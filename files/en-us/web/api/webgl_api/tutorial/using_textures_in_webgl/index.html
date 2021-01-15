@@ -9,7 +9,7 @@ tags:
 
 <p>Now that our sample program has a rotating 3D cube, let's map a texture onto it instead of having its faces be solid colors.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>This example uses the <a href="https://glmatrix.net/">glMatrix</a> library to perform its matrix and vertex math. You'll need to include it if you create your own project based on this code. Our sample loads a copy from a CDN in our HTML's {{HTMLElement("head")}}.</p>
 </div>
 
@@ -165,7 +165,7 @@ const texture = loadTexture(gl, 'cubetexture.png');</pre>
 
 <p>We need to replace the vertex shader so that instead of fetching color data, it instead fetches the texture coordinate data.</p>
 
-<pre class="brush: html notranslate">  const vsSource = `
+<pre class="brush: js notranslate">  const vsSource = `
     attribute vec4 aVertexPosition;
     attribute vec2 aTextureCoord;
 
@@ -187,7 +187,7 @@ const texture = loadTexture(gl, 'cubetexture.png');</pre>
 
 <p>The fragment shader likewise needs to be updated:</p>
 
-<pre class="brush: html notranslate">  const fsSource = `
+<pre class="brush: js notranslate">  const fsSource = `
     varying highp vec2 vTextureCoord;
 
     uniform sampler2D uSampler;
@@ -261,11 +261,11 @@ function drawScene(gl, programInfo, buffers, texture, deltaTime) {
 
 <p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample6/index.html', 670, 510) }}</p>
 
-<p><a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample6">View the complete code</a> | <a href="http://mdn.github.io/webgl-examples/tutorial/sample6/">Open this demo on a new page</a></p>
+<p><a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample6">View the complete code</a> | <a href="https://mdn.github.io/webgl-examples/tutorial/sample6/">Open this demo on a new page</a></p>
 
 <h2 id="Cross-domain_textures">Cross-domain textures</h2>
 
-<p>Loading of WebGL textures is subject to cross-domain access controls. In order for your content to load a texture from another domain, CORS approval needs to be be obtained. See <a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control</a> for details on CORS.</p>
+<p>Loading of WebGL textures is subject to cross-domain access controls. In order for your content to load a texture from another domain, CORS approval needs to be obtained. See <a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control</a> for details on CORS.</p>
 
 <p>Because WebGL now requires textures to be loaded from secure contexts, you can't use textures loaded from <code>file:///</code> URLs in WebGL. That means that you'll need a secure web server to test and deploy your code. For local testing, see our guide <a href="/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">How do you set up a local testing server?</a> for help.</p>
 

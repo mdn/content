@@ -154,7 +154,7 @@ function Child(x, y) {
   }
 }
 
-Child = Object.assign(ParentWithStatic)
+Child = Object.assign(Child, ParentWithStatic)  // copies over the static members from ParentWithStatic to Child
 Child.prototype = Object.create(ParentWithStatic.prototype)
 Child.prototype.constructor = Child
 
@@ -171,7 +171,7 @@ Child.prototype.getOffsetByInitialPosition = function getOffsetByInitialPosition
 <p>For this example we need either to stay parent constructor to continue to work properly or reassign static properties to child's constructor:</p>
 
 <pre class="brush: js notranslate">...
-Child = Object.assign(ParentWithStatic) // Notice that we assign it before we create(...) a prototype below
+Child = Object.assign(Child, ParentWithStatic) // Notice that we assign it before we create(...) a prototype below
 Child.prototype = Object.create(ParentWithStatic.prototype)
 ...
 </pre>
@@ -186,7 +186,7 @@ Child.prototype = Object.create(ParentWithStatic.prototype)
 ...
 </pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Summary</strong>: Manually updating or setting the constructor can lead to differrent and sometimes confusing consequences. To prevent this, just define the role of <code>constructor</code> in each specific case. In most cases, <code>constructor</code> is not used and reassignment of it is not necessary.</p>
 </div>
 
@@ -206,8 +206,6 @@ Child.prototype = Object.create(ParentWithStatic.prototype)
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("javascript.builtins.Object.constructor")}}</p>
 

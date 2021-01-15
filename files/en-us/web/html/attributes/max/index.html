@@ -6,6 +6,7 @@ tags:
   - Attributes
   - Constraint validation
   - HTML
+  - max
   - Reference
 ---
 <p>{{HTMLSidebar}}</p>
@@ -14,7 +15,7 @@ tags:
 
 <p>Valid for the numeric input types, including the {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types, and both the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the <code>max</code> attribute is a number that specifies the most positive value a form control to be considered valid.</p>
 
-<p>If the value exceeds the max value allowed, the {{domxref('validityState.rangeOverflow')}} will be true, and the the control will be matched by the {{cssxref(':out-of-range')}} and {{cssxref(':invalid')}} pseudo-classes.</p>
+<p>If the value exceeds the max value allowed, the {{domxref('validityState.rangeOverflow')}} will be true, and the control will be matched by the {{cssxref(':out-of-range')}} and {{cssxref(':invalid')}} pseudo-classes.</p>
 
 <h3 id="Syntax">Syntax</h3>
 
@@ -51,7 +52,7 @@ tags:
   <tr>
    <td>{{HTMLElement("input/datetime-local", "datetime-local")}}</td>
    <td><code>yyyy-mm-ddThh:mm</code></td>
-   <td><code class="brush: html">&lt;input type="datetime-local" min="2019-12-25T23:59"&gt;</code></td>
+   <td><code class="brush: html">&lt;input type="datetime-local" max="2019-12-25T23:59"&gt;</code></td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/number", "number")}}</td>
@@ -147,8 +148,6 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("html.elements.attributes.max")}}</p>
 
 <h2 id="See_also">See also</h2>
@@ -162,4 +161,5 @@ tags:
  <li>{{domxref('validityState.rangeOverflow')}}</li>
  <li>{{cssxref(':out-of-range')}}</li>
  <li>{{htmlelement('input')}}</li>
+ <li>{{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types, and the {{htmlelement('meter')}}</li>
 </ul>

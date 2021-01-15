@@ -9,7 +9,7 @@ tags:
 ---
 <p>{{FirefoxSidebar}}{{draft}}</p>
 
-<p class="summary">This article provides information about the changes in Firefox 85 that will affect developers. Firefox 85 is the current <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly">Nightly version of Firefox</a>, and will ship on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">January 26, 2021</a>.</p>
+<p class="summary">This article provides information about the changes in Firefox 85 that will affect developers. Firefox 85 is the current <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#beta">Beta version of Firefox</a>, and will ship on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">January 26, 2021</a>.</p>
 
 <h2 id="Changes_for_web_developers">Changes for web developers</h2>
 
@@ -21,11 +21,31 @@ tags:
 
 <h4 id="Removals_2">Removals</h4>
 
+<ul>
+  <li>The {{HTMLElement("menuitem")}} HTML element is no longer available — it has been hidden behind the <code>dom.menuitem.enabled flag</code>. ({{bug(1680596)}}). </li>
+</ul>
+
 <h3 id="CSS">CSS</h3>
+
+<ul>
+  <li>The {{cssxref(":focus-visible")}} pseudo-class is now enabled. ({{bug(1445482)}}). </li>
+  <li>The <code>pinch-zoom</code> value for the {{cssxref("touch-action")}} property is now enabled. ({{bug(1329241)}}). </li>
+</ul>
 
 <h4 id="Removals_3">Removals</h4>
 
 <h3 id="JavaScript">JavaScript</h3>
+
+<ul>
+  <li>
+    The <code>collation</code> property can now be specified in the options passed to the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator"><code>Intl.Collator()</code> constructor</a> ({{bug(1670062)}}). This allows developers to write code with greater clarity:
+    <pre class="notranslate brush: js">
+// Old method
+let pinyin = new Intl.Collator(["zh-u-co-pinyin"]);
+// New method
+let pinyin = new Intl.Collator("zh", {collator: "pinyin"});</pre> 
+  </li>
+ </ul>
 
 <h4 id="Removals_4">Removals</h4>
 

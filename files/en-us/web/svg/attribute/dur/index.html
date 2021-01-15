@@ -53,7 +53,7 @@ tags:
 
 <dl>
  <dt><code>&lt;clock-value&gt;</code></dt>
- <dd>This value specifies the length of the simple duration. The value must be greater than 0 and can be expressed with hours (<code>h</code>), minutes (<code>m</code>), seconds (<code>s</code>) or milliseconds (<code>ms</code>). Itʼs possible to combine those time representations to create some complex durations like <code>hh:mm:ss.iii</code> or <code>mm:ss.iii</code>.</dd>
+ <dd>This value specifies the length of the simple duration. The value must be greater than 0 and can be expressed with hours (<code>h</code>), minutes (<code>m</code>), seconds (<code>s</code>) or milliseconds (<code>ms</code>). It's possible to combine those time representations to create some complex durations like <code>hh:mm:ss.iii</code> or <code>mm:ss.iii</code>.</dd>
  <dt><code>media</code></dt>
  <dd>This value specifies the simple duration as the intrinsic media duration. This is only valid for elements that define media.<br>
  (For <a href="/en-US/docs/Web/SVG/Element#Animation_elements">animation elements</a> the attribute will be ignored if <code>media</code> is specified.)</dd>
@@ -63,7 +63,7 @@ tags:
  </dd>
 </dl>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> the interpolation will not work if the simple duration is indefinite (although this may still be useful for {{SVGElement("set")}} elements).</p>
 </div>
 
@@ -92,7 +92,5 @@ tags:
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("svg.elements.animate.dur")}}</p>

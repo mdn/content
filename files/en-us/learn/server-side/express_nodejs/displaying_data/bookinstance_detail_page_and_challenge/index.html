@@ -84,7 +84,7 @@ block content
 
 <ol>
  <li>Replace the variable <code>due_back</code> with <code>due_back_formatted</code> in the <em>BookInstance detail</em> page.</li>
- <li>Update the <font face="Consolas, Liberation Mono, Courier, monospace">Author</font> model to add a lifespan virtual property. The lifespan should look like: <em>date_of_birth - date_of_death</em>, where both values have the same date format as <code>BookInstance.due_back_formatted</code>.</li>
+ <li>Update the <code>Author</code> model to add a lifespan virtual property. The lifespan should look like: <em>date_of_birth - date_of_death</em>, where both values have the same date format as <code>BookInstance.due_back_formatted</code>.</li>
  <li>Use <code>Author.lifespan</code> in all views where you currently explicitly use <code>date_of_birth</code> and <code>date_of_death</code>.</li>
 </ol>
 

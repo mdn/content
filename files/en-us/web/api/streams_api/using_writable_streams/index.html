@@ -102,7 +102,7 @@ const writableStream = new WritableStream({
 <ul>
  <li>The <code>write()</code> method contains a promise including code that decodes each written chunk into a format that can be written to the UI. This is called when each chunk is actually written (see the next section).</li>
  <li>The <code>close()</code> method is called automatically when writing has finished — it prints the entire decoded result to the UI in one string.</li>
- <li>The <code>abort()</code> method simply prints an error to the console if the stream is aborted.</li>
+ <li>The <code>abort()</code> method prints an error to the console if the stream is aborted.</li>
 </ul>
 
 <h3 id="Writing">Writing</h3>

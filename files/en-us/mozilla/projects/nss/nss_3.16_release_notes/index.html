@@ -1,0 +1,49 @@
+---
+title: NSS 3.16 release notes
+slug: Mozilla/Projects/NSS/NSS_3.16_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+<p>The NSS team has released Network Security Services (NSS) 3.16, which is a minor release.</p>
+<h2 id="Distribution_Information">Distribution Information</h2>
+<p>The HG tag is NSS_3_16_RTM. NSS 3.16 requires NSPR 4.10.3 or newer.</p>
+<p>NSS 3.16 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_16_RTM/src/" title="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_15_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_16_RTM/src/</a></li>
+</ul>
+<h2 id="New_in_NSS_3.16">New in NSS 3.16</h2>
+<h3 id="New_Functionality">New Functionality</h3>
+<ul>
+ <li>Supports the Linux x32 ABI. (This requires NSPR 4.10.4.) To build for the Linux x32 target, set the environment variable USE_X32=1 when building NSS.</li>
+</ul>
+<h4 id="New_Functions">New Functions</h4>
+<ul>
+ <li><em>in cms.h</em>
+  <ul>
+   <li><b>NSS_CMSSignerInfo_Verify</b> - verify the signature of a single SignerInfo. It just verifies the signature, assuming that the certificate has been verified already.</li>
+  </ul>
+ </li>
+</ul>
+<h4 id="New_Macros">New Macros</h4>
+<ul>
+ <li><em>in sslproto.h</em>
+  <ul>
+   <li><b>TLS_RSA_WITH_RC4_128_SHA, TLS_RSA_WITH_3DES_EDE_CBC_SHA, etc.</b> - cipher suites that were first defined in SSL 3.0 can now be referred to with their official IANA names in TLS, with the TLS_ prefix. Previously, they had to be referred to with their names in SSL 3.0, with the SSL_ prefix.</li>
+  </ul>
+ </li>
+</ul>
+<h2 id="Notable_Changes_in_NSS_3.16">Notable Changes in NSS 3.16</h2>
+<ul>
+ <li>ECC is enabled by default. It is no longer necessary to set the environment variable NSS_ENABLE_ECC=1 when building NSS. To disable ECC, set the environment variable NSS_DISABLE_ECC=1 when building NSS.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=903885">Bug 903885</a>: (CVE-2014-1492) In a wildcard certificate, the wildcard character should not be embedded within the U-label of an internationalized domain name. See the last bullet point in <a href="https://tools.ietf.org/html/rfc6125#section-7.2">RFC 6125, Section 7.2</a>.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=962760">Bug 962760</a>: libpkix should not include the common name of CA as DNS names when evaluating name constraints.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=981170">Bug 981170</a>: AESKeyWrap_Decrypt should not return SECSuccess for invalid keys.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=974693">Bug 974693</a>: Fix a memory corruption in sec_pkcs12_new_asafe.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=956082">Bug 956082</a>: If the NSS_SDB_USE_CACHE environment variable is set, skip the runtime test sdb_measureAccess.</li>
+ <li>The built-in roots module has been updated to version 1.97, which adds, removes, and distrusts several certificates.</li>
+ <li>The atob utility has been improved to automatically ignore lines of text that aren't in base64 format.</li>
+ <li>The certutil utility has been improved to support creation of version 1 and version 2 certificates, in addition to the existing version 3 support.</li>
+</ul>
+<h2 id="Bugs_fixed_in_NSS_3.16">Bugs fixed in NSS 3.16</h2>
+<p>This Bugzilla query returns all the bugs fixed in NSS 3.16:</p>
+<p><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.16" title="https://bugzilla.mozilla.org/buglist.cgi?list_id=6278317&amp;resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.15">https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.16</a></p>

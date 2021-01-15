@@ -29,7 +29,7 @@ tags:
 <p>The reason that the Box alignment properties remain detailed in the flexbox specification as well as being in box alignment is to ensure that completion of the flexbox spec is not held up by box alignment, which has to detail these methods for all layout types. There is a note in the flexbox spec stating that in the future, once it is completed, the definitions in Box Alignment Level 3 will supersede those of flexbox:</p>
 
 <blockquote>
-<p>"Note: While the alignment properties are defined in CSS Box Alignment [CSS-ALIGN-3], Flexible Box Layout reproduces the definitions of the relevant ones here so as to not create a normative dependency that may slow down advancement of the spec. These properties apply only to flex layout until CSS Box Alignment Level 3 is finished and defines their effect for other layout modes. Additionally, any new values defined in the Box Alignment module will apply to Flexible Box Layout; in otherwords, the Box Alignment module, once completed, will supercede the definitions here."</p>
+<p>"Note: While the alignment properties are defined in CSS Box Alignment [CSS-ALIGN-3], Flexible Box Layout reproduces the definitions of the relevant ones here so as to not create a normative dependency that may slow down advancement of the spec. These properties apply only to flex layout until CSS Box Alignment Level 3 is finished and defines their effect for other layout modes. Additionally, any new values defined in the Box Alignment module will apply to Flexible Box Layout; in otherwords, the Box Alignment module, once completed, will supersede the definitions here."</p>
 </blockquote>
 
 <p>In a later article in this series — Aligning items in a flex container — we will take a thorough look at how the Box Alignment properties apply to flex items.</p>
@@ -112,7 +112,7 @@ tags:
 
 <p>In the following live example I have a flex container with three child elements. One of these flex items has two elements nested inside it, which would not ordinarily participate in flex layout. Flex layout only applies to the direct children of a flex container.</p>
 
-<p>By adding <code>display: contents</code> to the wrapper around the nested elements, you can see that that item has disappeared from the layout, allowing the two sub-children to be laid out as if they were direct children of the flex container. You can try removing the <code>display: contents</code> line to see it return.</p>
+<p>By adding <code>display: contents</code> to the wrapper around the nested elements, you can see that the item has disappeared from the layout, allowing the two sub-children to be laid out as if they were direct children of the flex container. You can try removing the <code>display: contents</code> line to see it return.</p>
 
 <p>Note that this only removes the box from the layout; the sub-children don’t become direct children in any other way. You can see that as I have used a direct child selector to add the background and borders to the flex items, this has not been applied to our nested children. They have been laid out as flex items, but as they are not direct children they do not get the other styling.</p>
 
@@ -120,7 +120,7 @@ tags:
 <p><strong>Warning</strong>: Current implementations in most browsers will remove any element with <code>display: contents</code> from the accessibility tree (but descendants will remain). This will cause the element itself to no longer be announced by screen reading technology. This is incorrect behavior according to the specification, see <a href="/en-US/docs/Web/CSS/display#display_contents"><code>display: contents</code></a>.</p>
 </div>
 
-<p>Also, having removed the box you cannot then use it to — for example — add a background colour behind the nested sub children. If you remove <code>display: contents</code> in this live example you will see that the direct child we are removing has an orange background colour. This also disappears when the box disappears. </p>
+<p>Also, having removed the box you cannot then use it to — for example — add a background color behind the nested sub children. If you remove <code>display: contents</code> in this live example you will see that the direct child we are removing has an orange background color. This also disappears when the box disappears. </p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/relationship/display-contents.html", '100%', 650)}}</p>
 

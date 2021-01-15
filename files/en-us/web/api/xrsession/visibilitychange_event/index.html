@@ -57,7 +57,7 @@ tags:
 
 <pre class="brush: js">navigator.xr.requestSession("inline").then((xrSession) =&gt; {
   xrSession.addEventListener("visibilitychange", e =&gt; {
-    switch(e.session.visiblityState) {
+    switch(e.session.visibilityState) {
       case "visible":
       case "visible-blurred":
         mySessionVisible(true);

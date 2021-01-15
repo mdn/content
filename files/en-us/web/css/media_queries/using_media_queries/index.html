@@ -33,7 +33,7 @@ tags:
 <p>A media query computes to true when the media type (if specified) matches the device on which a document is being displayed <em>and</em> all media feature expressions compute as true. Queries involving unknown media types are always false.</p>
 
 <div class="note">
-<p><strong>Note:</strong> A style sheet with a media query attached to its {{HTMLElement("link")}} tag <a href="http://scottjehl.github.com/CSS-Download-Tests/">will still download</a> even if the query returns false. Nevertheless, its contents will not apply unless and until the result of the query changes to true.</p>
+<p><strong>Note:</strong> A style sheet with a media query attached to its {{HTMLElement("link")}} tag <a href="https://scottjehl.github.com/CSS-Download-Tests/">will still download</a> even if the query returns false. Nevertheless, its contents will not apply unless and until the result of the query changes to true.</p>
 </div>
 
 <h3 id="Media_types">Media types</h3>
@@ -41,13 +41,13 @@ tags:
 <p><em>Media types</em> describe the general category of a device. Except when using the <code>not</code> or <code>only</code> logical operators, the media type is optional and the <code>all</code> type will be implied.</p>
 
 <dl>
- <dt><a id="all" name="all"><code id="all">all</code></a></dt>
+ <dt><a id="all"><code>all</code></a></dt>
  <dd>Suitable for all devices.</dd>
- <dt><a id="print" name="print"><code id="print">print</code></a></dt>
+ <dt><a id="print"><code>print</code></a></dt>
  <dd>Intended for paged material and documents viewed on a screen in print preview mode. (Please see <a href="/en-US/docs/Web/CSS/Paged_Media">paged media</a> for information about formatting issues that are specific to these formats.)</dd>
- <dt><a id="screen" name="screen"><code id="screen">screen</code></a></dt>
+ <dt><a id="screen"><code>screen</code></a></dt>
  <dd>Intended primarily for screens.</dd>
- <dt><a id="speech" name="speech"><code id="speech">speech</code></a></dt>
+ <dt><a id="speech"><code>speech</code></a></dt>
  <dd>Intended for speech synthesizers.</dd>
 </dl>
 
@@ -114,7 +114,7 @@ tags:
   <tr>
    <td>{{cssxref("@media/display-mode", "display-mode")}}</td>
    <td>The display mode of the application, as specified in the web app manifest's <a href="/en-US/docs/Web/Manifest#display"><code>display</code></a> member</td>
-   <td>Defined in the <a href="http://w3c.github.io/manifest/#the-display-mode-media-feature">Web App Manifest spec</a>.</td>
+   <td>Defined in the <a href="https://w3c.github.io/manifest/#the-display-mode-media-feature">Web App Manifest spec</a>.</td>
   </tr>
   <tr>
    <td>{{cssxref("@media/forced-colors", "forced-colors")}}</td>
@@ -232,7 +232,7 @@ tags:
 
 <h4 id="only"><code>only</code></h4>
 
-<p>The <code>only</code> operator is used to apply a style only if an entire query matches, and is useful for preventing older browsers from applying selected styles. When not using <code>only</code>, older browsers would interpret the query <code>screen and (max-width: 500px)</code> simply as <code>screen</code>, ignoring the remainder of the query, and applying its styles on all screens. If you use the <code>only</code> operator, you <em>must also</em> specify a media type.</p>
+<p>The <code>only</code> operator is used to apply a style only if an entire query matches, and is useful for preventing older browsers from applying selected styles. When not using <code>only</code>, older browsers would interpret the query <code>screen and (max-width: 500px)</code> as <code>screen</code>, ignoring the remainder of the query, and applying its styles on all screens. If you use the <code>only</code> operator, you <em>must also</em> specify a media type.</p>
 
 <h4 id="comma"><code>,</code> (comma)</h4>
 
@@ -268,7 +268,7 @@ tags:
 
 <pre class="brush: css notranslate">@media speech and (aspect-ratio: 11/5) { ... }</pre>
 
-<p>For more <a href="#Media_features">media feature</a> examples, please see the reference page for each specific feature.</p>
+<p>For more <a href="#media_features">media feature</a> examples, please see the reference page for each specific feature.</p>
 
 <h2 id="Creating_complex_media_queries">Creating complex media queries</h2>
 

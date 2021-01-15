@@ -18,9 +18,15 @@ tags:
 
 <p>{{AvailableInWorkers}}</p>
 
+<h2 id="Constructor">Constructor</h2>
+<dl>
+  <dt>{{domxref("IDBVersionChangeEvent.IDBVersionChangeEvent", "IDBVersionChangeEvent()")}}</dt>
+  <dd>Creates and returns a new <code>IDBVersionChangeEvent</code> object which is used to represent when a version of the database has changed.</dd>
+</dl>
+
 <h2 id="Properties">Properties</h2>
 
-<p><em>Also inherits properties from its parent, {{domxref("Method")}}.</em></p>
+<p><em>Also inherits properties from its parent, {{domxref("Event")}} interface.</em></p>
 
 <dl>
  <dt>{{ domxref("IDBVersionChangeEvent.oldVersion") }} {{readonlyInline}}</dt>
@@ -44,11 +50,11 @@ tags:
 
 <h3 id="Methods">Methods</h3>
 
-<p><em>No specific method, but inherits properties from its parent, {{domxref("Method")}}.</em></p>
+<p><em>No specific method, but inherits properties from its parent, {{domxref("Event")}} interface.</em></p>
 
 <h2 id="Example">Example</h2>
 
-<p>In the following code snippet, we make a request to open a database, and include handlers for the success and error cases. Upon a version change (after an <code>upgradedneeded</code> event), the <code>success</code> event will implement the <code>IDBVersionChangeEvent</code> interface. For a full working example, see our <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> app (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
+<p>In the following code snippet, we make a request to open a database, and include handlers for the success and error cases. Upon a version change (after an <code>upgradedneeded</code> event), the <code>success</code> event will implement the <code>IDBVersionChangeEvent</code> interface. For a full working example, see our <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> app (<a class="external" href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
 
 <pre class="brush:js">var note = document.querySelector("ul");
 
@@ -93,14 +99,12 @@ DBOpenRequest.onsuccess = function(event) {
   <tr>
    <td>{{SpecName("IndexedDB 2", "#idbversionchangeevent", "IDBVersionChangeEvent")}}</td>
    <td>{{Spec2("IndexedDB 2")}}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.IDBVersionChangeEvent")}}</p>
 
@@ -114,5 +118,5 @@ DBOpenRequest.onsuccess = function(event) {
  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
  <li>Using cursors: {{domxref("IDBCursor")}}</li>
  <li><a href="/en-US/docs/Web/API/IDBDatabase/onversionchange">IDBDatabase.onversionchange</a></li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+ <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>

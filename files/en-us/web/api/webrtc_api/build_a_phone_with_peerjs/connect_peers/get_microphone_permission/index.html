@@ -25,7 +25,7 @@ slug: >-
 
 <p id="f23a">C. <code>window.localAudio.autoplay = true</code>: we’re setting the autoplay attribute for the audio element to auto play.</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>If you’ve done some sleuthing online, you may have come across <code>navigator.getUserMedia</code> and assumed you can use that instead of <code>navigator.MediaDevices.getUserMedia</code>. You’d be wrong. The former is a <a href="/en-US/docs/Web/API/Navigator/getUserMedia" rel="noopener nofollow">deprecated method</a> which requires callbacks as well as constraints as arguments. The latter uses a promise so you don’t need to use callbacks.</p>
 </div>
 
@@ -39,13 +39,11 @@ slug: >-
 
 <pre class="brush: js notranslate">/* global Peer */
 
-
 /**
  * Gets the local audio stream of the current caller
- * @param callbacks - an object to set the success/error behaviour
+ * @param callbacks - an object to set the success/error behavior
  * @returns {void}
  */
-
 
 function getLocalStream() {
     navigator.mediaDevices.getUserMedia({video: false, audio: true}).then( stream =&gt; {

@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.tabs.onRemoved.addListener(callback)
+<pre class="brush:js">browser.tabs.onRemoved.addListener(callback)
 browser.tabs.onRemoved.removeListener(listener)
 browser.tabs.onRemoved.hasListener(listener)
 </pre>
@@ -70,7 +70,7 @@ browser.tabs.onRemoved.hasListener(listener)
 
 <p>Listen for close events, and log the info:</p>
 
-<pre class="brush: js">function handleRemoved(tabId, removeInfo) {
+<pre class="notranslate brush: js">function handleRemoved(tabId, removeInfo) {
   console.log("Tab: " + tabId + " is closing");
   console.log("Window ID: " + removeInfo.windowId);
   console.log("Window is closing: " + removeInfo.isWindowClosing);
@@ -81,8 +81,6 @@ browser.tabs.onRemoved.addListener(handleRemoved);</pre>
 <p>{{WebExtExamples}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("webextensions.api.tabs.onRemoved")}}</p>
 

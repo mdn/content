@@ -16,7 +16,7 @@ tags:
 
 <h3 id="Deprecated_and_obsolete">Deprecated and obsolete</h3>
 
-<p><strong>D</strong><strong>eprecated</strong> and <strong>obsolete</strong> are common terms associated with technologies and specifications, but what do they mean?</p>
+<p><strong>Deprecated</strong> and <strong>obsolete</strong> are common terms associated with technologies and specifications, but what do they mean?</p>
 
 <dl>
  <dt>Deprecated</dt>
@@ -51,7 +51,7 @@ tags:
 
 <p>Archived pages are pages that are stored in the MDN <a href="/en-US/docs/Archive">Archive of obsolete content</a>. These pages contain information out-of-date enough that it is not directly useful to anyone anymore.</p>
 
-<p>Most commonly, these concern Mozilla projects that have been discontinued and shouldn't be relied on anymore. But we don't simply delete them because they form a useful historical record, and some of the patterns or ideas contained within might be useful for future work. A good example is the <a href="/en-US/docs/Archive/B2G_OS">B2G (Firefox OS) project</a>.</p>
+<p>Most commonly, these concern Mozilla projects that have been discontinued and shouldn't be relied on anymore. But we don't delete them because they form a useful historical record, and some of the patterns or ideas contained within might be useful for future work. A good example is the <a href="/en-US/docs/Archive/B2G_OS">B2G (Firefox OS) project</a>.</p>
 
 <h4 id="When_should_a_page_be_archived">When should a page be archived?</h4>
 
@@ -65,7 +65,7 @@ tags:
 
 <ul>
  <li>Reference pages for API features that were removed from the specification before they were implemented in any browsers.</li>
- <li>Articles covering techniques that were later shown to be bad practice and superceded by better techniques.</li>
+ <li>Articles covering techniques that were later shown to be bad practice and superseded by better techniques.</li>
  <li>Articles containing information that were later replaced by other, better quality articles.</li>
  <li>Articles containing content that is inappropriate for MDN.</li>
  <li>Translations that are old, out-of-date, and difficult to fix, meaning that the English version is preferrable and starting a new translation would be an easier option.</li>
@@ -115,7 +115,7 @@ tags:
 </div>
 
 <ul>
- <li>If the item was <em>never</em> implemented in a release version of <em>any</em> browser—even behind a preference or flag—simply delete any references to the item from the documentation.
+ <li>If the item was <em>never</em> implemented in a release version of <em>any</em> browser—even behind a preference or flag—delete any references to the item from the documentation.
 
   <ul>
    <li>If the item has any documentation pages describing only that one item (such as {{domxref("RTCPeerConnection.close()")}}), delete that page. If the removed item is an interface, this means removing any subpages describing the properties and methods on that interface as well.</li>
@@ -195,6 +195,6 @@ tags:
 
 <p>Note that sometimes (but rarely) there is a conflict between different spec versions (usually W3C versus WHATWG), e.g. one version might have a feature listed as deprecated, while the other doesn't. In such cases, consider what the reality is — i.e. what browsers are actually doing — and write an "important" note to summarize that latest status. For example, as of Jan 2019 the <code><a href="/en-US/docs/Web/HTML/Global_attributes/inputmode">inputmode</a></code> global attribute has a conflict, which was summarized like so:</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p><strong>Spec conflict</strong>: The <a href="https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode">WHATWG spec lists <code>inputmode</code></a>, and modern browsers are working towards supporting it. The <a href="https://www.w3.org/TR/html52/index.html#contents">W3C HTML 5.2 spec</a> however no longer lists it (i.e. marks it as obsolete). You should consider the WHATWG definition as correct, until a consensus is reached.=</p>
 </div>

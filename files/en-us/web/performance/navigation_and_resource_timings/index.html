@@ -8,11 +8,11 @@ tags:
   - Web Performance
   - performance APIs
 ---
-<p><span class="seoSummary"><strong>Navigation timings </strong>are metrics measuring a browser's document navigation events. <strong>Resource timings </strong>are detailed network timing measurements regarding the loading of an application's resources.</span> Both provide the same read-only properties, but navigation timing measures the main document's timings whereas the resource timing provides the times for all the assets or resources called in by that main document and the resources' requested resources.</p>
+<p><span class="seoSummary"><strong>Navigation timings</strong> are metrics measuring a browser's document navigation events. <strong>Resource timings</strong> are detailed network timing measurements regarding the loading of an application's resources.</span> Both provide the same read-only properties, but navigation timing measures the main document's timings whereas the resource timing provides the times for all the assets or resources called in by that main document and the resources' requested resources.</p>
 
 <p>The general performance timings below have been deprecated in favor of the Performance Entry API, which provides for marking and measuring times along the navigation and resource loading process. While deprecated, they are supported in all browsers.</p>
 
-<h2 id="Performance_Timings"><strong>Performance Timings</strong></h2>
+<h2 id="Performance_Timings">Performance Timings</h2>
 
 <p>The <a href="/en-US/docs/Web/API/PerformanceTiming">performanceTiming API</a>, a JavaScript API for measuring the loading performance of the requested page, is deprecated but supported in all browsers. It has been replaced with the <a href="/en-US/docs/Web/API/PerformanceNavigationTiming">performanceNavigationTiming</a> API.</p>
 
@@ -197,7 +197,7 @@ performance.getEntriesByType('frame').forEach((frame) =&gt; {
   console.dir(frame);
 });</pre>
 
-<p>In supporting browsers, you can use <code>performance.getEntriesByType('paint')</code> to query the measure for <code>first-paint</code> and <code>first-contentful-paint</code>. We use <code>performance.getEntriesByType('navigation')</code> and<code> </code> <code>performance.getEntriesByType('resource')</code> to query the navigation and resource timings respectively.</p>
+<p>In supporting browsers, you can use <code>performance.getEntriesByType('paint')</code> to query the measure for <code>first-paint</code> and <code>first-contentful-paint</code>. We use <code>performance.getEntriesByType('navigation')</code> and  <code>performance.getEntriesByType('resource')</code> to query the navigation and resource timings respectively.</p>
 
 <h2 id="Navigation_Timing">Navigation Timing</h2>
 
@@ -239,7 +239,7 @@ performance.getEntriesByType('frame').forEach((frame) =&gt; {
 
 <p><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">If we do the math with these numbers, we get the same result: </span></span></span><code>1 - (22.04 / 87.24) = 0.747</code>. The navigation timings provide us a way to programmatically check transfer sizing and bandwidth savings.</p>
 
-<p>Note that this is the size for this single document alone: for this resource alone, not for all the resources combined. However, the duration, load events and DOM related timings have to do with the entire navigation, not this single asset. Client-side web applications may seem faster than this one with <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="tree-indent tree-last-indent">​</span><span class="object-label">transfer size</span><span class="object-delimiter">s under 10000 and </span><span class="object-label">decoded body size</span><span class="object-delimiter">s under </span><span class="objectBox objectBox-number">30000, but that doesn't mean JavaScript, CSS, or media assets aren't adding bloat. Checking compression ratios is important but ensure to also check duration and the time between when the DOM</span><span class="object-label">ContentLoaded event ended and when the DOM is complete, as running JavaScript on the main thread for long periods of time can lead to a non-responsive user interface.</span></span></span></span></p>
+<p>Note that this is the size for this single document alone: for this resource alone, not for all the resources combined. However, the duration, load events and DOM related timings have to do with the entire navigation, not this single asset. Client-side web applications may seem faster than this one with <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="tree-indent tree-last-indent"></span><span class="object-label">transfer size</span><span class="object-delimiter">s under 10000 and </span><span class="object-label">decoded body size</span><span class="object-delimiter">s under </span><span class="objectBox objectBox-number">30000, but that doesn't mean JavaScript, CSS, or media assets aren't adding bloat. Checking compression ratios is important but ensure to also check duration and the time between when the DOM</span><span class="object-label">ContentLoaded event ended and when the DOM is complete, as running JavaScript on the main thread for long periods of time can lead to a non-responsive user interface.</span></span></span></span></p>
 
 <h3 id="Request_time">Request time</h3>
 
@@ -275,7 +275,7 @@ performance.getEntriesByType('frame').forEach((frame) =&gt; {
 
 <p>The main thing to look at for each resource.</p>
 
-<h2 id="See_Also">See Also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{domxref("PerformanceNavigationTiming")}}</li>

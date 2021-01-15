@@ -13,7 +13,7 @@ tags:
 
 <p><span class="seoSummary">The <strong><code>Set-Cookie</code></strong> HTTP response header is used to send a cookie from the server to the user agent, so the user agent can send it back to the server later. To send multiple cookies, multiple <strong><code>Set-Cookie</code></strong></span> headers should be sent in the same response.</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>Browsers block frontend JavaScript code from accessing the <code>Set Cookie</code> header, as required by the Fetch spec, which defines <code>Set-Cookie</code> as a <a href="https://fetch.spec.whatwg.org/#forbidden-response-header-name">forbidden response-header name</a> that <a href="https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0">must be filtered out</a> from any response exposed to frontend code.</p>
 </div>
 
@@ -38,7 +38,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;
+<pre class="brush: html notranslate">Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;
 Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Expires=&lt;date&gt;
 Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Max-Age=&lt;non-zero-digit&gt;
 Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt;
@@ -72,7 +72,7 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
 
  <p>If unspecified, the cookie becomes a <strong>session cookie</strong>. A session finishes when the client shuts down, and session cookies will be removed.</p>
 
- <div class="blockIndicator warning">
+ <div class="notecard warning">
  <p><strong>Warning:</strong> Many web browsers have a <em>session restore</em> feature that will save all tabs and restore them next time the browser is used. Session cookies will also be restored, as if the browser was never closed.</p>
  </div>
 
@@ -106,19 +106,19 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
  <p>Standards related to the <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">SameSite Cookies</a> recently changed such that:</p>
 
  <ol>
-  <li>The cookie-sending behaviour if <code>SameSite</code> is not specified is <code>SameSite=Lax</code>. Previously the default was that cookies were sent for all requests.</li>
+  <li>The cookie-sending behavior if <code>SameSite</code> is not specified is <code>SameSite=Lax</code>. Previously the default was that cookies were sent for all requests.</li>
   <li>Cookies with <code>SameSite=None</code> must now<br>
    also specify the <code>Secure</code> attribute (i.e. they require a secure context).</li>
  </ol>
 
- <p>The options below covers the new behaviour. See the <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#Browser_compatibility">Browser compatibility</a> table for information about specific browser implementation (rows: "<code>SameSite</code>: Defaults to <code>Lax</code>" and "<code>SameSite</code>: Secure context required").</p>
+ <p>The options below covers the new behavior. See the <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#Browser_compatibility">Browser compatibility</a> table for information about specific browser implementation (rows: "<code>SameSite</code>: Defaults to <code>Lax</code>" and "<code>SameSite</code>: Secure context required").</p>
  </div>
  Inline options are:
 
  <ul>
   <li><code>Strict</code>: The browser sends the cookie only for same-site requests (that is, requests originating from the same site that set the cookie). If the request originated from a different URL than the current one, no cookies with the <code>SameSite=Strict</code> attribute are sent.</li>
   <li><code>Lax</code>: The cookie is not sent on cross-site requests, such as calls to load images or frames, but is sent when a user is navigating to the origin site from an external site (e.g. if following a link).<br>
-   This is the default behaviour if the <code>SameSite</code> attribute is not specified.</li>
+   This is the default behavior if the <code>SameSite</code> attribute is not specified.</li>
   <li><code>None</code>: The browser sends the cookie with both cross-site and same-site requests. The <code>Secure</code> attribute must also be set when <code>SameSite=None</code>!</li>
  </ul>
  </dd>
@@ -161,7 +161,7 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
 
 <p>In addition, cookies with the <code>__Host-</code> prefix must have a path of <code>/</code> (meaning any path at the host) and must not have a <code>Domain</code> attribute.</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>For clients that don't implement cookie prefixes, you cannot count on these additional assurances, and prefixed cookies will always be accepted.</p>
 </div>
 

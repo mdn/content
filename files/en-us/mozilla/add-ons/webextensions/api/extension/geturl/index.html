@@ -15,7 +15,6 @@ tags:
 ---
 <div>{{AddonSidebar}}</div>
 
-<div> </div>
 
 <div class="warning">
 <p>This function is deprecated. Please use <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL"><code>runtime.getURL</code></a>.</p>
@@ -25,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.extension.getURL(
+<pre class="brush:js">browser.extension.getURL(
   path // string
 )
 </pre>
@@ -43,15 +42,13 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("webextensions.api.extension.getURL")}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>Given a file packaged with the add-on at "beasts/frog.html", get the full URL like this:</p>
 
-<pre class="brush: js">var fullURL = browser.extension.getURL("beasts/frog.html");
+<pre class="notranslate brush: js">var fullURL = browser.extension.getURL("beasts/frog.html");
 
 // -&gt; something like:
 // moz-extension://2c127fa4-62c7-7e4f-90e5-472b45eecfdc/beasts/frog.html</pre>

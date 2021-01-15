@@ -19,7 +19,7 @@ tags:
 
 <p>When a user agent (such as your browser) lays out a document, it generates a box for every element. Each box is divided into four areas:</p>
 
-<ol start="1">
+<ol>
  <li>Content area</li>
  <li>Padding area</li>
  <li>Border area</li>
@@ -40,12 +40,12 @@ tags:
 
 <p>The process for identifying the containing block depends entirely on the value of the element's {{cssxref("position")}} property:</p>
 
-<ol start="1">
+<ol>
  <li>If the <code>position</code> property is <code><strong>static</strong></code>, <code><strong>relative</strong></code>, or <strong><code>sticky</code></strong>, the containing block is formed by the edge of the <em>content box</em> of the nearest ancestor element that is either <strong>a block container</strong> (such as an inline-block, block, or list-item element) or <strong>establishes a formatting context</strong> (such as a table container, flex container, grid container, or the block container itself).</li>
  <li>If the <code>position</code> property is <code><strong>absolute</strong></code>, the containing block is formed by the edge of the <em>padding box</em> of the nearest ancestor element that has a <code>position</code> value other than <code>static</code> (<code>fixed</code>, <code>absolute</code>, <code>relative</code>, or <code>sticky</code>).</li>
  <li>If the <code>position</code> property is <code><strong>fixed</strong></code>, the containing block is established by the {{glossary("viewport")}} (in the case of continuous media) or the page area (in the case of paged media).</li>
  <li>If the <code>position</code> property is <code><strong>absolute</strong></code> or <code><strong>fixed</strong></code>, the containing block may also be formed by the edge of the <em>padding box</em> of the nearest ancestor element that has the following:
-  <ol start="1">
+  <ol>
    <li>A {{cssxref("transform")}} or {{cssxref("perspective")}} value other than <code>none</code></li>
    <li>A {{cssxref("will-change")}} value of <code>transform</code> or <code>perspective</code></li>
    <li>A {{cssxref("filter")}} value other than <code>none</code> or a <code>will-change</code> value of <code>filter</code> (only works on Firefox).</li>
@@ -62,7 +62,7 @@ tags:
 
 <p>As noted above, when certain properties are given a percentage value, the computed value depends on the element's containing block. The properties that work this way are <strong>box model properties</strong> and <strong>offset properties</strong>:</p>
 
-<ol start="1">
+<ol>
  <li>The {{cssxref("height")}}, {{cssxref("top")}}, and {{cssxref("bottom")}} properties compute percentage values from the <code>height</code> of the containing block.</li>
  <li>The {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}}, and {{cssxref("margin")}} properties compute percentage values from the <code>width</code> of the containing block.</li>
 </ol>

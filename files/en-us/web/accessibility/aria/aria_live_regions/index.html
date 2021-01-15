@@ -169,16 +169,16 @@ renderPlanetInfoButton.addEventListener('click', event =&gt; {
 
 <ol>
  <li><code><strong>aria-atomic</strong></code>: The <code>aria-atomic=BOOLEAN</code> is used to set whether or not the screen reader should always present the live region as a whole, even if only part of the region changes. The possible settings are: <code>false</code> or <code>true</code>. The default setting is <code>false</code>.</li>
- <li><code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute" title="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute"><strong>aria-relevant</strong></a></code>: The <code>aria-relevant=[LIST_OF_CHANGES]</code> is used to set what types of changes are relevant to a live region. The possible settings are one or more of: <code>additions</code>, <code>removals</code>, <code>text</code>, <code>all</code>. The default setting is: <code>additions text</code>.</li>
+ <li><code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute"><strong>aria-relevant</strong></a></code>: The <code>aria-relevant=[LIST_OF_CHANGES]</code> is used to set what types of changes are relevant to a live region. The possible settings are one or more of: <code>additions</code>, <code>removals</code>, <code>text</code>, <code>all</code>. The default setting is: <code>additions text</code>.</li>
  <li><code><strong>aria-labelledby</strong></code>: The <code>aria-labelledby=[IDLIST]</code> is used to associate a region with its labels, similar to aria-controls but instead associating labels to the region. and label identifiers are separated with a space.</li>
  <li><code><strong>aria-describedby</strong></code>: The <code>aria-describedby=[IDLIST]</code> is used to associate a region with its descriptions, similar to aria-controls but instead associating descriptions to the region and description identifiers are separated with a space.</li>
 </ol>
 
 <h3 id="Advanced_use_case_Clock"><span class="mw-headline" id="Use_Case:_Clock">Advanced use case: Clock</span></h3>
 
-<p>As an illustration of <code>aria-atomic</code>, consider a site with a simple clock, showing hours and minutes. The clock is updated each minute, with the new remaining time simply overwriting the current content.</p>
+<p>As an illustration of <code>aria-atomic</code>, consider a site with a simple clock, showing hours and minutes. The clock is updated each minute, with the new remaining time overwriting the current content.</p>
 
-<pre class="notranslate">&lt;div id="clock" role="timer" aria-live="polite"&gt;&lt;/div&gt;
+<pre class="brush: html notranslate">&lt;div id="clock" role="timer" aria-live="polite"&gt;&lt;/div&gt;
 </pre>
 
 <pre class="brush: js notranslate">/* basic JavaScript to update the clock */
@@ -195,50 +195,48 @@ setInterval(function() {
 
 <p><code>aria-atomic="true"</code> ensures that each time the live region is updated, the entirety of the content is announced in full (e.g. "Time: 17:34").</p>
 
-<pre class="notranslate">&lt;div id="clock" role="timer" aria-live="polite" aria-atomic="true"&gt;&lt;/div&gt;
+<pre class="brush: html notranslate">&lt;div id="clock" role="timer" aria-live="polite" aria-atomic="true"&gt;&lt;/div&gt;
 </pre>
 
 <div class="note">
 <p><strong>Note</strong>: As observed, setting/updating the innerHTML again would cause the whole text to be read again, whether or not you set aria-atomic="true", so the above Clock example does not work as expected.</p>
 </div>
 
-<p class="syntaxbox">A working example of a simple year control for better understanding:</p>
+<p>A working example of a simple year control for better understanding:</p>
 
-<pre class="syntaxbox notranslate">&lt;div id="date-input"&gt;
-  &lt;label&gt;Year:
-    &lt;input type="text" id="year" value="1990" onblur="change(event)"/&gt;
-  &lt;/label&gt;
+<pre class="brush: html notranslate">&lt;div id="date-input"&gt;
+&lt;label&gt;Year:
+&lt;input type="text" id="year" value="1990" onblur="change(event)"/&gt;
+&lt;/label&gt;
 &lt;/div&gt;
 
 &lt;div id="date-output" aria-live="polite"&gt;
-  The set year is:
-  &lt;span id="year-output"&gt;1990&lt;/span&gt;
+The set year is:
+&lt;span id="year-output"&gt;1990&lt;/span&gt;
 &lt;/div&gt;</pre>
 
-<p class="syntaxbox"></p>
-
-<pre class="syntaxbox notranslate">function change(event) {
+<pre class="brush: js notranslate">
+function change(event) {
   var yearOut = document.getElementById("year-output");
+
   switch (event.target.id) {
     case "year":
       yearOut.innerHTML = event.target.value;
       break;
-   default:
-      return;
+    default:
+      return;
   }
 };</pre>
 
-<p class="syntaxbox"></p>
-
 <p>Without <code>aria-atomic="true" </code>the screenreader announces only the changed value of year.</p>
 
-<p>With <code>aria-atomic="true"</code>, the screenreader announces "The set year is: <em>changedvalue</em>"</p>
+<p>With <code>aria-atomic="true"</code>, the screenreader announces "The set year is: <em>changed value</em>"</p>
 
 <h3 id="Advanced_use_case_Roster"><span class="mw-headline" id="Use_Case:_Roster">Advanced use case: Roster</span></h3>
 
 <p>A chat site would like to display a list of users currently logged in. Display a list of users where a user's log-in and log-out status will be reflected dynamically (without a page reload).</p>
 
-<pre class="notranslate">&lt;ul id="roster" aria-live="polite" aria-relevant="additions removals"&gt;
+<pre class="brush: html notranslate">&lt;ul id="roster" aria-live="polite" aria-relevant="additions removals"&gt;
 	&lt;!-- use JavaScript to add remove users here--&gt;
 &lt;/ul&gt;
 </pre>

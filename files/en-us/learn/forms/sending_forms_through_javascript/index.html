@@ -33,9 +33,9 @@ tags:
 
 <h3 id="How_is_it_different">How is it different?</h3>
 
-<p><a href="/en-US/docs/AJAX">T</a>he {{domxref("XMLHttpRequest")}} (XHR) DOM object can build HTTP requests, send them, and retrieve their results. Historically, {{domxref("XMLHttpRequest")}} was designed to fetch and send <a href="/en-US/docs/XML">XML</a> as an exchange format, which has since been superceded by <a href="/en-US/docs/JSON">JSON</a>. But neither XML nor JSON fit into form data request encoding. Form data (<code>application/x-www-form-urlencoded</code>) is made of URL-encoded lists of key/value pairs. For transmitting binary data, the HTTP request is reshaped into <code>multipart/form-data</code>.</p>
+<p><a href="/en-US/docs/AJAX">T</a>he {{domxref("XMLHttpRequest")}} (XHR) DOM object can build HTTP requests, send them, and retrieve their results. Historically, {{domxref("XMLHttpRequest")}} was designed to fetch and send <a href="/en-US/docs/XML">XML</a> as an exchange format, which has since been superseded by <a href="/en-US/docs/JSON">JSON</a>. But neither XML nor JSON fit into form data request encoding. Form data (<code>application/x-www-form-urlencoded</code>) is made of URL-encoded lists of key/value pairs. For transmitting binary data, the HTTP request is reshaped into <code>multipart/form-data</code>.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: The <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> is often used in place of XHR these days — it is a modern, updated version of XHR, which works in a similar fashion but has some advantages. Most of the XHR code you'll see in this article could be swapped out for Fetch.</p>
 </div>
 
@@ -84,7 +84,7 @@ function sendData( data ) {
   }
 
   // Combine the pairs into a single string and replace all %-encoded spaces to
-  // the '+' character; matches the behaviour of browser form submissions.
+  // the '+' character; matches the behavior of browser form submissions.
   urlEncodedData = urlEncodedDataPairs.join( '&amp;' ).replace( /%20/g, '+' );
 
   // Define what happens on successful data submission
@@ -122,7 +122,7 @@ btn.addEventListener( 'click', function() {
 
 <h3 id="Using_XMLHttpRequest_and_the_FormData_object">Using XMLHttpRequest and the FormData object</h3>
 
-<p>Building an HTTP request by hand can be overwhelming. Fortunately, the <a href="http://www.w3.org/TR/XMLHttpRequest/" rel="external">XMLHttpRequest specification</a> provides a newer, simpler way to handle form data requests with the {{domxref("XMLHttpRequest/FormData","FormData")}} object.</p>
+<p>Building an HTTP request by hand can be overwhelming. Fortunately, the <a href="https://www.w3.org/TR/XMLHttpRequest/" rel="external">XMLHttpRequest specification</a> provides a newer, simpler way to handle form data requests with the {{domxref("XMLHttpRequest/FormData","FormData")}} object.</p>
 
 <p>The {{domxref("XMLHttpRequest/FormData","FormData")}} object can be used to build form data for transmission, or to get the data within a form element to manage how it's sent. Note that {{domxref("XMLHttpRequest/FormData","FormData")}} objects are "write only", which means you can change them, but not retrieve their contents.</p>
 

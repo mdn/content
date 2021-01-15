@@ -65,9 +65,6 @@ tags:
 <pre class="brush: css example-bad">  margin: 0px;
 </pre>
 
-<ul>
-</ul>
-
 <h3 id="Use_expanded_syntax">Use expanded syntax</h3>
 
 <p>It is often harder to understand what the shorthand is doing and the shorthand can also hide some unwanted default values. It is good to privilege expanded syntax to make your intentions explicit.</p>
@@ -126,13 +123,13 @@ h3 {
 
 <h2 id="Overriding_CSS">Overriding CSS</h2>
 
-<p>Before overriding any CSS rules, check whether overriding is really needed. Sometimes, when copy-pasting older code, it happens that the code in question contains unnecessary overrides. This could be because the CSS that it was overriding got removed in the meantime. In this case, simply dropping the override should work.</p>
+<p>Before overriding any CSS rules, check whether overriding is really needed. Sometimes, when copy-pasting older code, it happens that the code in question contains unnecessary overrides. This could be because the CSS that it was overriding got removed in the meantime. In this case, dropping the override should work.</p>
 
 <p>It is also good practice to look at whether the rule you are overriding is still needed: maybe the UX spec for the component has changed and that rule can actually be updated or removed. When this is the case, don't be afraid to remove or update that rule.</p>
 
 <p>Once the two things above have been checked, check if the other rule you are overriding contains <code>!important</code>, if that is case, try putting it in question, because it might have become obsolete.</p>
 
-<p>Afterwards, check the specificity of the other selector; if it is causing your rule to be overriden, you can try reducing its specificity, either by simplifying the selector or by changing where the rule is placed in the stylesheet. If this isn't possible, you can also try introducing a <code>:not()</code> to prevent the other rule from applying, this is especially relevant for different element states (<code>:hover</code>, <code>:active</code>, <code>[checked]</code> or <code>[disabled]</code>). However, never try to increase the selector of the rule you are adding as it can easily become hard to understand.</p>
+<p>Afterwards, check the specificity of the other selector; if it is causing your rule to be overridden, you can try reducing its specificity, either by simplifying the selector or by changing where the rule is placed in the stylesheet. If this isn't possible, you can also try introducing a <code>:not()</code> to prevent the other rule from applying, this is especially relevant for different element states (<code>:hover</code>, <code>:active</code>, <code>[checked]</code> or <code>[disabled]</code>). However, never try to increase the selector of the rule you are adding as it can easily become hard to understand.</p>
 
 <p>Finally, once you have checked all the things above, you can permit yourself to use <code>!important</code> along with a comment why it is needed.</p>
 
@@ -144,9 +141,9 @@ h3 {
 
 <ol>
  <li><strong>Is the variable value changed at runtime?</strong><br>
-  <em>(Either from JavaScript or overriden by another CSS file)</em><br>
+  <em>(Either from JavaScript or overridden by another CSS file)</em><br>
   <br>
-  <strong>If the answer is no</strong>, consider using a preprocessor variable or simply inlining the value.<br>
+  <strong>If the answer is no</strong>, consider using a preprocessor variable or inlining the value.<br>
    </li>
  <li><strong>Is the variable value used multiple times?</strong><br>
   <br>
@@ -191,11 +188,9 @@ h3 {
  <li>Write {{cssxref("padding")}}<code>: 0 3px 4px;</code> instead of <code>padding: 0 3px 4px 3px;</code>. This makes it more obvious that the padding is symmetrical (so RTL won't be an issue).</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: See <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties">CSS Logical Properties and Values</a> for more information.</p>
 </div>
-
-
 
 <h3 id="Testing">Testing</h3>
 
@@ -279,16 +274,11 @@ h3 {
 
 <p>[2] However there is probably a better way than using absolute positioning.</p>
 
-
-
 <h3 id="Colors">Colors</h3>
 
 <p>For common areas of the Firefox interface (panels, toolbar buttons, etc.), mozilla-central often comes with some useful CSS variables that are adjusted with the correct values for different platform configurations, so using those CSS variables can definitively save some testing time, as you can assume they already work correctly.</p>
 
 <p>Using the <code>currentcolor</code> keyword or inheriting is also good practice, because sometimes the needed value is already in the color or on the parent element. This is especially useful in conjunction with icons using <code>-moz-context-properties: fill;</code> where the icon can adjust to the right platform color automatically from the text color. It is also possible to use <code>currentcolor</code> with other properties like {{cssxref("opacity")}} or {{cssxref("fill-opacity")}} to have different opacities of the platform color.</p>
-
-<ul>
-</ul>
 
 <h3 id="High_contrast_mode">High contrast mode</h3>
 
@@ -324,7 +314,7 @@ h3 {
 
 <p>Using the background/text pairs is especially important to ensure the contrast is respected in all situations. Never mix custom text colors with a system background color and vice-versa.</p>
 
-<p>Note that using system colors is only useful for the chrome area, since content area colors are overriden by Gecko anyway.</p>
+<p>Note that using system colors is only useful for the chrome area, since content area colors are overridden by Gecko anyway.</p>
 
 <h3 id="Writing_media_queries">Writing media queries</h3>
 
@@ -365,9 +355,6 @@ h3 {
   }
 }</pre>
 
-<ul>
-</ul>
-
 <h2 id="Theme_support">Theme support</h2>
 
 <p>Firefox comes built-in with 3 themes: default, light and dark. The built-in light/dark themes are a bit special as they load the <code>compacttheme.css</code> stylesheet. In addition to this, Firefox supports a variety of <a href="/en-US/docs/Mozilla/Add-ons/Themes">WebExtension themes</a> that can be installed from AMO. For testing purposes, <a href="https://addons.mozilla.org/en-US/firefox/addon/arc-dark-theme-we/">here is an example of a WebExtension theme.</a></p>
@@ -397,11 +384,11 @@ h3 {
 
 <h3 id="Layout">Layout</h3>
 
-<p>Mixing XUL flexbox and HTML flexbox can lead to undefined behaviour.</p>
+<p>Mixing XUL flexbox and HTML flexbox can lead to undefined behavior.</p>
 
 <h3 id="CSS_selectors">CSS selectors</h3>
 
-<p>When targetting the root element of a page, using <code>:root</code> is the most performant way of doing so.</p>
+<p>When targeting the root element of a page, using <code>:root</code> is the most performant way of doing so.</p>
 
 <h3 id="Reflows_and_style_flushes">Reflows and style flushes</h3>
 

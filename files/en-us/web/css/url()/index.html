@@ -12,10 +12,10 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <code><strong>url()</strong></code> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functionals">function</a> is used to include a file. The parameter is an absolute URL, a relative URL, or a data URI. The <code><strong>url()</strong></code> function can be passed as a parameter of another CSS functions, like the {{cssxref('attr()')}} function. Depending on the property for which it is a value, the resource sought can be an image, font, or a stylesheet. The <code>url()</code> functional notation is the value for the <code>&lt;url&gt;</code> data type.</span></p>
+<p><span class="seoSummary">The <code><strong>url()</strong></code> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> is used to include a file. The parameter is an absolute URL, a relative URL, or a data URI. The <code><strong>url()</strong></code> function can be passed as a parameter of another CSS functions, like the {{cssxref('attr()')}} function. Depending on the property for which it is a value, the resource sought can be an image, font, or a stylesheet. The <code>url()</code> functional notation is the value for the <code>&lt;url&gt;</code> data type.</span></p>
 
-<div class="blockIndicator note">
-<p><strong>URI or URL?</strong> There is a difference between a {{Glossary("URI")}} and a {{Glossary("URL")}}. A URI simply identifies a resource. A URL is a type of URI, and describes the <em>location</em> of a resource. A URI can be either a URL or a name ({{Glossary("URN")}}) of a resource.</p>
+<div class="notecard note">
+<p><strong>URI or URL?</strong> There is a difference between a {{Glossary("URI")}} and a {{Glossary("URL")}}. A URI identifies a resource. A URL is a type of URI, and describes the <em>location</em> of a resource. A URI can be either a URL or a name ({{Glossary("URN")}}) of a resource.</p>
 
 <p>In CSS Level 1, the <code>url()</code> functional notation described only true URLs. In CSS Level 2, the definition of <code>url()</code> was extended to describe any URI, whether a URL or a URN. Confusingly, this meant that <code>url()</code> could be used to create a <code>&lt;uri&gt;</code> CSS data type. This change was not only awkward but, debatably, unnecessary, since URNs are almost never used in actual CSS. To alleviate the confusion, CSS Level 3 returned to the narrower, initial definition. Now, <code>url()</code> denotes only true <code>&lt;url&gt;</code>s.</p>
 </div>
@@ -70,7 +70,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 	<dl>
 		<dt>&lt;url&gt;</dt>
 		<dd>A url, which is a relative or absolute address, or pointer, to the web resource to be included, or a data uri, optionally in single or double quotes. Quotes are required if the URL includes parentheses, whitespace, or quotes, unless these characters are escaped, or if the address includes control characters above 0x7e. Double quotes cannot occur inside double quotes and single quotes cannot occur inside single quotes unless escaped. The following are all valid and equivalent:
-		<pre class="syntaxbox notranslate">&lt;css_property&gt;: url("https://example.com/image.png")
+		<pre class="brush: css notranslate">&lt;css_property&gt;: url("https://example.com/image.png")
 &lt;css_property&gt;: url('https://example.com/image.png')
 &lt;css_property&gt;: url(https://example.com/image.png)</pre>
 
@@ -86,7 +86,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 
 <h3 id="Formal_syntax">Formal syntax</h3>
 
-<pre class="syntaxbox notranslate">url( <a href="/en-US/docs/Web/CSS/string">&lt;string&gt;</a> &lt;url-modifier&gt;* )</pre>
+<pre class="brush: css notranslate">url( <a href="/en-US/docs/Web/CSS/string">&lt;string&gt;</a> &lt;url-modifier&gt;* )</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -198,8 +198,6 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <div>{{Compat("css.types.url")}}</div>
 

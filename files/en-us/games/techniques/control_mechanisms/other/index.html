@@ -65,7 +65,7 @@ if(this.cursors.right.isDown) {
 
 <p>Have you ever thought about controlling a game only with your hands? It's possible with <a href="https://www.leapmotion.com/">Leap Motion</a>, an immersive controller for games and apps.</p>
 
-<p>Leapmotion is becoming more and more popular due to very good integration with VR headsets — demoing <a href="https://mozvr.com/webvr-demos/demos/rainbowmembrane/">Rainbow Membrane</a> on an Oculus Rift with Leap Motion attached to it was voted one of the best WebVR experiences by JavaScript developers visiting demo booths at conferences around the world.</p>
+<p>Leapmotion is becoming more and more popular due to very good integration with VR headsets — demoing <a href="https://mozilla.github.io/rainbow/">Rainbow Membrane</a> on an Oculus Rift with Leap Motion attached to it was voted one of the best WebVR experiences by JavaScript developers visiting demo booths at conferences around the world.</p>
 
 <p>As well as being great for virtual interfaces, it can also be used for a casual 2D gaming experiences. It would be very difficult to do everything with only your hands, but it's totally doable for the simple Captain Roger's gameplay — steering the ship and shooting the bullets.</p>
 
@@ -126,7 +126,7 @@ var grabStrength = 0;</pre>
 
 <p><img alt="Leap Motion controller support in the game, with visible output for roll, pitch and strength." src="https://mdn.mozillademos.org/files/14161/controls-leapmotion.png" style="border-style: solid; border-width: 1px; display: block; height: 474px; margin: 0px auto; width: 600px;"></p>
 
-<p>That's it — everything you needed for a working Leap Motion example in JavaScript is here already. You can explore the <code>hand</code>'s properties and implement any behaviour you like right inside your game.</p>
+<p>That's it — everything you needed for a working Leap Motion example in JavaScript is here already. You can explore the <code>hand</code>'s properties and implement any behavior you like right inside your game.</p>
 
 <h2 id="Doppler_effect">Doppler effect</h2>
 
@@ -134,7 +134,7 @@ var grabStrength = 0;</pre>
 
 <p><img alt="Doppler effect as a way to control the scroll of an article on a laptop using hand gesture." src="https://mdn.mozillademos.org/files/14131/controls-doppler.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 575px;"></p>
 
-<p>If the frequency of the bounced sound is shifted from the original one, then we can detect that the movement of that object occured. That way we can detect a hand movement by using only a built-in microphone!</p>
+<p>If the frequency of the bounced sound is shifted from the original one, then we can detect that the movement of that object occurred. That way we can detect a hand movement by using only a built-in microphone!</p>
 
 <p>This can be accomplished using <a href="https://github.com/DanielRapp/doppler">a small library</a> created by Daniel Rapp — it can be as simple as calculating the difference between two frequencies:</p>
 
@@ -158,7 +158,7 @@ var grabStrength = 0;</pre>
     var proximity = event.value;
 });</pre>
 
-<p>The <code>min</code> and <code>max</code> values are the minimum and the maximum distances respectively between which the sensor can detect the exact <code>proximity</code> value. All three are calculated in centimetres.</p>
+<p>The <code>min</code> and <code>max</code> values are the minimum and the maximum distances respectively between which the sensor can detect the exact <code>proximity</code> value. All three are calculated in centimeters.</p>
 
 <div class="note">
 <p><strong>Note</strong>: See the {{domxref("DeviceProximityEvent")}} reference page for more details.</p>

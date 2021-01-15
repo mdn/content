@@ -23,7 +23,7 @@ tags:
  <li><a href="/en-US/docs/Web/CSS/scroll-margin-inline-start"><code>scroll-margin-inline-start</code></a></li>
 </ul>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: css notranslate">/* &lt;length&gt; values */
 scroll-margin-inline: 10px;
@@ -35,7 +35,7 @@ scroll-margin-inline: initial;
 scroll-margin-inline: unset;
 </pre>
 
-<h3 id="Values" name="Values">Values</h3>
+<h3 id="Values">Values</h3>
 
 <dl>
  <dt><code><var>&lt;length&gt;</var></code></dt>
@@ -52,7 +52,7 @@ scroll-margin-inline: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+<pre class="brush: css notranslate">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -123,7 +123,7 @@ scroll-margin-inline: unset;
 
 <p>This means that when scrolling past the middle child elements, the scrolling will snap to <code>1rem</code> outside the inline end edge of the second <code>&lt;div&gt;</code>, and <code>2rems</code> outside the inline end edge of the third <code>&lt;div&gt;</code>.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Here we are setting <code>scroll-margin</code> on the start <em>and</em> end of the inline axis (x in our case), but only the end edge is really relevant. It would work just as well here to only set a scroll margin on that one edge, for example with <code>scroll-margin-inline: 0 1rem</code>, or <code><a href="/en-US/docs/Web/CSS/scroll-margin-inline-end">scroll-margin-inline-end</a>: 1rem</code>.</p>
 </div>
 
@@ -157,3 +157,10 @@ scroll-margin-inline: unset;
 <p class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
 <p>{{Compat("css.properties.scroll-margin-inline")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li><a href="/en-US/docs/Web/CSS/CSS_Scroll_Snap">CSS Scroll Snap</a></li>
+  <li><a href="https://developers.google.com/web/updates/2018/07/css-scroll-snap">Well-Controlled Scrolling with CSS Scroll Snap</a></li>
+</ul>

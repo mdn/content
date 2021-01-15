@@ -19,7 +19,7 @@ tags:
 
 <p>The complete source code for this project is <a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2">available on GitHub</a>.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>This project uses the <a href="http://glmatrix.net/">glMatrix</a> library to perform its matrix operations, so you will need to include that in your project. We're loading a copy from a CDN in our HTML's {{HTMLElement("head")}}.</p>
 </div>
 
@@ -67,7 +67,7 @@ tags:
 
 <p>The <strong>fragment shader</strong> is called once for every pixel on each shape to be drawn, after the shape's vertices have been processed by the vertex shader. Its job is to determine the color of that pixel by figuring out which texel (that is, the pixel from within the shape's texture) to apply to the pixel, getting that texel's color, then applying the appropriate lighting to the color. The color is then returned to the WebGL layer by storing it in the special variable <code>gl_FragColor</code>. That color is then drawn to the screen in the correct position for the shape's corresponding pixel.</p>
 
-<p>In this case, we're simply returning white every time, since we're just drawing a white square, with no lighting in use.</p>
+<p>In this case, we're returning white every time, since we're just drawing a white square, with no lighting in use.</p>
 
 <pre class="brush: js notranslate">  const fsSource = `
     void main() {
@@ -299,7 +299,7 @@ function loadShader(gl, type, source) {
 
 <p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample2/index.html', 670, 510) }}</p>
 
-<p><a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2">View the complete code</a> | <a href="http://mdn.github.io/webgl-examples/tutorial/sample2/">Open this demo on a new page</a></p>
+<p><a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2">View the complete code</a> | <a href="https://mdn.github.io/webgl-examples/tutorial/sample2/">Open this demo on a new page</a></p>
 
 <h2 id="Matrix_utility_operations">Matrix utility operations</h2>
 
@@ -310,7 +310,7 @@ function loadShader(gl, type, source) {
 <ul>
  <li><a href="https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html">Matrices</a> on WebGLFundamentals</li>
  <li><a class="external" href="http://mathworld.wolfram.com/Matrix.html">Matrices</a> on Wolfram MathWorld</li>
- <li><a class="external" href="http://en.wikipedia.org/wiki/Matrix_(mathematics)">Matrix</a> on Wikipedia</li>
+ <li><a class="external" href="https://en.wikipedia.org/wiki/Matrix_(mathematics)">Matrix</a> on Wikipedia</li>
 </ul>
 
 <p>{{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}</p>

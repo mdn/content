@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.bookmarks.onChanged.addListener(listener)
+<pre class="brush:js">browser.bookmarks.onChanged.addListener(listener)
 browser.bookmarks.onChanged.removeListener(listener)
 browser.bookmarks.onChanged.hasListener(listener)
 </pre>
@@ -60,13 +60,13 @@ browser.bookmarks.onChanged.hasListener(listener)
 	</dd>
 </dl>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>Multiple events may occur when a bookmark changes, and that changeInfo object may contain only the data that has changed, rather than all the data for the bookmark. In other words, if the <code>url</code> for a bookmark changes, the changeInfo may only contain the new <code>url</code> information.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">function handleChanged(id, changeInfo) {
+<pre class="notranslate brush: js">function handleChanged(id, changeInfo) {
   console.log("Item: " + id + " changed");
   console.log("Title: " + changeInfo.title);
   console.log("Url: " + changeInfo.url);

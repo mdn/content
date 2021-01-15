@@ -12,7 +12,7 @@ tags:
 ---
 <p>{{SeeCompatTable}}{{APIRef("Streams")}}</p>
 
- <p>The <strong><code>WritableStreamDefaultWriter</code></strong> interface of the the <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> is the object returned by {{domxref("WritableStream.getWriter()")}} and once created locks the writer to the <code>WritableStream</code> ensuring that no other streams can write to the underlying sink.</p>
+ <p>The <strong><code>WritableStreamDefaultWriter</code></strong> interface of the <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> is the object returned by {{domxref("WritableStream.getWriter()")}} and once created locks the writer to the <code>WritableStream</code> ensuring that no other streams can write to the underlying sink.</p>
 
  <h2 id="Constructor">Constructor</h2>
 
@@ -48,9 +48,6 @@ tags:
  <h2 id="Examples">Examples</h2>
 
  <p>The following example shows the creation of a <code>WritableStream</code> with a custom sink and an API-supplied queuing strategy. It then calls a function called <code>sendMessage()</code>, passing the newly created stream and a string. Inside this function it calls the stream's <code>getWriter()</code> method, which returns an instance of {{domxref("WritableStreamDefaultWriter")}}. A <code>forEach()</code> call is used to write each chunk of the string to the stream. Finally, <code>write()</code> and <code>close()</code> return promises that are processed to deal with success or failure of chunks and streams.</p>
-
- <ul>
- </ul>
 
  <pre class="brush: js notranslate"> const list = document.querySelector('ul');
 
@@ -136,8 +133,4 @@ tags:
 
  <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
  <p>{{Compat("api.WritableStreamDefaultWriter")}}</p>
-
- <div style="display: none;"><a href="https://www.viewerboss.com" style="color: #fff;">twitch viewer bot</a></div>

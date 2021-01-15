@@ -166,7 +166,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));</pre>
 
 <h3 id="Defining_and_creating_models">Defining and creating models</h3>
 
-<p>Models are <em>defined </em>using the <code>Schema</code> interface. The Schema allows you to define the fields stored in each document along with their validation requirements and default values. In addition, you can define static and instance helper methods to make it easier to work with your data types, and also virtual properties that you can use like any other field, but which aren't actually stored in the database (we'll discuss a bit further below).</p>
+<p>Models are <em>defined</em> using the <code>Schema</code> interface. The Schema allows you to define the fields stored in each document along with their validation requirements and default values. In addition, you can define static and instance helper methods to make it easier to work with your data types, and also virtual properties that you can use like any other field, but which aren't actually stored in the database (we'll discuss a bit further below).</p>
 
 <p>Schemas are then "compiled" into models using the <code>mongoose.model()</code> method. Once you have a model you can use it to find, create, update, and delete objects of the given type.</p>
 
@@ -210,7 +210,7 @@ var SomeModel = mongoose.model('SomeModel', SomeModelSchema );</strong></pre>
 <p>The first argument is the singular name of the collection that will be created for your model (Mongoose will create the database collection for the above model <em>SomeModel</em> above), and the second argument is the schema you want to use in creating the model.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Once you've defined your model classes you can use them to create, update, or delete records, and run queries to get all records or particular subsets of records. We'll show you how to do this in the <a href="#Using_models">Using models</a> section, and when we create our views.</p>
+<p><strong>Note:</strong> Once you've defined your model classes you can use them to create, update, or delete records, and run queries to get all records or particular subsets of records. We'll show you how to do this in the <a href="#using_models">Using models</a> section, and when we create our views.</p>
 </div>
 
 <h4 id="Schema_types_fields">Schema types (fields)</h4>
@@ -481,7 +481,7 @@ bob.save(function (err) {
 </pre>
 </div>
 
-<p>This is almost everything you need to know about working with related items<em> for this tutorial</em>. For more detailed information see <a href="http://mongoosejs.com/docs/populate.html">Population</a> (Mongoose docs).</p>
+<p>This is almost everything you need to know about working with related items <em>for this tutorial</em>. For more detailed information see <a href="http://mongoosejs.com/docs/populate.html">Population</a> (Mongoose docs).</p>
 
 <h3 id="One_schemamodel_per_file">One schema/model per file</h3>
 
@@ -531,7 +531,7 @@ SomeModel.find(callback_function);</pre>
  <li>This will open the <em>Create New Cluster</em> screen.<br>
   <img alt="Choose a cloud provider when using MongoDB Atlas." src="https://mdn.mozillademos.org/files/16511/MongoDB_Atlas_-_ChooseProviderRegion.jpg" style="border-style: solid; border-width: 1px; height: 656px; width: 742px;">
   <ul>
-   <li>Select any provider from the <em>Cloud Provider &amp; Region </em>section. Different providers offer different regions.</li>
+   <li>Select any provider from the <em>Cloud Provider &amp; Region</em> section. Different providers offer different regions.</li>
    <li>Select any region marked "FREE TIER AVAILABLE".</li>
    <li>Click the <strong>Create Cluster</strong> button (creation of the cluster will take some minutes).</li>
   </ul>
@@ -556,7 +556,7 @@ SomeModel.find(callback_function);</pre>
   <img alt="Details during database creation on MongoDB Atlas." src="https://mdn.mozillademos.org/files/16520/MongoDB_Atlas_-_DatabaseDetails.jpg" style="border-style: solid; border-width: 1px; height: 441px; width: 416px;">
   <ul>
    <li>Enter the name for the new database as <code>local_library</code>.</li>
-   <li>Enter the name of the collection as <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">Collection0</span></font>.</li>
+   <li>Enter the name of the collection as <code>Collection0</code>.</li>
    <li>Click the <strong>Create</strong> button to create the database.</li>
   </ul>
  </li>
@@ -573,12 +573,12 @@ SomeModel.find(callback_function);</pre>
   <ul>
    <li>Click the <strong>Allow Access from Anywhere</strong> button.<br>
     This will open a form with <code>0.0.0.0/0</code> pre-seeded for the IP Address. Click the <strong>Add IP Address</strong> button.
-    <div class="blockIndicator note">
+    <div class="notecard note">
     <p><strong>Note:</strong> It is a best practice to limit the IP addresses that can connect to your database and other resources. Here we allow a connection from anywhere because we don't know where the request will come from after deployment.</p>
     </div>
    </li>
    <li>Enter a username and password and click <strong>Create MongoDB User</strong> button.
-    <div class="blockIndicator note">
+    <div class="notecard note">
     <p><strong>Note:</strong> Avoid using special characters in your MongoDB user password as mongoose may not parse the connection string properly.</p>
     </div>
    </li>
@@ -593,7 +593,7 @@ SomeModel.find(callback_function);</pre>
   </ul>
  </li>
  <li>This will open the <em>Connect</em> screen.<br>
-  <img alt="Choose the Short SRV connection when settinup a connection on MongoDB Atalas." src="https://mdn.mozillademos.org/files/17153/MongoDB_Atlas_-_ConnectForShortSRV_2020-03.PNG" style="border-style: solid; border-width: 1px; height: 649px; width: 666px;">
+  <img alt="Choose the Short SRV connection when setting up a connection on MongoDB Atlas." src="https://mdn.mozillademos.org/files/17153/MongoDB_Atlas_-_ConnectForShortSRV_2020-03.PNG" style="border-style: solid; border-width: 1px; height: 649px; width: 666px;">
   <ul>
    <li>Click the <strong>Copy</strong> button to copy the connection string.</li>
    <li>Save this string somewhere safe.</li>
@@ -607,7 +607,7 @@ SomeModel.find(callback_function);</pre>
 
 <h2 id="Install_Mongoose">Install Mongoose</h2>
 
-<p>Open a command prompt and navigate to the directory where you created your <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">skeleton Local Library website</a>. Enter the following command to install Mongoose (and its dependencies) and add it to your <strong>package.json</strong> file, unless you have already done so when reading the <a href="#Installing_Mongoose_and_MongoDB">Mongoose Primer</a> above.</p>
+<p>Open a command prompt and navigate to the directory where you created your <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">skeleton Local Library website</a>. Enter the following command to install Mongoose (and its dependencies) and add it to your <strong>package.json</strong> file, unless you have already done so when reading the <a href="#installing_mongoose_and_mongodb">Mongoose Primer</a> above.</p>
 
 <pre class="brush: bash notranslate">npm install mongoose
 </pre>
@@ -623,11 +623,11 @@ mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));</pre>
 
-<p>As discussed <a href="#Connecting_to_MongoDB">in the Mongoose primer above</a>, this code creates the default connection to the database and binds to the error event (so that errors will be printed to the console). </p>
+<p>As discussed <a href="#connecting_to_mongodb">in the Mongoose primer above</a>, this code creates the default connection to the database and binds to the error event (so that errors will be printed to the console). </p>
 
 <h2 id="Defining_the_LocalLibrary_Schema">Defining the LocalLibrary Schema</h2>
 
-<p>We will define a separate module for each model, as <a href="#One_schemamodel_per_file">discussed above</a>. Start by creating a folder for our models in the project root (<strong>/models</strong>) and then create separate files for each of the models:</p>
+<p>We will define a separate module for each model, as <a href="#one_schemamodel_per_file">discussed above</a>. Start by creating a folder for our models in the project root (<strong>/models</strong>) and then create separate files for each of the models:</p>
 
 <pre class="notranslate">/express-locallibrary-tutorial  //the project root
   <strong>/models</strong>
@@ -680,7 +680,7 @@ module.exports = mongoose.model('Author', AuthorSchema);
 
 </pre>
 
-<p>We've also declared a <a href="#Virtual_properties">virtual</a> for the AuthorSchema named "url" that returns the absolute URL required to get a particular instance of the model — we'll use the property in our templates whenever we need to get a link to a particular author.</p>
+<p>We've also declared a <a href="#virtual_properties">virtual</a> for the AuthorSchema named "url" that returns the absolute URL required to get a particular instance of the model — we'll use the property in our templates whenever we need to get a link to a particular author.</p>
 
 <div class="note">
 <p><strong>Note:</strong> Declaring our URLs as a virtual in the schema is a good idea because then the URL for an item only ever needs to be changed in one place.<br>
@@ -700,10 +700,10 @@ var Schema = mongoose.Schema;
 var BookSchema = new Schema(
   {
     title: {type: String, required: true},
-  <strong>  author: {type: Schema.Types.ObjectId, ref: 'Author', required: true},</strong>
+    <strong>author: {type: Schema.Types.ObjectId, ref: 'Author', required: true},</strong>
     summary: {type: String, required: true},
     isbn: {type: String, required: true},
-  <strong>  genre: [{type: Schema.Types.ObjectId, ref: 'Genre'}]</strong>
+    <strong>genre: [{type: Schema.Types.ObjectId, ref: 'Genre'}]</strong>
   }
 );
 
@@ -770,7 +770,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);</pre>
 <ul>
  <li>The model should have a <code>String</code> SchemaType called <code>name</code> to describe the genre.</li>
  <li>This name should be required and have between 3 and 100 characters.</li>
- <li>Declare a <a href="#Virtual_properties">virtual</a> for the genre's URL, named <code>url</code>.</li>
+ <li>Declare a <a href="#virtual_properties">virtual</a> for the genre's URL, named <code>url</code>.</li>
  <li>Export the model.</li>
 </ul>
 
@@ -790,8 +790,8 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);</pre>
  <li>Enter the following commands in the project root to install the <em>async</em> module that is required by the script (we'll discuss this in later tutorials, )
   <pre class="brush: bash notranslate">npm install async</pre>
  </li>
- <li>Run the script using node in your command prompt, passing in the URL of your <em>MongoDB</em> database (the same one you replaced the <em>insert_your_database_url_here </em>placeholder with, inside <code>app.js</code> earlier):
-  <pre class="brush: bash notranslate">node populatedb &lt;your mongodb url&gt;​​​​</pre>
+ <li>Run the script using node in your command prompt, passing in the URL of your <em>MongoDB</em> database (the same one you replaced the <em>insert_your_database_url_here</em> placeholder with, inside <code>app.js</code> earlier):
+  <pre class="brush: bash notranslate">node populatedb &lt;your mongodb url&gt;</pre>
  </li>
  <li>The script should run through to completion, displaying items as it creates them in the terminal.</li>
 </ol>

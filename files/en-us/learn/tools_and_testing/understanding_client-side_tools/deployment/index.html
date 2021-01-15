@@ -38,12 +38,12 @@ tags:
 <p>Here's just a few things to consider for this particular project:</p>
 
 <ul>
- <li>Generating a production build: Ensuring files are minimised, chunked, have tree-shaking applied, and that versions are "cache busted".</li>
+ <li>Generating a production build: Ensuring files are minimized, chunked, have tree-shaking applied, and that versions are "cache busted".</li>
  <li>Running tests: These can range from "is this code formatted properly?" to "does this thing do what I expect?", and ensuring failing tests prevent deployment.</li>
  <li>Actually deploying the updated code to a live URL: Or potentially a staging URL so it can be reviewed first.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Cache busting is a new term that we haven't met before in the module. This is the strategy of breaking a browser's own caching mechanism, which forces the browser to download a new copy of your code. Parcel (and indeed many other tools) will generate filenames that are unique to each new build. This unique filename "busts" your browser's cache, thereby making sure the browser downloads the fresh code each time an update is made to the deployed code.</p>
 </div>
 
@@ -85,7 +85,7 @@ tags:
   <strong>"build": "parcel build src/index.html"</strong>
 }</pre>
 
-  <div class="blockIndicator note">
+  <div class="notecard note">
   <p><strong>Note</strong>: If the <code>scripts</code> property already has a command inside it, put a comma at the end of it. Keep the JSON valid.</p>
   </div>
  </li>
@@ -99,8 +99,8 @@ tags:
   <pre class="brush: bash">dist/src.99d8a31a.js.map       446.15 KB     63ms
 dist/src.99d8a31a.js           172.51 KB    5.55s
 dist/stars.7f1dd035.svg          6.31 KB    145ms
-dist/asteriod2.3ead4904.svg      3.51 KB    155ms
-dist/asteriod1.698d75e9.svg       2.9 KB    153ms
+dist/asteroid2.3ead4904.svg      3.51 KB    155ms
+dist/asteroid1.698d75e9.svg       2.9 KB    153ms
 dist/src.84f2edd1.css.map        2.57 KB      3ms
 dist/src.84f2edd1.css            1.25 KB    1.53s
 dist/bg.084d3fd3.svg               795 B    147ms
@@ -143,7 +143,7 @@ dist/index.html                    354 B    944ms</pre>
 
   <pre class="brush: bash">git commit -m ’committing initial code’</pre>
 
-  <div class="blockIndicator note">
+  <div class="notecard note">
   <p><strong>Note</strong>: Although you're free to write whatever you wish in the commit message, there's some useful tips around the web on good commit messages. Keep them short, concise, and descriptive, so they clearly describe what the change does.  </p>
   </div>
  </li>
@@ -179,7 +179,7 @@ dist/index.html                    354 B    944ms</pre>
  </li>
 </ol>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you are interested in using the SSH option, thereby avoiding the need to enter your username and password every time you push to GitHub, <a href="https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh">this tutorial walks you through how</a>.</p>
 </div>
 
@@ -191,7 +191,7 @@ dist/index.html                    354 B    944ms</pre>
 
 <p>Deploying from GitHub to Netlify is surprisingly simple once you know the steps, particularly with "static websites" such as this project.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: There are also a lot of <a href="https://www.netlify.com/tags/tutorial/">guides and tutorials on Netlify</a> to help you improve your development workflow.</p>
 </div>
 
@@ -332,7 +332,7 @@ git push github master</pre>
 <p>Let's summarise all the parts of the toolchain:</p>
 
 <ul>
- <li>Code quality and maintenance are performed by eslint and prettier. These tools are added as <code>devDependancies</code> to the project via <code>npm install --dev eslint prettier eslint-plugin-react</code> (the eslint plugin is needed because this particular project uses React).</li>
+ <li>Code quality and maintenance are performed by eslint and prettier. These tools are added as <code>devDependencies</code> to the project via <code>npm install --dev eslint prettier eslint-plugin-react</code> (the eslint plugin is needed because this particular project uses React).</li>
  <li>There are two configuration files that the code quality tools read: <code>.eslintrc</code> and <code>.prettierrc</code>.</li>
  <li>During development, we use Parcel to handle our dependencies. <code>parcel src/index.html</code> is running in the background to watch for changes and to automatically build our source.</li>
  <li>Deployment is handled by pushing our changes to Github (on the "master" branch), which triggers a build and deployment on Netlify to publish the project. For our instance this URL is <a href="near-misses.netlify.com">near-misses.netlify.com</a>; you will have your own unique URL.</li>

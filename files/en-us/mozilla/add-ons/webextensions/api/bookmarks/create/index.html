@@ -16,7 +16,7 @@ tags:
 
 <p>Creates a bookmark or folder as a child of the {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} with the specified <code>parentId</code>. To create a folder, omit or leave empty the {{WebExtAPIRef("bookmarks.CreateDetails", "CreateDetails", "url")}} parameter.</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>If your extension tries to create a new bookmark in the bookmark tree's root node, it raises an error: "<em>The bookmark root cannot be modified</em>" and the bookmark won't be created.</p>
 </div>
 
@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var createBookmark = browser.bookmarks.create(
+<pre class="brush:js">var createBookmark = browser.bookmarks.create(
   bookmark                  // CreateDetails object
 )
 </pre>
@@ -44,7 +44,7 @@ tags:
 
 <p>This example creates a bookmark for this page, placing it in the default folder ("Other Bookmarks" in Firefox and Chrome).</p>
 
-<pre class="brush: js">function onCreated(node) {
+<pre class="notranslate brush: js">function onCreated(node) {
   console.log(node);
 }
 

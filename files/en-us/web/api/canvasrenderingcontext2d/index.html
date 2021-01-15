@@ -61,9 +61,9 @@ ctx.stroke();
  <dt>{{domxref("CanvasRenderingContext2D.clearRect()")}}</dt>
  <dd>Sets all pixels in the rectangle defined by starting point <em>(x, y)</em> and size <em>(width, height)</em> to transparent black, erasing any previously drawn content.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.fillRect()")}}</dt>
- <dd>Draws a filled rectangle at <em>(x, y) </em>position whose size is determined by <em>width</em> and <em>height</em>.</dd>
+ <dd>Draws a filled rectangle at <em>(x, y)</em> position whose size is determined by <em>width</em> and <em>height</em>.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.strokeRect()")}}</dt>
- <dd>Paints a rectangle which has a starting point at <em>(x, y)</em> and has a<em> w</em> width and an <em>h</em> height onto the canvas, using the current stroke style.</dd>
+ <dd>Paints a rectangle which has a starting point at <em>(x, y)</em> and has a <em>w</em> width and an <em>h</em> height onto the canvas, using the current stroke style.</dd>
 </dl>
 
 <h3 id="Drawing_text">Drawing text</h3>
@@ -74,7 +74,7 @@ ctx.stroke();
  <dt>{{domxref("CanvasRenderingContext2D.fillText()")}}</dt>
  <dd>Draws (fills) a given text at the given (x, y) position.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.strokeText()")}}</dt>
- <dd>Draws (strokes) a given text at the given (x, y)<em> </em>position.</dd>
+ <dd>Draws (strokes) a given text at the given (x, y) position.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.measureText()")}}</dt>
  <dd>Returns a {{domxref("TextMetrics")}} object.</dd>
 </dl>
@@ -174,7 +174,7 @@ ctx.stroke();
  <dt>{{domxref("CanvasRenderingContext2D.ellipse()")}}</dt>
  <dd>Adds an elliptical arc to the current path.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.rect()")}}</dt>
- <dd>Creates a path for a rectangle at<em> </em>position (x, y) with a size that is determined by <em>width</em> and <em>height</em>.</dd>
+ <dd>Creates a path for a rectangle at position (x, y) with a size that is determined by <em>width</em> and <em>height</em>.</dd>
 </dl>
 
 <h3 id="Drawing_paths">Drawing paths</h3>
@@ -253,9 +253,6 @@ ctx.stroke();
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}} {{experimental_inline}}</dt>
  <dd>Image smoothing mode; if disabled, images will not be smoothed if scaled.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("CanvasRenderingContext2D.imageSmoothingQuality")}} {{experimental_inline}}</dt>
  <dd>Allows you to set the quality of image smoothing.</dd>
 </dl>
@@ -271,6 +268,8 @@ ctx.stroke();
  <dd>Restores the drawing style state to the last element on the 'state stack' saved by <code>save()</code>.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.canvas")}}</dt>
  <dd>A read-only back-reference to the {{domxref("HTMLCanvasElement")}}. Might be {{jsxref("null")}} if it is not associated with a {{HTMLElement("canvas")}} element.</dd>
+ <dt>{{domxref("CanvasRenderingContext2D.getContextAttributes()")}}</dt>
+ <dd>Returns an object containing the actual context attributes. Context attributes can be requested with {{domxref("HTMLCanvasElement.getContext()")}}.</dd>
 </dl>
 
 <h3 id="Hit_regions">Hit regions</h3>
@@ -346,7 +345,6 @@ ctx.stroke();
  <dd>Intended for HD backing stores, but removed from canvas specifications.</dd>
 </dl>
 
-
 <h3 id="Gecko_only">Gecko only</h3>
 
 <h4 id="Prefixed_APIs">Prefixed APIs</h4>
@@ -359,7 +357,7 @@ ctx.stroke();
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.mozImageSmoothingEnabled</code></dt>
  <dd>See {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}.</dd>
  <dt>{{non-standard_inline}} {{deprecated_inline}} <code>CanvasRenderingContext2D.mozTextStyle</code></dt>
- <dd>Introduced in in Gecko 1.9, deprecated in favor of the {{domxref("CanvasRenderingContext2D.font")}} property.</dd>
+ <dd>Introduced in Gecko 1.9, deprecated in favor of the {{domxref("CanvasRenderingContext2D.font")}} property.</dd>
  <dt>{{non-standard_inline}} {{obsolete_inline}} <code>CanvasRenderingContext2D.mozDrawText()</code></dt>
  <dd>This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0. Use {{domxref("CanvasRenderingContext2D.strokeText()")}} or {{domxref("CanvasRenderingContext2D.fillText()")}} instead.</dd>
  <dt>{{non-standard_inline}} {{obsolete_inline}} <code>CanvasRenderingContext2D.mozMeasureText()</code></dt>
@@ -383,7 +381,7 @@ ctx.stroke();
 
 <dl>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.msFillRule</code></dt>
- <dd>The <a class="external" href="http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t" title="http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t">fill rule</a> to use. This must be one of <code>evenodd</code> or <code>nonzero</code> (default).</dd>
+ <dd>The <a class="external" href="http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t">fill rule</a> to use. This must be one of <code>evenodd</code> or <code>nonzero</code> (default).</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
@@ -406,7 +404,6 @@ ctx.stroke();
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("api.CanvasRenderingContext2D")}}</p>
 </div>

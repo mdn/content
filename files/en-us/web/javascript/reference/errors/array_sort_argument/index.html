@@ -13,7 +13,7 @@ tags:
 
 <h2 id="Message">Message</h2>
 
-<pre class="syntaxbox">TypeError: argument is not a function object (Edge)
+<pre class="brush: html notranslate">TypeError: argument is not a function object (Edge)
 TypeError: invalid Array.prototype.sort argument (Firefox)
 </pre>
 
@@ -38,7 +38,6 @@ var cmp = { asc: (x, y) =&gt; x &gt;= y, dsc: (x, y) =&gt; x &lt;= y };
 <h3 id="Valid_cases">Valid cases</h3>
 
 <pre class="brush: js example-good">[1, 3, 2].sort();   // [1, 2, 3]
-
 
 var cmp = { asc: (x, y) =&gt; x &gt;= y, dsc: (x, y) =&gt; x &lt;= y };
 [1, 3, 2].sort(cmp[this.key || 'asc']); // [1, 2, 3]</pre>

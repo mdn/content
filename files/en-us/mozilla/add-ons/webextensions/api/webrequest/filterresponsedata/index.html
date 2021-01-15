@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var filter = browser.webRequest.filterResponseData(
+<pre class="brush:js">var filter = browser.webRequest.filterResponseData(
   requestId       // string
 )
 </pre>
@@ -41,7 +41,7 @@ tags:
 
 <p>This example, taken from the <a href="https://github.com/mdn/webextensions-examples/tree/master/http-response">http-response</a> example extension, creates a filter in {{WebExtAPIRef("webRequest.onBeforeRequest")}} and uses it, to modify the first chunk of the response:</p>
 
-<pre class="brush: js">function listener(details) {
+<pre class="notranslate brush: js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let decoder = new TextDecoder("utf-8");
   let encoder = new TextEncoder();
@@ -67,7 +67,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>{{WebExtExamples}}</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>Note that this example only works for small requests that aren't chunked or streamed. More advanced examples are documented with {{WebExtAPIRef("webRequest.StreamFilter.ondata")}}.</p>
 </div>
 

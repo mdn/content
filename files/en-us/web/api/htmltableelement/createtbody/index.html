@@ -1,0 +1,66 @@
+---
+title: 'HTMLTableElement: createTBody()'
+slug: Web/API/HTMLTableElement/createTBody
+tags:
+- API
+- HTML DOM
+- HTMLTableElement
+- Method
+- NeedsSpecTable
+- Reference
+---
+<div>{{APIRef("HTML DOM")}}</div>
+
+<p>The <code><strong>createTBody()</strong></code> method of
+  {{domxref("HTMLTableElement")}} objects creates and returns a new
+  {{HTMLElement("tbody")}} element associated with a given {{HtmlElement("table")}}.</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> Unlike {{domxref("HTMLTableElement.createTHead()")}} and
+    {{domxref("HTMLTableElement.createTFoot()")}}, <code>createTBody()</code>
+    systematically creates a new <code>&lt;tbody&gt;</code> element, even if the table
+    already contains one or more bodies. If so, the new one is inserted after the existing
+    ones.</p>
+</div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js notranslate"><var>table</var>.createTBody();</pre>
+
+<h3 id="Return_value">Return value</h3>
+
+<p>{{domxref("HTMLTableSectionElement")}}</p>
+
+<h2 id="Example">Example</h2>
+
+<pre
+  class="brush:js">let mybody = mytable.createTBody();
+// Now this should be true: mybody == mytable.tBodies.item(mytable.tBodies.length - 1)</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#dom-table-createtbody', 'HTMLTableElement:
+        createTBody')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div>
+
+
+  <p>{{Compat("api.HTMLTableElement.createTBody")}}</p>
+</div>

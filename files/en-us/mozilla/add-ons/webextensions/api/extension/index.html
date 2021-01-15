@@ -14,7 +14,7 @@ tags:
 
 <p>Utilities related to your extension. Get URLs to resources packages with your extension. Get the <code><a href="/en-US/docs/Web/API/Window">Window</a></code> object for your extension's pages. Get the values for various settings.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> <strong>The messaging APIs in this module are deprecated</strong> in favor of the equivalent APIs in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime">runtime</a></code> module.</p>
 </div>
 
@@ -29,7 +29,7 @@ tags:
 
 <dl>
 	<dt>{{WebExtAPIRef("extension.lastError")}}</dt>
-	<dd>Set for the lifetime of a callback if an ansychronous extension API has resulted in an error. If no error has, occured <code>lastError</code> will be {{jsxref("undefined")}}.</dd>
+	<dd>Set for the lifetime of a callback if an asynchronous extension API has resulted in an error. If no error has, occurred <code>lastError</code> will be {{jsxref("undefined")}}.</dd>
 	<dt>{{WebExtAPIRef("extension.inIncognitoContext")}}</dt>
 	<dd><code>True</code> for content scripts running inside incognito tabs, and for extension pages running inside an incognito process. (The latter only applies to extensions with '<code>split</code>' <code>incognito_behavior</code>.)</dd>
 </dl>
@@ -65,8 +65,6 @@ tags:
 </dl>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("webextensions.api.extension")}}</p>
 

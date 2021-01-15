@@ -1,0 +1,97 @@
+---
+title: FC_GetTokenInfo
+slug: Mozilla/Projects/NSS/Reference/FC_GetTokenInfo
+tags:
+  - NSS
+---
+
+<h3 id="Name"> Name </h3>
+<p>FC_GetTokenInfo - obtain information about a particular token in the system.
+</p>
+<h3 id="Syntax"> Syntax </h3>
+<pre class="eval"><a href="/en-US/CK_RV">CK_RV</a> FC_GetTokenInfo(<a href="/en-US/CK_SLOT_ID">CK_SLOT_ID</a> slotID, <a href="/en-US/CK_TOKEN_INFO">CK_TOKEN_INFO_PTR</a> pInfo);
+</pre>
+<h3 id="Parameters"> Parameters </h3>
+<p><code>FC_GetTokenInfo</code> has two parameters:
+</p>
+<dl>
+  <dt><code>slotID</code></dt>
+  <dd> the ID of the token's slot
+  </dd>
+  <dt><code>pInfo</code></dt>
+  <dd> points to a <a href="/en-US/CK_TOKEN_INFO">CK_TOKEN_INFO</a> structure
+  </dd>
+</dl>
+<h3 id="Description"> Description </h3>
+<p><code>FC_GetTokenInfo</code> returns information about the token in the specified slot. On return, the
+  <code>CK_TOKEN_INFO</code> structure that <code>pInfo</code> points to has the following information:
+</p>
+<ul>
+  <li> <code>label</code>: the label of the token, assigned during token initialization, padded with spaces to 32 bytes
+    and not null-terminated.
+  </li>
+  <li> <code>manufacturerID</code>: ID of the device manufacturer, "Mozilla Foundation", padded with spaces to 32
+    characters and not null-terminated.
+  </li>
+  <li> <code>model</code>: model of the device, "NSS 3", padded with spaces to 16 characters and not null-terminated.
+  </li>
+  <li> <code>serialNumber</code>: the device's serial number as a string, "0000000000000000", 16 characters and not
+    null-terminated.
+  </li>
+  <li> <code>flags</code>: bit flags indicating capabilities and status of the device.
+    <ul>
+      <li> <code>CKF_RNG (0x00000001)</code>: this device has a random number generator
+      </li>
+      <li> <code>CKF_WRITE_PROTECTED (0x00000002)</code>: this device is read-only
+      </li>
+      <li> <code>CKF_LOGIN_REQUIRED (0x00000004)</code>: this device requires the user to log in to use some of its
+        services
+      </li>
+      <li> <code>CKF_USER_PIN_INITIALIZED (0x00000008)</code>: the user's password has been initialized
+      </li>
+      <li> <code>CKF_DUAL_CRYPTO_OPERATIONS (0x00000200)</code>: a single session with the token can perform dual
+        cryptographic operations
+      </li>
+      <li> <code>CKF_TOKEN_INITIALIZED (0x00000400)</code>: the token has been initialized. If login is required (which
+        is true for the FIPS mode of operation), this flag means the user's password has been initialized.
+      </li>
+    </ul>
+  </li>
+  <li> <code>ulSessionCount</code>: number of sessions that this application currently has open with the token
+  </li>
+  <li> <code>ulRwSessionCount</code>: number of read/write sessions that this application currently has open with the
+    token
+  </li>
+  <li> <code>hardwareVersion</code>: hardware version number, for example, 8.3 (<code>major=0x08, minor=0x03</code>),
+    which are the version numbers of the certificate and key databases, respectively.
+  </li>
+  <li> <code>firmwareVersion</code>: firmware version number, 0.0 (<code>major=0x00, minor=0x00</code>).
+  </li>
+</ul>
+<p>A user may call <code>FC_GetTokenInfo</code> without logging into the token (to assume the NSS User role).
+</p>
+<h3 id="Return_value"> Return value </h3>
+<dl>
+  <dt><code>CKR_OK</code></dt>
+  <dd> Token information was successfully copied.
+  </dd>
+  <dt><code>CKR_CRYPTOKI_NOT_INITIALIZED</code></dt>
+  <dd> The PKCS #11 module library is not initialized.
+  </dd>
+  <dt><code>CKR_SLOT_ID_INVALID</code></dt>
+  <dd> The specified slot number is out of the defined range of values.
+  </dd>
+</dl>
+<div class="note">
+  <p>FC_GetTokenInfo should return CKR_ARGUMENTS_BAD if pInfo is NULL.
+  </p>
+</div>
+<h3 id="Examples"> Examples </h3>
+<p>Note the use of the <code>%.32s</code> format string to print the <code>label</code> and <code>manufacturerID</code>
+  members of the <code>CK_TOKEN_INFO</code> structure.
+</p>
+<h3 id="See_also"> See also </h3>
+<ul>
+  <li> <a href="/en-US/FC_GetSlotInfo">FC_GetSlotInfo</a>, <a href="/en-US/NSC_GetTokenInfo">NSC_GetTokenInfo</a>
+  </li>
+</ul>

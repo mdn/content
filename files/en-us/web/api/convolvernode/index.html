@@ -45,23 +45,23 @@ tags:
 
 <dl>
 	<dt>{{domxref("ConvolverNode.ConvolverNode()", "ConvolverNode()")}}</dt>
-	<dd><span>Creates a new <code>ConvolverNode</code> object instance.</span></dd>
+	<dd>Creates a new <code>ConvolverNode</code> object instance.</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>Inherits properties from its parent, </em><em>{{domxref("AudioNode")}}</em>.</p>
+<p><em>Inherits properties from its parent, {{domxref("AudioNode")}}</em>.</p>
 
 <dl>
 	<dt>{{domxref("ConvolverNode.buffer")}}</dt>
-	<dd><span>A mono, stereo, or 4-channel </span><em>{{domxref("AudioBuffer")}}</em><span> containing the (possibly multichannel) impulse response used by the <code>ConvolverNode</code> to create the reverb effect.</span></dd>
+	<dd>A mono, stereo, or 4-channel <em>{{domxref("AudioBuffer")}}</em> containing the (possibly multichannel) impulse response used by the <code>ConvolverNode</code> to create the reverb effect.</dd>
 	<dt>{{domxref("ConvolverNode.normalize")}}</dt>
-	<dd><span>A boolean that controls whether the impulse response from the buffer will be scaled by an equal-power normalization when the <code>buffer</code> attribute is set, or not.</span></dd>
+	<dd>A boolean that controls whether the impulse response from the buffer will be scaled by an equal-power normalization when the <code>buffer</code> attribute is set, or not.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>No specific method; inherits methods from its parent, </em><em>{{domxref("AudioNode")}}</em>.</p>
+<p><em>No specific method; inherits methods from its parent, {{domxref("AudioNode")}}</em>.</p>
 
 <h2 id="ConvolverNode_Example">ConvolverNode Example</h2>
 
@@ -70,8 +70,6 @@ tags:
 <div class="note">
 <p><strong>Note</strong>: You will need to find an impulse response to complete the example below. See this <a href="https://codepen.io/DonKarlssonSan/pen/doVKRE">Codepen</a> for an applied example.</p>
 </div>
-
-
 
 <pre class="brush: js">let audioCtx = new window.AudioContext();
 
@@ -95,8 +93,6 @@ someOtherAudioNode.connect(reverb);
 reverb.connect(audioCtx.destination);
 </pre>
 
-
-
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
@@ -117,7 +113,6 @@ reverb.connect(audioCtx.destination);
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("api.ConvolverNode")}}</p>
 </div>

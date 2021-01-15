@@ -9,7 +9,7 @@ tags:
 
 <p>In this example, we'll actually rotate our square plane.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>This example uses the glMatrix library to perform its matrix and vertex math. You'll need to include it if you create your own project based on this code. Our sample loads a copy from a CDN in our HTML's {{HTMLElement("head")}}.</p>
 </div>
 
@@ -49,13 +49,12 @@ tags:
 
 <p>This code uses <code>requestAnimationFrame</code> to ask the browser to call the function "<code>render</code>" on each frame. <code>requestAnimationFrame</code> passes us the time in milliseconds since the page loaded. We convert that to seconds and then subtract from it the last time to compute <code>deltaTime</code> which is the number of second since the last frame was rendered. At the end of drawscene we add the code to update <code>squareRotation.</code></p>
 
-<pre class="brush: js notranslate"><code>  squareRotation += deltaTime;</code>
-</pre>
+<pre class="brush: js notranslate">squareRotation += deltaTime;</pre>
 
 <p>This code uses the amount of time that's passed since the last time we updated the value of <code>squareRotation</code> to determine how far to rotate the square.</p>
 
 <p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample4/index.html', 670, 510) }}</p>
 
-<p><a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample4">View the complete code</a> | <a href="http://mdn.github.io/webgl-examples/tutorial/sample4/">Open this demo on a new page</a></p>
+<p><a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample4">View the complete code</a> | <a href="https://mdn.github.io/webgl-examples/tutorial/sample4/">Open this demo on a new page</a></p>
 
 <p>{{PreviousNext("Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL", "Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL") }}</p>

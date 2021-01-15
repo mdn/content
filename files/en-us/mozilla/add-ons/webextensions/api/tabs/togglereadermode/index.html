@@ -15,9 +15,6 @@ tags:
 
 <p>Toggles Reader Mode for the given tab.</p>
 
-<ul>
-</ul>
-
 <p>This function toggles Reader Mode for the given tab. It takes a tab ID as a parameter: if this is omitted, the currently active tab is toggled.</p>
 
 <p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
@@ -33,7 +30,7 @@ tags:
 
 <p>To find out whether a tab is already in Reader Mode, check the <code>isInReaderMode</code> property of {{WebExtAPIRef("tabs.Tab")}}. To track tabs changing into or out of Reader Mode, you'll need to keep track of the current state of all tabs, and check when <code>isInReaderMode</code> changes:</p>
 
-<pre class="brush: js">function handleUpdated(tabId, changeInfo, tabInfo) {
+<pre class="notranslate brush: js">function handleUpdated(tabId, changeInfo, tabInfo) {
   if (changeInfo.status === "complete") {
     console.log(`Tab ${tabId} reader mode: ${tabInfo.isInReaderMode}`);
   }
@@ -43,7 +40,7 @@ browser.tabs.onUpdated.addListener(handleUpdated);</pre>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var toggling = browser.tabs.toggleReaderMode(
+<pre class="brush:js">var toggling = browser.tabs.toggleReaderMode(
   tabId            // optional integer
 )
 </pre>
@@ -63,7 +60,7 @@ browser.tabs.onUpdated.addListener(handleUpdated);</pre>
 
 <p>This code switches every new page into Reader Mode, if that page is eligible for it:</p>
 
-<pre class="brush: js">function switchToReaderMode(tabId, changeInfo, tabInfo) {
+<pre class="notranslate brush: js">function switchToReaderMode(tabId, changeInfo, tabInfo) {
   if (changeInfo.isArticle) {
     browser.tabs.toggleReaderMode(tabId);
   }

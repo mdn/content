@@ -14,7 +14,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>&lt;easing-function&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> denotes a mathematical function that describes the the rate at which a numerical value changes.</p>
+<p>The <strong><code>&lt;easing-function&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> denotes a mathematical function that describes the rate at which a numerical value changes.</p>
 
 <p>This transition between two values may be applied in different situations. It may be used to describe how fast values change during animations. This lets you vary the animation's speed over the course of its duration. It may also be used to interpolate between two colors in a color gradient.</p>
 
@@ -42,7 +42,7 @@ tags:
 
 <p>The interpolation is done at a constant rate from beginning to end. This keyword represents the easing function <code>cubic-bezier(0.0, 0.0, 1.0, 1.0)</code>.</p>
 
-<h4 class="cleared" id="cubic-bezier" name="cubic-bezier()">The cubic-bezier() class of easing functions</h4>
+<h4 class="cleared" id="cubic-bezier">The cubic-bezier() class of easing functions</h4>
 
 <p style="float: left;"><img src="/files/3433/cubic-bezier,%20example.png"></p>
 
@@ -58,7 +58,7 @@ tags:
 
 <h5 id="Syntax_2">Syntax</h5>
 
-<pre class="syntaxbox notranslate">cubic-bezier(<var>x<sub>1</sub></var>, <var>y<sub>1</sub></var>, <var>x<sub>2</sub></var>, <var>y<sub>2</sub></var>)
+<pre class="brush: css notranslate">cubic-bezier(<var>x<sub>1</sub></var>, <var>y<sub>1</sub></var>, <var>x<sub>2</sub></var>, <var>y<sub>2</sub></var>)
 </pre>
 
 <p>where:</p>
@@ -94,13 +94,13 @@ tags:
 
 <p>The interpolation starts abruptly, and then progressively slows down towards the end. This keyword represents the easing function <code>cubic-bezier(0.0, 0.0, 0.58, 1.0)</code>.</p>
 
-<h4 id="steps" name="steps()">The steps() class of easing functions</h4>
+<h4 id="steps">The steps() class of easing functions</h4>
 
 <p>The <code>steps()</code> functional notation defines a <a href="https://en.wikipedia.org/wiki/Step_function">step function</a> dividing the domain of output values in equidistant steps.This subclass of step functions are sometimes also called <em>staircase functions</em>.</p>
 
 <h5 id="Syntax_3">Syntax</h5>
 
-<pre class="syntaxbox notranslate">steps(<var>number_of_steps</var>, <var>direction</var>)
+<pre class="brush: css notranslate">steps(<var>number_of_steps</var>, <var>direction</var>)
 </pre>
 
 <p>where:</p>
@@ -123,7 +123,7 @@ tags:
  <dd><code>end</code> is the default.</dd>
 </dl>
 
-<h5 id="steps_n_&lt;direction>">steps( n, &lt;direction&gt; )</h5>
+<h5 id="steps_n_&lt;direction&gt;">steps( n, &lt;direction&gt; )</h5>
 
 <ul style="list-style-type: none; display: flex;">
  <li>
@@ -324,8 +324,6 @@ steps(0, jump-none)</pre>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("css.types.easing-function", 2)}}</p>
 

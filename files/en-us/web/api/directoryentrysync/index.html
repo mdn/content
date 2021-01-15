@@ -12,7 +12,7 @@ tags:
 ---
 <p>{{APIRef("File System API")}}{{Non-standard_header}}</p>
 
-<p>The <code>DirectoryEntrySync</code> interface of the <a href="/en/DOM/File_API/File_System_API" title="en/DOM/File_API/File_System_API">File System API</a> represents a directory in a file system. It includes methods for creating, reading, looking up, and recursively removing files in a directory.</p>
+<p>The <code>DirectoryEntrySync</code> interface of the <a href="/en/DOM/File_API/File_System_API">File System API</a> represents a directory in a file system. It includes methods for creating, reading, looking up, and recursively removing files in a directory.</p>
 
 <div class="note">
 <p>This interface has been abandonned: it was on a standard track and it proves not a good idea. Do not use it anymore.</p>
@@ -20,15 +20,15 @@ tags:
 
 <h2 id="About_this_document">About this document</h2>
 
-<p>This document was last updated on March 2, 2012 and follows the <a class="external" href="http://www.w3.org/TR/file-system-api/">W3C Specifications (Working Draft)</a> drafted on April 19, 2011.</p>
+<p>This document was last updated on March 2, 2012 and follows the <a class="external" href="https://www.w3.org/TR/file-system-api/">W3C Specifications (Working Draft)</a> drafted on April 19, 2011.</p>
 
 <p>This specification is pretty much abandoned, having failed to reach any substantial traction.</p>
 
-<h2 id="basic_concepts" name="basic_concepts">Basic concepts</h2>
+<h2 id="basic_concepts">Basic concepts</h2>
 
 <p>If you want to create subdirectories, you have to create each child directory in sequence. If you try to create a directory using a full path that includes parent directories that do not exist yet, you get an error. So create the hierarchy by recursively adding a new path after creating the parent directory.</p>
 
-<h4 id="example" name="example">Example</h4>
+<h4 id="example">Example</h4>
 
 <p>The <code>getFile()</code> method returns a <code>FileEntrySync</code>, which represents a file in the file system.  The following creates an empty file called <code>seekrits.txt</code> in the root directory.</p>
 
@@ -44,23 +44,23 @@ tags:
 <table class="standard-table">
 	<tbody>
 		<tr>
-			<td><code>DirectoryReaderSync <a href="#createReader" title="#createReader">createReader</a> () raises (<a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+			<td><code>DirectoryReaderSync <a href="#createreader">createReader</a> () raises (<a href="/en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
 		</tr>
 		<tr>
-			<td><code><a href="/en/DOM/File_API/File_System_API/FileEntrySync" title="en/DOM/File_API/File_System_API/FileEntrySync">FileEntrySync</a> <a href="#getFile" title="#getFile">getFile</a> (in DOMString <em>path</em>, in optional Flags <em>options</em>) raises (<a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+			<td><code><a href="/en/DOM/File_API/File_System_API/FileEntrySync">FileEntrySync</a> <a href="#getfile">getFile</a> (in DOMString <em>path</em>, in optional Flags <em>options</em>) raises (<a href="/en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
 		</tr>
 		<tr>
-			<td><code>DirectoryEntrySync <a href="#getDirectory" title="#getDirectory">getDirectory</a> (in DOMString path, in optional Flags <em>options</em>) raises (<a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+			<td><code>DirectoryEntrySync <a href="#getdirectory">getDirectory</a> (in DOMString path, in optional Flags <em>options</em>) raises (<a href="/en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
 		</tr>
 		<tr>
-			<td><code>void <a href="#removeRecursively" title="#removeRecursively">removeRecursively</a> () raises (<a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>); </code></td>
+			<td><code>void <a href="#removerecursively">removeRecursively</a> () raises (<a href="/en/DOM/File_API/File_System_API/FileException">FileException</a>); </code></td>
 		</tr>
 	</tbody>
 </table>
 
 <h2 id="Methods">Methods</h2>
 
-<h3 id="createReader" name="createReader">createReader()</h3>
+<h3 id="createReader">createReader()</h3>
 
 <p>Creates a new <code>DirectoryReaderSync</code> to read entries from this directory.</p>
 
@@ -70,7 +70,7 @@ tags:
 <h5 id="Returns">Returns</h5>
 
 <dl>
-	<dt><code><a href="/en/DOM/File_API/File_System_API/DirectoryReaderSync" title="en/DOM/File_API/File_System_API/DirectoryReaderSync">DirectoryReaderSync</a></code></dt>
+	<dt><code><a href="/en/DOM/File_API/File_System_API/DirectoryReaderSync">DirectoryReaderSync</a></code></dt>
 	<dd>Represents a directory in a file system.</dd>
 </dl>
 
@@ -80,7 +80,7 @@ tags:
 
 <h5 id="Exceptions">Exceptions</h5>
 
-<p>This method can raise a <a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
+<p>This method can raise a <a href="/en/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
 
 <table class="standard-table">
 	<thead>
@@ -101,7 +101,7 @@ tags:
 	</tbody>
 </table>
 
-<h3 id="getFile" name="getFile">getFile()</h3>
+<h3 id="getFile">getFile()</h3>
 
 <p>Depending on how you've set the <code>options</code> parameter, the method either creates a file or looks up an existing file.</p>
 
@@ -163,13 +163,13 @@ tags:
 <h5 id="Returns_2">Returns</h5>
 
 <dl>
-	<dt><a href="/en/DOM/File_API/File_System_API/FileEntrySync" title="en/DOM/File_API/File_System_API/FileEntrySync"><code>FileEntrySync</code></a></dt>
+	<dt><a href="/en/DOM/File_API/File_System_API/FileEntrySync"><code>FileEntrySync</code></a></dt>
 	<dd>Represents a file in a file system.</dd>
 </dl>
 
 <h5 id="Exceptions_2">Exceptions</h5>
 
-<p>This method can raise a <a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
+<p>This method can raise a <a href="/en/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
 
 <table class="standard-table">
 	<thead>
@@ -210,7 +210,7 @@ tags:
 	</tbody>
 </table>
 
-<h3 id="getDirectory" name="getDirectory">getDirectory()</h3>
+<h3 id="getDirectory">getDirectory()</h3>
 
 <p>Creates or looks up a directory. The method is similar to <code>getFile()</code> with DirectoryEntrySync being passed.</p>
 
@@ -272,13 +272,13 @@ tags:
 <h5 id="Returns_3">Returns</h5>
 
 <dl>
-	<dt><a href="/en/DOM/File_API/File_System_API/DirectoryReaderSync" title="en/DOM/File_API/File_System_API/DirectoryReaderSync"><code>DirectoryEntrySync</code></a></dt>
+	<dt><a href="/en/DOM/File_API/File_System_API/DirectoryReaderSync"><code>DirectoryEntrySync</code></a></dt>
 	<dd>Represents a directory in a file system.</dd>
 </dl>
 
 <h5 id="Exceptions_3">Exceptions</h5>
 
-<p>This method can raise a <a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
+<p>This method can raise a <a href="/en/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
 
 <table class="standard-table">
 	<thead>
@@ -319,7 +319,7 @@ tags:
 	</tbody>
 </table>
 
-<h3 id="removeRecursively" name="removeRecursively">removeRecursively()</h3>
+<h3 id="removeRecursively">removeRecursively()</h3>
 
 <p>Deletes a directory and all of its contents. You cannot delete the root directory of a file system.</p>
 
@@ -338,7 +338,7 @@ tags:
 
 <h5 id="Exceptions_4">Exceptions</h5>
 
-<p>This method can raise a <a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
+<p>This method can raise a <a href="/en/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
 
 <table class="standard-table">
 	<thead>
@@ -373,7 +373,6 @@ tags:
 
 <div>
 
-
 <p>{{Compat("api.DirectoryEntrySync")}}</p>
 </div>
 
@@ -381,6 +380,6 @@ tags:
 
 <p>Specification: {{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}</p>
 
-<p>Reference: <a href="/en/DOM/File_API/File_System_API" title="en/DOM/File_API/File_System_API">File System API</a></p>
+<p>Reference: <a href="/en/DOM/File_API/File_System_API">File System API</a></p>
 
-<p>Introduction: <a href="/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API" title="en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">Basic Concepts About the File System API</a></p>
+<p>Introduction: <a href="/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">Basic Concepts About the File System API</a></p>

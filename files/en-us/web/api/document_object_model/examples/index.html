@@ -7,7 +7,7 @@ tags:
 ---
 <p>This chapter provides some longer examples of web and XML development using the DOM. Wherever possible, the examples use common APIs, tricks, and patterns in JavaScript for manipulating the document object.</p>
 
-<h2 id="Example_1_height_and_width" name="Example_1:_height_and_width">Example 1: height and width</h2>
+<h2 id="Example_1_height_and_width">Example 1: height and width</h2>
 
 <p>The following example shows the use of the <code>height</code> and <code>width</code> properties alongside images of varying dimensions:</p>
 
@@ -64,7 +64,7 @@ function init() {
 &lt;/html&gt;
 </pre>
 
-<h2 id="Example_2_Image_Attributes" name="Example_2:_Image_Attributes">Example 2: Image Attributes</h2>
+<h2 id="Example_2_Image_Attributes">Example 2: Image Attributes</h2>
 
 <pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -95,7 +95,7 @@ function setBorderWidth(width) {
 &lt;/html&gt;
 </pre>
 
-<h2 id="Example_3_Manipulating_Styles" name="Example_3:_Manipulating_Styles">Example 3: Manipulating Styles</h2>
+<h2 id="Example_3_Manipulating_Styles">Example 3: Manipulating Styles</h2>
 
 <p>In this simple example, some basic style properties of an HTML paragraph element are accessed using the style object on the element and that object's CSS style properties, which can be retrieved and set from the DOM. In this case, you are manipulating the individual styles directly. In the next example (see Example 4), you can use stylesheets and their rules to change styles for whole documents.</p>
 
@@ -125,7 +125,7 @@ function changeText() {
 &lt;/html&gt;
 </pre>
 
-<h2 id="Example_4_Using_Stylesheets" name="Example_4:_Using_Stylesheets">Example 4: Using Stylesheets</h2>
+<h2 id="Example_4_Using_Stylesheets">Example 4: Using Stylesheets</h2>
 
 <p>The styleSheets property on the document object returns a list of the stylesheets that have been loaded on that document. You can access these stylesheets and their rules individually using the stylesheet, style, and CSSRule objects, as demonstrated in this example, which prints out all of the style rule selectors to the console.</p>
 
@@ -151,7 +151,7 @@ P
 #LUMPY
 </pre>
 
-<h2 id="Example_5_Event_Propagation" name="Example_5:_Event_Propagation">Example 5: Event Propagation</h2>
+<h2 id="Example_5_Event_Propagation">Example 5: Event Propagation</h2>
 
 <p>This example demonstrates how events fire and are handled in the DOM in a very simple way. When the BODY of this HTML document loads, an event listener is registered with the top row of the TABLE. The event listener handles the event by executing the function stopEvent, which changes the value in the bottom cell of the table.</p>
 
@@ -199,7 +199,7 @@ function load() {
 &lt;/html&gt;
 </pre>
 
-<h2 id="Example_6_getComputedStyle" name="Example_6:_getComputedStyle">Example 6: getComputedStyle</h2>
+<h2 id="Example_6_getComputedStyle">Example 6: getComputedStyle</h2>
 
 <p>This example demonstrates how the {{domxref("window.getComputedStyle")}} method can be used to get the styles of an element that are not set using the <code>style</code> attribute or with JavaScript (e.g., <code>elt.style.backgroundColor="rgb(173, 216, 230)"</code>). These latter types of styles can be retrieved with the more direct {{domxref("element.style", "elt.style")}} property, whose properties are listed in the <a href="/en-US/docs/Web/CSS/Reference">DOM CSS Properties List</a>.</p>
 
@@ -259,7 +259,7 @@ function cStyles() {
 &lt;/html&gt;
 </pre>
 
-<h2 id="Example_7_Displaying_Event_Object_Properties" name="Example_7:_Displaying_Event_Object_Properties">Example 7: Displaying Event Object Properties</h2>
+<h2 id="Example_7_Displaying_Event_Object_Properties">Example 7: Displaying Event Object Properties</h2>
 
 <p>This example uses DOM methods to display all the properties of the {{domxref("window.onload")}} {{domxref("event")}} object and their values in a table. It also shows a useful technique of using a for..in loop to iterate over the properties of an object to get their values.</p>
 
@@ -330,7 +330,7 @@ window.onload = function(event){
 &lt;/html&gt;
 </pre>
 
-<h2 id="Example_8_Using_the_DOM_Table_Interface" name="Example_8:_Using_the_DOM_Table_Interface">Example 8: Using the DOM Table Interface</h2>
+<h2 id="Example_8_Using_the_DOM_Table_Interface">Example 8: Using the DOM Table Interface</h2>
 
 <p>The DOM HTMLTableElement interface provides some convenience methods for creating and manipulating tables. Two frequently used methods are {{domxref("HTMLTableElement.insertRow")}} and {{domxref("tableRow.insertCell")}}.</p>
 
@@ -357,7 +357,7 @@ for (var i = 0; i &lt; 2; i++) {
 &lt;/script&gt;
 </pre>
 
-<h3 id="Notes" name="Notes">Notes</h3>
+<h3 id="Notes">Notes</h3>
 
 <ul>
  <li>A table's {{domxref("element.innerHTML","innerHTML")}} property should never be used to modify a table, although you can use it to write an entire table or the content of a cell.</li>

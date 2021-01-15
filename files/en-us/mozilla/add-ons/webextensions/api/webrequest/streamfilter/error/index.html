@@ -26,7 +26,7 @@ tags:
 
 <p>This example adds an {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} listener which logs the value of <code>error</code>.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">listener</span><span class="punctuation token">(</span>details<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+<pre class="notranslate brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">listener</span><span class="punctuation token">(</span>details<span class="punctuation token">)</span> <span class="punctuation token">{</span>
   <span class="keyword token">let</span> filter <span class="operator token">=</span> browser<span class="punctuation token">.</span>webRequest<span class="punctuation token">.</span><span class="function token">filterResponseData</span><span class="punctuation token">(</span><span class="string token">"12345"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 
   filter<span class="punctuation token">.</span>onerror <span class="operator token">=</span> event <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span>

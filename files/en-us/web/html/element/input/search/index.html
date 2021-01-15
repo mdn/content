@@ -125,9 +125,7 @@ tags:
 
 <p>{{page("/en-US/docs/Web/HTML/Element/input/text", "size", 0, 1, 2)}}</p>
 
-<h3 id="htmlattrdefspellcheck">{{htmlattrdef("spellcheck")}}</h3>
-
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "spellcheck-include")}}</p>
+<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "spellcheck", 0, 1, 2)}}</p>
 
 <h2 id="Non-standard_attributes">Non-standard attributes</h2>
 
@@ -171,7 +169,7 @@ tags:
 
 <p>If <code>incremental</code> is not specified, the {{event("search")}} event is only sent when the user explicitly initiates a search (such as by pressing the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field).</p>
 
-<p>The <code>search</code> event is rate-limited so that it is not sent more more frequently than an implementation-defined interval.</p>
+<p>The <code>search</code> event is rate-limited so that it is not sent more frequently than an implementation-defined interval.</p>
 </div>
 
 <h3 id="htmlattrdefmozactionhint_non-standard_inline">{{htmlattrdef("mozactionhint")}} {{non-standard_inline}}</h3>
@@ -213,11 +211,11 @@ tags:
 
 <p>The main basic differences come in the way browsers handle them. The first thing to note is that some browsers show a cross icon that can be clicked on to remove the search term instantly if desired. The following screenshot comes from Chrome:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15235/chrome-cross-icon.png" style="display: block; height: 31px; margin: 0px auto; width: 144px;"></p>
+<p><img alt="" src="chrome-cross-icon.png" style="display: block; height: 31px; margin: 0px auto; width: 144px;"></p>
 
 <p>In addition, modern browsers also tend to automatically store search terms previously entered across domains, which then come up as autocomplete options when subsequent searches are performed in search inputs on that domain. This helps users who tend to do searches on the same or similar search queries over time. This screenshot is from Firefox:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15237/firefox-auto-complete.png" style="display: block; height: 83px; margin: 0px auto; width: 171px;">At this point, let's look at some useful techniques you can apply to your search forms.</p>
+<p><img alt="" src="firefox-auto-complete.png" style="display: block; height: 83px; margin: 0px auto; width: 171px;">At this point, let's look at some useful techniques you can apply to your search forms.</p>
 
 <h3 id="Setting_placeholders">Setting placeholders</h3>
 
@@ -288,7 +286,7 @@ tags:
 <p><code>&lt;input&gt;</code> elements of type <code>search</code> have the same validation features available to them as regular <code>text</code> inputs. It is less likely that you'd want to use validation features in general for search boxes. In many cases, users should just be allowed to search for anything, but there are a few cases to consider, such as searches against data of a known format.</p>
 
 <div class="note">
-<p><strong>Note</strong>: HTML form validation is <em>not</em> a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to simply bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.</p>
+<p><strong>Note</strong>: HTML form validation is <em>not</em> a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.</p>
 </div>
 
 <h3 id="A_note_on_styling">A note on styling</h3>
@@ -346,7 +344,7 @@ input:valid ~ span:after {
 
 <p>In addition, if you try to submit the form with no search term entered into it, the browser will show a message. The following example is from Firefox:</p>
 
-<p><img alt="form field with attached message that says Please fill out this field" src="https://mdn.mozillademos.org/files/15241/firefox-required-message.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="form field with attached message that says Please fill out this field" src="firefox-required-message.png" style="display: block; margin: 0 auto;"></p>
 
 <p>Different messages will be shown when you try to submit the form with different types of invalid data contained inside the inputs; see the below examples.</p>
 
@@ -393,7 +391,7 @@ input:valid ~ span:after {
 
 <h3 id="Specifying_a_pattern">Specifying a pattern</h3>
 
-<p>You can use the {{htmlattrxref("pattern", "input")}} attribute to specify a regular expression that the inputted value must follow to be considered valid (see <a href="/en-US/docs/Learn/HTML/Forms/Form_validation#Validating_against_a_regular_expression">Validating against a regular expression</a> for a simple crash course).</p>
+<p>You can use the {{htmlattrxref("pattern", "input")}} attribute to specify a regular expression that the inputted value must follow to be considered valid (see <a href="/en-US/docs/Learn/Forms/Form_validation#Validating_against_a_regular_expression">Validating against a regular expression</a> for a simple crash course).</p>
 
 <p>Let's look at an example. Say we wanted to provide a product ID search form, and the IDs were all codes of two letters followed by four numbers. The following example covers it:</p>
 
@@ -432,7 +430,7 @@ input:valid ~ span:after {
 
 <h2 id="Examples">Examples</h2>
 
-<p>You can see a good example of a search form used in context at our <a class="external external-icon" href="https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles">website-aria-roles</a> example (<a class="external external-icon" href="http://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/">see it live</a>).</p>
+<p>You can see a good example of a search form used in context at our <a class="external external-icon" href="https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles">website-aria-roles</a> example (<a class="external external-icon" href="https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/">see it live</a>).</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -460,14 +458,12 @@ input:valid ~ span:after {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("html.elements.input.input-search")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/HTML/Forms">HTML Forms</a></li>
+ <li><a href="/en-US/docs/Learn/Forms">HTML Forms</a></li>
  <li>{{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon</li>
  <li><code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code></li>
  <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>

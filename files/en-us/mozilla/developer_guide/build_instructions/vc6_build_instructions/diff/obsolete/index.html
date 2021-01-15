@@ -75,7 +75,6 @@ diff -u -r1.62 gfxWindowsFonts.h
 +++ gfxWindowsFonts.h	13 Jul 2007 11:09:26 -0000
 @@ -242,10 +242,11 @@
 
-
  class gfxSparseBitSet {
 -private:
 +public:
@@ -218,7 +217,6 @@ diff -u -r3.331 nsCSSParser.cpp
 --- nsCSSParser.cpp	12 Dec 2006 15:34:43 -0000	3.331
 +++ nsCSSParser.cpp	13 Dec 2006 16:36:41 -0000
 @@ -3567,8 +3567,8 @@
-
 
  struct UnitInfo {
 -  const char name[5];  // needs to be long enough for the longest unit, with
@@ -973,7 +971,6 @@ diff -u -r1.41 gfxWindowsPlatform.cpp
 
 @@ -721,9 +721,10 @@
      }
-
 
 +    PRInt8 i, k;
      PRInt8 matchBaseWeight = 0;

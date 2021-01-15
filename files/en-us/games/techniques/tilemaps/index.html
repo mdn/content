@@ -19,7 +19,7 @@ tags:
 
 <h2 id="The_tile_atlas">The tile atlas</h2>
 
-<p>The most efficient way to store the tile images is in an atlas or spritesheet. This is simply all of the required tiles grouped together in a single image file. When it's time to draw a tile, only a small section of this bigger image is rendered on the game canvas. The below images shows a tile atlas of 8 x 4 tiles:</p>
+<p>The most efficient way to store the tile images is in an atlas or spritesheet. This is all of the required tiles grouped together in a single image file. When it's time to draw a tile, only a small section of this bigger image is rendered on the game canvas. The below images shows a tile atlas of 8 x 4 tiles:</p>
 
 <p><img alt="Tile atlas image" src="https://mdn.mozillademos.org/files/11697/tile_atlas.png" style="display: block; height: 256px; margin: 0px auto; width: 511px;"></p>
 
@@ -84,14 +84,13 @@ function worldToScreen(x, y) {
   return {x: x - camera.x, y: y - camera.y};
 }
 
-
 function screenToWorld(x,y) {
   return {x: x + camera.x, y: y + camera.y};
 }</pre>
 
 <h4 id="Rendering">Rendering</h4>
 
-<p>A trivial method for rendering would just be to iterate over all the tiles (like in static tilemaps) and draw them, substracting the camera coordinates (like in the <code>worldToScreen()</code> example shown above) and letting the parts that fall outside the view window sit there, hidden. Drawing all the tiles that can not be seen is wasteful, however, and can take a toll on performance. <strong>Only tiles that are at visible should be rendered</strong> ideally — see the {{anch("Performance")}} section for more ideas on improving rendering performance.</p>
+<p>A trivial method for rendering would just be to iterate over all the tiles (like in static tilemaps) and draw them, subtracting the camera coordinates (like in the <code>worldToScreen()</code> example shown above) and letting the parts that fall outside the view window sit there, hidden. Drawing all the tiles that can not be seen is wasteful, however, and can take a toll on performance. <strong>Only tiles that are at visible should be rendered</strong> ideally — see the {{anch("Performance")}} section for more ideas on improving rendering performance.</p>
 
 <p>You can read more about implementing scrolling tilemaps and see some example implementations in <a href="/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation%3A_Scrolling_maps">Square tilemaps implementation: Scrolling maps</a>.</p>
 
@@ -110,7 +109,7 @@ function screenToWorld(x,y) {
 <p>Since tilemaps are an actual grid of visual tiles, it is common to create a mapping between this visual grid and a logic grid. The most common case is to use this logic grid to handle collisions, but other uses are possible as well: character spawning points, detecting whether some elements are placed together in the right way to trigger a certain action (like in <em>Tetris</em> or <em>Bejeweled</em>), path-finding algorithms, etc.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can take a look at our demo that shows <a href="http://mozdevs.github.io/gamedev-js-tiles/square/logic-grid.html">how to use a logic grid to handle collisions</a>.</p>
+<p><strong>Note</strong>: You can take a look at our demo that shows <a href="https://mozdevs.github.io/gamedev-js-tiles/square/logic-grid.html">how to use a logic grid to handle collisions</a>.</p>
 </div>
 
 <h2 id="Isometric_tilemaps">Isometric tilemaps</h2>
@@ -125,7 +124,7 @@ function screenToWorld(x,y) {
 
 <p>One simple technique consists of pre-rendering the map in a canvas on its own (when using the Canvas API) or on a texture (when using WebGL), so tiles don't need to be re-drawn every frame and rendering can be done in just one blitting operation. Of course, if the map is large this doesn't really solve the problem — and some systems don't have a very generous limit on how big a texture can be.</p>
 
-<p>One way consists of <a href="http://mozdevs.github.io/gamedev-js-tiles/performance/offcanvas.html">drawing the section that will be visible off-canvas</a> (instead of the entire map.) That means that as long as there is no scrolling, the map doesn't need to be rendered.</p>
+<p>One way consists of <a href="https://mozdevs.github.io/gamedev-js-tiles/performance/offcanvas.html">drawing the section that will be visible off-canvas</a> (instead of the entire map.) That means that as long as there is no scrolling, the map doesn't need to be rendered.</p>
 
 <p>A caveat of that approach is that when there <em>is</em> a scrolling, that technique is not very efficient. A better way would be to create a canvas that is 2x2 tiles bigger than the visible area, so there is one tile of "bleeding" around the edges. That means that the map only needs to be redrawn on canvas when the scrolling has advanced one full tile — instead of every frame — while scrolling.</p>
 
@@ -142,7 +141,7 @@ function screenToWorld(x,y) {
  </li>
  <li>External resources:
   <ul>
-   <li><a href="http://mozdevs.github.io/gamedev-js-tiles/">Demos and source code</a></li>
+   <li><a href="https://mozdevs.github.io/gamedev-js-tiles/">Demos and source code</a></li>
    <li><a href="http://www-cs-students.stanford.edu/~amitp/game-programming/grids/">Amit's thoughts on grids</a></li>
    <li><a href="https://en.wikipedia.org/wiki/Isometric_graphics_in_video_games_and_pixel_art">Isometric graphics in videogames</a> (Wikipedia)</li>
   </ul>

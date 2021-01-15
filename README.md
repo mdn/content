@@ -7,6 +7,27 @@ The following is a set of guidelines for contributing to the
 [content of MDN Web Docs](https://github.com/mdn/content), which is hosted within the
 [MDN Organization](https://github.com/mdn) on GitHub.
 
+<!-- You can quickly regenerate this TOC by running: npx markdown-toc@1.2.0 --bullets='-' --no-firsth1 README.md -->
+
+- [Code of Conduct](#code-of-conduct)
+- [License](#license)
+- [Making contributions](#making-contributions)
+  - [Setup](#setup)
+  - [Fundamental concepts](#fundamental-concepts)
+  - [Simple changes](#simple-changes)
+  - [More substantial changes](#more-substantial-changes)
+  - [Pull request etiquette](#pull-request-etiquette)
+  - [Adding a new document](#adding-a-new-document)
+  - [Moving one or more documents](#moving-one-or-more-documents)
+  - [Deleting a document](#deleting-a-document)
+  - [Adding images](#adding-images)
+  - [Updating a browser compatibility table](#updating-a-browser-compatibility-table)
+  - [Adding code examples](#adding-code-examples)
+  - [Archiving and unarchiving pages](#archiving-and-unarchiving-pages)
+  - [Making a change that depends on a macro update](#making-a-change-that-depends-on-a-macro-update)
+- [Frequently asked questions (FAQ)](#frequently-asked-questions-faq)
+  - [When will my change show up on the production MDN site?](#when-will-my-change-show-up-on-the-production-mdn-site)
+
 ## Code of Conduct
 
 Everyone participating in this project is expected to follow
@@ -35,26 +56,29 @@ If you're not familiar with [`git`](https://git-scm.com) and
 helpful.
 
 There are several ways forward from this point. It's up to you. Here are some options:
-1. Go to https://github.com/mdn/content and just use the [GitHub UI](https://docs.github.com/en/free-pro-team@latest/github/managing-files-in-a-repository/managing-files-on-github). This is the easiest approach if you just want to make a simple change to a single file, like fixing a typo.
+
+1. Go to <https://github.com/mdn/content> and just use the [GitHub UI](https://docs.github.com/en/free-pro-team@latest/github/managing-files-in-a-repository/managing-files-on-github). This is the easiest approach if you just want to make a simple change to a single file, like fixing a typo.
 1. Install and use the [GitHub Desktop](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-desktop)
 1. Install and use the [GitHub CLI](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-cli)
 1. [Install `git`](https://git-scm.com/downloads) and use it from the command line. You might find these resources helpful:
-    - [Using Git](https://docs.github.com/en/free-pro-team@latest/github/using-git)
-    - [`git` cheatsheet](https://training.github.com/)
+    * [Using Git](https://docs.github.com/en/free-pro-team@latest/github/using-git)
+    * [`git` cheatsheet](https://training.github.com/)
 
 If you choose an option other than the GitHub UI, you want to install
-[Node.js (version >=12)](https://nodejs.org) and [`yarn`](https://classic.yarnpkg.com/en/docs/install).
+[Node.js (version >=12.11)](https://nodejs.org) and [`yarn`](https://classic.yarnpkg.com/en/docs/install).
 
-### Fundamental content concepts
+### Fundamental concepts
 
 These are some important things to keep in mind about the MDN content.
-- **Documents are folders** --  Documents are always
+
+* **Documents are folders** --  Documents are always
 represented by a folder (e.g., [`files/en-us/web/javascript`](files/en-us/web/javascript)), and that folder will contain the content of that specific document as an
 `index.html` file (e.g., [`files/en-us/web/javascript/index.html`](files/en-us/web/javascript/index.html)).
-- **Documents are hierarchical** - A document folder may contain other folders, where those folders would represent child documents (e.g., [`files/en-us/web/javascript/closures/index.html`](files/en-us/web/javascript/closures/index.html)).
-- **Document folders may contain image files** -- A document folder may also contain image files, which are referenced within that document's `index.html` file.
-- **All redirects are specified in a single file** -- All of the redirects are specified within [`files/en-us/_redirects.txt`](files/en-us/_redirects.txt), one redirect per line. Each line specifies a `from` and `to` URI separated by whitespace. When you move a document, you'll need to add a redirect to this file specifying that its old URI now redirects to its new URI. If both an `index.html` file and a redirect exist for a document, the document takes precedence and the redirect is ignored.
-- **A document's `index.html` starts with "front-matter"** -- Each document's `index.html` file must begin with some YAML called front-matter that defines some important information about the document: `title`, `slug`, and [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag) (if any). Here's an example that shows the front-matter from the [JavaScript landing page](files/en-us/web/javascript/index.html):
+* **Documents are hierarchical** - A document folder may contain other folders, where those folders would represent child documents (e.g., [`files/en-us/web/javascript/closures/index.html`](files/en-us/web/javascript/closures/index.html)).
+* **Document folders may contain image files** -- A document folder may also contain image files, which are referenced within that document's `index.html` file.
+* **All redirects are specified in a single file** -- All of the redirects are specified within [`files/en-us/_redirects.txt`](files/en-us/_redirects.txt), one redirect per line. Each line specifies a `from` and `to` URI separated by whitespace. When you move a document, you'll need to add a redirect to this file specifying that its old URI now redirects to its new URI. If both an `index.html` file and a redirect exist for a document, the document takes precedence and the redirect is ignored.
+* **A document's `index.html` starts with "front-matter"** -- Each document's `index.html` file must begin with some [YAML](https://en.wikipedia.org/wiki/YAML) called front-matter that defines some important information about the document: `title`, `slug`, and [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag) (if any). Here's an example that shows the front-matter from the [JavaScript landing page](files/en-us/web/javascript/index.html):
+
     ```yaml
     ---
     title: JavaScript
@@ -73,7 +97,7 @@ represented by a folder (e.g., [`files/en-us/web/javascript`](files/en-us/web/ja
 If you just want to make a simple change to a single file, like fixing a typo, the
 GitHub UI is the simplest way to do that. For example, if you've found
 a typo within the [JavaScript landing page](files/en-us/web/javascript/index.html),
-you can sign into GitHub, go to https://github.com/mdn/content, navigate to
+you can sign into GitHub, go to <https://github.com/mdn/content>, navigate to
 `files/en-us/web/javascript/index.html`, and then click on the edit (pencil) button. From there the GitHub UI will take your hand and
 [walk you through the rest](https://docs.github.com/en/free-pro-team@latest/github/managing-files-in-a-repository/editing-files-in-your-repository),
 like automatically creating a
@@ -82,7 +106,7 @@ and branch to commit your changes to, as well as helping you reach the ultimate 
 [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests). Your pull request
 represents the work you want to be reviewed, hopefully approved,
 and then merged into the `main` branch of this repository.
-**See the [pull-request etiquette section](#pull-request-etiquette) for more details**
+**See the [pull request etiquette section](#pull-request-etiquette) for more details**
 **on creating and handling pull requests successfully.**
 
 If you're not certain of the changes that you want to make, get in touch with us first!
@@ -132,7 +156,7 @@ it `mdn`, but you can name it anything you'd like.
 `mdn` and `origin`. The `origin` remote is the default name that `git` has assigned to your
 fork (`https://github.com/octocat/content`).
 
-1. Once you've created your local clone, there's no need to to do that again next time
+1. Once you've created your local clone, there's no need to do that again next time
 you want to make a contribution. However, each time before you start a new chunk of work make sure you update your local clone. The following checks-out your local clone's
 `main` branch, fetches the latest content from the `main` branch of the `mdn`
 repository and merges it into your local `main` branch, and finally checks out
@@ -149,7 +173,7 @@ and use it to make a pull request.
 
 1. Next, you'll want to start the local preview service, so you can see the changes
 you'll make as they would look in production. Once started, this local preview
-service is available at http://localhost:5000 within your browser.
+service is available at `http://localhost:5000` within your browser.
 
     ```sh
     # Switch to a separate terminal.
@@ -193,20 +217,20 @@ service is available at http://localhost:5000 within your browser.
 1. Make your desired changes to one or more `index.html` files using
 your preferred code editor. **When thinking about your desired changes, it's
 important to keep the following in mind:**
-    - **Make sure you've read the
+    * **Make sure you've read the
     [MDN guidelines](https://developer.mozilla.org/en-US/docs/MDN/Guidelines),
     including the
     [Writing style guide](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide).**
-    - **Large chunks of work can be difficult to review, so try to group your
+    * **Large chunks of work can be difficult to review, so try to group your
     changes into the smallest logical chunks that make sense, and create a
     separate pull request for each logical chunk.**
 
 1. Once you've made and saved your changes, open a browser, and navigate to the page(s)
 you've changed. For example, if you changed `files/en-us/web/javascript/index.html`,
-open http://localhost:5000/en-us/docs/web/javascript in your browser.
+open `http://localhost:5000/en-us/docs/web/javascript` in your browser.
 
 1. You might have noticed that at the top of each page that you preview, for example
-the http://localhost:5000/en-us/docs/web/javascript page, there is a `Show flaws` button.
+the `http://localhost:5000/en-us/docs/web/javascript` page, there is a `Show flaws` button.
 Click on that button to see if your changes have introduced flaws on the page.
 
 1. Once you're happy with your changes, add and commit them to your branch, and then
@@ -230,12 +254,12 @@ into the `main` branch, and then later (within 48 hours) published on
 [MDN Web Docs](https://developer.mozilla.org). Along the way, you may be asked, not only
 to answer questions about your work, but to make changes as well. Don't worry, that's a
 common and natural part of the process.
-**See the [pull-request etiquette section](#pull-request-etiquette) for more details**
+**See the [pull request etiquette section](#pull-request-etiquette) for more details**
 **on creating and handling pull requests successfully.**
 
-### Pull-request etiquette
+### Pull request etiquette
 
-Here are some important rules of etiquette to remember when working with pull-requests.
+Here are some important rules of etiquette to remember when working with pull requests.
 
 1. When you submit a pull request, a number of tests are automatically run as GitHub
 Actions (see [.github/workflows/pr-build.yml](.github/workflows/pr-build.yml),
@@ -260,7 +284,9 @@ suspicious (it is easier to hide malicious changes in a large pull request). In 
 cases, the reviewer has the right to close your pull request, and ask that you submit
 a separate pull request for each logical set of changes that belong together.
 
-1. If your pull request contains any kind of significant complexity (it contains technical changes, and isn't just a typo fix, grammatical improvement, or formatting/structural change), please describe why you're making the change and anything else we need to know about it. You can do this in your pull request's description, or reference an existing issue that describes the motivation for the change. You can reference an existing issue using `#` followed by the issue's ID, for example `#1234`.
+1. If your pull request contains any kind of significant complexity (it contains technical changes, and isn't just a typo fix, grammatical improvement, or formatting/structural change), please describe why you're making the change and anything else we need to know about it.
+   * If the pull request is simple (it is really clear what has been changed and why, and the change is obviously a good thing), you can do this in your pull request's description.
+   * If the pull request is complex (the changes and the reasoning behind them need a bit more explanation), then the requestor should file an issue describing the intended change first, and seek discussion/approval as needed. When the time is right to submit the PR, they should reference the issue (or an existing issue that describes the motivation for the change) in the PR. You can reference an existing issue using `#` followed by the issue's ID, for example `#1234`.
 
 1. Do not re-open a pull request that a reviewer has closed.
 
@@ -268,18 +294,21 @@ a separate pull request for each logical set of changes that belong together.
 
 Adding a new document is relatively straightforward, especially if you can start by copying
 the `index.html` of a similar document. There are only a few things to keep in mind:
-- Remember that a document is represented by an `index.html` file within its own folder.
-- Determine where in the document hierarchy your document belongs. For example, if you're
+
+* Remember that a document is represented by an `index.html` file within its own folder.
+* Determine where in the document hierarchy your document belongs. For example, if you're
 creating a new CSS document for a new property `foo`, you'll want to create a new folder
 `files/en-us/web/css/foo/` and its `files/en-us/web/css/foo/index.html` file.
-- Remember that a document's `index.html` file must start with front-matter that defines
+* Remember that a document's `index.html` file must start with front-matter that defines
 the `title`, `slug`, and
 [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag)
 (if any) for the document. You might find it helpful to refer
 to the front-matter within a similar document's `index.html`.
 
 As we outlined above, the step-by-step process in general would be:
+
 1. Start a fresh, up-to-date branch to work within:
+
     ```sh
     cd ~/repos/mdn/content
     git checkout main
@@ -293,6 +322,7 @@ As we outlined above, the step-by-step process in general would be:
 1. Create one or more new document folders, each with their own `index.html` file.
 
 1. Add and commit your new files, as well as push your new branch to your fork:
+
     ```sh
     git add files/en-us/folder/you/created
     git commit
@@ -395,7 +425,7 @@ push your branch to your fork:
 ### Adding images
 
 Adding an image to a document is easy as well. All you need to do is add your image
-file within the document's folder, and then simply reference the image from within the
+file within the document's folder, and then reference the image from within the
 document's `index.html` file using an `<img>` element. It's as easy as that. Let's
 walk through an example:
 
@@ -421,7 +451,8 @@ a new image to the `files/en-us/web/css` document.
     cp /some/path/my-cool-image.png files/en-us/web/css/
     ```
 
-1. Run our `filecheck` command on each image you add. It'll complain if something's wrong.
+1. Run the `filecheck` command on each image you add. It'll complain if something's wrong 
+  (see also the [Compressing images](#compressing-images) section below).
 We'll automatically run this as one of the tests we run when your new pull request is created,
 but why wait to fix any possible issues later?
 
@@ -447,33 +478,83 @@ push your branch to your fork:
 
 1. Now you're ready to create your [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
+#### Compressing images
+
+When you add images to MDN, you should make sure that they are compressed as much as possible without degrading quality, to save on download size for our readers. In fact, if you don't do this our CI process will fail and the build results will warn you that some of your images are too big.
+
+The best way to compress them is by using the built-in compression tool. You can compress an image appropriately by using the `filecheck` command with the `--save-compression` option — this compresses the specified image as much as possible, and saves the result over the top of the original.
+
+For example:
+
+```sh
+yarn filecheck files/en-us/web/css/my-cool-image.png --save-compression
+``` 
+
 ### Updating a browser compatibility table
 
-The browser compatibiliity table shown near the bottom of many of the MDN document pages,
+The browser compatibility table shown near the bottom of many of the MDN document pages,
 for example on
 [the JavaScript Array page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Browser_compatibility),
-is generated from the `npm` package created from the https://github.com/mdn/browser-compat-data
+is generated from the `npm` package created from the <https://github.com/mdn/browser-compat-data>
 repository. If you'd like to make or suggest a change to the content of the browser-compatibility
 table on any given MDN document page, you can either use the `Report problems with this data on GitHub` link in the upper-right corner of the table on the page itself to create an issue,
-or simply go to https://github.com/mdn/browser-compat-data and
+or go to <https://github.com/mdn/browser-compat-data> and
 [read more to learn how to contribute](https://github.com/mdn/browser-compat-data/blob/master/docs/contributing.md).
 
 ### Adding code examples
 
 There are a lot of code examples on MDN, and you'll probably want to add some as you contribute content to the project. There are four types of code example used on MDN:
 
-- [Static examples](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples#Static_examples) — plain code blocks, possibly with a screenshot to statically show the
+* [Static examples](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples#Static_examples) — plain code blocks, possibly with a screenshot to statically show the
 result of such code if it were to be run.
-- [Traditional MDN "live samples"](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples#Traditional_live_samples) — A macro that takes plain code blocks, dynamically puts
+* [Traditional MDN "live samples"](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples#Traditional_live_samples) — A macro that takes plain code blocks, dynamically puts
 them into a document inside an `<iframe>` element, and embeds it into the page to show the
 code running live.
-- [GitHub "live samples"](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples#GitHub_live_samples) — A macro that takes a document in a GitHub repo inside the [`mdn
-organization`](https://github.com/mdn), puts it inside an `<iframe>` element, and embeds
+* [GitHub "live samples"](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples#GitHub_live_samples) — A macro that takes a document in a GitHub repo inside the [mdn
+organization](https://github.com/mdn), puts it inside an `<iframe>` element, and embeds
 it into the page to show the code running live.
-- [Interactive examples](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples#Interactive_examples) — Our system for creating live interactive examples that show the
+* [Interactive examples](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples#Interactive_examples) — Our system for creating live interactive examples that show the
 code running live but also allow you to change code on the fly to see what the effect is.
 
 For a complete description of this topic, see
 [the MDN code examples page](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples).
 
-Also make sure that your code examples follow the [MDN code example guidelines](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines). 
+Also make sure that your code examples follow the [MDN code example guidelines](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines).
+
+### Archiving and unarchiving pages
+
+Pages with the banner "This is an archived page. It's not actively maintained." at the top are archived pages — they are archived because either they are obsolete or out-of-date, or they are not in scope for MDN contributors to actively work on.
+
+If you find a page that is marked archived and you think it shouldn't be, you can follow the below steps to unarchive it:
+
+* Submit an issue to check why the page is archived and if it should be unarchived.
+* Find the source code location of the archived page. Archived pages live in the [Archived content](https://github.com/mdn/archived-content/) repo, the structure of which is the same as this repo (except that there are also locale directories present other than `en-US`). As an example:
+  * Take the archived [Mobile developer challenge](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Mobile_developer_challenge) page, which is at the URL `https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Mobile_developer_challenge`.
+  * This page's source code is at [https://github.com/mdn/archived-content/blob/main/files/en-us/mozilla/mobile/mobile_developer_challenge/index.html](https://github.com/mdn/archived-content/blob/main/files/en-us/mozilla/mobile/mobile_developer_challenge/index.html).
+* To unarchive the page, you need to open a pull request to move the page's directory into the appropriate place inside this repo, and update the page's meta data (like `slug`) if needed.
+
+Note: To archive a currently-non-archived page, you need to follow the above procedure, but move the page in question the opposite way between repos.
+
+Note: You can have an archived page with non-archived pages below it in the hierarchy, and vice-versa. To achive this you need to have the same directory structure in both the `content` and `archive-content` repos. Whether a page is non-archived or archived depends on which repo its `index.html` file is in. As an example, compare the [archived-content mozilla directory](https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla) with the [content mozilla directory](https://github.com/mdn/content/tree/main/files/en-us/mozilla). Both locations represent the same directory structure, but the `index.html` file appears in the latter, therefore the page is not archived.
+
+### Making a change that depends on a macro update
+
+KumaScript macros are still used on MDN pages, even in the new platform. These are the function names surrounded by handlebars-style double curly braces that you'll see in the source code on occasion, for example `{{domxref}}` Eventually we have to replace them with something else, but they are here for now. They live in [https://github.com/mdn/yari/tree/master/kumascript/macros](https://github.com/mdn/yari/tree/master/kumascript/macros).
+
+Sometimes you'll want to make a change to the content that relies on a macro change. Take [https://github.com/mdn/content/pull/187](https://github.com/mdn/content/pull/187). Florian wanted to add documentation for a new WebGL extension to MDN, but this change relied on the new feature's spec being added to [https://github.com/mdn/yari/blob/master/kumascript/macros/SpecData.json](https://github.com/mdn/yari/blob/master/kumascript/macros/SpecData.json). If not, the specification table on the new page would not render properly because the data it relies on would not be there.
+
+In such situations:
+
+1. Make the required PR to <https://github.com/mdn/yari/blob/master/kumascript/macros/> first, and get that merged.
+2. Add the content to this repo.
+
+## Frequently asked questions (FAQ)
+
+### When will my change show up on the production MDN site?
+
+After your pull request is merged, it may take up to 48 hours before the change goes live on the production https://developer.mozilla.org/ site, but it will usually be quicker.
+
+* The complete build runs every 24h at around 7PM US/Eastern time, and is then deployed.
+* Once deployment has occurred, it can take up to 24 hours for the associated CDN caches to replace their previously-cached content with the updates.
+
+You can use https://whatsdeployed.io/s/DLi/mdn/content to see if your change has been deployed to the production site.

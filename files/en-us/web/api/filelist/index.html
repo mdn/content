@@ -8,35 +8,35 @@ tags:
 ---
 <div>{{APIRef("File API")}}{{gecko_minversion_header("1.9")}}</div>
 
-<p>An object of this type is returned by the <code>files</code> property of the HTML {{HTMLElement("input")}} element; this lets you access the list of files selected with the <code>&lt;input type="file"&gt;</code> element. It's also used for a list of files dropped into web content when using the drag and drop API; see the <a href="/en-US/docs/DragDrop/DataTransfer" title="DragDrop/DataTransfer"><code>DataTransfer</code></a> object for details on this usage.</p>
+<p>An object of this type is returned by the <code>files</code> property of the HTML {{HTMLElement("input")}} element; this lets you access the list of files selected with the <code>&lt;input type="file"&gt;</code> element. It's also used for a list of files dropped into web content when using the drag and drop API; see the <a href="/en-US/docs/DragDrop/DataTransfer"><code>DataTransfer</code></a> object for details on this usage.</p>
 
 <div class="note">
 <p><strong>Note:</strong> Prior to {{Gecko("1.9.2")}}, the input element only supported a single file being selected at a time, meaning that the FileList would contain only one file. Starting with {{Gecko("1.9.2")}}, if the input element's multiple attribute is true, the FileList may contain multiple files.</p>
 </div>
 
-<h2 id="Using_the_file_list" name="Using_the_file_list">Using the file list</h2>
+<h2 id="Using_the_file_list">Using the file list</h2>
 
 <p>All <code>&lt;input&gt;</code> element nodes have a <code>files</code> attribute of type <code>FileList</code> on them which allows access to the items in this list. For example, if the HTML includes the following file input:</p>
 
 <pre>&lt;input id="fileItem" type="file"&gt;
 </pre>
 
-<p>The following line of code fetches the first file in the node's file list as a <a href="/en-US/docs/DOM/File" title="DOM/File"><code>File</code></a> object:</p>
+<p>The following line of code fetches the first file in the node's file list as a <a href="/en-US/docs/DOM/File"><code>File</code></a> object:</p>
 
 <pre class="brush: js">var file = document.getElementById('fileItem').files[0];
 </pre>
 
-<h2 id="Method_overview" name="Method_overview">Method overview</h2>
+<h2 id="Method_overview">Method overview</h2>
 
 <table class="standard-table">
 	<tbody>
 		<tr>
-			<td><code>File <a href="#item ()">item</a>(index);</code></td>
+			<td><code>File <a href="#item()">item</a>(index);</code></td>
 		</tr>
 	</tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">Properties</h2>
+<h2 id="Attributes">Properties</h2>
 
 <table class="standard-table">
 	<tbody>
@@ -53,29 +53,29 @@ tags:
 	</tbody>
 </table>
 
-<h2 id="Methods" name="Methods">Methods</h2>
+<h2 id="Methods">Methods</h2>
 
-<h3 id="item()" name="item()">item()</h3>
+<h3 id="item()">item()</h3>
 
-<p>Returns a <a href="/en-US/docs/DOM/File" title="DOM/File"><code>File</code></a> object representing the file at the specified index in the file list.</p>
+<p>Returns a <a href="/en-US/docs/DOM/File"><code>File</code></a> object representing the file at the specified index in the file list.</p>
 
 <pre> File item(
    index
  );
 </pre>
 
-<h6 id="Parameters" name="Parameters">Parameters</h6>
+<h6 id="Parameters">Parameters</h6>
 
 <dl>
 	<dt><code>index</code></dt>
 	<dd>The zero-based index of the file to retrieve from the list.</dd>
 </dl>
 
-<h6 id="Return_value" name="Return_value">Return value</h6>
+<h6 id="Return_value">Return value</h6>
 
-<p>The <a href="/en-US/docs/DOM/File" title="DOM/File"><code>File</code></a> representing the requested file.</p>
+<p>The <a href="/en-US/docs/DOM/File"><code>File</code></a> representing the requested file.</p>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <p>This example iterates over all the files selected by the user using an <code>input</code> element:</p>
 
@@ -151,28 +151,25 @@ document.querySelector("#myfiles").onchange=pullfiles;
 		<tr>
 			<td>{{SpecName('File API', '#filelist-section', 'FileList')}}</td>
 			<td>{{Spec2('File API')}}</td>
-			<td> </td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>{{SpecName('HTML WHATWG', '#concept-input-type-file-selected', 'selected files')}}</td>
 			<td>{{Spec2('HTML WHATWG')}}</td>
-			<td> </td>
+			<td></td>
 		</tr>
 	</tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
-
-
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat("api.FileList")}}</p>
 
-<p> </p>
 
-<h2 id="See_also" name="See_also">See also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
 	<li><a href="/en-US/docs/Using_files_from_web_applications" title="Using files from web applications">Using files from web applications</a></li>
-	<li><code><a href="/en-US/docs/DOM/File" title="DOM/File">File</a></code></li>
-	<li><code><a href="/en-US/docs/DOM/FileReader" title="DOM/FileReader">FileReader</a></code></li>
+	<li><code><a href="/en-US/docs/DOM/File">File</a></code></li>
+	<li><code><a href="/en-US/docs/DOM/FileReader">FileReader</a></code></li>
 </ul>

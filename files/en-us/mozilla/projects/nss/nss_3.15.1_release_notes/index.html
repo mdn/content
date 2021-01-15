@@ -1,0 +1,66 @@
+---
+title: NSS 3.15.1 release notes
+slug: Mozilla/Projects/NSS/NSS_3.15.1_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+<p>Network Security Services (NSS) 3.15.1 is a patch release for NSS 3.15. The bug fixes in NSS 3.15.1 are described in the "Bugs Fixed" section below.</p>
+<h2 id="Distribution_Information">Distribution Information</h2>
+<p>NSS 3.15.1 source distributions are also available on ftp.mozilla.org for secure HTTPS download:</p>
+<ul>
+  <li>Source tarballs:<br>
+    <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_15_1_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_15_1_RTM/src/</a></li>
+</ul>
+<h2 id="New_in_NSS_3.15.1">New in NSS 3.15.1</h2>
+<h3 id="New_Functionality">New Functionality</h3>
+<ul>
+  <li>TLS 1.2: TLS 1.2 (<a href="https://tools.ietf.org/html/rfc5246" title="http://tools.ietf.org/html/rfc5246">RFC 5246</a>) is supported. HMAC-SHA256 cipher suites (<a href="https://tools.ietf.org/html/rfc5246" title="http://tools.ietf.org/html/rfc5246">RFC 5246</a> and <a href="https://tools.ietf.org/html/rfc5289" title="http://tools.ietf.org/html/rfc5289">RFC 5289</a>) are supported, allowing TLS to be used without MD5 and SHA-1. Note the following limitations.
+    <ul>
+      <li>The hash function used in the signature for TLS 1.2 client authentication must be the hash function of the TLS 1.2 PRF, which is always SHA-256 in NSS 3.15.1.</li>
+      <li>AES GCM cipher suites are not yet supported.</li>
+    </ul>
+  </li>
+</ul>
+<h4 id="New_Functions">New Functions</h4>
+<p>None.</p>
+<h4 id="New_Types">New Types</h4>
+<ul>
+  <li><em>in sslprot.h</em>
+    <ul>
+      <li><strong>SSL_LIBRARY_VERSION_TLS_1_2</strong> - The protocol version of TLS 1.2 on the wire, value 0x0303.</li>
+      <li><strong>TLS_DHE_RSA_WITH_AES_256_CBC_SHA256</strong>, <strong>TLS_RSA_WITH_AES_256_CBC_SHA256</strong>, <strong>TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256</strong>, <strong>TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</strong>, <strong>TLS_DHE_RSA_WITH_AES_128_CBC_SHA256</strong>, <strong>TLS_RSA_WITH_AES_128_CBC_SHA256</strong>, <strong>TLS_RSA_WITH_NULL_SHA256</strong> - New TLS 1.2 only HMAC-SHA256 cipher suites.</li>
+    </ul>
+  </li>
+  <li><em>in sslerr.h</em>
+    <ul>
+      <li><strong>SSL_ERROR_UNSUPPORTED_HASH_ALGORITHM</strong>, <strong>SSL_ERROR_DIGEST_FAILURE</strong>, <strong>SSL_ERROR_INCORRECT_SIGNATURE_ALGORITHM</strong> - New error codes for TLS 1.2.</li>
+    </ul>
+  </li>
+  <li><em>in sslt.h</em>
+    <ul>
+      <li><strong>ssl_hmac_sha256</strong> - A new value in the SSLMACAlgorithm enum type.</li>
+      <li><strong>ssl_signature_algorithms_xtn</strong> - A new value in the SSLExtensionType enum type.</li>
+    </ul>
+  </li>
+</ul>
+<h4 id="New_PKCS_11_Mechanisms">New PKCS #11 Mechanisms</h4>
+<p>None.</p>
+<h3 id="Notable_Changes_in_NSS_3.15.1">Notable Changes in NSS 3.15.1</h3>
+<ul>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=856060">Bug 856060</a> - Enforce name constraints on the common name in libpkix  when no subjectAltName is present.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=875156">Bug 875156</a> - Add const to the function arguments of SEC_CertNicknameConflict.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=877798">Bug 877798</a> - Fix ssltap to print the certificate_status handshake message correctly.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=882829">Bug 882829</a> - On Windows, NSS initialization fails if NSS cannot call the RtlGenRandom function.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=875601">Bug 875601</a> - SECMOD_CloseUserDB/SECMOD_OpenUserDB fails to reset the token delay, leading to spurious failures.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=884072">Bug 884072</a> - Fix a typo in the header include guard macro of secmod.h.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=876352">Bug 876352</a> - certutil now warns if importing a PEM file that contains a private key.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=565296">Bug 565296</a> - Fix the bug that shlibsign exited with status 0 even though it failed.</li>
+  <li>The NSS_SURVIVE_DOUBLE_BYPASS_FAILURE build option is removed.</li>
+</ul>
+<h3 id="Bugs_fixed_in_NSS_3.15.1">Bugs fixed in NSS 3.15.1</h3>
+<ul>
+  <li><a href="https://bugzilla.mozilla.org/buglist.cgi?list_id=5689256;resolution=FIXED;classification=Components;query_format=advanced;target_milestone=3.15.1;product=NSS">https://bugzilla.mozilla.org/buglist.cgi?list_id=5689256;resolution=FIXED;classification=Components;query_format=advanced;target_milestone=3.15.1;product=NSS</a></li>
+</ul>
+<h2 id="Compatibility">Compatibility</h2>
+<p>NSS 3.15.1 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.15.1 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+<h2 id="Feedback">Feedback</h2>
+<p>Bugs discovered should be reported by filing a bug report with<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (product NSS).</p>

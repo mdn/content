@@ -9,7 +9,7 @@ slug: >-
 <h3 id="HTML">HTML</h3>
 
 <pre class="brush: html">&lt;div class="square"&gt;
-  #&lt;input class="color"&gt;
+  &lt;p class="color"&gt;#000000&lt;/p&gt;
 &lt;/div&gt;</pre>
 
 <h3 id="CSS">CSS</h3>
@@ -38,7 +38,7 @@ slug: >-
 
 <pre class="brush: js">function setColor(color) {
   document.querySelector('.square').style.backgroundColor = '#' + color;
-  document.querySelector('.color').value = color;
+  document.querySelector('.color').textContent = '#' + color;
 }
 
 function getRandomColor() {
@@ -46,21 +46,8 @@ function getRandomColor() {
   return color.toString(16);
 }
 
-function getInputColor() {
-  var value = document.querySelector('.color').value;
-  var color = Number('0x' + color);
-  if (color === +color) {
-    return color.toString(16);
-  }
-  return value;
-}
-
-document.addEventListener('click', function () {
+document.addEventListener('click', function (e) {
   setColor(getRandomColor());
-});
-
-document.addEventListener('keyup', function () {
-  setColor(getInputColor());
 });
 </pre>
 </div>

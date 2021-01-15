@@ -25,7 +25,7 @@ tags:
 <p>The process works like this (using {{domxref("MediaStreamTrack")}} as an example):</p>
 
 <ol>
-	<li>If needed, call {{domxref("MediaDevices.getSupportedConstraints()")}} to get the list of <strong>supported constraints</strong>, which tells you what constrainable properties the browser knows about. This isn't always necessary, since any that aren't known will simply be ignored when you specify them—but if you have any that you can't get by without, you can start by checking to be sure they're on the list.</li>
+	<li>If needed, call {{domxref("MediaDevices.getSupportedConstraints()")}} to get the list of <strong>supported constraints</strong>, which tells you what constrainable properties the browser knows about. This isn't always necessary, since any that aren't known will be ignored when you specify them—but if you have any that you can't get by without, you can start by checking to be sure they're on the list.</li>
 	<li>Once the script knows whether the property or properties it wishes to use are supported, it can then check the <strong>capabilities</strong> of the API and its implementation by examining the object returned by the track's <code>getCapabilities()</code> method; this object lists each supported constraint and the values or range of values which are supported.</li>
 	<li>Finally, the track's <code>applyConstraints()</code> method is called to configure the API as desired by specifying the values or ranges of values it wishes to use for any of the constrainable properties about which it has a preference.</li>
 	<li>The track's <code>getConstraints()</code> method returns the set of constraints passed into the most recent call to <code>applyConstraints()</code>. This may not represent the actual current state of the track, due to properties whose requested values had to be adjusted and because platform default values aren't represented. For a complete representation of the track's current configuration, use <code>getSettings()</code>.</li>
@@ -51,7 +51,7 @@ document.getElementById("frameRateSlider").disabled = !supported["frameRate"];</
 
 <h3 id="Requesting_a_specific_value_for_a_setting">Requesting a specific value for a setting</h3>
 
-<p>Most simply, each constraint may be a specific value indicating a desired value for the setting. For example:</p>
+<p>Most, each constraint may be a specific value indicating a desired value for the setting. For example:</p>
 
 <pre class="brush: js notranslate">let constraints = {
   width: 1920,
@@ -330,7 +330,7 @@ let audioSettingsText = document.getElementById("audioSettingsText");
 	<dt><code>logElement</code></dt>
 	<dd>A {{HTMLElement("div")}} into which any error messages or other log-type output will be written.</dd>
 	<dt><code>supportedConstraintList</code></dt>
-	<dd>A {{HTMLElement("ul")}} (unordered list) into which we programatically add the names of each of the constrainable properties supported by the user's browser.</dd>
+	<dd>A {{HTMLElement("ul")}} (unordered list) into which we programmatically add the names of each of the constrainable properties supported by the user's browser.</dd>
 	<dt><code>videoConstraintEditor</code></dt>
 	<dd>A {{HTMLElement("textarea")}} element that lets the user edit the code for the video track's constraint set.</dd>
 	<dt><code>audioConstraintEditor</code></dt>
@@ -381,9 +381,6 @@ audioConstraintEditor.value = audioDefaultConstraintString;</pre>
 <h4 id="Configuring_and_starting_the_stream">Configuring and starting the stream</h4>
 
 <p>The <code>startVideo()</code> method handles setting up and starting the video stream.</p>
-
-<ol>
-</ol>
 
 <pre class="brush: js notranslate">function startVideo() {
   buildConstraints();
@@ -477,7 +474,7 @@ audioConstraintEditor.value = audioDefaultConstraintString;</pre>
 });
 </pre>
 
-<p>This simply stops the active tracks, sets the <code>videoTrack</code> and <code>audioTrack</code> variables to <code>null</code> so we know they're gone, and removes the stream from the {{HTMLElement("video")}} element by setting {{domxref("HTMLMediaElement.srcObject")}} to <code>null</code>.</p>
+<p>This stops the active tracks, sets the <code>videoTrack</code> and <code>audioTrack</code> variables to <code>null</code> so we know they're gone, and removes the stream from the {{HTMLElement("video")}} element by setting {{domxref("HTMLMediaElement.srcObject")}} to <code>null</code>.</p>
 
 <h4 id="Simple_tab_support_in_the_editor">Simple tab support in the editor</h4>
 
@@ -563,7 +560,6 @@ function handleError(reason) {
 <h3 id="MediaDevices.getSupportedConstraints"><code>MediaDevices.getSupportedConstraints</code></h3>
 
 <div>
-
 
 <p>{{Compat("api.MediaDevices.getSupportedConstraints")}}</p>
 </div>

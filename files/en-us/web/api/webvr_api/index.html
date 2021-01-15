@@ -14,7 +14,7 @@ tags:
 ---
 <p>{{DefaultAPISidebar("WebVR API")}}{{Deprecated_Header}}</p>
 
-<div class="blockIndicator note"><strong>Note:</strong> WebVR API is replaced by <a href="/en-US/docs/Web/API/WebXR_API">WebXR API</a>. WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.</div>
+<div class="notecard note"><strong>Note:</strong> WebVR API is replaced by <a href="/en-US/docs/Web/API/WebXR_API">WebXR API</a>. WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.</div>
 
 <p class="summary">WebVR provides support for exposing virtual reality devices — for example, head-mounted displays like the Oculus Rift or HTC Vive — to web apps, enabling developers to translate position and movement information from the display into movement around a 3D scene. This has numerous, interesting applications, from virtual product tours and interactive training apps to immersive first-person games.</p>
 
@@ -28,7 +28,7 @@ tags:
 
 <ul>
  <li>Retrieve useful information to allow us to identify the display, what capabilities it has, controllers associated with it, and more.</li>
- <li>Retrieve {{DOMxRef("VRFrameData", "frame data")}} for each frame of content you you want to present in a display, and submit those frames for display at a consistent rate.</li>
+ <li>Retrieve {{DOMxRef("VRFrameData", "frame data")}} for each frame of content you want to present in a display, and submit those frames for display at a consistent rate.</li>
  <li>Start and stop presenting to the display.</li>
 </ul>
 
@@ -88,7 +88,7 @@ tags:
  <dt>{{DOMxRef("VRLayerInit")}}</dt>
  <dd>Represents a layer to be presented in a {{DOMxRef("VRDisplay")}}.</dd>
  <dt>{{DOMxRef("VRStageParameters")}}</dt>
- <dd>Represents the values describing the the stage area for devices that support room-scale experiences.</dd>
+ <dd>Represents the values describing the stage area for devices that support room-scale experiences.</dd>
 </dl>
 
 <h3 id="Extensions_to_other_interfaces">Extensions to other interfaces</h3>
@@ -124,9 +124,6 @@ tags:
  <dd>Represents an event handler that will run when a display is able to be presented to (when the {{event("vrdisplayactivate")}} event fires), for example if an HMD has been moved to bring it out of standby, or woken up by being put on.</dd>
  <dt>{{DOMxRef("Window.onvrdisplaydeactivate")}}</dt>
  <dd>Represents an event handler that will run when a display can no longer be presented to (when the {{event("vrdisplaydeactivate")}} event fires), for example if an HMD has gone into standby or sleep mode due to a period of inactivity.</dd>
-</dl>
-
-<dl>
  <dt>{{DOMxRef("Window.onvrdisplayblur")}}</dt>
  <dd>Represents an event handler that will run when presentation to a display has been paused for some reason by the browser, OS, or VR hardware (when the {{event("vrdisplayblur")}} event fires) — for example, while the user is interacting with a system menu or browser, to prevent tracking or loss of experience.</dd>
  <dt>{{DOMxRef("Window.onvrdisplayfocus")}}</dt>

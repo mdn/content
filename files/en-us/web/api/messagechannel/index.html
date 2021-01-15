@@ -39,7 +39,7 @@ tags:
 
 <p>When the IFrame has loaded, we register an <code>onmessage</code> handler for  {{domxref("MessageChannel.port1")}} and transfer {{domxref("MessageChannel.port2")}} to the IFrame using the {{domxref("window.postMessage")}} method along with a message.</p>
 
-<p>When a message is received back from the IFrame, the <code>onMessage</code> function simply outputs the message to a paragraph.</p>
+<p>When a message is received back from the IFrame, the <code>onMessage</code> function outputs the message to a paragraph.</p>
 
 <pre class="brush: js">var channel = new MessageChannel();
 var output = document.querySelector('.output');
@@ -55,7 +55,6 @@ function onLoad() {
   // Transfer port2 to the iframe
   iframe.contentWindow.postMessage('Hello from the main page!', '*', [channel.port2]);
 }
-
 
 // Handle messages received on port1
 function onMessage(e) {
@@ -77,7 +76,7 @@ function onMessage(e) {
 		<tr>
 			<td>{{SpecName('HTML WHATWG', 'web-messaging.html#message-channels','Message channels')}}</td>
 			<td>{{Spec2('HTML WHATWG')}}</td>
-			<td> </td>
+			<td></td>
 		</tr>
 	</tbody>
 </table>
@@ -85,7 +84,6 @@ function onMessage(e) {
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("api.MessageChannel")}}</p>
 </div>

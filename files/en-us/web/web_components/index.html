@@ -28,7 +28,7 @@ tags:
 <p>Web Components aims to solve such problems — it consists of three main technologies, which can be used together to create versatile custom elements with encapsulated functionality that can be reused wherever you like without fear of code collisions.</p>
 
 <ul>
- <li><strong>Custom elements</strong>: A set of JavaScript APIs that allow you to define custom elements and their behaviour, which can then be used as desired in your user interface.</li>
+ <li><strong>Custom elements</strong>: A set of JavaScript APIs that allow you to define custom elements and their behavior, which can then be used as desired in your user interface.</li>
  <li><strong>Shadow DOM</strong>: A set of JavaScript APIs for attaching an encapsulated "shadow" DOM tree to an element — which is rendered separately from the main document DOM — and controlling associated functionality. In this way, you can keep an element's features private, so they can be scripted and styled without the fear of collision with other parts of the document.</li>
  <li><strong>HTML templates</strong>: The {{HTMLElement("template")}} and {{HTMLElement("slot")}} elements enable you to write markup templates that are not displayed in the rendered page. These can then be reused multiple times as the basis of a custom element's structure.</li>
 </ul>
@@ -72,13 +72,6 @@ tags:
   <li><code>attributeChangedCallback</code>: Invoked when one of the custom element's attributes is added, removed, or changed.</li>
  </ul>
  </dd>
- <dd>
- <ul>
- </ul>
- </dd>
-</dl>
-
-<dl>
  <dt>Extensions for creating custom built-in elements</dt>
  <dd>
  <ul>
@@ -93,10 +86,6 @@ tags:
   <li>{{cssxref(":host")}}: Selects the shadow host of the <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a> containing the CSS it is used inside.</li>
   <li>{{cssxref(":host()")}}: Selects the shadow host of the <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a> containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host.</li>
   <li>{{cssxref(":host-context()")}}: Selects the shadow host of the <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a> containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host's ancestor(s) in the place it sits inside the DOM hierarchy.</li>
- </ul>
- </dd>
- <dd>
- <ul>
  </ul>
  </dd>
  <dt>CSS pseudo-elements</dt>
@@ -148,9 +137,6 @@ tags:
  <dd>Assigns a slot in a shadow DOM shadow tree to an element.</dd>
  <dt>{{domxref("Slotable")}}</dt>
  <dd>A mixin implemented by both {{domxref("Element")}} and {{domxref("Text")}} nodes, defining features that allow them to become the contents of an {{htmlelement("slot")}} element. The mixin defines one attribute, {{domxref("Slotable.assignedSlot")}}, which returns a reference to the slot the node is inserted in.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Element")}} extensions</dt>
  <dd>Extensions to the <code>Element</code> interface related to slots:
  <ul>
@@ -223,10 +209,10 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://www.webcomponents.org/">webcomponents.org</a> — site featuring web components examples, tutorials, and other information.</li>
+ <li><a href="https://open-wc.org/">Open Web Components</a> — Guides, tools and libraries for developing web components.</li>
  <li><a href="https://www.dataformsjs.com/">DataFormsJS</a> — Open source web components library — Set of Web Components that can be used to build Single Page Apps (SPA), Display JSON data from API’s and Web Services, and bind data to different elements on screen. All Web Components are plain JavaScript and require no build process.</li>
  <li><a href="https://fast.design/" rel="noopener">FAST</a> is a web component library built by Microsoft which offers several packages to leverage depending on your project needs. <a href="https://github.com/microsoft/fast/tree/master/packages/web-components/fast-element" rel="noopener">Fast Element</a> is a lightweight means to easily build performant, memory-efficient, standards-compliant Web Components. <a href="https://github.com/microsoft/fast/tree/master/packages/web-components/fast-foundation" rel="noopener">Fast Foundation</a> is a library of Web Component classes, templates, and other utilities built on fast-element intended to be composed into registered Web Components.</li>
- <li><a href="https://github.com/hybridsjs/hybrids">Hybrids</a> — Open source web components library, which favors plain objects and pure functions over <code>class</code> and <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">this</span></font> syntax. It provides a simple and functional API for creating custom elements.</li>
+ <li><a href="https://github.com/hybridsjs/hybrids">Hybrids</a> — Open source web components library, which favors plain objects and pure functions over <code>class</code> and <code>this</code> syntax. It provides a simple and functional API for creating custom elements.</li>
  <li><a href="https://www.polymer-project.org/">Polymer</a> — Google's web components framework — a set of polyfills, enhancements, and examples. Currently the easiest way to use web components cross-browser.</li>
  <li><a href="https://github.com/devpunks/snuggsi#readme">Snuggsi</a> — Easy Web Components in ~1kB <em>Including polyfill</em> — All you need is a browser and basic understanding of HTML, CSS, and JavaScript classes to be productive.</li>
  <li><a href="https://github.com/slimjs/slim.js">Slim.js</a> — Open source web components library — a high-performant library for rapid and easy component authoring; extensible and pluggable and cross-framework compatible.</li>

@@ -10,7 +10,7 @@ tags:
 
 <p>The <strong><code>color-interpolation-filters</code></strong> attribute specifies the color space for imaging operations performed via filter effects.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Notes:</strong> This property just has an affect on filter operations. Therefore, it has no effect on filter primitives like {{SVGElement("feOffset")}}, {{SVGElement("feImage")}}, {{SVGElement("feTile")}} or {{SVGElement("feFlood")}}.</p>
 
 <p><code>color-interpolation-filters</code> has a different initial value than {{SVGAttr("color-interpolation")}}. <code>color-interpolation-filters</code> has an initial value of <code>linearRGB</code>, whereas <code>color-interpolation</code> has an initial value of <code>sRGB</code>. Thus, in the default case, filter effects operations occur in the linearRGB color space, whereas all other color interpolations occur by default in the sRGB color space.</p>
@@ -18,7 +18,7 @@ tags:
 <p>It has no affect on filter functions, which operate in the {{Glossary("sRGB")}} color space.</p>
 </div>
 
-<p class="note"><strong>Note:</strong> As a presentation attribute, <code>color-interpolation</code> can be used as a CSS property.</p>
+<p class="note"><strong>Note:</strong> As a presentation attribute, <code>color-interpolation-filters</code> can be used as a CSS property.</p>
 
 <p>As a presentation attribute, it can be applied to any element but it only has an effect on the following eighteen elements: {{SVGElement("feSpotLight")}}, {{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feConvolveMatrix")}}, {{SVGElement("feDiffuseLighting")}}, {{SVGElement("feDisplacementMap")}}, {{SVGElement("feDropShadow")}}, {{SVGElement("feFlood")}}, {{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMorphology")}}, {{SVGElement("feOffset")}}, {{SVGElement("feSpecularLighting")}}, {{SVGElement("feTile")}}, {{SVGElement("feTurbulence")}}</p>
 
@@ -50,7 +50,6 @@ tags:
  <dd>Indicates that color interpolation should occur in the linearized RGB color space as described in <a class="external" href="https://webstore.iec.ch/publication/6169">the sRGB specification</a>.</dd>
 </dl>
 
-
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
@@ -75,9 +74,7 @@ tags:
  </tbody>
 </table>
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Browser compatibility</h2>
-
-
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat("svg.attributes.presentation.color-interpolation-filters")}}</p>
 

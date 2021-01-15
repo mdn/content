@@ -61,7 +61,7 @@ tags:
  <li>The WebXR infrastructure or hardware drivers detected that the device had temporarily lost tracking, causing the hardware and software to be out of sync on position and orientation.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> A <code>reset</code> event will <em>not</em> occur if the reference space is able to regain tracking of its previous origin, since that means the origin has not been forced to be relocated. This event is only fired when the origin has to be relocated to recover from the tracking loss.</p>
 </div>
 
@@ -77,7 +77,7 @@ tags:
 
 <h3 id="The_effect_of_discontinuity_size">The effect of discontinuity size</h3>
 
-<p>The <code>reset</code> event won't be fired when the discontinuity is small enough that the device is able to regain tracking within the same tracking area. Nor will be be fired at an unbounded reference space as it makes small adjustments to its native origin over time to maintain the space's stability in the vicinity of the user; only large discontinuities will trigger a reset.</p>
+<p>The <code>reset</code> event won't be fired when the discontinuity is small enough that the device is able to regain tracking within the same tracking area. Nor will be fired at an unbounded reference space as it makes small adjustments to its native origin over time to maintain the space's stability in the vicinity of the user; only large discontinuities will trigger a reset.</p>
 
 <h2 id="Examples">Examples</h2>
 

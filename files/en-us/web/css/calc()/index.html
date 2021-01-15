@@ -14,7 +14,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>calc()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functionals">function</a> lets you perform calculations when specifying CSS property values. It can be used anywhere a {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}}, or {{cssxref("&lt;integer&gt;")}} is allowed.</p>
+<p>The <strong><code>calc()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> lets you perform calculations when specifying CSS property values. It can be used anywhere a {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}}, or {{cssxref("&lt;integer&gt;")}} is allowed.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/function-calc.html")}}</div>
 
@@ -52,7 +52,7 @@ width: calc(100% - 80px);</pre>
 
 <h3 id="Formal_syntax">Formal syntax</h3>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+<pre class="brush: css notranslate">{{csssyntax}}</pre>
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
@@ -148,9 +148,6 @@ width: calc(100% - 80px);</pre>
 
 <p>After all variables are expanded, <code>widthC</code>'s value will be <code>calc( calc( 100px / 2) / 2)</code>, then when it's assigned to <code>.foo</code>'s width property, all inner <code>calc()</code>s (no matter how deeply nested) will be flattened to just parentheses, so the <code>width</code> property's value will be eventually <code>calc( ( 100px / 2) / 2)</code>, i.e. <code>25px</code>. In short: a <code>calc()</code> inside of a <code>calc()</code> is identical to just parentheses.</p>
 
-<ul>
-</ul>
-
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
@@ -171,8 +168,6 @@ width: calc(100% - 80px);</pre>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("css.types.calc")}}</p>
 

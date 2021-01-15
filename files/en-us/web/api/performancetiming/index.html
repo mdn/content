@@ -3,7 +3,7 @@ title: PerformanceTiming
 slug: Web/API/PerformanceTiming
 tags:
   - API
-  - Backwards compatibilty
+  - Backwards compatibility
   - Deprecated
   - Interface
   - Navigation Timing
@@ -28,7 +28,7 @@ tags:
 
 <p>These properties each describe the time at which a particular point in the page loading process was reached. Some correspond to DOM events; others describe the time at which internal browser operations of interest took place.</p>
 
-<p>Each time is provided as an <code>unsigned long long</code> representing the moment, in milliseconds since the UNIX epoch</p>
+<p>Each time is provided as a {{interwiki("wikipedia", "Unix_time", "Unix time")}} (<code>unsigned long long</code>) representing the moment, in milliseconds since the UNIX epoch.</p>
 
 <p>These properties are listed in the order in which they occur during the navigation process.</p>
 
@@ -83,7 +83,7 @@ tags:
 
 <dl>
  <dt>{{deprecated_inline}}  {{domxref("PerformanceTiming.toJSON()")}} {{non-Standard_Inline}}</dt>
- <dd>Returns a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON object</a> representing this <code>PerformanceTiming</code> object.</dd>
+ <dd>Returns a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON object</a> representing this <code>PerformanceTiming</code> object.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
@@ -106,7 +106,6 @@ tags:
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("api.PerformanceTiming")}}</p>
 </div>

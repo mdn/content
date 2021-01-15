@@ -10,7 +10,7 @@ tags:
 
 <p class="summary">In MathML there are two ways to mark up mathematics: <em>Presentation</em> MathML is used to control the layout of equations, whereas <em>Content</em> MathML is designed to encode the semantic mathematical meaning and to make expressions understandable to computer algebra systems. The MathML elements <code>&lt;semantics&gt;</code>, <code>&lt;annotation&gt;</code> and <code>&lt;annotation-xml&gt;</code> are used to combine presentation and content markup and to provide both, layout information and semantic meaning of mathematical expressions.</p>
 
-<p>The <code>&lt;semantics&gt;</code> element acts as a container element associating annotations and must have child elements (it will raise an <em>invalid markup </em>error otherwise). The <code>&lt;annotation&gt;</code> element is the container element containing semantic information in a non-XML format, whereas the <code>&lt;annotation-xml&gt;</code> element contains content in an XML format, e.g. Content MathML or OpenMath.</p>
+<p>The <code>&lt;semantics&gt;</code> element acts as a container element associating annotations and must have child elements (it will raise an <em>invalid markup</em> error otherwise). The <code>&lt;annotation&gt;</code> element is the container element containing semantic information in a non-XML format, whereas the <code>&lt;annotation-xml&gt;</code> element contains content in an XML format, e.g. Content MathML or OpenMath.</p>
 
 <p>The rules of determining the visible child in a <code>&lt;semantics&gt;</code> element are the following:</p>
 
@@ -20,14 +20,14 @@ tags:
  <li>If no Presentation MathML is found, render the first <code>&lt;annotation&gt;</code> or <code>&lt;annotation-xml&gt;</code> child element of <code>&lt;semantics&gt;</code>.<br>
   Beware that <code>&lt;annotation-xml&gt;</code> elements are only recognized, if the encoding attribute is set to one of the following:
   <ul>
-   <li><code><span id="the-code"><span class="s">"application/mathml-presentation+xml</span></span></code>"</li>
-   <li><code><span id="the-code"><span class="s">"MathML-Presentation</span></span></code>"</li>
-   <li><span id="the-code"><span class="s"><code>"SVG1.1</code></span></span>"</li>
+   <li><code>"application/mathml-presentation+xml"</code></li>
+   <li><code>"MathML-Presentation"</code></li>
+   <li><code>"SVG1.1"</code></li>
    <li><code>"text/html"</code></li>
    <li><code>"image/svg+xml"</code></li>
-   <li><code><span class="st">"application/xml</span></code>".</li>
+   <li><code>"application/xml</code>".</li>
   </ul>
-  Note that<span id="the-code"><span class="c"> "application/mathml+xml</span></span>" is <em>not</em> mentioned here as it does not distinguish between Content or Presentation MathML.</li>
+  Note that <code>"application/mathml+xml"</code> is <em>not</em> mentioned here as it does not distinguish between Content or Presentation MathML.</li>
 </ul>
 
 <h2 id="Attributes">Attributes</h2>
@@ -118,8 +118,6 @@ tags:
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("mathml.elements.semantics")}}</p>
 

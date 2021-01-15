@@ -11,16 +11,16 @@ tags:
 
 <p><span class="seoSummary">The <strong><code>Text.wholeText</code></strong> read-only property returns the full text of all {{domxref("Text")}} nodes logically adjacent to the node.</span> The text is concatenated in document order.  This allows to specify any text node and obtain all adjacent text as a single string.</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js"><em>str</em> = <em>textnode</em>.wholeText;</pre>
 
-<h2 id="Example" name="Example">Notes and example</h2>
+<h2 id="Example">Notes and example</h2>
 
 <p>Suppose you have the following simple paragraph within your webpage (with some whitespace added to aid formatting throughout the code samples here), whose DOM node is stored in the variable <code>para</code>:</p>
 
 <pre class="brush: html">&lt;p&gt;Thru-hiking is great!  &lt;strong&gt;No insipid election coverage!&lt;/strong&gt;
-  However, &lt;a href="http://en.wikipedia.org/wiki/Absentee_ballot"&gt;casting a
+  However, &lt;a href="https://en.wikipedia.org/wiki/Absentee_ballot"&gt;casting a
   ballot&lt;/a&gt; is tricky.&lt;/p&gt;
 </pre>
 
@@ -37,7 +37,7 @@ tags:
 <p>All set, right? <em>Wrong!</em> What happened was you removed the <code>strong</code> element, but the removed sentence’s element separated two text nodes. One for the first sentence, and one for the first word of the last. Instead, you now effectively have this:</p>
 
 <pre class="brush: html">&lt;p&gt;Thru-hiking is great, but However, &lt;a
-  href="http://en.wikipedia.org/wiki/Absentee_ballot"&gt;casting a
+  href="https://en.wikipedia.org/wiki/Absentee_ballot"&gt;casting a
   ballot&lt;/a&gt; is tricky.&lt;/p&gt;
 </pre>
 
@@ -56,13 +56,13 @@ tags:
 <p>We’re removing every adjacent text node (all the ones that constituted the whole text) but the one on which <code>replaceWholeText()</code> is called, and we’re changing the remaining one to the new text. What we have now is this:</p>
 
 <pre class="brush: html">&lt;p&gt;Thru-hiking is great, but &lt;a
-  href="http://en.wikipedia.org/wiki/Absentee_ballot"&gt;casting a
+  href="https://en.wikipedia.org/wiki/Absentee_ballot"&gt;casting a
   ballot&lt;/a&gt; is tricky.&lt;/p&gt;
 </pre>
 
 <p>Some uses of the whole-text functionality may be better served by using <code>Node.textContent</code>, or the longstanding {{domxref("Element.innerHTML")}}; that’s fine and probably clearer in most circumstances. If you have to work with mixed content within an element, as seen here, <code>wholeText</code> and <span class="internal"><code>replaceWholeText()</code></span> may be useful.</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p><span class="internal"><code>replaceWholeText()</code></span> <a href="/en-US/docs/Web/API/Text/replaceWholeText">is obsolete</a>.</p>
 </div>
 
@@ -89,8 +89,6 @@ tags:
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.Text.wholeText")}}</p>
 

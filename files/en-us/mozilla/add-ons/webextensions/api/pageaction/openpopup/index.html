@@ -15,7 +15,6 @@ tags:
 
 <div>Open the page action's popup.</div>
 
-<div> </div>
 
 <div>
 <p>You can only call this function from inside the handler for a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions">user action</a>.</p>
@@ -23,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.pageAction.openPopup()
+<pre class="brush:js">browser.pageAction.openPopup()
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -44,7 +43,7 @@ tags:
 
 <p>Open the popup when the user selects a context menu item:</p>
 
-<pre class="brush: js">browser.menus.create({
+<pre class="notranslate brush: js">browser.menus.create({
   id: "open-popup",
   title: "open popup",
   contexts: ["all"]

@@ -253,7 +253,7 @@ let completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
 
 <p>We can tell Svelte that we want our <code>totalTodos</code> and <code>completedTodos</code> variables to be reactive by prefixing them with <code>$:</code>. Svelte will generate the code to automatically update them whenever data they depend on is changed.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Svelte uses the <code>$:</code> <a href="/en-US/docs/Web/JavaScript/Reference/Statements/label">JavaScript label statement syntax</a> to mark reactive statements. Just like the <code>export</code> keyword being used to declare props, this may look a little alien. This is another example in which Svelte takes advantage of valid JavaScript syntax and gives it a new purpose — in this case to mean "re-run this code whenever any of the referenced values change". Once you get used to it, there's no going back.</p>
 </div>
 
@@ -296,7 +296,7 @@ $: completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
 
 	<pre class="brush: js notranslate">$: console.log('newTodoName: ', newTodoName)</pre>
 
-	<div class="blockIndicator note">
+	<div class="notecard note">
 	<p><strong>Note</strong>: as you may have noticed, reactive statements aren't limited to variable declarations. You can put <em>any</em> JavaScript statement after the <code>$:</code> sign.</p>
 	</div>
 	</li>
@@ -311,7 +311,7 @@ $: completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
   newTodoName = ''
 }</pre>
 
-	<div class="blockIndicator note">
+	<div class="notecard note">
 	<p><strong>Note</strong>: For the moment we are just assigning the same <code>id</code> to every todo, but don't worry, we will fix that soon.</p>
 	</div>
 	</li>
@@ -327,7 +327,7 @@ $: completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
 
 	<p>Just adding <code>todos = todos</code> to the end of the <code>addTodo()</code> function would solve the problem, but it seems strange to have to include that at the end of the function. Instead, we'll take out the <code>push()</code> method and use <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread syntax</a> to achieve the same result — we'll assign a value to the <code>todos</code> array equal to the <code>todos</code> array plus the new object.</p>
 
-	<div class="blockIndicator note">
+	<div class="notecard note">
 	<p><strong>Note</strong>: Array has several mutable operations — <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push">push()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop">pop()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">splice()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift">shift()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift">unshift()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse">reverse()</a></code>, and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">sort()</a></code>. Using them often causes side effects and bugs that are hard to track. By using the spread syntax instead of <code>push()</code> we avoid mutating the array, which is considered a good practice.</p>
 	</div>
 
@@ -357,7 +357,7 @@ $: completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
     }
   }</pre>
 
-	<div class="blockIndicator note">
+	<div class="notecard note">
 	<p><strong>Note</strong>: as you can see, reactive statements are not limited to one-liners. The following would work too, but it is a little less readable: <code>$: newTodoId = totalTodos ? Math.max(...todos.map(t =&gt; t.id)) + 1 : 1</code></p>
 	</div>
 	</li>
@@ -416,7 +416,7 @@ $: completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
 
 	<p>We will show the current filter by applying the <code>btn__primary</code> class to the active filter button. To conditionally apply style classes to an element we use the <code>class:name={value}</code> directive. If the value expression evaluates to truthy, the class name will be applied. You can add many of these directives, with different conditions, to the same element. So when we issue <code>class:btn__primary={filter === 'all'}</code>, Svelte will apply the <code>btn__primary</code> class if filter equals all.</p>
 
-	<div class="blockIndicator note">
+	<div class="notecard note">
 	<p><strong>Note</strong>: Svelte provides a shortcut which allows us to shorten <code>&lt;div class:active={active}&gt;</code> to <code>&lt;div class:active&gt;</code> when the class matches the variable name.</p>
 	</div>
 
@@ -436,7 +436,7 @@ $: completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
 	</li>
 </ol>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>Tip: reactivity can be tricky sometimes. Svelte recognizes <code>filter</code> as a dependency because we are referencing it in the <code>filterTodos(filter, todo)</code> expression. <code>filter</code> is a top-level variable, so we might be tempted to remove it from the helper function params, and just call it like this — <code>filterTodos(todo)</code>. This would work, but now Svelte has no way to find out that <code>{#each filterTodos(todos)... }</code> depends on <code>filter</code>, and the list of filtered todos won't be updated when the filter changes. Always remember that Svelte analyzes our code to find out dependencies, so it's better to be explicit about it and not rely on the visibility of top-level variables. Besides, it's a good practice to make our code clear and explicit about what information it is using.</p>
 </div>
 

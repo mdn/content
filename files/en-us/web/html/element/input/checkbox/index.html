@@ -151,7 +151,7 @@ tags:
 
 <h3 id="Checking_boxes_by_default">Checking boxes by default</h3>
 
-<p>To make a checkbox checked by default, you simply give it the <code>checked</code> attribute. See the below example:</p>
+<p>To make a checkbox checked by default, you give it the <code>checked</code> attribute. See the below example:</p>
 
 <pre class="brush: html notranslate">&lt;fieldset&gt;
   &lt;legend&gt;Choose your interests&lt;/legend&gt;
@@ -193,7 +193,7 @@ tags:
 
 <p>So in this case the <code>indeterminate</code> state is used to state that collecting the ingredients has started, but the recipe is not yet complete.</p>
 
-<pre class="brush: js notranslate" id="line1">  var overall = document.querySelector('input[id="EnchTbl"]');
+<pre class="brush: js notranslate">  var overall = document.querySelector('input[id="EnchTbl"]');
   var ingredients = document.querySelectorAll('ul input');
 
   overall.addEventListener('click', function(e) {
@@ -335,7 +335,7 @@ otherCheckbox.addEventListener('change', () =&gt; {
 			<td></td>
 		</tr>
 		<tr>
-			<td>{{SpecName('HTML5 W3C', 'forms.html#checkbox-state-(type=checkbox)', '&lt;input type="checkbox"&gt;')}}</td>
+			<td>{{SpecName('HTML5 W3C', 'sec-forms.html#checkbox-state-(type=checkbox)', '&lt;input type="checkbox"&gt;')}}</td>
 			<td>{{Spec2('HTML5 W3C')}}</td>
 			<td></td>
 		</tr>
@@ -344,8 +344,6 @@ otherCheckbox.addEventListener('change', () =&gt; {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("html.elements.input.input-checkbox")}}</p>
 
 <h2 id="See_also">See also</h2>
@@ -353,5 +351,5 @@ otherCheckbox.addEventListener('change', () =&gt; {
 <ul>
 	<li>{{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.</li>
 	<li>The {{cssxref(":checked")}} and {{cssxref(":indeterminate")}} CSS selectors let you style checkboxes based on their current state</li>
-	<li><a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">Compatibility of CSS properties</a></li>
+	<li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
 </ul>

@@ -73,7 +73,7 @@ btn.addEventListener('click', () =&gt; {
 
 <p>{{EmbedLiveSample('Synchronous_JavaScript', '100%', '70px')}}</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: It is important to remember that <code><a href="/en-US/docs/Web/API/Window/alert">alert()</a></code>, while being very useful for demonstrating a synchronous blocking operation, is terrible for use in real world applications.</p>
 </div>
 
@@ -107,7 +107,7 @@ let blob = response.blob();
 
 <p>The first parameter is the type of event to be listened for, and the second parameter is a callback function that is invoked when the event is fired.</p>
 
-<p>When we pass a callback function as an argument to another function, we are only passing the function's reference as an argument, i.e, the callback function is <strong>not </strong>executed immediately. It is “called back” (hence the name) asynchronously somewhere inside the containing function’s body. The containing function is responsible for executing the callback function when the time comes.</p>
+<p>When we pass a callback function as an argument to another function, we are only passing the function's reference as an argument, i.e, the callback function is <strong>not</strong> executed immediately. It is “called back” (hence the name) asynchronously somewhere inside the containing function’s body. The containing function is responsible for executing the callback function when the time comes.</p>
 
 <p>You can write your own function containing a callback easily enough. Let's look at another example that loads a resource via the <a href="/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code> API</a> (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/xhr-async-callback.html">run it live</a>, and <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/xhr-async-callback.html">see the source</a>):</p>
 
@@ -133,7 +133,7 @@ function displayImage(blob) {
 
 loadAsset('coffee.jpg', 'blob', displayImage);</pre>
 
-<p>Here we create a <code>displayImage()</code> function that simply represents a blob passed to it as an object URL, then creates an image to display the URL in, appending it to the document's <code>&lt;body&gt;</code>. However, we then create a <code>loadAsset()</code> function that takes a callback as a parameter, along with a URL to fetch and a content type. It uses <code>XMLHttpRequest</code> (often abbreviated to "XHR") to fetch the resource at the given URL, then pass the response to the callback to do something with. In this case the callback is waiting on the XHR call to finish downloading the resource (using the <code><a href="/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload">onload</a></code> event handler) before it passes it to the callback.</p>
+<p>Here we create a <code>displayImage()</code> function that represents a blob passed to it as an object URL, then creates an image to display the URL in, appending it to the document's <code>&lt;body&gt;</code>. However, we then create a <code>loadAsset()</code> function that takes a callback as a parameter, along with a URL to fetch and a content type. It uses <code>XMLHttpRequest</code> (often abbreviated to "XHR") to fetch the resource at the given URL, then pass the response to the callback to do something with. In this case the callback is waiting on the XHR call to finish downloading the resource (using the <code><a href="/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload">onload</a></code> event handler) before it passes it to the callback.</p>
 
 <p>Callbacks are versatile — not only do they allow you to control the order in which functions are run and what data is passed between them, they also allow you to pass data to different functions depending on circumstance. So you could have different actions to run on the response downloaded, such as <code>processJSON()</code>, <code>displayText()</code>, etc.</p>
 
@@ -160,7 +160,7 @@ gods.forEach(function (eachName, index){
   console.log('Fetch problem: ' + err.message);
 });</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can find the finished version on GitHub (<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-script.js">see the source here</a>, and also <a href="https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/">see it running live</a>).</p>
 </div>
 
@@ -173,7 +173,7 @@ gods.forEach(function (eachName, index){
  <li>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch">catch()</a></code> block at the end runs if any of the <code>.then()</code> blocks fail — in a similar way to synchronous <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> blocks, an error object is made available inside the <code>catch()</code>, which can be used to report the kind of error that has occurred. Note however that synchronous <code>try...catch</code> won't work with promises, although it will work with <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Async_await">async/await</a>, as you'll learn later on.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You'll learn a lot more about promises later on in the module, so don't worry if you don't understand them fully yet.</p>
 </div>
 
@@ -251,15 +251,15 @@ console.log("all done");</pre>
 
 <p>This is because at the time the browser tries to run the third <code>console.log()</code> statement, the <code>fetch()</code> block has not finished running so the <code>image</code> variable has not been given a value.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: For security reasons, you can't <code>fetch()</code> files from your local filesystem (or run other such operations locally); to run the above example locally you'll have to run the example through a <a href="/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">local webserver</a>.</p>
 </div>
 
 <h2 id="Active_learning_make_it_all_async!">Active learning: make it all async!</h2>
 
-<p>To fix the problematic <code>fetch()</code> example and make the three <code>console.log()</code> statements appear in the desired order, you could make the third <code>console.log()</code> statement run async as well. This can be done by moving it inside another <code>.then()</code> block chained onto the end of the second one, or by simply moving it inside the second <code>then()</code> block. Try fixing this now.</p>
+<p>To fix the problematic <code>fetch()</code> example and make the three <code>console.log()</code> statements appear in the desired order, you could make the third <code>console.log()</code> statement run async as well. This can be done by moving it inside another <code>.then()</code> block chained onto the end of the second one, or by moving it inside the second <code>then()</code> block. Try fixing this now.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you get stuck, you can <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync-fixed.html">find an answer here</a> (see it <a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync-fixed.html">running live</a> also). You can also find a lot more information on promises in our <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">Graceful asynchronous programming with Promises</a> guide, later on in the module.</p>
 </div>
 
@@ -272,9 +272,6 @@ console.log("all done");</pre>
 <p>There are times when we want things to load and happen right away. For example when applying some user-defined styles to a webpage you'll want the styles to be applied as soon as possible.</p>
 
 <p>If we're running an operation that takes time however, like querying a database and using the results to populate templates, it is better to push this off the main thread and complete the task asynchronously. Over time, you'll learn when it makes more sense to choose an asynchronous technique over a synchronous one.</p>
-
-<ul>
-</ul>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Concepts", "Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous")}}</p>
 

@@ -12,7 +12,7 @@ tags:
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
-<p><span class="seoSummary">The <strong><code>AudioBufferSourceNode</code></strong><strong> </strong>interface is an {{domxref("AudioScheduledSourceNode")}} which represents an audio source consisting of in-memory audio data, stored in an {{domxref("AudioBuffer")}}. It's especially useful for playing back audio which has particularly stringent timing accuracy requirements, such as for sounds that must match a specific rhythm and can be kept in memory rather than being played from disk or the network.</span> To play sounds which require accurate timing but must be streamed from the network or played from disk, use a {{domxref("AudioWorkletNode")}} to implement its playback.</p>
+<p><span class="seoSummary">The <strong><code>AudioBufferSourceNode</code></strong> interface is an {{domxref("AudioScheduledSourceNode")}} which represents an audio source consisting of in-memory audio data, stored in an {{domxref("AudioBuffer")}}. It's especially useful for playing back audio which has particularly stringent timing accuracy requirements, such as for sounds that must match a specific rhythm and can be kept in memory rather than being played from disk or the network.</span> To play sounds which require accurate timing but must be streamed from the network or played from disk, use a {{domxref("AudioWorkletNode")}} to implement its playback.</p>
 
 <p>{{InheritanceDiagram(600, 140)}}</p>
 
@@ -51,13 +51,13 @@ tags:
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>Inherits properties from its parent, </em><em>{{domxref("AudioScheduledSourceNode")}}</em>.</p>
+<p><em>Inherits properties from its parent, {{domxref("AudioScheduledSourceNode")}}</em>.</p>
 
 <dl>
  <dt>{{domxref("AudioBufferSourceNode.buffer")}}</dt>
  <dd>An {{domxref("AudioBuffer")}} that defines the audio asset to be played, or when set to the value <code>null</code>, defines a single channel of silence (in which every sample is 0.0).</dd>
  <dt>{{domxref("AudioBufferSourceNode.detune")}}</dt>
- <dd>Is a <a href="/en-US/docs/DOM/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}} representing detuning of playback in <a href="http://en.wikipedia.org/wiki/Cent_%28music%29">cents</a>. This value is compounded with <code>playbackRate</code> to determine the speed at which the sound is played. Its default value is <code>0</code> (meaning no detuning), and its nominal range is -∞ to ∞.</dd>
+ <dd>Is a <a href="/en-US/docs/DOM/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}} representing detuning of playback in <a href="https://en.wikipedia.org/wiki/Cent_%28music%29">cents</a>. This value is compounded with <code>playbackRate</code> to determine the speed at which the sound is played. Its default value is <code>0</code> (meaning no detuning), and its nominal range is -∞ to ∞.</dd>
  <dt>{{domxref("AudioBufferSourceNode.loop")}}</dt>
  <dd>A Boolean attribute indicating if the audio asset must be replayed when the end of the {{domxref("AudioBuffer")}} is reached. Its default value is <code>false</code>.</dd>
  <dt>{{domxref("AudioBufferSourceNode.loopStart")}} {{optional_inline}}</dt>
@@ -70,18 +70,18 @@ tags:
 
 <h3 id="Event_handlers">Event handlers</h3>
 
-<p><em>Inherits event handlers from its parent, </em><em>{{domxref("AudioScheduledSourceNode")}}</em>.</p>
+<p><em>Inherits event handlers from its parent, {{domxref("AudioScheduledSourceNode")}}</em>.</p>
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>Inherits methods from its parent, </em><em>{{domxref("AudioScheduledSourceNode")}}</em>.</p>
+<p><em>Inherits methods from its parent, {{domxref("AudioScheduledSourceNode")}}</em>.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>In this example, we create a two-second buffer, fill it with white noise, and then play it using an <code>AudioBufferSourceNode</code>. The comments should clearly explain what is going on.</p>
 
 <div class="note">
-<p>You can also <a class="external external-icon" href="http://mdn.github.io/webaudio-examples/audio-buffer/">run the code live</a>, or <a class="external external-icon" href="https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html">view the source</a>.</p>
+<p>You can also <a class="external external-icon" href="https://mdn.github.io/webaudio-examples/audio-buffer/">run the code live</a>, or <a class="external external-icon" href="https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html">view the source</a>.</p>
 </div>
 
 <pre class="brush: js notranslate">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -136,7 +136,6 @@ source.start();</pre>
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("api.AudioBufferSourceNode")}}</p>
 </div>

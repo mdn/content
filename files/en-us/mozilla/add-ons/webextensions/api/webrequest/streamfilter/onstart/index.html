@@ -13,7 +13,7 @@ tags:
 <div>{{AddonSidebar()}}</div>
 
 <div>
-<p>An event handler that will be called when when the stream is opened and is about to begin delivering data. From this point on, the extension may use filter functions like {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}}, {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}, or {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}}.</p>
+<p>An event handler that will be called when the stream is opened and is about to begin delivering data. From this point on, the extension may use filter functions like {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}}, {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}, or {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}}.</p>
 </div>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -26,7 +26,7 @@ tags:
 
 <p>This example will replace the page content with "replacement text":</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">listener</span><span class="punctuation token">(</span>details<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+<pre class="notranslate brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">listener</span><span class="punctuation token">(</span>details<span class="punctuation token">)</span> <span class="punctuation token">{</span>
   <span class="keyword token">let</span> filter <span class="operator token">=</span> browser<span class="punctuation token">.</span>webRequest<span class="punctuation token">.</span><span class="function token">filterResponseData</span><span class="punctuation token">(</span>details<span class="punctuation token">.</span>requestId<span class="punctuation token">)</span><span class="punctuation token">;</span>
 
   filter<span class="punctuation token">.</span>onstart <span class="operator token">=</span> event <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span>

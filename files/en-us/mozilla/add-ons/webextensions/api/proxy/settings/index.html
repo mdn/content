@@ -15,7 +15,7 @@ tags:
 
 <p>A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to change the browser's proxy settings.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: The ability to change proxy settings requires private window access because proxy settings affect both private and non-private windows. Therefore, if an extension has not been granted private window permission, calls to <code>proxy.settings.set()</code> will throw an exception.</p>
 </div>
 
@@ -50,7 +50,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">let proxySettings = {
+<pre class="notranslate brush: js">let proxySettings = {
   proxyType: "manual",
   http: "http://proxy.org:8080",
   socksVersion: 4,

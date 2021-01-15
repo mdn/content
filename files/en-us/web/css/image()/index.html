@@ -11,15 +11,15 @@ tags:
 ---
 <div>{{CSSRef}}{{SeeCompatTable}}</div>
 
-<p>The <strong><code>image()</code></strong> <a href="/en-US/docs/CSS" title="CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functionals">function</a> defines an {{CSSxRef("&lt;image&gt;")}} in a similar fashion to the {{CSSxRef("&lt;url&gt;")}} function, but with added functionality including specifying the image's directionality, specifying fallback images for when the preferred image is not supported, displaying just a part of that image defined by a media fragment, and specifying a solid color as a fallback in case none of the specified images are able to be rendered.</p>
+<p>The <strong><code>image()</code></strong> <a href="/en-US/docs/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> defines an {{CSSxRef("&lt;image&gt;")}} in a similar fashion to the {{CSSxRef("&lt;url&gt;")}} function, but with added functionality including specifying the image's directionality, specifying fallback images for when the preferred image is not supported, displaying just a part of that image defined by a media fragment, and specifying a solid color as a fallback in case none of the specified images are able to be rendered.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Disambiguation:</strong> {{DOMxRef("HTMLImageElement/Image", '<code>Image()</code>, the <code>HTMLImageElement</code> constructor', '', 1)}}.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">{{CSSSyntax("image()")}}</pre>
+<pre class="brush: css notranslate">{{CSSSyntax("image()")}}</pre>
 
 <p>where:</p>
 
@@ -42,7 +42,7 @@ tags:
 
 <pre class="brush: css; notranslate">background-image: image('myimage.webp#xywh=0,20,40,60');</pre>
 
-<p>The background image of the element will be the portion of the image<em> myImage.webp</em> that starts at the coordinate 0px, 20px (the top left hand corner) and is 40px wide and 60px tall.</p>
+<p>The background image of the element will be the portion of the image <em>myImage.webp</em> that starts at the coordinate 0px, 20px (the top left hand corner) and is 40px wide and 60px tall.</p>
 
 <p>The <code>#xywh=#,#,#,#</code> media fragment syntax takes four comma separated numeric values. The first two represent the X and Y coordates for the starting point of the box that will be created. The third value is the width of the box, and the last value is the height. By default, these are pixel values. The <a href="https://www.w3.org/TR/media-frags/#naming-space">spacial dimension definition in the media specification</a> indicates that percentages will be supported as well:</p>
 
@@ -50,7 +50,7 @@ tags:
 xywh=pixel:160,120,320,240  /* results in a 320x240 image at x=160 and y=120 */
 xywh=percent:25,25,50,50    /* results in a 50%x50% image at x=25% and y=25% */</pre>
 
-<p>The image fragments can be used in <code>url()</code> notation as well. The <code>#xywh=#,#,#,#</code> media fragment syntax is 'backwards compatible' in that a media fragment will be ignored if not understood, and won't break the source call when used with <code>url()</code>. If the browser doesn't understand the media fragments notation, it simply ignores the fragment, displaying the entire image.</p>
+<p>The image fragments can be used in <code>url()</code> notation as well. The <code>#xywh=#,#,#,#</code> media fragment syntax is 'backwards compatible' in that a media fragment will be ignored if not understood, and won't break the source call when used with <code>url()</code>. If the browser doesn't understand the media fragments notation, it ignores the fragment, displaying the entire image.</p>
 
 <p>Browsers that understand <code>image()</code> also understand the fragment notation. Therefore, if the fragment is not understood within <code>image()</code>, the image will be considered invalid.</p>
 
@@ -73,7 +73,7 @@ xywh=percent:25,25,50,50    /* results in a 50%x50% image at x=25% and y=25% */<
 
 <p>This feature can help improve accessibility by providing a fallback color when an image fails to load. While this can and should be done by including a background-color on every background image, the CSS <code>image()</code> function allows adding allows only including background colors should an image fail to load, which means you can add a fall back color should a transparent PNG/GIF/WebP not load.</p>
 
-<h2 id="Examples" name="Examples">Examples</h2>
+<h2 id="Examples">Examples</h2>
 
 <h3 id="Directionally-sensitive_images">Directionally-sensitive images</h3>
 
@@ -156,8 +156,6 @@ xywh=percent:25,25,50,50    /* results in a 50%x50% image at x=25% and y=25% */<
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("css.types.image.image")}}</p>
 

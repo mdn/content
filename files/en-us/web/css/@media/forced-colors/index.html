@@ -10,9 +10,9 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>forced-colors</code></strong> <a href="/en-US/docs/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">media feature</a> is used to detect if the {{Glossary("user agent")}} has enabled a forced colors mode where it enforces a user-chosen limited color palette on the page.</span></p>
+<p><span class="seoSummary">The <strong><code>forced-colors</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">media feature</a> is used to detect if the {{Glossary("user agent")}} has enabled a forced colors mode where it enforces a user-chosen limited color palette on the page.</span></p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> This feature is not supported by any user agent and its specifics are subject to change.</p>
 </div>
 
@@ -37,8 +37,6 @@ tags:
 
 <ul>
  <li>{{cssxref("color")}}</li>
- <li>{{cssxref("fill")}}</li>
- <li>{{cssxref("stroke")}}</li>
  <li>{{cssxref("text-decoration-color")}}</li>
  <li>{{cssxref("text-emphasis-color")}}</li>
  <li>{{cssxref("border-color")}}</li>
@@ -48,18 +46,20 @@ tags:
  <li>{{cssxref("-webkit-tap-highlight-color")}}</li>
  <li>{{cssxref("box-shadow")}}</li>
  <li>{{cssxref("text-shadow")}}</li>
+ <li><a href="/en-US/docs/Web/SVG/Attribute/fill">SVG fill attribute</a></li>
+ <li><a href="/en-US/docs/Web/SVG/Attribute/stroke">SVG stroke attribute</a></li>
 </ul>
 
-<p>You can use <a href="/en-US/docs/web/css/color_value#System_Colors">system color keywords</a> with any property <em>other</em> than those listed above, to ensure that the rest of the page integrates with the restricted color palette available in forced colors mode.</p>
+<p>You can use <a href="/en-US/docs/Web/CSS/color_value#System_Colors">system color keywords</a> with any property <em>other</em> than those listed above, to ensure that the rest of the page integrates with the restricted color palette available in forced colors mode.</p>
 
 <h3 id="User_preferences">User preferences</h3>
 
-<p>Currently no user agent implements this feature, although various operating systems do support such preferences and if this media query is ever implemented user agents will likely rely on the settings provided by the operating system in use.</p>
+<p>This media feature is active only if the user has enabled color scheme preferences in their operating system. For example High Contrast mode on Windows.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> No browser currently implements this feature so the following example will not work.</p>
+<div class="notecard note">
+<p><strong>Note:</strong> The below example will only work when using a browser that supports this media feature, and with a preference such as High Contrast mode enabled in your OS.</p>
 </div>
 
 <p>This example has an annoying color palette by default. This example does not take advantage of the colors provided by the user agent.</p>
@@ -117,4 +117,8 @@ tags:
 
 <h2 id="See_also">See also</h2>
 
-<p>{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}</p>
+<ul>
+  <li><a href="/en-US/docs/Web/CSS/@media">@media</a></li>
+  <li><a href="https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/">Styling for Windows high contrast with standards for forced colors.</a></li>
+	<li>{{cssxref("forced-color-adjust")}}</li>
+</ul>

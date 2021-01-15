@@ -33,7 +33,7 @@ tags:
 
 <p>Each <code>AudioNode</code> has inputs and outputs, and multiple audio nodes are connected to build a <em>processing graph</em>. This graph is contained in an {{domxref("AudioContext")}}, and each audio node can only belong to one audio context.</p>
 
-<p>A <em>source node</em> has zero inputs but one or multiple outputs, and can be used to generate sound. On the other hand, a <em>destination node</em> has no outputs; instead, all its inputs are directly played back on the speakers (or whatever audio output device the audio context uses). In addition, there are <em>processing nodes</em> which have inputs and outputs. The exact processing done varies from one <code>AudioNode</code> to another but, in general, a node reads its inputs, does some audio-related processing, and generates new values for its outputs, or simply lets the audio pass through (for example in the {{domxref("AnalyserNode")}}, where the result of the processing is accessed separately).</p>
+<p>A <em>source node</em> has zero inputs but one or multiple outputs, and can be used to generate sound. On the other hand, a <em>destination node</em> has no outputs; instead, all its inputs are directly played back on the speakers (or whatever audio output device the audio context uses). In addition, there are <em>processing nodes</em> which have inputs and outputs. The exact processing done varies from one <code>AudioNode</code> to another but, in general, a node reads its inputs, does some audio-related processing, and generates new values for its outputs, or lets the audio pass through (for example in the {{domxref("AnalyserNode")}}, where the result of the processing is accessed separately).</p>
 
 <p>The more nodes in a graph, the higher the latency will be. For example, if your graph has a latency of 500ms, when the source node plays a sound, it will take half a second until that sound can be heard on your speakers (or even longer because of latency in the underlying audio device). Therefore, if you need to have interactive audio, keep the graph as small as possible, and put user-controlled audio nodes at the end of a graph. For example, a volume control (<code>GainNode</code>) should be the last node so that volume changes take immediate effect.</p>
 
@@ -43,7 +43,7 @@ tags:
 
 <h3 id="Creating_an_AudioNode">Creating an <code>AudioNode</code></h3>
 
-<p>There are two ways to create an <code>AudioNode</code>: via the <em>constuctor</em> and via the <em>factory method</em>.</p>
+<p>There are two ways to create an <code>AudioNode</code>: via the <em>constructor</em> and via the <em>factory method</em>.</p>
 
 <pre class="brush: js; notranslate">// constructor
 const analyserNode = new AnalyserNode(audioCtx, {
@@ -77,24 +77,12 @@ analyserNode.smoothingTimeConstant = 0.5;</pre>
 <dl>
  <dt>{{domxref("AudioNode.context")}} {{readonlyInline}}</dt>
  <dd>Returns the associated {{domxref("BaseAudioContext")}}, that is the object representing the processing graph the node is participating in.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("AudioNode.numberOfInputs")}} {{readonlyInline}}</dt>
  <dd>Returns the number of inputs feeding the node. Source nodes are defined as nodes having a <code>numberOfInputs</code> property with a value of <code>0</code>.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("AudioNode.numberOfOutputs")}} {{readonlyInline}}</dt>
  <dd>Returns the number of outputs coming out of the node. Destination nodes — like {{ domxref("AudioDestinationNode") }} — have a value of <code>0</code> for this attribute.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("AudioNode.channelCount")}}</dt>
  <dd>Represents an integer used to determine how many channels are used when <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing">up-mixing and down-mixing</a> connections to any inputs to the node. Its usage and precise definition depend on the value of {{domxref("AudioNode.channelCountMode")}}.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("AudioNode.channelCountMode")}}</dt>
  <dd>Represents an enumerated value describing the way channels must be matched between the node's inputs and outputs.</dd>
  <dt>{{domxref("AudioNode.channelInterpretation")}}</dt>
@@ -149,7 +137,6 @@ oscillator.channelCount;</pre>
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("api.AudioNode")}}</p>
 </div>

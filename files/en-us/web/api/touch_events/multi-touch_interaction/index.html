@@ -99,8 +99,8 @@ function handle_pinch_zoom(ev) {
      var diff2 = Math.abs(tpCache[point2].clientX - ev.targetTouches[1].clientX);
 
      // This threshold is device dependent as well as application specific
-     var PINCH_THRESHHOLD = ev.target.clientWidth / 10;
-     if (diff1 &gt;= PINCH_THRESHHOLD &amp;&amp; diff2 &gt;= PINCH_THRESHHOLD)
+     var PINCH_THRESHOLD = ev.target.clientWidth / 10;
+     if (diff1 &gt;= PINCH_THRESHOLD &amp;&amp; diff2 &gt;= PINCH_THRESHOLD)
          ev.target.style.background = "green";
    }
    else {
@@ -198,7 +198,7 @@ function handle_pinch_zoom(ev) {
 
 <h4 id="Update_background_color">Update background color</h4>
 
-<p>The background color of the touch areas will change as follows: no touch is <code>white</code>; one touch is <code>yellow</code>; two simultaneous touches is <code>pink</code>, and three or more simultaneous touches is <code>lightblue</code>. See <a href="#Touch_move">touch move</a> for information about the background color changing when a 2-finger move/pinch/zoom is detected.</p>
+<p>The background color of the touch areas will change as follows: no touch is <code>white</code>; one touch is <code>yellow</code>; two simultaneous touches is <code>pink</code>, and three or more simultaneous touches is <code>lightblue</code>. See <a href="#touch_move">touch move</a> for information about the background color changing when a 2-finger move/pinch/zoom is detected.</p>
 
 <pre class="brush: js">function update_background(ev) {
  // Change background color based on the number simultaneous touches

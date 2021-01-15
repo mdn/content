@@ -25,7 +25,7 @@ tags:
 
 <h2 id="JavaScript_execution_contexts">JavaScript execution contexts</h2>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> The details here are generally not important to most JavaScript programmers. This information is provided as a basis for why microtasks are useful and how they function; if you don't care, you can skip this and come back later if you find that you need to.</p>
 </div>
 
@@ -107,9 +107,6 @@ greetUser("Veronica");</pre>
 <p>To run JavaScript code, the runtime engine maintains a set of <strong>agents</strong> in which to execute JavaScript code. Each agent is made up of a set of execution contexts, the execution context stack, a main thread, a set for any additional threads that may be created to handle workers, a task queue, and a microtask queue. Other than the main thread—which some browsers share across multiple agents—each component of an agent is unique to that agent.</p>
 
 <p>Here we look at how the runtime functions in slightly more detail.</p>
-
-<ul>
-</ul>
 
 <h3 id="Event_loops">Event loops</h3>
 

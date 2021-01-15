@@ -135,14 +135,14 @@ tags:
 
 <p>This should give you a list of errors and other information.</p>
 
-<p><img alt="A list of of HTML validation results from the W3C markup validation service" src="https://mdn.mozillademos.org/files/12443/validation-results.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="A list of HTML validation results from the W3C markup validation service" src="https://mdn.mozillademos.org/files/12443/validation-results.png" style="display: block; margin: 0 auto;"></p>
 
 <h4 id="Interpreting_the_error_messages">Interpreting the error messages</h4>
 
 <p>The error messages are usually helpful, but sometimes they are not so helpful; with a bit of practice you can work out how to interpret these to fix your code. Let's go through the error messages and see what they mean. You'll see that each message comes with a line and column number to help you to locate the error easily.</p>
 
 <ul>
- <li>"<span>Consider adding a </span><code>lang</code><span> attribute to the </span><code>html</code><span> start tag to declare the language of this document.": This is not an error but a warning. The <a href="https://www.w3.org/International/questions/qa-html-language-declarations">recommendation</a> is to always define a language, and this warning explains how to do it.</span></li>
+ <li>"Consider adding a <code>lang</code> attribute to the <code>html</code> start tag to declare the language of this document.": This is not an error but a warning. The <a href="https://www.w3.org/International/questions/qa-html-language-declarations">recommendation</a> is to always define a language, and this warning explains how to do it.</li>
  <li>"End tag <code>li</code> implied, but there were open elements" (2 instances): These messages indicate that an element is open that should be closed. The ending tag is implied, but not actually there. The line/column information points to the first line after the line where the closing tag should really be, but this is a good enough clue to see what is wrong.</li>
  <li>"Unclosed element <code>strong</code>": This is really easy to understand — a {{htmlelement("strong")}} element is unclosed, and the line/column information points right to where it is.</li>
  <li>"End tag <code>strong</code> violates nesting rules": This points out the incorrectly nested elements, and the line/column information points out where they are.</li>
@@ -157,9 +157,9 @@ tags:
  <li>"Unclosed element <code>ul</code>": This is not very helpful, as the {{htmlelement("ul")}} element <em>is</em> closed correctly. This error comes up because the {{htmlelement("a")}} element is not closed, due to the missing closing quote mark.</li>
 </ul>
 
-<p><span>If you can't work out what every error message means, don't worry about it — a good idea is to try fixing a few errors at a time. Then try revalidating your HTML to show what errors are left. Sometimes fixing an earlier error will also get rid of other error messages — several errors can often be caused by a single problem, in a domino effect.</span></p>
+<p>If you can't work out what every error message means, don't worry about it — a good idea is to try fixing a few errors at a time. Then try revalidating your HTML to show what errors are left. Sometimes fixing an earlier error will also get rid of other error messages — several errors can often be caused by a single problem, in a domino effect.</p>
 
-<p><span>You will know when all your errors are fixed when you see the following banner in your output: </span></p>
+<p>You will know when all your errors are fixed when you see the following banner in your output:</p>
 
 <p><img alt='Banner that reads "The document validates according to the specified schema(s) and to additional constraints checked by the validator."' src="https://mdn.mozillademos.org/files/12445/valid-html-banner.png" style="display: block; margin: 0 auto;"></p>
 

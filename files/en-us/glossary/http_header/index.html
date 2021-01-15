@@ -16,7 +16,7 @@ tags:
  <li><strong>Representation metadata header</strong>: metadata about the resource in the message body (e.g. language, length, media type, etc.).</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>Older versions of the specification referred to:</p>
 
 <ul>
@@ -27,19 +27,19 @@ tags:
 
 <p>A basic request with one header:</p>
 
-<pre class="notranslate">GET /example.http HTTP/1.1
+<pre class="brush: plain notranslate">GET /example.http HTTP/1.1
 Host: example.com
 </pre>
 
 <p>Redirects have mandatory headers ({{HTTPHeader("Location")}}):</p>
 
-<pre class="notranslate">302 Found
+<pre class="brush: plain notranslate">302 Found
 Location: /NewPage.html
 </pre>
 
 <p>A typical set of headers:</p>
 
-<pre class="notranslate">304 Not Modified
+<pre class="brush: plain notranslate">304 Not Modified
 Access-Control-Allow-Origin: *
 Age: 2318192
 Cache-Control: public, max-age=315360000
@@ -54,7 +54,7 @@ X-Cache: Hit from cloudfront
 X-Cache-Info: cached
 </pre>
 
-<section class="Quick_links" id="Quick_Links">
+<section id="Quick_links">
 <ol>
  <li>Specifications
   <ol>

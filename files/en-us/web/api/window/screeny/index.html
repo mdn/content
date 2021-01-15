@@ -13,11 +13,11 @@ tags:
 
 <p>The <code><strong>Window.screenY</strong></code> read-only property returns the vertical distance, in CSS pixels, of the top border of the user's browser viewport to the top edge of the screen.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: An alias of <code>screenY</code> was implemented across modern browsers in more recent times — {{domxref("Window.screenTop")}}. This was originally supported only in IE but was introduced everywhere due to popularity.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js"><em><var>topWindowPos</var> = window.screenY
 </em></pre>
@@ -26,7 +26,7 @@ tags:
 
 <p>A number equal to the number of CSS pixels from the top edge of the browser viewport to the  top edge of the screen.</p>
 
-<h2 id="Specifications">Examples</h2>
+<h2 id="Examples">Examples</h2>
 
 <p>In our <a href="https://mdn.github.io/dom-examples/screenleft-screentop/">screenleft-screentop</a> example, you'll see a canvas onto which has been drawn a circle. In this example we are using {{domxref("Window.screenLeft")}}/{{domxref("Window.screenTop")}} plus {{domxref("Window.requestAnimationFrame()")}} to constantly redraw the circle in the same physical position on the screen, even if the window position is moved.</p>
 
@@ -84,11 +84,9 @@ window.requestAnimationFrame(positionElem);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("api.Window.screenY")}}</p>
 
-<h2 id="See_also" name="See_also">See also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{domxref("window.screenTop")}}</li>

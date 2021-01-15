@@ -6,9 +6,9 @@ tags:
   - Responsive Design
   - Web Development
 ---
-<p>Silver bullets are hard to find in web development — you’re more likely to come across strategies that make the best use of a variety of techniques given the circumstances. This brings us to our third approach, which aims to avoid some of the shortcomings the <a href="/en/Web_Development/Mobile/Separate_sites" title="en/Web development/Mobile/Separate sites">separate sites</a> and <a href="/en/Web_development/Mobile/Responsive_design" title="en/Web_development/Mobile/Responsive_design">responsive design</a> approaches by combining them.</p>
+<p>Silver bullets are hard to find in web development — you’re more likely to come across strategies that make the best use of a variety of techniques given the circumstances. This brings us to our third approach, which aims to avoid some of the shortcomings the <a href="/en-US/docs/Web_Development/Mobile/Separate_sites" title="en-US/docs/Web development/Mobile/Separate sites">separate sites</a> and <a href="/en-US/docs/Web_development/Mobile/Responsive_design">responsive design</a> approaches by combining them.</p>
 
-<p>This hybrid approach centers around breaking down mobile development into its <a href="/en/Web_Development/Mobile/Mobile-friendliness" title="en/Web development/Mobile/Mobile-friendliness">three goals</a>, and then applying the best techniques available to tackle each goal individually. This article presents one potential combination of techniques as an example here, but different combinations will be appropriate under different circumstances. The most important concept to remember is that server-side and client-side techniques can be combined to fit your situation.</p>
+<p>This hybrid approach centers around breaking down mobile development into its <a href="/en-US/docs/Web_Development/Mobile/Mobile-friendliness">three goals</a>, and then applying the best techniques available to tackle each goal individually. This article presents one potential combination of techniques as an example here, but different combinations will be appropriate under different circumstances. The most important concept to remember is that server-side and client-side techniques can be combined to fit your situation.</p>
 
 <h2 id="The_Good">The Good</h2>
 
@@ -16,7 +16,7 @@ tags:
 
 <p>Luckily, we aren’t technically constrained to using client-side techniques here: another option is to use server-side user-agent detection to show the user the proper content. This keeps the complexity of altering content on the server side, but still allows our layouts to benefit from the flexibility and future-readiness of responsive design.</p>
 
-<p>Using user-agent detection specifically for content and not layout also allows you to have a single URL for each piece of content, so that the content can adapt its layout to the user’s browser. This is generally thought to be <a class="external" href="http://www.w3.org/TR/mobile-bp/#OneWeb" title="W3C One Web Recommendation">a good thing</a>. Instead of maintaining two completely different sites, we simply redirect users to pages for the content they care about. And since the design is responsive, you know that each page looks as good as possible on the user’s screen.</p>
+<p>Using user-agent detection specifically for content and not layout also allows you to have a single URL for each piece of content, so that the content can adapt its layout to the user’s browser. This is generally thought to be <a class="external" href="https://www.w3.org/TR/mobile-bp/#OneWeb" title="W3C One Web Recommendation">a good thing</a>. Instead of maintaining two completely different sites, we redirect users to pages for the content they care about. And since the design is responsive, you know that each page looks as good as possible on the user’s screen.</p>
 
 <p>We can also address some of the performance problems with responsive design by incorporating server-side techniques. For example, an often-criticized point about responsive web design is that full-resolution images are sent to all devices, including phones that show the images scaled down anyway. <a class="external" href="http://wurfl.sourceforge.net/utilities/imageserver.php" title="WURFL Image Server">One such technique</a> for dealing with this issue uses server-side user-agent detection along with the <a class="external" href="http://wurfl.sourceforge.net/" title="WURFL device capability library">WURFL</a> device capability library to send a properly sized image for the user’s device. A <a class="external" href="http://imgble.com/" title="IMGBLE">range</a> of <a class="external" href="http://www.sencha.com/products/io/" title="Sencha IO">products</a> are also emerging which provide this as a service. Of course, this technique suffers from all the downsides associated with user-agent detection. But even if it does not work, it is no worse with respect to performance than only using <a class="external" href="http://unstoppablerobotninja.com/entry/fluid-images/" title="Fluid Images">fluid images</a>.</p>
 
@@ -46,7 +46,7 @@ tags:
  <li>Future plans include exploring serving images based on user-agent.</li>
 </ul>
 
-<p>So far there is not much to see for mobile, since things are still in the formative stages of development, but you can always watch the new mozilla.org grow up <a class="link-https" href="https://github.com/mozilla/bedrock" title="New Mozilla.com Source Code">on github</a>. Subscribe to the <a class="external" href="http://blog.mozilla.com/webdev/" title="http://blog.mozilla.com/webdev/">Mozilla Webdev</a> blog for updates about our progress.</p>
+<p>So far there is not much to see for mobile, since things are still in the formative stages of development, but you can always watch the new mozilla.org grow up <a class="link-https" href="https://github.com/mozilla/bedrock" title="New Mozilla.com Source Code">on github</a>. Subscribe to the <a class="external" href="http://blog.mozilla.com/webdev/">Mozilla Webdev</a> blog for updates about our progress.</p>
 
 <h2 id="Summary">Summary</h2>
 
@@ -57,15 +57,14 @@ tags:
 <p>See the following articles for background and other approaches to developing for mobile platforms.</p>
 
 <ul>
- <li><a href="/en/Web_Development/Mobile/Mobile-friendliness" title="Wat is CSS">What is mobile-friendliness?</a></li>
- <li><a href="/en/Web_Development/Mobile/Separate_sites" title="en/Web development/Mobile/Separate sites">Separate sites</a></li>
- <li><a href="/en/Web_Development/Mobile/Responsive_design" title="en/Web development/Mobile/Responsive design">Responsive design</a></li>
+ <li><a href="/en-US/docs/Web_Development/Mobile/Mobile-friendliness">What is mobile-friendliness?</a></li>
+ <li><a href="/en-US/docs/Web_Development/Mobile/Separate_sites">Separate sites</a></li>
+ <li><a href="/en-US/docs/Web_Development/Mobile/Responsive_design">Responsive design</a></li>
 </ul>
 
 <div class="originaldocinfo">
 <h3 id="Original_document_information">Original document information</h3>
 
-<p>This article was originally published on 27 June 2011, on the Mozilla Webdev blog as "<a class="external" href="http://blog.mozilla.com/webdev/2011/06/27/approaches-to-mobile-web-development-part-4-%E2%80%93-a-hybrid-approach/" title="http://blog.mozilla.com/webdev/2011/06/27/approaches-to-mobile-web-development-part-4-%E2%80%93-a-hybrid-approach/">Approaches to Mobile Web Development Part 4 – A Hybrid Approach</a>", by Jason Grlicky.</p>
+<p>This article was originally published on 27 June 2011, on the Mozilla Webdev blog as "<a class="external" href="http://blog.mozilla.com/webdev/2011/06/27/approaches-to-mobile-web-development-part-4-%E2%80%93-a-hybrid-approach/">Approaches to Mobile Web Development Part 4 – A Hybrid Approach</a>", by Jason Grlicky.</p>
 </div>
 
-<p> </p>

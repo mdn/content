@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var gettingAll = browser.windows.getAll(
+<pre class="brush:js">var gettingAll = browser.windows.getAll(
   getInfo                // optional object
 )
 </pre>
@@ -46,15 +46,13 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("webextensions.api.windows.getAll")}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>Log the URLs for the tabs across all "normal" browser windows. Note that you'll need the "tabs" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> to access tab URLs.</p>
 
-<pre class="brush: js">function logTabsForWindows(windowInfoArray) {
+<pre class="notranslate brush: js">function logTabsForWindows(windowInfoArray) {
   for (windowInfo of windowInfoArray) {
     console.log(`Window: ${windowInfo.id}`);
     console.log(windowInfo.tabs.map(tab =&gt; tab.url));

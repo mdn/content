@@ -14,9 +14,7 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/css/transition-duration.html")}}</div>
 
-
-
-<p>You may specify multiple durations; each duration will be applied to the corresponding property as specified by the {{ cssxref("transition-property") }} property, which acts as a master list. If there are fewer durations specified than in the master list, the user agent repeat the list of durations. If there are more durations, the list is simply truncated to the right size. In both case the CSS declaration stays valid.</p>
+<p>You may specify multiple durations; each duration will be applied to the corresponding property as specified by the {{ cssxref("transition-property") }} property, which acts as a master list. If there are fewer durations specified than in the master list, the user agent repeat the list of durations. If there are more durations, the list is truncated to the right size. In both case the CSS declaration stays valid.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -45,7 +43,7 @@ transition-duration: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+<pre class="brush: css notranslate">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -55,7 +53,7 @@ transition-duration: unset;
 <div id="duration_0_5s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
 <p><code>transition-duration: 0.5s</code></p>
 
-<div style="display: none;">
+<div class="hidden">
 <pre class="brush:html notranslate"> &lt;div class="parent"&gt;
   &lt;div class="box"&gt;Lorem&lt;/div&gt;
 &lt;/div&gt;
@@ -120,7 +118,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
 <div id="duration_1s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
 <p><code>transition-duration: 1s</code></p>
 
-<div style="display: none;">
+<div class="hidden">
 <pre class="brush:html notranslate"> &lt;div class="parent"&gt;
   &lt;div class="box"&gt;Lorem&lt;/div&gt;
 &lt;/div&gt;
@@ -185,7 +183,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
 <div id="duration_2s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
 <p><code>transition-duration: 2s</code></p>
 
-<div style="display: none;">
+<div class="hidden">
 <pre class="brush:html notranslate"> &lt;div class="parent"&gt;
   &lt;div class="box"&gt;Lorem&lt;/div&gt;
 &lt;/div&gt;
@@ -250,7 +248,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
 <div id="duration_4s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
 <p><code>transition-duration: 4s</code></p>
 
-<div style="display: none;">
+<div class="hidden">
 <pre class="brush:html notranslate"> &lt;div class="parent"&gt;
   &lt;div class="box"&gt;Lorem&lt;/div&gt;
 &lt;/div&gt;
@@ -333,8 +331,6 @@ var intervalID = window.setInterval(updateTransition, 7000);
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("css.properties.transition-duration")}}</p>
 

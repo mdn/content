@@ -16,7 +16,7 @@ tags:
 
 <div id="my-test">
 <ul>
- <li>The network request summary now includes the amount of data actually transferred ("transferred size"), as does the the performance analysis view ({{bug(1168376)}}).</li>
+ <li>The network request summary now includes the amount of data actually transferred ("transferred size"), as does the performance analysis view ({{bug(1168376)}}).</li>
  <li>The network request headers view now links to the related documentation on MDN ({{bug(1320233)}}).</li>
 </ul>
 </div>
@@ -31,8 +31,8 @@ tags:
  <li>When Mozilla introduced dedicated content threads to Firefox (through the Electrolysis or e10s project), support for styling {{HTMLElement("option")}} elements was removed temporarily. Starting in Firefox 54, you can apply foreground and background colors to <code>&lt;option&gt;</code> elements again, using the {{cssxref("color")}} and {{cssxref("background-color")}} attributes. See {{bug(910022)}} for more information. Note that this is still disabled in Linux due to lack of contrast (see {{bug(1338283)}} for progress on this).</li>
  <li><a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a> now send the {{event("animationcancel")}} event as expected when an animation aborts prematurely ({{bug(1302648)}}).</li>
  <li>Transparent colors (i.e. those with an alpha channel of 0) were being serialized to the <a href="/en-US/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code> color keyword</a> in <a href="https://www.fxsitecompat.com/en-CA/docs/2017/transparent-rgba-colour-values-are-no-longer-serialized-to-transparent-keyword/">certain situations</a>; this has been fixed so that Firefox follows the spec (as well as other browsers' implementations). See ({{bug("1339394")}} for further information.</li>
- <li>The proprietary <code>:-moz-table-border-nonzero</code> pseudo-class is no longer available to web content; it is now restricted to Firefox's internal UA sylesheet ({{bug(1341925)}}).</li>
- <li>[css-grid] Intristic content with overflow:auto overlaps in grid ({{bug(1348857)}}).</li>
+ <li>The proprietary <code>:-moz-table-border-nonzero</code> pseudo-class is no longer available to web content; it is now restricted to Firefox's internal UA stylesheet ({{bug(1341925)}}).</li>
+ <li>[css-grid] Intrinsic content with overflow:auto overlaps in grid ({{bug(1348857)}}).</li>
  <li>[css-grid] Transferred min-size contribution of percentage size grid item with an intrinsic ratio ({{bug(1349320)}}).</li>
 </ul>
 
@@ -42,7 +42,7 @@ tags:
  <li><code>\b</code> and <code>\B</code> in {{jsxref("RegExp")}} with the <code>"u"</code> (Unicode) and <code>"i"</code> (case insensitive) flags now treat U+017F (LATIN SMALL LETTER LONG S) and U+212A (KELVIN SIGN) as word characters ({{bug(1338373)}}).</li>
  <li>The {{jsxref("DataView")}} constructor now throws a {{jsxref("RangeError")}} if the <code>byteOffset</code> parameter is out of {{jsxref("Number.MAX_SAFE_INTEGER")}} (&gt;= 2 ** 53) ({{bug(1317382)}}).</li>
  <li>The {{jsxref("Date.UTC()")}} method has been updated to conform to ECMAScript 2017 when fewer than two arguments are provided ({{bug(1050755)}}).</li>
- <li>The {{jsxref("Function.prototype.toString()")}} method has been updated to match the latest <a href="http://tc39.github.io/Function-prototype-toString-revision/">proposed specification</a> ({{bug(1317400)}}).</li>
+ <li>The {{jsxref("Function.prototype.toString()")}} method has been updated to match the latest <a href="https://tc39.github.io/Function-prototype-toString-revision/">proposed specification</a> ({{bug(1317400)}}).</li>
 </ul>
 
 <h3 id="DOM_HTML_DOM">DOM &amp; HTML DOM</h3>
@@ -62,7 +62,7 @@ tags:
  <li>The {{domxref("WindowOrWorkerGlobalScope.origin")}} property has been implemented (see {{bug(1306170)}}).</li>
  <li>The {{domxref("Client.type")}} property has been implemented (see {{bug(1339844)}}).</li>
  <li>{{domxref("Clients.matchAll()")}} now returns {{domxref("Client")}} objects in most recently focused order (see {{bug(1266747)}}).</li>
- <li>Some changes have been made to the observed behaviour when the {{domxref("Request.Request","Request()")}} constructor is passed an existing {{domxref("Request")}} object instance to make a new instance. The following new behaviors are designed to retain security while making the constructor less likely to throw exceptions:
+ <li>Some changes have been made to the observed behavior when the {{domxref("Request.Request","Request()")}} constructor is passed an existing {{domxref("Request")}} object instance to make a new instance. The following new behaviors are designed to retain security while making the constructor less likely to throw exceptions:
   <ul>
    <li>If this object exists on another origin to the constructor call, the {{domxref("Request.referrer")}} is stripped out.</li>
    <li>If this object has a {{domxref("Request.mode")}} of <code>navigate</code>, the <code>mode</code> value is converted to <code>same-origin</code>.</li>
@@ -105,7 +105,6 @@ tags:
  <li>TCP ICE candidate support, originally added in Firefox 41, is now enabled by default. This allows the ICE layer to consider candidates that use TCP rather than the preferred UDP for transmission. This can be useful in environments in which UDP is blocked ({{bug(1176382)}}). This <a href="https://blog.mozilla.org/webrtc/active-ice-tcp-punch-firewalls-directly/">blog post</a> explains the feature in more details.</li>
 </ul>
 
-<p> </p>
 
 <h2 id="Removals_from_the_web_platform">Removals from the web platform</h2>
 

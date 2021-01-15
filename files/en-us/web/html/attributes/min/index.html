@@ -7,6 +7,7 @@ tags:
   - Constraint validation
   - HTML
   - min
+  - Reference
 ---
 <p>{{HTMLSidebar}}</p>
 
@@ -65,7 +66,7 @@ tags:
 </table>
 
 <div class="note">
-<p><strong>Note:</strong> When the data entered by the user doesn't adhere to the min value set, the value is considered invalid in contraint validation and will match the {{cssxref(':invalid')}} pseudoclass</p>
+<p><strong>Note:</strong> When the data entered by the user doesn't adhere to the min value set, the value is considered invalid in contraint validation and will match the {{cssxref(':invalid')}} and {{cssxref(':out-of-range')}} pseudo-classes.</p>
 </div>
 
 <p>See <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Client-side validation</a> and {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}} for more information.</p>
@@ -112,7 +113,7 @@ tags:
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
-<p>Provide instructions to help users understand how to complete the form and use individual form controls. Indicate any required and optional input, data formats, and other relevant information. When using the min attribute, ensure this minimum requirement is understood by the user. Providing instructions within the {{htmlelement('label')}} may be sufficient. If providing instructions outside of labels, which allows more flexible positioning and design, consider using <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a></code> or <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute">aria-describedby</a></code>.</p>
+<p>Provide instructions to help users understand how to complete the form and use individual form controls. Indicate any required and optional input, data formats, and other relevant information. When using the <code>min</code> attribute, ensure this minimum requirement is understood by the user. Providing instructions within the {{htmlelement('label')}} may be sufficient. If providing instructions outside of labels, which allows more flexible positioning and design, consider using <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a></code> or <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute">aria-describedby</a></code>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -140,17 +141,16 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("html.elements.attributes.min")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></li>
- <li><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></li>
- <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a></li>
- <li>{{domxref('Constraint_validation')}}</li>
+ <li><a href="/en-US/docs/Web/HTML/Attributes/step"><code>step</code></a></li>
+ <li><a href="/en-US/docs/Web/HTML/Attributes/max"><code>max</code></a></li>
+ <li>other meter attributes: <a href="/en-US/docs/Web/HTML/Attributes/low"><code>low</code></a>, <a href="/en-US/docs/Web/HTML/Attributes/high"><code>high</code></a>, <a href="/en-US/docs/Web/HTML/Attributes/optimum"><code>optimum</code></a></li>
+ <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Constraint validation</a></li>
+ <li><a href="/en-US/docs/Web/API/Constraint_validation">Constraint validation API</a></li>
  <li>{{domxref('validityState.rangeUnderflow')}}</li>
  <li>{{cssxref(':out-of-range')}}</li>
  <li>{{htmlelement('input')}}</li>

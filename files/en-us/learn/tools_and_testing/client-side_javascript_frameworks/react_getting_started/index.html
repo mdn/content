@@ -12,7 +12,7 @@ tags:
   - jsx
   - props
 ---
-<div>react{{LearnSidebar}}</div>
+<div>{{LearnSidebar}}</div>
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
@@ -69,7 +69,7 @@ tags:
   &lt;/header&gt;
 );</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: The parentheses in the previous snippet aren't unique to JSX, and don’t have any effect on your application. They're a signal to you (and your computer) that the multiple lines of code inside are part of the same expression. You could just as well write the header expression like this:</p>
 
 <pre class="brush: js notranslate">const header = &lt;header&gt;
@@ -130,7 +130,7 @@ tags:
  <li>Initializes the directory as a git repository, if you have git installed on your computer.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: if you have the yarn package manager installed, create-react-app will default to using it instead of npm. If you have both package managers installed and explicitly want to use NPM, you can add the flag <code>--use-npm</code> when you run create-react-app:</p>
 
 <pre class="brush: bash notranslate">npx create-react-app moz-todo-react --use-npm</pre>
@@ -140,7 +140,7 @@ tags:
 
 <p>When the process is complete, <code>cd</code> into the <code>moz-todo-react</code> directory and run the command <code>npm start</code>. The scripts installed by create-react-app will start being served at a local server at localhost:3000, and open the app in a new browser tab. Your browser will display something like this:</p>
 
-<p><img alt="Screenshot of Firefox MacOS, open to localhost:3000, showing the default create-react-app application" src="https://mdn.mozillademos.org/files/17203/default-create-react-app.png" style="border-style: solid; border-width: 1px; height: 980px; width: 1600px;"></p>
+<p><img alt="Screenshot of Firefox MacOS, open to localhost:3000, showing the default create-react-app application" src="default-create-react-app.png" style="border-style: solid; border-width: 1px;"></p>
 
 <h3 id="Application_structure">Application structure</h3>
 
@@ -173,7 +173,7 @@ tags:
 
 <p>The <code>package.json</code> file contains information about our project that Node.js/npm uses to keep it organized. This file is not unique to React applications; create-react-app merely populates it. You don't need to understand this file at all to complete this tutorial, however, if you'd like to learn more about it, you can read <a href="https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/">What is the file `package.json`? on NodeJS.org</a>; we also talk about it in our <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management">Package management basics</a> tutorial.</p>
 
-<h2 id="Exploring_our_first_React_component_—_&lt;App>">Exploring our first React component — <code>&lt;App/&gt;</code></h2>
+<h2 id="Exploring_our_first_React_component_—_&lt;App&gt;">Exploring our first React component — <code>&lt;App/&gt;</code></h2>
 
 <p>In React, a <strong>component</strong> is a reusable module that renders a part of our app. These parts can be big or small, but they are usually clearly defined: they serve a single, obvious purpose.</p>
 
@@ -308,7 +308,7 @@ serviceWorker.unregister();</pre>
 
 <p>All of this tells React that we want to render our React application with the <code>App</code> component as the root, or first component.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: In JSX, React components and HTML elements must have closing slashes. Writing just <code>&lt;App&gt;</code> or just <code>&lt;img&gt;</code> will cause an error.</p>
 </div>
 

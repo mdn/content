@@ -58,7 +58,7 @@ tags:
 
 <h2 id="Synchronous_API">Synchronous API</h2>
 
-<p>The synchronous API is should only be used in {{domxref("Worker")}}s; these calls block until they're finished executing, and simply return the results instead of using callbacks. Using them on the main thread will block the browser, which is naughty. The interfaces below otherwise mirror the ones from the asynchronous API.</p>
+<p>The synchronous API is should only be used in {{domxref("Worker")}}s; these calls block until they're finished executing, and return the results instead of using callbacks. Using them on the main thread will block the browser, which is naughty. The interfaces below otherwise mirror the ones from the asynchronous API.</p>
 
 <dl>
  <dt>{{domxref("FileSystemSync")}}</dt>
@@ -86,6 +86,7 @@ tags:
  <dt>{{domxref("LockedFile")}}</dt>
  <dd>Provides tools to deal with a given file with all the necessary locks.</dd>
  <dt>{{domxref("Metadata")}}{{experimental_inline}}</dt>
+ <dd></dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
@@ -112,8 +113,6 @@ tags:
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <h3 id="FileSystem"><code>FileSystem</code></h3>
-
-
 
 <p>{{Compat("api.FileSystem", 0)}}</p>
 

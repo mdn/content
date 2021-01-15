@@ -32,7 +32,7 @@ install Firefox Developer Edition</a> Firefox 42 was released on November 3, 201
 <ul>
  <li>Vertical {{cssxref('writing-mode')}} is now supported with rtl scripts ({{bug(1131451)}}).</li>
  <li>The values of {{cssxref("caption-side")}} are now relative to the table, and changing actual meaning according to its {{cssxref("writing-mode")}} value {{bug(1202993)}}.</li>
- <li>Non-standard properties like {{cssxref('-moz-margin-start')}} are now aliases of their standard counterpart ({{cssxref('margin-inline-start')}}, …). Previously, it was the opposite. This affects the value returned by {{domxref('CSSStyleDeclaration.cssText')}} and iteration of the properties in a style ruleand iteration of the properties in a style rule, that both use the canonical form ({{bug(1118103)}}).</li>
+ <li>Non-standard properties like {{cssxref('-moz-margin-start')}} are now aliases of their standard counterpart ({{cssxref('margin-inline-start')}}, …). Previously, it was the opposite. This affects the value returned by {{domxref('CSSStyleDeclaration.cssText')}} and iteration of the properties in a style rule and iteration of the properties in a style rule, that both use the canonical form ({{bug(1118103)}}).</li>
  <li>The prefixed version of CSS gradients can be turned off by setting the <code>layout.css.prefixes.gradients</code> preference to <code>false</code>.</li>
  <li>Several old bugs with {{cssxref("float")}} and margin collapsing behavior have been fixed ({{bug(478834)}}, {{bug(538194)}}, and {{bug(451791)}}).</li>
 </ul>
@@ -74,7 +74,7 @@ install Firefox Developer Edition</a> Firefox 42 was released on November 3, 201
 
 <ul>
  <li>{{domxref('Request.context')}} has been removed ({{bug(1188062)}}).</li>
- <li>The <a href="/en-US/docs/Web/API/Push_API">Push API</a> has been activated by default on Firefox for Desktop ({{bug(1153499)}}), but only on the Nightly/Dev Edition/Beta channels. It is being deactivated by default in the Release channel until consumer UX and debugging features have been properly implemented ({{bug(1207875)}}.) You can still activate it by enabling the <span id="summary_alias_container"><span id="short_desc_nonedit_display"><code>dom.push.enabled</code> pref in <a>about:config</a>.</span></span></li>
+ <li>The <a href="/en-US/docs/Web/API/Push_API">Push API</a> has been activated by default on Firefox for Desktop ({{bug(1153499)}}), but only on the Nightly/Dev Edition/Beta channels. It is being deactivated by default in the Release channel until consumer UX and debugging features have been properly implemented ({{bug(1207875)}}.) You can still activate it by enabling the <code>dom.push.enabled</code> pref in <a>about:config</a>.</li>
  <li>The {{domxref("PushManager.hasPermission()")}} method has been deprecated in the spec, and replaced with the {{domxref("PushManager.permissionState()")}} method. Firefox has updated its implementation to reflect this ({{bug("1183853")}}.)</li>
  <li>Service-worker-related additions to the <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a> have been implemented ({{bug(1114554)}}), but are disabled in this release.</li>
 </ul>
@@ -168,7 +168,7 @@ install Firefox Developer Edition</a> Firefox 42 was released on November 3, 201
 <h4 id="nsIContentPolicy">nsIContentPolicy</h4>
 
 <ul>
- <li>The <code><strong>TYPE_EMBED</strong></code> constant has been added to <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentPolicy" title="">nsIContentPolicy</a></code> to allow Gecko internals and add-on code to better differentiate different types of requests. Previously, <code><strong>TYPE_OBJECT</strong></code> was used for these cases ({{bug(1148030)}}).</li>
+ <li>The <code><strong>TYPE_EMBED</strong></code> constant has been added to <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentPolicy">nsIContentPolicy</a></code> to allow Gecko internals and add-on code to better differentiate different types of requests. Previously, <code><strong>TYPE_OBJECT</strong></code> was used for these cases ({{bug(1148030)}}).</li>
  <li>Similarly, the <strong><code>TYPE_SUBDOCUMENT</code></strong> constants has been split into <code><strong>TYPE_FRAME</strong></code> and <strong><code>TYPE_IFRAME</code></strong> ({{bug(1148044)}}).</li>
 </ul>
 

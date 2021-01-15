@@ -18,7 +18,7 @@ tags:
 
 <h3 id="Function_declarations">Function declarations</h3>
 
-<p>A <strong>function definition</strong> (also called a <strong>function declaration</strong>, or <strong>function statement</strong>) consists of the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/function" title="function"><code>function</code></a> keyword, followed by:</p>
+<p>A <strong>function definition</strong> (also called a <strong>function declaration</strong>, or <strong>function statement</strong>) consists of the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/function"><code>function</code></a> keyword, followed by:</p>
 
 <ul>
 	<li>The name of the function.</li>
@@ -33,7 +33,7 @@ tags:
 }
 </pre>
 
-<p>The function <code>square</code> takes one parameter, called <code>number</code>. The function consists of one statement that says to return the parameter of the function (that is, <code>number</code>) multiplied by itself. The statement <a href="/en-US/docs/Web/JavaScript/Reference/Statements/return" title="return"><code>return</code></a> specifies the value returned by the function:</p>
+<p>The function <code>square</code> takes one parameter, called <code>number</code>. The function consists of one statement that says to return the parameter of the function (that is, <code>number</code>) multiplied by itself. The statement <a href="/en-US/docs/Web/JavaScript/Reference/Statements/return"><code>return</code></a> specifies the value returned by the function:</p>
 
 <pre class="brush: js notranslate">return number * number;
 </pre>
@@ -116,7 +116,7 @@ if (num === 0) {
 
 <h2 id="Calling_functions">Calling functions</h2>
 
-<p><em>Defining</em> a function does not <em>execute</em> it. Defining it simply names the function and specifies what to do when the function is called.</p>
+<p><em>Defining</em> a function does not <em>execute</em> it. Defining it names the function and specifies what to do when the function is called.</p>
 
 <p><strong>Calling</strong> the function actually performs the specified actions with the indicated parameters. For example, if you define the function <code>square</code>, you could call it as follows:</p>
 
@@ -147,7 +147,7 @@ const square = function(n) {
 </pre>
 </div>
 
-<p>The arguments of a function are not limited to strings and numbers. You can pass whole objects to a function. The <code>showProps()</code> function (defined in <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_Properties" title="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Working_with_Objects#Objects_and_Properties">Working with objects</a>) is an example of a function that takes an object as an argument.</p>
+<p>The arguments of a function are not limited to strings and numbers. You can pass whole objects to a function. The <code>showProps()</code> function (defined in <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_Properties">Working with objects</a>) is an example of a function that takes an object as an argument.</p>
 
 <p>A function can call itself. For example, here is a function that computes factorials recursively:</p>
 
@@ -173,7 +173,7 @@ e = factorial(5); // e gets the value 120
 
 <p>It turns out that <em>functions are themselves objects</em>—and in turn, these objects have methods. (See the {{jsxref("Function")}} object.) One of these, the {{jsxref("Function.apply", "apply()")}} method, can be used to achieve this goal.</p>
 
-<h2 class="deki-transform" id="Function_scope">Function scope</h2>
+<h2 id="Function_scope">Function scope</h2>
 
 <p>Variables defined inside a function cannot be accessed from anywhere outside the function, because the variable is defined only in the scope of the function. However, a function can access all variables and functions defined inside the scope in which it is defined.</p>
 
@@ -404,7 +404,7 @@ outside()(10); // returns 20 instead of 10
 
 <p>Closures are one of the most powerful features of JavaScript. JavaScript allows for the nesting of functions and grants the inner function full access to all the variables and functions defined inside the outer function (and all other variables and functions that the outer function has access to).</p>
 
-<p>However, the outer function does <em>not </em>have access to the variables and functions defined inside the inner function. This provides a sort of encapsulation for the variables of the inner function.</p>
+<p>However, the outer function does <em>not</em> have access to the variables and functions defined inside the inner function. This provides a sort of encapsulation for the variables of the inner function.</p>
 
 <p>Also, since the inner function has access to the scope of the outer function, the variables and functions defined in the outer function will live longer than the duration of the outer function execution, if the inner function manages to survive beyond the life of the outer function. A closure is created when the inner function is somehow made available to any scope outside the outer function.</p>
 
@@ -469,7 +469,7 @@ pet.getName();                  // Oliver
 getCode();    // Returns the apiCode
 </pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Caution:</strong> There are a number of pitfalls to watch out for when using closures!</p>
 
 <p>If an enclosed function defines a variable with the same name as a variable in the outer scope, then there is no way to refer to the variable in the outer scope again.  (The inner scope variable "overrides" the outer one, until the program exits the inner scope.)</p>
@@ -551,7 +551,7 @@ multiply(5); // 5
 
 <h4 id="With_default_parameters_post-ECMAScript_2015">With default parameters (post-ECMAScript 2015)</h4>
 
-<p>With <em>default parameters</em>, a manual check in the function body is no longer necessary. You can simply put <code>1</code> as the default value for <code>b</code> in the function head:</p>
+<p>With <em>default parameters</em>, a manual check in the function body is no longer necessary. You can put <code>1</code> as the default value for <code>b</code> in the function head:</p>
 
 <pre class="brush: js notranslate">function multiply(a, b = 1) {
   return a * b;

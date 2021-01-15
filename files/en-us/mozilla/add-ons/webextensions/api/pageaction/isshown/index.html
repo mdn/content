@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">let gettingIsShown = browser.pageAction.isShown(
+<pre class="brush:js">let gettingIsShown = browser.pageAction.isShown(
   details // object
 )
 </pre>
@@ -33,13 +33,6 @@ tags:
  <dl class="reference-values">
   <dt><code>tabId</code></dt>
   <dd><code>integer</code>. ID of the tab to check.</dd>
- </dl>
- </dd>
-</dl>
-
-<dl>
- <dd>
- <dl class="reference-values">
  </dl>
  </dd>
 </dl>
@@ -58,7 +51,7 @@ tags:
 
 <p>Check the state of the currently active tab:</p>
 
-<pre class="brush: js">async function shownInActiveTab() {
+<pre class="notranslate brush: js">async function shownInActiveTab() {
   let tabs = await browser.tabs.query({
     currentWindow:true,
     active: true

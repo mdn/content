@@ -1,0 +1,44 @@
+---
+title: NSS 3.27.2 Release Notes
+slug: Mozilla/Projects/NSS/NSS_3.27.2_Release_Notes
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p><span class="seoSummary">Network Security Services (NSS) 3.27.2 is a patch release for NSS 3.27.</span></p>
+
+<h2 id="Distribution_Information">Distribution Information</h2>
+
+<p>The HG tag is NSS_3_27_2_RTM. NSS 3.27.2 requires NSPR 4.13 or newer.</p>
+
+<p>NSS 3.27.2 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_27_1_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_27_2_RTM/src/</a></li>
+</ul>
+
+<h2 id="New_in_NSS_3.27.2">New in NSS 3.27.2</h2>
+
+<h3 id="New_Functionality">New Functionality</h3>
+
+<p>No new functionality is introduced in this release. This is a patch release to address a memory leak in the <code>SSL_SetTrustAnchors()</code> function.</p>
+
+<h2 id="Notable_Changes_in_NSS_3.27.2">Notable Changes in NSS 3.27.2</h2>
+
+<p>The <code>SSL_SetTrustAnchors()</code> function is used to set the distinguished names that an NSS server includes in its TLS CertificateRequest message.  If this function is not used, NSS will include the distinguished names for all trust anchors installed in the database.  This can be a lengthy list.</p>
+
+<p>Previous versions of NSS leaked the memory used to store distinguished names when <code>SSL_SetTrustAnchors()</code> was used.  This release fixes that error.</p>
+
+<h2 id="Bugs_fixed_in_NSS_3.27.2">Bugs fixed in NSS 3.27.2</h2>
+
+<ul>
+ <li>The following bug has been fixed in NSS 3.27.2: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1318561">Bug 1318561 - SSL_SetTrustAnchors leaks</a></li>
+</ul>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.27.2 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.27.2 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report with<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (product NSS).</p>

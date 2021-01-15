@@ -14,7 +14,7 @@ tags:
 <p><span class="seoSummary">This page lists all the {{Glossary("HTML")}} {{Glossary("Element","elements")}}, which are created using {{Glossary("Tag", "tags")}}.</span> They are grouped by function to help you find what you have in mind easily. An alphabetical list of all elements is provided in the sidebar on every element's page as well as this one.</p>
 
 <div class="note">
-<p>For more information about the basics of HTML elements and attributes, see <a href="/en-US/docs/Web/Guide/HTML/Introduction#Elements_%E2%80%94_the_basic_building_blocks">the section on elements in the Introduction to HTML article</a>.</p>
+<p>For more information about the basics of HTML elements and attributes, see <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML#Elements_%E2%80%94_the_basic_building_blocks">the section on elements in the Introduction to HTML article</a>.</p>
 </div>
 
 <h2 id="Main_root">Main root</h2>
@@ -61,6 +61,29 @@ tags:
 
 <p>{{HTMLRefTable({"include":["HTML embedded content"], "exclude":["multimedia"]})}}</p>
 
+<h2 id="SVG_and_Math">SVG and MathML</h2>
+
+<p>You can embed <a href="/en-US/docs/Web/SVG">SVG</a> and <a href="/en-US/docs/Web/MathML">MathML</a> content directly into HTML documents, using the {{SVGElement("svg")}} and {{MathMLElement("math")}} elements.</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Element</th>
+   <th scope="col">Description</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td style="vertical-align: top;">{{SVGElement("svg")}}</td>
+   <td>The <code>svg</code> element is a container that defines a new coordinate system and <a href="/en-US/docs/Web/SVG/Attribute/viewBox">viewport</a>. It is used as the outermost element of SVG documents, but it can also be used to embed an SVG fragment inside an SVG or HTML document.</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">{{MathMLElement("math")}}</td>
+   <td>The top-level element in MathML is <code>&lt;math&gt;</code>. Every valid MathML instance must be wrapped in <code>&lt;math&gt;</code> tags. In addition you must not nest a second <code>&lt;math&gt;</code> element in another, but you can have an arbitrary number of other child elements in it.</td>
+  </tr>
+ </tbody>
+</table>
+
 <h2 id="Scripting">Scripting</h2>
 
 <p>In order to create dynamic content and Web applications, HTML supports the use of scripting languages, most prominently JavaScript. Certain elements support this capability.</p>
@@ -81,7 +104,7 @@ tags:
 
 <h2 id="Forms">Forms</h2>
 
-<p>HTML provides a number of elements which can be used together to create forms which the user can fill out and submit to the Web site or application. There's a great deal of further information about this available in the <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML forms guide</a>.</p>
+<p>HTML provides a number of elements which can be used together to create forms which the user can fill out and submit to the Web site or application. There's a great deal of further information about this available in the <a href="/en-US/docs/Learn/Forms">HTML forms guide</a>.</p>
 
 <p>{{HTMLRefTable({"include": ["HTML forms"], "exclude":["Deprecated"]})}}</p>
 

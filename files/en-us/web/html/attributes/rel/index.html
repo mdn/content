@@ -9,7 +9,7 @@ tags:
   - form
   - rel
 ---
-<p>{{draft}}</p>
+<p>{{HTMLSidebar}}{{draft}}</p>
 
 <p class="summary">The <strong><code>rel</code></strong> attribute defines the relationship between a linked resource and the current document. Valid on {{htmlelement('link')}}, {{htmlelement('a')}}, {{htmlelement('area')}}, and {{htmlelement('form')}}, the supported values depend on the element on which the attribute is found.</p>
 
@@ -263,7 +263,7 @@ tags:
 
 	<p>If there are multiple <code>&lt;link rel="icon"&gt;</code>s, the browser uses their <a href="media"><code>media</code></a> attribute, <a href="type"><code>type</code></a>, and <a href="sizes"><code>sizes</code></a> attributes to select the most appropriate icon. If several icons are equally appropriate, the last one is used. If the most appropriate icon is later found to be inappropriate, for example because it uses an unsupported format, the browser proceeds to the next-most appropriate, and so on.</p>
 
-	<div class="blockIndicator note">
+	<div class="notecard note">
 	<p>Prior to Firefox 83 the <a href="/en-US/docs/Web/HTML/Attributes/crossorigin">crossorigin</a> attribute was not supported for <code>rel="icon"</code> there is also <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1121645">an open issue for Chrome</a>.</p>
 	</div>
 
@@ -292,7 +292,7 @@ tags:
 	<br>
 	This is the opposite of {{anch("opener")}}.</dd>
 	<dt>{{htmlattrdef("noreferrer")}}</dt>
-	<dd>Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, including this value makes the referrer unknown (no <code>Referer</code> header will be included), and opens the creates a top-level browsing context, as if <code>noopener</code> were also set.</dd>
+	<dd>Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, including this value makes the referrer unknown (no <code>Referer</code> header will be included), and creates a top-level browsing context as if <code>noopener</code> were also set.</dd>
 	<dt>{{htmlattrdef("opener")}}</dt>
 	<dd>Creates an auxiliary browsing context if the hyperlink would otherwise create a top-level browsing context that is not anauxiliary browsing context (i.e., has "<code>_blank</code>" as <code>target</code> attribute value). Effectively, the opposite of {{anch("noopener")}}.</dd>
 	<dt>{{htmlattrdef("pingback")}}</dt>
@@ -352,8 +352,6 @@ tags:
 </dl>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("html.elements.attributes.rel")}}</p>
 

@@ -30,7 +30,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var gettingTopSites = browser.topSites.get(
+<pre class="brush:js">var gettingTopSites = browser.topSites.get(
     options  // object
 )
 </pre>
@@ -68,15 +68,13 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("webextensions.api.topSites.get")}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>This code logs the title and URL for all pages in the "New Tab" page:</p>
 
-<pre class="brush: js">function logTopSites(topSitesArray) {
+<pre class="notranslate brush: js">function logTopSites(topSitesArray) {
   for (topSite of topSitesArray) {
     console.log(`Title: ${topSite.title}, URL: ${topSite.url}`);
   }
@@ -92,7 +90,7 @@ gettingTopSites.then(logTopSites, onError);
 
 <p>This code logs the title and URL for all top pages, including ones the user has blocked, and potentially including multiple pages in the same domain:</p>
 
-<pre class="brush: js">function logTopSites(topSitesArray) {
+<pre class="notranslate brush: js">function logTopSites(topSitesArray) {
   for (topSite of topSitesArray) {
     console.log(`Title: ${topSite.title}, URL: ${topSite.url}`);
   }

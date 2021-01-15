@@ -56,7 +56,7 @@ tags:
 
 <p>Next, create a file called "page-eater.js" inside the "modify-page" directory, and give it the following contents:</p>
 
-<pre class="brush: js notranslate">document.body.textContent = "";
+<pre class="notranslate brush: js">document.body.textContent = "";
 
 var header = document.createElement('h1');
 header.textContent = "This page has been eaten";
@@ -102,7 +102,7 @@ document.body.appendChild(header);</pre>
 
 <p>Let's create this file. Create a new file called <code>background.js</code> in the <code>modify-page</code> directory, and give it the following contents:</p>
 
-<pre class="brush: js notranslate">browser.contextMenus.create({
+<pre class="notranslate brush: js">browser.contextMenus.create({
   id: "eat-page",
   title: "Eat this page"
 });
@@ -157,7 +157,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
  </thead>
 </table>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>In addition to this method of communication, which sends one-off messages, you can also use a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging">connection-based approach to exchange messages</a>. For advice on choosing between the options, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Choosing_between_one-off_messages_and_connection-based_messaging">Choosing between one-off messages and connection-based messaging</a>.</p>
 </div>
 
@@ -165,7 +165,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 
 <p>First, edit <code>background.js</code> so that it has these contents:</p>
 
-<pre class="brush: js notranslate">browser.contextMenus.create({
+<pre class="notranslate brush: js">browser.contextMenus.create({
   id: "eat-page",
   title: "Eat this page"
 });
@@ -198,7 +198,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 
 <p>Next, update <code>page-eater.js</code> like this:</p>
 
-<pre class="brush: js notranslate">function eatPageReceiver(request, sender, sendResponse) {
+<pre class="notranslate brush: js">function eatPageReceiver(request, sender, sendResponse) {
   document.body.textContent = "";
   let header = document.createElement('h1');
   header.textContent = request.replacement;
@@ -219,7 +219,7 @@ browser.runtime.onMessage.addListener(eatPageReceiver);
 
 <p>If we want send messages back from the content script to the background page,  we would use <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage">runtime.sendMessage()</a></code> instead of <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage">tabs.sendMessage()</a></code>, e.g.:</p>
 
-<pre class="brush: js notranslate">browser.runtime.sendMessage({
+<pre class="notranslate brush: js">browser.runtime.sendMessage({
     title: "from page-eater.js"
 });</pre>
 

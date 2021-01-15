@@ -1,0 +1,86 @@
+---
+title: NSS 3.38 release notes
+slug: Mozilla/Projects/NSS/NSS_3.38_release_notes
+tags:
+  - Mozilla
+  - NSS
+  - Release Notes
+---
+
+<h2 id="Introduction">Introduction</h2>
+
+<p>The NSS team has released Network Security Services (NSS) 3.38, which is a minor release.</p>
+
+<h2 id="Distribution_Information">Distribution Information</h2>
+
+<p>The HG tag is NSS_3_38_RTM. NSS 3.38 requires NSPR 4.19 or newer.</p>
+
+<p>NSS 3.38 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_38_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_38_RTM/src/</a></li>
+</ul>
+
+<h2 id="New_in_NSS_3.38">New in NSS 3.38</h2>
+
+<h3 id="New_Functionality">New Functionality</h3>
+
+<ul>
+ <li>Added support for the TLS Record Size Limit Extension.</li>
+ <li>When creating a certificate request (CSR) using certutil -R, an existing orphan private key can be reused. Parameter -k may be used to specify the ID of an existing orphan key. The available orphan key IDs can be displayed using command certutil -K.</li>
+ <li>When using certutil -O to print the chain for a given certificate nickname, the new parameter --simple-self-signed may be provided, which can avoid ambiguous output in some scenarios.</li>
+</ul>
+
+<h4 id="New_Functions">New Functions</h4>
+
+<ul>
+ <li><em>in secitem.h</em>
+
+  <ul>
+   <li><strong>SECITEM_MakeItem</strong> - Allocate and make an item with the requested contents</li>
+  </ul>
+ </li>
+</ul>
+
+<h4 id="New_Macros">New Macros</h4>
+
+<ul>
+ <li><em>in ssl.h</em>
+
+  <ul>
+   <li><strong>SSL_RECORD_SIZE_LIMIT</strong> - used to control the TLS Record Size Limit Extension</li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Notable_Changes_in_NSS_3.38">Notable Changes in NSS 3.38</h2>
+
+<ul>
+ <li>
+  <p>Fixed <a href="https://nvd.nist.gov/vuln/detail/CVE-2018-0495">CVE-2018-0495</a> in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1464971">bug 1464971</a>.</p>
+ </li>
+ <li>
+  <p>Various security fixes in the ASN.1 code.</p>
+ </li>
+ <li>
+  <p>NSS automatically enables caching for SQL database storage on Linux, if it is located on a network filesystem that's known to benefit from caching.</p>
+ </li>
+ <li>
+  <p>When repeatedly importing the same certificate into an SQL database, the existing nickname will be kept.</p>
+ </li>
+</ul>
+
+<h2 id="Bugs_fixed_in_NSS_3.38">Bugs fixed in NSS 3.38</h2>
+
+<p>This Bugzilla query returns all the bugs fixed in NSS 3.38:</p>
+
+<p><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.38">https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.38</a></p>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.38 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.38 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report with<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (product NSS).</p>

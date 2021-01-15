@@ -14,8 +14,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/css/column-fill.html")}}</div>
 
-
-
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: css no-line-numbers notranslate">/* Keyword values */
@@ -48,7 +46,7 @@ column-fill: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+<pre class="brush: css notranslate">{{csssyntax}}</pre>
 
 <h2 id="Example">Example</h2>
 
@@ -106,11 +104,9 @@ p.fill-balance {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("css.properties.column-fill")}}</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>Note that there are some interoperability issues and bugs with <code>column-fill</code> across browsers, due to unresolved issues in the specification.</p>
 
 <p>In particular, when using <code>column-fill: auto</code> to fill columns sequentially, Chrome will only consult this property if the multicol container has a size in the block dimension (e.g., height in a horizontal writing mode). Firefox will always consult this property, therefore filling the first column with all of the content in cases where there is no size.</p>

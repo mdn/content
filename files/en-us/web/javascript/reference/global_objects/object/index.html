@@ -201,7 +201,6 @@ Employee.prototype.constructor = Employee; //If you don't set Object.prototype.c
                                            //it will take prototype.constructor of Person (parent).
                                            //To avoid that, we set the prototype.constructor to Employee (child).
 
-
 Employee.prototype.greet = function() {
   if (this.canTalk) {
     console.log('Hi, I am ' + this.name + ', the ' + this.title);
@@ -217,7 +216,6 @@ Customer.prototype.constructor = Customer; //If you don't set Object.prototype.c
                                            //it will take prototype.constructor of Person (parent).
                                            //To avoid that, we set the prototype.constructor to Customer (child).
 
-
 var Mime = function(name) {
   Person.call(this, name);
   this.canTalk = false;
@@ -227,7 +225,6 @@ Mime.prototype = Object.create(Person.prototype);
 Mime.prototype.constructor = Mime; //If you don't set Object.prototype.constructor to Mime,
                                    //it will take prototype.constructor of Person (parent).
                                    //To avoid that, we set the prototype.constructor to Mime (child).
-
 
 var bob = new Employee('Bob', 'Builder');
 var joe = new Customer('Joe');

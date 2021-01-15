@@ -8,14 +8,14 @@ tags:
 ---
 <div>{{HTMLSidebar("Global_attributes")}}</div>
 
-<p>The <strong><code>data-*</code></strong> <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a> form a class of attributes called <strong>custom data attributes</strong>, that allow proprietary information to be exchanged between the <a href="/en-US/docs/Web/HTML" title="en/HTML">HTML</a> and its <a href="/en-US/docs/Web/API/Document_Object_Model" title="en/DOM">DOM</a> representation by scripts.</p>
+<p>The <strong><code>data-*</code></strong> <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a> form a class of attributes called <strong>custom data attributes</strong>, that allow proprietary information to be exchanged between the <a href="/en-US/docs/Web/HTML">HTML</a> and its <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a> representation by scripts.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/attribute-data.html","tabbed-standard")}}</div>
 
 <div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</div>
 
 <p>All such custom data are available via the {{domxref("HTMLElement")}} interface of the element the attribute is set on. The {{domxref("HTMLElement.dataset")}} property gives access to them.<br>
- The <code>*</code> may be replaced by any name following <a class="external" href="http://www.w3.org/TR/REC-xml/#NT-Name" title="http://www.w3.org/TR/REC-xml/#NT-Name">the production rule of XML names</a> with the following restrictions:</p>
+ The <code>*</code> may be replaced by any name following <a class="external" href="https://www.w3.org/TR/REC-xml/#NT-Name">the production rule of XML names</a> with the following restrictions:</p>
 
 <ul>
  <li>the name must not start with <code>xml</code>, whatever case is used for these letters;</li>
@@ -23,7 +23,7 @@ tags:
  <li>the name must not contain capital letters.</li>
 </ul>
 
-<p>Note that the {{domxref("HTMLElement.dataset")}} property is a {{domxref("DOMStringMap")}}, and the name of the custom data attribute <em> data-test-value</em> will be accessible via <code>HTMLElement.dataset.testValue</code> (or by <code>HTMLElement.dataset["<em>testValue</em>"]</code>) as any dash (<code>U+002D</code>) is replaced by the capitalization of the next letter, converting the name to camelcase.</p>
+<p>Note that the {{domxref("HTMLElement.dataset")}} property is a {{domxref("DOMStringMap")}}, and the name of the custom data attribute <em>data-test-value</em> will be accessible via <code>HTMLElement.dataset.testValue</code> (or by <code>HTMLElement.dataset["<em>testValue</em>"]</code>) as any dash (<code>U+002D</code>) is replaced by the capitalization of the next letter, converting the name to camelcase.</p>
 
 <h3 id="Usage">Usage</h3>
 
@@ -43,25 +43,11 @@ tags:
  <thead>
   <tr>
    <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
   </tr>
  </thead>
  <tbody>
   <tr>
-   <td>{{SpecName('HTML WHATWG', "dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes", "data-*")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from latest snapshot, {{SpecName('HTML5.1')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "dom.html#element-attrdef-global-data", "data-*")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Snapshot of {{SpecName('HTML WHATWG')}}, no change from {{SpecName('HTML5 W3C')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "dom.html#element-attrdef-global-data", "data-*")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Snapshot of {{SpecName('HTML WHATWG')}}, initial definition.</td>
+   <td>{{SpecName('HTML WHATWG', "dom.html#attr-data-*", "data-*")}}</td>
   </tr>
  </tbody>
 </table>

@@ -14,10 +14,9 @@ tags:
 
 <p>Much of today's web content assumes the user's pointing device will be a mouse. However, since many devices support other types of pointing input devices, such as pen/stylus and touch surfaces, extensions to the existing pointing device event models are needed. <em><a href="#term_pointer_event">Pointer events</a></em> address that need.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Pointer events are <em>not available</em> in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
 </div>
-
 
 <p>Pointer events are DOM events that are fired for a pointing device. They are designed to create a single DOM event model to handle pointing input devices such as a mouse, pen/stylus or touch (such as one or more fingers).</p>
 
@@ -124,7 +123,7 @@ tags:
   <tr>
    <td>{{event('pointercancel')}}</td>
    <td>{{domxref('GlobalEventHandlers.onpointercancel','onpointercancel')}}</td>
-   <td>A browser fires this event if it concludes the pointer will no longer be able to generate events (for example the related device is deactived).</td>
+   <td>A browser fires this event if it concludes the pointer will no longer be able to generate events (for example the related device is deactivated).</td>
   </tr>
   <tr>
    <td>{{event('pointerout')}}</td>
@@ -255,7 +254,7 @@ tags:
           process_touch(ev);
           break;
         default:
-          console.log("pointerType " + ev.pointerType + " is Not suported");
+          console.log("pointerType " + ev.pointerType + " is Not supported");
       }
 
       // Call the tilt handler
@@ -346,7 +345,7 @@ tags:
  </tbody>
 </table>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Notice:</strong> The <code>button</code> property indicates a change in the state of the button. However, as in the case of touch, when multiple events occur with one event, all of them have the same value.</p>
 </div>
 
@@ -484,7 +483,7 @@ tags:
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility"><span>Browser compatibility</span></h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div class="hidden">
 <p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
@@ -497,7 +496,7 @@ tags:
 <h2 id="Demos_and_examples">Demos and examples</h2>
 
 <ul>
- <li><a href="http://patrickhlauke.github.io/touch/">Touch/pointer tests and demos (by Patrick H. Lauke)</a></li>
+ <li><a href="https://patrickhlauke.github.io/touch/">Touch/pointer tests and demos (by Patrick H. Lauke)</a></li>
 </ul>
 
 <h2 id="Community">Community</h2>
@@ -511,5 +510,5 @@ tags:
 <h2 id="Related_topics_and_resources">Related topics and resources</h2>
 
 <ul>
- <li><a href="http://www.w3.org/TR/touch-events/">Touch Events Standard</a></li>
+ <li><a href="https://www.w3.org/TR/touch-events/">Touch Events Standard</a></li>
 </ul>

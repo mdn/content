@@ -41,13 +41,13 @@ tags:
 
 <h2 id="Introducing_the_variation_axis">Introducing the 'variation axis'</h2>
 
-<p>The heart of the new variable fonts format is the concept of an <strong>axis of variation</strong> describing the allowable range of that particular aspect of the typeface design. So the 'weight axis' describes how light or how bold the letterforms can be; the 'width axis' describes how narrow or how wide they can be; the 'italic axis' describes if italic letterforms are present and can be turned on or off accordingly, etc. Note that an axis can be a range or a binary choice. Weight might range from 1–999, whereas italic might simply be 0 or 1 (off or on).</p>
+<p>The heart of the new variable fonts format is the concept of an <strong>axis of variation</strong> describing the allowable range of that particular aspect of the typeface design. So the 'weight axis' describes how light or how bold the letterforms can be; the 'width axis' describes how narrow or how wide they can be; the 'italic axis' describes if italic letterforms are present and can be turned on or off accordingly, etc. Note that an axis can be a range or a binary choice. Weight might range from 1–999, whereas italic might be 0 or 1 (off or on).</p>
 
 <p>As defined in the specification, there are two kinds of axes: <strong>registered</strong> and <strong>custom</strong>:</p>
 
 <ul>
  <li>
-  <p>Registered axes are simply those that are most frequently encountered, and common enough that the authors of the specification felt it was worth standardizing. The five currently registered axes are weight, width, slant, italic, and optical size. The W3C has undertaken mapping them to existing CSS attributes, and in one case introduced a new one, which you'll see below.</p>
+  <p>Registered axes are those that are most frequently encountered, and common enough that the authors of the specification felt it was worth standardizing. The five currently registered axes are weight, width, slant, italic, and optical size. The W3C has undertaken mapping them to existing CSS attributes, and in one case introduced a new one, which you'll see below.</p>
  </li>
  <li>
   <p>Custom axes are in fact limitless: the typeface designer can define and scope any axis they like, and are just required to give it a four-letter <strong>tag</strong> to identify it within the font file format itself. You can use these four-letter tags in CSS to specify a point along that axis of variation, as will be show in the code examples below.</p>
@@ -69,13 +69,13 @@ tags:
   <p><code>wght</code> (weight) is a registered axis, and <code>GRAD</code> (grade) is a custom one.</p>
  </li>
  <li>
-  <p>If you have set values using <code>font-variation-settings</code> and want to change one of those values, you must redeclare all of them (in the same way as when you set OpenType font features using {{cssxref("font-feature-settings")}}). You can work around this limitation by using <a href="/en-US/docs/Web/CSS/Using_CSS_variables">CSS Custom Properties</a> (CSS variables) for the individual values, and simply modifying the value of an individual custom property. Example code follows at the end of the guide.</p>
+  <p>If you have set values using <code>font-variation-settings</code> and want to change one of those values, you must redeclare all of them (in the same way as when you set OpenType font features using {{cssxref("font-feature-settings")}}). You can work around this limitation by using <a href="/en-US/docs/Web/CSS/Using_CSS_variables">CSS Custom Properties</a> (CSS variables) for the individual values, and modifying the value of an individual custom property. Example code follows at the end of the guide.</p>
  </li>
 </ol>
 
 <h3 id="Weight">Weight</h3>
 
-<p>Weight (represented by the <code>wght</code> tag) defines the design axis of how thin or thick (light or heavy, in typical typographic terms) the strokes of the letterforms can be. For a long time in CSS there has existed the ability to specify this via the {{cssxref("font-weight")}} property, which takes numeric values ranging from 100 to 900 in increments of 100, and keywords like <code>normal</code> or <code>bold</code>, which are simply aliases for their corresponding numeric values (400 and 700 in this case). These are still applied when dealing with non-variable or variable fonts, but with variable ones, any number from 1 to 1000 is now valid.</p>
+<p>Weight (represented by the <code>wght</code> tag) defines the design axis of how thin or thick (light or heavy, in typical typographic terms) the strokes of the letterforms can be. For a long time in CSS there has existed the ability to specify this via the {{cssxref("font-weight")}} property, which takes numeric values ranging from 100 to 900 in increments of 100, and keywords like <code>normal</code> or <code>bold</code>, which are aliases for their corresponding numeric values (400 and 700 in this case). These are still applied when dealing with non-variable or variable fonts, but with variable ones, any number from 1 to 1000 is now valid.</p>
 
 <p>It should be noted that at this point there is no way in the <code>@font-face</code> declaration to 'map' a specific point on the variation axis of a variable font to the keyword <code>bold</code> (or any other keyword). This can generally be resolved fairly easily, but does require an extra step in writing your CSS:</p>
 
@@ -196,7 +196,7 @@ font-variation-settings: 'opsz' 36;</pre>
 }</pre>
 
 <div class="note">
-<p><strong>Note:</strong> there is no set specific value for the upper-end degree measurement in this case; they simply indicate that there is an axis so the browser can know to render upright or italic (remember that italics are only on or off)</p>
+<p><strong>Note:</strong> there is no set specific value for the upper-end degree measurement in this case; they indicate that there is an axis so the browser can know to render upright or italic (remember that italics are only on or off)</p>
 </div>
 
 <h4 id="Example_for_a_font_that_contains_only_italics_and_no_upright_characters">Example for a font that contains only italics and no upright characters:</h4>

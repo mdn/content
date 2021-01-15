@@ -1,0 +1,67 @@
+---
+title: Build instructions for JSS 4.3.x
+slug: Mozilla/Projects/NSS/JSS/Build_instructions_for_JSS_4.3.x
+tags:
+  - JSS
+---
+<h2 id="Build_Instructions_for_JSS_4.3.x">Build Instructions for JSS 4.3.x</h2>
+<p>Newsgroup: <a class="link-news" href="news://news.mozilla.org/mozilla.dev.tech.crypto">mozilla.dev.tech.crypto</a></p>
+<p>Before building JSS, you need to set up your system as follows:</p>
+<ol>
+ <li>Build NSPR/NSS by following the <a href="/en-US/NSS_reference/Building_and_installing_NSS/Build_instructions">NSPR/NSS build instructions</a>,</li>
+ <li>To check that NSS built correctly, run <code>all.sh</code> (in <code>mozilla/security/nss/tests</code>) and examine the results (in <code>mozilla/test_results/security/</code><em>computername</em>.#<code>/results.html</code>.</li>
+ <li>Install a Java compiler and runtime. JSS supports Java version 1.5 or later. We suggest you use the latest.</li>
+ <li>You must have Perl version 5.005 or later.</li>
+</ol>
+<p>Now you are ready to build JSS. Follow these steps:</p>
+<ol>
+ <li>Switch to the appropriate directory and check out JSS from the root of your source tree.
+  <pre>cvs co -r JSS_4_3_1_RTM mozilla/security/jss</pre>
+  or
+  <pre>cvs co -r JSS_4_3_RTM mozilla/security/jss</pre>
+ </li>
+ <li>
+  <p>Setup environment variables needed for compiling Java source. The <code>JAVA_HOME</code> variable indicates the directory containing your Java SDK installation. Note, on Windows platforms it is best to have JAVA_HOME set to a directory path that doest not have spaces. </p>
+  <strong>Unix</strong>
+  <pre>setenv JAVA_HOME /usr/local/jdk1.5.0 <em>(or wherever your JDK is installed)</em>
+</pre>
+  <strong>Windows</strong>
+  <pre>set JAVA_HOME=c:\programs\jdk1.5.0 <em>(or wherever your JDK is installed)</em>
+</pre>
+  <strong>Windows (Cygnus)</strong>
+  <pre>JAVA_HOME=/cygdrive/c/programs/jdk1.5.0 <em>(or wherever your JDK is installed)</em>
+export JAVA_HOME
+</pre>
+  <strong>Windows build Configurations WINNT vs WIN95 </strong><br>
+  <pre>As of NSS 3.15.4, NSPR/NSS/JSS build generates a "WIN95" configuration by default on Windows.
+We recommend most applications use the "WIN95" configuration. If you want JSS to be used
+with your applet and the Firefox browser than you must build WIN95. (See JSS <a href="https://www.mozilla.org/projects/security/pki/jss/faq.html">FAQ</a>)
+The "WIN95" configuration supports all versions of Windows. The "WIN95" name is historical;
+it should have been named "WIN32".
+To generate a "WINNT" configuration, set OS_TARGET=WINNT and build NSPR/NSS/JSS WIN95. </pre>
+  <span style="font-weight: bold;">Mac OS X</span><br>
+  It has been recently reported that special build instructions are necessary to succeed building JSS on OSX. Please see <a href="/HOWTO_successfully_compile_JSS_and_NSS_for_32_and_64_bits_on_OSX_10.6_(10.6.7)" title="HOWTO successfully compile JSS and NSS for 32 and 64 bits on OSX 10.6 (10.6.7)">HOWTO_successfully_compile_JSS_and_NSS_for_32_and_64_bits_on_OSX_10.6_(10.6.7)</a> for contributed instructions.<br>
+   </li>
+ <li>
+  <p>Build JSS.</p>
+  <blockquote>
+   <pre>cd mozilla/security/jss
+gmake
+
+</pre>
+  </blockquote>
+ </li>
+ <li>
+  <p>Sign the JSS jar.</p>
+  <blockquote>
+   <pre>If you're intention is to modify and build the JSS source you
+need to Apply for your own  <a href="https://www.mozilla.org/projects/security/pki/jss/provider_notes.html#signed-jar">JCE code-signing certificate </a>
+
+If you made no changes and your goal is to build JSS you can use the
+signed binary release of the jss4.jar from ftp.mozilla.org.
+with your built jss4 JNI shared library.
+</pre>
+  </blockquote>
+ </li>
+</ol>
+<p>Next, you should read the instructions on <a href="Using_JSS"> using JSS</a>.</p>

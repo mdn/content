@@ -16,7 +16,7 @@ tags:
 
 <p>The <strong><code>bookmarks.removeTree()</code></strong> method recursively removes a bookmark folder and all of its contents.</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>If your extension attempts to remove a bookmark tree from the bookmarks tree root node, the call will raise an error with the message: "The bookmark root cannot be modified" and the bookmark won't be removed.</p>
 </div>
 
@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var removingTree = browser.bookmarks.removeTree(
+<pre class="brush:js">var removingTree = browser.bookmarks.removeTree(
   id                // string
 )
 </pre>
@@ -46,7 +46,7 @@ tags:
 
 <p>This example locates a bookmark folder named "MDN" and deletes it along with all of its contents.</p>
 
-<pre class="brush: js">function onRemoved() {
+<pre class="notranslate brush: js">function onRemoved() {
   console.log("bookmark item removed!");
 }
 

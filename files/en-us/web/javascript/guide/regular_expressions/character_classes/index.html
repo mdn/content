@@ -123,7 +123,7 @@ tags:
    <td>Matches a UTF-16 code-unit with the value <code><em>hhhh</em></code> (four hexadecimal digits).</td>
   </tr>
   <tr>
-   <td><code>\u<em>{hhhh} </em>or <em>\u{hhhhh}</em></code></td>
+   <td><code>\u<em>{hhhh}</em> or <em>\u{hhhhh}</em></code></td>
    <td>(Only when the <code>u</code> flag is set.) Matches the character with the Unicode value <code>U+<em>hhhh</em></code> or <code>U+<em>hhhhh</em></code> (hexadecimal digits).</td>
   </tr>
   <tr>
@@ -136,7 +136,7 @@ tags:
      <li>For characters that are usually treated specially, indicates that the next character is not special and should be interpreted literally. For example, "*" is a special character that means 0 or more occurrences of the preceding character should be matched; for example, <code>/a*/</code> means match 0 or more "a"s. To match <code>*</code> literally, precede it with a backslash; for example, <code>/a\*/</code> matches "a*".</li>
     </ul>
 
-    <div class="blockIndicator note">
+    <div class="notecard note">
     <p>To match this character literally, escape it with itself. In other words to search for <code>\</code> use <code>/\\/</code>.</p>
     </div>
    </td>
@@ -153,7 +153,6 @@ var regexpFourDigits = /\b\d{4}\b/g;
 // \b indicates a boundary (i.e. do not start matching in the middle of a word)
 // \d{4} indicates a digit, four times
 // \b indicates another boundary (i.e. do not end matching in the middle of a word)
-
 
 console.table(randomData.match(regexpFourDigits));
 // ['8787', '3512', '8735']

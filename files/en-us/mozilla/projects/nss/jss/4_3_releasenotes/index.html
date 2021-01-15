@@ -1,0 +1,125 @@
+---
+title: 4.3 Release Notes
+slug: Mozilla/Projects/NSS/JSS/4_3_ReleaseNotes
+tags:
+  - JSS
+  - NSS
+---
+<h2 id="Release_Date_01_April_2009">Release Date: 01 April 2009</h2>
+
+<h3 id="Introduction">Introduction</h3>
+
+<p>Network Security Services for Java (JSS) 4.3 is a minor release with the following new features:</p>
+
+<ul>
+ <li>SQLite-Based Shareable Certificate and Key Databases</li>
+ <li>libpkix: an RFC 3280 Compliant Certificate Path Validation Library</li>
+ <li>PKCS11 needsLogin method</li>
+ <li>support HmacSHA256, HmacSHA384, and HmacSHA512</li>
+ <li>support for all NSS 3.12 initialization options</li>
+</ul>
+
+<p>JSS 4.3 is <a class="external" href="https://www.mozilla.org/MPL">tri-licensed</a> under MPL 1.1/GPL 2.0/LGPL 2.1.</p>
+
+<h3 id="New_in_JSS_4.3">New in JSS 4.3</h3>
+
+<p> A list of bug fixes and enhancement requests were implemented in this release can be obtained by running this <a class="external" href="http://bugzilla.mozilla.org/buglist.cgi?product=JSS&amp;target_milestone=4.2.5&amp;target_milestone=4.3&amp;bug_status=RESOLVED&amp;resolution=FIXED">bugzilla query</a></p>
+
+<p><strong>JSS 4.3 requires <a class="external" href="https://www.mozilla.org/projects/security/pki/nss/nss-3.12/nss-3.12-release-notes.html" title="http://www.mozilla.org/projects/security/pki/nss/nss-3.12/nss-3.12-release-notes.html">NSS 3.12</a> or higher. </strong></p>
+
+<ul>
+ <li>New <a class="link-https" href="https://wiki.mozilla.org/NSS_Shared_DB">SQLite-Based Shareable Certificate and Key Databases</a> by prepending the string "sql:" to the directory path passed to configdir parameter for Crypomanager.initialize method or using the NSS environment variable <a class="external" href="/en-US/NSS_reference/NSS_environment_variables" rel="external nofollow" title="https://developer.mozilla.org/editor/fckeditor/core/editor/en/NSS_reference/NSS_environment_variables">NSS_DEFAULT_DB_TYPE</a>.</li>
+ <li>Libpkix: an RFC 3280 Compliant Certificate Path Validation Library (see <a class="external" href="http://mxr.mozilla.org/mozilla/ident?i=PKIXVerify">PKIXVerify</a>)</li>
+ <li>PK11Token.needsLogin method (see needsLogin)</li>
+ <li>support HmacSHA256, HmacSHA384, and HmacSHA512 (see <a class="external" href="http://mxr.mozilla.org/mozilla/source/security/jss/org/mozilla/jss/tests/HMACTest.java">HMACTest.java</a>)</li>
+ <li>support for all NSS 3.12 initialization options (see InitializationValues)</li>
+ <li>New SSL error codes (see https://mxr.mozilla.org/security/sour...util/SSLerrs.h)
+  <ul>
+   <li>SSL_ERROR_UNSUPPORTED_EXTENSION_ALERT<br>
+    SSL_ERROR_CERTIFICATE_UNOBTAINABLE_ALERT<br>
+    SSL_ERROR_UNRECOGNIZED_NAME_ALERT<br>
+    SSL_ERROR_BAD_CERT_STATUS_RESPONSE_ALERT<br>
+    SSL_ERROR_BAD_CERT_HASH_VALUE_ALERT</li>
+  </ul>
+ </li>
+ <li>New TLS cipher suites (see https://mxr.mozilla.org/security/sour...SSLSocket.java):
+  <ul>
+   <li>TLS_RSA_WITH_CAMELLIA_128_CBC_SHA<br>
+    TLS_DHE_DSS_WITH_CAMELLIA_128_CBC_SHA<br>
+    TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA<br>
+    TLS_RSA_WITH_CAMELLIA_256_CBC_SHA<br>
+    TLS_DHE_DSS_WITH_CAMELLIA_256_CBC_SHA<br>
+    TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</li>
+  </ul>
+ </li>
+ <li>Note: the following TLS cipher suites are declared but are not yet implemented:
+  <ul>
+   <li>TLS_DH_DSS_WITH_CAMELLIA_128_CBC_SHA<br>
+    TLS_DH_RSA_WITH_CAMELLIA_128_CBC_SHA<br>
+    TLS_DH_ANON_WITH_CAMELLIA_128_CBC_SHA<br>
+    TLS_DH_DSS_WITH_CAMELLIA_256_CBC_SHA<br>
+    TLS_DH_RSA_WITH_CAMELLIA_256_CBC_SHA<br>
+    TLS_DH_ANON_WITH_CAMELLIA_256_CBC_SHA<br>
+    TLS_ECDH_anon_WITH_NULL_SHA<br>
+    TLS_ECDH_anon_WITH_RC4_128_SHA<br>
+    TLS_ECDH_anon_WITH_3DES_EDE_CBC_SHA<br>
+    TLS_ECDH_anon_WITH_AES_128_CBC_SHA<br>
+    TLS_ECDH_anon_WITH_AES_256_CBC_SHA</li>
+  </ul>
+ </li>
+</ul>
+
+<h3 id="Distribution_Information">Distribution Information</h3>
+
+<ul>
+ <li>JSS is checked into <code>mozilla/security/jss/</code>.</li>
+ <li>The CVS tag for the JSS 4.3 release is <code>JSS_4_3_RTM</code>.</li>
+ <li>Source tarballs are available from <a href="https://archive.mozilla.org/pub/security/jss/releases/JSS_4_3_RTM/src/jss-4.3.tar.bz2">https://archive.mozilla.org/pub/security/jss/releases/JSS_4_3_RTM/src/jss-4.3.tar.bz2</a></li>
+ <li>Binary releases are no longer available on mozilla. JSS is a JNI library we provide the jss4.jar but expect you to build the JSS's matching JNI shared library. We provide the jss4.jar in case you do not want to obtain your own JCE code signing certificate. JSS is a JCE provider and therefore the jss4.jar must be signed. <a href="https://archive.mozilla.org/pub/security/jss/releases/JSS_4_3_RTM/">https://archive.mozilla.org/pub/security/jss/releases/JSS_4_3_RTM/</a></li>
+</ul>
+
+<hr>
+<h3 id="Documentation">Documentation</h3>
+
+<p>Documentation for JSS 4.3 is available as follows:</p>
+
+<ul>
+ <li><a href="/jss_build_4.3.html" title="jss_build_4.3.html">Build Instructions for JSS 4.3</a></li>
+ <li>Javadoc <a href="/javadoc">[online]</a> <a class="link-ftp" href="ftp://ftp.mozilla.org/pub/mozilla.org/security/jss/releases/JSS_4_3_RTM/doc/JSS_4_3_RTM-doc.zip">[zipped]</a></li>
+ <li>Read the instructions on <a href="/using_jss.html" title="using_jss.html">using JSS</a>.</li>
+ <li>Source may be viewed with a browser (via the MXR tool) at <a class="external" href="http://mxr.mozilla.org/mozilla/source/security/jss/"> http://mxr.mozilla.org/mozilla/source/security/jss/</a></li>
+ <li>The RUN TIME behavior of JSS can be affected by the <a class="internal" href="/en-US/NSS_reference/NSS_environment_variables">NSS Environment Variables</a>. </li>
+</ul>
+
+<h3 id="Platform_Information">Platform Information</h3>
+
+<ul>
+ <li>JSS 4.3 works with JDK versions 4 or higher we suggest the latest.</li>
+ <li>JSS 4.3 requires <a class="external" href="https://www.mozilla.org/projects/security/pki/nss/nss-3.12/nss-3.12-release-notes.html" title="http://www.mozilla.org/projects/security/pki/nss/nss-3.12/nss-3.12-release-notes.html">NSS 3.12</a> or higher.</li>
+ <li>JSS 4.3 requires <a class="external" href="https://www.mozilla.org/projects/nspr/release-notes/" title="http://www.mozilla.org/projects/nspr/release-notes/">NSPR 4.7.1</a> or higher.</li>
+ <li>JSS only supports the native threading model (no green threads).</li>
+</ul>
+
+<hr>
+<h3 id="Known_Bugs_and_Issues">Known Bugs and Issues</h3>
+
+<ul>
+ <li>For a list of reported bugs that have not yet been fixed, <a class="external" href="http://bugzilla.mozilla.org/buglist.cgi?bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;&amp;product=JSS">click here.</a> Note that some bugs may have been fixed since JSS 4.3 was released. </li>
+</ul>
+
+<hr>
+<h3 id="Compatibility">Compatibility</h3>
+
+<ul>
+ <li>JSS 4.3 is backwards compatible with JSS 4.2. Applications compiled against JSS 4.2 will work with JSS 4.3.</li>
+ <li>The 4.3 version of libjss4.so/jss4.dll must only be used with jss4.jar. In general, a JSS JAR file must be used with the JSS shared library from the exact same release.</li>
+ <li>To obtain the version info from the jar file use, "System.out.println(org.mozilla.jss.CryptoManager.JAR_JSS_VERSION)" and to check the shared library: strings libjss4.so | grep -i header  </li>
+</ul>
+
+<hr>
+<h3 id="Feedback">Feedback</h3>
+
+<ul>
+ <li>Bugs discovered should be reported by filing a bug report with <a class="external" href="http://bugzilla.mozilla.org/enter_bug.cgi?product=JSS">bugzilla</a>.</li>
+ <li>You can also give feedback directly to the developers on the Mozilla Cryptography forums... {{ DiscussionList("dev-tech-crypto", "mozilla.dev.tech.crypto") }}</li>
+</ul>

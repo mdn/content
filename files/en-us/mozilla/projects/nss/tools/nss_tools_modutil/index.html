@@ -1,0 +1,842 @@
+---
+title: NSS Tools modutil
+slug: Mozilla/Projects/NSS/tools/NSS_Tools_modutil
+---
+<h2 id="Using_the_Security_Module_Database_(modutil)">Using the Security Module Database (modutil)</h2>
+
+Newsgroup: <a href="news://news.mozilla.org/mozilla.dev.tech.crypto">mozilla.dev.tech.crypto</a>
+
+<p>
+    The Security Module Database Tool is a command-line utility for managing PKCS #11 module information within
+    <code>secmod.db</code> files or within hardware tokens. You can use the tool to add and delete PKCS #11 modules,
+    change passwords, set defaults, list module contents, enable or disable slots, enable or disable FIPS 140-2
+    compliance, and assign default providers for cryptographic operations. This tool can also create
+    <code>key3.db</code>, <code>cert8.db</code>, and <code>secmod.db</code> security database files.
+</p>
+<a id="1043099">
+    The tasks associated with security module database management are part of a process that typically also involves
+    managing key databases (<code>key3.db</code> files) and certificate databases (<code>cert8.db</code> files). The
+    key, certificate, and PKCS #11 module management process generally begins with creating the keys and key database
+    necessary to generate and manage certificates and the certificate database. </a>
+<a id="1043101">
+    This document discusses security module database management. For information on certificate database and key
+    database management, see </a><a href="certutil.html">Using the Certificate Database Tool</a>.
+
+<h2 id="Availability_2"><a id="Availability"></a>
+    <a id="1031698">
+        Availability
+    </a>
+</h2><a id="1033637">
+    This tool is known to build on Solaris 2.5.1 (SunOS 5.5.1) and Windows NT 4.0. </a>
+
+<h2 id="Syntax_2"><a id="Syntax"></a>
+    <a id="1028268">
+        Syntax
+    </a>
+</h2><a id="1033678">
+    To run the Security Module Database Tool, type the command</a>
+<a id="1033679">
+    <code>modutil </code><i>option</i><code> [</code><i>arguments</i><code>]</code></a>
+<a id="1028271">
+    where <i>option</i> and <i>arguments</i> are combinations of the options and arguments listed in the following
+    section. Each command takes one option. Each option may take zero or more arguments. To see a usage string, issue
+    the command without options. </a>
+
+<h3 id="Options_and_Arguments">
+    <a id="1027593">
+        Options and Arguments
+    </a>
+</h3>
+
+<a id="1028291"></a>
+Options specify an action. Option arguments modify an action. The options and arguments for the <code>modutil</code>
+command are defined as follows:
+<table>
+    <tbody>
+        <tr>
+            <td><a id="1043286">
+                    <b>Options
+                    </b></a></td>
+            <td>
+                <p><a id="1043288">
+                    </a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><a id="1032245">
+                        <code>-create</code></a></p>
+            </td>
+            <td>
+                <p><a id="1038808">
+                        Create new <code>secmod.db</code>, <code>key3.db</code>, and <code>cert8.db</code> files.
+                        Use the <code>-dbdir</code> <i>directory</i> argument to specify a directory. If any of
+                        these databases already exist in a specified directory, the Security Module Database Tool
+                        displays an error message. </a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><a id="1032249">
+                        <code>-list [</code><i>modulename</i><code>]</code></a></p>
+            </td>
+            <td>
+                <p><a id="1038844">
+                        Display basic information about the contents of the <code>secmod.db</code> file. Use
+                        <i>modulename</i> to display detailed information about a particular module and its slots
+                        and tokens. </a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><a id="1038660">
+                        <code>-add </code><i>modulename</i></a></p>
+            </td>
+            <td>
+                <p><a id="1038851">
+                        Add the named PKCS #11 module to the database. Use this option with the
+                        <code>-libfile</code>, <code>-ciphers</code>, and <code>-mechanisms</code> arguments. </a>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><a id="1038656">
+                        <code>-jar </code><i>JAR-file</i></a></p>
+            </td>
+            <td>
+                <p><a id="1038943">
+                        Add a new PKCS #11 module to the database using the named JAR file. Use this option with the
+                        <code>-installdir</code> and <code>-tempdir</code> arguments. The JAR file uses the Netscape
+                        Server PKCS #11 JAR format to identify all the files to be installed, the module's name, the
+                        mechanism flags, and the cipher flags. The JAR file should also contain any files to be
+                        installed on the target machine, including the PKCS #11 module library file and other files
+                        such as documentation. See the section </a><a href="modutil.html#1043224">JAR Installation
+                        File</a> for information on creating the special script needed to perform an installation
+                    through a server or with the Security Module Database Tool (that is, in environments without
+                    JavaScript support). For general installation instructions and to install a module in
+                    environments where JavaScript support is available (as in Netscape Communicator), see the
+                    document <a href="http://developer.netscape.com/docs/manuals/security/jmpkcs/jimpkcs.htm">Using
+                        the JAR Installation Manager to Install a PKCS #11 Cryptographic Module</a>. </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><a id="1038652">
+                        <code>-delete </code><i>modulename</i></a></p>
+            </td>
+            <td>
+                <p><a id="1038654">
+                        Delete the named module. Note that you cannot delete the Netscape Communicator internal PKCS
+                        #11 module. </a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><a id="1038648">
+                        <code>-changepw </code><i>tokenname</i></a></p>
+            </td>
+            <td>
+                <p><a id="1039006">
+                        Change the password on the named token. If the token has not been initialized, this option
+                        initializes the password. Use this option with the <code>-pwfile</code> and
+                        <code>-newpwfile</code> arguments. In this context, the term "password" is equivalent to a
+                        personal identification number (PIN). </a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><a id="1038644">
+                        <code>-default </code><i>modulename</i></a></p>
+            </td>
+            <td>
+                <p><a id="1039027">
+                        Specify the security mechanisms for which the named module will be a default provider. The
+                        security mechanisms are specified with the <code>-mechanisms</code> <i>mechanism-list</i>
+                        argument. </a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><a id="1038640">
+                        <code>-undefault </code><i>modulename</i></a></p>
+            </td>
+            <td>
+                <p><a id="1039044">
+                        Specify the security mechanisms for which the named module will <i>not</i> be a default
+                        provider. The security mechanisms are specified with the<code> -mechanisms</code>
+                        <i>mechanism-list</i> argument. </a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><a id="1038691">
+                        <code>-enable </code><i>modulename</i></a></p>
+            </td>
+            <td>
+                <p><a id="1039376">
+                        Enable all slots on the named module. Use the
+                        <code>[-slot </code><i>slotname</i><code>] </code>argument to enable a specific slot. </a>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><a id="1038687">
+                        <code>-disable </code><i>modulename</i></a></p>
+            </td>
+            <td>
+                <p><a id="1038689">
+                        Disable all slots on the named module. Use the
+                        <code>[-slot </code><i>slotname</i><code>] </code>argument to disable a specific slot. </a>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><a id="1038683">
+                        <code>-fips [true | false]</code></a></p>
+            </td>
+            <td>
+                <p><a id="1039068">
+                        Enable (<code>true</code>) or disable (<code>false</code>) FIPS 140-2 compliance for the
+                        Netscape Communicator internal module. </a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><a id="1038679">
+                        <code>-force</code></a></p>
+            </td>
+            <td>
+                <p><a id="1039075">
+                        Disable the Security Module Database Tool's interactive prompts so it can be run from a
+                        script. Use this option only after manually testing each planned operation to check for
+                        warnings and to ensure that bypassing the prompts will cause no security lapses or loss of
+                        database integrity. </a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><a id="1043282">
+                        <b>Arguments</b></a></p>
+            </td>
+            <td>
+                <p><a id="1043284">
+                    </a></p>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><a id="1038834">
+                        <code>-dbdir </code><i>directory</i></a></p>
+            </td>
+            <td>
+                <p><a id="1039085">
+                        Specify the database directory in which to access or create security module database files.
+                        On Unix, the Security Module Database Tool defaults to the user's Netscape directory.
+                        Windows NT has no default directory, so <code>-dbdir</code> must be used to specify a
+                        directory. </a></p>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <code>-dbprefix</code> <i>prefix</i>
+                </p>
+            </td>
+            <td>
+                <p>
+                    Specify the prefix used on the <code>cert8.db</code> and <code>key3.db</code> files (for
+                    example, <code>my_cert8.db</code>
+                    and <code>my_key3.db</code>).
+                    This option is provided as a special case. Changing the names of the certificate and key
+                    databases is not recommended.
+
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><a id="1037903">
+                        <code>-libfile </code><i>library-file</i></a></p>
+            </td>
+            <td>
+                <p><a id="1039095">
+                        Specify a path to the DLL or other library file containing the implementation of the PKCS
+                        #11 interface module that is being added to the database. </a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><a id="1037899">
+                        <code>-ciphers </code><i>cipher-enable-list</i></a></p>
+            </td>
+            <td>
+                <p><a id="1039102">
+                        Enable specific ciphers in a module that is being added to the database. The
+                        <i>cipher-enable-list</i> is a colon-delimited list of cipher names. Enclose this list in
+                        quotation marks if it contains spaces. The following cipher is currently available:
+                        <code>FORTEZZA</code>. </a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><a id="1038731">
+                        <code>-mechanisms </code><i>mechanism-list</i></a></p>
+            </td>
+            <td>
+                <p><a id="1039116">
+                        Specify the security mechanisms for which a particular module will be flagged as a default
+                        provider. The <i>mechanism-list</i> is a colon-delimited list of mechanism names. Enclose
+                        this list in quotation marks if it contains spaces. The module becomes a default provider
+                        for the listed mechanisms when those mechanisms are enabled. If more than one module claims
+                        to be a particular mechanism's default provider, that mechanism's default provider is
+                        undefined. The following mechanisms are currently available: <code>RSA</code>,
+                        <code>DSA</code>, <code>RC2</code>, <code>RC4</code>, <code>RC5</code>, <code>DES</code>,
+                        <code>DH</code>, <code>FORTEZZA</code>, <code>SHA1</code>, <code>MD5</code>,
+                        <code>MD2</code>, <code>RANDOM</code> (for random number generation), and
+                        <code>FRIENDLY</code> (meaning certificates are publicly readable). </a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><a id="1038727">
+                        <code>-installdir </code><i>root-installation-directory</i></a></p>
+            </td>
+            <td>
+                <p><a id="1039213">
+                        Specify the root installation directory relative to which files will be installed by the
+                        <code>-jar</code> <i>JAR-file</i> option. This directory should be one below which it is
+                        appropriate to store dynamic library files (for example, a server's root directory or the
+                        Netscape Communicator root directory). </a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><a id="1038723">
+                        <code>-tempdir </code><i>temporary-directory</i></a></p>
+            </td>
+            <td>
+                <p><a id="1039235">
+                        The temporary directory is the location where temporary files will be created in the course
+                        of installation by the <code>-jar</code> <i>JAR-file</i> option. If no temporary directory
+                        is specified, the current directory will be used. </a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><a id="1038719">
+                        <code>-pwfile </code><i>old-password-file</i></a></p>
+            </td>
+            <td>
+                <p><a id="1039652">
+                        Specify a text file containing a token's existing password so that a password can be entered
+                        automatically when the <code>-changepw</code> <i>tokenname</i> option is used to change
+                        passwords. </a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><a id="1038715">
+                        <code>-newpwfile </code><i>new-password-file</i></a></p>
+            </td>
+            <td>
+                <p><a id="1038717">
+                        Specify a text file containing a token's new or replacement password so that a password can
+                        be entered automatically with the <code>-changepw</code> <i>tokenname</i> option. </a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><a id="1038711">
+                        <code>-slot </code><i>slotname</i></a></p>
+            </td>
+            <td>
+                <p><a id="1038713">
+                        Specify a particular slot to be enabled or disabled with the <code>-enable</code>
+                        <i>modulename</i> or <code>-disable</code> <i>modulename</i> options. </a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><a id="1043973">
+                        -nocertdb</a></p>
+            </td>
+            <td>
+                <p><a id="1043985">
+                        Do not open the certificate or key databases. This has several effects: </a></p>
+                <ul>
+                    <li><a id="1044076">
+                            With the <code>-create</code> command, only a <code>secmod.db</code> file will be
+                            created; <code>cert8.db</code> and <code>key3.db</code> will not be created. </a></li>
+                    <li><a id="1044080">
+                            With the <code>-jar</code> command, signatures on the JAR file will not be checked. </a>
+                    </li>
+                    <li><a id="1044089">
+                            With the <code>-changepw</code> command, the password on the Netscape internal module
+                            cannot be set or changed, since this password is stored in <code>key3.db</code>.</a>
+                    </li>
+                </ul>
+
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="Usage_2"><a id="Usage"></a>
+    <a id="1040302">
+        Usage
+    </a>
+</h2><a id="1043239">
+    The Security Module Database Tool's capabilities are grouped as follows, using these combinations of options and
+    arguments. The options and arguments in square brackets are optional, those without square brackets are required.
+</a>
+<ul>
+    <li><a id="1043240">
+            Creating a set of security management database files (<code>key3.db</code>, <code>cert8.db</code>, and
+            <code>secmod.db</code>): </a>
+        <blockquote><a id="1043241">
+                <code>-create
+</code></a></blockquote>
+    </li>
+
+    <li><a id="1043242">
+            Displaying basic module information or detailed information about the contents of a given module: </a>
+        <blockquote><a id="1043243">
+                <code>-list [</code><i>modulename</i><code>]
+</code></a></blockquote>
+    </li>
+
+    <li><a id="1043244">
+            Adding a PKCS #11 module, which includes setting a supporting library file, enabling ciphers, and setting
+            default provider status for various security mechanisms: </a>
+        <blockquote><a id="1043245">
+                <code>-add </code><i>modulename</i><code> -libfile </code><i>library-file</i><code> [-ciphers </code><i>cipher-enable-list</i><code>]<br>
+[-mechanisms </code><i>mechanism-list</i><code>]
+</code></a></blockquote>
+    </li>
+
+    <li><a id="1043246">
+            Adding a PKCS #11 module from an existing JAR file: </a>
+        <blockquote><a id="1043247">
+                <code>-jar </code><i>JAR-file</i><code> -installdir </code><i>root-installation-directory</i><code> <br>
+[-tempdir </code><i>temporary-directory</i><code>]
+</code></a></blockquote>
+    </li>
+
+    <li><a id="1043248">
+            Deleting a specific PKCS #11 module from a security module database: </a>
+        <blockquote><a id="1043249">
+                <code>-delete </code><i>modulename
+                </i></a></blockquote>
+    </li>
+
+    <li><a id="1043250">
+            Initializing or changing a token's password: </a>
+        <blockquote><a id="1043251">
+                <code>-changepw </code><i>tokenname</i><code> [-pwfile </code><i>old-password-file</i><code>] <br>
+[-newpwfile </code><i>new-password-file</i><code>]
+</code></a></blockquote>
+    </li>
+
+    <li><a id="1043252">
+            Setting the default provider status of various security mechanisms in an existing PKCS #11 module: </a>
+        <blockquote><a id="1043253">
+                <code>-default </code><i>modulename</i><code> -mechanisms </code><i>mechanism-list</i></a></blockquote>
+    </li>
+
+    <li><a id="1043254">
+            Clearing the default provider status of various security mechanisms in an existing PKCS #11 module: </a>
+
+        <blockquote><a id="1043255">
+                <code>-undefault </code><i>modulename</i><code> -mechanisms </code><i>mechanism-list</i></a></blockquote>
+    </li>
+
+    <li><a id="1043256">
+            Enabling a specific slot or all slots within a module: </a>
+        <blockquote><a id="1043257">
+                <code>-enable </code><i>modulename</i><code> [-slot </code><i>slotname</i><code>]
+</code></a></blockquote>
+    </li>
+
+    <li><a id="1043258">
+            Disabling a specific slot or all slots within a module: </a>
+        <blockquote><a id="1043259">
+                <code>-disable </code><i>modulename</i><code> [-slot </code><i>slotname</i><code>]
+</code></a></blockquote>
+    </li>
+
+    <li><a id="1043260">
+            Enabling or disabling FIPS 140-2 compliance within the Netscape Communicator internal module: </a>
+        <blockquote><a id="1043261">
+                <code>-fips [true | false]
+</code></a></blockquote>
+    </li>
+
+    <li><a id="1043262">
+            Disabling interactive prompts for the Security Module Database Tool, to support scripted operation: </a>
+
+        <blockquote><a id="1043263">
+                <code>-force
+</code></a></blockquote>
+    </li>
+</ul>
+<h2 id="JAR_Installation_File">
+    <a id="1043224">
+        JAR Installation File
+    </a>
+</h2><a id="1040623">
+    When a JAR file is run by a server, by the Security Module Database Tool, or by any program that does not interpret
+    JavaScript, a special information file must be included in the format described below. </a>
+<a id="1040326">
+    This information file contains special scripting and must be declared in the JAR archive's manifest file. The script
+    can have any name. The metainfo tag for this is <code>Pkcs11_install_script</code>. To declare meta-information in
+    the manifest file, put it in a file that is passed to the </a><a
+    href="http://developer.netscape.com/docs/manuals/signedobj/signtool/index.htm">Netscape Signing Tool</a>.
+
+<h3 id="Sample_Script">
+    <a id="1040669">
+        Sample Script
+    </a>
+</h3>
+
+<a id="1041893">
+    For example, the PKCS #11 installer script could be in the file <code>pk11install.</code> If so, the metainfo file
+    for the </a><a href="http://developer.netscape.com/docs/manuals/signedobj/signtool/index.htm">Netscape Signing
+    Tool</a> would include a line such as this:
+<pre><a id="1040334"><code>+ Pkcs11_install_script: pk11install</code></a></pre><a id="1040336">
+    The sample script file could contain the following: </a>
+<pre><a id="1040338">ForwardCompatible { IRIX:6.2:mips SUNOS:5.5.1:sparc }<br>Platforms {<br>   WINNT::x86 {<br>      ModuleName { "Fortezza Module" }<br>      ModuleFile { win32/fort32.dll }<br>      DefaultMechanismFlags{0x0001}<br>      DefaultCipherFlags{0x0001}<br>      Files {<br>         win32/setup.exe {<br>            Executable<br>            RelativePath { %temp%/setup.exe }<br>         }<br>         win32/setup.hlp {<br>            RelativePath { %temp%/setup.hlp }<br>         }<br>         win32/setup.cab {<br>            RelativePath { %temp%/setup.cab }<br>         }<br>      }<br>   }<br>   WIN95::x86 {<br>      EquivalentPlatform {WINNT::x86}<br>   }<br>   SUNOS:5.5.1:sparc {<br>      ModuleName { "Fortezza UNIX Module" }<br>      ModuleFile { unix/fort.so }<br>      DefaultMechanismFlags{0x0001}<br>      CipherEnableFlags{0x0001}<br>      Files {<br>         unix/fort.so {<br>            RelativePath{%root%/lib/fort.so}<br>            AbsolutePath{/usr/local/netscape/lib/fort.so}<br>            FilePermissions{555}<br>         }<br>         xplat/instr.html {<br>            RelativePath{%root%/docs/inst.html}<br>            AbsolutePath{/usr/local/netscape/docs/inst.html}<br>            FilePermissions{555}<br>         }<br>      }<br>   }<br>   IRIX:6.2:mips {<br>      EquivalentPlatform { SUNOS:5.5.1:sparc }<br>   }<br>}</a></pre>
+<h3 id="Script_Grammar">
+    <a id="1040386">
+        Script Grammar
+    </a>
+</h3>
+
+<a id="1041894">
+    The script file grammar is as follows:</a>
+<pre><a id="1040388"><code>--&gt; </code><i>valuelist</i></a></pre>
+<pre><a id="1040390"><i>valuelist</i><code> --&gt; </code><i>value valuelist<br></i><code>               &lt;</code><i>null&gt;</i></a></pre>
+<pre><a id="1040394"><i>value</i><code> ---&gt; </code><i>key_value_pair<br></i>            <i>string</i></a></pre>
+<pre><a id="1040397"><i>key_value_pair</i><code> --&gt; </code><i>key </i><code>{ </code><i>valuelist</i><code> }</code></a></pre>
+<pre><a id="1040399"><i>key</i><code> --&gt; </code><i>string</i></a></pre>
+<pre><a id="1040401"><i>string</i><code> --&gt; </code><i>simple_string<br></i><code>            "</code><i>complex_string</i><code>"</code></a></pre>
+<pre><a id="1040404"><i>simple_string</i><code> --&gt; [^ \t\n\""{""}"]+ <br></code><var>(No whitespace, quotes, or braces.)</var></a></pre>
+<pre><a id="1040406"><i>complex_string</i><code> --&gt; ([^\"\\\r\n]|(\\\")|(\\\\))+ </code><var>(Quotes and<br>backslashes must be escaped with a backslash. A complex string must not<br>include newlines or carriage returns.)</var></a></pre>
+<a id="1040408">
+    Outside of complex strings, all white space (for example, spaces, tabs, and carriage returns) is considered equal
+    and is used only to delimit tokens. </a>
+
+<h3 id="Keys">
+    <a id="1040412">
+        Keys
+    </a>
+</h3>
+
+<a id="1040414">
+    Keys are case-insensitive. This section discusses the following keys:</a>
+<a id="1042754">
+</a><a href="modutil.html#1042778">Global Keys</a><br><a href="modutil.html#1040459">Per-Platform Keys</a><br><a
+    href="modutil.html#1040510">Per-File Keys</a>
+
+<h4 id="Global_Keys">
+    <a id="1042778">
+        Global Keys
+    </a>
+</h4>
+
+<a id="1040418">
+    <code>ForwardCompatible</code> </a>
+<a id="1040419">
+    Gives a list of platforms that are forward compatible. If the current platform cannot be found in the list of
+    supported platforms, then the <code>ForwardCompatible</code> list is checked for any platforms that have the same OS
+    and architecture in an earlier version. If one is found, its attributes are used for the current platform. </a>
+<a id="1040424">
+    <code>Platforms</code> (required) </a>
+<a id="1040425">
+    Gives a list of platforms. Each entry in the list is itself a key-value pair: the key is the name of the platform
+    and the value list contains various attributes of the platform. The <code>ModuleName</code>,
+    <code>ModuleFile</code>, and <code>Files</code> attributes must be specified for each platform unless an
+    <code>EquivalentPlatform</code> attribute is specified. The platform string is in the following format: <i>system
+        name</i><code>:</code><i>OS release</i><code>:</code><i>architecture</i>. The installer obtains these values
+    from NSPR. <i>OS release</i> is an empty string on non-Unix operating systems. The following system names and
+    platforms are currently defined by NSPR: </a>
+<ul>
+    <li><a id="1040433">
+            AIX (rs6000) </a></li>
+    <li><a id="1040434">
+            BSDI (x86) </a></li>
+    <li><a id="1041998">
+            FREEBSD (x86) </a></li>
+    <li><a id="1040436">
+            HPUX (hppa1.1) </a></li>
+    <li><a id="1040437">
+            IRIX (mips) </a></li>
+    <li><a id="1040438">
+            LINUX (ppc, alpha, x86) </a></li>
+    <li><a id="1040439">
+            MacOS (PowerPC)</a></li>
+    <li><a id="1040443">
+            NCR (x86) </a></li>
+    <li><a id="1040444">
+            NEC (mips) </a></li>
+    <li><a id="1040445">
+            OS2 (x86) </a></li>
+    <li><a id="1040446">
+            OSF (alpha) </a></li>
+    <li><a id="1040447">
+            ReliantUNIX (mips) </a></li>
+    <li><a id="1040448">
+            SCO (x86) </a></li>
+    <li><a id="1040449">
+            SOLARIS (sparc) </a></li>
+    <li><a id="1040450">
+            SONY (mips) </a></li>
+    <li><a id="1040451">
+            SUNOS (sparc) </a></li>
+    <li><a id="1040452">
+            UnixWare (x86) </a></li>
+    <li><a id="1040453">
+            WIN16 (x86) </a></li>
+    <li><a id="1040454">
+            WIN95 (x86) </a></li>
+    <li><a id="1040455">
+            WINNT (x86) </a></li>
+</ul><a id="1040456">
+    Here are some examples of valid platform strings:</a>
+<pre><a id="1043641">IRIX:6.2:mips<br>SUNOS:5.5.1:sparc<br>Linux:2.0.32:x86<br>WIN95::x86. </a></pre>
+<h4 id="Per-Platform_Keys">
+    <a id="1040459">
+        Per-Platform Keys
+    </a>
+</h4>
+
+<a id="1040461">
+    These keys have meaning only within the value list of an entry in the <code>Platforms</code> list. </a>
+<a id="1040463">
+    <code>ModuleName</code> (required) </a>
+<a id="1040464">
+    Gives the common name for the module. This name will be used to reference the module from Netscape Communicator, the
+    Security Module Database tool (<code>modutil</code>), servers, or any other program that uses the Netscape security
+    module database. </a>
+<a id="1040467">
+    <code>ModuleFile</code> (required) </a>
+<a id="1040468">
+    Names the PKCS #11 module file (DLL or <code>.so</code>) for this platform. The name is given as the relative path
+    of the file within the JAR archive. </a>
+<a id="1040470">
+    <code>Files</code> (required) </a>
+<a id="1040471">
+    Lists the files that need to be installed for this module. Each entry in the file list is a key-value pair: the key
+    is the path of the file in the JAR archive, and the value list contains attributes of the file. At least
+    <code>RelativePath</code> or <code>AbsolutePath</code> must be specified for each file. </a>
+<a id="1040475">
+    <code>DefaultMechanismFlags</code> </a>
+<a id="1040476">
+    Specifies mechanisms for which this module will be a default provider. This key-value pair is a bitstring specified
+    in hexadecimal (0x) format. It is constructed as a bitwise OR of the following constants. If the
+    <code>DefaultMechanismFlags</code> entry is omitted, the value defaults to 0x0. </a>
+<pre><a id="1040481"><code>   RSA:                   0x00000001<br>   DSA:                   0x00000002<br>   RC2:                   0x00000004<br>   RC4:                   0x00000008<br>   DES:                   0x00000010<br>   DH:                    0x00000020<br>   FORTEZZA:              0x00000040<br>   RC5:                   0x00000080<br>   SHA1:                  0x00000100<br>   MD5:                   0x00000200<br>   MD2:                   0x00000400<br>   RANDOM:                0x08000000<br>   FRIENDLY:              0x10000000<br>   OWN_PW_DEFAULTS:       0x20000000<br>   DISABLE:               0x40000000</code></a></pre>
+<a id="1040497">
+    <code>CipherEnableFlags</code> </a>
+<a id="1040498">
+    Specifies ciphers that this module provides but Netscape Communicator does not, so that Communicator can enable
+    them. This key is a bitstring specified in hexadecimal (0x) format. It is constructed as a bitwise OR of the
+    following constants. If the <code>CipherEnableFlags</code> entry is omitted, the value defaults to 0x0. </a>
+<pre><a id="1040503">   FORTEZZA:               0x0000 0001</a></pre><a id="1040505">
+    <code>EquivalentPlatform</code> </a>
+<a id="1040506">
+    Specifies that the attributes of the named platform should also be used for the current platform. Saves typing when
+    there is more than one platform using the same settings. </a>
+
+<h4 id="Per-File_Keys">
+    <a id="1040510">
+        Per-File Keys
+    </a>
+</h4>
+
+<a id="1040512">
+    These keys have meaning only within the value list of an entry in a <code>Files</code> list. At least one of
+    <code>RelativePath</code> and <code>AbsolutePath</code> must be specified. If both are specified, the relative path
+    is tried first, and the absolute path is used only if no relative root directory is provided by the installer
+    program. </a>
+<a id="1040517">
+    <code>RelativePath</code> </a>
+<a id="1040518">
+    Specifies the destination directory of the file, relative to some directory decided at install time. Two variables
+    can be used in the relative path: "<code>%root%</code>" and "<code>%temp%</code>". "<code>%root%</code>" is replaced
+    at run time with the directory relative to which files should be installed; for example, it may be the server's root
+    directory or the Netscape Communicator root directory. The "<code>%temp%</code>" directory is created at the
+    beginning of the installation and destroyed at the end.</a>
+<a id="1040524">
+    The purpose of "<code>%temp%</code>" is to hold executable files (such as setup programs) or files that are used by
+    these programs. For example, a Windows installation might consist of a <code>setup.exe</code> installation program,
+    a help file, and a <code>.cab</code> file containing compressed information. All these files could be installed in
+    the temporary directory. Files destined for the temporary directory are guaranteed to be in place before any
+    executable file is run; they are not deleted until all executable files have finished. </a>
+<a id="1040531">
+    <code>AbsolutePath</code> </a>
+<a id="1040532">
+    Specifies the destination directory of the file as an absolute path. If both <code>RelativePath</code> and
+    <code>AbsolutePath</code> are specified, the installer attempts to use the relative path; if it is unable to
+    determine a relative path, it uses the absolute path. </a>
+<a id="1040534">
+    <code>Executable</code> </a>
+<a id="1040535">
+    Specifies that the file is to be executed during the course of the installation. Typically this string would be used
+    for a setup program provided by a module vendor, such as a self-extracting <code>setup.exe</code>. More than one
+    file can be specified as executable, in which case the files are run in the order in which they are specified in the
+    script file. </a>
+<a id="1040540">
+    <code>FilePermissions</code> </a>
+<a id="1040541">
+    Interpreted as a string of octal digits, according to the standard Unix format. This string is a bitwise OR of the
+    following constants: </a>
+<pre><a id="1040544">   user read:                0400<br>   user write:               0200<br>   user execute:             0100<br>   group read:               0040<br>   group write:              0020<br>   group execute:            0010<br>   other read:               0004<br>   other write:              0002<br>   other execute:       0001</a></pre>
+<a id="1040554">
+    Some platforms may not understand these permissions. They are applied only insofar as they make sense for the
+    current platform. If this attribute is omitted, a default of 777 is assumed. </a>
+
+<h2 id="Examples_2"><a id="Examples"></a>
+    <a id="1028519">
+        Examples
+    </a>
+</h2><a id="1042784">
+</a><a href="modutil.html#1028724">Creating Database Files</a><br><a href="modutil.html#1034026">Displaying Module
+    Information</a><br><a href="modutil.html#1028731">Setting a Default Provider</a><br><a
+    href="modutil.html#1034020">Enabling a Slot</a><br><a href="modutil.html#1034010">Enabling FIPS Compliance</a><br><a
+    href="modutil.html#1042489">Adding a Cryptographic Module</a><br><a href="modutil.html#1042502">Installing a
+    Cryptographic Module from a JAR File</a><br><a href="modutil.html#1043961">Changing the Password on a Token</a>
+
+<h3 id="Creating_Database_Files">
+    <a id="1028724">
+        Creating Database Files
+    </a>
+</h3>
+
+<a id="1039687">
+    This example creates a set of security management database files in the specified directory: </a>
+<pre><a id="1039688">modutil -create -dbdir c:\databases</a></pre><a id="1039696">
+    The Security Module Database Tool displays a warning: </a>
+<pre><a id="1039706">WARNING: Performing this operation while Communicator is running could<br>cause corruption of your security databases. If Communicator is<br>currently running, you should exit Communicator before continuing this<br>operation. Type 'q &lt;enter&gt;' to abort, or &lt;enter&gt; to continue: </a></pre>
+<a id="1039739">
+    After you press Enter, the tool displays the following: </a>
+<pre><a id="1039710">Creating "c:\databases\key3.db"...done.<br>Creating "c:\databases\cert8.db"...done.<br>Creating "c:\databases\secmod.db"...done. </a></pre>
+<h3 id="Displaying_Module_Information">
+    <a id="1034026">
+        Displaying Module Information
+    </a>
+</h3>
+
+<a id="1034749">
+    This example gives detailed information about the specified module: </a>
+<pre><a id="1039742">modutil -list "Netscape Internal PKCS #11 Module" -dbdir c:\databases </a></pre><a id="1039750">
+    The Security Module Database Tool displays information similar to this: </a>
+<pre><a id="1039755">Using database directory c:\databases...<br>--------------------------------------------------------<br>Name: Netscape Internal PKCS #11 Module<br>Library file: **Internal ONLY module**<br>Manufacturer: Netscape Communications Corp <br>Description: Communicator Internal Crypto Svc<br>PKCS #11 Version 2.0<br>Library Version: 4.0<br>Cipher Enable Flags: None<br>Default Mechanism Flags: RSA:DSA:RC2:RC4:DES:SHA1:MD5:MD2</a></pre>
+<pre><a id="1039767">Slot: Communicator Internal Cryptographic Services Version 4.0<br>Manufacturer: Netscape Communications Corp <br>Type: Software<br>Version Number: 4.1<br>Firmware Version: 0.0<br>Status: Enabled<br>Token Name: Communicator Generic Crypto Svcs<br>Token Manufacturer: Netscape Communications Corp <br>Token Model: Libsec 4.0 <br>Token Serial Number: 0000000000000000<br>Token Version: 4.0<br>Token Firmware Version: 0.0<br>Access: Write Protected<br>Login Type: Public (no login required)<br>User Pin: NOT Initialized</a></pre>
+<pre><a id="1039783">Slot: Communicator User Private Key and Certificate Services<br>Manufacturer: Netscape Communications Corp <br>Type: Software<br>Version Number: 3.0<br>Firmware Version: 0.0<br>Status: Enabled<br>Token Name: Communicator Certificate DB <br>Token Manufacturer: Netscape Communications Corp <br>Token Model: Libsec 4.0 <br>Token Serial Number: 0000000000000000<br>Token Version: 7.0<br>Token Firmware Version: 0.0<br>Access: NOT Write Protected<br>Login Type: Login required<br>User Pin: NOT Initialized</a></pre>
+<h3 id="Setting_a_Default_Provider">
+    <a id="1028731">
+        Setting a Default Provider
+    </a>
+</h3>
+
+<a id="1045162">
+    This example makes the specified module a default provider for the RSA, DSA, and RC2 security mechanisms: </a>
+<pre><a id="1045163">modutil -default "Cryptographic Module" -dbdir <br>c:\databases -mechanisms RSA:DSA:RC2 </a></pre>
+<a id="1039981">
+    The Security Module Database Tool displays a warning: </a>
+<pre><a id="1040003">WARNING: Performing this operation while Communicator is running could<br>cause corruption of your security databases. If Communicator is<br>currently running, you should exit Communicator before continuing this<br>operation. Type 'q &lt;enter&gt;' to abort, or &lt;enter&gt; to continue: </a></pre>
+<a id="1039996">
+    After you press Enter, the tool displays the following: </a>
+<pre><a id="1040016">Using database directory c:\databases...</a></pre>
+<pre><a id="1040001">Successfully changed defaults.</a></pre>
+<h3 id="Enabling_a_Slot">
+    <a id="1034020">
+        Enabling a Slot
+    </a>
+</h3>
+
+<a id="1040032">
+    This example enables a particular slot in the specified module: </a>
+<pre><a id="1040045">modutil -enable "Cryptographic Module" -slot <br>"Cryptographic Reader" -dbdir c:\databases </a></pre>
+<a id="1034013">
+    The Security Module Database Tool displays a warning: </a>
+<pre><a id="1040066">WARNING: Performing this operation while Communicator is running could<br>cause corruption of your security databases. If Communicator is<br>currently running, you should exit Communicator before continuing this<br>operation. Type 'q &lt;enter&gt;' to abort, or &lt;enter&gt; to continue: </a></pre>
+<a id="1040054">
+    After you press Enter, the tool displays the following: </a>
+<pre><a id="1040079">Using database directory c:\databases...</a></pre>
+<pre><a id="1040081">Slot "Cryptographic Reader" enabled. </a></pre>
+<h3 id="Enabling_FIPS_Compliance">
+    <a id="1034010">
+        Enabling FIPS Compliance
+    </a>
+</h3>
+
+<a id="1035548">
+    This example enables FIPS 140-2 compliance in Communicator's internal module: </a>
+<pre><a id="1037817">modutil -dbdir "C:\databases" -fips true </a></pre><a id="1040108">
+    The Security Module Database Tool displays a warning: </a>
+<pre><a id="1040127">WARNING: Performing this operation while the browser is running could cause<br>corruption of your security databases. If the browser is currently running,<br>you should exit browser before continuing this operation. Type<br>'q &lt;enter&gt;' to abort, or &lt;enter&gt; to continue: </a></pre>
+<a id="1040114">
+    After you press Enter, the tool displays the following: </a>
+<pre><a id="1040140">FIPS mode enabled. </a></pre>
+<h3 id="Adding_a_Cryptographic_Module">
+    <a id="1042489">
+        Adding a Cryptographic Module
+    </a>
+</h3>
+
+<a id="1043770">
+    This example adds a new cryptographic module to the database:</a>
+<pre><a id="1042490">C:\modutil&gt; modutil -dbdir "C:\databases" -add "Cryptorific Module" -<br>libfile "C:\winnt\system32\crypto.dll" -mechanisms RSA:DSA:RC2:RANDOM </a></pre>
+<a id="1043776">
+    The Security Module Database Tool displays a warning: </a>
+<pre><a id="1042493">WARNING: Performing this operation while Communicator is running could<br>cause corruption of your security databases. If Communicator is<br>currently running, you should exit Communicator before continuing this<br>operation. Type 'q &lt;enter&gt;' to abort, or &lt;enter&gt; to continue: </a></pre>
+<a id="1043772">
+    After you press Enter, the tool displays the following: </a>
+<pre><a id="1042498">Using database directory C:\databases... <br>Module "Cryptorific Module" added to database. <br>C:\modutil&gt; </a></pre>
+<h3 id="Installing_a_Cryptographic_Module_from_a_JAR_File">
+    <a id="1042502">
+        Installing a Cryptographic Module from a JAR File
+    </a>
+</h3>
+
+<a id="1043888">
+    This example installs a cryptographic module from the following sample installation script. </a>
+<pre><a id="1042506">Platforms { <br>   WinNT::x86 { <br>      ModuleName { "Cryptorific Module" } <br>      ModuleFile { crypto.dll } <br>      DefaultMechanismFlags{0x0000} <br>      CipherEnableFlags{0x0000} <br>      Files { <br>         crypto.dll { <br>            RelativePath{ %root%/system32/crypto.dll } <br>         } <br>         setup.exe { <br>            Executable <br>            RelativePath{ %temp%/setup.exe } <br>         } <br>      } <br>   } <br>   Win95::x86 { <br>      EquivalentPlatform { Winnt::x86 } <br>   } <br>} </a></pre>
+<a id="1042529">
+    To install from the script, use the following command. The root directory should be the Windows root directory (for
+    example, <code>c:\\windows</code>, or <code>c:\\winnt</code>).</a>
+<pre><a id="1043921">C:\modutil&gt; modutil -dbdir "c:\databases" -jar <br>install.jar -installdir "C:/winnt" </a></pre>
+<a id="1043875">
+    The Security Module Database Tool displays a warning: </a>
+<pre><a id="1042532">WARNING: Performing this operation while Communicator is running could<br>cause corruption of your security databases. If Communicator is<br>currently running, you should exit Communicator before continuing this<br>operation. Type 'q &lt;enter&gt;' to abort, or &lt;enter&gt; to continue: </a></pre>
+<a id="1043881">
+    After you press Enter, the tool displays the following: </a>
+<pre><a id="1042537">Using database directory c:\databases... </a></pre>
+<pre><a id="1042539">This installation JAR file was signed by: <br>---------------------------------------------- </a></pre>
+<pre><a id="1042541">**SUBJECT NAME** </a></pre>
+<pre><a id="1042542">C=US, ST=California, L=Mountain View, CN=Cryptorific Inc., OU=Digital ID<br>Class 3 - Netscape Object Signing, OU="www.verisign.com/repository/CPS<br>Incorp. by Ref.,LIAB.LTD(c)9 6", OU=www.verisign.com/CPS Incorp.by Ref<br>. LIABILITY LTD.(c)97 VeriSign, OU=VeriSign Object Signing CA - Class 3<br>Organization, OU="VeriSign, Inc.", O=VeriSign Trust Network **ISSUER<br>NAME**, OU=www.verisign.com/CPS Incorp.by Ref. LIABILITY LTD.(c)97<br>VeriSign, OU=VeriSign Object Signing CA - Class 3 Organization,<br>OU="VeriSign, Inc.", O=VeriSign Trust Network <br>---------------------------------------------- </a></pre>
+<pre><a id="1042561">Do you wish to continue this installation? (y/n) y <br>Using installer script "installer_script" <br>Successfully parsed installation script <br>Current platform is WINNT::x86 <br>Using installation parameters for platform WinNT::x86 <br>Installed file crypto.dll to C:/winnt/system32/crypto.dll <br>Installed file setup.exe to ./pk11inst.dir/setup.exe <br>Executing "./pk11inst.dir/setup.exe"... <br>"./pk11inst.dir/setup.exe" executed successfully <br>Installed module "Cryptorific Module" into module database </a></pre>
+<pre><a id="1042926">Installation completed successfully <br>C:\modutil&gt; </a></pre>
+<h3 id="Changing_the_Password_on_a_Token">
+    <a id="1043961">
+        Changing the Password on a Token
+    </a>
+</h3>
+
+<a id="1043962">
+    This example changes the password for a token on an existing module.</a>
+<pre><a id="1043963">C:\modutil&gt; modutil -dbdir "c:\databases" -changepw <br>"Communicator Certificate DB" </a></pre>
+<a id="1043964">
+    The Security Module Database Tool displays a warning: </a>
+<pre><a id="1043965">WARNING: Performing this operation while Communicator is running could<br>cause corruption of your security databases. If Communicator is<br>currently running, you should exit Communicator before continuing this<br>operation. Type 'q &lt;enter&gt;' to abort, or &lt;enter&gt; to continue: </a></pre>
+<a id="1043966">
+    After you press Enter, the tool displays the following: </a>
+<pre><a id="1043967">Using database directory c:\databases... <br>Enter old password: <br>Incorrect password, try again... <br>Enter old password: <br>Enter new password: <br>Re-enter new password: <br>Token "Communicator Certificate DB" password changed successfully. <br>C:\modutil&gt; </a></pre>
+
+<hr>

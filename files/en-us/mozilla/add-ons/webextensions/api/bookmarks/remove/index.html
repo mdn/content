@@ -16,7 +16,7 @@ tags:
 
 <p>The <strong><code>bookmarks.remove()</code></strong> method removes a single bookmark or an empty bookmark folder.</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>If your extension attempts to remove a bookmark from the bookmarks tree root node, the call will raise an error with the message: "The bookmark root cannot be modified" and the bookmark won't be removed.</p>
 </div>
 
@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var removingBookmark = browser.bookmarks.remove(
+<pre class="brush:js">var removingBookmark = browser.bookmarks.remove(
   id                 // string
 )
 </pre>
@@ -44,7 +44,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">function onRemoved() {
+<pre class="notranslate brush: js">function onRemoved() {
   console.log("Removed!");
 }
 

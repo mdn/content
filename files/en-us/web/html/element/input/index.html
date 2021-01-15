@@ -21,7 +21,7 @@ tags:
 
 <div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
-<h2 id="&lt;input>_types">&lt;input&gt; types</h2>
+<h2 id="input_types">&lt;input&gt; types</h2>
 
 <p>How an <code>&lt;input&gt;</code> works varies considerably depending on the value of its {{htmlattrxref("type", "input")}} attribute, hence the different types are covered in their own separate reference pages. If this attribute is not specified, the default type adopted is <code>text</code>.</p>
 
@@ -38,7 +38,6 @@ tags:
    <th>Type</th>
    <th>Description</th>
    <th>Basic Examples</th>
-   <th>Spec</th>
   </tr>
  </thead>
  <tbody>
@@ -49,7 +48,6 @@ tags:
     <pre class="brush: html hidden notranslate">
 &lt;input  type="button" name="button" /&gt;</pre>
     {{EmbedLiveSample("examplebutton",200,55,"","", "nobutton")}}</td>
-   <td></td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/checkbox", "checkbox")}}</td>
@@ -58,7 +56,6 @@ tags:
     <pre class="brush: html hidden notranslate">
 &lt;input  type="checkbox" name="checkbox"/&gt;</pre>
     {{EmbedLiveSample("examplecheckbox",200,55,"","", "nobutton")}}</td>
-   <td></td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/color", "color")}}</td>
@@ -67,7 +64,6 @@ tags:
     <pre class="brush: html hidden notranslate">
 &lt;input  type="color" name="color"/&gt;</pre>
     {{EmbedLiveSample("examplecolor",200,55,"","", "nobutton")}}</td>
-   <td>{{HTMLVersionInline("5")}}</td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/date", "date")}}</td>
@@ -76,7 +72,6 @@ tags:
     <pre class="brush: html hidden notranslate">
 &lt;input  type="date" name="date"/&gt;</pre>
     {{EmbedLiveSample("exampledate",200,55,"","", "nobutton")}}</td>
-   <td>{{HTMLVersionInline("5")}}</td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/datetime-local", "datetime-local")}}</td>
@@ -85,7 +80,6 @@ tags:
     <pre class="brush: html hidden notranslate">
 &lt;input  type="datetime-local" name="datetime-local"/&gt;</pre>
     {{EmbedLiveSample("exampledtl",200,55,"","", "nobutton")}}</td>
-   <td>{{HTMLVersionInline("5")}}</td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/email", "email")}}</td>
@@ -94,7 +88,6 @@ tags:
     <pre class="brush: html hidden notranslate">
 &lt;input type="email" name="email"/&gt;</pre>
     {{EmbedLiveSample("exampleemail",200,55,"","", "nobutton")}}</td>
-   <td>{{HTMLVersionInline("5")}}</td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/file", "file")}}</td>
@@ -103,13 +96,11 @@ tags:
     <pre class="brush: html hidden notranslate">
 &lt;input type="file" accept="image/*, text/*" name="file"/&gt;</pre>
     {{EmbedLiveSample("examplefile",'100%',55,"","", "nobutton")}}</td>
-   <td></td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/hidden", "hidden")}}</td>
    <td>A control that is not displayed but whose value is submitted to the server. There is an example in the next column, but it's hidden!</td>
-   <td></td>
-   <td></td>
+   <td><input id="userId" name="userId" type="hidden" value="abc123"></td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/image", "image")}}</td>
@@ -118,7 +109,6 @@ tags:
     <pre class="brush: html hidden notranslate">
 &lt;input type="image" name="image" src="" alt="image input"/&gt;</pre>
     {{EmbedLiveSample("exampleimage",200,55,"","", "nobutton")}}</td>
-   <td></td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/month", "month")}}</td>
@@ -127,7 +117,6 @@ tags:
     <pre class="brush: html hidden notranslate">
 &lt;input type="month" name="month"/&gt;</pre>
     {{EmbedLiveSample("examplemonth",200,55,"","", "nobutton")}}</td>
-   <td>{{HTMLVersionInline("5")}}</td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/number", "number")}}</td>
@@ -136,7 +125,6 @@ tags:
     <pre class="brush: html hidden notranslate">
 &lt;input  type="number" name="number"/&gt;</pre>
     {{EmbedLiveSample("examplenumber",200,55,"","", "nobutton")}}</td>
-   <td>{{HTMLVersionInline("5")}}</td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/password", "password")}}</td>
@@ -145,7 +133,6 @@ tags:
     <pre class="brush: html hidden notranslate">
 &lt;input  type="password" name="password"/&gt;</pre>
     {{EmbedLiveSample("examplepassword",200,55,"","", "nobutton")}}</td>
-   <td></td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/radio", "radio")}}</td>
@@ -154,7 +141,6 @@ tags:
     <pre class="brush: html hidden notranslate">
 &lt;input type="radio" name="radio"/&gt;</pre>
     {{EmbedLiveSample("exampleradio",200,55,"","", "nobutton")}}</td>
-   <td></td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/range", "range")}}</td>
@@ -163,7 +149,6 @@ tags:
     <pre class="brush: html hidden notranslate">
 &lt;input type="range" name="range" min="0" max="25"/&gt;</pre>
     {{EmbedLiveSample("examplerange",200,55,"","", "nobutton")}}</td>
-   <td>{{HTMLVersionInline("5")}}</td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/reset", "reset")}}</td>
@@ -172,7 +157,6 @@ tags:
     <pre class="brush: html hidden notranslate">
 &lt;input  type="reset" name="reset"/&gt;</pre>
     {{EmbedLiveSample("examplereset",200,55,"","", "nobutton")}}</td>
-   <td></td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/search", "search")}}</td>
@@ -181,7 +165,6 @@ tags:
     <pre class="brush: html hidden notranslate">
 &lt;input  type="search" name="search"/&gt;</pre>
     {{EmbedLiveSample("examplesearch",200,55,"","", "nobutton")}}</td>
-   <td>{{HTMLVersionInline("5")}}</td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/submit", "submit")}}</td>
@@ -190,7 +173,6 @@ tags:
     <pre class="brush: html hidden notranslate">
 &lt;input type="submit" name="submit"/&gt;</pre>
     {{EmbedLiveSample("examplesubmit",200,55,"","", "nobutton")}}</td>
-   <td></td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/tel", "tel")}}</td>
@@ -199,7 +181,6 @@ tags:
     <pre class="brush: html hidden notranslate">
 &lt;input  type="tel" name="tel"/&gt;</pre>
     {{EmbedLiveSample("exampletel",200,55,"","", "nobutton")}}</td>
-   <td>{{HTMLVersionInline("5")}}</td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/text", "text")}}</td>
@@ -208,7 +189,6 @@ tags:
     <pre class="brush: html hidden notranslate">
 &lt;input type="text" name="text"/&gt;</pre>
     {{EmbedLiveSample("exampletext",200,55,"","", "nobutton")}}</td>
-   <td></td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/time", "time")}}</td>
@@ -217,7 +197,6 @@ tags:
     <pre class="brush: html hidden notranslate">
 &lt;input  type="time" name="time"/&gt;</pre>
     {{EmbedLiveSample("exampletime",200,55,"","", "nobutton")}}</td>
-   <td>{{HTMLVersionInline("5")}}</td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/url", "url")}}</td>
@@ -226,7 +205,6 @@ tags:
     <pre class="brush: html hidden notranslate">
 &lt;input type="url" name="url"/&gt;</pre>
     {{EmbedLiveSample("exampleurl",200,55,"","", "nobutton")}}</td>
-   <td>{{HTMLVersionInline("5")}}</td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/week", "week")}}</td>
@@ -235,10 +213,9 @@ tags:
     <pre class="brush: html hidden notranslate">
 &lt;input type="week" name="week"/&gt;</pre>
     {{EmbedLiveSample("exampleweek",200,55,"","", "nobutton")}}</td>
-   <td>{{HTMLVersionInline("5")}}</td>
   </tr>
   <tr>
-   <th colspan="4">Obsolete values</th>
+   <th colspan="3">Obsolete values</th>
   </tr>
   <tr>
    <td>{{HTMLElement("input/datetime", "datetime")}}</td>
@@ -247,7 +224,6 @@ tags:
     <pre class="brush: html hidden notranslate">
 &lt;input type="datetime" name="datetime"/&gt;</pre>
     {{EmbedLiveSample("exampledatetime",200,75,"","", "nobutton")}}</td>
-   <td>{{HTMLVersionInline("5")}}</td>
   </tr>
  </tbody>
 </table>
@@ -446,7 +422,7 @@ tags:
  </dd>
  <dt id="htmlattrdefautocomplete">{{htmlattrdef("autocomplete")}}</dt>
  <dd>
- <p>(<strong>Not</strong> a Boolean attribute!) The <code><a href="/en-US/docs/Web/HTML/Attributes/autocomplete">autocomplete</a></code> attribute takes as its value a space-separated string that describes what, if any, type of autocomplete functionality the input should provide. A typical implementation of autocomplete simply recalls previous values entered in the same input field, but more complex forms of autocomplete can exist. For instance, a browser could integrate with a device's contacts list to autocomplete <code>email</code> addresses in an email input field. See {{SectionOnPage("/en-US/docs/Web/HTML/Attributes/autocomplete", "Values")}} for permitted values.</p>
+ <p>(<strong>Not</strong> a Boolean attribute!) The <code><a href="/en-US/docs/Web/HTML/Attributes/autocomplete">autocomplete</a></code> attribute takes as its value a space-separated string that describes what, if any, type of autocomplete functionality the input should provide. A typical implementation of autocomplete recalls previous values entered in the same input field, but more complex forms of autocomplete can exist. For instance, a browser could integrate with a device's contacts list to autocomplete <code>email</code> addresses in an email input field. See {{SectionOnPage("/en-US/docs/Web/HTML/Attributes/autocomplete", "Values")}} for permitted values.</p>
 
  <p>The <code>autocomplete</code> attribute is valid on <code>hidden</code>, <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, <code>range</code>, <code>color</code>, and <code>password</code>. This attribute has no effect on input types that do not return numeric or text data, being valid for all input types except <code>checkbox</code>, <code>radio</code>, <code>file</code>, or any of the button types.</p>
 
@@ -476,7 +452,7 @@ tags:
  </dd>
  <dt id="htmlattrdefchecked">{{htmlattrdef("checked")}}</dt>
  <dd>
- <p>Valid for both <code>radio</code> and <code>checkbox</code> types, <code>checked</code> is a Boolean attribute. If present on a <code>radio</code> type, it indicates that that radio button is the currently selected one in the group of same-named radio buttons. If present on a <code>checkbox</code> type, it indicates that the checkbox is checked by default (when the page loads). It does <em>not</em> indicate whether this checkbox is currently checked: if the checkbox’s state is changed, this content attribute does not reflect the change. (Only the <a href="/en-US/docs/Web/API/HTMLInputElement"><code>HTMLInputElement</code>’s <code>checked</code> IDL attribute</a> is updated.)</p>
+ <p>Valid for both <code>radio</code> and <code>checkbox</code> types, <code>checked</code> is a Boolean attribute. If present on a <code>radio</code> type, it indicates that the radio button is the currently selected one in the group of same-named radio buttons. If present on a <code>checkbox</code> type, it indicates that the checkbox is checked by default (when the page loads). It does <em>not</em> indicate whether this checkbox is currently checked: if the checkbox’s state is changed, this content attribute does not reflect the change. (Only the <a href="/en-US/docs/Web/API/HTMLInputElement"><code>HTMLInputElement</code>’s <code>checked</code> IDL attribute</a> is updated.)</p>
 
  <div class="note">
  <p><strong>Note:</strong> Unlike other input controls, a checkboxes and radio buttons value are only included in the submitted data if they are currently <code>checked</code>. If they are, the name and the value(s) of the checked controls are submitted.</p>
@@ -541,11 +517,11 @@ tags:
  <dd>
  <p>Valid for the <code>image</code> input button only, the <code>height</code> is the height of the image file to display to represent the graphical submit button. See the {{HTMLElement("input/image", "image")}} input type.</p>
  </dd>
- <dt id="htmlattrdefheight">{{htmlattrdef("id")}}</dt>
+ <dt id="htmlattrdefid">{{htmlattrdef("id")}}</dt>
  <dd>
  <p>Global attribute valid for all elements, including all the input types, it defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking. The value is used as the value of the {{htmlelement('label')}}'s <code>for</code> attribute to link the label with the form control. See {{htmlelement('label')}}.</p>
  </dd>
- <dt id="htmlattrdefheight">{{htmlattrdef("inputmode")}}</dt>
+ <dt id="htmlattrdefinputmode">{{htmlattrdef("inputmode")}}</dt>
  <dd>
  <p>Global value valid for all elements, it provides a hint to browsers as to the type of virtual keyboard configuration to use when editing this element or its contents. Values include <code>none</code>, <code>text</code>, <code>tel</code>, <code>url</code>, <code>email</code>, <code>numeric</code>, <code>decimal</code>, and <code>search</code>.</p>
  </dd>
@@ -736,11 +712,11 @@ let hatSize = form.elements["hat-size"];
 
  <p>See {{anch("Client-side validation")}} for more information.</p>
  </dd>
- <dt id="htmlattrdeftype">{{htmlattrdef("tabindex")}}</dt>
+ <dt id="htmlattrdeftabindex">{{htmlattrdef("tabindex")}}</dt>
  <dd>
  <p>Global attribute valid for all elements, including all the input types, an integer attribute indicating if the element can take input focus (is focusable), if it should participate to sequential keyboard navigation. As all input types except for input of type hidden are focusable, this attribute should not be used on form controls, because doing so would require the management of the focus order for all elements within the document with the risk of harming usability and accessibility if done incorrectly.</p>
  </dd>
- <dt id="htmlattrdefformenctype">{{htmlattrdef('title')}}</dt>
+ <dt id="htmlattrdeftitle">{{htmlattrdef('title')}}</dt>
  <dd>
  <p>Global attribute valid for all elements, including all input types, containing a text representing advisory information related to the element it belongs to. Such information can typically, but not necessarily, be presented to the user as a tooltip. The title should NOT be used as the primary explanation of the purpose of the form control. Instead, use the {{htmlelement('label')}} element with a <code>for</code> attribute set to the form control's {{htmlattrdef('id')}} attribute. See {{anch("Labels")}} below.</p>
  </dd>
@@ -947,12 +923,12 @@ input[type="password"] {}
 /* matches a form control whose valid values are limited to a range of values*/
 input[min][max] {}
 
-/* matches a form control with with a pattern attribute */
+/* matches a form control with a pattern attribute */
  input[pattern] {}</pre>
 
 <h3 id="placeholder">::placeholder</h3>
 
-<p>By default, the appearance of placeholder text is a translucent or light gray. The {{cssxref('::placeholder')}} pseudo-element is the input's <a href="/en-US/docs/Web/HTML/Forms_in_HTML#The_placeholder_attribute">placeholder text</a>. It can be styled with a limited subset of CSS properties.</p>
+<p>By default, the appearance of placeholder text is a translucent or light gray. The {{cssxref('::placeholder')}} pseudo-element is the input's <a href="/en-US/docs/Learn/Forms#The_placeholder_attribute">placeholder text</a>. It can be styled with a limited subset of CSS properties.</p>
 
 <pre class="brush: css no-line-numbers notranslate">::placeholder {
   color: blue;
@@ -1005,8 +981,8 @@ input[min][max] {}
 <p>Also see:</p>
 
 <ul>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Styling_HTML_forms">Styling HTML forms,</a> <a href="/en-US/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms">advanced styling for HTML forms</a>, and</li>
- <li>the<a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets"> compatibility table of CSS properties</a>.</li>
+ <li><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling HTML forms,</a> <a href="/en-US/docs/Learn/Forms/Advanced_form_styling">advanced styling for HTML forms</a>, and</li>
+ <li>the<a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls"> compatibility table of CSS properties</a>.</li>
 </ul>
 
 <h2 id="Additional_features">Additional features</h2>
@@ -1042,13 +1018,13 @@ input[min][max] {}
 
 <p>Not only is the placeholder not accessible to screen readers, but once the user enters any text into the form control, or if the form control already has a value, the placeholder disappears. Browsers with automatic page translation features may skip over attributes when translating, meaning the <code>placeholder</code> may not get translated.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>Don't use the {{htmlattrxref("placeholder", "input")}} attribute if you can avoid it. If you need to label an <code>&lt;input&gt;</code> element, use the {{HTMLElement("label")}} element.</p>
 </div>
 
 <h3 id="Client-side_validation">Client-side validation</h3>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p><strong>Warning:</strong> Client-side validation is useful, but it does <em>not</em> guarantee that the server will receive valid data. If the data must be in a specific format, <em>always</em> verify it also on the server-side, and return a <a href="/en-US/docs/Web/HTTP/Status/400"><code>400</code> HTTP response</a> if the format is invalid.</p>
 </div>
 
@@ -1137,7 +1113,7 @@ input[min][max] {}
 
 <p>For each of these Boolean properties, a value of <code>true</code> indicates that the specified reason validation may have failed is true, with the exception of the <code>valid</code> property, which is <code>true</code> if the element's value obeys all constraints.</p>
 
-<p>If there is an error, supporting browsers will both alert the user and prevent the form from being submitted. A word of caution: if a custom error is set to a truthy value (anything other than the empty string or <code>null</code>), the form will be be prevented from being submitted. If there is no custom error message, and none of the other properties return true, <code>valid</code> will be true, and the form can be submitted.</p>
+<p>If there is an error, supporting browsers will both alert the user and prevent the form from being submitted. A word of caution: if a custom error is set to a truthy value (anything other than the empty string or <code>null</code>), the form will be prevented from being submitted. If there is no custom error message, and none of the other properties return true, <code>valid</code> will be true, and the form can be submitted.</p>
 
 <pre class="brush: js notranslate">function validate(input) {
   let validityState_object = input.validity;
@@ -1197,11 +1173,11 @@ nameInput.addEventListener('invalid', () =&gt; {
  <li>If it is valid, it will submit as you'd expect. For this to happen, the custom validity has to be cancelled, by invoking <code>setCustomValidity()</code> with an empty string value. We therefore do this every time the <code>input</code> event is raised. If you don't do this, and a custom validity was previously set, the input will register as invalid, even if it current contains a valid value on submission.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Always validate input constraints both client side and server side. Constraint validation doesn't remove the need for validation on the <em>server side</em>. Invalid values can still be sent by older browsers or by bad actors.</p>
 </div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Firefox supported a proprietary error attribute — <code>x-moz-errormessage</code> — for many versions, which allowed you set custom error messages in a similar way. This has been removed as of version 66 (see {{bug(1513890)}}).</p>
 </div>
 
@@ -1222,8 +1198,8 @@ nameInput.addEventListener('invalid', () =&gt; {
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, listed, submittable, resettable, form-associated element, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>. If the {{htmlattrxref("type", "input")}} is not <code>hidden</code>, then labelable element, palpable content.</td>
+   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, listed, submittable, resettable, form-associated element, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>. If the {{htmlattrxref("type", "input")}} is not <code>hidden</code>, then labelable element, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -1235,7 +1211,7 @@ nameInput.addEventListener('invalid', () =&gt; {
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -1341,7 +1317,7 @@ nameInput.addEventListener('invalid', () =&gt; {
 
 <h3 id="Labels_2">Labels</h3>
 
-<p>When including inputs, it is an accessibilty requirement to add labels along side. This is needed so those who use assistive technologies can tell what the input is for. Also, clicking or touching a label gives focus to the label's associated form control. This improves the accessibility and usability for sighted users, increases the area a user can click or touch to activate the form control. This is especially useful (and even needed) for radio buttons and checkboxes, which are tiny. For more information about labels in general see {{anch("Labels")}} .</p>
+<p>When including inputs, it is an accessibility requirement to add labels along side. This is needed so those who use assistive technologies can tell what the input is for. Also, clicking or touching a label gives focus to the label's associated form control. This improves the accessibility and usability for sighted users, increases the area a user can click or touch to activate the form control. This is especially useful (and even needed) for radio buttons and checkboxes, which are tiny. For more information about labels in general see {{anch("Labels")}} .</p>
 
 <p>The following is an example of how to associate the <code>&lt;label&gt;</code> with an <code>&lt;input&gt;</code> element in the above style. You need to give the <code>&lt;input&gt;</code> an <code>id</code> attribute. The <code>&lt;label&gt;</code> then needs a <code>for</code> attribute whose value is the same as the input's <code>id</code>.</p>
 
@@ -1361,22 +1337,20 @@ nameInput.addEventListener('invalid', () =&gt; {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <div>{{Compat("html.elements.input")}}</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Form constraint validation</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form">Your first HTML form</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form">How to structure an HTML form</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/The_native_form_widgets">The native form widgets</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">Sending form data</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets">How to build custom form widgets</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers">HTML forms in legacy browsers</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Styling_HTML_forms">Styling HTML forms</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms">Advanced styling for HTML forms</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">CSS property compatibility table</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Your_first_form">Your first HTML form</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form">How to structure an HTML form</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls">The native form widgets</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data">Sending form data</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Form_validation">Form data validation</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form widgets</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/HTML_forms_in_legacy_browsers">HTML forms in legacy browsers</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling HTML forms</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Advanced_form_styling">Advanced styling for HTML forms</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">CSS property compatibility table</a></li>
 </ul>

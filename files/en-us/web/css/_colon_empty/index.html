@@ -14,7 +14,7 @@ tags:
 
 <p>The <strong><code>:empty</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents any element that has no children. Children can be either element nodes or text (including whitespace). Comments, processing instructions, and CSS {{cssxref("content")}} do not affect whether an element is considered empty.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> In {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}} the <code>:empty</code> pseudo-class was changed to act like <span style="white-space: nowrap;">{{CSSxRef(":-moz-only-whitespace")}}</span>, but no browser currently supports this yet.</p>
 </div>
 
@@ -25,7 +25,7 @@ div:empty {
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">{{CSSSyntax}}</pre>
+<pre class="brush: css notranslate">{{CSSSyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -68,7 +68,7 @@ div:empty {
 
 <p>Assistive technology such as screen readers cannot parse interactive content that is empty. All interactive content must have an accessible name, which is created by providing a text value for the interactive control's parent element (<a href="/en-US/docs/Web/HTML/Element/a">anchors</a>, <a href="/en-US/docs/Web/HTML/Element/button">buttons</a>, etc.). Accessible names expose the interactive control to the <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs">accessibility tree</a>, an API that communicates information useful for assistive technologies.</p>
 
-<p>The text that provides the interactive control's accessible name can be hidden using <a href="https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link" rel="noopener">a combination of properties</a> that remove it visually from the screen but keep it parseable by assistive technology. This is commonly used for buttons that rely solely on an icon to convey purpose.</p>
+<p>The text that provides the interactive control's accessible name can be hidden using <a href="https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link" rel="noopener">a combination of properties</a> that remove it visually from the screen but keep it parsable by assistive technology. This is commonly used for buttons that rely solely on an icon to convey purpose.</p>
 
 <ul>
  <li><a href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/" rel="noopener">What is an accessible name? | The Paciello Group</a></li>
@@ -102,8 +102,6 @@ div:empty {
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("css.selectors.empty")}}</p>
 

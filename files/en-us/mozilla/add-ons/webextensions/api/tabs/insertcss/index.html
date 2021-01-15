@@ -20,7 +20,7 @@ tags:
 
 <p>You can only inject CSS into pages whose URL can be expressed using a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match pattern</a>: meaning, its scheme must be one of "http", "https", "file", "ftp". This means that you can't inject CSS into any of the browser's built-in pages, such as about:debugging, about:addons, or the page that opens when you open a new empty tab.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>Firefox resolves URLs in injected CSS files relative to the CSS file itself, rather than to the page it's injected into.</p>
 </div>
 
@@ -30,7 +30,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var inserting = browser.tabs.insertCSS(
+<pre class="brush:js">var inserting = browser.tabs.insertCSS(
   tabId,           // optional integer
   details          // object
 )
@@ -76,7 +76,7 @@ tags:
 
 <p>This example inserts into the currently active tab CSS which is taken from a string.</p>
 
-<pre class="brush: js">var css = "body { border: 20px dotted pink; }";
+<pre class="notranslate brush: js">var css = "body { border: 20px dotted pink; }";
 
 browser.browserAction.onClicked.addListener(() =&gt; {
 
@@ -90,7 +90,7 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <p>This example inserts CSS which is loaded from a file packaged with the extension. The CSS is inserted into the tab whose ID is 2:</p>
 
-<pre class="brush: js">browser.browserAction.onClicked.addListener(() =&gt; {
+<pre class="notranslate brush: js">browser.browserAction.onClicked.addListener(() =&gt; {
 
   function onError(error) {
     console.log(`Error: ${error}`);
@@ -103,8 +103,6 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 <p>{{WebExtExamples}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("webextensions.api.tabs.insertCSS")}}</p>
 

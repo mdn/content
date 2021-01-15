@@ -36,7 +36,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js notranslate">var gettingPage = browser.runtime.getBackgroundPage()
+<pre class="brush:js notranslate">var gettingPage = browser.runtime.getBackgroundPage()
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -57,7 +57,7 @@ tags:
 
 <p>Suppose a <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">background script</a> defines a function <code>foo()</code>:</p>
 
-<pre class="brush: js notranslate">// background.js
+<pre class="notranslate brush: js">// background.js
 
 function foo() {
   console.log("I'm defined in background.js");
@@ -65,7 +65,7 @@ function foo() {
 
 <p>A script running in a <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">popup</a> can call this function directly like this:</p>
 
-<pre class="brush: js notranslate">// popup.js
+<pre class="notranslate brush: js">// popup.js
 
 function onGot(page) {
   page.foo();

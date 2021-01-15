@@ -25,7 +25,7 @@ tags:
 
 <p>To keep constantly updating the canvas drawing on each frame, we need to define a drawing function that will run over and over again, with a different set of variable values each time to change sprite positions, etc. You can run a function over and over again using a JavaScript timing function such as {{domxref("WindowTimers.setInterval()", "setInterval()")}} or {{domxref("window.requestAnimationFrame()", "requestAnimationFrame()")}}.</p>
 
-<p>Delete all the JavaScript you currently have inside your HTML file except for the first two lines, and add the following below them. The <code>draw()</code> function will be executed within <code>setInterval</code> every 10 miliseconds:</p>
+<p>Delete all the JavaScript you currently have inside your HTML file except for the first two lines, and add the following below them. The <code>draw()</code> function will be executed within <code>setInterval</code> every 10 milliseconds:</p>
 
 <pre class="brush: js notranslate">function draw() {
     // drawing code
@@ -55,7 +55,7 @@ var y = canvas.height-30;
 
 <p>Next update the <code>draw()</code> function to use the x and y variables in the {{domxref("CanvasRenderingContext2D.arc()","arc()")}} method, as shown in the following highlighted line:</p>
 
-<pre class="brush: js; highlight:[3] notranslate">function draw() {
+<pre class="brush: js highlight:[3] notranslate">function draw() {
     ctx.beginPath();
     ctx.arc(x, y, 10, 0, Math.PI*2);
     ctx.fillStyle = "#0095DD";
@@ -72,7 +72,7 @@ var dy = -2;
 
 <p>The last thing to do is to update <code>x</code> and <code>y</code> with our <code>dx</code> and <code>dy</code> variable on every frame, so the ball will be painted in the new position on every update. Add the following two new lines indicated below to your <code>draw()</code> function:</p>
 
-<pre class="brush: js; highlight:[7,8] notranslate">function draw() {
+<pre class="brush: js highlight:[7,8] notranslate">function draw() {
     ctx.beginPath();
     ctx.arc(x, y, 10, 0, Math.PI*2);
     ctx.fillStyle = "#0095DD";
@@ -92,7 +92,7 @@ var dy = -2;
 
 <p>Add the following highlighted new line to the <code>draw()</code> function:</p>
 
-<pre class="brush: js; highlight:[2] notranslate">function draw() {
+<pre class="brush: js highlight:[2] notranslate">function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.beginPath();
     ctx.arc(x, y, 10, 0, Math.PI*2);

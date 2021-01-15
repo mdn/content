@@ -14,7 +14,7 @@ tags:
 
 <ul>
  <li>Avoid scrolling latency on highlighters given by APZ ({{bug(1312103)}}).</li>
- <li>Added option to <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Copy CSS Path">copy the full CSS path</a> of an element ({{bug(1323700)}}).</li>
+ <li>Added option to <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Copy_CSS_Path">copy the full CSS path</a> of an element ({{bug(1323700)}}).</li>
  <li>Devtools support for css-color-4 ({{bug(1310681)}}).</li>
  <li>Markup view: add a visual hint between opening and closing tags of a collapsed node ({{bug(1323193)}}).</li>
 </ul>
@@ -121,9 +121,9 @@ tags:
 <h4 id="WebRTC">WebRTC</h4>
 
 <ul>
- <li>The {{domxref("RTCPeerConnection")}} methods {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} and {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} now return a {{jsxref("Promise")}} that returns an object conforming to the dictionary {{domxref("RTCSessionDescriptionInit")}} instead of returning an {{domxref("RTCSessionDescription")}} directly. Existing code will continue to work, but <a href="/en-US/docs/Web/API/RTCPeerConnection/setLocalDescription#About_the_session_description_parameter">new code can be written more simply</a>.</li>
+ <li>The {{domxref("RTCPeerConnection")}} methods {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} and {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} now return a {{jsxref("Promise")}} that returns an object conforming to the dictionary {{domxref("RTCSessionDescriptionInit")}} instead of returning an {{domxref("RTCSessionDescription")}} directly. Existing code will continue to work, but <a href="/en-US/docs/Web/API/RTCPeerConnection/setLocalDescription#About_the_session_description_parameter">new code can be written more</a>.</li>
  <li>Similarly, the {{domxref("RTCPeerConnection")}} methods {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} and {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}} now accept as input an object conforming to the dictionary {{domxref("RTCSessionDescriptionInit")}}. Existing code continues to work, but <a href="/en-US/docs/Web/API/RTCPeerConnection/setLocalDescription#About_the_session_description_parameter">can be simplified</a>.</li>
- <li>{{domxref("RTCPeerConnection.addIceCandidate()")}} now accepts as input an object conforming to the {{domxref("RTCIceCandidateInit")}} dictionary. This is compatible with existing code but allows new code to be written slightly more simply when used in tandem with the changes listed above ({{bug(1263312)}}).</li>
+ <li>{{domxref("RTCPeerConnection.addIceCandidate()")}} now accepts as input an object conforming to the {{domxref("RTCIceCandidateInit")}} dictionary. This is compatible with existing code but allows new code to be written slightly more when used in tandem with the changes listed above ({{bug(1263312)}}).</li>
  <li>{{Glossary("DTMF")}} support is now enabled by default using {{domxref("RTCDTMFSender")}}. See <a href="/en-US/docs/Web/API/WebRTC_API/Using_DTMF">Using DTMF with WebRTC</a> for more information on how this works.</li>
 </ul>
 
@@ -154,12 +154,12 @@ tags:
 <h3 id="HTMLXML">HTML/XML</h3>
 
 <ul>
- <li>The <span id="summary_alias_container"><span id="short_desc_nonedit_display"><code>dom.details_element.enabled</code> pref — which controlled enabling/disabling {{htmlelement("details")}} and {{htmlelement("summary")}} element support in Firefox — has now been removed from <code>about:config</code>. These elements (which were first enabled by default in Firefox 49) can no longer be disabled. See {{bug(1271549)}}.</span></span></li>
- <li><span><span>The <code>mozapp</code> attribute of the {{htmlelement("iframe")}} element</span></span>/{{domxref("HTMLIFrameElement")}} interface has been removed — this was used to enable a Firefox OS app to be embedded in a moz <a href="/en-US/docs/Mozilla/Gecko/Chrome/API/Browser_API">Browser API</a> <code>&lt;iframe&gt;</code> ({{bug(1310845)}}).</li>
+ <li>The <code>dom.details_element.enabled</code> pref — which controlled enabling/disabling {{htmlelement("details")}} and {{htmlelement("summary")}} element support in Firefox — has now been removed from <code>about:config</code>. These elements (which were first enabled by default in Firefox 49) can no longer be disabled. See {{bug(1271549)}}.</li>
+ <li>The <code>mozapp</code> attribute of the {{htmlelement("iframe")}} element /{{domxref("HTMLIFrameElement")}} interface has been removed — this was used to enable a Firefox OS app to be embedded in a moz <a href="/en-US/docs/Mozilla/Gecko/Chrome/API/Browser_API">Browser API</a> <code>&lt;iframe&gt;</code> ({{bug(1310845)}}).</li>
  <li>The {{domxref("HTMLIFrameElement.setInputMethodActive()")}} method and <code>InputMethod</code> interface (used to set and manage IMEs on Firefox OS apps) has been removed ({{bug(1313169)}}).</li>
 </ul>
 
-<h3 id="CSS_2"><span><span>CSS</span></span></h3>
+<h3 id="CSS_2">CSS</h3>
 
 <ul>
  <li>Removed {{property_prefix("-moz")}} prefixed variant of {{cssxref(":dir", ":dir()")}} pseudo-class ({{bug(1270406)}}).</li>

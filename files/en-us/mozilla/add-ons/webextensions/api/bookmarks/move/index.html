@@ -16,7 +16,7 @@ tags:
 
 <p>The <strong><code>bookmarks.move()</code></strong> method moves the specified {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} to the specified destination within the tree of bookmarks. This lets you move a bookmark to a new folder and/or position within the folder.</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>If your extension attempts to move a bookmark into the bookmarks tree root node, the call will raise an error with the message: "<em>The bookmark root cannot be modified</em>" and the move won't be completed.</p>
 </div>
 
@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var movingBookmark = browser.bookmarks.move(
+<pre class="brush:js">var movingBookmark = browser.bookmarks.move(
   id,                    // string
   destination           // object
 )
@@ -57,7 +57,7 @@ tags:
 
 <p>This example moves a bookmark so that it's the first bookmark in its current folder.</p>
 
-<pre class="brush: js">function onMoved(bookmarkItem) {
+<pre class="notranslate brush: js">function onMoved(bookmarkItem) {
   console.log(bookmarkItem.index);
 }
 

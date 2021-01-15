@@ -69,6 +69,16 @@ tags:
   }
 ]</pre>
 
+<p>If the protocol is not in the allowed list then it has to start with 'ext+'</p>
+
+<pre class="brush: json  no-line-numbers">"protocol_handlers": [
+  {
+    "protocol": "ext+foo",
+    "name": "Foo Extension",
+    "uriTemplate": "https://example.com/#!/%s"
+  }
+]</pre>
+
 <p>Handlers can also be <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">extension pages</a>.</p>
 
 <pre class="brush: json  no-line-numbers">"protocol_handlers": [

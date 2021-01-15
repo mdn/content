@@ -26,27 +26,23 @@ tags:
 
 <p>By default, web pages are treated as documents; assistive technologies (AT) enter browse or read mode when entering a new web page. This mode can be altered through various roles, including the widget and application roles. The <code>document</code> role brings the AT back into browse or read mode. </p>
 
-<p>Generally placed within an application role or other interactive widget role, the <code>document</code> role is used to indicate a section of a complex composit widget that an assistive technology user should read using its browse or virtual reading mode, if available.</p>
+<p>Generally placed within an application role or other interactive widget role, the <code>document</code> role is used to indicate a section of a complex composite widget that an assistive technology user should read using its browse or virtual reading mode, if available.</p>
 
 <p>Because ATs with reading mode default to that mode for all elements except for those with a widget or application role set, document role is only useful for focusable elements within a widget or application that should be read as static rich text. Adding <code>role="document"</code> and <code>tabindex="0"</code> to the element containing the text within a widget enables the screen reader user to press the Tab key to place focus on the document element and read the text with the screen reader's reading cursor.</p>
 
 <p>Assistive technologies should switch context back to document mode, possibly intercepting from controls rewired for the parent's dynamic context, re-enabling the standard input events, such as Up or Down arrow keyboard events, to control the reading cursor.</p>
 
-<p>In contrast to the <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role">article</a></code> role, the <code>document</code> role does not have any relation to other elements with a document role, it merely has a relationship to the containing composit widget. An article can have associated articles.</p>
+<p>In contrast to the <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role">article</a></code> role, the <code>document</code> role does not have any relation to other elements with a document role, it merely has a relationship to the containing composite widget. An article can have associated articles.</p>
 
 <h3 id="Associated_WAI-ARIA_roles_states_and_properties">Associated WAI-ARIA roles, states, and properties</h3>
 
 <dl>
  <dt><code>aria-expanded</code></dt>
  <dd>Include with a value of <code>true</code> or <code>false</code> if the document element is collapsible, to indicate if the document is currently expanded or collapsed. Other values include the default <code>undefined</code> which means the document is not collapsible.</dd>
-</dl>
-
-<dl>
  <dt>tabindex="0"</dt>
  <dd>Used to make it focusable so the assistive technology user can tab to it and start reading right away.</dd>
 </dl>
 
-<p> </p>
 
 <h3 id="Keyboard_interactions">Keyboard interactions</h3>
 
@@ -58,7 +54,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>An example is Gmail and the single conversation view. GMail is a web application. When in GMail, most user agent interactions are usurped by the application. However, when the Keyboard focus is set on the starting heading on a single conversation that contains the subject of the conversation, the screen reader user can use the reading mode commands to read through the messages, expand or collapse them, and manipulate them. Once focus returns to the message list either by activating the Back button or pressing an asociated keystroke, direct application interaction mode is invoked again, and the user can move to a different conversation in the list with the <kbd>arrow</kbd> keys.</p>
+<p>An example is Gmail and the single conversation view. GMail is a web application. When in GMail, most user agent interactions are usurped by the application. However, when the Keyboard focus is set on the starting heading on a single conversation that contains the subject of the conversation, the screen reader user can use the reading mode commands to read through the messages, expand or collapse them, and manipulate them. Once focus returns to the message list either by activating the Back button or pressing an associated keystroke, direct application interaction mode is invoked again, and the user can move to a different conversation in the list with the <kbd>arrow</kbd> keys.</p>
 
 <h2 id="Best_practices">Best practices</h2>
 
@@ -85,7 +81,6 @@ tags:
 
 <h2 id="Screen_reader_support">Screen reader support</h2>
 
-<p> </p>
 
 <h2 id="See_also">See also</h2>
 

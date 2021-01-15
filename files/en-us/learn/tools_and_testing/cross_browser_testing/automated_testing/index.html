@@ -150,14 +150,14 @@ exports.default = function(cb) {
 
 <ol>
  <li>Install using the following line:
-  <pre class="brush: bash notranslate"><span class="text"><span>npm install --save-dev gulp-htmltidy</span></span>
+  <pre class="brush: bash notranslate">npm install --save-dev gulp-htmltidy
 </pre>
 
   <div class="note">
   <p><strong>Note</strong>: <code>--save-dev</code> adds the package as a dependency to your project. If you look in your project's <code>package.json</code> file, you'll see an entry for it in the <code>devDependencies</code> property.</p>
   </div>
  </li>
- <li class="line">Add the following dependency to <code>gulpfile.js</code>:
+ <li>Add the following dependency to <code>gulpfile.js</code>:
   <pre class="brush: js notranslate">const htmltidy = require('gulp-htmltidy');</pre>
  </li>
  <li>Add the following test to the bottom of <code>gulpfile.js</code>:
@@ -237,15 +237,15 @@ const csslint = require('gulp-csslint');</pre>
  <li>Install using the following lines:
   <pre class="editor editor-colors notranslate">npm install --save-dev gulp-babel @babel/preset-env
 npm install --save-dev @babel/core
-<span class="shell source"><span>npm install jshint gulp-jshint --save-dev</span></span>
+npm install jshint gulp-jshint --save-dev
 </pre>
  </li>
  <li>Add the following dependencies to <code>gulpfile.js</code>:
-  <pre class="editor editor-colors notranslate">const babel = require('gulp-babel');
-<span class="js source"><span class="js storage type"><span>const</span></span><span> jshint </span><span class="assignment js keyword operator"><span>=</span></span><span> </span><span class="function-call js meta"><span class="function js support"><span>require</span></span><span class="js meta"><span class="begin definition js punctuation round"><span>(</span></span><span class="js quoted single string"><span class="begin definition js punctuation string"><span>'</span></span><span>gulp-jshint</span><span class="definition end js punctuation string"><span>'</span></span></span><span class="definition end js punctuation round"><span>)</span></span></span></span><span class="js punctuation statement terminator"><span>;</span></span></span>
+  <pre class="brush: js editor editor-colors notranslate">const babel = require('gulp-babel');
+const jshint = require('gulp-jshint');
 </pre>
  </li>
- <li class="line">Add the following test to the bottom of <code>gulpfile.js</code>:
+ <li>Add the following test to the bottom of <code>gulpfile.js</code>:
   <pre class="brush: js notranslate">function js(cb) {
     return gulp.src('src/main.js')
         .pipe(jshint())
@@ -373,7 +373,7 @@ npm install --save-dev @babel/core
 
 <ol>
  <li>Click <em>Start a new manual session</em>.</li>
- <li>In the next screen, type in the URL of a page you want to test (use <a href="http://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html">http://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html</a>, for example), then choose a browser/OS combination you want to test by using the different buttons and lists. There is a lot of choice, as you'll see!<img alt="" src="https://mdn.mozillademos.org/files/14229/sauce-manual-session.png" style="border-style: solid; border-width: 1px; display: block; height: 636px; margin: 0px auto; width: 600px;"></li>
+ <li>In the next screen, type in the URL of a page you want to test (use <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html">https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html</a>, for example), then choose a browser/OS combination you want to test by using the different buttons and lists. There is a lot of choice, as you'll see!<img alt="" src="https://mdn.mozillademos.org/files/14229/sauce-manual-session.png" style="border-style: solid; border-width: 1px; display: block; height: 636px; margin: 0px auto; width: 600px;"></li>
  <li>When you click Start session, a loading screen will then appear, which spins up a virtual machine running the combination you chose.</li>
  <li>When loading has finished, you can then start to remotely test the web site running in the chosen browser.<img alt="" src="https://mdn.mozillademos.org/files/14231/sauce-test-running.png" style="display: block; height: 390px; margin: 0px auto; width: 800px;"></li>
  <li>From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The top menu allows you to:
@@ -473,7 +473,7 @@ myAccount.getAccountDetails(function (err, res) {
 <p><strong>Note</strong>: The blue device icon next to some of the mobile device choices signals that you will be testing on a real device; choices without that icon will be run on an emulator.</p>
 </div>
 
-<p>You'll find that you can enter URLs into the address bar, and use the other controls like you'd expect on a real device. You can even do things like copy and paste from the device to your clipboard, scroll up and down by dragging with the mouse, or use appropriate gestures (e.g. pinch/zoom, two fingers to scroll) on the touchpads of supporting devices (e.g. Macbook). Note that not all features are available on all devices.</p>
+<p>You'll find that you can enter URLs into the address bar, and use the other controls like you'd expect on a real device. You can even do things like copy and paste from the device to your clipboard, scroll up and down by dragging with the mouse, or use appropriate gestures (e.g. pinch/zoom, two fingers to scroll) on the touchpads of supporting devices (e.g. MacBook). Note that not all features are available on all devices.</p>
 
 <p>You'll also see a menu that allows you to control the session.</p>
 

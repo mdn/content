@@ -10,13 +10,11 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The<strong> <code>list-style-type</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the marker (such as a disc, character, or custom counter style) of a list item element.</p>
+<p>The <strong><code>list-style-type</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the marker (such as a disc, character, or custom counter style) of a list item element.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/list-style-type.html")}}</div>
 
-
-
-<p>The <a href="/en-US/docs/CSS/color_value" title="color">color</a> of the marker will be the same as the computed color of the element it applies to.</p>
+<p>The <a href="/en-US/docs/CSS/color_value">color</a> of the marker will be the same as the computed color of the element it applies to.</p>
 
 <p>Only a few elements ({{HTMLElement("li")}} and {{HTMLElement("summary")}}) have a default value of <code>display: list-item</code>. However, the <code>list-style-type</code> property may be applied to any element whose {{cssxref("display")}} value is set to <code>list-item</code>. Moreover, because this property is inherited, it can be set on a parent element (commonly {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make it apply to all list items.</p>
 
@@ -49,9 +47,9 @@ list-style-type: unset;
 <p>The list-style-type property may be defined as any one of:</p>
 
 <ul>
- <li>a <code><a href="#&lt;custom-ident>">&lt;custom-ident&gt;</a></code> value</li>
+ <li>a <code><a href="#custom-ident">&lt;custom-ident&gt;</a></code> value</li>
  <li>a <code><a href="#symbols()">symbols()</a></code> value</li>
- <li>a <code><a href="#&lt;string>">&lt;string&gt;</a></code> value</li>
+ <li>a <code><a href="#string">&lt;string&gt;</a></code> value</li>
  <li>the keyword <code><a href="#none">none</a></code>.</li>
 </ul>
 
@@ -65,20 +63,14 @@ list-style-type: unset;
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt><a id="&lt;custom-ident>" name="&lt;custom-ident>">{{cssxref("custom-ident", "&lt;custom-ident&gt;")}}</a></dt>
+ <dt><a id="custom-ident">{{cssxref("custom-ident", "&lt;custom-ident&gt;")}}</a></dt>
  <dd>A identifier matching the value of a {{cssxref("@counter-style")}} or one of the predefined styles:</dd>
-</dl>
-
-<dl>
- <dt><a id="symbols()" name="symbols()">{{cssxref("symbols()")}}</a></dt>
+ <dt><a id="symbols()">{{cssxref("symbols()")}}</a></dt>
  <dd>Defines an anonymous style of the list.</dd>
- <dt><a id="&lt;string>" name="&lt;string>">{{cssxref("&lt;string&gt;")}}</a></dt>
+ <dt><a id="string">{{cssxref("&lt;string&gt;")}}</a></dt>
  <dd>The specified string will be used as the item's marker.</dd>
- <dt><a id="none" name="none"><code>none</code></a></dt>
+ <dt><a id="none"><code>none</code></a></dt>
  <dd>No item marker is shown.</dd>
-</dl>
-
-<dl>
  <dt><code>disc</code></dt>
  <dd>
  <ul style="list-style-type: disc;">
@@ -532,7 +524,7 @@ ul li::before {
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+<pre class="brush: css notranslate">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -605,8 +597,6 @@ ol.shortcut {
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("css.properties.list-style-type")}}</p>
 

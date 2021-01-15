@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">let querying = browser.tabs.query(<var>queryObj</var>)
+<pre class="brush:js">let querying = browser.tabs.query(<var>queryObj</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -62,7 +62,7 @@ tags:
   <dt><code>title</code>{{optional_inline}}</dt>
   <dd><code>string</code>. Match page titles against a pattern.</dd>
   <dt><code>url</code>{{optional_inline}}</dt>
-  <dd><code><code>string</code></code> or <code><code>array</code> of <code><code>string</code></code></code>. Match tabs against one or more <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. Note that fragment identifiers are not matched.</dd>
+  <dd><code>string</code> or <code>array</code> of <code>string</code>. Match tabs against one or more <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. Note that fragment identifiers are not matched.</dd>
   <dt><code>windowId</code>{{optional_inline}}</dt>
   <dd><code>integer</code>. The <code>id</code> of the parent window, or {{WebExtAPIRef('windows.WINDOW_ID_CURRENT')}} for the current window.</dd>
   <dt><code>windowType</code>{{optional_inline}}</dt>
@@ -81,7 +81,7 @@ tags:
 
 <p>Get all tabs:</p>
 
-<pre class="brush: js">function logTabs(tabs) {
+<pre class="notranslate brush: js">function logTabs(tabs) {
   for (let tab of tabs) {
     // tab.url requires the `tabs` permission
     console.log(tab.url);
@@ -97,7 +97,7 @@ querying.then(logTabs, onError);</pre>
 
 <p>Get all tabs in the current window:</p>
 
-<pre class="brush: js">function logTabs(tabs) {
+<pre class="notranslate brush: js">function logTabs(tabs) {
   for (let tab of tabs) {
     // tab.url requires the `tabs` permission
     console.log(tab.url);
@@ -113,7 +113,7 @@ querying.then(logTabs, onError);</pre>
 
 <p>Get the active tab in the current window:</p>
 
-<pre class="brush: js">function logTabs(tabs) {
+<pre class="notranslate brush: js">function logTabs(tabs) {
   // tabs[0].url requires the `tabs` permission
   console.log(tabs[0].url);
 }
@@ -127,7 +127,7 @@ querying.then(logTabs, onError);</pre>
 
 <p>Get tabs for all HTTP and HTTPS URLs under <code>"mozilla.org"</code> or any of its subdomains:</p>
 
-<pre class="brush: js">function logTabs(tabs) {
+<pre class="notranslate brush: js">function logTabs(tabs) {
   for (let tab of tabs) {
     // tab.url requires the `tabs` permission
     console.log(tab.url);
@@ -144,8 +144,6 @@ querying.then(logTabs, onError);</pre>
 <p>{{WebExtExamples}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("webextensions.api.tabs.query")}}</p>
 

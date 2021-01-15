@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.windows.onFocusChanged.addListener(listener)
+<pre class="brush:js">browser.windows.onFocusChanged.addListener(listener)
 browser.windows.onFocusChanged.removeListener(listener)
 browser.windows.onFocusChanged.hasListener(listener)
 </pre>
@@ -56,15 +56,13 @@ browser.windows.onFocusChanged.hasListener(listener)
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("webextensions.api.windows.onFocusChanged")}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>Log focus changes:</p>
 
-<pre class="brush: js">browser.windows.onFocusChanged.addListener((windowId) =&gt; {
+<pre class="notranslate brush: js">browser.windows.onFocusChanged.addListener((windowId) =&gt; {
   console.log("Newly focused window: " + windowId);
 });</pre>
 

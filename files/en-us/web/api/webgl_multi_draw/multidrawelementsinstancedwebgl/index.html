@@ -1,0 +1,163 @@
+---
+title: WEBGL_multi_draw.multiDrawElementsInstancedWEBGL()
+slug: Web/API/WEBGL_multi_draw/multiDrawElementsInstancedWEBGL
+tags:
+- Method
+- Reference
+- WebGL
+- WebGL extension
+---
+<div>{{APIRef("WebGL")}}</div>
+
+<p>The <code><strong>WEBGL_multi_draw.multiDrawElementsWEBGL()</strong></code> method of
+  the
+  <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> renders multiple primitives from
+  array data. It is
+  identical to multiple calls to the
+  <a
+    href="/en-US/docs/Web/API/WebGL2RenderingContext/drawElementsInstanced"><code>gl.drawElementsInstanced()</code></a>
+  method.
+</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js notranslate">void <var>ext</var>.multiDrawElementsInstancedWEBGL(<var>mode</var>, 
+    <var>countsList</var>, <var>countsOffset</var>,
+    <var>type</var>,
+    <var>firstsList</var>, <var>firstsOffset</var>,
+    <var>instanceCountsList</var>, <var>instanceCountsOffset</var>,
+    <var>drawCount</var>);
+</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt><code>mode</code></dt>
+  <dd>A <a href="/en-US/docs/Web/API/WebGL_API/Types"><code>GLenum</code></a>
+    specifying the type primitive to render. Possible values are:
+    <ul>
+      <li><code>gl.POINTS</code>: Draws a single dot.</li>
+      <li><code>gl.LINE_STRIP</code>: Draws a straight line to the next vertex.</li>
+      <li><code>gl.LINE_LOOP</code>: Draws a straight line to the next vertex, and
+        connects the
+        last vertex back to the first.</li>
+      <li><code>gl.LINES</code>: Draws a line between a pair of vertices.</li>
+      <li>
+        <code><a href="https://en.wikipedia.org/wiki/Triangle_strip">gl.TRIANGLE_STRIP</a></code>
+      </li>
+      <li>
+        <code><a href="https://en.wikipedia.org/wiki/Triangle_fan">gl.TRIANGLE_FAN</a></code>
+      </li>
+      <li><code>gl.TRIANGLES</code>: Draws a triangle for a group of three vertices.</li>
+    </ul>
+  </dd>
+  <dt><code>countsList</code></dt>
+  <dd>An <a
+      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array"><code>Int32Array</code></a>
+    or <a
+      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>
+    (of <a href="/en-US/docs/Web/API/WebGL_API/Types"><code>GLint</code></a>)
+    specifying a list of numbers of indices to be rendered.</dd>
+  <dt><code>countsOffset</code></dt>
+  <dd>A <a href="/en-US/docs/Web/API/WebGL_API/Types"><code>GLUint</code></a>
+    defining the starting point into the <code>countsList</code> array.</dd>
+  <dt>type</dt>
+  <dd>A <a href="/en-US/docs/Web/API/WebGL_API/Types"><code>GLenum</code></a> specifying
+    the type of the values in the element array buffer. Possible values are:
+    <ul>
+      <li><code>gl.UNSIGNED_BYTE</code></li>
+      <li><code>gl.UNSIGNED_SHORT</code></li>
+      <li>When using the <a
+          href="/en-US/docs/Web/API/OES_element_index_uint"><code>OES_element_index_uint</code></a>
+        extension:
+        <ul>
+          <li><code>gl.UNSIGNED_INT</code></li>
+        </ul>
+      </li>
+    </ul>
+  </dd>
+  <dt><code>offsetsList</code></dt>
+  <dd>An <a
+      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array"><code>Int32Array</code></a>
+    or <a
+      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>
+    (of <a href="/en-US/docs/Web/API/WebGL_API/Types"><code>GLsizei</code></a>)
+    specifying a list of starting indices for the arrays of vector points.</dd>
+  <dt><code>offsetsOffset</code></dt>
+  <dd>A <a href="/en-US/docs/Web/API/WebGL_API/Types"><code>GLuint</code></a>
+    defining the starting point into the <code>offsetsList</code> array.</dd>
+  <dt><code>instanceCountsList</code></dt>
+  <dd>An <a
+      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array"><code>Int32Array</code></a>
+    or <a
+      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>
+    (of <a href="/en-US/docs/Web/API/WebGL_API/Types"><code>GLsizei</code></a>)
+    specifying a list of number sof instances of the range of elements to execute.</dd>
+  <dt><code>instanceCountsOffset</code></dt>
+  <dd>A <a href="/en-US/docs/Web/API/WebGL_API/Types"><code>GLuint</code></a>
+    defining the starting point into the <code>instanceCountsList</code> array.</dd>
+  <dt><code>drawCount</code></dt>
+  <dd>A <a href="/en-US/docs/Web/API/WebGL_API/Types"><code>GLsizei</code></a>
+    specifying the number of instances of the range of elements to execute.</dd>
+</dl>
+
+<h3 id="Return_value">Return value</h3>
+
+<p>None.</p>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<ul>
+  <li>If <code>mode</code> is not one of the accepted values, a
+    <code>gl.INVALID_ENUM</code> error is thrown.</li>
+  <li>If <code>drawCount</code> or items in <code>countsList</code>,
+    <code>offsetsList</code>, or <code>instanceCountsList</code> are negative,
+    a <code>gl.INVALID_VALUE</code> error is thrown.</li>
+</ul>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: js">
+// let counts = new Int32Array(...);
+// let offsets = new Int32Array(...);
+// let instanceCounts = new Int32Array(...);
+ext.multiDrawElementsInstancedWEBGL(
+    gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, instanceCounts, 0,
+    counts.length);
+}
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('WEBGL_multi_draw', '', 'WEBGL_multi_draw')}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data.
+  If you'd like to contribute to the data, please check out
+  <a
+    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+  and send us a pull request.
+</p>
+
+<p>{{Compat("api.WEBGL_multi_draw.multiDrawElementsWEBGL")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li><a
+      href="/en-US/docs/Web/API/WebGLRenderingContext/drawElements"><code>WebGLRenderingContext.drawElements()</code></a>
+  </li>
+  <li><a
+      href="/en-US/docs/Web/API/WebGL2RenderingContext/drawElementsInstanced"><code>WebGL2RenderingContext.drawElementsInstanced()</code></a>
+  </li>
+</ul>

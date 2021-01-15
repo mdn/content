@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var updating = browser.windows.update(
+<pre class="brush:js">var updating = browser.windows.update(
   windowId,              // integer
   updateInfo             // object
 )
@@ -61,15 +61,13 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("webextensions.api.windows.update")}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>When the user clicks a browser action's icon, move the window to the top left corner:</p>
 
-<pre class="brush: js">function onUpdated(windowInfo) {
+<pre class="notranslate brush: js">function onUpdated(windowInfo) {
   console.log(`Updated window: ${windowInfo.id}`);
 }
 

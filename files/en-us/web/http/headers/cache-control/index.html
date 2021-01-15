@@ -43,7 +43,7 @@ tags:
 
 <p>Standard <code>Cache-Control</code> directives that can be used by the client in an HTTP request.</p>
 
-<pre class="syntaxbox notranslate">Cache-Control: max-age=&lt;seconds&gt;
+<pre class="brush: html notranslate">Cache-Control: max-age=&lt;seconds&gt;
 Cache-Control: max-stale[=&lt;seconds&gt;]
 Cache-Control: min-fresh=&lt;seconds&gt;
 Cache-Control: no-cache
@@ -56,7 +56,7 @@ Cache-Control: only-if-cached
 
 <p>Standard <code>Cache-Control</code> directives that can be used by the server in an HTTP response.</p>
 
-<pre class="syntaxbox notranslate">Cache-Control: must-revalidate
+<pre class="brush: html notranslate">Cache-Control: must-revalidate
 Cache-Control: no-cache
 Cache-Control: no-store
 Cache-Control: no-transform
@@ -69,9 +69,9 @@ Cache-Control: s-maxage=&lt;seconds&gt;
 
 <h3 id="Extension_Cache-Control_directives">Extension Cache-Control directives</h3>
 
-<p>Extension <code>Cache-Control</code> directives are not part of the core HTTP caching standards document. Check the <a href="#Browser_compatibility">compatibility table</a> for their support; user-agents that don't recognize them should ignore them.</p>
+<p>Extension <code>Cache-Control</code> directives are not part of the core HTTP caching standards document. Check the <a href="#browser_compatibility">compatibility table</a> for their support; user-agents that don't recognize them should ignore them.</p>
 
-<pre class="syntaxbox notranslate">Cache-Control: immutable
+<pre class="brush: html notranslate">Cache-Control: immutable
 Cache-Control: stale-while-revalidate=&lt;seconds&gt;
 Cache-Control: stale-if-error=&lt;seconds&gt;
 </pre>
@@ -141,10 +141,10 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
  <dd>
  <pre class="example-good brush: http no-line-numbers notranslate">Cache-Control: no-store</pre>
 
- <div class="blockIndicator note">
+ <div class="notecard note">
  <p>The <code>no-store</code> directive will prevent a new resource being cached, but it will not prevent the cache from responding with a non-stale resource that was cached as the result of an earlier request. Setting <code>max-age=0</code> as well forces the cache to revalidate (clears the cache).</p>
 
- <pre class="syntaxbox notranslate">Cache-Control: no-store, max-age=0
+ <pre class="brush: html notranslate">Cache-Control: no-store, max-age=0
 </pre>
  </div>
  </dd>
@@ -204,8 +204,6 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("http.headers.Cache-Control")}}</p>
 

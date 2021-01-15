@@ -41,7 +41,7 @@ tags:
 
 <p>In JavaScript, you'll find functions everywhere. In fact, we've been using functions all the way through the course so far; we've just not been talking about them very much. Now is the time, however, for us to start talking about functions explicitly, and really exploring their syntax.</p>
 
-<p>Pretty much anytime you make use of a JavaScript structure that features a pair of parentheses — <code>()</code> — and you're <strong>not</strong> using a common built-in language structure like a <a href="/en-US/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop">for loop</a>, <a href="/en-US/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while">while or do...while loop</a>, or <a href="/en-US/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements">if...else statement</a>, you are making use of a function.</p>
+<p>Pretty much anytime you make use of a JavaScript structure that features a pair of parentheses — <code>()</code> — and you're <strong>not</strong> using a common built-in language structure like a <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop">for loop</a>, <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while">while or do...while loop</a>, or <a href="/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements">if...else statement</a>, you are making use of a function.</p>
 
 <h2 id="Built-in_browser_functions">Built-in browser functions</h2>
 
@@ -77,15 +77,15 @@ console.log(madeAString);
 
 <p>The JavaScript language has many built-in functions to allow you to do useful things without having to write all that code yourself. In fact, some of the code you are calling when you <strong>invoke</strong> (a fancy word for run, or execute) a built in browser function couldn't be written in JavaScript — many of these functions are calling parts of the background browser code, which is written largely in low-level system languages like C++, not web languages like JavaScript.</p>
 
-<p>Bear in mind that some built-in browser functions are not part of the core JavaScript language — some are defined as part of browser APIs, which build on top of the default language to provide even more functionality (refer to <a href="/en-US/Learn/JavaScript/First_steps/What_is_JavaScript#So_what_can_it_really_do">this early section of our course</a> for more descriptions). We'll look at using browser APIs in more detail in a later module.</p>
+<p>Bear in mind that some built-in browser functions are not part of the core JavaScript language — some are defined as part of browser APIs, which build on top of the default language to provide even more functionality (refer to <a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#So_what_can_it_really_do">this early section of our course</a> for more descriptions). We'll look at using browser APIs in more detail in a later module.</p>
 
 <h2 id="Functions_versus_methods">Functions versus methods</h2>
 
 <p>Programmers call <strong>functions</strong> that are part of objects <strong>methods</strong>. You don't need to learn about the inner workings of structured JavaScript objects yet — you can wait until our later module that will teach you all about the inner workings of objects, and how to create your own. For now, we just wanted to clear up any possible confusion of method versus function — you are likely to meet both terms as you look at the available related resources across the Web.</p>
 
-<p>The built-in code we've made use of so far come in both forms: <strong>functions </strong>and <strong>methods. </strong>You can check the full list of the built-in functions, as well as the built-in objects and their corresponding methods <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects">here</a>.</p>
+<p>The built-in code we've made use of so far come in both forms: <strong>functions</strong> and <strong>methods.</strong> You can check the full list of the built-in functions, as well as the built-in objects and their corresponding methods <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects">here</a>.</p>
 
-<p>You've also seen a lot of <strong>custom functions</strong> in the course so far — functions defined in your code, not inside the browser. Anytime you saw a custom name with parentheses straight after it, you were using a custom function. In our <a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html">random-canvas-circles.html</a> example (see also the full <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html">source code</a>) from our <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">loops article</a>, we included a custom <code>draw()</code> function that looked like this:</p>
+<p>You've also seen a lot of <strong>custom functions</strong> in the course so far — functions defined in your code, not inside the browser. Anytime you saw a custom name with parentheses straight after it, you were using a custom function. In our <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html">random-canvas-circles.html</a> example (see also the full <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html">source code</a>) from our <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">loops article</a>, we included a custom <code>draw()</code> function that looked like this:</p>
 
 <pre class="brush: js  notranslate">function draw() {
   ctx.clearRect(0,0,WIDTH,HEIGHT);
@@ -120,7 +120,7 @@ console.log(madeAString);
 myFunction();
 // calls the function once</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>This form of creating a function is also known as <em>function declaration</em>. It is always hoisted, so you can call function above function definition and it will work fine.</p>
 </div>
 
@@ -154,7 +154,7 @@ myButton.onclick = function() {
   alert('hello');
 }</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>This form of creating a function is also known as <em>function expression</em>. Unlike function declaration, function expressions are not hoisted.</p>
 </div>
 
@@ -248,7 +248,7 @@ function greeting() {
 <p>Both functions you want to call are called <code>greeting()</code>, but you can only ever access the <code>first.js</code> file's <code>greeting()</code> function (the second one is ignored). In addition, attempting to declare the <code>name</code> variable a second time with the <code>let</code> keyword in the <code>second.js</code> file results in an error. </p>
 
 <div class="note">
-<p><strong>Note</strong>: You can see this example <a href="http://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html">running live on GitHub</a> (see also the <a href="https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions">source code</a>).</p>
+<p><strong>Note</strong>: You can see this example <a href="https://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html">running live on GitHub</a> (see also the <a href="https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions">source code</a>).</p>
 </div>
 
 <p>Keeping parts of your code locked away in functions avoids such problems, and is considered the best practice.</p>
@@ -328,9 +328,6 @@ b();</pre>
 <p><strong>Note</strong>: The <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError: "x" is not defined</a> error is one of the most common you'll encounter. If you get this error and you are sure that you have defined the variable in question, check what scope it is in.</p>
 </div>
 
-<ul>
-</ul>
-
 <h3 id="Functions_inside_functions">Functions inside functions</h3>
 
 <p>Keep in mind that you can call a function from anywhere, even inside another function.  This is often used as a way to keep code tidy — if you have a big complex function, it is easier to understand if you break it down into several sub-functions:</p>
@@ -392,9 +389,6 @@ function subFunction3(value) {
  <li><a href="/en-US/docs/Web/JavaScript/Guide/Functions">Functions detailed guide</a> — covers some advanced features not included here.</li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions">Functions reference</a></li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">Default parameters</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow functions</a> — advanced concept references</li>
-</ul>
-
-<ul>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}</p>

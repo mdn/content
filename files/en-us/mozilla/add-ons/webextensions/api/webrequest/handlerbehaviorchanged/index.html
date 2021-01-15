@@ -16,7 +16,6 @@ tags:
 
 <div>This function can be used to ensure that event listeners are applied correctly when pages are in the browser's in-memory cache.</div>
 
-<div> </div>
 
 <div>If the browser has loaded a page, and the page is reloaded, the browser may reload the page from its in-memory cache, and in this case, events will not be triggered for the request.</div>
 
@@ -41,7 +40,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var flushingCache = browser.webRequest.handlerBehaviorChanged()
+<pre class="brush:js">var flushingCache = browser.webRequest.handlerBehaviorChanged()
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -54,15 +53,13 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("webextensions.api.webRequest.handlerBehaviorChanged")}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>In the following snippet, we flush the in-memory cache via a call to <code>handlerBehaviorChanged()</code>,  and report this action by logging an appropriate message to the console.</p>
 
-<pre class="brush: js">function onFlushed() {
+<pre class="notranslate brush: js">function onFlushed() {
   console.log(`In-memory cache flushed`);
 }
 

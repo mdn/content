@@ -11,8 +11,6 @@ tags:
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
-<div></div>
-
 <p>The <strong><code>ExtendableMessageEvent</code></strong> interface of the <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a> represents the event object of a {{event("message_(ServiceWorker)","message")}} event fired on a service worker (when a message is received on the {{domxref("ServiceWorkerGlobalScope")}} from another context) — extends the lifetime of such events.</p>
 
 <p>This interface inherits from the {{domxref("ExtendableEvent")}} interface.</p>
@@ -26,7 +24,7 @@ tags:
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>Inherits properties from its parent, </em><em>{{domxref("ExtendableEvent")}}</em>.</p>
+<p><em>Inherits properties from its parent, {{domxref("ExtendableEvent")}}</em>.</p>
 
 <dl>
  <dt>{{domxref("ExtendableMessageEvent.data")}} {{readonlyinline}}</dt>
@@ -43,7 +41,7 @@ tags:
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>Inherits methods from its parent, </em><em>{{domxref("ExtendableEvent")}}</em>.</p>
+<p><em>Inherits methods from its parent, {{domxref("ExtendableEvent")}}</em>.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -95,7 +93,6 @@ addEventListener('message', event =&gt; {
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("api.ExtendableMessageEvent")}}</p>
 </div>

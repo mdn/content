@@ -55,10 +55,7 @@ tags:
  </li>
  <li>modify request headers in:
   <ul>
-   <li>{{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}
-    <ul>
-    </ul>
-   </li>
+   <li>{{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}</li>
   </ul>
  </li>
  <li>modify response headers in:
@@ -77,7 +74,7 @@ tags:
 
 <p>In the listener, you can then return a {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}} object, which indicates the modification you need to make: for example, the modified request header you want to send.</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p><strong>Warning</strong>: Non-HTTP(S) protocols do not currently support <code>"blocking"</code> functionality, so modifying these requests is not available at this time. See {{bug(1475832)}} for more details.</p>
 </div>
 
@@ -120,7 +117,7 @@ tags:
 
 <dl>
  <dt>{{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES", "webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}}</dt>
- <dd>The maximum number of times that <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest/handlerBehaviorChanged" title="Suppose an add-on's job is to block web requests against a pattern, and the following scenario happens:"><code>handlerBehaviorChanged()</code></a></code> can be called in a 10 minute period.</dd>
+ <dd>The maximum number of times that {{WebExtAPIRef("WebRequest.handlerBehaviorChanged", "handlerBehaviorChanged()")}} can be called in a 10 minute period.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -158,8 +155,6 @@ tags:
 </dl>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("webextensions.api.webRequest")}}</p>
 

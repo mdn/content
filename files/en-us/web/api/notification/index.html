@@ -35,6 +35,7 @@ tags:
  </ul>
  </dd>
  <dt>{{domxref("Notification.maxActions")}} {{readonlyinline}}</dt>
+ <dd></dd>
 </dl>
 
 <h3 id="Instance_properties">Instance properties</h3>
@@ -43,23 +44,23 @@ tags:
 
 <dl>
  <dt>{{domxref("Notification.actions")}} {{readonlyinline}}</dt>
- <dd>The actions array of the notification as specified in the constructor's <code><var>options<var></var></var></code> parameter.</dd>
+ <dd>The actions array of the notification as specified in the constructor's <code><var>options</var></code> parameter.</dd>
  <dt>{{domxref("Notification.badge")}} {{readonlyinline}}</dt>
  <dd>The URL of the image used to represent the notification when there is not enough space to display the notification itself.</dd>
  <dt>{{domxref("Notification.body")}} {{readonlyinline}}</dt>
- <dd>The body string of the notification as specified in the constructor's <code><var>options<var></var></var></code> parameter.</dd>
+ <dd>The body string of the notification as specified in the constructor's <code><var>options</var></code> parameter.</dd>
  <dt>{{domxref("Notification.data")}} {{readonlyinline}}</dt>
  <dd>Returns a structured clone of the notification’s data.</dd>
  <dt>{{domxref("Notification.dir")}} {{readonlyinline}}</dt>
- <dd>The text direction of the notification as specified in the constructor's <code><var>options<var></var></var></code> parameter.</dd>
+ <dd>The text direction of the notification as specified in the constructor's <code><var>options</var></code> parameter.</dd>
  <dt>{{domxref("Notification.lang")}} {{readonlyinline}}</dt>
- <dd>The language code of the notification as specified in the constructor's <code><var>options<var></var></var></code> parameter.</dd>
+ <dd>The language code of the notification as specified in the constructor's <code><var>options</var></code> parameter.</dd>
  <dt>{{domxref("Notification.tag")}} {{readonlyinline}}</dt>
- <dd>The ID of the notification (if any) as specified in the constructor's <code><var>options<var></var></var></code> parameter.</dd>
+ <dd>The ID of the notification (if any) as specified in the constructor's <code><var>options</var></code> parameter.</dd>
  <dt>{{domxref("Notification.icon")}} {{readonlyinline}}</dt>
- <dd>The URL of the image used as an icon of the notification as specified in the constructor's <code><var>options<var></var></var></code> parameter.</dd>
+ <dd>The URL of the image used as an icon of the notification as specified in the constructor's <code><var>options</var></code> parameter.</dd>
  <dt>{{domxref("Notification.image")}} {{readonlyinline}}</dt>
- <dd>The URL of an image to be displayed as part of the notification, as specified in the constructor's <code><var>options<var></var></var></code> parameter.</dd>
+ <dd>The URL of an image to be displayed as part of the notification, as specified in the constructor's <code><var>options</var></code> parameter.</dd>
  <dt>{{domxref("Notification.renotify")}} {{readonlyinline}}</dt>
  <dd>Specifies whether the user should be notified after a new notification replaces an old one.</dd>
  <dt>{{domxref("Notification.requireInteraction")}} {{readonlyinline}}</dt>
@@ -143,7 +144,7 @@ tags:
 
 <p>We no longer show a live sample on this page, as Chrome and Firefox no longer allow notification permissions to be requested from cross-origin {{htmlelement("iframe")}}s, with other browsers to follow. To see a example in action, check out our <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do list example</a> (also see <a href="https://mdn.github.io/to-do-notifications/">the app running live</a>.)</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: In the above example we spawn notifications in response to a user gesture (clicking a button). This is not only best practice — you should not be spamming users with notifications they didn't agree to — but going forward browsers will explicitly disallow notifications not triggered in response to a user gesture. Firefox is already doing this from version 72, for example.</p>
 </div>
 
@@ -165,8 +166,6 @@ tags:
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.Notification")}}</p>
 

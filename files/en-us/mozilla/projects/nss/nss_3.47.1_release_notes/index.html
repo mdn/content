@@ -1,0 +1,49 @@
+---
+title: NSS 3.47.1 release notes
+slug: Mozilla/Projects/NSS/NSS_3.47.1_release_notes
+---
+<h2 dir="ltr" id="Introduction" style="line-height: 1.38; margin-top: 18pt; margin-bottom: 4pt;">Introduction</h2>
+
+<p dir="ltr">Network Security Services (NSS) 3.47.1 is a patch release for NSS 3.47. The bug fixes in NSS 3.47.1 are described in the "Bugs Fixed" section below. It was released on 19 November 2019.</p>
+
+<p>The NSS team would like to recognize first-time contributors:</p>
+
+<ul>
+ <li>Craig Disselkoen</li>
+</ul>
+
+<h2 dir="ltr" id="Distribution_Information" style="line-height: 1.38; margin-top: 18pt; margin-bottom: 4pt;">Distribution Information</h2>
+
+<p dir="ltr">The HG tag is NSS_3_47_1_RTM. NSS 3.47.1 requires NSPR 4.23 or newer.</p>
+
+<p dir="ltr">NSS 3.47.1 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul dir="ltr">
+ <li>Source tarballs: <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_47_1_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_47_1_RTM/src/</a></li>
+</ul>
+
+<p dir="ltr">Other releases are available in NSS Releases.</p>
+
+<h2 dir="ltr" id="New_in_NSS_3.47.1" style="line-height: 1.38; margin-top: 18pt; margin-bottom: 4pt;">New in NSS 3.47.1</h2>
+
+<p dir="ltr">No new functionality is introduced in this release.</p>
+
+<h2 dir="ltr" id="Bugs_fixed_in_NSS_3.47.1" style="line-height: 1.38; margin-top: 18pt; margin-bottom: 4pt;">Bugs fixed in NSS 3.47.1</h2>
+
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=CVE-2019-11745">CVE-2019-11745</a> - EncryptUpdate should use maxout, not block size</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1590495">Bug 1590495</a> - Fix a crash that could be caused by client certificates during startup</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1589810">Bug 1589810</a> - Fix compile-time warnings from uninitialized variables in a perl script</li>
+</ul>
+
+<p dir="ltr">This Bugzilla query returns all the bugs fixed in NSS 3.47:</p>
+
+<p dir="ltr"><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.47">https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.47</a></p>
+
+<h2 dir="ltr" id="Compatibility" style="line-height: 1.38; margin-top: 18pt; margin-bottom: 4pt;">Compatibility</h2>
+
+<p dir="ltr">NSS 3.47.1 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.47.1 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 dir="ltr" id="Feedback" style="line-height: 1.38; margin-top: 18pt; margin-bottom: 4pt;">Feedback</h2>
+
+<p dir="ltr">Bugs discovered should be reported by filing a bug report with<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (product NSS).</p>
