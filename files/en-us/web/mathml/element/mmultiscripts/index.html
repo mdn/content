@@ -13,7 +13,7 @@ tags:
 
 <p>MathML uses a special syntax to describe subscripts and superscripts for both, postscripts and prescripts, attached to a base expression:</p>
 
-<pre class="syntaxbox notranslate">&lt;mmultiscripts&gt;
+<pre class="brush: html notranslate">&lt;mmultiscripts&gt;
     <em>base</em>
      (<em>subscript superscript</em>)*
      [ &lt;mprescripts/&gt; (<em>presubscript presuperscript</em>)* ]
@@ -73,7 +73,18 @@ tags:
 
 <p>Sample rendering: <img alt="" src="/files/3222/mmultiscripts_none.png" style="margin-left: 10px; vertical-align: middle;"></p>
 
-<p>Rendering in your browser: <math> <mmultiscripts> <mi>X</mi> <none></none> <mi>c</mi> <mprescripts></mprescripts> <mi>b</mi> <none></none> </mmultiscripts> </math></p>
+<p>Rendering in your browser:
+    <math>
+        <mmultiscripts>
+            <mi>X</mi>
+            <none />
+            <mi>c</mi>
+            <mprescripts />
+            <mi>b</mi>
+            <none />
+        </mmultiscripts>
+    </math>
+</p>
 
 <pre class="brush: html notranslate">&lt;math&gt;
 

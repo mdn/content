@@ -2,7 +2,7 @@
 title: Getting Mozilla Source Code Using CVS
 slug: Mozilla/Developer_guide/Source_Code/CVS
 ---
-<div class="note">Note: This document descibes how to get source code for older versions of the code, Gecko 1.9.0, Firefox 3 or earlier, and older versions of NSS and NSPR. Development for Gecko 1.9.1/Firefox 3.5 and beyond, and recent versions of NSS and NSPR, uses the <a class="internal" href="/en-US/docs/Developer_Guide/Source_Code/Mercurial" title="En/Developer Guide/Source Code/Mercurial">Mercurial</a> source code control system.</div>
+<div class="note">Note: This document describes how to get source code for older versions of the code, Gecko 1.9.0, Firefox 3 or earlier, and older versions of NSS and NSPR. Development for Gecko 1.9.1/Firefox 3.5 and beyond, and recent versions of NSS and NSPR, uses the <a class="internal" href="/en-US/docs/Developer_Guide/Source_Code/Mercurial">Mercurial</a> source code control system.</div>
 
 <div class="warning">
 <p>As of July 2015, CVS services are no longer operated at Mozilla. For access to CVS Archives, please see <a href="https://web.archive.org/web/20160629020307/https://blog.mozilla.org/it/2015/07/28/vcs-decom-status/">the blog post</a> announcing the change.</p>
@@ -66,7 +66,7 @@ slug: Mozilla/Developer_guide/Source_Code/CVS
 
 <p>Multiple projects can be specified with commas: <code>MOZ_CO_PROJECT=suite,browser,xulrunner</code>.</p>
 
-<p><strong>Note</strong> that if you are using a custom <code><a href="/en/Configuring_Build_Options#Using_a_.mozconfig_Configuration_File">.mozconfig</a></code> file, you can also specify <code>MOZ_CO_PROJECT</code> there, instead of including it on the command line.</p>
+<p><strong>Note</strong> that if you are using a custom <code><a href="/en-US/docs/Configuring_Build_Options#Using_a_.mozconfig_Configuration_File">.mozconfig</a></code> file, you can also specify <code>MOZ_CO_PROJECT</code> there, instead of including it on the command line.</p>
 
 <h3 id="Checking_Out_a_New_Source_Tree">Checking Out a New Source Tree</h3>
 
@@ -81,7 +81,7 @@ slug: Mozilla/Developer_guide/Source_Code/CVS
 <pre class="eval">$ cvs -d <a class="link-mailto" href="mailto::pserver:anonymous@cvs-mirror.mozilla.org" rel="freelink">:pserver:anonymous@cvs-mirror.mozilla.org</a>:/cvsroot co mozilla/client.mk
 </pre>
 
-<p>Note: if you have already set up a <code><a href="/en/Configuring_Build_Options#Using_a_.mozconfig_Configuration_File">.mozconfig</a></code> file, you may also need to check out the following files:</p>
+<p>Note: if you have already set up a <code><a href="/en-US/docs/Configuring_Build_Options#Using_a_.mozconfig_Configuration_File">.mozconfig</a></code> file, you may also need to check out the following files:</p>
 
 <dl>
  <dt>Firefox </dt>
@@ -123,7 +123,7 @@ $ make -f client.mk checkout MOZ_CO_PROJECT=<em>option,option</em>
 
 <p>If you want to check out the source code as it was at a specific time you can use the MOZ_CO_DATE variable. For example <code>MOZ_CO_DATE="20 Oct 2006 17:00 PDT"</code>.</p>
 
-<p>This can either be added to your <code><a href="/en/Configuring_Build_Options#Using_a_.mozconfig_Configuration_File">.mozconfig</a></code> file, or specified on the command line, such as</p>
+<p>This can either be added to your <code><a href="/en-US/docs/Configuring_Build_Options#Using_a_.mozconfig_Configuration_File">.mozconfig</a></code> file, or specified on the command line, such as</p>
 
 <pre class="eval">$ cd mozilla
 $ make -f client.mk checkout MOZ_CO_DATE="20 Oct 2006 17:00 PDT" MOZ_CO_PROJECT=<em>option,option</em>
@@ -167,7 +167,7 @@ $ cvs up -r BRANCH client.mk
 <pre class="eval">$ cvs diff -u8p FILENAME
 </pre>
 
-<p>See <a href="/en/Creating_a_patch">Creating a patch</a> for more information.</p>
+<p>See <a href="/en-US/docs/Creating_a_patch">Creating a patch</a> for more information.</p>
 
 <h3 id="Converting_a_Downloaded_Source_Tree">Converting a Downloaded Source Tree</h3>
 

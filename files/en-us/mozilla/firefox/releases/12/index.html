@@ -17,7 +17,7 @@ tags:
 
 <ul>
  <li>The <code>title</code> attribute now supports newline characters to allow multi-line tooltips.</li>
- <li>If JavaScript is disabled, the {{HTMLElement("canvas")}} element was being rendered instead of showing the fallback content as per the <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html">specification</a>. Now the fallback content is rendered instead.</li>
+ <li>If JavaScript is disabled, the {{HTMLElement("canvas")}} element was being rendered instead of showing the fallback content as per the <a class="external" href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html">specification</a>. Now the fallback content is rendered instead.</li>
  <li>The <code>crossorigin</code> attribute is now supported on {{HTMLElement("video")}}.</li>
 </ul>
 
@@ -41,7 +41,7 @@ tags:
  <li>{{domxref("XMLHttpRequest")}} now supports timeouts using the <code>timeout</code> property and "timeout" event, as well as the <code>ontimeout</code> event handler on the {{domxref("XMLHttpRequestEventTarget")}} interface.</li>
  <li>{{domxref("XMLHttpRequest")}} can now load from <a href="/en-US/docs/data_URIs" title="data URIs"><code>data:</code> URIs</a>.</li>
  <li>When downloading large amounts of data, {{domxref("XMLHttpRequest")}} progress event handlers are now called periodically with the <code>responseType</code> set to "moz-blob" and the response being a {{domxref("Blob")}} containing all of the data received so far. This lets progress handlers begin processing data without having to wait for it all to arrive.</li>
- <li>Gecko now supports <a href="/en-US/docs/DOM/Touch_events" title="en-US/docs/DOM/Touch_events">multi-touch</a> (instead of just single touches at a time) on Android.</li>
+ <li>Gecko now supports <a href="/en-US/docs/DOM/Touch_events">multi-touch</a> (instead of just single touches at a time) on Android.</li>
  <li>While editing text using an IME, the <code>input</code> event is now sent whenever the contents of the element being edited have been changed; this happens after the <code>compositionupdate</code> event has been sent to indicate that the IME's text has been changed. You can use the <code>input</code> event handler, therefore, to monitor changes to the actual content of the element.</li>
  <li>{{domxref("DOMError")}} as defined in the DOM 4 specification has been implemented.</li>
  <li>The {{domxref("Document.createNodeIterator()")}} method has been updated to match the DOM4 specification. This makes the <code>whatToShow</code> and <code>filter</code> parameters optional and removes the non-standard fourth parameter, <code>entityReferenceExpansion</code>.</li>
@@ -85,7 +85,7 @@ tags:
  <li>The <a href="/en-US/docs/Tools/Web_Console" title="Web Console">Web Console</a> now caches error messages and log entries added using {{domxref("console.log()")}} if the console isn't currently open, and displays them when the console is opened.</li>
  <li>You can now reset the zoom level, panning, and rotation in the <a href="/en-US/docs/Tools/Page_Inspector/3D_view" title="3D view">3D view</a> by pressing the "r" key.</li>
  <li>You can now hide nodes in the <a href="/en-US/docs/Tools/Page_Inspector/3D_view" title="3D view">3D view</a> by pressing the "x" key after selecting them.</li>
- <li>The <a href="/en-US/docs/Tools/Using_the_Source_Editor" title="en-US/docs/Tools/Using_the_Source_Editor">source editor</a> has a several new editing features and keyboard shortcuts; see <a href="/en-US/docs/Tools/Using_the_Source_Editor" title="Using the Source Editor">Using the Source Editor</a> for details</li>
+ <li>The <a href="/en-US/docs/Tools/Using_the_Source_Editor">source editor</a> has a several new editing features and keyboard shortcuts; see <a href="/en-US/docs/Tools/Using_the_Source_Editor" title="Using the Source Editor">Using the Source Editor</a> for details</li>
 </ul>
 
 <p>Mozilla has been working on integrating its own Web developer tools that complement the popular <a class="external" href="http://getfirebug.com/" title="Firebug Firefox add-on">Firebug</a> add-on. You can get more information about these tools as well as see a list of resources external to Firefox that will help you with your Web development. The entire list is located at <a href="/en-US/docs/Tools" title="Web Developer Tools">Web developer tools</a>.</p>
@@ -103,8 +103,8 @@ tags:
 <h4 id="source-editor.jsm">source-editor.jsm</h4>
 
 <ul>
- <li>The <a href="/en-US/docs/JavaScript_code_modules/source-editor.jsm#resetUndo%28%29" title="en-US/docs/JavaScript_code_modules/source-editor.jsm#resetUndo%28%29"><code>resetUndo()</code></a> method was added; this lets you clear the undo stack.</li>
- <li>The source editor now offers methods for providing search capability: <a href="/en-US/docs/JavaScript_code_modules/source-editor.jsm#find()" title="en-US/docs/JavaScript_code_modules/source-editor.jsm#find()"><code>find()</code></a>, <a href="/en-US/docs/JavaScript_code_modules/source-editor.jsm#findNext()" title="en-US/docs/JavaScript_code_modules/source-editor.jsm#findNext()"><code>findNext()</code></a>, and <a href="/en-US/docs/JavaScript_code_modules/source-editor.jsm#findPrevious()" title="en-US/docs/JavaScript_code_modules/source-editor.jsm#findPrevious()"><code>findPrevious()</code></a>.</li>
+ <li>The <a href="/en-US/docs/JavaScript_code_modules/source-editor.jsm#resetUndo%28%29"><code>resetUndo()</code></a> method was added; this lets you clear the undo stack.</li>
+ <li>The source editor now offers methods for providing search capability: <a href="/en-US/docs/JavaScript_code_modules/source-editor.jsm#find()"><code>find()</code></a>, <a href="/en-US/docs/JavaScript_code_modules/source-editor.jsm#findNext()"><code>findNext()</code></a>, and <a href="/en-US/docs/JavaScript_code_modules/source-editor.jsm#findPrevious()"><code>findPrevious()</code></a>.</li>
 </ul>
 
 <h3 id="XUL">XUL</h3>
@@ -123,7 +123,7 @@ tags:
 <h3 id="XPConnect">XPConnect</h3>
 
 <ul>
- <li>The <a href="/en-US/docs/PRUint64" title="PRUint64"><code>PRUint64</code></a> data type was incorrectly essentially identical to <a href="/en-US/docs/PRInt64" title="PRInt64"><code>PRint64</code></a> when used with XPConnect. This has been fixed.</li>
+ <li>The <a href="/en-US/docs/PRUint64"><code>PRUint64</code></a> data type was incorrectly essentially identical to <a href="/en-US/docs/PRInt64"><code>PRint64</code></a> when used with XPConnect. This has been fixed.</li>
 </ul>
 
 <h3 id="Interface_changes">Interface changes</h3>
@@ -156,7 +156,7 @@ tags:
 <h3 id="Other_changes">Other changes</h3>
 
 <ul>
- <li>The editor component (known as <a href="/en-US/docs/Midas">Midas</a>) now <a href="/en-US/docs/Using_the_Editor_from_XUL#Editor_event_handling" title="en-US/docs/Using_the_Editor_from_XUL#Editor_event_handling">only accepts events</a> from privileged code.</li>
+ <li>The editor component (known as <a href="/en-US/docs/Midas">Midas</a>) now <a href="/en-US/docs/Using_the_Editor_from_XUL#Editor_event_handling">only accepts events</a> from privileged code.</li>
 </ul>
 
 <h2 id="See_also">See also</h2>

@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var createContext = browser.contextualIdentities.create(
+<pre class="brush:js">var createContext = browser.contextualIdentities.create(
   details                  // object
 )
 </pre>
@@ -38,7 +38,7 @@ tags:
   </dd>
   <dt><code>color</code></dt>
   <dd>
-  <p><code><code>string</code></code>. The color associated with the new identity. This will be used to highlight tabs belonging to this identity. You can supply any of the following values here:</p>
+  <p><code>string</code>. The color associated with the new identity. This will be used to highlight tabs belonging to this identity. You can supply any of the following values here:</p>
 
   <ul>
    <li>"blue"</li>
@@ -90,7 +90,7 @@ tags:
 
 <p>This example creates a new contextual identity and logs its cookie store ID:</p>
 
-<pre class="brush: js">function onCreated(context) {
+<pre class="notranslate brush: js">function onCreated(context) {
   console.log(`New identity's ID: ${context.cookieStoreId}.`);
 }
 

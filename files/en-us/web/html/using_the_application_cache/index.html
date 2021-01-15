@@ -25,7 +25,7 @@ tags:
 
 <h2 id="Introduction">Introduction</h2>
 
-<p><a href="/en-US/docs/HTML/HTML5">HTML5</a> provides an <em>application caching</em> mechanism that lets web applications run offline. This <strong>Application Cache</strong> (<em>AppCache</em>) interface lists resources that browsers should cache to be available offline. Applications that are cached load and work correctly offline, even if users press the Refresh button.</p>
+<p><a href="/en-US/docs/Web/HTML/HTML5">HTML5</a> provides an <em>application caching</em> mechanism that lets web applications run offline. This <strong>Application Cache</strong> (<em>AppCache</em>) interface lists resources that browsers should cache to be available offline. Applications that are cached load and work correctly offline, even if users press the Refresh button.</p>
 
 <p>An application cache gives the following benefits:</p>
 
@@ -114,14 +114,14 @@ tags:
 
 <h3 id="Example_1_a_simple_cache_manifest_file">Example 1: a simple cache manifest file</h3>
 
-<p>The following is a simple cache manifest file, <code>example.appcache</code>, for an imaginary web site at <span class="nowiki">www.example.com</span>.</p>
+<p>The following is a simple cache manifest file, <code>example.appcache</code>, for an imaginary web site at <code>www.example.com</code>.</p>
 
 <pre class="eval notranslate">CACHE MANIFEST
 # v1 - 2011-08-13
 # This is a comment.
-<span class="nowiki">http://www.example.com/index.html</span>
-<span class="nowiki">http://www.example.com/header.png</span>
-<span class="nowiki">http://www.example.com/blah/blah</span>
+http://www.example.com/index.html
+http://www.example.com/header.png
+http://www.example.com/blah/blah
 </pre>
 
 <p>A cache manifest file can include three sections (<code>CACHE</code>, <code>NETWORK</code>, and <code>FALLBACK</code>, discussed below). In the example above, there is no section header, so all data lines are assumed to be in the explicit (<code>CACHE</code>) section, meaning that the browser should cache all the listed resources in the application cache. Resources can be specified using either absolute or relative URLs (e.g., <code>index.html</code>).</p>
@@ -147,7 +147,7 @@ tags:
 
 <h3 id="Example_2_a_more_complete_cache_manifest_file">Example 2: a more complete cache manifest file</h3>
 
-<p>The following is a more complete cache manifest file for the imaginary web site at <span class="nowiki">www.example.com</span>:</p>
+<p>The following is a more complete cache manifest file for the imaginary web site at <code>www.example.com</code>:</p>
 
 <pre class="eval notranslate">CACHE MANIFEST
 # v1 2011-08-14
@@ -210,8 +210,9 @@ FALLBACK:
 </table>
 </blockquote>
 
+<p>The section header line may include whitespaces, but must include the colon (<code>:</code>) in the section name.</p>
+
 <dl>
- <dd>The section header line may include whitespaces, but must include the colon (<code>:</code>) in the section name.</dd>
  <dt>Section data</dt>
  <dd>The format for lines of data varies from section to section. In the explicit (<code>CACHE:</code>) section, each line is a valid URI or IRI reference to a resource to cache (no wildcard characters are allowed in this sections). Whitespace is allowed before and after the URI or IRI on each line. In the Fallback section each line is a valid URI or IRI reference to a resource, followed by a fallback resource that is to be served up when a connection with the server cannot be made. In the network section, each line is a valid URI or IRI reference to a resource to fetch from the network (or the wildcard character <code>*</code> can be used in this section).
  <div class="note"><strong>Note:</strong> Relative URIs are relative to the cache manifest's URI, not to the URI of the document referencing the manifest.</div>

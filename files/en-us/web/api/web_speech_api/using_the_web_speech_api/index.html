@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Speech_recognition">Speech recognition</h2>
 
-<p>Speech recognition involves receiving speech through a device's microphone, which is then checked by a speech recognition service against a list of grammar (basically, the vocabulary you want to have recognised in a particular app.) When a word or phrase is successfully recognised, it is returned as a result (or list of results) as a text string, and further actions can be initiated as a result.</p>
+<p>Speech recognition involves receiving speech through a device's microphone, which is then checked by a speech recognition service against a list of grammar (basically, the vocabulary you want to have recognized in a particular app.) When a word or phrase is successfully recognized, it is returned as a result (or list of results) as a text string, and further actions can be initiated as a result.</p>
 
 <p>The Web Speech API has a main controller interface for this — {{domxref("SpeechRecognition")}} — plus a number of closely-related interfaces for representing grammar, results, etc. Generally, the default speech recognition system available on the device will be used for the speech recognition — most modern OSes have a speech recognition system for issuing voice commands. Think about Dictation on macOS, Siri on iOS, Cortana on Windows 10, Android Speech, etc.</p>
 
@@ -27,7 +27,7 @@ tags:
 
 <p>To show simple usage of Web speech recognition, we've written a demo called <a href="https://github.com/mdn/web-speech-api/tree/master/speech-color-changer">Speech color changer</a>. When the screen is tapped/clicked, you can say an HTML color keyword, and the app's background color will change to that color.</p>
 
-<p><img alt="The UI of an app titled Speech Color changer. It invites the user to tap the screen and say a color, and then it turns the background of the app that colour. In this case it has turned the background red." src="https://mdn.mozillademos.org/files/11975/speech-color-changer.png" style="border: 1px solid black; display: block; height: 533px; margin: 0px auto; width: 300px;"></p>
+<p><img alt="The UI of an app titled Speech Color changer. It invites the user to tap the screen and say a color, and then it turns the background of the app that color. In this case it has turned the background red." src="https://mdn.mozillademos.org/files/11975/speech-color-changer.png" style="border: 1px solid black; display: block; height: 533px; margin: 0px auto; width: 300px;"></p>
 
 <p>To run the demo, you can clone (or <a href="https://github.com/mdn/web-speech-api/archive/master.zip">directly download</a>) the Github repo it is part of, open the HTML index file in a supporting desktop browser, or navigate to the <a href="https://mdn.github.io/web-speech-api/speech-color-changer/">live demo URL</a> in a supporting mobile browser like Chrome.</p>
 
@@ -71,7 +71,7 @@ var grammar = '#JSGF V1.0; grammar colors; public &lt;color&gt; = ' + colors.joi
 <ul>
  <li>The lines are separated by semi-colons, just like in JavaScript.</li>
  <li>The first line — <code>#JSGF V1.0;</code> — states the format and version used. This always needs to be included first.</li>
- <li>The second line indicates a type of term that we want to recognise. <code>public</code> declares that it is a public rule, the string in angle brackets defines the recognised name for this term (<code>color</code>), and the list of items that follow the equals sign are the alternative values that will be recognised and accepted as appropriate values for the term. Note how each is separated by a pipe character.</li>
+ <li>The second line indicates a type of term that we want to recognise. <code>public</code> declares that it is a public rule, the string in angle brackets defines the recognized name for this term (<code>color</code>), and the list of items that follow the equals sign are the alternative values that will be recognized and accepted as appropriate values for the term. Note how each is separated by a pipe character.</li>
  <li>You can have as many terms defined as you want on separate lines following the above structure, and include fairly complex grammar definitions. For this basic demo, we are just keeping things simple. </li>
 </ul>
 
@@ -132,17 +132,17 @@ document.body.onclick = function() {
   console.log('Confidence: ' + event.results[0][0].confidence);
 }</pre>
 
-<p>The second line here is a bit complex-looking, so let's explain it step by step. The {{domxref("SpeechRecognitionEvent.results")}} property returns a {{domxref("SpeechRecognitionResultList")}} object containing {{domxref("SpeechRecognitionResult")}} objects. It has a getter so it can be accessed like an array — so the first <code>[0]</code> returns the <code>SpeechRecognitionResult</code> at position 0. Each <code>SpeechRecognitionResult</code> object contains {{domxref("SpeechRecognitionAlternative")}} objects that contain individual recognised words. These also have getters so they can be accessed like arrays — the second <code>[0]</code> therefore returns the <code>SpeechRecognitionAlternative</code> at position 0. We then return its <code>transcript</code> property to get a string containing the individual recognised result as a string, set the background color to that color, and report the color recognised as a diagnostic message in the UI.</p>
+<p>The second line here is a bit complex-looking, so let's explain it step by step. The {{domxref("SpeechRecognitionEvent.results")}} property returns a {{domxref("SpeechRecognitionResultList")}} object containing {{domxref("SpeechRecognitionResult")}} objects. It has a getter so it can be accessed like an array — so the first <code>[0]</code> returns the <code>SpeechRecognitionResult</code> at position 0. Each <code>SpeechRecognitionResult</code> object contains {{domxref("SpeechRecognitionAlternative")}} objects that contain individual recognized words. These also have getters so they can be accessed like arrays — the second <code>[0]</code> therefore returns the <code>SpeechRecognitionAlternative</code> at position 0. We then return its <code>transcript</code> property to get a string containing the individual recognized result as a string, set the background color to that color, and report the color recognized as a diagnostic message in the UI.</p>
 
-<p>We also use a {{domxref("SpeechRecognition.onspeechend")}} handler to stop the speech recognition service from running (using {{domxref("SpeechRecognition.stop()")}}) once a single word has been recognised and it has finished being spoken:</p>
+<p>We also use a {{domxref("SpeechRecognition.onspeechend")}} handler to stop the speech recognition service from running (using {{domxref("SpeechRecognition.stop()")}}) once a single word has been recognized and it has finished being spoken:</p>
 
 <pre class="brush: js">recognition.onspeechend = function() {
   recognition.stop();
 }</pre>
 
-<h4 id="Handling_errors_and_unrecognised_speech">Handling errors and unrecognised speech</h4>
+<h4 id="Handling_errors_and_unrecognized_speech">Handling errors and unrecognized speech</h4>
 
-<p>The last two handlers are there to handle cases where speech was recognised that wasn't in the defined grammar, or an error occurred. {{domxref("SpeechRecognition.onnomatch")}} seems to be supposed to handle the first case mentioned, although note that at the moment it doesn't seem to fire correctly; it just returns whatever was recognised anyway:</p>
+<p>The last two handlers are there to handle cases where speech was recognized that wasn't in the defined grammar, or an error occurred. {{domxref("SpeechRecognition.onnomatch")}} seems to be supposed to handle the first case mentioned, although note that at the moment it doesn't seem to fire correctly; it just returns whatever was recognized anyway:</p>
 
 <pre class="brush: js">recognition.onnomatch = function(event) {
   diagnostic.textContent = 'I didnt recognise that color.';

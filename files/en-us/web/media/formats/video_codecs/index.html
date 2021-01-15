@@ -1599,7 +1599,7 @@ tags:
 
 <p>To prepare video for archival purposes from outside your web site or app, use a utility that performs compression on the original uncompressed video data. For example, the free <a href="https://www.videolan.org/developers/x264.html">x264</a> utility can be used to encode video in {{anch("AVC")}} format using a very high bit rate:</p>
 
-<pre class="notranslate">x264 --crf 18 -preset ultrafast --output <em>outfilename.mp4</em> <em>infile</em></pre>
+<pre class="brush: plain notranslate">x264 --crf 18 -preset ultrafast --output <em>outfilename.mp4</em> <em>infile</em></pre>
 
 <p>While other codecs may have better best-case quality levels when compressing the video by a significant margin, their encoders tend to be slow enough that the nearly-lossless encoding you get with this compression is vastly faster at about the same overall quality level.</p>
 
@@ -1687,6 +1687,6 @@ let recorder = new MediaRecorder(sourceStream, options);</pre>
  <li>{{RFC(4381)}}: MIME Type Registrations for 3GPP2 Multimedia Files</li>
  <li>{{RFC(4337)}}: MIME Type Registrations for MPEG-4</li>
  <li><a href="http://dev.opera.com/articles/view/introduction-html5-video/#codecs">Video codecs in Opera</a></li>
- <li><a href="http://msdn.microsoft.com/en-us/library/ff975073%28v=VS.85%29.aspx">Video</a> and <a href="http://msdn.microsoft.com/en-us/library/ff975061%28v=vs.85%29.aspx">audio</a> codecs in Internet Explorer</li>
+ <li><a href="https://msdn.microsoft.com/en-us/library/ff975073%28v=VS.85%29.aspx">Video</a> and <a href="https://msdn.microsoft.com/en-us/library/ff975061%28v=vs.85%29.aspx">audio</a> codecs in Internet Explorer</li>
  <li><a href="http://www.chromium.org/audio-video">Video and audio codecs in Chrome</a></li>
 </ul>

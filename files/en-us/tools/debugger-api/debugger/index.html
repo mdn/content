@@ -85,7 +85,7 @@ slug: Tools/Debugger-API/Debugger
  <dd>Debuggee code has executed a<em>debugger</em> statement in<em>frame</em>. This method should return a <a href="Conventions#resumption-values" title="Debugger API: General Conventions: Resumption Values">resumption value</a> specifying how the debuggee’s execution should proceed.</dd>
  <dt><code>onEnterFrame(<em>frame</em>)</code></dt>
  <dd>
- <p>The stack frame<em>frame</em> is about to begin executing code. (Naturally,<em>frame</em> is currently the youngest <a href="Debugger.Frame#visible-frames" title="Debugger.Frame: Visible Frames">visible frame</a>.) This method should return a <a href="Conventions#resumption-values" title="Debugger API: General Conventions: Resumption Values">resumption value</a> specifying how the debuggee’s execution should proceed.</p>
+ <p>The stack <em>frame</em> is about to begin executing code. (Naturally,<em>frame</em> is currently the youngest <a href="Debugger.Frame#visible-frames" title="Debugger.Frame: Visible Frames">visible frame</a>.) This method should return a <a href="Conventions#resumption-values" title="Debugger API: General Conventions: Resumption Values">resumption value</a> specifying how the debuggee’s execution should proceed.</p>
 
  <p>SpiderMonkey only calls <code>onEnterFrame</code> to report <a href="Debugger.Frame#visible-frames" title="Debugger.Frame: Visible Frames">visible</a>, non-<code>"debugger"</code> frames.</p>
  </dd>

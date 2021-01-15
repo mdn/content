@@ -2,34 +2,42 @@
 title: Intl.PluralRules.select()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select
 tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Method
-  - PluralRules
+- Internationalization
+- Intl
+- JavaScript
+- Localization
+- Method
+- PluralRules
+- Prototype
+- Reference
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>Intl.PluralRules.prototype.select</code></strong> method returns a String indicating which plural rule to use for locale-aware formatting.</p>
+<p>The <strong><code>Intl.PluralRules.prototype.select()</code></strong> method returns a
+	string indicating which plural rule to use for locale-aware formatting.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><code><var>pluralCategory = pluralRule</var>.select(<var>number</var>)</code></pre>
+<pre
+	class="brush: js notranslate"><var>pluralCategory = pluralRule</var>.select(<var>number</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>number</code></dt>
- <dd>The number to get a plural rule for.</dd>
+	<dt><code><var>number</var></code></dt>
+	<dd>The number to get a plural rule for.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code>string</code> representing the pluralization category of the <code>number</code>, can be one of <code>zero</code>, <code>one</code>, <code>two</code>, <code>few</code>, <code>many</code> or <code>other</code>.</p>
+<p>A string representing the pluralization category of the <code>number</code>, can be one
+	of <code>zero</code>, <code>one</code>, <code>two</code>, <code>few</code>,
+	<code>many</code> or <code>other</code>.</p>
 
 <h2 id="Description">Description</h2>
 
-<p>This function selects a pluralization category according to the locale and formatting options of a {{jsxref("PluralRules")}} object.</p>
+<p>This function selects a pluralization category according to the locale and formatting
+	options of a {{jsxref("PluralRules")}} object.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -54,27 +62,25 @@ new Intl.PluralRules('ar-EG').select(18);
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sec-intl.pluralrules.prototype.select', 'Intl.PluralRules.select()')}}</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('ES Int Draft', '#sec-intl.pluralrules.prototype.select',
+				'Intl.PluralRules.select()')}}</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("javascript.builtins.Intl.PluralRules.select")}}</p>
-</div>
+<div>{{Compat("javascript.builtins.Intl.PluralRules.select")}}</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("PluralRules", "Intl.PluralRules")}}</li>
+	<li>{{jsxref("Intl.PluralRules")}}</li>
 </ul>

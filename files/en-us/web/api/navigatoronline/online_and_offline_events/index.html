@@ -10,7 +10,7 @@ tags:
   - Offline web applications
   - Web Development
 ---
-<p>Some browsers implement <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#offline">Online/Offline events</a> from the <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/">WHATWG Web Applications 1.0 specification</a>.</p>
+<p>Some browsers implement <a class="external" href="https://www.whatwg.org/specs/web-apps/current-work/#offline">Online/Offline events</a> from the <a class="external" href="https://www.whatwg.org/specs/web-apps/current-work/">WHATWG Web Applications 1.0 specification</a>.</p>
 
 <h2 id="Overview">Overview</h2>
 
@@ -33,7 +33,7 @@ tags:
 
 <p>This property is updated whenever the user switches into "Offline Mode" (File → Work Offline in Firefox). Additionally, this property should update whenever a browser is no longer capable of connecting to the network. According to the specification:</p>
 
-<blockquote cite="http://www.whatwg.org/specs/web-apps/current-work/#offline">The <code>navigator.onLine</code> attribute must return false if the user agent will not contact the network when the user follows links or when a script requests a remote page (or knows that such an attempt would fail)...</blockquote>
+<blockquote cite="https://www.whatwg.org/specs/web-apps/current-work/#offline">The <code>navigator.onLine</code> attribute must return false if the user agent will not contact the network when the user follows links or when a script requests a remote page (or knows that such an attempt would fail)...</blockquote>
 
 <p>Firefox 2 updates this property when switching to/from the browser's Offline mode.  <a href="https://developer.mozilla.org/en-US/Firefox/Releases/41#Miscellaneous">Firefox 41</a> updates this property also when the OS reports a change in network connectivity on Windows, Linux, and OS X.</p>
 
@@ -111,14 +111,14 @@ tags:
 
 <p>{{ EmbedLiveSample('Example', '100%', '150') }}</p>
 
-<h2 id="References">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p>If the API isn't implemented in the browser, you can use other signals to detect if you are offline including using service workers and <a class="external" href="http://www.html5rocks.com/en/mobile/workingoffthegrid.html#toc-xml-http-request">responses from XMLHttpRequest</a>.</p>
 
 <h2 id="References">References</h2>
 
 <ul>
- <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#offline">'Online/Offline events' section from the WHATWG Web Applications 1.0 Specification</a></li>
+ <li><a class="external" href="https://www.whatwg.org/specs/web-apps/current-work/#offline">'Online/Offline events' section from the WHATWG Web Applications 1.0 Specification</a></li>
  <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=336359">The bug tracking online/offline events implementation in Firefox</a> and a <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=336682">follow-up</a></li>
  <li><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=220609">A simple test case</a></li>
  <li><a class="external" href="http://ejohn.org/blog/offline-events/">An explanation of Online/Offline events</a></li>

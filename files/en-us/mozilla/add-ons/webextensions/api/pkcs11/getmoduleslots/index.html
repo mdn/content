@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var getting = browser.pkcs11.getModuleSlots(
+<pre class="brush:js">var getting = browser.pkcs11.getModuleSlots(
   name              // string
 )
 </pre>
@@ -71,7 +71,7 @@ tags:
 
 <p>Installs a module, then lists its slots and list the tokens they contain:</p>
 
-<pre class="brush: js">function onInstalled() {
+<pre class="notranslate brush: js">function onInstalled() {
   return browser.pkcs11.getModuleSlots("my_module");
 }
 

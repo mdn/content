@@ -48,9 +48,6 @@ tags:
 
  <p>Defaults to <code>false</code>.</p>
  </dd>
- <dd>
-
- </dd>
  <dt><code>hyperlinkAuditingEnabled</code></dt>
  <dd>A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If <code>true</code>, the browser sends auditing pings when a website uses the <code>ping</code> attribute to request them.</dd>
  <dt><code>protectedContentEnabled</code></dt>
@@ -95,7 +92,7 @@ tags:
 
 <p>Set the <code>hyperlinkAuditingEnabled</code> property.</p>
 
-<pre class="brush: js notranslate">function onSet(result) {
+<pre class="notranslate brush: js notranslate">function onSet(result) {
   if (result) {
     console.log("success");
   } else {

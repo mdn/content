@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js notranslate">var capturing = browser.tabs.captureVisibleTab(
+<pre class="brush:js">var capturing = browser.tabs.captureVisibleTab(
   windowId,               // optional integer
   options                 // optional extensionTypes.ImageDetails
 )
@@ -43,7 +43,7 @@ tags:
 
 <p>Capture an image of the active tab in the current window, with default settings:</p>
 
-<pre class="brush: js notranslate">function onCaptured(imageUri) {
+<pre class="notranslate brush: js">function onCaptured(imageUri) {
   console.log(imageUri);
 }
 

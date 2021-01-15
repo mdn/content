@@ -9,7 +9,7 @@ slug: Mozilla/Projects/NSS/NSS_3.15_release_notes
 <p>NSS 3.15 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
 <ul>
   <li>Source tarballs:<br>
-    <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_15_RTM/src/" title="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_15_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_15_RTM/src/</a></li>
+    <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_15_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_15_RTM/src/</a></li>
 </ul>
 <h2 id="New_in_NSS_3.15">New in NSS 3.15</h2>
 <h3 id="New_Functionality">New Functionality</h3>
@@ -79,7 +79,7 @@ slug: Mozilla/Projects/NSS/NSS_3.15_release_notes
   <li><em>SECITEM_ReallocItem</em> is now deprecated. Please consider using <em>SECITEM_ReallocItemV2</em> in all future code.</li>
   <li>
     <p>NSS has migrated from CVS to the Mercurial source control management system.</p>
-    <p>Updated build instructions are available at <a href="/en-US/docs/NSS_reference/Building_and_installing_NSS/Migration_to_HG" title="/en-US/docs/NSS_reference/Building_and_installing_NSS/Migration_to_HG">Migration to HG</a></p>
+    <p>Updated build instructions are available at <a href="/en-US/docs/NSS_reference/Building_and_installing_NSS/Migration_to_HG">Migration to HG</a></p>
     <p>As part of this migration, the source code directory layout has been re-organized.</p>
   </li>
   <li>
@@ -89,13 +89,12 @@ slug: Mozilla/Projects/NSS/NSS_3.15_release_notes
     <p>The default implementation of SSL_AuthCertificate has been updated to add certificate status responses stapled by the TLS server to the OCSP cache.</p>
     <p>Applications that use SSL_AuthCertificateHook to override the default handler should add appropriate calls to <em>SSL_PeerStapledOCSPResponse</em> and <em>CERT_CacheOCSPResponseFromSideChannel</em>.</p>
   </li>
-  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=554369" title="https://bugzilla.mozilla.org/show_bug.cgi?id=554369">Bug 554369</a>: Fixed correctness of CERT_CacheOCSPResponseFromSideChannel and other OCSP caching behaviour.</li>
-  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=853285" title="https://bugzilla.mozilla.org/show_bug.cgi?id=853285">Bug 853285</a>: Fixed bugs in AES GCM.</li>
-  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=341127" title="https://bugzilla.mozilla.org/show_bug.cgi?id=341127">Bug 341127</a>: Fix the invalid read in rc4_wordconv.</li>
-  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=831006" title="https://bugzilla.mozilla.org/show_bug.cgi?id=831006">Faster NIST curve P-256 implementation</a>.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=554369">Bug 554369</a>: Fixed correctness of CERT_CacheOCSPResponseFromSideChannel and other OCSP caching behaviour.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=853285">Bug 853285</a>: Fixed bugs in AES GCM.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=341127">Bug 341127</a>: Fix the invalid read in rc4_wordconv.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=831006">Faster NIST curve P-256 implementation</a>.</li>
   <li>Dropped (32-bit) SPARC V8 processor support on Solaris. The shared library <code>libfreebl_32int_3.so</code> is no longer produced.</li>
 </ul>
 <h2 id="Bugs_fixed_in_NSS_3.15">Bugs fixed in NSS 3.15</h2>
 <p>This Bugzilla query returns all the bugs fixed in NSS 3.15:</p>
-<p><a href="https://bugzilla.mozilla.org/buglist.cgi?list_id=6278317&amp;resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.15" title="https://bugzilla.mozilla.org/buglist.cgi?list_id=6278317&amp;resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.15">https://bugzilla.mozilla.org/buglist.cgi?list_id=6278317&amp;resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.15</a></p>
-<p> </p>
+<p><a href="https://bugzilla.mozilla.org/buglist.cgi?list_id=6278317&amp;resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.15">https://bugzilla.mozilla.org/buglist.cgi?list_id=6278317&amp;resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.15</a></p>

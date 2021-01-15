@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{JsSidebar("More")}}</div>
 
-<p>This page describes JavaScript's lexical grammar. The source text of ECMAScript scripts gets scanned from left to right and is converted into a sequence of input elements which are tokens, control characters, line terminators, comments or <a href="/en-US/docs/Glossary/whitespace">white space</a>. ECMAScript also defines certain keywords and literals and has rules for automatic insertion of semicolons to end statements.</p>
+<p>This page describes JavaScript's lexical grammar. The source text of ECMAScript scripts gets scanned from left to right and is converted into a sequence of input elements which are tokens, control characters, line terminators, comments or <a href="/en-US/docs/Glossary/Whitespace">white space</a>. ECMAScript also defines certain keywords and literals and has rules for automatic insertion of semicolons to end statements.</p>
 
 <h2 id="Control_characters">Control characters</h2>
 
@@ -50,7 +50,7 @@ tags:
 
 <h2 id="White_space">White space</h2>
 
-<p><a href="/en-US/docs/Glossary/whitespace">White space</a> characters improve the readability of source text and separate tokens from each other. These characters are usually unnecessary for the functionality of the code. <a href="https://en.wikipedia.org/wiki/Minification_%28programming%29">Minification tools</a> are often used to remove whitespace in order to reduce the amount of data that needs to be transferred.</p>
+<p><a href="/en-US/docs/Glossary/Whitespace">White space</a> characters improve the readability of source text and separate tokens from each other. These characters are usually unnecessary for the functionality of the code. <a href="https://en.wikipedia.org/wiki/Minification_%28programming%29">Minification tools</a> are often used to remove whitespace in order to reduce the amount of data that needs to be transferred.</p>
 
 <table class="standard-table">
 	<caption>White space characters</caption>
@@ -111,7 +111,7 @@ tags:
 
 <h2 id="Line_terminators">Line terminators</h2>
 
-<p>In addition to <a href="/en-US/docs/Glossary/Whitespace">white space</a> characters, line terminator characters are used to improve the readability of the source text. However, in some cases, line terminators can influence the execution of JavaScript code as there are a few places where they are forbidden. Line terminators also affect the process of <a href="#Automatic_semicolon_insertion">automatic semicolon insertion</a>. Line terminators are matched by the <strong>\s</strong> class in <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expressions</a>.</p>
+<p>In addition to <a href="/en-US/docs/Glossary/Whitespace">white space</a> characters, line terminator characters are used to improve the readability of the source text. However, in some cases, line terminators can influence the execution of JavaScript code as there are a few places where they are forbidden. Line terminators also affect the process of <a href="#automatic_semicolon_insertion">automatic semicolon insertion</a>. Line terminators are matched by the <strong>\s</strong> class in <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expressions</a>.</p>
 
 <p>Only the following Unicode code points are treated as line terminators in ECMAScript, other line breaking characters are treated as white space (for example, Next Line, NEL, U+0085 is considered as white space).</p>
 
@@ -243,7 +243,7 @@ console.log("Hello world");
 	<li>{{jsxref("Statements/const", "const")}}</li>
 	<li>{{jsxref("Statements/continue", "continue")}}</li>
 	<li>{{jsxref("Statements/debugger", "debugger")}}</li>
-	<li>{{jsxref("Statements/default", "default")}}</li>
+	<li>{{jsxref("Statements/switch", "default")}}</li>
 	<li>{{jsxref("Operators/delete", "delete")}}</li>
 	<li>{{jsxref("Statements/do...while", "do")}}</li>
 	<li>{{jsxref("Statements/if...else", "else")}}</li>
@@ -551,7 +551,7 @@ var o = { a: a, b: b, c: c };
 
 <h3 id="Template_literals">Template literals</h3>
 
-<p>See also <a href="/en-US/docs/Web/JavaScript/Reference/template_strings">template strings</a> for more information.</p>
+<p>See also <a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">template strings</a> for more information.</p>
 
 <pre class="brush: js notranslate">`string text`
 
@@ -578,17 +578,19 @@ tag `string text ${expression} string text`</pre>
 
 <p>The ECMAScript specification mentions <a href="https://tc39.github.io/ecma262/#sec-rules-of-automatic-semicolon-insertion">three rules of semicolon insertion</a>.</p>
 
-<p>1. A semicolon is inserted before, when a <a href="#Line_terminators">Line terminator</a> or "}" is encountered that is not allowed by the grammar.</p>
+<p>1. A semicolon is inserted before, when a <a href="#line_terminators">Line terminator</a> or "}" is encountered that is not allowed by the grammar.</p>
 
-<pre class="brush: js notranslate">{ 1 2 } 3
+<pre class="brush: js notranslate">{ 1
+2 } 3
 
-// is transformed by ASI into
+// is transformed by ASI into:
 
-{ 1 2 ;} 3;</pre>
+{ 1
+;2 ;} 3;</pre>
 
 <p>2. A semicolon is inserted at the end, when the end of the input stream of tokens is detected and the parser is unable to parse the single input stream as a complete program.</p>
 
-<p>Here <code>++</code> is not treated as a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment">postfix operator</a> applying to variable <code>b</code>, because a line terminator occurs between <code>b</code> and <code>++</code>.</p>
+<p>Here <code>++</code> is not treated as a <a href="/en-US/docs/Web/JavaScript/Reference/Operators#Increment">postfix operator</a> applying to variable <code>b</code>, because a line terminator occurs between <code>b</code> and <code>++</code>.</p>
 
 <pre class="brush: js notranslate">a = b
 ++c

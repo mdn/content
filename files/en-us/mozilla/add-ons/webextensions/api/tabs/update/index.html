@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var updating = browser.tabs.update(
+<pre class="brush:js">var updating = browser.tabs.update(
   tabId,              // optional integer
   updateProperties    // object
 )
@@ -89,7 +89,7 @@ tags:
 
 <p>Navigate the active tab in the current window to https://developer.mozilla.org:</p>
 
-<pre class="brush: js">function onUpdated(tab) {
+<pre class="notranslate brush: js">function onUpdated(tab) {
   console.log(`Updated tab: ${tab.id}`);
 }
 
@@ -102,7 +102,7 @@ updating.then(onUpdated, onError);</pre>
 
 <p>Activate the first tab in the current window, and navigate it to https://developer.mozilla.org:</p>
 
-<pre class="brush: js">function onUpdated(tab) {
+<pre class="notranslate brush: js">function onUpdated(tab) {
   console.log(`Updated tab: ${tab.id}`);
 }
 

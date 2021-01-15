@@ -22,7 +22,7 @@ slug: Mozilla/Projects/NSS/NSS_3.30_release_notes
 <h3 id="New_Functionality">New Functionality</h3>
 
 <ul>
- <li>In the PKCS#11 root CA module (nssckbi), CAs with positive trust are marked with a new boolean attribute, CKA_NSS_MOZILLA_CA_POLICY, set to true. Applications that need to distinguish them from other other root CAs, may use the exported function PK11_HasAttributeSet.</li>
+ <li>In the PKCS#11 root CA module (nssckbi), CAs with positive trust are marked with a new boolean attribute, CKA_NSS_MOZILLA_CA_POLICY, set to true. Applications that need to distinguish them from other root CAs, may use the exported function PK11_HasAttributeSet.</li>
  <li>Support for callback functions that can be used to monitor SSL/TLS alerts that are sent or received.</li>
 </ul>
 

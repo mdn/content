@@ -71,7 +71,7 @@ tags:
 	<dt><code>urlMatches</code>{{optional_inline}}</dt>
 	<dd><code>string</code>. Matches if the URL (without fragment identifier) matches a specified <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expression</a>. Port numbers are stripped from the URL if they match the default port number.
 	<ul>
-		<li>For example: <code>urlMatches: "^[^:]*:(?://)?(?:[^/]*\\.)?mozilla\\.org/.*$"</code> matches "http://mozilla.org/", "https://developer.mozilla.org/", "ftp://foo.mozilla.org/", but not "https://developer.fakemozilla.org/".</li>
+		<li>For example: <code>urlMatches: "^[^:]*:(?://)?(?:[^/]*\\.)?mozilla\\.org/.*$"</code> matches "https://mozilla.org/", "https://developer.mozilla.org/", "ftp://foo.mozilla.org/", but not "https://developer.fakemozilla.org/".</li>
 	</ul>
 	</dd>
 	<dt><code>originAndPathMatches</code>{{optional_inline}}</dt>
@@ -85,13 +85,13 @@ tags:
 	<dt><code>urlSuffix</code>{{optional_inline}}</dt>
 	<dd><code>string</code>. Matches if the URL (without fragment identifier) ends with a specified string. Port numbers are stripped from the URL if they match the default port number. Note that an implicit forward slash "/" is added after the host, so <code>"com/"</code> matches "https://example.com", but <code>"com"</code> does not.</dd>
 	<dt><code>schemes</code>{{optional_inline}}</dt>
-	<dd><code>array</code> of <code><code>string</code></code>. Matches if the scheme of the URL is equal to any of the schemes specified in the array. Because schemes are always converted to lowercase, this should always be given in lowercase or it will never match.
+	<dd><code>array</code> of <code>string</code>. Matches if the scheme of the URL is equal to any of the schemes specified in the array. Because schemes are always converted to lowercase, this should always be given in lowercase or it will never match.
 	<ul>
 		<li>Example: <code>["https"]</code> will match only HTTPS URLs.</li>
 	</ul>
 	</dd>
 	<dt><code>ports</code>{{optional_inline}}</dt>
-	<dd><code>array</code> of <code><code><code>(integer</code></code> </code>or<code> <code><code>array</code> of <code><code>integer</code></code></code></code>). An array which may contain integers and arrays of integers. Integers are interpreted as port numbers, while arrays of integers are interpreted as port ranges. Matches if the port of the URL matches any port numer or is contained in any ranges.
+	<dd><code>array</code> of (<code>integer</code> or (<code>array</code> of <code>integer</code>)). An array which may contain integers and arrays of integers. Integers are interpreted as port numbers, while arrays of integers are interpreted as port ranges. Matches if the port of the URL matches any port number or is contained in any ranges.
 	<ul>
 		<li>For example: <code>[80, 443, [1000, 1200]]</code> matches all requests on ports 80, 443, and in the range 1000-1200.</li>
 	</ul>

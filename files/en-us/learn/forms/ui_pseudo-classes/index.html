@@ -39,7 +39,7 @@ tags:
  <li>{{cssxref(":active")}}: selects an element only when it is being activated (i.e. while it is being clicked on, or when the <kbd>Return</kbd>/<kbd>Enter</kbd> key is being pressed down in the case of a keyboard activation).</li>
 </ul>
 
-<p>These basic pseudo-classes should be familiar to you now. More recently, the <a href="https://www.w3.org/TR/css3-selectors/" rel="external">CSS Selector Level 3</a> and <a href="http://dev.w3.org/csswg/css3-ui/#pseudo-classes" rel="external">CSS Basic UI Level 3</a> added more pseudo-classes related to HTML forms that provide several other useful targetting conditions that you can take advantage of. We'll discuss these in more detail in the sections below, but briefly, the main ones we'll be looking at are:</p>
+<p>These basic pseudo-classes should be familiar to you now. More recently, the <a href="https://www.w3.org/TR/css3-selectors/" rel="external">CSS Selector Level 3</a> and <a href="http://dev.w3.org/csswg/css3-ui/#pseudo-classes" rel="external">CSS Basic UI Level 3</a> added more pseudo-classes related to HTML forms that provide several other useful targeting conditions that you can take advantage of. We'll discuss these in more detail in the sections below, but briefly, the main ones we'll be looking at are:</p>
 
 <ul>
  <li>{{cssxref(':required')}} and {{cssxref(':optional')}}: Targets required or optional form controls.</li>
@@ -113,7 +113,7 @@ input:optional {
 
 <p>In previous articles, we've seen the usage of <a href="/en-US/docs/Web/CSS/CSS_Generated_Content">generated content</a>, but we thought now would be a good time to talk about it in a bit more detail.</p>
 
-<p>The idea is that we can use the <code><a href="/en-US/docs/Web/CSS/::before">::before</a></code> and <code><a href="/en-US/docs/Web/CSS/::after">::after</a></code> pseudo-elements along with the <code><a href="/en-US/docs/Web/CSS/content">content</a></code> property to make a chunk of content appear before or after the affected element. The chunk of content is not added to the DOM, so is invisible to screenreaders; it is part of the document's styles. Because it is a pseudo element, it can be targetted with styles in the same way that any actual DOM node can.</p>
+<p>The idea is that we can use the <code><a href="/en-US/docs/Web/CSS/::before">::before</a></code> and <code><a href="/en-US/docs/Web/CSS/::after">::after</a></code> pseudo-elements along with the <code><a href="/en-US/docs/Web/CSS/content">content</a></code> property to make a chunk of content appear before or after the affected element. The chunk of content is not added to the DOM, so is invisible to screenreaders; it is part of the document's styles. Because it is a pseudo element, it can be targeted with styles in the same way that any actual DOM node can.</p>
 
 <p>This is really useful when you want to add a visual indicator to an element, such as a label or icon, but don't want it to be picked up by assistive technologies. For example, in our <a href="https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html">custom radio buttons example</a>, we use generated content to handle the placement and animation of the inner circle when a radio button is selected:</p>
 
@@ -460,7 +460,7 @@ textarea:read-write {
 
 <p>When checked, they will be matched by the {{cssxref(":checked")}} pseudo-class.</p>
 
-<p>The most common use of this is to add a different style onto the checkbox/radiobutton when it is checked, in cases where you've removed the system default styling with <code>appearance: none;</code> and want to build the styles back up yourself. We saw examples of this in the previous article when we talked about <a href="/en-US/docs/Learn/Forms/Advanced_form_styling#Using_appearence_none_on_radioscheckboxes">Using <code>appearence: none</code> on radios/checkboxes</a>.</p>
+<p>The most common use of this is to add a different style onto the checkbox/radiobutton when it is checked, in cases where you've removed the system default styling with <code>appearance: none;</code> and want to build the styles back up yourself. We saw examples of this in the previous article when we talked about <a href="/en-US/docs/Learn/Forms/Advanced_form_styling#Using_appearance_none_on_radioscheckboxes">Using <code>appearance: none</code> on radios/checkboxes</a>.</p>
 
 <p>As a recap, the <code>:checked</code> code from our <a href="https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html">Styled radio buttons</a> example looks like so:</p>
 

@@ -2,7 +2,7 @@
 title: Preferences
 slug: Mozilla/Developer_guide/Preferences
 ---
-<p>This document attempts to explaing the guide line of naming rules of preferences and accessing them.</p>
+<p>This document attempts to explaining the guide line of naming rules of preferences and accessing them.</p>
 
 <div class="warning">
 <p>This document is still under discussion.</p>
@@ -48,9 +48,9 @@ foo.bar.baz_range.max
 
 <p>If you need to get a preference value at very hot path, you shouldn't use <code>Preferences::Get*()</code>. Instead of that there are two kinds of API sets.</p>
 
-<p>One is <code>Preferences::Add*VarCache()</code>. This API modifies registered static variable to the latest preference value automatically. Therefore, this is very useful if you don't need to reinitialize someting when the pref is changed.</p>
+<p>One is <code>Preferences::Add*VarCache()</code>. This API modifies registered static variable to the latest preference value automatically. Therefore, this is very useful if you don't need to reinitialize something when the pref is changed.</p>
 
-<p>The other is <code>Preferences::RegisterCallback()</code>. You can register a call back method for preferences which you want to observe the changes. If you use this, you need to call <code>Preferences::UnregisterCallback()</code> when you don't need it anymore. If you need a whole time while our process is running, you should call it at shutting down XPCOM. Most modules have an observer of XPCOM shudown and calls <code>Shutdown()</code> method of a lot of classes. See <code>nsLayoutStatics::Shutdown()</code> ({{Source("layout/build/nsLayoutStatics.cpp")}}) for the example.</p>
+<p>The other is <code>Preferences::RegisterCallback()</code>. You can register a call back method for preferences which you want to observe the changes. If you use this, you need to call <code>Preferences::UnregisterCallback()</code> when you don't need it anymore. If you need a whole time while our process is running, you should call it at shutting down XPCOM. Most modules have an observer of XPCOM shutdown and calls <code>Shutdown()</code> method of a lot of classes. See <code>nsLayoutStatics::Shutdown()</code> ({{Source("layout/build/nsLayoutStatics.cpp")}}) for the example.</p>
 
 <h2 id="Float_values">Float values</h2>
 

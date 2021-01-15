@@ -92,7 +92,7 @@ tags:
 
 <p>Consider a web page like this:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta http-equiv="content-type" content="text/html; charset=utf-8" /&gt;
@@ -105,7 +105,7 @@ tags:
 
 <p>The script <code>page-script.js</code> does this:</p>
 
-<pre class="brush: js notranslate">// page-script.js
+<pre class="notranslate brush: js">// page-script.js
 
 // add a new element to the DOM
 let p = document.createElement("p");
@@ -123,7 +123,7 @@ window.confirm = function() {
 
 <p>Now an extension injects a content script into the page:</p>
 
-<pre class="brush: js notranslate">// content-script.js
+<pre class="notranslate brush: js">// content-script.js
 
 // can access and modify the DOM
 let pageScriptPara = document.getElementById("page-script-para");
@@ -143,7 +143,7 @@ window.confirm("Are you sure?"); // calls the original window.confirm()</pre>
 
 <p>If a content script needs to use a JavaScript library, then the library itself should be injected as a content script <em>alongside</em> the content script that wants to use it:</p>
 
-<pre class="brush: json notranslate">"content_scripts": [
+<pre class="brush: json">"content_scripts": [
   {
     "matches": ["*://*.mozilla.org/*"],
     "js": ["jquery.js", "content-script.js"]
@@ -263,7 +263,7 @@ window.confirm("Are you sure?"); // calls the original window.confirm()</pre>
 
 <p>If the click was on a link, it sends a message to the background page with the target URL:</p>
 
-<pre class="brush: js notranslate">// content-script.js
+<pre class="notranslate brush: js">// content-script.js
 
 window.addEventListener("click", notifyExtension);
 
@@ -276,7 +276,7 @@ function notifyExtension(e) {
 
 <p>The background script listens for these messages and displays a notification using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications">notifications</a></code> API:</p>
 
-<pre class="brush: js notranslate">// background-script.js
+<pre class="notranslate brush: js">// background-script.js
 
 browser.runtime.onMessage.addListener(notify);
 
@@ -332,7 +332,7 @@ function notify(message) {
  <li>Uses <code>myPort</code> to sends messages to the background script when the user clicks the document</li>
 </ul>
 
-<pre class="brush: js notranslate">// content-script.js
+<pre class="notranslate brush: js">// content-script.js
 
 let myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
@@ -360,7 +360,7 @@ document.body.addEventListener("click", function() {
  <li>Sends messages to the content script, using <code>portFromCS</code>, when the user clicks the extension's browser action</li>
 </ul>
 
-<pre class="brush: js notranslate">// background-script.js
+<pre class="notranslate brush: js">// background-script.js
 
 let portFromCS;
 
@@ -383,7 +383,7 @@ browser.browserAction.onClicked.addListener(function() {
 
 <p>If you have multiple content scripts communicating at the same time, you might want to store connections to them in an array.</p>
 
-<pre class="brush: js notranslate">// background-script.js
+<pre class="notranslate brush: js">// background-script.js
 
 let ports = []
 
@@ -419,7 +419,7 @@ browser.browserAction.onClicked.addListener(function() {
  <dd>
  <ul>
   <li>Scripts engage in sessions where multiple messages are exchanged.</li>
-  <li>The extension need to know about task progress, needs to know if a task is interrupted, or may want to interrupt a task initiated using messaging.</li>
+  <li>The extension needs to know about task progress or if a task is interrupted, or wants to interrupt a task initiated using messaging.</li>
  </ul>
  </dd>
 </dl>
@@ -430,7 +430,7 @@ browser.browserAction.onClicked.addListener(function() {
 
 <p>For example:</p>
 
-<pre class="brush: js notranslate">// page-script.js
+<pre class="notranslate brush: js">// page-script.js
 
 let messenger = document.getElementById("from-page-script");
 
@@ -444,7 +444,7 @@ function messageContentScript() {
 }
 </pre>
 
-<pre class="brush: js notranslate">// content-script.js
+<pre class="notranslate brush: js">// content-script.js
 
 window.addEventListener("message", function(event) {
   if (event.source == window &amp;&amp;
@@ -461,7 +461,7 @@ window.addEventListener("message", function(event) {
 
 <p>To give a trivial example, suppose the content script code that receives the message does something like this:</p>
 
-<pre class="brush: js example-bad notranslate">// content-script.js
+<pre class="notranslate brush: js example-bad">// content-script.js
 
 window.addEventListener("message", function(event) {
   if (event.source == window &amp;&amp;
@@ -489,7 +489,7 @@ window.addEventListener("message", function(event) {
 
 <p>For example, consider a content script like this:</p>
 
-<pre class="brush: js notranslate">// content-script.js
+<pre class="notranslate brush: js">// content-script.js
 
 window.eval('window.x = 1;');
 eval('window.y = 2');
@@ -505,7 +505,7 @@ window.postMessage({
 
 <p>On receiving the message, the page script logs the same variables:</p>
 
-<pre class="brush: js notranslate">window.addEventListener("message", function(event) {
+<pre class="notranslate brush: js">window.addEventListener("message", function(event) {
   if (event.source === window &amp;&amp; event.data &amp;&amp; event.data.message === "check") {
     console.log(`In page script, window.x: ${window.x}`);
     console.log(`In page script, window.y: ${window.y}`);
@@ -536,7 +536,7 @@ In page script, window.y: undefined</pre>
 
 <p>The page's environment is controlled by potentially malicious web pages, which can redefine objects you interact with to behave in unexpected ways:</p>
 
-<pre class="brush: js example-bad notranslate">// page.js redefines console.log
+<pre class="notranslate brush: js example-bad">// page.js redefines console.log
 
 let original = console.log;
 
@@ -545,7 +545,7 @@ console.log = function() {
 }
 </pre>
 
-<pre class="brush: js example-bad notranslate">// content-script.js calls the redefined version
+<pre class="notranslate brush: js example-bad">// content-script.js calls the redefined version
 
 window.eval('console.log(false)');
 </pre>
