@@ -35,13 +35,13 @@ tags:
 <p>Your OS may be associating the wrong media type with the .svg filename extension if you have installed an old program such as Photoshop Elements 1.0 and chose to install the *very* old Adobe SVG Viewer that comes bundled with it. This will set up the OS to associate the .svg filename extension with the incorrect media type "image/svg-xml" instead of "image/svg+xml".
 </p>
 <h5 id="Microsoft_Windows"> Microsoft Windows </h5>
-<p>One way to fix this in Microsoft Windows is to start RegEdit (Start &gt; Run &gt; regedit) and search for "svg". Change every occurance of "image/svg-xml" (or whatever the invalid media type is) to "image/svg+xml".
+<p>One way to fix this in Microsoft Windows is to start RegEdit (Start &gt; Run &gt; regedit) and search for "svg". Change every occurrence of "image/svg-xml" (or whatever the invalid media type is) to "image/svg+xml".
 </p><p>Normally, this matters just for the entry "HKEY_CLASSES_ROOT\.svg\Content Type".
 </p>
 <hr>
-<p>After correcting the OS file associations you will probably need to re-clean your mimeTypes.rdf as described in the <a class="external" href="http://developer.mozilla.org/en/docs/SVG:mimeTypes.rdf_corruption#Create_and_Remove_a_Bogus_File_Association">section above</a>.
+<p>After correcting the OS file associations you will probably need to re-clean your mimeTypes.rdf as described in the <a class="external" href="#Create_and_Remove_a_Bogus_File_Association">section above</a>.
 </p>
 <h3 id="Fixing_the_Bug"> Fixing the Bug </h3>
-<p>Need to look at <a class="external" href="http://lxr.mozilla.org/seamonkey/source/uriloader/exthandler/">the exthandler code</a>.
+<p>Need to look at <a class="external" href="https://lxr.mozilla.org/seamonkey/source/uriloader/exthandler/">the exthandler code</a>.
 </p><p>Related bugs: <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=332690">bug 332690</a> and <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=303581">bug 303581</a>.
 </p>

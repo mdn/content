@@ -222,19 +222,19 @@ tags:
   <tr>
    <td><code>x(?!y)</code></td>
    <td>
-    <p><strong>Negative lookahead assertion: </strong>Matches "x" only if "x"<span> is not followed by </span>"y"<span>.</span> For example, <code>/\d+(?!\.)/</code><span> matches a number only if it is not followed by a decimal point. </span><code>/\d+(?!\.)/.exec('3.141')</code> matches "141" but not "3".</p>
+    <p><strong>Negative lookahead assertion: </strong>Matches "x" only if "x" is not followed by "y". For example, <code>/\d+(?!\.)/</code> matches a number only if it is not followed by a decimal point. <code>/\d+(?!\.)/.exec('3.141')</code> matches "141" but not "3".</p>
    </td>
   </tr>
   <tr>
    <td><code>(?&lt;=y)x</code></td>
    <td>
-    <p><strong>Lookbehind assertion: </strong>Matches "x" only if "x" is preceded by "y". For example, <code>/(?&lt;=Jack)Sprat/</code><span> matches "Sprat" only if it is preceded by "Jack". </span><code>/(?&lt;=Jack|Tom)Sprat/</code> matches "Sprat" only if it is preceded by "Jack" or "Tom". However, neither "Jack" nor "Tom" is part of the match results.</p>
+    <p><strong>Lookbehind assertion: </strong>Matches "x" only if "x" is preceded by "y". For example, <code>/(?&lt;=Jack)Sprat/</code> matches "Sprat" only if it is preceded by "Jack". <code>/(?&lt;=Jack|Tom)Sprat/</code> matches "Sprat" only if it is preceded by "Jack" or "Tom". However, neither "Jack" nor "Tom" is part of the match results.</p>
    </td>
   </tr>
   <tr>
    <td><code>(?&lt;!y)x</code></td>
    <td>
-    <p><strong>Negative lookbehind assertion: </strong>Matches "x" only if "x" is not preceded by "y". For example, <code>/(?&lt;!-)\d+/</code><span> matches a number only if it is not preceded by a minus sign. </span><code>/(?&lt;!-)\d+/.exec('3')</code> matches "3". <code>/(?&lt;!-)\d+/.exec('-3')</code>  match is not found because the number is preceded by the minus sign.</p>
+    <p><strong>Negative lookbehind assertion: </strong>Matches "x" only if "x" is not preceded by "y". For example, <code>/(?&lt;!-)\d+/</code> matches a number only if it is not preceded by a minus sign. <code>/(?&lt;!-)\d+/.exec('3')</code> matches "3". <code>/(?&lt;!-)\d+/.exec('-3')</code>  match is not found because the number is preceded by the minus sign.</p>
    </td>
   </tr>
  </tbody>

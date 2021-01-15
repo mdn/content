@@ -38,7 +38,7 @@ tags:
  </ul>
  </dd>
  <dt><code>documentUrlPatterns</code> {{optional_inline}}</dt>
- <dd><code>array</code> of <code><code>string</code></code>. Lets you restrict the item to apply only to documents whose URL matches one of the given <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. This applies to frames as well.</dd>
+ <dd><code>array</code> of <code>string</code>. Lets you restrict the item to apply only to documents whose URL matches one of the given <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. This applies to frames as well.</dd>
  <dt><code>enabled</code> {{optional_inline}}</dt>
  <dd><code>boolean</code>. Whether this menu item is enabled or disabled. Defaults to <code>true</code>.</dd>
  <dt><code>icons</code> {{optional_inline}}</dt>
@@ -65,9 +65,9 @@ tags:
  <dt><code>onclick</code> {{optional_inline}}</dt>
  <dd><code>function</code>. A function that will be called when the menu item is clicked. Event pages cannot use this: instead, they should register a listener for {{WebExtAPIRef('menus.onClicked')}}.</dd>
  <dt><code>parentId</code> {{optional_inline}}</dt>
- <dd><code><code>integer</code></code> or <code><code>string</code></code>. The ID of a parent menu item; this makes the item a child of a previously added item. Note: If you have created more than one menu item, then the items will be placed in a submenu. The submenu's parent will be labeled with the name of the extension.</dd>
+ <dd><code>integer</code> or <code>string</code>. The ID of a parent menu item; this makes the item a child of a previously added item. Note: If you have created more than one menu item, then the items will be placed in a submenu. The submenu's parent will be labeled with the name of the extension.</dd>
  <dt><code>targetUrlPatterns</code> {{optional_inline}}</dt>
- <dd><code>array</code> of <code><code>string</code></code>. Similar to <code>documentUrlPatterns</code>, but lets you filter based on the <code>href</code> of anchor tags and the <code>src</code> attribute of img/audio/video tags. This parameter supports any URL scheme, even those that are usually not allowed in a match pattern.</dd>
+ <dd><code>array</code> of <code>string</code>. Similar to <code>documentUrlPatterns</code>, but lets you filter based on the <code>href</code> of anchor tags and the <code>src</code> attribute of img/audio/video tags. This parameter supports any URL scheme, even those that are usually not allowed in a match pattern.</dd>
  <dt><code>title</code> {{optional_inline}}</dt>
  <dd>
  <p><code>string</code>. The text to be displayed in the item. Mandatory unless <code>type</code> is "separator".</p>

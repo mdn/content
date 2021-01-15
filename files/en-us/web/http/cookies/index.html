@@ -48,7 +48,7 @@ tags:
 
 <p>The {{HTTPHeader("Set-Cookie")}} HTTP response header sends cookies from the server to the user agent. A simple cookie is set like this:</p>
 
-<pre class="syntaxbox notranslate">Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;</pre>
+<pre class="brush: html notranslate">Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;</pre>
 
 <p>This shows the server sending headers to tell the client to store a pair of cookies:</p>
 
@@ -193,7 +193,7 @@ console.log(document.cookie);
 
 <ul>
  <li>Use the <code>HttpOnly</code> attribute to prevent access to cookie values via JavaScript.</li>
- <li>Cookies that are used for sensitive information (such as indicating authentication) should have a short lifetime, with the <code>SameSite</code> attribute set to <code>Strict</code> or <code>Lax</code>. (See <a href="#">SameSite cookies</a>, above.) In <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie#Browser_compatibility">browsers that support SameSite</a>, this has the effect of ensuring that the authentication cookie is not sent with cross-origin requests, so such a request is effectively unauthenticated to the application server.</li>
+ <li>Cookies that are used for sensitive information (such as indicating authentication) should have a short lifetime, with the <code>SameSite</code> attribute set to <code>Strict</code> or <code>Lax</code>. (See <a href="#">SameSite cookies</a>, above.) In <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie#Browser_compatibility">browsers that support SameSite</a>, this has the effect of ensuring that the authentication cookie is not sent with cross-site requests, so such a request is effectively unauthenticated to the application server.</li>
 </ul>
 
 <h2 id="Tracking_and_privacy">Tracking and privacy</h2>

@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{APIRef("File System API")}}{{non-standard_header()}}</div>
 
-<p>The <code>LocalFileSystem</code> interface of the <a href="/en/DOM/File_API/File_System_API">File System API</a> gives you access to a sandboxed file system.  The methods are implemented by <a href="/cn/DOM/window" title="cn/DOM/window">window</a> and <a href="/en/DOM/Worker">worker</a> objects.</p>
+<p>The <code>LocalFileSystem</code> interface of the <a href="/en/DOM/File_API/File_System_API">File System API</a> gives you access to a sandboxed file system.  The methods are implemented by <a href="/cn/DOM/window">window</a> and <a href="/en/DOM/Worker">worker</a> objects.</p>
 
 <h2 id="Basic_concepts">Basic concepts</h2>
 
@@ -69,7 +69,7 @@ window.requestFileSystem(window.PERSISTENT, 1024*1024,onInitFs,errorHandler);
 <table class="standard-table">
  <tbody>
   <tr>
-   <td><code>void <a href="#requestFileSystem">requestFileSystem</a> (in unsigned short <em>type</em>, in unsigned long long <em>size</em>, in FileSystemCallback <em>successCallback</em>, in optional ErrorCallback <em>errorCallback</em>); </code></td>
+   <td><code>void <a href="#requestfilesystem">requestFileSystem</a> (in unsigned short <em>type</em>, in unsigned long long <em>size</em>, in FileSystemCallback <em>successCallback</em>, in optional ErrorCallback <em>errorCallback</em>); </code></td>
   </tr>
   <tr>
    <td><code>void <a href="/#resolveLocalFileSystemURL" title="#resolveLocalFileSystemURL">resolveLocalFileSystemURL</a> (in DOMString <em>url</em>, in EntryCallback <em>successCallback</em>, in optional ErrorCallback <em>errorCallback</em>);</code></td>
@@ -138,6 +138,7 @@ window.requestFileSystem(window.PERSISTENT, 1024*1024,onInitFs,errorHandler);
 
 <dl>
  <dt><code>void</code></dt>
+ <dd></dd>
 </dl>
 
 <h5 id="Exceptions">Exceptions</h5>
@@ -183,6 +184,7 @@ window.requestFileSystem(window.PERSISTENT, 1024*1024,onInitFs,errorHandler);
 
 <dl>
  <dt><code>void</code></dt>
+ <dd></dd>
 </dl>
 
 <h5 id="Exceptions_2">Exceptions</h5>

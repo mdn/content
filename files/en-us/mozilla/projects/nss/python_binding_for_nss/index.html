@@ -26,8 +26,8 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
  <li>Identifer names follow the preferred Python style instead of the style in the NSS/NSPR C header files.
   <ul>
    <li>Classes are camel-case. Class names always begin with a upper case letter and are then followed by a mix of lower and upper case letters, a upper case letter is used to separate words. Acronyms always appear as a contiguous string of upper case letters.</li>
-   <li>Method, function and property names are always lower case with words seperated by underscores.</li>
-   <li>Constants are all upper case with words seperated by underscores, they match the NSS/NSPR C API.</li>
+   <li>Method, function and property names are always lower case with words separated by underscores.</li>
+   <li>Constants are all upper case with words separated by underscores, they match the NSS/NSPR C API.</li>
   </ul>
  </li>
  <li>Every module, class, function, and method has associated documentation and is exposed via the standard Python methodology. This documentation is available via the numerous Python documentation extraction tools. Also see the <a href="https://mozilla.github.io/python-nss-docs/">generated HTML documentation</a> provided with each release.</li>
@@ -49,7 +49,7 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
 
 <h2 id="Project_History">Project History</h2>
 
-<p>Red Hat utilizes both NSS and Python in many of it's projects, however it was not previously possible to call NSS directly from Python. To solve this problem Red Hat generously funded the initial development of python-nss as well as it's continued maintenance. Red Hat following it's open source philosophy has contributed the source to the Mozilla security project. Red Hat welcomes all interested contributors who would like to contribute the the python-nss project as part of an open source community. The initial release of python-nss occurred in September 2008 with it's inclusion in the Fedora distribution. The source code to python-nss was first imported into the Mozilla CVS repository on June 9th 2009. python-nss is currently available in:</p>
+<p>Red Hat utilizes both NSS and Python in many of it's projects, however it was not previously possible to call NSS directly from Python. To solve this problem Red Hat generously funded the initial development of python-nss as well as it's continued maintenance. Red Hat following it's open source philosophy has contributed the source to the Mozilla security project. Red Hat welcomes all interested contributors who would like to contribute the python-nss project as part of an open source community. The initial release of python-nss occurred in September 2008 with it's inclusion in the Fedora distribution. The source code to python-nss was first imported into the Mozilla CVS repository on June 9th 2009. python-nss is currently available in:</p>
 
 <ul>
  <li>Fedora</li>
@@ -109,7 +109,7 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
 
 <p>You may want to review the <a href="/en-US/docs/Developer_Guide/Source_Code/Mercurial"> Getting Mozilla Source Code Using Mercurial</a> documentation for more information with working with Mercurial.</p>
 
-<p>The old deprecated CVS documentation can be found here: <a href="/en/Mozilla_Source_Code_Via_CVS"> Getting Mozilla Source Code Using CVS</a>.</p>
+<p>The old deprecated CVS documentation can be found here: <a href="/en-US/docs/Mozilla_Source_Code_Via_CVS"> Getting Mozilla Source Code Using CVS</a>.</p>
 
 <p>The old deprecated python-nss CVS source code location is <code class="filename">mozilla/security/python/nss</code>.</p>
 
@@ -669,7 +669,7 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
 
       <p>Certificate(data, certdb=cert_get_default_certdb(), perm=False, nickname=None)</p>
 
-      <p>This change was necessary because all certs should be added to the NSS temporary database when they are loaded, but earlier code failed to to that. It's is not likely that an previous code was failing to pass initialization data or the der_is_signed flag so this change should be backwards compatible.</p>
+      <p>This change was necessary because all certs should be added to the NSS temporary database when they are loaded, but earlier code failed to do that. It's is not likely that an previous code was failing to pass initialization data or the der_is_signed flag so this change should be backwards compatible.</p>
      </li>
      <li>
       <p>Fix bug #922247, PKCS12Decoder.database_import() method. Importing into a NSS database would sometimes fail or segfault.</p>
@@ -1690,5 +1690,3 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
   </tr>
  </tbody>
 </table>
-
-<p> </p>

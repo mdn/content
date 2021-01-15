@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.tabs.onActivated.addListener(listener)
+<pre class="brush:js">browser.tabs.onActivated.addListener(listener)
 browser.tabs.onActivated.removeListener(listener)
 browser.tabs.onActivated.hasListener(listener)
 </pre>
@@ -67,7 +67,7 @@ browser.tabs.onActivated.hasListener(listener)
 
 <p>Listen for and log tab activation events:</p>
 
-<pre class="brush: js">function handleActivated(activeInfo) {
+<pre class="notranslate brush: js">function handleActivated(activeInfo) {
   console.log("Tab " + activeInfo.tabId +
               " was activated");
 }

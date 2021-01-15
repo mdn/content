@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Page_actions_and_browser_actions">Page actions and browser actions</h2>
 
-<p>The address bar button (or page action) is similiar to the toolbar button (or browser action).</p>
+<p>The address bar button (or page action) is similar to the toolbar button (or browser action).</p>
 
 <p>The differences are:</p>
 
@@ -82,7 +82,7 @@ tags:
 <ul>
  <li><strong>Without a popup:</strong> When the user clicks the button, an event is dispatched to the extension, which the extension listens for using <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked" title="Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."><code>pageAction.onClicked</code></a>:</li>
  <li>
-  <pre class="brush: js line-numbers  language-js"><code class="language-js">browser<span class="punctuation token">.</span>pageAction<span class="punctuation token">.</span>onClicked<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span>handleClick<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+  <pre class="notranslate brush: js line-numbers  language-js"><code class="language-js">browser<span class="punctuation token">.</span>pageAction<span class="punctuation token">.</span>onClicked<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span>handleClick<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
  </li>
  <li><strong>With a popup:</strong> the <code>click</code> event is not dispatched. Instead, the popup appears when the user clicks the button. The user then interacts with the popup. When the user clicks outside of the popup, it closes automatically. See the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Popups">Popup </a>article for more details on creating and managing popups.</li>
 </ul>

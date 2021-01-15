@@ -39,7 +39,7 @@ except exceptions.ScriptTimeoutException as e:
 <pre class="brush: python">from selenium import webdriver
 from selenium.common import exceptions
 
-session = webdriver.Firefox(capabilites={"alwaysMatch": {"timeouts": {"script": 150000}}})
+session = webdriver.Firefox(capabilities={"alwaysMatch": {"timeouts": {"script": 150000}}})
 session.execute_script("""
     let [resolve] = arguments;
     window.setTimeout(resolve, 35000);

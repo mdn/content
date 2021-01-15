@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var getting = browser.devtools.network.getHAR()
+<pre class="brush:js">var getting = browser.devtools.network.getHAR()
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -38,7 +38,7 @@ tags:
 
 <p>Log the URLs of requests contained in the HAR log:</p>
 
-<pre class="brush: js">async function logRequests() {
+<pre class="notranslate brush: js">async function logRequests() {
   let harLog = await browser.devtools.network.getHAR();
   console.log(`HAR version: ${harLog.version}`);
   for (let entry of harLog.entries) {
