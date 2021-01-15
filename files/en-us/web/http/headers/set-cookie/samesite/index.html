@@ -19,7 +19,7 @@ tags:
  <li>Cookies with <code>SameSite=None</code> must now also specify the <code>Secure</code> attribute (they require a secure context/HTTPS).</li>
 </ul>
 
-<p>This article documents the new standard. See <a href="#Browser_compatibility">Browser Compatibility</a> below for information about specific versions where the behavior changed.</p>
+<p>This article documents the new standard. See <a href="#browser_compatibility">Browser Compatibility</a> below for information about specific versions where the behavior changed.</p>
 </div>
 
 <h2 id="Values">Values</h2>
@@ -62,7 +62,7 @@ This Set-Cookie was blocked because it had the "SameSite=None" attribute but did
 
 <pre class="example-good notranslate">Set-Cookie: flavor=choco; SameSite=None; <strong>Secure</strong></pre>
 
-<p>A <a href="#Secure"><code>Secure</code></a> cookie is only sent to the server with an encrypted request over the HTTPS protocol. Note that insecure sites (<code>http:</code>) can't set cookies with the <code>Secure</code> directive.</p>
+<p>A <a href="#secure"><code>Secure</code></a> cookie is only sent to the server with an encrypted request over the HTTPS protocol. Note that insecure sites (<code>http:</code>) can't set cookies with the <code>Secure</code> directive.</p>
 
 <div class="notecard note">
 <p>On older browser versions you might get a warning that the cookie will be blocked in future. For example:</p>
