@@ -76,22 +76,22 @@ tags:
   exceptions are thrown during the setup process.</p>
 
 <div class="codecopy codecopy-lg">
-  <pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">function</span> <span class="function token">recordStream</span><span class="punctuation token">(</span>stream<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">let</span> recorder <span class="operator token">=</span> <span class="keyword token">null</span><span class="punctuation token">;</span>
-  <span class="keyword token">let</span> bufferList <span class="operator token">=</span> <span class="punctuation token">[</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
+  <pre class="brush: js line-numbers language-js notranslate">function recordStream(stream) {
+  let recorder = null;
+  let bufferList = [];
 
-  <span class="keyword token">try</span> <span class="punctuation token">{</span>
-    recorder <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">MediaRecorder</span><span class="punctuation token">(</span>stream<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span> <span class="keyword token">catch</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  try {
+    recorder = new MediaRecorder(stream);
+  } catch(err) {
     return err.name;     /* return the error name */
-  <span class="punctuation token">}</span>
+  }
 
-  recorder<span class="punctuation token">.</span>ondataavailable <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>event<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    bufferList<span class="punctuation token">.</span><span class="function token">push</span><span class="punctuation token">(</span>event<span class="punctuation token">.</span>data<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">;</span>
+  recorder.ondataavailable = function(event) {
+    bufferList.push(event.data);
+  };
 
-  recorder<span class="punctuation token">.</span>onerror <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>event<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">let</span> error <span class="operator token">=</span> event<span class="punctuation token">.</span>error<span class="punctuation token">;
+  recorder.onerror = function(event) {
+    let error = event.error;
 
     switch(error.name) {
       case InvalidStateError:
@@ -107,15 +107,15 @@ tags:
         showNotification("A problem occurred while trying " +
                          "to record the video.");
         break;
-    }</span>
-  <span class="punctuation token">}</span><span class="punctuation token">;
+    }
+  };
 
   /* this would be a good place to create a Worker to handle
-     writing the buffers to disk periodically */</span>
+     writing the buffers to disk periodically */
 
-  recorder<span class="punctuation token">.</span><span class="function token">start</span><span class="punctuation token">(</span><span class="number token">100</span><span class="punctuation token">)</span><span class="punctuation token">;</span>  <span class="comment token">/* 100ms time slices per buffer */</span>
-  <span class="keyword token">return</span> recorder<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+  recorder.start(100);  /* 100ms time slices per buffer */
+  return recorder;
+}</pre>
 </div>
 
 <h2 id="Specifications">Specifications</h2>

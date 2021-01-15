@@ -20,13 +20,13 @@ tags:
 <p><strong>Note:</strong> This tutorial previously used the <a href="https://www.npmjs.com/package/moment">moment</a> library for date formatting. We've moved to Luxon because moment has <a href="https://momentjs.com/docs/#/-project-status/">declared itself "legacy"</a>. Luxon is one of the <a href="https://momentjs.com/docs/#/-project-status/recommendations/">moment project's main recommendations</a> for a great alternative library.</p>
 </div>
 
-<h2 class="highlight-spanned" id="Install_luxon"><span class="highlight-span">Install luxon</span></h2>
+<h2 class="highlight-spanned" id="Install_luxon">Install luxon</h2>
 
 <p>Enter the following command in the root of the project:</p>
 
 <pre class="brush: bash line-numbers  language-bash notranslate"><code class="language-bash">npm install luxon</code></pre>
 
-<h2 class="highlight-spanned" id="Create_the_virtual_property"><span class="highlight-span">Create the virtual property</span></h2>
+<h2 class="highlight-spanned" id="Create_the_virtual_property">Create the virtual property</h2>
 
 <ol>
  <li>Open <strong>./models/bookinstance.js</strong>.</li>
@@ -37,24 +37,24 @@ tags:
 
 <p>Add the virtual property <code>due_back_formatted</code> just after the url property.</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">BookInstanceSchema
-<span class="punctuation token">.</span><span class="function token">virtual</span><span class="punctuation token">(</span><span class="string token">'due_back_formatted'</span><span class="punctuation token">)</span>
-<span class="punctuation token">.</span><span class="keyword token">get</span><span class="punctuation token">(</span><span class="keyword token">function</span> <span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  </code>return DateTime.fromJSDate(this.due_back).toLocaleString(DateTime.DATE_MED);<code class="language-js">
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers language-js notranslate">BookInstanceSchema
+.virtual('due_back_formatted')
+.get(function () {
+  return DateTime.fromJSDate(this.due_back).toLocaleString(DateTime.DATE_MED);
+});</pre>
 
 <div class="note">
 <p><strong>Note:</strong> Luxon can import strings in many formats and export to both predefined and free-form formats. In this  case we use <code>fromJSDate()</code> to import a JavaScript date string and <code>toLocaleString()</code> to output the date in  <code>DATE_MED</code> format in English: Oct 6th, 2020.<br>
  For information about other formats and date string internationalisation see the Luxon documentation on <a href="https://moment.github.io/luxon/docs/manual/formatting.html">formatting</a>. </p>
 </div>
 
-<h2 class="highlight-spanned" id="Update_the_view"><span class="highlight-span">Update the view</span></h2>
+<h2 class="highlight-spanned" id="Update_the_view">Update the view</h2>
 
 <p>Open <strong>/views/bookinstance_list.pug</strong> and replace <code>due_back</code> with <code>due_back_formatted</code>.</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">      <span class="keyword token">if</span> val<span class="punctuation token">.</span>status <span class="operator token">!= </span><span class="string token">'Available'</span>
-        <span class="comment token">//span  (Due: #{val.due_back} )</span>
-        span <span class="function token"> </span><span class="punctuation token">(</span>Due<span class="punctuation token">:</span> #<span class="punctuation token">{</span>val<span class="punctuation token">.</span>due_back_formatted<span class="punctuation token">}</span> <span class="punctuation token">)</span>       </code></pre>
+<pre class="brush: js line-numbers language-js notranslate">      if val.status != 'Available'
+        //span  (Due: #{val.due_back} )
+        span  (Due: #{val.due_back_formatted} )</pre>
 
 <p>That's it. If you go to <em>All book-instances</em> in the sidebar, you should now see all the due dates are far more attractive!</p>
 
