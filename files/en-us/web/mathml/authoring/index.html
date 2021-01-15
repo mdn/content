@@ -282,7 +282,7 @@ sudo make install
 <pre class="notranslate">  latexmlc --dest foo.html foo.tex # Generate a HTML5 document foo.html
   latexmlc --dest foo.epub foo.tex # Generate an EPUB document foo.epub</pre>
 
-<p>To handle the case of browsers without MathML support, you can use the <code>--javascript</code> parameter to tell LaTeXML to include one of the <a href="#Fallback_for_Browsers_without_MathML_support">fallback scripts</a>:</p>
+<p>To handle the case of browsers without MathML support, you can use the <code>--javascript</code> parameter to tell LaTeXML to include one of the <a href="#fallback_for_browsers_without_mathml_support">fallback scripts</a>:</p>
 
 <pre class="notranslate">  latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathml.css/mspace.js foo.tex  # Add the CSS fallback
   latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpadded-min.js foo.tex # Add the MathJax fallback

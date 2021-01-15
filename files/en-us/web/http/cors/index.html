@@ -62,7 +62,7 @@ tags:
 
 <h3 id="Simple_requests">Simple requests</h3>
 
-<p>Some requests don’t trigger a <a href="#Preflighted_requests">CORS preflight</a>. Those are called <em>“simple requests”</em> in this article, though the {{SpecName('Fetch')}} spec (which defines CORS) doesn’t use that term. A “simple request” is one that <strong>meets all the following conditions</strong>:</p>
+<p>Some requests don’t trigger a <a href="#preflighted_requests">CORS preflight</a>. Those are called <em>“simple requests”</em> in this article, though the {{SpecName('Fetch')}} spec (which defines CORS) doesn’t use that term. A “simple request” is one that <strong>meets all the following conditions</strong>:</p>
 
 <ul>
  <li>One of the allowed methods:
@@ -153,11 +153,11 @@ Content-Type: application/xml
 <pre class="notranslate"><code class="plain">Access-Control-Allow-Origin: https://foo.example</code>
 </pre>
 
-<div class="note"><strong>Note:</strong> When responding to a <a href="#Credentialed_requests_and_wildcards">credentialed requests</a> request, the server <strong>must</strong> specify an origin in the value of the <code>Access-Control-Allow-Origin</code> header, instead of specifying the "<code>*</code>" wildcard.</div>
+<div class="note"><strong>Note:</strong> When responding to a <a href="#credentialed_requests_and_wildcards">credentialed requests</a> request, the server <strong>must</strong> specify an origin in the value of the <code>Access-Control-Allow-Origin</code> header, instead of specifying the "<code>*</code>" wildcard.</div>
 
 <h3 id="Preflighted_requests">Preflighted requests</h3>
 
-<p>Unlike <a href="#Simple_requests">“simple requests” (discussed above)</a>, for "preflighted" requests the browser first sends an HTTP request using the {{HTTPMethod("OPTIONS")}} method to the resource on the other origin, in order to determine if the actual request is safe to send. Cross-site requests are preflighted like this since they may have implications to user data.</p>
+<p>Unlike <a href="#simple_requests">“simple requests” (discussed above)</a>, for "preflighted" requests the browser first sends an HTTP request using the {{HTTPMethod("OPTIONS")}} method to the resource on the other origin, in order to determine if the actual request is safe to send. Cross-site requests are preflighted like this since they may have implications to user data.</p>
 
 <p>The following is an example of a request that will be preflighted:</p>
 
@@ -274,13 +274,13 @@ Content-Type: text/plain
 
 <ul>
  <li>Change the server-side behavior to avoid the preflight and/or to avoid the redirect</li>
- <li>Change the request such that it is a <a href="#Simple_requests">simple request</a> that doesn’t cause a preflight</li>
+ <li>Change the request such that it is a <a href="#simple_requests">simple request</a> that doesn’t cause a preflight</li>
 </ul>
 
 <p>If that's not possible, then another way is to:</p>
 
 <ol>
- <li>Make a <a href="#Simple_requests">simple request</a> (using {{domxref("Response.url")}} for the Fetch API, or {{domxref("XMLHttpRequest.responseURL")}}) to determine what URL the real preflighted request would end up at.</li>
+ <li>Make a <a href="#simple_requests">simple request</a> (using {{domxref("Response.url")}} for the Fetch API, or {{domxref("XMLHttpRequest.responseURL")}}) to determine what URL the real preflighted request would end up at.</li>
  <li>Make another request (the “real” request) using the URL you obtained from <code>Response.url</code> or <code>XMLHttpRequest.responseURL</code> in the first step.</li>
 </ol>
 
