@@ -232,6 +232,11 @@ open `http://localhost:5000/en-us/docs/web/javascript` in your browser.
 1. You might have noticed that at the top of each page that you preview, for example
 the `http://localhost:5000/en-us/docs/web/javascript` page, there is a `Show flaws` button.
 Click on that button to see if your changes have introduced flaws on the page.
+You can also fix flaws on a particular page by running the command:
+
+    ```sh
+    yarn content flaws <slug>
+    ```
 
 1. Once you're happy with your changes, add and commit them to your branch, and then
 push the branch to your fork. Remember, the default name that `git` assigned to the remote
