@@ -1,0 +1,17 @@
+{
+  "problemMatcher": [
+    {
+      "owner": "yari-filecheck",
+      "pattern": [
+        {
+          "regexp": "^(\\w*): /home/runner/work/content/content/(\\S*) (.*)$",
+          "severity": 1,
+          "file": 2,
+          "message": 3,
+          "line": "1",
+          "column": "0"
+        }
+      ]
+    }
+  ]
+}

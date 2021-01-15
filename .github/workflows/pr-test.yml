@@ -109,6 +109,7 @@ jobs:
           echo ${{ env.GIT_DIFF_FILES }}
 
           export CONTENT_ROOT=$(pwd)/files
+          echo "::add-matcher::.github/workflows/filecheck-problem-matcher.json"
           yarn filecheck ${{ env.GIT_DIFF_FILES }}
 
       - uses: technote-space/get-diff-action@v4.0.5
