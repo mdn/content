@@ -1,6 +1,13 @@
 ---
 title: CSSStyleRule.styleMap
 slug: Web/API/CSSStyleRule/styleMap
+tags:
+  - API
+  - CSS Typed Object Model API
+  - CSSStyleRule
+  - Reference
+  - Houdini
+  - Experimental
 ---
 <div>{{APIRef("CSSOM")}}{{SeeCompatTable}}</div>
 
@@ -25,10 +32,9 @@ slug: Web/API/CSSStyleRule/styleMap
 <pre class="brush: js notranslate">const stylesheet = document.styleSheets[0];
 
 Object.values(stylesheet.cssRules).forEach(block =&gt; {
-
-	if (block.selectorText === 'button') {
-		block.styleMap.set('--mainColour', 'black');
-	}
+  if (block.selectorText === 'button') {
+    block.styleMap.set('--mainColour', 'black');
+  }
 })</pre>
 
 <h2 id="Specifications">Specifications</h2>
