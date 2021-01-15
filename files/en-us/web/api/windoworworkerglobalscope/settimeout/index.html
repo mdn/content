@@ -75,7 +75,9 @@ var <var>timeoutID</var> = <var>scope</var>.setTimeout(<var>code</var>[, <var>de
   <code>setTimeout()</code> or <code>setInterval()</code> on the same object (a window or
   a worker). However, different objects use separate pools of IDs.</p>
 
-<h2 id="Example">Example</h2>
+<h2 id="Example">Examples</h2>
+
+<h2 id="Timeouts">1: setTimeout() / clearTimeout()</h2>
 
 <p>The following example sets up two simple buttons in a web page and hooks them to the
   <code>setTimeout()</code> and <code>clearTimeout()</code> routines. Pressing the first
@@ -106,11 +108,89 @@ function clearAlert() {
 
 <h3 id="Result">Result</h3>
 
-<p>{{EmbedLiveSample('Example')}}</p>
+<p>{{EmbedLiveSample('1_setTimeout_clearTimeout')}}</p>
 
 <p>See also <a
     href="/en-US/docs/Web/API/WindowTimers/clearTimeout#Example"><code>clearTimeout()</code>
     example</a>.</p>
+
+<h2 id="Throttle">2: Timeouts throttled</h2>
+
+<p>This code defines several functions, three of which demonstrate this throttling effect:
+<em><code>interval()</code></em>, called after <code>setInterval</code> timer expiration; 
+<em><code>timeout()</code></em> called after <code>setTimeout()</code> timer expiration;
+<em><code>run()</code></em>, called at program start.</p>
+
+<p>The timers for <code>interval()</code> and <code>timeout()</code> expire immediately. Both functions are called in a tight loop because of this immediate expiration. You'll see the throttling effect after a few milliseconds... </p>
+
+<h3 id="HTML">HTML</h3>
+
+<pre class="brush: html notranslate">&lt;p&gt;Live Example&lt;/p&gt;
+&lt;button onclick="run();"&gt;Run&lt;/button&gt;
+&lt;div id='log'&gt;&lt;/div&gt;
+</pre>
+
+<h3 id="JavaScript">JavaScript</h3>
+
+<pre class="brush: js notranslate">
+var to_timer = 0; // fires after zero milliseconds
+var interval_timer = 0; // fires every zero milliseconds
+var cleanup_timer = 0; // fires at end of run
+var last = 0; // last millisecond recorded
+var duration = 15; // total milliseconds
+var lineno = 0; // current output line number
+function interval() {
+  var d = new Date();
+  logline(d.getMilliseconds());
+}
+
+function timeout() {
+  var d = new Date();
+  logline(d.getMilliseconds());
+  interval();
+  to_timer = setTimeout(timeout, 0);
+}
+
+function run() {
+  interval_timer = setInterval(interval, 0);
+  to_timer = setTimeout(timeout, 0);
+  cleanup_timer = setInterval(cleanup, duration);
+ last = 0;
+  lineno = 0;
+  document.getElementById('log').innerHTML = "";
+  document.getElementById('log').innerHTML += "&lt;div&gt;^&nbsp;&rArr;&nbsp;Current interval greater than last interval";
+  document.getElementById('log').innerHTML += "&lt;div&gt;v&nbsp;&rArr;&nbsp;Current interval less than last interval (should never be seen)";
+}
+
+</pre>
+
+<h4 id="JavaScript">Supporting functions</h4>
+
+<pre class="brush: js notranslate">
+function cleanup() {
+  clearTimeout(to_timer);
+  clearInterval(interval_timer);
+  clearInterval(cleanup_timer);
+  document.getElementById('log').innerHTML += "--- Done ---";
+}
+
+function pad(d) {
+  return (d < 10) ? '0' + d.toString() : d.toString();
+}
+
+function logline(msec) { // msec can't wrap: run duration < 1 second
+  var c = "";
+  if (last < msec) { c = "^"; } 
+  if (last > msec) { c = "v"; } // Should never happen
+  document.getElementById('log').innerHTML += "&lt;pre&gt;" + pad(lineno++) + " " + last + " " + msec + " " + c;
+  last = msec;
+}
+</pre>
+
+
+<h3 id="Result">Result</h3>
+
+<p>{{EmbedLiveSample('2_Timeouts_throttled', 100, 175)}}</p>
 
 <h2 id="Polyfill">Polyfill</h2>
 
@@ -369,111 +449,32 @@ window.setTimeout("alert('Hello World!');", 500);
   symbols in the context where <code>setTimeout()</code> was called will not be available
   when the string is evaluated as code.</p>
 
-<h2 id="Reasons_for_delays_longer_than_specified">Reasons for delays longer than specified</h2>
+<h3 id="Reasons_for_delays">Reasons for delays longer than specified</h3>
 
 <p>There are a number of reasons why a timeout may take longer to fire than anticipated.
   This section describes the most common reasons.</p>
 
-<h2 id="Timeouts">Timeouts throttled</h2>
+<h4 id="E_clampus_vitus">Clamping</h4>
 
 <p>In modern browsers, <code>{{domxref("WindowOrworkerGlobalScope.setTimeout","setTimeout()")}}</code>/{{domxref("WindowOrworkerGlobalScope.setInterval","setInterval()")}} calls are throttled to a minimum of once every 4 ms when successive calls are triggered due to callback nesting (where the nesting level is at least a certain depth), or after certain number of successive intervals.</p>
 
-<p>This code defines several functions, three of which demonstrate this throttling effect:
-<em><code>interval()</code></em>, called after <code>setInterval</code> timer expiration; 
-<em><code>timeout()</code></em> called after <code>setTimeout()</code> timer expiration;
-<em><code>run()</code></em>, called at program start.</p>
-
-<h3 id="HTML">Example</h3>
-
-<p><code>interval()</code> logs the current millisecond since start</p>
-<p><code>timeout()</code> logs the current millisecond since start, and reschedules itself
-<p><code>run()</code> kicks off <code>interval()</code> and <code>timeout()</code> </p>
-<p>The timers for <code>interval()</code> and <code>timeout()</code> expire immediately. Both functions are called in a tight loop because of this immediate expiration. You'll see the throttling effect after a few milliseconds... </p>
-<pre class="brush: html notranslate">&lt;p&gt;Live Example&lt;/p&gt;
-&lt;button onclick="run();"&gt;Run&lt;/button&gt;
-&lt;div id='log'&gt;&lt;/div&gt;
-</pre>
-
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre class="brush: js notranslate">
-var to_timer = 0;
-var interval_timer = 0;
-var cleanup_timer = 0;
-var last = 0;
-var duration = 15; // total milliseconds
-var cycle = 0;
-
-function interval() {
-  var d = new Date();
-  logline(d.getMilliseconds());
-}
-
-function timeout() {
-  var d = new Date();
-  logline(d.getMilliseconds());
-  interval();
-  to_timer = setTimeout(timeout, 0);
-}
-
-function run() {
-  interval_timer = setInterval(interval, 0);
-  to_timer = setTimeout(timeout, 0);
-  cleanup_timer = setInterval(cleanup, duration);
-  last = 0;
-  cycle = 0;
-  document.getElementById('log').innerHTML = "";
-  document.getElementById('log').innerHTML += ("&lt;div&gt;^&nbsp;&rArr;&nbsp;Current interval greater than last interval");
-  document.getElementById('log').innerHTML += ("&lt;div&gt;v&nbsp;&rArr;&nbsp;Current interval less than last interval (should never be seen)");
-}
-
-function cleanup() {
-  clearTimeout(to_timer);
-  clearInterval(interval_timer);
-  clearInterval(cleanup_timer);
-  document.getElementById('log').innerHTML += ("--- Done ---");
-}
-
-function pad(d) {
-  return (d < 10) ? '0' + d.toString() : d.toString();
-}
-
-function logline(msec) { // msec can't wrap: run duration < 1 second
-  var c = "";
-  if (last < msec) { c = "^"; } 
-  if (last > msec) { c = "v"; } // Should never happen
-  document.getElementById('log').innerHTML += ("&lt;pre&gt;" + pad(cycle++) + " " + last + " " + msec + " " + c);
-  last = msec;
-}
-</pre>
-
-<h3 id="Result">Result</h3>
-
-<p>{{EmbedLiveSample('Timeouts_throttled', 100, 700)}}</p>
-
-<h2>Notes</h2>
-
-<p>In Chrome and Firefox, the 5th successive callback call is clamped; Safari clamps on the 6th call; in Edge it's the 3rd one. Gecko started to clamp after 4ms <code>setInterval()</code> in <a href="/en-US/docs/Mozilla/Firefox/Releases/56">version 56</a> (it already did this with <code>setTimeout()</code>; see below).</p>
-
-<p><a class="external"
-    href="http://code.google.com/p/chromium/issues/detail?id=792#c10">Historically</a>
-  some browsers implemented this throttling behavior a bit differently (e.g. Firefox) — on
-  <code>setInterval()</code> calls made from anywhere, or when a nested
-  <code>setTimeout()</code> is called where the nesting level is at least a certain depth.
-</p>
-
-<p>To implement a 0 ms timeout in a modern browser, you can use
-  {{domxref("window.postMessage()")}} as <a class="external"
-    href="http://dbaron.org/log/20100309-faster-timeouts">described here</a>.</p>
+<p>See above examples</p>
 
 <div class="note">
-  <p><strong>Note</strong>: The minimum delay, <code>DOM_MIN_TIMEOUT_VALUE</code>, is 4 ms
-    (stored in a preference in Firefox: <code>dom.min_timeout_value</code>), with a
-    <code>DOM_CLAMP_TIMEOUT_NESTING_LEVEL</code> of 5.</p>
+<p>In Chrome and Firefox, the 5th successive callback call is clamped; Safari clamps on the 6th call; in Edge it's the 3rd one. Gecko started to clamp after 4ms <code>setInterval()</code> in <a href="/en-US/docs/Mozilla/Firefox/Releases/56">version 56</a>. It already did this with <code>setTimeout()</code>, as described in the following notes.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: 4 ms is <a class="external" href="https://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers">specified by the HTML5 spec</a> and is consistent across browsers released in 2010 and onward. Prior to {{geckoRelease("5.0")}}, the minimum timeout value for nested timeouts was 10 ms.</p>
+<p><a class="external" href="http://code.google.com/p/chromium/issues/detail?id=792#c10">Historically</a> some browsers implemented this throttling behavior a bit differently (e.g. Firefox) — on <code>setInterval()</code> calls made from anywhere, or when a nested <code>setTimeout()</code> is called where the nesting level is at least a certain depth.</p>
+</div>
+
+<div class="note">
+<p>To implement a 0 ms timeout in a modern browser, you can use {{domxref("window.postMessage()")}} as <a class="external" href="http://dbaron.org/log/20100309-faster-timeouts">described here</a>.</p>
+</div>
+
+<div class="note">
+<p>The minimum delay, <code>DOM_MIN_TIMEOUT_VALUE</code>, is 4 ms (stored in a preference in Firefox: <code>dom.min_timeout_value</code>), with a <code>DOM_CLAMP_TIMEOUT_NESTING_LEVEL</code> of 5.</p>
+<p>4 ms is <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers">specified by the HTML5 spec</a> and is consistent across browsers released in 2010 and onward. Prior to {{geckoRelease("5.0")}}, the minimum timeout value for nested timeouts was 10 ms.</p>
 </div>
 
 <h4 id="Timeouts_in_inactive_tabs_throttled_to_≥_1000ms">Timeouts in inactive tabs
