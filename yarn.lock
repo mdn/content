@@ -28,10 +28,10 @@
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.2.18":
-  version "0.2.18"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.2.18.tgz#88e9df6a3be574338fc49b2805cb67c46506c709"
-  integrity sha512-VfqECmdtWa7PPtjVa0SLnEQgJwJSnm7bZqOLVfUr/rbIui4+o5XutO8JFEte5QiO2ZxdRCRRsGtx8p00QzV8BQ==
+"@mdn/yari@0.2.28":
+  version "0.2.28"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.2.28.tgz#45b8ebb4f98587d99b33972c49a9218c1a8bf52d"
+  integrity sha512-Cz3h/eVu2itY12HURuZd1Gr3XXGQ3Eb6QNAmKEG3ZtpFc2KIMMerxgrK8D1IvzGzXUxAmLWBzYlDMVn9Iohhaw==
   dependencies:
     "@caporal/core" "2.0.2"
     "@mdn/browser-compat-data" "3.0.2"
@@ -48,7 +48,7 @@
     ejs "3.1.5"
     express "4.17.1"
     express-http-proxy "1.6.2"
-    file-type "16.1.0"
+    file-type "16.2.0"
     front-matter "4.0.2"
     fs-extra "9.0.1"
     glob "^7.1.6"
@@ -1558,10 +1558,10 @@ figures@^2.0.0:
   dependencies:
     escape-string-regexp "^1.0.5"
 
-file-type@16.1.0:
-  version "16.1.0"
-  resolved "https://registry.yarnpkg.com/file-type/-/file-type-16.1.0.tgz#1c8a4458b2103e07d2b49ae7f76384abafe86529"
-  integrity sha512-G4Klqf6tuprtG0pC4r9kni4Wv8XhAAsfHphVqsQGA+YiOlPAO40BZduDqKfv0RFsu9q9ZbFObWfwszY/NqhEZw==
+file-type@16.2.0:
+  version "16.2.0"
+  resolved "https://registry.yarnpkg.com/file-type/-/file-type-16.2.0.tgz#d4f1da71ddda758db7f15f93adfaed09ce9e2715"
+  integrity sha512-1Wwww3mmZCMmLjBfslCluwt2mxH80GsAXYrvPnfQ42G1EGWag336kB1iyCgyn7UXiKY3cJrNykXPrCwA7xb5Ag==
   dependencies:
     readable-web-to-node-stream "^3.0.0"
     strtok3 "^6.0.3"
