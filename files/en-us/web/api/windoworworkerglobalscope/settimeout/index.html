@@ -164,8 +164,7 @@ function run() {
 
 </pre>
 
-<h4 id="JavaScript">Supporting functions</h4>
-
+<div class="hidden">
 <pre class="brush: js notranslate">
 function cleanup() {
   clearTimeout(to_timer);
@@ -186,7 +185,7 @@ function logline(msec) { // msec can't wrap: run duration < 1 second
   last = msec;
 }
 </pre>
-
+</div>
 
 <h3 id="Result">Result</h3>
 
@@ -445,9 +444,7 @@ window.setTimeout(function() {
 window.setTimeout("alert('Hello World!');", 500);
 </pre>
 
-<p>A string passed to <code>setTimeout</code> is evaluated in the global context, so local
-  symbols in the context where <code>setTimeout()</code> was called will not be available
-  when the string is evaluated as code.</p>
+<p>A string passed to <code>{{domxref("WindowOrworkerGlobalScope.setTimeout","setTimeout()")}}</code> is evaluated in the global context, so local symbols in the context where <code>{{domxref("WindowOrworkerGlobalScope.setTimeout","setTimeout()")}}</code> was called will not be available when the string is evaluated as code.</p>
 
 <h3 id="Reasons_for_delays">Reasons for delays longer than specified</h3>
 
@@ -456,20 +453,20 @@ window.setTimeout("alert('Hello World!');", 500);
 
 <h4 id="E_clampus_vitus">Clamping</h4>
 
-<p>In modern browsers, <code>{{domxref("WindowOrworkerGlobalScope.setTimeout","setTimeout()")}}</code>/{{domxref("WindowOrworkerGlobalScope.setInterval","setInterval()")}} calls are throttled to a minimum of once every 4 ms when successive calls are triggered due to callback nesting (where the nesting level is at least a certain depth), or after certain number of successive intervals.</p>
+<p>In modern browsers, <code>{{domxref("WindowOrworkerGlobalScope.setTimeout()","setTimeout()")}}</code>/{{domxref("WindowOrworkerGlobalScope.setInterval","setInterval()")}} calls are throttled to a minimum of once every 4 ms when successive calls are triggered due to callback nesting (where the nesting level is at least a certain depth), or after certain number of successive intervals.</p>
 
-<p>See <a href="#2_Timeouts_throttled">example</a>, above.</p>
+<p>See {{anch("2 Timeouts throttled")}}, above.</p>
 
 <div class="note">
-<p>In Chrome and Firefox, the 5th successive callback call is clamped; Safari clamps on the 6th call; in Edge it's the 3rd one. Gecko started to clamp after 4ms <code>setInterval()</code> in <a href="/en-US/docs/Mozilla/Firefox/Releases/56">version 56</a>. It already did this with <code>setTimeout()</code>, as described in the following notes.</p>
+<p>In Chrome and Firefox, the 5th successive callback call is clamped; Safari clamps on the 6th call; in Edge it's the 3rd one. Gecko started to clamp after 4ms <code>{{domxref("WindowOrworkerGlobalScope.setInterval","setInterval()")}}</code> in <a class="external" href="/en-US/docs/Mozilla/Firefox/Releases/56">version 56</a>. It already did this with <code>setTimeout()</code>, as described in the following notes.</p>
 </div>
 
 <div class="note">
-<p><a class="external" href="http://code.google.com/p/chromium/issues/detail?id=792#c10">Historically</a> some browsers implemented this throttling behavior a bit differently (e.g. Firefox) — on <code>setInterval()</code> calls made from anywhere, or when a nested <code>setTimeout()</code> is called where the nesting level is at least a certain depth.</p>
+<p><a class="external" href="//code.google.com/p/chromium/issues/detail?id=792#c10">Historically</a> some browsers implemented this throttling behavior a bit differently (e.g. Firefox) — on <code>{{domxref("WindowOrworkerGlobalScope.setInterval()","setInterval()")}}</code> calls made from anywhere, or when a nested <code>{{domxref("WindowOrworkerGlobalScope.setTimeout()","setTimeout()")}}</code> is called where the nesting level is at least a certain depth.</p>
 </div>
 
 <div class="note">
-<p>To implement a 0 ms timeout in a modern browser, you can use {{domxref("window.postMessage()")}} as <a class="external" href="http://dbaron.org/log/20100309-faster-timeouts">described here</a>.</p>
+<p>To implement a 0 ms timeout in a modern browser, you can use {{domxref("window.postMessage()")}} as <a class="external" href="//dbaron.org/log/20100309-faster-timeouts">described here</a>.</p>
 </div>
 
 <div class="note">
@@ -522,10 +519,7 @@ window.setTimeout("alert('Hello World!');", 500);
 
 <h4 id="Late_timeouts">Late timeouts</h4>
 
-<p>In addition to "clamping", the timeout can also fire later when the page (or the
-  OS/browser itself) is busy with other tasks. One important case to note is that the
-  function or code snippet cannot be executed until the thread that called
-  <code>setTimeout()</code> has terminated. For example:</p>
+<p>In addition to {{anch("Clamping")}}, the timeout can also fire later when the page (or the OS/browser itself) is busy with other tasks. One important case to note is that the function or code snippet cannot be executed until the thread that called <code>{{domxref("WindowOrworkerGlobalScope.setTimeout()","setTimeout()")}}</code> has terminated. For example:</p>
 
 <pre class="brush: js notranslate">function foo() {
   console.log('foo has been called');
