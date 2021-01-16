@@ -114,7 +114,7 @@ function clearAlert() {
     href="/en-US/docs/Web/API/WindowTimers/clearTimeout#Example"><code>clearTimeout()</code>
     example</a>.</p>
 
-<h2 id="Throttle">2: Timeouts throttled</h2>
+<h2 id="Timeouts_throttled">2: Timeouts throttled</h2>
 
 <p>This code defines several functions, three of which demonstrate this throttling effect:
 <em><code>interval()</code></em>, called after <code>setInterval</code> timer expiration; 
@@ -458,7 +458,7 @@ window.setTimeout("alert('Hello World!');", 500);
 
 <p>In modern browsers, <code>{{domxref("WindowOrworkerGlobalScope.setTimeout","setTimeout()")}}</code>/{{domxref("WindowOrworkerGlobalScope.setInterval","setInterval()")}} calls are throttled to a minimum of once every 4 ms when successive calls are triggered due to callback nesting (where the nesting level is at least a certain depth), or after certain number of successive intervals.</p>
 
-<p>See above examples</p>
+<p>See <a href="#2_Timeouts_throttled">example</a>, above.</p>
 
 <div class="note">
 <p>In Chrome and Firefox, the 5th successive callback call is clamped; Safari clamps on the 6th call; in Edge it's the 3rd one. Gecko started to clamp after 4ms <code>setInterval()</code> in <a href="/en-US/docs/Mozilla/Firefox/Releases/56">version 56</a>. It already did this with <code>setTimeout()</code>, as described in the following notes.</p>
