@@ -116,29 +116,32 @@ function clearAlert() {
 
 <h2 id="Timeouts_throttled">2: Timeouts throttled</h2>
 
-<p>This code defines several functions, three of which demonstrate this throttling effect:
-<em><code>interval()</code></em>, called after <code>setInterval</code> timer expiration; 
-<em><code>timeout()</code></em> called after <code>setTimeout()</code> timer expiration;
-<em><code>run()</code></em>, called at program start.</p>
-
-<p>The timers for <code>interval()</code> and <code>timeout()</code> expire immediately. Both functions are called in a tight loop because of this immediate expiration. You'll see the throttling effect after a few milliseconds... </p>
+<p>This example defines functions which demonstrate this throttling effect:
+<ul>
+  
+<li><em><code>interval()</code></em>, called after <code>{{domxref("WindowOrworkerGlobalScope.setInterval()","setInterval()")}}</code> interval expiration.</li>
+<li><em><code>timeout()</code></em> called after <code>{{domxref("WindowOrworkerGlobalScope.setTimeout()","setTimeout()")}}</code> timer expiration.</li>
+<li><em><code>run()</code></em>, called at program start</li>
+<li><em><code>logline()</code></em>, called at interval and timer expiration, displays the last and current intervals along with an indicator when throttling occurs.</li></ul></p>
+<p>The durations defined for <code>interval()</code> and <code>timeout()</code> cause both timers to immediately expire which triggers their completion functions. The browser applies call throttling when it senses that it's calling these completion functions in rapid succession.</p>
 
 <h3 id="HTML">HTML</h3>
 
 <pre class="brush: html notranslate">&lt;p&gt;Live Example&lt;/p&gt;
 &lt;button onclick="run();"&gt;Run&lt;/button&gt;
-&lt;div id='log'&gt;&lt;/div&gt;
+&lt;div id="log"&gt;&lt;/div&gt;
 </pre>
 
 <h3 id="JavaScript">JavaScript</h3>
 
 <pre class="brush: js notranslate">
-var to_timer = 0; // fires after zero milliseconds
-var interval_timer = 0; // fires every zero milliseconds
+var to_timer = 0; // duration is zero milliseconds
+var interval_timer = 0; // expires immediately
 var cleanup_timer = 0; // fires at end of run
 var last = 0; // last millisecond recorded
-var duration = 15; // total milliseconds
+var duration = 15; // run duration in milliseconds
 var lineno = 0; // current output line number
+
 function interval() {
   var d = new Date();
   logline(d.getMilliseconds());
@@ -155,13 +158,18 @@ function run() {
   interval_timer = setInterval(interval, 0);
   to_timer = setTimeout(timeout, 0);
   cleanup_timer = setInterval(cleanup, duration);
- last = 0;
+  last = 0;
   lineno = 0;
-  document.getElementById('log').innerHTML = "";
-  document.getElementById('log').innerHTML += "&lt;div&gt;^&nbsp;&rArr;&nbsp;Current interval greater than last interval";
-  document.getElementById('log').innerHTML += "&lt;div&gt;v&nbsp;&rArr;&nbsp;Current interval less than last interval (should never be seen)";
-}
+  document.getElementById("log").innerHTML = "";
+  document.getElementById("log").innerHTML = "line&ensp;last&emsp;current";
+ }
 
+function logline(msec) { // msec can't wrap: run duration < 1 second
+  var c = "";
+  if ((last != 0) && (last < msec - 1 /* variation */)) { c = "Throttled"; } 
+  document.getElementById("log").innerHTML +=  "&lt;pre&gt;" + pad(lineno++, 2) + "&emsp;&emsp;" + pad(last, 3) + "&emsp;&emsp;" + msec + "&ensp;" + c;
+  last = msec;
+}
 </pre>
 
 <div class="hidden">
@@ -170,26 +178,19 @@ function cleanup() {
   clearTimeout(to_timer);
   clearInterval(interval_timer);
   clearInterval(cleanup_timer);
-  document.getElementById('log').innerHTML += "--- Done ---";
+  document.getElementById("log").innerHTML += "--- Done ---";
 }
 
-function pad(d) {
-  return (d < 10) ? '0' + d.toString() : d.toString();
+function pad(d, len) {
+  return d.toString().padStart(len, "0");
 }
 
-function logline(msec) { // msec can't wrap: run duration < 1 second
-  var c = "";
-  if (last < msec) { c = "^"; } 
-  if (last > msec) { c = "v"; } // Should never happen
-  document.getElementById('log').innerHTML += "&lt;pre&gt;" + pad(lineno++) + " " + last + " " + msec + " " + c;
-  last = msec;
-}
 </pre>
 </div>
 
 <h3 id="Result">Result</h3>
 
-<p>{{EmbedLiveSample('2_Timeouts_throttled', 100, 175)}}</p>
+<p>{{EmbedLiveSample("2_Timeouts_throttled", 100, 175)}}</p>
 
 <h2 id="Polyfill">Polyfill</h2>
 
@@ -455,7 +456,7 @@ window.setTimeout("alert('Hello World!');", 500);
 
 <p>In modern browsers, <code>{{domxref("WindowOrworkerGlobalScope.setTimeout()","setTimeout()")}}</code>/{{domxref("WindowOrworkerGlobalScope.setInterval","setInterval()")}} calls are throttled to a minimum of once every 4 ms when successive calls are triggered due to callback nesting (where the nesting level is at least a certain depth), or after certain number of successive intervals.</p>
 
-<p>See {{anch("2 Timeouts throttled")}}, above.</p>
+<p>See {{anch("2 Timeouts throttled")}} example, above.</p>
 
 <div class="note">
 <p>In Chrome and Firefox, the 5th successive callback call is clamped; Safari clamps on the 6th call; in Edge it's the 3rd one. Gecko started to clamp after 4ms <code>{{domxref("WindowOrworkerGlobalScope.setInterval","setInterval()")}}</code> in <a class="external" href="/en-US/docs/Mozilla/Firefox/Releases/56">version 56</a>. It already did this with <code>setTimeout()</code>, as described in the following notes.</p>
