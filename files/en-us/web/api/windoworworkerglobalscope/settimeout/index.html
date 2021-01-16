@@ -121,7 +121,7 @@ function clearAlert() {
   
 <li><em><code>interval()</code></em>, called after <code>{{domxref("WindowOrworkerGlobalScope.setInterval()","setInterval()")}}</code> interval expiration.</li>
 <li><em><code>timeout()</code></em> called after <code>{{domxref("WindowOrworkerGlobalScope.setTimeout()","setTimeout()")}}</code> timer expiration.</li>
-<li><em><code>run()</code></em>, called at program start</li>
+<li><em><code>run()</code></em>, called at program start.</li>
 <li><em><code>logline()</code></em>, called at interval and timer expiration, displays the last and current intervals along with an indicator when throttling occurs.</li></ul></p>
 <p>The durations defined for <code>interval()</code> and <code>timeout()</code> cause both timers to immediately expire which triggers their completion functions. The browser applies call throttling when it senses that it's calling these completion functions in rapid succession.</p>
 
