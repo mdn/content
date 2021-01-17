@@ -180,7 +180,7 @@ tags:
   <p>This calls the <code>fetch()</code> method, passing it the URL of the image to fetch from the network as a parameter. This can also take an options object as an optional second parameter, but we are just using the simplest version for now. We are storing the promise object returned by <code>fetch()</code> inside a variable called <code>promise</code>. As we said before, this object represents an intermediate state that is initially neither success nor failure — the official term for a promise in this state is <strong>pending</strong>.</p>
  </li>
  <li>
-  <p>To respond to the successful completion of the operation whenever that occurs (in this case, when a {{domxref("Response")}} is returned), we invoke the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">.then()</a></code> method of the promise object. The callback inside the <code>.then()</code> block (referred to as the <strong>executor</strong>) runs only when the promise call completes successfully and returns the {{domxref("Response")}} object — in promise-speak, when it has been <strong>fulfilled</strong>. It is passed the returned {{domxref("Response")}} object as a parameter.</p>
+  <p>To respond to the successful completion of the operation whenever that occurs (in this case, when a {{domxref("Response")}} is returned), we invoke the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">.then()</a></code> method of the promise object. The callback inside the <code>.then()</code> block runs only when the promise call completes successfully and returns the {{domxref("Response")}} object — in promise-speak, when it has been <strong>fulfilled</strong>. It is passed the returned {{domxref("Response")}} object as a parameter.</p>
 
   <div class="notecard note">
   <p><strong>Note</strong>: The way that a <code>.then()</code> block works is similar to when you add an event listener to an object using <code>AddEventListener()</code>. It doesn't run until an event occurs (when the promise fulfills). The most notable difference is that a <code>.then()</code> will only run once for each time it is used, whereas an event listener could be invoked multiple times.</p>
@@ -216,7 +216,7 @@ tags:
 })</pre>
  </li>
  <li>
-  <p>Now let's fill in the body of the executor function. Add the following lines inside the curly braces:</p>
+   <p>Now let's fill in the body of the <code>.then()</code> callback. Add the following lines inside the curly braces:</p>
 
   <pre class="brush: js notranslate">let objectURL = URL.createObjectURL(myBlob);
 let image = document.createElement('img');
@@ -271,7 +271,7 @@ document.body.appendChild(image);</pre>
   console.log('There has been a problem with your fetch operation: ' + e.message);
 });</pre>
 
-<p>Bear in mind that the value returned by a fulfilled promise becomes the parameter passed to the next <code>.then()</code> block's executor function.</p>
+<p>Bear in mind that the value returned by a fulfilled promise becomes the parameter passed to the next <code>.then()</code> block's callback function.</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: <code>.then()</code>/<code>.catch()</code> blocks in promises are basically the async equivalent of a <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> block in sync code. Bear in mind that synchronous <code>try...catch</code> won't work in async code.</p>
@@ -285,7 +285,7 @@ document.body.appendChild(image);</pre>
  <li>When a promise is created, it is neither in a success or failure state. It is said to be <strong>pending</strong>.</li>
  <li>When a promise returns, it is said to be <strong>resolved</strong>.
   <ol>
-   <li>A successfully resolved promise is said to be <strong>fulfilled</strong>. It returns a value, which can be accessed by chaining a <code>.then()</code> block onto the end of the promise chain. The executor function inside the <code>.then()</code> block will contain the promise's return value.</li>
+   <li>A successfully resolved promise is said to be <strong>fulfilled</strong>. It returns a value, which can be accessed by chaining a <code>.then()</code> block onto the end of the promise chain. The callback function inside the <code>.then()</code> block will contain the promise's return value.</li>
    <li>An unsuccessful resolved promise is said to be <strong>rejected</strong>. It returns a <strong>reason</strong>, an error message stating why the promise was rejected. This reason can be accessed by chaining a <code>.catch()</code> block onto the end of the promise chain.</li>
   </ol>
  </li>
@@ -301,7 +301,7 @@ document.body.appendChild(image);</pre>
   ...
 });</pre>
 
-<p>If they all fulfil, the chained <code>.then()</code> block's executor function will be passed an array containing all those results as a parameter. If any of the promises passed to <code>Promise.all()</code> reject, the whole block will reject.</p>
+<p>If they all fulfil, the chained <code>.then()</code> block's callback function will be passed an array containing all those results as a parameter. If any of the promises passed to <code>Promise.all()</code> reject, the whole block will reject.</p>
 
 <p>This can be very useful. Imagine that we’re fetching information to dynamically populate a UI feature on our page with content. In many cases, it makes sense to receive all the data and only then show the complete content, rather than displaying partial information.</p>
 
@@ -353,7 +353,7 @@ Promise.all([a, b, c]).then(values =&gt; {
    <li>Inside the function body, we have a similar structure to what we saw in the first example — we call the <code>fetch()</code> function to fetch the resource at the specified URL, then chain it onto another promise that returns the decoded (or "read") response body. This was always the <code>blob()</code> method in the previous example.</li>
    <li>However, two things are different here:
     <ul>
-     <li>First of all, the second promise we return is different depending on what the <code>type</code> value is. Inside the executor function, we include a simple <code>if ... else if</code> statement to return a different promise depending on what type of file we need to decode (in this case we've got a choice of <code>blob</code> or <code>text</code>, but it would be easy to extend this to deal with other types as well).</li>
+     <li>First of all, the second promise we return is different depending on what the <code>type</code> value is. Inside the <code>.then()</code> callback function, we include a simple <code>if ... else if</code> statement to return a different promise depending on what type of file we need to decode (in this case we've got a choice of <code>blob</code> or <code>text</code>, but it would be easy to extend this to deal with other types as well).</li>
      <li>Second, we have added the <code>return</code> keyword before the <code>fetch()</code> call. The effect this has is to run the entire chain and then run the final result (i.e. the promise returned by <code>blob()</code> or <code>text()</code>) as the return value of the function we've just defined. In effect, the <code>return</code> statements pass the results back up the chain to the top.</li>
     </ul>
    </li>
@@ -372,13 +372,13 @@ let tea = fetchAndDecode('tea.jpg', 'blob');
 let description = fetchAndDecode('description.txt', 'text');</pre>
  </li>
  <li>
-  <p>Next, we will define a <code>Promise.all()</code> block to run some code only when all three of the promises stored above have successfully fulfilled. To begin with, add a block with an empty executor inside the <code>.then()</code> call, like so:</p>
+  <p>Next, we will define a <code>Promise.all()</code> block to run some code only when all three of the promises stored above have successfully fulfilled. To begin with, add a block with an empty callback function inside the <code>.then()</code> call, like so:</p>
 
   <pre class="brush: js notranslate">Promise.all([coffee, tea, description]).then(values =&gt; {
 
 });</pre>
 
-  <p>You can see that it takes an array containing the promises as a parameter. The executor will only run when all three promises resolve; when that happens, it will be passed an array containing the results from the individual promises (i.e. the decoded response bodies), kind of like [coffee-results, tea-results, description-results].</p>
+  <p>You can see that it takes an array containing the promises as a parameter. The <code>.then()</code> callback function will only run when all three promises resolve; when that happens, it will be passed an array containing the results from the individual promises (i.e. the decoded response bodies), kind of like [coffee-results, tea-results, description-results].</p>
  </li>
  <li>
   <p>Finally, add the following inside the executor. Here we use some fairly simple sync code to store the results in separate variables (creating object URLs from the blobs), then display the images and text on the page.</p>
