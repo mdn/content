@@ -1,0 +1,107 @@
+---
+title: NSS 3.48 release notes
+slug: Mozilla/Projects/NSS/NSS_3.48_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p>The NSS team has released Network Security Services (NSS) 3.48 on <strong>5 December 2019</strong>, which is a minor release.</p>
+
+<p>The NSS team would like to recognize first-time contributors:</p>
+
+<ul>
+ <li>Craig Disselkoen</li>
+ <li>Giulio Benetti</li>
+ <li>Lauri Kasanen</li>
+ <li>Tom Prince</li>
+</ul>
+
+<h2 id="Distribution_Information">Distribution Information</h2>
+
+<p>The HG tag is NSS_3_48_RTM. NSS 3.48 requires NSPR 4.24 or newer.</p>
+
+<p>NSS 3.48 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_48_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_48_RTM/src/</a></li>
+</ul>
+
+<p>Other releases are available <a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Releases">in NSS Releases</a>.</p>
+
+<h2 id="Notable_Changes_in_NSS_3.48">Notable Changes in NSS 3.48</h2>
+
+<ul>
+ <li><a class="external" href="https://tools.ietf.org/html/rfc8446" rel="noopener">TLS 1.3</a> is the default maximum TLS version.  See <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1573118" rel="noopener">Bug 1573118</a> for details.</li>
+ <li><a class="external" href="https://tools.ietf.org/html/rfc7627" rel="noopener">TLS extended master secret</a> is enabled by default, where possible.  See <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1575411" rel="noopener">Bug 1575411</a> for details.</li>
+ <li>The master password PBE now uses 10,000 iterations by default when using the default sql (key4.db) storage. Because using an iteration count higher than 1 with the legacy dbm (key3.db) storage creates files that are incompatible with previous versions of NSS, applications that wish to enable it for key3.db are required to set environment variable <kbd>NSS_ALLOW_LEGACY_DBM_ITERATION_COUNT=1</kbd>. Applications may set environment variable <kbd>NSS_MIN_MP_PBE_ITERATION_COUNT</kbd> to request a higher iteration count than the library's default, or <kbd>NSS_MAX_MP_PBE_ITERATION_COUNT</kbd> to request a lower iteration count for test environments. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1562671">Bug 1562671 </a>for details.</li>
+</ul>
+
+<h3 id="Certificate_Authority_Changes">Certificate Authority Changes</h3>
+
+<ul>
+ <li>The following CA certificates were Added:
+  <ul>
+   <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1591178">Bug 1591178</a> - Entrust Root Certification Authority - G4 Cert
+
+    <ul>
+     <li>SHA-256 Fingerprint: DB3517D1F6732A2D5AB97C533EC70779EE3270A62FB4AC4238372460E6F01E88</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Upcoming_Changes_in_NSS_3.49">Upcoming Changes in NSS 3.49</h2>
+
+<ul>
+ <li>The legacy DBM database, <strong>libnssdbm</strong>, will no longer be built by default. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1594933">Bug 1594933 </a>for details.</li>
+</ul>
+
+<h2 id="Bugs_fixed_in_NSS_3.48">Bugs fixed in NSS 3.48</h2>
+
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1600775">Bug 1600775</a> - Require NSPR 4.24 for NSS 3.48</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1593401">Bug 1593401</a> - Fix race condition in self-encrypt functions</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1599545">Bug 1599545</a> - Fix assertion and add test for early Key Update</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1597799">Bug 1597799</a> - Fix a crash in nssCKFWObject_GetAttributeSize</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1591178">Bug 1591178</a> - Add Entrust Root Certification Authority - G4 certificate to NSS</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1590001">Bug 1590001</a> - Prevent negotiation of versions lower than 1.3 after HelloRetryRequest</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1596450">Bug 1596450</a> - Added a simplified and unified MAC implementation for HMAC and CMAC behind PKCS#11</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1522203">Bug 1522203</a> - Remove an old Pentium Pro performance workaround</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1592557">Bug 1592557</a> - Fix PRNG known-answer-test scripts</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1586176">Bug 1586176</a> - EncryptUpdate should use maxout not block size (CVE-2019-11745)</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1593141">Bug 1593141</a> - add `notBefore` or similar "beginning-of-validity-period" parameter to mozilla::pkix::TrustDomain::CheckRevocation</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1591363">Bug 1591363</a> - Fix a PBKDF2 memory leak in NSC_GenerateKey if key length &gt; MAX_KEY_LEN (256)</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1592869">Bug 1592869</a> - Use ARM NEON for ctr_xor</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1566131">Bug 1566131</a> - Ensure SHA-1 fallback disabled in TLS 1.2</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1577803">Bug 1577803</a> - Mark PKCS#11 token as friendly if it implements CKP_PUBLIC_CERTIFICATES_TOKEN</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1566126">Bug 1566126</a> - POWER GHASH Vector Acceleration</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1589073">Bug 1589073</a> - Use of new PR_ASSERT_ARG in certdb.c</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1590495">Bug 1590495</a> - Fix a crash in PK11_MakeCertFromHandle</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1591742">Bug 1591742</a> - Ensure DES IV length is valid before usage from PKCS#11</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1588567">Bug 1588567</a> - Enable mozilla::pkix gtests in NSS CI</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1591315">Bug 1591315</a> - Update NSC_Decrypt length in constant time</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1562671">Bug 1562671</a> - Increase NSS MP KDF default iteration count, by default for modern key4 storage, optionally for legacy key3.db storage</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1590972">Bug 1590972</a> - Use -std=c99 rather than -std=gnu99</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1590676">Bug 1590676</a> - Fix build if ARM doesn't support NEON</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1575411">Bug 1575411</a> - Enable TLS extended master secret by default</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1590970">Bug 1590970</a> - SSL_SetTimeFunc has incomplete coverage</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1590678">Bug 1590678</a> - Remove -Wmaybe-uninitialized warning in tls13esni.c</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1588244">Bug 1588244</a> - NSS changes for Delegated Credential key strength checks</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1459141">Bug 1459141</a> - Add more CBC padding tests that missed NSS 3.47</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1590339">Bug 1590339</a> - Fix a memory leak in btoa.c</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1589810">Bug 1589810</a> - fix uninitialized variable warnings from certdata.perl</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1573118">Bug 1573118</a> - Enable TLS 1.3 by default in NSS</li>
+</ul>
+
+<p>This Bugzilla query returns all the bugs fixed in NSS 3.48:</p>
+
+<p><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.48">https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.48</a></p>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.48 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.48 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report with<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (product NSS).</p>

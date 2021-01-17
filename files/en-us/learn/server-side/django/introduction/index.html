@@ -105,9 +105,6 @@ tags:
 <p><strong>Note</strong>: Django refers to this organisation as the "Model View Template (MVT)" architecture. It has many similarities to the more familiar <a href="/en-US/docs/Glossary/MVC">Model View Controller</a> architecture. </p>
 </div>
 
-<ul>
-</ul>
-
 <p>The sections below will give you an idea of what these main parts of a Django app look like (we'll go into more detail later on in the course, once we've set up a development environment).</p>
 
 <h3 id="Sending_the_request_to_the_right_view_urls.py">Sending the request to the right view (urls.py)</h3>
@@ -154,9 +151,6 @@ def index(request):
 </ul>
 </div>
 
-<ul>
-</ul>
-
 <p>Views are usually stored in a file called <strong>views.py</strong>.</p>
 
 <h3 id="Defining_data_models_models.py">Defining data models (models.py)</h3>
@@ -185,7 +179,7 @@ class Team(models.Model):
 <p><strong>Note</strong>: A little bit of Python:</p>
 
 <ul>
- <li>Python supports "object-oriented programming", a style of programming where we organise our code into objects, which include related data and functions for operating on that data. Objects can also inherit/extend/derive from other objects, allowing common behaviour between related objects to be shared. In Python we use the keyword <code>class</code> to define the "blueprint" for an object. We can create multiple specific <em>instances</em> of the type of object based on the model in the class.<br>
+ <li>Python supports "object-oriented programming", a style of programming where we organise our code into objects, which include related data and functions for operating on that data. Objects can also inherit/extend/derive from other objects, allowing common behavior between related objects to be shared. In Python we use the keyword <code>class</code> to define the "blueprint" for an object. We can create multiple specific <em>instances</em> of the type of object based on the model in the class.<br>
   <br>
   So for example, here we have a <code>Team</code> class, which derives from the <code>Model</code> class. This means it is a model, and will contain all the methods of a model, but we can also give it specialized features of its own too. In our model we define the fields our database will need to store our data, giving them specific names. Django uses these definitions, including the field names, to create the underlying database.</li>
 </ul>

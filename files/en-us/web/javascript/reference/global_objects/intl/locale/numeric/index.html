@@ -6,6 +6,8 @@ tags:
   - Intl
   - JavaScript
   - Property
+  - Locale
+  - Localization
   - Prototype
   - Reference
 ---
@@ -19,7 +21,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Setting_the_numeric_value_via_the_locale_string">Setting the <code>numeric</code> value via the locale string</h3>
+<h3 id="Setting_the_numeric_value_via_the_locale_string">Setting the numeric value via the locale string</h3>
 
 <p>In the <a href="https://www.unicode.org/reports/tr35/" rel="noopener">Unicode locale string spec</a>, the values that <code>numeric</code> represents correspond to the key <code>kn</code>. <code>kn</code> is considered a locale string "extension subtag". These subtags add additional data about the locale, and are added to locale identifiers by using the <code>-u</code> extension key. Thus, the <code>numeric</code> value can be added to the inital locale identifier string that is passed into the {{jsxref("Locale/Locale", "Locale")}} constructor. To set the <code>numeric</code> value, first add the <code>-u</code> extension key to the string. Next, add the <code>-kn</code> extension key to indicate that you are adding a value for <code>numeric</code>. Finally, add the <code>numeric</code> value to the string. If you want to set <code>numeric</code> to <code>true</code>, adding the <code>kn</code> key will suffice. To set the value to <code>false</code>, you must specify in by adding "<code>false</code>" after the <code>kn</code> key.</p>
 
@@ -37,16 +39,16 @@ console.log(us12hour.numeric); // Prints "true"
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sec-Intl.Locale.prototype.numeric')}}</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('ES Int Draft', '#sec-Intl.Locale.prototype.numeric')}}</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -56,5 +58,5 @@ console.log(us12hour.numeric); // Prints "true"
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Locale", "Intl.Locale")}}</li>
+	<li>{{jsxref("Intl.Locale")}}</li>
 </ul>

@@ -90,7 +90,7 @@ function screenToWorld(x,y) {
 
 <h4 id="Rendering">Rendering</h4>
 
-<p>A trivial method for rendering would just be to iterate over all the tiles (like in static tilemaps) and draw them, substracting the camera coordinates (like in the <code>worldToScreen()</code> example shown above) and letting the parts that fall outside the view window sit there, hidden. Drawing all the tiles that can not be seen is wasteful, however, and can take a toll on performance. <strong>Only tiles that are at visible should be rendered</strong> ideally — see the {{anch("Performance")}} section for more ideas on improving rendering performance.</p>
+<p>A trivial method for rendering would just be to iterate over all the tiles (like in static tilemaps) and draw them, subtracting the camera coordinates (like in the <code>worldToScreen()</code> example shown above) and letting the parts that fall outside the view window sit there, hidden. Drawing all the tiles that can not be seen is wasteful, however, and can take a toll on performance. <strong>Only tiles that are at visible should be rendered</strong> ideally — see the {{anch("Performance")}} section for more ideas on improving rendering performance.</p>
 
 <p>You can read more about implementing scrolling tilemaps and see some example implementations in <a href="/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation%3A_Scrolling_maps">Square tilemaps implementation: Scrolling maps</a>.</p>
 

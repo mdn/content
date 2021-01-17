@@ -210,7 +210,7 @@ var SomeModel = mongoose.model('SomeModel', SomeModelSchema );</strong></pre>
 <p>The first argument is the singular name of the collection that will be created for your model (Mongoose will create the database collection for the above model <em>SomeModel</em> above), and the second argument is the schema you want to use in creating the model.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Once you've defined your model classes you can use them to create, update, or delete records, and run queries to get all records or particular subsets of records. We'll show you how to do this in the <a href="#Using_models">Using models</a> section, and when we create our views.</p>
+<p><strong>Note:</strong> Once you've defined your model classes you can use them to create, update, or delete records, and run queries to get all records or particular subsets of records. We'll show you how to do this in the <a href="#using_models">Using models</a> section, and when we create our views.</p>
 </div>
 
 <h4 id="Schema_types_fields">Schema types (fields)</h4>
@@ -593,7 +593,7 @@ SomeModel.find(callback_function);</pre>
   </ul>
  </li>
  <li>This will open the <em>Connect</em> screen.<br>
-  <img alt="Choose the Short SRV connection when settinup a connection on MongoDB Atalas." src="https://mdn.mozillademos.org/files/17153/MongoDB_Atlas_-_ConnectForShortSRV_2020-03.PNG" style="border-style: solid; border-width: 1px; height: 649px; width: 666px;">
+  <img alt="Choose the Short SRV connection when setting up a connection on MongoDB Atlas." src="https://mdn.mozillademos.org/files/17153/MongoDB_Atlas_-_ConnectForShortSRV_2020-03.PNG" style="border-style: solid; border-width: 1px; height: 649px; width: 666px;">
   <ul>
    <li>Click the <strong>Copy</strong> button to copy the connection string.</li>
    <li>Save this string somewhere safe.</li>
@@ -607,7 +607,7 @@ SomeModel.find(callback_function);</pre>
 
 <h2 id="Install_Mongoose">Install Mongoose</h2>
 
-<p>Open a command prompt and navigate to the directory where you created your <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">skeleton Local Library website</a>. Enter the following command to install Mongoose (and its dependencies) and add it to your <strong>package.json</strong> file, unless you have already done so when reading the <a href="#Installing_Mongoose_and_MongoDB">Mongoose Primer</a> above.</p>
+<p>Open a command prompt and navigate to the directory where you created your <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">skeleton Local Library website</a>. Enter the following command to install Mongoose (and its dependencies) and add it to your <strong>package.json</strong> file, unless you have already done so when reading the <a href="#installing_mongoose_and_mongodb">Mongoose Primer</a> above.</p>
 
 <pre class="brush: bash notranslate">npm install mongoose
 </pre>
@@ -623,11 +623,11 @@ mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));</pre>
 
-<p>As discussed <a href="#Connecting_to_MongoDB">in the Mongoose primer above</a>, this code creates the default connection to the database and binds to the error event (so that errors will be printed to the console). </p>
+<p>As discussed <a href="#connecting_to_mongodb">in the Mongoose primer above</a>, this code creates the default connection to the database and binds to the error event (so that errors will be printed to the console). </p>
 
 <h2 id="Defining_the_LocalLibrary_Schema">Defining the LocalLibrary Schema</h2>
 
-<p>We will define a separate module for each model, as <a href="#One_schemamodel_per_file">discussed above</a>. Start by creating a folder for our models in the project root (<strong>/models</strong>) and then create separate files for each of the models:</p>
+<p>We will define a separate module for each model, as <a href="#one_schemamodel_per_file">discussed above</a>. Start by creating a folder for our models in the project root (<strong>/models</strong>) and then create separate files for each of the models:</p>
 
 <pre class="notranslate">/express-locallibrary-tutorial  //the project root
   <strong>/models</strong>
@@ -680,7 +680,7 @@ module.exports = mongoose.model('Author', AuthorSchema);
 
 </pre>
 
-<p>We've also declared a <a href="#Virtual_properties">virtual</a> for the AuthorSchema named "url" that returns the absolute URL required to get a particular instance of the model — we'll use the property in our templates whenever we need to get a link to a particular author.</p>
+<p>We've also declared a <a href="#virtual_properties">virtual</a> for the AuthorSchema named "url" that returns the absolute URL required to get a particular instance of the model — we'll use the property in our templates whenever we need to get a link to a particular author.</p>
 
 <div class="note">
 <p><strong>Note:</strong> Declaring our URLs as a virtual in the schema is a good idea because then the URL for an item only ever needs to be changed in one place.<br>
@@ -770,7 +770,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);</pre>
 <ul>
  <li>The model should have a <code>String</code> SchemaType called <code>name</code> to describe the genre.</li>
  <li>This name should be required and have between 3 and 100 characters.</li>
- <li>Declare a <a href="#Virtual_properties">virtual</a> for the genre's URL, named <code>url</code>.</li>
+ <li>Declare a <a href="#virtual_properties">virtual</a> for the genre's URL, named <code>url</code>.</li>
  <li>Export the model.</li>
 </ul>
 

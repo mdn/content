@@ -226,17 +226,24 @@ let amountDueView = new Float32Array(buffer, 20, 1);</pre>
 
 <p>Then you can access, for example, the amount due with <code>amountDueView[0]</code>.</p>
 
-<div class="note"><strong>Note:</strong> The <a href="http://en.wikipedia.org/wiki/Data_structure_alignment">data structure alignment</a> in a C structure is platform-dependent. Take precautions and considerations for these padding differences.</div>
+<div class="note"><strong>Note:</strong> The <a href="https://en.wikipedia.org/wiki/Data_structure_alignment">data structure alignment</a> in a C structure is platform-dependent. Take precautions and considerations for these padding differences.</div>
 
 <h3 id="Conversion_to_normal_arrays">Conversion to normal arrays</h3>
 
-<p>After processing a typed array, it is sometimes useful to convert it back to a normal array in order to benefit from the {{jsxref("Array")}} prototype. This can be done using {{jsxref("Array.from()")}}, or using the following code where <code>Array.from()</code> is unsupported.</p>
+<p>After processing a typed array, it is sometimes useful to convert it back to a normal array in order to benefit from the {{jsxref("Array")}} prototype. This can be done using {{jsxref("Array.from()")}}</p>
 
-<pre class="brush:js">let typedArray = new Uint8Array([1, 2, 3, 4]),
-    normalArray = Array.prototype.slice.call(typedArray);
-normalArray.length === 4;
-normalArray.constructor === Array;
-</pre>
+<pre class="brush:js">const typedArray = new Uint8Array([1, 2, 3, 4]);
+const normalArray = Array.from(typedArray);</pre>
+
+<p>as well as the {{jsxref("operators/spread_syntax", "spread operator", "", 1)}}</p>
+
+<pre class="brush:js">const typedArray = new Uint8Array([1, 2, 3, 4]);
+const normalArray = [...typedArray];</pre>
+
+<p>or using the following code where <code>Array.from()</code> is unsupported.</p>
+
+<pre class="brush:js">const typedArray = new Uint8Array([1, 2, 3, 4]);
+const normalArray = Array.prototype.slice.call(typedArray);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

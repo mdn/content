@@ -96,7 +96,7 @@ tags:
 
 <h3 id="Database_configuration">Database configuration</h3>
 
-<p>So far in this tutorial we've used a single database that is hard coded into the <strong>app.js</strong> file. Normally we'd like to be able to have a different database for production and development, so next we'll modify the LocalLibrary website to get the database URI from the OS environment, and otherwise use our development database that we added manually earlier. Cloud Foundry has a very flexible services model that enables multiple services of the same type to exist in the environment. It stores all services related configurations in a single parseable JSON object called <code>VCAP_SERVICES</code>. A typical <code>VCAP_SERVICES</code> variable looks like this:</p>
+<p>So far in this tutorial we've used a single database that is hard coded into the <strong>app.js</strong> file. Normally we'd like to be able to have a different database for production and development, so next we'll modify the LocalLibrary website to get the database URI from the OS environment, and otherwise use our development database that we added manually earlier. Cloud Foundry has a very flexible services model that enables multiple services of the same type to exist in the environment. It stores all services related configurations in a single parsable JSON object called <code>VCAP_SERVICES</code>. A typical <code>VCAP_SERVICES</code> variable looks like this:</p>
 
 <pre class="brush: json">{
  "VCAP_SERVICES": {
@@ -167,7 +167,7 @@ var appEnv = cfenv.getAppEnv();
 
 <h2 id="Get_a_Pivotal_Web_Services_account">Get a Pivotal Web Services account</h2>
 
-<p>To start using Pivotal Web Services you will first need to create an account (skip ahead to <a href="#Create_and_upload_the_website">Create and upload the website</a> if you've already got an account and have already installed the PWS cf CLI client).</p>
+<p>To start using Pivotal Web Services you will first need to create an account (skip ahead to <a href="#create_and_upload_the_website">Create and upload the website</a> if you've already got an account and have already installed the PWS cf CLI client).</p>
 
 <ul>
  <li>Go to <a href="https://run.pivotal.io">https://run.pivotal.io</a> and click the <strong>SIGN UP FOR FREE</strong> button.</li>
@@ -208,7 +208,7 @@ Password: enter your password</pre>
 
 <h2 id="Setting_configuration_variables">Setting configuration variables</h2>
 
-<p>You will recall from a preceding section that we need to <a href="#NODE_ENV">set NODE_ENV to 'production'</a> in order to improve our performance and generate less-verbose error messages.</p>
+<p>You will recall from a preceding section that we need to <a href="#node_env">set NODE_ENV to 'production'</a> in order to improve our performance and generate less-verbose error messages.</p>
 
 <ol>
  <li>

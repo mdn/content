@@ -1,0 +1,235 @@
+---
+title: NSS 3.21 release notes
+slug: Mozilla/Projects/NSS/NSS_3.21_release_notes
+---
+<p>2016-01-07, this page has been updated to include additional information about the release. The sections "Security Fixes" and "Acknowledgements" have been added.</p>
+
+<h2 id="Introduction">Introduction</h2>
+
+<p>The NSS team has released Network Security Services (NSS) 3.21, which is a minor release.</p>
+
+<h2 id="Distribution_Information">Distribution Information</h2>
+
+<p>The HG tag is NSS_3_21_RTM. NSS 3.21 requires NSPR 4.10.10 or newer.</p>
+
+<p>NSS 3.21 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_21_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_21_RTM/src/</a></li>
+</ul>
+
+<h2 id="Security_Fixes_in_NSS_3.21" style="font-size: 2.14285714285714rem;">Security Fixes in NSS 3.21</h2>
+
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1158489">Bug 1158489</a><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1138554"> </a>/ <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-7575">CVE-2015-7575</a> - Prevent MD5 Downgrade in TLS 1.2 Signatures.</li>
+</ul>
+
+<h2 id="New_in_NSS_3.21">New in NSS 3.21</h2>
+
+<h3 id="New_Functionality">New Functionality</h3>
+
+<ul>
+ <li><code>certutil</code> now supports a <code>--rename</code> option to change a nickname (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1142209">bug 1142209</a>)</li>
+ <li>TLS extended master secret extension (<a href="https://tools.ietf.org/html/rfc7627">RFC 7627</a>) is supported (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1117022">bug 1117022</a>)</li>
+ <li>New info functions added for use during mid-handshake callbacks (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1084669">bug 1084669</a>)</li>
+</ul>
+
+<h4 id="New_Functions">New Functions</h4>
+
+<ul>
+ <li><em>in nss.h</em>
+
+  <ul>
+   <li><strong>NSS_OptionSet</strong> - sets NSS global options</li>
+   <li><strong>NSS_OptionGet</strong> - gets the current value of NSS global options</li>
+  </ul>
+ </li>
+ <li><em>in secmod.h</em>
+  <ul>
+   <li><strong>SECMOD_CreateModuleEx</strong> - Create a new SECMODModule structure from module name string, module parameters string, NSS specific parameters string, and NSS configuration parameter string. The module represented by the module structure is not loaded. The difference with <strong>SECMOD_CreateModule</strong> is the new function handles NSS configuration parameter strings.</li>
+  </ul>
+ </li>
+ <li><em>in ssl.h</em>
+  <ul>
+   <li><strong>SSL_GetPreliminaryChannelInfo</strong> - obtains information about a TLS channel prior to the handshake being completed, for use with the callbacks that are invoked during the handshake</li>
+   <li><strong>SSL_SignaturePrefSet</strong> - configures the enabled signature and hash algorithms for TLS</li>
+   <li><strong>SSL_SignaturePrefGet</strong> - retrieves the currently configured signature and hash algorithms</li>
+   <li><strong>SSL_SignatureMaxCount</strong> - obtains the maximum number signature algorithms that can be configured with <strong>SSL_SignaturePrefSet</strong></li>
+  </ul>
+ </li>
+ <li><em>in utilpars.h</em>
+  <ul>
+   <li><strong>NSSUTIL_ArgParseModuleSpecEx</strong> - takes a module spec and breaks it into shared library string, module name string, module parameters string, NSS specific parameters string, and NSS configuration parameter strings. The returned strings must be freed by the caller. The difference with <strong>NSS_ArgParseModuleSpec </strong>is the new function handles NSS configuration parameter strings.</li>
+   <li><strong>NSSUTIL_MkModuleSpecEx</strong> - take a shared library string, module name string, module parameters string, NSS specific parameters string, and NSS configuration parameter string and returns a module string which the caller must free when it is done. The difference with <strong>NSS_MkModuleSpec</strong> is the new function handles NSS configuration parameter strings.</li>
+  </ul>
+ </li>
+</ul>
+
+<h4 id="New_Types">New Types</h4>
+
+<ul>
+ <li><em>in pkcs11t.h</em>
+
+  <ul>
+   <li><strong>CK_TLS12_MASTER_KEY_DERIVE_PARAMS{_PTR}</strong> - parameters {or pointer} for <strong>CKM_TLS12_MASTER_KEY_DERIVE</strong></li>
+   <li><strong>CK_TLS12_KEY_MAT_PARAMS{_PTR} </strong>- parameters {or pointer} for <strong>CKM_TLS12_KEY_AND_MAC_DERIVE</strong></li>
+   <li><strong>CK_TLS_KDF_PARAMS{_PTR} </strong>- parameters {or pointer} for <strong>CKM_TLS_KDF</strong></li>
+   <li><strong>CK_TLS_MAC_PARAMS{_PTR} </strong>- parameters {or pointer} for <strong>CKM_TLS_MAC</strong></li>
+  </ul>
+ </li>
+ <li><em>in sslt.h</em>
+  <ul>
+   <li><strong>SSLHashType</strong> - identifies a hash function</li>
+   <li><strong>SSLSignatureAndHashAlg </strong>- identifies a signature and hash function</li>
+   <li><strong>SSLPreliminaryChannelInfo</strong> - provides information about the session state prior to handshake completion</li>
+  </ul>
+ </li>
+</ul>
+
+<h4 id="New_Macros">New Macros</h4>
+
+<ul>
+ <li><em>in nss.h</em>
+
+  <ul>
+   <li><strong>NSS_RSA_MIN_KEY_SIZE</strong> - used with NSS_OptionSet and NSS_OptionGet to set or get the minimum RSA key size</li>
+   <li><strong>NSS_DH_MIN_KEY_SIZE</strong> - used with NSS_OptionSet and NSS_OptionGet to set or get the minimum DH key size</li>
+   <li><strong>NSS_DSA_MIN_KEY_SIZE</strong> - used with NSS_OptionSet and NSS_OptionGet to set or get the minimum DSA key size</li>
+  </ul>
+ </li>
+ <li><em>in pkcs11t.h</em>
+  <ul>
+   <li><strong>CKM_TLS12_MASTER_KEY_DERIVE</strong> - derives TLS 1.2 master secret</li>
+   <li><strong>CKM_TLS12_KEY_AND_MAC_DERIVE</strong> - derives TLS 1.2 traffic key and IV</li>
+   <li><strong>CKM_TLS12_MASTER_KEY_DERIVE_DH</strong> - derives TLS 1.2 master secret for DH (and ECDH) cipher suites</li>
+   <li><strong>CKM_TLS12_KEY_SAFE_DERIVE</strong> and <strong>CKM_TLS_KDF</strong> are identifiers for additional PKCS#12 mechanisms for TLS 1.2 that are currently unused in NSS.</li>
+   <li><strong>CKM_TLS_MAC</strong> - computes TLS Finished MAC</li>
+  </ul>
+ </li>
+ <li><em>in secoidt.h</em>
+  <ul>
+   <li><strong>NSS_USE_ALG_IN_SSL_KX</strong> - policy flag indicating that keys are used in TLS key exchange</li>
+  </ul>
+ </li>
+ <li><em>in sslerr.h</em>
+  <ul>
+   <li><strong>SSL_ERROR_RX_SHORT_DTLS_READ</strong> - error code for failure to include a complete DTLS record in a UDP packet</li>
+   <li><strong>SSL_ERROR_NO_SUPPORTED_SIGNATURE_ALGORITHM</strong> - error code for when no valid signature and hash algorithm is available</li>
+   <li><strong>SSL_ERROR_UNSUPPORTED_SIGNATURE_ALGORITHM</strong> - error code for when an unsupported signature and hash algorithm is configured</li>
+   <li><strong>SSL_ERROR_MISSING_EXTENDED_MASTER_SECRET</strong> - error code for when the extended master secret is missing after having been negotiated</li>
+   <li><strong>SSL_ERROR_UNEXPECTED_EXTENDED_MASTER_SECRET</strong> - error code for receiving an extended master secret when previously not negotiated</li>
+  </ul>
+ </li>
+ <li><em>in sslt.h</em>
+  <ul>
+   <li><strong>SSL_ENABLE_EXTENDED_MASTER_SECRET</strong> - configuration to enable the TLS extended master secret extension (<a href="https://tools.ietf.org/html/rfc7627">RFC 7627</a>)</li>
+   <li><strong>ssl_preinfo_version</strong> - used with <strong>SSLPreliminaryChannelInfo</strong> to indicate that a TLS version has been selected</li>
+   <li><strong>ssl_preinfo_cipher_suite</strong> - used with <strong>SSLPreliminaryChannelInfo</strong> to indicate that a TLS cipher suite has been selected</li>
+   <li><strong>ssl_preinfo_all</strong> - used with <strong>SSLPreliminaryChannelInfo</strong> to indicate that all preliminary information has been set</li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Notable_Changes_in_NSS_3.21">Notable Changes in NSS 3.21</h2>
+
+<ul>
+ <li>NSS now builds with elliptic curve ciphers enabled by default (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1205688">bug 1205688</a>)</li>
+ <li>NSS now builds with warnings as errors (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1182667">bug 1182667</a>)</li>
+ <li>The following CA certificates were <strong>Removed</strong>
+  <ul>
+   <li>CN = VeriSign Class 4 Public Primary Certification Authority - G3
+    <ul>
+     <li>SHA1 Fingerprint: C8:EC:8C:87:92:69:CB:4B:AB:39:E9:8D:7E:57:67:F3:14:95:73:9D</li>
+    </ul>
+   </li>
+   <li>CN = UTN-USERFirst-Network Applications
+    <ul>
+     <li>SHA1 Fingerprint: 5D:98:9C:DB:15:96:11:36:51:65:64:1B:56:0F:DB:EA:2A:C2:3E:F1</li>
+    </ul>
+   </li>
+   <li>CN = TC TrustCenter Universal CA III
+    <ul>
+     <li>SHA1 Fingerprint: 96:56:CD:7B:57:96:98:95:D0:E1:41:46:68:06:FB:B8:C6:11:06:87</li>
+    </ul>
+   </li>
+   <li>CN = A-Trust-nQual-03
+    <ul>
+     <li>SHA-1 Fingerprint: D3:C0:63:F2:19:ED:07:3E:34:AD:5D:75:0B:32:76:29:FF:D5:9A:F2</li>
+    </ul>
+   </li>
+   <li>CN = USERTrust Legacy Secure Server CA
+    <ul>
+     <li>SHA-1 Fingerprint: 7C:2F:91:E2:BB:96:68:A9:C6:F6:BD:10:19:2C:6B:52:5A:1B:BA:48</li>
+    </ul>
+   </li>
+   <li>Friendly Name: Digital Signature Trust Co. Global CA 1
+    <ul>
+     <li>SHA-1 Fingerprint: 81:96:8B:3A:EF:1C:DC:70:F5:FA:32:69:C2:92:A3:63:5B:D1:23:D3</li>
+    </ul>
+   </li>
+   <li>Friendly Name: Digital Signature Trust Co. Global CA 3
+    <ul>
+     <li>SHA-1 Fingerprint: AB:48:F3:33:DB:04:AB:B9:C0:72:DA:5B:0C:C1:D0:57:F0:36:9B:46</li>
+    </ul>
+   </li>
+   <li>CN = UTN - DATACorp SGC
+    <ul>
+     <li>SHA-1 Fingerprint: 58:11:9F:0E:12:82:87:EA:50:FD:D9:87:45:6F:4F:78:DC:FA:D6:D4</li>
+    </ul>
+   </li>
+   <li>O = TÜRKTRUST Bilgi İletişim ve Bilişim Güvenliği Hizmetleri A.Ş. (c) Kasım 2005
+    <ul>
+     <li>SHA-1 Fingerprint: B4:35:D4:E1:11:9D:1C:66:90:A7:49:EB:B3:94:BD:63:7B:A7:82:B7</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li>The following CA certificate had the Websites <strong> trust bit turned off </strong>
+  <ul>
+   <li>OU = Equifax Secure Certificate Authority
+    <ul>
+     <li>SHA1 Fingerprint: D2:32:09:AD:23:D3:14:23:21:74:E4:0D:7F:9D:62:13:97:86:63:3A</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li>The following CA certificates were <strong>Added</strong>
+  <ul>
+   <li>CN = Certification Authority of WoSign G2
+    <ul>
+     <li>SHA1 Fingerprint: FB:ED:DC:90:65:B7:27:20:37:BC:55:0C:9C:56:DE:BB:F2:78:94:E1</li>
+    </ul>
+   </li>
+   <li>CN = CA WoSign ECC Root
+    <ul>
+     <li>SHA1 Fingerprint: D2:7A:D2:BE:ED:94:C0:A1:3C:C7:25:21:EA:5D:71:BE:81:19:F3:2B</li>
+    </ul>
+   </li>
+   <li>CN = OISTE WISeKey Global Root GB CA
+    <ul>
+     <li>SHA1 Fingerprint: 0F:F9:40:76:18:D3:D7:6A:4B:98:F0:A8:35:9E:0C:FD:27:AC:CC:ED</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li>The version number of the updated root CA list has been set to 2.6</li>
+</ul>
+
+<h2 id="Bugs_fixed_in_NSS_3.21">Bugs fixed in NSS 3.21</h2>
+
+<p>This Bugzilla query returns all the bugs fixed in NSS 3.21:</p>
+
+<p><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.21">https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.21</a></p>
+
+<h2 id="Acknowledgements">Acknowledgements</h2>
+
+<p>The NSS development team would like to thank Karthikeyan Bhargavan from <a class="external external-icon" href="http://inria.fr/">INRIA</a> for responsibly disclosing the issue in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1158489">Bug 1158489</a>.</p>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.21 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.21 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report with<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (product NSS).</p>

@@ -1,0 +1,56 @@
+---
+title: NSC_InitToken
+slug: Mozilla/Projects/NSS/Reference/NSC_InitToken
+tags:
+  - NSS
+---
+
+<h3 id="Name"> Name </h3>
+<p><code>NSC_InitToken()</code> - initialize or re-initialize a token.
+</p>
+<h3 id="Syntax"> Syntax </h3>
+<pre class="eval"><a href="/en-US/CK_RV">CK_RV</a> NSC_InitToken(
+  <a href="/en-US/CK_SLOT_ID">CK_SLOT_ID</a> slotID,
+  <a href="/en-US/CK_CHAR">CK_CHAR_PTR</a> pPin,
+  <a href="/en-US/CK_ULONG">CK_ULONG</a> ulPinLen,
+  <a href="/en-US/CK_CHAR">CK_CHAR_PTR</a> pLabel
+);
+</pre>
+<h3 id="Parameters"> Parameters </h3>
+<p><code>NSC_InitToken()</code> has the following parameters:
+</p>
+<dl><dt><code>slotID</code></dt><dd> the ID of the token's slot
+</dd><dt><code>pPin</code></dt><dd> the password of the security officer (SO)
+</dd><dt><code>ulPinLen</code></dt><dd> the length in bytes of the SO password
+</dd><dt><code>pLabel</code></dt><dd> points to the label of the token, which must be padded with spaces to 32 bytes and not be null-terminated
+</dd></dl>
+<h3 id="Description"> Description </h3>
+<p><code>NSC_InitToken()</code> initializes a brand new token or re-initializes a token that was initialized before.
+</p><p>Specifically, <code>NSC_InitToken()</code> initializes or clears the key database, removes the password, and then marks all the <i>user certs</i> in the certificate database as <i>non-user certs</i>. (User certs are the certificates that have their associated private keys in the key database.)
+</p>
+<div class="note">
+<p><b>Note:</b> The SO password should be the empty string, i.e., <code>ulPinLen</code> argument should be 0. <code>NSC_InitToken()</code> ignores the <code>pLabel</code> argument.
+</p>
+</div>
+<h3 id="Return_value"> Return value </h3>
+<p><code>NSC_InitToken()</code> returns the following return codes.
+</p>
+<ul><li> <code>CKR_OK</code>: token initialization succeeded.
+</li><li> <code>CKR_SLOT_ID_INVALID</code>: slot ID is invalid.
+</li><li> <code>CKR_TOKEN_WRITE_PROTECTED</code>
+<ul><li> slot ID is 1. (The non-FIPS mode has two slots: 1 and 2. The key database is in slot 2. Slot 1 doesn't have a key database.)
+</li><li> we don't have a reference to the key database (we failed to open the key database or we have released our reference).
+</li></ul>
+</li><li> <code>CKR_DEVICE_ERROR</code>: failed to reset the key database.
+</li></ul>
+<h3 id="Examples"> Examples </h3>
+<h3 id="Application_usage"> Application usage </h3>
+<p><code>NSC_InitToken()</code> is used to reset the password for the key database when the user forgets the password.
+</p>
+<ul><li> The "Reset Password" button of the Mozilla Application Suite and SeaMonkey (in <b>Preferences-&gt;Privacy &amp; Security-&gt;Master Passwords</b>) calls <code>NSC_InitToken()</code>.
+</li><li> The "-T" (token reset) command of <code>certutil</code> calls <code>NSC_InitToken()</code>.
+</li></ul>
+<div class="note"><b>Note:</b> Resetting the password clears all permanent secret and private keys. You won't be able to decrypt the data, such as Mozilla's stored passwords, that were encrypted using any of those keys.</div>
+<h3 id="See_also"> See also </h3>
+<ul><li> <a href="/en-US/NSC_InitPIN">NSC_InitPIN</a>, <a href="/en-US/FC_InitToken">FC_InitToken</a>
+</li></ul>

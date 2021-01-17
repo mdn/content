@@ -85,7 +85,7 @@ tags:
 var buffer = context.createBuffer(2, 22050, 44100);</pre>
 
 <div class="note">
-<p><strong>Note</strong>: In <a href="https://en.wikipedia.org/wiki/Digital_audio" title="Digital audio">digital audio</a>, <strong>44,100 <a href="https://en.wikipedia.org/wiki/Hertz" title="Hertz">Hz</a></strong> (alternately represented as <strong>44.1 kHz</strong>) is a common <a href="https://en.wikipedia.org/wiki/Sampling_frequency" title="Sampling frequency">sampling frequency</a>. Why 44.1kHz? <br>
+<p><strong>Note</strong>: In <a href="https://en.wikipedia.org/wiki/Digital_audio" title="Digital audio">digital audio</a>, <strong>44,100 <a href="https://en.wikipedia.org/wiki/Hertz">Hz</a></strong> (alternately represented as <strong>44.1 kHz</strong>) is a common <a href="https://en.wikipedia.org/wiki/Sampling_frequency" title="Sampling frequency">sampling frequency</a>. Why 44.1kHz? <br>
  <br>
  Firstly, because the <a href="https://en.wikipedia.org/wiki/Hearing_range" title="Hearing range">hearing range</a> of human ears is roughly 20 Hz to 20,000 Hz. Via the <a href="https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem" title="Nyquist–Shannon sampling theorem">Nyquist–Shannon sampling theorem</a>, the sampling frequency must be greater than twice the maximum frequency one wishes to reproduce. Therefore, the sampling rate has to be greater than 40 kHz.<br>
  <br>
@@ -168,7 +168,7 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
  </thead>
  <tbody>
   <tr>
-   <th colspan="1" rowspan="13" scope="row"><code>speakers</code></th>
+   <th rowspan="13" scope="row"><code>speakers</code></th>
    <td><code>1</code> <em>(Mono)</em></td>
    <td><code>2</code> <em>(Stereo)</em></td>
    <td><em>Up-mix from mono to stereo</em>.<br>
@@ -276,24 +276,24 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
     The central (<code>C</code>) is mixed with the lateral non-surround channels (<code>L</code> and <code>R</code>). As it is mixed down to two channels, it is mixed at a lower power: in each case it is multiplied by <code>√2/2</code>. The surround channels are passed unchanged. The subwoofer (<code>LFE</code>) channel is lost.<br>
     <code>output.L = input.L + 0.7071 * input.C<br>
     output.R = input.R + 0.7071 * input.C<br>
-    <code>output.SL = input.SL<br>
-    output.SR = input.SR</code></code></td>
+    output.SL = input.SL<br>
+    output.SR = input.SR</code></td>
   </tr>
   <tr>
-   <td colspan="2" rowspan="1">Other, non-standard layouts</td>
+   <td colspan="2">Other, non-standard layouts</td>
    <td>Non-standard channel layouts are handled as if <code>channelInterpretation</code> is set to <code>discrete</code>.<br>
     The specification explicitly allows the future definition of new speaker layouts. This fallback is therefore not future proof as the behavior of the browsers for a specific number of channels may change in the future.</td>
   </tr>
   <tr>
-   <th colspan="1" rowspan="2" scope="row"><code>discrete</code></th>
-   <td rowspan="1">any (<code>x</code>)</td>
-   <td rowspan="1">any (<code>y</code>) where <code>x&lt;y</code></td>
+   <th rowspan="2" scope="row"><code>discrete</code></th>
+   <td>any (<code>x</code>)</td>
+   <td>any (<code>y</code>) where <code>x&lt;y</code></td>
    <td><em>Up-mix discrete channels.</em><br>
     Fill each output channel with its input counterpart, that is the input channel with the same index. Channels with no corresponding input channels are left silent.</td>
   </tr>
   <tr>
-   <td rowspan="1">any (<code>x</code>)</td>
-   <td rowspan="1">any (<code>y</code>) where <code>x&gt;y</code></td>
+   <td>any (<code>x</code>)</td>
+   <td>any (<code>y</code>) where <code>x&gt;y</code></td>
    <td><em>Down-mix discrete channels.</em><br>
     Fill each output channel with its input counterpart, that is the input channel with the same index. Input channels with no corresponding output channels are dropped.</td>
   </tr>
@@ -311,14 +311,8 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
 <dl>
  <dt>{{domxref("AnalyserNode.getFloatFrequencyData()")}}</dt>
  <dd>Copies the current frequency data into a {{domxref("Float32Array")}} array passed into it.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("AnalyserNode.getByteFrequencyData()")}}</dt>
  <dd>Copies the current frequency data into a {{domxref("Uint8Array")}} (unsigned byte array) passed into it.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("AnalyserNode.getFloatTimeDomainData()")}}</dt>
  <dd>Copies the current waveform, or time-domain, data into a {{domxref("Float32Array")}} array passed into it.</dd>
  <dt>{{domxref("AnalyserNode.getByteTimeDomainData()")}}</dt>

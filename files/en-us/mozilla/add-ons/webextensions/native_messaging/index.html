@@ -147,9 +147,6 @@ python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"</pre>
 <p><strong>Note:</strong> If you base your work on the example located on GitHub, please read <a href="https://github.com/SphinxKnight/webextensions-examples/tree/master/native-messaging#windows-setup">this part of the readme</a> and check the output of <code>check_config_win.py</code> before installing the WebExtension on your browser.</p>
 </div>
 
-<ul>
-</ul>
-
 <h2 id="Exchanging_messages">Exchanging messages</h2>
 
 <p>Given the above setup, an extension can exchange JSON messages with a native application.</p>
@@ -186,7 +183,7 @@ python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"</pre>
 
 <p>Here's an example background script that establishes a connection with the <code>"ping_pong"</code> app, listens for messages from it, then sends it a <code>"ping"</code> message whenever the user clicks the browser action:</p>
 
-<pre class="brush: js notranslate">/*
+<pre class="notranslate brush: js">/*
 On startup, connect to the "ping_pong" app.
 */
 var port = browser.runtime.connectNative("ping_pong");
@@ -227,7 +224,7 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <p>Here's the example above, rewritten to use <code>runtime.sendNativeMessage()</code>:</p>
 
-<pre class="brush: js notranslate">function onResponse(response) {
+<pre class="notranslate brush: js">function onResponse(response) {
   console.log("Received " + response);
 }
 
@@ -257,7 +254,7 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <p>You can quickly get started sending and receiving messages with this NodeJS code:</p>
 
-<pre class="brush: js notranslate">#!/usr/local/bin/node
+<pre class="notranslate brush: js">#!/usr/local/bin/node
 
 (() =&gt; {
 

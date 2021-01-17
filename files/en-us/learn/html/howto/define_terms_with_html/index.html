@@ -15,7 +15,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>You need to be familiar with how to <a href="/en-US/Learn/HTML/Write_a_simple_page_in_HTML">create a basic HTML document</a>.</td>
+   <td>You need to be familiar with how to <a href="/en-US/docs/Learn/HTML/Write_a_simple_page_in_HTML">create a basic HTML document</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -54,12 +54,12 @@ tags:
 </pre>
 
 <div class="note">
-<p>Another use for bold is to emphasize content. Bold itself is a concept foreign to HTML, but there are <a href="/en-US/Learn/HTML/Howto/Emphasize_content_or_indicate_that_text_is_important">tags for indicating emphasis.</a></p>
+<p>Another use for bold is to emphasize content. Bold itself is a concept foreign to HTML, but there are <a href="/en-US/docs/Learn/HTML/Howto/Emphasize_content_or_indicate_that_text_is_important">tags for indicating emphasis.</a></p>
 </div>
 
 <h3 id="Special_case_Abbreviations">Special case: Abbreviations</h3>
 
-<p>It's best to<a href="/en-US/Learn/HTML/Howto/Mark_abbreviations_and_make_them_understandable"> mark abbreviations specially</a> with {{htmlelement("abbr")}}, so that screen readers read them appropriately and so that you can operate on all abbreviations uniformly. Just as with any new keyword, you should define your abbreviations the first time they occur.</p>
+<p>It's best to<a href="/en-US/docs/Learn/HTML/Howto/Mark_abbreviations_and_make_them_understandable"> mark abbreviations specially</a> with {{htmlelement("abbr")}}, so that screen readers read them appropriately and so that you can operate on all abbreviations uniformly. Just as with any new keyword, you should define your abbreviations the first time they occur.</p>
 
 <pre class="brush: html">&lt;p&gt;
   &lt;dfn&gt;&lt;abbr&gt;HTML&lt;/abbr&gt; (hypertext markup language)&lt;/dfn&gt;
@@ -79,7 +79,7 @@ tags:
     &lt;dfn aria-describedby="ff"&gt;Firefox&lt;/dfn&gt;
     is the web browser created by the Mozilla Foundation.
   &lt;/span&gt;
-  You can download it at &lt;a href="http://www.mozilla.org"&gt;mozilla.org&lt;/a&gt;
+  You can download it at &lt;a href="https://www.mozilla.org"&gt;mozilla.org&lt;/a&gt;
 &lt;/p&gt;</pre>
 
 <p>Assistive technology can often use this attribute to find a text alternative to a given term. You can use <code>aria-describedby</code> on any tag enclosing a keyword to be defined (not just the <code>&lt;dfn&gt;</code> element). <code>aria-describedby</code> references the {{htmlattrxref('id')}} of the element containing the description.</p>

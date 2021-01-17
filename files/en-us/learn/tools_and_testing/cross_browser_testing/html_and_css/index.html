@@ -112,11 +112,11 @@ tags:
 
 <p>Once you've identified a list of potential problem technologies you will be using, it is a good idea to research what browsers they are supported in, and what related techniques are useful. See {{anch("Finding help")}} below.</p>
 
-<h4 id="HTML_fallback_behaviour">HTML fallback behaviour</h4>
+<h4 id="HTML_fallback_behavior">HTML fallback behavior</h4>
 
 <p>Some problems can be solved by just taking advantage of the natural way in which HTML/CSS work.</p>
 
-<p>Unrecognised HTML elements are treated by the browser as anonymous inline elements (effectively inline elements with no semantic value, similar to {{htmlelement("span")}} elements). You can still refer to them by their names, and style them with CSS, for example — you just need to make sure they are behaving as you want them to, for example setting <code>display: block;</code> on all of the new semantic elements (such as {{htmlelement("article")}}, {{htmlelement("aside")}}, etc.), but only in old versions of IE that don't recognise them (so, IE 8 and lower). This way new browsers can just use the code as normal, but older IE versions will be able to style these elements too.</p>
+<p>Unrecognized HTML elements are treated by the browser as anonymous inline elements (effectively inline elements with no semantic value, similar to {{htmlelement("span")}} elements). You can still refer to them by their names, and style them with CSS, for example — you just need to make sure they are behaving as you want them to, for example setting <code>display: block;</code> on all of the new semantic elements (such as {{htmlelement("article")}}, {{htmlelement("aside")}}, etc.), but only in old versions of IE that don't recognise them (so, IE 8 and lower). This way new browsers can just use the code as normal, but older IE versions will be able to style these elements too.</p>
 
 <div class="note">
 <p><strong>Note</strong>: See {{anch("IE conditional comments")}} for the best way to do this.</p>
@@ -126,13 +126,13 @@ tags:
 
 <p>For example:</p>
 
-<pre class="brush: html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>video</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>video<span class="punctuation token">"</span></span> <span class="attr-name token">controls</span> <span class="attr-name token">preload</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>metadata<span class="punctuation token">"</span></span> <span class="attr-name token">poster</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>img/poster.jpg<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>source</span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>video/tears-of-steel-battle-clip-medium.mp4<span class="punctuation token">"</span></span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>video/mp4<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
- <span class="tag token"><span class="tag token"><span class="punctuation token"> &lt;</span>source</span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>video/tears-of-steel-battle-clip-medium.webm<span class="punctuation token">"</span></span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>video/webm<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="comment token">&lt;!-- Offer download --&gt;</span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;p&gt;Your browser does not support HTML5 video; here is a link to
-  &lt;</span>a</span> <span class="attr-name token">href</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>video/tears-of-steel-battle-clip-medium.mp4<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>view the video<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>a</span><span class="punctuation token">&gt; directly.&lt;/p&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>video</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html">&lt;video id="video" controls preload="metadata" poster="img/poster.jpg"&gt;
+  &lt;source src="video/tears-of-steel-battle-clip-medium.mp4" type="video/mp4"&gt;
+  &lt;source src="video/tears-of-steel-battle-clip-medium.webm" type="video/webm"&gt;
+  &lt;!-- Offer download --&gt;
+  &lt;p&gt;Your browser does not support HTML5 video; here is a link to
+  &lt;a href="video/tears-of-steel-battle-clip-medium.mp4"&gt;view the video&lt;/a&gt; directly.&lt;/p&gt;
+&lt;/video&gt;</pre>
 
 <p>This example includes a simple link allowing you to download the video if even the HTML5 video player doesn't work, so at least the user can still access the video.</p>
 
@@ -205,7 +205,7 @@ tags:
 <p>Note: Of course, this may not be a great solution for your project's needs — the difference in visual presentation is not great, plus it is harder to guarantee the data will be entered in the format you want it in. For cross browser forms, It is probably better to rely on simple form elements, or selectively use advanced form elements only in supporting browsers, or using a library that provides decent cross browser form widgets, such as <a href="http://jqueryui.com/">jQuery UI</a> or <a href="https://bootstrap-datepicker.readthedocs.io/en/latest/">Bootstrap datepicker</a>.</p>
 </div>
 
-<h4 id="CSS_fallback_behaviour">CSS fallback behaviour</h4>
+<h4 id="CSS_fallback_behavior">CSS fallback behavior</h4>
 
 <p>CSS is arguably better at fallbacks than HTML. If a browser encounters a declaration or rule it doesn't understand, it just skips it completely without applying it or throwing an error. This might be frustrating for you and your users if such a mistake slips through to production code, but at least it means the whole site doesn't come crashing down because of one error, and if used cleverly you can use it to your advantage.</p>
 
@@ -251,15 +251,15 @@ button:active {
 
 <p>IE conditional comments are a modified proprietary HTML comment syntax, which can be used to selectively apply HTML code to different versions of IE. This has proven to be a very effective mechanism for fixing cross browser bugs. The syntax looks like this:</p>
 
-<pre class="brush: html"><span class="c">&lt;!--[if lte IE 8]&gt;
-  &lt;script src="ie-fix.js"&gt;&lt;/script&gt;</span>
+<pre class="brush: html">&lt;!--[if lte IE 8]&gt;
+  &lt;script src="ie-fix.js"&gt;&lt;/script&gt;
   &lt;link href="ie-fix.css" rel="stylesheet" type="text/css"&gt;
-<span class="c">&lt;![endif]--&gt;</span></pre>
+&lt;![endif]--&gt;</pre>
 
 <p>This block will apply the IE-specific CSS and JavaScript only if the browser viewing the page is IE 8 or older. <code>lte</code> means "less than or equal to", but you can also use lt, gt, gte, <code>!</code> for NOT, and other logical syntax.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Sitepoint's <span class="l-d-i l-pa2 t-bg-white"><a href="https://www.sitepoint.com/web-foundations/internet-explorer-conditional-comments/">Internet Explorer Conditional Comments</a> provides a useful beginner's tutorial/reference that explains the conditional comment syntax in detail.</span></p>
+<p><strong>Note</strong>: Sitepoint's <a href="https://www.sitepoint.com/web-foundations/internet-explorer-conditional-comments/">Internet Explorer Conditional Comments</a> provides a useful beginner's tutorial/reference that explains the conditional comment syntax in detail.</p>
 </div>
 
 <p>As you can see, this is especially useful for applying code fixes to old versions of IE. The use case we mentioned earlier (making modern semantic elements stylable in old versions of IE) can be achieved easily using conditional comments, for example you could put something like this in your IE stylesheet:</p>
@@ -337,7 +337,7 @@ background-image: linear-gradient(to right,green,yellow);
 
 <p>Prefixed features were never supposed to be used in production websites — they are subject to change or removal without warning, and cause cross browser issues. This is particularly a problem when developers decide to only use say, the <code>-webkit- </code>version of a property — meaning that the site won't work in other browsers. This actually happens so much that other browsers have started to implement <code>-webkit-</code> prefixed versions of various CSS properties, so they will work with such code. Usage of prefixes by browser vendors has declined recently precisely because of these types of problems, but there are still some that need attention.</p>
 
-<p>If you insist on using prefixed features, make sure you use the right ones. You can look up what browsers require prefixes on MDN reference pages, and sites like <a href="http://caniuse.com/">caniuse.com</a>. If you are unsure, you can also find out by doing some testing directly in browsers.</p>
+<p>If you insist on using prefixed features, make sure you use the right ones. You can look up what browsers require prefixes on MDN reference pages, and sites like <a href="https://caniuse.com/">caniuse.com</a>. If you are unsure, you can also find out by doing some testing directly in browsers.</p>
 
 <p>Try this simple example:</p>
 
@@ -438,7 +438,7 @@ transform: rotate(90deg);</pre>
 
 <p>Responsive design is the practice of creating web layouts that change to suit different device form factors — for example, different screen widths, orientations (portrait or landscape), or resolutions. A desktop layout for example will look terrible when viewed on a mobile device, so you need to provide a suitable mobile layout using <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a>, and make sure it is applied correctly using <a href="/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">viewport</a>. You can find a detailed account of such practices in <a href="/en-US/docs/Web/Apps/Progressive/Responsive/responsive_design_building_blocks">The building blocks of responsive design</a>.</p>
 
-<p>Resolution is a big issue too — for example, mobile devices are less likely to need big heavy images than desktop computers, and are more likely to have slower internet connections and possibly even expensive data plans that make wasted bandwidth more of a problem. In addition, different devices can have a range of different resolutions, meaning that smaller images could appear pixellated. There are a number of techniques that allow you to work around such problems, from simple <a href="/en-US/Apps/Progressive/Responsive/Mobile_first">mobile first media queries</a>, to more complex <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#Resolution_switching_Different_sizes">responsive image techniques</a>.</p>
+<p>Resolution is a big issue too — for example, mobile devices are less likely to need big heavy images than desktop computers, and are more likely to have slower internet connections and possibly even expensive data plans that make wasted bandwidth more of a problem. In addition, different devices can have a range of different resolutions, meaning that smaller images could appear pixelated. There are a number of techniques that allow you to work around such problems, from simple <a href="/en-US/Apps/Progressive/Responsive/Mobile_first">mobile first media queries</a>, to more complex <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#Resolution_switching_Different_sizes">responsive image techniques</a>.</p>
 
 <p>Another difficulty that can present problems is browser support for the features that make the above techniques possible. media queries are not supported in IE 8 or less, so if you want to use a mobile first layout and have the desktop layout then apply to old IE versions, you'll have to apply a media query {{glossary("polyfill")}} to your page, like <a href="https://code.google.com/archive/p/css3-mediaqueries-js/">css3-mediaqueries-js</a>, or <a href="https://github.com/scottjehl/Respond">Respond.js</a>.</p>
 
@@ -446,7 +446,7 @@ transform: rotate(90deg);</pre>
 
 <p>There are many other issues you'll encounter with HTML and CSS, making knowledge of how to find answers online invaluable.</p>
 
-<p>Among the best sources of support information are the Mozilla Developer Network (that's where you are now!), <a href="http://stackoverflow.com/">stackoverflow.com</a>, and <a href="http://caniuse.com/">caniuse.com</a>.</p>
+<p>Among the best sources of support information are the Mozilla Developer Network (that's where you are now!), <a href="http://stackoverflow.com/">stackoverflow.com</a>, and <a href="https://caniuse.com/">caniuse.com</a>.</p>
 
 <p>To use the Mozilla Developer Network (MDN), most people do a search engine search of the technology they are trying to find information on, plus the term "mdn", for example "mdn HTML5 video". MDN contains several useful types of content:</p>
 
@@ -456,7 +456,7 @@ transform: rotate(90deg);</pre>
  <li>Useful tutorials that solve specific problems, for example, <a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a>.</li>
 </ul>
 
-<p><a href="http://caniuse.com/">caniuse.com</a> provides support information, along with a few useful external resource links. For example, see <a href="http://caniuse.com/#search=video">http://caniuse.com/#search=video</a> (you just have to enter the feature you are searching for into the text box).</p>
+<p><a href="https://caniuse.com/">caniuse.com</a> provides support information, along with a few useful external resource links. For example, see <a href="https://caniuse.com/#search=video">https://caniuse.com/#search=video</a> (you just have to enter the feature you are searching for into the text box).</p>
 
 <p><a href="http://stackoverflow.com/">stackoverflow.com</a> (SO) is a forum site where you can ask questions and have fellow developers share their solutions, look up previous posts, and help other developers. You are advised to look and see if there is an answer to your question already, before posting a new question. For example, we searched for "cross browser html5 video" on SO, and very quickly came up with <a class="question-hyperlink" href="http://stackoverflow.com/questions/16212510/html5-video-with-full-cross-browser-compatibility">HTML5 Video with full cross browser compatibility</a>.</p>
 

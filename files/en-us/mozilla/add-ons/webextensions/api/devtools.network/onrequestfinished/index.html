@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js notranslate">browser.devtools.network.onRequestFinished.addListener(listener)
+<pre class="brush:js notranslate">browser.devtools.network.onRequestFinished.addListener(listener)
 browser.devtools.network.onRequestFinished.removeListener(listener)
 browser.devtools.network.onRequestFinished.hasListener(listener)
 </pre>
@@ -63,7 +63,7 @@ browser.devtools.network.onRequestFinished.hasListener(listener)
 
 <p>Add a listener that logs the server IP address and response body for every network request.</p>
 
-<pre class="brush: js notranslate">function handleRequestFinished(request) {
+<pre class="notranslate brush: js">function handleRequestFinished(request) {
   console.log("Server IP: ", request.serverIPAddress);
   request.getContent().then(([content, mimeType]) =&gt; {
     console.log("Content: ", content);

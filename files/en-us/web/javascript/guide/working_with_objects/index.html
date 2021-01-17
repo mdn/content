@@ -110,7 +110,7 @@ myCar.year = 1969</pre>
 <p>Starting with <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla" title="en-US/docs/JavaScript/ECMAScript 5 support in Mozilla">ECMAScript 5</a>, there are three native ways to list/traverse object properties:</p>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in" title="en-US/docs/JavaScript/Reference/Statements/for...in">for...in</a></code> loops<br>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code> loops<br>
   This method traverses all enumerable properties of an object and its prototype chain.</li>
  <li>{{jsxref("Object.keys", "Object.keys(o)")}}<br>
   This method returns an array with all the own (not in the prototype chain) enumerable properties' names ("keys") of an object <code>o</code>.</li>
@@ -389,11 +389,11 @@ Manager.howOldAmI() // I am 27 years old.
 <p>Getters and setters can be either</p>
 
 <ul>
- <li>defined using <a href="#Object_initializers">object initializers</a>, or</li>
+ <li>defined using <a href="#object_initializers">object initializers</a>, or</li>
  <li>added later to any object at any time using a getter or setter adding method.</li>
 </ul>
 
-<p>When defining getters and setters using <a href="#Object_initializers">object initializers</a> all you need to do is to prefix a getter method with <code>get</code> and a setter method with <code>set</code>. Of course, the getter method must not expect a parameter, while the setter method expects exactly one parameter (the new value to set). For instance:</p>
+<p>When defining getters and setters using <a href="#object_initializers">object initializers</a> all you need to do is to prefix a getter method with <code>get</code> and a setter method with <code>set</code>. Of course, the getter method must not expect a parameter, while the setter method expects exactly one parameter (the new value to set). For instance:</p>
 
 <pre class="brush: js notranslate">var o = {
   a: 7,

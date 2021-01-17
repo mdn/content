@@ -113,7 +113,7 @@ engine.runRenderLoop(renderLoop);
 <p>A mesh is a way the engine creates geometric shapes, so material can be easily applied to them later on. In this case we're creating a box using the <code>Mesh.CreateBox</code> method with it's own name, a size of 2, and a declaration of which scene we want it added to.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The size or position values (e.g. for the box size) are unitless, and can basically be anything you deem suitable for your scene — milimeters, meters, feet, or miles — it's up to you.</p>
+<p><strong>Note</strong>: The size or position values (e.g. for the box size) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.</p>
 </div>
 
 <p>If you save and refresh now, your object will look like a square, because it's facing the camera. The good thing about objects is that we can move them on the scene however we want, for example rotating and scaling. Let's apply a little bit of rotation to the box, so we can see more than one face — again, add these lines below the previous one:</p>
@@ -169,7 +169,7 @@ torus.material = torusMaterial;
 
 <h3 id="Cylinder">Cylinder</h3>
 
-<p>Creating a cylinder and its material is done in almost exacly the same way as we did for the torus. Add the following code, again at the bottom of your script:</p>
+<p>Creating a cylinder and its material is done in almost exactly the same way as we did for the torus. Add the following code, again at the bottom of your script:</p>
 
 <pre class="brush: js">var cylinder = BABYLON.Mesh.CreateCylinder("cylinder", 2, 2, 2, 12, 1, scene);
 cylinder.position.x = 5;

@@ -1,0 +1,38 @@
+---
+title: NSS 3.42.1 release notes
+slug: Mozilla/Projects/NSS/NSS_3.42.1_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p>The NSS team has released Network Security Services (NSS) 3.42.1 on 31 January 2019, which is a patch release.</p>
+
+<h2 id="Distribution_Information">Distribution Information</h2>
+
+<p>The HG tag is NSS_3_42_1_RTM. NSS 3.42.1 requires NSPR 4.20 or newer.</p>
+
+<p>NSS 3.42.1 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_42_1_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_42_1_RTM/src/</a></li>
+</ul>
+
+<p>Other releases are available <a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Releases">in NSS Releases</a>.</p>
+
+<h2 id="Bugs_fixed_in_NSS_3.42.1">Bugs fixed in NSS 3.42.1</h2>
+
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1507135">Bug 1507135</a> and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1507174">Bug 1507174</a> - Add additional null checks to several CMS functions to fix a rare CMS crash. Thanks to Hanno Böck and Damian Poddebniak for the discovery and fixes. This was originally announced in <a href="/en-US/docs/Mozilla/Projects/NSS/NSS_3.42_release_notes">NSS 3.42</a>, but was mistakenly not included in the release. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=CVE-2018-18508">CVE-2018-18508</a>)</li>
+</ul>
+
+<p>This Bugzilla query returns all the bugs fixed in NSS 3.42.1:</p>
+
+<p><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.42.1">https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.42.1</a></p>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.42.1 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.42.1 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report with<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (product NSS).</p>

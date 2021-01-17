@@ -1,0 +1,109 @@
+---
+title: Building NSS
+slug: Mozilla/Projects/NSS/Building
+tags:
+  - Guide
+  - NSS
+  - Security
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p>This page has detailed information on how to build NSS. Because NSS is a cross-platform library that builds on many different platforms and has many options, it may be complex to build. Please read these instructions carefully before attempting to build.</p>
+
+<h2 id="Build_environment">Build environment</h2>
+
+<p>NSS needs a C and C++ compiler.  It has minimal dependencies, including only standard C and C++ libraries, plus <a href="https://www.zlib.net/">zlib</a>.</p>
+
+<p>For building, you also need <a href="https://www.gnu.org/software/make/">make</a>.  Ideally, also install <a href="https://gyp.gsrc.io/">gyp</a> and <a href="https://ninja-build.org/">ninja</a> and put them on your path.  This is recommended, as the build is faster and more reliable.</p>
+
+<h3 id="Windows">Windows</h3>
+
+<p>NSS compilation on Windows uses the same shared build system as Mozilla Firefox. You must first install the <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Windows_Prerequisites">Windows Prerequisites</a>, including <strong>MozillaBuild</strong>.</p>
+
+<p>You can also build NSS on the Windows Subsystem for Linux, but the resulting binaries aren't usable by other Windows applications.</p>
+
+<h2 id="Get_the_source">Get the source</h2>
+
+<p>NSS and NSPR use Mercurial for source control like other Mozilla projects. To check out the latest sources for NSS and NSPR--which may not be part of a stable release--use the following commands:</p>
+
+<pre>hg clone https://hg.mozilla.org/projects/nspr
+hg clone https://hg.mozilla.org/projects/nss
+</pre>
+
+<p>To get the source of a specific release, see <a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Releases">NSS Releases</a>.</p>
+
+
+<h2 id="Build">Build</h2>
+
+<p>Build NSS using our build script:</p>
+
+<pre>nss/build.sh
+</pre>
+
+<p>This builds both NSPR and NSS.</p>
+
+<h2 id="Build_with_make">Build with make</h2>
+
+<p>Alternatively, there is a <code>make</code> target called "nss_build_all", which produces a similar result.  This supports some alternative options, but can be a lot slower.</p>
+
+<pre>make -C nss nss_build_all USE_64=1
+</pre>
+
+<p>The make-based build system for NSS uses a variety of variables to control the build. Below are some of the variables, along with possible values they may be set to.</p>
+
+<dl>
+	<dt>BUILD_OPT</dt>
+	<dd>
+	<dl>
+		<dt>0</dt>
+		<dd>Build a debug (non-optimized) version of NSS. <em>This is the default.</em></dd>
+		<dt>1</dt>
+		<dd>Build an optimized (non-debug) version of NSS.</dd>
+	</dl>
+	</dd>
+	<dt>USE_64</dt>
+	<dd>
+	<dl>
+		<dt>0</dt>
+		<dd>Build for a 32-bit environment/ABI. <em>This is the default.</em></dd>
+		<dt>1</dt>
+		<dd>Build for a 64-bit environment/ABI. <em>This is recommended.</em></dd>
+	</dl>
+	</dd>
+	<dt>USE_ASAN</dt>
+	<dd>
+	<dl>
+		<dt>0</dt>
+		<dd>Do not create an <a href="http://clang.llvm.org/docs/AddressSanitizer.html">AddressSanitizer</a> build. <em>This is the default.</em></dd>
+		<dt>1</dt>
+		<dd>Create an AddressSanitizer build.</dd>
+	</dl>
+	</dd>
+</dl>
+
+<h2 id="Unit_testing">Unit testing</h2>
+
+<p>NSS contains extensive unit tests.  Scripts to run these are found in the <code>tests</code> directory.  Run the standard suite by:</p>
+
+<pre>HOST=localhost DOMSUF=localdomain USE_64=1 nss/tests/all.sh</pre>
+
+<h3 id="Unit_test_configuration">Unit test configuration</h3>
+
+<p>NSS tests are configured using environment variables.<br>
+The scripts will attempt to infer values for <code>HOST</code> and <code>DOMSUF</code>, but can fail. Replace <code>localhost</code> and <code>localdomain</code> with the hostname and domain suffix for your host. You need to be able to connect to <code>$HOST.$DOMSUF</code>.</p>
+
+<p>If you don't have a domain suffix you can add an entry to <code>/etc/hosts</code> (on Windows,<code> c:\Windows\System32\drivers\etc\hosts</code>) as follows:</p>
+
+<pre><code>127.0.0.1 localhost.localdomain</code></pre>
+
+<p>Validate this opening a command shell and typing: <code>ping localhost.localdomain</code>.</p>
+
+<p>Remove the <code>USE_64=1</code> override if using a 32-bit build.</p>
+
+<h3 id="Test_results">Test results</h3>
+
+<p>Running all tests can take a considerable amount of time.</p>
+
+<p>Test output is stored in <code>tests_results/security/$HOST.$NUMBER/</code>.  The file <code>results.html</code> summarizes the results, <code>output.log</code> captures all the test output.</p>
+
+<p>Other subdirectories of <code>nss/tests</code> contain scripts that run a subset of the full suite. Those can be run directly instead of <code>all.sh</code>, which might save some time at the cost of coverage.</p>

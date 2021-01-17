@@ -111,7 +111,7 @@ p, li {
   color: #a60000;
 }</pre>
 
-<p>The recognised styling convention for abbreviations is a dotted underline, and it is unwise to significantly deviate from this. For more on abbreviations, see <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#Abbreviations">Abbreviations</a>.</p>
+<p>The recognized styling convention for abbreviations is a dotted underline, and it is unwise to significantly deviate from this. For more on abbreviations, see <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#Abbreviations">Abbreviations</a>.</p>
 
 <h4 id="Links">Links</h4>
 
@@ -156,7 +156,7 @@ a:active {
 
 <p>Most of the CSS you'll write for forms will be for sizing the elements, lining up labels and inputs, and getting them looking neat and tidy.</p>
 
-<p>You shouldn't however deviate too much from the expected visual feedback form elements receive when they are focused, which is basically the same as links (see above). You could style form focus/hover states to make this behaviour more consistent across browsers or fit in better with your page design, but don't get rid of it altogether — again, people rely on these clues to help them know what is going on.</p>
+<p>You shouldn't however deviate too much from the expected visual feedback form elements receive when they are focused, which is basically the same as links (see above). You could style form focus/hover states to make this behavior more consistent across browsers or fit in better with your page design, but don't get rid of it altogether — again, people rely on these clues to help them know what is going on.</p>
 
 <h4 id="Tables">Tables</h4>
 
@@ -189,7 +189,7 @@ a:active {
 <p>On the other hand, you shouldn't use {{cssxref("visibility")}}<code>:hidden</code> or {{cssxref("display")}}<code>:none</code>, because they do hide content from screen readers. Unless of course, there is a good reason why you want this content to be hidden from screen readers.</p>
 
 <div class="note">
-<p><strong>Note</strong>: <span class="subtitle"><a href="http://webaim.org/techniques/css/invisiblecontent/">Invisible Content Just for Screen Reader Users</a> has a lot more useful detail surrounding this topic.</span></p>
+<p><strong>Note</strong>: <a href="http://webaim.org/techniques/css/invisiblecontent/">Invisible Content Just for Screen Reader Users</a> has a lot more useful detail surrounding this topic.</p>
 </div>
 
 <h3 id="Accept_that_users_can_override_styles">Accept that users can override styles</h3>
@@ -297,7 +297,7 @@ function validate(e) {
 <p>Each link serves a dual purpose — it tells you what the error is, plus you can click on it/activate it to jump straight to the input element in question and correct your entry.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The <code>focus()</code> part of this example is a bit tricky. Chrome and Edge (and newer versions of IE) will focus the element when the link is clicked, without needing the <code>onclick</code>/<code>focus()</code> block. Safari will only highlight the form element with the link on its own, so needs the <code>onclick</code>/<code>focus()</code> block to actually focus it. Firefox doesn't focus the inputs properly at all in this context, so Firefox users can't take advantage of this at present (although everything else works fine). The Firefox issue should be fixed soon — work is being done to give Firefox behaviour parity with other browsers (see {{bug(277178)}}).</p>
+<p><strong>Note</strong>: The <code>focus()</code> part of this example is a bit tricky. Chrome and Edge (and newer versions of IE) will focus the element when the link is clicked, without needing the <code>onclick</code>/<code>focus()</code> block. Safari will only highlight the form element with the link on its own, so needs the <code>onclick</code>/<code>focus()</code> block to actually focus it. Firefox doesn't focus the inputs properly at all in this context, so Firefox users can't take advantage of this at present (although everything else works fine). The Firefox issue should be fixed soon — work is being done to give Firefox behavior parity with other browsers (see {{bug(277178)}}).</p>
 </div>
 
 <p>In addition, the <code>errorField</code> is placed at the top of the source order (although it is positioned differently in the UI using CSS), meaning that users can find out exactly what's wrong with their form submissions and get to the input elements in question by going back up to the start of the page.</p>

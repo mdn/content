@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.browserAction.setTitle(
+<pre class="brush:js">browser.browserAction.setTitle(
   details // object
 )
 </pre>
@@ -67,7 +67,7 @@ tags:
 
 <p>This code switches the title between "this" and "that" each time the user clicks the browser action:</p>
 
-<pre class="brush: js">function toggleTitle(title) {
+<pre class="notranslate brush: js">function toggleTitle(title) {
   if (title == "this") {
     browser.browserAction.setTitle({title: "that"});
   } else {

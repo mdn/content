@@ -37,7 +37,7 @@ tags:
 </dl>
 
 <dl>
- <dt>CSS3 <code><span class="nowiki">:only-child</span></code></dt>
+ <dt>CSS3 <code>:only-child</code></dt>
  <dd>This CSS3 selector allows <a class="external" href="https://www.w3.org/TR/2001/CR-css3-selectors-20011113/#only-child-pseudo">selecting an element</a> that has no other elements as siblings in the DOM.</dd>
 </dl>
 
@@ -58,7 +58,7 @@ tags:
 
 <dl>
  <dt>URI values on CSS <code>cursor</code> properties</dt>
- <dd>On Windows, OS/2 and Linux (Gtk+ 2.x) one can now use an arbitrary image as the mouse cursor while a given DOM node is being hovered. Any image format supported by Gecko can be used for the image. (SVG, animated GIF, and ANI cursors are not supported.) See <a href="en/Using_URL_values_for_the_cursor_property">Using URL values for the cursor property</a> for a description of the feature.</dd>
+ <dd>On Windows, OS/2 and Linux (Gtk+ 2.x) one can now use an arbitrary image as the mouse cursor while a given DOM node is being hovered. Any image format supported by Gecko can be used for the image. (SVG, animated GIF, and ANI cursors are not supported.) See <a href="/en-US/Using_URL_values_for_the_cursor_property">Using URL values for the cursor property</a> for a description of the feature.</dd>
 </dl>
 
 <dl>
@@ -80,7 +80,7 @@ tags:
 
 <dl>
  <dt>Array extras</dt>
- <dd>New methods have been added to the Array object to facilitate common tasks. See <a href="en/Core_JavaScript_1.5_Reference/Objects/Array">JavaScript 1.5 Array Object</a>.</dd>
+ <dd>New methods have been added to the Array object to facilitate common tasks. See <a href="/en-US/Core_JavaScript_1.5_Reference/Objects/Array">JavaScript 1.5 Array Object</a>.</dd>
 </dl>
 
 <dl>
@@ -117,7 +117,7 @@ tags:
 
 <dl>
  <dt><code>&lt;canvas&gt;</code> Support</dt>
- <dd><code>&lt;canvas&gt;</code> is a scriptable drawing surface for dynamically creating bitmap graphics. For a further introduction, see <a href="en/Drawing_Graphics_with_Canvas">Drawing Graphics with Canvas</a>.</dd>
+ <dd><code>&lt;canvas&gt;</code> is a scriptable drawing surface for dynamically creating bitmap graphics. For a further introduction, see <a href="/en-US/Drawing_Graphics_with_Canvas">Drawing Graphics with Canvas</a>.</dd>
 </dl>
 
 <h4 id="Miscellaneous">Miscellaneous</h4>
@@ -134,7 +134,7 @@ tags:
 
 <dl>
  <dt>XForms support</dt>
- <dd>The <a class="external" href="https://www.w3.org/MarkUp/Forms/">W3C's XML Forms</a> language allows writing complex forms in XML, and includes features that regular HTML forms do not have, such as client side validation against <a class="external" href="https://www.w3.org/XML/Schema">XML Schema</a> and XML submission/retrieval. Support for XForms comes as an extension, see <a class="external" href="http://www.mozilla.org/projects/xforms/">Mozilla XForms Project Page</a>.</dd>
+ <dd>The <a class="external" href="https://www.w3.org/MarkUp/Forms/">W3C's XML Forms</a> language allows writing complex forms in XML, and includes features that regular HTML forms do not have, such as client side validation against <a class="external" href="https://www.w3.org/XML/Schema">XML Schema</a> and XML submission/retrieval. Support for XForms comes as an extension, see <a class="external" href="https://www.mozilla.org/projects/xforms/">Mozilla XForms Project Page</a>.</dd>
 </dl>
 
 <h3 id="New_Extension_Developer_Features">New Extension Developer Features</h3>
@@ -151,7 +151,7 @@ tags:
 
 <dl>
  <dt>API for managing user and UA stylesheets</dt>
- <dd>Extensions can now register stylesheet URIs as additional user and UA stylesheets. This means extensions no longer have to try to edit <code>userContent.css</code> to add styling (say for XBL binding attachment) to web pages. See <a href="en/Using_the_Stylesheet_Service">Using the Stylesheet Service</a>.</dd>
+ <dd>Extensions can now register stylesheet URIs as additional user and UA stylesheets. This means extensions no longer have to try to edit <code>userContent.css</code> to add styling (say for XBL binding attachment) to web pages. See <a href="/en-US/Using_the_Stylesheet_Service">Using the Stylesheet Service</a>.</dd>
 </dl>
 
 <dl>
@@ -167,46 +167,26 @@ tags:
 <dl>
  <dt>E4X</dt>
  <dd>The Mozilla JavaScript engine now supports ECMAScript for XML (E4X), a draft ECMA standard that adds native XML datatypes to the language and provides operators for common XML operations. See <a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-357.htm">the ECMA specification</a>. {{bug(246441)}}</dd>
-</dl>
-
-<dl>
  <dt>Translucent Windows (Windows/Linux)</dt>
  <dd>On Windows and Linux, XUL windows with a transparent background are now supported. This allows whatever is below the window to shine through the window background.</dd>
-</dl>
-
-<dl>
  <dt>Adding tokens to the User-Agent string</dt>
- <dd>It is now possible for applications, extensions, and vendors to all add tokens to the User-Agent string (using default preferences) without overwriting each other. See <a class="external" href="http://www.mozilla.org/build/revised-user-agent-strings.html">documentation</a>. {{bug(274928) }}</dd>
-</dl>
-
-<dl>
+ <dd>It is now possible for applications, extensions, and vendors to all add tokens to the User-Agent string (using default preferences) without overwriting each other. See <a class="external" href="https://www.mozilla.org/build/revised-user-agent-strings.html">documentation</a>. {{bug(274928) }}</dd>
  <dt>Toolkit chrome registry</dt>
- <dd>Chrome registration has been significantly improved to use simple plaintext chrome registration manifests, and no longer keeps the chrome.rdf/overlayinfo cache. See <a href="en/Chrome_Registration">Chrome Registration</a>.</dd>
-</dl>
-
-<dl>
+ <dd>Chrome registration has been significantly improved to use simple plaintext chrome registration manifests, and no longer keeps the chrome.rdf/overlayinfo cache. See <a href="/en-US/Chrome_Registration">Chrome Registration</a>.</dd>
  <dt>Extension Manager</dt>
-</dl>
-
-<ul>
- <li>It is now possible to have Extensions outside the profile and application Extensions directories.</li>
- <li>Installing extensions can now be done by dropping an XPI into the profile or application Extensions directory.</li>
- <li>Uninstalling an Extension now involves deleting its folder from the profile or application Extensions directory.</li>
-</ul>
-
-<dl>
+ <dd>
+ <ul>
+   <li>It is now possible to have Extensions outside the profile and application Extensions directories.</li>
+   <li>Installing extensions can now be done by dropping an XPI into the profile or application Extensions directory.</li>
+   <li>Uninstalling an Extension now involves deleting its folder from the profile or application Extensions directory.</li>
+  </ul>
+ </dd>
  <dt>New Preferences bindings</dt>
  <dd>These <a class="external" href="http://forums.mozillazine.org/viewtopic.php?t=263028">new bindings</a> make it easier to create preferences windows for extensions. The new preferences windows support instant-apply behavior, which is enabled by default on Mac and Linux.</dd>
-</dl>
-
-<dl>
  <dt>API for implementing new command-line switches</dt>
  <dd>An API has been introduced so that extensions can easily handle complex command-line flags. This API will be stable and frozen for 1.1. See the interfaces {{ Interface("nsICommandLine") }} and {{ Interface("nsICommandLineHandler") }}.</dd>
-</dl>
-
-<dl>
  <dt>XTF Support</dt>
- <dd>The eXtensible Tag Framework allows adding support for new namespaces using XPCOM components to Mozilla (written in JavaScript or C++). For example, the <a class="external" href="http://www.mozilla.org/projects/xforms">Mozilla XForms Project</a> uses XTF to add support for the XForms namespace. See <a class="external" href="http://www.croczilla.com/xtf">XTF Home Page</a></dd>
+ <dd>The eXtensible Tag Framework allows adding support for new namespaces using XPCOM components to Mozilla (written in JavaScript or C++). For example, the <a class="external" href="https://www.mozilla.org/projects/xforms">Mozilla XForms Project</a> uses XTF to add support for the XForms namespace. See <a class="external" href="http://www.croczilla.com/xtf">XTF Home Page</a></dd>
 </dl>
 
 <h3 id="New_Browser_Features">New Browser Features</h3>
@@ -214,8 +194,8 @@ tags:
 <h4 id="Improved_Preferences">Improved Preferences</h4>
 
 <dl>
- <dt>Instant Apply behaviour on Linux and Mac</dt>
- <dd>Changes made in the Preferences window now apply immediately, in line with typical behaviour in other Mac OS X and GNOME applications. This changes conforms with the Apple and GNOME Human Interface Guidelines.</dd>
+ <dt>Instant Apply behavior on Linux and Mac</dt>
+ <dd>Changes made in the Preferences window now apply immediately, in line with typical behavior in other Mac OS X and GNOME applications. This changes conforms with the Apple and GNOME Human Interface Guidelines.</dd>
 </dl>
 
 <dl>
@@ -232,7 +212,7 @@ tags:
 
 <dl>
  <dt>Firefox MSI package</dt>
- <dd>The new MSI installation package facilitates distibuted installation and provides greater flexibility to network administrators wanting to deploy Firefox in a corporate environment.</dd>
+ <dd>The new MSI installation package facilitates distributed installation and provides greater flexibility to network administrators wanting to deploy Firefox in a corporate environment.</dd>
 </dl>
 
 <dl>
@@ -258,7 +238,7 @@ tags:
 </dl>
 
 <dl>
- <dt>Anonymous FTP login failure behaviour</dt>
+ <dt>Anonymous FTP login failure behavior</dt>
  <dd>FTP users are now prompted to input a name and password if anonymous access fails.</dd>
 </dl>
 

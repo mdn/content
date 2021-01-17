@@ -68,13 +68,13 @@ tags:
 
 <h2 id="Collapsed_items">Collapsed items</h2>
 
-<p>The flexbox specification details what should happen if a flex item is collapsed by setting <code>visibility: collapse</code> on an item. See the MDN documentation for the {{cssxref("visibility")}} property. The specification describes the behaviour as follows:</p>
+<p>The flexbox specification details what should happen if a flex item is collapsed by setting <code>visibility: collapse</code> on an item. See the MDN documentation for the {{cssxref("visibility")}} property. The specification describes the behavior as follows:</p>
 
 <blockquote>
 <p>“Specifying visibility:collapse on a flex item causes it to become a collapsed flex item, producing an effect similar to visibility:collapse on a table-row or table-column: the collapsed flex item is removed from rendering entirely, but leaves behind a "strut" that keeps the flex line’s cross-size stable. Thus, if a flex container has only one flex line, dynamically collapsing or uncollapsing items may change the flex container’s main size, but is guaranteed to have no effect on its cross size and won’t cause the rest of the page’s layout to "wobble". Flex line wrapping is re-done after collapsing, however, so the cross-size of a flex container with multiple lines might or might not change.” - <a href="https://www.w3.org/TR/css-flexbox-1/#visibility-collapse">Collapsed items</a></p>
 </blockquote>
 
-<p>This behaviour is useful if you want to target flex items using JavaScript to show and hide content for example. The example in the specification demonstrates one such pattern.</p>
+<p>This behavior is useful if you want to target flex items using JavaScript to show and hide content for example. The example in the specification demonstrates one such pattern.</p>
 
 <p>In the following live example I have a non-wrapped flex container. The third item has more content than the others yet is set to <code>visibility: collapse</code> and therefore the flex container is retaining a <em>strut</em> of the height required to display this item. If you remove <code>visibility: collapse</code> from the CSS or change the value to <code>visible</code>, you will see the item disappear and the space redistribute between non-collapsed items; the height of the flex container should not change.</p>
 
@@ -84,11 +84,11 @@ tags:
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/wrapping/visibility-collapse.html", '100%', 650)}}</p>
 
-<p>When dealing with multiple-line flex containers however you need to understand that the wrapping is re-done <em>after</em> collapsing. So the browser needs to re-do the wrapping behaviour to account for the new space that the collapsed item has left in the inline direction.</p>
+<p>When dealing with multiple-line flex containers however you need to understand that the wrapping is re-done <em>after</em> collapsing. So the browser needs to re-do the wrapping behavior to account for the new space that the collapsed item has left in the inline direction.</p>
 
 <p>This means that items might end up on a different line to the one they started on. In the case of an item being shown and hidden it could well cause the items to end up in a different row.</p>
 
-<p>I have created this behaviour in the next live example. You can see how the stretching changes row based on the location of the collapsed item. If you add more content to the second item, it changes row once it gets long enough. That top row then only becomes as tall as a single line of text.</p>
+<p>I have created this behavior in the next live example. You can see how the stretching changes row based on the location of the collapsed item. If you add more content to the second item, it changes row once it gets long enough. That top row then only becomes as tall as a single line of text.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/wrapping/wrapped-visibility-collapse.html", '100%', 750)}}</p>
 

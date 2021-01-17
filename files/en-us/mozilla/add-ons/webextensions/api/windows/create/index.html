@@ -30,7 +30,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var creating = browser.windows.create(
+<pre class="brush:js">var creating = browser.windows.create(
   createData            // optional object
 )
 </pre>
@@ -72,7 +72,7 @@ tags:
   <dt><code>type</code> {{optional_inline}}</dt>
   <dd>A {{WebExtAPIRef('windows.CreateType')}} value. Specifies what type of browser window to create. Specify <code>panel</code> or <code>popup</code> here to open a window without any of the normal browser UI (address bar, toolbar, etc).</dd>
   <dt><code>url</code> {{optional_inline}}</dt>
-  <dd><code><code>string</code></code> or <code><code>array</code></code> of <code><code><code>string</code></code></code>s. A URL or array of URLs to open as tabs in the window. Fully-qualified URLs must include a scheme (i.e. <code>http://www.google.com</code>, not <code>www.google.com</code>). Relative URLs will be relative to the current page within the extension. Defaults to the New Tab Page.</dd>
+  <dd><code>string</code> or <code>array</code> of <code>string</code>s. A URL or array of URLs to open as tabs in the window. Fully-qualified URLs must include a scheme (i.e. <code>http://www.google.com</code>, not <code>www.google.com</code>). Relative URLs will be relative to the current page within the extension. Defaults to the New Tab Page.</dd>
   <dt><code>width</code> {{optional_inline}}</dt>
   <dd><code>integer</code>. The width in pixels of the new window, including the frame. If not specified defaults to a natural width.</dd>
  </dl>
@@ -87,7 +87,7 @@ tags:
 
 <p>Open a window containing two tabs:</p>
 
-<pre class="brush: js">function onCreated(windowInfo) {
+<pre class="notranslate brush: js">function onCreated(windowInfo) {
   console.log(`Created window: ${windowInfo.id}`);
 }
 
@@ -105,7 +105,7 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
 
 <p>Open a window when the user clicks a browser action, and move the currently active tab into it:</p>
 
-<pre class="brush: js">function onCreated(windowInfo) {
+<pre class="notranslate brush: js">function onCreated(windowInfo) {
   console.log(`Created window: ${windowInfo.id}`);
 }
 
@@ -122,7 +122,7 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
 
 <p>Open a small panel-style window, and load a locally-packaged file into it:</p>
 
-<pre class="brush: js">function onCreated(windowInfo) {
+<pre class="notranslate brush: js">function onCreated(windowInfo) {
   console.log(`Created window: ${windowInfo.id}`);
 }
 

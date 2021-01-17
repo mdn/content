@@ -167,7 +167,7 @@ tags:
 <p><strong>Note</strong>: There are of course many other tests you can run. Use your discretion, but we'll expect you to do at least the tests above.</p>
 </div>
 
-<p>The following section shows <a href="#Screenshots">screenshots</a> of a site that implements the requirements above.</p>
+<p>The following section shows <a href="#screenshots">screenshots</a> of a site that implements the requirements above.</p>
 
 <h2 id="Screenshots">Screenshots</h2>
 
@@ -237,7 +237,7 @@ tags:
 
 <h2 id="Hints_and_tips">Hints and tips</h2>
 
-<p>This project is very similar to the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> tutorial. You will be able to set up the skeleton, user login/logout behaviour, support for static files, views, URLs, forms, base templates and admin site configuration using almost all the same approaches.</p>
+<p>This project is very similar to the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> tutorial. You will be able to set up the skeleton, user login/logout behavior, support for static files, views, URLs, forms, base templates and admin site configuration using almost all the same approaches.</p>
 
 <p>Some general hints:</p>
 
@@ -262,7 +262,7 @@ tags:
         form.instance.author = self.request.user
         #Associate comment with blog based on passed id
         form.instance.blog=get_object_or_404(Blog, pk = self.kwargs['pk'])
-        # Call super-class form validation behaviour
+        # Call super-class form validation behavior
         return super(BlogCommentCreate, self).form_valid(form)
 </pre>
    </li>

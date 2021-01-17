@@ -17,7 +17,7 @@ tags:
 
 <p>Whether we are dealing with pre-recorded audio files or live streams, the mechanism for making them available through the browser's {{ htmlelement("audio")}} and {{ htmlelement("video")}} elements remains pretty much the same. Currently, to support all browsers we need to specify two formats, although with the adoption of MP3 and MP4 formats in Firefox and Opera, this is changing fast. You can find compatibility information in the <a href="/en-US/docs/Web/Media/Formats">Guide to media types and formats on the web</a>.</p>
 
-<p><span>To deliver video and audio, the general workflow is usually something like this:</span></p>
+<p>To deliver video and audio, the general workflow is usually something like this:</p>
 
 <ol>
  <li>Check what format the browser supports via feature detection (usually a choice of two, as stated above).</li>
@@ -138,7 +138,7 @@ myVideo.height = 320;</pre>
     alert('web audio api not supported');
   }</pre>
 
-<p>In this example we retrieve an MP3 file via XHR, load it into a source and play it (<a href="http://jsbin.com/facutone/1/edit?js">Try it for yourself</a>). Find more about Web Audio API basics in <a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>.</p>
+<p>In this example we retrieve an MP3 file via XHR, load it into a source and play it (<a href="https://jsbin.com/facutone/1/edit?js">Try it for yourself</a>). Find more about Web Audio API basics in <a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>.</p>
 
 <h2 id="getUserMedia_Stream_API">getUserMedia / Stream API</h2>
 
@@ -158,7 +158,7 @@ myVideo.height = 320;</pre>
     video.srcObject = stream;
   })
   .catch(function onError() {
-    alert('There has been a problem retreiving the streams - are you running on file:/// or did you disallow access?');
+    alert('There has been a problem retrieving the streams - are you running on file:/// or did you disallow access?');
   });
 } else {
   alert('getUserMedia is not supported in this browser.');
@@ -210,13 +210,13 @@ myVideo.height = 320;</pre>
  <br>
  The API supports use cases ranging from simple clear key decryption to high value video (given an appropriate user agent implementation). License/key exchange is controlled by the application, facilitating the development of robust playback applications supporting a range of content decryption and protection technologies.<br>
  <br>
- One of the principle uses of EME is to allow browsers to implement DRM (<a href="http://en.wikipedia.org/wiki/Digital_rights_management">Digital Rights Management</a>), which helps to prevent web-based content (especially video) from being copied.</p>
+ One of the principle uses of EME is to allow browsers to implement DRM (<a href="https://en.wikipedia.org/wiki/Digital_rights_management">Digital Rights Management</a>), which helps to prevent web-based content (especially video) from being copied.</p>
 
 <h3 id="Adaptive_Streaming">Adaptive Streaming</h3>
 
 <p>New formats and protocols are being rolled out to facilitate adaptive streaming. Adaptive streaming media means that the bandwidth and typically quality of the stream can change in real-time in reaction to the user's available bandwidth. Adaptive streaming is often used in conjunction with live streaming where smooth delivery of audio or video is paramount.</p>
 
-<p>The main formats used for adaptive streaming are <a href="/en-US/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video#HLS">HLS</a> and <a href="/en-US/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video#MPEG-DASH">MPEG-DASH</a>. MSE has been designed with DASH in mind. MSE defines byte streams according to <a href="https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/isobmff-byte-stream-format.html">ISOBMFF</a> and <a href="http://en.wikipedia.org/wiki/M2ts">M2TS</a> (both supported in DASH, the latter supported in HLS). Generally speaking, if you are interested in standards, are looking for flexibility, or wish to support most modern browsers, you are probably better off with DASH.</p>
+<p>The main formats used for adaptive streaming are <a href="/en-US/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video#HLS">HLS</a> and <a href="/en-US/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video#MPEG-DASH">MPEG-DASH</a>. MSE has been designed with DASH in mind. MSE defines byte streams according to <a href="https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/isobmff-byte-stream-format.html">ISOBMFF</a> and <a href="https://en.wikipedia.org/wiki/M2ts">M2TS</a> (both supported in DASH, the latter supported in HLS). Generally speaking, if you are interested in standards, are looking for flexibility, or wish to support most modern browsers, you are probably better off with DASH.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Currently Safari does not support DASH although dash.js will work on newer versions of Safari scheduled for release with OSX Yosemite.</p>
@@ -225,9 +225,6 @@ myVideo.height = 320;</pre>
 <p>DASH also provides a number of profiles including simple onDemand profiles that no preprocessing and splitting up of media files. There are also a number of cloud based services that will convert your media to both HLS and DASH.<br>
  <br>
  For further information see <a href="/en-US/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video">Live streaming web audio and video</a>.</p>
-
-<ul>
-</ul>
 
 <h2 id="Customising_Your_Media_Player">Customising Your Media Player</h2>
 
@@ -272,7 +269,7 @@ myVideo.height = 320;</pre>
   window.addEventListener( "keypress", checkKey, false );
 }</pre>
 
-<p>You can <a href="http://jsbin.com/jujeladu/2/edit">try this example out here</a>. For more information, see <a href="https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/Cross-browser_audio_basics#Creating_your_own_custom_audio_player">Creating your own custom audio player</a>.</p>
+<p>You can <a href="https://jsbin.com/jujeladu/2/edit">try this example out here</a>. For more information, see <a href="https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/Cross-browser_audio_basics#Creating_your_own_custom_audio_player">Creating your own custom audio player</a>.</p>
 
 <h2 id="Other_tips_for_audiovideo">Other tips for audio/video</h2>
 
@@ -317,13 +314,13 @@ mediaElement.played.end(0);      // Returns the number of seconds the browser ha
 <p>A few examples:</p>
 
 <dl>
- <dt><span class="nowiki">http://example.com/video.ogv#t=10,20</span></dt>
+ <dt><code>http://example.com/video.ogv#t=10,20</code></dt>
  <dd>Specifies that the video should play the range 10 seconds through 20 seconds.</dd>
- <dt><span class="nowiki">http://example.com/video.ogv#t=,10.5</span></dt>
+ <dt><code>http://example.com/video.ogv#t=,10.5</code></dt>
  <dd>Specifies that the video should play from the beginning through 10.5 seconds.</dd>
- <dt><span class="nowiki">http://example.com/video.ogv#t=,02:00:00</span></dt>
+ <dt><code>http://example.com/video.ogv#t=,02:00:00</code></dt>
  <dd>Specifies that the video should play from the beginning through two hours.</dd>
- <dt><span class="nowiki">http://example.com/video.ogv#t=60</span></dt>
+ <dt><code>http://example.com/video.ogv#t=60</code></dt>
  <dd>Specifies that the video should start playing at 60 seconds and play through the end of the video.</dd>
 </dl>
 
@@ -359,12 +356,12 @@ mediaElement.played.end(0);      // Returns the number of seconds the browser ha
 <p>Use the following verified sources within your audio and video elements to check support.</p>
 
 <ul>
- <li>Audio MP3 (<code>type="audio/mpeg"</code>): <a href="http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3">http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3</a> (<a href="http://jsbin.com/gekatoge/1/edit">play the MP3 audio live</a>.)</li>
- <li>Audio MP4 (<code>type="audio/mp4"</code>): <a href="http://jPlayer.org/audio/m4a/Miaow-01-Tempered-song.m4a">http://jPlayer.org/audio/m4a/Miaow-01-Tempered-song.m4a</a> (<a href="http://jsbin.com/gekatoge/2/edit">play the MP4 audio live</a>.)</li>
- <li>Audio Ogg (<code>type="audio/ogg"</code>): <a href="http://jPlayer.org/audio/ogg/Miaow-01-Tempered-song.ogg">http://jPlayer.org/audio/ogg/Miaow-01-Tempered-song.ogg</a> (<a href="http://jsbin.com/gekatoge/4/edit">play the OGG audio live</a>.)</li>
- <li>Video MP4 (<code>type="video/mp4"</code>): <a href="http://jPlayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v">http://jPlayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v</a> (<a href="http://jsbin.com/gekatoge/5/edit">play the MP4 video live</a>.)</li>
- <li>Video WebM (<code>type="video/webm"</code>): <a href="http://jPlayer.org/video/webm/Big_Buck_Bunny_Trailer.webm">http://jPlayer.org/video/webm/Big_Buck_Bunny_Trailer.webm</a> (<a href="http://jsbin.com/gekatoge/6/edit">play the WebM video live</a>.)</li>
- <li>Video Ogg (<code>type="video/ogg"</code>): <a href="http://jPlayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv">http://jPlayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv</a> (<a href="http://jsbin.com/gekatoge/7/edit">play the OGG video live</a>.)</li>
+ <li>Audio MP3 (<code>type="audio/mpeg"</code>): <a href="http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3">http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3</a> (<a href="https://jsbin.com/gekatoge/1/edit">play the MP3 audio live</a>.)</li>
+ <li>Audio MP4 (<code>type="audio/mp4"</code>): <a href="http://jPlayer.org/audio/m4a/Miaow-01-Tempered-song.m4a">http://jPlayer.org/audio/m4a/Miaow-01-Tempered-song.m4a</a> (<a href="https://jsbin.com/gekatoge/2/edit">play the MP4 audio live</a>.)</li>
+ <li>Audio Ogg (<code>type="audio/ogg"</code>): <a href="http://jPlayer.org/audio/ogg/Miaow-01-Tempered-song.ogg">http://jPlayer.org/audio/ogg/Miaow-01-Tempered-song.ogg</a> (<a href="https://jsbin.com/gekatoge/4/edit">play the OGG audio live</a>.)</li>
+ <li>Video MP4 (<code>type="video/mp4"</code>): <a href="http://jPlayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v">http://jPlayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v</a> (<a href="https://jsbin.com/gekatoge/5/edit">play the MP4 video live</a>.)</li>
+ <li>Video WebM (<code>type="video/webm"</code>): <a href="http://jPlayer.org/video/webm/Big_Buck_Bunny_Trailer.webm">http://jPlayer.org/video/webm/Big_Buck_Bunny_Trailer.webm</a> (<a href="https://jsbin.com/gekatoge/6/edit">play the WebM video live</a>.)</li>
+ <li>Video Ogg (<code>type="video/ogg"</code>): <a href="http://jPlayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv">http://jPlayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv</a> (<a href="https://jsbin.com/gekatoge/7/edit">play the OGG video live</a>.)</li>
 </ul>
 
 <p>If these don't play then the browser you are testing doesn't support the given format. Consider using a different format or using a fallback.<br>
@@ -512,7 +509,7 @@ lastsource.addEventListener('error', function(ev) {
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: Firefox OS versions 1.3 and above support the <a href="http://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol">RTSP</a> protocol for streaming video delivery. A fallback solution for older versions would be to use <code>&lt;video&gt;</code> along with a suitable format for Gecko (such as WebM) to serve fallback content. More information will be published on this in good time.</p>
+<p><strong>Note</strong>: Firefox OS versions 1.3 and above support the <a href="https://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol">RTSP</a> protocol for streaming video delivery. A fallback solution for older versions would be to use <code>&lt;video&gt;</code> along with a suitable format for Gecko (such as WebM) to serve fallback content. More information will be published on this in good time.</p>
 </div>
 
 <h2 id="References">References</h2>

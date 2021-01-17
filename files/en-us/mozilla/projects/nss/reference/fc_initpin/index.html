@@ -1,0 +1,42 @@
+---
+title: FC_InitPIN
+slug: Mozilla/Projects/NSS/Reference/FC_InitPIN
+tags:
+  - NSS
+---
+
+<h3 id="Name"> Name </h3>
+<p><code>FC_InitPIN()</code> - Initialize the user's PIN.
+</p>
+<h3 id="Syntax"> Syntax </h3>
+<pre class="eval"><a href="/en-US/CK_RV">CK_RV</a> FC_InitPIN(
+  <a href="/en-US/CK_SESSION_HANDLE">CK_SESSION_HANDLE</a> hSession,
+  <a href="/en-US/CK_CHAR_PTR">CK_CHAR_PTR</a> pPin,
+  <a href="/en-US/CK_ULONG">CK_ULONG</a> ulPinLen
+);
+</pre>
+<h3 id="Parameters"> Parameters </h3>
+<p><code>FC_InitPIN()</code> takes three parameters:
+</p>
+<dl><dt><code>hSession</code></dt><dd>{{ mediawiki.external('Input') }} Session handle.
+</dd><dt><code>pPin</code></dt><dd>{{ mediawiki.external('Input') }} Pointer to the PIN being set.
+</dd><dt><code>ulPinLen</code>
+</dt><dd>{{ mediawiki.external('Input') }} Length of the PIN.
+</dd></dl>
+<h3 id="Description"> Description </h3>
+<p><code>FC_InitPIN()</code> initializes the normal user's PIN.
+</p><p><code>FC_InitPIN()</code> must be called when the PKCS #11 Security Officer (SO) is logged into the token and the session is read/write, that is, the session must be in the "R/W SO Functions" state (<code>CKS_RW_SO_FUNCTIONS</code>). The role of the PKCS #11 SO is to initialize a token and to initialize the normal user's PIN. In the NSS cryptographic module, one uses the empty string password ("") to log in as the PKCS #11 SO. The module only allows the PKCS #11 SO to log in if the normal user's PIN has not yet been set or has been reset.
+</p>
+<h3 id="Return_value"> Return value </h3>
+<p><code>FC_InitPIN()</code> returns the following return codes.
+</p>
+<ul><li> <code>CKR_OK</code>: normal user's PIN initialization succeeded.
+</li><li> <code>CKR_SESSION_HANDLE_INVALID</code>: the session handle is invalid.
+</li><li> <code>CKR_USER_NOT_LOGGED_IN</code>: the session is not in the "R/W SO Functions" state.
+</li><li> <code>CKR_PIN_INVALID</code>: the PIN has an invalid UTF-8 character.
+</li><li> <code>CKR_PIN_LEN_RANGE</code>: the PIN is too short, too long, or too weak (doesn't have enough character types).
+</li><li> <code>CKR_DEVICE_ERROR</code>: normal user's PIN is already initialized.
+</li></ul>
+<h3 id="See_also"> See also </h3>
+<ul><li> <a href="/en-US/NSC_InitPIN">NSC_InitPIN</a>, <a href="/en-US/FC_SetPIN">FC_SetPIN</a>
+</li></ul>

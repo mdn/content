@@ -324,7 +324,7 @@ Changes to be committed:
 </ol>
 
 <div class="notecard warning">
-<p><strong>Warning:</strong> In 2020 Github change the default repo branch name to "main" (from "master"). If using an older/existing repository you might call <code>git push origin master</code> instead.</p>
+<p><strong>Warning:</strong> In 2020 Github changed the default repo branch name to "main" (from "master"). If using an older/existing repository you might need to call <code>git push origin master</code> instead.</p>
 </div>
 
 <p>When this operation completes, you should be able to go back to the page on Github where you created your repo, refresh the page, and see that your whole application has now been uploaded. You can continue to update your repository as files change using this add/commit/push cycle.</p>
@@ -400,7 +400,7 @@ git push origin main</pre>
 
 <h3 id="Get_a_Heroku_account">Get a Heroku account</h3>
 
-<p>To start using Heroku you will first need to create an account (skip ahead to <a href="#Create_and_upload_the_website">Create and upload the website</a> if you've already got an account and installed the Heroku client):</p>
+<p>To start using Heroku you will first need to create an account (skip ahead to <a href="#create_and_upload_the_website">Create and upload the website</a> if you've already got an account and installed the Heroku client):</p>
 
 <ul>
  <li>Go to <a href="https://www.heroku.com/">www.heroku.com</a> and click the <strong>SIGN UP FOR FREE</strong> button.</li>
@@ -438,7 +438,7 @@ git push origin main</pre>
 <pre class="brush: bash notranslate">heroku open</pre>
 
 <div class="note">
-<p><strong>Note</strong>: This may result in the Heroku page error page. This is will be remedy in the next section.</p>
+<p><strong>Note</strong>: This may result in the Heroku page error page. This will be remedied in the next section.</p>
 </div>
 
 <div class="note">
@@ -447,7 +447,7 @@ git push origin main</pre>
 
 <h3 id="Setting_configuration_variables">Setting configuration variables</h3>
 
-<p>You will recall from a preceding section that we need to <a href="#NODE_ENV">set NODE_ENV to 'production'</a> in order to improve our performance and generate less-verbose error messages. We do this by entering the following command:</p>
+<p>You will recall from a preceding section that we need to <a href="#node_env">set NODE_ENV to 'production'</a> in order to improve our performance and generate less-verbose error messages. We do this by entering the following command:</p>
 
 <pre class="brush: bash notranslate">&gt;heroku config:set NODE_ENV='production'
 Setting NODE_ENV and restarting limitless-tor-18923... done, v13
@@ -487,9 +487,6 @@ NODE_ENV:    production
 heroku logs --tail # Show current logs and keep updating with any new results
 heroku ps   #Display dyno status
 </pre>
-
-<ul>
-</ul>
 
 <h2 id="Summary">Summary</h2>
 
