@@ -55,7 +55,7 @@ let badString = 'This is a test;
 let badString = This is a test';</pre>
   These lines don't work because any text without quotes around it is assumed to be a variable name, property name, a reserved word, or similar. If the browser can't find it, then an error is raised (e.g. "missing; before statement"). If the browser can see where a string starts, but can't find the end of the string, as indicated by the 2nd quote, it complains with an error (with "unterminated string literal"). If your program is raising such errors, then go back and check all your strings to make sure you have no missing quote marks.</li>
  <li>The following will work if you previously defined the variable <code>string</code> — try it now:
-  <pre class="brush: js">let badString = string;
+  <pre class="brush: js">badString = string;
 badString;</pre>
   <code>badString</code> is now set to have the same value as <code>string</code>.</li>
 </ol>
