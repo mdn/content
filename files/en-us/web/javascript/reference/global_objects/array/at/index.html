@@ -66,27 +66,27 @@ for (let C of [Array, String, Uint8Array]) {
 
 <h2 id="Examples">Examples</h2>
 
-<h3>Return the last value of an array.</h3>
+<h3>Return the last value of an array</h3>
 
 <p>The following example provides a function which returns the last element found in a specified array.</p>
 
 <pre class="brush: js notranslate">
-  // Our array with items
-  const cart = ['apple', 'banana', 'pear'];
+// Our array with items
+const cart = ['apple', 'banana', 'pear'];
 
-  // A function which returns the last item of a given array
-  function returnLast(arr) {
-    return arr.at(-1);
-  }
+// A function which returns the last item of a given array
+function returnLast(arr) {
+  return arr.at(-1);
+}
 
-  // Get the last item of our array 'cart'
-  const item1 = returnLast(cart);
-  console.log(item1); // Logs: 'pear'
+// Get the last item of our array 'cart'
+const item1 = returnLast(cart);
+console.log(item1); // Logs: 'pear'
 
-  // Add an item to our 'cart' array
-  cart.push('orange');
-  const item2 = returnLast(cart);
-  console.log(item2); // Logs: 'orange'
+// Add an item to our 'cart' array
+cart.push('orange');
+const item2 = returnLast(cart);
+console.log(item2); // Logs: 'orange'
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
