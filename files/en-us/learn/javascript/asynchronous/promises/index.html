@@ -381,7 +381,7 @@ let description = fetchAndDecode('description.txt', 'text');</pre>
   <p>You can see that it takes an array containing the promises as a parameter. The <code>.then()</code> callback function will only run when all three promises resolve; when that happens, it will be passed an array containing the results from the individual promises (i.e. the decoded response bodies), kind of like [coffee-results, tea-results, description-results].</p>
  </li>
  <li>
-  <p>Finally, add the following inside the executor. Here we use some fairly simple sync code to store the results in separate variables (creating object URLs from the blobs), then display the images and text on the page.</p>
+  <p>Finally, add the following inside the callback. Here we use some fairly simple sync code to store the results in separate variables (creating object URLs from the blobs), then display the images and text on the page.</p>
 
   <pre class="brush: js notranslate">console.log(values);
 // Store each value returned from the promises in separate variables; create object URLs from the blobs
