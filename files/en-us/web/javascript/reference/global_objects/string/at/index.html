@@ -33,7 +33,6 @@ tags:
 
 <p>A {{jsxref('String')}} consisting of the single UTF-16 code unit located at the specified position. Returns {{jsxref('undefined')}} if the given index can not be found.</p>
 
-
 <h2 id="Polyfill">Polyfill</h2>
 
 <p>This method may not be available in all JavaScript implementations yet. However you can polyfill <code>String.prototype.at</code> with the following snippet:</p>
@@ -66,21 +65,20 @@ for (let C of [Array, String, Uint8Array]) {
 <p>The following example provides a function which returns the last character found in a specified string.</p>
 
 <pre class="brush: js notranslate">
-  // A function which returns the last character of a given string
-  function returnLast(arr) {
-    return arr.at(-1);
-  }
+// A function which returns the last character of a given string
+function returnLast(arr) {
+  return arr.at(-1);
+}
 
-  let invoiceRef = 'myinvoice01';
+let invoiceRef = 'myinvoice01';
 
-	console.log( returnLast(invoiceRef) );
-	// Logs: '1'
+console.log( returnLast(invoiceRef) );
+// Logs: '1'
 
-	invoiceRef = 'myinvoice02';
+invoiceRef = 'myinvoice02';
 
-	console.log( returnLast(invoiceRef) );
-	// Logs: '2'
-
+console.log( returnLast(invoiceRef) );
+// Logs: '2'
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
