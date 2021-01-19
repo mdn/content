@@ -105,7 +105,7 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
  <dt><code>min-fresh=&lt;seconds&gt;</code></dt>
  <dd>Indicates the client wants a response that will still be fresh for <em>at least</em> the specified number of seconds.</dd>
  <dt><code>stale-while-revalidate=&lt;seconds&gt;</code> {{Experimental_Inline}}</dt>
- <dd>Indicates the client will accept a stale response, while asynchronously checking in the background for a fresh one. The <em>seconds</em> value indicates how long the client will accept a stale response. See "<a href="https://web.dev/stale-while-revalidate">Keeping things fresh with <code>stale-while-revalidate</code></a>" for more information.</dd>
+ <dd>Indicates the client will accept a stale response, while asynchronously checking in the background for a fresh one. The <em>seconds</em> value indicates how long the client will accept a stale response. Note that the time does not start at the time of the request itself, but, for example, after <code>max-age</code> has elapsed. See "<a href="https://web.dev/stale-while-revalidate">Keeping things fresh with <code>stale-while-revalidate</code></a>" for more information.</dd>
  <dt><code>stale-if-error=&lt;seconds&gt;</code> {{Experimental_Inline}}</dt>
  <dd>Indicates the client will accept a stale response if the check for a fresh one fails. The <em>seconds</em> value indicates how long the client will accept the stale response after the initial expiration.</dd>
 </dl>
