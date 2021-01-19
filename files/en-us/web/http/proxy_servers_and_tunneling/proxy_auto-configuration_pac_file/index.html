@@ -88,8 +88,8 @@ tags:
 
 <p>Next, you should configure your server to map the .pac filename extension to the MIME type.</p>
 
-<div class="note">
-<p><strong>Notes: </strong></p>
+<div class="notecard note">
+<h4>Notes</h4>
 
 <ul>
  <li>The JavaScript function should always be saved to a file by itself but not be embedded in a HTML file or any other file.</li>
@@ -143,8 +143,9 @@ tags:
  </li>
 </ul>
 
-<div class="note">
-<p><strong>Note:</strong> pactester (part of the <a href="https://github.com/pacparser/pacparser">pacparser </a>package) was used to test the following syntax examples.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+<p>pactester (part of the <a href="https://github.com/pacparser/pacparser">pacparser </a>package) was used to test the following syntax examples.</p>
 
 <ul>
  <li>The PAC file is named <code>proxy.pac</code></li>
@@ -369,13 +370,20 @@ dnsDomainLevels("www.mozilla.org"); // 2
  <dd>is a shell expression to compare against.</dd>
 </dl>
 
-<p>Returns true if the string matches the specified shell expression.</p>
+<p>Returns <code>true</code> if the string matches the specified shell glob expression.</p>
 
-<p><strong>Note that the patterns are <em>shell</em> glob <em>expressions</em>, not regular expressions. </strong><code>*</code> and <code>?</code> are always supported, while <code>[characters]</code> and <code>[^characters]</code> are supported by some implmentations including Firefox. This is mainly because the expression is translated to a RegExp via subsitution of <code>[.*?]</code>. For a reliable way to use these RegExp syntaxes, just use RegExp instead.</p>
+<p>Support for particular glob expression syntax varies across browsers: 
+  <code>*</code> (match any number of characters) and <code>?</code> (match one character) are always supported, 
+  while <code>[characters]</code> and <code>[^characters]</code> are additionally supported by some implementations (including Firefox). </p>
+
+<div class="notecard note">
+<p>If supported by the client, JavaScript regular expressions typically provide a more powerful and consistent way to pattern-match URLs (and other strings).</p>
+</div>
+
 
 <h4 id="Examples_8">Examples</h4>
 
-<pre class="brush: js notranslate">shExpMatch("http://home.netscape.com/people/ari/index.html"     , "*/ari/*"); // returns true
+<pre class="brush: js notranslate">shExpMatch("http://home.netscape.com/people/ari/index.html", "*/ari/*"); // returns true
 shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); // returns false</pre>
 
 <h3 id="weekdayRange">weekdayRange()</h3>
@@ -384,8 +392,9 @@ shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); //
 
 <pre class="brush: js notranslate">weekdayRange(<var>wd1</var>, <var>wd2</var>, [<var>gmt</var>])</pre>
 
-<div class="note">
-<p><strong>Note:</strong> (Before Firefox 49) wd1 must be less than wd2 if you want the function to evaluate these parameters as a range. See the warning below.</p>
+<div class="notecard note">
+  <h4>Notes</h4>
+<p>(Before Firefox 49) wd1 must be less than wd2 if you want the function to evaluate these parameters as a range. See the warning below.</p>
 </div>
 
 <h4 id="Parameters_12">Parameters</h4>
@@ -430,8 +439,9 @@ dateRange(&lt;day1&gt;, &lt;month1&gt;, &lt;day2&gt;, &lt;month2&gt;, [gmt])
 dateRange(&lt;month1&gt;, &lt;year1&gt;, &lt;month2&gt;, &lt;year2&gt;, [gmt])
 dateRange(&lt;day1&gt;, &lt;month1&gt;, &lt;year1&gt;, &lt;day2&gt;, &lt;month2&gt;, &lt;year2&gt;, [gmt])</pre>
 
-<div class="note">
-<p><strong>Note:</strong> (Before Firefox 49) day1 must be less than day2, month1 must be less than month2, and year1 must be less than year2 if you want the function to evaluate these parameters as a range. See the warning below.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+<p>(Before Firefox 49) day1 must be less than day2, month1 must be less than month2, and year1 must be less than year2 if you want the function to evaluate these parameters as a range. See the warning below.</p>
 </div>
 
 <h4 id="Parameters_13">Parameters</h4>
@@ -459,7 +469,8 @@ dateRange(&lt;day1&gt;, &lt;month1&gt;, &lt;year1&gt;, &lt;day2&gt;, &lt;month2&
 
 <p>If only a single value is specified (from each category: day, month, year), the function returns a true value only on days that match that specification. If both values are specified, the result is true between those times, including bounds, <em>but the bounds are ordered</em>.</p>
 
-<div class="warning">
+<div class="notecard warning">
+  <h4>Warning</h4>
 <p><strong>The order of the days, months, and years matter</strong>; Before Firefox 49, <code>dateRange("<em>JAN", "DEC"</em>)</code> will always evaluate to <code>true</code>. Now <code>dateRange("<em>DEC", "JAN"</em>)</code> will only evaluate true if the current month is December or January.</p>
 </div>
 
@@ -495,8 +506,9 @@ dateRange(1995, 1997);
 <pre class="brush: html notranslate">// The full range of expansions is analogous to dateRange.
 timeRange(&lt;hour1&gt;, &lt;min1&gt;, &lt;sec1&gt;, &lt;hour2&gt;, &lt;min2&gt;, &lt;sec2&gt;, [gmt])</pre>
 
-<div class="note">
-<p><strong>Note:</strong> (Before Firefox 49) the category hour1, min1, sec1 must be less than the category hour2, min2, sec2 if you want the function to evaluate these parameters as a range. See the warning below.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+<p>(Before Firefox 49) the category hour1, min1, sec1 must be less than the category hour2, min2, sec2 if you want the function to evaluate these parameters as a range. See the warning below.</p>
 </div>
 
 <h4 id="Parameters_14">Parameters</h4>
@@ -514,7 +526,8 @@ timeRange(&lt;hour1&gt;, &lt;min1&gt;, &lt;sec1&gt;, &lt;hour2&gt;, &lt;min2&gt;
 
 <p>If only a single value is specified (from each category: hour, minute, second), the function returns a true value only at times that match that specification. If both values are specified, the result is true between those times, including bounds, <em>but the bounds are ordered</em>.</p>
 
-<div class="warning">
+<div class="notecard warning">
+  <h4>Warning</h4>
 <p><strong>The order of the hour, minute, second matter</strong>; Before Firefox 49, <code>timeRange(<em>0, 23</em>)</code> will always evaluate to true. Now <code>timeRange(<em>23, 0</em>)</code> will only evaluate true if the current hour is 23:00 or midnight.</p>
 </div>
 
@@ -531,8 +544,9 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
 
 <h3 id="Use_proxy_for_everything_except_local_hosts">Use proxy for everything except local hosts</h3>
 
-<div class="note">
-<p><strong>Note:</strong> Since all of the examples that follow are very specific, they have not been tested.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+<p>Since all of the examples that follow are very specific, they have not been tested.</p>
 </div>
 
 <p>All hosts which aren't fully qualified, or the ones that are in local domain, will be connected to directly. Everything else will go through <code>w3proxy.mozilla.org:8080</code>. If the proxy goes down, connections become direct automatically:</p>
@@ -545,8 +559,9 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
   }
 }</pre>
 
-<div class="note">
-<p><strong>Note:</strong> This is the simplest and most efficient autoconfig file for cases where there's only one proxy.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+<p>This is the simplest and most efficient autoconfig file for cases where there's only one proxy.</p>
 </div>
 
 <h2 id="Example_2_2">Example 2</h2>
@@ -569,8 +584,9 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
 
 <p>The above example will use the proxy for everything except local hosts in the mozilla.org domain, with the further exception that hosts <code>www.mozilla.org</code> and <code>merchant.mozilla.org</code> will go through the proxy.</p>
 
-<div class="note">
-<p><strong>Note</strong> the order of the above exceptions for efficiency: localHostOrDomainIs() functions only get executed for URLs that are in local domain, not for every URL. Be careful to note the parentheses around the <em>or</em> expression before the <em>and</em> expression to achieve the above-mentioned efficient behavior.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+<p>The order of the above exceptions for efficiency: <code>localHostOrDomainIs()</code> functions only get executed for URLs that are in local domain, not for every URL. Be careful to note the parentheses around the <em>or</em> expression before the <em>and</em> expression to achieve the above-mentioned efficient behavior.</p>
 </div>
 
 <h2 id="Example_3_2">Example 3</h2>
@@ -703,8 +719,9 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
 
 }</pre>
 
-<div class="note">
-<p><strong>Note:</strong> The same can be accomplished using the <code><a href="#shexpmatch">shExpMatch()</a></code> function described earlier.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+<p>The same can be accomplished using the <code><a href="#shexpmatch">shExpMatch()</a></code> function described earlier.</p>
 </div>
 
 <p>For example:</p>
@@ -715,7 +732,7 @@ if (shExpMatch(url, "http:*")) {
 }
 // ...</pre>
 
-<div class="note">
+<div class="notecard note">
 <p>The autoconfig file can be output by a CGI script. This is useful, for example, when making the autoconfig file act differently based on the client IP address (the <code>REMOTE_ADDR</code> environment variable in CGI).</p>
 
 <p>Usage of <code>isInNet()</code>, <code>isResolvable()</code> and <code>dnsResolve()</code> functions should be carefully considered, as they require the DNS server to be consulted. All the other autoconfig-related functions are mere string-matching functions that don't require the use of a DNS server. If a proxy is used, the proxy will perform its DNS lookup which would double the impact on the DNS server. Most of the time these functions are not necessary to achieve the desired result.</p>
