@@ -349,7 +349,7 @@ function testPromise() {
   // and what to do when the promise is rejected with the catch() call
   p1.then(function(val) {
     // Log the fulfillment value
-    log.insertAdjacentHTML('beforeend', val + ') Promise fulfilled<br />');
+    log.insertAdjacentHTML('beforeend', val + ') Promise fulfilled<' + 'br>');
   }).catch((reason) =&gt; {
     // Log the rejection reason
     console.log(`Handle rejected promise (${reason}) here.`);
