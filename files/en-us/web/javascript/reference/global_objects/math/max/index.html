@@ -3,14 +3,22 @@ title: Math.max()
 slug: Web/JavaScript/Reference/Global_Objects/Math/max
 tags:
 - JavaScript
+- Largest Number
+- Largest Value
 - Math
 - Method
+- Maximum
 - Reference
+- Largest
+- Largest Number
+- Largest Value
+- max
 ---
 <div>{{JSRef}}</div>
 
 <p><span class="seoSummary">The <strong><code>Math.max()</code></strong> function returns
-    the largest of the zero or more numbers given as input parameters.</span></p>
+    the largest of the zero or more numbers given as input parameters, or {{jsxref("NaN")}} if any parameter
+    isn't a number and can't be converted into one.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/js/math-max.html")}}</div>
 
@@ -29,26 +37,25 @@ tags:
 
 <dl>
   <dt><code><var>value1</var>, <var>value2</var>, ...</code></dt>
-  <dd>Numbers.</dd>
+  <dd>Zero or more numbers among which the largest value will be selected and returned.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>The largest of the given numbers. If any of the arguments are <code>NaN</code> or
-  cannot be converted to a number, {{jsxref("NaN")}} is returned.</p>
+<p>The smallest of the given numbers. If any one or more of the parameters cannot be
+  converted into a number, {{jsxref("NaN")}} is returned. The result is
+  -{{jsxref("Infinity")}} if no parameters are provided.</p>
 
 <h2 id="Description">Description</h2>
 
-<p>Because <code>Math</code> is not a constructor, <code>max()</code> is a static method
-  of <code>Math</code> (You always use it as <code>Math.max()</code>, rather than as a
-  method of an instanced <code>Math</code> object).</p>
+<p>Because <code>max()</code> is a static method of <code>Math</code>, you always use it
+  as <code>Math.max()</code>, rather than as a method of a <code>Math</code> object you
+  created (<code>Math</code> is not a constructor).</p>
 
-<p>-{{jsxref("Infinity")}} is the initial comparant because it is smaller than all other
-  numbers, so that's why when no arguments are given, -{{jsxref("Infinity")}} is returned.
-</p>
+<p>If no arguments are given, the result is -{{jsxref("Infinity")}}.</p>
 
-<p>If any of the arguments are <code>NaN</code> or cannot be converted to a number, the
-  result is {{jsxref("NaN")}}.</p>
+<p>If at least one of arguments cannot be converted to a number, the result is
+  {{jsxref("NaN")}}.</p>
 
 <h2 id="Examples">Examples</h2>
 
