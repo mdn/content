@@ -111,7 +111,7 @@ tags:
 
 <h2 id="Line_terminators">Line terminators</h2>
 
-<p>In addition to <a href="/en-US/docs/Glossary/Whitespace">white space</a> characters, line terminator characters are used to improve the readability of the source text. However, in some cases, line terminators can influence the execution of JavaScript code as there are a few places where they are forbidden. Line terminators also affect the process of <a href="#Automatic_semicolon_insertion">automatic semicolon insertion</a>. Line terminators are matched by the <strong>\s</strong> class in <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expressions</a>.</p>
+<p>In addition to <a href="/en-US/docs/Glossary/Whitespace">white space</a> characters, line terminator characters are used to improve the readability of the source text. However, in some cases, line terminators can influence the execution of JavaScript code as there are a few places where they are forbidden. Line terminators also affect the process of <a href="#automatic_semicolon_insertion">automatic semicolon insertion</a>. Line terminators are matched by the <strong>\s</strong> class in <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expressions</a>.</p>
 
 <p>Only the following Unicode code points are treated as line terminators in ECMAScript, other line breaking characters are treated as white space (for example, Next Line, NEL, U+0085 is considered as white space).</p>
 
@@ -578,7 +578,7 @@ tag `string text ${expression} string text`</pre>
 
 <p>The ECMAScript specification mentions <a href="https://tc39.github.io/ecma262/#sec-rules-of-automatic-semicolon-insertion">three rules of semicolon insertion</a>.</p>
 
-<p>1. A semicolon is inserted before, when a <a href="#Line_terminators">Line terminator</a> or "}" is encountered that is not allowed by the grammar.</p>
+<p>1. A semicolon is inserted before, when a <a href="#line_terminators">Line terminator</a> or "}" is encountered that is not allowed by the grammar.</p>
 
 <pre class="brush: js notranslate">{ 1
 2 } 3

@@ -101,46 +101,6 @@ tags:
  </tbody>
 </table>
 
-<h3 id="&lt;link_relpreload&gt;">&lt;link rel="preload"&gt;</h3>
-
-<p>The {{HTMLElement("link")}} element's {{htmlattrxref("rel", "link")}} attribute is intended to help provide performance gains by letting you download resources earlier in the page lifecycle, ensuring that they're available earlier and are less likely to block page rendering. Read <a href="/en-US/docs/Web/HTML/Preloading_content">Preloading content with rel="preload"</a> for more details. For more details on the status of this feature, see {{bug(1639607)}}.</p>
-
-<table class="standard-table" style="max-width: 42rem;">
- <thead>
-  <tr>
-   <th scope="col" style="vertical-align: bottom;">Release channel</th>
-   <th scope="col" style="vertical-align: bottom;">Version added</th>
-   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Nightly</th>
-   <td>78</td>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Developer Edition</th>
-   <td>78</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Beta</th>
-   <td>78</td>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Release</th>
-   <td>78</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Preference name</th>
-   <th colspan="2"><code>network.preload</code></th>
-  </tr>
- </tbody>
-</table>
-
 <h3 id="inert_attribute">inert attribute</h3>
 
 <p>The {{domxref("HTMLElement")}} property {{DOMxRef("HTMLElement.inert")}} is a {{jsxref("Boolean")}}, when present, may make the browser "ignore" the element from assistive technologies, page search and text selection. For more details on the status of this feature see {{bug(1655722)}}. </p>
@@ -345,46 +305,6 @@ tags:
   <tr>
    <th scope="row">Preference name</th>
    <th colspan="2"><code>layout.css.aspect-ratio.enabled</code></th>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="Pseudo-class_focus-visible">Pseudo-class: :focus-visible</h3>
-
-<p>Allows focus styles to be applied to elements like buttons and form controls, only when they are focused using the keyboard (e.g. when tabbing between elements), and not when they are focused using a mouse or other pointing device. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1617600">bug 1617600</a> for more details.</p>
-
-<table class="standard-table" style="max-width: 42rem;">
- <thead>
-  <tr>
-   <th scope="col" style="vertical-align: bottom;">Release channel</th>
-   <th scope="col" style="vertical-align: bottom;">Version added</th>
-   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Nightly</th>
-   <td>75</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Developer Edition</th>
-   <td>75</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Beta</th>
-   <td>75</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Release</th>
-   <td>75</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Preference name</th>
-   <th colspan="2"><code>layout.css.focus-visible.enabled</code></th>
   </tr>
  </tbody>
 </table>
@@ -930,7 +850,7 @@ tags:
 
 <p>The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document’s DOM. Default elements within each configuration property (those to be sanitized) are still under consideration. Due to this the config parameter has not been implemented (see {{domxref('Sanitizer.sanitizer()', 'the constructor')}}) for more information. See {{bug('1673309')}} for more details.</p>
 
-<table class="standard-table">
+<table class="standard-table" style="max-width: 42rem;">
  <thead>
   <tr>
    <th scope="col" style="vertical-align: bottom;">Release channel</th>

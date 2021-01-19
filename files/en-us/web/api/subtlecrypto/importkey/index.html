@@ -38,11 +38,11 @@ tags:
     import. It can be one of the following:
 
     <ul>
-      <li><code>raw</code>: <a href="#Raw">Raw</a> format.</li>
-      <li><code>pkcs8</code>: <a href="#PKCS_8">PKCS #8</a> format.</li>
-      <li><code>spki</code>: <a href="#SubjectPublicKeyInfo">SubjectPublicKeyInfo</a>
+      <li><code>raw</code>: <a href="#raw">Raw</a> format.</li>
+      <li><code>pkcs8</code>: <a href="#pkcs_8">PKCS #8</a> format.</li>
+      <li><code>spki</code>: <a href="#subjectpublickeyinfo">SubjectPublicKeyInfo</a>
         format.</li>
-      <li><code>jwk</code>: <a href="#JSON_Web_Key">JSON Web Key</a> format.</li>
+      <li><code>jwk</code>: <a href="#json_web_key">JSON Web Key</a> format.</li>
     </ul>
   </li>
   <li><code><em>keyData</em></code> is an {{domxref("ArrayBuffer")}}, a <a
@@ -187,7 +187,7 @@ ml2FIkoovZh/8yeTKmjUMb804g6OmjUc9vVojCRV0YdaSmYkkJMJbLg=
   </li>
 </ul>
 
-<p>See the <a href="#Examples">Examples</a> section for more concrete guidance.</p>
+<p>See the <a href="#examples">Examples</a> section for more concrete guidance.</p>
 
 <h3 id="SubjectPublicKeyInfo">SubjectPublicKeyInfo</h3>
 
@@ -202,7 +202,7 @@ ml2FIkoovZh/8yeTKmjUMb804g6OmjUc9vVojCRV0YdaSmYkkJMJbLg=
     algorithm            AlgorithmIdentifier,
     subjectPublicKey     BIT STRING  }</pre>
 
-<p>Just like <a href="#PKCS_8">PKCS #8</a>, the <code>importKey()</code> method expects to
+<p>Just like <a href="#pkcs_8">PKCS #8</a>, the <code>importKey()</code> method expects to
   receive this object as an
   <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code>
   containing the <a href="http://luca.ntop.org/Teaching/Appunti/asn1.html">DER-encoded</a>
@@ -222,7 +222,7 @@ CDPUBUA3HLsZUhKm3BbSkd7Q9Ngkjv3+yByo4/fL+fkYRa8j9Ypa2N0Iw53LFb3B
 gQIDAQAB
 -----END PUBLIC KEY-----</pre>
 
-<p>Just as with <a href="#PKCS_8">PKCS #8</a>, to get this into a format you can give to
+<p>Just as with <a href="#pkcs_8">PKCS #8</a>, to get this into a format you can give to
   <code>importKey()</code> you need to do two things:</p>
 
 <ul>
@@ -234,7 +234,7 @@ gQIDAQAB
   </li>
 </ul>
 
-<p>See the <a href="#Examples">Examples</a> section for more concrete guidance.</p>
+<p>See the <a href="#examples">Examples</a> section for more concrete guidance.</p>
 
 <h3 id="JSON_Web_Key">JSON Web Key</h3>
 

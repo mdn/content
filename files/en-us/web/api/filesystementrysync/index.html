@@ -24,7 +24,7 @@ tags:
 
 <h2 id="basic">Basic concepts</h2>
 
-<p>The <code>FileSystemEntrySync</code> interface includes methods that you would expect for manipulating files and directories, but it also include a really handy method for getting a URL of the entry: <code><a href="#toURL">toURL()</a></code>. It also introduces a new URL scheme: <code>filesystem:</code>.</p>
+<p>The <code>FileSystemEntrySync</code> interface includes methods that you would expect for manipulating files and directories, but it also include a really handy method for getting a URL of the entry: <code><a href="#tourl">toURL()</a></code>. It also introduces a new URL scheme: <code>filesystem:</code>.</p>
 
 <p>You can use the <code>filesystem:</code> scheme on Google Chrome to see all the files and folders that are stored in the origin of your app. Just use <code>filesystem:</code> scheme for the root directory of the origin of the app. For example, if your app is in <code><a class="external" href="http://ww.html5rocks.com" rel="freelink">http://ww.html5rocks.com</a></code>, open <code>filesystem:<a class="external" href="http://www.html5rocks.com/temporary/" rel="freelink">http://www.html5rocks.com/temporary/</a></code> in a tab. Chrome shows a read-only list of all the files and folders stored the origin of your app.</p>
 
@@ -33,22 +33,22 @@ tags:
 <table class="standard-table">
  <tbody>
   <tr>
-   <td><code>Metadata <a href="#getMetada">getMetadata</a> () raises (<a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+   <td><code>Metadata <a href="#getmetada">getMetadata</a> () raises (<a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>FileSystemEntrySync <a href="#moveTo">moveTo</a> (in <a href="/en-US/docs/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a> <em>parent</em>, optional DOMString <em>newName</em>) raises (<a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+   <td><code>FileSystemEntrySync <a href="#moveto">moveTo</a> (in <a href="/en-US/docs/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a> <em>parent</em>, optional DOMString <em>newName</em>) raises (<a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>FileSystemEntrySync <a href="#copyTo">copyTo</a>(in <a href="/en-US/docs/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a> <em>parent</em>, optional DOMString <em>newName</em>) raises (<a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+   <td><code>FileSystemEntrySync <a href="#copyto">copyTo</a>(in <a href="/en-US/docs/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a> <em>parent</em>, optional DOMString <em>newName</em>) raises (<a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>DOMString <a href="#toURL">toURL</a>();</code></td>
+   <td><code>DOMString <a href="#tourl">toURL</a>();</code></td>
   </tr>
   <tr>
    <td><code>void <a href="#remove">remove</a>() raises (<a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>DirectoryEntrySync <a href="#getParent">getParent</a>();</code></td>
+   <td><code>DirectoryEntrySync <a href="#getparent">getParent</a>();</code></td>
   </tr>
  </tbody>
 </table>
