@@ -93,11 +93,13 @@ tags:
       <dt><code>cache</code></dt>
       <dd>The <a href="/en-US/docs/Web/API/Request/cache">cache mode</a> you want to use
         for the request.</dd>
-      <dt><code>redirect</code></dt>
-      <dd>The redirect mode to use: <code>follow</code> (automatically follow redirects),
-        <code>error</code> (abort with an error if a redirect occurs), or
-        <code>manual</code> (handle redirects manually). In Chrome the default is
-        <code>follow</code> (before Chrome 47 it defaulted to <code>manual</code>).</dd>
+<dt><code>redirect</code></dt>
+<dd>How to handle a <code>redirect</code> response:
+    <ul>
+        <li><code>follow</code>: Automatically follow redirects. Unless otherwise stated the redirect mode is set to <code>follow</code></li>
+        <li><code>error</code>: Abort with an error if a redirect occurs.</li>
+        <li><code>manual</code>: Caller intends to process the response in another context.<br>See <a class="external" href="https://fetch.spec.whatwg.org/#requests">WHATWG fetch standard</a> for more information.</li>
+    </ul>
       <dt><code>referrer</code></dt>
       <dd>A {{domxref("USVString")}} specifying the referrer of the request. This can be a
         same-origin URL, <code>about:client</code>, or an empty string.</dd>
