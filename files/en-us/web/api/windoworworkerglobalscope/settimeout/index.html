@@ -2,18 +2,18 @@
 title: WindowOrWorkerGlobalScope.setTimeout()
 slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 tags:
-- API
-- HTML DOM
-- Intervals
-- JavaScript timers
-- MakeBrowserAgnostic
-- Method
-- NeedsMarkupWork
-- NeedsUpdate
-- Reference
-- Timers
-- WindowOrWorkerGlobalScope
-- setTimeout
+  - API
+  - HTML DOM
+  - Intervals
+  - JavaScript timers
+  - MakeBrowserAgnostic
+  - Method
+  - NeedsMarkupWork
+  - NeedsUpdate
+  - Reference
+  - Timers
+  - WindowOrWorkerGlobalScope
+  - setTimeout
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
@@ -111,7 +111,7 @@ function clearAlert() {
 <p>{{EmbedLiveSample('Timeouts')}}</p>
 
 <p>See also <a
-    href="/en-US/docs/Web/API/WindowTimers/clearTimeout#Example"><code>clearTimeout()</code>
+    href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout#Example"><code>clearTimeout()</code>
     example</a>.</p>
 
 <h2 id="Timeouts_throttled">2: Timeouts throttled</h2>
@@ -433,7 +433,7 @@ setTimeout(myBoundMethod, 1.5*1000, "1"); // prints "one" after 1.5 seconds
 
 <p>Passing a string instead of a function to <code>setTimeout()</code> has the same
   associated problems as using
-  <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/eval#Don.27t_use_eval.21">eval</a>. </code>
+  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#Don.27t_use_eval.21">eval</a>. </code>
 </p>
 
 <pre class="brush: js notranslate">// Recommended
@@ -608,11 +608,11 @@ foo has been called</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/Add-ons/Code_snippets/Timers">JavaScript timers</a></li>
+  <li><a href="/en-US/docs/Mozilla/Add-ons/Code_snippets/Timers">JavaScript timers</a></li>
   <li><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Timer.jsm">Timer.jsm</a></li>
   <li>{{domxref("WindowOrWorkerGlobalScope.clearTimeout")}}</li>
   <li>{{domxref("WindowOrWorkerGlobalScope.setInterval")}}</li>
   <li>{{domxref("window.requestAnimationFrame")}}</li>
-  <li><a href="/en-US/Add-ons/Code_snippets/Timers/Daemons"><em>Daemons</em>
+  <li><a href="/en-US/docs/Mozilla/Add-ons/Code_snippets/Timers/Daemons"><em>Daemons</em>
       management</a></li>
 </ul>
