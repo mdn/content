@@ -39,7 +39,7 @@ tags:
  <dt><code><var>tabId</var></code></dt>
  <dd><code>integer</code>. ID of the tab whose content scripts we want to send a message to.</dd>
  <dt><code><var>message</var></code></dt>
- <dd><code>any</code>. An object that can be serialized to JSON.</dd>
+ <dd><code>any</code>. An object that can be serialized (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#Data_cloning_algorithm">Data cloning algorithm</a>).</dd>
  <dt><code><var>options</var></code> {{optional_inline}}</dt>
  <dd><code>object</code>.</dd>
  <dd>
@@ -52,7 +52,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{jsxref("Promise")}} that will be fulfilled with the JSON response object sent by the handler of the message in the content script, or with no arguments if the content script did not send a response.</p>
+<p>A {{jsxref("Promise")}} that will be fulfilled with the response object sent by the handler of the message in the content script, or with no arguments if the content script did not send a response.</p>
 
 <p>If an error occurs while connecting to the specified tab or any other error occurs, the promise will be rejected with an error message.</p>
 
