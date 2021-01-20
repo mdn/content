@@ -112,7 +112,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 
 <h4 id="Domain_attribute">Domain attribute</h4>
 
-<p>The <code>Domain</code> attribute specifies which hosts are allowed to receive the cookie. If unspecified, it defaults to the same {{Glossary("origin")}} that set the cookie, <em>excluding subdomains</em>. If <code>Domain</code> <em>is</em> specified, then subdomains are always included. Therefore, specifying <code>Domain</code> is less restrictive than omitting it. However, it can be helpful when subdomains need to share information about a user.</p>
+<p>The <code>Domain</code> attribute specifies which hosts are allowed to receive the cookie. If unspecified, it defaults to the same {{Glossary("host")}} that set the cookie, <em>excluding subdomains</em>. If <code>Domain</code> <em>is</em> specified, then subdomains are always included. Therefore, specifying <code>Domain</code> is less restrictive than omitting it. However, it can be helpful when subdomains need to share information about a user.</p>
 
 <p>For example, if <code>Domain=mozilla.org</code> is set, then cookies are available on subdomains like <code>developer.mozilla.org</code>.</p>
 

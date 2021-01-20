@@ -15,8 +15,7 @@ tags:
 
 <h2>About this page</h2>
 
-<p>The <b>kitchensink</b> is an <i>attempt</i> to incorporate every possible
-  content element and every Yari macros possible.</p>
+<p>The <b>kitchensink</b> is a page that <i>attempts</i> to incorporate every possible content element and Yari macro.</p>
 
 <p>This page attempts to be the complete intersection of every other page. No in terms of the text but in terms of the
 styles and macros. Let's start with some notes...</p>
@@ -112,7 +111,7 @@ mod tests {
 
 <p><em>The formal syntax must be taken from the spec and added to the <a href="https://github.com/mdn/data">MDN data repository</a>. It is an important tool to get precise syntax information for advanced users.</em></p>
 
-<pre class="brush: css notranslate">{{CSSSyntax}}</pre>
+<pre class="brush: css notranslate">{{CSSSyntax("font-stretch")}}</pre>
 
 <h2>Interactive Examples</h2>
 
@@ -202,7 +201,7 @@ mod tests {
 
     <p>The <code>contain</code> value means that the viewport is scaled to fit the largest rectangle inscribed within the display.</p>
 
-    <p>The <code>cover</code> value means that the viewport is scaled to fill the device display. It is highly recommended to make use of the <a href="/en-US/docs/Web/CSS/env">safe area inset</a> variables to ensure that important content doesn't end up outside the display.</p>
+    <p>The <code>cover</code> value means that the viewport is scaled to fill the device display. It is highly recommended to make use of the <a href="/en-US/docs/Web/CSS/env()">safe area inset</a> variables to ensure that important content doesn't end up outside the display.</p>
   </td>
   </tr>
   <tr>
@@ -292,7 +291,9 @@ rect2.bind("EnterFrame", function () {
 
 <p>{{ EmbedLiveSample('Rect_code', '700', '300', '', 'Games/Techniques/2D_collision_detection') }}</p>
 
-<p>{{APIRef("Web Animations")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("Bluetooth API")}}{{SeeCompatTable}}</p>
+
+<p>{{WebExtAPIRef("tabs.mutedInfo")}}</p>
 
 <h3 id="Obsolete_CSSOM_interfaces">Obsolete CSSOM interfaces {{Obsolete_Inline}}</h3>
 
@@ -366,3 +367,8 @@ rect2.bind("EnterFrame", function () {
 {{Non-standard_Header}}
 {{Obsolete_Header}}
 {{Deprecated_Header}}
+
+<p>Small change</p>
+<img src="iceberg.jpg" alt="Iceberg pic">
+
+<p><code>geckoRelease:</code> {{ geckoRelease("1.9.3") }}</p>

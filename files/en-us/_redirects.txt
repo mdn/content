@@ -3747,7 +3747,6 @@
 /en-US/docs/DOM/window.frameElement	/en-US/docs/Web/API/window.frameElement
 /en-US/docs/DOM/window.frames	/en-US/docs/Web/API/window.frames
 /en-US/docs/DOM/window.fullScreen	/en-US/docs/Web/API/window.fullScreen
-/en-US/docs/DOM/window.getAttention	/en-US/docs/Web/API/window.getAttention
 /en-US/docs/DOM/window.getComputedStyle	/en-US/docs/Web/API/window.getComputedStyle
 /en-US/docs/DOM/window.getDefaultComputedStyle	/en-US/docs/Web/API/window/getDefaultComputedStyle
 /en-US/docs/DOM/window.getSelection	/en-US/docs/Web/API/window.getSelection
@@ -4270,7 +4269,6 @@
 /en-US/docs/DOM:window.frameElement	/en-US/docs/Web/API/window.frameElement
 /en-US/docs/DOM:window.frames	/en-US/docs/Web/API/window.frames
 /en-US/docs/DOM:window.fullScreen	/en-US/docs/Web/API/window.fullScreen
-/en-US/docs/DOM:window.getAttention	/en-US/docs/Web/API/window.getAttention
 /en-US/docs/DOM:window.getComputedStyle	/en-US/docs/Web/API/window.getComputedStyle
 /en-US/docs/DOM:window.getSelection	/en-US/docs/Web/API/window.getSelection
 /en-US/docs/DOM:window.history	/en-US/docs/Web/API/window.history
@@ -4448,6 +4446,7 @@
 /en-US/docs/Developer_Guide/Committing_Rules_and_Responsibilities	/en-US/docs/Mozilla/Developer_guide/Committing_Rules_and_Responsibilities
 /en-US/docs/Developer_Guide/Customizing_Firefox	/en-US/docs/Mozilla/Developer_guide/Customizing_Firefox
 /en-US/docs/Developer_Guide/Development_process_overview	/en-US/docs/Mozilla/Developer_guide/Development_process_overview
+/en-US/docs/Developer_Guide/Editor_Configuration	/en-US/docs/Mozilla/Developer_guide/Editor_configuration
 /en-US/docs/Developer_Guide/Getting_documentation_updated	/en-US/docs/Mozilla/Developer_guide/Getting_documentation_updated
 /en-US/docs/Developer_Guide/How_to_Submit_a_Patch	/en-US/docs/Mozilla/Developer_guide/How_to_Submit_a_Patch
 /en-US/docs/Developer_Guide/Include_dependencies	/en-US/docs/Mozilla/Developer_guide/Include_dependencies
@@ -5119,7 +5118,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.frameElement	/en-US/docs/Web/API/window.frameElement
 /en-US/docs/Document_Object_Model_(DOM)/window.frames	/en-US/docs/Web/API/window.frames
 /en-US/docs/Document_Object_Model_(DOM)/window.fullScreen	/en-US/docs/Web/API/window.fullScreen
-/en-US/docs/Document_Object_Model_(DOM)/window.getAttention	/en-US/docs/Web/API/window.getAttention
 /en-US/docs/Document_Object_Model_(DOM)/window.getComputedStyle	/en-US/docs/Web/API/window.getComputedStyle
 /en-US/docs/Document_Object_Model_(DOM)/window.getSelection	/en-US/docs/Web/API/window.getSelection
 /en-US/docs/Document_Object_Model_(DOM)/window.history	/en-US/docs/Web/API/window.history
@@ -7783,6 +7781,29 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/removeAll	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/removeAll
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/update	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/update
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/cookies.SameSiteStatus	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/SameSiteStatus
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/reload	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/reload
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/tabId	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network/getHAR	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/getHAR
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network/onNavigated	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/onNavigated
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network/onRequestFinished	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/onRequestFinished
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/createSidebarPane	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/onSelectionChanged	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/onSelectionChanged
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionPanel	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/onHidden	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onHidden
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/onShown	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onShown
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setExpression	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setExpression
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setObject	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setObject
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setPage	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setPage
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/create	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/create
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/elements	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/elements
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/onThemeChanged	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/onThemeChanged
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/themeName	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/themeName
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/install()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/install
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/management.getPermissionWarningsByManifest()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsByManifest
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/management.onDisabled()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/onDisabled
@@ -7840,7 +7861,7 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Walkthrough	/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 /en-US/docs/Mozilla/Add-ons/WebExtensions/WebExtension_i18n	/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization
 /en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions_	/en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
-/en-US/docs/Mozilla/Add-ons/WebExtensions/devtools.inspectedWindow	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow
+/en-US/docs/Mozilla/Add-ons/WebExtensions/devtools.inspectedWindow	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow
 /en-US/docs/Mozilla/Add-ons/WebExtensions/devtools_panels	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 /en-US/docs/Mozilla/Add-ons/WebExtensions/differences_between_extensions_API_implementations	/en-US/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations
 /en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications	/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
@@ -11384,7 +11405,6 @@
 /en-US/docs/Web/API/Window.frameElement	/en-US/docs/Web/API/Window/frameElement
 /en-US/docs/Web/API/Window.frames	/en-US/docs/Web/API/Window/frames
 /en-US/docs/Web/API/Window.fullScreen	/en-US/docs/Web/API/Window/fullScreen
-/en-US/docs/Web/API/Window.getAttention	/en-US/docs/Web/API/Window/getAttention
 /en-US/docs/Web/API/Window.getComputedStyle	/en-US/docs/Web/API/Window/getComputedStyle
 /en-US/docs/Web/API/Window.getSelection	/en-US/docs/Web/API/Window/getSelection
 /en-US/docs/Web/API/Window.history	/en-US/docs/Web/API/Window/history
@@ -12920,7 +12940,8 @@
 /en-US/docs/Web/Events/canplaythrough_event	/en-US/docs/Web/HTML/Element/audio/canplaythrough_event
 /en-US/docs/Web/Events/change	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/Web/Events/click	/en-US/docs/Web/API/Element/click_event
-/en-US/docs/Web/Events/clipboardchange	/en-US/docs/Web/API/Window/clipboardchange_event
+/en-US/docs/Web/Events/clipboardchange	/en-US/docs/Web/API/Window#clipboard_events
+/en-US/docs/Web/Events/clipboardchange_event	/en-US/docs/Web/API/Window#clipboard_events
 /en-US/docs/Web/Events/close	/en-US/docs/Web/API/HTMLDialogElement/close_event
 /en-US/docs/Web/Events/close_websocket	/en-US/docs/Web/API/WebSocket/close_event
 /en-US/docs/Web/Events/complete	/en-US/docs/Web/API/OfflineAudioContext/complete_event
@@ -14714,7 +14735,6 @@
 /en-US/docs/screenX	/en-US/docs/Web/API/MouseEvent/screenX
 /en-US/docs/screenY	/en-US/docs/Web/API/MouseEvent/screenY
 /en-US/docs/scrollbar-color	/en-US/docs/Web/CSS/scrollbar-color
-/en-US/docs/sdfsdf%22%3E%3Cimg%20src='1.jpg'onerror=javascript:alert(%22XSS%22)%3E	/en-US/docs/blablablabla
 /en-US/docs/selectorText	/en-US/docs/Web/API/CSSStyleRule/selectorText
 /en-US/docs/setAttribute	/en-US/docs/Web/API/element.setAttribute
 /en-US/docs/setAttributeNS	/en-US/docs/Web/API/element.setAttributeNS
@@ -14771,7 +14791,6 @@
 /en-US/docs/window.focus	/en-US/docs/Document_Object_Model_(DOM)/window.focus
 /en-US/docs/window.forward	/en-US/docs/Web/API/window.forward
 /en-US/docs/window.frames	/en-US/docs/Web/API/window.frames
-/en-US/docs/window.getAttention	/en-US/docs/Web/API/window.getAttention
 /en-US/docs/window.getSelection	/en-US/docs/Web/API/window.getSelection
 /en-US/docs/window.history	/en-US/docs/Web/API/window.history
 /en-US/docs/window.home	/en-US/docs/Document_Object_Model_(DOM)/window.home

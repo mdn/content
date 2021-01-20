@@ -15,9 +15,17 @@ tags:
 
 <h3 id="Developer_Tools">Developer Tools</h3>
 
+<ul>
+  <li>Developers can now use the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Viewing_common_pseudo-classes">Page Inspector</a> to toggle the {{cssxref(":focus-visible")}} pseudo-class for the currently selected element (in addition to the psuedo classes that were previously supported: {{cssxref(":hover")}}, {{cssxref(":active")}} and {{cssxref(":focus")}}, {{cssxref(":focus-within")}}, and {{cssxref(":visited")}}). ({{bug(1617608)}}).</li>
+</ul>
+
 <h4 id="Removals">Removals</h4>
 
 <h3 id="HTML">HTML</h3>
+
+<ul>
+  <li>The <a href="/en-US/docs/Web/HTML/Link_types/preload"><code>&lt;link rel="preload"&gt;</code></a> is now enabled. ({{bug(1626997)}}).</li>
+</ul>
 
 <h4 id="Removals_2">Removals</h4>
 
@@ -38,12 +46,12 @@ tags:
 
 <ul>
   <li>
-    The <code>collation</code> property can now be specified in the options passed to the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator"><code>Intl.Collator</code> constructor</a> ({{bug(1670062)}}). This allows developers to write code with greater clarity:
+    The <code>collation</code> property can now be specified in the options passed to the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator"><code>Intl.Collator()</code> constructor</a> ({{bug(1670062)}}). This allows developers to write code with greater clarity:
     <pre class="notranslate brush: js">
 // Old method
 let pinyin = new Intl.Collator(["zh-u-co-pinyin"]);
 // New method
-let pinyin = new Intl.Collator("zh", {collator: "pinyin"});</pre> 
+let pinyin = new Intl.Collator("zh", {collator: "pinyin"});</pre>
   </li>
  </ul>
 
@@ -53,9 +61,11 @@ let pinyin = new Intl.Collator("zh", {collator: "pinyin"});</pre>
 
 <h4 id="Removals_5">Removals</h4>
 
-<h3 id="Security">Security</h3>
+<h3 id="Security">Plugins</h3>
 
-<h4 id="Removals_6">Removals</h4>
+<ul>
+  <li>Flash support has been completely removed from Firefox ({{bug(1675349)}}). Read our <a href="/en-US/docs/Plugins/Roadmap#schedule">plugin roadmap</a> for more information.</li>
+</ul>
 
 <h3 id="APIs">APIs</h3>
 

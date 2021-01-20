@@ -75,18 +75,23 @@ Note that changes to any content areas not explicitly listed below will be handl
 * [CSS reference content](https://github.com/mdn/content/tree/main/files/en-us/web/css) — the [@yari-content-css](https://github.com/orgs/mdn/teams/yari-content-css) team, which conists of:
   * [@rachelandrew](https://github.com/rachelandrew)
   * [@ericwbailey](https://github.com/ericwbailey)
-  * [@vkWeb](https://github.com/vkWeb/)
 * [HTML reference content](https://github.com/mdn/content/tree/main/files/en-us/web/html) — the [@yari-content-html](https://github.com/orgs/mdn/teams/yari-content-html) team, which consists of:
   * [@rachelandrew](https://github.com/rachelandrew)
   * [@ericwbailey](https://github.com/ericwbailey)
-  * [@vkWeb](https://github.com/vkWeb/)
 * [JavaScript reference content](https://github.com/mdn/content/tree/main/files/en-us/web/javascript) — the [@yari-content-javascript](https://github.com/orgs/mdn/teams/yari-content-javascript) team, which consists of:
   * [@Rumyra](https://github.com/Rumyra)
   * [@sideshowbarker](https://github.com/sideshowbarker)
   * [@Elchi3](https://github.com/Elchi3)
-  * [@vkWeb](https://github.com/vkWeb/)
 * [Web API reference content](https://github.com/mdn/content/tree/main/files/en-us/web/api) — the [@yari-content-web-api](https://github.com/orgs/mdn/teams/yari-content-web-api) team, which consists of:
   * [@Rumyra](https://github.com/Rumyra)
   * [@sideshowbarker](https://github.com/sideshowbarker)
   * [@Elchi3](https://github.com/Elchi3)
   * [@jpmedley](https://github.com/jpmedley)
+* [SVG reference content](https://github.com/mdn/content/tree/main/files/en-us/web/svg) — the [@yari-content-svg](https://github.com/orgs/mdn/teams/yari-content-svg) team, which consists of:
+  * [@Ryuno-Ki](https://github.com/Ryuno-Ki)
+  
+### Reviewer alumni
+  
+The following folks used to be in one or more of our review teams, but no longer have the time to contribute; we want to give them our sincere thanks for all their help.
+
+* [@vkWeb](https://github.com/vkWeb/)

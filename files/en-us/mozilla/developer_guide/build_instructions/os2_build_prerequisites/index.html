@@ -192,7 +192,7 @@ tags:
 
 <h2 id="Getting_sources_and_building">Getting sources and building</h2>
 
-<p>The <a href="/en/Configuring_Build_Options">options for the build</a> are taken from <code>.mozconfig</code> which is a file you create in the <code>mozilla</code> directory. They can also be generated using the <a class="external" href="http://webtools.mozilla.org/build/config.cgi">Unix Build Configurator</a> but you should start with a minimal file first, like this one:</p>
+<p>The <a href="/en-US/docs/Configuring_Build_Options">options for the build</a> are taken from <code>.mozconfig</code> which is a file you create in the <code>mozilla</code> directory. They can also be generated using the <a class="external" href="http://webtools.mozilla.org/build/config.cgi">Unix Build Configurator</a> but you should start with a minimal file first, like this one:</p>
 
 <pre>mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj
 mk_add_options MOZ_CO_PROJECT=suite
@@ -210,7 +210,7 @@ ac_add_options --disable-debug</pre>
  <code>make -f client.mk build 2&gt;&amp;1 | tee build.log</code><br>
  (The redirection and <code>tee</code> call keeps a logfile of the whole build in the file <code>build.log</code> but also issues all the messages to the screen.)</p>
 
-<p>Once the build is complete, the binaries can be found in <code>obj/dist/bin</code>. If you want to make a package, please follow the instructions on <a href="/en/Building_a_SeaMonkey_package">Building a SeaMonkey package</a>.</p>
+<p>Once the build is complete, the binaries can be found in <code>obj/dist/bin</code>. If you want to make a package, please follow the instructions on <a href="/en-US/docs/Building_a_SeaMonkey_package">Building a SeaMonkey package</a>.</p>
 
 <p>If these information is not enough, there is some background info in <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works">How Mozilla's build system works</a>.</p>
 

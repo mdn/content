@@ -7,7 +7,7 @@ tags:
 ---
 <p>This tool can be used to generate CSS3 {{cssxref("border-image")}} values.</p>
 
-<div style="display: none;">
+<div class="hidden">
 <h2 id="Border_Image_Generator">Border Image Generator</h2>
 
 <h3 id="HTML_Content">HTML Content</h3>
@@ -38,7 +38,7 @@ tags:
             &lt;div class="property"&gt;
                 &lt;div class="name"&gt;scale&lt;/div&gt;
                 &lt;div class="ui-input-slider" data-topic="scale"
-                    data-unit="%" data-max="300" data-sensivity="10"&gt;
+                    data-unit="%" data-max="300" data-sensitivity="10"&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;div class="separator"&gt;&lt;/div&gt;
@@ -107,17 +107,17 @@ tags:
                 &lt;/div&gt;
                 &lt;div class="property"&gt;
                     &lt;div class="ui-input-slider" data-topic="font-size" data-info="em size"
-                        data-unit="px" data-value="12" data-sensivity="3"&gt;
+                        data-unit="px" data-value="12" data-sensitivity="3"&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
 
                 &lt;div class="property"&gt;
                     &lt;div class="ui-input-slider" data-topic="preview-width" data-info="width"
-                         data-unit=" px" data-min="10" data-max="10000" data-sensivity="3"&gt;&lt;/div&gt;
+                         data-unit=" px" data-min="10" data-max="10000" data-sensitivity="3"&gt;&lt;/div&gt;
                 &lt;/div&gt;
                 &lt;div class="property"&gt;
                     &lt;div class="ui-input-slider" data-topic="preview-height" data-info="height"
-                        data-unit=" px" data-min="10" data-max="10000" data-sensivity="3"&gt;
+                        data-unit=" px" data-min="10" data-max="10000" data-sensitivity="3"&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
@@ -1262,7 +1262,7 @@ var InputSliderManager = (function InputSliderManager() {
 
 		var sliderMotion = function sliderMotion(e) {
 			slider.style.cursor = "e-resize";
-			var delta = (e.clientX - startX) / obj.sensivity | 0;
+			var delta = (e.clientX - startX) / obj.sensitivity | 0;
 			var value = delta * obj.step + start_value;
 			setValue(obj.topic, value);
 		};
@@ -1278,7 +1278,7 @@ var InputSliderManager = (function InputSliderManager() {
 		var topic	= node.getAttribute('data-topic');
 		var unit	= node.getAttribute('data-unit');
 		var name 	= node.getAttribute('data-info');
-		var sensivity = node.getAttribute('data-sensivity') | 0;
+		var sensitivity = node.getAttribute('data-sensitivity') | 0;
 		var precision = node.getAttribute('data-precision') | 0;
 
 		this.min = isNaN(min) ? 0 : min;
@@ -1288,7 +1288,7 @@ var InputSliderManager = (function InputSliderManager() {
 		this.topic = topic;
 		this.node = node;
 		this.unit = unit === null ? '' : unit;
-		this.sensivity = sensivity &gt; 0 ? sensivity : 5;
+		this.sensitivity = sensitivity &gt; 0 ? sensitivity : 5;
 		value = isNaN(value) ? this.min : value;
 
 		var input = new InputComponent(this);
@@ -1390,14 +1390,14 @@ var InputSliderManager = (function InputSliderManager() {
 		setValue(topic, slider.value);
 	};
 
-	var setSensivity = function setSensivity(topic, value) {
+	var setSensitivity = function setSensitivity(topic, value) {
 		var slider = sliders[topic];
 		if (slider === undefined)
 			return;
 
 		value = value | 0;
 
-		slider.sensivity = value &gt; 0 ? value : 5;
+		slider.sensitivity = value &gt; 0 ? value : 5;
 	};
 
 	var getNode =  function getNode(topic) {
@@ -1461,7 +1461,7 @@ var InputSliderManager = (function InputSliderManager() {
 		subscribe : subscribe,
 		unsubscribe : unsubscribe,
 		setPrecision : setPrecision,
-		setSensivity : setSensivity,
+		setSensitivity : setSensitivity,
 		getPrecision : getPrecision,
 		createSlider : createSlider,
 	};
@@ -1478,7 +1478,7 @@ var DropDownManager = (function DropdownManager() {
 	var dropdowns = [];
 	var active = null;
 
-	var visbility = ["hidden", "visible"];
+	var visibility = ["hidden", "visible"];
 
 	var DropDown = function DropDown(node) {
 		var topic = node.getAttribute('data-topic');
@@ -2286,7 +2286,7 @@ var BorderImage = (function BorderImage() {
 			InputSliderManager.setStep('unit-precision', 1);
 			InputSliderManager.setMax('unit-precision', 2);
 			InputSliderManager.setValue('unit-precision', 2);
-			InputSliderManager.setSensivity('unit-precision', 20);
+			InputSliderManager.setSensitivity('unit-precision', 20);
 
 			InputSliderManager.setValue('unit-step', 1);
 			InputSliderManager.setStep('unit-step', 0.01);
@@ -2425,7 +2425,7 @@ var BorderImage = (function BorderImage() {
 			var slider = InputSliderManager.createSlider(topic, positions[labelID]);
 			var dropdown = DropDownManager.createDropDown(topic, dropdown_unit_options[optionsID]);
 
-			InputSliderManager.setSensivity(topic, 3);
+			InputSliderManager.setSensitivity(topic, 3);
 			InputSliderManager.setPrecision(topic, 1);
 
 			var property = document.createElement('div');

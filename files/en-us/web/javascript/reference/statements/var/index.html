@@ -2,10 +2,10 @@
 title: var
 slug: Web/JavaScript/Reference/Statements/var
 tags:
-- JavaScript
-- Language feature
-- Reference
-- Statement
+  - JavaScript
+  - Language feature
+  - Reference
+  - Statement
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
@@ -80,7 +80,7 @@ console.log('still going...'); // still going...</pre>
 
 <p>In the global context, a variable declared using <code>var</code> is added as a
   non-configurable property of the global object. This means its property descriptor
-  cannot be changed and it cannot be deleted using {{jsxref("delete")}}. The corresponding
+  cannot be changed and it cannot be deleted using {{JSxRef("Operators/delete", "delete")}}. The corresponding
   name is also added to a list on the internal <code>[[VarNames]]</code> slot on the <a
     href="https://www.ecma-international.org/ecma-262/10.0/index.html#sec-global-environment-records">global
     environment record</a> (which forms part of the global lexical environment). The list
@@ -134,7 +134,7 @@ globalThis.hasOwnProperty('foo') // true
 </pre>
 
 <p>In ECMAScript 5, this behavior was changed for <a
-    href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode">strict
+    href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict
     mode</a>. Assignment to an unqualified identifier in strict mode will result in a
   <code>ReferenceError</code>, to avoid the accidental creation of properties on the
   global object.</p>

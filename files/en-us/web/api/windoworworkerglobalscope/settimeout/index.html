@@ -43,8 +43,8 @@ var <var>timeoutID</var> = <var>scope</var>.setTimeout(<var>code</var>[, <var>de
   <dd>The time, in milliseconds (thousandths of a second), the timer should wait before
     the specified function or code is executed. If this parameter is omitted, a value of 0
     is used, meaning execute "immediately", or more accurately, the next event cycle. Note
-    that in either case, the actual delay may be longer than intended; see {{anch("Reasons
-    for delays longer than specified")}} below.</dd>
+    that in either case, the actual delay may be longer than intended; see
+    {{anch("Reasons for delays longer than specified")}} below.</dd>
   <dt><code><var>arg1</var>, ..., <var>argN</var></code> {{optional_inline}}</dt>
   <dd>Additional arguments which are passed through to the function specified by
     <code><var>function</var></code>.</dd>
@@ -307,7 +307,7 @@ window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentTo
 
 <div class="note"><strong>Note</strong>: These two replacements will also enable the HTML5
   standard passage of arbitrary arguments to the callback functions of timers in IE. So
-  they can be used as polyfills also. See the <a href="#Callback_arguments">Callback
+  they can be used as polyfills also. See the <a href="#callback_arguments">Callback
     arguments</a> paragraph.</div>
 
 <p>New feature test:</p>

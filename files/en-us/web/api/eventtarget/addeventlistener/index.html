@@ -49,8 +49,8 @@ tags:
   <dd>The object that receives a notification (an object that implements the
     {{domxref("Event")}} interface) when an event of the specified type occurs. This must
     be an object implementing the {{domxref("EventListener")}} interface, or a JavaScript
-    <a href="/en-US/docs/Web/JavaScript/Guide/Functions">function</a>. See {{anch("The
-    event listener callback")}} for details on the callback itself.</dd>
+    <a href="/en-US/docs/Web/JavaScript/Guide/Functions">function</a>. See
+      {{anch("The event listener callback")}} for details on the callback itself.</dd>
   <dt><code><var>options</var></code> {{optional_inline}}</dt>
   <dd>An options object specifies characteristics about the event listener. The available
     options are:
@@ -68,8 +68,8 @@ tags:
         specified by <code><var>listener</var></code> will never call
         {{domxref("Event.preventDefault", "preventDefault()")}}. If a passive listener
         does call <code>preventDefault()</code>, the user agent will do nothing other than
-        generate a console warning. See {{anch("Improving scrolling performance with
-        passive listeners")}} to learn more.</dd>
+        generate a console warning. See <a href="#improving_scrolling_performance_with_passive_listeners">Improving scrolling performance with
+          passive listeners</a> to learn more.</dd>
       <dt>{{non-standard_inline}} <code>mozSystemGroup</code></dt>
       <dd>A {{jsxref("Boolean")}} indicating that the listener should be added to the
         system group. Available only in code running in XBL or in the
@@ -450,7 +450,7 @@ function nonePassiveHandler(event) {
   <li>It works on any DOM element, not just HTML elements.</li>
 </ul>
 
-<p>The alternative, <a href="#Older_way_to_register_event_listeners">older way to register
+<p>The alternative, <a href="#older_way_to_register_event_listeners">older way to register
     event listeners</a>, is described below.</p>
 
 <h3 id="Adding_a_listener_during_event_dispatch">Adding a listener during event dispatch
@@ -474,7 +474,7 @@ function nonePassiveHandler(event) {
   the SAME unchanging source-code called repeatedly, even if in a loop.</p>
 
 <p>However, repeatedly defining the same named function in such cases can be more
-  problematic. (See <a href="#Memory_issues">Memory issues</a>, below.)</p>
+  problematic. (See <a href="#memory_issues">Memory issues</a>, below.)</p>
 
 <h3 id="The_value_of_this_within_the_handler">The value of "this" within the handler</h3>
 
@@ -630,7 +630,7 @@ myObject.register();</pre>
 <h4 id="Getting_data_into_an_event_listener_using_this">Getting data into an event
   listener using "this"</h4>
 
-<p>As mentioned <a href="#Specifying_this_using_bind">above</a>, you can use
+<p>As mentioned <a href="#specifying_this_using_bind">above</a>, you can use
   <code>Function.prototype.bind()</code> to pass a value to an event listener via the
   <code>this</code> reference variable.</p>
 

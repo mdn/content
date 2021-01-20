@@ -68,8 +68,9 @@ class BookListView(generic.ListView):
 
 <p>That's it! The generic view will query the database to get all records for the specified model (<code>Book</code>) then render a template located at <strong>/locallibrary/catalog/templates/catalog/book_list.html</strong> (which we will create below). Within the template you can access the list of books with the template variable named <code>object_list</code> OR <code>book_list</code> (i.e. generically "<code><em>the_model_name</em>_list</code>").</p>
 
-<div class="note">
-<p><strong>Note</strong>: This awkward path for the template location isn't a misprint — the generic views look for templates in <code>/<em>application_name</em>/<em>the_model_name</em>_list.html</code> (<code>catalog/book_list.html</code> in this case) inside the application's <code>/<em>application_name</em>/templates/</code> directory (<code>/catalog/templates/)</code>.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>This awkward path for the template location isn't a misprint — the generic views look for templates in <code>/<em>application_name</em>/<em>the_model_name</em>_list.html</code> (<code>catalog/book_list.html</code> in this case) inside the application's <code>/<em>application_name</em>/templates/</code> directory (<code>/catalog/templates/)</code>.</p>
 </div>
 
 <p>You can add attributes to change the default behavior above. For example, you can specify another template file if you need to have multiple views that use this same model, or you might want to use a different template variable name if <code>book_list</code> is not intuitive for your particular template use-case. Possibly the most useful variation is to change/filter the subset of results that are returned — so instead of listing all books you might list top 5 books that were read by other users.</p>
@@ -113,8 +114,9 @@ class BookListView(generic.ListView):
  <li>Then return the new (updated) context.</li>
 </ul>
 
-<div class="note">
-<p><strong>Note</strong>: Check out <a href="https://docs.djangoproject.com/en/3.1/topics/class-based-views/generic-display/">Built-in class-based generic views</a> (Django docs) for many more examples of what you can do.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Check out <a href="https://docs.djangoproject.com/en/3.1/topics/class-based-views/generic-display/">Built-in class-based generic views</a> (Django docs) for many more examples of what you can do.</p>
 </div>
 
 <h3 id="Creating_the_List_View_template">Creating the List View template</h3>
@@ -177,8 +179,9 @@ class BookListView(generic.ListView):
 
 <p>We can also call <em>functions</em> in the model from within our template — in this case we call <code>Book.get_absolute_url()</code> to get a URL you could use to display the associated detail record. This works provided the function does not have any arguments (there is no way to pass arguments!)</p>
 
-<div class="note">
-<p><strong>Note</strong>: We have to be a little careful of "side effects" when calling functions in templates. Here we just get a URL to display, but a function can do pretty much anything — we wouldn't want to delete our database (for example) just by rendering our template!</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>We have to be a little careful of "side effects" when calling functions in templates. Here we just get a URL to display, but a function can do pretty much anything — we wouldn't want to delete our database (for example) just by rendering our template!</p>
 </div>
 
 <h4 id="Update_the_base_template">Update the base template</h4>
@@ -211,18 +214,21 @@ class BookListView(generic.ListView):
 
 <p>In this case we use <code>'&lt;int:pk&gt;'</code> to capture the book id, which must be a specially formatted string and pass it to the view as a parameter named <code>pk</code> (short for primary key). This is the id that is being used to store the book uniquely in the database, as defined in the Book Model.</p>
 
-<div class="note">
-<p><strong>Note</strong>: As discussed previously, our matched URL is actually <code>catalog/book/&lt;digits&gt;</code> (because we are in the <strong>catalog</strong> application, <code>/catalog/</code> is assumed).</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>As discussed previously, our matched URL is actually <code>catalog/book/&lt;digits&gt;</code> (because we are in the <strong>catalog</strong> application, <code>/catalog/</code> is assumed).</p>
 </div>
 
-<div class="warning">
-<p><strong>Important</strong>: The generic class-based detail view <em>expects</em> to be passed a parameter named <strong>pk</strong>. If you're writing your own function view you can use whatever parameter name you like, or indeed pass the information in an unnamed argument.</p>
+<div class="notecard warning">
+  <h4>Important</h4>
+  <p>The generic class-based detail view <em>expects</em> to be passed a parameter named <strong>pk</strong>. If you're writing your own function view you can use whatever parameter name you like, or indeed pass the information in an unnamed argument.</p>
 </div>
 
 <h4 id="Advanced_path_matchingregular_expression_primer">Advanced path matching/regular expression primer</h4>
 
-<div class="note">
-<p><strong>Note</strong>: You won't need this section to complete the tutorial! We provide it because knowing this option is likely to be useful in your Django-centric future.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>You won't need this section to complete the tutorial! We provide it because knowing this option is likely to be useful in your Django-centric future.</p>
 </div>
 
 <p>The pattern matching provided by <code>path()</code> is simple and useful for the (very common) cases where you just want to capture <em>any</em> string or integer. If you need more refined filtering (for example, to filter only strings that have a certain number of characters) then you can use the <a href="https://docs.djangoproject.com/en/3.1/ref/urls/#django.urls.re_path">re_path()</a> method.</p>
@@ -324,20 +330,23 @@ class BookListView(generic.ListView):
 
 <p>You can capture multiple patterns in the one match, and hence encode lots of different information in a URL.</p>
 
-<div class="note">
-<p><strong>Note</strong>: As a challenge, consider how you might encode a URL to list all books released in a particular year, month, day, and the RE that could be used to match it.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>As a challenge, consider how you might encode a URL to list all books released in a particular year, month, day, and the RE that could be used to match it.</p>
 </div>
 
 <h4 id="Passing_additional_options_in_your_URL_maps">Passing additional options in your URL maps</h4>
 
-<p>One feature that we haven't used here, but which you may find valuable, is that you can declare and pass <a href="https://docs.djangoproject.com/en/3.1/topics/http/urls/#views-extra-options">additional options</a> to the view. The options are declared as a dictionary that you pass as the third un-named argument to the <code>path()</code> function. This approach can be useful if you want to use the same view for multiple resources, and pass data to configure its behavior in each case (below we supply a different template in each case).</p>
+<p>One feature that we haven't used here, but which you may find valuable, is that you can pass a <a href="https://docs.djangoproject.com/en/3.1/topics/http/urls/#views-extra-options">dictionary containing additional options</a> to the view (using the third un-named argument to the <code>path()</code> function). This approach can be useful if you want to use the same view for multiple resources, and pass data to configure its behavior in each case.</p>
 
-<pre class="brush: python notranslate">path('url/', views.my_reused_view, <strong>{'my_template_name': 'some_path'}</strong>, name='aurl'),
-path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_path'}</strong>, name='anotherurl'),
+<p>For example, given the path shown below, for a request to <code>/myurl/halibut/</code> Django will call <code>views.my_view(request, fish=halibut, my_template_name='some_path')</code>.</p>
+
+<pre class="brush: python notranslate">path('myurl/&lt;int:fish&gt;', views.my_view, <strong>{'my_template_name': 'some_path'}</strong>, name='aurl'),
 </pre>
 
-<div class="note">
-<p><strong>Note:</strong> Both extra options and named captured patterns are passed to the view as <em>named</em> arguments. If you use the <strong>same name</strong> for both a captured pattern and an extra option then only the captured pattern value will be sent to the view (the value specified in the additional option will be dropped). </p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Both named captured patterns and dictionary options are passed to the view as <em>named</em> arguments. If you use the <strong>same name</strong> for both a capture pattern and a dictionary key, then the dictionary option will be used.</p>
 </div>
 
 <h3 id="View_class-based_2">View (class-based)</h3>
@@ -408,11 +417,13 @@ def book_detail_view(request, primary_key):
   &lt;/div&gt;
 {% endblock %}</pre>
 
-<div class="note">
-<p>The author link in the template above has an empty URL because we've not yet created an author detail page. Once that exists, you should update the URL like this:</p>
 
-<pre class="notranslate">&lt;a href="<strong>{% url 'author-detail' book.author.pk %}</strong>"&gt;\{{ book.author }}&lt;/a&gt;
-</pre>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>The author link in the template above has an empty URL because we've not yet created an author detail page. Once that exists, you should update the URL like this:</p>
+
+  <pre class="notranslate">&lt;a href="<strong>{% url 'author-detail' book.author.pk %}</strong>"&gt;\{{ book.author }}&lt;/a&gt;
+  </pre>
 </div>
 
 <p>Though a little larger, almost everything in this template has been described previously:</p>
@@ -432,12 +443,13 @@ def book_detail_view(request, primary_key):
 
 <p>This method is needed because you declare a <code>ForeignKey</code> (one-to many) field in only the "one" side of the relationship (the <code>BookInstance</code>). Since you don't do anything to declare the relationship in the other ("many") models, it (the <code>Book</code>) doesn't have any field to get the set of associated records. To overcome this problem, Django constructs an appropriately named "reverse lookup" function that you can use. The name of the function is constructed by lower-casing the model name where the <code>ForeignKey</code> was declared, followed by <code>_set</code> (i.e. so the function created in <code>Book</code> is <code>bookinstance_set()</code>).</p>
 
-<div class="note">
-<p><strong>Note</strong>: Here we use <code>all()</code> to get all records (the default). While you can use the <code>filter()</code> method to get a subset of records in code, you can't do this directly in templates because you can't specify arguments to functions.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Here we use <code>all()</code> to get all records (the default). While you can use the <code>filter()</code> method to get a subset of records in code, you can't do this directly in templates because you can't specify arguments to functions.</p>
 
-<p>Beware also that if you don't define an order (on your class-based view or model), you will also see errors from the development server like this one:</p>
+  <p>Beware also that if you don't define an order (on your class-based view or model), you will also see errors from the development server like this one:</p>
 
-<pre class="notranslate">[29/May/2017 18:37:53] "GET /catalog/books/?page=1 HTTP/1.1" 200 1637
+  <pre class="notranslate">[29/May/2017 18:37:53] "GET /catalog/books/?page=1 HTTP/1.1" 200 1637
 /foo/local_library/venv/lib/python3.5/site-packages/django/views/generic/list.py:99: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: &lt;QuerySet [&lt;Author: Ortiz, David&gt;, &lt;Author: H. McRaven, William&gt;, &lt;Author: Leigh, Melinda&gt;]&gt;
   allow_empty_first_page=allow_empty_first_page, **kwargs)
 </pre>
@@ -469,10 +481,11 @@ def book_detail_view(request, primary_key):
 <strong>    class Meta:
         ordering = ['last_name']</strong></pre>
 
-<p>Of course, the field doesn't need to be <code>last_name</code>: it could be any other.</p>
+  <p>Of course, the field doesn't need to be <code>last_name</code>: it could be any other.</p>
 
-<p>Last but not least, you should sort by an attribute/column that actually has an index (unique or not) on your database to avoid performance issues. Of course, this will not be necessary here (we are probably getting ahead of ourselves with so few books and users), but it is something worth keeping in mind for future projects.</p>
+  <p>Last but not least, you should sort by an attribute/column that actually has an index (unique or not) on your database to avoid performance issues. Of course, this will not be necessary here (we are probably getting ahead of ourselves with so few books and users), but it is something worth keeping in mind for future projects.</p>
 </div>
+
 
 <p>The second interesting (and non-obvious) thing in the template is where we set a class (<code>text-success</code>, <code>text-danger</code>, <code>text-warning</code>) to color-code the human readable status text for each book instance ("available", "maintenance", etc.). Astute readers will note that the method <code>BookInstance.get_status_display()</code> that we use to get the status text does not appear elsewhere in the code.</p>
 
@@ -491,11 +504,11 @@ def book_detail_view(request, primary_key):
 
 <p>Click the <strong>All books</strong> link to display the list of books. </p>
 
-<p><img alt="Book List Page" src="https://mdn.mozillademos.org/files/14049/book_list_page_no_pagination.png" style="border-style: solid; border-width: 1px; display: block; height: 216px; margin: 0px auto; width: 823px;"></p>
+<p><img alt="Book List Page" src="book_list_page_no_pagination.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>Then click a link to one of your books. If everything is set up correctly, you should see something like the following screenshot.</p>
 
-<p><img alt="Book Detail Page" src="https://mdn.mozillademos.org/files/14051/book_detail_page_no_pagination.png" style="border-style: solid; border-width: 1px; display: block; height: 783px; margin: 0px auto; width: 926px;"></p>
+<p><img alt="Book Detail Page" src="book_detail_page_no_pagination.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h2 id="Pagination">Pagination</h2>
 
@@ -553,7 +566,7 @@ def book_detail_view(request, primary_key):
 
 <p>The pagination links are displayed on the bottom, with next/previous links being displayed depending on which page you're on.</p>
 
-<p><img alt="Book List Page - paginated" src="https://mdn.mozillademos.org/files/14057/book_list_paginated.png" style="border-style: solid; border-width: 1px; display: block; height: 216px; margin: 0px auto; width: 924px;"></p>
+<p><img alt="Book List Page - paginated" src="book_list_paginated.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h2 id="Challenge_yourself">Challenge yourself</h2>
 
@@ -566,23 +579,24 @@ def book_detail_view(request, primary_key):
 
 <p>The code required for the URL mappers and the views should be virtually identical to the <code>Book</code> list and detail views we created above. The templates will be different but will share similar behavior.</p>
 
-<div class="note">
+<div class="note notecard">
 <p><strong>Note</strong>:</p>
 
 <ul>
- <li>Once you've created the URL mapper for the author list page you will also need to update the <strong>All authors</strong> link in the base template. Follow the <a href="#Update_the_base_template">same process</a> as we did when we updated the <strong>All books</strong> link.</li>
- <li>Once you've created the URL mapper for the author detail page, you should also update the <a href="#Creating_the_Detail_View_template">book detail view template</a> (<strong>/locallibrary/catalog/templates/catalog/book_detail.html</strong>) so that the author link points to your new author detail page (rather than being an empty URL). The line will change to add the template tag shown in bold below.
+ <li>Once you've created the URL mapper for the author list page you will also need to update the <strong>All authors</strong> link in the base template. Follow the <a href="#update_the_base_template">same process</a> as we did when we updated the <strong>All books</strong> link.</li>
+ <li>Once you've created the URL mapper for the author detail page, you should also update the <a href="#creating_the_detail_view_template">book detail view template</a> (<strong>/locallibrary/catalog/templates/catalog/book_detail.html</strong>) so that the author link points to your new author detail page (rather than being an empty URL). The line will change to add the template tag shown in bold below.
   <pre class="brush: html notranslate">&lt;p&gt;&lt;strong&gt;Author:&lt;/strong&gt; &lt;a href="<strong>{% url 'author-detail' book.author.pk %}</strong>"&gt;\{{ book.author }}&lt;/a&gt;&lt;/p&gt;
 </pre>
  </li>
 </ul>
 </div>
 
+
 <p>When you are finished, your pages should look something like the screenshots below.</p>
 
-<p><img alt="Author List Page" src="https://mdn.mozillademos.org/files/14053/author_list_page_no_pagination.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Author List Page" src="author_list_page_no_pagination.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
-<p><img alt="Author Detail Page" src="https://mdn.mozillademos.org/files/14055/author_detail_page_no_pagination.png" style="border-style: solid; border-width: 1px; display: block; height: 358px; margin: 0px auto; width: 825px;"></p>
+<p><img alt="Author Detail Page" src="author_detail_page_no_pagination.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h2 id="Summary">Summary</h2>
 

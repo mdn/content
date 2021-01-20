@@ -1,0 +1,151 @@
+---
+title: Editor Configuration
+slug: Mozilla/Developer_guide/Editor_configuration
+tags:
+  - Clang-based Code Indexing
+  - Emacs
+  - Mozilla Specific Packages
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p>This page contains techniques and advice for setting up text editors and IDEs that will help you to work with Mozilla projects like the gecko codebase.</p>
+
+<h2 id="General">General</h2>
+
+<h3 id="Compilation_database_compile_commands.json"><a id="compilation-database">Compilation database</a> (compile_commands.json)</h3>
+
+<p>Several clang-based tools described below require a <em>compilation database</em>, which is a JSON file called compile_commands.json containing the parameters that need to be passed to the compiler to compile each source code file.</p>
+
+<p>Using mach, this can be done via the following command, after configuration is run:</p>
+
+<pre>./mach build-backend -b CompileDB</pre>
+
+<h2 id="Emacs">Emacs</h2>
+
+<h3 id="Mozilla_Specific_Packages">Mozilla Specific Packages</h3>
+
+<h4 id="dxr.el">dxr.el</h4>
+
+<p>dxr.el is an elisp package that enables searching of <a href="https://dxr.mozilla.org">DXR Code Indexer</a> results from within emacs. Using this can sometimes be easier than doing localized code indexing with rtags, as rtags processing of code trees can be very processing intensive (similar to a clobber build).</p>
+
+<p>dxr.el is available via <a href="https://github.com/tromey/dxr.el">github repo</a>, or via the Marmalade package manager.</p>
+
+<h4 id="eslint">eslint</h4>
+
+<p>Mozilla uses <a href="https://eslint.org/">eslint</a> to automate various coding style checks for JavaScript sources.  See <a href="https://wiki.mozilla.org/DevTools/CodingStandards#Running_ESLint_in_Emacs">the devtools documentation</a> that describes how to integrate this into Emacs.</p>
+
+<h3 id="CC_Development_Packages">C/C++ Development Packages</h3>
+
+<h4 id="General_Guidelines_to_Emacs_C_Programming">General Guidelines to Emacs C++ Programming</h4>
+
+<p>The following guides give an overview of the C++ editing capabilities of emacs. It is worth reading through these guides to see what features are available. The rest of this section is dedicated to Mozilla/Gecko specific setup for packages.</p>
+
+<ul>
+	<li><a href="https://tuhdo.github.io/c-ide.html">C/C++ Development Environment for Emacs</a></li>
+	<li><a href="https://syamajala.github.io/c-ide.html">Emacs as C++ IDE</a></li>
+</ul>
+
+<h4 id="rtags_LLVMClang-based_Code_Indexing"><a name="rtags">rtags</a> (LLVM/Clang-based Code Indexing)</h4>
+
+<p>Instructions for the installation of rtags are available at the <a href="https://github.com/Andersbakken/rtags">rtags github repo.</a> rtags requires a <a href="#compilation-database">compilation database</a> as described above.</p>
+
+<p>In order for rtags to index correctly, included files need to be copied and unified compilation files need to be created. Either run a full build of the tree, or if you only want indexes to be generated for the moment, run the following commands (assuming you're in the gecko repo root):</p>
+
+<pre>cd [gecko_build_directory]
+make export
+./config.status</pre>
+
+<p>To increase indexing speed, it's best to remove unified build files and test files from database updates. This can be done by creating a ~/.rdmrc file with the following contents, with [src_dir] replaced with either the repo or build directory for your checkout:</p>
+
+<pre>-X */[src_dir]/*Unified*;*/[src_dir]/*/test/*;*/[src_dir]/*/tests/*</pre>
+
+<p>Once the rdm daemon is running, the compilation database can be added to rtags like so:</p>
+
+<pre>rc -J [gecko_build_directory]/compile_commands.json</pre>
+
+<p>Note that this process will take a while initially. However, once the database is built, it will only require incremental updates. As long as the rdm daemon is running in the background, the database will be updated based on changes to files.</p>
+
+<h4 id="irony_LLVMClang-based_Code_Completion">irony (LLVM/Clang-based Code Completion)</h4>
+
+<p>Instructions on the installation of irony-mode are available at the <a href="https://github.com/Sarcasm/irony-mode">irony-mode github repo</a>.</p>
+
+<p>irony-mode requires a <a href="#compilation-database">compilation database</a> as described above.</p>
+
+<p>Note that irony-mode, by default, uses elisp to parse the compile_commands.json file. As gecko is a very large codebase, this file can easily be multiple megabytes, which can make irony-mode take multiple seconds to load on a gecko file. It is recommended to use <a href="https://github.com/Hylen/irony-mode/tree/compilation-database-guessing-4-pull-request">this fork of irony-mode</a>, which requires the boost System and Filesystem libraries. <a href="https://github.com/Sarcasm/irony-mode/issues/176">Checking the bug to get this patch into the mainline of irony-mode</a> is recommended, to see if the fork can be used or if the mainline repo can be used. Using the Boost version of the irony-mode server brings file load times to under 1s.</p>
+
+<h4 id="Projectile_Project_Management">Projectile (Project Management)</h4>
+
+<p>Instructions on the installation of projectile are available at the <a href="https://github.com/bbatsov/projectile">projectile github repo</a>.</p>
+
+<p>Projectile comes preconfigured for many project types. Since, gecko uses its own special build system (mach), a new project type needs to be added. This can be done via adding the following elisp configuration command to your emacs configuration file.</p>
+
+<pre>    (projectile-register-project-type 'gecko
+                                      '("mach" "moz.build")
+                                      "python mach --log-no-times build"
+                                      "python mach mochitest"
+                                      "python mach run")</pre>
+
+<p>Assuming projectile-global-mode is on, this will allow projectile to run the correct commands whenever it is working in a gecko repo.</p>
+
+<h4 id="gdb">gdb</h4>
+
+<p>Emacs comes with great integration with gdb, especially when using <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/GDB-User-Interface-Layout.html">gdb-many-windows</a>. However, when gdb is invoked via mach, some special arguments need to be passed in order to make sure the correct display mode is used. To use M-x gdb with mach on firefox, use the following command:</p>
+
+<pre>[gecko_repo_directory]/mach run --debug --debugparams=-i=mi
+</pre>
+
+<p>In some cases you may still see symptoms that M-x gdb is not cooperating.  Symptoms include:</p>
+
+<ul>
+	<li>error message "<em>Error: you did not specify -i=mi on GDB's command line!</em>"</li>
+	<li>unexpected output in the "<code>*gud*</code>" buffer every time you hit RET at the (gdb) prompt</li>
+</ul>
+
+<p>Directing file descriptor "2" (STDERR) to <code>/dev/null</code> has been shown to get M-x gdb to cooperate.  Therefore, the next thing to try is to put the following code into an executable script, then type the path to your script when prompted by M-x gdb:</p>
+
+<pre>#!/bin/bash
+[gecko_repo_directory]/mach run --debug --debugger-args=-i=mi 2&gt;/dev/null
+
+</pre>
+
+<p>Invoke the script in emacs:</p>
+
+<pre>Run gdb (like this): /home/user/bin/mach_run_debug.sh</pre>
+
+<h2 id="vi">vi</h2>
+
+<h2 id="Visual_Studio">Visual Studio</h2>
+
+<p>You can generate Visual Studio solution file:</p>
+
+<pre>./mach build-backend --backend=VisualStudio</pre>
+
+<h2 id="Visual_Studio_Code">Visual Studio Code</h2>
+
+<p>For general information on using Visual Studio Code, see their <a href="https://code.visualstudio.com/">home page</a>, <a href="https://github.com/Microsoft/vscode/">repo</a> and <a href="https://code.visualstudio.com/docs/languages/cpp">guide to working with C++</a>.</p>
+
+<p>For IntelliSense to work properly, a <a href="#compilation-database">compilation database</a> as described above is required. When it is present when you open the mozilla source code folder, it will be automatically detected and Visual Studio Code will ask you if it should use it, which you should confirm.</p>
+
+<h5 id="Useful_preferences">Useful preferences</h5>
+
+<p>When setting the preference</p>
+
+<p><code>"editor.formatOnSave": true</code></p>
+
+<p>you might find that this isn't working on large source code files, but triggering formatting manually works. This is due to the default timeout for formatOnSave, which is quite short (750ms). You might want to increase this timeout, e.g.</p>
+
+<p><code>"editor.formatOnSaveTimeout": 5000</code></p>
+
+<h2 id="Sublime_text_and_Atom">Sublime text and Atom</h2>
+
+<p>For working with JSMs, HTML, and other Web-friendly formats.</p>
+
+<p>Install JSCS linter and use Google's defaults. Please also install JSHint or ESLint and use it. Avoid trailing whitespace.</p>
+
+<p>The <a href="https://packagecontrol.io/packages/Emacs-like%20Modelines">Emacs-like Modelines</a> package in Sublime Text will automatically set the correct indentation style according to the comments at the top of source files like:</p>
+
+<pre>/* -*- Mode: C++; tab-width: 2; indent-tabs-mode: nil; c-basic-offset: 2 -*-</pre>
+
+<h2 id="Eclipse_CDT">Eclipse CDT</h2>
+
+<p>See <a href="/en-US/docs/Mozilla/Developer_guide/Eclipse/Eclipse_CDT">Eclipse CDT</a>.</p>

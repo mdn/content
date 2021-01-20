@@ -30,19 +30,6 @@ tags:
 window.onbeforeprint = function(event) { ... };
 </pre>
 
-<h2 id="Polyfill">Polyfill</h2>
-
-<p>Safari does not implement these events, but you can create an equivalent result to the
-  <code>beforeprint</code> event with
-  {{domxref("window.matchMedia")}}<code>('print')</code>.</p>
-
-<pre class="brush: js">var mediaQueryList = window.matchMedia('print');
-mediaQueryList.addListener(function(mql) {
-  if(mql.matches) {
-    console.log('webkit equivalent of onbeforeprint');
-  }
-});</pre>
-
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
