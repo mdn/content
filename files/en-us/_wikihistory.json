@@ -67523,18 +67523,6 @@
       "bershanskiy"
     ]
   },
-  "Web/API/NameList": {
-    "modified": "2019-03-24T00:12:50.926Z",
-    "contributors": [
-      "mfluehr",
-      "Sebastianz",
-      "teoli",
-      "kscarfone",
-      "Prachi_Dighe",
-      "Sheppy",
-      "Brettz9"
-    ]
-  },
   "Web/API/NamedNodeMap": {
     "modified": "2020-10-15T21:14:44.319Z",
     "contributors": [
