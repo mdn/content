@@ -159,7 +159,7 @@ tags:
 
 <p>If you go to VoiceOver's landmarks menu (accessed using VoiceOver key + U and then using the cursor keys to cycle through the menu choices), you'll see that most of the elements are nicely listed so they can be accessed quickly.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14420/landmarks-list.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="landmarks-list.png" style="display: block; margin: 0 auto;"></p>
 
 <p>However, we could do better here. the search form is a really important landmark that people will want to find, but it is not listed in the landmarks menu or treated like a notable landmark, beyond the actual input being called out as a search input (<code>&lt;input type="search"&gt;</code>). In addition, some older browsers (most notably IE8) don't recognise the semantics of the HTML5 elements.</p>
 
@@ -212,7 +212,7 @@ tags:
   &lt;/blockquote&gt;
 &lt;/section&gt;</pre>
 
-<p>Our JavaScript loads a JSON file via <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> containing a series of random quotes and their authors. Once that is done, we start up a <code><a href="/en-US/docs/Web/API/WindowTimers/setInterval">setInterval()</a></code> loop that loads a new random quote into the quote box every 10 seconds:</p>
+<p>Our JavaScript loads a JSON file via <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> containing a series of random quotes and their authors. Once that is done, we start up a <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></code> loop that loads a new random quote into the quote box every 10 seconds:</p>
 
 <pre class="brush: js notranslate">let intervalID = window.setInterval(showQuote, 10000);</pre>
 
