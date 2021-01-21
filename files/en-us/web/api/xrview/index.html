@@ -131,7 +131,7 @@ mat4.transpose(normalMatrix, normalMatrix);
 
 <p>The third section creates the new {{domxref("XRRigidTransform")}}, specifying a point providing the offsets along the three axes as the first parameter, and the orientation quaternion as the second parameter. The returned object's {{domxref("XRRigidTransform.matrix", "matrix")}} property is the actual matrix that transforms points from the scene's reference space to the object's new position.</p>
 
-<p>Finally, a new reference space is created to describe the relationship between the two reference spaces fully. That reference space is returnedto the caller.</p>
+<p>Finally, a new reference space is created to describe the relationship between the two reference spaces fully. That reference space is returned to the caller.</p>
 
 <p>To use this function, we pass the returned reference space into {{domxref("XRFrame.getPose()")}} or {{domxref("XRFrame.getViewerPose", "getViewerPose()")}}, as appropriate for yoru needs. the {{domxref("XRPose")}} returned will then be used to actuall render the scene for the current frame.</p>
 
