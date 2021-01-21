@@ -129,7 +129,7 @@ render();
 
 <p>Now our scene is properly rendering, we can start adding 3D shapes. To speed up development, Three.js provides a bunch of predefined primitives, which you can use to create shapes instantly in a single line of code. There's cubes, spheres, cylinders, and more complicated shapes available. Detail like drawing required vertices and faces, for a given shape, is handled by the Three framework, so we can focus on higher level coding. Let's start, by defining the geometry for a cube shape, adding the following just above the <code>render()</code> function:</p>
 
-<pre class="brush: js">boxGeometry = new THREE.BoxGeometry(10, 10, 10);
+<pre class="brush: js">const boxGeometry = new THREE.BoxGeometry(10, 10, 10);
 </pre>
 
 <p>In this case, we define a simple cube that is 10 x 10 x 10 units. The geometry itself is not enough though, we also need a material that will be used for our shape.</p>
