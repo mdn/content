@@ -272,7 +272,7 @@ test();</pre>
   value. However due to lexical scoping this value is not available inside the block: the
   identifier <code>foo</code> <em>inside</em> the <code>if</code> block is the
   <code>let foo</code>. The expression <code>(foo + 55)</code> throws
-  a <code>ReferenceError</code> because initialisation of <code>let foo</code> has not
+  a <code>ReferenceError</code> because initialization of <code>let foo</code> has not
   completed — it is still in the temporal dead zone.</p>
 
 <p>This phenomenon can be confusing in a situation like the following. The instruction
