@@ -297,12 +297,12 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
  <li>
   <p>The <code>{{domxref("Response.Response","Response()")}}</code> constructor allows you to create a custom response. In this case, we are just returning a simple text string:</p>
 
-  <pre class="brush: js notranslate">new Response('Hello from your friendly neighbourhood service worker!');</pre>
+  <pre class="brush: js notranslate">new Response('Hello from your friendly neighborhood service worker!');</pre>
  </li>
  <li>
   <p>This more complex <code>Response</code> below shows that you can optionally pass a set of headers in with your response, emulating standard HTTP response headers. Here we are just telling the browser what the content type of our synthetic response is:</p>
 
-  <pre class="brush: js notranslate">new Response('&lt;p&gt;Hello from your friendly neighbourhood service worker!&lt;/p&gt;', {
+  <pre class="brush: js notranslate">new Response('&lt;p&gt;Hello from your friendly neighborhood service worker!&lt;/p&gt;', {
   headers: { 'Content-Type': 'text/html' }
 });</pre>
  </li>
