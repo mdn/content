@@ -7881,6 +7881,7 @@
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_47_for_developers	/en-US/docs/Mozilla/Firefox/Releases/47
 /en-US/docs/Mozilla/Firefox/Releases/developers	/en-US/docs/Mozilla/Firefox/Releases/63
 /en-US/docs/Mozilla/Mobile/Viewport_meta_tag	/en-US/docs/Web/HTML/Viewport_meta_tag
+/en-US/docs/Mozilla/Performance/ScrollLinkedEffects	/en-US/docs/Mozilla/Performance/Scroll-linked_effects
 /en-US/docs/Mozilla/Projects/NSS/Reference/troubleshoot.html	/en-US/docs/Mozilla/Projects/NSS/Reference/troubleshoot
 /en-US/docs/Mozilla/Projects/NSS/SSL_functions/gtstd.html	/en-US/docs/Mozilla/Projects/NSS/SSL_functions/gtstd
 /en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc.html	/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc
