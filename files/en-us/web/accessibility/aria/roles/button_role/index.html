@@ -88,7 +88,7 @@ tags:
  <dt><code>onclick</code></dt>
  <dd>Handles the event raised when the button is activated using a mouse click or touch event.</dd>
  <dt><code>onKeyDown</code></dt>
- <dd>Handles the event raised when the button is activated using the Enter or Space key on the keyboard. (Note not the <a href="/en-US/docs/Web/Events/keypress">deprecated onKeyPress</a>)</dd>
+ <dd>Handles the event raised when the button is activated using the Enter or Space key on the keyboard. (Note not the <a href="/en-US/docs/Web/API/Document/keypress_event">deprecated onKeyPress</a>)</dd>
 </dl>
 
 <h4 id="Changing_attribute_values">Changing attribute values</h4>
@@ -205,7 +205,7 @@ button:focus,
 
 function handleBtnKeyDown(event) {
   // Check to see if space or enter were pressed
-  if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") { // <a href="/en-US/docs/Web/API/KeyboardEvent/key/Key_Values#Whitespace_keys">"Spacebar" for IE11 support</a>
+  if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") { // <a href="/en-US/docs/Web/API/KeyboardEvent/key/Key_Values#whitespace_keys">"Spacebar" for IE11 support</a>
     // Prevent the default action to stop scrolling when space is pressed
     event.preventDefault();
     toggleButton(event.target);
