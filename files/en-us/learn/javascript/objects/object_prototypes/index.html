@@ -14,7 +14,7 @@ tags:
   - Prototype
   - Prototype Chaining
   - create()
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{LearnSidebar}}</div>
 
@@ -30,7 +30,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Understanding JavaScript functions, familiarity with JavaScript basics (see <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and <a href="/en-US/docs/Learn/JavaScript/Building_blocks">Building blocks</a>), and OOJS basics (see <a href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction">Introduction to objects</a>).</td>
+   <td>Understanding JavaScript functions, familiarity with JavaScript basics (see <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and <a href="/en-US/docs/Learn/JavaScript/Building_blocks">Building blocks</a>), and OOJS basics (see <a href="/en-US/docs/Learn/JavaScript/Objects/Basics">Introduction to objects</a>).</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -79,11 +79,11 @@ tags:
 
 <p>If you type "<code>person1.</code>" into your JavaScript console, you should see the browser try to auto-complete this with the member names available on this object:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13853/object-available-members.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="object-available-members.png" style="display: block; margin: 0 auto;"></p>
 
 <p>In this list, you will see the members defined on <code>person1</code>'s constructor — <code>Person()</code> — <code>name</code>, <code>age</code>, <code>gender</code>, <code>interests</code>, <code>bio</code>, and <code>greeting</code>. You will however also see some other members — <code>toString</code>, <code>valueOf</code>, etc — these are defined on <code>person1</code>'s prototype object's prototype object, which is <code>Object.prototype</code>.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13891/MDN-Graphics-person-person-object-2.png" style="display: block; height: 150px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="mdn-graphics-person-person-object-2.png" style="display: block; margin: 0px auto;"></p>
 
 <p>What happens if you call a method on <code>person1</code>, which is actually defined on <code>Object.prototype</code>? For example:</p>
 
