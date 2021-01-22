@@ -5,7 +5,7 @@ tags:
   - Forms
   - HTML
 ---
-<p>This is the last example that explain <a href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets">how to build custom form widgets</a>.</p>
+<p>This is the last example that explain <a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">how to build custom form widgets</a>.</p>
 
 <h2 id="Change_states">Change states</h2>
 
@@ -229,11 +229,11 @@ function getIndex(select) {
 // Event binding //
 // ------------- //
 
-window.addEventListener("load", function () {
+window.addEventListener(&quot;load&quot;, function () {
   var form = document.querySelector('form');
 
-  form.classList.remove("no-widget");
-  form.classList.add("widget");
+  form.classList.remove(&quot;no-widget&quot;);
+  form.classList.add(&quot;widget&quot;);
 });
 
 window.addEventListener('load', function () {
@@ -274,7 +274,7 @@ window.addEventListener('load', function () {
       var length = optionList.length,
           index  = getIndex(select);
 
-<code class="language-js"><span class="keyword token">      if</span> <span class="punctuation token">(</span>event<span class="punctuation token">.</span>keyCode <span class="operator token">===</span> <span class="number token">27</span><span class="punctuation token">)</span> <span class="punctuation token">{</span></code> deactivateSelect(select);<code class="language-js"><span class="punctuation token"> }</span></code>
+      if (event.keyCode === 27) { deactivateSelect(select); }
       if (event.keyCode === 40 &amp;&amp; index &lt; length - 1) { index++; }
       if (event.keyCode === 38 &amp;&amp; index &gt; 0) { index--; }
 
