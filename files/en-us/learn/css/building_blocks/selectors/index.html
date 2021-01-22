@@ -32,7 +32,7 @@ tags:
 
 <p>You have met selectors already. A CSS selector is the first part of a CSS Rule. It is a pattern of elements and other terms that tell the browser which HTML elements should be selected to have the CSS property values inside the rule applied to them. The element or elements which are selected by the selector are referred to as the <em>subject of the selector</em>.</p>
 
-<p><img alt="Some code with the h1 highlighted." src="https://mdn.mozillademos.org/files/16550/selector.png" style="border: 1px solid #cccccc; height: 218px; width: 471px;"></p>
+<p><img alt="Some code with the h1 highlighted." src="selector.png" style="border: 1px solid #cccccc;"></p>
 
 <p>In earlier articles you met some different selectors, and learned that there are selectors that target the document in different ways — for example by selecting an element such as <code>h1</code>, or a class such as <code>.special</code>.</p>
 
@@ -42,26 +42,26 @@ tags:
 
 <p>If you have more than one thing which uses the same CSS then the individual selectors can be combined into a <em>selector list</em> so that the rule is applied to all of the individual selectors. For example, if I have the same CSS for an <code>h1</code> and also a class of <code>.special</code>, I could write this as two separate rules.</p>
 
-<pre class="brush: css notranslate"><code>h1 {
+<pre class="brush: css notranslate">h1 {
   color: blue;
 }
 
 .special {
   color: blue;
-} </code></pre>
+} </pre>
 
 <p>I could also combine these into a selector list, by adding a comma between them.</p>
 
-<pre class="brush: css notranslate"><code>h1, .special {
+<pre class="brush: css notranslate">h1, .special {
   color: blue;
-} </code></pre>
+} </pre>
 
 <p>White space is valid before or after the comma. You may also find the selectors more readable if each is on a new line.</p>
 
-<pre class="brush: css notranslate"><code>h1,
+<pre class="brush: css notranslate">h1,
 .special {
   color: blue;
-} </code></pre>
+} </pre>
 
 <p>In the live example below try combining the two selectors which have identical declarations. The visual display should be the same after combining them.</p>
 
@@ -71,19 +71,19 @@ tags:
 
 <p>In the following example, the invalid class selector rule will be ignored, whereas the <code>h1</code> would still be styled.</p>
 
-<pre class="brush: css notranslate"><code>h1 {
+<pre class="brush: css notranslate">h1 {
   color: blue;
 }
 
 ..special {
   color: blue;
-} </code></pre>
+} </pre>
 
 <p>When combined however, neither the <code>h1</code> nor the class will be styled as the entire rule is deemed invalid.</p>
 
-<pre class="brush: css notranslate"><code>h1, ..special {
+<pre class="brush: css notranslate">h1, ..special {
   color: blue;
-} </code></pre>
+} </pre>
 
 <h2 id="Types_of_selectors">Types of selectors</h2>
 
@@ -176,12 +176,12 @@ tags:
   <tr>
    <td><a href="/en-US/docs/Web/CSS/Pseudo-classes">Pseudo-class selectors</a></td>
    <td><code>p:first-child { }</code></td>
-   <td><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseuso-classes_and_Pseudo-elements#What_is_a_pseudo-class">Pseudo-classes</a></td>
+   <td><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#What_is_a_pseudo-class">Pseudo-classes</a></td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/CSS/Pseudo-elements">Pseudo-element selectors</a></td>
    <td><code>p::first-line { }</code></td>
-   <td><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseuso-classes_and_Pseudo-elements#What_is_a_pseudo-element">Pseudo-elements</a></td>
+   <td><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#What_is_a_pseudo-element">Pseudo-elements</a></td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/CSS/Descendant_combinator">Descendant combinator</a></td>
