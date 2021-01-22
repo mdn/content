@@ -26950,16 +26950,6 @@
       "bsmedberg"
     ]
   },
-  "Plugins/Flash_Activation:_Browser_Comparison": {
-    "modified": "2019-03-23T22:11:05.925Z",
-    "contributors": [
-      "jamesdhurd",
-      "Artist-sumo",
-      "tsaddique389",
-      "cpeterson",
-      "bsmedberg"
-    ]
-  },
   "Plugins/Flash_to_HTML5": {
     "modified": "2019-03-23T22:10:31.640Z",
     "contributors": [
@@ -67531,18 +67521,6 @@
     "contributors": [
       "sideshowbarker",
       "bershanskiy"
-    ]
-  },
-  "Web/API/NameList": {
-    "modified": "2019-03-24T00:12:50.926Z",
-    "contributors": [
-      "mfluehr",
-      "Sebastianz",
-      "teoli",
-      "kscarfone",
-      "Prachi_Dighe",
-      "Sheppy",
-      "Brettz9"
     ]
   },
   "Web/API/NamedNodeMap": {
@@ -125807,28 +125785,6 @@
       "Jonata"
     ]
   },
-  "Web/HTML/Element/command": {
-    "modified": "2020-10-15T21:07:36.243Z",
-    "contributors": [
-      "sideshowbarker",
-      "SimonSiefke",
-      "kherock",
-      "Sheppy",
-      "teoli",
-      "slimsag",
-      "Sebastianz",
-      "Scipion",
-      "kscarfone",
-      "fbender",
-      "kohei.yoshino",
-      "tregagnon",
-      "medicdude",
-      "ethertank",
-      "ziyunfei",
-      "berkerpeksag",
-      "McGurk"
-    ]
-  },
   "Web/HTML/Element/content": {
     "modified": "2020-10-15T21:25:48.419Z",
     "contributors": [
@@ -126224,24 +126180,6 @@
       "FdvVto",
       "Mgjbot",
       "PablO"
-    ]
-  },
-  "Web/HTML/Element/element": {
-    "modified": "2020-10-15T21:25:47.135Z",
-    "contributors": [
-      "alattalatta",
-      "mfuji09",
-      "MendyBerger",
-      "Sheppy",
-      "teoli",
-      "SphinxKnight",
-      "annray",
-      "sideshowbarker",
-      "Sebastianz",
-      "Jeremie",
-      "markg",
-      "BluePyth",
-      "kscarfone"
     ]
   },
   "Web/HTML/Element/em": {

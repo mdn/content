@@ -40,9 +40,9 @@ tags:
 <h2 id="Example">Example</h2>
 
 <div id="offsetContainer"
-  style="margin: 40px 50px 50px; background-color: rgb(255, 255, 204); border: 4px dashed black; color: black; position: relative; display: inline-block;">
+  style="margin: 0px 40px 50px;background-color: rgb(255, 255, 204);border: 4px dashed black;color: black;position: relative;display: inline-block;min-width: 300px;">
   <div id="idDiv"
-    style="margin: 24px 29px; border: 24px black solid; padding: 0px 28px; width: 199px; height: 102px; overflow: auto; background-color: white; font-size: 13px!important; font-family: Arial, sans-serif;">
+    style="margin: 24px auto;border: 24px black solid;padding: 0px 15px;width: 220px;height: 120px;overflow: auto;background-color: white;font-size: 13px!important;font-family: Arial, sans-serif;">
     <p id="PaddingTopLabel"
       style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">
       padding-top</p>
@@ -59,11 +59,9 @@ tags:
       style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">
       padding-bottom</p>
   </div>
-  <strong>Left</strong> <strong>Top</strong> <strong
-    style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 370px; position: absolute; top: 85px;">Right</strong>
-  <strong
-    style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 164px; position: absolute; top: 225px;">Bottom</strong>
-  <em>margin-top</em> <em>margin-bottom</em> <em>border-top</em> <em>border-bottom</em>
+  <strong style="position: absolute; left: -12%; top: 50%; transform: translateY(-50%); color: blue; font-weight: bold; font-size: 14px;">Left</strong> <strong style="position: absolute; left: 50%; top: -15%; transform: translateX(-50%); color: blue; font-weight: bold; font-size: 14px;">Top</strong> <strong style="position: absolute;right: -15%;top: 50%;transform: translateY(-50%);color: blue;font-weight: bold;font-size: 14px;">Right</strong>
+  <strong style="position: absolute;left: 50%;bottom: -15%;transform: translateX(-50%);color: blue;font-weight: bold;font-size: 14px;">Bottom</strong>
+  <em style="position: absolute;left: 50%;top: 0;transform: translateX(-50%);font-size: 14px;">margin-top</em> <em style="position: absolute;left: 50%;bottom: 0;transform: translateX(-50%);font-size: 14px;">margin-bottom</em> <em style="position: absolute;left: 50%;top: 14%;transform: translateX(-50%);font-size: 14px;color: white;">border-top</em> <em style="position: absolute;left: 50%;bottom: 14%;transform: translateX(-50%);font-size: 14px;color: white;">border-bottom</em>
 </div>
 
 <p><img src="scrollheight.png"></p>

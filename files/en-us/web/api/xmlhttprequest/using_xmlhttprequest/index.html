@@ -932,7 +932,7 @@ oReq.send(null);</pre>
   is subsequently <code>open()</code>. This case can happen, for example, when one has an
   XMLHttpRequest that gets fired on an onunload event for a window, the expected
   XMLHttpRequest is created when the window to be closed is still there, and finally
-  sending the request (in otherwords, <code>open()</code>) when this window has lost its
+  sending the request (in other words, <code>open()</code>) when this window has lost its
   focus and another window gains focus. The most effective way to avoid this problem is to
   set a listener on the new window's {{event("activate")}} event which is set once the
   terminated window has its {{event("unload")}} event triggered.</p>

@@ -8,7 +8,7 @@ tags:
   - Reference
   - z-index
 ---
-<div>{{cssref}}</div>
+<div>{{CSSRef}}</div>
 
 <p>The <strong>stacking context</strong> is a three-dimensional conceptualization of HTML elements along an imaginary z-axis relative to the user, who is assumed to be facing the viewport or the webpage. HTML elements occupy this space in priority order based on element attributes.</p>
 
@@ -22,7 +22,7 @@ tags:
  <li>Root element of the document (<code>&lt;html&gt;</code>).</li>
  <li>Element with a {{cssxref("position")}} value <code>absolute</code> or <code>relative</code> and {{cssxref("z-index")}} value other than <code>auto</code>.</li>
  <li>Element with a {{cssxref("position")}} value <code>fixed</code> or <code>sticky</code> (sticky for all mobile browsers, but not older desktop).</li>
- <li>Element that is a child of a flex ({{cssxref("flexbox")}}) container, with {{cssxref("z-index")}} value other than <code>auto</code>.</li>
+ <li>Element that is a child of a flex ({{cssxref("CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox")}}) container, with {{cssxref("z-index")}} value other than <code>auto</code>.</li>
  <li>Element that is a child of a grid ({{cssxref("grid")}}) container, with {{cssxref("z-index")}} value other than <code>auto</code>.</li>
  <li>Element with a {{cssxref("opacity")}} value less than <code>1</code> (See <a href="https://www.w3.org/TR/css3-color/#transparency">the specification for opacity</a>).</li>
  <li>Element with a {{cssxref("mix-blend-mode")}} value other than <code>normal</code>.</li>
@@ -55,7 +55,7 @@ tags:
 
 <h2 id="The_example">The example</h2>
 
-<p><img alt="Example of stacking rules modified using z-index" src="/@api/deki/files/913/=Understanding_zindex_04.png"></p>
+<p><img alt="Example of stacking rules modified using z-index" src="understanding_zindex_04.png"></p>
 
 <p>In this example, every positioned element creates its own stacking context, because of their positioning and <code>z-index</code> values. The hierarchy of stacking contexts is organized as follows:</p>
 

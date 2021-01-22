@@ -19,7 +19,7 @@ tags:
 
 <p>We'll be using the <a href="http://rogers2.enclavegames.com/demo/">Captain Rogers: Battle at Andromeda demo</a> as an example.</p>
 
-<p><img alt="Captain Rogers: Battle at Andromeda - cover of the game containing Enclave Games and Blackmoon Design logos, Roger's space ship and title of the game." src="https://mdn.mozillademos.org/files/13849/captainrogers2-cover.png" style="display: block; height: 325px; margin: 0px auto; width: 575px;"></p>
+<p><img alt="Captain Rogers: Battle at Andromeda - cover of the game containing Enclave Games and Blackmoon Design logos, Roger's space ship and title of the game." src="captainrogers2-cover.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Captain Rogers was created using the <a href="http://phaser.io/">Phaser</a> framework, the most popular tool for simple 2D game development in JavaScript right now, but it should be fairly easy to reuse the knowledge contained within these articles when building games in pure JavaScript or any other framework. If you're looking for a good introduction to Phaser, then check the <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser">2D breakout game using Phaser</a> tutorial.</p>
 
@@ -29,7 +29,7 @@ tags:
 
 <p>Let's start with a quick overview of the game's folder structure, JavaScript files and in-game states, so we know what's happening where. The game's folders look like this:</p>
 
-<p><img alt="Captain Rogers: Battle at Andromeda - folder structure of the games' project containing JavaScript sources, images and fonts." src="https://mdn.mozillademos.org/files/13851/captainrogers2-folderstructure.png" style="border-style: solid; border-width: 1px; display: block; height: 479px; margin: 0px auto; width: 575px;"></p>
+<p><img alt="Captain Rogers: Battle at Andromeda - folder structure of the games' project containing JavaScript sources, images and fonts." src="captainrogers2-folderstructure.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>As you can see there are folders for images, JavaScript files, fonts and sound effects. The <code>src</code> folder contains the JavaScript files split as a separate states — <code>Boot.js</code>, <code>Preloader.js</code>, <code>MainMenu.js</code> and <code>Game.js</code> — these are loaded into the index file in this exact order. The first one initializes Phaser, the second preloads all the assets, the third one controls the main menu welcoming the player, and the fourth controls the actual gameplay.</p>
 

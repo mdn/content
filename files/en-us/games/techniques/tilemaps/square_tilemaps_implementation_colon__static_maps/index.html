@@ -1,6 +1,6 @@
 ---
 title: 'Square tilemaps implementation: Static maps'
-slug: 'Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Static_maps'
+slug: Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Static_maps
 tags:
   - Canvas
   - Games
@@ -24,7 +24,7 @@ tags:
 
 <p>A tilemap might use one or several atlases — or spritesheets — that contain all of the tile images. This is the atlas we will be using as an example, which features five different tiles:</p>
 
-<p><img alt="Tiles packaged in an atlas" src="https://mdn.mozillademos.org/files/11641/tiles.png" style="height: 64px; width: 320px;"></p>
+<p><img alt="Tiles packaged in an atlas" src="tiles.png"></p>
 
 <p>To draw a tile from the atlas into the canvas we make use of the {{domxref("CanvasRenderingContext2D.drawImage","drawImage()")}} method in a canvas 2D context. We need to supply the atlas image, the coordinates and dimensions of the tile inside the atlas, and the target coordinates and size (a different tile size in here would scale the tile.)</p>
 
@@ -106,4 +106,4 @@ tags:
 
 <p>Our static tilemap implementation demo pulls the above code together to show what an implementation of this map looks like. You can see a <a href="https://mozdevs.github.io/gamedev-js-tiles/square/no-scroll.html">live demo</a> and grab the <a href="https://github.com/mozdevs/gamedev-js-tiles">full source code</a>.</p>
 
-<p><a href="https://mozdevs.github.io/gamedev-js-tiles/square/no-scroll.html"><img alt="" src="https://mdn.mozillademos.org/files/11659/no-scroll.png" style="display: block; height: 256px; margin: 0px auto; width: 256px;"></a></p>
+<p><a href="https://mozdevs.github.io/gamedev-js-tiles/square/no-scroll.html"><img alt="" src="no-scroll.png" style="display: block; margin: 0px auto;"></a></p>

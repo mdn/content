@@ -12,13 +12,11 @@ tags:
   - Reference
   - Window
 ---
-<p>{{ APIRef() }}</p>
-
-<p>{{Obsolete_header(29)}}</p>
+<p>{{APIRef()}}{{deprecated_header}}</p>
 
 <h2 id="Summary">Summary</h2>
 
-<p>Returns the <code>pkcs11</code> object, which is used to install drivers and other software associated with the <a href="/en/Pkcs11_protocol">pkcs11 protocol</a>. If <code>pkcs11</code> isn't supported, this property returns <code>null</code>.</p>
+<p>Returns the <code>pkcs11</code> object, which is used to install drivers and other software associated with the <a href="/en-US/docs/Pkcs11_protocol">pkcs11 protocol</a>. If <code>pkcs11</code> isn't supported, this property returns <code>null</code>.</p>
 
 <div class="note">
 <p><strong>Note:</strong> This property has been returned <code>null</code> since Gecko 1.9.0.14 (Firefox 3.0.14) and <strong>removed</strong> in Gecko 29.0 {{geckoRelease(29)}}) for security reasons. For more information on installing PKCS11 modules, see <a href="/en-US/docs/PKCS11_Module_Installation">installing PKCS11 modules</a>. See {{ Bug(326628) }} for details on why the property was removed.</p>

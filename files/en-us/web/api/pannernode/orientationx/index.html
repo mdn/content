@@ -76,7 +76,7 @@ tags:
 const yRotationToVector = degrees =&gt; {
   // convert degrees to radians and offset the angle so 0 points towards the listener
   const radians = (degrees - 90) * (Math.PI / 180);
-  // using cosine and sine here ensures the output values are always normalised
+  // using cosine and sine here ensures the output values are always normalized
   // i.e. they range between -1 and 1
   const x = Math.cos(radians);
   const z = Math.sin(radians);

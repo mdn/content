@@ -88,12 +88,12 @@ browser.runtime.onMessage.hasListener(<var>listener</var>)
 
  <dl class="reference-values">
   <dt><code><var>message</var></code></dt>
-  <dd><code>object</code>. The message itself. This is a JSON-ifiable object.</dd>
+  <dd><code>object</code>. The message itself. This is a serializable object (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#Data_cloning_algorithm">Data cloning algorithm</a>).</dd>
   <dt><code><var>sender</var></code></dt>
   <dd>A {{WebExtAPIRef('runtime.MessageSender')}} object representing the sender of the message.</dd>
   <dt><code><var>sendResponse</var></code></dt>
   <dd>
-  <p>A function to call, at most once, to send a response to the <code><var>message</var></code>. The function takes a single argument, which may be any JSON-ifiable object. This argument is passed back to the message sender.</p>
+  <p>A function to call, at most once, to send a response to the <code><var>message</var></code>. The function takes a single argument, which may be any serializable object (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#Data_cloning_algorithm">Data cloning algorithm</a>). This argument is passed back to the message sender.</p>
 
   <p>If you have more than one <code>onMessage()</code> listener in the same document, then only one may send a response.</p>
 

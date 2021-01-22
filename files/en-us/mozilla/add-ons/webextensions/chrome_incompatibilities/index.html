@@ -369,3 +369,18 @@ setCookie.then(logCookie, logError);</pre>
  <dt>In Chrome</dt>
  <dd>The app manifest is expected in a different place. See <a href="https://developer.chrome.com/extensions/nativeMessaging#native-messaging-host-location">Native messaging host location</a> in the Chrome docs.</dd>
 </dl>
+
+<h2 id="Data_cloning_algorithm">Data cloning algorithm</h2>
+
+<p>Some extension APIs allow an extension to send data from one part of the extension to another, such as {{WebExtAPIRef("runtime.sendMessage()")}}, {{WebExtAPIRef("tabs.sendMessage()")}}, {{WebExtAPIRef("runtime.onMessage")}}, the <code>postMessage()</code> method of {{WebExtAPIRef("runtime.port")}}, and {{WebExtAPIRef("tabs.executeScript()")}}.</p>
+
+<dl>
+ <dt>In Firefox</dt>
+ <dd>The <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">Structured clone algorithm</a> is used.</dd>
+ <dt>In Chrome</dt>
+ <dd>The <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#description">JSON serialization algorithm</a> is used. It may switch to structured cloning in the future (<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=248548">issue 248548</a>).</dd>
+</dl>
+
+<p>The Structured clone algorithm supports more types than the JSON serialization algorithm. A notable exception are (DOM) objects with a <code>toJSON</code> method. DOM objects are not cloneable nor JSON-serializable by default, but with a <code>toJSON()</code> method, these can be JSON-serialized (but still not cloned with the structured cloning algorithm). Examples of JSON-serializable objects that are not structured cloneable include instances of {{domxref("URL")}} and {{domxref("PerformanceEntry")}}.</p>
+
+<p>Extension that rely on the <code>toJSON()</code> method of the JSON serialization algorithm can use {{jsxref("JSON.stringify()")}} followed by {{jsxref("JSON.parse()")}} to ensure that a message can be exchanged, because a parsed JSON value is always structurally cloneable.</p>
