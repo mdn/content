@@ -13,15 +13,12 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p class="summary">The <strong><code>at()</code></strong> method takes an integer value and returns the item at that index, allowing for negative integers which count back from the last item.</p>
+<p class="summary">The <strong><code>at()</code></strong> method takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.</p>
+
+<!-- changed -->
+<p>This is not to suggest there is anything wrong with using the square bracket notation. For example <code>array[0]</code> would return the first item. However instead of using {{domxref('Array.prototype.length','array.length')}} for latter items; e.g. <code>array[array.length-1]</code> for the last item, you can call <code>array.at(-1)</code>. <a href="#Examples">(See the examples below)</a></p>
 
 <div>{{EmbedInteractiveExample("pages/js/array-at.html")}}</div>
-
-<ul>
-  <li>If you need to find an element based on a provided testing function, use {{jsxref("Array.prototype.find()", "find()")}}.</li>
-  <li>If you need to find if a value <strong>exists</strong> in an array, use {{jsxref("Array.prototype.includes()")}}.</li>
-  <li>If you need the <strong>index</strong> of an element in the array, use {{jsxref("Array.indexOf", "indexOf()")}}.</li>
-</ul>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -38,31 +35,6 @@ tags:
 
 <p>The element in the array matching the given index. Returns {{jsxref('undefined')}} if the given index can not be found.</p>
 
-
-<h2 id="Polyfill">Polyfill</h2>
-
-<p>This method may not be available in all JavaScript implementations yet. However you can polyfill <code>Array.prototype.at</code> with the following snippet:</p>
-
-<pre class="brush: js notranslate">
-function at(n) {
-	// ToInteger() abstract op
-	n = Math.trunc(n) || 0;
-	// Allow negative indexing from the end
-	if(n < 0) n += this.length;
-	// OOB access is guaranteed to return undefined
-	if(n < 0 || n >= this.length) return undefined;
-	// Otherwise, this is just normal property access
-	return this[n];
-}
-
-// Other TypedArray constructors omitted for brevity.
-for (let C of [Array, String, Uint8Array]) {
-    Object.defineProperty(C.prototype, "at",
-                        { value: at,
-                          writable: true,
-                          enumerable: false,
-                          configurable: true });
-}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -89,21 +61,39 @@ const item2 = returnLast(cart);
 console.log(item2); // Logs: 'orange'
 </pre>
 
-<h2 id="Specifications">Specifications</h2>
+<h3>Comparing methods</h3>
+
+<p>Here we compare different ways to select the penultimate (last but one) item of an {{domxref('Array')}}. Whilst all below methods are valid, it highlights the succinctness and readability of the <code>at()</code> method.</p>
+
+<pre class="brush: js notranslate">
+// Our array with items
+const colors = ['red', 'green', 'blue'];
+
+// Using length property
+const lengthWay = colors[colors.length-2];
+console.log(lengthWay); // Logs: 'green'
+
+// Using slice() method. Note an array is returned
+const sliceWay = colors.slice(-2, -1);
+console.log(sliceWay[0]); // Logs: 'green'
+
+// Using at() method
+const atWay = colors.at(-2);
+console.log(atWay); // Logs: 'green'
+</pre>
+
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft','#sec-array.prototype.at','Array.prototype.at')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Relative Indexing Method', '#sec-array-prototype-additions', 'Relative Indexing Method')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -115,6 +105,7 @@ console.log(item2); // Logs: 'orange'
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li><a href="https://github.com/tc39/proposal-relative-indexing-method#polyfill">A polyfill for the at() method</a>.</li>
   <li>{{jsxref("Array.prototype.find()")}} – return a value based on a given test.</li>
   <li>{{jsxref("Array.prototype.includes()")}} – test whether a value exists in the array.</li>
   <li>{{jsxref("Array.prototype.indexOf()")}} – return the index of a given element.</li>
