@@ -38,7 +38,7 @@ tags:
 <p>The offer/answer process is performed both when a call is first established, but also any time the call's format or other configuration needs to change. Regardless of whether it's a new call, or reconfiguring an existing one, these are the basic steps which must occur to exchange the offer and answer, leaving out the ICE layer for the moment:</p>
 
 <ol>
- <li>The caller captures local Media via {{domxref("MediaDevices/getUserMedia")}} </li>
+ <li>The caller captures local Media via {{domxref("MediaDevices.getUserMedia")}} </li>
  <li>The caller creates <code>RTCPeerConnection</code> and called {{domxref("RTCPeerConnection.addTrack()")}} (Since <code>addStream</code> is deprecating)</li>
  <li>The caller calls {{domxref("RTCPeerConnection.createOffer()")}} to create an offer.</li>
  <li>The caller calls {{domxref("RTCPeerConnection.setLocalDescription()")}} to set that offer as the <em>local description</em> (that is, the description of the local end of the connection).</li>
@@ -87,7 +87,7 @@ tags:
 
 <dl>
  <dt><code>host</code></dt>
- <dd>A host candidate is one for which its {{domxref("RTCIceCandidate/address", "ip")}} address is the actual, direct IP address of the remote peer.</dd>
+ <dd>A host candidate is one for which its {{domxref("RTCIceCandidate.address", "ip")}} address is the actual, direct IP address of the remote peer.</dd>
  <dt><code>prflx</code></dt>
  <dd>A peer reflexive candidate is one whose IP address comes from a symmetric NAT between the two peers, usually as an additional candidate during trickle ICE (that is, additional candidate exchanges that occur after primary signaling but before the connection verification phase is finished).</dd>
  <dt><code>srflx</code></dt>
