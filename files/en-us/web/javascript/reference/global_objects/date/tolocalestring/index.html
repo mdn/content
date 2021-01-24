@@ -2,12 +2,12 @@
 title: Date.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 tags:
-- Date
-- Internationalization
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - Date
+  - Internationalization
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 ---
 <div>{{JSRef}}</div>
 
@@ -38,7 +38,7 @@ tags:
   locale used and the form of the string returned are entirely implementation dependent.
 </p>
 
-<p>See the {{jsxref("DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}
+<p>See the {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}
   constructor for details on these parameters and how to use them.</p>
 
 <p>The default value for each date-time component property is {{jsxref("undefined")}}.
@@ -49,13 +49,6 @@ tags:
 <h3 id="Return_value">Return value</h3>
 
 <p>A string representing the given date according to language-specific conventions.</p>
-
-<h2 id="Performance">Performance</h2>
-
-<p>When formatting large numbers of dates, it is better to create an
-  {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} object and use the
-  function provided by its {{jsxref("DateTimeFormat.prototype.format", "format")}}
-  property.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -209,7 +202,7 @@ console.log(date.toLocaleString('en-US', { hour12: false }));
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li>{{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}</li>
+  <li>{{jsxref("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}}</li>
   <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
   <li>{{jsxref("Date.prototype.toLocaleTimeString()")}}</li>
   <li>{{jsxref("Date.prototype.toString()")}}</li>
