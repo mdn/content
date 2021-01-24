@@ -404,7 +404,7 @@ import { Triangle } from './modules/triangle.js';</pre>
 
 <h2 id="Dynamic_module_loading">Dynamic module loading</h2>
 
-<p>The newest part of the JavaScript modules functionality to be available in browsers is dynamic module loading. This allows you to dynamically load modules only when they are needed, rather than having to load everything up front. This has some obvious performance advantages; let's read on and see how it works.</p>
+<p>A recent addition to JavaScript modules functionality is dynamic module loading. This allows you to dynamically load modules only when they are needed, rather than having to load everything up front. This has some obvious performance advantages; let's read on and see how it works.</p>
 
 <p>This new functionality allows you to call {{JSxRef("Statements/import", "import()", "#Dynamic_Imports")}} as a function, passing it the path to the module as a parameter. It returns a {{JSxRef("Promise")}}, which fulfills with a module object (see <a href="#creating_a_module_object">Creating a module object</a>) giving you access to that object's exports, e.g.</p>
 
@@ -433,6 +433,71 @@ import { Triangle } from './modules/triangle.js';</pre>
 });</pre>
 
 <p>Note that, because the promise fulfillment returns a module object, the class is then made a subfeature of the object, hence we now need to access the constructor with <code>Module.</code> prepended to it, e.g. <code>Module.Square( ... )</code>.</p>
+
+<h3 id="Top_level_await">Top level await</h3>
+
+<p>The newest feature to appear in modules is top level await. This allows the await keyword to be used within modules. It lets them act as big <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">asynchronous functions</a> allowing code to be evaluated before use in parent modules, but without blocking sibling modules from loading.</p>
+
+<p>Let's take a look at an example. You can find all the files and code described in this section within the <code><a href="https://github.com/mdn/js-examples/tree/master/modules/top-level-await">top-level-await</a></code> directory, which extends from the previous examples.</p>
+
+<p>Firstly we'll declare our color palette in a separate <code><a href="https://github.com/mdn/js-examples/blob/master/modules/top-level-await/data/colors.json">colors.json</a></code> file:</p>
+
+
+<pre class="brush: js notranslate">
+{
+  "yellow": "#F4D03F",
+  "green": "#52BE80",
+  "blue": "#5499C7",
+  "red": "#CD6155",
+  "orange": "#F39C12"
+}
+</pre>
+
+<p>Then we'll create a module called <code><a href="https://github.com/mdn/js-examples/blob/master/modules/top-level-await/modules/getColors.js">getColors.js</a></code> which uses a fetch request to load the <code><a href="https://github.com/mdn/js-examples/blob/master/modules/top-level-await/data/colors.json">colors.json</a></code> file and return the data as an object.</p>
+
+<pre class="brush: js notranslate">
+// fetch request
+const colors = fetch('../data/colors.json')
+	.then(response => response.json());
+
+export default await colors;
+</pre>
+
+<p>Notice the last export line here.</p>
+
+<p>We're using the keyword <code>await</code> before specifying the constant <code>colors</code> to export. This means any other modules which include this one will wait until <code>colors</code> is ready/been fetched before using it.</p>
+
+<p>Let's include this module in our <code><a href="https://github.com/mdn/js-examples/blob/master/modules/top-level-await/main.js">main.js</a></code> file:</p>
+
+<pre class="brush: js notranslate">
+import colors from './modules/getColors.js';
+import { Canvas } from './modules/canvas.js';
+
+let circleBtn = document.querySelector('.circle');
+
+...
+
+</pre>
+
+<p>We'll use <code>colors</code> instead of the previously used strings when calling our shape functions:</p>
+
+<pre class="brush: js notranslate">
+...
+
+let square1 = new Module.Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, colors.blue);
+
+...
+
+let circle1 = new Module.Circle(myCanvas.ctx, myCanvas.listId, 75, 200, 100, colors.green);
+
+...
+
+let triangle1 = new Module.Triangle(myCanvas.ctx, myCanvas.listId, 100, 75, 190, colors.yellow);
+
+...
+</pre>
+
+<p>This is useful because the code within <code><a href="https://github.com/mdn/js-examples/blob/master/modules/top-level-await/main.js">main.js</a></code> won't execute until the code in <code><a href="https://github.com/mdn/js-examples/blob/master/modules/top-level-await/modules/getColors.js">getColors.js</a></code> has run. However it won't block other modules being loaded. For instance our <code><a href="https://github.com/mdn/js-examples/blob/master/modules/top-level-await/modules/canvas.js">canvas.js</a></code> module will continue to load whilst <code>colors</code> is being fetched.</p>
 
 <h2 id="Troubleshooting">Troubleshooting</h2>
 
