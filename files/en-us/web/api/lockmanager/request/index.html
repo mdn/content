@@ -121,7 +121,7 @@ tags:
 <p>To grab a lock only if it isn't already being held, use the <code>ifAvailable</code>
   option. In this function <code>await</code> means the method will not return until the
   callback is complete. Since the lock is only granted if it was available, this call
-  avoids needing to wait on the lock being released elsehwere.</p>
+  avoids needing to wait on the lock being released elsewhere.</p>
 
 <pre class="brush: js">await navigator.locks.request('my_resource', {ifAvailable: true}, async lock =&gt; {
   if (!lock) {
