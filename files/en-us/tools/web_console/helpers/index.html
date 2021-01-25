@@ -128,13 +128,13 @@ tags:
 
 <h3 id="Looking_at_the_contents_of_a_DOM_node">Looking at the contents of a DOM node</h3>
 
-<p>Let's say you have a DOM node with the ID "title". In fact, this page you're reading right now has one, so you can open up the Web Console and try this right now.</p>
+<p>Let's say you have a DOM node with the class "title". In fact, this page you're reading right now has one, so you can open up the Web Console and try this right now.</p>
 
 <p>Let's take a look at the contents of that node by using the <code>$()</code> and <code>inspect()</code> functions:</p>
 
-<pre class="brush: js; no-line-numbers notranslate">inspect($("#title"))</pre>
+<pre class="brush: js; no-line-numbers notranslate">inspect($(".title"))</pre>
 
-<p>This automatically generates rich output for the object, showing you the contents of the DOM node that matches the CSS selector <code>"#title"</code>, which is of course the element with ID <code>"title"</code>. You can use the up- and down-arrow keys to navigate through the output, the right-arrow key to expand an item, and the left-arrow key to collapse it.</p>
+<p>This automatically generates rich output for the object, showing you the contents of the first DOM node that matches the CSS selector <code>".title"</code>, which is of course the first element with class <code>"title"</code>. You can use the up- and down-arrow keys to navigate through the output, the right-arrow key to expand an item, and the left-arrow key to collapse it.</p>
 
 <h2 id="See_also">See also</h2>
 
