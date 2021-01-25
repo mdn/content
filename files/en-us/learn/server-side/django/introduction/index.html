@@ -62,8 +62,9 @@ tags:
 
 <p>Django has continued to grow and improve, from its first milestone release (1.0) in September 2008 through to the recently-released version 3.1 (2020). Each release has added new functionality and bug fixes, ranging from support for new types of databases, template engines, and caching, through to the addition of "generic" view functions and classes (which reduce the amount of code that developers have to write for a number of programming tasks). </p>
 
-<div class="note">
-<p><strong>Note</strong>: Check out <span style="line-height: 1.5;">the <a href="https://docs.djangoproject.com/en/stable/releases/">release notes</a> on the Django website to see what has changed in recent versions, and how much work is going into making Django better.</span></p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Check out <span style="line-height: 1.5;">the <a href="https://docs.djangoproject.com/en/stable/releases/">release notes</a> on the Django website to see what has changed in recent versions, and how much work is going into making Django better.</span></p>
 </div>
 
 <p>Django is now a thriving, collaborative open source project, with many thousands of users and contributors. While it does still have some features that reflect its origin<span style="line-height: 1.5;">, Django has evolved into a versatile framework that is capable of developing any type of website. </span></p>
@@ -92,7 +93,7 @@ tags:
 
 <p>Django web applications typically group the code that handles each of these steps into separate files:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13931/basic-django.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="basic-django.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <ul>
  <li><strong>URLs: </strong>While it is possible to process requests from every single URL via a single function, it is much more maintainable to write a separate view function to handle each resource. A URL mapper is used to redirect HTTP requests to the appropriate view based on the request URL. The URL mapper can also match particular patterns of strings or digits that appear in a URL and pass these to a view function as data.</li>
@@ -101,8 +102,9 @@ tags:
  <li><strong>Templates:</strong> A template is a text file defining the structure or layout of a file (such as an HTML page), with placeholders used to represent actual content. A <em>view</em> can dynamically create an HTML page using an HTML template, populating it with data from a <em>model</em>. A template can be used to define the structure of any type of file; it doesn't have to be HTML!</li>
 </ul>
 
-<div class="note">
-<p><strong>Note</strong>: Django refers to this organisation as the "Model View Template (MVT)" architecture. It has many similarities to the more familiar <a href="/en-US/docs/Glossary/MVC">Model View Controller</a> architecture. </p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Django refers to this organisation as the "Model View Template (MVT)" architecture. It has many similarities to the more familiar <a href="/en-US/docs/Glossary/MVC">Model View Controller</a> architecture. </p>
 </div>
 
 <p>The sections below will give you an idea of what these main parts of a Django app look like (we'll go into more detail later on in the course, once we've set up a development environment).</p>
@@ -142,13 +144,14 @@ def index(request):
     return HttpResponse('Hello from Django!')
 </pre>
 
-<div class="note">
-<p><strong>Note</strong>: A little bit of Python:</p>
-
-<ul>
- <li><a href="https://docs.python.org/3/tutorial/modules.html">Python modules</a> are "libraries" of functions, stored in separate files, that we might want to use in our code. Here we import just the <code>HttpResponse</code> object from the <code>django.http</code> module so that we can use it in our view: <code>from django.http import HttpResponse</code> . There are other ways of importing some or all objects from a module.</li>
- <li>Functions are declared using the <code>def</code> keyword as shown above, with named parameters listed in brackets after the name of the function; the whole line ends in a colon. Note how the next lines are all <strong>indented</strong>. The indentation is important, as it specifies that the lines of code are inside that particular block (mandatory indentation is a key feature of Python, and is one reason that Python code is so easy to read).</li>
-</ul>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>A little bit of Python:</p>
+  
+  <ul>
+    <li><a href="https://docs.python.org/3/tutorial/modules.html">Python modules</a> are "libraries" of functions, stored in separate files, that we might want to use in our code. Here we import just the <code>HttpResponse</code> object from the <code>django.http</code> module so that we can use it in our view: <code>from django.http import HttpResponse</code> . There are other ways of importing some or all objects from a module.</li>
+    <li>Functions are declared using the <code>def</code> keyword as shown above, with named parameters listed in brackets after the name of the function; the whole line ends in a colon. Note how the next lines are all <strong>indented</strong>. The indentation is important, as it specifies that the lines of code are inside that particular block (mandatory indentation is a key feature of Python, and is one reason that Python code is so easy to read).</li>
+  </ul>
 </div>
 
 <p>Views are usually stored in a file called <strong>views.py</strong>.</p>
@@ -175,14 +178,15 @@ class Team(models.Model):
     team_level = models.CharField(max_length=3, choices=TEAM_LEVELS, default='U11')
 </pre>
 
-<div class="note">
-<p><strong>Note</strong>: A little bit of Python:</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>A little bit of Python:</p>
 
-<ul>
- <li>Python supports "object-oriented programming", a style of programming where we organise our code into objects, which include related data and functions for operating on that data. Objects can also inherit/extend/derive from other objects, allowing common behavior between related objects to be shared. In Python we use the keyword <code>class</code> to define the "blueprint" for an object. We can create multiple specific <em>instances</em> of the type of object based on the model in the class.<br>
+  <ul>
+   <li>Python supports "object-oriented programming", a style of programming where we organise our code into objects, which include related data and functions for operating on that data. Objects can also inherit/extend/derive from other objects, allowing common behavior between related objects to be shared. In Python we use the keyword <code>class</code> to define the "blueprint" for an object. We can create multiple specific <em>instances</em> of the type of object based on the model in the class.<br>
   <br>
-  So for example, here we have a <code>Team</code> class, which derives from the <code>Model</code> class. This means it is a model, and will contain all the methods of a model, but we can also give it specialized features of its own too. In our model we define the fields our database will need to store our data, giving them specific names. Django uses these definitions, including the field names, to create the underlying database.</li>
-</ul>
+    So for example, here we have a <code>Team</code> class, which derives from the <code>Model</code> class. This means it is a model, and will contain all the methods of a model, but we can also give it specialized features of its own too. In our model we define the fields our database will need to store our data, giving them specific names. Django uses these definitions, including the field names, to create the underlying database.</li>
+  </ul>
 </div>
 
 <h3 id="Querying_data_views.py">Querying data (views.py)</h3>
