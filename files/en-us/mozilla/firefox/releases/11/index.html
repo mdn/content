@@ -78,7 +78,7 @@ trans1.put("1", "key");</pre>
  <li>Previous to Firefox 11, object store {{domxref("IDBObjectStore.autoIncrement","autoIncrement")}} counters were shared across all object stores for a given database, whereas per spec each object store should have a separate counter. This is now fixed.</li>
  <li>It is now possible to {{domxref("IDBObjectStore.createIndex","create an index")}} with an empty <code>keyPath</code>.</li>
  <li>It is now possible to create a multi-entry index (see <a href="/en-US/docs/Web/API/IDBObjectStore/createIndex#Parameters"><code>IDBObjectStore.createIndex</code> parameters</a>.)</li>
- <li>The {{event("abort")}} event now bubbles; in addition, an {{domxref("IDBDatabase.onabort")}} hander has been added.</li>
+ <li>The {{event("abort")}} event now bubbles; in addition, an {{domxref("IDBDatabase.onabort")}} handler has been added.</li>
  <li>IndexedDB can now be used to store files/blobs.</li>
  <li>IndexedDB now supports complex key paths, e.g. <code>foo.bar</code> to access property <code>bar</code> of property <code>foo</code>.</li>
  <li>IndexedDB can now accept an array as a <code>keyPath</code> when creating an {{domxref("IDBDatabase.createObjectStore()","object store")}} or an {{domxref("IDBObjectStore.createIndex()","index")}} ({{bug("694138")}}.)</li>
