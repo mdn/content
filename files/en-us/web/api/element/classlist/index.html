@@ -248,7 +248,7 @@ if (typeof DOMTokenList !== "function") (function(window){
     version of <code>classList</code> and the W3 specs is that for IE6-8, there is no way
     to create an immutable object (an object whose properties cannot be directly
     modified). In IE9, however, it is possible through extending the prototype, freezing
-    the visible object, and overwritting native property methods. However, such actions
+    the visible object, and overwriting native property methods. However, such actions
     would not work in IE6-IE8 and, in IE9, slow the performance of the entire webpage to a
     snail's crawl, making these modifications completely impractical for this polyfill.
 </p>
