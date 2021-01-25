@@ -138,7 +138,7 @@ if (typeof DOMTokenList !== "function") (function(window){
                 for(var innerI=0; innerI!==cI; ++innerI) if(tokens[innerI]===tokens[cI]) {sub++; continue a;}
                 resTokenList[cI-sub] = tokens[cI];
             }
-            for (var i=cLen-sub; i &lt; oldLen; ++i) delete resTokenList[i]; //remove trailing indexs
+            for (var i=cLen-sub; i &lt; oldLen; ++i) delete resTokenList[i]; //remove trailing indexes
             if(prop !== "classList") return;
             skipPropChange = 1, target.classList = resTokenList, target.className = strval;
             skipPropChange = 0, resTokenList.length = tokens.length - sub;
@@ -165,7 +165,7 @@ if (typeof DOMTokenList !== "function") (function(window){
                     for(var innerI=0; innerI!==cI; ++innerI) if(toks[innerI]===toks[cI]) {sub++; continue a;}
                     resTokenList[cI-sub] = toks[cI];
                 }
-                for (var i=cLen-sub; i &lt; oldLen; ++i) delete resTokenList[i]; //remove trailing indexs
+                for (var i=cLen-sub; i &lt; oldLen; ++i) delete resTokenList[i]; //remove trailing indexes
             }
         }); defineProperty(ele, " uCLp", { // for accessing the hidden prototype
             enumerable: 0, configurable: 0, writeable: 0, value: protoObj.prototype
