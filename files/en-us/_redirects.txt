@@ -7028,7 +7028,10 @@
 /en-US/docs/MDN/User_guide	/en-US/docs/MDN/Tools
 /en-US/docs/MDN/User_guide/Advanced_search	/en-US/docs/MDN/Tools/Search
 /en-US/docs/MDN/User_guide/Troubleshooting_KumaScript_errors	/en-US/docs/MDN/Tools/KumaScript/Troubleshooting
-/en-US/docs/MDN_at_ten/History	/en-US/docs/MDN_at_ten/History_of_MDN
+/en-US/docs/MDN_at_ten	/en-US/docs/MDN/At_ten
+/en-US/docs/MDN_at_ten/Contributing_to_MDN	/en-US/docs/MDN/At_ten/Contributing_to_MDN
+/en-US/docs/MDN_at_ten/History	/en-US/docs/MDN/At_ten/History_of_MDN
+/en-US/docs/MDN_at_ten/History_of_MDN	/en-US/docs/MDN/At_ten/History_of_MDN
 /en-US/docs/MODULE	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options
 /en-US/docs/MOZ_FS_LAYOUT	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options
 /en-US/docs/Mac_OS_X_Build_Prerequisites	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Prerequisites
