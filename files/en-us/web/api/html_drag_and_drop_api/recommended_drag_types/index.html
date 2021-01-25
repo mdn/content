@@ -85,7 +85,7 @@ dt.setData("text/plain", "Hello there, stranger");
 
 <h2 id="file">Dragging Files</h2>
 
-<p>A local file is dragged using the <code>application/x-moz-file</code> type with a data value that is an <a href="/en-US/docs/XPCOM_Interface_Reference/nsIFile">nsIFile</a> object. Non-privileged web pages canot retrieve or modify data of this type.</p>
+<p>A local file is dragged using the <code>application/x-moz-file</code> type with a data value that is an <a href="/en-US/docs/XPCOM_Interface_Reference/nsIFile">nsIFile</a> object. Non-privileged web pages cannot retrieve or modify data of this type.</p>
 
 <p>Because a file is not a string, you must use the {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} method to assign the data. Similarly, when retrieving the data, you must use the {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} method.</p>
 
