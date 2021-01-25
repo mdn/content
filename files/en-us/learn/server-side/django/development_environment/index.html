@@ -210,7 +210,7 @@ tags:
 
 <h2 id="Using_Django_inside_a_Python_virtual_environment">Using Django inside a Python virtual environment</h2>
 
-<p>The libraries we'll use for creating our virtual environments are <a href="https://virtualenvwrapper.readthedocs.io/en/latest/index.html">virtualenvwrapper</a> (Linux and macOS) and <a href="https://pypi.python.org/pypi/virtualenvwrapper-win">virtualenvwrapper-win</a> (Windows), which in turn both use the <a href="/en-US/docs/Python/Virtualenv">virtualenv</a> tool. The wrapper tools creates a consistent interface for managing interfaces on all platforms.</p>
+<p>The libraries we'll use for creating our virtual environments are <a href="https://virtualenvwrapper.readthedocs.io/en/latest/index.html">virtualenvwrapper</a> (Linux and macOS) and <a href="https://pypi.python.org/pypi/virtualenvwrapper-win">virtualenvwrapper-win</a> (Windows), which in turn both use the <a href="/en-US/docs/Mozilla/Virtualenv">virtualenv</a> tool. The wrapper tools creates a consistent interface for managing interfaces on all platforms.</p>
 
 <h3 id="Installing_the_virtual_environment_software">Installing the virtual environment software</h3>
 
@@ -220,15 +220,15 @@ tags:
 
 <p>Install the tool using <em>pip3</em>:</p>
 
-<pre class="brush: bash notranslate"><code>sudo pip3 install virtualenvwrapper</code></pre>
+<pre class="brush: bash notranslate">sudo pip3 install virtualenvwrapper</pre>
 
 <p>Then add the following lines to the end of your shell startup file (this is a hidden file name <strong>.bashrc</strong> in your home directory). These set the location where the virtual environments should live, the location of your development project directories, and the location of the script installed with this package:</p>
 
-<pre class="brush: bash notranslate"><code>export WORKON_HOME=$HOME/.virtualenvs
+<pre class="brush: bash notranslate">export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS=' -p /usr/bin/python3 '
 export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh</code>
+source /usr/local/bin/virtualenvwrapper.sh
 </pre>
 
 <div class="notecard note">
@@ -240,16 +240,16 @@ source /usr/local/bin/virtualenvwrapper.sh</code>
 
 <p>Then reload the startup file by running the following command in the terminal:</p>
 
-<pre class="brush: bash notranslate"><code>source ~/.bashrc</code></pre>
+<pre class="brush: bash notranslate">source ~/.bashrc</pre>
 
 <p>At this point you should see a bunch of scripts being run as shown below:</p>
 
-<pre class="brush: bash notranslate"><code>virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/premkproject
+<pre class="brush: bash notranslate">virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/premkproject
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/postmkproject
 ...
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/preactivate
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/postactivate
-virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/get_env_details</code>
+virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/get_env_details
 </pre>
 
 <p>Now you can create a new virtual environment with the <code>mkvirtualenv</code> command.</p>
@@ -260,14 +260,14 @@ virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/get_env_detail
 
 <p>Install <em>virtualenvwrapper</em> (and bundling <em>virtualenv</em>) using <em>pip</em> as shown.</p>
 
-<pre class="brush: bash notranslate"><code>sudo pip3 install virtualenvwrapper</code></pre>
+<pre class="brush: bash notranslate">sudo pip3 install virtualenvwrapper</pre>
 
 <p>Then add the following lines to the end of your shell startup file.</p>
 
-<pre class="brush: bash notranslate"><code>export WORKON_HOME=$HOME/.virtualenvs
+<pre class="brush: bash notranslate">export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh</code></pre>
+source /usr/local/bin/virtualenvwrapper.sh</pre>
 
 <div class="notecard note">
   <h4>Note</h4>
@@ -301,7 +301,7 @@ nano .bash_profile # Open the file in the nano text editor, within the terminal
 
 <p>Then reload the startup file by making the following call in the terminal:</p>
 
-<pre class="brush: bash notranslate"><code>source ~/.bash_profile</code></pre>
+<pre class="brush: bash notranslate">source ~/.bash_profile</pre>
 
 <p>At this point, you may see a bunch of scripts being run (the same scripts as for the Ubuntu installation). You should now be able to create a new virtual environment with the <code>mkvirtualenv</code> command.</p>
 
@@ -412,7 +412,7 @@ Quit the server with CONTROL-C.
 
 <p>Once the server is running you can view the site by navigating to the following URL on your local web browser: <code>http://127.0.0.1:8000/</code>. You should see a site that looks like this:</p>
 
-<p><img alt="The home page of the skeleton Django app." src="https://mdn.mozillademos.org/files/17430/Django_Skeleton_App_Homepage_-_Django_3.1.png" style="height: 693px; width: 1017px;"></p>
+<p><img alt="The home page of the skeleton Django app." src="django_skeleton_app_homepage_-_django_3.1.png"></p>
 
 <h2 id="Summary">Summary</h2>
 
