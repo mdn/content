@@ -366,7 +366,7 @@ DATABASES['default'].update(db_from_env)</pre>
 
 <p>Django will use our SQLite database locally by default, because the <code>DATABASE_URL</code> environment variable isn't set in our local environment. If you want to switch to Postgres completely and use our Heroku free tier database for both development and production then you can. For example, to install psycopg2 and its dependencies locally on a Debian-flavoured Linux system you would use the following Bash/terminal commands:</p>
 
-<pre class="brush: bash notranslate"><code>sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-contrib</code>
+<pre class="brush: bash notranslate">sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-contrib
 pip3 install psycopg2-binary
 </pre>
 
@@ -586,9 +586,9 @@ DJANGO_SECRET_KEY: eu09(ilk6@4sfdofb=b_2ht@vad*$ehh9-)3u_83+y%(+phh
 
 <p>We similarly set <code>DJANGO_DEBUG</code>:</p>
 
-<pre class="brush: bash notranslate">&gt; heroku config:set <code>DJANGO_DEBUG='False'
+<pre class="brush: bash notranslate">&gt; heroku config:set DJANGO_DEBUG='False'
 
-Setting DJANGO_DEBUG and restarting locallibrary... done, v8</code></pre>
+Setting DJANGO_DEBUG and restarting locallibrary... done, v8</pre>
 
 <p>If you visit the site now you'll get a "Bad request" error, because the <a href="https://docs.djangoproject.com/en/3.1/ref/settings/#allowed-hosts">ALLOWED_HOSTS</a> setting is <em>required</em> if you have <code>DEBUG=False</code> (as a security measure). Open <strong>/locallibrary/settings.py</strong> and change the <code>ALLOWED_HOSTS</code> setting to include your base app url (e.g. 'locallibrary1234.herokuapp.com') and the URL you normally use on your local development server.</p>
 
