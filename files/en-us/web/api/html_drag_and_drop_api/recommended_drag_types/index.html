@@ -191,7 +191,7 @@ dataProvider.prototype = {
 
        aTransferable.getTransferData('application/x-moz-file-promise-url', urlPrimitive, dataSize);
        var url = urlPrimitive.value.QueryInterface(Components.interfaces.nsISupportsString).data;
-       console.log("URL file orignal is = " + url);
+       console.log("URL file original is = " + url);
 
        var namePrimitive = {};
        aTransferable.getTransferData('<span class="p">application/x-moz-file-promise-dest-filename</span>', namePrimitive, dataSize);
