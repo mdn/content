@@ -307,7 +307,7 @@ tags:
  <dt>OBJID_TITLEBAR</dt>
  <dt>OBJID_VSCROLL</dt>
  <dt>OBJID_WINDOW</dt>
- <dd>[important, but implemented automatically by Microsoft Windows. Will return object of type ROLE_WINDOW. See <a href="#WindowFromAccessibleObject">WindowFromAccessibleObject quirk explanation</a> below.]</dd>
+ <dd>[important, but implemented automatically by Microsoft Windows. Will return object of type ROLE_WINDOW. See <a href="#windowfromaccessibleobject">WindowFromAccessibleObject quirk explanation</a> below.]</dd>
 </dl>
 
 <h2 id="Dealing_with_the_Quirks_of_MSAA"><a id="quirks">Dealing with the Quirks of MSAA</a></h2>
@@ -459,7 +459,7 @@ tags:
 
 <h3 id="MSAA_tree_vs._DOM_tree_-_what's_the_relationship">MSAA tree vs. DOM tree - what's the relationship?</h3>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/6227/tree-relativity.gif" style="border-style: solid; border-width: 1px; height: 506px; width: 696px;"></p>
+<p><img alt="" src="tree-relativity.gif" style="border-style: solid; border-width: 1px;"></p>
 
 <p>The MSAA tree and the DOM tree are parallel structures, although the MSAA tree is a subset of the DOM tree. <code>QueryInterface()</code> can be used to switch between the interfaces used in the two trees (IAccessible and ISimpleDOMNode). If there is no MSAA node for a DOM node, pAccessible-&gt;<code>QueryInterface(IID_IAccessible)</code> will return null.</p>
 
@@ -477,7 +477,7 @@ tags:
 
 <p>First, keep in mind that most MSAA events aren't utilized by accessibility aids. Therefore we implement only the handful that matter. See the <a href="#events">Events</a> cheat sheet above for the list of events we implement. By far the most important one is EVENT_OBJECT_FOCUS.</p>
 
-<p>When a potential accessibility-related event occurs within Mozilla, it is typically listened for by nsDocAccessible or nsRootAccessible. The event listeners on these classes call FireToolkitEvent(), which is implemented for every accessible. Eventually, the event ends up at nsDocAccessibleWrap::FireToolkitEvent() which calls NotifyWinEvent from the Win32 API. NotifyWinEvent is passed arguments for the window the event occurred in, and the ID of the child within that window. Accessibility aids use the Win32 call SetWinEventHook() to register as a listener for these events. Creating a unique child ID for every object within a window can be difficult, see the problem and solution for <a href="#Hacky_caret_tracking_not_working">no unique child ID for object in window</a>.</p>
+<p>When a potential accessibility-related event occurs within Mozilla, it is typically listened for by nsDocAccessible or nsRootAccessible. The event listeners on these classes call FireToolkitEvent(), which is implemented for every accessible. Eventually, the event ends up at nsDocAccessibleWrap::FireToolkitEvent() which calls NotifyWinEvent from the Win32 API. NotifyWinEvent is passed arguments for the window the event occurred in, and the ID of the child within that window. Accessibility aids use the Win32 call SetWinEventHook() to register as a listener for these events. Creating a unique child ID for every object within a window can be difficult, see the problem and solution for <a href="#hacky_caret_tracking_not_working">no unique child ID for object in window</a>.</p>
 
 <p>The assistive technology chooses which events it is interested in learning more about by calling the Win32 method AccessibleObjectFromEvent, which returns the IAccessible to the node corresponding to the child number that had been indicated from NotifyWinEvent(). This ends up asking nsDocAccessibleWrap::get_accChild() for a child IAccessible which matches the child ID we indicated through NotifyWinEvent().</p>
 
@@ -485,4 +485,4 @@ tags:
 
 <h2 id="Feedback"><a id="feedback">Feedback</a></h2>
 
-<p>How can this document be improved? Was it useful? Questions? This document is maintained by the Mozilla Accessibility Community; you can reach and give us feedback on the <a href="/en-US/docs/Accessibility">discussion list</a>!</p>
+<p>How can this document be improved? Was it useful? Questions? This document is maintained by the Mozilla Accessibility Community; you can reach and give us feedback on the <a href="/en-US/docs/Web/Accessibility">discussion list</a>!</p>
