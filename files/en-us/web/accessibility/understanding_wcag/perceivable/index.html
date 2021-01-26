@@ -33,28 +33,28 @@ tags:
   <tr>
    <td rowspan="5">1.1.1 Provide text equivalents  (A)</td>
    <td>All images that convey meaningful content should be given suitable alternative text.</td>
-   <td><a href="/en-US/docs/Learn/Accessibility/HTML#Text_alternatives">Text alternatives.</a></td>
+   <td><a href="/en-US/docs/Learn/Accessibility/HTML#text_alternatives">Text alternatives.</a></td>
   </tr>
   <tr>
    <td>Complex images or charts should have an accessible alternative provided, either on the same page or via a link. Use a regular link instead of a <code>longdesc</code> attribute.</td>
    <td>
-    <p>A text description may work, or an accessible data table (see <a href="/en-US/docs/Learn/HTML/Tables/Advanced">HTML table advanced features and accessibility</a>). See <a href="/en-US/docs/Learn/Accessibility/HTML#Other_text_alternative_mechanisms">Other text alternative mechanisms</a> for the argument against <code>longdesc</code>.</p>
+    <p>A text description may work, or an accessible data table (see <a href="/en-US/docs/Learn/HTML/Tables/Advanced">HTML table advanced features and accessibility</a>). See <a href="/en-US/docs/Learn/Accessibility/HTML#other_text_alternative_mechanisms">Other text alternative mechanisms</a> for the argument against <code>longdesc</code>.</p>
    </td>
   </tr>
   <tr>
    <td>Multimedia content (i.e., audio or video) should at least have a descriptive identification available, such as a caption or similar.</td>
    <td>
-    <p>See <a href="/en-US/docs/Learn/Accessibility/HTML#Text_alternatives">Text alternatives</a> for static caption options, and <a href="/en-US/docs/Learn/Accessibility/Multimedia#Audio_transcripts">Audio transcripts</a>, <a href="/en-US/docs/Learn/Accessibility/Multimedia#Video_text_tracks">Video text tracks</a>, and <a href="/en-US/docs/Learn/Accessibility/Multimedia#Other_multimedia_content">Other multimedia content</a> for other alternatives.</p>
+    <p>See <a href="/en-US/docs/Learn/Accessibility/HTML#text_alternatives">Text alternatives</a> for static caption options, and <a href="/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a>, <a href="/en-US/docs/Learn/Accessibility/Multimedia#video_text_tracks">Video text tracks</a>, and <a href="/en-US/docs/Learn/Accessibility/Multimedia#other_multimedia_content">Other multimedia content</a> for other alternatives.</p>
    </td>
   </tr>
   <tr>
    <td>UI controls such as form elements and buttons should have text labels that describe their purpose.</td>
-   <td>Buttons are simple—you should make sure the button text describes the function of the button (e.g., <code>&lt;button&gt;Upload image&lt;/button&gt;</code>). For more information on other UI controls, see <a href="/en-US/docs/Learn/Accessibility/HTML#UI_controls">UI controls</a>.</td>
+   <td>Buttons are simple—you should make sure the button text describes the function of the button (e.g., <code>&lt;button&gt;Upload image&lt;/button&gt;</code>). For more information on other UI controls, see <a href="/en-US/docs/Learn/Accessibility/HTML#ui_controls">UI controls</a>.</td>
   </tr>
   <tr>
    <td>Implement decorative (non-content) images, video, etc., in a way that is invisible to assistive technology, so it doesn't confuse users.</td>
    <td>
-    <p>Decorative images should be implemented using CSS background images (see <a href="/en-US/docs/Learn/CSS/Styling_boxes/Backgrounds">Backgrounds</a>).  If you have to include an image via an {{htmlelement("img")}} element, give it a blank alt (<code>alt=""</code>). Otherwise, screenreaders may try to read out the filepath, etc.</p>
+    <p>Decorative images should be implemented using CSS background images (see <a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Backgrounds</a>).  If you have to include an image via an {{htmlelement("img")}} element, give it a blank alt (<code>alt=""</code>). Otherwise, screenreaders may try to read out the filepath, etc.</p>
 
     <p>If you are including background video or audio that autoplays, make it as unobtrusive as possible. Don't make it look/sound like content, and provide a control to turn it off. Ideally, don't include it at all.</p>
    </td>
@@ -80,17 +80,17 @@ tags:
   <tr>
    <td>1.2.1 Provide alternatives for pre-recorded audio-only and video-only content (A)</td>
    <td>A transcript should be provided for prerecorded audio-only media, and a transcript or audio description should be provided for prerecorded video-only media (i.e., silent video).</td>
-   <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#Audio_transcripts">Audio transcripts</a> for transcript information. No audio description tutorial is available yet.</td>
+   <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a> for transcript information. No audio description tutorial is available yet.</td>
   </tr>
   <tr>
    <td>1.2.2 Provide captions for web-based video (A)</td>
    <td>You should provide captions for video presented on the web (e.g., HTML5 video). This is for the benefit of people who can't hear the audio part of the video.</td>
-   <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#Video_text_tracks">Video text tracks</a> for HTML5 video captions, and <a href="/en-US/docs/Learn/Accessibility/Multimedia#Other_multimedia_content">Other multimedia content</a> for other technologies. See also <a href="https://support.google.com/youtube/answer/2734796?hl=en">Add your own subtitles &amp; closed captions</a> (YouTube).</td>
+   <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#video_text_tracks">Video text tracks</a> for HTML5 video captions, and <a href="/en-US/docs/Learn/Accessibility/Multimedia#other_multimedia_content">Other multimedia content</a> for other technologies. See also <a href="https://support.google.com/youtube/answer/2734796?hl=en">Add your own subtitles &amp; closed captions</a> (YouTube).</td>
   </tr>
   <tr>
    <td>1.2.3 Provide text transcript or audio description for web-based video (A)</td>
    <td>You should provide text transcripts or audio descriptions for video presented on the web (e.g., HTML5 video. This is for the benefit of people who can't see the visual part of the video, and don't get the full content from the audio alone.</td>
-   <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#Audio_transcripts">Audio transcripts</a> for transcript information. No audio description tutorial is available yet.</td>
+   <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a> for transcript information. No audio description tutorial is available yet.</td>
   </tr>
   <tr>
    <td>1.2.4 Provide captions for live audio (AA)</td>
@@ -115,12 +115,12 @@ tags:
   <tr>
    <td>1.2.8 Provide an alternative for prerecorded media (AAA)</td>
    <td>For all content that features video, a descriptive text transcript should be provided, for example a script of the movie you are watching. This is for the benefit of hearing-impaired viewers who cannot hear the content.</td>
-   <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#Audio_transcripts">Audio transcripts</a> for transcript information.</td>
+   <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a> for transcript information.</td>
   </tr>
   <tr>
    <td>1.2.9 Provide a transcript for live audio (AAA)</td>
    <td>For any live audio content being broadcast, a descriptive text should be provided, for example a script of the play or musical you are listening to. This is for the benefit of hearing-impaired viewers who cannot hear the content.</td>
-   <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#Audio_transcripts">Audio transcripts</a> for transcript information.</td>
+   <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a> for transcript information.</td>
   </tr>
  </thead>
 </table>
@@ -152,7 +152,7 @@ tags:
     </ul>
    </td>
    <td>The whole of
-    <p><a href="/en-US/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a> is packed with information about this, but you should particularly refer to <a href="/en-US/docs/Learn/Accessibility/HTML#Good_semantics">Good semantics</a>, <a href="/en-US/docs/Learn/Accessibility/HTML#UI_controls">UI controls</a>, and <a href="/en-US/docs/Learn/Accessibility/HTML#Text_alternatives">Text alternatives</a>.</p>
+    <p><a href="/en-US/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a> is packed with information about this, but you should particularly refer to <a href="/en-US/docs/Learn/Accessibility/HTML#good_semantics">Good semantics</a>, <a href="/en-US/docs/Learn/Accessibility/HTML#ui_controls">UI controls</a>, and <a href="/en-US/docs/Learn/Accessibility/HTML#text_alternatives">Text alternatives</a>.</p>
    </td>
   </tr>
   <tr>
@@ -222,12 +222,12 @@ tags:
    <td>
     <p>Color should not be solely relied upon to convey information. For example, in forms, you should never mark required fields purely with a color (like red). Instead (or as well as), something like an asterisk with a label of "required" would be more appropriate.</p>
    </td>
-   <td>See <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color contrast</a> and <a href="/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form#Multiple_labels">Multiple labels</a>.</td>
+   <td>See <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast">Color and color contrast</a> and <a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form#multiple_labels">Multiple labels</a>.</td>
   </tr>
   <tr>
    <td>1.4.2 Audio controls (A)</td>
    <td>For any audio that plays for longer than three seconds, provide accessible controls to play and pause the audio/video, and mute/adjust volume.</td>
-   <td>Use native <code>&lt;button&gt;</code>s to provide accessible keyboard controls, as shown in <a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Video_player_styling_basics">Video player styling basics</a>.</td>
+   <td>Use native <code>&lt;button&gt;</code>s to provide accessible keyboard controls, as shown in <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics">Video player styling basics</a>.</td>
   </tr>
   <tr>
    <td>1.4.3 Minimum contrast (AA)</td>
@@ -239,7 +239,7 @@ tags:
      <li>Heading (or just larger) text should have a ratio of at least 3:1. Larger text is defined as at least 18pt, or 14pt bold.</li>
     </ul>
    </td>
-   <td>See <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color contrast</a>.</td>
+   <td>See <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast">Color and color contrast</a>.</td>
   </tr>
   <tr>
    <td>1.4.4 Resize text (AA)</td>
@@ -261,7 +261,7 @@ tags:
      <li>Heading (or just larger) text should have a ratio of at least 4.5:1. Larger text is defined as at least 18pt, or 14pt bold.</li>
     </ul>
    </td>
-   <td>See <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color contrast</a>.</td>
+   <td>See <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast">Color and color contrast</a>.</td>
   </tr>
   <tr>
    <td>1.4.7 Low or no background audio (AAA)</td>

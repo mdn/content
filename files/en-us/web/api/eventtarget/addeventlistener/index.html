@@ -2,22 +2,22 @@
 title: EventTarget.addEventListener()
 slug: Web/API/EventTarget/addEventListener
 tags:
-- API
-- AccessOuterData
-- DOM
-- Detecting Events
-- Event Handlers
-- Event Listener
-- EventTarget
-- JavaScript
-- Method
-- PassingData
-- Receiving Events
-- Reference
-- addEventListener
-- attachEvent
-- events
-- mselementresize
+  - API
+  - AccessOuterData
+  - DOM
+  - Detecting Events
+  - Event Handlers
+  - Event Listener
+  - EventTarget
+  - JavaScript
+  - Method
+  - PassingData
+  - Receiving Events
+  - Reference
+  - addEventListener
+  - attachEvent
+  - events
+  - mselementresize
 ---
 <p>{{APIRef("DOM Events")}}</p>
 
@@ -493,7 +493,7 @@ function nonePassiveHandler(event) {
 </pre>
 
 <p>As a reminder, <a
-    href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#No_separate_this">arrow
+    href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#no_separate_this">arrow
     functions do not have their own <code>this</code> context</a>.</p>
 
 <pre class="brush: js notranslate">my_element.addEventListener('click', (e) =&gt; {
@@ -622,7 +622,7 @@ myObject.register();</pre>
 <p>It may seem that event listeners are like islands, and that it is extremely difficult
   to pass them any data, much less to get any data back from them after they execute.
   Event listeners only take one argument, the <a
-    href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_objects">Event
+    href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_objects">Event
     Object</a>, which is automatically passed to the listener, and the return value is
   ignored. So how can we get data in and back out of them again? There are a number of
   good methods for doing this.</p>
@@ -653,15 +653,15 @@ myButton.addEventListener('click', function () {
 <p>When an outer scope contains a variable declaration (with <code>const</code>,
   <code>let</code>), all the inner functions declared in that scope have access to that
   variable (look <a
-    href="/en-US/docs/Glossary/Function#Different_types_of_functions">here</a> for
+    href="/en-US/docs/Glossary/Function#different_types_of_functions">here</a> for
   information on outer/inner functions, and <a
-    href="/en-US/docs/Web/JavaScript/Reference/Statements/var#Implicit_globals_and_outer_function_scope">here</a>
+    href="/en-US/docs/Web/JavaScript/Reference/Statements/var#implicit_globals_and_outer_function_scope">here</a>
   for information on variable scope). Therefore, one of the simplest ways to access data
   from outside of an event listener is to make it accessible to the scope in which the
   event listener is declared.</p>
 
 <pre class="brush: js notranslate">const myButton = document.getElementById('my-button-id');
-const someString = 'Data';
+let someString = 'Data';
 
 myButton.addEventListener('click', function() {
   console.log(someString);  // Expected Value: 'Data'
@@ -742,7 +742,7 @@ window.setInterval(function() {
 </h3>
 
 <p>In Internet Explorer versions before IE 9, you have to use
-  {{domxref("EventTarget.attachEvent", "attachEvent()")}}, rather than the standard
+  <code>attachEvent()</code>, rather than the standard
   <code>addEventListener()</code>. For IE, we modify the preceding example to:</p>
 
 <pre class="brush: js notranslate">if (el.addEventListener) {
@@ -984,7 +984,7 @@ window.addEventListener('scroll', function(event) {
 <p>On older browsers that don't support the <code>options</code> parameter to
   <code>addEventListener()</code>, attempting to use it prevents the use of the
   <code>useCapture</code> argument without proper use of <a
-    href="#Safely_detecting_option_support">feature detection</a>.</p>
+    href="#safely_detecting_option_support">feature detection</a>.</p>
 
 <p>You don't need to worry about the value of <code>passive</code> for the basic
   {{event("scroll")}} event. Since it can't be canceled, event listeners can't block page

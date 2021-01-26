@@ -47,7 +47,7 @@ tags:
 
 <pre class="brush: js">caches.has('v1').then(function(hasCache) {
   if (!hasCache) {
-    someCacheSetupfunction();
+    someCacheSetupFunction();
   } else {
     caches.open('v1').then(function(cache) {
       return cache.addAll(myAssets);

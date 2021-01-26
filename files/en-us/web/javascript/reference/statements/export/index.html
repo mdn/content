@@ -59,7 +59,7 @@ export * from …; // does not set the default export
 export * as name1 from …; // Draft ECMAScript® 2O21
 export { <var>name1</var>, <var>name2</var>, …, <var>nameN</var> } from …;
 export { <var>import1</var> as <var>name1</var>, <var>import2</var> as <var>name2</var>, …, <var>nameN</var> } from …;
-export { default } from …;</pre>
+export { default, … } from …;</pre>
 
 <dl>
   <dt><code><var>nameN</var></code></dt>
@@ -132,7 +132,7 @@ console.log(m);        // will log 12
 
 <pre class="brush: js notranslate">import { default as function1,
          function2 } from 'bar.js';
-export { function1, function2 };
+export { function1 as default, function2 };
 </pre>
 
 <p>But where <code>function1</code> and <code>function2</code> do not become available
@@ -151,6 +151,12 @@ export { function1, function2 };
 <p>The correct way of doing this is to rename the export:</p>
 
 <pre class="brush: js notranslate">export { default as DefaultExport } from 'bar.js';
+</pre>
+
+<p>The "export from" syntax allows the <code>as</code> token to be omitted; however
+  this will mean the default item cannot be imported as a named import:</p>
+
+<pre class="brush: js notranslate">export { default, function2 } from 'bar.js';
 </pre>
 
 <h2 id="Examples">Examples</h2>

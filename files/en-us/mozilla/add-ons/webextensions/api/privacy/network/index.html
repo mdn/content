@@ -35,6 +35,16 @@ tags:
   <li><code>proxy_only</code> (only connections using TURN on a TCP connection through a proxy are allowed)</li>
  </ul>
  </dd>
+ <dt><code>httpsOnlyMode</code></dt>
+<dd>
+  <p>This setting allows your extension to determine if a user has enabled
+  <a href="https://support.mozilla.org/kb/https-only-prefs"> HTTPS-Only mode</a>. This property is read-only on all platforms. Its underlying value is a string that may take one of three values:</p>
+  <ul>
+    <li><code>"always"</code>: HTTPS-Only mode is on.</li>
+    <li><code>"never"</code>: HTTPS-Only mode is off.</li>
+    <li><code>"private_browsing"</code>: HTTPS-Only mode is on in private browsing windows only.</li>
+  </ul>
+</dd>
 </dl>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
