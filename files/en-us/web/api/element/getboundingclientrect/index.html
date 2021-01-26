@@ -95,6 +95,8 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
+<h3 id="Basic">Basic</h3>
+
 <p>This simple example retrieves the <code>DOMRect</code> object representing the bounding
   client rect of a simple <code>&lt;div&gt;</code> element, and prints out its properties
   below it.</p>
@@ -119,7 +121,7 @@ for (var key in rect) {
   }
 }</pre>
 
-<p>{{EmbedLiveSample('Examples', '100%', 640)}}</p>
+<p>{{EmbedLiveSample('Basic', '100%', 640)}}</p>
 
 <p>Notice how the <code>width</code>/<code>height</code> are equal to its
   <code>width</code>/<code>height</code> + <code>padding</code>.</p>
@@ -128,6 +130,43 @@ for (var key in rect) {
   <code>y</code>/<code>top</code>, <code>right</code>, and <code>bottom</code> are equal
   to the absolute distance from the relevant edge of the viewport to that side of the
   element, in each case.</p>
+
+<h4 id="Scrolling">Scrolling</h4>
+<p>This example demonstrates how bounding client rect is changing when document is scrolled.</p>
+
+<pre class="brush: html notranslate">&lt;div&gt;&lt;/div&gt;</pre>
+
+<pre class="brush: css notranslate">div#example {
+  width: 400px;
+  height: 200px;
+  padding: 20px;
+  margin: 50px auto;
+  background: purple;
+}
+
+body { padding-bottom: 1000px; }
+p { margin: 0; }</pre>
+
+<pre class="brush: js notranslate">function update() {
+  const container = document.getElementById("controls");
+  const elem = document.querySelector('div');
+  const rect = elem.getBoundingClientRect();
+  
+  container.innerHTML = '';
+  for (let key in rect) {
+    if(typeof rect[key] !== 'function') {
+      let para = document.createElement('p');
+      para.textContent  = `${ key } : ${ rect[key] }`;
+      container.appendChild(para);
+    }
+  }
+}
+
+document.addEventListener('scroll', update);
+update();</pre>
+
+<p>{{EmbedLiveSample('Scrolling', '100%', 640)}}</p>
+
 
 <h2 id="Specifications">Specifications</h2>
 
