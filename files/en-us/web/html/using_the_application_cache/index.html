@@ -266,20 +266,20 @@ NETWORK:
 /api
 </pre>
 
-<p>The cache manifest section listed above ensures that requests to load resources contained in the <code><a href="http://www.example.com/api/" rel="freelink">http://www.example.com/api/</a></code> subtree always go to the network without attempting to access the cache.</p>
+<p>The cache manifest section listed above ensures that requests to load resources contained in the <code><a href="http://www.example.com/api/">http://www.example.com/api/</a></code> subtree always go to the network without attempting to access the cache.</p>
 
 <div class="note"><strong>Note</strong>: Omitting master entries (files that have the <code>manifest</code> attribute set in the <code>html</code> element) from the manifest file would not have the same result, because master entries will be added—and subsequently served from—the application cache.</div>
 
 <h3 id="Fallback_entries">Fallback entries</h3>
 
-<p>Fallback entries are used when an attempt to load a resource fails. For example, let's say the cache manifest file <code><a href="http://www.example.com/example.appcache" rel="freelink">http://www.example.com/example.appcache</a></code> includes the following content:</p>
+<p>Fallback entries are used when an attempt to load a resource fails. For example, let's say the cache manifest file <code><a href="http://www.example.com/example.appcache">http://www.example.com/example.appcache</a></code> includes the following content:</p>
 
 <pre class="eval notranslate">CACHE MANIFEST
 FALLBACK:
 example/bar/ example.html
 </pre>
 
-<p>Any request to <code><a href="http://www.example.com/example/bar/" rel="freelink">http://www.example.com/example/bar/</a></code> or any of its subdirectories and their content cause the browser to issue a network request to attempt to load the requested resource. If the attempt fails, due to either a network failure or a server error of some kind, the browser loads the file <code>example.html</code> instead.</p>
+<p>Any request to <code><a href="http://www.example.com/example/bar/">http://www.example.com/example/bar/</a></code> or any of its subdirectories and their content cause the browser to issue a network request to attempt to load the requested resource. If the attempt fails, due to either a network failure or a server error of some kind, the browser loads the file <code>example.html</code> instead.</p>
 
 <h2 id="Cache_states">Cache states</h2>
 
