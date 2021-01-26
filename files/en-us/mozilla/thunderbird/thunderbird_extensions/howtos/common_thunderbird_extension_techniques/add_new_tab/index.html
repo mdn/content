@@ -1,0 +1,14 @@
+---
+title: Add New Tab
+slug: >-
+  Mozilla/Thunderbird/Thunderbird_extensions/HowTos/Common_Thunderbird_Extension_Techniques/Add_New_Tab
+tags:
+  - missing
+  - thunderbird
+---
+<p>{{AddonSidebar}}</p>
+
+<pre class="brush: js">var aURL = "chrome://myext/mytab.xul";
+let tabmail = getMail3Pane().document.getElementById("tabmail");
+tabmail.openTab("chromeTab", { chromePage: aUrl });
+</pre>

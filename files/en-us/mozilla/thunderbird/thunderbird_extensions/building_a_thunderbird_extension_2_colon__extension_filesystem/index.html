@@ -1,0 +1,34 @@
+---
+title: 'Building a Thunderbird extension 2: extension file layout'
+slug: >-
+  Mozilla/Thunderbird/Thunderbird_extensions/Building_a_Thunderbird_extension_2:_extension_filesystem
+tags:
+  - Extensions
+  - thunderbird
+---
+<p>{{AddonSidebar}}</p>
+
+<p>{{ warning("This content is for older versions of Thunderbird. Much of it may no longer be relevant. See developer.thunderbird.net for newer information.") }}</p>
+
+<p>Extensions are packaged and distributed in archive files (also known as <a href="../../../../en/Bundles" rel="internal">Bundles</a>), with the <code>XPI</code> (<em>pronounced “zippy”</em>) file extension. At a minimum, they contain an <strong>install.rdf</strong>, the <strong>chrome.manifest</strong> and a <strong>chrome/</strong> folder. A <strong>content/</strong> folder sometimes contains the actual content files. These files contain the code that makes your extension actually do something. When this tutorial is finished, our extension will look like this:</p>
+
+<pre class="eval">myfirstext.xpi:                                //created in step 8
+              /install.rdf                     //created in step 3
+              /chrome.manifest                 //created in step 4
+              /chrome/
+              /content/
+              /content/myhelloworld.xul        //created in step 5
+              /content/overlay.js              //created in step 6
+              /chrome/locale/*                 //Building an Extension# <a href="/en/Building_an_Extension#Localization" title="https://developer.mozilla.org/en/Building_an_Extension#Localization">Localization</a>
+              /chrome/skin/
+              /defaults/preferences/           //Building an Extension# <a href="/en/Building_an_Extension#Defaults_Files" title="https://developer.mozilla.org/en/Building_an_Extension#Defaults_Files">Defaults Files</a>
+</pre>
+
+<p>The following tutorial pages will explain how to write each of these files (except <strong>locale/</strong> and <strong>defaults/</strong>) and package them into an XPI (zippy) file. You can find  information about the <strong>locale/</strong> and <strong>defaults/</strong> folders in the more general "<a href="/en/Building_an_Extension" title="en/Building an Extension"><strong>Building an Extension</strong></a>" documentation.</p>
+
+<p>To start with the tutorial, manually create the initial directory structure for the extension as it is depicted above in a folder called <strong><code>myfirstext@jen.zed</code></strong>. This directory could be created anywhere on your filesystem.</p>
+
+<p><br>
+ {{ Previous("Building_a_Thunderbird_extension") }}</p>
+
+<p>{{ Next("Extensions/Thunderbird/Building_a_Thunderbird_extension_3:_install_manifest") }}</p>

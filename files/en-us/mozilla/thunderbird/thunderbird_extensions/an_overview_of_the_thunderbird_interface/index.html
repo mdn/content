@@ -1,0 +1,439 @@
+---
+title: An overview of Thunderbird components
+slug: >-
+  Mozilla/Thunderbird/Thunderbird_extensions/An_overview_of_the_Thunderbird_interface
+tags:
+  - thunderbird
+---
+<section class="Quick_links" id="Quick_Links">
+  <ol>
+    <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions"><strong>Browser extensions</strong></a></li>
+    <li class="toggle">
+      <details>
+        <summary>Getting started</summary>
+        <ol>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions">What are extensions?</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension">Your first extension</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension">Your second extension</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">Anatomy of an extension</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples">Example extensions</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next_">What next?</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>Concepts</summary>
+        <ol>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Using_the_JavaScript_APIs">Using the JavaScript APIs</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">Content scripts</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">Match patterns</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_files">Working with files</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization">Internationalization</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Security_best_practices">Security best practices</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Content Security Policy</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">Native messaging</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>User interface</summary>
+        <ol>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface">User Interface</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">Toolbar button</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions">Address bar button</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars">Sidebars</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items">Context menu items</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">Options page</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">Extension pages</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications">Notifications</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox">Address bar suggestions</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels">Developer tools panels</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>How to</summary>
+        <ol>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests">Intercept HTTP requests</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page">Modify a web page</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page">Insert external content</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar">Add a button to the toolbar</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page">Implement a settings page</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API">Work with the Tabs API</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API">Work with the Bookmarks API</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_the_Cookies_API">Work with the Cookies API</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities">Work with contextual identities</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/onboarding_upboarding_offboarding_best_practices">Onboard, upboard, and offboard users</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>Porting</summary>
+        <ol>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Firefox_differentiators">Firefox differentiators</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension">Porting a Google Chrome extension</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on">Porting a legacy Firefox extension</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions">Embedded WebExtensions</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK">Comparison with the Add-on SDK</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_XUL_XPCOM_extensions">Comparison with XUL/XPCOM extensions</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations">Differences between API implementations</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities">Chrome incompatibilities</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Differences_between_desktop_and_Android">Differences between desktop and Android</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>Firefox workflow</summary>
+        <ol>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Development_Tools">Developer tools</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/User_experience_best_practices">User Experience</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">Temporary Installation in Firefox</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Debugging">Debugging</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Testing_persistent_and_restart_features">Testing persistent and restart features</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Firefox_for_Android">Developing for Firefox for Android</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">Getting started with web-ext</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/web-ext_command_reference">web-ext command reference</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID">Extensions and the Add-on ID</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Request_the_right_permissions">Request the right permissions</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>JavaScript APIs</summary>
+        <ol><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">Browser support for JavaScript APIs</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms">alarms</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks">bookmarks</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browserAction</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings">browserSettings</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData">browsingData</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/clipboard">clipboard</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/commands">commands</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contentScripts">contentScripts</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities">contextualIdentities</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies">cookies</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow">devtools.inspectedWindow</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network">devtools.network</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels">devtools.panels</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/dns">dns</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads">downloads</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/events">events</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension">extension</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extensionTypes">extensionTypes</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/find">find</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history">history</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n">i18n</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/identity">identity</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/idle">idle</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management">management</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus">menus</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications">notifications</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox">omnibox</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction">pageAction</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions">permissions</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11">pkcs11</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy">privacy</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy">proxy</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime">runtime</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/search">search</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions">sessions</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction">sidebarAction</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs">tabs</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme">theme</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/topSites">topSites</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types">types</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation">webNavigation</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest">webRequest</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows">windows</a></li></ol>
+      </details>
+    </li>
+
+    <li class="toggle">
+      <details>
+      <summary>Manifest keys</summary>
+      <ol><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author">author</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background">background</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides">chrome_settings_overrides</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides">chrome_url_overrides</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands">commands</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy">content_security_policy</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale">default_locale</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description">description</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer">developer</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page">devtools_page</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url">homepage_url</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/incognito">incognito</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name">name</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/offline_enabled">offline_enabled</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox">omnibox</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions">optional_permissions</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_page">options_page</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers">protocol_handlers</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/short_name">short_name</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebar_action</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme">theme</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version">version</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version_name">version_name</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a></li></ol>
+      </details>
+    </li>
+
+    <li><a href="/en-US/docs/Mozilla/Add-ons/Themes"><strong>Themes</strong></a></li>
+    <li class="toggle">
+      <details>
+        <summary>Browser themes</summary>
+        <ol>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/Themes/Theme_concepts">Browser theme concepts</a></li>
+        </ol>
+      </details>
+    </li>
+    <li><a href="/en-US/docs/Mozilla/Add-ons/Distribution"><strong>Publishing and Distribution</strong></a></li>
+    <li class="toggle">
+      <details>
+        <summary>Publishing add-ons</summary>
+        <ol>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/Distribution">Signing and distribution overview</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Package_your_extension_">Package your extension</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on">Submit an add-on</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/Source_Code_Submission">Source code submission</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/Distribution/Resources_for_publishers">Resources for publishers</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/Listing">Creating an appealing listing</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/Distribution/Make_money_from_browser_extensions">Make money from browser extensions</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/Distribution/Promoting_your_extension_or_theme">Promoting your extension or theme</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/AMO/Policy/Reviews">Review policies</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/AMO/Policy/Agreement">Developer agreement</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/AMO/Policy/Featured">Featured add-ons</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/Distribution/Retiring_your_extension">Retiring your extension</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>Distributing add-ons</summary>
+        <ol>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_distribution_options/Sideloading_add-ons">For sideloading</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_distribution_options/Add-ons_for_desktop_apps">For desktop apps</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_distribution_options/Add-ons_in_the_enterprise">For an enterprise</a></li>
+        </ol>
+      </details>
+    </li>
+    <li><a href="https://discourse.mozilla.org/c/add-ons"><strong>Community and Support</strong></a></li>
+    <li class="toggle">
+      <details>
+        <summary>Channels</summary>
+        <ol>
+          <li><a href="https://blog.mozilla.org/addons">Add-ons blog</a></li>
+          <li><a href="https://discourse.mozilla.org/c/add-ons">Add-on forums</a></li>
+          <li><a href="http://stackoverflow.com/questions/tagged/firefox-addon">Stack Overflow</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/#Contact_us">Contact us</a></li>
+        </ol>
+      </details>
+    </li>
+  </ol>
+</section>
+
+<div class="blockIndicator standardNote">
+<p>This content covers features introduced in <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a></p>
+</div>
+
+<div class="blockIndicator draft">
+    <p><strong>Draft</strong><br>
+    This page is not complete.</p>
+
+</div>
+
+<p>The Thunderbird mail application is a group of components built on a set of technologies that can seem daunting to new developers. However, in many cases you only need to learn a few concepts to write an extension.</p>
+
+<p>The purpose of this article is to:</p>
+
+<ul>
+ <li>describe the Thunderbird user interface and provide the standard terms for interface elements</li>
+ <li>discuss some example modifications that could be made via Thunderbird extensions</li>
+ <li>introduce some of the APIs that are most commonly used by extension developers</li>
+</ul>
+
+<p>To dive right in, see <a class="internal" href="/En/Building_a_Thunderbird_extension" rel="external nofollow" title="En/Building a Thunderbird extension">Building a Thunderbird extension</a> or the <a class="internal" href="/en/Extensions" title="En/Extensions">general information</a> about development tools and environment. To read the notes embedded in the Thunderbird source code, check out <a class="external" href="https://dxr.mozilla.org/comm-central/source/" title="http://mxr.mozilla.org/comm-central/source/">comm-central</a>.</p>
+
+<p>(There are some UML <a class="link-https" href="https://wiki.mozilla.org/User:Emre/tb/architecture/diagrams" title="https://wiki.mozilla.org/User:Emre/tb/architecture/diagrams">diagrams of Thunderbird's underlying architecture</a>. However, their complexity means they are generally beyond what is needed by extension developers. Also, there is some documentation on the <a class="link-https" href="https://wiki.mozilla.org/Thunderbird:Activity_Manager" title="https://wiki.mozilla.org/Thunderbird:Activity_Manager">Activity Manager</a> (which displays events and process activity to the user) but these are also probably beyond the scope of extension developers' needs.)</p>
+
+<h2 id="Background_-_the_big_picture">Background - the big picture</h2>
+
+<h3 id="Message_flow">Message flow</h3>
+
+<h4 id="What_happens_to_incoming_messages">What happens to incoming messages?</h4>
+
+<ol>
+ <li>establish connection with server (via Accounts and the Login Manager)</li>
+ <li>validate user credentials</li>
+ <li>...</li>
+</ol>
+
+<h4 id="What_happens_to_outgoing_messages">What happens to outgoing messages?</h4>
+
+<ol>
+ <li>user composes the message</li>
+ <li>Thunderbird establishes connection with server (link to Accounts section)</li>
+ <li>...</li>
+</ol>
+
+<p><strong>TODO</strong></p>
+
+<h2 id="Accounts">Accounts</h2>
+
+<p>Thunderbird users usually configure several accounts. (In the Thunderbird code and documentation, accounts are also referred to as "servers".) There are accounts for incoming mail messages (POP and IMAP, and Gmail and .Mac services); accounts for outgoing messages (SMTP); and accounts for incoming and outgoing newsgroup messages (NNTP). Users can also configure accounts for syndicated news and blogs (RSS). After they have been created, accounts are displayed as top-level containers in the Folder pane. (The <a class="internal" href="/en/MailNews_Protocols" title="En/MailNews Protocols">MailNews Protocols</a> article discusses Thunderbird's implementation of these protocols.)</p>
+
+<p>Accounts are created and configured in the Account Manager (Tools | Account Settings).</p>
+
+<p><img alt="" src="TODO"></p>
+
+<h3 id="Related_interfaces">Related interfaces</h3>
+
+<p>See the <a class="internal" href="/en/Thunderbird/Account_interfaces" rel="internal" title="en/Thunderbird/Account interfaces">Accounts interfaces page</a> for a description of related interfaces. </p>
+
+<p>Alternatively, view the source code in the Mozilla Cross-Reference:<a href="/en/Thunderbird/Account_interfaces#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></p>
+
+<ul>
+ <li><code><a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/public/nsIMsgAccountManager.idl" rel="internal" title="http://mxr.mozilla.org/comm-central/source/mailnews/base/public/nsIMsgAccountManager.idl">nsIMsgAccountManager</a></code></li>
+ <li><code><a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/public/nsIMsgAccount.idl" rel="internal" title="http://mxr.mozilla.org/comm-central/source/mailnews/base/public/nsIMsgAccount.idl">nsIMsgAccount</a></code></li>
+ <li><code><a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/public/nsIMsgIncomingServer.idl" rel="internal" title="http://mxr.mozilla.org/comm-central/source/mailnews/base/public/nsIMsgIncomingServer.idl">nsIMsgIncomingServer</a></code></li>
+ <li><code><a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/public/nsIMsgIdentity.idl" rel="internal" title="http://mxr.mozilla.org/comm-central/source/mailnews/base/public/nsIMsgIdentity.idl">nsIMsgIdentity </a></code></li>
+ <li><code><a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/public/nsIMsgProtocolInfo.idl" rel="internal" title="http://mxr.mozilla.org/comm-central/source/mailnews/base/public/nsIMsgProtocolInfo.idl">nsIMsgProtocolInfo</a></code></li>
+</ul>
+
+<h3 id="Things_extensions_can_do_with_accounts">Things extensions can do with accounts</h3>
+
+<ul>
+ <li><a class="internal" href="/en/Thunderbird/Account_examples#Iterate_over_all_known_accounts" title="en/Thunderbird/Account examples#Iterate over all known accounts">iterate over all known accounts</a></li>
+ <li><a class="internal" href="/en/Thunderbird/Account_examples#Introspect_the_details_of_particular_accounts_%28names.2c_parameters.2c_etc.%29" title="en/Thunderbird/Account examples#Introspect the details of particular accounts (names.2c parameters.2c etc.)">introspect the details of particular accounts (names, parameters, etc.)</a></li>
+ <li><a class="internal" href="/en/Thunderbird/Account_examples#Iterate_over_the_folders_in_an_account" title="en/Thunderbird/Account examples#Iterate over the folders in an account">iterate over the folders in an account</a></li>
+</ul>
+
+<h2 id="Login_Manager">Login Manager</h2>
+
+<p>The Login Manager is a component shared by Thunderbird and Firefox that stores username / password combinations in encrypted format. Refer to the <a class="internal" href="/en/XPCOM_Interface_Reference/nsILoginManager/Using_nsILoginManager" title="En/Using nsILoginManager">Using nsILoginManager</a> article for more information about this component.</p>
+
+<h3 id="Related_interfaces_2">Related interfaces</h3>
+
+<p>View the source code in the Mozilla Cross-Reference:<a href="/en/Thunderbird/Account_interfaces#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></p>
+
+<ul>
+ <li><code><a class="internal" href="/En/NsILoginManager" rel="internal" title="En/NsILoginManager">nsILoginManager</a></code></li>
+ <li><code><a class="internal" href="/En/NsILoginInfo" rel="internal" title="En/NsILoginInfo">nsILoginInfo</a></code></li>
+</ul>
+
+<p><strong>TODO</strong></p>
+
+<h2 id="Folder_pane">Folder pane</h2>
+
+<p>The folder pane is displayed by default on the left side of the Thunderbird interface.</p>
+
+<p>When Thunderbird is installed it creates the "Local Folders" container. When users create mail accounts, they can elect to store the messages either in the "Local Folders" container or in a top-level container specific to the account. (This allows messages from multiple POP3 accounts to be optionally aggregated into a single container.) Therefore, the folder pane will show the "Local Folders" container, any mail accounts that were configured to use their own top-level container, and any RSS or newsgroup account.</p>
+
+<p>Users can create folders beneath top-level containers (except for newsgroups accounts). Folders can contain other folders and / or messages.</p>
+
+<p>Folders are a key data structure in Thunderbird. Thunderbird uses one  database per folder (<code>nsIMsgDbFolder</code>), which is designed to optimize folder performance. These databases store information from the message header, so lists of messages in folders can be displayed and sorted very quickly, even if the messages themselves are large. (These headers are <code>nsIMsgDbHdr</code> objects.) Each folder also has a database called the "off-line cache" that stores the complete messages (including headers, bodies and attachments) that have already been downloaded from the server.</p>
+
+<p>(See also the section on <a class="internal" href="/en/Extensions/Thunderbird/An_overview_of_the_Thunderbird_interface#gloda" title="En/Extensions/Thunderbird/An overview of the Thunderbird interface#gloda">Gloda</a>, which is a multi-folder database introduced in Thunderbird 3.)</p>
+
+<p>Users can create folders that contain messages that match specific search criteria. These are called "virtual folders" or "saved searches".</p>
+
+<p>Smart folders aggregate similar types of messages from POP3 and IMAP accounts, so that, for example, a single inbox contains messages from the inboxes of all configured accounts. To access smart folders, use the arrows at the top of the folder panel.</p>
+
+<h3 id="Related_interfaces_3">Related interfaces</h3>
+
+<p>The <a class="internal" href="/en/Thunderbird/Folder_pane_interfaces" title="en/Thunderbird/Folder pane interfaces">Folder pane interfaces page</a> describes the relevant interfaces.</p>
+
+<p>Alternatively, view the source code in the Mozilla Cross-Reference:<a href="/en/Thunderbird/Account_interfaces#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></p>
+
+<ul>
+ <li><code><a class="internal" href="../../../../en/nsIMsgDatabase" rel="internal">nsIMsgDatabase</a></code>: an abstract interface used to access the mail database backend</li>
+ <li><code><a class="internal" href="../../../../en/nsIMsgFolder" rel="internal">nsIMsgFolder</a>: </code>an interface used to interact with folders</li>
+ <li><code>nsIMsgDbFolder?</code></li>
+ <li><code>off-line cache IDL?</code></li>
+</ul>
+
+<h3 id="Things_extensions_can_do_with_folders">Things extensions can do with folders</h3>
+
+<ul>
+ <li>Iterate over all messages in a folder?</li>
+ <li>Extension to write a new folderpane mode</li>
+ <li><a class="internal" href="/en/Extensions/Thunderbird/Adding_items_to_the_Folder_Pane" title="En/Extensions/Thunderbird/Adding items to the Folder Pane">Add items to the Folder Pane </a></li>
+ <li><a class="internal" href="/en/Extensions/Thunderbird/Adding_views_to_the_Folder_Pane" title="En/Extensions/Thunderbird/Adding views to the Folder Pane">Add views to the Folder Pane</a></li>
+</ul>
+
+<p><strong>TODO</strong></p>
+
+<ul>
+ <li>smart folders (when done)</li>
+ <li>Update the related interfaces list and expand the description on the <a class="internal" href="/en/Thunderbird/Folder_pane_interfaces" title="en/Thunderbird/Folder pane interfaces">Folder pane interfaces page</a></li>
+ <li>write "Iterate over all messages in a folder" example</li>
+ <li>write "<a class="internal" href="/en/Extensions/Thunderbird/Adding_views_to_the_Folder_Pane" title="En/Extensions/Thunderbird/Adding views to the Folder Pane">Add views to the Folder Pane</a>" example (link is for a stub page)</li>
+ <li>extension to write a new folderpane mode</li>
+</ul>
+
+<h2 id="Message_list">Message list</h2>
+
+<p>The message list is displayed by default on the top right area of the Thunderbird interface. It summarizes (in column form) all the messages in the selected folder.</p>
+
+<h3 id="Related_interfaces_4">Related interfaces</h3>
+
+<p>See <a class="internal" href="/en/Thunderbird/Message_list_interfaces" title="en/Thunderbird/Message list interfaces">Message list interfaces</a> for a description of the related interfaces.</p>
+
+<h3 id="Things_extensions_can_do_with_the_message_list">Things extensions can do with the message list</h3>
+
+<ul>
+ <li><a class="internal" href="/en/Extensions/Thunderbird/Creating_a_Custom_Column" title="en/Extensions/Thunderbird/Creating a Custom Column">Creating a custom column in the message list</a></li>
+</ul>
+
+<p><strong>TODO</strong></p>
+
+<ul>
+ <li>expand description - what is relevant or interesting to extension developers?</li>
+ <li>validate text and interface list</li>
+ <li>include quick search?</li>
+ <li>does "<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=454829" title="https://bugzilla.mozilla.org/show_bug.cgi?id=454829">Collapsed threads and multiple selections</a>"  need to be described here?</li>
+ <li><a class="internal" href="/en/Thunderbird/Message_list_interfaces" title="en/Thunderbird/Message list interfaces">Message list interface</a></li>
+ <li>more examples (added above and on <a class="internal" href="/en/Thunderbird/Message_list_examples" title="en/Thunderbird/Message list examples">the examples page</a>)</li>
+ <li>update <a class="internal" href="/en/Extensions/Thunderbird/Creating_a_Custom_Column" title="en/Extensions/Thunderbird/Creating a Custom Column">Creating a custom column in the message list</a></li>
+</ul>
+
+<h2 id="Message_window">Message window</h2>
+
+<p>The contents of the message selected in the message list are displayed in the message window. Alternatively, messages can be displayed in a tab or in a separate window.</p>
+
+<p>Message headers are meta information about an email message. They consist of name / value pairs. Message headers are defined in <a class="external" href="http://www.iana.org/assignments/message-headers/perm-headers.html" title="http://www.iana.org/assignments/message-headers/perm-headers.html">several RFCs</a>. User agents can also create custom headers, as long as they adhere to the definition in the RFC. By default, Thunderbird displays a subset of a message's headers (the "from" address, subject, recipient, etc) above the body of the message.</p>
+
+<p>As of Thunderbird 3.0, the compact message header view (which allowed the user to reduce the size of the message header to a single line) was removed from the Thunderbird core. That means that the only view is the default, which shows a number of message headers and several icons (reply, forward, etc). Message header display can be customized via extensions (for example, the <a class="link-https" href="https://addons.mozilla.org/en-US/thunderbird/addon/14369" title="https://addons.mozilla.org/en-US/thunderbird/addon/14369">Header Design Inc</a> and the <a class="link-https" href="https://addons.mozilla.org/en-US/thunderbird/addon/13564" title="https://addons.mozilla.org/en-US/thunderbird/addon/13564">Compact Header</a> extensions).</p>
+
+<h3 id="Related_interfaces_5">Related interfaces</h3>
+
+<p>See the <a class="internal" href="/en/Thunderbird/Message_interfaces" title="en/Thunderbird/Message interfaces">Message interfaces page</a> for a description of the related interfaces.</p>
+
+<p>Alternatively, view the source code in the Mozilla Cross-Reference:<a href="/en/Thunderbird/Account_interfaces#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></p>
+
+<ul>
+ <li><a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/public/nsIMsgHdr.idl" rel="external nofollow" title="http://mxr.mozilla.org/comm-central/source/mailnews/base/public/nsIMsgHdr.idl">nsIMsgHdr</a></li>
+</ul>
+
+<p><img alt="" src="TODO"></p>
+
+<h3 id="Things_extensions_can_do_with_message_headers">Things extensions can do with message headers</h3>
+
+<ul>
+ <li><a class="internal" href="/en/Thunderbird/Message_examples#Create_a_custom_message_header" title="en/Thunderbird/Message examples#Create a custom message header">create a custom message header</a></li>
+</ul>
+
+<p><strong>TODO</strong></p>
+
+<ul>
+ <li>expand description - what is relevant or interesting to extension developers?</li>
+ <li>validate text and interface list</li>
+ <li>more examples, listed above and on the <a class="internal" href="/en/Thunderbird/Message_examples" title="en/Thunderbird/Message examples">Message example page</a></li>
+</ul>
+
+<h2 id="Address_Book">Address Book</h2>
+
+<p>Thunderbird's main address book management functions are built on a few key concepts:</p>
+
+<ul>
+ <li>A <strong>Contact</strong> is an entry corresponding to a person (or the equivalent, for example the address for a group), including email address, first and last name, phone number, etc.</li>
+ <li>A <strong>List</strong> is a set of email addresses that can be referred to with a single nickname. For example, a user might group all the members of their work team under the List name "Team". The user could then send a message to all the addresses included in the List by specifying the list name as the message recipient.</li>
+ <li>An <strong>Address Book</strong> is a collection of contacts and lists. By default, Thunderbird creates two address books: a user-defined address book (which is manually maintained by the user), and a "Collected address" book (where Thunderbird stores the addresses of recipients of messages to which users apply. On Macintosh systems, there is also a Mac OS X address book that reads (but does not write) the system address book. If the user configures an LDAP server, there will be another read-only address book that contains the addresses stored on the LDAP server.</li>
+</ul>
+
+<p>The contact sidebar is displayed in the message composition window (invoked from the View menu). When enabled, users can select address books and assign recipient emails.</p>
+
+<h3 id="Related_interfaces_6">Related interfaces</h3>
+
+<p>See the the <a class="internal" href="/En/Address_Book_Interfaces" title="En/Address Book Interfaces">Address book interfaces page</a> for a description of the related interfaces.</p>
+
+<p>Alternatively, <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/addrbook/public/" title="http://mxr.mozilla.org/comm-central/source/mailnews/addrbook/public/">view the source code</a> in the Mozilla Cross-Reference:<a href="/en/Thunderbird/Account_interfaces#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></p>
+
+<p><img alt="" src="TODO"></p>
+
+<h3 id="Things_extensions_can_do_with_the_address_book">Things extensions can do with the address book</h3>
+
+<ul>
+ <li><a class="internal" href="/en/Thunderbird/Address_Book_Examples#How_do_I_get_all_address_books.3f" title="En/Address Book Examples#How do I get all address books.3f">Get data from multiple address books</a></li>
+ <li><a class="internal" href="/en/Thunderbird/Address_Book_Examples#How_do_I_display_properties_dialogs_to_the_user.3f" title="En/Address Book Examples#How do I display properties dialogs to the user.3f">Display properties dialogs to the user</a></li>
+ <li><a class="internal" href="/en/Thunderbird/Address_Book_Examples#How_do_I_search_for_a_particular_contact_property_(name.2c_email).3f" title="En/Address Book Examples#How do I search for a particular contact property (name.2c email).3f"><span>Search for a particular contact property</span></a></li>
+ <li><a class="internal" href="/en/Thunderbird/Address_Book_Examples" title="En/Address Book Examples">... more examples ...</a></li>
+</ul>
+
+<h2 id="Global_components">Global components</h2>
+
+<p>The items in this section are not component-specific. They can apply to more than one aspect of Thunderbird.</p>
+
+<h3 id="Global_database_gloda">Global database (gloda)</h3>
+
+<p>While the folder-centric structure described above is good for many things, it makes it hard to do manipulations on messages that span different folders. (For example, multiple folder databases need to be open and kept in memory at the same time, indices are inefficient to maintained, etc.)</p>
+
+<p>In Thunderbird 3, there is a new database layer called "gloda" (short for "global database"), which provides multi-folder capabilities. Gloda functionality enables searching across multiple accounts for specific message parameters (such as email address, the existence of an attachment, receipt within a time range, etc).</p>
+
+<p>See the <a href="/en/Thunderbird/gloda" title="en/Thunderbird/gloda">gloda</a> page for more information about how gloda works. See <a href="/en/Thunderbird/Creating_a_Gloda_message_query" title="en/Thunderbird/Creating a Gloda message query">Creating a gloda message query</a> for information about implementing gloda. See <a href="/en/Thunderbird/Gloda_examples" title="en/Thunderbird/Gloda examples">Gloda examples</a> for more use cases.</p>
+
+<h4 id="Related_interfaces_7">Related interfaces</h4>
+
+<p>See the <a href="/en/Thunderbird/gloda" title="en/Thunderbird/gloda">gloda</a> page for information about its interfaces.</p>
+
+<h4 id="Things_extensions_can_do_with_Gloda">Things extensions can do with Gloda</h4>
+
+<ul>
+ <li><a class="internal" href="/en/Thunderbird/Creating_a_Gloda_message_query" title="en/Thunderbird/Creating a Gloda message query">Create a Gloda message query</a></li>
+ <li><a class="internal" href="/en/Thunderbird/Gloda_examples#Show_all_messages_in_a_conversation_regardless_of_the_folder_in_which_they_are_stored" title="en/Thunderbird/Gloda examples#Show all messages in a conversation regardless of the folder in which they are stored">Show all messages in a conversation regardless of the folder in which they are stored</a></li>
+ <li><a class="internal" href="/en/Thunderbird/Gloda_examples#Show_all_messages_where_the_from.2c_to_and_CC_values_include_a_specified_email_address" title="en/Thunderbird/Gloda examples#Show all messages where the from.2c to and CC values include a specified email address">Show all messages where the from, to and CC values include a specified email address</a></li>
+</ul>
+
+<h3 id="STEEL">STEEL</h3>
+
+<p>STEEL is the <strong>S</strong>criptable <strong>T</strong>hunderbird <strong>E</strong>asy <strong>E</strong>xtension <strong>L</strong>ibrary. Similar to Firefox's <a class="internal" href="../../../../en/FUEL" rel="internal">FUEL</a>, it is JavaScript library designed to help developers build extensions using terminology and interfaces that are familiar to them. like set of interfaces to facilitate Thunderbird extension development. The <code><span class="lang lang-en"><a class="external" href="http://mxr.mozilla.org/comm-central/source/mail/steel/steelIApplication.idl" rel="external nofollow" title="http://mxr.mozilla.org/comm-central/source/mail/steel/steelIApplication.idl">steelIApplication</a> </span></code> interface implements all the functions of <code><span class="lang lang-en"><a class="external" href="http://mxr.mozilla.org/comm-central/source/mozilla/toolkit/components/exthelper/extIApplication.idl" rel="external nofollow" title="http://mxr.mozilla.org/comm-central/source/mozilla/toolkit/components/exthelper/extIApplication.idl">extIApplication</a>. </span></code></p>
+
+<h4 id="Related_interfaces_8">Related interfaces</h4>
+
+<p>See the <a class="internal" href="/en/Toolkit_API/STEEL" title="en/Thunderbird/STEEL interfaces">STEEL interfaces page</a> for information about the related interfaces.</p>
+
+<p>Alternatively, view the source code in the Mozilla Cross-Reference:</p>
+
+<ul>
+ <li><code><span class="lang lang-en"><a class="external" href="http://mxr.mozilla.org/comm-central/source/mail/steel/steelIApplication.idl" rel="external nofollow" title="http://mxr.mozilla.org/comm-central/source/mail/steel/steelIApplication.idl">steelIApplication</a> </span></code></li>
+ <li><code><span class="lang lang-en"><a class="external" href="http://mxr.mozilla.org/comm-central/source/mozilla/toolkit/components/exthelper/extIApplication.idl" rel="external nofollow" title="http://mxr.mozilla.org/comm-central/source/mozilla/toolkit/components/exthelper/extIApplication.idl">extIApplication</a> </span></code></li>
+</ul>

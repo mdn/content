@@ -1,0 +1,219 @@
+---
+title: Mail event system
+slug: Mozilla/Thunderbird/Mail_event_system
+tags:
+  - Guide
+  - Interface
+  - Intermediate
+  - Method
+  - NeedsUpdate
+  - events
+  - thunderbird
+---
+<p>{{ outdated("It was imported from mozilla.org and last updated in 2002.") }}</p>
+
+<p>Mozilla mail requires an event system to notify different subsystems that data has changed. This document describes the system that events are passed amongst the mail objects.</p>
+
+<p>For example, when a folder gets a new message, its total message count increases. The folder pane needs to know that this changed so that it can update the message count so the user can see it.</p>
+
+<h2 id="Interfaces">Interfaces</h2>
+
+<p>The key interfaces here are:</p>
+
+<ul>
+ <li><a class="external" href="http://lxr.mozilla.org/seamonkey/source/mailnews/base/public/nsIFolder.idl">nsIFolder.idl</a> is an interface for storing a hierarchy of objects with properties. This interface is not (should not be) mail-related. nsIFolders each store individual lists of folder listeners which are maintained with addListener() and removeListener(). When a notification is fired on a folder, all of the folder's folder listeners and the mail session itself is notified.</li>
+ <li><a class="external" href="http://lxr.mozilla.org/seamonkey/source/mailnews/base/public/nsIFolderListener.idl">nsIFolderListener.idl</a> is an interface that an object can implement if it is interested in listening to changes on single folder or on all folders. If the object just needs to be notified about one folder, it should call that folder's addListener method. If the object wants to know about all notifications on all folders, then it should register with the mail session.</li>
+ <li><a class="external" href="http://lxr.mozilla.org/seamonkey/source/mailnews/base/public/nsIMsgMailSession.idl">nsIMsgMailSession.idl</a> is a service that acts as a broadcaster for folder notifications. The mail session receives all notifications from all folders, and then forwards it on to any nsIFolderListeners that have registered themselves. The nsIMsgMailSession interface actually only allows adding and removal of listeners - the notifications happen through the nsIFolderListener interface as well.</li>
+</ul>
+
+<h2 id="Methods">Methods</h2>
+
+<p>Each event type has a two methods associated with it:</p>
+
+<ul>
+ <li>Notify*<em>&lt;event&gt;</em> - in the nsIFolder interface, and nsIMsgMailSession interface.</li>
+ <li>OnItem*<em>&lt;event&gt;</em> - in the nsIFolderListener interface. The mail session implements this interface.</li>
+</ul>
+
+<p>Where</p>
+
+<p><em>&lt;event&gt;</em></p>
+
+<p>is the type of event, such as</p>
+
+<p><code>BoolPropertyChanged</code></p>
+
+<p>or the generic</p>
+
+<p><code>Event</code></p>
+
+<p>.</p>
+
+<h2 id="Sample_control_flow">Sample control flow</h2>
+
+<p>Here is an example of a possible flow of control when a new message is added to a folder. In this example, there is a dialog open that shows properties for this folder including the message count. This dialog is a listener on this particular folder.</p>
+
+<ol>
+ <li>A message is added to an nsImapMailFolder containing 4 messages.</li>
+ <li>Because the number of messages in the folder have increased, this change in total message count needs to be broadcast to the world. The folder calls NotifyIntPropertyChanged on itself with the atom that represents "TotalMessages":<br>
+  <em><code>this-&gt;NotifyIntPropertychanged(kTotalMessagesAtom, 4, 5);</code></em>.</li>
+ <li>NotifyPropertyChanged broadcasts this event to each its nsIFolderListeners by calling OnItemIntPropertyChanged on each listener:<br>
+  <em><code>listener-&gt;OnIntPropertyChanged(this, kTotalMessagesAtom, 4, 5);</code></em>
+  <ul>
+   <li>The dialog is one of these folder-specific listeners. In its implementation of OnIntPropertyChanged, it uses this information to update the message count in the dialog.</li>
+  </ul>
+ </li>
+ <li>NotifyPropertyChanged then broadcasts this event to the mail session:<br>
+  <em><code>mailSession-&gt;OnIntPropertyChanged(this, kTotalMessagesAtom, 4, 5);</code></em></li>
+ <li>The mail session rebroadcasts this information to each of the global listeners that has been registered with it. For each global listener, it calls OnIntPropertyChanged:<br>
+  <em><code>listener-&gt;OnIntPropertyChanged(folder, kTotalMessagesAtom, 4, 5);</code></em>
+  <ul>
+   <li>The folder datasource is a listener on all folders and receives this notification. In its implementation of OnIntPropertyChanged, it notifies RDF (via the nsIRDFObserver system) that the message count has changed. RDF handles the notification by updating the message counts in the folder pane.</li>
+  </ul>
+ </li>
+</ol>
+
+<h2 id="Events">Events</h2>
+
+<p>At the time this document is being written, these are the current events:</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>nsIFolder</th>
+   <th>nsIFolderListener</th>
+  </tr>
+  <tr>
+   <td>NotifyItemAdded</td>
+   <td>OnItemAdded</td>
+  </tr>
+  <tr>
+   <td>NotifyItemRemoved</td>
+   <td>OnItemRemoved</td>
+  </tr>
+  <tr>
+   <td>NotifyItemPropertyChanged</td>
+   <td>OnItemPropertyChanged</td>
+  </tr>
+  <tr>
+   <td>NotifyItemIntPropertyChanged</td>
+   <td>OnItemIntPropertyChanged</td>
+  </tr>
+  <tr>
+   <td>NotifyItemBoolPropertyChanged</td>
+   <td>OnItemBoolPropertyChanged</td>
+  </tr>
+  <tr>
+   <td>NotifyItemUnicharPropertyChanged</td>
+   <td>OnItemUnicharPropertyChanged</td>
+  </tr>
+  <tr>
+   <td>NotifyItemPropertyFlagChanged</td>
+   <td>OnItemPropertyFlagChanged</td>
+  </tr>
+  <tr>
+   <td>NotifyItemEvent</td>
+   <td>OnItemEvent</td>
+  </tr>
+  <tr>
+   <td>NotifyFolderLoaded</td>
+   <td>OnFolderLoaded</td>
+  </tr>
+  <tr>
+   <td>NotifyDeleteOrMoveMessages</td>
+   <td>OnDeleteOrMoveMessages</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Sample_code">Sample code</h2>
+
+<p>In this example, a listener will be set up to be notified when the message count changes in a folder:</p>
+
+<div style="border: medium groove ;">
+<pre class="notranslate">// our variable to know if the listener fired
+var <em>listenerHasFired</em> = false;
+var <em>totalMessagesListenerHasFired</em> = false;
+
+// the listening function that will react to changes
+function <em>myOnIntPropertyChanged</em>(item, property, oldValue, newValue) {
+  <em>listenerHasFired</em>=true;
+
+  var propertyString = property.GetUnicode();
+
+  dump("OnIntPropertyChanged has fired with property + " +
+    propertyString + "!\n");
+  if (propertyString == "TotalMessages") {
+     <em>totalMessagesListenerHasFired</em>=true;
+
+     //now show us visually
+     var folder = item.QueryInterface(Components.interfaces.nsIMsgFolder);
+     dump("The folder " + folder.prettyName + " now has " +
+       newValue + " messages.");
+  } else if (propertyString == "TestProperty") {
+     dump("Recieved integer test property fired on folder " +
+       folder.prettyName + " with values " + oldValue + " and " +
+       newValue + "\n");
+}
+
+// set up the folder listener to point to the above function
+var folderListener = {
+  <strong>OnItemAdded</strong>: function(parent, item, viewString) {},
+  <strong>OnItemRemoved</strong>: function(parent, item, viewString) {},
+  <strong>OnItemPropertyChanged</strong>: function(parent, item, viewString) {},
+  <strong>OnItemIntPropertyChanged</strong>: <em>myOnIntPropertyChanged,</em>
+  <strong>OnItemBoolPropertyChanged</strong>: function(item, property, oldValue, newValue) {},
+  <strong>OnItemUnicharPropertyChanged</strong>: function(item, property, oldValue, newValue) {},
+  <strong>OnItemPropertyFlagChanged</strong>: function(item, property, oldFlag, newFlag) {},
+  <strong>OnItemEvent</strong>: function(item, event) = {},
+  <strong>OnFolderLoaded</strong>: function(aFolder) = {}
+  <strong>OnDeleteOrMoveMessagesCompleted</strong>: function( aFolder) = {},
+}
+
+// now register myself as a listener on every mail folder
+var mailSession = Components.classes["component://netscape/messenger/services/session"].
+  getService(Components.interfaces.nsIMsgMailSession);
+
+mailSession.<strong>addListener</strong>(folderListener);
+
+// now test to see if integer stuff is firing at all
+// let's say "folder" is a folder we know about
+
+// first we need an atom to play with
+atomService = Components.classes["component://netscape/atom-service"].
+  getService(Components.interfaces.nsIAtomService);
+
+var testPropertyAtom = atomService.getAtom("TestProperty");
+
+// now fire the test notification
+folder.<strong>NotifyIntPropertyChanged</strong>(testPropertyAtom, 0, 100);
+
+// Now we would do some operations to change the message count, such
+// as copying a message into this folder or something. Then we could
+// verify that our listener fired by checking if <em>listenerHasFired</em> and
+// <em>totalMessagesListenerHasFired</em> are true
+
+// this is left as an exercise for the reader.
+      </pre>
+</div>
+
+<h2 id="Future_plans">Future plans</h2>
+
+<p>The notification system has two duplicate methods which could be implemented with OnItemEvent/NotifyItemEvent:</p>
+
+<p><code>FolderLoaded</code></p>
+
+<p>, and</p>
+
+<p><code>DeleteOrMoveMessagesCompleted</code></p>
+
+<p>. Both of these could be done by making atoms for each of these events and just firing it with NotifyItemEvent.</p>
+
+<h2 id="Completed">Completed</h2>
+
+<p><s>There are some of redundant methods between the nsIMsgMailSession and the nsIFolderListener interfaces. nsIMsgMailSession also contains a number of other methods that are completely unrealted to folder notification. It would make sense to collapse the nsIMsgMailSession simply into an object that implements the the nsIFolderListener interface to receive notifications from the folders. The notification functions should probably go to an nsIFolderBroadcaster interface or something, since they need to know what folder is being modified.</s></p>
+
+<hr>
+<address><a class="link-mailto" href="mailto:alecf@flett.org">Alec Flett</a></address>
+
+<p>Last modified: Fri Mar 31 12:22:03 PST 2000</p>

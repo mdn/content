@@ -1,0 +1,323 @@
+---
+title: Using the Multiple Accounts API
+slug: Mozilla/Thunderbird/Using_the_Multiple_Accounts_API
+---
+<p>{{ outdated("It was imported from mozilla.org and last updated in 2003.") }}</p>
+
+<p>By Alec Flett <a class="link-mailto" href="mailto:alecf@flett.org">alecf@flett.org</a></p>
+
+<ul>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/accountmanager.html#Structure">Structure</a>
+
+  <ul>
+   <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/accountmanager.html#Server">Servers</a></li>
+   <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/accountmanager.html#Identity">Identities</a></li>
+  </ul>
+ </li>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/accountmanager.html#Storage">Storage</a></li>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/accountmanager.html#Creating">Creating new accounts</a></li>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/accountmanager.html#SMTP">SMTP Servers</a></li>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/accountmanager.html#AppendixA">Appendix A</a>: Listing of all preferences and properties</li>
+</ul>
+
+<hr>
+<h2 id="Structure_2"><span id="Structure">Structure</span></h2>
+
+<p><span id="Structure">The account system consists of: </span></p>
+
+<ul>
+ <li><span id="Structure">The Account Manager (</span><a class="external" href="http://lxr.mozilla.org/seamonkey/source/mailnews/base/public/nsIMsgAccountManager.idl">nsIMsgAccountManager</a>): There is a single account manager in the the client, which maintains the list of accounts, servers, etc. It is also responsible for the creation of any new account-related objects. The account manager maintains the main list of Accounts.</li>
+ <li>Accounts (<a class="external" href="http://lxr.mozilla.org/seamonkey/source/mailnews/base/public/nsIMsgAccount.idl">nsIMsgAccount</a>): An account consists of a single incoming server, and one or more identities. An account is merely a container to bind incoming servers and identities together.</li>
+ <li>Incoming Servers (<a class="external" href="http://lxr.mozilla.org/seamonkey/source/mailnews/base/public/nsIMsgIncomingServer.idl">nsIMsgIncomingServer</a>): An incoming server represents a remote message store such as a POP, IMAP, or NNTP server. It holds all the information necessary to retrieve mail from the remote server, such as hostname, user login name, and biff settings.</li>
+ <li>Identities (<a class="external" href="http://lxr.mozilla.org/seamonkey/source/mailnews/base/public/nsIMsgIdentity.idl">nsIMsgIdentity</a>): An identity contains all the information necessary to compose and <em>outgoing</em> mail message. It includes a user's full name and e-mail address.</li>
+ <li>SMTP Servers (<a class="external" href="http://lxr.mozilla.org/seamonkey/source/mailnews/compose/public/nsISmtpServer.idl">nsISmtpServer</a>): An SMTP server is not tied to any of the above and can be retrieved from the SMTP Service (<a class="external" href="http://lxr.mozilla.org/seamonkey/source/mailnews/compose/public/nsISmtpService.idl">nsISmtpService</a>).</li>
+</ul>
+
+<p>Here's an example of a common setup.</p>
+
+<p> </p>
+
+<p>(You'll have to pardon the crude drawing for now)</p>
+
+<p> </p>
+
+<p>Account Manager</p>
+
+<div style="border: medium groove ;">
+<pre>+- Account 1
+|    +- Incoming Server 1 (imap.mywork.com IMAP Server, my work account)
+|    +- Identity 1 (Alec Flett &lt;alecf@mywork.com&gt;)
++- Account 2
+|    +- Incoming Server 2 (pop.myisp.com POP Server, my ISP account)
+|    +- Identity 2 (Alec Flett &lt;alecf@myisp.com&gt;)
++- Account 3
+|    +- Incoming Server 3 (news.myisp.com NNTP server, my ISP's server)
+|    +- Identity 3 (Alec Flett &lt;alecfNOSPAM@myisp.com&gt;)
++- Account 4
+     +- Incoming Server 4 (news.mozilla.org NNTP server, mozilla devel)
+     +- Identity 2 (Alec Flett &lt;alecf@myisp.com&gt;)
+     +- Identity 3 (Alec Flett &lt;alecfNOSPAM@myisp.com&gt;)
+      </pre>
+</div>
+
+<p>This is the internal structure that the mail client maintains, but it is presented to the user in a few different ways.</p>
+
+<p>(You may have noticed that Identities 2 and 3 are shared between a few accounts...more on that later)</p>
+
+<h3 id="Servers"><span id="Server">Servers</span></h3>
+
+<p><span id="Server">Servers are show in the folder pane, and in any place where the user must browse or choose folders, such as the new folder dialog, search, filters, etc. The view shows a flat, unified view of all the servers. The above example would look like this: </span></p>
+
+<div style="border: medium groove ;">
+<pre><span id="Server">alecf on imap.mywork.com
+  +- INBOX
+  +- Trash
+  +- (etc)
+alecf on pop.myisp.com
+  +- INBOX
+  +- Trash
+  +- (etc)
+news.myisp.com
+  +- comp.os.linux.announce
+  +- etc..
+news.mozilla.org
+  +- netscape.public.mozilla.announce
+  +- netscape.public.mozilla.mail-news
+    </span></pre>
+</div>
+
+<p><span id="Server">Relevant API calls: </span></p>
+
+<ul>
+ <li><cite><span id="Server">nsIMsgAccount.incomingServer</span></cite> <span id="Server"> </span></li>
+ <li><cite><span id="Server">nsIMsgAccountManager.allServers</span></cite><span id="Server">: a list of all servers held by all accounts.</span></li>
+</ul>
+
+<h3 id="Identities"><span id="Identity">Identities</span></h3>
+
+<p><span id="Identity">Identities are used in the compose window. If identities are shared between accounts, you will only see that identity once in the list.</span></p>
+
+<p><span id="Identity">In the above example, the list of identities would be as follows:</span></p>
+
+<div style="border: medium groove ;">
+<pre><span id="Identity">Alec Flett &lt;alecf@mywork.com&gt;)
+Alec Flett &lt;alecf@myisp.com&gt;)
+Alec Flett &lt;alecfNOSPAM@myisp.com&gt;)
+      </span></pre>
+</div>
+
+<p><span id="Identity">Relevant API calls: </span></p>
+
+<ul>
+ <li><cite><span id="Identity">nsIMsgAccount.identities</span></cite></li>
+ <li><cite><span id="Identity">nsIMsgAccountManager.allServers</span></cite><span id="Identity">: a list of all servers across all accounts</span></li>
+</ul>
+
+<hr>
+<h2 id="Storage_2"><span id="Storage">Storage</span></h2>
+
+<p><span id="Storage">The accounts are stored in the preferences. The accounts, identities, and servers are all linked via <em>keys</em>. Keys are simply internal strings that uniquely identify each account, identity and server. The keys are also used to decide the name of each of the preferences that hold the object's data.</span></p>
+
+<p><span id="Storage">As an example, the above structure would be represented in your preferences like this:</span></p>
+
+<pre><span id="Storage">user_pref("mail.accountmanager.accounts", "account1,account2,account3");
+user_pref("mail.account.account1.server", "server1");
+user_pref("mail.account.account1.identities", "id1");
+user_pref("mail.account.account2.server", "server2");
+user_pref("mail.account.account2.identities", "id3");
+user_pref("mail.account.account3.server", "server3");
+user_pref("mail.account.account3.identities", "id3");
+user_pref("mail.account.account4.server", "server4");
+user_pref("mail.account.account4.identities", "id2,id3");
+user_pref("mail.server.server1.hostname", "imap.mywork.com");
+user_pref("mail.server.server2.hostname", "pop.myisp.com");
+user_pref("mail.server.server3.hostname", "news.myisp.com");
+user_pref("mail.server.server4.hostname", "news.mozilla.org");
+user_pref("mail.identity.id1.useremail", "alecf@mywork.com");
+user_pref("mail.identity.id2.useremail", "alecf@myisp.com");
+user_pref("mail.identity.id3.useremail", "alecfNOSPAM@myisp.com");
+    </span></pre>
+
+<p><span id="Storage">There is a lot of information missing here of course.</span></p>
+
+<p><span id="Storage">The <em>keys</em> used here are the account1, server1, id1, etc. These keys are listed in the value of some of these preferences, such as "mail.accountmanager.accounts", and are used to construct the preference names, such as "mail.account.account1.server". This the way accounts know which server and which identities they contain.</span></p>
+
+<hr>
+<h2 id="Creating_new_accounts"><span id="Creating">Creating new accounts</span></h2>
+
+<p><span id="Creating">It is possible to create and modify accounts through the account manager API. The account manager is responsible for the creation of all accounts, incoming servers, and identities. You should not use CreateInstance() to create any of the relevant objects because the account manager needs to keep track of all of these objects as they are created.</span></p>
+
+<p><span id="Creating">To create accounts using the API, you should do the following:</span></p>
+
+<ol>
+ <li><span id="Creating">Create a fresh identity with createIdentity(); </span></li>
+ <li><span id="Creating">Assign values to the various identity properties as necessary. </span></li>
+ <li><span id="Creating">Create a fresh incoming server with createIncomingServer(). You will need to pass it the server type as a string, from the list above. </span></li>
+ <li><span id="Creating">Assign values to the various server properties as necessary. The most important properties here are the userName and the hostname. </span></li>
+ <li><span id="Creating">Create a fresh account with createAccount(); </span></li>
+ <li><span id="Creating">Assign the server to the account with the incomingServer attribute. </span></li>
+ <li><span id="Creating">Assign the identity to the account with the AddIdentity() method. </span></li>
+</ol>
+
+<p><span id="Creating">Some sample code: (where accountManager is the account manager.</span></p>
+
+<p><span id="Creating"><code>var identity = accountManager.createIdentity();<br>
+ identity.email="fred@myisp.com";<br>
+ <br>
+ var server = accountManager.createIncomingServer("pop3");<br>
+ server.userName = "fred";<br>
+ server.hostname = "pop.myisp.com";<br>
+ <br>
+ var account = accountManager.createAccount();<br>
+ account.incomingServer = server;<br>
+ account.AddIdentity(identity);</code></span></p>
+
+<p><span id="Creating">That's it! Now you have a working account, identity, and server.</span></p>
+
+<p><span id="Creating">It is possible, through some tricks with server and identity keys, to share servers and identities between accounts. You can do this by referring to the same identity or server key in the preferences, or with clever calls to the account manager. (Left as an exercise for the reader.)This will work but it is not supported. The UI will act slighty strange when you share information between accounts. The current plans prevent sharing of information between accounts using the UI.</span></p>
+
+<p><span id="Creating">Relevant API calls: </span></p>
+
+<ul>
+ <li><cite><span id="Creating">nsIMsgAccount nsIMsgAccountManager.createAccount()</span></cite> <span id="Creating"> </span></li>
+ <li><cite><span id="Creating">nsIMsgAccount nsIMsgAccountManager.getAccount(in string key)</span></cite> <span id="Creating"> </span></li>
+ <li><cite><span id="Creating">nsIMsgIncomingServer nsIMsgAccountManager.createIncomingServer(in string type)</span></cite> <span id="Creating"> </span></li>
+ <li><cite><span id="Creating">nsIMsgIncomingServer nsIMsgAccountManager.getIncomingServer(in string key)</span></cite> <span id="Creating"> </span></li>
+</ul>
+
+<h2 id="SMTP_Servers"><span id="SMTP">SMTP Servers</span></h2>
+
+<p>SMTP Servers are kept separately from all the other account management stuff. A user's SMTP servers are not actually dependant on any of the account settings. The only thing that determines which SMTP server a user should use is their physical connection to the internet. For instance, if a user is connected to the internet through MyISP, Inc. then he or she must use MyISP's SMTP server, no matter what identity they will be sending mail with.</p>
+
+<p>The SMTP server list is accessable through the SMTP Service. You can add (and eventually delete) servers and have a default server.</p>
+
+<p>SMTP servers are stored in your preferences in a manner resembling the accounts:</p>
+
+<pre>user_pref("mail.smtpservers", "server1,server2");
+user_pref("mail.smtpserver.server1.hostname", "smtp.myisp.com");
+user_pref("mail.smtpserver.server2.hostname", "smtp.mywork.com");
+    </pre>
+
+<p>You can add new SMTP servers using the SMTP service.</p>
+
+<pre>var server = smtpService.createSmtpServer();
+server.hostname = "smtp.myisp.com";
+    </pre>
+
+<p>The default SMTP server is the first server in the list in your preferences. Currently, you can set the default SMTP server to something else by setting the defaultServer property on the smtpService, but that will not be saved to disk. Eventually there will be the concept of a session default server, and a permenant default server.</p>
+
+<p>Relevant API calls:</p>
+
+<ul>
+ <li><cite>nsISmtpService.smtpServers</cite>: list of SMTP servers</li>
+ <li><cite>nsISmtpService.createSmtpServer()</cite>: Create a new SMTP server</li>
+ <li><cite>nsISmtpServer.hostname</cite>, <cite>nsISmtpServer.username</cite>: Useful properties of the SMTP server.</li>
+</ul>
+
+<hr>
+<h2 id="Appendix_A_Listing_of_all_properties"><span id="AppendixA">Appendix A: Listing of all properties</span></h2>
+
+<p><span id="AppendixA">(When brendan's idldoc comes along, I'll just link to that)</span></p>
+
+<p><span id="AppendixA">All preferences are strings, unless otherwise noted.</span></p>
+
+<h3 id="Account_Manager"><span id="AppendixA">Account Manager</span></h3>
+
+<dl>
+ <dt><span id="AppendixA">Pref: <font face="monospace">mail.accountmanager.accounts</font></span></dt>
+</dl>
+
+<h3 id="Account"><span id="AppendixA">Account</span></h3>
+
+<dl>
+ <dt><span id="AppendixA">Preference: <font face="monospace">mail.account.<em>account</em>.server</font></span></dt>
+ <dt><span id="AppendixA">IDL: <font face="monospace">nsIMsgAccount.incomingServer</font></span></dt>
+ <dd><span id="AppendixA">The incoming server associated with this account. The preference is the preference "key" used, such as "server1".</span></dd>
+ <br>
+ <br>
+ <br>
+
+ <dt><span id="AppendixA">Preference: <font face="monospace">mail.account.<em>account</em>.identities</font> </span></dt>
+ <dt><span id="AppendixA">IDL: <font face="monospace">nsIMsgAccount.identities</font></span></dt>
+ <dd><span id="AppendixA">The list of identites associated with this account. The preference is a comma-seperated list of preference "keys" such as "identity1,identity2".</span></dd>
+</dl>
+
+<h3 id="Incoming_Servers"><span id="AppendixA">Incoming Servers</span></h3>
+
+<dl>
+ <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.type</font></span></dt>
+ <dd><span id="AppendixA">: String id of the server type: pop3, nntp, imap, or local </span>
+ <dl>
+  <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.hostname</font> - hostname of the server</span></dt>
+  <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.username</font> - user login name</span></dt>
+  <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.password</font> - user login password</span></dt>
+  <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.check_new_mail</font> - boolean, should we check for new mail on a regular basis?</span></dt>
+  <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.check_time</font> - integer, number of minutes between checks for new mail</span></dt>
+  <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.remember_password</font> - boolean, should we remember the password?</span></dt>
+  <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.download_on_biff.</font> - boolean, Should we download new messags on biff (true) or just alert user that there is new mail (false)</span></dt>
+  <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.directory</font> - local platform-specific path to store messages and folder indexes</span></dt>
+  <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.name</font> - User-visible name of server</span></dt>
+ </dl>
+ <span id="AppendixA"> The following are specific to IMAP: </span>
+
+ <dl>
+  <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.admin_url</font> - administration URL for server</span></dt>
+  <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.using_subscription</font> - boolean, should we use subscriptions? (i.e. use LSUB instead of LIST)</span></dt>
+  <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.cleanup_inbox_on_exit</font> - boolean, should we purge the inbox when we quit?</span></dt>
+  <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.dual_use_folders</font> - boolean - can folders contain both folders and messages?</span></dt>
+  <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.empty_trash_on_exit</font></span></dt>
+  <dd><span id="AppendixA">boolean, (should not be imap-specific) - should we empty this server's trash when we quit? </span>
+  <dl>
+   <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.offline_download</font> - boolean, is this server marked for offline download?</span></dt>
+   <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.override_namespaces</font> - boolean, should we override namespaces on this server?</span></dt>
+   <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.max_cached_connections</font> - integer, max number of connections left open to the server</span></dt>
+   <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.empty_trash_threshhold</font></span></dt>
+   <dd><span id="AppendixA">integer, (should not be imap-specific) max k of wasted diskspace before we purge a folder </span>
+   <dl>
+    <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.delete_model</font> - integer, delete model (move to trash, IMAP delete, purge immediately, not sure of values)</span></dt>
+    <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.timeout</font> - integer, number of minutes a connection is idle before we drop it</span></dt>
+    <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.capability</font> - list of capabilities of this server</span></dt>
+    <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.namespace.public</font> - the server's namespace for public folders</span></dt>
+    <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.namespace.personal</font> - the server's namespace for personal folders</span></dt>
+    <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.namespace.other_users</font> - the server's namespace for other user's folders</span></dt>
+   </dl>
+   <span id="AppendixA"> </span>
+
+   <p><span id="AppendixA">The following are specific to POP:</span></p>
+   <span id="AppendixA"> </span>
+
+   <p><span id="AppendixA">The following are specific to news:</span></p>
+
+   <dl>
+    <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.leave_on_server</font> - boolean, should we leave messages on the server after we have downloaded them?</span></dt>
+    <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.delete_mail_left_on_server</font> - boolean, when we delete a message locally, should we delete that message on the server?</span></dt>
+    <dt><span id="AppendixA">Preference: <font face="monospace">mail.server.<em>server</em>.newsrc.file</font> - platform specific file path to newsrc file</span></dt>
+   </dl>
+   <span id="AppendixA"> </span>
+
+   <h3 id="Identities_2"><span id="AppendixA">Identities</span></h3>
+   <span id="AppendixA"> </span>
+
+   <dl>
+    <dt><span id="AppendixA">Preference: <font face="monospace">mail.identity.<em>identity</em>.fullName</font> - the user's full name, i.e. John Smith</span></dt>
+    <dt><span id="AppendixA">Preference: <font face="monospace">mail.identity.<em>identity</em>.useremail</font> - the user's e-mail address, i.e. jsmith@isp.com</span></dt>
+    <dt><span id="AppendixA">Preference: <font face="monospace">mail.identity.<em>identity</em>.reply_to</font> - reply to address during message composition, should only be used if different than useremail. (ReplyTo: header in mail messages)</span></dt>
+    <dt><span id="AppendixA">Preference: <font face="monospace">mail.identity.<em>identity</em>.organization</font> - User's organization (Organization: header in mail messages)</span></dt>
+    <dt><span id="AppendixA">Preference: <font face="monospace">mail.identity.<em>identity</em>.compose_html</font> - boolean, should we compose messages in HTML (true) or Plain Text (false)?</span></dt>
+    <dt><span id="AppendixA">Preference: <font face="monospace">mail.identity.<em>identity</em>.attach_vcard</font> - boolean, should we attach the vCard?</span></dt>
+    <dt><span id="AppendixA">Preference: <font face="monospace">mail.identity.<em>identity</em>.attach_signature</font> - boolean, should we attach the signature?</span></dt>
+    <dt><span id="AppendixA">Preference: <font face="monospace">mail.identity.<em>identity</em>.fcc</font> - boolean, should we keep a copy of messages in our sent folder?</span></dt>
+    <dt><span id="AppendixA">Preference: <font face="monospace">mail.identity.<em>identity</em>.fcc_folder</font> - URI of folder to put sent messages in</span></dt>
+    <dt><span id="AppendixA">Preference: <font face="monospace">mail.identity.<em>identity</em>.bcc_self</font> - boolean, should we blind carbon copy (BCC) this identity with each e-mail sent with this identity?</span></dt>
+    <dt><span id="AppendixA">Preference: <font face="monospace">mail.identity.<em>identity</em>.bcc_other</font> - boolean, should we BCC other e-mail addresses with each mail sent with this identity?</span></dt>
+    <dt><span id="AppendixA">Preference: <font face="monospace">mail.identity.<em>identity</em>.bcc_other_list</font> - comma-seperated list of other addresses to BCC</span></dt>
+    <dt><span id="AppendixA">Preference: <font face="monospace">mail.identity.<em>identity</em>.draft_folder</font> - URI of folder to use for drafts</span></dt>
+    <dt><span id="AppendixA">Preference: <font face="monospace">mail.identity.<em>identity</em>.stationary_folder</font> - URI of folder to use for stationary (called Templates in 4.x)</span></dt>
+    <dt><span id="AppendixA">Preference: <font face="monospace">mail.identity.<em>identity</em>.spam_folder</font> - URI of folder to use for SPAM (I think this is cut)</span></dt>
+   </dl>
+   </dd>
+  </dl>
+  </dd>
+ </dl>
+ </dd>
+</dl>

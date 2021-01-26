@@ -1,0 +1,79 @@
+---
+title: Activity Manager
+slug: Mozilla/Thunderbird/Activity_Manager
+tags:
+  - Thunderbird 3
+  - thunderbird
+---
+<div class="blockIndicator standardNote">
+<p>This content covers features introduced in <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a></p>
+</div>
+<p>The Activity Manager is a simple component that understands how to display a combination of user activity and history. The Activity Manager works in conjunction with the Interactive Status Bar to give the user notifications concerning what Thunderbird is doing and how Thunderbird has handled user requests.</p>
+<p>See <a href="/en/Thunderbird/Activity_Manager_interfaces" title="en/Thunderbird/Activity Manager interfaces">Activity Manager interfaces</a> for a description of the programmatic components. The <a href="../../../../en/Extensions/Thunderbird/HowTos/Activity_Manager" rel="internal">Activity Manager examples</a> page has code snippets.</p>
+<p>The Interactive Status Bar displays important events and process activity to the user. The Activity Manager displays a more detailed summary of activity for each process and event.</p>
+<p>A maximum of 250 events can be stored in the activity manager. Those events are persistent in the Activity Manager until the user pushes the <strong>Clear List</strong> button or until Thunderbird is shut down.</p>
+<h2 id="Activity_items"><span class="mw-headline">Activity items </span></h2>
+<p>There are two different classifications of activity items that can be displayed in the Activity Manager window.</p>
+<h3 id="Processes"><span class="mw-headline"> Processes</span></h3>
+<p>Processes are vague notions of activity that are provided for the users' benefit. They do not directly translate into an operating system process or a Thunderbird thread and therefore can be comprised of many different parts of which are actually separate processes internally.</p>
+<p>Processes are transient in the display. They are not written to disk as they are always acting on data that already exists (locally or remotely). If a process has finished and needs to keep some state for the user (for example, last sync time) it can convert itself into an event.</p>
+<p>Processes can be in one of these states:</p>
+<ul> <li>Active <ul> <li>When a process is running (like sending mail)</li> </ul> </li> <li>Try Again <ul> <li>When a process has failed and is waiting for a certain timeout period before trying again (<em>Users can interrupt this state by telling the process to run immediately or cancel</em>)</li> </ul> </li> <li>Waiting for Input <ul> <li>A process can <strong>only</strong> continue if the user gives additional input (for example, a password) <ul> <li>Additional input is not acknowledgement of a problem</li> </ul> </li> </ul> </li> <li>Finished <ul> <li>When a process is done and has converted itself into an event</li> <li>Not all processes need to convert to events (such as sending mail)</li> </ul> </li>
+</ul>
+<p>There is no failure state included in the process state. There is only "try again" and "wait for input". This is intentional because Thunderbird should never completely quit on the user - it should always continue trying until it has succeeded or been told to cancel. During this period of continually trying it is important that, through these changes, the user is aware of what Thunderbird is doing and has the capability to alter its actions by cancelling the "try again" process.</p>
+<p>Processes should (essentially) be directly attached to a server URL. With incoming email accounts and outgoing email accounts the errors are almost always problems with server connections. When a connection fails, the group of actions that is currently running will often all be blocked by the same issue (whether the issue is waiting for the connection or waiting for user input). Therefore by creating a relationship of process to server with multiple actions in the process we can have a user interface where single actions are available to "try now" for all actions running in a process.</p>
+<h4 id="Sort_order">Sort order</h4>
+<p>An active process is always displayed at the top of the Activity Manager window. Once a process is finished it can convert to an event and then is sorted in reverse chronological order (newest to oldest) with other events. If a process is in the "try again" state it is sorted above active processes. A process in the "waiting for input state" is sorted above everything else.</p>
+<h4 id="Process_example_account_activity">Process example: account activity</h4>
+<p>A process connected to the mail account creates multiple events for different activities. This is the parent process essentially responsible for the connections between Thunderbird and a mail server. As it synchronizes mail or performs user initiated actions it can create events or errors in the Activity Manager.</p>
+<p>A single account process can perform multiple actions at the same time, for example:</p>
+<pre>+--------------------------------------------------------------------+
+| Moz Mail                                                     ( v ) |
+|                                                                    |
+|      [=====================                ]  100 of 300 messages  |
+|       Synchronizing Folder 'bugs'                                  |
+|      [============                         ]  3 of 20 messages     |
+|       Moving Conversation from 'Inbox' to 'Personal'               |
+|      [===============================      ]  23 of 30 messages    |
+|       Filtering messages in 'Inbox'                                |
+|                                                                    |
++--------------------------------------------------------------------+
+</pre>
+<p>Possible Events created</p>
+<ul> <li>Moved - Folder / Message / Conversation</li> <li>Copied - Folder / Message / Conversation</li> <li>Deleted - Folder / Message / Conversation</li>
+</ul>
+<p>Possible "try again" state</p>
+<ul> <li>Connection Error</li>
+</ul>
+<p>Possible "waiting for input" state</p>
+<ul> <li>Password Error</li>
+</ul>
+<p>Possible finished state</p>
+<ul> <li>Completed Sync</li>
+</ul>
+<h4 id="Process_example_sending_mail">Process example: sending mail</h4>
+<p>A parent process represents the connection to an SMTP server. The display of this process is transient, therefore when finished it disappears from the Activity Manager window leaving behind only the "sent mail" events.</p>
+<p>Once the connection to the server is made this process can display progress as it creates "sent message" events for each message sent.</p>
+<pre>+--------------------------------------------------------------------+
+| Account - /Default SMTP/                                           |
+|                                                                    |
+|      [=====================                ]  10 of 30 messages    |
+|       Sending Messages                                             |
+|                                                                    |
++--------------------------------------------------------------------+
+</pre>
+<p>Possible events created</p>
+<ul> <li>Sent Message</li>
+</ul>
+<p>Possible "try again" states</p>
+<ul> <li>Connection Error</li> <li>General Error</li>
+</ul>
+<p>Possible "waiting for input" state</p>
+<ul> <li>Password Error</li>
+</ul>
+<p>Finished state</p>
+<ul> <li><em>Disappear</em></li>
+</ul>
+<h3 id="Events">Events</h3>
+<p>Historical actions that were performed by the user resulted in a process in the Activity Manager window. Events can be displayed in the Interactive Status bar as they are created. However often the process is being actively displayed.</p>
+<p>The goal of an event is to provide a historical context to the user about the actions they performed, such as sending mail or deleting contacts. In future versions events could have an undo function to recover from operations the user didn't intend.</p>

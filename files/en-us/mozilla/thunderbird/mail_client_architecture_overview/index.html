@@ -1,0 +1,104 @@
+---
+title: Mail client architecture overview
+slug: Mozilla/Thunderbird/Mail_client_architecture_overview
+tags:
+  - Beginner
+  - Guide
+  - NeedsUpdate
+  - thunderbird
+---
+<p>{{ outdated("It was imported from mozilla.org and last updated in 2002. All of the links seem to be broken.") }}<br>
+  </p>
+
+<h2 id="The_mail_reader">The mail reader</h2>
+
+<table>
+ <tbody>
+  <tr>
+   <td colspan="4">
+    <div class="white" style="border: 1px solid black;"><a class="external" href="http://mxr.mozilla.org/newlayout/"><span style="color: #ffffff;">Gecko</span></a><span style="color: #ffffff;"> (XUL and HTML rendering)</span></div>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <div class="white" style="border: 1px solid black;"><a class="external" href="http://mxr.mozilla.org/rdf/doc/"><span style="color: #ffffff;">RDF</span></a><br>
+    <span style="color: #ffffff;">(dynamic widgets)</span></div>
+   </td>
+   <td colspan="2">
+    <div class="white" style="border: 1px solid black;"><a class="external" href="http://mxr.mozilla.org/js/">JS</a><br>
+    (menus, events)</div>
+   </td>
+   <td rowspan="4">
+    <div class="mail"><span style="color: #000000;">libmime</span></div>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <div class="mail white"><span style="color: #ffffff;">Mail Datasources</span></div>
+   </td>
+   <td colspan="2">
+    <div class="mail white">Mail JavaScript</div>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="3">
+    <div class="white mail" style="border-bottom: medium none;"><span style="color: #ffffff;">Folder/Message management</span></div>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <div class="white mail" style="border-top: medium none; border-right: medium none;"><span style="color: #ffffff;">msgdb </span></div>
+   </td>
+   <td>
+    <div class="mail" style="border-top: medium none; border-left: medium none;"></div>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="4">
+    <div class="mail"><span style="color: #ffffff;">IMAP/NNTP/POP3</span></div>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="4">
+    <div class="white" style="border: 1px solid black;"><a class="external" href="http://mxr.mozilla.org/docs/netlib/necko.html"><span style="color: #ffffff;">Necko</span></a><br>
+    <span style="color: #ffffff;">(networking)</span></div>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Sections in <span style="background-color: #888888;">grey</span> refer to modules outside of mail/news</p>
+
+
+
+<h2 id="The_base_Module">The base Module</h2>
+
+
+
+<p>The <em>base</em> module provides a generic interface to a set of protocol-independant messaging services. This includes management of accounts, folders and messages.</p>
+
+<p>The base module consists of the following basic building blocks</p>
+
+<ul>
+ <li><a class="external" href="/en/Using_the_Multiple_Accounts_API" title="https://developer.mozilla.org/en/Using_the_Multiple_Accounts_API">Account Management</a> - The Account Manager is the root object of the server/folder/message hierarchy. It manages individual accounts on mail servers and the identity of users as used to send mail.</li>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/folders.html">Folders</a> - Mail folders contain messages and folders. All folders have folder indexes.</li>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/messages.html">Messages</a> - Messages are always stored and streamed in RFC822 format. Whenever multiple messages are stored in one file, the berkeley mailbox format is used.</li>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/rdf.html">Datasources</a> - Datasources are the glue code that reflect mail data such as folders and messages into RDF. RDF will use the datasource to create user interfaces based on this data. Datasources are also used to run commands that operate on this mail data.</li>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/events.html">Events</a> - As data changes throughout the mail application, the event system notifies key components such as datasources and the URL system of these changes.</li>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/mailwindow.html">Mail Window Management</a> - Each mail window maintains a certain amount of state to aid in view navigation, progress display, etc.</li>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/network.html">URL display and dispatching</a> - In order to perform network operations such as downloading new mail, copying and moving messages, and displaying messages from a remote server, the URL system interacts with necko and reflects it's state to the mail window.</li>
+</ul>
+
+<p>There are also a number of protocol independant subsystems that have a symbiotic relationship with base:</p>
+
+<ul>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/libmime-description.html">libMIME</a> - for dealing with RFC822 messages and their MIME parts. This library has the cabability to stream messages to an HTML renderer such as Gecko, manage individual parts of messages, and so forth.</li>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/db.html">msgdb</a> - A message database for a given folder is a summary of some of the key attributes in a folder such as the Author and Subject.</li>
+</ul>
+
+<p>Finally, there are larger modules outside of the mail client that are mail-oriented. Most of these modules have little dependancy on the mail reader itself:</p>
+
+<ul>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/compose/">Compose</a> - The mail compose module is responsible for anything that has to do with sending mail. This includes the mail compose window, creation of RFC822 messages from the data a user has entered, and sending the messages via SMTP.</li>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/addrbook/">Address book</a> - The address book contains lists of people and all attributes associated with them such as their e-mail address, phone number, etc.</li>
+</ul>

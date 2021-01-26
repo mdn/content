@@ -1,0 +1,56 @@
+---
+title: 'Building a Thunderbird extension 3: install manifest'
+slug: >-
+  Mozilla/Thunderbird/Thunderbird_extensions/Building_a_Thunderbird_extension_3:_install_manifest
+tags:
+  - Extensions
+  - thunderbird
+---
+<p>{{AddonSidebar}}</p>
+
+<p>{{ warning("This content is for older versions of Thunderbird. Much of it may no longer be relevant. See developer.thunderbird.net for newer information.") }}</p>
+
+<p>The <code>install.rdf</code> file is an XML file that provides general information about the extension.<span style="line-height: 1.5;"> </span></p>
+
+<p>Open the file called <code>install.rdf</code> that you created at the top of your extension's directory hierarchy and paste the following text into the file:</p>
+
+<pre class="brush: xml">&lt;?xml version="1.0"?&gt;
+
+&lt;RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#"&gt;
+
+  &lt;Description about="urn:mozilla:install-manifest"&gt;
+    &lt;em:id&gt;myfirstext@jen.zed&lt;/em:id&gt;
+    &lt;em:name&gt;My First Extension&lt;/em:name&gt;
+    &lt;em:version&gt;1.0&lt;/em:version&gt;
+    &lt;em:creator&gt;jenzed&lt;/em:creator&gt;
+
+    &lt;em:targetApplication&gt;
+      &lt;Description&gt;
+        &lt;em:id&gt;{3550f703-e582-4d05-9a08-453d09bdfdc6}&lt;/em:id&gt;
+        &lt;em:minVersion&gt;1.5&lt;/em:minVersion&gt;
+        &lt;em:maxVersion&gt;5.0.*&lt;/em:maxVersion&gt;
+      &lt;/Description&gt;
+    &lt;/em:targetApplication&gt;
+
+  &lt;/Description&gt;
+&lt;/RDF&gt;
+</pre>
+
+<p> The following items (shown in bold) should be customized for your application:</p>
+
+<ul>
+ <li><code><strong>&lt;em:id&gt;<a class="link-mailto" href="mailto:myfirstext@jen.zed" rel="freelink">myfirstext@jen.zed</a>&lt;/em:id&gt;</strong></code>: This is the ID of the extension. The first portion is the short name of the extension and <strong>must</strong> be in lowercase; the last portion is a two-part period-delimited value such as your first and last name or the top-level domain of your website. While this value is in email address format, it is <em>not</em> an email address. It should, however, be a unique value so that it does not conflict with other extensions. </li>
+ <li><code><strong>&lt;em:name&gt;My First Extension&lt;/em:name&gt;</strong></code>: The extension name is displayed in the Thunderbird add-on Manager.</li>
+ <li><code><strong>&lt;em:version&gt;1.0&lt;/em:version&gt;</strong></code>: This is the version number of your extension. It must be updated each time you release a new version of your extension. It is <em>not</em> the Thunderbird version number (which is stored in the <code>minVersion</code> and <code>maxVersion</code> fields).</li>
+ <li><code><strong>&lt;em:creator&gt;jenzed&lt;/em:creator&gt;</strong></code>: This optional value is used to store the extension author's name.</li>
+ <li><code><strong>&lt;em:id&gt;{3550f703-e582-4d05-9a08-453d09bdfdc6}&lt;/em:id&gt;</strong></code>: This element contains the version id of the application that this add on is developed for. It is defined by Mozilla. A list of valid application ids can be found <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/pages/appversions" title="https://addons.mozilla.org/en-US/firefox/pages/appversions">here</a>. Normally the id does not change and is always the same even for different versions of Thunderbird.</li>
+ <li><strong><code>&lt;em:minVersion&gt;1.5&lt;/em:minVersion&gt;</code></strong>: This element indicates the earliest version of Thunderbird for which the extension is intended to work. Do not use a wildcard (such as "*"). See <a class="external" href="http://addons.mozilla.org/en-US/firefox/pages/appversions" title="http://addons.mozilla.org/en-US/firefox/pages/appversions">Valid Application Versions</a> for a list of the supported version numbers and formats.</li>
+ <li><strong><code>&lt;em:maxVersion&gt;5.0.*&lt;/em:maxVersion&gt;</code></strong>: This element indicates the most recent version of Thunderbird for which the extension is intended to work. This cannot be higher than the currently available version. "5.0.*" indicates that the extension works with Thunderbird 5.0 and any subsequent 5.0.x releases. See <a class="external" href="http://addons.mozilla.org/en-US/firefox/pages/appversions" title="http://addons.mozilla.org/en-US/firefox/pages/appversions">Valid Application Versions</a> for a list of the supported version numbers and formats.</li>
+</ul>
+
+<p>There are more optional elements that can be specified in <code>install.rdf.</code> These are described on the <a class="internal" href="/en/Install_Manifests" title="en/Install Manifests">Install Manifests</a> page. Note that elements can be specified in any order, as long as they are children of the <code>&lt;Description&gt;</code> node.</p>
+
+<p>{{ Previous("Extensions/Thunderbird/Building_a_Thunderbird_extension_2:_extension_filesystem") }}</p>
+
+<p>{{ Next("Extensions/Thunderbird/Building_a_Thunderbird_extension_4:_chrome_manifest") }}</p>

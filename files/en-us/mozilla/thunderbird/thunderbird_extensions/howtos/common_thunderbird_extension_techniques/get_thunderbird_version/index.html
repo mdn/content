@@ -1,0 +1,39 @@
+---
+title: Get Thunderbird version
+slug: >-
+  Mozilla/Thunderbird/Thunderbird_extensions/HowTos/Common_Thunderbird_Extension_Techniques/Get_Thunderbird_version
+tags:
+  - thunderbird
+---
+<p>{{AddonSidebar}}</p>
+
+<p>On Thunderbird version 3.0b3pre and later, you can use the following snippet to get the Thunderbird version. (Version 3.0b3pre was the first build to include <a class="internal" href="/en/Toolkit_API/STEEL" title="en/Toolkit API/STEEL">STEEL</a>.)</p>
+
+<pre class="brush: js">var versionChecker =
+Components.classes["@mozilla.org/xpcom/version-comparator;1"].getService(Components.interfaces.nsIVersionComparator);
+
+if (versionChecker.compare(Application.version, "3.0b4") &gt;= 0)
+  // code for &gt;= 3.0b4
+else
+  // code for &lt;  3.0b4
+</pre>
+
+<p>For versions prior to 3.0b3pre, you can use something like this:</p>
+
+<pre class="brush: js">var version;
+if ( "@mozilla.org/xre/app-info;1" in Components.classes )
+  version = Components.classes["@mozilla.org/xre/app-info;
+1"].getService(Components.interfaces.nsIXULAppInfo).version;
+else
+  version = Components.classes["@mozilla.org/preferences-service;
+1"].getService(Components.interfaces.nsIPrefBranch).getCharPref
+("app.version");
+
+var versionChecker = Components.classes["@mozilla.org/xpcom/version-
+comparator;1"].getService(Components.interfaces.nsIVersionComparator);
+
+if ( versionChecker.compare( version, "3.0b3" ) &gt;= 0 )
+  // code for &gt;= 3.0b3
+else
+  // code for &lt; 3.0b3
+</pre>

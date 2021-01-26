@@ -1,0 +1,26 @@
+---
+title: Thunderbird Automated Testing
+slug: Mozilla/Thunderbird/Thunderbird_Automated_Testing
+tags:
+  - Automated testing
+  - Developing Mozilla
+  - thunderbird
+---
+<p>Automated testing is increasingly becoming a significant and important part of Thunderbird's development. It allows us to quickly pick up regressions in patches and helps the developer to think about different cases.</p>
+<p>This page and its sub-pages are intended to describe and provide pointers to the available test mechanisms within Thunderbird and supporting information for developers and testers.</p>
+<h3 id="Core_Tests_expanded_for_Thunderbird">Core Tests expanded for Thunderbird</h3>
+<h4 id="xpcshell-tests_and_make_check">xpcshell-tests and make check</h4>
+<p>These tests are run against almost every changeset that gets committed to the Thunderbird code base.</p>
+<ul> <li><a class="internal" href="/en/MailNews_xpcshell-tests" title="en/MailNews xpcshell-tests">xpcshell-tests</a> run in javascript without any chrome present. This makes them especially useful for testing at the component/module level. xpcshell-tests are the quickest tests to run. MailNews provides additional facilities as detailed on the <a class="internal" href="/en/MailNews/MailNews_Automated_Testing#xpcshell-tests_and_make_check" title="en/MailNews/MailNews Automated Testing#xpcshell-tests and make check">MailNews automated testing page</a>.</li> <li>"make check" is used to run <a class="internal" href="/en/Compiled-code_automated_tests" title="en/Compiled-code automated tests">compiled code tests</a>, these are tests for when xpcshell-tests isn't quite sufficient (e.g. need access to c++ code), and other options don't test at the right level.</li>
+</ul>
+<h3 id="Thunderbird_specific_tests_harnesses">Thunderbird specific tests harnesses</h3>
+<p>Thunderbird is currently working on supporting <a class="external" href="http://code.google.com/p/mozmill/" title="http://code.google.com/p/mozmill/">MozMill</a> as a test harness within its source base. Mozmill is designed as a harness that will drive an application at its UI level, putting in button and key presses just like a normal user would.<a class="internal" href="/en/Thunderbird/Thunderbird_MozMill_Testing" title="en/Thunderbird/Thunderbird MozMill Testing"><br>
+</a></p>
+<ul> <li><a class="internal" href="/en/Thunderbird/Thunderbird_MozMill_Testing" title="en/Thunderbird/Thunderbird MozMill Testing">How to run MozMill tests within Thunderbird</a>.</li> <li><a class="external" href="/en/Mozmill_Tests" title="https://developer.mozilla.org/en/Mozmill_Tests">MozMill documentation</a>.</li>
+</ul>
+<h3 id="Other_Core_Tests">Other Core Tests</h3>
+<p>There are other core tests that are not automatically run on Thunderbird for the reasons detailed below:</p>
+<ul> <li>Mochitest, Chrome and Browser Chrome tests <ul> <li>These require a browser window to be run, as Thunderbird doesn't have this, these tests cannot currently be run.</li> </ul> </li> <li>Reftest, crashtest <ul> <li>These tests can be run on Thunderbird. However, as they are specific to graphical layout they are just testing the core Gecko, and therefore the Thunderbird code won't have a direct effect on them. Therefore we leave running these tests to the Firefox tinderboxes.</li> </ul> </li>
+</ul><h3 id="Useful_References">Useful References</h3>
+<ul> <li><a href="/en/Thunderbird/Thunderbird_Automated_Testing/Thunderbird_Automated_Testing_FAQ" title="https://developer.mozilla.org/en/Thunderbird/Thunderbird_Automated_Testing/Thunderbird_Automated_Testing_FAQ">Thunderbird Automated Testing FAQ</a></li> <li><a class="internal" href="/en/Mozilla_automated_testing" title="en/Mozilla automated testing">Mozilla Automated Testing</a></li> <li><a class="internal" href="/en/Developing_Tests" title="en/Developing Tests">Developing Tests</a></li> <li><a class="internal" href="/en/MailNews/MailNews_Automated_Testing" title="en/MailNews/MailNews Automated Testing">MailNews Automated Testing</a></li>
+</ul>

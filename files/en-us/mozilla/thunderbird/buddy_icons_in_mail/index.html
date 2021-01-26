@@ -1,0 +1,41 @@
+---
+title: Buddy icons in mail
+slug: Mozilla/Thunderbird/Buddy_icons_in_mail
+tags:
+  - Beginner
+  - Guide
+  - thunderbird
+---
+<p>{{ outdated("It was imported from mozilla.org and last updated in 2003.") }}</p>
+
+<p><a class="link-mailto" href="mailto:sspitzer@mozilla.org">Seth Spitzer</a><br>
+ <br>
+ Mozilla is now able to show icons in the message header area and the addressbook card pane.<br>
+ <br>
+ For the message pane, the icon we will show is on disk at:<br>
+ <br>
+ &lt;profile home&gt;/NIM/&lt;value of pref aim.session.screenname&gt;/picture/&lt;screenname for sender email address&gt;.gif<br>
+ <br>
+ When trying to determine the screenname for the sender, we search the addressbook that we are using for collection.  (See <a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/cab.html">this</a> document for info about that.)<br>
+ <br>
+ For the addressbook card pane, the icon will show is on disk at:<br>
+ <br>
+ &lt;profile home&gt;/NIM/&lt;value of pref aim.session.screenname&gt;/picture/&lt;screenname for card&gt;.gif<br>
+ <br>
+ If aim.session.screenname is not set, the icon will not appear. <br>
+ If there is no card matching the email, the icon will not appear. <br>
+ If there is a card, but no screenname, the icon will not appear. <br>
+ And finally, if there is no icon, the icon will not appear.<br>
+ <br>
+ The reason this file name scheme was chosen was is this is how Netscape 7.0 IM stores buddy icons on disk. <br>
+ So if you use NIM, and you use buddy icons, this will just work for free.<br>
+ <br>
+ Notes:</p>
+
+<ol>
+ <li>You do not have to be online to use this feature.</li>
+ <li>We do not show any buddy icon if you are in "collapsed" header mode.</li>
+</ol>
+
+<p><br>
+ <img alt="screenshot" src="http://bugzilla.mozilla.org/attachment.cgi?id=99248&amp;action=view" style="height: 434px; width: 757px;" title=""></p>

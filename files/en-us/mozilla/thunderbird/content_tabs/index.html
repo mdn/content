@@ -1,0 +1,134 @@
+---
+title: Content Tabs
+slug: Mozilla/Thunderbird/Content_Tabs
+tags:
+  - thunderbird
+---
+<div class="blockIndicator standardNote">
+<p>This content covers features introduced in <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a></p>
+</div>
+
+<p>Content Tabs enable Thunderbird to display remote content in a tab, which users can browse in (mostly) the same way as with a browser. For example, invoking Thunderbird's <strong>Help | What's New</strong> menu option opens a tab that displays web content. The Thunderbird team can update this content via the website at any time.</p>
+
+<p>Content Tabs can take advantage of form fill, autocomplete, password manager, cookies, "find as you type" and a range of other browsing features.</p>
+
+<p><span class="inlineIndicator standardNote">New in <a class="new" href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/3.3" rel="nofollow">Thunderbird 3.3</a></span> Content tabs now also support favicons.</p>
+
+<h2 id="Opening_a_Content_Tab">Opening a Content Tab</h2>
+
+<p>A Content Tab is opened via the <a href="http://mxr.mozilla.org/comm-central/source/mail/base/content/tabmail.xml">tabmail</a> interface. The following example checks the user preference for whether new messages should be opened in a tab or message window, then displays the "What's New" page for nightly builds of Thunderbird (in either a Content Tab or a new message window, depending on the user's preference settings).</p>
+
+<pre class="brush: js">let url = "http://www.mozillamessaging.com/en-US/thunderbird/nightly/whatsnew/";
+let tabmail = document.getElementById("tabmail");
+if (!tabmail) {
+  // Try opening new tabs in an existing 3pane window
+  let mail3PaneWindow = Components.classes["@mozilla.org/appshell/window-mediator;1"]
+                                  .getService(Components.interfaces.nsIWindowMediator)
+                                  .getMostRecentWindow("mail:3pane");
+  if (mail3PaneWindow) {
+    tabmail = mail3PaneWindow.document.getElementById("tabmail");
+    mail3PaneWindow.focus();
+  }
+}
+
+if (tabmail)
+  tabmail.openTab("contentTab", {contentPage: url});
+else
+  window.openDialog("chrome://messenger/content/", "_blank",
+                    "chrome,dialog=no,all", null,
+                    { tabType: "contentTab",
+                      tabParams: {contentPage: url} });
+</pre>
+
+<p>To test out opening something in a Content Tab, you can enter the following in the Error Console and press <strong>Evaluate</strong>:</p>
+
+<pre class="brush: js">Components.classes['@mozilla.org/appshell/window-mediator;1'].getService(Components.interfaces.nsIWindowMediator).getMostRecentWindow("mail:3pane").document.getElementById("tabmail").openTab("contentTab", {contentPage: "http://www.mozillamessaging.com/en-US/thunderbird/nightly/whatsnew/"});
+</pre>
+
+<p>Both the above examples will open a Content Tab with a default click handler.</p>
+
+<h2 id="Handling_clicks">Handling clicks</h2>
+
+<p>Opening a Content Tab without a specified click handler will use a <code><a class="external" href="http://mxr.mozilla.org/comm-central/search?string=defaultClickHandler&amp;find=/mail" title="http://mxr.mozilla.org/comm-central/search?string=defaultClickHandler&amp;find=/mail">defaultClickHandler</a></code>. The default click handler will push any <code>about:</code>, <code>http:</code> or <code>https:</code> links out to the external browser and will load any others internally or externally depending on the setting of the <code>network.protocol-handler.expose.*</code> preferences.</p>
+
+<p>You can explicitly specify the <code>defaultClickHandler</code> by providing a <code>clickHandler</code> argument when opening the Content Tab. Note that this is the equivalent to not providing a <code>clickHandler</code> argument:</p>
+
+<pre class="brush: js">tabmail.openTab("contentTab", {contentPage: url,
+                               clickHandler: "specialTabs.defaultClickHandler(event);" });
+</pre>
+
+<p>The <code>clickHandler</code> is the value inserted into the <code>onclick</code> attribute of the browser element created for the <code>contentTab</code>.</p>
+
+<h3 id="Limiting_browsing_to_certain_sites">Limiting browsing to certain sites</h3>
+
+<p>Thunderbird supplies a <a class="external" href="http://mxr.mozilla.org/comm-central/search?string=siteClickHandler&amp;find=/mail" title="http://mxr.mozilla.org/comm-central/search?string=siteClickHandler&amp;find=/mail">siteClickHandler</a>, which takes an extra argument (a <a href="/en/JavaScript/Guide/Regular_Expressions" title="en/Core JavaScript 1.5 Guide/Regular Expressions">regular expression</a>). This results in the following functionality:</p>
+
+<ul>
+ <li>If the link clicked has an <code>http</code> or <code>https</code> scheme and the regular expression does not match the link, the link will be opened in the external browser.</li>
+ <li>Otherwise, the link will be opened internally in the browser element (and according to the <code>network.protocol-handler.expose.*</code> preferences).</li>
+</ul>
+
+<div class="blockIndicator note"><strong>Note:</strong> Due to the limitations of <code>http</code> and the possibility for redirects, if sites change or use JavaScript, the <code>onclick</code> handlers may not be able to ensure the <code>contentTab</code> stays within a site. Extensions using this function should consider this when implementing the handlers.</div>
+
+<p>A good example of this site limitation is the <a class="link-https" href="https://addons.mozilla.org/en-US/thunderbird/addon/10900" title="https://addons.mozilla.org/en-US/thunderbird/addon/10900">Personas</a> extension. It can open a Content Tab for browsing its gallery, but as soon as the user tries to go outside the site they are pushed to their external browser, which will provide them with better overall support for general browsing. The code to do this is relatively simple and is reduced down to:</p>
+
+<pre class="brush: js">let PersonasController = {
+  get _thunderbirdRegExp() {
+    delete this._thunderbirdRegExp;
+    return this._thunderbirdRegExp = new RegExp("^http://www.getpersonas.com/");
+  },
+
+
+  openURLInTab: function (url) {
+    ...
+    openTab("contentTab", { contentPage: url,
+                            clickHandler: "specialTabs.siteClickHandler(event, PersonaController._thunderbirdRegExp);" });
+    ...
+  }
+};
+</pre>
+
+<h3 id="Other_click_handlers">Other click handlers</h3>
+
+<p>Extensions can provide their own click handlers, although they should be based on the <a class="external" href="http://mxr.mozilla.org/comm-central/search?string=siteClickHandler&amp;find=/mail" title="http://mxr.mozilla.org/comm-central/search?string=siteClickHandler&amp;find=/mail">siteClickHandler</a>, which should be checked regularly for any updates that fix bugs.</p>
+
+<h3 id="Saving_click_handlers">Saving click handlers</h3>
+
+<p>Content Tabs are hooked up to the session persistence code that <a href="http://mxr.mozilla.org/comm-central/source/mail/base/content/tabmail.xml">tabmail</a> provides. The click handler will be saved alongside the Content Tab URL and restored when the application is restarted.</p>
+
+<h2 id="Extending_Content_Tabs">Extending Content Tabs</h2>
+
+<p>Extensions can extend Content Tabs in two ways: by extending the current Content Tab code (which will affect all extensions) or by providing your own template and support code.</p>
+
+<p>If you wish to implement your own specific types, then you need to look at:</p>
+
+<ul>
+ <li><a href="http://mxr.mozilla.org/comm-central/source/mail/base/content/specialTabs.xul">specialTabs.xul</a> - the XUL template for content tabs</li>
+ <li><a href="http://mxr.mozilla.org/comm-central/source/mail/base/content/specialTabs.js">specialTabs.js</a> - the JavaScript implementation for Content Tabs (see <code>contentTabType</code>).</li>
+</ul>
+
+<h2 id="Security">Security</h2>
+
+<p>Extensions should consider security issues. Thunderbird provides a minimal security UI at the moment, given that it doesn't support browsing by default. Various security considerations include:</p>
+
+<ul>
+ <li>Providing a URL bar display</li>
+ <li>Providing indications of security levels</li>
+ <li>This page about <a href="/En/Displaying_web_content_in_an_extension_without_security_issues" title="En/Displaying web content in an extension without security issues">displaying web content in an extension</a> may also have relevant information</li>
+</ul>
+
+<h2 id="Installation_of_add-ons">Installation of add-ons</h2>
+
+<p><span class="inlineIndicator standardNote">New in <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/3.1">Thunderbird 3.1</a></span> Content tabs have in-built support for loading add-ons from non-whitelisted sites. They now automatically subscribe to the "xpinstall-install-blocked" notification and display a notification bar for installation if required.</p>
+
+<p>The blocked notification can also be displayed if the administrator has blocked add-on installation within Thunderbird. This is situation is also supported in the notification bar.</p>
+
+<div class="blockIndicator note"><strong>Note:</strong> The click handler must allow clicks through to the xpi for the installation to work correctly - otherwise the xpi will attempt to be loaded in the default browser.</div>
+
+<h2 id="Lightweight_Themes">Lightweight Themes</h2>
+
+<p><span class="inlineIndicator standardNote">New in <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/3.1">Thunderbird 3.1</a></span> Thunderbird has support for <a href="/en/Themes/Lightweight_themes" title="en/Themes/Lightweight themes">Lightweight Themes</a>. Lightweight Themes referenced in content tabs can be installed into Thunderbird. See the <a class="link-https" href="https://addons.mozilla.org/en-US/thunderbird/addon/10900" title="https://addons.mozilla.org/en-US/thunderbird/addon/10900">Personas</a> extension for an example.</p>
+
+<h2 id="See_Also">See Also</h2>
+
+<p>Bugs relating to Thunderbird's implementation of Content Tabs should be filed in <a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Thunderbird" title="https://bugzilla.mozilla.org/enter_bug.cgi?product=Thunderbird">Bugzilla</a>. First, check for <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?query_format=advanced&amp;product=Thunderbird&amp;component=Toolbars+and+Tabs&amp;resolution=---" title="https://bugzilla.mozilla.org/buglist.cgi?query_format=advanced&amp;product=Thunderbird&amp;component=Toolbars+and+Tabs&amp;resolution=---">existing known bugs</a>. If your bug is new, specify the "Thunderbird" product and the "Toolbars and Tabs" component when you create the bug.</p>

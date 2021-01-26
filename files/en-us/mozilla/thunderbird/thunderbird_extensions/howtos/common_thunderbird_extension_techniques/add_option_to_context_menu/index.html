@@ -1,0 +1,56 @@
+---
+title: Add Option to Context Menu
+slug: >-
+  Mozilla/Thunderbird/Thunderbird_extensions/HowTos/Common_Thunderbird_Extension_Techniques/Add_Option_to_Context_Menu
+tags:
+  - incomplete
+  - thunderbird
+---
+<p>{{AddonSidebar}}</p>
+
+<p>Assuming this on chrome.manifest:</p>
+
+<p><code>overlay    <a class="external" rel="freelink">chrome://messenger/content/mailWindowOverlay.xul</a>     <a class="external" rel="freelink">chrome://myext/content/thunderbird-overlay.xul</a></code></p>
+
+<p>Add the next in thunderbird-overlay.xul.</p>
+
+<h4 id="For_Thunderbird_2">For Thunderbird 2</h4>
+
+<p> </p>
+
+<pre class="eval">  &lt;?xml version="1.0"?&gt;
+  &lt;overlay id="sample"
+         xmlns="<a class="linkification-ext external" href="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" title="Linkification: http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</a>"&gt;
+<code>  &lt;menupopup id="messagePaneContext"&gt;
+      &lt;menuitem
+        id="my_option"
+        label="My option concise and cool label"
+        oncommand="alert('Hi')"/&gt;
+    &lt;/menupopup&gt;</code>
+  &lt;/overlay&gt;</pre>
+
+<h4 id="For_Thunderbird_3">For Thunderbird 3</h4>
+
+<pre class="eval">  &lt;?xml version="1.0"?&gt;
+  &lt;overlay id="sample"
+         xmlns="<a class="linkification-ext external" href="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" rel="external nofollow" title="Linkification: http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</a>"&gt;
+<code>      &lt;popup id="mailContext"&gt;</code>
+<code>       &lt;menuitem
+        id="my_option"
+        label="My option concise and cool label"
+        oncommand="alert('Hi')"/&gt;
+</code><code>    &lt;/popup&gt;
+&lt;/overlay&gt;
+</code>
+</pre>
+
+<h4 id="For_Thunderbird_2_and_3_in_the_same_XPI">For Thunderbird 2 and 3 in the same XPI</h4>
+
+<p>If our extension needs to support Thunderbird 2 and 3 we need to make custom overlays for each version. This can be reached by adding these lines to the <code>chrome.manifest</code> file:</p>
+
+<pre style="white-space: pre-wrap;"><span style="font-family: courier new;">overlay chrome://messenger/content/</span><code>mailWindowOverlay</code><span style="font-family: courier new;">.xul chrome://myaddon/content/tbOverlay-tb2.xul appversion&lt;3.0
+</span><span style="font-family: courier new;">overlay chrome://messenger/content/</span><code>mailWindowOverlay</code><span style="font-family: courier new;">.xul chrome://myaddon/content/tbOverlay-tb3.xul appversion=&gt;3.0</span></pre>
+
+<p>Than we need two overlay XUL files with content from examples above.</p>
+
+<div class="note">Note: If our extension supports more Mozilla applications (for example Mozilla Firefox and Mozilla Thunderbird) we need also specify <code>application</code> flag. For more details see <a class="internal" href="/en/Chrome_Registration" title="en/Chrome Registration">Chrome Registration</a>.</div>

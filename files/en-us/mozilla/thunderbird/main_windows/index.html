@@ -1,0 +1,52 @@
+---
+title: Main Windows
+slug: Mozilla/Thunderbird/Main_Windows
+tags:
+  - thunderbird
+---
+<p>{{ warning("This content is for older versions of Thunderbird. Much of it may no longer be relevant. See developer.thunderbird.net for newer information.") }}</p>
+
+<p>The base chrome directory of Thunderbird can sometimes appear confusing when you're just beginning to look at it. As such, I've always thought it would be nice to have a list of what <code>xul</code>, <code>js</code>, or other files are that are here, what they do, and where they overlay at different points within the client. Things appear confusing for several reasons:</p>
+
+<ol>
+ <li>Much of the code is written to be portable, so instead of duplicating it, its been put in overlays that are loaded over many different types of windows.</li>
+ <li>Some of the code was written based off of early <a href="en/Firefox">Firefox</a> code, but is not exactly the same. You’ll sometimes see reimplementations of things that are already in toolkit, written specially for Thunderbird.</li>
+</ol>
+
+<h2 id="messenger.xul" name="messenger.xul">messenger.xul</h2>
+
+<p>The base mail window that you see when you first open Thunderbird is <code><a class="external" href="https://dxr.mozilla.org/comm-central/source/mail/base/content/messenger.xul">messenger.xul</a></code>: <img alt="Image:ThunderbirdMainWindow.png" src="https://mdn.mozillademos.org/files/16285/ThunderbirdMainWindow.png"> <code>messenger.xul</code> itself doesn’t contain a lot. Its main focus is on handling the folderpane, threadpane, and the message preview sections shown above. The rest is loaded from overlays:</p>
+
+<dl>
+ <dt><a class="external" href="https://dxr.mozilla.org/comm-central/source/mail/base/content/mailWindowOverlay.xul">mailWindowOverlay.xul</a></dt>
+ <dd>This is the <span style="color: red;">red</span> sections shown in the interface above (<strong>where?</strong>), including the toolbars, notification bars, and the status bar, but also includes most of the commands, keysets, and context menus of Thunderbird, along with a whole lot of Javascript.</dd>
+ <dt><a class="external" href="https://dxr.mozilla.org/comm-central/source/mail/base/content/mailOverlay.xul">mailOverlay.xul</a></dt>
+ <dd>A really small overlay that only adds a few “New message” and “New Card” commands to the menus, along with their associated javascript.</dd>
+ <dt><a class="external" href="https://dxr.mozilla.org/comm-central/source/mail/base/content/msgHdrViewOverlay.xul">msgHdrViewOverlay.xul</a></dt>
+ <dd>Shown in <span style="color: blue;">blue</span> above (<strong>where?</strong>), this overlay consists of three boxes. Two are stacked showing either a brief or expanded view of the headers. The third is the attachment box which can be toggled into a slim or an expanded view</dd>
+ <dt><a class="external" href="https://dxr.mozilla.org/comm-central/source/mail/base/content/baseMenuOverlay.xul">baseMenuOverlay.xul</a></dt>
+ <dd>Contains the contents of most of the menus (i.e. File, Edit, View, etc).</dd>
+ <dt><a class="external" href="https://dxr.mozilla.org/comm-central/source/mail/base/content/macMenuOverlay.xul">OSX Only: macMenuOverlay.xul</a></dt>
+ <dd>A special overlay for OSX that adds a few items to the <code>window</code> menu.</dd>
+</dl>
+
+<h2 id="messageWindow.xul" name="messageWindow.xul">messageWindow.xul</h2>
+
+<p><code><a class="external" href="http://mxr.mozilla.org/comm-central/source/mail/base/content/messageWindow.xul">messageWindow.xul</a></code> is shown when a message is opened. Its almost exactly the same as <code>messenger.xul</code> in terms of overlays, but just lacks the folder and threadpanes normally shown. Menus, toolbar buttons, and headers are all taken from exactly the same overlays listed above though. <img alt="Image:ThunderbirdViewMessage.png" src="https://mdn.mozillademos.org/files/16286/ThunderbirdViewMessage.png"></p>
+
+<dl>
+ <dt><a class="external" href="http://mxr.mozilla.org/comm-central/source/mail/base/content/mailWindowOverlay.xul">mailWindowOverlay.xul</a></dt>
+ <dd>This is the <span style="color: red;">red</span> sections shown in the interface above, including the toolbars, notification bars and the status bar.It also includes most of the commands, keysets, and context menus of Thunderbird, along with a whole lot of Javascript.</dd>
+ <dt><a class="external" href="http://mxr.mozilla.org/comm-central/source/mail/base/content/msgHdrViewOverlay.xul">msgHdrViewOverlay.xul</a></dt>
+ <dd>Shown in <span style="color: blue;">blue</span> above, this overlay consists of three boxes. Two are stacked showing either a brief or expanded view of the headers. The third is the attachment box which can be toggled into a slim or an expanded view</dd>
+ <dt><a class="external" href="http://mxr.mozilla.org/comm-central/source/mail/base/content/baseMenuOverlay.xul">baseMenuOverlay.xul</a></dt>
+ <dd>Contains the contents of most of the menus (i.e. File, Edit, View, etc).</dd>
+ <dt><a class="external" href="http://mxr.mozilla.org/comm-central/source/mail/base/content/macMenuOverlay.xul">OSX Only: macMenuOverlay.xul</a></dt>
+ <dd>A special overlay for OSX that adds a few items to the <code>window</code> menu.</dd>
+</dl>
+
+<h2 id="customizeToolbar.xul_and_customizeToolbarSheet.xul" name="customizeToolbar.xul_and_customizeToolbarSheet.xul">customizeToolbar.xul and customizeToolbarSheet.xul</h2>
+
+<p>These are two old files from when the original customizable toolbars were ported from <a href="en/Firefox">Firefox</a> (Phoenix at the time) to <a href="en/Thunderbird">Thunderbird</a> (Minotaur at the time). <code><a class="external" href="http://mxr.mozilla.org/comm-central/source/mail/base/content/customizeToolbar.xul">customizeToolbar.xul</a></code> looks and acts a whole lot like the <a class="external" href="http://mxr.mozilla.org/mozilla-central/source/toolkit/content/customizeToolbar.xul">toolkit's customizeToolbar.xul</a>. Items have the same ID’s, and contain the same structure. A few odd pieces are missing though. For instance, the “Add New Toolbar” buttons from toolkit aren’t in the Thunderbird version. <code><a class="external" href="http://mxr.mozilla.org/comm-central/source/mail/base/content/customizeToolbarSheet.xul">customizeToolbarSheet.xul</a></code> is a similar implementation written for OSX to give a more native appearance. At compile time these files are added to the toolkit directory so that their chrome addresses are in global, the same as Firefox’s.</p>
+
+<p>Why this is this way, I’m not sure at the moment. I assume that customizeToolbars was originally not in the toolkit, but in Firefox's chrome, or that there were some special changes wanted for Thunderbird's implementation at some point. Regardless, it seems to still be that way now.</p>

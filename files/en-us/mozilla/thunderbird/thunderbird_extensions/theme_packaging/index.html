@@ -1,0 +1,127 @@
+---
+title: Theme Packaging
+slug: Mozilla/Thunderbird/Thunderbird_extensions/Theme_Packaging
+tags:
+  - Add-ons
+  - Themes
+  - Toolkit API
+---
+<div class="warning">
+<p>The documentation here is out of date.</p>
+</div>
+
+<p>This document describes how to package themes for Thunderbird.</p>
+
+<h2 id="Pre-requisites" name="Pre-requisites">Pre-requisites</h2>
+
+<p>Making a theme for Thunderbird requires knowledge of Cascading Stylesheets (<a href="/docs/Web/CSS" title="CSS">CSS</a>), probably <a href="/docs/XBL" title="XBL">XBL</a>, and some graphic design and aesthetic skill (...or maybe not). <em>This document describes only how Themes are packaged in order to be shown in Firefox's Themes window.</em></p>
+
+<h2 id="Theme_File_Layout" name="Theme_File_Layout">Theme File Layout</h2>
+
+<p>Thunderbird themes are packaged in an XPI file with the following structure:</p>
+
+<pre>theme.xpi:
+  install.rdf
+  preview.png
+  icon.png
+  chrome/
+        browser/<em>files
+</em><span style="font-size: 1rem;">        </span><span style="font-size: 1rem;">communicator/</span><em>files</em>
+<span style="font-size: 1rem;">        </span>global/<em>files</em>
+<span style="font-size: 1rem;">        </span>mozapps/<em>files</em>
+  ...
+
+</pre>
+
+<ul>
+ <li>You must have a top-level <a href="/docs/Chrome_Registration" title="Chrome_Registration">chrome.manifest</a> file which registers the chrome for the theme (as before) and also an <a href="/en-US/docs/Install_Manifests" title="Install_Manifests">install.rdf</a> manifest that specifies metadata that is displayed in the Appearance section of the Add-ons Manager.</li>
+ <li>preview.png is a preview image which will show when double-clicked on a theme in the Appearance section of the Add-ons Manager. It can be any size.</li>
+ <li>icon.png is a 32x32 (max. 48x48) PNG (may contain alpha transparency) which will show up in the Appearance section of the Add-ons Manager.</li>
+</ul>
+
+<h2 id="install.rdf" name="install.rdf">install.rdf</h2>
+
+<p>Your <a href="/Add-ons/Install_Manifests" title="Install_Manifests">install.rdf</a> manifest will look something like this:</p>
+
+<pre class="brush:xml;highlight:[8]">&lt;?xml version="1.0"?&gt;
+
+&lt;RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#"&gt;
+
+  &lt;Description about="urn:mozilla:install-manifest"&gt;
+    &lt;em:type&gt;4&lt;/em:type&gt;
+    more properties
+  &lt;/Description&gt;
+&lt;/RDF&gt;
+</pre>
+
+<h3 id="Required_install.rdf_Properties" name="Required_install.rdf_Properties">Required install.rdf Properties</h3>
+
+<p>Your install.rdf file must have the following properties. See the <a href="/docs/Install_Manifests" title="Install_Manifests">install.rdf Reference</a> for more information:</p>
+
+<ul>
+ <li>em:id</li>
+ <li>em:version</li>
+ <li>em:type</li>
+ <li>em:targetApplication</li>
+ <li>em:name</li>
+ <li>em:internalName</li>
+</ul>
+
+<h3 id="Optional_install.rdf_Properties" name="Optional_install.rdf_Properties">Optional install.rdf Properties</h3>
+
+<ul>
+ <li>em:description</li>
+ <li>em:creator</li>
+ <li>em:contributor</li>
+ <li>em:homepageURL</li>
+ <li>em:updateURL</li>
+</ul>
+
+<p>Note that if your theme will be made available on the <a href="https://addons.mozilla.org" rel="freelink">https://addons.mozilla.org</a> website, it may not include an updateURL.</p>
+
+<h3 id="Sample_install.rdf_File" name="Sample_install.rdf_File">Sample install.rdf File</h3>
+
+<pre class="brush:xml">&lt;?xml version="1.0"?&gt;
+
+&lt;RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#"&gt;
+
+  &lt;Description about="urn:mozilla:install-manifest"&gt;
+    &lt;em:id&gt;{18b64b56-d42f-428d-a88c-baa413bc413f}&lt;/em:id&gt;
+    &lt;em:version&gt;1.0&lt;/em:version&gt;
+    &lt;em:type&gt;4&lt;/em:type&gt;
+
+    &lt;!-- Target Application this extension can install into,
+         with minimum and maximum supported versions. --&gt;
+    &lt;em:targetApplication&gt;
+      &lt;Description&gt;
+        &lt;em:id&gt;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&lt;/em:id&gt;
+        &lt;em:minVersion&gt;0.8&lt;/em:minVersion&gt;
+        &lt;em:maxVersion&gt;0.9&lt;/em:maxVersion&gt;
+      &lt;/Description&gt;
+    &lt;/em:targetApplication&gt;
+
+    &lt;!-- Front End MetaData --&gt;
+    &lt;em:name&gt;New Theme 1&lt;/em:name&gt;
+    &lt;em:description&gt;A test theme for Thunderbird&lt;/em:description&gt;
+    &lt;em:creator&gt;Ben Goodger&lt;/em:creator&gt;
+    &lt;em:contributor&gt;John Doe&lt;/em:contributor&gt;
+    &lt;em:homepageURL&gt;http://www.bengoodger.com/&lt;/em:homepageURL&gt;
+
+    &lt;!-- Front End Integration Hooks (used by Theme Manager)--&gt;
+    &lt;em:internalName&gt;newtheme1&lt;/em:internalName&gt;
+  &lt;/Description&gt;
+&lt;/RDF&gt;
+</pre>
+
+<p>The following are some common target application GUIDs that you can use in your targetApplication properties:</p>
+
+<pre>Thunderbird  {3550f703-e582-4d05-9a08-453d09bdfdc6}
+SeaMonkey    {92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}
+Pale Moon    {8de7fcbb-c55c-4fbe-bfc5-fc555c87dbc4}
+</pre>
+
+<h2 id="Official_References_for_Toolkit_API" name="Official_References_for_Toolkit_API">Official References for <a href="/en-US/docs/Toolkit_API" title="Toolkit_API">Toolkit API</a></h2>
+
+<div>{{page("/en-US/docs/Toolkit_API/Official_References")}}</div>

@@ -1,0 +1,542 @@
+---
+title: Mail composition back end
+slug: Mozilla/Thunderbird/Mail_composition_back_end
+tags:
+  - Beginner
+  - Guide
+  - Landing
+  - NeedsUpdate
+  - thunderbird
+---
+<p>{{ outdated("It was imported from mozilla.org and last updated in 2000.") }}<br>
+  </p>
+
+<p><strong><font color="#000000">by Richard H. Pizzarro &lt;<a class="link-mailto" href="mailto:rhp@netscape.com">rhp@netscape.com</a>&gt;</font></strong> <strong><font color="#000000"><font size="+2">Contents</font></font></strong></p>
+
+<ul>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/compose-backend.html#OVER">Overview</a></li>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/compose-backend.html#SENDING">Sending Messages</a>
+  <ul>
+   <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/compose-backend.html#SENDING">nsIMsgSend</a></li>
+  </ul>
+ </li>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/compose-backend.html#LISTENER">Sending Listener Interfaces</a>
+  <ul>
+   <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/compose-backend.html#NSIMSGSENDLISTENER">nsIMsgSendListener</a></li>
+   <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/compose-backend.html#NSIMSGCOPYSERVICELISTENER">nsIMsgCopyServiceListener</a></li>
+  </ul>
+ </li>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/compose-backend.html#API">Copy Operations</a>
+  <ul>
+   <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/compose-backend.html#COPYSENT">Copy to Sent Folder</a></li>
+   <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/compose-backend.html#DRAFTS">Drafts</a></li>
+   <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/compose-backend.html#TEMPLATES">Templates</a></li>
+   <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/compose-backend.html#TEMPLATES">"Send Later"</a></li>
+  </ul>
+ </li>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/compose-backend.html#SENDUNSENT">Sending Unsent Messages</a></li>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/compose-backend.html#SENDUNSENTLISTENER">Sending Unsent Messages Listener</a></li>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/compose-backend.html#QUOTING">Quoting</a></li>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/compose-backend.html#SAMPLES">Sample Programs</a></li>
+</ul>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><span id="OVER"><strong><font color="#000000"><font size="+2">Overview</font></font></strong></span></td>
+  </tr>
+ </tbody>
+</table>
+
+<p><font color="#000000">I've done considerable work in the past few weeks reorganizing the Mail Composition back end, so I thought it would be helpful to put together a small doc on the new interfaces and how one can use them. The Mail Composition back end is responsible for the assembly and creation of RFC822 messages to be delivered either via SMTP or NNTP services. You also have the ability to save RFC822 files to disk, should you need this data for some reason. Included in this functionality is the code to copy the messages to the appropriate locations after delivery (i.e. a "Sent" folder) as well as the ability to store messages for features like "Drafts" and "Templates". Several (but not all) of these interfaces are specified in IDL. This will change in the coming weeks and allow for developers to write JavaScript to take advantage of the back end services. Also, I will talk about some features though they may not be complete as of yet. I will try to make comments for these exceptions.</font><br>
+  <br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><span id="SENDING"><strong><font color="#000000"><font size="+2">Sending Messages</font></font></strong></span></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The primary responsibility of the back end is for the creation and sending of RFC822 messages. The interface that accomplishes this task is the <strong>nsIMsgSend </strong>interface. The feedback mechanism is provided by a <strong>nsIMsgSendListener</strong> which is implemented by the caller. The caller has the ability to add or remove listener interfaces to the <strong>nsIMsgSend</strong> object and the interface can support multiple listeners. (For detailed information on the listener interfaces, see the <a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/compose-backend.html#LISTENER">Listener Interfaces</a> section of this document)<br>
+  <br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><span id="NSIMSGSEND"><strong><font color="#000000"><font size="+1">nsIMsgSend</font></font></strong></span></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The following describes the methods of the <strong>nsIMsgSend</strong> interface. All of these methods are asynchronous operations.<br>
+  <br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><strong><font color="#000000"><font size="+1">CreateAndSendMessage</font></font></strong></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The <strong>CreateAndSendMessage </strong>method will create an RFC822 message and send it all in one operation as well as providing the ability to save disk files for later use. The mode of delivery can also be specified for the "Send Later", "Drafts" and "Templates" operations. <font color="#ff0000">(NOTE: This method could easily be broken in to a few different calls. Currently, this method does several functions depending on the arguments passed in, but this could easily lead to confusion. This is something that very well may change as time allows).</font></p>
+
+<p><code><font color="#ff0000"> </font><font color="#000099"> NS_IMETHOD <strong>CreateAndSendMessage</strong>(</font></code><br>
+ <code><font color="#000099">                  nsIEditorShell                    *aEditor,</font></code><br>
+ <font color="#cc0000">- the editor object for the mail compose operation. If this is not null, the body will be extracted from this object and any embedded objects or links will be sent as part of the message in MHTML</font><br>
+ <code><font color="#000099">                  nsIMsgIdentity                    *aUserIdentity,</font></code><br>
+ <font color="#cc0000">- the user identity for the person doing the send operation. This will be needed to determine the appropriate folder for copy operations.</font><br>
+ <code><font color="#000099">                  nsIMsgCompFields                  *fields,</font></code><br>
+ <font color="#cc0000">- the message composition fields. This will contain all of the relevant header information for message creation</font><br>
+ <code><font color="#000099">                  PRBool                            digest_p,</font></code><br>
+ <font color="#cc0000">- this is a flag that says that most of the documents we are attaching are themselves messages, and so we should generate a multipart/digest container instead of multipart/mixed.  (It's a minor difference.)</font><br>
+ <code><font color="#000099">                  PRBool                            dont_deliver_p,</font></code><br>
+ <font color="#cc0000">- If "dont_deliver_p" is false, then we actually deliver the message to the SMTP and/or NNTP server</font><br>
+ <code><font color="#000099">                  nsMsgDeliverMode                  mode,</font></code><br>
+ <font color="#cc0000">- mode is the delivery mode. This can be set for the various modes of delivery. These can include nsMsgDeliverNow, nsMsgQueueForLater, nsMsgSave, nsMsgSaveAs, nsMsgSaveAsDraft, nsMsgSaveAsTemplate.</font><br>
+ <font color="#cc0000">                           </font><code><font color="#000099">nsIMessage                        *msgToReplace,</font></code><br>
+ <font color="#cc0000">- if the delivery mode is set to nsMsgSaveAsDraft, this is a pointer to the the nsIMessage object for the message that needs to be replaced</font><br>
+ <code><font color="#000099">                  const char                        *attachment1_type,</font></code><br>
+ <code><font color="#000099">                  const char                        *attachment1_body,</font></code><br>
+ <code><font color="#000099">                  PRUint32                          attachment1_body_length,</font></code><br>
+ <font color="#cc0000">- the full text of the first attachment is provided via `attachment1_type' `attachment1_body' and `attachment1_body_length'.  These may all be 0 if all attachments are provided externally.</font><br>
+ <code><font color="#000099">                  const struct nsMsgAttachmentData  *attachments,</font></code><br>
+ <font color="#cc0000">- Subsequent attachments are provided as URLs to load, described in the nsMsgAttachmentData structures.</font><br>
+ <code><font color="#000099">                  const struct nsMsgAttachedFile    *preloaded_attachments,</font></code><br>
+ <font color="#cc0000">- attachments that are already locally stored on disk (note: both attachments and preloaded_attachments cannot be specified on a single call</font><br>
+ <code><font color="#000099">                  void                              *relatedPart /* nsMsgSendPart  */,</font></code><br>
+ <font color="#cc0000">- a related part for multipart related operations</font><br>
+ <code><font color="#000099">                  nsIMsgSendListener                **aListenerArray) = 0;</font></code><br>
+ <font color="#cc0000">- an array of listeners for the send operation. this can be nsnull if you want to do the delivery operation "blind"</font><br>
+  <br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><strong><font color="#000000"><font size="+1">SendMessageFile</font></font></strong></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The <strong>SendMessageFile </strong>method will let the caller send a message that has been created by another process (Note: CreateAndSendMessage can accomplish this task).</p>
+
+<p><code><font color="#000099">  NS_IMETHOD  <strong>SendMessageFile</strong>(</font></code><br>
+ <code><font color="#000099">                          nsIMsgIdentity                    *aUserIdentity,</font></code><br>
+ <font color="#cc0000">- the user identity for the person doing the send operation. This will be needed to determine the appropriate folder for copy operations.</font><br>
+ <code><font color="#000099">                          nsIMsgCompFields                  *fields,</font></code><br>
+ <font color="#cc0000">- the message composition fields. This will contain all of the relevant header information for message delivery</font><br>
+ <code><font color="#000099">                          nsFileSpec                        *sendFileSpec,</font></code><br>
+ <font color="#cc0000">- the file spec for the message being sent</font><br>
+ <code><font color="#000099">                          PRBool                            deleteSendFileOnCompletion,</font></code><br>
+ <font color="#cc0000">- tell the back end if it should delete the file upon successful completion</font><br>
+ <code><font color="#000099">                          PRBool                            digest_p,</font></code><br>
+ <font color="#cc0000">- this is a flag that says that most of the documents we are attaching are themselves messages, and so we should generate a multipart/digest container instead of multipart/mixed.  (It's a minor difference.)</font><br>
+ <code><font color="#000099">                          nsMsgDeliverMode                  mode,</font></code><br>
+ <font color="#cc0000">- mode is the delivery mode. This can be set for the various modes of delivery. These can include nsMsgDeliverNow, nsMsgQueueForLater, nsMsgSave, nsMsgSaveAs, nsMsgSaveAsDraft, nsMsgSaveAsTemplate.</font><br>
+ <font color="#cc0000">                                        </font><code><font color="#000099">nsIMessage                        *msgToReplace,</font></code><br>
+ <font color="#cc0000">- if the delivery mode is set to nsMsgSaveAsDraft, this is a pointer to the the nsIMessage object for the message that needs to be replaced</font><br>
+ <code><font color="#000099">                          nsIMsgSendListener                **aListenerArray) = 0;</font></code><br>
+ <font color="#cc0000">- an array of listeners for the send operation. this can be nsnull if you want to do the delivery operation "blind"</font><br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><strong><font color="#000000"><font size="+1">SendWebPage</font></font></strong></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The <strong>SendWebPage </strong>method is a convenience function that will let the caller send a web page by specifying a URI. NOTE: This can be any valid URI so one can send local disk files by specifying a <strong><a class="external" rel="freelink">file://</a></strong> URI.</p>
+
+<p><code><font color="#000099">  NS_IMETHOD  <strong>SendWebPage</strong>(</font></code><br>
+ <code><font color="#000099">                          nsIMsgIdentity                    *aUserIdentity,</font></code><br>
+ <font color="#cc0000">- the user identity for the person doing the send operation. This will be needed to determine the appropriate folder for copy operations.</font><br>
+ <code><font color="#000099">                          nsIMsgCompFields                  *fields,</font></code><br>
+ <font color="#cc0000">- the message composition fields. This will contain all of the relevant header information for message delivery</font><br>
+ <code><font color="#000099">                          nsIURI                            *url,</font></code><br>
+ <font color="#cc0000">- the URI of the message composition fields. This will contain all of the relevant header information for message delivery</font><br>
+ <code><font color="#000099">                          nsMsgDeliverMode                  mode,</font></code><br>
+ <font color="#cc0000">- mode is the delivery mode. This can be set for the various modes of delivery (i.e. send later, drafts, templates or send the message now)</font><br>
+ <code><font color="#000099">                          nsIMsgSendListener                **aListenerArray) = 0;</font></code><br>
+ <font color="#cc0000">- an array of listeners for the send operation. this can be nsnull if you want to do the delivery operation "blind"</font></p>
+
+<p>The <strong>AddListener/RemoveListener </strong>methods let the caller add and remove listeners to the sending interface.</p>
+
+<p><code><font color="#000099">  NS_IMETHOD  <strong>AddListener</strong>(nsIMsgSendListener *aListener) = 0;</font></code><br>
+ <code><font color="#000099">  NS_IMETHOD  <strong>RemoveListener</strong>(nsIMsgSendListener *aListener) = 0;</font></code><br>
+  <br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><span id="LISTENER"><strong><font color="#000000"><font size="+2">Sending Listener Interfaces</font></font></strong></span></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The <strong>nsIMsgSendListener </strong>interface will let a caller keep track of the progress and any status of a send operation. These are critical for message delivery since message sending is asynchronous. It is the only way to determine if the operation was successful or not. An important item to note is the fact that this interface should also implement the <strong>nsIMsgCopyServiceListener</strong> interface if it wants to be notified of the progress and completion of the copy operation.<br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><span id="NSIMSGSENDLISTENER"><strong><font color="#000000"><font size="+1">nsIMsgSendListener</font></font></strong></span></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The following describes the methods of the <strong>nsIMsgSendListener</strong> interface:<br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><strong><font color="#000000"><font size="+1">OnStartSending</font></font></strong></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The <strong>OnStartSending</strong> interface is called when the sending operation has begun. This is called after messages creation has completed. If message creation fails, the nsIMsgSend operation will return an NS_FAILED() return code.</p>
+
+<p><code><font color="#000099"> NS_IMETHOD <strong>OnStartSending</strong>(const char *aMsgID,</font></code><br>
+ <font color="#cc0000">- the message ID for the message being sent</font><br>
+ <code><font color="#000099">                            PRUint32 aMsgSize) = 0;</font></code><br>
+ <font color="#cc0000">- the total message size for the message being sent</font><br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><strong><font color="#000000"><font size="+1">OnProgress</font></font></strong></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The <strong>OnProgress</strong> interface is called with progress notification on the send operation.</p>
+
+<p><code><font color="#000099"> NS_IMETHOD <strong>OnProgress</strong>(const char *aMsgID,</font></code><br>
+ <font color="#cc0000">- the message ID for the message being sent</font><br>
+ <code><font color="#000099">                        PRUint32 aProgress,</font></code><br>
+ <font color="#cc0000">- the progress so far</font><br>
+ <code><font color="#000099">                        PRUint32 aProgressMax) = 0;</font></code><br>
+ <font color="#cc0000">- the maximum progress (aProgress should be used as a numerator and aProgressMax as a denominator for a message sent percentage)</font><br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><strong><font color="#000000"><font size="+1">OnStatus</font></font></strong></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The <strong>OnStatus</strong> gives the listener status updates for the current operation.</p>
+
+<p><code><font color="#000099">  NS_IMETHOD <strong>OnStatus</strong>(const char *aMsgID,</font></code><br>
+ <font color="#cc0000">- the message ID for the message being sent</font><br>
+ <code><font color="#000099">                      const PRUnichar *aMsg) = 0;</font></code><br>
+ <font color="#cc0000">- a message concerning the status of the send operation</font><br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><strong><font color="#000000"><font size="+1">OnStopSending</font></font></strong></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The <strong>OnStopSending </strong>interface is called when the sending operation has completed. This will be called in the case of both success and failure.</p>
+
+<p><code><font color="#000099">  NS_IMETHOD <strong>OnStopSending</strong>(const char *aMsgID,</font></code><br>
+ <font color="#cc0000">- the message ID for the message being sent</font><br>
+ <code><font color="#000099">                           nsresult aStatus,</font></code><br>
+ <font color="#cc0000">- the resulting status for the send operation</font><br>
+ <code><font color="#000099">                           const PRUnichar *aMsg,</font></code><br>
+ <font color="#cc0000">- a message concerning the status of the send operation</font><br>
+ <code><font color="#000099">                           nsIFileSpec *returnFileSpec) = 0;</font></code><br>
+ <font color="#cc0000">- an nsIFileSpec which will specify the file that was created (this is used if the </font><code><font color="#000099">dont_deliver_p </font></code><font color="#cc0000">argument is set to PR_TRUE)</font><br>
+  <br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><span id="NSIMSGCOPYSERVICELISTENER"><strong><font color="#000000"><font size="+1">nsIMsgCopyServiceListener</font></font></strong></span></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The <strong>nsIMsgCopyServiceListener</strong> interface will notify the implementor or the progress and completion of the copy operation that follows successful send operations.<br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><strong><font color="#000000"><font size="+1">OnStartCopy</font></font></strong></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The <strong>OnStartCopy </strong>interface is called when the copy operation has begun.</p>
+
+<p><code><font color="#000099"> NS_IMETHOD <strong>OnStartCopy</strong>(</font></code><br>
+ <code><font color="#000099">                        nsISupports *listenerData) = 0;</font></code><br>
+ <font color="#cc0000">- the nsISupports pointer passed in to the original copy operation</font><br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><strong><font color="#000000"><font size="+1">OnProgress</font></font></strong></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The <strong>OnProgress</strong> interface is called with progress notification for the copy operation.</p>
+
+<p><code><font color="#000099"> NS_IMETHOD <strong>OnProgress</strong>(</font></code><br>
+ <code><font color="#000099">                        PRUint32 aProgress,</font></code><br>
+ <font color="#cc0000">- the progress so far</font><br>
+ <code><font color="#000099">                        PRUint32 aProgressMax) = 0;</font></code><br>
+ <font color="#cc0000">- the maximum progress (aProgress should be used as a numerator and aProgressMax as a denominator for a message sent percentage)</font><br>
+ <code><font color="#000099">                        nsISupports *listenerData) = 0;</font></code><br>
+ <font color="#cc0000">- the nsISupports pointer passed in to the original copy operation</font><br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><strong><font color="#000000"><font size="+1">OnStopCopy</font></font></strong></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The <strong>OnStopCopy </strong>interface is called when the copy operation has completed. This will be called in the case of both success and failure.</p>
+
+<p><code><font color="#000099">  NS_IMETHOD <strong>OnStopCopy</strong>(</font></code><br>
+ <code><font color="#000099">                        nsresult aStatus,</font></code><br>
+ <font color="#cc0000">- the resulting status for the send operation</font><br>
+ <code><font color="#000099">                        nsISupports *listenerData) = 0;</font></code><br>
+ <font color="#cc0000">- the nsISupports pointer passed in to the original copy operation</font><br>
+  <br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><span id="COPY"><strong><font color="#000000"><font size="+2">Copy Operations</font></font></strong></span></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>There are various copy operations that can result as a part of message creation and delivery. These are all controlled by the caller in various way. The following details the specific copy operations that can occur in a message send call.<br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><span id="COPYSENT"><strong><font color="#000000"><font size="+2">Copy to Sent Folder</font></font></strong></span></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Copying to the "Sent" folder is controlled by a setting in the <code><font color="#000099">nsIMsgCompFields</font></code> interface. The SetFcc() and GetFcc() methods are used by the caller to control if a message should be copied to the defined "Sent" folder if the sending operation was successful. Currently, this pref is a "char *" which is the specific name of the folder, but this will more than likely change to a PRBool (boolean) preference. The determiniation of which folder is the "Sent" folder for the user is done by a call to <strong>GetFoldersWithFlag()</strong> and the message store will control this user defined preference. If the setting for GetFcc() is set to true, the copy operation is automatically performed after a successful send operation.<br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><span id="DRAFTS"><strong><font color="#000000"><font size="+2">Drafts</font></font></strong></span></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Saving a message as a draft is controlled by the "<code><font color="#000099">nsMsgDeliverMode  mode" </font></code>argument of the <strong>CreateAndSendMessage </strong>and <strong>SendMessageFile </strong>methods. If the caller passes in <font color="#cc0000">nsMsgSaveAsDraft, </font>the file created or passed in will be stored as a draft in the user specified "Drafts" folder.<br>
+  <br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><span id="TEMPLATES"><strong><font color="#000000"><font size="+2">Templates</font></font></strong></span></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Like Drafts, saving a message as a template is controlled by the "<code><font color="#000099">nsMsgDeliverMode  mode" </font></code>argument of the <strong>CreateAndSendMessage </strong>and <strong>SendMessageFile </strong>methods. If the caller passes in <font color="#cc0000">nsMsgSaveAsTemplate, </font>the file created or passed in will be stored as a draft in the user specified "Templates" folder.<br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><span id="SENDLATER"><strong><font color="#000000"><font size="+2">Send Later</font></font></strong></span></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Developers also have the ability to do "Send Later" operations. This will store messages in the user defined "Unsent Messages or Drafts" folder. This simply does a save operation similar to Drafts and Templates. Send Later operations are controlled by the "<code><font color="#000099">nsMsgDeliverMode  mode" </font></code>argument of the <strong>CreateAndSendMessage </strong>and <strong>SendMessageFile </strong>methods. If the caller passes in <font color="#cc0000">nsMsgQueueForLater</font>.<br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><span id="SENDUNSENT"><strong><font color="#000000"><font size="+2">Sending Unsent Messages</font></font></strong></span></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The back end has the ability to send all messages that are currently stored in the user defined "Unsent Messages or Drafts" folder. (See <a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/compose-backend.html#SENDLATER">Send Later</a> above) The <strong>nsIMsgSendLater </strong>is the interface that allows the caller to send all of the files previously stored. The caller will implement an <strong>nsIMsgSendLaterListener </strong>interface to monitor the progress of the send operations.</p>
+
+<p>The following describes the methods of the <strong>nsIMsgSendLater</strong> interface. This method is performs the send operations asynchronously.</p>
+
+<p>The <strong>SendUnsentMessages</strong> method will send all queued messages.</p>
+
+<p><code><font color="#000099">  NS_IMETHOD  <strong>SendUnsentMessages</strong>(nsIMsgIdentity           *identity,</font></code><br>
+ <font color="#cc0000">- the user identity for the person doing the send operation. This will be needed to determine the appropriate folder for copy operations.</font><br>
+ <code><font color="#000099">                                 nsIMsgSendLaterListener  **listenerArray) = 0;</font></code><br>
+ <font color="#cc0000">- an array of listeners for the send operation. this can be nsnull if you want to do the delivery operations "blind"</font></p>
+
+<p>The <strong>AddListener &amp; RemoveListener</strong> methods will add and remove listeners from the <strong>nsIMsgSendLater </strong>object.</p>
+
+<p><code><font color="#000099">  NS_IMETHOD  <strong>AddListener</strong>(nsIMsgSendLaterListener *aListener) = 0;</font></code><br>
+ <code><font color="#000099">  NS_IMETHOD  <strong>RemoveListener</strong>(nsIMsgSendLaterListener *aListener) = 0;</font></code><br>
+  <br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><span id="SENDUNSENTLISTENER"><strong><font color="#000000"><font size="+2">Sending Unsent Messages Listener</font></font></strong></span></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The <strong>nsIMsgSendLaterListener</strong> interface will notify the implementor of the progress and completion of the send later operations.<br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><strong><font color="#000000"><font size="+1">CreateAndSendMessage</font></font></strong></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The <strong>OnStartSending </strong>interface is called when the send later operation has begun.</p>
+
+<p><code><font color="#000099">  NS_IMETHOD <strong>OnStartSending</strong>(</font></code><br>
+ <code><font color="#000099">                            PRUint32 aTotalMessageCount) = 0;</font></code><br>
+ <font color="#cc0000">- the total messages to be sent</font><br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><strong><font color="#000000"><font size="+1">CreateAndSendMessage</font></font></strong></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The <strong>OnProgress</strong> interface is called with progress notification of the send later operation.</p>
+
+<p><code><font color="#000099">  NS_IMETHOD <strong>OnProgress</strong>(</font></code><br>
+ <code><font color="#000099">                        PRUint32 aCurrentMessage,</font></code><br>
+ <font color="#cc0000">- the current message being sent</font><br>
+ <code><font color="#000099">                        PRUint32 aTotalMessage) = 0;</font></code><br>
+ <font color="#cc0000">- the total messages to be sent</font><br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><strong><font color="#000000"><font size="+1">CreateAndSendMessage</font></font></strong></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The <strong>OnStatus</strong> gives the listener status updates for the current operation.</p>
+
+<p><code><font color="#000099">  NS_IMETHOD <strong>OnStatus</strong>(</font></code><br>
+ <code><font color="#000099">                      const PRUnichar *aMsg) = 0;</font></code><br>
+ <font color="#cc0000">- the progress so far</font><br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><strong><font color="#000000"><font size="+1">CreateAndSendMessage</font></font></strong></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The <strong>OnStopSending </strong>interface is called when the send later operation has completed.</p>
+
+<p><code><font color="#000099">  NS_IMETHOD <strong>OnStopSending</strong>(</font></code><br>
+ <code><font color="#000099">                           nsresult aStatus,</font></code><br>
+ <font color="#cc0000">- the resulting status for the send operation</font><br>
+ <code><font color="#000099">                           const PRUnichar *aMsg,</font></code><br>
+ <font color="#cc0000">- a status message</font><br>
+ <code><font color="#000099">                           PRUint32 aTotalTried,</font></code><br>
+ <font color="#cc0000">- the total messages that were attempted</font><br>
+ <code><font color="#000099">                           PRUint32 aSuccessful) = 0;</font></code><br>
+ <font color="#cc0000">- the number of successful messages</font><br>
+  <br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><span id="QUOTING"><strong><font color="#000000"><font size="+2">Quoting</font></font></strong></span></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Quoting a mail message is made possible via the <strong>nsIMsgQuote</strong> interface. It is a simple interface that takes a consumer output stream for the quoted data. The message will be output in HTML form and it is up to the caller to handle plain text conversion.<br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><strong><font color="#000000"><font size="+1">CreateAndSendMessage</font></font></strong></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The <strong>QuoteMessage</strong> method is the primary interface for message quoting.</p>
+
+<p><code><font color="#3333ff">  NS_IMETHOD QuoteMessage(</font></code><br>
+ <code><font color="#3333ff">                          const PRUnichar *msgURI,</font></code><br>
+ <font color="#cc0000">- the URI of the message to be quoted</font><br>
+ <code><font color="#3333ff">                          nsIOutputStream *outStream) = 0;</font></code><br>
+ <font color="#cc0000">- the consumer output stream for the quoted data</font><br>
+  <br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><span id="SAMPLES"><strong><font color="#000000"><font size="+2">Sample Programs</font></font></strong></span></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The <a class="external" href="http://lxr.mozilla.org/mozilla/source/mailnews/compose/tests">mozilla/mailnews/compose/tests/</a> directory contains sample test programs for all of the above described interfaces. Use at your own risk and beware of bitrot!</p>
+
+<ul>
+ <li><a class="external" href="http://lxr.mozilla.org/mozilla/source/mailnews/compose/tests/compose/">compose</a> - this program shows the use of the <strong>CreateAndSendMessage</strong> interface (<strong>CreateAndSendMessage</strong>)</li>
+ <li><a class="external" href="http://lxr.mozilla.org/mozilla/source/mailnews/compose/tests/compose2/">compose2</a> - this program shows the use of the <strong>CreateAndSendMessage</strong> interface (<strong>SendMessageFile</strong>)</li>
+ <li><a class="external" href="http://lxr.mozilla.org/mozilla/source/mailnews/compose/tests/sendlater/">sendlater</a> - this program shows the use of the <strong>nsIMsgSendLater </strong>interface</li>
+ <li><a class="external" href="http://lxr.mozilla.org/mozilla/source/mailnews/compose/tests/sendpage/">sendpage </a> - this program shows the use of the <strong>CreateAndSendMessage</strong> interface (<strong>SendWebPage</strong>)</li>
+</ul>
+
+<hr>
+<p><font size="-1">Last modified: Wed Nov 1, 2000 <a class="link-mailto" href="mailto:rhp@netscape.com">rhp@netscape.com</a></font></p>

@@ -1,0 +1,27 @@
+---
+title: 'Building a Thunderbird extension 8: packaging'
+slug: >-
+  Mozilla/Thunderbird/Thunderbird_extensions/Building_a_Thunderbird_extension_8:_packaging
+tags:
+  - Extensions
+  - thunderbird
+---
+<p>{{AddonSidebar}}</p>
+
+<p>{{ warning("This content is for older versions of Thunderbird. Much of it may no longer be relevant. See developer.thunderbird.net for newer information.") }}</p>
+
+<p>When you are satisfied with how your extension works, package it for deployment and installation.</p>
+
+<p>Zip the contents of your extension's folder (not the extension folder itself), and rename the zip file to have a .xpi extension. In Windows 7, you can do this by selecting all the files and subfolders in your extension folder, right click and choose "Send To -&gt; Compressed (Zipped) Folder". A .zip file will be created for you. Just rename it and you're done!</p>
+
+<p>On Mac OS X, you can right-click on the contents of the extension's folder and choose "Create Archive of..." to make the zip file. However, since Mac OS X adds hidden files to folders in order to track file metadata, you should instead use the Terminal, delete the hidden files (whose names begin with a period), and then use the <code>zip</code> command on the command line to create the zip file. The files are typically of the name .DS_Store.</p>
+
+<p>On Linux, you would likewise use the command-line Zip tool.</p>
+
+<pre class="eval"> cd ~/extensions/my_extensions
+ zip -r ../sample.xpi *
+</pre>
+
+<p>When placed in the (user's profile)/extension directory, Thunderbird will open the xpi, check the id in the <code>install.rdf</code> and create that directory for your package. It will then cd to that directory and unzip the files, thereby creating a mirror of your <code>~/extensions/my_extension</code> directory structure and files.</p>
+
+<p>{{ PreviousNext("Extensions/Thunderbird/Building_a_Thunderbird_extension_7:_Installation", "Extensions/Thunderbird/Building_a_Thunderbird_extension_9:_distributing") }}</p>

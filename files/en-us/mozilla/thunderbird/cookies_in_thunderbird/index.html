@@ -1,0 +1,42 @@
+---
+title: Cookies In Thunderbird
+slug: Mozilla/Thunderbird/Cookies_In_Thunderbird
+tags:
+  - Cookies
+  - Guide
+  - thunderbird
+---
+<div class="blockIndicator standardNote">
+<p>This content covers features introduced in <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a></p>
+</div>
+
+<p>In versions of Thunderbird prior to 3 the cookie policy was very restrictive (to RSS only). Thunderbird 3 uses the <a class="internal" href="/en/Gecko" title="en/Gecko">Gecko</a> cookie policy with some changes. </p>
+
+<ul>
+ <li>Any non-mailnews url/location has cookies enabled, e.g., remote content.</li>
+ <li>Remote content in emails will be able to use cookies, but only if the user chooses to accept view remote content on the email.</li>
+ <li>Viewing RSS feed items as web pages allows cookies.</li>
+</ul>
+
+<p>These are all subject to the Gecko cookie policy allowing the cookies based on its internal policies and the user's preferences.</p>
+
+<h2 id="Risks">Risks</h2>
+
+<p>The new cookie policy could pose dangers or risks in the following areas or ways:</p>
+
+<ul>
+ <li>Allows emails to associate cookies with email addresses
+  <ul>
+   <li>&lt;img src="<a class="external" href="http://tracker.net/?email=you@example.com" rel="freelink">http://tracker.net/?email=you@example.com</a>"&gt;, tracker.net sets a cookie, later page views read the cookie and email address/profile</li>
+   <li>Scenario: nytimes.com sends daily news per mail with embedded web bug, and from then on tracks all RSS reads with email address/identity.</li>
+  </ul>
+ </li>
+</ul>
+
+<h3 id="References">References</h3>
+
+<ul>
+ <li>See the <a class="internal" href="/Special:Tags?tag=Cookies" title="Special:Tags?tag=Cookies">Cookies</a> tag for more information about cookies in <a class="internal" href="/en/Gecko" title="en/Gecko">Gecko</a>.</li>
+</ul>
+
+<p> </p>

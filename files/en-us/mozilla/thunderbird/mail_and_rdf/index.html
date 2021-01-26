@@ -1,0 +1,161 @@
+---
+title: Mail and RDF
+slug: Mozilla/Thunderbird/Mail_and_RDF
+tags:
+  - Advanced
+  - Guide
+  - NeedsUpdate
+  - RDF
+  - thunderbird
+---
+<p>{{ outdated("It was imported from mozilla.org and last updated in 1999.") }}<br>
+  </p>
+
+<p>Mozilla Mail exposes many of it's data structures to RDF through a few datasources. This allows exposure of mailnews-specific data to user interface using <a class="external" href="http://mxr.mozilla.org/rdf/doc/xul-template-reference.html">RDF Templates</a>.</p>
+
+<p>You should learn about <a class="external" href="http://mxr.mozilla.org/rdf/doc/">RDF</a> before reading this document or you will be hopelessly confused.</p>
+
+<h2 id="Overview_of_Mail_RDF_graph">Overview of Mail RDF graph</h2>
+
+<p>The root resource for all accounts, folders and messages is the <a class="external" href="http://lxr.mozilla.org/seamonkey/source/rdf/base/idl/nsIRDFResource.idl">RDF Resource</a> named <code>msgaccounts:/</code>. From this resource, you can follow a number of arcs to find servers, folders, and finally messages. Eventually we'll probably hang mail filters, annotations, etc, off of nodes in the graph. Here is an example of how this might be set up:</p>
+
+<p>In this tree-style representation of an RDF graph, I've made arcs <em>italic</em> and resources <strong>bold</strong>.</p>
+
+<div style="border: medium groove ;">
+<pre class="notranslate"><strong>msgaccounts:/</strong>
+    +-- <em>http://home.netscape.com/NC-rdf#child</em> --&gt;
+    |     <strong>imap://alecf@imap.mywork.com</strong>
+    |   +-- <em>http://home.netscape.com/NC-rdf#IsServer</em> --&gt; "true"
+    |   +-- <em>http://home.netscape.com/NC-rdf#child</em> --&gt;
+    |         <strong>imap://alecf@imap.mywork.com/INBOX</strong>
+    |       +-- <em>http://home.netscape.com/NC-rdf#TotalMessages</em> --&gt; "4"
+    |       +-- <em>http://home.netscape.com/NC-rdf#IsServer</em> --&gt; "false"
+    |       +-- <em>http://home.netscape.com/NC-rdf#MessageChild</em> --&gt;
+    |       |     <strong>imap_message://alecf@imap.mywork.com/INBOX#1</strong>
+    |       +-- <em>http://home.netscape.com/NC-rdf#MessageChild</em> --&gt;
+    |       |     <strong>imap_message://alecf@imap.mywork.com/INBOX#2</strong>
+    |       +-- <em>http://home.netscape.com/NC-rdf#MessageChild</em> --&gt;
+    |       |     <strong>imap_message://alecf@imap.mywork.com/INBOX#3</strong>
+    |       +-- <em>http://home.netscape.com/NC-rdf#MessageChild</em> --&gt;
+    |             <strong>imap_message://alecf@imap.mywork.com/INBOX#4</strong>
+    |       etc...
+    +-- <em>http://home.netscape.com/NC-rdf#child</em> --&gt;
+    |     <strong>mailbox://alecf@pop.mywork.com</strong>
+    |   +-- <em>http://home.netscape.com/NC-rdf#IsServer</em> --&gt; "true"
+    |   +-- <em>http://home.netscape.com/NC-rdf#child</em> --&gt;
+    |         <strong>mailbox://alecf@pop.mywork.com/INBOX</strong>
+    |       +-- <em>http://home.netscape.com/NC-rdf#TotalMessages</em> --&gt; "2"
+    |       +-- <em>http://home.netscape.com/NC-rdf#IsServer</em> --&gt; "false"
+    |       +-- <em>http://home.netscape.com/NC-rdf#MessageChild</em> --&gt;
+    |       |     <strong>mailbox_message://alecf@pop.mywork.com/INBOX#1</strong>
+    |       +-- <em>http://home.netscape.com/NC-rdf#MessageChild</em> --&gt;
+    |             <strong>mailbox_message://alecf@pop.mywork.com/INBOX#2</strong>
+    |       etc...
+      </pre>
+</div>
+
+<p>There are of course many more properties that are exposed via RDF, but this should give you a feel for it.</p>
+
+<h2 id="Datasources">Datasources</h2>
+
+<p>We have a few primary datasources used in mail:</p>
+
+<ul>
+ <li><a class="external" href="http://lxr.mozilla.org/seamonkey/source/mailnews/base/src/nsMsgAccountManagerDS.cpp">nsMsgAccountDataSource</a> - answers queries about arcs coming out of msgaccounts:/. If you ask it for #child nodes out of msgaccounts:/, it returns the root URIs of all servers in the account manager. Note that it does not actually know anything about the servers who's URIs it returns.</li>
+ <li><a class="external" href="http://lxr.mozilla.org/seamonkey/source/mailnews/base/src/nsMsgFolderDataSource.cpp">nsMsgFolderDataSource</a> - answer queries about any mail folders, including toplevel server folders. If asked about a folder along the #child arc, it will return resources for all subfolders in that folder. If asked about a folder along the #MessageChild arc, it will return resources for all messages in a folder. It also answers queries about various properties of folders such as the total number of messages, whether or not this folder is actually a root server, and so forth.</li>
+ <li><a class="external" href="http://lxr.mozilla.org/seamonkey/source/mailnews/base/src/nsMsgMessageDataSource.cpp">nsMsgMessageDataSource</a> - answers queries about messages in folders. All RDF properties of a message currently come from the database that backs the containing folder.</li>
+</ul>
+
+<h3 id="Datasources_and_the_UI">Datasources and the UI</h3>
+
+<p>Mail does not link the UI to datasources in a "traditional" manner.</p>
+
+<p>Instead of having a singleton datasource that is shared across all UI components, we have per-view datasources. This allows each template-based widget to maintain view/window-specific data with each datasource. For example...??? (sorting? what else do we store?)</p>
+
+<p>Datasources are created when each window's JavaScript is loaded by declaring the datasource variables in the source javascript as global variables. In the document's onload= handler the datasources are attached to their respective widgets by setting the <code>database</code> property on each <a class="external" href="http://mxr.mozilla.org/rdf/doc/xul-template-reference.html">RDF template</a>'s parent element.</p>
+
+<h3 id="Reflecting_data_to_RDF">Reflecting data to RDF</h3>
+
+<p>In order to have a dynamic UI that updates when the underlying content changes, a datasource must implement two key methods of reflecting data into RDF.</p>
+
+<ul>
+ <li><strong>Answering queries</strong>: When RDF asks for information about a resource, datasources answer with the results of the query.</li>
+ <li><strong>Asynchronously notifying RDF</strong> when the data itself changes, RDF needs to be notified.</li>
+</ul>
+
+<h4 id="The_details">The details</h4>
+
+<p><strong>Answering Queries</strong></p>
+
+<p>Mail uses RDF Resource Factories to attach mail-specific information to RDF resources. (The details of RDF Resource Factories will be left to RDF documentation for now.) From an RDF Resource, it is possible to QueryInterface() to the appropriate mail/news object, and then access information from there.</p>
+
+<p>For example, the folder pane needs to display the number of messages in the INBOX. Information for this column is queried when the tree's <a class="external" href="http://mxr.mozilla.org/rdf/doc/xul-template-reference.html">RDF Template</a> calls the folder datasource's GetTarget() method. The query's target is the resource named <code><a class="external" rel="freelink">mailbox://alecf@pop.myisp.com/INBOX</a></code> and the property node is named <code><a class="external" href="http://home.netscape.com/NC-rdf#TotalMessages" rel="freelink">http://home.netscape.com/NC-rdf#TotalMessages</a></code>. This is basically what happens, behind the scenes:</p>
+
+<pre class="notranslate">    var target = RDF.GetResource("mailbox://alecf@pop.myisp.com/INBOX");
+    var property = RDF.GetResource("http://home.netscape.com/NC-rdf#TotalMessages");
+    var resultNode = dataSource.GetTarget(target, property, true);
+    </pre>
+
+<p>In the folder datasource's GetTarget(), <code>target</code> would be QueryInterfaced to a <a class="external" href="http://lxr.mozilla.org/seamonkey/source/mailnews/base/public/nsIMsgFolder.idl">nsIMsgFolder</a>. To get the total messages, the datasource would then call nsIMsgFolder.GetTotalMessages(). Finally, it would convert the result of this call to an <a class="external" href="http://lxr.mozilla.org/seamonkey/source/rdf/base/idl/nsIRDFLiteral.idl">RDF Literal</a>, and pass it back through the return parameter of GetTarget().</p>
+
+<p>An example of how this might work inside the datasource:</p>
+
+<pre class="notranslate">    var msgCountArc = RDF.GetResource("http://home.netscape.com/NC-rdf#TotalMessages");
+
+    function GetTarget(target, property, unused) {
+       var folder = target.QueryInterface(Components.interfaces.nsIMsgFolder);
+       if (property == msgCountArc) {
+           var msgCount = folder.GetTotalMessages(false);
+           var result = RDF.GetLiteral(msgCount.toString());
+           return result;
+       }
+    }
+    </pre>
+
+<p><strong>Asynchronously notifying RDF</strong></p>
+
+<p>When a mail object's data changes and the data is reflected in RDF by notifying all of the observers that RDF has registered with the datasource.</p>
+
+<p>In the example of mail folders, each folder datasource first registers itself with the mail session as a nsIFolderListener because it wants information about when a folder changes. Each template registers itself as an RDF observer. When a folder's contents or properties change, it tells the mail session to notify the folder listeners that the data has changed. The folder datasource then translates these property changes into OnAssert() or OnUnassert() calls to the observers.</p>
+
+<p>The calling chain essentially looks like this:</p>
+
+<p>Registration:</p>
+
+<ol>
+ <li>Folder datasource registers itself with the mail session as a folder listener</li>
+ <li>RDF Template registers itself with the datasource as a content observer.</li>
+</ol>
+
+<p>Notification:</p>
+
+<ol>
+ <li>Folder data changes.</li>
+ <li>Folder notifies mail session that it's data changed.</li>
+ <li>Mail session notifies folder listeners that the folder has changed.</li>
+ <li>Folder datasource notifies RDF Content observers of the changes.</li>
+ <li>Content observers update UI.</li>
+</ol>
+
+<p><strong>An aside: Rational behind the design</strong></p>
+
+<p>After reviewing this design, it might seem unnecessary to have the double-levels of notification/registration. Why can't folders directly notify the RDF Content observers when things change?</p>
+
+<p>Here is the rational behind this design:</p>
+
+<ul>
+ <li>It keeps all RDF datasource-related code in one place and out of the messages and folders themselves. This allows the mail code to be mostly free of RDF. The actual dependancies on RDF are small, so it makes sense to keep RDF out of folders and messages.</li>
+ <li>There should be a non-RDF mechanism for folder change notification. There are times (for example, from JavaScript/XUL) where we want folder notifications that have nothing to do with RDF. Requring these listeners to use RDF would be unnecessarily burdening them with an unnecessary API.</li>
+ <li>The folders or the mail session would have to know about every RDF observer on each datasource. This means the folder would have to notify each of those observers. This design allows each datasource to manage its own observers, and lets each mail session manage a list of folder listeners without necessarily knowing that some of these listeners are RDF-related.</li>
+</ul>
+
+<p>Please</p>
+
+<p><a class="link-mailto" href="mailto:mozilla-mail-news@mozilla.org?Subject=RDF%20Notifications">comment</a></p>
+
+<p>!</p>
+
+<hr>
+<address><a class="link-mailto" href="mailto:alecf@flett.org">Alec Flett</a></address>
+
+<p>Last modified: Thu Oct 7 11:33:42 PDT 1999</p>

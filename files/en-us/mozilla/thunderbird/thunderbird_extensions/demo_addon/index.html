@@ -1,0 +1,158 @@
+---
+title: Demo Addon
+slug: Mozilla/Thunderbird/Thunderbird_extensions/Demo_Addon
+---
+<p>{{AddonSidebar}}</p>
+
+<p>{{ warning("This content is for older versions of Thunderbird. Much of it may no longer be relevant. See developer.thunderbird.net for newer information.") }}</p>
+
+<h4 id="Overview">Overview</h4>
+
+<p>This demo add-on has been created by Jonathan Protzenko for his presentation at MozCamp 2011. It shows how to achieve various goals in a working live example, such as working with Gloda.</p>
+
+<p><strong>You can download it at the bottom of the page.</strong></p>
+
+<h4 id="How_to_use">How to use</h4>
+
+<p>After installing the demo add-on in Thunderbird, right click on the toolbar and choose "Customize". Drag the "Demo" button into the toolbar. Afterwards, just click that button to show the demo overview.</p>
+
+<p>All three demos are explained in the following sections. Only the interesting parts are shown, it's recommended that you download the add-on and have a look at its files.</p>
+
+<h3 id="The_basics">The basics</h3>
+
+<p>The interesting parts covered in this article are in the <code>content </code>folder. The toolbar button and its functionality are defined in <code>overlay.xul</code> and <code>overlay.js</code>.</p>
+
+<p>We make use of <code>fixIterator()</code>. It is a handy library that keeps your code cleaner and simpler. It lets you iterate over any collection and transforms your collection elements in the given objects, To use fixIterator, you have to import it with <code>Cu.import("<a class="external" rel="external" title="resource:///modules/iteratorUtils.jsm">resource:///modules/iteratorUtils.jsm</a>");</code>.</p>
+
+<h3 id="Demo_1_-_Iterate_over_all_the_accounts">Demo 1 - Iterate over all the accounts</h3>
+
+<p>This demo is implemented in <code>demo1.html</code> in the <code>content </code>folder. It lists all your email accounts with their account type - either pop3 or imap - and the associated email addresses.</p>
+
+<pre class="brush: js">let data = [];
+for each (let account in fixIterator(MailServices.accounts.accounts, Ci.nsIMsgAccount)) {
+    let info = {
+        server: null,
+        type: null,
+        emails: [],
+        name: null,
+    };
+
+    let server = account.incomingServer;
+    if (server) {
+        info.server = server.prettyName;
+        info.type = server.type;
+    }
+    for each (let id in fixIterator(account.identities, Ci.nsIMsgIdentity)) {
+        // We're only interested in identities that have a real email.
+        if (id.email)
+            info.emails.push(id.email);
+    }
+    data.push(info);
+}
+</pre>
+
+<p>First, we use <code>fixIterator()</code> here to get all accounts in your profile. Each account is a {{ Interface("nsIMsgAccount") }}.</p>
+
+<p>To get the the server name, we access the incomingServer property of our account, which is a {{ Interface("nsIMsgIncomingServer") }} object. From this, we get its name and type.</p>
+
+<p>Because an account can have multiple identities of type {{ Interface("nsIMsgIdentity") }} and therefore multiple associated email addresses, with use <code>fixIterator()</code> again to go over all identities and get every email address.</p>
+
+<h3 id="Demo_2_-_Find_the_Inbox">Demo 2 - Find the Inbox</h3>
+
+<p>This demo shows various information: It lists all folders of an account (in this case the first one) and marks the inbox folder with a *. Furthermore, it shows some messages in the inbox and lists a random attachment.</p>
+
+<p>We start with listing all folders and marking the inbox:</p>
+
+<pre class="brush: js">let server = accounts[0].incomingServer;
+let folder = server.rootFolder;
+// ...
+let inbox;
+let print = function (indent, folder) {
+    let isInbox = folder.getFlag(Ci.nsMsgFolderFlags.Inbox);
+    if (isInbox)
+        inbox = folder;
+    str += indent + folder.prettiestName + (isInbox ? " *" : "") + "\n";
+    if (folder.hasSubFolders)
+        for each (let folder in fixIterator(folder.subFolders, Ci.nsIMsgFolder))
+            print(indent + "  ", folder);
+};
+print("  ", folder);
+</pre>
+
+<p class="deki-transform">As in the previous example, we get the incomingServer of the account in question. Beginning with the <code>rootFolder</code>, with  <code>folder.getFlag(Ci.nsMsgFolderFlags.Inbox)</code> we check whether the folder is the inbox. Then we store the folder name in a string to display it later on the screen and mark it with an * if it is the inbox. Afterwards, we check every folder for subfolders. We then go into each subfolder and start over.</p>
+
+<p class="deki-transform">To list some messages of the folder we use:</p>
+
+<pre class="brush: js">for each (let msgHdr in fixIterator(inbox.msgDatabase.EnumerateMessages(), Ci.nsIMsgDBHdr)) {
+    if (++i &gt;= 10 &amp;&amp; lastMsgHdr != null)
+        break;
+
+    messages.push({
+        author: msgHdr.mime2DecodedAuthor,
+        subject: msgHdr.mime2DecodedSubject,
+        date: new Date(msgHdr.date/1000),
+    });
+
+//...
+
+}
+</pre>
+
+<p class="deki-transform">To get a collection of messages in the inbox, we use <code>inbox.msgDatabase.EnumerateMessages()</code>. Each message is a {{ Interface("nsIMsgDBHdr") }}. We iterate over the first ten of them and extract author, subject and date for each one.</p>
+
+<h3 id="Demo_3-_Search_messages_by_subject">Demo 3- Search messages by subject</h3>
+
+<p>This demo shows how to find messages by a subject accross all folders using Gloda.</p>
+
+<pre class="brush: js">let query = Gloda.newQuery(Gloda.NOUN_MESSAGE);
+query.subjectMatches(searchTerm);
+let myListener = {
+    /* called when new items are returned by the database query or freshly indexed */
+    onItemsAdded: function myListener_onItemsAdded(aItems, aCollection) {
+    },
+    /* called when items that are already in our collection get re-indexed */
+    onItemsModified: function myListener_onItemsModified(aItems, aCollection) {
+    },
+    /* called when items that are in our collection are purged from the system */
+    onItemsRemoved: function myListener_onItemsRemoved(aItems, aCollection) {
+    },
+    /* called when our database query completes */
+    onQueryCompleted: function myListener_onQueryCompleted(aCollection) {
+        let items = aCollection.items;
+        let data = {
+            messages: [],
+        };
+        for (let i in items) {
+            data.messages.push({
+                subject: items[i].subject,
+                date: items[i].date,
+                author: items[i].from.value,
+            });
+        // ...
+        };
+    }
+    // ...
+  };
+let collection = query.getCollection(myListener);
+</pre>
+
+<p>At first, a new Gloda query for finding messages is created. The subject is assigned as search criterion. In the Gloda query result listener the variable <code>aCollection</code> is a <code>GlodaCollection</code>s. It contains a collection of <code>GlodaConversation</code> objects which itself is a thread that contains one or more <code>GlodaMessage</code>s. For every Gloda message subject, date and author is extracted.</p>
+
+<p>The last line of this example executes the Gloda query.</p>
+
+
+
+<h2 id="Download">Download</h2>
+
+<p><s><a href="http://www.xulforum.org/mozcamp2011/" title="http://www.xulforum.org/mozcamp2011/">Demo Addon Download</a></s></p>
+
+<h2 id="See_also"><br>
+ See also</h2>
+
+<ul>
+ <li><a href="/en/Thunderbird/Creating_a_Gloda_message_query" title="Creating a gloda message query">Creating a gloda message query</a></li>
+ <li><a href="/en/Thunderbird/Gloda_examples" title="Gloda examples">Gloda examples</a></li>
+ <li><a href="/en/Thunderbird/gloda" title="Gloda">Gloda</a></li>
+ <li><a href="/en/Extensions/Thunderbird/HowTos" title="Thunderbird HowTos">Thunderbird HowTos</a><br>
+   </li>
+</ul>

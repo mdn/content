@@ -1,0 +1,34 @@
+---
+title: Access Window
+slug: >-
+  Mozilla/Thunderbird/Thunderbird_extensions/HowTos/Common_Thunderbird_Extension_Techniques/Access_Window
+tags:
+  - missing
+  - thunderbird
+---
+<p>{{AddonSidebar}}</p>
+
+<p>The window object represents the Window of the Thunderbird application as well as the currently opened tabs. You can do many things with the <strong><code>window</code></strong> object, such as accessing the height or width of the window/tab or setting its title, registering timer events and much more. The <a href="/en/DOM/window" title="en/DOM/Window">Window API </a>will give you the complete details. <code>Since </code><strong><code>window </code></strong>is a global variable you can use it directly from your JavaScript file.</p>
+
+<h3 id="Check_if_the_window_is_a_tab_or_the_root_window">Check if the window is a tab or the root window</h3>
+
+<pre class="brush: js">window.addEventListener("load", function(e) {
+    alert("Is root?: " + isRoot());
+}, false);
+
+function isRoot() {
+	if(window != window.top) return "false";
+	else return "true";
+}
+</pre>
+
+<p>The example above tells you if the window object is a reference of the application window or of one of it is a tabs.</p>
+
+<h3 id="Register_a_timer">Register a timer</h3>
+
+<pre class="brush: js">window.setInterval(
+    function() {
+        alert('foobar');
+    }, 60000); //execute the function once very minute</pre>
+
+<p>If you periodically need to perform a certain action then you can use the <strong><code>setInterval </code></strong>function, it will then call this function every x <strong>milliseconds</strong>, in this case every 60000ms or one minute.</p>

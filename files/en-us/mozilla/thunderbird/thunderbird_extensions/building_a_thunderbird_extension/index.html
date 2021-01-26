@@ -1,0 +1,56 @@
+---
+title: 'Building a Thunderbird extension 1: introduction'
+slug: Mozilla/Thunderbird/Thunderbird_extensions/Building_a_Thunderbird_extension
+tags:
+  - Add-ons
+  - Extensions
+  - thunderbird
+---
+<p>{{AddonSidebar}}</p>
+
+<p>Thunderbird is a <a href="https://www.thunderbird.net/en-US/">community managed open-source email application</a>. It shares many of the technologies used by Mozilla Firefox, including <a class="internal" href="/en/JavaScript" title="en/JavaScript">JavaScript</a>, the <a class="internal" href="/en/Gecko" title="en/Gecko">Gecko</a> layout engine, the <a class="internal" href="/en/XUL" title="en/XUL">XUL</a> XML User Interface Language and the <a class="internal" href="/en/XPCOM" title="en/XPCOM">XPCOM</a> Cross-Platform Component Object Model. Similar to Firefox, Thunderbird functionality can be enhanced and customized via <a class="external" href="https://addons.mozilla.org/thunderbird/" title="http://addons.mozilla.org/en-US/thunderbird/">extensions</a>.</p>
+
+<p>{{ warning("This content is for older versions of Thunderbird. Much of it may no longer be relevant. See developer.thunderbird.net for newer information.") }}</p>
+
+<p>This tutorial will introduce you to the components of a Thunderbird extension and will show you how to build your own. The tutorial has the following pages:</p>
+
+<ol>
+ <li>Introduction (this page)</li>
+ <li><a class="internal" href="/en/Extensions/Thunderbird/Building_a_Thunderbird_extension_2:_extension_filesystem" title="en/Extensions/Thunderbird/Building a Thunderbird extension 2: extension filesystem">The extension filesystem</a> (setting up your local system)</li>
+ <li><a class="internal" href="/en/Extensions/Thunderbird/Building_a_Thunderbird_extension_3:_install_manifest" title="en/Extensions/Thunderbird/Building a Thunderbird extension 3: install manifest">Install manifest</a> (the <code>install.rdf</code> file that contains meta-information about the extension)</li>
+ <li><a class="internal" href="/en/Extensions/Thunderbird/Building_a_Thunderbird_extension_4:_chrome_manifest" title="en/Extensions/Thunderbird/Building a Thunderbird extension 4: chrome manifest">Chrome manifest</a> (list of packages and overlays)</li>
+ <li><a class="internal" href="/en/Extensions/Thunderbird/Building_a_Thunderbird_extension_5:_XUL" title="en/Extensions/Thunderbird/Building a Thunderbird extension 5: XUL">XUL</a> (the XML user interface language that is used to modify the Thunderbird user interface)</li>
+ <li><a href="/en/Extensions/Thunderbird/Building_a_Thunderbird_extension_6:_Adding_Javascript" title="en/Extensions/Thunderbird/Building a Thunderbird extension 6: Adding Javascript">Adding JavaScript</a> (explains how to add some simple JavaScript to your Thunderbird extension)</li>
+ <li><a class="internal" href="/en/Extensions/Thunderbird/Building_a_Thunderbird_extension_7:_Installation" title="en/Extensions/Thunderbird/Building a Thunderbird extension 7: Installation">Installing locally</a> (enabling the extension on your local Thunderbird instance)</li>
+ <li><a class="internal" href="/en/Extensions/Thunderbird/Building_a_Thunderbird_extension_8:_packaging" title="en/Extensions/Thunderbird/Building a Thunderbird extension 8: packaging">Packaging</a> (making a distribution package that contains the extension)</li>
+ <li><a class="internal" href="/en/Extensions/Thunderbird/Building_a_Thunderbird_extension_9:_distributing" title="en/Extensions/Thunderbird/Building a Thunderbird extension 9: distributing">Distributing</a> (from your own site or from <a class="external" href="http://addons.mozilla.org/" rel="external nofollow" title="http://addons.mozilla.org/">http://addons.mozilla.org/</a>)</li>
+</ol>
+
+<p>This tutorial is compatible with Thunderbird versions 2,3 and 5. All Thunderbird builds are available from <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/" title="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/">the ftp site</a>.</p>
+
+<h2 id="References_and_resources">References and resources</h2>
+
+<h3 id="Tools_and_helper_extensions">Tools and helper extensions</h3>
+
+<p>There are many tools available that help with developing Thunderbird extensions. At a minimum you will need:</p>
+
+<ul>
+ <li><a class="external" href="http://en.wikipedia.org/wiki/List_of_text_editors" title="http://en.wikipedia.org/wiki/List_of_text_editors">Text editor</a>: Any editor that is capable of writing plain text can be used to write extensions. However, most developers use an editing program optimized for writing code (also known as an Integrated Development Environment). These provide features like syntax highlighting and code coloration, indentation, auto-complete, etc.</li>
+ <li><a class="external" href="http://en.wikipedia.org/wiki/Comparison_of_file_archivers" title="http://en.wikipedia.org/wiki/Comparison_of_file_archivers">File archive utility</a>: Any utility that is capable of creating archive files can be used.</li>
+</ul>
+
+<p>There are also a number of extension and applications that are useful for testing and debugging Thunderbird extensions, such as JavaScript consoles and XPCOM inspectors. These are described on the page "<a class="internal" href="/en/Setting_up_extension_development_environment" title="en/Setting up extension development environment">Setting up an extension development environment</a>".</p>
+
+<h3 id="Documentation">Documentation</h3>
+
+<ul>
+ <li><a class="internal" href="/en/Extensions/Thunderbird" title="en/Extensions/Thunderbird">Thunderbird extensions (documentation overview)</a></li>
+ <li><a class="internal" href="/En/Firefox_addons_developer_guide" title="En/Firefox addons developer guide">Firefox addons developer guide</a> (many topics are applicable to Thunderbird)</li>
+ <li><a class="external" href="https://dxr.mozilla.org/comm-central/source/" title="http://mxr.mozilla.org/comm-central/">Mozilla cross-reference</a> source code browser ("comm-central" contains the Thunderbird code repository)</li>
+</ul>
+
+<h3 id="Community">Community</h3>
+
+<p>The Thunderbird development community has a <a class="external" href="http://groups.google.com/group/mozilla.dev.apps.thunderbird/topics?lnk" title="http://groups.google.com/group/mozilla.dev.apps.thunderbird/topics?lnk">mailing list with an extensive searchable archive</a><a href="http://groups.google.com/group/mozilla.dev.apps.thunderbird/topics?lnk"> with an extensive searchable archive</a>. You can also talk with the community on the <a class="link-irc" href="irc://moznet/#maildev" title="irc://moznet/#maildev">#maildev IRC channel</a>.</p>
+
+<p>{{ Next("Extensions/Thunderbird/Building_a_Thunderbird_extension_2:_extension_filesystem") }}</p>

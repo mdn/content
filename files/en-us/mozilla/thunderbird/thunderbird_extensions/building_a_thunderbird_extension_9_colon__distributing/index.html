@@ -1,0 +1,27 @@
+---
+title: 'Building a Thunderbird extension 9: distributing'
+slug: >-
+  Mozilla/Thunderbird/Thunderbird_extensions/Building_a_Thunderbird_extension_9:_distributing
+tags:
+  - Extensions
+  - thunderbird
+---
+<p>{{AddonSidebar}}</p>
+
+<p>{{ warning("This content is for older versions of Thunderbird. Much of it may no longer be relevant. See developer.thunderbird.net for newer information.") }}</p>
+
+<h2 class="editable" id="Using_addons.mozilla.org">Using addons.mozilla.org</h2>
+
+<p>The <a class="external" href="http://addons.mozilla.org/en-US/thunderbird" rel="external nofollow" title="http://addons.mozilla.org/en-US/thunderbird">addons.mozilla.org</a> site is a distribution site where you can host your extension for free. Your extension will be hosted on Mozilla's mirror network. Mozilla's site also provides users with easier installation and will automatically make new versions available to users of your existing versions when you upload them. In addition Mozilla Update allows users to comment and provide feedback on your extension. It is highly recommended that you use AMO to distribute your extensions.</p>
+
+<p>Visit <a class="external" href="http://addons.mozilla.org/developers/" rel="external nofollow" title="http://addons.mozilla.org/developers/">http://addons.mozilla.org/developers/</a> to create an account and begin distributing your extensions. Note that your extension will be approved more quickly and downloaded more frequently if you have a good description and screenshots of the extension in action.</p>
+
+<h2 class="editable" id="Installing_from_a_web_page">Installing from a web page</h2>
+
+<p>There are a variety of ways you can install extensions from web pages, including direct linking to the XPI files and using the InstallTrigger object. Extension and web authors are encouraged to use the <a href="../../../../en/Installing_Extensions_and_Themes_From_Web_Pages" rel="internal"> InstallTrigger method</a> to install XPIs, as it provides the best experience to users.</p>
+
+<h3 class="editable" id="Registering_Extensions_in_the_Windows_Registry">Registering Extensions in the Windows Registry</h3>
+
+<p>On Windows, information about extensions can be added to the registry, and the extensions will automatically be picked up the next time the applications starts. This allows application installers to easily add integration hooks as extensions. See <a href="../../../../en/Adding_Extensions_using_the_Windows_Registry" rel="internal">Adding Extensions using the Windows Registry</a> for more information.</p>
+
+<p>{{ Previous("Extensions/Thunderbird/Building_a_Thunderbird_extension_8:_packaging") }}</p>

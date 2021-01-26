@@ -1,0 +1,194 @@
+---
+title: Upgrading Thunderbird in the Enterprise
+slug: >-
+  Mozilla/Thunderbird/Deploying_Thunderbird_in_the_Enterprise/Upgrading_Thunderbird_in_the_Enterprise
+tags:
+  - Thunderbird 3
+  - enterprise
+  - thunderbird
+---
+<div>
+  {{ draft }}</div>
+<p>This is an Upgrade Guide intended to help large organizations (also referred to as "enterprises") that use Thunderbird to upgrade to Thunderbird version 3. This initial draft is a summary of the draft author's knowledge regarding auto-sync / offline settings (<a class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=562589" rel="nofollow" title="Bug 562589 -- RESOLVED FIXED -- Thunderbird/Migration -- If I disable migration wizard I'm in situation where all IMAP -folders are set to download no matter what I do to account in question (Needs a way to keep offline-use setting upon migration to Tb 3, even if Migration Assistant is disabled on purpose)">bug 562589</a>) and Thunderbird 3 migration issues relevant to administrators (<a class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=562589#c7" rel="nofollow" title="timo.pietila@helsinki.fi -- I have to say that IMO you are breaking one of the very fundamental features of IMAP by forcing offline download to get benefit of _VERY MINOR_ email client function. Gloda is mino ...">bug 562589#c7</a>) (as of 2010/05/06).</p>
+<h2 id="Background">Background</h2>
+<p>This Migration Guide makes some assumptions about the typical enterprise environment:</p>
+<ul>
+  <li>IMAP accounts and folders</li>
+  <li>High mail data volume</li>
+  <li>"Roaming profiles" or something similar are common (to support backup/recovery and mobile users)</li>
+</ul>
+<p>(The above requirements may not be compatible with the fact that the new global search (Gloda) is enabled by default on upgrade and IMAP folder automatic synchronization is enabled by default on upgrade. This is discussed further below.)</p>
+<p>Enterprise environments typically need to perform mass software upgrades rather than upgrade software for individual users. The goals of such an an upgrade may be:</p>
+<ul>
+  <li>To resolve bugs that exist in earlier versions</li>
+  <li>To gain improvements in stability and reliability</li>
+  <li>To gain improvements in performance</li>
+  <li>To gain improvements in usability</li>
+  <li>To minimize or make user training as simple as possible</li>
+  <li>To minimize manpower needed to support the new, updated application</li>
+</ul>
+<p>Related information:</p>
+<ul>
+  <li><a href="/en-US/docs/Thunderbird/Deploying_Thunderbird_in_the_Enterprise/Thunderbird_Preferences_Relevant_to_Enterprises">Thunderbird Preferences Relevant to Enterprises</a></li>
+  <li><a href="/en-US/docs/Thunderbird/Deploying_Thunderbird_in_the_Enterprise" title="Thunderbird/Deploying Thunderbird in the Enterprise">Other resources: Forums, How Tos, ....</a></li>
+</ul>
+<h2 id="Migration_Guide_(Thunderbird_2_To_Thunderbird_3.0)"><span class="mw-headline">Migration Guide (Thunderbird 2 To Thunderbird 3.0) </span></h2>
+<p>The major changes in Thunderbird 3.0 that are relevant to enterprise administrators include:</p>
+<ul>
+  <li>Gloda (Global Search and Indexer). Enabled by default.</li>
+  <li>Auto-sync of IMAP folders. Enabled by default.</li>
+  <li>Per-folder "offline use" setting of all IMAP folders is changed to "offline use=On" by default upon migration.</li>
+  <li>"Smart Folders" is default folder pane view, even if "All Folders" is user's choice in Thunderbird 2.</li>
+</ul>
+<p>For more detailed information about the changes between Thunderbird 2 and Thunderbird 3, see:</p>
+<ul>
+  <li><a class="external text" href="http://www.mozillamessaging.com/en-US/thunderbird/3.0/releasenotes/" rel="nofollow" title="http://www.mozillamessaging.com/en-US/thunderbird/3.0/releasenotes/">Thunderbird Release Notes</a></li>
+  <li><a class="external text" href="/en-US/docs/Thunderbird_3_for_users" rel="nofollow" title="https://developer.mozilla.org/en/Thunderbird_3_for_users">Thunderbird 3 for users</a></li>
+  <li><a class="external text" href="/en-US/docs/Thunderbird_3_for_developers" rel="nofollow" title="https://developer.mozilla.org/En/Thunderbird_3_for_developers">Thunderbird 3 for developers</a></li>
+</ul>
+<p>As a general rule, administrators should deal with the process of upgrading Thunderbird and enabling new features separately. That is, they should try to keep the user setup as similar as possible between Thunderbird 2 and 3 and wait until the Thunderbird 3 upgrade is complete and stable before enabling Thunderbird 3 features.</p>
+<h3 id="Disable_Add-on_prior_to_migration_for_safe_upgrade"><span class="mw-headline">Disable Add-on prior to migration for safe upgrade</span></h3>
+<p>Problems due to add-on are known. For example;</p>
+<ul>
+  <li><a class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=533692" rel="nofollow" title="Bug 533692 -- RESOLVED FIXED -- Thunderbird/General -- Kaspersky Anti-Spam Extension causes blank main window on 2.0.0.23 to 3.0 upgrade">Bug 562589</a> Kaspersky Anti-Spam Extension causes blank main window on 2.0.0.23 to 3.0 upgrade</li>
+  <li><a class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=543076" rel="nofollow" title='Bug 543076 -- RESOLVED INVALID -- MailNews Core/Networking: IMAP -- TB 3.0.1 does not handle IMAP Attachments correctly (bug of "Attachment size" add-on or some others)'>Bug 543076</a> TB 3.0.1 does not handle IMAP Attachments correctly (bug of "Attachment size" add-on or some others)</li>
+</ul>
+<p>To avoid such unwanted problems due to add-ons, next upgrade procedure is recommended for safe migration.</p>
+<ol>
+  <li>Start Tb 2 with -safe-mode to make all add-ons disabled before upgrade.</li>
+  <li>Keep backup of profile directory before upgrade.</li>
+  <li>If possible, do uninstall of Thunderbird 2 and clean install of Thunderbird 3, instead of upgrade by software update by Thunderbird 2, for both safe migration and reducing of network traffic.</li>
+</ol>
+<h3 id="Disable_Migration_Assistant"><span class="mw-headline">Disable Migration Assistant</span></h3>
+<p>Enterprise sites that perform mass upgrades generally want to prevent users from performing Thunderbird upgrades on their own. An upgrade dialogue in the Thunderbird Migration Assistant should be disabled.</p>
+<pre>lockPref("mail.ui.show.migration.on.upgrade",false);</pre>
+<h3 id="Disable_Gloda_(Global_Search_and_Indexer)_to_avoid_indexing_just_after_migration"><span class="mw-headline">Disable Gloda (Global Search and Indexer) to avoid indexing just after migration</span></h3>
+<p>Initail purpose of Gloda was solution of of problem like <a class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=383895" rel="nofollow" title='Bug 383895 -- NEW -- Thunderbird/Search -- Thunderbird Message Body/fulltext search or filter is painfully slow compared to Outlook on folders with lots of messages (both "quick search" and "search messages")'>Bug 383895</a> (slowness in body text search of local mail data). With enhancements and many improvements by Thuderbird 3 on auto-sync of IMAP folder, Gloda can be used also for IMAP folders very easily. So, gloda is very useful for everyday usage even for IMAP users: It can search messages very fast, much faster than an IMAP server can, and so notably increase productivity. Also, it will in the future have increased functionality in other areas.</p>
+<p>However, the new Thunderbird 3 search and index functionality initially impacts performance. (The indexer runs when Thunderbird 3 is first started and will continue to work until all the user's email is indexed. The more messages a user has, the longer the indexer will run.) Also, it uses diskspace on the client (about 1/2 (?) of mailbox size), which is a problem for roaming profiles.</p>
+<p>Gloda can be enabled by only single action after upgrade - check an option at Tools/Options/Advanced/General tab. So, to minimize user support workload after migration, we  recommend you to disable automatic enabling of Gloda durng migration by Thunderbird 3.</p>
+<blockquote>
+  But how? Is it possible? Enhancement is needed?</blockquote>
+<h3 id="Disable_Auto-Sync_Keep_Per_Folder_Offline_Use_Setting_to_avoid_download_of_all_mails_in_huge_IMAP_folder_just_after_migration"><span class="mw-headline">Disable Auto-Sync, Keep Per Folder "Offline Use" Setting, to avoid download of all mails in huge IMAP folder just after migration</span></h3>
+<p>Auto-sync of IMAP folders is enabled by default for all IMAP accounts. The per folder "offline use" setting of all IMAP folders is changed to "offline use=On" when Thunderbird 3 is launched the first time. To keep same settings as Thunderbird 2, disable the auto-sync and offline-use settings upon upgrade.</p>
+<p>To disable auto-sync completely:</p>
+<pre>lockPref("mail.server.default.autosync_offline_stores", false);
+lockPref("mail.server." + serverFromAccount + ".autosync_offline_stores", false);
+</pre>
+<p>To disable per folder "offline use" setting change upon migration (Tb 3.0.5 to Tb 3.1rc1):</p>
+<pre>lockPref("mail.server." + serverFromAccount + ".offline_download", false);
+</pre>
+<p>To disable per folder "offline use" setting change upon migration (Tb 3.1rc2 or later):</p>
+<pre>lockPref("mailnews.ui.show.migration.on.upgrade",false);
+</pre>
+<p>Note:</p>
+<ul>
+  <li>mail.server.serverX.offline_download (default=true) of Tb 3.
+    <ul>
+      <li>When an IMAP folder is created or subscribed, set offline use=off if false, set offline use=on if true.<br>
+        i.e. This setting is for default of offline use=on/off of an IMAP folder.</li>
+    </ul>
+  </li>
+  <li>Enhancement of mail.server.serverX.offline_download=flase prior to upgrade to Tb 3(from Tb 3.0.5 to Tb 3.1rc1).
+    <ul>
+      <li>Upon first use of Tb 3, if mail.server.serverX.offline_download=false is set before upgrade, IMAP folder's "offline use" is not touched by Migration code of Tb 3 .</li>
+      <li>It's enhanced by <a class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=562589" rel="nofollow" title="Bug 562589 -- RESOLVED FIXED -- Thunderbird/Migration -- If I disable migration wizard I'm in situation where all IMAP -folders are set to download no matter what I do to account in question (Needs a way to keep offline-use setting upon migration to Tb 3, even if Migration Assistant is disabled on purpose)">bug 562589</a>. This enhancement is already landed on Tb3.1pre and Tb3.2pre, and the enhancement has been landed on Tb 3.0.5pre(As of 2010/5/10).</li>
+    </ul>
+  </li>
+  <li>Above enhancement of mail.server.serverX.offline_download=false prior to migration of bug 562589 has been removed by Bug 569161.
+    <ul>
+      <li>Code which changes offline-use=on/off of IMAP folders upon migration is moved to Migration Assistant by <a class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=569161" rel="nofollow" title="Bug 569161 -- VERIFIED FIXED -- Thunderbird/Migration -- New Migration Assistant does not honor Advanced IMAP Synchronization settings">bug 569161</a>. So, if Migration Assistant is disabled, offline-use setting of any IMAP folder is never touched upon migration to Tb 3.1 and Tb 3.2.</li>
+      <li>Patch of bug 569161 is landed on Tb3.1rc2 and Tb3.2a1(As of 2010/06/07).</li>
+    </ul>
+  </li>
+</ul>
+<h4 id="How_to_enable_auto-sync_after_migration">How to enable auto-sync after migration</h4>
+<p>Account Settings/Synchronization &amp; Disk Space</p>
+<ul>
+  <li>[ ? ] Keep messages of this account on this computer</li>
+</ul>
+<p>Current behavior of UI for auto-sync setting.</p>
+<ul>
+  <li>Unchecked-&gt;Checked
+    <ol>
+      <li>Set mail.server.serverX.offline_download=true</li>
+      <li>Set offline use=on of all folders of the IMAP account</li>
+      <li>Enable "Advanced" button to change offline-use setting of IMAP folders</li>
+    </ol>
+  </li>
+  <li>Checked-&gt;Unchecked
+    <ol>
+      <li>Set mail.server.serverX.offline_download=false</li>
+      <li>Set offline use=off of all folders of the IMAP account</li>
+      <li>Disable "Advanced" button to change offline-use setting of IMAP folders</li>
+    </ol>
+  </li>
+</ul>
+<p>Note: There is a request for a design change in <a class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=537943" rel="nofollow" title='Bug 537943 -- NEW -- Thunderbird/Folder and Message Lists -- "Advanced" button at Synchronization&amp;amp;Disk Space should be enabled even if mail.server.serverX.offline_download=false is set, and is better to be called "Folder Property Manager".'>bug 537943</a>.</p>
+<p>Gloda and auto-sync/offline-use are possibly independent, although relevant.</p>
+<ul>
+  <li>"Download Now" button downloads mail to offline-use regardless of offline-use=On/Off.</li>
+  <li>"Download Now" button seems to be intercepted and discarded if auto-sync is enabled and offline-use=On. It looks due to already started schedule based automatic downloading.</li>
+  <li>Auto-sync automatically downloads mail data to offline-store if auto-sync is enabled and if offline-use=On is set in an IMAP folder.</li>
+  <li>"Work Offline" automatcally downloads mail data to offline-store automatically, if per folder offline-use=On is set in an IMAP folder.</li>
+  <li>Gloda indexes mail data in offline-store, if mail data is saved in offline-store, perhaps regardless of auto-sync is enabled/disabled and offline-use=On/Off and Working Online/Working Offline.</li>
+</ul>
+<h3 id="Change_folder_pane_view_to_All_Folders_from_Smart_Folders"><span class="mw-headline">Change folder pane view to "All Folders" from "Smart Folders"</span></h3>
+<p>By default, Thunderbird 3 displays "Smart Folders" in the folder pane. (Smart Folders combine the messages in similarly named folders in multiple accounts, for example grouping Inbox messages from all accounts into a single Inbox on the Smart Folder pane.) If you want to preserve the default Thunderbird 2 behavior of showing "All Folders", advice users to select <strong>View | Folders | All</strong> from the menu.</p>
+<p>Can "forcing Smart Folders view" upon migration be stopped? How? Is it possible? Enhancement is needed?</p>
+<p>Note: "Smart Folders" is renamed to "Unified Folders" by Tb 3.1, and Tb 3.1 won't force it upon migration from Tb2 any more.</p>
+<h2 id="Considerations"><span class="mw-headline">Considerations </span></h2>
+<h3 id="Account_definition_by_autoconfig"><span class="mw-headline">Account definition by autoconfig </span></h3>
+<p>When new accounts are created, the new "autoconfig" functionality is automatically invoked. Unless users have the correct account definition parameters, it may be confusing for them to configure their own accounts (if this is permitted).</p>
+<h3 id="IMAP_folder_file_location"><span class="mw-headline">IMAP folder file location </span></h3>
+<p>By default, the IMAP folder file is located in each user's profile directory. If the user is storing a lot of messages for off-line access, this can result in too much data for a roaming profile. Regardless of whether or not there is a roaming profile, there may be if the profile is located on a network resource or if Microsoft Window's Offline File (CSC) is used for the offline storage file.</p>
+<p>If that is the case, you have two options:</p>
+<p>If the Gloda search and index is mandatory for IMAP mail data:</p>
+<ol>
+  <li>Locate mail directory for IMAP account at location with which remote/network access won't happen(e.g. "Local Settings" of MS Win)</li>
+  <li>Enable auto-sync, and set offline use=on of IMAP folders.</li>
+  <li>Accept download of all mails to any PC which uses the IMAP account.</li>
+  <li>Accept per PC thread pane column setting of the IMAP accout.
+    <ul>
+      <li>
+        <dl>
+          <dt>
+             </dt>
+        </dl>
+        <dl>
+          <dd>
+            As thread pane column setting is currently saved in .msf file, and as you selected folder location other than profile directory, data in .msf can not be shared among PCs, even when you use Roaming Profile.</dd>
+        </dl>
+      </li>
+    </ul>
+  </li>
+</ol>
+<p>When Gloda is not needed for IMAP mail data:</p>
+<ol>
+  <li>Locate IMAP folder file at any place you want.</li>
+  <li>Disable auto-sync, and/or set offline use=off of all IMAP folders.
+    <ul>
+      <li>
+        <dl>
+          <dt>
+             </dt>
+        </dl>
+        <dl>
+          <dd>
+            As new feature of "Disk Cache for mail in IMAP folder of offline-use=off" is added to Tb 3, mail data of viewed mail is held in far larger Disk Cache than very small memory cache of Thunderbird 2. So, frequency of problem like "repeatedly downloaded big attachment data" is reduced very much compared to Thunderbird 2.</dd>
+        </dl>
+      </li>
+    </ul>
+  </li>
+</ol>
+<p>As Gloda is first solution of problem of <a class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=383895" rel="nofollow" title='Bug 383895 -- NEW -- Thunderbird/Search -- Thunderbird Message Body/fulltext search or filter is painfully slow compared to Outlook on folders with lots of messages (both "quick search" and "search messages")'>Bug 383895</a> (slowness in body text search of local mail data), and as many IMAP servers have excellent body text search functionality, consider utilizing of online search first for IMAP mail data. If online search is usable, enabling of auto-sync/offline-use merely for Gloda can be avoided.</p>
+<h3 id="Online_search_of_IMAP_folder"><span class="mw-headline">Online search of IMAP folder </span></h3>
+<p>There is known with regards to online search (documented in <a class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=546925" rel="nofollow" title="Bug 546925 -- NEW -- Thunderbird/Search -- custom header search is non-functional ('Run search on server' of Edit/Find/Search Messages doesn't work any more)">Bug 546925</a> "Run search on server" of Edit/Find/Search Messages doesn't work). For now, users must use Quick Search or Virtual Folder (Saved Search folder) for online searches.</p>
+<h3 id="Search_auto-sync_offline-use_and_Smart_Folders"><span class="mw-headline">Search, auto-sync, offline-use, and "Smart Folders" </span></h3>
+<p>If IMAP folder of offline-use=off, full text search by Gloda won't work because of offline-use=off.</p>
+<p>And, if not all mails of IMAP folder of offline-use=on is downloaded into local offline-store file because of your setting for offline-store file size limitation, Gloda can't find not-downloaded mails of the IMAP folder.</p>
+<p>And, as "Smart Folder" is internally Virtual Folder(Saved Search Folder), a "Smart Folder" can be Virtual Folder with multiple search target folders in mixture of local mail folders, IMAP folders of offline-use=on(all mails are sync'ed), IMAP folders of offline-use=on(not all mails are sync'ed), and IMAP folders of offline-use=off.</p>
+<p>Never open bug at bugzilla.mozilla.org for "Search can't find my mail!" without sufficient checking of "what mail at what kind of folder is not hit by what kind of search at where", please.</p>
+<h2 id="Migration_Guide_(Thunderbird_2_To_Thunderbird_3.1)"><span class="mw-headline">Migration Guide (Thunderbird 2 To Thunderbird 3.1) </span></h2>
+<p>(content needed)</p>
+<h2 id="Migration_Guide_(Thunderbird_3.0_To_Thunderbird_3.1)"><span class="mw-headline">Migration Guide (Thunderbird 3.0 To Thunderbird 3.1) </span></h2>
+<p>(content needed)</p>

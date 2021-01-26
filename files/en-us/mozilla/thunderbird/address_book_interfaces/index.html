@@ -1,0 +1,74 @@
+---
+title: Address Book Interfaces
+slug: Mozilla/Thunderbird/Address_Book_Interfaces
+tags:
+  - MailNews
+  - Mozilla
+  - SeaMonkey
+  - thunderbird
+---
+<div class="blockIndicator standardNote">
+<p>This content covers features introduced in <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a></p>
+</div>
+
+<p>This page contains a list of the interfaces that you'll will most likely hit when writing patches for the Address Book or writing extensions. The complete list of interfaces for the address book can be found <a class="external" href="https://dxr.mozilla.org/comm-central/source/comm/mailnews/addrbook/public" title="http://mxr.mozilla.org/comm-central/source/mailnews/addrbook/public/">here</a>. <a class="internal" href="/En/Address_Book_Examples" title="En/Address Book Examples">Address Book examples</a> show how to perform various tasks and provide code snippets.</p>
+
+<h3 id="nsIAbManager">nsIAbManager</h3>
+
+<p><code><a class="external" href="https://dxr.mozilla.org/comm-central/source/comm/mailnews/addrbook/public/nsIAbManager.idl" title="http://mxr.mozilla.org/comm-central/source/mailnews/addrbook/public/nsIAbManager.idl">nsIAbManager</a></code> is an interface to the main address book manager. It is used to create/delete address book instances and provides other utility functions such as the ability to export address books and add listeners to be notified about updates to address books.</p>
+
+<h4 id="RDF_Obsolescence">RDF Obsolescence</h4>
+
+<p>In Thunderbird 2.x/SeaMonkey 1.1 the RDF service was used to get the list of all address books. For Thunderbird 3/SeaMonkey 2, using the RDF interfaces should be considered <strong>obsolete</strong>, except for using as datasources for tree elements. Instead use <code>nsIAbManager.getDirectory</code> and <code>nsIAbManager.directories</code>, although these interfaces aren't finalized, they are more convenient and will be heading towards the Address Book interfaces of the future.</p>
+
+<h3 id="nsIAbItem">nsIAbItem</h3>
+
+<p><code><a class="external" href="https://dxr.mozilla.org/comm-central/source/comm/mailnews/addrbook/public/nsIAbItem.idl" title="http://mxr.mozilla.org/comm-central/source/mailnews/addrbook/public/nsIAbItem.idl">nsIAbItem</a></code> is the base class for all items that can be in address books. The only exception to this rule is that <code>nsIAbDirectory</code> items cannot currently be nested.</p>
+
+<p><code>nsIAbItem</code> contains functions that are generic to all items, at the moment this is one function, <code>generateName</code> that returns the name of an item suitable for display.</p>
+
+<h3 id="nsIAbCard">nsIAbCard</h3>
+
+<p>The <a class="internal" href="/en/nsIAbCard//Thunderbird3" title="En/NsIAbCard/Thunderbird3"><code>nsIAbCard</code></a> interface is generally used to represent and manipulate cards in the address book. The User Interfaces calls these cards "Contacts".</p>
+
+<p>Currently <code>nsIAbCard</code> can also represent mailing lists. If this is the case then its <code>isMailList</code> attribute will be true. <code>nsIAbCard</code> is typically used in this form when displaying lists of contacts from the address book (e.g. after quick search or in contacts sidebar).</p>
+
+<div class="blockIndicator note">
+<p><strong>Note:</strong> It is planned that at some stage the mailing list representation will be removed from <code>nsIAbCard</code> into its own interface. That may or may not happen before TB 3, the interested can follow along on <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=464833" title="Mailing list sanity">bug 464833</a>.</p>
+</div>
+
+<h3 id="nsIAbCollection">nsIAbCollection</h3>
+
+<p><code><a class="external" href="https://dxr.mozilla.org/comm-central/source/comm/mailnews/addrbook/public/nsIAbCollection.idl" title="http://mxr.mozilla.org/comm-central/source/mailnews/addrbook/public/nsIAbCollection.idl">nsIAbCollection</a></code> represents collections of <code>nsIAbItem</code>. It contains information on the type of collection (remote, read-only, etc) and provides search functions.</p>
+
+<div class="blockIndicator note">
+<p><strong>Note:</strong> At the moment, only <code>nsIAbDirectory</code> uses <code>nsIAbCollection</code>, it is intended that there will be another class (probably called <code>nsIAbGroup</code>) that will hold mailing lists and specific groups of email addresses.</p>
+</div>
+
+<h3 id="nsIAbDirectory">nsIAbDirectory</h3>
+
+<p><code><a class="external" href="https://dxr.mozilla.org/comm-central/source/comm/mailnews/addrbook/public/nsIAbDirectory.idl" title="http://mxr.mozilla.org/comm-central/source/mailnews/addrbook/public/nsIAbDirectory.idl">nsIAbDirectory</a></code> are instances of <code>nsIAbCollection</code> that are saved in some form, this could be a file on the local disk, within another application or remotely over a network. On the user interface, each <code>nsIAbDirectory</code> is represented as an "Address Book".</p>
+
+<p>The class contains methods for setting up the address book and for adding, modifying and removing <code>nsIAbItem</code> objects.</p>
+
+<h4 id="nsIAbDirectory_and_Mailing_Lists">nsIAbDirectory and Mailing Lists</h4>
+
+<p>Currently <code>nsIAbDirectory</code> is also used to represent mailing lists. This is the case if the <code>isMailList</code> attribute is true. See the <a class="internal" href="/En/Address_Book_Examples" title="En/Address Book Examples">examples page</a> for how this operates.</p>
+
+<div class="blockIndicator note">
+<p><strong>Note:</strong> <span class="lang lang-en">It is planned that at some stage the mailing list representation will be removed from <code>nsIAbDirectory</code> into its own interface. That may or may not happen before TB 3, the interested can follow along on <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=464833" title="Mailing list sanity">bug 464833</a>.</span></p>
+</div>
+
+<h4 id="Address_BookDirectory_interfaces_specific_to_types_of_Address_Books">Address Book/Directory interfaces specific to types of Address Books</h4>
+
+<p>These interfaces should only be used where necessary for setting up address books of the appropriate type or accessing type specific functions. Keeping to non-type-specific interfaces (where possible) will mean that functions will work across different types of address book and help to provide a better user experience.</p>
+
+<h5 id="nsIAbMDBDirectory">nsIAbMDBDirectory</h5>
+
+<p>A <code><a class="external" href="https://dxr.mozilla.org/comm-central/source/comm/mailnews/addrbook/public/nsIAbMDBDirectory.idl" title="http://mxr.mozilla.org/comm-central/source/mailnews/addrbook/public/nsIAbMDBDirectory.idl">nsIAbMDBDirectory</a></code> object is also an <code>nsIAbDirectory</code> and represents a <a class="internal" href="/Special:Tags?tag=Mork&amp;language=en" title="Special:Tags?tag=Mork&amp;language=en">mork</a>-based address book. Address books of this type are stored within the user's profile.</p>
+
+<p>The interface provides functions specific to setting up mork address books.</p>
+
+<h5 id="nsIAbLDAPDirectory">nsIAbLDAPDirectory</h5>
+
+<p>A <a class="external" href="https://dxr.mozilla.org/comm-central/source/comm/mailnews/addrbook/public/nsIAbLDAPDirectory.idl" title="http://mxr.mozilla.org/comm-central/source/mailnews/addrbook/public/nsIAbLDAPDirectory.idl"><code>nsIAbLDAPDirectory</code></a> object is also an <code>nsIAbDirectory</code> and represents a remote LDAP address book.</p>

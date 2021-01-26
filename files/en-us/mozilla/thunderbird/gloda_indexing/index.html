@@ -1,0 +1,107 @@
+---
+title: Gloda indexing
+slug: Mozilla/Thunderbird/Gloda_indexing
+tags:
+  - Gloda
+  - Guide
+  - Intermediate
+  - thunderbird
+---
+<p>This page provides a big-picture summary of what the indexer does; please see the source for nitty-gritty details or if this page seems to be wrong.  <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/db/gloda/modules/indexer.js" title="http://mxr.mozilla.org/comm-central/source/mailnews/db/gloda/modules/indexer.js">GlodaIndexer</a> provides the core indexing logic. <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/db/gloda/modules/index_msg.js" title="http://mxr.mozilla.org/comm-central/source/mailnews/db/gloda/modules/index_msg.js">GlodaMsgIndexer</a> has the message-specific stuff, although the actual attribute-providers are found in <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/db/gloda/modules/explattr.js" title="http://mxr.mozilla.org/comm-central/source/mailnews/db/gloda/modules/explattr.js">GlodaExplicitAttr</a> and <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/db/gloda/modules/fundattr.js" title="http://mxr.mozilla.org/comm-central/source/mailnews/db/gloda/modules/fundattr.js">GlodaFundAttr</a>. <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/db/gloda/modules/index_ab.js" title="http://mxr.mozilla.org/comm-central/source/mailnews/db/gloda/modules/index_ab.js">GlodaABIndexer</a> has the limited address book support.</p>
+
+<h2 id="What_Folders_get_Indexed">What Folders get Indexed?</h2>
+
+<ul>
+ <li>Never Indexed
+  <ul>
+   <li>per priority policy:
+    <ul>
+     <li>Trash folders</li>
+     <li>Junk folders</li>
+     <li>Queue folders (outbox?)</li>
+     <li>Newsgroup folders</li>
+    </ul>
+   </li>
+   <li>per hard-coded do-not-go-in-there logic:
+    <ul>
+     <li>non-Mail folders (we do a bitmask test on the folder flags)</li>
+     <li>Virtual folders (we do a bitmask test on the folder flags)</li>
+     <li>folders which are neither local nor IMAP (we do an instanceof test to make sure the implementations are either local folders or IMAP folders)</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li>Indexed with priority, where bigger numbers are indexed before lower numbers:
+  <ul>
+   <li>60:
+    <ul>
+     <li>Sent mail</li>
+    </ul>
+   </li>
+   <li>50:
+    <ul>
+     <li>Inboxes</li>
+    </ul>
+   </li>
+   <li>40
+    <ul>
+     <li>Favorite folders -- You can right click on folders and mark them as your favorite.  Note that currently gloda does not listen for this attribute changing on a folder so this is likely to be inconsistently applied.</li>
+    </ul>
+   </li>
+   <li>30
+    <ul>
+     <li>CheckNew -- This might come from a secret pref or something.  Just like favorite folders, this is likely to be stale.</li>
+    </ul>
+   </li>
+   <li>20
+    <ul>
+     <li>Default; everybody else.</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="What_Messages_get_Indexed">What Messages get Indexed?</h2>
+
+<p>All local (POP) messages get indexed.  IMAP messages get indexed according to the following rules provided in table form:</p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td></td>
+   <td><em>The folder IS marked for offline storage.</em></td>
+   <td><em>The folder is NOT marked for offline storage.</em></td>
+  </tr>
+  <tr>
+   <td><em>The message IS offline. [What does this mean?]</em></td>
+   <td>We index the message including its body.  This means attribute providers get to see all of the message headers and the contents of the message (converted to plaintext) are available for fulltext queries.</td>
+   <td>This can't happen.</td>
+  </tr>
+  <tr>
+   <td><em>The message is NOT offline.</em></td>
+   <td>We wait for the message to get brought offline, likely by autosync.  The message is invisible to gloda until this time.</td>
+   <td>We index the message based on the nsMsgDBHdr but do not stream the message.  Attribute providers only get to see what is already on the nsMsgDBHdr; they do not get to see all headers.  The message body is not available for fulltext queries.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="What_Parts_of_Messages_get_Full-text_Indexed">What Parts of Messages get Full-text Indexed?</h2>
+
+<ul>
+ <li>Always
+  <ul>
+   <li>The message author's display name and e-mail address *as present in the e-mail message*.  We do not involve any nickname you've applied to the contact.</li>
+   <li>The message recipients' display name and e-mail addresses *as present in the e-mail message*.</li>
+   <li>The message subject line.</li>
+  </ul>
+ </li>
+ <li>Only if the message body was available:
+  <ul>
+   <li>The body text.  If the message had an HTML part without a corresponding text part, we convert the HTML part to text.</li>
+   <li>The attachment names.</li>
+  </ul>
+ </li>
+</ul>
+
+<p>The impact of the latter point is that a gloda full-text search will still work even when messages are not available offline, but obviously the quality of the search will be greatly reduced.</p>

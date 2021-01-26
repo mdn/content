@@ -1,0 +1,33 @@
+---
+title: Access StringBundle from Overlay
+slug: >-
+  Mozilla/Thunderbird/Thunderbird_extensions/HowTos/Common_Thunderbird_Extension_Techniques/Access_StringBundle_from_Overlay
+tags:
+  - thunderbird
+---
+<p> </p>
+
+<p>{{AddonSidebar}}</p>
+
+<p><a href="/en/XUL/stringbundle" title="en/XUL/stringbundle">Stringbundles</a> are handy for localizing your project by removing all of your strings into a separate, easy to access text file. Unfortunately adding the bundles into Thunderbird isn't as easy as adding them to your <a href="/en/XUL" title="en/XUL">XUL</a> overlay. The most efficient way to append these strings is by attaching them to an existing <a href="/en/XUL/stringbundleset" title="en/XUL/stringbundleset">stringbundleset</a> as such:</p>
+
+<pre class="brush: xml">&lt;stringbundleset id="stringbundleset"&gt;
+  &lt;stringbundle src="<a class="external" rel="freelink">chrome://your_extension/locale/overlay.properties</a>" id="your-extension-strings" /&gt;
+&lt;/stringbundleset&gt;
+</pre>
+
+<p>Now that your <a href="/en/XUL/stringbundle" title="en/XUL/stringbundle">stringbundle</a> is attached you can access it from JavaScript as follows:</p>
+
+<pre class="brush: js">var str = document.getElementById("your-extension-strings"); //get the stringbundle object itself
+str.getString("propertyName");                                 //get a string (and do something with it) </pre>
+
+<p> </p>
+
+<h1 id="Alternative_way">Alternative way</h1>
+
+<pre class="brush: js">let stringBundleService = Cc["@mozilla.org/intl/stringbundle;1"].getService(Ci.nsIStringBundleService);
+let bundle = stringBundleService.createBundle("chrome://your_extension/locale/overlay.properties");
+let str = bundle.GetStringFromName("propertyName");
+</pre>
+
+<p>see <a class="external" href="http://mxr.mozilla.org/comm-central/source/mozilla/intl/strres/public/nsIStringBundle.idl#85" title="http://mxr.mozilla.org/comm-central/source/mozilla/intl/strres/public/nsIStringBundle.idl#85">nsIStringBundleService</a></p>

@@ -1,0 +1,419 @@
+---
+title: Activity Manager examples
+slug: Mozilla/Thunderbird/Thunderbird_extensions/HowTos/Activity_Manager
+---
+<section class="Quick_links" id="Quick_Links">
+  <ol>
+    <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions"><strong>Browser extensions</strong></a></li>
+    <li class="toggle">
+      <details>
+        <summary>Getting started</summary>
+        <ol>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions">What are extensions?</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension">Your first extension</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension">Your second extension</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">Anatomy of an extension</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples">Example extensions</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next_">What next?</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>Concepts</summary>
+        <ol>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Using_the_JavaScript_APIs">Using the JavaScript APIs</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">Content scripts</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">Match patterns</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_files">Working with files</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization">Internationalization</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Security_best_practices">Security best practices</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Content Security Policy</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">Native messaging</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>User interface</summary>
+        <ol>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface">User Interface</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">Toolbar button</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions">Address bar button</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars">Sidebars</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items">Context menu items</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">Options page</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">Extension pages</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications">Notifications</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox">Address bar suggestions</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels">Developer tools panels</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>How to</summary>
+        <ol>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests">Intercept HTTP requests</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page">Modify a web page</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page">Insert external content</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar">Add a button to the toolbar</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page">Implement a settings page</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API">Work with the Tabs API</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API">Work with the Bookmarks API</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_the_Cookies_API">Work with the Cookies API</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities">Work with contextual identities</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/onboarding_upboarding_offboarding_best_practices">Onboard, upboard, and offboard users</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>Porting</summary>
+        <ol>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Firefox_differentiators">Firefox differentiators</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension">Porting a Google Chrome extension</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on">Porting a legacy Firefox extension</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions">Embedded WebExtensions</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK">Comparison with the Add-on SDK</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_XUL_XPCOM_extensions">Comparison with XUL/XPCOM extensions</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations">Differences between API implementations</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities">Chrome incompatibilities</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Differences_between_desktop_and_Android">Differences between desktop and Android</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>Firefox workflow</summary>
+        <ol>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Development_Tools">Developer tools</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/User_experience_best_practices">User Experience</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">Temporary Installation in Firefox</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Debugging">Debugging</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Testing_persistent_and_restart_features">Testing persistent and restart features</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Firefox_for_Android">Developing for Firefox for Android</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">Getting started with web-ext</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/web-ext_command_reference">web-ext command reference</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID">Extensions and the Add-on ID</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Request_the_right_permissions">Request the right permissions</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>JavaScript APIs</summary>
+        <ol><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">Browser support for JavaScript APIs</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms">alarms</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks">bookmarks</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browserAction</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings">browserSettings</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData">browsingData</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/clipboard">clipboard</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/commands">commands</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contentScripts">contentScripts</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities">contextualIdentities</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies">cookies</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow">devtools.inspectedWindow</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network">devtools.network</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels">devtools.panels</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/dns">dns</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads">downloads</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/events">events</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension">extension</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extensionTypes">extensionTypes</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/find">find</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history">history</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n">i18n</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/identity">identity</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/idle">idle</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management">management</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus">menus</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications">notifications</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox">omnibox</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction">pageAction</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions">permissions</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11">pkcs11</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy">privacy</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy">proxy</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime">runtime</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/search">search</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions">sessions</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction">sidebarAction</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs">tabs</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme">theme</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/topSites">topSites</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types">types</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation">webNavigation</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest">webRequest</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows">windows</a></li></ol>
+      </details>
+    </li>
+
+    <li class="toggle">
+      <details>
+      <summary>Manifest keys</summary>
+      <ol><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author">author</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background">background</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides">chrome_settings_overrides</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides">chrome_url_overrides</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands">commands</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy">content_security_policy</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale">default_locale</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description">description</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer">developer</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page">devtools_page</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url">homepage_url</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/incognito">incognito</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name">name</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/offline_enabled">offline_enabled</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox">omnibox</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions">optional_permissions</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_page">options_page</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers">protocol_handlers</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/short_name">short_name</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebar_action</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme">theme</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version">version</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version_name">version_name</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a></li></ol>
+      </details>
+    </li>
+
+    <li><a href="/en-US/docs/Mozilla/Add-ons/Themes"><strong>Themes</strong></a></li>
+    <li class="toggle">
+      <details>
+        <summary>Browser themes</summary>
+        <ol>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/Themes/Theme_concepts">Browser theme concepts</a></li>
+        </ol>
+      </details>
+    </li>
+    <li><a href="/en-US/docs/Mozilla/Add-ons/Distribution"><strong>Publishing and Distribution</strong></a></li>
+    <li class="toggle">
+      <details>
+        <summary>Publishing add-ons</summary>
+        <ol>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/Distribution">Signing and distribution overview</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Package_your_extension_">Package your extension</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on">Submit an add-on</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/Source_Code_Submission">Source code submission</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/Distribution/Resources_for_publishers">Resources for publishers</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/Listing">Creating an appealing listing</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/Distribution/Make_money_from_browser_extensions">Make money from browser extensions</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/Distribution/Promoting_your_extension_or_theme">Promoting your extension or theme</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/AMO/Policy/Reviews">Review policies</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/AMO/Policy/Agreement">Developer agreement</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/AMO/Policy/Featured">Featured add-ons</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/Distribution/Retiring_your_extension">Retiring your extension</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>Distributing add-ons</summary>
+        <ol>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_distribution_options/Sideloading_add-ons">For sideloading</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_distribution_options/Add-ons_for_desktop_apps">For desktop apps</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_distribution_options/Add-ons_in_the_enterprise">For an enterprise</a></li>
+        </ol>
+      </details>
+    </li>
+    <li><a href="https://discourse.mozilla.org/c/add-ons"><strong>Community and Support</strong></a></li>
+    <li class="toggle">
+      <details>
+        <summary>Channels</summary>
+        <ol>
+          <li><a href="https://blog.mozilla.org/addons">Add-ons blog</a></li>
+          <li><a href="https://discourse.mozilla.org/c/add-ons">Add-on forums</a></li>
+          <li><a href="http://stackoverflow.com/questions/tagged/firefox-addon">Stack Overflow</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/#Contact_us">Contact us</a></li>
+        </ol>
+      </details>
+    </li>
+  </ol>
+</section>
+
+<div class="blockIndicator standardNote">
+<p>This content covers features introduced in <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a></p>
+</div>
+
+<p>The <a href="/en/Thunderbird/Activity_Manager" title="en/Thunderbird/Activity Manager">Activity Manager</a> is a simple component that understands how to display a combination of user activity and history. See the <a href="/en/Thunderbird/Activity_Manager" title="en/Thunderbird/Activity Manager">Activity Manager</a> page for a general description of the component. See the <a href="/en/Thunderbird/Activity_Manager_interfaces" title="en/Thunderbird/Activity Manager interfaces">Activity Manager interfaces</a> page for an overview of the related interfaces.</p>
+
+<p>If the default implementation of <code><a class="external" href="http://mxr.mozilla.org/comm-central/source/mail/components/activity/nsIActivity.idl#270" title="http://mxr.mozilla.org/comm-central/source/mail/components/activity/nsIActivity.idl#270">nsIActivityProcess</a></code>, <code><a class="external" href="http://mxr.mozilla.org/comm-central/source/mail/components/activity/nsIActivity.idl#459" title="http://mxr.mozilla.org/comm-central/source/mail/components/activity/nsIActivity.idl#459">nsIActivityWarning</a></code> and <code><a class="external" href="http://mxr.mozilla.org/comm-central/source/mail/components/activity/nsIActivity.idl#406" title="http://mxr.mozilla.org/comm-central/source/mail/components/activity/nsIActivity.idl#406">nsIActivityEvent</a></code> are not sufficient for the activity initiator, activity developers can provide their own components to extend the capabilities. Default implementations can be found in <code><a class="external" href="http://mxr.mozilla.org/comm-central/source/mail/components/activity/nsActivity.js" title="http://mxr.mozilla.org/comm-central/source/mail/components/activity/nsActivity.js">nsActivity.js</a></code> file<em>.</em></p>
+
+<p>If activity developers would like to extend the default UI representation of the activity types, they can provide their own XBL elements for their own activity types. All custom activity XBL elements should inherit from "activity-base" binding. For XBL samples please see <code><a class="external" href="http://mxr.mozilla.org/comm-central/source/mail/components/activity/content/activity.xml" title="http://mxr.mozilla.org/comm-central/source/mail/components/activity/content/activity.xml">activity.xml</a></code> and <code><a class="external" href="http://mxr.mozilla.org/comm-central/source/mail/components/activity/content/activityBinding.css" title="http://mxr.mozilla.org/comm-central/source/mail/components/activity/content/activityBinding.css">activityBinding.css</a></code> files.</p>
+
+<h2 id="Showing_a_user-defined_activity_in_the_Activity_Manager_window"><span class="mw-headline">Showing a user-defined activity in the Activity Manager window </span></h2>
+
+<p>The following sample will show a process and an event for junk processing in the Activity Manager window.</p>
+
+<pre class="brush: js">// Step 1: Adding a Process into the activity manager
+const nsIAP = Components.interfaces.nsIActivityProcess;
+const nsIAE = Components.interfaces.nsIActivityEvent;
+const nsIAM = Components.interfaces.nsIActivityManager;
+
+let gActivityManager = Components.classes["@mozilla.org/activity-manager;1"].getService(nsIAM);
+let process = Components.classes["@mozilla.org/activity-process;1"].createInstance(nsIAP);
+
+// Assuming <em>folder</em> is an instance of nsIMsgFolder interface
+
+// Localization is omitted, initiator is not provided
+process.init("Processing folder: " + folder.prettiestName,
+             null);
+// Note that we don't define a custom icon, default process icon
+// will be used
+process.contextType = "account";     // group this activity by account
+process.contextObj = folder.server;  // account in question
+
+gActivityManager.addActivity(process);
+
+// Step 2: Showing some progress
+
+let percent = 50;
+process.setProgress(percent, "Junk processing 25 of 50 messages", 25, 50);
+
+// Step 3: Removing the process and adding an Event using Process' attributes
+process.state = Components.interfaces.nsIActivityProcess.STATE_COMPLETED;
+gActivityManager.removeActivity(process.id);
+
+let event = Components.classes["@mozilla.org/activity-event;1"].createInstance(nsIAE);
+
+// Localization is omitted, initiator is omitted
+event.init(folder.prettiestName + " is processed",
+           null,
+           "No junk found",
+           process.startTime,  // start time
+           Date.now());        // completion time
+
+event.contextType = process.contextType; // optional
+event.contextObj = process.contextObj;   // optional
+
+gActivityManager.addActivity(event);
+</pre>
+
+<h2 id="Showing_a_user-defined_activity_with_cancel_capability_JavaScript"><span class="mw-headline">Showing a user-defined activity with cancel capability (JavaScript)</span></h2>
+
+<p>This sample improves the previous one by providing an <code>nsIActivityCancelHandler</code> to allow the user to cancel the process.</p>
+
+<pre class="brush: js">// Step 1: Create a nsIActivityCancelHandler implementation
+function CancelJunkProcess()
+{
+ // user stuff here..
+}
+CancelJunkProcess.prototype = {
+ cancel: function(aActivity) {
+   let initiator = aActivity.initiator;
+   if (initiator) {
+     let folder = aActivity.getSubjects({})[0];
+     ....
+     // assuming that the initiator has some way to cancel
+     // the junk processing for given folder
+     if (initiator.cancelFolderOp(folder)) {
+       aActivity.state = Components.interfaces.nsIActivityProcess.STATE_CANCELED;
+       gActivityManager.removeActivity(aActivity.id);
+       return Cr.NS_SUCCESS;
+     }
+   }
+  return Cr.NS_FAILURE;
+ }
+}
+
+// Step 2: Modify the previous sample to add initiator, subject
+// and associate a nsIActivityCancelHandler component
+...
+// assuming that gJunkProcessor is the entity initiating the junk processing
+// activity, and it has cancelFolderOp method that cancels the operations on folders
+process.init("Processing folder: " + folder.prettiestName,
+             gJunkProcessor);
+
+// folder is being filtered/processed
+process.addSubject(folder);
+process.cancelHandler = new CancelJunkProcess();
+...
+</pre>
+
+<p>Since <code>nsIActivityCancelHandler</code> is provided with the activity, the UI will show a cancel button beside the activity. You can extrapolate this sample to <code>nsIActivityRetryHandler</code> and <code>nsIActivityPauseHandler</code> as well.</p>
+
+<h2 id="Showing_a_user-defined_activity_with_undo_capability_C"><span class="mw-headline">Showing a user-defined activity with undo capability (C++) </span></h2>
+
+<pre class="brush: cpp">.....
+#include "nsIActivity.h"
+#include "nsIActivityManager.h"
+.....
+</pre>
+
+<pre class="brush: cpp">//////////////////////////////////////////////////////////////////////////////
+//// Undo handler implementation
+
+class myCopyEventUndo : public nsIActivityUndoHandler
+{
+ public:
+  NS_DECL_ISUPPORTS
+  NS_DECL_NSIACTIVITYUNDOHANDLER
+  myCopyEventUndo() {}
+ private:
+  ~myCopyEventUndo() {}
+};
+NS_IMPL_ISUPPORTS1(myCopyEventUndo, nsIActivityUndoHandler)
+</pre>
+
+<pre class="brush: cpp">NS_IMETHODIMP myCopyEventUndo::Undo(nsIActivityEvent *event, nsresult *result)
+{
+  nsresult rv;
+  // get the subjects of this copy event
+  PRUint32 length;
+  nsIVariant **subjectList;
+  rv = event-&gt;GetSubjects(&amp;length, &amp;subjectList);
+  if(NS_FAILED(rv))
+    return rv;
+
+  // first subject in the list is the source folder in this particular case
+  nsCOMPtr&lt;nsIMsgFolder&gt; folder = do_QueryInterface(subjectList[0]);
+
+  // get the initiator
+  nsIVariant *initiator;
+  event-&gt;GetInitiator(&amp;initiator);
+
+  if (initiator)
+  {
+    nsISupports* ptr;
+    rv = object-&gt;GetAsISupports(&amp;ptr);
+    if(NS_FAILED(rv))
+      return rv;
+
+    nsCOMPtr&lt;nsIMsgCopyService&gt; copyService = do_QueryInterface(ptr);
+    if (copyService)
+      copyService-&gt;Undo(folder);
+  }
+
+  return (*result = NS_OK);
+ }
+</pre>
+
+<pre class="brush: cpp">/////////////////////////////////////////////////////////////////////////////
+//// Creating an undoable copy event
+
+nsCOMPtr&lt;nsIActivityUndoHandler&gt; undoHandler = new myCopyEventUndo();
+nsCOMPtr&lt;nsIActivityEvent&gt; copyEvent(do_CreateInstance("@mozilla.org/activity-event;1"));
+
+// The initiator of this particular event is CopyService. We want to
+// associate it with the event since we are going to use it in the
+// undo handler.
+// Same for the source folder, it is required for undo operation, but
+// since it is the subject of this activity (event), it goes into the
+// subject list.
+
+// wrap copyservice in a nsvariant component
+nsCOMPtr&lt;nsIWritableVariant&gt; initiator = do_CreateInstance(NS_VARIANT_CONTRACTID);
+initiator-&gt;SetAsISupports(reinterpret_cast&lt;nsISupports*&gt;(copyService));
+
+// subject of the delete operation is the imap folder
+// wrap it in a nsvariant component
+nsCOMPtr&lt;nsIWritableVariant&gt; srcFolder = do_CreateInstance(NS_VARIANT_CONTRACTID);
+srcFolder-&gt;SetAsISupports(reinterpret_cast&lt;nsISupports*&gt;(imapFolder));
+copyEvent-&gt;AddSubject(srcFolder);
+
+copyEvent-&gt;Init(NS_LITERAL_STRING("Message copy event"),
+                initiator,
+                NS_LITERAL_STRING("Completed successfully"),
+                PR_Now() / PR_USEC_PER_MSEC,   // start time
+                PR_Now() / PR_USEC_PER_MSEC);  // completion time
+
+// Do not forget to increase the ref counter if needed
+copyEvent-&gt;SetUndoHandler(undoHandler);
+</pre>
+
+<pre class="brush: cpp">////////////////////////////////////////////////////////////////
+//// Adding the event into Activity Manager
+
+nsCOMPtr&lt;nsIActivityManager&gt; activityMgr(do_GetService("@mozilla.org/activity-manager;1"));
+PRUint32 id;
+activityMgr-&gt;AddActivity(copyEvent, &amp;id);
+</pre>
+
+<h2 id="Adding_an_activity_with_a_custom_context_type"><span class="mw-headline">Adding an activity with a custom context type</span></h2>
+
+<p>This sample shows how to provide a custom context type for junk processing. As a result, all junk processing activities (assuming that we process accounts in parallel) dealing with messages coming from the same sender will be grouped together. (This example seems to be outdated and not working, see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=557467#c1">bug 557467 comment 1</a>.)</p>
+
+<pre class="brush: js">//optional: define some convenience constants
+const nsActProcess = Components.Constructor("@mozilla.org/activity-process;1",
+                                           "nsIActivityProcess", "init");
+const nsActEvent = Components.Constructor("@mozilla.org/activity-event;1",
+                                         "nsIActivityEvent", "init");
+
+ // Step 1: Implement nsIActivityContextDisplayHelper to show a
+ //         customized   display text for our context type
+function SenderContextDisplayHelper()
+{
+ // user stuff here..
+}
+SenderContextDisplayHelper.prototype = {
+ getContextDisplayText: function(contextType, contextObj) {
+   // in this particular example we know that contextType is "Sender"
+   // since we also pass the contextType along with the contextObject
+   //  in some cases, one helper can be registered for a group of context types
+
+   // we know that the context object is the author of the message
+   // Localization is omitted
+   return "Messages coming from " + contextObj.surname + ", " + contextObj.firstname;
+ }
+}
+
+// Step 2: Register the helper for this context type
+gActivityManager.registerContextDisplayHelper("Sender",
+                                             new SenderContextDisplayHelper());
+
+
+// Step 3: Create the process
+...
+let process = new nsActProcess("Processing folder: " + folder.prettiestName,
+                               gJunkProcessor);
+
+process.cancelHandler = new CancelJunkProcess();
+
+// folder is being filtered/processed
+process.addSubject(folder);
+process.contextType = "Sender";
+// assuming msg is an instance of nsIMsgHdr
+process.contextObj = msg.author;
+...
+</pre>
+
+<h2 id="Adding_a_fully_customized_activity"><span class="mw-headline">Adding a fully customized activity </span></h2>
+
+<p>In complex scenarios, extensions might implement their own version of the <code>nsIActivityProcess</code>, <code>nsIActivityWarning</code> and <code>nsIActivityEvent</code> interfaces. In such cases, <a class="external" href="http://mxr.mozilla.org/comm-central/source/mail/components/activity/nsActivity.js" title="http://mxr.mozilla.org/comm-central/source/mail/components/activity/nsActivity.js"><code>nsActivity.js</code></a> can be used as a model.</p>

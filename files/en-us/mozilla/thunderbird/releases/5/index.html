@@ -1,0 +1,116 @@
+---
+title: Thunderbird 5 for developers
+slug: Mozilla/Thunderbird/Releases/5
+tags:
+  - Thunderbird 5
+---
+<div class="blockIndicator draft">
+    <p><strong>Draft</strong><br>
+    This page is not complete.</p>
+
+</div>
+
+<div class="blockIndicator standardNote">
+<p>This content covers features introduced in <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/5">Thunderbird 5</a></p>
+</div>
+
+<p><span>This page lists the changes in Thunderbird 5 that are relevant for developers. For changes that are relevant to end users, see <a class="external" href="http://support.mozillamessaging.com/kb/new-thunderbird-5/" title="http://support.mozillamessaging.com/kb/new-thunderbird-5/">http://support.mozillamessaging.com/kb/new-thunderbird-5/</a>.</span></p>
+
+<h2 id="Gecko_5.0">Gecko 5.0</h2>
+
+<p>Thunderbird 5 is based on Gecko 5.0. The <a href="/en/Firefox_4_for_developers" title="en/Firefox 4 for developers">Firefox 4</a> and <a href="/en/Firefox_5_for_developers" title="en/Firefox 5 for developers">Firefox 5</a> pages have details on the significant changes to Gecko.</p>
+
+<h2 id="Changes_for_Mozilla_and_add-on_developers">Changes for Mozilla and add-on developers</h2>
+
+<p>For helpful tips on updating existing extensions for Thunderbird 5, see <a href="/en/Extensions/Updating_extensions_for_Firefox_4" title="en/Extensions/Updating extensions for Firefox 4">Updating extensions for Firefox 4</a>. There are several key changes that break compatibility with existing add-ons, so be sure to read that article.</p>
+
+<h2 id="STEEL">STEEL</h2>
+
+<ul>
+ <li>Thunderbird 5 will include the new add-ons manager. As a side effect, the global <a href="/en/Toolkit_API/extIApplication" title="en/Toolkit API/extIApplication">Application</a> object won't have an extensions property anymore. See <a class="external" href="http://www.oxymoronical.com/blog/2010/03/How-were-breaking-some-extensions-in-the-near-future" title="http://www.oxymoronical.com/blog/2010/03/How-were-breaking-some-extensions-in-the-near-future">this blog post</a> for more details.</li>
+</ul>
+
+<h3 id="JavaScript_code_modules">JavaScript code modules</h3>
+
+<dl>
+ <dt><a href="/en/JavaScript_code_modules/Services.jsm" title="en/JavaScript code modules/Services.jsm">Services.jsm</a></dt>
+ <dd>The <code>Services.jsm</code> code module provides getters that make it easy to obtain references to commonly-used services, such as the preferences service or the window mediator, among others.</dd>
+ <dt>mailServices.js"</dt>
+ <dd>The mailServices.js code is similar to Services.jsm but is for mail specific functions.</dd>
+ <dt><a href="/en/JavaScript_code_modules/ctypes.jsm" title="en/JavaScript code modules/ctypes.jsm">JS-ctypes API</a></dt>
+ <dd>The JS-ctypes API makes it possible to call C-compatible foreign library functions without using XPCOM.</dd>
+ <dt><a href="/en/Addons/Add-on_Manager" title="en/Addons/Add-on Manager">Add-ons Manager</a></dt>
+ <dd>The new Add-ons Manager provides information about installed add-ons, support for managing them, and provides ways to install and remove add-ons.</dd>
+ <dt><a href="/en/JavaScript_code_modules/Using#Locating_the_code_module" title="en/JavaScript code modules/Using JavaScript code modules#Locating the code module">Loading code modules from chrome: URLs</a></dt>
+ <dd>You can now load JavaScript code modules using <strong>chrome:</strong> URLs, even inside JAR files.</dd>
+ <dt>DownloadLastDir.jsm</dt>
+ <dd>The <a href="/en/JavaScript_code_modules/DownloadLastDir.jsm" title="en/JavaScript/Code modules/DownloadLastDir.jsm"><code>DownloadLastDir.jsm</code></a> code module provides the <code>gDownloadLastDir</code> global variable, which contains a string you can use to learn the path of the directory into which the last download occurred. This module handles issues related to private browsing for you.</dd>
+</dl>
+
+<h4 id="Miscellaneous_changes_to_code_modules">Miscellaneous changes to code modules</h4>
+
+<p>The <code>NetUtil.jsm</code> code module now offers the <a href="/en/JavaScript_code_modules/NetUtil.jsm#readInputStreamToString()" title="en/JavaScript/Code modules/NetUtil.jsm#readInputStreamToString()"><code>readInputStreamToString()</code></a> method, which lets you read arbitrary bytes from a stream into a string, even if the stream includes zeroes.</p>
+
+<h3 id="MimeMessage_API">MimeMessage API</h3>
+
+<p>The <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/db/gloda/modules/mimemsg.js#171" title="http://mxr.mozilla.org/comm-central/source/mailnews/db/gloda/modules/mimemsg.js#171"><code>MsgHdrToMimeMessage</code></a> function from <code>Cu.import("<a class="external" rel="freelink">resource:///modules/gloda/mimemsg.js</a>");</code> now returns a <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/db/gloda/modules/mimemsg.js#322" title="http://mxr.mozilla.org/comm-central/source/mailnews/db/gloda/modules/mimemsg.js#322"><code>MimeMessage</code></a> with enhanced properties. This is the recommended way to easily parse a message into a hierarchical MIME tree, and examine it. Should you find that API to be too restrictive, please do <a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=MailNews%20Core&amp;component=Database" title="https://bugzilla.mozilla.org/enter_bug.cgi?product=MailNews Core&amp;component=Database">let us know</a>!</p>
+
+<ol>
+ <li>
+  <p><code>MimeMessageAttachment</code> instances now sport a <code>size</code> property which allows you to conveniently access the size of a message's attachment.</p>
+ </li>
+ <li>
+  <p><code>MimeMessage</code> instances now feature a brand new <code>allUserAttachments</code> property which accurately represents the attachments that will be displayed in the message reader. This is probably what you have in mind when you think "attachments". The <code>allAttachments</code> property doesn't include MIME parts such as attached emails.</p>
+ </li>
+ <li>
+  <p>To speed things up, if the message is stored only on the remote IMAP server, you can add an extra <code>partsOnDemand: true</code> member to the <code>options</code> object that you pass to <code>MsgHdrToMimeMessage</code>, and the backend won't download attachments such as images.</p>
+ </li>
+</ol>
+
+<h3 id="Gloda_API">Gloda API</h3>
+
+<p>Gloda-indexed messages now feature an additional property called <code>attachmentInfos</code>, which allows you to quickly manipulate a given message's attachments without having to re-stream it through <code>MsgHdrToMimeMessage</code>. <code>attachmentInfos</code> is a list of objects whose properties are <code>url, size, contentType, name</code>. Please note as of 5a1, there are no plans to bump the database schema, which means only messages indexed after 5 was installed will have this property. You can force gloda to reindex messages that have an <code>attachmentTypes</code> property, though. <code>GlodaMsgIndexer</code> from <code>Cu.import("<a class="external" rel="freelink">resource:///modules/gloda/index_msg.js</a>")</code> is probably what you need for this.</p>
+
+<h3 id="Backend_changes">Backend changes</h3>
+
+<ul>
+ <li>When streaming a message through <code>DisplayMessage</code>, you can now add an extra <code>&amp;markRead=false</code> parameter to the URI to prevent the backend from marking a message as read when you display it (on IMAP).</li>
+ <li>Thunderbird's tabmail now honors onbeforeunload event handlers. If you're developing something inside a content or a chrome tab, now here's your chance to prevent the tab from being closed.</li>
+ <li>Chrome tabs now can have favicons as well.</li>
+ <li>When opening a content tab, an extra onload arguments allows you to be notified when the tab is done loading.</li>
+ <li>A new "fake header" mechanism has been introduced. Fake headers are inserted after a message has been sent, and serve as placeholder, while autosync fetches the actual header from the remote IMAP server. Their message keys are in the range 2**32 - 128 to 2**32 - 1. They disappear after the real header has come in. This might be surprising for some addons which manipulate message headers, as the message header might become invalid.</li>
+</ul>
+
+<h2 id="XPCOM">XPCOM</h2>
+
+<p>In addition to the specific changes referenced below, it's important to note that there are no longer any frozen interfaces. All interfaces are now unfrozen, regardless of what the documentation may say. We'll update the documentation over time.</p>
+
+<dl>
+ <dt><a href="/en/XPCOM/XPCOM_changes_in_Gecko_2.0" title="en/XPCOM/XPCOM changes in Gecko 2.0">XPCOM changes in Gecko 2.0</a></dt>
+ <dd>Details about changes to XPCOM that impact compatibility in Firefox 4.</dd>
+ <dt><a href="/en/Components.utils.getGlobalForObject" title="en/Components.utils.getGlobalForObject">Components.utils.getGlobalForObject()</a></dt>
+ <dd>This new method returns the global object with which an object is associated; this replaces a common use case of the now-removed <code>__parent__</code>.</dd>
+</dl>
+
+<h2 id="Other_Changes">Other Changes</h2>
+
+<ul>
+ <li>Thunderbird has been changed from building statically, to building libxul style.</li>
+ <li>Thunderbird now supports the out-of-process plugins facilities that Firefox supports.</li>
+ <li>Most of the resources contained within Thunderbird have been combined into a single JAR archive, <code>omni.jar</code>, which improves startup performance by reducing I/O. For details, read <a href="/en/About_omni.jar" rel="internal">About omni.jar</a>.</li>
+ <li>Content tabs now support favicons in the same way that Firefox does.</li>
+ <li>Thunderbird releases are now numbered according to the corresponding Gecko release. See the <a class="external" href="http://groups.google.com/group/tb-planning/browse_thread/thread/521988f37b611174" title="http://groups.google.com/group/tb-planning/browse_thread/thread/521988f37b611174">discussion on the tb-planning list</a> for more information.</li>
+</ul>
+
+<h2 id="More_resources">More resources</h2>
+
+<p>The code name for Thunderbird 5 is 'Miramar'.</p>
+
+<ul>
+ <li><a href="/en/Firefox_5_for_developers" title="en/Firefox 5 for developers">Firefox 5 for developers</a></li>
+ <li><a href="/en/Firefox_4_for_developers" title="en/Firefox 4.0 for developers">Firefox 4 for developers</a></li>
+ <li><a href="/En/Thunderbird_3_for_developers" title="En/Thunderbird 3 for
+    developers">Thunderbird 3.1 for developers</a></li>
+ <li><a class="external" href="http://ccgi.standard8.plus.com/blog/archives/322" title="http://ccgi.standard8.plus.com/blog/archives/322">build details</a></li>
+ <li><a class="link-https" href="https://wiki.mozilla.org/Thunderbird:Testing" title="https://wiki.mozilla.org/Thunderbird:Testing">how to help with testing</a></li>
+</ul>

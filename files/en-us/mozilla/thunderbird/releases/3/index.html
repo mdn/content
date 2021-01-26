@@ -1,0 +1,127 @@
+---
+title: Thunderbird 3 for developers
+slug: Mozilla/Thunderbird/Releases/3
+tags:
+  - thunderbird
+---
+<p><span>This page lists the changes in Thunderbird 3 that are relevant for developers. See <a class="internal" href="/en/Thunderbird_3_for_users" title="en/Thunderbird 3 for users">Thunderbird 3 for users</a> to see a list of changes relevant to end users.</span></p>
+
+<h2 id="Activity_Manager">Activity Manager</h2>
+
+<p>The activity manager is a new way of displaying progress on activities that Thunderbird is doing. It is linked into the status bar so that feedback is shown to the user of the activities in progress. <a class="link-https" href="https://wiki.mozilla.org/Thunderbird:Activity_Manager" title="https://wiki.mozilla.org/Thunderbird:Activity_Manager">Current documentation</a> (reasonably relevant, but may be out of date).</p>
+
+<h2 id="Address_book">Address book</h2>
+
+<h3 id="Updated_interfaces">Updated interfaces</h3>
+
+<p style="text-align: left;"><span><a class="internal" href="/En/Address_Book_Interfaces" title="En/Address Book Interfaces">Various interfaces</a> have been added, dropped or reworked. The main aim of these changes has been to reduce the specialisms to particular address book types, and make the interfaces more generic all round. See also <a class="internal" href="/En/Address_Book_Examples" title="En/Address Book Examples">examples</a> of their use.</span></p>
+
+<h3 id="Menu_popup_widget">Menu popup widget</h3>
+
+<p>There is now a <a class="external" href="http://mxr.mozilla.org/comm-1.9.1/source/mailnews/addrbook/content/addrbookWidgets.xml" title="http://mxr.mozilla.org/comm-1.9.1/source/mailnews/addrbook/content/addrbookWidgets.xml">menupopup binding</a> that will provide you with a list of address books based on a few parameters.</p>
+
+<h2 id="Autocomplete">Autocomplete</h2>
+
+<p>The old <a class="internal" href="/En/XUL/Textbox_(XPFE_autocomplete)" title="en/XUL/textbox (Mozilla autocomplete)">xpfe autocomplete element</a> has now been updated to implement all the attributes and functions of the <a class="internal" href="/En/XUL/Textbox_(Toolkit_autocomplete)" title="En/XUL/Textbox (Firefox autocomplete)">toolkit autocomplete element</a>. This means that extensions can now use the same attributes as the <a class="internal" href="/En/XUL/Textbox_(Toolkit_autocomplete)" title="En/XUL/Textbox (Firefox autocomplete)">toolkit autocomplete element</a> and implement the <a class="internal" href="/en/How_to_implement_custom_autocomplete_search_component" title="en/How to implement custom autocomplete search component">toolkit autocomplete interfaces</a> to generate their own autocomplete mechanisms.</p>
+
+<h3 id="Address_book_autocomplete">Address book autocomplete</h3>
+
+<p>Some of the address book autocomplete functionality has been updated as well. See the <a class="internal" href="/En/Address_Book_Examples#How_do_I.c2.a0set_up_autocomplete_to_use_the_address_book.3f" title="En/Address Book Examples#How do I.c2.a0set up autocomplete to use the address book.3f">examples</a> for how to use the new interfaces.</p>
+
+<h2 id="Content_Browsing">Content Browsing</h2>
+
+<p>Thunderbird 3 has been improved to allow browsing of content within browser elements in the main mail window - alongside the message pane. See the <a href="/en/Thunderbird/Content_Tabs" title="en/Thunderbird/Content Tabs">content tabs</a> page for a detailed background. The significant changes for Thunderbird 3 are:</p>
+
+<ul>
+ <li>The <code>network.protocol-handler.expose.{about,http,https}</code> prefs have been set to true.
+
+  <ul>
+   <li>
+    <div class="warning">This means that any &lt;browser&gt; or &lt;iframe&gt; element will now by default navigate any about:/ http:/ or https: link if the content policy allows it. (Previously, clicking a link would open in the default browser).</div>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <p>Extensions should implement an onclick handlers for &lt;browser&gt; and &lt;iframe&gt; elements. The <a href="/en/Thunderbird/Content_Tabs" title="en/Thunderbird/Content Tabs">content tabs</a> page has some examples.</p>
+ </li>
+</ul>
+
+<h2 id="Cookies">Cookies</h2>
+
+<p>Thunderbird 3 has relaxed the cookie policy. See <a class="internal" href="/en/Thunderbird/Cookies_In_Thunderbird" title="en/Thunderbird/Cookies In Thunderbird">Cookies In Thunderbird</a> for more information.</p>
+
+<h2 id="Error_Reporting_Tools">Error Reporting Tools</h2>
+
+<p>Thunderbird 3 has extra <a href="/en/Extensions/Thunderbird/Error_reporting_tools" title="en/Extensions/Thunderbird/Error reporting tools">error reporting tools</a> available internally and for use by extensions.</p>
+
+<h2 id="Form_fill">Form fill</h2>
+
+<p>The Gecko code to support form fill (known as satchel) has been enabled in Thunderbird 3 builds. This allows fields submitted in forms to be saved and autocompleted later if a user revisits that page. The content tabs in Thunderbird have <a href="http://mxr.mozilla.org/comm-central/source/mail/base/content/specialTabs.xul">an example of how to enable form autocomplete on browser elements</a>, there is also <a class="internal" href="/en/Code_snippets/Autocomplete" title="en/Code snippets/Autocomplete">this code snippet</a>.</p>
+
+<p>Note: this also enables autocomplete to work for username/password forms where there are multiple passwords to be entered.</p>
+
+<h2 id="JavaScript">JavaScript</h2>
+
+<p>Due to various security considerations. Javascript has been disabled completely in message content (the <code>javascript.allow.mailnews</code> preference no longer has any effect). Javascript is enabled for remote content including RSS feeds.</p>
+
+<h2 id="Passwords">Passwords</h2>
+
+<p>Thunderbird 3 has switched to using the <a class="internal" href="/en/XPCOM_Interface_Reference/nsILoginManager" title="En/NsILoginManager">toolkit Password Manager</a>.</p>
+
+<h2 id="Search">Search</h2>
+
+<p>Thunderbird includes a new message indexing and search system (gloda) that improves search performance, provides sophisticated full-text  search capabilities and categorized search results. "Gloda" is short for the Thunderbird "global database". See the <a href="/en/Thunderbird/gloda" title="en/Thunderbird/gloda">gloda</a> page for an overview of gloda concepts and information about the implementation. See <a href="/en-US/docs/Mozilla/Thunderbird/Creating_a_Gloda_message_query">Creating a gloda message query</a> for information about using gloda in extensions. See <a href="/en-US/docs/Mozilla/Thunderbird/Gloda_examples" rel="internal">Gloda examples</a> for some gloda use-cases.</p>
+
+<h2 id="STEEL">STEEL</h2>
+
+<p><a class="internal" href="/en/Toolkit_API/STEEL" title="en/STEEL">STEEL</a> is the <strong>S</strong>criptable <strong>T</strong>hunderbird <strong>E</strong>asy <strong>E</strong>xtension <strong>L</strong>ibrary. It is a <a class="internal" href="/en/Toolkit_API/FUEL" title="en/FUEL">FUEL</a>-like set of interfaces to facilitate Thunderbird extension development.</p>
+
+<h2 id="Tabbed_mail">Tabbed mail</h2>
+
+<p>Thunderbird 3 supports tabs in the main view. Extensions can create new tab types. The current documentation is in <a href="http://mxr.mozilla.org/comm-central/source/mail/base/content/tabmail.xml">tabmail.xml</a> a small example is in <a href="http://mxr.mozilla.org/comm-central/source/mail/base/content/specialTabs.js">specialTabs.js</a> called contentTabType.</p>
+
+<h2 id="Miscellaneous">Miscellaneous</h2>
+
+<ul>
+ <li>Many interfaces have had various changes since Thunderbird 3. Some of these have been to uplift interfaces to use newer methods of passing parameters, if you think that a function you used to use in Thunderbird 2 is now throwing exceptions, try checking it in <a class="external" href="http://mxr.mozilla.org/comm-1.9.1/" title="http://mxr.mozilla.org/comm-1.9.1/">mxr</a>. These are some typical replacements that have been performed in uplifting the code:
+
+  <ul>
+   <li>nsISupportsArray to <a class="internal" href="/en/XPCOM_Interface_Reference/nsIArray" title="En/NsIArray">nsIArray</a> and <a class="internal" href="/en/XPCOM_Interface_Reference/nsIMutableArray" title="En/NsIMutableArray">nsIMutableArray</a></li>
+   <li><a class="internal" href="/en/XPCOM_Interface_Reference/nsIFileSpec" title="En/NsIFileSpec">nsIFileSpec</a> to <a class="internal" href="/en/XPCOM_Interface_Reference/nsIFile" title="En/NsIFile">nsIFile</a> (and <a class="internal" href="/en/nsILocalFile" title="En/NsILocalFile">nsILocalFile</a>)</li>
+   <li>wstring to AString</li>
+   <li>string to ACString or AUTF8String</li>
+  </ul>
+ </li>
+ <li>Various flag sets have been converted from c++ only #defines to constants in idl files, making them accessible from Javascript. The changed files include:
+  <ul>
+   <li><a class="external" href="http://mxr.mozilla.org/comm-1.9.1/source/mailnews/base/public/nsMsgMessageFlags.idl" title="http://mxr.mozilla.org/comm-1.9.1/source/mailnews/base/public/nsMsgMessageFlags.idl">nsMsgMessageFlags.idl</a> (flags used in <code>X-Mozilla-Status</code> header field in messages)</li>
+   <li><a class="external" href="http://mxr.mozilla.org/comm-1.9.1/source/mailnews/base/public/nsMsgFolderFlags.idl" title="http://mxr.mozilla.org/comm-1.9.1/source/mailnews/base/public/nsMsgFolderFlags.idl">nsMsgFolderFlags.idl</a> (flags about a folder or a newsgroup)</li>
+  </ul>
+ </li>
+ <li>The id of the popup you add message pane context options changed from <code>messagePaneContext</code> to <code>mailContext</code>. See also <a href="/en/Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Add_Option_to_Context_Menu" title="en/Extensions/Thunderbird/HowTos/Common Thunderbird Extension Techniques/Add Option to Context Menu">Add Option to Context Menu</a>.</li>
+ <li>gContextMenu.isTextSelected was removed from Thunderbird 3 - see <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=463003" rel="external nofollow" title="https://bugzilla.mozilla.org/show_bug.cgi?id=463003">bug 463003</a> for the replacement code.</li>
+</ul>
+
+<h3 id="Video">Video</h3>
+
+<p>The <a class="internal" href="/En/HTML/Element/Video" title="En/HTML/Element/Video">&lt;video&gt;</a> element has been enabled from Gecko. As JavaScript is disabled in emails, controls will not show, but can be accessed via the right-click menu. For <a class="internal" href="/En/HTML/Element/Video" title="En/HTML/Element/Video">&lt;video&gt;</a> elements in remote content (e.g. RSS feeds viewed as a web page), the controls will show as normal.</p>
+
+<p><a class="internal" href="/En/HTML/Element/Audio" title="En/HTML/Element/Audio">&lt;audio&gt;</a> elements in emails do not work (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=515082" title="Investigate enabling UI to control audio elements in email messages">bug 515082</a>) as the controls require javascript (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=449358" title="FIXED: Add test to confirm that video/audio UI controls function when JavaScript is disabled">bug 449358</a>). The media.autoplay.enabled preference has been turned off by default to avoid annoyances.</p>
+
+<h2 id="More_resources">More resources</h2>
+
+<h3 id="Release_notes_and_announcements">Release notes and announcements</h3>
+
+<p>The release notes that accompany each beta contain detailed information about the changes included in each beta release.</p>
+
+<ul>
+ <li><a class="external" href="http://www.mozillamessaging.com/en-US/thunderbird/3.0rc1/releasenotes/" title="http://www.mozillamessaging.com/en-US/thunderbird/3.0rc1/releasenotes/">Thunderbird 3.0 RC 1 release notes</a></li>
+ <li><a class="external" href="http://www.mozillamessaging.com/en-US/thunderbird/3.0b4/releasenotes/" title="http://www.mozillamessaging.com/en-US/thunderbird/3.0b4/releasenotes/">Thunderbird 3.0 beta 4 release notes</a></li>
+ <li><a class="external" href="http://www.mozillamessaging.com/en-US/thunderbird/3.0b3/releasenotes/" title="http://www.mozillamessaging.com/en-US/thunderbird/3.0b3/releasenotes/">Thunderbird 3.0 beta 3 release notes</a></li>
+ <li><a class="external" href="http://www.mozillamessaging.com/en-US/thunderbird/3.0b2/releasenotes/" title="http://www.mozillamessaging.com/en-US/thunderbird/3.0b2/releasenotes/">Thunderbird 3.0 beta 2 release notes</a></li>
+ <li><a class="external" href="http://www.mozillamessaging.com/en-US/thunderbird/3.0b1/releasenotes/" title="http://www.mozillamessaging.com/en-US/thunderbird/3.0b1/releasenotes/">Thunderbird 3.0 beta 1 release notes</a></li>
+</ul>
+
+<h3 id="MozillaZine">MozillaZine</h3>
+
+<p>There is an article in the MozillaZine knowledge base that summarizes developer-relevant changes and links to the source discussions, specifications and documentation (in Bugzilla, on various blogs and on the Mozilla wiki). See "<a class="external" href="http://kb.mozillazine.org/Thunderbird_3.0_-_New_Features_and_Changes" title="http://kb.mozillazine.org/Thunderbird_3.0_-_New_Features_and_Changes">Thunderbird 3.0 - New Features and </a></p>

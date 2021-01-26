@@ -1,0 +1,51 @@
+---
+title: 'Building a Thunderbird extension 6: Adding JavaScript'
+slug: >-
+  Mozilla/Thunderbird/Thunderbird_extensions/Building_a_Thunderbird_extension_6:_Adding_Javascript
+---
+<p>{{AddonSidebar}}</p>
+
+<p>{{ warning("This content is for older versions of Thunderbird. Much of it may no longer be relevant. See developer.thunderbird.net for newer information.") }}</p>
+
+<p>In this step we will create a small piece of JavaScript code that inserts the current date into our statusbar widget. The statusbar is usually displayed at the bottom of the Thunderbird window. Depending on the installed <a class="external" href="http://addons.mozilla.org/en-US/thunderbird/themes/" title="http://addons.mozilla.org/en-US/thunderbird/themes/">theme</a> the result will look something like this: </p>
+
+<p style="margin-left: 40px;"><a href="/@api/deki/files/5567/=current_date.png" title="current_date.png"><img alt="current_date.png" class="default internal" src="/@api/deki/files/5567/=current_date.png?size=webview" style="height: 25px; width: 102px;"></a></p>
+
+<p><strong>Modify XUL elements with JavaScript</strong></p>
+
+<p>Save the following JavaScript code into the <span class="nowiki"><strong>content/</strong></span> folder next to your <code><strong>myhelloworld.xul</strong></code> file and name it <span class="nowiki"><strong><code>overlay.js</code></strong></span>.</p>
+
+<pre class="brush: js">window.addEventListener("load", function(e) {
+	startup();
+}, false);
+
+window.setInterval(
+	function() {
+		startup();
+	}, 60000); //update date every minute
+
+function startup() {
+	var myPanel = document.getElementById("my-panel");
+	var date = new Date();
+	var day = date.getDay();
+	var dateString = date.getFullYear() + "." + (date.getMonth()+1) + "." + date.getDate();
+	myPanel.label = "Date: " + dateString;
+}</pre>
+
+<p>The first part registers a new event listener that will be executed automatically when Thunderbird loads. The event listener then calls our <code>startup </code>function which gets our <span class="nowiki"><code>&lt;statusbarpanel&gt;</code></span>-element with the id <strong>my-panel</strong> from the document's DOM tree. It then uses JavaScript's <code>Date</code> class to get the current date, which it converts into a string that has the format of <em>YYYY.MM.DD</em>. Because the month is zero-based we also need to add one to the month. Finally the label of our panel is set to "Date: " and concatenated with the date string that contains the formatted date.</p>
+
+<p>We use the function <a href="/en/DOM/window.setInterval" title="https://developer.mozilla.org/en/DOM/window.setInterval"><strong><code>window.setInterval</code></strong></a> to update the date in case Thunderbird is left running for more than one day. This allows us to call the <code>startup</code> function repeatedly with an interval of 60000ms (every minute).</p>
+
+<h3 id="Further_Documentation">Further Documentation</h3>
+
+<p>More functions for the dom objects are listed on:</p>
+
+<ul>
+ <li><strong><a href="/en/DOM/window" title="en/DOM/Window">DOM/Window</a></strong> (API reference for the Window object)</li>
+ <li><strong><a href="/en/DOM/document" title="en/DOM/Document">DOM/Document</a></strong> (API reference for the Document object)</li>
+ <li><strong><a href="/en/Gecko_DOM_Reference" title="https://developer.mozilla.org/en/Gecko_DOM_Reference">Gecko DOM Reference</a></strong> (overview of all DOM objects in Gecko)</li>
+</ul>
+
+<p>You may also find the <strong><a class="external" href="http://www.addedbytes.com/cheat-sheets/javascript-cheat-sheet/" title="http://www.addedbytes.com/cheat-sheets/javascript-cheat-sheet/">Javascript Cheat Sheet</a></strong> very useful.</p>
+
+<p>{{ PreviousNext("Extensions/Thunderbird/Building_a_Thunderbird_extension_5:_XUL", "Extensions/Thunderbird/Building_a_Thunderbird_extension_7:_Installation") }}</p>

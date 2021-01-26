@@ -1,0 +1,325 @@
+---
+title: Thunderbird 24 for developers
+slug: Mozilla/Thunderbird/Releases/24
+---
+<h2 id="Interfaces">Interfaces</h2>
+<h4 id="nsIImportService">nsIImportService</h4>
+<p>CreateRFC822Message: removed argument aBodyLength</p>
+<h4 id="nsIMimeConverter">nsIMimeConverter</h4>
+<p>encodeMimePartIIStr: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=834757" title="https://bugzilla.mozilla.org/show_bug.cgi?id=834757">removed</a></p>
+<h4 id="nsIMimeHeaders">nsIMimeHeaders</h4>
+<p>initialize: removed function argument allHeadersSize</p>
+<h4 id="nsIMsgAccount">nsIMsgAccount</h4>
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=820377" title="https://bugzilla.mozilla.org/show_bug.cgi?id=820377">identities: type changed from nsISupportsArray to nsIArray</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=314806" title="https://bugzilla.mozilla.org/show_bug.cgi?id=314806">setDefaultIdentity: method  now changes identity order permanently</a></li>
+</ul>
+<h4 id="nsIMsgAccountManager">nsIMsgAccountManager</h4>
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=820377" title="https://bugzilla.mozilla.org/show_bug.cgi?id=820377">accounts: type changed from nsISupportsArray to nsIArray</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=820377" title="https://bugzilla.mozilla.org/show_bug.cgi?id=820377">allIdentities: type changed from nsISupportsArray to nsIArray</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=820377" title="https://bugzilla.mozilla.org/show_bug.cgi?id=820377">allServers: type changed from nsISupportsArray to nsIArray</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=820377" title="https://bugzilla.mozilla.org/show_bug.cgi?id=820377">GetIdentitiesForServer: renamed to getIdentitiesForServer and type changed from nsISupportsArray to nsIArray</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=820377" title="https://bugzilla.mozilla.org/show_bug.cgi?id=820377">GetServersForIdentity: renamed to getServersForIdentity and type changed from nsISupportsArray to nsIArray</a></li>
+</ul>
+<h4 id="nsIMsgCompFields">nsIMsgCompFields</h4>
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=68784" title="https://bugzilla.mozilla.org/show_bug.cgi?id=68784">The boolean attribute hasRecipients has been added.</a></li>
+ <li>newshost: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=133605" title="https://bugzilla.mozilla.org/show_bug.cgi?id=133605">removed</a></li>
+</ul>
+<h4 id="nsIMsgFilter">nsIMsgFilter</h4>
+<ul>
+ <li>actionList: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=821743" title="https://bugzilla.mozilla.org/show_bug.cgi?id=821743">removed</a></li>
+ <li>getSortedActionList: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=821253" title="https://bugzilla.mozilla.org/show_bug.cgi?id=821253">changed type</a></li>
+</ul>
+<h4 id="nsIMsgFilterService">nsIMsgFilterService</h4>
+<p>applyFiltersToFolders: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=822131" title="https://bugzilla.mozilla.org/show_bug.cgi?id=822131">changed function argument type</a></p>
+<h4 id="nsIMsgFolder">nsIMsgFolder</h4>
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=882502" title="https://bugzilla.mozilla.org/show_bug.cgi?id=882502">allowsPosting: removed</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=882502" title="https://bugzilla.mozilla.org/show_bug.cgi?id=882502">knowsSearchNntpExtension: removed</a></li>
+ <li>getExpansionArray: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=821236" title="https://bugzilla.mozilla.org/show_bug.cgi?id=821236">removed</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=544621" title="https://bugzilla.mozilla.org/show_bug.cgi?id=544621">clearRequiresCleanup: removed</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=544621" title="https://bugzilla.mozilla.org/show_bug.cgi?id=544621">requiresCleanup: removed</a></li>
+ <li>ListDescendants: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=436089" title="https://bugzilla.mozilla.org/show_bug.cgi?id=436089">function argument type changed from nsISupportsArray to nsIMutableArray</a></li>
+</ul>
+<h4 id="nsIMsgProtocolInfo">nsIMsgProtocolInfo</h4>
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=832034" title="https://bugzilla.mozilla.org/show_bug.cgi?id=832034">The boolean attribute foldersCreateAsync has been added.</a></p>
+<h4 id="nsIMsgSearchAdapter">nsIMsgSearchAdapter</h4>
+<p>CurrentUrlDone: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=801383" title="https://bugzilla.mozilla.org/show_bug.cgi?id=801383">Type of function argument changed</a></p>
+<h4 id="nsIMsgSend">nsIMsgSend</h4>
+<ul>
+ <li>createAndSendMessage: removed argument aBodyLength</li>
+ <li>createRFC822Message: removed argument aBodyLength</li>
+</ul>
+<h4 id="nsISmtpService">nsISmtpService</h4>
+<ul>
+ <li>createSmtpServer:  renamed to createServer</li>
+ <li>deleteSmtpServer: renamed to deleteServer</li>
+ <li>GetSmtpServerByIdentity: renamed to getServerByIdentity</li>
+ <li>smtpServers: renamed to servers</li>
+</ul>
+<h4 id="nsISupportsArray">nsISupportsArray</h4>
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=820377" title="https://bugzilla.mozilla.org/show_bug.cgi?id=820377">EnumerateForwards and EnumerateBackwards: removed</a></li>
+</ul>
+<h4 id="prplIAccount">prplIAccount</h4>
+<p>noNewlines: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=799068" title="https://bugzilla.mozilla.org/show_bug.cgi?id=799068">removed</a></p>
+<h2 id="Global_Functions_and_Objects">Global Functions and Objects</h2>
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=776705" title="https://bugzilla.mozilla.org/show_bug.cgi?id=776705">accountManagerContractID: Removed from accountUtils.js</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=827017" title="https://bugzilla.mozilla.org/show_bug.cgi?id=827017">addEditorClickEventListener: removed from /editor/ui/composer/content/editor.js</a></li>
+ <li>AlertWithTitle: removed from /editor/ui/composer/content/editorUtilities.js, use Services.prompt instead</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=861767" title="https://bugzilla.mozilla.org/show_bug.cgi?id=861767">ArrangeAccountCentralItems: changed in /mailnews/base/prefs/content/AccountWizard.js</a></li>
+ <li>cleanUpHostname|removed from aw-incoming.js</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=839279" title="https://bugzilla.mozilla.org/show_bug.cgi?id=839279">CreateHTTPEquivElement: removed from /editor/ui/dialogs/content/EdDialogCommon.js</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=839279" title="https://bugzilla.mozilla.org/show_bug.cgi?id=839279">CreateHTTPEquivMetaElement: removed from /editor/ui/dialogs/content/EdDialogCommon.js</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=775665" title="https://bugzilla.mozilla.org/show_bug.cgi?id=775665">determineFilterType: removed from FilterEditor.js</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=271730" title="https://bugzilla.mozilla.org/show_bug.cgi?id=271730">disableEditableFields: removed from MsgComposeCommands.js</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=271730" title="https://bugzilla.mozilla.org/show_bug.cgi?id=271730">enableEditableFields: removed from MsgComposeCommands.js</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=807101" title="https://bugzilla.mozilla.org/show_bug.cgi?id=807101">enabling: renamed to LDAPenabling in am-addressing.js</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=252423" title="https://bugzilla.mozilla.org/show_bug.cgi?id=252423">FinishHTMLSource: removed from /editor/ui/composer/content/editor.js</a></li>
+ <li>FocusManager: removed from quickFilterManager.js, use Services.focus instead</li>
+ <li>gAccountManager: removed from /mail/components/compose/content/MsgComposeCommands.js, use MailServices.accounts instead</li>
+ <li>gAccountManager: removed from am-server-advanced.js, use MailServices.accounts instead</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=792979" title="https://bugzilla.mozilla.org/show_bug.cgi?id=792979">gAttachmentNotifier.EditAction(): Removed from MsgComposeCommands.js</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=823009" title="https://bugzilla.mozilla.org/show_bug.cgi?id=823009">gAttachmentNotifier.handleMutations: removed from MsgComposeCommands.js</a></li>
+ <li>GetHTTPEquivMetaElement: removed /editor/ui/dialogs/content/EdDialogCommon.js, use <a href="/en-US/docs/Web/API/document.querySelector" title="/en-US/docs/Web/API/document.querySelector">document.querySelector </a>instead</li>
+ <li>GetWindowByWindowType: removed form mailWindowOverlay.js, use Services.wm.getMostRecentWindow instead</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=861767" title="https://bugzilla.mozilla.org/show_bug.cgi?id=861767">getInterfaceForType: removed from /mailnews/base/prefs/content/AccountWizard.js</a></li>
+ <li>GetIOService: removed from /editor/ui/composer/content/editorUtilities.js, use Services.io instead</li>
+ <li>GetPromptService: removed from /editor/ui/composer/content/ComposerCommands.js, use Services.prompt instead</li>
+ <li>GetLoginManager: removed from /editor/ui/composer/content/publishprefs.js, use Services.logins instead</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=775665" title="https://bugzilla.mozilla.org/show_bug.cgi?id=775665">gFilterContext: removed from FilterEditor.js</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=807101" title="https://bugzilla.mozilla.org/show_bug.cgi?id=807101">gIdentity: removed from am-addressing.js</a></li>
+ <li>gIOService: removed from MsgComposeCommands.js, use Services.io instead</li>
+ <li>gIsOffline: removed from MsgComposeCommands.js, use Services.io.offline instead</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=812921" title="https://bugzilla.mozilla.org/show_bug.cgi?id=812921">gLastPurpleConvId: renamed to gLastPrplConvId in imConversations.js</a></li>
+ <li>gMailSession: removed from /mail/components/compose/content/MsgComposeCommands.js, use MailServices.mailSession instead</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=852690" title="https://bugzilla.mozilla.org/show_bug.cgi?id=852690">gMimeHeaderParser: removed from /mail/components/compose/content/addressingWidgetOverlay.js</a></li>
+ <li>gObserver: removed from am-server.js, use Services.obs instead</li>
+ <li>gPrefBranch: removed from am-junk.js, use Services.prefs instead</li>
+ <li>gPrefBranch: removed form mailWindowOverlay.js, use Services.prefs instead</li>
+ <li>gPrefBranch: removed from am-copies.js, use Services.prefs instead</li>
+ <li>gPrefInt: removed from am-addressing.js, use Services.prefs.getIntPref instead</li>
+ <li>gPrefs: removed from mailnewsMigrator.js, , use Services.prefs instead</li>
+ <li>gPromptService: removed from MsgComposeCommands.js, use Services.prompt instead</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=179033" title="https://bugzilla.mozilla.org/show_bug.cgi?id=179033">gSelectionSummaryStrings.Nmessages: removed from /mailnews/base/public/nsIMsgFolder.idl</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=577775" title="https://bugzilla.mozilla.org/show_bug.cgi?id=577775">gServer: Removed from am-serverwithnoidentities.js</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=80855" title="https://bugzilla.mozilla.org/show_bug.cgi?id=80855">gSmtpHostNameIsIllegal: removed from AccountManager.js</a></li>
+ <li>hasOnlyWhitespaces: removed from /mailnews/addrbook/prefs/content/pref-directory-add.js, use (&lt;string&gt;.trim() == "") instead</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=80855" title="https://bugzilla.mozilla.org/show_bug.cgi?id=80855">hostnameIsIllegal: removed from amUtils.js</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=80855" title="https://bugzilla.mozilla.org/show_bug.cgi?id=80855">hostnameIsIllegal: removed from aw-incoming.js</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=814956" title="https://bugzilla.mozilla.org/show_bug.cgi?id=814956">InitAppEditMessagesMenu: renamed to InitAppFolderViewsMenu in /mail/base/content/mailWindowOverlay.js</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=775105" title="https://bugzilla.mozilla.org/show_bug.cgi?id=775105">initContactList: Removed from chat-messenger-overlay.js</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=799068" title="https://bugzilla.mozilla.org/show_bug.cgi?id=799068">ircChannel.prototype.setMode: Non backwards compatible change to parameters (second parameter changed)</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=839279" title="https://bugzilla.mozilla.org/show_bug.cgi?id=839279">IsEventHandler: removed from /editor/ui/dialogs/content/EdAEJSEAttributes.js</a></li>
+ <li>IsWhitespace: removed from /editor/ui/composer/content/editorUtilities.js, use &lt;string&gt;.trim() == "" instead</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=793599" title="https://bugzilla.mozilla.org/show_bug.cgi?id=793599">KEY_ISP_DIRECTORY_LIST: removed from am-junk.js</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=810680" title="https://bugzilla.mozilla.org/show_bug.cgi?id=810680">kHighestPort: removed from /mailnews/base/prefs/content/accountcreation/emailWizard.js</a></li>
+ <li>nsIWindowMediator: removed from nsMailDefaultHandler.js, use Services.wm instead</li>
+ <li>nsIWindowWatcher: removed from nsMailDefaultHandler.js, use Services.ww instead</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=878604" title="https://bugzilla.mozilla.org/show_bug.cgi?id=878604">onChooseFolder: removed from /mail/base/content/SearchDialog.js</a></li>
+ <li>pref: removed from mailWindow.js, use Services.prefs instead</li>
+ <li>prefs: removed from nsMsgTraitService.js, use Services.prefs instead</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=679696" title="https://bugzilla.mozilla.org/show_bug.cgi?id=679696">queryISupportsArray(supportsArray, iid): Removed from MsgComposeCommands.js</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=878604" title="https://bugzilla.mozilla.org/show_bug.cgi?id=878604">selectFolder: removed from /mail/base/content/SearchDialog.js</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=785980" title="https://bugzilla.mozilla.org/show_bug.cgi?id=785980">SetUpToolbarButtons(uri): Removed from mailWindowOverlay.js</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=795152" title="https://bugzilla.mozilla.org/show_bug.cgi?id=795152">specialTabs.getApplicationUpgradeVersions: removed function argument in specialTabs.js</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=795152" title="https://bugzilla.mozilla.org/show_bug.cgi?id=795152">specialTabs.shouldShowTelemetryNotification: removed function argument in specialTabs.js</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=795152" title="https://bugzilla.mozilla.org/show_bug.cgi?id=795152">specialTabs.showTelemetryNotification: removed function argument in specialTabs.js</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=795152" title="https://bugzilla.mozilla.org/show_bug.cgi?id=795152">specialTabs.shouldShowAboutRightsNotification: removed function argument in specialTabs.js</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=795152" title="https://bugzilla.mozilla.org/show_bug.cgi?id=795152">specialTabs.showAboutRightsNotification: removed function argument in specialTabs.js</a></li>
+ <li>toggleFilter: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=783491" title="https://bugzilla.mozilla.org/show_bug.cgi?id=783491">Removed second function argument</a></li>
+ <li>trim: removed from amUtils.js, use &lt;string&gt;.trim() instead</li>
+ <li>updateInboxAccount: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=389139" title="https://bugzilla.mozilla.org/show_bug.cgi?id=389139">changed</a> in /mailnews/base/prefs/content/am-server-advanced.js</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=725488" title="https://bugzilla.mozilla.org/show_bug.cgi?id=725488">updateMoveTargetMode(aEnable): Removed from am-junk.js</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=725488" title="https://bugzilla.mozilla.org/show_bug.cgi?id=725488">updatePurgeSpam(aEnable): Removed from am-junk.js</a></li>
+ <li>updateSearchFolderPicker: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=878604" title="https://bugzilla.mozilla.org/show_bug.cgi?id=878604">changed</a> in /mail/base/content/SearchDialog.js</li>
+</ul>
+<h2 id="Further_changes">Further changes</h2>
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=327812" title="https://bugzilla.mozilla.org/show_bug.cgi?id=327812">Server name validation for incoming servers has been added</a>: If an add-on created a fake account with an incoming server which does not validate, this can cause issues on re-validation.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=749200" title="https://bugzilla.mozilla.org/show_bug.cgi?id=749200">The sort order of accounts has been defined for new account types changed</a> and centralized. Extensions can also use the allAccountsSorted() function to retrieve this common sort order of the accounts in the profile. In all list widgets the accounts should be shown in this order:
+  <ul>
+   <li><span class="quote">default account</span></li>
+   <li><span class="quote">other mail accounts</span></li>
+   <li><span class="quote">Local Folders</span></li>
+   <li><span class="quote">chat accounts</span></li>
+   <li><span class="quote">feeds</span></li>
+   <li><span class="quote">newsgroups</span></li>
+  </ul>
+ </li>
+ <li>The Local directory used for mail storage <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=750781" title="https://bugzilla.mozilla.org/show_bug.cgi?id=750781">is now checked for validity and safeness</a>. Filesystem directories deemed inappropriate are rejected by the account manager. Extensions can <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=848477" title="https://bugzilla.mozilla.org/show_bug.cgi?id=848477">add theirs own lists of file directories which can (or should not) be used for mail</a> storage by extending the global <span class="difflineplus">gDangerousLocalStorageDirs</span> array in <span class="difflineplus">/mailnews/base/prefs/content/AccountManager.js</span>.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=834911" title="https://bugzilla.mozilla.org/show_bug.cgi?id=834911">Support for nsIEnumerator has been removed /from mailnews/base/util/iteratorUtils.jsm</a></li>
+</ul>
+<h2 id="Platform_changes_and_web_standards_support">Platform changes and web standards support</h2>
+<p>For information about changes to the underlying Gecko platform and changes to the support of web technologies, please read the following information for developers:</p>
+<ul>
+ <li><a href="/en-US/docs/Mozilla/Firefox/Releases/18" title="/en-US/docs/Mozilla/Firefox/Releases/18">Firefox 18 for developers</a></li>
+ <li><a href="/en-US/docs/Mozilla/Firefox/Releases/19" title="/en-US/docs/Mozilla/Firefox/Releases/19">Firefox 19 for developers</a></li>
+ <li><a href="/en-US/docs/Mozilla/Firefox/Releases/20" title="/en-US/docs/Mozilla/Firefox/Releases/20">Firefox 20 for developers</a></li>
+ <li><a href="/en-US/docs/Mozilla/Firefox/Releases/21" title="/en-US/docs/Mozilla/Firefox/Releases/21">Firefox 21 for developers</a></li>
+ <li><a href="/en-US/docs/Mozilla/Firefox/Releases/22" title="/en-US/docs/Mozilla/Firefox/Releases/22">Firefox 22 for developers</a></li>
+ <li><a href="/en-US/docs/Mozilla/Firefox/Releases/23" title="/en-US/docs/Mozilla/Firefox/Releases/23">Firefox 23 for developers</a></li>
+ <li><a href="/en-US/docs/Mozilla/Firefox/Releases/24" title="/en-US/docs/Mozilla/Firefox/Releases/24">Firefox 24 for developers</a></li>
+</ul>
+<h2 id="Strings">Strings</h2>
+<h4 id="advanced.dtd">advanced.dtd</h4>
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=804001" title="https://bugzilla.mozilla.org/show_bug.cgi?id=804001">checkNow.acesskey renamed to checkDefaultsNow.accesskey<br>
+ checkNow.label renamed to checkDefaultsNow.label</a><br>
+ <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=892255" title="https://bugzilla.mozilla.org/show_bug.cgi?id=892255">viewCRLs.label removed<br>
+ viewCRLs.accesskey removed</a></p>
+<h4 id="am-identities-list.dtd">am-identities-list.dtd</h4>
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=314806" title="https://bugzilla.mozilla.org/show_bug.cgi?id=314806">identitiesListDesc.label removed</a></p>
+<h4 id="am-server-advanced.dtd">am-server-advanced.dtd</h4>
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=389139" title="https://bugzilla.mozilla.org/show_bug.cgi?id=389139">globalInbox.label removed<br>
+ globalInbox.accesskey removed</a></p>
+<h4 id="am-smime.properties">am-smime.properties</h4>
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=465351" title="https://bugzilla.mozilla.org/show_bug.cgi?id=465351">ErrorCanNotEncrypt renamed to ErrorEncryptMail</a><br>
+ <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=465351" title="https://bugzilla.mozilla.org/show_bug.cgi?id=465351">ErrorCanNotSign renamed to ErrorCanNotSignMail</a><br>
+ <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=800877" title="https://bugzilla.mozilla.org/show_bug.cgi?id=800877">mime_multipartSignedBlurb removed</a></p>
+<h4 id="composeMsgs.properties">composeMsgs.properties</h4>
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=801383" title="https://bugzilla.mozilla.org/show_bug.cgi?id=801383">12564 removed</a></p>
+<h4 id="display.dtd">display.dtd</h4>
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=845807" title="https://bugzilla.mozilla.org/show_bug.cgi?id=845807">color.label removed<br>
+ color.accesskey removed<br>
+ colors.label removed<br>
+ overrideColors.label removed<br>
+ fontsAndColors.label removed</a></p>
+<h4 id="editorOverlay.dtd">editorOverlay.dtd</h4>
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=813295" title="https://bugzilla.mozilla.org/show_bug.cgi?id=813295">decreaseFontSize.key renamed to decrementFontSize.key<br>
+ decreaseFontSize.key2 renamed to decrementFontSize.key2<br>
+ increaseFontSize.key renamed to incrementFontSize.key<br>
+ increaseFontSize.key2 renamed to incrementFontSize.key2</a></p>
+<h4 id="filter.properties">filter.properties</h4>
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=561762" title="https://bugzilla.mozilla.org/show_bug.cgi?id=561762">searchTermsInvalidMessage renamed to searchTermsInvalidRule</a></p>
+<h4 id="FilterEditor.dtd">FilterEditor.dtd</h4>
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=775665" title="https://bugzilla.mozilla.org/show_bug.cgi?id=775665">contextDesc.accesskey renamed to contextIncomingMail.accesskey<br>
+ contextIncoming.label renamed to contextIncomingMail.label</a><br>
+ <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=775665" title="https://bugzilla.mozilla.org/show_bug.cgi?id=775665">contextBoth.label removed<br>
+ contextPostPlugin.label removed<br>
+ contextPostPluginBoth.label removed</a></p>
+<h4 id="imapMsgs.properites">imapMsgs.properites</h4>
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=448624" title="https://bugzilla.mozilla.org/show_bug.cgi?id=448624">5061 removed</a></p>
+<h4 id="irc.properties">irc.properties</h4>
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=812921" title="https://bugzilla.mozilla.org/show_bug.cgi?id=812921">command.mode removed<br>
+ message.mode removed</a><br>
+ <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=799068" title="https://bugzilla.mozilla.org/show_bug.cgi?id=799068">command.wallops removed</a><br>
+ <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=842183" title="https://bugzilla.mozilla.org/show_bug.cgi?id=842183">command.whois removed</a><br>
+ <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=792046" title="https://bugzilla.mozilla.org/show_bug.cgi?id=792046">connection.error.certError removed</a></p>
+<h4 id="localMsgs.properties">localMsgs.properties</h4>
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=858238" title="https://bugzilla.mozilla.org/show_bug.cgi?id=858238">321 renamed to pop3OutOfDiskSpace<br>
+ 4000 renamed to buildingSummary<br>
+ 4001 renamed to localStatusDocumentDone<br>
+ 4003 renamed to pop3ServerError<br>
+ 4004 renamed to pop3UsernameFailure<br>
+ 4005 renamed to pop3PasswordFailure<br>
+ 4006 renamed to pop3MessageWriteError<br>
+ 4012 renamed to pop3RetrFailure<br>
+ 4013 renamed to pop3PasswordUndefined<br>
+ 4014 renamed to pop3UsernameUndefined<br>
+ 4015 renamed to pop3ListFailure<br>
+ 4016 renamed to pop3DeleFailure<br>
+ 4024 renamed to pop3StatFail<br>
+ 4025 renamed to pop3ServerSaid<br>
+ 4027 renamed to copyingMessagesStatus<br>
+ 4028 renamed to movingMessagesStatus<br>
+ 4029 renamed to pop3MessageFolderBusy<br>
+ 4033 renamed to movemailCantOpenSpoolFile<br>
+ 4034 renamed to movemailCantCreateLock<br>
+ 4035 renamed to movemailCantDeleteLock<br>
+ 4036 renamed to movemailCantTruncateSpoolFile<br>
+ 4037 renamed to movemailSpoolFileNotFound<br>
+ 4038 renamed to pop3TmpDownloadError<br>
+ 4040 renamed to pop3ServerDoesNotSupportUidlEtc<br>
+ 4041 renamed to pop3ServerDoesNotSupportTopCommand<br>
+ 4043 renamed to nsErrorCouldNotConnectViaTls<br>
+ 4044 renamed to pop3MoveFolderToTrash<br>
+ 4045 renamed to pop3DeleteFolderDialogTitle<br>
+ 4046 renamed to pop3DeleteFolderButtonLabel<br>
+ 4047 renamed to pop3AuthInternalError<br>
+ 4048 renamed to pop3AuthChangeEncryptToPlainNoSSL<br>
+ 4049 renamed to pop3AuthChangeEncryptToPlainSSL<br>
+ 4050 renamed to pop3AuthChangePlainToEncrypt<br>
+ 4051 renamed to pop3AuthMechNotSupported<br>
+ 4052 renamed to pop3GssapiFailure</a></p>
+<h4 id="main.properties">main.properties</h4>
+<p>source: /mail/locales/en-US/feedback/main.properties<br>
+ File removed</p>
+<h4 id="messenger.dtd">messenger.dtd</h4>
+<p>moved to viewZoomOverlay.dtd:<br>
+ <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=738194" title="https://bugzilla.mozilla.org/show_bug.cgi?id=738194">fullZoomEnlargeCmd.label<br>
+ fullZoomReduceCmd.label<br>
+ fullZoomResetCmd.label<br>
+ fullZoomToggleCmd.label</a><br>
+ <br>
+ internal:<br>
+ <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=812630" title="https://bugzilla.mozilla.org/show_bug.cgi?id=812630">appmenuButton.tooltip renamed to appmenuButton1.tooltip</a><br>
+ <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=508250" title="https://bugzilla.mozilla.org/show_bug.cgi?id=508250">contextForwardAsAttachment.label renamed to contextMultiForwardAsAttachment.label<br>
+ contextForwardAsAttachment.accesskey renamed to contextMultiForwardAsAttachment.accesskey</a><br>
+ <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=179033" title="https://bugzilla.mozilla.org/show_bug.cgi?id=179033">contextKillSubthreadMenu.accesskey<br>
+ contextWatchThreadMenu.accesskey</a><br>
+ <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=878933" title="https://bugzilla.mozilla.org/show_bug.cgi?id=878933">folderContextOpenNewWindow.label renamed to folderContextOpenInNewWindow.label<br>
+ folderContextOpenNewWindow.accesskey renamed to folderContextOpenInNewWindow.accesskey</a><br>
+ <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=599036" title="https://bugzilla.mozilla.org/show_bug.cgi?id=599036">openFeedMessage.label renamed to openFeedMessage1.label<br>
+ openFeedMessage.accesskey renamed to openFeedMessage1.accesskey</a><br>
+ <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=853135" title="https://bugzilla.mozilla.org/show_bug.cgi?id=853135">openAttachmentCmd.label renamed to openAttachmentListCmd.label<br>
+ openAttachmentCmd.accesskey renamed to openAttachmentListCmd.accesskey</a><br>
+ <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=599036" title="https://bugzilla.mozilla.org/show_bug.cgi?id=599036">openFeedWebPageInWindow.label removed<br>
+ openFeedWebPageInWindow.accesskey removed<br>
+ openFeedSummaryInWindow.label removed<br>
+ openFeedSummaryInWindow.accesskey removed</a></p>
+<h4 id="messenger.properties">messenger.properties</h4>
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=308690" title="https://bugzilla.mozilla.org/show_bug.cgi?id=308690">applyNowButton removed<br>
+ applyToCollapsedAlwaysAskCheckbox removed<br>
+ applyToCollapsedMsgsTitle removed<br>
+ applyToCollapsedMsgs removed</a><br>
+ <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=883485" title="https://bugzilla.mozilla.org/show_bug.cgi?id=883485">confirmMsgDelete.shiftDel.desc renamed to confirmMsgDelete.deleteNoTrash.desc</a><br>
+ <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=595104" title="https://bugzilla.mozilla.org/show_bug.cgi?id=595104">getNextNMessages renamed to getNextNewsMessages</a><br>
+ <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=852461" title="https://bugzilla.mozilla.org/show_bug.cgi?id=852461">growlNotification removed</a><br>
+ <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=595104" title="https://bugzilla.mozilla.org/show_bug.cgi?id=595104">openWindowWarningText renamed to openWindowWarningConfirmation</a></p>
+<h4 id="messengercompose.dtd">messengercompose.dtd</h4>
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=339887" title="https://bugzilla.mozilla.org/show_bug.cgi?id=339887">outputFormatMenu.label renamed to deliveryFormatMenu.label<br>
+ deliveryFormatMenu.accesskey renamed to deliveryFormatMenu.acesskey</a></p>
+<h4 id="msgHdrViewOverlay.dtd">msgHdrViewOverlay.dtd</h4>
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=686427" title="https://bugzilla.mozilla.org/show_bug.cgi?id=686427">bccField3.label renamed to bccField4.label<br>
+ ccField3.label renamed to ccField4.label<br>
+ dateField3.label renamed to dateField4.label<br>
+ followupToField3.label renamed to followupToField4.label<br>
+ fromField3.label renamed to fromField4.label<br>
+ inReplyToField3.label renamed to inReplyToField4.label<br>
+ messageIdField3.label renamed to messageIdField4.label<br>
+ newsgroupsField3.label renamed to newsgroupsField4.label<br>
+ organizationField3.label renamed to organizationField4.label<br>
+ originalWebsite3.label renamed to originalWebsite4.label<br>
+ referencesField3.label renamed to referencesField4.label<br>
+ replyToField3.label renamed to replyToField4.label<br>
+ senderField3.label renamed to senderField4.label<br>
+ subjectField3.label renamed to subjectField4.label<br>
+ tagsHdr3.label renamed to tagsHdr4.label<br>
+ toField3.label renamed to toField4.label<br>
+ userAgentField3.label renamed to userAgentField4.label</a></p>
+<h4 id="multimessageview.properties">multimessageview.properties</h4>
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=179033" title="https://bugzilla.mozilla.org/show_bug.cgi?id=179033">Nmessages removed</a></p>
+<h4 id="preferences.properties">preferences.properties</h4>
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=595723" title="https://bugzilla.mozilla.org/show_bug.cgi?id=595723">alreadyDefaultClientTitle removed<br>
+ alreadyDefault removed</a></p>
+<h4 id="prefs.properties">prefs.properties</h4>
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=734034" title="https://bugzilla.mozilla.org/show_bug.cgi?id=734034">confirmDeferAccount renamed to confirmDeferAccountWarning</a><br>
+ <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=577775" title="https://bugzilla.mozilla.org/show_bug.cgi?id=577775">directoryUsedByOtherAccount renamed to directoryAlreadyUsedByOtherAccount</a><br>
+ <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=327812" title="https://bugzilla.mozilla.org/show_bug.cgi?id=327812">serverNameEmpty removed</a></p>
+<h4 id="sanitize.dtd">sanitize.dtd</h4>
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=807699" title="https://bugzilla.mozilla.org/show_bug.cgi?id=807699">clearDataSettings2.label removed<br>
+ clearTimeDuration.dateColumn removed<br>
+ clearTimeDuration.nameColumn removed<br>
+ column.width removed<br>
+ dataSection.label removed<br>
+ historySection.label removed<br>
+ sanitizePrefs2.title removed<br>
+ sanitizeItems.label removed</a></p>
+<h4 id="SearchDialog.dtd">SearchDialog.dtd</h4>
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=325777" title="https://bugzilla.mozilla.org/show_bug.cgi?id=325777">fileHereMenu.label renamed to moveHereMenu.label<br>
+ fileHereMenu.accesskey renamed to moveHereMenu.accesskey<br>
+ fileButton.label renamed to moveButton.label<br>
+ fileButton.accesskey renamed to moveButton.accesskey</a></p>

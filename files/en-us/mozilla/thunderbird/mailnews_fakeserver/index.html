@@ -1,0 +1,79 @@
+---
+title: MailNews fakeserver
+slug: Mozilla/Thunderbird/MailNews_fakeserver
+tags:
+  - MailNews
+  - SeaMonkey
+  - thunderbird
+---
+<p>Fakeserver is a testing server that implements a generic text-based protocol common to all major mailnews protocols (POP, IMAP, SMTP, and NNTP) designed for use in automated tests. It can also be used in manual QA tests.</p>
+<h2 id="Basic_Structure"><span class="mw-headline"> Basic Structure </span></h2>
+<p>Fakeserver is situated entirely under <code>mailnews/test/fakeserver/</code>. It is comprised of three major components: a daemon, a handler, and the server itself.</p>
+<p>The server itself is found in <code>mailnews/test/fakeserver/maild.js</code> and was largely based off of the httpd fakeserver from network code. It utilizes UTF-8 as its transport mechanism and is capable of performing proper pipelining of commands.</p>
+<p>The other two components are specific to the protocol type and found under similar files in the same directory (e.g., <code>smtpd.js</code>).</p>
+<p>A daemon is information about the server that can be manipulated. An example of such a manipulation is adding a folder or adding messages. Daemons should usually persist for the entirety of the test.</p>
+<p>The handler is the glue between the server and the daemon. This area will be the most diverse of all components, as edge cases with quirky servers being liberal with the specs will require different handlers.</p>
+<h2 id="Writing_a_new_fakeserver"><span class="mw-headline"> Writing a new fakeserver </span></h2>
+<p>Since the number of protocols we use is very small, most people shouldn't have to write an entirely new daemon and handler setup by themselves. That said, someone writing a new test may have to take into account a new handler.</p>
+<p>A handler will contain the following methods:</p>
+<table> <caption> Handler methods </caption> <tbody> <tr> <th>Name</th> <th>Arguments</th> <th>Returns</th> <th>Notes</th> </tr> <tr> <td><code>[command]</code></td> <td>rest of sent line</td> <td>Server's response</td> <td>The name is normalized to be uppercase.</td> </tr> <tr> <td><code>onError </code></td> <td>command, rest of sent line</td> <td>Server's response</td> <td>Called if handler does not define the command function.</td> </tr> <tr> <td><code>onStartup</code></td> <td>none</td> <td>Server's response</td> <td>Called when a connection is made.</td> </tr> <tr> <td><code>onMultiline</code></td> <td>sent line</td> <td>Server's response or nothing</td> <td>Called when in multi-line mode.</td> </tr> <tr> <td><code>postCommand</code></td> <td>Server object</td> <td>none</td> <td>Called after every command.</td> </tr> </tbody>
+</table>
+<p>The server is smart about the responses and will normalize all occurrences of <code>'\n'</code> (but not <code>'\r'</code>) to <code>'\r\n'</code> for you, as well as append the <code>'\r\n'</code> to the response if not present. It will also properly queue all messages sent in pipelining mode and will present lines without any EOL characters. In addition, it uses UTF-8 as the transmission medium.</p>
+<p>The server presents the following API to the handler:</p>
+<table> <caption> Server API </caption> <tbody> <tr> <th>Name</th> <th>Arguments</th> <th>Returns</th> <th>Description</th> </tr> <tr> <td><code>closeSocket</code></td> <td>none</td> <td>nothing</td> <td>Closes the socket and stops the test.</td> </tr> <tr> <td><code>setMultiline</code></td> <td>the new value of multiline</td> <td>nothing</td> <td>The value is a boolean, with true invoking multiline mode. It is off by default.</td> </tr> </tbody>
+</table>
+<p>Extending a handler to provide different mechanisms is a process not defined here; please check the documentation of the corresponding handler for instructions.</p><h2 id="Using_fakeserver_in_xpcshell_tests"><span class="mw-headline"> Using fakeserver in xpcshell tests </span></h2>
+<p>Since there are three different components of fakeserver, a total of four objects need to be set up in a fakeserver test on top of other testing. The outline of a test looks like this:</p>
+<pre class="brush: js">var daemon = <em>setupDaemon</em>(); // <em>Check with your local fakeserver docs</em>
+var handlers = [ /* <em>Some set of handlers</em> */ ];
+
+for (var handler in handlers) {
+  // This sets up the fake server
+  var server = new nsMailServer(new handler(daemon));
+  // Port to use. I tend to like using 1024 + default port number myself.
+  // Probably best to include as a constant somewhere. Also, use something
+  // larger than 1024 for best results.
+  server.start(port);
+
+  // <em>Set up a nsIMsgIncomingServer locally</em>
+  localserver.<em>someActionRequiringConnection</em>();
+  server.performTest();
+  // Nothing will be executed until the connection is closed
+  // localserver.closeCachedConnections() is generally a good way to do so
+  server.resetTest();
+
+  // <em>Set up second test</em>
+  server.performTest();
+  transaction = server.playTransaction();
+
+  // Finished with tests
+  server.stop();
+}
+</pre>
+<p>Currently, fakeserver provides no means to keep a persistent connection past a test, requiring connections to be closed, possibly forcibly. Alternatively, one can wait for the timeout, which occurs after 3 minutes, so not closing connections would make the tests take unbearably long.</p>
+<p>The server provides the following api to xpcshell tests:</p>
+<table> <caption> nsMailServer xpcshell API </caption> <tbody> <tr> <th>Name</th> <th>Arguments</th> <th>Returns</th> <th>Description</th> </tr> <tr> <td><code>performTest</code></td> <td>none</td> <td>nothing</td> <td>Runs until the test is forcibly aborted or stopped normally</td> </tr> <tr> <td><code>isStopped</code></td> <td>none</td> <td>if the server is stopped</td> <td>helper for <code>performTest</code></td> </tr> <tr> <td><code>isTestFinished</code></td> <td>none</td> <td>if the test is finished</td> <td>helper for <code>performTest</code></td> </tr> <tr> <td><code>playTransaction</code></td> <td>none</td> <td>the transaction</td> <td>The transaction is an object with two properties: us, and them; us is an array of responses we sent, them an array of commands received</td> </tr> <tr> <td><code>resetTest</code></td> <td>none</td> <td>nothing</td> <td>prepares the server for the next test without closing the connection</td> </tr> <tr> <td><code>start</code></td> <td>port number</td> <td>nothing</td> <td>Starts the server listening</td> </tr> <tr> <td><code>stop</code></td> <td>none</td> <td>nothing</td> <td>Stops the server and closes the connection</td> </tr> </tbody>
+</table>
+<h2 id="Using_fakeserver_in_QA_testing"><span class="mw-headline"> Using fakeserver in QA testing </span></h2>
+<h2 id="Debug_output_from_fakeservers"><span class="mw-headline"> Debug output from fakeservers </span></h2>
+<p>It is possible to get the fakeservers to dump to the console the commands they have sent and received.</p>
+<p>To enable/disable debugging, call <code>setDebugLevel</code> on your <code>nsMailServer</code> instance with one of the following options:</p>
+<pre>const fsDebugNone = 0;     // Dump nothing
+const fsDebugRecv = 1;     // Dump just the received commands
+const fsDebugRecvSend = 2; // Dump received + sent commands, no data
+const fsDebugAll = 3;      // Dump everything
+</pre>
+<p>Debugging is set to "None" by default.</p>
+<h2 id="Specific_fakeserver_guidelines"><span class="mw-headline"> Specific fakeserver guidelines </span></h2>
+<h3 id="POP"><span class="mw-headline"> POP </span></h3>
+<p> </p>
+<h3 id="IMAP"><span class="mw-headline"> IMAP </span></h3>
+<p> </p>
+<h3 id="SMTP"><span class="mw-headline"> SMTP </span></h3>
+<p> </p>
+<h3 id="NNTP"><span class="mw-headline"> NNTP </span></h3>
+<p><code>nntpd.js</code> defines a few different classes of NNTP servers: compliance for <a class="external" href="http://tools.ietf.org/html/rfc977" title="http://tools.ietf.org/html/rfc977">RFC 977</a>, <a class="external" href="http://tools.ietf.org/html/rfc2980" title="http://tools.ietf.org/html/rfc2980">RFC 2980</a>, and <a class="external" href="http://tools.ietf.org/html/rfc3977" title="http://tools.ietf.org/html/rfc3977">RFC 3977</a>, as well as a Giganews and an INN server. (Full 2980 and 3977 compliance as well as INN is not yet written).</p>
+<p>For xpcshell tests in <code>mailnews/news</code>, all files in <code>mailnews/news/test/postings/auto-add</code> are automatically added based on the Newsgroups header. There are added in alphabetical order, which may help for purposes that rely on article key orders. The only generated header is Lines.</p>
+<p>The following comprises the API of the news fakeserver itself:</p>
+<table> <tbody> <tr> <th colspan="4"><code>nntpDaemon</code> API</th> </tr> <tr> <th>Name</th> <th>Arguments</th> <th>Returns</th> <th>Notes</th> </tr> <tr> <td><code>[constructor] </code></td> <td>daemon flags</td> <td>N/A</td> <td>Flags are defined below</td> </tr> <tr> <td><code>addGroup</code></td> <td>group name (string), is postable</td> <td>nothing</td> <td>Adds the group (resetting if it exists)</td> </tr> <tr> <td><code>addArticle</code></td> <td><code>newsArticle</code> object</td> <td>nothing</td> <td>Adds the message to all groups in the article's group list</td> </tr> <tr> <td><code>addArticleToGroup</code></td> <td><code>newsArticle</code> object, group (string), integral key for group</td> <td>nothing</td> <td>Adds the message to the specified group with the specified key</td> </tr> <tr> <td><code>getGroup</code></td> <td>group name</td> <td>group object</td> <td>Group is a map key-&gt;article, with the additional properties: flags, keys (array of keys), nextKey (next key to use for new articles)</td> </tr> <tr> <td><code>getGroupStats</code></td> <td>group name</td> <td>array of [size, min, max]</td> <td>the size is an estimate if NNTP_REAL_LENGTH is not specified in the daemon flags.</td> </tr> <tr> <td><code>getArticle</code></td> <td>message ID</td> <td><code>newsArticle</code> object</td> <td>Pretty self-explanatory</td> </tr> <tr> <th colspan="4"><code>newsArticle</code> API</th> </tr> <tr> <th>Name</th> <th>Arguments</th> <th>Returns</th> <th>Notes</th> </tr> <tr> <td><code>[constructor] </code></td> <td>text (as a string)</td> <td>N/A</td> <td>initializes all fields</td> </tr> <tr> <td><code>headers</code></td> <td>(property)</td> <td colspan="2">map of header (lower-case) -&gt; value</td> </tr> <tr> <td><code>body</code></td> <td>(property)</td> <td colspan="2">text of body</td> </tr> <tr> <td><code>messageID</code></td> <td>(property)</td> <td colspan="2">message ID</td> </tr> <tr> <td><code>fullText</code></td> <td>(property)</td> <td colspan="2">Full text as message without modification except added headers.</td> </tr> </tbody>
+</table>

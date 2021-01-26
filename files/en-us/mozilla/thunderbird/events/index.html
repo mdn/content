@@ -1,0 +1,136 @@
+---
+title: Events
+slug: Mozilla/Thunderbird/Events
+tags:
+  - Beginner
+  - Guide
+  - events
+  - thunderbird
+---
+<p>There are a lot of events that can be fired in Mail code. Some of these are standard events, such as those created by the DOM. Others are internal to Gecko or other parts of Mozilla application code. This reference will help you track those events down and learn how to use them.</p>
+
+<h4 id="Composition">Composition</h4>
+
+<table class="standard-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <th class="header" style="width: 220px;">Event Name</th>
+   <th class="header" style="width: 90px;">Event Type</th>
+   <th class="header">Fired when...</th>
+  </tr>
+  <tr>
+   <td>compose-send-message</td>
+   <td></td>
+   <td>A message gets sent</td>
+  </tr>
+  <tr>
+   <td>compose-window-close</td>
+   <td></td>
+   <td>A compose window gets closed</td>
+  </tr>
+  <tr>
+   <td>compose-window-init</td>
+   <td></td>
+   <td>A compose window has been opened</td>
+  </tr>
+  <tr>
+   <td>compose-window-reopen</td>
+   <td></td>
+   <td>A cached compose window has been reopened. No load event is fired in this case.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Folders">Folders</h4>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th class="header" style="width: 220px;">Event Name</th>
+   <th class="header" style="width: 90px;">Event Type</th>
+   <th class="header">Fired when...</th>
+  </tr>
+  <tr>
+   <td>MsgCreateDBView</td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>onActiveCreatedView</td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>onActiveMessagesLoaded</td>
+   <td></td>
+   <td>The active messages in the folder have been loaded</td>
+  </tr>
+  <tr>
+   <td>onCreatedView</td>
+   <td></td>
+   <td>A folder view has been created, but not yet shown. If custom column handlers need to do something, this is likely the event you are looking for.</td>
+  </tr>
+  <tr>
+   <td>onDestroyingView</td>
+   <td></td>
+   <td>The current folder view is being destroyed.</td>
+  </tr>
+  <tr>
+   <td>onDisplayingFolder</td>
+   <td></td>
+   <td>A folder gets displayed</td>
+  </tr>
+  <tr>
+   <td>onFolderLoading</td>
+   <td></td>
+   <td>A folder is being loaded</td>
+  </tr>
+  <tr>
+   <td>onLeavingFolder</td>
+   <td></td>
+   <td>A folder is being unloaded, includes deletion</td>
+  </tr>
+  <tr>
+   <td>onLoadingFolder</td>
+   <td></td>
+   <td>A folder is being loaded</td>
+  </tr>
+  <tr>
+   <td>onMakeActive</td>
+   <td></td>
+   <td>A FolderDisplayWidget becomes active</td>
+  </tr>
+  <tr>
+   <td>onMessageCountsChanged</td>
+   <td></td>
+   <td>The counts of the messages changed</td>
+  </tr>
+  <tr>
+   <td>onMessagesLoaded</td>
+   <td></td>
+   <td>The messages in the folder have been loaded</td>
+  </tr>
+  <tr>
+   <td>onMessagesRemovalFailed</td>
+   <td></td>
+   <td>Removing some messages from the current folder failed</td>
+  </tr>
+  <tr>
+   <td>onMessagesRemoved</td>
+   <td></td>
+   <td>Some messages of the current message list have been removed</td>
+  </tr>
+  <tr>
+   <td>onSearching</td>
+   <td></td>
+   <td>A folder view derived from a search is being loaded, e.g. saved searches, virtual folders, a quicksearch</td>
+  </tr>
+  <tr>
+   <td>onSortChanged</td>
+   <td></td>
+   <td>The sort method in the messages list has been changed</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="sect1"></h4>

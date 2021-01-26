@@ -1,0 +1,31 @@
+---
+title: Add Toolbar Button
+slug: >-
+  Mozilla/Thunderbird/Thunderbird_extensions/HowTos/Common_Thunderbird_Extension_Techniques/Add_Toolbar_Button
+---
+<p>{{AddonSidebar}}</p>
+
+<p>Example XUL overlay file:</p>
+
+<pre class="brush: js">&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://demo/skin/overlay.css" type="text/css" ?&gt;
+
+&lt;overlay id="messengerWindow" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+  &lt;script type="application/x-javascript" src="overlay.js" /&gt;
+  &lt;toolbarpalette id="MailToolbarPalette"&gt;
+    &lt;toolbarbutton id="demo-button"
+      class="demo-button toolbarbutton-1"
+      label="Demo"
+      type="button"
+      oncommand="Demo.load();"
+      /&gt;
+  &lt;/toolbarpalette&gt;
+&lt;/overlay&gt;
+</pre>
+
+<p>Add this to the css file you referenced in your xul file:</p>
+
+<pre class="brush: css">#demo-button, [place="palette"] &gt; #demo-button {
+  list-style-image: url("chrome://demo/skin/icon.png") !important;
+}
+</pre>

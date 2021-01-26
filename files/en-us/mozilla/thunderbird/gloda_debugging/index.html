@@ -1,0 +1,108 @@
+---
+title: Gloda debugging
+slug: Mozilla/Thunderbird/Gloda_debugging
+tags:
+  - Guide
+  - Intermediate
+  - thunderbird
+---
+<h3 id="Log4Moz_Explicit_Logging">Log4Moz Explicit Logging</h3>
+
+<p>The gloda code has Log4Moz logging statements spread throughout.  The following preferences are supported to control how this gets logged:</p>
+
+<ul>
+ <li>mailnews.database.global.logging.console - Should warning and error messages be logged to the error console window (accessible via <em>Tools... Error Console</em>)</li>
+ <li>mailnews.database.global.logging.dump - Should all messages be logged to stdout by the dump() command?  This does require that browser.dom.window.dump.enabled is set to true.</li>
+ <li>mailnews.database.global.logging.net - Should we look for a /tmp/chainsaw.ptr file that tells us a hostname and port to connect to to send XML formatted log records to.  The file should be of the form "hostname:port" like "localhost:1234".</li>
+</ul>
+
+<p>Gloda will run faster if only error console logging is enabled; some of the debug-level log statements and their arguments are entirely predicated on the gloda logging level.</p>
+
+<h3 id="SQLite_Query_EXPLAINations">SQLite Query EXPLAINations</h3>
+
+<p>The gloda datastore will write a JSON file with the EXPLAINed results of all its SQL queries to the path found in the preference<em>mailnews.database.global.datastore.explainToPath</em>.  This preference is observed so that setting it during runtime will cause it to create the file and begin explaining all subequently created queries.  Clearing/changing the preference closes out the current file and potentially opens a new one.</p>
+
+<p>Gloda unit tests will automatically set the preference to the value of the environment variable<em> GLODA_DATASTORE_EXPLAIN_TO_PATH</em><span class="Apple-converted-space"> </span>if set.</p>
+
+<p>See the following <a class="external" href="http://www.visophyte.org/blog/2010/04/06/performance-annotated-sqlite-explaination-visualizations-using-systemtap/" title="http://www.visophyte.org/blog/2010/04/06/performance-annotated-sqlite-explaination-visualizations-using-systemtap/">blog post</a> for more information and tools on the subject.</p>
+
+<h3 id="SQLite_Queries_you_can_run_against_the_database">SQLite Queries you can run against the database</h3>
+
+<p>An important thing to know about the gloda database is that because we use a custom tokenizer ("mozporter"), running the SQLite3 command line tool or any other tool against global-messages-db.sqlite will fail to be able to treat the fulltext tables as usable FTS3 tables.  This does not matter for poking and prodding because FTS3 actually uses multiple backing tables under the hood, and we can directly poke at them.  Specifically, in the case of messages, our FTS3 virtual table is named "messagesText" and you won't be able to poke it, but all of its nougaty goodness is stored in "messagesText_content", "messagesText_segdir", and "conversationsText_segments".  The segment tables just store giant BLOBs that are not human readable, but "messagesText_content" has the acutal full text that we care about.</p>
+
+<h4 id="Fulltext_message_size_distribution">Fulltext message size distribution</h4>
+
+<p>The following query will tally the fulltext content size distributions of messages in (rounded-down) kilobytes.  Enter it into the SQLite3 commandline tool against global-messages-db.sqlite.  It will take a bit of time.  Note that <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=543737" title="https://bugzilla.mozilla.org/show_bug.cgi?id=543737">bug 543737</a> will cap the body sizes making this somewhat less interesting.</p>
+
+<p><code>select (length(c0subject) + length(c1body) + length(c2attachmentNames) + length(c3author) + length(c4recipients))/ 1024 as kilos, count(*) from messagesText_content group by kilos;</code></p>
+
+<p>The results will look something like this:</p>
+
+<p>|158<br>
+ 0|74125<br>
+ 1|33622<br>
+ 2|9917<br>
+ 3|5026<br>
+ 4|2126<br>
+ 5|1252<br>
+ 6|862<br>
+ 7|658<br>
+ 8|666<br>
+ 9|566<br>
+ 10|372<br>
+ 11|378<br>
+ 12|326<br>
+ 13|183<br>
+ 14|179<br>
+ 15|124<br>
+ 16|108<br>
+ 17|79<br>
+ 18|64<br>
+ 19|51<br>
+ 20|62<br>
+ 21|34<br>
+ 22|26<br>
+ 23|19<br>
+ 24|26<br>
+ 25|16<br>
+ 26|19<br>
+ 27|7<br>
+ 28|4<br>
+ 29|4<br>
+ 30|13<br>
+ 31|6<br>
+ 32|11<br>
+ 33|7<br>
+ 34|6<br>
+ 35|3<br>
+ 37|3<br>
+ 38|2<br>
+ 40|3<br>
+ 41|6<br>
+ 42|2<br>
+ 43|4<br>
+ 44|4<br>
+ 45|7<br>
+ 46|2<br>
+ 47|1<br>
+ 48|2<br>
+ 49|1<br>
+ 50|1<br>
+ 53|2<br>
+ 58|1<br>
+ 61|1<br>
+ 62|3<br>
+ 63|2<br>
+ 65|2<br>
+ 81|4<br>
+ 83|2<br>
+ 88|2<br>
+ 89|2<br>
+ 96|2<br>
+ 101|2<br>
+ 108|2<br>
+ 109|4<br>
+ 116|2<br>
+ 118|2<br>
+ 254|2<br>
+ 303|2</p>

@@ -1,0 +1,217 @@
+---
+title: Address book sync client design
+slug: Mozilla/Thunderbird/Address_book_sync_client_design
+tags:
+  - Guide
+  - Interface
+  - Intermediate
+  - Mozilla
+  - thunderbird
+---
+<p>{{ outdated("It was imported from mozilla.org and last updated in 2000.") }}<br>
+  </p>
+
+<p><strong><font color="#000000">by Richard H. Pizzarro &lt;<a class="link-mailto" href="mailto:rhp@netscape.com">rhp@netscape.com</a>&gt;</font></strong></p>
+
+<p><strong><font color="#000000"><font size="+2">Contents</font></font></strong></p>
+
+<ul>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/ABSyncClientDesign.html#OVER">Overview</a></li>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/ABSyncClientDesign.html#client">Client Side Sync Logic</a></li>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/ABSyncClientDesign.html#public">Public Interfaces</a></li>
+</ul>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><span id="OVER"><strong><font color="#000000"><font size="+2">Overview</font></font></strong></span></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>There is an component available in the mozilla tree for performing synchronization operations against a server based address book. The general architecture for the sync component is the following:</p>
+
+
+
+
+
+
+
+<table>
+ <tbody>
+  <tr>
+   <td>
+    <table style="height: 100%; width: 100%;">
+     <tbody>
+      <tr>
+       <td>
+        <p>Mozilla UI</p>
+       </td>
+       <td></td>
+      </tr>
+      <tr>
+       <td>
+        <p>AB Sync Logic</p>
+       </td>
+       <td>
+        <p>Mork AB Database</p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>Sync Protocol Encoding</p>
+       </td>
+       <td>
+        <p>Sync Protocol Decoding</p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>HTTP "POST" API</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>Mozilla Networking</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+
+
+
+
+
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><span id="client"><strong><font color="#000000"><font size="+1">Client Side Sync Logic</font></font></strong></span></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The client synchronization logic defers to the server peforming some intelligence in handling duplicate entries for the sync process. The static information that is held on the client for address book sync operations is stored in a file called</p>
+
+<p><strong>absync.dat</strong></p>
+
+<p>which is located in the root directory of the users profile information.</p>
+
+<p><code>//</code><br>
+ <code>// The client keeps a Sync mapping table which holds the following:</code><br>
+ <code>//</code><br>
+ <code>// ServerRecordID   - Unique ID for a record provided by the</code><br>
+ <code>//                    UAB server.</code><br>
+ <code>// LocalRecordID    - Local Unique ID, for mobile devices this</code><br>
+ <code>//                    is assigned by the mobile device.</code><br>
+ <code>// CRC              - CRC of the record last time we synced.</code><br>
+ <code>// Flags            - Operation to apply to this record.  ADD</code><br>
+ <code>//                    if it's new, MOD if it's been modified,</code><br>
+ <code>//                    RET if it was already sent to the server</code><br>
+ <code>//                    but an error occured, etc.</code><br>
+ <code>//</code><br>
+ <code>// Step 1:</code><br>
+ <code>// When the user begins a sync, run through the local database and update the</code><br>
+ <code>// sync mapping table.  If the CRC has changed, mark the entry modified, if</code><br>
+ <code>// it's a new record, add an entry and mark it new, if a record was deleted,</code><br>
+ <code>// mark the entry deleted, etc.</code><br>
+ <code>//</code><br>
+ <code>// Sync approach - server handles all conflict resolution:</code><br>
+ <code>//</code><br>
+ <code>// Step 2:</code><br>
+ <code>// Using the sync mapping table and the local records database, generate the change</code><br>
+ <code>// list to send to the server.  Mark any modified or new record with the RET (retry)</code><br>
+ <code>// flag.</code><br>
+ <code>//</code><br>
+ <code>// Step 3:</code><br>
+ <code>// Get the response back from the server.  Since the communication was successful,</code><br>
+ <code>// clear the RET (retry) flag on all records.  Then apply the server changes back</code><br>
+ <code>// to the local database (updating the CRC's in the process).  Save the changes to</code><br>
+ <code>// the local database, clear the sync mapping table flags and save the new sync</code><br>
+ <code>// mapping table.</code><br>
+ <code>//</code><br>
+  <br>
+  </p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><span id="public"><strong><font color="#000000"><font size="+1">Public Interfaces</font></font></strong></span></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>There is a very simple interface to the address book sync component. This interface is defined in  <a class="external" href="http://lxr.mozilla.org/mozilla/source/mailnews/addrbook/public/nsIAbSyncDriver.idl">mozilla/mailnews/addrbook/public/nsIAbSyncDriver.idl</a></p>
+
+<p><code>#include "nsrootidl.idl"</code><br>
+ <code>#include "nsIAbSyncListener.idl"</code></p>
+
+<p><code>[scriptable, uuid(91FDFEE1-EFBC-11d3-8F97-000073757374)]</code><br>
+ <code>interface nsIAbSyncDriver : nsIAbSyncListener</code><br>
+ <code>{</code><br>
+ <code>    void KickIt();</code><br>
+ <code>};</code></p>
+
+<p>As you can see, this is a very simple interface which allows for the starting of the address book sync operation. The interface of greater interest is the address book sync listener. This provides feedback of the current sync operation. This interface is as follows:</p>
+
+<p><code>#include "nsISupports.idl"</code><br>
+ <code>#include "nsrootidl.idl"</code><br>
+ <code>#include "nsIFileSpec.idl"</code></p>
+
+<p><code>[scriptable, uuid(E0ED29E0-098A-11d4-8FD6-00A024A7D144)]</code><br>
+ <code>interface nsIAbSyncListener : nsISupports {</code></p>
+
+<p><code>    /**</code><br>
+ <code>     * Notify the observer that the AB Sync Authorization operation has begun.</code><br>
+ <code>     *</code><br>
+ <code>     */</code><br>
+ <code>    void OnStartAuthOperation();</code></p>
+
+<p><code>    /**</code><br>
+ <code>     * Notify the observer that the AB Sync operation has been completed.</code><br>
+ <code>     *</code><br>
+ <code>     * This method is called regardless of whether the the operation was</code><br>
+ <code>     * successful.</code><br>
+ <code>     *</code><br>
+ <code>     *  aTransactionID    - the ID for this particular request</code><br>
+ <code>     *  aStatus           - Status code for the sync request</code><br>
+ <code>     *  aMsg              - A text string describing the error (if any).</code><br>
+ <code>     *  aCookie           - hmmm...cooookies!</code><br>
+ <code>     */</code><br>
+ <code>    void OnStopAuthOperation(in nsresult aStatus, in wstring aMsg, in string aCookie);</code></p>
+
+<p><code>    /**</code><br>
+ <code>     * Notify the observer that the AB Sync operation has begun. This method is</code><br>
+ <code>     * called only once, at the beginning of a sync transaction</code><br>
+ <code>     *</code><br>
+ <code>     */</code><br>
+ <code>    void OnStartOperation(in PRInt32 aTransactionID, in PRUint32 aMsgSize);</code></p>
+
+<p><code>    /**</code><br>
+ <code>     * Notify the observer that progress as occurred for the AB Sync operation</code><br>
+ <code>     */</code><br>
+ <code>    void OnProgress(in PRInt32 aTransactionID, in PRUint32 aProgress, in PRUint32 aProgressMax);</code></p>
+
+<p><code>    /**</code><br>
+ <code>     * Notify the observer with a status message for sync operation</code><br>
+ <code>     */</code><br>
+ <code>    void OnStatus(in PRInt32 aTransactionID, in wstring aMsg);</code></p>
+
+<p><code>    /**</code><br>
+ <code>     * Notify the observer that the AB Sync operation has been completed.</code><br>
+ <code>     *</code><br>
+ <code>     * This method is called regardless of whether the the operation was</code><br>
+ <code>     * successful.</code><br>
+ <code>     *</code><br>
+ <code>     *  aTransactionID    - the ID for this particular request</code><br>
+ <code>     *  aStatus           - Status code for the sync request</code><br>
+ <code>     *  aMsg              - A text string describing the error (if any).</code><br>
+ <code>     */</code><br>
+ <code>    void OnStopOperation(in PRInt32 aTransactionID, in nsresult aStatus,</code><br>
+ <code>                         in wstring aMsg);</code><br>
+ <code>};</code></p>

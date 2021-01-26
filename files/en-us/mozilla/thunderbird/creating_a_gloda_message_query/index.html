@@ -1,0 +1,114 @@
+---
+title: Creating a gloda message query
+slug: Mozilla/Thunderbird/Creating_a_Gloda_message_query
+tags:
+  - Thunderbird 3
+  - thunderbird
+---
+<div class="blockIndicator standardNote">
+<p>This content covers features introduced in <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a></p>
+</div>
+
+<p>This page describes how to programmatically create a message query using gloda, Thunderbird's global database. See the <a href="/en/Thunderbird/gloda" title="en/Thunderbird/gloda">gloda</a> page for background on the component. See <a href="/en/Thunderbird/Gloda_examples" title="en/Thunderbird/Gloda examples">Gloda examples</a> for more code samples.</p>
+
+<h3 id="Creating_your_first_message_query...">Creating your first message query...</h3>
+
+<h4 id="Import_gloda">Import gloda</h4>
+
+<p>Gloda's API is exposed in the "<code>Gloda</code>" object that is contributed to your namespace. You can find the file, which includes <a class="external" href="http://www.doxygen.org/" title="http://www.doxygen.org/">doxygen</a> markup of sorts, here: <a class="link-https" href="https://hg.mozilla.org/comm-central/file/tip/mailnews/db/gloda/modules/gloda.js" title="https://hg.mozilla.org/comm-central/file/tip/mailnews/db/gloda/modules/gloda.js">https://hg.mozilla.org/comm-central/file/tip/mailnews/db/gloda/modules/gloda.js</a></p>
+
+<pre class="brush:js;">Components.utils.import("resource:///modules/gloda/public.js");</pre>
+
+<h4 id="Create_the_query">Create the query</h4>
+
+<pre class="brush:js;">let query = Gloda.newQuery(Gloda.NOUN_MESSAGE);</pre>
+
+<h4 id="Add_constraints_to_the_query">Add constraints to the query</h4>
+
+<p>Each constraint function takes one or more arguments which are "OR"ed together.  So if we had a "color" constraint such as <code>query.color("red", "green", "blue")</code> would mean any of red, green, or blue is okay. Constraints are "AND"ed together.  So if we had a "shape" constraint such as <code>query.shape("square")</code> and we combined it with the previous color constraint it would match a red square, a green square, or a blue square.</p>
+
+<ul>
+ <li><code>query.involves(identity1, identity2, ...)</code>: Add the constraint that the message must "involve" one of the identities provided. An identity is involved if the message was to them, from them, or carbon-copied to them.</li>
+ <li><code>gloda.from</code>, <code>gloda.to</code>, <code>gloda.cc</code>: Just like <code>gloda.involves</code>, but specific to from/to/cc.</li>
+ <li><code>gloda.dateRange([lowerDate1, upperDate1], [lowerDate2, upperDate2], ...)</code>: Add the constraint that the message date (per the message's Date header) must fall within one of the specified inclusive ranges. The date instances are JavaScript <code>Date</code> instances.</li>
+ <li><code>query.folder(folder1, folder2, ...)</code>: Add the constraint that the message must be found in one of the specified folders. The folder may be a <code>GlodaFolder</code> instance (retrieved via <code>Gloda.getFolderForFolder</code>, which takes an <code>nsIMsgFolder</code>) or an <code>nsIMsgFolder</code> instance.</li>
+ <li><code>query.conversation(conversation1, conversation2, ...)</code>: Add the constraint that the message must belong to one of the specified conversations. The conversation must be a <code>GlodaConversation</code> instance.  You find these by first finding a message and then accessing its "<code>conversation</code>" attribute.</li>
+ <li><code>query.tags(tag1, tag2, tag3, ...)</code>: Add the constraint that the message must have one of the provided <code>nsIMsgTag</code> tags applied.  (Use <code>nsIMsgTagService</code> to access message tags.)</li>
+ <li><code>query.starred(true/false)</code>: Add the constraint that the message must be (or not be) starred (flagged).</li>
+ <li><code>query.read(true/false)</code>: Add the constraint that the message must be (or not be) marked as read.</li>
+ <li><code>query.bodyMatches(searchString)</code>: Perform a full-text search against plaintext message bodies.</li>
+ <li><code>query.attachmentTypes(mimeType1, mimeType2, ...)</code>: Constrain to messages with attachments among the given mime types. In theory, providing no arguments should result in finding messages with any attachment, but this is somewhat untested.</li>
+ <li>More constraints can be found in the three js files given further below. From <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Thunderbird_extensions/Demo_Addon">https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Thunderbird_extensions/Demo_Addon</a>, Demo3, it seems that the attributeName given in these files is the constraintname to be used (e.g. query.subjectMatches(searchString) for message subject  (compare  <a class="external" href="https://hg.mozilla.org/comm-central/file/tip/mailnews/db/gloda/modules/fundattr.js" title="https://hg.mozilla.org/comm-central/file/tip/mailnews/db/gloda/modules/fundattr.js">fundattr.js</a>  line 145 <a href="comm-central/mailnews/db/gloda/modules/fundattr.js">)</a>.</li>
+</ul>
+
+<h4 id="Create_a_collection_from_the_query">Create a collection from the query</h4>
+
+<p>Your listener is notified as messages are added to the collection as the database query completes. You may also see new messages show up if new messages are indexed that meet the constraints.</p>
+
+<pre class="brush: js">let myListener = {
+  /* called when new items are returned by the database query or freshly indexed */
+  onItemsAdded: function myListener_onItemsAdded(aItems, aCollection) {
+  },
+  /* called when items that are already in our collection get re-indexed */
+  onItemsModified: function myListener_onItemsModified(aItems, aCollection) {
+  },
+  /* called when items that are in our collection are purged from the system */
+  onItemsRemoved: function myListener_onItemsRemoved(aItems, aCollection) {
+  },
+  /* called when our database query completes */
+  onQueryCompleted: function myListener_onQueryCompleted(aCollection) {
+  }
+};
+let collection = query.getCollection(myListener);
+</pre>
+
+<h4 id="Message_attributes">Message attributes</h4>
+
+<p><strong>Look at the pretty messages</strong>!</p>
+
+<p>The max number of messages which are returned is governed by a preference:</p>
+
+<pre><code class="highlighted" id="line-568"><span class="str">"mailnews.database.global.search.msg.limit"</span></code></pre>
+
+<p>Although you can deal with the messages as they show up via the listener, the list of messages in the collection is available in <code>collection.items</code>. Each message is a <code>GlodaMessage</code>, whose database-row attributes are implemented/defined in gloda's <a class="external" href="https://hg.mozilla.org/comm-central/file/tip/mailnews/db/gloda/modules/datamodel.js" title="https://hg.mozilla.org/comm-central/file/tip/mailnews/db/gloda/modules/datamodel.js"><code>datamodel.js</code></a>. However, many attributes are dynamically contributed by built-in logic (<a class="external" href="https://hg.mozilla.org/comm-central/file/tip/mailnews/db/gloda/modules/fundattr.js" title="https://hg.mozilla.org/comm-central/file/tip/mailnews/db/gloda/modules/fundattr.js"><code>fundattr.js</code></a> and <a class="external" href="https://hg.mozilla.org/comm-central/file/tip/mailnews/db/gloda/modules/explattr.js" title="https://hg.mozilla.org/comm-central/file/tip/mailnews/db/gloda/modules/explattr.js"><code>explattr.js</code></a>) as well as other extensions.</p>
+
+<p>The database-row attributes are:</p>
+
+<ul>
+ <li><code>id</code>: The gloda message id. This is a locally unique identifier.</li>
+ <li><code>folder</code>: The folder the message is found in, as represented by a <code>GlodaFolder</code> instance.</li>
+ <li><code>conversation</code>: The conversation the message belongs to, as represented by a <code>GlodaConversation</code> instance.</li>
+</ul>
+
+<p>Somewhat magic attributes:</p>
+
+<ul>
+ <li><code>headerMessageID</code>: The contents of the Message-ID header of the message. You probably should not be using this.</li>
+ <li><code>folderMessage</code>: Return the <code>nsIMsgDBHdr</code> that corresponds to the message. An <code>nsIMsgDBHdr</code> is the low-level, old-school, Thunderbird XPCOM representation of a message. You should not need to use this unless you are dealing with other old-school code or you need to manipulate the state of a message. In the future, the <a href="/en/Toolkit_API/STEEL" title="en/Toolkit API/STEEL">STEEL</a> layer should provide wrappers to make manipulation clean and fun. Note that this message may return "<code>null</code>" if gloda is unable to locate the underlying message anymore.</li>
+</ul>
+
+<p>Attributes provided by <a class="external" href="https://hg.mozilla.org/comm-central/file/tip/mailnews/db/gloda/modules/fundattr.js" title="https://hg.mozilla.org/comm-central/file/tip/mailnews/db/gloda/modules/fundattr.js"><code>fundattr.js</code></a>:</p>
+
+<ul>
+ <li><code>from</code>: A single <code>GlodaIdentity</code> corresponding to the author of the message.</li>
+ <li><code>to</code>: A list of <code>GlodaIdentity</code> instances corresponding to the email addresses found on the To line of the message.</li>
+ <li><code>cc</code>: ditto, but cc.</li>
+ <li><code>involves</code>: A list of all <code>GlodaIdentity</code> instances associated with this message. Effectively, this is the contents of from/to/cc in a single list and with duplicates removed.</li>
+ <li><code>attachmentTypes</code>: A list of the attachment mime types found on this message.</li>
+</ul>
+
+<p>Attributes provided by <a class="external" href="https://hg.mozilla.org/comm-central/file/tip/mailnews/db/gloda/modules/explattr.js" title="https://hg.mozilla.org/comm-central/file/tip/mailnews/db/gloda/modules/explattr.js"><code>explattr.js</code></a>:</p>
+
+<ul>
+ <li><code>tags</code>: A list of the <code>nsIMsgTags</code> applied to this message.</li>
+ <li><code>starred</code>: A boolean indicating whether this message is starred/flagged or not.</li>
+ <li><code>read</code>: A boolean indicating whether this message is read or not.</li>
+</ul>
+
+<h3 id="Want_a_GlodaMessage_when_you_already_have_an_nsIMsgDBHdr">Want a GlodaMessage when you already have an nsIMsgDBHdr?</h3>
+
+<p><code>Gloda.getMessageCollectionForHeader(aMsrHdr, aListener, aData)</code> returns a collection (with your provided listener and data). Keep in mind that gloda is not infallible and it's conceivable that your collection may end up with no messages in it.</p>
+
+<h3 id="Have_a_GlodaMessage_and_want_the_rest_of_the_messages_in_the_conversation">Have a GlodaMessage and want the rest of the messages in the conversation?</h3>
+
+<p><code>glodaMessage.conversation.getMessagesCollection(aListener, aData)</code> returns a collection that should contain all of the messages gloda knows about that belong to the conversation. Keep in mind that duplicate messages can and will appear. (A duplicate message is a message with the same Message-Id header.)</p>

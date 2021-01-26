@@ -1,0 +1,152 @@
+---
+title: Creating a Custom Column
+slug: Mozilla/Thunderbird/Thunderbird_extensions/Creating_a_Custom_Column
+tags:
+  - Add-ons
+  - Extensions
+  - thunderbird
+---
+<div>
+<p>{{AddonSidebar}}</p>
+One of the new and exciting features available to <a href="/en/Extensions/Thunderbird" title="en/Extensions/Thunderbird">Thunderbird Extension</a> developers in Thunderbird 2.0 is the ability to easily create and handle custom columns in Thunderbird's main view.</div>
+
+<div>The following step through will get you well on the road to creating your own columns and populating them with custom data.</div>
+
+<h2 id="Getting_Started" name="Getting_Started">Getting Started</h2>
+
+<p>In this example we will be developing a small extension that will be adding a column that will display the "Reply-To:" field of an email (<strong>if it exists</strong>, it if often not set). If you are unfamiliar with the setup and creation of an extension please read <a class="external" href="/en/docs/Building_a_Thunderbird_extension" title="en/docs/Building_a_Thunderbird_extension">Building a Thunderbird Extension</a>.</p>
+
+<h2 id="Adding_A_Column" name="Adding_A_Column">Adding A Column</h2>
+
+<p>By far the easiest part is the physical addition of the column. For this we overlay <a class="external" href="http://lxr.mozilla.org/seamonkey/source/mail/base/content/messenger.xul">messenger.xul</a>, by placing the following line in our chrome.manifest file:</p>
+
+<pre>overlay chrome://messenger/content/messenger.xul chrome://replyto_col/content/replyto_col_overlay.xul</pre>
+
+<p>Now that our overlay is set up we need to connect a column to the current columns that exist. Looking in <a class="external" href="http://lxr.mozilla.org/seamonkey/source/mail/base/content/messenger.xul#326">messenger.xul</a> reveals that the columns reside inside a <a href="/en/XUL/tree" title="en/XUL/tree">tree</a> with the id "threadTree" whose columns (<a href="/en/XUL/treecols" title="en/XUL/treecols">treecols</a>) reside in "threadCols". To attach our column we add another <a href="/en/XUL/treecol" title="en/XUL/treecol">treecol</a> tag ("colReplyTo") with the settings that we would like to use. Don't forget to add in a <a href="/en/XUL/splitter" title="en/XUL/splitter">splitter</a> before the column to ensure that the user can easily resize and drag our column around.</p>
+
+<p>Our <strong>replyto_col_overlay.xul</strong> should now contain something similar to this:</p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;overlay id="sample"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+  &lt;tree id="threadTree"&gt;
+    &lt;treecols id="threadCols"&gt;
+    &lt;splitter class="tree-splitter" /&gt;
+    &lt;treecol id="colReplyTo" persist="hidden ordinal width"
+           currentView="unthreaded" flex="2"
+           label="Reply-To" tooltiptext="Click to sort by the Reply-To header" /&gt;
+    &lt;/treecols&gt;
+  &lt;/tree&gt;
+
+  &lt;!-- include our javascript file --&gt;
+  &lt;script type="text/javascript" src="chrome://replyto_col/content/replyto_col.js"/&gt;
+&lt;/overlay&gt;
+</pre>
+
+<p>That's it! Our new column exists and is ready to be used. Unfortunately the new column doesn't have any data in it and it doesn't react to sort clicks on it... yet.</p>
+
+<h2 id="The_Column_Handler" name="The_Column_Handler">The Column Handler</h2>
+
+<p>Now that our column physically exists it's time to give it a bit of personality.</p>
+
+<h3 id="The_nsIMsgCustomColumnHandler_Interface" name="The_nsIMsgCustomColumnHandler_Interface">The <a href="/en/XPCOM_Interface_Reference/nsIMsgCustomColumnHandler" title="en/XPCOM_Interface_Reference/nsIMsgCustomColumnHandler">nsIMsgCustomColumnHandler</a> Interface</h3>
+
+<p>To handle a column we need to implement the <a href="/en/XPCOM_Interface_Reference/nsIMsgCustomColumnHandler" title="en/XPCOM_Interface_Reference/nsIMsgCustomColumnHandler">nsIMsgCustomColumnHandler</a> interface which defines the basic set of functionality that must be implemented to handle a column. Note that an object that implements this interface can also take control of an existing, built-in column, but more about that later.</p>
+
+<p><a href="/en/XPCOM_Interface_Reference/nsIMsgCustomColumnHandler" title="en/XPCOM_Interface_Reference/nsIMsgCustomColumnHandler">nsIMsgCustomColumnHandler</a> extends (inherits from) <a href="/en/XPCOM_Interface_Reference/nsITreeView" title="en/XPCOM_Interface_Reference/nsITreeView">nsITreeView</a> and as such needs to implement functions from both. The following is a list of functions that <strong>must</strong> be implemented to ensure that your extension works well with Thunderbird. Rest assured that these functions will be called - so implement them, even with empty function.</p>
+
+<p>From <a href="/en/XPCOM_Interface_Reference/nsITreeView" title="en/XPCOM_Interface_Reference/nsITreeView">nsITreeView</a>:</p>
+
+<ul>
+ <li><strong>getCellProperties(row, col, props)</strong>: optionally modify the props array</li>
+ <li><strong>getRowProperties(row, props)</strong>: optionally modify the props array</li>
+ <li><strong>getImageSrc(row, col)</strong>: return a string (or null)</li>
+ <li><strong>getCellText(row, col)</strong>: return a string representing the actual text to display in the column</li>
+</ul>
+
+<p>From <a href="/en/XPCOM_Interface_Reference/nsIMsgCustomColumnHandler" title="en/XPCOM_Interface_Reference/nsIMsgCustomColumnHandler">nsIMsgCustomColumnHandler</a>:</p>
+
+<ul>
+ <li><strong>getSortStringForRow(hdr)</strong>: return the string value that the column will be sorted by</li>
+ <li><strong>getSortLongForRow(hdr)</strong>: return the long value that the column will be sorted by</li>
+ <li><strong>isString()</strong>: return true / false</li>
+</ul>
+
+<p><strong>Warning!</strong> Do not get confused between GetCellText() and GetSortString/LongForRow()! Though they sound similar you may not want to return the same value from both. GetCellText() is the text that is displayed to the user while GetSort*ForRow() is what is used internally when sorting by your column</p>
+
+<h3 id="A_Simple_Implementation" name="A_Simple_Implementation">A Simple Implementation</h3>
+
+<p>Objects in Javascript are just "advanced" variables, so an implementation of the <a href="/en/XPCOM_Interface_Reference/nsIMsgCustomColumnHandler" title="en/XPCOM_Interface_Reference/nsIMsgCustomColumnHandler">nsIMsgCustomColumnHandler</a> interface looks like:</p>
+
+<pre>var columnHandler = {
+   getCellText:         function(row, col) {
+      //get the message's header so that we can extract the reply to field
+      var hdr = gDBView.getMsgHdrAt(row);
+      return hdr.getStringProperty("replyTo");
+   },
+   getSortStringForRow: function(hdr) {return hdr.getStringProperty("replyTo");},
+   isString:            function() {return true;},
+
+   getCellProperties:   function(row, col, props){},
+   getRowProperties:    function(row, props){},
+   getImageSrc:         function(row, col) {return null;},
+   getSortLongForRow:   function(hdr) {return 0;}
+}
+</pre>
+
+<p>Basically, all we are doing here is making sure that both the text that is displayed to the user (getCellText()) and the string we sort according to (when the user decided to sort the view by our custom column) are identical.</p>
+
+<h2 id="Putting_the_Pieces_together" name="Putting_the_Pieces_together">Putting the Pieces together</h2>
+
+<p>We now have our column and our handler object - it's time to put everything together. For this we use a new function, addColumnHandler that takes a column ID and a handler object. Our implementation will need to call something similar to:</p>
+
+<pre>gDBView.addColumnHandler("colReplyTo", columnHandler);
+
+</pre>
+
+<h3 id="Setting_the_Custom_Column_Handler" name="Setting_the_Custom_Column_Handler">Setting the Custom Column Handler</h3>
+
+<p>We've added a special event that gets fired whenever a view is created. When that event fires, you should set up the custom column handler on the new view.</p>
+
+<pre>window.addEventListener("load", doOnceLoaded, false);
+
+function doOnceLoaded() {
+  var ObserverService = Components.classes["@mozilla.org/observer-service;1"].getService(Components.interfaces.nsIObserverService);
+  ObserverService.addObserver(CreateDbObserver, "MsgCreateDBView", false);
+}
+
+var CreateDbObserver = {
+  // Components.interfaces.nsIObserver
+  observe: function(aMsgFolder, aTopic, aData)
+  {
+     addCustomColumnHandler();
+  }
+}
+</pre>
+
+<p><br>
+ In this example we have a function addCustomColumnHandler() that is called whenever the event is fired. This function is a simple one liner along the lines of:</p>
+
+<pre>function addCustomColumnHandler() {
+   gDBView.addColumnHandler("colReplyTo", columnHandler);
+}
+</pre>
+
+<h2 id="Wrap_Up" name="Wrap_Up">Wrap Up</h2>
+
+<p>As you have seen it is quite easy to add your own custom column handler. Most of the dirty tasks (displaying and sorting) are done for you in the background - so that all that's left to you, the <a href="/en/Extensions/Thunderbird" title="en/Extensions/Thunderbird">Extension</a> developer is to populate the code with your feature.</p>
+
+<p>Don't forget that columns aren't restricted to text - they can also load images (via getImageSrc()) so that your extension can display a new visual cue to the user.</p>
+
+<p>As you develop your custom extension, please revisit this article and add any helpful hints that you find along the way!</p>
+
+<h2 id="Caveats">Caveats</h2>
+
+<p>Some weird behaviors have been witnessed, namely failing to be notified of the MsgCreateDBView event when Enigmail is installed [protz]. What happens is:</p>
+
+<ul>
+ <li>usually, the event sequence is: jsm load -&gt; onload -&gt; MsgCreateDBView</li>
+ <li>with Enigmail, the event sequence becomes jsm load -&gt; MsgCreateDBView -&gt; onload</li>
+</ul>
+
+<p>To workaround this, you can either i) manually run addCustomHandler() at the end of your onload handler or ii) register CreateDbObserver when your .jsm is loaded. Some extensions (e.g. rkent's junquilla) use i).</p>

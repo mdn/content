@@ -1,0 +1,77 @@
+---
+title: libmime content type handlers
+slug: Mozilla/Thunderbird/libmime_content_type_handlers
+---
+<p>{{ outdated("It was imported from mozilla.org and last updated in 2001.") }}<br>
+  </p>
+
+<p><strong><font color="#000000">by Richard H. Pizzarro &lt;<a class="link-mailto" href="mailto:rhp@netscape.com">rhp@netscape.com</a>&gt;</font></strong></p>
+
+<p><strong><font color="#000000"><font size="+1">Contents</font></font></strong></p>
+
+<ul>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/libmime-content-type-handlers.html#OVER">Overview</a></li>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/libmime-content-type-handlers.html#API">API's</a></li>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/libmime-content-type-handlers.html#LOCATION">Plugin Location/Installation</a></li>
+ <li><a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/libmime-content-type-handlers.html#SAMPLE">Sample Content Type Handler Plugin</a></li>
+</ul>
+
+<p><strong><font color="#000000"><font size="+1">Overview</font></font></strong><br>
+ <font color="#000000">The libmime module implements a general-purpose MIME parser and one of the primary methods provided by the parser is the ability to emit an HTML representation of an input stream. The primary use of  libmime is to parse and render RFC822 messages for use by the Messenger component of Seamonkey.</font></p>
+
+<p>A necessary capability of this module is to dynamically add the ability to decode and render various content types. This functionality will be accomplished via Content Type Handler Plugins for libmime. <a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/libmime-description.html">libmime</a> has a homegrown object system written in C, and since the content type handler plugins need to exist in this module, a <a class="external" href="http://mxr.mozilla.org/mozilla-org/source/html/mailnews/arch/libmime-description.html">description of the libmime object system</a> should be reviewed and understood.</p>
+
+<p><strong><font color="#000000"><font size="+1">API's</font></font></strong><br>
+ Content Type Handler Plugins are dynamically loaded and need to access internal pointers, functions that are part of the C based object system. The following XP-COM interface is implemented by libmime and is necessary for Content Type Handler Plugin development.</p>
+
+<p><code>/*</code><br>
+ <code> * This interface is implemented by content type handlers that will be</code><br>
+ <code> * called upon by libmime to process various attachments types. The primary</code><br>
+ <code> * purpose of these handlers will be to represent the attached data in a</code><br>
+ <code> * viewable HTML format that is useful for the user</code><br>
+ <code> *</code><br>
+ <code> * Note: These will all register by their content type prefixed by the</code><br>
+ <code> *       following:  mimecth:text/vcard</code><br>
+ <code> *</code><br>
+ <code> *       libmime will then use nsComponentManager::ContractIDToCLSID() to</code><br>
+ <code> *       locate the appropriate Content Type handler</code><br>
+ <code> */</code><br>
+ <code>#ifndef nsIMimeContentTypeHandler_h_</code><br>
+ <code>#define nsIMimeContentTypeHandler_h_</code></p>
+
+<p><code>typedef struct {</code><br>
+ <code>  PRBool      force_inline_display;</code><br>
+ <code>} contentTypeHandlerInitStruct;</code></p>
+
+<p><code>#include "prtypes.h"</code><br>
+ <code>#include "nsISupports.h"</code><br>
+ <code>#include "mimecth.h"</code></p>
+
+<p><code>// {20DABD99-F8B5-11d2-8EE0-00A024A7D144}</code><br>
+ <code>#define NS_IMIME_CONTENT_TYPE_HANDLER_IID \</code><br>
+ <code>      { 0x20dabd99, 0xf8b5, 0x11d2,   \</code><br>
+ <code>      { 0x8e, 0xe0, 0x0, 0xa0, 0x24, 0xa7, 0xd1, 0x44 } }</code></p>
+
+<p><code>class nsIMimeContentTypeHandler : public nsISupports {</code><br>
+ <code>public:</code><br>
+ <code>  static const nsIID&amp; GetIID() { static nsIID iid = NS_IMIME_CONTENT_TYPE_HANDLER_IID; return iid; }</code></p>
+
+<p><code>  NS_IMETHOD    GetContentType(char **contentType) = 0;</code></p>
+
+<p><code>  NS_IMETHOD    CreateContentTypeHandlerClass(const char *content_type,</code><br>
+ <code>                                              contentTypeHandlerInitStruct *initStruct,</code><br>
+ <code>                                              MimeObjectClass **objClass) = 0;</code><br>
+ <code>};</code></p>
+
+<p><code>#endif /* nsIMimeContentTypeHandler_h_ */</code></p>
+
+<p><strong><font color="#000000"><font size="+1">Plugin Installation/Location</font></font></strong><br>
+ The installation of these modules will be similar to the that of any XPCOM component (i.e. the components directory for the bin directory).</p>
+
+<p><strong><font color="#000000"><font size="+1">Sample Content Type Handler Plugin</font></font></strong><br>
+ To see an example of a Content Type Handler Plugin, the source for the handler of the content type "text/calendar" can be viewed at the following link: <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/mime/cthandlers/calendar/" title="http://mxr.mozilla.org/comm-central/source/mailnews/mime/cthandlers/calendar/">Calendar plugin</a> <em>Note: This plugin simply creates a blue table in the output stream to identify the fact that it is operational, but the basic constructs of what is needed to build a functional content type handler can be seen. The UUID for this component is:</em></p>
+
+<p><code>// {20DABDA1-F8B5-11d2-8EE0-00A024A7D144}</code><br>
+ <code>#define NS_VCARD_CONTENT_TYPE_HANDLER_CID \</code><br>
+ <code>      { 0x20dabda1, 0xf8b5, 0x11d2, \</code><br>
+ <code>      { 0x8e, 0xe0, 0x0, 0xa0, 0x24, 0xa7, 0xd1, 0x44 } }</code></p>

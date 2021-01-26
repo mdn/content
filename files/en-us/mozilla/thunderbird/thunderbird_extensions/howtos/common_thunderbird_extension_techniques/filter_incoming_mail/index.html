@@ -1,0 +1,43 @@
+---
+title: Filter Incoming Mail
+slug: >-
+  Mozilla/Thunderbird/Thunderbird_extensions/HowTos/Common_Thunderbird_Extension_Techniques/Filter_Incoming_Mail
+tags:
+  - filter
+  - incoming
+  - mails
+  - thunderbird
+---
+<p>{{AddonSidebar}}</p>
+
+<h2 id="Filter_Incoming_Mail">Filter Incoming Mail</h2>
+
+<p>To filter incoming mail, the first step is to detect <a href="/en-US/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/Open_Folder#Watch_for_New_Mail" title="/en-US/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/Open_Folder#Watch_for_New_Mail">new messages inconming</a>. The, you've got <code>Components.interfaces.nsIMsgDBHdr</code> from where you can modify the mail. By example, to modify the mail subject :</p>
+
+<pre class="brush: js">var newMailListener = {
+  msgAdded: function(aMsgHdr) {
+    if( !aMsgHdr.isRead ) {
+      // Here we are, a new mail has popped
+      // let get a Javascript string object from the subject property
+      // Querying mime conversion interface
+      var mimeConvert = Components.classes["@mozilla.org/messenger/mimeconverter;1"]
+        .getService(Components.interfaces.nsIMimeConverter);
+      var subject =  mimeConvert.decodeMimeHeader(aMsgHdr.subject, null, false, true);
+      // Here with have a string to modify with Javascript. By example, setting it to lower case
+      subject = subject.toLocaleLowerCase();
+      // Then we rebuild a subject objet by rencoding the string
+      // and assign it to the message headers and we're done
+      aMsgHdr.subject = mimeConvert.encodeMimePartIIStr_UTF8(subject, false, "UTF-8", 0, 72);
+      }
+    }
+  };
+function init() {
+  var notificationService = Components.classes["@mozilla.org/messenger/msgnotificationservice;1"]
+    .getService(Components.interfaces.nsIMsgFolderNotificationService);
+  notificationService.addListener(newMailListener, notificationService.msgAdded);
+  }
+addEventListener("load", init, true);</pre>
+
+<p>Have a look to <a href="/en-US/docs/XPCOM_Interface_Reference/nsIMsgDBHdr" title="/en-US/docs/XPCOM_Interface_Reference/nsIMsgDBHdr">nsIMsgDBHdr</a> to get the full list of properties to be modified.</p>
+
+<p>You can take a look at a working code in the<a href="https://github.com/nfroidure/CapsKiller" title="https://github.com/nfroidure/CapsKiller"> CapsKiller add-on repository</a>.</p>

@@ -1,0 +1,67 @@
+---
+title: Thunderbird Configuration Files
+slug: Mozilla/Thunderbird/Thunderbird_Configuration_Files
+tags:
+  - Config Editor
+  - Configuration Files
+---
+<p>{{ outdated("It was imported from mozilla.org.") }}</p>
+
+<h2 id="Config_Editor"><a name="configeditor">Config Editor</a></h2>
+
+<p>Many of the tips and tricks mentioned on this site can be applied by using the built-in Config Editor. To access the Config Editor, go to <span class="mnu">Tools &gt; Options or do </span><span class="mnu">Thunderbird &gt; Preferences. If you are </span>on Mac OS X, and on Linux do <span class="mnu">Edit &gt; Preferences </span>on, select the Advanced options panel, click on the General tab, and click on <span class="button">Config Editor</span>. This will display a list of used preferences, as well as a search bar at the top.</p>
+
+<p>Double-click on a preference to change its value. To do add a new preference, open the context menu (right-click) on any existing preference, go to the <span class="mnu">New</span> menu, and select the type of preference.</p>
+
+<p class="note">Some preferences may require that you restart Thunderbird in order to take effect.</p>
+
+<h2 id="Configuration_Files">Configuration Files</h2>
+
+<p>Some tips and tricks require that you edit configuration files manually. There are three files you should know about:</p>
+
+<dl>
+ <dt><a class="external" href="http://www.mozilla.org/support/thunderbird/edit#css">userChrome.css</a></dt>
+ <dd>Used to change the appearance of the browser.</dd>
+ <dt><a class="external" href="http://www.mozilla.org/support/thunderbird/edit#content">userContent.css</a></dt>
+ <dd>Used to change the appearance of web pages.</dd>
+ <dt><a class="external" href="http://www.mozilla.org/support/thunderbird/edit#user">user.js</a></dt>
+ <dd>Used to change various preferences.</dd>
+</dl>
+
+<p>All these files are plain text files you need to create in your <a class="external" href="http://www.mozilla.org/support/thunderbird/edit#profile">profile folder</a> and can be edited using a standard text editor, such as Notepad on Windows and gedit or kate on Linux.</p>
+
+<h2 id="Locate_your_profile_folder">Locate your profile folder</h2>
+
+<p>Before the configuration files are presented, you should know how to find your <a class="external" href="http://www.mozilla.org/support/thunderbird/profile">profile folder</a>, which is where Thunderbird saves all your settings on your hard drive.</p>
+
+<ul>
+ <li>On <strong>Windows Vista/XP/2000</strong>, the path is usually <code class="filename"><a class="external" href="http://www.mozilla.org/support/thunderbird/edit#appdata">%AppData%</a>\Thunderbird\Profiles\<var>xxxxxxxx</var>.default\</code>, where <var>xxxxxxxx</var> is a random string of 8 characters. Just browse to <code class="filename">C:\Documents and Settings\<var>[User Name]</var>\Application Data\Thunderbird\Profiles\</code> on Windows XP/2000 or <code class="filename">C:\users\<var>[User Name]</var>\AppData\Roaming\Thunderbird\Profiles\</code> on Windows Vista, and the rest should be obvious.</li>
+ <li>On <strong>Windows 95/98/Me</strong>, the path is usually <code class="filename">C:\WINDOWS\Application Data\Thunderbird\Profiles\<var>xxxxxxxx</var>.default\</code></li>
+ <li>On <strong>Linux</strong>, the path is usually <code class="filename">~/.thunderbird/<var>xxxxxxxx</var>.default/</code></li>
+ <li>On <strong>Mac OS X</strong>, the path is usually <code class="filename">~/Library/Thunderbird/Profiles/<var>xxxxxxxx</var>.default/</code></li>
+</ul>
+
+<p class="note"><a id="appdata"><var>%AppData%</var></a> is a shorthand for the Application Data path on Windows 2000/XP/Vista. To use it, click <span class="mnu">Start &gt; Run...</span> (use the search box on Vista), enter <span class="type">%AppData%</span> and press <code>Enter</code>. You will be taken to the "real" folder, which is normally <code class="filename">C:\Documents and Settings\<var>[User Name]</var>\Application Data</code> on Windows XP/2000, <code class="filename">C:\users\<var>[User Name]</var>\AppData\Roaming</code> on Windows Vista.</p>
+
+<p>Thunderbird is capable of handling more than one user and thus, more than one profile. The path examples above refers to the <em>default</em> profile that is automatically created when you start Thunderbird for the first time. You can manage any number of profiles by using the <a class="external" href="http://www.mozilla.org/support/thunderbird/profile">Profile Manager</a>.</p>
+
+<h2 id="userChrome.css"><a name="css">userChrome.css</a></h2>
+
+<p>This file sets the display rules for various elements in the Thunderbird user interface and is located in the sub-folder called <code class="filename">chrome</code> in your <a class="external" href="http://www.mozilla.org/support/thunderbird/edit#profile">profile folder</a>. This folder <strong>does not exist</strong> by default, so you need to create it before you can start adding your preferences.</p>
+
+<h2 id="userContent.css"><a name="content">userContent.css</a></h2>
+
+<p>This file sets the display rules for web content and is located in the sub-folder called <code class="filename">chrome</code> in your <a class="external" href="http://www.mozilla.org/support/thunderbird/edit#profile">profile folder</a>. As with <a class="external" href="http://www.mozilla.org/support/thunderbird/edit#css">userChrome.css</a>, this folder <strong>does not exist</strong> by default, so you need to create it before you can start adding your preferences.</p>
+
+<h2 id="user.js"><a name="user">user.js</a></h2>
+
+<p>This is the additional preferences file for Thunderbird and is located in your <a class="external" href="http://www.mozilla.org/support/thunderbird/edit#profile">profile folder</a>. The file <strong>does not exist</strong> by default, so you need to create it before you can start adding your preferences. In almost all cases, edits made using the user.js can be done via the <a class="external" href="http://www.mozilla.org/support/thunderbird/edit#configeditor">Config Editor</a>, which is the recommended method.</p>
+
+<p>Windows users: If you know how to create a file, just skip this section. Before you can create the file, you must make sure that you can see the file type extensions in Windows. Start Explorer (just click on the My Computer icon on your desktop) and select <span class="mnu">Tools &gt; Folder Options. </span>Click the View tab and uncheck the Hide extensions for known file types option. Now, go to your profile folder and select <span class="mnu"><span>File</span> &gt; <span>New</span> &gt; <span>Text Document</span></span>. The default name <code class="filename">New Text Document.txt</code> should be displayed. Change the name to <code class="filename">user.js</code> (click <span class="button">Yes</span> on the file type warning that appears).</p>
+
+<p><strong>Linux users:</strong> Use your own preferred method to create user.js in the profile folder. If you don't already have one, consider running the following code in a terminal.</p>
+
+<pre>$ cd $PROFILE    # where $PROFILE is your profile folder
+$ touch user.js  # create the empty JavaScript file</pre>
+
+<p>Alternatively, open a Files window (if you're on Ubuntu. This will depend on which distribution you use), navigate to the profile folder, and right-click in some empty space on the right pane, then select New Document &gt; Empty Document. The default name <code>Untitled Document</code> should appear, with focus on the filename. Enter <code>user.js</code> to change the document's name.</p>

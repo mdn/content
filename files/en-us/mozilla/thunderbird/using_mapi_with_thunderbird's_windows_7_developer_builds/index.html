@@ -1,0 +1,13 @@
+---
+title: Using MAPI with Thunderbird's Windows 7 developer builds
+slug: Mozilla/Thunderbird/Using_MAPI_with_Thunderbird's_Windows_7_developer_builds
+tags:
+  - Thunderbird debug
+  - thunderbird
+---
+<p> MAPI (Messaging Application Programming Interface) is a Windows feature that allows applications to send files via a system's default mail application. The Thunderbird installer sets the installed build as the default mapi/mail client. If you want to set a debug build as the default mail client, you need configure it manually:</p>
+<ol> <li> <p>In the <code>objdir/mozilla/dist/bin</code> directory, copy <code>mozMapi32.dll</code> to <code>mozMapi32_InUse.dll</code> and <code>MapiProxy</code> to <code>MapiProxy_InUse.dll</code>. (Be sure to copy - not move - these files.)</p> </li> <li> <p>In the uninstall sub-directory of the <code>bin</code> directory, run these two commands:</p> </li> <pre>helper.exe /SetAsDefaultAppGlobal
+helper.exe /SetAsDefaultAppUser
+</pre> <li> <p>Create an elevated shell and register the MAPI proxy.dll as a COM server. (One way to create an elevated shell is to invoke the command prompt from the Start menu, right click, and select <strong>Run as Administrator</strong>.) In the elevated shell, change to the <code>objdir/mozilla/dist/bin</code> directory and enter this command:</p> </li>
+</ol>
+<pre>regsvr32 MapiProxy_InUse.dll</pre>

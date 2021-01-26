@@ -1,0 +1,55 @@
+---
+title: Thunderbird 3.1 for developers
+slug: Mozilla/Thunderbird/Releases/3.1
+tags:
+  - thunderbird
+---
+<div class="blockIndicator draft">
+    <p><strong>Draft</strong><br>
+    This page is not complete.</p>
+
+</div>
+<div class="blockIndicator standardNote">
+<p>This content covers features introduced in <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/3.1">Thunderbird 3.1</a></p>
+</div>
+<p><span>This page lists the changes in Thunderbird 3.1 that are relevant for developers. For the time being, please also list user-visible changes. (If there are many of these, we will create a separate page for them.)</span></p>
+<h2 id="Alerts">Alerts</h2>
+<ul>
+  <li>In Thunderbird 3 and earlier, there were modal alerts originating from protocol (e.g. imap/pop3) origins display errors such as "Failed to connect to server xxx".</li>
+  <li>In Thunderbird 3.1 and later these are now displayed in the same area as "new mail" notifications, as notifications and do not require dismissing for Thunderbird to continue functioning. The errors are also echoed to the activity manager for later examination if required.</li>
+</ul>
+<h2 id="Content_Tabs">Content Tabs</h2>
+<ul>
+  <li>Content tabs now support the installation of <a href="/en/Thunderbird/Content_Tabs#Installation_of_add-ons" title="en/Thunderbird/Content Tabs#Installation of add-ons">add-ons from non-whitelisted sites</a> and handle administrator-blocked installation.</li>
+</ul>
+<h2 id="Folders">Folders</h2>
+<ul>
+  <li>Folder tree modes can now express parent relationships and tell us which folder a message belongs to. There is a new interface (expected to be implemented by folder tree modes) called <a class="external" href="http://mxr.mozilla.org/comm-central/source/mail/base/content/folderPane.js#54" title="http://mxr.mozilla.org/comm-central/source/mail/base/content/folderPane.js#54">IFolderTreeMode</a>. However, for extension developers, this change breaks compatibility. Shifting to the new interface from the 3.0 callback is simple -- the callback maps to <code>generateMap</code> directly, and the other functions should be easy enough to define.</li>
+</ul>
+<h2 id="Message_Header">Message Header</h2>
+<ul>
+  <li>The message header toolbar has changed from being hardcoded to being customizable.  Extensions which touch the toolbar may need to adjust how they interact with it.   For details, see the <a class="external" href="http://mxr.mozilla.org/comm-1.9.2/source/mail/base/content/msgHdrViewOverlay.xul#150" title="http://mxr.mozilla.org/comm-1.9.2/source/mail/base/content/msgHdrViewOverlay.xul#150">source for this toolbar</a>, and the <a href="/en/Creating_toolbar_buttons" title="https://developer.mozilla.org/en/Creating_toolbar_buttons">tutorial for customizable toolbar buttons</a>.</li>
+</ul>
+<h2 id="Themes">Themes</h2>
+<p>Thunderbird 3.1 supports <a href="/en/Themes/Lightweight_themes" title="en/Themes/Lightweight themes">lightweight themes</a>; these are easy-to-create themes that simply apply a background to the top (URL bar and button bar) and bottom (status bar) of the main mail windows. This is an integration of the existing <a class="external" href="http://www.getpersonas.com/" rel="external nofollow" title="http://www.getpersonas.com/">Personas</a> theme architecture into Thunderbird.</p>
+<p>Lightweight themes can be installed from <a href="/en/Thunderbird/Content_Tabs" title="en/Thunderbird/Content Tabs">content tabs</a>.</p>
+<h2 id="Attachments">Attachments</h2>
+<ul>
+  <li>A new method <code>detachAttachmentsWOPrompts</code> allows extensions to silently detach attachments to a specific folder, with unique file names created if needed to prevent duplicates.</li>
+</ul>
+<h2 id="Manipulating_message_headers">Manipulating message headers</h2>
+<ul>
+  <li>Extensions can now use the <a class="external" href="http://mxr.mozilla.org/comm-central/source/mail/base/content/mailWindowOverlay.js#1301" title="http://mxr.mozilla.org/comm-central/source/mail/base/content/mailWindowOverlay.js#1301">BatchMessageMover</a> to archive messages. Previously, only the currently selected messages could be archived. Now an extension can silently archive some messages in the background using the standard process instead of determining the right folder and doing the move all by itself. Please note that <code>archiveSelectedMessages</code> has been renamed into <code>archiveMessages</code> to easily check whether this new feature is available.</li>
+</ul>
+<dl>
+</dl>
+<h2 id="More_resources">More resources</h2>
+<p>Thunderbird 3.1 is code-named "<a class="external" href="http://ascher.ca/blog/2009/12/15/a-public-internet-deserves-great-beaches/" title="http://ascher.ca/blog/2009/12/15/a-public-internet-deserves-great-beaches/">Lanikai</a>".</p>
+<ul>
+  <li><a href="/en/Firefox_3.6_for_developers" title="en/Firefox 3.6 for developers">Firefox 3.6 for developers</a> - the non-browser specific changes mentioned here also apply to Thunderbird 3.1.</li>
+  <li><a href="/En/Thunderbird_3_for_developers" title="En/Thunderbird 3 for developers">Thunderbird 3.0 for developers</a> - useful if you're upgrading your add-on from Thunderbird 2.0.</li>
+  <li><a href="/en/Thunderbird_3.2_for_developers" title="en/Thunderbird 3.2 for developers">Thunderbird 3.2 for developers</a> - upcoming changes in the next version you might want to anticipate</li>
+  <li><a class="external" href="http://ccgi.standard8.plus.com/blog/archives/322" title="http://ccgi.standard8.plus.com/blog/archives/322">build details</a></li>
+  <li><a class="link-https" href="https://wiki.mozilla.org/Thunderbird:Testing" title="https://wiki.mozilla.org/Thunderbird:Testing">how to help with testing</a></li>
+</ul>
+<h3 id="Release_notes_and_announcements">Release notes and announcements</h3>

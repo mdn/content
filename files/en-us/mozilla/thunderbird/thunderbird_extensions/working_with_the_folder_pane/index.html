@@ -1,0 +1,197 @@
+---
+title: Working with the Folder Pane
+slug: Mozilla/Thunderbird/Thunderbird_extensions/Working_with_the_Folder_Pane
+tags:
+  - Add-ons
+  - Extensions
+  - thunderbird
+---
+<section class="Quick_links" id="Quick_Links">
+  <ol>
+    <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions"><strong>Browser extensions</strong></a></li>
+    <li class="toggle">
+      <details>
+        <summary>Getting started</summary>
+        <ol>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions">What are extensions?</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension">Your first extension</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension">Your second extension</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">Anatomy of an extension</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples">Example extensions</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next_">What next?</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>Concepts</summary>
+        <ol>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Using_the_JavaScript_APIs">Using the JavaScript APIs</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">Content scripts</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">Match patterns</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_files">Working with files</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization">Internationalization</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Security_best_practices">Security best practices</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Content Security Policy</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">Native messaging</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>User interface</summary>
+        <ol>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface">User Interface</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">Toolbar button</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions">Address bar button</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars">Sidebars</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items">Context menu items</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">Options page</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">Extension pages</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications">Notifications</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox">Address bar suggestions</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels">Developer tools panels</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>How to</summary>
+        <ol>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests">Intercept HTTP requests</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page">Modify a web page</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page">Insert external content</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar">Add a button to the toolbar</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page">Implement a settings page</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API">Work with the Tabs API</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API">Work with the Bookmarks API</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_the_Cookies_API">Work with the Cookies API</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities">Work with contextual identities</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/onboarding_upboarding_offboarding_best_practices">Onboard, upboard, and offboard users</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>Porting</summary>
+        <ol>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Firefox_differentiators">Firefox differentiators</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension">Porting a Google Chrome extension</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on">Porting a legacy Firefox extension</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions">Embedded WebExtensions</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK">Comparison with the Add-on SDK</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_XUL_XPCOM_extensions">Comparison with XUL/XPCOM extensions</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations">Differences between API implementations</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities">Chrome incompatibilities</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Differences_between_desktop_and_Android">Differences between desktop and Android</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>Firefox workflow</summary>
+        <ol>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Development_Tools">Developer tools</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/User_experience_best_practices">User Experience</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">Temporary Installation in Firefox</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Debugging">Debugging</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Testing_persistent_and_restart_features">Testing persistent and restart features</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Firefox_for_Android">Developing for Firefox for Android</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">Getting started with web-ext</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/web-ext_command_reference">web-ext command reference</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID">Extensions and the Add-on ID</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Request_the_right_permissions">Request the right permissions</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>JavaScript APIs</summary>
+        <ol><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">Browser support for JavaScript APIs</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms">alarms</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks">bookmarks</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browserAction</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings">browserSettings</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData">browsingData</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/clipboard">clipboard</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/commands">commands</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contentScripts">contentScripts</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities">contextualIdentities</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies">cookies</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow">devtools.inspectedWindow</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network">devtools.network</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels">devtools.panels</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/dns">dns</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads">downloads</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/events">events</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension">extension</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extensionTypes">extensionTypes</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/find">find</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history">history</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n">i18n</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/identity">identity</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/idle">idle</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management">management</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus">menus</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications">notifications</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox">omnibox</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction">pageAction</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions">permissions</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11">pkcs11</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy">privacy</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy">proxy</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime">runtime</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/search">search</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions">sessions</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction">sidebarAction</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs">tabs</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme">theme</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/topSites">topSites</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types">types</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation">webNavigation</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest">webRequest</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows">windows</a></li></ol>
+      </details>
+    </li>
+
+    <li class="toggle">
+      <details>
+      <summary>Manifest keys</summary>
+      <ol><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author">author</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background">background</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides">chrome_settings_overrides</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides">chrome_url_overrides</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands">commands</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy">content_security_policy</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale">default_locale</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description">description</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer">developer</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page">devtools_page</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url">homepage_url</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/incognito">incognito</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name">name</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/offline_enabled">offline_enabled</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox">omnibox</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions">optional_permissions</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_page">options_page</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers">protocol_handlers</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/short_name">short_name</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebar_action</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme">theme</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version">version</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version_name">version_name</a></li><li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a></li></ol>
+      </details>
+    </li>
+
+    <li><a href="/en-US/docs/Mozilla/Add-ons/Themes"><strong>Themes</strong></a></li>
+    <li class="toggle">
+      <details>
+        <summary>Browser themes</summary>
+        <ol>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/Themes/Theme_concepts">Browser theme concepts</a></li>
+        </ol>
+      </details>
+    </li>
+    <li><a href="/en-US/docs/Mozilla/Add-ons/Distribution"><strong>Publishing and Distribution</strong></a></li>
+    <li class="toggle">
+      <details>
+        <summary>Publishing add-ons</summary>
+        <ol>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/Distribution">Signing and distribution overview</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Package_your_extension_">Package your extension</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on">Submit an add-on</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/Source_Code_Submission">Source code submission</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/Distribution/Resources_for_publishers">Resources for publishers</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/Listing">Creating an appealing listing</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/Distribution/Make_money_from_browser_extensions">Make money from browser extensions</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/Distribution/Promoting_your_extension_or_theme">Promoting your extension or theme</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/AMO/Policy/Reviews">Review policies</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/AMO/Policy/Agreement">Developer agreement</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/AMO/Policy/Featured">Featured add-ons</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/Distribution/Retiring_your_extension">Retiring your extension</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>Distributing add-ons</summary>
+        <ol>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_distribution_options/Sideloading_add-ons">For sideloading</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_distribution_options/Add-ons_for_desktop_apps">For desktop apps</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_distribution_options/Add-ons_in_the_enterprise">For an enterprise</a></li>
+        </ol>
+      </details>
+    </li>
+    <li><a href="https://discourse.mozilla.org/c/add-ons"><strong>Community and Support</strong></a></li>
+    <li class="toggle">
+      <details>
+        <summary>Channels</summary>
+        <ol>
+          <li><a href="https://blog.mozilla.org/addons">Add-ons blog</a></li>
+          <li><a href="https://discourse.mozilla.org/c/add-ons">Add-on forums</a></li>
+          <li><a href="http://stackoverflow.com/questions/tagged/firefox-addon">Stack Overflow</a></li>
+          <li><a href="/en-US/docs/Mozilla/Add-ons/#Contact_us">Contact us</a></li>
+        </ol>
+      </details>
+    </li>
+  </ol>
+</section>
+
+<div class="blockIndicator draft">
+    <p><strong>Draft</strong><br>
+    This page is not complete.</p>
+
+</div>
+
+<div class="blockIndicator standardNote">
+<p>This content covers features introduced in <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a></p>
+</div>
+
+<p>The "Folder Pane" refers to the main navigation element that appears on the left side of the main Thunderbird window. Here, users traditionally find a hierarchical view of their accounts and folders. Beginning in Thunderbird 2, additional views on those folders ("Recent Folders", "Favorite Folders", and "Unread Folders") were added, accessible via the scroll-arrows at the top of the pane.</p>
+
+<p>Thunderbird 3 replaces the architecture underlying the Folder Pane, and the result is dramatically increased abilities for extensions to modify and extend the pane's display. Extension authors are encouraged to experiment with alternative views on the traditional folder view, in an effort to find new ways of presenting the user with the necessary navigation data.</p>
+
+<p>See <a class="internal" href="/en/Thunderbird/Folder_pane_interfaces" title="en/Thunderbird/Folder pane interfaces">Folder Pane interfaces</a> for information on the related APIs.</p>
+
+<p>Check out these tutorials for examples:</p>
+
+<ul>
+ <li><a class="internal" href="/en/Extensions/Thunderbird/Adding_items_to_the_Folder_Pane" title="En/Extensions/Thunderbird/Adding items to the Folder Pane">Adding items to the Folder Pane</a> - Extensions can now append their own items to the navigation panel, even if those items don't correspond to traditional mail folders</li>
+ <li><a class="internal" href="/en/Extensions/Thunderbird/Adding_views_to_the_Folder_Pane" title="En/Extensions/Thunderbird/Adding views to the Folder Pane">Adding views to the Folder Pane</a> - A tutorial on how to add additional views to the navigation pane in addition to the four provided.</li>
+ <li><a class="internal" href="/en/Extensions/Thunderbird/Styling_the_Folder_Pane" title="en/Extensions/Thunderbird/Styling the Folder Pane">Styling the Folder Pane</a> - A reference on the CSS properties that the folder pane provides.</li>
+</ul>

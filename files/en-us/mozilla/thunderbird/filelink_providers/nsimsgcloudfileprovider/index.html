@@ -1,0 +1,321 @@
+---
+title: nsIMsgCloudFileProvider
+slug: Mozilla/Thunderbird/Filelink_Providers/nsIMsgCloudFileProvider
+tags:
+  - Attribute
+  - Intermediate
+  - Landing
+  - Method
+  - thunderbird
+---
+<p>nsIMsgCloudFileProvider is the interface that must be implemented by new <a href="/en/Thunderbird/Filelink_Providers" title="Filelink Providers">Filelink</a> providers.</p>
+
+<p>Inherits from: {{ Interface("nsISupports") }}</p>
+
+<h2 id="Method_overview" name="Method_overview">Method overview</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="/en/Thunderbird/Filelink_Providers/nsIMsgCloudFileProvider#init()" title="nsIMsgCloudFileProvider">init</a>(in string aAccountKey);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="/en/Thunderbird/Filelink_Providers/nsIMsgCloudFileProvider#uploadFile()" title="nsIMsgCloudFileProvider">uploadFile</a>(in nsILocalFile aFile, in nsIRequestObserver aCallback)</code>;</td>
+  </tr>
+  <tr>
+   <td><code>ACString <a href="/en/Thunderbird/Filelink_Providers/nsIMsgCloudFileProvider#urlForFile()" title="nsIMsgCloudFileProvider">urlForFile</a>(in nsILocalFile aFile)</code>;</td>
+  </tr>
+  <tr>
+   <td><code>void <a href="/en/Thunderbird/Filelink_Providers/nsIMsgCloudFileProvider#cancelFileUpload()" title="nsIMsgCloudFileProvider">cancelFileUpload</a>(in nsILocalFile aFile);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="/en/Thunderbird/Filelink_Providers/nsIMsgCloudFileProvider#refreshUserInfo()" title="nsIMsgCloudFileProvider">refreshUserInfo</a>(in boolean aWithUI, in nsIRequestObserver aCallback);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="/en/Thunderbird/Filelink_Providers/nsIMsgCloudFileProvider#deleteFile()" title="nsIMsgCloudFileProvider">deleteFile</a>(in nsILocalFile aFile, in nsIRequestObserver aCallback);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="/en/Thunderbird/Filelink_Providers/nsIMsgCloudFileProvider#createNewAccount()" title="nsIMsgCloudFileProvider">createNewAccount</a>(in ACString aEmailAddress, in ACString aPassword,<br>
+                          in ACString aFirstName, in ACString aLastName,<br>
+                          in nsIRequestObserver aCallback);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="/en/Thunderbird/Filelink_Providers/nsIMsgCloudFileProvider#createExistingAccount()" title="nsIMsgCloudFileProvider">createExistingAccount</a>(in nsIRequestObserver aCallback);</code></td>
+  </tr>
+  <tr>
+   <td><code>ACString <a href="/en/Thunderbird/Filelink_Providers/nsIMsgCloudFileProvider#providerUrlForError()" title="nsIMsgCloudFileProvider">providerUrlForError</a>(in unsigned long aError);</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Attributes" name="Attributes">Attributes</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Attribute</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>type</code></td>
+   <td><code>ACString</code></td>
+   <td><strong>Readonly:</strong> The type is a unique string identifier which can be used by interface elements for styling. As such, the type should be an alphanumpheric string with no spaces.</td>
+  </tr>
+  <tr>
+   <td><code>displayName</code></td>
+   <td><code>ACString</code></td>
+   <td><strong>Readonly:</strong> Used for displaying the service name in the user interface.</td>
+  </tr>
+  <tr>
+   <td><code>serviceURL</code></td>
+   <td><code>ACString</code></td>
+   <td><strong>Readonly:</strong> A link to the homepage of the service, if applicable.</td>
+  </tr>
+  <tr>
+   <td><code>iconClass</code></td>
+   <td><code>ACString</code></td>
+   <td><strong>Readonly:</strong> A chrome URL for an icon to be used for representing the service.</td>
+  </tr>
+  <tr>
+   <td><code>accountKey</code></td>
+   <td><code>ACString</code></td>
+   <td><strong>Readonly:</strong> The unique identifier for the account associated with an instance of an nsIMsgCloudFileProvider.</td>
+  </tr>
+  <tr>
+   <td><code>settingsURL</code></td>
+   <td><code>ACString</code></td>
+   <td><strong>Readonly:</strong> A chrome URL for an XHTML page displayed in the account setup dialog window, used for displaying and setting provider-specific settings. <strong>This URL should not point to external web content.</strong></td>
+  </tr>
+  <tr>
+   <td><code>managementURL</code></td>
+   <td><code>ACString</code></td>
+   <td><strong>Readonly:</strong> A chrome URL for an XHTML page displayed within the Filelink preferences dialog, used for displaying and setting provider-specific settings once the account has already been set up. <strong>This URL should not point to external web content.</strong></td>
+  </tr>
+  <tr>
+   <td><code>fileUploadSizeLimit</code></td>
+   <td><code>long</code></td>
+   <td><strong>Readonly:</strong> The upper size limit in bytes for a file to be uploaded. If this value is not known, returns -1.</td>
+  </tr>
+  <tr>
+   <td><code>remainingFileSpace</code></td>
+   <td><code>long long</code></td>
+   <td><strong>Readonly:</strong> The remaining storage space available for this account in bytes. If this value is not known, returns -1.</td>
+  </tr>
+  <tr>
+   <td><code>fileSpaceUsed</code></td>
+   <td><code>long long</code></td>
+   <td><strong>Readonly:</strong> The total amount of space used by this account. If this value is not known, returns -1.</td>
+  </tr>
+  <tr>
+   <td><code>lastError</code></td>
+   <td><code>ACString</code></td>
+   <td><strong>Readonly:</strong> The last error message received from the server.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Constants" name="Constants">Constants</h2>
+
+<p>The following constants are used for the status codes passed to the onStopRequest functions of the nsIRequestObserver's used by the asynchronous methods of nsIMsgCloudFileProvider.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Constant</td>
+   <td class="header">Value</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>offlineErr</code></td>
+   <td><code>0x80550014</code></td>
+   <td>Returned when it appears that there is no active network connection.</td>
+  </tr>
+  <tr>
+   <td><code>authErr</code></td>
+   <td><code>0x8055001e</code></td>
+   <td>Returned when authorizing has failed.</td>
+  </tr>
+  <tr>
+   <td><code>uploadErr</code></td>
+   <td><code>0x8055311a</code></td>
+   <td>Returned when uploading has failed for an unknown reason.</td>
+  </tr>
+  <tr>
+   <td><code>uploadWouldExceedQuota</code></td>
+   <td><code>0x8055311b</code></td>
+   <td>Returned when uploading has failed because the user has exceeded their storage quota.</td>
+  </tr>
+  <tr>
+   <td><code>uploadExceedsFileLimit</code></td>
+   <td><code>0x8055311c</code></td>
+   <td>Returned when uploading has failed because the file being uploaded is larger than the file size limit.</td>
+  </tr>
+  <tr>
+   <td><code>uploadCanceled</code></td>
+   <td><code>0x8055311d</code></td>
+   <td>Returned when uploading has stopped because it was cancelled by the user.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Methods" name="Methods">Methods</h2>
+
+<h3 id="init">init()</h3>
+
+<p>Initializes an nsIMsgCloudFileProvider to be associated with a particular account.  This should probably be called immediately after instantiation.</p>
+
+<pre class="eval notranslate"><code>void init(in string aAccountKey);</code>
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<h3 id="uploadFile">uploadFile()</h3>
+
+<p>Starts a file upload for this account.</p>
+
+<dl>
+ <dt><code>aAccountKey</code></dt>
+ <dd>The account key that this instance of the nsIMsgCloudFileProvider should be associated with.</dd>
+</dl>
+
+<pre class="eval notranslate"><code>void uploadFile(in nsILocalFile aFile,
+                in nsIRequestObserver aCallback)</code>;
+</pre>
+
+<h6 id="Parameters_2">Parameters</h6>
+
+<dl>
+ <dt><code>aFile</code></dt>
+ <dd>The file to be uploaded.</dd>
+ <dt><code>aCallback</code></dt>
+ <dd>The nsIRequestObserver callback to receive request start and stop notices.</dd>
+</dl>
+
+<h3 id="urlForFile">urlForFile()</h3>
+
+<p>Returns the URL for a file that has been uploaded.</p>
+
+<pre class="eval notranslate"><code>ACString urlForFile(in nsILocalFile aFile)</code>;
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aFile</code></dt>
+ <dd>The previously uploaded file to get the URL for.</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p>The string representation of the URL for the uploaded file. If the file was not uploaded with this instance of the nsIMsgCloudFileProvider, returns undefined.</p>
+
+<h3 id="cancelFileUpload">cancelFileUpload()</h3>
+
+<p>Cancels an upload currently in progress for some nsILocalFile.</p>
+
+<pre class="eval notranslate"><code>void cancelFileUpload(in nsILocalFile aFile)</code>;
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aFile</code></dt>
+ <dd>The nsILocalFile that is currently being uploaded to cancel.</dd>
+</dl>
+
+<h3 id="refreshUserInfo">refreshUserInfo()</h3>
+
+<p>Refreshes the data for this user account - for example, the storage quota, or the amount of storage being used.</p>
+
+<pre class="eval notranslate"><code>void </code><code>refreshUserInfo(in boolean aWithUI,
+                     in nsIRequestObserver aCallback);</code>
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aWithUI</code></dt>
+ <dd>Whether or not the provider should prompt the user for credentails in the event that the stored credentials have gone stale.  If <code>aWithUI</code> is false, and the credentials are stale, the <code>onStopRequest</code> of the <code>aCallback</code> <code>nsIRequestListener</code> will get the <code>authErr</code> status code passed to it.</dd>
+ <dt><code>aCallback</code></dt>
+ <dd>The <code>nsIRequestObserver</code> for monitoring the start and stop states of the refresh operation.</dd>
+</dl>
+
+<h3 id="deleteFile">deleteFile()</h3>
+
+<p>Attempts to delete a file that had previously been uploaded using this instance.</p>
+
+<pre class="eval notranslate"><code>void </code><code>deleteFile(in nsILocalFile aFile,
+                in nsIRequestObserver aCallback);</code>
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aFile</code></dt>
+ <dd>The file that was previously uploaded using this nsIMsgCloudFileProvider instance that should be deleted.</dd>
+ <dt><code>aCallback</code></dt>
+ <dd>The <code>nsIRequestObserver</code> for monitoring the start and stop states of the delete operation.</dd>
+</dl>
+
+<h3 id="createNewAccount">createNewAccount()</h3>
+
+<p>Creates a new user account for the storage provider represented by the nsIMsgCloudFileProvider.</p>
+
+<p><code>{{ Note("This function is not directly called by the Filelink UI. This might change in the future, but as it stands, this function can simply return NS_ERROR_NOT_IMPLEMENTED unless there are plans to call createNewAccount from the management or settings XHTML files.") }}</code></p>
+
+<pre class="eval notranslate"><code>void createNewAccount(in ACString aEmailAddress, in ACString aPassword,
+                      in ACString aFirstName, in ACString aLastName,
+                      in nsIRequestObserver aCallback);</code>
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aEmailAddress</code></dt>
+ <dd>The new user account email address.</dd>
+ <dt><code>aPassword</code></dt>
+ <dd>The desired password for the new account.</dd>
+ <dt><code>aFirstName</code></dt>
+ <dd>The new account holder's first name.</dd>
+ <dt><code>aLastName</code></dt>
+ <dd>The new account holder's last name.</dd>
+ <dt><code>aCallback</code></dt>
+ <dd>The <code>nsIRequestObserver</code> for monitoring the start and stop states of the new account creation operation.</dd>
+</dl>
+
+<h3 id="createExistingAccount">createExistingAccount()</h3>
+
+<p>For an init'ed nsIMsgCloudFileProvider, attempts to communicate with the service provider in order to get the proper credentials for starting uploads.</p>
+
+<pre class="eval notranslate"><code>void </code><code>createExistingAccount(in nsIRequestObserver aCallback);</code>
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aCallback</code></dt>
+ <dd>The <code>nsIRequestObserver</code> for monitoring the start and stop states of the creation operation.</dd>
+</dl>
+
+<h3 id="providerUrlForError">providerUrlForError()</h3>
+
+<p>For an error code, for example <code>uploadWouldExceedQuota</code>, a provider might have a URL with information on how to deal with that error. This function translates those error codes into those URLs.  If the provider has no appropriate URL for the error, the method returns the empty string.</p>
+
+<pre class="eval notranslate"><code>void </code><code>providerUrlForError(</code><code>in unsigned long aError);</code>
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aError</code></dt>
+ <dd>An error code to be translated into a URL.</dd>
+</dl>
+
+<dl>
+ <dt></dt>
+</dl>
+
+<dl>
+ <dt></dt>
+</dl>

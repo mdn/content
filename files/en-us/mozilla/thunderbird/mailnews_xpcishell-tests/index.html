@@ -1,0 +1,111 @@
+---
+title: MailNews xpcshell-tests
+slug: Mozilla/Thunderbird/MailNews_xpcishell-tests
+tags:
+  - Automated testing
+  - Developing Mozilla
+  - MailNews
+  - SeaMonkey
+  - thunderbird
+---
+<div class="blockIndicator draft">
+    <p><strong>Draft</strong><br>
+    This page is not complete.</p>
+
+</div>
+
+<p>MailNews xpcshell-tests are written and run in the same manner as the <a class="internal" href="/en/Writing_xpcshell-based_unit_tests" title="en/Writing xpcshell-based unit tests">core xpcshell-tests</a>. This page describes additional resources and facilities that MailNews has developed to support the xpcshell-tests; see the <a class="internal" href="/en/Writing_xpcshell-based_unit_tests" title="en/Writing xpcshell-based unit tests">core xpcshell-tests</a> page for more information on how to develop these.</p>
+
+<p>To run all xpcshell-test, run the following command in the source directory</p>
+
+<pre><code>./mozilla/mach xpcshell-test</code></pre>
+
+<p>To run a single xpcshell test use (e.g.)</p>
+
+<pre><code>./mozilla/mach xpcshell-test mailnews/news/test/unit/test_server.js</code></pre>
+
+<p>To run all xpcshell tests in a given directory, use (e.g.)</p>
+
+<pre>./mozilla/mach x<code>pcshell-test mailnews/news</code></pre>
+
+<p>For a single test or directory, if it's inside <code>comm-central/mozilla/</code>, then the path should be relative to <code>comm-central/mozilla/</code>, e.g.</p>
+
+<pre>./mozilla/mach xpcshell-test toolkit/components/passwrdmgr</pre>
+
+<h2 id="Review_Requirements_for_new_tests">Review Requirements for new tests</h2>
+
+<p>See <a class="internal" href="/en/Mailnews_and_Mail_code_review_requirements#Unit_test_rules" title="en/Mailnews and Mail code review requirements#Unit test rules">MailNews Review Requirements</a>.</p>
+
+<h2 id="Memory_Leaks">Memory Leaks</h2>
+
+<p>When running the xpcshell-tests or check-one commands, if the test is successful and there are no reference count leaks, it will output:</p>
+
+<pre>TEST-PASS | /Users/moztest/comm/main/tb/mozilla/_tests/xpcshell/test_mailnewsbase/unit/test_nsIMsgFolderListener.js | test passed
+</pre>
+
+<p>If the test is successful, and there are reference count leaks, it will output something similar to:</p>
+
+<pre>TEST-PASS | /Users/moztest/comm/main/tb/mozilla/_tests/xpcshell/test_mailnewsbase/unit/test_nsIMsgFolderListenerLocal.js | test passed
+
+== BloatView: ALL (cumulative) LEAK STATISTICS
+
+     |&lt;----------------Class---------------&gt;|&lt;-----Bytes------&gt;|&lt;----------------Objects----------------&gt;|&lt;--------------References--------------&gt;|
+                                              Per-Inst   Leaked    Total      Rem      Mean       StdDev     Total      Rem      Mean       StdDev
+   0 TOTAL                                          32      300    14949        6 (  155.82 +/-   189.73)    51641        6 (  148.25 +/-   229.91)
+  28 morkObject                                     44      132      481        3 (   54.62 +/-    15.38)     1362        3 (   76.49 +/-    20.87)
+  29 morkRowObject                                  56      168       97        3 (   17.40 +/-     4.96)      127        3 (   17.05 +/-     5.46)
+
+nsTraceRefcntImpl::DumpStatistics: 199 entries
+</pre>
+
+<p>There are some mailnews tests which are currently known to leak, these are covered by the tracking bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=498147" title="MailNews xpcshell-tests leak tracking bug.">bug 498147</a> and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=438922" title="FIXED: Ensure that mailnews unit tests shutdown observers gracefully">bug 438922</a>. The general policy is that new tests shouldn't leak, unless covered by existing bugs. If new tests really need to land with leaks, then they must have bugs covering the leak.</p>
+
+<h2 id="Test_Startup_and_Profile_Details">Test Startup and Profile Details</h2>
+
+<p>All MailNews xpcshell-test directories have a head_*.js file that imports <a href="http://mxr.mozilla.org/comm-central/source/mailnews/test/resources/mailDirService.js">mailDirService.js</a>. This file:</p>
+
+<ul>
+ <li>Will remove any existing files in the directory <code>&lt;objdir&gt;/mozilla/_tests/mailtest</code>.</li>
+ <li>Will set up an <a class="internal" href="/en/nsIDirectoryServiceProvider" title="en/nsIDirectoryServiceProvider"><code>nsIDirectoryServiceProvider</code></a> which will register <code>&lt;objdir&gt;/mozilla/_tests/mailtest </code>as the profile directory to use for each xpcshell-tests.</li>
+ <li>Provides a <code>gProfileDir</code> global variable that contains a <a class="internal" href="/en/nsIFile" title="en/nsIFile"><code>nsIFile</code></a> set up to point at <code>&lt;objdir&gt;/mozilla/_tests/mailtest</code>.</li>
+</ul>
+
+<h2 id="Test_Shutdown">Test Shutdown</h2>
+
+<p>All MailNews xpcshell-tests <code>head_*.js</code> files should have a <code>do_register_cleanup</code> section that loads <code><a href="http://mxr.mozilla.org/comm-central/source/mailnews/test/resources/mailShutdown.js">mailShutdown.js</a></code>. This is done so that mailnews is shutdown correctly at the end of the unit tests which in turn ensures representative leak logs. The shutdown sequence is as follows:</p>
+
+<ol>
+ <li>Do a cycle collection to clean up any js objects that are no longer required.</li>
+ <li>Post the following <a class="internal" href="/en/Observer_Notifications" title="en/Observer Notifications">shutdown notifications</a> via the observer service:
+  <ol>
+   <li>quit-application</li>
+   <li>profile-change-net-teardown</li>
+   <li>profile-change-teardown</li>
+   <li>profile-before-change</li>
+  </ol>
+ </li>
+ <li>Unregisters the profile directory provider.</li>
+</ol>
+
+<h2 id="Helper_Resources">Helper Resources</h2>
+
+<h3 id="Fake_Servers">Fake Servers</h3>
+
+<p>The MailNews xpcshell-tests have available a selection of fake servers that are used to simulate IMAP, POP3, NNTP and SMTP servers. More information is <a class="internal" href="/en/MailNews_fakeserver" title="en/MailNews fakeserver"><span class="external">available here</span></a>.</p>
+
+<h3 id="General_Helpers">General Helpers</h3>
+
+<p>There are a variety of helper functions and objects in the files within the <a href="http://mxr.mozilla.org/comm-central/source/mailnews/test/resources/">http://mxr.mozilla.org/comm-central/source/mailnews/test/resources/</a> directory. These give facilities such as:</p>
+
+<ul>
+ <li><a href="http://mxr.mozilla.org/comm-central/source/mailnews/test/resources/alertTestUtils.js">Alert Hooks</a> - enabling hooking into alert dialogs.</li>
+ <li><a href="http://mxr.mozilla.org/comm-central/source/mailnews/test/resources/asyncTestUtils.js">Asynchronuous test drivers</a>.</li>
+ <li><a href="http://mxr.mozilla.org/comm-central/source/mailnews/test/resources/messageGenerator.js">Email message generators</a> - Generate synthetic messages.</li>
+</ul>
+
+<p>To load these into xpcshell-tests use the command:</p>
+
+<pre>load("../../mailnews/resources/&lt;filename&gt;");
+</pre>
+
+<p> </p>

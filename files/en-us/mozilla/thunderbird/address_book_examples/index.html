@@ -1,0 +1,416 @@
+---
+title: Address Book examples
+slug: Mozilla/Thunderbird/Address_Book_Examples
+tags:
+  - MailNews
+  - SeaMonkey
+  - thunderbird
+---
+<p>{{ Note("Thunderbird and SeaMonkey user interfaces now reference 'Contacts' not 'Cards' however, as the backend still uses the 'Cards' terminology, that is what is used here") }}</p>
+
+<p>This article provides examples on accessing and manipulating Thunderbird address books. <a class="internal" href="/En/Address_Book_Interfaces" title="En/Address Book Interfaces">Address book interfaces</a> provides an overview of the related interfaces. See <a class="internal" href="/en/Extensions/Thunderbird/An_overview_of_the_Thunderbird_interface" title="En/Extensions/Thunderbird/An overview of the Thunderbird interface">An overview of Thunderbird components </a>for a general description of the Thunderbird user interface and related programmatic interfaces.</p>
+
+<h3 id="How_do_I_get_all_address_books">How do I get all address books?</h3>
+
+<p>Use the Address Book Manager to get an <a class="internal" href="/en/XPCOM_Interface_Reference/nsISimpleEnumerator" title="En/NsISimpleEnumerator">nsISimpleEnumerator</a>, then progress through the enumerator, looking for nsIAbItem, nsIAbCollection or nsIAbDirectory interfaces as you require.</p>
+
+<pre class="brush: js">let abManager = Components.classes["@mozilla.org/abmanager;1"]
+                          .getService(Components.interfaces.nsIAbManager);
+
+let allAddressBooks = abManager.directories;
+
+while (allAddressBooks.hasMoreElements()) {
+  let addressBook = allAddressBooks.getNext()
+                                   .QueryInterface(Components.interfaces.nsIAbDirectory);
+  if (addressBook instanceof Components.interfaces.nsIAbDirectory) { // or nsIAbItem or nsIAbCollection
+    // alert ("Directory Name:" + addressBook.dirName);
+    ...
+  }
+}
+</pre>
+
+<h3 id="How_do_I_get_one_address_book">How do I get one address book?</h3>
+
+<p>Address Books are uniquely identified by a URI. This can be obtained via nsIAbDirectory.URI. The code stores URIs in various places (e.g. preferences, in address book trees etc). Assuming you have the URI, then use the Address Book Manager to get an nsIAbDirectory representing the address book:</p>
+
+<pre class="brush: js">let abManager = Components.classes["@mozilla.org/abmanager;1"]
+                          .getService(Components.interfaces.nsIAbManager);
+
+let oneAddressBook = abManager.getDirectory(addressBookURI);
+</pre>
+
+<h3 id="How_do_I_search_for_a_particular_contact_property_(name_email)">How do I search for a particular contact property (name, email)?</h3>
+
+<p>Once you have an object that implements <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/addrbook/public/nsIAbCollection.idl" title="http://mxr.mozilla.org/comm-central/source/mailnews/addrbook/public/nsIAbCollection.idl">nsIAbCollection</a> (see above), you can search for cards with particular properties within that collection using <code>getCardFromProperty</code>. This function will return the first match that it finds in the collection or <code>null</code>.</p>
+
+<pre class="brush: js">let collection = ...
+
+let card = collection.getCardFromProperty("JobTitle", "software engineer", false);
+</pre>
+
+<p>If you are searching for a card with a particular email address, you can use the <code>cardForEmailAddress</code> function that will match against multiple email addresses stored in one card. Again, this function returns the first match that it finds in the collection, or <code>null</code>.</p>
+
+<pre class="brush: js">let collection = ...
+
+let card = collection.cardForEmailAddress("foo@bar.invalid.com");</pre>
+
+<p>{{ Note("Both of these functions may raise an <code>NS_ERROR_NOT_IMPLEMENTED</code> exception if the collection has not implemented that function. This is currently true in the case of LDAP, but may be true in other cases as well.") }}</p>
+
+<h3 id="How_do_I_search_for_multiple_contacts">How do I search for multiple contacts?</h3>
+
+<p>Formulate a boolean search string (see <a class="internal" href="/en/nsIAbCard//Thunderbird3" title="En/NsIAbCard/Thunderbird3"><code>nsIAbCard</code></a> for built-in property names):</p>
+
+<pre class="brush: js">var searchQuery = "(or(PrimaryEmail,bw,@V)(NickName,bw,@V)(and(IsMailList,=,TRUE)(Notes,bw,@V)))";
+searchQuery = searchQuery.replace(/@V/g, encodeURIComponent("mystr")
+</pre>
+
+<p>The search queries use <a class="external" href="http://en.wikipedia.org/wiki/Lisp_(programming_language)" title="http://en.wikipedia.org/wiki/Lisp_(programming_language)">Lisp</a> syntax with operators enumerated in <a class="external" href="https://dxr.mozilla.org/comm-central/source/comm/mailnews/addrbook/src/nsAbQueryStringToExpression.cpp#258" title="http://mxr.mozilla.org/comm-central/source/mailnews/addrbook/src/nsAbQueryStringToExpression.cpp#278">nsAbQueryStringToExpression.cpp</a>.</p>
+
+<p>Assuming you wish to search across multiple directories:</p>
+
+<pre class="brush: js">let abManager = Components.classes["@mozilla.org/abmanager;1"]
+                          .getService(Components.interfaces.nsIAbManager);
+let allAddressBooks = abManager.directories;
+
+while (allAddressBooks.hasMoreElements()) {
+
+  let ab = allAddressBooks.getNext();
+  if (ab instanceof Components.interfaces.nsIAbDirectory &amp;&amp;
+      !ab.isRemote) {
+    let searchResult = abManager.getDirectory(ab.URI + "?" + searchQuery).childCards;
+
+    // ... use searchResult as required.
+  }
+}
+</pre>
+
+<p>{{ Note("This method doesn't work with remote address books (e.g. LDAP). Hence the additional <code>!ab.isRemote</code> check"); }}</p>
+
+<h3 id="How_do_I_addeditdelete_contacts">How do I add/edit/delete contacts?</h3>
+
+<p>{{ Note("Not all address books can be written to. Use the <code>nsIAbCollection.readOnly</code> attribute to determine the read-only status of an address book") }}</p>
+
+<h4 id="Adding_Contacts">Adding Contacts</h4>
+
+<p>Create a card and set its properties using the <a class="internal" href="/en/nsIAbCard//Thunderbird3" title="en/nsIAbCard/Thunderbird3"><code>nsIAbCard</code></a> interface (see the interface documentation for property names supported by the application):</p>
+
+<pre class="brush: js">let card = Components.classes["@mozilla.org/<span class="s">addressbook/cardproperty;1"]
+                     .createInstance(Components.interfaces.nsIAbCard);
+  card.setProperty("FirstName", "John"); card.setProperty("LastName", "Smith");
+  card.primaryEmail = "john@invalid.com";</span></pre>
+
+<p>Now add the card to an address book via its <a class="internal" href="/En/Address_Book_Interfaces#nsIAbDirectory" title="En/Address Book Interfaces#nsIAbDirectory"><code>nsIAbDirectory</code></a> interface:</p>
+
+<pre class="brush: js">let newCard = addressbook.addCard(card);
+</pre>
+
+<p>The <code>addCard</code> function returns a new <code>nsIAbCard</code> object that may have had nsIAbDirectory specific data added to it, e.g. database specific information, that is used on edits.</p>
+
+<h4 id="Editing_Contacts">Editing Contacts</h4>
+
+<p>Once you have obtained a card from an <code>nsIAbDirectory</code> (see above), you can edit it in a two step process, firstly, change the properties that you to edit:</p>
+
+<pre class="brush: js">card.setProperty("FirstName", "Jane");
+card.setProperty("LastName", "Doe");
+</pre>
+
+<p>Secondly, call <code>modifyCard</code> to save the card in the database.</p>
+
+<pre class="brush: js">addressbook.modifyCard(card);
+</pre>
+
+<h4 id="Deleting_Contacts">Deleting Contacts</h4>
+
+<p>Once you have obtained a card(s) from an <code>nsIAbDirectory</code> (see above) you can delete one or more simply by calling the <code>deleteCards</code> function:</p>
+
+<pre class="brush: js">let cardsToDelete = Components.classes["@mozilla.org/array;1"]
+                              .createInstance(Components.interfaces.nsIMutableArray);
+cardsToDelete.appendElement(card);
+// Repeat append as necessary
+
+addressbook.deleteCards(cardsToDelete);
+</pre>
+
+<h3 id="How_do_I_add_and_use_my_own_properties">How do I add and use my own properties?</h3>
+
+<p>Use the <code>setProperty/getProperty</code> functions on <a class="internal" href="/en/nsIAbCard//Thunderbird3" title="En/NsIAbCard/Thunderbird3">nsIAbCard</a> to set your property in the same way as you would do with normal properties:</p>
+
+<pre class="brush: js">card.setProperty("Random1", "xyz");
+card.setProperty("Random2", "foo");
+...
+my value = card.getProperty("Random1");
+</pre>
+
+<p>{{ Note("Local (mork) address books are currently the only built-in type of address book that supports saving of non-built-in properties. However, outlook directories are the only other built-in write capable directories.") }}</p>
+
+<h3 id="How_do_I_addeditdelete_mailing_lists">How do I add/edit/delete mailing lists?</h3>
+
+<h4 id="Adding_a_Mailing_List">Adding a Mailing List</h4>
+
+<p>First create a mailing list object and initialize it:</p>
+
+<pre class="brush: js">var mailList = Components.classes["@mozilla.org/addressbook/directoryproperty;1"]
+                         .createInstance(Components.interfaces.nsIAbDirectory);
+mailList.isMailList = true;
+</pre>
+
+<p>Now fill in the details you want to store:</p>
+
+<pre class="brush: js">mailList.dirName = "My Mailing List";
+mailList.listNickName = "NickName for List";
+mailList.description = "List Description";
+</pre>
+
+<p>Add the cards you want to include in the list:</p>
+
+<pre class="brush: js">for (let i = 0; i &lt; numCards; i++)
+  mailList.addressLists.appendElement(card[i], false);
+</pre>
+
+<p>Now save the list:</p>
+
+<pre class="brush: js">var parentDirectory = ...; // An nsIAbDirectory for the parent of the mailing list.
+
+parentDirectory.addMailList(mailList);
+</pre>
+
+<h4 id="Modifying_a_Mailing_List">Modifying a Mailing List</h4>
+
+<p>To modify a mailing list, you first need an object that implements <code>nsIAbCard</code>. This can be obtained via searching in address books as <a class="internal" href="/en/Thunderbird/Address_Book_Examples/Address_Book_examples#How_do_I_search_for_multiple_contacts.3f" title="En/Address Book Examples#How do I search for multiple contacts.3f">mentioned above</a>. Once you have the nsIAbCard object you can modify the names and description of it like this:</p>
+
+<pre class="brush: js">mailListCard.displayName = "New List Name";
+mailListCard.lastName = mailListCard.displayName;
+mailListCard.setProperty("NickName", "New NickName for List");
+mailListCard.setProperty("Notes", "New List Description");
+</pre>
+
+<p>Then you need to get the equivalent mailing list object that implements <code>nsIAbDirectory</code>:</p>
+
+<pre class="brush: js">let abManager = Components.classes["@mozilla.org/abmanager;1"]
+                          .getService(Components.interfaces.nsIAbManager);
+
+let mailListDirectory = abManager.getDirectory(mailListCard.mailListURI);
+</pre>
+
+<p>You can then adjust the items in the actual mailing list:</p>
+
+<pre class="brush: js">mailListDirectory.addressLists.appendElement(newCard, false);
+</pre>
+
+<p>Then save the updated list to the database:</p>
+
+<pre class="brush: js">mailListDirectory.editMailListToDatabase(mailListCard);
+</pre>
+
+<h4 id="Deleting_a_Mailing_List">Deleting a Mailing List</h4>
+
+<p>There are two ways to delete a mailing list. If you have it in its <code>nsIAbCard</code> form, then you can delete it in the same way as per <a class="internal" href="/en/Thunderbird/Address_Book_Examples/Address_Book_examples#Deleting_Contacts" title="En/Address Book Examples#Deleting Contacts">deleting a contact</a>. If you have it in its <code>nsIAbDirectory</code> form, then you can delete it like this:</p>
+
+<pre class="brush: js">var abManager = Components.classes["@mozilla.org/abmanager;1"]
+                          .createInstance(Components.interfaces.nsIAbManager);
+abManager.deleteAddressBook(mailList.URI);
+</pre>
+
+<h3 id="How_do_I_display_properties_dialogs_to_the_user">How do I display properties dialogs to the user?</h3>
+
+<p>In the following examples:</p>
+
+<ul>
+ <li><code>selectedAB</code> is the URI of an address book to default the dialog to saving the card in. This may be blank if not required.</li>
+ <li><code>abURI</code> and <code>card</code> are the URI of the address book and the card contained within that address book.</li>
+</ul>
+
+<h4 id="New_Contact_Dialog">New Contact Dialog</h4>
+
+<pre class="brush: js">window.openDialog("chrome://messenger/content/addressbook/abNewCardDialog.xul",
+                  "",
+                  "chrome,resizable=no,titlebar,modal,centerscreen",
+                  {selectedAB:selectedAB});
+</pre>
+
+<h4 id="Edit_Contact_Dialog">Edit Contact Dialog</h4>
+
+<pre class="brush: js">window.openDialog("chrome://messenger/content/addressbook/abEditCardDialog.xul",
+                  "",
+                  "chrome,resizable=no,modal,titlebar,centerscreen",
+                  {abURI:abURI, card:card});
+</pre>
+
+<h4 id="New_List_Dialog">New List Dialog</h4>
+
+<pre class="brush: js">window.openDialog("chrome://messenger/content/addressbook/abMailListDialog.xul",
+                  "",
+                  "chrome,resizable=no,titlebar,modal,centerscreen",
+                  {selectedAB:selectedAB});
+</pre>
+
+<h4 id="Edit_List_Dialog">Edit List Dialog</h4>
+
+<pre class="brush: js">window.openDialog("chrome://messenger/content/addressbook/abEditListDialog.xul",
+                  "",
+                  "chrome,resizable=no,titlebar,modal,centerscreen",
+                  {abCard:abCard, listURI:listURI});
+</pre>
+
+<h4 id="New_Address_Book_Dialog">New Address Book Dialog</h4>
+
+<p>Unlike the edit address book dialog, the new address book dialog does not currently have the facility to get the chrome URI based on the address book type. The following options are available.</p>
+
+<p>For local (mork) address books:</p>
+
+<pre class="brush: js">window.openDialog(
+    "chrome://messenger/content/addressbook/abAddressBookNameDialog.xul",
+    "", "chrome,modal=yes,resizable=no,centerscreen", null);
+</pre>
+
+<p>For LDAP address books:</p>
+
+<pre class="brush: js">window.openDialog("chrome://messenger/content/addressbook/pref-directory-add.xul",
+                  "",
+                  "chrome,modal=yes,resizable=no,centerscreen",
+                  null);
+</pre>
+
+<p>{{ Note("There is no new address book dialog for the OS X address book. As this is a system address book, there is only one address book represented, and therefore a new address book dialog does not make sense. In Thunderbird a menu option is provided instead.") }}</p>
+
+<h4 id="Edit_Address_Book_Dialog">Edit Address Book Dialog</h4>
+
+<p><code>addressbook</code> is an <a class="internal" href="/En/Address_Book_Interfaces#nsIAbDirectory" title="En/Address Book Interfaces#nsIAbDirectory"><code>nsIAbDirectory</code></a> that provides the chrome URI that is used in the call to openDialog. Using the propertiesChromeURI means that the different implementations can call up their own dialog.</p>
+
+<pre class="brush: js">window.openDialog(addressbook.propertiesChromeURI,
+                  "editDirectory", "chrome,modal=yes,resizable=no",
+                  {selectedDirectory: addressbook});
+</pre>
+
+<h3 id="How_do_I_set_up_my_own_address_book">How do I set up my own address book?</h3>
+
+<p>{{ draft() }}</p>
+
+<p>As of Thunderbird 7.0, implementing your own address book type can be done with either JavaScript or with a binary component. In either case, you'll need:</p>
+
+<ul>
+ <li>A factory object implementing <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/addrbook/public/nsIAbDirFactory.idl" title="http://mxr.mozilla.org/comm-central/source/mailnews/addrbook/public/nsIAbDirFactory.idl">nsIAbDirFactory</a></li>
+ <li>A directory object implementing <a class="internal" href="/En/Address_Book_Interfaces#nsIAbDirectory" title="En/Address Book Interfaces#nsIAbDirectory">nsIAbDirectory</a></li>
+</ul>
+
+<p>If you are using C++, you can inherit from <a class="external" href="http://mxr.mozilla.org/comm-central/find?text=&amp;kind=text&amp;string=nsAbDirProperty" title="http://mxr.mozilla.org/comm-central/find?text=&amp;kind=text&amp;string=nsAbDirProperty">nsAbDirProperty</a> and override functions for your specific implementation to save implementing all the functions on nsIAbDirectory yourself. The best example of a binary implementation of an address book is the <a class="external" href="http://mxr.mozilla.org/comm-central/find?string=ns.*AbOSX&amp;tree=comm-central&amp;hint=" title="http://mxr.mozilla.org/comm-central/find?string=ns.*AbOSX&amp;tree=comm-central&amp;hint=">OS X Address Book source code</a>.</p>
+
+<p>If you are implementing in JavaScript then you will have to implement the full interfaces mentioned above. At the moment, the best example of this is the <a class="external" href="http://bazaar.launchpad.net/~mconley/thunderbird-eds-extension/thunderbird-eds-integration/files" title="http://bazaar.launchpad.net/~mconley/thunderbird-eds-extension/thunderbird-eds-integration/files">EDS contacts integration add-on</a>.</p>
+
+<p>Once you've added your own address book implementation, you might also want to extend the address book user interface.</p>
+
+<h3 id="How_do_I_extend_the_address_book_user_interface">How do I extend the address book user interface?</h3>
+
+<p>There are several hooks in the address book code exposed to add-on developers to help extend the behavior of the address book.</p>
+
+<h4 id="Load_and_save_listeners">Load and save listeners</h4>
+
+<p>Edit dialogs for both contacts and mailing lists expose functions for registering load and save listeners. For example, in order to register a load listener for a contact, the following should take place within the scope of the contact editor dialog:</p>
+
+<pre class="brush: js"><code>/* An example load listener for a contact</code>
+<code> * </code><code>aCard the nsIAbCard being loaded
+ </code><code>* aDocument a reference to the contact editor document
+ </code><code>*/
+function foo(aCard, aDocument) </code><code>{
+  // Do something useful, like disabling</code>
+<code>  // input fields that cards for this
+  // address book type do not support.
+} </code>
+
+<code>RegisterLoadListener(foo);</code>
+</pre>
+
+<p>Save listeners are functions that take the same parameters, and can be registered with:</p>
+
+<pre class="brush: js">RegisterSaveListener(foo);</pre>
+
+<p>Load and save listeners can be unregistered using <code>UnregisterLoadListener(foo)</code> and <code>UnregisterSaveListener(foo)</code>, respectively.</p>
+
+<h4 id="Photo_handlers">Photo handlers</h4>
+
+<p>Photo handlers allow developers to customize the behavior of the contact editor when loading or saving contact photos. This is useful if, for example, cards within your address book implementation need to save contact photos within a database.</p>
+
+<p>A photo handler defines the behavior of the contact editor for a particular photo type. Each photo handler must implement the following interface:</p>
+
+<pre class="brush: js">/*
+ * onLoad: function(aCard, aDocument):
+ *   Called when the editor wants to populate the contact editor
+ *   input fields with information about aCard's photo.  Note that
+ *   this does NOT make aCard's photo appear in the contact editor -
+ *   this is left to the onShow function.  Returns true on success.
+ *   If the function returns false, the generic photo handler onLoad
+ *   function will be called.
+ *
+ * onShow: function(aCard, aDocument, aTargetID):
+ *   Called when the editor wants to show this photo type.
+ *   The onShow method should take the input fields in the document,
+ *   and render the requested photo in the IMG tag with id
+ *   aTargetID.  Note that onShow does NOT save the photo for aCard -
+ *   this job is left to the onSave function.  Returns true on success.
+ *   If the function returns false, the generic photo handler onShow
+ *   function will be called.
+ *
+ * onSave: function(aCard, aDocument)
+ *   Called when the editor wants to save this photo type.  The
+ *   onSave method is responsible for analyzing the photo of this
+ *   type requested by the user, and storing it, as well as the
+ *   other fields required by onLoad/onShow to retrieve and display
+ *   the photo again.  Returns true on success.  If the function
+ *   returns false, the generic photo handler onSave function will
+ *   be called.
+ */</pre>
+
+<p>Photo handlers are registered within the context of the contact editor dialog using the <code>registerPhotoHandler</code> function, as follows:</p>
+
+<pre class="brush: js">registerPhotoHandler(aType, aPhotoHandler)
+</pre>
+
+<p>...where <code>aType</code> is a string with a unique identifier for that particular photo type. In order for a photo handler to be used for a contact, the <code>PhotoType</code> property of the contact must return a string equal to <code>aType</code>.</p>
+
+<p>The address book defaults with three photo handler types, identified by  <code>"generic"</code>, <code>"file"</code> and <code>"web"</code>. These can be overridden by calling <code>registerPhotoHandler</code> with these identifiers and a custom photo handler.</p>
+
+<h4 id="Photo_display_handlers">Photo display handlers</h4>
+
+<p>A photo display handler determines how a contact photo can be extracted from a contact and displayed in an <code>IMG</code> element. This is useful in the contact viewer within the address book.</p>
+
+<p>Photo display handlers are registered with the <code>registerPhotoDisplayHandler </code>function within the context of the address book card view overlay.</p>
+
+<p>A photo display handler is a function that behaves as follows:</p>
+
+<pre class="brush: js">/*
+ * function(aCard, aImg):
+ *    The function is responsible for determining how to retrieve
+ *    the photo from nsIAbCard aCard, and for displaying it in img
+ *    img element aImg.  Returns true if successful.  If it returns
+ *    false, the generic photo display handler will be called.
+ */
+</pre>
+
+<h3 id="How_do_I_set_up_autocomplete_to_use_the_address_book">How do I set up autocomplete to use the address book?</h3>
+
+<p>There are 3 address book autocomplete widgets:</p>
+
+<ul>
+ <li>"mydomain" - use to autocomplete a domain for an email identity, e.g. for a user <code>@bar.com</code>, entering <code>foo</code> would become <code><a class="link-mailto" href="mailto:foo@bar.com" rel="freelink">foo@bar.com</a></code></li>
+ <li>"addrbook" - use to autocomplete from a local address book, e.g. a Mork based local store or a OS X address book</li>
+ <li>LDAP - use for searching in LDAP address books.</li>
+</ul>
+
+<h4 id="MyDomain_and_Addrbook_Autocomplete">MyDomain and Addrbook Autocomplete</h4>
+
+<p>"mydomain" and "addrbook" both use the <a class="internal" href="/en/How_to_implement_custom_autocomplete_search_component" title="en/How to implement custom autocomplete search component">toolkit interfaces</a> to provide autocomplete facilities. To use them in code all you need to do is set up your text box as follows:</p>
+
+<pre> &lt;textbox id="myautocompletetextbox" type="autocomplete" autocompletesearch="mydomain addrbook"/&gt;
+</pre>
+
+<p>The attributes of the <a class="internal" href="/En/XUL/Textbox_(Toolkit_autocomplete)" title="En/XUL/Textbox (Toolkit autocomplete)">toolkit autocomplete element</a> can also be used here.</p>
+
+<p>The "mydomain" and "addrbook" behaviours can be changed by passing an identity key (see nsIMsgIdentity.key) via an attribute autocompletesearchparam on the textbox element.</p>
+
+<h4 id="LDAP_Autocomplete">LDAP Autocomplete</h4>
+
+<p>LDAP autocomplete still uses the XPFE interfaces, it is planned ({{ bug("452232") }}) to move this over to the toolkit interfaces at some stage.</p>
+
+<p>The best example of how to use this is via the existing code that can be <a class="external" href="http://hg.mozilla.org/comm-central/file/117e438feb4a/mail/components/compose/content/MsgComposeCommands.js#l784" title="http://hg.mozilla.org/comm-central/file/117e438feb4a/mail/components/compose/content/MsgComposeCommands.js#l784">found here</a>.</p>
+
+<p>Click <a class="external" href="/en/Thunderbird_Addon_Demonstrating_Autocomplete_With_Addrbook_And_LDAP" title="https://developer.mozilla.org/index.php?title=en/Thunderbird_Addon_Demonstrating_Autocomplete_With_Addrbook_And_LDAP_(Gecko_1.8_and_1.9)">here</a> for a addon demonstrating autocomplete with LDAP and addrbook working with both Thunderbird 2 and Thunderbird 3.</p>

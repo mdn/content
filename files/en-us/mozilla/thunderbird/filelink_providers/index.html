@@ -1,0 +1,89 @@
+---
+title: Filelink Providers
+slug: Mozilla/Thunderbird/Filelink_Providers
+tags:
+  - Obsolete
+  - thunderbird
+---
+<p><a class="external" href="http://support.mozillamessaging.com/kb/file-link" title="http://support.mozillamessaging.com/kb/file-link">Filelink</a> is a Thunderbird feature that makes it easy for users to upload large attachments to web-based storage services such as <a class="link-https" href="https://www.hightail.com" title="https://www.hightail.com">Hightail</a>.</p>
+
+<p>This document explains how to extend Thunderbird to support additional web-based storage services.</p>
+
+<h3 id="nsIMsgCloudFileProvider">nsIMsgCloudFileProvider</h3>
+
+<p>{{ Note("Cloudfiles and BigFiles were the two temporary feature names that were used while Filelink was under construction. Both refer to the Filelink feature.") }}</p>
+
+<p>Filelink storage providers must implement the <a href="/en/Thunderbird/Filelink_Providers/nsIMsgCloudFileProvider" title="nsIMsgCloudFileProvider"><span class="external">nsIMsgCloudFileProvider </span></a>interface. The <a class="external" href="https://dxr.mozilla.org/comm-central/source/comm/mail/components/cloudfile/nsHightail.js" title="https://dxr.mozilla.org/comm-central/source/mail/components/cloudfile/nsHightail.js">Hightail implementation</a> is a great place to look for examples and inspiration.</p>
+
+<p>The <a href="/en/Thunderbird/Filelink_Providers/nsIMsgCloudFileProvider" title="nsIMsgCloudFileProvider"><span class="external">nsIMsgCloudFileProvider</span></a> implementation must be <a href="/en/How_to_Build_an_XPCOM_Component_in_Javascript" title="https://developer.mozilla.org/en/How_to_Build_an_XPCOM_Component_in_Javascript">registered as a component</a>. If the provider is being merged into the <a href="/en/comm-central" title="comm-central">comm-central code repository</a> (and thus added to the official Thunderbird build), you must also add the components to the <a class="external" href="http://dxr.mozilla.org/comm-central/source/mail/components/cloudfile/cloudFileComponents.manifest" title="http://dxr.mozilla.org/comm-central/source/mail/components/cloudfile/cloudFileComponents.manifest">cloudfile/cloudFileComponents.manifest</a>, <a class="external" href="http://dxr.mozilla.org/comm-central/source/mail/components/cloudfile/jar.mn" title="http://dxr.mozilla.org/comm-central/source/mail/components/cloudfile/jar.mn">cloudfile/jar.mn</a>, and <a class="external" href="http://dxr.mozilla.org/comm-central/source/mail/installer/package-manifest.in#170" title="http://dxr.mozilla.org/comm-central/source/mail/installer/package-manifest.in#170">installer/package-manifest.in</a>.</p>
+
+<p>If the <a href="/en/Thunderbird/Filelink_Providers/nsIMsgCloudFileProvider" title="en/Thunderbird/Filelink_Providers/nsIMsgCloudFileProvider">nsIMsgCloudFileProvider</a> is being created as part of an add-on, the add-on must register the component in <a href="/en/Extensions/Thunderbird/Building_a_Thunderbird_extension_4:_chrome_manifest" title="Building a Thunderbird extension 4: chrome manifest">chrome.manifest</a>. Also, you must add the component's contract ID to the "cloud-file" category. See <a class="external" href="http://dxr.mozilla.org/comm-central/source/mail/components/cloudfile/cloudFileComponents.manifest" title="http://dxr.mozilla.org/comm-central/source/mail/components/cloudfile/cloudFileComponents.manifest">cloudfile/cloudFileComponents.manifest</a> for an example, as well as<a href="/en/Chrome_Registration" title="https://developer.mozilla.org/en/Chrome_Registration"> this document on chrome.manifest files.</a></p>
+
+<h3 id="The_Account_Setup_Dialog">The Account Setup Dialog</h3>
+
+<p>The account setup dialog allows the user to select what account type they would like to create from a menulist.</p>
+
+<p><img alt="BPDkK.png" class="default internal" src="/@api/deki/files/6208/=BPDkK.png"></p>
+
+<p>Some providers require Thunderbird to do very little in order to connect a user to their account. Other providers however may require the user to fill in additional details in order to connect to the service. Hightail, for example, requires a username and password. Other services may require the user to fill in a server string or port number.</p>
+
+<p>A provider implementation can choose what information it gets from the user from the setup dialog by pointing the <code>settingsURL</code> attribute of their nsIMsgCloudFileProvider implementation to a chrome URL for an XHTML page that contains a form with the extra information. That URL is then loaded into an IFrame directly beneath the provider menulist.</p>
+
+<p>{{ Note("The setup dialog window should resize itself automatically in order to fit the content of the IFRAME without scrollbars.") }}</p>
+
+<h4 id="Custom_settings_fields">Custom settings fields</h4>
+
+<p>To handle custom settings, the settings XHTML page should contain a form with the id "<code>provider-form</code>", with its <code>onsubmit</code> attribute set to <code>"return false;"</code>.</p>
+
+<p><strong>Example:</strong></p>
+
+<pre class="brush: html">&lt;form id="provider-form" onsubmit="return false;"&gt;
+  &lt;label for="username"&gt;Username:&lt;/label&gt;
+  &lt;input id="username" type="text" required="true" /&gt;
+  &lt;label for="server"&gt;Server:&lt;/label&gt;
+  &lt;input id="server" type="text" required="true" /&gt;
+  &lt;label for="port"&gt;Port:&lt;/label&gt;
+  &lt;input id="port" pattern="[0-9]+" required="true" /&gt;
+&lt;/form&gt;
+</pre>
+
+<p><a href="/en/HTML/Forms_in_HTML#Constraint_Validation_API" title="en/HTML/Forms_in_HTML#Constraint_Validation_API">The form is expected to use HTML5 form validation</a>. For each input event, the <code>checkValidity</code> method of the form is automatically called. The button to set up the account will only become enabled once the <code>checkValidity</code> method for the form returns true.</p>
+
+<h4 id="Saving_custom_settings_in_preferences">Saving custom settings in preferences</h4>
+
+<p>Custom settings for a provider are saved using the <a href="/en/Preferences_API" title="en/Preferences_API">Preferences API</a>.</p>
+
+<p>Saving the preferences is handled automatically by the dialog code. Providers need only provide an <code>extraArgs</code> function in the IFrame content which returns an object specifying the name, type, and value to save.</p>
+
+<p>The format for the returned object is:</p>
+
+<pre class="brush: js">{
+  FIELD_NAME: {type: FIELD_TYPE, value: FIELD_VALUE}
+}
+</pre>
+
+<p>Where <code>FIELD_TYPE</code> is <code>"int"</code>, <code>"bool"</code>, or <code>"char"</code>.</p>
+
+<p>For example, the Hightail implementation provides the following function:</p>
+
+<pre class="brush: js">function extraArgs() {
+  var usernameValue = document.getElementById("username").value;
+  return {
+    "username": {type: "char", value: usernameValue},
+  };
+}
+</pre>
+
+<p>In this example, the username value is read from the input, and then the specially-crafted object is returned.  Once this is done, the field is accessible from within the implementation via the Preferences API using the key <code>mail.cloud_files.accounts.ACCOUNT_KEY.username</code> where <code>ACCOUNT_KEY</code> is the value passed into the implementations <code>init</code> function.</p>
+
+<p>The Hightail <a href="https://dxr.mozilla.org/comm-central/source/mail/components/cloudfile/content/Hightail/settings.xhtml" title="https://dxr.mozilla.org/comm-central/source/mail/components/cloudfile/content/Hightail/settings.xhtml">settings.xhtml</a> and <a href="https://dxr.mozilla.org/comm-central/source/mail/components/cloudfile/content/Hightail/settings.js" title="https://dxr.mozilla.org/comm-central/source/mail/components/cloudfile/content/Hightail/settings.js">settings.js</a> file have examples of this.</p>
+
+<h3 id="Management_interface">Management interface</h3>
+
+<p>Once an account has been created, it is manageable from within the Preferences dialog, in the Attachment pane, in the Outgoing tab.</p>
+
+<p><img alt="" class="internal" src="/@api/deki/files/6209/=me0f5.png" style="height: 510px; width: 610px;"></p>
+
+<p>The content to the right of the menulist is an IFrame, pointed at a URL read from the providers <code>managementURL</code> attribute, which should point to an XHTML page.</p>
+
+<p>The XHTML page should have a function in the global scope called <code>onLoadProvider</code>.  This function is called automatically once the DOM content is done loading, and is passed a single parameter - the provider instance whose data is being displayed.</p>

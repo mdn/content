@@ -1,0 +1,140 @@
+---
+title: Error reporting tools
+slug: Mozilla/Thunderbird/Thunderbird_extensions/Error_reporting_tools
+tags:
+  - thunderbird
+---
+<p>{{AddonSidebar}}</p>
+
+<p>Currently, Thunderbird tends to eat a lot of exceptions. Some make it to the error console, most don't. There are deep fixes to the platform needed (e.g. <a class="external" href="http://bugzilla.mozilla.org/show_bug.cgi?id=493414" title="http://bugzilla.mozilla.org/show_bug.cgi?id=493414">bug 493414</a>), but in the meantime, it would be helpful to be able to get useful output on <code>stderr</code> about exceptions, events and pretty-printed objects.</p>
+
+<p>There are a couple of tools available for viewing exceptions: the <code>errUtils</code> module and the <code>log4moz</code> extension.</p>
+
+<h2 id="errUtils">errUtils</h2>
+
+<p><span class="inlineIndicator standardNote">New in <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a></span></p>
+
+<p>The <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/util/errUtils.js" title="http://mxr.mozilla.org/comm-central/source/mailnews/base/util/errUtils.js">errUtils </a>module contains a set of helper methods for debugging, such as logging exception objects, dumping DOM nodes, Events, and generic object dumps.</p>
+
+<h3 id="Basic_use_case">Basic use case</h3>
+
+<p>The basic use case is:</p>
+
+<pre class="brush: js" id="comment_text_0"><code> Components.utils.import("resource://gre/modules/errUtils.js"); ...  try {  ... do stuff that might throw an exception }  catch (e) {  logException(e, true); // second arg is whether to rethrow }  </code></pre>
+
+<p>...which results in the following on the dump output:</p>
+
+<pre>-- EXCEPTION START --
++ message (string) 'a is not defined'
++ fileName (string) 'chrome://messenger/content/folderDisplay.js'
++ lineNumber (number) 483
++ stack (string) 428 chars
++ name (string) 'ReferenceError'
+*
+-- EXCEPTION END --
+&lt;top&gt;
+FolderDisplayWidget_show@chrome://messenger/content/folderDisplay.js:522
+FolderPaneSelectionChange@chrome://messenger/content/commandglue.js:352
+onselect@chrome://messenger/content/messenger.xul:1
+[anonymous]@null:0
+onxblmousedown@chrome://global/content/bindings/tree.xml:975
+
+</pre>
+
+<h3 id="Event_handler">Event handler</h3>
+
+<p> In an event handler, you can:</p>
+
+<pre class="brush: js">logEvent(event);
+</pre>
+
+<p>...and it will output stuff like:</p>
+
+<pre>-EVENT --------------------------
+type: click
+eventPhase: 3
+target: [object HTMLSpanElement]
+target.nodeName: span
+target.id: null
+currentTarget: [object HTMLDivElement]
+currentTarget.nodeName: div
+currentTarget.id: query-explanation
+originalTarget: [object HTMLSpanElement]
+originalTarget.nodeName: span
+originalTarget.id: null
+bubbles: true
+cancelable: true
+detail: 1
+button: 0
+isChar: false
+shiftKey: false
+altKey: false
+ctrlKey: false
+metaKey: false
+clientX: 385
+clientY: 30
+screenX: 488
+screenY: 156
+layerX: 57
+layerY: 30
+isTrusted: true
+timeStamp: 2080434436
+-------------------------------------
+</pre>
+
+<h3 id="JavaScript_object">JavaScript object</h3>
+
+<p>If faced with a generic JavaScript object, you can get detailed debugging output as follows. For example, given:</p>
+
+<pre class="brush: js"><code>let x = {'foo': 123, 'bar': {'sub-key': 1, 'sub-key-2': 'tomato'}};</code></pre>
+
+<p> Do:<code> </code></p>
+
+<pre class="brush: js"><code>logObject(x, 'x');</code></pre>
+
+<p>This yields:</p>
+
+<pre>Dumping Object: x
++ foo (number) 123
++ bar (object) [object Object]
+| + sub-key (number) 1
+| + sub-key-2 (string) 'tomato'
+| *
+*
+</pre>
+
+<h3 id="DOM_elements">DOM elements</h3>
+
+
+
+<p>If faced with a DOM element, you can print it out. For example:</p>
+
+<pre>logElement(document.getElementById('query-explanation', 'query-explanation'))
+</pre>
+
+<p>...yields:</p>
+
+<pre class="brush: html">&lt;div
+    id='query-explanation'
+&gt;
+  &lt;span
+      class='explanation-fulltext-label'
+  &gt;
+    &lt;#text
+        Searching for'
+  &lt;/span&gt;
+  &lt;span
+      class='explanation-fulltext-term'
+  &gt;
+    &lt;#text
+        gloda'
+  &lt;/span&gt;
+&lt;/div&gt;</pre>
+
+<h2 id="log4moz">log4moz</h2>
+
+<p>The <a class="link-https" href="https://wiki.mozilla.org/Labs/JS_Modules#Logging" title="https://wiki.mozilla.org/Labs/JS_Modules#Logging">Mozilla Labs log4moz </a>interface is a partial implementation of Apache's log4* project (for example, <a class="external" href="http://logging.apache.org/log4j/1.2/index.html" title="http://logging.apache.org/log4j/1.2/index.html">log4j</a>). To use it, create one or more appenders while initializing your add-on, and create loggers in the places where you have logging messages to emit. Minimum log levels to allow you to customize your logging output without changing any code.</p>
+
+<h2 id="Protocol_logging">Protocol logging</h2>
+
+<p>Activity regarding specific protocols (such as IMAP, SMTP, etc) can be logged by setting environment variables that specify the protocol and degree of verbosity in the log. This is explained on the <a class="external" href="http://wiki.mozilla.org/MailNews:Logging" title="http://wiki.mozilla.org/MailNews:Logging">MailNews Logging page</a> on the <a class="external" href="http://wiki.mozilla.org/" title="http://wiki.mozilla.org/">Mozilla wiki</a>.</p>

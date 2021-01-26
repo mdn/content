@@ -1,0 +1,138 @@
+---
+title: Gloda examples
+slug: Mozilla/Thunderbird/Gloda_examples
+tags:
+  - Thunderbird 3
+  - thunderbird
+---
+<div class="blockIndicator standardNote">
+<p>This content covers features introduced in <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a></p>
+</div>
+
+<p>This page provides some examples for using <a href="/en/Thunderbird/gloda" title="en/Thunderbird/gloda">gloda</a>. See <a href="/en/Thunderbird/Creating_a_Gloda_message_query" title="en/Thunderbird/Creating a Gloda message query">Creating a gloda message query</a> for more examples.</p>
+
+<h2 id="a_Show_all_messages_in_a_conversation_regardless_of_the_folder_in_which_they_are_stored_b_Search_messages_by_subject">a) Show all messages in a conversation regardless of the folder in which they are stored,<br>
+ <span class="highlight-span">b) Search messages by subject</span></h2>
+
+<p>Assuming that you have a message (<code>glodaMessage</code>) in the conversation already, this is straight forward using <code>glodaMessage.conversation.getMessagesCollection()</code></p>
+
+<pre class="brush: js">aListener = {
+    /* called when new items are returned by the database query or freshly indexed */
+    onItemsAdded: function _onItemsAdded(aItems, aCollection) {
+    },
+    /* called when items that are already in our collection get re-indexed */
+    onItemsModified: function _onItemsModified(aItems, aCollection) {
+    },
+    /* called when items that are in our collection are purged from the system */
+    onItemsRemoved: function _onItemsRemoved(aItems, aCollection) {
+    },
+    /* called when our database query completes */
+    onQueryCompleted: function _onQueryCompleted(conversation_coll) {
+        try {
+            for (var conv in conversation_coll) {
+                //do something with the Conversation here
+                alert(conv.subject);
+            }
+        } catch (e) {}
+    }
+}
+
+glodaMessage.conversation.getMessagesCollection(aListener)</pre>
+
+<p>Alternatively if you need to get a conversation based on the subject, you need to do a query (using the same listener as above).</p>
+
+<p>If you search for a message based on subject, use NOUN_MESSAGE instead of NOUN_CONVERSATION and modify the listener accordingly.</p>
+
+<pre class="brush: js">query=Gloda.newQuery(Gloda.NOUN_CONVERSATION);
+query.subjectMatches("Gloda makes searching easy");
+query.getCollection(aListener)
+</pre>
+
+<h2 class="highlight-spanned" id="Search_messages_by_tags"><span class="highlight-span">Search messages by tags</span></h2>
+
+<p>Searches for all messages having any (or several) of all tags defined in TB</p>
+
+<pre class="brush: js">  let query = Gloda.newQuery(Gloda.NOUN_MESSAGE);
+  let tagArray = MailServices.tags.getAllTags({});
+
+  query.tags(...tagArray);
+  let collection = query.getCollection(myListener);
+</pre>
+
+<p> </p>
+
+<h2 id="Search_messages_by_dateRange">Search messages by dateRange</h2>
+
+<p>Searches for all messages within a date range</p>
+
+<pre class="brush: js">id_q=Gloda.newQuery(Gloda.NOUN_MESSAGE);
+// Define a date range form yesterday to now
+id_q.dateRange([new Date() - 86400000, new Date()]);
+var myListener = {
+    /* called when new items are returned by the database query or freshly indexed */
+    onItemsAdded: function _onItemsAdded(aItems, aCollection) {
+    },
+    /* called when items that are already in our collection get re-indexed */
+    onItemsModified: function _onItemsModified(aItems, aCollection) {
+    },
+    /* called when items that are in our collection are purged from the system */
+    onItemsRemoved: function _onItemsRemoved(aItems, aCollection) {
+    },
+    /* called when our database query completes */
+    onQueryCompleted: function _onQueryCompleted(aCollection) {
+        var items = aCollection.items;
+
+        for (msg of items) {
+            alert(msg.subject);
+        };
+    }
+  };
+collection = id_q.getCollection(myListener);</pre>
+
+<h2 id="Show_all_messages_where_the_from_to_and_CC_values_include_a_specified_email_address">Show all messages where the from, to and CC values include a specified email address</h2>
+
+<p> At present there doesn't appear to be any way of going directly from an email address to email addresses that it involves. Instead you need to do two queries, first to get the "<code>Identity</code>" object for an email address and then to get the messages.</p>
+
+<p>This requires two chained asynchronous calls:</p>
+
+<pre class="brush: js">//First take an email address and turn it into an identity object
+id_q = Gloda.newQuery(Gloda.NOUN_IDENTITY);
+id_q.kind("email");
+id_q.value("test@example.com");
+id_coll = id_q.getCollection({
+                onItemsAdded: function _onItemsAdded(aItems, aCollection) {
+                },
+                onItemsModified: function _onItemsModified(aItems, aCollection) {
+                },
+                onItemsRemoved: function _onItemsRemoved(aItems, aCollection) {
+                },
+                onQueryCompleted: function _onQueryCompleted(id_coll) {
+                    //woops no identity
+                    if (id_coll.items.length &lt;= 0) return;
+                        id = id_coll.items[0];
+                        //now we use the identity to find all messages that person was involved with
+                        msg_q=Gloda.newQuery(Gloda.NOUN_MESSAGE)
+                        msg_q.involves(id)
+                        msg_q.getCollection({
+                            /* called when new items are returned by the database query or freshly indexed */
+                            onItemsAdded: function _onItemsAdded(aItems, aCollection) {
+                            },
+                            /* called when items that are already in our collection get re-indexed */
+                            onItemsModified: function _onItemsModified(aItems, aCollection) {
+                            },
+                            /* called when items that are in our collection are purged from the system */
+                            onItemsRemoved: function _onItemsRemoved(aItems, aCollection) {
+                            },
+                            /* called when our database query completes */
+                            onQueryCompleted: function _onQueryCompleted(msg_coll) {
+                                try {
+                                    while(msg = msg_coll.items.pop()) {
+                                        //do something with the messages here
+                                        alert(msg.subject);
+                                    }
+                                } catch (e) {}
+                            }
+                        });
+                }
+});
+</pre>

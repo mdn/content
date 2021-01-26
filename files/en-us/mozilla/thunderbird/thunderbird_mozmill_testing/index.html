@@ -1,0 +1,148 @@
+---
+title: Thunderbird MozMill Testing
+slug: Mozilla/Thunderbird/Thunderbird_MozMill_Testing
+tags:
+  - Automated testing
+  - Developing Mozilla
+  - MozMill
+  - thunderbird
+---
+<p>MozMill is the framework that we're using to run interactive tests.  Mozmill tests effectively run the entire application through unit tests.</p>
+
+<h2 id="Running_Mozmill_Tests"><a name="runtests">Running Mozmill Tests</a></h2>
+
+<p><a name="runtests"></a></p><div class="blockIndicator note"><a name="runtests"><strong>Note:</strong> Although running a Thunderbird instance and a MozMill Thunderbird instance alongside each other in the same user login is possible, MozMill tends not to detect shutdown of the MozMill Instance correctly. If your test isn't finishing (even though Thunderbird has shut down) try closing any other instances of Thunderbird running in the user login.</a></div>
+
+<p><a name="runtests"></a></p><div class="blockIndicator note"><a name="runtests"><strong>Note:</strong> Testing with a debug build is known to be very slow, you should use an optimized build.</a></div>
+
+<h4 id="Running_a_test_suite"><a name="runtests">Running a test suite:</a></h4>
+
+<p><a name="runtests">Run this from <code>objdir/</code> to run all the tests in the test suite.</a></p>
+
+<pre><a name="runtests"><code>make mozmill</code></a></pre>
+
+<p>For builds on Windows (created by <a href="http://mxr.mozilla.org/comm-central/source/mozilla/mach">mozilla/mach</a> and implicitly <a href="http://mxr.mozilla.org/comm-central/source/build/pymake/make.py">build/pymake/make.py</a>):</p>
+
+<pre><a name="runtests"><code>mozmake mozmill</code></a></pre>
+
+<p><strong>Obsolete</strong>: In the past, the following command had been used for builds on Windows (created by <a href="http://mxr.mozilla.org/comm-central/source/mozilla/mach">mozilla/mach</a> and implicitly <a href="http://mxr.mozilla.org/comm-central/source/build/pymake/make.py">build/pymake/make.py</a>):</p>
+
+<pre><a name="runtests">../build/pymake/make.py<code> mozmill</code></a></pre>
+
+<h4 id="Running_a_specific_test"><a name="runtests">Running a specific test:</a></h4>
+
+<p><a name="runtests">For example to run all the </a><a href="http://mxr.mozilla.org/comm-central/source/mail/test/mozmill/folder-display/">folder-display</a> tests, go to the objdir and run:</p>
+
+<pre><a name="runtests"><code>make SOLO_TEST=folder-display mozmill-one</code></a></pre>
+
+<p>For builds on Windows (created by <a href="http://mxr.mozilla.org/comm-central/source/mozilla/mach">mozilla/mach</a> and implicitly <a href="http://mxr.mozilla.org/comm-central/source/build/pymake/make.py">build/pymake/make.py</a>):</p>
+
+<pre><a name="runtests">../build/pymake/make.py<code> SOLO_TEST=folder-display mozmill-one</code></a></pre>
+
+<p><a name="runtests"><code>SOLO_TEST</code> may be a directory containing tests within </a><a href="http://mxr.mozilla.org/comm-central/source/mail/test/mozmill/">mail/test/mozmill</a>, or a specific test file.</p>
+
+<p><a name="runtests">To run just a single test ("all the tests in a single file"), like test-message-window.js, again go to the objdir and run:</a></p>
+
+<pre><a name="runtests"><code>make SOLO_TEST=folder-display/test-message-window.js mozmill-one </code></a></pre>
+
+<p>For builds on Windows (created by <a href="http://mxr.mozilla.org/comm-central/source/mozilla/mach">mozilla/mach</a> and implicitly <a href="http://mxr.mozilla.org/comm-central/source/build/pymake/make.py">build/pymake/make.py</a>):</p>
+
+<pre><a name="runtests">../build/pymake/make.py<code> SOLO_TEST=folder-display/test-message-window.js mozmill-one</code></a></pre>
+
+<h4 id="Running_a_specific_CalendarLightning_test"><a name="runtests">Running a specific Calendar/Lightning test:</a></h4>
+
+<p>For example to run "testBiweeklyRecurrence.js", go to the objdir and run:</p>
+
+<pre><code>make -C comm/calendar/test/mozmill SOLO_FILE=cal-recurrence/testBiweeklyRecurrence.js mozmill-one</code></pre>
+
+<h2 id="Running_MozMill_Tests_with_pre-compiled_Thunderbird_packaged_tests"><a name="runtests">Running MozMill Tests with pre-compiled Thunderbird ('packaged tests')</a></h2>
+
+<p><a name="runtests">If you don't have a self-compiled build of Thunderbird, then you can run tests against pre-compiled Thunderbird builds. This is known as running in the 'packaged tests' style.</a></p>
+
+<p><a name="runtests"></a><a href="/en/Thunderbird/Thunderbird_MozMill_Testing/Running_Thunderbird_MozMill_tests_from_packaged_tests" title="https://developer.mozilla.org/en/Thunderbird/Thunderbird_MozMill_Testing/Running_Thunderbird_MozMill_tests_from_packaged_tests">See this page for how to run in package test style</a>.</p>
+
+<h3 id="Linux_VNC_Server">Linux &amp; VNC Server</h3>
+
+<p>Linux runs have a lot of issues with focus related problems in more recents of gecko.  Also, it can be annoying to lose your session to the tests.  With the landing of bug 548172 if you have Xvnc installed and exposed via /usr/bin/vncserver and a password defined in ~/.vnc/passwd, we will use it to spin up a VNC session and run the mozmill tests in that session.  On Fedora Core 12, this is provided by the tigervnc-server package.</p>
+
+<p>There are two things you need to do / be aware of:</p>
+
+<ol>
+ <li>You must create a password at ~/.vnc/passwd for this to work.  This is accomplished by invoking the "vncpasswd" script.</li>
+ <li>The default xstartup script (~/.vnc/xstartup), at least on my system, uses the default X startup junk from /etc.  That may start up more than you really want spun up in the testing session.  For example, when I connected with vncviewer I noticed that my gnome-panel was in there running a system monitor.  I personally have whacked my xstartup file to lose the /etc stuff and just invoke xfwm4 (the xfce window manager which I specially installed):</li>
+</ol>
+
+<pre>#!/bin/sh
+
+vncconfig -iconic &amp;
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+OS=`uname -s`
+xsetroot -solid grey
+xterm -geometry 80x24+10+10 -ls -title "$VNCDESKTOP Desktop" &amp;
+xfwm4 &amp;
+</pre>
+
+<p>You can connect to the vnc server to see what it is doing by invoking "vncviewer :99".  (We always run mozmill tests on display 99, currently.)  You will need to enter the password.</p>
+
+<h3 id="Developing_Tests">Developing Tests</h3>
+
+<div class="blockIndicator draft">
+    <p><strong>Draft</strong><br>
+    This page is not complete.</p>
+
+</div>
+
+<p>The Thunderbird mozmill tests and infrastructure are stored in <a href="http://mxr.mozilla.org/comm-central/source/mail/test/mozmill">http://mxr.mozilla.org/comm-central/source/mail/test/mozmill</a>.</p>
+
+<p>Each set of tests is stored in a sub-directory, the tests that are run on a full mozmill run are listed in <a href="http://mxr.mozilla.org/comm-central/source/mail/test/mozmill/mozmilltests.list">http://mxr.mozilla.org/comm-central/source/mail/test/mozmill/mozmilltests.list</a>.</p>
+
+<p>MozMill has its own <a href="/en/Mozmill" title="en/Mozmill">documentation</a> that is useful to examine to get used to working with MozMill. However, Thunderbird has its own set of APIs/styles that it uses to interact with mozmill, and these are contained in the <a href="http://mxr.mozilla.org/comm-central/source/mail/test/mozmill/shared-modules/">http://mxr.mozilla.org/comm-central/source/mail/test/mozmill/shared-modules/</a> directory. This code is shared across the different test sub-directories being included in the tests where required, documentation for these functions is contained within the code in doxygen format.</p>
+
+<p>These files give examples of MozMill tests in Thunderbird and are considered relatively simple examples to get started with:</p>
+
+<ul>
+ <li><a href="http://mxr.mozilla.org/comm-central/source/mail/test/mozmill/junk-commands/test-junk-commands.js">http://mxr.mozilla.org/comm-central/source/mail/test/mozmill/junk-commands/test-junk-commands.js</a></li>
+ <li><a href="http://mxr.mozilla.org/comm-central/source/mail/test/mozmill/content-policy/test-js-content-policy.js">http://mxr.mozilla.org/comm-central/source/mail/test/mozmill/content-policy/test-js-content-policy.js</a></li>
+ <li><a href="http://mxr.mozilla.org/comm-central/source/mail/test/mozmill/search-window/test-right-click-to-open-search-window.js">http://mxr.mozilla.org/comm-central/source/mail/test/mozmill/search-window/test-right-click-to-open-search-window.js</a></li>
+</ul>
+
+<p>Need info on:</p>
+
+<ul>
+ <li>Support modules</li>
+ <li>Profiles</li>
+ <li>Running MozMill in a normal profile</li>
+ <li>...</li>
+</ul>
+
+<div class="blockIndicator obsolete obsoleteHeader"><p><strong><span class="icon-only-inline" title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span> Obsolete since Gecko 9 (Firefox 9 / Thunderbird 9 / SeaMonkey 2.6)</strong><br>This feature is obsolete. Although it may still work in some browsers, its use is discouraged since it could be removed at any time. Try to avoid using it.</p></div>
+
+<h3 id="Installing_MozMill">Installing MozMill</h3>
+
+<p><strong>Starting Thunderbird 9, MozMill no longer needs to be installed separately. It is included in the sources and will be installed into a virtual environment during the build process. So you can proceed with <a href="/en/Thunderbird/Thunderbird_MozMill_Testing#Running_Mozmill_Tests">Running Mozmill Tests</a>.</strong></p>
+
+<p>Thunderbird's MozMill test harness currently requires using MozMill 1.4.2b1; more recent versions will not work at this time.  If you need to use a more recent version of mozmill for other software development, you will want to look into <a class="external" href="http://pypi.python.org/pypi/virtualenv" title="http://pypi.python.org/pypi/virtualenv">virtualenv</a>.</p>
+
+<h4 id="Windows">Windows</h4>
+
+<p>You'll need <a class="internal" href="/En/Developer_Guide/Build_Instructions/Windows_Prerequisites#MozillaBuild" title="En/Developer Guide/Build Instructions/Windows
+Prerequisites#MozillaBuild">MozillaBuild 1.4 or higher</a> for this. Start a MozillaBuild prompt and use it to install MozMill 1.4.2b1:</p>
+
+<pre> easy_install http://pypi.rhaptos.org/mozrunner/mozrunner-2.5.2.tar.gz
+ easy_install http://pypi.rhaptos.org/jsbridge/jsbridge-2.3.7b1.tar.gz
+ easy_install http://pypi.rhaptos.org/mozmill/mozmill-1.4.2b1.tar.gz
+</pre>
+
+<h4 id="MacLinux">Mac/Linux</h4>
+
+<p>You'll need root privileges for this.</p>
+
+<pre> sudo easy_install http://pypi.rhaptos.org/mozrunner/mozrunner-2.5.2.tar.gz
+ sudo easy_install http://pypi.rhaptos.org/jsbridge/jsbridge-2.3.7b1.tar.gz
+ sudo easy_install http://pypi.rhaptos.org/mozmill/mozmill-1.4.2b1.tar.gz
+</pre>
+
+<p>If you, for some reason, need a different version, see <a class="internal" href="/en/Thunderbird/Thunderbird_MozMill_Testing/MozMill_Development_Install" title="en/Thunderbird/Thunderbird MozMill Testing/MozMill Development Install">MozMill Development Install</a>.</p>
+
+<h3 id="sect1"><a name="runtests"></a></h3>

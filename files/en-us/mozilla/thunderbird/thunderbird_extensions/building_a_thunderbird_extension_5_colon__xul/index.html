@@ -1,0 +1,44 @@
+---
+title: 'Building a Thunderbird extension 5: XUL'
+slug: >-
+  Mozilla/Thunderbird/Thunderbird_extensions/Building_a_Thunderbird_extension_5:_XUL
+tags:
+  - Extensions
+  - thunderbird
+---
+<p>{{AddonSidebar}}</p>
+
+<p>{{ warning("This content is for older versions of Thunderbird. Much of it may no longer be relevant. See developer.thunderbird.net for newer information.") }}</p>
+
+<p>Thunderbird's user interface is written in <a href="/en/XUL" title="https://developer.mozilla.org/en/XUL">XUL </a>and <a href="/en/JavaScript" title="https://developer.mozilla.org/en/JavaScript">JavaScript</a>. XUL is an XML grammar that provides user interface widgets like buttons, menus, toolbars, trees etc. We add widgets by inserting new XUL DOM elements into the application window and modify them using scripts and attaching event handlers. While XUL provides the elements of the user interface, actions are written in JavaScript.</p>
+
+<p>For our first extension, we will add some text to the Thunderbird status bar. The status bar is implemented in a XUL file called <code>messenger.xul</code>, which can be found in the <code>chrome/messenger/content/messenger</code>  folder which is packaged inside the <a href="/en/About_omni.jar" title="en/About omni.jar">omni.ja</a> archive. To view this XUL file use the <s><a class="link-https" href="https://addons.mozilla.org/en-US/thunderbird/addon/dom-inspector/" title="https://addons.mozilla.org/en-US/thunderbird/addon/dom-inspector/">DOM Inspector</a> extension</s> (no longer supported) or look inside the <a href="/en/About_omni.jar" title="en/About omni.jar">omni.ja</a> archive, which is located in the Thunderbird program folder. omni.ja can be easily browsed by copying the file to a different location and renaming it to omni.zip. If you have trouble with one zip manager (like 7zip) try another (like WinRAR). In <code>messenger.xul</code> we find the status bar, which looks something like this.:</p>
+
+<pre class="brush: xml notranslate">&lt;statusbar id="status-bar" ...&gt;
+ ... &lt;statusbarpanel&gt;s ...
+&lt;/statusbar&gt;
+</pre>
+
+<p><span class="nowiki"><code>&lt;statusbar id="status-bar"&gt;</code></span> is a "merge point" for a XUL overlay. <a href="../../../../en/XUL_Overlays" rel="internal">XUL Overlays</a> are a way of attaching other UI widgets to a XUL document at run time. A XUL Overlay is a <code>.xul</code> file that specifies XUL fragments to insert at specific merge points within a <strong>"</strong>master<strong>"</strong> document. These fragments can specify widgets to be inserted, removed or modified.</p>
+
+<p>In this example you are adding a line to the indented statusbar. Therefore it becomes an item owned by the id called "<code>status-bar</code>". This shows how the Thunderbird architecture allows extensions to modify the user experience without modifying the installation files. This also enables version independence between Thunderbird and Thunderbird extensions.</p>
+
+<p><strong>Example XUL Overlay Document</strong></p>
+
+<p>Create a new file called <code><strong>myhelloworld.xul</strong></code> within the <code>content</code> folder you created earlier with the following content:</p>
+
+<pre class="brush: html notranslate">&lt;?xml version="1.0"?&gt;
+&lt;overlay id="sample"
+xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+ &lt;script type="application/javascript" src="chrome://myfirstext/content/overlay.js"/&gt;&lt;!-- A reference to your JavaScript file --&gt;
+ &lt;statusbar id="status-bar"&gt;
+  &lt;statusbarpanel id="my-panel" label="Date"/&gt;
+ &lt;/statusbar&gt;
+&lt;/overlay&gt;
+</pre>
+
+<p>The <span class="nowiki"><code>&lt;statusbar</code>&gt;</span> widget named <code><strong>status-bar</strong></code> specifies the merge point within the application window that we want to attach to. When parsing our overlay file, the XUL engine will take all child elements of the <span class="nowiki">&lt;statusbar&gt;</span> tag and merge them with the original XUL document's <span class="nowiki">&lt;statusbar&gt;</span> tag. In the example above we have defined a new <span class="nowiki">&lt;statusbarpanel&gt;</span> item (that can be referred to as <strong><code>my-panel</code></strong>) which will create a new instance of this widget type and add it at the end of the statusbar. In Thunderbird it will appear as a label at the right side of Thunderbird's statusbar and display "Date".  We have also added a &lt;script&gt; tag that contains a reference to the JavaScript file <strong><code>overlay.js</code></strong>. In the next section you will learn how to use JavaScript to modify your label so that it shows the current date.</p>
+
+<div class="note">The <strong>overlay.js</strong> file will be created in a later section and your add-on will still work if the file is missing. For now you can ignore this line, but remember that this is how you reference a JavaScript file.</div>
+
+<p>{{ PreviousNext("Extensions/Thunderbird/Building_a_Thunderbird_extension_4:_chrome_manifest", "Extensions/Thunderbird/Building_a_Thunderbird_extension_6:_Adding_Javascript") }}</p>

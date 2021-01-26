@@ -1,0 +1,65 @@
+---
+title: DB Views (message lists)
+slug: Mozilla/Thunderbird/DB_Views_(message_lists)
+tags:
+  - MailNews
+  - thunderbird
+---
+<p>The thread pane (aka message list) is driven by classes that implement {{ Interface("nsIMsgDBView") }} and inherit from <a class="external" href="https://dxr.mozilla.org/comm-central/source/comm/mailnews/base/src/nsMsgDBView.h#108" title="https://dxr.mozilla.org/comm-central/source/comm/mailnews/base/src/nsMsgDBView.h#108">nsMsgDBView</a>. These are the main view classes:</p>
+
+<ul>
+ <li><code>nsMsgThreadedDBView - <a class="external" href="https://dxr.mozilla.org/comm-central/source/comm/mailnews/base/src/nsMsgThreadedDBView.cpp" title="https://dxr.mozilla.org/comm-central/source/comm/mailnews/base/src/nsMsgThreadedDBView.cpp">(implementation)</a></code></li>
+ <li><code>nsMsgSearchDBView - <a class="external" href="https://dxr.mozilla.org/comm-central/source/comm/mailnews/base/src/nsMsgSearchDBView.cpp" title="https://dxr.mozilla.org/comm-central/source/comm/mailnews/base/src/nsMsgSearchDBView.cpp">(implementation)</a></code></li>
+ <li><code>nsMsgQuickSearchDBView - <a class="external" href="https://dxr.mozilla.org/comm-central/source/comm/mailnews/base/src/nsMsgQuickSearchDBView.cpp" title="https://dxr.mozilla.org/comm-central/source/comm/mailnews/base/src/nsMsgQuickSearchDBView.cpp">(implementation)</a></code></li>
+ <li><code>nsMsgXFVirtualFolderDBView - <a class="external" href="https://dxr.mozilla.org/comm-central/source/comm/mailnews/base/src/nsMsgXFVirtualFolderDBView.cpp" title="https://dxr.mozilla.org/comm-central/source/comm/mailnews/base/src/nsMsgXFVirtualFolderDBView.cpp">(implementation)</a></code></li>
+ <li><code>nsMsgGroupView - <a class="external" href="https://dxr.mozilla.org/comm-central/source/comm/mailnews/base/src/nsMsgGroupView.cpp" title="https://dxr.mozilla.org/comm-central/source/comm/mailnews/base/src/nsMsgGroupView.cpp">(implementation)</a></code></li>
+</ul>
+
+<p>Usually, a view object has parallel arrays, which map directly to lines in the message list:</p>
+
+<dl>
+ <dt><code>m_keys</code></dt>
+ <dd>Message header key</dd>
+ <dt><code>m_flags</code></dt>
+ <dd>32 bits, combination of message header flags and view-only flags (e.g., collapsed)</dd>
+ <dt><code>m_level</code></dt>
+ <dd>The indentation level when in threaded mode.</dd>
+ <dt><code>m_folders</code></dt>
+ <dd>Cross-folder views only (<code>nsMsgSearchDBView</code> and its descendant, <code>nsMsgXFVirtualFolderDBView</code>)</dd>
+</dl>
+
+<p>Most of the time, the thread pane is driven by an <code>nsMsgThreadedDBView</code> object (even when we're in a flat sort). If the user does a quick search or picks a view from the view menu, we create an <code>nsMsgQuickSearchDBView</code>. Advanced search results are displayed with an <code>nsMsgSearchDBView</code>, and cross-folder saved searches use <code>nsMsgXFVirtualFolderDBView</code>, which inherits from <code>nsMsgSearchDBView</code>.</p>
+
+<p><code>nsMsgGroupView</code> is used when grouping is turned on. One unique thing about <code>nsMsgGroupView</code> is that instead of using the message database's <a class="external" href="https://dxr.mozilla.org/comm-central/source/comm/mailnews/db/msgdb/public/nsMsgThread.h#50" title="https://dxr.mozilla.org/comm-central/source/comm/mailnews/db/msgdb/public/nsMsgThread.h#50">nsMsgThread</a> objects like the other view classes, it uses an <code>nsMsgGroupThread</code> object, which also implements {{ Interface("nsIMsgThread") }}.</p>
+
+
+
+<h2 id="View_Flags_and_Types" name="View_Flags_and_Types">View Flags and Types</h2>
+
+<p>The <a href="/en/nsMsgViewFlagsType" title="en/nsMsgViewFlagsType">view flags</a> <a class="external" href="https://dxr.mozilla.org/comm-central/source/comm/mailnews/base/public/nsIMsgDBView.idl#65" title="https://dxr.mozilla.org/comm-central/source/comm/mailnews/base/public/nsIMsgDBView.idl#65">(external reference)</a> are not exclusive. The <a href="/en/nsMsgViewType" title="en/nsMsgViewType">view types</a> <a class="external" href="http://mxr.mozilla.org/mozilla/source/mailnews/base/public/nsIMsgDBView.idl#66">(external reference)</a> are. These are the values filed in {{ Interface("nsIDBFolderInfo") }} to remember the view settings for the folder.</p>
+
+
+
+<h2 id="View_Interaction_with_nsITreeView" name="View_Interaction_with_nsITreeView">View Interaction with nsITreeView</h2>
+
+<p>The {{ Interface("nsITreeView") }} methods in <a class="external" href="http://mxr.mozilla.org/mozilla/source/mailnews/base/src/nsMsgDBView.cpp">nsMsgDBView.cpp</a> control the appearance of the thread pane.</p>
+
+<h3 id="Properties" name="Properties">Properties</h3>
+
+<p>These nsMsgDBView methods set properties,</p>
+
+<ul>
+ <li><code>nsITreeView.getRowProperties</code> (<a class="external" href="http://mxr.mozilla.org/mozilla/source/mailnews/base/src/nsMsgDBView.cpp#1131">implementation</a>)</li>
+ <li><code>nsITreeView.getCellPropreties</code> (<a class="external" href="http://mxr.mozilla.org/mozilla/source/mailnews/base/src/nsMsgDBView.cpp#1164">implementation</a>)</li>
+</ul>
+
+<h3 id="Theming" name="Theming">Theming</h3>
+
+<p>The theme uses these properties to style the thread pane. See the <a href="/en/XUL_Tutorial/Styling_a_Tree" title="en/XUL_Tutorial/Styling_a_Tree">tutorial</a> for information about styling trees using css, and the Thunderbird source for some <a class="external" href="https://dxr.mozilla.org/comm-central/source/comm/mail/themes/qute/mail/mailWindow1.css">example css</a>.</p>
+
+<h3 id="Text" name="Text">Text</h3>
+
+<dl>
+ <dt>nsITreeView.getCellText (<a class="external" href="http://mxr.mozilla.org/mozilla/source/mailnews/base/src/nsMsgDBView.cpp#1704">implementation</a>)</dt>
+ <dd>Tells the {{ Interface("nsITreeView") }} what text to display for a particular row and text column.</dd>
+</dl>

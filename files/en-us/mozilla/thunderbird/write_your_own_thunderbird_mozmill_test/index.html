@@ -1,0 +1,31 @@
+---
+title: Write Your Own Thunderbird MozMill Test
+slug: Mozilla/Thunderbird/Write_Your_Own_Thunderbird_MozMill_Test
+---
+<p>{{ draft() }}</p>
+<p>This page attempts to be a basic guide to writing your own Thunderbird MozMill Test.</p>
+<h3 id="Getting_the_existing_MozMill_tests_Running">Getting the existing MozMill tests Running</h3>
+<p>Currently you need:</p>
+<ul>
+  <li>Thunderbird source, compiled and built (see <a href="/en/Simple_Thunderbird_build" title="en/Simple Thunderbird build">Simple Thunderbird Build</a>).</li>
+  <li>MozMill, MozRunner and jsBridge installed (see the main <a href="/en/Thunderbird/Thunderbird_MozMill_Testing" title="en/Thunderbird/Thunderbird MozMill Testing">Thunderbird MozMill Testing</a> page)</li>
+</ul>
+<p>Once you have both of those, cd into your object directory (of what?) and try running MozMill:</p>
+<pre><code>make mozmill</code>
+</pre>
+<p>If you want to run just one set of tests rather than all of them, then you can do:</p>
+<pre>make SOLO_TEST=content_policy mozmill-one
+</pre>
+<p>The file {{ source("mail/test/mozmill/mozmilltests.list", "mozmilltests.list") }} tells you the available sets of tests.</p>
+<p>If the tests don't pass, check the <a class="external" href="http://tinderbox.mozilla.org/Thunderbird/" title="http://tinderbox.mozilla.org/Thunderbird/">Tinderbox</a> to ensure that the code you pulled is passing. You may also be seeing one of a few intermittent failures which are tracked from <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=tbmozmillorange" title="https://bugzilla.mozilla.org/show_bug.cgi?id=tbmozmillorange">this bug</a>.</p>
+<h3 id="Write_Your_Own_Test">Write Your Own Test</h3>
+<p>Now that you've got the tests running, you can start writing your own. When you need to do a mozmill test, you have several options:</p>
+<ul>
+  <li>Modify an existing test
+    <ul>
+      <li><a class="link-https" href="https://litmus.mozilla.org/">https://litmus.mozilla.org/</a></li>
+    </ul>
+  </li>
+  <li>Write a new test file in an existing test set</li>
+  <li>Write a new set of tests (even if it just contains one file)</li>
+</ul>

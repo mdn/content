@@ -1,0 +1,49 @@
+---
+title: Cached compose window FAQ
+slug: Mozilla/Thunderbird/Cached_compose_window_FAQ
+tags:
+  - Guide
+  - Intermediate
+  - thunderbird
+---
+<p>{{ outdated("It was imported from mozilla.org and last updated in 2003.") }}</p>
+
+<p><a class="link-mailto" href="mailto:sspitzer@mozilla.org">Seth Spitzer (sspitzer@mozilla.org)</a><br>
+ <strong style="font-weight: bold;">What is the "cached" compose window</strong><strong style="font-weight: bold;">?</strong><br>
+ Instead of destroying the mail compose window on send (or close) just to create a new one the next time, Mozilla Mail will "cache" the compose window on send (or close), and use that instead.  The downsides are that we have had some bugs, it complicates and bloats the code, and it requires more testing.  The upside is that is has been a major performance win<br>
+ <br>
+ <strong style="font-weight: bold;">Why did you do this?</strong><br>
+ Back 0.9.7, we hit a wall with the compose window.  Any new window performance problems that mozilla has are especially painful in mail compose, as we need to create a new compose window on every new mail message or reply.<br>
+ <br>
+ But we noticed that the common usage pattern is to compose, send, compose, send, compose send.  We decided it would be worth the trouble to cache the compose window.  If  the user has this usage pattern, we wouldn't have to create a new window.  We could just hide it on send, and then show it on the next compose.  If the user opens (but never sends or closes compose windows), this trick will not apply to them.  But this is not a common usage model.<br>
+ <br>
+ <strong style="font-weight: bold;">How do I test it?</strong><br>
+ On window and mac, the cached compose window is on by default.  To test it</p>
+
+<ol>
+ <li>start mozilla </li>
+ <li>do new message.  this is a new compose window.  notice how long it took.</li>
+ <li>close or send the window. (the compose window is now cached)</li>
+ <li>do new message again.  this is the cached compose window.  it should have been faster than in step 2.</li>
+ <li>close or send the window. (the compose window is cached again)</li>
+ <li>do new message again.  this is the cached compose window.  it should be as fast as in step 4.</li>
+ <li>do new message again.  there is no "cached" window, so this will be as slow as step 4.</li>
+ <li>close one of the compose windows.  (this window is now cached).</li>
+ <li>close the other compose window.  (this window is not cached, since you already have a cached compose window.)</li>
+ <li>do new message again.  this is the cached compose window.  it should be as fast as in step 4.</li>
+ <li>do new message again.  there is no "cached" window, so this will be as slow as step 4.</li>
+</ol>
+
+<p>We cache at most &lt;n&gt; html compose windws and &lt;n&gt; plain text windows, where n is the value of the hidden pref.</p>
+
+<p><br>
+ <strong style="font-weight: bold;">What's the hidden pref to control it?</strong></p>
+
+<p>user_pref("mail.compose.max_recycled_windows", 1);</p>
+
+<p><br>
+ <strong style="font-weight: bold;">Where can I read more about it?</strong></p>
+
+<p>See</p>
+
+<p><a class="external" href="http://bugzilla.mozilla.org/show_bug.cgi?id=104989" title="Bug 104989 -- VERIFIED FIXED -- MailNews Core/Composition -- improve 2nd compose window time by hiding compose window on send, and re-showing it after clearing, subject, etc">http://bugzilla.mozilla.org/show_bug.cgi?id=104989</a></p>

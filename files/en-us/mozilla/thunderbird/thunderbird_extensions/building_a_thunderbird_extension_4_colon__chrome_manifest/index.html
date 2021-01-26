@@ -1,0 +1,41 @@
+---
+title: 'Building a Thunderbird extension 4: chrome manifest'
+slug: >-
+  Mozilla/Thunderbird/Thunderbird_extensions/Building_a_Thunderbird_extension_4:_chrome_manifest
+tags:
+  - Extensions
+  - thunderbird
+---
+<p>{{AddonSidebar}}</p>
+
+<p>{{ warning("This content is for older versions of Thunderbird. Much of it may no longer be relevant. See developer.thunderbird.net for newer information.") }}</p>
+
+<p>The file called <code>chrome.manifest</code> tells Thunderbird what packages and overlays are provided by the extension. Open the file called <code>chrome.manifest</code> that you created and add this code:</p>
+
+<pre class="eval">content     myfirstext    content/
+</pre>
+
+<ul>
+ <li><code><strong>content</strong></code> specifies the type of material in the package</li>
+ <li><code><strong>myfirstext</strong></code> is the name of the chrome package (specified in the first segment of <code>&lt;em:id&gt;</code> in the <code>install.rdf</code> file</li>
+ <li><code><strong>content/</strong></code> Is the location of the package's files and used when resolving the URI <code>chrome://<em>myfirstext</em>/content/...</code>.</li>
+</ul>
+
+<p>So, this line says that for a chrome package <code><strong>myfirstext</strong></code>, we can find its <strong>content</strong> files in the directory <code>content</code>/ (which is a path relative to the location of <code>chrome.manifest</code>).</p>
+
+<p>To change the Thunderbird user interface to support the extension, you create an overlay and then merge it with the default Thunderbird interface. Later in the tutorial we will create a XUL overlay file that will merge with the default <code>messenger.xul</code> file. At this point we are going to specify in <code>chrome.manifest</code> the existence of the overlay (which we will create later).</p>
+
+<p>Add this line at the end of <code>chrome.manifest:</code></p>
+
+<div id="section_8">
+<pre class="eval">overlay <a class="external" rel="freelink">chrome://messenger/content/messenger.xul</a> <a class="external" rel="freelink">chrome://myfirstext/content/myhelloworld.xul</a>
+</pre>
+
+<p>This tells Thunderbird to merge <code>myhelloworld.xul</code> into <code>messenger.xul</code> when <code>messenger.xul</code> loads. For more information on chrome manifests and the properties they support, see the <a href="../../Chrome_Registration" rel="internal">Chrome Manifest</a> Reference.</p>
+</div>
+
+<div class="note"><s>It can be useful to install an add-on such as the <a href="/en/DOM_Inspector" title="en/DOM Inspector"><strong>DOM Inspector</strong></a> to better understand the layout of existing XUL files and to debug your own overlays.</s> (not supported as of Thunderbird 60)</div>
+
+<p>{{ Previous("Extensions/Thunderbird/Building_a_Thunderbird_extension_3:_install_manifest") }}</p>
+
+<p>{{ Next("Extensions/Thunderbird/Building_a_Thunderbird_extension_5:_XUL") }}</p>

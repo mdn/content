@@ -1,0 +1,50 @@
+---
+title: Folders and message lists
+slug: Mozilla/Thunderbird/Thunderbird_extensions/HowTos/Folders_and_message_lists
+tags:
+  - Guide
+  - thunderbird
+---
+<p>{{AddonSidebar}}</p>
+
+<h2 id="Interacting_With_the_Current_Folder">Interacting With the Current Folder</h2>
+
+<p>The <code><a href="https://dxr.mozilla.org/comm-central/source/mail/base/content/folderDisplay.js">FolderDisplayWidget</a></code> for the current folder can be accessed via the global variable <code>gFolderDisplay</code>. This object provides many of the functions required for working with folder views. We'll look at some of them below.</p>
+
+<h3 id="Getting_the_Current_nsIMsgFolder">Getting the Current <code>nsIMsgFolder</code></h3>
+
+<p>The <code><a href="https://dxr.mozilla.org/comm-central/source/mailnews/base/public/nsIMsgFolder.idl">nsIMsgFolder</a></code> interface contains many methods and attributes for working with folders. To get the <code>nsIMsgFolder</code> instance for the currently-displayed folder, just use <code>gFolderDisplay.displayedFolder</code>.</p>
+
+<h3 id="Getting_the_Currently-Selected_Message">Getting the Currently-Selected Message</h3>
+
+<p>The <code>FolderDisplayWidget</code> has several ways of getting the currently-selected message(s), depending on what exactly you're trying to do:</p>
+
+<ul>
+ <li><code>gFolderDisplay.selectedCount</code>: Returns the number of messages currently selected.</li>
+ <li><code>gFolderDisplay.selectedMessage</code>: Returns the <em>first</em> currently-selected message. When using this, be sure that there's only one selected message (or that you only care about the first one). Otherwise, use one of the methods described below.</li>
+ <li><code>gFolderDisplay.selectedMessages</code>: Returns an array of <code><a href="https://dxr.mozilla.org/comm-central/source/mailnews/base/public/nsIMsgHdr.idl" rel="external" title="http://mxr.mozilla.org/comm-central/source/mailnews/base/public/nsIMsgHdr.idl">nsIMsgDBHdr</a></code>s for the selected messages. If a collapsed thread is in there and working with collapsed threads is enabled, this will <em>include</em> the headers for the messages in that collapsed thread.</li>
+ <li><code>gFolderDisplay.selectedMessageUris</code>: Returns an array of the URIs corresponding to the selected messages. Like <code>selectedMessages</code>, this also includes messages in selected collapsed threads when so enabled.</li>
+</ul>
+
+<h3 id="Changing_the_Current_Message_Selection">Changing the Current Message Selection</h3>
+
+<p>In addition to getting the currently-selected messages, you can also change the selection:</p>
+
+<ul>
+ <li><code>gFolderDisplay.selectMessage(<em>msgHdr</em>)</code>: Selects a single message, as specified by <em><code>msgHdr</code></em> (an <code>nsIMsgDBHdr</code>) and scrolls to its position in the message list.</li>
+ <li><code>gFolderDisplay.selectMessages(<em>arrayOfMsgHdrs</em>)</code>: Selects all the messages in the array <em><code>arrayOfMsgHdrs</code></em>. Like <code>selectMessage</code>, this function will attempt to scroll the view so the entire selection is visible (which may not be possible for large selections).</li>
+ <li><code>gFolderDisplay.clearSelection()</code>: Clears the list of selected messages.</li>
+</ul>
+
+<h3 id="Listing_Messages_in_a_Folder">Listing Messages in a Folder</h3>
+
+<p>If you have a message folder, and would like to list all the messages in that folder, you can use the <code>.messages</code> attribute, which returns an <code>nsISimpleEnumerator</code>. It's used like this:</p>
+
+<pre class="brush: js">// Import the fixIterator() function.
+Components.utils.import("resource:///modules/iteratorUtils.jsm");
+
+for (let msgHdr in fixIterator(myFolder.messages,
+                               Components.interfaces.nsIMsgDBHdr)) {
+  // Do something with msgHdr...
+}
+</pre>

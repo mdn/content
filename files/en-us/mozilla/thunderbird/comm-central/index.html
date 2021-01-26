@@ -1,0 +1,175 @@
+---
+title: comm-central
+slug: Mozilla/Thunderbird/comm-central
+tags:
+  - Developing Mozilla
+  - Guide
+  - Internationalization
+  - Mercurial
+  - NeedsUpdate
+---
+<p><span class="seoSummary"><strong><code>comm-central</code></strong> is a <a href="/en-US/docs/Mercurial" title="Mercurial">Mercurial</a> repository of the <a href="/en-US/docs/Thunderbird" title="Thunderbird">Thunderbird</a>, <a href="http://www.seamonkey-project.org/" title="http://www.seamonkey-project.org/">SeaMonkey</a>, <a href="/en-US/docs/Calendar" title="Calendar">and Lightning extension</a> code; it's located at: <a href="http://hg.mozilla.org/comm-central" rel="freelink">http://hg.mozilla.org/comm-central</a>. This article provides information about this repository and its use.</span><br>
+ <br>
+ The relevant Treeherder (to see whether it does build) pages are located at:</p>
+
+<ul>
+ <li><a class="link-https" href="https://treeherder.mozilla.org/#/jobs?repo=comm-central" rel="freelink">https://treeherder.mozilla.org/#/jobs?repo=comm-central</a></li>
+</ul>
+
+<div class="blockIndicator note">
+<p><strong>Note:</strong> The comm-central code only includes a subset of the code required to build Thunderbird, SeaMonkey and Sunbird. See <a href="/en/Comm-central_source_code_(Mercurial)">Comm-central source code (Mercurial)</a> for how to get the other required code.</p>
+</div>
+
+<h3 id="Nightly_builds">Nightly builds</h3>
+
+<p>If you're looking for Nightly Builds of comm-central, then see the links for <a href="/en-US/docs/Thunderbird/Thunderbird_Binaries" title="Thunderbird/Thunderbird Binaries">Thunderbird</a>, SeaMonkey (TBD) and Calendar (TBD).</p>
+
+<h3 id="Building_comm-central_applications">Building comm-central applications</h3>
+
+<p>For the comm-central apps, see the following links:</p>
+
+<ul>
+ <li><a href="/en-US/docs/Simple_Thunderbird_build" title="Simple Thunderbird build">Simple Thunderbird Build</a></li>
+ <li><a href="/en-US/docs/Simple_SeaMonkey_build" title="Simple SeaMonkey build">Simple SeaMonkey Build</a></li>
+ <li><a href="/en-US/docs/Simple_Sunbird_build" title="Simple Sunbird build">Simple Sunbird Build</a></li>
+</ul>
+
+<h2 id="comm-central_tree_rules" name="comm-central_tree_rules">comm-central tree rules</h2>
+
+<p>This section summarizes rules for the comm-central source code repository.</p>
+
+<h3 id="Requirements">Requirements</h3>
+
+<ul>
+ <li>Do not check in until you have appropriate <a href="/en-US/docs/Code_Review_FAQ" rel="internal">review</a>, including <a href="http://www.mozilla.org/hacking/reviewers.html" rel="external nofollow" title="http://www.mozilla.org/hacking/reviewers.html">super-review</a> and <a class="link-https" href="https://wiki.mozilla.org/TreeStatus" rel="external nofollow" title="https://wiki.mozilla.org/TreeStatus">approval</a> if needed. Special review instructions to specific comm-central applications and code can be found from the links below:
+
+  <ul>
+   <li><a href="/en-US/docs/Mailnews_and_Mail_code_review_requirements" title="Mailnews and Mail code review requirements">mailnews/ and mail/ specific rules</a></li>
+   <li><a href="http://www.seamonkey-project.org/dev/review-and-flags" title="http://www.seamonkey-project.org/dev/review-and-flags">suite/ specific rules</a></li>
+   <li><a class="link-https" href="https://wiki.mozilla.org/Calendar:Module_Ownership" title="https://wiki.mozilla.org/Calendar:Module_Ownership">calendar/ specific rules</a></li>
+   <li>Build Config (TBD)</li>
+  </ul>
+ </li>
+ <li>You should be available for the next hour or so in case something goes wrong with your checkin (This is roughly the time it takes to get unit test results from all platforms.</li>
+</ul>
+
+<h3 id="Regressions">Regressions</h3>
+
+<ul>
+ <li>Automated unit tests must pass</li>
+ <li>Any Leak tests must not regress</li>
+</ul>
+
+<p>Any regressions on <a href="/en-US/docs/Supported_build_configurations" rel="internal">tier-1 platforms</a> are cause for immediate backout. Regressions on tier-2 platforms are usually not cause for backout, but you will be expected to help fix them if needed.</p>
+
+<p>If you think your patch <em>might</em> cause regressions, land on the <a class="link-https" href="https://wiki.mozilla.org/Thunderbird/Infrastructure/TryServer" title="https://wiki.mozilla.org/Thunderbird/Infrastructure/TryServer">Thunderbird Try Server</a> <a href="http://wiki.mozilla.org/Build:TryServer" rel="external nofollow" title="http://wiki.mozilla.org/Build:TryServer">(read about what a try server is)</a> first.</p>
+
+<h2 id="Pushing_changes_to_comm-central" name="Pushing_changes_to_comm-central">Pushing changes to comm-central</h2>
+
+<p>See <a href="/en-US/docs/Mercurial_FAQ#How_do_I_check_stuff_in.3F" rel="internal">How do I check stuff in?</a> for help with hg commit and hg push. If you believe you should have access to mozilla-central but don't know your login details, <a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=mozilla.org&amp;component=Server+Operations:+Account+Requests" rel="external nofollow" title="https://bugzilla.mozilla.org/enter_bug.cgi?product=mozilla.org&amp;component=Server+Operations:+Account+Requests">file a bug</a>.</p>
+
+<ul>
+ <li>Changes must not introduce multiple heads into comm-central.</li>
+ <li>Please try to keep history tidy. A single commit or a few independent changesets are preferable to many "work in progress" changesets which clutter history. Consider using <a href="/en-US/docs/Mercurial_Queues" title="Mercurial_Queues">Mercurial queues</a> to manage patches before checkin.</li>
+ <li>At least the final changeset being pushed should list the bug number and reviewer for the relevant change.</li>
+ <li>Your <strong>commit comment</strong> must include the bug number and reviewers. It should contain the summary of the bug or a clear explanation of the fix.</li>
+ <li>If you are not the author of the code, make that clear, preferably using <code>commit -u "Patch Author &lt;<a class="link-mailto" href="mailto:email@example.com" rel="freelink">email@example.com</a>&gt;"</code>.</li>
+</ul>
+
+<h2 id="comm-central_code_layout" name="comm-central_code_layout">comm-central code layout</h2>
+
+<p>These directories are included in the comm-central repository:</p>
+
+<dl>
+ <dt><code>build/</code></dt>
+ <dd>Miscellaneous files used by the build process.</dd>
+ <dt><code><a href="http://mxr.mozilla.org/comm-central/source/calendar/">calendar/</a></code></dt>
+ <dd>Lightning extension and Sunbird specific source code.</dd>
+ <dt><code>config/</code></dt>
+ <dd>Files required for the comm-central build process.</dd>
+ <dt><code>ldap/xpcom/</code></dt>
+ <dd>An XPCOM wrapper for the LDAP c-sdk. Used for communicating with LDAP servers.</dd>
+ <dt> </dt>
+ <dt><code>editor/</code></dt>
+ <dd>UI for the Compose window (Thunderbird/SeaMonkey) and the Composer part of SeaMonkey.</dd>
+ <dt><code><a href="http://wiki.mozilla.org/Thunderbird:Code_Layout">mail/</a></code></dt>
+ <dd>Thunderbird specific source code.</dd>
+ <dt><code><a href="http://wiki.mozilla.org/MailNews:Code_Layout">mailnews/</a></code></dt>
+ <dd>Source code specific to the <a href="/en-US/docs/MailNews" title="MailNews">Mail and Newsgroups part</a> of Thunderbird and SeaMonkey.</dd>
+ <dt><code>other-licenses/</code></dt>
+ <dd>Code that is not under the Mozilla tri-license (e.g. official branding) see <a href="http://www.mozilla.org/MPL/" rel="freelink">http://www.mozilla.org/MPL/</a> for more info.</dd>
+ <dt><code><a href="http://wiki.mozilla.org/SeaMonkey:Suite_Directory_Layout">suite/</a></code></dt>
+ <dd>SeaMonkey specific source code.</dd>
+</dl>
+
+<dl>
+ <dt><span style="font-size: 14px; font-weight: normal; line-height: 1.5;">These directories are included after </span><code style="font-size: 14px; font-style: normal; line-height: 1.5;"><a href="/en-US/docs/Developer_Guide/Source_Code/Getting_comm-central#Checking_out_a_source_tree" title="Comm-central_source_code_(Mercurial)#Checking_out_a_source_tree">client.py</a></code><span style="font-size: 14px; font-weight: normal; line-height: 1.5;"> has been run:</span></dt>
+</dl>
+
+<div><font face="Courier New, Andale Mono, monospace"><span style="font-size: 14px; font-style: inherit; font-weight: inherit; line-height: 1.5;">lda</span></font><font face="Courier New, Andale Mono, monospace"><span style="font-size: 14px; font-style: inherit; font-weight: inherit; line-height: 1.5;">p/sdk</span></font><span style="font-family: 'Courier New','Andale Mono',monospace; font-size: 14px; font-style: inherit; font-weight: inherit; line-height: 1.5;">s</span></div>
+
+<dl>
+</dl>
+
+<dl>
+ <dd>The <a href="https://hg.mozilla.org/projects/ldap-sdks/" title="LDAP_C_SDK">LDAP C SDK</a> code pulled from mozilla mecurial repository.</dd>
+</dl>
+
+<dl>
+ <dt><code><a href="/en-US/docs/mozilla-central" title="mozilla-central">mozilla/</a></code></dt>
+ <dd>The Firefox/xulrunner code base pulled from the <a href="/en-US/docs/mozilla-central" title="mozilla-central">mozilla-central</a> repository. See <a href="/en-US/docs/Mozilla_Source_Code_Directory_Structure" title="Mozilla_Source_Code_Directory_Structure">Mozilla_Source_Code_Directory_Structure</a> for more details of its structure.</dd>
+ <dt><a href="http://mxr.mozilla.org/seamonkey/source/extensions/irc" style="font-family: 'Courier New', 'Andale Mono', monospace; font-style: inherit; font-weight: inherit; font-size: 14px; line-height: 1.5;">mozilla/extensions/irc</a></dt>
+ <dd>Code for the Chatzilla extension, pulled from Mercurial.</dd>
+ <dt><code><a href="http://hg.mozilla.org/venkman/" title="http://hg.mozilla.org/venkman/">mozilla/extensions/venkman</a></code></dt>
+ <dd>Code for the Venkman extension, pulled from Mercurial.</dd>
+ <dt><code><a href="http://hg.mozilla.org/dom-inspector/" title="http://hg.mozilla.org/dom-inspector/">mozilla/extensions/inspector</a></code></dt>
+ <dd>Code for the DOM Inspector extension, pulled from Mercurial.</dd>
+</dl>
+
+<p>{{Note("For the directories currently pulled from cvs, it is expected that some of these will be made obsolete and some will be migrated to Mercurial.")}}</p>
+
+<h2 id="Branches">Branches</h2>
+
+<p>comm-central is branched at various times to provide a stable location for final development of comm-central applications and for security and stability releases. The branches to date are:</p>
+
+<table style="width: 100%;">
+ <thead>
+  <tr>
+   <th scope="col">Branch</th>
+   <th scope="col">Gecko Version</th>
+   <th scope="col">Applications</th>
+   <th scope="col">Base Tag</th>
+   <th scope="col">Date Created</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a href="http://hg.mozilla.org/releases/comm-1.9.2/" title="http://hg.mozilla.org/releases/comm-1.9.2/">http://hg.mozilla.org/releases/comm-1.9.2/</a></td>
+   <td>1.9.2</td>
+   <td>Thunderbird 3.1, Lightning 1.0b2</td>
+   <td>COMM_1_9_2_BASE</td>
+   <td>Mon Apr 26 10:32:47 2010 -0700</td>
+  </tr>
+  <tr>
+   <td><a href="http://hg.mozilla.org/releases/comm-1.9.1/" title="http://hg.mozilla.org/releases/comm-1.9.1/">http://hg.mozilla.org/releases/comm-1.9.1/</a></td>
+   <td>1.9.1</td>
+   <td>Thunderbird 3.0, SeaMonkey 2.0, Sunbird 1.0b1, Lightning 1.0b1</td>
+   <td>COMM_1_9_1_BASE</td>
+   <td>Thu Oct 22 05:41:21 2009 -0700</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The Base Tag is applied to both the comm-central and comm-* repositories and shows where the branch actually took place.</p>
+
+<p>As we cannot take string changes on a stable branch, the built-in extensions that are shipped by SeaMonkey (chatzilla, dom-inspector, venkman) also have a named branch called <code>COMM_1_9_1_BRANCH</code> based on a <code>COMM_1_9_1_BASE</code> in their Mercurial repositories, and the client.py script in the comm-1.9.1 repository pulls from that (due to recognizing this somewhat late in this cycle, this was only introduced on December 17, 2009; see {{bug(534422)}}.</p>
+
+<h2 id="See_also" name="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Developer_Guide/Source_Code/Getting_comm-central" title="Comm-central source code (Mercurial)">Comm-central source code (Mercurial)</a></li>
+ <li><a href="/en-US/docs/How_comm-central's_build_system_works" title="How_comm-central's_build_system_works">How comm-central's build system works</a></li>
+ <li><a href="/en-US/docs/Mercurial_FAQ" title="Mercurial_FAQ">Mercurial FAQ</a></li>
+ <li><a href="/en-US/docs/mozilla-central" title="mozilla-central">mozilla-central</a></li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/showdependencytree.cgi?id=433384&amp;hide_resolved=1">Tracking: issues making development difficult on mozilla-central</a></li>
+</ul>

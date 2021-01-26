@@ -1,0 +1,85 @@
+---
+title: Thunderbird Binaries
+slug: Mozilla/Thunderbird/Thunderbird_Binaries
+tags:
+  - Branch
+  - Trunk
+  - comm-central
+  - thunderbird
+---
+<p>Described below are three types of generally available Thunderbird packages - Releases, Early Preview Releases, and Nightly Builds (including trunk development builds) - and their downloaded locations.  Additionally, ad-hoc packages called <a class="link-https" href="https://wiki.mozilla.org/Thunderbird/Infrastructure/TryServer" title="https://wiki.mozilla.org/Thunderbird/Infrastructure/TryServer">try builds</a> are made available on an as-needed basis to allow for testing of certain patches, and are typically announced in related bug reports.</p>
+
+<h3 id="Releases">Releases</h3>
+
+<p>Thunderbird releases have been extensively tested and are made available for anyone to download and use it.</p>
+
+<p>Thunderbird current release can be downloaded from <a href="https://www.mozilla.org/thunderbird/">https://www.mozilla.org/thunderbird/</a></p>
+
+<p>Past Thunderbird releases can be downloaded from <a href="https://releases.mozilla.org/pub/thunderbird/releases/">https://releases.mozilla.org/pub/thunderbird/releases/</a></p>
+
+<h3 id="Early_Preview_Releases">Early Preview Releases</h3>
+
+<p>Whilst writing new versions of Thunderbird, developers release preview versions, known as Betas. These builds are made to get feedback from testers and extension developers.</p>
+
+<p>{{ note("While Beta builds have had some testing, they should be considered preview only and should not be used in a production environment. Please read the release notes before downloading.") }}</p>
+
+<p>Preview Releases are available from <a href="http://www.mozilla.org/thunderbird/channel/">http://www.mozilla.org/thunderbird/channel/</a></p>
+
+<h3 id="Nightly_Builds">Nightly Builds</h3>
+
+<p>Nightly builds are cutting-edge builds. They are built every 24 hours by the <a class="internal" href="/en/Tinderbox" title="en/Tinderbox">tinderboxes</a> from the very latest source code. There are various sorts of nightly builds available for download. If you wish to download nightly builds to help us test for the next release, please read the <a class="link-https" href="https://wiki.mozilla.org/Thunderbird:Testing" title="https://wiki.mozilla.org/Thunderbird:Testing">testing page</a> for where we need help.</p>
+
+<p>{{ warning("Whilst developers try to ensure that nightly builds are stable, it is possible that errors can get into nightly builds that can destroy your data or harm it. They should only be used for testing purposes.<br>
+ If you wish to use a nightly build on your main profile, you should make sure you back up your profile.") }}</p>
+
+
+<h4 id="Nightly_builds_from_the_comm-central_trunk">Nightly builds from the comm-central trunk</h4>
+
+<p>The trunk is the central source code that is used for continuous and ongoing development. Trunk builds contain the very latest bleeding-edge changes and updates, as well as 64-bit builds for Windows.</p>
+
+<p>Latest English trunk builds are available at: <a href="https://archive.mozilla.org/pub/thunderbird/nightly/latest-comm-central/">https://archive.mozilla.org/pub/thunderbird/nightly/latest-comm-central/</a><br>
+ Latest localized trunk builds are available at: <a href="https://archive.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/">https://archive.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/</a></p>
+
+<p>{{ note("Please use http://ftp.stage.mozaws.net/pub/thunderbird/nightly/latest-comm-central/ because the above two links currently do not work.") }}</p>
+
+<h3 id="Frequently_asked_questions">Frequently asked questions</h3>
+
+<h4 id="What_is_the_trunk">What is the trunk?</h4>
+
+<p>The trunk is the central source code that is used for continuous and ongoing development. Trunk builds contain the very latest bleeding-edge changes and updates. The trunk can be very unstable at times, so it's good to ask around before using trunk builds.</p>
+
+<h4 id="What_is_a_branch">What is a branch?</h4>
+
+<p>Branches are "forks" in the code, split from the trunk and destined to become end-user releases. At conception, a branch contains everything that the trunk contains, but from that point onwards, only certain fixes or changes will be accepted. Therefore, over time, the branch becomes more stable.</p>
+
+<h4 id="Why_branch_Wouldn't_it_be_better_to_have_everyone_working_towards_a_release">Why branch? Wouldn't it be better to have everyone working towards a release?</h4>
+
+<p>Many developers prefer to work on areas of the code which are too risky to change when approaching a release. Some of their changes may also take months to test and implement correctly. Their changes will be made to the trunk so that they don't delay the release and will be picked up in future branches.</p>
+
+<h4 id="Distinguishing_between_different_nightly_builds">Distinguishing between different nightly builds</h4>
+
+<p>The main way you can determine if you are using a trunk or branch build is to click the "Help" menu and choose "About". You should see a string that looks something like this:<br>
+ <br>
+ comm-central-1.9.2 branch:</p>
+
+<div class="note"><code>Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.2.2pre) Gecko/20100308 Lanikai/3.1b1pre</code></div>
+
+<dl class="codebox">
+</dl>
+
+<p>comm-central-trunk:</p>
+
+<div class="note"><code>Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.3a1pre) Gecko/20090826 Shredder/3.1a1pre</code></div>
+
+<p> </p>
+
+<p>The part that you want to note is the Gecko revision number (rv) and the Thunderbird version string. These correspond to which build you are using. It works something like this:</p>
+
+<p> </p>
+
+<p>rv:1.7.x and Thunderbird 1.0.x = Gecko 1.7 (Thunderbird 1.0) Branch.<br>
+ rv:1.8.0.x and Thunderbird 1.5.0.x = Gecko 1.8.0 (Thunderbird 1.5) Branch.<br>
+ rv:1.8.1.x and Thunderbird 2.0.0.x = Gecko 1.8.1 (Thunderbird 2) Branch.<br>
+ rv:1.9.1.x and Thunderbird (or Shredder) 3.0.x = Gecko 1.9.1 (Thunderbird 3.0) Branch.<br>
+ rv:1.9.2.x and Thunderbird (or Lanikai) 3.1.x = Gecko 1.9.2 (Thunderbird 3.1) Branch.<br>
+ rv:2.0.0.x and Thunderbird (or Shredder/Miramar) 3.3a1pre and on = Gecko 2.0.0 (towards Thunderbird 3.3)</p>

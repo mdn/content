@@ -1,0 +1,87 @@
+---
+title: Mailnews and Mail code review requirements
+slug: Mozilla/Thunderbird/Mailnews_and_Mail_code_review_requirements
+tags:
+  - Advanced
+  - Guide
+  - thunderbird
+---
+<p>This document describes the process for reviewing patches to the mozilla/mailnews  and mozilla/mail directories. Thunderbird and SeaMonkey are the primary users of the code in mozilla/mailnews. Thunderbird's front-end code is stored in mozilla/mail. (A fair amount of this code is forked from code in the mailnews/ directory).</p>
+
+<p>For background on the review process, see the <a class="internal" href="/en/Code_Review_FAQ" title="en/Code Review FAQ">Code Review FAQ</a>. See the <a class="internal" href="/en/comm-central" title="en/comm-central">comm-central</a> page for a detailed description of the code repository. Please direct questions or concerns to the dev-planning mailing list/newsgroup.</p>
+
+<h3 id="Mailnews_and_Mail_review_rules">Mailnews and Mail review rules</h3>
+
+<h4 id="Patches_affecting_Thunderbird_User_Experience_or_Interfaces">Patches affecting Thunderbird User Experience or Interfaces</h4>
+
+<p>{{ Note("It is recommended that when working on bugs that affect user experience or interfaces, that ui-review is obtained at an early stage in the patch development process.") }}</p>
+
+<p>Getting early ui-reviews this reduces the chance that work is rejected due to needing further user experience changes, and hence is aimed at saving time for the developer and reviewers.</p>
+
+<ul>
+ <li>All patches that affect user experience or interfaces on Thunderbird should have ui-review on those patches in addition to the reviews required below.
+  <ul>
+   <li>To obtained a ui-review on an attachment, set ui-review to '?' and enter <code>:bwinton</code> (for Blake Winton) as the requestee.  Mike Conley (:mconley) can also provide useful feedback, but Blake is the current ultimate decider for UI choices in Thunderbird.</li>
+  </ul>
+ </li>
+</ul>
+
+<h4 id="Rules_for_all_patches_affecting_mailnews_and_mail">Rules for all patches affecting mailnews/ and mail/</h4>
+
+<ul>
+ <li>Wherever possible, significant patches in a certain area should be reviewed by one of the listed sub-module owner/reviewers.</li>
+ <li>Peers may grant review in any area covered by mailnews/, provided they feel confident in their knowledge of the code being changed.</li>
+ <li>Sub-module peers may only grant review in the listed sub-module.</li>
+ <li>If a reviewer feels that the patch would benefit from additional reviews, they should request a second review from an appropriate person.</li>
+ <li>Super-review is required in certain situations: significant architectural refactoring, any change to any API, all changes that affect how code modules interact. See the <a href="http://www.mozilla.org/hacking/reviewers.html" title="http://www.mozilla.org/hacking/reviewers.html">full super-review policy</a> for more details.</li>
+</ul>
+
+<h3 id="Unit_test_rules">Unit test rules</h3>
+
+<ul>
+ <li>Patches are required to include <a href="/en/Thunderbird/Thunderbird_Automated_Testing" title="en/Thunderbird/Thunderbird Automated Testing">automated tests</a> which are run during <code>make check</code> or via MozMill in Thunderbird, but submitters are encouraged to request exceptions from reviewers in cases where the cost is believed to outweigh the benefit. Once unit tests are committed, the <code>in-testsuite+</code> flag should be set on the bug.</li>
+ <li>Unit tests must be included in patches and reviewed just like any other code.</li>
+ <li>If an <a class="external" href="http://developer.mozilla.org/en/docs/Mozilla_automated_testing">automated test framework</a> is needed but is not yet available, the developer is encouraged to write appropriate test code and commit it. A bug should be filed on the needed test framework. The <code>in-testsuite?</code> flag should be set on the bug until the framework has been completed and the test code is running automatically.</li>
+ <li>Certain build-config or tooling bugs which don't affect the actual product cannot be usefully tested. These bugs should have the <code>in-testsuite-</code> flag set.</li>
+</ul>
+
+<h3 id="Rubber-Stamp_Approvals_for_Intermittently_Failing_Orange_Test_FixesDebugging">Rubber-Stamp Approvals for Intermittently Failing ("Orange") Test Fixes/Debugging</h3>
+
+<p>In order to make it easier to debug and fix tests that fail intermittently ("intermittent orange" tests), we have created the following two rubber-stamps based on <a class="link-https" href="https://mail.mozilla.org/pipermail/tb-planning/2011-March/000899.html" title="https://mail.mozilla.org/pipermail/tb-planning/2011-March/000899.html">this proposal on the tb-planning mailing list</a>.  The procedure to use these is to be sure to:</p>
+
+<ol>
+ <li>include "rs=simple-orange-fix" or "rs=orange-debugging" in the first line of the commit message</li>
+ <li>paste a link to the pushed commit with the rubber stamp in the bug</li>
+ <li>make sure you pasted a link to any try-server pushes of the patch in the bug</li>
+</ol>
+
+<h4 id="rssimple-orange-fix">rs=simple-orange-fix</h4>
+
+<p>Requirements:</p>
+
+<ol>
+ <li>The patch is fixing an intermittent orange test failure.</li>
+ <li>The patch is a change exclusively to test logic.</li>
+ <li>The patch has identified a likely problem and fixes it; no commenting  out tests/changing what a test tests/adding huge timeouts.  (You could still ask a reviewer to approve such things, though.)</li>
+ <li>The patch does not change public test frameworks, specifically, nothing in mailnews/test/resources/ or mail/test/mozmill/shared-modules/.</li>
+ <li>For mozmill tests, the patch has passed on the try server.  For xpcshell tests, it has either passed on try or has been run locally on the appropriate platform(s).  Specifically, if the xpcshell test will do different things on Windows than it will do on OS X or Linux, it must be run on Windows and one of OS X / Linux.</li>
+ <li>The author of the patch is the module owner or a peer of the module to which the test corresponds.</li>
+ <li>A bug is still required, even if it is immediately marked fixed.</li>
+</ol>
+
+<h4 id="rsorange-debugging">rs=orange-debugging</h4>
+
+<p>Requirements:</p>
+
+<ol>
+ <li>The patch is trying to fix an intermittent orange test failure.</li>
+ <li>The patch only touches test logic.</li>
+ <li>The patch only adds/modifies logging statements, although the logs can be conditional.</li>
+ <li>The patch must have been run at least once on the try server.  (I have done some mozmill orange fixing where the try server would not duplicate the orange failures of the trunk and so in order to get the enhanced logging, the changes need to go into the trunk.)</li>
+ <li>The patch is authored by the module owner/a peer for the affected test.</li>
+ <li>There must be an associated bug tracking the orange bug to be fixed.</li>
+</ol>
+
+<h3 id="Mailnews_individuals_and_roles"><a class="link-https" href="https://wiki.mozilla.org/Modules/MailNews_Core" title="https://wiki.mozilla.org/Modules/MailNews_Core">Mailnews individuals and roles</a></h3>
+
+<h3 id="Mail_individuals_and_roles"><a class="link-https" href="https://wiki.mozilla.org/Modules:Thunderbird" title="https://wiki.mozilla.org/Modules:Thunderbird">Mail individuals and roles</a></h3>

@@ -1,0 +1,201 @@
+---
+title: customDBHeaders Preference
+slug: Mozilla/Thunderbird/Thunderbird_extensions/customDBHeaders_Preference
+---
+<p>{{AddonSidebar}}</p>
+
+<div>As you follow along the step-by-step guide in <a href="/en/Extensions/Thunderbird/Creating_a_Custom_Column" title="en/Extensions/Thunderbird/Creating_a_Custom_Column">Creating a Custom Column</a>, you may want to consider a preference setting that exposes custom header data for use in a custom column within Thunderbird's main view. The <code>mailnews.customDBHeaders</code> preference will be our focus.</div>
+
+<p> </p>
+
+<div>Some of the functionality described here is really new, so please try to be understanding if some of these things change tomorrow (or have changed already).</div>
+
+<p> </p>
+
+<div>While I was going through the <a href="/en/Extensions/Thunderbird/Creating_a_Custom_Column" title="en/Extensions/Thunderbird/Creating_a_Custom_Column">Creating a Custom Column</a> guide, I built and used thunderbird-2.0b1 checked-out from CVS with the <strong>THUNDERBIRD_2_0b1_RELEASE</strong> tag. There is a high probability that your experience will be different should you use an earlier release.</div>
+
+<p> </p>
+
+<h3 id="Getting_Started" name="Getting_Started">Getting Started</h3>
+
+<p>To build upon the <a href="/en/Extensions/Thunderbird/Creating_a_Custom_Column" title="en/Extensions/Thunderbird/Creating_a_Custom_Column">Reply-To Column Tutorial</a>, I'll describe the process I went through in <span class="seoSummary">developing a custom column to display a 'Superfluous' column within Thunderbird's main view. The data will come from a custom header labeled <strong>X-Superfluous</strong></span>.</p>
+
+<h3 id="Setting_the_Preferences" name="Setting_the_Preferences">Setting the Preferences</h3>
+
+<p>Although there are various ways to set preferences, I tend to just navigate to the directory where my profile is stored and edit the <code>user.js</code> file with my favorite text editor. In addition to the preference outlined in <a class="external" href="http://kb.mozillazine.org/Setting_up_extension_development_environment">Setting up extension development environment</a>, you'll want to add the following preferences:</p>
+
+<pre class="eval">// this allows you to add extra headers while composing messages
+user_pref("mail.compose.other.header", "X-Superfluous,X-Other,X-Whatever");
+// this enables the preservation of custom headers as incoming mail is processed
+user_pref( "mailnews.customDBHeaders", "x-superfluous,x-other");
+</pre>
+
+<p><strong>IMPORTANT:</strong> Please pay careful attention to the case of the <code>mailnews.customDBHeaders</code> preference. Because comparisons are case-insensitive, all of the custom headers get set to lowercase when the data gets migrated to the message database. Also, it has been brought to my attention that the delimiter has been changed to a space in the latest code. When using the latest releases, the line should look like:</p>
+
+<pre class="eval">// space-delimited list in the latest code!
+user_pref( "mailnews.customDBHeaders", "x-superfluous x-other");
+</pre>
+
+<h3 id="Adding_a_Column" name="Adding_a_Column">Adding a Column</h3>
+
+<p>The <a href="/en/Extensions/Thunderbird/Creating_a_Custom_Column" title="en/Extensions/Thunderbird/Creating_a_Custom_Column">Reply-To Column Tutorial</a> does a good job of explaining how to add a column with an overlay, so I'll just show you my overlay file:</p>
+
+<pre>&lt;?xml version="1.0" ?&gt;
+
+&lt;overlay id="colSuperfluousOverlay"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;script type='application/javascript' src='chrome://superfluous/content/superfluous.js'/&gt;
+
+&lt;tree id="threadTree"&gt;
+  &lt;treecols id="threadCols"&gt;
+    &lt;splitter class="tree-splitter" /&gt;
+    &lt;treecol id="colSuperfluous" persist="hidden ordinal width"
+              currentView="unthreaded" flex="1"
+              label="Superfluous"
+              tooltiptext="Click to sort by Superfluous" /&gt;
+  &lt;/treecols&gt;
+&lt;/tree&gt;
+
+
+&lt;/overlay&gt;
+</pre>
+
+<p>You should insure that whatever id you use for the treecol you're adding matches the reference from your javascript code (i.e. <code>gDBView.addColumnHandler("colSuperfluous",columnHandler)</code>).</p>
+
+<h3 id="Javascript_Code" name="Javascript_Code">Javascript Code</h3>
+
+<p>Once again, other tutorials have demonstrated the general javascript code used to populated columns with data from a message header, so I'm just including my file for reference. This is the <code>superfluous.js</code> file referenced from within the <code>superfluous_overlay.xul</code> file:</p>
+
+<pre>dump(" ~ ~ ~ ~     SUPERFLUOUS   ~ ~ ~ ~ \n");
+
+var columnHandler = {
+   getCellText: function(row, col) {
+   //get the messages header so that we can extract the 'X-Superfluous' field
+    var key = gDBView.getKeyAt(row);
+    var hdr = gDBView.db.GetMsgHdrForKey(key);
+    var retval = hdr.getStringProperty("x-superfluous");
+    dump("x-superfluous: " + retval + "\n");
+    return retval;
+   },
+
+   getSortStringForRow: function(hdr) {
+    return hdr.getStringProperty("x-superfluous");
+   },
+   isString:            function() {return true;},
+   getCellProperties:   function(row, col, props){},
+   getImageSrc:         function(row, col) {return null;},
+   getSortLongForRow:   function(hdr) {return 0;}
+}
+
+function addCustomColumnHandler() {
+  gDBView.addColumnHandler("colSuperfluous",columnHandler);
+  dump("column handler being added: " + columnHandler + "\n");
+}
+
+var CreateDbObserver = {
+  // Components.interfaces.nsIObserver
+observe: function(aMsgFolder, aTopic, aData)
+    {
+       dump("HERE HERE!");
+       addCustomColumnHandler();
+    }
+}
+
+function doOnceLoaded(){
+  var ObserverService = Components.classes["@mozilla.org/observer-service;1"].getService(Components.interfaces.nsIObserverService);
+  ObserverService.addObserver(CreateDbObserver, "MsgCreateDBView", false);
+  window.document.getElementById('folderTree').addEventListener("select",addCustomColumnHandler,false);
+}
+
+window.addEventListener("load",doOnceLoaded,false);
+dump(" ~ ~ ~ ~  END SUPERFLUOUS   ~ ~ ~ ~ \n");
+</pre>
+
+<p><strong>IMPORTANT</strong> Be aware that only messages that are added to the .msf database after the customDBHeaders pref is set will have the corresponding string property set on the msgHdr. If the .msf file is rebuilt, all the msgHdrs should have the string property set correctly.</p>
+
+<p>The attaching of the column handler through the ObserverService object is some pretty new stuff, so I was using the <code>addEventListener("select"...)</code> stuff as a backup. Depending on the release you use one, both, or none of the methods may work.</p>
+
+<h3 id="Building_the_Extension" name="Building_the_Extension">Building the Extension</h3>
+
+<p>For this extension, I used a directory tree exactly like this:</p>
+
+<pre>  superfluous/
+              chrome.manifest
+              install.rdf
+              Makefile
+              chrome/
+                     content/
+                             superfluous.js
+                             superfluous_overlay.xul
+</pre>
+
+<p>Here's the Makefile:</p>
+
+<pre>DEPS:= chrome/ \
+       chrome.manifest \
+       chrome/content/ \
+       chrome/content/superfluous.js \
+       chrome/content/superfluous_overlay.xul \
+       install.rdf
+
+superfluous.xpi: ${DEPS}
+  zip  $@  ${DEPS}
+
+</pre>
+
+<p>chrome.manifest:</p>
+
+<pre>content superfluous chrome/content/
+overlay chrome://messenger/content/messenger.xul  chrome://superfluous/content/superfluous_overlay.xul
+</pre>
+
+<p>install.rdf:</p>
+
+<pre>&lt;?xml version='1.0' encoding='UTF-8'?&gt;
+&lt;RDF xmlns='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+xmlns:em='http://www.mozilla.org/2004/em-rdf#'&gt;
+
+   &lt;Description about='urn:mozilla:install-manifest'&gt;
+      &lt;em:id&gt;superfluous@yoursite.com&lt;/em:id&gt;
+      &lt;em:version&gt;0.1.1&lt;/em:version&gt;
+      &lt;em:type&gt;2&lt;/em:type&gt; &lt;!-- 2 is type 'extension' --&gt;
+      &lt;em:targetApplication&gt;
+        &lt;Description&gt;
+          &lt;!--   This next line identifies TBird as target --&gt;
+          &lt;em:id&gt;{3550f703-e582-4d05-9a08-453d09bdfdc6}&lt;/em:id&gt;
+          &lt;em:minVersion&gt;2*&lt;/em:minVersion&gt;
+          &lt;em:maxVersion&gt;3.0.0.*&lt;/em:maxVersion&gt;
+        &lt;/Description&gt;
+      &lt;/em:targetApplication&gt;
+    &lt;em:name&gt;superfluous&lt;/em:name&gt;
+    &lt;em:description&gt;Test Superfluous Extension&lt;/em:description&gt;
+    &lt;em:creator&gt;Garrett Comeaux&lt;/em:creator&gt;
+&lt;/Description&gt;
+&lt;/RDF&gt;
+
+</pre>
+
+<p>Build process:</p>
+
+<pre>[gcomeaux@kyle tbird-ext]$ cd superfluous/
+[gcomeaux@kyle superfluous]$ make
+zip  superfluous.xpi  chrome/ chrome.manifest chrome/content/ chrome/content/superfluous.js chrome/content/superfluous_overlay.xul install.rdf
+  adding: chrome/ (stored 0%)
+  adding: chrome.manifest (deflated 44%)
+  adding: chrome/content/ (stored 0%)
+  adding: chrome/content/superfluous.js (deflated 57%)
+  adding: chrome/content/superfluous_overlay.xul (deflated 44%)
+  adding: install.rdf (deflated 50%)
+</pre>
+
+<h3 id="End_Result" name="End_Result">End Result</h3>
+
+<p>Ultimately, you want to be able to compose a message like this:<br>
+ <img alt="Composing a superfluous message" class="internal" src="/@api/deki/files/424/=X-superfluous01.png"><br>
+ and see the Superfluous column displayed in your inbox like this:<br>
+ <img alt="Superfluous message in your inbox" class="internal" src="/@api/deki/files/425/=X-superfluous02.png"></p>
+
+<h3 id="Thanks" name="Thanks">Thanks</h3>
+
+<p>Many thanks go out to the Thunderbird developers for the fine product that it is. Special thanks go to Mr. Bienvenu for his patience and assistance in guiding me through this process.</p>

@@ -1,0 +1,28 @@
+---
+title: Account interfaces
+slug: Mozilla/Thunderbird/Account_interfaces
+tags:
+  - Code snippets
+  - Extension Development
+  - thunderbird
+---
+<div class="blockIndicator draft">
+    <p><strong>Draft</strong><br>
+    This page is not complete.</p>
+
+</div>
+<div class="blockIndicator standardNote">
+<p>This content covers features introduced in <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a></p>
+</div>
+<p>This page contains a list of the interfaces that you'll will most likely use when writing extensions that work with email or other accounts. See <a class="internal" href="/en/Thunderbird/Account_examples" rel="internal" title="en/Thunderbird/Account examples">Account examples</a> for examples and code snippets.</p>
+<h2 id="nsIMsgAccountManager">nsIMsgAccountManager</h2>
+<p><code><a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/public/nsIMsgAccountManager.idl" rel="internal" title="http://mxr.mozilla.org/comm-central/source/mailnews/base/public/nsIMsgAccountManager.idl">nsIMsgAccountManager</a></code> is the service through which all accounts, identities, and servers can be retrieved. It is also responsible for the startup and shutdown handling of these objects, as well as the creation and destruction of accounts.</p>
+<h2 id="nsIMsgAccount">nsIMsgAccount</h2>
+<p><code><a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/public/nsIMsgAccount.idl" rel="internal" title="http://mxr.mozilla.org/comm-central/source/mailnews/base/public/nsIMsgAccount.idl">nsIMsgAccount</a></code> is the interface that represents an account. Accounts only contain a single server and at least one identity, although they are associated with preferences that extensions may use as a base. In general, only <code>nsIMsgAccountManager</code> will be creating these.</p>
+<h2 id="nsIMsgIncomingServer">nsIMsgIncomingServer</h2>
+<p><code><a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/public/nsIMsgIncomingServer.idl" rel="internal" title="http://mxr.mozilla.org/comm-central/source/mailnews/base/public/nsIMsgIncomingServer.idl">nsIMsgIncomingServer</a></code> is the interface that represents a server. Servers are one of the primary interfaces to the backend (the others being <code>nsIMsgFolder</code> and <code>nsIMsgDatabase</code>), and represent the basic connection to an external message source. Many of the attributes are ultimately shortcuts to various preferences (the preference key is the unique identifier for servers) and several are mostly used to impact UI choices. Most server implementations will also have another interface for protocol-specific attributes and methods.</p>
+<h2 id="nsIMsgIdentity">nsIMsgIdentity</h2>
+<p><code><a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/public/nsIMsgIdentity.idl" rel="internal" title="http://mxr.mozilla.org/comm-central/source/mailnews/base/public/nsIMsgIdentity.idl">nsIMsgIdentity</a></code> is the interface that represents an identity. Identities are primarily composition configurations: options such as the email address or the compose drafts folder is stored here.</p>
+<h2 id="nsIMsgProtocolInfo">nsIMsgProtocolInfo</h2>
+<p><code><a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/public/nsIMsgProtocolInfo.idl" rel="internal" title="http://mxr.mozilla.org/comm-central/source/mailnews/base/public/nsIMsgProtocolInfo.idl">nsIMsgProtocolInfo</a></code> is the interface that represents permissible actions by protocol level. Most of the attributes are currently limited to account creation concerns, although some do impact UI choices.</p>
+<p> </p>

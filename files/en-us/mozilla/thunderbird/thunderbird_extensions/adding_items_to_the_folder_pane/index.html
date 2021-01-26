@@ -1,0 +1,121 @@
+---
+title: Adding items to the Folder Pane
+slug: Mozilla/Thunderbird/Thunderbird_extensions/Adding_items_to_the_Folder_Pane
+---
+<p>{{AddonSidebar}}</p>
+
+<p>This tutorial examines how to add items to an existing Folder Pane view. The result is a javascript file that will add a "Numbers" container to the end of Thunderbird's "All Folders" mode. That container will have 3 child-items, the numbers 1, 2, and 3. Clicking on those items will display the number in the main viewing pane of Thunderbird.</p>
+
+<p>First, some necessary background on how the Folder Pane constructs the data it displays. The Folder Pane tracks modifications to a user's folders and accounts. Each time the Folder Pane determines that it is necessary to invalidate all its data (because of too many changes, or more commonly because the Folder Pane's "mode" (aka view) has changed), a "rebuild" occurs. When this happens, the Folder Pane consults the map-generator for the current mode, and that generator returns the necessary data for the Folder Pane's display. <strong>This data is returned in the form of an array of folder-tree-items</strong>.</p>
+
+<h2 id="Listening_for_Folder_Pane_rebuilds">Listening for Folder Pane rebuilds</h2>
+
+<p>Every time the Folder Pane rebuilds, it fires a "mapRebuild" event, which is the ideal opportunity for extensions to step in and modify the display data. The following code snippet listens for that event:</p>
+
+<pre>let gNumbersExt = {
+  load: function gne_load() {
+    window.removeEventListener("load", gNumbersExt.load, false);
+    let tree = document.getElementById("folderTree");
+    tree.addEventListener("mapRebuild", gNumbersExt._insert, false);
+  },
+
+  _insert: function gne__insert() {
+    // This function is called when a rebuild occurs
+  }
+};
+window.addEventListener("load", gNumbersExt.load, true);</pre>
+
+<h2 id="The_structure_of_folder-tree-items">The structure of folder-tree-items</h2>
+
+<p>The Folder Pane stores its current display data in a property called <code>_rowMap</code>. This property is an array of <code>folder-tree-items</code>. Each item in this array satisfies the following interface:</p>
+
+<dl>
+ <dt><code>id</code></dt>
+ <dd>(attribute)<br>
+ a unique string for this object. Must persist over sessions</dd>
+ <dt><code>text</code></dt>
+ <dd>(attribute)<br>
+ the text to display in the tree</dd>
+ <dt><code>level</code></dt>
+ <dd>(attribute)<br>
+ the level in the tree to display the item at</dd>
+ <dt><code>open</code></dt>
+ <dd>(rw, attribute)<br>
+ whether or not this container is open</dd>
+ <dt><code>children</code></dt>
+ <dd>(attribute)<br>
+ an array of child items also conforming to this spec</dd>
+ <dt><code>getProperties</code></dt>
+ <dd>(function)<br>
+ a call from getRowProperties or getCellProperties for this item will be passed into this function</dd>
+ <dt><code>command</code></dt>
+ <dd>(function)<br>
+ this function will be called when the item is double-clicked</dd>
+</dl>
+
+<p>For our example extension, two different types of folder-tree-items will be defined. First, our "Numbers" container looks like this:</p>
+
+<pre>    let containerRow = {
+      _NUMBERS: 3,
+      id: "numbers-main-container",
+      text: "Numbers",
+      level: 0,
+      open: false,
+
+      _children: null,
+      get children() {
+        if (!this._children) {
+          this._children = [];
+          for (var i = 1; i &lt;= this._NUMBERS; i++)
+            this._children.push(new numberRow(i));
+        }
+        return this._children;
+      },
+      getProperties: function gne_getProps() {
+        // Put your css attributes here
+      },
+      command: function gne_command() {
+        // Just going to alert, to do something here
+        Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
+                  .getService(Components.interfaces.nsIPromptService)
+                  .alert(window, null, this.text);
+      }
+    };</pre>
+
+<p>Second, our child items (the numbers 1, 2, and 3) are copies of the following prototype:</p>
+
+<pre>    function numberRow(aNumber) {
+      this._number = aNumber;
+    }
+    numberRow.prototype = {
+      get id() { return "numbers-child-row-" + this._number; },
+      get text() { return this._number; },
+      level: 1,
+      open: false,
+      children: [],
+      getProperties: function gne_kid_getProps() {}, // no-op
+      command: function gne_kid_command() {
+        // Just going to alert, to do something here
+        Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
+                  .getService(Components.interfaces.nsIPromptService)
+                  .alert(window, null, this.text);
+      }
+    };</pre>
+
+<h2 id="Putting_it_all_together">Putting it all together</h2>
+
+<p>All that is left at this point is to actually add these newly defined folder-tree-items to the Folder Pane's <code>_rowMap</code> at the appropriate time. Thus, our <code>_insert</code> function becomes</p>
+
+<pre>  _insert: function gne__insert() {
+    // Only insert our nodes into the "all" mode
+    if (gFolderTreeView.mode != "all")
+      return;
+
+    gFolderTreeView._rowMap.push(containerRow);
+  },</pre>
+
+<p>Right now, clicking on these additional items has no effect. However, the complete <a class="internal" href="/en/Extensions/Thunderbird/Adding_items_to_the_Folder_Pane/Code" title="En/Extensions/Thunderbird/Adding items to the Folder Pane/Code">example file</a> includes code to display the number selected in Thunderbird's main viewing pane, when such a number is selected in the Folder Pane.</p>
+
+<h2 id="A_note_about_the_initial_rebuild">A note about the initial rebuild</h2>
+
+<p>When Thunderbird first starts up, the Folder Pane does an initial rebuild to get the first data it should display. Unfortunately, this rebuild will occur before an extension's "load" event fires. Thus, extensions may need to do manual insertions when this load event fires, if they want to add items to the initial display. <a href="/@api/deki/files/4017/=add_code.js" title="https://developer.mozilla.org/@api/deki/files/4017/=add_code.js">add_code.js</a> also includes code to accomplish this result.</p>

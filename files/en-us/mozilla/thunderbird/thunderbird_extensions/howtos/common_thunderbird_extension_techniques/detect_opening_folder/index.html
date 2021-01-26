@@ -1,0 +1,12 @@
+---
+title: Detect Opening Folder
+slug: >-
+  Mozilla/Thunderbird/Thunderbird_extensions/HowTos/Common_Thunderbird_Extension_Techniques/Detect_Opening_Folder
+tags:
+  - thunderbird
+---
+<p>{{AddonSidebar}}</p>
+
+<p>Some actions require execution every time you open a folder (for example, registering a <a href="/en/Extensions/Thunderbird/Creating_a_Custom_Column" title="en/Extensions/Thunderbird/Creating_a_Custom_Column">custom column handler</a>. To do this you need to capture the <strong>select</strong> event of the folder [{{ mediawiki.external('XUL:tree|tree') }}] whose id is (conveniently) <strong>folderTree</strong> like so:</p>
+
+<pre class="brush: js">window.document.getElementById('folderTree').addEventListener("select", testColumns, false);</pre>

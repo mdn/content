@@ -1,0 +1,142 @@
+---
+title: Running Thunderbird MozMill tests from packaged tests
+slug: >-
+  Mozilla/Thunderbird/Thunderbird_MozMill_Testing/Running_Thunderbird_MozMill_tests_from_packaged_tests
+tags:
+  - Guide
+  - NeedsUpdate
+  - thunderbird
+---
+<p>If you want to run the MozMill tests that the Thunderbird builders run in automated fashion against a pre-compiled Thunderbird, it is possible to do this.  </p>
+
+<p>This description works for Thunderbird 9.0a1 or newer. You do not need to install mozmill as a separate package anymore, because it is now included in the source (see <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=656736" title="https://bugzilla.mozilla.org/show_bug.cgi?id=656736">bug 656736</a>).</p>
+
+<h2 id="Getting_Thunderbird_and_the_tests">Getting Thunderbird and the tests</h2>
+
+<p>It is best to download the Thunderbird package and associated tests together. Then you can be sure that the versions of tests correctly match the Thunderbird build you're running against. The lastest release (candidates) builds including the tests can be found <a href="ftp://ftp.mozilla.org/pub/thunderbird/nightly/latest-candidate-comm-release/">there</a>.  There are also folders with the latest <a class="link-ftp" href="ftp://ftp.mozilla.org/pub/thunderbird/nightly/latest-candidate-comm-beta" title="ftp://ftp.mozilla.org/pub/thunderbird/nightly/latest-candidate-comm-beta">beta</a>, <a class="link-ftp" href="ftp://ftp.mozilla.org/pub/thunderbird/nightly/latest-earlybird" title="ftp://ftp.mozilla.org/pub/thunderbird/nightly/latest-earlybird">earlybird</a> and <a class="link-ftp" href="ftp://ftp.mozilla.org/pub/thunderbird/nightly/latest-comm-central/" title="ftp://ftp.mozilla.org/pub/thunderbird/nightly/latest-comm-central/">daily</a> builds. Depending on which version you want, you might have to look in a subdirectory for the correct files.</p>
+
+<p>The two files you want to get are (for a release (candidate) build): </p>
+
+<ol>
+ <li><code>thunderbird-&lt;version&gt;</code><code>.&lt;package extension&gt;</code>
+
+  <ul>
+   <li>e.g. <strong>Linux</strong>: thunderbird-9.0.1.tar.bz2</li>
+   <li><strong>Windows</strong>: thunderbird-9.0.1.zip (note: its best to use the zip rather than the installer.)</li>
+   <li><strong>Mac</strong>: thunderbird-9.0.1.dmg</li>
+  </ul>
+ </li>
+ <li>thunderbird-9.0.1.common.tests.zip</li>
+</ol>
+
+<p>You can also get this from:</p>
+
+<ul>
+ <li><a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/tinderbox-builds/" title="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/tinderbox-builds/">Tinderbox builds</a>
+
+  <ul>
+   <li>These are short-lived builds produced by the Thunderbird builders, best for if you're trying to cut a regression range down to less than a day.</li>
+  </ul>
+ </li>
+ <li><a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/try-builds/?C=M;O=D" title="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/try-builds/?C=M;O=D">Current try-server builds</a>
+  <ul>
+   <li>Only really useful if you're testing a specific change that has been pushed to the try server.</li>
+  </ul>
+ </li>
+</ul>
+
+<h3 id="Setting_up_to_run_the_tests">Setting up to run the tests</h3>
+
+<p>So you've got your two files, now what? First create a sub-directory to work in:</p>
+
+<pre class="notranslate">mkdir mozmilltest
+cd mozmilltest
+</pre>
+
+<p>Next unpack the tests. This is slightly different per platform. The documentation below uses the example file names from above, just replace them with what you have to run.</p>
+
+<h4 id="Windows">Windows</h4>
+
+<pre class="notranslate">unzip ../thunderbird-9.0.1.zip
+unzip ../thunderbird-9.0.1.common.tests.zip
+</pre>
+
+<h4 id="Mac">Mac</h4>
+
+<pre class="notranslate">wget http://hg.mozilla.org/build/tools/raw-file/default/buildfarm/utils/installdmg.sh
+bash installdmg.sh ../thunderbird-9.0.1.dmg
+unzip ../thunderbird-9.0.1.common.tests.zip
+</pre>
+
+<h4 id="Linux">Linux</h4>
+
+<pre class="notranslate">tar -vxjf ../thunderbird-9.0.1.tar.bz2
+unzip ../thunderbird-9.0.1.common.tests.zip
+</pre>
+
+<h2 id="Setup_mozmill">Setup mozmill</h2>
+
+<p>You have to create a virtual environment containing the mozmill version included in the tests. For Thunderbird versions below 60.0a1 do:</p>
+
+<pre class="notranslate">cd mozmill
+python resources/installmozmill.py ../mozmill-virtualenv ../mozbase
+</pre>
+
+<p>For Thunderbird versions &gt;= 60.0a1 the packaging has changed. You have to unzip the tests (see above) into a directory with name <code>testing</code>. Then you have to create a symbolic link and need to create a python file named <code>buildconfig.py </code>in <code>mozmill/resources</code> needed during installation.</p>
+
+<pre class="notranslate">ln -s tools ../python
+</pre>
+
+<p>Then content of buildconfig.py is:</p>
+
+<pre class="notranslate">import os
+substs = {}
+substs['top_srcdir'] = os.path.abspath(os.path.join('..', '..'))
+</pre>
+
+<p>Mozmill is installed into the virtual environment by:</p>
+
+<pre class="notranslate">cd mozmill
+python resources/installmozmill.py ../mozmill-virtualenv</pre>
+
+<h2 id="Running_all_the_tests">Running all the tests</h2>
+
+<p>Now you're all set up for running the tests, here's how to do it.</p>
+
+<h4 id="Windows_2">Windows</h4>
+
+<pre class="notranslate">../mozmill-virtualenv/Scripts/python runtestlist.py --binary=../thunderbird/thunderbird.exe --list=mozmilltests.list
+</pre>
+
+<h4 id="Mac_2">Mac</h4>
+
+<pre class="notranslate">../mozmill-virtualenv/Scripts/python runtestlist.py --binary=../Shredder.app --list=mozmilltests.list
+</pre>
+
+<p>Note: On Mac, the binary name may be different depending on what you are running, e.g. it could be <code>Thunderbird.app</code>, <code>Miramar.app</code> or something else.</p>
+
+<h4 id="Linux_2">Linux</h4>
+
+<pre class="notranslate">python runtestlist.py --binary=../thunderbird/thunderbird --list=mozmilltests.list
+</pre>
+
+<h2 id="Running_a_single_test">Running a single test</h2>
+
+<p>If you want to run a single test (or all the tests in one folder), then it requires a slightly different command. The examples below show the running of the <code>content-tabs/test-content-tab.js</code> test, but if you wanted to run all the content-tab tests, just replace the last bit with <code>content-tabs</code>.</p>
+
+<h4 id="Windows_3">Windows</h4>
+
+<pre class="notranslate">../mozmill-virtualenv/Scripts/python runtest.py --binary=../thunderbird/thunderbird.exe -t <code>content-tabs/test-content-tab.js</code>
+</pre>
+
+<h4 id="Mac_3">Mac</h4>
+
+<pre class="notranslate">../mozmill-virtualenv/Scripts/python runtest.py --binary=../Shredder.app -t <code>content-tabs/test-content-tab.js</code>
+</pre>
+
+<p>Note: On Mac, the binary name may be different depending on what you are running, e.g. it could be <code>Thunderbird.app</code>, <code>Miramar.app</code> or something else.</p>
+
+<h4 id="Linux_3">Linux</h4>
+
+<pre class="notranslate">python runtest.py --binary=../thunderbird/thunderbird -t <code>content-tabs/test-content-tab.js</code>
+</pre>

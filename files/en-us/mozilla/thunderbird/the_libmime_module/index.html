@@ -1,0 +1,139 @@
+---
+title: The libmime module
+slug: Mozilla/Thunderbird/The_libmime_module
+tags:
+  - Advanced
+  - Guide
+  - Method
+  - thunderbird
+---
+<p>{{ outdated("It was imported from mozilla.org and last updated in 2002.") }}<br>
+  </p>
+
+<p><strong><font color="#000000">by Richard H. Pizzarro &lt;<a class="link-mailto" href="mailto:rhp@netscape.com">rhp@netscape.com</a>&gt;</font></strong></p>
+
+<p>This module, libmime, implements a general-purpose MIME parser. One of the methods provided by this parser is the ability to emit an HTML representation of the data stream.</p>
+
+<p>The parser is object-oriented. There is a class for each MIME type, and each class is responsible for parsing itself, and/or handing the input data off to one of its child objects.</p>
+
+<p>The definition of these classes is somewhat idiosyncratic and consists of an internally defined object system, instead of C++.</p>
+
+<p>There is one header file and one source file for each class (for example, the  MimeInlineText class is defined in "mimetext.h" and "mimetext.c".) Each header  file follows the following boiler-plate form:</p>
+
+<p><strong><font size="+1">typedefs</font></strong><br>
+ These come first to avoid circular dependencies.</p>
+
+<p><code>    typedef struct FoobarClass FoobarClass;</code><br>
+ <code>    typedef struct Foobar      Foobar;</code></p>
+
+<p><strong><font size="+1">Class Declaration</font></strong><br>
+ Theis structure defines the callback routines and other per-class data of the class defined in this module.</p>
+
+<p><code>    struct FoobarClass {</code><br>
+ <code>      ParentClass superclass;</code><br>
+ <code>      ...any callbacks or class-variables...</code><br>
+ <code>    };</code></p>
+
+<p><strong><font size="+1">Class Definition</font></strong><br>
+ This variable holds an instance of the one-and-only class record; the various instances of this class point to this object.  (One interrogates the type of an instance by comparing the value of its class pointer with the address of this variable.)</p>
+
+<p><code>    extern FoobarClass foobarClass;</code></p>
+
+<p><strong><font size="+1">Instance Declaration</font></strong><br>
+ Theis structure defines the per-instance data of an object, and a pointer to the corresponding class record.</p>
+
+<p><code>    struct Foobar {</code><br>
+ <code>      Parent parent;</code><br>
+ <code>      ...any instance variables...</code><br>
+ <code>    };</code></p>
+
+<p>Then, in the corresponding .c file, the following structure is used:</p>
+
+<p><strong><font size="+1">Class Definition</font></strong><br>
+ First we pull in the appropriate include file (which includes all necessary include files for the parent classes) and then we define the class object using the MimeDefClass macro:</p>
+
+<p><code>    #include "foobar.h"</code><br>
+ <code>    #define MIME_SUPERCLASS parentlClass</code><br>
+ <code>    MimeDefClass(Foobar, FoobarClass, foobarClass, &amp;MIME_SUPERCLASS);</code></p>
+
+<p>The definition of MIME_SUPERCLASS is just to move most of the knowlege of the exact class hierarchy up to the file's header, instead of it being scattered through the various methods; see below.</p>
+
+<p><strong><font size="+1">Method Declarations</font></strong><br>
+ We will be putting function pointers into the class object, so we declare them here.  They can generally all be static, since nobody outside of this file needs to reference them by name; all references to these routines should be through the class object.</p>
+
+<p><code>    extern int FoobarMethod(Foobar *);</code><br>
+ <code>    ...etc...</code></p>
+
+<p><strong><font size="+1">Class Initialization Function</font></strong><br>
+ The MimeDefClass macro expects us to define a function which will finish up any initialization of the class object that needs to happen before the first time it is instantiated.  Its name must be of the form "&lt;class&gt;Initialize", and it should initialize the various method slots in the class as appropriate.  Any methods or class variables which this class does not wish to override will be automatically inherited from the parent class (by virtue of its class-initialization function having been run first.)  Each class object will only be initialized once.</p>
+
+<p><code>    static int</code><br>
+ <code>    FoobarClassInitialize(FoobarClass *class)</code><br>
+ <code>    {</code><br>
+ <code>      class-&gt;method = FoobarMethod.</code><br>
+ <code>      ...etc...</code><br>
+ <code>    }</code></p>
+
+<p><strong><font size="+1">Method Definitions</font></strong><br>
+ Next come the definitions of the methods we referred to in the class-init function.  The way to access earlier methods (methods defined on the superclass) is to simply extract them from the superclass's object. But note that you CANNOT get at methods by indirecting through object-&gt;class-&gt;superclass: that will only work to one level, and will go into a loop if some subclass tries to continue on this method.</p>
+
+<p>The easiest way to do this is to make use of the MIME_SUPERCLASS macro that was defined at the top of the file, as shown below.  The alternative to that involves typing the literal name of the direct superclass of the class defined in this file, which will be a maintenance headache if the class hierarchy changes.  If you use the MIME_SUPERCLASS idiom, then a textual change is required in only one place if this class's superclass changes.</p>
+
+<p><code>    static void</code><br>
+ <code>    Foobar_finalize (MimeObject *object)</code><br>
+ <code>    {</code><br>
+ <code>      ((MimeObjectClass*)&amp;MIME_SUPERCLASS)-&gt;finalize(object);  //  RIGHT</code><br>
+ <code>      parentClass.whatnot.object.finalize(object);             //  (works...)</code><br>
+ <code>      object-&gt;class-&gt;superclass-&gt;finalize(object);             //  WRONG!!</code><br>
+ <code>    }</code></p>
+
+<p>The class hierarchy is:</p>
+
+<p><code>   MimeObject (abstract)</code><br>
+ <code>    |</code><br>
+ <code>    |--- MimeContainer (abstract)</code><br>
+ <code>    |     |</code><br>
+ <code>    |     |--- MimeMultipart (abstract)</code><br>
+ <code>    |     |     |</code><br>
+ <code>    |     |     |--- MimeMultipartMixed</code><br>
+ <code>    |     |     |</code><br>
+ <code>    |     |     |--- MimeMultipartDigest</code><br>
+ <code>    |     |     |</code><br>
+ <code>    |     |     |--- MimeMultipartParallel</code><br>
+ <code>    |     |     |</code><br>
+ <code>    |     |     |--- MimeMultipartAlternative</code><br>
+ <code>    |     |     |</code><br>
+ <code>    |     |     |--- MimeMultipartRelated</code><br>
+ <code>    |     |     |</code><br>
+ <code>    |     |     |--- MimeMultipartAppleDouble</code><br>
+ <code>    |     |     |</code><br>
+ <code>    |     |     |--- MimeSunAttachment</code><br>
+ <code>    |     |     |</code><br>
+ <code>    |     |     |--- MimeMultipartSigned (abstract)</code><br>
+ <code>    |     |</code><br>
+ <code>    |     |--- MimeMessage</code><br>
+ <code>    |     |</code><br>
+ <code>    |     |--- MimeUntypedText</code><br>
+ <code>    |</code><br>
+ <code>    |--- MimeLeaf (abstract)</code><br>
+ <code>    |     |</code><br>
+ <code>    |     |--- MimeInlineText (abstract)</code><br>
+ <code>    |     |     |</code><br>
+ <code>    |     |     |--- MimeInlineTextPlain</code><br>
+ <code>    |     |     |</code><br>
+ <code>    |     |     |--- MimeInlineTextHTML</code><br>
+ <code>    |     |     |</code><br>
+ <code>    |     |     |--- MimeInlineTextRichtext</code><br>
+ <code>    |     |     |     |</code><br>
+ <code>    |     |     |     |--- MimeInlineTextEnriched</code><br>
+ <code>    |     |   |</code><br>
+ <code>    |     |   |--- MimeInlineTextVCard</code><br>
+ <code>    |     |   |</code><br>
+ <code>    |     |   |--- MimeInlineTextCalendar</code><br>
+ <code>    |     |</code><br>
+ <code>    |     |--- MimeInlineImage</code><br>
+ <code>    |     |</code><br>
+ <code>    |     |--- MimeExternalObject</code><br>
+ <code>    |</code><br>
+ <code>    |--- MimeExternalBody</code><br>
+  </p>

@@ -1,0 +1,78 @@
+---
+title: Spam filtering
+slug: Mozilla/Thunderbird/Spam_filtering
+tags:
+  - Guide
+  - NeedsUpdate
+  - thunderbird
+---
+<p>{{ outdated("It was imported from mozilla.org and last updated in 2003.") }}<br>
+  </p>
+
+<p><a class="link-mailto" href="mailto:sspitzer@mozilla.org">Seth Spitzer</a><br>
+ <br>
+ The Mozilla implement is based on Paul Graham's <a class="external" href="http://www.paulgraham.com/spam.html">A Plan for Spam</a>.<br>
+ <br>
+ Training data is global across all mail accounts within a profile.<br>
+ <br>
+ Training data is stored in a binary format, in a file named "training.dat".<br>
+ <br>
+ Initially, the training.dat file is empty (there was discussion of shipping with a default file).<br>
+ <br>
+ On spam detection, the user can choose to move spam to a special "Junk" folder.<br>
+ <br>
+ The user can configure junk mail can be automatically purged from the "Junk" folder.<br>
+ <br>
+ To analyze a message for spam, we need the entire message, not just the headers.<br>
+ <br>
+ Spam detection happens after filters are run.<br>
+ <br>
+ White listing happens after filters, but before spam detection.<br>
+ <br>
+ The purge code is implemented as a search of the "Junk" folder, looking for "old" message that have the proper junk status.<br>
+ <br>
+ <em>When does purging happens?</em><br>
+ <br>
+ <em>Elaborate on the mime changes that were made for spam.</em><br>
+ <br>
+ Currently, spam filtering is does not work for news, but it would be possible to add support for this.  (there is a bug on it.).</p>
+
+<table style="text-align: left; width: 100%;">
+ <tbody>
+  <tr>
+   <td style="vertical-align: top;"><strong style="font-weight: bold;">initial state</strong></td>
+   <td style="vertical-align: top;"><strong style="font-weight: bold;">user action</strong></td>
+   <td style="vertical-align: top;"><strong style="font-weight: bold;">table changes</strong></td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">unknown (user can't see this, looks like "not junk")</td>
+   <td style="vertical-align: top;">mark as junk</td>
+   <td style="vertical-align: top;">add tokens to bad</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">unknown (user can't see this, looks like "not junk")</td>
+   <td style="vertical-align: top;">mark as not junk</td>
+   <td style="vertical-align: top;">add tokens to good</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">not junk</td>
+   <td style="vertical-align: top;">mark as junk</td>
+   <td style="vertical-align: top;">remove tokens from good, add tokens to bad</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">not junk</td>
+   <td style="vertical-align: top;">mark as not junk</td>
+   <td style="vertical-align: top;">no op</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">junk</td>
+   <td style="vertical-align: top;">mark as junk</td>
+   <td style="vertical-align: top;">no op</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">junk</td>
+   <td style="vertical-align: top;">mark as not junk</td>
+   <td style="vertical-align: top;">remove tokens from bad, add tokens to good</td>
+  </tr>
+ </tbody>
+</table>

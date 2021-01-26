@@ -1,0 +1,152 @@
+---
+title: Thunderbird Preferences Relevant to Enterprises
+slug: >-
+  Mozilla/Thunderbird/Deploying_Thunderbird_in_the_Enterprise/Thunderbird_Preferences_Relevant_to_Enterprises
+tags:
+  - enterprise
+  - thunderbird
+---
+<p>Preferences related to use of Thunderbird in enterprises</p>
+
+<h2 id="Account_Provisioning">Account Provisioning</h2>
+
+<p><span class="inlineIndicator standardNote">New in <a class="new" href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/13" rel="nofollow">Thunderbird 13</a></span></p>
+
+<p>Account Provisioning allows users to sign up for new email accounts directly from within Thunderbird.</p>
+
+<ul>
+ <li>mail.provider.enabled
+  <ul>
+   <li>Default: true</li>
+   <li>Default Action: If the user does not have an account set up, they will be prompted to sign up for a new account. They may choose to set up an existing account that they hold instead of obtaining a new one.</li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Filelink">Filelink</h2>
+
+<p><span class="inlineIndicator standardNote">New in <a class="new" href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/13" rel="nofollow">Thunderbird 13</a></span></p>
+
+<p>Filelink is a feature that allows users to upload big files to various servers and send a link to the attachment in the email, rather than the attachment itself. This has benefits for sending the email, especially when sending to multiple users.</p>
+
+<p>It is possible for other providers/accounts types to be set up; we are working on documenting that at the moment.</p>
+
+<ul>
+ <li>mail.cloud_files.enabled
+  <ul>
+   <li>Default: true</li>
+   <li>Default Action: Prompts the user to see if they wish to send a link for big file attachments, rather than the link itself</li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Instant_Messaging">Instant Messaging</h2>
+
+<p><span class="inlineIndicator standardNote">New in <a class="new" href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/13" rel="nofollow">Thunderbird 13</a></span></p>
+
+<p>Instant Messaging allows the user to access different types of messaging accounts, e.g. twitter, irc and general chat.</p>
+
+<ul>
+ <li>mail.chat.enabled
+  <ul>
+   <li>Default: true</li>
+   <li>Default Action: Enables access to the Instant Messaging user interface in Thunderbird</li>
+   <li>Notes:
+    <ul>
+     <li>Although all the UI options to access Instant Messaging itself are disabled, the preferences window still shows the Chat options, see {{ bug("735347") }}</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="HTML">HTML</h2>
+
+<p>By default all HTML elements are interpreted by the Thunderbird HTML parser.</p>
+
+<ul>
+ <li>{{ obsolete_inline("Thunderbird 13") }} mailnews.display.html_sanitizer.allowed_tags
+  <ul>
+   <li>Default: html head title body p br div(lang,title) h1 h2 h3 h4 h5 h6 ul(type,compact) ol(type,compact,start) li(type,value) dl dt dd blockquote(type,cite) pre noscript noframes strong em sub sup span(lang,title) acronym(title) abbr(title) del(title,cite,datetime) ins(title,cite,datetime) q(cite) a(href,name,title) img(alt,title,longdesc,src) base(href) area(alt) applet(alt) object(alt) var samp dfn address kbd code cite s strike tt b i table(align) caption tr(align,valign) td(rowspan,colspan,align,valign) th(rowspan,colspan,align,valign) wbr</li>
+   <li>Default Action: Allows specified elements to be interpreted by Thunderbird's HTML parser</li>
+   <li>Notes: Obsolete after Thunderbird 13, use mailnews.display.html_sanitizer.drop_media and mailnews.display.html_sanitizer.drop_non_css_presentation instead. The preference will be automatically migrated to the new preferences if necessary.</li>
+  </ul>
+ </li>
+ <li><span class="inlineIndicator standardNote">New in <a class="new" href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/14" rel="nofollow">Thunderbird 14 </a></span>mailnews.display.html_sanitizer.drop_media
+  <ul>
+   <li>Default: false</li>
+   <li>Default Action: Allows all media files.</li>
+   <li>Notes: To restrict the &lt;img&gt; element from being interpreted (and thus prevent images from displaying in HTML messages), set to true.</li>
+  </ul>
+ </li>
+ <li><span class="inlineIndicator standardNote">New in <a class="new" href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/14" rel="nofollow">Thunderbird 14</a></span>
+  <ul>
+   <li>Default: true</li>
+   <li>Default Action: Drop non-CSS presentational HTML elements and attributes, such as &lt;font&gt;, &lt;center&gt; and bgcolor=""</li>
+   <li>Notes:</li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Version_Upgrades"><span class="mw-headline">Version Upgrades </span></h2>
+
+<p>Select your Add-ons</p>
+
+<ul>
+ <li><span class="inlineIndicator standardNote">New in <a class="new" href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/10" rel="nofollow">Thunderbird 10</a></span> extensions.autoDisableScopes
+
+  <ul>
+   <li>Default: 15</li>
+   <li>Default Action: When upgrading to a build from before Thunderbird 10 to after, the user will be prompted about add-ons installed by Third Parties.</li>
+   <li>Notes: This preference is a bit-wise OR of values that control the locations for which add-ons are prompted about as third-parties. Organizations typically want to set this to 11 if they are installing thier own add-ons. The bit values are as follows:
+    <ul>
+     <li>1: Installed in the profile</li>
+     <li>2: Installed for all of this user's profile</li>
+     <li>4: Installed and owned by the Application</li>
+     <li>8: Installed for all users of the computer</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<h3 id="Migration_Assistant"><span class="mw-headline">Migration Assistant </span></h3>
+
+<ul>
+ <li>mailnews.ui.show.migration.on.upgrade
+  <ul>
+   <li>Default: true</li>
+   <li>Default Action: Shows the migration assistant when we're upgrading a profile from 3.0 or earlier.</li>
+  </ul>
+ </li>
+</ul>
+
+<h3 id="Offline_Download_Synchronisation"><span class="mw-headline">Offline Download / Synchronisation </span></h3>
+
+<ul>
+ <li>mail.server.default.offline_download
+  <ul>
+   <li>Default: true</li>
+   <li>Default Action: Used to determine if newly created folders are set to take part in offline download or not.</li>
+   <li>Notes:
+    <ul>
+     <li>This is the default value for all servers/accounts, i.e. when the mail.server.server&lt;n&gt;.offline_download is not set.</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li>mail.server.server&lt;n&gt;.offline_download
+  <ul>
+   <li>Default: true</li>
+   <li>Default Action: Used to determine if newly created folders are set to take part in offline download or not.</li>
+   <li>Notes:
+    <ul>
+     <li>This value is typically not present unless it has been specifically overridden.</li>
+     <li>Overrides mail.server.default.offline_download for server&lt;n&gt;</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<p>Both preferences now also have the behaviour that if offline_download is true for an account/server, then on upgrade from Thunderbird 2, all existing IMAP folders will be updated to take part in offline download.</p>

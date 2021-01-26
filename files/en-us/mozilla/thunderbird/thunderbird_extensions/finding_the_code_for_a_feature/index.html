@@ -1,0 +1,26 @@
+---
+title: Finding the code for a feature
+slug: Mozilla/Thunderbird/Thunderbird_extensions/Finding_the_code_for_a_feature
+tags:
+  - Add-ons
+  - Extensions
+  - thunderbird
+---
+<p>{{AddonSidebar}}</p>
+
+<p>Frequently you are trying to figure out the code that implements a specific feature of the user interface. How do you find that out? As an example, I received the following inquiry, and I decided to follow my usual path and document what I do:</p>
+
+<blockquote>Hello i would like to add colours and tags to specific emails...by<br>
+using nsiMsgTagService, can this be done?</blockquote>
+
+<p>Here is my (edited) response:</p>
+
+<p>nsIMsgTagService is used to store the list of valid tags, so it is not the correct way to tag messages. Tags are applied using the message database property "keyword". I know the underlying code, but I don't remember the user interface level function to do it. But here is how I find out.</p>
+
+<p>There are two key tools that you need. The first is the <a class="link-https" href="https://addons.mozilla.org/en-US/thunderbird/addon/6622" title="https://addons.mozilla.org/en-US/thunderbird/addon/6622">DOM inspector extension</a> which I have routinely installed in all of my Thunderbird installations. (For debug builds, you can make it appear by default using "ac_add_options --enable-extensions=default,venkman,inspector" which is part of my standard configuration). The second is mozilla's source code search tool mxr. I keep two prominent links to this on my Firefox toolbar, one to <a class="external" href="https://dxr.mozilla.org/comm-central/source/" title="http://mxr.mozilla.org/comm-central/">comm-central string search</a>, and one to <a class="external" href="http://mxr.mozilla.org/comm-central/find" title="http://mxr.mozilla.org/comm-central/find">comm-central file search</a>.</p>
+
+<p>So, how did I use those to figure out how to do this? I know there is a menu command "Tag" to tag the message - how does it do it? Using DOM inspector, I find the Tag menu item, and I see that it uses command "cmd_tag". Then I use mxr and look for "cmd_tag". I see it occurs in mail3PaneWindowCommands.js a couple of times. I look at the last occurrence, and see it is just an enable item with no real action involved. Oops, I guess I need to get the submenu instead. Repeating this process, I see that the submenu items all call a function ToggleMessageTagMenu. Looking that up in mxr, its underlying function uses a very strange call prevHdrFolder[toggler](messages, key) to change the key. Trying to figure that out from the code, I see that is just a clever way to do the addKeywordsToMessages or removeKeywordsFromMessages method call. (Please don't do that guys, it really makes code search difficult!)</p>
+
+<p>So the answer the your question is, use the nsIMsgFolder method "addKeywordsToMessages" (and now I remember that I knew that!).</p>
+
+<p>If you want examples, scan mxr for addKeywordsToMessages. You'll find that the only decent examples are in unit tests, my test_bug428427.js or asuth's messageModifier.js</p>

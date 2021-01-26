@@ -1,0 +1,28 @@
+---
+title: MailNews Filters
+slug: Mozilla/Thunderbird/MailNews_filters
+tags:
+  - MailNews
+  - thunderbird
+---
+<p>Mailnews filters consist of a set of search terms, and a set of filter actions. Filter execution is done by evaluating the search terms using the core mailnews/base/search code, and then applying the filter hits when the search terms match. For new incoming messages, the protocol specific object that handles new messages calls nsIMsgFilterList::ApplyFiltersToHdr and passes itself in as nsIMsgFilterHitNotify interface to handle filter hits. E.g., <a class="external" href="http://mxr.mozilla.org/mozilla/source/mailnews/imap/src/nsImapMailFolder.cpp#2828">IMAP</a>, <a class="external" href="http://mxr.mozilla.org/mozilla/source/mailnews/local/src/nsParseMailbox.cpp#1820">POP3</a>.
+</p><p>ApplyFiltersToHdr will in turn call the <a class="external" href="http://mxr.mozilla.org/mozilla/source/mailnews/base/search/public/nsIMsgFilterHitNotify.idl#57">applyFilterHit</a> method of the passed in nsIMsgFilterHitNotify interface ptr. The protocol specific code will then apply all of the actions of the filter to the current msg header. If one of the actions is a move, or a stop filter execution action, we move on to the next header; otherwise, we move on to the next filter.
+</p><p>In the case of POP3, filter execution is synchronous. For each new header, we evaluate the filter criteria and apply the actions synchronously, including moving a message to an other local folder, and advance to the next header. For IMAP, we tend to initiate the urls synchronously, but because we don't run two urls simultaneously on the same folder, the urls don't run until we've finished downloading headers. We also coalesce moves to the same destination folder, so that we can do them in one url/command to the server, and we playback those moves when the header download is done.
+</p><p><br>
+</p>
+<h3 id="After_the_Fact_Filters"> After the Fact Filters </h3>
+<p>These are one or more filters run on one or more folders *after* the headers have been downloaded. These filters are initiated in the filter editor, and implemented in <a class="external" href="http://mxr.mozilla.org/mozilla/source/mailnews/base/search/src/nsMsgFilterService.cpp#326">nsMsgFilterService.cpp</a>. This is implemented by doing a search using the filter criteria and applying the actions en masse on the resulting hits. The search is executed locally, not on the server, so that criteria like "in address book" still work. </p>
+<h3 id="How_to_add_a_filter_action"> How to add a filter action </h3>
+<ul><li> Add your new action to <a class="external" href="http://mxr.mozilla.org/mozilla/source/mailnews/base/search/public/nsMsgFilterCore.idl#63">nsIMsgFilterAction</a>
+</li><li> Add code to file out the new action <a class="external" href="http://mxr.mozilla.org/mozilla/source/mailnews/base/search/src/nsMsgFilter.cpp#762">here</a>
+</li><li> Add new action to the <a class="external" href="http://mxr.mozilla.org/mozilla/source/mailnews/base/search/src/nsMsgFilter.cpp#869">rulesActionTable</a>
+</li><li> Add string for the new action to the <a class="external" href="http://mxr.mozilla.org/mozilla/source/mail/locales/en-US/chrome/messenger/FilterEditor.dtd#53">filter editor dtd file</a>
+</li><li> Add new action to the <a class="external" href="http://mxr.mozilla.org/mozilla/source/mailnews/base/search/resources/content/FilterEditor.js#58">filter editor js code</a>
+</li><li> Add new action to the <a class="external" href="http://mxr.mozilla.org/mozilla/source/mailnews/base/search/resources/content/searchWidgets.xml#85">xbl widget</a> in the filter editor
+</li><li> If your action has a parameter, add code to initialize the ui editing an existing filter <a class="external" href="http://mxr.mozilla.org/mozilla/source/mailnews/base/search/resources/content/searchWidgets.xml#266">here</a> and to save to the filter <a class="external" href="http://mxr.mozilla.org/mozilla/source/mailnews/base/search/resources/content/searchWidgets.xml#343">here</a>
+</li><li> Add your action to <a class="external" href="http://mxr.mozilla.org/mozilla/source/mail/locales/en-US/chrome/messenger/filter.properties#46">filter.properties</a> so it will show up in the filter log.
+</li><li> Finally, add protocol-specific code to apply your filter action in the various ApplyFilterHit methods <a class="external" href="http://mxr.mozilla.org/mozilla/source/mailnews/imap/src/nsImapMailFolder.cpp#3017">IMAP</a> <a class="external" href="http://mxr.mozilla.org/mozilla/source/mailnews/local/src/nsParseMailbox.cpp#1829">POP3</a> <a class="external" href="http://mxr.mozilla.org/mozilla/source/mailnews/news/src/nsNNTPNewsgroupList.cpp#747">News</a> and <a class="external" href="http://mxr.mozilla.org/mozilla/source/mailnews/base/search/src/nsMsgFilterService.cpp#513">"after the fact"</a>
+</li></ul>
+<p>Since SeaMonkey and Thunderbird share the filter code, you will also need to update the SeaMonkey .dtd and .property files.
+</p><p>I may have missed some places, but that's a start, anyway. It would be really nice if we had a mechanism for extensions to add their own filter actions. Most if not all of the above pieces of code would be involved in the extension mechanism.
+</p>

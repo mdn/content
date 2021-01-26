@@ -1,0 +1,246 @@
+---
+title: LDAP Support
+slug: Mozilla/Thunderbird/LDAP_Support
+tags:
+  - Administration
+  - enterprise
+  - thunderbird
+---
+<p>This document is intended to "fill in the gaps" about how Enterprise customers can leverage and customize LDAP support in Mozilla Thunderbird. It is not intended as an introduction to LDAP and Mozilla products. It assumes you are already familiar with configuring preferences for deployed builds in addition to setting up Thunderbird to use an LDAP directory. It should be noted that all of this information applies to both Thunderbird and the SeaMonkey application suite.</p>
+
+<h2 id="Mail_Compose_Typedown">Mail Compose Typedown</h2>
+
+<p>In mail compose, when typing a partial mail address, a typedown window appears listing possible matches against address books and LDAP directories. For large companies, there may be a large number of users in the directory with the same name. In such a scenario, it may be hard to tell which person you really want to send the message to. In Thunderbird, the type down window can be customized to show arbitrary LDAP fields. This can be accomplished by setting the following preferences:</p>
+
+<pre>  user_pref("mail.autoComplete.commentColumn", 2);
+  user_pref("ldap_2.servers.<em>DIRECTORYNAME</em>.autoComplete.commentFormat", "[ou]");
+</pre>
+
+<p>The first preference tells us to use a comment column in the type down (the default value is 0 for no comment), and that the value for the comment is a custom string unique to each directory. The commentFormat preference is set on EACH directory. It acts as a template, specifying the extra LDAP attribute which should be used in the comment field along with how the attribute should be formatted. It expects the following format:</p>
+
+<ul>
+ <li>The desired LDAP attribute should be wrapped in square brackets. In this example, we are setting the organization unit as the LDAP attribute.</li>
+ <li>You can also insert arbitrary text to clarify the LDAP attribute. i.e. "Department: [ou]" would yield a type down entry that looks like "John Smit       Department: Client Engineering".</li>
+</ul>
+
+<h2 id="LDAP_Schema">LDAP Schema</h2>
+
+<p>The following table summarizes the schema used by Thunderbird to map between LDAP attributes and attributes within the the Address Book. Some notes about the relationship:</p>
+
+<ul>
+ <li>There is a many to one relationship between LDAP attributes and its Address Book counterpart.</li>
+ <li>There is a one to one relationship between a Address Book attribute and its LDAP counterpart. If there are multiple entries for a Address Book attribute, the first takes precedence.</li>
+</ul>
+
+<p>These relationships ensure: Generality is maintained when mapping from LDAP attributes to Address Book. Consistent round tripping when editing Address Book attributes which are stored on an LDAP server.</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>Address Book attribute</th>
+   <th>LDAP attribute</th>
+  </tr>
+  <tr>
+   <td>FirstName</td>
+   <td>givenname</td>
+  </tr>
+  <tr>
+   <td>LastName</td>
+   <td>sn</td>
+  </tr>
+  <tr>
+   <td>LastName</td>
+   <td>surname</td>
+  </tr>
+  <tr>
+   <td>DisplayName</td>
+   <td>cn</td>
+  </tr>
+  <tr>
+   <td>DisplayName</td>
+   <td>commonname</td>
+  </tr>
+  <tr>
+   <td>DisplayName</td>
+   <td>displayname</td>
+  </tr>
+  <tr>
+   <td>NickName</td>
+   <td>xmozillanickname</td>
+  </tr>
+  <tr>
+   <td>PrimaryEmail</td>
+   <td>mail</td>
+  </tr>
+  <tr>
+   <td>SecondEmail</td>
+   <td>xmozillasecondemail</td>
+  </tr>
+  <tr>
+   <td>WorkPhone</td>
+   <td>telephonenumber</td>
+  </tr>
+  <tr>
+   <td>HomePhone</td>
+   <td>homephone</td>
+  </tr>
+  <tr>
+   <td>FaxNumber</td>
+   <td>fax</td>
+  </tr>
+  <tr>
+   <td>FaxNumber</td>
+   <td>facsimiletelephonenumber</td>
+  </tr>
+  <tr>
+   <td>PagerNumber</td>
+   <td>pager</td>
+  </tr>
+  <tr>
+   <td>PagerNumber</td>
+   <td>pagerphone</td>
+  </tr>
+  <tr>
+   <td>CellularNumber</td>
+   <td>mobile</td>
+  </tr>
+  <tr>
+   <td>CellularNumber</td>
+   <td>cellphone</td>
+  </tr>
+  <tr>
+   <td>CellularNumber</td>
+   <td>carphone</td>
+  </tr>
+  <tr>
+   <td>WorkAddress</td>
+   <td>postofficebox</td>
+  </tr>
+  <tr>
+   <td>WorkAddress</td>
+   <td>streetaddress</td>
+  </tr>
+  <tr>
+   <td>WorkCity</td>
+   <td>l</td>
+  </tr>
+  <tr>
+   <td>WorkCity</td>
+   <td>locality</td>
+  </tr>
+  <tr>
+   <td>WorkState</td>
+   <td>st</td>
+  </tr>
+  <tr>
+   <td>WorkState</td>
+   <td>region</td>
+  </tr>
+  <tr>
+   <td>WorkZipCode</td>
+   <td>postalcode</td>
+  </tr>
+  <tr>
+   <td>WorkZipCode</td>
+   <td>zip</td>
+  </tr>
+  <tr>
+   <td>WorkCountry</td>
+   <td>countryname</td>
+  </tr>
+  <tr>
+   <td>JobTitle</td>
+   <td>title</td>
+  </tr>
+  <tr>
+   <td>Department</td>
+   <td>ou</td>
+  </tr>
+  <tr>
+   <td>Department</td>
+   <td>orgunit</td>
+  </tr>
+  <tr>
+   <td>Department</td>
+   <td>department</td>
+  </tr>
+  <tr>
+   <td>Department</td>
+   <td>departmentnumber</td>
+  </tr>
+  <tr>
+   <td>Company</td>
+   <td>o</td>
+  </tr>
+  <tr>
+   <td>Company</td>
+   <td>company</td>
+  </tr>
+  <tr>
+   <td>WorkCountry</td>
+   <td>countryname</td>
+  </tr>
+  <tr>
+   <td>_AimScreenName</td>
+   <td>nscpaimscreenname</td>
+  </tr>
+  <tr>
+   <td>WebPage1</td>
+   <td>workurl</td>
+  </tr>
+  <tr>
+   <td>WebPage2</td>
+   <td>homeurl</td>
+  </tr>
+  <tr>
+   <td>BirthYear</td>
+   <td>birthyear</td>
+  </tr>
+  <tr>
+   <td>Custom1</td>
+   <td>custom1</td>
+  </tr>
+  <tr>
+   <td>Custom2</td>
+   <td>custom2</td>
+  </tr>
+  <tr>
+   <td>Custom3</td>
+   <td>custom3</td>
+  </tr>
+  <tr>
+   <td>Custom4</td>
+   <td>custom4</td>
+  </tr>
+  <tr>
+   <td>Notes</td>
+   <td>notes</td>
+  </tr>
+  <tr>
+   <td>Notes</td>
+   <td>description</td>
+  </tr>
+  <tr>
+   <td>PreferMailFormat</td>
+   <td>xmozillausehtmlmail</td>
+  </tr>
+  <tr>
+   <td>LastModifiedDate</td>
+   <td>modifytimestamp</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Custom_LDAP_Attributes">Custom LDAP Attributes</h2>
+
+<p>Thunderbird supports custom LDAP attributes for various Address Book attributes. See <a class="external" href="http://bugzilla.mozilla.org/show_bug.cgi?id=119291">Bug #119291</a> for more details.</p>
+
+<div class="originaldocinfo">
+<h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+
+
+<ul>
+ <li>Author(s): Scott MacGregor</li>
+ <li>Copyright Information: Portions of this content are © 1998–2010 by individual mozilla.org contributors; content available under a Creative Commons license | <a class="external" href="http://www.mozilla.org/foundation/licensing/website-content.html">Details</a>.</li>
+</ul>
+</div>

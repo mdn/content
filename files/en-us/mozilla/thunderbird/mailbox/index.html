@@ -1,0 +1,9 @@
+---
+title: Mailbox
+slug: Mozilla/Thunderbird/Mailbox
+tags:
+  - MailNews
+---
+<p>The mailbox protocol is used to read messages from a local folder berkeley mailbox. It consists of <a class="external" href="https://dxr.mozilla.org/mozilla/source/mailnews/local/src/nsMailboxService.cpp#77">nsMailboxService</a>, <a class="external" href="https://dxr.mozilla.org/mozilla/source/mailnews/local/src/nsMailboxUrl.cpp#76">nsMailboxUrl</a>, and <a class="external" href="https://dxr.mozilla.org/mozilla/source/mailnews/local/src/nsMailboxProtocol.cpp#84">nsMailboxProtocol</a>. This may seem like a lot of infrastructure just to read messages from a flat file, but it allows us to do it asynchronously, and to have reading local messages fit into the same kind of mechanisms that reading nntp and imap messages do - running urls, getting onStart/StopRunningUrl notifications when the url starts/stops, etc.</p>
+
+<p>The Mailbox protocol is also used to regenerate a summary file, in conjunction with <a class="external" href="http://mxr.mozilla.org/mozilla/source/mailnews/local/src/nsParseMailbox.cpp#101">nsMsgMailboxParser</a></p>

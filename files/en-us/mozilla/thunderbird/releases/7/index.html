@@ -1,0 +1,28 @@
+---
+title: Thunderbird 7 for developers
+slug: Mozilla/Thunderbird/Releases/7
+---
+<div class="blockIndicator draft">
+    <p><strong>Draft</strong><br>
+    This page is not complete.</p>
+
+</div>
+<div class="blockIndicator standardNote">
+<p>This content covers features introduced in <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/7">Thunderbird 7</a></p>
+</div>
+<p><span>This page lists the changes in Thunderbird 7 that are relevant for developers. For changes that are relevant to end users, see <a class="external" href="http://support.mozillamessaging.com/" title="http://support.mozillamessaging.com/">http://support.mozillamessaging.com/</a></span><a class=" link-https" href="https://support.mozillamessaging.com/en-US/kb/new-thunderbird-7/history">en-US/kb/new-thunderbird-7/.</a><br> </p>
+<h2 id="Gecko_7.0">Gecko 7.0</h2>
+<p>Thunderbird 7 is based on Gecko 7.0. The <a href="/en/Firefox_7_for_developers" title="en/Firefox_7_for_developers">Firefox 7</a> page has details on the significant changes to Gecko.</p>
+<h2 id="Changes_for_Mozilla_and_add-on_developers">Changes for Mozilla and add-on developers</h2>
+<p>For helpful tips on updating existing extensions for Thunderbird 7, see <a href="/en/Extensions/Updating_extensions_for_Firefox_7" title="en/Extensions/Updating_extensions_for_Firefox_7">Updating extensions for Firefox 7</a>. There are several key changes that break compatibility with existing add-ons, so be sure to read that article.</p>
+<h3 id="Attachment_API">Attachment API</h3>
+<p>Attachment objects in the reader (formerly <code>createNewAttachmentInfo</code>) are now called <code>AttachmentInfo</code>. Related functions (e.g. <code>saveAttachment</code>) have been replaced with methods (e.g. <code>AttachmentInfo.save</code>).</p>
+<h3 id="Address_Book_RDF_Obsolescence">Address Book RDF Obsolescence</h3>
+<div class="editable"><span>The deprecated RDF interfaces for accessing and manipulating address books have been removed.</span>  Any and all address book manipulation should now be carried out solely through the nsIAbManager.  <a href="/En/Address_Book_Interfaces" title="Address Book Interfaces">See the Address Book Interfaces article for more details</a>.</div>
+<h3 id="Backend_changes"><br> Backend changes</h3>
+<p> </p>
+<h2 id="Other_Changes">Other Changes</h2>
+<p> </p>
+<h2 id="More_resources">More resources</h2>
+<ul> <li><a href="/en/Firefox_7_for_developers" title="en/Firefox_7_for_developers">Firefox 7 for developers</a></li> <li><a href="/en/Thunderbird_6_for_developers" title="en/Thunderbird_6_for_developers">Thunderbird 6 for developers</a></li> <li><a class=" external" href="http://support.mozillamessaging.com/en-US/kb/new-thunderbird-7/" title="http://support.mozillamessaging.com/en-US/kb/new-thunderbird-7/">New in Thunderbird 7</a> for users</li>
+</ul>

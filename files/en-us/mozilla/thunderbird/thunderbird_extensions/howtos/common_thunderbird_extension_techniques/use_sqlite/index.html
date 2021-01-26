@@ -1,0 +1,91 @@
+---
+title: Use SQLite
+slug: >-
+  Mozilla/Thunderbird/Thunderbird_extensions/HowTos/Common_Thunderbird_Extension_Techniques/Use_SQLite
+tags:
+  - thunderbird
+---
+<p>{{AddonSidebar}}</p>
+
+<p>If you'd like to use an SQLite database in your extension you'll need to look over the <a href="/en/Storage" title="en/Storage">Storage</a> docs for an API reference, however this code should get you started. Be careful of <a href="/en/Storage#How_to_corrupt_your_database" title="en/Storage#How_to_corrupt_your_database">multi-thread access</a> to your database.</p>
+
+<p>This will create an SQLite db named <strong>tbird.sqlite</strong> inside your profile directory with a table called <em>attachments</em>. You can see the schema for the attachments table in the code. To double check the information you've inserted you can query the <em>tbird.sqlite</em> file using regular SQLite programs.</p>
+
+<pre class="brush: js">const Cc = Components.classes;
+const Ci = Components.interfaces;
+
+var tbirdsqlite = {
+
+  onLoad: function() {
+    // initialization code
+    this.initialized = true;
+    this.dbInit();
+  },
+
+  dbConnection: null,
+
+  dbSchema: {
+     tables: {
+       attachments:"id           INTEGER PRIMARY KEY, \
+                    name         TEXT \
+                    encoded      TEXT NOT NULL"
+    }
+  },
+
+  dbInit: function() {
+    var dirService = Cc["@mozilla.org/file/directory_service;1"].
+      getService(Ci.nsIProperties);
+
+    var dbFile = dirService.get("ProfD", Ci.nsIFile);
+    dbFile.append("tbird.sqlite");
+
+    var dbService = Cc["@mozilla.org/storage/service;1"].
+      getService(Ci.mozIStorageService);
+
+    var dbConnection;
+
+    if (!dbFile.exists())
+      dbConnection = this._dbCreate(dbService, dbFile);
+    else {
+      dbConnection = dbService.openDatabase(dbFile);
+    }
+    this.dbConnection = dbConnection;
+  },
+
+  _dbCreate: function(aDBService, aDBFile) {
+    var dbConnection = aDBService.openDatabase(aDBFile);
+    this._dbCreateTables(dbConnection);
+    return dbConnection;
+  },
+
+  _dbCreateTables: function(aDBConnection) {
+    for(var name in this.dbSchema.tables)
+      aDBConnection.createTable(name, this.dbSchema.tables[name]);
+  },
+};
+window.addEventListener("load", function(e) { tbirdsqlite.onLoad(e); }, false);</pre>
+
+<p>This is another practical sample on how to handle openDatabase and SQL queries on the Client Side, using in-memory (BLOB) storage of 2Mb:</p>
+
+<pre class="brush: js">var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+var msg;
+db.transaction(function (tx) {
+  tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)');
+  tx.executeSql('INSERT INTO LOGS (id, log) VALUES (1, "foobar")');
+  tx.executeSql('INSERT INTO LOGS (id, log) VALUES (2, "logmsg")');
+  msg = '&lt;p&gt;Log message created and row inserted.&lt;/p&gt;';
+  document.querySelector('#status').innerHTML =  msg;
+});
+
+db.transaction(function (tx) {
+  tx.executeSql('SELECT * FROM LOGS', [], function (tx, results) {
+   var len = results.rows.length, i;
+   msg = "&lt;p&gt;Found rows: " + len + "&lt;/p&gt;";
+   document.querySelector('#status').innerHTML +=  msg;
+   for (i = 0; i &lt; len; i++){
+     msg = "&lt;p&gt;&lt;b&gt;" + results.rows.item(i).log + "&lt;/b&gt;&lt;/p&gt;";
+     document.querySelector('#status').innerHTML +=  msg;
+   }
+ }, null);
+});
+</pre>

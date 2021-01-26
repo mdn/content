@@ -1,0 +1,52 @@
+---
+title: 'Building a Thunderbird extension 7: Installation'
+slug: >-
+  Mozilla/Thunderbird/Thunderbird_extensions/Building_a_Thunderbird_extension_7:_Installation
+tags:
+  - Extensions
+  - thunderbird
+---
+<p>{{AddonSidebar}}</p>
+
+<p>{{ warning("This content is for older versions of Thunderbird. Much of it may no longer be relevant. See developer.thunderbird.net for newer information.") }}</p>
+
+<p>While you are developing the extension, there are two ways you can make Thunderbird load it so you can test it as you go. You can either put the folder with the extension files directly into Thunderbird's extensions folder, or you can put a file there that tells Thunderbird where your extension is located. (In step 8 you will learn how to package an <span class="nowiki">.xpi</span> file for distribution and installation.)</p>
+
+<p>To find the Thunderbird extension folder, navigate to Thunderbird's profile directory and open the <span class="nowiki">extensions/</span> folder. Depending on the operating system it will be in one of the following locations:</p>
+
+<ul>
+ <li><span style="font-family: helvetica;"><strong>Windows:</strong></span> <code><span class="nowiki">%APPDATA%\Thunderbird\Profiles\&lt;Profile Name&gt;\extensions\</span></code></li>
+ <li><span style="font-family: helvetica;"><strong>Linux:</strong></span> <code><span class="nowiki">~/.thunderbird/&lt;Profile Name&gt;/extensions/</span></code></li>
+ <li><span style="font-family: helvetica;"><strong>MAC:</strong></span> <code><span class="nowiki">~/Library/Thunderbird/Profiles/&lt;Profile Name&gt;/extensions/</span></code></li>
+</ul>
+
+<div class="note">To ensure that your current mail and settings don't get messed up during testing, it is safer to use a test profile rather than your standard profile when developing extensions. Here is a Mozilla knowledge-base <a href="http://mzl.la/1ml3Fmj">article</a> that shows you how to set up multiple profiles.</div>
+
+<div class="note">If the <span class="nowiki">extensions/</span> directory does not yet exist you need to create it.</div>
+
+<p><strong>Using a text file to reference your extension files (recommended):</strong></p>
+
+<ol>
+ <li>If you are developing your extension in a different folder (for example "...\<span class="nowiki">My Documents\Code\Thunderbird Extensions\</span><strong><span class="nowiki">myfirstext@jen.zed\</span></strong>"), then you can create a text file in the <span class="nowiki">extensions/</span> folder to point to it. The name of the text file must be exactly the same as the value of <span class="nowiki"><code>&lt;em:id&gt;</code></span> from <strong>install.rdf</strong>. In our case the file will be named: <strong><code><span class="nowiki">myfirstext@jen.zed</span></code></strong>.</li>
+ <li>The file must contain a single line with the absolute path of the extension. The folder that is referenced must be the <strong>same </strong>as the value of <span class="nowiki"><code>&lt;em:id&gt;</code></span> from <strong>install.rdf</strong>.<br>
+  <span class="nowiki"><code><code>C:\Documents and Settings\&lt;user name&gt;\My Documents\Code\Thunderbird Extensions\</code><strong><code>myfirstext@jen.zed\</code></strong></code></span></li>
+</ol>
+
+<p><strong>Putting the extension file directly into the extensions folder (alternative):</strong></p>
+
+<ol>
+ <li>After you have opened the <span class="nowiki">extensions/</span> folder, create a sub-folder with the name of your extension. This name must be exactly the same as the id of the <span class="nowiki"><code>&lt;em:id&gt;</code></span> field in the <strong>install.rdf</strong> file. In our case the folder will be named: <code><span class="nowiki">myfirstext@jen.zed/</span></code>. Depending on the format of your id, the folder name may also be a <a href="/en/Generating_GUIDs" title="en/Generating GUIDs">GUID</a>.</li>
+</ol>
+
+<p>Now you can start Thunderbird. Thunderbird will detect the extension and try to load it.</p>
+
+<p>See <a href="/en/Setting_up_extension_development_environment" title="en/Setting_up_extension_development_environment">Setting up extension development environment</a> for how to set up a developer profile and enable debugging features.</p>
+
+<p>You can now go back and make changes to the .<code>xul</code> file. When you close and restart Thunderbird they should appear.</p>
+
+<ul>
+</ul>
+
+<div class="note">There is also the possibility for remotly debugging Thunderbird with the Firefox debugger. Here is a Mozilla knowledge-base <a href="https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging/Thunderbird">article</a> that shows you how to set up remote debugging.</div>
+
+<p>{{ PreviousNext("Extensions/Thunderbird/Building_a_Thunderbird_extension_6:_Adding_Javascript", "Extensions/Thunderbird/Building_a_Thunderbird_extension_8:_packaging") }}</p>
