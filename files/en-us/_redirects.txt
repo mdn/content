@@ -6910,6 +6910,7 @@
 /en-US/docs/Localization	/en-US/docs/Glossary/Localization
 /en-US/docs/Localizations_and_character_encodings	/en-US/docs/Web/Guide/Localizations_and_character_encodings
 /en-US/docs/MDC:How_to_Help	/en-US/docs/MDN/Contribute
+/en-US/docs/MDN/At_ten/Contributing_to_MDN	/en-US/docs/MDN/Contribute
 /en-US/docs/MDN/Contribute/Code_sample_guidelines	/en-US/docs/MDN/Guidelines/Code_guidelines
 /en-US/docs/MDN/Contribute/Content	/en-US/docs/MDN/Guidelines
 /en-US/docs/MDN/Contribute/Content/Content_blocks	/en-US/docs/MDN/Guidelines/CSS_style_guide
@@ -7029,7 +7030,7 @@
 /en-US/docs/MDN/User_guide/Advanced_search	/en-US/docs/MDN/Tools/Search
 /en-US/docs/MDN/User_guide/Troubleshooting_KumaScript_errors	/en-US/docs/MDN/Tools/KumaScript/Troubleshooting
 /en-US/docs/MDN_at_ten	/en-US/docs/MDN/At_ten
-/en-US/docs/MDN_at_ten/Contributing_to_MDN	/en-US/docs/MDN/At_ten/Contributing_to_MDN
+/en-US/docs/MDN_at_ten/Contributing_to_MDN	/en-US/docs/MDN/Contribute
 /en-US/docs/MDN_at_ten/History	/en-US/docs/MDN/At_ten/History_of_MDN
 /en-US/docs/MDN_at_ten/History_of_MDN	/en-US/docs/MDN/At_ten/History_of_MDN
 /en-US/docs/MODULE	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options
