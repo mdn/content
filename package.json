@@ -11,7 +11,7 @@
     "start": "yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true node node_modules/@mdn/yari/server",
     "filecheck": "env-cmd --silent cross-env CONTENT_ROOT=files node node_modules/@mdn/yari/filecheck/cli.js --cwd=$(pwd)",
     "content": "env-cmd --silent cross-env CONTENT_ROOT=files node node_modules/@mdn/yari/tool/cli.js",
-    "build": "env-cmd --silent cross-env CONTENT_ROOT=files node node_modules/@mdn/yari/build/cli.js"
+    "build": "env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build node node_modules/@mdn/yari/build/cli.js"
   },
   "dependencies": {
     "@mdn/yari": "0.3.29",
