@@ -61,7 +61,7 @@ tags:
 	<li>a language subtag,</li>
 	<li>(optionally) a script subtag,</li>
 	<li>(optionally) a region (or country) subtag,</li>
-	<li>(optionally) one or more variant subtags,</li>
+	<li>(optionally) one or more variant subtags (all of which must be unique),</li>
 	<li>(optionally) one or more BCP 47 extension sequences, and</li>
 	<li>(optionally) a private-use extension sequence</li>
 </ol>
@@ -89,7 +89,7 @@ tags:
 			<li>"<code>en-GB-u-ca-islamic</code>": use British English with the Islamic (Hijri) calendar, where the Gregorian date 14 October, 2017 is the Hijri date 24 Muharram, 1439.</li>
 		</ul>
 	</li>
-	<li>The <code>"t"</code> (transformed) extension indicates transformed content: for example, text that was translated from another locale. No <code>Intl</code> functionality currently considers the <code>"t"</code> extension. However, this extension sometimes contains a nested locale (with no extensions): for example, the transformed extension in "<code>de-t-en</code>" contains the locale identifier for English. If a nested locale is present, it must be a valid locale identifier.</li>
+	<li>The <code>"t"</code> (transformed) extension indicates transformed content: for example, text that was translated from another locale. No <code>Intl</code> functionality currently considers the <code>"t"</code> extension. However, this extension sometimes contains a nested locale (with no extensions): for example, the transformed extension in "<code>de-t-en</code>" contains the locale identifier for English. If a nested locale is present, it must be a valid locale identifier. For example, because "<code>en-emodeng-emodeng</code>" is invalid (because it contains a duplicate <code>emodeng</code> variant subtag), "<code>de-t-en-emodeng-emodeng</code>" is also invalid.</li>
 </ul>
 
 <p>Finally, a private-use extension sequence using the letter <code>"x"</code> may appear, followed by one or more one- to eight-letter or digit subtags separated by hyphens. This allows applications to encode information for their own private use, that will be ignored by all <code>Intl</code> operations.</p>
