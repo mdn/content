@@ -431,6 +431,7 @@
 /en-US/docs/CSS/:-moz-ui-valid	/en-US/docs/Web/CSS/:-moz-ui-valid
 /en-US/docs/CSS/:-moz-user-disabled	/en-US/docs/Web/CSS/:-moz-user-disabled
 /en-US/docs/CSS/:-moz-window-inactive	/en-US/docs/Web/CSS/:-moz-window-inactive
+/en-US/docs/Web/CSS/:-webkit-autofill	/en-US/docs/Web/CSS/:autofill
 /en-US/docs/CSS/::-moz-page	/en-US/docs/Web/CSS/::-moz-page
 /en-US/docs/CSS/::-moz-page-sequence	/en-US/docs/Web/CSS/::-moz-page-sequence
 /en-US/docs/CSS/::-moz-placeholder	/en-US/docs/Web/CSS/::placeholder
