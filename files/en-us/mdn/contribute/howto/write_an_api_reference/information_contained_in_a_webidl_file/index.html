@@ -1,6 +1,7 @@
 ---
 title: Information contained in a WebIDL file
-slug: MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
+slug: >-
+  MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
 tags:
   - Howto
   - MDN Meta
@@ -234,10 +235,10 @@ interface SpeechSynthesis {
 
 <p>It is uncommon to have getters throwing exceptions, though it happens in a few cases. In this case the <code>[GetterThrows]</code> annotation is used. Here also, the Syntax section of the property page <em>must</em> have an Exceptions subsection.</p>
 
-<pre class="brush: js notranslate"><code id="line-16">partial interface Blob {</code><code id="line-17">
-</code><code id="line-18">  <strong>[GetterThrows]</strong>
-</code><code id="line-19">  readonly attribute <span class="k">unsigned</span> <span class="k">long</span> <span class="k">long</span> size;
-};</code>
+<pre class="brush: js notranslate">partial interface Blob {
+  [GetterThrows]
+  readonly attribute unsigned long long size;
+};
 </pre>
 
 <h3 id="Not_throwing_exceptions">Not throwing exceptions</h3>
@@ -246,12 +247,12 @@ interface SpeechSynthesis {
 
 <p>Mostly for compatibility purpose, this behavior is sometimes annoying. To prevent this by creating a no-op setter (that is by silently ignoring any attempt to set the property to a new value), the <code>[LenientSetter]</code> annotation can be used.</p>
 
-<pre class="brush: js notranslate"><code id="line-223">partial interface Document {</code><code id="line-225">
-</code><code id="line-226"><strong>  [LenientSetter]</strong>
-</code><code id="line-227">  readonly attribute boolean fullscreen;</code><code id="line-229">
-</code><code id="line-230"><strong>  [LenientSetter]</strong>
-</code><code id="line-231">  readonly attribute boolean fullscreenEnabled;
-};</code>
+<pre class="brush: js notranslate">partial interface Document {
+  [LenientSetter]
+  readonly attribute boolean fullscreen;
+  [LenientSetter]
+  readonly attribute boolean fullscreenEnabled;
+};
 </pre>
 
 <p>In these cases, an extra sentence is added to the description of the property. E.g</p>
@@ -353,7 +354,7 @@ interface SpeechSynthesis {
 
 <p>Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. <a href="https://heycam.github.io/webidl/#es-enumeration">Trying to set an illegal enumerated value</a> (mapped to a JavaScript {{jsxref('String')}}) as a parameter will raise a {{exception('TypeError')}} exception. This must be documented, but it is only implicitly marked in the WebIDL document.</p>
 
-<p>Have a look at one of these <a href="/en-US/docs/Web/API/SubtleCrypto/importKey#Exceptions"><em>Exceptions</em> sections</a>.</p>
+<p>Have a look at one of these <a href="/en-US/docs/Web/API/SubtleCrypto/importKey#exceptions"><em>Exceptions</em> sections</a>.</p>
 
 <h3 id="Availability_in_workers_2">Availability in workers</h3>
 
@@ -485,7 +486,7 @@ serializer;</strong> // Standard version
 
 <h3 id="Stringifiers">Stringifiers</h3>
 
-<p>In addition to adding the <code>toString()</code> method to an interface as described in <a href="#toString_and_toJSON">toString() and toJSON()</a>, stringifiers also indicate that an object instance, when used as a string, returns a <code>DOMString</code> other than the default. (The default is usually a JSON representation of the object). Exactly how depends on the way it is specified in the IDL. Regardless of the how, the non-default behavior should be described on the interface page.</p>
+<p>In addition to adding the <code>toString()</code> method to an interface as described in <a href="#tostring_and_tojson">toString() and toJSON()</a>, stringifiers also indicate that an object instance, when used as a string, returns a <code>DOMString</code> other than the default. (The default is usually a JSON representation of the object). Exactly how depends on the way it is specified in the IDL. Regardless of the how, the non-default behavior should be described on the interface page.</p>
 
 <p>When the <code>stringifier</code> keyword accompanies an attribute name, referencing the object name has the same result as referencing the attribute name. Consider the following IDL:</p>
 
