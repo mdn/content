@@ -16,21 +16,21 @@ tags:
 
 <p>First, we consider a single, pure list item. This list item has no marker (otherwise known as a "bullet") and is not yet part of a list itself. It hangs alone in the void, simple and unadorned, as shown in Figure 1.</p>
 
-<p><img alt="Figure 1" class="internal" src="/@api/deki/files/619/=Consistent-list-indentation-figure1.gif"></p>
+<p><img alt="Figure 1" class="internal" src="consistent-list-indentation-figure1.gif"></p>
 
 <p>That dotted red border represents outer edges of the content-area of the list item. Remember that, at this point, the list item has no padding or borders. If we add two more list items, we get a result like that shown in Figure 2.</p>
 
-<p><img alt="Figure 2" class="internal" src="/@api/deki/files/620/=Consistent-list-indentation-figure2.gif"></p>
+<p><img alt="Figure 2" class="internal" src="consistent-list-indentation-figure2.gif"></p>
 
 <p>Now we wrap these in a parent element; in this case, we'll wrap them in an unordered list (i.e., <code>&lt;ul&gt;</code>). According to the CSS box model, the list items' boxes must be displayed within the parent element's content area. Since that parent has no padding or margins yet, we get the situation shown in Figure 3.</p>
 
-<p><img alt="Figure 3" class="internal" src="/@api/deki/files/621/=Consistent-list-indentation-figure3.gif"></p>
+<p><img alt="Figure 3" class="internal" src="consistent-list-indentation-figure3.gif"></p>
 
 <p>Here, the dotted blue border shows us the edges of the <code>&lt;ul&gt;</code> element's content area. Since we have no padding for the <code>&lt;ul&gt;</code> element, its content wraps snugly around the three list items.</p>
 
 <p>Now we add the list item markers. Since this is an unordered list, we'll add traditional filled-circle "bullets," as shown in Figure 4.</p>
 
-<p><img alt="Figure 4" class="internal" src="/@api/deki/files/622/=Consistent-list-indentation-figure4.gif"></p>
+<p><img alt="Figure 4" class="internal" src="consistent-list-indentation-figure4.gif"></p>
 
 <p>Visually, the markers are <em>outside</em> the content area of the <code>&lt;ul&gt;</code>, but that's not the important part here. What's key is that the markers are placed outside the "principal box" of the <code>&lt;li&gt;</code> elements, not the <code>&lt;ul&gt;</code>. They're sort of like appendages to the list items, hanging outside the content-area of the <code>&lt;li&gt;</code> but still attached to the <code>&lt;li&gt;</code>.</p>
 
@@ -56,11 +56,11 @@ tags:
 
 <p>Let's look at the two approaches for a moment. In Internet Explorer and Opera, the lists are indented by setting a left margin of 40 pixels on the <code>&lt;ul&gt;</code> element. If we apply a background color to the <code>&lt;ul&gt;</code> element and leave the list item and <code>&lt;ul&gt;</code> borders in place, we get the result shown in Figure 5.</p>
 
-<p><img alt="Figure 5" class="internal" src="/@api/deki/files/623/=Consistent-list-indentation-figure5.gif"></p>
+<p><img alt="Figure 5" class="internal" src="consistent-list-indentation-figure5.gif"></p>
 
 <p>Gecko, on the other hand, sets a left <em>padding</em> of 40 pixels for the <code>&lt;ul&gt;</code> element, so given the exact same styles as were used to produce Figure 5, loading the example into a Gecko-based browser gives us Figure 6.</p>
 
-<p><img alt="Figure 6" class="internal" src="/@api/deki/files/624/=Consistent-list-indentation-figure6.gif"></p>
+<p><img alt="Figure 6" class="internal" src="consistent-list-indentation-figure6.gif"></p>
 
 <p>As we can see, the markers remain attached to the <code>&lt;li&gt;</code> elements, no matter where they are. The difference is entirely in how the <code>&lt;ul&gt;</code> is styled. We can only see the difference if we try to set a background or border on the <code>&lt;ul&gt;</code> element.</p>
 

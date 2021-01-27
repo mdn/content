@@ -38,7 +38,7 @@ tags:
 ];
 </pre>
 
-<p><span>What does multiplying by the identity matrix look like? The easiest example is to multiply a single point by the identity matrix. Since a 3D point only needs three values (x, y, and z), and the transformation matrix is a 4x4 value matrix, we need to add a fourth dimension to the point. By convention, this dimension is called the <strong>perspective</strong>, and is represented by the letter w. For a typical position, setting w to 1 will make the math work out.</span></p>
+<p>What does multiplying by the identity matrix look like? The easiest example is to multiply a single point by the identity matrix. Since a 3D point only needs three values (x, y, and z), and the transformation matrix is a 4x4 value matrix, we need to add a fourth dimension to the point. By convention, this dimension is called the <strong>perspective</strong>, and is represented by the letter w. For a typical position, setting w to 1 will make the math work out.</p>
 
 <p>After adding the w component to the point, notice how neatly the matrix and the point line up:</p>
 
@@ -50,7 +50,7 @@ tags:
 [4, 3, 2, 1]  // Point at [x, y, z, w]
 </pre>
 
-<p><span>The w component has some additional uses that are out of scope for this article. Check out the </span><a href="/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection">WebGL model view projection</a><span> article for a look into how it comes in handy.</span></p>
+<p>The w component has some additional uses that are out of scope for this article. Check out the <a href="/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection">WebGL model view projection</a> article for a look into how it comes in handy.</p>
 
 <h3 id="Multiplying_a_matrix_and_a_point">Multiplying a matrix and a point</h3>
 
@@ -303,7 +303,7 @@ function rotateAroundZAxis(a) {
 
 <p>Another mind-bender is that matrix multiplication in WebGL and CSS needs to happen in the reverse order that the operations intuitively happen. For instance, to scale something down by 80%, move it down 200 pixels, and then rotate about the origin 90 degrees would look something like the following in pseudo-code.</p>
 
-<pre class="notranslate">
+<pre class="brush: plain notranslate">
   transformation = rotate * translate * scale
 </pre>
 

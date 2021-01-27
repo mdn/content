@@ -170,7 +170,7 @@ input:valid {
 
 <h3 id="Validating_against_a_regular_expression">Validating against a regular expression</h3>
 
-<p>Another useful validation feature is the <a href="/en-US/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a> attribute, which expects a <a href="/en-US/docs/JavaScript/Guide/Regular_Expressions">Regular Expression</a> as its value. A regular expression (regex) is a pattern that can be used to match character combinations in text strings, so regexps are ideal for form validation and serve a variety of other uses in JavaScript.</p>
+<p>Another useful validation feature is the <a href="/en-US/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a> attribute, which expects a <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Regular Expression</a> as its value. A regular expression (regex) is a pattern that can be used to match character combinations in text strings, so regexps are ideal for form validation and serve a variety of other uses in JavaScript.</p>
 
 <p>Regexps are quite complex, and we don't intend to teach you them exhaustively in this article. Below are some examples to give you a basic idea of how they work.</p>
 
@@ -369,7 +369,7 @@ input:focus:invalid {
 
 <p>{{EmbedLiveSample("Full_example", "100%", 420)}}</p>
 
-<p>See <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation#Validation-related_attributes">Validation-related attributes</a> for a complete list of attributes that can be used to constrain input values and the input types that support them.</p>
+<p>See <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation#validation-related_attributes">Validation-related attributes</a> for a complete list of attributes that can be used to constrain input values and the input types that support them.</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: You can find this example live on GitHub as <a href="https://mdn.github.io/learning-area/html/forms/form-validation/full-example.html">full-example.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/full-example.html">source code</a>.)</p>
@@ -429,7 +429,7 @@ input:focus:invalid {
  <li>They depend on the browser locale, which means that you can have a page in one language but an error message displayed in another language, as seen in the following Firefox screenshot.</li>
 </ul>
 
-<p><img alt="Example of an error message with Firefox in French on an English page" src="/files/4329/error-firefox-win7.png" style="height: 97px; width: 228px;"></p>
+<p><img alt="Example of an error message with Firefox in French on an English page" src="error-firefox-win7.png"></p>
 
 <p>Customizing these error messages is one of the most common use cases of the <a href="/en-US/docs/Web/API/Constraint_validation" rel="external">constraint validation API</a>. Let's work through a simple example of how to do this.</p>
 
@@ -455,7 +455,7 @@ email.addEventListener("input", function (event) {
 
 <p>Here we store a reference to the email input, then add an event listener to it that runs the contained code each time the value inside the input is changed.</p>
 
-<p>Inside the contained code, we check whether the email input's <code>validity.typeMismatch</code> property returns <code>true</code>, meaning that the contained value doesn't match the pattern for a well-formed email address. If so, we call the <a href="/en-US/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()"><code>setCustomValidity()</code></a> method with a custom message. This renders the input invalid, so that when you try to submit the form, submission fails and the custom error message is displayed.</p>
+<p>Inside the contained code, we check whether the email input's <code>validity.typeMismatch</code> property returns <code>true</code>, meaning that the contained value doesn't match the pattern for a well-formed email address. If so, we call the <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation#constraint_api's_element.setcustomvalidity()"><code>setCustomValidity()</code></a> method with a custom message. This renders the input invalid, so that when you try to submit the form, submission fails and the custom error message is displayed.</p>
 
 <p>If the <code>validity.typeMismatch</code> property returns <code>false</code>, we call the <code>setCustomValidity()</code> method an empty string. This renders the input valid, so the form will submit.</p>
 
@@ -488,7 +488,7 @@ email.addEventListener("input", function (event) {
 
 <p>Our input to validate is an <code><a href="/en-US/docs/Web/HTML/Element/input/email">&lt;input type="email"&gt;</a></code>, which is <code>required</code>, and has a <code>minlength</code> of 8 characters. Let's check these using our own code, and show a custom error message for each one.</p>
 
-<p>We are aiming to show the error messages inside a <code>&lt;span&gt;</code> element. The <a href="/en-US/docs/Accessibility/ARIA/ARIA_Live_Regions"><code>aria-live</code></a> attribute is set on that <code>&lt;span&gt;</code> to make sure that our custom error message will be presented to everyone, including it being read out to screenreader users.</p>
+<p>We are aiming to show the error messages inside a <code>&lt;span&gt;</code> element. The <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions"><code>aria-live</code></a> attribute is set on that <code>&lt;span&gt;</code> to make sure that our custom error message will be presented to everyone, including it being read out to screenreader users.</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: A key point here is that setting the <code>novalidate</code> attribute on the form is what stops the form from showing its own error message bubbles, and allows us to instead display the custom error messages in the DOM in some manner of our own choosing.</p>
@@ -839,5 +839,5 @@ addEvent(form, "submit", function () {
 <ul>
  <li><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form controls</a></li>
  <li><a href="/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript">Sending forms through JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_widgets">Property compatibility table for form widgets</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Property compatibility table for form widgets</a></li>
 </ul>

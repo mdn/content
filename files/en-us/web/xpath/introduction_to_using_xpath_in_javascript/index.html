@@ -32,18 +32,18 @@ tags:
  <li><code>contextNode</code>: A node in the document against which the <code>xpathExpression</code> should be evaluated, including any and all of its child nodes. The <a href="/en-US/docs/Web/API/document">document</a> node is the most commonly used.</li>
  <li><code>namespaceResolver</code>: A function that will be passed any namespace prefixes contained within <code>xpathExpression</code> which returns a string representing the namespace URI associated with that prefix. This enables conversion between the prefixes used in the XPath expressions and the possibly different prefixes used in the document. The function can be either:
   <ul>
-   <li><a href="#Implementing_a_Default_Namespace_Resolver">Created</a> by using the <code><a href="/en-US/docs/Web/API/Document.createNSResolver">createNSResolver</a></code> method of a <code><a href="/en-US/docs/Using_XPath#Node-specific_evaluator_function">XPathEvaluator</a></code> object. You should use this virtually all of the time.</li>
+   <li><a href="#implementing_a_default_namespace_resolver">Created</a> by using the <code><a href="/en-US/docs/Web/API/Document.createNSResolver">createNSResolver</a></code> method of a <code><a href="/en-US/docs/Using_XPath#Node-specific_evaluator_function">XPathEvaluator</a></code> object. You should use this virtually all of the time.</li>
    <li><code>null</code>, which can be used for HTML documents or when no namespace prefixes are used. Note that, if the <code>xpathExpression</code> contains a namespace prefix, this will result in a <code>DOMException</code> being thrown with the code <code>NAMESPACE_ERR</code>.</li>
-   <li>A custom user-defined function. See the <a href="#Implementing_a_User_Defined_Namespace_Resolver">Using a User Defined Namespace Resolver</a> section in the appendix for details.</li>
+   <li>A custom user-defined function. See the <a href="#implementing_a_user_defined_namespace_resolver">Using a User Defined Namespace Resolver</a> section in the appendix for details.</li>
   </ul>
  </li>
- <li><code>resultType</code>: A <a href="#XPathResult_Defined_Constants">constant</a> that specifies the desired result type to be returned as a result of the evaluation. The most commonly passed constant is <code>XPathResult.ANY_TYPE</code> which will return the results of the XPath expression as the most natural type. There is a section in the appendix which contains a full list of the <a href="#XPathResult_Defined_Constants">available constants</a>. They are explained below in the section "<a href="#Specifying_the_Return_Type">Specifying the Return Type</a>."</li>
+ <li><code>resultType</code>: A <a href="#xpathresult_defined_constants">constant</a> that specifies the desired result type to be returned as a result of the evaluation. The most commonly passed constant is <code>XPathResult.ANY_TYPE</code> which will return the results of the XPath expression as the most natural type. There is a section in the appendix which contains a full list of the <a href="#xpathresult_defined_constants">available constants</a>. They are explained below in the section "<a href="#specifying_the_return_type">Specifying the Return Type</a>."</li>
  <li><code>result</code>: If an existing <code>XPathResult</code> object is specified, it will be reused to return the results. Specifying <code>null</code> will create a new <code>XPathResult</code> object.</li>
 </ul>
 
 <h3 id="Return_Value">Return Value</h3>
 
-<p>Returns <code>xpathResult</code>, which is an <code>XPathResult</code> object of the type <a href="#Specifying_the_Return_Type">specified</a> in the <code>resultType</code> parameter. The <code>XPathResult</code> Interface is defined <a href="/en-US/docs/Web/API/XPathResult">here</a>.</p>
+<p>Returns <code>xpathResult</code>, which is an <code>XPathResult</code> object of the type <a href="#specifying_the_return_type">specified</a> in the <code>resultType</code> parameter. The <code>XPathResult</code> Interface is defined <a href="/en-US/docs/Web/API/XPathResult">here</a>.</p>
 
 <h3 id="Implementing_a_Default_Namespace_Resolver">Implementing a Default Namespace Resolver</h3>
 
@@ -54,7 +54,7 @@ tags:
 
 <p><span class="comment">Or alternatively by using the &lt;code&gt;createNSResolver&lt;/code&gt; method of a &lt;code&gt;XPathEvaluator&lt;/code&gt; object. &lt;pre&gt; var xpEvaluator = new XPathEvaluator(); var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement ); &lt;/pre&gt;</span> And then pass <code>document.evaluate</code>, the <code>nsResolver</code> variable as the <code>namespaceResolver</code> parameter.</p>
 
-<p>Note: XPath defines QNames without a prefix to match only elements in the null namespace. There is no way in XPath to pick up the default namespace as applied to a regular element reference (e.g., <code>p[@id='_myid']</code> for <code><span class="nowiki">xmlns='http://www.w3.org/1999/xhtml</span>'</code>). To match default elements in a non-null namespace, you either have to refer to a particular element using a form such as <code>['namespace-uri()='<span class="nowiki">http://www.w3.org/1999/xhtml</span>' and name()='p' and @id='_myid']</code> (<a href="#Using_XPath_functions_to_reference_elements_with_a_default_namespace">this approach</a> works well for dynamic XPath's where the namespaces might not be known) or use prefixed name tests, and create a namespace resolver mapping the prefix to the namespace. Read more on <a href="#Implementing_a_User_Defined_Namespace_Resolver">how to create a user-defined namespace resolver</a>, if you wish to take the latter approach.</p>
+<p>Note: XPath defines QNames without a prefix to match only elements in the null namespace. There is no way in XPath to pick up the default namespace as applied to a regular element reference (e.g., <code>p[@id='_myid']</code> for <code>xmlns='http://www.w3.org/1999/xhtml'</code>). To match default elements in a non-null namespace, you either have to refer to a particular element using a form such as <code>['namespace-uri()='http://www.w3.org/1999/xhtml' and name()='p' and @id='_myid']</code> (<a href="#using_xpath_functions_to_reference_elements_with_a_default_namespace">this approach</a> works well for dynamic XPath's where the namespaces might not be known) or use prefixed name tests, and create a namespace resolver mapping the prefix to the namespace. Read more on <a href="#implementing_a_user_defined_namespace_resolver">how to create a user-defined namespace resolver</a>, if you wish to take the latter approach.</p>
 
 <h3 id="Notes">Notes</h3>
 
@@ -62,7 +62,7 @@ tags:
 
 <h3 id="Specifying_the_Return_Type">Specifying the Return Type</h3>
 
-<p>The returned variable <code>xpathResult</code> from <code>document.evaluate</code> can either be composed of individual nodes (<a href="#Simple_Types">simple types</a>), or a collection of nodes (<a href="#Node-Set_Types">node-set types</a>).</p>
+<p>The returned variable <code>xpathResult</code> from <code>document.evaluate</code> can either be composed of individual nodes (<a href="#simple_types">simple types</a>), or a collection of nodes (<a href="#node-set_types">node-set types</a>).</p>
 
 <h4 id="Simple_Types">Simple Types</h4>
 
@@ -105,9 +105,9 @@ alert( 'This document contains ' + paragraphCount.stringValue + ' paragraph elem
 <p>The <code>XPathResult</code> object allows node-sets to be returned in 3 principal different types:</p>
 
 <ul>
- <li><a href="#Iterators">Iterators</a></li>
- <li><a href="#Snapshots">Snapshots</a></li>
- <li><a href="#First_Node">First Nodes</a></li>
+ <li><a href="#iterators">Iterators</a></li>
+ <li><a href="#snapshots">Snapshots</a></li>
+ <li><a href="#first_node">First Nodes</a></li>
 </ul>
 
 <h5 id="Iterators">Iterators</h5>
@@ -191,7 +191,7 @@ alert( 'The first phone number found is ' + firstPhoneNumber.singleNodeValue.tex
 
 <p>It could be any of the simple types (<code>NUMBER_TYPE, STRING_TYPE, BOOLEAN_TYPE</code>), <strong>but</strong>, if the returned result type is a node-set then it will <strong>only</strong> be an <code>UNORDERED_NODE_ITERATOR_TYPE</code>.</p>
 
-<p>To determine that type after evaluation, we use the <code>resultType</code> property of the <code>XPathResult</code> object. The <a href="#XPathResult_Defined_Constants">constant</a> values of this property are defined in the appendix. <span class="comment">None Yet =====Any_Type Example===== &lt;pre&gt; &lt;/pre&gt;</span></p>
+<p>To determine that type after evaluation, we use the <code>resultType</code> property of the <code>XPathResult</code> object. The <a href="#xpathresult_defined_constants">constant</a> values of this property are defined in the appendix. <span class="comment">None Yet =====Any_Type Example===== &lt;pre&gt; &lt;/pre&gt;</span></p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -224,7 +224,7 @@ while (thisHeading) {
 
 <h3 id="Evaluating_against_an_XML_document_within_an_Extension">Evaluating against an XML document within an Extension</h3>
 
-<p>The following uses an XML document located at <span class="nowiki">chrome://yourextension/content/peopleDB.xml</span> as an example.</p>
+<p>The following uses an XML document located at <code>chrome://yourextension/content/peopleDB.xml</code> as an example.</p>
 
 <pre class="brush: xml">&lt;?xml version="1.0"?&gt;
 &lt;people xmlns:xul = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" &gt;
@@ -274,7 +274,7 @@ var personIterator = xmlDoc.evaluate('//person', xmlDoc, nsResolver, XPathResult
 
 <p>will select all <a href="/en-US/docs/Web/API/MathML">MathML</a> expressions that are the children of (X)HTML table data cell elements.</p>
 
-<p>In order to associate the '<code>mathml:</code>' prefix with the namespace URI '<code><span class="nowiki">http://www.w3.org/1998/Math/MathML</span></code>' and '<code>xhtml:</code>' with the URI '<code><span class="nowiki">http://www.w3.org/1999/xhtml</span></code>' we provide a function:</p>
+<p>In order to associate the '<code>mathml:</code>' prefix with the namespace URI '<code>http://www.w3.org/1998/Math/MathML</code>' and '<code>xhtml:</code>' with the URI '<code>http://www.w3.org/1999/xhtml</code>' we provide a function:</p>
 
 <pre class="brush: js">function nsResolver(prefix) {
   var ns = {
@@ -292,7 +292,7 @@ var personIterator = xmlDoc.evaluate('//person', xmlDoc, nsResolver, XPathResult
 
 <h4 id="Implementing_a_default_namespace_for_XML_documents">Implementing a default namespace for XML documents</h4>
 
-<p>As noted in the <a href="#Implementing_a_Default_Namespace_Resolver">Implementing a Default Namespace Resolver</a> previously, the default resolver does not handle the default namespace for XML documents. For example with this document:</p>
+<p>As noted in the <a href="#implementing_a_default_namespace_resolver">Implementing a Default Namespace Resolver</a> previously, the default resolver does not handle the default namespace for XML documents. For example with this document:</p>
 
 <pre class="brush: xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;feed xmlns="http://www.w3.org/2005/Atom"&gt;
@@ -318,7 +318,7 @@ doc.evaluate('//myns:entry', doc, resolver, XPathResult.ANY_TYPE, null)
 
 <h4 id="Using_XPath_functions_to_reference_elements_with_a_default_namespace">Using XPath functions to reference elements with a default namespace</h4>
 
-<p>Another approach to match default elements in a non-null namespace (and one which works well for dynamic XPath expressions where the namespaces might not be known), involves referring to a particular element using a form such as <code>[namespace-uri()='<span class="nowiki">http://www.w3.org/1999/xhtml</span>' and name()='p' and @id='_myid']</code>. This circumvents the problem of an XPath query not being able to detect the default namespace on a regularly labeled element.</p>
+<p>Another approach to match default elements in a non-null namespace (and one which works well for dynamic XPath expressions where the namespaces might not be known), involves referring to a particular element using a form such as <code>[namespace-uri()='http://www.w3.org/1999/xhtml' and name()='p' and @id='_myid']</code>. This circumvents the problem of an XPath query not being able to detect the default namespace on a regularly labeled element.</p>
 
 <h4 id="Getting_specifically_namespaced_elements_and_attributes_regardless_of_prefix">Getting specifically namespaced elements and attributes regardless of prefix</h4>
 
@@ -326,7 +326,7 @@ doc.evaluate('//myns:entry', doc, resolver, XPathResult.ANY_TYPE, null)
 
 <p>While one can adapt the approach in the above section to test for namespaced elements regardless of the prefix chosen (using <code><a href="/en-US/docs/XPath/Functions/local-name">local-name()</a></code> in combination with <code><a href="/en-US/docs/XPath/Functions/namespace-uri">namespace-uri()</a></code> instead of <code><a href="/en-US/docs/XPath/Functions/name">name()</a></code>), a more challenging situation occurs, however, if one wishes to grab an element with a particular namespaced attribute in a predicate (given the absence of implementation-independent variables in XPath 1.0).</p>
 
-<p>For example, one might try (incorrectly) to grab an element with a namespaced attribute as follows: <code>var xpathlink = someElements[local-name(@*)="href" and namespace-uri(@*)='<span class="nowiki">http://www.w3.org/1999/xlink</span>'];</code></p>
+<p>For example, one might try (incorrectly) to grab an element with a namespaced attribute as follows: <code>var xpathlink = someElements[local-name(@*)="href" and namespace-uri(@*)='http://www.w3.org/1999/xlink'];</code></p>
 
 <p>This could inadvertently grab some elements if one of its attributes existed that had a local name of "<code>href</code>", but it was a different attribute which had the targeted (XLink) namespace (instead of <code><a href="/en-US/docs/Web/XPath/Axes/attribute">@href</a></code>).</p>
 

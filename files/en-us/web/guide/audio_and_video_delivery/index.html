@@ -17,7 +17,7 @@ tags:
 
 <p>Whether we are dealing with pre-recorded audio files or live streams, the mechanism for making them available through the browser's {{ htmlelement("audio")}} and {{ htmlelement("video")}} elements remains pretty much the same. Currently, to support all browsers we need to specify two formats, although with the adoption of MP3 and MP4 formats in Firefox and Opera, this is changing fast. You can find compatibility information in the <a href="/en-US/docs/Web/Media/Formats">Guide to media types and formats on the web</a>.</p>
 
-<p><span>To deliver video and audio, the general workflow is usually something like this:</span></p>
+<p>To deliver video and audio, the general workflow is usually something like this:</p>
 
 <ol>
  <li>Check what format the browser supports via feature detection (usually a choice of two, as stated above).</li>
@@ -226,7 +226,7 @@ myVideo.height = 320;</pre>
  <br>
  For further information see <a href="/en-US/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video">Live streaming web audio and video</a>.</p>
 
-<h2 id="Customising_Your_Media_Player">Customising Your Media Player</h2>
+<h2 id="Customizing_Your_Media_Player">Customizing Your Media Player</h2>
 
 <p>You may decide that you want your audio or video player to have a consistent look across browsers, or just wish to tweak it to match your site. The general technique for achieving this is to omit the <code>controls</code> attribute so that the default browser controls are not displayed, create custom controls using HTML and CSS, then use JavaScript to link your controls to the audio/video API.</p>
 
@@ -314,13 +314,13 @@ mediaElement.played.end(0);      // Returns the number of seconds the browser ha
 <p>A few examples:</p>
 
 <dl>
- <dt><span class="nowiki">http://example.com/video.ogv#t=10,20</span></dt>
+ <dt><code>http://example.com/video.ogv#t=10,20</code></dt>
  <dd>Specifies that the video should play the range 10 seconds through 20 seconds.</dd>
- <dt><span class="nowiki">http://example.com/video.ogv#t=,10.5</span></dt>
+ <dt><code>http://example.com/video.ogv#t=,10.5</code></dt>
  <dd>Specifies that the video should play from the beginning through 10.5 seconds.</dd>
- <dt><span class="nowiki">http://example.com/video.ogv#t=,02:00:00</span></dt>
+ <dt><code>http://example.com/video.ogv#t=,02:00:00</code></dt>
  <dd>Specifies that the video should play from the beginning through two hours.</dd>
- <dt><span class="nowiki">http://example.com/video.ogv#t=60</span></dt>
+ <dt><code>http://example.com/video.ogv#t=60</code></dt>
  <dd>Specifies that the video should start playing at 60 seconds and play through the end of the video.</dd>
 </dl>
 
@@ -431,7 +431,7 @@ lastsource.addEventListener('error', function(ev) {
 
 <h2 id="AudioVideo_JavaScript_Libraries">Audio/Video JavaScript Libraries</h2>
 
-<p>A number of audio and video JavaScript libaries exist. The most popular libraries allow you to choose a consistent player design over all browsers and provide a fallback for browsers that don't support audio and video natively. Fallbacks have historically used now-obsolete plugins such as Adobe Flash or Microsoft Silverlight plugins to provide a media player in non-supporting browsers, although these are no longer supported on modern computers. Other functionality such as the <code><a href="/en-US/docs/Web/HTML/Element/track">&lt;track&gt;</a></code> element for subtitles can also be provided through media libraries.</p>
+<p>A number of audio and video JavaScript libraries exist. The most popular libraries allow you to choose a consistent player design over all browsers and provide a fallback for browsers that don't support audio and video natively. Fallbacks have historically used now-obsolete plugins such as Adobe Flash or Microsoft Silverlight plugins to provide a media player in non-supporting browsers, although these are no longer supported on modern computers. Other functionality such as the <code><a href="/en-US/docs/Web/HTML/Element/track">&lt;track&gt;</a></code> element for subtitles can also be provided through media libraries.</p>
 
 <h3 id="Audio_only">Audio only</h3>
 
@@ -469,7 +469,7 @@ lastsource.addEventListener('error', function(ev) {
  <dt><a href="/en-US/Apps/Build/Manipulating_media/cross_browser_video_player">Creating a cross-browser video player</a></dt>
  <dd>A guide to creating a basic cross browser video player using the {{ htmlelement ("video") }} element.</dd>
  <dt><a href="/en-US/Apps/Build/Manipulating_media/Video_player_styling_basics">Video player styling basics</a></dt>
- <dd>With the cross-browser video player put in place in the previous article, this article now looks at providing some basic, reponsive styling for the player.</dd>
+ <dd>With the cross-browser video player put in place in the previous article, this article now looks at providing some basic, responsive styling for the player.</dd>
  <dt><a href="/en-US/Apps/Build/Manipulating_media/Cross-browser_audio_basics">Cross-browser audio basics</a></dt>
  <dd>
  <div>

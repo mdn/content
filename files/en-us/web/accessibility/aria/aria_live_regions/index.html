@@ -111,7 +111,7 @@ renderPlanetInfoButton.addEventListener('click', event =&gt; {
 
 <p>Here is a screenshot of VoiceOver on Mac announcing the update (via subtitles) to the live region:</p>
 
-<p><img alt="A screenshot of VoiceOver on Mac announcing the update to a live region. Subtitles are shown in the picture." src="https://mdn.mozillademos.org/files/15815/Web_Accessibility_ARIA_ARIA_Live_Regions.png" style="height: 573px; width: 800px;"></p>
+<p><img alt="A screenshot of VoiceOver on Mac announcing the update to a live region. Subtitles are shown in the picture." src="web_accessibility_aria_aria_live_regions.png"></p>
 
 <h2 id="Preferring_specialized_live_region_roles">Preferring specialized live region roles</h2>
 
@@ -178,7 +178,7 @@ renderPlanetInfoButton.addEventListener('click', event =&gt; {
 
 <p>As an illustration of <code>aria-atomic</code>, consider a site with a simple clock, showing hours and minutes. The clock is updated each minute, with the new remaining time overwriting the current content.</p>
 
-<pre class="notranslate">&lt;div id="clock" role="timer" aria-live="polite"&gt;&lt;/div&gt;
+<pre class="brush: html notranslate">&lt;div id="clock" role="timer" aria-live="polite"&gt;&lt;/div&gt;
 </pre>
 
 <pre class="brush: js notranslate">/* basic JavaScript to update the clock */
@@ -195,40 +195,38 @@ setInterval(function() {
 
 <p><code>aria-atomic="true"</code> ensures that each time the live region is updated, the entirety of the content is announced in full (e.g. "Time: 17:34").</p>
 
-<pre class="notranslate">&lt;div id="clock" role="timer" aria-live="polite" aria-atomic="true"&gt;&lt;/div&gt;
+<pre class="brush: html notranslate">&lt;div id="clock" role="timer" aria-live="polite" aria-atomic="true"&gt;&lt;/div&gt;
 </pre>
 
 <div class="note">
 <p><strong>Note</strong>: As observed, setting/updating the innerHTML again would cause the whole text to be read again, whether or not you set aria-atomic="true", so the above Clock example does not work as expected.</p>
 </div>
 
-<p class="syntaxbox">A working example of a simple year control for better understanding:</p>
+<p>A working example of a simple year control for better understanding:</p>
 
-<pre class="syntaxbox notranslate">&lt;div id="date-input"&gt;
-  &lt;label&gt;Year:
-    &lt;input type="text" id="year" value="1990" onblur="change(event)"/&gt;
-  &lt;/label&gt;
+<pre class="brush: html notranslate">&lt;div id="date-input"&gt;
+&lt;label&gt;Year:
+&lt;input type="text" id="year" value="1990" onblur="change(event)"/&gt;
+&lt;/label&gt;
 &lt;/div&gt;
 
 &lt;div id="date-output" aria-live="polite"&gt;
-  The set year is:
-  &lt;span id="year-output"&gt;1990&lt;/span&gt;
+The set year is:
+&lt;span id="year-output"&gt;1990&lt;/span&gt;
 &lt;/div&gt;</pre>
 
-<p class="syntaxbox"></p>
-
-<pre class="syntaxbox notranslate">function change(event) {
+<pre class="brush: js notranslate">
+function change(event) {
   var yearOut = document.getElementById("year-output");
+
   switch (event.target.id) {
     case "year":
       yearOut.innerHTML = event.target.value;
       break;
-   default:
-      return;
+    default:
+      return;
   }
 };</pre>
-
-<p class="syntaxbox"></p>
 
 <p>Without <code>aria-atomic="true" </code>the screenreader announces only the changed value of year.</p>
 
@@ -238,7 +236,7 @@ setInterval(function() {
 
 <p>A chat site would like to display a list of users currently logged in. Display a list of users where a user's log-in and log-out status will be reflected dynamically (without a page reload).</p>
 
-<pre class="notranslate">&lt;ul id="roster" aria-live="polite" aria-relevant="additions removals"&gt;
+<pre class="brush: html notranslate">&lt;ul id="roster" aria-live="polite" aria-relevant="additions removals"&gt;
 	&lt;!-- use JavaScript to add remove users here--&gt;
 &lt;/ul&gt;
 </pre>

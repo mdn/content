@@ -9,7 +9,7 @@ tags:
 <div class="warning"><br>
 <br>
 <br>
-<span style="font-size: medium;">Building Sunbird is no longer supported. You can give it a try, but its likely that the build system will present you an error. Instead it is suggested to build Thunderbird with Lightning. Please refer to the <a href="/en/Simple_Thunderbird_build">Simple Thunderbird build</a> guide.<br>
+<span style="font-size: medium;">Building Sunbird is no longer supported. You can give it a try, but its likely that the build system will present you an error. Instead it is suggested to build Thunderbird with Lightning. Please refer to the <a href="/en-US/docs/Simple_Thunderbird_build">Simple Thunderbird build</a> guide.<br>
 </span><br>
 <br>
 </div>
@@ -61,11 +61,11 @@ ac_add_options --disable-optimize
 <p>Then just re-run the "<code>make -f client.mk</code>" command above (you can do the addition before running make for the first time).</p>
 <p>This will build the lightning extension into <code>src/../objdir-sb/mozilla/dist/xpi-stage/</code>. See <a class="internal" href="../../../../en/Setting_up_extension_development_environment#Custom_code_location"> this section</a> for information on how to easily integrate Lightning into a nightly version of Thunderbird.</p>
 <h2 id="How_to_build_again_later">How to build again later</h2>
-<p>In your <span>comm</span><code>-central</code> directory, run these commands:</p>
+<p>In your <code>comm-central</code> directory, run these commands:</p>
 <pre># Get the latest source
 python client.py checkout
 </pre>
-<p>Then just re-run the "<code>make -f client.mk</code>" command above. <code>make</code> will only recompile files that changed, but it's still a long haul. An <a class="internal" href="/en/Incremental_Build">incremental build</a> can be faster.</p>
+<p>Then just re-run the "<code>make -f client.mk</code>" command above. <code>make</code> will only recompile files that changed, but it's still a long haul. An <a class="internal" href="/en-US/docs/Incremental_Build">incremental build</a> can be faster.</p>
 <h4 id="Building_just_Lightning">Building just Lightning</h4>
 <p>After you have completed a full build, if you would like to rebuild Lightning you don't need to go through the whole build process:</p>
 <pre># Enter the calendar directory in the object-directory
@@ -75,5 +75,5 @@ cd src/../objdir-sb-release/calendar
 make -C lightning
 </pre>
 <h3 id="References">References</h3>
-<ul> <li><a class="internal" href="/En/Developer_Guide/Build_Instructions">General Build Documentation</a></li> <li><a class="internal" href="/en/comm-central">comm-central</a></li>
+<ul> <li><a class="internal" href="/En/Developer_Guide/Build_Instructions">General Build Documentation</a></li> <li><a class="internal" href="/en-US/docs/comm-central">comm-central</a></li>
 </ul>

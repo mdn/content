@@ -5,7 +5,7 @@ tags:
   - Forms
   - HTML
 ---
-<p>This is the third example that explain <a href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets">how to build custom form widgets</a>.</p>
+<p>This is the third example that explain <a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">how to build custom form widgets</a>.</p>
 
 <h2 id="Change_states">Change states</h2>
 
@@ -238,11 +238,11 @@ window.addEventListener('load', function () {
       deactivateSelect(select);
     });
 
-<code class="language-js">    select<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'keyup'</span><span class="punctuation token">,</span> <span class="keyword token">function</span> <span class="punctuation token">(</span><span class="parameter token">event</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-<span class="comment token">      </span><span class="keyword token">if</span> <span class="punctuation token">(</span>event<span class="punctuation token">.</span>keyCode <span class="operator token">===</span> <span class="number token">27</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> </code>
+    select.addEventListener('keyup', function (event) {
+      if (event.keyCode === 27) {
          deactivateSelect(select);
-<code class="language-js"><span class="punctuation token">      }
-   </span></code> });
+      }
+    });
   });
 });</pre>
 

@@ -28,16 +28,7 @@ tags:
 
 <h2 id="Setting_up_to_play_with_service_workers">Setting up to play with service workers</h2>
 
-<p>Many service workers features are now enabled by default in newer versions of supporting browsers. If however you find that demo code is not working in your installed versions, you might need to enable a pref:</p>
-
-<ul>
- <li><strong>Firefox Nightly</strong>: Go to <code>about:config</code> and set <code>dom.serviceWorkers.enabled</code> to true; restart browser. If you are testing with a non-https local server, you'll need to also set <code>dom.serviceWorkers.testing.enabled</code> to true.</li>
- <li><strong>Chrome Canary</strong>: Go to <code>chrome://flags</code> and turn on <code>experimental-web-platform-features</code>; restart browser (note that some features are now enabled by default in Chrome.)</li>
- <li><strong>Opera</strong>: Go to <code>opera://flags</code> and enable <code>Support for ServiceWorker</code>; restart browser.</li>
- <li><strong>Microsoft Edge</strong>: Go to <code>about:flags</code> and tick <code>Enable service workers</code>; restart browser.</li>
-</ul>
-
-<p>You’ll also need to serve your code via HTTPS — Service workers are restricted to running across HTTPS for security reasons. GitHub is therefore a good place to host experiments, as it supports HTTPS. In order to facilitate local development, <code>localhost</code> is considered a secure origin by browsers as well.</p>
+<p>These days, service workers are enabled by default in all modern browsers. To run code using service workers, you’ll need to serve your code via HTTPS — Service workers are restricted to running across HTTPS for security reasons. GitHub is therefore a good place to host experiments, as it supports HTTPS. In order to facilitate local development, <code>localhost</code> is considered a secure origin by browsers as well.</p>
 
 <h2 id="Basic_architecture">Basic architecture</h2>
 
@@ -297,12 +288,12 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
  <li>
   <p>The <code>{{domxref("Response.Response","Response()")}}</code> constructor allows you to create a custom response. In this case, we are just returning a simple text string:</p>
 
-  <pre class="brush: js notranslate">new Response('Hello from your friendly neighbourhood service worker!');</pre>
+  <pre class="brush: js notranslate">new Response('Hello from your friendly neighborhood service worker!');</pre>
  </li>
  <li>
   <p>This more complex <code>Response</code> below shows that you can optionally pass a set of headers in with your response, emulating standard HTTP response headers. Here we are just telling the browser what the content type of our synthetic response is:</p>
 
-  <pre class="brush: js notranslate">new Response('&lt;p&gt;Hello from your friendly neighbourhood service worker!&lt;/p&gt;', {
+  <pre class="brush: js notranslate">new Response('&lt;p&gt;Hello from your friendly neighborhood service worker!&lt;/p&gt;', {
   headers: { 'Content-Type': 'text/html' }
 });</pre>
  </li>

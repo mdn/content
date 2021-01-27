@@ -22,14 +22,14 @@ tags:
 
 <p>For very simple installations, the install methods on the <code>InstallTrigger</code> object may be all that's needed in the installation script.</p>
 
-<p>For more complex installations, you may need to use the <a href="/en/XPInstall_API_Reference/Install_Object"> Install</a> and/or <a href="/en/XPInstall_API_Reference/File_Object"> File</a> installation objects. In either case, you must trigger the installation process by creating a web page script in which InstallTrigger methods download the specified XPI file and "trigger" the execution of the install.js script at the top level of that XPI.</p>
+<p>For more complex installations, you may need to use the <a href="/en-US/docs/XPInstall_API_Reference/Install_Object"> Install</a> and/or <a href="/en-US/docs/XPInstall_API_Reference/File_Object"> File</a> installation objects. In either case, you must trigger the installation process by creating a web page script in which InstallTrigger methods download the specified XPI file and "trigger" the execution of the install.js script at the top level of that XPI.</p>
 
-<p>The principal method on the InstallTrigger object is <a href="/en/XPInstall_API_Reference/InstallTrigger_Object/Methods/install"> install</a>, which downloads and installs one or more software packages archived in the XPI file format. The following is a basic example of an install trigger on a web page:</p>
+<p>The principal method on the InstallTrigger object is <a href="/en-US/docs/XPInstall_API_Reference/InstallTrigger_Object/Methods/install"> install</a>, which downloads and installs one or more software packages archived in the XPI file format. The following is a basic example of an install trigger on a web page:</p>
 
 <pre>xpi={'XPInstall Dialog Display Name':'simple.xpi'};
 InstallTrigger.install(xpi);
 </pre>
 
-<p>You can also use the InstallTrigger object to install Netscape 6/Mozilla skins and language packs, and perform multiple-package installations with <a href="/en/XPInstall_API_Reference/InstallTrigger_Object/Methods/install"> install</a>.</p>
+<p>You can also use the InstallTrigger object to install Netscape 6/Mozilla skins and language packs, and perform multiple-package installations with <a href="/en-US/docs/XPInstall_API_Reference/InstallTrigger_Object/Methods/install"> install</a>.</p>
 
 <p>{{SubpagesWithSummaries}}</p>

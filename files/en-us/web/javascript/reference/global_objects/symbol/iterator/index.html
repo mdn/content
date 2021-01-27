@@ -63,15 +63,15 @@ const someObj = {
   }
 }
 
-[...new Foo] // [ 1, 2, 3 ]
-[...someObj] // [ 'a', 'b' ]
+console.log(...new Foo); // 1, 2, 3 
+console.log(...someObj); // 'a', 'b'
 </pre>
 
 <h3 id="Non-well-formed_iterables">Non-well-formed iterables</h3>
 
 <p>If an iterable's <code>@@iterator</code> method does not return an iterator object, then it is a non-well-formed iterable. Using it as such is likely to result in runtime exceptions or buggy behavior:</p>
 
-<pre class="brush: js">var nonWellFormedIterable = {}
+<pre class="brush: js example-bad">var nonWellFormedIterable = {}
 nonWellFormedIterable[Symbol.iterator] = () =&gt; 1
 [...nonWellFormedIterable] // TypeError: [] is not a function
 </pre>

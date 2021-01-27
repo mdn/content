@@ -101,46 +101,6 @@ tags:
  </tbody>
 </table>
 
-<h3 id="&lt;link_relpreload&gt;">&lt;link rel="preload"&gt;</h3>
-
-<p>The {{HTMLElement("link")}} element's {{htmlattrxref("rel", "link")}} attribute is intended to help provide performance gains by letting you download resources earlier in the page lifecycle, ensuring that they're available earlier and are less likely to block page rendering. Read <a href="/en-US/docs/Web/HTML/Preloading_content">Preloading content with rel="preload"</a> for more details. For more details on the status of this feature, see {{bug(1639607)}}.</p>
-
-<table class="standard-table" style="max-width: 42rem;">
- <thead>
-  <tr>
-   <th scope="col" style="vertical-align: bottom;">Release channel</th>
-   <th scope="col" style="vertical-align: bottom;">Version added</th>
-   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Nightly</th>
-   <td>78</td>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Developer Edition</th>
-   <td>78</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Beta</th>
-   <td>78</td>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Release</th>
-   <td>78</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Preference name</th>
-   <th colspan="2"><code>network.preload</code></th>
-  </tr>
- </tbody>
-</table>
-
 <h3 id="inert_attribute">inert attribute</h3>
 
 <p>The {{domxref("HTMLElement")}} property {{DOMxRef("HTMLElement.inert")}} is a {{jsxref("Boolean")}}, when present, may make the browser "ignore" the element from assistive technologies, page search and text selection. For more details on the status of this feature see {{bug(1655722)}}. </p>
@@ -349,46 +309,6 @@ tags:
  </tbody>
 </table>
 
-<h3 id="Pseudo-class_focus-visible"><span>Pseudo-class: :focus-visible</span></h3>
-
-<p>Allows focus styles to be applied to elements like buttons and form controls, only when they are focused using the keyboard (e.g. when tabbing between elements), and not when they are focused using a mouse or other pointing device. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1617600">bug 1617600</a> for more details.</p>
-
-<table class="standard-table" style="max-width: 42rem;">
- <thead>
-  <tr>
-   <th scope="col" style="vertical-align: bottom;">Release channel</th>
-   <th scope="col" style="vertical-align: bottom;">Version added</th>
-   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Nightly</th>
-   <td>75</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Developer Edition</th>
-   <td>75</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Beta</th>
-   <td>75</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Release</th>
-   <td>75</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Preference name</th>
-   <th colspan="2"><code>layout.css.focus-visible.enabled</code></th>
-  </tr>
- </tbody>
-</table>
-
 <h3 id="Single_numbers_as_aspect_ratio_in_media_queries">Single numbers as aspect ratio in media queries</h3>
 
 <p>Support for using a single {{cssxref("number")}} as a {{cssxref("ratio")}} when specifying the aspect ratio for a <a href="/en-US/docs/Web/CSS/Media_Queries">media query</a>. See {{bug(1565562)}} for more details.</p>
@@ -592,6 +512,42 @@ tags:
 </table>
 
 <h2 id="JavaScript">JavaScript</h2>
+
+<h3 id="Relative_indexing_method">Relative indexing method</h3>
+
+<p>The relative indexing method <code>at()</code> has been added to the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">TypedArray</a></code> global objects. Passing a positive integer to the method returns the item or character at that position, and it also accepts negative integers, which count back from the end of the array or string. For example, <code>1</code> would return the second item or character and <code>-1</code> would return the last item or character. See <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/at">Array.prototype.at()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/at">String.prototype.at()</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/at">TypedArray.prototype.at()</a></code> for more details.</p>
+
+<table class="standard-table" style="max-width: 42rem;">
+ <thead>
+  <tr>
+   <th scope="col" style="vertical-align: bottom;">Release channel</th>
+   <th scope="col" style="vertical-align: bottom;">Version added</th>
+   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Nightly</th>
+   <td>85</td>
+   <td>Yes</td>
+  </tr>
+  <tr>
+   <th scope="row">Developer Edition</th>
+   <td>85</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Beta</th>
+   <td>85</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Release</th>
+   <td>85</td>
+   <td>No</td>
+  </tr>
+ </tbody>
+</table>
 
 <h3 id="Private_class_fields">Private class fields</h3>
 
@@ -930,7 +886,7 @@ tags:
 
 <p>The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document’s DOM. Default elements within each configuration property (those to be sanitized) are still under consideration. Due to this the config parameter has not been implemented (see {{domxref('Sanitizer.sanitizer()', 'the constructor')}}) for more information. See {{bug('1673309')}} for more details.</p>
 
-<table class="standard-table">
+<table class="standard-table" style="max-width: 42rem;">
  <thead>
   <tr>
    <th scope="col" style="vertical-align: bottom;">Release channel</th>
@@ -1666,7 +1622,7 @@ tags:
 
 <p>[1] Support for zooming using the double-tap gesture was added in Firefox 76. The other gestures were added for Firefox 79.</p>
 
-<h4 id="Server-sent_events_in_Network_Monitor"><span>Server-sent events in Network Monitor</span></h4>
+<h4 id="Server-sent_events_in_Network_Monitor">Server-sent events in Network Monitor</h4>
 
 <p>The Network Monitor displays information for <a href="/en-US/docs/Web/API/Server-sent_events">server-sent</a> events. See {{bug(1405706)}}.</p>
 

@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var creating = browser.tabs.create(
+<pre class="brush:js">var creating = browser.tabs.create(
   createProperties   // object
 )
 </pre>
@@ -62,7 +62,7 @@ tags:
    <li>javascript: URLs</li>
    <li>data: URLs</li>
    <li>file: URLs (i.e., files on the filesystem. However, to use a file packaged inside the extension, see below)</li>
-   <li>privileged about: URLs (for example, <code>about:config</code>, <code>about:addons</code>, <code>about:debugging</code>)<span style="display: none;"> </span>. Non-privileged URLs (e.g., <code>about:blank</code>) are allowed.</li>
+   <li>privileged about: URLs (for example, <code>about:config</code>, <code>about:addons</code>, <code>about:debugging</code>). Non-privileged URLs (e.g., <code>about:blank</code>) are allowed.</li>
    <li>The New Tab page (<code>about:newtab</code>) can be opened if no value for URL is provided.</li>
   </ul>
 
@@ -84,7 +84,7 @@ tags:
 
 <p>Open "https://example.org" in a new tab:</p>
 
-<pre class="brush: js">function onCreated(tab) {
+<pre class="notranslate brush: js">function onCreated(tab) {
   console.log(`Created new tab: ${tab.id}`)
 }
 

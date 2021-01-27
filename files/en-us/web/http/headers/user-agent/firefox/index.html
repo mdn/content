@@ -216,7 +216,7 @@ Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/4
 
 <h2 id="Klar_for_Android">Klar for Android</h2>
 
-<p>Since version 4.1, Klar for Android uses the same UA string as <a href="#Focus_for_Android">Focus for Android</a>. Before version 4.1, it sent a <var>Klar/&lt;version&gt;</var> <var>product/version</var> token.</p>
+<p>Since version 4.1, Klar for Android uses the same UA string as <a href="#focus_for_android">Focus for Android</a>. Before version 4.1, it sent a <var>Klar/&lt;version&gt;</var> <var>product/version</var> token.</p>
 
 <table class="standard-table">
  <thead>
@@ -380,7 +380,7 @@ Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/4
 <p>It's easy to find the correspondences by looking at the <a href="https://hg.mozilla.org/releases">Mercurial repository names</a>: repositories starting by <code>mozilla-b2g</code> are the release repositories for Firefox OS, and have both Firefox OS and Gecko versions in their names.</p>
 </div>
 
-<p>Firefox OS has a four-digit version number: <samp>X.X.X.Y</samp>. The first two digits are owned by the Mozilla product team and denote versions with new features (eg: v1.1, 1.2, etc). The third digit is incremented with regular version tags (about every 6 weeks) for security updates, and the fourth is owned by the OEM.</p>
+<p>Firefox OS has a four-digit version number: <code>X.X.X.Y</code>. The first two digits are owned by the Mozilla product team and denote versions with new features (eg: v1.1, 1.2, etc). The third digit is incremented with regular version tags (about every 6 weeks) for security updates, and the fourth is owned by the OEM.</p>
 
 <h2 id="Firefox_for_iOS">Firefox for iOS</h2>
 
@@ -452,14 +452,14 @@ Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/4
 
 <p>Prior to Firefox 4 and Gecko 2.0, it was possible for extensions to add user agent parts through the <code>general.useragent.extra.<em>identifier</em></code> preferences, (see the <a href="/En/User_Agent_Strings_Reference">obsolete User Agent Strings Reference</a>). But that has not been possible since {{ Bug(581008) }}.</p>
 
-<p>In the past, specific plug-ins, add-ons or extensions added user agent parts to notify sites they were installed. The recommended way to do this, if it's absolutely necessary (remember that it slows down every request) is to <a href="/en/Setting_HTTP_request_headers">set a custom HTTP header</a>.</p>
+<p>In the past, specific plug-ins, add-ons or extensions added user agent parts to notify sites they were installed. The recommended way to do this, if it's absolutely necessary (remember that it slows down every request) is to <a href="/en-US/docs/Setting_HTTP_request_headers">set a custom HTTP header</a>.</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="http://lawrencemandel.com/2012/07/27/decision-made-firefox-os-user-agent-string/">Firefox OS User Agent String</a> (blog post w/<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=777710">bug 777710</a> reference)</li>
  <li><a class="external" href="https://hacks.mozilla.org/2010/09/final-user-agent-string-for-firefox-4/">Final User Agent string for Firefox 4</a> (blog post)</li>
- <li>Recommendations on <a href="/en/Browser_Detection_and_Cross_Browser_Support">sniffing the UA string for cross-browser support</a></li>
+ <li>Recommendations on <a href="/en-US/docs/Browser_Detection_and_Cross_Browser_Support">sniffing the UA string for cross-browser support</a></li>
  <li><a href="/en-US/docs/Web/API/Window/navigator" rel="internal">window.navigator.userAgent</a></li>
  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1169772">Add Android version to Fennec UA String (bug 1169772)</a></li>
 </ul>

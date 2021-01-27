@@ -30,7 +30,7 @@ alert(paragraphs[0].nodeName);
 
 <p>All of the properties, methods, and events available for manipulating and creating web pages are organized into objects (for example, the <code>document</code> object that represents the document itself, the <code>table</code> object that implements the special {{domxref("HTMLTableElement")}} DOM interface for accessing HTML tables, and so forth). This documentation provides an object-by-object reference to the DOM.</p>
 
-<p>The modern DOM is built using multiple APIs that work together. The core <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a> defines the objects that fundamentally describe a document and the objects within it. This is expanded upon as needed by other APIs that add new features and capabilities to the DOM. For example, the <a href="/en-US/docs/Web/API/HTML_DOM">HTML DOM API</a> adds support for representing HTML documents to the core DOM.</p>
+<p>The modern DOM is built using multiple APIs that work together. The core <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a> defines the objects that fundamentally describe a document and the objects within it. This is expanded upon as needed by other APIs that add new features and capabilities to the DOM. For example, the <a href="/en-US/docs/Web/API/HTML_DOM_API">HTML DOM API</a> adds support for representing HTML documents to the core DOM.</p>
 
 <h2 id="DOM_and_JavaScript">DOM and JavaScript</h2>
 
@@ -172,12 +172,12 @@ table.summary = "note: increased border";
  <li><code>{{domxref("document.createElement", "", "", "1")}}(name)</code></li>
  <li><code>parentNode.{{domxref("Node.appendChild", "appendChild", "", "1")}}(node)</code></li>
  <li><code>element.{{domxref("element.innerHTML", "innerHTML", "", "1")}}</code></li>
- <li><code>element.{{domxref("HTMLElement.style", "style", "", "1")}}.left</code></li>
+ <li><code>element.{{domxref("ElementCSSInlineStyle/style", "style", "", "1")}}.left</code></li>
  <li><code>element.{{domxref("element.setAttribute", "setAttribute", "", "1")}}()</code></li>
  <li><code>element.{{domxref("element.getAttribute", "getAttribute", "", "1")}}()</code></li>
  <li><code>element.{{domxref("EventTarget.addEventListener", "addEventListener", "", "1")}}()</code></li>
  <li><code>{{domxref("window.content", "", "", "1")}}</code></li>
- <li><code>{{domxref("window.onload", "", "", "1")}}</code></li>
+ <li><code>{{domxref("GlobalEventHandlers/onload", "", "", "1")}}</code></li>
  <li><code>{{domxref("window.scrollTo", "", "", "1")}}()</code></li>
 </ul>
 
@@ -236,7 +236,7 @@ table.summary = "note: increased border";
 
 <figure>
 <figcaption>Figure 0.1 Sample DOM Test Page</figcaption>
-<img alt="Image:DOM_Ref_Introduction_to_the_DOM.gif" class="internal" src="/@api/deki/files/173/=DOM_Ref_Introduction_to_the_DOM.gif"></figure>
+<img src="dom_ref_introduction_to_the_dom.gif"></figure>
 
 <p>In this example, the drop-down menus dynamically update such DOM—accessible aspects of the web page as its background color (<code>bgColor</code>), the color of the hyperlinks (<code>aLink</code>), and color of the text (<code>text</code>). However, you design your test pages, testing the interfaces as you read about them is an important part of learning how to use the DOM effectively.</p>
 

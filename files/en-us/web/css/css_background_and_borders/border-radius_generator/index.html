@@ -8,7 +8,7 @@ tags:
 ---
 <p>This tool can be used to generate CSS3 {{cssxref("border-radius")}} effects.</p>
 
-<div style="display: none;">
+<div class="hidden">
 <h2 id="border-radius-generator">border-radius</h2>
 
 <h3 id="HTML_Content">HTML Content</h3>
@@ -32,40 +32,40 @@ tags:
 
                 &lt;div id="radius-ui-sliders"&gt;
                     &lt;div id="tlr" class="ui-input-slider" data-topic="top-left"
-                         data-unit=" px" data-sensivity="2"&gt;&lt;/div&gt;
+                         data-unit=" px" data-sensitivity="2"&gt;&lt;/div&gt;
 
                     &lt;div id="tlw" class="ui-input-slider" data-topic="top-left-w"
-                         data-unit=" px" data-sensivity="2"&gt;&lt;/div&gt;
+                         data-unit=" px" data-sensitivity="2"&gt;&lt;/div&gt;
 
                     &lt;div id="tlh" class="ui-input-slider" data-topic="top-left-h"
-                        data-unit=" px" data-sensivity="2"&gt;&lt;/div&gt;
+                        data-unit=" px" data-sensitivity="2"&gt;&lt;/div&gt;
 
                     &lt;div id="trr" class="ui-input-slider" data-topic="top-right"
-                         data-unit=" px" data-sensivity="2"&gt;&lt;/div&gt;
+                         data-unit=" px" data-sensitivity="2"&gt;&lt;/div&gt;
 
                     &lt;div id="trw" class="ui-input-slider" data-topic="top-right-w"
-                         data-unit=" px" data-sensivity="2"&gt;&lt;/div&gt;
+                         data-unit=" px" data-sensitivity="2"&gt;&lt;/div&gt;
 
                     &lt;div id="trh" class="ui-input-slider" data-topic="top-right-h"
-                        data-unit=" px" data-sensivity="2"&gt;&lt;/div&gt;
+                        data-unit=" px" data-sensitivity="2"&gt;&lt;/div&gt;
 
                     &lt;div id="brr" class="ui-input-slider" data-topic="bottom-right"
-                         data-unit=" px" data-sensivity="2"&gt;&lt;/div&gt;
+                         data-unit=" px" data-sensitivity="2"&gt;&lt;/div&gt;
 
                     &lt;div id="brw" class="ui-input-slider" data-topic="bottom-right-w"
-                         data-unit=" px" data-sensivity="2"&gt;&lt;/div&gt;
+                         data-unit=" px" data-sensitivity="2"&gt;&lt;/div&gt;
 
                     &lt;div id="brh" class="ui-input-slider" data-topic="bottom-right-h"
-                        data-unit=" px" data-sensivity="2"&gt;&lt;/div&gt;
+                        data-unit=" px" data-sensitivity="2"&gt;&lt;/div&gt;
 
                     &lt;div id="blr" class="ui-input-slider" data-topic="bottom-left"
-                         data-unit=" px" data-sensivity="2"&gt;&lt;/div&gt;
+                         data-unit=" px" data-sensitivity="2"&gt;&lt;/div&gt;
 
                     &lt;div id="blw" class="ui-input-slider" data-topic="bottom-left-w"
-                         data-unit=" px" data-sensivity="2"&gt;&lt;/div&gt;
+                         data-unit=" px" data-sensitivity="2"&gt;&lt;/div&gt;
 
                     &lt;div id="blh" class="ui-input-slider" data-topic="bottom-left-h"
-                        data-unit=" px" data-sensivity="2"&gt;&lt;/div&gt;
+                        data-unit=" px" data-sensitivity="2"&gt;&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
@@ -75,10 +75,10 @@ tags:
         &lt;div class="group section"&gt;
             &lt;div id="dimensions"&gt;
                 &lt;div class="ui-input-slider" data-topic="width" data-info="width"
-                     data-unit=" px" data-min="150" data-max="700" data-sensivity="1"&gt;&lt;/div&gt;
+                     data-unit=" px" data-min="150" data-max="700" data-sensitivity="1"&gt;&lt;/div&gt;
 
                 &lt;div class="ui-input-slider" data-topic="height" data-info="height"
-                    data-unit=" px" data-min="75" data-max="350" data-sensivity="1"&gt;&lt;/div&gt;
+                    data-unit=" px" data-min="75" data-max="350" data-sensitivity="1"&gt;&lt;/div&gt;
             &lt;/div&gt;
 
             &lt;div id="output"&gt;&lt;/div&gt;
@@ -620,7 +620,7 @@ body {
 #unit-selection select {
 	width: 50px;
 	height: 20px;
-	marign: 0;
+	margin: 0;
 	padding: 0 0 0 10px;
 	background: #555;
 	border: 1px solid #555;
@@ -869,7 +869,7 @@ var InputSliderManager = (function InputSliderManager() {
 
 		var sliderMotion = function sliderMotion(e) {
 			slider.style.cursor = "e-resize";
-			var delta = (e.clientX - startX) / obj.sensivity | 0;
+			var delta = (e.clientX - startX) / obj.sensitivity | 0;
 			var value = delta * obj.step + start_value;
 			setValue(obj.topic, value);
 		}
@@ -885,7 +885,7 @@ var InputSliderManager = (function InputSliderManager() {
 		var topic	= node.getAttribute('data-topic');
 		var unit	= node.getAttribute('data-unit');
 		var name 	= node.getAttribute('data-info');
-		var sensivity = node.getAttribute('data-sensivity') | 0;
+		var sensitivity = node.getAttribute('data-sensitivity') | 0;
 
 		this.min = min;
 		this.max = max &gt; 0 ? max : 100;
@@ -893,7 +893,7 @@ var InputSliderManager = (function InputSliderManager() {
 		this.topic = topic;
 		this.node = node;
 		this.unit = unit;
-		this.sensivity = sensivity &gt; 0 ? sensivity : 5;
+		this.sensitivity = sensitivity &gt; 0 ? sensitivity : 5;
 
 		var input = new InputComponent(this);
 		var slider_left  = new SliderComponent(this, -1);
@@ -1192,7 +1192,7 @@ var BorderRadius = (function BorderRadius() {
 	}
 
 	UnitSelector.prototype.setValue = function setValue(value) {
-		this.salect.value = value;
+		this.select.value = value;
 	}
 
 	var RadiusContainer = function RadiusContainer(node) {

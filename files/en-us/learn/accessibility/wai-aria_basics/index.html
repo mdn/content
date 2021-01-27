@@ -90,8 +90,8 @@ tags:
 <p>Next, you need to worry about whether the browsers in question support ARIA features and expose them via their APIs, but also whether screenreaders recognise that information and present it to their users in a useful way.</p>
 
 <ol>
- <li>Browser support is generally quite good — at the time of writing, <a href="http://caniuse.com/#feat=wai-aria">caniuse.com</a> stated that global browser support for WAI-ARIA was around 88%.</li>
- <li>Screenreader support for ARIA features isn't quite at this level, but the most popular screenreaders are getting there. You can get an idea of support levels by looking at Powermapper's <a href="http://www.powermapper.com/tests/screen-readers/aria/">WAI-ARIA Screen reader compatibility</a><span> article.</span></li>
+ <li>Browser support is generally quite good — at the time of writing, <a href="https://caniuse.com/#feat=wai-aria">caniuse.com</a> stated that global browser support for WAI-ARIA was around 88%.</li>
+ <li>Screenreader support for ARIA features isn't quite at this level, but the most popular screenreaders are getting there. You can get an idea of support levels by looking at Powermapper's <a href="http://www.powermapper.com/tests/screen-readers/aria/">WAI-ARIA Screen reader compatibility</a> article.</li>
 </ol>
 
 <p>In this article, we won't attempt to cover every WAI-ARIA feature, and its exact support details. Instead, we will cover the most critical WAI-ARIA features for you to know about; if we don't mention any support details, you can assume that the feature is well-supported. We will clearly mention any exceptions to this.</p>
@@ -123,7 +123,7 @@ tags:
 
 <p>In the next section we'll look at the four areas in more detail, along with practical examples. Before you continue, you should get a screenreader testing setup put in place, so you can test some of the examples as you go through.</p>
 
-<p>See our section on <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders">testing screenreaders</a> for more information.</p>
+<p>See our section on <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders">testing screenreaders</a> for more information.</p>
 
 <h3 id="SignpostsLandmarks">Signposts/Landmarks</h3>
 
@@ -159,7 +159,7 @@ tags:
 
 <p>If you go to VoiceOver's landmarks menu (accessed using VoiceOver key + U and then using the cursor keys to cycle through the menu choices), you'll see that most of the elements are nicely listed so they can be accessed quickly.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14420/landmarks-list.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="landmarks-list.png" style="display: block; margin: 0 auto;"></p>
 
 <p>However, we could do better here. the search form is a really important landmark that people will want to find, but it is not listed in the landmarks menu or treated like a notable landmark, beyond the actual input being called out as a search input (<code>&lt;input type="search"&gt;</code>). In addition, some older browsers (most notably IE8) don't recognise the semantics of the HTML5 elements.</p>
 
@@ -212,7 +212,7 @@ tags:
   &lt;/blockquote&gt;
 &lt;/section&gt;</pre>
 
-<p>Our JavaScript loads a JSON file via <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> containing a series of random quotes and their authors. Once that is done, we start up a <code><a href="/en-US/docs/Web/API/WindowTimers/setInterval">setInterval()</a></code> loop that loads a new random quote into the quote box every 10 seconds:</p>
+<p>Our JavaScript loads a JSON file via <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> containing a series of random quotes and their authors. Once that is done, we start up a <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></code> loop that loads a new random quote into the quote box every 10 seconds:</p>
 
 <pre class="brush: js notranslate">let intervalID = window.setInterval(showQuote, 10000);</pre>
 
@@ -263,7 +263,7 @@ tags:
  <li><code>tabindex="-1"</code> — this allows not normally tabbable elements to receive focus programmatically, e.g. via JavaScript, or as the target of links. </li>
 </ul>
 
-<p>We discussed this in more detail and showed a typical implementation back in our HTML accessibility article — see <a href="/en-US/docs/Learn/Accessibility/HTML#Building_keyboard_accessibility_back_in">Building keyboard accessibility back in</a>.</p>
+<p>We discussed this in more detail and showed a typical implementation back in our HTML accessibility article — see <a href="/en-US/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in">Building keyboard accessibility back in</a>.</p>
 
 <h3 id="Accessibility_of_non-semantic_controls">Accessibility of non-semantic controls</h3>
 
@@ -271,12 +271,12 @@ tags:
 
 <h4 id="Form_validation_and_error_alerts">Form validation and error alerts</h4>
 
-<p>First of all, let's revisit the form example we first looked at in our CSS and JavaScript accessibility article (read <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Keeping_it_unobtrusive">Keeping it unobtrusive</a> for a full recap). At the end of this section we showed that we have included some ARIA attributes on the error message box that displays any validation errors when you try to submit the form:</p>
+<p>First of all, let's revisit the form example we first looked at in our CSS and JavaScript accessibility article (read <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#keeping_it_unobtrusive">Keeping it unobtrusive</a> for a full recap). At the end of this section we showed that we have included some ARIA attributes on the error message box that displays any validation errors when you try to submit the form:</p>
 
-<pre class="brush: html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>errors<span class="punctuation token">"</span></span> <span class="attr-name token">role</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>alert<span class="punctuation token">"</span></span> <span class="attr-name token">aria-relevant</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>all<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>ul</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>ul</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html notranslate">&lt;div class="errors" role="alert" aria-relevant="all"&gt;
+  &lt;ul&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
 
 <ul>
  <li><code><a href="https://www.w3.org/TR/wai-aria-1.1/#alert">role="alert"</a></code> automatically turns the element it is applied to into a live region, so changes to it are read out; it also semantically identifies it as an alert message (important time/context sensitive information), and represents a better, more accessible way of delivering an alert to a user (modal dialogs like <code><a href="/en-US/docs/Web/API/Window/alert">alert()</a></code> calls have a number of accessibility problems; see <a href="http://webaim.org/techniques/javascript/other#popups">Popup Windows</a> by WebAIM).</li>
@@ -306,11 +306,11 @@ tags:
 <p><strong>Note</strong>: You can see the finished example live at <a href="https://mdn.github.io/learning-area/accessibility/aria/form-validation-updated.html">form-validation-updated.html</a>.</p>
 </div>
 
-<p>WAI-ARIA also enables some advanced form labelling techniques, beyond the classic {{htmlelement("label")}} element. We already talked about using the <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-label">aria-label</a></code> property to provide a label where we don't want the label to be visible to sighted users (see the {{anch("Signposts/Landmarks")}} section, above). There are some other labelling techniques that use other properties such as <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby">aria-labelledby</a></code> if you want to designate a non-<code>&lt;label&gt;</code> element as a label or label multiple form inputs with the same label, and <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby">aria-describedby</a></code>, if you want to associate other information with a form input and have it read out as well. See <a href="http://webaim.org/techniques/forms/advanced">WebAIM's Advanced Form Labeling article</a><span class="subtitle"> for more details.</span></p>
+<p>WAI-ARIA also enables some advanced form labelling techniques, beyond the classic {{htmlelement("label")}} element. We already talked about using the <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-label">aria-label</a></code> property to provide a label where we don't want the label to be visible to sighted users (see the {{anch("Signposts/Landmarks")}} section, above). There are some other labelling techniques that use other properties such as <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby">aria-labelledby</a></code> if you want to designate a non-<code>&lt;label&gt;</code> element as a label or label multiple form inputs with the same label, and <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby">aria-describedby</a></code>, if you want to associate other information with a form input and have it read out as well. See <a href="http://webaim.org/techniques/forms/advanced">WebAIM's Advanced Form Labeling article</a> for more details.</p>
 
-<p><span class="subtitle">There are many other useful properties and states too, for indicating the status of form elements. For example, <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-disabled">aria-disabled</a>="true"</code> can be used to indicate that a form field is disabled. Many browsers will just skip past disabled form fields, and they won't even be read out by screenreaders, but in some cases they will be perceived, so it is a good idea to include this attribute to let the screenreader know that a disabled input is in fact disabled.</span></p>
+<p>There are many other useful properties and states too, for indicating the status of form elements. For example, <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-disabled">aria-disabled</a>="true"</code> can be used to indicate that a form field is disabled. Many browsers will just skip past disabled form fields, and they won't even be read out by screenreaders, but in some cases they will be perceived, so it is a good idea to include this attribute to let the screenreader know that a disabled input is in fact disabled.</p>
 
-<p><span class="subtitle">If the disabled state of an input is likely to change, then it is also a good idea to indicate when it happens, and what the result is. For example, in our <a href="https://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html">form-validation-checkbox-disabled.html</a> demo there is a checkbox that when checked, enables another form input to allow further information be entered. We've set up a hidden live region:</span></p>
+<p>If the disabled state of an input is likely to change, then it is also a good idea to indicate when it happens, and what the result is. For example, in our <a href="https://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html">form-validation-checkbox-disabled.html</a> demo there is a checkbox that when checked, enables another form input to allow further information be entered. We've set up a hidden live region:</p>
 
 <pre class="brush: html notranslate">&lt;p class="hidden-alert" aria-live="assertive"&gt;&lt;/p&gt;</pre>
 
@@ -334,7 +334,7 @@ tags:
 
 <h4 id="Describing_non-semantic_buttons_as_buttons">Describing non-semantic buttons as buttons</h4>
 
-<p>A few times in this course already, we've mentioned the native accessibility of (and the accessibility issues behind using other elements to fake) buttons, links, or form elements (see <a href="/en-US/docs/Learn/Accessibility/HTML#UI_controls">UI controls</a> in the HTML accessibility article, and {{anch("Enhancing keyboard accessibility")}}, above). Basically, you can add keyboard accessibility back in without too much trouble in many cases, using <code>tabindex</code> and a bit of JavaScript.</p>
+<p>A few times in this course already, we've mentioned the native accessibility of (and the accessibility issues behind using other elements to fake) buttons, links, or form elements (see <a href="/en-US/docs/Learn/Accessibility/HTML#ui_controls">UI controls</a> in the HTML accessibility article, and {{anch("Enhancing keyboard accessibility")}}, above). Basically, you can add keyboard accessibility back in without too much trouble in many cases, using <code>tabindex</code> and a bit of JavaScript.</p>
 
 <p>But what about screenreaders? They still won't see the elements as buttons. If we test our <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a> example in a screenreader, our fake buttons will be reported using phrases like "Click me!, group", which is obviously confusing.</p>
 
@@ -352,7 +352,7 @@ tags:
 
 <p>There are a whole host of other <a href="https://www.w3.org/TR/wai-aria-1.1/#role_definitions">roles</a> that can identify non-semantic element structures as common UI features that go beyond what's available in standard HTML, for example <code><a href="https://www.w3.org/TR/wai-aria-1.1/#combobox">combobox</a></code>, <code><a href="https://www.w3.org/TR/wai-aria-1.1/#slider">slider</a></code>, <code><a href="https://www.w3.org/TR/wai-aria-1.1/#tabpanel">tabpanel</a></code>, <code><a href="https://www.w3.org/TR/wai-aria-1.1/#tree">tree</a></code>. You can see a number of useful examples in the <a href="https://dequeuniversity.com/library/">Deque university code library</a>, to give you an idea of how such controls can be made accessible.</p>
 
-<p>Let's go through an example of our own. We'll return to our simple absolutely-positioned tabbed interface (see <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Hiding_things">Hiding things</a> in our CSS and JavaScript accessibility article), which you can find at <a class="external external-icon" href="https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html">Tabbed info box example</a> (see <a class="external external-icon" href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html">source code</a>).</p>
+<p>Let's go through an example of our own. We'll return to our simple absolutely-positioned tabbed interface (see <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#hiding_things">Hiding things</a> in our CSS and JavaScript accessibility article), which you can find at <a class="external external-icon" href="https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html">Tabbed info box example</a> (see <a class="external external-icon" href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html">source code</a>).</p>
 
 <p>This example as-is works fine in terms of keyboard accessibility — you can happily tab between the different tabs and select them to show the tab contents. It is also fairly accessible too — you can scroll through the content and use the headings to navigate, even if you can't see what is happening on screen. It is however not that obvious what the content is — a screenreader currently reports the content as a list of links, and some content with three headings. It doesn't give you any idea of what the relationship is between the content. Giving the user more clues as to the structure of the content is always good.</p>
 

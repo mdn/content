@@ -132,7 +132,7 @@ tags:
 
 <p>A specific user experience issue that often arises is a document that's loaded with permission to access a resource and the document contains an {{HTMLElement("iframe")}} with the {{htmlattrxref("allow", "iframe")}} attribute to delegate that permission to the contents of the frame. In this case, it's possible for the user to wind up being prompted repeatedly for that same resource, first by the main page, then by the document in the frame.</p>
 
-<p>Browsers may choose to provide ways around this. For example, in Firefox 73, the user permission requests were revised so that when an <code>&lt;iframe&gt;</code> uses the <code>allow</code> keyword to delegate permission to the embeded document, the browser asks the user to grant the parent document permission to use the resource, and that permission is then shared with the embedded content that requested the resource to begin with.</p>
+<p>Browsers may choose to provide ways around this. For example, in Firefox 73, the user permission requests were revised so that when an <code>&lt;iframe&gt;</code> uses the <code>allow</code> keyword to delegate permission to the embedded document, the browser asks the user to grant the parent document permission to use the resource, and that permission is then shared with the embedded content that requested the resource to begin with.</p>
 
 <p>&lt;-- diagram and/or code snippet to clarify things--&gt;</p>
 

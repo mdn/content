@@ -103,7 +103,9 @@ cd 191src
 
 <h2 id="Windows_Vista_SDK">Windows Vista SDK</h2>
 
-<p>{{ obsolete_header("12.0") }}</p>
+<div class="note">
+<p><strong>Note:</strong> This SDK is not used since {{Gecko("12.0")}}.
+</div>
 
 <p>This is the SDK that mozilla-1.9.1 (Firefox 3.5) builds used to be built against. Features that depend on this SDK include:</p>
 
@@ -132,9 +134,11 @@ cd 191src
 
 <h2 id="Windows_Server_2003_R2_Platform_SDK">Windows Server 2003 R2 Platform SDK</h2>
 
-<p>{{ obsolete_header("12.0") }}</p>
+<div class="note">
+<p><strong>Note:</strong> This SDK is not used since {{Gecko("12.0")}}.
+</div>
 
-<p>This is your only option if you're on Windows 2000. This also used to be necessary for building a default <strong>Gecko 1.9.2 through 8</strong> with Visual C++ Express editions (see <a href="/en/atlbase.h" title="atlbase.h">atlbase.h</a> for more).</p>
+<p>This is your only option if you're on Windows 2000. This also used to be necessary for building a default <strong>Gecko 1.9.2 through 8</strong> with Visual C++ Express editions (see <a href="/en-US/docs/atlbase.h" title="atlbase.h">atlbase.h</a> for more).</p>
 
 <p>You can <a class="external" href="http://www.microsoft.com/downloads/details.aspx?familyid=0baf2b35-c656-4969-ace8-e4c0c0716adb&amp;displaylang=en">download the SDK</a> from the Microsoft Download Center.</p>
 
@@ -164,7 +168,7 @@ cd 191src
 <ul>
  <li>Use another SDK (the one shipped with Visual Studio 9).</li>
  <li>Delete the vcvars32.bat file and repair your Visual Studio installation with the setup program.</li>
- <li>Edit vcvars32.bat to correct the problem (see <a class="external" href="http://blogs.msdn.com/windowssdk/archive/2008/04/18/installing-win-sdk-for-svr-2008-after-vs-2008-breaks-vs-command-line-build-environment.aspx" rel="freelink">http://blogs.msdn.com/windowssdk/arc...vironment.aspx</a> "Workaround: Repair the VS2008 command line build environment by editing c:\Program Files\Microsoft Visual Studio 9.0\VC\bin\vcvars32.bat manually").</li>
+ <li>Edit vcvars32.bat to correct the problem (see <a class="external" href="http://blogs.msdn.com/windowssdk/archive/2008/04/18/installing-win-sdk-for-svr-2008-after-vs-2008-breaks-vs-command-line-build-environment.aspx">http://blogs.msdn.com/windowssdk/arc...vironment.aspx</a> "Workaround: Repair the VS2008 command line build environment by editing c:\Program Files\Microsoft Visual Studio 9.0\VC\bin\vcvars32.bat manually").</li>
 </ul>
 
 <p>SDKs older than the Server 2003 R2 Platform SDK aren't supported either.</p>

@@ -47,7 +47,7 @@ tags:
 
 <h2 id="Writing_modes_and_block_and_inline_layout">Writing modes and block and inline layout</h2>
 
-<p>We have already discussed <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model#Block_and_inline_boxes">block and inline layout</a>, and the fact that some things display as block elements and others as inline elements. As we have seen described above, block and inline is tied to the writing mode of the document, and not the physical screen. Blocks are only displayed from the top to the bottom of the page if you are using a writing mode that displays text horizontally, such as English.</p>
+<p>We have already discussed <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model#block_and_inline_boxes">block and inline layout</a>, and the fact that some things display as block elements and others as inline elements. As we have seen described above, block and inline is tied to the writing mode of the document, and not the physical screen. Blocks are only displayed from the top to the bottom of the page if you are using a writing mode that displays text horizontally, such as English.</p>
 
 <p>If we look at an example this will become clearer. In this next example I have two boxes that contain a heading and a paragraph. The first uses <code>writing-mode: horizontal-tb</code>, a writing mode that is written horizontally and from the top of the page to the bottom. The second uses <code>writing-mode: vertical-rl</code>; this is a writing mode that is written vertically and from right to left.</p>
 
@@ -55,11 +55,11 @@ tags:
 
 <p>When we switch the writing mode, we are changing which direction is block and which is inline. In a <code>horizontal-tb</code> writing mode the block direction runs from top to bottom; in a <code>vertical-rl</code> writing mode the block direction runs right-to-left horizontally. So the <strong>block dimension</strong> is always the direction blocks are displayed on the page in the writing mode in use. The <strong>inline dimension</strong> is always the direction a sentence flows.</p>
 
-<p>This figure shows the two dimensions when in a horizontal writing mode.<img alt="Showing the block and inline axis for a horizontal writing mode." src="https://mdn.mozillademos.org/files/16574/horizontal-tb.png" style="height: 353px; width: 634px;"></p>
+<p>This figure shows the two dimensions when in a horizontal writing mode.<img alt="Showing the block and inline axis for a horizontal writing mode." src="horizontal-tb.png"></p>
 
 <p>This figure shows the two dimensions in a vertical writing mode.</p>
 
-<p><img alt="Showing the block and inline axis for a vertical writing mode." src="https://mdn.mozillademos.org/files/16575/vertical.png" style="height: 472px; width: 406px;"></p>
+<p><img alt="Showing the block and inline axis for a vertical writing mode." src="vertical.png"></p>
 
 <p>Once you start to look at CSS layout, and in particular the newer layout methods, this idea of block and inline becomes very important. We will revisit it later on.</p>
 

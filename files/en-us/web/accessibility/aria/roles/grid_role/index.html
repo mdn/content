@@ -43,9 +43,9 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>A grid widget contains one or more rows with one or more cells of thematically related interactive content. While it does not imply a specific visual presentation, it implies a relationship among elements. <span>Uses </span><span>fall into two categories: presenting tabular information (data grids) and grouping other widgets (layout grids). Even though both data grids and layout grids employ the same ARIA roles, states, and properties, differences in their content and purpose surface factors that are important to consider in keyboard interaction design. See </span><a href="https://www.w3.org/TR/wai-aria-practices-1.2/#grid">ARIA Authoring practices</a> for more details</p>
+<p>A grid widget contains one or more rows with one or more cells of thematically related interactive content. While it does not imply a specific visual presentation, it implies a relationship among elements. Uses fall into two categories: presenting tabular information (data grids) and grouping other widgets (layout grids). Even though both data grids and layout grids employ the same ARIA roles, states, and properties, differences in their content and purpose surface factors that are important to consider in keyboard interaction design. See <a href="https://www.w3.org/TR/wai-aria-practices-1.2/#grid">ARIA Authoring practices</a> for more details</p>
 
-<p>Cell elements have the role <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_Role">gridcell</a></code>, unless they are a row or column header. Then the elements are <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowheader_Role">rowheader</a></code> and <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role">columnheader</a></code>, respectively. Cell elements need to be owned by elements with a <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role">row</a></code> role. Rows can be grouped using <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">rowgroup</a>s</code>.</p>
+<p>Cell elements have the role <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_role">gridcell</a></code>, unless they are a row or column header. Then the elements are <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowheader_Role">rowheader</a></code> and <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role">columnheader</a></code>, respectively. Cell elements need to be owned by elements with a <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role">row</a></code> role. Rows can be grouped using <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">rowgroup</a>s</code>.</p>
 
 <p>If the grid is used as an interactive widget, <a href="#keyboard-use">keyboard</a> interactions need to be implemented.</p>
 
@@ -462,7 +462,7 @@ document.querySelector('table').addEventListener("keydown", function(event) {
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="notranslate">&lt;table role="grid" aria-labelledby="calendarheader"&gt;
+<pre class="brush: html notranslate">&lt;table role="grid" aria-labelledby="calendarheader"&gt;
   &lt;caption id="calendarheader"&gt;September 2018&lt;/caption&gt;
   &lt;thead role="rowgroup"&gt;
     &lt;tr role="row"&gt;
@@ -544,7 +544,7 @@ tbody td[role="gridcell"]:hover, tbody td[role="gridcell"]:focus {
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<pre class="notranslate">var selectables = document.querySelectorAll('table td[role="gridcell"]');
+<pre class="brush: js notranslate">var selectables = document.querySelectorAll('table td[role="gridcell"]');
 
 selectables[0].setAttribute('tabindex', 0);
 
@@ -688,11 +688,11 @@ document.querySelector('table').addEventListener("keydown", function(event) {
 
 <ul>
  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/composite_Role">ARIA composite role</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/table_Role">ARIA table role</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role">ARIA table role</a></li>
  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_Role">ARIA treegrid role</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/row_Role">ARIA row role</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_Role">ARIA rowgroup role</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_Role">ARIA: gridcell role</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role">ARIA row role</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">ARIA rowgroup role</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_role">ARIA: gridcell role</a></li>
  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowheader_Role">ARIA: rowheader role</a></li>
  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role">ARIA: columnheader role</a></li>
  <li>HTML table element</li>

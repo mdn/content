@@ -108,17 +108,7 @@ fixed.newProp = 'ohai'; // throws a TypeError
 delete Object.prototype; // throws a TypeError
 </pre>
 
-<p>Fourth, strict mode prior to Gecko 34 requires that all properties named in an object literal be unique. The normal code may duplicate property names, with the last one determining the property's value. But since only the last one does anything, the duplication is a vector for bugs, if the code is modified to change the property value other than by changing the last instance. Duplicate property names are a syntax error in strict mode:</p>
-
-<div class="note">
-<p>This is no longer the case in ECMAScript 2015 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1041128">bug 1041128</a>).</p>
-</div>
-
-<pre class="brush: js notranslate">'use strict';
-var o = { p: 1, p: 2 }; // !!! syntax error
-</pre>
-
-<p>Fifth, strict mode requires that function parameter names be unique. In normal code the last duplicated argument hides previous identically-named arguments. Those previous arguments remain available through <code>arguments[i]</code>, so they're not completely inaccessible. Still, this hiding makes little sense and is probably undesirable (it might hide a typo, for example), so in strict mode duplicate argument names are a syntax error:</p>
+<p>Fourth, strict mode requires that function parameter names be unique. In normal code the last duplicated argument hides previous identically-named arguments. Those previous arguments remain available through <code>arguments[i]</code>, so they're not completely inaccessible. Still, this hiding makes little sense and is probably undesirable (it might hide a typo, for example), so in strict mode duplicate argument names are a syntax error:</p>
 
 <pre class="brush: js notranslate">function sum(a, a, c) { // !!! syntax error
   'use strict';
@@ -126,11 +116,11 @@ var o = { p: 1, p: 2 }; // !!! syntax error
 }
 </pre>
 
-<p>Sixth, a strict mode in ECMAScript 5 forbids octal syntax. The octal syntax isn't part of ECMAScript 5, but it's supported in all browsers by prefixing the octal number with a zero: <code>0644 === 420</code> and <code>"\045" === "%"</code>. In ECMAScript 2015 Octal number is supported by prefixing a number with "<code>0o</code>". i.e. </p>
+<p>Fifth, a strict mode in ECMAScript 5 <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal">forbids a <code>0</code>-prefixed octal literal or octal escape sequence</a>. Outside strict mode, a number beginning with a <code>0</code>, such as <code>0644</code>, is interpreted as an octal number (<code>0644 === 420</code>), if all digits are smaller than 8. Octal escape sequences, such as <code>"\45"</code>, which is equal to <code>"%"</code>, can be used to represent characters by extended-ASCII character code numbers in octal. In strict mode, this is a syntax error. In ECMAScript 2015, octal literals are supported by prefixing a number with "<code>0o</code>"; for example:</p>
 
 <pre class="brush: js notranslate">var a = 0o10; // ES2015: Octal</pre>
 
-<p>Novice developers sometimes believe a leading zero prefix has no semantic meaning, so they use it as an alignment device — but this changes the number's meaning! A leading zero syntax for the octals is rarely useful and can be mistakenly used, so strict mode makes it a syntax error:</p>
+<p>Novice developers sometimes believe a leading zero prefix has no semantic meaning, so they might use it as an alignment device — but this changes the number's meaning! A leading zero syntax for the octals is rarely useful and can be mistakenly used, so strict mode makes it a syntax error:</p>
 
 <pre class="brush: js notranslate">'use strict';
 var sum = 015 + // !!! syntax error
@@ -141,7 +131,7 @@ var sumWithOctal = 0o10 + 8;
 console.log(sumWithOctal); // 16
 </pre>
 
-<p>Seventh, strict mode in ECMAScript 2015 forbids setting properties on <a href="/en-US/docs/Glossary/primitive">primitive</a> values. Without strict mode, setting properties is ignored (no-op), with strict mode, however, a {{jsxref("TypeError")}} is thrown.</p>
+<p>Sixth, strict mode in ECMAScript 2015 forbids setting properties on <a href="/en-US/docs/Glossary/primitive">primitive</a> values. Without strict mode, setting properties is ignored (no-op), with strict mode, however, a {{jsxref("TypeError")}} is thrown.</p>
 
 <pre class="brush: js notranslate">(function() {
 'use strict';
@@ -152,11 +142,17 @@ false.true = '';         // TypeError
 
 })();</pre>
 
+<p>In ECMAScript 5 strict-mode code, duplicate property names were considered a {{jsxref("SyntaxError")}}. With the introduction of <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">computed property names</a>, making duplication possible at runtime, ECMAScript 2015 removed that restriction.</p>
+
+<pre class="brush: js notranslate">'use strict';
+var o = { p: 1, p: 2 }; // syntax error prior to ECMAScript 2015 
+</pre>
+
 <h3 id="Simplifying_variable_uses">Simplifying variable uses</h3>
 
 <p>Strict mode simplifies how variable names map to particular variable definitions in the code. Many compiler optimizations rely on the ability to say that variable <em>X</em> is stored in <em>that</em> location: this is critical to fully optimizing JavaScript code. JavaScript sometimes makes this basic mapping of name to variable definition in the code impossible to perform until runtime. Strict mode removes most cases where this happens, so the compiler can better optimize strict mode code.</p>
 
-<p>First, strict mode prohibits <code>with</code>. The problem with <code>with</code> is that any name inside the block might map either to a property of the object passed to it, or to a variable in surrounding (or even global) scope, at runtime: it's impossible to know which beforehand. Strict mode makes <code>with</code> a syntax error, so there's no chance for a name in a <code>with</code> to refer to an unknown location at runtime:</p>
+<p>First, strict mode prohibits <a href="/en-US/docs/Web/JavaScript/Reference/Statements/with"><code>with</code></a>. The problem with <code>with</code> is that any name inside the block might map either to a property of the object passed to it, or to a variable in surrounding (or even global) scope, at runtime; it's impossible to know which beforehand. Strict mode makes <code>with</code> a syntax error, so there's no chance for a name in a <code>with</code> to refer to an unknown location at runtime:</p>
 
 <pre class="brush: js notranslate">'use strict';
 var x = 17;
@@ -338,7 +334,7 @@ function baz() { // kosher
 
 <h2 id="Strict_mode_in_browsers">Strict mode in browsers</h2>
 
-<p>The major browsers now implement strict mode. However, don't blindly depend on it since there still are numerous <a class="external" href="http://caniuse.com/use-strict" rel="external" title="caniuse.com availability of strict mode">Browser versions used in the wild that only have partial support for strict mode</a> or do not support it at all (e.g. Internet Explorer below version 10!). <em>Strict mode changes semantics.</em> Relying on those changes will cause mistakes and errors in browsers which don't implement strict mode. Exercise caution in using strict mode, and back up reliance on strict mode with feature tests that check whether relevant parts of strict mode are implemented. Finally, make sure to <em>test your code in browsers that do and don't support strict mode</em>. If you test only in browsers that don't support strict mode, you're very likely to have problems in browsers that do, and vice versa.</p>
+<p>The major browsers now implement strict mode. However, don't blindly depend on it since there still are numerous <a class="external" href="https://caniuse.com/use-strict" rel="external" title="caniuse.com availability of strict mode">Browser versions used in the wild that only have partial support for strict mode</a> or do not support it at all (e.g. Internet Explorer below version 10!). <em>Strict mode changes semantics.</em> Relying on those changes will cause mistakes and errors in browsers which don't implement strict mode. Exercise caution in using strict mode, and back up reliance on strict mode with feature tests that check whether relevant parts of strict mode are implemented. Finally, make sure to <em>test your code in browsers that do and don't support strict mode</em>. If you test only in browsers that don't support strict mode, you're very likely to have problems in browsers that do, and vice versa.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

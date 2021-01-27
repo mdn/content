@@ -34,7 +34,7 @@ tags:
 
 <p>At the most basic level, whenever a browser needs a file that is hosted on a web server, the browser requests the file via HTTP. When the request reaches the correct (hardware) web server, the (software) <em>HTTP server</em> accepts the request, finds the requested document, and sends it back to the browser, also through HTTP. (If the server doesn't find the requested document, it returns a <a href="/en-US/docs/Web/HTTP/Status/404">404</a> response instead.)</p>
 
-<p><img alt="Basic representation of a client/server connection through HTTP" src="https://mdn.mozillademos.org/files/8659/web-server.svg" style="height: 200px; width: 600px;"></p>
+<p><img alt="Basic representation of a client/server connection through HTTP" src="web-server.svg"></p>
 
 <p>To publish a website, you need either a static or a dynamic web server.</p>
 
@@ -46,7 +46,7 @@ tags:
 
 <h2 id="Active_learning">Active learning</h2>
 
-<p><em>There is no active learning available yet. <a href="/en-US/docs/MDN/Getting_started">Please, consider contributing</a>.</em></p>
+<p><em>There is no active learning available yet. <a href="/en-US/docs/MDN/Contribute/Getting_started">Please, consider contributing</a>.</em></p>
 
 <h2 id="Deeper_dive">Deeper dive</h2>
 
@@ -65,9 +65,9 @@ tags:
  <li>A dedicated web server is typically maintained by a third-party.</li>
 </ul>
 
-<p>For all these reasons, finding a good hosting provider is a key part of building your website. Examine the various services companies offer. Choose one that fits your needs and budget. (Services range from free to thousands of dollars per month.) You can find more details <a href="/en-US/docs/Learn/How_much_does_it_cost#Hosting">in this article</a>.</p>
+<p>For all these reasons, finding a good hosting provider is a key part of building your website. Examine the various services companies offer. Choose one that fits your needs and budget. (Services range from free to thousands of dollars per month.) You can find more details <a href="/en-US/docs/Learn/Common_questions/How_much_does_it_cost#hosting">in this article</a>.</p>
 
-<p>Once you have web hosting service, you must <a href="/en-US/docs/Learn/Upload_files_to_a_web_server">upload your files to your web server</a>.</p>
+<p>Once you have web hosting service, you must <a href="/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server">upload your files to your web server</a>.</p>
 
 <h3 id="Communicating_through_HTTP">Communicating through HTTP</h3>
 
@@ -90,7 +90,7 @@ tags:
  <li>The web server <em>must answer</em> every HTTP request, at least with an error message.</li>
 </ul>
 
-<p><a href="/en-US/docs/Web/HTTP/Status/404"><img alt="The MDN 404 page as an example of such error page" src="https://mdn.mozillademos.org/files/8661/mdn-404.jpg" style="float: right; height: 300px; width: 300px;"></a>On a web server, the HTTP server is responsible for processing and answering incoming requests.</p>
+<p><a href="/en-US/docs/Web/HTTP/Status/404"><img alt="The MDN 404 page as an example of such error page" src="mdn-404.jpg" style="float: right;"></a>On a web server, the HTTP server is responsible for processing and answering incoming requests.</p>
 
 <ol>
  <li>Upon receiving a request, an HTTP server first checks if the requested URL matches an existing file.</li>
@@ -104,9 +104,7 @@ tags:
 
 <p>The term <em>dynamic</em> means that the server processes the content or even generates it on the fly from a database. This approach provides more flexibility, but the technical stack is more complex, making it dramatically more challenging to build a website.</p>
 
-<p>Take, for example, the page you're reading right now. On the web server hosting it, there is an application server that takes article content from a database, formats it, puts it inside some HTML templates, and sends you the results. In this case, the application server is called <a href="/en-US/docs/MDN/Kuma">Kuma</a>. Kuma is built with the programming language <a href="https://www.python.org/">Python</a> (using the <a href="https://www.djangoproject.com/">Django</a> framework). The Mozilla team built Kuma for the specific needs of MDN, but there are many similar applications built on many other technologies.</p>
-
-<p>There are so many application servers that it's difficult to suggest a particular one. Some application servers cater to specific website categories like blogs, wikis, or eCommerce; others, called {{Glossary("CMS", "CMSs")}} (content management systems), are more generic. If you're building a dynamic website, take the time to choose technology that fits your needs. Unless you want to learn web server programming (which is an exciting area in itself!), you don't need to create your own application server. That's just <a href="https://en.wikipedia.org/wiki/Reinventing_the_wheel">reinventing the wheel</a>.</p>
+<p>There are so many application server technologies that it's difficult to suggest a particular one. Some application servers cater to specific website categories like blogs, wikis, or eCommerce; others are more generic. If you're building a dynamic website, take the time to choose technology that fits your needs. Unless you want to learn web server programming (which is an exciting area in itself!), you don't need to create your own application server. That's just <a href="https://en.wikipedia.org/wiki/Reinventing_the_wheel">reinventing the wheel</a>.</p>
 
 <h2 id="Next_steps">Next steps</h2>
 

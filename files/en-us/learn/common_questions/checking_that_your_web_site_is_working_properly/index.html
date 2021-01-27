@@ -19,7 +19,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>You need to know how to <a href="/en-US/docs/Learn/Upload_files_to_a_web_server">upload files to a web server</a>.</td>
+   <td>You need to know how to <a href="/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server">upload files to a web server</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -36,7 +36,7 @@ tags:
 
 <h2 id="Active_Learning">Active Learning</h2>
 
-<p><em>There is no active learning available yet. <a href="/en-US/docs/MDN/Getting_started">Please, consider contributing</a>.</em></p>
+<p><em>There is no active learning available yet. <a href="/en-US/docs/MDN/Contribute/Getting_started">Please, consider contributing</a>.</em></p>
 
 <h2 id="Dig_deeper">Dig deeper</h2>
 
@@ -48,11 +48,11 @@ tags:
 
 <p>Let's look at our personal website, <code>http://demozilla.examplehostingprovider.net/</code>. It's not showing the image we expected!</p>
 
-<p><img alt="Oops, the ‘unicorn’ image is missing" src="https://mdn.mozillademos.org/files/9643/image-missing.png" style="height: 189px; width: 380px;"></p>
+<p><img alt="Oops, the ‘unicorn’ image is missing" src="image-missing.png"></p>
 
 <p>Open Firefox's Network tool (<strong>Tools ➤ Web Developer ➤ Network</strong>) and reload the page:</p>
 
-<p><img alt="The image has a 404 error" src="https://mdn.mozillademos.org/files/9645/error404.png" style="height: 304px; width: 562px;"></p>
+<p><img alt="The image has a 404 error" src="error404.png"></p>
 
 <p>There's the problem, that "404" at the bottom. "404" means "resource not found", and that's why we didn't see the image.</p>
 
@@ -61,7 +61,7 @@ tags:
 <p>Servers respond with a status message whenever they receive a request. Here are the most common statuses:</p>
 
 <dl>
- <dt><strong><span id="cke_bm_110S" style="display: none;"> </span>200: OK</strong></dt>
+ <dt><strong>200: OK</strong></dt>
  <dd>The resource you asked for was delivered.</dd>
  <dt><strong>301: Moved permanently</strong></dt>
  <dd>The resource has moved to a new location. You won't see this much in your browser, but it's good to know about "301" since search engines use this information a lot to update their indexes.</dd>
@@ -83,15 +83,15 @@ tags:
 
 <p>So what went wrong?</p>
 
-<p><img alt="Le list of images in our project" src="https://mdn.mozillademos.org/files/9649/demozilla-images-list.png" style="height: 71px; width: 407px;"></p>
+<p><img alt="Le list of images in our project" src="demozilla-images-list.png"></p>
 
 <p>At first glance, the image we asked for seems to be in the right place... but the Network tool reported a "404". It turns out that we made a typo in our HTML code: <code>unicorn_pics.png</code> rather than <code>unicorn_pic.png</code>. So correct the typo in your code editor by changing the image's <code>src</code> attribute:</p>
 
-<p><img alt="Deleting the ‘s’" src="https://mdn.mozillademos.org/files/9651/code-correct.png" style="height: 125px; width: 775px;"></p>
+<p><img alt="Deleting the ‘s’" src="code-correct.png"></p>
 
-<p>Save, <a href="/en-US/docs/Learn/Upload_files_to_a_web_server">push to the server</a>, and reload the page in your browser:</p>
+<p>Save, <a href="/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server">push to the server</a>, and reload the page in your browser:</p>
 
-<p><img alt="The image loads correctly in the browser" src="https://mdn.mozillademos.org/files/9655/image-corrected.png" style="height: 554px; width: 565px;"></p>
+<p><img alt="The image loads correctly in the browser" src="image-corrected.png"></p>
 
 <p>There you go! Let's look at the {{Glossary("HTTP")}} statuses again:</p>
 
@@ -110,7 +110,7 @@ tags:
 
 <p>We wanted to type <code>http://demozilla.examplehostingprovider.net/</code> but typed too fast and forgot an “l”:</p>
 
-<p><img alt="Address unreachable" src="https://mdn.mozillademos.org/files/9657/cannot-find-server.png" style="height: 425px; width: 908px;"></p>
+<p><img alt="Address unreachable" src="cannot-find-server.png"></p>
 
 <p>The address cannot be found. Indeed.</p>
 
@@ -124,7 +124,7 @@ tags:
 
 <p>Open the console (<strong>Tools ➤ Web developer ➤ Web Console</strong>) and reload the page:</p>
 
-<p><img alt="A Javascript error is shown in the Console" src="https://mdn.mozillademos.org/files/9659/js-error.png" style="height: 511px; width: 523px;"></p>
+<p><img alt="A Javascript error is shown in the Console" src="js-error.png"></p>
 
 <p>In this example, we learn (quite clearly) what the error is, and we can go fix it (we will cover JavaScript in <a href="/en-US/docs/Learn/JavaScript">another series </a>of articles).</p>
 
@@ -136,7 +136,7 @@ tags:
 
 <p>Does the page load fast enough? Resources like <a href="http://www.webpagetest.org/">WebPageTest.org</a> or browser add-ons like <a href="https://addons.mozilla.org/en-US/firefox/addon/yslow/">YSlow</a> can tell you a few interesting things:</p>
 
-<p><img alt="Yslow diagnostics" src="https://mdn.mozillademos.org/files/9661/yslow-diagnostics.png" style="height: 766px; width: 637px;"></p>
+<p><img alt="Yslow diagnostics" src="yslow-diagnostics.png"></p>
 
 <p>Grades go from A to F. Our page is just small and meets most criteria. But we can already note it would have been better to use a {{Glossary("CDN")}}. That doesn't matter very much when we're only serving one image, but it would be critical for a high-bandwidth website serving many thousands of images.</p>
 
@@ -170,6 +170,6 @@ round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms</pre>
 <p>Congratulations, your website is up and running for anyone to visit. That's a huge achievement. Now, you can start digging deeper into various subjects.</p>
 
 <ul>
- <li>Since people can come to your website from all over the world, you should consider making it <a href="/en-US/docs/Learn/What_is_accessibility">accessible to everybody</a>.</li>
- <li>Is the design of your website a bit too rough? It's time to <a href="/en-US/docs/Learn/CSS/Using_CSS_in_a_web_page">learn more about CSS</a>.</li>
+ <li>Since people can come to your website from all over the world, you should consider making it <a href="/en-US/docs/Learn/Common_questions/What_is_accessibility">accessible to everybody</a>.</li>
+ <li>Is the design of your website a bit too rough? It's time to <a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_works">learn more about CSS</a>.</li>
 </ul>

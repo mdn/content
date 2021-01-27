@@ -74,7 +74,7 @@ var request = window.indexedDB.open("MyTestDatabase", 3);
 
 <p>The open request doesn't open the database or start the transaction right away. The call to the <code>open()</code> function returns an <a href="/en-US/docs/Web/API/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a> object with a result (success) or error value that you handle as an event. Most other asynchronous functions in IndexedDB do the same thing - return an <a href="/en-US/docs/Web/API/IDBRequest"><code style="font-size: 14px; color: rgb(51, 51, 51);">IDBRequest</code></a> object with the result or error. The result for the open function is an instance of an <code style="font-size: 14px; color: rgb(51, 51, 51);"><a href="/en-US/docs/Web/API/IDBDatabase">IDBDatabase</a>.</code></p>
 
-<p>The second parameter to the open method is the version of the database. The version of the database determines the database schema — the object stores in the database and their structure. If the database doesn't already exist, it is created by the <code>open</code> operation, then an <code>onupgradeneeded</code> event is triggered and you create the database schema in the handler for this event. If the database does exist but you are specifying an upgraded version number, an <code>onupgradeneeded</code> event is triggered straight away, allowing you to provide an updated schema in its handler. More on this later in <a href="#Updating_the_version_of_the_database">Updating the version of the database</a> below, and the {{ domxref("IDBFactory.open") }} reference page. </p>
+<p>The second parameter to the open method is the version of the database. The version of the database determines the database schema — the object stores in the database and their structure. If the database doesn't already exist, it is created by the <code>open</code> operation, then an <code>onupgradeneeded</code> event is triggered and you create the database schema in the handler for this event. If the database does exist but you are specifying an upgraded version number, an <code>onupgradeneeded</code> event is triggered straight away, allowing you to provide an updated schema in its handler. More on this later in <a href="#updating_the_version_of_the_database">Updating the version of the database</a> below, and the {{ domxref("IDBFactory.open") }} reference page. </p>
 
 <div class="warning">
 <p><strong>Important</strong>: The version number is an <code>unsigned long long</code> number, which means that it can be a very big integer. It also means that you can't use a float, otherwise it will be converted to the closest lower integer and the transaction may not start, nor the <code>upgradeneeded</code> event trigger. So for example, don't use 2.4 as a version number:<br>
@@ -238,7 +238,7 @@ request.onupgradeneeded = function(event) {
 
 <p>We've also asked for an index named "name" that looks at the <code>name</code> property of the stored objects. As with <code>createObjectStore()</code>, <code>createIndex()</code> takes an optional <code>options</code> object that refines the type of index that you want to create. Adding objects that don't have a <code>name</code> property still succeeds, but the objects won't appear in the "name" index.</p>
 
-<p>We can now retrieve the stored customer objects using their <code>ssn</code> from the object store directly, or using their name by using the index. To learn how this is done, see the section on <a href="#Using_an_index">using an index</a>.</p>
+<p>We can now retrieve the stored customer objects using their <code>ssn</code> from the object store directly, or using their name by using the index. To learn how this is done, see the section on <a href="#using_an_index">using an index</a>.</p>
 
 <h3 id="Using_a_key_generator">Using a key generator</h3>
 
@@ -447,7 +447,7 @@ objectStore.openCursor().onsuccess = function(event) {
 
 <pre class="brush: js notranslate">// First, make sure you created index in request.onupgradeneeded:
 // objectStore.createIndex("name", "name");
-// Otherwize you will get DOMException.
+// Otherwise you will get DOMException.
 
 var index = objectStore.index("name");
 

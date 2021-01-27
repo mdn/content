@@ -109,7 +109,7 @@ tags:
 <p>The resulting <code>gl_Position</code> is calculated by multiplying the model-view and the projection matrices by each vector to get the final vertex position, in each case.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can learn more about <em>model</em>, <em>view</em>, and <em>projection transformations</em> from the <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Basic_theory#Vertex_processing">vertex processing paragraph</a>, and you can also check out the links at the end of this article to learn more about it.</p>
+<p><strong>Note</strong>: You can learn more about <em>model</em>, <em>view</em>, and <em>projection transformations</em> from the <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Basic_theory#vertex_processing">vertex processing paragraph</a>, and you can also check out the links at the end of this article to learn more about it.</p>
 </div>
 
 <p>Both <code>projectionMatrix</code> and <code>modelViewMatrix</code> are provided by Three.js and the vector is passed with the new 3D position, which results in the original cube moving 10 units along the <code>x</code> axis and 5 units along the <code>z</code> axis, translated via a shader. We can ignore the fourth parameter and leave it with the default <code>1.0</code> value; this is used to manipulate the clipping of the vertex position in the 3D space, but we don't need in our case.</p>
@@ -154,7 +154,7 @@ tags:
 
 <p>Three.js compiles and runs the shaders attached to the mesh to which this material is given. In our case the cube will have both vertex and texture shaders applied. That's it — you've just created the simplest possible shader, congratulations! Here's what the cube should look like:</p>
 
-<p><img alt="Three.js blue cube demo" src="https://end3r.github.io/MDN-Games-3D/Shaders/img/cube.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="Three.js blue cube demo" src="cube.png" style="display: block; margin: 0px auto;"></p>
 
 <p>It looks exactly the same as the Three.js cube demo but the slightly different position and the same blue color are both achieved using the shader.</p>
 

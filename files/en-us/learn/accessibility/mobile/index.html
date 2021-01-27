@@ -245,12 +245,12 @@ panel.ontouchend = stopMove;</pre>
 
 <h2 id="Responsive_design">Responsive design</h2>
 
-<p><a href="/en-US/docs/Web/Apps/Progressive/Responsive">Responsive design</a> is the practice of making your layouts and other features of your apps dynamically change depending on factors such as screen size and resolution, so they are usable and accessible to users of different device types.</p>
+<p><a href="/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks">Responsive design</a> is the practice of making your layouts and other features of your apps dynamically change depending on factors such as screen size and resolution, so they are usable and accessible to users of different device types.</p>
 
 <p>In particular, the most common problems that need to be addressed for mobile are:</p>
 
 <ul>
- <li>Suitability of layouts for mobile devices. A multi-column layout won't work as well on a narrow screen, for example, and the text size may need to be increased so it is legible. Such issues can be solved by creating a responsive layout using technologies such as <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a>, <a href="/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">viewport</a>, and <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">flexbox</a>.</li>
+ <li>Suitability of layouts for mobile devices. A multi-column layout won't work as well on a narrow screen, for example, and the text size may need to be increased so it is legible. Such issues can be solved by creating a responsive layout using technologies such as <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a>, <a href="/en-US/docs/Web/HTML/Viewport_meta_tag">viewport</a>, and <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">flexbox</a>.</li>
  <li>Conserving image sizes downloaded. In general, small screen devices won't need images that are as large as their desktop counterparts, and they are more likely to be on slow network connections. Therefore, it is wise to serve smaller images to narrow screen devices as appropriate. You can handle this using <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">responsive image techniques</a>.</li>
  <li>Thinking about high resolutions. Many mobile devices have high-resolution screens, and therefore need higher-resolution images so that the display can continue to look crisp and sharp. Again, you can serve images as appropriate using responsive image techniques. In addition, many image requirements can be fulfilled using the SVG vector images format, which is well-supported across browsers today. SVG has a small file size and will stay sharp regardless of whatever size is being displayed  (see <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">Adding vector graphics to the web</a> for more details).</li>
 </ul>
@@ -265,7 +265,7 @@ panel.ontouchend = stopMove;</pre>
 
 <h4 id="Not_disabling_zoom">Not disabling zoom</h4>
 
-<p>Using <a href="/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">viewport</a>, it is possible to disable zoom. Always ensure resizing is enabled, and set the width to the device's width in the {{htmlelement("head")}}:</p>
+<p>Using <a href="/en-US/docs/Web/HTML/Viewport_meta_tag">viewport</a>, it is possible to disable zoom. Always ensure resizing is enabled, and set the width to the device's width in the {{htmlelement("head")}}:</p>
 
 <pre class="brush: html notranslate">&lt;meta name="viewport" content="width=device-width; user-scalable=yes"&gt;</pre>
 

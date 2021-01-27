@@ -61,7 +61,7 @@ var knotBSphere = new Sphere(
 
 <p>Unfortunately, there is no equivalent of <code>Box3.setFromObject</code> for Sphere instances. So if we apply transformations or change the position of the <code>Mesh</code>, we need to manually update the bounding sphere. For instance:</p>
 
-<pre class="notranslate">knot.scale.set(2, 2, 2);
+<pre class="brush: js notranslate">knot.scale.set(2, 2, 2);
 knotBSphere.radius = knot.geometry.radius * 2;
 </pre>
 
@@ -118,7 +118,7 @@ THREE.Sphere.prototype.intersectsBox = function (box) {
  <li><a href="https://mozdevs.github.io/gamedev-js-3d-aabb/raw_sphere.html">Sphere vs. Box and Sphere</a></li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11825/Screen%20Shot%202015-10-20%20at%2015.19.16.png" style="display: block; height: 256px; margin: 0px auto; width: 256px;"></p>
+<p><img alt="" src="screen_shot_2015-10-20_at_15.19.16.png" style="display: block; margin: 0px auto;"></p>
 
 <h2 id="Using_BoxHelper">Using <code>BoxHelper</code></h2>
 
@@ -149,12 +149,12 @@ scene.add(knotBoxHelper);</pre>
 
 <p>In order to also have our actual <code>Box3</code> bounding box, we create a new <code>Box3</code> object and make it assume the <code>BoxHelper</code>'s shape and position.</p>
 
-<pre class="syntaxbox notranslate">var box3 = new THREE.Box3();
+<pre class="brush: js notranslate">var box3 = new THREE.Box3();
 box3.setFromObject(knotBoxHelper);</pre>
 
 <p>If we change the <code>Mesh</code> position, rotation, scale, etc. we need to call the <code>update()</code> method so the <code>BoxHelper</code> instance matches its linked <code>Mesh</code>. We also need to call <code>setFromObject</code> again in order to make the <code>Box3</code> follow the <code>Mesh</code>.</p>
 
-<pre class="syntaxbox notranslate">knot.position.set(-3, 2, 1);
+<pre class="brush: js notranslate">knot.position.set(-3, 2, 1);
 knot.rotation.x = -Math.PI / 4;
 // update the bounding box so it stills wraps the knot
 knotBoxHelper.update();
@@ -171,4 +171,4 @@ box3.containsPoint(point.position);</pre>
 
 <p>There are <strong>two demos</strong> you can take a look at on our <a href="https://mozdevs.github.io/gamedev-js-3d-aabb/">live demos page</a>. The <a href="https://mozdevs.github.io/gamedev-js-3d-aabb/api_point.html">first one</a> showcases point vs. box collisions using <code>BoxHelper</code>. The <a href="https://mozdevs.github.io/gamedev-js-3d-aabb/api_box.html">second one</a> performs box vs. box tests.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11821/Screen%20Shot%202015-10-19%20at%2012.10.06.png" style="display: block; height: 256px; margin: 0px auto; width: 256px;"></p>
+<p><img alt="" src="screen_shot_2015-10-19_at_12.10.06.png" style="display: block; margin: 0px auto;"></p>

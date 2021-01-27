@@ -37,8 +37,6 @@ tags:
 <dl>
 	<dt>{{domxref("ReadableStream.cancel()")}}</dt>
 	<dd>Cancels the stream, signaling a loss of interest in the stream by a consumer. The supplied reason argument will be given to the underlying source, which may or may not use it.</dd>
-	<dt>{{domxref("ReadableStream.getIterator()")}}</dt>
-	<dd>Creates a ReadableStream async iterator instance and locks the stream to it. While the stream is locked, no other reader can be acquired until this one is released.</dd>
 	<dt>{{domxref("ReadableStream.getReader()")}}</dt>
 	<dd>Creates a reader and locks the stream to it. While the stream is locked, no other reader can be acquired until this one is released.</dd>
 	<dt>{{domxref("ReadableStream.pipeThrough()")}}</dt>
@@ -47,11 +45,11 @@ tags:
 	<dd>Pipes the current ReadableStream to a given {{domxref("WritableStream")}} and returns a promise that fulfills when the piping process completes successfully, or rejects if any errors were encountered.</dd>
 	<dt>{{domxref("ReadableStream.tee()")}}</dt>
 	<dd>The <code>tee</code> method <a href="https://streams.spec.whatwg.org/#tee-a-readable-stream" id="ref-for-tee-a-readable-stream②">tees</a> this readable stream, returning a two-element array containing the two resulting branches as new {{domxref("ReadableStream")}} instances. Each of those streams receives the same incoming data.</dd>
-	<dt>{{domxref("ReadableStream[@@asyncIterator]()")}}</dt>
-	<dd>Alias of <code>getIterator</code> method.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
+
+<h3 id="example-fetch-stream">Fetch stream</h3>
 
 <p>In the following example, an artificial {{domxref("Response")}} is created to stream HTML fragments fetched from another resource to the browser.</p>
 
@@ -85,6 +83,27 @@ tags:
   return new Response(stream, { headers: { "Content-Type": "text/html" } });
 });
 </pre>
+
+<h3 id="example-ittr-to-stream">Async iterator to stream</h3>
+
+<p>Converting an <a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">(async) iterator</a> to a readable stream:</p>
+
+<pre class="brush: js">function iteratorToStream(iterator) {
+  return new ReadableStream({
+    async pull(controller) {
+      const { value, done } = await iterator.next();
+
+      if (done) {
+        controller.close();
+      } else {
+        controller.enqueue(value);
+      }
+    },
+  });
+}
+</pre>
+
+<p>This works with both async and non-async iterators.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

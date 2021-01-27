@@ -41,11 +41,11 @@ tags:
 
 <h2 id="Optimizing_image_delivery">Optimizing image delivery</h2>
 
-<p>Despite being the largest consumer of bandwidth, images load asynchronously so the visitor can see the page as they download and therefore, their impact on <a href="/en-US/docs/Learn/Performance/perceived_performance">perceived performance</a> is far lower than many expect. However, images are mostly used for content, so it's important that a visitor can see them as soon as possible for a good experience.</p>
+<p>Despite being the largest consumer of bandwidth, images load asynchronously so the visitor can see the page as they download and therefore, their impact on <a href="/en-US/docs/Learn/Performance/Perceived_performance">perceived performance</a> is far lower than many expect. However, images are mostly used for content, so it's important that a visitor can see them as soon as possible for a good experience.</p>
 
 <h3 id="Loading_strategy">Loading strategy</h3>
 
-<p>One of the biggest improvements to most websites is <a href="/en-US/docs/Learn/Performance/Lazy_loading">lazy-loading</a> images beneath-the-fold, rather than downloading them all on initial page load regardless of whether a visitor scrolls to see them or not. Many JavaScript libraries can implement this for you, such as <a href="https://github.com/aFarkas/lazysizes" rel="noopener">lazysizes</a>, and browser vendors are working on a native <code>lazyload</code> attribute that is currently in the experimental phase.</p>
+<p>One of the biggest improvements to most websites is <a href="/en-US/docs/Web/Performance/Lazy_loading">lazy-loading</a> images beneath-the-fold, rather than downloading them all on initial page load regardless of whether a visitor scrolls to see them or not. Many JavaScript libraries can implement this for you, such as <a href="https://github.com/aFarkas/lazysizes" rel="noopener">lazysizes</a>, and browser vendors are working on a native <code>lazyload</code> attribute that is currently in the experimental phase.</p>
 
 <p>Beyond loading a subset of images, next you should look into the format of the images themselves:</p>
 
@@ -82,7 +82,7 @@ tags:
  <li><strong>AVIF </strong>— created by  <a href="https://aomedia.org/">Alliance for Open Media (AOMedia)</a> is an image format created from the AV1 video frames in the <a href="https://en.wikipedia.org/wiki/High_Efficiency_Image_File_Format">HEIF</a> format. AVIF is designed for efficient compression that is known to be better than the late <strong>WebP</strong>. It is now supported from <a href="https://www.google.com/chrome/">Chrome 85</a>, while other browsers tend to add full support for it soon. See also <a href="https://avif-converter.online">an online tool to convert previous image formats to AVIF</a>.</li>
 </ul>
 
-<p>Given the narrow support for JPEG-XR and JPEG2000, and also taking decode costs into the equation, the only serious contender for JPEG today is WebP. Which is why you could consider offering your images in that flavor, too, for the browsers that support it. This can be done via the <code>&lt;picture&gt;</code> element with the help of a <code>&lt;source&gt;</code> element equipped with a <a href="/en-US/docs/Web/HTML/Element/picture#The_type_attribute">type attribute</a>.</p>
+<p>Given the narrow support for JPEG-XR and JPEG2000, and also taking decode costs into the equation, the only serious contender for JPEG today is WebP. Which is why you could consider offering your images in that flavor, too, for the browsers that support it. This can be done via the <code>&lt;picture&gt;</code> element with the help of a <code>&lt;source&gt;</code> element equipped with a <a href="/en-US/docs/Web/HTML/Element/picture#the_type_attribute">type attribute</a>.</p>
 
 <p>If all of this sounds a bit complicated or feels like too much work for your team then there is also online services that you can use as image CDNs that will automate the serving of the correct image format on-the-fly, according to the type of device or browser requesting the image. The biggest ones are <a href="https://cloudinary.com/features/responsive_images">Cloudinary</a> and <a href="https://imageengine.io/">Image Engine</a>.</p>
 
