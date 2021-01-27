@@ -31,15 +31,6 @@ async function main() {
     );
   }
 
-  const { body } = contextPullRequest;
-  if (!body.trim()) {
-    // Even for typos it's required that to explain something about the PR.
-    return (
-      "Pull request body can't be empty. " +
-      "Please try to explain what the pull request accomplishes."
-    );
-  }
-
   // No errors or problems!
   return null;
 }
