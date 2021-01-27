@@ -109,7 +109,7 @@ tags:
 <p>The resulting <code>gl_Position</code> is calculated by multiplying the model-view and the projection matrices by each vector to get the final vertex position, in each case.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can learn more about <em>model</em>, <em>view</em>, and <em>projection transformations</em> from the <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Basic_theory#Vertex_processing">vertex processing paragraph</a>, and you can also check out the links at the end of this article to learn more about it.</p>
+<p><strong>Note</strong>: You can learn more about <em>model</em>, <em>view</em>, and <em>projection transformations</em> from the <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Basic_theory#vertex_processing">vertex processing paragraph</a>, and you can also check out the links at the end of this article to learn more about it.</p>
 </div>
 
 <p>Both <code>projectionMatrix</code> and <code>modelViewMatrix</code> are provided by Three.js and the vector is passed with the new 3D position, which results in the original cube moving 10 units along the <code>x</code> axis and 5 units along the <code>z</code> axis, translated via a shader. We can ignore the fourth parameter and leave it with the default <code>1.0</code> value; this is used to manipulate the clipping of the vertex position in the 3D space, but we don't need in our case.</p>
