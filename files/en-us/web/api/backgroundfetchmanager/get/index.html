@@ -28,11 +28,11 @@ tags:
 
 <h3 id="Returns">Return value</h3>
 
-<p>A {{jsxref("Promise")}} that resolves with resolves with a {{domxref("BackgroundFetchRegistration")}} or {{jsxref("undeffined")}}.</p>
+<p>A {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} or {{jsxref("undeffined")}}.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following examples shows how to use `get()` to retrieve a {{domxref("BackgroundFetchRegistration")}}. With an active service worker, use the {{domxref('ServiceWorkerRegistration.backgroundFetch')}} to access the `BackgroundFetchManager` object and call its `get()` method.</p>
+<p>The following examples shows how to use <code>get()</code> to retrieve a {{domxref("BackgroundFetchRegistration")}}. With an active {{domxref('ServiceWorker', 'service worker')}}, use the {{domxref('ServiceWorkerRegistration.backgroundFetch')}} to access the <code>BackgroundFetchManager</code> object and call its <code>get()</code> method.</p>
 
 <pre class="brush: js">navigator.serviceWorker.ready.then(async (swReg) => {
   const bgFetch = await swReg.backgroundFetch.get('my-fetch');
@@ -61,5 +61,3 @@ my code block</pre>
 <div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("api.BackgroundFetchManager.get")}}</p>
-
-false
