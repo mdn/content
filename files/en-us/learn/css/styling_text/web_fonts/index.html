@@ -43,7 +43,7 @@ tags:
   font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
 }</pre>
 
-<p>This system works well, but traditionally web developers' font choices were limited. There are only a handful of fonts that you can guarantee to be available across all common systems — the so-called <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Web_safe_fonts">Web-safe fonts</a>. You can use the font stack to specify preferable fonts, followed by web-safe alternatives, followed by the default system font, but this adds overhead in terms of testing to make sure that your designs look ok with each font, etc.</p>
+<p>This system works well, but traditionally web developers' font choices were limited. There are only a handful of fonts that you can guarantee to be available across all common systems — the so-called <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals#web_safe_fonts">Web-safe fonts</a>. You can use the font stack to specify preferable fonts, followed by web-safe alternatives, followed by the default system font, but this adds overhead in terms of testing to make sure that your designs look ok with each font, etc.</p>
 
 <h2 id="Web_fonts">Web fonts</h2>
 
@@ -198,7 +198,7 @@ tags:
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: You can also specify particular {{cssxref("font-variant")}} and {{cssxref("font-stretch")}} values for your web fonts. In newer browsers, you can also specify a {{cssxref("unicode-range")}} value, which is a specific range of characters you want to use out of the web font — in supporting browsers, only the specified characters will be downloaded, saving unnecessary downloading. <a href="https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/">Creating Custom Font Stacks with Unicode-Range</a> by Drew McLellan provides some useful ideas on how to make use of this.</p>
+<p><strong>Note</strong>: You can also specify particular {{cssxref("font-variant")}} and {{cssxref("font-stretch")}} values for your web fonts. In newer browsers, you can also specify a {{cssxref("@font-face/unicode-range", "unicode-range")}} value, which is a specific range of characters you want to use out of the web font — in supporting browsers, only the specified characters will be downloaded, saving unnecessary downloading. <a href="https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/">Creating Custom Font Stacks with Unicode-Range</a> by Drew McLellan provides some useful ideas on how to make use of this.</p>
 </div>
 
 <h2 id="Variable_fonts">Variable fonts</h2>

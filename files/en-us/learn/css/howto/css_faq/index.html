@@ -67,7 +67,7 @@ tags:
 <ul>
  <li>Using classes makes your styling extensible — even if you only have one element to style with a particular ruleset now, you might want to add more later.</li>
  <li>Classes allow you to style multiple elements, therefore they can lead to shorter stylesheets, rather than having to write out the same styling information in multiple rules that use id selectors. Shorter stylesheets are more performant.</li>
- <li>Class selectors have lower <a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#Specificity">specificity</a> than id selectors, so are easier to override if needed.</li>
+ <li>Class selectors have lower <a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity">specificity</a> than id selectors, so are easier to override if needed.</li>
 </ul>
 
 <div class="note">
@@ -186,7 +186,7 @@ h1 { color: initial; }</pre>
 
 <h3 id="Specificity_in_CSS">Specificity in CSS</h3>
 
-<p>When multiple rules apply to a certain element, the rule chosen depends on its style <a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#Specificity">specificity</a>. Inline style (in HTML <code>style</code> attributes) has the highest specificity and will override any selectors, followed by ID selectors, then class selectors, and eventually element selectors. The text color of the below {{htmlelement("div")}} will therefore be red.</p>
+<p>When multiple rules apply to a certain element, the rule chosen depends on its style <a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity">specificity</a>. Inline style (in HTML <code>style</code> attributes) has the highest specificity and will override any selectors, followed by ID selectors, then class selectors, and eventually element selectors. The text color of the below {{htmlelement("div")}} will therefore be red.</p>
 
 <pre>div { color: black; }
 #orange { color: orange; }
@@ -212,7 +212,7 @@ h1 { color: initial; }</pre>
 transform: rotate(90deg);</pre>
 
 <div class="note">
-<p><strong>Note</strong>: For more information on dealing with prefixed properties, see <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes">Handling common HTML and CSS problems — Handling CSS prefixes</a> from our <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing">Cross-browser testing</a> module.</p>
+<p><strong>Note</strong>: For more information on dealing with prefixed properties, see <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#handling_css_prefixes">Handling common HTML and CSS problems — Handling CSS prefixes</a> from our <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing">Cross-browser testing</a> module.</p>
 </div>
 
 <div class="note">
@@ -226,5 +226,5 @@ transform: rotate(90deg);</pre>
 <p>An element with a higher z-index/stack order is always rendered in front of an element with a lower z-index/stack order on the screen. Z-index will only work on elements that have a specified position (<code>position:absolute</code>, <code>position:relative</code>, or <code>position:fixed</code>).</p>
 
 <div class="note">
-<p><strong>Note</strong>: For more information, see our <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a> learning article, and in particular the <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning#Introducing_z-index">Introducing z-index</a> section.</p>
+<p><strong>Note</strong>: For more information, see our <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a> learning article, and in particular the <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning#introducing_z-index">Introducing z-index</a> section.</p>
 </div>
