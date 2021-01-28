@@ -28,7 +28,7 @@ tags:
 
 <h3 id="Minimize_the_number_of_files">Minimize the number of files</h3>
 
-<p>Reducing the number of files referenced in a web page lowers the number of <a href="/en-US/docs/HTTP">HTTP</a> connections required to download a page, thereby reducing the time for these requests to be sent, and for their responses to be received.</p>
+<p>Reducing the number of files referenced in a web page lowers the number of <a href="/en-US/docs/Web/HTTP">HTTP</a> connections required to download a page, thereby reducing the time for these requests to be sent, and for their responses to be received.</p>
 
 <p>Depending on a browser's cache settings, it may send a request with the <code><a href="/en-US/docs/Web/HTTP/Headers/If-Modified-Since">If-Modified-Since</a></code> header for each referenced file, asking whether the file has been modified since the last time it was downloaded. Too much time spent querying the last modified time of the referenced files can delay the initial display of the web page, since the browser must check the modification time for each of these files, before rendering the page.</p>
 
@@ -77,7 +77,7 @@ tags:
 
 <h3 id="Reduce_the_number_of_inline_scripts">Reduce the number of inline scripts</h3>
 
-<p>Inline scripts can be expensive for page loading since the parser must assume that an inline script could modify the page structure while parsing is in progress. Reducing the use of inline scripts in general, and reducing the use of <code>document.write()</code> to output content in particular, can improve overall page loading. Use modern <a href="/en-US/docs/AJAX">AJAX</a> methods to manipulate page content for modern browsers, rather than the older approaches based on <code>document.write()</code>.</p>
+<p>Inline scripts can be expensive for page loading since the parser must assume that an inline script could modify the page structure while parsing is in progress. Reducing the use of inline scripts in general, and reducing the use of <code>document.write()</code> to output content in particular, can improve overall page loading. Use modern <a href="/en-US/docs/Web/Guide/AJAX">AJAX</a> methods to manipulate page content for modern browsers, rather than the older approaches based on <code>document.write()</code>.</p>
 
 <h3 id="Use_modern_CSS_and_valid_markup">Use modern CSS and valid markup</h3>
 
@@ -151,7 +151,7 @@ tags:
 
 <h3 id="Use_async_and_defer_if_possible">Use async and defer, if possible</h3>
 
-<p>Make the JavaScript scripts such that they are compatible with both the <a href="/en-US/docs/HTML/Element/script#Attributes">async</a> and the <a href="/en-US/docs/HTML/Element/script#Attributes">defer</a> attributes, and use <a href="/en-US/docs/HTML/Element/script#Attributes">async</a> whenever possible, especially if you have multiple script tags.<br>
+<p>Make the JavaScript scripts such that they are compatible with both the <a href="/en-US/docs/Web/HTML/Element/script#attributes">async</a> and the <a href="/en-US/docs/Web/HTML/Element/script#attributes">defer</a> attributes, and use <a href="/en-US/docs/Web/HTML/Element/script#attributes">async</a> whenever possible, especially if you have multiple script tags.<br>
  <br>
  With that, the page can stop rendering while JavaScript is still loading. Otherwise, the browser will not render anything that is after the script tags that do not have these attributes.</p>
 

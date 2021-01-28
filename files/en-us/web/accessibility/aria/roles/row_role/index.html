@@ -37,7 +37,7 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>The element <code>role="row"</code> is a row within a <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a></code>, <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role">table</a></code> or <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role">treegrid</a></code>, and optionally within a <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">rowgroup</a></code>, that is a container for one or more <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_Role">cells</a></code>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_Role"><code>gridcells</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role"><code>columnheaders</code></a>, or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowheader_Role"><code>rowheaders</code></a> within a static tabular structure. Using native <a href="/en-US/docs/Web/HTML/Element/tr">HTML <code>&lt;tr&gt;</code></a> elements, whenever possible, is strongly encouraged.</p>
+<p>The element <code>role="row"</code> is a row within a <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a></code>, <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role">table</a></code> or <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role">treegrid</a></code>, and optionally within a <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">rowgroup</a></code>, that is a container for one or more <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_Role">cells</a></code>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_role"><code>gridcells</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role"><code>columnheaders</code></a>, or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowheader_Role"><code>rowheaders</code></a> within a static tabular structure. Using native <a href="/en-US/docs/Web/HTML/Element/tr">HTML <code>&lt;tr&gt;</code></a> elements, whenever possible, is strongly encouraged.</p>
 
 <p>To create an ARIA row, add <code>role="row"</code> to the container element. That row should be nested within a grid, table or treegrid. A group of rows can be nested within a grid, table or treegrid directly, or within a rowgroup in one of those containers. Each row contains child cells. These cells can be of different types, depending on whether they are column or row headers, or grid or regular cells.</p>
 
@@ -197,7 +197,7 @@ tags:
    &lt;/tbody&gt;
  &lt;/table&gt;</pre>
 
-<p>Above is the semantic way of writing a table. The ARIA roles are only necessary if the native semantics of the table, and therefore the table rows, are obliterated, such as via setting the <a href="/en-US/docs/Web/CSS/display#Accessibility_concerns">display property to flex or grid</a>.</p>
+<p>Above is the semantic way of writing a table. The ARIA roles are only necessary if the native semantics of the table, and therefore the table rows, are obliterated, such as via setting the <a href="/en-US/docs/Web/CSS/display#accessibility_concerns">display property to flex or grid</a>.</p>
 
 <h3 id="Added_benefits">Added benefits</h3>
 

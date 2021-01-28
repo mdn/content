@@ -10,7 +10,7 @@ tags:
   - JavaScript
   - Learn
   - events
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{LearnSidebar}}</div>
 
@@ -35,7 +35,7 @@ tags:
 
 <p>As mentioned above, <strong>events</strong> are actions or occurrences that happen in the system you are programming — the system produces (or "fires") a signal of some kind when an event occurs, and provides a mechanism by which an action can be automatically taken (that is, some code running) when the event occurs. For example, in an airport, when the runway is clear for take off, a signal is communicated to the pilot. As a result, the plane can safely takeoff.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14077/MDN-mozilla-events-runway.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="mdn-mozilla-events-runway.png" style="display: block; margin: 0px auto;"></p>
 
 <p>In the case of the Web, events are fired inside the browser window, and tend to be attached to a specific item that resides in it — this might be a single element, set of elements, the HTML document loaded in the current tab, or the entire browser window. There are many different types of events that can occur. For example:</p>
 
@@ -94,7 +94,7 @@ btn.onclick = function() {
 
 <p>For example, <a href="/en-US/docs/Learn/Server-side/Express_Nodejs">Node.js</a> is a very popular JavaScript runtime that enables developers to use JavaScript to build network and server-side applications. The <a href="https://nodejs.org/docs/latest-v12.x/api/events.html">Node.js event model</a> relies on listeners to listen for events and emitters to emit events periodically — it doesn't sound that different, but the code is quite different, making use of functions like <code>on()</code> to register an event listener, and <code>once()</code> to register an event listener that unregisters after it has run once. The <a href="https://nodejs.org/docs/latest-v12.x/api/http.html#http_event_connect">HTTP connect event docs</a> provide a good example.</p>
 
-<p>You can also use JavaScript to build cross-browser add-ons — browser functionality enhancements — using a technology called <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a>. The event model is similar to the web events model, but a bit different — event listeners properties are camel-cased (such as <code>onMessage</code> rather than <code>onmessage</code>), and need to be combined with the <code>addListener</code> function. See the <a href="/en-US/Add-ons/WebExtensions/API/runtime/onMessage#Examples"><code>runtime.onMessage</code> page</a> for an example.</p>
+<p>You can also use JavaScript to build cross-browser add-ons — browser functionality enhancements — using a technology called <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a>. The event model is similar to the web events model, but a bit different — event listeners properties are camel-cased (such as <code>onMessage</code> rather than <code>onmessage</code>), and need to be combined with the <code>addListener</code> function. See the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#examples"><code>runtime.onMessage</code> page</a> for an example.</p>
 
 <p>You don't need to understand anything about other such environments at this stage in your learning; we just wanted to make it clear that events can differ in different programming environments.</p>
 
@@ -113,7 +113,7 @@ btn.onclick = function() {
   document.body.style.backgroundColor = rndCol;
 }</pre>
 
-<p>The <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onclick">onclick</a></code> property is the event handler property being used in this situation. It is essentially a property like any other available on the button (e.g. <code><a href="/en-US/docs/Web/API/Node/textContent">btn.textContent</a></code>, or <code><a href="/en-US/docs/Web/API/HTMLElement/style">btn.style</a></code>), but it is a special type — when you set it to be equal to some code, that code is run when the event fires on the button.</p>
+<p>The <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onclick">onclick</a></code> property is the event handler property being used in this situation. It is essentially a property like any other available on the button (e.g. <code><a href="/en-US/docs/Web/API/Node/textContent">btn.textContent</a></code>, or <code><a href="/en-US/docs/Web/API/ElementCSSInlineStyle/style">btn.style</a></code>), but it is a special type — when you set it to be equal to some code, that code is run when the event fires on the button.</p>
 
 <p>You could also set the handler property to be equal to a named function name (like we saw in <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">Build your own function</a>). The following works just the same:</p>
 
@@ -137,7 +137,7 @@ btn.onclick = bgChange;</pre>
  <li><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onmouseover">btn.onmouseover</a></code> and <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onmouseout">btn.onmouseout</a></code> — The color changes when the mouse pointer hovers over the button, or when the pointer moves off the button, respectively.</li>
 </ul>
 
-<p>Some events are general and available nearly anywhere (e.g. an <code>onclick</code> handler can be registered on nearly any element), whereas some are more specific and only useful in certain situations (e.g. it makes sense to use <a href="/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onplay">onplay</a> only on specific elements, such as {{htmlelement("video")}}).</p>
+<p>Some events are general and available nearly anywhere (e.g. an <code>onclick</code> handler can be registered on nearly any element), whereas some are more specific and only useful in certain situations (e.g. it makes sense to use <a href="/en-US/docs/Web/API/GlobalEventHandlers/onplay">onplay</a> only on specific elements, such as {{htmlelement("video")}}).</p>
 
 <h3 id="Inline_event_handlers_—_dont_use_these">Inline event handlers — don't use these</h3>
 
@@ -331,7 +331,7 @@ for (let i = 0; i &lt; divs.length; i++) {
 
 <p>{{ EmbedLiveSample('Hidden_example', '100%', 400, "", "", "hide-codepen-jsfiddle") }}</p>
 
-<p>Most event handlers you'll encounter have a standard set of properties and functions (methods) available on the event object; see the {{domxref("Event")}} object reference for a full list. Some more advanced handlers, however, add specialist properties containing extra data that they need to function. The <a href="/en-US/docs/Web/API/MediaRecorder_API">Media Recorder API</a>, for example, has a <code>dataavailable</code> event, which fires when some audio or video has been recorded and is available for doing something with (for example saving it, or playing it back). The corresponding <a href="/en-US/docs/Web/API/MediaRecorder/ondataavailable">ondataavailable</a> handler's event object has a <code>data</code> property available containing the recorded audio or video data to allow you to access it and do something with it.</p>
+<p>Most event handlers you'll encounter have a standard set of properties and functions (methods) available on the event object; see the {{domxref("Event")}} object reference for a full list. Some more advanced handlers, however, add specialist properties containing extra data that they need to function. The <a href="/en-US/docs/Web/API/MediaStream_Recording_API">Media Recorder API</a>, for example, has a <code>dataavailable</code> event, which fires when some audio or video has been recorded and is available for doing something with (for example saving it, or playing it back). The corresponding <a href="/en-US/docs/Web/API/MediaRecorder/ondataavailable">ondataavailable</a> handler's event object has a <code>data</code> property available containing the recorded audio or video data to allow you to access it and do something with it.</p>
 
 <h3 id="Preventing_default_behavior">Preventing default behavior</h3>
 
@@ -515,7 +515,7 @@ video.onclick = function() {
  <li>Then it moves on to the next immediate ancestor element and does the same thing, then the next one, and so on until it reaches the <code>&lt;html&gt;</code> element.</li>
 </ul>
 
-<p><a href="https://mdn.mozillademos.org/files/14075/bubbling-capturing.png"><img alt="" src="https://mdn.mozillademos.org/files/14075/bubbling-capturing.png" style="display: block; height: 452px; margin: 0px auto; width: 960px;"></a></p>
+<p><a href="https://mdn.mozillademos.org/files/14075/bubbling-capturing.png"><img alt="" src="bubbling-capturing.png" style="display: block; margin: 0px auto;"></a></p>
 
 <p>(Select the image for a bigger diagram)</p>
 

@@ -13,7 +13,7 @@ tags:
 
 <p class="summary"><span class="seoSummary">MDN has many built-in global styles available for use when styling and laying out articles, and this article is a guide to the available classes and when to use them.</span></p>
 
-<p>Please keep in that these styles have been developed to cover the most common situations that arise while styling article content, and that whenever possible, you should try to use the available classes; diverging too much from the standard content look-and-feel isn't good for consistency and readability. If you feel that your page absolutely requires some kind of special custom styling, you should <a href="/en-US/docs/MDN/Contribute/Getting_started#Step_4_Ask_for_help">talk to us</a> about it.</p>
+<p>Please keep in that these styles have been developed to cover the most common situations that arise while styling article content, and that whenever possible, you should try to use the available classes; diverging too much from the standard content look-and-feel isn't good for consistency and readability. If you feel that your page absolutely requires some kind of special custom styling, you should <a href="/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help">talk to us</a> about it.</p>
 
 <h2 id="Inline_styles">Inline styles</h2>
 
@@ -231,13 +231,17 @@ Which gives you the following output:
 <p>Turns a section of content into a note box, which is normally a useful note that tangentially relates to the current subject but doesn't directly fit into the flow of information.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: This is how we usually present a note in an MDN article.</p>
+<h4>Note</h4>
+<p>This is how we usually present a note in an MDN article.</p>
 </div>
+
+<p>We've used an <code>&lt;h4&gt;</code> for the heading in this example, but you should choose the level of heading that makes sense for your note's position in the document hierarchy — <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, or <code>&lt;h4&gt;</code>.</p>
 
 <h4 id="Example_syntax_12">Example syntax</h4>
 
-<pre class="brush: html; notranslate">&lt;div class="notecard note" role="complementary"&gt;
-  &lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: This is how we usually present a note in an MDN article.&lt;/p&gt;
+<pre class="brush: html">&lt;div class="notecard note"&gt;
+  &lt;h4&gt;Note&lt;/h4&gt;
+  &lt;p&gt;This is how we usually present a note in an MDN article.&lt;/p&gt;
 &lt;/div&gt;</pre>
 
 <h3 id=".notecard.warning"><code>.notecard.warning</code></h3>
@@ -245,13 +249,17 @@ Which gives you the following output:
 <p>Turns a section of content into a warning box, which normally communicates a vital fact that the reader needs to be really careful about (e.g., they need to do something, or avoid something to avoid serious issues.)</p>
 
 <div class="notecard warning">
-<p><strong>Warning</strong>: Here be dragons!</p>
+  <h4>Warning</h4>
+  <p>Here be dragons!</p>
 </div>
+
+<p>We've used an <code>&lt;h4&gt;</code> for the heading in this example, but you should choose the level of heading that makes sense for your note's position in the document hierarchy — <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, or <code>&lt;h4&gt;</code>.</p>
 
 <h4 id="Example_syntax_17">Example syntax</h4>
 
 <pre class="brush: html notranslate">&lt;div class="notecard warning"&gt;
-  &lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt;:Here be dragons!&lt;/p&gt;
+  &lt;h4&gt;Warning&lt;/h4&gt;
+  &lt;p&gt;Here be dragons!&lt;/p&gt;
 &lt;/div&gt;</pre>
 
 <h2 id="Table_styles">Table styles</h2>

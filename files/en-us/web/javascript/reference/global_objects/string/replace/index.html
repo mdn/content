@@ -104,7 +104,9 @@ tags:
     <tr>
       <td><code>$&lt;Name&gt;</code></td>
       <td>Where <code>Name</code> is a capturing group name. If the group is not in the
-        regular expressions (or not in the match), this will resolve to the empty string.
+        match, or not in the regular expression, or if a string was passed as the first argument
+        to <code>replace</code> instead of a regular expression, this resolves to a literal
+        (e.g., <code>$&lt;Name&gt;</code>).
         Only available in browser versions supporting named capturing groups.</td>
     </tr>
   </tbody>

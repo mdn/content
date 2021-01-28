@@ -36,12 +36,12 @@ tags:
 <p>Let's look at a <a href="https://mdn.github.io/learning-area/javascript/apis/third-party-apis/mapquest/">Simple Mapquest API example</a>, and use it to illustrate how third-party APIs differ from browser APIs.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You might want to just <a href="/en-US/docs/Learn#Getting_our_code_examples">get all our code examples</a> at once, in which case you can then just search the repo for the example files you need in each section.</p>
+<p><strong>Note</strong>: You might want to just <a href="/en-US/docs/Learn#getting_our_code_examples">get all our code examples</a> at once, in which case you can then just search the repo for the example files you need in each section.</p>
 </div>
 
 <h3 id="They_are_found_on_third-party_servers">They are found on third-party servers</h3>
 
-<p>Browser APIs are built into the browser — you can access them from JavaScript immediately. For example, the Web Audio API we <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#How_do_APIs_work">saw in the Introductory article</a> is accessed using the native {{domxref("AudioContext")}} object. For example:</p>
+<p>Browser APIs are built into the browser — you can access them from JavaScript immediately. For example, the Web Audio API we <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#how_do_apis_work">saw in the Introductory article</a> is accessed using the native {{domxref("AudioContext")}} object. For example:</p>
 
 <pre class="brush: js">const audioCtx = new AudioContext();
   ...
@@ -68,12 +68,12 @@ const audioSource = audioCtx.createMediaElementSource(audioElement);
 <p>This is all the information the Mapquest API needs to plot a simple map. The server you are connecting to handles all the complicated stuff, like displaying the correct map tiles for the area being shown, etc.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Some APIs handle access to their functionality slightly differently, requiring the developer to make an HTTP request to a specific URL pattern to retrieve data. These are called <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs#A_RESTful_API_%E2%80%94_NYTimes">RESTful APIs — we'll show an example later on</a>.</p>
+<p><strong>Note</strong>: Some APIs handle access to their functionality slightly differently, requiring the developer to make an HTTP request to a specific URL pattern to retrieve data. These are called <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs#a_restful_api_%e2%80%94_nytimes">RESTful APIs — we'll show an example later on</a>.</p>
 </div>
 
 <h3 id="They_usually_require_API_keys">They usually require API keys</h3>
 
-<p>Security for browser APIs tends to be handled by permission prompts, as <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#They_have_additional_security_mechanisms_where_appropriate">discussed in our first article</a>. The purpose of these is so that the user knows what is going on in the websites they visit and is less likely to fall victim to someone using an API in a malicious way.</p>
+<p>Security for browser APIs tends to be handled by permission prompts, as <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#they_have_additional_security_mechanisms_where_appropriate">discussed in our first article</a>. The purpose of these is so that the user knows what is going on in the websites they visit and is less likely to fall victim to someone using an API in a malicious way.</p>
 
 <p>Third party APIs have a slightly different permissions system — they tend to use developer keys to allow developers access to the API functionality, which is more to protect the API vendor than the user.</p>
 
@@ -97,7 +97,7 @@ const audioSource = audioCtx.createMediaElementSource(audioElement);
 
 <ol>
  <li>
-  <p>To start this section, make yourself a copy of the <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/mapquest/starter-file.html">mapquest starter file</a>, in a new directory. If you've already <a href="/en-US/docs/Learn#Getting_our_code_examples">cloned the examples repository</a>, you'll already have a copy of this file, which you can find in the <em>javascript/apis/third-party-apis/mapquest</em> directory.</p>
+  <p>To start this section, make yourself a copy of the <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/mapquest/starter-file.html">mapquest starter file</a>, in a new directory. If you've already <a href="/en-US/docs/Learn#getting_our_code_examples">cloned the examples repository</a>, you'll already have a copy of this file, which you can find in the <em>javascript/apis/third-party-apis/mapquest</em> directory.</p>
  </li>
  <li>
   <p>Next, you need to go to the <a href="https://developer.mapquest.com/">Mapquest developer site</a>, create an account, and then create a developer key to use with your example. (At the time of writing, it was called a "consumer key" on the site, and the key creation process also asked for an optional "callback URL". You don't need to fill in a URL here: just leave it blank.)</p>
@@ -188,13 +188,13 @@ const audioSource = audioCtx.createMediaElementSource(audioElement);
   <p>Get the API key from the resulting page.</p>
  </li>
  <li>
-  <p>Now, to start the example off, make copies of <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes_start.html">nytimes_start.html</a> and <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes.css">nytimes.css</a> in a new directory on your computer. If you've already <a href="/en-US/docs/Learn#Getting_our_code_examples">cloned the examples repository</a>, you'll already have a copy of these files, which you can find in the <em>javascript/apis/third-party-apis/nytimes</em> directory. Initially the <code>&lt;script&gt;</code> element contains a number of variables needed for the setup of the example; below we'll fill in the required functionality.</p>
+  <p>Now, to start the example off, make copies of <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes_start.html">nytimes_start.html</a> and <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes.css">nytimes.css</a> in a new directory on your computer. If you've already <a href="/en-US/docs/Learn#getting_our_code_examples">cloned the examples repository</a>, you'll already have a copy of these files, which you can find in the <em>javascript/apis/third-party-apis/nytimes</em> directory. Initially the <code>&lt;script&gt;</code> element contains a number of variables needed for the setup of the example; below we'll fill in the required functionality.</p>
  </li>
 </ol>
 
 <p>The app will end up allowing you to type in a search term and optional start and end dates, which it will then use to query the Article Search API and display the search results.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/17025/nytimes-example.png" style="border-style: solid; border-width: 1px; display: block; height: 374px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="nytimes-example.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h3 id="Connect_the_API_to_your_app">Connect the API to your app</h3>
 
@@ -262,7 +262,7 @@ function fetchResults(e) {
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: The example has rudimentary form data validation — the search term field has to be filled in before the form can be submitted (achieved using the <code>required</code> attribute), and the date fields have <code>pattern</code> attributes specified, which means they won't submit unless their values consist of 8 numbers (<code>pattern="[0-9]{8}"</code>). See <a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a> for more details on how these work.</p>
+<p><strong>Note</strong>: The example has rudimentary form data validation — the search term field has to be filled in before the form can be submitted (achieved using the <code>required</code> attribute), and the date fields have <code>pattern</code> attributes specified, which means they won't submit unless their values consist of 8 numbers (<code>pattern="[0-9]{8}"</code>). See <a href="/en-US/docs/Learn/Forms/Form_validation">Form data validation</a> for more details on how these work.</p>
 </div>
 
 <h3 id="Requesting_data_from_the_API">Requesting data from the API</h3>
@@ -409,7 +409,7 @@ function previousPage(e) {
 
 <p>This example is interesting because it shows two related third-party APIs being used together to build an app. The first one is a RESTful API, while the second one works more like Mapquest (with API-specific methods, etc.). It is worth noting however that both of the APIs require a JavaScript library to be applied to the page. The RESTful API has functions available to handle making the HTTP requests and returning the results.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14823/youtube-example.png" style="border-style: solid; border-width: 1px; display: block; height: 389px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="youtube-example.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>We are not going to say too much more about this example in the article — <a href="https://github.com/mdn/learning-area/tree/master/javascript/apis/third-party-apis/youtube">the source code</a> has detailed comments inserted inside it to explain how it works.</p>
 

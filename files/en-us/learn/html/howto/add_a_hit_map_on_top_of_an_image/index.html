@@ -16,7 +16,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>You should already know how to <a href="/en-US/docs/Learn/HTML/Write_a_simple_page_in_HTML">create a basic HTML document</a> and how to <a href="/en-US/docs/Learn/HTML/Howto/Add_images_to_a_webpage">add accessible images to a webpage.</a></td>
+   <td>You should already know how to <a href="/en-US/docs/Learn/Getting_started_with_the_web">create a basic HTML document</a> and how to <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#how_do_we_put_an_image_on_a_webpage">add accessible images to a webpage.</a></td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -49,7 +49,7 @@ tags:
  <li>Hotspots must be large enough to tap comfortably, at any viewport size. How large is large enough? <a href="http://uxmovement.com/mobile/finger-friendly-design-ideal-mobile-touch-target-sizes/">72 × 72 CSS pixels is a good minimum,</a> with additional generous gaps between touch targets. The map of the world at <a href="http://www.goethe-verlag.com/book2/">50languages.com</a> (as of time of writing) illustrates the problem perfectly. It’s much easier to tap Russia or North America than Albania or Estonia.</li>
 </ul>
 
-<p>You insert your image <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#How_do_we_put_an_image_on_a_webpage">much the same way as always</a> (with an {{htmlelement("img")}} element and {{htmlattrxref("alt",'img')}} text). If the image is only present as a navigation device, you may write <code>alt=""</code>, provided you furnish appropriate {{htmlattrxref("alt",'area')}} text in the {{htmlelement('area')}} elements later on.</p>
+<p>You insert your image <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#how_do_we_put_an_image_on_a_webpage">much the same way as always</a> (with an {{htmlelement("img")}} element and {{htmlattrxref("alt",'img')}} text). If the image is only present as a navigation device, you may write <code>alt=""</code>, provided you furnish appropriate {{htmlattrxref("alt",'area')}} text in the {{htmlelement('area')}} elements later on.</p>
 
 <p>You will need a special {{htmlattrxref("usemap","img")}} attribute. Come up with a unique name, containing no spaces, for your image map. Then assign that name (preceded by a hash) as the value for the <code>usemap</code> attribute:</p>
 
@@ -90,7 +90,7 @@ tags:
  <dd>The URL of the resource you’re linking to. You may leave this attribute blank if you <em>don’t</em> want the current area to link anywhere (say, if you’re making a hollow circle.)</dd>
  <dt>{{htmlattrxref('alt','area')}}</dt>
  <dd>
- <p>A mandatory attribute, telling people where the link goes or what it does. <code>alt</code> text only displays when the image is unavailable. Please refer to our <a href="/en-US/docs/Learn/HTML/Howto/Create_a_hyperlink#Writing_accessible_link_text">guidelines for writing accessible link text.</a></p>
+ <p>A mandatory attribute, telling people where the link goes or what it does. <code>alt</code> text only displays when the image is unavailable. Please refer to our <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#writing_accessible_link_text">guidelines for writing accessible link text.</a></p>
 
  <p>You may write <code>alt=""</code> if the <code>href</code> attribute is blank <em>and</em> the entire image already has an <code>alt</code> attribute.</p>
  </dd>

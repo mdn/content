@@ -132,7 +132,7 @@ const height = canvas.height = window.innerHeight;</pre>
 <pre class="brush: js notranslate">ctx.fillStyle = 'rgb(0, 0, 0)';
 ctx.fillRect(0, 0, width, height);</pre>
 
-<p>Here we are setting a fill color using the canvas' {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} property (this takes <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors">color values</a> just like CSS properties do), then drawing a rectangle that covers the entire area of the canvas with the{{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} method (the first two parameters are the coordinates of the rectangle's top left hand corner; the last two are the width and height you want the rectangle drawn at — we told you those <code>width</code> and <code>height</code> variables would be useful)!</p>
+<p>Here we are setting a fill color using the canvas' {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} property (this takes <a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#colors">color values</a> just like CSS properties do), then drawing a rectangle that covers the entire area of the canvas with the{{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} method (the first two parameters are the coordinates of the rectangle's top left hand corner; the last two are the width and height you want the rectangle drawn at — we told you those <code>width</code> and <code>height</code> variables would be useful)!</p>
 
 <p>OK, our template is done and it's time to move on.</p>
 
@@ -140,7 +140,7 @@ ctx.fillRect(0, 0, width, height);</pre>
 
 <p>As we said above, all drawing operations are done by manipulating a {{domxref("CanvasRenderingContext2D")}} object (in our case, <code>ctx</code>). Many operations need to be given coordinates to pinpoint exactly where to draw something — the top left of the canvas is point (0, 0), the horizontal (x) axis runs from left to right, and the vertical (y) axis runs from top to bottom.</p>
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/224/Canvas_default_grid.png" style="display: block; height: 220px; margin: 0px auto; width: 220px;"></p>
+<p><img alt="" class="internal" src="canvas_default_grid.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Drawing shapes tends to be done using the rectangle shape primitive, or by tracing a line along a certain path and then filling in the shape. Below we'll show how to do both.</p>
 
@@ -269,7 +269,7 @@ ctx.fill();</pre>
    <li>The side opposite the 60 degree angle is called the <strong>opposite</strong>, which is the height of the triangle we want to calculate.</li>
   </ul>
 
-  <p><img alt="" src="https://mdn.mozillademos.org/files/14829/trigonometry.png" style="display: block; margin: 0 auto;"></p>
+  <p><img alt="" src="trigonometry.png" style="display: block; margin: 0 auto;"></p>
 
   <p>One of the basic trigonometric formulae states that the length of the adjacent multiplied by the tangent of the angle is equal to the opposite, hence we come up with <code>50 * Math.tan(degToRad(60))</code>. We use our <code>degToRad()</code> function to convert 60 degrees to radians, as {{jsxref("Math.tan()")}} expects an input value in radians.</p>
  </li>
@@ -394,7 +394,7 @@ image.src = 'firefox.png';</pre>
   ctx.drawImage(image, 50, 50);
 }</pre>
 
-  <p>If you load your example in the browser now, you should see the image embeded in the canvas.</p>
+  <p>If you load your example in the browser now, you should see the image embedded in the canvas.</p>
  </li>
  <li>
   <p>But there's more! What if we want to display only a part of the image, or to resize it? We can do both with the more complex version of <code>drawImage()</code>. Update your <code>ctx.drawImage()</code> line like so:</p>
@@ -584,7 +584,7 @@ let posX = 0;</pre>
 
   <p>Let's explain the spritesheet image (which we have respectfully borrowed from Mike Thomas' <a href="http://atomicrobotdesign.com/blog/htmlcss/create-a-sprite-sheet-walk-cycle-using-using-css-animation/" rel="bookmark" title="Permanent Link to Create a sprite sheet walk cycle using CSS animation">Create a sprite sheet walk cycle using CSS animation</a>). The image looks like this:</p>
 
-  <p><img alt="" src="https://mdn.mozillademos.org/files/14847/walk-right.png" style="display: block; height: 148px; margin: 0px auto; width: 612px;"></p>
+  <p><img alt="" src="walk-right.png" style="display: block; margin: 0px auto;"></p>
 
   <p>It contains six sprites that make up the whole walking sequence — each one is 102 pixels wide and 148 pixels high. To display each sprite cleanly we will have to use <code>drawImage()</code> to chop out a single sprite image from the spritesheet and display only that part, like we did above with the Firefox logo. The X coordinate of the slice will have to be a multiple of 102, and the Y coordinate will always be 0. The slice size will always be 102 by 148 pixels.</p>
  </li>
@@ -626,7 +626,7 @@ let posX = 0;</pre>
     }
   }</pre>
 
-  <p>We are wrapping the whole block in <code> if (posX % 13 === 0) { ... }</code>. We use the modulo (<code>%</code>) operator (also known as the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_()">remainder operator</a>) to check whether the <code>posX</code> value can be exactly divided by 13 with no remainder. If so, we move on  to the next sprite by incrementing <code>sprite</code> (wrapping to 0 after we're done with sprite #5). This effectively means that we are only updating the sprite on every 13th frame, or roughly about 5 frames a second (<code>requestAnimationFrame()</code> calls us at up to 60 frames per second if possible). We are deliberately slowing down the frame rate because we only have six sprites to work with, and if we display one every 60th of a second, our character will move way too fast!</p>
+  <p>We are wrapping the whole block in <code> if (posX % 13 === 0) { ... }</code>. We use the modulo (<code>%</code>) operator (also known as the <a href="/en-US/docs/Web/JavaScript/Reference/Operators#remainder_()">remainder operator</a>) to check whether the <code>posX</code> value can be exactly divided by 13 with no remainder. If so, we move on  to the next sprite by incrementing <code>sprite</code> (wrapping to 0 after we're done with sprite #5). This effectively means that we are only updating the sprite on every 13th frame, or roughly about 5 frames a second (<code>requestAnimationFrame()</code> calls us at up to 60 frames per second if possible). We are deliberately slowing down the frame rate because we only have six sprites to work with, and if we display one every 60th of a second, our character will move way too fast!</p>
 
   <p>Inside the outer block we use an <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if ... else</a></code> statement to check whether the <code>sprite</code> value is at 5 (the last sprite, given that the sprite numbers run from 0 to 5). If we are showing the last sprite already, we reset <code>sprite</code> back to 0; if not we just increment it by 1.</p>
  </li>
