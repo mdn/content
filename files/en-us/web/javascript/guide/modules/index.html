@@ -441,7 +441,7 @@ import { Triangle } from './modules/triangle.js';</pre>
 <ul>
 	<li>We mentioned this before, but to reiterate: <code>.js</code> files need to be loaded with a MIME-type of <code>text/javascript</code> (or another JavaScript-compatible MIME-type, but <code>text/javascript</code> is recommended), otherwise you'll get a strict MIME type checking error like "The server responded with a non-JavaScript MIME type".</li>
 	<li>If you try to load the HTML file locally (i.e. with a <code>file://</code> URL), you'll run into CORS errors due to JavaScript module security requirements. You need to do your testing through a server. GitHub pages is ideal as it also serves <code>.js</code> files with the correct MIME type.</li>
-	<li>Because <code>.mjs</code> is a non-standard file extension, some operating systems might not recognise it, or try to replace it with something else. For example, we found that macOS was silently adding on <code>.js</code> to the end of <code>.mjs</code> files and then automatically hiding the file extension. So all of our files were actually coming out as <code>x.mjs.js</code>. Once we turned off automatically hiding file extensions, and trained it to accept <code>.mjs</code>, it was OK.</li>
+	<li>Because <code>.mjs</code> is a non-standard file extension, some operating systems might not recognize it, or try to replace it with something else. For example, we found that macOS was silently adding on <code>.js</code> to the end of <code>.mjs</code> files and then automatically hiding the file extension. So all of our files were actually coming out as <code>x.mjs.js</code>. Once we turned off automatically hiding file extensions, and trained it to accept <code>.mjs</code>, it was OK.</li>
 </ul>
 
 <h2 id="See_also">See also</h2>
