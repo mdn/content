@@ -12,8 +12,7 @@ tags:
 <p>{{APIRef("Encoding API")}}</p>
 
 <p class="summary">The <strong><code>encoding</code></strong> read-only property of the {{domxref("TextEncoderStream")}} interface returns a
-  {{DOMxRef("DOMString")}} containing the name of the encoding algorithm used by the
-  specific encoder.</p>
+  {{DOMxRef("DOMString")}} containing the name of the encoding algorithm used by the current <code>TextEncoderStream</code> object.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -24,7 +23,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>Returning the value of <code>encoding</code> from a <code>TextEncoderStream</code>.</p>
+<p>The following example demonstrates how to return <code>encoding</code> from a <code>TextEncoderStream</code> object.</p>
 
 <pre class="brush:js">stream = new TextEncoderStream();
 console.log(stream.encoding);</pre>
