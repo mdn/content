@@ -79,7 +79,7 @@ tags:
   },
   // optional callback after the last asynchronous function completes.
   function(err, results) {
-    // 'results' is now equal to: {one: 1, two: 2, ..., something_else: some_value} 
+    // 'results' is now equal to: {one: 1, two: 2, ..., something_else: some_value}
   }
 );</pre>
 
@@ -93,13 +93,13 @@ tags:
     callback(null, 'one');
   },
   function(callback) {
-    // do some more stuff ... 
+    // do some more stuff ...
     callback(null, 'two');
   }
  ],
   // optional callback
   function(err, results) {
-  // results is now equal to ['one', 'two'] 
+  // results is now equal to ['one', 'two']
   }
 );</pre>
 
@@ -114,7 +114,7 @@ tags:
     callback(null, 'one', 'two');
   },
   function(arg1, arg2, callback) {
-    // arg1 now equals 'one' and arg2 now equals 'two' 
+    // arg1 now equals 'one' and arg2 now equals 'two'
     callback(null, 'three');
   },
   function(arg1, callback) {
