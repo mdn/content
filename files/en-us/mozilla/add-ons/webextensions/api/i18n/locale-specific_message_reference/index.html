@@ -17,7 +17,7 @@ tags:
 <p>Each internationalized extension has at least one file named <code>messages.json</code> that provides locale-specific strings. This page describes the format of <code>messages.json</code> files.</p>
 
 <div class="note">
-<p><strong>Note</strong>: For information on how to internationalize your extensions, see our <a href="/en-US/Add-ons/WebExtensions/WebExtension_i18n">i18n</a> guide.</p>
+<p><strong>Note</strong>: For information on how to internationalize your extensions, see our <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization">i18n</a> guide.</p>
 </div>
 
 <h2 id="messages.json_example">messages.json example</h2>
@@ -74,7 +74,7 @@ tags:
  <li>@</li>
 </ul>
 
-<p class="note"><strong>Note:</strong> You shouldn't define names that start with @@. Such names are reserved for <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Internationalization#Predefined_messages">predefined messages</a>.</p>
+<p class="note"><strong>Note:</strong> You shouldn't define names that start with @@. Such names are reserved for <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#predefined_messages">predefined messages</a>.</p>
 
 <h3 id="message">message</h3>
 
@@ -119,7 +119,7 @@ tags:
 
 <h4 id="content">content</h4>
 
-<p>The "content" item defines the content of the placeholder. This can be a hardcoded string, such as "My placeholder", but it can also include values obtained from a {{WebExtAPIRef("i18n.getMessage()")}} call. This property is required. For more information, see <a href="/en-US/Add-ons/WebExtensions/Internationalization#Retrieving_message_strings_from_JavaScript">Retrieving message strings from JavaScript</a>.</p>
+<p>The "content" item defines the content of the placeholder. This can be a hardcoded string, such as "My placeholder", but it can also include values obtained from a {{WebExtAPIRef("i18n.getMessage()")}} call. This property is required. For more information, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#retrieving_message_strings_from_javascript">Retrieving message strings from JavaScript</a>.</p>
 
 <h4 id="example">example</h4>
 
