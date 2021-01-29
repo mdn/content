@@ -30,6 +30,25 @@ tags:
   </dd>
 </dl>
 
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: js notranslate">// Create WebSocket connection.
+const socket = new WebSocket("ws://localhost:8080");
+// Change binary type from "blob" to "arraybuffer"
+socket.binaryType = "arraybuffer";
+
+// Listen for messages
+socket.addEventListener("message", function (event) {
+    if(event.data instanceof ArrayBuffer) {
+        // binary frame
+        const view = new DataView(event.data);
+        console.log(view.getInt32(0));
+    } else {
+        // text frame
+        console.log(event.data);
+    }
+});</pre>
+
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
