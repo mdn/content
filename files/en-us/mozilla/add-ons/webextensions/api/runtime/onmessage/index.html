@@ -19,9 +19,9 @@ tags:
 <p>Some example use cases are:</p>
 
 <ul>
- <li><strong>in a <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts">content script</a></strong>, to listen for messages from a <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">background script.</a></li>
+ <li><strong>in a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts">content script</a></strong>, to listen for messages from a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts">background script.</a></li>
  <li><strong>in a background script</strong>, to listen for messages from a content script.</li>
- <li><strong>in an <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages">options page</a> or <a href="/en-US/Add-ons/WebExtensions/User_interface_components#Popups">popup</a> script</strong>, to listen for messages from a background script.</li>
+ <li><strong>in an <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages">options page</a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface#popups">popup</a> script</strong>, to listen for messages from a background script.</li>
  <li><strong>in a background script</strong>, to listen for messages from an options page or popup script.</li>
 </ul>
 
@@ -30,7 +30,7 @@ tags:
 <div class="notecard note">
 <p>Avoid creating multiple <code>onMessage()</code> listeners for the same type of message, because the order in which multiple listeners will fire is not guaranteed.</p>
 
-<p>If you want to guarantee the delivery of a message to a specific end point, use the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging">connection-based approach to exchange messages</a>.</p>
+<p>If you want to guarantee the delivery of a message to a specific end point, use the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging">connection-based approach to exchange messages</a>.</p>
 </div>
 
 <p>Along with the message itself, the listener is passed:</p>
@@ -40,13 +40,13 @@ tags:
  <li>a <code>sendResponse()</code> function that can be used to send a response back to the sender.</li>
 </ul>
 
-<p>You can send a synchronous response to the message by calling the <code>sendResponse()</code> function inside your listener. <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/runtime/onMessage#Sending_a_synchronous_response">See an example</a>.</p>
+<p>You can send a synchronous response to the message by calling the <code>sendResponse()</code> function inside your listener. <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_a_synchronous_response">See an example</a>.</p>
 
 <p>To send an asynchronous response, there are two options:</p>
 
 <ul>
- <li>return <code>true</code> from the event listener. This keeps the <code>sendResponse()</code> function valid after the listener returns, so you can call it later. <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/runtime/onMessage#Sending_an_asynchronous_response_using_sendResponse">See an example</a>.</li>
- <li>return a <code>Promise</code> from the event listener, and resolve when you have the response (or reject it in case of an error). <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/runtime/onMessage#Sending_an_asynchronous_response_using_a_Promise">See an example</a>.</li>
+ <li>return <code>true</code> from the event listener. This keeps the <code>sendResponse()</code> function valid after the listener returns, so you can call it later. <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_sendresponse">See an example</a>.</li>
+ <li>return a <code>Promise</code> from the event listener, and resolve when you have the response (or reject it in case of an error). <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_a_promise">See an example</a>.</li>
 </ul>
 
 <div class="warning">
@@ -56,7 +56,7 @@ tags:
 </div>
 
 <div class="notecard note">
-<p>You can also use a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging">connection-based approach to exchange messages</a>.</p>
+<p>You can also use a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging">connection-based approach to exchange messages</a>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -88,12 +88,12 @@ browser.runtime.onMessage.hasListener(<var>listener</var>)
 
  <dl class="reference-values">
   <dt><code><var>message</var></code></dt>
-  <dd><code>object</code>. The message itself. This is a serializable object (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#Data_cloning_algorithm">Data cloning algorithm</a>).</dd>
+  <dd><code>object</code>. The message itself. This is a serializable object (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm">Data cloning algorithm</a>).</dd>
   <dt><code><var>sender</var></code></dt>
   <dd>A {{WebExtAPIRef('runtime.MessageSender')}} object representing the sender of the message.</dd>
   <dt><code><var>sendResponse</var></code></dt>
   <dd>
-  <p>A function to call, at most once, to send a response to the <code><var>message</var></code>. The function takes a single argument, which may be any serializable object (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#Data_cloning_algorithm">Data cloning algorithm</a>). This argument is passed back to the message sender.</p>
+  <p>A function to call, at most once, to send a response to the <code><var>message</var></code>. The function takes a single argument, which may be any serializable object (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm">Data cloning algorithm</a>). This argument is passed back to the message sender.</p>
 
   <p>If you have more than one <code>onMessage()</code> listener in the same document, then only one may send a response.</p>
 
