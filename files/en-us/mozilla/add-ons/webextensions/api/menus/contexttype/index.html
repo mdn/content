@@ -27,7 +27,7 @@ tags:
  <dt>audio</dt>
  <dd>Applies when the user context-clicks an <a href="/en-US/docs/Web/HTML/Element/audio">audio</a> element.</dd>
  <dt>bookmark</dt>
- <dd>Applies when the user context-clicks a bookmark item in the bookmarks toolbar, bookmarks menu, bookmarks sidebar (<kbd>Ctrl</kbd> + <kbd>B</kbd>) and the Library window (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd>). The latter two are supported as of Firefox 66. Requires the "bookmarks" <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a> in the manifest.</dd>
+ <dd>Applies when the user context-clicks a bookmark item in the bookmarks toolbar, bookmarks menu, bookmarks sidebar (<kbd>Ctrl</kbd> + <kbd>B</kbd>) and the Library window (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd>). The latter two are supported as of Firefox 66. Requires the "bookmarks" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a> in the manifest.</dd>
  <dt>browser_action</dt>
  <dd>Applies when the user context-clicks your browser action. The maximum number of items that can be added to the top-level browser action context menu is {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}, but you can add any number of items to submenus.</dd>
  <dt>editable</dt>
@@ -50,7 +50,7 @@ tags:
  <dd>
  <p>Applies when the user context-clicks on a tab (specifically, this refers to the tab-strip or other user interface element enabling the user to switch from one browser tab to another, not to the page itself).</p>
 
- <p>From Firefox 63, clicking the menu item on a tab grants the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission">activeTab</a> permission for the tab clicked, even if that isn't the currently active tab.</p>
+ <p>From Firefox 63, clicking the menu item on a tab grants the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission">activeTab</a> permission for the tab clicked, even if that isn't the currently active tab.</p>
  </dd>
  <dt>tools_menu</dt>
  <dd>The item will be added to the browser's tools menu. Note that this is only available if you access <code>ContextType</code> through the <code>menus</code> namespace. It is not available if you access it through the <code>contextMenus</code> namespace.</dd>

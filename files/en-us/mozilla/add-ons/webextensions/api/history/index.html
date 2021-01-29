@@ -24,17 +24,17 @@ tags:
 <p>Browser history is a chronological record of pages the user has visited. The history API enables you to:</p>
 
 <ul>
- <li><a href="/en-US/Add-ons/WebExtensions/API/history/search">search for pages that appear in the browser history</a></li>
- <li><a href="/en-US/Add-ons/WebExtensions/API/history/deleteUrl">remove individual pages from the browser history</a></li>
- <li><a href="/en-US/Add-ons/WebExtensions/API/history/addUrl">add pages to the browser history</a></li>
- <li><a href="/en-US/Add-ons/WebExtensions/API/history/deleteAll">remove all pages from the browser history</a>.</li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/search">search for pages that appear in the browser history</a></li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/deleteUrl">remove individual pages from the browser history</a></li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/addUrl">add pages to the browser history</a></li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/deleteAll">remove all pages from the browser history</a>.</li>
 </ul>
 
 <p>However, the user may have visited a single page multiple times, so the API also has the concept of "visits". So you can also use this API to:</p>
 
 <ul>
- <li><a href="/en-US/Add-ons/WebExtensions/API/history/getVisits">retrieve the complete set of visits the user made to a particular page</a></li>
- <li><a href="/en-US/Add-ons/WebExtensions/API/history/deleteRange">remove visits to any pages made during a given time period</a>.</li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/getVisits">retrieve the complete set of visits the user made to a particular page</a></li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/deleteRange">remove visits to any pages made during a given time period</a>.</li>
 </ul>
 
 <p>To use this API, an extension must request the "history" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> in its <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> file.</p>
@@ -58,7 +58,7 @@ tags:
 
 <dl>
  <dt>{{WebExtAPIRef("history.search()")}}</dt>
- <dd>Searches the browser history for <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/History/HistoryItem" title="A HistoryItem object provides information about one result from a history query."><code>history.HistoryItem</code></a> objects matching the given criteria.</dd>
+ <dd>Searches the browser history for <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem" title="A HistoryItem object provides information about one result from a history query."><code>history.HistoryItem</code></a> objects matching the given criteria.</dd>
  <dt>{{WebExtAPIRef("history.getVisits()")}}</dt>
  <dd>Retrieves information about visits to a given page.</dd>
  <dt>{{WebExtAPIRef("history.addUrl()")}}</dt>
