@@ -50,7 +50,7 @@ tags:
 
 <p>The form is defined in HTML as a collection of elements inside <code>&lt;form&gt;...&lt;/form&gt;</code> tags, containing at least one <code>input</code> element of <code>type="submit"</code>.</p>
 
-<pre class="brush: html notranslate">&lt;form action="/team_name_url/" method="post"&gt;
+<pre class="brush: html">&lt;form action="/team_name_url/" method="post"&gt;
     &lt;label for="team_name"&gt;Enter name: &lt;/label&gt;
     &lt;input id="team_name" type="text" name="name_field" value="Default name for team."&gt;
     &lt;input type="submit" value="OK"&gt;
@@ -110,7 +110,7 @@ tags:
 
 <p>Install the module by running the following command in the root of the project.</p>
 
-<pre class="brush: bash notranslate">npm install express-validator
+<pre class="brush: bash">npm install express-validator
 </pre>
 
 <h4 id="Using_express-validator">Using express-validator</h4>
@@ -121,7 +121,7 @@ tags:
 
 <p>To use the validator in our controllers we have to <em>require</em> the functions we want to use from the <strong>'express-validator/check</strong>' and <strong>'express-validator/filter</strong>' modules, as shown below:</p>
 
-<pre class="brush: js notranslate">const { body,validationResult } = require('express-validator');
+<pre class="brush: js">const { body,validationResult } = require('express-validator');
 </pre>
 
 <p>There are many functions available, allowing you to check and sanitize data from request parameters, body, headers, cookies, etc., or all of them at once. For this tutorial, we'll primarily be using <code>body</code> and <code>validationResult</code> (as "required" above).</p>
@@ -133,19 +133,19 @@ tags:
   <br>
   For example, the line below first defines that we're checking the "name" field and that a validation error will set an error message "Empty name". We then call the sanitization method <code>trim()</code> to remove whitespace from the start and end of the string, and then <code>isLength()</code> to check the resulting string isn't empty. Finally, we call <code>escape()</code> to remove HTML characters from the variable that might be used in JavaScript cross-site scripting attacks.
 
-  <pre class="brush: js notranslate">body('name', 'Empty name').trim().isLength({ min: 1 }).escape(), </pre>
+  <pre class="brush: js">body('name', 'Empty name').trim().isLength({ min: 1 }).escape(), </pre>
   This test checks that the age field is a valid date and uses <code>optional()</code> to specify that null and empty strings will not fail validation.
 
-  <pre class="brush: js notranslate">body('age', 'Invalid age').optional({ checkFalsy: true }).isISO8601().toDate(),
+  <pre class="brush: js">body('age', 'Invalid age').optional({ checkFalsy: true }).isISO8601().toDate(),
 </pre>
   You can also daisy chain different validators, and add messages that are displayed if the preceding validators are true.
 
-  <pre class="brush: js notranslate">body('name').trim().isLength({ min: 1 }).withMessage('Name empty.')
+  <pre class="brush: js">body('name').trim().isLength({ min: 1 }).withMessage('Name empty.')
     .isAlpha().withMessage('Name must be alphabet letters.'),
 </pre>
  </li>
  <li><code><a href="https://github.com/ctavan/express-validator#validationresultreq">validationResult(req)</a></code>: Runs the validation, making errors available in the form of a <code>validation</code> result object. This is invoked in a separate callback, as shown below:
-  <pre class="brush: js notranslate">(req, res, next) =&gt; {
+  <pre class="brush: js">(req, res, next) =&gt; {
     // Extract the validation errors from a request.
     const errors = validationResult(req);
 
@@ -190,7 +190,7 @@ tags:
 
 <p>We have already created the routes for all our model's create pages in <strong>/routes/catalog.js</strong> (in a <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes">previous tutorial</a>). For example, the genre routes are shown below:</p>
 
-<pre class="brush: js notranslate">// GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
+<pre class="brush: js">// GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
 router.get('/genre/create', genre_controller.genre_create_get);
 
 // POST request for creating Genre.

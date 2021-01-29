@@ -17,7 +17,7 @@ tags:
 
 <p>Open <strong>/controllers/bookinstanceController.js</strong>. Find the exported <code>bookinstance_detail()</code> controller method and replace it with the following code.</p>
 
-<pre class="brush: js notranslate">// Display detail page for a specific BookInstance.
+<pre class="brush: js">// Display detail page for a specific BookInstance.
 exports.bookinstance_detail = function(req, res, <strong>next</strong>) {
 
 <strong>    BookInstance.findById(req.params.id)
@@ -42,7 +42,7 @@ exports.bookinstance_detail = function(req, res, <strong>next</strong>) {
 
 <p>Create <strong>/views/bookinstance_detail.pug</strong> and copy in the content below.</p>
 
-<pre class="brush: js notranslate">extends layout
+<pre class="brush: js">extends layout
 
 block content
 

@@ -14,18 +14,18 @@ tags:
 
 <p>Open <strong>/controllers/bookinstanceController.js</strong>, and add the following lines at the top of the file:</p>
 
-<pre class="brush: js  notranslate">const { body,validationResult } = require('express-validator');
+<pre class="brush: js">const { body,validationResult } = require('express-validator');
 </pre>
 
 <h2 id="Controller—get_route">Controller—get route</h2>
 
 <p>At the top of the file, require the <em>Book</em> module (needed because each <code>BookInstance</code> is associated with a particular <code>Book</code>).</p>
 
-<pre class="brush: js  notranslate">var Book = require('../models/book');</pre>
+<pre class="brush: js">var Book = require('../models/book');</pre>
 
 <p>Find the exported <code>bookinstance_create_get()</code> controller method and replace it with the following code.</p>
 
-<pre class="brush: js  notranslate">// Display BookInstance create form on GET.
+<pre class="brush: js">// Display BookInstance create form on GET.
 exports.bookinstance_create_get = function(req, res, next) {
 
     Book.find({},'title')
@@ -43,7 +43,7 @@ exports.bookinstance_create_get = function(req, res, next) {
 
 <p>Find the exported <code>bookinstance_create_post()</code> controller method and replace it with the following code.</p>
 
-<pre class="brush: js  notranslate">// Handle BookInstance create on POST.
+<pre class="brush: js">// Handle BookInstance create on POST.
 exports.bookinstance_create_post = [
 
     // Validate and sanitise fields.
@@ -93,7 +93,7 @@ exports.bookinstance_create_post = [
 
 <p>Create <strong>/views/bookinstance_form.pug</strong> and copy in the text below.</p>
 
-<pre class="notranslate">extends layout
+<pre>extends layout
 
 block content
   h1=title

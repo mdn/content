@@ -15,7 +15,7 @@ tags:
 
 <p>Open <strong>/controllers/authorController.js</strong>. Find the exported <code>author_list()</code> controller method near the top of the file and replace it with the following code.</p>
 
-<pre class="brush: js notranslate">// Display list of all Authors.
+<pre class="brush: js">// Display list of all Authors.
 exports.author_list = function(req, res, next) {
 
   Author.find()
@@ -34,7 +34,7 @@ exports.author_list = function(req, res, next) {
 
 <p>Create <strong>/views/author_list.pug</strong> and replace its content with the text below.</p>
 
-<pre class="brush: js notranslate">extends layout
+<pre class="brush: js">extends layout
 
 block content
   h1= title

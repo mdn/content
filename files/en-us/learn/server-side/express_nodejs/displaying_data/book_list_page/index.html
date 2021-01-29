@@ -16,7 +16,7 @@ tags:
 
 <p>Open <strong>/controllers/bookController.js</strong>. Find the exported <code>book_list()</code> controller method and replace it with the following code.</p>
 
-<pre class="brush: js line-numbers  language-js notranslate">// Display list of all Books.
+<pre class="brush: js line-numbers  language-js">// Display list of all Books.
 exports.book_list = function(req, res, next) {
 
   Book.find({}, 'title author')
@@ -37,7 +37,7 @@ exports.book_list = function(req, res, next) {
 
 <p>Create <strong>/views/book_list.pug</strong> and copy in the text below.</p>
 
-<pre class="brush: js line-numbers  language-js notranslate">extends layout
+<pre class="brush: js line-numbers  language-js">extends layout
 
 block content
   h1= title
