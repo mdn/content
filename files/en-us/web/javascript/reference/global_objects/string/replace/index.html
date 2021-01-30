@@ -23,12 +23,12 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/string-replace.html")}}</div>
 
-<h2 id="Syntax">Syntax</h2>
+<h2 id="syntax">Syntax</h2>
 
 <pre
   class="brush: js notranslate">const newStr = <var>str</var>.replace(<var>regexp</var>|<var>substr</var>, <var>newSubstr</var>|<var>function</var>)</pre>
 
-<h3 id="Parameters">Parameters</h3>
+<h3 id="parameters">Parameters</h3>
 
 <dl>
   <dt><code><var>regexp</var></code> (pattern)</dt>
@@ -43,21 +43,21 @@ tags:
   <dd>The {{jsxref("String")}} that replaces the substring specified by the specified
     <code><var>regexp</var></code> or <code><var>substr</var></code> parameter. A number
     of special replacement patterns are supported; see the "<a
-      href="#Specifying_a_string_as_a_parameter">Specifying a string as a parameter</a>"
+      href="#specifying_a_string_as_a_parameter">Specifying a string as a parameter</a>"
     section below.</dd>
   <dt><code><var>function</var></code> (replacement)</dt>
   <dd>A function to be invoked to create the new substring to be used to replace the
     matches to the given <code><var>regexp</var></code> or <code><var>substr</var></code>.
     The arguments supplied to this function are described in the "<a
-      href="#Specifying_a_function_as_a_parameter">Specifying a function as a
+      href="#specifying_a_function_as_a_parameter">Specifying a function as a
       parameter</a>" section below.</dd>
 </dl>
 
-<h3 id="Return_value">Return value</h3>
+<h3 id="return_value">Return value</h3>
 
 <p>A new string, with some or all matches of a pattern replaced by a replacement.</p>
 
-<h2 id="Description">Description</h2>
+<h2 id="description">Description</h2>
 
 <p>This method does not change the calling {{jsxref("String")}} object. It returns a new
   string.</p>
@@ -65,7 +65,7 @@ tags:
 <p>To perform a global search and replace, include the <code>g</code> switch in the
   regular expression.</p>
 
-<h3 id="Specifying_a_string_as_a_parameter">Specifying a string as a parameter</h3>
+<h3 id="specifying_a_string_as_a_parameter">Specifying a string as a parameter</h3>
 
 <p>The replacement string can include the following special replacement patterns:</p>
 
@@ -112,7 +112,7 @@ tags:
   </tbody>
 </table>
 
-<h3 id="Specifying_a_function_as_a_parameter">Specifying a function as a parameter</h3>
+<h3 id="specifying_a_function_as_a_parameter">Specifying a function as a parameter</h3>
 
 <p>You can specify a function as the second parameter. In this case, the function will be
   invoked after the match has been performed. The function's result (return value) will be
@@ -178,9 +178,9 @@ let newString = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
 console.log(newString);  // abc - 12345 - #$*%
 </pre>
 
-<h2 id="Examples">Examples</h2>
+<h2 id="examples">Examples</h2>
 
-<h3 id="Defining_the_regular_expression_in_replace">Defining the regular expression in
+<h3 id="defining_the_regular_expression_in_replace">Defining the regular expression in
   replace()</h3>
 
 <p>In the following example, the regular expression is defined in <code>replace()</code>
@@ -199,11 +199,11 @@ console.log(newstr);  // Twas the night before Christmas...
     explanations about regular expressions.</p>
 </div>
 
-<h3 id="Using_global_and_ignore_with_replace">Using global and ignore with replace()</h3>
+<h3 id="using_global_and_ignore_with_replace">Using global and ignore with replace()</h3>
 
 <p>Global replace can only be done with a regular expression. In the following example,
   the regular expression includes the <a
-    href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags_2">global
+    href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags_2">global
     and ignore case flags</a> which permits <code>replace()</code> to replace each
   occurrence of <code>'apples'</code> in the string with <code>'oranges'</code>.</p>
 
@@ -215,7 +215,7 @@ console.log(newstr);  // oranges are round, and oranges are juicy.
 
 <p>This logs <code>'oranges are round, and oranges are juicy'</code>.</p>
 
-<h3 id="Switching_words_in_a_string">Switching words in a string</h3>
+<h3 id="switching_words_in_a_string">Switching words in a string</h3>
 
 <p>The following script switches the words in the string. For the replacement text, the
   script uses <a
@@ -230,7 +230,7 @@ console.log(newstr);  // Smith, John
 
 <p>This logs <code>'Smith, John'</code>.</p>
 
-<h3 id="Using_an_inline_function_that_modifies_the_matched_characters">Using an inline
+<h3 id="using_an_inline_function_that_modifies_the_matched_characters">Using an inline
   function that modifies the matched characters</h3>
 
 <p>In this example, all occurrences of capital letters in the string are converted to
@@ -265,7 +265,7 @@ console.log(newstr);  // Smith, John
   string literal (resulting in the same <code>'$&amp;'</code>) before using the characters
   as a pattern.</p>
 
-<h3 id="Replacing_a_Fahrenheit_degree_with_its_Celsius_equivalent">Replacing a Fahrenheit
+<h3 id="replacing_a_Fahrenheit_degree_with_its_Celsius_equivalent">Replacing a Fahrenheit
   degree with its Celsius equivalent</h3>
 
 <p>The following example replaces a Fahrenheit degree with its equivalent Celsius degree.
@@ -291,7 +291,7 @@ console.log(newstr);  // Smith, John
 }
 </pre>
 
-<h2 id="Specifications">Specifications</h2>
+<h2 id="specifications">Specifications</h2>
 
 <table class="standard-table">
   <thead>
@@ -307,7 +307,7 @@ console.log(newstr);  // Smith, John
   </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<h2 id="browser_compatibility">Browser compatibility</h2>
 
 <p class="hidden">The compatibility table in this page is generated from structured data.
   If you'd like to contribute to the data, please check out <a
@@ -316,7 +316,7 @@ console.log(newstr);  // Smith, John
 
 <p>{{Compat("javascript.builtins.String.replace")}}</p>
 
-<h2 id="See_also">See also</h2>
+<h2 id="see_also">See also</h2>
 
 <ul>
   <li>{{jsxref("String.prototype.replaceAll", "String.prototype.replaceAll()")}}</li>
