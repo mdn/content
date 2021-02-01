@@ -3,7 +3,7 @@ title: Eclipse CDT
 slug: Mozilla/Developer_guide/Eclipse/Eclipse_CDT
 tags:
   - Developing Mozilla
-  - 'Developing_Mozilla:Tools'
+  - Developing_Mozilla:Tools
   - Eclipse
   - Tools
 ---
@@ -45,7 +45,7 @@ tags:
 <p>For the Eclipse indexer to work well you must first build Mozilla, so that it includes headers from the objdir etc. These can be found and processed by Eclipse.</p>
 
 <div class="warning">
-<p><strong>Note:</strong> Your <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options#Building_with_an_Objdir">MOZ_OBJDIR</a> must be outside the Mozilla source directory.</p>
+<p><strong>Note:</strong> Your <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options#building_with_an_objdir">MOZ_OBJDIR</a> must be outside the Mozilla source directory.</p>
 </div>
 
 <p>Once your build is complete, <code>mach</code> can then generate a useful Eclipse project on your behalf. First, make sure that the directory of Eclipse's <code>eclipse</code> binary (typically <code>/Applications/Eclipse.app/Contents/MacOS/</code> on macOS) is in your <code>PATH</code>. Then, to create the eclipse project and open it, run:</p>
