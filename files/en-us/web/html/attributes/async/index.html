@@ -1,0 +1,59 @@
+---
+title: 'HTML attribute: async'
+slug: Web/HTML/Attributes/async
+tags:
+  - Attribute
+  - Attributes
+  - HTML
+  - async
+  - Reference
+---
+<p>{{HTMLSidebar}}</p>
+<p>The <strong><code>async</code></strong> attribute is a boolean attribute.</p>
+<p>The <strong><code>async</code></strong> attribute is an allowed attribute for {{htmlelement("script")}}. When used on a <code>&lt;script&gt;</code> element , it specifies that the script will be executed asynchronously as soon as it is available.</p>
+<p>Note: The <strong><code>async</code></strong> attribute is only for external scripts (and should only be used if the <code>src</code> attribute is present).</p>
+<p>
+Note: There are several ways an external script can be executed:
+<ul>
+    <li>If <strong><code>async</code></strong> is present: The script is executed asynchronously with the rest of the page (the script will be executed while the page continues the parsing).</li>
+    <li>If <strong><code>async</code></strong> is not present and <strong><code>defer</code></strong> is present: The script is executed when the page has finished parsing.</li>
+    <li>If neither <strong><code>async</code></strong> or <strong><code>defer</code></strong> is present: The script is fetched and executed immediately, before the browser continues parsing the page.</li>
+</ul>   
+</p>
+<h2 id="Usage">Usage</h2>
+<p>The <strong><code>async</code></strong> can be used on  <code>&lt;script&gt;</code> element.</p>
+<pre class="brush: html">&lt;script src="demo_async.js" async&gt;&lt;/script&gt;</pre>
+
+<h2 id="Examples">Examples</h2>
+
+<p>See examples of usage on the element pages for {{htmlelement("script")}}.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'forms.html#attr-script-async', 'async as used with script')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', 'sec-forms.html#element-attrdef-script-async', 'async as used with script')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<h3>Support with script</h3>
+
+<p>{{Compat("html.elements.script.async")}}</p>
