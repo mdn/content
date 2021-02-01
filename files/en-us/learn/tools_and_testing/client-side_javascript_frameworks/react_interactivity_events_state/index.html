@@ -70,7 +70,7 @@ btn.addEventListener('click', () =&gt; {
 
 <h3 id="Handling_form_submission">Handling form submission</h3>
 
-<p>At the top of the <code>Form()</code> component function, create a function named <code>handleSubmit()</code>. This function should <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#Preventing_default_behavior">prevent the default behavior of the <code>submit</code> event</a>. After that, it should trigger an <code>alert()</code>, which can say whatever you’d like. It should end up looking something like this:</p>
+<p>At the top of the <code>Form()</code> component function, create a function named <code>handleSubmit()</code>. This function should <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#preventing_default_behavior">prevent the default behavior of the <code>submit</code> event</a>. After that, it should trigger an <code>alert()</code>, which can say whatever you’d like. It should end up looking something like this:</p>
 
 <pre class="brush: js notranslate">function handleSubmit(e) {
   e.preventDefault();
@@ -287,7 +287,7 @@ export default Form;</pre>
 
 <p>First of all, we need to put name into an object that has the same structure as our existing tasks. Inside of the <code>addTask()</code> function, we will make a <code>newTask</code> object to add to the array.</p>
 
-<p>We then need to make a new array with this new task added to it and then update the state of the tasks data to this new state. To do this, we can use spread syntax to <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Copy_an_array">copy the existing array</a>, and add our object at the end. We then pass this array into <code>setTasks()</code> to update the state.</p>
+<p>We then need to make a new array with this new task added to it and then update the state of the tasks data to this new state. To do this, we can use spread syntax to <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#copy_an_array">copy the existing array</a>, and add our object at the end. We then pass this array into <code>setTasks()</code> to update the state.</p>
 
 <p>Putting that all together, your <code>addTask()</code> function should read like so:</p>
 

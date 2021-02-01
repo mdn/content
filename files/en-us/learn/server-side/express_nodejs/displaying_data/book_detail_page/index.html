@@ -14,7 +14,7 @@ tags:
 
 <p>Open <strong>/controllers/bookController.js</strong>. Find the exported <code>book_detail()</code> controller method and replace it with the following code.</p>
 
-<pre class="brush: js notranslate">// Display detail page for a specific book.
+<pre class="brush: js">// Display detail page for a specific book.
 exports.book_detail = function(req, res, <strong>next</strong>) {
 
 <strong>    async.parallel({
@@ -55,7 +55,7 @@ exports.book_detail = function(req, res, <strong>next</strong>) {
 
 <p>Create <strong>/views/book_detail.pug</strong> and add the text below.</p>
 
-<pre class="notranslate">extends layout
+<pre>extends layout
 
 block content
   h1 #{title}: #{book.title}
@@ -96,7 +96,7 @@ block content
 <div class="note">
 <p><strong>Note:</strong> The list of genres associated with the book is implemented in the template as below. This adds a comma after every genre associated with the book except for the last one.</p>
 
-<pre class="notranslate">  p #[strong Genre:]
+<pre>  p #[strong Genre:]
     each val, index in book.genre
       a(href=val.url) #{val.name}
       if index &lt; book.genre.length - 1
@@ -107,7 +107,7 @@ block content
 
 <p>Run the application and open your browser to <a href="http://localhost:3000/">http://localhost:3000/</a>. Select the <em>All books</em> link, then select one of the books. If everything is set up correctly, your page should look something like the following screenshot.</p>
 
-<p><img alt="Book Detail Page - Express Local Library site" src="https://mdn.mozillademos.org/files/14470/LocalLibary_Express_Book_Detail.png" style="border-style: solid; border-width: 1px; display: block; height: 616px; margin: 0px auto; width: 1200px;"></p>
+<p><img alt="Book Detail Page - Express Local Library site" src="locallibary_express_book_detail.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h2 id="Next_steps">Next steps</h2>
 

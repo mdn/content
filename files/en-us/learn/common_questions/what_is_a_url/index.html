@@ -53,6 +53,7 @@ https://developer.mozilla.org/en-US/search?q=URL</pre>
 <dl>
  <dt><img alt="Protocol" src="mdn-url-protocol@x2_update.png"></dt>
  <dd><code>http</code> is the protocol. The first part of the URL indicates which protocol the browser must use. A protocol is a set method for exchanging or transferring data around a computer network. Usually for websites it is the HTTP protocol or its secured version, HTTPS. The Web requires one of these two, but browsers also know how to handle other protocols such as <code>mailto:</code> (to open a mail client) or <code>ftp:</code> to handle file transfer, so don't be surprised if you see such protocols.</dd>
+ <dd><code>://</code> marks the end of the scheme (protocol) and the start of the authority. If there is a <code>//</code> after the colon (<code>:</code>), this indicates that what follows is the authority. The colon acts as a delimiter between the scheme and the authority component which is preceded by two slashes. The authority in a URL is <code>//www.example.com:80</code>, where the domain name is <code>www.example.com</code> and the port is <code>:80</code>. One example of a URL that doesn't use an authority is the mail client (<code>mailto:foobar</code>). It contains a scheme but doesn't use an authority component. Therefore, the colon is not preceded by two slashes and only acts as a delimiter between the scheme and mail address.</dd>
  <dt><img alt="Domain Name" src="mdn-url-domain@x2.png"></dt>
  <dd><code>www.example.com</code> is the domain name. It indicates which Web server is being requested. Alternatively, it is possible to directly use an {{Glossary("IP address")}}, but because it is less convenient, it is not often used on the Web.</dd>
  <dt><img alt="Port" src="mdn-url-port@x2.png"></dt>
@@ -65,7 +66,10 @@ https://developer.mozilla.org/en-US/search?q=URL</pre>
  <dd><code>#SomewhereInTheDocument</code> is an anchor to another part of the resource itself. An anchor represents a sort of "bookmark" inside the resource, giving the browser the directions to show the content located at that "bookmarked" spot. On an HTML document, for example, the browser will scroll to the point where the anchor is defined; on a video or audio document, the browser will try to go to the time the anchor represents. It is worth noting that the part after the <strong>#</strong>, also known as the <em><strong>fragment identifier</strong>, is never sent to the server with the request.</em></dd>
 </dl>
 
-<p>{{Note('There are <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Locator">some extra parts and some extra rules</a> regarding URLs, but they are not relevant for regular users or Web developers. Don\'t worry about this, you don\'t need to know them to build and use fully functional URLs.')}}</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>There are <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Locator">some extra parts and some extra rules</a> regarding URLs, but they are not relevant for regular users or Web developers. Don\'t worry about this, you don\'t need to know them to build and use fully functional URLs.</p>
+</div>
 
 <p>You might think of a URL like a regular postal mail address: the <em>protocol</em> represents the postal service you want to use, the <em>domain name</em> is the city or town, and the <em>port</em> is like the zip code; the <em>path</em> represents the building where your mail should be delivered; the <em>parameters</em> represent extra information such as the number of the apartment in the building; and, finally, the <em>anchor</em> represents the actual person to whom you've addressed your mail.</p>
 
@@ -82,8 +86,9 @@ https://developer.mozilla.org/en-US/search?q=URL</pre>
  <li>to display other HTML documents with the {{HTMLElement("iframe")}} element.</li>
 </ul>
 
-<div class="note">
-<p><strong>Note:</strong> When specifying URLs to load resources as part of a page (such as when using the <code>&lt;script&gt;</code>, <code>&lt;audio&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;video&gt;</code>, and the like), you should generally only use HTTP and HTTPS URLs, with few exceptions (one notable one being <code>data:</code>; see <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">Data URLs</a>). Using FTP, for example, is not secure and is no longer supported by modern browsers.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>When specifying URLs to load resources as part of a page (such as when using the <code>&lt;script&gt;</code>, <code>&lt;audio&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;video&gt;</code>, and the like), you should generally only use HTTP and HTTPS URLs, with few exceptions (one notable one being <code>data:</code>; see <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">Data URLs</a>). Using FTP, for example, is not secure and is no longer supported by modern browsers.</p>
 </div>
 
 <p>Other technologies, such as {{Glossary("CSS")}} or {{Glossary("JavaScript")}}, use URLs extensively, and these are really the heart of the Web.</p>

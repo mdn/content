@@ -37,11 +37,11 @@ tags:
 
 <h2 id="The_DOM_versus_view_source">The DOM versus view source</h2>
 
-<p>Something that can trip up newcomers to DevTools is the difference between what you see when you <a href="/en-US/docs/Tools/View_source">view the source</a> of a webpage, or look at the HTML file you put on the server, and what you can see in the <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#HTML_pane">HTML Pane</a> of the DevTools. While it looks roughly similar to what you can see via View Source there are some differences.</p>
+<p>Something that can trip up newcomers to DevTools is the difference between what you see when you <a href="/en-US/docs/Tools/View_source">view the source</a> of a webpage, or look at the HTML file you put on the server, and what you can see in the <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#html_pane">HTML Pane</a> of the DevTools. While it looks roughly similar to what you can see via View Source there are some differences.</p>
 
 <p>In the rendered DOM the browser may have corrected some badly-written HTML for you. If you incorrectly closed an element, for instance opening an <code>&lt;h2&gt;</code> but closing with an <code>&lt;/h3&gt;</code>, the browser will figure out what you were meaning to do and the HTML in the DOM will correctly close the open <code>&lt;h2&gt;</code> with an <code>&lt;/h2&gt;</code>. The browser will also normalize all of the HTML, and the DOM will also show any changes made by JavaScript.</p>
 
-<p>View Source in comparison, is the HTML source code as stored on the server. The <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#HTML_tree">HTML tree</a> in your DevTools shows exactly what the browser is rendering at any given time, so it gives you an insight into what is really going on.</p>
+<p>View Source in comparison, is the HTML source code as stored on the server. The <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#html_tree">HTML tree</a> in your DevTools shows exactly what the browser is rendering at any given time, so it gives you an insight into what is really going on.</p>
 
 <h2 id="Inspecting_the_applied_CSS">Inspecting the applied CSS</h2>
 
@@ -49,7 +49,7 @@ tags:
 
 <p><img alt="The example page for this tutorial with DevTools open." src="inspecting1.png" style="border-style: solid; border-width: 1px;"></p>
 
-<p>If you look at the <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#Rules_view">Rules view</a> to the right of your HTML, you should be able to see the CSS properties and values applied to that element. You will see the rules directly applied to class <code>box1</code> and also the CSS that is being inherited by the box from its ancestors, in this case to <code>&lt;body&gt;</code>. This is useful if you are seeing some CSS being applied that you didn't expect. Perhaps it is being inherited from a parent element and you need to add a rule to overwrite it in the context of this element.</p>
+<p>If you look at the <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#rules_view">Rules view</a> to the right of your HTML, you should be able to see the CSS properties and values applied to that element. You will see the rules directly applied to class <code>box1</code> and also the CSS that is being inherited by the box from its ancestors, in this case to <code>&lt;body&gt;</code>. This is useful if you are seeing some CSS being applied that you didn't expect. Perhaps it is being inherited from a parent element and you need to add a rule to overwrite it in the context of this element.</p>
 
 <p>Also useful is the ability to expand out shorthand properties. In our example the <code>margin</code> shorthand is used.</p>
 
@@ -87,7 +87,7 @@ tags:
 
 <p>In previous lessons we have discussed <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">the Box Model</a>, and the fact that we have an alternate box model that changes how the size of elements are calculated based on the size you give them, plus the padding and borders. DevTools can really help you to understand how the size of an element is being calculated.</p>
 
-<p>The <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#Layout_view">Layout view</a> shows you a diagram of the box model on the selected element, along with a description of the properties and values that change how the element is laid out. This includes a description of properties that you may not have explicitly used on the element, but which do have initial values set.</p>
+<p>The <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#layout_view">Layout view</a> shows you a diagram of the box model on the selected element, along with a description of the properties and values that change how the element is laid out. This includes a description of properties that you may not have explicitly used on the element, but which do have initial values set.</p>
 
 <p>In this panel, one of the detailed properties is the <code>box-sizing</code> property, which controls what box model the element uses.</p>
 
@@ -126,7 +126,7 @@ tags:
 
 <h2 id="Find_out_more_about_the_Firefox_DevTools">Find out more about the Firefox DevTools</h2>
 
-<p>There is a lot of information about the Firefox DevTools here on MDN. Take a look at the main <a href="/en-US/docs/Tools">DevTools section</a>, and for more detail on the things we have briefly covered in this lesson see <a href="/en-US/docs/Tools/Page_Inspector#How_to">The How To Guides</a>.</p>
+<p>There is a lot of information about the Firefox DevTools here on MDN. Take a look at the main <a href="/en-US/docs/Tools">DevTools section</a>, and for more detail on the things we have briefly covered in this lesson see <a href="/en-US/docs/Tools/Page_Inspector#how_to">The How To Guides</a>.</p>
 
 <h2 id="Debugging_problems_in_CSS">Debugging problems in CSS</h2>
 

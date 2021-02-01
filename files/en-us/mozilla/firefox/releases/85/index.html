@@ -7,24 +7,26 @@ tags:
   - Mozilla
   - Release
 ---
-<p>{{FirefoxSidebar}}{{draft}}</p>
+<p>{{FirefoxSidebar}}</p>
 
-<p class="summary">This article provides information about the changes in Firefox 85 that will affect developers. Firefox 85 is the current <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#beta">Beta version of Firefox</a>, and will ship on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">January 26, 2021</a>.</p>
+<p class="summary">This article provides information about the changes in Firefox 85 that will affect developers. Firefox 85 was released on January 26, 2021.</p>
+
+<div class="notecard note">
+<p class="summary"><strong>Note</strong>: See also <a href="https://hacks.mozilla.org/2021/01/january-brings-us-firefox-85/">January brings us Firefox 85</a> on Mozilla Hacks.</p>
+</div>
 
 <h2 id="Changes_for_web_developers">Changes for web developers</h2>
 
 <h3 id="Developer_Tools">Developer Tools</h3>
 
 <ul>
-  <li>Developers can now use the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Viewing_common_pseudo-classes">Page Inspector</a> to toggle the {{cssxref(":focus-visible")}} pseudo-class for the currently selected element (in addition to the pseudo classes that were previously supported: {{cssxref(":hover")}}, {{cssxref(":active")}} and {{cssxref(":focus")}}, {{cssxref(":focus-within")}}, and {{cssxref(":visited")}}). ({{bug(1617608)}}).</li>
+  <li>Developers can now use the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#viewing_common_pseudo-classes">Page Inspector</a> to toggle the {{cssxref(":focus-visible")}} pseudo-class for the currently selected element (in addition to the pseudo classes that were previously supported: {{cssxref(":hover")}}, {{cssxref(":active")}} and {{cssxref(":focus")}}, {{cssxref(":focus-within")}}, and {{cssxref(":visited")}}). ({{bug(1617608)}}).</li>
 </ul>
-
-<h4 id="Removals">Removals</h4>
 
 <h3 id="HTML">HTML</h3>
 
 <ul>
-  <li>The <a href="/en-US/docs/Web/HTML/Link_types/preload"><code>&lt;link rel="preload"&gt;</code></a> is now enabled. ({{bug(1626997)}}).</li>
+  <li><a href="/en-US/docs/Web/HTML/Link_types/preload"><code>&lt;link rel="preload"&gt;</code></a> is now enabled. ({{bug(1626997)}}).</li>
 </ul>
 
 <h4 id="Removals_2">Removals</h4>
@@ -40,8 +42,6 @@ tags:
   <li>The <code>pinch-zoom</code> value for the {{cssxref("touch-action")}} property is now enabled. ({{bug(1329241)}}). </li>
 </ul>
 
-<h4 id="Removals_3">Removals</h4>
-
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
@@ -55,12 +55,6 @@ let pinyin = new Intl.Collator("zh", {collator: "pinyin"});</pre>
   </li>
  </ul>
 
-<h4 id="Removals_4">Removals</h4>
-
-<h3 id="HTTP">HTTP</h3>
-
-<h4 id="Removals_5">Removals</h4>
-
 <h3 id="Security">Plugins</h3>
 
 <ul>
@@ -69,19 +63,11 @@ let pinyin = new Intl.Collator("zh", {collator: "pinyin"});</pre>
 
 <h3 id="APIs">APIs</h3>
 
-<h4 id="DOM">DOM</h4>
-
-<h4 id="Media_WebRTC_and_Web_Audio">Media, WebRTC, and Web Audio</h4>
-
-<h4 id="Removals_7">Removals</h4>
-
-<h3 id="WebAssembly">WebAssembly</h3>
-
-<h4 id="Removals_8">Removals</h4>
+<p><em>No changes.</em></p>
 
 <h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
 
-<h4 id="Removals_9">Removals</h4>
+<p><em>No changes.</em></p>
 
 <h2 id="Older_versions">Older versions</h2>
 

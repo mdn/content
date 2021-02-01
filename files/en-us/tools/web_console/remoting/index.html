@@ -304,7 +304,7 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 <p>Prior to Firefox 23 we used a different actor (<code>WebConsoleObjectActor</code>) for working with JavaScript objects through the protocol. In <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=783499">bug 783499</a> we did a number of changes that allowed us to reuse the <code>ObjectActor</code> from the debugger.</p>
 </div>
 
-<p>Console API messages come through the <a href="/en-US/docs/XPCOM_Interface_Reference/nsIObserverService"><code>nsIOb<span style="display: none;"> </span>serverService</code></a> - the console object implementation lives in <a href="http://mxr.mozilla.org/mozilla-central/source/dom/base/ConsoleAPI.js"><code>dom/base/ConsoleAPI.js</code></a>.</p>
+<p>Console API messages come through the <a href="/en-US/docs/XPCOM_Interface_Reference/nsIObserverService"><code>nsIObserverService</code></a> - the console object implementation lives in <a href="http://mxr.mozilla.org/mozilla-central/source/dom/base/ConsoleAPI.js"><code>dom/base/ConsoleAPI.js</code></a>.</p>
 
 <p>For each console message we receive in the server, we send the following <code>consoleAPICall</code> packet to the client:</p>
 

@@ -21,20 +21,20 @@
     winston "3.2.1"
     wrap-ansi "^6.2.0"
 
-"@mdn/browser-compat-data@3.0.4":
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.0.4.tgz#770c9f674bdf8edbae96a1def688da39c6e73667"
-  integrity sha512-2QRe7xbrUe6OQ6B/Le22GZQSOnnjAxuMXk3OzOBbghLY7OeXg+phBjATt/r+MHrN3R3gZWME2fjBzSZmwL/s4A==
+"@mdn/browser-compat-data@3.0.5":
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.0.5.tgz#d1b3c7e796cdb0f23275b5231d3e267d8a2a4fec"
+  integrity sha512-hOR0J8eHbCSCDsSUXyT9bpM1KO5TQ5LYuBgM8iLtqdJrU2F5iNPEteVa5DmwXgBac+Wm1Xj32kfxTWdHYRxNXQ==
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.3.25":
-  version "0.3.25"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.3.25.tgz#744dd9fbdfb6ea1aa0548dadc4f7b356aaebea70"
-  integrity sha512-q1AujnaefzMSFYEskoTtXqkm3fn30/kYTPdbpmhjQs7kK2YlaqDVKqIvh06dAADGg1MYFV3jNtRJwAxMaYUKGg==
+"@mdn/yari@0.4.29":
+  version "0.4.29"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.29.tgz#a9015759d17e506e9dfcbe9e8ca3264338ca5767"
+  integrity sha512-OFlrDhukezV92vgpTVFr6w83wqklMmHTO4VoGBVp4u/n8UvJG8uyWgiDtgNRHJbAnEbzW4l7lM0//3mBRSZ6Yw==
   dependencies:
     "@caporal/core" "2.0.2"
-    "@mdn/browser-compat-data" "3.0.4"
+    "@mdn/browser-compat-data" "3.0.5"
     accept-language-parser "1.5.0"
     chalk "4.1.0"
     cheerio "1.0.0-rc.5"
@@ -60,7 +60,7 @@
     imagemin-svgo "8.0.0"
     is-svg "4.2.1"
     js-yaml "4.0.0"
-    mdn-data "2.0.15"
+    mdn-data "2.0.16"
     open "^7.3.1"
     open-editor "3.0.0"
     prismjs "1.23.0"
@@ -2456,10 +2456,10 @@ map-obj@^1.0.0, map-obj@^1.0.1:
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-1.0.1.tgz#d933ceb9205d82bdcf4886f6742bdc2b4dea146d"
   integrity sha1-2TPOuSBdgr3PSIb2dCvcK03qFG0=
 
-mdn-data@2.0.15:
-  version "2.0.15"
-  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.15.tgz#4b31efd913cc9b0d8d99123033fbb805f458c541"
-  integrity sha512-1e9FFjfvzeTxVzBtcbAFDw9R+i+ka92rb9aT4TrV/68ZuLpM2kff4jatBDs/I/VvKPBLjCqv6/BtnD+pnAxyMg==
+mdn-data@2.0.16:
+  version "2.0.16"
+  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.16.tgz#b4f8cf050e4d679cbd185d1daf6370c3f434d731"
+  integrity sha512-z5eL/oKlBXGWk8MRrzk8Ll+owSRCXppDPJ5zBtoHhk4MUEVG5MEkHy5gdzvqpB53LUc+4F9CSVDcdgwKSY1Crg==
 
 mdn-data@2.0.4:
   version "2.0.4"

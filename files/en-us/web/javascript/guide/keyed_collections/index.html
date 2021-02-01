@@ -6,7 +6,7 @@ tags:
   - Guide
   - JavaScript
   - Map
-  - 'l10n:priority'
+  - l10n:priority
   - set
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}</div>
@@ -21,7 +21,7 @@ tags:
 
 <p>The following code shows some basic operations with a <code>Map</code>. See also the {{jsxref("Map")}} reference page for more examples and the complete API. You can use a {{jsxref("Statements/for...of","for...of")}} loop to return an array of <code>[<var>key<var>, <var>value</var>]</var></var></code> for each iteration.</p>
 
-<pre class="brush: js notranslate">let sayings = new Map();
+<pre class="brush: js">let sayings = new Map();
 sayings.set('dog', 'woof');
 sayings.set('cat', 'meow');
 sayings.set('elephant', 'toot');
@@ -71,7 +71,7 @@ sayings.size; // 0
 
 <p>One use case of <code>WeakMap</code> objects is to store private data for an object, or to hide implementation details. The following example is from Nick Fitzgerald's blog post <a href="http://fitzgeraldnick.com/weblog/53/">"Hiding Implementation Details with ECMAScript 6 WeakMaps"</a>. The private data and methods belong inside the object and are stored in the <code><var>privates</var></code> <code>WeakMap</code> object. Everything exposed on the instance and prototype is public; everything else is inaccessible from the outside world because <code><var>privates</var></code> is not exported from the module.</p>
 
-<pre class="brush: js notranslate">const privates = new WeakMap();
+<pre class="brush: js">const privates = new WeakMap();
 
 function Public() {
   const me = {
@@ -95,7 +95,7 @@ module.exports = Public;</pre>
 
 <p>The following code shows some basic operations with a <code>Set</code>. See also the {{jsxref("Set")}} reference page for more examples and the complete API.</p>
 
-<pre class="brush: js notranslate">let mySet = new Set();
+<pre class="brush: js">let mySet = new Set();
 mySet.add(1);
 mySet.add('some text');
 mySet.add('foo');
@@ -111,13 +111,14 @@ for (let item of mySet) console.log(item);
 
 <h3 id="Converting_between_Array_and_Set">Converting between Array and Set</h3>
 
-<p>You can create an {{jsxref("Array")}} from a Set using {{jsxref("Array.from")}} or the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread operator</a>. Also, the <code>Set</code> constructor accepts an <code>Array</code> to convert in the other direction.</p>
+<p>You can create an {{jsxref("Array")}} from a Set using {{jsxref("Array.from")}} or the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread syntax</a>. Also, the <code>Set</code> constructor accepts an <code>Array</code> to convert in the other direction.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Remember that <code>Set</code> objects store <em>unique values</em>—so any duplicate elements from an Array are deleted when converting!</p>
+  <h4>Note</h4>
+  <p>Remember that <code>Set</code> objects store <em>unique values</em>—so any duplicate elements from an Array are deleted when converting!</p>
 </div>
 
-<pre class="brush: js notranslate">Array.from(mySet);
+<pre class="brush: js">Array.from(mySet);
 [...mySet2];
 
 mySet2 = new Set([1, 2, 3, 4]);
@@ -142,7 +143,8 @@ mySet2 = new Set([1, 2, 3, 4]);
 
 <ul>
  <li>In contrast to <code>Sets</code>, <code>WeakSets</code> are <strong>collections of <em>objects only</em></strong>, and not of arbitrary values of any type.</li>
- <li>The <code>WeakSet</code> is <em>weak</em>: References to objects in the collection are held weakly. If there is no other reference to an object stored in the <code>WeakSet</code>, they can be garbage collected. That also means that there is no list of current objects stored in the collection. <code>WeakSets</code> are not enumerable.</li>
+ <li>The <code>WeakSet</code> is <em>weak</em>: References to objects in the collection are held weakly. If there is no other reference to an object stored in the <code>WeakSet</code>, they can be garbage collected. That also means that there is no list of current objects stored in the collection.</li>
+ <li><code>WeakSets</code> are not enumerable.</li>
 </ul>
 
 <p>The use cases of <code>WeakSet</code> objects are limited. They will not leak memory, so it can be safe to use DOM elements as a key and mark them for tracking purposes, for example.</p>
