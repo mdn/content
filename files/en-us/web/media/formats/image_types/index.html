@@ -271,7 +271,8 @@ tags:
 
 <p>AVIF does not support progressive rendering, so files must be fully downloaded before they can be displayed. This often has little impact on real-world user experience because AVIF files are much smaller than the equivalent JPEG or PNG files, and hence can be downloaded and displayed much faster. For larger file size the impact can become significant, and you should consider using a format that supports progressive rendering.</p>
 
-<p>AVIF is supported on desktop in Chrome 85, Opera 71 and Firefox 77 (requires the feature flag <code>image.avif.enable</code> set <code>true</code>). As support is not yet comprehensive (and has no historical depth) you should provide a fallback in either {{anch("JPEG")}} or {{anch("PNG")}} format using <a href="/en-US/docs/Web/HTML/Element/picture">the <code>&lt;picture&gt;</code> element</a> (or some other approach).</p>
+<p>AVIF is supported on desktop in Chrome, Opera and Firefox (in current versions).
+  As support is not yet comprehensive (and has no historical depth) you should provide a fallback in either {{anch("JPEG")}} or {{anch("PNG")}} format using <a href="/en-US/docs/Web/HTML/Element/picture">the <code>&lt;picture&gt;</code> element</a> (or some other approach).</p>
 
 <table class="standard-table">
  <tbody>
@@ -291,7 +292,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Browser compatibility</th>
-   <td>Chrome 85, Opera 71, and Firefox 86 (From Firefox 77 to 85 requires the preference <code>image.avif.enable</code> set <code>true</code>).</td>
+   <td>Chrome 85, Opera 71, and Firefox 86 (Firefox 77 to 85 require the preference <code>image.avif.enable</code> set <code>true</code>).</td>
   </tr>
   <tr>
    <th scope="row">Maximum dimensions</th>
@@ -1370,5 +1371,5 @@ static unsigned char square8_bits[] = {
  <li><a href="/en-US/docs/Web/Media/Formats/Video_codecs">Guide to video codecs used on the web</a></li>
  <li>The {{Glossary("HTML")}} {{HTMLElement("img")}} and {{HTMLElement("picture")}} elements</li>
  <li>The CSS {{cssxref("background-image")}} property</li>
- <li>The {{domxref("HTMLImageElement/Image")}} constructor and the {{domxref("HTMLImageElement")}} interface</li>
+ <li>The {{domxref("HTMLImageElement.Image()")}} constructor and the {{domxref("HTMLImageElement")}} interface</li>
 </ul>
