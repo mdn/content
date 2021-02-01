@@ -154,7 +154,7 @@ function Child(x, y) {
   }
 }
 
-Child = Object.assign(ParentWithStatic)
+Child = Object.assign(Child, ParentWithStatic)  // copies over the static members from ParentWithStatic to Child
 Child.prototype = Object.create(ParentWithStatic.prototype)
 Child.prototype.constructor = Child
 
@@ -171,7 +171,7 @@ Child.prototype.getOffsetByInitialPosition = function getOffsetByInitialPosition
 <p>For this example we need either to stay parent constructor to continue to work properly or reassign static properties to child's constructor:</p>
 
 <pre class="brush: js notranslate">...
-Child = Object.assign(ParentWithStatic) // Notice that we assign it before we create(...) a prototype below
+Child = Object.assign(Child, ParentWithStatic) // Notice that we assign it before we create(...) a prototype below
 Child.prototype = Object.create(ParentWithStatic.prototype)
 ...
 </pre>

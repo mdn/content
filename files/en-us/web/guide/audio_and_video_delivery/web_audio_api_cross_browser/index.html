@@ -9,7 +9,7 @@ tags:
 <p><em>What do we do!?</em></p>
 <p>We don't want to maintain two or more separate code bases, and feature detection code is cumbersome! Plus we want to write code that reliably works in the future, or at least, works with a minimum amount of changes. Is there a way to satisfy all these constraints at the same time? <em>Probably!</em></p>
 <h2 id="Writing_for_today_(and_tomorrow)">Writing for today (and tomorrow)</h2>
-<p>First, get a copy of <a href="https://github.com/cwilso/AudioContext-MonkeyPatch/">AudioContext-MonkeyPatch</a> by Chris Wilson. This little library will "normalise" the interfaces for you and make it look as if your code is running in a standards compliant browser, by aliasing prefixed names to the unprefixed versions. And it won't do anything if the unprefixed versions are already present.</p>
+<p>First, get a copy of <a href="https://github.com/cwilso/AudioContext-MonkeyPatch/">AudioContext-MonkeyPatch</a> by Chris Wilson. This little library will "normalize" the interfaces for you and make it look as if your code is running in a standards compliant browser, by aliasing prefixed names to the unprefixed versions. And it won't do anything if the unprefixed versions are already present.</p>
 <p>Once you include it in your page, you can write in "modern Web Audio API" style, and do things such as:</p>
 <pre class="brush: js notranslate">var audioContext = new AudioContext();
 </pre>
@@ -28,7 +28,7 @@ tags:
 <p>If it's using, for example, <code>OscillatorNode</code>, you will have to wait until it is supported, or maybe, if you're really eager, hack in some replacement using <a href="https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html#ScriptProcessorNode-section">ScriptProcessorNode</a>, which allows you to write a node with callbacks that get called periodically, so that your JavaScript code generates or processes audio.</p>
 <p>The node parameters you use must also be supported in Firefox too. If they aren't, you might be able to change them into something "acceptable" for the time being, and count on the talented audio developers to implement those very soon.</p>
 <p>For example, up until a couple of days ago <a href="https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html#PannerNode-section">PannerNode</a> did not support the default HRTF panning model yet, and attempting to use a <code>PannerNode</code> with that configuration resulted in silence or a mono output coming out from that node, depending on the build you used.</p>
-<p>Today the support is already present in <a href="http://nightly.mozilla.org/">Nightly</a>, but not quite yet in <a href="http://www.mozilla.org/en-US/firefox/aurora/">Aurora</a>. In the meantime, you can explicitly specify <code>'equalpower'</code> instead:</p>
+<p>Today the support is already present in <a href="http://nightly.mozilla.org/">Nightly</a>, but not quite yet in <a href="https://www.mozilla.org/en-US/firefox/aurora/">Aurora</a>. In the meantime, you can explicitly specify <code>'equalpower'</code> instead:</p>
 <pre class="brush: js notranslate">var panner = new audioContext.PannerNode();
 panner.panningModel = 'equalpower';
 </pre>

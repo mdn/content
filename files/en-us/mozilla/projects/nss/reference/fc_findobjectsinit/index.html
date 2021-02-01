@@ -1,0 +1,31 @@
+---
+title: FC_FindObjectsInit
+slug: Mozilla/Projects/NSS/Reference/FC_FindObjectsInit
+tags:
+  - NSS
+---
+
+<h3 id="Name"> Name </h3>
+<p>FC_FindObjectsInit - initialize the parameters for an object search.
+</p>
+<h3 id="Syntax"> Syntax </h3>
+<pre class="eval"><a href="/en-US/CK_RV">CK_RV</a> FC_FindObjectsInit(
+  <a href="/en-US/CK_SESSION_HANDLE">CK_SESSION_HANDLE</a> hSession,
+  <a href="/en-US/CK_ATTRIBUTE">CK_ATTRIBUTE_PTR</a> pTemplate,
+  <a href="/en-US/CK_ULONG">CK_ULONG</a> usCount
+);
+</pre>
+<h3 id="Parameters"> Parameters </h3>
+<dl><dt><code>hSession</code></dt><dd> {{ mediawiki.external('in') }} session handle.
+</dd><dt><code>pTemplate</code></dt><dd> {{ mediawiki.external('in') }} pointer to template.
+</dd><dt><code>usCount</code></dt><dd> {{ mediawiki.external('in') }} number of attributes in the template.
+</dd></dl>
+<h3 id="Description"> Description </h3>
+<p><code>FC_FindObjectsInit</code> sets the attribute list for an object search. If <code>FC_FindObjectsInit</code> is successful <code>FC_FindObjects</code> may be called one or more times to retrieve handles of matching objects.
+</p><p>A user must log into the token (to assume the NSS User role) before searching for secret or private key objects.
+</p>
+<h3 id="Return_value"> Return value </h3>
+<h3 id="Examples"> Examples </h3>
+<h3 id="See_also"> See also </h3>
+<ul><li> <a href="/en-US/FC_FindObjects">FC_FindObjects</a>, <a href="/en-US/NSC_FindObjectsInit">NSC_FindObjectsInit</a>
+</li></ul>

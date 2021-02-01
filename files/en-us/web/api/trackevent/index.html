@@ -18,7 +18,7 @@ tags:
 <p>Events based on <code>TrackEvent</code> are always sent to one of the media track list types:</p>
 
 <ul>
- <li><span style="display: none;"> </span>Events involving video tracks are always sent to the {{domxref("VideoTrackList")}} found in {{domxref("HTMLMediaElement.videoTracks")}}</li>
+ <li>Events involving video tracks are always sent to the {{domxref("VideoTrackList")}} found in {{domxref("HTMLMediaElement.videoTracks")}}</li>
  <li>Events involving audio tracks are always sent to the {{domxref("AudioTrackList")}} specified in {{domxref("HTMLMediaElement.audioTracks")}}</li>
  <li>Events affecting text tracks are sent to the {{domxref("TextTrackList")}} object indicated by {{domxref("HTMLMediaElement.textTracks")}}.</li>
 </ul>
@@ -45,7 +45,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>This example sets up a function, <code>handleTrackEvent()</code>, which is callled for any {{event("addtrack")}} or {{event("removetrack")}} event on the first {{HTMLElement("video")}} element found in the document.</p>
+<p>This example sets up a function, <code>handleTrackEvent()</code>, which is called for any {{event("addtrack")}} or {{event("removetrack")}} event on the first {{HTMLElement("video")}} element found in the document.</p>
 
 <pre class="brush: js">var videoElem = document.querySelector("video");
 

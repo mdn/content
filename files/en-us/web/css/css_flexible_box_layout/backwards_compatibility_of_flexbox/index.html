@@ -46,7 +46,7 @@ tags:
 
 <p>The majority of issues with flexbox relate to the changes in the specification, as it has been developed, and the fact that many of us were attempting to use an experimental specification in production. If you are trying to ensure backwards compatibility with old versions of browsers, and in particular IE10 and 11, the <a href="https://github.com/philipwalton/flexbugs">Flexbugs</a> site is a helpful resource. You will see that many of the listed bugs apply to old browser versions and are fixed in current browsers. Each of the bugs has a workaround listed — which can save you many hours of puzzling.</p>
 
-<p>If you want to include very old browsers with flexbox support then you can include the vendor prefixes in your CSS in addition to the unprefixed version. This is becoming less and less of a requirement today as support is widespread.<code> </code></p>
+<p>If you want to include very old browsers with flexbox support then you can include the vendor prefixes in your CSS in addition to the unprefixed version. This is becoming less and less of a requirement today as support is widespread. </p>
 
 <pre class="brush: css notranslate">.wrapper {
   display: -webkit-box;
@@ -67,9 +67,9 @@ tags:
 <p>“float and clear do not create floating or clearance of flex item, and do not take it out-of-flow.” - <a href="https://www.w3.org/TR/css-flexbox-1/#flex-containers">3. Flex Containers</a></p>
 </blockquote>
 
-<p>In the following live example, I have floated two blocks and then set <code>display: flex</code> on the container. The items are now flex items, which means they stretch to equal height. Any float behaviour does not apply.</p>
+<p>In the following live example, I have floated two blocks and then set <code>display: flex</code> on the container. The items are now flex items, which means they stretch to equal height. Any float behavior does not apply.</p>
 
-<p>You can test the fallback behaviour by removing <code>display: flex</code> from the wrapper.</p>
+<p>You can test the fallback behavior by removing <code>display: flex</code> from the wrapper.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/browsers/float.html", '100%', 550)}}</p>
 
@@ -77,11 +77,11 @@ tags:
 
 <p>Once an <code>inline-block</code> item becomes a flex item, it is <code>block</code>ified and so behavior of <code>display: inline-block</code> like preserving white space between items no longer applies.</p>
 
-<p>Remove <code>display: flex</code> to see the fallback behavior. You'll see white space added between the items, which is what happens when using <code>display: inine-block</code> as it prefers white space like other inline items.</p>
+<p>Remove <code>display: flex</code> to see the fallback behavior. You'll see white space added between the items, which is what happens when using <code>display: inline-block</code> as it prefers white space like other inline items.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/browsers/inline-block.html", '100%', 550)}}</p>
 
-<h3 id="display_table-">display: table-<em> </em></h3>
+<h3 id="display_table-">display: table- </h3>
 
 <p>The CSS table display properties are potentially very useful as a fallback, due to the fact that they allow design patterns such as full height columns and vertical centering and work back as far as Internet Explorer 8.</p>
 

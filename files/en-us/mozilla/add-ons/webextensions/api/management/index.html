@@ -23,7 +23,7 @@ tags:
  <li>get notifications of add-ons being installed, uninstalled, enabled, or disabled.</li>
 </ul>
 
-<p>Most of these operations require the "management" <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions">API permission</a>. Operations that don't provide access to other add-ons don't require this permission.</p>
+<p>Most of these operations require the "management" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">API permission</a>. Operations that don't provide access to other add-ons don't require this permission.</p>
 
 <h2 id="Types">Types</h2>
 
@@ -53,9 +53,11 @@ tags:
  <dd>Get the set of permission warnings that would be displayed for the given manifest string.</dd>
  <dt>{{WebExtAPIRef("management.setEnabled()")}}</dt>
  <dd>Enable/disable a particular add-on, given its ID.</dd>
- <dt>
- <h2 id="Events">Events</h2>
- </dt>
+</dl>
+
+<h2 id="Events">Events</h2>
+
+<dl>
  <dt>{{WebExtAPIRef("management.onInstalled")}}</dt>
  <dd>Fired when an add-on is installed.</dd>
  <dt>{{WebExtAPIRef("management.onUninstalled")}}</dt>

@@ -1,0 +1,37 @@
+---
+title: FC_Verify
+slug: Mozilla/Projects/NSS/Reference/FC_Verify
+tags:
+  - NSS
+---
+
+<h3 id="Name"> Name </h3>
+<p>FC_Verify - sign a block of data.
+</p>
+<h3 id="Syntax"> Syntax </h3>
+<pre class="eval"><a href="/en-US/CK_RV">CK_RV</a> FC_Verify(
+  <a href="/en-US/CK_SESSION_HANDLE">CK_SESSION_HANDLE</a> hSession,
+  <a href="/en-US/CK_BYTE">CK_BYTE_PTR</a> pData,
+  <a href="/en-US/CK_ULONG">CK_ULONG</a> usDataLen,
+  <a href="/en-US/CK_BYTE">CK_BYTE_PTR</a> pSignature,
+  <a href="/en-US/CK_ULONG">CK_ULONG</a> usSignatureLen
+);
+</pre>
+<h3 id="Parameters"> Parameters </h3>
+<dl><dt><code>hSession</code></dt><dd> {{ mediawiki.external('in') }} session handle.
+</dd><dt><code>pData</code></dt><dd> {{ mediawiki.external('in') }} pointer to data block.
+</dd><dt><code>usDataLen</code></dt><dd> {{ mediawiki.external('in') }} length of the data in bytes.
+</dd><dt><code>pSignature</code></dt><dd> {{ mediawiki.external('in') }} pointer to the signature.
+</dd><dt><code>usSignatureLen</code></dt><dd> {{ mediawiki.external('in') }} length of the signature in bytes.
+</dd></dl>
+<h3 id="Description"> Description </h3>
+<p><code>FC_Verify</code> verifies a signature in a single-part operation, where the signature is an appendix to the data.
+</p><p>A user must log into the token (to assume the NSS User role) before calling <code>FC_Verify</code>.
+</p>
+<h3 id="Return_value"> Return value </h3>
+<p><code>CKR_OK</code> is returned on success. <code>CKR_SIGNATURE_INVALID</code> is returned for signature mismatch.
+</p>
+<h3 id="Examples"> Examples </h3>
+<h3 id="See_also"> See also </h3>
+<ul><li> <a href="/en-US/FC_VerifyInit">FC_VerifyInit</a>, <a href="/en-US/NSC_Verify">NSC_Verify</a>
+</li></ul>

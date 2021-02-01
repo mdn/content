@@ -1,0 +1,729 @@
+---
+title: 'NSS tools : signtool'
+slug: Mozilla/Projects/NSS/Tools/signtool
+---
+<p>Name<br>
+<br>
+   signtool — Digitally sign objects and files.<br>
+<br>
+Synopsis<br>
+<br>
+   signtool [-k keyName] <a href="-h">-h</a> <a href="-H">-H</a> <a href="-l">-l</a> <a href="-L">-L</a> <a href="-M">-M</a> <a href="-v">-v</a> <a href="-w">-w</a><br>
+   <a href="-G_nickname">-G nickname</a> <a href="--keysize"> -s size</a> <a href="-b_basename">-b basename</a> [[-c Compression<br>
+   Level] ] [[-d cert-dir] ] [[-i installer script] ] [[-m metafile] ] [[-x<br>
+   name] ] [[-f filename] ] [[-t|--token tokenname] ] [[-e extension] ] [[-o]<br>
+   ] [[-z] ] [[-X] ] [[--outfile] ] [[--verbose value] ] [[--norecurse] ]<br>
+   [[--leavearc] ] [[-j directory] ] [[-Z jarfile] ] [[-O] ] [[-p password] ]<br>
+   [directory-tree] [archive]<br>
+<br>
+Description<br>
+<br>
+   The Signing Tool, signtool, creates digital signatures and uses a Java<br>
+   Archive (JAR) file to associate the signatures with files in a directory.<br>
+   Electronic software distribution over any network involves potential<br>
+   security problems. To help address some of these problems, you can<br>
+   associate digital signatures with the files in a JAR archive. Digital<br>
+   signatures allow SSL-enabled clients to perform two important operations:<br>
+<br>
+   * Confirm the identity of the individual, company, or other entity whose<br>
+   digital signature is associated with the files<br>
+<br>
+   * Check whether the files have been tampered with since being signed<br>
+<br>
+   If you have a signing certificate, you can use Netscape Signing Tool to<br>
+   digitally sign files and package them as a JAR file. An object-signing<br>
+   certificate is a special kind of certificate that allows you to associate<br>
+   your digital signature with one or more files.<br>
+<br>
+   An individual file can potentially be signed with multiple digital<br>
+   signatures. For example, a commercial software developer might sign the<br>
+   files that constitute a software product to prove that the files are<br>
+   indeed from a particular company. A network administrator manager might<br>
+   sign the same files with an additional digital signature based on a<br>
+   company-generated certificate to indicate that the product is approved for<br>
+   use within the company.<br>
+<br>
+   The significance of a digital signature is comparable to the significance<br>
+   of a handwritten signature. Once you have signed a file, it is difficult<br>
+   to claim later that you didn't sign it. In some situations, a digital<br>
+   signature may be considered as legally binding as a handwritten signature.<br>
+   Therefore, you should take great care to ensure that you can stand behind<br>
+   any file you sign and distribute.<br>
+<br>
+   For example, if you are a software developer, you should test your code to<br>
+   make sure it is virus-free before signing it. Similarly, if you are a<br>
+   network administrator, you should make sure, before signing any code, that<br>
+   it comes from a reliable source and will run correctly with the software<br>
+   installed on the machines to which you are distributing it.<br>
+<br>
+   Before you can use Netscape Signing Tool to sign files, you must have an<br>
+   object-signing certificate, which is a special certificate whose<br>
+   associated private key is used to create digital signatures. For testing<br>
+   purposes only, you can create an object-signing certificate with Netscape<br>
+   Signing Tool 1.3. When testing is finished and you are ready to<br>
+   disitribute your software, you should obtain an object-signing certificate<br>
+   from one of two kinds of sources:<br>
+<br>
+   * An independent certificate authority (CA) that authenticates your<br>
+   identity and charges you a fee. You typically get a certificate from an<br>
+   independent CA if you want to sign software that will be distributed over<br>
+   the Internet.<br>
+<br>
+   * CA server software running on your corporate intranet or extranet.<br>
+   Netscape Certificate Management System provides a complete management<br>
+   solution for creating, deploying, and managing certificates, including CAs<br>
+   that issue object-signing certificates.<br>
+<br>
+   You must also have a certificate for the CA that issues your signing<br>
+   certificate before you can sign files. If the certificate authority's<br>
+   certificate isn't already installed in your copy of Communicator, you<br>
+   typically install it by clicking the appropriate link on the certificate<br>
+   authority's web site, for example on the page from which you initiated<br>
+   enrollment for your signing certificate. This is the case for some test<br>
+   certificates, as well as certificates issued by Netscape Certificate<br>
+   Management System: you must download the CA certificate in addition to<br>
+   obtaining your own signing certificate. CA certificates for several<br>
+   certificate authorities are preinstalled in the Communicator certificate<br>
+   database.<br>
+<br>
+   When you receive an object-signing certificate for your own use, it is<br>
+   automatically installed in your copy of the Communicator client software.<br>
+   Communicator supports the public-key cryptography standard known as PKCS<br>
+   #12, which governs key portability. You can, for example, move an<br>
+   object-signing certificate and its associated private key from one<br>
+   computer to another on a credit-card-sized device called a smart card.<br>
+<br>
+Options<br>
+<br>
+   -b basename<br>
+<br>
+           Specifies the base filename for the .rsa and .sf files in the<br>
+           META-INF directory to conform with the JAR format. For example, -b<br>
+           signatures causes the files to be named signatures.rsa and<br>
+           signatures.sf. The default is signtool.<br>
+<br>
+   -c#<br>
+<br>
+           Specifies the compression level for the -J or -Z option. The<br>
+           symbol # represents a number from 0 to 9, where 0 means no<br>
+           compression and 9 means maximum compression. The higher the level<br>
+           of compression, the smaller the output but the longer the<br>
+           operation takes. If the -c# option is not used with either the -J<br>
+           or the -Z option, the default compression value used by both the<br>
+           -J and -Z options is 6.<br>
+<br>
+   -d certdir<br>
+<br>
+           Specifies your certificate database directory; that is, the<br>
+           directory in which you placed your key3.db and cert7.db files. To<br>
+           specify the current directory, use "-d." (including the period).<br>
+           The Unix version of signtool assumes ~/.netscape unless told<br>
+           otherwise. The NT version of signtool always requires the use of<br>
+           the -d option to specify where the database files are located.<br>
+<br>
+   -e extension<br>
+<br>
+           Tells signtool to sign only files with the given extension; for<br>
+           example, use -e".class" to sign only Java class files. Note that<br>
+           with Netscape Signing Tool version 1.1 and later this option can<br>
+           appear multiple times on one command line, making it possible to<br>
+           specify multiple file types or classes to include.<br>
+<br>
+   -f commandfile<br>
+<br>
+           Specifies a text file containing Netscape Signing Tool options and<br>
+           arguments in keyword=value format. All options and arguments can<br>
+           be expressed through this file. For more information about the<br>
+           syntax used with this file, see "Tips and Techniques".<br>
+<br>
+   -i scriptname<br>
+<br>
+           Specifies the name of an installer script for SmartUpdate. This<br>
+           script installs files from the JAR archive in the local system<br>
+           after SmartUpdate has validated the digital signature. For more<br>
+           details, see the description of -m that follows. The -i option<br>
+           provides a straightforward way to provide this information if you<br>
+           don't need to specify any metadata other than an installer script.<br>
+<br>
+   -j directory<br>
+<br>
+           Specifies a special JavaScript directory. This option causes the<br>
+           specified directory to be signed and tags its entries as inline<br>
+           JavaScript. This special type of entry does not have to appear in<br>
+           the JAR file itself. Instead, it is located in the HTML page<br>
+           containing the inline scripts. When you use signtool -v, these<br>
+           entries are displayed with the string NOT PRESENT.<br>
+<br>
+   -k key ... directory<br>
+<br>
+           Specifies the nickname (key) of the certificate you want to sign<br>
+           with and signs the files in the specified directory. The directory<br>
+           to sign is always specified as the last command-line argument.<br>
+           Thus, it is possible to write signtool -k MyCert -d . signdir You<br>
+           may have trouble if the nickname contains a single quotation mark.<br>
+           To avoid problems, escape the quotation mark using the escape<br>
+           conventions for your platform. It's also possible to use the -k<br>
+           option without signing any files or specifying a directory. For<br>
+           example, you can use it with the -l option to get detailed<br>
+           information about a particular signing certificate.<br>
+<br>
+   -G nickname<br>
+<br>
+           Generates a new private-public key pair and corresponding<br>
+           object-signing certificate with the given nickname. The newly<br>
+           generated keys and certificate are installed into the key and<br>
+           certificate databases in the directory specified by the -d option.<br>
+           With the NT version of Netscape Signing Tool, you must use the -d<br>
+           option with the -G option. With the Unix version of Netscape<br>
+           Signing Tool, omitting the -d option causes the tool to install<br>
+           the keys and certificate in the Communicator key and certificate<br>
+           databases. If you are installing the keys and certificate in the<br>
+           Communicator databases, you must exit Communicator before using<br>
+           this option; otherwise, you risk corrupting the databases. In all<br>
+           cases, the certificate is also output to a file named x509.cacert,<br>
+           which has the MIME-type application/x-x509-ca-cert. Unlike<br>
+           certificates normally used to sign finished code to be distributed<br>
+           over a network, a test certificate created with -G is not signed<br>
+           by a recognized certificate authority. Instead, it is self-signed.<br>
+           In addition, a single test signing certificate functions as both<br>
+           an object-signing certificate and a CA. When you are using it to<br>
+           sign objects, it behaves like an object-signing certificate. When<br>
+           it is imported into browser software such as Communicator, it<br>
+           behaves like an object-signing CA and cannot be used to sign<br>
+           objects. The -G option is available in Netscape Signing Tool 1.0<br>
+           and later versions only. By default, it produces only RSA<br>
+           certificates with 1024-byte keys in the internal token. However,<br>
+           you can use the -s option specify the required key size and the -t<br>
+           option to specify the token. For more information about the use of<br>
+           the -G option, see "Generating Test Object-Signing<br>
+           Certificates""Generating Test Object-Signing Certificates" on page<br>
+           1241.<br>
+<br>
+   -l<br>
+<br>
+           Lists signing certificates, including issuing CAs. If any of your<br>
+           certificates are expired or invalid, the list will so specify.<br>
+           This option can be used with the -k option to list detailed<br>
+           information about a particular signing certificate. The -l option<br>
+           is available in Netscape Signing Tool 1.0 and later versions only.<br>
+<br>
+   -J<br>
+<br>
+           Signs a directory of HTML files containing JavaScript and creates<br>
+           as many archive files as are specified in the HTML tags. Even if<br>
+           signtool creates more than one archive file, you need to supply<br>
+           the key database password only once. The -J option is available<br>
+           only in Netscape Signing Tool 1.0 and later versions. The -J<br>
+           option cannot be used at the same time as the -Z option. If the<br>
+           -c# option is not used with the -J option, the default compression<br>
+           value is 6. Note that versions 1.1 and later of Netscape Signing<br>
+           Tool correctly recognizes the CODEBASE attribute, allows paths to<br>
+           be expressed for the CLASS and SRC attributes instead of filenames<br>
+           only, processes LINK tags and parses HTML correctly, and offers<br>
+           clearer error messages.<br>
+<br>
+   -L<br>
+<br>
+           Lists the certificates in your database. An asterisk appears to<br>
+           the left of the nickname for any certificate that can be used to<br>
+           sign objects with signtool.<br>
+<br>
+   --leavearc<br>
+<br>
+           Retains the temporary .arc (archive) directories that the -J<br>
+           option creates. These directories are automatically erased by<br>
+           default. Retaining the temporary directories can be an aid to<br>
+           debugging.<br>
+<br>
+   -m metafile<br>
+<br>
+           Specifies the name of a metadata control file. Metadata is signed<br>
+           information attached either to the JAR archive itself or to files<br>
+           within the archive. This metadata can be any ASCII string, but is<br>
+           used mainly for specifying an installer script. The metadata file<br>
+           contains one entry per line, each with three fields: field #1:<br>
+           file specification, or + if you want to specify global metadata<br>
+           (that is, metadata about the JAR archive itself or all entries in<br>
+           the archive) field #2: the name of the data you are specifying;<br>
+           for example: Install-Script field #3: data corresponding to the<br>
+           name in field #2 For example, the -i option uses the equivalent of<br>
+           this line: + Install-Script: script.js This example associates a<br>
+           MIME type with a file: movie.qt MIME-Type: video/quicktime For<br>
+           information about the way installer script information appears in<br>
+           the manifest file for a JAR archive, see The JAR Format on<br>
+           Netscape DevEdge.<br>
+<br>
+   -M<br>
+<br>
+           Lists the PKCS #11 modules available to signtool, including smart<br>
+           cards. The -M option is available in Netscape Signing Tool 1.0 and<br>
+           later versions only. For information on using Netscape Signing<br>
+           Tool with smart cards, see "Using Netscape Signing Tool with Smart<br>
+           Cards". For information on using the -M option to verify<br>
+           FIPS-140-1 validated mode, see "Netscape Signing Tool and<br>
+           FIPS-140-1".<br>
+<br>
+   --norecurse<br>
+<br>
+           Blocks recursion into subdirectories when signing a directory's<br>
+           contents or when parsing HTML.<br>
+<br>
+   -o<br>
+<br>
+           Optimizes the archive for size. Use this only if you are signing<br>
+           very large archives containing hundreds of files. This option<br>
+           makes the manifest files (required by the JAR format) considerably<br>
+           smaller, but they contain slightly less information.<br>
+<br>
+   --outfile outputfile<br>
+<br>
+           Specifies a file to receive redirected output from Netscape<br>
+           Signing Tool.<br>
+<br>
+   -p password<br>
+<br>
+           Specifies a password for the private-key database. Note that the<br>
+           password entered on the command line is displayed as plain text.<br>
+<br>
+   -s keysize<br>
+<br>
+           Specifies the size of the key for generated certificate. Use the<br>
+           -M option to find out what tokens are available. The -s option can<br>
+           be used with the -G option only.<br>
+<br>
+   -t token<br>
+<br>
+           Specifies which available token should generate the key and<br>
+           receive the certificate. Use the -M option to find out what tokens<br>
+           are available. The -t option can be used with the -G option only.<br>
+<br>
+   -v archive<br>
+<br>
+           Displays the contents of an archive and verifies the cryptographic<br>
+           integrity of the digital signatures it contains and the files with<br>
+           which they are associated. This includes checking that the<br>
+           certificate for the issuer of the object-signing certificate is<br>
+           listed in the certificate database, that the CA's digital<br>
+           signature on the object-signing certificate is valid, that the<br>
+           relevant certificates have not expired, and so on.<br>
+<br>
+   --verbosity value<br>
+<br>
+           Sets the quantity of information Netscape Signing Tool generates<br>
+           in operation. A value of 0 (zero) is the default and gives full<br>
+           information. A value of -1 suppresses most messages, but not error<br>
+           messages.<br>
+<br>
+   -w archive<br>
+<br>
+           Displays the names of signers of any files in the archive.<br>
+<br>
+   -x directory<br>
+<br>
+           Excludes the specified directory from signing. Note that with<br>
+           Netscape Signing Tool version 1.1 and later this option can appear<br>
+           multiple times on one command line, making it possible to specify<br>
+           several particular directories to exclude.<br>
+<br>
+   -z<br>
+<br>
+           Tells signtool not to store the signing time in the digital<br>
+           signature. This option is useful if you want the expiration date<br>
+           of the signature checked against the current date and time rather<br>
+           than the time the files were signed.<br>
+<br>
+   -Z jarfile<br>
+<br>
+           Creates a JAR file with the specified name. You must specify this<br>
+           option if you want signtool to create the JAR file; it does not do<br>
+           so automatically. If you don't specify -Z, you must use an<br>
+           external ZIP tool to create the JAR file. The -Z option cannot be<br>
+           used at the same time as the -J option. If the -c# option is not<br>
+           used with the -Z option, the default compression value is 6.<br>
+<br>
+The Command File Format<br>
+<br>
+   Entries in a Netscape Signing Tool command file have this general format:<br>
+   keyword=value Everything before the = sign on a single line is a keyword,<br>
+   and everything from the = sign to the end of line is a value. The value<br>
+   may include = signs; only the first = sign on a line is interpreted. Blank<br>
+   lines are ignored, but white space on a line with keywords and values is<br>
+   assumed to be part of the keyword (if it comes before the equal sign) or<br>
+   part of the value (if it comes after the first equal sign). Keywords are<br>
+   case insensitive, values are generally case sensitive. Since the = sign<br>
+   and newline delimit the value, it should not be quoted.<br>
+<br>
+   Subsection<br>
+<br>
+   basename<br>
+<br>
+           Same as -b option.<br>
+<br>
+   compression<br>
+<br>
+           Same as -c option.<br>
+<br>
+   certdir<br>
+<br>
+           Same as -d option.<br>
+<br>
+   extension<br>
+<br>
+           Same as -e option.<br>
+<br>
+   generate<br>
+<br>
+           Same as -G option.<br>
+<br>
+   installscript<br>
+<br>
+           Same as -i option.<br>
+<br>
+   javascriptdir<br>
+<br>
+           Same as -j option.<br>
+<br>
+   htmldir<br>
+<br>
+           Same as -J option.<br>
+<br>
+   certname<br>
+<br>
+           Nickname of certificate, as with -k and -l -k options.<br>
+<br>
+   signdir<br>
+<br>
+           The directory to be signed, as with -k option.<br>
+<br>
+   list<br>
+<br>
+           Same as -l option. Value is ignored, but = sign must be present.<br>
+<br>
+   listall<br>
+<br>
+           Same as -L option. Value is ignored, but = sign must be present.<br>
+<br>
+   metafile<br>
+<br>
+           Same as -m option.<br>
+<br>
+   modules<br>
+<br>
+           Same as -M option. Value is ignored, but = sign must be present.<br>
+<br>
+   optimize<br>
+<br>
+           Same as -o option. Value is ignored, but = sign must be present.<br>
+<br>
+   password<br>
+<br>
+           Same as -p option.<br>
+<br>
+   keysize<br>
+<br>
+           Same as -s option.<br>
+<br>
+   token<br>
+<br>
+           Same as -t option.<br>
+<br>
+   verify<br>
+<br>
+           Same as -v option.<br>
+<br>
+   who<br>
+<br>
+           Same as -w option.<br>
+<br>
+   exclude<br>
+<br>
+           Same as -x option.<br>
+<br>
+   notime<br>
+<br>
+           Same as -z option. value is ignored, but = sign must be present.<br>
+<br>
+   jarfile<br>
+<br>
+           Same as -Z option.<br>
+<br>
+   outfile<br>
+<br>
+           Name of a file to which output and error messages will be<br>
+           redirected. This option has no command-line equivalent.<br>
+<br>
+Extended Examples<br>
+<br>
+   The following example will do this and that<br>
+<br>
+   Listing Available Signing Certificates<br>
+<br>
+   You use the -L option to list the nicknames for all available certificates<br>
+   and check which ones are signing certificates.<br>
+<br>
+ signtool -L<br>
+<br>
+ using certificate directory: /u/jsmith/.netscape<br>
+ S Certificates<br>
+ - ------------<br>
+   BBN Certificate Services CA Root 1<br>
+   IBM World Registry CA<br>
+   VeriSign Class 1 CA - Individual Subscriber - VeriSign, Inc.<br>
+   GTE CyberTrust Root CA<br>
+   Uptime Group Plc. Class 4 CA<br>
+ * Verisign Object Signing Cert<br>
+   Integrion CA<br>
+   GTE CyberTrust Secure Server CA<br>
+   AT&amp;T Directory Services<br>
+ * test object signing cert<br>
+   Uptime Group Plc. Class 1 CA<br>
+   VeriSign Class 1 Primary CA<br>
+ - ------------<br>
+<br>
+ Certificates that can be used to sign objects have *'s to their left.<br>
+<br>
+   Two signing certificates are displayed: Verisign Object Signing Cert and<br>
+   test object signing cert.<br>
+<br>
+   You use the -l option to get a list of signing certificates only,<br>
+   including the signing CA for each.<br>
+<br>
+ signtool -l<br>
+<br>
+ using certificate directory: /u/jsmith/.netscape<br>
+ Object signing certificates<br>
+ ---------------------------------------<br>
+<br>
+ Verisign Object Signing Cert<br>
+     Issued by: VeriSign, Inc. - Verisign, Inc.<br>
+     Expires: Tue May 19, 1998<br>
+ test object signing cert<br>
+     Issued by: test object signing cert (Signtool 1.0 Testing<br>
+ Certificate (960187691))<br>
+     Expires: Sun May 17, 1998<br>
+ ---------------------------------------<br>
+<br>
+   For a list including CAs, use the -L option.<br>
+<br>
+   Signing a File<br>
+<br>
+   1. Create an empty directory.<br>
+<br>
+ mkdir signdir<br>
+<br>
+   2. Put some file into it.<br>
+<br>
+ echo boo &gt; signdir/test.f<br>
+<br>
+   3. Specify the name of your object-signing certificate and sign the<br>
+   directory.<br>
+<br>
+ signtool -k MySignCert -Z testjar.jar signdir<br>
+<br>
+ using key "MySignCert"<br>
+ using certificate directory: /u/jsmith/.netscape<br>
+ Generating signdir/META-INF/manifest.mf file..<br>
+ --&gt; test.f<br>
+ adding signdir/test.f to testjar.jar<br>
+ Generating signtool.sf file..<br>
+ Enter Password or Pin for "Communicator Certificate DB":<br>
+<br>
+ adding signdir/META-INF/manifest.mf to testjar.jar<br>
+ adding signdir/META-INF/signtool.sf to testjar.jar<br>
+ adding signdir/META-INF/signtool.rsa to testjar.jar<br>
+<br>
+ tree "signdir" signed successfully<br>
+<br>
+   4. Test the archive you just created.<br>
+<br>
+ signtool -v testjar.jar<br>
+<br>
+ using certificate directory: /u/jsmith/.netscape<br>
+ archive "testjar.jar" has passed crypto verification.<br>
+            status   path<br>
+      ------------   -------------------<br>
+          verified   test.f<br>
+<br>
+   Using Netscape Signing Tool with a ZIP Utility<br>
+<br>
+   To use Netscape Signing Tool with a ZIP utility, you must have the utility<br>
+   in your path environment variable. You should use the zip.exe utility<br>
+   rather than pkzip.exe, which cannot handle long filenames. You can use a<br>
+   ZIP utility instead of the -Z option to package a signed archive into a<br>
+   JAR file after you have signed it:<br>
+<br>
+ cd signdir<br>
+<br>
+   zip -r ../myjar.jar *<br>
+   adding: META-INF/ (stored 0%)<br>
+   adding: META-INF/manifest.mf (deflated 15%)<br>
+   adding: META-INF/signtool.sf (deflated 28%)<br>
+   adding: META-INF/signtool.rsa (stored 0%)<br>
+   adding: text.txt (stored 0%)<br>
+<br>
+   Generating the Keys and Certificate<br>
+<br>
+   The signtool option -G generates a new public-private key pair and<br>
+   certificate. It takes the nickname of the new certificate as an argument.<br>
+   The newly generated keys and certificate are installed into the key and<br>
+   certificate databases in the directory specified by the -d option. With<br>
+   the NT version of Netscape Signing Tool, you must use the -d option with<br>
+   the -G option. With the Unix version of Netscape Signing Tool, omitting<br>
+   the -d option causes the tool to install the keys and certificate in the<br>
+   Communicator key and certificate databases. In all cases, the certificate<br>
+   is also output to a file named x509.cacert, which has the MIME-type<br>
+   application/x-x509-ca-cert.<br>
+<br>
+   Certificates contain standard information about the entity they identify,<br>
+   such as the common name and organization name. Netscape Signing Tool<br>
+   prompts you for this information when you run the command with the -G<br>
+   option. However, all of the requested fields are optional for test<br>
+   certificates. If you do not enter a common name, the tool provides a<br>
+   default name. In the following example, the user input is in boldface:<br>
+<br>
+ signtool -G MyTestCert<br>
+<br>
+ using certificate directory: /u/someuser/.netscape<br>
+ Enter certificate information. All fields are optional. Acceptable<br>
+ characters are numbers, letters, spaces, and apostrophes.<br>
+ certificate common name: Test Object Signing Certificate<br>
+ organization: Netscape Communications Corp.<br>
+ organization unit: Server Products Division<br>
+ state or province: California<br>
+ country (must be exactly 2 characters): US<br>
+ username: someuser<br>
+ email address: <a class=" link-mailto" href="mailto:someuser@netscape.com">someuser@netscape.com</a><br>
+ Enter Password or Pin for "Communicator Certificate DB": [Password will not echo]<br>
+ generated public/private key pair<br>
+ certificate request generated<br>
+ certificate has been signed<br>
+ certificate "MyTestCert" added to database<br>
+ Exported certificate to x509.raw and x509.cacert.<br>
+<br>
+   The certificate information is read from standard input. Therefore, the<br>
+   information can be read from a file using the redirection operator (&lt;) in<br>
+   some operating systems. To create a file for this purpose, enter each of<br>
+   the seven input fields, in order, on a separate line. Make sure there is a<br>
+   newline character at the end of the last line. Then run signtool with<br>
+   standard input redirected from your file as follows:<br>
+<br>
+ signtool -G MyTestCert inputfile<br>
+<br>
+   The prompts show up on the screen, but the responses will be automatically<br>
+   read from the file. The password will still be read from the console<br>
+   unless you use the -p option to give the password on the command line.<br>
+<br>
+   Using the -M Option to List Smart Cards<br>
+<br>
+   You can use the -M option to list the PKCS #11 modules, including smart<br>
+   cards, that are available to signtool:<br>
+<br>
+ signtool -d "c:\netscape\users\jsmith" -M<br>
+<br>
+ using certificate directory: c:\netscape\users\username<br>
+ Listing of PKCS11 modules<br>
+ -----------------------------------------------<br>
+         1. Netscape Internal PKCS #11 Module<br>
+                           (this module is internally loaded)<br>
+                           slots: 2 slots attached<br>
+                           status: loaded<br>
+           slot: Communicator Internal Cryptographic Services Version 4.0<br>
+          token: Communicator Generic Crypto Svcs<br>
+           slot: Communicator User Private Key and Certificate Services<br>
+          token: Communicator Certificate DB<br>
+         2. CryptOS<br>
+                           (this is an external module)<br>
+  DLL name: core32<br>
+          slots: 1 slots attached<br>
+         status: loaded<br>
+           slot: Litronic 210<br>
+          token:<br>
+         -----------------------------------------------<br>
+<br>
+   Using Netscape Signing Tool and a Smart Card to Sign Files<br>
+<br>
+   The signtool command normally takes an argument of the -k option to<br>
+   specify a signing certificate. To sign with a smart card, you supply only<br>
+   the fully qualified name of the certificate.<br>
+<br>
+   To see fully qualified certificate names when you run Communicator, click<br>
+   the Security button in Navigator, then click Yours under Certificates in<br>
+   the left frame. Fully qualified names are of the format smart<br>
+   card:certificate, for example "MyCard:My Signing Cert". You use this name<br>
+   with the -k argument as follows:<br>
+<br>
+ signtool -k "MyCard:My Signing Cert" directory<br>
+<br>
+   Verifying FIPS Mode<br>
+<br>
+   Use the -M option to verify that you are using the FIPS-140-1 module.<br>
+<br>
+ signtool -d "c:\netscape\users\jsmith" -M<br>
+<br>
+ using certificate directory: c:\netscape\users\jsmith<br>
+ Listing of PKCS11 modules<br>
+ -----------------------------------------------<br>
+   1. Netscape Internal PKCS #11 Module<br>
+           (this module is internally loaded)<br>
+           slots: 2 slots attached<br>
+           status: loaded<br>
+     slot: Communicator Internal Cryptographic Services Version 4.0<br>
+    token: Communicator Generic Crypto Svcs<br>
+     slot: Communicator User Private Key and Certificate Services<br>
+    token: Communicator Certificate DB<br>
+ -----------------------------------------------<br>
+<br>
+   This Unix example shows that Netscape Signing Tool is using a FIPS-140-1<br>
+   module:<br>
+<br>
+ signtool -d "c:\netscape\users\jsmith" -M<br>
+ using certificate directory: c:\netscape\users\jsmith<br>
+ Enter Password or Pin for "Communicator Certificate DB": [password will not echo]<br>
+ Listing of PKCS11 modules<br>
+ -----------------------------------------------<br>
+ 1. Netscape Internal FIPS PKCS #11 Module<br>
+ (this module is internally loaded)<br>
+ slots: 1 slots attached<br>
+ status: loaded<br>
+ slot: Netscape Internal FIPS-140-1 Cryptographic Services<br>
+ token: Communicator Certificate DB<br>
+ -----------------------------------------------<br>
+<br>
+See Also<br>
+<br>
+   signver (1)<br>
+<br>
+   The NSS wiki has information on the new database design and how to<br>
+   configure applications to use it.<br>
+<br>
+     o <a class=" link-https" href="https://wiki.mozilla.org/NSS_Shared_DB_Howto">https://wiki.mozilla.org/NSS_Shared_DB_Howto</a><br>
+<br>
+     o <a class=" link-https" href="https://wiki.mozilla.org/NSS_Shared_DB">https://wiki.mozilla.org/NSS_Shared_DB</a><br>
+<br>
+Additional Resources<br>
+<br>
+   For information about NSS and other tools related to NSS (like JSS), check<br>
+   out the NSS project wiki at<br>
+   [1]<a class=" external" href="https://www.mozilla.org/projects/security/pki/nss/">http://www.mozilla.org/projects/security/pki/nss/</a>. The NSS site relates<br>
+   directly to NSS code changes and releases.<br>
+<br>
+   Mailing lists: <a class=" link-https" href="https://lists.mozilla.org/listinfo/dev-tech-crypto">https://lists.mozilla.org/listinfo/dev-tech-crypto</a><br>
+<br>
+   IRC: Freenode at #dogtag-pki<br>
+<br>
+Authors<br>
+<br>
+   The NSS tools were written and maintained by developers with Netscape, Red<br>
+   Hat, and Sun.<br>
+<br>
+   Authors: Elio Maldonado &lt;<a class=" link-mailto" href="mailto:emaldona@redhat.com">emaldona@redhat.com</a>&gt;, Deon Lackey<br>
+   &lt;<a class=" link-mailto" href="mailto:dlackey@redhat.com">dlackey@redhat.com</a>&gt;.<br>
+<br>
+Copyright<br>
+<br>
+   (c) 2010, Red Hat, Inc. Licensed under the GNU Public License version 2.<br>
+<br>
+References<br>
+<br>
+   Visible links<br>
+   1. <a class=" external" href="https://www.mozilla.org/projects/security/pki/nss/">http://www.mozilla.org/projects/security/pki/nss/</a></p>

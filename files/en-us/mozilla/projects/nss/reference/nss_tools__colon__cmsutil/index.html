@@ -1,0 +1,110 @@
+---
+title: 'NSS tools : cmsutil'
+slug: 'Mozilla/Projects/NSS/Reference/NSS_tools_:_cmsutil'
+---
+<p>Name</p>
+<p>cmsutil — Performs basic cryptograpic operations, such as encryption and<br>
+decryption, on Cryptographic Message Syntax (CMS) messages.</p>
+<p>Synopsis</p>
+<p>cmsutil [options] <a href="arguments">arguments</a></p>
+<p>Description</p>
+<p>The cmsutil command-line uses the S/MIME Toolkit to perform basic<br>
+operations, such as encryption and decryption, on Cryptographic Message<br>
+Syntax (CMS) messages.</p>
+<p>To run cmsutil, type the command cmsutil option [arguments] where option<br>
+and arguments are combinations of the options and arguments listed in the<br>
+following section. Each command takes one option. Each option may take<br>
+zero or more arguments. To see a usage string, issue the command without<br>
+options.</p>
+<p>Options and Arguments</p>
+<p>Options</p>
+<p>Options specify an action. Option arguments modify an action. The options<br>
+and arguments for the cmsutil command are defined as follows:</p>
+<p>-D</p>
+<p>Decode a message.</p>
+<p>-C</p>
+<p>Encrypt a message.</p>
+<p>-E</p>
+<p>Envelope a message.</p>
+<p>-O</p>
+<p>Create a certificates-only message.</p>
+<p>-S</p>
+<p>Sign a message.</p>
+<p>Arguments</p>
+<p>Option arguments modify an action and are lowercase.</p>
+<p>-c content</p>
+<p>Use this detached content (decode only).</p>
+<p>-d dbdir</p>
+<p>Specify the key/certificate database directory (default is ".")</p>
+<p>-e envfile</p>
+<p>Specify a file containing an enveloped message for a set of<br>
+recipients to which you would like to send an encrypted message.<br>
+If this is the first encrypted message for that set of recipients,<br>
+a new enveloped message will be created that you can then use for<br>
+future messages (encrypt only).</p>
+<p>-G</p>
+<p>Include a signing time attribute (sign only).</p>
+<p>-h num</p>
+<p>Generate email headers with info about CMS message (decode only).</p>
+<p>-i infile</p>
+<p>Use infile as a source of data (default is stdin).</p>
+<p>-N nickname</p>
+<p>Specify nickname of certificate to sign with (sign only).</p>
+<p>-n</p>
+<p>Suppress output of contents (decode only).</p>
+<p>-o outfile</p>
+<p>Use outfile as a destination of data (default is stdout).</p>
+<p>-P</p>
+<p>Include an S/MIME capabilities attribute.</p>
+<p>-p password</p>
+<p>Use password as key database password.</p>
+<p>-r recipient1,recipient2, ...</p>
+<p>Specify list of recipients (email addresses) for an encrypted or<br>
+enveloped message. For certificates-only message, list of<br>
+certificates to send.</p>
+<p>-T</p>
+<p>Suppress content in CMS message (sign only).</p>
+<p>-u certusage</p>
+<p>Set type of cert usage (default is certUsageEmailSigner).</p>
+<p>-Y ekprefnick</p>
+<p>Specify an encryption key preference by nickname.</p>
+<p>Usage</p>
+<p>Encrypt Example</p>
+<p>cmsutil -C [-i infile] [-o outfile] [-d dbdir] [-p password] -r "recipient1,recipient2, . . ." -e envfile</p>
+<p><br>
+Decode Example</p>
+<p>cmsutil -D [-i infile] [-o outfile] [-d dbdir] [-p password] [-c content] [-n] [-h num]</p>
+<p><br>
+Envelope Example</p>
+<p>cmsutil -E [-i infile] [-o outfile] [-d dbdir] [-p password] -r "recipient1,recipient2, ..."</p>
+<p><br>
+Certificate-only Example</p>
+<p>cmsutil -O [-i infile] [-o outfile] [-d dbdir] [-p password] -r "cert1,cert2, . . ."</p>
+<p><br>
+Sign Message Example</p>
+<p>cmsutil -S [-i infile] [-o outfile] [-d dbdir] [-p password] -N nickname[-TGP] [-Y ekprefnick]</p>
+<p><br>
+See also</p>
+<p>certutil(1)</p>
+<p>See Also</p>
+<p>Additional Resources</p>
+<p>NSS is maintained in conjunction with PKI and security-related projects<br>
+through Mozilla dn Fedora. The most closely-related project is Dogtag PKI,<br>
+with a project wiki at [1]<a class=" external" href="http://pki.fedoraproject.org/wiki/">http://pki.fedoraproject.org/wiki/</a>.</p>
+<p>For information specifically about NSS, the NSS project wiki is located at<br>
+[2]<a class=" external" href="https://www.mozilla.org/projects/security/pki/nss/">http://www.mozilla.org/projects/security/pki/nss/</a>. The NSS site relates<br>
+directly to NSS code changes and releases.</p>
+<p>Mailing lists: <a class=" link-mailto" href="mailto:pki-devel@redhat.com">pki-devel@redhat.com</a> and <a class=" link-mailto" href="mailto:pki-users@redhat.com">pki-users@redhat.com</a></p>
+<p>IRC: Freenode at #dogtag-pki</p>
+<p>Authors</p>
+<p>The NSS tools were written and maintained by developers with Netscape and<br>
+now with Red Hat.</p>
+<p>Authors: Elio Maldonado &lt;<a class=" link-mailto" href="mailto:emaldona@redhat.com">emaldona@redhat.com</a>&gt;, Deon Lackey<br>
+&lt;<a class=" link-mailto" href="mailto:dlackey@redhat.com">dlackey@redhat.com</a>&gt;.</p>
+<p>Copyright</p>
+<p>(c) 2010, Red Hat, Inc. Licensed under the GNU Public License version 2.</p>
+<p>References</p>
+<p>Visible links<br>
+1. <a class=" external" href="http://pki.fedoraproject.org/wiki/">http://pki.fedoraproject.org/wiki/</a><br>
+2. <a class=" external" href="https://www.mozilla.org/projects/security/pki/nss/">http://www.mozilla.org/projects/security/pki/nss/</a><br>
+</p>

@@ -37,9 +37,9 @@ request.open("POST", "http://foo.com/submitform.php");
 request.send(formData);
 </pre>
 
-<div class="note"><strong>Note:</strong> The fields "userfile" and "webmasterfile" both contain a file. The number assigned to the field "accountnum" is immediately converted into a string by the <a href="/en/DOM/XMLHttpRequest/FormData#append()"><code>FormData.append()</code></a> method (the field's value can be a {{ domxref("Blob") }}, {{ domxref("File") }}, or a string: <strong>if the value is neither a Blob nor a File, the value is converted to a string</strong>).</div>
+<div class="note"><strong>Note:</strong> The fields "userfile" and "webmasterfile" both contain a file. The number assigned to the field "accountnum" is immediately converted into a string by the <a href="/en-US/docs/DOM/XMLHttpRequest/FormData#append()"><code>FormData.append()</code></a> method (the field's value can be a {{ domxref("Blob") }}, {{ domxref("File") }}, or a string: <strong>if the value is neither a Blob nor a File, the value is converted to a string</strong>).</div>
 
-<p>This example builds a <code>FormData</code> instance containing values for fields named "username", "accountnum", "userfile" and "webmasterfile", then uses the <code>XMLHttpRequest</code> method <a href="/en/DOM/XMLHttpRequest#send()"><code>send()</code></a> to send the form's data. The field "webmasterfile" is a {{domxref("Blob")}}. A <code>Blob</code> object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The {{ domxref("File") }} interface is based on <code>Blob</code>, inheriting blob functionality and expanding it to support files on the user's system. In order to build a <code>Blob</code> you can invoke the {{domxref("Blob.Blob","Blob() constructor")}}.</p>
+<p>This example builds a <code>FormData</code> instance containing values for fields named "username", "accountnum", "userfile" and "webmasterfile", then uses the <code>XMLHttpRequest</code> method <a href="/en-US/docs/DOM/XMLHttpRequest#send()"><code>send()</code></a> to send the form's data. The field "webmasterfile" is a {{domxref("Blob")}}. A <code>Blob</code> object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The {{ domxref("File") }} interface is based on <code>Blob</code>, inheriting blob functionality and expanding it to support files on the user's system. In order to build a <code>Blob</code> you can invoke the {{domxref("Blob.Blob","Blob() constructor")}}.</p>
 
 <h2 id="Retrieving_a_FormData_object_from_an_HTML_form">Retrieving a FormData object from an HTML form</h2>
 
@@ -114,6 +114,10 @@ form.addEventListener('submit', function(ev) {
 
 <div class="note">
 <p><strong>Note</strong>: If you pass in a reference to the form, the <a href="/en-US/docs/Web/HTTP/Methods">request method</a> specified in the form will be used over the method specified in the open() call.</p>
+</div>
+
+<div class="warning">
+<p><strong>Warning</strong>: When using FormData to submit POST requests using {{ domxref("XMLHttpRequest") }} or the {{ domxref("Fetch_API") }} with the <code>multipart/form-data</code> Content-Type (e.g. when uploading Files and Blobs to the server), <em>do not</em> explicitly set the <a href="/en-us/docs/Web/HTTP/Headers/Content-Type"><code>Content-Type</code></a> header on the request. Doing so will prevent the browser from being able to set the Content-Type header with the boundary expression it will use to delimit form fields in the request body.</p>
 </div>
 
 <p>You can also append a {{ domxref("File") }} or {{ domxref("Blob") }} directly to the {{ domxref("FormData") }} object, like this:</p>

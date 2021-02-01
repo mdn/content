@@ -82,7 +82,7 @@ tags:
  </tbody>
 </table>
 
-<p>For more information, see <a class="external" href="http://tools.ietf.org/html/rfc3986">RFC 3986</a>, "Uniform Resource Identifier (URI): Generic Syntax", and the <a class="external" href="http://www.iana.org/assignments/uri-schemes.html">IANA URI scheme registry</a>.</p>
+<p>For more information, see <a class="external" href="https://tools.ietf.org/html/rfc3986">RFC 3986</a>, "Uniform Resource Identifier (URI): Generic Syntax", and the <a class="external" href="http://www.iana.org/assignments/uri-schemes.html">IANA URI scheme registry</a>.</p>
 
 <ul>
  <li><a href="/en-US/docs/Gecko_Plugin_API_Reference/URLs#Getting_URLs">Getting URLs</a></li>
@@ -211,8 +211,6 @@ const char *buf, NPBool file);</pre>
 
 <p>The following code posts two name-value pairs to a CGI script through HTTP. The response from the server is displayed in a new window.</p>
 
-<pre> </pre>
-
 <p class="p0" style="margin-bottom: 0pt; margin-top: 0pt;"><em>char* pPostData = "Content-Type:\tapplication/x-www-form-urlencoded\nContent-Length:\t17\n\nname=aaashun@gmail.com\n";</em></p>
 
 <p class="p0" style="margin-bottom: 0pt; margin-top: 0pt;"><em>uint32 nPostDataLen = (uint32)strlen(pPostData);</em></p>
@@ -243,7 +241,7 @@ err = NPN_PostURLNotify(instance, "mailto:fred@example.com",
 
 NULL, myLength, myData, FALSE);</pre>
 
-<p>The example starts by defining the mail message, <code>myData</code>, and its length, <code>myLength</code>. It sends <code>myData</code> and <code>myLength</code> to the mailto URL <span class="nowiki">mailto:fred@example.com</span>. The target window for displaying the message is null in the example. Normally, using a null target window causes the response to be delivered from the server to the plug-in instance in a new stream, but no response is expected for a mailto URL.</p>
+<p>The example starts by defining the mail message, <code>myData</code>, and its length, <code>myLength</code>. It sends <code>myData</code> and <code>myLength</code> to the mailto URL <code>mailto:fred@example.com</code>. The target window for displaying the message is null in the example. Normally, using a null target window causes the response to be delivered from the server to the plug-in instance in a new stream, but no response is expected for a mailto URL.</p>
 
 <p>You cannot use either of these functions to set the body or attachments of an email message.</p>
 

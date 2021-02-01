@@ -17,7 +17,7 @@ tags:
 <p>It accepts an integer as a value, with different results depending on the integer's value:</p>
 
 <ul>
- <li>A <em>negative value</em> (usually <code>tabindex="-1"</code>) means that the element is not reachable via sequential keyboard navigation, but could be focused with Javascript or visually by clicking with the mouse. It's mostly useful to create accessible widgets with JavaScript.
+ <li>A <em>negative value</em> (usually <code>tabindex="-1"</code>) means that the element is not reachable via sequential keyboard navigation, but could be focused with JavaScript or visually by clicking with the mouse. It's mostly useful to create accessible widgets with JavaScript.
 
   <div class="note">
   <p>A negative value is useful when you have off-screen content that appears on a specific event. The user won't be able to focus any element with a negative <code>tabindex</code> using the keyboard, but a script can do so by calling the <code>focus()</code> <a href="/en-US/docs/Web/API/HTMLElement/focus">method</a>.</p>
@@ -49,30 +49,11 @@ tags:
  <thead>
   <tr>
    <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
   </tr>
  </thead>
  <tbody>
   <tr>
    <td>{{SpecName('HTML WHATWG', "interaction.html#attr-tabindex", "tabindex")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from latest snapshot, {{SpecName('HTML5.1')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "editing.html#the-tabindex-attribute", "tabindex")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Snapshot of {{SpecName('HTML WHATWG')}}, no change from {{SpecName('HTML5 W3C')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "editing.html#attr-tabindex", "tabindex")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Snapshot of {{SpecName('HTML WHATWG')}}. From {{SpecName("HTML4.01")}}, the attribute is now supported on all elements (global attributes).</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'interact/forms.html#adef-tabindex', 'tabindex')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td>Only supported on {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.</td>
   </tr>
  </tbody>
 </table>

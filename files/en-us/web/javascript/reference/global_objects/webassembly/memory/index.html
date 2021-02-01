@@ -66,7 +66,7 @@ tags:
 
 <p>By default, WebAssembly memories are unshared. You can create a <a href="/en-US/docs/WebAssembly/Understanding_the_text_format#Shared_memories">shared memory</a> by passing <code>shared: true</code> in the constructor's initialization object:</p>
 
-<pre class="notranslate">let memory = new WebAssembly.Memory({initial:10, maximum:100, shared: true});</pre>
+<pre class="brush: js notranslate">let memory = new WebAssembly.Memory({initial:10, maximum:100, shared: true});</pre>
 
 <p>This memory's <code>buffer</code> property will return a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer">SharedArrayBuffer</a></code>.</p>
 

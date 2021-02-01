@@ -113,7 +113,7 @@ engine.runRenderLoop(renderLoop);
 <p>A mesh is a way the engine creates geometric shapes, so material can be easily applied to them later on. In this case we're creating a box using the <code>Mesh.CreateBox</code> method with it's own name, a size of 2, and a declaration of which scene we want it added to.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The size or position values (e.g. for the box size) are unitless, and can basically be anything you deem suitable for your scene — milimeters, meters, feet, or miles — it's up to you.</p>
+<p><strong>Note</strong>: The size or position values (e.g. for the box size) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.</p>
 </div>
 
 <p>If you save and refresh now, your object will look like a square, because it's facing the camera. The good thing about objects is that we can move them on the scene however we want, for example rotating and scaling. Let's apply a little bit of rotation to the box, so we can see more than one face — again, add these lines below the previous one:</p>
@@ -137,7 +137,7 @@ box.material = boxMaterial;
 
 <p>Congratulations, you've created your first object in a 3D environment using Babylon.js! It was easier than you thought, right? Here's how it should look:</p>
 
-<p><img alt="Blue Babylon.js 3D box on the gray background." src="https://end3r.github.io/MDN-Games-3D/Babylon.js/img/cube.png" style="display: block; height: 490px; margin: 0px auto; width: 600px;"></p>
+<p><img alt="Blue Babylon.js 3D box on the gray background." src="cube.png" style="display: block; margin: 0px auto;"></p>
 
 <p>And here's the code we have created so far:</p>
 
@@ -169,7 +169,7 @@ torus.material = torusMaterial;
 
 <h3 id="Cylinder">Cylinder</h3>
 
-<p>Creating a cylinder and its material is done in almost exacly the same way as we did for the torus. Add the following code, again at the bottom of your script:</p>
+<p>Creating a cylinder and its material is done in almost exactly the same way as we did for the torus. Add the following code, again at the bottom of your script:</p>
 
 <pre class="brush: js">var cylinder = BABYLON.Mesh.CreateCylinder("cylinder", 2, 2, 2, 12, 1, scene);
 cylinder.position.x = 5;
@@ -183,7 +183,7 @@ cylinder.material = cylinderMaterial;
 
 <p>Here's how the scene should look right now:</p>
 
-<p><img alt="Light gray torus, blue box and yellow cylinder created with Babylon.js on the gray background." src="https://end3r.github.io/MDN-Games-3D/Babylon.js/img/shapes.png" style="display: block; height: 210px; margin: 0px auto; width: 600px;"></p>
+<p><img alt="Light gray torus, blue box and yellow cylinder created with Babylon.js on the gray background." src="shapes.png" style="display: block; margin: 0px auto;"></p>
 
 <p>This works, but it is a bit boring. In a game something is usually happening — we can see animations and such — so let's try to breathe a little life into those shapes by animating them.</p>
 

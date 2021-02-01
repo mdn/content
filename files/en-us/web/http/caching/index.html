@@ -40,7 +40,7 @@ tags:
  <li>Responses other than {{HTTPMethod("GET")}} if something suitable for use as a cache key is defined.</li>
 </ul>
 
-<p>A cache entry might also consist of multiple stored responses differentiated by a secondary key, if the request is target of content negotiation. For more details see the information about the {{HTTPHeader("Vary")}} header <a href="#Varying_responses">below</a>.</p>
+<p>A cache entry might also consist of multiple stored responses differentiated by a secondary key, if the request is target of content negotiation. For more details see the information about the {{HTTPHeader("Vary")}} header <a href="#varying_responses">below</a>.</p>
 
 <h2 id="Controlling_caching">Controlling caching</h2>
 
@@ -75,13 +75,13 @@ Cache-Control: public
 
 <p>The most important directive here is <code>max-age=&lt;seconds&gt;</code>, which is the maximum amount of time in which a resource will be considered fresh. This directive is relative to the time of the request, and overrides the {{HTTPHeader("Expires")}} header (if set). For the files in the application that will not change, you can normally use aggressive caching. This includes static files such as images, CSS files, and JavaScript files, for example.</p>
 
-<p>For more details, see also the <a href="#Freshness">Freshness</a> section below.</p>
+<p>For more details, see also the <a href="#freshness">Freshness</a> section below.</p>
 
 <pre class="notranslate">Cache-Control: max-age=31536000</pre>
 
 <h4 id="Validation">Validation</h4>
 
-<p>When using the "<code>must-revalidate</code>" directive, the cache must verify the status of the stale resources before using it and expired ones should not be used. For more details, see the <a href="#Cache_validation">Validation</a> section below.</p>
+<p>When using the "<code>must-revalidate</code>" directive, the cache must verify the status of the stale resources before using it and expired ones should not be used. For more details, see the <a href="#cache_validation">Validation</a> section below.</p>
 
 <pre class="notranslate">Cache-Control: must-revalidate</pre>
 
@@ -151,7 +151,7 @@ Cache-Control: public
 <pre class="notranslate">Vary: <code>Accept-Encoding</code>
 </pre>
 
-<div class="note"><strong>Note:</strong> Use <code>Vary</code> with care—it can easily reduce the effectiveness of caching! A caching server should use <a href="#Normalization">normalization</a> to reduce duplicated cache entries and unnecessary requests to the origin server. This is particularly true when using <code>Vary</code> with headers and header values that can have many values.</div>
+<div class="note"><strong>Note:</strong> Use <code>Vary</code> with care—it can easily reduce the effectiveness of caching! A caching server should use <a href="#normalization">normalization</a> to reduce duplicated cache entries and unnecessary requests to the origin server. This is particularly true when using <code>Vary</code> with headers and header values that can have many values.</div>
 
 <p>The <code>Vary</code> header can also be useful for serving different content to desktop and mobile users, or to allow search engines to discover the mobile version of a page (and perhaps also tell them that no <a href="https://en.wikipedia.org/wiki/Cloaking">Cloaking</a> is intended). This is usually achieved with the <code>Vary: User-Agent</code> header, and works because the {{HTTPHeader("User-Agent")}} header value is different for mobile and desktop clients.</p>
 

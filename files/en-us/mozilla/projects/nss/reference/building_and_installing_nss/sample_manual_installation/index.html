@@ -1,0 +1,19 @@
+---
+title: Sample manual installation
+slug: >-
+  Mozilla/Projects/NSS/Reference/Building_and_installing_NSS/Sample_manual_installation
+tags:
+  - NSS
+---
+<p><br>
+The NSS build system does not include a target to install header files and shared libraries in the system directories, so this needs to be done manually.
+</p><p>After building NSS with <i>"gmake nss_build_all"</i>, the resulting build can be found in the NSS source tree as follows:
+</p>
+<ul><li> NSS header files: <i>mozilla/dist/public/nss</i>
+</li><li> NSPR header files: <i>mozilla/dist/<b>&lt;OBJ-DIR&gt;</b>/include</i>
+</li><li> NSPR/NSS shared libs: <i>mozilla/dist/<b>&lt;OBJ-DIR&gt;</b>/lib</i>
+</li><li> NSS binary executables: <i>mozilla/dist/<b>&lt;OBJ-DIR&gt;</b>/bin</i>.
+</li></ul>
+<p>where <b>&lt;OBJ-DIR&gt;</b> would vary according to the type of build and the platform. For example, <b>&lt;OBJ-DIR&gt;</b> for a debug build of NSS on the x86 platform with a Linux kernel version 2.6 with glibc would be: Linux2.6_x86_glibc_PTH_DBG.OBJ
+</p><p>From these directories, you can copy the files to any system (or other) directory. If the destination directories are not what's standard for the system (e.g. /usr/include, /usr/lib and /usr/bin for a Linux system), you need to edit the corresponding environment variables or compiler/linker arguments.
+</p>

@@ -10,14 +10,14 @@ tags:
 <ul>
  <li>The method used in the request is itself <em>cacheable</em>, that is either a {{HTTPMethod("GET")}} or a {{HTTPMethod("HEAD")}} method. A response to a {{HTTPMethod("POST")}} or {{HTTPMethod("PATCH")}} request can also be cached if freshness is indicated and the {{HTTPHeader("Content-Location")}} header is set, but this is rarely implemented. (For example, Firefox does not support it per <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=109553">https://bugzilla.mozilla.org/show_bug.cgi?id=109553</a>.) Other methods, like {{HTTPMethod("PUT")}} or {{HTTPMethod("DELETE")}} are not cacheable and their result cannot be cached.</li>
  <li>The status code of the response is <em>known</em> by the application caching, and it is considered <em>cacheable</em>. The following status code are cacheable: {{HTTPStatus("200")}}, {{HTTPStatus("203")}}, {{HTTPStatus("204")}}, {{HTTPStatus("206")}}, {{HTTPStatus("300")}}, {{HTTPStatus("301")}}, {{HTTPStatus("404")}}, {{HTTPStatus("405")}}, {{HTTPStatus("410")}}, {{HTTPStatus("414")}}, and {{HTTPStatus("501")}}.</li>
- <li>There are<em> specific headers</em> in the response, like {{HTTPHeader("Cache-Control")}}, that prevents caching.</li>
+ <li>There are <em>specific headers</em> in the response, like {{HTTPHeader("Cache-Control")}}, that prevents caching.</li>
 </ul>
 
 <p>Note that some non-cacheable requests/responses to a specific URI may invalidate previously cached responses on the same URI. For example, a {{HTTPMethod("PUT")}} to pageX.html will invalidate all cached {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} requests to the same URI.</p>
 
 <p>When both, the method of the request and the status of the response, are cacheable, the response to the request can be cached:</p>
 
-<pre class="notranslate">GET /pageX.html HTTP/1.1
+<pre class="brush: plain notranslate">GET /pageX.html HTTP/1.1
 (…)
 
 200 OK
@@ -26,7 +26,7 @@ tags:
 
 <p>A {{HTTPMethod("PUT")}} request cannot be cached. Moreover, it invalidates cached data for request to the same URI done via {{HTTPMethod("HEAD")}} or {{HTTPMethod("GET")}}:</p>
 
-<pre class="notranslate">PUT /pageX.html HTTP/1.1
+<pre class="brush: plain notranslate">PUT /pageX.html HTTP/1.1
 (…)
 
 200 OK
@@ -35,14 +35,14 @@ tags:
 
 <p>A specific {{HTTPHeader("Cache-Control")}} header in the response can prevent caching:</p>
 
-<pre class="notranslate">GET /pageX.html HTTP/1.1
+<pre class="brush: plain notranslate">GET /pageX.html HTTP/1.1
 (…)
 
 200 OK
 Cache-Control: no-cache
 (…)</pre>
 
-<section class="Quick_links" id="Quick_Links">
+<section id="Quick_links">
 <ol>
  <li>General knowledge
   <ol>

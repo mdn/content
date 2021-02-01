@@ -1,0 +1,72 @@
+---
+title: NSS 3.44.1 release notes
+slug: Mozilla/Projects/NSS/NSS_3.44.1_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p>Network Security Services (NSS) 3.44.1 is a patch release for NSS 3.44. The bug fixes in NSS 3.44.1 are described in the "Bugs Fixed" section below. It was released on 21 June 2019.</p>
+
+<p>The NSS team would like to recognize first-time contributors: Greg Rubin</p>
+
+<h2 id="Distribution_Information">Distribution Information</h2>
+
+<p>The HG tag is NSS_3_44_1_RTM. NSS 3.44.1 requires NSPR 4.21 or newer.</p>
+
+<p>NSS 3.44.1 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_44_1_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_44_1_RTM/src/</a></li>
+</ul>
+
+<p>Other releases are available <a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Releases">in NSS Releases</a>.</p>
+
+<h2 id="New_in_NSS_3.44.1">New in NSS 3.44.1</h2>
+
+<h3 id="New_Functionality">New Functionality</h3>
+
+<ul>
+ <li>
+  <div><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1546229">1546229</a> - Add IPSEC IKE support to softoken</div>
+ </li>
+ <li>
+  <div>Many new FIPS test cases (Note: This has increased the source archive by approximately 50 megabytes for this release.)</div>
+ </li>
+</ul>
+
+<h2 id="Bugs_fixed_in_NSS_3.44.1">Bugs fixed in NSS 3.44.1</h2>
+
+<ul>
+ <li>
+  <div><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1554336">1554336</a> - Optimize away unneeded loop in mpi.c</div>
+ </li>
+ <li>
+  <div><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1515342">1515342</a> - More thorough input checking (<a class="bz_bug_link bz_status_RESOLVED bz_closed" href="https://bugzilla.mozilla.org/show_bug.cgi?id=CVE-2019-11729">CVE-2019-11729)</a></div>
+ </li>
+ <li>
+  <div><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1540541">1540541</a> - Don't unnecessarily strip leading 0's from key material during PKCS11 import (<a class="bz_bug_link bz_status_RESOLVED bz_closed" href="https://bugzilla.mozilla.org/show_bug.cgi?id=CVE-2019-11719">CVE-2019-11719</a>)</div>
+ </li>
+ <li>
+  <div><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1515236">1515236</a> - Add a SSLKEYLOGFILE enable/disable flag at <a href="http://build.sh">build.sh</a></div>
+ </li>
+ <li>
+  <div><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1473806">1473806</a> - Fix SECKEY_ConvertToPublicKey handling of non-RSA keys</div>
+ </li>
+ <li>
+  <div><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1546477">1546477</a> - Updates to testing for FIPS validation</div>
+ </li>
+ <li>
+  <div><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1552208">1552208</a> - Prohibit use of RSASSA-PKCS1-v1_5 algorithms in TLS 1.3 (<a class="bz_bug_link bz_status_RESOLVED bz_closed" href="https://bugzilla.mozilla.org/show_bug.cgi?id=CVE-2019-11727">CVE-2019-11727</a>)</div>
+ </li>
+ <li>
+  <div><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1551041">1551041</a> - Unbreak build on GCC &lt; 4.3 big-endian</div>
+ </li>
+</ul>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.44.1 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.44.1 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report with<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (product NSS).</p>

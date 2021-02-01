@@ -18,7 +18,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">This tutorial extends our <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> website, adding a session-based visit-counter to the home page. This is a relatively simple example, but it does show how you can use the session framework to provide persistent behaviour for anonymous users in your own sites.</p>
+<p class="summary">This tutorial extends our <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> website, adding a session-based visit-counter to the home page. This is a relatively simple example, but it does show how you can use the session framework to provide persistent behavior for anonymous users in your own sites.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -39,11 +39,11 @@ tags:
 
 <p>In a "real" library you may wish to provide individual users with a customized experience, based on their previous use of the site, preferences, etc. For example, you could hide warning messages that the user has previously acknowledged next time they visit the site, or store and respect their preferences (e.g. the number of search results that they want to be displayed on each page). </p>
 
-<p>The session framework lets you implement this sort of behaviour, allowing you to store and retrieve arbitrary data on a per-site-visitor basis. </p>
+<p>The session framework lets you implement this sort of behavior, allowing you to store and retrieve arbitrary data on a per-site-visitor basis. </p>
 
 <h2 id="What_are_sessions">What are sessions?</h2>
 
-<p>All communication between web browsers and servers is via {{Glossary("HTTP")}}, which is <em>stateless</em>. The fact that the protocol is stateless means that messages between the client and server are completely independent of each other— there is no notion of "sequence" or behaviour based on previous messages. As a result, if you want to have a site that keeps track of the ongoing relationships with a client, you need to implement that yourself.</p>
+<p>All communication between web browsers and servers is via {{Glossary("HTTP")}}, which is <em>stateless</em>. The fact that the protocol is stateless means that messages between the client and server are completely independent of each other— there is no notion of "sequence" or behavior based on previous messages. As a result, if you want to have a site that keeps track of the ongoing relationships with a client, you need to implement that yourself.</p>
 
 <p>Sessions are the mechanism used by Django (and most of the Internet) for keeping track of the "state" between the site and a particular browser. Sessions allow you to store arbitrary data per browser, and have this data available to the site whenever the browser connects. Individual data items associated with the session are then referenced by a "key", which is used both to store and retrieve the data.</p>
 
@@ -73,8 +73,9 @@ MIDDLEWARE = [
 
 <p>The code fragments below show how you can get, set, and delete some data with the key "<code>my_car</code>", associated with the current session (browser). </p>
 
-<div class="note">
-<p><strong>Note</strong>: One of the great things about Django is that you don't need to think about the mechanisms that tie the session to your current request in your view. If we were to use the fragments below in our view, we'd know that the information about <code>my_car</code> is associated only with the browser that sent the current request.</p>
+<div class="notecard note">
+    <h4>Note</h4>
+    <p>One of the great things about Django is that you don't need to think about the mechanisms that tie the session to your current request in your view. If we were to use the fragments below in our view, we'd know that the information about <code>my_car</code> is associated only with the browser that sent the current request.</p>
 </div>
 
 <pre class="brush: python notranslate"># Get a session value by its key (e.g. 'my_car'), raising a KeyError if the key is not present
@@ -105,11 +106,12 @@ request.session['my_car'] = 'mini'</pre>
 request.session['my_car']['wheels'] = 'alloy'
 
 # Set session as modified to force data updates/cookie to be saved.
-<code>request.session.modified = True</code>
+request.session.modified = True
 </pre>
 
-<div class="note">
-<p><strong>Note</strong>: You can change the behavior so the site will update the database/send cookie on every request by adding <code>SESSION_SAVE_EVERY_REQUEST = True</code> into your project settings (<strong>locallibrary/locallibrary/settings.py</strong>).</p>
+<div class="notecard note">
+    <h4>Note</h4>
+    <p>You can change the behavior so the site will update the database/send cookie on every request by adding <code>SESSION_SAVE_EVERY_REQUEST = True</code> into your project settings (<strong>locallibrary/locallibrary/settings.py</strong>).</p>
 </div>
 
 <h2 id="Simple_example_—_getting_visit_counts">Simple example — getting visit counts</h2>
@@ -140,8 +142,9 @@ request.session['my_car']['wheels'] = 'alloy'
 
 <p>Here we first get the value of the <code>'num_visits'</code> session key, setting the value to 1 if it has not previously been set. Each time a request is received, we then increment the value and store it back in the session (for the next time the user visits the page). The <code>num_visits</code> variable is then passed to the template in our context variable.</p>
 
-<div class="note">
-<p><strong>Note</strong>: We might also test whether cookies are even supported in the browser here (see <a href="https://docs.djangoproject.com/en/3.1/topics/http/sessions/">How to use sessions</a> for examples) or design our UI so that it doesn't matter whether or not cookies are supported.</p>
+<div class="notecard note">
+    <h4>Note</h4>
+    <p>We might also test whether cookies are even supported in the browser here (see <a href="https://docs.djangoproject.com/en/3.1/topics/http/sessions/">How to use sessions</a> for examples) or design our UI so that it doesn't matter whether or not cookies are supported.</p>
 </div>
 
 <p>Add the line seen at the bottom of the following block to your main HTML template (<strong>/locallibrary/catalog/templates/index.html</strong>) at the bottom of the "Dynamic content" section to display the context variable:</p>
@@ -160,9 +163,6 @@ request.session['my_car']['wheels'] = 'alloy'
 </pre>
 
 <p>Save your changes and restart the test server. Every time you refresh the page, the number should update.</p>
-
-<ul>
-</ul>
 
 <h2 id="Summary">Summary</h2>
 

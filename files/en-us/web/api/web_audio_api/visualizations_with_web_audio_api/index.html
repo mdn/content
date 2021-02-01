@@ -85,12 +85,12 @@ var dataArray = new Uint8Array(bufferLength);</pre>
 
 <pre class="brush: js">analyser.getByteTimeDomainData(dataArray);</pre>
 
-<p>Next, fill the canvas with a solid colour to start</p>
+<p>Next, fill the canvas with a solid color to start</p>
 
 <pre class="brush: js">canvasCtx.fillStyle = 'rgb(200, 200, 200)';
 canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);</pre>
 
-<p>Set a line width and stroke colour for the wave we will draw, then begin drawing a path</p>
+<p>Set a line width and stroke color for the wave we will draw, then begin drawing a path</p>
 
 <pre class="brush: js">canvasCtx.lineWidth = 2;
 canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
@@ -162,7 +162,7 @@ canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);</pre>
 var barHeight;
 var x = 0;</pre>
 
-<p>As before, we now start a for loop and cycle through each value in the <code>dataArray</code>. For each one, we make the <code>barHeight</code> equal to the array value, set a fill colour based on the <code>barHeight</code> (taller bars are brighter), and draw a bar at <code>x</code> pixels across the canvas, which is <code>barWidth</code> wide and <code>barHeight/2</code> tall (we eventually decided to cut each bar in half so they would all fit on the canvas better.)</p>
+<p>As before, we now start a for loop and cycle through each value in the <code>dataArray</code>. For each one, we make the <code>barHeight</code> equal to the array value, set a fill color based on the <code>barHeight</code> (taller bars are brighter), and draw a bar at <code>x</code> pixels across the canvas, which is <code>barWidth</code> wide and <code>barHeight/2</code> tall (we eventually decided to cut each bar in half so they would all fit on the canvas better.)</p>
 
 <p>The one value that needs explaining is the vertical offset position we are drawing each bar at: <code>HEIGHT-barHeight/2</code>. I am doing this because I want each bar to stick up from the bottom of the canvas, not down from the top, as it would if we set the vertical position to 0. Therefore, we instead set the vertical position each time to the height of the canvas minus <code>barHeight/2</code>, so therefore each bar will be drawn from partway down the canvas, down to the bottom.</p>
 

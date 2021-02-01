@@ -26,42 +26,24 @@ tags:
 <dl>
  <dt>{{domxref("Animation.currentTime")}}</dt>
  <dd>The current time value of the animation in milliseconds, whether running or paused. If the animation lacks a {{domxref("AnimationTimeline", "timeline")}}, is inactive or hasn't been played yet, its value is <code>null</code>.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Animation.effect")}}</dt>
  <dd>Gets and sets the {{domxref("AnimationEffectReadOnly")}} associated with this animation. This will usually be a {{domxref("KeyframeEffect")}} object.</dd>
  <dt>{{domxref("Animation.finished")}} {{readOnlyInline}}</dt>
  <dd>Returns the current finished Promise for this animation.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Animation.id")}}</dt>
  <dd>Gets and sets the <code>String</code> used to identify the animation.</dd>
  <dt>{{domxref("Animation.pending")}} {{readonlyinline}}</dt>
  <dd>Indicates whether the animation is currently waiting for an asynchronous operation such as initiating playback or pausing a running animation.</dd>
  <dt>{{domxref("Animation.playState")}} {{readOnlyInline}}</dt>
  <dd>Returns an enumerated value describing the playback state of an animation.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Animation.playbackRate")}}</dt>
  <dd>Gets or sets the playback rate of the animation.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Animation.ready")}} {{readOnlyInline}}</dt>
  <dd>Returns the current ready Promise for this animation.</dd>
  <dt>{{domxref("animation.replaceState")}}</dt>
  <dd>Returns the replace state of the animation. This will be <code>active</code> if the animation has been replaced, or <code>persisted</code> if {{domxref("Animation.persist()")}} has been invoked on it.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Animation.startTime")}}</dt>
  <dd>Gets or sets the scheduled time when an animation's playback should begin.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Animation.timeline")}}</dt>
  <dd>Gets or sets the {{domxref("AnimationTimeline", "timeline")}} associated with this animation.</dd>
 </dl>
@@ -84,26 +66,14 @@ tags:
  <dd>Clears all {{domxref("KeyframeEffect", "keyframeEffects")}} caused by this animation and aborts its playback.</dd>
  <dt>{{domxref("animation.commitStyles()")}}</dt>
  <dd>Commits the end styling state of an animation to the element being animated, even after that animation has been removed. It will cause the end styling state to be written to the element being animated, in the form of properties inside a <code>style</code> attribute.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Animation.finish()")}}</dt>
  <dd>Seeks either end of an animation, depending on whether the animation is playing or reversing.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Animation.pause()")}}</dt>
  <dd>Suspends playing of an animation.</dd>
  <dt>{{domxref("animation.persist()")}}</dt>
  <dd>Explicitly persists an animation, when it would otherwise be removed due to the browser's {{anch("Automatically removing filling animations")}} behavior.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Animation.play()")}}</dt>
  <dd>Starts or resumes playing of an animation, or begins the animation again if it previously finished.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Animation.reverse()")}}</dt>
  <dd>Reverses playback direction, stopping at the start of the animation. If the animation is finished or unplayed, it will play from end to beginning.</dd>
  <dt>{{domxref("Animation.updatePlaybackRate()")}}</dt>

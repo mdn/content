@@ -1,0 +1,31 @@
+---
+title: NSS 3.14.4 release notes
+slug: Mozilla/Projects/NSS/NSS_3.14.4_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+<p>Network Security Services (NSS) 3.14.4 is a patch release for NSS 3.14. The bug fixes in NSS 3.14.4 are described in the "Bugs Fixed" section below.</p>
+<h2 id="Distribution_Information">Distribution Information</h2>
+<p>The CVS tag is NSS_3_14_4_RTM. NSS 3.14.4 requires NSPR 4.9.5 or newer.</p>
+<p>NSS 3.14.4 source distributions are also available on ftp.mozilla.org for secure HTTPS download:</p>
+<ul>
+  <li>Source tarballs:<br>
+    <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_14_4_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_14_4_RTM/src/</a></li>
+</ul>
+<h2 id="Security_Advisories">Security Advisories</h2>
+<p>The following security-relevant bugs have been resolved in NSS 3.14.4. Users are encouraged to upgrade immediately.</p>
+<ul>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=894370">Bug 894370</a> - (CVE-2013-1739) Avoid uninitialized data read in the event of a decryption failure.</li>
+</ul>
+<h2 id="New_in_NSS_3.14.4">New in NSS 3.14.4</h2>
+<h3 id="New_Functionality">New Functionality</h3>
+<ul>
+  <li>No new major functionality is introduced in this release. This release is a patch release to address <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1739">CVE-2013-1739</a>.</li>
+</ul>
+<h3 id="Bugs_fixed_in_NSS_3.14.4">Bugs fixed in NSS 3.14.4</h3>
+<ul>
+  <li><a href="https://bugzilla.mozilla.org/buglist.cgi?bug_id=894370%2C832942%2C863947&amp;bug_id_type=anyexact&amp;list_id=8338081&amp;resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS">https://bugzilla.mozilla.org/buglist.cgi?bug_id=894370%2C832942%2C863947&amp;bug_id_type=anyexact&amp;list_id=8338081&amp;resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS</a></li>
+</ul>
+<h2 id="Compatibility">Compatibility</h2>
+<p>NSS 3.14.4 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.14.4 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+<h2 id="Feedback">Feedback</h2>
+<p>Bugs discovered should be reported by filing a bug report with<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (product NSS).</p>

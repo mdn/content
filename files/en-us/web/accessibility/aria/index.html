@@ -11,7 +11,7 @@ tags:
 <p><span class="seoSummary">It supplements HTML so that interactions and widgets commonly used in applications can be passed to assistive technologies</span> when there is not otherwise a mechanism. For example, ARIA enables accessible navigation landmarks in HTML4, JavaScript widgets, form hints and error messages, live content updates, and more. </p>
 
 <div class="warning">
-<p>Many of these widgets were later incorporated into HTML5, and <strong>developers should prefer using the correct semantic HTML element over using ARIA</strong>, if such an element exists. For instance, native elements have built-in <a href="/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets">keyboard accessibility</a>, roles and states. However, if you choose to use ARIA, you are responsible for mimicking (the equivalent) browser behaviour in script.</p>
+<p>Many of these widgets were later incorporated into HTML5, and <strong>developers should prefer using the correct semantic HTML element over using ARIA</strong>, if such an element exists. For instance, native elements have built-in <a href="/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets">keyboard accessibility</a>, roles and states. However, if you choose to use ARIA, you are responsible for mimicking (the equivalent) browser behavior in script.</p>
 </div>
 
 <p>Here's the markup for a progress bar widget:</p>
@@ -54,13 +54,12 @@ function updateProgress(percentComplete) {
 
 <p>It is also important to test your authored ARIA with actual assistive technology. Much as how browser emulators and simulators are not an effective solution for testing full support, proxy assistive technology solutions aren't sufficient to fully guarantee functionality.</p>
 
-<section id="sect1">
 <div class="row topicpage-table">
 <div class="section">
 <h2 class="Documentation" id="Tutorials">Tutorials</h2>
 
 <dl>
- <dt><a href="/en-US/docs/Accessibility/An_overview_of_accessible_web_applications_and_widgets">Introduction to ARIA</a></dt>
+ <dt><a href="/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets">Introduction to ARIA</a></dt>
  <dd>A quick introduction to making dynamic content accessible with ARIA. See also the classic <a class="external" href="http://dev.opera.com/articles/view/introduction-to-wai-aria/">ARIA intro by Gez Lemon</a>, from 2008.</dd>
  <dt><a class="external" href="http://zomigi.com/blog/videos-of-screen-readers-using-aria-updated/">Videos of screen readers using ARIA</a></dt>
  <dd>See both real and simplified examples from around the web, including "before" and "after" ARIA videos.</dd>
@@ -73,7 +72,7 @@ function updateProgress(percentComplete) {
 <dl>
  <dt><a class="external" href="https://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/">Enhancing page navigation with ARIA landmarks</a></dt>
  <dd>A nice intro to using ARIA landmarks to improve web page navigation for screen reader users. <a class="external" href="http://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/">See also, ARIA landmark implementation notes</a> and examples on real sites (updated as of July 2011).</dd>
- <dt><a href="/en-US/docs/ARIA/forms">Improving form accessibility</a></dt>
+ <dt><a href="/en-US/docs/Web/Accessibility/ARIA/forms">Improving form accessibility</a></dt>
  <dd>ARIA is not just for dynamic content! Learn how to improve accessibility of HTML forms using additional ARIA attributes.</dd>
 </dl>
 
@@ -82,7 +81,7 @@ function updateProgress(percentComplete) {
 <dl>
  <dt><a href="/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets">Writing keyboard-navigable JavaScript widgets</a></dt>
  <dd>Built-in elements like &lt;input&gt;, &lt;button&gt; etc have built-in keyboard accessibility. If you 'fake' these with &lt;div&gt;s and ARIA, you must ensure your widgets are keyboard accessible.</dd>
- <dt><a href="/en-US/docs/Accessibility/ARIA/ARIA_Live_Regions" title="Live Regions">Live regions</a></dt>
+ <dt><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">Live regions</a></dt>
  <dd>Live regions provide suggestions to screen readers about how to handle changes to the contents of a page.</dd>
  <dt><a class="external" href="http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm">Using ARIA Live Regions to announce content changes</a></dt>
  <dd>A quick summary of live regions, by the makers of JAWS screen reader software. Live regions are also supported by NVDA with Firefox, and VoiceOver with Safari.</dd>
@@ -116,18 +115,17 @@ function updateProgress(percentComplete) {
 
 <h2 id="Filing_Bugs">Filing Bugs</h2>
 
-<p><a href="/en/Accessibility/ARIA/How_to_file_ARIA-related_bugs">File ARIA bugs on browsers, screen readers, and JavaScript libraries.</a></p>
+<p><a href="/en-US/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">File ARIA bugs on browsers, screen readers, and JavaScript libraries.</a></p>
 </div>
 </div>
-</section>
 
 <h2 id="Related_Topics">Related topics</h2>
 
-<p><a href="/en-US/docs/Accessibility">Accessibility</a>, <a href="/en-US/docs/AJAX">AJAX</a>, <a href="/en-US/docs/Web/JavaScript">JavaScript</a></p>
+<p><a href="/en-US/docs/Web/Accessibility">Accessibility</a>, <a href="/en-US/docs/Web/Guide/AJAX">AJAX</a>, <a href="/en-US/docs/Web/JavaScript">JavaScript</a></p>
 
-<section id="Quick_Links">
+<section id="Quick_links">
 <ol>
- <li><a href="/en-US/docs/Web/Guide" title="REDIRECT Web">Web Development</a></li>
- <li><a href="/en-US/docs/Mozilla/Accessibility" title="Accessibility is the idea that software (among other things) should be designed to be usable and, as much as possible, convenient to use for people with disabilities. Mozilla strives to make its software accessible; the documents below cover the ways in which we do so.">Accessibility and Mozilla</a></li>
+ <li><a href="/en-US/docs/Web/Guide">Web Development</a></li>
+ <li><a href="/en-US/docs/Mozilla/Accessibility">Accessibility and Mozilla</a></li>
 </ol>
 </section>

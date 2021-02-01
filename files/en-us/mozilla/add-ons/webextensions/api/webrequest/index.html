@@ -17,7 +17,7 @@ tags:
 
 <p>Each event is fired at a particular stage of the request. The typical sequence of events is like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13376/webRequest-flow.png" style="display: block; height: 680px; margin-left: auto; margin-right: auto; width: 624px;"></p>
+<p><img alt="" src="webrequest-flow.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} can be fired at any time during the request. Also, note that sometimes the sequence of events may differ from this: for example, in Firefox, on an <a href="/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">HSTS</a> upgrade, the <code>onBeforeRedirect</code> event will be triggered immediately after <code>onBeforeRequest</code>.</p>
 
@@ -31,7 +31,7 @@ tags:
 
 <p>The listener function is passed a <code>details</code> object containing information about the request. This includes a request ID, which is provided to enable an add-on to correlate events associated with a single request. It is unique within a browser session and the add-on's context. It stays the same throughout a request, even across redirections and authentication exchanges.</p>
 
-<p>To use the <code>webRequest</code> API for a given host, an extension must have the <code>"webRequest"</code> <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a> and the <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission </a>for that host. To use the <code>"blocking"</code> feature, the extension must also have the <code>"webRequestBlocking"</code> API permission.</p>
+<p>To use the <code>webRequest</code> API for a given host, an extension must have the <code>"webRequest"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a> and the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permission </a>for that host. To use the <code>"blocking"</code> feature, the extension must also have the <code>"webRequestBlocking"</code> API permission.</p>
 
 <p>To intercept resources loaded by a page (such as images, scripts, or stylesheets), the extension must have the host permission for the resource as well as for the main page requesting the resource. For example, if a page at <code>https://developer.mozilla.org</code> loads an image from <code>https://mdn.mozillademos.org</code>, then an extension must have both host permissions if it is to intercept the image request.</p>
 
@@ -55,10 +55,7 @@ tags:
  </li>
  <li>modify request headers in:
   <ul>
-   <li>{{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}
-    <ul>
-    </ul>
-   </li>
+   <li>{{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}</li>
   </ul>
  </li>
  <li>modify response headers in:
@@ -91,7 +88,7 @@ tags:
 
 <p>To modify the HTTP response bodies for a request, call {{WebExtAPIRef("webRequest.filterResponseData")}}, passing it the ID of the request. This returns a {{WebExtAPIRef("webRequest.StreamFilter")}} object that you can use to examine and modify the data as it is received by the browser.</p>
 
-<p>To do this, you must have the <code>"webRequestBlocking"</code> API permission as well as the <code>"webRequest"</code> <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a> and the <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission </a>for the relevant host.</p>
+<p>To do this, you must have the <code>"webRequestBlocking"</code> API permission as well as the <code>"webRequest"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a> and the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permission </a>for the relevant host.</p>
 
 <h2 id="Types">Types</h2>
 
@@ -120,7 +117,7 @@ tags:
 
 <dl>
  <dt>{{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES", "webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}}</dt>
- <dd>The maximum number of times that <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest/handlerBehaviorChanged" title="Suppose an add-on's job is to block web requests against a pattern, and the following scenario happens:"><code>handlerBehaviorChanged()</code></a></code> can be called in a 10 minute period.</dd>
+ <dd>The maximum number of times that {{WebExtAPIRef("WebRequest.handlerBehaviorChanged", "handlerBehaviorChanged()")}} can be called in a 10 minute period.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -161,7 +158,7 @@ tags:
 
 <p>{{Compat("webextensions.api.webRequest")}}</p>
 
-<p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webRequest_incompatibilities">Extra notes on Chrome incompatibilities</a>.</p>
+<p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webrequest_incompatibilities">Extra notes on Chrome incompatibilities</a>.</p>
 
 <p>{{WebExtExamples("h2")}}</p>
 

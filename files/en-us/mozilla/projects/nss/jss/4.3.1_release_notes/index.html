@@ -1,0 +1,125 @@
+---
+title: 4.3.1 Release Notes
+slug: Mozilla/Projects/NSS/JSS/4.3.1_Release_Notes
+tags:
+  - JSS
+  - NSPR
+  - NSS
+---
+<h2 id="Release_Date_2009-12-02">Release Date: 2009-12-02</h2>
+<h3 id="Introduction">Introduction</h3>
+<p>Network Security Services for Java (JSS) 4.3.1 is a minor release with the following new features:</p>
+<ul>
+  <li>Support for SSL3 &amp; TLS Renegotiation Vulnerability</li>
+  <li>Support to explicitly set the key usage for the generated private key</li>
+</ul>
+<p>JSS 4.3.1 is <a class="external" href="https://www.mozilla.org/MPL">tri-licensed</a> under MPL 1.1/GPL 2.0/LGPL 2.1.
+</p>
+<h3 id="New_in_JSS_4.3.1">New in JSS 4.3.1</h3>
+<p> A list of bug fixes and enhancement requests were implemented in this release can be obtained by running this <a
+    class="external"
+    href="http://bugzilla.mozilla.org/buglist.cgi?product=JSS&amp;target_milestone=4.3.1&amp;target_milestone=4.3.1&amp;bug_status=RESOLVED&amp;resolution=FIXED">bugzilla
+    query</a></p>
+<p><strong>JSS 4.3.1 requires <a href="/NSS_3.12.5_release_notes" title="NSS 3.12.5 release notes">NSS 3.12.5 </a>or
+    higher. </strong></p>
+<h4 id="SSL3_TLS_Renegotiation_Vulnerability">SSL3 &amp; TLS Renegotiation Vulnerability</h4>
+<p>See <a class=" external" href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3555" rel="external nofollow"
+    title="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3555">CVE-2009-3555</a> and <a class=" external"
+    href="http://www.kb.cert.org/vuls/id/120541" rel="external nofollow"
+    title="http://www.kb.cert.org/vuls/id/120541">US-CERT VU#120541</a> for more information about this security
+  vulnerability.</p>
+<p>All SSL/TLS renegotiation is disabled by default in NSS 3.12.5 and therefore will be disabled by default with
+  JSS 4.3.1. This will cause programs that attempt to perform renegotiation to experience failures where they formerly
+  experienced successes, and is necessary for them to not be vulnerable, until such time as a new safe renegotiation
+  scheme is standardized by the IETF.</p>
+<p>If an application depends on renegotiation feature, it can be enabled by setting the environment variable
+  NSS_SSL_ENABLE_RENEGOTIATION to 1. By setting this environmental variable, the fix provided by these patches will
+  have no effect and the application may become vulnerable to the issue.</p>
+<p>This default setting can also be changed within the application by using the following JSS methods:</p>
+<ul>
+  <li>SSLServerSocket.enableRenegotiation(int mode)</li>
+  <li>SSLSocket.enableRenegotiation(int mode)</li>
+  <li>SSLSocket.enableRenegotiationDefault(int mode)</li>
+</ul>
+The mode of renegotiation that the peer must use can be set to the following:
+<ul>
+  <li>SSLSocket.SSL_RENEGOTIATE_NEVER - Never renegotiate at all. (Default)</li>
+  <li>SSLSocket.SSL_RENEGOTIATE_UNRESTRICTED - Renegotiate without<br> restriction, whether or not the peer's client
+    hello bears the<br> renegotiation info extension (like we always did in the past).</li>
+  <li>SSLSocket.SSL_RENEGOTIATE_REQUIRES_XTN - NOT YET IMPLEMENTED</li>
+</ul>
+<h4 id="Explicitly_set_the_key_usage_for_the_generated_private_key">Explicitly set the key usage for the generated
+  private key</h4>
+<p> In PKCS #11, each keypair can be marked with the operations it will<br>  be used to perform. Some tokens require
+  that a key be marked for<br>  an operation before the key can be used to perform that operation;<br>  other tokens
+  don't care. NSS/JSS provides a way to specify a set of<br>  flags and a corresponding mask for these flags.</p>
+<ul>
+  <li>see generateECKeyPairWithOpFlags</li>
+  <li>see generateRSAKeyPairWithOpFlags</li>
+  <li>see generateDSAKeyPairWithOpFlags</li>
+</ul>
+<h3 id="Distribution_Information">Distribution Information</h3>
+<ul>
+  <li>JSS is checked into <code>mozilla/security/jss/</code>.</li>
+  <li>The CVS tag for the JSS 4.3.1 release is <code>JSS_4_3_1_RTM</code>.</li>
+  <li>Source tarballs are available from <a class=" link-ftp"
+      href="ftp://ftp.mozilla.org/pub/mozilla.org/security/jss/releases/JSS_4_3_1_RTM/src/jss-4.3.1.tar.bz2"
+     >ftp://ftp.mozilla.org/pub/mozilla.or...-4.3.1.tar.bz2</a></li>
+  <li>Binary releases are no longer available on mozilla. JSS is a JNI library we provide the jss4.jar but expect you to
+    build the JSS's matching JNI shared library. We provide the jss4.jar in case you do not want to obtain your own
+    JCE code signing certificate. JSS is a JCE provider and therefore the jss4.jar must be signed. <a class="link-ftp"
+      href="ftp://ftp.mozilla.org/pub/mozilla.org/security/jss/releases/JSS_4_3_1_RTM/">ftp://ftp.mozilla.org/pub/mozilla.org/security/jss/releases/JSS_4_3_1_RTM</a>.
+  </li>
+</ul>
+<h3 id="Documentation">Documentation</h3>
+<p>Documentation for JSS 4.3.1 is available as follows:</p>
+<ul>
+  <li><a href="/jss_build_4.3.1.html" title="jss_build_4.3.1.html">Build Instructions for JSS 4.3.1</a></li>
+  <li>Javadoc <a href="/javadoc">[online]</a> <a class="link-ftp"
+      href="ftp://ftp.mozilla.org/pub/mozilla.org/security/jss/releases/JSS_4_3_1_RTM/doc/JSS_4_3_1_RTM-doc.zip"
+      title="ftp://ftp.mozilla.org/pub/mozilla.org/security/jss/releases/JSS_4_3_1_RTM/doc/JSS_4_3_1_RTM-doc.zip">[zipped]</a>
+  </li>
+  <li>Read the instructions on <a href="/using_jss.html" title="using_jss.html">using JSS</a>.</li>
+  <li>Source may be viewed with a browser (via the MXR tool) at <a class="external"
+      href="http://mxr.mozilla.org/mozilla/source/security/jss/">
+      http://mxr.mozilla.org/mozilla/source/security/jss/</a></li>
+  <li>The RUN TIME behavior of JSS can be affected by the <a class="internal"
+      href="/en-US/NSS_reference/NSS_environment_variables">NSS
+      Environment Variables</a>. </li>
+</ul>
+<h3 id="Platform_Information">Platform Information</h3>
+<ul>
+  <li>
+    <p>
+      You can check out the source from CVS by</p>
+      <div class="note">cvs co -r JSS_4_3_1_RTM JSS</div>
+  </li>
+  <li>JSS 4.3.1 works with JDK versions 4 or higher we suggest the latest.</li>
+  <li>JSS 4.3.1 requires <a href="/NSS_3.12.5" title="NSS 3.12.5">NSS 3.12.5</a> or higher.</li>
+  <li>JSS 4.3.1 requires <a class="external" href="https://www.mozilla.org/projects/nspr/release-notes/"
+      title="http://www.mozilla.org/projects/nspr/release-notes/">NSPR 4.7.1</a> or higher.</li>
+  <li>JSS only supports the native threading model (no green threads).</li>
+</ul>
+<h3 id="Known_Bugs_and_Issues">Known Bugs and Issues</h3>
+<ul>
+  <li>For a list of reported bugs that have not yet been fixed, <a class="external"
+      href="http://bugzilla.mozilla.org/buglist.cgi?bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;&amp;product=JSS">click
+      here.</a> Note that some bugs may have been fixed since JSS 4.3.1 was released. </li>
+</ul>
+<h3 id="Compatibility">Compatibility</h3>
+<ul>
+  <li>JSS 4.3.1 is backwards compatible with JSS 4.2. Applications compiled against JSS 4.2 will work with JSS 4.3.1.
+  </li>
+  <li>The 4.3.1 version of libjss4.so/jss4.dll must only be used with jss4.jar. In general, a JSS JAR file must be used
+    with the JSS shared library from the exact same release.</li>
+  <li>To obtain the version info from the jar file use,
+    "System.out.println(org.mozilla.jss.CryptoManager.JAR_JSS_VERSION)" and to check the shared library: strings
+    libjss4.so | grep -i header  </li>
+</ul>
+<h3 id="Feedback">Feedback</h3>
+<ul>
+  <li>Bugs discovered should be reported by filing a bug report with <a class="external"
+      href="http://bugzilla.mozilla.org/enter_bug.cgi?product=JSS">bugzilla</a>.</li>
+  <li>You can also give feedback directly to the developers on the Mozilla Cryptography forums... {{
+    DiscussionList("dev-tech-crypto", "mozilla.dev.tech.crypto") }}</li>
+</ul>

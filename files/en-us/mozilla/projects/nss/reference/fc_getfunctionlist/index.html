@@ -1,0 +1,40 @@
+---
+title: FC_GetFunctionList
+slug: Mozilla/Projects/NSS/Reference/FC_GetFunctionList
+tags:
+  - NSS
+---
+
+<h3 id="Name"> Name </h3>
+<p>FC_GetFunctionList - get a pointer to the list of function pointers in the FIPS mode of operation.
+</p>
+<h3 id="Syntax"> Syntax </h3>
+<pre class="eval"><a href="/en-US/CK_RV">CK_RV</a> FC_GetFunctionList(<a href="/en-US/CK_FUNCTION_LIST">CK_FUNCTION_LIST_PTR</a> *ppFunctionList);
+</pre>
+<h3 id="Parameters"> Parameters </h3>
+<p><code>FC_GetFunctionList</code> has one parameter:
+</p>
+<dl><dt><code>ppFunctionList</code>
+</dt><dd>{{ mediawiki.external('Output') }} The address of a variable that will receive a pointer to the list of function pointers.
+</dd></dl>
+<h3 id="Description"> Description </h3>
+<p><code>FC_GetFunctionList</code> stores in <code>*ppFunctionList</code> a pointer to the <a href="/en-US/NSS_reference/NSS_cryptographic_module">NSS cryptographic module</a>'s list of function pointers in the <a href="/en-US/NSS_reference/NSS_cryptographic_module/FIPS_mode_of_operation">FIPS mode of operation</a>.
+</p><p>A user may call <code>FC_GetFunctionList</code> without logging into the token (to assume the NSS User role).
+</p>
+<h3 id="Return_value"> Return value </h3>
+<p><code>FC_GetFunctionList</code> always returns <code>CKR_OK</code>.
+</p>
+<h3 id="Examples"> Examples </h3>
+<pre class="eval">#include &lt;assert.h&gt;
+
+CK_FUNCTION_LIST_PTR pFunctionList;
+CK_RV crv;
+
+crv = FC_GetFunctionList(&amp;pFunctionList);
+assert(crv == CKR_OK);
+
+/* invoke the FC_XXX function as pFunctionList-&gt;C_XXX */
+</pre>
+<h3 id="See_also"> See also </h3>
+<ul><li> <a href="/en-US/NSC_GetFunctionList">NSC_GetFunctionList</a>
+</li></ul>

@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var updating = browser.tabs.update(
+<pre class="brush:js">var updating = browser.tabs.update(
   tabId,              // optional integer
   updateProperties    // object
 )
@@ -74,7 +74,7 @@ tags:
    <li>javascript: URLs</li>
    <li>data: URLs</li>
    <li>file: URLs (i.e., files on the filesystem. However, to use a file packaged inside the extension, see below)</li>
-   <li>privileged about: URLs (for example, <code>about:config</code>, <code>about:addons</code>, <code>about:debugging</code>, <code>about:newtab</code>)<span style="display: none;"> </span>. Non-privileged URLs (e.g., <code>about:blank</code>) are allowed.</li>
+   <li>privileged about: URLs (for example, <code>about:config</code>, <code>about:addons</code>, <code>about:debugging</code>, <code>about:newtab</code>). Non-privileged URLs (e.g., <code>about:blank</code>) are allowed.</li>
   </ul>
   To load a page that's packaged with your extension, specify an absolute URL starting at the extension's manifest.json file. For example: '/path/to/my-page.html'. If you omit the leading '/', the URL is treated as a relative URL, and different browsers may construct different absolute URLs.</dd>
  </dl>
@@ -89,7 +89,7 @@ tags:
 
 <p>Navigate the active tab in the current window to https://developer.mozilla.org:</p>
 
-<pre class="brush: js">function onUpdated(tab) {
+<pre class="notranslate brush: js">function onUpdated(tab) {
   console.log(`Updated tab: ${tab.id}`);
 }
 
@@ -102,7 +102,7 @@ updating.then(onUpdated, onError);</pre>
 
 <p>Activate the first tab in the current window, and navigate it to https://developer.mozilla.org:</p>
 
-<pre class="brush: js">function onUpdated(tab) {
+<pre class="notranslate brush: js">function onUpdated(tab) {
   console.log(`Updated tab: ${tab.id}`);
 }
 

@@ -5,11 +5,11 @@ tags:
   - SVG
   - XML
 ---
-<p>As an <a href="/en-US/docs/Glossary/XML" title="en-US/docs/Glossary/XML">XML</a> dialect, <a href="/en-US/docs/Web/SVG" title="en-US/docs/Web/SVG">SVG</a> is namespaced. It is important to understand the concept of namespaces and how they are used if you plan to author SVG content. Versions of SVG viewers prior to the release of Firefox 1.5 unfortunately paid scant attention to namespaces, but they are essential to multi-XML dialect supporting user agents such as <a href="/en-US/docs/Mozilla/Gecko" title="en-US/docs/Mozilla/Gecko">Gecko</a>-based browsers which must be very strict. Take some time to understand namespaces now and it will save you all sorts of headaches in the future.</p>
+<p>As an <a href="/en-US/docs/Glossary/XML">XML</a> dialect, <a href="/en-US/docs/Web/SVG">SVG</a> is namespaced. It is important to understand the concept of namespaces and how they are used if you plan to author SVG content. Versions of SVG viewers prior to the release of Firefox 1.5 unfortunately paid scant attention to namespaces, but they are essential to multi-XML dialect supporting user agents such as <a href="/en-US/docs/Mozilla/Gecko">Gecko</a>-based browsers which must be very strict. Take some time to understand namespaces now and it will save you all sorts of headaches in the future.</p>
 
 <h3 id="Background">Background</h3>
 
-<p>It has been a long standing goal of the W3C to make it possible for different types of XML based content to be mixed together in the same XML file. For example, SVG and <a href="/en-US/docs/Web/MathML" title="en-US/docs/Web/MathML">MathML</a> might be incorporated directly into an XHTML based scientific document. Being able to mix content types like this has many advantages, but it also required a very real problem to be solved.</p>
+<p>It has been a long standing goal of the W3C to make it possible for different types of XML based content to be mixed together in the same XML file. For example, SVG and <a href="/en-US/docs/Web/MathML">MathML</a> might be incorporated directly into an XHTML based scientific document. Being able to mix content types like this has many advantages, but it also required a very real problem to be solved.</p>
 
 <p>Naturally, each XML dialect defines the meaning of the markup element names described in its specification. The problem with mixing content from different XML dialects in a single XML document is that the elements defined by one dialect may have the same name as elements defined by another. For example, both XHTML and SVG have a <code>&lt;title&gt;</code> element. How should the user agent distinguish between the two? In fact how does the user agent tell when XML content is something it knows about, and not just a meaningless XML file containing arbitrary element names unknown to it?</p>
 
@@ -26,7 +26,7 @@ tags:
 &lt;/svg&gt;
 </pre>
 
-<p>The namespace declaration is provided by the <code>xmlns</code> parameter. This parameter says that the <code>&lt;svg&gt;</code> element and its child elements belong to whichever XML dialect has the namespace name <span class="nowiki">'http://www.w3.org/2000/svg'</span> which is, of course, SVG. Note that the namespace declaration only needs to be provided once on a root element. The declaration defines the <em>default</em> namespace, so the user agent knows that all the <code>&lt;svg&gt;</code> element's descendants also belong to the same namespace. User agents check to see if they recognize the namespace name to determine if they know how to handle the markup.</p>
+<p>The namespace declaration is provided by the <code>xmlns</code> parameter. This parameter says that the <code>&lt;svg&gt;</code> element and its child elements belong to whichever XML dialect has the namespace name <code>http://www.w3.org/2000/svg</code> which is, of course, SVG. Note that the namespace declaration only needs to be provided once on a root element. The declaration defines the <em>default</em> namespace, so the user agent knows that all the <code>&lt;svg&gt;</code> element's descendants also belong to the same namespace. User agents check to see if they recognize the namespace name to determine if they know how to handle the markup.</p>
 
 <p>Note that namespace names are just strings, so the fact that the SVG namespace name also looks like a URI isn't important. URIs are commonly used because they are unique, the intention is not to "link" somewhere. (In fact URIs are used so frequently that the term "namespace URI" is commonly used instead of "namespace name".)</p>
 
@@ -61,11 +61,11 @@ tags:
 
 <p>This example has the rather unusual looking parameter <code>xmlns:xlink</code>. As you may guess from the first 'xmlns' part, this is another namespace declaration. However, instead of setting the default namespace, this namespace declaration sets the namespace for something called a "namespace prefix". In this case, we have chosen to use the prefix <code>xlink</code> (the second part) since the prefix will be used to tell the user agent about attributes that belong to XLink.</p>
 
-<p>As their name suggests, namespace prefixes are used to prefix parameter and element names. This is done by putting the namespace prefix and a colon before the parameter name as shown on the <code>&lt;script&gt;</code> element in the example above. This tells the user agent that that particular parameter belongs to the namespace assigned to the namespace prefix (XLink), and is a parameter that can be used with the same meaning on other elements.</p>
+<p>As their name suggests, namespace prefixes are used to prefix parameter and element names. This is done by putting the namespace prefix and a colon before the parameter name as shown on the <code>&lt;script&gt;</code> element in the example above. This tells the user agent that the particular parameter belongs to the namespace assigned to the namespace prefix (XLink), and is a parameter that can be used with the same meaning on other elements.</p>
 
 <p>Note that it is an XML error to use a prefix that hasn't been bound to a namespace name. The binding created by the <code>xmlns:xlink</code> parameter in the example above is absolutely essential for the <code>xlink:href</code> parameter to not cause an error. This XLink parameter is also frequently used in SVG on the <code>&lt;a&gt;</code>, <code>&lt;use&gt;</code> and <code>&lt;image&gt;</code> elements among others, so it's a good idea to always include the XLink declaration in your documents.</p>
 
-<p>As an aside, it's useful to know that namespace prefixes can also be used for element names. This tells the user agent that that particular element (but not its children this time!) belongs to the namespace assigned to the prefix. Knowing this will save you some confusion if you come across markup like in the following example:</p>
+<p>As an aside, it's useful to know that namespace prefixes can also be used for element names. This tells the user agent that the particular element (but not its children this time!) belongs to the namespace assigned to the prefix. Knowing this will save you some confusion if you come across markup like in the following example:</p>
 
 <pre>&lt;html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:svg="http://www.w3.org/2000/svg"&gt;
@@ -143,7 +143,7 @@ tags:
  </tbody>
 </table>
 
-<p>The first parameter for all the DOM2 namespace aware methods must be the namespace name (also known as the namespace URI) of the element or parameter in question. For SVG <strong>elements</strong> this is <span class="nowiki">'http://www.w3.org/2000/svg'</span>. However, note carefully: the <a class="external" href="https://www.w3.org/TR/xml-names11/#defaulting">Namespaces in XML 1.1</a> recommendation states that the namespace name for parameters without a prefix does not have a value. In other words, although the parameters belong to the namespace of the element, you do not use the tag's namespace name. Instead, <strong>you must use null as the namespace name for unqualified (prefixless) parameters</strong>. So, to create an SVG <code>rect</code> <em>element</em> using <code>document.createElementNS()</code>, you must write:</p>
+<p>The first parameter for all the DOM2 namespace aware methods must be the namespace name (also known as the namespace URI) of the element or parameter in question. For SVG <strong>elements</strong> this is <code>http://www.w3.org/2000/svg</code>. However, note carefully: the <a class="external" href="https://www.w3.org/TR/xml-names11/#defaulting">Namespaces in XML 1.1</a> recommendation states that the namespace name for parameters without a prefix does not have a value. In other words, although the parameters belong to the namespace of the element, you do not use the tag's namespace name. Instead, <strong>you must use null as the namespace name for unqualified (prefixless) parameters</strong>. So, to create an SVG <code>rect</code> <em>element</em> using <code>document.createElementNS()</code>, you must write:</p>
 
 <pre><code class="language-javascript">document.createElementNS('http://www.w3.org/2000/svg', 'rect');</code></pre>
 
@@ -151,7 +151,7 @@ tags:
 
 <pre class="eval"><code class="language-javascript">rect.getAttributeNS(<strong>null</strong>, 'x');</code></pre>
 
-<p>Note that this isn't the case for parameters <em>with</em> a namespace prefix (parameters that don't belong to the same XML dialect as the element). Parameters such as <code>xlink:href</code> require the namespace name that was assigned to that prefix (<span class="nowiki">http://www.w3.org/1999/xlink</span> for XLink). Hence to get the value of the <code>xlink:href</code> parameter of an <code>&lt;a&gt;</code> element in SVG you would write:</p>
+<p>Note that this isn't the case for parameters <em>with</em> a namespace prefix (parameters that don't belong to the same XML dialect as the element). Parameters such as <code>xlink:href</code> require the namespace name that was assigned to that prefix (<code>http://www.w3.org/1999/xlink</code> for XLink). Hence to get the value of the <code>xlink:href</code> parameter of an <code>&lt;a&gt;</code> element in SVG you would write:</p>
 
 <pre><code class="language-javascript">elt.getAttributeNS('http://www.w3.org/1999/xlink', 'href');</code></pre>
 

@@ -14,7 +14,7 @@ tags:
 
 <h3 id="Preventing_default_behavior_in_event_code">Preventing default behavior in event code</h3>
 
-<p>When writing drag and drop code, sometimes you'll find that text on the page gets accidently selected while dragging. Or if you want to use the backspace key in your code, you want to override the browser's default behavior when the backspace key is pressed, which is to go back to the previous page. The <code>evt.preventDefault()</code> method lets you do this.</p>
+<p>When writing drag and drop code, sometimes you'll find that text on the page gets accidentally selected while dragging. Or if you want to use the backspace key in your code, you want to override the browser's default behavior when the backspace key is pressed, which is to go back to the previous page. The <code>evt.preventDefault()</code> method lets you do this.</p>
 
 <h3 id="Using_eventListeners_with_objects">Using <code>eventListeners</code> with objects</h3>
 
@@ -24,7 +24,7 @@ tags:
 this.message=message
 </pre>
 
-<pre class="eval"> this.rect=document.createElementNS("<span class="nowiki">http://www.w3.org/2000/svg</span>","rect")
+<pre class="eval"> this.rect=document.createElementNS("http://www.w3.org/2000/svg","rect")
  this.rect.setAttributeNS(null,"x",x)
  this.rect.setAttributeNS(null,"y",y)
  this.rect.setAttributeNS(null,"width",w)
@@ -78,7 +78,7 @@ this.message=message
 
 <h3 id="setProperty_has_three_parameters"><code>setProperty</code> has three parameters</h3>
 
-<p>The function <code>svgElement.style.setProperty("fill-opacity", "0.0")</code> throws a DOMException - <code>SYNTAX ERR</code> in Mozilla. This behaviour is specified by the W3C in the DOM Level 2 Style Specification. The function <code>setProperty</code> is defined as a function with three parameters. The above can be replaced with <code>'svgElement.style.setProperty("fill-opacity", "0.0", "")'</code>, which is standards compliant.</p>
+<p>The function <code>svgElement.style.setProperty("fill-opacity", "0.0")</code> throws a DOMException - <code>SYNTAX ERR</code> in Mozilla. This behavior is specified by the W3C in the DOM Level 2 Style Specification. The function <code>setProperty</code> is defined as a function with three parameters. The above can be replaced with <code>'svgElement.style.setProperty("fill-opacity", "0.0", "")'</code>, which is standards compliant.</p>
 
 <h3 id="Links">Links</h3>
 

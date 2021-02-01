@@ -1,0 +1,51 @@
+---
+title: Installation guide
+slug: Mozilla/Projects/NSS/Reference/Building_and_installing_NSS/Installation_guide
+tags:
+  - NSS
+---
+<p>The build system of NSS originated from Netscape's build system,
+which predated the "configure; make; make test; make install"
+sequence that we're familiar with now. Our makefiles also have
+an "install" target, but it has a different meaning: our "install"
+means installing the headers, libraries, and programs in the
+appropriate directories under mozilla/dist.
+</p><p>So right now you need to manually install the headers, libraries,
+and programs in the directories you want. If you install the
+libraries in a directory other than /usr/lib, you usually need
+to set the LD_LIBRARY_PATH environment variable. You can avoid
+that by installing the libraries in a directory that is
+$ORIGIN/../lib, where $ORIGIN is the directory where the programs
+are installed. This is done here:
+<a class=" external" href="http://lxr.mozilla.org/security/source/security/nss/cmd/platlibs.mk#53">http://lxr.mozilla.org/security/sour...platlibs.mk#53</a>
+</p>
+<pre class="eval">53 ifeq ($(OS_ARCH), Linux)
+54 ifeq ($(USE_64), 1)
+55 EXTRA_SHARED_LIBS += -Wl,-rpath,'$$ORIGIN/../lib64:$$ORIGIN/../lib'
+56 else
+57 EXTRA_SHARED_LIBS += -Wl,-rpath,'$$ORIGIN/../lib'
+58 endif
+59 endif
+</pre>
+<p>For example, if you install certutil in /foo/bar/nss/bin and the
+.so's in /foo/bar/nss/lib, then you only need to add /foo/bar/nss/bin
+to your PATH; you don't need to set LD_LIBRARY_PATH.
+</p><p>The libraries you need to install are listed below.
+</p><p>NSPR:
+</p>
+<ul><li>libnspr4.so
+</li><li>libplds4.so
+</li><li>libplc4.so
+</li></ul>
+<p>NSS: (Note the use of * for libfreebl -- some platforms have multiple
+ones)
+</p>
+<ul><li>libfreebl*3.so
+</li><li>libfreebl*3.chk
+</li><li>libsoftokn3.so
+</li><li>libsoftokn3.chk
+</li><li>libnss3.so
+</li><li>libsmime3.so
+</li><li>libssl3.so
+</li><li>libnssckbi.so
+</li></ul>

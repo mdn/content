@@ -15,8 +15,6 @@ tags:
 
 <p class="summary"><strong>Article tags</strong> are an important way to put visitors in touch with helpful content. Each page should normally have several tags to help keep content organized. <span class="seoSummary">This page explains the best way to tag pages so that our readers can find information and we can keep ourselves organized.</span></p>
 
-<p>For a help with the user interface for editing tags, see the <a href="/en-US/docs/MDN/Contribute/Editor/Basics#The_tags_box">tagging section</a> in our editor guide.</p>
-
 <p>Please use tags properly as explained below. If you don't, our automated tools will not correctly generate lists of content, landing pages, and cross-linking of articles.</p>
 
 <div class="notecard warning">
@@ -53,15 +51,15 @@ tags:
 <p>We use the following category names as standard tagging terms:</p>
 
 <dl>
- <dt><code>{{Tag("Intro")}}</code></dt>
+ <dt><code>Intro</code></dt>
  <dd>The article provides introductory material about a topic. Ideally each technology area should have only one "Intro"</dd>
- <dt><code>{{Tag("Reference")}}</code></dt>
+ <dt><code>Reference</code></dt>
  <dd>The article contains reference material about an API, element, attribute, property, or the like.</dd>
- <dt><code>{{Tag("Landing")}}</code></dt>
+ <dt><code>Landing</code></dt>
  <dd>The page is a landing page.</dd>
- <dt><code>{{Tag("Guide")}}</code></dt>
+ <dt><code>Guide</code></dt>
  <dd>The article is a how-to or guide page.</dd>
- <dt><code>{{Tag("Example")}}</code></dt>
+ <dt><code>Example</code></dt>
  <dd>The article is a code sample page, or has code samples (that is, actual snippets of useful code, not one-line "syntax examples").</dd>
 </dl>
 
@@ -72,21 +70,21 @@ tags:
 <p>While there's some room for flexibility here as we identify new topic areas, we try to limit ourselves to the names of APIs or technologies. Some useful examples:</p>
 
 <ul>
- <li><code>{{Tag("HTML")}}</code></li>
- <li><code>{{Tag("CSS")}}</code></li>
- <li><code>{{Tag("JavaScript")}}</code> (notice the capital "S"!)</li>
- <li><code>{{Tag("Document")}}</code></li>
- <li><code>{{Tag("DOM")}}</code></li>
- <li><code>{{Tag("API")}}</code> for each API's overview, interface, method, and property.</li>
- <li><code>{{Tag("Method")}}</code> for each method of an API</li>
- <li><code>{{Tag("Property")}}</code> for each property of an API</li>
- <li><code>{{Tag("Graphics")}}</code></li>
- <li><code>{{Tag("SVG")}}</code></li>
- <li><code>{{Tag("WebGL")}}</code></li>
- <li><code>{{Tag("Tools")}}</code></li>
- <li><code>{{Tag("Web")}}</code></li>
- <li><code>{{Tag("Element")}}</code></li>
- <li><code>{{Tag("Extensions")}}</code> and <code>{{Tag("WebExtensions")}}</code> for WebExtension documentation.</li>
+ <li><code>HTML</code></li>
+ <li><code>CSS</code></li>
+ <li><code>JavaScript</code> (notice the capital "S"!)</li>
+ <li><code>Document</code></li>
+ <li><code>DOM</code></li>
+ <li><code>API</code> for each API's overview, interface, method, and property.</li>
+ <li><code>Method</code> for each method of an API</li>
+ <li><code>Property</code> for each property of an API</li>
+ <li><code>Graphics</code></li>
+ <li><code>SVG</code></li>
+ <li><code>WebGL</code></li>
+ <li><code>Tools</code></li>
+ <li><code>Web</code></li>
+ <li><code>Element</code></li>
+ <li><code>Extensions</code> and <code>WebExtensions</code> for WebExtension documentation.</li>
 </ul>
 
 <p>In general, your topic identification tag should be the name of an interface with a number of related pages (like <a href="/en-US/docs/Web/API/Node">Node</a>, which has many pages for its various properties and methods), or the name of an overall technology type. You might tag a page about WebGL with <code>Graphics</code> and <code>WebGL</code>, for example, but a page about {{HTMLElement("canvas")}} with <code>HTML</code>, <code>Element</code>, <code>Canvas</code>, and <code>Graphics</code>.</p>
@@ -96,11 +94,11 @@ tags:
 <p>These tags are used in Mozilla-specific content only:</p>
 
 <ul>
- <li><code>{{Tag("Mozilla")}}</code></li>
- <li><code>{{Tag("Firefox")}}</code></li>
- <li><code>{{Tag("Gecko")}}</code></li>
- <li><code>{{Tag("XUL")}}</code></li>
- <li><code>{{Tag("XPCOM")}}</code></li>
+ <li><code>Mozilla</code></li>
+ <li><code>Firefox</code></li>
+ <li><code>Gecko</code></li>
+ <li><code>XUL</code></li>
+ <li><code>XPCOM</code></li>
 </ul>
 
 <h3 id="API_identification">API identification</h3>
@@ -108,13 +106,13 @@ tags:
 <p>Within the API reference, each article should identify which part of the API it covers:</p>
 
 <dl>
- <dt><code>{{tag("Interface")}}</code></dt>
+ <dt><code>Interface</code></dt>
  <dd>The main article for an interface should have this tag. For example, {{DOMxRef("RTCPeerConnection")}}.</dd>
- <dt><code>{{tag("Constructor")}}</code></dt>
+ <dt><code>Constructor</code></dt>
  <dd>Each interface may have up to one page tagged "Constructor"; this is the interface's constructor. The page should have the same name as the interface, like {{DOMxRef("RTCPeerConnection.RTCPeerConnection()", "RTCPeerConnection()")}}.</dd>
- <dt><code>{{tag("Property")}}</code></dt>
+ <dt><code>Property</code></dt>
  <dd>Every article describing a particular property within an interface needs this tag. See {{DOMxRef("RTCPeerConnection.connectionState")}}, for example.</dd>
- <dt><code>{{tag("Method")}}</code></dt>
+ <dt><code>Method</code></dt>
  <dd>Each article documenting an interface method needs this tag. See {{DOMxRef("RTCPeerConnection.createOffer()")}} for example.</dd>
 </dl>
 
@@ -122,11 +120,11 @@ tags:
 
 <dl>
  <dt>The interface {{DOMxRef("RTCPeerConnection")}}</dt>
- <dd>Include the tag <code>{{Tag("RTCPeerConnection")}}</code> along with the other relevant tags (<code>{{Tag("Interface")}}</code>, <code>{{Tag("WebRTC")}}</code>, <code>{{Tag("WebRTC API")}}</code>, <code>{{Tag("API")}}</code>, <code>{{Tag("Reference")}}</code>, and so forth).</dd>
+ <dd>Include the tag <code>RTCPeerConnection</code> along with the other relevant tags (<code>Interface</code>, <code>WebRTC</code>, <code>WebRTC API</code>, <code>API</code>, <code>Reference</code>, and so forth).</dd>
  <dt>The method {{DOMxRef("RTCPeerConnection.createOffer()")}}</dt>
- <dd>Include the tags <code>{{Tag("RTCPeerConnection")}}</code> and <code>{{Tag("createOffer")}}</code> (note <em>no</em> parentheses in tag names!) along with the other relevant tags, including <code>{{Tag("Method")}}</code>, <code>{{Tag("WebRTC")}}</code>, <code>{{Tag("WebRTC API")}}</code>, <code>{{Tag("API")}}</code>, <code>{{Tag("Reference")}}</code>, and so forth. Consider including things like <code>{{Tag("Offer")}}</code> and <code>{{Tag("SDP")}}</code>, which are also relevant here.</dd>
+ <dd>Include the tags <code>RTCPeerConnection</code> and <code>createOffer</code> (note <em>no</em> parentheses in tag names!) along with the other relevant tags, including <code>Method</code>, <code>WebRTC</code>, <code>WebRTC API</code>, <code>API</code>, <code>Reference</code>, and so forth. Consider including things like <code>Offer</code> and <code>SDP</code>, which are also relevant here.</dd>
  <dt>The property {{DOMxRef("RTCPeerConnection.iceConnectionState")}}</dt>
- <dd>Include the tags <code>{{Tag("RTCPeerConnection")}}</code> and <code>{{Tag("iceConnectionState")}}</code> along with the other relevant tags, including <code>{{Tag("Property")}}</code>, <code>{{Tag("WebRTC")}}</code>, <code>{{Tag("WebRTC API")}}</code>, <code>{{Tag("API")}}</code> and <code>{{Tag("Reference")}}</code>. Also consider including <code>{{Tag("ICE")}}</code>.</dd>
+ <dd>Include the tags <code>RTCPeerConnection</code> and <code>iceConnectionState</code> along with the other relevant tags, including <code>Property</code>, <code>WebRTC</code>, <code>WebRTC API</code>, <code>API</code> and <code>Reference</code>. Also consider including <code>ICE</code>.</dd>
 </dl>
 
 <h3 id="Technology_status">Technology status</h3>
@@ -136,34 +134,34 @@ tags:
 <p>Here are possible values for these tags:</p>
 
 <dl>
- <dt><code>{{Tag("Read-only")}}</code></dt>
+ <dt><code>Read-only</code></dt>
  <dd>Apply this tag to reference pages which describe a property or attribute which is read-only.</dd>
- <dt><code>{{Tag("Non-standard")}}</code></dt>
- <dd>Indicates that the technology or API described on the page is not part of a standard, whether it's stable or not in any browsers which implement it (if it's not stable, it should also be {{Tag("Experimental")}}). If you don't use this tag, your readers will assume the technology is standard. The compatibility table on the page should clarify which browser(s) support this technology or API.</dd>
- <dt><code>{{Tag("Deprecated")}}</code></dt>
+ <dt><code>Non-standard</code></dt>
+ <dd>Indicates that the technology or API described on the page is not part of a standard, whether it's stable or not in any browsers which implement it (if it's not stable, it should also be Experimental). If you don't use this tag, your readers will assume the technology is standard. The compatibility table on the page should clarify which browser(s) support this technology or API.</dd>
+ <dt><code>Deprecated</code></dt>
  <dd>The technology or API covered on the page is marked as deprecated in the specification, and is likely to eventually be removed, but is generally still available in current versions of browsers.</dd>
- <dt><code>{{Tag("Obsolete")}}</code></dt>
+ <dt><code>Obsolete</code></dt>
  <dd>The technology or API has been deemed obsolete and has been removed (or is actively being removed) from all or most current browsers.</dd>
- <dt><code>{{Tag("Experimental")}}</code></dt>
- <dd>The technology is not standardized, and is an experimental technology or API that may or may not ever become part of a standard. It is also subject to change in the browser engine (typically only one) that implements it. If the technology isn't part of any specification (even in draft form), it should also have the {{tag("Non-standard")}} tag.</dd>
- <dt><code>{{Tag("Needs Privileges")}}</code></dt>
+ <dt><code>Experimental</code></dt>
+ <dd>The technology is not standardized, and is an experimental technology or API that may or may not ever become part of a standard. It is also subject to change in the browser engine (typically only one) that implements it. If the technology isn't part of any specification (even in draft form), it should also have the Non-standard tag.</dd>
+ <dt><code>Needs Privileges</code></dt>
  <dd>The API requires privileged access to the device on which the code is running.</dd>
- <dt><code>{{Tag("Certified Only")}}</code></dt>
+ <dt><code>Certified Only</code></dt>
  <dd>The API only works in certified code.</dd>
 </dl>
 
-<p>These tags are no excuse to leave out the <a href="/en-US/docs/MDN/Contribute/Structures/Compatibility_tables">compatibility table</a> in your article! That should always be present.</p>
+<p>These tags are no excuse to leave out the <a href="/en-US/docs/MDN/Structures/Compatibility_tables">compatibility table</a> in your article! That should always be present.</p>
 
 <h3 id="Skill_level">Skill level</h3>
 
 <p>Use the skill-level tag type only for guides and tutorials (that is, pages tagged <code>Guide</code>) to help users choose tutorials based on how familiar they are with a technology. There are three values for this:</p>
 
 <dl>
- <dt><code>{{Tag("Beginner")}}</code></dt>
+ <dt><code>Beginner</code></dt>
  <dd>Articles designed to introduce the reader to a technology they've never used or have only a passing familiarity with.</dd>
- <dt><code>{{Tag("Intermediate")}}</code></dt>
+ <dt><code>Intermediate</code></dt>
  <dd>Articles for users who have gotten started with the technology but aren't experts.</dd>
- <dt><code>{{Tag("Advanced")}}</code></dt>
+ <dt><code>Advanced</code></dt>
  <dd>Articles about stretching the capabilities of a technology and of the reader.</dd>
 </dl>
 
@@ -172,25 +170,25 @@ tags:
 <p>The writing community uses tags to label articles as requiring specific types of work. Here's a list of the ones we use most:</p>
 
 <dl>
- <dt><code>{{Tag("Draft")}}</code></dt>
+ <dt><code>Draft</code></dt>
  <dd>The article is not complete, and is at least in theory still actively being updated (although it's also possible it's been forgotten about). Try to check with the most recent contributors before making changes, in order to avoid potential content collisions.</dd>
- <dt><code>{{Tag("NeedsCompatTable")}}</code></dt>
- <dd>The article needs a table to specify compatibility of a feature across browsers. <a href="/en-US/docs/MDN/Contribute/Structures/Compatibility_tables">See here</a> for a guide on contributing to browser compatibility.</dd>
- <dt><code>{{Tag("NeedsContent")}}</code></dt>
+ <dt><code>NeedsCompatTable</code></dt>
+ <dd>The article needs a table to specify compatibility of a feature across browsers. <a href="/en-US/docs/MDN/Structures/Compatibility_tables">See here</a> for a guide on contributing to browser compatibility.</dd>
+ <dt><code>NeedsContent</code></dt>
  <dd>The article is a stub, or is otherwise lacking information. This tag means that someone should review the content and add more details and/or finish writing the article.</dd>
- <dt><code>{{Tag("NeedsExample")}}</code></dt>
+ <dt><code>NeedsExample</code></dt>
  <dd>The article needs one or more examples created to help illustrate the article's point. These examples should use the <a href="/en-US/docs/Project:MDN/Contributing/How_to_help/Code_samples">live sample system</a>.</dd>
- <dt><code>{{Tag("NeedsLiveSamples")}}</code></dt>
+ <dt><code>NeedsLiveSamples</code></dt>
  <dd>The article has one or more examples that need to be updated to use the <a href="/en-US/docs/Project:MDN/Contributing/How_to_help/Code_samples">live sample system</a>.</dd>
- <dt><code>{{Tag("NeedsMarkupWork")}}</code></dt>
+ <dt><code>NeedsMarkupWork</code></dt>
  <dd>The article needs improvement to the page markup (usually because the page content consists mostly or entirely of {{HTMLElement("p")}} tags).</dd>
- <dt><code>{{Tag("NeedsSpecTable")}}</code></dt>
+ <dt><code>NeedsSpecTable</code></dt>
  <dd>The article needs a table to indicate on which specification document(s) the feature was defined.</dd>
- <dt><code>{{Tag("NeedsUpdate")}}</code></dt>
+ <dt><code>NeedsUpdate</code></dt>
  <dd>The content is out of date and needs to be updated.</dd>
- <dt><code>{{Tag("l10n:exclude")}}</code></dt>
+ <dt><code>l10n:exclude</code></dt>
  <dd>The content is not really worth localizing and will not appear on localization status pages.</dd>
- <dt><code>{{Tag("l10n:priority")}}</code></dt>
+ <dt><code>l10n:priority</code></dt>
  <dd>The content is important and should be marked as a priority for MDN translators. Shows up in an extra priority table on localization status pages.</dd>
 </dl>
 
@@ -200,163 +198,12 @@ tags:
 
 <dl>
  <dt>A tutorial about WebGL for beginners</dt>
- <dd>{{Tag("WebGL")}}, {{Tag("Graphics")}}, {{Tag("Guide")}}, {{Tag("Beginner")}}</dd>
+ <dd>WebGL, Graphics, Guide, Beginner</dd>
  <dt>Reference page for {{HTMLElement("canvas")}}</dt>
- <dd>{{Tag("Canvas")}}, {{Tag("HTML")}}, {{Tag("Element")}}, {{Tag("Graphics")}}, {{Tag("Reference")}}</dd>
+ <dd>Canvas, HTML, Element, Graphics, Reference</dd>
  <dt>A landing page for Firefox developer tools</dt>
- <dd>{{Tag("Tools")}}, {{Tag("Firefox")}}, {{Tag("Landing")}}</dd>
+ <dd>Tools, Firefox, Landing</dd>
 </dl>
-
-<h2 id="Tagging_and_search_filters">Tagging and search filters</h2>
-
-<p>Search filters won't work properly unless we tag MDN pages properly. Here's a table of search filters and which tags they look for. (Search filters are used only on the <a href="https://wiki.developer.mozilla.org">wiki</a> (editing) site; the <a href="https://developer.mozilla.org">read-only</a> site uses a different search system without filters.)</p>
-
-<div class="notecard note">
-<p><strong>Note:</strong> If multiple tags are listed under "Tag name," that means any one or more of these tags must be present for the article to match.</p>
-</div>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Filter group</th>
-   <th scope="col">Search filter name</th>
-   <th scope="col">Tag name</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th rowspan="22" scope="row" style="vertical-align: baseline;">Topic</th>
-   <td>APIs and DOM</td>
-   <td>{{Tag("API")}} || {{Tag("DOM")}} {{Deprecated_Inline}}</td>
-  </tr>
-  <tr>
-   <td>Add-ons &amp; Extensions {{Deprecated_Inline}}</td>
-   <td>{{Tag("Add-ons")}} || {{Tag("Extensions")}} || {{Tag("Plugins")}} || {{Tag("Themes")}} || {{Tag("WebExtensions")}}</td>
-  </tr>
-  <tr>
-   <td>CSS</td>
-   <td>{{Tag("CSS")}}</td>
-  </tr>
-  <tr>
-   <td>Canvas</td>
-   <td>{{Tag("Canvas")}}</td>
-  </tr>
-  <tr>
-   <td>Firefox</td>
-   <td>{{Tag("Firefox")}}</td>
-  </tr>
-  <tr>
-   <td>Firefox OS</td>
-   <td>{{Tag("Firefox OS")}}</td>
-  </tr>
-  <tr>
-   <td>Games</td>
-   <td>{{Tag("Games")}}</td>
-  </tr>
-  <tr>
-   <td>HTML</td>
-   <td>{{Tag("HTML")}}</td>
-  </tr>
-  <tr>
-   <td>HTTP</td>
-   <td>{{Tag("HTTP")}}</td>
-  </tr>
-  <tr>
-   <td>JavaScript</td>
-   <td>{{Tag("JavaScript")}}</td>
-  </tr>
-  <tr>
-   <td>Marketplace {{Non-standard_Inline}}</td>
-   <td>{{Tag("Marketplace")}}</td>
-  </tr>
-  <tr>
-   <td>MathML</td>
-   <td>{{Tag("MathML")}}</td>
-  </tr>
-  <tr>
-   <td>Mobile</td>
-   <td>{{Tag("Mobile")}}</td>
-  </tr>
-  <tr>
-   <td>Open Web Apps {{Non-standard_Inline}}</td>
-   <td>{{Tag("Apps")}}</td>
-  </tr>
-  <tr>
-   <td>SVG</td>
-   <td>{{Tag("SVG")}}</td>
-  </tr>
-  <tr>
-   <td>Web Development</td>
-   <td>{{Tag("Web Development")}}</td>
-  </tr>
-  <tr>
-   <td>Web Standards</td>
-   <td>{{Tag("Web")}}</td>
-  </tr>
-  <tr>
-   <td>WebExtensions</td>
-   <td>{{Tag("WebExtensions")}}</td>
-  </tr>
-  <tr>
-   <td>WebGL</td>
-   <td>{{Tag("WebGL")}}</td>
-  </tr>
-  <tr>
-   <td>Writing Documentation</td>
-   <td>{{Tag("MDN Meta")}}</td>
-  </tr>
-  <tr>
-   <td>XPCOM {{Non-standard_Inline}}</td>
-   <td>{{Tag("XPCOM")}}</td>
-  </tr>
-  <tr>
-   <td>XUL {{Non-standard_Inline}}</td>
-   <td>{{Tag("XUL")}}</td>
-  </tr>
-  <tr>
-   <th rowspan="3" scope="row" style="vertical-align: baseline; white-space: nowrap;">{{anch("Skill level")}}</th>
-   <td>I'm an Expert</td>
-   <td>{{Tag("Advanced")}}</td>
-  </tr>
-  <tr>
-   <td>Intermediate</td>
-   <td>{{Tag("Intermediate")}}</td>
-  </tr>
-  <tr>
-   <td>I'm Learning</td>
-   <td>{{Tag("Beginner")}}</td>
-  </tr>
-  <tr>
-   <th rowspan="7" scope="row" style="vertical-align: baseline; white-space: nowrap;">Document type</th>
-   <td>Docs</td>
-   <td><em>This restricts the search to docs content, leaving out Hacks and other MDN content.</em></td>
-  </tr>
-  <tr>
-   <td>Demos</td>
-   <td><em>This type of document is no longer used on MDN Web Docs.</em></td>
-  </tr>
-  <tr>
-   <td>Tools</td>
-   <td>{{Tag("Tools")}}</td>
-  </tr>
-  <tr>
-   <td>Code Samples</td>
-   <td>{{Tag("Example")}}</td>
-  </tr>
-  <tr>
-   <td>How-To &amp; Tutorial</td>
-   <td>{{Tag("Guide")}}</td>
-  </tr>
-  <tr>
-   <td>Developer Profiles</td>
-   <td><em>This includes developer profiles from the MDN site in the search results.</em></td>
-  </tr>
-  <tr>
-   <td>External Resources</td>
-   <td><em>The dev team is still figuring this out...</em></td>
-  </tr>
- </tbody>
-</table>
 
 <h2 id="Tagging_problems_you_can_fix">Tagging problems you can fix</h2>
 

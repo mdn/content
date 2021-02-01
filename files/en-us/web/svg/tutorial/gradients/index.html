@@ -65,9 +65,9 @@ tags:
    &lt;stop id="stop3" offset="100%"/&gt;
  &lt;/linearGradient&gt;
  &lt;linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1"
-    xmlns:xlink="<a class="external" href="https://www.w3.org/1999/xlink" rel="freelink">http://www.w3.org/1999/xlink</a>" xlink:href="#Gradient1"/&gt;
+    xmlns:xlink="<a class="external" href="https://www.w3.org/1999/xlink">http://www.w3.org/1999/xlink</a>" xlink:href="#Gradient1"/&gt;
 </pre>
-I've included the xlink namespace here directly on the node, although usually you would define it at the top of your document. More on that when we <a href="/en-US/Web/SVG/Tutorial/Other_content_in_SVG" title="en-US/Web/SVG/Tutorial/Other content in SVG">talk about images</a>.</div>
+I've included the xlink namespace here directly on the node, although usually you would define it at the top of your document. More on that when we <a href="/en-US/docs/Web/SVG/Tutorial/Other_content_in_SVG">talk about images</a>.</div>
 
 <h2 id="Radial_Gradient">Radial Gradient</h2>
 
@@ -173,7 +173,7 @@ I've included the xlink namespace here directly on the node, although usually yo
 <pre class="eval"> &lt;radialGradient id="Gradient" cx="60" cy="60" r="50" fx="35" fy="35" gradientUnits="userSpaceOnUse"&gt;
 </pre>
 
-<p>You can also then apply another transformation to the gradient by using the <code>gradientTransform</code> attribute, but since we haven't <a href="/en-US/Web/SVG/Tutorial/Basic_Transformations" title="en-US/Web/SVG/Tutorial/Basic Transformations">introduced transforms</a> yet, I'll leave that for later.</p>
+<p>You can also then apply another transformation to the gradient by using the <code>gradientTransform</code> attribute, but since we haven't <a href="/en-US/docs/Web/SVG/Tutorial/Basic_Transformations">introduced transforms</a> yet, I'll leave that for later.</p>
 
 <p>There are some other caveats for dealing with <code>gradientUnits="objectBoundingBox"</code> when the object bounding box isn't square, but they're fairly complex and will have to wait for someone more in-the-know to explain them.</p>
 

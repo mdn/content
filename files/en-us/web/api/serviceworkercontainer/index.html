@@ -23,9 +23,6 @@ tags:
 <dl>
  <dt>{{domxref("ServiceWorkerContainer.controller")}} {{readonlyinline}}</dt>
  <dd>Returns a {{domxref("ServiceWorker")}} object if its state is <code>activating</code> or <code>activated</code> (the same object returned by {{domxref("ServiceWorkerRegistration.active")}}). This property returns <code>null</code> during a force-refresh request (<em>Shift</em> + refresh) or if there is no active worker.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("ServiceWorkerContainer.ready")}} {{readonlyinline}}</dt>
  <dd>Provides a way of delaying code execution until a service worker is active. It returns a {{jsxref("Promise")}} that will never reject, and which waits indefinitely until the {{domxref("ServiceWorkerRegistration")}} associated with the current page has an {{domxref("ServiceWorkerRegistration.active")}} worker. Once that condition is met, it resolves with the {{domxref("ServiceWorkerRegistration")}}.</dd>
 </dl>

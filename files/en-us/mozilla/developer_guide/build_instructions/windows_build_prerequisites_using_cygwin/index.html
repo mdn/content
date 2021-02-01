@@ -12,7 +12,7 @@ tags:
 
 <p>{{Note('This document is a guide to the build prerequisites for building the Mozilla 1.9 codebase before the introduction of the MozillaBuild system in March 2007. If you are building Firefox 3 or greater, please see the standard <a href="/en-US/docs/Windows_Build_Prerequisites" title="Windows Build Prerequisites">Windows Build Prerequisites</a>. <strong>For building Firefox 2, Firefox 1.5, and other Mozilla products based on pre-1.9 branches, see the <a href="/en-US/docs/Windows_Build_Prerequisites_(1.7_and_1.8_Branches)" title="Windows Build Prerequisites (1.7 and 1.8 Branches)">Windows Build Prerequisites on the 1.7 and 1.8 Branches</a>.</strong>')}}</p>
 
-<p>If you are building very old versions of the Mozilla source code, from the 1.0 branch and earlier, follow the <a class="external" href="http://www.mozilla.org/build/win32-nmake.html">nmake build instructions</a>.</p>
+<p>If you are building very old versions of the Mozilla source code, from the 1.0 branch and earlier, follow the <a class="external" href="https://www.mozilla.org/build/win32-nmake.html">nmake build instructions</a>.</p>
 
 <h2 id="Hardware_Requirements">Hardware Requirements</h2>
 <p>Mozilla takes time to build. You need a development-class system:</p>
@@ -166,7 +166,7 @@ bin/make.exe --version
 <p>The following is a batch script (run with cmd.exe or modify the cygwin.bat file) which should be used to configure environment variables:</p>
 <pre>rem --- Set HOME so that cvs and ssh work correctly
 rem --- cvs uses HOME to locate your .cvspass file, and ssh to locate your .ssh file
-rem --- if you are using ssh, your HOME should match the home directory specified in /etc/passwd. See <a class="external" href="http://www.cygwin.com/faq/faq0.html" rel="freelink">http://www.cygwin.com/faq/faq0.html</a>.
+rem --- if you are using ssh, your HOME should match the home directory specified in /etc/passwd. See <a class="external" href="http://www.cygwin.com/faq/faq0.html">http://www.cygwin.com/faq/faq0.html</a>.
 set HOME=C:\home
 
 rem --- Set VCVARS to wherever the MSVC vcvars.bat file is found
@@ -181,7 +181,7 @@ set MOZ_TOOLS=<var>C:\moztools</var>
 
 rem --- Set CYGWINBASE to wherever cygwin is installed
 rem --- Do not use CYGWIN or else cygserver, cygrunsrv, and Cygwin services will not function properly
-rem --- Variable CYGWIN is also used to modify Cygwin's behaviour a little bit.
+rem --- Variable CYGWIN is also used to modify Cygwin's behavior a little bit.
 set CYGWINBASE=<var>C:\cygwin</var>
 rem --- Make sure Cygwin does not print out a DOS style path warning
 set CYGWIN=<var>nodosfilewarning</var>
@@ -241,9 +241,9 @@ rename cyglink.exe link.exe</pre>
   <li>The build may fail if your PATH environment variable contains quotes ("). Quotes are not properly translated when passed down to the cygwin sub-shells. Quotes are usually not needed so they can be removed.</li>
   <li>Double-check to make sure that you have the complete cygwin package list. If not, launch the cygwin installer and add the missing packages.
     <ul>
-      <li>From the Cygwin Mailing Lists, the behaviour change in make 3.81 was caused by a patch for DOS style paths being removed.</li>
+      <li>From the Cygwin Mailing Lists, the behavior change in make 3.81 was caused by a patch for DOS style paths being removed.</li>
     </ul>
  </li>
-  <li><a href="/en-US/docs/Debugging_Mozilla_on_Windows_FAQ" title="Debugging_Mozilla_on_Windows_FAQ">Debugging Mozilla on Windows FAQ</a>: Tips on how to debug Mozilla on Windows.</li>
+  <li><a href="/en-US/docs/Debugging_Mozilla_on_Windows_FAQ">Debugging Mozilla on Windows FAQ</a>: Tips on how to debug Mozilla on Windows.</li>
   <li><a href="/en-US/docs/Developer_Guide/Build_Instructions/Windows_Prerequisites" title="Windows_Build_Prerequisites">Upgrading a Windows build system from VC6 to VC7?</a></li>
 </ul>

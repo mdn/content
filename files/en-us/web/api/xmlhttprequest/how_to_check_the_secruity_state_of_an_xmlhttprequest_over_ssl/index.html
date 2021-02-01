@@ -3,7 +3,7 @@ title: How to check the security state of an XMLHTTPRequest over SSL
 slug: >-
   Web/API/XMLHttpRequest/How_to_check_the_secruity_state_of_an_XMLHTTPRequest_over_SSL
 ---
-<p>Here is a an example Javascript function that prints the security details of an <a class="internal" href="/en/XMLHttpRequest">XMLHTTPRequest</a> sent over SSL. The function is passed the channel property of an XMLHTTPRequest to extract the following information:</p>
+<p>Here is a an example Javascript function that prints the security details of an <a class="internal" href="/en-US/docs/XMLHttpRequest">XMLHTTPRequest</a> sent over SSL. The function is passed the channel property of an XMLHTTPRequest to extract the following information:</p>
 <ul>
  <li>Was the connection secure?</li>
  <li>Was the used SSL certificate valid and what are its details (owner, expiration, certificate authority, etc.)?</li>
@@ -77,7 +77,7 @@ function createTCPErrorFromFailedXHR(xhr) {
     } else {
   // Calculating the difference
 
-  <span>let sslErr = Math.abs(nsINSSErrorsService.NSS_SSL_ERROR_BASE) - (status &amp; 0xffff);</span>
+  let sslErr = Math.abs(nsINSSErrorsService.NSS_SSL_ERROR_BASE) - (status &amp; 0xffff);
 
       switch (sslErr) {
         case 3: // SSL_ERROR_NO_CERTIFICATE, ssl(3)
@@ -181,8 +181,8 @@ function dumpSecurityInfo(xhr, error) {
 
       dump("\tCommon name (CN) = " + cert.commonName + "\n");
       dump("\tIssuer = " + cert.issuerOrganization + "\n");
-      <span>dump("\tOrganisation = " + cert.organization + "\n");</span><span style="font-size: 1rem;">
-      dump("\tSHA1 fingerprint = " + cert.sha1Fingerprint + "\n");</span>
+      dump("\tOrganisation = " + cert.organization + "\n");
+      dump("\tSHA1 fingerprint = " + cert.sha1Fingerprint + "\n");
 
       var validity = cert.validity.QueryInterface(Ci.nsIX509CertValidity);
       dump("\tValid from " + validity.notBeforeGMT + "\n");

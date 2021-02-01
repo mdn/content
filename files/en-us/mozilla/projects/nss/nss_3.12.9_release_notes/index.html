@@ -1,0 +1,75 @@
+---
+title: NSS 3.12.9 release notes
+slug: Mozilla/Projects/NSS/NSS_3.12.9_release_notes
+tags:
+  - NSS
+---
+ 2010-09-23
+ <em>Newsgroup: <a class="link-news" href="news://news.mozilla.org/mozilla.dev.tech.crypto" rel="external" title="news://news.mozilla.org/mozilla.dev.tech.crypto">mozilla.dev.tech.crypto</a></em>
+<div id="section_1">
+ <h1 id="Introduction_2">Introduction</h1>
+ <p><a name="Introduction">Network Security Services (NSS) 3.12.9 is a patch release for NSS 3.12. The bug fixes in NSS 3.12.9 are described in the "</a><a href="#bugsfixed">Bugs Fixed</a>" section below.</p>
+ <p>NSS 3.12.9 is tri-licensed under the MPL 1.1/GPL 2.0/LGPL 2.1.</p>
+</div>
+<div id="section_2">
+ <h1 id="Distribution_Information"><a name="distribution">Distribution Information</a></h1>
+ <p><a name="distribution">The CVS tag for the NSS 3.12.9 release is <code>NSS_3.12.9_RTM</code>.  NSS 3.12.9 requires </a><a class="external" href="https://www.mozilla.org/projects/nspr/release-notes/nspr486.html" rel="external" title="http://www.mozilla.org/projects/nspr/release-notes/nspr486.html">NSPR 4.8.7</a>.<br>
+  <br>
+  See the <a href="#docs">Documentation</a> section for the build instructions.</p>
+ <p>NSS 3.12.9 source distribution is also available on <code>ftp.mozilla.org</code> for secure HTTPS download:</p>
+ <ul>
+  <li>Source tarballs: <a class="link-https" href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3.12.9_RTM/src/" rel="external" title="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3.12.9_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3.12.9_RTM/src/</a>.</li>
+ </ul>
+ <p>You also need to download the NSPR 4.8.7 binary distributions to get the NSPR 4.8.7 header files and shared libraries, which NSS 3.12.9 requires. NSPR 4.8.7 binary distributions are in <a class="link-https" href="https://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v4.8.7/" rel="external" title="https://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v4.8.7/">https://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v4.8.7/</a>.</p>
+</div>
+<div id="section_3">
+ <h1 id="New_in_NSS_3.12.9">New in NSS 3.12.9</h1>
+ <div id="section_5">
+  <h3 id="Removed_functions">Removed functions</h3>
+ </div>
+ <div id="section_6">
+  <h3 id="New_SSL_options">New SSL options</h3>
+  <div id="section_7">
+   <h3 id="New_error_codes">New error codes</h3>
+  </div>
+ </div>
+</div>
+<div id="section_8">
+ <h1 id="Bugs_Fixed">Bugs Fixed</h1>
+ <p>The following bugs have been fixed in NSS 3.12.9.</p>
+ <ul>
+  <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=609068" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=609068">Bug 609068</a>: Implement J-PAKE in FreeBL</li>
+  <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=607058" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=607058">Bug 607058</a>: crash [@ nss_cms_decoder_work_data]</li>
+  <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=613394" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=613394">Bug 613394</a>: November/December 2010 batch of NSS root CA changes</li>
+  <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=610843" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=610843">Bug 610843</a>: Need way to recover softoken in child after fork()</li>
+  <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=617492" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=617492">Bug 617492</a>: Add PK11_KeyGenWithTemplate function to pk11wrap (for Firefox Sync)</li>
+  <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=610162" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=610162">Bug 610162</a>: SHA-512 and SHA-384 hashes are incorrect for inputs of 512MB or larger when running under Windows and other 32-bit platforms (Fx 3.6.12 and 4.0b6)</li>
+  <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=518551" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=518551">Bug 518551</a>: Vfychain crashes in PKITS tests.</li>
+  <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=536485" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=536485">Bug 536485</a>: crash during ssl handshake in [@ intel_aes_decrypt_cbc_256]</li>
+  <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=444367" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=444367">Bug 444367</a>: NSS 3.12 softoken returns the certificate type of a certificate object as CKC_X_509_ATTR_CERT.</li>
+  <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=620908" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=620908">Bug 620908</a>: certutil -T -d "sql:." dumps core</li>
+  <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=584257" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=584257">Bug 584257</a>: Need a way to expand partial private keys.</li>
+  <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=596798" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=596798">Bug 596798</a>: win_rand.c (among others) uses unsafe _snwprintf</li>
+  <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=597622" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=597622">Bug 597622</a>: Do not use the SEC_ERROR_BAD_INFO_ACCESS_LOCATION error code for bad CRL distribution point URLs</li>
+  <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=619268" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=619268">Bug 619268</a>: Memory leaks in CERT_ChangeCertTrust and CERT_SaveSMimeProfile</li>
+  <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=585518" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=585518">Bug 585518</a>: AddTrust Qualified CA Root serial wrong in certdata.txt trust entry</li>
+  <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=337433" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=337433">Bug 337433</a>: Need CERT_FindCertByNicknameOrEmailAddrByUsage</li>
+  <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=592939" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=592939">Bug 592939</a>: Expired CAs in certdata.txt</li>
+ </ul>
+</div>
+<div id="section_9">
+ <h1 id="Documentation">Documentation</h1>
+ <p>NSS Documentation. New and revised documents available since the release of NSS 3.11 include the following:</p>
+ <ul>
+  <li><a href="/en-US/nss-3.11.4/nss-3.11.4-build.html" rel="internal">Build Instructions for NSS 3.11.4 and above</a></li>
+  <li><a class="external" href="http://wiki.mozilla.org/NSS_Shared_DB" rel="external" title="http://wiki.mozilla.org/NSS_Shared_DB">NSS Shared DB</a></li>
+ </ul>
+</div>
+<div id="section_10">
+ <h1 id="Compatibility">Compatibility</h1>
+ <p>NSS 3.12.9 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.12.9 shared libraries without recompiling or relinking.  Furthermore, applications that restrict their use of NSS APIs to the functions listed in <a href="/en-US/ref/nssfunctions.html" rel="internal">NSS Public Functions</a> will remain compatible with future versions of the NSS shared libraries. <a name="feedback"></a></p>
+</div>
+<div id="section_11">
+ <h1 id="Feedback">Feedback</h1>
+ <p>Bugs discovered should be reported by filing a bug report with <a class="link-https" href="https://bugzilla.mozilla.org/" rel="external" title="https://bugzilla.mozilla.org/">mozilla.org Bugzilla</a> (product NSS).</p>
+</div>

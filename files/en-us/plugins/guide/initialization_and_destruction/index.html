@@ -44,7 +44,7 @@ tags:
 
 <p>The function tables also contain version information that the plug-in checks to verify that it is compatible with the API capabilities provided by the application. To check this information, use <code><a href="/en/NPN_Version">NPN_Version</a></code>.</p>
 
-<p>No plug-in API calls can take place in either direction until the initialization completes successfully, with the exception of the functions <code><a href="/en/NP_Initialize">NP_Initialize</a></code> and <code><a href="/en/NP_Shutdown">NP_Shutdown</a></code>, which are not in the function tables. However, because <code><a href="/en/NP_Initialize">NP_Initialize</a></code> is called at the end of the initialization process, you can call other methods, such as <code><a class="internal" href="/en/NPN_MemAlloc" title="en/NPN MemAlloc">NPN_MemAlloc</a></code> and <code><a class="internal" href="/en/NPN_Status" title="en/NPN Status">NPN_Status</a></code>, from <code><a href="/en/NP_Initialize">NP_Initialize</a></code>.</p>
+<p>No plug-in API calls can take place in either direction until the initialization completes successfully, with the exception of the functions <code><a href="/en/NP_Initialize">NP_Initialize</a></code> and <code><a href="/en/NP_Shutdown">NP_Shutdown</a></code>, which are not in the function tables. However, because <code><a href="/en/NP_Initialize">NP_Initialize</a></code> is called at the end of the initialization process, you can call other methods, such as <code><a class="internal" href="/en/NPN_MemAlloc">NPN_MemAlloc</a></code> and <code><a class="internal" href="/en/NPN_Status">NPN_Status</a></code>, from <code><a href="/en/NP_Initialize">NP_Initialize</a></code>.</p>
 
 <h3 id="Instance_Creation">Instance Creation</h3>
 
@@ -133,7 +133,7 @@ strcpy((*save)-&gt;buf, myData);
 
 <pre>void NP_Shutdown(void);</pre>
 
-<p>For an example that shows both the <code><a href="/en/NP_Initialize">NP_Initialize</a></code> and <code><a class="internal" href="/en/NP_Shutdown" title="en/NP Shutdown">NP_Shutdown</a></code> methods, see <a href="/en/Gecko_Plugin_API_Reference/Initialization_and_Destruction#Initialize_and_Shutdown_Example">Initialize and Shutdown Example</a>.</p>
+<p>For an example that shows both the <code><a href="/en/NP_Initialize">NP_Initialize</a></code> and <code><a class="internal" href="/en/NP_Shutdown">NP_Shutdown</a></code> methods, see <a href="/en/Gecko_Plugin_API_Reference/Initialization_and_Destruction#Initialize_and_Shutdown_Example">Initialize and Shutdown Example</a>.</p>
 
 <h3 id="Initialize_and_Shutdown_Example">Initialize and Shutdown Example</h3>
 

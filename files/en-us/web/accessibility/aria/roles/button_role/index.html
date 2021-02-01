@@ -35,9 +35,9 @@ tags:
 
 <dl>
  <dt><code><span class="highlight-span">aria-pressed</span></code></dt>
- <dd>Defines the button as a toggle button. The value of <code>aria-pressed</code> describes the state of the button. The values include <code>aria-pressed="false"</code> when a button is not currently pressed, <code><code>aria-pressed="true"</code></code> to indicate a button is currently pressed, and <code>aria-pressed="mixed"</code> if the button is considered to be partially pressed. If the attribute is omitted or set to its default value of <code><code>aria-pressed="undefined"</code></code>, the element does not support being pressed.</dd>
+ <dd>Defines the button as a toggle button. The value of <code>aria-pressed</code> describes the state of the button. The values include <code>aria-pressed="false"</code> when a button is not currently pressed, <code>aria-pressed="true"</code> to indicate a button is currently pressed, and <code>aria-pressed="mixed"</code> if the button is considered to be partially pressed. If the attribute is omitted or set to its default value of <code>aria-pressed="undefined"</code>, the element does not support being pressed.</dd>
  <dt><code>aria-expanded</code></dt>
- <dd>If the button controls a grouping of other elements, the <code>aria-expanded</code> state indicates whether the controlled grouping is currently expanded or collapsed.  If the button has <code>aria-expanded="false"</code> set, the grouping is not currently expanded; If the button has <code>aria-expanded="true"</code> set, it is currently expanded; if the button has <code>aria-expanded="undefined"</code> set or the attribute is ommitted, it is not expandable.</dd>
+ <dd>If the button controls a grouping of other elements, the <code>aria-expanded</code> state indicates whether the controlled grouping is currently expanded or collapsed.  If the button has <code>aria-expanded="false"</code> set, the grouping is not currently expanded; If the button has <code>aria-expanded="true"</code> set, it is currently expanded; if the button has <code>aria-expanded="undefined"</code> set or the attribute is omitted, it is not expandable.</dd>
 </dl>
 
 <h3 id="Basic_buttons">Basic buttons</h3>
@@ -51,7 +51,7 @@ tags:
 <ul>
  <li>If <code>aria-pressed</code> is not used, or is set to the "undefined" state, the button is not a toggle button.</li>
  <li>If <code>aria-pressed="false"</code> is used the button is a toggle button that is currently not pressed. </li>
- <li>If <code><code>aria-pressed="true"</code></code> is used the button is a toggle button that is currently pressed.</li>
+ <li>If <code>aria-pressed="true"</code> is used the button is a toggle button that is currently pressed.</li>
  <li>if <code>aria-pressed="mixed"</code> is used, the button is considered to be partially pressed.</li>
 </ul>
 
@@ -88,7 +88,7 @@ tags:
  <dt><code>onclick</code></dt>
  <dd>Handles the event raised when the button is activated using a mouse click or touch event.</dd>
  <dt><code>onKeyDown</code></dt>
- <dd>Handles the event raised when the button is activated using the Enter or Space key on the keyboard. (Note not the <a href="/en-US/docs/Web/Events/keypress">deprecated onKeyPress</a>)</dd>
+ <dd>Handles the event raised when the button is activated using the Enter or Space key on the keyboard. (Note not the <a href="/en-US/docs/Web/API/Document/keypress_event">deprecated onKeyPress</a>)</dd>
 </dl>
 
 <h4 id="Changing_attribute_values">Changing attribute values</h4>
@@ -205,7 +205,7 @@ button:focus,
 
 function handleBtnKeyDown(event) {
   // Check to see if space or enter were pressed
-  if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") { // <a href="/en-US/docs/Web/API/KeyboardEvent/key/Key_Values#Whitespace_keys">"Spacebar" for IE11 support</a>
+  if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") { // <a href="/en-US/docs/Web/API/KeyboardEvent/key/Key_Values#whitespace_keys">"Spacebar" for IE11 support</a>
     // Prevent the default action to stop scrolling when space is pressed
     event.preventDefault();
     toggleButton(event.target);

@@ -16,7 +16,7 @@ tags:
 
 <p>This type is a string, which represents the context in which a resource was fetched in a web request.</p>
 
-<p>It's used to <a href="/en-US/Add-ons/WebExtensions/API/WebRequest/RequestFilter">filter</a> the requests you listen to using the webRequest API. For example: you can listen to requests only for images, or only for scripts.</p>
+<p>It's used to <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter">filter</a> the requests you listen to using the webRequest API. For example: you can listen to requests only for images, or only for scripts.</p>
 
 <h2 id="Type">Type</h2>
 
@@ -33,9 +33,6 @@ tags:
  <dd>Resources loaded to be rendered as image, except for <code>imageset</code> on browsers that support that type (see browser compatibility below).</dd>
  <dt><code>imageset</code></dt>
  <dd>Images loaded by a {{HTMLElement("picture")}} element or given in an <code>&lt;img&gt;</code> element's {{htmlattrxref("srcset", "img")}} attribute.</dd>
-</dl>
-
-<dl>
  <dt><code>main_frame</code></dt>
  <dd>Top-level documents loaded into a tab.</dd>
  <dt><code>media</code></dt>
@@ -63,7 +60,7 @@ tags:
  <dt><code>xbl</code></dt>
  <dd><a href="/en-US/docs/Mozilla/Tech/XBL">XBL</a> bindings loaded to extend the behavior of elements in a document.</dd>
  <dt><code>xml_dtd</code></dt>
- <dd><a href="/en-US/docs/Glossary/DTD">DTDs</a> loaded for an XML document.</dd>
+ <dd><a href="/en-US/docs/Glossary/Doctype">DTDs</a> loaded for an XML document.</dd>
  <dt><code>xmlhttprequest</code></dt>
  <dd>Requests sent by an {{domxref("XMLHttpRequest")}} object or through the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>.</dd>
  <dt><code>xslt</code></dt>

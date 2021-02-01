@@ -54,12 +54,12 @@ canvas.requestPointerLock()
 
 <p>Here is an example of using <code>pointerLockElement</code>:</p>
 
-<pre class="brush: js"><span class="idlInterface" id="idl-def-MouseLockable"><span class="idlInterface" id="idl-def-MouseLockable">if(document.pointerLockElement === canvas ||
+<pre class="brush: js"><span class="idlInterface">if(document.pointerLockElement === canvas ||
   document.mozPointerLockElement === canvas) {
     console.log('The pointer lock status is now locked');
 } else {
     console.log('The pointer lock status is now unlocked');
-}</span></span></pre>
+}</span></pre>
 
 <p>The {{domxref("Document.exitPointerLock()")}} method is used to exit pointer lock, and like {{domxref("Element.requestPointerLock","requestPointerLock")}}, works asynchronously using the {{event("pointerlockchange")}} and {{event("pointerlockerror")}} events, which you'll see more about below.</p>
 

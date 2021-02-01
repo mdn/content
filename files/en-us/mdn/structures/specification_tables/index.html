@@ -10,7 +10,7 @@ tags:
 
 <p>Every reference page on MDN should provide information about the specification or specifications in which that API or technology was defined. This article demonstrates what these tables look like and explains how to construct them.</p>
 
-<p>These tables are similar in some respects to the <a href="/en-US/docs/MDN/Contribute/Structures/Compatibility_tables">compatibility tables</a> (which should also be present on any page that has a specification table).</p>
+<p>These tables are similar in some respects to the <a href="/en-US/docs/MDN/Structures/Compatibility_tables">compatibility tables</a> (which should also be present on any page that has a specification table).</p>
 
 <h2 id="Format">Format</h2>
 
@@ -34,8 +34,8 @@ tags:
 <p>Which specs to include in each table depends on what features are being discussed on the reference page in question.</p>
 
 <ul>
- <li>If it is just a single feature of a spec, you usually just need to include a single line that details the latest spec the feature is defined in. See the <a href="/en-US/docs/Web/API/AudioContext/close#Specifications"><code>AudioContext.close()</code> Specifications</a>, for example.</li>
- <li>If it is a landing page for an API where different parts of the API (e.g. extensions) are defined in different specs, you may need multiple lines referencing different specs. See the <a href="/en-US/docs/Web/API/Gamepad_API#Specifications">Gamepad API Specifications</a> for a simple clear example.</li>
+ <li>If it is just a single feature of a spec, you usually just need to include a single line that details the latest spec the feature is defined in. See the <a href="/en-US/docs/Web/API/AudioContext/close#specifications"><code>AudioContext.close()</code> Specifications</a>, for example.</li>
+ <li>If it is a landing page for an API where different parts of the API (e.g. extensions) are defined in different specs, you may need multiple lines referencing different specs. See the <a href="/en-US/docs/Web/API/Gamepad_API#specifications">Gamepad API Specifications</a> for a simple clear example.</li>
 </ul>
 
 <h3 id="Different_types_of_specs">Different types of specs</h3>
@@ -44,7 +44,7 @@ tags:
 
 <p>Other specs (normally WebAPI specs) will tend to have a single URL that always points to the latest editor's draft, whichever spec that is (not always the same spec). In such cases, it is usually better to link to the latest editor's draft so that as the latest spec changes, the link will stay correct — the latest editor's draft is where all the latest features are defined and what browser vendors usually work from. This is therefore the most interesting place to link to, which is most likely to be up-to-date. Examples of this include the <a href="https://w3c.github.io/IndexedDB/">IndexedDB draft</a>, <a href="https://webaudio.github.io/web-audio-api/">Web Audio API draft</a>, etc. You can find the latest draft link at the top of each specification.</p>
 
-<p>Other specs will have the core functionality defined in one spec, but then other specs will extend that functionality, for example The Credential Management spec is extended by the Web Authentication spec (<a href="/en-US/docs/Web/API/Credential_Management_API#Specifications">see the spec table</a>).</p>
+<p>Other specs will have the core functionality defined in one spec, but then other specs will extend that functionality, for example The Credential Management spec is extended by the Web Authentication spec (<a href="/en-US/docs/Web/API/Credential_Management_API#specifications">see the spec table</a>).</p>
 
 <p>With CSS specs, it is not that simple — CSS specs are generally broken up into different Levels, which introduce new functionality — for example <a href="https://drafts.csswg.org/mediaqueries-4/">Media Queries Level 4</a> and <a href="https://drafts.csswg.org/mediaqueries-5/">Media Queries Level 5</a>. You'll often have to link to multiple specs to show where all the functionality of a feature is defined.</p>
 
@@ -52,7 +52,7 @@ tags:
 
 <h3 id="What_not_to_include">What not to include</h3>
 
-<p>There are a number of spec tables on MDN where we've included all the specs that define a feature, back to ancient times. For example, the <a href="/en-US/docs/Web/CSS/color#Specifications">CSS color property spec table</a>. This goes all the way back to CSS level 1, but you probably don't need the bottom three rows of the table. Everything is defined in Level 4, except for the part about colors being animatable.</p>
+<p>There are a number of spec tables on MDN where we've included all the specs that define a feature, back to ancient times. For example, the <a href="/en-US/docs/Web/CSS/color#specifications">CSS color property spec table</a>. This goes all the way back to CSS level 1, but you probably don't need the bottom three rows of the table. Everything is defined in Level 4, except for the part about colors being animatable.</p>
 
 <p>You especially don't need to refer to specs that are marked as obsolete. They aren't helpful.</p>
 

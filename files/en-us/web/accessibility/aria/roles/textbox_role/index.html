@@ -39,7 +39,7 @@ tags:
 <h3 class="highlight-spanned" id="Associated_ARIA_properties"><span class="highlight-span">Associated ARIA properties</span></h3>
 
 <dl>
-	<dt><code>aria-activedescendent</code> attribute</dt>
+	<dt><code>aria-activedescendant</code> attribute</dt>
 	<dd>Taking as it's value the ID of is either a descendant of the element with DOM focus or is a logical descendant as indicated by the <code>aria-owns</code> attribute, it indicates when that element has focus, when it is part of a composite widget such as a <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox">combobox</a>. For example, in a combobox, focus may remain on the textbox while the value of <code>aria-activedescendant</code> on the textbox element refers to a descendant of a popup listbox that is controlled by the textbox.This attribute must be updated programmatically as the focus changes.</dd>
 	<dt><code>aria-autocomplete</code> attribute</dt>
 	<dd>Indicates whether and how the user's input into the field could trigger display of a prediction of the intended value. It supports the following values:
@@ -71,8 +71,8 @@ tags:
 <p><span class="highlight-span">All features associated with any and all properties and states must be maintained, and forms submission on enter or return on a single line textbox needs to be handled.</span></p>
 
 <dl>
-	<dt>Focus event handler and aria-activedescendent attribute</dt>
-	<dd>If you are implementing a composite widget, such as a combobox composed of a text box and a listbox, you need to manage the <code>aria-activedescendent</code> attribute using a handler. Before using this technique, ensure that the browsers you need to target currently support it. See the <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-activedescendant">specification of aria-descendent</a> for further information.</dd>
+	<dt>Focus event handler and aria-activedescendant attribute</dt>
+	<dd>If you are implementing a composite widget, such as a combobox composed of a text box and a listbox, you need to manage the <code>aria-activedescendant</code> attribute using a handler. Before using this technique, ensure that the browsers you need to target currently support it. See the <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-activedescendant">specification of aria-descendent</a> for further information.</dd>
 </dl>
 
 <div class="note">

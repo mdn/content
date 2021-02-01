@@ -11,7 +11,7 @@ tags:
 
 <p class="summary">When navigating through different networks of the Internet, proxy servers and HTTP tunnels are facilitating access to content on the World Wide Web. A proxy can be on the user's local computer, or anywhere between the user's computer and a destination server on the Internet. This page outlines some basics about proxies and introduces a few configuration options.</p>
 
-<p>There are two types of proxies: <strong>forward proxies</strong> (or tunnel, or gateway) and<strong> reverse proxies</strong> (used to control and protect access to a server for load-balancing, authentication, decryption or caching).</p>
+<p>There are two types of proxies: <strong>forward proxies</strong> (or tunnel, or gateway) and <strong>reverse proxies</strong> (used to control and protect access to a server for load-balancing, authentication, decryption or caching).</p>
 
 <h2 id="Forward_proxies">Forward proxies</h2>
 
@@ -72,11 +72,11 @@ tags:
 
 <p id="Saving_the_Auto-Config_File_Setting_the_MIME_Type">The auto-config file should be saved to a file with a <code>.pac</code> filename extension:</p>
 
-<pre class="syntaxbox notranslate">proxy.pac</pre>
+<pre class="brush: html notranslate">proxy.pac</pre>
 
 <p>And the MIME type set to:</p>
 
-<pre class="syntaxbox notranslate">application/x-ns-proxy-autoconfig</pre>
+<pre class="brush: html notranslate">application/x-ns-proxy-autoconfig</pre>
 
 <p>The file consists of a function called <code>FindProxyForURL</code>. The example below will work in an environment where the internal DNS server is set up so that it can only resolve internal host names, and the goal is to use a proxy only for hosts that aren't resolvable:</p>
 

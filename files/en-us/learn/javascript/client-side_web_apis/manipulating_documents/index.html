@@ -40,10 +40,10 @@ tags:
 
 <p>Despite the limitations, Web APIs still give us access to a lot of functionality that enable us to do a great many things with web pages. There are a few really obvious bits you'll reference regularly in your code — consider the following diagram, which represents the main parts of a browser directly involved in viewing web pages:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14557/document-window-navigator.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="document-window-navigator.png" style="display: block; margin: 0 auto;"></p>
 
 <ul>
- <li>The window is the browser tab that a web page is loaded into; this is represented in JavaScript by the {{domxref("Window")}} object. Using methods available on this object you can do things like return the window's size (see {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}}), manipulate the document loaded into that window, store data specific to that document on the client-side (for example using a local database or other storage mechanism), attach an <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#A_series_of_fortunate_events">event handler</a> to the current window, and more.</li>
+ <li>The window is the browser tab that a web page is loaded into; this is represented in JavaScript by the {{domxref("Window")}} object. Using methods available on this object you can do things like return the window's size (see {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}}), manipulate the document loaded into that window, store data specific to that document on the client-side (for example using a local database or other storage mechanism), attach an <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#a_series_of_fortunate_events">event handler</a> to the current window, and more.</li>
  <li>The navigator represents the state and identity of the browser (i.e. the user-agent) as it exists on the web. In JavaScript, this is represented by the {{domxref("Navigator")}} object. You can use this object to retrieve things like the user's preferred language, a media stream from the user's webcam, etc.</li>
  <li>The document (represented by the DOM in browsers) is the actual page loaded into the window, and is represented in JavaScript by the {{domxref("Document")}} object. You can use this object to return and manipulate information on the HTML and CSS that comprises the document, for example get a reference to an element in the DOM, change its text content, apply new styles to it, create new elements and add them to the current element as children, or even delete it altogether.</li>
 </ul>
@@ -72,7 +72,7 @@ tags:
 
 <p>The DOM on the other hand looks like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14559/dom-screenshot.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="dom-screenshot.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <div class="note">
 <p><strong>Note</strong>: This DOM tree diagram was created using Ian Hickson's <a href="https://software.hixie.ch/utilities/js/live-dom-viewer/">Live DOM viewer</a>.</p>
@@ -177,9 +177,9 @@ linkPara.appendChild(text);</pre>
 
 <p>It is possible to manipulate CSS styles via JavaScript in a variety of ways.</p>
 
-<p>To start with, you can get a list of all the stylesheets attached to a document using {{domxref("Document.stylesheets")}}, which returns an array-like object with {{domxref("CSSStyleSheet")}} objects. You can then add/remove styles as wished. However, we're not going to expand on those features because they are a somewhat archaic and difficult way to manipulate style. There are much easier ways.</p>
+<p>To start with, you can get a list of all the stylesheets attached to a document using {{domxref("DocumentOrShadowRoot/styleSheets", "Document.stylesheets")}}, which returns an array-like object with {{domxref("CSSStyleSheet")}} objects. You can then add/remove styles as wished. However, we're not going to expand on those features because they are a somewhat archaic and difficult way to manipulate style. There are much easier ways.</p>
 
-<p>The first way is to add inline styles directly onto elements you want to dynamically style. This is done with the {{domxref("HTMLElement.style")}} property, which contains inline styling information for each element in the document. You can set properties of this object to directly update element styles.</p>
+<p>The first way is to add inline styles directly onto elements you want to dynamically style. This is done with the {{domxref("ElementCSSInlineStyle/style", "HTMLElement.style")}} property, which contains inline styling information for each element in the document. You can set properties of this object to directly update element styles.</p>
 
 <ol>
  <li>As an example, try adding these lines to our ongoing example:
@@ -248,7 +248,7 @@ let winHeight = window.innerHeight;</pre>
 div.style.height = winHeight + 'px';</pre>
  </li>
  <li>Save and try refreshing your browser — you should now see the div become as big as your viewport, whatever size of screen your are using. If you now try resizing your window to make it bigger, you'll see that the div stays the same size — we are only setting it once.</li>
- <li>How about we use an event so that the div resizes as we resize the window? The {{domxref("Window")}} object has an event available on it called resize, which is fired every time the window is resized — let's access that via the {{domxref("Window.onresize")}} event handler and rerun our sizing code each time it changes. Add the following to the bottom of your code:
+ <li>How about we use an event so that the div resizes as we resize the window? The {{domxref("Window")}} object has an event available on it called resize, which is fired every time the window is resized — let's access that via the {{domxref("GlobalEventHandlers/onresize", "Window.onresize")}} event handler and rerun our sizing code each time it changes. Add the following to the bottom of your code:
   <pre class="brush: js notranslate">window.onresize = function() {
   winWidth = window.innerWidth;
   winHeight = window.innerHeight;
@@ -274,7 +274,7 @@ div.style.height = winHeight + 'px';</pre>
 
 <p>The finished demo will look something like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14563/shopping-list.png" style="border-style: solid; border-width: 1px; display: block; height: 225px; margin: 0px auto; width: 369px;"></p>
+<p><img alt="" src="shopping-list.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>To complete the exercise, follow the steps below, and make sure that the list behaves as described above.</p>
 
@@ -282,14 +282,14 @@ div.style.height = winHeight + 'px';</pre>
  <li>To start with, download a copy of our <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/shopping-list.html">shopping-list.html</a> starting file and make a copy of it somewhere. You'll see that it has some minimal CSS, a list with a label, input, and button, and an empty list and {{htmlelement("script")}} element. You'll be making all your additions inside the script.</li>
  <li>Create three variables that hold references to the list ({{htmlelement("ul")}}), {{htmlelement("input")}}, and {{htmlelement("button")}} elements.</li>
  <li>Create a <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">function</a> that will run in response to the button being clicked.</li>
- <li>Inside the function body, start off by storing the current <a href="/en-US/docs/Web/API/HTMLInputElement#Properties">value</a> of the input element in a variable.</li>
+ <li>Inside the function body, start off by storing the current <a href="/en-US/docs/Web/API/HTMLInputElement#properties">value</a> of the input element in a variable.</li>
  <li>Next, empty the input element by setting its value to an empty string — <code>''</code>.</li>
  <li>Create three new elements — a list item ({{htmlelement('li')}}), {{htmlelement('span')}}, and {{htmlelement('button')}}, and store them in variables.</li>
  <li>Append the span and the button as children of the list item.</li>
  <li>Set the text content of the span to the input element value you saved earlier, and the text content of the button to 'Delete'.</li>
  <li>Append the list item as a child of the list.</li>
  <li>Attach an event handler to the delete button, so that when clicked it will delete the entire list item it is inside.</li>
- <li>Finally, use the <code><a href="/en-US/docs/Web/API/HTMLElement/focus">focus()</a></code> method to focus the input element ready for entering the next shopping list item.</li>
+ <li>Finally, use the <code><a href="/en-US/docs/Web/API/HTMLOrForeignElement/focus">focus()</a></code> method to focus the input element ready for entering the next shopping list item.</li>
 </ol>
 
 <div class="note">

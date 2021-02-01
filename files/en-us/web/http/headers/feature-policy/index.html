@@ -38,7 +38,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">Feature-Policy: &lt;directive&gt; &lt;allowlist&gt;</pre>
+<pre class="brush: html notranslate">Feature-Policy: &lt;directive&gt; &lt;allowlist&gt;</pre>
 
 <dl>
  <dt><code>&lt;directive&gt;</code></dt>
@@ -70,9 +70,6 @@ tags:
  <dd>Controls whether tasks should execute in frames while they're not being rendered (e.g. if an iframe is <code><a href="/en-US/docs/Web/HTML/Global_attributes/hidden">hidden</a></code> or <code>display: none</code>).</dd>
  <dt>{{httpheader('Feature-Policy/execution-while-out-of-viewport', 'execution-while-out-of-viewport')}}</dt>
  <dd>Controls whether tasks should execute in frames while they're outside of the visible viewport.</dd>
-</dl>
-
-<dl>
  <dt>{{httpheader('Feature-Policy/fullscreen','fullscreen')}}</dt>
  <dd>Controls whether the current document is allowed to use {{DOMxRef("Element.requestFullScreen()")}}. When this policy is disabled, the returned {{JSxRef("Promise")}} rejects with a {{JSxRef("TypeError")}}.</dd>
  <dt>{{httpheader('Feature-Policy/geolocation','geolocation')}}</dt>
@@ -81,14 +78,8 @@ tags:
  <dd>Controls whether the current document is allowed to gather information about the orientation of the device through the {{DOMxRef("Gyroscope")}} interface.</dd>
  <dt>{{httpheader('Feature-Policy/layout-animations','layout-animations')}}</dt>
  <dd>Controls whether the current document is allowed to show layout animations.</dd>
-</dl>
-
-<dl>
  <dt>{{httpheader('Feature-Policy/legacy-image-formats','legacy-image-formats')}}</dt>
  <dd>Controls whether the current document is allowed to display images in legacy formats.</dd>
-</dl>
-
-<dl>
  <dt>{{httpheader('Feature-Policy/magnetometer','magnetometer')}}</dt>
  <dd>Controls whether the current document is allowed to gather information about the orientation of the device through the {{DOMxRef("Magnetometer")}} interface.</dd>
  <dt>{{httpheader('Feature-Policy/microphone','microphone')}}</dt>
@@ -104,7 +95,7 @@ tags:
  <dt>{{httpheader('Feature-Policy/picture-in-picture', 'picture-in-picture')}}</dt>
  <dd>Controls whether the current document is allowed to play a video in a Picture-in-Picture mode via the corresponding API.</dd>
  <dt>{{httpheader("Feature-Policy/publickey-credentials-get", "publickey-credentials-get")}}</dt>
- <dd>Controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API</a> to retreive already stored public-key credentials, i.e. via {{domxref("CredentialsContainer.get","navigator.credentials.get({publicKey: ..., ...})")}}.</dd>
+ <dd>Controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API</a> to retrieve already stored public-key credentials, i.e. via {{domxref("CredentialsContainer.get","navigator.credentials.get({publicKey: ..., ...})")}}.</dd>
  <dt>{{httpheader('Feature-Policy/sync-xhr', 'sync-xhr')}}</dt>
  <dd>Controls whether the current document is allowed to make synchronous {{DOMxRef("XMLHttpRequest")}} requests.</dd>
  <dt>{{httpheader('Feature-Policy/usb', 'usb')}}</dt>

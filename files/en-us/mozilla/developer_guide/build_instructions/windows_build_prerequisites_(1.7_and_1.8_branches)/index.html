@@ -6,11 +6,11 @@ tags:
   - Build documentation
   - Developing Mozilla
 ---
-<p><span class="comment">NOTE: Do not make substantive changes to this document without consulting Benjamin Smedberg &lt;<a class="link-mailto" href="mailto:benjamin@smedbergs.us" rel="freelink">benjamin@smedbergs.us</a>&gt; or one of the build-config peers.</span></p>
+<p><span class="comment">NOTE: Do not make substantive changes to this document without consulting Benjamin Smedberg &lt;<a class="link-mailto" href="mailto:benjamin@smedbergs.us">benjamin@smedbergs.us</a>&gt; or one of the build-config peers.</span></p>
 
 <h3 id="Introduction">Introduction</h3>
 
-<p>This document is a guide to the prerequisite software for building Mozilla on Windows platforms on the 1.7 branch (Mozilla 1.7.*), the aviary branch (Firefox 1.0.*), the 1.8.0 branch (Firefox 1.5.0.*), and the 1.8 branch (Firefox 2). The build prerequisites for the Mozilla trunk are <a href="/en/Windows_Build_Prerequisites">here</a>.</p>
+<p>This document is a guide to the prerequisite software for building Mozilla on Windows platforms on the 1.7 branch (Mozilla 1.7.*), the aviary branch (Firefox 1.0.*), the 1.8.0 branch (Firefox 1.5.0.*), and the 1.8 branch (Firefox 2). The build prerequisites for the Mozilla trunk are <a href="/en-US/docs/Windows_Build_Prerequisites">here</a>.</p>
 
 <h3 id="Hardware_Requirements">Hardware Requirements</h3>
 
@@ -48,7 +48,7 @@ tags:
 <p><br>
  If you plan to modify the build system's configure.in files, you will need to install an editor (xemacs, vim, etc.) and the autoconf-2.13 (don't use autoconf-2.5x or 2.60) package as well.</p>
 
-<p>It is hightly recommended to choose "DOS" style line endings from the cygwin installer.</p>
+<p>It is highly recommended to choose "DOS" style line endings from the cygwin installer.</p>
 
 <p>You may use <a class="external" href="http://activestate.com/Products/ActivePerl/">ActivePerl from ActiveState</a> instead of the perl package in cygwin if you prefer.</p>
 
@@ -96,7 +96,7 @@ install.bat
 
 <h4 id="Compiler_&amp;_Linker">Compiler &amp; Linker</h4>
 
-<p>The standard compiler for Mozilla on Windows is Microsoft Visual C++, version 6. You must use either the Professional or Enterprise edition (the Visual C++ Processor Pack will not install with Visual C++ Standard). The GUI tools of the MSVC environment are not used, only the command-line tools CL (C/C++ compiler), LINK (linker), RC (resource compiler), and ML (assembler). <a class="external" href="http://msdn.microsoft.com/vstudio/downloads/updates/sp/vs6/sp5/default.aspx">Visual C++ Service Pack 5</a> and <a class="external" href="http://msdn.microsoft.com/vstudio/downloads/tools/ppack/">Visual C++ Processor Pack</a> are required. Service Pack 6 is not supported. MSVC version 5 is not supported.</p>
+<p>The standard compiler for Mozilla on Windows is Microsoft Visual C++, version 6. You must use either the Professional or Enterprise edition (the Visual C++ Processor Pack will not install with Visual C++ Standard). The GUI tools of the MSVC environment are not used, only the command-line tools CL (C/C++ compiler), LINK (linker), RC (resource compiler), and ML (assembler). <a class="external" href="https://msdn.microsoft.com/vstudio/downloads/updates/sp/vs6/sp5/default.aspx">Visual C++ Service Pack 5</a> and <a class="external" href="https://msdn.microsoft.com/vstudio/downloads/tools/ppack/">Visual C++ Processor Pack</a> are required. Service Pack 6 is not supported. MSVC version 5 is not supported.</p>
 
 <p>The environment must be configured to include the MSVC tools. This is typically with the <code>vcvars32.bat</code> script, see below for details.</p>
 
@@ -134,7 +134,7 @@ install.bat
 
 <pre class="eval">rem --- Set HOME so that cvs and ssh work correctly
 rem --- cvs uses HOME to locate your .cvspass file, and ssh to locate your .ssh file
-rem --- if you are using ssh, your HOME should match the home directory specified in /etc/passwd. See <a class="external" href="http://www.cygwin.com/faq/faq0.html" rel="freelink">http://www.cygwin.com/faq/faq0.html</a>.
+rem --- if you are using ssh, your HOME should match the home directory specified in /etc/passwd. See <a class="external" href="http://www.cygwin.com/faq/faq0.html">http://www.cygwin.com/faq/faq0.html</a>.
 set HOME=C:\home
 
 rem --- Set VCVARS to wherever the MSVC vcvars.bat file is found
@@ -149,7 +149,7 @@ set MOZ_TOOLS=<var>C:\moztools</var>
 
 rem --- Set CYGWINBASE to wherever cygwin is installed
 rem --- Do not use CYGWIN or else cygserver, cygrunsrv, and other cygwin services will not function properly.
-rem --- The CYGWIN variable is also used to sort of change the behaviour of Cygwin.
+rem --- The CYGWIN variable is also used to sort of change the behavior of Cygwin.
 set CYGWINBASE=<var>C:\cygwin</var>
 rem --- Make sure Cygwin does not print out a DOS style path warning
 set CYGWIN=<var>nodosfilewarning</var>
@@ -197,16 +197,16 @@ Fix above errors and restart with "make -f client.mk build"
 <h3 id="Common_Problems_and_Hints">Common Problems and Hints</h3>
 
 <ul>
- <li>Check the <a href="/en/Mozilla_Build_FAQ">Mozilla Build Frequently Asked Questions</a></li>
+ <li>Check the <a href="/en-US/docs/Mozilla_Build_FAQ">Mozilla Build Frequently Asked Questions</a></li>
  <li>Your source tree must be located at a /cygdrive/&lt;c&gt; mount point. It must not be located within your /home.</li>
  <li>Mozilla may not build if you install the wintools directory inside the cygwin directory.</li>
  <li>If the configure or build fails due to a missing w32api, add the mingw32's /include directory to the end of your INCLUDE environment variable. Mingw32 libraries or binaries should not be needed, only the headers.</li>
  <li>The build may fail if your PATH environment variable contains quotes ("). Quotes are not properly translated when passed down to the cygwin sub-shells. Quotes are usually not needed so they can be removed.</li>
  <li>Currently the build system is incompatible with make 3.81, so make sure you're using make 3.80. This issue is being tracked in <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=325148">bug 325148</a>, where a partial patch exists.
   <ul>
-   <li>From the Cygwin Mailing Lists, the cause of the change of behaviour on make 3.81 is because of a DOS style path patch removal. That patch is still on make 3.80.</li>
+   <li>From the Cygwin Mailing Lists, the cause of the change of behavior on make 3.81 is because of a DOS style path patch removal. That patch is still on make 3.80.</li>
   </ul>
  </li>
  <li>Double-check to make sure that you have the complete cygwin package list. If not, launch the cygwin installer and add the missing packages.</li>
- <li><a href="/en/Debugging_Mozilla_on_Windows_FAQ">Debugging Mozilla on Windows FAQ</a>: Tips on how to debug Mozilla on Windows.</li>
+ <li><a href="/en-US/docs/Debugging_Mozilla_on_Windows_FAQ">Debugging Mozilla on Windows FAQ</a>: Tips on how to debug Mozilla on Windows.</li>
 </ul>

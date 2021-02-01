@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var createContext = browser.contextualIdentities.update(
+<pre class="brush:js">var createContext = browser.contextualIdentities.update(
   cookieStoreId,           // string
   details                  // object
 )
@@ -43,7 +43,7 @@ tags:
   </dd>
   <dt><code>color</code> {{optional_inline}}</dt>
   <dd>
-  <p><code><code>string</code></code>. A new color for the identity. This will be used to highlight tabs belonging to this identity. You can supply any of the following values here:</p>
+  <p><code>string</code>. A new color for the identity. This will be used to highlight tabs belonging to this identity. You can supply any of the following values here:</p>
 
   <ul>
    <li>"blue"</li>
@@ -54,7 +54,7 @@ tags:
    <li>"red"</li>
    <li>"pink"</li>
    <li>"purple"</li>
-   <li>"toolbar"<span style="display: none;"> </span></li>
+   <li>"toolbar"</li>
   </ul>
   </dd>
   <dt><code>icon</code> {{optional_inline}}</dt>
@@ -95,7 +95,7 @@ tags:
 
 <p>This example updates the contextual identity whose ID is "firefox-container-1" to have a new name, color, and icon:</p>
 
-<pre class="brush: js">function onUpdated(context) {
+<pre class="notranslate brush: js">function onUpdated(context) {
   console.log(`New identity's name: ${context.name}.`);
 }
 

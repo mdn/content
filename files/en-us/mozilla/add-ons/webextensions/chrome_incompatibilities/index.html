@@ -17,7 +17,7 @@ tags:
   <p>Support for JavaScript APIs differs across browsers. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">Browser support for JavaScript APIs</a> for more details.</p>
  </li>
  <li>
-  <p>Support for <code>manifest.json</code> keys differs across browsers. See the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json#Browser_compatibility">"Browser compatibility" section</a> in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json"><code>manifest.json</code></a> page for more details.</p>
+  <p>Support for <code>manifest.json</code> keys differs across browsers. See the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json#browser_compatibility">"Browser compatibility" section</a> in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json"><code>manifest.json</code></a> page for more details.</p>
  </li>
  <li>
   <p>Javascript APIs:</p>
@@ -50,11 +50,11 @@ tags:
 <dl>
  <dt>In Chrome</dt>
  <dd>Extensions access privileged JavaScript APIs using the <code>chrome</code> namespace.
- <pre class="brush: js;">chrome.browserAction.setIcon({path: "path/to/icon.png"});</pre>
+ <pre class="notranslate brush: js">chrome.browserAction.setIcon({path: "path/to/icon.png"});</pre>
  </dd>
  <dt>In Firefox (via the WebExtension API)</dt>
  <dd>The equivalent APIs are accessed using the <code>browser</code> namespace.
- <pre class="brush: js;">browser.browserAction.setIcon({path: "path/to/icon.png"});</pre>
+ <pre class="notranslate brush: js">browser.browserAction.setIcon({path: "path/to/icon.png"});</pre>
  </dd>
 </dl>
 
@@ -63,7 +63,7 @@ tags:
 <dl>
  <dt>In Chrome</dt>
  <dd>Asynchronous APIs use callbacks to return values, and {{WebExtAPIRef("runtime.lastError")}} to communicate errors.
- <pre class="brush: js;">function logCookie(c) {
+ <pre class="notranslate brush: js">function logCookie(c) {
   if (chrome.runtime.lastError) {
     console.error(chrome.runtime.lastError);
   } else {
@@ -78,7 +78,7 @@ chrome.cookies.set(
  </dd>
  <dt>In Firefox (via the WebExtension API)</dt>
  <dd>Asynchronous APIs use <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a> to return values instead.
- <pre class="brush: js;">function logCookie(c) {
+ <pre class="notranslate brush: js">function logCookie(c) {
   console.log(c);
 }
 
@@ -115,7 +115,7 @@ setCookie.then(logCookie, logError);</pre>
 
 <ul>
  <li>
-  <p>For <code>notifications.create()</code>, with <code><a href="/en-US/Add-ons/WebExtensions/API/notifications/TemplateType">type</a> "basic"</code>:</p>
+  <p>For <code>notifications.create()</code>, with <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/TemplateType">type</a> "basic"</code>:</p>
 
   <dl>
    <dt>In Firefox</dt>
@@ -196,7 +196,7 @@ setCookie.then(logCookie, logError);</pre>
  </li>
 </ul>
 
-<h4 id="webRequest"><a href="/en-US/Add-ons/WebExtensions/API/webRequest" id="webRequest_incompatibilities">webRequest</a></h4>
+<h4 id="webRequest"><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest" id="webRequest_incompatibilities">webRequest</a></h4>
 
 <dl>
  <dt>In Firefox</dt>
@@ -295,14 +295,18 @@ setCookie.then(logCookie, logError);</pre>
  <dd>When a content script makes a request (for example, using <a href="/en-US/docs/Web/API/Fetch_API/Using_Fetch"><code>fetch()</code></a>) to a relative URL (like <code>/api</code>), it will be sent to <code>https://example.com/api</code>.</dd>
  <dt>In Firefox</dt>
  <dd>When a content script makes a request, you <em>must</em> provide absolute URLs.</dd>
- <dt>
- <h4 id="Sharing_variables_between_content_scripts">Sharing variables between content scripts</h4>
- </dt>
+</dl>
+
+<h4 id="Sharing_variables_between_content_scripts">Sharing variables between content scripts</h4>
+
+<dl>
  <dt>In Firefox</dt>
  <dd>You cannot share variables between content scripts by assigning them to <code>this.{variableName}</code> in one script and then attempting to access them using <code>window.{variableName}</code> in another. This is a limitation created by the sandbox environment in Firefox. This limitation may be removed, see {{bug(1208775)}}.</dd>
- <dt>
- <h4 id="Content_script_lifecycle_during_navigation">Content script lifecycle during navigation</h4>
- </dt>
+</dl>
+
+<h4 id="Content_script_lifecycle_during_navigation">Content script lifecycle during navigation</h4>
+
+<dl>
  <dt>In Chrome</dt>
  <dd>Content scripts are destroyed when the user navigates away from a web page. If the user then returns to the page through history, by clicking the back button, the content script is injected into the web page again.</dd>
  <dt>In Firefox</dt>
@@ -311,11 +315,13 @@ setCookie.then(logCookie, logError);</pre>
 
  <p>To mimic the behavior of Chrome, listen for the <a href="/en-US/docs/Web/API/Window/pageshow_event">pageshow</a> and <a href="/en-US/docs/Web/API/Window/pagehide_event">pagehide</a> events. Then simulate the injection or destruction of the content script.</p>
  </dd>
- <dt>
- <h4 id="per-tab_zoom_behavior">"per-tab" zoom behavior</h4>
+</dl>
 
- <p>See {{WebExtAPIRef("tabs.ZoomSettingsScope")}}</p>
- </dt>
+<h4 id="per-tab_zoom_behavior">"per-tab" zoom behavior</h4>
+
+<p>See {{WebExtAPIRef("tabs.ZoomSettingsScope")}}</p>
+
+<dl>
  <dt>In Chrome</dt>
  <dd>Zoom changes are reset on navigation; navigating a tab will always load pages with their per-origin zoom factors.</dd>
  <dt>In Firefox</dt>
@@ -363,3 +369,18 @@ setCookie.then(logCookie, logError);</pre>
  <dt>In Chrome</dt>
  <dd>The app manifest is expected in a different place. See <a href="https://developer.chrome.com/extensions/nativeMessaging#native-messaging-host-location">Native messaging host location</a> in the Chrome docs.</dd>
 </dl>
+
+<h2 id="Data_cloning_algorithm">Data cloning algorithm</h2>
+
+<p>Some extension APIs allow an extension to send data from one part of the extension to another, such as {{WebExtAPIRef("runtime.sendMessage()")}}, {{WebExtAPIRef("tabs.sendMessage()")}}, {{WebExtAPIRef("runtime.onMessage")}}, the <code>postMessage()</code> method of {{WebExtAPIRef("runtime.port")}}, and {{WebExtAPIRef("tabs.executeScript()")}}.</p>
+
+<dl>
+ <dt>In Firefox</dt>
+ <dd>The <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">Structured clone algorithm</a> is used.</dd>
+ <dt>In Chrome</dt>
+ <dd>The <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#description">JSON serialization algorithm</a> is used. It may switch to structured cloning in the future (<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=248548">issue 248548</a>).</dd>
+</dl>
+
+<p>The Structured clone algorithm supports more types than the JSON serialization algorithm. A notable exception are (DOM) objects with a <code>toJSON</code> method. DOM objects are not cloneable nor JSON-serializable by default, but with a <code>toJSON()</code> method, these can be JSON-serialized (but still not cloned with the structured cloning algorithm). Examples of JSON-serializable objects that are not structured cloneable include instances of {{domxref("URL")}} and {{domxref("PerformanceEntry")}}.</p>
+
+<p>Extension that rely on the <code>toJSON()</code> method of the JSON serialization algorithm can use {{jsxref("JSON.stringify()")}} followed by {{jsxref("JSON.parse()")}} to ensure that a message can be exchanged, because a parsed JSON value is always structurally cloneable.</p>

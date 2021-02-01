@@ -36,7 +36,7 @@ tags:
 
 <p>Use the <code>permissions</code> key to request special powers for your extension. This key is an array of strings, and each string is a request for a permission.</p>
 
-<p>If you request permissions using this key, then the browser may inform the user at install time that the extension is requesting certain privileges, and ask them to confirm that they are happy to grant these privileges. The browser may also allow the user to inspect an extension's privileges after installation. As the request to grant privileges may impact on users' willingness to install your extension, requesting privileges is worth careful consideration. For example, you want to avoid requesting unnecessary permissions and may want to provide information about why you are requesting permissions in your extension's store description. More information on the issues you should consider is provided in the article <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Request_the_right_permissions">Request the right permissions</a>.</p>
+<p>If you request permissions using this key, then the browser may inform the user at install time that the extension is requesting certain privileges, and ask them to confirm that they are happy to grant these privileges. The browser may also allow the user to inspect an extension's privileges after installation. As the request to grant privileges may impact on users' willingness to install your extension, requesting privileges is worth careful consideration. For example, you want to avoid requesting unnecessary permissions and may want to provide information about why you are requesting permissions in your extension's store description. More information on the issues you should consider is provided in the article <a href="https://extensionworkshop.com/documentation/develop/request-the-right-permissions/">Request the right permissions</a>.</p>
 
 <p>For information on how to test and preview permission requests, see <a href="https://extensionworkshop.com/documentation/develop/test-permission-requests/">Test permission requests</a>  on the Extension Workshop site.</p>
 
@@ -68,7 +68,7 @@ tags:
 
 <p>where <code>60a20a9b-1ad4-af49-9b6c-c64c98c37920</code> is the extension's internal ID. The extension can get this URL programmatically by calling {{webextAPIref("extension/getURL", "extension.getURL()")}}:</p>
 
-<pre class="brush: js; notranslate">browser.extension.getURL("");
+<pre class="notranslate brush: js">browser.extension.getURL("");
 // moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
 </pre>
 

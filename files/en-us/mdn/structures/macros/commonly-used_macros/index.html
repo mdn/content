@@ -9,9 +9,9 @@ tags:
 ---
 <p>{{MDNSidebar}}</p>
 
-<p><span class="seoSummary">This page lists many of the general-purpose macros created for use on MDN. For how-to information on using these macros, see <a href="/en-US/docs/MDN/Contribute/Structures/Macros">Using macros</a> and <a href="/en-US/docs/MDN/Contribute/Editor/Links#Using_link_macros">Using link macros</a>.</span> See <a href="/en-US/docs/MDN/Contribute/Structures/Macros/Other">Other macros</a> for information on macros that are infrequently used, are used only in special contexts, or are deprecated. There is also a <a href="/en-US/dashboards/macros">complete list of all macros on MDN</a>. </p>
+<p><span class="seoSummary">This page lists many of the general-purpose macros created for use on MDN. For how-to information on using these macros, see <a href="/en-US/docs/MDN/Structures/Macros">Using macros</a>.</span> See <a href="/en-US/docs/MDN/Structures/Macros/Other">Other macros</a> for information on macros that are infrequently used, are used only in special contexts, or are deprecated.</p>
 
-<p>See also the <a href="/en-US/docs/MDN/Contribute/Guidelines/CSS_style_guide">CSS style guide</a> for styles available for your use.</p>
+<p>See also the <a href="/en-US/docs/MDN/Guidelines/CSS_style_guide">CSS style guide</a> for styles available for your use.</p>
 
 <h2 id="Linking">Linking</h2>
 
@@ -20,7 +20,7 @@ tags:
 <p id="To_another_MDN_page_or_its_section_(anch_SectionOnPage_manch_Link_LinkItem_LinkItemDL)">In general, you don't need to use macros for creating arbitrary links. Use the <strong>Link</strong> button in the Editor interface to create links. </p>
 
 <ul>
- <li>The {{TemplateLink("Glossary")}} macro creates a link to a specified term's entry in the MDN <a href="/en-US/docs/Glossary">glossary</a>. This macro accepts one required and two optional parameters:
+ <li>The <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/Glossary.ejs">Glossary</a></code> macro creates a link to a specified term's entry in the MDN <a href="/en-US/docs/Glossary">glossary</a>. This macro accepts one required and two optional parameters:
 
   <p>Examples:</p>
 
@@ -36,7 +36,7 @@ tags:
    <li><code>\{{Glossary("HTML", "", 1)}}</code> yields {{Glossary("HTML", "", 1)}}</li>
   </ul>
  </li>
- <li>{{TemplateLink("anch")}} - creates link to in-page section:
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/anch.ejs">anch</a></code> - creates link to in-page section:
   <ul>
    <li><code>\{{anch("Linking to pages in references")}}</code>;</li>
    <li>
@@ -51,18 +51,17 @@ tags:
 <p>There are various macros for linking to pages in specific reference areas of MDN.</p>
 
 <ul>
- <li>{{TemplateLink("cssxref")}} links to a page in the <a href="/en-US/docs/Web/CSS/Reference">CSS Reference</a>.<br>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/cssxref.ejs">cssxref</a></code> links to a page in the <a href="/en-US/docs/Web/CSS/Reference">CSS Reference</a>.<br>
   Example: <code>\{{CSSxRef("cursor")}}</code>, results in: {{CSSxRef("cursor")}}.</li>
- <li>{{TemplateLink("domxref")}} links to pages in the DOM reference; if you include parentheses at the end, the template knows to display the link to look like a function name. For example, <code>\{{DOMxRef("document.getElementsByName()")}}</code> results in {{DOMxRef("document.getElementsByName()")}} while <code>\{{DOMxRef("Node")}}</code> results in {{DOMxRef("Node")}}.</li>
- <li>{{TemplateLink("event")}} links to pages in the DOM Event reference, for example: <code>\{{Event("change")}}</code> results in {{Event("change")}}.</li>
- <li>{{TemplateLink("HTMLElement")}} links to an HTML element in the HTML Reference.</li>
- <li>{{TemplateLink("htmlattrxref")}} links to an HTML attribute, either a global attribute description if you only specify the attribute name or an attribute associated with a specific element if you specify an attribute name and an element name. For example, <code>\{{HTMLAttrxRef("lang")}} </code>will create this link: {{HTMLAttrxRef("lang")}}. <code>\{{HTMLAttrxRef("type","input")}}</code> will create this link: {{htmlattrxref("type","input")}}.</li>
- <li>{{TemplateLink("jsxref")}} links to a page in the <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript Reference</a>.</li>
- <li>{{TemplateLink("SVGAttr")}} links to a specific SVG attribute. For example, <code>\{{SVGAttr("d")}}</code> creates this link: {{SVGAttr("d")}}.</li>
- <li>{{TemplateLink("SVGElement")}} links to an SVG element in the SVG Reference.</li>
- <li>{{TemplateLink("HTTPHeader")}} links to an <a href="/en-US/docs/Web/HTTP/Headers">HTTP header</a>.</li>
- <li>{{TemplateLink("HTTPMethod")}} links to an <a href="/en-US/docs/Web/HTTP/Methods">HTTP request method</a>.</li>
- <li>{{TemplateLink("HTTPStatus")}} links to an <a href="/en-US/docs/Web/HTTP/Status">HTTP response status code</a>.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/DOMxRef.ejs">domxref</a></code> links to pages in the DOM reference; if you include parentheses at the end, the template knows to display the link to look like a function name. For example, <code>\{{DOMxRef("document.getElementsByName()")}}</code> results in {{DOMxRef("document.getElementsByName()")}} while <code>\{{DOMxRef("Node")}}</code> results in {{DOMxRef("Node")}}.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/HTMLElement.ejs">HTMLElement</a></code> links to an HTML element in the HTML Reference.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/htmlattrxref.ejs">htmlattrxref</a></code> links to an HTML attribute, either a global attribute description if you only specify the attribute name or an attribute associated with a specific element if you specify an attribute name and an element name. For example, <code>\{{HTMLAttrxRef("lang")}} </code>will create this link: {{HTMLAttrxRef("lang")}}. <code>\{{HTMLAttrxRef("type","input")}}</code> will create this link: {{htmlattrxref("type","input")}}.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/jsxref.ejs">jsxref</a></code> links to a page in the <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript Reference</a>.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/SVGAttr.ejs">SVGAttr</a></code> links to a specific SVG attribute. For example, <code>\{{SVGAttr("d")}}</code> creates this link: {{SVGAttr("d")}}.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/SVGElement.ejs">SVGElement</a></code> links to an SVG element in the SVG Reference.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/HTTPHeader.ejs">HTTPHeader</a></code> links to an <a href="/en-US/docs/Web/HTTP/Headers">HTTP header</a>.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/HTTPMethod.ejs">HTTPMethod</a></code> links to an <a href="/en-US/docs/Web/HTTP/Methods">HTTP request method</a>.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/HTTPStatus.ejs">HTTPStatus</a></code> links to an <a href="/en-US/docs/Web/HTTP/Status">HTTP response status code</a>.</li>
 </ul>
 
 <h3 id="Linking_to_bugs">Linking to bugs</h3>
@@ -70,23 +69,23 @@ tags:
 <ul>
  <li>Bugs
   <ul>
-   <li>{{TemplateLink("bug")}} allows you to link to a bug on bugzilla.mozilla.org easily using this syntax: <code>\{{Bug(123456)}}</code>. This gives you: {{Bug(123456)}}.</li>
-   <li>{{TemplateLink("WebkitBug")}} inserts a link to a bug in the WebKit bug database. For example, <code>\{{WebkitBug(31277)}}</code> inserts {{WebkitBug(31277)}}.</li>
+   <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/bug.ejs">bug</a></code> allows you to link to a bug on bugzilla.mozilla.org easily using this syntax: <code>\{{Bug(123456)}}</code>. This gives you: {{Bug(123456)}}.</li>
+   <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/WebkitBug.ejs">WebkitBug</a></code> inserts a link to a bug in the WebKit bug database. For example, <code>\{{WebkitBug(31277)}}</code> inserts {{WebkitBug(31277)}}.</li>
   </ul>
  </li>
 </ul>
 
 <h3 id="Navigation_aids_for_multi-page_guides">Navigation aids for multi-page guides</h3>
 
-<p>{{TemplateLink("Previous")}}, {{TemplateLink("Next")}}, and {{TemplateLink("PreviousNext")}} provide navigation controls for articles which are part of sequences. For the single-way templates, the only parameter needed is the wiki location of the previous or next article in the sequence. For {{TemplateLink("PreviousNext")}}, the two parameters needed are the wiki locations of the appropriate articles. The first parameter is for the previous article and the second is for the next article.</p>
+<p><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/Previous.ejs">Previous</a></code>, <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/Next.ejs">Next</a></code>, and <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/PreviousNext.ejs">PreviousNext</a></code> provide navigation controls for articles which are part of sequences. For the single-way templates, the only parameter needed is the wiki location of the previous or next article in the sequence. For <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/PreviousNext.ejs">PreviousNext</a></code>, the two parameters needed are the wiki locations of the appropriate articles. The first parameter is for the previous article and the second is for the next article.</p>
 
 <h2 id="Code_samples">Code samples</h2>
 
 <h3 id="Live_samples">Live samples</h3>
 
 <ul>
- <li>{{TemplateLink("EmbedLiveSample")}} lets you embed the output of a code sample on a page, as described in <a href="/en-US/docs/MDN/Contribute/Structures/Live_samples">Live samples</a>.</li>
- <li>{{TemplateLink("LiveSampleLink")}} creates a link to a page containing the output of a code sample on a page, as described in <a href="/en-US/docs/MDN/Contribute/Structures/Live_samples">Live samples</a>.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code> lets you embed the output of a code sample on a page, as described in <a href="/en-US/docs/MDN/Structures/Live_samples">Live samples</a>.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/LiveSampleLink.ejs">LiveSampleLink</a></code> creates a link to a page containing the output of a code sample on a page, as described in <a href="/en-US/docs/MDN/Structures/Live_samples">Live samples</a>.</li>
 </ul>
 
 <h2 id="Sidebar_generation">Sidebar generation</h2>
@@ -94,16 +93,16 @@ tags:
 <p>There are templates for almost every large collection of pages. They typically link back to the main page of the reference/guide/tutorial (this is often needed because our breadcrumbs sometimes can't do this) and put the article in the appropriate category.</p>
 
 <ul>
- <li>{{TemplateLink("CSSRef")}} generates the sidebar for CSS reference pages.</li>
- <li>{{TemplateLink("HTMLRef")}} generates the sidebar for HTML reference pages.</li>
- <li>{{TemplateLink("APIRef")}} generates the sidebar for Web API reference pages.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/CSSRef.ejs">CSSRef</a></code> generates the sidebar for CSS reference pages.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/HTMLRef.ejs">HTMLRef</a></code> generates the sidebar for HTML reference pages.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/APIRef.ejs">APIRef</a></code> generates the sidebar for Web API reference pages.</li>
 </ul>
 
 <h2 id="General-purpose_formatting">General-purpose formatting</h2>
 
 <h3 id="Inline_indicators_for_API_documentation">Inline indicators for API documentation</h3>
 
-<p>{{TemplateLink("optional_inline")}} and {{TemplateLink("ReadOnlyInline")}} are used in API documentation, usually when describing the list of properties of an object or parameters of a function.</p>
+<p><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/optional_inline.ejs">optional_inline</a></code> and <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/ReadOnlyInline.ejs">ReadOnlyInline</a></code> are used in API documentation, usually when describing the list of properties of an object or parameters of a function.</p>
 
 <p>Usage: <code>\{{Optional_Inline}}</code> or <code>\{{ReadOnlyInline}}</code>. Example:</p>
 
@@ -134,7 +133,7 @@ tags:
 
 <h4 id="Experimental">Experimental</h4>
 
-<p>{{TemplateLink("experimental_inline")}} inserts an in-line mark indicating the API is not widely implemented and may change in the future.</p>
+<p><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/experimental_inline.ejs">experimental_inline</a></code> inserts an in-line mark indicating the API is not widely implemented and may change in the future.</p>
 
 <h5 id="Syntax_2">Syntax</h5>
 
@@ -152,7 +151,7 @@ tags:
 
 <h4 id="Deprecated">Deprecated</h4>
 
-<p>{{TemplateLink("deprecated_inline")}} inserts an in-line deprecated mark to discourage the use of an API that is officially deprecated. <strong>Note:</strong> "Deprecated" means that the item should no longer be used, but still functions. If you mean that it no longer works at all, use the term "obsolete."</p>
+<p><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/deprecated_inline.ejs">deprecated_inline</a></code> inserts an in-line deprecated mark to discourage the use of an API that is officially deprecated. <strong>Note:</strong> "Deprecated" means that the item should no longer be used, but still functions. If you mean that it no longer works at all, use the term "obsolete."</p>
 
 <p>Don't use the parameter in any browser-agnostic area (HTML, APIs, JS, CSS, …).</p>
 
@@ -167,43 +166,20 @@ tags:
  <li>Badge:{{Deprecated_Inline("gecko5")}}</li>
 </ul>
 
-<h4 id="Obsolete">Obsolete</h4>
-
-<p>{{TemplateLink("obsolete_inline")}} inserts an in-line obsolete mark to prevent the use of, for example, a function, method or property which is officially obsolete.</p>
-
-<p>Don't use the parameter in any browser-agnostic area (HTML, APIs, JS, CSS, …).</p>
-
-<h5 id="Syntax_4">Syntax</h5>
-
-<p><code>\{{Obsolete_Inline}}</code> or <code>\{{Obsolete_Inline("js1.8.5")}}</code></p>
-
-<h5 id="Examples_4">Examples</h5>
-
-<ul>
- <li>Icon: {{Obsolete_Inline}}</li>
- <li>Badge:{{Obsolete_Inline("js1.8.5")}}</li>
-</ul>
-
-<h3 id="Template_badges">Template badges</h3>
-
-<p>These macros are mostly used on the <a href="/en-US/docs/Web/API">WebAPI</a> page. See {{anch("Creating new badges")}} for information on creating a new badge.</p>
-
 <h3 id="Page_or_section_header_indicators">Page or section header indicators</h3>
 
 <p>These templates have the same semantics as their inline counterparts described above. The templates should be placed directly underneath the main page title (or breadcrumb navigation if available) in the reference page. They can also be used to mark up a section on a page.</p>
 
 <ul>
  <li>{{TemplateLink("non-standard_header")}}: <code>\{{Non-standard_Header}}</code> {{Non-standard_Header}}</li>
- <li>{{TemplateLink("SeeCompatTable")}} should be used on pages that document <a href="/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental">experimental features</a>. Example: <code>\{{SeeCompatTable}}</code> {{SeeCompatTable}}</li>
- <li>{{TemplateLink("deprecated_header")}}: <code>\{{Deprecated_Header}}</code> {{Deprecated_Header}}</li>
- <li>{{TemplateLink("deprecated_header")}} with parameter: <code>\{{Deprecated_Header("gecko5")}}</code> {{Deprecated_Header("gecko5")}} Don't use the parameter in any browser-agnostic area (HTML, APIs, JS, CSS, …).</li>
- <li>{{TemplateLink("obsolete_header")}}: <code>\{{Obsolete_Header}}</code> {{Obsolete_Header}}</li>
- <li>{{TemplateLink("obsolete_header")}} with parameter: <code>\{{Obsolete_Header("gecko30")}}</code> {{Obsolete_Header("gecko30")}} Don't use the parameter in any browser-agnostic area (HTML, APIs, JS, CSS, …).</li>
- <li>{{TemplateLink("secureContext_header")}}: <code>\{{SecureContext_Header}}</code> {{SecureContext_Header}}</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/SeeCompatTable.ejs">SeeCompatTable</a></code> should be used on pages that document <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental features</a>. Example: <code>\{{SeeCompatTable}}</code> {{SeeCompatTable}}</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/deprecated_header.ejs">deprecated_header</a></code>: <code>\{{Deprecated_Header}}</code> {{Deprecated_Header}}</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/deprecated_header.ejs">deprecated_header</a></code> with parameter: <code>\{{Deprecated_Header("gecko5")}}</code> {{Deprecated_Header("gecko5")}} Don't use the parameter in any browser-agnostic area (HTML, APIs, JS, CSS, …).</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/secureContext_header.ejs">secureContext_header</a></code>: <code>\{{SecureContext_Header}}</code> {{SecureContext_Header}}</li>
 </ul>
 
 <h3 id="Indicating_that_a_feature_is_available_in_web_workers">Indicating that a feature is available in web workers</h3>
 
-<p>The {{TemplateLink("AvailableInWorkers")}} macro inserts a localised note box indicating that a feature is available in a <a href="/en-US/docs/Web/API/Web_Workers_API">Web worker</a> context.</p>
+<p>The <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/AvailableInWorkers.ejs">AvailableInWorkers</a></code> macro inserts a localised note box indicating that a feature is available in a <a href="/en-US/docs/Web/API/Web_Workers_API">Web worker</a> context.</p>
 
 <p>{{AvailableInWorkers}}</p>

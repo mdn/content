@@ -10,7 +10,7 @@ tags:
   - OOJS
   - Object-Oriented
   - Objects
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{LearnSidebar}}</div>
 
@@ -35,7 +35,7 @@ tags:
 
 <p>To get this assessment started, make a local copy of <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index-finished.html">index-finished.html</a>, <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css">style.css</a>, and <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js">main-finished.js</a> from our last article in a new directory in your local computer.</p>
 
-<p>Alternatively, you could use a site like <a class="external external-icon" href="http://jsbin.com/">JSBin</a> or <a class="external external-icon" href="https://glitch.com/">Glitch</a> to do your assessment. You could paste the HTML, CSS and JavaScript into one of these online editors. If the online editor you are using doesn't have separate JavaScript/CSS panels, feel free to put them inline <code>&lt;script&gt;</code>/<code>&lt;style&gt;</code> elements inside the HTML page.</p>
+<p>Alternatively, you could use a site like <a class="external external-icon" href="https://jsbin.com/">JSBin</a> or <a class="external external-icon" href="https://glitch.com/">Glitch</a> to do your assessment. You could paste the HTML, CSS and JavaScript into one of these online editors. If the online editor you are using doesn't have separate JavaScript/CSS panels, feel free to put them inline <code>&lt;script&gt;</code>/<code>&lt;style&gt;</code> elements inside the HTML page.</p>
 
 <div class="note">
 <p><strong>Note</strong>: If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.</p>
@@ -56,10 +56,7 @@ tags:
 
 <p>The following screenshot gives you an idea of what the finished program should look like:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13875/bouncing-evil-circle.png" style="display: block; margin: 0 auto;"></p>
-
-<ul>
-</ul>
+<p><img alt="" src="bouncing-evil-circle.png" style="display: block; margin: 0 auto;"></p>
 
 <p>To give you more of an idea, have a look at the <a href="https://mdn.github.io/learning-area/javascript/oojs/assessment/">finished example</a> (no peeking at the source code!)</p>
 
@@ -77,9 +74,29 @@ tags:
 	<li>The <code>Ball()</code> constructor should inherit the <code>x</code>, <code>y</code>, <code>velX</code>, <code>velY</code>, and <code>exists</code> properties from the <code>Shape()</code> constructor.</li>
 	<li>It should also define a <code>color</code> and a <code>size</code> property, like the original <code>Ball()</code> constructor did.</li>
 	<li>Remember to set the <code>Ball()</code> constructor's <code>prototype</code> and <code>constructor</code> appropriately.</li>
+	<li>
+		The <code>Ball</code> prototype's <code>collisionDetect()</code> method needs a small update. If the code were kept as-is, the <code>EvilCircle</code> would start eating the bouncing balls by setting the <code>exists</code> property to <code>false</code>. And that would reduce the number of balls involved in collision detection. A ball needs to be considered for collision detection only if the <code>exists</code> property is <code>true</code>. So, replace the existing <code>collisionDetect()</code> code with the following code:
+		<pre class="brush: js">
+Ball.prototype.collisionDetect = function() {
+  for (let j = 0; j &lt; balls.length; j++) {
+    if (!(this === balls[j]) && balls[j].exists) {
+      const dx = this.x - balls[j].x;
+      const dy = this.y - balls[j].y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+      if (distance &lt; this.size + balls[j].size) {
+        balls[j].color = this.color = 'rgb(' + random(0, 255) + ',' + random(0, 255) + ',' + random(0, 255) +')';
+      }
+    }
+  }
+}</pre>
+As discussed above, the only addition is to check if the ball exists — by using <code>balls[j].exists</code> in the <code>if</code> conditional.
+	</li>
+  
+
 </ol>
 
-<p>The ball <code>draw()</code>, <code>update()</code>, and <code>collisionDetect()</code> method definitions should be able to stay exactly the same as they were before.</p>
+<p>The ball <code>draw()</code> and <code>update()</code> method definitions should be able to stay exactly the same as they were before.</p>
 
 <p>You also need to add a new parameter to the <code>new Ball() ( ... )</code> constructor call — the <code>exists</code> parameter should be the 5th parameter, and should be given a value of <code>true</code>.</p>
 
@@ -188,9 +205,6 @@ window.onkeydown = function(e) {
 	</ul>
 	</li>
 </ol>
-
-<ul>
-</ul>
 
 <h2 id="Assessment_or_further_help">Assessment or further help</h2>
 

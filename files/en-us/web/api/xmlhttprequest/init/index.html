@@ -1,0 +1,39 @@
+---
+title: init()
+slug: Web/API/XMLHttpRequest/init
+---
+<p><span class="seoSummary">Initializes the object for use from C++ code.</span></p>
+
+<div class="warning"><span class="seoSummary"><strong>Warning:</strong> This method must
+    <em>not</em> be called from JavaScript.</span></div>
+
+<pre class="brush: js notranslate">[noscript] void init(
+  in nsIPrincipal principal,
+  in nsIScriptContext scriptContext,
+  in nsIGlobalObject globalObject,
+  in nsIURI baseURI,
+  [optional] in nsILoadGroup loadGroup
+);
+</pre>
+
+<h5 id="Parameters">Parameters</h5>
+
+<dl>
+  <dt><code>principal</code></dt>
+  <dd>The <a
+      href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPrincipal">principal</a>
+    to use for the request; this must not be <code>null</code>.</dd>
+  <dt><code>scriptContext</code></dt>
+  <dd>The script context to use for the request; this must not be <code>null</code>.</dd>
+  <dt><code>globalObject</code></dt>
+  <dd>The object to use as the global for our request. Often, this is the outer
+    {{domxref("Window")}}, but it may also be a sandbox or backstage pass. This may be
+    <code>null</code>, but if it is, the request cannot create a {{domxref("document")}}.
+    Prior to Firefox 23, this was always a {{domxref("Window")}}.</dd>
+  <dt><code>baseURI</code> {{gecko_minversion_inline('1.9.2')}}</dt>
+  <dd>The base URI to use when resolving relative URIs when handling the request. This may
+    be <code>null</code>.</dd>
+  <dt><code>loadGroup</code> {{optional_inline}} {{gecko_minversion_inline(37)}}</dt>
+  <dd>An optional load group used when performing the request. If this is specified, it is
+    used even if the global has a window with a load group already established.</dd>
+</dl>

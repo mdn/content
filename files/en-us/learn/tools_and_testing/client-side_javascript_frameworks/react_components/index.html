@@ -108,7 +108,7 @@ touch src/components/Todo.js</pre>
 
 <p>When you look back at your browser, you'll notice something unfortunate: your list now repeats the first task three times!</p>
 
-<p><img alt="Our todo list app, with todo components repeating because the label is hardcoded into the component" src="https://mdn.mozillademos.org/files/17255/todo-list-repeating-todos.png" style="border-style: solid; border-width: 1px; height: 954px; width: 856px;"></p>
+<p><img alt="Our todo list app, with todo components repeating because the label is hardcoded into the component" src="todo-list-repeating-todos.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>We don't only want to eat; we have other things to — well — to do. Next we'll look at how we can make different component calls render unique content.</p>
 
@@ -157,7 +157,7 @@ touch src/components/Todo.js</pre>
 
 <p><em>Now</em> your browser should show three unique tasks. Another problem remains though: they're all still checked by default.</p>
 
-<p><img alt="Our todo list, with different todo labels now they are passed into the components as props" src="https://mdn.mozillademos.org/files/17256/todo-list-unique-todos.png" style="border-style: solid; border-width: 1px; height: 954px; width: 856px;"></p>
+<p><img alt="Our todo list, with different todo labels now they are passed into the components as props" src="todo-list-unique-todos.png" style="border-style: solid; border-width: 1px;"></p>
 
 <h3 id="Is_it_completed">Is it <code>completed</code>?</h3>
 
@@ -173,7 +173,7 @@ touch src/components/Todo.js</pre>
 
 <p>And your browser should update to show only <code>Eat</code> being checked:</p>
 
-<p><img alt="Our todo list app, now with differing checked states - some checkboxes are checked, others not" src="https://mdn.mozillademos.org/files/17254/todo-list-differing-checked-states.png" style="border-style: solid; border-width: 1px; height: 954px; width: 856px;"></p>
+<p><img alt="Our todo list app, now with differing checked states - some checkboxes are checked, others not" src="todo-list-differing-checked-states.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>If you change each <code>&lt;Todo /&gt;</code> component’s <code>completed</code> prop, your browser will check or uncheck the equivalent rendered checkboxes accordingly.</p>
 
@@ -244,7 +244,7 @@ touch src/components/Todo.js</pre>
 
 <p>This gets us some of the way towards showing all the components again, but we’ve got more work to do: the browser currently renders each task's name as unstructured text. We’re missing our HTML structure — the <code>&lt;li&gt;</code> and its checkboxes and buttons!</p>
 
-<p><img alt="Our todo list app with the todo item labels just shown bunched up on one line" src="https://mdn.mozillademos.org/files/17257/todo-list-unstructured-names.png" style="border-style: solid; border-width: 1px; height: 627px; width: 856px;"></p>
+<p><img alt="Our todo list app with the todo item labels just shown bunched up on one line" src="todo-list-unstructured-names.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>To fix this, we need to return a <code>&lt;Todo /&gt;</code> component from our <code>map()</code> function — remember that JSX allows us to mix up JavaScript and markup structures! Let's try the following instead of what we have already:</p>
 
@@ -349,7 +349,7 @@ function FilterButton(props) {
 export default FilterButton;</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You might notice that we are making the same mistake here as we first made for the <code>&lt;Todo /&gt;</code> component, in that each button will be the same. That’s fine! We’re going to fix up this component later on, in <a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#Back_to_the_filter_buttons">Back to the filter buttons</a>.</p>
+<p><strong>Note</strong>: You might notice that we are making the same mistake here as we first made for the <code>&lt;Todo /&gt;</code> component, in that each button will be the same. That’s fine! We’re going to fix up this component later on, in <a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons">Back to the filter buttons</a>.</p>
 </div>
 
 <h2 id="Importing_all_our_components">Importing all our components</h2>

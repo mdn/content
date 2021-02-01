@@ -21,12 +21,12 @@ tags:
 
 <dl>
  <dt>Subtree Modification</dt>
- <dd>Execution pauses if any of the elementʼs descendant nodes are modified.<br>
+ <dd>Execution pauses if any of the element's descendant nodes are modified.<br>
  That means, the script execution is stopped whenever a child node or descendant node deeper in the DOM structure is added to or removed from the element the option is set on.<br>
  <br>
  Examples for when this breakpoint is triggered are calling {{domxref("Node.appendChild()")}} and {{domxref("Node.removeChild()")}}, calling {{domxref("ChildNode.remove()")}} or setting {{domxref("Element.innerHTML")}} on one of the subnodes.</dd>
  <dt>Attribute Modification</dt>
- <dd>Execution pauses when any of the elementsʼ attributes are modified.<br>
+ <dd>Execution pauses when any of the elements' attributes are modified.<br>
  That means, the script execution is stopped whenever an attribute is added to or removed from the element the option is set on or the value of one of its attributes is changed.<br>
  <br>
  Examples for when this breakpoint is triggered are calling {{domxref("Element.setAttribute()")}}, {{domxref("Element.removeAttribute()")}}, and <code><a href="/en-US/docs/Web/API/Element/classList#Methods">Element.classList.add()</a></code>, or setting {{domxref("Element.id")}}.</dd>

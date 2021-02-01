@@ -14,10 +14,10 @@ tags:
 
 <div class="note">
 <p><strong>Note:</strong> Some browsers don’t support certain schemes.<br>
- Check the <a href="#Browser_compatibility">Browser compatibility table</a> for details.</p>
+ Check the <a href="#browser_compatibility">Browser compatibility table</a> for details.</p>
 </div>
 
-<p>All match patterns are specified as strings. Apart from the special <code><a href="/en-US/Add-ons/WebExtensions/Match_patterns#%3Call_urls%3E">&lt;all_urls&gt;</a></code> pattern, match patterns consist of three parts: <em>scheme</em>, <em>host</em>, and <em>path</em>. The scheme and host are separated by <code>://</code>.</p>
+<p>All match patterns are specified as strings. Apart from the special <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns#%3call_urls%3e">&lt;all_urls&gt;</a></code> pattern, match patterns consist of three parts: <em>scheme</em>, <em>host</em>, and <em>path</em>. The scheme and host are separated by <code>://</code>.</p>
 
 <pre>&lt;scheme&gt;://&lt;host&gt;&lt;path&gt;</pre>
 
@@ -88,7 +88,7 @@ tags:
 <p>Neither the <a href="https://en.wikipedia.org/wiki/Fragment_identifier">URL fragment identifier</a>, nor the <code>#</code> which precedes it, are considered as part of the <em>path</em>.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The path pattern string should not include a port number. Adding a port, as in: <em>"http://localhost:1234/*" </em>causes the match pattern to be ignored. However, "<em>http://localhost:1234</em>" will match with "<em>http://localhost/*</em>"</p>
+<p><strong>Note</strong>: The path pattern string should not include a port number. Adding a port, as in: <em>"http://localhost:1234/*"</em> causes the match pattern to be ignored. However, "<em>http://localhost:1234</em>" will match with "<em>http://localhost/*</em>"</p>
 </div>
 
 <h3 id="&lt;all_urls&gt;">&lt;all_urls&gt;</h3>

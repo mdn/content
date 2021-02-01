@@ -30,7 +30,7 @@ init();</pre>
 
 <p><code>init()</code> creates a local variable called <code>name</code> and a function called <code>displayName()</code>. The <code>displayName()</code> function is an inner function that is defined inside <code>init()</code> and is available only within the body of the <code>init()</code> function. Note that the <code>displayName()</code> function has no local variables of its own. However, since inner functions have access to the variables of outer functions, <code>displayName()</code> can access the variable <code>name</code> declared in the parent function, <code>init()</code>.</p>
 
-<p>Run the code using <a href="http://jsfiddle.net/xAFs9/3/">this JSFiddle link</a> and notice that the <code>alert()</code> statement within the <code>displayName()</code> function successfully displays the value of the <code>name</code> variable, which is declared in its parent function. This is an example of <em>lexical</em> <em>scoping</em>, which describes how a parser resolves variable names when functions are nested. The word <em>lexical</em> refers to the fact that lexical scoping uses the location where a variable is declared within the source code to determine where that variable is available. Nested functions have access to variables declared in their outer scope.</p>
+<p>Run the code using <a href="https://jsfiddle.net/xAFs9/3/">this JSFiddle link</a> and notice that the <code>alert()</code> statement within the <code>displayName()</code> function successfully displays the value of the <code>name</code> variable, which is declared in its parent function. This is an example of <em>lexical</em> <em>scoping</em>, which describes how a parser resolves variable names when functions are nested. The word <em>lexical</em> refers to the fact that lexical scoping uses the location where a variable is declared within the source code to determine where that variable is available. Nested functions have access to variables declared in their outer scope.</p>
 
 <h2 id="Closure">Closure</h2>
 
@@ -173,10 +173,6 @@ console.log(counter.value());  // 1.
 
 <p>Those three public functions are closures that share the same lexical environment. Thanks to JavaScript's lexical scoping, they each have access to the <code>privateCounter</code> variable and the <code>changeBy</code> function.</p>
 
-<div class="note">
-<p>Notice that I defined an anonymous function that creates a counter, and then I call it immediately and assign the result to the <code>counter</code> variable. You could store this function in a separate variable <code>makeCounter</code>, and then use it to create several counters.</p>
-</div>
-
 <pre class="brush: js notranslate">var makeCounter = function() {
   var privateCounter = 0;
   function changeBy(val) {
@@ -227,7 +223,7 @@ alert(counter2.value()); // 0.
  <li>Global Scope</li>
 </ul>
 
-<p>A common mistake is not realizing that, in the case where the outer function is itself a nested function, access to the outer function's scope includes the enclosing scope of the outer function—effectively creating a chain of function scopes. To demonstrate, consider the following example code.</p>
+<p>A common mistake is not realizing that in the case where the outer function is itself a nested function, access to the outer function's scope includes the enclosing scope of the outer function—effectively creating a chain of function scopes. To demonstrate, consider the following example code.</p>
 
 <pre class="brush: js notranslate">// global scope
 var e = 10;
@@ -272,7 +268,7 @@ console.log(s3) //log 20
 
 <h2 id="Creating_closures_in_loops_A_common_mistake">Creating closures in loops: A common mistake</h2>
 
-<p>Prior to the introduction of the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/let" title="let"><code>let</code> </a>keyword in ECMAScript 2015, a common problem with closures occurred when you created them inside a loop. To demonstrate, consider the following example code.</p>
+<p>Prior to the introduction of the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/let"><code>let</code> </a>keyword in ECMAScript 2015, a common problem with closures occurred when you created them inside a loop. To demonstrate, consider the following example code.</p>
 
 <pre class="brush: html notranslate">&lt;p id="help"&gt;Helpful notes will appear here&lt;/p&gt;
 &lt;p&gt;E-mail: &lt;input type="text" id="email" name="email"&gt;&lt;/p&gt;

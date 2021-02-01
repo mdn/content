@@ -20,8 +20,6 @@ tags:
 
 <div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
-<div class="notecard note"></div>
-
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="language-css notranslate" id="css">/* A conic gradient rotated 45 degrees,
@@ -52,14 +50,14 @@ background: conic-gradient(
  <dt>{{CSSxRef("&lt;angle&gt;")}}</dt>
  <dd>Preceded by the <code>from</code> keyterm, and taking an angle as its value, defines the gradient rotation in clockwise direction.</dd>
  <dt><code>&lt;position&gt;</code></dt>
- <dd>Using the same length, order and keyterm values as the <a href="/en-US/docs/Web/CSS/background-position">background-position</a> property, the position defines center of the gradient. If omitted, the default value is <code>center</code>, meaing the gradient will be centered, .</dd>
+ <dd>Using the same length, order and keyterm values as the <a href="/en-US/docs/Web/CSS/background-position">background-position</a> property, the position defines center of the gradient. If omitted, the default value is <code>center</code>, meaning the gradient will be centered, .</dd>
  <dt><code>&lt;angular-color-stop&gt;</code></dt>
  <dd>A color-stop's {{CSSxRef("&lt;color&gt;")}} value, followed by one or two optional stop positions, (an {{CSSxRef("&lt;angle&gt;")}} along the gradient's circumference axis).</dd>
  <dt><code>&lt;color-hint&gt;</code></dt>
  <dd>Th color-hint is an interpolation hint defining how the gradient progresses between adjacent color stops. The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. If omitted, the midpoint of the color transition is the midpoint between two color stops.</dd>
  <dd>
  <div class="note">
- <p><strong>Note:</strong> Rendering of <a href="#Gradient_with_multiple_color_stops">color stops in CSS gradients</a> follows the same rules as color stops in <a href="/en-US/docs/Web/SVG/Tutorial/Gradients">SVG gradients</a>.</p>
+ <p><strong>Note:</strong> Rendering of <a href="#gradient_with_multiple_color_stops">color stops in CSS gradients</a> follows the same rules as color stops in <a href="/en-US/docs/Web/SVG/Tutorial/Gradients">SVG gradients</a>.</p>
  </div>
  </dd>
 </dl>
@@ -99,7 +97,7 @@ conic-gradient(red 0deg, orange 90deg, yellow 180deg, green 270deg, blue 360deg)
 
 <pre class="brush: css notranslate">conic-gradient(red 40grad, 80grad, blue 360grad);</pre>
 
-<p>If two or more color stops are at the same location, the transition will be a hard line between the first and last colors declared at that location. To use conic gradients to create pie charts --- which is NOT the correct way to create pie charts as background images are not accessible -- use hard color stops, where the color stop angles for two adjacent color stops are the same. The easiest way to do this is to use multip position colors stops. The following two declarations are equivalent:</p>
+<p>If two or more color stops are at the same location, the transition will be a hard line between the first and last colors declared at that location. To use conic gradients to create pie charts --- which is NOT the correct way to create pie charts as background images are not accessible -- use hard color stops, where the color stop angles for two adjacent color stops are the same. The easiest way to do this is to use multiple position colors stops. The following two declarations are equivalent:</p>
 
 <pre class="brush: css notranslate">conic-gradient(#fff 0.09turn, #bbb 0.09turn, #bbb 0.27turn, #666 0.27turn, #666 0.54turn, #000 0.54turn);
 conic-gradient(#fff 0turn 0.09turn, #bbb 0.09turn 0.27turn, #666 0.27turn 0.54turn, #000 0.54turn 1turn);</pre>

@@ -7,36 +7,37 @@ tags:
   - Internationalization
   - Intl
   - JavaScript
+  - Localization
+  - Reference
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>Intl.Collator</code></strong> objects enable language sensitive string comparison.</p>
+<p>The <strong><code>Intl.Collator</code></strong> object enables language-sensitive string comparison.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/intl-collator.html")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
- <dt>{{jsxref("Intl/Collator/Collator", "Intl.Collator()")}}</dt>
- <dd>Creates a new <code>Collator</code> object.</dd>
+	<dt>{{jsxref("Intl/Collator/Collator", "Intl.Collator()")}}</dt>
+	<dd>Creates a new <code>Collator</code> object.</dd>
 </dl>
 
 <h2 id="Static_methods">Static methods</h2>
 
 <dl>
- <dt>{{jsxref("Collator.supportedLocalesOf", "Intl.Collator.supportedLocalesOf()")}}</dt>
- <dd>Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.</dd>
+	<dt>{{jsxref("Collator.supportedLocalesOf", "Intl.Collator.supportedLocalesOf()")}}</dt>
+	<dd>Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.</dd>
 </dl>
 
 <h2 id="Instance_methods">Instance methods</h2>
 
 <dl>
- <dt>{{jsxref("Collator.compare", "Intl.Collator.prototype.compare")}}</dt>
- <dd>Getter function that compares two strings according to the sort order of this {{jsxref("Global_Objects/Collator", "Intl.Collator")}} object.</dd>
- <dt>{{jsxref("Collator.resolvedOptions", "Intl.Collator.prototype.resolvedOptions()")}}</dt>
- <dd>Returns a new object with properties reflecting the locale and collation options computed during initialization of the object.</dd>
+	<dt>{{jsxref("Collator.compare", "Intl.Collator.prototype.compare")}}</dt>
+	<dd>Getter function that compares two strings according to the sort order of this {{jsxref("Global_Objects/Collator", "Intl.Collator")}} object.</dd>
+	<dt>{{jsxref("Collator.resolvedOptions", "Intl.Collator.prototype.resolvedOptions()")}}</dt>
+	<dd>Returns a new object with properties reflecting the locale and collation options computed during initialization of the object.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -81,27 +82,24 @@ console.log(new Intl.Collator('sv', { sensitivity: 'base' }).compare('ä', 'a'))
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#collator-objects', 'Intl.Collator')}}</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('ES Int Draft', '#collator-objects', 'Intl.Collator')}}</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("javascript.builtins.Intl.Collator")}}</p>
-</div>
+<div>{{Compat("javascript.builtins.Intl.Collator")}}</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl">Intl</a></code></li>
+	<li>{{jsxref("Intl")}}</li>
 </ul>
