@@ -436,7 +436,7 @@ import { Triangle } from './modules/triangle.js';</pre>
 
 <h3 id="Top_level_await">Top level await</h3>
 
-<p>The newest feature to appear in modules is top level await. This allows the await keyword to be used within modules. It lets them act as big <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">asynchronous functions</a> allowing code to be evaluated before use in parent modules, but without blocking sibling modules from loading.</p>
+<p>Top level await is a feature available within modules. This means the <code>await</code> keyword can be used. It allows modules act as big <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">asynchronous functions</a> meaning code can be evaluated before use in parent modules, but without blocking sibling modules from loading.</p>
 
 <p>Let's take a look at an example. You can find all the files and code described in this section within the <code><a href="https://github.com/mdn/js-examples/tree/master/modules/top-level-await">top-level-await</a></code> directory, which extends from the previous examples.</p>
 
@@ -465,7 +465,7 @@ export default await colors;
 
 <p>Notice the last export line here.</p>
 
-<p>We're using the keyword <code>await</code> before specifying the constant <code>colors</code> to export. This means any other modules which include this one will wait until <code>colors</code> is ready/been fetched before using it.</p>
+<p>We're using the keyword <code>await</code> before specifying the constant <code>colors</code> to export. This means any other modules which include this one will wait until <code>colors</code> has been downloaded and parsed before using it.</p>
 
 <p>Let's include this module in our <code><a href="https://github.com/mdn/js-examples/blob/master/modules/top-level-await/main.js">main.js</a></code> file:</p>
 
