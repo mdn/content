@@ -69,7 +69,7 @@ let pinyin = new Intl.Collator("zh", {collator: "pinyin"});</pre>
 <ul>
   <li>Fixed a potential page load timeout situation when <code>WebDriver:ElementClick</code>
     is called for a link with a <code>target</code> other than <code>_blank</code> ({{bug(1678455)}}).</li>
-  <li>Using web element references on browsing contexts other than the originating one correctly returns a <code>no such element</code> error instead of <code>stale element reference</code> now ({{bug(1684827)}})</li>
+  <li>Using web element references on browsing contexts other than the originating one now correctly returns a <code>no such element</code> error instead of a <code>stale element reference</code> error ({{bug(1684827)}}).</li>
 </ul>
 
 
