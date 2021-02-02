@@ -20,12 +20,12 @@ slug: Tools/Debugger/How_to/Use_a_source_map
  <li>include a comment in the transformed file, that points to the source map. The comment's syntax is like this:</li>
 </ul>
 
-<pre class="brush: js"><code>//# sourceMappingURL=http://example.com/path/to/your/sourcemap.map</code></pre>
+<pre class="brush: js">//# sourceMappingURL=http://example.com/path/to/your/sourcemap.map</pre>
 
 <p>{{EmbedYouTube("Fqd15gHC4Pg")}}</p>
 
 <p>In the video above we load <a href="https://mdn.github.io/devtools-examples/sourcemaps-in-console/index.html">https://mdn.github.io/devtools-examples/sourcemaps-in-console/index.html</a>. This page loads a source called "main.js" that was originally written in CoffeeScript and compiled to JavaScript. The compiled source contains a comment like this, that points to a source map:</p>
 
-<pre class="brush: js"><code>//# sourceMappingURL=main.js.map</code></pre>
+<pre class="brush: js">//# sourceMappingURL=main.js.map</pre>
 
-<p>In the Debugger's <a href="/en-US/docs/Tools/Debugger/UI_Tour#Source_list_pane">source list pane</a>, the original CoffeeScript source now appears as "main.coffee", and we can debug it just like any other source.</p>
+<p>In the Debugger's <a href="/en-US/docs/Tools/Debugger/UI_Tour#source_list_pane">source list pane</a>, the original CoffeeScript source now appears as "main.coffee", and we can debug it just like any other source.</p>
