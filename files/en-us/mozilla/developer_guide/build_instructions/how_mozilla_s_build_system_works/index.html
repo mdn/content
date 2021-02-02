@@ -10,7 +10,10 @@ tags:
 
 <p>For many developers, typing <code>mach build</code> to build the tree is sufficient to work with the source tree. This document explains how the build system works.</p>
 
-<p>Note: This document is not intended for developers who just want to build Mozilla. For that, see the <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions">Build Documentation</a>.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>NThis document is not intended for developers who just want to build Mozilla. For that, see the <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions">Build Documentation</a>.</p>
+</div>
 
 <h2 id="Concepts">Phases</h2>
 
@@ -321,9 +324,9 @@ include $(topsrcdir)/config/rules.mk
 
 <p>As you can see, there are no extra variables to define. If a <strong><a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/JAR_Manifests">jar.mn</a></strong> file exists in the same directory as this Makefile.in, it will automatically be processed. Although the common practice is to have a <strong>resources</strong> directory that contains the jar.mn and chrome files, you may also put a jar.mn file in a directory that creates a library, in which case it will be processed.</p>
 
-<h2 id="Related_Links">Related Links</h2>
+<h2 id="Related_links">Related links</h2>
 
-<p>See the <a href="/en-US/docs/tag/Build%20Glossary">glossary of makefile variables</a> for information about specific variables and how to use them.</p>
+<p>See <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works/Makefile_-_variables">Makefile - variables</a> for information about specific variables and how to use them.</p>
 
 <div class="originaldocinfo">
 <h2 id="Original_Document_Information">Original Document Information</h2>
