@@ -1,6 +1,6 @@
 ---
-title: 'Version, UI, and Status Information'
-slug: 'Plugins/Guide/Version,_UI,_and_Status_Information'
+title: Version, UI, and Status Information
+slug: Plugins/Guide/Version_UI_and_Status_Information
 tags:
   - Gecko Plugin API Reference
   - Guide
@@ -19,7 +19,7 @@ tags:
 
 <p>Users are accustomed to checking the UI status line at the bottom of the browser window for updates on the progress of an operation or the URL of a link on the page. You can also use the status line to notify the user of plug-in-related information. The user might appreciate seeing the percentage completed of the current operation or the URL of a button or other link object when the cursor is over it, all of which the browser shows. In fact, your plug-in interface should be consistent with the rest of the browser in this way.</p>
 
-<p>To accomplish this, the plug-in calls the <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_Status">NPN_Status</a></code> method to display your message on the status line.</p>
+<p>To accomplish this, the plug-in calls the <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Status">NPN_Status</a></code> method to display your message on the status line.</p>
 
 <pre class="eval">void NPN_Status(NPP instance, const char *message);
 </pre>
@@ -32,7 +32,7 @@ tags:
 
 <p>A plug-in can check which browser is running on the user's current system. Browsers communicate with HTTP servers, which store agent software name, version, and operating system in a <code>user_agent</code> field. If you want to gather usage statistics or just find out the version of your plug-in's host browser, this information can help you.</p>
 
-<p>The plug-in calls the <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_UserAgent">NPN_UserAgent</a></code> method to retrieve the contents of the <code>user_agent</code> field.</p>
+<p>The plug-in calls the <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_UserAgent">NPN_UserAgent</a></code> method to retrieve the contents of the <code>user_agent</code> field.</p>
 
 <pre class="eval">const char* NPN_UserAgent(NPP instance);
 </pre>
@@ -47,7 +47,7 @@ tags:
 
 <p>Differing version numbers may mean that the current Plug-in API and the browser versions are incompatible. Changes to the minor version numbers indicate a smaller difference than changes to the major version. Changes to the major version numbers probably indicate incompatibility.</p>
 
-<p>The plug-in calls the <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_Version">NPN_Version</a></code> method to check for changes in major and minor Plug-in API version numbers. It gets the values from the plug-in rather than from the browser.</p>
+<p>The plug-in calls the <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Version">NPN_Version</a></code> method to check for changes in major and minor Plug-in API version numbers. It gets the values from the plug-in rather than from the browser.</p>
 
 <pre class="eval">void NPN_Version(int *plugin_major,
    int *plugin_minor,
@@ -57,7 +57,7 @@ tags:
 
 <p>This function returns the plug-in version number in <code>plugin_major</code>, the plug-in point release number in <code>plugin_minor</code>, the browser version number in <code>netscape_major</code>, and the browser point release number in <code>netscape_minor</code>.</p>
 
-<p>This code declares variables to hold the version numbers and calls <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_Version">NPN_Version</a></code> to return the major and minor version numbers for the browser and the Plug-in API.</p>
+<p>This code declares variables to hold the version numbers and calls <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Version">NPN_Version</a></code> to return the major and minor version numbers for the browser and the Plug-in API.</p>
 
 <pre class="eval">int plugin_major, plugin_minor, netscape_major,
 netscape_minor; // declare variables to hold version numbers
@@ -76,7 +76,7 @@ void NPN_Version(
 
 <p>In this example, the <code>has_windowless</code> method finds out whether the current version of the API supports windowless plug-ins. This method for detecting support is only useful on MS Windows and Mac OS X.</p>
 
-<p>It starts by using <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_Version">NPN_Version</a></code> to get the version numbers. It then uses the <code>netscape_minor</code> version number to find out if the windowless feature, represented by the <code>NPVERS_HAS_WINDOWLESS</code> constant, is supported. If the method returns true, a windowless plug-in can confidently proceed. If false is returned, windowless plug-ins will not work, and the developer must provide alternatives.</p>
+<p>It starts by using <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Version">NPN_Version</a></code> to get the version numbers. It then uses the <code>netscape_minor</code> version number to find out if the windowless feature, represented by the <code>NPVERS_HAS_WINDOWLESS</code> constant, is supported. If the method returns true, a windowless plug-in can confidently proceed. If false is returned, windowless plug-ins will not work, and the developer must provide alternatives.</p>
 
 <pre class="eval">Bool has_windowless()
 {
@@ -117,7 +117,7 @@ void NPN_Version(
 
 <h2 id="Reloading_a_Plug-in">Reloading a Plug-in</h2>
 
-<p>When the browser starts up, it loads all the plug-ins it finds in the Plugins directory for the platform. If you call <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_ReloadPlugins">NPN_ReloadPlugins</a></code>, the browser reloads all plug-ins in the Plugins directory without restarting. This causes the browser to install a new plug-in and load it, or remove a plug-in, without having to restart. Consider using this function as part of the plug-in's SmartUpdate process.</p>
+<p>When the browser starts up, it loads all the plug-ins it finds in the Plugins directory for the platform. If you call <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_ReloadPlugins">NPN_ReloadPlugins</a></code>, the browser reloads all plug-ins in the Plugins directory without restarting. This causes the browser to install a new plug-in and load it, or remove a plug-in, without having to restart. Consider using this function as part of the plug-in's SmartUpdate process.</p>
 
 <pre class="eval">void NPN_ReloadPlugins(NPBool reloadPages);
 </pre>

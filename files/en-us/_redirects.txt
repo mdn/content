@@ -7408,6 +7408,7 @@
 /en-US/docs/Plugins/Flash_to_HTML5/Video/Interstitial_ads	/en-US/docs/Plugins/Flash_to_HTML5/Video/Advertising
 /en-US/docs/Plugins/Flash_to_HTML5/Video/Video_ads	/en-US/docs/Plugins/Flash_to_HTML5/Video/Advertising
 /en-US/docs/Plugins/Flash_to_HTML5_migration_guide	/en-US/docs/Plugins/Flash_to_HTML5
+/en-US/docs/Plugins/Guide/Version,_UI,_and_Status_Information	/en-US/docs/Plugins/Guide/Version_UI_and_Status_Information
 /en-US/docs/Printing	/en-US/docs/Web/Guide/Printing
 /en-US/docs/Properly_Configuring_Server_MIME_Types	/en-US/docs/Learn/Server-side/Configuring_server_MIME_types
 /en-US/docs/Properties_compatibility_table_for_forms_widgets	/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls
