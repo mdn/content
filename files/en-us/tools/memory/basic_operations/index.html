@@ -14,29 +14,29 @@ slug: Tools/Memory/Basic_operations
 
 <p>To take a snapshot of the heap, click the "Take snapshot" button, or the camera icon on the left:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13651/memory-1-small.png" style="display: block; height: 244px; margin: 0px auto; width: 900px;"></p>
+<p><img alt="" src="memory-1-small.png" style="display: block; margin: 0px auto;"></p>
 
 <p>The snapshot will occupy the large pane on the right-hand side. On the left, you'll see an entry for the new snapshot, including its timestamp, size, and controls to save or clear this snapshot:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13653/memory-2-small.png" style="display: block; height: 243px; margin: 0px auto; width: 900px;"></p>
+<p><img alt="" src="memory-2-small.png" style="display: block; margin: 0px auto;"></p>
 
 <h2 id="Clearing_a_snapshot">Clearing a snapshot</h2>
 
 <p>To remove a snapshot, click the "X" icon:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13655/memory-3-small.png" style="display: block; height: 243px; margin: 0px auto; width: 900px;"></p>
+<p><img alt="" src="memory-3-small.png" style="display: block; margin: 0px auto;"></p>
 
 <h2 id="Saving_and_loading_snapshots">Saving and loading snapshots</h2>
 
 <p>If you close the Memory tool, all unsaved snapshots will be discarded. To save a snapshot click "Save":</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13657/memory-4-small.png" style="display: block; height: 243px; margin: 0px auto; width: 900px;"></p>
+<p><img alt="" src="memory-4-small.png" style="display: block; margin: 0px auto;"></p>
 
 <p>You'll be prompted for a name and location, and the file will be saved with an <code>.fxsnapshot</code> extension.</p>
 
 <p>To load a snapshot from an existing <code>.fxsnapshot</code> file, click the import button, which looks like a rectangle with an arrow rising from it (before Firefox 49, this button was labeled with the text "Import..."):</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13659/memory-5-small.png" style="display: block; height: 243px; margin: 0px auto; width: 900px;"></p>
+<p><img alt="" src="memory-5-small.png" style="display: block; margin: 0px auto;"></p>
 
 <p>You'll be prompted to find a snapshot file on disk.</p>
 
@@ -46,7 +46,7 @@ slug: Tools/Memory/Basic_operations
 
 <p>To create a diff, click the button that looks like a Venn diagram next to the camera icon (before Firefox 47, this looked like a "+/-" icon):</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13661/memory-6-small.png" style="display: block; height: 243px; margin: 0px auto; width: 900px;"></p>
+<p><img alt="" src="memory-6-small.png" style="display: block; margin: 0px auto;"></p>
 
 <p>You'll be prompted to select the snapshot to use as a baseline, then the snapshot to compare. The tool then shows you the differences between the two snapshots:</p>
 
@@ -60,4 +60,4 @@ slug: Tools/Memory/Basic_operations
 
 <p>The Memory tool can tell you exactly where in your code you are allocating memory. However, recording this information has a run-time cost, so you must ask the tool to record memory calls <em>before</em> the memory is allocated, if you want to see memory call sites in the snapshot. To do this, check "Record call stacks" (before Firefox 49 this was labeled "Record allocation stacks"):</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13663/memory-7-small.png" style="display: block; height: 243px; margin: 0px auto; width: 900px;"></p>
+<p><img alt="" src="memory-7-small.png" style="display: block; margin: 0px auto;"></p>

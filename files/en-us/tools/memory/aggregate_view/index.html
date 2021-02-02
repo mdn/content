@@ -4,11 +4,11 @@ slug: Tools/Memory/Aggregate_view
 ---
 <div>{{ToolsSidebar}}</div><p>Before Firefox 48, this was the default view of a heap snapshot. After Firefox 48, the default view is the <a href="/en-US/docs/Tools/Memory/Tree_map_view">Tree map view</a>, and you can switch to the Aggregate view using the dropdown labeled "View:":</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13028/memory-tool-switch-view.png" style="display: block; height: 270px; margin-left: auto; margin-right: auto; width: 716px;"></p>
+<p><img alt="" src="memory-tool-switch-view.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>The Aggregate view looks something like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13030/memory-tool-aggregate-view.png" style="display: block; height: 267px; margin-left: auto; margin-right: auto; width: 716px;"></p>
+<p><img alt="" src="memory-tool-aggregate-view.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>It presents a breakdown of the heap's contents, as a table. There are three main ways to group the data:</p>
 
@@ -26,7 +26,7 @@ slug: Tools/Memory/Aggregate_view
 
 <p>This is the default view, which looks something like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13030/memory-tool-aggregate-view.png" style="display: block; height: 267px; margin-left: auto; margin-right: auto; width: 716px;"></p>
+<p><img alt="" src="memory-tool-aggregate-view.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>It groups the things on the heap into types, including:</p>
 
@@ -58,17 +58,17 @@ slug: Tools/Memory/Aggregate_view
 
 <p>Next to the type's name, there's an icon that contains three stars arranged in a triangle:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13054/memory-tool-in-group-icon.png" style="display: block; height: 136px; margin-left: auto; margin-right: auto; width: 496px;"></p>
+<p><img alt="" src="memory-tool-in-group-icon.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Click this to see every instance of that type. For example, the entry for <code>Array</code> tells us that there are four <code>Array</code> objects in the snapshot. If we click the star-triangle, we'll see all four <code>Array</code> instances:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13032/memory-tool-in-group.png" style="display: block; height: 267px; margin-left: auto; margin-right: auto; width: 716px;"></p>
+<p><img alt="" src="memory-tool-in-group.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
-<p>For each instance, you can see the <a href="/en-US/docs/Tools/Memory/Dominators#Shallow_and_retained_size">retained size and shallow size</a> of that instance. In this case, you can see that the first three arrays have a fairly large shallow size (5% of the total heap usage) and a much larger retained size (26% of the total).</p>
+<p>For each instance, you can see the <a href="/en-US/docs/Tools/Memory/Dominators#shallow_and_retained_size">retained size and shallow size</a> of that instance. In this case, you can see that the first three arrays have a fairly large shallow size (5% of the total heap usage) and a much larger retained size (26% of the total).</p>
 
-<p>On the right-hand side is a pane that just says "Select an item to view its retaining paths". If you select an item, you'll see the <a href="/en-US/docs/Tools/Memory/Dominators_view#Retaining_Paths_panel">Retaining paths panel</a> for that item:</p>
+<p>On the right-hand side is a pane that just says "Select an item to view its retaining paths". If you select an item, you'll see the <a href="/en-US/docs/Tools/Memory/Dominators_view#retaining_paths_panel">Retaining paths panel</a> for that item:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13034/memory-tool-in-group-retaining-paths.png" style="display: block; height: 360px; margin-left: auto; margin-right: auto; width: 716px;"></p>
+<p><img alt="" src="memory-tool-in-group-retaining-paths.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 
 <p>{{EmbedYouTube("uLjzrvx_VCg")}}</p>
@@ -81,7 +81,7 @@ slug: Tools/Memory/Aggregate_view
 
 <p>You'll then see a list of all the functions that allocated objects, ordered by the size of the allocations they made:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13040/memory-tool-call-stack.png" style="display: block; height: 322px; margin-left: auto; margin-right: auto; width: 762px;"><br>
+<p><img alt="" src="memory-tool-call-stack.png" style="display: block; margin-left: auto; margin-right: auto;"><br>
  <br>
  The structure of this view is very much like the structure of the <a href="/en-US/docs/Tools/Performance/Call_Tree">Call Tree</a>, only it shows allocations rather than processor samples. So, for example, the first entry says that:</p>
 
@@ -108,13 +108,13 @@ slug: Tools/Memory/Aggregate_view
 
 <p>You should see something like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13040/memory-tool-call-stack.png" style="display: block; height: 322px; margin-left: auto; margin-right: auto; width: 762px;"></p>
+<p><img alt="" src="memory-tool-call-stack.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>This is telling us that 93% of the total heap snapshot was allocated in functions called from "alloc.js", line 35 (our initial <code>createToolbars()</code> call).</p>
 
 <p>We can use the disclosure arrow to expand the tree to find out exactly where we're allocating memory:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13042/memory-tool-call-stack-expanded.png" style="display: block; height: 530px; margin-left: auto; margin-right: auto; width: 762px;"></p>
+<p><img alt="" src="memory-tool-call-stack-expanded.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>This is where the "Bytes" and "Count" columns are useful: they show allocation size and number of allocations at that exact point.</p>
 
@@ -132,7 +132,7 @@ slug: Tools/Memory/Aggregate_view
 
 <p>Let's see what the example looks like when we select "Inverted Call Stack":</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13044/memory-tool-inverted-call-stack.png" style="display: block; height: 141px; margin-left: auto; margin-right: auto; width: 762px;"></p>
+<p><img alt="" src="memory-tool-inverted-call-stack.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Now at the top we can immediately see the <code>createToolbarButton()</code> call accounting for 89% of the heap usage in our page.</p>
 

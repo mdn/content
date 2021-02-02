@@ -200,13 +200,13 @@ for (let numOrPromise of generator()) {
       console.log(num);
     }
   } catch (e) {
-    console.log('catched', e)
+    console.log('caught', e)
   }
 })();
 // 0
 // 1
 // 2
-// catched 3
+// caught 3
 
 // compare with for-of loop:
 
@@ -215,14 +215,14 @@ try {
     console.log(numOrPromise);
   }
 } catch (e) {
-  console.log('catched', e)
+  console.log('caught', e)
 }
 // 0
 // 1
 // Promise { 2 }
 // Promise { &lt;rejected&gt; 3 }
 // 4
-// catched 5
+// caught 5
 // called finally
 </pre>
 
@@ -237,13 +237,13 @@ try {
       console.log(await numOrPromise);
     }
   } catch (e) {
-    console.log('catched', e)
+    console.log('caught', e)
   }
 })()
 // 0
 // 1
 // 2
-// catched 3
+// caught 3
 // called finally</pre>
 
 <h2 id="Specifications">Specifications</h2>

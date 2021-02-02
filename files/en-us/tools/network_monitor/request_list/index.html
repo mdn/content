@@ -2,7 +2,7 @@
 title: Network request list
 slug: Tools/Network_Monitor/request_list
 tags:
-  - '110n:priority'
+  - 110n:priority
   - Debugging
   - Dev Tools
   - Firefox
@@ -18,7 +18,7 @@ tags:
 
 <p>By default, the Network Monitor shows a list of all the network requests made in the course of loading the page. Each request is displayed in its own row:</p>
 
-<p><img alt="" src="network_request_list.png" style="border: 1px solid black; display: block; margin: 0px auto;">By default, the Network Monitor is cleared each time you navigate to a new page or reload the current page. You can override this behavior by checking "Enable persistent logs" in the <a href="/en-US/docs/Tools/Tools_Toolbox#Common_preferences">Settings</a>.</p>
+<p><img alt="" src="network_request_list.png" style="border: 1px solid black; display: block; margin: 0px auto;">By default, the Network Monitor is cleared each time you navigate to a new page or reload the current page. You can override this behavior by checking "Enable persistent logs" in the <a href="/en-US/docs/Tools/Tools_Toolbox#common_preferences">Settings</a>.</p>
 
 <h3 id="Network_request_columns">Network request columns</h3>
 
@@ -43,7 +43,7 @@ tags:
   <ul>
    <li>If the request used SSL/TLS and the connection had security weaknesses such as weak ciphers, you'll see a warning triangle next to the domain. Y</li>
    <li>Hover over the domain to see the IP address.</li>
-   <li>There's an icon next to the domain that gives you extra information about the security status of that request. See <a href="/en-US/docs/Tools/Network_Monitor/request_list#Security_icons">Security icons</a>.</li>
+   <li>There's an icon next to the domain that gives you extra information about the security status of that request. See <a href="/en-US/docs/Tools/Network_Monitor/request_list#security_icons">Security icons</a>.</li>
   </ul>
  </li>
  <li><strong>File</strong>: The basename of the file requested.
@@ -124,7 +124,7 @@ tags:
 
 <p><img alt="" src="timeline.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
-<p>Each timeline is given a horizontal position in its row relative to the other network requests, so you can see the total time taken to load the page. For more details on the color-coding used here, see the section on the <a href="/en-US/docs/Tools/Network_Monitor#Timings">Timings</a> page.</p>
+<p>Each timeline is given a horizontal position in its row relative to the other network requests, so you can see the total time taken to load the page. For more details on the color-coding used here, see the section on the <a href="/en-US/docs/Tools/Network_Monitor#timings">Timings</a> page.</p>
 
 <p>Starting in Firefox 45, the timeline also contains two vertical lines:</p>
 
@@ -201,29 +201,29 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Content type</th>
-   <td>Use the buttons in the <a href="/en-US/docs/Tools/Network_Monitor#Toolbar">toolbar</a> (<strong>HTML</strong>, <strong>CSS</strong>, <strong>JS</strong>).</td>
+   <td>Use the buttons in the <a href="/en-US/docs/Tools/Network_Monitor#toolbar">toolbar</a> (<strong>HTML</strong>, <strong>CSS</strong>, <strong>JS</strong>).</td>
   </tr>
   <tr>
    <th scope="row">{{Glossary("XHR (XMLHttpRequest)", "XHR")}} requests</th>
-   <td>Use the <strong>XHR</strong> button in the <a href="/en-US/docs/Tools/Network_Monitor#Toolbar">toolbar</a>.</td>
+   <td>Use the <strong>XHR</strong> button in the <a href="/en-US/docs/Tools/Network_Monitor#toolbar">toolbar</a>.</td>
   </tr>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/API/WebSockets_API">WebSocket</a> connections</th>
-   <td>Use the <strong>WS</strong> button in the <a href="/en-US/docs/Tools/Network_Monitor#Toolbar">toolbar</a>. You can filter by plain text (in which case the text is used to find partial matches; entering "for" will match any message that contains the word "for") or—as of <a href="/en-US/docs/Mozilla/Firefox/Releases/75">Firefox 75</a>—using <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expressions</a> (by writing the regexp bracketed within slashes; "/.+Corp.*/" will look for any occurrence of "Corp" which has at least one character before it and may or may not have any characters after it, for example).
+   <td>Use the <strong>WS</strong> button in the <a href="/en-US/docs/Tools/Network_Monitor#toolbar">toolbar</a>. You can filter by plain text (in which case the text is used to find partial matches; entering "for" will match any message that contains the word "for") or—as of <a href="/en-US/docs/Mozilla/Firefox/Releases/75">Firefox 75</a>—using <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expressions</a> (by writing the regexp bracketed within slashes; "/.+Corp.*/" will look for any occurrence of "Corp" which has at least one character before it and may or may not have any characters after it, for example).
     <p>The third-party add-on <a href="https://addons.mozilla.org/en-US/firefox/addon/websocketsniff">WebSocket Sniffer</a> may be helpful as well.</p>
    </td>
   </tr>
   <tr>
    <th scope="row">URL</th>
    <td>
-    <p>Use the <em>Filter URLs</em> box in the <a href="/en-US/docs/Tools/Network_Monitor#Toolbar">toolbar</a>. You can focus it by clicking in the filter box, or by pressing <kbd>Ctrl</kbd> + <kbd>F</kbd> (or <kbd>Cmd</kbd> + <kbd>F</kbd> on a Mac); then start typing. The list of network requests is filtered to include only requests that contain your filter string, in either the Domain or the File portions.</p>
+    <p>Use the <em>Filter URLs</em> box in the <a href="/en-US/docs/Tools/Network_Monitor#toolbar">toolbar</a>. You can focus it by clicking in the filter box, or by pressing <kbd>Ctrl</kbd> + <kbd>F</kbd> (or <kbd>Cmd</kbd> + <kbd>F</kbd> on a Mac); then start typing. The list of network requests is filtered to include only requests that contain your filter string, in either the Domain or the File portions.</p>
 
     <p>You can filter requests that <em>don't</em> contain your filter string by prefixing your query with the "-" operator. For example, the query "-google.com" will show all requests that don't have "google.com" in the URL.</p>
    </td>
   </tr>
   <tr>
    <th scope="row">Request properties</th>
-   <td>Use the search box in the <a href="/en-US/docs/Tools/Network_Monitor#Toolbar">toolbar</a>. See next section.</td>
+   <td>Use the search box in the <a href="/en-US/docs/Tools/Network_Monitor#toolbar">toolbar</a>. See next section.</td>
   </tr>
  </tbody>
 </table>
@@ -262,7 +262,7 @@ tags:
   </tr>
   <tr>
    <th scope="row"><code>cause</code></th>
-   <td>Shows resources matching a specific cause type. The types can be found in the description of the <a href="#Cause_column">cause column</a>.</td>
+   <td>Shows resources matching a specific cause type. The types can be found in the description of the <a href="#cause_column">cause column</a>.</td>
    <td><code>cause:js</code><br>
     <code>cause:stylesheet<br>
     cause:img</code></td>
@@ -378,7 +378,7 @@ tags:
   </tr>
   <tr>
    <td>Copy &gt; Copy as cURL</td>
-   <td>Copies the network request to the clipboard as a <a href="http://curl.haxx.se/">cURL</a> command, so you can execute it from a command line. See <a href="#Copy_as_cURL">Copy as cURL</a>, below.</td>
+   <td>Copies the network request to the clipboard as a <a href="http://curl.haxx.se/">cURL</a> command, so you can execute it from a command line. See <a href="#copy_as_curl">Copy as cURL</a>, below.</td>
   </tr>
   <tr>
    <td>Copy &gt; Copy as Fetch</td>
@@ -414,7 +414,7 @@ tags:
   </tr>
   <tr>
    <td>Block URL</td>
-   <td>Blocks the selected URL for future requests. See <a href="#Blocking_a_specific_URL_from_the_Request_List">Blocking a specific URL from the Request List</a>.</td>
+   <td>Blocks the selected URL for future requests. See <a href="#blocking_a_specific_url_from_the_request_list">Blocking a specific URL from the Request List</a>.</td>
   </tr>
   <tr>
    <td>Open in New Tab</td>
@@ -425,7 +425,7 @@ tags:
    <td>For a CSS resource, opens it in the <a href="/en-US/docs/Tools/Style_Editor">Style Editor</a>.</td>
   </tr>
   <tr>
-   <td>Start <a href="/en-US/docs/Tools/Network_Monitor#Performance_analysis">Performance Analysis</a></td>
+   <td>Start <a href="/en-US/docs/Tools/Network_Monitor#performance_analysis">Performance Analysis</a></td>
    <td></td>
   </tr>
   <tr>
