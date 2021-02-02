@@ -14,7 +14,7 @@ tags:
 
 <p>For single-line entry, you can type JavaScript expressions in the field at the bottom of the console log, at the <strong>&gt;&gt;</strong> prompt.</p>
 
-<p><img alt="The Web Console, showing single-line mode" src="https://mdn.mozillademos.org/files/16965/web_console_single.png" style="display: block; margin-left: auto; margin-right: auto; width: 1952px;"></p>
+<p><img alt="The Web Console, showing single-line mode" src="web_console_single.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>To enter expressions in single-line mode, type at the prompt and press <kbd>Enter</kbd>. To enter multi-line expressions, press <kbd>Shift</kbd>+<kbd>Enter</kbd> after typing each line, then <kbd>Enter</kbd> to run all the entered lines.</p>
 
@@ -32,7 +32,7 @@ tags:
 
 <p>For multi-line entry, click the "split panel" icon at the right hand side of the single-line entry field, or press  <kbd>Ctrl</kbd>+<kbd>B</kbd> (Windows/Linux) or <kbd>Cmd</kbd>+<kbd>B</kbd> (macOS). The multi-line editing pane opens on the left side the of Web Console.</p>
 
-<p><img alt="Web Console in multi-line mode" src="https://mdn.mozillademos.org/files/16966/web_console_multi.png" style="border-style: solid; border-width: 1px; width: 1946px;"></p>
+<p><img alt="Web Console in multi-line mode" src="web_console_multi.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>You can enter multiple lines of JavaScript by default in this mode, pressing <kbd>Enter</kbd> after each one. To execute the snippet that is currently in the editing pane, click the <strong>Run</strong> button or press <kbd>Ctrl</kbd>+<kbd>Enter</kbd> (or <kbd>Cmd</kbd>+<kbd>Return</kbd> on MacOS). The snippet is echoed under the input prompt (in the right-side pane), followed by the result. You can also select a range of lines in the editing pane, and run just the code on those lines.</p>
 
@@ -51,13 +51,13 @@ tags:
 
 <p>You can access variables defined in the page, both built-in variables like <code>window</code> and variables added by JavaScript libraries like <em>jQuery</em>:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/7367/commandline-accessbuiltin.png" style="display: block; margin-left: auto; margin-right: auto;"><img alt="" src="https://mdn.mozillademos.org/files/7369/commandline-accesspageadded.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="commandline-accessbuiltin.png" style="display: block; margin-left: auto; margin-right: auto;"><img alt="" src="commandline-accesspageadded.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h2 id="Autocomplete">Autocomplete</h2>
 
 <p>The editor has autocomplete: enter the first few letters and a popup appears with possible completions:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16426/console_autocomplete_cropped.png" style="border: 1px solid black; display: block; height: 299px; margin-left: auto; margin-right: auto; width: 302px;"></p>
+<p><img alt="" src="console_autocomplete_cropped.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Press  <kbd>Enter</kbd>, <kbd>Tab</kbd>, or the right arrow key to accept the suggestion, use the up/down arrows to move to a different suggestion, or just keep typing if you don't like any of the suggestions.</p>
 
@@ -67,7 +67,7 @@ tags:
 
 <p>You get autocomplete suggestions for array elements, as well:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16440/arrayList_autocomplete.png" style="border: 1px solid black; display: block; height: 271px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="arraylist_autocomplete.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>You can enable or disable autocompletion via the Settings ("gear") menu in the Web Console toolbar. The menuitem <strong>Enable Autocompletion</strong> has a checkmark next to it when the feature is enabled, which is missing when it is disabled. Select the menuitem to change the state.</p>
 
@@ -87,7 +87,7 @@ tags:
 
 <h2 id="Syntax_highlighting">Syntax highlighting</h2>
 
-<p><img alt="Console output showing syntax highlighting" src="https://mdn.mozillademos.org/files/16470/console_syntaxHighlighting.png" style="border: 1px solid black; display: block; height: 310px; margin-left: auto; margin-right: auto; width: 452px;"></p>
+<p><img alt="Console output showing syntax highlighting" src="console_syntaxhighlighting.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>The text you enter has syntax highlighting as soon as you have typed enough for the highlighter to parse it and infer the meanings of the "words".</p>
 
@@ -106,15 +106,15 @@ tags:
 	<li>In multi-line mode, use the  <strong>⋀</strong> and <strong>⋁</strong> icons in the editing panel's toolbar.</li>
 </ul>
 
-<p>The expression history is persisted across sessions. To clear the history, use the <code>clearHistory()</code> <a href="/en-US/docs/Tools/Web_Console/The_command_line_interpreter#Helper_commands">helper function</a>.</p>
+<p>The expression history is persisted across sessions. To clear the history, use the <code>clearHistory()</code> <a href="/en-US/docs/Tools/Web_Console/The_command_line_interpreter#helper_commands">helper function</a>.</p>
 
 <p>You can initiate a reverse search through the expression history, much like you can in bash on Linux and Mac or PowerShell on Windows. On Windows and Linux press <kbd>F9</kbd>. On Mac press <kbd>Ctrl</kbd>+<kbd>R</kbd> (<strong>note:</strong> not <kbd>Cmd</kbd>+<kbd>R</kbd>!) to initiate the reverse search.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16468/reverse_search.png" style="border: 1px solid black; display: block; margin: 0px auto; width: 500px;"></p>
+<p><img alt="" src="reverse_search.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
 <p>Enter the text you want to search for in the input box at the bottom of the Console. Start typing part of the expression you are looking for and the first match is displayed in the console. Repeatedly typing <kbd>F9</kbd> on Windows and Linux ( <kbd>Ctrl</kbd>+<kbd>R</kbd> on Mac) cycles backwards through the matches.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16469/reverse_search_example.png" style="border: 1px solid black; display: block; margin: 0 auto;"></p>
+<p><img alt="" src="reverse_search_example.png" style="border: 1px solid black; display: block; margin: 0 auto;"></p>
 
 <p>Once you  have initiated the reverse search, you can use <kbd>Shift</kbd> + <kbd>F9</kbd> on Windows or Linux ( <kbd>Ctrl</kbd>+<kbd>S</kbd> on Mac) to search forward in the list of matches. You can also use the  <strong>⋀</strong> and <strong>⋁</strong> icons in the expression search bar.</p>
 
@@ -181,9 +181,9 @@ cd(frame.contentWindow);
 
 <p>Now you'll see that the global window's document is the iframe:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/7355/web-console-iframe-document.png" style="display: block; height: 75px; margin-left: auto; margin-right: auto; width: 632px;">And you can call the function defined in the iframe:</p>
+<p><img alt="" src="web-console-iframe-document.png" style="display: block; margin-left: auto; margin-right: auto;">And you can call the function defined in the iframe:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/7357/web-console-iframe-function.png" style="display: block; height: 77px; margin-left: auto; margin-right: auto; width: 632px;"></p>
+<p><img alt="" src="web-console-iframe-function.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h2 id="Helper_commands">Helper commands</h2>
 

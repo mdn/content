@@ -17,9 +17,9 @@ tags:
 <p>With the <a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Web Audio API</a>, developers create an {{domxref ("AudioContext", "audio context")}}. Within that context they then construct a number of {{domxref ("AudioNode", "audio nodes")}}, including:</p>
 
 <ul>
- <li>nodes providing the <a href="/en-US/docs/Web/API/Web_Audio_API#Defining_audio_sources">audio source</a>, such as an oscillator or a data buffer source</li>
- <li>nodes performing <a href="/en-US/docs/Web/API/Web_Audio_API#Defining_audio_effects_filters">transformations</a> such as delay and gain</li>
- <li>nodes representing the <a href="/en-US/docs/Web/API/Web_Audio_API#Defining_audio_destinations">destination of the audio stream</a>, such as the speakers</li>
+ <li>nodes providing the <a href="/en-US/docs/Web/API/Web_Audio_API#defining_audio_sources">audio source</a>, such as an oscillator or a data buffer source</li>
+ <li>nodes performing <a href="/en-US/docs/Web/API/Web_Audio_API#defining_audio_effects_filters">transformations</a> such as delay and gain</li>
+ <li>nodes representing the <a href="/en-US/docs/Web/API/Web_Audio_API#defining_audio_destinations">destination of the audio stream</a>, such as the speakers</li>
 </ul>
 
 <p>Each node has zero or more {{domxref ("AudioParam")}} properties that configure its operation. For example, the {{domxref ("GainNode")}} has a single <code>gain</code> property, while the {{domxref ("OscillatorNode")}} has <code>frequency</code> and <code>detune</code> properties.</p>
@@ -32,7 +32,7 @@ tags:
 
 <h2 id="Opening_the_Web_Audio_Editor">Opening the Web Audio Editor</h2>
 
-<p>The Web Audio Editor is not enabled by default in Firefox 32. To enable it, open the <a href="/en-US/docs/Tools/Tools_Toolbox#Settings_2">Developer Tool Settings</a> and check "Web Audio". Now there should be an extra tab in the <a href="/en-US/docs/Tools/Tools_Toolbox#Toolbar">Toolbox toolbar</a> labeled "Web Audio". Click the tab and load a page that constructs an audio context. Two good demos are:</p>
+<p>The Web Audio Editor is not enabled by default in Firefox 32. To enable it, open the <a href="/en-US/docs/Tools/Tools_Toolbox#settings_2">Developer Tool Settings</a> and check "Web Audio". Now there should be an extra tab in the <a href="/en-US/docs/Tools/Tools_Toolbox#toolbar">Toolbox toolbar</a> labeled "Web Audio". Click the tab and load a page that constructs an audio context. Two good demos are:</p>
 
 <ul>
  <li>the <a href="https://github.com/mdn/voice-change-o-matic">Voice-change-O-Matic</a>, which can apply various effects to the microphone input and also provides a visualisation of the result</li>
@@ -43,7 +43,7 @@ tags:
 
 <p>The Web Audio Editor will now display the graph for the loaded audio context. Here's the graph for the Violent Theremin demo:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10171/web-audio-editor.png" style="display: block; height: 648px; margin-left: auto; margin-right: auto; width: 868px;">You can see that it uses three nodes: an {{domxref ("OscillatorNode")}} as the source, a {{domxref ("GainNode")}} to control the volume, and an {{domxref ("GainNode")}} as the destination.</p>
+<p><img alt="" src="web-audio-editor.png" style="display: block; margin-left: auto; margin-right: auto;">You can see that it uses three nodes: an {{domxref ("OscillatorNode")}} as the source, a {{domxref ("GainNode")}} to control the volume, and an {{domxref ("GainNode")}} as the destination.</p>
 
 <h3 id="Connections_to_AudioParams">Connections to AudioParams</h3>
 
@@ -51,13 +51,13 @@ tags:
 <p>Displaying connections to AudioParams is new in Firefox 34.</p>
 </div>
 
-<p>Connections between nodes are displayed as solid lines. If, instead, you've <a href="/en-US/docs/Web/API/AudioNode.connect%28AudioParam%29">connected a node to an AudioParam in another node</a>, then the connection is shown as a dashed line between the nodes, and is labeled with the name of the <code>AudioParam</code>:<img alt="" src="https://mdn.mozillademos.org/files/8819/web%20audio-editor-connect-param.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p>Connections between nodes are displayed as solid lines. If, instead, you've <a href="/en-US/docs/Web/API/AudioNode.connect%28AudioParam%29">connected a node to an AudioParam in another node</a>, then the connection is shown as a dashed line between the nodes, and is labeled with the name of the <code>AudioParam</code>:<img alt="" src="web_audio-editor-connect-param.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h2 id="Inspecting_and_modifying_AudioNodes">Inspecting and modifying AudioNodes</h2>
 
 <p>If you click on a node, it's highlighted and you get a node inspector on the right hand side. This list the values of that node's <code>AudioParam</code> properties. For example, here's what the OscillatorNode looks like:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10173/web-audio-editor-props.png" style="display: block; height: 648px; margin-left: auto; margin-right: auto; width: 868px;">With the Violent Theremin demo, the frequency parameter is modified as the user moves the mouse left and right, and you can see this reflected in the node inspector. However, the value isn't updated in real time: you have to click the node again to see the updated value.</p>
+<p><img alt="" src="web-audio-editor-props.png" style="display: block; margin-left: auto; margin-right: auto;">With the Violent Theremin demo, the frequency parameter is modified as the user moves the mouse left and right, and you can see this reflected in the node inspector. However, the value isn't updated in real time: you have to click the node again to see the updated value.</p>
 
 <p>If you click on a value in the node inspector you can modify it: press <kbd>Enter</kbd> or <kbd>Tab</kbd> and the new value takes effect immediately.</p>
 
@@ -69,6 +69,6 @@ tags:
 
 <p>In the pane that shows you the node's details, there's an on/off button:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10183/web-audio-editor-on-off.png" style="display: block; height: 97px; margin-left: auto; margin-right: auto; width: 316px;">Click it, and the graph will be modified to bypass this node, so it will no longer have any effect. Nodes that are bypassed are shown with a hatched background:</p>
+<p><img alt="" src="web-audio-editor-on-off.png" style="display: block; margin-left: auto; margin-right: auto;">Click it, and the graph will be modified to bypass this node, so it will no longer have any effect. Nodes that are bypassed are shown with a hatched background:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10181/web-audio-editor-bypassed.png" style="display: block; height: 74px; margin-left: auto; margin-right: auto; width: 348px;"></p>
+<p><img alt="" src="web-audio-editor-bypassed.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
