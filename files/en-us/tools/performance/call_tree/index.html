@@ -26,9 +26,9 @@ tags:
 
 <p>The screenshot below shows the output of a program that compares three sorting algorithms - bubble sort, selection sort, and quicksort. To do this, it generates some arrays filled with random integers and sorts them using each algorithm in turn.</p>
 
-<p>We've <a href="/en-US/docs/Tools/Performance/UI_Tour#Zooming_in">zoomed</a> into the part of the recording that shows a long JavaScript marker:</p>
+<p>We've <a href="/en-US/docs/Tools/Performance/UI_Tour#zooming_in">zoomed</a> into the part of the recording that shows a long JavaScript marker:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10981/perf-call-tree.png" style="display: block; height: 574px; margin-left: auto; margin-right: auto; width: 1052px;"></p>
+<p><img alt="" src="perf-call-tree.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>The Call Tree presents the results in a table. Each row represents a function in which at least one sample was taken, and the rows are ordered by the number of samples taken while in that function, highest to lowest.</p>
 
@@ -45,7 +45,7 @@ tags:
 <p>In the current version of the Call Tree, these are the most important columns. Functions with a relatively high <em>Self Cost</em> are good candidates for optimization, either because they take a long time to run, or because they are called very often.</p>
 
 <div class="note">
-<p><a href="#Using_an_inverted_aka_Bottom-Up_Call_Tree">The inverted call tree</a> is a good way to focus on these <em>Self Cos</em>t values.</p>
+<p><a href="#using_an_inverted_aka_bottom-up_call_tree">The inverted call tree</a> is a good way to focus on these <em>Self Cos</em>t values.</p>
 </div>
 
 <p>This screenshot tells us something we probably already knew: Bubble sort is a very inefficient algorithm. We have about six times as many samples in bubble sort as in selection sort, and 13 times as many as in quicksort.</p>
@@ -54,7 +54,7 @@ tags:
 
 <p>Next to each function name is a disclosure arrow: Click that, and you can see the path back up the call tree, from the function in which the sample was taken, to the root. For example, we can expand the entry for <code>bubbleSort()</code>:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10983/perf-call-tree-expanded-bubblesort.png" style="display: block; height: 512px; margin-left: auto; margin-right: auto; width: 1054px;"></p>
+<p><img alt="" src="perf-call-tree-expanded-bubblesort.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>So we can see the call graph is like this:</p>
 
@@ -68,7 +68,7 @@ tags:
 
 <p>Sometimes there's more than one path back from an entry to the top level. Let's expand the entry for <code>swap()</code>:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10985/perf-call-tree-expanded-sawp.png" style="display: block; height: 636px; margin-left: auto; margin-right: auto; width: 1052px;"></p>
+<p><img alt="" src="perf-call-tree-expanded-sawp.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>There were 253 samples taken inside <code>swap()</code>. But <code>swap()</code> was reached by two different paths: both <code>bubbleSort()</code> and <code>selectionSort()</code> use it. We can also see that 252 of the 253 samples in <code>swap() </code>were taken in the <code>bubbleSort()</code> branch, and only one in the <code>selectionSort()</code> branch.</p>
 
@@ -100,7 +100,7 @@ tags:
 
 <p>In our example, there are 679 samples assigned to <em>Gecko </em>- the second-largest group after <code>bubbleSort()</code>. Let's expand that:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10987/perf-call-tree-expanded-gecko.png" style="display: block; height: 478px; margin-left: auto; margin-right: auto; width: 1050px;"></p>
+<p><img alt="" src="perf-call-tree-expanded-gecko.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>This result is telling us that 614 of those samples, or about 20% of the total cost, are coming from our <code>sort()</code> call. If we look at the code for <code>sort()</code>, it should be fairly obvious that the high platform data cost is coming from repeated calls to <code>console.log()</code>:</p>
 
@@ -115,7 +115,7 @@ tags:
 <p>One thing to be aware of here is that idle time is classified as <em>Gecko</em>, so parts of your profile where your JavaScript isn't running will contribute <em>Gecko</em> samples. These aren't relevant to the performance of your site.</p>
 
 <div class="note">
-<p>By default, the Call Tree doesn't split platform data out into separate functions, because they add a great deal of noise, and the details are not likely to be useful to people not working on Firefox. If you want to see the details, check "Show Gecko Platform Data" in the <a href="/en-US/docs/Tools/Performance/UI_Tour#Toolbar">Settings</a>.</p>
+<p>By default, the Call Tree doesn't split platform data out into separate functions, because they add a great deal of noise, and the details are not likely to be useful to people not working on Firefox. If you want to see the details, check "Show Gecko Platform Data" in the <a href="/en-US/docs/Tools/Performance/UI_Tour#toolbar">Settings</a>.</p>
 </div>
 
 <h2 id="Using_an_inverted_aka_Bottom-Up_Call_Tree">Using an inverted, aka Bottom-Up, Call Tree</h2>
@@ -125,5 +125,4 @@ tags:
 
 <p>To display this view, click the gear icon on the right-hand end of the performance tab and select <strong>Invert Call Tree</strong>.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16093/performance_menu_invert_call_tree.png" style="border-style: solid; border-width: 1px; display: block; height: 201px; margin: 0 auto; width: 492px;"></p>
-
+<p><img alt="" src="performance_menu_invert_call_tree.png" style="border-style: solid; border-width: 1px; display: block; margin: 0 auto;"></p>
