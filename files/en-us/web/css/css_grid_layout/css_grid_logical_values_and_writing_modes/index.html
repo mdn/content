@@ -1,6 +1,6 @@
 ---
-title: 'CSS grids, logical values, and writing modes'
-slug: 'Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes'
+title: CSS grids, logical values, and writing modes
+slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes
 tags:
   - CSS
   - CSS Grids
@@ -33,7 +33,7 @@ tags:
 
 <p>This can become an issue when developing a site that has to work in multiple languages, including languages that have text starting on the right, rather than the left. Browsers are pretty good at dealing with text direction, and you don’t even need to be working in a {{glossary("rtl")}} language to take a look. In the example below, I have two paragraphs. One has no {{cssxref("text-align")}} property set, the second has <code>text-align</code> set to left. I have added <code>dir="rtl"</code> to the <code>html</code> element, which switches the writing mode from the default for an English language document of <code>ltr</code>. You can see that the first paragraph remains left to right, due to the <code>text-align</code> value being <code>left</code> . The second however, switches direction and the text runs from right to left .</p>
 
-<p><img alt="A simple example of text direction." src="https://mdn.mozillademos.org/files/14733/8_direction_simple_example.png" style="height: 354px; width: 1136px;"></p>
+<p><img alt="A simple example of text direction." src="8_direction_simple_example.png"></p>
 
 <p>This is a very simple example of the problem with physical values and properties being used in CSS. They prevent the browser being able to do the work to switch writing mode, as they make the assumption that the text is flowing left to right and top to bottom.</p>
 
@@ -45,7 +45,7 @@ tags:
 
 <p>Once we begin dealing with logical, rather than physical properties, we stop seeing the world as left to right, and top to bottom. We need a new reference point, and this is where understanding the <em>block</em> and <em>inline</em> axes, that we met previously in the guide to <em>alignment</em>, becomes very useful. If you can start to see layout in terms of block and inline, the way things work in grid start to make a lot more sense.</p>
 
-<p><img alt="An image showing the default direction of the Block and Inline Axes." src="https://mdn.mozillademos.org/files/14735/8-horizontal-tb.png" style="height: 256px; width: 500px;"></p>
+<p><img alt="An image showing the default direction of the Block and Inline Axes." src="8-horizontal-tb.png"></p>
 
 <h2 id="CSS_writing_modes">CSS writing modes</h2>
 
@@ -177,7 +177,7 @@ gap: 10px;
 <p>{{ EmbedLiveSample('writing_3', '500', '330') }}</p>
 </div>
 
-<p><img alt="A image showing the direction of Block and Inline when writing-mode is vertical-lr" src="https://mdn.mozillademos.org/files/14737/8-vertical-lr.png" style="height: 360px; width: 257px;"></p>
+<p><img alt="A image showing the direction of Block and Inline when writing-mode is vertical-lr" src="8-vertical-lr.png"></p>
 
 <h2 id="Logical_values_for_alignment">Logical values for alignment</h2>
 

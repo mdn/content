@@ -431,7 +431,6 @@
 /en-US/docs/CSS/:-moz-ui-valid	/en-US/docs/Web/CSS/:-moz-ui-valid
 /en-US/docs/CSS/:-moz-user-disabled	/en-US/docs/Web/CSS/:-moz-user-disabled
 /en-US/docs/CSS/:-moz-window-inactive	/en-US/docs/Web/CSS/:-moz-window-inactive
-/en-US/docs/Web/CSS/:-webkit-autofill	/en-US/docs/Web/CSS/:autofill
 /en-US/docs/CSS/::-moz-page	/en-US/docs/Web/CSS/::-moz-page
 /en-US/docs/CSS/::-moz-page-sequence	/en-US/docs/Web/CSS/::-moz-page-sequence
 /en-US/docs/CSS/::-moz-placeholder	/en-US/docs/Web/CSS/::placeholder
@@ -11421,6 +11420,7 @@
 /en-US/docs/Web/CSS/:-moz-placeholder	/en-US/docs/Web/CSS/:placeholder-shown
 /en-US/docs/Web/CSS/:-moz-ui-invalid	/en-US/docs/Web/CSS/:user-invalid
 /en-US/docs/Web/CSS/:-ms-input-placeholder	/en-US/docs/Web/CSS/:placeholder-shown
+/en-US/docs/Web/CSS/:-webkit-autofill	/en-US/docs/Web/CSS/:autofill
 /en-US/docs/Web/CSS/::-moz-placeholder	/en-US/docs/Web/CSS/::placeholder
 /en-US/docs/Web/CSS/::-moz-selection	/en-US/docs/Web/CSS/::selection
 /en-US/docs/Web/CSS/::-webkit-file-upload-button	/en-US/docs/Web/CSS/::file-selector-button
@@ -11480,6 +11480,7 @@
 /en-US/docs/Web/CSS/CSS_Functionals	/en-US/docs/Web/CSS/CSS_Functions
 /en-US/docs/Web/CSS/CSS_Grid	/en-US/docs/Web/CSS/CSS_Grid_Layout
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_In_Grid_Layout	/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout
+/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes	/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Realising_common_layouts_using_CSS_Grid_	/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout_	/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
 /en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_Concepts_of_Logical_Properties_and_Values	/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts
