@@ -1,0 +1,67 @@
+---
+title: 'HTML attribute: action'
+slug: Web/HTML/Attributes/action
+tags:
+  - Attribute
+  - Attributes
+  - HTML
+  - action
+  - form-elements
+  - Reference
+---
+<p>{{HTMLSidebar}}</p>
+
+<p>The <strong><code>action</code></strong> attribute is an allowed attribute for {{htmlelement("form")}}.
+When used on a <code>&lt;form&gt;</code> element it specifies  where to send the form-data when a form is submitted.
+</p>
+
+<h2 id="Usage">Usage</h2>
+
+<h3>Syntax</h3>
+
+<pre class="brush: html">&lt;form action="URL" method="get"&gt; </pre>
+
+<p>On submit, send the form-data to URL specified in action, to process the input.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: html">&lt;form action="/action_page.php" method="get"&gt;
+  &lt;label for="fname"&gt;First name:&lt;/label&gt;
+  &lt;input type="text" id="fname" name="fname" value="10"&gt;
+  &lt;label for="lname"&gt;Last name:&lt;/label&gt;
+  &lt;input type="text" id="lname" name="lname" value="10"&gt;
+&lt;/form&gt;
+</pre>
+
+<p>See more examples of usage on the element pages for {{htmlelement("form")}}.
+</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', 'forms.html#attr-form-action', 'action as used with form')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+       <td>{{SpecName('HTML5 W3C', 'sec-forms.html#element-attrdef-form-action', 'action as used with form')}}</td>
+       <td>{{Spec2('HTML5 W3C')}}</td>
+       <td></td>
+    </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<h3>Support with form</h3>
+
+<p>{{Compat("html.elements.form.action")}}</p>
