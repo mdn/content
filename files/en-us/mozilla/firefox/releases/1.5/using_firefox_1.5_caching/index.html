@@ -13,7 +13,7 @@ tags:
 
 <h2 id="Introduction">Introduction</h2>
 
-<p><a href="/en-US/docs/Firefox_1.5_for_developers" title="Firefox_1.5_for_developers">Firefox 1.5</a> uses in-memory caching for entire Web pages, including their JavaScript states, for a single browser session. Going backward and forward between visited pages requires no page loading and the JavaScript states are preserved. This feature, referred to by some as <strong>bfcache</strong> (for "Back-Forward Cache"), makes page navigation very fast. This caching state is preserved until the user closes the browser.</p>
+<p><a href="/en-US/docs/Mozilla/Firefox/Releases/1.5" title="Firefox_1.5_for_developers">Firefox 1.5</a> uses in-memory caching for entire Web pages, including their JavaScript states, for a single browser session. Going backward and forward between visited pages requires no page loading and the JavaScript states are preserved. This feature, referred to by some as <strong>bfcache</strong> (for "Back-Forward Cache"), makes page navigation very fast. This caching state is preserved until the user closes the browser.</p>
 
 <p>There are instances in which Firefox doesn’t cache pages. Below are some common programmatic reasons that a page is not cached:</p>
 
@@ -187,6 +187,6 @@ function loadOnlyFirst() {
 
 <h2 id="Developing_Firefox_extensions">Developing Firefox extensions</h2>
 
-<p>Firefox 1.5 <a href="/en-US/docs/Building_an_Extension">extensions</a> need to allow for this caching functionality. If you are developing a Firefox extension that you want to be compatible with both 1.5 and earlier versions, make sure that it listens for the <code>load</code> event for triggers that can be cached and listens for the <code>pageshow</code> event for triggers that shouldn’t be cached.</p>
+<p>Firefox 1.5 <a href="/en-US/docs/Mozilla/Add-ons">extensions</a> need to allow for this caching functionality. If you are developing a Firefox extension that you want to be compatible with both 1.5 and earlier versions, make sure that it listens for the <code>load</code> event for triggers that can be cached and listens for the <code>pageshow</code> event for triggers that shouldn’t be cached.</p>
 
 <p>For instance, the Google Toolbar for Firefox should listen for the <code>load</code> event for the autolink function and to the <code>pageshow</code> event for the PageRank function in order to be compatible with both 1.5 and earlier versions.</p>

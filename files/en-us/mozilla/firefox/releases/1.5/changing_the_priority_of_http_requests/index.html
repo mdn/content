@@ -9,11 +9,11 @@ tags:
 
 <h3 id="Introduction">Introduction</h3>
 
-<p>In <a href="/en-US/docs/Firefox_1.5_for_developers">Firefox 1.5</a> (Gecko 1.8), an API was added to support changing the priority of <a href="/en-US/docs/HTTP">HTTP</a> requests. Prior to this, there was no way to directly indicate that a request was of a different priority. The API is defined in <a href="/en-US/docs/nsISupportsPriority">nsISupportsPriority</a>, but is defined in very generic terms so that any object can implement this interface to enable the concept of priority. This article deals specifically with using that interface to change the priority of HTTP requests.</p>
+<p>In <a href="/en-US/docs/Mozilla/Firefox/Releases/1.5">Firefox 1.5</a> (Gecko 1.8), an API was added to support changing the priority of <a href="/en-US/docs/Web/HTTP">HTTP</a> requests. Prior to this, there was no way to directly indicate that a request was of a different priority. The API is defined in <a href="/en-US/docs/nsISupportsPriority">nsISupportsPriority</a>, but is defined in very generic terms so that any object can implement this interface to enable the concept of priority. This article deals specifically with using that interface to change the priority of HTTP requests.</p>
 
 <p>At the time of this writing, changing the priority of an HTTP request only affects the order in which connection attempts are made. This means that the priority only has an effect when there are more connections (to a server) than are allowed.</p>
 
-<p>The examples in this document are all written in <a href="/en-US/docs/JavaScript">JavaScript</a> using <a href="/en-US/docs/XPCOM">XPCOM</a>.</p>
+<p>The examples in this document are all written in <a href="/en-US/docs/Web/JavaScript">JavaScript</a> using <a href="/en-US/docs/XPCOM">XPCOM</a>.</p>
 
 <h3 id="Using_the_API">Using the API</h3>
 
@@ -40,7 +40,7 @@ var ch = ios.newChannel("<a class="linkification-ext external" href="https://www
 
 <h4 id="Getting_an_nsIChannel_from_XMLHttpRequest">Getting an nsIChannel from XMLHttpRequest</h4>
 
-<p>If you are programming in <a href="/en-US/docs/JavaScript">JavaScript</a>, you will probably want to use <a href="/en-US/docs/XMLHttpRequest">XMLHttpRequest</a>, a much higher level abstraction of an HTTP request. You can access the <code>channel</code> member of an <a href="/en-US/docs/XMLHttpRequest">XMLHttpRequest</a> once you have called the <code>open</code> method on it, as follows:</p>
+<p>If you are programming in <a href="/en-US/docs/Web/JavaScript">JavaScript</a>, you will probably want to use <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>, a much higher level abstraction of an HTTP request. You can access the <code>channel</code> member of an <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> once you have called the <code>open</code> method on it, as follows:</p>
 
 <pre class="eval">var req = new XMLHttpRequest();
 req.open("GET", "<a class="linkification-ext external" href="https://www.example.com" title="Linkification: https://www.example.com">https://www.example.com</a>", false);
@@ -51,7 +51,7 @@ req.send(null);
 </pre>
 
 <p><br>
- Note that this example uses a synchronous <a href="/en-US/docs/XMLHttpRequest">XMLHttpRequest</a>, which you should not use in practice.</p>
+ Note that this example uses a synchronous <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>, which you should not use in practice.</p>
 
 <h4 id="Adjusting_priority">Adjusting priority</h4>
 
