@@ -1,0 +1,80 @@
+---
+title: 'HTML attribute: accept-charset'
+slug: Web/HTML/Attributes/accept-charset
+tags:
+  - Attribute
+  - Attributes
+  - HTML
+  - accept-charset
+  - acceptcharset
+  - form-elements
+  - Reference
+---
+<p>{{HTMLSidebar}}</p>
+
+<p>The <strong><code>accept-charset</code></strong> attribute is an allowed attribute for {{htmlelement("form")}}.
+When used on a <code>&lt;form&gt;</code> element it specifies the character encodings that are to be used for the form submission. </p>
+
+<h2 id="Usage">Usage</h2>
+
+<h3>Syntax</h3>
+
+<pre class="brush: html">&lt;form accept-charset="character_set"&gt; </pre>
+
+<h3>Attribute values</h3>
+
+<p>A space-separated list of one or more character encodings that are to be used for the form submission.
+</p>
+<p>
+    Common values:
+    <ul>
+        <li>UTF-8 - Character encoding for Unicode</li>
+        <li>ISO-8859-1 - Character encoding for the Latin alphabet</li>
+    </ul>
+</p>
+
+<p>In theory, any character encoding can be used, but no browser understands all of them. The more widely a character encoding is used, the better the chance that a browser will understand it.
+</p>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: html">&lt;form accept-charset="ISO-8859-1"&gt;
+  &lt;label for="fname"&gt;First name:&lt;/label&gt;
+  &lt;input type="text" id="fname" name="fname" value="10"&gt;
+  &lt;label for="lname"&gt;Last name:&lt;/label&gt;
+  &lt;input type="text" id="lname" name="lname" value="10"&gt;
+&lt;/form&gt;
+</pre>
+
+<p>See more examples of usage on the element pages for {{htmlelement("form")}.
+</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', 'forms.html#attr-form-accept-charset', 'accept-charset as used with form')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+       <td>{{SpecName('HTML5 W3C', 'sec-forms.html#element-attrdef-form-accept-charset', 'accept-charset as used with form')}}</td>
+       <td>{{Spec2('HTML5 W3C')}}</td>
+       <td></td>
+    </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<h3>Support with form</h3>
+
+<p>{{Compat("html.elements.form.accept-charset")}}</p>
