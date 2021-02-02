@@ -20,15 +20,15 @@ tags:
 <h4 id="Debugger">Debugger</h4>
 
 <ul>
- <li>You can now change the URL accessed by the remote device from the <a href="/en-US/docs/Tools/about:debugging#Connecting_to_a_remote_device">about:debugging</a> panel. ({{bug("1617237")}})</li>
+ <li>You can now change the URL accessed by the remote device from the <a href="/en-US/docs/Tools/about:debugging#connecting_to_a_remote_device">about:debugging</a> panel. ({{bug("1617237")}})</li>
  <li>The <strong>Disable JavaScript</strong> menu item in the <a href="/en-US/docs/Tools/Debugger/UI_Tour">Debugger</a> now only affects the current tab, and is reset when the Developer Tools are closed. ({{bug("1640318")}})</li>
- <li><a href="/en-US/docs/Tools/Debugger/Set_a_logpoint">Logpoints</a> can map variable names in source-mapped code back to their original names, if you enable <strong>Maps</strong> in the <a href="/en-US/docs/Tools/Debugger/UI_Tour#Scopes">Scopes pane</a>. ({{bug("1536857")}})</li>
+ <li><a href="/en-US/docs/Tools/Debugger/Set_a_logpoint">Logpoints</a> can map variable names in source-mapped code back to their original names, if you enable <strong>Maps</strong> in the <a href="/en-US/docs/Tools/Debugger/UI_Tour#scopes">Scopes pane</a>. ({{bug("1536857")}})</li>
 </ul>
 
 <h4 id="Network_Monitor">Network Monitor</h4>
 
 <ul>
- <li>In the <a href="/en-US/docs/Tools/Network_Monitor/request_list#Network_request_columns">Network Monitor</a>, you can now resize the columns of the request list by dragging the column borders anywhere in the table. ({{bug("1618409")}})</li>
+ <li>In the <a href="/en-US/docs/Tools/Network_Monitor/request_list#network_request_columns">Network Monitor</a>, you can now resize the columns of the request list by dragging the column borders anywhere in the table. ({{bug("1618409")}})</li>
  <li>The <a href="/en-US/docs/Tools/Network_Monitor/request_details">request details panel</a> in the Network Monitor has some UX improvements. ({{bug("1631302")}}, {{bug("1631295")}})</li>
  <li>If a request was blocked, the <a href="/en-US/docs/Tools/Network_Monitor/request_list">request list</a> now shows the reason, such as an add-on, CSP, CORS, or Enhanced Tracking Protection. ({{bug("1555057")}}, {{bug("1445637")}}, {{bug("1556451")}})</li>
 </ul>
@@ -57,8 +57,8 @@ tags:
  <li>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat">Intl.ListFormat</a></code> API is now supported ({{bug(1589095)}}).</li>
  <li>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat">Intl.NumberFormat()</a></code> constructor has been extended to support new options specified in the <a href="https://github.com/tc39/proposal-unified-intl-numberformat">Intl.NumberFormat Unified API Proposal</a> ({{bug(1633836)}}). This includes among other things:
   <ul>
-   <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#Scientific_engineering_or_compact_notations">Support for scientific notations</a></li>
-   <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#Unit_formatting">Unit</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#Currency_formatting">currency</a> and <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#Displaying_signs">sign display</a> formatting</li>
+   <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#scientific_engineering_or_compact_notations">Support for scientific notations</a></li>
+   <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#unit_formatting">Unit</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#currency_formatting">currency</a> and <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#displaying_signs">sign display</a> formatting</li>
   </ul>
  </li>
  <li>The {{JSxRef("RegExp")}} engine <a href="https://hacks.mozilla.org/2020/06/a-new-regexp-engine-in-spidermonkey/">has been updated</a> and now supports all new features introduced in ECMAScript 2018:
@@ -69,7 +69,7 @@ tags:
    <li><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">Named capture groups</a> ({{bug(1362154)}})</li>
   </ul>
  </li>
- <li>Due to a <a href="https://github.com/heycam/webidl/pull/357">WebIDL spec change</a> in mid-2020, we've <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag#toStringTag_available_on_all_DOM_prototype_objects">added a <code>Symbol.toStringTag</code> property to all DOM prototype objects</a> ({{bug(1277799)}}).</li>
+ <li>Due to a <a href="https://github.com/heycam/webidl/pull/357">WebIDL spec change</a> in mid-2020, we've <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag#tostringtag_available_on_all_dom_prototype_objects">added a <code>Symbol.toStringTag</code> property to all DOM prototype objects</a> ({{bug(1277799)}}).</li>
  <li>The garbage collection of {{jsxref("WeakMap")}} objects has been improved. <code>WeakMaps</code> are now marked incrementally ({{bug(1167452)}}).</li>
 </ul>
 

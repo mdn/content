@@ -20,17 +20,17 @@ tags:
 
 <ul>
  <li><a href="http://asmjs.org/spec/latest/">Asm.js </a>optimizations are enabled, making it possible to compile C/C++ applications to a subset of JavaScript for better performance.</li>
- <li>ES2015 <a href="/en-US/docs/JavaScript/Reference/arrow_functions">Arrow Function</a> syntax has been implemented ({{bug(846406)}}).</li>
+ <li>ES2015 <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow Function</a> syntax has been implemented ({{bug(846406)}}).</li>
  <li>The new <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is">Object.is</a> function has been added ({{bug(839979)}}).</li>
  <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a></code> in generator expressions is now inherited from enclosing lexical scope ({{bug(848051)}}).</li>
- <li>The ES2015 Proxy {{jsxref("Global_Objects/Proxy/handler/preventExtensions", "preventExtensions")}} trap have been implemented ({{bug(789897)}}).</li>
+ <li>The ES2015 Proxy {{jsxref("Global_Objects/Proxy/Proxy/preventExtensions", "preventExtensions")}} trap have been implemented ({{bug(789897)}}).</li>
 </ul>
 
 <h3 id="DOM">DOM</h3>
 
 <ul>
- <li>Support for the <code>multipart</code> property on <code>XMLHttpRequest</code> and <code>multipart/x-mixed-replace</code> responses in <code>XMLHttpRequest</code> has been removed. This was a Gecko-only feature that was never standardized. <a href="/en-US/docs/Server-sent_events" title="Server-sent_events">Server-Sent Events</a>, <a href="/en-US/docs/WebSockets">Web Sockets</a> or inspecting <code>responseText</code> from progress events can be used instead.</li>
- <li>Support for <a href="/en-US/docs/WebAPI/Using_Web_Notifications">Web Notifications</a> has been landed ({{bug(782211)}}).</li>
+ <li>Support for the <code>multipart</code> property on <code>XMLHttpRequest</code> and <code>multipart/x-mixed-replace</code> responses in <code>XMLHttpRequest</code> has been removed. This was a Gecko-only feature that was never standardized. <a href="/en-US/docs/Web/API/Server-sent_events" title="Server-sent_events">Server-Sent Events</a>, <a href="/en-US/docs/Web/API/WebSockets_API">Web Sockets</a> or inspecting <code>responseText</code> from progress events can be used instead.</li>
+ <li>Support for <a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Web Notifications</a> has been landed ({{bug(782211)}}).</li>
  <li>The {{domxref("FormData")}}  <code>append</code> method now accepts a third optional <code>filename</code> parameter ({{bug(690659)}}).</li>
  <li>{{domxref("Node.isSupported")}} has been removed ({{bug(801562)}}).</li>
  <li>{{domxref("Node.setUserData")}} and {{domxref("Node.getUserData")}} has been removed for web content and are deprecated for chrome content ({{bug(842372)}}).</li>
@@ -51,7 +51,7 @@ tags:
 <h3 id="CSS">CSS</h3>
 
 <ul>
- <li>Support for <a href="/en-US/docs/CSS/Tutorials/Using_CSS_flexible_boxes">CSS Flexbox layout</a> has been enabled by default ({{bug("841876")}}).</li>
+ <li>Support for <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">CSS Flexbox layout</a> has been enabled by default ({{bug("841876")}}).</li>
  <li>Following a spec change, the initial value for {{cssxref("min-width")}} and {{cssxref("min-height")}} has been changed back to <code>0</code>, even on flex items ({{bug("848539")}}).</li>
  <li>Support for CSS Conditionals ({{cssxref("@supports")}} and {{domxref("CSS.supports")}}) has been enabled by default ({{bug("855455")}}).</li>
  <li>Support for {{cssxref("background-clip")}} and {{cssxref("background-origin")}} properties in the {{cssxref("background")}} shorthand has been implemented ({{bug("570896")}}).</li>
@@ -61,7 +61,7 @@ tags:
 
 <ul>
  <li>The <code>properties</code> parameter has been removed from the {{ifmethod('nsITreeView','getCellProperties')}}, {{ifmethod('nsITreeView','getColumnProperties')}} and {{ifmethod('nsITreeView','getRowProperties')}} methods of {{interface('nsITreeView')}}. These methods should now return a string of space-separated property names. ({{bug('407956')}})</li>
- <li>The {{ifmethod('inIDOMUtils', 'getCSSPropertyNames')}} method has been implemented and will return all supported <a href="/en-US/docs/CSS/CSS_Reference">CSS property</a> names.</li>
+ <li>The {{ifmethod('inIDOMUtils', 'getCSSPropertyNames')}} method has been implemented and will return all supported <a href="/en-US/docs/Web/CSS/Reference">CSS property</a> names.</li>
  <li>See <a href="https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/">here </a>for more changes.</li>
 </ul>
 

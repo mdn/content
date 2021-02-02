@@ -14,13 +14,13 @@ tags:
 <p>Highlights:</p>
 
 <ul>
- <li><a href="/en-US/docs/Tools/Web_Audio_Editor#Bypassing_nodes">Bypass audio nodes in Web Audio Editor</a></li>
- <li><a href="/en-US/docs/Tools/Web_Console#Helper_commands">"copy" command in Web Console</a></li>
- <li><a href="/en-US/docs/Tools/Web_Console#XHR">Highlight and filter XmlHttpRequests in Web Console</a></li>
- <li><a href="/en-US/docs/Tools/Debugger/How_to/Examine,_modify,_and_watch_variables">See optimized-out variables in the Debugger</a></li>
- <li><a href="/en-US/docs/Tools/Network_Monitor#Security">See security warnings in the Network Monitor</a></li>
- <li><a href="/en-US/docs/Tools/Network_Monitor#Network_request_fields">See transferred sizes in the Network Monitor</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#Animations_view">Play/pause all animations in the page</a></li>
+ <li><a href="/en-US/docs/Tools/Web_Audio_Editor#bypassing_nodes">Bypass audio nodes in Web Audio Editor</a></li>
+ <li><a href="/en-US/docs/Tools/Web_Console#helper_commands">"copy" command in Web Console</a></li>
+ <li><a href="/en-US/docs/Tools/Web_Console#xhr">Highlight and filter XmlHttpRequests in Web Console</a></li>
+ <li><a href="/en-US/docs/Tools/Debugger/How_to/Set_Watch_Expressions">See optimized-out variables in the Debugger</a></li>
+ <li><a href="/en-US/docs/Tools/Network_Monitor#security">See security warnings in the Network Monitor</a></li>
+ <li><a href="/en-US/docs/Tools/Network_Monitor#network_request_fields">See transferred sizes in the Network Monitor</a></li>
+ <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#animations_view">Play/pause all animations in the page</a></li>
 </ul>
 
 <p><a class="external external-icon" href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Client%20Software&amp;chfieldto=2015-02-23&amp;query_format=advanced&amp;chfield=resolution&amp;chfieldfrom=2015-01-12&amp;chfieldvalue=FIXED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;component=Developer%20Tools&amp;component=Developer%20Tools%3A%203D%20View&amp;component=Developer%20Tools%3A%20Canvas%20Debugger&amp;component=Developer%20Tools%3A%20Console&amp;component=Developer%20Tools%3A%20Debugger&amp;component=Developer%20Tools%3A%20Framework&amp;component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&amp;component=Developer%20Tools%3A%20Inspector&amp;component=Developer%20Tools%3A%20Memory&amp;component=Developer%20Tools%3A%20Netmonitor&amp;component=Developer%20Tools%3A%20Object%20Inspector&amp;component=Developer%20Tools%3A%20Profiler&amp;component=Developer%20Tools%3A%20Responsive%20Mode&amp;component=Developer%20Tools%3A%20Scratchpad&amp;component=Developer%20Tools%3A%20Source%20Editor&amp;component=Developer%20Tools%3A%20Storage%20Inspector&amp;component=Developer%20Tools%3A%20Style%20Editor&amp;component=Developer%20Tools%3A%20Timeline&amp;component=Developer%20Tools%3A%20User%20Stories&amp;component=Developer%20Tools%3A%20Web%20Audio%20Editor&amp;component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&amp;component=Developer%20Tools%3A%20WebIDE&amp;product=Firefox&amp;list_id=12076303">All devtools bugs fixed between Firefox 37 and Firefox 38</a>.</p>
@@ -40,10 +40,10 @@ tags:
    <li>Direction-independent equivalents of {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} and {{cssxref("margin-left")}}: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}} and {{cssxref("margin-inline-end")}} ({{bug(649142)}}).</li>
    <li>Direction-independent equivalents of {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}} and {{cssxref("padding-left")}}: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}} and {{cssxref("padding-inline-end")}} ({{bug(649142)}}).</li>
    <li>Direction-independent equivalents of {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}} and {{cssxref("border-left")}} and their longhands for width, style and color: {{cssxref("border-block-start")}}, {{cssxref("border-block-start-width")}}, {{cssxref("border-block-start-style")}}, {{cssxref("border-block-start-color")}}, {{cssxref("border-block-end")}}, {{cssxref("border-block-end-width")}}, {{cssxref("border-block-end-style")}}, {{cssxref("border-block-end-color")}}, {{cssxref("border-inline-start")}}, {{cssxref("border-inline-start-width")}}, {{cssxref("border-inline-start-style")}}, {{cssxref("border-inline-start-color")}}, {{cssxref("border-inline-end")}}, {{cssxref("border-inline-end-width")}}, {{cssxref("border-inline-end-style")}} and {{cssxref("border-inline-end-color")}} ({{bug(649142)}}).</li>
-   <li>Direction-independent equivalents of {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} and {{cssxref("left")}}: {{cssxref("offset-block-start")}}, {{cssxref("offset-block-end")}}, {{cssxref("offset-inline-start")}} and {{cssxref("offset-inline-end")}} ({{bug(1120283)}}).</li>
+   <li>Direction-independent equivalents of {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} and {{cssxref("left")}}: {{cssxref("inset-block-start")}}, <code>offset-block-end</code>, <code>offset-inline-start</code> and <code>offset-inline-end</code> ({{bug(1120283)}}).</li>
   </ul>
  </li>
- <li>How <a href="/en-US/docs/Web/Guide/CSS/Using_CSS_transitions">CSS transitions</a> start has been modified to match a recent change of the specifications, aiming at having an interoperable behavior between browsers ({{bug(960465)}}).</li>
+ <li>How <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS transitions</a> start has been modified to match a recent change of the specifications, aiming at having an interoperable behavior between browsers ({{bug(960465)}}).</li>
 </ul>
 
 <h3 id="HTML">HTML</h3>
@@ -85,7 +85,7 @@ tags:
 <h3 id="InterfacesAPIsDOM">Interfaces/APIs/DOM</h3>
 
 <ul>
- <li>The Fetch API {{domxref("fetch()")}} method has been implemented ({{bug(1039846)}}).</li>
+ <li>The Fetch API {{domxref("WindowOrWorkerGlobalScope/fetch", "fetch()")}} method has been implemented ({{bug(1039846)}}).</li>
  <li>{{domxref("BroadcastChannel")}} API has been implemented and is available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> ({{bug(966439)}} and {{bug(1121420)}}).</li>
  <li>The Console API is now available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</li>
  <li>{{domxref("CanvasRenderingContext2D.clearHitRegions()")}} has been implemented ({{bug(1119527)}}).</li>
@@ -94,9 +94,9 @@ tags:
  <li>{{domxref("KeyboardEvent.code")}} now supports special keys on Sun keyboards on Linux, Android, and Firefox OS. ({{bug(1020139)}})</li>
  <li>The {{domxref("TextEncoder.TextEncoder", "TextEncoder()")}} constructor has been changed to match the spec: when an invalid parameter is passed, the {{exception("RangeError")}} exception is now raised, rather than the erroneous {{exception("TypeError")}} ({{bug(1125766)}}).</li>
  <li>The User Timing API, adding {{domxref("Performance.mark()")}}, {{domxref("Performance.clearMarks()")}}, {{domxref("Performance.measure()")}}, and {{domxref("Performance.clearMeasures()")}} has been implemented ({{bug(782751)}}).</li>
- <li>The prefixed version of {{domxref("Window.indexedDB", "indexedDB")}}, <code>mozIndexedDB</code> has been removed ({{bug(975699)}}).</li>
+ <li>The prefixed version of {{domxref("WindowOrWorkerGlobalScope/indexedDB", "indexedDB")}}, <code>mozIndexedDB</code> has been removed ({{bug(975699)}}).</li>
  <li>The {{event("DOMContentLoaded")}} event is no longer cancelable ({{bug(1134559)}}).</li>
- <li>You can now use <a href="/en-US/docs/WebSockets">WebSockets</a> in <a href="/en-US/docs/Web/API/Web_Workers_API">Workers</a> ({{bug(504553)}}).</li>
+ <li>You can now use <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a> in <a href="/en-US/docs/Web/API/Web_Workers_API">Workers</a> ({{bug(504553)}}).</li>
  <li>The {{domxref("XMLHttpRequest.responseType")}} and {{domxref("XMLHttpRequest.withCredentials")}} properties can now be set before calling {{domxref("XMLHttpRequest.open()")}} ({{bug(707484)}}).</li>
 </ul>
 
