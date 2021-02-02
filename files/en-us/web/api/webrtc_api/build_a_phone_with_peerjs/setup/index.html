@@ -8,7 +8,7 @@ slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup
 
 <ol>
   <li>
-    <p>First find a sensible place on your local file structure and run <code>mkdir audio_app</code> and then <code>cd audio_app</code> to create a directory to contain your app and enter into it.</p>
+    <p>First find a sensible place on your local file structure and run <code>mkdir audio_app</code> and then <code>cd phone_app</code> to create a directory to contain your app and enter into it.</p>
   </li>
   <li>
     <p>Next, create a new app by running <code>yarn init</code>. Follow the prompts, providing a name, version, description, etc. to your project.</p>
@@ -41,9 +41,10 @@ slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup
     "peerjs": "^1.3.1"
   }
 }</pre>
+    <p> If your file has `"main": "index.js"`, you'll want to change it so that it says `"main": "server.js"` instead so that it's pointing to the correct file.
   </li>
   <li>
-    <p>To finish the setup, you’ll want to copy the following <a href="https://gist.github.com/578d692e4700dfe2c9d239c80bbdbabc">HTML</a> and <a href="https://gist.github.com/b4498288b86ddce995603546a64abb29" rel="noopener nofollow">CSS</a> files into the root of your project folder. You won't need to modify these much in the articles that follow.</p>
+    <p>To finish the setup, you’ll want to copy the following <a href="https://gist.github.com/578d692e4700dfe2c9d239c80bbdbabc">HTML</a> and <a href="https://gist.github.com/b4498288b86ddce995603546a64abb29" rel="noopener nofollow">CSS</a> files into the root of your project folder. You can name both files 'index', so the HTML file will be 'index.html' and the CSS file will be 'index.css'. You won't need to modify these much in the articles that follow.</p>
   </li>
 </ol>
 
