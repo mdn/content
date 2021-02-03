@@ -9197,6 +9197,7 @@
 /en-US/docs/Web/API/HTMLHyperlinkElementUtils/host	/en-US/docs/Web/API/HTMLAnchorElement/host
 /en-US/docs/Web/API/HTMLHyperlinkElementUtils/hostname	/en-US/docs/Web/API/HTMLAnchorElement/hostname
 /en-US/docs/Web/API/HTMLHyperlinkElementUtils/href	/en-US/docs/Web/API/HTMLAnchorElement/href
+/en-US/docs/Web/API/HTMLHyperlinkElementUtils/origin	/en-US/docs/Web/API/HTMLAnchorElement/origin
 /en-US/docs/Web/API/HTMLHyperlinkElementUtils/password	/en-US/docs/Web/API/HTMLAnchorElement/password
 /en-US/docs/Web/API/HTMLHyperlinkElementUtils/pathname	/en-US/docs/Web/API/HTMLAnchorElement/pathname
 /en-US/docs/Web/API/HTMLHyperlinkElementUtils/port	/en-US/docs/Web/API/HTMLAnchorElement/port

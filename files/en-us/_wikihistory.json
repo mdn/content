@@ -55767,24 +55767,6 @@
       "Annevk"
     ]
   },
-  "Web/API/HTMLHyperlinkElementUtils/origin": {
-    "modified": "2020-10-15T21:24:54.809Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "jpmedley",
-      "libbymc",
-      "teoli",
-      "claudepache",
-      "chrisdavidmills",
-      "cvrebert",
-      "poke",
-      "jonathanKingston",
-      "ziyunfei",
-      "Korikulum",
-      "Kartik_Chadha"
-    ]
-  },
   "Web/API/HTMLHyperlinkElementUtils/toString": {
     "modified": "2020-10-15T21:24:54.612Z",
     "contributors": [
@@ -165933,6 +165915,24 @@
       "Tigt",
       "teoli",
       "chrisdavidmills",
+      "Kartik_Chadha"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/origin": {
+    "modified": "2020-10-15T21:24:54.809Z",
+    "contributors": [
+      "sideshowbarker",
+      "fscholz",
+      "jpmedley",
+      "libbymc",
+      "teoli",
+      "claudepache",
+      "chrisdavidmills",
+      "cvrebert",
+      "poke",
+      "jonathanKingston",
+      "ziyunfei",
+      "Korikulum",
       "Kartik_Chadha"
     ]
   }
