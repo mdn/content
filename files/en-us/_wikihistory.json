@@ -55748,25 +55748,6 @@
       "ThomasACorey"
     ]
   },
-  "Web/API/HTMLHyperlinkElementUtils": {
-    "modified": "2020-11-13T08:35:00.542Z",
-    "contributors": [
-      "Rumyra",
-      "chrisdavidmills",
-      "Wind1808",
-      "connorshea",
-      "fscholz",
-      "myf",
-      "RayannTedds",
-      "ricea",
-      "jpmedley",
-      "teoli",
-      "cvrebert",
-      "baku",
-      "Bzbarsky",
-      "Annevk"
-    ]
-  },
   "Web/API/HTMLIFrameElement": {
     "modified": "2020-10-15T21:07:37.626Z",
     "contributors": [
