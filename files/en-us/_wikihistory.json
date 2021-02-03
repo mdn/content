@@ -55767,26 +55767,6 @@
       "Annevk"
     ]
   },
-  "Web/API/HTMLHyperlinkElementUtils/hash": {
-    "modified": "2020-10-15T21:24:52.659Z",
-    "contributors": [
-      "Wind1808",
-      "sjfortin",
-      "Tigt",
-      "fscholz",
-      "SLYJason",
-      "lmika",
-      "jpmedley",
-      "libbymc",
-      "HassenPy",
-      "teoli",
-      "azasypkin",
-      "Sebastianz",
-      "chrisdavidmills",
-      "kohei.yoshino",
-      "vishu_gawli"
-    ]
-  },
   "Web/API/HTMLHyperlinkElementUtils/host": {
     "modified": "2020-10-15T21:24:52.503Z",
     "contributors": [
@@ -165934,6 +165914,26 @@
       "jwhitlock",
       "stephaniehobson",
       "groovecoder"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/hash": {
+    "modified": "2020-10-15T21:24:52.659Z",
+    "contributors": [
+      "Wind1808",
+      "sjfortin",
+      "Tigt",
+      "fscholz",
+      "SLYJason",
+      "lmika",
+      "jpmedley",
+      "libbymc",
+      "HassenPy",
+      "teoli",
+      "azasypkin",
+      "Sebastianz",
+      "chrisdavidmills",
+      "kohei.yoshino",
+      "vishu_gawli"
     ]
   }
 }
