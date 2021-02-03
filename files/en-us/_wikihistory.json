@@ -55816,20 +55816,6 @@
       "mikemcg"
     ]
   },
-  "Web/API/HTMLHyperlinkElementUtils/port": {
-    "modified": "2020-10-15T21:24:52.528Z",
-    "contributors": [
-      "Wind1808",
-      "fscholz",
-      "adambrenecki",
-      "erikadoyle",
-      "jpmedley",
-      "libbymc",
-      "teoli",
-      "chrisdavidmills",
-      "Kartik_Chadha"
-    ]
-  },
   "Web/API/HTMLHyperlinkElementUtils/search": {
     "modified": "2020-10-15T21:24:52.537Z",
     "contributors": [
@@ -165929,6 +165915,20 @@
       "Wind1808",
       "fscholz",
       "tyoshino",
+      "jpmedley",
+      "libbymc",
+      "teoli",
+      "chrisdavidmills",
+      "Kartik_Chadha"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/port": {
+    "modified": "2020-10-15T21:24:52.528Z",
+    "contributors": [
+      "Wind1808",
+      "fscholz",
+      "adambrenecki",
+      "erikadoyle",
       "jpmedley",
       "libbymc",
       "teoli",

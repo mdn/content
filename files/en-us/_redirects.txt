@@ -9197,6 +9197,7 @@
 /en-US/docs/Web/API/HTMLHyperlinkElementUtils/host	/en-US/docs/Web/API/HTMLAnchorElement/host
 /en-US/docs/Web/API/HTMLHyperlinkElementUtils/hostname	/en-US/docs/Web/API/HTMLAnchorElement/hostname
 /en-US/docs/Web/API/HTMLHyperlinkElementUtils/href	/en-US/docs/Web/API/HTMLAnchorElement/href
+/en-US/docs/Web/API/HTMLHyperlinkElementUtils/port	/en-US/docs/Web/API/HTMLAnchorElement/port
 /en-US/docs/Web/API/HTMLHyperlinkElementUtils/protocol	/en-US/docs/Web/API/HTMLAnchorElement/protocol
 /en-US/docs/Web/API/HTMLIFrameElement.contentWindow	/en-US/docs/Web/API/HTMLIFrameElement/contentWindow
 /en-US/docs/Web/API/HTMLIFrameElement/referrer	/en-US/docs/Web/API/HTMLIFrameElement/referrerPolicy
