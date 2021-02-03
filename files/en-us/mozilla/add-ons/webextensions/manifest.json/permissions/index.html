@@ -56,6 +56,7 @@ tags:
 
 <ul>
  <li><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> and <a href="/en-US/docs/Web/API/Fetch_API">fetch</a> access to those origins without cross-origin restrictions (even for requests made from content scripts)</li>
+ <li>the ability to read tab-specific metadata without the "tabs" permission, such as the <code>url</code>, <code>title</code>, and <code>favIconUrl</code> properties of {{WebExtAPIRef("tabs.Tab")}} objects</li>
  <li>the ability to inject scripts programmatically (using {{webextAPIref("tabs/executeScript", "tabs.executeScript()")}} ) into pages served from those origins</li>
  <li>the ability to receive events from the {{webextAPIref("webrequest")}}  API for these hosts</li>
  <li>the ability to access cookies for that host using the {{webextAPIref("cookies")}} API, as long as the <code>"cookies"</code> API permission is also included.</li>
@@ -128,10 +129,11 @@ tags:
 <p>In most cases the permission just grants access to the API, with the following exceptions:</p>
 
 <ul>
- <li><code>tabs</code> gives you access to {{webextAPIref("tabs", "privileged parts of the <code>tabs</code> API")}}: <code>Tab.url</code>, <code>Tab.title</code>, and <code>Tab.faviconUrl</code>.
+ <li><code>tabs</code> gives you access to {{webextAPIref("tabs", "privileged parts of the <code>tabs</code> API")}} without the need for <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a>: <code>Tab.url</code>, <code>Tab.title</code>, and <code>Tab.faviconUrl</code>.
 
   <ul>
-   <li>In Firefox, you also need <code>tabs</code> if you want to include <code>url</code> in the <code>queryInfo</code> parameter to {{webextAPIref("tabs/query", "tabs.query()")}}. The rest of the <code>tabs</code> API can be used without requesting any permission.</li>
+   <li>In Firefox 85 and earlier, you also need <code>tabs</code> if you want to include <code>url</code> in the <code>queryInfo</code> parameter to {{webextAPIref("tabs/query", "tabs.query()")}}. The rest of the <code>tabs</code> API can be used without requesting any permission.</li>
+   <li>As of Firefox 86 and Chrome 50, matching <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> can also be used instead of the "tabs" permission.</li>
   </ul>
  </li>
  <li><code>webRequestBlocking</code> enables you to use the <code>"blocking"</code> argument, so you can {{webextAPIref("WebRequest", "modify and cancel requests")}}.</li>
