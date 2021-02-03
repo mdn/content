@@ -1,31 +1,34 @@
 ---
-title: HTMLHyperlinkElementUtils.protocol
+title: HTMLAnchorElement.protocol
 slug: Web/API/HTMLAnchorElement/protocol
 tags:
   - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
+  - HTMLAnchorElement
   - Property
-  - URL API
 ---
-<p>{{ApiRef("URL API")}}</p>
+<p>{{ApiRef("HTML DOM")}}</p>
 
 <p>The
-  <code><strong>HTMLHyperlinkElementUtils</strong></code><strong><code>.protocol</code></strong>
+  <code><strong>HTMLAnchorElement.protocol</code></strong>
   property is a {{domxref("USVString")}} representing the protocol scheme of the URL,
   including the final <code>':'</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>string</em> = <em>object</em>.protocol;
-<em>object</em>.protocol = <em>string</em>;
+<pre class="brush: js">
+// Getter
+<em>string</em> = <em>anchor</em>.protocol;
+// Setter
+<em>anchor</em>.protocol = <em>string</em>;
 </pre>
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">// Let's an &lt;a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLHyperlinkElementUtils.protocol"&gt; element be in the document
-var anchor = document.getElementById("myAnchor");
-var result = anchor.protocol; // Returns:'https:'
+<h3>Getting the protocol of an anchor link</h3>
+
+<pre class="brush: js">// An &lt;a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLAnchorElement"&gt; element is in the document
+const anchor = document.getElementById("myAnchor");
+anchor.protocol; // returns 'https:'
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
@@ -34,24 +37,19 @@ var result = anchor.protocol; // Returns:'https:'
   <tbody>
     <tr>
       <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
     </tr>
     <tr>
-      <td>{{SpecName('HTML WHATWG', '#dom-hyperlink-protocol',
-        'HTMLHyperlinkElementUtils.protocol')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>Initial definition.</td>
+      <td>{{SpecName('HTML WHATWG', '#dom-hyperlink-protocol','HTMLHyperlinkElementUtils.protocol')}}</td>
     </tr>
   </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLHyperlinkElementUtils.protocol")}}</p>
+<p>{{Compat("api.HTMLAnchorElement.protocol")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li>The {{domxref("HTMLHyperlinkElementUtils")}} mixin it belongs to.</li>
+  <li>The {{domxref("HTMLAnchorElement")}} interface it belongs to.</li>
 </ul>
