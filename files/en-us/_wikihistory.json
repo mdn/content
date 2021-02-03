@@ -55785,18 +55785,6 @@
       "Kartik_Chadha"
     ]
   },
-  "Web/API/HTMLHyperlinkElementUtils/password": {
-    "modified": "2020-10-15T21:24:54.829Z",
-    "contributors": [
-      "fscholz",
-      "sideshowbarker",
-      "jpmedley",
-      "Tigt",
-      "teoli",
-      "chrisdavidmills",
-      "Kartik_Chadha"
-    ]
-  },
   "Web/API/HTMLHyperlinkElementUtils/toString": {
     "modified": "2020-10-15T21:24:54.612Z",
     "contributors": [
@@ -165931,6 +165919,18 @@
       "Wind1808",
       "fscholz",
       "jpmedley",
+      "teoli",
+      "chrisdavidmills",
+      "Kartik_Chadha"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/password": {
+    "modified": "2020-10-15T21:24:54.829Z",
+    "contributors": [
+      "fscholz",
+      "sideshowbarker",
+      "jpmedley",
+      "Tigt",
       "teoli",
       "chrisdavidmills",
       "Kartik_Chadha"
