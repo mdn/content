@@ -55811,17 +55811,6 @@
       "Kartik_Chadha"
     ]
   },
-  "Web/API/HTMLHyperlinkElementUtils/username": {
-    "modified": "2020-10-15T21:24:54.543Z",
-    "contributors": [
-      "Wind1808",
-      "fscholz",
-      "jpmedley",
-      "teoli",
-      "chrisdavidmills",
-      "Kartik_Chadha"
-    ]
-  },
   "Web/API/HTMLIFrameElement": {
     "modified": "2020-10-15T21:07:37.626Z",
     "contributors": [
@@ -165933,6 +165922,17 @@
       "jsx",
       "madarche",
       "fusionchess",
+      "Kartik_Chadha"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/username": {
+    "modified": "2020-10-15T21:24:54.543Z",
+    "contributors": [
+      "Wind1808",
+      "fscholz",
+      "jpmedley",
+      "teoli",
+      "chrisdavidmills",
       "Kartik_Chadha"
     ]
   }

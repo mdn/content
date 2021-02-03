@@ -9201,6 +9201,7 @@
 /en-US/docs/Web/API/HTMLHyperlinkElementUtils/port	/en-US/docs/Web/API/HTMLAnchorElement/port
 /en-US/docs/Web/API/HTMLHyperlinkElementUtils/protocol	/en-US/docs/Web/API/HTMLAnchorElement/protocol
 /en-US/docs/Web/API/HTMLHyperlinkElementUtils/search	/en-US/docs/Web/API/HTMLAnchorElement/search
+/en-US/docs/Web/API/HTMLHyperlinkElementUtils/username	/en-US/docs/Web/API/HTMLAnchorElement/username
 /en-US/docs/Web/API/HTMLIFrameElement.contentWindow	/en-US/docs/Web/API/HTMLIFrameElement/contentWindow
 /en-US/docs/Web/API/HTMLIFrameElement/referrer	/en-US/docs/Web/API/HTMLIFrameElement/referrerPolicy
 /en-US/docs/Web/API/HTMLIFrameElement/setNfcFocus	/en-US/docs/Web/API/HTMLIFrameElement
