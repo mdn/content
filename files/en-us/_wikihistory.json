@@ -55797,25 +55797,6 @@
       "Kartik_Chadha"
     ]
   },
-  "Web/API/HTMLHyperlinkElementUtils/pathname": {
-    "modified": "2020-11-13T08:38:15.177Z",
-    "contributors": [
-      "Rumyra",
-      "Brettz9",
-      "fscholz",
-      "johnjacobkenny",
-      "erikadoyle",
-      "chrisdavidmills",
-      "jpmedley",
-      "libbymc",
-      "teoli",
-      "klusark",
-      "fusionchess",
-      "mturnwall",
-      "Kartik_Chadha",
-      "mikemcg"
-    ]
-  },
   "Web/API/HTMLHyperlinkElementUtils/search": {
     "modified": "2020-10-15T21:24:52.537Z",
     "contributors": [
@@ -165934,6 +165915,25 @@
       "teoli",
       "chrisdavidmills",
       "Kartik_Chadha"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/pathname": {
+    "modified": "2020-11-13T08:38:15.177Z",
+    "contributors": [
+      "Rumyra",
+      "Brettz9",
+      "fscholz",
+      "johnjacobkenny",
+      "erikadoyle",
+      "chrisdavidmills",
+      "jpmedley",
+      "libbymc",
+      "teoli",
+      "klusark",
+      "fusionchess",
+      "mturnwall",
+      "Kartik_Chadha",
+      "mikemcg"
     ]
   }
 }
