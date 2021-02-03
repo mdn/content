@@ -30,9 +30,9 @@ tags:
 
 <p>You can open the Storage Inspector by selecting "Storage Inspector" from the Web Developer submenu in the Firefox Menu Panel (or Tools menu if you display the menu bar or are on macOS), or by pressing its <kbd>Shift</kbd> + <kbd>F9</kbd> keyboard shortcut.</p>
 
-<p>The <a href="/en-US/docs/Tools/DevTools_Window">Toolbox</a> will appear at the bottom of the browser window, with the Storage Inspector activated. It's just called "Storage" in the Developer Toolbox.</p>
+<p>The <a href="/en-US/docs/Tools/Tools_Toolbox">Toolbox</a> will appear at the bottom of the browser window, with the Storage Inspector activated. It's just called "Storage" in the Developer Toolbox.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16764/storage_inspector.png" style="display: block; margin: 0px auto; width: 600px;"></p>
+<p><img alt="" src="storage_inspector.png" style="display: block; margin: 0px auto;"></p>
 
 <h2 id="Storage_Inspector_User_Interface">Storage Inspector User Interface</h2>
 
@@ -44,27 +44,27 @@ tags:
  <li><a href="#sidebar">Sidebar</a></li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16765/storage_labeled.png" style="display: block; margin: 0 auto; width: 600px;"></p>
+<p><img alt="" src="storage_labeled.png" style="display: block; margin: 0 auto;"></p>
 
 <h3 id="Storage_tree"><a name="storage-tree">Storage tree</a></h3>
 
 <p>The storage tree lists all the storage types that the Storage Inspector can inspect:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16766/storage_types.png" style="display: block; height: 129px; margin: 0 auto; width: 400px;"></p>
+<p><img alt="" src="storage_types.png" style="display: block; margin: 0 auto;"></p>
 
 <p>Under each type, objects are organized by origin. For cookies, the protocol does not differentiate the origin. For Indexed DB or local storage an origin is a combination of protocol + hostname. For example, "https://mozilla.org" and "https://mozilla.org" are two different origins so local storage items cannot be shared between them.</p>
 
 <p>Under "Cache Storage", objects are organized by origin and then by the name of the cache:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16802/cache_storage.png" style="border: 1px solid black; display: block; height: 215px; margin-left: auto; margin-right: auto; width: 274px;"></p>
+<p><img alt="" src="cache_storage.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>IndexedDB objects are organized by origin, then by database name, then by object store name:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16804/indexedDb_storage.png" style="border: 1px solid black; display: block; height: 193px; margin-left: auto; margin-right: auto; width: 274px;"></p>
+<p><img alt="" src="indexeddb_storage.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>With the Cookies, Local Storage, and Session Storage types, there's only one level in the hierarchy, so stored items are listed directly under each origin:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16803/cookie_storage.png" style="border: 1px solid black; display: block; height: 217px; margin-left: auto; margin-right: auto; width: 274px;"></p>
+<p><img alt="" src="cookie_storage.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>You can click on each item in the tree to expand or collapse its children. The tree is live, so if a new origin gets added (by adding an iframe, for example), it will be added to each storage type automatically.</p>
 
@@ -76,13 +76,13 @@ tags:
 
 <p>All the columns in a Table Widget are resizable. You can hide and show columns by context-clicking on the table header and selecting the columns you want to see:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16767/cookie_context_menu.png" style="border: 1px solid black; display: block; height: 330px; margin-left: auto; margin-right: auto; width: 914px;"></p>
+<p><img alt="" src="cookie_context_menu.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h3 id="Search">Search</h3>
 
 <p>There's a search box at the top of the Table Widget:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16808/storage_detail_filter.png" style="border: 1px solid black; display: block; height: 249px; margin-left: auto; margin-right: auto; width: 926px;"></p>
+<p><img alt="" src="storage_detail_filter.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>This filters the table to show only items which match the search term. Items match the search term if any of their fields (including fields whose columns you have hidden) contain the search term.</p>
 
@@ -92,7 +92,7 @@ tags:
 
 <p>You'll also have buttons available to add a new storage entry or refresh the view of the currently viewed storage type where applicable (you can't add new entries to IndexedDB or Cache):</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16809/storage_detail_add_refresh.png" style="border: 1px solid black; display: block; height: 249px; margin: 0px auto; width: 926px;"></p>
+<p><img alt="" src="storage_detail_add_refresh.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
 <h3 id="Sidebar"><a name="sidebar">Sidebar</a></h3>
 

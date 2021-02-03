@@ -119,7 +119,7 @@ slug: Mozilla/Developer_guide/Listening_to_events_on_all_tabs
  <dt>
   <code>aState</code></dt>
  <dd>
-  A value composed of the <a class="internal" href="/en-US/docs/XPCOM_Interface_Reference/nsIWebProgressListener#Security_Strength_Flags">Security State Flags</a> and the <a href="#Security_Strength_Flags">Security Strength Flags</a> described in the documentation for {{ interface("nsIWebProgressListener") }}.</dd>
+  A value composed of the <a class="internal" href="/en-US/docs/XPCOM_Interface_Reference/nsIWebProgressListener#Security_Strength_Flags">Security State Flags</a> and the <a href="#security_strength_flags">Security Strength Flags</a> described in the documentation for {{ interface("nsIWebProgressListener") }}.</dd>
 </dl>
 <h3 id="onStateChange">onStateChange</h3>
 <p>Notification indicating the state has changed for one of the requests associated with <code>aWebProgress</code>.</p>
@@ -157,7 +157,7 @@ slug: Mozilla/Developer_guide/Listening_to_events_on_all_tabs
   Error status code associated with the state change; this indicates whether or not the request was successful. This parameter should be ignored unless <code>aStateFlags</code> includes the <code>STATE_STOP</code> bit.</dd>
 </dl>
 <div class="note">
- <strong>NOTE</strong>: <code>aStatus</code> may be a success code even for server generated errors, such as the HTTP <code><a href="/en-US/docs/HTTP/HTTP_response_codes#404">404 File Not Found</a></code> error. In such cases, the request itself should be queried for extended error information (e.g., for HTTP requests see <code><a href="/en-US/docs/XPCOM_Interface_Reference/nsIHttpChannel">nsIHttpChannel</a></code>).</div>
+ <strong>NOTE</strong>: <code>aStatus</code> may be a success code even for server generated errors, such as the HTTP <code><a href="/en-US/docs/Web/HTTP/Status#404">404 File Not Found</a></code> error. In such cases, the request itself should be queried for extended error information (e.g., for HTTP requests see <code><a href="/en-US/docs/XPCOM_Interface_Reference/nsIHttpChannel">nsIHttpChannel</a></code>).</div>
 <h3 id="onStatusChange">onStatusChange</h3>
 <p>Notification that the status of a request has changed. The status message is intended to be displayed to the user (e.g., in the status bar of the browser).</p>
 <pre>void onStatusChange(

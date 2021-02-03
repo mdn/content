@@ -15,7 +15,7 @@ tags:
 
 <p>Open <strong>/controllers/authorController.js</strong>. Find the exported <code>author_list()</code> controller method near the top of the file and replace it with the following code.</p>
 
-<pre class="brush: js notranslate">// Display list of all Authors.
+<pre class="brush: js">// Display list of all Authors.
 exports.author_list = function(req, res, next) {
 
   Author.find()
@@ -34,7 +34,7 @@ exports.author_list = function(req, res, next) {
 
 <p>Create <strong>/views/author_list.pug</strong> and replace its content with the text below.</p>
 
-<pre class="brush: js notranslate">extends layout
+<pre class="brush: js">extends layout
 
 block content
   h1= title
@@ -50,7 +50,7 @@ block content
 
 <p>Run the application and open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>. Then select the <em>All authors</em> link. If everything is set up correctly, the page should look something like the following screenshot.</p>
 
-<p><img alt="Author List Page - Express Local Library site" src="https://mdn.mozillademos.org/files/14468/LocalLibary_Express_Author_List.png" style="display: block; height: 453px; margin: 0px auto; width: 1200px;"></p>
+<p><img alt="Author List Page - Express Local Library site" src="locallibary_express_author_list.png" style="display: block; margin: 0px auto;"></p>
 
 <div class="note">
 <p><strong>Note:</strong> The appearance of the author <em>lifespan</em> dates is ugly! You can improve this using the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment">same approach</a> as we used for the <code>BookInstance</code> list (adding the virtual property for the lifespan to the <code>Author</code> model).<br>
@@ -64,7 +64,7 @@ block content
 
 <p>In this section you should implement your own genre list page. The page should display a list of all genres in the database, with each genre linked to its associated detail page. A screenshot of the expected result is shown below.</p>
 
-<p><img alt="Genre List - Express Local Library site" src="https://mdn.mozillademos.org/files/14460/LocalLibary_Express_Genre_List.png" style="border-style: solid; border-width: 1px; display: block; height: 346px; margin: 0px auto; width: 600px;"></p>
+<p><img alt="Genre List - Express Local Library site" src="locallibary_express_genre_list.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>The genre list controller function needs to get a list of all <code>Genre</code> instances, and then pass these to the template for rendering.</p>
 

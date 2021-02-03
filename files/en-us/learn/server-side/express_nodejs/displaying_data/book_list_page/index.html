@@ -16,7 +16,7 @@ tags:
 
 <p>Open <strong>/controllers/bookController.js</strong>. Find the exported <code>book_list()</code> controller method and replace it with the following code.</p>
 
-<pre class="brush: js line-numbers  language-js notranslate">// Display list of all Books.
+<pre class="brush: js line-numbers  language-js">// Display list of all Books.
 exports.book_list = function(req, res, next) {
 
   Book.find({}, 'title author')
@@ -37,7 +37,7 @@ exports.book_list = function(req, res, next) {
 
 <p>Create <strong>/views/book_list.pug</strong> and copy in the text below.</p>
 
-<pre class="brush: js line-numbers  language-js notranslate">extends layout
+<pre class="brush: js line-numbers  language-js">extends layout
 
 block content
   h1= title
@@ -62,9 +62,9 @@ block content
 
 <h2 class="highlight-spanned" id="What_does_it_look_like"><span class="highlight-span">What does it look like?</span></h2>
 
-<p>Run the application (see <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes#Testing_the_routes">Testing the routes</a> for the relevant commands) and open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>. Then select the <em>All books</em> link. If everything is set up correctly, your site should look something like the following screenshot.</p>
+<p>Run the application (see <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes#testing_the_routes">Testing the routes</a> for the relevant commands) and open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>. Then select the <em>All books</em> link. If everything is set up correctly, your site should look something like the following screenshot.</p>
 
-<p><img alt="Book List Page - Express Local Library site" src="https://mdn.mozillademos.org/files/16950/new_book_list.png" style="border-style: solid; border-width: 1px; display: block; height: 257px; margin: 0px auto; width: 752px;"></p>
+<p><img alt="Book List Page - Express Local Library site" src="new_book_list.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h2 id="Next_steps">Next steps</h2>
 

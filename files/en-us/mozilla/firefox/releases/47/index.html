@@ -16,8 +16,8 @@ tags:
 <h3 id="Developer_Tools">Developer Tools</h3>
 
 <ul>
- <li><a href="/en-US/docs/Browser_detection_using_the_user_agent">User-agent spoofing</a> from the <a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive mode</a></li>
- <li><a href="/en-US/docs/Tools/Memory/Dominators_view#Retaining_Paths_panel">Retaining paths panel</a> in memory tool</li>
+ <li><a href="/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent">User-agent spoofing</a> from the <a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive mode</a></li>
+ <li><a href="/en-US/docs/Tools/Memory/Dominators_view#retaining_paths_panel">Retaining paths panel</a> in memory tool</li>
  <li><a href="/en-US/docs/Web/API/ServiceWorker">Service workers</a> and <a href="/en-US/docs/Web/API/Push_API">Push API</a> debugging
   <ul>
    <li><a href="/en-US/docs/Tools/about:debugging">about:debugging</a> dashboard for workers</li>
@@ -29,7 +29,7 @@ tags:
  <li><a href="/en-US/docs/Tools/Web_Console">Console</a> now detects incomplete input and switches multi-line mode</li>
  <li>Updated breakpoint style in <a href="/en-US/docs/Tools/Debugger">Debugger</a></li>
  <li>Prevent panels from hiding automatically using the <a href="/en-US/docs/Tools/Browser_Toolbox">Browser Toolbox</a>, to aid browser and add-on debugging</li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#Fonts_view">Font inspector</a> has been disabled by default</li>
+ <li><a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#fonts_view">Font inspector</a> has been disabled by default</li>
  <li><a href="/en-US/docs/Tools/3D_View">3D view</a> has been removed</li>
  <li>Developer tools theme refresh</li>
  <li>Disable the Font Panel ({{bug(1247723)}}).</li>
@@ -49,7 +49,7 @@ tags:
  <li>Our still experimental grid implementation has been updated:
   <ul>
    <li>{{cssxref("align-content")}}: <code>normal</code> behaves now as <code>stretch</code> for grid containers ({{bug(1237754)}}).</li>
-   <li>The order of column/row values for {{cssxref('grid')}}, {{cssxref('grid-template')}}, and {{cssxref('grid-gap')}} properties has been swapped ({{bug(1251999)}}).</li>
+   <li>The order of column/row values for {{cssxref('grid')}}, {{cssxref('grid-template')}}, and <code>grid-gap</code> properties has been swapped ({{bug(1251999)}}).</li>
   </ul>
  </li>
  <li>The {{cssxref("@media/display-mode", "display-mode")}} media feature is now supported ({{bug("1104916")}}).</li>
@@ -112,7 +112,7 @@ tags:
  <li><a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</a> methods can now use the RSA-PSS cryptographic algorithm ({{bug (1191936)}}).</li>
  <li>The <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a> has had the {{domxref("Permissions.revoke()")}} method added ({{bug("1197461")}}).</li>
  <li>The <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>, which extends the functionality of {{htmlelement("iframe")}}s to allow the creation of frames for displaying web content using HTML — and was previously only available in Firefox OS — is now available to desktop chrome code too ({{bug(1238160)}}).</li>
- <li>The <a href="/en-US/docs/Web/API/notification">Notification API</a>'s {{domxref("Notification.requestPermission()","requestPermission()")}} method has been updated from a callback to a promised-based syntax ({{bug(1241278)}}).</li>
+ <li>The <a href="/en-US/docs/Web/API/Notification">Notification API</a>'s {{domxref("Notification.requestPermission()","requestPermission()")}} method has been updated from a callback to a promised-based syntax ({{bug(1241278)}}).</li>
  <li>The <a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a> has been updated to the latest spec and unprefixed. Some methods have been renamed or have seen their capitalization changed ({{bug(743198)}}). Note that this is behind the <code>full-screen-api.unprefix.enabled</code> preference, defaulting to false ({{bug(1268749)}}).</li>
 </ul>
 

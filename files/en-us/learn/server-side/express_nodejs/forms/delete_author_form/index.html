@@ -15,7 +15,7 @@ tags:
 
 <p>Open <strong>/controllers/authorController.js</strong>. Find the exported <code>author_delete_get()</code> controller method and replace it with the following code.</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">// Display Author delete form on GET.
+<pre class="brush: js line-numbers  language-js">// Display Author delete form on GET.
 exports.author_delete_get = function(req, res, next) {
 
     async.parallel({
@@ -34,25 +34,25 @@ exports.author_delete_get = function(req, res, next) {
         res.render('author_delete', { title: 'Delete Author', author: results.author, author_books: results.authors_books } );
     });
 
-};</code></pre>
+};</pre>
 
 <p>The controller gets the id of the <code>Author</code> instance to be deleted from the URL parameter (<code>req.params.id</code>). It uses the <code>async.parallel()</code> method to get the author record and all associated books in parallel. When both operations have completed it renders the <code><strong>author_delete</strong></code><strong>.pug</strong> view, passing variables for the <code>title</code>, <code>author</code>, and <code>author_books</code>.</p>
 
 <div class="note">
 <p><strong>Note:</strong> If  <code>findById()</code> returns no results the author is not in the database. In this case there is nothing to delete, so we immediately render the list of all authors. </p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">}, function(err, results) {
+<pre class="brush: js line-numbers  language-js">}, function(err, results) {
     if (err) { return next(err); }
     if (results.author==null) { // No results.
         res.redirect('/catalog/authors')
-    }</code></pre>
+    }</pre>
 </div>
 
 <h2 class="highlight-spanned" id="Controller—post_route">Controller—post route</h2>
 
 <p>Find the exported <code>author_delete_post()</code> controller method, and replace it with the following code.</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">// Handle Author delete on POST.
+<pre class="brush: js line-numbers  language-js">// Handle Author delete on POST.
 exports.author_delete_post = function(req, res, next) {
 
     async.parallel({
@@ -79,7 +79,7 @@ exports.author_delete_post = function(req, res, next) {
             })
         }
     });
-};</code></pre>
+};</pre>
 
 <p>First we validate that an id has been provided (this is sent via the form body parameters, rather than using the version in the URL). Then we get the author and their associated books in the same way as for the <code>GET</code> route. If there are no books then we delete the author object and redirect to the list of all authors. If there are still books then we just re-render the form, passing in the author and list of books to be deleted.</p>
 
@@ -91,7 +91,7 @@ exports.author_delete_post = function(req, res, next) {
 
 <p>Create <strong>/views/author_delete.pug</strong> and copy in the text below.</p>
 
-<pre class="line-numbers  language-html notranslate"><code class="language-html">extends layout
+<pre class="line-numbers  language-html"><code class="language-html">extends layout
 
 block content
   h1 #{title}: #{author.name}
@@ -137,13 +137,13 @@ block content
 
 <p>Open the <strong>author_detail.pug</strong> view and add the following lines at the bottom.</p>
 
-<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html">hr
+<pre class="brush: html line-numbers  language-html">hr
 p
-  a(href=author.url+'/delete') Delete author</code></pre>
+  a(href=author.url+'/delete') Delete author</pre>
 
 <p>The control should now appear as a link, as shown below on the <em>Author detail</em> page.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14492/LocalLibary_Express_Author_Detail_Delete.png" style="border-style: solid; border-width: 1px; display: block; height: 202px; margin: 0px auto; width: 500px;"></p>
+<p><img alt="" src="locallibary_express_author_detail_delete.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h2 class="highlight-spanned" id="What_does_it_look_like">What does it look like?</h2>
 
@@ -151,11 +151,11 @@ p
 
 <p>If the author has no books, you'll be presented with a page like this. After pressing delete, the server will delete the author and redirect to the author list.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14494/LocalLibary_Express_Author_Delete_NoBooks.png" style="border-style: solid; border-width: 1px; display: block; height: 342px; margin: 0px auto; width: 600px;"></p>
+<p><img alt="" src="locallibary_express_author_delete_nobooks.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>If the author does have books, then you'll be presented with a view like the following. You can then delete the books from their detail pages (once that code is implemented!).</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14496/LocalLibary_Express_Author_Delete_WithBooks.png" style="border-style: solid; border-width: 1px; display: block; height: 327px; margin: 0px auto; width: 500px;"></p>
+<p><img alt="" src="locallibary_express_author_delete_withbooks.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <div class="note">
 <p><strong>Note:</strong> The other pages for deleting objects can be implemented in much the same way. We've left that as a challenge.</p>

@@ -47,7 +47,7 @@ tags:
   console.log(`Window is private: ${windowInfo.incognito}`);
 });</pre>
  </li>
- <li>"split": the extension will be split between private and non-private windows. There are effectively two copies of the extension running: one sees only non-private windows, the other sees only private windows. Each copy has isolated access to Web APIs (so, for example, <code><a href="/en-US/docs/Web/API/Storage/LocalStorage">localStorage</a></code> is not shared). However, the WebExtension API <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/local">storage.local</a></code> is shared. (<strong>Note:</strong> this setting is not supported by Firefox.)</li>
+ <li>"split": the extension will be split between private and non-private windows. There are effectively two copies of the extension running: one sees only non-private windows, the other sees only private windows. Each copy has isolated access to Web APIs (so, for example, <code><a href="/en-US/docs/Web/API/Window/localStorage">localStorage</a></code> is not shared). However, the WebExtension API <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/local">storage.local</a></code> is shared. (<strong>Note:</strong> this setting is not supported by Firefox.)</li>
  <li>"not_allowed": private tabs and windows are invisible to the extension.</li>
 </ul>
 

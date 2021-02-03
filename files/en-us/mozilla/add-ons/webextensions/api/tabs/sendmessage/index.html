@@ -21,7 +21,7 @@ tags:
 <p>This is an asynchronous function that returns a {{jsxref("Promise")}}.</p>
 
 <div class="note">
-<p>You can also use a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging">connection-based approach to exchange messages</a>.</p>
+<p>You can also use a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging">connection-based approach to exchange messages</a>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -39,13 +39,13 @@ tags:
  <dt><code><var>tabId</var></code></dt>
  <dd><code>integer</code>. ID of the tab whose content scripts we want to send a message to.</dd>
  <dt><code><var>message</var></code></dt>
- <dd><code>any</code>. An object that can be serialized (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#Data_cloning_algorithm">Data cloning algorithm</a>).</dd>
+ <dd><code>any</code>. An object that can be serialized (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm">Data cloning algorithm</a>).</dd>
  <dt><code><var>options</var></code> {{optional_inline}}</dt>
  <dd><code>object</code>.</dd>
  <dd>
  <dl class="reference-values">
   <dt><code><var>frameId</var></code> {{optional_inline}}</dt>
-  <dd><code>integer</code>. Sends the message to a specific frame identified by <code><var>frameId</var></code> instead of all frames in the tab. Whether the content script is executed in all frames depends on the <code>all_frames</code> setting in the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/content_scripts"><code>content_scripts</code></a> section of <code>manifest.json</code>.</dd>
+  <dd><code>integer</code>. Sends the message to a specific frame identified by <code><var>frameId</var></code> instead of all frames in the tab. Whether the content script is executed in all frames depends on the <code>all_frames</code> setting in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts"><code>content_scripts</code></a> section of <code>manifest.json</code>.</dd>
  </dl>
  </dd>
 </dl>

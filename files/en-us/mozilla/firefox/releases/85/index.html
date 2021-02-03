@@ -51,7 +51,7 @@ tags:
 // Old method
 let pinyin = new Intl.Collator(["zh-u-co-pinyin"]);
 // New method
-let pinyin = new Intl.Collator("zh", {collator: "pinyin"});</pre>
+let pinyin = new Intl.Collator("zh", {collation: "pinyin"});</pre>
   </li>
  </ul>
 
@@ -64,6 +64,14 @@ let pinyin = new Intl.Collator("zh", {collator: "pinyin"});</pre>
 <h3 id="APIs">APIs</h3>
 
 <p><em>No changes.</em></p>
+
+<h3 id="WebDriver_conformance_Marionette">WebDriver conformance (Marionette)</h3>
+<ul>
+  <li>Fixed a potential page load timeout situation when <code>WebDriver:ElementClick</code>
+    is called for a link with a <code>target</code> other than <code>_blank</code> ({{bug(1678455)}}).</li>
+  <li>Using web element references on browsing contexts other than the originating one now correctly returns a <code>no such element</code> error instead of a <code>stale element reference</code> error ({{bug(1684827)}}).</li>
+</ul>
+
 
 <h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
 
