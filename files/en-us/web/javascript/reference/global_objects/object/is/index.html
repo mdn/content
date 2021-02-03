@@ -91,6 +91,7 @@ Object.is(null, null);       // true
 
 // Special Cases
 Object.is(0, -0);            // false
+Object.is(0n, -0n);          // true
 Object.is(-0, -0);           // true
 Object.is(NaN, 0/0);         // true
 </pre>

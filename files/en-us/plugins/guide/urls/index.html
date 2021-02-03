@@ -91,7 +91,7 @@ tags:
 
 <h3 id="Getting_URLs">Getting URLs</h3>
 
-<p>To retrieve a URL and display it on a specified target page, use the <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_GetURL">NPN_GetURL</a></code>, <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_GetURLNotify">NPN_GetURLNotify</a></code>, and <code><a href="/en-US/Add-ons/Plugins/Reference/NPP_URLNotify">NPP_URLNotify</a></code> functions. This section describes the methods and procedures used for getting the URL and displaying the page.</p>
+<p>To retrieve a URL and display it on a specified target page, use the <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetURL">NPN_GetURL</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetURLNotify">NPN_GetURLNotify</a></code>, and <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPP_URLNotify">NPP_URLNotify</a></code> functions. This section describes the methods and procedures used for getting the URL and displaying the page.</p>
 
 <p>The plug-in uses the <code>NPN_GetURL</code> function to ask the browser to display data retrieved from a URL in a specified target window or frame, or deliver it to the plug-in instance in a new stream. This is the way that plug-ins provide hyperlinks to other documents or retrieve data from the network.</p>
 
@@ -105,11 +105,11 @@ tags:
 
 <p>The instance parameter represents the current plug-in instance. The url parameter is the URL of the request, which can be of any type, including HTTP, FTP, news, or mailto.</p>
 
-<p>The target parameter represents the destination where the URL will be displayed, a window or frame. If target refers to the window or frame containing the plug-in instance, it is destroyed and the plug-in may be unloaded. If the target parameter is set to null, the application creates a new stream and delivers the data to the plug-in instance, through calls to <code><a href="/en-US/Add-ons/Plugins/Reference/NPP_NewStream">NPP_NewStream</a></code>, <code><a href="/en-US/Add-ons/Plugins/Reference/NPP_WriteReady">NPP_WriteReady</a></code> and <code><a href="/en-US/Add-ons/Plugins/Reference/NPP_Write">NPP_Write</a></code>, and <code><a href="/en-US/Add-ons/Plugins/Reference/NPP_DestroyStream">NPP_DestroyStream</a></code>.</p>
+<p>The target parameter represents the destination where the URL will be displayed, a window or frame. If target refers to the window or frame containing the plug-in instance, it is destroyed and the plug-in may be unloaded. If the target parameter is set to null, the application creates a new stream and delivers the data to the plug-in instance, through calls to <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPP_NewStream">NPP_NewStream</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPP_WriteReady">NPP_WriteReady</a></code> and <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPP_Write">NPP_Write</a></code>, and <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPP_DestroyStream">NPP_DestroyStream</a></code>.</p>
 
 <p>In general, if a URL works in the location box of the Navigator, it works as a target for <code>NPN_GetURL</code>, except for the <code>_self</code> target.</p>
 
-<p>Make sure that the target matches the URL type sent to it. For example, a null target does not make sense for some URL types (such as mailto). For some recommendations to help you with target parameter choice, see the reference entry for <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_GetURL">NPN_GetURL</a></code>.</p>
+<p>Make sure that the target matches the URL type sent to it. For example, a null target does not make sense for some URL types (such as mailto). For some recommendations to help you with target parameter choice, see the reference entry for <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetURL">NPN_GetURL</a></code>.</p>
 
 <p>The <code>NPN_GetURLNotify</code> method acts like <code>NPN_GetURL</code>. Both request the creation of a new stream with the contents of the specified URL, and, in addition, <code>NPN_GetURLNotify</code> notifies the plug-in of the successful or unsuccessful completion of the request. The browser notifies the plug-in by calling the plug-in's <code>NPP_URLNotify</code> function and passing it the <code>notifyData</code> value, which may be used to track multiple requests.</p>
 
@@ -160,7 +160,7 @@ tags:
  <li><a href="/en-US/docs/Gecko_Plugin_API_Reference/URLs#Sending_Mail">Sending Mail</a></li>
 </ul>
 
-<p>The plug-in calls <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_PostURL">NPN_PostURL</a></code> to post data from a file or buffer to a URL. This function is the counterpart of <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_GetURL">NPN_GetURL</a></code>.</p>
+<p>The plug-in calls <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_PostURL">NPN_PostURL</a></code> to post data from a file or buffer to a URL. This function is the counterpart of <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetURL">NPN_GetURL</a></code>.</p>
 
 <ul>
  <li><code>NPN_PostURL</code> writes data from a file or buffer to the URL and either displays the server response in the target window or delivers it to the plug-in.</li>

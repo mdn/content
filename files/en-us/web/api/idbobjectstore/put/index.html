@@ -2,14 +2,14 @@
 title: IDBObjectStore.put()
 slug: Web/API/IDBObjectStore/put
 tags:
-- API
-- Database
-- IDBObjectStore
-- IndexedDB
-- Method
-- Reference
-- Storage
-- put
+  - API
+  - Database
+  - IDBObjectStore
+  - IndexedDB
+  - Method
+  - Reference
+  - Storage
+  - put
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -20,7 +20,7 @@ tags:
 <p>The put method is an<span class="database"> <em>update or insert</em> </span>method.
   See the {{domxref("IDBObjectStore.add")}} method for an <em>insert only</em> method.</p>
 
-<p>Bear in mind that if you have a {{domxref("cursor","IDBCursor")}} to the record you
+<p>Bear in mind that if you have a {{domxref("IDBCursor","IDBCursor")}} to the record you
   want to update, updating it with {{domxref("IDBCursor.update()")}} is preferable to
   using {{domxref("IDBObjectStore.put()")}}. Doing so makes it clear that an existing
   record will be updated, instead of a new record being inserted.</p>
@@ -65,7 +65,7 @@ let <em>request</em> = <em>objectStore</em>.put(<em>item</em>, <em>key</em>);</p
     <tr>
       <td><code>ReadOnlyError</code></td>
       <td>The transaction associated with this operation is in read-only <a
-          href="/en-US/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.</td>
+          href="/en-US/docs/Web/API/IDBTransaction#mode_constants">mode</a>.</td>
     </tr>
     <tr>
       <td><code>TransactionInactiveError</code></td>
@@ -152,8 +152,7 @@ objectStoreTitleRequest.onsuccess = () =&gt; {
   };
 };</pre>
 
-<h2 id="Specification"><span style="font-size: 2.14285714285714rem;">Specification</span>
-</h2>
+<h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
   <tbody>

@@ -15,7 +15,7 @@ tags:
 
 <ul>
  <li>Vastly improved web console - Arrays are shown inline without clicking to bring up in the right inspector, window objects show their url, etc.</li>
- <li>Added the <a href="https://developer.mozilla.org/docs/Web/API/console">console API</a> to Web Workers (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=620935">bug 620935</a>). Now you can log messages to the Web Console from Web Workers.</li>
+ <li>Added the <a href="/en-US/docs/Web/API/Console">console API</a> to Web Workers (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=620935">bug 620935</a>). Now you can log messages to the Web Console from Web Workers.</li>
  <li>The <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> tool now shows performance statistics using pie charts ({{bug(846601)}}).</li>
  <li>On the <a href="/en-US/docs/Tools/Page_Inspector">Inspector</a>, preview tooltips of CSS transforms are now available ({{bug(726427)}}).</li>
  <li>DOM elements seen in the debugger and console can be removed or inspected directly, via the new buttons to the right of the variable listing.</li>
@@ -28,7 +28,7 @@ tags:
 <h3 id="CSS">CSS</h3>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/Using_CSS_variables">CSS variables</a> have been implemented ({{bug("773296")}}). Mozilla Hacks article can be found <a href="https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/">here</a>. They are enabled by default only for non-release builds (on release builds flip the pref <code>layout.css.variables.enabled</code> to <code>true</code> if you want to play with them).</li>
+ <li><a href="/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS variables</a> have been implemented ({{bug("773296")}}). Mozilla Hacks article can be found <a href="https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/">here</a>. They are enabled by default only for non-release builds (on release builds flip the pref <code>layout.css.variables.enabled</code> to <code>true</code> if you want to play with them).</li>
  <li>Flexboxes now support {{cssxref("visibility")}}<code>: collapse</code> ({{bug(783470)}}).</li>
  <li>The {{cssxref("box-sizing")}} property has been unprefixed ({{bug(243412)}}).</li>
  <li>The {{cssxref("will-change")}} property, a hint to that something will animate has been added. The preference <code>layout.css.will-change.enabled</code> must be switched to <code>true</code> to enable it. ({{bug(940842)}})</li>
@@ -55,9 +55,9 @@ tags:
   <ul>
    <li>New objects in the new {{jsxref("Intl")}} object namespace:
     <ul>
-     <li>{{jsxref("Collator", "Intl.Collator")}}</li>
-     <li>{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}</li>
-     <li>{{jsxref("NumberFormat", "Intl.NumberFormat")}}</li>
+     <li>{{jsxref("Intl/Collator", "Intl.Collator")}}</li>
+     <li>{{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}</li>
+     <li>{{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}</li>
     </ul>
    </li>
    <li>The following methods of {{jsxref("String")}}, {{jsxref("Number")}} and {{jsxref("Date")}} have been updated to include the <code>locales</code> and <code>options</code> arguments per ECMA-402:
@@ -82,7 +82,7 @@ tags:
 
 <ul>
  <li>A new type of workers, {{domxref("SharedWorker")}}, is now available by default ({{bug(924089)}}).</li>
- <li>The {{domxref("URLUtils")}} interface now supports the {{domxref("URLUtils.searchParams", "searchParams")}} property returning a {{domxref("URLSearchParams")}} object, allowing to modify the search params of an URL ({{bug(887836)}}). The {{domxref("URLSearchParams")}} constructor allows easier parsing of query strings.</li>
+ <li>The {{domxref("HTMLHyperlinkElementUtils", "URLUtils")}} interface now supports the {{domxref("URLUtils.searchParams", "searchParams")}} property returning a {{domxref("URLSearchParams")}} object, allowing to modify the search params of an URL ({{bug(887836)}}). The {{domxref("URLSearchParams")}} constructor allows easier parsing of query strings.</li>
  <li>The {{domxref("NavigatorOnLine.onLine")}} property is now supported on {{domxref("WorkerNavigator")}} , allowing to know the online/offline status in workers ({{bug(925437)}}).</li>
  <li>As part of the implementation of Web Components, the {{domxref("HTMLShadowElement")}} interface has been implemented behind the <code>dom.webcomponents.enabled</code>. Flip it to <code>true</code> if you want to use it. ({{bug(887538)}}).</li>
  <li>The read-only property {{domxref("HTMLIFrameElement.sandbox")}} is no longer a {{domxref("string")}} but an {{domxref("HTMLSettableToken")}} ({{bug(845057)}}).</li>
@@ -93,9 +93,9 @@ tags:
  <li>The deprecated {{domxref("Window.pkcs11")}} property has been removed; it was returning <code>null</code> since Firefox 3.0.14. ({{bug(964964)}})</li>
  <li>The {{domxref("Node.cloneNode()")}} and {{domxref("Document.importNode()")}} methods take the Boolean <code>deep</code> argument. Until now, if omitted, these methods acted as if the value of <code>deep</code> was <code>true</code>. But this behavior has been changed as per the latest spec, and if omitted, the methods will act as if the value was <code>false</code>. ({{bug(937461)}})</li>
  <li>{{domxref("Window._content")}} is no longer available to Web content ({{bug(946564)}}).</li>
- <li>{{domxref("URLUtils.port")}} behavior has been slightly changed: set to <code>''</code> will set it to the default port associated with the protocol, and <code>0</code> to <code>0.</code> ({{bug(930450)}})</li>
+ <li>{{domxref("HTMLHyperlinkElementUtils/port", "URLUtils.port")}} behavior has been slightly changed: set to <code>''</code> will set it to the default port associated with the protocol, and <code>0</code> to <code>0.</code> ({{bug(930450)}})</li>
  <li>{{domxref("Document.referrer")}} is now based on the incumbent script ({{bug(887928)}}).</li>
- <li>The <a href="/en-US/docs/Web/Guide/API/Gamepad">Gamepad API</a> is enabled by default ({{bug(878828)}}).</li>
+ <li>The <a href="/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Gamepad API</a> is enabled by default ({{bug(878828)}}).</li>
  <li>The {{domxref("CanvasRenderingContext2D.drawSystemFocusRing()")}} method got renamed to {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}} ({{bug(959820)}}).</li>
 </ul>
 
@@ -116,7 +116,7 @@ tags:
 <h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
 
 <ul>
- <li><a href="/en-US/Firefox/Australis_add-on_compat">Australis and add-on compatibility</a> - This is a major Firefox theme change that affects most extensions that involving the Firefox user interface.</li>
+ <li><a href="/en-US/docs/Mozilla/Firefox/Australis_add-on_compat">Australis and add-on compatibility</a> - This is a major Firefox theme change that affects most extensions that involving the Firefox user interface.</li>
  <li><code>nsISecurityCheckedComponent</code> has been removed ({{bug(794943)}}). Most consumers can remove nsISecurityCheckedComponent from their interface definition and they will continue to work.</li>
 </ul>
 

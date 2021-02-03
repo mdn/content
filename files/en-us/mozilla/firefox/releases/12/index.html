@@ -39,14 +39,14 @@ tags:
 <ul>
  <li>{{domxref("DOMParser")}} now supports parsing of HTML document fragments.</li>
  <li>{{domxref("XMLHttpRequest")}} now supports timeouts using the <code>timeout</code> property and "timeout" event, as well as the <code>ontimeout</code> event handler on the {{domxref("XMLHttpRequestEventTarget")}} interface.</li>
- <li>{{domxref("XMLHttpRequest")}} can now load from <a href="/en-US/docs/data_URIs" title="data URIs"><code>data:</code> URIs</a>.</li>
+ <li>{{domxref("XMLHttpRequest")}} can now load from <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs" title="data URIs"><code>data:</code> URIs</a>.</li>
  <li>When downloading large amounts of data, {{domxref("XMLHttpRequest")}} progress event handlers are now called periodically with the <code>responseType</code> set to "moz-blob" and the response being a {{domxref("Blob")}} containing all of the data received so far. This lets progress handlers begin processing data without having to wait for it all to arrive.</li>
- <li>Gecko now supports <a href="/en-US/docs/DOM/Touch_events">multi-touch</a> (instead of just single touches at a time) on Android.</li>
+ <li>Gecko now supports <a href="/en-US/docs/Web/API/Touch_events">multi-touch</a> (instead of just single touches at a time) on Android.</li>
  <li>While editing text using an IME, the <code>input</code> event is now sent whenever the contents of the element being edited have been changed; this happens after the <code>compositionupdate</code> event has been sent to indicate that the IME's text has been changed. You can use the <code>input</code> event handler, therefore, to monitor changes to the actual content of the element.</li>
  <li>{{domxref("DOMError")}} as defined in the DOM 4 specification has been implemented.</li>
  <li>The {{domxref("Document.createNodeIterator()")}} method has been updated to match the DOM4 specification. This makes the <code>whatToShow</code> and <code>filter</code> parameters optional and removes the non-standard fourth parameter, <code>entityReferenceExpansion</code>.</li>
  <li>The {{domxref("Blob")}} interface's <code>slice()</code> method was affected by a bug that prevented it from properly accepting <code>start</code> and <code>end</code> values outside the range of a signed 64-bit integer; this has been fixed.</li>
- <li>The {{domxref("element.getBoundingClientRect()")}} method now considers effect of <a href="/en-US/docs/CSS/Using_CSS_transforms" title="Using CSS transforms">CSS transforms</a> when computing the element's bounding rectangle.</li>
+ <li>The {{domxref("element.getBoundingClientRect()")}} method now considers effect of <a href="/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms" title="Using CSS transforms">CSS transforms</a> when computing the element's bounding rectangle.</li>
  <li>The <code>crossOrigin</code> property is now supported by {{domxref("HTMLMediaElement")}}.</li>
 </ul>
 
@@ -69,7 +69,7 @@ tags:
 <h3 id="MathML">MathML</h3>
 
 <ul>
- <li>To control the directionality of MathML formulas, the <code>dir</code> attribute is now supported on the {{MathMLElement("math")}}, {{MathMLElement("mrow")}}, and {{MathMLElement("mstyle")}} elements as well as on <a href="/Special:Tags?tag=MathML:Token+Elements" title="Special:Tags?tag=MathML:Token+Elements">MathML Token Elements</a>. This is particularly important for some <a class="external" href="https://www.w3.org/TR/arabic-math/">Arabic mathematical notations</a>.</li>
+ <li>To control the directionality of MathML formulas, the <code>dir</code> attribute is now supported on the {{MathMLElement("math")}}, {{MathMLElement("mrow")}}, and {{MathMLElement("mstyle")}} elements as well as on <a href="/en-US/docs/Web/MathML/Element#token_elements">MathML Token Elements</a>. This is particularly important for some <a class="external" href="https://www.w3.org/TR/arabic-math/">Arabic mathematical notations</a>.</li>
  <li>The alignment attribute <code>align</code> defined in MathML3 has been implemented for {{MathMLElement("munder")}}, {{MathMLElement("mover")}}, and {{MathMLElement("munderover")}}.</li>
 </ul>
 
@@ -83,9 +83,9 @@ tags:
 
 <ul>
  <li>The <a href="/en-US/docs/Tools/Web_Console" title="Web Console">Web Console</a> now caches error messages and log entries added using {{domxref("console.log()")}} if the console isn't currently open, and displays them when the console is opened.</li>
- <li>You can now reset the zoom level, panning, and rotation in the <a href="/en-US/docs/Tools/Page_Inspector/3D_view" title="3D view">3D view</a> by pressing the "r" key.</li>
- <li>You can now hide nodes in the <a href="/en-US/docs/Tools/Page_Inspector/3D_view" title="3D view">3D view</a> by pressing the "x" key after selecting them.</li>
- <li>The <a href="/en-US/docs/Tools/Using_the_Source_Editor">source editor</a> has a several new editing features and keyboard shortcuts; see <a href="/en-US/docs/Tools/Using_the_Source_Editor" title="Using the Source Editor">Using the Source Editor</a> for details</li>
+ <li>You can now reset the zoom level, panning, and rotation in the <a href="/en-US/docs/Tools/3D_View" title="3D view">3D view</a> by pressing the "r" key.</li>
+ <li>You can now hide nodes in the <a href="/en-US/docs/Tools/3D_View" title="3D view">3D view</a> by pressing the "x" key after selecting them.</li>
+ <li>The <a href="/en-US/docs/Tools/Keyboard_shortcuts#source_editor">source editor</a> has a several new editing features and keyboard shortcuts; see <a href="/en-US/docs/Tools/Keyboard_shortcuts#source_editor" title="Using the Source Editor">Using the Source Editor</a> for details</li>
 </ul>
 
 <p>Mozilla has been working on integrating its own Web developer tools that complement the popular <a class="external" href="http://getfirebug.com/" title="Firebug Firefox add-on">Firebug</a> add-on. You can get more information about these tools as well as see a list of resources external to Firefox that will help you with your Web development. The entire list is located at <a href="/en-US/docs/Tools" title="Web Developer Tools">Web developer tools</a>.</p>
@@ -116,7 +116,7 @@ tags:
 <h3 id="XPCOM">XPCOM</h3>
 
 <ul>
- <li><a href="/en-US/docs/nsISupports_proxies" title="nsISupports proxies"><code>nsISupports</code> proxies</a> are no longer supported. You should be using runnables instead; see <a href="/en-US/docs/XPCOM/Making_cross-thread_calls_using_runnables" title="en-US/docs/XPCOM/Making cross-thread calls using runnables">Making cross-thread calls using runnables</a>.</li>
+ <li><a href="/en-US/docs/nsISupports_proxies" title="nsISupports proxies"><code>nsISupports</code> proxies</a> are no longer supported. You should be using runnables instead; see <a href="/en-US/docs/XPCOM/Making_cross-thread_calls_using_runnables">Making cross-thread calls using runnables</a>.</li>
  <li>Firefox 11 changed the behavior of <a href="/en-US/docs/Components.utils.getWeakReference" title="Components.utils.getWeakReference"><code>Components.utils.getWeakReference()</code></a> to throw an exception when the object reference is null; the previous behavior of silently failing has been restored.</li>
 </ul>
 

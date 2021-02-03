@@ -267,12 +267,12 @@ const iterable = [3, 5, 7];
 iterable.foo = 'hello';
 
 for (const i in iterable) {
-  console.log(i); // logs 0, 1, 2, "foo", "arrCustom", "objCustom"
+  console.log(i); // logs "0", "1", "2", "foo", "arrCustom", "objCustom"
 }
 
 for (const i in iterable) {
   if (iterable.hasOwnProperty(i)) {
-    console.log(i); // logs 0, 1, 2, "foo"
+    console.log(i); // logs "0", "1", "2", "foo"
   }
 }
 

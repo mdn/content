@@ -10,8 +10,7 @@ tags:
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p>The <code>await</code> operator is used to wait for a {{jsxref("Promise")}}. It can
-  only be used inside an {{jsxref("Statements/async_function", "async function")}}.</p>
+<p>The <code>await</code> operator is used to wait for a {{jsxref("Promise")}}. It can only be used inside an {{jsxref("Statements/async_function", "async function")}} within regular JavaScript code; however it can be used on it's own with <a href="/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript modules.</a></p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -123,6 +122,20 @@ f4();</pre>
 // response will be undefined if the promise is rejected
 </pre>
 
+<h3 id="Top-level-await">Top level await</h3>
+
+<p>You can use the <code>await</code> keyword on it's own (outside of an async function) within a <a href="/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript module</a>. This means modules, with child modules that use <code>await</code>, wait for the child module to execute before they themselves run. All while not blocking other child modules from loading.</p>
+
+<p>Here is an example of a simple module using the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> and specifying await within the <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/export">export statement</a></code>. Any modules that include this will wait for the fetch to resolve before running any code.</p>
+
+<pre class="brush: js notranslate">
+// fetch request
+const colors = fetch('../data/colors.json')
+  .then(response => response.json());
+
+export default await colors;
+</pre>
+
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
@@ -134,6 +147,10 @@ f4();</pre>
   <tbody>
     <tr>
       <td>{{SpecName("ESDraft", "#sec-async-function-definitions", "async functions")}}
+      </td>
+    </tr>
+    <tr>
+      <td>{{SpecName("Top Level Await", "#introduction", "Top level await")}}
       </td>
     </tr>
   </tbody>
@@ -152,4 +169,5 @@ f4();</pre>
   <li>{{jsxref("Statements/async_function", "async function")}}</li>
   <li>{{jsxref("Operators/async_function", "async function expression")}}</li>
   <li>{{jsxref("AsyncFunction")}} object</li>
+  <li><a href="https://v8.dev/features/top-level-await">Top level await</a> on v8.dev</li>
 </ul>

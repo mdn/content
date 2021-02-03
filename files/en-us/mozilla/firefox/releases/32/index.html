@@ -13,10 +13,10 @@ tags:
 <ul>
  <li><a href="/en-US/docs/Tools/Web_Audio_Editor">Web Audio Editor</a></li>
  <li><a href="/en-US/docs/Tools/Scratchpad#Code_completion_and_inline_documentation">Code completion and inline documentation in Scratchpad</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector#Rules_view">User agent styles in the Inspector's Rules view</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector#Firefox_32_onwards_2">Element picker button has moved</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector#Firefox_32_onwards">Node dimensions added to the Inspector's infobar</a></li>
- <li><a href="/en-US/docs/Tools/Tools_Toolbox#Extra_tools">Full page screenshot button added</a></li>
+ <li><a href="/en-US/docs/Tools/Page_Inspector#rules_view">User agent styles in the Inspector's Rules view</a></li>
+ <li><a href="/en-US/docs/Tools/Page_Inspector#firefox_32_onwards_2">Element picker button has moved</a></li>
+ <li><a href="/en-US/docs/Tools/Page_Inspector#firefox_32_onwards">Node dimensions added to the Inspector's infobar</a></li>
+ <li><a href="/en-US/docs/Tools/Tools_Toolbox#extra_tools">Full page screenshot button added</a></li>
  <li>HiDPI images added to the tools</li>
  <li>Nodes that have <code>display:none</code> are shown differently in the Inspector</li>
 </ul>
@@ -28,7 +28,7 @@ tags:
 <ul>
  <li>Enabled {{cssxref("mix-blend-mode")}} by default ({{Bug(952643)}}).</li>
  <li>Enabled <code>position:sticky</code> by default in release builds (only enabled on Nightly and Aurora before) ({{Bug(916315)}}).</li>
- <li>Implemented {{cssxref("box-decoration-break")}} and removed the non-standard {{cssxref("-moz-background-inline-policy")}}({{Bug(613659)}}).</li>
+ <li>Implemented {{cssxref("box-decoration-break")}} and removed the non-standard <code>-moz-background-inline-policy</code>({{Bug(613659)}}).</li>
  <li>Allowed {{cssxref("flex-grow")}} and  {{cssxref("flex-shrink")}} to transition between zero and nonzero values, like 'flex-grow: 0.6'({{Bug(996945)}}).</li>
 </ul>
 
@@ -60,8 +60,8 @@ tags:
  <li>The {{domxref("KeyboardEvent.code")}} property have been experimentally implemented: it is disabled on release build ({{Bug(865649)}}).</li>
  <li>Scoped selectors for {{domxref("Document.querySelector()")}} and  {{domxref("Document.querySelectorAll()")}}, for example <code>querySelector(":scope &gt; li")</code>have been implemented ({{Bug(528456)}}).</li>
  <li>The experimental implementation of the  {{domxref("Document.timeline")}} interface, related to the <a href="http://dev.w3.org/fxtf/web-animations/">Web Animation API</a>, has been added ({{bug("998246")}}). It is controlled by <code>layout.web-animations.api.enabled</code> preference, enabled only on Nightly and Aurora for the moment.</li>
- <li>The <a href="/en-US/docs/Web/API/Data_Store_API">Data Store API</a> has been made available to <a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Web Workers</a> ({{bug("949325")}}). It still is only activated for certified applications.</li>
- <li>The <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker</a> {{domxref("InstallPhaseEvent")}} and {{domxref("InstallEvent")}} interfaces have been implemented ({{ Bug("967264") }}).</li>
+ <li>The <a href="/en-US/docs/Web/API/Data_Store_API">Data Store API</a> has been made available to <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web Workers</a> ({{bug("949325")}}). It still is only activated for certified applications.</li>
+ <li>The <a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker</a> {{domxref("InstallPhaseEvent")}} and {{domxref("InstallEvent")}} interfaces have been implemented ({{ Bug("967264") }}).</li>
  <li> The <a href="/en-US/docs/Web/API/MSISDN_Verification_API">MSISDN Verification API</a>, only activated for privileged apps, has been added ({{ Bug("988469") }}).</li>
  <li>The <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> is now supported on Firefox for Android ({{bug(852935)}}).</li>
  <li>To match the spec and the evolution of the CSS syntax, minor changes have been done to {{domxref("CSS.escape()")}}. The identifier now can begins with <code>'--'</code> and the second dash must not be escaped. Also vendor identifier are no more escaped. ({{bug(1008719)}})</li>
@@ -116,16 +116,16 @@ tags:
 
 <p>Xray vision is now applied to JavaScript objects that are not themselves DOM objects: <a href="/en-US/docs/Xray_vision#Xrays_for_JavaScript_objects">Xrays for JavaScript objects</a>.</p>
 
-<p>A <code><a href="/en-US/Add-ons/Add-on_Manager/Addon#getDataDirectory()">getDataDirectory()</a></code> method has been added to <code><a href="/en-US/Add-ons/Add-on_Manager/Addon">Addon</a></code> instances. This method returns the preferred location, within the current profile, for add-ons to store data.</p>
+<p>A <code><a href="/en-US/docs/Mozilla/Add-ons/Add-on_Manager/Addon#getdatadirectory()">getDataDirectory()</a></code> method has been added to <code><a href="/en-US/docs/Mozilla/Add-ons/Add-on_Manager/Addon">Addon</a></code> instances. This method returns the preferred location, within the current profile, for add-ons to store data.</p>
 
 <h3 id="Add-on_SDK">Add-on SDK</h3>
 
 <h4 id="Highlights">Highlights</h4>
 
 <ul>
- <li>Added <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs/page-mod#PageMod%28options%29"><code>exclude</code></a> option to <code>PageMod</code>.</li>
- <li>Added <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs/request#Request%28options%29"><code>anonymous</code></a> option to <code>Request</code>.</li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/Add-on_Debugger">Add-on Debugger</a> now includes a Console and a Scratchpad.</li>
+ <li>Added <a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/page-mod#pagemod%28options%29"><code>exclude</code></a> option to <code>PageMod</code>.</li>
+ <li>Added <a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/request#request%28options%29"><code>anonymous</code></a> option to <code>Request</code>.</li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/Add-on_Debugger">Add-on Debugger</a> now includes a Console and a Scratchpad.</li>
 </ul>
 
 <h4 id="Details">Details</h4>

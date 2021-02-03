@@ -23,8 +23,8 @@ tags:
 <p>You can use this pattern to communicate between:</p>
 
 <ul>
- <li>different parts of your extension (for example, between <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> and <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">background scripts</a>)</li>
- <li>between your extension and a <a href="/en-US/Add-ons/WebExtensions/Native_messaging">native application running on the user's computer</a>.</li>
+ <li>different parts of your extension (for example, between <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts">background scripts</a>)</li>
+ <li>between your extension and a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">native application running on the user's computer</a>.</li>
  <li>between your extension and a different extension</li>
 </ul>
 
@@ -88,7 +88,7 @@ tags:
  <dt><code>onMessage</code></dt>
  <dd><code>object</code>. This contains the <code>addListener()</code> and <code>removeListener()</code> functions common to all events for extensions built using WebExtension APIs. Listener functions will be called when the other end has sent this port a message. The listener will be passed the value that the other end sent.</dd>
  <dt><code>postMessage</code></dt>
- <dd><code>function</code>. Send a message to the other end. This takes one argument, which is a serializable value (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#Data_cloning_algorithm">Data cloning algorithm</a>) representing the message to send. It will be delivered to any script listening to the port's <code>onMessage</code> event, or to the native application if this port is connected to a native application.</dd>
+ <dd><code>function</code>. Send a message to the other end. This takes one argument, which is a serializable value (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm">Data cloning algorithm</a>) representing the message to send. It will be delivered to any script listening to the port's <code>onMessage</code> event, or to the native application if this port is connected to a native application.</dd>
  <dt><code>sender</code>{{optional_inline}}</dt>
  <dd>{{WebExtAPIRef('runtime.MessageSender')}}. Contains information about the sender of the message. This property will only be present on ports passed to <code>onConnect</code>/<code>onConnectExternal</code> listeners.</dd>
 </dl>

@@ -23,7 +23,7 @@ tags:
 <h3 id="HTML">HTML</h3>
 
 <ul>
- <li>Elements on which {{htmlattrxref("contenteditable")}} has been set to <code>true</code> now use {{htmlelement("div")}} elements to separate different lines of text, to give Firefox parity with other modern browsers ({{bug(1297414)}}). See <a href="/en-US/docs/Web/Guide/HTML/Editable_content#Differences_in_markup_generation">Differences in markup generation</a> for more details.</li>
+ <li>Elements on which {{htmlattrxref("contenteditable")}} has been set to <code>true</code> now use {{htmlelement("div")}} elements to separate different lines of text, to give Firefox parity with other modern browsers ({{bug(1297414)}}). See <a href="/en-US/docs/Web/Guide/HTML/Editable_content#differences_in_markup_generation">Differences in markup generation</a> for more details.</li>
  <li>Enable <code>dom.forms.datetime</code> by default on Nightly ({{bug(1366188)}}).</li>
 </ul>
 
@@ -31,13 +31,13 @@ tags:
 
 <ul>
  <li>Exposed the {{cssxref("transform-box")}} property by default ({{bug(1208550)}}).</li>
- <li>Implemented the <a href="/en-US/docs/Web/CSS/single-transition-timing-function#The_frames()_class_of_timing-functions">frames() timing function</a> ({{bug(1248340)}}).</li>
+ <li>Implemented the <a href="/en-US/docs/Web/CSS/easing-function#the_frames()_class_of_timing-functions">frames() timing function</a> ({{bug(1248340)}}).</li>
  <li>Implemented the {{cssxref("text-justify")}} property ({{bug(1343512)}}, {{bug("276079")}}).</li>
  <li>[css-grid] {{cssxref("fit-content")}} unexpectedly reserves space for full clamp size in {{cssxref("repeat()")}} ({{bug(1359060)}}).</li>
  <li>The {{cssxref("float")}} / {{cssxref("clear")}} logical values — <code>inline-start</code> and <code>inline-end</code> — which were previously implemented but preffed off in release channels, are now available in all channels by default ({{bug(1253919)}}).</li>
- <li>The <code>layout.css.variables.enabled</code> preference has been removed completely meaning that the <a href="/en-US/docs/Web/CSS/Using_CSS_variables">CSS variables</a> feature is enabled all the time and can no longer be disabled ({{bug(1312328)}}).</li>
+ <li>The <code>layout.css.variables.enabled</code> preference has been removed completely meaning that the <a href="/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS variables</a> feature is enabled all the time and can no longer be disabled ({{bug(1312328)}}).</li>
  <li>Implemented the proprietary {{cssxref("-moz-context-properties")}} property ({{bug(1058040)}}).</li>
- <li>Zero (0) angle value without degree unit is not correctly interpreted in {{cssxref("linear-gradient")}} ({{bug(1363292)}}).</li>
+ <li>Zero (0) angle value without degree unit is not correctly interpreted in {{cssxref("linear-gradient()")}} ({{bug(1363292)}}).</li>
  <li>The {{cssxref("::cue")}} pseudo-element is now supported; it matches on text cues presented within a media element ({{bug(1318542)}}).</li>
 </ul>
 
@@ -51,10 +51,10 @@ tags:
 
 <ul>
  <li>The {{jsxref("SharedArrayBuffer")}} and {{jsxref("Atomics")}} objects are now enabled by default. See <a href="https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/">A Taste of JavaScript’s New Parallel Primitives</a> for an introduction to JavaScript Shared Memory and Atomics.</li>
- <li>The rest operator (<code>...</code>) is now supported in <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">object destructuring</a> and the spread operator (<code>...</code>) now works in <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator#Spread_in_object_literals">object literals</a> (Stage 3 ECMAScript proposal: <a href="https://github.com/tc39/proposal-object-rest-spread">Object Rest/Spread Properties</a>, {{bug(1339395)}}).</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions#Async_generator_methods">Async generator methods</a> are now supported ({{bug(1353693)}}).</li>
+ <li>The rest operator (<code>...</code>) is now supported in <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">object destructuring</a> and the spread operator (<code>...</code>) now works in <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_in_object_literals">object literals</a> (Stage 3 ECMAScript proposal: <a href="https://github.com/tc39/proposal-object-rest-spread">Object Rest/Spread Properties</a>, {{bug(1339395)}}).</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions#async_generator_methods">Async generator methods</a> are now supported ({{bug(1353693)}}).</li>
  <li>The {{jsxref("String.prototype.toLocaleLowerCase()")}} and {{jsxref("String.prototype.toLocaleUpperCase()")}} methods now support an optional <code>locale</code> parameter to specify a language tag for locale-specific case mappings ({{bug(1318403)}}).</li>
- <li>The {{jsxref("Collator", "Intl.Collator")}} object now supports the <code>caseFirst</code> option ({{bug(866473)}}).</li>
+ <li>The {{jsxref("Intl/Collator", "Intl.Collator")}} object now supports the <code>caseFirst</code> option ({{bug(866473)}}).</li>
  <li>The <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl">Intl API</a> now uses the browser's default locale instead of the operating system's default locale when no locale setting is provided ({{bug(1346674)}}).</li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">Template call sites objects</a> are now canonicalized per realm, based upon their list of raw strings ({{bug(1108941)}}).</li>
  <li>{{jsxref("TypedArray")}} constructors (like {{jsxref("Int8Array")}}, {{jsxref("Float32Array")}}, etc.) have been updated to ES2017. They now use the <code>ToIndex</code> operation and allow constructors without arguments, which return zero-length typed arrays ({{bug(1317383)}}).</li>
@@ -67,7 +67,7 @@ tags:
 <ul>
  <li>The <strong><a href="/en-US/docs/Web/API/Background_Tasks_API">Collaborative Scheduling of Background Tasks API</a></strong> (also known as the <strong>Background Tasks API</strong> or the <strong><code>requestIdleCallback</code> API</strong>) is now enabled by default after being available behind a preference since Firefox 53. This API lets you schedule tasks to be executed when the browser determines that there's free time available before the next repaint occurs, so that your code can make use of that time without causing visible performance lag ({{bug(1314959)}}).</li>
  <li>The <strong><a href="/en-US/docs/Web/API/WebVR_API">WebVR 1.1 API</a></strong> is now turned on by default on Windows (and is available on macOS in Nightly). This API exposes virtual reality devices — for example head-mounted displays like the Oculus Rift or HTC Vive — to web apps, enabling developers to translate position and movement information from the display into movement around a 3D scene, and present content into such displays.</li>
- <li>The <strong><a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a></strong> — which provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's <a href="/en-US/docs/Glossary/viewport" title="viewport: A viewport represents a polygonal (normally rectangular) area in computer graphics that is currently being viewed. In web browser terms, it refers to the part of the document you're viewing which is currently visible in its window. Content outside the viewport is currently not displayed onscreen.">viewport</a> — has been added ({{bug(1321865)}}).</li>
+ <li>The <strong><a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a></strong> — which provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's <a href="/en-US/docs/Glossary/Viewport">viewport</a> — has been added ({{bug(1321865)}}).</li>
 </ul>
 
 <h4 id="DOM">DOM</h4>
@@ -75,7 +75,7 @@ tags:
 <ul>
  <li>The {{domxref("Window")}} properties {{domxref("Window.scrollX", "scrollX")}} and {{domxref("Window.scrollY", "scrollY")}} (as well as their aliases {{domxref("Window.pageXOffset", "pageXOffset")}} and {{domxref("Window.pageYOffset", "pageYOffset")}}) have been updated to be subpixel precise. Instead of returning an integer, these now return a floating-point value which more accurately describes the scroll position on subpixel-precise displays ({{bug(1151421)}}). If need be, you can use {{jsxref("Math.round()")}} to convert them into integers.</li>
  <li>{{domxref("MediaQueryList")}} (and other related features) have been updated to match the latest spec. See {{bug("1354441")}}, and also see {{domxref("MediaQueryList")}} and {{domxref("MediaQueryListEvent")}}.</li>
- <li>Methods of the {{domxref("DOMTokenList")}} that modify the list value now automatically trim whitespace and remove duplicate tokens ({{bug("869788")}}, also see <a href="/en-US/docs/Web/API/DOMTokenList#Trimming_of_whitespace_and_removal_of_duplicates">Trimming of whitespace and removal of duplicates</a>).</li>
+ <li>Methods of the {{domxref("DOMTokenList")}} that modify the list value now automatically trim whitespace and remove duplicate tokens ({{bug("869788")}}, also see <a href="/en-US/docs/Web/API/DOMTokenList#trimming_of_whitespace_and_removal_of_duplicates">Trimming of whitespace and removal of duplicates</a>).</li>
  <li>The {{domxref("HTMLInputElement")}}'s <code>maxLength</code> property can now be dynamically altered with JavaScript after the equivalent HTML has been created ({{bug(1352799)}}).</li>
  <li>The {{domxref("URL.URL", "URL()")}} constructor can no longer accept a {{domxref("DOMString")}} as its base (2nd parameter) — it only accepts a {{domxref("USVString")}}. It can still use an existing {{domxref("URL")}} object for the base, which stringifies itself to the object's {{domxref("DOMString.href","href")}} attribute ({{bug(1368950)}}).</li>
 </ul>
@@ -91,7 +91,7 @@ tags:
 <h4 id="Selection_API">Selection API</h4>
 
 <ul>
- <li>The <a href="/en-US/docs/Web/API/Selection_API">Selection API</a> has been updated so that it has parity with other browsers in terms of how editing hosts are given focus when the selection moves inside them ({{bug("1318312")}}). See <a href="/en-US/docs/Web/API/Selection#Behavior_of_Selection_API_in_terms_of_editing_host_focus_changes">Behavior of Selection API in terms of editing host focus changes</a> for more details.</li>
+ <li>The <a href="/en-US/docs/Web/API/Selection">Selection API</a> has been updated so that it has parity with other browsers in terms of how editing hosts are given focus when the selection moves inside them ({{bug("1318312")}}). See <a href="/en-US/docs/Web/API/Selection#behavior_of_selection_api_in_terms_of_editing_host_focus_changes">Behavior of Selection API in terms of editing host focus changes</a> for more details.</li>
  <li>The {{domxref("Selection")}} API has been updated to match some recent spec changes ({{bug(1359371)}}):
   <ul>
    <li>The {{domxref("Selection.collapse", "collapse()")}} and {{domxref("Selection.extend", "extend()")}} methods' <code>offset</code> parameter is now optional.</li>
@@ -108,7 +108,7 @@ tags:
 
 <ul>
  <li>Workers and shared workers can now be created with an identifying <code>name</code> property. See the {{domxref("Worker.Worker", "Worker()")}} and {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructors, and the {{domxref("DedicatedWorkerGlobalScope")}} and {{domxref("SharedWorkerGlobalScope")}} interfaces. ({{bug(1364297)}}).</li>
- <li>{{domxref("WindowOrWorkerGlobalScope.setTimeout","setTimeout()")}} and {{domxref("WindowOrWorkerGlobalScope.setInterval","setInterval()")}} are now subject to minimum interval throttling for tracking scripts in background tabs — see <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#Throttling_of_tracking_timeout_scripts">Throttling of tracking timeout scripts</a> ({{bug(1355311)}}).</li>
+ <li>{{domxref("WindowOrWorkerGlobalScope.setTimeout","setTimeout()")}} and {{domxref("WindowOrWorkerGlobalScope.setInterval","setInterval()")}} are now subject to minimum interval throttling for tracking scripts in background tabs — see <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#throttling_of_tracking_timeout_scripts">Throttling of tracking timeout scripts</a> ({{bug(1355311)}}).</li>
 </ul>
 
 <h4 id="Service_WorkersPush">Service Workers/Push</h4>
@@ -203,7 +203,7 @@ tags:
  <li>The proprietary Firefox OS Device Storage API has been removed from the platform ({{bug(1299500)}}).</li>
  <li>The <code>aShowDialog</code> parameter of the non-standard {{domxref("Window.find()")}} method (which could be specified to open up a "Find" dialog in the browser) has been removed ({{bug(1348409)}}).</li>
  <li>The <code>HTMLFormElement.requestAutoComplete()</code> method has been removed (see {{domxref("HTMLFormElement")}}) ({{bug(1270740)}}).</li>
- <li>The non-standard, Mozilla-specific, WebRTC offer options <code>mozDontOfferDataChannel</code> and <code>mozBundleOnly</code> have been removed from the <code><a href="/en-US/docs/Web/API/RTCPeerConnection/createOffer#RTCOfferOptions_dictionary">RTCOfferOptions</a></code> dictionary and are no longer supported by {{domxref("RTCPeerConnection.createOffer()")}} ({{bug(1196974)}}).</li>
+ <li>The non-standard, Mozilla-specific, WebRTC offer options <code>mozDontOfferDataChannel</code> and <code>mozBundleOnly</code> have been removed from the <code><a href="/en-US/docs/Web/API/RTCPeerConnection/createOffer#rtcofferoptions_dictionary">RTCOfferOptions</a></code> dictionary and are no longer supported by {{domxref("RTCPeerConnection.createOffer()")}} ({{bug(1196974)}}).</li>
  <li>Support for the proprietary Firefox OS <a href="/en-US/docs/Archive/B2G_OS/API/Audio_Channels_API">Audio Channels API</a> has been removed from {{domxref("HTMLMediaElement")}} and {{domxref("AudioContext")}} ({{bug(1358061)}}).</li>
 </ul>
 
@@ -218,11 +218,11 @@ tags:
 <h3 id="WebExtensions">WebExtensions</h3>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/contextMenus/create">contextMenus.create()'s command property enables you to open browser action popups, page action popups, and sidebars from the context menu.</a></li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/create">contextMenus.create()'s command property enables you to open browser action popups, page action popups, and sidebars from the context menu.</a></li>
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy">proxy API</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides">chrome_settings_overrides key enables you to override the browser's homepage.</a></li>
- <li>browser_style property enables you to have browser-like styling for <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/browser_action">browser action popups</a>, <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebars</a>, and <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/options_ui">options pages</a>.</li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/permissions">permissions API</a></li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides">chrome_settings_overrides key enables you to override the browser's homepage.</a></li>
+ <li>browser_style property enables you to have browser-like styling for <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser action popups</a>, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebars</a>, and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options pages</a>.</li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions">permissions API</a></li>
 </ul>
 
 <h2 id="See_also">See also</h2>

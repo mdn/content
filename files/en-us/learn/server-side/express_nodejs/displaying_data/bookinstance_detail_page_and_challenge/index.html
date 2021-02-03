@@ -17,7 +17,7 @@ tags:
 
 <p>Open <strong>/controllers/bookinstanceController.js</strong>. Find the exported <code>bookinstance_detail()</code> controller method and replace it with the following code.</p>
 
-<pre class="brush: js notranslate">// Display detail page for a specific BookInstance.
+<pre class="brush: js">// Display detail page for a specific BookInstance.
 exports.bookinstance_detail = function(req, res, <strong>next</strong>) {
 
 <strong>    BookInstance.findById(req.params.id)
@@ -42,7 +42,7 @@ exports.bookinstance_detail = function(req, res, <strong>next</strong>) {
 
 <p>Create <strong>/views/bookinstance_detail.pug</strong> and copy in the content below.</p>
 
-<pre class="brush: js notranslate">extends layout
+<pre class="brush: js">extends layout
 
 block content
 
@@ -70,14 +70,14 @@ block content
 
 <p>Run the application and open your browser to <a href="http://localhost:3000/">http://localhost:3000/</a>. Select the <em>All book-instances</em> link, then select one of the items. If everything is set up correctly, your site should look something like the following screenshot.</p>
 
-<p><img alt="BookInstance Detail Page - Express Local Library site" src="https://mdn.mozillademos.org/files/14472/LocalLibary_Express_BookInstance_Detail.png" style="border-style: solid; border-width: 1px; display: block; height: 362px; margin: 0px auto; width: 1000px;"></p>
+<p><img alt="BookInstance Detail Page - Express Local Library site" src="locallibary_express_bookinstance_detail.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h2 id="Challenge">Challenge</h2>
 
 <p>Currently most <em>dates</em> displayed on the site use the default JavaScript format (e.g. <em>Tue Oct 06 2020 15:49:58 GMT+1100 (AUS Eastern Daylight Time))</em>. The challenge for this article is to improve the appearance of the date display for <code>Author</code> lifespan information (date of death/birth) and for <em>BookInstance detail</em> pages to use the format: Oct 6th, 2016.</p>
 
 <div class="note">
-<p><strong>Note:</strong> You can use the <a href="#">same approach</a> as we used for the <em>Book Instance List</em> (adding the virtual property for the lifespan to the <code>Author</code> model and use <a href="/en-US/docs/https://www.npmjs.com/package/luxon">luxon</a> to format the date strings).</p>
+<p><strong>Note:</strong> You can use the <a href="#">same approach</a> as we used for the <em>Book Instance List</em> (adding the virtual property for the lifespan to the <code>Author</code> model and use <a href="https://www.npmjs.com/package/luxon">luxon</a> to format the date strings).</p>
 </div>
 
 <p>To complete this challenge, you must:</p>

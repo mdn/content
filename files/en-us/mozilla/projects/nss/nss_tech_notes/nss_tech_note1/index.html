@@ -40,7 +40,7 @@ arguments :
   <li> <u>SECItem* src</u>† is a structure containing a
     pointer to the binary data to be decoded, as well as its size.</li>
   <li> <u>const SEC_ASN1Template* templateEntry</u> is a
-    pointer to one or more <a href="#Templates">decoder templates</a>. The
+    pointer to one or more <a href="#templates">decoder templates</a>. The
     number of required templates is determined by the type of the first
     template.When multiple templates are required, the pointer must point to
     a NULL-terminated array of templates. The syntax of these templates is
@@ -65,7 +65,7 @@ input data. This structure contains four fields :
 <ul>
   <li> <u>kind</u> . This 32-bit field tells the decoder what
     to do with a particular component within the input data. It is made of
-    two parts : the lower byte, which can contain <a href="#ASN.1_tags">ASN.1
+    two parts : the lower byte, which can contain <a href="#asn.1_tags">ASN.1
       tags</a>, and the upper 3 bytes, which can contain <a href="#decoder_modifiers">decoder modifiers</a>. If only an
     ASN.1 tag
     is specified without a modifier, then the decoder will enforce the

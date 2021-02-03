@@ -103,15 +103,15 @@ tags:
 
 <h2 id="Feature_Queries_and_flexbox">Feature Queries and flexbox</h2>
 
-<p>You can use <a href="/en-US/docs/Web/CSS/%40supports">feature queries</a> to detect flexbox support:</p>
+<p>You can use <a href="/en-US/docs/Web/CSS/@supports">feature queries</a> to detect flexbox support:</p>
 
-<pre class="brush: css notranslate">@supports (display: flex) {
+<pre class="brush: css">@supports (display: flex) {
   // code for supporting browsers
 }</pre>
 
 <p>Note that Internet Explorer 11 does not support feature queries yet <em>does</em> support flexbox. If you decide the IE11 implementation is too buggy and you wish to serve it the fallback layout then you could use feature queries to serve flexbox rules only to those browsers with good flexbox support. Remember that if you want to include versions of browsers that had vendor-prefixed flexbox you would need to include the prefixed version in your feature query. The following feature query would include UC Browser, which supports feature queries and old flexbox syntax, prefixed:</p>
 
-<pre class="brush: css notranslate">@supports (display: flex) or (display: -webkit-box) {
+<pre class="brush: css">@supports (display: flex) or (display: -webkit-box) {
   // code for supporting browsers
 }</pre>
 
