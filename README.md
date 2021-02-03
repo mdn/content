@@ -28,6 +28,7 @@ hosted within the [MDN Organization](https://github.com/mdn) on GitHub.
   - [Making a change that depends on a macro update](#making-a-change-that-depends-on-a-macro-update)
 - [Frequently asked questions (FAQ)](#frequently-asked-questions-faq)
   - [When will my change show up on the production MDN site?](#when-will-my-change-show-up-on-the-production-mdn-site)
+  - [Can I copy content from other places to put on MDN?](#can-i-copy-content-from-other-sources-to-put-on-MDN)
 
 ## Code of Conduct
 
@@ -661,7 +662,7 @@ In such situations:
 
 ## Frequently asked questions (FAQ)
 
-### When my change show up on the production MDN site
+### When will my change show up on the production MDN site
 
 After your pull request is merged, it may take up to 48 hours before the
 change goes live on the production <https://developer.mozilla.org/> site,
@@ -675,3 +676,32 @@ but it will usually be quicker.
 
 You can use <https://whatsdeployed.io/s/DLi/mdn/content> to see if your change
 has been deployed to the production site.
+
+### Can I copy content from other sources to put on MDN
+
+In general, we do not approve of copying content from other sources and putting
+it on MDN. MDN should be made up of original content wherever possible. If we
+receive a pull request and discover that it contains plagiarised content,
+we will close it and request that the submitter resubmit the change with
+the content rewritten into their own words.
+
+If someone wants to donate an article to MDN that they previously published on
+their blog or it makes sense to copy a complex reference sheet to MDN there may
+be justification for republishing it. In these cases you should discuss your
+plan with the MDN team first:
+
+1. Include a comment on the relevant repo issue that explains your intention — say
+what you would like to copy (include the URL) and explain why you think this
+is appropriate.
+1. If the content is published under a closed license:
+   - If you hold the rights to the content, state this, and say that you are
+happy to republish it on MDN.
+   - If you do not hold the rights to the content, include the author/publisher
+   on the issue if possible, or include details of how they could be contacted
+   so we can ask them for permission to republish the content.
+1. If the content is published under an open license, say what it is, and link
+to the license so we can check whether it is compatible with [MDN's license](https://developer.mozilla.org/en-US/docs/MDN/About#using_mdn_web_docs_content).
+1. @-mention chrisdavidmills on the issue, so he can review the request.
+
+Be warned that unless there is a good reason to republish the content, we will
+probably say "no". The MDN writing team's decision is final.

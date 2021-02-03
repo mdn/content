@@ -16,11 +16,11 @@ install Firefox Developer Edition</a> Firefox 41 was released on September 22, 2
 <p>Highlights:</p>
 
 <ul>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Element_popup_menu">Take a screenshot of a DOM node</a></li>
- <li><a href="/en-US/docs/Tools/Network_Monitor#CopySave_All_As_HAR">Copy as HAR/save as HAR</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Add_rules">"Add Rule" button in the Rules view</a></li>
+ <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#element_popup_menu">Take a screenshot of a DOM node</a></li>
+ <li><a href="/en-US/docs/Tools/Network_Monitor#copysave_all_as_har">Copy as HAR/save as HAR</a></li>
+ <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#add_rules">"Add Rule" button in the Rules view</a></li>
  <li><a href="/en-US/docs/Tools/View_source">View source in a tab</a> (Disabled by default)</li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Copy_rules">More options to copy CSS rules</a></li>
+ <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#copy_rules">More options to copy CSS rules</a></li>
  <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/View_background_images">Copy image as data: URI in the Rules view</a></li>
  <li><a href="/en-US/docs/Tools/GCLI/Display_security_information">Added command to GCLI to display CSP info</a></li>
 </ul>
@@ -40,7 +40,7 @@ install Firefox Developer Edition</a> Firefox 41 was released on September 22, 2
    <li>Direction-independent equivalents of {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} and {{cssxref("margin-left")}}: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}} and {{cssxref("margin-inline-end")}}.</li>
    <li>Direction-independent equivalents of {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}} and {{cssxref("padding-left")}}: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}} and {{cssxref("padding-inline-end")}}.</li>
    <li>Direction-independent equivalents of {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}} and {{cssxref("border-left")}} and their longhands for width, style and color: {{cssxref("border-block-start")}}, {{cssxref("border-block-start-width")}}, {{cssxref("border-block-start-style")}}, {{cssxref("border-block-start-color")}}, {{cssxref("border-block-end")}}, {{cssxref("border-block-end-width")}}, {{cssxref("border-block-end-style")}}, {{cssxref("border-block-end-color")}}, {{cssxref("border-inline-start")}}, {{cssxref("border-inline-start-width")}}, {{cssxref("border-inline-start-style")}}, {{cssxref("border-inline-start-color")}}, {{cssxref("border-inline-end")}}, {{cssxref("border-inline-end-width")}}, {{cssxref("border-inline-end-style")}} and {{cssxref("border-inline-end-color")}}.</li>
-   <li>Direction-independent equivalents of {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} and {{cssxref("left")}}: {{cssxref("offset-block-start")}}, {{cssxref("offset-block-end")}}, {{cssxref("offset-inline-start")}} and {{cssxref("offset-inline-end")}}.</li>
+   <li>Direction-independent equivalents of {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} and {{cssxref("left")}}: <code>offset-block-start</code>, <code>offset-block-end</code>, <code>offset-inline-start</code> and <code>offset-inline-end</code>.</li>
   </ul>
  </li>
  <li>Support the {{cssxref("transform-origin")}} property in SVG and implement the {{cssxref("transform-box")}} property  ({{bug(923193)}}).</li>
@@ -58,7 +58,7 @@ install Firefox Developer Edition</a> Firefox 41 was released on September 22, 2
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
- <li>{{jsxref("Date.prototype")}} is now an ordinary object, not a {{jsxref("Date")}} instance anymore ({{bug(861219)}}).</li>
+ <li><code>Date.prototype</code> is now an ordinary object, not a {{jsxref("Date")}} instance anymore ({{bug(861219)}}).</li>
  <li>{{jsxref("Date.prototype.toString")}} is now a generic method ({{bug(861219)}}).</li>
  <li>{{jsxref("Symbol.species")}} has been added ({{bug(1131043)}}).</li>
  <li>{{jsxref("Map.@@species", "Map[@@species]")}} and {{jsxref("Set.@@species", "Set[@@species]")}} getters have been added ({{bug(1131043)}}).</li>
@@ -88,7 +88,7 @@ install Firefox Developer Edition</a> Firefox 41 was released on September 22, 2
 <h4 id="Events">Events</h4>
 
 <ul>
- <li>The non-standard {{domxref("CloseEvent.initCloseEvent()")}} method and the ability to create a {{domxref("CloseEvent")}} using the {{domxref("Event.createEvent", "Event.createEvent('CloseEvent')")}} method has been removed; use the standard constructor, {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} instead ({{bug(1161950)}}).</li>
+ <li>The non-standard {{domxref("CloseEvent.initCloseEvent()")}} method and the ability to create a {{domxref("CloseEvent")}} using the {{domxref("Document/createEvent", "Event.createEvent('CloseEvent')")}} method has been removed; use the standard constructor, {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} instead ({{bug(1161950)}}).</li>
  <li>On Desktop, {{domxref("PointerEvent")}} is now activated by default in Nightly; it is not activated in Developer Edition, Beta or Release and won't be for at least some versions ({{bug(1166347)}}).</li>
  <li>The unprefixed version of {{domxref("MouseEvent.movementX")}} and {{domxref("MouseEvent.movementY")}} have been added; the prefixed versions are deprecated and will be removed at some point in the future ({{bug(1164981)}}).</li>
 </ul>
@@ -102,7 +102,7 @@ install Firefox Developer Edition</a> Firefox 41 was released on September 22, 2
 <h4 id="Canvas_API">Canvas API</h4>
 
 <ul>
- <li>{{domxref("HTMLCanvasElement.captureStream()")}} and {{domxref("CanvasCaptureMediaStream")}} have been added and allow to stream the display of a {{HTMLElement("canvas")}} in real-time ({{bug(1032848)}}).</li>
+ <li>{{domxref("HTMLCanvasElement.captureStream()")}} and <code>CanvasCaptureMediaStream</code> have been added and allow to stream the display of a {{HTMLElement("canvas")}} in real-time ({{bug(1032848)}}).</li>
  <li>{{domxref("MediaStream.id")}} now returns the unique id of a stream ({{bug(1089798)}}).</li>
  <li>The initial value of {{domxref("CanvasRenderingContext2D.filter")}} is now correctly set to <code>none</code> ({{bug(1163124)}}).</li>
 </ul>
@@ -110,7 +110,7 @@ install Firefox Developer Edition</a> Firefox 41 was released on September 22, 2
 <h4 id="Service_Workers">Service Workers</h4>
 
 <ul>
- <li>Improvement to our experimental <a href="/en-US/docs/Web/API/ServiceWorker_API">Service Worker</a> implementation:
+ <li>Improvement to our experimental <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker</a> implementation:
 
   <ul>
    <li>{{domxref("ServiceWorkerGlobalScope.skipWaiting()")}} has been implemented ({{bug(1131352)}}).</li>
@@ -141,11 +141,11 @@ install Firefox Developer Edition</a> Firefox 41 was released on September 22, 2
  <li>The User Timing API is now available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web workers</a> ({{bug(1155761)}}).</li>
  <li>The <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a> is now available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web workers</a> ({{bug(916893)}}).</li>
  <li>{{domxref("DOMRequest")}} and {{domxref("DOMCursor")}} are now available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web workers</a> ({{bug(1167650)}}).</li>
- <li>The <a href="/en-US/docs/Web/API/CSSFontLoading_API">CSS Font Loading API</a> has been completely implemented and is now enabled by default ({{bug(1149381)}}).</li>
+ <li>The <a href="/en-US/docs/Web/API/CSS_Font_Loading_API">CSS Font Loading API</a> has been completely implemented and is now enabled by default ({{bug(1149381)}}).</li>
  <li>Shared workers can no longer be shared between private (i.e. browsing in a private window) and non-private documents (see {{bug(1177621)}}).</li>
  <li>The {{domxref("URLUtilsSearchParams.searchParams")}} property is now read-only ({{bug(1174731)}}).</li>
  <li>
-  <p>The {{domxref('URLUtils.hash')}} property no longer decodes URL fragment ({{bug(1093611)}}).</p>
+  <p>The {{domxref('HTMLHyperlinkElementUtils/hash')}} property no longer decodes URL fragment ({{bug(1093611)}}).</p>
  </li>
 </ul>
 
@@ -177,8 +177,8 @@ install Firefox Developer Edition</a> Firefox 41 was released on September 22, 2
 <h2 id="Security">Security</h2>
 
 <ul>
- <li>The <a href="/en-US/docs/Web/Security/CSP">CSP</a> 1.1 <code>manifest-src</code> <a href="/en-US/docs/Web/Security/CSP/CSP_policy_directives">directive</a> is now supported ({{bug(1089255)}}).</li>
- <li>Previous versions of Firefox incorrectly expected the <a href="/en-US/docs/Web/Security/CSP">Content Security Policy</a> <a href="/en-US/docs/Web/Security/CSP/CSP_policy_directives#referrer">referrer</a> directive's value <code>origin-when-cross-origin</code> to be spelled <code>origin-when-crossorigin</code>. This has been corrected to include the missing dash character.</li>
+ <li>The <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> 1.1 <code>manifest-src</code> <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">directive</a> is now supported ({{bug(1089255)}}).</li>
+ <li>Previous versions of Firefox incorrectly expected the <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a> <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#referrer">referrer</a> directive's value <code>origin-when-cross-origin</code> to be spelled <code>origin-when-crossorigin</code>. This has been corrected to include the missing dash character.</li>
 </ul>
 
 <h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
