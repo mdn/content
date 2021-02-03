@@ -55767,20 +55767,6 @@
       "Annevk"
     ]
   },
-  "Web/API/HTMLHyperlinkElementUtils/hostname": {
-    "modified": "2020-10-15T21:24:52.580Z",
-    "contributors": [
-      "CarstenDeyl",
-      "Wind1808",
-      "fscholz",
-      "tyoshino",
-      "jpmedley",
-      "libbymc",
-      "teoli",
-      "chrisdavidmills",
-      "Kartik_Chadha"
-    ]
-  },
   "Web/API/HTMLHyperlinkElementUtils/origin": {
     "modified": "2020-10-15T21:24:54.809Z",
     "contributors": [
@@ -165933,6 +165919,20 @@
       "mbudde",
       "Bzbarsky",
       "mattbasta",
+      "Kartik_Chadha"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/hostname": {
+    "modified": "2020-10-15T21:24:52.580Z",
+    "contributors": [
+      "CarstenDeyl",
+      "Wind1808",
+      "fscholz",
+      "tyoshino",
+      "jpmedley",
+      "libbymc",
+      "teoli",
+      "chrisdavidmills",
       "Kartik_Chadha"
     ]
   }
