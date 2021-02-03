@@ -2,19 +2,19 @@
 title: AudioContext.createMediaStreamTrackSource()
 slug: Web/API/AudioContext/createMediaStreamTrackSource
 tags:
-- API
-- Audio
-- AudioContext
-- MediaStreamTrack
-- MediaStreamTrackAudioSource
-- Method
-- Node
-- Reference
-- Web Audio API
-- createMediaStreamTrackSource
-- sound
-- source
-- track
+  - API
+  - Audio
+  - AudioContext
+  - MediaStreamTrack
+  - MediaStreamTrackAudioSource
+  - Method
+  - Node
+  - Reference
+  - Web Audio API
+  - createMediaStreamTrackSource
+  - sound
+  - source
+  - track
 ---
 <p>{{draft}}{{ APIRef("Web Audio API") }}</p>
 
@@ -59,11 +59,11 @@ var <em>track</em> = <em>audioCtx</em>.createMediaStreamTrackSource(<em>track</e
   in the stream returned by <code>getUserMedia()</code>.</p>
 
 <p>Then a {{domxref("BiquadFilterNode")}} is created using
-  {{domxref("AudioContext.createBiquadFilter", "createBiquadFilter()")}}, and it's
+  {{domxref("BaseAudioContext/createBiquadFilter", "createBiquadFilter()")}}, and it's
   configured as desired to perform a lowshelf filter on the audio coming from the source.
   The output from the microphone is then routed into the new biquad filter, and the
   filter's output is in turn routed to the audio context's
-  {{domxref("AudioContext.destination", "destination")}}.</p>
+  {{domxref("BaseAudioContext/destination", "destination")}}.</p>
 
 <pre class="brush: js">navigator.mediaDevices.getUserMedia ({audio: true, video: false})
 .then(function(stream) {
@@ -117,7 +117,7 @@ var <em>track</em> = <em>audioCtx</em>.createMediaStreamTrackSource(<em>track</e
 
 <ul>
   <li>Web Audio API</li>
-  <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
   </li>
   <li>{{domxref("MediaStreamTrackAudioSource")}}</li>
 </ul>
