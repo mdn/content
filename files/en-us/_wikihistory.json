@@ -55862,20 +55862,6 @@
       "Kartik_Chadha"
     ]
   },
-  "Web/API/HTMLHyperlinkElementUtils/protocol": {
-    "modified": "2020-10-15T21:24:52.609Z",
-    "contributors": [
-      "Wind1808",
-      "epascarello",
-      "fscholz",
-      "erikadoyle",
-      "jpmedley",
-      "libbymc",
-      "teoli",
-      "chrisdavidmills",
-      "Kartik_Chadha"
-    ]
-  },
   "Web/API/HTMLHyperlinkElementUtils/search": {
     "modified": "2020-10-15T21:24:52.537Z",
     "contributors": [
@@ -165933,6 +165919,20 @@
       "teoli",
       "Sebastianz",
       "kscarfone",
+      "Kartik_Chadha"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/protocol": {
+    "modified": "2020-10-15T21:24:52.609Z",
+    "contributors": [
+      "Wind1808",
+      "epascarello",
+      "fscholz",
+      "erikadoyle",
+      "jpmedley",
+      "libbymc",
+      "teoli",
+      "chrisdavidmills",
       "Kartik_Chadha"
     ]
   }
