@@ -13,8 +13,8 @@ tags:
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
- <li><code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Map">Map</a></code> and <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Set">Set</a></code> objects have changed from having a <code>size()</code> method to a <code>size</code> property ({{bug("807001")}})</li>
- <li><code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Map">Map</a></code> and <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Set">Set</a></code> objects also have a clear() method now. ({{bug("805003")}})</li>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">Map</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set">Set</a></code> objects have changed from having a <code>size()</code> method to a <code>size</code> property ({{bug("807001")}})</li>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">Map</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set">Set</a></code> objects also have a clear() method now. ({{bug("805003")}})</li>
 </ul>
 
 <h3 id="CSS">CSS</h3>
@@ -25,9 +25,9 @@ tags:
  <li>The <code>-moz-initial</code> value has been unprefixed ({{bug("806068")}}). <code>-moz-initial</code> will be kept for a while as an alias; however, authors are strongly encouraged to switch over to <code>initial</code>.</li>
  <li>The CSS {{cssxref("text-transform")}} property now supports the <code>full-width</code> keyword, which allows a more seamless inclusion of Latin characters in text using ideographic fixed-width characters, like Chinese or Japanese ({{bug("774560")}}).</li>
  <li>The CSS {{cssxref("page-break-inside")}} has been implemented ({{bug("685012")}}).</li>
- <li>The CSS {{cssxref("calc", "calc()")}} function can now be used on <code>&lt;color-stop&gt;</code> (on {{cssxref("&lt;gradient&gt;")}}).</li>
+ <li>The CSS {{cssxref("calc()", "calc()")}} function can now be used on <code>&lt;color-stop&gt;</code> (on {{cssxref("&lt;gradient&gt;")}}).</li>
  <li>The CSS {{cssxref("@page")}} at-rule is now supported ({{bug("115199")}}). Note that the pseudo-classes {{cssxref(":first")}}, {{cssxref(":right")}}, and {{cssxref(":left")}} are not yet implemented.</li>
- <li>The {{cssxref(":-moz-placeholder")}} pseudo-class is replaced by the {{cssxref("::-moz-placeholder")}} pseudo-<em>element</em> ({{bug("737786")}}).</li>
+ <li>The <code>:-moz-placeholder</code> pseudo-class is replaced by the <code>::-moz-placeholder</code> pseudo-<em>element</em> ({{bug("737786")}}).</li>
  <li>Declarations qualified with <code>!important</code> appearing in {{cssxref("@keyframes")}} are now ignored, per spec ({{bug(784466)}}).</li>
 </ul>
 

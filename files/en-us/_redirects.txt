@@ -509,6 +509,7 @@
 /en-US/docs/CSS/CSS_animated_properties	/en-US/docs/Web/CSS/CSS_animated_properties
 /en-US/docs/CSS/CSS_animations	/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
 /en-US/docs/CSS/CSS_animations/Detecting_CSS_animation_support	/en-US/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
+/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 /en-US/docs/CSS/CSS_flex-wrap	/en-US/docs/Web/CSS/flex-wrap
 /en-US/docs/CSS/CSS_percentage_values	/en-US/docs/Web/CSS
 /en-US/docs/CSS/CSS_transform_functions	/en-US/docs/Web/CSS/transform
@@ -6162,6 +6163,7 @@
 /en-US/docs/Plugins/Flash_to_HTML5/Video/Interstitial_ads	/en-US/docs/Plugins/Flash_to_HTML5/Video/Advertising
 /en-US/docs/Plugins/Flash_to_HTML5/Video/Video_ads	/en-US/docs/Plugins/Flash_to_HTML5/Video/Advertising
 /en-US/docs/Plugins/Flash_to_HTML5_migration_guide	/en-US/docs/Plugins/Flash_to_HTML5
+/en-US/docs/Plugins/Guide/Version,_UI,_and_Status_Information	/en-US/docs/Plugins/Guide/Version_UI_and_Status_Information
 /en-US/docs/Printing	/en-US/docs/Web/Guide/Printing
 /en-US/docs/Properly_Configuring_Server_MIME_Types	/en-US/docs/Learn/Server-side/Configuring_server_MIME_types
 /en-US/docs/Properties_compatibility_table_for_forms_widgets	/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls
@@ -6662,6 +6664,9 @@
 /en-US/docs/The_XSLT_JavaScript_Interface_in_Gecko:Setting_Parameters	/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
 /en-US/docs/The_add-on_bar	/en-US/docs/Mozilla/Firefox/Releases/4/The_add-on_bar
 /en-US/docs/The_data_URL_scheme	/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
+/en-US/docs/Thunderbird/Autoconfiguration	/en-US/docs/Mozilla/Thunderbird/Autoconfiguration
+/en-US/docs/Thunderbird/Autoconfiguration/FileFormat/Definition	/en-US/docs/Mozilla/Thunderbird/Autoconfiguration/FileFormat/Definition
+/en-US/docs/Thunderbird/Autoconfiguration/FileFormat/HowTo	/en-US/docs/Mozilla/Thunderbird/Autoconfiguration/FileFormat/HowTo
 /en-US/docs/Tips_for_Authoring_Fast-loading_HTML_Pages	/en-US/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /en-US/docs/Toolbox	/en-US/docs/Tools/Tools_Toolbox
 /en-US/docs/Tools/DOM_Inspector	/en-US/docs/Tools/DOM_Property_Viewer
@@ -10174,6 +10179,7 @@
 /en-US/docs/Web/CSS/:-moz-placeholder	/en-US/docs/Web/CSS/:placeholder-shown
 /en-US/docs/Web/CSS/:-moz-ui-invalid	/en-US/docs/Web/CSS/:user-invalid
 /en-US/docs/Web/CSS/:-ms-input-placeholder	/en-US/docs/Web/CSS/:placeholder-shown
+/en-US/docs/Web/CSS/:-webkit-autofill	/en-US/docs/Web/CSS/:autofill
 /en-US/docs/Web/CSS/::-moz-placeholder	/en-US/docs/Web/CSS/::placeholder
 /en-US/docs/Web/CSS/::-moz-selection	/en-US/docs/Web/CSS/::selection
 /en-US/docs/Web/CSS/::-webkit-file-upload-button	/en-US/docs/Web/CSS/::file-selector-button
@@ -10233,6 +10239,7 @@
 /en-US/docs/Web/CSS/CSS_Functionals	/en-US/docs/Web/CSS/CSS_Functions
 /en-US/docs/Web/CSS/CSS_Grid	/en-US/docs/Web/CSS/CSS_Grid_Layout
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_In_Grid_Layout	/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout
+/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes	/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Realising_common_layouts_using_CSS_Grid_	/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout_	/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
 /en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_Concepts_of_Logical_Properties_and_Values	/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts

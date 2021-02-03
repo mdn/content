@@ -11,14 +11,14 @@ tags:
 <p>This article covers three tools you can use to visualize and edit animations:</p>
 
 <ul>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#Animation_inspector">the animation inspector</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#Edit_keyframes">editing @keyframes</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#Edit_timing_functions">editing timing functions</a></li>
+ <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#animation_inspector">the animation inspector</a></li>
+ <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#edit_keyframes">editing @keyframes</a></li>
+ <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#edit_timing_functions">editing timing functions</a></li>
 </ul>
 
 <h2 id="Animation_inspector">Animation inspector</h2>
 
-<p>The Page Inspector's <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#Animations_view">Animations view</a> displays animations in the page synchronized along a timeline, with a draggable widget you can use to move to any point in the timeline and see the page at that point.</p>
+<p>The Page Inspector's <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#animations_view">Animations view</a> displays animations in the page synchronized along a timeline, with a draggable widget you can use to move to any point in the timeline and see the page at that point.</p>
 
 <p>It displays animations created using <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS transitions</a>, <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">CSS @keyframes rules</a>, or the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>. Starting in Firefox 48, it will show animations applied to the <code><a href="/en-US/docs/Web/CSS/::before">::before</a></code> and <code><a href="/en-US/docs/Web/CSS/::after">::after</a></code> pseudo-elements.</p>
 
@@ -41,7 +41,7 @@ tags:
 
 <p>Let's take a closer look at the contents of the animation inspector here:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16354/animation_pane.png" style="border: 1px solid black; display: block; height: 297px; margin-left: auto; margin-right: auto; width: 394px;"></p>
+<p><img alt="" src="animation_pane.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>It shows a synchronized timeline for every animation applied to the selected element or its children. The timeline starts at the start of the first animation, ends at the end of the last animation, and is labeled with markers every 250 milliseconds (this depends on the time scale of the animations currently displayed).</p>
 
@@ -55,13 +55,13 @@ tags:
  <li>green if the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> was used</li>
 </ul>
 
-<p>The bar contains a lightning bolt icon <img alt="" src="https://mdn.mozillademos.org/files/13106/compositor.png" style="width: 15px;"> if the property was animated using the compositor thread (see more about the <a href="/en-US/docs/Tools/Performance/Scenarios/Animating_CSS_properties#CSS_property_cost">cost of animating different CSS properties</a>).</p>
+<p>The bar contains a lightning bolt icon <img alt="" src="compositor.png"> if the property was animated using the compositor thread (see more about the <a href="/en-US/docs/Tools/Performance/Scenarios/Animating_CSS_properties#css_property_cost">cost of animating different CSS properties</a>).</p>
 
 <p>The bar is shaped to reflect the easing effect used for the animation. In the example above you can see that the first bar is concave, representing ease-in, and the second is convex, representing ease-out.</p>
 
 <p>If the animation used CSS transitions, there is one bar for each property transitioned, and it is labeled with the name of the property being transitioned. If the animation used CSS <code>@keyframes</code>, there is one bar for each animation, labeled with its name.</p>
 
-<p>If the animation or transition had a delay, this is shown as a cross-hatched portion of the bar. <a href="/en-US/docs/Web/API/Web_Animations_API/Animation_timing_options"><code>delay</code> and <code>endDelay</code></a> are both represented.</p>
+<p>If the animation or transition had a delay, this is shown as a cross-hatched portion of the bar. <a href="/en-US/docs/Web/API/EffectTiming"><code>delay</code> and <code>endDelay</code></a> are both represented.</p>
 
 <p>If you hover over the bar, a tooltip appears, giving you more detailed information about the animation or transition, including:</p>
 
@@ -74,32 +74,32 @@ tags:
  <li>the Playback rate of the animation</li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16355/animation_details.png" style="border: 1px solid black; display: block; height: 313px; margin-left: auto; margin-right: auto; width: 549px;"></p>
+<p><img alt="" src="animation_details.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h3 id="Information_about_the_animated_element">Information about the animated element</h3>
 
 <p>To the left of each bar is a selector for the element that the animation applies to. If you hover over this selector, the element is highlighted in the page. Click the selector to select the element in the inspector.</p>
 
-<p>To the left of the selector is a "target" icon (<img alt="" src="https://mdn.mozillademos.org/files/11919/target-icon.png" style="height: 16px; width: 15px;">). Clicking this icon locks the highlighter on the element.</p>
+<p>To the left of the selector is a "target" icon (<img alt="" src="target-icon.png">). Clicking this icon locks the highlighter on the element.</p>
 
 <h3 id="Animation_details">Animation details</h3>
 
 <p>If you click one of the bars, you'll see details of all the properties that were changed in the animation. For example, try clicking on the bar for <code>img#icon</code>'s animation:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16356/animation_icon_details.png" style="border: 1px solid black; display: block; height: 313px; margin-left: auto; margin-right: auto; width: 549px;"></p>
+<p><img alt="" src="animation_icon_details.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>This is telling us that two properties were modified: <code><a href="/en-US/docs/Web/CSS/filter">filter</a></code> and <code><a href="/en-US/docs/Web/CSS/transform">transform</a></code>. Each dot represents an entry for that property in the set of keyframes used for the animation. Both properties were initialized at 0ms and finalized at 750ms. <code>filter</code> was given a value at 250ms and <code>transform</code> at 500ms. If you hover over a dot, you'll see the value assigned to that property at that point in the timeline:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16357/animation_icon_scale.png" style="border: 1px solid black; display: block; height: 313px; margin-left: auto; margin-right: auto; width: 549px;"></p>
+<p><img alt="" src="animation_icon_scale.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
-<p>This is essentially a visual representation of the animation's <a href="/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations/Animation_inspector_example:_Web_Animations_API#JavaScript_Content">keyframes</a>:</p>
+<p>This is essentially a visual representation of the animation's <a href="/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations/Animation_inspector_example:_Web_Animations_API#javascript_content">keyframes</a>:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> iconKeyframeSet <span class="operator token">=</span> <span class="punctuation token">[</span>
-  <span class="punctuation token">{</span> transform<span class="punctuation token">:</span> <span class="string token">'scale(1)'</span><span class="punctuation token">,</span>   filter<span class="punctuation token">:</span> <span class="string token">'grayscale(100%)'                </span><span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="punctuation token">{</span>                          filter<span class="punctuation token">:</span> <span class="string token">'grayscale(100%)'</span><span class="punctuation token">,</span> offset<span class="punctuation token">:</span> <span class="number token">0.333</span><span class="punctuation token"> }</span><span class="punctuation token">,</span>
-  <span class="punctuation token">{</span> transform<span class="punctuation token">:</span> <span class="string token">'scale(1.5)'</span><span class="punctuation token">,</span>                            offset<span class="punctuation token">:</span> <span class="number token">0.666</span> <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="punctuation token">{</span> transform<span class="punctuation token">:</span> <span class="string token">'scale(1.5)'</span><span class="punctuation token">,</span> filter<span class="punctuation token">:</span> <span class="string token">'grayscale(0%)'</span><span class="punctuation token">                  }</span>
-<span class="punctuation token">]</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js">var iconKeyframeSet = [
+  { transform: 'scale(1)',   filter: 'grayscale(100%)'                },
+  {                          filter: 'grayscale(100%)', offset: 0.333 },
+  { transform: 'scale(1.5)',                            offset: 0.666 },
+  { transform: 'scale(1.5)', filter: 'grayscale(0%)'                  }
+];</pre>
 
 <h3 id="Application_to_the_example">Application to the example</h3>
 
@@ -112,14 +112,14 @@ tags:
    <li>animated the <code><a href="/en-US/docs/Web/CSS/filter">filter</a></code> and <code><a href="/en-US/docs/Web/CSS/transform">transform</a></code> properties, to scale the icon and color it</li>
    <li>lasted 750ms, had an <code>endDelay</code> of 100ms</li>
    <li>used the compositor thread</li>
-   <li>was given an <code><a href="/en-US/docs/Web/API/AnimationEffectTimingProperties/easing">easing</a></code> value of <code>ease-in</code>: you can see this by the concave shape of the green bar.</li>
+   <li>was given an <code><a href="/en-US/docs/Web/API/EffectTiming/easing">easing</a></code> value of <code>ease-in</code>: you can see this by the concave shape of the green bar.</li>
   </ul>
  </li>
  <li>The <code>span#note</code> animation:
   <ul>
    <li>animated the <code><a href="/en-US/docs/Web/CSS/width">width</a></code> and <code><a href="/en-US/docs/Web/CSS/opacity">opacity</a></code> properties, to make the name gradually appear</li>
    <li>lasted 500ms, and had a <code>delay</code> of 150ms</li>
-   <li>was given an <code><a href="/en-US/docs/Web/API/AnimationEffectTimingProperties/easing">easing</a></code> value of <code>ease-out</code>: you can see this by the convex shape of the green bar.</li>
+   <li>was given an <code><a href="/en-US/docs/Web/API/EffectTiming/easing">easing</a></code> value of <code>ease-out</code>: you can see this by the convex shape of the green bar.</li>
   </ul>
  </li>
 </ul>
@@ -146,7 +146,7 @@ tags:
  <li>The expanded animation information now includes a lightning bolt icon next to the properties whose animation has been optimized via the compositor.</li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16359/animation_swoosh_01.png" style="border: 1px solid black; display: block; height: 313px; margin: 0px auto; width: 549px;"></p>
+<p><img alt="" src="animation_swoosh_01.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
 <p>Let's now look at <a href="https://mdn.github.io/devtools-examples/animation-inspector/animation-inspector-compositing-silly.html">animation-inspector-compositing-silly.html</a> — this is the same example, except that now once the red rectangle is clicked we animate both the {{cssxref("left")}} and {{cssxref("transform")}} (with a translation) properties at the same time as {{cssxref("opacity")}}. It doesn't make much sense to try to animate a geometric property and a translation at the same time — the two effects won't be synchronized — so the <code>transform</code> property is deliberately not handed over to the compositor to handle. The Animation Inspector will tell you this — look at it now and you'll see that:</p>
 
@@ -156,19 +156,19 @@ tags:
  <li>Properties whose animation is <strong>not</strong> being optimized, but could be if you improved your code, are now given a dotted underline — see transform in the screenshot below. Hovering over this gives you a tooltip that explains why. In this case, the message is "Animations of 'transform' cannot be run on the compositor when geometric properties are animated on the same element at the same time."</li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16360/animation_not_optimized.png" style="border: 1px solid black; display: block; height: 375px; margin: 0px auto; width: 549px;"></p>
+<p><img alt="" src="animation_not_optimized.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
 <h2 id="Edit_keyframes">Edit @keyframes</h2>
 
-<p>Any <a href="/en-US/docs/Web/Guide/CSS/Using_CSS_animations">@keyframes rules</a> associated with the currently selected element are displayed in the <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#Rules_view">Rules view</a> and are editable:</p>
+<p>Any <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">@keyframes rules</a> associated with the currently selected element are displayed in the <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#rules_view">Rules view</a> and are editable:</p>
 
 <p>{{EmbedYouTube("mDHtLK88ZW4")}}</p>
 
 <h2 id="Edit_timing_functions">Edit timing functions</h2>
 
-<p>When you <a href="/en-US/docs/Web/Guide/CSS/Using_CSS_animations">create a CSS animation</a> you can specify a <a href="/en-US/docs/Web/CSS/animation-timing-function">timing function</a>: this determines the rate at which the animation progresses. One way to specify the timing function is with a cubic Bézier curve.</p>
+<p>When you <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">create a CSS animation</a> you can specify a <a href="/en-US/docs/Web/CSS/animation-timing-function">timing function</a>: this determines the rate at which the animation progresses. One way to specify the timing function is with a cubic Bézier curve.</p>
 
-<p>Timing functions defined as cubic Bézier curves get an icon in the Rules view. If you click the icon you get a visual editor for the curve, enabling you to drag <a href="/en-US/docs/Web/CSS/timing-function#The_cubic-bezier()_class_of_timing-functions">P1 and P2</a>, and see the results in the page:</p>
+<p>Timing functions defined as cubic Bézier curves get an icon in the Rules view. If you click the icon you get a visual editor for the curve, enabling you to drag <a href="/en-US/docs/Web/CSS/easing-function#the_cubic-bezier()_class_of_timing-functions">P1 and P2</a>, and see the results in the page:</p>
 
 <p>{{EmbedYouTube("GW5-R2ewaqA")}}</p>
 

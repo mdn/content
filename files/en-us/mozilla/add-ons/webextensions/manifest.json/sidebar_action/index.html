@@ -38,7 +38,7 @@ tags:
  </tbody>
 </table>
 
-<p>A <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Sidebars">sidebar</a> is a pane that is displayed at the left-hand side of the browser window, next to the web page. The browser provides a UI that enables the user to see the currently available sidebars and to select a sidebar to display.</p>
+<p>A <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars">sidebar</a> is a pane that is displayed at the left-hand side of the browser window, next to the web page. The browser provides a UI that enables the user to see the currently available sidebars and to select a sidebar to display.</p>
 
 <p>The sidebar_action key enables you to define the default properties for the sidebar. You can change these properties at runtime using the {{WebExtAPIRef("sidebarAction")}} API.</p>
 
@@ -63,7 +63,7 @@ tags:
 
     <p>Use this to include a stylesheet in your popup that will make it look consistent with the browser's UI and with other extensions that use the <code>browser_style</code> property.</p>
 
-    <p>In Firefox, the stylesheet can be seen at chrome://browser/content/extension.css, or chrome://browser/content/extension-mac.css on OS X. When setting dimensions, be aware that this style sheet currently sets <code>box-sizing: border-box</code> (see <a href="https://developer.mozilla.org/docs/Web/CSS/box-sizing">box-sizing</a>).</p>
+    <p>In Firefox, the stylesheet can be seen at chrome://browser/content/extension.css, or chrome://browser/content/extension-mac.css on OS X. When setting dimensions, be aware that this style sheet currently sets <code>box-sizing: border-box</code> (see <a href="/en-US/docs/Web/CSS/box-sizing">box-sizing</a>).</p>
 
     <p>The <a class="external external-icon" href="https://firefoxux.github.io/StyleGuide/#/controls">Firefox Style Guide</a> describes the classes you can apply to elements in the sidebar in order to get particular styles.</p>
    </td>
@@ -89,7 +89,7 @@ tags:
       "32": "path/to/geo-32.png"
     }</pre>
 
-    <p>See <a href="/en-US/Add-ons/WebExtensions/manifest.json/browser_action#Choosing_icon_sizes">Choosing icon sizes</a> for more guidance on this.</p>
+    <p>See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes">Choosing icon sizes</a> for more guidance on this.</p>
 
     <p>This property is optional: if it is omitted, the sidebar doesn't get an icon.</p>
    </td>
@@ -102,11 +102,11 @@ tags:
 
     <p>The HTML file may include CSS and JavaScript files using <code><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a></code> elements, just like a normal web page.</p>
 
-    <p>Unlike a normal web page, JavaScript running in the panel can access all the <a href="/en-US/Add-ons/WebExtensions/API">WebExtension APIs</a> (subject, of course, to the extension having the appropriate <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a>).</p>
+    <p>Unlike a normal web page, JavaScript running in the panel can access all the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API">WebExtension APIs</a> (subject, of course, to the extension having the appropriate <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a>).</p>
 
     <p>This property is mandatory.</p>
 
-    <p>This is a <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json">localizable property</a>.</p>
+    <p>This is a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json">localizable property</a>.</p>
    </td>
   </tr>
   <tr>
@@ -117,7 +117,7 @@ tags:
 
     <p>This property is optional: if it is omitted, the sidebar's title is the extension's <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name">name</a></code>.</p>
 
-    <p>This is a <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json">localizable property</a>.</p>
+    <p>This is a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json">localizable property</a>.</p>
    </td>
   </tr>
   <tr>
