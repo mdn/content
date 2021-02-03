@@ -55797,25 +55797,6 @@
       "Kartik_Chadha"
     ]
   },
-  "Web/API/HTMLHyperlinkElementUtils/search": {
-    "modified": "2020-10-15T21:24:52.537Z",
-    "contributors": [
-      "Wind1808",
-      "mfluehr",
-      "BuonOmo",
-      "fscholz",
-      "Jonathan_Watt",
-      "chrisdavidmills",
-      "jpmedley",
-      "AndySky21",
-      "libbymc",
-      "teoli",
-      "jsx",
-      "madarche",
-      "fusionchess",
-      "Kartik_Chadha"
-    ]
-  },
   "Web/API/HTMLHyperlinkElementUtils/toString": {
     "modified": "2020-10-15T21:24:54.612Z",
     "contributors": [
@@ -165934,6 +165915,25 @@
       "mturnwall",
       "Kartik_Chadha",
       "mikemcg"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/search": {
+    "modified": "2020-10-15T21:24:52.537Z",
+    "contributors": [
+      "Wind1808",
+      "mfluehr",
+      "BuonOmo",
+      "fscholz",
+      "Jonathan_Watt",
+      "chrisdavidmills",
+      "jpmedley",
+      "AndySky21",
+      "libbymc",
+      "teoli",
+      "jsx",
+      "madarche",
+      "fusionchess",
+      "Kartik_Chadha"
     ]
   }
 }
