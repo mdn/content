@@ -18,7 +18,7 @@ tags:
 
 <ul>
  <li>Provides a master directory of all the named caches that can be accessed by a {{domxref("ServiceWorker")}} or other type of worker or {{domxref("window")}} scope (you’re not limited to only using it with service workers, even though the {{SpecName('Service Workers')}} spec defines it).
-  <div class="note"><strong>Note</strong>: <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1026063">Chrome and Safari only expose `CacheStorage` to the windowed context over HTTPS</a>. {{domxref("window.caches")}} will be undefined unless an SSL certificate is configured.</div>
+  <div class="note"><strong>Note</strong>: <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1026063">Chrome and Safari only expose `CacheStorage` to the windowed context over HTTPS</a>. {{domxref("WindowOrWorkerGlobalScope/caches", "WorkerGlobalScope.caches")}} will be undefined unless an SSL certificate is configured.</div>
  </li>
  <li>Maintains a mapping of string names to corresponding {{domxref("Cache")}} objects.</li>
 </ul>
@@ -187,7 +187,7 @@ try {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
+ <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a></li>
  <li>{{domxref("Cache")}}</li>
  <li>{{domxref("WindowOrWorkerGlobalScope.caches")}}</li>
 </ul>
