@@ -19,7 +19,7 @@ tags:
 
 <p>An origin can have multiple, named <code>Cache</code> objects. You are responsible for implementing how your script (e.g. in a {{domxref("ServiceWorker")}}) handles <code>Cache</code> updates. Items in a <code>Cache</code> do not get updated unless explicitly requested; they don’t expire unless deleted. Use {{domxref("CacheStorage.open", "CacheStorage.open()")}} to open a specific named <code>Cache</code> object and then call any of the <code>Cache</code> methods to maintain the <code>Cache</code>.</p>
 
-<p>You are also responsible for periodically purging cache entries. Each browser has a hard limit on the amount of cache storage that a given origin can use. Cache quota usage estimates are available via the {{domxref("StorageEstimate")}} API. The browser does its best to manage disk space, but it may delete the Cache storage for an origin. The browser will generally delete all of the data for an origin or none of the data for an origin. Make sure to version caches by name and use the caches only from the version of the script that they can safely operate on. See <a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers#Deleting_old_caches">Deleting old caches</a> for more information.</p>
+<p>You are also responsible for periodically purging cache entries. Each browser has a hard limit on the amount of cache storage that a given origin can use. Cache quota usage estimates are available via the {{domxref("StorageEstimate")}} API. The browser does its best to manage disk space, but it may delete the Cache storage for an origin. The browser will generally delete all of the data for an origin or none of the data for an origin. Make sure to version caches by name and use the caches only from the version of the script that they can safely operate on. See <a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers#deleting_old_caches">Deleting old caches</a> for more information.</p>
 
 <div class="note">
 <p><strong>Note</strong>: The key matching algorithm depends on the <a href="https://www.fastly.com/blog/best-practices-for-using-the-vary-header">VARY header</a> in the value. So matching a new key requires looking at both key and value for entries in the Cache.</p>
@@ -56,7 +56,7 @@ tags:
 
 <p>The code then uses {{domxref("Cache.match()")}} to see if there's already a matching font in the cache, and if so, returns it. If there isn't a matching font, the code fetches the font from the network and uses {{domxref("Cache.put()")}} to cache the fetched resource.</p>
 
-<p>The code handles exceptions thrown from the {{domxref("Globalfetch.fetch","fetch()")}} operation. Note that an HTTP error response (e.g., 404) will not trigger an exception. It will return a normal response object that has the appropriate error code.</p>
+<p>The code handles exceptions thrown from the {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}} operation. Note that an HTTP error response (e.g., 404) will not trigger an exception. It will return a normal response object that has the appropriate error code.</p>
 
 <p>The code snippet also shows a best practice for versioning caches used by the service worker. Though there's only one cache in this example, the same approach can be used for multiple caches. It maps a shorthand identifier for a cache to a specific, versioned cache name. The code also deletes all caches that aren't named in <code>CURRENT_CACHES</code>.</p>
 

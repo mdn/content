@@ -30,7 +30,7 @@ tags:
 
 <h2 id="Clipping_paths">Clipping paths</h2>
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/209/Canvas_clipping_path.png" style="float: right;">A clipping path is like a normal canvas shape but it acts as a mask to hide unwanted parts of shapes. This is visualized in the image on the right. The red star shape is our clipping path. Everything that falls outside of this path won't get drawn on the canvas.</p>
+<p><img alt="" class="internal" src="canvas_clipping_path.png" style="float: right;">A clipping path is like a normal canvas shape but it acts as a mask to hide unwanted parts of shapes. This is visualized in the image on the right. The red star shape is our clipping path. Everything that falls outside of this path won't get drawn on the canvas.</p>
 
 <p>If we compare clipping paths to the <code>globalCompositeOperation</code> property we've seen above, we see two compositing modes that achieve more or less the same effect in <code>source-in</code> and <code>source-atop</code>. The most important differences between the two are that clipping paths are never actually drawn to the canvas and the clipping path is never affected by adding new shapes. This makes clipping paths ideal for drawing multiple shapes in a restricted area.</p>
 
