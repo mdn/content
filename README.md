@@ -303,9 +303,7 @@ Here are some important rules of etiquette to remember when working
 with pull requests.
 
 1. When you submit a pull request, a number of tests are automatically run
-as GitHub Actions (see [.github/workflows/pr-build.yml](.github/workflows/pr-build.yml),
-[.github/workflows/pr-filecheck.yml](.github/workflows/pr-filecheck.yml),
-and [.github/workflows/preview.yml](.github/workflows/preview.yml)). If
+as GitHub Actions (see [.github/workflows](.github/workflows)). If
 one or more of these tests fail, it is your responsibility to try and
 resolve the underlying issue(s). If you don't know how to resolve the
 underlying issue(s), you can ask for help. Your pull request will not be
