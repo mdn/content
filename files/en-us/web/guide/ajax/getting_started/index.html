@@ -165,7 +165,7 @@ httpRequest.send();
 
 <div class="note"><strong>Note</strong>: If you're sending a request to a piece of code that will return XML, rather than a static HTML file, you must set response headers to work in Internet Explorer. If you do not set header <code>Content-Type: application/xml</code>, IE will throw a JavaScript "Object Expected" error after the line where you tried to access an XML element.</div>
 
-<div class="note"><strong>Note 2</strong>: If you do not set header <code>Cache-Control: no-cache</code> the browser will cache the response and never re-submit the request, making debugging challenging. You can also add an always-different GET parameter, like a timestamp or random number (see <a href="/en/DOM/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache">bypassing the cache</a>)</div>
+<div class="note"><strong>Note 2</strong>: If you do not set header <code>Cache-Control: no-cache</code> the browser will cache the response and never re-submit the request, making debugging challenging. You can also add an always-different GET parameter, like a timestamp or random number (see <a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache">bypassing the cache</a>)</div>
 
 <div class="note"><strong>Note 3</strong>: If the <code>httpRequest</code> variable is used globally, competing functions calling <code>makeRequest()</code> can overwrite each other, causing a race condition. Declaring the <code>httpRequest </code>variable local to a <a href="/en/JavaScript/Guide/Closures">closure</a> containing the AJAX functions avoids this.</div>
 
