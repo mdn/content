@@ -19,7 +19,16 @@ tags:
 <var>element</var>.ariaLive = <var>ariaLive</var></pre>
 
 <h3>Value</h3>
-<p>A {{domxref("DOMString")}}.</p>
+<p>A {{domxref("DOMString")}} with one of the following values:</p>
+
+<dl>
+  <dt><code>assertive</code></dt>
+  <dd>Indicates that updates to the region have the highest priority and should be presented the user immediately.</dd>
+  <dt><code>off</code></dt>
+  <dd>Indicates that updates to the region should not be presented to the user unless the user is currently focused on that region.</dd>
+  <dt><code>polite</code></dt>
+  <dd>Indicates that updates to the region should be presented at the next graceful opportunity, such as at the end of speaking the current sentence or when the user pauses typing.</dd>
+</dl>
 
 <h2 id="Examples">Examples</h2>
 

@@ -20,7 +20,13 @@ tags:
 <var>element</var>.ariaAtomic = <var>ariaAtomic</var></pre>
 
 <h3>Value</h3>
-<p>A {{domxref("DOMString")}}.</p>
+<p>A {{domxref("DOMString")}} with one of the following values:</p>
+<dl>
+  <dt><code>false</code></dt>
+  <dd>Assistive technologies will present only the changed node or nodes.</dd>
+  <dt><code>true</code></dt>
+  <dd>Assistive technologies will present the entire changed region as a whole, including the author-defined label if one exists.</dd>
+</dl>
 
 <h2 id="Examples">Examples</h2>
 

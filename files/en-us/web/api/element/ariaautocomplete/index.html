@@ -20,7 +20,17 @@ tags:
 <var>element</var>.ariaAutoComplete = <var>ariaAutoComplete</var></pre>
 
 <h3>Value</h3>
-<p>A {{domxref("DOMString")}}.</p>
+<p>A {{domxref("DOMString")}} with one of the following values:</p>
+<dl>
+  <dt><code>inline</code></dt>
+  <dd>When a user is providing input, text suggesting one way to complete the provided input may be dynamically inserted after the caret.</dd>
+  <dt><code>list</code></dt>
+  <dd>When a user is providing input, an element containing a collection of values that could complete the provided input may be displayed.</dd>
+  <dt><code>both</code></dt>
+  <dd>When a user is providing input, an element containing a collection of values that could complete the provided input may be displayed. If displayed, one value in the collection is automatically selected, and the text needed to complete the automatically selected value appears after the caret in the input.</dd>
+  <dt><code>none</code></dt>
+  <dd>When a user is providing input, an automatic suggestion that attempts to predict how the user intends to complete the input is not displayed.</dd>
+</dl>
 
 <h2 id="Examples">Examples</h2>
 
