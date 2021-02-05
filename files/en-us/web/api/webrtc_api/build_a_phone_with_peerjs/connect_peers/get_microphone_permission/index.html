@@ -10,14 +10,14 @@ slug: >-
 <p>After you've created the peer, you'll want to get the browser's permission to access the microphone. We'll be using the <a href="/en-US/docs/Web/API/MediaDevices/getUserMedia"><code>getUserMedia()</code></a> method on the <code>navigator.MediaDevices</code> object. The <code>getUserMedia()</code> endpoint takes a <code>constraints</code> object that specifies which permissions are needed. <code>getUserMedia()</code> is a promise which, when successfully resolved, returns a <a href="/en-US/docs/Web/API/MediaStream"><code>MediaStream</code></a> object. In our case this is going to contain the audio from our stream. If the promise isn’t successfully resolved, you’ll want to catch and display the error.</p>
 
 <ol>
-  <li>Add the following code to the bottom of your <code>script.js</code> file:</p>
+  <li>Add the following code to the bottom of your <code>script.js</code> file:
 
 <pre class="brush: js">function getLocalStream() {
-    navigator.mediaDevices.getUserMedia({video: false, audio: true}).then( stream => {
+    navigator.mediaDevices.getUserMedia({video: false, audio: true}).then( stream =&gt; {
         window.localStream = stream; // A
         window.localAudio.srcObject = stream; // B
         window.localAudio.autoplay = true; // C
-    }).catch( err => {
+    }).catch( err =&gt; {
         console.log("u got an error:" + err)
     });
 }</pre>
