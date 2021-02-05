@@ -82,11 +82,11 @@ tags:
  <dd>Firefox 3.5 supports web workers to allow easy multi-threading support in web applications.</dd>
  <dt><a class="internal" href="/en-US/Using_geolocation">Using geolocation</a></dt>
  <dd>Firefox 3.5 supports the Geolocation API, which allows web applications to obtain information about the user's current location if a provider for that information is installed and enabled.</dd>
- <dt><a class="internal" href="/en-US/DOM/Locating_DOM_elements_using_selectors">Locating DOM elements using selectors</a></dt>
+ <dt><a class="internal" href="/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors">Locating DOM elements using selectors</a></dt>
  <dd>The selectors API allows querying a document to locate the elements that match a given selection rule.</dd>
- <dt><a class="internal" href="/en-US/DOM/Mouse_gesture_events">Mouse gesture events</a></dt>
+ <dt><a class="internal" href="/en-US/docs/Web/Guide/Events/Mouse_gesture_events">Mouse gesture events</a></dt>
  <dd>Firefox 3.5 supports mouse gesture events such as trackpad swipes.</dd>
- <dt><a class="internal" href="/en-US/DOM/NodeIterator">The <code>NodeIterator</code> object</a></dt>
+ <dt><a class="internal" href="/en-US/docs/Web/API/NodeIterator">The <code>NodeIterator</code> object</a></dt>
  <dd>The <code>NodeIterator</code> object provides support for iterating over the list of the nodes in a DOM subtree.</dd>
  <dt><a class="internal" href="/en-US/docs/Gecko-Specific_DOM_Events#MozAfterPaint">The MozAfterPaint event</a></dt>
  <dd>This new DOM event is sent after painting updates in windows.</dd>
@@ -156,7 +156,7 @@ tags:
  <li>The property <code><a class="internal" href="/en-US/docs/Web/API/ParentNode/children" rel="internal">element.children</a></code> has been added. It returns a <em>collection</em> of child elements of the given element.</li>
  <li>The property {{ domxref("element.contentEditable") }} is now supported, to support editable elements.</li>
  <li>The Element Traversal API is now supported by the DOM <a class="internal" href="/en-US/docs/Web/API/Element" rel="internal">Element</a> object.</li>
- <li>HTML document nodes may now be cloned using <a class="internal" href="/en-US/DOM/Node.cloneNode"><code>cloneNode()</code></a>.</li>
+ <li>HTML document nodes may now be cloned using <a class="internal" href="/en-US/docs/Web/API/Node/cloneNode"><code>cloneNode()</code></a>.</li>
  <li>The non-standard <code>getBoxObjectFor()</code> DOM method has been removed. You should be using <a class="internal" href="/en-US/docs/Web/API/Element/getBoundingClientRect"><code>getBoundingClientRect()</code></a> instead.</li>
  <li>Dispatched DOM events can now be re-dispatched.  This makes Firefox 3.5 pass Acid 3 test 30.</li>
  <li>Improvements have been made to DOM 2 Range handling.</li>
@@ -195,7 +195,7 @@ tags:
  <li>Added the <a class="internal" href="/en-US/docs/XUL/Attribute/panel.level"><code>level</code></a> attribute to the <a class="internal" href="/en-US/docs/XUL/panel"><code>panel</code></a> element; this specifies whether panels appear on top of other applications, or just on top of the window the panel is contained within.</li>
  <li>XUL elements now support the<code> clientHeight</code>,<code> clientWidth</code>,<code> scrollHeight</code>, and<code> scrollWidth </code>properties.</li>
  <li><a class="internal" href="/en-US/docs/XUL/keyset"><code>keyset</code></a>s now include a <code>disabled</code> attribute.</li>
- <li>In addition, <code>keyset</code>s can now be removed using the node's <a class="internal" href="/en-US/DOM/Node.removeChild"><code>removeChild()</code></a> method.</li>
+ <li>In addition, <code>keyset</code>s can now be removed using the node's <a class="internal" href="/en-US/docs/Web/API/Node/removeChild"><code>removeChild()</code></a> method.</li>
  <li><span class="lang lang-en"><code><a href="/en-US/docs/mozIStorageStatement" rel="internal">mozIStorageStatement</a></code> </span> had the <code>initialize()</code> method removed; consumers should use the <span class="lang lang-en"><code><a href="/en-US/docs/mozIStorageConnection#createStatement()" rel="internal">createStatement()</a></code> </span> method instead to get a new statement object.</li>
  <li>The <a class="internal" href="/en-US/docs/Storage">Storage</a> API now offers support for asynchronous requests.</li>
  <li>The <a class="internal" href="/en-US/docs/XPCOM_Interface_Reference/nsICookie2"><code>nsICookie2</code></a> interface now exposes the time at which cookies were created in its new <code>creationTime</code> attribute.</li>
