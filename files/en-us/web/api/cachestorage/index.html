@@ -34,6 +34,11 @@ tags:
 
 <div class="notecard note">
   <h4>Note</h4>
+  <p>CacheStorage always rejects with a <code>SecurityError</code> on untrusted origins (i.e. those that aren't using HTTPS, although this definition will likely become more complex in the future.) When testing, you can get around this by checking the "Enable Service Workers over HTTP (when toolbox is open)" option in the Firefox Devtools options/gear menu.</p>
+</div>
+
+<div class="notecard note">
+  <h4>Note</h4>
   <p>{{domxref("CacheStorage.match()")}} is a convenience method. Equivalent functionality to match a cache entry can be implemented by returning an array of cache names from {{domxref("CacheStorage.keys()")}}, opening each cache with {{domxref("CacheStorage.open()")}}, and matching the one you want with {{domxref("Cache.match()")}}.</p>
 </div>
 
