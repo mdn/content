@@ -86,7 +86,7 @@ tags:
 <p>Inside the constructor, we define all the functionality the element will have when an instance of it is instantiated. In this case we attach a shadow root to the custom element, use some DOM manipulation to create the element's internal shadow DOM structure — which is then attached to the shadow root — and finally attach some CSS to the shadow root to style it.</p>
 
 <pre class="brush: js notranslate">// Create a shadow root
-this.attachShadow({mode: 'open'}); // sets and returns 'this.shadowRoot'
+const shadow = this.attachShadow({mode: 'open'}); // sets and returns 'this.shadowRoot'
 
 // Create (nested) span elements
 const wrapper = document.createElement('span');
