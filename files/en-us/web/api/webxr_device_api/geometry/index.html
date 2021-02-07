@@ -53,7 +53,12 @@ let radiansToDegrees = (rad) =&gt; rad / RADIANS_PER_DEGREE;
 
 <h4 id="Times_and_durations">Times and durations</h4>
 
-<div class="callout-box">Note that for security reasons, <code>DOMHighResTimeStamp</code> usually introduces a small amount of imprecision to the clock in order to prevent it from being used in <a href="/en-US/docs/Web/Privacy#Fingerprinting">fingerprinting</a> and timing-based attacks.</div>
+<div class="notecard note">
+  <p>Note that for security reasons, <code>DOMHighResTimeStamp</code> usually introduces a
+  small amount of imprecision to the clock in order to prevent it from being used in <a
+    href="/en-US/docs/Web/Privacy#Fingerprinting">fingerprinting</a> and timing-based
+  attacks.</p>
+</div>
 
 <p>All times and durations in WebXR are measured using the {{domxref("DOMHighResTimeStamp")}} type, which is a double-precision floating-point value specifying the time in milliseconds relative to the starting time. Since the value is a floating-point number, it may be accurate to well better than the millisecond level, depending on the platform and hardware.</p>
 
@@ -79,7 +84,9 @@ let radiansToDegrees = (rad) =&gt; rad / RADIANS_PER_DEGREE;
 
 <p>Thus it's all about creating a sense of space. From the perspective of an XR developer, designing the stage is the part that matters most to your users. Like an architect or a set designer, you have the power to create moods and experiences through a physical environment. How you structure that space will both depend on and influence how users can interact and explore it.</p>
 
-<div class="callout-box" style="text-align: justify;">A space will typically have foreground, mid-distance, and background elements. The right balance can create a unique presence and guide your user. The foreground includes objects and interfaces that you can interact with directly. The mid-distance includes objects you can interact with to some extent, or can approach in order to examine and engage with more closely. The background, on the other hand, is usually largely or entirely non-interactive, at least until and unless the user is able to approach it, bringing it into the mid-distance or foreground range.</div>
+<div class="notecard note">
+  <p>A space will typically have foreground, mid-distance, and background elements. The right balance can create a unique presence and guide your user. The foreground includes objects and interfaces that you can interact with directly. The mid-distance includes objects you can interact with to some extent, or can approach in order to examine and engage with more closely. The background, on the other hand, is usually largely or entirely non-interactive, at least until and unless the user is able to approach it, bringing it into the mid-distance or foreground range.</p>
+</div>
 
 <p>In WebXR, the fundamental concept of a <strong>space</strong>—as in, a coordinate space in which a scene takes place—is represented by an instance of {{domxref("XRSpace")}}. The space is used to make determinations about the relative positions and motion of objects and other entities (such as light sources and cameras) within the user's environment.</p>
 

@@ -94,10 +94,12 @@ gl.vertexAttribPointer(aVertexPosition, vertexNumComponents,
 
 gl.drawArrays(gl.TRIANGLES, 0, vertexCount);</pre>
 
-<div class="callout-box">This code snippet is taken from <a
+<div class="notecard note">
+  <p>This code snippet is taken from <a
     href="/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#Drawing_and_animating_the_scene">the
     function <code>animateScene()</code></a> in "A basic 2D WebGL animation example." See
-  that article for the full sample and to see the resulting animation in action.</div>
+  that article for the full sample and to see the resulting animation in action.</p>
+</div>
 
 <p>This code sets the buffer of vertexes that will be used to draw the triangles of the
   shape by calling {{domxref("WebGLRenderingContext.bindBuffer", "bindBuffer()")}}. Then
