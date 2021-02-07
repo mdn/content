@@ -685,7 +685,7 @@ Usage and Examples<br>
 <br>
    For example:<br>
 <br>
- $ certutil -C -c "my-ca-cert" -i /home/certs/cert.req -o cert.cer -m 010 -v 12 -w 1 -d sql:/home/my/sharednssdb -1 nonRepudiation,dataEncipherment -5 sslClient -6 clientAuth -7 <a class=" link-mailto" href="mailto:jsmith@example.com" rel="freelink">jsmith@example.com</a><br>
+ $ certutil -C -c "my-ca-cert" -i /home/certs/cert.req -o cert.cer -m 010 -v 12 -w 1 -d sql:/home/my/sharednssdb -1 nonRepudiation,dataEncipherment -5 sslClient -6 clientAuth -7 <a class=" link-mailto" href="mailto:jsmith@example.com">jsmith@example.com</a><br>
 <br>
    Generating Key Pairs<br>
 <br>
@@ -855,12 +855,12 @@ Usage and Examples<br>
    ever intermediary CA to the actual certificate. For example, for an email<br>
    certificate with two CAs in the chain:<br>
 <br>
- $ certutil -d sql:/home/my/sharednssdb -O -n "<a class=" link-mailto" href="mailto:jsmith@example.com" rel="freelink">jsmith@example.com</a>"<br>
- "Builtin Object Token:Thawte Personal Freemail CA" [<a class=" link-mailto" href="mailto:E=personal-freemail@thawte.com,CN=Thawte" rel="freelink">E=personal-freemail@thawte.com,CN=Thawte</a> Personal Freemail CA,OU=Certification Services Division,O=Thawte Consulting,L=Cape Town,ST=Western Cape,C=ZA]<br>
+ $ certutil -d sql:/home/my/sharednssdb -O -n "<a class=" link-mailto" href="mailto:jsmith@example.com">jsmith@example.com</a>"<br>
+ "Builtin Object Token:Thawte Personal Freemail CA" [<a class=" link-mailto" href="mailto:E=personal-freemail@thawte.com,CN=Thawte">E=personal-freemail@thawte.com,CN=Thawte</a> Personal Freemail CA,OU=Certification Services Division,O=Thawte Consulting,L=Cape Town,ST=Western Cape,C=ZA]<br>
 <br>
    "Thawte Personal Freemail Issuing CA - Thawte Consulting" [CN=Thawte Personal Freemail Issuing CA,O=Thawte Consulting (Pty) Ltd.,C=ZA]<br>
 <br>
-     "(null)" [<a class=" link-mailto" href="mailto:E=jsmith@example.com,CN=Thawte" rel="freelink">E=jsmith@example.com,CN=Thawte</a> Freemail Member]<br>
+     "(null)" [<a class=" link-mailto" href="mailto:E=jsmith@example.com,CN=Thawte">E=jsmith@example.com,CN=Thawte</a> Freemail Member]<br>
 <br>
    Resetting a Token<br>
 <br>
@@ -968,12 +968,12 @@ NSS Database Types<br>
    be configured to use them. For example, this how-to article covers how to<br>
    configure Firefox and Thunderbird to use the new shared NSS databases:<br>
 <br>
-     o <a class=" link-https" href="https://wiki.mozilla.org/NSS_Shared_DB_Howto" rel="freelink">https://wiki.mozilla.org/NSS_Shared_DB_Howto</a><br>
+     o <a class=" link-https" href="https://wiki.mozilla.org/NSS_Shared_DB_Howto">https://wiki.mozilla.org/NSS_Shared_DB_Howto</a><br>
 <br>
    For an engineering draft on the changes in the shared NSS databases, see<br>
    the NSS project wiki:<br>
 <br>
-     o <a class=" link-https" href="https://wiki.mozilla.org/NSS_Shared_DB" rel="freelink">https://wiki.mozilla.org/NSS_Shared_DB</a><br>
+     o <a class=" link-https" href="https://wiki.mozilla.org/NSS_Shared_DB">https://wiki.mozilla.org/NSS_Shared_DB</a><br>
 <br>
 See Also<br>
 <br>
@@ -984,27 +984,27 @@ See Also<br>
    certutil has arguments or operations that use features defined in several<br>
    IETF RFCs.<br>
 <br>
-     o <a class=" external" href="https://tools.ietf.org/html/rfc5280" rel="freelink">http://tools.ietf.org/html/rfc5280</a><br>
+     o <a class=" external" href="https://tools.ietf.org/html/rfc5280">http://tools.ietf.org/html/rfc5280</a><br>
 <br>
-     o <a class=" external" href="https://tools.ietf.org/html/rfc1113" rel="freelink">http://tools.ietf.org/html/rfc1113</a><br>
+     o <a class=" external" href="https://tools.ietf.org/html/rfc1113">http://tools.ietf.org/html/rfc1113</a><br>
 <br>
-     o <a class=" external" href="https://tools.ietf.org/html/rfc1485" rel="freelink">http://tools.ietf.org/html/rfc1485</a><br>
+     o <a class=" external" href="https://tools.ietf.org/html/rfc1485">http://tools.ietf.org/html/rfc1485</a><br>
 <br>
    The NSS wiki has information on the new database design and how to<br>
    configure applications to use it.<br>
 <br>
-     o <a class=" link-https" href="https://wiki.mozilla.org/NSS_Shared_DB_Howto" rel="freelink">https://wiki.mozilla.org/NSS_Shared_DB_Howto</a><br>
+     o <a class=" link-https" href="https://wiki.mozilla.org/NSS_Shared_DB_Howto">https://wiki.mozilla.org/NSS_Shared_DB_Howto</a><br>
 <br>
-     o <a class=" link-https" href="https://wiki.mozilla.org/NSS_Shared_DB" rel="freelink">https://wiki.mozilla.org/NSS_Shared_DB</a><br>
+     o <a class=" link-https" href="https://wiki.mozilla.org/NSS_Shared_DB">https://wiki.mozilla.org/NSS_Shared_DB</a><br>
 <br>
 Additional Resources<br>
 <br>
    For information about NSS and other tools related to NSS (like JSS), check<br>
    out the NSS project wiki at<br>
-   [1]<a class=" external" href="https://www.mozilla.org/projects/security/pki/nss/" rel="freelink">http://www.mozilla.org/projects/security/pki/nss/</a>. The NSS site relates<br>
+   [1]<a class=" external" href="https://www.mozilla.org/projects/security/pki/nss/">http://www.mozilla.org/projects/security/pki/nss/</a>. The NSS site relates<br>
    directly to NSS code changes and releases.<br>
 <br>
-   Mailing lists: <a class=" link-https" href="https://lists.mozilla.org/listinfo/dev-tech-crypto" rel="freelink">https://lists.mozilla.org/listinfo/dev-tech-crypto</a><br>
+   Mailing lists: <a class=" link-https" href="https://lists.mozilla.org/listinfo/dev-tech-crypto">https://lists.mozilla.org/listinfo/dev-tech-crypto</a><br>
 <br>
    IRC: Freenode at #dogtag-pki<br>
 <br>
@@ -1013,8 +1013,8 @@ Authors<br>
    The NSS tools were written and maintained by developers with Netscape, Red<br>
    Hat, and Sun.<br>
 <br>
-   Authors: Elio Maldonado &lt;<a class=" link-mailto" href="mailto:emaldona@redhat.com" rel="freelink">emaldona@redhat.com</a>&gt;, Deon Lackey<br>
-   &lt;<a class=" link-mailto" href="mailto:dlackey@redhat.com" rel="freelink">dlackey@redhat.com</a>&gt;.<br>
+   Authors: Elio Maldonado &lt;<a class=" link-mailto" href="mailto:emaldona@redhat.com">emaldona@redhat.com</a>&gt;, Deon Lackey<br>
+   &lt;<a class=" link-mailto" href="mailto:dlackey@redhat.com">dlackey@redhat.com</a>&gt;.<br>
 <br>
 Copyright<br>
 <br>
@@ -1023,4 +1023,4 @@ Copyright<br>
 References<br>
 <br>
    Visible links<br>
-   1. <a class=" external" href="https://www.mozilla.org/projects/security/pki/nss/" rel="freelink">http://www.mozilla.org/projects/security/pki/nss/</a></p>
+   1. <a class=" external" href="https://www.mozilla.org/projects/security/pki/nss/">http://www.mozilla.org/projects/security/pki/nss/</a></p>

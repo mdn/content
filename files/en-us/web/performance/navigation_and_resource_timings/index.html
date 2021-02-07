@@ -16,7 +16,7 @@ tags:
 
 <p>The <a href="/en-US/docs/Web/API/PerformanceTiming">performanceTiming API</a>, a JavaScript API for measuring the loading performance of the requested page, is deprecated but supported in all browsers. It has been replaced with the <a href="/en-US/docs/Web/API/PerformanceNavigationTiming">performanceNavigationTiming</a> API.</p>
 
-<p>The performance timing API provided read only times, in milliseconds(ms), describing at what time each point in the page loading process was reached. As displayed in the image below, the navigation process goes from <code><a href="/en-US/docs/Web/API/PerformanceTiming/navigationStart">navigationStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/unloadEventStart">unloadEventStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/unloadEventEnd">unloadEventEnd</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/redirectStart">redirectStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/redirectEnd">redirectEnd</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/fetchStart">fetchStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domainLookupStart">domainLookupStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domainLookupEnd">domainLookupEnd</a></code>, <a href="/en-US/docs/Web/API/PerformanceTiming/connectStart">c<code>onnectStart</code></a> , <code><a href="/en-US/docs/Web/API/PerformanceTiming/connectEnd">connectEnd</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/secureConnectionStart">secureConnectionStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/requestStart">requestStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/responseStart">responseStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/responseEnd">responseEnd</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domLoading">domLoading</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domInteractive">domInteractive</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domContentLoadedEventStart">domContentLoadedEventStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domContentLoadedEventEnd">domContentLoadedEventEnd</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domComplete">domComplete</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/loadEventStart">loadEventStart</a></code>, and <code><a href="/en-US/docs/Web/API/PerformanceTiming/loadEventEnd">loadEventEnd</a></code>.</p>
+<p>The performance timing API provided read only times, in milliseconds(ms), describing at what time each point in the page loading process was reached. As displayed in the image below, the navigation process goes from <code><a href="/en-US/docs/Web/API/PerformanceTiming/navigationStart">navigationStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/unloadEventStart">unloadEventStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/unloadEventEnd">unloadEventEnd</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/redirectStart">redirectStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/redirectEnd">redirectEnd</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/fetchStart">fetchStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domainLookupStart">domainLookupStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domainLookupEnd">domainLookupEnd</a></code>, <a href="/en-US/docs/Web/API/PerformanceTiming/connectStart"><code>connectStart</code></a> , <code><a href="/en-US/docs/Web/API/PerformanceTiming/connectEnd">connectEnd</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/secureConnectionStart">secureConnectionStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/requestStart">requestStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/responseStart">responseStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/responseEnd">responseEnd</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domLoading">domLoading</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domInteractive">domInteractive</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domContentLoadedEventStart">domContentLoadedEventStart</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domContentLoadedEventEnd">domContentLoadedEventEnd</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/domComplete">domComplete</a></code>, <code><a href="/en-US/docs/Web/API/PerformanceTiming/loadEventStart">loadEventStart</a></code>, and <code><a href="/en-US/docs/Web/API/PerformanceTiming/loadEventEnd">loadEventEnd</a></code>.</p>
 
 <p><img alt="Navigation Timing event metrics" src="https://mdn.mozillademos.org/files/16620/Screen_Shot_2019-05-03_at_1.06.27_PM.png"></p>
 
@@ -24,7 +24,7 @@ tags:
 
 <p>To help measure the time it takes to complete all the steps, the Performance Timing API  provides read only measurements of navigation timings. To view and capture our app's timing we enter:</p>
 
-<pre>let time = window.performance.timing</pre>
+<pre class="brush: js">let time = window.performance.timing</pre>
 
 <p>We can then use the results to measure how well our app is performing.</p>
 
@@ -203,7 +203,7 @@ performance.getEntriesByType('frame').forEach((frame) =&gt; {
 
 <p>When a user requests a web site or application,<a href="/en-US/docs/Learn/Performance/Populating_the_page:_how_browsers_work"> to populate the browser</a> the user agent goes through a series of steps, including a {{glossary('DNS')}} lookup, {{glossary('TCP handshake')}}, and SSL negotiation, before the user agent makes the actual request and the servers return the requested assets. The browser then parses the content received, builds the DOM, CSSOM, accessibility, and render trees, eventually rendering the page. Once the user agent stops parsing the document, the user agent sets the document readiness to <em>interactive</em>. If there are deferred scripts needing to be parsed, it will do so, then fire the <a href="/en-US/docs/">DOMContentLoaded</a>, after which the readiness is set to <em>complete</em>. The Document can now handle post-load tasks, after which point the document is marked as completely loaded.</p>
 
-<pre>let navigationTimings = performance.getEntriesByType('navigation');</pre>
+<pre class="brush: js">let navigationTimings = performance.getEntriesByType('navigation');</pre>
 
 <p>The <code>performance.getEntriesByType('navigation')</code>a returns an array of <a href="/en-US/docs/Web/API/PerformanceEntry">PerformanceEntry</a> objects for the <em>navigation</em> <em>type</em>.</p>
 
@@ -211,35 +211,35 @@ performance.getEntriesByType('frame').forEach((frame) =&gt; {
 
 <p>A lot can be garnered from these timing. In the above image, we see via the <em>name</em> property that the file being timed is this document For the rest of this explanation, we use the following variable:</p>
 
-<pre>let timing = performance.getEntriesByType('navigation')[0];</pre>
+<pre class="brush: js">let timing = performance.getEntriesByType('navigation')[0];</pre>
 
 <h3 id="Protocol">Protocol</h3>
 
 <p>We can check the protocol used by querying:</p>
 
-<pre>let protocol = <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-variable">timing</span>.<span class="cm-property">nextHopProtocol</span></span></span></span></pre>
+<pre class="brush: js">let protocol = timing.nextHopProtocol</pre>
 
-<p><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-property">It r</span></span></span></span>eturns the network protocol used to fetch the resource: in this case<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-property"> <code>h2</code> for <code>http/2</code>.</span></span></span></span></p>
+<p>It returns the network protocol used to fetch the resource: in this case <code>h2</code> for <code>http/2</code>.</p>
 
 <h3 id="Compression">Compression</h3>
 
-<p>To get the compression savings percentage, we divide the<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"> <span class="cm-property">transferSize</span><span class="cm-property"> by the decodedBodySize</span>, and subtract that from 100%. We see a savings of over 74%.</span></span></span></p>
+<p>To get the compression savings percentage, we divide the transferSize by the decodedBodySize, and subtract that from 100%. We see a savings of over 74%.</p>
 
-<pre><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-keyword">let</span> <span class="cm-def">compressionSavings</span> <span class="cm-operator">=</span> <span class="cm-number">1</span> <span class="cm-operator">-</span> (<span class="cm-variable">timing</span>.<span class="cm-property">transferSize</span> <span class="cm-operator">/</span> <span class="cm-variable">timing</span>.<span class="cm-property">decodedBodySize</span>)</span></span></span></pre>
+<pre class="brush: js">let compressionSavings = 1 - (timing.transferSize / timing.decodedBodySize)</pre>
 
-<p><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-number">We could have used</span></span></span></span></p>
+<p>We could have used</p>
 
-<pre><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-keyword">let</span> <span class="cm-def">compressionSavings</span> <span class="cm-operator">= </span><span class="cm-number">1</span> <span class="cm-operator">-</span> (<span class="cm-variable">timing</span>.<span class="cm-property">encodedBodySize</span> <span class="cm-operator">/</span> <span class="cm-variable">timing</span>.<span class="cm-property">decodedBodySize</span>)</span></span></span></pre>
+<pre class="brush: js">let compressionSavings = 1 - (timing.encodedBodySize / timing.decodedBodySize)</pre>
 
-<p><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">but using <code>transfersize</code> includes the overhead bytes.</span></span></span></p>
+<p>but using <code>transferSize</code> includes the overhead bytes.</p>
 
-<p><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">For comparison, we can look at the network tab and see that we transferred 22.04KB for an uncompressed file size of 87.24KB. </span></span></span></p>
+<p>For comparison, we can look at the network tab and see that we transferred 22.04KB for an uncompressed file size of 87.24KB. </p>
 
-<p><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><img alt="View of the bytes transferred and the size via the network tab" src="https://mdn.mozillademos.org/files/16826/bytesdownloaded.png" style="height: 107px; width: 709px;"></span></span></span></p>
+<p><img alt="View of the bytes transferred and the size via the network tab" src="https://mdn.mozillademos.org/files/16826/bytesdownloaded.png" style="height: 107px; width: 709px;"></p>
 
-<p><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">If we do the math with these numbers, we get the same result: </span></span></span><code>1 - (22.04 / 87.24) = 0.747</code>. The navigation timings provide us a way to programmatically check transfer sizing and bandwidth savings.</p>
+<p>If we do the math with these numbers, we get the same result: <code>1 - (22.04 / 87.24) = 0.747</code>. The navigation timings provide us a way to programmatically check transfer sizing and bandwidth savings.</p>
 
-<p>Note that this is the size for this single document alone: for this resource alone, not for all the resources combined. However, the duration, load events and DOM related timings have to do with the entire navigation, not this single asset. Client-side web applications may seem faster than this one with <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="tree-indent tree-last-indent"></span><span class="object-label">transfer size</span><span class="object-delimiter">s under 10000 and </span><span class="object-label">decoded body size</span><span class="object-delimiter">s under </span><span class="objectBox objectBox-number">30000, but that doesn't mean JavaScript, CSS, or media assets aren't adding bloat. Checking compression ratios is important but ensure to also check duration and the time between when the DOM</span><span class="object-label">ContentLoaded event ended and when the DOM is complete, as running JavaScript on the main thread for long periods of time can lead to a non-responsive user interface.</span></span></span></span></p>
+<p>Note that this is the size for this single document alone: for this resource alone, not for all the resources combined. However, the duration, load events and DOM related timings have to do with the entire navigation, not this single asset. Client-side web applications may seem faster than this one with transfer sizes under 10000 and decoded body sizes under 30000, but that doesn't mean JavaScript, CSS, or media assets aren't adding bloat. Checking compression ratios is important but ensure to also check duration and the time between when the DOMContentLoaded event ended and when the DOM is complete, as running JavaScript on the main thread for long periods of time can lead to a non-responsive user interface.</p>
 
 <h3 id="Request_time">Request time</h3>
 
@@ -263,7 +263,7 @@ performance.getEntriesByType('frame').forEach((frame) =&gt; {
 
 <h3 id="Duration">Duration</h3>
 
-<p>We are provided with the duration. The duration is the difference between the <a href="/en-US/docs/Web/API/PerformanceNavigationTiming/loadEventEnd">PerformanceNavigationTiming.loadEventEnd</a> and P<a href="/en-US/docs/Web/API/PerformanceEntry/startTime">erformanceEntry.startTime</a> properties.</p>
+<p>We are provided with the duration. The duration is the difference between the <a href="/en-US/docs/Web/API/PerformanceNavigationTiming/loadEventEnd">PerformanceNavigationTiming.loadEventEnd</a> and <a href="/en-US/docs/Web/API/PerformanceEntry/startTime">PerformanceEntry.startTime</a> properties.</p>
 
 <p>The PerformanceNavigationTiming interface also provides information about what type of navigation you are measuring, returning <code>navigate</code>, <code>reload</code>, <code>back_forward</code> or <code>prerender</code>.</p>
 

@@ -4,7 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 tags:
   - WebExtensions
 ---
-<div>{{AddonSidebar}}
+<div>{{AddonSidebar}}</div>
 <p>If you've been through the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension">Your first extension</a> article, you've already got an idea of how to write an extension. <span class="seoSummary">In this article, we'll write a slightly more complex extension that demonstrates a few more of the APIs.</span></p>
 
 <p>The extension adds a new button to the Firefox toolbar. When the user clicks the button, we display a popup enabling them to choose an animal. Once they choose an animal, we'll replace the current page's content with a picture of the chosen animal.</p>
@@ -12,7 +12,7 @@ tags:
 <p>To implement this, we will:</p>
 
 <ul>
- <li><strong>define a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_action">browser action</a>, which is a button attached to the Firefox toolbar</strong>.<br>
+ <li><strong>define a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">browser action</a>, which is a button attached to the Firefox toolbar</strong>.<br>
   For the button we'll supply:
   <ul>
    <li>an icon, called "beasts-32.png"</li>
@@ -28,7 +28,7 @@ tags:
 
 <p>You could visualise the overall structure of the extension like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13671/Untitled-1.png" style="display: block; height: 1200px; margin-left: auto; margin-right: auto; width: 860px;"></p>
+<p><img alt="" src="untitled-1.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>It's a simple extension, but shows many of the basic concepts of the WebExtensions API:</p>
 
@@ -90,7 +90,7 @@ cd beastify</pre>
  <li>The first three keys: <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name">name</a></code>, and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version">version</a></code>, are mandatory and contain basic metadata for the extension.</li>
  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description">description</a></code> and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url">homepage_url</a></code> are optional, but recommended: they provide useful information about the extension.</li>
  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a></code> is optional, but recommended: it allows you to specify an icon for the extension, that will be shown in the Add-ons Manager.</li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> lists permissions the extension needs. We're just asking for the <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission"><code>activeTab</code> permission</a> here.</li>
+ <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> lists permissions the extension needs. We're just asking for the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission"><code>activeTab</code> permission</a> here.</li>
  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> specifies the toolbar button. We're supplying three pieces of information here:
   <ul>
    <li><code>default_icon</code> is mandatory, and points to the icon for the button</li>
@@ -111,10 +111,10 @@ cd beastify</pre>
 
 <p>If you choose to supply your own icon, It should be 48x48 pixels. You could also supply a 96x96 pixel icon, for high-resolution displays, and if you do this it will be specified as the <code>96</code> property of the <code>icons</code> object in manifest.json:</p>
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json">"icons": {
-  "48": "icons/beasts-48.png",
-  "96": "icons/beasts-96.png"
-}</code></pre>
+<pre class="brush: json line-numbers  language-json">&quot;icons&quot;: {
+  &quot;48&quot;: &quot;icons/beasts-48.png&quot;,
+  &quot;96&quot;: &quot;icons/beasts-96.png&quot;
+}</pre>
 
 <h3 id="The_toolbar_button">The toolbar button</h3>
 
@@ -318,7 +318,7 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
 
 <p>The place to start here is line 96. The popup script executes a content script in the active tab as soon as the popup is loaded, using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript">browser.tabs.executeScript()</a></code> API. If executing the content script is successful, then the content script will stay loaded in the page until the tab is closed or the user navigates to a different page.</p>
 
-<p>A common reason the <code>browser.tabs.executeScript()</code> call might fail is that you can't execute content scripts in all pages. For example, you can't execute them in privileged browser pages like about:debugging, and you can't execute them on pages in the <a href="https://addons.mozilla.org/">addons.mozilla.org</a> domain. If it does fail, <code>reportExecuteScriptError()</code> will hide the <code>"popup-content"</code> <code>&lt;div&gt;</code>, show the <code>"error-content"</code> <code>&lt;div&gt;</code>, and log an error to the <a href="/en-US/Add-ons/WebExtensions/Debugging">console</a>.</p>
+<p>A common reason the <code>browser.tabs.executeScript()</code> call might fail is that you can't execute content scripts in all pages. For example, you can't execute them in privileged browser pages like about:debugging, and you can't execute them on pages in the <a href="https://addons.mozilla.org/">addons.mozilla.org</a> domain. If it does fail, <code>reportExecuteScriptError()</code> will hide the <code>"popup-content"</code> <code>&lt;div&gt;</code>, show the <code>"error-content"</code> <code>&lt;div&gt;</code>, and log an error to the <a href="https://extensionworkshop.com/documentation/develop/debugging/">console</a>.</p>
 
 <p>If executing the content script is successful, we call <code>listenForClicks()</code>. This listens for clicks on the popup.</p>
 
@@ -331,14 +331,14 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
 
 <ul>
  <li>map the button clicked to a URL pointing to an image of a particular beast</li>
- <li>hide the page's whole content by injecting some CSS, using the <code><a href="/en-US/Add-ons/WebExtensions/API/tabs/insertCSS">browser.tabs.insertCSS()</a></code> API</li>
+ <li>hide the page's whole content by injecting some CSS, using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS">browser.tabs.insertCSS()</a></code> API</li>
  <li>send a "beastify" message to the content script using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage">browser.tabs.sendMessage()</a></code> API, asking it to beastify the page, and passing it the URL to the beast image.</li>
 </ul>
 
 <p>The <code>reset()</code> function essentially undoes a beastify:</p>
 
 <ul>
- <li>remove the CSS we added, using the <code><a href="/en-US/Add-ons/WebExtensions/API/tabs/removeCSS">browser.tabs.removeCSS()</a></code> API</li>
+ <li>remove the CSS we added, using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/removeCSS">browser.tabs.removeCSS()</a></code> API</li>
  <li>send a "reset" message to the content script asking it to reset the page.</li>
 </ul>
 
@@ -398,7 +398,7 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
 
 <p>The first thing the content script does is to check for a global variable <code>window.hasRun</code>: if it's set the script returns early, otherwise it sets <code>window.hasRun</code> and continues. The reason we do this is that every time the user opens the popup, the popup executes a content script in the active tab, so we could have multiple instances of the script running in a single tab. If this happens, we need to make sure that only the first instance is actually going to do anything.</p>
 
-<p>After that, the place to start is line 40, where the content script listens for messages from the popup, using the <code><a href="/en-US/Add-ons/WebExtensions/API/runtime/onMessage">browser.runtime.onMessage</a></code> API. We saw above that the popup script can send two different sorts of messages: "beastify" and "reset".</p>
+<p>After that, the place to start is line 40, where the content script listens for messages from the popup, using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">browser.runtime.onMessage</a></code> API. We saw above that the popup script can send two different sorts of messages: "beastify" and "reset".</p>
 
 <ul>
  <li>if the message is "beastify", we expect it to contain a URL pointing to a beast image. We remove any beasts that might have been added by previous "beastify" calls, then construct and append an <code><a href="/en-US/docs/Web/HTML/Element/img">&lt;img&gt;</a></code> element whose <code>src</code> attribute is set to the beast URL.</li>
@@ -411,7 +411,7 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
 
 <p>Create a new directory called "beasts", and add the three images in that directory, with the appropriate names. You can get the images from <a href="https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts">the GitHub repository</a>, or from here:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11459/frog.jpg" style="display: inline-block; height: 200px; margin: 20px; width: 200px;"><img alt="" src="https://mdn.mozillademos.org/files/11461/snake.jpg" style="display: inline-block; height: 200px; margin: 20px; width: 200px;"><img alt="" src="https://mdn.mozillademos.org/files/11463/turtle.jpg" style="display: inline-block; height: 200px; margin: 20px; width: 200px;"></p>
+<p><img alt="" src="frog.jpg" style="display: inline-block; margin: 20px;"><img alt="" src="snake.jpg" style="display: inline-block; margin: 20px;"><img alt="" src="turtle.jpg" style="display: inline-block; margin: 20px;"></p>
 
 <h2 id="Testing_it_out">Testing it out</h2>
 
@@ -450,20 +450,18 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
 
 <h2 id="Developing_from_the_command_line">Developing from the command line</h2>
 
-<p>You can automate the temporary installation step by using the <a href="/en-US/Add-ons/WebExtensions/Getting_started_with_web-ext">web-ext</a> tool. Try this:</p>
+<p>You can automate the temporary installation step by using the <a href="https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/">web-ext</a> tool. Try this:</p>
 
 <pre class="brush: bash">cd beastify
 web-ext run</pre>
-</div>
 
 <h2 id="Whats_next">What's next?</h2>
 
 <p>Now you've created a more advanced WebExtension for Firefox:</p>
 
 <ul>
- <li><a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">read about the anatomy of an extension</a></li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">read about the anatomy of an extension</a></li>
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples">explore the extension examples</a></li>
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next_">find out what you need to develop, test, and publish your extension</a></li>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next_#Continue_your_learning_experience">take your learning further</a>.</li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next_#continue_your_learning_experience">take your learning further</a>.</li>
 </ul>
-

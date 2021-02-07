@@ -16,7 +16,7 @@ tags:
 
 <p>Open <code>/controllers/bookinstanceController.js</code>. Find the exported <code>bookinstance_list()</code> controller method and replace it with the following code (the changed code is shown in bold).</p>
 
-<pre class="brush: js line-numbers language-js notranslate">// Display list of all BookInstances.
+<pre class="brush: js line-numbers language-js">// Display list of all BookInstances.
 exports.bookinstance_list = function(req, res, next) {
 
   BookInstance.find()
@@ -37,7 +37,7 @@ exports.bookinstance_list = function(req, res, next) {
 
 <p>Create <strong>/views/bookinstance_list.pug</strong> and copy in the text below.</p>
 
-<pre class="brush: js line-numbers language-js notranslate">extends layout
+<pre class="brush: js line-numbers language-js">extends layout
 
 block content
   h1= title
@@ -64,7 +64,7 @@ block content
 
 <p>Run the application, open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>, then select the <em>All book-instances</em> link. If everything is set up correctly, your site should look something like the following screenshot.</p>
 
-<p><img alt="BookInstance List Page - Express Local Library site" src="https://mdn.mozillademos.org/files/14474/LocalLibary_Express_BookInstance_List.png" style="border-style: solid; border-width: 1px; display: block; height: 322px; margin: 0px auto; width: 1200px;"></p>
+<p><img alt="BookInstance List Page - Express Local Library site" src="locallibary_express_bookinstance_list.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h2 id="Next_steps">Next steps</h2>
 

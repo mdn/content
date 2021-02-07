@@ -11647,7 +11647,7 @@
       "estelle"
     ]
   },
-  "Learn/Performance/perceived_performance": {
+  "Learn/Performance/Perceived_performance": {
     "modified": "2020-07-16T22:40:43.307Z",
     "contributors": [
       "wilsotobianco",
@@ -14800,45 +14800,6 @@
       "jswisher",
       "groovecoder",
       "Mingun"
-    ]
-  },
-  "MDN_at_ten": {
-    "modified": "2020-12-14T11:30:31.427Z",
-    "contributors": [
-      "fscholz",
-      "nasimrja",
-      "chandan987",
-      "stephaniehobson",
-      "jsx",
-      "daniellascandles",
-      "h8erofthem8tixs",
-      "jswisher",
-      "chrisdavidmills",
-      "wkforever",
-      "Sheppy"
-    ]
-  },
-  "MDN_at_ten/Contributing_to_MDN": {
-    "modified": "2020-10-30T09:22:12.636Z",
-    "contributors": [
-      "ksam",
-      "jswisher",
-      "jwhitlock",
-      "Sathindu",
-      "El_Matella",
-      "Sebastianz",
-      "Sheppy"
-    ]
-  },
-  "MDN_at_ten/History_of_MDN": {
-    "modified": "2020-12-12T07:24:50.578Z",
-    "contributors": [
-      "bershanskiy",
-      "Sheppy",
-      "jswisher",
-      "jwhitlock",
-      "stephaniehobson",
-      "groovecoder"
     ]
   },
   "Mozilla": {
@@ -27329,7 +27290,7 @@
       "Emil"
     ]
   },
-  "Plugins/Guide/Version,_UI,_and_Status_Information": {
+  "Plugins/Guide/Version_UI_and_Status_Information": {
     "modified": "2019-03-23T23:50:02.554Z",
     "contributors": [
       "fscholz",
@@ -107582,7 +107543,7 @@
       "teoli"
     ]
   },
-  "Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes": {
+  "Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes": {
     "modified": "2020-11-12T04:23:35.016Z",
     "contributors": [
       "rachelandrew",
@@ -165946,6 +165907,33 @@
       "ttromey",
       "qdot",
       "marcosc"
+    ]
+  },
+  "MDN/At_ten": {
+    "modified": "2020-12-14T11:30:31.427Z",
+    "contributors": [
+      "fscholz",
+      "nasimrja",
+      "chandan987",
+      "stephaniehobson",
+      "jsx",
+      "daniellascandles",
+      "h8erofthem8tixs",
+      "jswisher",
+      "chrisdavidmills",
+      "wkforever",
+      "Sheppy"
+    ]
+  },
+  "MDN/At_ten/History_of_MDN": {
+    "modified": "2020-12-12T07:24:50.578Z",
+    "contributors": [
+      "bershanskiy",
+      "Sheppy",
+      "jswisher",
+      "jwhitlock",
+      "stephaniehobson",
+      "groovecoder"
     ]
   }
 }

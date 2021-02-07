@@ -15,7 +15,7 @@ tags:
   - comments
   - external
   - inline
-  - 'l10n:priority'
+  - l10n:priority
   - what
 ---
 <div>{{LearnSidebar}}</div>
@@ -141,11 +141,11 @@ function updateName() {
 
 <p>Here we'll actually start looking at some code, and while doing so, explore what actually happens when you run some JavaScript in your page.</p>
 
-<p>Let's briefly recap the story of what happens when you load a web page in a browser (first talked about in our <a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_works#How_does_CSS_actually_work">How CSS works</a> article). When you load a web page in your browser, you are running your code (the HTML, CSS, and JavaScript) inside an execution environment (the browser tab). This is like a factory that takes in raw materials (the code) and outputs a product (the web page).</p>
+<p>Let's briefly recap the story of what happens when you load a web page in a browser (first talked about in our <a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_works#how_does_css_actually_work">How CSS works</a> article). When you load a web page in your browser, you are running your code (the HTML, CSS, and JavaScript) inside an execution environment (the browser tab). This is like a factory that takes in raw materials (the code) and outputs a product (the web page).</p>
 
 <p><img alt="" src="execution.png" style="display: block; margin: 0 auto;"></p>
 
-<p>A very common use of JavaScript is to dynamically modify HTML and CSS to update a user interface, via the Document Object Model API (as mentioned above). Note that the code in your web documents is generally loaded and executed in the order it appears on the page. If the JavaScript loads and tries to run before the HTML and CSS it is affecting has been loaded, errors can occur. You will learn ways around this later in the article, in the <a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Script_loading_strategies">Script loading strategies</a> section.</p>
+<p>A very common use of JavaScript is to dynamically modify HTML and CSS to update a user interface, via the Document Object Model API (as mentioned above). Note that the code in your web documents is generally loaded and executed in the order it appears on the page. If the JavaScript loads and tries to run before the HTML and CSS it is affecting has been loaded, errors can occur. You will learn ways around this later in the article, in the <a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#script_loading_strategies">Script loading strategies</a> section.</p>
 
 <h3 id="Browser_security">Browser security</h3>
 
@@ -307,7 +307,7 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 
 <h3 id="Script_loading_strategies">Script loading strategies</h3>
 
-<p>There are a number of issues involved with getting scripts to load at the right time. Nothing is as simple as it seems! A common problem is that all the HTML on a page is loaded in the order in which it appears. If you are using JavaScript to manipulate elements on the page (or more accurately, the <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#The_document_object_model">Document Object Model</a>), your code won't work if the JavaScript is loaded and parsed before the HTML you are trying to do something to.</p>
+<p>There are a number of issues involved with getting scripts to load at the right time. Nothing is as simple as it seems! A common problem is that all the HTML on a page is loaded in the order in which it appears. If you are using JavaScript to manipulate elements on the page (or more accurately, the <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#the_document_object_model">Document Object Model</a>), your code won't work if the JavaScript is loaded and parsed before the HTML you are trying to do something to.</p>
 
 <p>In the above code examples, in the internal and external examples the JavaScript is loaded and run in the head of the document, before the HTML body is parsed. This could cause an error, so we've used some constructs to get around it.</p>
 

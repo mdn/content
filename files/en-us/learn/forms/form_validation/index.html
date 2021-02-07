@@ -369,7 +369,7 @@ input:focus:invalid {
 
 <p>{{EmbedLiveSample("Full_example", "100%", 420)}}</p>
 
-<p>See <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation#Validation-related_attributes">Validation-related attributes</a> for a complete list of attributes that can be used to constrain input values and the input types that support them.</p>
+<p>See <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation#validation-related_attributes">Validation-related attributes</a> for a complete list of attributes that can be used to constrain input values and the input types that support them.</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: You can find this example live on GitHub as <a href="https://mdn.github.io/learning-area/html/forms/form-validation/full-example.html">full-example.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/full-example.html">source code</a>.)</p>
@@ -455,7 +455,7 @@ email.addEventListener("input", function (event) {
 
 <p>Here we store a reference to the email input, then add an event listener to it that runs the contained code each time the value inside the input is changed.</p>
 
-<p>Inside the contained code, we check whether the email input's <code>validity.typeMismatch</code> property returns <code>true</code>, meaning that the contained value doesn't match the pattern for a well-formed email address. If so, we call the <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()"><code>setCustomValidity()</code></a> method with a custom message. This renders the input invalid, so that when you try to submit the form, submission fails and the custom error message is displayed.</p>
+<p>Inside the contained code, we check whether the email input's <code>validity.typeMismatch</code> property returns <code>true</code>, meaning that the contained value doesn't match the pattern for a well-formed email address. If so, we call the <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation#constraint_api's_element.setcustomvalidity()"><code>setCustomValidity()</code></a> method with a custom message. This renders the input invalid, so that when you try to submit the form, submission fails and the custom error message is displayed.</p>
 
 <p>If the <code>validity.typeMismatch</code> property returns <code>false</code>, we call the <code>setCustomValidity()</code> method an empty string. This renders the input valid, so the form will submit.</p>
 

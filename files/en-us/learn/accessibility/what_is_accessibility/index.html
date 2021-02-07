@@ -72,11 +72,11 @@ tags:
  <li>Software built into the operating system, like <a class="external external-icon" href="https://www.apple.com/accessibility/mac/vision/">VoiceOver</a> (macOS, iPadOS, iOS), <a class="external external-icon" href="https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started">Narrator</a> (Windows), <a class="external external-icon" href="https://www.chromevox.com/">ChromeVox</a> (on Chrome OS), and <a class="external external-icon" href="https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback">TalkBack</a> (Android).</li>
 </ul>
 
-<p>It is a good idea to familiarize yourself with screen readers; you should also set up a screen reader and have a play around with it, to get an idea of how it works. See our <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders">cross-browser testing screen readers guide</a> for more details on using them. The below video also provides a brief example of what the experience is like.</p>
+<p>It is a good idea to familiarize yourself with screen readers; you should also set up a screen reader and have a play around with it, to get an idea of how it works. See our <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders">cross-browser testing screen readers guide</a> for more details on using them. The below video also provides a brief example of what the experience is like.</p>
 
 <p>{{EmbedYouTube("IK97XMibEws")}}</p>
 
-<p>In terms of statistics, the World Health Organization estimates that "285 million people are estimated to be visually impaired worldwide: 39 million are blind and 246 have low vision." (see <a href="https://www.who.int/mediacentre/factsheets/fs282/en/">Visual impairment and blindness</a>). That's a large and significant population of users to just miss out on because your site isn't coded properly — almost the same size as the population of the United States of America.</p>
+<p>In terms of statistics, the World Health Organization estimates that "285 million people are estimated to be visually impaired worldwide: 39 million are blind and 246 million have low vision." (see <a href="https://www.who.int/mediacentre/factsheets/fs282/en/">Visual impairment and blindness</a>). That's a large and significant population of users to just miss out on because your site isn't coded properly — almost the same size as the population of the United States of America.</p>
 
 <h3 id="People_with_hearing_impairments">People with hearing impairments</h3>
 
@@ -92,7 +92,7 @@ tags:
 
 <p>This kind of disability can also be a result of old age, rather than any specific trauma or condition, and it could also result from hardware limitations — some users might not have a mouse.</p>
 
-<p>The way this usually affects web development work is the requirement that controls be accessible by the keyboard — we'll discuss keyboard accessibility in later articles in the module, but it is a good idea to try out some websites using just the keyboard to see how you get on. Can you use the Tab key to move between the different controls of a web form, for example? You can find more details about keyboard controls in our <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility">Cross browser testing Using native keyboard accessibility</a> section.</p>
+<p>The way this usually affects web development work is the requirement that controls be accessible by the keyboard — we'll discuss keyboard accessibility in later articles in the module, but it is a good idea to try out some websites using just the keyboard to see how you get on. Can you use the Tab key to move between the different controls of a web form, for example? You can find more details about keyboard controls in our <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#using_native_keyboard_accessibility">Cross browser testing Using native keyboard accessibility</a> section.</p>
 
 <p>In terms of statistics, a significant number of people have mobility impairments. The US Centers for Disease Control and Prevention <a href="https://www.cdc.gov/nchs/fastats/disability.htm">Disability and Functioning (Non-institutionalized Adults 18 Years and Over)</a> reports the USA "Percent of adults with any physical functioning difficulty: 16.1%".</p>
 
@@ -118,7 +118,7 @@ tags:
 
 <ul>
  <li>Designing with <a href="/en-US/docs/Web/Accessibility/Cognitive_accessibility">cognitive accessibility</a> will lead to good design practices. They will benefit everyone.</li>
- <li>Many people with cognitive impairments also have physical disabilities. Websites must conform with the W3C’s <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines</a>, including <a href="/en-US/docs/Web/Accessibility/Cognitive_accessibility#Guidelines">cognitive accessibility guidelines</a>.</li>
+ <li>Many people with cognitive impairments also have physical disabilities. Websites must conform with the W3C’s <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines</a>, including <a href="/en-US/docs/Web/Accessibility/Cognitive_accessibility#guidelines">cognitive accessibility guidelines</a>.</li>
  <li>The W3C’s <a href="https://www.w3.org/WAI/GL/task-forces/coga/">Cognitive and Learning Disabilities Accessibility Task Force</a> produces web accessibility guidelines for people with cognitive impairments.</li>
  <li>WebAIM has a <a href="https://webaim.org/articles/cognitive/">Cognitive page</a> of relevant information and resources<a name="_GoBack"></a>.</li>
  <li>The United States Centers for Disease Control estimate that, as of 2018, 1 in 4 US citizens have a disability and, of them, <a href="https://www.cdc.gov/media/releases/2018/p0816-disability.html">cognitive impairment is the most common for young people</a>.</li>
@@ -137,7 +137,7 @@ tags:
 
 <p>If however, you consider accessibility from the start of a project, the cost of making most content accessible should be fairly minimal.</p>
 
-<p>When planning your project, factor accessibility testing into your testing regime, just like testing for any other important target audience segment (e.g., target desktop or mobile browsers). Test early and often, ideally running automated tests to pick up on programmatically detectable missing features (such as missing image <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Text_alternatives">alternative text</a> or bad link text — see <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Element_relationships_and_context">Element relationships and context</a>) and doing some testing with disabled user groups to see how well more complex site features work for them. For example:</p>
+<p>When planning your project, factor accessibility testing into your testing regime, just like testing for any other important target audience segment (e.g., target desktop or mobile browsers). Test early and often, ideally running automated tests to pick up on programmatically detectable missing features (such as missing image <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#text_alternatives">alternative text</a> or bad link text — see <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#element_relationships_and_context">Element relationships and context</a>) and doing some testing with disabled user groups to see how well more complex site features work for them. For example:</p>
 
 <ul>
  <li>Is my date picker widget usable by people using screen readers?</li>

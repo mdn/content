@@ -7,9 +7,9 @@ tags:
   - Houdini
   - Learn
 ---
-<p>The <strong><a href="/en-US/docs/Web/Houdini/CSS_Typed_OM">CSS Typed Object Model API</a></strong> exposes CSS values as typed JavaScript objects to allow their performant manipulation.</p>
+<p>The <strong><a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a></strong> exposes CSS values as typed JavaScript objects to allow their performant manipulation.</p>
 
-<p>Converting <a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a> value strings into meaningfully-typed JavaScript representations and back (via {{domxref('HTMLElement.style')}}) can incur a significant performance overhead.</p>
+<p>Converting <a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a> value strings into meaningfully-typed JavaScript representations and back (via {{domxref("ElementCSSInlineStyle/style", "HTMLElement.style")}} can incur a significant performance overhead.</p>
 
 <p>The CSS Typed OM makes CSS manipulation more logical and performant by providing object features (rather than CSSOM string manipulation), providing access to types, methods, and an object model for CSS values.</p>
 
@@ -53,7 +53,7 @@ for (const [prop, val] of defaultComputedStyles) {
 
 <p>The <code>computedStyleMap()</code> method returns a {{domxref('StylePropertyMapReadOnly')}} object containing the <code><a href="/en-US/docs/Web/API/StylePropertyMapReadOnly/size">size</a></code> property, which indicates how many properties are in the map. We iterate through the style map, creating a  <code><a href="/en-US/docs/Web/HTML/Element/dt">&lt;dt&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/dd">&lt;dd&gt;</a></code> for each property and value respectively.</p>
 
-<p>In  <a href="/en-US/docs/Web/API/Element/computedStyleMap#Browser_compatibility">browsers that support <code>computedStyleMap()</code></a>, you'll see a list of all the CSS properties and values. In other browsers, you'll just see a link.</p>
+<p>In  <a href="/en-US/docs/Web/API/Element/computedStyleMap#browser_compatibility">browsers that support <code>computedStyleMap()</code></a>, you'll see a list of all the CSS properties and values. In other browsers, you'll just see a link.</p>
 
 <p>{{EmbedLiveSample("example1", 120, 300)}}</p>
 
@@ -62,7 +62,7 @@ for (const [prop, val] of defaultComputedStyles) {
 
 <h3 id=".get_method_custom_properties">.get() method / custom properties</h3>
 
-<p>Let's update our example to only retrieve a few properties and values. Let's start by adding some CSS to our example, including a custom property and an inhertable property:</p>
+<p>Let's update our example to only retrieve a few properties and values. Let's start by adding some CSS to our example, including a custom property and an inheritable property:</p>
 
 <div id="example2">
 <pre class="brush: css notranslate">p {
@@ -128,7 +128,7 @@ for ( let i = 0; i &lt; ofInterest.length; i++ ) {
 <pre class="brush: html notranslate">&lt;p&gt;
    This is a paragraph with some content. Open up this example in Codepen or
    JSFiddle, and change some features. Try adding some CSS, such as a width
-   for this paragraph, or adding a CSS property to the ofInterst array.
+   for this paragraph, or adding a CSS property to the ofInterest array.
 &lt;/p&gt;
 &lt;table id="regurgitation"&gt;
   &lt;thead&gt;
@@ -259,7 +259,7 @@ for ( let i = 0; i &lt; ofInterest.length; i++ ) {
 
 <h2 id="CSSStyleValue">CSSStyleValue</h2>
 
-<p>The <code>CSSStyleValue</code> interface of the <a href="/en-US/docs/Web/API/CSS_Typed_Object_Model_API">CSS Typed Object Model API</a> is the base class of all CSS values accessible through the Typed OM API, including {{domxref('CSSImageValue')}}, {{domxref('CSSKeywordValue')}}, {{domxref('CSSNumericValue')}}, {{domxref('CSSPositionValue')}}, {{domxref('CSSTransformValue')}}, and {{domxref('CSSUnparsedValue')}}.</p>
+<p>The <code>CSSStyleValue</code> interface of the <a href="/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model">CSS Typed Object Model API</a> is the base class of all CSS values accessible through the Typed OM API, including {{domxref('CSSImageValue')}}, {{domxref('CSSKeywordValue')}}, {{domxref('CSSNumericValue')}}, {{domxref('CSSPositionValue')}}, {{domxref('CSSTransformValue')}}, and {{domxref('CSSUnparsedValue')}}.</p>
 
 <p>It has two methods:</p>
 
@@ -372,7 +372,7 @@ console.log( parsedUnit.value );  // 1.2</pre>
 
 <h3 id="CSSMathSum">CSSMathSum</h3>
 
-<p>Although the <code><a href="/en-US/docs/Web/HTML/Element/button">&lt;button&gt;</a></code> element is an inline element by default, we've added <code><a href="/en-US/docs/Web/CSS/CSS_Display">display: inline-block;</a></code> to enable sizing. In our CSS we have <code>width: calc(30% + 20px);</code>, which is a <code><a href="/en-US/docs/Web/CSS/calc">calc()</a></code> function to define the width.</p>
+<p>Although the <code><a href="/en-US/docs/Web/HTML/Element/button">&lt;button&gt;</a></code> element is an inline element by default, we've added <code><a href="/en-US/docs/Web/CSS/CSS_Display">display: inline-block;</a></code> to enable sizing. In our CSS we have <code>width: calc(30% + 20px);</code>, which is a <code><a href="/en-US/docs/Web/CSS/calc()">calc()</a></code> function to define the width.</p>
 
 <p>When we <code>get()</code> the <code>width</code>, we get a <code><a href="/en-US/docs/Web/API/CSSMathSum">CSSMathSum</a></code> returned. {{domxref('CSSMathSum.values')}} is a {{domxref('CSSNumericArray')}} with 2 <code>CSSUnitValues</code>.</p>
 
@@ -419,7 +419,7 @@ console.log( bgImage.toString() );  // url("https://mdn.mozillademos.org/files/1
 
 <h3 id="Summary">Summary</h3>
 
-<p>This should get you started with understanding the CSS Typed OM. Take a look at all the <a href="/en-US/docs/Web/Houdini/learn/CSS_Typed_OM">CSS Typed OM</a> interfaces to learn more.</p>
+<p>This should get you started with understanding the CSS Typed OM. Take a look at all the <a href="/en-US/docs/Web/API/CSS_Typed_OM_API/Guide">CSS Typed OM</a> interfaces to learn more.</p>
 
 <h2 id="See_also">See also</h2>
 

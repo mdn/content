@@ -18,8 +18,8 @@ tags:
 <ul>
  <li>The <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts">Flexbox inspector</a> is now enabled by default.</li>
  <li>Support has been added to the <a href="/en-US/docs/Tools/Debugger">JavaScript Debugger</a> for XHR Breakpoints ({{bug(821610)}}).</li>
- <li>Right-click on an item in the accessibility tree from the Accessibility viewer to <a href="/en-US/docs/Tools/Accessibility_inspector#Print_accessibility_tree_to_json">print it as json</a> to the JSON viewer.</li>
- <li>The <a href="/en-US/docs/Tools/Accessibility_inspector#Color_Contrast">color contrast</a> display of the Accessibility Picker has been updated so that if a text's background is complex (e.g. a gradient or complex image), it shows a range of color contrast values.</li>
+ <li>Right-click on an item in the accessibility tree from the Accessibility viewer to <a href="/en-US/docs/Tools/Accessibility_inspector#print_accessibility_tree_to_json">print it as json</a> to the JSON viewer.</li>
+ <li>The <a href="/en-US/docs/Tools/Accessibility_inspector#color_contrast">color contrast</a> display of the Accessibility Picker has been updated so that if a text's background is complex (e.g. a gradient or complex image), it shows a range of color contrast values.</li>
  <li>The Headers tab of the <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> now displays the Referrer Policy for the selected request ({{bug(1496742)}}).</li>
  <li>When displaying stack traces (e.g. in console logs or the JavaScript debugger), calls to framework methods are identified and collapsed by default, making it easier to home in on your code.</li>
  <li>In the same fashion as native terminals, you can now use reverse search to find entries in your JavaScript console history (<kbd>F9</kbd> on Windows/Linux or <kbd>Ctrl</kbd> + <kbd>R</kbd> on macOS, then type a search term, followed by <kbd>Ctrl</kbd> + <kbd>R</kbd>/<kbd>Ctrl</kbd> + <kbd>S</kbd> to toggle through results).</li>
@@ -48,7 +48,7 @@ tags:
   </ul>
  </li>
  <li>The {{cssxref("overflow-wrap")}} property's <code>anywhere</code> value has been implemented ({{bug(1505786)}}).</li>
- <li>The new step position keywords <code>jump-start</code>, <code>jump-end</code>, <code>jump-none</code>, and <code>jump-both</code> — usable inside the <a href="/en-US/docs/Web/CSS/single-transition-timing-function#The_steps()_class_of_timing_functions"><code>steps()</code> timing function</a> — have been implemented ({{bug(1496619)}}). This also coincides with the removal of the <code>frames()</code> timing function, which was the previous way of implementing such functionality, now deprecated.</li>
+ <li>The new step position keywords <code>jump-start</code>, <code>jump-end</code>, <code>jump-none</code>, and <code>jump-both</code> — usable inside the <a href="/en-US/docs/Web/CSS/easing-function#the_steps()_class_of_timing_functions"><code>steps()</code> timing function</a> — have been implemented ({{bug(1496619)}}). This also coincides with the removal of the <code>frames()</code> timing function, which was the previous way of implementing such functionality, now deprecated.</li>
  <li>Some new {{cssxref("appearance", "-webkit-appearance")}} values have been added, for compatibility with other browsers. In particular:
   <ul>
    <li><code>meter</code>, which is now used as the default value for {{htmlelement("meter")}} elements in UA stylesheets. the existing value <code>meterbar</code> is now an alias for <code>meter</code> ({{bug(1501483)}}).</li>
@@ -68,7 +68,7 @@ tags:
    <li>The proprietary <code>-moz-text</code> value has been removed.</li>
   </ul>
  </li>
- <li>CSS environment variables (the {{cssxref("env")}} function) have been implemented ({{bug(1462233)}}).</li>
+ <li>CSS environment variables (the {{cssxref("env()")}} function) have been implemented ({{bug(1462233)}}).</li>
 </ul>
 
 <h4 id="Removals">Removals</h4>
@@ -86,7 +86,7 @@ tags:
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
- <li>{{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}} is now supported ({{bug(1504334)}}).</li>
+ <li>{{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}} is now supported ({{bug(1504334)}}).</li>
  <li>Strings now have a maximum {{jsxref("String/length","length","","1")}} of <code>2**30 - 2</code> (~1GB) instead of <code>2**28 - 1</code> (~256MB) ({{bug(1509542)}}).</li>
  <li>The {{jsxref("globalThis")}} property, which always refers to the top-level global object, has been implemented ({{bug(1317422)}}).</li>
 </ul>
@@ -113,7 +113,7 @@ tags:
 
 <ul>
  <li>Going forward, only one {{domxref("Window.open()")}} call is allowed per event ({{bug(675574)}}).</li>
- <li>The <code><a href="/en-US/docs/Web/Events/keyup">keyup</a></code> and <code><a href="/en-US/docs/Web/Events/keydown">keydown</a></code> events are now fired during IME composition, to improve cross-browser compatibility for CJKT users ({{bug(354358)}}, also see<br>
+ <li>The <code><a href="/en-US/docs/Web/API/Document/keyup_event">keyup</a></code> and <code><a href="/en-US/docs/Web/API/Document/keydown_event">keydown</a></code> events are now fired during IME composition, to improve cross-browser compatibility for CJKT users ({{bug(354358)}}, also see<br>
   <a href="https://www.fxsitecompat.com/en-CA/docs/2018/keydown-and-keyup-events-are-now-fired-during-ime-composition/">keydown and keyup events are now fired during IME composition</a> for more useful details).</li>
 </ul>
 
@@ -154,7 +154,7 @@ tags:
  <li>The non-standard {{domxref("MediaStream")}} property <code>currentTime</code> has been removed ({{bug(1502927)}}).</li>
  <li>The <code>dom.webcomponents.shadowdom.enabled</code> and <code>dom.webcomponents.customelements.enabled</code> prefs have been removed — Shadow DOM and Custom Elements can no longer be disabled in <code>about:config</code> ({{bug(1503019)}}).</li>
  <li>The non-standard DOM <code>text</code> event — fired to notify the browser editor UI of IME composition string data and selection range — has been removed ({{bug(1288640)}}).</li>
- <li>The {{event("keypress")}} event is no longer fired for <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode#Non-printable_keys_(function_keys)">non-printable keys</a> ({{bug(968056)}}), except for the <kbd>Enter</kbd> key, and the <kbd>Shift</kbd> + <kbd>Enter</kbd> and <kbd>Ctrl</kbd> + <kbd>Enter</kbd> key combinations (these were kept for cross-browser compatibility purposes).</li>
+ <li>The {{event("keypress")}} event is no longer fired for <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)">non-printable keys</a> ({{bug(968056)}}), except for the <kbd>Enter</kbd> key, and the <kbd>Shift</kbd> + <kbd>Enter</kbd> and <kbd>Ctrl</kbd> + <kbd>Enter</kbd> key combinations (these were kept for cross-browser compatibility purposes).</li>
 </ul>
 
 <h3 id="Security">Security</h3>

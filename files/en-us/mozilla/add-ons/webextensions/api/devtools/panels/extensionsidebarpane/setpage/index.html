@@ -38,12 +38,12 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>Create a new pane, and populate it with an HTML page. You could run this code in a script loaded by your extension's <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/devtools_page">devtools page</a>.</p>
+<p>Create a new pane, and populate it with an HTML page. You could run this code in a script loaded by your extension's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page">devtools page</a>.</p>
 
-<pre class="notranslate brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">onCreated</span><span class="punctuation token">(</span>sidebarPane<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  sidebarPane<span class="punctuation token">.</span><span class="function token">setPage</span><span class="punctuation token">('sidebar/sidebar.html'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
-</code></pre>
+<pre class="notranslate brush: js line-numbers  language-js">function onCreated(sidebarPane) {
+  sidebarPane.setPage('sidebar/sidebar.html');
+}
+</pre>
 
 <p>{{WebExtExamples}}</p>
 
@@ -87,4 +87,3 @@ tags:
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</pre>
 </div>
-

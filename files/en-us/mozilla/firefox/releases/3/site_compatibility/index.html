@@ -32,11 +32,11 @@ tags:
 
 <h3 id="preventBubble_has_been_removed"><code>preventBubble</code> has been removed</h3>
 
-<p>In Gecko 1.8, the <code>preventBubble</code> method existed on events to prevent events from bubbling upwards. In Gecko 1.9 this method has been removed. Instead, you should use the standard <a href="/en-US/DOM/event.stopPropagation">stopPropagation()</a>, which also works fine in Gecko 1.8. The patch in {{ Bug(330494) }} made this happen. See also {{ Bug(105280) }}.</p>
+<p>In Gecko 1.8, the <code>preventBubble</code> method existed on events to prevent events from bubbling upwards. In Gecko 1.9 this method has been removed. Instead, you should use the standard <a href="/en-US/docs/Web/API/Event/stopPropagation">stopPropagation()</a>, which also works fine in Gecko 1.8. The patch in {{ Bug(330494) }} made this happen. See also {{ Bug(105280) }}.</p>
 
 <h3 id="A_few_other_old_event_APIs_are_no_longer_supported">A few other old event APIs are no longer supported</h3>
 
-<p><a href="/en-US/docs/Web/API/window.captureEvents"><code>window.captureEvents</code></a>, <a href="/en-US/docs/Web/API/window.releaseEvents"><code>window.releaseEvents</code></a> and <a href="/en-US/docs/Web/API/window.routeEvent"><code>window.routeEvent</code></a> are now considered deprecated since Gecko 1.9.</p>
+<p><a href="/en-US/docs/Web/API/Window/captureEvents"><code>window.captureEvents</code></a>, <a href="/en-US/docs/Web/API/Window/releaseEvents"><code>window.releaseEvents</code></a> and <a href="/en-US/docs/Web/API/Window/routeEvent"><code>window.routeEvent</code></a> are now considered deprecated since Gecko 1.9.</p>
 
 <h2 id="DOM">DOM</h2>
 
@@ -54,15 +54,15 @@ tags:
 
 <h3 id="intersectsNode_has_been_removed"><code>intersectsNode</code> has been removed</h3>
 
-<p>In Gecko 1.8 the function <code>intersectsNode</code> code be used to test if a node intersected a range. However the return values from this function were confusing and rarely useful and has therefore been removed in Gecko 1.9. Instead use the more precise and standard function <a href="/en-US/DOM/range.compareBoundaryPoints">compareBoundaryPoints</a>. The patch in {{ Bug(358073) }} removed this function.</p>
+<p>In Gecko 1.8 the function <code>intersectsNode</code> code be used to test if a node intersected a range. However the return values from this function were confusing and rarely useful and has therefore been removed in Gecko 1.9. Instead use the more precise and standard function <a href="/en-US/docs/Web/API/Range/compareBoundaryPoints">compareBoundaryPoints</a>. The patch in {{ Bug(358073) }} removed this function.</p>
 
-<p>See the documentation for <a href="/en-US/DOM/range.intersectsNode">intersectsNode</a> for how to use <code>compareBoundaryPoints</code> instead.</p>
+<p>See the documentation for <a href="/en-US/docs/Web/API/Range/intersectsNode">intersectsNode</a> for how to use <code>compareBoundaryPoints</code> instead.</p>
 
 <h3 id="compareNode_has_been_removed"><code>compareNode</code> has been removed</h3>
 
-<p>In Gecko 1.8 the function <code>compareNode</code> code be used to test how a node intersected a range. However the return values from this function were confusing and rarely useful and has therefore been removed in Gecko 1.9. Instead use the more precise and standard function <a href="/en-US/DOM/range.compareBoundaryPoints">compareBoundaryPoints</a>. The patch in {{ Bug(358073) }} removed this function.</p>
+<p>In Gecko 1.8 the function <code>compareNode</code> code be used to test how a node intersected a range. However the return values from this function were confusing and rarely useful and has therefore been removed in Gecko 1.9. Instead use the more precise and standard function <a href="/en-US/docs/Web/API/Range/compareBoundaryPoints">compareBoundaryPoints</a>. The patch in {{ Bug(358073) }} removed this function.</p>
 
-<p>See the documentation for <a href="/en-US/DOM/range.compareNode">compareNode</a> for how to use <code>compareBoundaryPoints</code> instead.</p>
+<p>See the documentation for <a href="/en-US/docs/Web/API/Range/compareNode">compareNode</a> for how to use <code>compareBoundaryPoints</code> instead.</p>
 
 <h2 id="HTML">HTML</h2>
 

@@ -11,14 +11,14 @@ tags:
 
 <p><code>make.py</code> (and the <code><a class="external" href="http://benjamin.smedbergs.us/pymake/">pymake</a></code> modules that support it) are an implementation of the <code>make</code> tool which are mostly compatible with makefiles written for GNU <code>make</code>.</p>
 <h3 id="Prerequisites">Prerequisites</h3>
-<p>If running Windows, you need to have <a href="/En/Developer_Guide/Build_Instructions/Windows_Prerequisites" title="Windows build prerequisites">a Windows build environment</a> installed for using <code>pymake</code> to build Mozilla.</p>
+<p>If running Windows, you need to have <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Windows_Prerequisites" title="Windows build prerequisites">a Windows build environment</a> installed for using <code>pymake</code> to build Mozilla.</p>
 <p>On other operating systems (Linux, OS X, etc), <code>pymake</code> itself only requires Python 2.6 or higher (but not Python 3). Please note that Python 2.7 is strongly recommended.</p>
 <h3 id="Usage">Usage</h3>
 <div class="note">
- <p>If you use <a href="/en-US/docs/Developer_Guide/mach">mach </a>for everything, you don't have to worry about gmake and pymake: mach will run whatever is best for the current machine.</p>
+ <p>If you use <a href="/en-US/docs/Mozilla/Developer_guide/mach">mach </a>for everything, you don't have to worry about gmake and pymake: mach will run whatever is best for the current machine.</p>
 </div>
 <div class="note">
- <p><strong>Note:</strong> On Windows, you must take special care to be able to switch back and forth between gmake and pymake on the same object dir. See <a href="/en-US/docs/Gmake_vs._Pymake">Gmake vs. Pymake</a> for more information.</p>
+ <p><strong>Note:</strong> On Windows, you must take special care to be able to switch back and forth between gmake and pymake on the same object dir. See <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Gmake_vs_Pymake">Gmake vs. Pymake</a> for more information.</p>
 </div>
 <p>Anywhere you would normally type <code>make</code>, instead type <code>python /path/to/srcdir/build/pymake/make.py</code>.  For example:</p>
 <ul>

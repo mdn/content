@@ -31,12 +31,12 @@ tags:
    <li>The <code>true</code> value has been renamed to <code>unsafe</code>; this affects the properties {{cssxref("justify-content")}}, {{cssxref("align-content")}}, {{cssxref("justify-self")}}, {{cssxref("align-self")}}, {{cssxref("justify-items")}} and {{cssxref("align-items")}} ({{bug(1230478)}}).</li>
   </ul>
  </li>
- <li>The properties {{cssxref("text-emphasis")}}, {{cssxref("text-emphasis-style")}}, {{cssxref("text-emphasis-color")}} and {{cssxref("text-emphasis-position")}} are now enabled by defaut ({{bug(1231485)}}).</li>
+ <li>The properties {{cssxref("text-emphasis")}}, {{cssxref("text-emphasis-style")}}, {{cssxref("text-emphasis-color")}} and {{cssxref("text-emphasis-position")}} are now enabled by default ({{bug(1231485)}}).</li>
  <li>Gecko now accepts the <code>-webkit-</code> prefixed version of <a href="https://wiki.mozilla.org/Compatibility/Mobile/Non_Standard_Compatibility">some properties</a>; it requires to switch <code>layout.css.prefixes.webkit</code> to <code>true</code> ({{bug(1213126)}}).</li>
  <li>The experimental support of the {{cssxref("@font/font-display", "font-display")}} descriptor (of {{cssxref("@font")}}; it requires to switch <code>layout.css.font-display.enabled</code> to <code>true</code> ({{bug(1157064)}}).</li>
  <li>Added support for <a href="/en-US/docs/Web/CSS/@media/-webkit-transform-3d"><code>@media (-webkit-transform-3d)</code></a> as a media query for 3D transform support, if about:config pref <code>layout.css.prefixes.webkit</code> is set to <code>true</code> ({{bug(1239799)}}).</li>
  <li>{{cssxref("linear-gradient()")}} support for the omission of <code>0deg</code> units ({{bug(1239153)}}).</li>
- <li>Added {{cssxref("-webkit-filter")}} for web compatibility, behind the preference <code>layout.css.prefixes.webkit</code>, defaulting to <code>false</code> ({{bug(1236506)}}).</li>
+ <li>Added <code>-webkit-filter</code> for web compatibility, behind the preference <code>layout.css.prefixes.webkit</code>, defaulting to <code>false</code> ({{bug(1236506)}}).</li>
  <li> [css-align] "unsafe start" (formerly "true start") should serialize to "start" etc ({{bug(1230398)}}).</li>
 </ul>
 
@@ -62,7 +62,7 @@ tags:
 
 <ul>
  <li>The deprecated {{domxref("Window.showModalDialog()")}} method is no more available when Firefox runs in multi-process mode (e10s) ({{bug(1234700)}}).</li>
- <li>Added support for {{domxref("Document.elementsFromPoint")}} ({{bug(1164427)}}).</li>
+ <li>Added support for {{domxref("DocumentOrShadowRoot/elementsFromPoint", "Document.elementsFromPoint")}} ({{bug(1164427)}}).</li>
  <li>When a non-existent option of a {{HTMLElement("select")}} element is programmatically selected, instead of being incorrectly left unchanged, the {{htmlattrxref("selectedIndex", "select")}} value is now set to <code>-1</code>, the {{htmlattrxref("selectedOptions", "select")}} to an empty {{domxref("HTMLCollection")}}, and {{htmlattrxref("value", "select")}} to an empty string ({{bug(1203668)}}).</li>
 </ul>
 
@@ -77,7 +77,7 @@ tags:
 <h4 id="WebGL">WebGL</h4>
 
 <ul>
- <li>The {{domxref("WEBGL_compressed_texture_es3")}} extension has been implemented, allowing the use of <a href="https://en.wikipedia.org/wiki/Ericsson_Texture_Compression">ETC2 compressed texture formats </a>({{bug(917505)}}). To use this extension, set the preference <code>webgl.enable-draft-extensions</code> to <code>true</code> in about:config.</li>
+ <li>The {{domxref("WEBGL_compressed_texture_etc")}} extension has been implemented, allowing the use of <a href="https://en.wikipedia.org/wiki/Ericsson_Texture_Compression">ETC2 compressed texture formats </a>({{bug(917505)}}). To use this extension, set the preference <code>webgl.enable-draft-extensions</code> to <code>true</code> in about:config.</li>
 </ul>
 
 <h4 id="IndexedDB">IndexedDB</h4>
@@ -117,7 +117,7 @@ tags:
  <li>The asynchronous {{domxref("FileReader")}} is now available in Web workers ({{bug(901097)}}).</li>
  <li>Our experimental implementation of <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> has been updated:
   <ul>
-   <li>{{domxref("AnimationEffectTimingReadOnly")}} and {{domxref("AnimationEffectReadOnly.timing")}} have been implemented ({{bug(1214536)}}).</li>
+   <li>{{domxref("AnimationEffectTimingReadOnly")}} and {{domxref("AnimationEffect/getTiming", "AnimationEffectReadOnly.timing")}} have been implemented ({{bug(1214536)}}).</li>
   </ul>
  </li>
  <li>The <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a> has now been enabled by default, for all release versions, not just Nightly as it previously was ({{bug(1221106)}}.)</li>

@@ -212,7 +212,7 @@ tags:
   <dt><code>document-uri</code></dt>
   <dd>The URI of the document in which the violation occurred.</dd>
   <dt><code>effective-directive</code></dt>
-  <dd>The directive whose enforcement caused the violation.</dd>
+  <dd>The directive whose enforcement caused the violation. Some browsers may provide different values, such as Chrome providing <code>style-src-elem</code>/<code>style-src-attr</code>, even when the actual enforced directive was <code>style-src</code>.</dd>
   <dt><code>original-policy</code></dt>
   <dd>The original policy as specified by the <code>Content-Security-Policy</code> HTTP
     header.</dd>
@@ -220,7 +220,7 @@ tags:
   <dd>The referrer of the document in which the violation occurred.</dd>
   <dt><code>script-sample</code></dt>
   <dd>The first 40 characters of the inline script, event handler, or style that caused
-    the violation.</dd>
+    the violation. Only applicable to <code>script-src*</code> and <code>style-src*</code> violations, when they contain the <code>'report-sample'</code></dd>
   <dt><code>status-code</code></dt>
   <dd>The HTTP status code of the resource on which the global object was instantiated.
   </dd>
@@ -303,6 +303,8 @@ tags:
       Web Workers</a></li>
   <li><a href="/en-US/docs/Web/Privacy">Privacy, permissions, and information security</a>
   </li>
-  <li><a href="https://github.com/google/csp-evaluator">CSP Evaluator</a> - Evaluate your
+  <li><a href="https://github.com/google/csp-evaluator" class="external">CSP Evaluator</a> - Evaluate your
+    Content Security Policy</li>
+  <li><a href="https://cspscanner.com/" class="external">CSP Scanner</a> - Improve your
     Content Security Policy</li>
 </ul>

@@ -200,12 +200,12 @@ tags:
 
 <h3 id="When_should_you_NOT_use_HTML_tables">When should you NOT use HTML tables?</h3>
 
-<p>HTML tables should be used for tabular data — this is what they are designed for. Unfortunately, a lot of people used to use HTML tables to lay out web pages, e.g. one row to contain the header, one row to contain the content columns, one row to contain the footer, etc. You can find more details and an example at <a href="/en-US/docs/Learn/Accessibility/HTML#Page_layouts">Page Layouts</a> in our <a href="/en-US/docs/Learn/Accessibility">Accessibility Learning Module</a>. This was commonly used because CSS support across browsers used to be terrible; table layouts are much less common nowadays, but you might still see them in some corners of the web.</p>
+<p>HTML tables should be used for tabular data — this is what they are designed for. Unfortunately, a lot of people used to use HTML tables to lay out web pages, e.g. one row to contain the header, one row to contain the content columns, one row to contain the footer, etc. You can find more details and an example at <a href="/en-US/docs/Learn/Accessibility/HTML#page_layouts">Page Layouts</a> in our <a href="/en-US/docs/Learn/Accessibility">Accessibility Learning Module</a>. This was commonly used because CSS support across browsers used to be terrible; table layouts are much less common nowadays, but you might still see them in some corners of the web.</p>
 
 <p>In short, using tables for layout rather than <a href="/en-US/docs/Learn/CSS/CSS_layout">CSS layout techniques</a> is a bad idea. The main reasons are as follows:</p>
 
 <ol>
- <li><strong>Layout tables reduce accessibility for visually impaired users</strong>: <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders">Screenreaders</a>, used by blind people, interpret the tags that exist in an HTML page and read out the contents to the user. Because tables are not the right tool for layout, and the markup is more complex than with CSS layout techniques, the screenreaders' output will be confusing to their users.</li>
+ <li><strong>Layout tables reduce accessibility for visually impaired users</strong>: <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders">Screenreaders</a>, used by blind people, interpret the tags that exist in an HTML page and read out the contents to the user. Because tables are not the right tool for layout, and the markup is more complex than with CSS layout techniques, the screenreaders' output will be confusing to their users.</li>
  <li><strong>Tables produce tag soup</strong>: As mentioned above, table layouts generally involve more complex markup structures than proper layout techniques. This can result in the code being harder to write, maintain, and debug.</li>
  <li><strong>Tables are not automatically responsive</strong>: When you use proper layout containers (such as {{htmlelement("header")}}, {{htmlelement("section")}}, {{htmlelement("article")}}, or {{htmlelement("div")}}), their width defaults to 100% of their parent element. Tables on the other hand are sized according to their content by default, so extra measures are needed to get table layout styling to effectively work across a variety of devices.</li>
 </ol>
@@ -562,7 +562,6 @@ tags:
 
 <div>{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}</div>
 
-<div>
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
@@ -570,4 +569,3 @@ tags:
  <li><a href="/en-US/docs/Learn/HTML/Tables/Advanced">HTML table advanced features and accessibility</a></li>
  <li><a href="/en-US/docs/Learn/HTML/Tables/Structuring_planet_data">Structuring planet data</a></li>
 </ul>
-</div>

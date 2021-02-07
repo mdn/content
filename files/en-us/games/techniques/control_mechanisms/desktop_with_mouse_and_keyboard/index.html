@@ -33,7 +33,7 @@ var leftPressed = false;
 var upPressed = false;
 var downPressed = false;</pre>
 
-<p>Then we will listen for the <code>keydown</code> and <code>keyup</code> events and act accordingly in both handler functions. Inside them we can get the code of the key that was pressed from the <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a> property of the event object, see which key it is, and then set the proper variable. There are no helpers so you have to remember what the given codes are (or <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode#Value_of_keyCode">look them up</a>); <code>37</code> is the left arrow:</p>
+<p>Then we will listen for the <code>keydown</code> and <code>keyup</code> events and act accordingly in both handler functions. Inside them we can get the code of the key that was pressed from the <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a> property of the event object, see which key it is, and then set the proper variable. There are no helpers so you have to remember what the given codes are (or <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode#value_of_keycode">look them up</a>); <code>37</code> is the left arrow:</p>
 
 <pre class="brush: js notranslate">function keyDownHandler(event) {
     if(event.keyCode == 39) {

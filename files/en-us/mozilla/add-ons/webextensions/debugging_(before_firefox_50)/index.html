@@ -14,7 +14,7 @@ tags:
 <div class="notecard note">
 <p>This article explains how you can debug extensions using WebExtension APIs on versions of Firefox earlier than version 50.</p>
 
-<p>If you're using Firefox 50 or later, see the <a href="/en-US/Add-ons/WebExtensions/Debugging">main article on debugging extensions</a>.</p>
+<p>If you're using Firefox 50 or later, see the <a href="https://extensionworkshop.com/documentation/develop/debugging/">main article on debugging extensions</a>.</p>
 </div>
 
 <p>This article explains how you can use the built-in Firefox developer tools to debug extensions developed with WebExtension APIs. If you're trying to debug an add-on developed with the Add-on SDK, please see the guide to the <a href="/en-US/docs/Mozilla/Add-ons/Add-on_Debugger">Add-on Debugger</a>.</p>
@@ -83,7 +83,7 @@ Assign `notify()` as a listener to messages from the content script.
 chrome.runtime.onMessage.addListener(notify);
 </pre>
 
-<p>If you want to follow along, clone the <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> repository, then <a href="/en-US/Add-ons/WebExtensions/Packaging_and_installation">package and install</a> "notify-link-clicks-i18n".</p>
+<p>If you want to follow along, clone the <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> repository, then <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Packaging_and_installation">package and install</a> "notify-link-clicks-i18n".</p>
 
 <h2 id="The_Browser_Toolbox">The Browser Toolbox</h2>
 
@@ -121,7 +121,7 @@ chrome.runtime.onMessage.addListener(notify);
 
 <p>In Firefox, a "Toolbox" is the name for a separate window containing a set of tools in a tabbed interface, like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11873/browser-toolbox.png" style="display: block; height: 458px; margin-left: auto; margin-right: auto; width: 900px;">The above toolbox contains five tools, which you can switch between using the tabs at the top of the window: "Inspector", "Console", "Debugger", "Style Editor", and "Scratchpad". We'll be using only two of these tools: "Console" and "Debugger".</p>
+<p><img alt="" src="browser-toolbox.png" style="display: block; margin-left: auto; margin-right: auto;">The above toolbox contains five tools, which you can switch between using the tabs at the top of the window: "Inspector", "Console", "Debugger", "Style Editor", and "Scratchpad". We'll be using only two of these tools: "Console" and "Debugger".</p>
 
 <h3 id="Viewing_log_output">Viewing log output</h3>
 
@@ -139,7 +139,7 @@ chrome.runtime.onMessage.addListener(notify);
 
 <p>{{EmbedYouTube("Qpx0n8gP3Qw")}}</p>
 
-<p>One problem here is that the console shows you messages from the entire browser, so there can be a lot of noise. Read about <a href="/en-US/docs/Tools/Web_Console/Console_messages#Filtering_and_searching">how to filter log messages</a> for help with this.</p>
+<p>One problem here is that the console shows you messages from the entire browser, so there can be a lot of noise. Read about <a href="/en-US/docs/Tools/Web_Console/Console_messages#filtering_and_searching">how to filter log messages</a> for help with this.</p>
 
 <h3 id="Debugging_JavaScript">Debugging JavaScript</h3>
 
@@ -147,7 +147,7 @@ chrome.runtime.onMessage.addListener(notify);
 
 <p>Background scripts are always available in the debugger if the extension is installed and enabled. Popup scripts only become visible when the popup is opened. If you need to access popup scripts as soon as they load, try adding a <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/debugger">debugger</a></code> ; statement at the start of the script.</p>
 
-<p>To use the JavaScript Debugger, select the Debugger tab in the Browser Toolbox. This will list every source file in the entire browser, so the next job is to find your extension's code: do this by <a href="/en-US/docs/Tools/Debugger/How_to/Search_and_filter">clicking in the Search box and typing the name of the source</a>.</p>
+<p>To use the JavaScript Debugger, select the Debugger tab in the Browser Toolbox. This will list every source file in the entire browser, so the next job is to find your extension's code: do this by <a href="/en-US/docs/Tools/Debugger/How_to/Search">clicking in the Search box and typing the name of the source</a>.</p>
 
 <p>Once you've found your source, you can set breakpoints, step through code, and do <a href="/en-US/docs/Tools/Debugger">everything else you'd expect to be able to do in a debugger</a>.</p>
 
@@ -201,10 +201,10 @@ chrome.runtime.onMessage.addListener(notify);
 
 <p>The problem with debugging panels in general is that they are hidden when you click outside them. So the first step is to disable this behavior. In the Browser Toolbox, click the icon that looks like four little squares:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12622/disable-autohide.png" style="display: block; height: 417px; margin-left: auto; margin-right: auto; width: 877px;">Now, when you open a panel in Firefox, it will stay open until you press Escape.</p>
+<p><img alt="" src="disable-autohide.png" style="display: block; margin-left: auto; margin-right: auto;">Now, when you open a panel in Firefox, it will stay open until you press Escape.</p>
 
 <div class="notecard note">
-<p>Note that this change applies to <a href="/en-US/docs/Tools/Browser_Toolbox#Debugging_popups">built-in browser popups</a>, like the Hamburger menu (<img alt="" src="https://mdn.mozillademos.org/files/12712/hamburger.png" style="height: 20px; width: 22px;">), as well as extension popups.</p>
+<p>Note that this change applies to <a href="/en-US/docs/Tools/Browser_Toolbox#debugging_popups">built-in browser popups</a>, like the Hamburger menu (<img alt="" src="hamburger.png">), as well as extension popups.</p>
 
 <p>Also note that the change is persistent, even across browser restarts. We're working on addressing this in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1251658">bug 1251658</a>, but until then you may prefer to re-enable autohide by clicking the button again before you close the Browser Toolbox.</p>
 
@@ -217,7 +217,7 @@ chrome.runtime.onMessage.addListener(notify);
 
 <h4 id="Select_the_popup's_frame">Select the popup's frame</h4>
 
-<p>The popup is loaded into its own frame. So next, select your popup's document with the Browser Toolbox's <a href="/en-US/docs/Tools/Browser_Toolbox#Targeting_a_document">frame selection button</a>:<img alt="" src="https://mdn.mozillademos.org/files/12624/frame-selection.png" style="display: block; height: 417px; margin-left: auto; margin-right: auto; width: 877px;">The document will be called something like</p>
+<p>The popup is loaded into its own frame. So next, select your popup's document with the Browser Toolbox's <a href="/en-US/docs/Tools/Browser_Toolbox#targeting_a_document">frame selection button</a>:<img alt="" src="frame-selection.png" style="display: block; margin-left: auto; margin-right: auto;">The document will be called something like</p>
 
 <pre>moz-extension://&lt;some-uuid&gt;/path/to/your-popup.html</pre>
 

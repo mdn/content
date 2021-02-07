@@ -289,6 +289,14 @@ function attemptMutation(v) {
    <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
   </tr>
   <tr>
+   <td><code>0n</code></td>
+   <td><code>-0n</code></td>
+   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
+   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
+   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
+   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
+  </tr>
+  <tr>
    <td><code>0</code></td>
    <td><code>false</code></td>
    <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
@@ -430,7 +438,7 @@ function attemptMutation(v) {
  <dd>
  <pre class="brush: js notranslate">let stoppingForce = obj.mass * -obj.velocity;</pre>
 
- <p>If <code>obj.velocity</code> is <code>0</code> (or computes to <code>0</code>), a <code>-0</code> is introduced at that place and propogates out into <code>stoppingForce</code>.</p>
+ <p>If <code>obj.velocity</code> is <code>0</code> (or computes to <code>0</code>), a <code>-0</code> is introduced at that place and propagates out into <code>stoppingForce</code>.</p>
  </dd>
 </dl>
 

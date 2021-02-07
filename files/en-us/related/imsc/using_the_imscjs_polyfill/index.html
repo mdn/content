@@ -33,7 +33,7 @@ tags:
 
 <pre class="brush: js">var t = doc.getMediaTimeEvents();</pre>
 
-<h2 id="Generating_an_IMSC_snapshot"><span id="cke_bm_87C" style="display: none;"> </span>Generating an IMSC snapshot</h2>
+<h2 id="Generating_an_IMSC_snapshot">Generating an IMSC snapshot</h2>
 
 <p>In the second step, a snapshot of the IMSC document at a particular point in time (<code>isd</code>) is created using <code>imsc.generateISD()</code>.</p>
 
@@ -73,7 +73,7 @@ var myTrack = myVideo.textTracks[0];</pre>
 
 <pre class="brush: js">var ttmlUrl = myVideo.getElementsByTagName("track")[0].src;</pre>
 
-<h2 id="Retrieving_the_IMSC_file">Retrieving the IMSC file<span id="cke_bm_89C" style="display: none;"> </span></h2>
+<h2 id="Retrieving_the_IMSC_file">Retrieving the IMSC file</h2>
 
 <p>The browser will not retrieve the document automatically for us. In most browsers only <a href="/en-US/docs/Web/API/WebVTT_API">WebVTT</a> is implemented at the moment. Therefore, these browsers expect that the value of the <code>src</code> attribute points to a WebVTT file. If it doesn't, they don't use it, and we also have no direct access to the file the <code>src</code> attribute is pointing to. We use the <code>src</code> attribute therefore just to store the URL of the IMSC file. We need to do the work to retrieve the file and read it into a JavaScript string. In the example we use the <code>XMLHttpRequest</code> method for this task:</p>
 
@@ -86,7 +86,7 @@ client.onreadystatechange = function () {
 
 client.send()</pre>
 
-<h2 id="Setting_the_text_track_mode">Setting the text track mode<span id="cke_bm_90C" style="display: none;"> </span></h2>
+<h2 id="Setting_the_text_track_mode">Setting the text track mode</h2>
 
 <p>There is one more side effect. Because browsers get no valid WebVTT file from the <code>src</code> attribute, they disable the track. The <code>mode</code> property of the text track is set to the value <code>disable</code>.</p>
 
@@ -144,7 +144,7 @@ client.send()</pre>
 
 <pre class="brush: js">imsc.generateISD(imscDoc, 2);</pre>
 
-<h2 id="Creating_text_track_cues">Creating text track cues<span id="cke_bm_92C" style="display: none;"> </span></h2>
+<h2 id="Creating_text_track_cues">Creating text track cues</h2>
 
 <p>With two methods we can now generate all necessary states of the IMSC rendering layer. We do this as follows:</p>
 
@@ -245,7 +245,7 @@ client.send()</pre>
 
 <p>The caption user interface problem is a bit harder to solve. Although we can listen to events, activating a track using the caption user interface will also activate the rendering of corresponding WebVTT. As we are using VTTCues for IMSC rendering, this can course undesired presentation behavior. The text property of the VTTCue has always the empty string as value but in some browser this may lead nonetheless to the rendering of artefacts.</p>
 
-<p>the best solution is to building your own custom controls. Find out how in our <a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a> tutorial.</p>
+<p>the best solution is to building your own custom controls. Find out how in our <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a> tutorial.</p>
 
 <section id="Quick_links">
 <ol>
@@ -266,4 +266,3 @@ client.send()</pre>
  </li>
 </ol>
 </section>
-

@@ -147,7 +147,7 @@ Promise.race([p3, p4])
 .then(function(value) {
   console.log(value); // "three"
   // p3 is faster, so it fulfills
-}, function(reason) {
+}, function(error) {
   // Not called
 });
 

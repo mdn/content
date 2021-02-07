@@ -19,7 +19,7 @@ tags:
 
 <ul>
  <li><a href="/en-US/docs/Tools/Debugger/Set_event_listener_breakpoints">Event Listener Breakpoints</a> let you diagnose which code a page executes in response to browser events. You can pick specific types, such as <code>click</code> or <code>keydown</code>, or whole categories of events, like all mouse input events. ({{bug(1526082)}}).</li>
- <li>Scripts shown in the debugger's  <a href="/en-US/docs/Tools/Debugger/UI_Tour#Source_list_pane">source list pane</a> can now be saved via the <em>Download file</em> context menu option ({{bug(888161)}}).</li>
+ <li>Scripts shown in the debugger's  <a href="/en-US/docs/Tools/Debugger/UI_Tour#source_list_pane">source list pane</a> can now be saved via the <em>Download file</em> context menu option ({{bug(888161)}}).</li>
  <li>In the debugger's source list pane, loaded extensions are listed with their name, rather than just their UUID ({{bug(1486416)}}), making it much easier to find the extension code you want to debug.</li>
  <li>The debugger now loads significantly faster via lazy-loading scripts ({{bug(1527488)}}).</li>
 </ul>
@@ -96,7 +96,7 @@ tags:
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes#Field_declarations">Public class fields</a> are enabled by default ({{bug(1555464)}}). See also <a href="/en-US/docs/Web/JavaScript/Reference/Classes/Class_fields">Class fields</a> for more information.</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes#field_declarations">Public class fields</a> are enabled by default ({{bug(1555464)}}). See also <a href="/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields">Class fields</a> for more information.</li>
  <li>The promise rejection events <code><a href="/en-US/docs/Web/API/Window/unhandledrejection_event">unhandledrejection</a></code> and <code><a href="/en-US/docs/Web/API/Window/rejectionhandled_event">rejectionhandled</a></code> are now enabled by default ({{bug(1362272)}}). To learn more about how these work, see {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}.</li>
 </ul>
 
@@ -124,7 +124,7 @@ tags:
  <li>{{domxref("DOMMatrix.fromMatrix()")}} has been implemented ({{bug(1560462)}}).</li>
  <li>We now support the six-parameter version of the {{domxref("DOMMatrix.scale()")}} method ({{bug(1397945)}}).</li>
  <li>The arguments for {{domxref("DOMMatrix.translate()")}}, {{domxref("DOMMatrix.skewX()")}}, and {{domxref("DOMMatrix.skewY()")}} are now all optional, as per spec ({{bug(1397949)}}).</li>
- <li>The {{domxref("navigator.userAgent")}}, {{domxref("navigator.platform")}}, and {{domxref("navigator.oscpu")}} properties no longer reveal whether a user is running 32-bit Firefox on a 64-bit OS ({{bug(1559747)}}). They now say <code>Linux x86_64</code> instead of <code>Linux i686 on x86_64</code>, and <code>Win64</code> instead of <code>WOW64</code>.</li>
+ <li>The {{domxref("NavigatorID/userAgent", "navigator.userAgent")}}, {{domxref("NavigatorID/platform", "navigator.platform")}}, and {{domxref("navigator.oscpu")}} properties no longer reveal whether a user is running 32-bit Firefox on a 64-bit OS ({{bug(1559747)}}). They now say <code>Linux x86_64</code> instead of <code>Linux i686 on x86_64</code>, and <code>Win64</code> instead of <code>WOW64</code>.</li>
  <li>The remaining methods of {{domxref("HTMLDocument")}} have been moved to {{domxref("Document")}}. This should have no appreciable impact on your work in most cases. In particular, the {{domxref("document.close", "close()")}}, {{domxref("document.open", "open()")}}, and {{domxref("document.write", "write()")}} methods have been moved. So have the various editor related methods, including {{domxref("document.execCommand", "execCommand()")}} as well as various properties ({{bug(1549560)}}).</li>
  <li>
   <p>We have implemented {{domxref("AbstractRange")}} and {{domxref("StaticRange")}} ({{bug(1444847)}}).</p>

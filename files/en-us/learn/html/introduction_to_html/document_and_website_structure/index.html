@@ -62,7 +62,7 @@ tags:
 <p><strong>Note</strong>: <a href="http://www.color-blindness.com/2006/04/28/colorblind-population/">Roughy 8% of men and 0.5% of women</a> are colorblind; or, to put it another way, approximately 1 in every 12 men and 1 in every 200 women. Blind and visually impaired people represent roughly 4-5% of the world population (in 2012 there were <a href="https://en.wikipedia.org/wiki/Visual_impairment">285 million such people in the world</a>, while the total population was <a href="https://en.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg">around 7 billion</a>).</p>
 </div>
 
-<p>In your HTML code, you can mark up sections of content based on their <em>functionality</em> — you can use elements that represent the sections of content described above unambiguously, and assistive technologies like screenreaders can recognise those elements and help with tasks like "find the main navigation", or "find the main content." As we mentioned earlier in the course, there are a number of <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Why_do_we_need_structure">consequences of not using the right element structure and semantics for the right job</a>.</p>
+<p>In your HTML code, you can mark up sections of content based on their <em>functionality</em> — you can use elements that represent the sections of content described above unambiguously, and assistive technologies like screenreaders can recognize those elements and help with tasks like "find the main navigation", or "find the main content." As we mentioned earlier in the course, there are a number of <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure">consequences of not using the right element structure and semantics for the right job</a>.</p>
 
 <p>To implement such semantic mark up, HTML provides dedicated tags that you can use to represent such sections, for example:</p>
 
@@ -173,7 +173,7 @@ tags:
  <li>{{HTMLElement('article')}} encloses a block of related content that makes sense on its own without the rest of the page (e.g., a single blog post).</li>
  <li>{{HTMLElement('section')}} is similar to <code>&lt;article&gt;</code>, but it is more for grouping together a single part of the page that constitutes one single piece of functionality (e.g., a mini map, or a set of article headlines and summaries), or a theme. It's considered best practice to begin each section with a <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">heading</a>; also note that you can break <code>&lt;article&gt;</code>s up into different <code>&lt;section&gt;</code>s, or <code>&lt;section&gt;</code>s up into different <code>&lt;article&gt;</code>s, depending on the context.</li>
  <li>{{HTMLElement('aside')}} contains content that is not directly related to the main content but can provide additional information indirectly related to it (glossary entries, author biography, related links, etc.).</li>
- <li>{{HTMLElement('header')}} represents a group of introductory content. If it is a child of {{HTMLElement('body')}} it defines the global header of a webpage, but if it's a child of an {{HTMLElement('article')}} or {{HTMLElement('section')}} it defines a specific header for that section (try not to confuse this with <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Adding_a_title">titles and headings</a>).</li>
+ <li>{{HTMLElement('header')}} represents a group of introductory content. If it is a child of {{HTMLElement('body')}} it defines the global header of a webpage, but if it's a child of an {{HTMLElement('article')}} or {{HTMLElement('section')}} it defines a specific header for that section (try not to confuse this with <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_a_title">titles and headings</a>).</li>
  <li>{{HTMLElement('nav')}} contains the main navigation functionality for the page. Secondary links, etc., would not go in the navigation.</li>
  <li>{{HTMLElement('footer')}} represents a group of end content for a page.</li>
 </ul>
@@ -227,7 +227,7 @@ But his structure was bad, his semantics were sad&lt;br&gt;
 and his markup didn't read very well.&lt;/p&gt;</pre>
 </div>
 
-<p>Without the <code>&lt;br&gt;</code> elements, the paragraph would just be rendered in one long line (as we said earlier in the course, <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Whitespace_in_HTML">HTML ignores most whitespace</a>); with <code>&lt;br&gt;</code> elements in the code, the markup renders like this:</p>
+<p>Without the <code>&lt;br&gt;</code> elements, the paragraph would just be rendered in one long line (as we said earlier in the course, <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#whitespace_in_html">HTML ignores most whitespace</a>); with <code>&lt;br&gt;</code> elements in the code, the markup renders like this:</p>
 
 <p>{{EmbedLiveSample('line-break-live-sample', '100%', '125px', '', '', 'hide-codepen-jsfiddle')}}</p>
 

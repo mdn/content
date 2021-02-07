@@ -14,7 +14,7 @@ tags:
 
 <p>Open <strong>/controllers/bookController.js</strong>. Find the exported <code>book_update_get()</code> controller method and replace it with the following code.</p>
 
-<pre class="brush: js line-numbers language-js notranslate">// Display book update form on GET.
+<pre class="brush: js line-numbers language-js">// Display book update form on GET.
 exports.book_update_get = function(req, res, next) {
 
     // Get book, authors and genres for form.
@@ -63,7 +63,7 @@ exports.book_update_get = function(req, res, next) {
 
 <p>Find the exported <code>book_update_post()</code> controller method, and replace it with the following code.</p>
 
-<pre class="brush: js line-numbers language-js notranslate">// Handle book update on POST.
+<pre class="brush: js line-numbers language-js">// Handle book update on POST.
 exports.book_update_post = [
 
     // Convert the genre to an array
@@ -141,7 +141,7 @@ exports.book_update_post = [
 
 <p>Open <strong>/views/book_form.pug</strong> and update the section where the author form control is set to have the conditional code shown below.</p>
 
-<pre class="line-numbers language-html notranslate">    div.form-group
+<pre class="line-numbers language-html">    div.form-group
       label(for='author') Author:
       select#author.form-control(type='select' placeholder='Select author' name='author' required='true' )
         - authors.sort(function(a, b) {let textA = a.family_name.toUpperCase(); let textB = b.family_name.toUpperCase(); return (textA &lt; textB) ? -1 : (textA &gt; textB) ? 1 : 0;});
@@ -166,7 +166,7 @@ exports.book_update_post = [
 
 <p>Open the <strong>book_detail.pug</strong> view and make sure there are links for both deleting and updating books at the bottom of the page, as shown below.</p>
 
-<pre class="brush: html line-numbers language-html notranslate">  hr
+<pre class="brush: html line-numbers language-html">  hr
   p
     a(href=book.url+'/delete') Delete Book
   p
@@ -180,7 +180,7 @@ exports.book_update_post = [
 
 <p>The form should look just like the <em>Create book</em> page, only with a title of 'Update book', and pre-populated with record values.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14498/LocalLibary_Express_Book_Update_NoErrors.png" style="border-style: solid; border-width: 1px; display: block; height: 443px; margin: 0px auto; width: 1000px;"></p>
+<p><img alt="" src="locallibary_express_book_update_noerrors.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <div class="note">
 <p><strong>Note:</strong> The other pages for updating objects can be implemented in much the same way. We've left that as a challenge.</p>

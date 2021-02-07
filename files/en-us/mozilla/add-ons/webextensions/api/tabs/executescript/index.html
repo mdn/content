@@ -18,7 +18,7 @@ tags:
 
 <p>You can inject code into pages whose URL can be expressed using a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match pattern</a>. To do so, its scheme must be one of: <code>http</code>, <code>https</code>, <code>file</code>, or <code>ftp</code>.</p>
 
-<p>You must have the permission for the page's URL—either explicitly, as a <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission</a>—or, via the <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission">activeTab permission</a>.</p>
+<p>You must have the permission for the page's URL—either explicitly, as a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permission</a>—or, via the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission">activeTab permission</a>.</p>
 
 <p>You can also inject code into pages packaged with your own extension:</p>
 
@@ -120,7 +120,7 @@ tags:
 
 <p>Here the results array will contain the string "<code>my result</code>" as an element.</p>
 
-<p>The result values must be <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clonable</a> (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#Data_cloning_algorithm">Data cloning algorithm</a>).</p>
+<p>The result values must be <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clonable</a> (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm">Data cloning algorithm</a>).</p>
 
 <div class="notecard note">
 <p><strong>Note:</strong> The last statement may be also a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>, but this feature is unsupported by <a href="https://github.com/mozilla/webextension-polyfill#tabsexecutescript">webextension-polyfill</a> library.</p>

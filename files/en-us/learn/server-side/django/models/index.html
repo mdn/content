@@ -53,7 +53,7 @@ tags:
 
 <p>With that in mind, the UML association diagram below shows the models we'll define in this case (as boxes).</p>
 
-<p><img alt="LocalLibrary Model UML with fixed Author multiplicity inside the Book class" src="https://mdn.mozillademos.org/files/17406/local_library_model_uml.png" style="height: 660px; width: 977px;"></p>
+<p><img alt="LocalLibrary Model UML with fixed Author multiplicity inside the Book class" src="local_library_model_uml.png"></p>
 
 <p>We've created models for the book (the generic details of the book), book instance (status of specific physical copies of the book available in the system), and author. We have also decided to have a model for the genre so that values can be created/selected through the admin interface. We've decided not to have a model for the <code>BookInstance:status</code> — we've hardcoded the values (<code>LOAN_STATUS</code>) because we don't expect these to change. Within each of the boxes, you can see the model name, the field names, and types, and also the methods and their return types.</p>
 
@@ -412,8 +412,8 @@ class BookInstance(models.Model):
 
 <p>All your models have now been created. Now re-run your database migrations to add them to your database.</p>
 
-<pre class="brush: bash notranslate"><code>python3 manage.py makemigrations
-python3 manage.py migrate</code></pre>
+<pre class="brush: bash notranslate">python3 manage.py makemigrations
+python3 manage.py migrate</pre>
 
 <h2 id="Language_model_—_challenge">Language model — challenge</h2>
 
@@ -430,8 +430,8 @@ python3 manage.py migrate</code></pre>
 
 <p>Don't forget that after a change to your model, you should again re-run your database migrations to add the changes.</p>
 
-<pre class="brush: bash notranslate"><code>python3 manage.py makemigrations</code><code>
-python3 manage.py migrate</code></pre>
+<pre class="brush: bash notranslate">python3 manage.py makemigrations
+python3 manage.py migrate</pre>
 
 <h2 id="Summary">Summary</h2>
 

@@ -2,11 +2,11 @@
 title: CanvasRenderingContext2D.drawImage()
 slug: Web/API/CanvasRenderingContext2D/drawImage
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Method
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Method
+  - Reference
 ---
 <div>{{APIRef}}</div>
 
@@ -20,7 +20,7 @@ void <em>ctx</em>.drawImage(<em>image</em>, <em>dx</em>, <em>dy</em>, <em>dWidth
 void <em>ctx</em>.drawImage(<em>image</em>, <em>sx</em>, <em>sy</em>, <em>sWidth</em>, <em>sHeight</em>, <em>dx</em>, <em>dy</em>, <em>dWidth</em>, <em>dHeight</em>);
 </pre>
 
-<p><img alt="drawImage" src="https://mdn.mozillademos.org/files/225/Canvas_drawimage.jpg"
+<p><img alt="drawImage" src="canvas_drawimage.jpg"
     style="float: right;"></p>
 
 <h3 id="Parameters">Parameters</h3>
@@ -202,11 +202,11 @@ function drawImageActualSize() {
     happens.</li>
   <li>Gecko 9.0 {{ geckoRelease("9.0") }} now correctly supports CORS for drawing images
     across domains without <a
-      href="/en-US/docs/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">tainting the
+      href="/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f">tainting the
       canvas</a>.</li>
   <li>Gecko 11.0 {{ geckoRelease("11.0") }} now allows SVG-as-an-image to be drawn into a
     canvas without <a
-      href="/en-US/docs/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">tainting the
+      href="/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f">tainting the
       canvas</a>.</li>
 </ul>
 
@@ -219,7 +219,7 @@ function drawImageActualSize() {
     property).</li>
   <li><code>drawImage()</code> will always use the source element's <em>intrinsic size in
       CSS pixels</em> when drawing, cropping, and/or scaling.</li>
-  <li>In some older browser verisons, <code>drawImage()</code> will ignore all EXIF
+  <li>In some older browser versions, <code>drawImage()</code> will ignore all EXIF
     metadata in images, including the Orientation. This behavior is especially troublesome
     on iOS devices. You should detect the Orientation yourself and use
     <code>rotate()</code> to make it right.</li>

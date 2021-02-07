@@ -50,7 +50,7 @@ tags:
  </li>
  <li>We implemented the {{cssxref("@media/overflow-inline", "overflow-inline")}} and {{cssxref("@media/overflow-block", "overflow-block")}} media queries ({{Bug(1422235)}}).</li>
  <li>{{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} are now animatable, as per the rules set out in their specs ({{bug(1348519)}}).</li>
- <li>We now support {{cssxref("calc")}} with percentages for table cells and column widths ({{bug(957915)}}).</li>
+ <li>We now support {{cssxref("calc()")}} with percentages for table cells and column widths ({{bug(957915)}}).</li>
  <li>The <code>min-content</code> and <code>max-content</code> keywords are now available unprefixed ({{bug(1322780)}}). These can be set on:
   <ul>
    <li>{{cssxref("width")}}</li>
@@ -77,7 +77,7 @@ tags:
 <h4 id="Removals_2">Removals</h4>
 
 <ul>
- <li>We removed support for the <code><a href="/en-US/docs/XML_introduction/xml:base">xml:base</a></code> attribute ({{Bug(903372)}}).</li>
+ <li>We removed support for the <code><a href="/en-US/docs/Web/XML/xml:base">xml:base</a></code> attribute ({{Bug(903372)}}).</li>
 </ul>
 
 <h3 id="JavaScript">JavaScript</h3>
@@ -110,7 +110,7 @@ tags:
 <h4 id="Media_Web_Audio_and_WebRTC">Media, Web Audio, and WebRTC</h4>
 
 <ul>
- <li>The new <a href="/en-US/docs/Web/Media/Formats/Video_codecs#AV1">AV1 video codec</a> is now enabled by default on both macOS and Windows (for Intel processors). Linux support will come in Firefox 67 ({{bug(1521181)}}, {{bug(1452146)}}, and {{bug(1534814)}}).</li>
+ <li>The new <a href="/en-US/docs/Web/Media/Formats/Video_codecs#av1">AV1 video codec</a> is now enabled by default on both macOS and Windows (for Intel processors). Linux support will come in Firefox 67 ({{bug(1521181)}}, {{bug(1452146)}}, and {{bug(1534814)}}).</li>
  <li>The {{domxref("MediaDevices")}} method {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}, available as <code>navigator.mediaDevices.getDisplayMedia()</code>, has been added and synchronized with the specification. This method lets you capture a screen or part of a screen as a {{domxref("MediaStream")}} for manipulation or sharing ({{bug(1321221)}}).</li>
  <li>As a step toward eventually deprecating the Firefox-specific {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}-based method for capturing screen and window contents, the non-standard <code>mediaSource</code> constraint now treats the values <code>screen</code> and <code>window</code> identically. Both now present a list of both screens and windows for the user to choose from ({{bug(1474376)}}).</li>
  <li>{{domxref("RTCRtpStreamStats.qpSum", "qpSum")}} has been added to local outbound {{domxref("RTCRTPStreamStats")}} objects. This measures the total of the Quantization Parameter values for every frame sent or received on the video track. The higher this number, the more compressed the stream probably is ({{bug(1347070)}}).</li>

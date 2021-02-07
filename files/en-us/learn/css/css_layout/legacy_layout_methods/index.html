@@ -176,7 +176,7 @@ div:nth-of-type(2) {
 
 <p><img alt="" src="simple-grid-finished.png" style="display: block; margin: 0px auto;"></p>
 
-<p>In the {{htmlelement("style")}} element, add the following code, which gives the wrapper container a width of 980 pixels, with padding on the right hand side of 20 pixels. This leaves us with 960 pixels for our total column/gutter widths — in this case, the padding is subtracted from the total content width because we have set {{cssxref("box-sizing")}} to <code>border-box</code> on all elements on the site (see <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model#Changing_the_box_model_completely">Changing the box model completely</a> for more explanation).</p>
+<p>In the {{htmlelement("style")}} element, add the following code, which gives the wrapper container a width of 980 pixels, with padding on the right hand side of 20 pixels. This leaves us with 960 pixels for our total column/gutter widths — in this case, the padding is subtracted from the total content width because we have set {{cssxref("box-sizing")}} to <code>border-box</code> on all elements on the site (see <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model#changing_the_box_model_completely">Changing the box model completely</a> for more explanation).</p>
 
 <pre class="brush: css">* {
   box-sizing: border-box;
@@ -326,7 +326,7 @@ body {
 
 <h3 id="Easier_calculations_using_the_calc()_function">Easier calculations using the calc() function</h3>
 
-<p>You could use the {{cssxref("calc()")}} function to do the math right inside your CSS — this allows you to insert simple mathematical equations into your CSS values, to calculate what a value should be. It is especially useful when there is complex math to be done, and you can even compute a calculation that uses different units, for example "I want this element's height to always be 100% of its parent's height, minus 50px". See <a href="/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API#Keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()">this example from a MediaRecorder API tutorial</a>.</p>
+<p>You could use the {{cssxref("calc()")}} function to do the math right inside your CSS — this allows you to insert simple mathematical equations into your CSS values, to calculate what a value should be. It is especially useful when there is complex math to be done, and you can even compute a calculation that uses different units, for example "I want this element's height to always be 100% of its parent's height, minus 50px". See <a href="/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API#keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()">this example from a MediaRecorder API tutorial</a>.</p>
 
 <p>Anyway, back to our grids! Any column that spans more than one column of our grid has a total width of 6.25% multiplied by the number of columns spanned plus 2.08333333% multiplied by the number of gutters (which will always be the number of columns minus 1). The <code>calc()</code> function allows us to do this calculation right inside the width value, so for any item spanning 4 columns we can do this, for example:</p>
 

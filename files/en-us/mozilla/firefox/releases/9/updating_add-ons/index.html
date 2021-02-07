@@ -8,7 +8,7 @@ tags:
 ---
 <div>{{FirefoxSidebar}}</div><p>Firefox 9 doesn't have a lot of changes that should be compatibility issues for add-on developers. However, there are a few possible items that might trip you up, so let's take a look.</p>
 <h2 id="Do_you_need_to_do_anything_at_all">Do you need to do anything at all?</h2>
-<p>If your add-on is distributed on <a class="external" href="http://addons.mozilla.org">addons.mozilla.org</a> (AMO), it's been checked by an automated compatibility verification tool. Add-ons that don't use APIs that changed in Firefox 8, and have no binary components (which <a href="/En/Developer_Guide/Interface_Compatibility#Binary_Interfaces">need to be recompiled for every major Firefox release</a>), have automatically been updated on AMO to indicate that they work in Firefox 9.</p>
+<p>If your add-on is distributed on <a class="external" href="http://addons.mozilla.org">addons.mozilla.org</a> (AMO), it's been checked by an automated compatibility verification tool. Add-ons that don't use APIs that changed in Firefox 8, and have no binary components (which <a href="/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces">need to be recompiled for every major Firefox release</a>), have automatically been updated on AMO to indicate that they work in Firefox 9.</p>
 <p>So you should start by visiting AMO and looking to see if your add-on needs any work done at all.</p>
 <div class="note">
  <strong>Note:</strong> You should still test your add-on on Firefox 9, even if it's been automatically upgraded. There are edge cases that may not be automatically detected.</div>
@@ -33,7 +33,7 @@ tags:
 <h2 id="DOM_changes">DOM changes</h2>
 <ul>
  <li>The long-obsolete method <code>Navigator.taintEnabled()</code> has been removed. This hasn't done anything useful in a very long time, but was often used in browser detection scripts, since it was Netscape-specific. Calling this method throws an exception starting in Firefox 9.</li>
- <li>Event handlers are now implemented as standard IDL interfaces. For most cases, this won't affect you, but <a href="/en-US/docs/DOM/DOM_event_handlers#Event_handler_changes_in_Firefox_9">there are exceptions</a>.</li>
+ <li>Event handlers are now implemented as standard IDL interfaces. For most cases, this won't affect you, but <a href="/en-US/docs/Web/Guide/Events/Event_handlers#event_handler_changes_in_firefox_9">there are exceptions</a>.</li>
 </ul>
 <h2 id="Other_changes_that_may_affect_binary_compatibility">Other changes that may affect binary compatibility</h2>
 <p>These changes are notable in that they may affect binary XPCOM components. These will need rebuilding anyway, since that's required for every major release of Firefox, but could introduce compile-time errors, so they're worth noting in particular.</p>

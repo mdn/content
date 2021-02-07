@@ -49,20 +49,20 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>Create a new pane, and populate it with a JSON object. You could run this code in a script loaded by your extension's <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/devtools_page">devtools page</a>.</p>
+<p>Create a new pane, and populate it with a JSON object. You could run this code in a script loaded by your extension's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page">devtools page</a>.</p>
 
-<pre class="notranslate brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">onCreated</span><span class="punctuation token">(</span>sidebarPane<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  sidebarPane<span class="punctuation token">.</span><span class="function token">setObject</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-    someBool<span class="punctuation token">:</span> <span class="keyword token">true</span><span class="punctuation token">,</span>
-    someString<span class="punctuation token">:</span> <span class="string token">"hello there"</span><span class="punctuation token">,</span>
-    someObject<span class="punctuation token">:</span> <span class="punctuation token">{</span>
-      someNumber<span class="punctuation token">:</span> <span class="number token">42</span><span class="punctuation token">,</span>
-      someOtherString<span class="punctuation token">:</span> <span class="string token">"this is my pane's content"</span>
-    <span class="punctuation token">}</span>
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+<pre class="notranslate brush: js line-numbers  language-js">function onCreated(sidebarPane) {
+  sidebarPane.setObject({
+    someBool: true,
+    someString: &quot;hello there&quot;,
+    someObject: {
+      someNumber: 42,
+      someOtherString: &quot;this is my pane's content&quot;
+    }
+  });
+}
 
-browser<span class="punctuation token">.</span>devtools<span class="punctuation token">.</span>panels<span class="punctuation token">.</span>elements<span class="punctuation token">.</span><span class="function token">createSidebarPane</span><span class="punctuation token">(</span><span class="string token">"My pane"</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span>onCreated<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+browser.devtools.panels.elements.createSidebarPane(&quot;My pane&quot;).then(onCreated);</pre>
 
 <p>{{WebExtExamples}}</p>
 
