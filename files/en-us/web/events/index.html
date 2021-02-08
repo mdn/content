@@ -9,87 +9,585 @@ tags:
 
 <p><a href="/en-US/docs/Web/API/Document_Object_Model/Events">DOM Events</a> notify code of "interesting changes" that may affect code execution. These can arise from user interactions such as using a mouse or resizing a window, changes in the state of the underlying environment (e.g. low battery or media events from the operating system), and other causes.</p>
 
-<p><span class="seoSummary"></span>This topic provides links to some of the more common objects and their events (events are grouped under the object that they are fired on).</span></p>
+<p>Each event is represented by an object that is based on the {{domxref("Event")}} interface, and may have additional custom fields and/or functions used to get additional information about what happened. A full list of the different event types is given in <a href="/en-US/docs/Web/API/Event#introduction">Events > Interfaces based on Event</a>.</p>
 
-<dl>
-	<dt><code><a href="/en-US/docs/Web/API/Window#events">Window</a></code></dt>
-	<dd>
-		<a href="/en-US/docs/Web/API/Window#animation_events">animation</a>, 
-		<a href="/en-US/docs/Web/API/Window#clipboard_events">clipboard</a>, 
-		<a href="/en-US/docs/Web/API/Window#connection_events">connection</a>, 
-		<a href="/en-US/docs/Web/API/Window#focus_events">focus</a>, 
-		<a href="/en-US/docs/Web/API/Window#gamepad_events">gamepad</a>, 
-		<a href="/en-US/docs/Web/API/Window#history_events">history</a>, 
-		<a href="/en-US/docs/Web/API/Window#load_unload_events">load & unload</a>, 
-		<a href="/en-US/docs/Web/API/Window#manifest_events">manifest</a>, 
-		<a href="/en-US/docs/Web/API/Window#messaging_events">messaging</a>, 
-		<a href="/en-US/docs/Web/API/Window#print_events">print</a>, 
-		<a href="/en-US/docs/Web/API/Window#promise_rejection_events">promise rejection</a>, 
-		<a href="/en-US/docs/Web/API/Window#transition_events">transition</a>, 
-		<a href="/en-US/docs/Web/API/Window#webvr_events">WebVR</a>
-	</dd>
+<p><span class="seoSummary"></span>This topic provides links to many of the common e that fire events (the object documentation contains more detailed event information). It also shows the associated event types, and provides a small subset of the types of events that they fire.</span></p>
 
-	<dt><a href="/en-US/docs/Web/API/WebSocket#events">Websocket</a></dt>
-	<dd></dd>
+<div class="notecard note">
+	<h4>Note</h4>
+	<p>This page lists the most common events you'll come across on the web. If you are searching for an event that isn't listed here, try searching for its name, topic area, or associated specification on the rest of MDN.</p>
+</div>
 
-	<dt><a href="/en-US/docs/Web/API/HTMLFormElement#events">HTMLFormElement</a></dt>
-	<dd></dd>
 
-	<dt><code><a href="/en-US/docs/Web/API/Element#events">Element</a></code></dt>
-	<dd>
-		<a href="/en-US/docs/Web/API/Element#clipboard_events">clipboard</a>, 
-		<a href="/en-US/docs/Web/API/Element#composition_events">composition</a>, 
-		<a href="/en-US/docs/Web/API/Element#focus_events">focus</a>, 
-		<a href="/en-US/docs/Web/API/Element#fullscreen_events">fullscreen</a>, 
-		<a href="/en-US/docs/Web/API/Element#keyboard_events">keyboard</a>, 
-		<a href="/en-US/docs/Web/API/Element#mouse_events">mouse</a>, 
-		<a href="/en-US/docs/Web/API/Element#touch_events">touch</a>
-	</dd>
+<table>
+	<tr>
+		<th>Object</th>
+		<th>Event interfaces</th>
+		<th>Event types/common events</th>
+	</tr>
 
-	<dt><code><a href="/en-US/docs/Web/API/HTMLMediaElement#events">HTMLMediaElement</a></code></dt>
-	<dd></dd>
+	<tr>
+		<td><code><a href="/en-US/docs/Web/API/AbortSignal#events">AbortSignal</a></code></td>
+		<td><code><a href="/en-US/docs/Web/API/Event">Event</a></code></td>
+		<td><code><a href="/en-US/docs/Web/API/AbortSignal/abort_event">abort</a></code></td>
+	</tr>
 
-	<dt><code><a href="/en-US/docs/Web/API/HTMLElement#events">HTMLElement</a></code></dt>
-	<dd>
-		<a href="/en-US/docs/Web/API/HTMLElement#animation_events">animation</a>, <a href="/en-US/docs/Web/API/HTMLElement#input_events">input</a>, <a href="/en-US/docs/Web/API/HTMLElement#pointer_events">pointer</a>,
-		<a href="/en-US/docs/Web/API/HTMLElement#transition_events">transition</a>
-	</dd>
+	<tr>
+		<td><code><a href="/en-US/docs/Web/API/Document#events">Document</a></code></td>
+		<td>
+			<code><a href="/en-US/docs/Web/API/ClipboardEvent">AnimationEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/Event">Event</a></code>,			
+			<code><a href="/en-US/docs/Web/API/ClipboardEvent">ClipboardEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/DragEvent">DragEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/Event">Event</a></code>,
+			<code><a href="/en-US/docs/Web/API/KeyboardEvent">KeyboardEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/PointerEvent">PointerEvent</a></code>,			
+			<code><a href="/en-US/docs/Web/API/TouchEvent">TouchEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/TransitionEvent">TransitionEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/WheelEvent">WheelEvent</a></code>
+		</td>
+		<td>
+			<a href="/en-US/docs/Web/API/Document#animation_events">animation</a>,
+			<a href="/en-US/docs/Web/API/Document#clipboard_events">clipboard</a>,
+			<a href="/en-US/docs/Web/API/Document#drag_drop_events">drag'n'drop</a>,
+			<a href="/en-US/docs/Web/API/Document#fullscreen_events">fullscreen</a>,
+			<a href="/en-US/docs/Web/API/Document#keyboard_events">keyboard</a>,
+			<a href="/en-US/docs/Web/API/Document#load_unload_events">load and unload</a>,
+			<a href="/en-US/docs/Web/API/Document#pointer_events">pointer</a>,
+			<a href="/en-US/docs/Web/API/Document#selection_events">selection</a>,
+			<a href="/en-US/docs/Web/API/Document#touch_events">touch</a>,
+			<a href="/en-US/docs/Web/API/Document#transition_events">transition</a>
+		</td>
+	</tr>
 
-	<dt><code><a href="/en-US/docs/Web/API/Document#events">Document</a></code></dt>
-	<dd>
-		<a href="/en-US/docs/Web/API/Document#animation_events">animation</a>,
-		<a href="/en-US/docs/Web/API/Document#clipboard_events">clipboard</a>,
-		<a href="/en-US/docs/Web/API/Document#drag_drop_events">Drag'n'drop</a>,
-		<a href="/en-US/docs/Web/API/Document#fullscreen_events">fullscreen</a>,
-		<a href="/en-US/docs/Web/API/Document#keyboard_events">keyboard</a>,
-		<a href="/en-US/docs/Web/API/Document#load_unload_events">load and unload</a>,
-		<a href="/en-US/docs/Web/API/Document#pointer_events">pointer</a>,
-		<a href="/en-US/docs/Web/API/Document#selection_events">selection</a>,
-		<a href="/en-US/docs/Web/API/Document#touch_events">touch</a>,
-		<a href="/en-US/docs/Web/API/Document#transition_events">transition</a>
-	</dd>
+	<tr>
+		<td><code><a href="/en-US/docs/Web/API/Element#events">Element</a></code></td>
+		<td>
+			<code><a href="/en-US/docs/Web/API/ClipboardEvent">ClipboardEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/CompositionEvent">CompositionEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/Event">Event</a></code>,
+			<code><a href="/en-US/docs/Web/API/FocusEvent">FocusEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/KeyboardEvent">KeyboardEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/MouseEvent">MouseEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/TouchEvent">TouchEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/UIEvent">UIEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/WheelEvent">WheelEvent</a></code>
+		</td>
+		<td>
+			<a href="/en-US/docs/Web/API/Element#clipboard_events">clipboard</a>, 
+			<a href="/en-US/docs/Web/API/Element#composition_events">composition</a>, 
+			<a href="/en-US/docs/Web/API/Element#focus_events">focus</a>, 
+			<a href="/en-US/docs/Web/API/Element#fullscreen_events">fullscreen</a>, 
+			<a href="/en-US/docs/Web/API/Element#keyboard_events">keyboard</a>, 
+			<a href="/en-US/docs/Web/API/Element#mouse_events">mouse</a>, 
+			<a href="/en-US/docs/Web/API/Element#touch_events">touch</a>
+		</td>
+	</tr>
 
-	<dt><code><a href="/en-US/docs/Web/API/HTMLInputElement#events">HTMLInputElement</a></code></dt>
-	<dd></dd>
+	<tr>
+		<td><code><a href="/en-US/docs/Web/API/EventSource#events">EventSource</a></code></td>
+		<td>
+			<code><a href="/en-US/docs/Web/API/ErrorEvent">ErrorEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/Event">Event</a></code>,
+			<code><a href="/en-US/docs/Web/API/MessageEvent">MessageEvent</a></code>
+		</td>
+		<td>XXX</td>
+	</tr>
 
-	<dt><code><a href="/en-US/docs/Web/API/EventSource#events">EventSource</a></code></dt>
-	<dd></dd>
+	<tr>
+		<td><code><a href="/en-US/docs/Web/API/HTMLElement#events">HTMLElement</a></code></td>
+		<td>
+			<code><a href="/en-US/docs/Web/API/ClipboardEvent">AnimationEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/Event">Event</a></code>,
+			<code><a href="/en-US/docs/Web/API/InputEvent">InputEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/PointerEvent">PointerEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/TransitionEvent">TransitionEvent</a></code>
+		</td>
+		<td>
+			<a href="/en-US/docs/Web/API/HTMLElement#animation_events">animation</a>,
+			<a href="/en-US/docs/Web/API/HTMLElement#input_events">input</a>,
+			<a href="/en-US/docs/Web/API/HTMLElement#pointer_events">pointer</a>,
+			<a href="/en-US/docs/Web/API/HTMLElement#transition_events">transition</a>
+		</td>
+	</tr>
 
-	<dt><code><a href="/en-US/docs/Web/API/AbortSignal#events">AbortSignal</a></code></dt>
-	<dd></dd>
+	<tr>
+		<td><code><a href="/en-US/docs/Web/API/HTMLFormElement#events">HTMLFormElement</a></code></td>
+		<td>
+			<code><a href="/en-US/docs/Web/API/Event">Event</a></code>,
+			<code><a href="/en-US/docs/Web/API/FormDataEvent">FormDataEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/SubmitEvent">SubmitEvent</a></code>		
+		</td>
+		<td>XXX</td>
+	</tr>
 
-	<dt><code><a href="/en-US/docs/Web/API/SVGElement#events">SVGElement</a></code></dt>
-	<dd></dd>
+	<tr>
+		<td><code><a href="/en-US/docs/Web/API/HTMLInputElement#events">HTMLInputElement</a></code></td>
+		<td>
+			<code><a href="/en-US/docs/Web/API/Event">Event</a></code>,
+			<code><a href="/en-US/docs/Web/API/InputEvent">InputEvent</a></code>
+		</td>
+		<td>XXX</td>
+	</tr>
 
-	<dt>Database</dt>
-	<dd><code><a href="/en-US/docs/Web/API/IDBRequest#events">IDBRequest</a></code></dd>
-	<dd><code><a href="/en-US/docs/Web/API/IDBTransaction#events">IDBTransaction</a></code></dd>
-	<dd><code><a href="/en-US/docs/Web/API/IDBOpenDBRequest#events">IDBOpenDBRequest</a></code></dd>
-	<dd><code><a href="/en-US/docs/Web/API/IDBDatabase#events">IDBDatabase</a></code></dd>
+	<tr>
+		<td><code><a href="/en-US/docs/Web/API/HTMLMediaElement#events">HTMLMediaElement</a></code></td>
+		<td>
+			<code><a href="/en-US/docs/Web/API/Event">Event</a></code>
+		</td>
+		<td>XXX</td>
+	</tr>
 
-  </dl>
+	<tr>
+		<td><code><a href="/en-US/docs/Web/API/IDBDatabase#events">IDBDatabase</a></code> (Database)</td>
+		<td>
+			<code><a href="/en-US/docs/Web/API/Event">Event</a></code>
+		</td>
+		<td>XXX</td>
+	</tr>
 
-<p>Depending on the browser/environment there may also be events for popups, tab changes, batteries, calls, sensors, smartcards, SMS messages, and many others. </p> 
+	<tr>
+		<td><code><a href="/en-US/docs/Web/API/IDBOpenDBRequest#events">IDBOpenDBRequest</a></code> (Database)</td>
+		<td>
+			<code><a href="/en-US/docs/Web/API/IDBVersionChangeEvent">IDBVersionChangeEvent</a></code>
+
+		</td>
+		<td>XXX</td>
+	</tr>
+
+	<tr>
+		<td><code><a href="/en-US/docs/Web/API/IDBRequest#events">IDBRequest</a></code> (Database)</td>
+		<td>
+			<code><a href="/en-US/docs/Web/API/Event">Event</a></code>
+		</td>
+		<td>XXX</td>
+	</tr>
+
+
+	<tr>
+		<td><code><a href="/en-US/docs/Web/API/IDBTransaction#events">IDBTransaction</a></code> (Database)</td>
+		<td>
+			<code><a href="/en-US/docs/Web/API/Event">Event</a></code>
+		</td>
+		<td>XXX</td>
+	</tr>
+
+	<tr>
+		<td><code><a href="/en-US/docs/Web/API/SVGElement#events">SVGElement</a></code></td>
+		<td>
+			<code><a href="/en-US/docs/Web/API/SVGEvent">SVGEvent</a></code>
+		</td>
+		<td>XXX</td>
+	</tr>
+
+	<tr>
+		<td><code><a href="/en-US/docs/Web/API/WebSocket#events">Websocket</a></code></td>
+		<td>
+			<code><a href="/en-US/docs/Web/API/CloseEvent">CloseEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/Event">Event</a></code>,
+			<code><a href="/en-US/docs/Web/API/MessageEvent">MessageEvent</a></code>
+		</td>
+		<td>XXX</td>
+	</tr>
+
+	<tr>
+		<td><code><a href="/en-US/docs/Web/API/Window#events">Window</a></td>
+		<td>
+			<code><a href="/en-US/docs/Web/API/AnimationEvent">AnimationEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/ClipboardEvent">ClipboardEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/DeviceMotionEvent">DeviceMotionEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/DeviceOrientationEvent">DeviceOrientationEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/FocusEvent">FocusEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/GamepadEvent">GamepadEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/HashChangeEvent">HashChangeEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/MessageEvent">MessageEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/PageTransitionEvent">PageTransitionEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/PromiseRejectionEvent">PromiseRejectionEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/StorageEvent">StorageEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/TransitionEvent">TransitionEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/UIEvent">UIEvent</a></code>,
+			<code><a href="/en-US/docs/Web/API/VRDisplayEvent">VRDisplayEvent</a></code>
+		</td>
+		<td>
+			<a href="/en-US/docs/Web/API/Window#animation_events">animation</a>,
+			<a href="/en-US/docs/Web/API/Window#clipboard_events">clipboard</a>, 
+			<a href="/en-US/docs/Web/API/Window#connection_events">connection</a>, 
+			<a href="/en-US/docs/Web/API/Window#focus_events">focus</a>, 
+			<a href="/en-US/docs/Web/API/Window#gamepad_events">gamepad</a>, 
+			<a href="/en-US/docs/Web/API/Window#history_events">history</a>, 
+			<a href="/en-US/docs/Web/API/Window#load_unload_events">load & unload</a>, 
+			<a href="/en-US/docs/Web/API/Window#manifest_events">manifest</a>, 
+			<a href="/en-US/docs/Web/API/Window#messaging_events">messaging</a>, 
+			<a href="/en-US/docs/Web/API/Window#print_events">print</a>, 
+			<a href="/en-US/docs/Web/API/Window#promise_rejection_events">promise rejection</a>, 
+			<a href="/en-US/docs/Web/API/Window#transition_events">transition</a>, 
+			<a href="/en-US/docs/Web/API/Window#webvr_events">WebVR</a>
+		</td>
+	</tr>
+
+
+
+
+
+
+
+<tr>
+	<td>
+		<code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope#events">ServiceWorkerGlobalScope</a></code>
+	</td>
+	<td>
+		<code><a href="/en-US/docs/Web/API/ContentIndexEvent">ContentIndexEvent</a></code>,
+		<code><a href="/en-US/docs/Web/API/ExtendableEvent">ExtendableEvent</a></code>,
+		<code><a href="/en-US/docs/Web/API/ExtendableMessageEvent">ExtendableMessageEvent</a></code>,
+		<code><a href="/en-US/docs/Web/API/NotificationEvent">NotificationEvent</a></code>,
+		<code><a href="/en-US/docs/Web/API/PushEvent">PushEvent</a></code>
+	</td>
+	<td>XXX</td>
+</tr>
+
+
+<tr>
+	<td>
+		<code><a href="/en-US/docs/Web/API/AudioScheduledSourceNode#events">AudioScheduledSourceNode</a></code>
+	</td>
+	<td>
+		<code><a href="/en-US/docs/Web/API/Event">Event</a></code>
+	</td>
+	<td>XXX</td>
+</tr>
+
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/AudioTrackList#events">AudioTrackList</a></code></td>
+	<td>
+		<code><a href="/en-US/docs/Web/API/TrackEvent">TrackEvent</a></code>,
+		<code><a href="/en-US/docs/Web/API/Event">Event</a></code>
+	</td>
+	<td>XXX</td>
+</tr>
+
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/BroadcastChannel#events">BroadcastChannel</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/MessageEvent">MessageEvent</a></code></td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope#events">DedicatedWorkerGlobalScope</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/MessageEvent">MessageEvent</a></code></td>
+	<td>XXX</td>
+</tr>
+
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/FileReader#events">FileReader</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/ProgressEvent">ProgressEvent</a></code></td>
+	<td>XXX</td>
+</tr>
+
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/Force_Touch_events#events">Force Touch events</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/MouseEvent">MouseEvent</a></code></td>
+	<td>XXX</td>
+</tr>
+
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/Fullscreen_API#events">Fullscreen API events</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/Event">Event</a></code></td>
+	<td>XXX</td>
+</tr>
+
+
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/HTMLCanvasElement#events">HTMLCanvasElement</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/WebGLContextEvent">WebGLContextEvent</a></code></td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/HTMLDetailsElement#events">HTMLDetailsElement</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/Event">Event</a></code></td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/HTMLDialogElement#events">HTMLDialogElement</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/Event">Event</a></code></td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/HTMLSlotElement#events">HTMLSlotElement</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/Event">Event</a></code></td>
+	<td>XXX</td>
+</tr>
+
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/HTMLTrackElement#events">HTMLTrackElement</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/Event">Event</a></code></td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/HTMLVideoElement#events">HTMLVideoElement</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/PictureInPictureEvent">PictureInPictureEvent</a></code></td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/MediaRecorder#events">MediaRecorder</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/MediaRecorderErrorEvent">MediaRecorderErrorEvent</a></code></td>
+	<td>XXX</td>
+</tr>
+
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/MediaStream#events">MediaStream</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/MediaStreamTrackEvent">MediaStreamTrackEvent</a></code></td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/MediaStreamTrack">MediaStreamTrack</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/Event">Event</a></code></td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/Media_Streams_API#events">Media Capture and Streams API</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/TrackEvent">TrackEvent</a></code></td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/MessagePort#events">MessagePort</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/MessageEvent">MessageEvent</a></code></td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/OfflineAudioContext#events">OfflineAudioContext</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/OfflineAudioCompletionEvent">OfflineAudioCompletionEvent</a></code></td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/PaymentRequest#events">PaymentRequest</a></code></td>
+	<td>
+		<code><a href="/en-US/docs/Web/API/MerchantValidationEvent">MerchantValidationEvent</a></code>,
+		<code><a href="/en-US/docs/Web/API/PaymentMethodChangeEvent">PaymentMethodChangeEvent</a></code>,
+		<code><a href="/en-US/docs/Web/API/PaymentRequestUpdateEvent">PaymentRequestUpdateEvent</a></code>
+	</td>
+	<td>XXX</td>
+</tr>
+
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/PaymentResponse#events">PaymentResponse</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/PaymentRequestUpdateEvent">PaymentRequestUpdateEvent</a></code></td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/Performance#events">Performance</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/Event">Event</a></code></td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/Picture-in-Picture_API#events">Picture-in-Picture API</a></code></td>
+	<td>
+		<code><a href="/en-US/docs/Web/API/PictureInPictureEvent">PictureInPictureEvent</a></code>,
+		<code><a href="/en-US/docs/Web/API/PictureInPictureWindow">PictureInPictureWindow</a></code>
+	</td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/RTCDataChannel#events">RTCDataChannel</a></code></td>
+	<td>
+		<code><a href="/en-US/docs/Web/API/Event">Event</a></code>,
+		<code><a href="/en-US/docs/Web/API/MessageEvent">MessageEvent</a></code>,
+		<code><a href="/en-US/docs/Web/API/RTCDataChannelEvent">RTCDataChannelEvent</a></code>,
+		<code><a href="/en-US/docs/Web/API/RTCErrorEvent">RTCErrorEvent</a></code>
+	</td>
+	<td>XXX</td>
+</tr>
+
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/RTCDTMFSender#events">RTCDTMFSender</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/RTCDTMFToneChangeEvent">RTCDTMFToneChangeEvent</a></code></td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/RTCIceTransport#events">RTCIceTransport</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/Event">Event</a></code></td>
+	<td>XXX</td>
+</tr>
+
+
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/RTCPeerConnection#events">RTCPeerConnection</a></code></td>
+	<td>
+		<code><a href="/en-US/docs/Web/API/Event">Event</a></code>,
+		<code><a href="/en-US/docs/Web/API/RTCDataChannelEvent">RTCDataChannelEvent</a></code>,
+		<code><a href="/en-US/docs/Web/API/RTCPeerConnectionIceEvent">RTCPeerConnectionIceEvent</a></code>,
+		<code><a href="/en-US/docs/Web/API/RTCPeerConnectionIceErrorEvent">RTCPeerConnectionIceErrorEvent</a></code>,
+		<code><a href="/en-US/docs/Web/API/RTCTrackEvent">RTCTrackEvent</a></code>,	
+	</td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/ScriptProcessorNode#events">ScriptProcessorNode</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/AudioProcessingEvent">AudioProcessingEvent</a></code></td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/ServiceWorkerContainer#events">ServiceWorkerContainer</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/MessageEvent">MessageEvent</a></code></td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/SharedWorkerGlobalScope#events">SharedWorkerGlobalScope</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/MessageEvent">MessageEvent</a></code></td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance#events">SpeechSynthesisUtterance</a></code></td>
+	<td>
+		<code><a href="/en-US/docs/Web/API/SpeechSynthesisEvent">SpeechSynthesisEvent</a></code>,
+		<code><a href="/en-US/docs/Web/API/SpeechSynthesisErrorEvent">SpeechSynthesisErrorEvent</a></code>
+	</td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/SVGAnimationElement#events">SVGAnimationElement</a></code></td>
+	<td>
+		<code><a href="/en-US/docs/Web/API/TimeEvent">TimeEvent</a></code>
+	</td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/SVGElement#events">SVGElement</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/SVGEvent">SVGEvent</a></code></td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/TextTrack#events">TextTrack</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/Event">Event</a></code></td>
+	<td>XXX</td>
+</tr>
+
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/TextTrackList#events">TextTrackList</a></code></td>
+	<td>
+		<code><a href="/en-US/docs/Web/API/Event">Event</a></code>,
+		<code><a href="/en-US/docs/Web/API/TrackEvent">TrackEvent</a></code>
+	</td>
+		
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/VideoTrackList#events">VideoTrackList</a></code></td>
+	<td>
+		<code><a href="/en-US/docs/Web/API/Event">Event</a></code>,
+		<code><a href="/en-US/docs/Web/API/TrackEvent">TrackEvent</a></code>
+	</td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/Worker#events">Worker</a></code></td>
+	<td>
+		<code><a href="/en-US/docs/Web/API/MessageEvent">MessageEvent</a></code>,
+		<code><a href="/en-US/docs/Web/API/PromiseRejectionEvent">PromiseRejectionEvent</a></code>
+	</td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/WorkerGlobalScope#events">WorkerGlobalScope</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/Event">Event</a></code></td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/XMLHttpRequest#events">XMLHttpRequest</a></code></td>
+	<td>
+		<code><a href="/en-US/docs/Web/API/ProgressEvent">ProgressEvent</a></code>
+	</td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/XRReferenceSpace#events">XRReferenceSpace</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/XRReferenceSpaceEvent">XRReferenceSpaceEvent</a></code></td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/XRSession#events">XRSession</a></code></td>
+	<td>
+		<code><a href="/en-US/docs/Web/API/XRSessionEvent">XRSessionEvent</a></code>,
+		<code><a href="/en-US/docs/Web/API/XRInputSourcesChangeEvent">XRInputSourcesChangeEvent</a></code>,
+		<code><a href="/en-US/docs/Web/API/XRInputSourceEvent">XRInputSourceEvent</a></code>
+	</td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/API/XRSystem#events">XRSystem</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/Event">Event</a></code></td>
+	<td>XXX</td>
+</tr>
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/HTML/Element/audio#events">Element/audio</a></code></td>
+	<td>
+		<code><a href="/en-US/docs/Web/API/AudioProcessingEvent">AudioProcessingEvent</a></code>,
+		<code><a href="/en-US/docs/Web/API/Event">Event</a></code>,
+		<code><a href="/en-US/docs/Web/API/OfflineAudioCompletionEvent">OfflineAudioCompletionEvent</a></code>
+	</td>
+	<td>XXX</td>
+</tr>
+
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/HTML/Element/details#events">Element/details</a></code></td>
+	<td><code><a href="/en-US/docs/Web/API/Event">Event</a></code></td>
+	<td>XXX</td>
+</tr>
+
+
+<tr>
+	<td><code><a href="/en-US/docs/Web/HTML/Element/video#events">Element/video</a></code></td>
+	<td>
+		<code><a href="/en-US/docs/Web/API/AudioProcessingEvent">AudioProcessingEvent</a></code>,
+		<code><a href="/en-US/docs/Web/API/Event">Event</a></code>
+	</td>
+	<td>XXX</td>
+</tr>
+
+</table>
+
+
 
 <h2 id="See_also">See also</h2>
 
