@@ -18,7 +18,10 @@ tags:
 
 <ul>
  <li>Provides a master directory of all the named caches that can be accessed by a {{domxref("ServiceWorker")}} or other type of worker or {{domxref("window")}} scope (you’re not limited to only using it with service workers, even though the {{SpecName('Service Workers')}} spec defines it).
-  <div class="note"><strong>Note</strong>: <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1026063">Chrome and Safari only expose `CacheStorage` to the windowed context over HTTPS</a>. {{domxref("WindowOrWorkerGlobalScope/caches", "WorkerGlobalScope.caches")}} will be undefined unless an SSL certificate is configured.</div>
+  <div class="notecard note">
+    <h4>Note</h4>
+    <p><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1026063">Chrome and Safari only expose `CacheStorage` to the windowed context over HTTPS</a>. {{domxref("WindowOrWorkerGlobalScope/caches", "WorkerGlobalScope.caches")}} will be undefined unless an SSL certificate is configured.</p>
+  </div>
  </li>
  <li>Maintains a mapping of string names to corresponding {{domxref("Cache")}} objects.</li>
 </ul>
@@ -29,9 +32,18 @@ tags:
 
 <p>You can access <code>CacheStorage</code> through the global {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}} property.</p>
 
-<div class="note"><strong>Note</strong>: CacheStorage always rejects with a <code>SecurityError</code> on untrusted origins (i.e. those that aren't using HTTPS, although this definition will likely become more complex in the future.) When testing, you can get around this by checking the "Enable Service Workers over HTTP (when toolbox is open)" option in the Firefox Devtools options/gear menu.</div>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>CacheStorage always rejects with a <code>SecurityError</code> on untrusted origins (i.e. those that aren't using HTTPS, although this definition will likely become more complex in the future.) When testing on Firefox, you can get around this by checking the <strong>Enable Service Workers over HTTP (when toolbox is open)</strong> option in the Firefox Devtools options/gear menu.</p>
+</div>
 
-<div class="note"><strong>Note</strong>: {{domxref("CacheStorage.match()")}} is a convenience method. Equivalent functionality to match a cache entry can be implemented by returning an array of cache names from {{domxref("CacheStorage.keys()")}}, opening each cache with {{domxref("CacheStorage.open()")}}, and matching the one you want with {{domxref("Cache.match()")}}.</div>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>{{domxref("CacheStorage.match()")}} is a convenience method. Equivalent functionality to match a cache entry can be implemented by returning an array of cache names from {{domxref("CacheStorage.keys()")}}, opening each cache with {{domxref("CacheStorage.open()")}}, and matching the one you want with {{domxref("Cache.match()")}}.</p>
+</div>
+
+<p>{{AvailableInWorkers}}</p>
+<p>{{securecontext_header}}</p>
 
 <h2 id="Methods">Methods</h2>
 
