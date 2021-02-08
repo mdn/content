@@ -3648,7 +3648,7 @@
 /en-US/docs/ECMAScript	/en-US/docs/Web/JavaScript/Language_Resources
 /en-US/docs/ECMAScript_DontEnum_attribute	/en-US/docs/Web/JavaScript/Data_structures#Properties
 /en-US/docs/EMBED_MANIFEST_AT	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options
-/en-US/docs/ESLint	/en-US/docs/Mozilla/Developer_guide/ESLint
+/en-US/docs/ESLint	https://firefox-source-docs.mozilla.org/code-quality/lint/index.html
 /en-US/docs/EXPORT_LIBRARY	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options
 /en-US/docs/EXSLT	/en-US/docs/Web/EXSLT
 /en-US/docs/EXSLT/exsl	/en-US/docs/Web/EXSLT/exsl
@@ -5959,6 +5959,7 @@
 /en-US/docs/Mozilla/Developer_guide/Build_Instructions/OS_2_Build_Prerequisites/Building_on_OS2_using_Mercurial	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/OS2_Build_Prerequisites/Building_on_OS2_using_Mercurial
 /en-US/docs/Mozilla/Developer_guide/Build_Instructions/OS_2_Build_Prerequisites/Building_on_OS_2_using_Mercurial	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/OS2_Build_Prerequisites/Building_on_OS2_using_Mercurial
 /en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Firefox_build/Windows_Firefox_build	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Firefox_build
+/en-US/docs/Mozilla/Developer_guide/ESLint	https://firefox-source-docs.mozilla.org/code-quality/lint/index.html
 /en-US/docs/Mozilla/Firefox/Releases/36/Site_Compatibility_for_Firefox_36	/en-US/docs/Mozilla/Firefox/Releases/36/Site_Compatibility
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_23_for_developers	/en-US/docs/Mozilla/Firefox/Releases/23
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_41_for_developers	/en-US/docs/Mozilla/Firefox/Releases/41
