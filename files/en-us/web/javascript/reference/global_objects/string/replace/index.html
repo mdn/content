@@ -207,7 +207,7 @@ console.log(newstr);  // Twas the night before Christmas...
     and ignore case flags</a> which permits <code>replace()</code> to replace each
   occurrence of <code>'apples'</code> in the string with <code>'oranges'</code>.</p>
 
-<pre class="brush: js notranslate">let re = /apples/gi;
+<pre class="brush: js notranslate">let re = /apples/ig;
 let str = 'Apples are round, and apples are juicy.';
 let newstr = str.replace(re, 'oranges');
 console.log(newstr);  // oranges are round, and oranges are juicy.
