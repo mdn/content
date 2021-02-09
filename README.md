@@ -7,6 +7,11 @@ The following is a set of guidelines for contributing to the
 [content of MDN Web Docs](https://github.com/mdn/content), which is
 hosted within the [MDN Organization](https://github.com/mdn) on GitHub.
 
+> **Note:** Just want to find a task and jump in?
+  See [Getting started on MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started) 
+  for an overview of how to join, and [Contributing to MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute)
+  for a filtered list of tasks.
+
 <!-- You can quickly regenerate this TOC by running:
   npx markdown-toc@1.2.0 --bullets='-' --no-firsth1 README.md -->
 
@@ -32,8 +37,8 @@ hosted within the [MDN Organization](https://github.com/mdn) on GitHub.
 
 ## Code of Conduct
 
-Everyone participating in this project is expected to follow
-[our Code of Conduct](CODE_OF_CONDUCT.md).
+Everyone participating in this project is expected to follow our
+[Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## License
 
@@ -623,10 +628,10 @@ you can follow the below steps to unarchive it:
 directory into the appropriate place inside this repo, and update the
 page's meta data (like `slug`) if needed.
 
-Note: To archive a currently-non-archived page, you need to follow the
+> **Note:** To archive a currently-non-archived page, you need to follow the
 above procedure, but move the page in question the opposite way between repos.
 
-Note: You can have an archived page with non-archived pages below it in the
+> **Note:** You can have an archived page with non-archived pages below it in the
 hierarchy, and vice-versa. To achive this you need to have the same directory
 structure in both the `content` and `archive-content` repos. Whether a page
 is non-archived or archived depends on which repo its `index.html` file is
