@@ -7623,7 +7623,6 @@
 /en-US/docs/Web/API/Element/animationend_event	/en-US/docs/Web/API/HTMLElement/animationend_event
 /en-US/docs/Web/API/Element/animationiteration_event	/en-US/docs/Web/API/HTMLElement/animationiteration_event
 /en-US/docs/Web/API/Element/animationstart_event	/en-US/docs/Web/API/HTMLElement/animationstart_event
-/en-US/docs/Web/API/Element/assignedSlot	/en-US/docs/Web/API/Slottable/assignedSlot
 /en-US/docs/Web/API/Element/cancel_event	/en-US/docs/Web/API/HTMLDialogElement/cancel_event
 /en-US/docs/Web/API/Element/childElementCount	/en-US/docs/Web/API/ParentNode/childElementCount
 /en-US/docs/Web/API/Element/children	/en-US/docs/Web/API/ParentNode/children
@@ -8799,7 +8798,8 @@
 /en-US/docs/Web/API/SharedWorkerGlobalScope.name	/en-US/docs/Web/API/SharedWorkerGlobalScope/name
 /en-US/docs/Web/API/SharedWorkerGlobalScope.onconnect	/en-US/docs/Web/API/SharedWorkerGlobalScope/onconnect
 /en-US/docs/Web/API/Slotable	/en-US/docs/Web/API/Slottable
-/en-US/docs/Web/API/Slotable/assignedSlot	/en-US/docs/Web/API/Slottable/assignedSlot
+/en-US/docs/Web/API/Slotable/assignedSlot	/en-US/docs/Web/API/Element/assignedSlot
+/en-US/docs/Web/API/Slottable/assignedSlot	/en-US/docs/Web/API/Element/assignedSlot
 /en-US/docs/Web/API/SpeechRecognition/SpeechRecognition.serviceURI	/en-US/docs/Web/API/SpeechRecognition/serviceURI
 /en-US/docs/Web/API/SpeechRecognition/start()	/en-US/docs/Web/API/SpeechRecognition/start
 /en-US/docs/Web/API/SpeechRecognitionEvent/SpeechRecognitionEvent.resultIndex	/en-US/docs/Web/API/SpeechRecognitionEvent/resultIndex
