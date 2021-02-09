@@ -38758,15 +38758,6 @@
       "PyroLagus"
     ]
   },
-  "Web/API/Credential/name": {
-    "modified": "2020-10-15T21:44:49.114Z",
-    "contributors": [
-      "ddbeck",
-      "fscholz",
-      "jpmedley",
-      "david_ross"
-    ]
-  },
   "Web/API/Credential/type": {
     "modified": "2020-10-15T21:44:58.322Z",
     "contributors": [
