@@ -5,10 +5,6 @@ tags:
   - NSS
   - Tutorial
 ---
-<div title="Page 1">
-<div>
-<div>
-<div>
 <h2 id="NSS_Coding_Style">NSS Coding Style</h2>
 
 <h3 id="Formatting">Formatting</h3>
@@ -46,15 +42,7 @@ else
     action();
 }
 </pre>
-</div>
-</div>
-</div>
-</div>
 
-<div title="Page 2">
-<div>
-<div>
-<div>
 <p>Or:</p>
 
 <pre class="brush: cpp">if (condition)
@@ -107,15 +95,7 @@ else
 <p><strong>goto</strong> can be used, to simplify resource deallocation, before returning from a function.</p>
 
 <p>A data buffer is usually represented as:</p>
-</div>
-</div>
-</div>
-</div>
 
-<div title="Page 3">
-<div>
-<div>
-<div>
 <pre class="brush: cpp">unsigned char *data;
 unsigned int len;</pre>
 
@@ -178,15 +158,7 @@ unsigned int len;</pre>
 <p>Public headers are in the <code>EXPORTS</code> variable.</p>
 
 <p>Private headers,which may be included by files in other directories, are in the <code>PRIVATE_EXPORTS</code> variable.</p>
-</div>
-</div>
-</div>
-</div>
 
-<div title="Page 4">
-<div>
-<div>
-<div>
 <p>Private headers, that are only included by files in the same directory, are not listed in either variable.</p>
 
 <p>Only functions listed in the symbol export lists (<code>nss.def</code>, <code>ssl.def</code>, <code>smime.def</code>, etc.) are truly public functions. Unfortunately, public headers may declare private functions, for historical reasons. The symbol export lists are the authoritative source of public functions.</p>
@@ -210,7 +182,3 @@ unsigned int len;</pre>
 <p>The procedure is documented at <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Updating_NSPR_or_NSS_in_mozilla-central">https://developer.mozilla.org//en-US/docs/Mozilla/Developer_guide/Build_Instructions/Updating_NSPR_or_NSS_in_mozilla-central</a>.</p>
 
 <p>If it is necessary to apply private patches, please document them in <code>&lt;tree&gt;/security/patches/README</code>.</p>
-</div>
-</div>
-</div>
-</div>
