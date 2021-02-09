@@ -123,10 +123,14 @@ document: `title`, `slug`, and [`tags`](https://developer.mozilla.org/en-US/docs
 
 If you just want to make a simple change to a single file, like fixing a typo,
 the GitHub UI is the simplest way to do that. For example, if you've found
-a typo within the [JavaScript landing page](files/en-us/web/javascript/index.html),
-you can sign into GitHub, go to <https://github.com/mdn/content>, navigate to
+a typo within the [JavaScript landing page](https://developer.mozilla.org/en-US/docs/Web/JavaScript),
+you can sign into GitHub, go to <https://github.com/mdn/content>, navigate to the source file
 `files/en-us/web/javascript/index.html`, and then click on the edit
-(pencil) button. From there the GitHub UI will take your hand and
+(pencil) button. 
+
+> **Tip:** Click the **Source on GitHub** link in the footer of any MDN page to jump to its source file on GitHub.
+
+From there the GitHub UI will take your hand and
 [walk you through the rest](https://docs.github.com/en/free-pro-team@latest/github/managing-files-in-a-repository/editing-files-in-your-repository),
 like automatically creating a
 [fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
@@ -134,8 +138,9 @@ and branch to commit your changes to, as well as helping you reach the
 ultimate goal, a [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests).
 Your pull request represents the work you want to be reviewed,
 hopefully approved, and then merged into the `main` branch of this repository.
-**See the [pull request etiquette section](#pull-request-etiquette) for more details**
-**on creating and handling pull requests successfully.**
+
+> **Note:** See the [pull request etiquette section](#pull-request-etiquette) for more details
+on creating and handling pull requests successfully.
 
 If you're not certain of the changes that you want to make, get in touch
 with us first!
