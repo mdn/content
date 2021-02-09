@@ -77,7 +77,7 @@ console.log(date.toLocaleString());
   try {
     new Date().toLocaleString('i');
   } catch (e) {
-    return e instanceof RangeError;
+    return e.name === 'RangeError';
   }
   return false;
 }
