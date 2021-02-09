@@ -41,10 +41,10 @@
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.4.83":
-  version "0.4.83"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.83.tgz#f2bcf3f99bb800e5200b502f5c0d9967985a2256"
-  integrity sha512-4e3Vr1EB2NEaNvAjL5KSpTRQZ3BWFDxy+t4O/4suCrRXaJpq5ff04/iCqVGwlKm6GObDRdU5Bm3QG2HWTQv8gw==
+"@mdn/yari@0.4.90":
+  version "0.4.90"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.90.tgz#d5f74d1d0286c8cf86435acd2fff8918534d0169"
+  integrity sha512-RWXCYOVZqbyOLaDbbWt/jsO9rODJQgxqfSvzBF+DXgGY2b3puX7g64Ek4srRuvohzAyIiow/0DNL6cim97KXZg==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
@@ -58,7 +58,7 @@
     cookie-parser "1.4.5"
     cssesc "^3.0.0"
     dotenv "8.2.0"
-    ejs "3.1.5"
+    ejs "3.1.6"
     express "4.17.1"
     express-http-proxy "1.6.2"
     file-type "16.2.0"
@@ -1209,10 +1209,10 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
-ejs@3.1.5:
-  version "3.1.5"
-  resolved "https://registry.yarnpkg.com/ejs/-/ejs-3.1.5.tgz#aed723844dc20acb4b170cd9ab1017e476a0d93b"
-  integrity sha512-dldq3ZfFtgVTJMLjOe+/3sROTzALlL9E34V4/sDtUd/KlBSS0s6U1/+WPE1B4sj9CXHJpL1M6rhNJnc9Wbal9w==
+ejs@3.1.6:
+  version "3.1.6"
+  resolved "https://registry.yarnpkg.com/ejs/-/ejs-3.1.6.tgz#5bfd0a0689743bb5268b3550cceeebbc1702822a"
+  integrity sha512-9lt9Zse4hPucPkoP7FHDF0LQAlGyF9JVpnClFLFH3aSSbxmyoqINRpp/9wePWJTUl4KOQwRL72Iw3InHPDkoGw==
   dependencies:
     jake "^10.6.1"
 
