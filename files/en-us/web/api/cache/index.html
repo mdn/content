@@ -15,7 +15,7 @@ tags:
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>Cache</code></strong> interface provides a storage mechanism for <code>{{domxref("Request")}}</code> / <code>{{domxref("Response")}}</code> object pairs that are cached, for example as part of the {{domxref("ServiceWorker")}} life cycle. Note that the <code>Cache</code> interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec.</span></p>
+<p><span class="seoSummary">The <strong><code>Cache</code></strong> interface provides a persistent storage mechanism for <code>{{domxref("Request")}}</code> / <code>{{domxref("Response")}}</code> object pairs that are cached in long lived memory. How long a Cache lives is browser dependent, but a single origin's scripts can typically rely on a previously populated Cache to exist. Note that the <code>Cache</code> interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec.</span></p>
 
 <p>An origin can have multiple, named <code>Cache</code> objects. You are responsible for implementing how your script (e.g. in a {{domxref("ServiceWorker")}}) handles <code>Cache</code> updates. Items in a <code>Cache</code> do not get updated unless explicitly requested; they don’t expire unless deleted. Use {{domxref("CacheStorage.open", "CacheStorage.open()")}} to open a specific named <code>Cache</code> object and then call any of the <code>Cache</code> methods to maintain the <code>Cache</code>.</p>
 
