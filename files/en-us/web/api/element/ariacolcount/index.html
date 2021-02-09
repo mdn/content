@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("DOM")}}</div>
 
-<p class="summary">The <strong><code>ariaColCount</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-rowcount</code> attribute.</p>
+<p class="summary">The <strong><code>ariaColCount</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-colcount</code> attribute, which defines the number of columns in a table, grid, or treegrid.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -20,11 +20,11 @@ tags:
 <var>element</var>.ariaColCount = <var>ariaColCount</var></pre>
 
 <h3>Value</h3>
-<p>A {{domxref("DOMString")}} which contains an integer.</p>
+<p>A {{domxref("DOMString")}}.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>In this example the <code>aria-colcount</code> attribute on the element with an id of <code>semantic-table</code> is set to "2". Using <code>ariaColCount</code> we update the value to "3".</p>
+<p>In this example the <code>aria-colcount</code> attribute on the element with an ID of <code>semantic-table</code> is set to "2". Using <code>ariaColCount</code> we update the value to "3".</p>
 
 <pre class="brush: html">&lt;table id="semantic-table" role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="100" aria-colcount="2"&gt;
   &lt;caption id="semantic_elements_table_desc"&gt;Semantic Elements to use instead of ARIA's roles&lt;/caption&gt;

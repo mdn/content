@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("DOM")}}</div>
 
-<p class="summary">The <strong><code>ariaModal</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-modal</code> attribute.</p>
+<p class="summary">The <strong><code>ariaModal</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-modal</code> attribute, which indicates whether an element is modal when displayed.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -23,15 +23,15 @@ tags:
 <p>A {{domxref("DOMString")}} with one of the following values:</p>
 
 <dl>
-  <dt><code>true</code></dt>
+  <dt><code>"true"</code></dt>
   <dd>The element is modal.</dd>
-  <dt><code>false</code></dt>
+  <dt><code>"false"</code></dt>
   <dd>The element is not modal.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>In this example the <code>aria-modal</code> attribute on the element with an id of <code>address-modal</code> is set to "true" indicating that this is a modal dialog. Using <code>ariaModal</code> we update the value to "false".</p>
+<p>In this example the <code>aria-modal</code> attribute on the element with an ID of <code>address-modal</code> is set to "true" indicating that this is a modal dialog. Using <code>ariaModal</code> we update the value to "false".</p>
 
 <pre class="brush: html">&lt;div role="dialog" id="address-modal" aria-labelledby="dialog1Title"
   aria-describedby="dialog1Desc" aria-modal="true"&gt;&lt;/div&gt;</pre>

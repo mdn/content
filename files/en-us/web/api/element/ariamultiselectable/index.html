@@ -1,37 +1,42 @@
 ---
-title: Element.ariaMultiselectable
-slug: Web/API/Element/ariaMultiselectable
+title: Element.ariaMultiSelectable
+slug: Web/API/Element/ariaMultiSelectable
 tags:
   - API
   - Property
   - Reference
-  - ariaMultiselectable
+  - ariaMultiSelectable
   - AriaAttributes
   - AriaMixin
   - Element
 ---
 <div>{{DefaultAPISidebar("DOM")}}</div>
 
-<p class="summary">The <strong><code>ariaMultiselectable</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-multiselectable</code> attribute.</p>
+<p class="summary">The <strong><code>ariaMultiSelectable</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-multiselectable</code> attribute, which indicates that the user may select more than one item from the current selectable descendants.</p>
+
+<div class="notecard note">
+  <h3>Note</h3>
+  <p>Where possible use an HTML {{htmlelement("select")}} element as this has built in semantics and does not require ARIA attributes.</p>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>ariaMultiselectable</var> = element.ariaMultiselectable;
-<var>element</var>.ariaMultiselectable = <var>ariaMultiselectable</var></pre>
+<pre class="syntaxbox notranslate">var <var>ariaMultiSelectable</var> = element.ariaMultiSelectable;
+<var>element</var>.ariaMultiSelectable = <var>ariaMultiSelectable</var></pre>
 
 <h3>Value</h3>
 <p>A {{domxref("DOMString")}} with one of the following values:</p>
 
 <dl>
-  <dt><code>true</code></dt>
+  <dt><code>"true"</code></dt>
   <dd>More than one item may be selected at a time.</dd>
-  <dt><code>false</code></dt>
+  <dt><code>"false"</code></dt>
   <dd>Only one item may be selected.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p></p>
+<p><p>In this example the <code>aria-multiselectable</code> attribute on the element with an ID of <code>listbox1</code> is set to "true" indicating that this input accepts multiple selected items. Using <code>ariaMultiSelectable</code> we update the value to "false".</p></p>
 
 <pre class="brush: html">&lt;div role="listbox" tabindex="0" id="listbox1"
   aria-multiselectable="true" aria-labelledby="listbox1label" aria-activedescendant="listbox1-1"&gt;
@@ -41,14 +46,9 @@ tags:
 &lt;/div></pre>
 
 <pre class="brush: js">let el = document.getElementById('listbox1');
-console.log(el.ariaMultiselectable); // "true"
-el.ariaMultiselectable = "false"
-console.log(el.ariaMultiselectable); // "false"</pre>
-
-<div class="notecard note">
-  <h3>Note</h3>
-  <p>Where possible use an HTML {{htmlelement("select")}} element as this has built in semantics and does not require ARIA attributes.</p>
-</div>
+console.log(el.ariaMultiSelectable); // "true"
+el.ariaMultiSelectable = "false"
+console.log(el.ariaMultiSelectable); // "false"</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -60,7 +60,7 @@ console.log(el.ariaMultiselectable); // "false"</pre>
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td>{{SpecName('ARIA 1.2','#dom-ariamixin-ariamultiselectable','ariaMultiselectable')}}</td>
+   <td>{{SpecName('ARIA 1.2','#dom-ariamixin-ariamultiselectable','ariaMultiSelectable')}}</td>
    <td>{{Spec2('ARIA 1.2')}}</td>
    <td>Initial definition.</td>
   </tr>
@@ -71,7 +71,7 @@ console.log(el.ariaMultiselectable); // "false"</pre>
 
 <div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
-<p>{{Compat("api.Element.ariaMultiselectable")}}</p>
+<p>{{Compat("api.Element.ariaMultiSelectable")}}</p>
 
 <h2 id="See_also">See also</h2>
 

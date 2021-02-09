@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("DOM")}}</div>
 
-<p class="summary">The <strong><code>ariaExpanded</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-expanded</code> attribute.</p>
+<p class="summary">The <strong><code>ariaExpanded</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-expanded</code> attribute, which indicates whether a grouping element owned or controlled by this element is expanded or collapsed.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -23,17 +23,17 @@ tags:
 <p>A {{domxref("DOMString")}} with one of the following values:</p>
 
 <dl>
-  <dt><code>true</code></dt>
+  <dt><code>"true"</code></dt>
   <dd>The grouping element this element owns or controls is collapsed.</dd>
-  <dt><code>false</code></dt>
+  <dt><code>"false"</code></dt>
   <dd>The grouping element this element owns or controls is expanded.</dd>
-  <dt><code>undefined</code></dt>
+  <dt><code>"undefined"</code></dt>
   <dd>The element does not own or control a grouping element that is expandable.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>In this example the <code>aria-expanded</code> attribute on the element with an id of <code>animal</code> is set to "false". Using <code>ariaExpanded</code> we update the value to "true".</p>
+<p>In this example the <code>aria-expanded</code> attribute on the element with an ID of <code>animal</code> is set to "false". Using <code>ariaExpanded</code> we update the value to "true".</p>
 
 <pre class="brush: html">&lt;div class="animals-combobox"&gt;
   &lt;label for="animal"&gt;Animal&lt;/label&gt;

@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("DOM")}}</div>
 
-<p class="summary">The <strong><code>ariaSort</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-sort</code> attribute.</p>
+<p class="summary">The <strong><code>ariaSort</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-sort</code> attribute, which indicates if items in a table or grid are sorted in ascending or descending order.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -23,19 +23,19 @@ tags:
 <p>A {{domxref("DOMString")}} with one of the following values:</p>
 
 <dl>
-  <dt><code>ascending</code></dt>
+  <dt><code>"ascending"</code></dt>
   <dd>Items are sorted in ascending order by this column.</dd>
-  <dt><code>descending</code></dt>
+  <dt><code>"descending"</code></dt>
   <dd>Items are sorted in descending order by this column.</dd>
-  <dt><code>none</code></dt>
+  <dt><code>"none"</code></dt>
   <dd>There is no defined sort applied to the column.</dd>
-  <dt><code>other</code></dt>
+  <dt><code>"other"</code></dt>
   <dd>A sort algorithm other than ascending or descending has been applied.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>In this example the <code>aria-sort</code> attribute on the element with an id of <code>role-heading</code> is set to "none". Using <code>ariaSort</code> we update the value to "ascending".</p>
+<p>In this example the <code>aria-sort</code> attribute on the element with an ID of <code>role-heading</code> is set to "none". Using <code>ariaSort</code> we update the value to "ascending".</p>
 
 <pre class="brush: html">&lt;table id="semantic-table" role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="100"&gt;
   &lt;caption id="semantic_elements_table_desc"&gt;Semantic Elements to use instead of ARIA's roles&lt;/caption&gt;
