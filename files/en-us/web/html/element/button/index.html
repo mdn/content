@@ -21,11 +21,11 @@ tags:
  <tbody>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Interactive_content">Interactive content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_listed">listed</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_labelable">labelable</a>, and <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_submittable">submittable</a> <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form-associated_content">form-associated</a> element, palpable content.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content">Interactive content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_listed">listed</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable">labelable</a>, and <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_submittable">submittable</a> <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_content">form-associated</a> element, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">Phrasing content</a> but there must be no <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Interactive_content">Interactive content</a></td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a> but there must be no <a href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content">Interactive content</a></td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -33,7 +33,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -134,7 +134,7 @@ tags:
 
 <h3 id="Icon_buttons">Icon buttons</h3>
 
-<p>Buttons that only show an icon to represent do not have an <em>accessible name</em>. Accessible names provide information for assistive technology, such as screen readers, to access when they parse the document and generate <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs">an accessibility tree</a>. Assistive technology then uses the accessibility tree to navigate and manipulate page content.</p>
+<p>Buttons that only show an icon to represent do not have an <em>accessible name</em>. Accessible names provide information for assistive technology, such as screen readers, to access when they parse the document and generate <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis">an accessibility tree</a>. Assistive technology then uses the accessibility tree to navigate and manipulate page content.</p>
 
 <p>To give an icon button an accessible name, put text in the <code>&lt;button&gt;</code> element that concisely describes the button's functionality.</p>
 
@@ -152,7 +152,7 @@ tags:
 
 <ul>
  <li><a href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/">What is an accessible name? | The Paciello Group</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust#Guideline_4.1_—_Compatible_Maximize_compatibility_with_current_and_future_user_agents_including_assistive_technologies">MDN Understanding WCAG, Guideline 4.1 explanations</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust#guideline_4.1_—_compatible_maximize_compatibility_with_current_and_future_user_agents_including_assistive_technologies">MDN Understanding WCAG, Guideline 4.1 explanations</a></li>
  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html">Understanding Success Criterion 4.1.2 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
@@ -178,6 +178,10 @@ tags:
  <li><a href="https://axesslab.com/hand-tremors/">Hand tremors and the giant-button-problem - Axess Lab</a></li>
 </ul>
 
+<h3 id="ARIA">ARIA state information</h3>
+
+<p>To describe the state of a button the correct ARIA attribute to use is <code>aria-pressed</code> and not <code>aria-checked</code> or <code>aria-selected</code>. To find out more read  the information about the <a href="/en-us/docs/Web/Accessibility/ARIA/Roles/button_role">ARIA button role</a>.</p>
+
 <h3 id="Firefox">Firefox</h3>
 
 <p>Firefox will add a small dotted border on a focused button. This border is declared through CSS in the browser stylesheet, but you can override it to add your own focused style using <code><a href="/en-US/docs/Web/CSS/::-moz-focus-inner">button::-moz-focus-inner { }</a></code>.</p>
@@ -188,7 +192,7 @@ tags:
 
 <ul>
  <li><a href="https://webaim.org/resources/contrastchecker/">WebAIM: Color Contrast Checker</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
