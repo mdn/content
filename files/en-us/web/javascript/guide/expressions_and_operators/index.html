@@ -25,16 +25,16 @@ tags:
   and contains information about operator precedence.</p>
 
 <ul>
- <li><a href="#Assignment_operators">Assignment operators</a></li>
- <li><a href="#Comparison_operators">Comparison operators</a></li>
- <li><a href="#Arithmetic_operators">Arithmetic operators</a></li>
- <li><a href="#Bitwise_operators">Bitwise operators</a></li>
- <li><a href="#Logical_operators">Logical operators</a></li>
- <li><a href="#String_operators">String operators</a></li>
- <li><a href="#Conditional_ternary_operator">Conditional (ternary) operator</a></li>
- <li><a href="#Comma_operator">Comma operator</a></li>
- <li><a href="#Unary_operators">Unary operators</a></li>
- <li><a href="#Relational_operators">Relational operators</a></li>
+ <li><a href="#assignment_operators">Assignment operators</a></li>
+ <li><a href="#comparison_operators">Comparison operators</a></li>
+ <li><a href="#arithmetic_operators">Arithmetic operators</a></li>
+ <li><a href="#bitwise_operators">Bitwise operators</a></li>
+ <li><a href="#logical_operators">Logical operators</a></li>
+ <li><a href="#string_operators">String operators</a></li>
+ <li><a href="#conditional_ternary_operator">Conditional (ternary) operator</a></li>
+ <li><a href="#comma_operator">Comma operator</a></li>
+ <li><a href="#unary_operators">Unary operators</a></li>
+ <li><a href="#relational_operators">Relational operators</a></li>
 </ul>
 
 <p>JavaScript has both <em>binary</em> and <em>unary</em> operators, and one special
@@ -58,7 +58,7 @@ tags:
 
 <p>For example, <code>x++</code> or <code>++x</code>.</p>
 
-<h3 id="Assignment_operators"><a id="Assignment">Assignment operators</a></h3>
+<h3 id="Assignment_operators">Assignment operators</h3>
 
 <p>An assignment operator assigns a value to its left operand based on the value of its
   right operand. The simple assignment operator is equal (<code>=</code>), which assigns
@@ -245,7 +245,7 @@ var three = foo[2];
 // with destructuring
 var [one, two, three] = foo;</pre>
 
-<h3 id="Comparison_operators"><a id="Comparison">Comparison operators</a></h3>
+<h3 id="Comparison_operators">Comparison operators</h3>
 
 <p>A comparison operator compares its operands and returns a logical value based on
   whether the comparison is true. The operands can be numerical, string, logical, or
@@ -274,7 +274,7 @@ var var2 = 4;
   <tbody>
     <tr>
       <td><a
-          href="/en-US/docs/Web/JavaScript/Reference/Operators#Equality">Equal</a>
+          href="/en-US/docs/Web/JavaScript/Reference/Operators#equality">Equal</a>
         (<code>==</code>)</td>
       <td>Returns <code>true</code> if the operands are equal.</td>
       <td><code>3 == var1</code>
@@ -283,16 +283,16 @@ var var2 = 4;
       </td>
     </tr>
     <tr>
-      <td><a
-          href="/en-US/docs/Web/JavaScript/Reference/Operators#Inequality">Not
-          equal</a> (<code>!=</code>)</td>
+      <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators#inequality">
+          Not equal</a> (<code>!=</code>)
+      </td>
       <td>Returns <code>true</code> if the operands are not equal.</td>
       <td><code>var1 != 4<br>
     var2 != "3"</code></td>
     </tr>
     <tr>
       <td><a
-          href="/en-US/docs/Web/JavaScript/Reference/Operators#Identity">Strict
+          href="/en-US/docs/Web/JavaScript/Reference/Operators#identity">Strict
           equal</a> (<code>===</code>)</td>
       <td>Returns <code>true</code> if the operands are equal and of the same type. See
         also {{jsxref("Object.is")}} and <a
@@ -302,7 +302,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td><a
-          href="/en-US/docs/Web/JavaScript/Reference/Operators#Nonidentity">Strict
+          href="/en-US/docs/Web/JavaScript/Reference/Operators#nonidentity">Strict
           not equal</a> (<code>!==</code>)</td>
       <td>Returns <code>true</code> if the operands are of the same type but not equal, or
         are of different type.</td>
@@ -311,7 +311,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td><a
-          href="/en-US/docs/Web/JavaScript/Reference/Operators#Greater_than_operator">Greater
+          href="/en-US/docs/Web/JavaScript/Reference/Operators#greater_than_operator">Greater
           than</a> (<code>&gt;</code>)</td>
       <td>Returns <code>true</code> if the left operand is greater than the right operand.
       </td>
@@ -320,7 +320,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td><a
-          href="/en-US/docs/Web/JavaScript/Reference/Operators#Greater_than_or_equal_operator">Greater
+          href="/en-US/docs/Web/JavaScript/Reference/Operators#greater_than_or_equal_operator">Greater
           than or equal</a> (<code>&gt;=</code>)</td>
       <td>Returns <code>true</code> if the left operand is greater than or equal to the
         right operand.</td>
@@ -329,7 +329,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td><a
-          href="/en-US/docs/Web/JavaScript/Reference/Operators#Less_than_operator">Less
+          href="/en-US/docs/Web/JavaScript/Reference/Operators#less_than_operator">Less
           than</a> (<code>&lt;</code>)</td>
       <td>Returns <code>true</code> if the left operand is less than the right operand.
       </td>
@@ -338,7 +338,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td><a
-          href="/en-US/docs/Web/JavaScript/Reference/Operators#Less_than_or_equal_operator">Less
+          href="/en-US/docs/Web/JavaScript/Reference/Operators#less_than_or_equal_operator">Less
           than or equal</a> (<code>&lt;=</code>)</td>
       <td>Returns <code>true</code> if the left operand is less than or equal to the right
         operand.</td>
@@ -354,7 +354,7 @@ var var2 = 4;
       functions</a>.</p>
 </div>
 
-<h3 id="Arithmetic_operators"><a id="Arithmetic">Arithmetic operators</a></h3>
+<h3 id="Arithmetic_operators">Arithmetic operators</h3>
 
 <p>An arithmetic operator takes numerical values (either literals or variables) as their
   operands and returns a single numerical value. The standard arithmetic operators are
@@ -438,7 +438,7 @@ var var2 = 4;
   </tbody>
 </table>
 
-<h3 id="Bitwise_operators"><a id="Bitwise">Bitwise operators</a></h3>
+<h3 id="Bitwise_operators">Bitwise operators</h3>
 
 <p>A bitwise operator treats their operands as a set of 32 bits (zeros and ones), rather
   than as decimal, hexadecimal, or octal numbers. For example, the decimal number nine has
@@ -635,7 +635,7 @@ After:               1010 0000 0000 0000 0110 0000 0000 0001</pre>
   </tbody>
 </table>
 
-<h3 id="Logical_operators"><a id="Logical">Logical operators</a></h3>
+<h3 id="Logical_operators">Logical operators</h3>
 
 <p>Logical operators are typically used with Boolean (logical) values; when they are, they
   return a Boolean value. However, the <code>&amp;&amp;</code> and <code>||</code>
@@ -741,7 +741,7 @@ var n3 = !'Cat'; // !t returns false
   It is thus the better alternative to provide defaults, when values like <code>''</code>
   or <code>0</code> are valid values for the first expression, too.</p>
 
-<h3 id="String_operators"><a id="String">String operators</a></h3>
+<h3 id="String_operators">String operators</h3>
 
 <p>In addition to the comparison operators, which can be used on string values, the
   concatenation operator (+) concatenates two string values together, returning another
@@ -759,8 +759,7 @@ var n3 = !'Cat'; // !t returns false
 <pre class="brush: js notranslate">var mystring = 'alpha';
 mystring += 'bet'; // evaluates to "alphabet" and assigns this value to mystring.</pre>
 
-<h3 id="Conditional_ternary_operator"><a id="Conditional">Conditional (ternary)
-    operator</a></h3>
+<h3 id="Conditional_ternary_operator">Conditional (ternary) operator</h3>
 
 <p>The <a
     href="/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">conditional
@@ -783,7 +782,7 @@ mystring += 'bet'; // evaluates to "alphabet" and assigns this value to mystring
   <code>age</code> is eighteen or more. Otherwise, it assigns the value "minor" to
   <code>status</code>.</p>
 
-<h3 id="Comma_operator"><a id="Comma">Comma operator</a></h3>
+<h3 id="Comma_operator">Comma operator</h3>
 
 <p>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator">comma
     operator</a> (<code>,</code>) evaluates both of its operands and returns the value of
@@ -804,7 +803,7 @@ for (var i = 0, j = 9; i &lt;= j; i++, j--)
   console.log('a[' + i + '][' + j + ']= ' + a[i][j]);
 </pre>
 
-<h3 id="Unary_operators"><a id="Unary">Unary operators</a></h3>
+<h3 id="Unary_operators">Unary operators</h3>
 
 <p>A unary operation is an operation with only one operand.</p>
 
@@ -942,7 +941,7 @@ void expression
   parentheses surrounding the expression are optional, but it is good style to use them.
 </p>
 
-<h3 id="Relational_operators"><a id="Relational">Relational operators</a></h3>
+<h3 id="Relational_operators">Relational operators</h3>
 
 <p>A relational operator compares its operands and returns a <code>Boolean</code> value
   based on whether the comparison is true.</p>
@@ -1097,7 +1096,7 @@ if (theDay instanceof Date) {
 
 <p>A more detailed version of this table, complete with links to additional details about
   each operator, may be found in <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#Table">JavaScript
+    href="/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table">JavaScript
     Reference</a>.</p>
 
 <h2 id="Expressions">Expressions</h2>
@@ -1121,7 +1120,7 @@ if (theDay instanceof Date) {
 
 <ul>
   <li>Arithmetic: evaluates to a number, for example 3.14159. (Generally uses <a
-      href="#Arithmetic">arithmetic operators</a>.)</li>
+      href="#arithmetic">arithmetic operators</a>.)</li>
   <li>String: evaluates to a character string, for example, "Fred" or "234". (Generally
     uses <a href="#string">string operators</a>.)</li>
   <li>Logical: evaluates to true or false. (Often involves <a href="#logical">logical
