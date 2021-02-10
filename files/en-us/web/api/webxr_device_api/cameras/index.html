@@ -64,7 +64,7 @@ tags:
 <p>In general, virtual cameras may or may not be incorporated into physical objects within the scene. Indeed, outside the scope of 3D gaming, the odds are far more likely that the camera will not correspond with an object that appears in the scene at all. Some examples of ways 3D cameras are used:</p>
 
 <ul>
- <li>When rendering animation—whether for filmmaking or for use within the context of a presentation or game—the virtual camera is used just like a real-world film camera. As much as possible, <a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras#Simulating_classic_cinematography">standard cinematographic techniques</a> are used, since the viewer has likely grown up watching films using those techniques, and has subconscious expectations that a film or animation will follow those methods. Deviating from them can pull the viewer out of the moment.</li>
+ <li>When rendering animation—whether for filmmaking or for use within the context of a presentation or game—the virtual camera is used just like a real-world film camera. As much as possible, <a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras#simulating_classic_cinematography">standard cinematographic techniques</a> are used, since the viewer has likely grown up watching films using those techniques, and has subconscious expectations that a film or animation will follow those methods. Deviating from them can pull the viewer out of the moment.</li>
  <li>In business applications, the 3D camera is used to set the apparent size and perspective when rendering things such as graphs and charts.</li>
  <li>In mapping applications, the camera may either be placed directly over the scene, or might use various angles to show perspective. For 3D GPS solutions, the camera is positioned to show the area around the user, with the majority of the display showing the area ahead of the user's path of motion.</li>
  <li>When using WebGL to accelerate 2D graphics drawing, the camera is typically placed directly above the center of the scene with the distance and field of view set to allow the entire scene to be presented.</li>
@@ -118,7 +118,7 @@ tags:
 
 <h3 id="Composing_multiple_transforms">Composing multiple transforms</h3>
 
-<p>If your camera needs to be performing multiple transforms simultaneously, such as zooming and panning at the same time, you can multiply the transform matrices together to compose them into a single matrix that applies both changes at once. See <a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web#Multiplying_two_matrices">Multiplying two matrices</a> in the article <a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web">Matrix math for the web</a> for a clear but readable function that does this or use your preferred matrix math library such as <a href="http://glmatrix.net/">glMatrix</a> to do the work.</p>
+<p>If your camera needs to be performing multiple transforms simultaneously, such as zooming and panning at the same time, you can multiply the transform matrices together to compose them into a single matrix that applies both changes at once. See <a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web#multiplying_two_matrices">Multiplying two matrices</a> in the article <a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web">Matrix math for the web</a> for a clear but readable function that does this or use your preferred matrix math library such as <a href="http://glmatrix.net/">glMatrix</a> to do the work.</p>
 
 <p>It's crucial to remember that unlike typical arithmetic, where multiplication is commutative (that is, you get the same answer whether you multiply left to right or right to left), matrix multiplication <em>is not commutative!</em> This is because each transform affects the position of the object and possibly the very coordinate system itself, which can dramatically change the results of the next operation performed. So you need to be careful about the order in which you apply your transforms when building your composite transform (or directly applying transforms in sequence).</p>
 
@@ -157,7 +157,7 @@ tags:
 
 <p>Among the best known camera effects is the <strong>zoom</strong>. Zooming is performed in a physical camera by altering the focal length of the lens; this is the distance between the center of the lens itself and the camera's light sensors. Thus, zooming doesn't actually involve moving the camera at all. Instead, a zoom shot changes the magnification of the camera over time to make the area of focus seem closer to or farther away from the viewer, without actually physically moving the camera. A slow move can bring a sense of movement, ease, or focus to a scene, while a rapid zoom can create a sense of anxiety, surprise, or tension.</p>
 
-<p>Because a zoom does not move the camera's position, the resulting effect is unnatural. The human eye doesn't have a zoom lens on it. We make things smaller or larger by moving away from or toward them. In cinematography, that's called a <a href="#dolly">dolly shot</a>.</p>
+<p>Because a zoom does not move the camera's position, the resulting effect is unnatural. The human eye doesn't have a zoom lens on it. We make things smaller or larger by moving away from or toward them. In cinematography, that's called a <a href="#dollying_moving_in_or_out">dolly shot</a>.</p>
 
 <p>There are two techniques in 3D graphics that can create similar though not identical results, and whose methods apply more easily in different situations.</p>
 
@@ -196,7 +196,7 @@ const translateVec = vec3.fromValues(-trackDistance, -craneDistance, pushDistanc
 mat4.translate(transform, transform, translateVec);
 </pre>
 
-<p>This starts with the perspective matrix representing a 130° vertical field of view, then applies a translation that moves the camera in a manner that includes <a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras#Track">track</a>, <a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras#Crane">crane</a>, and <a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras#Push">push</a> movements.</p>
+<p>This starts with the perspective matrix representing a 130° vertical field of view, then applies a translation that moves the camera in a manner that includes <a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras#track">track</a>, <a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras#crane">crane</a>, and <a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras#push">push</a> movements.</p>
 
 <h4 id="Scaling_transforms">Scaling transforms</h4>
 
@@ -268,7 +268,7 @@ vec4.transformMat4(myVector, myVector, createScalingMatrix(2.0));</pre>
 
 <p>Positive values for <code>angle</code> will tilt the camera downward, while negative values of <code>angle</code> will tilt upward.</p>
 
-<h3 id="Dollying_Moving_in_or_out"><a id="Dolly">Dollying (Moving in or out)</a></h3>
+<h3 id="Dollying_Moving_in_or_out">Dollying (Moving in or out)</h3>
 
 <p>A <strong>dolly</strong> shot is one in which the entire camera is moved forward and backward. In classic filmmaking, this is typically done with the camera mounted on a track or on a moving vehicle. The resulting motion can create impressively smooth effects, especially if moving along with the person or object that's the focus of your shot.</p>
 
