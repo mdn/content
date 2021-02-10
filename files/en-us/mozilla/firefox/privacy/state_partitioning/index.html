@@ -26,8 +26,8 @@ tags:
   of Firefox since version 85.
 </p>
 
-<h2>Motivation</h3>
-<h3>Cross-site tracking using shared state</h2>
+<h2>Motivation</h2>
+<h3>Cross-site tracking using shared state</h3>
 <p>
   Browsers traditionally key client-side state by the origin (or sometimes
   registrable domain) of the location a resource was loaded from. For example,
@@ -112,14 +112,13 @@ tags:
    </tr>
   </tbody>
  </table>
-</p>
 
-<h3 id="network_partitioning">Network Partitioning</h2>
+<h3 id="network_partitioning">Network Partitioning</h3>
   <p>Networking-related APIs are not intended to be used for websites to store
   data, but they can be
   <a class="external" href="https://blog.mozilla.org/security/2021/01/26/supercookie-protections/">abused</a>
   for cross-site tracking. As such, the following network APIs and caches are
-  <strong>permanently</strong> partitioned by the top-level site.
+  <strong>permanently</strong> partitioned by the top-level site.</p>
   <div class="note">
     <p><strong>Note</strong>: Network Partitioning is permanent. Websites can't
     control or relax these restrictions.</p>
@@ -135,7 +134,7 @@ tags:
     <li>HTTP Authentication</li>
     <li><a href="/en-US/docs/Web/HTTP/Headers/Alt-Svc">Alt-Svc</a></li>
     <li>Speculative Connections</li>
-    <li>Fonts & Font Cache</li>
+    <li>Fonts &amp; Font Cache</li>
     <li><a href="/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">HSTS</a></li>
     <li>OCSP</li>
     <li>Intermediate CA Cache</li>
@@ -146,11 +145,11 @@ tags:
     <li><a href="/en-US/docs/Glossary/Preflight_request">CORS-preflight</a> Cache</li>
     <li>WebRTC deviceID</li>
   </ul>
-<h3 id="dynamic_state_partitioning">Dynamic Partitioning</h2>
+<h3 id="dynamic_state_partitioning">Dynamic Partitioning</h3>
   <p>To prevent cross-site tracking via JavaScript accessible storage APIs,
   Firefox partitions them for third-parties by top-level site. As opposed to
   Network Partitioning this boundary is dynamic and storage access to the
-  embedders context maybe be granted in certain circumstances.
+  embedders context maybe be granted in certain circumstances.</p>
   <p>Firefox implements the
   <a href="#storage_access_api">StorageAccessAPI</a> to allow frames to request
   access to the parent storage. Access to top-level storage may also be granted
@@ -225,7 +224,7 @@ tags:
       <code>a.example</code> for 15 minutes.
     </li>
   </ul>
-  <h4 id="storage_access_api">Storage Access API</h5>
+  <h4 id="storage_access_api">Storage Access API</h4>
   <p>
     Third-party frames may use
     <a href="/en-US/docs/Web/API/Document/requestStorageAccess">
@@ -248,7 +247,7 @@ tags:
     time.</p>
   </div>
 
-<h3 id="debugging">Debugging</h2>
+<h3 id="debugging">Debugging</h3>
 <p>
   We encourage site owners to test their sites, particularly those that rely on
   third-party content integrations. There are several features in Firefox to
@@ -256,7 +255,7 @@ tags:
 </p>
 
 
-<h4>Logging</h3>
+<h4>Logging</h4>
 <p>
   Here is an overview of the messages logged to the web console when interacting
   with storage in a third-party context. In the following examples,
@@ -301,17 +300,17 @@ tags:
   Information Panel</a> in the permissions section under "Cross-site Cookies".
 </p>
 
-<h4>Test Preferences</h3>
+<h4>Test Preferences</h4>
 <div class="warning">
   <p><strong>Warning</strong>: Make sure to set these prefs in a separate
   Firefox profile or reset them after testing.</p>
 </div>
 
-<h5>Disable Heuristics</h4>
+<h5>Disable Heuristics</h5>
 <p>
   The following prefs can be used to disable individual storage access
   heuristics via the
-  <a class="external"href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">
+  <a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">
     config editor</a>:
 </p>
 <ul>
@@ -329,7 +328,7 @@ tags:
   </li>
 </ul>
 
-<h5>Disable Network Partitioning</h4>
+<h5>Disable Network Partitioning</h5>
 <p>Network partitioning can be disabled with the
 <code>privacy.partition.network_state</code> pref.</p>
 
