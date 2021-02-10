@@ -62,11 +62,11 @@ scroll-behavior: unset;
   &lt;a href="#page-2"&gt;2&lt;/a&gt;
   &lt;a href="#page-3"&gt;3&lt;/a&gt;
 &lt;/nav&gt;
-&lt;scroll-container&gt;
-  &lt;scroll-page id="page-1"&gt;1&lt;/scroll-page&gt;
-  &lt;scroll-page id="page-2"&gt;2&lt;/scroll-page&gt;
-  &lt;scroll-page id="page-3"&gt;3&lt;/scroll-page&gt;
-&lt;/scroll-container&gt;</pre>
+&lt;div class="scroll-container"&gt;
+  &lt;div class="scroll-page" id="page-1"&gt;1&lt;/div&gt;
+  &lt;div class="scroll-page" id="page-2"&gt;2&lt;/div&gt;
+  &lt;div class="scroll-page" id="page-3"&gt;3&lt;/div&gt;
+&lt;/div&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
@@ -75,7 +75,7 @@ scroll-behavior: unset;
   width: 50px;
   text-decoration: none;
 }
-nav, scroll-container {
+nav, .scroll-container {
   display: block;
   margin: 0 auto;
   text-align: center;
@@ -85,14 +85,13 @@ nav {
   padding: 5px;
   border: 1px solid black;
 }
-scroll-container {
-  display: block;
+.scroll-container {
   width: 350px;
   height: 200px;
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
-scroll-page {
+.scroll-page {
   display: flex;
   align-items: center;
   justify-content: center;
