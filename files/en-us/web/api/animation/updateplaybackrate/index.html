@@ -16,27 +16,24 @@ tags:
 ---
 <p>{{APIRef("Web Animations")}}{{SeeCompatTable}}</p>
 
-<div>
-  <p><span class="seoSummary">The
-      <strong><code>updatePlaybackRate()</code> </strong>method of the <a
-        href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>'s
-      {{domxref("Animation")}} Interface sets the speed of an animation after first
-      synchronizing its playback position.</span></p>
+<p>The <strong><code>updatePlaybackRate()</code> </strong>method of the <a
+    href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>'s
+  {{domxref("Animation")}} Interface sets the speed of an animation after
+  first synchronizing its playback position.</p>
 
-  <p>In some cases, an animation may run on a separate thread or process and will continue
-    updating even while long-running JavaScript delays the main thread. In such a case,
-    setting the {{domxref("Animation.playbackRate", "playbackRate")}} on the animation
-    directly may cause the animation's playback position to jump since its playback
-    position on the main thread may have drifted from the playback position where it is
-    currently running.</p>
+<p>In some cases, an animation may run on a separate thread or process and will continue
+  updating even while long-running JavaScript delays the main thread. In such a case,
+  setting the {{domxref("Animation.playbackRate", "playbackRate")}} on the animation
+  directly may cause the animation's playback position to jump since its playback
+  position on the main thread may have drifted from the playback position where it is
+  currently running.</p>
 
-  <p><code>updatePlaybackRate()</code> is an asynchronous method that sets the speed of an
-    animation after synchronizing with its current playback position, ensuring that the
-    resulting change in speed does not produce a sharp jump. After calling
-    <code>updatePlaybackRate()</code> the animation's {{domxref("Animation.playbackRate",
-    "playbackRate")}} is <em>not</em> immediately updated. It will be updated once the
-    animation's {{domxref("Animation.ready", "ready")}} promise is resolved.</p>
-</div>
+<p><code>updatePlaybackRate()</code> is an asynchronous method that sets the speed of an
+  animation after synchronizing with its current playback position, ensuring that the
+  resulting change in speed does not produce a sharp jump. After calling
+  <code>updatePlaybackRate()</code> the animation's {{domxref("Animation.playbackRate",
+  "playbackRate")}} is <em>not</em> immediately updated. It will be updated once the
+  animation's {{domxref("Animation.ready", "ready")}} promise is resolved.</p>
 
 <h2 id="Syntax">Syntax</h2>
 

@@ -14,7 +14,6 @@ tags:
 ---
 <div class="summary">
 <p><span class="seoSummary">This article explains some of the audio theory behind how the features of the Web Audio API work, to help you make informed decisions while designing how audio is routed through your app.</span> It won't turn you into a master sound engineer, but it will give you enough background to understand why the Web Audio API works like it does.</p>
-</div>
 
 <h2 id="Audio_graphs">Audio graphs</h2>
 
@@ -326,7 +325,6 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
 
 <h2 id="Spatialisations">Spatialisations</h2>
 
-<div>
 <p>An audio spatialisation (handled by the {{domxref("PannerNode")}} and {{domxref("AudioListener")}} nodes in the Web Audio API) allows us to model the position and behavior of an audio signal at a certain point in space, and the listener hearing that audio.</p>
 
 <p>The panner's position is described with right-hand Cartesian coordinates; its movement using a velocity vector, necessary for creating Doppler effects, and its directionality using a directionality cone.The cone can be very large, e.g. for omnidirectional sources.</p>

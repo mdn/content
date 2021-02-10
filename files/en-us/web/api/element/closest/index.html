@@ -135,19 +135,16 @@ if (!Element.prototype.closest) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
+<p>{{Compat("api.Element.closest")}}</p>
 
-  <p>{{Compat("api.Element.closest")}}</p>
+<h3 id="Compatibility_notes">Compatibility notes</h3>
 
-  <h3 id="Compatibility_notes">Compatibility notes</h3>
-
-  <ul>
-    <li>In Edge 15-18 <code>document.createElement(tagName).closest(tagName)</code> will
-      return <code>null</code> if the element is not first connected (directly or
-      indirectly) to the context object, for example the {{domxref("Document")}} object in
-      the case of the normal DOM.</li>
-  </ul>
-</div>
+<ul>
+  <li>In Edge 15-18 <code>document.createElement(tagName).closest(tagName)</code> will
+    return <code>null</code> if the element is not first connected (directly or
+    indirectly) to the context object, for example the {{domxref("Document")}} object in
+    the case of the normal DOM.</li>
+</ul>
 
 <h2 id="See_also">See also</h2>
 
