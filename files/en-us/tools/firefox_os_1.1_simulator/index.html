@@ -36,10 +36,10 @@ tags:
 <p>This guide covers the following topics:</p>
 
 <ul>
- <li><a href="/en-US/docs/Tools/Firefox_OS_1.1_Simulator#installing" title="#Installing">how to install the Simulator add-on</a></li>
- <li><a href="/en-US/docs/Tools/Firefox_OS_1.1_Simulator#adding-updating-removing" title="#Adding-updating-removing">how to add, remove, and refresh apps</a></li>
- <li><a href="/en-US/docs/Tools/Firefox_OS_1.1_Simulator#manifest-validation" title="#Manifest-validation">manifest validation</a></li>
- <li><a href="/en-US/docs/Tools/Firefox_OS_1.1_Simulator#running-the-simulator" title="#Running-the-Simulator">how to run the Simulator</a></li>
+ <li><a href="/en-US/docs/Tools/Firefox_OS_1.1_Simulator#installing_the_simulator_add-on" title="#Installing">how to install the Simulator add-on</a></li>
+ <li><a href="/en-US/docs/Tools/Firefox_OS_1.1_Simulator#adding_removing_and_refreshing_apps" title="#Adding-updating-removing">how to add, remove, and refresh apps</a></li>
+ <li><a href="/en-US/docs/Tools/Firefox_OS_1.1_Simulator#manifest_validation" title="#Manifest-validation">manifest validation</a></li>
+ <li><a href="/en-US/docs/Tools/Firefox_OS_1.1_Simulator#running_the_simulator" title="#Running-the-Simulator">how to run the Simulator</a></li>
  <li><a href="/en-US/docs/Tools/Firefox_OS_1.1_Simulator#attaching-developer-tools" title="#Attaching-developer-tools">how to connect developer tools such as the JS debugger to apps running in the Simulator</a></li>
  <li><a href="/en-US/docs/Tools/Firefox_OS_1.1_Simulator#simulator-receipts" title="#Simulator-receipts">how to get test receipts for a paid app</a></li>
  <li><a href="/en-US/docs/Tools/Firefox_OS_1.1_Simulator#push-to-device" title="#Push-to-device">how to push apps to a connected device</a></li>
@@ -48,7 +48,7 @@ tags:
 
 <div class="note">For a practical walkthrough that shows how to use the Simulator to debug a real web app, see the <a href="/en-US/docs/Tools/Firefox_OS_Simulator/Simulator_Walkthrough">Simulator Walkthrough</a> page.</div>
 
-<h2 id="Installing_the_Simulator_add-on"><a name="Installing">Installing the Simulator add-on</a></h2>
+<h2 id="Installing_the_Simulator_add-on">Installing the Simulator add-on</h2>
 
 <p>The Simulator is packaged and distributed as a Firefox add-on. To install it:</p>
 
@@ -67,7 +67,7 @@ tags:
 <p><img alt="" src="simulator-open-on-windows-7.png" style="display: block; margin-left: auto; margin-right: auto;"><br>
  The Dashboard is the tool you use to add your app to the Simulator and run it. Here's what it looks like: <img alt="" src="dashboard-4.0.png"></p>
 
-<h2 id="Adding_removing_and_refreshing_apps"><a name="Adding-updating-removing">Adding, removing and refreshing apps</a></h2>
+<h2 id="Adding_removing_and_refreshing_apps">Adding, removing and refreshing apps</h2>
 
 <h3 id="Adding_apps">Adding apps</h3>
 
@@ -105,7 +105,7 @@ tags:
 <p><strong>Refresh App from the Simulator window</strong>: you can update and reload an app directly from the Simulator window <a href="/en-US/docs/Tools/Firefox_OS_1.1_Simulator#simulator-menubar" title="#Simulator-menubar">using the menubar action or its associated shortcut</a> while the app is running.</p>
 </div>
 
-<h3 id="Manifest_validation"><a name="Manifest-validation">Manifest validation</a></h3>
+<h3 id="Manifest_validation">Manifest validation</h3>
 
 <p>When you supply a manifest, the Manager will run some validation tests on it. It reports three categories of problems:</p>
 
@@ -150,10 +150,10 @@ tags:
 
 <ul>
  <li>the <a href="/en-US/docs/Web/Apps/Manifest#type">type</a> field is "certified", but the Simulator does not yet fully support certified apps</li>
- <li>the manifest requests a <a href="/en-US/docs/Web/Apps/Manifest#permissions">permission</a> to use an API that is <a href="/en-US/docs/Tools/Firefox_OS_1.1_Simulator#unsupported-apis" title="#Unsupported-APIs">not yet supported</a> by the Simulator</li>
+ <li>the manifest requests a <a href="/en-US/docs/Web/Apps/Manifest#permissions">permission</a> to use an API that is <a href="/en-US/docs/Tools/Firefox_OS_1.1_Simulator#unsupported_apis" title="#Unsupported-APIs">not yet supported</a> by the Simulator</li>
 </ul>
 
-<h2 id="Running_the_Simulator"><a name="Running-the-Simulator">Running the Simulator</a></h2>
+<h2 id="Running_the_Simulator">Running the Simulator</h2>
 
 <p>There are two different ways the Simulator may be started:</p>
 
@@ -172,7 +172,7 @@ tags:
 
 <p><img alt="" src="simulator-homescreen.png"></p>
 
-<h3 id="Simulator_toolbar"><a name="Simulator-toolbar">Simulator toolbar</a></h3>
+<h3 id="Simulator_toolbar">Simulator toolbar</h3>
 
 <p>In the bottom toolbar, from left to right, there are the <strong>Home button</strong>, the <strong>Screen Rotation button</strong>, and the <strong>Geolocation button</strong>.</p>
 
@@ -184,7 +184,7 @@ tags:
 
 <p><a href="https://mdn.mozillademos.org/files/5511/simulator-geolocation.png"><img alt="" src="simulator-geolocation.png"></a><a href="https://mdn.mozillademos.org/files/5519/simulator-screen-orientation.png"><img alt="" src="simulator-screen-orientation.png"></a></p>
 
-<h3 id="Simulator_menubar"><a name="Simulator-menubar"></a>Simulator menubar</h3>
+<h3 id="Simulator_menubar">Simulator menubar</h3>
 
 <p>In the top menubar, you can access some useful commands to make development more efficient:</p>
 
@@ -221,7 +221,7 @@ tags:
 </ul>
 </div>
 
-<h2 id="Attaching_developer_tools"><a name="Attaching-developer-tools">Attaching developer tools</a></h2>
+<h2 id="Attaching_developer_tools">Attaching developer tools</h2>
 
 <p>You can attach developer tools to the Simulator to help debug your app. At the moment you can only attach the <a href="/en-US/docs/Tools/Debugger">JavaScript Debugger</a>, the <a href="/en-US/docs/Tools/Web_Console">Web Console</a>, the <a href="/en-US/docs/Tools/Style_Editor">Style Editor</a>, the <a href="/en-US/docs/Tools/Performance">Profiler</a>, and the <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a>, but we're working on adding support for more <a href="/en-US/docs/Tools/Tools_Toolbox">developer tools</a>.</p>
 
@@ -257,7 +257,7 @@ tags:
 
 <p>Thanks to the new Network Monitor, you can analyze the status, headers, content, and timing of all the network requests initiated by the app through a friendly interface. (<a href="https://hacks.mozilla.org/2013/06/network-monitor-now-in-firefox-beta/">Learn more about the Network Monitor.</a>)</p>
 
-<h2 id="Receipts"><a name="Simulator-receipts"></a>Receipts</h2>
+<h2 id="Receipts">Receipts</h2>
 
 <p>If you are developing a paid app, you should test your receipt validation code (e.g., the code that verifies that a user has already purchased the app or has been issued a refund and then informs the user and locks or unlocks app features accordingly) on a valid (cryptographically signed) receipt.</p>
 
@@ -265,7 +265,7 @@ tags:
 
 <p><img alt="" src="simulator-receipts-selector-4.0.png"></p>
 
-<h2 id="Push_to_device"><a name="Push-to-device">Push to device</a></h2>
+<h2 id="Push_to_device">Push to device</h2>
 
 <p>If you have a Firefox OS device, you can connect it to the Simulator and can then push apps from the Dashboard to the device.</p>
 
@@ -304,7 +304,7 @@ tags:
 
 <p>If you are unable to connect your device after creating udev rules, please see this <a href="https://github.com/mozilla/r2d2b2g/issues/515">bug</a>.</p>
 
-<h2 id="Limitations_of_the_Simulator"><a name="Limitations">Limitations of the Simulator</a></h2>
+<h2 id="Limitations_of_the_Simulator">Limitations of the Simulator</h2>
 
 <p>Note that the Firefox OS Simulator isn't a perfect simulation.</p>
 
@@ -325,13 +325,13 @@ tags:
 
 <p>This means it isn't possible to use the Simulator to test video playback in apps and on websites like YouTube that rely on these codecs.</p>
 
-<h3 id="Unsupported_APIs"><a name="Unsupported-APIs">Unsupported APIs</a></h3>
+<h3 id="Unsupported_APIs">Unsupported APIs</h3>
 
 <p>Certain APIs that work on the device won't work on the Simulator, generally because the supporting hardware is not available on the desktop. We've implemented simulations for some APIs such as geolocation, and expect to add more in future releases. However, at the moment the following APIs are not supported. Using them might throw errors or just return incorrect results:</p>
 
 <ul>
- <li><a href="/en-US/docs/WebAPI/WebTelephony">Telephony</a></li>
- <li><a href="/en-US/docs/WebAPI/WebSMS">WebSMS</a></li>
+ <li><a href="/en-US/docs/Archive/B2G_OS/API/Telephony">Telephony</a></li>
+ <li><a href="/en-US/docs/Archive/B2G_OS/API/Mobile_Messaging_API">WebSMS</a></li>
  <li><a href="/en-US/docs/Web/API/Web_Bluetooth_API">WebBluetooth</a></li>
  <li><a href="/en-US/docs/Web/API/Ambient_Light_Events">Ambient Light</a></li>
  <li><a href="/en-US/docs/Web/API/Proximity_Events">Proximity</a></li>
@@ -340,11 +340,11 @@ tags:
  <li><a href="/en-US/docs/Web/API/Vibration_API">Vibration</a></li>
 </ul>
 
-<h2 id="Getting_help"><a name="Simulator-help"></a>Getting help</h2>
+<h2 id="Getting_help">Getting help</h2>
 
 <p><span style="line-height: 1.572;">If you have a question, try asking us on the </span><a href="https://lists.mozilla.org/listinfo/dev-developer-tools" style="line-height: 1.572;">dev-developer-tools mailing list</a><span style="line-height: 1.572;"> or on </span><a href="irc://irc.mozilla.org/#devtools" style="line-height: 1.572;">#devtools on irc.mozilla.org</a><span style="line-height: 1.572;">.</span></p>
 
-<h3 id="How_to_enable_verbose_logging"><a name="Simulator-verbose-logging"></a>How to enable verbose logging</h3>
+<h3 id="How_to_enable_verbose_logging">How to enable verbose logging</h3>
 
 <p>Use about:config to create the preference <a href="mailto:extensions.r2d2b2g@mozilla.org.sdk.console.logLevel">extensions.r2d2b2g@mozilla.org.sdk.console.logLevel</a>, set it to the integer value 0, and disable/reenable the add-on. Additional messages about the Simulator's operation will appear in the Error Console (or Browser Console in newer versions of Firefox).</p>
 </div>
