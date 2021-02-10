@@ -81,32 +81,32 @@ tags:
 
 <h3 id="Using_the_Set_object">Using the Set object</h3>
 
-<pre class="brush: js notranslate">let mySet = new Set()
+<pre class="brush: js notranslate">let mySet1 = new Set()
 
-mySet.add(1)           // Set [ 1 ]
-mySet.add(5)           // Set [ 1, 5 ]
-mySet.add(5)           // Set [ 1, 5 ]
-mySet.add('some text') // Set [ 1, 5, 'some text' ]
+mySet1.add(1)           // Set [ 1 ]
+mySet1.add(5)           // Set [ 1, 5 ]
+mySet1.add(5)           // Set [ 1, 5 ]
+mySet1.add('some text') // Set [ 1, 5, 'some text' ]
 let o = {a: 1, b: 2}
-mySet.add(o)
+mySet1.add(o)
 
-mySet.add({a: 1, b: 2})   // o is referencing a different object, so this is okay
+mySet1.add({a: 1, b: 2})   // o is referencing a different object, so this is okay
 
-mySet.has(1)              // true
-mySet.has(3)              // false, since 3 has not been added to the set
-mySet.has(5)              // true
-mySet.has(Math.sqrt(25))  // true
-mySet.has('Some Text'.toLowerCase()) // true
-mySet.has(o)       // true
+mySet1.has(1)              // true
+mySet1.has(3)              // false, since 3 has not been added to the set
+mySet1.has(5)              // true
+mySet1.has(Math.sqrt(25))  // true
+mySet1.has('Some Text'.toLowerCase()) // true
+mySet1.has(o)       // true
 
-mySet.size         // 5
+mySet1.size         // 5
 
-mySet.delete(5)    // removes 5 from the set
-mySet.has(5)       // false, 5 has been removed
+mySet1.delete(5)    // removes 5 from the set
+mySet1.has(5)       // false, 5 has been removed
 
-mySet.size         // 4, since we just removed one value
+mySet1.size         // 4, since we just removed one value
 
-console.log(mySet)
+console.log(mySet1)
 // logs Set(4) [ 1, "some text", {…}, {…} ] in Firefox
 // logs Set(4) { 1, "some text", {…}, {…} } in Chrome
 </pre>
@@ -115,38 +115,38 @@ console.log(mySet)
 
 <pre class="brush: js notranslate">// iterate over items in set
 // logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
-for (let item of mySet) console.log(item)
+for (let item of mySet1) console.log(item)
 
 // logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
-for (let item of mySet.keys()) console.log(item)
+for (let item of mySet1.keys()) console.log(item)
 
 // logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
-for (let item of mySet.values()) console.log(item)
+for (let item of mySet1.values()) console.log(item)
 
 // logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
 // (key and value are the same here)
-for (let [key, value] of mySet.entries()) console.log(key)
+for (let [key, value] of mySet1.entries()) console.log(key)
 
 // convert Set object to an Array object, with <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from">Array.from</a>
-let myArr = Array.from(mySet) // [1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}]
+let myArr = Array.from(mySet1) // [1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}]
 
 // the following will also work if run in an HTML document
-mySet.add(document.body)
-mySet.has(document.querySelector('body')) // true
+mySet1.add(document.body)
+mySet1.has(document.querySelector('body')) // true
 
 // converting between Set and Array
-mySet2 = new Set([1, 2, 3, 4])
-mySet2.size                    // 4
-[...mySet2]                    // [1, 2, 3, 4]
+let mySet2 = new Set([1, 2, 3, 4])
+console.log(mySet2.size)                    // 4
+console.log([...mySet2])                    // [1, 2, 3, 4]
 
 // intersect can be simulated via
-let intersection = new Set([...set1].filter(x =&gt; set2.has(x)))
+let intersection = new Set([...mySet1].filter(x =&gt; mySet2.has(x)))
 
 // difference can be simulated via
-let difference = new Set([...set1].filter(x =&gt; !set2.has(x)))
+let difference = new Set([...mySet1].filter(x =&gt; !mySet2.has(x)))
 
 // Iterate set entries with forEach()
-mySet.forEach(function(value) {
+mySet1.forEach(function(value) {
   console.log(value)
 })
 
