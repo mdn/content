@@ -58,7 +58,7 @@ tags:
 
 <p>For example, <code>x++</code> or <code>++x</code>.</p>
 
-<h3 id="Assignment_operators"><a id="Assignment">Assignment operators</a></h3>
+<h3 id="Assignment_operators">Assignment operators</h3>
 
 <p>An assignment operator assigns a value to its left operand based on the value of its
   right operand. The simple assignment operator is equal (<code>=</code>), which assigns
@@ -117,8 +117,8 @@ tags:
       <td><a
           href="/en-US/docs/Web/JavaScript/Reference/Operators/Remainder_assignment">Remainder
           assignment</a></td>
-      <td><code>x %= y</code></td>
-      <td><code>x = x % y</code></td>
+      <td><code>x %= y</code></td>
+      <td><code>x = x % y</code></td>
     </tr>
     <tr>
       <td><a
@@ -245,7 +245,7 @@ var three = foo[2];
 // with destructuring
 var [one, two, three] = foo;</pre>
 
-<h3 id="Comparison_operators"><a id="Comparison">Comparison operators</a></h3>
+<h3 id="Comparison_operators">Comparison operators</h3>
 
 <p>A comparison operator compares its operands and returns a logical value based on
   whether the comparison is true. The operands can be numerical, string, logical, or
@@ -349,12 +349,12 @@ var var2 = 4;
 </table>
 
 <div class="note">
-  <p><strong>Note: </strong>(<strong>=&gt;</strong>) is not an operator, but the notation
+  <p><strong>Note: </strong>(<strong>=&gt;</strong>) is not an operator, but the notation
     for <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow
       functions</a>.</p>
 </div>
 
-<h3 id="Arithmetic_operators"><a id="Arithmetic">Arithmetic operators</a></h3>
+<h3 id="Arithmetic_operators">Arithmetic operators</h3>
 
 <p>An arithmetic operator takes numerical values (either literals or variables) as their
   operands and returns a single numerical value. The standard arithmetic operators are
@@ -420,16 +420,16 @@ var var2 = 4;
       <td>Unary operator. Attempts to convert the operand to a number, if it is not
         already.</td>
       <td>
-        <p><code>+"3"</code> returns <code>3</code>.</p>
+        <p><code>+"3"</code> returns <code>3</code>.</p>
 
-        <p><code>+true</code> returns <code>1</code>.</p>
+        <p><code>+true</code> returns <code>1</code>.</p>
       </td>
     </tr>
     <tr>
       <td><a
           href="/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation">Exponentiation
           operator</a> (<code>**</code>)</td>
-      <td>Calculates the <code>base</code> to the <code>exponent</code> power, that is,
+      <td>Calculates the <code>base</code> to the <code>exponent</code> power, that is,
         <code>base<sup>exponent</sup></code></td>
       <td><code>2 ** 3</code> returns <code>8</code>.<br>
         <code>10 ** -1</code> returns <code>0.1</code>.
@@ -438,7 +438,7 @@ var var2 = 4;
   </tbody>
 </table>
 
-<h3 id="Bitwise_operators"><a id="Bitwise">Bitwise operators</a></h3>
+<h3 id="Bitwise_operators">Bitwise operators</h3>
 
 <p>A bitwise operator treats their operands as a set of 32 bits (zeros and ones), rather
   than as decimal, hexadecimal, or octal numbers. For example, the decimal number nine has
@@ -519,7 +519,7 @@ var var2 = 4;
 <ul>
   <li>The operands are converted to thirty-two-bit integers and expressed by a series of
     bits (zeros and ones). Numbers with more than 32 bits get their most significant bits
-    discarded. For example, the following integer with more than 32 bits will be converted
+    discarded. For example, the following integer with more than 32 bits will be converted
     to a 32 bit integer:
     <pre class="notranslate">Before: 1110 0110 1111 1010 0000 0000 0000 0110 0000 0000 0001
 After:               1010 0000 0000 0000 0110 0000 0000 0001</pre>
@@ -635,7 +635,7 @@ After:               1010 0000 0000 0000 0110 0000 0000 0001</pre>
   </tbody>
 </table>
 
-<h3 id="Logical_operators"><a id="Logical">Logical operators</a></h3>
+<h3 id="Logical_operators">Logical operators</h3>
 
 <p>Logical operators are typically used with Boolean (logical) values; when they are, they
   return a Boolean value. However, the <code>&amp;&amp;</code> and <code>||</code>
@@ -729,19 +729,19 @@ var n3 = !'Cat'; // !t returns false
   <em>anything</em> part of the above expressions is not evaluated, so any side effects of
   doing so do not take effect.</p>
 
-<p>Note that for the second case, in modern code you can use the new <a
+<p>Note that for the second case, in modern code you can use the new <a
     href="/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">Nullish
     coalescing operator</a> (<code>??</code>) that works like <code>||</code>, but it only
   returns the second expression, when the first one is "<a
     href="/en-US/docs/Glossary/Nullish">nullish</a>", i.e. <a
     href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"
-    title="The value null represents the intentional absence of any object value. It is one of JavaScript's primitive values and is treated as falsy for boolean operations."><code>null</code></a>
+    title="The value null represents the intentional absence of any object value. It is one of JavaScript's primitive values and is treated as falsy for boolean operations."><code>null</code></a>
   or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined"
     title="The global undefined property represents the primitive value undefined. It is one of JavaScript's primitive types."><code>undefined</code></a>.
   It is thus the better alternative to provide defaults, when values like <code>''</code>
   or <code>0</code> are valid values for the first expression, too.</p>
 
-<h3 id="String_operators"><a id="String">String operators</a></h3>
+<h3 id="String_operators">String operators</h3>
 
 <p>In addition to the comparison operators, which can be used on string values, the
   concatenation operator (+) concatenates two string values together, returning another
@@ -759,8 +759,8 @@ var n3 = !'Cat'; // !t returns false
 <pre class="brush: js notranslate">var mystring = 'alpha';
 mystring += 'bet'; // evaluates to "alphabet" and assigns this value to mystring.</pre>
 
-<h3 id="Conditional_ternary_operator"><a id="Conditional">Conditional (ternary)
-    operator</a></h3>
+<h3 id="Conditional_ternary_operator">Conditional (ternary)
+    operator</h3>
 
 <p>The <a
     href="/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">conditional
@@ -783,7 +783,7 @@ mystring += 'bet'; // evaluates to "alphabet" and assigns this value to mystring
   <code>age</code> is eighteen or more. Otherwise, it assigns the value "minor" to
   <code>status</code>.</p>
 
-<h3 id="Comma_operator"><a id="Comma">Comma operator</a></h3>
+<h3 id="Comma_operator">Comma operator</h3>
 
 <p>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator">comma
     operator</a> (<code>,</code>) evaluates both of its operands and returns the value of
@@ -793,7 +793,7 @@ mystring += 'bet'; // evaluates to "alphabet" and assigns this value to mystring
   and should be used instead.</p>
 
 <p>For example, if <code>a</code> is a 2-dimensional array with 10 elements on a side, the
-  following code uses the comma operator to update two variables at once. The code prints
+  following code uses the comma operator to update two variables at once. The code prints
   the values of the diagonal elements in the array:</p>
 
 <pre class="brush: js notranslate">var x = [0,1,2,3,4,5,6,7,8,9]
@@ -804,7 +804,7 @@ for (var i = 0, j = 9; i &lt;= j; i++, j--)
   console.log('a[' + i + '][' + j + ']= ' + a[i][j]);
 </pre>
 
-<h3 id="Unary_operators"><a id="Unary">Unary operators</a></h3>
+<h3 id="Unary_operators">Unary operators</h3>
 
 <p>A unary operation is an operation with only one operand.</p>
 
@@ -820,8 +820,8 @@ delete objectName[index];
 delete property; // legal only within a with statement
 </pre>
 
-<p>where <code>object</code> is the name of an object, <code>property</code> is an
-  existing property, and <code>propertyKey</code> is a string or symbol referring to an
+<p>where <code>object</code> is the name of an object, <code>property</code> is an
+  existing property, and <code>propertyKey</code> is a string or symbol referring to an
   existing property.</p>
 
 <p>The fourth form is legal only within a
@@ -830,7 +830,7 @@ delete property; // legal only within a with statement
   object.</p>
 
 <p>If the <code>delete</code> operator succeeds, it removes the property from the object.
-  Trying to access it afterwards will yield <code>undefined</code>. The
+  Trying to access it afterwards will yield <code>undefined</code>. The
   <code>delete</code> operator returns <code>true</code> if the operation is possible; it
   returns <code>false</code> if the operation is not possible.</p>
 
@@ -847,10 +847,10 @@ delete myobj.h; // returns true (can delete user-defined properties)
 <h5 id="Deleting_array_elements">Deleting array elements</h5>
 
 <p>Since arrays are just objects, it's technically possible to <code>delete</code>
-  elements from them. This is however regarded as a bad practice, try to avoid it. When
+  elements from them. This is however regarded as a bad practice, try to avoid it. When
   you delete an array property, the array length is not affected and other elements are
   not re-indexed. To achieve that behavior, it is much better to just overwrite the
-  element with the value <code>undefined</code>. To actually manipulate the array, use the
+  element with the value <code>undefined</code>. To actually manipulate the array, use the
   various array methods such as
   <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">splice</a></code>.
 </p>
@@ -942,7 +942,7 @@ void expression
   parentheses surrounding the expression are optional, but it is good style to use them.
 </p>
 
-<h3 id="Relational_operators"><a id="Relational">Relational operators</a></h3>
+<h3 id="Relational_operators">Relational operators</h3>
 
 <p>A relational operator compares its operands and returns a <code>Boolean</code> value
   based on whether the comparison is true.</p>
@@ -956,7 +956,7 @@ void expression
 <pre class="brush: js notranslate">propNameOrNumber in objectName
 </pre>
 
-<p>where <code>propNameOrNumber</code> is a string, numeric, or symbol expression
+<p>where <code>propNameOrNumber</code> is a string, numeric, or symbol expression
   representing a property name or array index, and <code>objectName</code> is the name of
   an object.</p>
 
@@ -1106,7 +1106,7 @@ if (theDay instanceof Date) {
 
 <p>Every syntactically valid expression resolves to some value but conceptually, there are
   two types of expressions: with side effects (for example: those that assign value to a
-  variable) and those that in some sense evaluate and therefore resolve to a value.</p>
+  variable) and those that in some sense evaluate and therefore resolve to a value.</p>
 
 <p>The expression <code>x = 7</code> is an example of the first type. This expression uses
   the =<em> operator</em> to assign the value seven to the variable <code>x</code>. The
@@ -1204,7 +1204,7 @@ a * c + b * c // 9
 <p>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/super">super keyword</a> is
   used to call functions on an object's parent. It is useful with <a
     href="/en-US/docs/Web/JavaScript/Reference/Classes">classes</a> to call the parent
-  constructor, for example.</p>
+  constructor, for example.</p>
 
 <pre class="brush: js notranslate">super([arguments]); // calls the parent constructor.
 super.functionOnParent([arguments]);
