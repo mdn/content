@@ -509,6 +509,7 @@
 /en-US/docs/CSS/CSS_animated_properties	/en-US/docs/Web/CSS/CSS_animated_properties
 /en-US/docs/CSS/CSS_animations	/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
 /en-US/docs/CSS/CSS_animations/Detecting_CSS_animation_support	/en-US/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
+/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 /en-US/docs/CSS/CSS_flex-wrap	/en-US/docs/Web/CSS/flex-wrap
 /en-US/docs/CSS/CSS_percentage_values	/en-US/docs/Web/CSS
 /en-US/docs/CSS/CSS_transform_functions	/en-US/docs/Web/CSS/transform
@@ -4953,7 +4954,7 @@
 /en-US/docs/FORCE_SHARED_LIB	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options
 /en-US/docs/FORCE_STATIC_LIB	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options
 /en-US/docs/File_System_Access_API	/en-US/docs/Web/API/File_System_Access_API
-/en-US/docs/Firefox	11
+/en-US/docs/Firefox 11 for developers	/en-US/docs/Mozilla/Firefox/Releases/11
 /en-US/docs/Firefox_1.5	/en-US/docs/Mozilla/Firefox/Releases/1.5
 /en-US/docs/Firefox_1.5_Beta_for_Developers	/en-US/docs/Mozilla/Firefox/Releases/1.5
 /en-US/docs/Firefox_1.5_for_developers	/en-US/docs/Mozilla/Firefox/Releases/1.5
@@ -5507,7 +5508,7 @@
 /en-US/docs/IMAP	/en-US/docs/Glossary/IMAP
 /en-US/docs/IPv6	/en-US/docs/Glossary/IPv6
 /en-US/docs/Inbox/Advance_HTML_Tags	/en-US/docs/Learn/Common_questions/HTML_features_for_accessibility
-/en-US/docs/Inbox/Advanced_layouts_with_flexbox	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
+/en-US/docs/Inbox/Advanced_layouts_with_flexbox	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins
 /en-US/docs/Inbox/Using_flexbox_to_lay_out_web_applications	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
 /en-US/docs/Inbox/Writing_a_WebSocket_server_in_Java	/en-US/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
 /en-US/docs/Incorrect_MIME_Type_for_CSS_Files	/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types
@@ -6689,7 +6690,7 @@
 /en-US/docs/JavaScript_typed_arrays/Uint8Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
 /en-US/docs/LIBRARY_NAME	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options
 /en-US/docs/LIBXUL_LIBRARY	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options
-/en-US/docs/Learn/Advanced_layouts_with_flexbox	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
+/en-US/docs/Learn/Advanced_layouts_with_flexbox	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins
 /en-US/docs/Learn/Anatomy_of_a_web_page	/en-US/docs/Learn/Common_questions/Common_web_layouts
 /en-US/docs/Learn/CSS/Basic_text_styling_in_CSS	/en-US/docs/Learn/CSS/Styling_text/Fundamentals
 /en-US/docs/Learn/CSS/Basics	/en-US/docs/Learn/CSS/First_steps
@@ -6738,7 +6739,7 @@
 /en-US/docs/Learn/Choose,_Install_and_set_up_a_text_editor	/en-US/docs/Learn/Common_questions/Available_text_editors
 /en-US/docs/Learn/Client-side_web_APIs	/en-US/docs/Learn/JavaScript/Client-side_web_APIs
 /en-US/docs/Learn/Coding-Scripting	/en-US/docs/Learn
-/en-US/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine	/en-US/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine
+/en-US/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine﻿	/en-US/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine
 /en-US/docs/Learn/Common_questions/Set_up_a_basic_working_environment	/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server
 /en-US/docs/Learn/Composing_for_the_web	/en-US/docs/Learn/Common_questions
 /en-US/docs/Learn/Design_and_Accessibility	/en-US/docs/Learn/Common_questions
@@ -7230,7 +7231,7 @@
 /en-US/docs/Mozilla_developer_guide	/en-US/docs/Mozilla/Developer_guide
 /en-US/docs/Mozilla_event_reference	/en-US/docs/Web/Events
 /en-US/docs/Mozilla_event_reference/DOMContentLoaded_(event)	/en-US/docs/Web/API/Window/DOMContentLoaded_event
-/en-US/docs/Mozilla_event_reference/DOMContentLoading	(event)
+/en-US/docs/Mozilla_event_reference/DOMContentLoading (event)	/en-US/docs/Web/API/Window/DOMContentLoaded_event
 /en-US/docs/Mozilla_event_reference/DOMContentLoading_(event)	/en-US/docs/Web/API/Window/DOMContentLoaded_event
 /en-US/docs/Mozilla_event_reference/SVGAbort	/en-US/docs/Web/API/SVGElement/abort_event
 /en-US/docs/Mozilla_event_reference/SVGError	/en-US/docs/Web/API/SVGElement/error_event
@@ -7338,7 +7339,7 @@
 /en-US/docs/Mozilla_event_reference/ratechange	/en-US/docs/Web/API/HTMLMediaElement/ratechange_event
 /en-US/docs/Mozilla_event_reference/readystatechange	/en-US/docs/Web/API/Document/readystatechange_event
 /en-US/docs/Mozilla_event_reference/repeatEvent	/en-US/docs/Web/API/SVGAnimationElement/repeatEvent_event
-/en-US/docs/Mozilla_event_reference/reset	(event)
+/en-US/docs/Mozilla_event_reference/reset (event)	/en-US/docs/Web/API/HTMLFormElement/reset_event
 /en-US/docs/Mozilla_event_reference/reset_(event)	/en-US/docs/Web/API/HTMLFormElement/reset_event
 /en-US/docs/Mozilla_event_reference/resize	/en-US/docs/Web/API/Window/resize_event
 /en-US/docs/Mozilla_event_reference/scroll	/en-US/docs/Web/API/Document/scroll_event
@@ -7348,7 +7349,8 @@
 /en-US/docs/Mozilla_event_reference/show	/en-US/docs/Web/API/Element/show_event
 /en-US/docs/Mozilla_event_reference/stalled	/en-US/docs/Web/API/HTMLMediaElement/stalled_event
 /en-US/docs/Mozilla_event_reference/storage	/en-US/docs/Web/API/Window/storage_event
-/en-US/docs/Mozilla_event_reference/submit	(event)
+/en-US/docs/Mozilla_event_reference/submit	/en-US/docs/Web/API/HTMLFormElement/submit_event
+/en-US/docs/Mozilla_event_reference/submit (event)	/en-US/docs/Web/API/HTMLFormElement/submit_event
 /en-US/docs/Mozilla_event_reference/submit_(event)	/en-US/docs/Web/API/HTMLFormElement/submit_event
 /en-US/docs/Mozilla_event_reference/success_indexedDB	/en-US/docs/Web/API/IDBRequest/success_event
 /en-US/docs/Mozilla_event_reference/success_indexedDB-redirect-1	/en-US/docs/Web/API/IDBRequest/success_event
@@ -8183,7 +8185,7 @@
 /en-US/docs/Transforming_XML_with_XSLT:The_Netscape_XSLT_XPath_Reference:Functions	/en-US/docs/Web/XPath/Functions
 /en-US/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces	/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 /en-US/docs/URI	/en-US/docs/Glossary/URI
-/en-US/docs/URI/www	and
+/en-US/docs/URI/www and non-www URLs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 /en-US/docs/URI/www_vs_non-www_URLs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 /en-US/docs/URL.createObjectURL	/en-US/docs/Web/API/URL/createObjectURL
 /en-US/docs/URLUtilsReadOnly.origin	/en-US/docs/Web/API/URLUtilsReadOnly/origin
@@ -11487,9 +11489,8 @@
 /en-US/docs/Web/CSS/CSS_Colors	/en-US/docs/Web/CSS/CSS_Color
 /en-US/docs/Web/CSS/CSS_Compositing_and_Blending	/en-US/docs/Web/CSS/Compositing_and_Blending
 /en-US/docs/Web/CSS/CSS_Device_Adaptation/Viewport_Concepts	/en-US/docs/Web/CSS/Viewport_concepts
-/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
+/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Box_Alignment_in_Flexbox	/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
-/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_flexbox_to_lay_out_web_applications	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
 /en-US/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained	/en-US/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
@@ -11997,7 +11998,9 @@
 /en-US/docs/Web/Guide/API/DOM/Using_dynamic_styling_information	/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information
 /en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode	/en-US/docs/Web/API/Fullscreen_API
 /en-US/docs/Web/Guide/API/DOM/Whitespace_in_the_DOM	/en-US/docs/Web/API/Document_Object_Model/Whitespace
-/en-US/docs/Web/Guide/API/File	System/Introduction
+/en-US/docs/Web/Guide/API/File System	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
+/en-US/docs/Web/Guide/API/File System/FileError	/en-US/docs/Web/API/FileError
+/en-US/docs/Web/Guide/API/File System/Introduction	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /en-US/docs/Web/Guide/API/Gamepad	/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API
 /en-US/docs/Web/Guide/API/Vibration	/en-US/docs/Web/API/Vibration_API
 /en-US/docs/Web/Guide/API/WebRTC	/en-US/docs/Web/API/WebRTC_API
@@ -12701,7 +12704,7 @@
 /en-US/docs/Web/Reference/Events/waiting	/en-US/docs/Web/API/HTMLMediaElement/waiting_event
 /en-US/docs/Web/Reference/Events/wheel	/en-US/docs/Web/API/Element/wheel_event
 /en-US/docs/Web/Reference/File_System_API	/en-US/docs/Web/API/File_and_Directory_Entries_API
-/en-US/docs/Web/Reference/Functions_and	classes_available_to_workers
+/en-US/docs/Web/Reference/Functions_and classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/Reference/Functions_and_classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/SVG/Attribute/dataset	/en-US/docs/Web/API/HTMLOrForeignElement/dataset
 /en-US/docs/Web/SVG/Tutorial/Fill_Stroke_and_Gradients	/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes
