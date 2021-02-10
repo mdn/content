@@ -1288,7 +1288,7 @@
 /en-US/docs/DOM/DOM_Reference/Preface	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/DOM/DOM_Reference/document	/en-US/docs/Web/API/Document
 /en-US/docs/DOM/DOM_Reference/document.evaluate	/en-US/docs/Web/API/Document/evaluate
-/en-US/docs/DOM/DOM_Reference/element	/en-US/docs/Web/API/element
+/en-US/docs/DOM/DOM_Reference/element	/en-US/docs/Web/API/Element
 /en-US/docs/DOM/DOM_Reference/event	/en-US/docs/Web/API/Event
 /en-US/docs/DOM/DOM_Reference/style	/en-US/docs/Web/API/HTMLStyleElement
 /en-US/docs/DOM/DOM_Reference/window	/en-US/docs/Web/API/Window
@@ -1972,7 +1972,7 @@
 /en-US/docs/DOM/document.writeln	/en-US/docs/Web/API/Document/writeln
 /en-US/docs/DOM/document.xmlVersion	/en-US/docs/Web/API/Document/xmlVersion
 /en-US/docs/DOM/document/createRange	/en-US/docs/Web/API/Document/createRange
-/en-US/docs/DOM/element	/en-US/docs/Web/API/element
+/en-US/docs/DOM/element	/en-US/docs/Web/API/Element
 /en-US/docs/DOM/element.accessKey	/en-US/docs/Web/API/HTMLElement/accessKey
 /en-US/docs/DOM/element.addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener
 /en-US/docs/DOM/element.appendChild	/en-US/docs/Web/API/Node/appendChild
@@ -2488,7 +2488,7 @@
 /en-US/docs/DOM:document.write	/en-US/docs/Web/API/Document/write
 /en-US/docs/DOM:document.writeln	/en-US/docs/Web/API/Document/writeln
 /en-US/docs/DOM:document.xmlVersion	/en-US/docs/Web/API/Document/xmlVersion
-/en-US/docs/DOM:element	/en-US/docs/Web/API/element
+/en-US/docs/DOM:element	/en-US/docs/Web/API/Element
 /en-US/docs/DOM:element.addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener
 /en-US/docs/DOM:element.appendChild	/en-US/docs/Web/API/Node/appendChild
 /en-US/docs/DOM:element.attributes	/en-US/docs/Web/API/Element/attributes
@@ -8797,8 +8797,9 @@
 /en-US/docs/Web/API/SharedWorkerGlobalScope.applicationCache	/en-US/docs/Web/API/SharedWorkerGlobalScope/applicationCache
 /en-US/docs/Web/API/SharedWorkerGlobalScope.name	/en-US/docs/Web/API/SharedWorkerGlobalScope/name
 /en-US/docs/Web/API/SharedWorkerGlobalScope.onconnect	/en-US/docs/Web/API/SharedWorkerGlobalScope/onconnect
-/en-US/docs/Web/API/Slotable	/en-US/docs/Web/API/Slottable
+/en-US/docs/Web/API/Slotable	/en-US/docs/Web/API/Element
 /en-US/docs/Web/API/Slotable/assignedSlot	/en-US/docs/Web/API/Element/assignedSlot
+/en-US/docs/Web/API/Slottable	/en-US/docs/Web/API/Element
 /en-US/docs/Web/API/Slottable/assignedSlot	/en-US/docs/Web/API/Element/assignedSlot
 /en-US/docs/Web/API/SpeechRecognition/SpeechRecognition.serviceURI	/en-US/docs/Web/API/SpeechRecognition/serviceURI
 /en-US/docs/Web/API/SpeechRecognition/start()	/en-US/docs/Web/API/SpeechRecognition/start
