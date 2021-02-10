@@ -253,6 +253,7 @@ return pump();</pre>
 <pre class="brush: js">function readStream() {
   const reader = stream.getReader();
   let charsReceived = 0;
+  let result = '';
 
   // read() returns a promise that resolves
   // when a value has been received
