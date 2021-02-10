@@ -101994,14 +101994,6 @@
     ]
   },
   "Web/Accessibility/ARIA/widgets": {
-    "modified": "2019-01-16T13:47:16.764Z",
-    "contributors": [
-      "julianosilvaa",
-      "Sheppy",
-      "Aaronlev"
-    ]
-  },
-  "Web/Accessibility/ARIA/widgets/overview": {
     "modified": "2019-03-24T00:12:08.938Z",
     "contributors": [
       "pierrefar",

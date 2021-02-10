@@ -9851,6 +9851,7 @@
 /en-US/docs/Web/Accessibility/ARIA/Roles/checkbox	/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role
 /en-US/docs/Web/Accessibility/ARIA/Roles/dialog	/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role
 /en-US/docs/Web/Accessibility/ARIA/examples	/en-US/docs/Web/Accessibility/ARIA/ARIA_Test_Cases
+/en-US/docs/Web/Accessibility/ARIA/widgets/overview	/en-US/docs/Web/Accessibility/ARIA/widgets
 /en-US/docs/Web/Accessibility/Accessible_forms/alerts	/en-US/docs/Web/Accessibility/ARIA/forms/alerts
 /en-US/docs/Web/Accessibility/Implementing_an_MSAA_Server	/en-US/docs/Web/Accessibility/Implementing_MSAA_server
 /en-US/docs/Web/Accessibility/Seizure_disorders/Accessibility_and_Spacial_Patterns	/en-US/docs/Web/Accessibility/Accessibility_and_Spacial_Patterns
