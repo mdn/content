@@ -13,7 +13,8 @@ tags:
 
 <p class="summary">The <strong><code>cancel()</code></strong> method of the
   {{domxref("ReadableStreamDefaultReader")}} interface cancels the stream, signaling a
-  loss of interest in the stream by a consumer. The supplied reason argument will be given
+  loss of interest in the stream by a consumer and returns a {{jsxref("Promise")}} that
+  resolves when the cancel operation is complete. The supplied reason argument will be given
   to the underlying source, which may or may not use it.</p>
 
 <p>Cancel is used when you've completely finished with the stream and don't need any more
