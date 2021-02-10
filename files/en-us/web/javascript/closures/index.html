@@ -11,13 +11,12 @@ tags:
 ---
 <div>{{jsSidebar("Intermediate")}}</div>
 
-<p>A <strong>closure</strong> is the combination of a function bundled together (enclosed) with references to its surrounding state (the <strong>lexical environment</strong>). In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.</p>
+<p><span class="summary">A <strong>closure</strong> is the combination of a function bundled together (enclosed) with references to its surrounding state (the <strong>lexical environment</strong>).</span> In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.</p>
 
 <h2 id="Lexical_scoping">Lexical scoping</h2>
 
 <p>Consider the following example code:</p>
 
-<div>
 <pre class="brush: js notranslate">function init() {
   var name = 'Mozilla'; // name is a local variable created by init
   function displayName() { // displayName() is the inner function, a closure
@@ -26,7 +25,6 @@ tags:
   displayName();
 }
 init();</pre>
-</div>
 
 <p><code>init()</code> creates a local variable called <code>name</code> and a function called <code>displayName()</code>. The <code>displayName()</code> function is an inner function that is defined inside <code>init()</code> and is available only within the body of the <code>init()</code> function. Note that the <code>displayName()</code> function has no local variables of its own. However, since inner functions have access to the variables of outer functions, <code>displayName()</code> can access the variable <code>name</code> declared in the parent function, <code>init()</code>.</p>
 

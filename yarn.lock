@@ -34,21 +34,21 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@3.0.5":
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.0.5.tgz#d1b3c7e796cdb0f23275b5231d3e267d8a2a4fec"
-  integrity sha512-hOR0J8eHbCSCDsSUXyT9bpM1KO5TQ5LYuBgM8iLtqdJrU2F5iNPEteVa5DmwXgBac+Wm1Xj32kfxTWdHYRxNXQ==
+"@mdn/browser-compat-data@3.0.6":
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.0.6.tgz#e7536ee8c59ee5e8d68a95a3281cfd318fb4d223"
+  integrity sha512-uYr1gZ5WArnTCN4rSUWdlXMcS0yP9bwVQoUNB5ZVkYAVeqTTFr7j+pFMPgjG0Q/SLjiQwhCq46k7OCCYuJNC7g==
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.4.45":
-  version "0.4.45"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.45.tgz#24a60b33f60008fce370bbd4601eff943718900a"
-  integrity sha512-JMa3RVUu/inx2sjyRxAHAb9P0eLlrnmyhDldDqreK5pwgamtbfQRsYk0S6yOhaarGsOwU6+G5HCndIVpinXGRw==
+"@mdn/yari@0.4.95":
+  version "0.4.95"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.95.tgz#cdf71fc21e73024c6def5d2e660509f564a3d4b2"
+  integrity sha512-Q/MmLj16vWUs6LKQ79CWCWFu3Z2x3PBLe9To/F6lag+fXOzshg/mo1AfbVBRyHbfHQHrg6w6fDpLfko1wNDF6Q==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
-    "@mdn/browser-compat-data" "3.0.5"
+    "@mdn/browser-compat-data" "3.0.6"
     accept-language-parser "1.5.0"
     chalk "4.1.0"
     cheerio "1.0.0-rc.5"
@@ -58,7 +58,7 @@
     cookie-parser "1.4.5"
     cssesc "^3.0.0"
     dotenv "8.2.0"
-    ejs "3.1.5"
+    ejs "3.1.6"
     express "4.17.1"
     express-http-proxy "1.6.2"
     file-type "16.2.0"
@@ -1209,10 +1209,10 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
-ejs@3.1.5:
-  version "3.1.5"
-  resolved "https://registry.yarnpkg.com/ejs/-/ejs-3.1.5.tgz#aed723844dc20acb4b170cd9ab1017e476a0d93b"
-  integrity sha512-dldq3ZfFtgVTJMLjOe+/3sROTzALlL9E34V4/sDtUd/KlBSS0s6U1/+WPE1B4sj9CXHJpL1M6rhNJnc9Wbal9w==
+ejs@3.1.6:
+  version "3.1.6"
+  resolved "https://registry.yarnpkg.com/ejs/-/ejs-3.1.6.tgz#5bfd0a0689743bb5268b3550cceeebbc1702822a"
+  integrity sha512-9lt9Zse4hPucPkoP7FHDF0LQAlGyF9JVpnClFLFH3aSSbxmyoqINRpp/9wePWJTUl4KOQwRL72Iw3InHPDkoGw==
   dependencies:
     jake "^10.6.1"
 

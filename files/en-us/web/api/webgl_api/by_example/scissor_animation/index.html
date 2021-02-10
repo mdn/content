@@ -20,13 +20,11 @@ tags:
 
 <p>{{EmbedLiveSample("scissor-animation-source",660,425)}}</p>
 
-<div>
 <h3 id="Animation_with_scissoring">Animation with scissoring</h3>
 
 <p>In this example, we are animating squares using {{domxref("WebGLRenderingContext.scissor()","scissor()")}} and {{domxref("WebGLRenderingContext.clear()","clear()")}}. We again establish an animation loop using timers. Note that this time it is the position of the square (the scissoring area) that is updated every frame (we set frame rate to roughly one every 17ms, or roughly 60fps – frames per second).</p>
 
 <p>In contrast, the color of the square (set with {{domxref("WebGLRenderingContext.clearColor()","clearColor")}}) is only updated when a new square is created. This is a nice demonstration of {{Glossary("WebGL")}} as a state machine. For each square, we set its color once, and then update only its position every frame. The clear color state of WebGL remains at the set value, until we change it again when a new square is created.</p>
-</div>
 
 <div id="scissor-animation-source">
 <div class="hidden">

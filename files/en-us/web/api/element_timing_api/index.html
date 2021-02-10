@@ -1,0 +1,81 @@
+---
+title: Element Timing API
+slug: Web/API/Element_timing_API
+tags:
+  - API
+  - ElementTiming
+  - Performance
+  - Overview
+  - Reference
+---
+<div>{{DefaultAPISidebar("Element Timing")}}</div>
+
+<p class="summary">The <strong>Element Timing API</strong> provides features for monitoring the loading performance of large image elements and text nodes as they appear on screen.</p>
+
+<h2>Concepts and Usage</h2>
+
+<p>The aim of the Element Timing API is to give web developers or analytics tools the ability to measure rendering timestamps of critical elements on a page.</p>
+
+<p>The API supports timing information on {{htmlelement("img")}} elements, {{SVGElement("image")}} elements inside an {{htmlelement("svg")}}, poster images of {{htmlelement("video")}} elements, elements which have a {{cssxref("background-image")}}, and groups of text nodes, such as a {{htmlelement("p")}}.</p>
+
+<p>The author flags an element for observation by adding the <a href="/en-US/docs/Web/HTML/Attributes/for"><code>elementtiming</code></a> attribute on the element.</p>
+
+<h2 id="Interfaces">Interfaces</h2>
+
+<dl>
+  <dt>{{domxref("PerformanceElementTiming")}}</dt>
+  <dd>Reports timing information about one associated element.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example we have two elements which are being observed. We use the {{domxref("PerformanceObserver")}} interface to create a list of performance measurement events, in our case observing the {{domxref("PerformanceEntry.entrytype")}} <code>element</code> in order to use the <code>PerformanceElementTiming</code> interface from the Element Timing API.</p>
+
+<p>Two entries will be output to the console, the first containing details of the image, the second with details of the text node.</p>
+
+<pre class="brush: html">&lt;img src="image.jpg" elementtiming="big-image"&gt;
+&lt;p elementtiming="text" id="text-id"&gt;text here&lt;/p&gt;</pre>
+
+<pre class="brush: js">const observer = new PerformanceObserver((list) => {
+  let entries = list.getEntries().forEach(function (entry) {
+      console.log(entry);
+  });
+});
+observer.observe({ entryTypes: ["element"] });</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Element Timing')}}</td>
+   <td>{{Spec2('Element Timing')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<h3>PerformanceElementTiming</h3>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.PerformanceElementTiming")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li>{{domxref("PerformanceFrameTiming")}}</li>
+  <li>{{domxref("PerformanceNavigationTiming")}}</li>
+  <li>{{domxref("PerformanceResourceTiming")}}</li>
+  <li>{{domxref("PerformanceMark")}}</li>
+  <li>{{domxref("PerformanceMeasure")}}</li>
+  <li>{{domxref("PerformancePaintTiming")}}</li>
+  <li>{{domxref("PerformanceLongTaskTiming")}}</li>
+</ul>

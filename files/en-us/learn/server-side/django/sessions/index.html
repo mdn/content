@@ -100,7 +100,7 @@ del request.session['my_car']
 <pre class="brush: python notranslate"># This is detected as an update to the session, so session data is saved.
 request.session['my_car'] = 'mini'</pre>
 
-<p>If you're updating some information <em>within</em> session data, then Django will not recognise that you've made a change to the session and save the data (for example, if you were to change "<code>wheels</code>" data inside your "<code>my_car</code>" data, as shown below). In this case you will need to explicitly mark the session as having been modified.</p>
+<p>If you're updating some information <em>within</em> session data, then Django will not recognize that you've made a change to the session and save the data (for example, if you were to change "<code>wheels</code>" data inside your "<code>my_car</code>" data, as shown below). In this case you will need to explicitly mark the session as having been modified.</p>
 
 <pre class="brush: python notranslate"># Session object not directly modified, only data within the session. Session changes not saved!
 request.session['my_car']['wheels'] = 'alloy'

@@ -124,7 +124,7 @@ f4();</pre>
 
 <h3 id="Top-level-await">Top level await</h3>
 
-<p>You can use the <code>await</code> keyword on it's own (outside of an async function) within a <a href="/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript module</a>. This means modules, with child modules that use <code>await</code>, wait for the child module to execute before they themselves run. All while not blocking other child modules from loading.</p>
+<p>You can use the <code>await</code> keyword on its own (outside of an async function) within a <a href="/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript module</a>. This means modules, with child modules that use <code>await</code>, wait for the child module to execute before they themselves run. All while not blocking other child modules from loading.</p>
 
 <p>Here is an example of a simple module using the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> and specifying await within the <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/export">export statement</a></code>. Any modules that include this will wait for the fetch to resolve before running any code.</p>
 
@@ -158,10 +158,7 @@ export default await colors;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.operators.await")}}</p>
-</div>
+<p>{{Compat("javascript.operators.await")}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -1,0 +1,21 @@
+---
+title: MDN contribution changelog
+slug: MDN/Contribute/Changelog
+tags:
+  - Changelog
+  - Contribute
+  - MDN
+---
+<p>{{MDNSidebar}}</p>
+
+<p>This document provides a record of MDN content processes, constructs, and best practices that have changed, and when they changed. It is useful to allow regular contributors to check in and see what has changed about the process of creating content for MDN.</p>
+
+<h2 id="january_2021">January 2021</h2>
+
+<h3 id="markup_for_note_and_warning_boxes">Markup for note and warning boxes</h3>
+
+<p>Previously on MDN, note and warning boxes would be wrapped by <code>&lt;div&gt;</code> elements with <code>note</code> and <code>warning</code> classes, respectively. More often than not, their first paragraphs would start with a <code>&lt;strong&gt;</code>-wrapped <code>note</code> or <code>warning</code> text.</p>
+
+<p>In January this changed — the <code>class</code> attribute should now include an additional <code>notecard</code> class, and the strong text is instead included in a heading at the top of the block.</p>
+
+<p>See our <a href="/en-US/docs/MDN/Guidelines/CSS_style_guide#.note.notecard">Guide to classes and styles used in MDN content</a> guide for further information and syntax guides.</p>
