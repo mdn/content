@@ -1,0 +1,55 @@
+---
+title: HTMLAnchorElement.password
+slug: Web/API/HTMLAnchorElement/password
+tags:
+  - API
+  - HTMLAnchorElement
+  - Property
+---
+<p>{{ApiRef("HTML DOM")}}</p>
+
+<p>The <strong><code>HTMLAnchorElement.password</code></strong> property is a
+  {{domxref("USVString")}} containing the password specified before the domain name.</p>
+
+<p>If it is set without first setting the
+  <code><a href="/en-US/docs/Web/API/HTMLAnchorElement/username">username</a></code>
+  property, it silently fails.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">
+// Getter
+<em>string</em> = <em>anchor</em>.password;
+// Setter
+<em>anchor</em>.password = <em>string</em>;
+</pre>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: js">// An &lt;a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLAnchorElement"&gt; is in the document
+const anchor = document.getElementByID("myAnchor");
+anchor.password; // returns 'flabada'
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#dom-hyperlink-password','HTMLHyperlinkElementUtils.password')}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("api.HTMLAnchorElement.password")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li>The {{domxref("HTMLAnchorElement")}} interface it belongs to.</li>
+</ul>

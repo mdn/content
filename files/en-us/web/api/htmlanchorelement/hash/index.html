@@ -1,0 +1,68 @@
+---
+title: HTMLAnchorElement.hash
+slug: Web/API/HTMLAnchorElement/hash
+tags:
+  - API
+  - HTMLAnchorElement
+  - Property
+  - Reference
+---
+<div>{{ APIRef("HTML DOM") }}</div>
+
+<p><span class="seoSummary">The
+    <strong><code>HTMLAnchorElement.hash</code></strong> property returns a
+    {{domxref("USVString")}} containing a <code>'#'</code> followed by the fragment
+    identifier of the URL.</span></p>
+
+<p>The fragment is not <a
+    href="/en-US/docs/Glossary/percent-encoding">percent-decoded</a>. If the URL does not
+  have a fragment identifier, this property contains an empty string, <code>""</code>.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">
+// Getter
+<em>string</em> = <em>anchor</em>.hash;
+// Setter
+<em>anchor</em>.hash = <em>string</em>;
+</pre>
+  
+<h2 id="Examples">Examples</h2>
+
+<h3>Getting the hash from an anchor link</h3>
+
+Given this HTML
+
+<pre class="brush: html">
+&lt;a id="myAnchor" href="/en-US/docs/HTMLAnchorElement#Examples"&gt;Examples&lt;/a&gt;
+</pre>
+
+you can get the hash of the anchor like this:
+
+<pre class="brush: js">
+const anchor = document.getElementById("myAnchor");
+anchor.hash; // returns '#Examples'
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#dom-hyperlink-hash','HTMLHyperlinkElementUtils.hash')}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("api.HTMLAnchorElement.hash")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li>The {{domxref("HTMLAnchorElement")}} interface it belongs to.</li>
+</ul>
