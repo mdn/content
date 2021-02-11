@@ -88,7 +88,7 @@ tags:
 
 <p>"Normal" print is usually considered 11.5pt to 12pt, this is equivalent of 16px on screen. And this is for normal vision. To relate this to real world visual acuity, if you think of an eye doctor's chart, and focusing on a capital E. If that E is at the legibility or acuity limit for 20/20 vision, and that is at full contrast, it is equivalent to a Helvetica capital E that is 3.9px on screen, meaning a 5.5px CSS font-size. (In print, this is a 4pt font on coated paper).</p>
 
-<p>But that is the minimum for "just making out" the letters at ~70% accuracy. That is legibility, not readability. For readability, the lower case x-height needs to be a minimum of twice that cap height. This is called the critical font size for readability.</p>
+<p>But that is the minimum for "just making out" the letters at ~70% accuracy. That is legibility, not readability. For readability, the lower case <a href="https://kazdesignworks.com/graphic-design-terms-x-height-and-cap-height/">x-height</a> needs to be a minimum of twice that <a href="https://kazdesignworks.com/graphic-design-terms-x-height-and-cap-height/">cap height</a>. This is called the critical font size for readability.</p>
 
 <p>This means that while a 5.5px font may be the minimum for 20/20 legibility, the minimum for <em>read</em>ability is 15.6px (in print, about 12pt, the typical standard in books).  And this is for normal vision. Someone with 20/40 needs twice that, about a 31px font. This is why the <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html">WCAG standard requires</a> that users have the ability to zoom text larger.</p>
 
@@ -137,7 +137,7 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <p>The first example is using one of the defined color names. The list of basic color keywords is: <code>aqua</code>, <code>black</code>, <code>blue</code>, <code>fuchsia</code>, <code>gray</code>, <code>green</code>, <code>lime</code>, <code>maroon</code>, <code>navy</code>, <code>olive</code>, <code>purple</code>, <code>red</code>, <code>silver</code>, <code>teal</code>, <code>white</code>, and <code>yellow</code>. Some color names have aliases, for instance, <code>cyan</code> and <code>aqua</code> are the same color, as is <code>fuchsia</code> and <code>magenta</code>, and <code>grey</code> and <code>gray</code>. There are over <a href="https://www.w3.org/TR/css-color-3/#svg-color">a hundred and forty more</a> names that came from the SVG specification that are supported by most browsers.</p>
 
-<p>The next examples show "HSL" which stands for <strong>"Hue, Saturation, Lightness"</strong>. The color produced from the settings are still in the sRGB colorspace, but HSL is intended as a more convenient way to select and work with color. Because hue is adjusted as an angle, it is easy to create a user interface using a knob or circular control to adjust hue. And while in terms of real light, the range of visible wavelengths do not exist as such an angle, our perception of hue could be thought of as somewhat circular.</p>
+<p>The next examples show "HSL" which stands for <strong>"Hue, Saturation, Lightness"</strong>. The color produced from the settings are still in the sRGB colorspace, but HSL is intended as a more convenient way to select and work with color. Because hue is adjusted as an angle, it is easy to create a user interface using a knob or circular control to adjust hue.</p>
 
 <p>Next, we can set the sRGB values directly, as a percentage, 0% being off (black) and 100% being the full value for that color. The values are in the order of red, green, blue.</p>
 
@@ -164,6 +164,8 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 
 <h3 id="Luminance">Luminance</h3>
+
+<p>Luminance is a linear measure of light, which is spectrally weighted for human vision, but not perceptually weighted in terms of lightness to darkness. The spectral weighting takes into account the different sensitivity of the L, M, S cones. By far our eye is tuned to green, which makes up the majority of luminance. Relative to sRGB, green is 71% of the total luminance measure. Red is second at 21%, and blue is a distant third making up a mere 7% of luminance. This is based on a narrow 2° of our central vision.</p>
 
 <p>Once an RGB color value is converted to luminance, that luminance value can be used relative to another color to determine a contrast ratio, or used to predict a perceptual contrast. In WCAG 2.x, the contrast math is not perceptually uniform, so it does not predict the contrast appearance over the full range of light to dark. For WCAG 3.0, a new method known as the Advanced Perceptual Contrast Algorithm provides a numeric contrast value that is relative to perception.</p>
 
@@ -216,64 +218,48 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <p>A good resource with many more detailed examples is at <a href="https://munsell.com/color-blog/difference-chroma-saturation/"> the Munsell color site</a>.</p>
 
+
 <h3 id="Color_Combinations">Color Combinations</h3>
 
-<ul>
-  <li>Certain color combinations can be very problematic on a computer monitor or mobile device, and some color combinations can interfere with some impairments.</li>
-  <ul><li>Never rely on hue alone for differentiating details. Adequate luminance contrast is required.</li>
-    <li>The green in a monitor makes up the vast majority of luminance (light), so it will usually be a significant part of the lighter colors.</li>
-    <li>Pure blues should typically be the darkest of two colors</li>
-    <ul><li>To use blue as the lighter of two colors, green needs to be added, otherwise there will be insufficient contrast and poor readability.</li>
-      <li>This is both due to the low contrast and due to the human eye seeing blue at a lower resolution than green and red.</li>
-      <li>The nature of blue light causes it to focus at a different location on the retina than red, so a pure red and a pure blue may "shimmer" when next to each other. </li>
-      <li>In the example below: Left, pure red (<code>#F00</code>) and a pure blue (<code>#00D</code>). Right, an equal amount of blue was added to the background which removes all detail from the blue channel.</li>
-    </ul>
-  </ul>
-</ul>
+<p>Certain color combinations can be very problematic on a computer monitor or mobile device, and some color combinations can interfere with some impairments. Pure blue and red is one such example, shown below. But in addition, some impairments are deficient and can not differentiate all colors. And some colors, such as pure blue, as so low in luminance they must be the darkest of two colors. Blue is also very low in resolution as there are far fewer blue cones, and they are scattered in our peripheral vision, and not present in our central vision. This leads up to some guidelines:</p>
 
-<div style="margin: 0.75em auto 0; padding: 0; text-align: center; font-size: 1.1em; font-weight: bold;">Normal Vision</div>
-<div style="float: left; margin: 0 0.5em 0.5em;  padding: 0.5em 1em; color: #00D; background-color: #F00; font-size: 28px; font-weight: bold; border-radius: 0.5em;">BG #F00 TEXT #00D </div>
-<div style="float: right; margin: 0 0.5em 0.5em;  padding: 0.5em 1em; color: #00D; background-color: #E0D; font-size: 28px; font-weight: bold; border-radius: 0.5em;">BG #E0D TEXT #00D </div>
-<ul style="clear: both;">
-  <li>Reducing or avoiding details in the blue channel can help prevent chromatic aberration, glare, or shimmer.</li>
-  <li>However, both of these color combinations are still a significant problem for some forms of color vision deficiency. For instance, someone with protanopia sees the above examples as:</li>
-</ul>
+<p>• Never rely on hue alone for differentiating details. Adequate luminance contrast is required.</p>
 
-<div style="margin: 0.75em auto 0; padding: 0; text-align: center; font-size: 1.1em; font-weight: bold;">Protanopic Vision</div>
-<div style="float: left; margin: 0 0.5em 0.5em; padding: 0.5em 1em; color: #0022D9; background-color: #616019; font-size: 28px; font-weight: bold; border-radius: 0.5em;">BG #F00 TEXT #00D </div>
-<div style="float: right; margin: 0 0.5em 0.5em; padding: 0.5em 1em; color: #0022D9; background-color: #565DD9; font-size: 28px; font-weight: bold; border-radius: 0.5em;">BG #E0D TEXT #00D </div>
-<ul style="clear: both;">
-  <li>Adding green to the brightest of the two colors, in this case the background, improves the luminance contrast, which improves readability for everyone.</li>
-</ul>
+<p>• The green in a monitor makes up the vast majority of luminance (light), so it will usually be a significant part of the lighter colors.</p>
 
-<div style="margin: 0.75em auto 0; padding: 0; text-align: center; font-size: 1.1em; font-weight: bold;">Normal Vision</div>
-<div style="float: left; margin: 0 0.5em 0.5em; padding: 0.5em 1em; color: #00D; background-color: #F70; font-size: 28px; font-weight: bold; border-radius: 0.5em;">BG #F70 TEXT #00D </div>
-<div style="float: right; margin: 0 0.5em 0.5em; padding: 0.5em 1em; color: #00D; background-color: #D89; font-size: 28px; font-weight: bold; border-radius: 0.5em;">BG #D89 TEXT #00D </div>
-<div style="clear: both; margin: 0.75em auto 0; padding: 0; text-align: center; font-size: 1.1em; font-weight: bold;">Protanopic Vision</div>
-<div style="float: left; margin: 0 0.5em 0.5em; padding: 0.5em 1em; color: #00D; background-color: #8F8D17; font-size: 28px; font-weight: bold; border-radius: 0.5em;">BG #F70 TEXT #00D </div>
-<div style="float: right; margin: 0 0.5em 0.5em; padding: 0.5em 1em; color: #00D; background-color: #949499; font-size: 28px; font-weight: bold; border-radius: 0.5em;">BG #D89 TEXT #00D </div>
+<h4>Working with Blue</h4>
+<p>• Pure blues should typically be the darkest of two colors</p>
 
-<ul style="clear: both;">
-  <li>Thus it is always important to ensure ample luminance contrast. This is most easily regulated by adding green to the brightest of the two colors.</li>
-</ul>
+<p>• To use blue as the lighter of two colors, green needs to be added, otherwise there will be insufficient contrast and poor readability.</p>
 
+<p>• This is both due to the low contrast and due to the human eye seeing blue at a lower resolution than green and red.</p>
+
+<p>The nature of blue light causes it to focus at a different location on the retina than red, so a pure red and a pure blue may "shimmer" when next to each other. In the example below: Left, pure red (<code>#F00</code>) and a pure blue (<code>#00D</code>). Right, an equal amount of blue was added to the background which removes all detail from the blue channel.</p>
+
+
+<img src="colorcomb01.png" alt="an example of blue against red, versus an example where the red has blue added to it">
+
+<p>As can be seen, reducing or avoiding details in the blue channel can help prevent chromatic aberration, glare, or shimmer. However, both of these color combinations are still a significant problem for some forms of color vision deficiency. For instance, someone with protanopia (red deficient vision) sees the above examples as:</p>
+
+
+<img src="colorcomb02.png" alt="an example of blue against red, and blue and purple, as seen by protanopia">
+
+<p>Adding green to the brightest of the two colors, in this case the background, improves the luminance contrast, which improves readability for everyone.</p>
+
+<img src="colorcomb03.png" alt="the previous examples, but adding green to the brightest color to improve contrast.">
+
+<p>Thus it is always important to ensure ample luminance contrast. This is most easily regulated by adding green to the brightest of the two colors.</p>
+
+<h4>Working with Red</h4>
 <p>Pure red (<code>#F00</code>) text on a pure black (<code>#000</code>) background is a bare minimum contrast for a 24px 700 weight bold font for normal vision. Someone with protanopia would have a difficult time reading this on an sRGB monitor, and it would be literally invisible on a next-generation Rec2020 display.</p>
 
-<div style="display: inline-block; margin: 0.5em; padding: 0; text-align: center; font-size: 1.1em; font-weight: bold;">Normal Vision
-  <div style="margin: 0; padding: 0.5em 1em; color: #F00; background-color: #000; font-size: 24px; font-weight: 700; border-radius: 0.5em;">BG #000 TEXT #F00 </div>
-</div>
-<div style="display: inline-block; margin: 0.5em; padding: 0; text-align: center; font-size: 1.1em; font-weight: bold;"> Protanopic Vision
-  <div style="margin: 0; padding: 0.5em 1em; color: #606119; background-color: #000; font-size: 24px; font-weight: 700; border-radius: 0.5em;">BG #000 TEXT #F00 </div>
-</div>
-<ul>
-  <li>Here again, adding a small amount of green (#77) makes an noticeable difference for protanopia, and in fact improves readability for all users by improving the luminance contrast.</li>
-</ul>
-<div style="display: inline-block; margin: 0.5em; padding: 0; text-align: center; font-size: 1.1em; font-weight: bold;">Normal Vision
-  <div style="margin: 0; padding: 0.5em 1em; color: #F70; background-color: #000; font-size: 24px; font-weight: 700; border-radius: 0.5em;">BG #000 TEXT #F70</div>
-</div>
-<div style="display: inline-block; margin: 0.5em; padding: 0; text-align: center; font-size: 1.1em; font-weight: bold;">Protanopic Vision
-  <div style="margin: 0; padding: 0.5em 1em; color: #8C8D16; background-color: #000; font-size: 24px; font-weight: 700; border-radius: 0.5em;">BG #000 TEXT #F70</div>
-</div>
+<img src="colorcomb04.png" alt="pure red on black, and how someone with protanopia sees it, which is reduced to being illegible.">
+
+<p>Here again, adding a small amount of green (#77) makes an noticeable difference for protanopia, and in fact improves readability for all users by improving the luminance contrast.</p>
+
+<img src="colorcomb05.png" alt="the previous example, but adding a small amount of green to increase the luminance contrast of the text against black.">
+
+There are <a href="https://www.myndex.com/CVD/">color vision simulators</a>, that allow you to process a screenshot of your design to demonstrate how your design might look to someone with a color vision deficiency.
 
 
 <h3 id="Psychophysical_Aspects_of_Color">Psychophysical Aspects of Color</h3>
