@@ -8,7 +8,7 @@ The following is a set of guidelines for contributing to the
 hosted within the [MDN Organization](https://github.com/mdn) on GitHub.
 
 > **Note:** Just want to find a task and jump in?
-  See [Getting started on MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started) 
+  See [Getting started on MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started)
   for an overview of how to join, and [Contributing to MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute)
   for a filtered list of tasks.
 
@@ -124,11 +124,12 @@ document: `title`, `slug`, and [`tags`](https://developer.mozilla.org/en-US/docs
 If you just want to make a simple change to a single file, like fixing a typo,
 the GitHub UI is the simplest way to do that. For example, if you've found
 a typo within the [JavaScript landing page](https://developer.mozilla.org/en-US/docs/Web/JavaScript),
-you can sign into GitHub, go to <https://github.com/mdn/content>, navigate to the source file
-`files/en-us/web/javascript/index.html`, and then click on the edit
-(pencil) button. 
+you can sign into GitHub, go to <https://github.com/mdn/content>,
+navigate to the source file `files/en-us/web/javascript/index.html`,
+and then click on the edit (pencil) button.
 
-> **Tip:** Click the **Source on GitHub** link in the footer of any MDN page to jump to its source file on GitHub.
+> **Tip:** Click the **Source on GitHub** link in the footer of any MDN page
+  to jump to its source file on GitHub.
 
 From there the GitHub UI will take your hand and
 [walk you through the rest](https://docs.github.com/en/free-pro-team@latest/github/managing-files-in-a-repository/editing-files-in-your-repository),
@@ -139,8 +140,8 @@ ultimate goal, a [pull request](https://docs.github.com/en/free-pro-team@latest/
 Your pull request represents the work you want to be reviewed,
 hopefully approved, and then merged into the `main` branch of this repository.
 
-> **Note:** See the [pull request etiquette section](#pull-request-etiquette) for more details
-on creating and handling pull requests successfully.
+> **Note:** See the [pull request etiquette section](#pull-request-etiquette)
+  for more details on creating and handling pull requests successfully.
 
 If you're not certain of the changes that you want to make, get in touch
 with us first!
@@ -636,7 +637,7 @@ page's meta data (like `slug`) if needed.
 > **Note:** To archive a currently-non-archived page, you need to follow the
 above procedure, but move the page in question the opposite way between repos.
 
-> **Note:** You can have an archived page with non-archived pages below it in the
+**Note:** You can have an archived page with non-archived pages below it in the
 hierarchy, and vice-versa. To achive this you need to have the same directory
 structure in both the `content` and `archive-content` repos. Whether a page
 is non-archived or archived depends on which repo its `index.html` file is
