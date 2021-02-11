@@ -110,6 +110,28 @@ tags:
 &lt;/section&gt;
 </pre>
 
+<p>Sections with no headings do not appear in the document outine. If you did want force the inclusion of such an HTML block inside the document outline but not affect the visual output in any way, you could include a heading but hide it:</p>
+
+<pre class="brush: html">&lt;section&gt;
+  &lt;h2 class="hidden"&gt;Controls&lt;/h2&gt;
+  &lt;button class="reply"&gt;Reply&lt;/button&gt;
+  &lt;button class="reply-all"&gt;Reply to all&lt;/button&gt;
+  &lt;button class="fwd"&gt;Forward&lt;/button&gt;
+  &lt;button class="del"&gt;Delete&lt;/button&gt;
+&lt;/section&gt;
+</pre>
+
+<p>Make sure to use some assistive technology and screenreader-friendly CSS to hide it, like so:</p>
+
+<pre class="brush: html">.hidden {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+</pre>
+
+<p>Depending on the content, including a heading could also be good for SEO, so it is an option to consider.</p>
+
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
