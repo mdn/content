@@ -46,6 +46,20 @@ let age = parseInt(params.get("age"), 10); // is the number 18</code>
 
 <pre><code>let address = params.get("address"); // null</code></pre>
 
+<p>Be careful when using parameters encoded in base64:</p>
+
+<pre class="brush: js"><code>let base64 = btoa(String.fromCharCode(19,224,23,64,31,128)); // base64 is "E+AXQB+A"     
+let searchParams = new URLSearchParams("q=foo&bin=" + base64); // q=foo&bin=E+AXQB+A
+let getBin = searchParams.get("bin"); // "E AXQB A" + char is replaced by spaces
+btoa(atob(getBin)); // "EAXQBA==" no error thrown
+btoa(String.fromCharCode(16,5,208,4)) // "EAXQBA==" decodes to wrong binary value
+  
+getBin.replace(/ /g, "+"); // "E+AXQB+A" is one solution
+  
+// or use set to add the parameter, but this increases the query string length 
+searchParams.set("bin2", base64) // "q=foo&bin=E+AXQB+A&bin2=E%2BAXQB%2BA" encodes + as %2B
+searchParams.get("bin2"); // "E+AXQB+A"</code></pre>
+
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
