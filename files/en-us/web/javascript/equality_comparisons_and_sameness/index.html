@@ -74,7 +74,7 @@ console.log(obj === undefined); // false
  <thead>
   <tr>
    <th scope="row"></th>
-   <th colspan="7" scope="col" style="text-align: center;">Operand B</th>
+   <th colspan="8" scope="col" style="text-align: center;">Operand B</th>
   </tr>
  </thead>
  <tbody>
@@ -87,12 +87,14 @@ console.log(obj === undefined); // false
    <td style="text-align: center;">String</td>
    <td style="text-align: center;">Boolean</td>
    <td style="text-align: center;">Object</td>
+   <td style="text-align: center;">BigInt</td>
   </tr>
   <tr>
-   <th rowspan="6" scope="row">Operand A</th>
+   <th rowspan="7" scope="row">Operand A</th>
    <td>Undefined</td>
    <td style="text-align: center;"><code>true</code></td>
    <td style="text-align: center;"><code>true</code></td>
+   <td style="text-align: center;"><code>false</code></td>
    <td style="text-align: center;"><code>false</code></td>
    <td style="text-align: center;"><code>false</code></td>
    <td style="text-align: center;"><code>false</code></td>
@@ -106,6 +108,7 @@ console.log(obj === undefined); // false
    <td style="text-align: center;"><code>false</code></td>
    <td style="text-align: center;"><code>false</code></td>
    <td style="text-align: center;"><code>false</code></td>
+   <td style="text-align: center;"><code>false</code></td>
   </tr>
   <tr>
    <td>Number</td>
@@ -115,6 +118,7 @@ console.log(obj === undefined); // false
    <td style="text-align: center;"><code>A === ToNumber(B)</code></td>
    <td style="text-align: center;"><code>A === ToNumber(B)</code></td>
    <td style="text-align: center;"><code>A == ToPrimitive(B)</code></td>
+   <td style="text-align: center;"><code>ℝ(A) = ℝ(B)</code></td>
   </tr>
   <tr>
    <td>String</td>
@@ -124,6 +128,7 @@ console.log(obj === undefined); // false
    <td style="text-align: center;"><code>A === B</code></td>
    <td style="text-align: center;"><code>ToNumber(A) === ToNumber(B)</code></td>
    <td style="text-align: center;"><code>A == ToPrimitive(B)</code></td>
+   <td style="text-align: center;"><code>StringToBigInt(A) === B</code></td>
   </tr>
   <tr>
    <td>Boolean</td>
@@ -133,6 +138,7 @@ console.log(obj === undefined); // false
    <td style="text-align: center;"><code>ToNumber(A) === ToNumber(B)</code></td>
    <td style="text-align: center;"><code>A === B</code></td>
    <td style="text-align: center;"><code>ToNumber(A) == ToPrimitive(B)</code></td>
+   <td style="text-align: center;"><code>ToNumber(A) == B</code></td>
   </tr>
   <tr>
    <td>Object</td>
@@ -141,6 +147,17 @@ console.log(obj === undefined); // false
    <td style="text-align: center;"><code>ToPrimitive(A) == B</code></td>
    <td style="text-align: center;"><code>ToPrimitive(A) == B</code></td>
    <td style="text-align: center;"><code>ToPrimitive(A) == ToNumber(B)</code></td>
+   <td style="text-align: center;"><code>A === B</code></td>
+   <td style="text-align: center;"><code>ToPrimitive(A) == B</code></td>
+  </tr>
+  <tr>
+   <td>BigInt</td>
+   <td style="text-align: center;"><code>false</code></td>
+   <td style="text-align: center;"><code>false</code></td>
+   <td style="text-align: center;"><code>ℝ(A) = ℝ(B)</code></td>
+   <td style="text-align: center;"><code>A === StringToBigInt(B)</code></td>
+   <td style="text-align: center;"><code>A == ToNumber(B)</code></td>
+   <td style="text-align: center;"><code>A == ToPrimitive(B)</code></td>
    <td style="text-align: center;"><code>A === B</code></td>
   </tr>
  </tbody>
