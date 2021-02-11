@@ -6,17 +6,17 @@ tags:
   - HTTP
   - Overview
   - WebMechanics
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{HTTPSidebar}}</div>
 
 <p class="summary"><span class="seoSummary"><strong>HTTP</strong> is</span> a {{Glossary("protocol")}} which allows the fetching of resources, such as HTML documents. It is <span class="seoSummary">the foundation of any data exchange on the Web and it is a client-server protocol, which means requests are initiated by the recipient, usually the Web browser. A complete document is reconstructed from the different sub-documents fetched, for instance text, layout description, images, videos, scripts, and more</span>.</p>
 
-<p><img alt="A Web document is the composition of different resources" src="https://mdn.mozillademos.org/files/13677/Fetching_a_page.png" style="height: 319px; width: 545px;"></p>
+<p><img alt="A Web document is the composition of different resources" src="fetching_a_page.png"></p>
 
 <p>Clients and servers communicate by exchanging individual messages (as opposed to a stream of data). The messages sent by the client, usually a Web browser, are called <em>requests</em> and the messages sent by the server as an answer are called <em>responses</em>.</p>
 
-<p><img alt="HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer." src="https://mdn.mozillademos.org/files/13673/HTTP%20&amp;%20layers.png" style="float: left; height: 299px; padding-bottom: 15px; padding-right: 20px; width: 418px;">Designed in the early 1990s, HTTP is an extensible protocol which has evolved over time. It is an application layer protocol that is sent over {{Glossary("TCP")}}, or over a {{Glossary("TLS")}}-encrypted TCP connection, though any reliable transport protocol could theoretically be used. Due to its extensibility, it is used to not only fetch hypertext documents, but also images and videos or to post content to servers, like with HTML form results. HTTP can also be used to fetch parts of documents to update Web pages on demand.</p>
+<p><img alt="HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer." src="https://mdn.mozillademos.org/files/13673/HTTP%20&amp;%20layers.png" style="float: left; padding-bottom: 15px; padding-right: 20px;">Designed in the early 1990s, HTTP is an extensible protocol which has evolved over time. It is an application layer protocol that is sent over {{Glossary("TCP")}}, or over a {{Glossary("TLS")}}-encrypted TCP connection, though any reliable transport protocol could theoretically be used. Due to its extensibility, it is used to not only fetch hypertext documents, but also images and videos or to post content to servers, like with HTML form results. HTTP can also be used to fetch parts of documents to update Web pages on demand.</p>
 
 <h2 id="Components_of_HTTP-based_systems">Components of HTTP-based systems</h2>
 
@@ -24,7 +24,7 @@ tags:
 
 <p>Each individual request is sent to a server, which handles it and provides an answer, called the <em>response</em>. Between the client and the server there are numerous entities, collectively called {{Glossary("Proxy_server", "proxies")}}, which perform different operations and act as gateways or {{Glossary("Cache", "caches")}}, for example.</p>
 
-<p><img alt="Client server chain" src="https://mdn.mozillademos.org/files/13679/Client-server-chain.png"></p>
+<p><img alt="Client server chain" src="client-server-chain.png"></p>
 
 <p>In reality, there are more computers between a browser and the server handling the request: there are routers, modems, and more. Thanks to the layered design of the Web, these are hidden in the network and transport layers. HTTP is on top, at the application layer. Although important to diagnose network problems, the underlying layers are mostly irrelevant to the description of HTTP.</p>
 
@@ -137,12 +137,12 @@ Content-Type: text/html
 
 <p>An example HTTP request:</p>
 
-<p><img alt="A basic HTTP request" src="https://mdn.mozillademos.org/files/13687/HTTP_Request.png" style="height: 336px; width: 693px;"></p>
+<p><img alt="A basic HTTP request" src="http_request.png"></p>
 
 <p>Requests consists of the following elements:</p>
 
 <ul>
- <li>An HTTP <a href="/en-US/docs/Web/HTTP/Methods">method</a>, usually a verb like {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}} or a noun like {{HTTPMethod("OPTIONS")}} or {{HTTPMethod("HEAD")}} that defines the operation the client wants to perform. Typically, a client wants to fetch a resource (using <code>GET</code>) or post the value of an <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML form</a> (using <code>POST</code>), though more operations may be needed in other cases.</li>
+ <li>An HTTP <a href="/en-US/docs/Web/HTTP/Methods">method</a>, usually a verb like {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}} or a noun like {{HTTPMethod("OPTIONS")}} or {{HTTPMethod("HEAD")}} that defines the operation the client wants to perform. Typically, a client wants to fetch a resource (using <code>GET</code>) or post the value of an <a href="/en-US/docs/Learn/Forms">HTML form</a> (using <code>POST</code>), though more operations may be needed in other cases.</li>
  <li>The path of the resource to fetch; the URL of the resource stripped from elements that are obvious from the context, for example without the {{Glossary("protocol")}} (<code>http://</code>), the {{Glossary("domain")}} (here, <code>developer.mozilla.org</code>), or the TCP {{Glossary("port")}} (here, <code>80</code>).</li>
  <li>The version of the HTTP protocol.</li>
  <li>Optional <a href="/en-US/docs/Web/HTTP/Headers">headers</a> that convey additional information for the servers.</li>
@@ -153,7 +153,7 @@ Content-Type: text/html
 
 <p>An example response:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13691/HTTP_Response.png" style="height: 494px; width: 758px;"></p>
+<p><img alt="" src="http_response.png"></p>
 
 <p>Responses consist of the following elements:</p>
 
