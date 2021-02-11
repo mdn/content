@@ -25,7 +25,15 @@ tags:
   - photic seizure
   - seizure disorders
 ---
-<p>Understanding luminance which is a measure of light, and color, which means hue, chroma, and saturation, is important for designing visual and readable content that is accessible to all sighted users, and especially those with reduced vision and color deficient vision, but also for accessibility by those with certain neurological, cognitive, and other impairments.</p>
+<p>When designing visual and readable content to be accessibly to all sighted users, it is important to have an understanding of light, color, and perception. This page specifically discusses:</p>
+<ul>
+  <li>luminance which is a linear measure of light</li>
+  <li>color, which is measured as hue, chroma, and saturation</li>
+  <li>lightness, brightness, and contrast which are measures of perception</li>
+  <li>how these interrelate and interact with design elements</li>
+</ul>
+
+<p>While understanding these is important for design and readability for all sighted users, it is especially true for those with reduced vision and color deficient vision, and also for  those with certain neurological, cognitive, and other impairments.</p>
 
 <p>The <a href="/en-US/docs/Glossary/W3C">W3.org's</a> <a href="/en-US/docs/Glossary/WAI">WAI</a> publishes freely available guidelines, maintained by the AGWG (Accessibility Guidelines Working Group). Currently these are known as the <a href="/en-US/docs/Glossary/WCAG">WCAG 2.1 accessibility guidelines</a>. The next generation, <a href="https://www.w3.org/TR/wcag-3.0/">WCAG 3.0</a>, is presently published as a public working draft, pending further development and approvals.</p>
 
@@ -36,9 +44,9 @@ tags:
 
 <p>Color and how it is used is a major part of accessibility. While at first color may seem simple as it is something most sighted users experience on a daily basis, the underlying science of color perception is complex and often not intuitive.</p>
 
-<p>To begin with color is not "real," and while that may sound like an odd statement for an article on color, the fact is that in the visible range of light, the light simply exists in different frequencies, or wavelengths, much like the keys on a piano create sounds at different frequencies. But while our ear and aural perception may "hear" sound as a range of notes, the normal human eye divides the visible light into three overlapping groups. These three bands of light as detected by light sensitive cells known as cones, and the three cone types are called L, M, or S for long, medium, and short wavelengths.</p>
+<p>To begin with color is not "real," which might sound like an odd statement for an article on color. The fact is that in the visible range, light simply exists at different frequencies, or wavelengths. Consider how the keys on a piano create sounds at different frequencies. But while our ear and aural perception may "hear" sound as a range of notes, the normal human eye divides the visible light into three overlapping ranges. These three bands of light are detected by light sensitive cells in the eye known as cones, and the three cone types are called L, M, or S for long, medium, and short wavelengths.</p>
 
-<p>We normally associate L, M, or S cone sensitivity with the sensation of red, green, and blue colors, respectively. Thus we have what are referred to as the three primary colors of light. Specific red, green, and blue hues are used for the "color primaries" used in an RGB additive color model. The sRGB colorspace, the default standard colorspace for web content, uses the RGB additive color model.</p>
+<p>We normally associate L, M, or S cone sensitivity with the sensation of red, green, and blue colors, respectively. Thus we have what are referred to as the three primary colors of light. Specific red, green, and blue hues are used for the "color primaries" used in an RGB additive color model. The sRGB colorspace, the default standard colorspace for web content, is an example of an additive RGB color model.</p>
 
 <p>RGB is called an additive color model because it functions by adding light of different wavelengths in different proportions to stimulate the L, M, S cones in the eye to create a particular color perception. For instance when you see the color yellow on your monitor, the monitor is only putting out red and green light. This stimulates the L and M cones similarly to how a "yellow" wavelength of light might. The red and green light do not "mix" in the air as if paint, they remain separate. The "mixing" happens in our vision system's neurological processing.</p>
 
@@ -59,13 +67,15 @@ tags:
 
 <p>In the following image both of the yellow dots, and the grey of the square they are on, are identical in terms of the sRGB color value that is being displayed on your monitor. It is your context-sensitive perception of these colors that makes them appear so different, as your brain's image processing adjusts the perception based on what it thinks is in shadow or not.</p>
 
-<p><img alt="An image of a checkerboard, where identical colors look different if they are in shadow - image D.Lyon" src="yellowdotcheckershadow_dlyon.png"></p>
+<figure><img alt="An image of a checkerboard, where identical colors look different if they are in shadow - image D.Lyon" src="yellowdotcheckershadow_dlyon.png">
+<figcaption>The yellow dots in this image are identical colors coming from your monitor, but tey appear different due to context. Image D.Lyon</figcaption>
+</figure>
 
 <p>Our contrast sensitivity is therefore affected by the context of the nearby colors and other features of a design or image. This makes predicting contrast challenging, and is clearly not as simple as the distance or ratio between two colors.</p>
 
 <h3 id="Readability_Contrast">Readability Contrast</h3>
 
-<p>For web content, readability is one very important goal. Readability is not the same as legibility. Legibility refers to the "just noticeable difference" (JND) where a figure such as a letter just becomes discernible. For normal vision, the contrast sensitivity (CS) JND legibility level is about 1%, while someone with a mild impairment might have a CS of 3%. 10% would be represent profound impairment in the area of low vision. These levels are for large, bold fonts on a special chart used for testing contrast sensitivity.</p>
+<p>For web content, readability is one very important goal. Readability is not the same as legibility. Readability is the measure where a particular user can read at their best speed and best comprehension. Legibility refers to the "just noticeable difference" (JND) where a figure such as a letter just becomes discernible. For normal vision, the contrast sensitivity (CS) JND legibility level is about 1%, while someone with a mild impairment might have a CS of 3%. 10% would be represent profound impairment in the area of low vision. These levels are for large, bold fonts on a special chart used for testing contrast sensitivity.</p>
 
 <p>But the threshold of 1% to 3% is wholly insufficient for fluent, easy reading. The minimum critical contrast level is ten times the CS JND, and 20 times the JND is considered the better target to allow for "contrast reserve." <a href="https://pubmed.ncbi.nlm.nih.gov/8430009/"><em> (Visual requirements for reading, S G Whittaker, J Lovie-Kitchin)</em></a>.</p>
 
@@ -80,52 +90,52 @@ tags:
 
 <p>But that is the minimum for "just making out" the letters at ~70% accuracy. That is legibility, not readability. For readability, the lower case x-height needs to be a minimum of twice that cap height. This is called the critical font size for readability.</p>
 
-<p>This means that while a 5.5px font may be the minimum for 20/20 legibility, the minimum for <em>read</em>ability is 15.6px (in print, about 12pt, the typical standard in books).  And this is for normal vision. Someone with 20/40 needs twice that, about a 31px font. This is why the WCAG standard requires that users have the ability for to zoom up text.</p>
+<p>This means that while a 5.5px font may be the minimum for 20/20 legibility, the minimum for <em>read</em>ability is 15.6px (in print, about 12pt, the typical standard in books).  And this is for normal vision. Someone with 20/40 needs twice that, about a 31px font. This is why the <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html">WCAG standard requires</a> that users have the ability to zoom text larger.</p>
 
 <p>Interestingly, while text that is too small is hard to read, so is text that is too big. Above approximately 96px, reading speed decreases. Also, very large fonts make it difficult for a user to enlarge the smaller text on the page, as most browsers presently zoom all text regardless.</p>
 
 
 <h3 id="Text_Size_Guidelines">Text Size Guidelines</h3>
 
-<p>The current WCAG 2 contrast guidelines 1.4.3 and 1.4.6 define "large" text as text that is 18pt (24px) or larger at a normal weight (400), or text that is 14pt (18.7px) at a bold weight (700). This may have been sufficient in 2008 when the standard was created. At that time, most "web fonts" such as Verdana were only available in a normal and bold weight.</p>
+<p>The current WCAG 2.x contrast guidelines 1.4.3 and 1.4.6 define "large" text as text that is 18pt (24px) or larger at a normal weight (400), or text that is 14pt (18.7px) at a bold weight (700). This may have been sufficient in 2008 when the standard was created. At that time, most "web fonts" such as Verdana were only available in a normal and bold weight.</p>
 
-<p>Today, the proliferation of easily available web fonts of all sizes and weights has complicated the issue. The emerging WCAG 3.0 standard on visual contrast known as APCA, takes into account font weights and sizes in a variable manner, relative to the predicted contrast value.</p>
+<p>Today, the proliferation of easily available web fonts of all sizes and weights has complicated the issue. The emerging WCAG 3.0 standard on visual contrast is <a href="https://www.myndex.com/APCA/simple">known as APCA</a>, and takes into account font weights and sizes in a variable manner, relative to the predicted contrast value.</p>
 
-<p>Non text elements such as icons also need adaquate contrast for perception<strong><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G207">WCAG 2.1 technique G207</a></strong></p>
+<p>Non text elements such as icons also need adaquate contrast for perception. One description is this<strong><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G207">WCAG 2.1 guideline.</a></strong></p>
 
 
 
 <h3 id="CSS_and_the_sRGB_colorspace">CSS and the sRGB Colorspace </h3>
 
-<p>The W3.org defines the sRGB colorspace as the default for web content. The MDN page on <strong><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></strong> says "<em>The  <strong><a href="/en-US/docs/Web/CSS">CSS</a></strong> <strong><a href="/en-US/docs/Web/CSS/CSS_Types"> color data type</a></strong> represents a color in the </em><strong><em><a href="https://en.wikipedia.org/wiki/SRGB" rel="noopener">sRGB colorspace</a>.</em>"</strong>
+<p>The W3.org defines the sRGB colorspace as the <a href="https://www.w3.org/TR/css-color-3/#SRGB">default for web content</a>. The MDN page on <strong><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></strong> says "<em>The  <strong><a href="/en-US/docs/Web/CSS">CSS</a></strong> <strong><a href="/en-US/docs/Web/CSS/CSS_Types"> color data type</a></strong> represents a color in the </em><strong><em><a href="https://en.wikipedia.org/wiki/SRGB" rel="noopener">sRGB colorspace</a>.</em>"</strong>
 
 
 <h3>CSS Color Level 3 provides for several different notations:</h3>
 
-      <pre><code>
-      /* by name (from a defined set of names) */
-      em { color: 'magenta'; }
+<pre class="brush: css">
+/* by name (from a defined set of names) */
+div { color: 'magenta'; }
 
-      /* by HSL representation of the sRGB value */
-      em { color: hsl(300, 100%, 50%); }
-      em { color: hsla(300, 100%, 50%, 50%); }
+/* by HSL representation of the sRGB value */
+div { color: hsl(300, 100%, 50%); }
+div { color: hsla(300, 100%, 50%, 50%); }
 
-      /* by sRGB value as a percentage */
-      em { color: rgb(100%, 0%, 100%); }
-      em { color: rgba(100%, 0%, 100%, 50%); }
+/* by sRGB value as a percentage */
+div { color: rgb(100%, 0%, 100%); }
+div { color: rgba(100%, 0%, 100%, 50%); }
 
-      /* by sRGB integer values */
-      em { color: rgb(255, 0, 255); }
-      em { color: rgba(255, 0, 255, 128); }
+/* by sRGB integer values */
+div { color: rgb(255, 0, 255); }
+div { color: rgba(255, 0, 255, 128); }
 
-      /* by sRGB value in hex */
-      em { color: #f0f; }            /* #rgb, a shorthand for #rrggbb */
-      em { color: #ff00ff; }         /* #rrggbb */
-      em { color: #ff00ff80; }       /* #rrggbbaa */
-      </code></pre>
+/* by sRGB value in hex */
+div { color: #f0f; }            /* #rgb, a shorthand for #rrggbb */
+div { color: #ff00ff; }         /* #rrggbb */
+div { color: #ff00ff80; }       /* #rrggbbaa */
+</pre>
 
 
-<p>The first example is using one of the defined color names. The list of basic color keywords is: <code>aqua</code>, <code>black</code>, <code>blue</code>, <code>fuchsia</code>, <code>gray</code>, <code>green</code>, <code>lime</code>, <code>maroon</code>, <code>navy</code>, <code>olive</code>, <code>purple</code>, <code>red</code>, <code>silver</code>, <code>teal</code>, <code>white</code>, and <code>yellow</code>. Some color names have aliases, for instance, <code>cyan</code> and <code>aqua</code> are the same color, as is <code>fuchsia</code> and <code>magenta</code>, and <code>grey</code> and <code>gray</code>. There are over a hundred and forty more names that came from the SVG specification that are supported by most browsers.</p>
+<p>The first example is using one of the defined color names. The list of basic color keywords is: <code>aqua</code>, <code>black</code>, <code>blue</code>, <code>fuchsia</code>, <code>gray</code>, <code>green</code>, <code>lime</code>, <code>maroon</code>, <code>navy</code>, <code>olive</code>, <code>purple</code>, <code>red</code>, <code>silver</code>, <code>teal</code>, <code>white</code>, and <code>yellow</code>. Some color names have aliases, for instance, <code>cyan</code> and <code>aqua</code> are the same color, as is <code>fuchsia</code> and <code>magenta</code>, and <code>grey</code> and <code>gray</code>. There are over <a href="https://www.w3.org/TR/css-color-3/#svg-color">a hundred and forty more</a> names that came from the SVG specification that are supported by most browsers.</p>
 
 <p>The next examples show "HSL" which stands for <strong>"Hue, Saturation, Lightness"</strong>. The color produced from the settings are still in the sRGB colorspace, but HSL is intended as a more convenient way to select and work with color. Because hue is adjusted as an angle, it is easy to create a user interface using a knob or circular control to adjust hue. And while in terms of real light, the range of visible wavelengths do not exist as such an angle, our perception of hue could be thought of as somewhat circular.</p>
 
@@ -133,21 +143,20 @@ tags:
 
 <p>We can also set the sRGB values directly by an 8bit integer number, which means a whole number from 0 to 255. This is the number of values available in an 8bit byte, which is how numbers are often stored in a computer.</p>
 
-<p>Shown below that, we can use a hex value. Hex value means "hexadecimal," where the 0-255 integer is represented by two digits that each range from 0-15. As there are no Arabic numerals above 9, we use the letters a-f to represent 10-15. We add the '#' symbol to indicate the value is hex. Thus, #ff = 255.
+<p>Shown after that, we can use a hex value. Hex value means "hexadecimal," where the 0-255 integer is represented by two digits that each range from 0-15. As there are no Arabic numerals above 9, we use the letters a-f to represent 10-15. We add the '#' symbol to indicate the value is hex. Thus, #ff = 255.
 
-<p>In the examples above, you'll notice that some have a fourth value which is called “alpha”: <strong>RGBA</strong>. The alpha channel is not a color channel, but defines transparency in terms of the opacity value of the color. A higher value means the color is more opaque therefore less transparent. In the examples above, the alpha value is set to half or 50% opaque.</p>
+<p>In some of the examples above, you'll notice that some have a fourth value which is called “alpha”: <strong>RGBA</strong>. The alpha channel is not a color channel, but defines transparency in terms of the opacity value of the color. A higher value means the color is more opaque therefore less transparent. In the examples above, the alpha value is set to half or 50% opaque.</p>
 
 
 <h3 id="sRGB_the_Accessible_colorspace">sRGB the Accessible Colorspace </h3>
 
-<p>For accessibility guidelines the <strong>sRGB</strong> colorspace is most commonly used. This is not only because sRGB is the current default standard for the the web, but also the sRGB color primaries are well suited for accessibility concerns. For instance, the "red" sRGB primary is actually a red-orange, with a dominant wavelength of 611nm which overlaps into the M cone (green)  sensitivity.</p>
+<p>For accessibility guidelines the <strong>sRGB</strong> colorspace is most commonly used. This is not only because sRGB is the current default standard for the the web, but also the sRGB color primaries are well suited for accessibility concerns. For instance, the "red" sRGB primary is actually a red-orange, with a dominant wavelength of 611nm which overlaps into the M cone (green) sensitivity.</p>
 
-<p>Thus someone with protanopia (a form of CVD) where they have no red cones will still be able to perceive the sRGB red primary, though about 35% darker. But still, both a protan and deutan form of CVD will have difficulty distinguishing <em>between</em> red and green.</p>
+<p>This is helpful for some impairments related to color vision deficiency (CVD). One form of <abbr title="color vision deficiency">CVD</abbr> called protanopia means the eye has no red cones. But protanopia will still be able to perceive the sRGB red primary because the remaining green cones will still perceive it, though about 35% darker. Nevertheless, both a protan (red deficient) and deutan (green deficient) form of CVD will have difficulty distinguishing <em>between</em> red and green.</p>
 
-<p>However, some other display colorspaces use different primary colors. For the new ultraHD Rec2020 colorspace, the red primary has a much longer wavelength of 630nm. This greatly improves color fidelity for normal vision, but it also means that someone with protanopia will not see this red at all, or very dimly at best.</p>
+<p>However, some other display colorspaces use different primary colors. For the new <a href="https://en.wikipedia.org/wiki/Rec._2020">ultraHD Rec2020</a> colorspace, the red primary has a longer wavelength of 630nm. This greatly improves color fidelity for normal vision, but it also means that someone with protanopia will not see this red at all, or very dimly at best. The Rec2020 green primary may cause a greater reduction in luminance for deuteranopia (green deficient vision).</p>
 
 <p>While some standards in development such as <strong><a href="https://drafts.csswg.org/css-color-4/">CSS Color Module Level 4</a></strong> are adding additional colorspaces, sRGB will remain the default colorspace, and the preferred colorspace for accessibility for the foreseeable future.</p>
-
 
 <hr>
 
@@ -159,7 +168,6 @@ tags:
 <p>Once an RGB color value is converted to luminance, that luminance value can be used relative to another color to determine a contrast ratio, or used to predict a perceptual contrast. In WCAG 2.x, the contrast math is not perceptually uniform, so it does not predict the contrast appearance over the full range of light to dark. For WCAG 3.0, a new method known as the Advanced Perceptual Contrast Algorithm provides a numeric contrast value that is relative to perception.</p>
 
 <p>See also this article on <a href="https://www.myndex.com/WEB/LuminanceContrast">luminance contrast</a></p>.
-
 
 
 <h3 id="Adaptation">Adaptation</h3>
@@ -174,8 +182,9 @@ tags:
 
 <p><strong>Light adaptation</strong> is also known as photopic or "daylight vision." Here the eye is adapted to much higher levels of light, typically a luminance greater than 8 cd/m<sup>2</sup>. The equates to a CSS value of between <code>#444</code> and <code>#555</code> for a typical desktop monitor. While dark adaption may take 30 minutes, light adaptation is much faster, taking only a few minutes. An example is leaving a dark theater on a Saturday afternoon, and being dazed by the bright sunlight for a minute or two. This adaptation period can even be painful for some people.</p>
 
-<p>The twilight zone: there is a transitional area between dark and light adaptation known as mesopic vision, where both rods and cones operate at the same time. On a monitor, we'd consider this black (about <code>#000005</code>) up to as high as <code>#555</code> for a bright desktop monitor.</p>
+<p><strong>The twilight zone:</strong> there is a transitional area between dark and light adaptation known as mesopic vision, where both rods and cones operate at the same time. On a monitor, we'd consider this black (about <code>#000005</code>) up to as high as <code>#555</code> for a bright desktop monitor.</p>
 
+<p><strong>Other Adaptations:</strong> we also adapt to contrast levels, and chroma and hue. Our perception is relative to context. If a page is very high contrast, we adapt to that high contrast causing a low contrast item to seem even lower in contrast. We will adapt to the overall hue cast of a page, as a result other colors on that page will be affected and perceived relative to the overall page color.</p>
 
 <p>Here is a <a href="https://webvision.med.utah.edu/book/part-viii-psychophysics-of-vision/light-and-dark-adaptation/">much deeper discussion</a> of the nature of eye adaptation.</p>
 
@@ -203,112 +212,105 @@ tags:
 
 <p>Here is an example of high chroma vs no chroma. On the right, each of the three sRGB primaries are at maximum. On the left, there is no chroma, also known as "achromatic."</p>
 
-<img alt="0 to 100 Chroma Ramps" src="chroma-ramps.svg">
+<img alt="0 to 100 Chroma Ramps, an example of high chroma vs no chroma" src="chroma-ramps.svg">
 
-<p>A a good resource with many more detailed examples is at <a href="https://munsell.com/color-blog/difference-chroma-saturation/"> the Munsell color site</a>.</p>
+<p>A good resource with many more detailed examples is at <a href="https://munsell.com/color-blog/difference-chroma-saturation/"> the Munsell color site</a>.</p>
 
 <h3 id="Color_Combinations">Color Combinations</h3>
 
-    <ul>
-			<li>Certain color combinations can be very problematic on a computer monitor or mobile device, and some color combinations can interfere with some impairments.</li>
-			<ul><li>Never rely on hue alone for differentiating details. Adequate luminance contrast is required.</li>
-				<li>The green in a monitor makes up the vast majority of luminance (light), so it will usually be a significant part of the lighter colors.</li>
-				<li>Pure blues should typically be the darkest of two colors</li>
-				<ul><li>To use blue as the lighter of two colors, green needs to be added, otherwise there will be insufficient contrast and poor readability.</li>
-					<li>This is both due to the low contrast and due to the human eye seeing blue at a lower resolution than green and red.</li>
-					<li>The nature of blue light causes it to focus at a different location on the retina than red, so a pure red and a pure blue may "shimmer" when next to each other. </li>
-					<li>In the example below: Left, pure red (<code>#F00</code>) and a pure blue (<code>#00D</code>). Right, an equal amount of blue was added to the background which removes all detail from the blue channel.</li>
-				</ul>
-			</ul>
-		</ul>
-
-		<div style="margin: 0.75em auto 0; padding: 0; text-align: center; font-size: 1.1em; font-weight: bold;">Normal Vision</div>
-		<div style="float: left; margin: 0 0.5em 0.5em;  padding: 0.5em 1em; color: #00D; background-color: #F00; font-size: 28px; font-weight: bold; border-radius: 0.5em;">BG #F00 TEXT #00D </div>
-		<div style="float: right; margin: 0 0.5em 0.5em;  padding: 0.5em 1em; color: #00D; background-color: #E0D; font-size: 28px; font-weight: bold; border-radius: 0.5em;">BG #E0D TEXT #00D </div>
-		<ul style="clear: both;">
-				<li>Reducing or avoiding details in the blue channel can help prevent chromatic aberration, glare, or shimmer.</li>
-				<li>However, both of these color combinations are still a significant problem for some forms of color vision deficiency. For instance, someone with protanopia sees the above examples as:</li>
-		</ul>
-
-		<div style="margin: 0.75em auto 0; padding: 0; text-align: center; font-size: 1.1em; font-weight: bold;">Protanopic Vision</div>
-		<div style="float: left; margin: 0 0.5em 0.5em; padding: 0.5em 1em; color: #0022D9; background-color: #616019; font-size: 28px; font-weight: bold; border-radius: 0.5em;">BG #F00 TEXT #00D </div>
-		<div style="float: right; margin: 0 0.5em 0.5em; padding: 0.5em 1em; color: #0022D9; background-color: #565DD9; font-size: 28px; font-weight: bold; border-radius: 0.5em;">BG #E0D TEXT #00D </div>
-		<ul style="clear: both;">
-					<li>Adding green to the brightest of the two colors, in this case the background, improves the luminance contrast, which improves readability for everyone.</li>
-		</ul>
-
-		<div style="margin: 0.75em auto 0; padding: 0; text-align: center; font-size: 1.1em; font-weight: bold;">Normal Vision</div>
-		<div style="float: left; margin: 0 0.5em 0.5em; padding: 0.5em 1em; color: #00D; background-color: #F70; font-size: 28px; font-weight: bold; border-radius: 0.5em;">BG #F70 TEXT #00D </div>
-		<div style="float: right; margin: 0 0.5em 0.5em; padding: 0.5em 1em; color: #00D; background-color: #D89; font-size: 28px; font-weight: bold; border-radius: 0.5em;">BG #D89 TEXT #00D </div>
-		<div style="clear: both; margin: 0.75em auto 0; padding: 0; text-align: center; font-size: 1.1em; font-weight: bold;">Protanopic Vision</div>
-		<div style="float: left; margin: 0 0.5em 0.5em; padding: 0.5em 1em; color: #00D; background-color: #8F8D17; font-size: 28px; font-weight: bold; border-radius: 0.5em;">BG #F70 TEXT #00D </div>
-		<div style="float: right; margin: 0 0.5em 0.5em; padding: 0.5em 1em; color: #00D; background-color: #949499; font-size: 28px; font-weight: bold; border-radius: 0.5em;">BG #D89 TEXT #00D </div>
-
-		<ul style="clear: both;">
-			<li>Thus it is always important to ensure ample luminance contrast. This is most easily regulated by adding green to the brightest of the two colors.</li>
-		</ul>
-
-	<p>Pure red (<code>#F00</code>) text on a pure black (<code>#000</code>) background is a bare minimum contrast for a 24px 700 weight bold font for normal vision. Someone with protanopia would have a difficult time reading this on an sRGB monitor, and it would be literally invisible on a next-generation Rec2020 display.</p>
-
-		<div style="display: inline-block; margin: 0.5em; padding: 0; text-align: center; font-size: 1.1em; font-weight: bold;">Normal Vision
-			<div style="margin: 0; padding: 0.5em 1em; color: #F00; background-color: #000; font-size: 24px; font-weight: 700; border-radius: 0.5em;">BG #000 TEXT #F00 </div>
-		</div>
-		<div style="display: inline-block; margin: 0.5em; padding: 0; text-align: center; font-size: 1.1em; font-weight: bold;"> Protanopic Vision
-			<div style="margin: 0; padding: 0.5em 1em; color: #606119; background-color: #000; font-size: 24px; font-weight: 700; border-radius: 0.5em;">BG #000 TEXT #F00 </div>
-		</div>
-  <ul>
-    <li>Here again, adding a small amount of green (#77) makes an noticeable difference for protanopia, and in fact improves readability for all users by improving the luminance contrast.</li>
+<ul>
+  <li>Certain color combinations can be very problematic on a computer monitor or mobile device, and some color combinations can interfere with some impairments.</li>
+  <ul><li>Never rely on hue alone for differentiating details. Adequate luminance contrast is required.</li>
+    <li>The green in a monitor makes up the vast majority of luminance (light), so it will usually be a significant part of the lighter colors.</li>
+    <li>Pure blues should typically be the darkest of two colors</li>
+    <ul><li>To use blue as the lighter of two colors, green needs to be added, otherwise there will be insufficient contrast and poor readability.</li>
+      <li>This is both due to the low contrast and due to the human eye seeing blue at a lower resolution than green and red.</li>
+      <li>The nature of blue light causes it to focus at a different location on the retina than red, so a pure red and a pure blue may "shimmer" when next to each other. </li>
+      <li>In the example below: Left, pure red (<code>#F00</code>) and a pure blue (<code>#00D</code>). Right, an equal amount of blue was added to the background which removes all detail from the blue channel.</li>
+    </ul>
   </ul>
-		<div style="display: inline-block; margin: 0.5em; padding: 0; text-align: center; font-size: 1.1em; font-weight: bold;">Normal Vision
-			<div style="margin: 0; padding: 0.5em 1em; color: #F70; background-color: #000; font-size: 24px; font-weight: 700; border-radius: 0.5em;">BG #000 TEXT #F70</div>
-		</div>
-		<div style="display: inline-block; margin: 0.5em; padding: 0; text-align: center; font-size: 1.1em; font-weight: bold;">Protanopic Vision
-			<div style="margin: 0; padding: 0.5em 1em; color: #8C8D16; background-color: #000; font-size: 24px; font-weight: 700; border-radius: 0.5em;">BG #000 TEXT #F70</div>
-		</div>
 </ul>
+
+<div style="margin: 0.75em auto 0; padding: 0; text-align: center; font-size: 1.1em; font-weight: bold;">Normal Vision</div>
+<div style="float: left; margin: 0 0.5em 0.5em;  padding: 0.5em 1em; color: #00D; background-color: #F00; font-size: 28px; font-weight: bold; border-radius: 0.5em;">BG #F00 TEXT #00D </div>
+<div style="float: right; margin: 0 0.5em 0.5em;  padding: 0.5em 1em; color: #00D; background-color: #E0D; font-size: 28px; font-weight: bold; border-radius: 0.5em;">BG #E0D TEXT #00D </div>
+<ul style="clear: both;">
+  <li>Reducing or avoiding details in the blue channel can help prevent chromatic aberration, glare, or shimmer.</li>
+  <li>However, both of these color combinations are still a significant problem for some forms of color vision deficiency. For instance, someone with protanopia sees the above examples as:</li>
+</ul>
+
+<div style="margin: 0.75em auto 0; padding: 0; text-align: center; font-size: 1.1em; font-weight: bold;">Protanopic Vision</div>
+<div style="float: left; margin: 0 0.5em 0.5em; padding: 0.5em 1em; color: #0022D9; background-color: #616019; font-size: 28px; font-weight: bold; border-radius: 0.5em;">BG #F00 TEXT #00D </div>
+<div style="float: right; margin: 0 0.5em 0.5em; padding: 0.5em 1em; color: #0022D9; background-color: #565DD9; font-size: 28px; font-weight: bold; border-radius: 0.5em;">BG #E0D TEXT #00D </div>
+<ul style="clear: both;">
+  <li>Adding green to the brightest of the two colors, in this case the background, improves the luminance contrast, which improves readability for everyone.</li>
+</ul>
+
+<div style="margin: 0.75em auto 0; padding: 0; text-align: center; font-size: 1.1em; font-weight: bold;">Normal Vision</div>
+<div style="float: left; margin: 0 0.5em 0.5em; padding: 0.5em 1em; color: #00D; background-color: #F70; font-size: 28px; font-weight: bold; border-radius: 0.5em;">BG #F70 TEXT #00D </div>
+<div style="float: right; margin: 0 0.5em 0.5em; padding: 0.5em 1em; color: #00D; background-color: #D89; font-size: 28px; font-weight: bold; border-radius: 0.5em;">BG #D89 TEXT #00D </div>
+<div style="clear: both; margin: 0.75em auto 0; padding: 0; text-align: center; font-size: 1.1em; font-weight: bold;">Protanopic Vision</div>
+<div style="float: left; margin: 0 0.5em 0.5em; padding: 0.5em 1em; color: #00D; background-color: #8F8D17; font-size: 28px; font-weight: bold; border-radius: 0.5em;">BG #F70 TEXT #00D </div>
+<div style="float: right; margin: 0 0.5em 0.5em; padding: 0.5em 1em; color: #00D; background-color: #949499; font-size: 28px; font-weight: bold; border-radius: 0.5em;">BG #D89 TEXT #00D </div>
+
+<ul style="clear: both;">
+  <li>Thus it is always important to ensure ample luminance contrast. This is most easily regulated by adding green to the brightest of the two colors.</li>
+</ul>
+
+<p>Pure red (<code>#F00</code>) text on a pure black (<code>#000</code>) background is a bare minimum contrast for a 24px 700 weight bold font for normal vision. Someone with protanopia would have a difficult time reading this on an sRGB monitor, and it would be literally invisible on a next-generation Rec2020 display.</p>
+
+<div style="display: inline-block; margin: 0.5em; padding: 0; text-align: center; font-size: 1.1em; font-weight: bold;">Normal Vision
+  <div style="margin: 0; padding: 0.5em 1em; color: #F00; background-color: #000; font-size: 24px; font-weight: 700; border-radius: 0.5em;">BG #000 TEXT #F00 </div>
+</div>
+<div style="display: inline-block; margin: 0.5em; padding: 0; text-align: center; font-size: 1.1em; font-weight: bold;"> Protanopic Vision
+  <div style="margin: 0; padding: 0.5em 1em; color: #606119; background-color: #000; font-size: 24px; font-weight: 700; border-radius: 0.5em;">BG #000 TEXT #F00 </div>
+</div>
+<ul>
+  <li>Here again, adding a small amount of green (#77) makes an noticeable difference for protanopia, and in fact improves readability for all users by improving the luminance contrast.</li>
+</ul>
+<div style="display: inline-block; margin: 0.5em; padding: 0; text-align: center; font-size: 1.1em; font-weight: bold;">Normal Vision
+  <div style="margin: 0; padding: 0.5em 1em; color: #F70; background-color: #000; font-size: 24px; font-weight: 700; border-radius: 0.5em;">BG #000 TEXT #F70</div>
+</div>
+<div style="display: inline-block; margin: 0.5em; padding: 0; text-align: center; font-size: 1.1em; font-weight: bold;">Protanopic Vision
+  <div style="margin: 0; padding: 0.5em 1em; color: #8C8D16; background-color: #000; font-size: 24px; font-weight: 700; border-radius: 0.5em;">BG #000 TEXT #F70</div>
+</div>
+
 
 <h3 id="Psychophysical_Aspects_of_Color">Psychophysical Aspects of Color</h3>
 
 <p>Color as in hues and saturation can affect our mood, and enhance — or de-enhance — our interactive experiences.</p>
 
-<h4 style="margin: 12px 0 0 1em;">Color can be culturally dependent</h4>
-<p style="margin: 4px 0 0 2em;;"><a href="https://journals.sagepub.com/doi/10.1177/002202217300400201">A Cross-Cultural Study of the Affective Meanings of Color</a></p>
+<h4>Color can be culturally dependent</h4>
+<p><a href="https://journals.sagepub.com/doi/10.1177/002202217300400201">A Cross-Cultural Study of the Affective Meanings of Color</a></p>
 
-<h4 style="margin: 12px 0 0 1em;">Color affects our emotions</h4>
-<p style="margin: 4px 0 0 2em;;"><a href="https://pubmed.ncbi.nlm.nih.gov/28612080/">Color and emotion: effects of hue, saturation, and brightness</a></p>
+<h4>Color affects our emotions</h4>
+<p><a href="https://pubmed.ncbi.nlm.nih.gov/28612080/">Color and emotion: effects of hue, saturation, and brightness</a></p>
 
-<h4 style="margin: 12px 0 0 1em;">Higher contrasts can also have a positive affect on our emotions</h4>
-<p style="margin: 4px 0 0 2em;;"><a href="https://pubmed.ncbi.nlm.nih.gov/32823741/">Emotion Variation from Controlling Contrast of Visual Contents through EEG-Based Deep Emotion Recognition</a></p>
+<h4>Higher contrasts can also have a positive affect on our emotions</h4>
+<p><a href="https://pubmed.ncbi.nlm.nih.gov/32823741/">Emotion Variation from Controlling Contrast of Visual Contents through EEG-Based Deep Emotion Recognition</a></p>
 
-<h4 style="margin: 12px 0 0 1em;">Some colors can affect our perception of time</h4>
-<p style="margin: 4px 0 0 2em;;"><a href="https://pubmed.ncbi.nlm.nih.gov/29374198/">Color and time perception: Evidence for temporal overestimation of blue stimuli</a></p>
+<h4>Some colors can affect our perception of time</h4>
+<p><a href="https://pubmed.ncbi.nlm.nih.gov/29374198/">Color and time perception: Evidence for temporal overestimation of blue stimuli</a></p>
 
-<h4 style="margin: 12px 0 0 1em;">Blue also has a significant effect on brightness and glare</h4>
-<p style="margin: 4px 0 0 2em;;"><a href="https://pubmed.ncbi.nlm.nih.gov/31288107/">Blue and glare & brightness</a></p>
+<h4>Blue also has a significant effect on brightness and glare</h4>
+<p><a href="https://pubmed.ncbi.nlm.nih.gov/31288107/">Blue and glare & brightness</a></p>
 
-<h4 style="margin: 12px 0 0 1em;">Red tinted glasses can provide increased happiness or joy</h4>
-<p style="margin: 4px 0 0 2em;;"><a href="https://pubmed.ncbi.nlm.nih.gov/31244627/">Looking Through "Rose-Tinted" Glasses: The Influence of Tint on Visual Affective Processing</a></p>
+<h4>Red tinted glasses can provide increased happiness or joy</h4>
+<p><a href="https://pubmed.ncbi.nlm.nih.gov/31244627/">Looking Through "Rose-Tinted" Glasses: The Influence of Tint on Visual Affective Processing</a></p>
 
-<h4 style="margin: 12px 0 0 1em;">Red is well known to have significant effects on our behavior</h4>
-<p style="margin: 4px 0 0 2em;;"><a href="https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/">How the Color Red Influences Our Behavior</a> Scientific American, S. Martinez-Conde, S,Macknik</p>
+<h4>Red is well known to have significant effects on our behavior</h4>
+<p><a href="https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/">How the Color Red Influences Our Behavior</a> Scientific American, S. Martinez-Conde, S,Macknik</p>
 
-<h4 style="margin: 12px 0 0 1em;">Red Environment</h4>
-<p style="margin: 4px 0 0 2em;;">Studies have shown that a red environment stimulates cognition, but for those who suffer Traumatic Brain Injury cognitive function may be reduced in a red environment, while a green environment had no measurable effect <a href="https://www.ncbi.nlm.nih.gov/pubmed/20649469">according to this study</a>.</p>
+<h4>Red Environment</h4>
+<p>Studies have shown that a red environment stimulates cognition, but for those who suffer Traumatic Brain Injury cognitive function may be reduced in a red environment, while a green environment had no measurable effect <a href="https://www.ncbi.nlm.nih.gov/pubmed/20649469">according to this study</a>.</p>
 
 
 <h2 id="Flashing_and_Seizures"><strong>Flashing and Seizures</strong></h2>
-
-<p>In 1997 in Japan, a Pokemon animation on television displayed rapid flashing between blue and red, at the rapid rate of about 12 flashes per second. Approximately 700 children that were watching were brought to the hospital due to photic induced seizures or other photic induced neurological issues.</p>
-
-<p>It has also been found that certain very regular, high contrast patterns such as parallel white and black stripes, can also induce seizures.</p>
-
-<p>While there is a lack of consensus, some studies have indicated that very deep saturated red (with wavelengths of 660nm-700nm+) may exacerbate the problem, if these deep reds flash between a saturated and unsaturated state. It is useful to note that the sRGB red primary is actually red-orange at 611nm.</p>
-
-<p>Nevertheless, flashing at rates higher than 3 per second over a screen area greater than 300px square, has been shown to induce photic seizures in some people, largely children and adolescents.</p>
+<p>Flashing at rates higher than 3 per second over a screen area greater than about 300px square has been shown to induce photic seizures in some people, most likely in children and adolescents. It has also been found that certain very regular, high contrast patterns such as parallel white and black stripes, can also induce seizures. Some studies have indicated that very deep saturated red (with wavelengths of 660nm-700nm+) may exacerbate the problem, if these deep reds flash between a saturated and unsaturated state, no matter the luminance.</p>
 
 <p><strong>DEEP DIVE:</strong> The Epilepsy Foundation of America researched photic- related seizures thoroughly in this publication <a href="https://www.researchgate.net/publication/7615895_Photic-_and_Pattern-induced_Seizures_A_Review_for_the_Epilepsy_Foundation_of_America_Working_Group">Photic- and Pattern-induced Seizures A Review</a></p>
 
-<p>The study resulted in these following guidelines, a few key guidelines are:</p>
+<p>The study resulted in several important guidelines, a few key guidelines are:</p>
 
 <p><strong>Single, double, or triple flashes in one second are acceptable, but a sequence of flashes is not recommended when both of the following occur:</strong></p>
 <ol>
@@ -316,18 +318,16 @@ tags:
 <li>From the minimal expected viewing distance, the total area of concurrent flashes subtends at the eye a solid angle of >0.006 steradians (approximately 300px square).</li>
 </ol>
 
-<h4>and</h4>
-
 <p><strong>When the light–dark stripes of any pattern are larger than 300px square (approximately) and the luminance of the lightest stripe is more than 50 cd/m², the pattern should display no more than:</strong></p>
 <ol>
 <li>Five light–dark pairs of stripes, if the stripes change direction, oscillate, flash, or reverse in contrast.</li>
 <li>Eight light–dark pairs of stripes, if the pattern is unchanging or continuously and smoothly drifting in one direction.</li>
 </ol>
 
-<a href="https://www.epilepsy.com/sites/core/files/atoms/files/Epilepsia%20vol%2046%20issue%209%20Photosensitivity.pdf">Photic- and Pattern-induced Seizures: Expert Consensus of the Epilepsy Foundation of America </a></p>
+<p>The consensus recommendations are in this brief paper, <a href="https://www.epilepsy.com/sites/core/files/atoms/files/Epilepsia%20vol%2046%20issue%209%20Photosensitivity.pdf">Photic- and Pattern-induced Seizures: Expert Consensus of the Epilepsy Foundation of America </a></p>
 
 
-<p>Here also are some additional insights in these <a href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.9473&rep=rep1&type=pdf">guidelines for preventing seizures from the UK</a>.</p>
+<p>And some additional insights are available in this UK paper covering <a href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.9473&rep=rep1&type=pdf">guidelines for preventing seizures.</a>.</p>
 
 <hr>
 
@@ -335,15 +335,15 @@ tags:
 
 <p>The IEC standard for calculating relative luminance (Y) from an sRGB color is as follows:</p>
 
-		<h4>STEP ONE (8 bit integer to float)</h4>
+<h4>STEP ONE (8 bit integer to float)</h4>
 
-		<p>Convert 8 bit sRGB values to float (0.0 to 1.0) by dividing by 255.0:</p>
+<p>Convert 8 bit sRGB values to float (0.0 to 1.0) by dividing by 255.0:</p>
 
-		<p>&nbsp;&nbsp; <strong>R´<sub>float</sub> = R´<sub>8bit</sub> / 255.0 &nbsp;&nbsp; &nbsp;&nbsp; G´<sub>float</sub> = G´<sub>8bit</sub> / 255.0 &nbsp;&nbsp; &nbsp;&nbsp; B´<sub>float</sub> = B´<sub>8bit</sub> / 255.0</strong></p>
+<p>&nbsp;&nbsp; <strong>R´<sub>float</sub> = R´<sub>8bit</sub> / 255.0 &nbsp;&nbsp; &nbsp;&nbsp; G´<sub>float</sub> = G´<sub>8bit</sub> / 255.0 &nbsp;&nbsp; &nbsp;&nbsp; B´<sub>float</sub> = B´<sub>8bit</sub> / 255.0</strong></p>
 
-		<p>If your sRGB values are 16 bit then convert to decimal by dividing by 65535.</p>
+<p>If your sRGB values are 16 bit then convert to decimal by dividing by 65535.</p>
 
-		<h4>STEP TWO (Linearize)</h4>
+<h4>STEP TWO (Linearize)</h4>
 
 <pre class="" style=""><code><span class="kwd">function</span><span class="pln"> sRGBtoLin</span><span class="pun">(</span><span class="pln">colorChannel</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span>
 		<span class="com">// Send this function a decimal sRGB gamma encoded color channel</span>
@@ -356,33 +356,33 @@ tags:
 	<span class="pun">}</span></code></pre>
 
 <h4>IMPORTANT NOTE</h4>
-<p><em>Those familiar with the WCAG 2 contrast math may notice that the above code uses the threshold value of 0.04045. This is from the official IEC standard. The WCAG 2 guidelines were drafted citing an obsolete value. While the WCAG 2 version is incorrect, with 8-bit color there is no functional difference. For the record, the WCAG 2 value is 0.03928 </em></p>
+<p><em>Those familiar with the WCAG 2.x contrast math may notice that the above code uses the threshold value of 0.04045. This is from the official IEC standard. The WCAG 2.x guidelines were drafted citing an obsolete value. While the WCAG 2.x version is incorrect, with 8-bit color there is no functional difference. For the record, the WCAG 2.x value is 0.03928 </em></p>
 
-		<h4>STEP THREE (Spectrally Weighted Luminance)</h4>
+<h4>STEP THREE (Spectrally Weighted Luminance)</h4>
 
-		<p>The normal human eye has three types of cones that are sensitive to red, green, and blue light. But our spectral sensitivity is not uniform, as we are most sensitive to green (555 nm), and blue is a distant last place. Luminance is spectrally weighted to reflect this using the following coefficients for sRGB:</p>
+<p>The normal human eye has three types of cones that are sensitive to red, green, and blue light. But our spectral sensitivity is not uniform, as we are most sensitive to green (555 nm), and blue is a distant last place. Luminance is spectrally weighted to reflect this using the following coefficients for sRGB:</p>
 
-		<p>&nbsp;&nbsp; <strong>R<sub>lin</sub> * 0.2126 + G<sub>lin</sub> * 0.7152 + B<sub>lin</sub> * 0.0722 = Y</strong></p>
+<p>&nbsp;&nbsp; <strong>R<sub>lin</sub> * 0.2126 + G<sub>lin</sub> * 0.7152 + B<sub>lin</sub> * 0.0722 = Y</strong></p>
 
-		<p>Multiply each linearized color channel by their coefficient and sum them all together to find L, Luminance.</p>
+<p>Multiply each linearized color channel by their coefficient and sum them all together to find L, Luminance.</p>
 
 
-		<h4>STEP TWO ALT (Linearize, Simple Alternate Version)</h4>
+<h4>STEP TWO ALT (Linearize, Simple Alternate Version)</h4>
 
-		<p>Use this version instead of the piecewise version above if you are less concerned with accuracy and more concerned with performance.</p>
+<p>Use this version instead of the piecewise version above if you are less concerned with accuracy and more concerned with performance.</p>
 
-		<p>Raise each color channel to the power of 2.2, the same as an sRGB display. This is fine for most applications. But if you need to make multiple ound trips into and out of sRGB gamma encoded space, then use the more accurate versions below.</p>
+<p>Raise each color channel to the power of 2.2, the same as an sRGB display. This is fine for most applications. But if you need to make multiple round trips into and out of sRGB encoded space, then use the more accurate version above.</p>
 
-		<p>&nbsp;&nbsp; <strong>R´<sup>2.2</sup> = R<sub>lin</sub> &nbsp;&nbsp;   G´<sup>2.2</sup> = G<sub>lin</sub>  &nbsp;&nbsp; B´<sup>2.2</sup> = B<sub>lin</sub></strong></p>
+<p>&nbsp;&nbsp; <strong>R´<sup>2.2</sup> = R<sub>lin</sub> &nbsp;&nbsp;   G´<sup>2.2</sup> = G<sub>lin</sub>  &nbsp;&nbsp; B´<sup>2.2</sup> = B<sub>lin</sub></strong></p>
 
 <hr>
 
 <h3 id="Math_and_Methods">Math and Methods</h3>
 
-<p>Within the W3 AGWG there is active discussion and investigation regarding the WCAG 2 contrast method, math, and future proposals. The main discussion thread is on GitHub as <a href="https://github.com/w3c/wcag/issues/695">W3C/WCAG issue #695</a>.</p>
+<p>Within the W3 AGWG there is active discussion and investigation regarding the WCAG 2.x contrast method, math, and future proposals. The main discussion thread is on GitHub as <a href="https://github.com/w3c/wcag/issues/695">W3C/WCAG issue #695</a>.</p>
 
 <ul>
-  <li><strong><a href="https://webaim.org/resources/contrastchecker/">WCAG 2 Contrast Checker</a></strong>at WebAim.org. This popular and easy to use contrast check is for the WCAG 2 guidelines 1.4.3 and 1.4.6</li>
+  <li><strong><a href="https://webaim.org/resources/contrastchecker/">WCAG 2.x Contrast Checker</a></strong>at WebAim.org. This popular and easy to use contrast check is for the WCAG 2.x guidelines 1.4.3 and 1.4.6</li>
   <li><strong><a href="https://www.myndex.com/APCA/">APCA Contrast Calculator</a></strong>The new method for assessing contrast and more.</li>
   <li><strong><a href="http://brucelindbloom.com">brucelindbloom.com</a></strong> Bruce Lindbloom's site on colorspaces and the related math and transformation. It includes a very helpful calculator that converters between many color models, including the key CIE models.</li>
 </ul>
