@@ -81,13 +81,13 @@ tags:
 
 <h3 id="Using_the_Set_object">Using the Set object</h3>
 
-<pre class="brush: js notranslate">let mySet1 = new Set()
+<pre class="brush: js notranslate">const mySet1 = new Set()
 
 mySet1.add(1)           // Set [ 1 ]
 mySet1.add(5)           // Set [ 1, 5 ]
 mySet1.add(5)           // Set [ 1, 5 ]
 mySet1.add('some text') // Set [ 1, 5, 'some text' ]
-let o = {a: 1, b: 2}
+const o = {a: 1, b: 2}
 mySet1.add(o)
 
 mySet1.add({a: 1, b: 2})   // o is referencing a different object, so this is okay
@@ -128,22 +128,22 @@ for (let item of mySet1.values()) console.log(item)
 for (let [key, value] of mySet1.entries()) console.log(key)
 
 // convert Set object to an Array object, with <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from">Array.from</a>
-let myArr = Array.from(mySet1) // [1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}]
+const myArr = Array.from(mySet1) // [1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}]
 
 // the following will also work if run in an HTML document
 mySet1.add(document.body)
 mySet1.has(document.querySelector('body')) // true
 
 // converting between Set and Array
-let mySet2 = new Set([1, 2, 3, 4])
-console.log(mySet2.size)                    // 4
-console.log([...mySet2])                    // [1, 2, 3, 4]
+const mySet2 = new Set([1, 2, 3, 4])
+mySet2.size                    // 4
+[...mySet2]                    // [1, 2, 3, 4]
 
 // intersect can be simulated via
-let intersection = new Set([...mySet1].filter(x =&gt; mySet2.has(x)))
+const intersection = new Set([...mySet1].filter(x =&gt; mySet2.has(x)))
 
 // difference can be simulated via
-let difference = new Set([...mySet1].filter(x =&gt; !mySet2.has(x)))
+const difference = new Set([...mySet1].filter(x =&gt; !mySet2.has(x)))
 
 // Iterate set entries with forEach()
 mySet1.forEach(function(value) {
@@ -205,9 +205,9 @@ function difference(setA, setB) {
 }
 
 // Examples
-let setA = new Set([1, 2, 3, 4])
-let setB = new Set([2, 3])
-let setC = new Set([3, 4, 5, 6])
+const setA = new Set([1, 2, 3, 4])
+const setB = new Set([2, 3])
+const setC = new Set([3, 4, 5, 6])
 
 isSuperset(setA, setB)          // =&gt; true
 union(setA, setC)               // =&gt; Set [1, 2, 3, 4, 5, 6]
@@ -244,7 +244,7 @@ console.log([...new Set(numbers)])
 
 <pre class="brush: js notranslate">let text = 'India'
 
-let mySet = new Set(text)  // Set ['I', 'n', 'd', 'i', 'a']
+const mySet = new Set(text)  // Set ['I', 'n', 'd', 'i', 'a']
 mySet.size  // 5
 
 //case sensitive &amp; duplicate ommision
