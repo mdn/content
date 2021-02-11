@@ -41,12 +41,13 @@ tags:
   <li>Defining a value suggests it as the filename. <code>/</code> and <code>\</code> characters are converted to underscores (<code>_</code>). Filesystems may forbid other characters in filenames, so browsers will adjust the suggested name if necessary.</li>
  </ul>
 
- <div class="note"><strong>Notes:</strong>
+ <div class="notecard note">
+ <h4>Notes</h4>
 
  <ul>
   <li><code>download</code> only works for <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin URLs</a>, or the <code>blob:</code> and <code>data:</code> schemes.</li>
   <li>
-   <p>Note: if the <code>Content-Disposition</code> header has different information from the <code>download</code> attribute, resulting behavior may differ:</p>
+   <p>If the <code>Content-Disposition</code> header has different information from the <code>download</code> attribute, resulting behavior may differ:</p>
 
    <ul>
     <li>
@@ -89,12 +90,9 @@ tags:
   <li><code>_top</code>: the topmost browsing context (the "highest" context that’s an ancestor of the current one). If no ancestors, behaves as <code>_self</code>.</li>
  </ul>
 
- <div class="note">
- <p><strong>Note:</strong> When using <code>target</code>, add <code>rel="noreferrer noopener"</code> to avoid exploitation of the <code>window.opener</code> API.</p>
- </div>
-
- <div class="note">
- <p><strong>Note:</strong> In newer browser versions (e.g. Firefox 79+) setting <code>target="_blank"</code> on <code>&lt;a&gt;</code> elements implicitly provides the same <code>rel</code> behavior as setting <code>rel="noopener"</code>.</p>
+ <div class="notecard note">
+ <h4>Note</h4>
+ <p>Setting <code>target="_blank"</code> on <code>&lt;a&gt;</code> elements implicitly provides the same <code>rel</code> behavior as setting <code><a href="/en-US/docs/Web/HTML/Link_types/noopener">rel="noopener"</a></code> which does not set <code>window.opener</code>. See <a href="#browser_compatibility">browser compatibility</a> for support status.</p>
  </div>
  </dd>
  <dt id="type">{{HTMLAttrDef("type")}}</dt>
@@ -106,23 +104,28 @@ tags:
 <dl>
  <dt id="charset">{{HTMLAttrDef("charset")}}{{Obsolete_Inline("HTML5")}}</dt>
  <dd>Hinted at the {{Glossary("character encoding")}} of the linked URL.
- <div class="note">
- <p><strong>Note:</strong> This attribute is obsolete and <strong>should not be used by authors</strong>. Use the HTTP {{HTTPHeader("Content-Type")}} header on the linked URL.</p>
+ <div class="notecard note">
+ <h4>Note</h4>
+ <p>This attribute is obsolete and <strong>should not be used by authors</strong>. Use the HTTP {{HTTPHeader("Content-Type")}} header on the linked URL.</p>
  </div>
  </dd>
  <dt id="coords">{{HTMLAttrDef("coords")}}{{Obsolete_Inline("HTML5")}}</dt>
  <dd>Used with <a href="#shape">the <code>shape</code> attribute</a>. A comma-separated list of coordinates.</dd>
  <dt id="name">{{HTMLAttrDef("name")}}{{Obsolete_Inline("HTML5")}}</dt>
  <dd>Was required to define a possible target location in a page. In HTML 4.01, <code>id</code> and <code>name</code> could both be used on <code>&lt;a&gt;</code>, as long as they had identical values.
- <div class="note">
- <p><strong>Note:</strong> Use the global attribute {{HTMLAttrxRef("id")}} instead.</p>
+ <div class="notecard note">
+ <h4>Note</h4>
+ <p>Use the global attribute {{HTMLAttrxRef("id")}} instead.</p>
  </div>
  </dd>
  <dt id="rev">{{HTMLAttrDef("rev")}}{{Obsolete_Inline("HTML5")}}</dt>
  <dd>Specified a reverse link; the opposite of <a href="#rel">the <code>rel</code> attribute</a>. Deprecated for being very confusing.</dd>
  <dt id="shape">{{HTMLAttrDef("shape")}}{{Obsolete_Inline("HTML5")}}</dt>
  <dd>The shape of the hyperlink’s region in an image map.
- <div class="note"><strong>Note:</strong> Use the {{HTMLElement("area")}} element for image maps instead.</div>
+ <div class="notecard note">
+ <h4>Note</h4>
+ <p>Use the {{HTMLElement("area")}} element for image maps instead.</p>
+ </div>
  </dd>
 </dl>
 
@@ -227,7 +230,8 @@ tags:
 </pre>
 
 <div class="notecard note">
-<p><strong>Note:</strong> You can use <code>href="#top"</code> or the empty fragment (<code>href="#"</code>) to link to the top of the current page, <a href="https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier">as defined in the HTML specification</a>.</p>
+<h4>Note</h4>
+<p>You can use <code>href="#top"</code> or the empty fragment (<code>href="#"</code>) to link to the top of the current page, <a href="https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier">as defined in the HTML specification</a>.</p>
 </div>
 
 <h3 id="Linking_to_an_email_address">Linking to an email address</h3>
@@ -319,7 +323,7 @@ document.querySelector('a').addEventListener('click', event =&gt;
 
 <p><code>&lt;a&gt;</code> elements can have consequences for users’ security and privacy. See <a href="/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns"><code>Referer</code> header: privacy and security concerns</a> for information.</p>
 
-<p>Using <code>target="_blank"</code> without <code>rel="noreferrer"</code> and <code>rel="noopener"</code> makes the website vulnerable to {{domxref("window.opener")}} API exploitation attacks (<a href="https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/">vulnerability description</a>), although note that, in newer browser versions (e.g. Firefox 79+) setting <code>target="_blank"</code> implicitly provides the same protection as setting <code>rel="noopener"</code>.</p>
+<p>Using <code>target="_blank"</code> without <code><a href="/en-US/docs/Web/HTML/Link_types/noreferrer">rel="noreferrer"</a></code> and <code><a href="/en-US/docs/Web/HTML/Link_types/noopener">rel="noopener"</a></code> makes the website vulnerable to {{domxref("window.opener")}} API exploitation attacks (<a href="https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/">vulnerability description</a>), although note that, in newer browser versions setting <code>target="_blank"</code> implicitly provides the same protection as setting <code>rel="noopener"</code>. See <a href="#browser_compatibility">browser compatibility</a> for details.</p>
 
 <h2 id="Accessibility">Accessibility</h2>
 
