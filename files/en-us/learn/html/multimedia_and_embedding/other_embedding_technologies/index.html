@@ -271,7 +271,7 @@ textarea.onkeyup = function(){
 <p><strong>Note</strong>: Sandboxing provides no protection if attackers can fool people into visiting malicious content directly (outside an <code>iframe</code>). If there's any chance that certain content may be malicious (e.g., user-generated content), please serve it from a different {{glossary("domain")}} to your main site.</p>
 </div>
 
-<h4 id="Configure_CSP_directives">Configure CSP directives</h4>
+<h4 id="configure_csp_directives">Configure CSP directives</h4>
 
 <p>{{Glossary("CSP")}} stands for <strong><a href="/en-US/docs/Web/HTTP/CSP">content security policy</a></strong> and provides <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">a set of HTTP Headers</a> (metadata sent along with your web pages when they are served from a web server) designed to improve the security of your HTML document. When it comes to securing <code>&lt;iframe&gt;</code>s, you can <em><a href="/en-US/docs/Web/HTTP/Headers/X-Frame-Options">configure your server to send an appropriate <code>X-Frame-Options</code>  header.</a></em> This can prevent other websites from embedding your content in their web pages (which would enable {{interwiki('wikipedia','clickjacking')}} and a host of other attacks), which is exactly what the MDN developers have done, as we saw earlier on.</p>
 
