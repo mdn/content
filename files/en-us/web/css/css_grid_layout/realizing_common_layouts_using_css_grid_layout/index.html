@@ -12,7 +12,7 @@ tags:
 
 <p>Many websites are a variation of this type of layout, with content, sidebars, a header and a footer. In a responsive design, you may want to display the layout as a single column, adding a sidebar at a certain breakpoint and then bring in a three-column layout for wider screens.</p>
 
-<p><img alt="Image of the three different layouts created by redefining our grid at two breakpoints." src="https://mdn.mozillademos.org/files/14749/11-responsive-areas.png"></p>
+<p><img alt="Image of the three different layouts created by redefining our grid at two breakpoints." src="11-responsive-areas.png"></p>
 
 <p>I am going to create this layout using the <em>named template areas</em> that we learned about in the guide <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></em>.</p>
 
@@ -208,7 +208,7 @@ tags:
 
 <p>Rather than setting the end line number, I have chosen to say how many tracks this element should span, using the <code>span</code> keyword. I like this approach as when working with a multiple-column layout system we usually think of blocks in terms of the number of tracks of the grid they span, and adjust that for different breakpoints. To see how the blocks align themselves to the tracks, use the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Firefox Grid Inspector</a>. It clearly demonstrates how our items are placed.</p>
 
-<p><img alt="Showing the items placed on the grid with grid tracks highlighted." src="https://mdn.mozillademos.org/files/14753/11-grid-inspector-12col.png"></p>
+<p><img alt="Showing the items placed on the grid with grid tracks highlighted." src="11-grid-inspector-12col.png"></p>
 
 <p>There are some key differences with how a grid layout works over the grid systems you may have used previously. As you can see, we do not need to add any markup to create a row, grid systems need to do this to stop elements popping up into the row above. With CSS Grid Layout, we can place things into rows, with no danger of them rising up into the row above if it is left empty. Due to this <em>strict</em> column and row placement we can also easily leave white space in our layout. We also don’t need special classes to pull or push things, to indent them into the grid. All we need to do is specify the start and end line for the item.</p>
 
@@ -333,7 +333,7 @@ tags:
 
 <p>Once again the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Grid Inspector</a> is useful to help us see how our layout has taken shape.</p>
 
-<p><img alt="Showing the layout with grid tracks highlighted by the grid inspector." src="https://mdn.mozillademos.org/files/14755/11-grid-inspector-12col-layout.png" style="height: 614px; width: 2050px;"></p>
+<p><img alt="Showing the layout with grid tracks highlighted by the grid inspector." src="11-grid-inspector-12col-layout.png"></p>
 
 <p>Something to note as we create this layout is that we haven’t needed to explicitly position every element on the grid at each breakpoint. We have been able to inherit the placement set up for earlier breakpoints – an advantage of working “mobile first”. We are also able to take advantage of grid auto-placement. By keeping elements in a logical order, auto-placement does quite a lot of work for us in placing items onto the grid. In the final example in this guide we will create a layout that entirely relies on auto-placement.</p>
 
@@ -436,9 +436,9 @@ tags:
 
 <p>This is all looking fairly complete now, however we sometimes have these cards which contain far more content than the others. It might be nice to cause those to span two tracks, and then they won’t be so tall. I have a class of <code>wide</code> on my larger item, and I add a rule {{cssxref("grid-column-end")}} with a value of <code>span 2</code>. Now when grid encounters this item, it will assign it two tracks. At some breakpoints, this means that we'll get a gap in the grid – where there isn’t space to lay out a two-track item.</p>
 
-<p><img alt="The layout has gaps as there is not space to layout a two track item." src="https://mdn.mozillademos.org/files/14751/11-grid-auto-flow-sparse.png" style="height: 812px; width: 800px;"></p>
+<p><img alt="The layout has gaps as there is not space to layout a two track item." src="11-grid-auto-flow-sparse.png"></p>
 
-<p>I can cause a grid to backfill those gaps by setting {{cssxref("grid-auto-flow")}}<code>: dense </code> on the grid container. Take care when doing this however as it does take items away from their logical source order. You should only do this if your items do not have a set order – and be aware of the <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility#Visual_not_logical_re-ordering">issues</a> of the tab order following the source and not your reordered display.</p>
+<p>I can cause a grid to backfill those gaps by setting {{cssxref("grid-auto-flow")}}<code>: dense </code> on the grid container. Take care when doing this however as it does take items away from their logical source order. You should only do this if your items do not have a set order – and be aware of the <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility#visual_not_logical_re-ordering">issues</a> of the tab order following the source and not your reordered display.</p>
 
 <div id="layout_5">
 <div class="hidden">
