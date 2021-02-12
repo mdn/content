@@ -71,14 +71,14 @@ tags:
  <dt id="xmlhttprequest-upload">{{domxref("XMLHttpRequest.upload")}} {{readonlyinline}}</dt>
  <dd>Is an {{domxref("XMLHttpRequestUpload")}}, representing the upload process.</dd>
  <dt id="xmlhttprequest-withcredentials">{{domxref("XMLHttpRequest.withCredentials")}}</dt>
- <dd>Is a {{domxref("Boolean")}} that indicates whether or not cross-site <code>Access-Control</code> requests should be made using credentials such as cookies or authorization headers.</dd>
+ <dd>Is a {{jsxref("Boolean")}} that indicates whether or not cross-site <code>Access-Control</code> requests should be made using credentials such as cookies or authorization headers.</dd>
 </dl>
 
 <h3 id="Non-standard_properties">Non-standard properties</h3>
 
 <dl>
  <dt>{{domxref("XMLHttpRequest.channel")}}{{ReadOnlyInline}}</dt>
- <dd>Is a {{Interface("nsIChannel")}}. The channel used by the object when performing the request.</dd>
+ <dd>The channel used by the object when performing the request.</dd>
  <dt>{{domxref("XMLHttpRequest.mozAnon")}}{{ReadOnlyInline}}</dt>
  <dd>Is a boolean. If true, the request will be sent without cookie and authentication headers.</dd>
  <dt>{{domxref("XMLHttpRequest.mozSystem")}}{{ReadOnlyInline}}</dt>
@@ -127,7 +127,7 @@ tags:
  </dd>
  <dt>{{domxref("XMLHttpRequest.openRequest()")}}</dt>
  <dd>Initializes a request. This method is to be used from native code; to initialize a request from JavaScript code, 
-   use <a class="internal" href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest#open()"><code>open()</code></a> instead. See the documentation for <code>open()</code>.</dd>
+   use {{domxref("XMLHttpRequest.open()")}} instead.</dd>
  <dt>{{domxref("XMLHttpRequest.sendAsBinary()")}}{{deprecated_inline()}}</dt>
  <dd>A variant of the <code>send()</code> method that sends binary data.</dd>
 </dl>
