@@ -176,11 +176,36 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <h2 id="Light_and_Luminance">Light and Luminance</h2>
 
-<p>Luminance is a linear measure of light, which is spectrally weighted for human vision, but not perceptually weighted in terms of lightness to darkness. The spectral weighting takes into account the different sensitivity of the L, M, S cones. By far our eye is tuned to green, which makes up the majority of luminance. Relative to sRGB, green is 71% of the total luminance measure. Red is second at 21%, and blue is a distant third making up a mere 7% of luminance. This is based on a narrow 2° of our central vision.</p>
 
-<p>Once an RGB color value is converted to luminance, that luminance value can be used relative to another color to determine a contrast ratio, or used to predict a perceptual contrast. In WCAG 2.x, the contrast math is not perceptually uniform, so it does not predict the contrast appearance over the full range of light to dark. For WCAG 3.0, a new method known as the Advanced Perceptual Contrast Algorithm provides a numeric contrast value that is relative to perception.</p>
+<p>Luminance is a linear measure of light, which is spectrally weighted for human vision, but not perceptually weighted in terms of lightness to darkness. It is symbolized by <strong>Y</strong> for relative luminance, or <strong>L cd/m²</strong> for absolute. We will use Y for most of our discussions. The spectral weighting takes into account the different sensitivity of the L, M, S cones (sometimes thought of as the red, green, blue sensitive cells in the eye).</p>
 
-<p>See also this article on <a href="https://www.myndex.com/WEB/LuminanceContrast">luminance contrast</a></p>.
+<p>By far our eye is tuned to green, which makes up the majority of luminance. Relative to the total sRGB white (<code>#fff</code>), green is 71% of the total luminance measure. Red is second at 21%, and blue is a distant third as a mere 7% of luminance.</p>
+
+<h3>Deeper dive into spectral sensitivity</h3>
+
+<p>The relative density of the three cone cell types is 63% L cones, 31% M cones, and 6% S cones, and is quite variable for each individual. Now if we look at these numbers for a moment, we might be puzzled as to why the majority of cones are the longwave, L type, yet the "red" in an sRGB monitor makes up only 21% of luminance.</p>
+
+<p>This is because the peak sensitivity of the L cone is actually a green/yellow, and the L cone response almost entirely overlaps the M cone response. The reason we often refer to the L cone as the "red" cone is that it responds more to long wave red light than the M cone. It is this differential between M and L cones that results in the sensation of red.</p>
+
+<p>At 611nm, the red primary in an sRGB monitor is spectrally distant from the L cone's peak sensitivity at 565nm. But the sRGB green primary is 549nm, in between the L cont peak and the M cone's peak at 540nm. This explains why the green primary makes up such a large portion of total luminance on a monitor.</p>
+
+<p>For a really deep dive into the nuances of spectral response, luminance, and color perception, see this <a href="https://www.handprint.com/HP/WCL/color1.html">excellent article at Handprint.com</a></p>
+
+
+<h3>The value of luminance values</h3>
+
+<p>Once an sRGB color value is converted to the linear light value of luminance (Y), that luminance value can be used relative to another color's luminance to determine a contrast ratio, or used to predict a perceptual contrast. This is an important part of determining the readability of text on the page.</p>
+
+<p>In WCAG 2.x, the contrast math is not perceptually uniform, so it does not predict the contrast appearance over the full range of light to dark. For WCAG 3.0, a new method known as the Advanced Perceptual Contrast Algorithm provides a numeric contrast value that is relative to perception.</p>
+
+<p>See also this article on <a href="https://www.myndex.com/WEB/LuminanceContrast">luminance contrast</a> which discusses various math methods relating to luminance and contrast</p>.
+
+<h3>Perceptual lightness</h3>
+
+<p>While luminance is a linear measure of light, as light exists in the real world, it does not predict our perception of light. When we say light is linear, we don't mean that it travels in a straight line, we mean as an additive quantity. If we have 100 photons of light and triple it, we then have 300 photons of light. But in that example, we don't perceive a tripling. The human visual system sees a relatively modest increase, because our perception of light is non-linear.</p>
+
+<p>A simple way to describe this is that our perception roughly follows a power curve with an exponent of ~0.425, so perceptual lightness is approximately <strong>L<sup>*</sup> = Y<sup>0.425</sup></strong>, though this depends on adaptation.</p>
+
 
 
 <h3 id="Adaptation">Adaptation</h3>
@@ -206,26 +231,25 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 <p>Here is a <a href="https://webvision.med.utah.edu/book/part-viii-psychophysics-of-vision/light-and-dark-adaptation/">much deeper discussion</a> of the nature of eye adaptation.</p>
 
 
+
 <h2 id="Hue_Chroma_and_Saturation">Hue Chroma and Saturation</h2>
 
-<p>The world standard in terms of colorimetry (measuring color) is the <strong>CIE</strong>, and their <a href="http://eilv.cie.co.at">interactive glossary</a> is filled with color information. TIP: when searching use the UK spelling of "colour."</p>
+<p>Where luminance is a measure of light, and L<sup>*</sup> (Lstar) is a measure of our perception of lightness,  hue, chroma, saturation refer to our perception of the color of that light.</p>
 
-<ul>
-  <li><strong>Colourfulness</strong> is the “Attribute of a visual perception according to which the perceived colour of an area appears to be more or less chromatic.” (17-233).</li>
+<h3>Color terms</h3>
 
-    <ul><li>For a color of a given chromaticity this attribute usually increases as the luminance is raised except when the brightness is very high.</li>
-    </ul>
+<p>The world standard in terms of colorimetry (measuring color) is the <strong>CIE</strong>, and their <a href="http://eilv.cie.co.at">interactive glossary</a> is filled with color information.</p>
 
-  <li><strong>Saturation</strong> is the “Colourfulness of an area judged in proportion to its brightness.” (17-1136).</li>
+<p class="note notecard">TIP: when searching the CIE glossary use the UK spelling of "colour."</p>
 
-    <ul><li>For normal day viewing conditions a given chromaticity exhibits approximately constant saturation for all luminance levels, except when the brightness is very high.</li>
-    </ul>
+<h4>Colourfulness</h4>
+<p>Colorfulness is the “Attribute of a visual perception according to which the perceived colour of an area appears to be more or less chromatic.” (CIE 17-233). For a color of a given chromaticity this attribute usually increases as the luminance is raised except when the brightness is very high.</p>
 
-  <li><strong>Chroma</strong> is the “Colourfulness of an area judged as a proportion of the brightness of a similarly illuminated area that appears white or highly transmitting.” (17-139).</li>
+<h4>Saturation</h4>
+<p>Saturation is the “Colourfulness of an area judged in proportion to its brightness.” (CIE 17-1136). For normal day viewing conditions a given chromaticity exhibits approximately constant saturation for all luminance levels, except when the brightness is very high. </p>
 
-    <ul><li>A color exhibits approximately constant chroma for all levels of illuminance in normal day viewing conditions (except when the brightness is very high). If the luminance is increased, the chroma usually increases in the same circumstances.</li>
-    </ul>
-</ul>
+<h4>Chroma</h4>
+<p>Chroma is the “Colourfulness of an area judged as a proportion of the brightness of a similarly illuminated area that appears white or highly transmitting.” (CIE 17-139). A color exhibits approximately constant chroma for all levels of illuminance in normal day viewing conditions (except when the brightness is very high). If the luminance is increased, the chroma usually increases in the same circumstances.</p>
 
 <p>Here is an example of high chroma vs no chroma. On the right, each of the three sRGB primaries are at maximum. On the left, there is no chroma, also known as "achromatic."</p>
 
@@ -236,7 +260,7 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <h3 id="Color_Combinations">Color Combinations</h3>
 
-<p>Certain color combinations can be very problematic on a computer monitor or mobile device, and some color combinations can interfere with some impairments. Pure blue and red is one such example, shown below. But in addition, some impairments are deficient and can not differentiate all colors. And some colors, such as pure blue, as so low in luminance they must be the darkest of two colors. Blue is also very low in resolution as there are far fewer blue cones, and they are scattered in our peripheral vision, and not present in our central vision. This leads up to some guidelines:</p>
+<p>Certain color combinations can be very problematic on a computer monitor or mobile device, and some color combinations can interfere with some impairments. Pure blue and red is one such example, shown below. But in addition, some impairments are deficient and can not differentiate all colors. And some colors, such as pure blue, are so low in luminance they need to be the darkest of two colors. Blue is also very low in resolution as there are far fewer blue cones, and they are scattered in our peripheral vision, and not present in our central vision. This leads to some color use guidelines:</p>
 
 <p>• Never rely on hue alone for differentiating details. Adequate luminance contrast is required.</p>
 
@@ -283,8 +307,10 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <p>Color as in hues and saturation can affect our mood, and enhance — or de-enhance — our interactive experiences.</p>
 
-<h3>Examples of color's effect beyond vision</h3>
 
+
+
+<h3>Examples of color's effect beyond vision</h3>
 
 <h4>Color can be culturally dependent</h4>
 <p><a href="https://journals.sagepub.com/doi/10.1177/002202217300400201">A Cross-Cultural Study of the Affective Meanings of Color</a></p>
@@ -355,16 +381,21 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 <p>If your sRGB values are 16 bit then convert to decimal by dividing by 65535.</p>
 
 <h4>STEP TWO (Linearize)</h4>
+<p>Linearize the data to remove the encoded transfer curve.</p>
 
-<pre class="" style=""><code><span class="kwd">function</span><span class="pln"> sRGBtoLin</span><span class="pun">(</span><span class="pln">colorChannel</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span>
-		<span class="com">// Send this function a decimal sRGB gamma encoded color channel</span>
-		<span class="com">// between 0.0 and 1.0, and it returns a linearized value.</span>
-		<span class="pln"></span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> colorChannel </span><span class="pun">&lt;=</span><span class="pln"> </span><span class="lit">0.04045</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"></span>
-			<span class="kwd">return</span><span class="pln"> colorChannel </span><span class="pun">/</span><span class="pln"> </span><span class="lit">12.92</span><span class="pun">;</span><span class="pln"></span>
-		<span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-			<span class="kwd">return</span><span class="pln"> </span><span class="typ">Math</span><span class="pun">.</span><span class="pln">pow</span><span class="pun">(((</span><span class="pln"> colorChannel </span><span class="pun">+</span><span class="pln"> </span><span class="lit">0.055</span><span class="pun">)/</span><span class="lit">1.055</span><span class="pun">),</span><span class="lit">2.4</span><span class="pun">);</span><span class="pln"></span>
-		<span class="pun">}</span><span class="pln"></span>
-	<span class="pun">}</span></code></pre>
+<p>&nbsp;&nbsp; <strong>R<sub>lin</sub> = sRGBtoLin(R´<sub>float</sub>) &nbsp;&nbsp;   G<sub>lin</sub> = sRGBtoLin(G´<sub>float</sub>)   &nbsp;&nbsp; B<sub>lin</sub> = sRGBtoLin(B´<sub>float</sub>) </strong></p>
+
+<p>Using the function shown below:</p>
+
+<pre class="brush: javascript" style="">function sRGBtoLin(colorChannel) {
+		  // Send this function a decimal sRGB gamma encoded color channel
+		  // between 0.0 and 1.0, and it returns a linearized value.
+		if ( colorChannel &lt;= 0.04045 ) {
+			return colorChannel / 12.92;
+		} else {
+			return Math.pow((( colorChannel + 0.055)/1.055),2.4);
+		}
+	}</pre>
 
 <div class="note notecard">
 <h4>IMPORTANT NOTE</h4>
@@ -374,18 +405,18 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <p>The normal human eye has three types of cones that are sensitive to red, green, and blue light. But our spectral sensitivity is not uniform, as we are most sensitive to green (555 nm), and blue is a distant last place. Luminance is spectrally weighted to reflect this using the following coefficients for sRGB:</p>
 
-<p>&nbsp;&nbsp; <strong>R<sub>lin</sub> * 0.2126 + G<sub>lin</sub> * 0.7152 + B<sub>lin</sub> * 0.0722 = Y</strong></p>
+<p>&nbsp;&nbsp; <strong>Y = R<sub>lin</sub> * 0.2126 + G<sub>lin</sub> * 0.7152 + B<sub>lin</sub> * 0.0722</strong></p>
 
-<p>Multiply each linearized color channel by their coefficient and sum them all together to find L, Luminance.</p>
+<p>Multiply each linearized color channel by their coefficient and sum them all together to find Y, Luminance.</p>
 
 <hr>
-<h4>STEP TWO ALTERNATE (Linearize, simple alternate)</h4>
+<h4>ALTERNATE (sRGB to Y, simple)</h4>
 
 <p>Use this version instead of the piecewise version above if you are less concerned with accuracy and more concerned with performance.</p>
 
 <p>Raise each color channel to the power of 2.2, the same as an sRGB display. This is fine for most applications. But if you need to make multiple round trips into and out of sRGB encoded space, then use the more accurate version above.</p>
 
-<p>&nbsp;&nbsp; <strong>R´<sup>2.2</sup> = R<sub>lin</sub> &nbsp;&nbsp;   G´<sup>2.2</sup> = G<sub>lin</sub>  &nbsp;&nbsp; B´<sup>2.2</sup> = B<sub>lin</sub></strong></p>
+<p><strong>Y = 0.2126 * (R´/255.0)<sup>2.2</sup> + 0.7152 * (G´/255.0)<sup>2.2</sup> + 0.0722 * (B´/255.0)<sup>2.2</sup> </strong></p>
 
 <hr>
 
@@ -414,9 +445,9 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 <h4 id="W3C_Issues_and_Discussions">W3C Issues and Discussions</h4>
 <ul>
  <li><a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup">The Visual Contrast Research Group</a> for WCAG 3.</li>
- <li><a href="https://github.com/w3c/silver/issues/261">Light and dark text</a> and useful comparisons of WCAG 2.x to WCAG 3.0 contrast (Silver thread #261) </li>
+ <li><a href="https://github.com/w3c/silver/issues/261">Light and dark text</a> & WCAG 2.x vs WCAG 3.0 contrast (Silver thread #261) </li>
  <li><a href="https://github.com/w3c/wcag/issues/695">Contrast Ratio Math</a> and Related Visual Issue thread #695</li>
- <li><a href="https://github.com/w3c/wcag/issues/236">Luminance / Luma confusion thread #236</a></li>
+ <li><a href="https://github.com/w3c/wcag/issues/236">Luminance / Luma confusion</a> thread #236</li>
  <li><a href="https://github.com/w3c/wcag/issues/360">Non-sRGB color spaces</a>, outdated sRGB threshold thread #360</li>
 </ul>
 
