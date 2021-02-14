@@ -326,7 +326,7 @@ p:nth-of-type(1) {
 
 <h2 id="Fixed_positioning">Fixed positioning</h2>
 
-<p>Let's now look at fixed positioning. This works in exactly the same way as absolute positioning, with one key difference: whereas absolute positioning fixes an element in place relative to its nearest positioned ancestor (the initial containing block if there isn't one),<strong> fixed positioning</strong> <em>usually</em> fixes an element in place relative to the visible portion of the viewport, except if one of its ascendants is a fixed containing block due to its <a href="/en-US/docs/Web/CSS/transform">transform property</a> being different from none. This means that you can create useful UI items that are fixed in place, like persisting navigation menus that are always visible no matter how much the page scrolls.</p>
+<p>Let's now look at fixed positioning. This works in exactly the same way as absolute positioning, with one key difference: whereas absolute positioning fixes an element in place relative to its nearest positioned ancestor (the initial containing block if there isn't one),<strong> fixed positioning</strong> <em>usually</em> fixes an element in place relative to the visible portion of the viewport, except if one of its ancestors is a fixed containing block due to its <a href="/en-US/docs/Web/CSS/transform">transform property</a> being different from none. This means that you can create useful UI items that are fixed in place, like persisting navigation menus that are always visible no matter how much the page scrolls.</p>
 
 <p>Let's put together a simple example to show what we mean. First of all, delete the existing <code>p:nth-of-type(1)</code> and <code>.positioned</code> rules from your CSS.</p>
 
@@ -548,7 +548,7 @@ dt {
 
 <p>{{ EmbedLiveSample('Sticky_2', '100%', 200) }}</p>
 
-<p>Sticky elements are "sticky" relative to the nearest ancestor with a "scrolling mechanism", which is determined by its ascendants' <a href="/en-US/docs/Web/CSS/position">position</a> property.</p>
+<p>Sticky elements are "sticky" relative to the nearest ancestor with a "scrolling mechanism", which is determined by its ancestors' <a href="/en-US/docs/Web/CSS/position">position</a> property.</p>
 
 <div class="note">
 <p><strong>Note</strong>: You can see this example live at <code><a href="https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html">7_sticky-positioning.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/7_sticky-positioning.html">see source code</a>).</p>
