@@ -272,6 +272,19 @@ var result = mapped.map(function(el){
     href="https://null.house/open-source/mapsort">mapsort</a> which applies this approach.
 </p>
 
+<h3 id="sort_stability">Sort stability</h3>
+
+Since version 10 (or EcmaScript 2019), the <a href="https://tc39.es/ecma262/#sec-array.prototype.sort">specification</a> dictates that <code>Array.prototype.sort</code> is stable.<br />
+This means that objects that compare equal, will appear in the same order before and after sorting. For example, say you had the following array of objects:  
+<pre class="brush: js notranslate">
+var data = [
+	{ name: "Devlin",  rating: 13 },
+	{ name: "Eagle",   rating: 13 },
+];
+</pre>
+
+After sorting this array based on <code>rating</code, both objects compare equally because they have the same rating. Stable sort guarantees that they will appear in the same order as before sorting.
+
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
@@ -299,4 +312,5 @@ var result = mapped.map(function(el){
   <li>{{jsxref("String.prototype.localeCompare()")}}</li>
   <li><a href="https://v8.dev/blog/array-sort">About the stability of the algorithm used
       by V8 engine</a></li>
+  <li><a href="https://mathiasbynens.be/demo/sort-stability">Mathias Bynens' sort stability demo</a></li>
 </ul>
