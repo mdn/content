@@ -72,6 +72,13 @@ let pinyin = new Intl.Collator("zh", {collation: "pinyin"});</pre>
   <li>Using web element references on browsing contexts other than the originating one now correctly returns a <code>no such element</code> error instead of a <code>stale element reference</code> error ({{bug(1684827)}}).</li>
 </ul>
 
+<h4 id="WebDriver_known_bugs">Known bugs</h4>
+
+<ul>
+  <li>Calling <code>WebDriver:SwitchToFrame</code> while the frame's content hasn't been finished loading yet, following WebDriver commands can fail with a "no such window" error ({{bug(1691348)}}).</li>
+
+  <li>After a <a href="https://firefox-source-docs.mozilla.org/dom/navigation/nav_replace.html#cross-group-navigations">cross-group page navigation</a>, accessing a previously-retrieved element might not always raise a "stale element" error, and can also lead to a "no such element" error. To prevent this, set the <code>marionette.actors.enabled</code> preference to <code>false</code> ({{bug(1690308)}}).</li>
+</ul>
 
 <h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
 
