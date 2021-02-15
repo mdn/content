@@ -46,7 +46,7 @@ tags:
 <h3 id="Chained_Promises">Chained Promises</h3>
 
 <p>The methods <code>promise.then()</code>, <code>promise.catch()</code>, and <code>promise.finally()</code> are used to associate further action with a promise that becomes settled.
-<p>The <code>.then</code> method takes up to two arguments. These are callback functions for the resolved and rejected cases of the Promise. In the examples below <i>handleResolve</i> and <i>handleRejected</i> represent these two callback functions. These methods also return a newly generated promise object, which can optionally be used for chaining; for example:</p>
+<p>The <code>.then()</code> method takes up to two arguments; the first argument is a callback function for the resolved case of the promise, and the second argument is a callback function for the rejected case. Each <code>.then()</code> returns a newly generated promise object, which can optionally be used for chaining; for example:</p>
 
 <pre class="brush: js notranslate">
 const myPromise = new Promise((resolve, reject) => {
