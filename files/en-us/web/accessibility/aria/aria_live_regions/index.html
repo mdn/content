@@ -22,7 +22,7 @@ tags:
 
 <p>Normally, only <code>aria-live="polite"</code> is used. Any region which receives updates that are important for the user to receive, but not so rapid as to be annoying, should receive this attribute. The screen reader will speak changes whenever the user is idle.</p>
 
-<p><code>aria-live="assertive"</code> should only be used for important/critical notifications. Generally, a change to an assertive live region will interrupt any announcement a screen reader is currently making. As such, it can be extremely annoying and disruptive and should only be used sparingly.</p>
+<p><code>aria-live="assertive"</code> should only be used for time-sensitive/critical notifications that absolutely require the user's immediate attention. Generally, a change to an assertive live region will interrupt any announcement a screen reader is currently making. As such, it can be extremely annoying and disruptive and should only be used sparingly.</p>
 
 <p>As <code>aria-live="off"</code> is the assumed default for elements, it should not be necessary to set this explicitly, unless you're trying to suppress the announcement of elements which have an implicit live region role (such as <code>role="alert"</code>).</p>
 
