@@ -63,7 +63,7 @@ myPromise
 
 <p>Processing continues to the next link of the chain even when a <code>.then()</code> lacks a callback function that returns a Promise object. Therefore, a chain can safely omit every <i>rejection</i> callback function until the final <code>.catch()</code>.</p>
 
-<p>Handling a rejected promise in each <code>.then</code> has consequences further down the promise chain. Sometimes there is no choice because an error must be handled immediately. In such cases we must throw an error of some type to maintain error state down the chain. On the other hand, in the absence of an immediate need, it is simpler to leave out error handling until a final <code>.catch()</code> statement. A <code>.catch()</code> is really just a <code>.then()</code> without a slot for a resolve callback function.</p>
+<p>Handling a rejected promise in each <code>.then()</code> has consequences further down the promise chain. Sometimes there is no choice, because an error must be handled immediately. In such cases we must throw an error of some type to maintain error state down the chain. On the other hand, in the absence of an immediate need, it is simpler to leave out error handling until a final <code>.catch()</code> statement. A <code>.catch()</code> is really just a <code>.then()</code> without a slot for a callback function for the case when the promise is resolved.</p>
 
 <pre class="brush: js notranslate">
 myPromise
