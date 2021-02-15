@@ -85,7 +85,7 @@ promise1
 .catch(err => { console.log(err) });
 </pre>
 
-<p>The termination condition of a promise determines the "settled" state of the next promise in the chain. A "resolved" state indicates a successful completion of the Promise while a "rejected" state indicates a lack of success. The return value of each <i>resolved</i> promise in the chain is passed along to the next <code>.then()</code> while the reason for rejection is passed along to the next <i>rejection</i> handler function in the chain.</p>
+<p>The termination condition of a promise determines the "settled" state of the next promise in the chain. A "resolved" state indicates a successful completion of the promise, while a "rejected" state indicates a lack of success. The return value of each resolved promise in the chain is passed along to the next <code>.then()</code>, while the reason for rejection is passed along to the next rejection-handler function in the chain.</p>
 
 <p>The promises of a chain are nested like Russian dolls, but get popped like the top of a stack. The first promise in the chain is most deeply nested and is the first to pop.</p>
 
