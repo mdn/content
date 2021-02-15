@@ -91,18 +91,25 @@ partial interface mixin MyMixin {
 
 MyInterface includes MyMixin;</pre>
 
-<p>For documentation purposes, we create a mixin page, with the same structure as an interface page. As they are not true interfaces, the word <em>interface</em> is not used — <em>mixin</em> is used instead.</p>
+<p>For documentation purposes, MDN hides mixins. They are abstract and specification-only constructs.
+You can't see them in the Web developer console and it is more useful to know on which real interfaces methods and properties are implemented on.</p>
 
-<p>Mixin methods and properties are listed in the same way as regular methods and properties:</p>
+<p>If you encounter a mixin in IDL, like <a href="https://html.spec.whatwg.org/multipage/links.html#htmlhyperlinkelementutils">HTMLHyperlinkElementUtils</a>,
+search for the interfaces that implement the mixin, for example
+<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#htmlanchorelement">HTMLAnchorElement</a>, and document the mixin members directly on those interfaces.
+</p>
 
+<p>In practice this means instead of documenting <code>HTMLHyperlinkElementUtils</code>,
+docs are added to the concrete interfaces, like <a href="/en-US/docs/Web/API/HTMLAnchorElement"><code>HTMLAnchorElement</code></a>
+and <a href="/en-US/docs/Web/API/HTMLAreaElement"><code>HTMLAreaElement</code></a>.</p>
+
+<p>See the following two pages that document <code>HTMLHyperlinkElementUtils.hash</code> accordingly:</p>
 <ul>
- <li>They have their own pages, prefixed with the mixin name. E.g {{domxref('Body.bodyUsed')}} or {{domxref('Body.blob()')}}.</li>
- <li>They are listed on the interface page when the interface <em>implements</em> the mixin. Unlike regular properties and methods, they are prefixed with the mixin name and not the interface name. You can see <code>Body</code> properties and methods listed on both {{domxref('Request')}} and {{domxref('Response')}} interfaces, as they both implement the <code>Body</code> mixin.</li>
+  <li><a href="/en-US/docs/Web/API/HTMLAnchorElement/hash"><code>HTMLAnchorElement.hash</code></a></li>
+  <li><a href="/en-US/docs/Web/API/HTMLAreaElement/hash"><code>HTMLAreaElement.hash</code></a></li>
 </ul>
 
-<div class="notecard note">
-<p><strong>Note:</strong> Mixin names do not appear in a Web developer console. We shouldn't show them, but we currently do this as it saves us from duplicating content, which would lead to a maintenance issue. We do this if the mixin is only used in one interface. (Such cases are bugs in the relevant specs. They shouldn't be defined as mixins, but as partial interfaces.)</p>
-</div>
+<p>For compat data, consult the <a href="https://github.com/mdn/browser-compat-data/blob/master/docs/data-guidelines.md#mixins">data guideline for mixins in BCD</a>.</p>
 
 <h3 id="Old_mixin_syntax">Old mixin syntax</h3>
 
