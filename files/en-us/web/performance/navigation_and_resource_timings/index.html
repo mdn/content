@@ -253,7 +253,7 @@ performance.getEntriesByType('frame').forEach((frame) =&gt; {
 
 <p>By subtracting the time stamp from immediately before the load event of the current document is fired from the time when the load event of the current document is completed, you can measure the duration of the load event.</p>
 
-<pre class="brush: js">load = <a href="/en-US/docs/Web/API/PerformanceNavigationTiming/loadEventEnd"><code>timing.loadEventEnd</code> - <code>timing.loadEventEnd</code></a> </pre>
+<pre class="brush: js">load = <a href="/en-US/docs/Web/API/PerformanceNavigationTiming/loadEventEnd"><code>timing.loadEventEnd</code> - <code>timing.loadEventStart</code></a> </pre>
 
 <h3 id="DOMContentLoaded_event">DOMContentLoaded event</h3>
 
