@@ -8407,6 +8407,7 @@
 /en-US/docs/Web/API/NodeIterator.whatToShow	/en-US/docs/Web/API/NodeIterator/whatToShow
 /en-US/docs/Web/API/NodeList.item	/en-US/docs/Web/API/NodeList/item
 /en-US/docs/Web/API/NodeList.length	/en-US/docs/Web/API/NodeList/length
+/en-US/docs/Web/API/NonDocumentTypeChildNode	/en-US/docs/Web/API/Element
 /en-US/docs/Web/API/NonDocumentTypeChildNode.nextElementSibling	/en-US/docs/Web/API/Element/nextElementSibling
 /en-US/docs/Web/API/NonDocumentTypeChildNode.previousElementSibling	/en-US/docs/Web/API/Element/previousElementSibling
 /en-US/docs/Web/API/NonDocumentTypeChildNode/nextElementSibling	/en-US/docs/Web/API/Element/nextElementSibling
