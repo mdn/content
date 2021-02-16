@@ -19,8 +19,10 @@ tags:
     <th>Description</th>
   </tr>
   <tr>
-    <td><p>over <img src="operation_over.png" title="over operator" width="300px"/></td>
-    <td>The source graphic defined by the {{SVGAttr("in")}} attribute (the MDN logo) is placed over the destination graphic defined by the {{SVGAttr("in2")}} attribute (the circle).</p></td>
+    <td><p>over <img src="operation_over.png" title="over operator" width="300px"/></p></td>
+    <td>The source graphic defined by the {{SVGAttr("in")}} attribute (the MDN logo) is placed over the destination graphic defined by the {{SVGAttr("in2")}} attribute (the circle).
+      <p>This is the <em>default operation</em>, which will be used if no operation or an unsupported operation is specified.</p>
+    </td>
   </tr>
   <tr>
     <td><p>in <img src="operation_in.png" title="in operator" /></p></td>
@@ -90,11 +92,10 @@ tags:
 
 <p>This element implements the {{domxref("SVGFECompositeElement")}} interface.</p>
 
+
 <h2 id="Example">Example</h2>
 
-<div class="notecard note">
-  <h4>Note</h4>
-  <p>Ideally we would specify <code>BackgroundImage</code> as a compositing source within the filter (so that the filter acts on the pixels <em>underneath</em> the filter). Unfortunately this source-type is not supported on any of the modern browsers (see the compatibility table below). For this reason we a <a href="/en-US/docs/Web/SVG/Attribute/in#workaround_for_backgroundimage">Workaround for a BackgroundImage</a> that composites an <code>feImage</code> that is defined within the filter itself.</p> 
+<p>This example defines filters for each of the supported operations (<code>over</code>, <code>atop</code>, <code>lighter</code>, etc.), which  composite an input <code>SourceGraphic</code> with an image of the MDN logo. The filters are each applied to a circle element, which is then used as the <code>SourceGraphic</code>. The relevant code for just one filter (<code>lighter</code>) is shown below:</p>
 
   <pre class="brush: xml">
     &lt;defs&gt;
@@ -105,9 +106,11 @@ tags:
     &lt;/defs&gt;
     &lt;circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageLighter)"/&gt;
   </pre>
-  </div>
-
-
+  
+<div class="notecard note">
+  <h4>Note</h4>
+  <p><code>BackgroundImage</code> cannot be used as a compositing source on modern browsers, so we can't define a filter that composites using whatever pixels happen to be under the filter as one of the sources. The approach above is a <a href="/en-US/docs/Web/SVG/Attribute/in#workaround_for_backgroundimage">Workaround because we can't use BackgroundImage</a>.</p>
+</div>
 
 <h3 id="SVG">SVG</h3>
 
