@@ -8,7 +8,7 @@ tags:
 ---
 <p>{{HTTPSidebar}}{{Draft}}</p>
 
-<p>The <strong><code>Sec-Fetch-User</code></strong> fetch metadata header can only be sent for requests initiated by user activation and its value will always be <code>?1</code></p>
+<p>The <strong><code>Sec-Fetch-User</code></strong> fetch metadata header is only sent for requests initiated by user activation, and its value will always be <code>?1</code></p>
 
 <table class="properties">
  <tbody>
@@ -35,7 +35,7 @@ Sec-Fetch-User: ?1
 
 <h2 id="Value">Value</h2>
 
-<p>The value will always be <code>?1</code>. When the request was triggered by something other than a user activation, the spec requires browsers to omit the header completely</p>
+<p>The value will always be <code>?1</code>. When a request is triggered by something other than a user activation, the spec requires browsers to omit the header completely.</p>
 
 <h2 id="Examples">Examples</h2>
 
