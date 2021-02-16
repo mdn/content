@@ -70000,25 +70000,6 @@
       "teoli"
     ]
   },
-  "Web/API/NonDocumentTypeChildNode/nextElementSibling": {
-    "modified": "2020-10-15T21:05:52.064Z",
-    "contributors": [
-      "Krinkle",
-      "fscholz",
-      "freginold",
-      "jszhou",
-      "RobBelics",
-      "birjolaxew",
-      "Alhadis",
-      "teoli",
-      "awalGarg",
-      "tregagnon",
-      "Sheppy",
-      "ziyunfei",
-      "GavinSharp",
-      "Jürgen Jeka"
-    ]
-  },
   "Web/API/Notation": {
     "modified": "2020-10-15T21:14:44.239Z",
     "contributors": [
@@ -165883,6 +165864,25 @@
       "ziyunfei",
       "BillyRayPreachersSon",
       "JohnST",
+      "Jürgen Jeka"
+    ]
+  },
+  "Web/API/Element/nextElementSibling": {
+    "modified": "2020-10-15T21:05:52.064Z",
+    "contributors": [
+      "Krinkle",
+      "fscholz",
+      "freginold",
+      "jszhou",
+      "RobBelics",
+      "birjolaxew",
+      "Alhadis",
+      "teoli",
+      "awalGarg",
+      "tregagnon",
+      "Sheppy",
+      "ziyunfei",
+      "GavinSharp",
       "Jürgen Jeka"
     ]
   }
