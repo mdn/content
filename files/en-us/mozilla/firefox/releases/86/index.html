@@ -59,6 +59,10 @@ currencyNames.of('EUR'); // "Euro"</pre>
 
 <h3 id="HTTP">HTTP</h3>
 
+<ul>
+  <li>The default HTTP {{HTTPHeader("ACCEPT")}} header for <em>images</em> changed to: <code>image/avif,image/webp,*/*</code> (following addition of support for the <a href="/en-US/docs/Web/Media/Formats/Image_types#avif">AVIF</a> image format). ({{bug(1641208)}}).</li>
+</ul>
+
 <h4 id="Removals_5">Removals</h4>
 
 <h3 id="Security">Security</h3>
@@ -84,6 +88,17 @@ currencyNames.of('EUR'); // "Euro"</pre>
 <h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
 
 <h4 id="Removals_9">Removals</h4>
+
+<h3 id="Other">Other</h3>
+
+<ul>
+  <li>Basic support for <a href="/en-US/docs/Web/Media/Formats/Image_types#avif">AVIF</a> images is now enabled by default ({{bug(1682995)}}).
+    <ul>
+      <li><a href="/en-US/docs/Web/Media/Formats/Image_types#avif">AVIF</a> is a new image format with excellent compression and no patent restrictions (developed by the <a href="http://aomedia.org/">Alliance for Open Media</a>).</li>
+      <li>Some advanced features are still in development, including animated images and colorspace support ({{bug(1682995)}}).</li>
+    </ul>
+</ul>
+
 
 <h2 id="Older_versions">Older versions</h2>
 
