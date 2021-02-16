@@ -245,12 +245,14 @@ within your browser.
     ```
 
     Instead of having to type `export EDITOR=code` every time prior to
-    `yarn start`, you can instead store this in your personal `.env` file.
-    It might not exist so you might need to create one. For example:
+    `yarn start`, you can instead store this setting in your personal `.env` file
+    (this goes inside the root of your local `content` directory). If the `.env`
+    file doesn't already exist, you can create one and include the above setting
+    in it. Alternatively, running the following line will add the setting to the
+    `.env` file automatically, creating the file if it doesn't already exist:
 
     ```sh
     echo 'EDITOR=code' >> .env
-    yarn start
     ```
 
     Now, it should be set like that even after you've closed and started a new
