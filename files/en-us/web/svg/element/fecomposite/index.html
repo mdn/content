@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{SVGRef}}</div>
 
-<p>The <strong><code>&lt;feComposite&gt;</code></strong> <a href="/en-US/docs/Web/SVG">SVG</a> filter primitive performs the combination of two input images pixel-wise in image space using one of the Porter-Duff compositing operations: <code>over</code><em>, </em><code>in</code><em>, </em><code>atop</code><em>, </em><code>out</code><em>, </em><code>xor</code>, <code>lighter</code> and <code>arithmetic</code>.</p>
+<p>The <strong><code>&lt;feComposite&gt;</code></strong> <a href="/en-US/docs/Web/SVG">SVG</a> filter primitive performs the combination of two input images pixel-wise in image space using one of the Porter-Duff compositing operations: <code>over</code>, <code>in</code>, <code>atop</code><em>, <code>out</code>, <code>xor</code>, <code>lighter</code>, or <code>arithmetic</code>.</p>
 
 <p>The table below shows each of these operations using an image of the MDN logo composited with a red circle:</p>
 
@@ -19,33 +19,33 @@ tags:
     <th>Description</th>
   </tr>
   <tr>
-    <td><p>over <img src="operation_over.png" title="over operator" width="300px"/></p></td>
+    <td><p>over <img src="operation_over.png" title="over operator" width="300px"></p></td>
     <td>The source graphic defined by the {{SVGAttr("in")}} attribute (the MDN logo) is placed over the destination graphic defined by the {{SVGAttr("in2")}} attribute (the circle).
       <p>This is the <em>default operation</em>, which will be used if no operation or an unsupported operation is specified.</p>
     </td>
   </tr>
   <tr>
-    <td><p>in <img src="operation_in.png" title="in operator" /></p></td>
+    <td><p>in <img src="operation_in.png" title="in operator"></p></td>
     <td>The parts of the source graphic defined by the <code>in</code> attribute that overlap the destination graphic defined in the <code>in2</code> attribute, replace the destination graphic.</td>
   </tr>
   <tr>
-    <td><p>over <img src="operation_out.png" title="out operator" /> </p></td>
+    <td><p>over <img src="operation_out.png" title="out operator"> </p></td>
     <td>The parts of the source graphic defined by the <code>in</code> attribute that fall outside the destination graphic defined in the <code>in2</code> attribute, are displayed.</td>
   </tr>
   <tr>
-    <td><p>atop <img src="operation_atop.png" title="atop operator" /></p></td>
+    <td><p>atop <img src="operation_atop.png" title="atop operator"></p></td>
     <td>The parts of the source graphic defined in the <code>in</code> attribute, which overlap the destination graphic defined in the <code>in2</code> attribute, replace the destination graphic. The parts of the destination graphic that do not overlap with the source graphic stay untouched.</td>
   </tr>
   <tr>
-    <td><p>xor <img src="operation_xor.png" title="xor operator" /></p></td>
+    <td><p>xor <img src="operation_xor.png" title="xor operator"></p></td>
     <td>The non-overlapping regions of the source graphic defined in the <code>in</code> attribute and the destination graphic defined in the <code>in2</code> attribute are combined.</td>
   </tr>
   <tr>
-    <td><p>lighter <img src="operation_lighter.png" title="lighter operator" /> </p></td>
+    <td><p>lighter <img src="operation_lighter.png" title="lighter operator"> </p></td>
     <td>The sum of the source graphic defined in the <code>in</code> attribute and the destination graphic defined in the <code>in2</code> attribute is displayed.</td>
   </tr>
   <tr>
-      <td><p>arithmetic <img src="operation_arithmetic.png" title="arithmetic operator" /> </p></td>
+      <td><p>arithmetic <img src="operation_arithmetic.png" title="arithmetic operator"></p></td>
       <td>
         <p>The <code>arithmetic</code> operation is useful for combining the output from the {{SVGElement("feDiffuseLighting")}} and {{SVGElement("feSpecularLighting")}} filters with texture data. If the <code>arithmetic</code> operation is chosen, each result pixel is computed using the following formula:</p>
 
@@ -60,7 +60,6 @@ tags:
   </tr>
 
 </table>
-
 
 <h2 id="Usage_context">Usage context</h2>
 
@@ -95,7 +94,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>This example defines filters for each of the supported operations (<code>over</code>, <code>atop</code>, <code>lighter</code>, etc.), which  composite an input <code>SourceGraphic</code> with an image of the MDN logo. The filters are each applied to a circle element, which is then used as the <code>SourceGraphic</code>. The relevant code for just one filter (<code>lighter</code>) is shown below:</p>
+<p>This example defines filters for each of the supported operations (<code>over</code>, <code>atop</code>, <code>lighter</code>, etc.), which composite an input <code>SourceGraphic</code> with an image of the MDN logo. The filters are each applied to a circle element, which is then used as the <code>SourceGraphic</code>. The relevant code for just one filter (<code>lighter</code>) is shown below:</p>
 
   <pre class="brush: xml">
     &lt;defs&gt;
@@ -109,7 +108,7 @@ tags:
   
 <div class="notecard note">
   <h4>Note</h4>
-  <p><code>BackgroundImage</code> cannot be used as a compositing source on modern browsers, so we can't define a filter that composites using whatever pixels happen to be under the filter as one of the sources. The approach above is a <a href="/en-US/docs/Web/SVG/Attribute/in#workaround_for_backgroundimage">Workaround because we can't use BackgroundImage</a>.</p>
+  <p><code>BackgroundImage</code> cannot be used as a compositing source on modern browsers, so we can't define a filter that composites using whatever pixels happen to be under the filter as one of the sources. The approach above is a <a href="/en-US/docs/Web/SVG/Attribute/in#workaround_for_backgroundimage">Workaround because we can't use <code>BackgroundImage</code></a>.</p>
 </div>
 
 <h3 id="SVG">SVG</h3>
