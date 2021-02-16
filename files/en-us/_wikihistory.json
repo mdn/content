@@ -70019,27 +70019,6 @@
       "Jürgen Jeka"
     ]
   },
-  "Web/API/NonDocumentTypeChildNode/previousElementSibling": {
-    "modified": "2020-10-15T21:05:48.149Z",
-    "contributors": [
-      "mfluehr",
-      "sideshowbarker",
-      "fscholz",
-      "varEnigmatic",
-      "jszhou",
-      "Alhadis",
-      "kscarfone",
-      "teoli",
-      "tregagnon",
-      "ethertank",
-      "Sheppy",
-      "moshkin",
-      "ziyunfei",
-      "BillyRayPreachersSon",
-      "JohnST",
-      "Jürgen Jeka"
-    ]
-  },
   "Web/API/Notation": {
     "modified": "2020-10-15T21:14:44.239Z",
     "contributors": [
@@ -165884,6 +165863,27 @@
     "modified": "2020-10-15T22:30:57.859Z",
     "contributors": [
       "sideshowbarker"
+    ]
+  },
+  "Web/API/Element/previousElementSibling": {
+    "modified": "2020-10-15T21:05:48.149Z",
+    "contributors": [
+      "mfluehr",
+      "sideshowbarker",
+      "fscholz",
+      "varEnigmatic",
+      "jszhou",
+      "Alhadis",
+      "kscarfone",
+      "teoli",
+      "tregagnon",
+      "ethertank",
+      "Sheppy",
+      "moshkin",
+      "ziyunfei",
+      "BillyRayPreachersSon",
+      "JohnST",
+      "Jürgen Jeka"
     ]
   }
 }
