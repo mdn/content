@@ -120,7 +120,7 @@ tags:
 
 <p>So <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString">Object.prototype.toString()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf">Object.prototype.valueOf()</a></code>, etc., are available to any object types that inherit from <code>Object.prototype</code>, including new object instances created from the <code>Person()</code> constructor.</p>
 
-<p><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is">Object.is()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys()</a></code>, and other members not defined inside the <code>prototype</code> bucket are not inherited by object instances or object types that inherit from <code>Object.prototype</code>. They are methods/properties available just on the <code>Object()</code> constructor itself.</p>
+<p><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is">Object.is()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys()</a></code>, and other members not defined inside the <code>prototype</code> bucket, are not inherited by object instances or object types that inherit from <code>Object.prototype</code>. They are methods/properties available just on the <code>Object()</code> constructor itself.</p>
 
 <div class="note">
 <p><strong>Note</strong>: This seems strange — how can you have a method defined on a constructor, which is itself a function?</p>

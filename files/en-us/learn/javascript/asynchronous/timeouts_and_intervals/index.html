@@ -51,9 +51,7 @@ tags:
 
 <p>The asynchronous code set up by these functions runs on the main thread (after their specified timer has elapsed).</p>
 
-<div>
 <p>It's important to know that you can (and often will) run other code before a <code>setTimeout()</code> call executes, or between iterations of <code>setInterval()</code>. Depending on how processor-intensive these operations are, they can delay your async code even further, as any async code will execute only <em>after</em> the main thread is available. (In other words, when the stack is empty.)  You will learn more on this matter as you progress through this article.</p>
-</div>
 
 <p>In any case, these functions are used for running constant animations and other background processing on a web site or application. In the following sections we will show you how they can be used.</p>
 

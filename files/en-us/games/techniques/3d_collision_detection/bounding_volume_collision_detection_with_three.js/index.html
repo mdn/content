@@ -124,9 +124,7 @@ THREE.Sphere.prototype.intersectsBox = function (box) {
 
 <p>As an alternative to using raw <code>Box3</code> and <code>Sphere</code> objects, Three.js has a useful object to make handling <strong>bounding boxes easier: <code><a href="https://threejs.org/docs/#api/helpers/BoxHelper">BoxHelper</a></code></strong> (previously <code>BoundingBoxHelper</code>, which has been deprecated). This helper takes a <code>Mesh</code> and calculates a bounding box volume for it (including its child meshes). This results in a new box <code>Mesh</code> representing the bounding box, which shows the bounding box's shape, and can passed to the previously seen <code>setFromObject</code> method in order to have a bounding box matching the <code>Mesh</code>.</p>
 
-<div>
 <p><code>BoxHelper</code> is the <strong>recommended</strong> way to handle 3D collisions with bounding volumes in Three.js. You will miss sphere tests, but the tradeoffs are well worth it.</p>
-</div>
 
 <p>The advantages of using this helper are:</p>
 

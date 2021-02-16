@@ -88,9 +88,9 @@ console.log(date.toLocaleDateString());
   try {
     new Date().toLocaleDateString('i');
   } catch (e) {
-    return e.name !== 'RangeError';
+    return e.name === 'RangeError';
   }
-  return true;
+  return false;
 }
 </pre>
 

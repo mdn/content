@@ -165,7 +165,7 @@ document.cookie = "test2=World";
 
 const cookieValue = document.cookie
   .split('; ')
-  .find(row =&gt; row.startsWith('test2'))
+  .find(row =&gt; row.startsWith('test2='))
   .split('=')[1];
 
 function alertCookieValue() {

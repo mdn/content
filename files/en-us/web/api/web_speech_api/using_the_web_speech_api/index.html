@@ -61,7 +61,7 @@ var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEv
 
 <h4 id="The_grammar">The grammar</h4>
 
-<p>The next part of our code defines the grammar we want our app to recognise. The following variable is defined to hold our grammar:</p>
+<p>The next part of our code defines the grammar we want our app to recognize. The following variable is defined to hold our grammar:</p>
 
 <pre class="brush: js">var colors = [ 'aqua' , 'azure' , 'beige', 'bisque', 'black', 'blue', 'brown', 'chocolate', 'coral' ... ];
 var grammar = '#JSGF V1.0; grammar colors; public &lt;color&gt; = ' + colors.join(' | ') + ' ;'</pre>
@@ -71,7 +71,7 @@ var grammar = '#JSGF V1.0; grammar colors; public &lt;color&gt; = ' + colors.joi
 <ul>
  <li>The lines are separated by semi-colons, just like in JavaScript.</li>
  <li>The first line — <code>#JSGF V1.0;</code> — states the format and version used. This always needs to be included first.</li>
- <li>The second line indicates a type of term that we want to recognise. <code>public</code> declares that it is a public rule, the string in angle brackets defines the recognized name for this term (<code>color</code>), and the list of items that follow the equals sign are the alternative values that will be recognized and accepted as appropriate values for the term. Note how each is separated by a pipe character.</li>
+ <li>The second line indicates a type of term that we want to recognize. <code>public</code> declares that it is a public rule, the string in angle brackets defines the recognized name for this term (<code>color</code>), and the list of items that follow the equals sign are the alternative values that will be recognized and accepted as appropriate values for the term. Note how each is separated by a pipe character.</li>
  <li>You can have as many terms defined as you want on separate lines following the above structure, and include fairly complex grammar definitions. For this basic demo, we are just keeping things simple. </li>
 </ul>
 
@@ -145,7 +145,7 @@ document.body.onclick = function() {
 <p>The last two handlers are there to handle cases where speech was recognized that wasn't in the defined grammar, or an error occurred. {{domxref("SpeechRecognition.onnomatch")}} seems to be supposed to handle the first case mentioned, although note that at the moment it doesn't seem to fire correctly; it just returns whatever was recognized anyway:</p>
 
 <pre class="brush: js">recognition.onnomatch = function(event) {
-  diagnostic.textContent = 'I didnt recognise that color.';
+  diagnostic.textContent = 'I didnt recognize that color.';
 }</pre>
 
 <p>{{domxref("SpeechRecognition.onerror")}} handles cases where there is an actual error with the recognition successfully — the {{domxref("SpeechRecognitionError.error")}} property contains the actual error returned:</p>

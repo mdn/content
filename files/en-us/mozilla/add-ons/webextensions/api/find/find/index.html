@@ -136,7 +136,7 @@ tags:
 
 browser.find.find("banana").then(found);</pre>
 
-<p>Search for "banana" across all tabs (note that this requires the "tabs" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>, because it accesses <code>tab.url</code>):</p>
+<p>Search for "banana" across all tabs (note that this requires the "tabs" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> or matching <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a>, because it accesses <code>tab.url</code>):</p>
 
 <pre class="notranslate brush: js">async function findInAllTabs(allTabs) {
   for (let tab of allTabs) {

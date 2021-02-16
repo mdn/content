@@ -72,17 +72,13 @@ tags:
 
 <p>The best defense against XSS vulnerabilities is to remove or disable any markup that can potentially contain instructions to run the code. For HTML this includes elements, such as <code>&lt;script&gt;</code>, <code>&lt;object&gt;</code>, <code>&lt;embed&gt;</code>, and <code>&lt;link&gt;</code>.</p>
 
-<div>
 <p>The process of modifying user data so that it can't be used to run scripts or otherwise affect the execution of server code is known as input sanitization. Many web frameworks automatically sanitize user input from HTML forms by default.</p>
-</div>
 
 <h3 id="SQL_injection">SQL injection</h3>
 
 <p>SQL injection vulnerabilities enable malicious users to execute arbitrary SQL code on a database, allowing data to be accessed, modified, or deleted irrespective of the user's permissions. A successful injection attack might spoof identities, create new identities with administration rights, access all data on the server, or destroy/modify the data to make it unusable.</p>
 
-<div>
 <p>SQL injection types include Error-based SQL injection, SQL injection based on boolean errors, and Time-based SQL injection.</p>
-</div>
 
 <p>This vulnerability is present if user input that is passed to an underlying SQL statement can change the meaning of the statement. For example, the following code is intended to list all users with a particular name (<code>userName</code>) that has been supplied from an HTML form:</p>
 

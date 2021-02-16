@@ -72,7 +72,7 @@ browser.browserAction.onClicked.hasListener(listener)
  <pre class="notranslate brush: js">browser.browserAction.onClicked.addListener((tab) =&gt; {
   // disable the active tab
   browser.browserAction.disable(tab.id);
-  // requires the "tabs" or "activeTab" permission
+  // requires the "tabs" or "activeTab" permission, or host permissions for the URL
   console.log(tab.url);
 });
 </pre>
