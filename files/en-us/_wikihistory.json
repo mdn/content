@@ -69991,15 +69991,6 @@
       "teoli"
     ]
   },
-  "Web/API/NonDocumentTypeChildNode": {
-    "modified": "2020-10-15T21:29:39.756Z",
-    "contributors": [
-      "sideshowbarker",
-      "mfluehr",
-      "fscholz",
-      "teoli"
-    ]
-  },
   "Web/API/Notation": {
     "modified": "2020-10-15T21:14:44.239Z",
     "contributors": [
