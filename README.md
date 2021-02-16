@@ -249,8 +249,8 @@ within your browser.
     (this goes inside the root of your local `content` directory). If the `.env`
     file doesn't already exist, you can create one and include the above setting
     in it. Alternatively, running the following line will add the setting to the
-    `.env` file automatically, creating the file if it doesn't already exist: 
-    
+    `.env` file automatically, creating the file if it doesn't already exist:
+
     ```sh
     echo 'EDITOR=code' >> .env
     ```
