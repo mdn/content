@@ -69972,55 +69972,6 @@
       "teoli"
     ]
   },
-  "Web/API/NonDocumentTypeChildNode": {
-    "modified": "2020-10-15T21:29:39.756Z",
-    "contributors": [
-      "sideshowbarker",
-      "mfluehr",
-      "fscholz",
-      "teoli"
-    ]
-  },
-  "Web/API/NonDocumentTypeChildNode/nextElementSibling": {
-    "modified": "2020-10-15T21:05:52.064Z",
-    "contributors": [
-      "Krinkle",
-      "fscholz",
-      "freginold",
-      "jszhou",
-      "RobBelics",
-      "birjolaxew",
-      "Alhadis",
-      "teoli",
-      "awalGarg",
-      "tregagnon",
-      "Sheppy",
-      "ziyunfei",
-      "GavinSharp",
-      "Jürgen Jeka"
-    ]
-  },
-  "Web/API/NonDocumentTypeChildNode/previousElementSibling": {
-    "modified": "2020-10-15T21:05:48.149Z",
-    "contributors": [
-      "mfluehr",
-      "sideshowbarker",
-      "fscholz",
-      "varEnigmatic",
-      "jszhou",
-      "Alhadis",
-      "kscarfone",
-      "teoli",
-      "tregagnon",
-      "ethertank",
-      "Sheppy",
-      "moshkin",
-      "ziyunfei",
-      "BillyRayPreachersSon",
-      "JohnST",
-      "Jürgen Jeka"
-    ]
-  },
   "Web/API/Notation": {
     "modified": "2020-10-15T21:14:44.239Z",
     "contributors": [
@@ -165865,6 +165816,46 @@
     "modified": "2020-10-15T22:30:57.859Z",
     "contributors": [
       "sideshowbarker"
+    ]
+  },
+  "Web/API/Element/previousElementSibling": {
+    "modified": "2020-10-15T21:05:48.149Z",
+    "contributors": [
+      "mfluehr",
+      "sideshowbarker",
+      "fscholz",
+      "varEnigmatic",
+      "jszhou",
+      "Alhadis",
+      "kscarfone",
+      "teoli",
+      "tregagnon",
+      "ethertank",
+      "Sheppy",
+      "moshkin",
+      "ziyunfei",
+      "BillyRayPreachersSon",
+      "JohnST",
+      "Jürgen Jeka"
+    ]
+  },
+  "Web/API/Element/nextElementSibling": {
+    "modified": "2020-10-15T21:05:52.064Z",
+    "contributors": [
+      "Krinkle",
+      "fscholz",
+      "freginold",
+      "jszhou",
+      "RobBelics",
+      "birjolaxew",
+      "Alhadis",
+      "teoli",
+      "awalGarg",
+      "tregagnon",
+      "Sheppy",
+      "ziyunfei",
+      "GavinSharp",
+      "Jürgen Jeka"
     ]
   },
   "Web/API/Document/activeElement": {
