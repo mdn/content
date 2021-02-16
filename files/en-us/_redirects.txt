@@ -1878,7 +1878,7 @@
 /en-US/docs/DOM/dispatchEvent_example	/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
 /en-US/docs/DOM/document	/en-US/docs/Web/API/Document
 /en-US/docs/DOM/document.URL	/en-US/docs/Web/API/Document/URL
-/en-US/docs/DOM/document.activeElement	/en-US/docs/Web/API/DocumentOrShadowRoot/activeElement
+/en-US/docs/DOM/document.activeElement	/en-US/docs/Web/API/Document/activeElement
 /en-US/docs/DOM/document.addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener
 /en-US/docs/DOM/document.alinkColor	/en-US/docs/Web/API/Document/alinkColor
 /en-US/docs/DOM/document.anchors	/en-US/docs/Web/API/Document/anchors
@@ -2419,7 +2419,7 @@
 /en-US/docs/DOM:dispatchEvent_example	/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
 /en-US/docs/DOM:document	/en-US/docs/Web/API/Document
 /en-US/docs/DOM:document.URL	/en-US/docs/Web/API/Document/URL
-/en-US/docs/DOM:document.activeElement	/en-US/docs/Web/API/DocumentOrShadowRoot/activeElement
+/en-US/docs/DOM:document.activeElement	/en-US/docs/Web/API/Document/activeElement
 /en-US/docs/DOM:document.alinkColor	/en-US/docs/Web/API/Document/alinkColor
 /en-US/docs/DOM:document.anchors	/en-US/docs/Web/API/Document/anchors
 /en-US/docs/DOM:document.applets	/en-US/docs/Web/API/Document/applets
@@ -3250,7 +3250,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/cssMediaRule	/en-US/docs/Web/API/CSSMediaRule
 /en-US/docs/Document_Object_Model_(DOM)/dispatchEvent_example	/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
 /en-US/docs/Document_Object_Model_(DOM)/document.URL	/en-US/docs/Web/API/Document/URL
-/en-US/docs/Document_Object_Model_(DOM)/document.activeElement	/en-US/docs/Web/API/DocumentOrShadowRoot/activeElement
+/en-US/docs/Document_Object_Model_(DOM)/document.activeElement	/en-US/docs/Web/API/Document/activeElement
 /en-US/docs/Document_Object_Model_(DOM)/document.alinkColor	/en-US/docs/Web/API/Document/alinkColor
 /en-US/docs/Document_Object_Model_(DOM)/document.anchors	/en-US/docs/Web/API/Document/anchors
 /en-US/docs/Document_Object_Model_(DOM)/document.applets	/en-US/docs/Web/API/Document/applets
@@ -7509,7 +7509,6 @@
 /en-US/docs/Web/API/Document/Document:_DOMContentLoaded_event	/en-US/docs/Web/API/Document/DOMContentLoaded_event
 /en-US/docs/Web/API/Document/Document:_paste_event	/en-US/docs/Web/API/Document/paste_event
 /en-US/docs/Web/API/Document/ParentNode.querySelectorAll	/en-US/docs/Web/API/ParentNode/querySelectorAll
-/en-US/docs/Web/API/Document/activeElement	/en-US/docs/Web/API/DocumentOrShadowRoot/activeElement
 /en-US/docs/Web/API/Document/async	/en-US/docs/Web/API/XMLDocument/async
 /en-US/docs/Web/API/Document/baseURI	/en-US/docs/Web/API/Node/baseURI
 /en-US/docs/Web/API/Document/cancelFullscreen	/en-US/docs/Web/API/Document/exitFullscreen
@@ -7567,6 +7566,7 @@
 /en-US/docs/Web/API/DocumentFragment/children	/en-US/docs/Web/API/ParentNode/children
 /en-US/docs/Web/API/DocumentFragment/firstElementChild	/en-US/docs/Web/API/ParentNode/firstElementChild
 /en-US/docs/Web/API/DocumentFragment/lastElementChild	/en-US/docs/Web/API/ParentNode/lastElementChild
+/en-US/docs/Web/API/DocumentOrShadowRoot/activeElement	/en-US/docs/Web/API/Document/activeElement
 /en-US/docs/Web/API/DocumentOrShadowRoot/nodeFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot
 /en-US/docs/Web/API/DocumentOrShadowRoot/nodesFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot
 /en-US/docs/Web/API/DocumentOrShadowRoot/pictureInPictureEnabled	/en-US/docs/Web/API/DocumentOrShadowRoot/pictureInPictureElement
@@ -9250,7 +9250,7 @@
 /en-US/docs/Web/API/console.trace	/en-US/docs/Web/API/Console/trace
 /en-US/docs/Web/API/console.warn	/en-US/docs/Web/API/Console/warn
 /en-US/docs/Web/API/document.URL	/en-US/docs/Web/API/Document/URL
-/en-US/docs/Web/API/document.activeElement	/en-US/docs/Web/API/DocumentOrShadowRoot/activeElement
+/en-US/docs/Web/API/document.activeElement	/en-US/docs/Web/API/Document/activeElement
 /en-US/docs/Web/API/document.adoptNode	/en-US/docs/Web/API/Document/adoptNode
 /en-US/docs/Web/API/document.alinkColor	/en-US/docs/Web/API/Document/alinkColor
 /en-US/docs/Web/API/document.anchors	/en-US/docs/Web/API/Document/anchors
