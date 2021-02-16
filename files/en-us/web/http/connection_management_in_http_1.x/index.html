@@ -19,7 +19,7 @@ tags:
 
 <p>Two newer models were created in HTTP/1.1. The persistent-connection model keeps connections opened between successive requests, reducing the time needed to open new connections. The HTTP pipelining model goes one step further, by sending several successive requests without even waiting for an answer, reducing much of the latency in the network.</p>
 
-<p><img alt="Compares the performance of the three HTTP/1.x connection models: short-lived connections, persistent connections, and HTTP pipelining." src="https://mdn.mozillademos.org/files/13727/HTTP1_x_Connections.png" style="height: 538px; width: 813px;"></p>
+<p><img alt="Compares the performance of the three HTTP/1.x connection models: short-lived connections, persistent connections, and HTTP pipelining." src="http1_x_connections.png"></p>
 
 <div class="note">
 <p>HTTP/2 adds additional models for connection management.</p>
@@ -85,7 +85,7 @@ tags:
 
 <p>If the server wishes a faster Web site or application response, it is possible for the server to force the opening of more connections. For example, Instead of having all resources on the same domain, say <code>www.example.com</code>, it could split over several domains, <code>www1.example.com</code>, <code>www2.example.com</code>, <code>www3.example.com</code>. Each of these domains resolve to the <em>same</em> server, and the Web browser will open 6 connections to each (in our example, boosting the connections to 18). This technique is called <em>domain sharding</em>.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13783/HTTPSharding.png" style="height: 727px; width: 463px;"></p>
+<p><img alt="" src="httpsharding.png"></p>
 
 <h2 id="Conclusion">Conclusion</h2>
 
