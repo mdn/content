@@ -44326,25 +44326,6 @@
       "david_ross"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/activeElement": {
-    "modified": "2020-10-15T21:49:26.859Z",
-    "contributors": [
-      "alattalatta",
-      "mfluehr",
-      "sideshowbarker",
-      "krosylight",
-      "Konrud",
-      "chrisdavidmills",
-      "spencer523",
-      "Sheppy",
-      "Volker-E",
-      "jpmedley",
-      "u_7cc",
-      "fscholz",
-      "bede",
-      "david_ross"
-    ]
-  },
   "Web/API/DocumentOrShadowRoot/caretPositionFromPoint": {
     "modified": "2020-10-15T21:49:27.908Z",
     "contributors": [
@@ -165884,6 +165865,25 @@
     "modified": "2020-10-15T22:30:57.859Z",
     "contributors": [
       "sideshowbarker"
+    ]
+  },
+  "Web/API/Document/activeElement": {
+    "modified": "2020-10-15T21:49:26.859Z",
+    "contributors": [
+      "alattalatta",
+      "mfluehr",
+      "sideshowbarker",
+      "krosylight",
+      "Konrud",
+      "chrisdavidmills",
+      "spencer523",
+      "Sheppy",
+      "Volker-E",
+      "jpmedley",
+      "u_7cc",
+      "fscholz",
+      "bede",
+      "david_ross"
     ]
   }
 }
