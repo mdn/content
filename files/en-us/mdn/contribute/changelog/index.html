@@ -14,7 +14,15 @@ tags:
 
 <h3 id="documenting_mixins">Documenting mixins</h3>
 
-<p>Previously on MDN, mixins weren't documented consistently. In February, a new guideline was put in place that avoids the abstract, specification-only concept.</p>
+<p><a href="https://heycam.github.io/webidl/#idl-interface-mixins">Interface mixins</a> in Web IDL are used in specifications to define Web APIs.
+For web developers, they aren't observable directly; they act as helpers to avoid repeating API definitions.</p>
+<p>Previously we commonly defined a landing page for a mixin class itself, and put the defined members on subpages underneath it,
+before linking to those from the landing pages of the interfaces that implement those mixins.
+This was confusing for readers because mixins are spec constructs — you never access the defined members using the mixin classes.
+To avoid this confusion we've instead put the pages for members defined on mixins directly under the implementing class pages.
+For more details, see the guide page on
+<a href="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#mixins">how to write an API reference</a>
+and the discussion leading to this change in <a href="https://github.com/mdn/content/issues/1940">mdn/content#1940</a>.</p>
 
 <h2 id="january_2021">January 2021</h2>
 
