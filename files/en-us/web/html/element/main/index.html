@@ -154,12 +154,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>The <code>&lt;main&gt;</code> element is widely supported. For Internet Explorer 11 and lower, it's suggested that an {{glossary("ARIA")}} role of <code>"main"</code> be added to the <code>&lt;main&gt;</code> element to ensure it is accessible (screen readers like JAWS, used in combination with older versions of Internet Explorer, understand the semantic meaning of the <code>&lt;main&gt;</code> element when this <code>role</code> attribute is included).</p>
-
-<pre class="brush: html notranslate">&lt;main role="main"&gt;
-  ...
-&lt;/main&gt;
-</pre>
+<p>To support Internet Explorer 11 and lower, you can add an {{glossary("ARIA")}} role of <code>"main"</code> to the <code>&lt;main&gt;</code> element. But understand that the ARIA in HTML specification states that <code>role="main"</code> shouldn't actually be used with the <code>&lt;main&gt;</code> element, and the W3C validator will report a warning for it. However, Internet Explorer 11 and lower will otherwise not correctly expose the <code>&lt;main&gt;</code> element to screen readers such JAWS unless the element also has a <code>role="main"</code> attribute.</p>
 
 <p>{{Compat("html.elements.main")}}</p>
 
