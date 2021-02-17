@@ -58,7 +58,7 @@ exports.book_detail = function(req, res, <strong>next</strong>) {
 <pre>extends layout
 
 block content
-  h1 #{title}: #{book.title}
+  h1 Title: #{book.title}
 
   p #[strong Author:]
     a(href=book.author.url) #{book.author.name}
