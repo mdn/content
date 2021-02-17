@@ -77,13 +77,13 @@ tags:
 <h2 id="Client_hints">Client hints</h2>
 
 <p>HTTP {{Glossary("Client_hints", "Client hints")}} are a set of request headers that provide useful information about the client such as device type and network conditions, and allow the server to optimize what it serves for those conditions 
-  (the specification can be found on the <a href="https://httpwg.org/http-extensions/draft-ietf-httpbis-client-hints.html">HTTP working group website</a>).</p>
+  (<a href="https://tools.ietf.org/html/rfc8942"><cite>[RFC8942]</cite></a>).</p>
 
 <dl>
  <dt>{{HTTPHeader("Accept-CH")}} {{experimental_inline}}</dt>
- <dd>Servers can advertise support for Client Hints using the <code>Accept-CH</code> header field or an equivalent HTML <code>&lt;meta&gt;</code> element with <code>http-equiv</code> attribute (<a href="https://httpwg.org/http-extensions/client-hints.html#HTML5"><cite>[HTML5]</cite></a>).</dd>
+ <dd>Servers can advertise support for Client Hints using the <code>Accept-CH</code> header field or an equivalent HTML <code>&lt;meta&gt;</code> element with <code>http-equiv</code> attribute (<a href="https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-http-equiv"><cite>[HTML]</cite></a>).</dd>
  <dt>{{HTTPHeader("Accept-CH-Lifetime")}} {{experimental_inline}}</dt>
- <dd>Servers can ask the client to remember the set of Client Hints that the server supports for a specified period of time, to enable delivery of Client Hints on subsequent requests to the server’s origin (<a href="https://httpwg.org/http-extensions/client-hints.html#RFC6454"><cite>[RFC6454]</cite></a>).</dd>
+ <dd>Servers can ask the client to remember the set of Client Hints that the server supports for a specified period of time, to enable delivery of Client Hints on subsequent requests to the server’s origin (<a href="https://tools.ietf.org/html/rfc6454"><cite>[RFC6454]</cite></a>).</dd>
  <dt>{{HTTPHeader("Early-Data")}} {{experimental_inline}}</dt>
  <dd>Indicates that the request has been conveyed in early data.</dd>
  <dt>{{HTTPHeader("Device-Memory")}} {{experimental_inline}}</dt>
