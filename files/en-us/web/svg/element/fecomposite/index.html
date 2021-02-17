@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{SVGRef}}</div>
 
-<p>The <strong><code>&lt;feComposite&gt;</code></strong> <a href="/en-US/docs/Web/SVG">SVG</a> filter primitive performs the combination of two input images pixel-wise in image space using one of the Porter-Duff compositing operations: <code>over</code>, <code>in</code>, <code>atop</code><em>, <code>out</code>, <code>xor</code>, <code>lighter</code>, or <code>arithmetic</code>.</p>
+<p>The <strong><code>&lt;feComposite&gt;</code></strong> <a href="/en-US/docs/Web/SVG">SVG</a> filter primitive performs the combination of two input images pixel-wise in image space using one of the Porter-Duff compositing operations: <code>over</code>, <code>in</code>, <code>atop</code>, <code>out</code>, <code>xor</code>, <code>lighter</code>, or <code>arithmetic</code>.</p>
 
 <p>The table below shows each of these operations using an image of the MDN logo composited with a red circle:</p>
 
@@ -19,7 +19,7 @@ tags:
     <th>Description</th>
   </tr>
   <tr>
-    <td><p>over <img src="operation_over.png" title="over operator" width="300px"></p></td>
+    <td><p>over <img src="operation_over.png" title="over operator" width="300"></p></td>
     <td>The source graphic defined by the {{SVGAttr("in")}} attribute (the MDN logo) is placed over the destination graphic defined by the {{SVGAttr("in2")}} attribute (the circle).
       <p>This is the <em>default operation</em>, which will be used if no operation or an unsupported operation is specified.</p>
     </td>
@@ -83,7 +83,7 @@ tags:
  <li>{{SVGAttr("in")}}: First input for the given filter primitive.</li>
  <li>{{SVGAttr("in2")}}: Second input for the given filter primitive (works the same as the <code>in</code> attribute).</li>
  <li>{{SVGAttr("operator")}}: <code>over</code> | <code>in</code> | <code>out</code> | <code>atop</code> | <code>xor</code> | <code>lighter</code> | <code>arithmetic</code></li>
- <li>{{SVGAttr("k1")}}, {{SVGAttr("k2")}}, {{SVGAttr("k3")}}, {{SVGAttr("k4")}}: Values used for calculating the result pixel in <code>arithmetic</code> {{SVGAttr("operator")}} filter primitives. </li> </li>
+ <li>{{SVGAttr("k1")}}, {{SVGAttr("k2")}}, {{SVGAttr("k3")}}, {{SVGAttr("k4")}}: Values used for calculating the result pixel in <code>arithmetic</code> {{SVGAttr("operator")}} filter primitives.</li>
 </ul>
 
 
@@ -105,7 +105,7 @@ tags:
     &lt;/defs&gt;
     &lt;circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageLighter)"/&gt;
   </pre>
-  
+
 <div class="notecard note">
   <h4>Note</h4>
   <p><code>BackgroundImage</code> cannot be used as a compositing source on modern browsers, so we can't define a filter that composites using whatever pixels happen to be under the filter as one of the sources. The approach above is a <a href="/en-US/docs/Web/SVG/Attribute/in#workaround_for_backgroundimage">Workaround because we can't use <code>BackgroundImage</code></a>.</p>
