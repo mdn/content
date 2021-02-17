@@ -119,7 +119,7 @@ tags:
 <p><strong>Note:</strong> The <a href="https://github.com/ctavan/express-validator#express-validator">express-validator</a> guide on  Github provides a good overview of the API. We recommend you read that to get an idea of all its capabilities (including using <a href="https://express-validator.github.io/docs/schema-validation.html">schema validation</a> and <a href="https://express-validator.github.io/docs/custom-validators-sanitizers.html">creating custom validators</a>). Below we cover just a subset that is useful for the <em>LocalLibrary</em>.</p>
 </div>
 
-<p>To use the validator in our controllers we have to <em>require</em> the functions we want to use from the <strong>'express-validator/check</strong>' and <strong>'express-validator/filter</strong>' modules, as shown below:</p>
+<p>To use the validator in our controllers, we specify the particular functions we want to import from the <a href="https://www.npmjs.com/package/express-validator">express-validator</a> module, as shown below:</p>
 
 <pre class="brush: js">const { body,validationResult } = require('express-validator');
 </pre>
