@@ -274,7 +274,7 @@ for (const f of [func1, func2, func3]) {
 console.log(1); // 1, 2
 </pre>
 
-<p>Instead of running immediately, the passed-in function is put on a microtask queue, which means it runs later when the queue is emptied at the end of the current run of the JavaScript event loop, i.e. pretty soon:</p>
+<p>Instead of running immediately, the passed-in function is put on a microtask queue, which means it runs later ( only after the function which created it exits and when JavaScript execution stack is empty ), just before control is returned to the event loop, i.e. pretty soon:</p>
 
 <pre class="brush: js notranslate">const wait = ms =&gt; new Promise(resolve =&gt; setTimeout(resolve, ms));
 
