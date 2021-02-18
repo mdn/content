@@ -118,7 +118,7 @@ tags:
 
 <p>The current WCAG 2.x contrast guidelines 1.4.3 and 1.4.6 define "large" text as text that is 18pt (24px) or larger at a normal weight (400), or text that is 14pt (18.7px) at a bold weight (700). This may have been sufficient in 2008 when the standard was created. At that time, most "web fonts" such as Verdana were only available in a normal and bold weight.</p>
 
-<p>Today, the proliferation of easily available web fonts of all sizes and weights has complicated the issue. The emerging WCAG 3.0 standard on visual contrast is known as the <a href="https://www.myndex.com/APCA/simple">Advances Perceptual Contrast Algorithm (<abbr>APCA</abbr>)</a>, and takes into account font weights and sizes in a variable manner, relative to the predicted contrast value.</p>
+<p>Today, the proliferation of easily available web fonts of all sizes and weights has complicated the issue. The emerging WCAG 3.0 standard on visual contrast is known as the <a href="https://www.myndex.com/APCA/simple">Advanced Perceptual Contrast Algorithm (<abbr>APCA</abbr>)</a>, and takes into account font weights and sizes in a variable manner, relative to the predicted contrast value.</p>
 
 <p><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G207">Non text elements such as icons also need adequate contrast for perception</a>.</p>
 
@@ -287,11 +287,14 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <h3 id="Working_with_Blue">Working with Blue</h3>
 
-<p>• Pure blues should typically be the darkest of two colors</p>
+<ul>
+  <li>Pure blues should typically be the darkest of two colors</li>
 
-<p>• To use blue as the lighter of two colors, green needs to be added, otherwise there will be insufficient contrast and poor readability.</p>
+  <li>To use blue as the lighter of two colors, green needs to be added, otherwise there will be insufficient contrast and poor readability.</li>
 
-<p>• This is both due to the low contrast and due to the human eye seeing blue at a lower resolution than green and red.</p>
+  <li>This is both due to the low contrast and due to the human eye seeing blue at a lower resolution than green and red.</li>
+</ul>
+
 
 <p>The nature of blue light causes it to focus at a different location on the retina than red, so a pure red and a pure blue may "shimmer" when next to each other. In the example below: Left, pure red (<code>#F00</code>) and a pure blue (<code>#00D</code>). Right, an equal amount of blue was added to the background which removes all detail from the blue channel.</p>
 
@@ -332,31 +335,48 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <h3 id="Examples_of_colors_effect_beyond_vision">Examples of color's effect beyond vision</h3>
 
-<h4>Color can be culturally dependent</h4>
-<p><a href="https://journals.sagepub.com/doi/10.1177/002202217300400201">A Cross-Cultural Study of the Affective Meanings of Color</a></p>
+<ul>
+  <li>Color can be culturally dependent</li>
+  <ul>
+    <li><a href="https://journals.sagepub.com/doi/10.1177/002202217300400201">A Cross-Cultural Study of the Affective Meanings of Color</a></li>
+  </ul>
 
-<h4>Color affects our emotions</h4>
-<p><a href="https://pubmed.ncbi.nlm.nih.gov/28612080/">Color and emotion: effects of hue, saturation, and brightness</a></p>
+<li>Color affects our emotions</li>
+  <ul>
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/28612080/">Color and emotion: effects of hue, saturation, and brightness</a></li>
+  </ul>
 
-<h4>Higher contrasts can also have a positive affect on our emotions</h4>
-<p><a href="https://pubmed.ncbi.nlm.nih.gov/32823741/">Emotion Variation from Controlling Contrast of Visual Contents through EEG-Based Deep Emotion Recognition</a></p>
+<li>Higher contrasts can also have a positive affect on our emotions</li>
+  <ul>
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/32823741/">Emotion Variation from Controlling Contrast of Visual Contents through EEG-Based Deep Emotion Recognition</a></li>
+  </ul>
 
-<h4>Some colors can affect our perception of time</h4>
-<p><a href="https://pubmed.ncbi.nlm.nih.gov/29374198/">Color and time perception: Evidence for temporal overestimation of blue stimuli</a></p>
+<li>Some colors can affect our perception of time</li>
+  <ul>
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/29374198/">Color and time perception: Evidence for temporal overestimation of blue stimuli</a></li>
+  </ul>
 
-<h4>Blue also has a significant effect on brightness and glare</h4>
-<p><a href="https://pubmed.ncbi.nlm.nih.gov/31288107/">Blue and glare & brightness</a></p>
+<li>Blue also has a significant effect on brightness and glare</li>
+  <ul>
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/31288107/">Blue and glare & brightness</a></li>
+  </ul>
 
-<h4>Red tinted glasses can provide increased happiness or joy</h4>
-<p><a href="https://pubmed.ncbi.nlm.nih.gov/31244627/">Looking Through "Rose-Tinted" Glasses: The Influence of Tint on Visual Affective Processing</a></p>
+<li>Red tinted glasses can provide increased happiness or joy</li>
+  <ul>
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/31244627/">Looking Through "Rose-Tinted" Glasses: The Influence of Tint on Visual Affective Processing</a></li>
+  </ul>
 
-<h4>Red is well known to have significant effects on our behavior</h4>
-<p><a href="https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/">How the Color Red Influences Our Behavior</a> Scientific American, S. Martinez-Conde, S,Macknik</p>
+<li>Red is well known to have significant effects on our behavior</li>
+  <ul>
+    <li><a href="https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/">How the Color Red Influences Our Behavior</a> Scientific American, S. Martinez-Conde, S,Macknik</li>
+  </ul>
 
-<h4>Red Environment</h4>
+<li>Red Environment</li>
 
-<p><a href="https://www.ncbi.nlm.nih.gov/pubmed/20649469">Studies have shown that a red environment stimulates cognition</a>, but for those who suffer Traumatic Brain Injury cognitive function may be reduced in a red environment, while a green environment had no measurable effect according.</p>
-
+  <ul>
+    <li><a href="https://www.ncbi.nlm.nih.gov/pubmed/20649469">Studies have shown that a red environment stimulates cognition</a>, but for those who suffer Traumatic Brain Injury cognitive function may be reduced in a red environment, while a green environment had no measurable effect according.</li>
+  </ul>
+</ul>
 
 <h3 id="Flashing_and_Seizures">Flashing and Seizures</h3>
 
@@ -405,7 +425,7 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <p>Using the function shown below:</p>
 
-<pre class="brush: javascript" style="">function sRGBtoLin(colorChannel) {   
+<pre class="brush: javascript" style="">function sRGBtoLin(colorChannel) {
   // Send this function a decimal sRGB gamma encoded color channel
   // between 0.0 and 1.0, and it returns a linearized value.
   if ( colorChannel &lt;= 0.04045 ) {
