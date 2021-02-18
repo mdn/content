@@ -20,7 +20,7 @@ tags:
 
 <p>Audio nodes are linked into chains and simple webs by their inputs and outputs. They typically start with one or more sources. Sources provide arrays of sound intensities (samples) at very small timeslices, often tens of thousands of them per second. These could be either computed mathematically (such as {{domxref("OscillatorNode")}}), or they can be recordings from sound/video files (like {{domxref("AudioBufferSourceNode")}} and {{domxref("MediaElementAudioSourceNode")}}) and audio streams ({{domxref("MediaStreamAudioSourceNode")}}). In fact, sound files are just recordings of sound intensities themselves, which come in from microphones or electric instruments, and get mixed down into a single, complicated wave.</p>
 
-<p>Outputs of these nodes could be linked to inputs of others, which mix or modify these streams of sound samples into different streams. A common modification is multiplying the samples by a value to make them louder or quieter (as is the case with {{domxref("GainNode")}}). Once the sound has been sufficiently processed for the intended effect, it can be linked to the input of a destination ({{domxref("AudioContext.destination")}}), which sends the sound to the speakers or headphones. This last connection is only necessary if the user is supposed to hear the audio.</p>
+<p>Outputs of these nodes could be linked to inputs of others, which mix or modify these streams of sound samples into different streams. A common modification is multiplying the samples by a value to make them louder or quieter (as is the case with {{domxref("GainNode")}}). Once the sound has been sufficiently processed for the intended effect, it can be linked to the input of a destination ({{domxref("BaseAudioContext.destination")}}), which sends the sound to the speakers or headphones. This last connection is only necessary if the user is supposed to hear the audio.</p>
 
 <p>A simple, typical workflow for web audio would look something like this:</p>
 
@@ -32,7 +32,7 @@ tags:
 	<li>Connect the sources up to the effects, and the effects to the destination.</li>
 </ol>
 
-<p><img alt="A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information." src="https://mdn.mozillademos.org/files/16043/audio-context_.png" style="height: 400px; width: 1200px;"></p>
+<p><img alt="A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information." src="audio-context_.png"></p>
 
 <p>Timing is controlled with high precision and low latency, allowing developers to write code that responds accurately to events and is able to target specific samples, even at a high sample rate. So applications such as drum machines and sequencers are well within reach.</p>
 
@@ -95,7 +95,7 @@ tags:
 	<dt>{{domxref("OscillatorNode")}}</dt>
 	<dd>The <strong><code style="font-size: 14px;">OscillatorNode</code> </strong>interface represents a periodic waveform, such as a sine or triangle wave. It is an {{domxref("AudioNode")}} audio-processing module that causes a given <em>frequency</em> of wave to be created.</dd>
 	<dt>{{domxref("AudioBuffer")}}</dt>
-	<dd>The <strong><code>AudioBuffer</code></strong> interface represents a short audio asset residing in memory, created from an audio file using the {{ domxref("AudioContext.decodeAudioData()") }} method, or created with raw data using {{ domxref("AudioContext.createBuffer()") }}. Once decoded into this form, the audio can then be put into an {{ domxref("AudioBufferSourceNode") }}.</dd>
+	<dd>The <strong><code>AudioBuffer</code></strong> interface represents a short audio asset residing in memory, created from an audio file using the {{ domxref("BaseAudioContext.decodeAudioData") }} method, or created with raw data using {{ domxref("BaseAudioContext.createBuffer") }}. Once decoded into this form, the audio can then be put into an {{ domxref("AudioBufferSourceNode") }}.</dd>
 	<dt>{{domxref("AudioBufferSourceNode")}}</dt>
 	<dd>The <strong><code>AudioBufferSourceNode</code></strong> interface represents an audio source consisting of in-memory audio data, stored in an {{domxref("AudioBuffer")}}. It is an {{domxref("AudioNode")}} that acts as an audio source.</dd>
 	<dt>{{domxref("MediaElementAudioSourceNode")}}</dt>
@@ -137,7 +137,7 @@ tags:
 	<dt>{{domxref("AudioDestinationNode")}}</dt>
 	<dd>The <strong><code>AudioDestinationNode</code></strong> interface represents the end destination of an audio source in a given context — usually the speakers of your device.</dd>
 	<dt>{{domxref("MediaStreamAudioDestinationNode")}}</dt>
-	<dd>The <code><strong>MediaStreamAudio</strong></code><strong><code>DestinationNode</code></strong> interface represents an audio destination consisting of a <a href="/en-US/docs/WebRTC">WebRTC</a> {{domxref("MediaStream")}} with a single <code>AudioMediaStreamTrack</code>, which can be used in a similar way to a {{domxref("MediaStream")}} obtained from {{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}. It is an {{domxref("AudioNode")}} that acts as an audio destination.</dd>
+	<dd>The <code><strong>MediaStreamAudio</strong></code><strong><code>DestinationNode</code></strong> interface represents an audio destination consisting of a <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> {{domxref("MediaStream")}} with a single <code>AudioMediaStreamTrack</code>, which can be used in a similar way to a {{domxref("MediaStream")}} obtained from {{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}. It is an {{domxref("AudioNode")}} that acts as an audio destination.</dd>
 </dl>
 
 <h3 id="Data_analysis_and_visualization">Data analysis and visualization</h3>
@@ -198,7 +198,7 @@ tags:
 	<dt>{{event("audioprocess")}} (event) {{deprecated_inline}}</dt>
 	<dd>The <code>audioprocess</code> event is fired when an input buffer of a Web Audio API {{domxref("ScriptProcessorNode")}} is ready to be processed.</dd>
 	<dt>{{domxref("AudioProcessingEvent")}} {{deprecated_inline}}</dt>
-	<dd>The <a href="/en-US/docs/Web_Audio_API">Web Audio API</a> <code>AudioProcessingEvent</code> represents events that occur when a {{domxref("ScriptProcessorNode")}} input buffer is ready to be processed.</dd>
+	<dd>The <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> <code>AudioProcessingEvent</code> represents events that occur when a {{domxref("ScriptProcessorNode")}} input buffer is ready to be processed.</dd>
 </dl>
 
 <h3 id="Offlinebackground_audio_processing">Offline/background audio processing</h3>
@@ -272,11 +272,11 @@ tags:
 	<li><a href="/en-US/docs/Web/Media/Autoplay_guide">Autoplay guide for media and Web Audio APIs</a></li>
 	<li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_IIR_filters">Using IIR filters</a></li>
 	<li><a href="/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API">Visualizations with Web Audio API</a></li>
-	<li><a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics">Web audio spatialisation basics</a></li>
+	<li><a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">Web audio spatialisation basics</a></li>
 	<li><a href="/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode">Controlling multiple parameters with ConstantSourceNode</a></li>
 	<li><a href="http://www.html5rocks.com/tutorials/webaudio/positional_audio/">Mixing Positional Audio and WebGL</a></li>
 	<li><a href="http://www.html5rocks.com/tutorials/webaudio/games/">Developing Game Audio with the Web Audio API</a></li>
-	<li><a href="/en-US/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext">Porting webkitAudioContext code to standards based AudioContext</a></li>
+	<li><a href="/en-US/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext">Porting webkitAudioContext code to standards based AudioContext</a></li>
 </ul>
 
 <h3 id="Libraries">Libraries</h3>
