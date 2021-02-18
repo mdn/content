@@ -389,7 +389,7 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <p>The IEC standard for calculating relative luminance (Y) from an sRGB color is as follows:</p>
 
-<h4>STEP ONE (8 bit integer to float)</h4>
+<h4>Step one: 8 bit integer to float</h4>
 
 <p>Convert 8 bit sRGB values to float (0.0 to 1.0) by dividing by 255.0:</p>
 
@@ -416,10 +416,11 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 }</pre>
 
 <div class="note notecard">
-<h4>IMPORTANT NOTE</h4>
-<p><em>Those familiar with the WCAG 2.x contrast math may notice that the above code uses the threshold value of 0.04045. This is the official IEC standard. The WCAG 2.x guidelines were drafted citing an obsolete value. While the WCAG 2.x version is technically incorrect, with 8-bit color there is no functional difference for the purpose of WCAG 2.x contrast. For the record, the WCAG 2.x value is 0.03928 </em></p></div>
+  <h4>Important Note</h4>
+  <p>Those familiar with the WCAG 2.x contrast math may notice that the above code uses the threshold value of 0.04045. This is the official IEC standard. The WCAG 2.x guidelines were drafted citing an obsolete value. While the WCAG 2.x version is technically incorrect, with 8-bit color there is no functional difference for the purpose of WCAG 2.x contrast. For the record, the WCAG 2.x value is 0.03928.</p>
+</div>
 
-<h4>STEP THREE (Spectrally Weighted Luminance)</h4>
+<h4>Step three: Spectrally Weighted Luminance</h4>
 
 <p>The normal human eye has three types of cones that are sensitive to red, green, and blue light. But our spectral sensitivity is not uniform, as we are most sensitive to green (555 nm), and blue is a distant last place. Luminance is spectrally weighted to reflect this using the following coefficients for sRGB:</p>
 
