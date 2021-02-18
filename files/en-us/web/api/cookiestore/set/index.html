@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}</div>
 
-<p class="summary">The <strong><code>set()</code></strong> method of the {{domxref("CookieStore")}} interface sets a cookie using a name and value or an object should more options need to be passed.</p>
+<p class="summary">The <strong><code>set()</code></strong> method of the {{domxref("CookieStore")}} interface sets a cookie with the given name and value or options object. (See below.)</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -19,8 +19,8 @@ var <var>promise</var> = cookieStore.set(<var>options</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
- <p><code>set()</code> requires either the <code>name</code> and <code>value</code> argument or the <code>options</code> argument.</p>
- 
+<p>This method requires one of the following:</p>
+
 <dl>
   <dt><code>name</code></dt>
   <dd>A {{domxref("USVString")}} with the name of the cookie.</dd>
@@ -41,11 +41,19 @@ var <var>promise</var> = cookieStore.set(<var>options</var>);</pre>
       <dd>A {{domxref("USVString")}} containing the path of the cookie.</dd>
       <dt><code>sameSite</code>{{Optional_Inline}}</dt>
       <dd>One of the following <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">SameSite</a> values:
-        <ul>
-          <li><code>strict</code></li>
-          <li><code>lax</code></li>
-          <li><code>none</code></li>
-        </ul>
+        <dl>
+          <dt><code>"strict"</code></dt>
+          <dd>Cookies will only be sent in a first-party context and not be sent along with requests initiated by third party websites.</dd>
+          <dt><code>"lax"</code></dt>
+          <dd>Cookies are not sent on normal cross-site subrequests (for example to load images or frames into a third party site), but are sent when a user is navigating to the origin site (i.e. when following a link).</dd>
+          <dt><code>"none"</code></dt>
+          <dd>Cookies will be sent in all contexts.</dd>
+        </dl>
+
+        <div class="notecard note">
+          <h4>Note</h4>
+          <p>For more information on SameSite cookies see <a href="https://web.dev/samesite-cookies-explained/">SameSite cookies explained</a>.</p>
+        </div>
       </dd>
     </dl>
   </dd>
@@ -61,7 +69,7 @@ var <var>promise</var> = cookieStore.set(<var>options</var>);</pre>
   <dt>{{jsxref("TypeError")}}</dt>
   <dd>Thrown if setting the cookie with the given values fails.</dd>
   <dt>{{domxref("DOMException")}} <code>SecurityError</code></dt>
-  <dd>Thrown if the origin is classed as an opaque origin, and unable to be serialized.</dd>
+  <dd>Thrown if the origin does not {{glossary("serialize")}} to a URL.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>

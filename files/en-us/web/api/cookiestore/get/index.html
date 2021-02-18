@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}</div>
 
-<p class="summary">The <strong><code>get()</code></strong> method of the {{domxref("CookieStore")}} interface returns a single cookie. On being passed a cookie name or object containing and cookie name and URL it will return the first matching cookie for those parameters.</p>
+<p class="summary">The <strong><code>get()</code></strong> method of the {{domxref("CookieStore")}} interface returns a single cookie with the given name or options object. (See below.) The method will return the first matching cookie for the passed parameters.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -19,7 +19,7 @@ var <var>cookie</var> = CookieStore.get(<var>options</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
-<p>Either <code>name</code> or <code>options</code> must be passed to <code>get()</code>.</p>
+<p>This method requires one of the following:</p>
 
 <dl>
   <dt><code>name</code></dt>
@@ -58,12 +58,20 @@ var <var>cookie</var> = CookieStore.get(<var>options</var>);</pre>
   <dt><code>secure</code></dt>
   <dd>A {{jsxref("boolean")}} indicating whether the cookie is to be used in secure contexts only.</dd>
   <dt><code>sameSite</code></dt>
-  <dd>An <code>enum</code> with one of the following <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">SameSite</a> values:
-    <ul>
-      <li><code>strict</code></li>
-      <li><code>lax</code></li>
-      <li><code>none</code></li>
-    </ul>
+  <dd>One of the following <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">SameSite</a> values:
+    <dl>
+      <dt><code>"strict"</code></dt>
+      <dd>Cookies will only be sent in a first-party context and not be sent along with requests initiated by third party websites.</dd>
+      <dt><code>"lax"</code></dt>
+      <dd>Cookies are not sent on normal cross-site subrequests (for example to load images or frames into a third party site), but are sent when a user is navigating to the origin site (i.e. when following a link).</dd>
+      <dt><code>"none"</code></dt>
+      <dd>Cookies will be sent in all contexts.</dd>
+    </dl>
+
+    <div class="notecard note">
+      <h4>Note</h4>
+      <p>For more information on SameSite cookies see <a href="https://web.dev/samesite-cookies-explained/">SameSite cookies explained</a>.</p>
+    </div>
   </dd>
 </dl>
 
