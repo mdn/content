@@ -135,6 +135,7 @@ span {
 <p>If you now save and refresh, you should see something like so:</p>
 
 <div class="hidden">
+<h3 id="hidden_abspos_code">hidden abspos code</h3>
 <pre class="brush: html   notranslate">&lt;h1&gt;Absolute positioning&lt;/h1&gt;
 
 &lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
@@ -170,7 +171,7 @@ span {
 }</pre>
 </div>
 
-<p>{{ EmbedLiveSample('Absolute_positioning', '100%', 420) }}</p>
+<p>{{ EmbedLiveSample('hidden_abspos_code', '100%', 450) }}</p>
 
 <p>First of all, note that the gap where the positioned element should be in the document flow is no longer there — the first and third elements have closed together like it no longer exists! Well, in a way, this is true. An absolutely positioned element no longer exists in the normal document layout flow. Instead, it sits on its own layer separate from everything else. This is very useful: it means that we can create isolated UI features that don't interfere with the layout of other elements on the page.  For example, popup information boxes and control menus; rollover panels; UI features that can be dragged and dropped anywhere on the page; and so on...</p>
 
