@@ -13,7 +13,7 @@ tags:
 
 <p>A <code>CookieStoreManager</code> has an associated <strong>registration</strong> which is a {{domxref("ServiceWorkerRegistration")}}. Each service worker registration has a cookie change subscription list, which is a list of cookie change subscriptions each containing a name and url. The methods in this interface allow the service worker to add and remove subscriptions from this list, and to get a list of all subscriptions.</p>
 
-<p>The {{domxref("ServiceWorkerRegistration")}} interface is extended to give access to <code>CookieStoreManager</code> via <code>cookies</code>; therefore, <code>CookieStoreManager</code> has no constructor.</p>
+<p>The {{domxref("ServiceWorkerRegistration")}} interface is extended to give access to <code>CookieStoreManager</code> via <code>cookies</code>. Therefore, <code>CookieStoreManager</code> has no constructor.</p>
 
 <h2 id="Methods">Methods</h2>
 
@@ -36,7 +36,6 @@ await registration.cookies.subscribe(subscriptions);</pre>
 <p>If the {{domxref("ServiceWorkerRegistration")}} has subscribed to any cookies then {{domxref("CookieStoreManager.getSubscriptions()","getSubscriptions()")}} will return a list of cookies represented by objects in the same format as used for the original subscription.</p>
 
 <pre class="brush: js">const subscriptions = await registration.cookies.getSubscriptions();</pre>
-
 
 <h2 id="Specifications">Specifications</h2>
 
