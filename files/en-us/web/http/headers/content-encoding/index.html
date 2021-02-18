@@ -36,11 +36,9 @@ tags:
 <pre class="brush: html notranslate">Content-Encoding: gzip
 Content-Encoding: compress
 Content-Encoding: deflate
-Content-Encoding: identity
 Content-Encoding: br
 
 // Multiple, in the order in which they were applied
-Content-Encoding: gzip, identity
 Content-Encoding: deflate, gzip
 </pre>
 
@@ -68,9 +66,6 @@ Content-Encoding: deflate, gzip
       href="https://en.wikipedia.org/wiki/DEFLATE"><em>deflate</em></a> compression
     algorithm (defined in <a class="external"
       href="https://tools.ietf.org/html/rfc1951">RFC 1951</a>).</dd>
-  <dt><code>identity</code></dt>
-  <dd>Indicates the identity function (i.e., no compression or modification). This token,
-    except if explicitly specified, is always deemed acceptable.</dd>
   <dt><code>br</code></dt>
   <dd>A format using the <a href="https://en.wikipedia.org/wiki/Brotli">Brotli</a>
     algorithm.</dd>
