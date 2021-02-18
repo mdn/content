@@ -13,7 +13,7 @@ tags:
 
 <h2>Concepts and Usage</h2>
 
-<p>The existing method of getting and setting cookies involves working with {{domxref("document.cookie")}} as a string of <code>key=value</code> pairs. In addition to this being cumbersome and error prone, it also has a host of issues in respect of modern web development.</p>
+<p>The existing method of getting and setting cookies involves working with {{domxref("document.cookie")}} as a string of key/value pairs. In addition to this being cumbersome and error prone, it also has a host of issues in the context of modern web development.</p>
 
 <p>The <code>document.cookie</code> interface is synchronous, single-threaded, and blocking. When writing a cookie you must wait for the browser to update the string of cookies. In addition, the reliance on {{domxref("document")}} means that cookies cannot be accessed by service workers, which have no <code>document</code> and cannot block the event loop.</p>
 
