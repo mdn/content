@@ -397,7 +397,8 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <p>If your sRGB values are 16 bit then convert to decimal by dividing by 65535.</p>
 
-<h4>STEP TWO (Linearize)</h4>
+<h4>Step two: Linearize</h4>
+
 <p>Linearize the data to remove the encoded transfer curve.</p>
 
 <p>&nbsp;&nbsp; <strong>R<sub>lin</sub> = sRGBtoLin(R´<sub>float</sub>) &nbsp;&nbsp;   G<sub>lin</sub> = sRGBtoLin(G´<sub>float</sub>)   &nbsp;&nbsp; B<sub>lin</sub> = sRGBtoLin(B´<sub>float</sub>) </strong></p>
