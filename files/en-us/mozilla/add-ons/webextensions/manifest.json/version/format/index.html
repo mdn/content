@@ -8,7 +8,7 @@ tags:
 ---
 <p>{{AddonSidebar}}</p>
 
-<h1 id="Version_format" name="Version_format">Manifest Version Format</h1>
+<h1 id="Version_format">Manifest Version Format</h1>
 
 <p>A <strong>version string</strong> consists of one or more <em>version parts</em>, separated with dots.</p>
 
@@ -36,7 +36,7 @@ tags:
 
 <p>See <a href="https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#distributing-your-addon">maintenance policy</a> for special rules that mark version as &quot;beta&quot; in the AMO queues.</p>
 
-<h2 id="Comparing_versions" name="Comparing_versions">Comparing versions</h2>
+<h2 id="Comparing_versions">Comparing versions</h2>
 
 <p>When two version strings are compared, their version parts are compared left to right. An empty or missing version part is equivalent to <code>0</code>.</p>
 
@@ -44,11 +44,11 @@ tags:
 
 <p>Otherwise, the version strings are equal. Note, that since missing version parts are treated as if they were <code>0</code>, the following version strings are equal: <code>1</code>, <code>1.0</code>, <code>1.0.</code>, <code>1.0.0</code>, and even <code>1.0...</code></p>
 
-<h3 id="Comparing_version_parts" name="Comparing_version_parts">Comparing version parts</h3>
+<h3 id="Comparing_version_parts">Comparing version parts</h3>
 
 <p>Version parts are also compared left to right, parts A and C are compared as numbers, while parts B and D are compared byte-wise. A string-part that exists is always less than a string-part that doesn&apos;t exist (<code>1.6a</code> is less than <code>1.6</code>).</p>
 
-<h2 id="Examples" name="Examples">Examples</h2>
+<h2 id="Examples">Examples</h2>
 
 <pre class="eval">1.-1
 &lt; 1 == 1. == 1.0 == 1.0.0
