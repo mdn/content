@@ -673,10 +673,6 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
 
 <p>The Cache API is a another client-side storage mechanism, with a bit of a difference — it is designed to save HTTP responses, and so works very well with service workers.</p>
 
-<div class="note">
-<p><strong>Note</strong>: Service workers and Cache are supported in most modern browsers now. At the time of writing, Safari was still busy implementing it, but it should be there soon.</p>
-</div>
-
 <h3 id="A_service_worker_example">A service worker example</h3>
 
 <p>Let's look at an example, to give you a bit of an idea of what this might look like. We have created another version of the video store example we saw in the previous section — this functions identically, except that it also saves the HTML, CSS, and JavaScript in the Cache API via a service worker, allowing the example to run offline!</p>
