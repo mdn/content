@@ -405,15 +405,15 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <p>Using the function shown below:</p>
 
-<pre class="brush: javascript" style="">function sRGBtoLin(colorChannel) {
-		  // Send this function a decimal sRGB gamma encoded color channel
-		  // between 0.0 and 1.0, and it returns a linearized value.
-		if ( colorChannel &lt;= 0.04045 ) {
-			return colorChannel / 12.92;
-		} else {
-			return Math.pow((( colorChannel + 0.055)/1.055),2.4);
-		}
-	}</pre>
+<pre class="brush: javascript" style="">function sRGBtoLin(colorChannel) {   
+  // Send this function a decimal sRGB gamma encoded color channel
+  // between 0.0 and 1.0, and it returns a linearized value.
+  if ( colorChannel &lt;= 0.04045 ) {
+    return colorChannel / 12.92;
+  } else {
+      return Math.pow((( colorChannel + 0.055)/1.055),2.4);
+  }
+}</pre>
 
 <div class="note notecard">
 <h4>IMPORTANT NOTE</h4>
