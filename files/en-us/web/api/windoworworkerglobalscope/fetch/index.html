@@ -53,11 +53,8 @@ tags:
   <dt><code><var>resource</var></code></dt>
   <dd>This defines the resource that you wish to fetch. This can either be:
     <ul>
-      <li>A {{domxref("USVString")}} containing the direct URL of the resource you want to
-        fetch. Some browsers accept the <code>blob:</code> and <code>data:</code> schemes.
-      </li>
+      <li>A string or any other object with a <a href="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#stringifiers">stringifier</a> — including a {{domxref("URL")}} object — that provides the URL of the resource you want to fetch.</li>
       <li>A {{domxref("Request")}} object.</li>
-      <li>A {{domxref("URL")}} object, or any other object with a <a href="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#stringifiers">stringifier</a> that provides the URL for the resource you want to fetch.</li>
     </ul>
   </dd>
   <dt><code><var>init</var></code> {{optional_inline}}</dt>
