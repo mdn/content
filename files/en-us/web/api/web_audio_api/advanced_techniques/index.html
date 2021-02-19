@@ -430,7 +430,7 @@ rateControl.addEventListener('input', function() {
 <pre class="brush: js">function playSample(audioContext, audioBuffer, time) {
     const sampleSource = audioContext.createBufferSource();
     sampleSource.buffer = audioBuffer;
-    sampleSource.playbackRate = playbackRate;
+    sampleSource.playbackRate.value = playbackRate;
     sampleSource.connect(audioContext.destination)
     sampleSource.start(time);
     return sampleSource;
