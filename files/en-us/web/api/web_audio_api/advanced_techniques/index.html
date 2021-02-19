@@ -499,7 +499,7 @@ function scheduleNote(beatNumber, time) {
         playNoise(time)
     }
     if (pads[3].querySelectorAll('button')[beatNumber].getAttribute('aria-checked') === 'true') {
-        playSourceNode(audioCtx, dtmf, time);
+        playSample(audioCtx, dtmf, time);
     }
 }</pre>
 
