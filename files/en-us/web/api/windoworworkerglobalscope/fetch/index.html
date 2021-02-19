@@ -2,15 +2,15 @@
 title: WindowOrWorkerGlobalScope.fetch()
 slug: Web/API/WindowOrWorkerGlobalScope/fetch
 tags:
-- API
-- Experimental
-- Fetch
-- Fetch API
-- GlobalFetch
-- Method
-- Reference
-- WindowOrWorkerGlobalScope
-- request
+  - API
+  - Experimental
+  - Fetch
+  - Fetch API
+  - GlobalFetch
+  - Method
+  - Reference
+  - WindowOrWorkerGlobalScope
+  - request
 ---
 <p>{{APIRef("Fetch API")}}</p>
 
@@ -34,7 +34,7 @@ tags:
   {{domxref("Response.status")}} properties.</p>
 
 <p>The <code>fetch()</code> method is controlled by the <code>connect-src</code> directive
-  of <a href="/en-US/docs/Security/CSP/CSP_policy_directives">Content Security Policy</a>
+  of <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content Security Policy</a>
   rather than the directive of the resources it's retrieving.</p>
 
 <div class="note">
@@ -57,7 +57,7 @@ tags:
         fetch. Some browsers accept the <code>blob:</code> and <code>data:</code> schemes.
       </li>
       <li>A {{domxref("Request")}} object.</li>
-      <li>A {{domxref("URL")}} object, or any other object with a <a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#stringifiers">stringifier</a> that provides the URL for the resource you want to fetch.</li>
+      <li>A {{domxref("URL")}} object, or any other object with a <a href="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#stringifiers">stringifier</a> that provides the URL for the resource you want to fetch.</li>
     </ul>
   </dd>
   <dt><code><var>init</var></code> {{optional_inline}}</dt>
@@ -130,7 +130,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{domxref("Promise")}} that resolves to a {{domxref("Response")}} object.</p>
+<p>A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
@@ -255,7 +255,7 @@ let myRequest = new Request('flowers.jpg', myInit);
 
 <ul>
   <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
-  <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
+  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
   <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a></li>
   <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
 </ul>
