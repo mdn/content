@@ -12,6 +12,14 @@ tags:
 
 <h2 id="february_2021">February 2021</h2>
 
+<h3 id="multiline_javascript_and_api_syntax_blocks">Multiline JavaScript and API syntax blocks</h3>
+
+<p>Previously, the syntax blocks of JavaScript builtin and WebAPI methods that can be used in multiple different ways (i.e. various parameters are optional) were commonly written using <a href="https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form">BNF formal syntax notation</a>. Most notably, square brackets were used to signify optional parameters.</p>
+
+<p>This was problematic — many developers were confused by this, and it conflicts with valid syntax forms in other programming languages (e.g. <code>[]</code> is also an array in JavaScript).</p>
+
+<p>As a result, going forward we are now writing multiple syntax forms of a method on separate lines inside the syntax block. See <a href="/en-US/docs/MDN/Structures/Syntax_sections#Multiple_lines">Syntax sections > Multiple lines/Optional paramaters</a> for further information and examples.</p>
+
 <h3 id="documenting_mixins">Documenting mixins</h3>
 
 <p><a href="https://heycam.github.io/webidl/#idl-interface-mixins">Interface mixins</a> in Web IDL are used in specifications to define Web APIs.
