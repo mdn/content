@@ -33,7 +33,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>prototypeObj</var>.isPrototypeOf(<var>object</var>)</pre>
+  class="brush: js"><var>prototypeObj</var>.isPrototypeOf(<var>object</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -68,7 +68,7 @@ tags:
   <code>Bar.prototype</code>, <code>Foo.prototype</code> and <code>Object.prototype</code>
   exist in the prototype chain for object <code>baz</code>:</p>
 
-<pre class="brush: js notranslate">function Foo() {}
+<pre class="brush: js">function Foo() {}
 function Bar() {}
 function Baz() {}
 
@@ -91,7 +91,7 @@ console.log(Object.prototype.isPrototypeOf(baz)); // true
 <p>For example, check if <code>baz</code> object descends from <code>Foo.prototype</code>:
 </p>
 
-<pre class="brush: js notranslate">if (Foo.prototype.isPrototypeOf(baz)) {
+<pre class="brush: js">if (Foo.prototype.isPrototypeOf(baz)) {
   // do something safe
 }
 </pre>

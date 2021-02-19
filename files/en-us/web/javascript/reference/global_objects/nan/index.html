@@ -38,7 +38,7 @@ tags:
 
 <p><code>NaN</code> compares unequal (via <code>==</code>, <code>!=</code>, <code>===</code>, and <code>!==</code>) to any other value -- including to another <code>NaN</code> value. Use {{jsxref("Number.isNaN()")}} or {{jsxref("Global_Objects/isNaN", "isNaN()")}} to most clearly determine whether a value is <code>NaN</code>. Or perform a self-comparison: <code>NaN</code>, and only <code>NaN</code>, will compare unequal to itself.</p>
 
-<pre class="brush: js notranslate">NaN === NaN;        // false
+<pre class="brush: js">NaN === NaN;        // false
 Number.NaN === NaN; // false
 isNaN(NaN);         // true
 isNaN(Number.NaN);  // true
@@ -52,13 +52,13 @@ valueIsNaN(Number.NaN); // true
 
 <p>However, do note the difference between <code>isNaN()</code> and <code>Number.isNaN()</code>: the former will return <code>true</code> if the value is currently <code>NaN</code>, or if it is going to be <code>NaN</code> after it is coerced to a number, while the latter will return <code>true</code> only if the value is currently <code>NaN</code>:</p>
 
-<pre class="brush: js notranslate">isNaN('hello world');        // true
+<pre class="brush: js">isNaN('hello world');        // true
 Number.isNaN('hello world'); // false
 </pre>
 
 <p>Additionally, some array methods cannot find <code>NaN</code>, while others can.</p>
 
-<pre class="brush: js notranslate">let arr = [2, 4, NaN, 12];
+<pre class="brush: js">let arr = [2, 4, NaN, 12];
 arr.indexOf(NaN);                      // -1 (false)
 arr.includes(NaN);                     // true
 arr.findIndex(n =&gt; Number.isNaN(n));   // 2

@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Symbol.for(<var>key</var>);</pre>
+<pre class="brush: js">Symbol.for(<var>key</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -74,7 +74,7 @@ tags:
 
 <h3 id="Using_Symbol.for">Using Symbol.for()</h3>
 
-<pre class="brush: js notranslate">Symbol.for('foo'); // create a new global symbol
+<pre class="brush: js">Symbol.for('foo'); // create a new global symbol
 Symbol.for('foo'); // retrieve the already created symbol
 
 // Same global symbol, but not locally
@@ -89,7 +89,7 @@ sym.toString(); // "Symbol(mario)"
 <p>To avoid name clashes with your global symbol keys and other (library code) global
   symbols, it might be a good idea to prefix your symbols:</p>
 
-<pre class="brush: js notranslate">Symbol.for('mdn.foo');
+<pre class="brush: js">Symbol.for('mdn.foo');
 Symbol.for('mdn.bar');
 </pre>
 

@@ -19,7 +19,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">new Uint8ClampedArray(); // new in ES2017
+  class="brush: js">new Uint8ClampedArray(); // new in ES2017
 new Uint8ClampedArray(<var>length</var>);
 new Uint8ClampedArray(<var>typedArray</var>);
 new Uint8ClampedArray(<var>object</var>);
@@ -59,7 +59,7 @@ new Uint8ClampedArray(<var>buffer</var> [, <var>byteOffset</var> [, <var>length<
 <h3 id="Different_ways_to_create_a_Uint8ClampedArray">Different ways to create a
   Uint8ClampedArray</h3>
 
-<pre class="brush: js notranslate">// From a length
+<pre class="brush: js">// From a length
 var uintc8 = new Uint8ClampedArray(2);
 uintc8[0] = 42;
 uintc8[1] = 1337;
@@ -114,12 +114,12 @@ var uintc8 = new Uint8ClampedArray(iterable);
   <code>Uint8ClampedArray</code> constructor as a function without <code>new</code>, will
   throw a {{jsxref("TypeError")}} from now on.</p>
 
-<pre class="brush: js example-bad notranslate">var dv = Uint8ClampedArray([1, 2, 3]);
+<pre class="brush: js example-bad">var dv = Uint8ClampedArray([1, 2, 3]);
 // TypeError: calling a builtin Uint8ClampedArray constructor
 // without new is forbidden</pre>
 
 <pre
-  class="brush: js example-good notranslate">var dv = new Uint8ClampedArray([1, 2, 3]);</pre>
+  class="brush: js example-good">var dv = new Uint8ClampedArray([1, 2, 3]);</pre>
 
 <h2 id="See_also">See also</h2>
 

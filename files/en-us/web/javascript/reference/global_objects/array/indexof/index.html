@@ -26,7 +26,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>arr</var>.indexOf(<var>searchElement</var>[, <var>fromIndex</var>])</pre>
+  class="brush: js"><var>arr</var>.indexOf(<var>searchElement</var>[, <var>fromIndex</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -65,7 +65,7 @@ tags:
 
 <p>The following example uses <code>indexOf()</code> to locate values in an array.</p>
 
-<pre class="brush: js notranslate">var array = [2, 9, 9];
+<pre class="brush: js">var array = [2, 9, 9];
 array.indexOf(2);     // 0
 array.indexOf(7);     // -1
 array.indexOf(9, 2);  // 2
@@ -76,7 +76,7 @@ array.indexOf(2, -3); // 0
 <h3 id="Finding_all_the_occurrences_of_an_element">Finding all the occurrences of an
   element</h3>
 
-<pre class="brush: js notranslate">var indices = [];
+<pre class="brush: js">var indices = [];
 var array = ['a', 'b', 'a', 'c', 'a', 'd'];
 var element = 'a';
 var idx = array.indexOf(element);
@@ -91,7 +91,7 @@ console.log(indices);
 <h3 id="Finding_if_an_element_exists_in_the_array_or_not_and_updating_the_array">Finding
   if an element exists in the array or not and updating the array</h3>
 
-<pre class="brush: js notranslate">function updateVegetablesCollection (veggies, veggie) {
+<pre class="brush: js">function updateVegetablesCollection (veggies, veggie) {
     if (veggies.indexOf(veggie) === -1) {
         veggies.push(veggie);
         console.log('New veggies collection is : ' + veggies);
@@ -117,7 +117,7 @@ updateVegetablesCollection(veggies, 'spinach');
   one specified in ECMA-262, 5th edition, assuming {{jsxref("Global_Objects/TypeError",
   "TypeError")}} and {{jsxref("Math.abs()")}} have their original values.</p>
 
-<pre class="brush: js notranslate">// This version tries to optimize by only checking for "in" when looking for undefined and
+<pre class="brush: js">// This version tries to optimize by only checking for "in" when looking for undefined and
 // skipping the definitely fruitless NaN search. Other parts are merely cosmetic conciseness.
 // Whether it is actually faster remains to be seen.
 if (!Array.prototype.indexOf)
@@ -147,7 +147,7 @@ if (!Array.prototype.indexOf)
   ECMA standard, and are less concerned about performance or conciseness, then you may
   find this more descriptive polyfill to be more useful.</p>
 
-<pre class="brush: js notranslate">// Production steps of ECMA-262, Edition 5, 15.4.4.14
+<pre class="brush: js">// Production steps of ECMA-262, Edition 5, 15.4.4.14
 // Reference: https://es5.github.io/#x15.4.4.14
 if (!Array.prototype.indexOf) {
   Array.prototype.indexOf = function(searchElement, fromIndex) {

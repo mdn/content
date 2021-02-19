@@ -36,7 +36,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>promise</em> = navigator.clipboard.write(<em>data</em>)</pre>
+  class="brush: js">var <em>promise</em> = navigator.clipboard.write(<em>data</em>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -57,7 +57,7 @@ tags:
 <p>This example function replaces the current contents of the clipboard with a specified
   string.</p>
 
-<pre class="brush: js notranslate">function setClipboard(text) {
+<pre class="brush: js">function setClipboard(text) {
   let data = [new ClipboardItem({ "text/plain": text })];
 
   navigator.clipboard.write(data).then(function() {
@@ -78,7 +78,7 @@ tags:
 <h3 id="Example_of_copying_canvas_contents_to_the_clipboard">Example of copying canvas
   contents to the clipboard</h3>
 
-<pre class="brush: js notranslate">function copyCanvasContentsToClipboard(canvas, onDone, onError) {
+<pre class="brush: js">function copyCanvasContentsToClipboard(canvas, onDone, onError) {
   canvas.toBlob(function (blob) {
     let data = [new ClipboardItem({ [blob.type]: blob })];
 

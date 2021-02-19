@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Reflect.apply(<var>target</var>, <var>thisArgument</var>, <var>argumentsList</var>)
+<pre class="brush: js">Reflect.apply(<var>target</var>, <var>thisArgument</var>, <var>argumentsList</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -57,7 +57,7 @@ tags:
     object</a>).</p>
 
 <pre
-  class="brush: js notranslate">Function.prototype.apply.call(Math.floor, undefined, [1.75]);</pre>
+  class="brush: js">Function.prototype.apply.call(Math.floor, undefined, [1.75]);</pre>
 
 <p>With <code>Reflect.apply()</code> this becomes less verbose and easier to understand.
 </p>
@@ -66,7 +66,7 @@ tags:
 
 <h3 id="Using_Reflect.apply">Using Reflect.apply()</h3>
 
-<pre class="brush: js notranslate">Reflect.apply(Math.floor, undefined, [1.75]);
+<pre class="brush: js">Reflect.apply(Math.floor, undefined, [1.75]);
 // 1;
 
 Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111])

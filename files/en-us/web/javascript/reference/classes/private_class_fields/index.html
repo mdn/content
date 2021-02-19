@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">class ClassWithPrivateField {
+<pre class="brush: js">class ClassWithPrivateField {
   #privateField
 }
 
@@ -39,7 +39,7 @@ class ClassWithPrivateStaticField {
 
 <p>The limitation of static variables being called by only static methods still holds.</p>
 
-<pre class="brush: js notranslate">class ClassWithPrivateStaticField {
+<pre class="brush: js">class ClassWithPrivateStaticField {
   static #PRIVATE_STATIC_FIELD
 
   static publicStaticMethod() {
@@ -57,7 +57,7 @@ console.assert(ClassWithPrivateStaticField.publicStaticMethod() === 42)</pre>
 
 <p>This can lead to unexpected behavior when using <strong><code>this</code></strong>.</p>
 
-<pre class="brush: js notranslate">class BaseClassWithPrivateStaticField {
+<pre class="brush: js">class BaseClassWithPrivateStaticField {
   static #PRIVATE_STATIC_FIELD
 
   static basePublicStaticMethod() {
@@ -87,7 +87,7 @@ console.assert(error instanceof TypeError)
 <p>The encapsulation is enforced by the language. It is a syntax error to refer to
   <code>#</code> names from out of scope.</p>
 
-<pre class="brush: js notranslate">class ClassWithPrivateField {
+<pre class="brush: js">class ClassWithPrivateField {
   #privateField
 
   constructor() {
@@ -110,7 +110,7 @@ instance.#privateField === 42 // Syntax error
 
 <p>Private static methods may be generator, async, and async generator functions.</p>
 
-<pre class="brush: js notranslate">class ClassWithPrivateStaticMethod {
+<pre class="brush: js">class ClassWithPrivateStaticMethod {
   static #privateStaticMethod() {
     return 42
   }
@@ -134,7 +134,7 @@ console.assert(ClassWithPrivateStaticMethod.publicStaticMethod2() === 42);
   <code>Derived.publicStaticMethod2()</code>, and thus exhibits the same "provenance
   restriction" as mentioned above:</p>
 
-<pre class="brush: js notranslate">class Base {
+<pre class="brush: js">class Base {
   static #privateStaticMethod() {
     return 42;
   }
@@ -157,7 +157,7 @@ console.log(Derived.publicStaticMethod2()); // TypeError
 <p>Private instance methods are methods available on class instances whose access is
   restricted in the same manner as private instance fields.</p>
 
-<pre class="brush: js notranslate">class ClassWithPrivateMethod {
+<pre class="brush: js">class ClassWithPrivateMethod {
   #privateMethod() {
     return 'hello world'
   }
@@ -174,7 +174,7 @@ console.log(instance.getPrivateMessage())
 <p>Private instance methods may be generator, async, or async generator functions. Private
   getters and setters are also possible:</p>
 
-<pre class="brush: js notranslate">class ClassWithPrivateAccessor {
+<pre class="brush: js">class ClassWithPrivateAccessor {
   #message
 
   get #decoratedMessage() {

@@ -44,7 +44,7 @@ tags:
 <p>Consider this example where {{jsxref("JSON.parse()")}} parses the string as JSON and
   {{jsxref("eval")}} executes the string as JavaScript:</p>
 
-<pre class="brush: js notranslate">let code = '"\u2028\u2029"'
+<pre class="brush: js">let code = '"\u2028\u2029"'
 JSON.parse(code)  // evaluates to "\u2028\u2029" in all engines
 eval(code)        // throws a SyntaxError in old engines
 </pre>
@@ -59,7 +59,7 @@ eval(code)        // throws a SyntaxError in old engines
 
 <p>The full JSON syntax is as follows:</p>
 
-<pre class="brush: js notranslate"><var>JSON</var> = <strong>null</strong>
+<pre class="brush: js"><var>JSON</var> = <strong>null</strong>
     <em>or</em> <strong>true</strong> <em>or</em> <strong>false</strong>
     <em>or</em> <var>JSONNumber</var>
     <em>or</em> <var>JSONString</var>
@@ -141,7 +141,7 @@ eval(code)        // throws a SyntaxError in old engines
 
 <h3 id="Example_JSON">Example JSON</h3>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "browsers": {
     "firefox": {
       "name": "Firefox",

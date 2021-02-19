@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">x != y</pre>
+<pre class="brush: js">x != y</pre>
 
 <h2 id="Description">Description</h2>
 
@@ -27,7 +27,7 @@ tags:
   of the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Equality">equality</a>
   operator so the following two lines will always give the same result:</p>
 
-<pre class="brush: js notranslate">x != y
+<pre class="brush: js">x != y
 
 !(x == y)</pre>
 
@@ -38,19 +38,19 @@ tags:
 <p>Like the equality operator, the inequality operator will attempt to convert and compare
   operands of different types:</p>
 
-<pre class="brush: js notranslate">3 != "3"; // false</pre>
+<pre class="brush: js">3 != "3"; // false</pre>
 
 <p>To prevent this, and require that different types are considered to be different, use
   the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality">strict
     inequality</a> operator instead:</p>
 
-<pre class="brush: js notranslate">3 !== "3"; // true</pre>
+<pre class="brush: js">3 !== "3"; // true</pre>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Comparison_with_no_type_conversion">Comparison with no type conversion</h3>
 
-<pre class="brush: js notranslate">1 != 2;              // true
+<pre class="brush: js">1 != 2;              // true
 "hello" != "hola";   // true
 
 1 != 1;              // false
@@ -58,7 +58,7 @@ tags:
 
 <h3 id="Comparison_with_type_conversion">Comparison with type conversion</h3>
 
-<pre class="brush: js notranslate">"1" !=  1;            // false
+<pre class="brush: js">"1" !=  1;            // false
 1 != "1";             // false
 0 != false;           // false
 0 != null;            // true
@@ -74,7 +74,7 @@ number1 != number2;   // true</pre>
 
 <h3 id="Comparison_of_objects">Comparison of objects</h3>
 
-<pre class="brush: js notranslate">const object1 = {"key": "value"}
+<pre class="brush: js">const object1 = {"key": "value"}
 const object2 = {"key": "value"};
 
 object1 != object2 // true

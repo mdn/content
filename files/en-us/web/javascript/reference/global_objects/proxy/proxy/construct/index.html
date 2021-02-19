@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <var>p</var> = new Proxy(<var>target</var>, {
+<pre class="brush: js">const <var>p</var> = new Proxy(<var>target</var>, {
   construct: function(<var>target</var>, <var>argumentsList</var>, <var>newTarget</var>) {
   }
 });
@@ -67,7 +67,7 @@ tags:
 
 <p>The following code traps the {{jsxref("Operators/new", "new")}} operator.</p>
 
-<pre class="brush: js notranslate">const p = new Proxy(function() {}, {
+<pre class="brush: js">const p = new Proxy(function() {}, {
   construct: function(target, argumentsList, newTarget) {
     console.log('called: ' + argumentsList.join(', '));
     return { value: argumentsList[0] * 10 };
@@ -80,7 +80,7 @@ console.log(new p(1).value); // "called: 1"
 
 <p>The following code violates the invariant.</p>
 
-<pre class="brush: js example-bad notranslate">const p = new Proxy(function() {}, {
+<pre class="brush: js example-bad">const p = new Proxy(function() {}, {
   construct: function(target, argumentsList, newTarget) {
     return 1;
   }
@@ -91,7 +91,7 @@ new p(); // TypeError is thrown
 
 <p>The following code improperly initializes the proxy. The <code><var>target</var></code> in Proxy initialization must itself be a valid constructor for the {{jsxref("Operators/new", "new")}} operator.</p>
 
-<pre class="brush: js example-bad notranslate">const p = new Proxy({}, {
+<pre class="brush: js example-bad">const p = new Proxy({}, {
   construct: function(target, argumentsList, newTarget) {
     return {};
   }

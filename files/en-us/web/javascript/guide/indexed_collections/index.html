@@ -22,7 +22,7 @@ tags:
 
 <p>The following statements create equivalent arrays:</p>
 
-<pre class="brush: js notranslate">let arr = new Array(<var>element0</var>, <var>element1</var>, ..., <var>elementN</var>)
+<pre class="brush: js">let arr = new Array(<var>element0</var>, <var>element1</var>, ..., <var>elementN</var>)
 let arr = Array(<var>element0</var>, <var>element1</var>, ..., <var>elementN</var>)
 let arr = [<var>element0</var>, <var>element1</var>, ..., <var>elementN</var>]
 </pre>
@@ -33,7 +33,7 @@ let arr = [<var>element0</var>, <var>element1</var>, ..., <var>elementN</var>]
 
 <p>To create an array with non-zero length, but without any items, either of the following can be used:</p>
 
-<pre class="brush: js notranslate">// This...
+<pre class="brush: js">// This...
 let arr = new Array(<var>arrayLength</var>)
 
 // ...results in the same array as this
@@ -50,7 +50,7 @@ arr.length = <var>arrayLength</var>
 
 <p>In addition to a newly defined variable as shown above, arrays can also be assigned as a property of a new or an existing object:</p>
 
-<pre class="brush: js notranslate">let obj = {}
+<pre class="brush: js">let obj = {}
 // ...
 obj.prop = [element0, element1, ..., elementN]
 
@@ -60,7 +60,7 @@ let obj = {prop: [element0, element1, ...., elementN]}
 
 <p>If you wish to initialize an array with a single element, and the element happens to be a <code>Number</code>, you must use the bracket syntax. When a single <code>Number</code> value is passed to the <code>Array()</code> constructor or function, it is interpreted as an <code>arrayLength</code>, not as a single element.</p>
 
-<pre class="brush: js notranslate">let arr = [42]       // Creates an array with only one element:
+<pre class="brush: js">let arr = [42]       // Creates an array with only one element:
                      // the number 42.
 
 let arr = Array(42)  // Creates an array with no elements
@@ -73,20 +73,20 @@ arr.length = 42
 
 <p>Calling <code>Array(<var>N</var>)</code> results in a <code>RangeError</code>, if <code><var>N</var></code> is a non-whole number whose fractional portion is non-zero. The following example illustrates this behavior.</p>
 
-<pre class="brush: js notranslate">let arr = Array(9.3)   // RangeError: Invalid array length
+<pre class="brush: js">let arr = Array(9.3)   // RangeError: Invalid array length
 </pre>
 
 <p>If your code needs to create arrays with single elements of an arbitrary data type, it is safer to use array literals. Alternatively, create an empty array first before adding the single element to it.</p>
 
 <p>In ES2015, you can use the {{jsxref("Array.of")}} static method to create arrays with single element.</p>
 
-<pre class="brush: js notranslate">let wisenArray = Array.of(9.3)   // wisenArray contains only one element 9.3</pre>
+<pre class="brush: js">let wisenArray = Array.of(9.3)   // wisenArray contains only one element 9.3</pre>
 
 <h3 id="Referring_to_array_elements">Referring to array elements</h3>
 
 <p>Because elements are also properties, you can access the using <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">property accessors</a>. Suppose you define the following array:</p>
 
-<pre class="brush: js notranslate">let myArray = ['Wind', 'Rain', 'Fire']
+<pre class="brush: js">let myArray = ['Wind', 'Rain', 'Fire']
 </pre>
 
 <p>You can refer to the first element of the array as <code>myArray[0]</code>, the second element of the array as <code>myArray[1]</code>, etc… The index of the elements begins with zero.</p>
@@ -94,7 +94,7 @@ arr.length = 42
 <div class="note">
 <p><strong>Note:</strong> You can also use <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">property accessors</a> to access other properties of the array, like with an object.</p>
 
-<pre class="brush: js notranslate">let arr = ['one', 'two', 'three']
+<pre class="brush: js">let arr = ['one', 'two', 'three']
 arr[2]          // three
 arr['length']   // 3
 </pre>
@@ -104,7 +104,7 @@ arr['length']   // 3
 
 <p>You can populate an array by assigning values to its elements. For example:</p>
 
-<pre class="brush: js notranslate">let emp = []
+<pre class="brush: js">let emp = []
 emp[0] = 'Casey Jones'
 emp[1] = 'Phil Lesh'
 emp[2] = 'August West'
@@ -113,7 +113,7 @@ emp[2] = 'August West'
 <div class="note">
 <p><strong>Note:</strong> If you supply a non-integer value to the array operator in the code above, a property will be created in the object representing the array, instead of an array element.</p>
 
-<pre class="brush: js notranslate">let arr = []
+<pre class="brush: js">let arr = []
 arr[3.4] = 'Oranges'
 console.log(arr.length)                 // 0
 console.log(arr.hasOwnProperty(3.4))    // true
@@ -122,7 +122,7 @@ console.log(arr.hasOwnProperty(3.4))    // true
 
 <p>You can also populate an array when you create it:</p>
 
-<pre class="brush: js notranslate">let myArray = new Array('Hello', myVar, 3.14159)
+<pre class="brush: js">let myArray = new Array('Hello', myVar, 3.14159)
 // OR
 let myArray = ['Mango', 'Apple', 'Orange']
 </pre>
@@ -135,7 +135,7 @@ let myArray = ['Mango', 'Apple', 'Orange']
 
 <p>Remember, JavaScript Array indexes are 0-based: they start at <code>0</code>, not <code>1</code>. This means that the <code>length</code> property will be one more than the highest index stored in the array:</p>
 
-<pre class="brush: js notranslate">let cats = []
+<pre class="brush: js">let cats = []
 cats[30] = ['Dusty']
 console.log(cats.length) // 31
 </pre>
@@ -144,7 +144,7 @@ console.log(cats.length) // 31
 
 <p>Writing a value that is shorter than the number of stored items truncates the array. Writing <code>0</code> empties it entirely:</p>
 
-<pre class="brush: js notranslate">let cats = ['Dusty', 'Misty', 'Twiggy']
+<pre class="brush: js">let cats = ['Dusty', 'Misty', 'Twiggy']
 console.log(cats.length)  // 3
 
 cats.length = 2
@@ -161,7 +161,7 @@ console.log(cats)  // logs [ &lt;3 empty items&gt; ]
 
 <p>A common operation is to iterate over the values of an array, processing each one in some way. The simplest way to do this is as follows:</p>
 
-<pre class="brush: js notranslate">let colors = ['red', 'green', 'blue']
+<pre class="brush: js">let colors = ['red', 'green', 'blue']
 for (let i = 0; i &lt; colors.length; i++) {
   console.log(colors[i])
 }
@@ -169,7 +169,7 @@ for (let i = 0; i &lt; colors.length; i++) {
 
 <p>If you know that none of the elements in your array evaluate to <code>false</code> in a boolean context—if your array consists only of <a href="/en-US/docs/DOM">DOM</a> nodes, for example—you can use a more efficient idiom:</p>
 
-<pre class="brush: js notranslate">let divs = document.getElementsByTagName('div')
+<pre class="brush: js">let divs = document.getElementsByTagName('div')
 for (let i = 0, div; div = divs[i]; i++) {
   /* Process div in some way */
 }
@@ -179,7 +179,7 @@ for (let i = 0, div; div = divs[i]; i++) {
 
 <p>The {{jsxref("Array.forEach", "forEach()")}} method provides another way of iterating over an array:</p>
 
-<pre class="brush: js notranslate">let colors = ['red', 'green', 'blue']
+<pre class="brush: js">let colors = ['red', 'green', 'blue']
 colors.forEach(function(color) {
   console.log(color)
 })
@@ -190,7 +190,7 @@ colors.forEach(function(color) {
 
 <p>Alternatively, you can shorten the code for the forEach parameter with ES2015 Arrow Functions:</p>
 
-<pre class="brush: js notranslate">let colors = ['red', 'green', 'blue']
+<pre class="brush: js">let colors = ['red', 'green', 'blue']
 colors.forEach(color =&gt; console.log(color))
 // red
 // green
@@ -201,7 +201,7 @@ colors.forEach(color =&gt; console.log(color))
 
 <p>Note that the elements of an array that are omitted when the array is defined are not listed when iterating by <code>forEach</code>, but <em>are</em> listed when <code>undefined</code> has been manually assigned to the element:</p>
 
-<pre class="brush: js notranslate">let array = ['first', 'second', , 'fourth']
+<pre class="brush: js">let array = ['first', 'second', , 'fourth']
 
 array.forEach(function(element) {
   console.log(element)
@@ -233,54 +233,54 @@ array.forEach(function(element) {
 
 <p>{{jsxref("Array.concat", "concat()")}} joins two or more arrays and returns a new array.</p>
 
-<pre class="brush: js notranslate">let myArray = new Array('1', '2', '3')
+<pre class="brush: js">let myArray = new Array('1', '2', '3')
 myArray = myArray.concat('a', 'b', 'c')
 // myArray is now ["1", "2", "3", "a", "b", "c"]
 </pre>
 
 <p>{{jsxref("Array.join", "join(delimiter = ',')")}} joins all elements of an array into a string.</p>
 
-<pre class="brush: js notranslate">let myArray = new Array('Wind', 'Rain', 'Fire')
+<pre class="brush: js">let myArray = new Array('Wind', 'Rain', 'Fire')
 let list = myArray.join(' - ') // list is "Wind - Rain - Fire"
 </pre>
 
 <p>{{jsxref("Array.push", "push()")}} adds one or more elements to the end of an array and returns the resulting <code>length</code> of the array.</p>
 
-<pre class="brush: js notranslate">let myArray = new Array('1', '2')
+<pre class="brush: js">let myArray = new Array('1', '2')
 myArray.push('3')  // myArray is now ["1", "2", "3"]
 </pre>
 
 <p>{{jsxref("Array.pop", "pop()")}} removes the last element from an array and returns that element.</p>
 
-<pre class="brush: js notranslate">let myArray = new Array('1', '2', '3')
+<pre class="brush: js">let myArray = new Array('1', '2', '3')
 let last = myArray.pop()
 // myArray is now ["1", "2"], last = "3"
 </pre>
 
 <p>{{jsxref("Array.shift", "shift()")}} removes the first element from an array and returns that element.</p>
 
-<pre class="brush: js notranslate">let myArray = new Array('1', '2', '3')
+<pre class="brush: js">let myArray = new Array('1', '2', '3')
 let first = myArray.shift()
 // myArray is now ["2", "3"], first is "1"
 </pre>
 
 <p>{{jsxref("Array.unshift", "unshift()")}} adds one or more elements to the front of an array and returns the new length of the array.</p>
 
-<pre class="brush: js notranslate">let myArray = new Array('1', '2', '3')
+<pre class="brush: js">let myArray = new Array('1', '2', '3')
 myArray.unshift('4', '5')
 // myArray becomes ["4", "5", "1", "2", "3"]
 </pre>
 
 <p>{{jsxref("Array.slice", "slice(start_index, upto_index)")}} extracts a section of an array and returns a new array.</p>
 
-<pre class="brush: js notranslate">let myArray = new Array('a', 'b', 'c', 'd', 'e')
+<pre class="brush: js">let myArray = new Array('a', 'b', 'c', 'd', 'e')
 myArray = myArray.slice(1, 4)  // starts at index 1 and extracts all elements
                                // until index 3, returning [ "b", "c", "d"]
 </pre>
 
 <p>{{jsxref("Array.splice", "splice(index, count_to_remove, addElement1, addElement2, ...)")}} removes elements from an array and (optionally) replaces them. It returns the items which were removed from the array.</p>
 
-<pre class="brush: js notranslate">let myArray = new Array('1', '2', '3', '4', '5')
+<pre class="brush: js">let myArray = new Array('1', '2', '3', '4', '5')
 myArray.splice(1, 3, 'a', 'b', 'c', 'd')
 // myArray is now ["1", "a", "b", "c", "d", "5"]
 // This code started at index one (or where the "2" was),
@@ -290,14 +290,14 @@ myArray.splice(1, 3, 'a', 'b', 'c', 'd')
 
 <p>{{jsxref("Array.reverse", "reverse()")}} transposes the elements of an array, in place: the first array element becomes the last and the last becomes the first. It returns a reference to the array.</p>
 
-<pre class="brush: js notranslate">let myArray = new Array('1', '2', '3')
+<pre class="brush: js">let myArray = new Array('1', '2', '3')
 myArray.reverse()
 // transposes the array so that myArray = ["3", "2", "1"]
 </pre>
 
 <p>{{jsxref("Array.sort", "sort()")}} sorts the elements of an array in place, and returns a reference to the array.</p>
 
-<pre class="brush: js notranslate">let myArray = new Array('Wind', 'Rain', 'Fire')
+<pre class="brush: js">let myArray = new Array('Wind', 'Rain', 'Fire')
 myArray.sort()
 // sorts the array so that myArray = ["Fire", "Rain", "Wind"]
 </pre>
@@ -312,7 +312,7 @@ myArray.sort()
 
 <p>For instance, the following will sort by the last letter of a string:</p>
 
-<pre class="brush: js notranslate">let sortFn = function(a, b) {
+<pre class="brush: js">let sortFn = function(a, b) {
   if (a[a.length - 1] &lt; b[b.length - 1]) return -1;
   if (a[a.length - 1] &gt; b[b.length - 1]) return 1;
   if (a[a.length - 1] == b[b.length - 1]) return 0;
@@ -328,7 +328,7 @@ myArray.sort(sortFn)
 
 <p>{{jsxref("Array.indexOf", "indexOf(searchElement[, fromIndex])")}} searches the array for <code><var>searchElement</var></code> and returns the index of the first match.</p>
 
-<pre class="brush: js notranslate">let a = ['a', 'b', 'a', 'b', 'a']
+<pre class="brush: js">let a = ['a', 'b', 'a', 'b', 'a']
 console.log(a.indexOf('b'))     // logs 1
 
 // Now try again, starting from after the last match
@@ -338,7 +338,7 @@ console.log(a.indexOf('z'))     // logs -1, because 'z' was not found
 
 <p>{{jsxref("Array.lastIndexOf", "lastIndexOf(searchElement[, fromIndex])")}} works like <code>indexOf</code>, but starts at the end and searches backwards.</p>
 
-<pre class="brush: js notranslate">let a = ['a', 'b', 'c', 'd', 'a', 'b']
+<pre class="brush: js">let a = ['a', 'b', 'c', 'd', 'a', 'b']
 console.log(a.lastIndexOf('b'))     // logs 5
 
 // Now try again, starting from before the last match
@@ -348,28 +348,28 @@ console.log(a.lastIndexOf('z'))     // logs -1
 
 <p>{{jsxref("Array.forEach", "forEach(callback[, thisObject])")}} executes <code><var>callback</var></code> on every array item and returns <code>undefined</code>.</p>
 
-<pre class="brush: js notranslate">let a = ['a', 'b', 'c']
+<pre class="brush: js">let a = ['a', 'b', 'c']
 a.forEach(function(element) { console.log(element) })
 // logs each item in turn
 </pre>
 
 <p>{{jsxref("Array.map", "map(callback[, thisObject])")}} returns a new array of the return value from executing <code><var>callback</var></code> on every array item.</p>
 
-<pre class="brush: js notranslate">let a1 = ['a', 'b', 'c']
+<pre class="brush: js">let a1 = ['a', 'b', 'c']
 let a2 = a1.map(function(item) { return item.toUpperCase() })
 console.log(a2) // logs ['A', 'B', 'C']
 </pre>
 
 <p>{{jsxref("Array.filter", "filter(callback[, thisObject])")}} returns a new array containing the items for which <code><var>callback</var></code> returned <code>true</code>.</p>
 
-<pre class="brush: js notranslate">let a1 = ['a', 10, 'b', 20, 'c', 30]
+<pre class="brush: js">let a1 = ['a', 10, 'b', 20, 'c', 30]
 let a2 = a1.filter(function(item) { return typeof item === 'number'; })
 console.log(a2)  // logs [10, 20, 30]
 </pre>
 
 <p>{{jsxref("Array.every", "every(callback[, thisObject])")}} returns <code>true</code> if <code><var>callback</var></code> returns <code>true</code> for every item in the array.</p>
 
-<pre class="brush: js notranslate">function isNumber(value) {
+<pre class="brush: js">function isNumber(value) {
   return typeof value === 'number'
 }
 let a1 = [1, 2, 3]
@@ -380,7 +380,7 @@ console.log(a2.every(isNumber))  // logs false
 
 <p>{{jsxref("Array.some", "some(callback[, thisObject])")}} returns <code>true</code> if <code><var>callback</var></code> returns <code>true</code> for at least one item in the array.</p>
 
-<pre class="brush: js notranslate">function isNumber(value) {
+<pre class="brush: js">function isNumber(value) {
   return typeof value === 'number'
 }
 let a1 = [1, 2, 3]
@@ -399,7 +399,7 @@ console.log(a3.some(isNumber))  // logs false
 
 <p>If <code><var>callback</var></code> needs access to the index of the item being processed, on access to the entire array, they are available as optional parameters.</p>
 
-<pre class="brush: js notranslate">let a = [10, 20, 30]
+<pre class="brush: js">let a = [10, 20, 30]
 let total = a.reduce(function(accumulator, currentValue) { return accumulator + currentValue }, 0)
 console.log(total) // Prints 60
 </pre>
@@ -414,7 +414,7 @@ console.log(total) // Prints 60
 
 <p>The following code creates a two-dimensional array.</p>
 
-<pre class="brush: js notranslate">let a = new Array(4)
+<pre class="brush: js">let a = new Array(4)
 for (let i = 0; i &lt; 4; i++) {
   a[i] = new Array(4)
   for (let j = 0; j &lt; 4; j++) {
@@ -425,7 +425,7 @@ for (let i = 0; i &lt; 4; i++) {
 
 <p>This example creates an array with the following rows:</p>
 
-<pre class="notranslate">Row 0: [0, 0] [0, 1] [0, 2] [0, 3]
+<pre>Row 0: [0, 0] [0, 1] [0, 2] [0, 3]
 Row 1: [1, 0] [1, 1] [1, 2] [1, 3]
 Row 2: [2, 0] [2, 1] [2, 2] [2, 3]
 Row 3: [3, 0] [3, 1] [3, 2] [3, 3]
@@ -435,7 +435,7 @@ Row 3: [3, 0] [3, 1] [3, 2] [3, 3]
 
 <p>Arrays can also be used like objects, to store related information.</p>
 
-<pre class="brush: js notranslate"><code>const arr = [1, 2, 3];
+<pre class="brush: js"><code>const arr = [1, 2, 3];
 arr.property = "value";
 console.log(arr.property);  // Logs "value"</code>
 </pre>
@@ -450,7 +450,7 @@ console.log(arr.property);  // Logs "value"</code>
 
 <p>Array methods cannot be called directly on array-like objects.</p>
 
-<pre class="brush: js example-bad notranslate"><code>function printArguments() {
+<pre class="brush: js example-bad"><code>function printArguments() {
   arguments.forEach(function(item) {  // <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox-stackTrace reps-custom-format">TypeError: <span class="objectBox objectBox-string">arguments.forEach is not a function</span></span></span></span></span>
     console.log(item);
   });
@@ -459,7 +459,7 @@ console.log(arr.property);  // Logs "value"</code>
 
 <p>But you can call them indirectly using {{jsxref("Global_Objects/Function/call","Function.prototype.call()")}}.</p>
 
-<pre class="brush: js example-good notranslate"><code>function printArguments() {
+<pre class="brush: js example-good"><code>function printArguments() {
   Array.prototype.forEach.call(arguments, function(item) {
     console.log(item);
   });
@@ -468,7 +468,7 @@ console.log(arr.property);  // Logs "value"</code>
 
 <p>Array prototype methods can be used on strings as well, since they provide sequential access to their characters in a similar way to arrays:</p>
 
-<pre class="brush: js notranslate">Array.prototype.forEach.call('a string', function(chr) {
+<pre class="brush: js">Array.prototype.forEach.call('a string', function(chr) {
   console.log(chr)
 })
 </pre>

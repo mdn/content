@@ -15,7 +15,7 @@ tags:
 
 <p>JavaScript is a <em>loosely typed</em> and <em>dynamic</em> language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:</p>
 
-<pre class="brush: js notranslate">let foo = 42;    // foo is now a number
+<pre class="brush: js">let foo = 42;    // foo is now a number
 foo     = 'bar'; // foo is now a string
 foo     = true;  // foo is now a boolean
 </pre>
@@ -87,7 +87,7 @@ foo     = true;  // foo is now a boolean
 
 <p>In the praxis, this has almost no impact. For example, <code>+0 === -0</code> is <code>true</code>. However, you are able to notice this when you divide by zero:</p>
 
-<pre class="brush: js notranslate">&gt; 42 / +0
+<pre class="brush: js">&gt; 42 / +0
 Infinity
 &gt; 42 / -0
 -Infinity
@@ -111,7 +111,7 @@ Infinity
 
 <p>This example demonstrates, where incrementing the {{jsxref("Number.MAX_SAFE_INTEGER")}} returns the expected result:</p>
 
-<pre class="brush: js notranslate">&gt; const x = 2n ** 53n;
+<pre class="brush: js">&gt; const x = 2n ** 53n;
 9007199254740992n
 &gt; const y = x + 1n;
 9007199254740993n

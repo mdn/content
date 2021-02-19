@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Atomics.exchange(<var>typedArray</var>, <var>index</var>, <var>value</var>)
+<pre class="brush: js">Atomics.exchange(<var>typedArray</var>, <var>index</var>, <var>value</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -60,7 +60,7 @@ tags:
 
 <h3 id="Using_exchange">Using exchange()</h3>
 
-<pre class="brush: js notranslate">const sab = new SharedArrayBuffer(1024);
+<pre class="brush: js">const sab = new SharedArrayBuffer(1024);
 const ta = new Uint8Array(sab);
 
 Atomics.exchange(ta, 0, 12); // returns 0, the old value

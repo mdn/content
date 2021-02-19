@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>arr</var>.copyWithin(<var>target[, start[, end]]</var>)
+<pre class="brush: js"><var>arr</var>.copyWithin(<var>target[, start[, end]]</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -65,7 +65,7 @@ tags:
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="brush: js notranslate">if (!Array.prototype.copyWithin) {
+<pre class="brush: js">if (!Array.prototype.copyWithin) {
   Object.defineProperty(Array.prototype, 'copyWithin', {
     value: function(target, start/*, end*/) {
     // Steps 1-2.
@@ -137,7 +137,7 @@ tags:
 
 <h3 id="Using_copyWithin">Using copyWithin</h3>
 
-<pre class="brush: js notranslate">[1, 2, 3, 4, 5].copyWithin(-2)
+<pre class="brush: js">[1, 2, 3, 4, 5].copyWithin(-2)
 // [1, 2, 3, 1, 2]
 
 [1, 2, 3, 4, 5].copyWithin(0, 3)

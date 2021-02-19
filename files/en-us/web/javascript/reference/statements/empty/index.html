@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">;
+<pre class="brush: js">;
 </pre>
 
 <h2 id="Description">Description</h2>
@@ -41,7 +41,7 @@ tags:
 <p>The empty statement is sometimes used with loop statements. See the following example
   with an empty loop body:</p>
 
-<pre class="brush: js notranslate">let arr = [1, 2, 3];
+<pre class="brush: js">let arr = [1, 2, 3];
 
 // Assign all array values to 0
 for (let i = 0; i &lt; arr.length; arr[i++] = 0) /* empty statement */ ;
@@ -57,7 +57,7 @@ console.log(arr);
 
 <p>In the following example, the usage is probably not intentional:</p>
 
-<pre class="brush: js example-bad notranslate">if (condition);       // Caution, this "if" does nothing!
+<pre class="brush: js example-bad">if (condition);       // Caution, this "if" does nothing!
    killTheUniverse()  // So this always gets executed!!!
 </pre>
 
@@ -68,7 +68,7 @@ console.log(arr);
   not matter, and also the <code>launchRocket()</code> function in the <code>else</code>
   case will not be executed.</p>
 
-<pre class="brush: js example-bad notranslate">if (one)
+<pre class="brush: js example-bad">if (one)
   doOne();
 else if (two)
   doTwo();

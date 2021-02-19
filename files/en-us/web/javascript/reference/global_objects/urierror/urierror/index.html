@@ -15,7 +15,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">new URIError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
+  class="brush: js">new URIError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -32,7 +32,7 @@ tags:
 
 <h3 id="Catching_an_URIError">Catching an URIError</h3>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   decodeURIComponent('%')
 } catch (e) {
   console.log(e instanceof URIError)  // true
@@ -47,7 +47,7 @@ tags:
 
 <h3 id="Creating_an_URIError">Creating an URIError</h3>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   throw new URIError('Hello', 'someFile.js', 10)
 } catch (e) {
   console.log(e instanceof URIError)  // true

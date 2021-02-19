@@ -28,7 +28,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Math.random()</pre>
+<pre class="brush: js">Math.random()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -46,7 +46,7 @@ tags:
 <h3 id="Getting_a_random_number_between_0_inclusive_and_1_exclusive">Getting a random
   number between 0 (inclusive) and 1 (exclusive)</h3>
 
-<pre class="brush: js notranslate">function getRandom() {
+<pre class="brush: js">function getRandom() {
   return Math.random();
 }
 </pre>
@@ -58,7 +58,7 @@ tags:
   is no lower than (and may possibly equal) <code>min</code>, and is less than (and
   not equal) <code>max</code>.</p>
 
-<pre class="brush: js notranslate">function getRandomArbitrary(min, max) {
+<pre class="brush: js">function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
 }
 </pre>
@@ -71,7 +71,7 @@ tags:
   <code>min</code> isn't an integer), and is less than (but not equal to)
   <code>max</code>.</p>
 
-<pre class="brush: js notranslate">function getRandomInt(min, max) {
+<pre class="brush: js">function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
@@ -92,7 +92,7 @@ tags:
   minimum and the maximum? The <code>getRandomIntInclusive()</code> function below
   accomplishes that.</p>
 
-<pre class="brush: js notranslate">function getRandomIntInclusive(min, max) {
+<pre class="brush: js">function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive

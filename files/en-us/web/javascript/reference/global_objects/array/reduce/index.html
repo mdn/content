@@ -41,7 +41,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>arr</var>.reduce(<var>callback</var>( <var>accumulator</var>, <var>currentValue, </var>[, <var>index</var>[, <var>array</var>]] )[, <var>initialValue</var>])</pre>
+  class="brush: js"><var>arr</var>.reduce(<var>callback</var>( <var>accumulator</var>, <var>currentValue, </var>[, <var>index</var>[, <var>array</var>]] )[, <var>initialValue</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -122,7 +122,7 @@ tags:
   there can be up to <em>four</em> possible output types without
   <code><var>initialValue</var></code>, as shown in the following example:</p>
 
-<pre class="brush: js notranslate">let maxCallback = ( acc, cur ) =&gt; Math.max( acc.x, cur.x );
+<pre class="brush: js">let maxCallback = ( acc, cur ) =&gt; Math.max( acc.x, cur.x );
 let maxCallback2 = ( max, cur ) =&gt; Math.max( max, cur );
 
 // reduce without initialValue
@@ -140,7 +140,7 @@ let maxCallback2 = ( max, cur ) =&gt; Math.max( max, cur );
 
 <p>Suppose the following use of <code>reduce()</code> occurred:</p>
 
-<pre class="brush: js notranslate">[0, 1, 2, 3, 4].reduce(function(accumulator, currentValue, currentIndex, array) {
+<pre class="brush: js">[0, 1, 2, 3, 4].reduce(function(accumulator, currentValue, currentIndex, array) {
   return accumulator + currentValue
 })
 </pre>
@@ -202,13 +202,13 @@ let maxCallback2 = ( max, cur ) =&gt; Math.max( max, cur );
   instead of a full function. The code below will produce the same output as the code in
   the block above:</p>
 
-<pre class="brush: js notranslate">[0, 1, 2, 3, 4].reduce( (accumulator, currentValue, currentIndex, array) =&gt; accumulator + currentValue )
+<pre class="brush: js">[0, 1, 2, 3, 4].reduce( (accumulator, currentValue, currentIndex, array) =&gt; accumulator + currentValue )
 </pre>
 
 <p>If you were to provide an <code><var>initialValue</var></code> as the second argument
   to <code>reduce()</code>, the result would look like this:</p>
 
-<pre class="brush: js notranslate">[0, 1, 2, 3, 4].reduce((accumulator, currentValue, currentIndex, array) =&gt; {
+<pre class="brush: js">[0, 1, 2, 3, 4].reduce((accumulator, currentValue, currentIndex, array) =&gt; {
     return accumulator + currentValue
 }, 10)
 </pre>
@@ -272,7 +272,7 @@ let maxCallback2 = ( max, cur ) =&gt; Math.max( max, cur );
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="brush: js notranslate">// Production steps of ECMA-262, Edition 5, 15.4.4.21
+<pre class="brush: js">// Production steps of ECMA-262, Edition 5, 15.4.4.21
 // Reference: https://es5.github.io/#x15.4.4.21
 // https://tc39.github.io/ecma262/#sec-array.prototype.reduce
 if (!Array.prototype.reduce) {
@@ -348,7 +348,7 @@ if (!Array.prototype.reduce) {
 
 <h3 id="Sum_all_the_values_of_an_array">Sum all the values of an array</h3>
 
-<pre class="brush: js notranslate">let sum = [0, 1, 2, 3].reduce(function (accumulator, currentValue) {
+<pre class="brush: js">let sum = [0, 1, 2, 3].reduce(function (accumulator, currentValue) {
   return accumulator + currentValue
 }, 0)
 // sum is 6
@@ -357,7 +357,7 @@ if (!Array.prototype.reduce) {
 
 <p>Alternatively written with an arrow function:</p>
 
-<pre class="brush: js notranslate">let total = [ 0, 1, 2, 3 ].reduce(
+<pre class="brush: js">let total = [ 0, 1, 2, 3 ].reduce(
   ( accumulator, currentValue ) =&gt; accumulator + currentValue,
   0
 )</pre>
@@ -368,7 +368,7 @@ if (!Array.prototype.reduce) {
   an <code><var>initialValue</var></code>, so that each item passes through your function.
 </p>
 
-<pre class="brush: js notranslate">let initialValue = 0
+<pre class="brush: js">let initialValue = 0
 let sum = [{x: 1}, {x: 2}, {x: 3}].reduce(function (accumulator, currentValue) {
     return accumulator + currentValue.x
 }, initialValue)
@@ -378,7 +378,7 @@ console.log(sum) // logs 6
 
 <p>Alternatively written with an arrow function:</p>
 
-<pre class="brush: js notranslate">let initialValue = 0
+<pre class="brush: js">let initialValue = 0
 let sum = [{x: 1}, {x: 2}, {x: 3}].reduce(
     (accumulator, currentValue) =&gt; accumulator + currentValue.x
     , initialValue
@@ -388,7 +388,7 @@ console.log(sum) // logs 6</pre>
 
 <h3 id="Flatten_an_array_of_arrays">Flatten an array of arrays</h3>
 
-<pre class="brush: js notranslate">let flattened = [[0, 1], [2, 3], [4, 5]].reduce(
+<pre class="brush: js">let flattened = [[0, 1], [2, 3], [4, 5]].reduce(
   function(accumulator, currentValue) {
     return accumulator.concat(currentValue)
   },
@@ -399,7 +399,7 @@ console.log(sum) // logs 6</pre>
 
 <p>Alternatively written with an arrow function:</p>
 
-<pre class="brush: js notranslate">let flattened = [[0, 1], [2, 3], [4, 5]].reduce(
+<pre class="brush: js">let flattened = [[0, 1], [2, 3], [4, 5]].reduce(
   ( accumulator, currentValue ) =&gt; accumulator.concat(currentValue),
   []
 )
@@ -408,7 +408,7 @@ console.log(sum) // logs 6</pre>
 <h3 id="Counting_instances_of_values_in_an_object">Counting instances of values in an
   object</h3>
 
-<pre class="brush: js notranslate">let names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice']
+<pre class="brush: js">let names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice']
 
 let countedNames = names.reduce(function (allNames, name) {
   if (name in allNames) {
@@ -425,7 +425,7 @@ let countedNames = names.reduce(function (allNames, name) {
 
 <h3 id="Grouping_objects_by_a_property">Grouping objects by a property</h3>
 
-<pre class="brush: js notranslate">let people = [
+<pre class="brush: js">let people = [
   { name: 'Alice', age: 21 },
   { name: 'Max', age: 20 },
   { name: 'Jane', age: 20 }
@@ -458,7 +458,7 @@ let groupedPeople = groupBy(people, 'age')
   Bonding arrays contained in an array of objects using the spread operator and
   initialValue</h3>
 
-<pre class="brush: js notranslate">// friends - an array of objects
+<pre class="brush: js">// friends - an array of objects
 // where object field "books" is a list of favorite books
 let friends = [{
   name: 'Anna',
@@ -495,7 +495,7 @@ let allbooks = friends.reduce(function(accumulator, currentValue) {
     duplicate items have been removed.</p>
 </div>
 
-<pre class="brush: js notranslate">let myArray = ['a', 'b', 'a', 'b', 'c', 'e', 'e', 'c', 'd', 'd', 'd', 'd']
+<pre class="brush: js">let myArray = ['a', 'b', 'a', 'b', 'c', 'e', 'e', 'c', 'd', 'd', 'd', 'd']
 let myOrderedArray = myArray.reduce(function (accumulator, currentValue) {
   if (accumulator.indexOf(currentValue) === -1) {
     accumulator.push(currentValue)
@@ -512,7 +512,7 @@ console.log(myOrderedArray)</pre>
   {{jsxref("Array.reduce()")}}, thereby being more efficient. (If you like for loops, you
   can filter and map while traversing once with {{jsxref("Array.forEach()")}}).</p>
 
-<pre class="brush: js notranslate">const numbers = [-5, 6, 2, 0,];
+<pre class="brush: js">const numbers = [-5, 6, 2, 0,];
 
 const doubledPositiveNumbers = numbers.reduce((accumulator, currentValue) =&gt; {
   if (currentValue &gt; 0) {
@@ -526,7 +526,7 @@ console.log(doubledPositiveNumbers); // [12, 4]</pre>
 
 <h3 id="Running_Promises_in_Sequence">Running Promises in Sequence</h3>
 
-<pre class="brush: js notranslate">/**
+<pre class="brush: js">/**
  * Runs promises from array of functions that can return promises
  * in chained manner
  *
@@ -573,7 +573,7 @@ runPromiseInSequence(promiseArr, 10)
 
 <h3 id="Function_composition_enabling_piping">Function composition enabling piping</h3>
 
-<pre class="brush: js notranslate">// Building-blocks to use for composition
+<pre class="brush: js">// Building-blocks to use for composition
 const double = x =&gt; x + x
 const triple = x =&gt; 3 * x
 const quadruple = x =&gt; 4 * x
@@ -600,7 +600,7 @@ multiply24(10) // 240
 
 <h3 id="Write_map_using_reduce">Write map using reduce</h3>
 
-<pre class="brush: js notranslate">if (!Array.prototype.mapUsingReduce) {
+<pre class="brush: js">if (!Array.prototype.mapUsingReduce) {
   Array.prototype.mapUsingReduce = function(callback, thisArg) {
     return this.reduce(function(mappedArray, currentValue, index, array) {
       mappedArray[index] = callback.call(thisArg, currentValue, index, array)

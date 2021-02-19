@@ -25,7 +25,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Math.sign(<var>x</var>)</pre>
+<pre class="brush: js">Math.sign(<var>x</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -55,7 +55,7 @@ tags:
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="brush: js notranslate">if (!Math.sign) {
+<pre class="brush: js">if (!Math.sign) {
   Math.sign = function(x) {
     // If x is NaN, the result is NaN.
     // If x is -0, the result is -0.
@@ -83,7 +83,7 @@ tags:
 
 <h3 id="Using_Math.sign">Using Math.sign()</h3>
 
-<pre class="brush: js notranslate">Math.sign(3);     //  1
+<pre class="brush: js">Math.sign(3);     //  1
 Math.sign(-3);    // -1
 Math.sign('-3');  // -1
 Math.sign(0);     //  0

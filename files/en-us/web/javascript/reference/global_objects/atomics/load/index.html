@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Atomics.load(typedArray, index)
+<pre class="brush: js">Atomics.load(typedArray, index)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -48,7 +48,7 @@ tags:
 
 <h3 id="Using_load">Using <code>load</code></h3>
 
-<pre class="brush: js notranslate">const sab = new SharedArrayBuffer(1024);
+<pre class="brush: js">const sab = new SharedArrayBuffer(1024);
 const ta = new Uint8Array(sab);
 
 Atomics.add(ta, 0, 12);

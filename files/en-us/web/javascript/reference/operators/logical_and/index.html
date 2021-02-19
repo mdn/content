@@ -27,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>expr1</em> &amp;&amp; <em>expr2</em>
+<pre class="brush: js"><em>expr1</em> &amp;&amp; <em>expr2</em>
 </pre>
 
 <h2 id="Description">Description</h2>
@@ -74,7 +74,7 @@ tags:
   happens because the value of the operator is already determined after the evaluation of
   the first operand. See example:</p>
 
-<pre class="brush: js notranslate">function A(){ console.log('called A'); return false; }
+<pre class="brush: js">function A(){ console.log('called A'); return false; }
 function B(){ console.log('called B'); return true; }
 
 console.log( A() &amp;&amp; B() );
@@ -90,7 +90,7 @@ console.log( A() &amp;&amp; B() );
     precedence</a>).</p>
 
 <pre
-  class="brush: js notranslate">true || false &amp;&amp; false      // returns true, because &amp;&amp; is executed first
+  class="brush: js">true || false &amp;&amp; false      // returns true, because &amp;&amp; is executed first
 (true || false) &amp;&amp; false    // returns false, because operator precedence cannot apply</pre>
 
 <h2 id="Examples">Examples</h2>
@@ -100,7 +100,7 @@ console.log( A() &amp;&amp; B() );
 <p>The following code shows examples of the <code>&amp;&amp;</code> (logical AND)
   operator.</p>
 
-<pre class="brush: js notranslate">a1 = true  &amp;&amp; true       // t &amp;&amp; t returns true
+<pre class="brush: js">a1 = true  &amp;&amp; true       // t &amp;&amp; t returns true
 a2 = true  &amp;&amp; false      // t &amp;&amp; f returns false
 a3 = false &amp;&amp; true       // f &amp;&amp; t returns false
 a4 = false &amp;&amp; (3 == 4)   // f &amp;&amp; f returns false
@@ -116,21 +116,21 @@ a9 = false &amp;&amp; ''         // f &amp;&amp; f returns false</pre>
 
 <p>The following operation involving <strong>booleans</strong>:</p>
 
-<pre class="brush: js notranslate">bCondition1 &amp;&amp; bCondition2</pre>
+<pre class="brush: js">bCondition1 &amp;&amp; bCondition2</pre>
 
 <p>is always equal to:</p>
 
-<pre class="brush: js notranslate">!(!bCondition1 || !bCondition2)</pre>
+<pre class="brush: js">!(!bCondition1 || !bCondition2)</pre>
 
 <h4 id="Converting_OR_to_AND">Converting OR to AND</h4>
 
 <p>The following operation involving <strong>booleans</strong>:</p>
 
-<pre class="brush: js notranslate">bCondition1 || bCondition2</pre>
+<pre class="brush: js">bCondition1 || bCondition2</pre>
 
 <p>is always equal to:</p>
 
-<pre class="brush: js notranslate">!(!bCondition1 &amp;&amp; !bCondition2)</pre>
+<pre class="brush: js">!(!bCondition1 &amp;&amp; !bCondition2)</pre>
 
 <h3 id="Removing_nested_parentheses">Removing nested parentheses</h3>
 
@@ -140,11 +140,11 @@ a9 = false &amp;&amp; ''         // f &amp;&amp; f returns false</pre>
 <p>The following composite operation involving <strong>booleans</strong>:</p>
 
 <pre
-  class="brush: js notranslate">bCondition1 || (bCondition2 &amp;&amp; bCondition3)</pre>
+  class="brush: js">bCondition1 || (bCondition2 &amp;&amp; bCondition3)</pre>
 
 <p>is always equal to:</p>
 
-<pre class="brush: js notranslate">bCondition1 || bCondition2 &amp;&amp; bCondition3</pre>
+<pre class="brush: js">bCondition1 || bCondition2 &amp;&amp; bCondition3</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
