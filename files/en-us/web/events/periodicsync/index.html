@@ -37,7 +37,7 @@ tags:
 
 <p>The following example shows how to respond to a periodic sync event in the service worker.</p>
 
-<pre class="brush: js notranslate">self.addEventListener('periodicsync', event =&gt; {
+<pre class="brush: js">self.addEventListener('periodicsync', event =&gt; {
   if (event.tag == 'get-latest-news') {
     event.waitUntil(fetchAndCacheLatestNews());
   }
@@ -46,7 +46,7 @@ tags:
 
 <p>You can also set up the event handler using the ServiceWorkerGlobalScope.onperiodicsync property:</p>
 
-<pre class="brush: js notranslate">self.onperiodicsync = (event) =&gt; {
+<pre class="brush: js">self.onperiodicsync = (event) =&gt; {
   ...
 };
 </pre>

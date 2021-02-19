@@ -13,7 +13,7 @@ tags:
 
 <h2 id="Message">Message</h2>
 
-<pre class="brush: js notranslate">ReferenceError: "x" is not defined
+<pre class="brush: js">ReferenceError: "x" is not defined
 </pre>
 
 <h2 id="Error_type">Error type</h2>
@@ -37,13 +37,13 @@ tags:
 
 <h3 id="Variable_not_declared">Variable not declared</h3>
 
-<pre class="brush: js example-bad notranslate">foo.substring(1); // ReferenceError: foo is not defined
+<pre class="brush: js example-bad">foo.substring(1); // ReferenceError: foo is not defined
 </pre>
 
 <p>The "foo" variable isn't defined anywhere. It needs to be some string, so that the
   {{jsxref("String.prototype.substring()")}} method will work.</p>
 
-<pre class="brush: js example-good notranslate">var foo = 'bar';
+<pre class="brush: js example-good">var foo = 'bar';
 foo.substring(1); // "ar"</pre>
 
 <h3 id="Wrong_scope">Wrong scope</h3>
@@ -53,7 +53,7 @@ foo.substring(1); // "ar"</pre>
   accessed from anywhere outside the function, because the variable is defined only in the
   scope of the function</p>
 
-<pre class="brush: js example-bad notranslate">function numbers() {
+<pre class="brush: js example-bad">function numbers() {
   var num1 = 2,
       num2 = 3;
   return num1 + num2;
@@ -65,7 +65,7 @@ console.log(num1); // ReferenceError num1 is not defined.</pre>
   which it is defined. In other words, a function defined in the global scope can access
   all variables defined in the global scope.</p>
 
-<pre class="brush: js example-good notranslate">var num1 = 2,
+<pre class="brush: js example-good">var num1 = 2,
     num2 = 3;
 
 function numbers() {

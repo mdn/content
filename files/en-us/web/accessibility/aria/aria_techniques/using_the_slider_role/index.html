@@ -49,7 +49,7 @@ tags:
 
 <p>In the example below, a simple slider is used to select a value between 1 and 100. The current volume is 50. The application will programmatically update the value of <code>aria-valuenow</code> in response to user input.</p>
 
-<pre class="brush: html notranslate">&lt;label for="fader"&gt;Volume&lt;/label&gt;
+<pre class="brush: html">&lt;label for="fader"&gt;Volume&lt;/label&gt;
 &lt;input type="range"
   id="fader"
   min="1"
@@ -65,7 +65,7 @@ tags:
 
 <p>The following code snippet allows you to return the output as it is updated by user input:</p>
 
-<pre class="brush: js notranslate">function outputUpdate(vol) {
+<pre class="brush: js">function outputUpdate(vol) {
   document.querySelector('#volume').value = vol;
 }
 </pre>
@@ -74,7 +74,7 @@ tags:
 
 <p>Sometimes, a slider is used to choose a value that is not, semantically, a number. In these cases, the <code>aria-valuetext</code> attribute is used to provide the appropriate text name for the currently selected value. In the example below, the slider is used to select a day of the week.</p>
 
-<pre class="brush: html notranslate">&lt;label id="day-label"&gt;Days&lt;/label&gt;
+<pre class="brush: html">&lt;label id="day-label"&gt;Days&lt;/label&gt;
 &lt;div class="day-slider"&gt;
   &lt;div id="day-handle" class="day-slider-handle" role="slider" aria-labelledby="day-label"
      aria-valuemin="1"
@@ -87,7 +87,7 @@ tags:
 
 <p>The code snippet below shows a function that responds to user input and updates the <code>aria-valuenow</code> and <code>aria-valuetext</code> attributes:</p>
 
-<pre class="brush: js notranslate">var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+<pre class="brush: js">var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var updateSlider = function (newValue) {
     var handle = document.getElementById("day-handle");
     handle.setAttribute("aria-valuenow", newValue.toString());

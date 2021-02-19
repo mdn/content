@@ -11,7 +11,7 @@ tags:
 
 <p><span class="seoSummary">The <code>search</code> <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles">landmark role</a> is used to identify a section of the page used to search the page, site, or collection of sites.</span></p>
 
-<pre class="brush: html notranslate">&lt;form role="search"&gt;
+<pre class="brush: html">&lt;form role="search"&gt;
   &lt;!-- search input --&gt;
 &lt;/form&gt;
 </pre>
@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="bush: html notranslate">&lt;form id="search" role="search"&gt;
+<pre class="bush: html">&lt;form id="search" role="search"&gt;
   &lt;label for="search-input"&gt;Search this site&lt;/label&gt;
   &lt;input type="search" id="search-input" name="search" spellcheck="false"&gt;
   &lt;input value="Submit" type="submit"&gt;
@@ -45,7 +45,7 @@ tags:
 
 <p>If there is more than one <code>search</code> landmark role in a document, provide a label for each landmark. This label will allow an assistive technology user to be able to quickly understand the purpose of each landmark.</p>
 
-<pre class="brush: html notranslate">&lt;form id="site-search" role="search" aria-label="Sitewide"&gt;
+<pre class="brush: html">&lt;form id="site-search" role="search" aria-label="Sitewide"&gt;
   &lt;!-- search input --&gt;
 &lt;/form&gt;
 
@@ -60,7 +60,7 @@ tags:
 
 <p>If a <code>search</code> landmark role in a document is repeated in a document, and both landmarks have identical content, use the same label for each landmark. An example of this would be repeating the sitewide search at the top and bottom of the page.</p>
 
-<pre class="brush: html notranslate">&lt;header&gt;
+<pre class="brush: html">&lt;header&gt;
   &lt;form id="site-search-top" role="search" aria-label="Sitewide"&gt;
     &lt;!-- search input --&gt;
   &lt;/form&gt;

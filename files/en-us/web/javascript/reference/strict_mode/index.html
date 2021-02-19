@@ -39,7 +39,7 @@ tags:
 
 <p>To invoke strict mode for an entire script, put the <em>exact</em> statement <code>"use strict";</code> (or <code>'use strict';</code>) before any other statements.</p>
 
-<pre class="brush: js notranslate">// Whole-script strict mode syntax
+<pre class="brush: js">// Whole-script strict mode syntax
 'use strict';
 var v = "Hi! I'm a strict mode script!";
 </pre>
@@ -52,7 +52,7 @@ var v = "Hi! I'm a strict mode script!";
 
 <p>Likewise, to invoke strict mode for a function, put the <em>exact</em> statement <code>"use strict";</code> (or <code>'use strict';</code>) in the function's body before any other statements.</p>
 
-<pre class="brush: js notranslate">function strict() {
+<pre class="brush: js">function strict() {
   // Function-level strict mode syntax
   'use strict';
   function nested() { return 'And so am I!'; }
@@ -65,7 +65,7 @@ function notStrict() { return "I'm not strict."; }
 
 <p>ECMAScript 2015 introduced <a href="/en-US/docs/Web/JavaScript/Reference/Statements/export">JavaScript modules</a> and therefore a 3rd way to enter strict mode.  The entire contents of JavaScript modules are automatically in strict mode, with no statement needed to initiate it.</p>
 
-<pre class="brush: js notranslate">function strict() {
+<pre class="brush: js">function strict() {
     // because this is a module, I'm strict by default
 }
 export default strict;
@@ -81,7 +81,7 @@ export default strict;
 
 <p>First, strict mode makes it impossible to accidentally create global variables. In normal JavaScript mistyping a variable in an assignment creates a new property on the global object and continues to "work" (although future failure is possible: likely, in modern JavaScript). Assignments, which would accidentally create global variables, instead throw an error in strict mode:</p>
 
-<pre class="brush: js notranslate">'use strict';
+<pre class="brush: js">'use strict';
                        // Assuming no global variable mistypeVariable exists
 mistypeVariable = 17;  // this line throws a ReferenceError due to the
                        // misspelling of variable
@@ -89,7 +89,7 @@ mistypeVariable = 17;  // this line throws a ReferenceError due to the
 
 <p>Second, strict mode makes assignments which would otherwise silently fail to throw an exception. For example, <code>NaN</code> is a non-writable global variable. In normal code assigning to <code>NaN</code> does nothing; the developer receives no failure feedback. In strict mode assigning to <code>NaN</code> throws an exception. Any assignment that silently fails in normal code (assignment to a non-writable global or property, assignment to a getter-only property, assignment to a new property on a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions">non-extensible</a> object) will throw in strict mode:</p>
 
-<pre class="brush: js notranslate">'use strict';
+<pre class="brush: js">'use strict';
 
 // Assignment to a non-writable global
 var undefined = 5; // throws a TypeError
@@ -112,13 +112,13 @@ fixed.newProp = 'ohai'; // throws a TypeError
 
 <p>Third, strict mode makes attempts to delete undeletable properties throw (where before the attempt would have no effect):</p>
 
-<pre class="brush: js notranslate">'use strict';
+<pre class="brush: js">'use strict';
 delete Object.prototype; // throws a TypeError
 </pre>
 
 <p>Fourth, strict mode requires that function parameter names be unique. In normal code the last duplicated argument hides previous identically-named arguments. Those previous arguments remain available through <code>arguments[i]</code>, so they're not completely inaccessible. Still, this hiding makes little sense and is probably undesirable (it might hide a typo, for example), so in strict mode duplicate argument names are a syntax error:</p>
 
-<pre class="brush: js notranslate">function sum(a, a, c) { // !!! syntax error
+<pre class="brush: js">function sum(a, a, c) { // !!! syntax error
   'use strict';
   return a + a + c; // wrong if this code ran
 }
@@ -126,11 +126,11 @@ delete Object.prototype; // throws a TypeError
 
 <p>Fifth, a strict mode in ECMAScript 5 <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal">forbids a <code>0</code>-prefixed octal literal or octal escape sequence</a>. Outside strict mode, a number beginning with a <code>0</code>, such as <code>0644</code>, is interpreted as an octal number (<code>0644 === 420</code>), if all digits are smaller than 8. Octal escape sequences, such as <code>"\45"</code>, which is equal to <code>"%"</code>, can be used to represent characters by extended-ASCII character code numbers in octal. In strict mode, this is a syntax error. In ECMAScript 2015, octal literals are supported by prefixing a number with "<code>0o</code>"; for example:</p>
 
-<pre class="brush: js notranslate">var a = 0o10; // ES2015: Octal</pre>
+<pre class="brush: js">var a = 0o10; // ES2015: Octal</pre>
 
 <p>Novice developers sometimes believe a leading zero prefix has no semantic meaning, so they might use it as an alignment device — but this changes the number's meaning! A leading zero syntax for the octals is rarely useful and can be mistakenly used, so strict mode makes it a syntax error:</p>
 
-<pre class="brush: js notranslate">'use strict';
+<pre class="brush: js">'use strict';
 var sum = 015 + // !!! syntax error
           197 +
           142;
@@ -141,7 +141,7 @@ console.log(sumWithOctal); // 16
 
 <p>Sixth, strict mode in ECMAScript 2015 forbids setting properties on <a href="/en-US/docs/Glossary/primitive">primitive</a> values. Without strict mode, setting properties is ignored (no-op), with strict mode, however, a {{jsxref("TypeError")}} is thrown.</p>
 
-<pre class="brush: js notranslate">(function() {
+<pre class="brush: js">(function() {
 'use strict';
 
 false.true = '';         // TypeError
@@ -152,7 +152,7 @@ false.true = '';         // TypeError
 
 <p>In ECMAScript 5 strict-mode code, duplicate property names were considered a {{jsxref("SyntaxError")}}. With the introduction of <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">computed property names</a>, making duplication possible at runtime, ECMAScript 2015 removed that restriction.</p>
 
-<pre class="brush: js notranslate">'use strict';
+<pre class="brush: js">'use strict';
 var o = { p: 1, p: 2 }; // syntax error prior to ECMAScript 2015 
 </pre>
 
@@ -162,7 +162,7 @@ var o = { p: 1, p: 2 }; // syntax error prior to ECMAScript 2015
 
 <p>First, strict mode prohibits <a href="/en-US/docs/Web/JavaScript/Reference/Statements/with"><code>with</code></a>. The problem with <code>with</code> is that any name inside the block might map either to a property of the object passed to it, or to a variable in surrounding (or even global) scope, at runtime; it's impossible to know which beforehand. Strict mode makes <code>with</code> a syntax error, so there's no chance for a name in a <code>with</code> to refer to an unknown location at runtime:</p>
 
-<pre class="brush: js notranslate">'use strict';
+<pre class="brush: js">'use strict';
 var x = 17;
 with (obj) { // !!! syntax error
   // If this weren't strict mode, would this be var x, or
@@ -177,7 +177,7 @@ with (obj) { // !!! syntax error
 
 <p>Second, <a href="http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/"><code>eval</code> of strict mode code does not introduce new variables into the surrounding scope</a>. In normal code <code>eval("var x;")</code> introduces a variable <code>x</code> into the surrounding function or the global scope. This means that, in general, in a function containing a call to <code>eval</code> every name not referring to an argument or local variable must be mapped to a particular definition at runtime (because that <code>eval</code> might have introduced a new variable that would hide the outer variable). In strict mode <code>eval</code> creates variables only for the code being evaluated, so <code>eval</code> can't affect whether a name refers to an outer variable or some local variable:</p>
 
-<pre class="brush: js notranslate">var x = 17;
+<pre class="brush: js">var x = 17;
 var evalX = eval("'use strict'; var x = 42; x;");
 console.assert(x === 17);
 console.assert(evalX === 42);
@@ -185,7 +185,7 @@ console.assert(evalX === 42);
 
 <p>If the function <code>eval</code> is invoked by an expression of the form <code>eval(...)</code> in strict mode code, the code will be evaluated as strict mode code. The code may explicitly invoke strict mode, but it's unnecessary to do so.</p>
 
-<pre class="brush: js notranslate">function strict1(str) {
+<pre class="brush: js">function strict1(str) {
   'use strict';
   return eval(str); // str will be treated as strict mode code
 }
@@ -211,7 +211,7 @@ nonstrict("'use strict'; 'Strict mode code!'");
 
 <p>Third, strict mode forbids deleting plain names. <code>delete name</code> in strict mode is a syntax error:</p>
 
-<pre class="brush: js notranslate">'use strict';
+<pre class="brush: js">'use strict';
 
 var x;
 delete x; // !!! syntax error
@@ -224,7 +224,7 @@ eval('var y; delete y;'); // !!! syntax error</pre>
 
 <p>First, the names <code>eval</code> and <code>arguments</code> can't be bound or assigned in language syntax. All these attempts to do so are syntax errors:</p>
 
-<pre class="brush: js notranslate">'use strict';
+<pre class="brush: js">'use strict';
 eval = 17;
 arguments++;
 ++eval;
@@ -239,7 +239,7 @@ var f = new Function('arguments', "'use strict'; return 17;");
 
 <p>Second, strict mode code doesn't alias properties of <code>arguments</code> objects created within it. In normal code within a function whose first argument is <code>arg</code>, setting <code>arg</code> also sets <code>arguments[0]</code>, and vice versa (unless no arguments were provided or <code>arguments[0]</code> is deleted). <code>arguments</code> objects for strict mode functions store the original arguments when the function was invoked. <code>arguments[i]</code> does not track the value of the corresponding named argument, nor does a named argument track the value in the corresponding <code>arguments[i]</code>.</p>
 
-<pre class="brush: js notranslate">function f(a) {
+<pre class="brush: js">function f(a) {
   'use strict';
   a = 42;
   return [a, arguments[0]];
@@ -251,7 +251,7 @@ console.assert(pair[1] === 17);
 
 <p>Third, <code>arguments.callee</code> is no longer supported. In normal code <code>arguments.callee</code> refers to the enclosing function. This use case is weak: name the enclosing function! Moreover, <code>arguments.callee</code> substantially hinders optimizations like inlining functions, because it must be made possible to provide a reference to the un-inlined function if <code>arguments.callee</code> is accessed. <code>arguments.callee</code> for strict mode functions is a non-deletable property which throws an error when set or retrieved:</p>
 
-<pre class="brush: js notranslate">'use strict';
+<pre class="brush: js">'use strict';
 var f = function() { return arguments.callee; };
 f(); // throws a TypeError
 </pre>
@@ -262,7 +262,7 @@ f(); // throws a TypeError
 
 <p>First, the value passed as <code>this</code> to a function in strict mode is not forced into being an object (a.k.a. "boxed"). For a normal function, <code>this</code> is always an object: either the provided object if called with an object-valued <code>this</code>; the value, boxed, if called with a Boolean, string, or number <code>this</code>; or the global object if called with an <code>undefined</code> or <code>null</code> <code>this</code>. (Use <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call"><code>call</code></a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply"><code>apply</code></a>, or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind"><code>bind</code></a> to specify a particular <code>this</code>.) Not only is automatic boxing a performance cost, but exposing the global object in browsers is a security hazard because the global object provides access to functionality that "secure" JavaScript environments must restrict. Thus for a strict mode function, the specified <code>this</code> is not boxed into an object, and if unspecified, <code>this</code> will be <code>undefined</code>:</p>
 
-<pre class="brush: js notranslate">'use strict';
+<pre class="brush: js">'use strict';
 function fun() { return this; }
 console.assert(fun() === undefined);
 console.assert(fun.call(2) === 2);
@@ -275,7 +275,7 @@ console.assert(fun.bind(true)() === true);
 
 <p>Second, in strict mode it's no longer possible to "walk" the JavaScript stack via commonly-implemented extensions to ECMAScript. In normal code with these extensions, when a function <code>fun</code> is in the middle of being called, <code>fun.caller</code> is the function that most recently called <code>fun</code>, and <code>fun.arguments</code> is the <code>arguments</code> for that invocation of <code>fun</code>. Both extensions are problematic for "secure" JavaScript because they allow "secured" code to access "privileged" functions and their (potentially unsecured) arguments. If <code>fun</code> is in strict mode, both <code>fun.caller</code> and <code>fun.arguments</code> are non-deletable properties which throw when set or retrieved:</p>
 
-<pre class="brush: js notranslate">function restricted() {
+<pre class="brush: js">function restricted() {
   'use strict';
   restricted.caller;    // throws a TypeError
   restricted.arguments; // throws a TypeError
@@ -288,7 +288,7 @@ privilegedInvoker();
 
 <p>Third, <code>arguments</code> for strict mode functions no longer provide access to the corresponding function call's variables. In some old ECMAScript implementations <code>arguments.caller</code> was an object whose properties aliased variables in that function. This is a <a href="http://stuff.mit.edu/iap/2008/facebook/">security hazard</a> because it breaks the ability to hide privileged values via function abstraction; it also precludes most optimizations. For these reasons no recent browsers implement it. Yet because of its historical functionality, <code>arguments.caller</code> for a strict mode function is also a non-deletable property which throws when set or retrieved:</p>
 
-<pre class="brush: js notranslate">'use strict';
+<pre class="brush: js">'use strict';
 function fun(a, b) {
   'use strict';
   var v = 12;
@@ -303,7 +303,7 @@ fun(1, 2); // doesn't expose v (or a or b)
 
 <p>First, in strict mode, a short list of identifiers become reserved keywords. These words are <code>implements</code>, <code>interface</code>, <code>let</code>, <code>package</code>, <code>private</code>, <code>protected</code>, <code>public</code>, <code>static</code>, and <code>yield</code>. In strict mode, then, you can't name or use variables or arguments with these names.</p>
 
-<pre class="brush: js notranslate">function package(protected) { // !!!
+<pre class="brush: js">function package(protected) { // !!!
   'use strict';
   var implements; // !!!
 
@@ -322,7 +322,7 @@ function fun(static) { 'use strict'; } // !!!
 
 <p>Second, <a href="http://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/">strict mode prohibits function statements that are not at the top level of a script or function</a>. In normal mode in browsers, function statements are permitted "everywhere". <em>This is not part of ES5 (or even ES3)!</em> It's an extension with incompatible semantics in different browsers. Note that function statements outside top level are permitted in ES2015.</p>
 
-<pre class="brush: js notranslate">'use strict';
+<pre class="brush: js">'use strict';
 if (true) {
   function f() { } // !!! syntax error
   f();
