@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">new ImageData(<em>array</em>, <em>width</em> [, <em>height</em>]);
+<pre class="brush: js">new ImageData(<em>array</em>, <em>width</em> [, <em>height</em>]);
 new ImageData(<em>width</em>, <em>height</em>);
 </pre>
 
@@ -57,7 +57,7 @@ new ImageData(<em>width</em>, <em>height</em>);
 <p>This example creates an <code>ImageData</code> object that is 200 pixels wide and 100
   pixels tall, containing a total of 20,000 pixels.</p>
 
-<pre class="brush: js  language-js notranslate">let imageData = new ImageData(200, 100);
+<pre class="brush: js  language-js">let imageData = new ImageData(200, 100);
 // ImageData { width: 200, height: 100, data: Uint8ClampedArray[80000] }
 </pre>
 
@@ -68,7 +68,7 @@ new ImageData(<em>width</em>, <em>height</em>);
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
@@ -77,7 +77,7 @@ new ImageData(<em>width</em>, <em>height</em>);
   specifies a <code>width</code> of <code>200</code> for the new object, so its
   <code>height</code> defaults to 10,000 divided by 200, which is <code>50</code>.</p>
 
-<pre class="brush: js notranslate">const canvas = document.getElementById('canvas');
+<pre class="brush: js">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const arr = new Uint8ClampedArray(40000);
 

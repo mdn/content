@@ -51,7 +51,7 @@ tags:
 
 <p>This example begins playing a music track when the document becomes visible, and pauses the music when the document is no longer visible.</p>
 
-<pre class="brush:js notranslate">document.addEventListener("visibilitychange", function() {
+<pre class="brush:js">document.addEventListener("visibilitychange", function() {
   if (document.visibilityState === 'visible') {
     backgroundMusic.play();
   } else {

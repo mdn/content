@@ -47,9 +47,9 @@ tags:
 
 <p>This example shows how to scale an element using the mouse (or other pointing device) wheel.</p>
 
-<pre class="brush: html notranslate">&lt;div&gt;Scale me with your mouse wheel.&lt;/div&gt;</pre>
+<pre class="brush: html">&lt;div&gt;Scale me with your mouse wheel.&lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   min-height: 100vh;
   margin: 0;
   display: flex;
@@ -64,7 +64,7 @@ div {
   padding: 5px;
 }</pre>
 
-<pre class="brush: js notranslate">function zoom(event) {
+<pre class="brush: js">function zoom(event) {
   event.preventDefault();
 
   scale += event.deltaY * -0.01;
@@ -86,7 +86,7 @@ el.onwheel = zoom;</pre>
 
 <p>The event handler can also be set up using the {{domxref("EventTarget/addEventListener", "addEventListener()")}} method:</p>
 
-<pre class="brush: js notranslate">el.addEventListener('wheel', zoom);</pre>
+<pre class="brush: js">el.addEventListener('wheel', zoom);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

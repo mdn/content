@@ -27,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>videoElement</em>.requestPictureInPicture();</pre>
+<pre class="brush: js"><em>videoElement</em>.requestPictureInPicture();</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -39,7 +39,7 @@ tags:
 <p>This example requests that the video enters Picture-in-Picture mode, and sets an event
   listener to handle the floating window resizing.</p>
 
-<pre class="brush: js notranslate">function enterPictureInPicture() {
+<pre class="brush: js">function enterPictureInPicture() {
   videoElement.requestPictureInPicture()
     .then(pictureInPictureWindow =&gt; {
       pictureInPictureWindow.addEventListener("resize", () =&gt; onPipWindowResize(), false);

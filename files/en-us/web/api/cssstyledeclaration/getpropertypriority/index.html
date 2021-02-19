@@ -16,7 +16,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>priority</em> = <em>style</em>.getPropertyPriority(<em>property</em>);</pre>
+  class="brush: js">var <em>priority</em> = <em>style</em>.getPropertyPriority(<em>property</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -38,7 +38,7 @@ tags:
 <p>The following JavaScript code checks whether <code>margin</code> is marked as important
   in a CSS selector rule:</p>
 
-<pre class="brush: js notranslate">var declaration = document.styleSheets[0].cssRules[0].style;
+<pre class="brush: js">var declaration = document.styleSheets[0].cssRules[0].style;
 var isImportant = declaration.getPropertyPriority('margin') === 'important';
 </pre>
 

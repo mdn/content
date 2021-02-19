@@ -139,7 +139,7 @@ tags:
 
 <p>When the page is loaded, this code is run to set up an event listener to watch for the <kbd>Enter</kbd> key.</p>
 
-<pre class="brush: js notranslate">document.addEventListener("keypress", function(e) {
+<pre class="brush: js">document.addEventListener("keypress", function(e) {
   if (e.keyCode === 13) {
     toggleFullScreen();
   }
@@ -150,7 +150,7 @@ tags:
 
 <p>This code is called by the event handler above when the user hits the <kbd>Enter</kbd> key.</p>
 
-<pre class="brush: js notranslate">function toggleFullScreen() {
+<pre class="brush: js">function toggleFullScreen() {
   if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen();
   } else {

@@ -22,14 +22,14 @@ tags:
 
 <p>We start with some HTML: a paragraph with a link, as well as a definition list to which we will add all the CSS Property / Value pairs.</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
    &lt;a href="https://example.com"&gt;Link&lt;/a&gt;
 &lt;/p&gt;
 &lt;dl id="regurgitation"&gt;&lt;/dl&gt;</pre>
 
 <p>We add JavaScript to grab our unstyled link and return back a definition list of all the default CSS property values impacting the link using <code>computedStyleMap()</code>.</p>
 
-<pre class="brush: js notranslate">// get the element
+<pre class="brush: js">// get the element
 const myElement = document.querySelector('a');
 
 // get the &lt;dl&gt; we'll be populating
@@ -65,7 +65,7 @@ for (const [prop, val] of defaultComputedStyles) {
 <p>Let's update our example to only retrieve a few properties and values. Let's start by adding some CSS to our example, including a custom property and an inheritable property:</p>
 
 <div id="example2">
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   font-weight: bold;
 }
 
@@ -77,13 +77,13 @@ a {
 <p>Instead of getting <em>all</em> the properties, we create an array of properties of interest and use the {{domxref('StylePropertyMapReadOnly.get()')}} method to get each of their values:</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
    &lt;a href="https://example.com"&gt;Link&lt;/a&gt;
 &lt;/p&gt;
 &lt;dl id="regurgitation"&gt;&lt;/dl&gt;</pre>
 </div>
 
-<pre class="brush: js notranslate">// get the element
+<pre class="brush: js">// get the element
 const myElement = document.querySelector('a');
 
 // get the &lt;dl&gt; we'll be populating
@@ -125,7 +125,7 @@ for ( let i = 0; i &lt; ofInterest.length; i++ ) {
 
 <p>Let's write a plain paragraph, apply no styles, and inspect a few of its CSS properties by returning a table with the unit and value:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
    This is a paragraph with some content. Open up this example in Codepen or
    JSFiddle, and change some features. Try adding some CSS, such as a width
    for this paragraph, or adding a CSS property to the ofInterest array.
@@ -141,7 +141,7 @@ for ( let i = 0; i &lt; ofInterest.length; i++ ) {
 
 <p>For each property of interest, we list the name of the property, use <code>.get(propertyName).value</code> to return the value, and, if the object returned by the <code>get()</code> is a <code>CSSUnitValue</code>, list the unit type we retrieve with <code>.get(propertyName).unit</code>.</p>
 
-<pre class="brush: js notranslate">// get the element we're inspecting
+<pre class="brush: js">// get the element we're inspecting
 const myElement = document.querySelector('p');
 
 // get the table we'll be populating
@@ -253,7 +253,7 @@ for ( let i = 0; i &lt; ofInterest.length; i++ ) {
 
 <p>You can use a <code>CSSUnitValue</code> or <code>CSSKeywordValue</code> to create other objects. For example, the parameters for a {{domxref('CSSPositionValue')}} is one to two <code>CSSUnitValues</code> or <code>CSSKeywordValues</code>, or one of each:</p>
 
-<pre class="brush: js notranslate">let position = new CSSPositionValue(
+<pre class="brush: js">let position = new CSSPositionValue(
     new CSSKeywordValue("center"),
     new CSSUnitValue(10, "px"));</pre>
 
@@ -273,7 +273,7 @@ for ( let i = 0; i &lt; ofInterest.length; i++ ) {
 <p>Let's examine a CSS example with several custom properties, transforms, <code>calc()</code>s, and other features. We'll take a look at that their types are by employing short JavaScript snippets outputting to {{domxref('console.log()')}}:</p>
 
 <div id="example3">
-<pre class="brush: css notranslate">:root {
+<pre class="brush: css">:root {
     --mainColor: hsl(198, 43%, 42%);
     --black: hsl(0, 0%, 16%);
     --white: hsl(0,0%,97%);
@@ -296,10 +296,10 @@ button {
 
 <p>Let's add the class to a button (a button which does nothing).</p>
 
-<pre class="brush: html notranslate">&lt;button&gt;Styled Button&lt;/button&gt;
+<pre class="brush: html">&lt;button&gt;Styled Button&lt;/button&gt;
 </pre>
 
-<pre class="brush: js hidden notranslate">// get the element
+<pre class="brush: js hidden">// get the element
 const button = document.querySelector( 'button' );
 
 // Retrieve all computed styles with computedStyleMap()
@@ -349,7 +349,7 @@ console.log( parsedUnit.value );
 
 <p>We grab our <code>StylePropertyMapReadOnly</code> with the following JavaScript:</p>
 
-<pre class="brush: js notranslate">const allComputedStyles = document.querySelector('button').computedStyleMap();</pre>
+<pre class="brush: js">const allComputedStyles = document.querySelector('button').computedStyleMap();</pre>
 
 <p>The following examples reference <code>allComputedStyles</code>:</p>
 
@@ -357,7 +357,7 @@ console.log( parsedUnit.value );
 
 <p>The {{domxref('CSSUnparsedValue')}} represents <a href="/en-US/docs/Web/CSS/Using_CSS_custom_properties">custom properties</a>:</p>
 
-<pre class="brush: js notranslate">// CSSUnparsedValue
+<pre class="brush: js">// CSSUnparsedValue
 let unit = allComputedStyles.get('--unit');
 
 console.log( unit )    // CSSUnparsedValue {0: " 1.2rem", length: 1}
@@ -365,7 +365,7 @@ console.log (unit[0] ) // " 1.2rem" </pre>
 
 <p>When we invoke <code>get()</code>, a custom property of type <code>CSSUnparsedValue</code> is returned. Note the space before the <code> 1.2rem</code>.  To get a unit and value, we need a <code>CSSUnitValue</code>, which we can retrieve using the <code>CSSStyleValue.parse()</code> method on the <code>CSSUnparsedValue</code>.</p>
 
-<pre class="brush: js notranslate">let parsedUnit = CSSNumericValue.parse( unit );
+<pre class="brush: js">let parsedUnit = CSSNumericValue.parse( unit );
 console.log( parsedUnit );        // CSSUnitValue {value: 1.2, unit: "rem"}
 console.log( parsedUnit.unit );   // "rem"
 console.log( parsedUnit.value );  // 1.2</pre>
@@ -378,7 +378,7 @@ console.log( parsedUnit.value );  // 1.2</pre>
 
 <p>The value of {{domxref('CSSMathValue.operator')}} is <code>sum</code>:</p>
 
-<pre class="brush: js notranslate">let btnWidth = allComputedStyles.get('width')
+<pre class="brush: js">let btnWidth = allComputedStyles.get('width')
 
 console.log( btnWidth );             // CSSMathSum
 console.log( btnWidth.values );      // CSSNumericArray {0: CSSUnitValue, 1: CSSUnitValue, length: 2}
@@ -388,7 +388,7 @@ console.log( btnWidth.operator );    // 'sum'</pre>
 
 <p>The <code><a href="/en-US/docs/Web/CSS/CSS_Display">display: inline-block;</a></code> also enables transforming. In our CSS we have <code>transform: scale(0.95);</code>, which is a {{cssxref('transform')}} function. </p>
 
-<pre class="brush: js notranslate">let transform = allComputedStyles.get('transform');
+<pre class="brush: js">let transform = allComputedStyles.get('transform');
 
 console.log( transform );        // CSSTransformValue {0: CSSScale, 1: CSSTranslate, length: 2, is2D: true}
 console.log( transform.length ); // 1
@@ -408,7 +408,7 @@ console.log( transform.is2D );   // true</pre>
 
 <p>Our button has one background image: a magic wand.</p>
 
-<pre class="brush: js notranslate">let bgImage = allComputedStyles.get('background-image');
+<pre class="brush: js">let bgImage = allComputedStyles.get('background-image');
 
 console.log( bgImage );             // CSSImageValue
 console.log( bgImage.toString() );  // url("https://mdn.mozillademos.org/files/16793/magicwand.png")</pre>

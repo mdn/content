@@ -37,7 +37,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js line-numbers  language-js notranslate">const client = new XMLHttpRequest();
+<pre class="brush: js line-numbers  language-js">const client = new XMLHttpRequest();
 client.open('GET', 'http://www.example.org/example.txt');
 client.ontimeout = () =&gt; {
     console.error('Timeout!!')
@@ -47,7 +47,7 @@ client.send();</pre>
 
 <p>You could also set up the event handler using the {{domxref("EventTarget/addEventListener", "addEventListener()")}} method:</p>
 
-<pre class="brush: js notranslate">client.addEventListener('timeout', () =&gt; {
+<pre class="brush: js">client.addEventListener('timeout', () =&gt; {
     console.error("Timeout!!");
 });</pre>
 
