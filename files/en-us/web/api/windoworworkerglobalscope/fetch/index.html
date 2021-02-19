@@ -86,14 +86,17 @@ tags:
       <dd>The mode you want to use for the request, e.g., <code>cors</code>,
         <code>no-cors</code>, or <code>same-origin</code>.</dd>
       <dt><code>credentials</code></dt>
-      <dd>The request credentials you want to use for the request: <code>omit</code>,
-        <code>same-origin</code>, or <code>include</code>. To automatically send cookies
-        for the current domain, this option must be provided. Starting with Chrome 50,
-        this property also takes a {{domxref("FederatedCredential")}} instance or a
-        {{domxref("PasswordCredential")}} instance.</dd>
-      <dt><code>cache</code></dt>
-      <dd>The <a href="/en-US/docs/Web/API/Request/cache">cache mode</a> you want to use
-        for the request.</dd>
+      <dd>
+        <p>Controls what browsers do with credentials (<a href="/en-US/docs/Web/HTTP/Cookies">cookies</a>, <a href="/en-US/docs/Web/HTTP/Authentication">HTTP authentication</a> entries, and TLS client certificates). Must be one of the following strings:</p>
+        <dl>
+          <dt><code>omit</code></dt>
+          <dd>Tells browsers to exclude credentials from the request, and ignore any credentials sent back in the response (e.g., any {{HTTPHeader("Set-Cookie")}} header).</dd>
+          <dt><code>same-origin</code></dt>
+          <dd>Tells browsers to include credentials with requests to same-origin URLs, and use any credentials sent back in responses from same-origin URLs.</dd>
+          <dt><code>include</code></dt>
+          <dd>Tells browsers to always include credentials in requests, and always use any credentials sent back in responses.</dd>
+        </dl>
+      </dd>
 <dt><code>redirect</code></dt>
 <dd>How to handle a <code>redirect</code> response:
     <ul>
