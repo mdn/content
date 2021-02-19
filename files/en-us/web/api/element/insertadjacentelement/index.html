@@ -19,7 +19,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>targetElement</em>.insertAdjacentElement(<em>position</em>, <em>element</em>);</pre>
+  class="brush: js"><em>targetElement</em>.insertAdjacentElement(<em>position</em>, <em>element</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -70,7 +70,7 @@ tags:
 
 <h3 id="Visualization_of_position_names">Visualization of position names</h3>
 
-<pre class="notranslate">&lt;!-- <strong><code style="color: red;">beforebegin</code></strong> --&gt;
+<pre>&lt;!-- <strong><code style="color: red;">beforebegin</code></strong> --&gt;
 <code style="font-weight: bold;">&lt;p&gt;</code>
   &lt;!-- <strong><code style="color: green;">afterbegin</code></strong> --&gt;
   foo
@@ -84,7 +84,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">beforeBtn.addEventListener('click', function() {
+<pre class="brush: js">beforeBtn.addEventListener('click', function() {
   var tempDiv = document.createElement('div');
   tempDiv.style.backgroundColor = randomColor();
   if (activeElem) {

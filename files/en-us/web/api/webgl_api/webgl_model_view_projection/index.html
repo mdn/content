@@ -53,7 +53,7 @@ tags:
 
 <p>The constructor looks like this:</p>
 
-<pre class="brush: js notranslate">function WebGLBox() {
+<pre class="brush: js">function WebGLBox() {
   // Setup the canvas and WebGL context
   this.canvas = document.getElementById('canvas');
   this.canvas.width = window.innerWidth;
@@ -81,7 +81,7 @@ tags:
 
 <p>Now we'll create a method to draw a box on the screen.</p>
 
-<pre class="brush: js notranslate">WebGLBox.prototype.draw = function(settings) {
+<pre class="brush: js">WebGLBox.prototype.draw = function(settings) {
   // Create some attribute data; these are the triangles that will end being
   // drawn to the screen. There are two that form a square.
 
@@ -126,7 +126,7 @@ tags:
 
 <p>First take a look at the vertex shader that will move the vertices on the screen:</p>
 
-<pre class="brush: glsl notranslate">// The individual position vertex
+<pre class="brush: glsl">// The individual position vertex
 attribute vec3 position;
 
 void main() {
@@ -137,7 +137,7 @@ void main() {
 
 <p>Next, to actually rasterize the data into pixels, the fragment shader evaluates everything on a per pixel basis, setting a single color. The GPU calls the shader function for each pixel it needs to render; the shader's job is to return the color to use for that pixel.</p>
 
-<pre class="brush: glsl notranslate">precision mediump float;
+<pre class="brush: glsl">precision mediump float;
 uniform vec4 color;
 
 void main() {
@@ -147,12 +147,12 @@ void main() {
 
 <p>With those settings included, it's time to directly draw to the screen using clip space coordinates.</p>
 
-<pre class="brush: js notranslate">var box = new WebGLBox();
+<pre class="brush: js">var box = new WebGLBox();
 </pre>
 
 <p>First draw a red box in the middle.</p>
 
-<pre class="brush: js notranslate">box.draw({
+<pre class="brush: js">box.draw({
   top    : 0.5,             // x
   bottom : -0.5,            // x
   left   : -0.5,            // y
@@ -165,7 +165,7 @@ void main() {
 
 <p>Next, draw a green box up top and behind the red box.</p>
 
-<pre class="brush: js notranslate">box.draw({
+<pre class="brush: js">box.draw({
   top    : 0.9,             // x
   bottom : 0,               // x
   left   : -0.9,            // y
@@ -178,7 +178,7 @@ void main() {
 
 <p>Finally, for demonstration that clipping is actually going on, this box doesn't get drawn because it's entirely outside of clip space. The depth is outside of the -1.0 to 1.0 range.</p>
 
-<pre class="brush: js notranslate">box.draw({
+<pre class="brush: js">box.draw({
   top    : 1,               // x
   bottom : -1,              // x
   left   : -1,              // y
@@ -203,7 +203,7 @@ void main() {
 
 <p>The main line of the previous clip space vertex shader contained this code:</p>
 
-<pre class="brush: js notranslate">gl_Position = vec4(position, 1.0);
+<pre class="brush: js">gl_Position = vec4(position, 1.0);
 </pre>
 
 <p>The <code>position</code> variable was defined in the <code>draw()</code> method and passed in as an attribute to the shader. This is a three dimensional point, but the <code>gl_Position</code> variable that ends up getting passed down through the pipeline is actually 4 dimensional — instead of <code>(x, y, z)</code> it is <code>(x, y, z, w)</code>. There is no letter after <code>z</code>, so by convention this fourth dimension is labeled <code>w</code>. In the above example the <code>w</code> coordinate is set to 1.0.</p>
@@ -212,7 +212,7 @@ void main() {
 
 <p>A three dimensional point is defined in a typical Cartesian coordinate system. The added fourth dimension changes this point into a {{interwiki("wikipedia", "homogeneous coordinates", "homogeneous coordinate")}}. It still represents a point in 3D space and it can easily be demonstrated how to construct this type of coordinate through a pair of simple functions.</p>
 
-<pre class="brush: js notranslate">function cartesianToHomogeneous(point)
+<pre class="brush: js">function cartesianToHomogeneous(point)
   let x = point[0];
   let y = point[1];
   let z = point[2];
@@ -232,7 +232,7 @@ function homogeneousToCartesian(point) {
 
 <p>As previously mentioned and shown in the functions above, the w component divides the x, y, and z components. When the w component is a non-zero real number then homogeneous coordinate easily translates back into a normal point in Cartesian space. Now what happens if the w component is zero? In JavaScript the value returned would be as follows.</p>
 
-<pre class="brush: js notranslate">homogeneousToCartesian([10, 4, 5, 0]);
+<pre class="brush: js">homogeneousToCartesian([10, 4, 5, 0]);
 </pre>
 
 <p>This evaluates to: <code>[Infinity, Infinity, Infinity]</code>.</p>
@@ -247,7 +247,7 @@ function homogeneousToCartesian(point) {
 
 <p>To start playing with this idea the previous example can be modified to allow for the use of the <code>w</code> component.</p>
 
-<pre class="brush: js notranslate">//Redefine the triangles to use the W component
+<pre class="brush: js">//Redefine the triangles to use the W component
 var data = new Float32Array([
   //Triangle 1
   settings.left,  settings.bottom, settings.depth, settings.w,
@@ -263,7 +263,7 @@ var data = new Float32Array([
 
 <p>Then the vertex shader uses the 4 dimensional point passed in.</p>
 
-<pre class="brush: js notranslate">attribute vec4 position;
+<pre class="brush: js">attribute vec4 position;
 
 void main() {
   gl_Position = position;
@@ -272,7 +272,7 @@ void main() {
 
 <p>First, we draw a red box in the middle, but set W to 0.7. As the coordinates get divided by 0.7 they will all be enlarged.</p>
 
-<pre class="brush: js notranslate">box.draw({
+<pre class="brush: js">box.draw({
   top    : 0.5,             // y
   bottom : -0.5,            // y
   left   : -0.5,            // x
@@ -286,7 +286,7 @@ void main() {
 
 <p>Now, we draw a green box up top, but shrink it by setting the w component to 1.1</p>
 
-<pre class="brush: js notranslate">box.draw({
+<pre class="brush: js">box.draw({
   top    : 0.9,             // y
   bottom : 0,               // y
   left   : -0.9,            // x
@@ -300,7 +300,7 @@ void main() {
 
 <p>This last box doesn't get drawn because it's outside of clip space. The depth is outside of the -1.0 to 1.0 range.</p>
 
-<pre class="brush: js notranslate">box.draw({
+<pre class="brush: js">box.draw({
   top    : 1,               // y
   bottom : -1,              // y
   left   : -1,              // x
@@ -335,7 +335,7 @@ void main() {
 
 <p>The following code sample defines a method on the <code>CubeDemo</code> object that will create the model matrix. It uses custom functions to create and multiply matrices as defined in the <a href="https://github.com/TatumCreative/mdn-webgl">MDN WebGL</a> shared code. The new function looks like this:</p>
 
-<pre class="brush: js notranslate">CubeDemo.prototype.computeModelMatrix = function(now) {
+<pre class="brush: js">CubeDemo.prototype.computeModelMatrix = function(now) {
   //Scale down by 50%
   var scale = MDN.scaleMatrix(0.5, 0.5, 0.5);
 
@@ -360,17 +360,17 @@ void main() {
 
 <p>In order to use this in the shader it must be set to a uniform location. The locations for the uniforms are saved in the <code>locations</code> object shown below:</p>
 
-<pre class="brush: js notranslate">this.locations.model = gl.getUniformLocation(webglProgram, 'model');
+<pre class="brush: js">this.locations.model = gl.getUniformLocation(webglProgram, 'model');
 </pre>
 
 <p>And finally the uniform is set to that location. This hands off the matrix to the GPU.</p>
 
-<pre class="brush: js notranslate">gl.uniformMatrix4fv(this.locations.model, false, new Float32Array(this.transforms.model));
+<pre class="brush: js">gl.uniformMatrix4fv(this.locations.model, false, new Float32Array(this.transforms.model));
 </pre>
 
 <p>In the shader, each position vertex is first transformed into a homogeneous coordinate (a <code>vec4</code> object), and then multiplied against the model matrix.</p>
 
-<pre class="brush: glsl notranslate">gl_Position = model * vec4(position, 1.0);
+<pre class="brush: glsl">gl_Position = model * vec4(position, 1.0);
 </pre>
 
 <div class="note">
@@ -400,7 +400,7 @@ void main() {
 
 <p>The shader code looks like this.</p>
 
-<pre class="brush: js notranslate">// First transform the point
+<pre class="brush: js">// First transform the point
 vec4 transformedPosition = model * vec4(position, 1.0);
 
 // How much effect does the perspective have?
@@ -432,7 +432,7 @@ gl_Position = vec4(transformedPosition.xyz, w);
 
 <p>The last step of filling in the w component can actually be accomplished with a simple matrix. Start with the identity matrix:</p>
 
-<pre class="brush: js notranslate">var identity = [
+<pre class="brush: js">var identity = [
   1, 0, 0, 0,
   0, 1, 0, 0,
   0, 0, 1, 0,
@@ -445,7 +445,7 @@ MDN.multiplyPoint(identity, [2, 3, 4, 1]);
 
 <p>Then move the last column's 1 up one space.</p>
 
-<pre class="brush: js notranslate">var copyZ = [
+<pre class="brush: js">var copyZ = [
   1, 0, 0, 0,
   0, 1, 0, 0,
   0, 0, 1, 1,
@@ -458,7 +458,7 @@ MDN.multiplyPoint(copyZ, [2, 3, 4, 1]);
 
 <p>However in the last example we performed <code>(z + 1) * scaleFactor</code>:</p>
 
-<pre class="brush: js notranslate">var scaleFactor = 0.5;
+<pre class="brush: js">var scaleFactor = 0.5;
 
 var simpleProjection = [
   1, 0, 0, 0,
@@ -473,7 +473,7 @@ MDN.multiplyPoint(simpleProjection, [2, 3, 4, 1]);
 
 <p>Breaking it out a little further we can see how this works:</p>
 
-<pre class="brush: js notranslate">var x = (2 * 1) + (3 * 0) + (4 * 0) + (1 * 0)
+<pre class="brush: js">var x = (2 * 1) + (3 * 0) + (4 * 0) + (1 * 0)
 var y = (2 * 0) + (3 * 1) + (4 * 0) + (1 * 0)
 var z = (2 * 0) + (3 * 0) + (4 * 1) + (1 * 0)
 var w = (2 * 0) + (3 * 0) + (4 * scaleFactor) + (1 * scaleFactor)
@@ -481,19 +481,19 @@ var w = (2 * 0) + (3 * 0) + (4 * scaleFactor) + (1 * scaleFactor)
 
 <p>The last line could be simplified to:</p>
 
-<pre class="brush: js notranslate">w = (4 * scaleFactor) + (1 * scaleFactor)
+<pre class="brush: js">w = (4 * scaleFactor) + (1 * scaleFactor)
 </pre>
 
 <p>Then factoring out the scaleFactor, we get this:</p>
 
-<pre class="brush: js notranslate">w = (4 + 1) * scaleFactor
+<pre class="brush: js">w = (4 + 1) * scaleFactor
 </pre>
 
 <p>Which is exactly the same as the <code>(z + 1) * scaleFactor</code> that we used in the previous example.</p>
 
 <p>In the box demo, an additional <code>computeSimpleProjectionMatrix()</code> method is added. This is called in the <code>draw()</code> method and has the scale factor passed to it. The result should be identical to the last example:</p>
 
-<pre class="brush: js notranslate">CubeDemo.prototype.computeSimpleProjectionMatrix = function(scaleFactor) {
+<pre class="brush: js">CubeDemo.prototype.computeSimpleProjectionMatrix = function(scaleFactor) {
 	this.transforms.projection = [
 		1, 0, 0, 0,
 		0, 1, 0, 0,
@@ -505,7 +505,7 @@ var w = (2 * 0) + (3 * 0) + (4 * scaleFactor) + (1 * scaleFactor)
 
 <p>Although the result is identical, the important step here is in the vertex shader. Rather than modifying the vertex directly, it gets multiplied by an additional <strong>{{anch("Projection matrix", "projection matrix")}}</strong>, which (as the name suggests) projects 3D points onto a 2D drawing surface:</p>
 
-<pre class="brush: glsl notranslate">// Make sure to read the transformations in reverse order
+<pre class="brush: glsl">// Make sure to read the transformations in reverse order
 gl_Position = projection * model * vec4(position, 1.0);
 </pre>
 
@@ -555,7 +555,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 <p>Let's take a look at a <code>perspectiveMatrix()</code> function, which computes the perspective projection matrix.</p>
 
-<pre class="brush:js notranslate">MDN.perspectiveMatrix = function(fieldOfViewInRadians, aspectRatio, near, far) {
+<pre class="brush:js">MDN.perspectiveMatrix = function(fieldOfViewInRadians, aspectRatio, near, far) {
   var f = 1.0 / Math.tan(fieldOfViewInRadians / 2);
   var rangeInv = 1 / (near - far);
 
@@ -583,7 +583,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 <p>In the latest version of the box demo, the <code>computeSimpleProjectionMatrix()</code> method has been replaced with the <code>computePerspectiveMatrix()</code> method.</p>
 
-<pre class="brush: js notranslate">CubeDemo.prototype.computePerspectiveMatrix = function() {
+<pre class="brush: js">CubeDemo.prototype.computePerspectiveMatrix = function() {
   var fieldOfViewInRadians = Math.PI * 0.5;
   var aspectRatio = window.innerWidth / window.innerHeight;
   var nearClippingPlaneDistance = 1;
@@ -600,7 +600,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 <p>The shader code is identical to the previous example:</p>
 
-<pre class="brush: js notranslate">gl_Position = projection * model * vec4(position, 1.0);
+<pre class="brush: js">gl_Position = projection * model * vec4(position, 1.0);
 </pre>
 
 <p>Additionally (not shown), the position and scale matrices of the model have been changed to take it out of clip space and into the larger coordinate system.</p>
@@ -642,7 +642,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 <p>The following <code>computeViewMatrix()</code> method animates the view matrix by moving it in and out, and left and right.</p>
 
-<pre class="brush: js notranslate">CubeDemo.prototype.computeViewMatrix = function(now) {
+<pre class="brush: js">CubeDemo.prototype.computeViewMatrix = function(now) {
   var moveInAndOut = 20 * Math.sin(now * 0.002);
   var moveLeftAndRight = 15 * Math.sin(now * 0.0017);
 
@@ -663,7 +663,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 <p>The shader now uses three matrices.</p>
 
-<pre class="brush: glsl notranslate">gl_Position = projection * view * model * vec4(position, 1.0);
+<pre class="brush: glsl">gl_Position = projection * view * model * vec4(position, 1.0);
 </pre>
 
 <p>After this step, the GPU pipeline will clip the out of range vertices, and send the model down to the fragment shader for rasterization.</p>

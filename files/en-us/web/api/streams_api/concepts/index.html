@@ -107,7 +107,7 @@ tags:
 
 <p>The calculation performed is</p>
 
-<code class="notranslate">high water mark - total size of chunks in queue = desired size</code>
+<code>high water mark - total size of chunks in queue = desired size</code>
 
 <p>The <strong>desired size</strong> is the size of chunks the stream can still accept to keep the stream flowing but below the high water mark in size. After the calculation is performed, chunk generation will be slowed down/sped up as appropriate to keep the stream flowing as fast as possible while keeping the desired size above zero. If the value falls to zero (or below in the case of writable streams), it means that chunks are being generated faster than the stream can cope with, which results in problems.</p>
 

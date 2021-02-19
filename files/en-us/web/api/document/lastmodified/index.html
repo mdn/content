@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <var>string</var> = <var>document</var>.lastModified;
+<pre class="brush: js">var <var>string</var> = <var>document</var>.lastModified;
 </pre>
 
 <h2 id="Examples">Examples</h2>
@@ -26,7 +26,7 @@ tags:
 
 <p>This example alerts the value of <code>lastModified</code>.</p>
 
-<pre class="brush: js notranslate">alert(document.lastModified);
+<pre class="brush: js">alert(document.lastModified);
 // returns: Tuesday, December 16, 2017 11:09:42
 </pre>
 
@@ -35,7 +35,7 @@ tags:
 
 <p>This example transforms <code>lastModified</code> into a {{jsxref("Date")}} object.</p>
 
-<pre class="brush: js notranslate">let oLastModif = new Date(document.lastModified);
+<pre class="brush: js">let oLastModif = new Date(document.lastModified);
 </pre>
 
 <h3 id="Transforming_lastModified_into_milliseconds">Transforming lastModified into
@@ -44,7 +44,7 @@ tags:
 <p>This example transforms <code>lastModified</code> into the number of milliseconds since
   January 1, 1970, 00:00:00, local time.</p>
 
-<pre class="brush: js notranslate">let nLastModif = Date.parse(document.lastModified);
+<pre class="brush: js">let nLastModif = Date.parse(document.lastModified);
 </pre>
 
 <h2 id="Notes">Notes</h2>
@@ -54,14 +54,14 @@ tags:
   an alert message when the page changes (see also: <a
     href="/en-US/docs/DOM/document.cookie">JavaScript cookies API</a>):</p>
 
-<pre class="brush: js notranslate">if (Date.parse(document.lastModified) &gt; parseFloat(document.cookie.replace(/(?:(?:^|.*;)\s*last_modif\s*\=\s*([^;]*).*$)|^.*$/, "$1") || "0")) {
+<pre class="brush: js">if (Date.parse(document.lastModified) &gt; parseFloat(document.cookie.replace(/(?:(?:^|.*;)\s*last_modif\s*\=\s*([^;]*).*$)|^.*$/, "$1") || "0")) {
   document.cookie = "last_modif=" + Date.now() + "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=" + location.pathname;
   alert("This page has changed!");
 }</pre>
 
 <p>…the same example, but skipping the first visit:</p>
 
-<pre class="brush: js notranslate">var
+<pre class="brush: js">var
   nLastVisit = parseFloat(document.cookie.replace(/(?:(?:^|.*;)\s*last_modif\s*\=\s*([^;]*).*$)|^.*$/, "$1")),
   nLastModif = Date.parse(document.lastModified);
 

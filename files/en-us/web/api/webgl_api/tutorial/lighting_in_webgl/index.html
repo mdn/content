@@ -50,7 +50,7 @@ tags:
 
 <p>The first thing we need to do is generate the array of normals for all the vertices that comprise our cube. Since a cube is a very simple object, this is easy to do; obviously for more complex objects, calculating the normals will be more involved.</p>
 
-<pre class="brush: js notranslate">  const normalBuffer = gl.createBuffer();
+<pre class="brush: js">  const normalBuffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, normalBuffer);
 
   const vertexNormals = [
@@ -109,7 +109,7 @@ tags:
 
 <p>Then we add the code to <code>drawScene()</code> to bind the normals array to a shader attribute so the shader code can get access to it:</p>
 
-<pre class="brush: js notranslate">  // Tell WebGL how to pull out the normals from
+<pre class="brush: js">  // Tell WebGL how to pull out the normals from
   // the normal buffer into the vertexNormal attribute.
   {
     const numComponents = 3;
@@ -132,7 +132,7 @@ tags:
 
 <p>Finally, we need to update the code that builds the uniform matrices to generate and deliver to the shader a <strong>normal matrix</strong>, which is used to transform the normals when dealing with the current orientation of the cube in relation to the light source:</p>
 
-<pre class="brush: js notranslate">  const normalMatrix = mat4.create();
+<pre class="brush: js">  const normalMatrix = mat4.create();
   mat4.invert(normalMatrix, modelViewMatrix);
   mat4.transpose(normalMatrix, normalMatrix);
 
@@ -152,7 +152,7 @@ tags:
 
 <p>The first thing to do is update the vertex shader so it generates a shading value for each vertex based on the ambient lighting as well as the directional lighting. Let's take a look at the code:</p>
 
-<pre class="brush: js notranslate">  const vsSource = `
+<pre class="brush: js">  const vsSource = `
     attribute vec4 aVertexPosition;
     attribute vec3 aVertexNormal;
     attribute vec2 aTextureCoord;
@@ -192,7 +192,7 @@ tags:
 
 <p>The fragment shader now needs to be updated to take into account the lighting value computed by the vertex shader:</p>
 
-<pre class="brush: js notranslate">  const fsSource = `
+<pre class="brush: js">  const fsSource = `
     varying highp vec2 vTextureCoord;
     varying highp vec3 vLighting;
 
@@ -210,7 +210,7 @@ tags:
 
 <p>The only thing left is to look up the location of the <code>aVertexNormal</code> attribute and the <code>uNormalMatrix</code> uniform.</p>
 
-<pre class="brush: js notranslate">  const programInfo = {
+<pre class="brush: js">  const programInfo = {
     program: shaderProgram,
     attribLocations: {
       vertexPosition: gl.getAttribLocation(shaderProgram, 'aVertexPosition'),

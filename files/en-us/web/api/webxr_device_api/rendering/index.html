@@ -35,7 +35,7 @@ tags:
 
 <p>Kicking off the renderer thus looks like this:</p>
 
-<pre class="brush: js notranslate">let worldRefSpace;
+<pre class="brush: js">let worldRefSpace;
 
 async function runXR(xrSession) {
   worldRefSpace = await xrSession.requestReferenceSpace("immersive-vr");
@@ -147,7 +147,7 @@ async function runXR(xrSession) {
 
 <p>In this version of the WebXR rendering callback, we use a very straightforward approach that works great for relatively simple projects. This pseudocode outlines that process:</p>
 
-<pre class="brush: js notranslate">for each view in the pose's views list:
+<pre class="brush: js">for each view in the pose's views list:
   get the WebXR GL layer's viewport
   set the WebGL viewport to match
   for each object in the scene
@@ -168,7 +168,7 @@ async function runXR(xrSession) {
 
 <p>Let's take a look at some real code that follows this basic pattern. Since in the example above we gave this function the name <code>myDrawFrame()</code>, we'll continue to use that here.</p>
 
-<pre class="brush: js notranslate">let lastFrameTime = 0;
+<pre class="brush: js">let lastFrameTime = 0;
 
 function myDrawFrame(currentFrameTime, frame) {
   let session = frame.session;
@@ -242,7 +242,7 @@ function myDrawFrame(currentFrameTime, frame) {
 
 <p>The resulting pseudocode looks like this:</p>
 
-<pre class="brush: js notranslate">for each object in the scene
+<pre class="brush: js">for each object in the scene
   bindProgram()
   bindUniforms()
   bindBuffers()
@@ -263,7 +263,7 @@ function myDrawFrame(currentFrameTime, frame) {
 
 <p>For example, to reduce the frame rate by 50%, just skip every other frame:</p>
 
-<pre class="brush: js notranslate">let tick = 0;
+<pre class="brush: js">let tick = 0;
 
 function drawFrame(time, frame) {
   animationFrameRequestID = frame.session.requestAnimationFrame(drawFrame);
@@ -284,7 +284,7 @@ function drawFrame(time, frame) {
 
 <p>For that reason, you need to use the timestamp provided to ensure your animation renders at precisely the desired speed. To do so, the first thing you need to do is to compute the time that has elapsed since the last frame was rendered:</p>
 
-<pre class="brush: js notranslate">let lastFrameTime = 0;
+<pre class="brush: js">let lastFrameTime = 0;
 
 function drawFrame(time, frame) {
   /* ... schedule next frame, prepare the buffer, etc ... */
@@ -302,7 +302,7 @@ function drawFrame(time, frame) {
 
 <p>With the elapsed time in hand, your rendering code has the means to compute just how much every moving object has moved in the time elapsed. For instance, if an object is rotating, you might apply the rotation like this:</p>
 
-<pre class="brush: js notranslate">const xDeltaRotation = (xRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
+<pre class="brush: js">const xDeltaRotation = (xRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
 const yDeltaRotation = (yRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
 const zDeltaRotation = (zRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
 </pre>
@@ -311,7 +311,7 @@ const zDeltaRotation = (zRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaT
 
 <p>The same concept applied for objects that are moving rather than rotating:</p>
 
-<pre class="brush: js notranslate">const xDistanceMoved = xSpeedPerSecond * deltaTime;
+<pre class="brush: js">const xDistanceMoved = xSpeedPerSecond * deltaTime;
 const yDistanceMoved = ySpeedPerSecond * deltaTime;
 const ZDistanceMoved = zSpeedPerSecond * deltaTime;
 </pre>

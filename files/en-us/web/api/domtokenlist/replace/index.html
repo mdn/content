@@ -18,7 +18,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>tokenList</var>.replace(<var>oldToken</var>, <var>newToken</var>);</pre>
+  class="brush: js"><var>tokenList</var>.replace(<var>oldToken</var>, <var>newToken</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -48,11 +48,11 @@ tags:
 
 <p>First, the HTML:</p>
 
-<pre class="brush: html notranslate">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
 
 <p>Now the JavaScript:</p>
 
-<pre class="brush: js notranslate">let span = document.querySelector("span");
+<pre class="brush: js">let span = document.querySelector("span");
 let classes = span.classList;
 
 let result = classes.replace("c", "z");
@@ -75,7 +75,7 @@ if (result) {
   earlier versions of IE, refer to the polyfill at
   {{domxref("element.classList#Polyfill")}}</p>
 
-<pre class="brush: js notranslate"><code>DOMTokenList.prototype.replace = function (a, b) {
+<pre class="brush: js"><code>DOMTokenList.prototype.replace = function (a, b) {
     if (this.contains(a)) {
         this.add(b);
         this.remove(a);

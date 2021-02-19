@@ -12,7 +12,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">queryCommandState(String <var>command</var>)
+<pre class="brush: js">queryCommandState(String <var>command</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -27,13 +27,13 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;div contenteditable="true"&gt;Select a part of this text!&lt;/div&gt;
+<pre class="brush: html">&lt;div contenteditable="true"&gt;Select a part of this text!&lt;/div&gt;
 &lt;button onclick="makeBold();"&gt;Test the state of the 'bold' command&lt;/button&gt;
 </pre>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">function makeBold() {
+<pre class="brush: js">function makeBold() {
   var state = document.queryCommandState("bold");
   switch (state) {
     case true:

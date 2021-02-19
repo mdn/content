@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>arrayLength</em> = <em>analyserNode</em>.frequencyBinCount;
+<pre class="brush: js">var <em>arrayLength</em> = <em>analyserNode</em>.frequencyBinCount;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -28,7 +28,7 @@ tags:
 
 <p>The following example shows basic usage of an {{domxref("AudioContext")}} to create an <code>AnalyserNode</code>, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect frequency data repeatedly and draw a "winamp bargraph style" output of the current audio input. For more complete applied examples/information, check out our <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> demo (see <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js lines 128–205</a> for relevant code).</p>
 
-<pre class="brush: js notranslate">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
 analyser.minDecibels = -90;
 analyser.maxDecibels = -10;

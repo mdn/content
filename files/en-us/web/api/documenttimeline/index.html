@@ -36,7 +36,7 @@ tags:
 
 <p>We could share a single <code>documentTimeline</code> among multiple animations, thus allowing us to manipulate just that group of animations via their shared timeline. This bit of code would start all the cats animating 500 milliseconds into their animations:</p>
 
-<pre class="brush: js notranslate">const cats = document.querySelectorAll('.sharedTimelineCat');
+<pre class="brush: js">const cats = document.querySelectorAll('.sharedTimelineCat');
 const sharedTimeline = new DocumentTimeline({ originTime: 500 });
 
 for (const cat of cats) {

@@ -20,7 +20,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>unregister</var> = PeriodicSyncManager.unregister(tag);</pre>
+  class="brush: js">var <var>unregister</var> = PeriodicSyncManager.unregister(tag);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -42,7 +42,7 @@ tags:
 <p>The following example removes a periodic sync to stop syncing articles in the
   background.</p>
 
-<pre class="brush: js notranslate">navigator.serviceWorker.ready.then(registration =&gt; {
+<pre class="brush: js">navigator.serviceWorker.ready.then(registration =&gt; {
   registration.periodicSync.unregister('get-latest-news');
 });
 </pre>

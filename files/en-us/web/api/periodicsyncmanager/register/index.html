@@ -20,7 +20,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>register</var> = PeriodicSyncManager.register(tag, BackgroundSyncOptions);</pre>
+  class="brush: js">var <var>register</var> = PeriodicSyncManager.register(tag, BackgroundSyncOptions);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -57,7 +57,7 @@ tags:
 <p>The following asynchronous function registers a periodic background sync at a minimum
   interval of one day from a browsing context:</p>
 
-<pre class="brush: js notranslate">async function registerPeriodicNewsCheck() {
+<pre class="brush: js">async function registerPeriodicNewsCheck() {
   const registration = await navigator.serviceWorker.ready;
   try {
     await registration.periodicSync.register('fetch-news', {

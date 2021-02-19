@@ -19,7 +19,7 @@ tags:
 
 <p>The first step is to create the {{ HTMLElement("video") }} element that we'll use to retrieve the video frames:</p>
 
-<pre class="brush: js notranslate">// will set to true when video can be copied to texture
+<pre class="brush: js">// will set to true when video can be copied to texture
 var copyVideo = false;
 
 function setupVideo(url) {
@@ -69,7 +69,7 @@ function setupVideo(url) {
 
 <p>The next change is to <code>initTexture()</code>, which becomes much simpler, since it no longer needs to load an image file. Instead, all it does is create an empty texture object, put a single pixel in it, and set its filtering for later use:</p>
 
-<pre class="brush: js notranslate">function initTexture(gl) {
+<pre class="brush: js">function initTexture(gl) {
   const texture = gl.createTexture();
   gl.bindTexture(gl.TEXTURE_2D, texture);
 
@@ -101,7 +101,7 @@ function setupVideo(url) {
 
 <div>Here's what the <code>updateTexture()</code> function looks like; this is where the real work is done:</div>
 
-<pre class="brush: js notranslate">function updateTexture(gl, texture, video) {
+<pre class="brush: js">function updateTexture(gl, texture, video) {
   const level = 0;
   const internalFormat = gl.RGBA;
   const srcFormat = gl.RGBA;
@@ -118,7 +118,7 @@ function setupVideo(url) {
 
 <p>In the definition of <code>render()</code> if <code>copyVideo</code> is true, then we call <code>updateTexture()</code> each time just before we call the <code>drawScene()</code> function.</p>
 
-<pre class="brush: js notranslate">  const texture = initTexture(gl);
+<pre class="brush: js">  const texture = initTexture(gl);
 
   const video = setupVideo('Firefox.mp4');
 
