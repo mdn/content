@@ -24,7 +24,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>types</em> = <em>clipboardItem</em>.types;</pre>
+  class="brush: js">var <em>types</em> = <em>clipboardItem</em>.types;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -38,7 +38,7 @@ tags:
   to return the {{domxref("Blob")}} object. If no clipboards contents is found for the
   specified type, an error is returned.</p>
 
-<pre class="brush: js notranslate">async function getClipboardContents() {
+<pre class="brush: js">async function getClipboardContents() {
   try {
     const clipboardItems = await navigator.clipboard.read();
 

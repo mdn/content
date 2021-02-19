@@ -40,11 +40,11 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>t</em> = performance.now();</pre>
+<pre class="brush: js"><em>t</em> = performance.now();</pre>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">const t0 = performance.now();
+<pre class="brush: js">const t0 = performance.now();
 doSomething();
 const t1 = performance.now();
 console.log(`Call to doSomething took ${t1 - t0} milliseconds.`);
@@ -69,7 +69,7 @@ console.log(`Call to doSomething took ${t1 - t0} milliseconds.`);
   In Firefox, the <code>privacy.reduceTimerPrecision</code> preference is enabled by
   default and defaults to 1ms.</p>
 
-<pre class="brush: js notranslate">// reduced time precision (1ms) in Firefox 60
+<pre class="brush: js">// reduced time precision (1ms) in Firefox 60
 performance.now();
 // 8781416
 // 8781815
@@ -93,7 +93,7 @@ performance.now();
   isolate your document using the {{HTTPHeader("Cross-Origin-Opener-Policy")}} and
   {{HTTPHeader("Cross-Origin-Embedder-Policy")}} headers:</p>
 
-<pre class="brush: plain notranslate">Cross-Origin-Opener-Policy: same-origin
+<pre class="brush: plain">Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 </pre>
 

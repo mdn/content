@@ -28,7 +28,7 @@ tags:
 
 <p>First, we create space to build the keyboard into. We will be programmatically constructing the keyboard, because doing so gives us the flexibility to configure each key as we determine the appropriate data for the corresponding note. In our case, we get each key's frequency from a table, but it could be calculated algorithmically as well.</p>
 
-<pre class="brush: html notranslate">&lt;div class="container"&gt;
+<pre class="brush: html">&lt;div class="container"&gt;
   &lt;div class="keyboard"&gt;&lt;/div&gt;
 &lt;/div&gt;
 </pre>
@@ -43,7 +43,7 @@ tags:
 
 <p>First we create the <code>&lt;div&gt;</code> to contain the settings bar, so it can be styled as needed. Then we establish a box that will be presented on the left side of the bar and place a label and an {{HTMLElement("input")}} element of type <code>"range"</code>. The range element will typically be presented as a slider control; we configure it to allow any value between 0.0 and 1.0, stepping by 0.01 each position.</p>
 
-<pre class="brush: html notranslate">&lt;div class="settingsBar"&gt;
+<pre class="brush: html">&lt;div class="settingsBar"&gt;
   &lt;div class="left"&gt;
     &lt;span&gt;Volume: &lt;/span&gt;
     &lt;input type="range" min="0.0" max="1.0" step="0.01"
@@ -61,7 +61,7 @@ tags:
 
 <p>On the right side of the settings bar, we place a label and a {{HTMLElement("select")}} element named <code>"waveform"</code> whose options correspond to the available waveforms.</p>
 
-<pre class="brush: html notranslate">  &lt;div class="right"&gt;
+<pre class="brush: html">  &lt;div class="right"&gt;
     &lt;span&gt;Current waveform: &lt;/span&gt;
     &lt;select name="waveform"&gt;
       &lt;option value="sine"&gt;Sine&lt;/option&gt;
@@ -76,7 +76,7 @@ tags:
 <div class="hidden">
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css notranslate">.container {
+<pre class="brush: css">.container {
   overflow-x: scroll;
   overflow-y: hidden;
   width: 660px;
@@ -178,7 +178,7 @@ tags:
 
 <p>The JavaScript code begins by initializing a number of variables.</p>
 
-<pre class="brush: js notranslate">let audioContext = new (window.AudioContext || window.webkitAudioContext)();
+<pre class="brush: js">let audioContext = new (window.AudioContext || window.webkitAudioContext)();
 let oscList = [];
 let masterGainNode = null;
 </pre>
@@ -189,7 +189,7 @@ let masterGainNode = null;
  <li><code>masterGainNode</code> is set to null; during the setup process, it will be configured to contain a {{domxref("GainNode")}} which all playing oscillators will connect to and play through to allow the overall volume to be controlled using a single slider control.</li>
 </ol>
 
-<pre class="brush: js notranslate">let keyboard = document.querySelector(".keyboard");
+<pre class="brush: js">let keyboard = document.querySelector(".keyboard");
 let wavePicker = document.querySelector("select[name='waveform']");
 let volumeControl = document.querySelector("input[name='volume']");
 </pre>
@@ -202,7 +202,7 @@ let volumeControl = document.querySelector("input[name='volume']");
  <li><code>volumeControl</code> is the {{HTMLElement("input")}} element (of type <code>"range"</code>) used to control the master audio volume.</li>
 </ul>
 
-<pre class="brush: js notranslate">let noteFreq = null;
+<pre class="brush: js">let noteFreq = null;
 let customWaveform = null;
 let sineTerms = null;
 let cosineTerms = null;
@@ -220,7 +220,7 @@ let cosineTerms = null;
 
 <p>The <code>createNoteTable()</code> function builds the array <code>noteFreq</code> to contain an array of objects representing each octave. Each octave, in turn, has one named property for each note in that octave; the property's name is the note's name (such as "C#" to represent C-sharp), and the value is the frequency, in Hertz, of that note.</p>
 
-<pre class="brush: js notranslate">function createNoteTable() {
+<pre class="brush: js">function createNoteTable() {
   let noteFreq = [];
   for (let i=0; i&lt; 9; i++) {
     noteFreq[i] = [];
@@ -247,7 +247,7 @@ let cosineTerms = null;
 <p>... several octaves not shown for brevity ...</p>
 
 <div class="hidden">
-<pre class="brush: js notranslate">  noteFreq[2]["C"] = 65.406391325149658;
+<pre class="brush: js">  noteFreq[2]["C"] = 65.406391325149658;
   noteFreq[2]["C#"] = 69.295657744218024;
   noteFreq[2]["D"] = 73.416191979351890;
   noteFreq[2]["D#"] = 77.781745930520227;
@@ -314,7 +314,7 @@ let cosineTerms = null;
 </pre>
 </div>
 
-<pre class="brush: js notranslate">  noteFreq[7]["C"] = 2093.004522404789077;
+<pre class="brush: js">  noteFreq[7]["C"] = 2093.004522404789077;
   noteFreq[7]["C#"] = 2217.461047814976769;
   noteFreq[7]["D"] = 2349.318143339260482;
   noteFreq[7]["D#"] = 2489.015869776647285;
@@ -390,7 +390,7 @@ let cosineTerms = null;
 <div class="hidden">
 <p>This polyfill stands in when <code>Object.entries()</code> doesn't exist.</p>
 
-<pre class="brush: js notranslate">if (!Object.entries) {
+<pre class="brush: js">if (!Object.entries) {
     Object.entries = function entries(O) {
         return reduce(keys(O), (e, k) =&gt; concat(e, typeof k === 'string' &amp;&amp; isEnumerable(O, k) ? [[k, O[k]]] : []), []);
     };
@@ -402,7 +402,7 @@ let cosineTerms = null;
 
 <p>The <code>setup()</code> function is responsible for building the keyboard and preparing the app to play music.</p>
 
-<pre class="brush: js notranslate">function setup() {
+<pre class="brush: js">function setup() {
   noteFreq = createNoteTable();
 
   volumeControl.addEventListener("change", changeVolume, false);
@@ -458,7 +458,7 @@ setup();</pre>
 
 <p>The <code>createKey()</code> function is called once for each key that we want to present in the virtual keyboard. It creates the elements that comprise the key and its label, adds some data attributes to the element for later use, and assigns event handlers for the events we care about.</p>
 
-<pre class="brush: js notranslate">function createKey(note, octave, freq) {
+<pre class="brush: js">function createKey(note, octave, freq) {
   let keyElement = document.createElement("div");
   let labelElement = document.createElement("div");
 
@@ -487,7 +487,7 @@ setup();</pre>
 
 <p>The <code>playTone()</code> function's job is to play a tone at the given frequency. This will be used by the handler for events triggering keys on the keyboard to start playing the appropriate notes.</p>
 
-<pre class="brush: js notranslate">function playTone(freq) {
+<pre class="brush: js">function playTone(freq) {
   let osc = audioContext.createOscillator();
   osc.connect(masterGainNode);
 
@@ -516,7 +516,7 @@ setup();</pre>
 
 <p>When the {{event("mousedown")}} or {{domxref("mouseover")}} event occurs on a key, we want to start playing the corresponding note. The <code>notePressed()</code> function is used as the event handler for these events.</p>
 
-<pre class="brush: js notranslate">function notePressed(event) {
+<pre class="brush: js">function notePressed(event) {
   if (event.buttons &amp; 1) {
     let dataset = event.target.dataset;
 
@@ -537,7 +537,7 @@ setup();</pre>
 
 <p>The <code>noteReleased()</code> function is the event handler called when the user releases the mouse button or moves the mouse out of the key that's currently playing.</p>
 
-<pre class="brush: js notranslate">function noteReleased(event) {
+<pre class="brush: js">function noteReleased(event) {
   let dataset = event.target.dataset;
 
   if (dataset &amp;&amp; dataset["pressed"]) {
@@ -555,7 +555,7 @@ setup();</pre>
 
 <p>The volume slider in the settings bar provides a simple interface to change the gain value on the master gain node, thereby changing the loudness of all playing notes. The <code>changeVolume()</code> method is the handler for the {{event("change")}} event on the slider.</p>
 
-<pre class="brush: js notranslate">function changeVolume(event) {
+<pre class="brush: js">function changeVolume(event) {
   masterGainNode.gain.value = volumeControl.value
 }
 </pre>

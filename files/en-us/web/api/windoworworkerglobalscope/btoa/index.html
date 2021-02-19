@@ -28,7 +28,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>encodedData</var> = <var>scope</var>.btoa(<var>stringToEncode</var>);</pre>
+  class="brush: js">var <var>encodedData</var> = <var>scope</var>.btoa(<var>stringToEncode</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -52,7 +52,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">const encodedData = window.btoa('Hello, world'); // encode a string
+<pre class="brush: js">const encodedData = window.btoa('Hello, world'); // encode a string
 const decodedData = window.atob(encodedData); // decode the string
 </pre>
 
@@ -69,7 +69,7 @@ const decodedData = window.atob(encodedData); // decode the string
   string into <code>btoa()</code> containing characters that occupy more than one byte,
   you will get an error, because this is not considered binary data:</p>
 
-<pre class="brush: js notranslate">const ok = "a";
+<pre class="brush: js">const ok = "a";
 console.log(ok.codePointAt(0).toString(16)); //   61: occupies &lt; 1 byte
 
 const notOK = "✓"
@@ -81,7 +81,7 @@ console.log(btoa(notOK)); // error</pre>
 <p>If you need to encode Unicode text as ASCII using <code>btoa()</code>, one option is to
   convert the string such that each 16-bit unit occupies only one byte. For example:</p>
 
-<pre class="brush: js notranslate">// convert a Unicode string to a string in which
+<pre class="brush: js">// convert a Unicode string to a string in which
 // each 16-bit unit occupies only one byte
 function toBinary(string) {
   const codeUnits = new Uint16Array(string.length);
@@ -102,7 +102,7 @@ console.log(encoded);                 // OCY5JjomOyY8Jj4mPyY=
 <p>If you do this, of course you'll have to reverse the conversion on the decoded string:
 </p>
 
-<pre class="brush: js notranslate">function fromBinary(binary) {
+<pre class="brush: js">function fromBinary(binary) {
   const bytes = new Uint8Array(binary.length);
   for (let i = 0; i &lt; bytes.length; i++) {
     bytes[i] = binary.charCodeAt(i);

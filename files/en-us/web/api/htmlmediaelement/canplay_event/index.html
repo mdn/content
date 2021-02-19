@@ -51,7 +51,7 @@ tags:
 
 <p>Using <code>addEventListener()</code>:</p>
 
-<pre class="brush: js notranslate">const video = document.querySelector('video');
+<pre class="brush: js">const video = document.querySelector('video');
 
 video.addEventListener('canplay', (event) =&gt; {
   console.log('Video can start, but not sure it will play through.');
@@ -59,7 +59,7 @@ video.addEventListener('canplay', (event) =&gt; {
 
 <p>Using the <code>oncanplay</code> event handler property:</p>
 
-<pre class="brush: js notranslate">const video = document.querySelector('video');
+<pre class="brush: js">const video = document.querySelector('video');
 
 video.oncanplay = (event) =&gt; {
   console.log('Video can start, but not sure it will play through.');
