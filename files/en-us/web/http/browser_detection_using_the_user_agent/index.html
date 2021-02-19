@@ -37,7 +37,7 @@ tags:
 	<dt>Feature detection</dt>
 	<dd>Feature detection is where you don't try to figure out which browser is rendering your page, but instead, you check to see if the specific feature you need is available. If it's not, you use a fallback. In those rare cases where behavior differs between browsers, instead of checking the user agent string, you should instead implement a test to detect how the browser implements the API and determine how to use it from that. An example of feature detection is as follows. In 2017, Chrome <a href="https://www.chromestatus.com/feature/5668726032564224">unflagged experimental lookbehind support in regular expressions</a>, but no other browser supported it. So, you might have thought to do this:</dd>
 	<dd>
-	<pre class="brush: js notranslate">// this code snippet splits a string in a special notation
+	<pre class="brush: js">// this code snippet splits a string in a special notation
 
 if (navigator.userAgent.indexOf("Chrome") !== -1){
     // YES! The user is suspected to support look-behind regexps
@@ -68,7 +68,7 @@ console.log(splitUpString("jQWhy")); // ["jQ", "W", "hy"]</pre>
 
 	<p>Problems like these can be avoided by testing for support of the feature itself instead:</p>
 
-	<pre class="brush: js notranslate">var isLookBehindSupported = false;
+	<pre class="brush: js">var isLookBehindSupported = false;
 
 try {
     new RegExp("(?&lt;=)");
@@ -97,7 +97,7 @@ var splitUpString = isLookBehindSupported ? function(str) {
 	<dt id="Mobile_Device_Detection">Mobile device detection</dt>
 	<dd>Arguably the most common use and misuse of user agent sniffing is to detect if the device is a mobile device. However, people too often overlook what they are really after. People use user agent sniffing to detect if the users' device is touch-friendly and has a small screen so they can optimize their website accordingly. While user agent sniffing can sometimes detect these, not all devices are the same: some mobile devices have big screen sizes, some desktops have a small touchscreen, some people use smart TV's which are an entirely different ballgame altogether, and some people can dynamically change the width and height of their screen by flipping their tablet on its side! So, user agent sniffing is definitely not the way to go. Thankfully, there are much better alternatives. Use <a href="/en-US/docs/Web/API/Navigator/maxTouchPoints">Navigator.maxTouchPoints</a> to detect if the user's device has a touchscreen. Then, default back to checking the user agent screen only <em>if (!("maxTouchPoints" in navigator)) { /*Code here*/}</em>. Using this information of whether the device has a touchscreen, do not change the entire layout of the website just for touch devices: you will only create more work and maintenance for yourself. Rather, add in touch conveniences such as bigger, more easily clickable buttons (you can do this using CSS by increasing the font size). Here is an example of code that increases the padding of #exampleButton to 1em on mobile devices.</dd>
 	<dd>
-	<pre class="brush: js notranslate">var hasTouchScreen = false;
+	<pre class="brush: js">var hasTouchScreen = false;
 if ("maxTouchPoints" in navigator) {
     hasTouchScreen = navigator.maxTouchPoints &gt; 0;
 } else if ("msMaxTouchPoints" in navigator) {
@@ -133,7 +133,7 @@ if (hasTouchScreen)
 
 <p>Another such case is for fixing bugs in browsers that do not automatically update. Internet Explorer (on Windows) and Webkit (on iOS) are two perfect examples. Prior to version 9, Internet Explorer had unbelievable issues with rendering bugs, CSS bugs, API bugs, and so forth. However, Internet Explorer was such a special little <s>wasp</s> exception prior to version 9 that it was very easy to detect the browser based upon the browser-specific features available. Webkit is a bit worse because Apple forces all of the browsers on IOS to use Webkit internally, thus the user has no way to get a better more updated browser on older devices. Most bugs can be detected, but some bugs take more effort to detect than others. In such cases, it might be beneficial to use user agent sniffing to save on performance. For example, Webkit 6 has a bug whereby when the device orientation changes, the browser might not fire <a href="/en-US/docs/Web/API/MediaQueryList">MediaQueryList</a> listeners when it should. To overcome this bug, observe the code below.</p>
 
-<pre class="brush: js notranslate">var UA=navigator.userAgent, isWebkit=/\b(iPad|iPhone|iPod)\b/.test(UA) &amp;&amp;
+<pre class="brush: js">var UA=navigator.userAgent, isWebkit=/\b(iPad|iPhone|iPod)\b/.test(UA) &amp;&amp;
                /WebKit/.test(UA) &amp;&amp; !/Edge/.test(UA) &amp;&amp; !window.MSStream;
 
 var mediaQueryUpdated = true, mqL = [];

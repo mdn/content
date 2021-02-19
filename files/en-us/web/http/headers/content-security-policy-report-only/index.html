@@ -33,7 +33,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html notranslate">Content-Security-Policy-Report-Only: &lt;policy-directive&gt;; &lt;policy-directive&gt;
+<pre class="brush: html">Content-Security-Policy-Report-Only: &lt;policy-directive&gt;; &lt;policy-directive&gt;
 </pre>
 
 <h2 id="Directives">Directives</h2>
@@ -46,11 +46,11 @@ tags:
 
 <p>This header reports violations that would have occurred. You can use this to iteratively work on your content security policy. You observe how your site behaves, watching for violation reports, or <a href="https://secure.wphackedhelp.com/blog/wordpress-malware-redirect-hack-cleanup/">malware redirects</a>, then choose the desired policy enforced by the {{HTTPHeader("Content-Security-Policy")}} header.</p>
 
-<pre class="notranslate">Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/</pre>
+<pre>Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/</pre>
 
 <p>If you still want to receive reporting, but also want to enforce a policy, use the {{HTTPHeader("Content-Security-Policy")}} header with the {{CSP("report-uri")}} directive.</p>
 
-<pre class="notranslate">Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/</pre>
+<pre>Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/</pre>
 
 <h2 id="Violation_report_syntax">Violation report syntax</h2>
 
@@ -81,11 +81,11 @@ tags:
 
 <p>Let's consider a page located at <code>http://example.com/signup.html</code>. It uses the following policy, disallowing everything but stylesheets from <code>cdn.example.com</code>.</p>
 
-<pre class="notranslate">Content-Security-Policy-Report-Only: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports</pre>
+<pre>Content-Security-Policy-Report-Only: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports</pre>
 
 <p>The HTML of <code>signup.html</code> looks like this:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;title&gt;Sign Up&lt;/title&gt;
@@ -98,7 +98,7 @@ tags:
 
 <p>Can you spot the violation? Stylesheets are only allowed to be loaded from <code>cdn.example.com</code>, yet the website tries to load one from its own origin (<code>http://example.com</code>). A browser capable of enforcing CSP will send the following violation report as a POST request to <code>http://example.com/_/csp-reports</code>, when the document is visited:</p>
 
-<pre class="brush: js notranslate">{
+<pre class="brush: js">{
   "csp-report": {
     "document-uri": "http://example.com/signup.html",
     "referrer": "",

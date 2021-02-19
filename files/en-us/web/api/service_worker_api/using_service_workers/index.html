@@ -60,7 +60,7 @@ tags:
 
 <h4 id="sync">sync</h4>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   const value = myFunction();
   console.log(value);
 } catch(err) {
@@ -69,7 +69,7 @@ tags:
 
 <h4 id="async">async</h4>
 
-<pre class="brush: js notranslate">myFunction().then((value) =&gt; {
+<pre class="brush: js">myFunction().then((value) =&gt; {
   console.log(value);
 }).catch((err) =&gt; {
   console.log(err);
@@ -83,7 +83,7 @@ tags:
 
 <p>{{note("A real service worker implementation would use caching and onfetch rather than the XMLHttpRequest API. Those features are not used here so that you can focus on understanding Promises.")}}</p>
 
-<pre class="brush: js notranslate">const imgLoad = (url) =&gt; {
+<pre class="brush: js">const imgLoad = (url) =&gt; {
   return new Promise((resolve, reject) =&gt; {
     var request = new XMLHttpRequest();
     request.open('GET', url);
@@ -109,7 +109,7 @@ tags:
 
 <p>When we come to call the <code>imgLoad()</code> function, we call it with the url to the image we want to load, as we might expect, but the rest of the code is a little different:</p>
 
-<pre class="brush: js notranslate">let body = document.querySelector('body');
+<pre class="brush: js">let body = document.querySelector('body');
 let myImage = new Image();
 
 imgLoad('myLittleVader.jpg').then((response) =&gt; {
@@ -158,7 +158,7 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
 
 <p>The first block of code in our app’s JavaScript file — <code>app.js</code> — is as follows. This is our entry point into using service workers.</p>
 
-<pre class="brush: js notranslate">if ('serviceWorker' in navigator) {
+<pre class="brush: js">if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./sw-test/sw.js', {scope: './sw-test/'})
   .then((reg) =&gt; {
     // registration worked
@@ -222,7 +222,7 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
 
 <p>Let’s start this section by looking at a code sample — this is the <a href="https://github.com/mdn/sw-test/blob/gh-pages/sw.js#L1-L18">first block you’ll find in our service worker</a>:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('install', (event) =&gt; {
+<pre class="brush: js">self.addEventListener('install', (event) =&gt; {
   event.waitUntil(
     caches.open('v1').then((cache) =&gt; {
       return cache.addAll([
@@ -266,7 +266,7 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
 
 <p>You can attach a <code>fetch</code> event listener to the service worker, then call the <code>respondWith()</code> method on the event to hijack our HTTP responses and update them with your own magic.</p>
 
-<pre class="brush: js notranslate">self.addEventListener('fetch', (event) =&gt; {
+<pre class="brush: js">self.addEventListener('fetch', (event) =&gt; {
   event.respondWith(
     // magic goes here
   );
@@ -274,7 +274,7 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
 
 <p>We could start by responding with the resource whose url matches that of the network request, in each case:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('fetch', (event) =&gt; {
+<pre class="brush: js">self.addEventListener('fetch', (event) =&gt; {
   event.respondWith(
     caches.match(event.request)
   );
@@ -288,29 +288,29 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
  <li>
   <p>The <code>{{domxref("Response.Response","Response()")}}</code> constructor allows you to create a custom response. In this case, we are just returning a simple text string:</p>
 
-  <pre class="brush: js notranslate">new Response('Hello from your friendly neighborhood service worker!');</pre>
+  <pre class="brush: js">new Response('Hello from your friendly neighborhood service worker!');</pre>
  </li>
  <li>
   <p>This more complex <code>Response</code> below shows that you can optionally pass a set of headers in with your response, emulating standard HTTP response headers. Here we are just telling the browser what the content type of our synthetic response is:</p>
 
-  <pre class="brush: js notranslate">new Response('&lt;p&gt;Hello from your friendly neighborhood service worker!&lt;/p&gt;', {
+  <pre class="brush: js">new Response('&lt;p&gt;Hello from your friendly neighborhood service worker!&lt;/p&gt;', {
   headers: { 'Content-Type': 'text/html' }
 });</pre>
  </li>
  <li>
   <p>If a match wasn’t found in the cache, you could tell the browser to {{domxref("WindowOrWorkerGlobalScope/fetch","fetch")}} the default network request for that resource, to get the new resource from the network if it is available:</p>
 
-  <pre class="brush: js notranslate">fetch(event.request);</pre>
+  <pre class="brush: js">fetch(event.request);</pre>
  </li>
  <li>
   <p>If a match wasn’t found in the cache, and the network isn’t available, you could just match the request with some kind of default fallback page as a response using {{domxref("CacheStorage.match","match()")}}, like this:</p>
 
-  <pre class="brush: js notranslate">caches.match('./fallback.html');</pre>
+  <pre class="brush: js">caches.match('./fallback.html');</pre>
  </li>
  <li>
   <p>You can retrieve a lot of information about each request by calling parameters of the {{domxref("Request")}} object returned by the {{domxref("FetchEvent")}}:</p>
 
-  <pre class="brush: js notranslate">event.request.url
+  <pre class="brush: js">event.request.url
 event.request.method
 event.request.headers
 event.request.body</pre>
@@ -323,7 +323,7 @@ event.request.body</pre>
 
 <p>Fortunately, service workers’ promise-based structure makes it trivial to provide further options towards success. We could do this:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('fetch', (event) =&gt; {
+<pre class="brush: js">self.addEventListener('fetch', (event) =&gt; {
   event.respondWith(
     caches.match(event.request).then((response) =&gt; {
       return response || fetch(event.request);
@@ -335,7 +335,7 @@ event.request.body</pre>
 
 <p>If we were being really clever, we would not only request the resource from the network; we would also save it into the cache so that later requests for that resource could be retrieved offline too! This would mean that if extra images were added to the Star Wars gallery, our app could automatically grab them and cache them. The following would do the trick:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('fetch', (event) =&gt; {
+<pre class="brush: js">self.addEventListener('fetch', (event) =&gt; {
   event.respondWith(
     caches.match(event.request).then((resp) =&gt; {
       return resp || fetch(event.request).then((response) =&gt; {
@@ -354,7 +354,7 @@ event.request.body</pre>
 
 <p>The only trouble we have now is that if the request doesn’t match anything in the cache, and the network is not available, our request will still fail. Let’s provide a default fallback so that whatever happens, the user will at least get something:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('fetch', (event) =&gt; {
+<pre class="brush: js">self.addEventListener('fetch', (event) =&gt; {
   event.respondWith(
     caches.match(event.request).then((resp) =&gt; {
       return resp || fetch(event.request).then((response) =&gt; {
@@ -379,7 +379,7 @@ event.request.body</pre>
 
 <p>You’ll want to update your <code>install</code> event listener in the new service worker to something like this (notice the new version number):</p>
 
-<pre class="brush: js notranslate">self.addEventListener('install', (event) =&gt; {
+<pre class="brush: js">self.addEventListener('install', (event) =&gt; {
   event.waitUntil(
     caches.open('v2').then((cache) =&gt; {
       return cache.addAll([
@@ -407,7 +407,7 @@ event.request.body</pre>
 
 <p>Promises passed into <code>waitUntil()</code> will block other events until completion, so you can rest assured that your clean-up operation will have completed by the time you get your first <code>fetch</code> event on the new service worker.</p>
 
-<pre class="brush: js notranslate">self.addEventListener('activate', (event) =&gt; {
+<pre class="brush: js">self.addEventListener('activate', (event) =&gt; {
   var cacheKeeplist = ['v2'];
 
   event.waitUntil(

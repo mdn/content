@@ -41,7 +41,7 @@ tags:
 
 <p>This example creates a new barcode detector object, with specified supported formats and tests for browser compatibility.</p>
 
-<pre class="brush: js notranslate">// create new detector
+<pre class="brush: js">// create new detector
 var barcodeDetector = new BarcodeDetector({formats: ['code_39', 'codabar', 'ean_13']});
 
 // check compatibility
@@ -55,7 +55,7 @@ if (barcodeDetector) {
 
 <p>The following example calls the <code>getSupportFormat()</code> static method and logs the results to the console.</p>
 
-<pre class="brush: js notranslate">// check supported types
+<pre class="brush: js">// check supported types
 BarcodeDetector.getSupportedFormats()
   .then(formats =&gt; {
     supportedFormats.forEach(format =&gt; console.log(format));
@@ -65,7 +65,7 @@ BarcodeDetector.getSupportedFormats()
 
 <p>This example uses the <code>detect()</code> method to detect the barcodes within the given image. These are iterated over and the barcode data is logged to the console.</p>
 
-<pre class="brush: js notranslate">  barcodeDetector.detect(imageEl)
+<pre class="brush: js">  barcodeDetector.detect(imageEl)
     .then(barcodes =&gt; {
       barcodes.forEach(barcode =&gt; console.log(barcode.rawData));
     })

@@ -19,7 +19,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">CSS.registerProperty(<em>PropertyDefinition</em>);</pre>
+  class="brush: js">CSS.registerProperty(<em>PropertyDefinition</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -64,7 +64,7 @@ tags:
   <code>--my-color</code>, using <code>registerProperty()</code>, as a color, give it a
   default value, and have it not inherit its value:</p>
 
-<pre class="brush: js notranslate">window.CSS.registerProperty({
+<pre class="brush: js">window.CSS.registerProperty({
   name: '--my-color',
   syntax: '&lt;color&gt;',
   inherits: false,
@@ -77,7 +77,7 @@ tags:
   gradient on hover or focus. Notice that with the registered property the transition
   works, but that it doesn't with the unregistered property!</p>
 
-<pre class="brush: css notranslate">.registered {
+<pre class="brush: css">.registered {
   --my-color: #c0ffee;
   background-image: linear-gradient(to right, #fff, var(--my-color));
   transition: --my-color 1s ease-in-out;
@@ -104,7 +104,7 @@ button {
 
 <p>We can add these styles to some buttons:</p>
 
-<pre class="brush: html notranslate">&lt;button class="registered"&gt;Background Registered&lt;/button&gt;
+<pre class="brush: html">&lt;button class="registered"&gt;Background Registered&lt;/button&gt;
 &lt;button class="unregistered"&gt;Background Not Registered&lt;/button&gt;
 </pre>
 

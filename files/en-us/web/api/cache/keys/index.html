@@ -26,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>cache</em>.keys(<em>request</em>, {<em>options</em>}).then(function(<em>keys</em>) {
+<pre class="brush: js"><em>cache</em>.keys(<em>request</em>, {<em>options</em>}).then(function(<em>keys</em>) {
   // do something with your array of requests
 });
 </pre>
@@ -68,7 +68,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">caches.open('v1').then(function(cache) {
+<pre class="brush: js">caches.open('v1').then(function(cache) {
   cache.keys().then(function(keys) {
     keys.forEach(function(request, index, array) {
       cache.delete(request);

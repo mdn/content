@@ -33,7 +33,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html notranslate">Access-Control-Allow-Headers: <em>&lt;header-name&gt;</em>[, <em>&lt;header-name&gt;</em>]*
+<pre class="brush: html">Access-Control-Allow-Headers: <em>&lt;header-name&gt;</em>[, <em>&lt;header-name&gt;</em>]*
 Access-Control-Allow-Headers: *
 </pre>
 
@@ -52,19 +52,19 @@ Access-Control-Allow-Headers: *
 
 <p>Here's an example of what an <code>Access-Control-Allow-Headers</code> header might look like. It indicates that a custom header named <code>X-Custom-Header</code> is supported by CORS requests to the server (in addition to the {{glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}}).</p>
 
-<pre class="notranslate">Access-Control-Allow-Headers: X-Custom-Header</pre>
+<pre>Access-Control-Allow-Headers: X-Custom-Header</pre>
 
 <h3 id="Multiple_headers">Multiple headers</h3>
 
 <p>This example shows <code>Access-Control-Allow-Headers</code> when it specifies support for multiple headers.</p>
 
-<pre class="notranslate">Access-Control-Allow-Headers: X-Custom-Header, Upgrade-Insecure-Requests</pre>
+<pre>Access-Control-Allow-Headers: X-Custom-Header, Upgrade-Insecure-Requests</pre>
 
 <h3 id="Bypassing_additional_restrictions">Bypassing additional restrictions</h3>
 
 <p>Although {{glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}} are always allowed and don't usually need to be listed in <code>Access-Control-Allow-Headers</code>, listing them anyway will circumvent the <a href="/en-US/docs/Glossary/CORS-safelisted_request_header#Additional_restrictions">additional restrictions</a> that apply.</p>
 
-<pre class="notranslate">Access-Control-Allow-Headers: Accept</pre>
+<pre>Access-Control-Allow-Headers: Accept</pre>
 
 <h3 id="Example_preflight_request">Example preflight request</h3>
 
@@ -76,7 +76,7 @@ Access-Control-Allow-Headers: *
 
 <p>The preflight request below tells the server that we want to send a CORS <code>GET</code> request that has the headers listed in {{HTTPHeader("Access-Control-Request-Headers")}} ({{HTTPHeader("Content-Type")}} and <code>x-requested-with</code>).</p>
 
-<pre class="notranslate">OPTIONS /resource/foo
+<pre>OPTIONS /resource/foo
 Access-Control-Request-Method: GET
 <strong>Access-Control-Request-Headers: Content-Type, x-requested-with</strong>
 Origin: https://foo.bar.org</pre>
@@ -85,7 +85,7 @@ Origin: https://foo.bar.org</pre>
 
 <p>If the CORS request indicated by the preflight request is authorized, the server will respond to the preflight request with a message that indicates the allowed origin, methods and headers. Below we see that {{HTTPHeader("Access-Control-Allow-Headers")}} includes the headers that were requested.</p>
 
-<pre class="notranslate">HTTP/1.1 200 OK
+<pre>HTTP/1.1 200 OK
 Content-Length: 0
 Connection: keep-alive
 Access-Control-Allow-Origin: https://foo.bar.org
