@@ -14,7 +14,7 @@ tags:
 
 <p>The content inside the <code>&lt;canvas&gt; ... &lt;/canvas&gt;</code> tags can be used as a fallback for browsers which don't support canvas rendering. It's also very useful for assistive technology users (like screen readers) which can read and interpret the sub DOM in it. A good example at <a href="http://www.html5accessibility.com/tests/canvas.html">html5accessibility.com</a> demonstrates how this can be done:</p>
 
-<pre class="brush: html notranslate">&lt;canvas&gt;
+<pre class="brush: html">&lt;canvas&gt;
   &lt;h2&gt;Shapes&lt;/h2&gt;
   &lt;p&gt;A rectangle with a black border.
    In the background is a pink circle.
@@ -31,7 +31,7 @@ tags:
 
 <p>Accessible Rich Internet Applications <strong>(<a href="/en-US/docs/Web/Accessibility/ARIA">ARIA</a>)</strong> defines ways to make Web content and Web applications more accessible to people with disabilities. You can use ARIA attributes to describe the behavior and purpose of the canvas element. See <a href="/en-US/docs/Web/Accessibility/ARIA">ARIA</a> and <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">ARIA techniques</a> for more information.</p>
 
-<pre class="brush: html notranslate">&lt;canvas id="button" tabindex="0" role="button" aria-pressed="false" aria-label="Start game"&gt;&lt;/canvas&gt;
+<pre class="brush: html">&lt;canvas id="button" tabindex="0" role="button" aria-pressed="false" aria-label="Start game"&gt;&lt;/canvas&gt;
 </pre>
 
 <h2 id="Hit_regions">Hit regions</h2>
@@ -49,7 +49,7 @@ tags:
 
 <p>You can add a hit region to your path and check for the {{domxref("MouseEvent.region")}} property to test if your mouse is hitting your region, for example.</p>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
 &lt;script&gt;
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
@@ -68,7 +68,7 @@ canvas.addEventListener('mousemove', function(event) {
 
 <p>The <code>addHitRegion()</code> method also takes a <code>control</code> option to route events to an element (that is a descendant of the canvas):</p>
 
-<pre class="brush: js notranslate">ctx.addHitRegion({control: element});</pre>
+<pre class="brush: js">ctx.addHitRegion({control: element});</pre>
 
 <p>This can be useful for routing to {{HTMLElement("input")}} elements, for example. See also this <a href="https://codepen.io/peterj35/pen/PEdLKx">codepen demo</a>.</p>
 

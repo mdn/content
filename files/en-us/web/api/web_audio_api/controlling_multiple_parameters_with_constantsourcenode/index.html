@@ -37,7 +37,7 @@ tags:
 
 <p>The HTML content for this example is primarily a button to toggle the oscillator tones on and off and an {{HTMLElement("input")}} element of type <code>range</code> to control the volume of two of the three oscillators.</p>
 
-<pre class="brush: html notranslate">&lt;div class="controls"&gt;
+<pre class="brush: html">&lt;div class="controls"&gt;
   &lt;div class="left"&gt;
     &lt;div id="playButton" class="button"&gt;
       ▶️
@@ -56,7 +56,7 @@ change the volume of the notes E and G in the chord.&lt;/p&gt;</pre>
 <div class="hidden">
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css notranslate">.controls {
+<pre class="brush: css">.controls {
   width: 400px;
   position: relative;
   vertical-align: middle;
@@ -111,7 +111,7 @@ change the volume of the notes E and G in the chord.&lt;/p&gt;</pre>
 
 <p>Let's start by looking at the global variable initialization.</p>
 
-<pre class="brush: js notranslate">let context = null;
+<pre class="brush: js">let context = null;
 
 let playButton = null;
 let volumeControl = null;
@@ -145,7 +145,7 @@ let playing = false;</pre>
 
 <p>Now let's look at the <code>setup()</code> function, which is our handler for the window's {{event("load")}} event; it handles all the initialization tasks that require the DOM to be in place.</p>
 
-<pre class="brush: js notranslate">function setup() {
+<pre class="brush: js">function setup() {
   context = new (window.AudioContext || window.webkitAudioContext)();
 
   playButton = document.querySelector("#playButton");
@@ -192,7 +192,7 @@ window.addEventListener("load", setup, false);
 
 <p>Because {{domxref("OscillatorNode")}} doesn't support the notion of being in a paused state, we have to simulate it by terminating the oscillators and starting them again when the play button is clicked again to toggle them back on. Let's look at the code.</p>
 
-<pre class="brush: js notranslate">function togglePlay(event) {
+<pre class="brush: js">function togglePlay(event) {
   if (playing) {
     playButton.textContent = "▶️";
     stopOscillators();
@@ -210,7 +210,7 @@ window.addEventListener("load", setup, false);
 
 <p>The <code>changeVolume()</code> function—the event handler for the slider control for the gain on the linked oscillator pair—looks like this:</p>
 
-<pre class="brush: js notranslate">function changeVolume(event) {
+<pre class="brush: js">function changeVolume(event) {
   constantNode.offset.value = volumeControl.value;
 }</pre>
 
@@ -222,7 +222,7 @@ window.addEventListener("load", setup, false);
 
 <p>When the user clicks the play/pause toggle button while the oscillators aren't playing, the <code>startOscillators()</code> function gets called.</p>
 
-<pre class="brush: js notranslate">function startOscillators() {
+<pre class="brush: js">function startOscillators() {
   oscNode1 = context.createOscillator();
   oscNode1.type = "sine";
   oscNode1.frequency.value = 261.625565300598634; // middle C
@@ -260,7 +260,7 @@ window.addEventListener("load", setup, false);
 
 <p>Stopping the oscillators when the user toggles the play state to pause the tones is as simple as stopping each node.</p>
 
-<pre class="brush: js notranslate">function stopOscillators() {
+<pre class="brush: js">function stopOscillators() {
   oscNode1.stop();
   oscNode2.stop();
   oscNode3.stop();
