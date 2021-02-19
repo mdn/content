@@ -110,7 +110,7 @@ tags:
 
 <p>Making an element <em>draggable</em> requires adding the {{htmlattrxref("draggable")}} attribute and the {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} global event handler, as shown in the following code sample:</p>
 
-<pre class="brush: html notranslate">&lt;script&gt;
+<pre class="brush: html">&lt;script&gt;
   function dragstart_handler(ev) {
     // Add the target element's id to the data transfer object
     ev.dataTransfer.setData("text/plain", ev.target.id);
@@ -139,7 +139,7 @@ tags:
 
 <p>Each {{domxref("DragEvent","drag event")}} has a {{domxref("DragEvent.dataTransfer","dataTransfer")}} property that <em>holds</em> the event's data. This property (which is a {{domxref("DataTransfer")}} object) also has methods to <em>manage</em> drag data. The {{domxref("DataTransfer.setData","setData()")}} method is used to add an item to the drag data, as shown in the following example.</p>
 
-<pre class="brush: js notranslate">function dragstart_handler(ev) {
+<pre class="brush: js">function dragstart_handler(ev) {
   // Add different types of drag data
   ev.dataTransfer.setData("text/plain", ev.target.innerText);
   ev.dataTransfer.setData("text/html", ev.target.outerHTML);
@@ -156,7 +156,7 @@ tags:
 
 <p>By default, the browser supplies an image that appears beside the pointer during a drag operation. However, an application may define a custom image with the {{domxref("DataTransfer.setDragImage","setDragImage()")}} method, as shown in the following example.</p>
 
-<pre class="brush: js notranslate">function dragstart_handler(ev) {
+<pre class="brush: js">function dragstart_handler(ev) {
   // Create an image and then use it for the drag image.
   // NOTE: change "example.gif" to a real image URL or the image
   // will not be created and the default drag image will be used.
@@ -188,7 +188,7 @@ tags:
 
 <p>The following example shows how to use this property.</p>
 
-<pre class="brush: js notranslate">function dragstart_handler(ev) {
+<pre class="brush: js">function dragstart_handler(ev) {
   ev.dataTransfer.dropEffect = "copy";
 }
 </pre>
@@ -205,7 +205,7 @@ tags:
 
 <p>The following example shows how to use those attributes, and includes basic event handlers for each attribute.</p>
 
-<pre class="brush: html notranslate">&lt;script&gt;
+<pre class="brush: html">&lt;script&gt;
 function dragover_handler(ev) {
  ev.preventDefault();
  ev.dataTransfer.dropEffect = "move";
@@ -237,7 +237,7 @@ function drop_handler(ev) {
 
 <p>The following example shows a drop handler getting the source element's <code>id</code> from the drag data, and then using the <code>id</code> to move the source element to the drop element:</p>
 
-<pre class="brush: html notranslate">&lt;script&gt;
+<pre class="brush: html">&lt;script&gt;
 function dragstart_handler(ev) {
  // Add the target element's id to the data transfer object
  ev.dataTransfer.setData("application/my-app", ev.target.id);

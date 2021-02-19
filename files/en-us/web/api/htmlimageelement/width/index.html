@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>htmlImageElement</em>.width = <em>newWidth</em>;
+<pre class="brush: js"><em>htmlImageElement</em>.width = <em>newWidth</em>;
 let <em>width</em> = <em>htmlImageElement</em>.width;</pre>
 
 <h3 id="Value">Value</h3>
@@ -51,7 +51,7 @@ let <em>width</em> = <em>htmlImageElement</em>.width;</pre>
 <p>For viewports up to 400px wide, the image is drawn at a width of 200px. Otherwise, it's
   drawn at 400px.</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Image width: &lt;span class="size"&gt;?&lt;/span&gt;px (resize to update)&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Image width: &lt;span class="size"&gt;?&lt;/span&gt;px (resize to update)&lt;/p&gt;
 &lt;img src="/files/16864/clock-demo-200px.png"
       alt="Clock"
       srcset="/files/16864/clock-demo-200px.png 200w,
@@ -65,7 +65,7 @@ let <em>width</em> = <em>htmlImageElement</em>.width;</pre>
   "load")}} and {{domxref("Window.resize_event", "resize")}} event handlers so the most
   current width information is always available.</p>
 
-<pre class="brush: js notranslate">var clockImage = document.querySelector("img");
+<pre class="brush: js">var clockImage = document.querySelector("img");
 let output = document.querySelector(".size");
 
 const updateWidth = event =&gt; { output.innerText = clockImage.width; };

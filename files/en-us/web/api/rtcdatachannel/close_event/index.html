@@ -44,7 +44,7 @@ tags:
 
 <p>This example sets up a handler for the <code>close</code> event for the {{domxref("RTCDataChannel")}} named <code>dc</code>; its responsibility in this example is to update user interface elements to reflect that there is no longer an ongoing call, and to allow a new call to be started.</p>
 
-<pre class="brush: js notranslate">dc.addEventListener("close", ev =&gt; {
+<pre class="brush: js">dc.addEventListener("close", ev =&gt; {
   messageInputBox.disabled = true;
   sendButton.disabled = true;
   connectButton.disabled = false;
@@ -56,7 +56,7 @@ tags:
 
 <p>You can also use the {{domxref("RTCDataChannel.onclose", "onclose")}} event handler property to set a handler for <code>close</code> events:</p>
 
-<pre class="brush: js notranslate">dc.onclose = ev =&gt; {
+<pre class="brush: js">dc.onclose = ev =&gt; {
   messageInputBox.disabled = true;
   sendButton.disabled = true;
   connectButton.disabled = false;

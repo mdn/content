@@ -44,7 +44,7 @@ tags:
 
 <p>Even though you're building a server, a client still has to start the WebSocket handshake process by contacting the server and requesting a WebSocket connection. So, you must know how to interpret the client's request. The <strong>client</strong> will send a pretty standard HTTP request with headers that looks like this (the HTTP version <strong>must</strong> be 1.1 or greater, and the method <strong>must</strong> be <code>GET</code>):</p>
 
-<pre class="brush: bash notranslate">GET /chat HTTP/1.1
+<pre class="brush: bash">GET /chat HTTP/1.1
 Host: example.com:8000
 <strong>Upgrade: websocket</strong>
 <strong>Connection: Upgrade</strong>
@@ -71,7 +71,7 @@ Sec-WebSocket-Version: 13
 
 <p>When the <strong>server</strong> receives the handshake request, it should send back a special response that indicates that the protocol will be changing from HTTP to WebSocket. That header looks something like the following (remember each header line ends with <code>\r\n</code> and put an extra <code>\r\n</code> after the last one to indicate the end of the header):</p>
 
-<pre class="brush: bash notranslate"><strong>HTTP/1.1 101 Switching Protocols</strong>
+<pre class="brush: bash"><strong>HTTP/1.1 101 Switching Protocols</strong>
 Upgrade: websocket
 Connection: Upgrade
 <strong>Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
@@ -104,7 +104,7 @@ Connection: Upgrade
 
 <p>Each data frame (from the client to the server or vice-versa) follows this same format:</p>
 
-<pre class="brush: bash notranslate">Frame format:
+<pre class="brush: bash">Frame format:
 
       0                   1                   2                   3
       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
@@ -145,7 +145,7 @@ Connection: Upgrade
 
 <p>If the MASK bit was set (and it should be, for client-to-server messages), read the next 4 octets (32 bits); this is the masking key. <span style="line-height: 1.5;">Once the payload length and masking key is decoded, you can read that number of bytes from the socket. Let's call the data <strong>ENCODED</strong>, and the key <strong>MASK</strong>. To get <strong>DECODED</strong>, loop through the octets (bytes a.k.a. characters for text data) of <strong>ENCODED</strong> and XOR the octet with the (i modulo 4)th octet of MASK. In pseudo-code (that happens to be valid JavaScript):</span></p>
 
-<pre class="brush: js notranslate">var DECODED = "";
+<pre class="brush: js">var DECODED = "";
 for (var i = 0; i &lt; ENCODED.length; i++) {
     DECODED[i] = ENCODED[i] ^ MASK[i % 4];
 <span style="line-height: 1.5;">}</span></pre>
@@ -215,7 +215,7 @@ for (var i = 0; i &lt; ENCODED.length; i++) {
 
 <p>A client has to ask for a specific subprotocol. To do so, it will send something like this <em>as part of the original handshake</em>:</p>
 
-<pre class="brush: bash notranslate">GET /chat HTTP/1.1
+<pre class="brush: bash">GET /chat HTTP/1.1
 ...
 Sec-WebSocket-Protocol: soap, wamp
 
@@ -223,7 +223,7 @@ Sec-WebSocket-Protocol: soap, wamp
 
 <p>or, equivalently:</p>
 
-<pre class="brush: bash notranslate">...
+<pre class="brush: bash">...
 Sec-WebSocket-Protocol: soap
 Sec-WebSocket-Protocol: wamp
 
@@ -231,7 +231,7 @@ Sec-WebSocket-Protocol: wamp
 
 <p>Now the server must pick one of the protocols that the client suggested and it supports. If there is more than one, send the first one the client sent. Imagine our server can use both <code>soap</code> and <code>wamp</code>. Then, in the response handshake, it sends:</p>
 
-<pre class="brush: bash notranslate">Sec-WebSocket-Protocol: soap
+<pre class="brush: bash">Sec-WebSocket-Protocol: soap
 
 </pre>
 

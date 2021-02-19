@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>window</em>.find(<em>aString</em>, <em>aCaseSensitive</em>, <em>aBackwards</em>, <em>aWrapAround</em>,
+<pre class="brush: js"><em>window</em>.find(<em>aString</em>, <em>aCaseSensitive</em>, <em>aBackwards</em>, <em>aWrapAround</em>,
             <em>aWholeWord</em>, <em>aSearchInFrames</em>, <em>aShowDialog</em>);</pre>
 
 <dl>
@@ -50,13 +50,13 @@ tags:
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">findString = function findText(text) {
+<pre class="brush: js">findString = function findText(text) {
   alert("String \x22" + text + "\x22 found? " + window.find(text));
 }</pre>
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;Apples, Bananas, and Oranges.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Apples, Bananas, and Oranges.&lt;/p&gt;
 &lt;button type="button" onClick='findString("Apples")'&gt;Search for Apples&lt;/button&gt;
 &lt;button type="button" onClick='findString("Banana")'&gt;Search for Banana&lt;/button&gt;
 &lt;button type="button" onClick='findString("Orange")'&gt;Search for Orange&lt;/button&gt;

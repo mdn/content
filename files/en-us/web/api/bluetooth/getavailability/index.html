@@ -27,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>readerPromise = Bluetooth</em>.getAvailability();
+<pre class="brush: js">var <em>readerPromise = Bluetooth</em>.getAvailability();
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -47,7 +47,7 @@ tags:
 <p>The following snippet prints out a message in the console specifying whether or not
   Bluetooth is supported:</p>
 
-<pre class="brush: js notranslate">navigator.bluetooth.getAvailability().then(available =&gt; {
+<pre class="brush: js">navigator.bluetooth.getAvailability().then(available =&gt; {
   if (available)
       console.log("This device supports Bluetooth!");
   else

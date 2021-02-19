@@ -25,7 +25,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">let <em>errorInfo</em> = <em>rtcErrorEvent</em>.error;</pre>
+  class="brush: js">let <em>errorInfo</em> = <em>rtcErrorEvent</em>.error;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -41,7 +41,7 @@ tags:
 <p>In this example, a handler is established for an {{domxref("RTCDataChannel")}}'s
   {{domxref("RTCDataChannel.error_event", "error")}} event.</p>
 
-<pre class="brush: js notranslate">dataChannel.addEventListener("error", (event) =&gt; {
+<pre class="brush: js">dataChannel.addEventListener("error", (event) =&gt; {
   let error = event.error;
 
   if (error.errorDetail === "sdp-syntax-error") {
@@ -71,7 +71,7 @@ tags:
   use the <code>RTCDataChannel</code> object's {{domxref("RTCDataChannel.onerror",
   "onerror")}} event handler property, like this:</p>
 
-<pre class="brush: js notranslate">dataChannel.onerror = (event) =&gt; {
+<pre class="brush: js">dataChannel.onerror = (event) =&gt; {
   let error = event.error;
 
   /* and so forth */

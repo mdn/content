@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">navigator.registerProtocolHandler(<var>scheme</var>, <var>url</var>);
+<pre class="brush: js">navigator.registerProtocolHandler(<var>scheme</var>, <var>url</var>);
 </pre>
 
 <div class="note"><strong>Note:</strong> The original implementation required three
@@ -130,7 +130,7 @@ tags:
 <p>If your site is <code>burgers.example.com</code>, you can register a protocol handler
   for it to handle <code>web+burger:</code> links, like so:</p>
 
-<pre class="brush: js notranslate">navigator.registerProtocolHandler("web+burger",
+<pre class="brush: js">navigator.registerProtocolHandler("web+burger",
                                   "https://burgers.example.com/?burger=%s",
                                   "Burger handler"); // last title arg included for compatibility
 </pre>

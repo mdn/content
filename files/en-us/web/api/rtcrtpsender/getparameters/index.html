@@ -23,7 +23,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>rtpSendParameters</em> = <em>rtpSender</em>.getParameters()</pre>
+  class="brush: js">var <em>rtpSendParameters</em> = <em>rtpSender</em>.getParameters()</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -41,7 +41,7 @@ tags:
   {{domxref("RTCRtpSender.setParameters", "setParameters()")}} are always handled in the
   correct order, avoiding inadvertently overwriting parameters with older parameters.</p>
 
-<pre class="brush: js notranslate">function getSenderTransactionID(sender) {
+<pre class="brush: js">function getSenderTransactionID(sender) {
   let parameters = sender.getParameters();
 
   return parameters.transactionId;

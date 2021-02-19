@@ -26,7 +26,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">const <var>observer</var> = new MutationObserver(<var>callback</var>)</pre>
+  class="brush: js">const <var>observer</var> = new MutationObserver(<var>callback</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -64,7 +64,7 @@ tags:
 
 <h3 id="The_callback_function">The callback function</h3>
 
-<pre class="brush: js notranslate">function callback(mutationList, observer) {
+<pre class="brush: js">function callback(mutationList, observer) {
   mutationList.forEach( (mutation) =&gt; {
     switch(mutation.type) {
       case 'childList':
@@ -95,7 +95,7 @@ tags:
 
 <p>This code actually sets up the observation process.</p>
 
-<pre class="brush: js notranslate">const targetNode = document.querySelector("#someElement");
+<pre class="brush: js">const targetNode = document.querySelector("#someElement");
 const observerOptions = {
   childList: true,
   attributes: true,
