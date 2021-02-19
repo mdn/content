@@ -19,29 +19,29 @@ tags:
 </ul>
 <h2 id="Why_HyperLink_is_often_not_a_link">Why HyperLink is often not a link</h2>
 <p>As explained above, anything that is embedded in text implements the Hyperlink interface.</p>
-<p>While it is odd to call non-link objects a link, this was a necessary compromise in the <a class="external" href="https://www.mozilla.org/access/unix/new-atk.html">newatk design</a> because it is necessary to know where objects exist within their containing text. Previously the hyper link interface was really only for links, but the design could not fully represent an HTML document hierarchy. Keeping the link name of the interface is unfortunate but necessary for backwards compatibility, without introducing superfluous interfaces.</p>
+<p>While it is odd to call non-link objects a link, this was a necessary compromise in the <a href="https://www.mozilla.org/access/unix/new-atk.html">newatk design</a> because it is necessary to know where objects exist within their containing text. Previously the hyper link interface was really only for links, but the design could not fully represent an HTML document hierarchy. Keeping the link name of the interface is unfortunate but necessary for backwards compatibility, without introducing superfluous interfaces.</p>
 <h2 id="API_comparison">API comparison</h2>
 <ul>
   <li>nsIAccessible (internal). When you have an nsIAccessibleHyperText, you can ask for its links, which is the subset of children from the nsIAccessible hierarchy that are not text or whitespace.</li>
-  <li>ATK: Same as nsIAccessible, except that text and whitespace leaf nodes are not exposed. The children of any Hypertext object are an exact match to the links it exposes. The implementation doesn't create AtkObjects for a whitespace or text leaf nsIAccessibles. See the <a class="external" href="http://mxr.mozilla.org/seamonkey/search?string=isembeddedobject&amp;find=atk&amp;findi=&amp;filter=&amp;tree=seamonkey">ATK uses of IsEmbeddedObject()</a> for more information on how we do this.</li>
+  <li>ATK: Same as nsIAccessible, except that text and whitespace leaf nodes are not exposed. The children of any Hypertext object are an exact match to the links it exposes. The implementation doesn't create AtkObjects for a whitespace or text leaf nsIAccessibles. See the <a href="http://mxr.mozilla.org/seamonkey/search?string=isembeddedobject&amp;find=atk&amp;findi=&amp;filter=&amp;tree=seamonkey">ATK uses of IsEmbeddedObject()</a> for more information on how we do this.</li>
   <li>IAccessible2: Same as nsIAccessible. Text and whitespace leaf nodes are exposed, but are redundant with the information in the parent object's nsIAccessibleText. This is done for backward compatibility with older MSAA clients which didn't have access to a text interface. The children of a Hypertext object are a superset of the links it exposes. The new system makes it easier to show caret positions etc., which will be an improvement in IA2 over MSAA.</li>
 </ul>
 <h2 id="Example">Example</h2>
 <p>Take the following HTML code:</p>
-<pre class="eval"> &lt;div&gt;Hello&lt;a href="<a class="external" href="https://www.mozilla.org/access">http://www.mozilla.org/access</a>"&gt;My link&lt;img src="image.gif"&gt;is cool&lt;/a&gt;Bye&lt;/div&gt;
+<pre class="eval"> &lt;div&gt;Hello&lt;a href="<a href="https://www.mozilla.org/access">http://www.mozilla.org/access</a>"&gt;My link&lt;img src="image.gif"&gt;is cool&lt;/a&gt;Bye&lt;/div&gt;
 </pre>
 <p>Both the &lt;a&gt; and &lt;img&gt; are hyperlinks Also, both the &lt;div&gt; and &lt;a&gt; are hypertexts So the &lt;a&gt; is both a hypertext and a hyperlink, because it contains text and is contained within text.</p>
 <p>This means that we have an exact mirror to the dom, but text lives in the parents instead of in the leaves, which now don't really provide additional useful information. They are only provided under MSAA/IA2 for backward compatibility.</p>
 <h2 id="Implementation_classes">Implementation classes</h2>
 <p>Here are some notes on the classes we use:</p>
-<p><a class="external" href="http://lxr.mozilla.org/seamonkey/find?string=nshypertextacc">nsHyperTextAccessible</a> is for any container that may wrap both text and embedded object:</p>
+<p><a href="http://lxr.mozilla.org/seamonkey/find?string=nshypertextacc">nsHyperTextAccessible</a> is for any container that may wrap both text and embedded object:</p>
 <ul>
   <li>nsIAccessibleText is supported if there is potentially any text in the container</li>
   <li>nsIAccessibleHyperText is supported if there is potentially text and embedded objects together in the container.</li>
   <li>nsIAccessibleEditableText is supported if the area is potentially editable. If it's actually editable it will also provide STATE_EDITABLE.</li>
 </ul>
-<p><a class="external" href="http://lxr.mozilla.org/seamonkey/find?string=nsAccessible%5C.">nsAccessible</a> still represents any node in the tree. If the node is embedded in a parent that is an nsIAccessibleHyperText, the node will be exposed as an nsIAccessibleHyperlink. Consumers can use this interface to determine the position of the object in the parent's text.</p>
-<p><a class="external" href="http://lxr.mozilla.org/seamonkey/find?string=nstextaccessible">nsTextAccessible</a> serves 2 purposes</p>
+<p><a href="http://lxr.mozilla.org/seamonkey/find?string=nsAccessible%5C.">nsAccessible</a> still represents any node in the tree. If the node is embedded in a parent that is an nsIAccessibleHyperText, the node will be exposed as an nsIAccessibleHyperlink. Consumers can use this interface to determine the position of the object in the parent's text.</p>
+<p><a href="http://lxr.mozilla.org/seamonkey/find?string=nstextaccessible">nsTextAccessible</a> serves 2 purposes</p>
 <ul>
   <li>it is used by nsHyperTextAccessible to collect information about itself</li>
   <li>it is still exposed in MSAA for backward compatibility by old windows assistive technologies. Those AT's don't yet know about any IAccessibleText yet, and want to see the hierarchy how they always did -- with text in leaf nodes.</li>
@@ -94,7 +94,7 @@ tags:
   </li>
 </ol>
 <p>Navigating to the next word follows a similar pattern. Navigating previous requires returning to the embed character in the parent accessible when the point of regard reaches the end of text in the corresponding child accessible for the embed.</p>
-<p>See <a class="external" href="http://svn.gnome.org/viewcvs/lsr/trunk/src/Adapters/ATSPI/HypertextAdapter.py?view=markup">http://svn.gnome.org/viewcvs/lsr/tru...py?view=markup</a> for a BSD implementation.</p>
+<p>See <a href="http://svn.gnome.org/viewcvs/lsr/trunk/src/Adapters/ATSPI/HypertextAdapter.py?view=markup">http://svn.gnome.org/viewcvs/lsr/tru...py?view=markup</a> for a BSD implementation.</p>
 <h3 id=".28E.29_To_grab_a_subtree_of_content:">(E) To grab a subtree of content:</h3>
 <p>Although under Windows text content is still exposed in leaf nodes of ROLE_TEXT, it is no longer necessary to visit those nodes. Therefore for parent nodes that support the HyperText interface, it is more performant to grab the text from the AccessibleText interface and then only visit the link children. The HyperLink interface can be used to grab the children. Using this technique is about twice as fast as visiting all nodes in the tree, according to tests run by the developers of NVDA.</p>
 <h3 id=".28F.29_To_get_the_line_of_text_at_the_caret:">(F) To get the line of text at the caret:</h3>
@@ -107,4 +107,4 @@ tags:
   <li><code>#define CHAR_OFFSET_CARET = -2</code></li>
 </ul>
 <h2 id="More_information">More information</h2>
-<p>Many more details on the Mozilla document hierarchy are in the <a class="external" href="https://www.mozilla.org/access/unix/new-atk.html">original design document for newatk</a>. There are also details on the <a class="external" href="https://www.mozilla.org/access/architecture">general implementation of Mozilla accessibility architecture</a> (needs updating).</p>
+<p>Many more details on the Mozilla document hierarchy are in the <a href="https://www.mozilla.org/access/unix/new-atk.html">original design document for newatk</a>. There are also details on the <a href="https://www.mozilla.org/access/architecture">general implementation of Mozilla accessibility architecture</a> (needs updating).</p>

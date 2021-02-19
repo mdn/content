@@ -8,15 +8,15 @@ tags:
 ---
 <h2 id="Description">Description</h2>
 
-<p class="p1">This technique demonstrates how to use the <a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#group">group</a> role and describes the effect it has on browsers and assistive technology.</p>
+<p class="p1">This technique demonstrates how to use the <a href="https://www.w3.org/TR/wai-aria-1.1/#group">group</a> role and describes the effect it has on browsers and assistive technology.</p>
 
-<p class="p1">The group role is used to identify a set of user interface objects which, in contrast with a <a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#region">region</a>, are not intended to be included in a table of contents or a page summary (such as the structures that are dynamically created by a script or assistive technologies); a group should not be considered a major perceivable section on a page. When the role is added to an element, the browser will send out an accessible group event to assistive technology products which can then notify the user about it.</p>
+<p class="p1">The group role is used to identify a set of user interface objects which, in contrast with a <a href="https://www.w3.org/TR/wai-aria-1.1/#region">region</a>, are not intended to be included in a table of contents or a page summary (such as the structures that are dynamically created by a script or assistive technologies); a group should not be considered a major perceivable section on a page. When the role is added to an element, the browser will send out an accessible group event to assistive technology products which can then notify the user about it.</p>
 
-<p class="p1">A group should be used to form a logical collection of items with related functionality, such as children in a tree widget forming a collection of siblings in a hierarchy, or a collection of items having the same container in a directory. However, when a group is used in the context of list, authors must limit its children to <a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#listitem">listitem</a> elements. Group elements may be nested.</p>
+<p class="p1">A group should be used to form a logical collection of items with related functionality, such as children in a tree widget forming a collection of siblings in a hierarchy, or a collection of items having the same container in a directory. However, when a group is used in the context of list, authors must limit its children to <a href="https://www.w3.org/TR/wai-aria-1.1/#listitem">listitem</a> elements. Group elements may be nested.</p>
 
 <p class="p1">Proper handling of a group by assistive technologies is determined by the context in which it is provided.</p>
 
-<p class="p1">If an author believes a section is significant enough to warrant inclusion in the page's table of contents, they should assign the section a role of <a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#region">region</a> or a <a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#landmark">standard landmark role</a>.</p>
+<p class="p1">If an author believes a section is significant enough to warrant inclusion in the page's table of contents, they should assign the section a role of <a href="https://www.w3.org/TR/wai-aria-1.1/#region">region</a> or a <a href="https://www.w3.org/TR/wai-aria-1.1/#landmark">standard landmark role</a>.</p>
 
 <h3 id="Possible_effects_on_user_agents_and_assistive_technology">Possible effects on user agents and assistive technology </h3>
 
@@ -30,7 +30,7 @@ tags:
 <p class="p1">Assistive technology products should listen for such an event and notify the user accordingly:</p>
 
 <ul class="ul1">
- <li class="li2">Screen readers should announce the group when focus first lands on a control inside it, and if <a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby"><span class="s1">aria-describedby</span></a> has been set, the description may be spoken. Following this the focused control may be announced.</li>
+ <li class="li2">Screen readers should announce the group when focus first lands on a control inside it, and if <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby"><span class="s1">aria-describedby</span></a> has been set, the description may be spoken. Following this the focused control may be announced.</li>
  <li class="li2">Screen magnifiers may enlarge the group.</li>
 </ul>
 
@@ -106,13 +106,13 @@ tags:
 <h3 class="p1" id="ARIA_attributes_used">ARIA attributes used</h3>
 
 <ul class="ul1">
- <li class="li2"><a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#group">group</a></li>
+ <li class="li2"><a href="https://www.w3.org/TR/wai-aria-1.1/#group">group</a></li>
 </ul>
 
 <h3 class="p1" id="Related_ARIA_techniques">Related ARIA techniques </h3>
 
 <ul class="ul1">
- <li class="li2"><a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#region">region</a> role</li>
+ <li class="li2"><a href="https://www.w3.org/TR/wai-aria-1.1/#region">region</a> role</li>
 </ul>
 
 <h3 class="p1" id="Compatibility">Compatibility</h3>
