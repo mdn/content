@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>aString</em> = CSSMathValue.operator;</pre>
+<pre class="brush: js">var <em>aString</em> = CSSMathValue.operator;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -73,18 +73,18 @@ tags:
   then <code><a href="/en-US/docs/Web/API/Console/log">console.log()</a></code> the
   <code>operator</code>.</p>
 
-<pre class="brush: html notranslate">&lt;div&gt;My width has a &lt;code&gt;calc()&lt;/code&gt; function&lt;/div&gt;
+<pre class="brush: html">&lt;div&gt;My width has a &lt;code&gt;calc()&lt;/code&gt; function&lt;/div&gt;
 </pre>
 
 <p>We assign a <code>width</code> with a calculation</p>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   width: calc(50% - 0.5vw);
 }</pre>
 
 <p>We add the JavaScript</p>
 
-<pre class="brush: js notranslate">const styleMap = document.querySelector('div').computedStyleMap();
+<pre class="brush: js">const styleMap = document.querySelector('div').computedStyleMap();
 
 console.log( styleMap.get('width') );                   // CSSMathSum {values: CSSNumericArray, operator: "sum"}
 console.log( styleMap.get('width').values );            // CSSNumericArray {0: CSSUnitValue, 1: CSSMathNegate, length: 2}

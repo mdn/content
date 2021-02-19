@@ -119,7 +119,7 @@ tags:
 
 <p>The console works the exact same way as <code>eval</code>: the last expression entered is returned. For the sake of simplicity, it can be imagined that every time something is entered into the console, it is actually surrounded by <code>console.log</code> around <code>eval</code>, like so:</p>
 
-<pre class="brush: js notranslate">function greetMe(yourName) {
+<pre class="brush: js">function greetMe(yourName) {
   alert("Hello " + yourName)
 }
 <code>console.log(eval('3 + 5'))</code>
@@ -133,7 +133,7 @@ tags:
 
 <p>To get started with writing JavaScript, open the Web Console in multi-line mode, and write your first "Hello world" JavaScript code:</p>
 
-<pre class="brush: js notranslate">(function(){
+<pre class="brush: js">(function(){
   "use strict";
   /* Start of your code */
   function greetMe(yourName) {

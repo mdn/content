@@ -45,7 +45,7 @@ tags:
 
 <p>In the following example, the variable <code>smallNumber</code> is assigned a value that is smaller than the minimum value. When the {{jsxref("Statements/if...else", "if")}} statement executes, <code>smallNumber</code> has the value <code>-Infinity</code>, so <code>smallNumber</code> is set to a more manageable value before continuing.</p>
 
-<pre class="brush: js notranslate">var smallNumber = (-Number.MAX_VALUE) * 2;
+<pre class="brush: js">var smallNumber = (-Number.MAX_VALUE) * 2;
 
 if (smallNumber === Number.NEGATIVE_INFINITY) {
   smallNumber = returnFinite();

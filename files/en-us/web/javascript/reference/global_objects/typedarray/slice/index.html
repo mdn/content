@@ -29,7 +29,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>typedarray</var>.slice([<var>begin</var>[, <var>end</var>]])</pre>
+  class="brush: js"><var>typedarray</var>.slice([<var>begin</var>[, <var>end</var>]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -69,7 +69,7 @@ tags:
 <h3 id="Return_a_portion_of_an_existing_typed_array">Return a portion of an existing typed
   array</h3>
 
-<pre class="brush: js notranslate">const uint8 = new Uint8Array([1,2,3]);
+<pre class="brush: js">const uint8 = new Uint8Array([1,2,3]);
 uint8.slice(1);   // Uint8Array [ 2, 3 ]
 uint8.slice(2);   // Uint8Array [ 3 ]
 uint8.slice(-2);  // Uint8Array [ 2, 3 ]
@@ -81,7 +81,7 @@ uint8.slice(0,1); // Uint8Array [ 1 ]
 <p>Since there is no global object with the name <em>TypedArray</em>, polyfilling must be
   done on an "as needed" basis.</p>
 
-<pre class="brush: js notranslate">if (!Uint8Array.prototype.slice) {
+<pre class="brush: js">if (!Uint8Array.prototype.slice) {
   Object.defineProperty(Uint8Array.prototype, 'slice', {
     value: function (begin, end)
      {

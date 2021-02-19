@@ -15,7 +15,7 @@ tags:
 
 <p>A <code>BigInt</code> is created by appending <code>n</code> to the end of an integer literal — <code>10n</code> — or by calling the function <code>BigInt()</code>.</p>
 
-<pre class="brush: js notranslate">const previouslyMaxSafeInteger = 9007199254740991n
+<pre class="brush: js">const previouslyMaxSafeInteger = 9007199254740991n
 
 const alsoHuge = BigInt(9007199254740991)
 // ↪ 9007199254740991n
@@ -39,13 +39,13 @@ const hugeBin = BigInt("0b11111111111111111111111111111111111111111111111111111"
 
 <p>When tested against <code>typeof</code>, a <code>BigInt</code> will give "bigint":</p>
 
-<pre class="brush: js notranslate">typeof 1n === 'bigint'           // true
+<pre class="brush: js">typeof 1n === 'bigint'           // true
 typeof BigInt('1') === 'bigint'  // true
 </pre>
 
 <p>When wrapped in an <code>Object</code>, a <code>BigInt</code> will be considered as a normal "object" type:</p>
 
-<pre class="brush: js notranslate">typeof Object(1n) === 'object'  // true
+<pre class="brush: js">typeof Object(1n) === 'object'  // true
 </pre>
 
 <h3 id="Operators">Operators</h3>
@@ -56,7 +56,7 @@ typeof BigInt('1') === 'bigint'  // true
 
 <p>Also unsupported is the unary operator (<code>+</code>), <a href="https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs">in order to not break asm.js</a>.</p>
 
-<pre class="brush: js notranslate">const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER)
+<pre class="brush: js">const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER)
 // ↪ 9007199254740991n
 
 const maxPlusOne = previousMaxSafe + 1n
@@ -89,7 +89,7 @@ bigN * -1n
 <p>An operation with a fractional result will be truncated when used with a <code>BigInt</code>.</p>
 </div>
 
-<pre class="brush: js notranslate">const expected = 4n / 2n
+<pre class="brush: js">const expected = 4n / 2n
 // ↪ 2n
 
 const rounded = 5n / 2n
@@ -101,7 +101,7 @@ const rounded = 5n / 2n
 
 <p>A <code>BigInt</code> is not strictly equal to a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a>, but it <em>is</em> loosely so:</p>
 
-<pre class="brush: js notranslate">0n === 0
+<pre class="brush: js">0n === 0
 // ↪ false
 
 0n == 0
@@ -109,7 +109,7 @@ const rounded = 5n / 2n
 
 <p>A <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a> and a <code>BigInt</code> may be compared as usual:</p>
 
-<pre class="brush: js notranslate">1n &lt; 2
+<pre class="brush: js">1n &lt; 2
 // ↪ true
 
 2n &gt; 1
@@ -126,7 +126,7 @@ const rounded = 5n / 2n
 
 <p>They may be mixed in arrays and sorted:</p>
 
-<pre class="brush: js notranslate">const mixed = [4n, 6, -12n, 10, 4, 0, 0n]
+<pre class="brush: js">const mixed = [4n, 6, -12n, 10, 4, 0, 0n]
 // ↪  [4n, 6, -12n, 10, 4, 0, 0n]
 
 mixed.sort() // default sorting behavior
@@ -143,7 +143,7 @@ mixed.sort((a, b) =&gt; (a &lt; b) ? -1 : ((a &gt; b) ? 1 : 0))
 
 <p>Note that comparisons with <code>Object</code>-wrapped <code>BigInt</code>s act as with other objects, only indicating equality when the same object instance is compared:</p>
 
-<pre class="brush: js notranslate">0n === Object(0n)          // false
+<pre class="brush: js">0n === Object(0n)          // false
 Object(0n) === Object(0n)  // false
 
 const o = Object(0n)
@@ -160,7 +160,7 @@ o === o                    // true
  <li>within a conditional test like an <a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else"><code>if</code></a> statement.</li>
 </ul>
 
-<pre class="brush: js notranslate">if (0n) {
+<pre class="brush: js">if (0n) {
   console.log('Hello from the if!')
 } else {
   console.log('Hello from the else!')
@@ -228,18 +228,18 @@ Boolean(12n)
 
 <p>Using <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify"><code>JSON.stringify()</code></a> with any <code>BigInt</code> value will raise a <code>TypeError</code> as <code>BigInt</code> values aren't serialized in JSON by default. However, you can implement your own <code>toJSON</code> method if needed:</p>
 
-<pre class="brush: js notranslate">BigInt.prototype.toJSON = function() { return this.toString()  }</pre>
+<pre class="brush: js">BigInt.prototype.toJSON = function() { return this.toString()  }</pre>
 
 <p>Instead of throwing, <code>JSON.stringify</code> now produces a string like this:</p>
 
-<pre class="brush: js notranslate">JSON.stringify(BigInt(1))
+<pre class="brush: js">JSON.stringify(BigInt(1))
 // '"1"'</pre>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Calculating_Primes">Calculating Primes</h3>
 
-<pre class="brush: js notranslate">// Returns true if passed BigInt is a prime number
+<pre class="brush: js">// Returns true if passed BigInt is a prime number
 function isPrime(p) {
   for (let i = 2n; i * i &lt;= p; i++) {
     if (p % i === 0n) return false;

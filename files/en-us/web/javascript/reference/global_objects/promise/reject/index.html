@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Promise.reject(<var>reason</var>);</pre>
+<pre class="brush: js">Promise.reject(<var>reason</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -47,7 +47,7 @@ tags:
 <h3 id="Using_the_static_Promise.reject_method">Using the static Promise.reject() method
 </h3>
 
-<pre class="brush: js notranslate">Promise.reject(new Error('fail')).then(function() {
+<pre class="brush: js">Promise.reject(new Error('fail')).then(function() {
   // not called
 }, function(error) {
   console.error(error); // Stacktrace

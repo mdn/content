@@ -26,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>str</var>[Symbol.iterator]</pre>
+<pre class="brush: js"><var>str</var>[Symbol.iterator]</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -36,7 +36,7 @@ tags:
 
 <h3 id="Using_iterator">Using [@@iterator]()</h3>
 
-<pre class="brush: js notranslate">var str = 'A\uD835\uDC68';
+<pre class="brush: js">var str = 'A\uD835\uDC68';
 
 var strIter = str[Symbol.iterator]();
 
@@ -46,7 +46,7 @@ console.log(strIter.next().value); // "\uD835\uDC68"
 
 <h3 id="Using_iterator_with_for..of">Using [@@iterator]() with for..of</h3>
 
-<pre class="brush: js notranslate">var str = 'A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A';
+<pre class="brush: js">var str = 'A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A';
 
 for (var v of str) {
   console.log(v);

@@ -25,7 +25,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">Object.defineProperty(<var>obj</var>, <var>prop</var>, <var>descriptor</var>)</pre>
+  class="brush: js">Object.defineProperty(<var>obj</var>, <var>prop</var>, <var>descriptor</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -121,7 +121,7 @@ tags:
   options explicitly, or point to {{jsxref("null")}} with {{jsxref("Object.create",
   "Object.create(null)")}}.</p>
 
-<pre class="brush: js notranslate">// using __proto__
+<pre class="brush: js">// using __proto__
 var obj = {};
 var descriptor = Object.create(null); // no inherited properties
 descriptor.value = 'static';
@@ -170,7 +170,7 @@ Object.defineProperty(obj, 'key', withValue('static'));
   <code>Object.defineProperty()</code> creates a new property as described. Fields may be
   omitted from the descriptor, and default values for those fields are inputted.</p>
 
-<pre class="brush: js notranslate">var o = {}; // Creates a new object
+<pre class="brush: js">var o = {}; // Creates a new object
 
 // Example of an object property added
 // with defineProperty with a data property descriptor
@@ -231,7 +231,7 @@ Object.defineProperty(o, 'conflict', {
 <p>When the <code>writable</code> property attribute is set to <code>false</code>, the
   property is said to be “non-writable”. It cannot be reassigned.</p>
 
-<pre class="brush: js notranslate">var o = {}; // Creates a new object
+<pre class="brush: js">var o = {}; // Creates a new object
 
 Object.defineProperty(o, 'a', {
   value: 37,
@@ -269,7 +269,7 @@ console.log(o.a); // logs 37. The assignment didn't work.
   up in a {{jsxref("Statements/for...in", "for...in")}} loop and
   {{jsxref("Object.keys()")}} or not.</p>
 
-<pre class="brush: js notranslate">var o = {};
+<pre class="brush: js">var o = {};
 Object.defineProperty(o, 'a', {
   value: 1,
   enumerable: true
@@ -321,7 +321,7 @@ p[Symbol.for('f')] // undefined
   can be deleted from the object and whether its attributes (other than <code>value</code>
   and <code>writable</code>) can be changed.</p>
 
-<pre class="brush: js notranslate">var o = {};
+<pre class="brush: js">var o = {};
 Object.defineProperty(o, 'a', {
   get() { return 1; },
   configurable: false
@@ -359,7 +359,7 @@ console.log(o.a); // logs 1
   often a difference between using dot notation to assign a value and using
   <code>Object.defineProperty()</code>, as shown in the example below.</p>
 
-<pre class="brush: js notranslate">var o = {};
+<pre class="brush: js">var o = {};
 
 o.a = 1;
 // is equivalent to:
@@ -387,7 +387,7 @@ Object.defineProperty(o, 'a', {
   <code>temperature</code> property is set, the <code>archive</code> array gets a log
   entry.</p>
 
-<pre class="brush: js notranslate">function Archiver() {
+<pre class="brush: js">function Archiver() {
   var temperature = null;
   var archive = [];
 
@@ -414,7 +414,7 @@ arc.getArchive(); // [{ val: 11 }, { val: 13 }]
 
 <p>In this example, a getter always returns the same value.</p>
 
-<pre class="brush: js notranslate">var pattern = {
+<pre class="brush: js">var pattern = {
     get() {
         return 'I always return this string, ' +
                'whatever you have assigned';
@@ -443,7 +443,7 @@ console.log(instance.myname); // this is my name string
   these methods use a variable to store the value, this value will be shared by all
   objects.</p>
 
-<pre class="brush: js notranslate">function myclass() {
+<pre class="brush: js">function myclass() {
 }
 
 var value;
@@ -466,7 +466,7 @@ console.log(b.x); // 1
   <code>set</code> methods, <code>this</code> points to the object which is used to access
   or modify the property.</p>
 
-<pre class="brush: js notranslate">function myclass() {
+<pre class="brush: js">function myclass() {
 }
 
 Object.defineProperty(myclass.prototype, "x", {
@@ -488,7 +488,7 @@ console.log(b.x); // undefined
   on a prototype. However, if a non-writable value property is inherited, it still
   prevents from modifying the property on the object.</p>
 
-<pre class="brush: js notranslate">function myclass() {
+<pre class="brush: js">function myclass() {
 }
 
 myclass.prototype.x = 1;

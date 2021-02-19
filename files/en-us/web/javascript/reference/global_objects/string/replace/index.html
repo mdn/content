@@ -26,7 +26,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">const newStr = <var>str</var>.replace(<var>regexp</var>|<var>substr</var>, <var>newSubstr</var>|<var>function</var>)</pre>
+  class="brush: js">const newStr = <var>str</var>.replace(<var>regexp</var>|<var>substr</var>, <var>newSubstr</var>|<var>function</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -170,7 +170,7 @@ tags:
 <p>The following example will set <code>newString</code>
   to <code>'abc - 12345 - #$*%'</code>:</p>
 
-<pre class="brush: js notranslate">function replacer(match, p1, p2, p3, offset, string) {
+<pre class="brush: js">function replacer(match, p1, p2, p3, offset, string) {
   // p1 is nondigits, p2 digits, and p3 non-alphanumerics
   return [p1, p2, p3].join(' - ');
 }
@@ -186,7 +186,7 @@ console.log(newString);  // abc - 12345 - #$*%
 <p>In the following example, the regular expression is defined in <code>replace()</code>
   and includes the ignore case flag.</p>
 
-<pre class="brush: js notranslate">let str = 'Twas the night before Xmas...';
+<pre class="brush: js">let str = 'Twas the night before Xmas...';
 let newstr = str.replace(/xmas/i, 'Christmas');
 console.log(newstr);  // Twas the night before Christmas...
 </pre>
@@ -207,7 +207,7 @@ console.log(newstr);  // Twas the night before Christmas...
     and ignore case flags</a> which permits <code>replace()</code> to replace each
   occurrence of <code>'apples'</code> in the string with <code>'oranges'</code>.</p>
 
-<pre class="brush: js notranslate">let re = /apples/gi;
+<pre class="brush: js">let re = /apples/gi;
 let str = 'Apples are round, and apples are juicy.';
 let newstr = str.replace(re, 'oranges');
 console.log(newstr);  // oranges are round, and oranges are juicy.
@@ -222,7 +222,7 @@ console.log(newstr);  // oranges are round, and oranges are juicy.
     href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">capturing
     groups</a> and the <code>$1</code> and <code>$2</code> replacement patterns.</p>
 
-<pre class="brush: js notranslate">let re = /(\w+)\s(\w+)/;
+<pre class="brush: js">let re = /(\w+)\s(\w+)/;
 let str = 'John Smith';
 let newstr = str.replace(re, '$2, $1');
 console.log(newstr);  // Smith, John
@@ -241,7 +241,7 @@ console.log(newstr);  // Smith, John
 <p>The replacement function accepts the matched snippet as its parameter, and uses it to
   transform the case and concatenate the hyphen before returning.</p>
 
-<pre class="brush: js notranslate">function styleHyphenFormat(propertyName) {
+<pre class="brush: js">function styleHyphenFormat(propertyName) {
   function upperToHyphenLower(match, offset, string) {
     return (offset &gt; 0 ? '-' : '') + match.toLowerCase();
   }
@@ -258,7 +258,7 @@ console.log(newstr);  // Smith, John
   had tried to do this using the match without a function, the
   {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} would have no effect.</p>
 
-<pre class="brush: js example-bad notranslate">let newString = propertyName.replace(/[A-Z]/g, '-' + '$&amp;'.toLowerCase());  // won't work
+<pre class="brush: js example-bad">let newString = propertyName.replace(/[A-Z]/g, '-' + '$&amp;'.toLowerCase());  // won't work
 </pre>
 
 <p>This is because <code>'$&amp;'.toLowerCase()</code> would first be evaluated as a
@@ -281,7 +281,7 @@ console.log(newstr);  // Smith, John
   <code>f2c()</code> then returns the Celsius number. This function approximates Perl's
   <code>s///e</code> flag.</p>
 
-<pre class="brush: js notranslate">function f2c(x) {
+<pre class="brush: js">function f2c(x) {
   function convert(str, p1, offset, s) {
     return ((p1 - 32) * 5/9) + 'C';
   }

@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>var new_array = arr</var>.flatMap(function <var>callback(currentValue[, index[, array]]) {
+<pre class="brush: js"><var>var new_array = arr</var>.flatMap(function <var>callback(currentValue[, index[, array]]) {
     // return element for new_array
 }</var>[, <var>thisArg</var>])</pre>
 
@@ -60,7 +60,7 @@ tags:
 
 <h4 id="reduce_and_concat"><code>reduce()</code> and <code>concat()</code></h4>
 
-<pre class="brush: js notranslate">var arr = [1, 2, 3, 4];
+<pre class="brush: js">var arr = [1, 2, 3, 4];
 
 arr.flatMap(x =&gt; [x, x * 2]);
 // is equivalent to
@@ -83,7 +83,7 @@ arr.reduce((acc, x) =&gt; acc.concat([x, x * 2]), []);
 
 <h3 id="map_and_flatMap"><code>map()</code> and <code>flatMap()</code></h3>
 
-<pre class="brush: js notranslate">let arr1 = [1, 2, 3, 4];
+<pre class="brush: js">let arr1 = [1, 2, 3, 4];
 
 arr1.map(x =&gt; [x * 2]);
 // [[2], [4], [6], [8]]
@@ -101,7 +101,7 @@ arr1.flatMap(x =&gt; [[x * 2]]);
 
 <p>Let's generate a list of words from a list of sentences.</p>
 
-<pre class="brush: js notranslate">let arr1 = ["it's Sunny in", "", "California"];
+<pre class="brush: js">let arr1 = ["it's Sunny in", "", "California"];
 
 arr1.map(x =&gt; x.split(" "));
 // [["it's","Sunny","in"],[""],["California"]]
@@ -122,7 +122,7 @@ arr1.flatMap(x =&gt; x.split(" "));
   Return a 1-element array to keep the item, a multiple-element array to add items, or a
   0-element array to remove the item.</p>
 
-<pre class="brush: js notranslate">// Let's say we want to remove all the negative numbers
+<pre class="brush: js">// Let's say we want to remove all the negative numbers
 // and split the odd numbers into an even number and a 1
 let a = [5, 4, -3, 20, 17, -33, -4, 18]
 //       |\  \  x   |  | \   x   x   |

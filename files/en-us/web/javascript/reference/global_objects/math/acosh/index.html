@@ -65,7 +65,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Math.acosh(<var>x</var>)</pre>
+<pre class="brush: js">Math.acosh(<var>x</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -89,7 +89,7 @@ tags:
 
 <h3 id="Using_Math.acosh">Using Math.acosh()</h3>
 
-<pre class="brush: js notranslate">Math.acosh(-1);  // NaN
+<pre class="brush: js">Math.acosh(-1);  // NaN
 Math.acosh(0);   // NaN
 Math.acosh(0.5); // NaN
 Math.acosh(1);   // 0
@@ -142,7 +142,7 @@ Math.acosh(2);   // 1.3169578969248166
     </semantics>
   </math> and so this can be emulated with the following function:</p>
 
-<pre class="brush: js notranslate">Math.acosh = Math.acosh || function(x) {
+<pre class="brush: js">Math.acosh = Math.acosh || function(x) {
   return Math.log(x + Math.sqrt(x * x - 1));
 };
 </pre>

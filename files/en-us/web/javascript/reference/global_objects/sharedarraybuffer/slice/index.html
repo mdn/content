@@ -28,7 +28,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>sab</var>.slice()
+<pre class="brush: js"><var>sab</var>.slice()
 <var>sab</var>.slice(<var>begin</var>)
 <var>sab</var>.slice(<var>begin</var>, <var>end</var>)</pre>
 
@@ -61,7 +61,7 @@ tags:
 
 <h3 id="Using_slice">Using slice()</h3>
 
-<pre class="brush:js notranslate">var sab = new SharedArrayBuffer(1024);
+<pre class="brush:js">var sab = new SharedArrayBuffer(1024);
 sab.slice();    // SharedArrayBuffer { byteLength: 1024 }
 sab.slice(2);   // SharedArrayBuffer { byteLength: 1022 }
 sab.slice(-2);  // SharedArrayBuffer { byteLength: 2 }

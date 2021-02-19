@@ -109,7 +109,7 @@ tags:
 
 <h3 id="Counting_vowels">Counting vowels</h3>
 
-<pre class="brush: js notranslate">var aliceExcerpt = "There was a long silence after this, and Alice could only hear whispers now and then.";
+<pre class="brush: js">var aliceExcerpt = "There was a long silence after this, and Alice could only hear whispers now and then.";
 var regexpVowels = /[aeiouy]/g;
 
 console.log("Number of vowels:", aliceExcerpt.match(regexpVowels).length);
@@ -117,7 +117,7 @@ console.log("Number of vowels:", aliceExcerpt.match(regexpVowels).length);
 
 <h3 id="Using_groups">Using groups</h3>
 
-<pre class="brush: js notranslate">let personList = `First_Name: John, Last_Name: Doe
+<pre class="brush: js">let personList = `First_Name: John, Last_Name: Doe
 First_Name: Jane, Last_Name: Smith`;
 
 let regexpNames =  /First_Name: (\w+), Last_Name: (\w+)/mg;
@@ -129,7 +129,7 @@ do {
 
 <h3 id="Using_named_groups">Using named groups</h3>
 
-<pre class="brush: js notranslate">let personList = `First_Name: John, Last_Name: Doe
+<pre class="brush: js">let personList = `First_Name: John, Last_Name: Doe
 First_Name: Jane, Last_Name: Smith`;
 
 let regexpNames =  /First_Name: (?&lt;firstname&gt;\w+), Last_Name: (?&lt;lastname&gt;\w+)/mg;

@@ -22,7 +22,7 @@ tags:
 
 <p>For example, this code defines a simple target with just two properties, and an even simpler handler with no properties:</p>
 
-<pre class="brush: js notranslate">const target = {
+<pre class="brush: js">const target = {
   message1: "hello",
   message2: "everyone"
 };
@@ -34,13 +34,13 @@ const proxy1 = new Proxy(target, handler1);
 
 <p>Because the handler is empty, this proxy behaves just like the original target:</p>
 
-<pre class="brush: js notranslate">console.log(proxy1.message1); // hello
+<pre class="brush: js">console.log(proxy1.message1); // hello
 console.log(proxy1.message2); // everyone
 </pre>
 
 <p>To customise the proxy, we define functions on the handler object:</p>
 
-<pre class="brush: js notranslate">const target = {
+<pre class="brush: js">const target = {
   message1: "hello",
   message2: "everyone"
 };
@@ -57,12 +57,12 @@ const proxy2 = new Proxy(target, handler2);</pre>
 
 <p>Handler functions are sometimes called <em>traps</em>, presumably because they trap calls to the target object. The very simple trap in <code>handler2</code> above redefines all property accessors:</p>
 
-<pre class="brush: js notranslate">console.log(proxy2.message1); // world
+<pre class="brush: js">console.log(proxy2.message1); // world
 console.log(proxy2.message2); // world</pre>
 
 <p>With the help of the {{jsxref("Reflect")}} class we can give some accessors the original behavior and redefine others:</p>
 
-<pre class="brush: js notranslate">const target = {
+<pre class="brush: js">const target = {
   message1: "hello",
   message2: "everyone"
 };
@@ -101,7 +101,7 @@ console.log(proxy3.message2); // world</pre>
 
 <p>In this simple example, the number <code>37</code> gets returned as the default value when the property name is not in the object. It is using the {{jsxref("Global_Objects/Proxy/handler/get", "get")}} handler.</p>
 
-<pre class="brush: js notranslate">const handler = {
+<pre class="brush: js">const handler = {
   get: function(obj, prop) {
     return prop in obj ?
       obj[prop] :
@@ -124,7 +124,7 @@ console.log('c' in p, p.c);
 
 <p>In this example, we are using a native JavaScript object to which our proxy will forward all operations that are applied to it.</p>
 
-<pre class="brush: js notranslate">const target = {};
+<pre class="brush: js">const target = {};
 const p = new Proxy(target, {});
 
 p.a = 37;
@@ -141,7 +141,7 @@ console.log(target.a);
 
 <p>With a <code>Proxy</code>, you can easily validate the passed value for an object. This example uses the {{jsxref("Global_Objects/Proxy/handler/set", "set")}} handler.</p>
 
-<pre class="brush: js notranslate">let validator = {
+<pre class="brush: js">let validator = {
   set: function(obj, prop, value) {
     if (prop === 'age') {
       if (!Number.isInteger(value)) {
@@ -172,7 +172,7 @@ person.age = 300;        // Throws an exception
 
 <p>A function proxy could easily extend a constructor with a new constructor. This example uses the {{jsxref("Global_Objects/Proxy/handler/construct", "construct")}} and {{jsxref("Global_Objects/Proxy/handler/apply", "apply")}} handlers.</p>
 
-<pre class="brush: js notranslate">function extend(sup, base) {
+<pre class="brush: js">function extend(sup, base) {
   var descriptor = Object.getOwnPropertyDescriptor(
     base.prototype, 'constructor'
   );
@@ -214,7 +214,7 @@ console.log(Peter.age);     // 13</pre>
 
 <p>Sometimes you want to toggle the attribute or class name of two different elements. Here's how using the {{jsxref("Global_Objects/Proxy/handler/set", "set")}} handler.</p>
 
-<pre class="brush: js notranslate">let view = new Proxy({
+<pre class="brush: js">let view = new Proxy({
   selected: null
 },
 {
@@ -255,7 +255,7 @@ Note: even if selected: !null, then giving oldval.setAttribute is not a function
 
 <p>The <code>products</code> proxy object evaluates the passed value and converts it to an array if needed. The object also supports an extra property called <code>latestBrowser</code> both as a getter and a setter.</p>
 
-<pre class="brush: js notranslate">let products = new Proxy({
+<pre class="brush: js">let products = new Proxy({
   browsers: ['Internet Explorer', 'Netscape']
 },
 {
@@ -309,7 +309,7 @@ console.log(products.latestBrowser);
 
 <p>This proxy extends an array with some utility features. As you see, you can flexibly "define" properties without using {{jsxref("Object.defineProperties", "Object.defineProperties")}}. This example can be adapted to find a table row by its cell. In that case, the target will be {{domxref("HTMLTableElement.rows", "table.rows")}}.</p>
 
-<pre class="brush: js notranslate">let products = new Proxy([
+<pre class="brush: js">let products = new Proxy([
   { name: 'Firefox', type: 'browser' },
   { name: 'SeaMonkey', type: 'browser' },
   { name: 'Thunderbird', type: 'mailer' }
@@ -370,7 +370,7 @@ console.log(products.number);      // 3
 
 <p>Now in order to create a complete sample <code>traps</code> list, for didactic purposes, we will try to proxify a <em>non-native</em> object that is particularly suited to this type of operation: the <code>docCookies</code> global object created by <a href="/en-US/docs/Web/API/Document/cookie/Simple_document.cookie_framework">the "little framework" published on the <code>document.cookie</code> page</a>.</p>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
   var docCookies = ... get the "docCookies" object here:
   https://developer.mozilla.org/en-US/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support
 */

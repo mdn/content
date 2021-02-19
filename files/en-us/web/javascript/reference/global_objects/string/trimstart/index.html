@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>str</var>.trimStart();
+<pre class="brush: js"><var>str</var>.trimStart();
 <var>str</var>.trimLeft();</pre>
 
 <h3 id="Return_value">Return value</h3>
@@ -44,7 +44,7 @@ tags:
   <code>trimLeft</code> remains as an alias to <code>trimStart</code>. In some engines
   this means:</p>
 
-<pre class="brush: js notranslate">String.prototype.trimLeft.name === "trimStart";</pre>
+<pre class="brush: js">String.prototype.trimLeft.name === "trimStart";</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -52,7 +52,7 @@ tags:
 
 <p>The following example displays the lowercase string <code>'foo  '</code>:</p>
 
-<pre class="brush: js highlight: [5] notranslate">var str = '   foo  ';
+<pre class="brush: js highlight: [5]">var str = '   foo  ';
 
 console.log(str.length); // 8
 
@@ -63,7 +63,7 @@ console.log(str);        // 'foo  '
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="brush: js highlight: [5] notranslate">//https://github.com/FabioVergani/js-Polyfill_String-trimStart
+<pre class="brush: js highlight: [5]">//https://github.com/FabioVergani/js-Polyfill_String-trimStart
 
 (function(w){
     var String=w.String, Proto=String.prototype;

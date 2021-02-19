@@ -58,7 +58,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><code>Math.asinh(<var>x</var>)</code></pre>
+<pre class="brush: js"><code>Math.asinh(<var>x</var>)</code></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -81,7 +81,7 @@ tags:
 
 <h3 id="Using_Math.asinh">Using Math.asinh()</h3>
 
-<pre class="brush: js notranslate">Math.asinh(1);  // 0.881373587019543
+<pre class="brush: js">Math.asinh(1);  // 0.881373587019543
 Math.asinh(0);  // 0
 </pre>
 
@@ -89,7 +89,7 @@ Math.asinh(0);  // 0
 
 <p><code>Math.asinh</code> can be emulated with the following function:</p>
 
-<pre class="brush: js notranslate">if (!Math.asinh) Math.asinh = function(x) {
+<pre class="brush: js">if (!Math.asinh) Math.asinh = function(x) {
     var absX = Math.abs(x), w
     if (absX &lt; 3.725290298461914e-9) // |x| &lt; 2^-28
         return x

@@ -28,7 +28,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>typedarray</var>.fill(<var>value</var>[, <var>start = 0</var>[, <var>end = this.length</var>]])</pre>
+  class="brush: js"><var>typedarray</var>.fill(<var>value</var>[, <var>start = 0</var>[, <var>end = this.length</var>]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -65,7 +65,7 @@ tags:
 
 <h3 id="Using_fill">Using fill()</h3>
 
-<pre class="brush: js notranslate">new Uint8Array([1, 2, 3]).fill(4);         // Uint8Array [4, 4, 4]
+<pre class="brush: js">new Uint8Array([1, 2, 3]).fill(4);         // Uint8Array [4, 4, 4]
 new Uint8Array([1, 2, 3]).fill(4, 1);      // Uint8Array [1, 4, 4]
 new Uint8Array([1, 2, 3]).fill(4, 1, 2);   // Uint8Array [1, 4, 3]
 new Uint8Array([1, 2, 3]).fill(4, 1, 1);   // Uint8Array [1, 2, 3]
@@ -78,7 +78,7 @@ new Uint8Array([1, 2, 3]).fill(4, -3, -2); // Uint8Array [4, 2, 3]
   done on an "as needed" basis. Use the following "polyfill" along with the
   {{jsxref("Array.prototype.fill()")}} polyfill.</p>
 
-<pre class="brush: js notranslate">// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.fill
+<pre class="brush: js">// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.fill
 if (!Uint8Array.prototype.fill) {
   Uint8Array.prototype.fill = Array.prototype.fill;
 }

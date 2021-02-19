@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>arr</var>.lastIndexOf(<var>searchElement</var>[, <var>fromIndex</var>])
+<pre class="brush: js"><var>arr</var>.lastIndexOf(<var>searchElement</var>[, <var>fromIndex</var>])
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -54,7 +54,7 @@ tags:
 
 <p>The following example uses <code>lastIndexOf</code> to locate values in an array.</p>
 
-<pre class="brush: js notranslate">var numbers = [2, 5, 9, 2];
+<pre class="brush: js">var numbers = [2, 5, 9, 2];
 numbers.lastIndexOf(2);     // 3
 numbers.lastIndexOf(7);     // -1
 numbers.lastIndexOf(2, 3);  // 3
@@ -70,7 +70,7 @@ numbers.lastIndexOf(2, -1); // 3
   element in a given array, using {{jsxref("Array.prototype.push", "push")}} to add them
   to another array as they are found.</p>
 
-<pre class="brush: js notranslate">var indices = [];
+<pre class="brush: js">var indices = [];
 var array = ['a', 'b', 'a', 'c', 'a', 'd'];
 var element = 'a';
 var idx = array.lastIndexOf(element);
@@ -99,7 +99,7 @@ console.log(indices);
   {{jsxref("Math.floor")}}, {{jsxref("Math.abs")}}, and {{jsxref("Math.min")}} have their
   original values.</p>
 
-<pre class="brush: js notranslate">// Production steps of ECMA-262, Edition 5, 15.4.4.15
+<pre class="brush: js">// Production steps of ECMA-262, Edition 5, 15.4.4.15
 // Reference: https://es5.github.io/#x15.4.4.15
 if (!Array.prototype.lastIndexOf) {
   Array.prototype.lastIndexOf = function(searchElement /*, fromIndex*/) {

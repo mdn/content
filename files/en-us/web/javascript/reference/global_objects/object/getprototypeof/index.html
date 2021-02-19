@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Object.getPrototypeOf(<var>obj</var>)</pre>
+<pre class="brush: js">Object.getPrototypeOf(<var>obj</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -41,7 +41,7 @@ tags:
 
 <h3 id="Using_getPrototypeOf">Using getPrototypeOf</h3>
 
-<pre class="brush: js notranslate">var proto = {};
+<pre class="brush: js">var proto = {};
 var obj = Object.create(proto);
 Object.getPrototypeOf(obj) === proto; // true
 </pre>
@@ -52,7 +52,7 @@ Object.getPrototypeOf(obj) === proto; // true
   parameter isn't an object. In ES2015, the parameter will be coerced to an
   {{jsxref("Object")}}.</p>
 
-<pre class="brush: js notranslate">Object.getPrototypeOf('foo');
+<pre class="brush: js">Object.getPrototypeOf('foo');
 // TypeError: "foo" is not an object (ES5 code)
 Object.getPrototypeOf('foo');
 // String.prototype                  (ES2015 code)

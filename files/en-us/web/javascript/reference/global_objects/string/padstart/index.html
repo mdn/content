@@ -28,7 +28,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>str</var>.padStart(<var>targetLength</var> [, <var>padString</var>])</pre>
+  class="brush: js"><var>str</var>.padStart(<var>targetLength</var> [, <var>padString</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -53,7 +53,7 @@ tags:
 
 <h3 id="Basic_examples">Basic examples</h3>
 
-<pre class="brush: js notranslate">'abc'.padStart(10);         // "       abc"
+<pre class="brush: js">'abc'.padStart(10);         // "       abc"
 'abc'.padStart(10, "foo");  // "foofoofabc"
 'abc'.padStart(6,"123465"); // "123abc"
 'abc'.padStart(8, "0");     // "00000abc"
@@ -61,7 +61,7 @@ tags:
 
 <h3 id="Fixed_width_string_number_conversion">Fixed width string number conversion</h3>
 
-<pre class="brush: js notranslate">// Javascript version of: (unsigned)
+<pre class="brush: js">// Javascript version of: (unsigned)
 //  printf "%0*d" width num
 function leftFillNum(num, targetLength) {
     return num.toString().padStart(targetLength, 0);

@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>arr</var>.pop()</pre>
+<pre class="brush: js"><var>arr</var>.pop()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -54,7 +54,7 @@ tags:
 <p>The following code creates the <code>myFish</code> array containing four elements, then
   removes its last element.</p>
 
-<pre class="brush: js notranslate">var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+<pre class="brush: js">var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
 
 var popped = myFish.pop();
 
@@ -69,7 +69,7 @@ console.log(popped); // 'sturgeon'</pre>
   elements and a length parameter, then removes its last element and decrements the length
   parameter.</p>
 
-<pre class="brush: js notranslate">var myFish = {0:'angel', 1:'clown', 2:'mandarin', 3:'sturgeon', length: 4};
+<pre class="brush: js">var myFish = {0:'angel', 1:'clown', 2:'mandarin', 3:'sturgeon', length: 4};
 
 var popped = Array.prototype.pop.call(myFish); //same syntax for using apply( )
 

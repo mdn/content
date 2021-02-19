@@ -28,7 +28,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Symbol([<var>description</var>])</pre>
+<pre class="brush: js">Symbol([<var>description</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -45,7 +45,7 @@ tags:
 <p>To create a new primitive symbol, you write <code>Symbol()</code> with an optional
   string as its description:</p>
 
-<pre class="brush: js notranslate">let sym1 = Symbol()
+<pre class="brush: js">let sym1 = Symbol()
 let sym2 = Symbol('foo')
 let sym3 = Symbol('foo')
 </pre>
@@ -54,7 +54,7 @@ let sym3 = Symbol('foo')
   coerce the string <code>"foo"</code> into a symbol. It creates a new symbol each time:
 </p>
 
-<pre class="brush: js notranslate">Symbol('foo') === Symbol('foo')  // false
+<pre class="brush: js">Symbol('foo') === Symbol('foo')  // false
 </pre>
 
 <h3 id="new_Symbol...">new Symbol(...)</h3>
@@ -62,7 +62,7 @@ let sym3 = Symbol('foo')
 <p>The following syntax with the {{jsxref("Operators/new", "new")}} operator will throw a
   {{jsxref("TypeError")}}:</p>
 
-<pre class="brush: js notranslate">let sym = new Symbol()  // TypeError
+<pre class="brush: js">let sym = new Symbol()  // TypeError
 </pre>
 
 <p>This prevents authors from creating an explicit <code>Symbol</code> wrapper object
@@ -73,7 +73,7 @@ let sym3 = Symbol('foo')
 <p>If you really want to create a <code>Symbol</code> wrapper object, you can use the
   <code>Object()</code> function:</p>
 
-<pre class="brush: js notranslate">let sym    = Symbol('foo');
+<pre class="brush: js">let sym    = Symbol('foo');
 let symObj = Object(sym);
 typeof sym    // =&gt; "symbol"
 typeof symObj // =&gt; "object"
