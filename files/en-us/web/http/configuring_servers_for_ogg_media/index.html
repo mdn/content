@@ -41,7 +41,7 @@ AddType application/ogg .ogg
 
 <p>When the browser seeks through Ogg media to a specified time, it has to seek to the nearest key frame before the seek target, then download and decode the video from there until the requested target time. The farther apart your key frames are, the longer this takes, so it's helpful to include key frames at regular intervals.</p>
 
-<p>By default, <a class="external" href="http://v2v.cc/~j/ffmpeg2theora/"><code>ffmpeg2theora</code></a> uses one key frame every 64 frames (or about every 2 seconds at 30 frames per second), which works pretty well.</p>
+<p>By default, <a href="http://v2v.cc/~j/ffmpeg2theora/"><code>ffmpeg2theora</code></a> uses one key frame every 64 frames (or about every 2 seconds at 30 frames per second), which works pretty well.</p>
 
 <div class="note"><strong>Note:</strong> Of course, the more key frames you use, the larger your video file is, so you may need to experiment a bit to get the right balance between file size and seek performance.</div>
 
@@ -74,7 +74,7 @@ AddType application/ogg .ogg
 
 <h3 id="Don't_use_HTTP_compression_for_media_files">Don't use HTTP compression for media files</h3>
 
-<p>One common way to reduce the load on a web server is to use <a class="external" href="http://betterexplained.com/articles/how-to-optimize-your-site-with-gzip-compression/">gzip or deflate compression</a> when serving to a supporting web browser.</p>
+<p>One common way to reduce the load on a web server is to use <a href="http://betterexplained.com/articles/how-to-optimize-your-site-with-gzip-compression/">gzip or deflate compression</a> when serving to a supporting web browser.</p>
 
 <p>Although it's unlikely, it's possible the browser may advertise that it supports HTTP compression (gzip/deflate) using the <code>Accept-Encoding: gzip,deflate</code> header when requesting media files. Your server should be configured to not do so. The data in media files is already compressed, so you won't get any real benefit from compression, and the use of compression makes it impossible for the browser to properly seek the video or determine its duration.</p>
 
@@ -82,7 +82,7 @@ AddType application/ogg .ogg
 
 <h3 id="Getting_the_duration_of_Ogg_media">Getting the duration of Ogg media</h3>
 
-<p>You can use the <code>oggz-info</code> tool to get the media duration; this tool is included with the <a class="external" href="http://www.xiph.org/oggz/"><code>oggz-tools</code></a> package. The output from <code>oggz-info</code> looks like this:</p>
+<p>You can use the <code>oggz-info</code> tool to get the media duration; this tool is included with the <a href="http://www.xiph.org/oggz/"><code>oggz-tools</code></a> package. The output from <code>oggz-info</code> looks like this:</p>
 
 <pre> $ oggz-info /g/media/bruce_vs_ironman.ogv
  Content-Duration: 00:01:00.046

@@ -437,7 +437,7 @@ serializer;</strong> // Standard version
 <p><strong>Note:</strong> the value pairs to iterate over can be defined in two different ways:</p>
 
 <ol>
- <li>Outside the webidl file, in the prose accompanying it. Such a prose is in the spec and usually starts with: <em>"The <a class="external" href="https://heycam.github.io/webidl/#dfn-values-to-iterate-over">values to iterate over</a>…"</em>.</li>
+ <li>Outside the webidl file, in the prose accompanying it. Such a prose is in the spec and usually starts with: <em>"The <a href="https://heycam.github.io/webidl/#dfn-values-to-iterate-over">values to iterate over</a>…"</em>.</li>
  <li>In the webidl file, implicitly, if the interface supports indexed properties, that is when the interface has a <code>getter</code> methods with a parameter of type <code>unsigned long</code>.</li>
 </ol>
 </div>
@@ -458,8 +458,8 @@ serializer;</strong> // Standard version
 <p>Such an iterator allows to use the syntax <code>for (var p in object)</code> as a shorthand of <code>for (var p in object.entries())</code>. We add a sentence about it in the interface description. E.g. {{domxref('FormData')}}.</p>
 
 <div class="note notecard">
-<p><strong>Note:</strong> the value pairs to iterate over are <em>not</em> defined in the webidl file, but in the prose accompanying it. Such a prose is in the spec and usually starts with: <em>"The <a class="external" href="https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over">value pairs to iterate over</a>…"</em><br>
- E.g, for {{domxref('FormData')}} you find in the spec: <em>"The <a class="external" href="https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over">value pairs to iterate over</a> are the <a href="https://xhr.spec.whatwg.org/#concept-formdata-entry" title="concept-FormData-entry">entries</a> with the key being the <a href="https://xhr.spec.whatwg.org/#concept-formdata-entry-name" title="concept-FormData-entry-name">name</a> and the value the <a href="https://xhr.spec.whatwg.org/#concept-formdata-entry-value" title="concept-FormData-entry-value">value</a>. "</em></p>
+<p><strong>Note:</strong> the value pairs to iterate over are <em>not</em> defined in the webidl file, but in the prose accompanying it. Such a prose is in the spec and usually starts with: <em>"The <a href="https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over">value pairs to iterate over</a>…"</em><br>
+ E.g, for {{domxref('FormData')}} you find in the spec: <em>"The <a href="https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over">value pairs to iterate over</a> are the <a href="https://xhr.spec.whatwg.org/#concept-formdata-entry" title="concept-FormData-entry">entries</a> with the key being the <a href="https://xhr.spec.whatwg.org/#concept-formdata-entry-name" title="concept-FormData-entry-name">name</a> and the value the <a href="https://xhr.spec.whatwg.org/#concept-formdata-entry-value" title="concept-FormData-entry-value">value</a>. "</em></p>
 </div>
 
 <h3 id="Set-like_methods">Set-like methods</h3>
