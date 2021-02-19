@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:js notranslate">var removing = browser.sessions.removeWindowValue(
+<pre class="brush:js">var removing = browser.sessions.removeWindowValue(
   windowId,    // integer
   key          // string
 )
@@ -48,7 +48,7 @@ tags:
 
 <p>This code adds two context menu items: one stores a value associated with the current window, the other one removes it:</p>
 
-<pre class="notranslate brush: js">async function setOnActiveWindow() {
+<pre class="brush: js">async function setOnActiveWindow() {
   let currentWindow = await browser.windows.getLastFocused();
   await browser.sessions.setWindowValue(currentWindow.id, "my-key", "my-value");
 }

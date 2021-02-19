@@ -22,7 +22,7 @@ tags:
 
 <p>Before you can look at your service worker in action in the <em>Applications</em> panel, you need to successfully register it. Registration is done with a block of code along these lines, using the <code><a href="/en-US/docs/Web/API/ServiceWorkerContainer/register">register()</a></code> method:</p>
 
-<pre class="brush: js notranslate">if('serviceWorker' in navigator) {
+<pre class="brush: js">if('serviceWorker' in navigator) {
   navigator.serviceWorker
            .register('sw.js')
            .then(function() { console.log('Service Worker Registered'); });

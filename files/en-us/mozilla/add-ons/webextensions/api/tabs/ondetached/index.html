@@ -70,7 +70,7 @@ browser.tabs.onDetached.hasListener(listener)
 
 <p>Listen for detach events, and log the info:</p>
 
-<pre class="notranslate brush: js">function handleDetached(tabId, detachInfo) {
+<pre class="brush: js">function handleDetached(tabId, detachInfo) {
   console.log("Tab: " + tabId + " moved");
   console.log("Old window: " + detachInfo.oldWindowId);
   console.log("Old index: " + detachInfo.oldPosition);

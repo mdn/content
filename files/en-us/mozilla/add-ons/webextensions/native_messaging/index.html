@@ -42,7 +42,7 @@ tags:
 
 <p>Example <code>manifest.json</code> file:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
 
   "description": "Native messaging example add-on",
   "manifest_version": 2,
@@ -85,7 +85,7 @@ tags:
 
 <p>For example, here's a manifest for the <code>"ping_pong"</code> native application:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "name": "ping_pong",
   "description": "Example host for native messaging",
   "path": "/path/to/native-messaging/app/ping_pong.py",
@@ -107,7 +107,7 @@ tags:
 
 <p>In the example above, the native application is a Python script. It can be difficult to get Windows to run Python scripts reliably in this way, so an alternative is to provide a <code>.bat</code> file, and link to that from the application's manifest:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "name": "ping_pong",
   "description": "Example host for native messaging",
   "path": "c:\\path\\to\\native-messaging\\app\\ping_pong_win.bat",
@@ -119,7 +119,7 @@ tags:
 
 <p>The batch file then invokes the Python script:</p>
 
-<pre class="brush: bash notranslate">@echo off
+<pre class="brush: bash">@echo off
 
 python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"</pre>
 
@@ -183,7 +183,7 @@ python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"</pre>
 
 <p>Here's an example background script that establishes a connection with the <code>"ping_pong"</code> app, listens for messages from it, then sends it a <code>"ping"</code> message whenever the user clicks the browser action:</p>
 
-<pre class="notranslate brush: js">/*
+<pre class="brush: js">/*
 On startup, connect to the "ping_pong" app.
 */
 var port = browser.runtime.connectNative("ping_pong");
@@ -224,7 +224,7 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <p>Here's the example above, rewritten to use <code>runtime.sendNativeMessage()</code>:</p>
 
-<pre class="notranslate brush: js">function onResponse(response) {
+<pre class="brush: js">function onResponse(response) {
   console.log("Received " + response);
 }
 
@@ -254,7 +254,7 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <p>You can quickly get started sending and receiving messages with this NodeJS code:</p>
 
-<pre class="notranslate brush: js">#!/usr/local/bin/node
+<pre class="brush: js">#!/usr/local/bin/node
 
 (() =&gt; {
 
@@ -320,7 +320,7 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <p>This is the Python 2 version:</p>
 
-<pre class="brush: python notranslate">#!/usr/bin/python -u
+<pre class="brush: python">#!/usr/bin/python -u
 
 # Note that running python with the `-u` flag is required on Windows,
 # in order to ensure that stdin and stdout are opened in binary, rather
@@ -358,7 +358,7 @@ while True:
 
 <p>In Python 3, the received binary data must be decoded into a string. The content to be sent back to the addon must be encoded into binary data using a struct:</p>
 
-<pre class="brush: python notranslate">#!/usr/bin/python -u
+<pre class="brush: python">#!/usr/bin/python -u
 
 # Note that running python with the `-u` flag is required on Windows,
 # in order to ensure that stdin and stdout are opened in binary, rather
@@ -413,7 +413,7 @@ while True:
 
 <p>If you haven't managed to run the application, you should see an error message giving you a clue about the problem.</p>
 
-<pre class="notranslate">"No such native application &lt;name&gt;"</pre>
+<pre>"No such native application &lt;name&gt;"</pre>
 
 <ul>
  <li>Check that the name passed to <code>runtime.connectNative()</code> matches the name in the app manifest</li>
@@ -423,19 +423,19 @@ while True:
  <li>Windows: check that the path given in the registry key points to the app manifest.</li>
 </ul>
 
-<pre class="notranslate">"Error: Invalid application &lt;name&gt;"</pre>
+<pre>"Error: Invalid application &lt;name&gt;"</pre>
 
 <ul>
  <li>Check that the application's name contains no invalid characters.</li>
 </ul>
 
-<pre class="notranslate">"'python' is not recognized as an internal or external command, ..."</pre>
+<pre>"'python' is not recognized as an internal or external command, ..."</pre>
 
 <ul>
  <li>Windows: if your application is a Python script, check that you have Python installed and have your path set up for it.</li>
 </ul>
 
-<pre class="notranslate">"File at path &lt;path&gt; does not exist, or is not executable"</pre>
+<pre>"File at path &lt;path&gt; does not exist, or is not executable"</pre>
 
 <ul>
  <li>If you see this, then the app manifest has been found successfully.</li>
@@ -445,19 +445,19 @@ while True:
  <li>Check that the app is executable.</li>
 </ul>
 
-<pre class="notranslate">"This extension does not have permission to use native application &lt;name&gt;"</pre>
+<pre>"This extension does not have permission to use native application &lt;name&gt;"</pre>
 
 <ul>
  <li>Check that the <code>"allowed_extensions"</code> key in the app manifest contains the add-on's ID.</li>
 </ul>
 
-<pre class="notranslate">"TypeError: browser.runtime.connectNative is not a function"</pre>
+<pre>"TypeError: browser.runtime.connectNative is not a function"</pre>
 
 <ul>
  <li>Check that the extension has the <code>"nativeMessaging"</code> permission</li>
 </ul>
 
-<pre class="notranslate">"[object Object]       NativeMessaging.jsm:218"</pre>
+<pre>"[object Object]       NativeMessaging.jsm:218"</pre>
 
 <ul>
  <li>There was a problem starting the application.</li>

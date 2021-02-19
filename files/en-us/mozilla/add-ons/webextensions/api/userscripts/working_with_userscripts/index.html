@@ -50,7 +50,7 @@ tags:
 
 <p>Before a userScript can be executed, it must be registered using the <code>userScripts.register()</code> method. Here is the code to register the example extension:</p>
 
-<pre class="notranslate brush: js">async function registerScript() {
+<pre class="brush: js">async function registerScript() {
   const params = {
     hosts: stringToArray(hostsInput.value),
     code: codeInput.value,

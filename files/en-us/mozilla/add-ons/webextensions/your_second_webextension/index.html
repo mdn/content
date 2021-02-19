@@ -215,7 +215,7 @@ touch choose_beast.html choose_beast.css choose_beast.js
 
 <p>Here's the JavaScript for the popup:</p>
 
-<pre class="notranslate brush: js">/**
+<pre class="brush: js">/**
  * CSS to hide everything on the page,
  * except for elements that have the "beastify-image" class.
  */
@@ -346,7 +346,7 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
 
 <p>Create a new directory, under the extension root, called "content_scripts" and create a new file in it called "beastify.js", with the following contents:</p>
 
-<pre class="notranslate brush: js">(function() {
+<pre class="brush: js">(function() {
   /**
    * Check and set a global guard variable.
    * If this content script is injected into the same page again,

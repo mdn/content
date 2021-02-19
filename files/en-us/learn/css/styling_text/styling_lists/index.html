@@ -36,7 +36,7 @@ tags:
 
 <p>The HTML for our list example looks like so:</p>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Shopping (unordered) list&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Shopping (unordered) list&lt;/h2&gt;
 
 &lt;p&gt;Paragraph for reference, paragraph for reference, paragraph for reference,
 paragraph for reference, paragraph for reference, paragraph for reference.&lt;/p&gt;
@@ -92,7 +92,7 @@ paragraph for reference, paragraph for reference, paragraph for reference.&lt;/p
 
 <p>The CSS used for the text styling and spacing is as follows:</p>
 
-<pre class="brush: css notranslate">/* General styles */
+<pre class="brush: css">/* General styles */
 
 html {
   font-family: Helvetica, Arial, sans-serif;
@@ -143,7 +143,7 @@ dt {
 
 <p>As mentioned above, the {{cssxref("list-style-type")}} property allows you to set what type of bullet to use for the bullet points. In our example, we've set the ordered list to use uppercase roman numerals, with:</p>
 
-<pre class="brush: css notranslate">ol {
+<pre class="brush: css">ol {
   list-style-type: upper-roman;
 }</pre>
 
@@ -159,7 +159,7 @@ dt {
 
 <p>If you set the value to <code>inside</code>, the bullets will sit inside the lines:</p>
 
-<pre class="brush: css notranslate">ol {
+<pre class="brush: css">ol {
   list-style-type: upper-roman;
   list-style-position: inside;
 }</pre>
@@ -170,7 +170,7 @@ dt {
 
 <p>The {{cssxref("list-style-image")}} property allows you to use a custom image for your bullet. The syntax is pretty simple:</p>
 
-<pre class="brush: css notranslate">ul {
+<pre class="brush: css">ul {
   list-style-image: url(star.svg);
 }</pre>
 
@@ -178,7 +178,7 @@ dt {
 
 <p>In our finished example, we have styled the unordered list like so (on top of what you've already seen above):</p>
 
-<pre class="brush: css notranslate">ul {
+<pre class="brush: css">ul {
   padding-left: 2rem;
   list-style-type: none;
 }
@@ -214,7 +214,7 @@ ul li {
 
 <p>The three properties mentioned above can all be set using a single shorthand property, {{cssxref("list-style")}}. For example, the following CSS:</p>
 
-<pre class="brush: css notranslate">ul {
+<pre class="brush: css">ul {
   list-style-type: square;
   list-style-image: url(example.png);
   list-style-position: inside;
@@ -222,7 +222,7 @@ ul li {
 
 <p>Could be replaced by this:</p>
 
-<pre class="brush: css notranslate">ul {
+<pre class="brush: css">ul {
   list-style: square url(example.png) inside;
 }</pre>
 
@@ -236,7 +236,7 @@ ul li {
 
 <p>The {{htmlattrxref("start","ol")}} attribute allows you to start the list counting from a number other than 1. The following example:</p>
 
-<pre class="brush: html notranslate">&lt;ol start="4"&gt;
+<pre class="brush: html">&lt;ol start="4"&gt;
   &lt;li&gt;Toast pita, leave to cool, then slice down the edge.&lt;/li&gt;
   &lt;li&gt;Fry the halloumi in a shallow, non-stick pan, until browned on both sides.&lt;/li&gt;
   &lt;li&gt;Wash and chop the salad.&lt;/li&gt;
@@ -251,7 +251,7 @@ ul li {
 
 <p>The {{htmlattrxref("reversed","ol")}} attribute will start the list counting down instead of up. The following example:</p>
 
-<pre class="brush: html notranslate">&lt;ol start="4" reversed&gt;
+<pre class="brush: html">&lt;ol start="4" reversed&gt;
   &lt;li&gt;Toast pita, leave to cool, then slice down the edge.&lt;/li&gt;
   &lt;li&gt;Fry the halloumi in a shallow, non-stick pan, until browned on both sides.&lt;/li&gt;
   &lt;li&gt;Wash and chop the salad.&lt;/li&gt;
@@ -270,7 +270,7 @@ ul li {
 
 <p>The {{htmlattrxref("value","ol")}} attribute allows you to set your list items to specific numerical values. The following example:</p>
 
-<pre class="brush: html notranslate">&lt;ol&gt;
+<pre class="brush: html">&lt;ol&gt;
   &lt;li value="2"&gt;Toast pita, leave to cool, then slice down the edge.&lt;/li&gt;
   &lt;li value="4"&gt;Fry the halloumi in a shallow, non-stick pan, until browned on both sides.&lt;/li&gt;
   &lt;li value="6"&gt;Wash and chop the salad.&lt;/li&gt;
@@ -301,7 +301,7 @@ ul li {
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
+<pre class="brush: html">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
   &lt;h2&gt;HTML Input&lt;/h2&gt;
   &lt;textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"&gt;&lt;ul&gt;
   &lt;li&gt;First, light the candle.&lt;/li&gt;
@@ -327,7 +327,7 @@ ul li {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js notranslate">var htmlInput = document.querySelector(".html-input");
+<pre class="brush: js">var htmlInput = document.querySelector(".html-input");
 var cssInput = document.querySelector(".css-input");
 var reset = document.getElementById("reset");
 var htmlCode = htmlInput.value;

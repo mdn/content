@@ -45,11 +45,11 @@ tags:
 
 <p>So for example, if your image is called <code>dinosaur.jpg</code>, and it sits in the same directory as your HTML page, you could embed the image like so:</p>
 
-<pre class="brush: html notranslate">&lt;img src="dinosaur.jpg"&gt;</pre>
+<pre class="brush: html">&lt;img src="dinosaur.jpg"&gt;</pre>
 
 <p>If the image was in an <code>images</code> subdirectory, which was inside the same directory as the HTML page (which Google <a href="https://support.google.com/webmasters/answer/114016">recommends</a> for {{glossary("SEO")}}/indexing purposes), then you'd embed it like this:</p>
 
-<pre class="brush: html notranslate">&lt;img src="images/dinosaur.jpg"&gt;</pre>
+<pre class="brush: html">&lt;img src="images/dinosaur.jpg"&gt;</pre>
 
 <p>And so on.</p>
 
@@ -59,7 +59,7 @@ tags:
 
 <p>You could embed the image using its absolute URL, for example:</p>
 
-<pre class="brush: html notranslate">&lt;img src="https://www.example.com/images/dinosaur.jpg"&gt;</pre>
+<pre class="brush: html">&lt;img src="https://www.example.com/images/dinosaur.jpg"&gt;</pre>
 
 <p>But this is pointless, as it just makes the browser do more work, looking up the IP address from the DNS server all over again, etc. You'll almost always keep the images for your website on the same server as your HTML.</p>
 
@@ -92,7 +92,7 @@ tags:
 
 <p>The next attribute we'll look at is <code>alt</code>. Its value is supposed to be a textual description of the image, for use in situations where the image cannot be seen/displayed or takes a long time to render because of a slow internet connection. For example, our above code could be modified like so:</p>
 
-<pre class="brush: html notranslate">&lt;img src="images/dinosaur.jpg"
+<pre class="brush: html">&lt;img src="images/dinosaur.jpg"
      alt="The head and torso of a dinosaur skeleton;
           it has a large head with long sharp teeth"&gt;</pre>
 
@@ -129,7 +129,7 @@ tags:
 
 <p>You can use the <code>width</code> and <code>height</code> attributes to specify the width and height of your image. You can find your image's width and height in a number of ways. For example on the Mac you can use <kbd>Cmd</kbd> + <kbd>I</kbd> to get the info display up for the image file. Returning to our example, we could do this:</p>
 
-<pre class="brush: html notranslate">&lt;img src="images/dinosaur.jpg"
+<pre class="brush: html">&lt;img src="images/dinosaur.jpg"
      alt="The head and torso of a dinosaur skeleton;
           it has a large head with long sharp teeth"
      width="400"
@@ -151,7 +151,7 @@ tags:
 
 <p>As <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#adding_supporting_information_with_%3ctitle%3e">with links</a>, you can also add <code>title</code> attributes to images, to provide further supporting information if needed. In our example, we could do this:</p>
 
-<pre class="brush: html notranslate">&lt;img src="images/dinosaur.jpg"
+<pre class="brush: html">&lt;img src="images/dinosaur.jpg"
      alt="The head and torso of a dinosaur skeleton;
           it has a large head with long sharp teeth"
      width="400"
@@ -187,7 +187,7 @@ tags:
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -204,7 +204,7 @@ tags:
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -224,7 +224,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -309,7 +309,7 @@ textarea.onkeyup = function(){
 
 <p>Speaking of captions, there are a number of ways that you could add a caption to go with your image. For example, there would be nothing to stop you from doing this:</p>
 
-<pre class="brush: html notranslate">&lt;div class="figure"&gt;
+<pre class="brush: html">&lt;div class="figure"&gt;
   &lt;img src="images/dinosaur.jpg"
        alt="The head and torso of a dinosaur skeleton;
             it has a large head with long sharp teeth"
@@ -323,7 +323,7 @@ textarea.onkeyup = function(){
 
 <p>A better solution, is to use the HTML5 {{htmlelement("figure")}} and {{htmlelement("figcaption")}} elements. These are created for exactly this purpose: to provide a semantic container for figures, and to clearly link the figure to the caption. Our above example could be rewritten like this:</p>
 
-<pre class="notranslate">&lt;figure&gt;
+<pre>&lt;figure&gt;
   &lt;img src="images/dinosaur.jpg"
        alt="The head and torso of a dinosaur skeleton;
             it has a large head with long sharp teeth"
@@ -363,7 +363,7 @@ textarea.onkeyup = function(){
 <div class="hidden">
 <h6 id="Playable_code_2">Playable code 2</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -379,7 +379,7 @@ textarea.onkeyup = function(){
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -399,7 +399,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -484,7 +484,7 @@ textarea.onkeyup = function(){
 
 <p>You can also use CSS to embed images into webpages (and JavaScript, but that's another story entirely). The CSS {{cssxref("background-image")}} property, and the other <code>background-*</code> properties, are used to control background image placement. For example, to place a background image on every paragraph on a page, you could do this:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   background-image: url("images/dinosaur.jpg");
 }</pre>
 

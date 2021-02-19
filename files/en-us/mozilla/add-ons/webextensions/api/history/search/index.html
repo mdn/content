@@ -63,7 +63,7 @@ tags:
 
 <p>Logs the URL and last visit time for all history items visited in the last 24 hours:</p>
 
-<pre class="notranslate brush: js">function onGot(historyItems) {
+<pre class="brush: js">function onGot(historyItems) {
   for (item of historyItems) {
     console.log(item.url);
     console.log(new Date(item.lastVisitTime));
@@ -76,7 +76,7 @@ searching.then(onGot);</pre>
 
 <p>Logs the URL and last visit time for all history items ever visited:</p>
 
-<pre class="notranslate brush: js">function onGot(historyItems) {
+<pre class="brush: js">function onGot(historyItems) {
   for (item of historyItems) {
     console.log(item.url);
     console.log(new Date(item.lastVisitTime));
@@ -92,7 +92,7 @@ searching.then(onGot);</pre>
 
 <p>Logs the URL and last visit time of the most recent visit to a page that contain the string "mozilla":</p>
 
-<pre class="notranslate brush: js">function onGot(historyItems) {
+<pre class="brush: js">function onGot(historyItems) {
   for (item of historyItems) {
     console.log(item.url);
     console.log(new Date(item.lastVisitTime));

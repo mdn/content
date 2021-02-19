@@ -52,7 +52,7 @@ tags:
 
 <p>Log the URLs for the tabs across all "normal" browser windows. Note that you'll need the "tabs" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> or matching <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> to access tab URLs.</p>
 
-<pre class="notranslate brush: js">function logTabsForWindows(windowInfoArray) {
+<pre class="brush: js">function logTabsForWindows(windowInfoArray) {
   for (windowInfo of windowInfoArray) {
     console.log(`Window: ${windowInfo.id}`);
     console.log(windowInfo.tabs.map(tab =&gt; tab.url));

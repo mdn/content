@@ -64,7 +64,7 @@ browser.history.onVisited.hasListener(listener)
 
 <p>Listen for visits, and log the URL and visit time.</p>
 
-<pre class="notranslate brush: js">function onVisited(historyItem) {
+<pre class="brush: js">function onVisited(historyItem) {
   console.log(historyItem.url);
   console.log(new Date(historyItem.lastVisitTime));
 }

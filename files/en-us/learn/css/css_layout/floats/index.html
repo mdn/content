@@ -48,7 +48,7 @@ tags:
 
 <p>First, we'll start off with some simple HTML — add the following to your HTML body, removing anything that was inside there before:</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Simple float example&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Simple float example&lt;/h1&gt;
 
 &lt;div class="box"&gt;Float&lt;/div&gt;
 
@@ -60,7 +60,7 @@ tags:
 
 <p>Now apply the following CSS to your HTML (using a {{htmlelement("style")}} element or a {{htmlelement("link")}} to a separate <code>.css</code> file — your choice):</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
@@ -77,7 +77,7 @@ tags:
 
 <p>If you save and refresh now, you'll see something much like what you'd expect — the box is sitting above the text, in normal flow. To float the text around it add the {{cssxref("float")}} and {{cssxref("margin-right")}} properties to the <code>.box</code> rule:</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   float: left;
   margin-right: 15px;
   width: 150px;
@@ -93,7 +93,7 @@ tags:
 <div class="hidden">
 <h6 id="Float_Example_1">Float Example 1</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Simple float example&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Simple float example&lt;/h1&gt;
 
 &lt;div class="box"&gt;Float&lt;/div&gt;
 
@@ -104,7 +104,7 @@ tags:
 &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
 </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
@@ -134,7 +134,7 @@ tags:
 
 <p>Add a class of <code>special</code> to the first paragraph of text, the one immediately following the floated box, then in your CSS add the following rules. These will give our following paragraph a background color.</p>
 
-<pre class="brush: css notranslate">.special {
+<pre class="brush: css">.special {
   background-color: rgb(79,185,227);
   padding: 10px;
   color: #fff;
@@ -147,7 +147,7 @@ tags:
 <div class="hidden">
 <h6 id="Float_Example_2">Float Example 2</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Simple float example&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Simple float example&lt;/h1&gt;
 
 &lt;div class="box"&gt;Float&lt;/div&gt;
 
@@ -157,7 +157,7 @@ tags:
 
 &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;    </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
@@ -193,7 +193,7 @@ tags:
 
 <p>In your HTML from the previous example, add a class of <code>cleared</code> to the second paragraph below the floated item. Then add the following to your CSS:</p>
 
-<pre class="brush: css notranslate">.cleared {
+<pre class="brush: css">.cleared {
   clear: left;
 }
 </pre>
@@ -202,7 +202,7 @@ tags:
 <div class="hidden">
 <h6 id="Float_Example_3">Float Example 3</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Simple float example&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Simple float example&lt;/h1&gt;
 
 &lt;div class="box"&gt;Float&lt;/div&gt;
 
@@ -213,7 +213,7 @@ tags:
 &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
     </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
@@ -257,7 +257,7 @@ tags:
 
 <p>You now know how to clear something following a floated element, but let's see what happens if you have a tall float and a short paragraph, with a box wrapped around both elements. Change your document so that the first paragraph and our floated box are wrapped with a {{htmlelement("div")}} with a class of <code>wrapper</code>.</p>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box"&gt;Float&lt;/div&gt;
 
   &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate.&lt;/p&gt;
@@ -266,7 +266,7 @@ tags:
 
 <p>In your CSS, add the following rule for the <code>.wrapper</code> class and then reload the page:</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   background-color: rgb(79,185,227);
   padding: 10px;
   color: #fff;
@@ -274,7 +274,7 @@ tags:
 
 <p>In addition, remove the original <code>.cleared</code> class:</p>
 
-<pre class="brush: css notranslate" id="ct-0">.cleared {
+<pre class="brush: css" id="ct-0">.cleared {
     clear: left;
 }</pre>
 
@@ -284,7 +284,7 @@ tags:
 <div class="hidden">
 <h6 id="Float_Example_4">Float Example 4</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Simple float example&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Simple float example&lt;/h1&gt;
 &lt;div class="wrapper"&gt;
   &lt;div class="box"&gt;Float&lt;/div&gt;
 
@@ -295,7 +295,7 @@ tags:
 
 &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;    </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
@@ -331,7 +331,7 @@ tags:
 
 <p>Add the following CSS to our example:</p>
 
-<pre class="brush: css notranslate">.wrapper::after {
+<pre class="brush: css">.wrapper::after {
   content: "";
   clear: both;
   display: block;
@@ -343,7 +343,7 @@ tags:
 <div class="hidden">
 <h6 id="Float_Example_5">Float Example 5</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Simple float example&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Simple float example&lt;/h1&gt;
 &lt;div class="wrapper"&gt;
   &lt;div class="box"&gt;Float&lt;/div&gt;
 
@@ -353,7 +353,7 @@ tags:
 
 &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;      </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
@@ -393,7 +393,7 @@ tags:
 
 <p>Remove the clearfix CSS you added in the last section, and instead add <code>overflow: auto</code> to the rules for wrapper. Once again, the box should clear.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   background-color: rgb(79,185,227);
   padding: 10px;
   color: #fff;
@@ -404,7 +404,7 @@ tags:
 <div class="hidden">
 <h6 id="Float_Example_6">Float Example 6</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Simple float example&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Simple float example&lt;/h1&gt;
 &lt;div class="wrapper"&gt;
   &lt;div class="box"&gt;Float&lt;/div&gt;
 
@@ -414,7 +414,7 @@ tags:
 
 &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;    </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
@@ -449,7 +449,7 @@ tags:
 
 <p>The modern way of solving this problem is to use the value <code>flow-root</code> of the <code>display</code> property. This exists only to create a BFC without using hacks — there will be no unintended consequences when you use it. Remove <code>overflow: auto</code> from your <code>.wrapper</code> rule and add <code>display: flow-root</code>. Assuming you have a <a href="/en-US/docs/Web/CSS/display#browser_compatibility">supporting browser</a>, the box will clear.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   background-color: rgb(79,185,227);
   padding: 10px;
   color: #fff;
@@ -460,7 +460,7 @@ tags:
 <div class="hidden">
 <h6 id="Float_Example_7">Float Example 7</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Simple float example&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Simple float example&lt;/h1&gt;
 &lt;div class="wrapper"&gt;
   &lt;div class="box"&gt;Float&lt;/div&gt;
 
@@ -470,7 +470,7 @@ tags:
 
 &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;    </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;

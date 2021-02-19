@@ -54,7 +54,7 @@ tags:
 
 <p>In {{glossary("pseudocode")}}, this would look something like the following:</p>
 
-<pre class="notranslate">loop(food = 0; foodNeeded = 10) {
+<pre>loop(food = 0; foodNeeded = 10) {
   if (food &gt;= foodNeeded) {
     exit loop;
     // We have enough food; let's go home
@@ -77,7 +77,7 @@ tags:
 <div class="hidden">
 <h6 id="Hidden_code">Hidden code</h6>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -147,7 +147,7 @@ tags:
 
 <p>You don't have to understand all the code for now, but let's look at the part of the code that actually draws the 100 circles:</p>
 
-<pre class="brush: js notranslate">for (let i = 0; i &lt; 100; i++) {
+<pre class="brush: js">for (let i = 0; i &lt; 100; i++) {
   ctx.beginPath();
   ctx.fillStyle = 'rgba(255,0,0,0.5)';
   ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
@@ -163,7 +163,7 @@ tags:
 
 <p>If we weren't using a loop here, we'd have to repeat the following code for every circle we wanted to draw:</p>
 
-<pre class="brush: js notranslate">ctx.beginPath();
+<pre class="brush: js">ctx.beginPath();
 ctx.fillStyle = 'rgba(255,0,0,0.5)';
 ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
 ctx.fill();</pre>
@@ -174,7 +174,7 @@ ctx.fill();</pre>
 
 <p>Let's start exploring some specific loop constructs. The first, which you'll use most of the time, is the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a> loop. This has the following syntax:</p>
 
-<pre class="notranslate">for (initializer; condition; final-expression) {
+<pre>for (initializer; condition; final-expression) {
   // code to run
 }</pre>
 
@@ -194,7 +194,7 @@ ctx.fill();</pre>
 
 <p>Let's look at a real example so we can visualize what these do more clearly.</p>
 
-<pre class="brush: js notranslate">const cats = ['Bill', 'Jeff', 'Pete', 'Biggles', 'Jasmin'];
+<pre class="brush: js">const cats = ['Bill', 'Jeff', 'Pete', 'Biggles', 'Jasmin'];
 let info = 'My cats are called ';
 const para = document.querySelector('p');
 
@@ -209,7 +209,7 @@ para.textContent = info;</pre>
 <div class="hidden">
 <h6 id="Hidden_code_2">Hidden code 2</h6>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -276,7 +276,7 @@ para.textContent = info;</pre>
 
 <p>Ideally, we want to change the concatenation on the final loop iteration so that we haven't got a comma on the end of the sentence. Well, no problem — we can quite happily insert a conditional inside our for loop to handle this special case:</p>
 
-<pre class="brush: js notranslate">for (let i = 0; i &lt; cats.length; i++) {
+<pre class="brush: js">for (let i = 0; i &lt; cats.length; i++) {
   if (i === cats.length - 1) {
     info += 'and ' + cats[i] + '.';
   } else {
@@ -300,7 +300,7 @@ para.textContent = info;</pre>
 
 <p>Say we wanted to search through an array of contacts and telephone numbers and return just the number we wanted to find? First, some simple HTML — a text {{htmlelement("input")}} allowing us to enter a name to search for, a {{htmlelement("button")}} element to submit a search, and a {{htmlelement("p")}} element to display the results in:</p>
 
-<pre class="brush: html notranslate">&lt;label for="search"&gt;Search by contact name: &lt;/label&gt;
+<pre class="brush: html">&lt;label for="search"&gt;Search by contact name: &lt;/label&gt;
 &lt;input id="search" type="text"&gt;
 &lt;button&gt;Search&lt;/button&gt;
 
@@ -308,7 +308,7 @@ para.textContent = info;</pre>
 
 <p>Now on to the JavaScript:</p>
 
-<pre class="brush: js notranslate">const contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
+<pre class="brush: js">const contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
 const para = document.querySelector('p');
 const input = document.querySelector('input');
 const btn = document.querySelector('button');
@@ -331,7 +331,7 @@ btn.addEventListener('click', function() {
 <div class="hidden">
 <h6 id="Hidden_code_3">Hidden code 3</h6>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -401,7 +401,7 @@ btn.addEventListener('click', function() {
 
 <p>The HTML is basically the same as the last example — a simple text input, and a paragraph for output. The JavaScript is mostly the same too, although the loop itself is a bit different:</p>
 
-<pre class="brush: js notranslate">let num = input.value;
+<pre class="brush: js">let num = input.value;
 
 for (let i = 1; i &lt;= num; i++) {
   let sqRoot = Math.sqrt(i);
@@ -417,7 +417,7 @@ for (let i = 1; i &lt;= num; i++) {
 <div class="hidden">
 <h6 id="Hidden_code_4">Hidden code 4</h6>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -478,7 +478,7 @@ for (let i = 1; i &lt;= num; i++) {
 
 <p>First, let's have a look at the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/while">while</a> loop. This loop's syntax looks like so:</p>
 
-<pre class="notranslate">initializer
+<pre>initializer
 while (condition) {
   // code to run
 
@@ -491,7 +491,7 @@ while (condition) {
 
 <p>Let's have a look again at our cats list example, but rewritten to use a while loop:</p>
 
-<pre class="brush: js notranslate">let i = 0;
+<pre class="brush: js">let i = 0;
 
 while (i &lt; cats.length) {
   if (i === cats.length - 1) {
@@ -509,7 +509,7 @@ while (i &lt; cats.length) {
 
 <p>The <a href="/en-US/docs/Web/JavaScript/Reference/Statements/do...while">do...while</a> loop is very similar, but provides a variation on the while structure:</p>
 
-<pre class="notranslate">initializer
+<pre>initializer
 do {
   // code to run
 
@@ -522,7 +522,7 @@ do {
 
 <p>Let's rewrite our cat listing example again to use a <code>do...while</code> loop:</p>
 
-<pre class="brush: js notranslate">let i = 0;
+<pre class="brush: js">let i = 0;
 
 do {
   if (i === cats.length - 1) {
@@ -574,7 +574,7 @@ do {
 <div class="hidden">
 <h6 id="Active_learning">Active learning</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 &lt;div class="output" style="height: 410px;overflow: auto;"&gt;
 
 &lt;/div&gt;
@@ -600,7 +600,7 @@ output.innerHTML = '';
 
 <p class="brush: js"></p>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -622,7 +622,7 @@ body {
 
 <p class="brush: js"></p>
 
-<pre class="brush: js notranslate">const textarea = document.getElementById('code');
+<pre class="brush: js">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 let code = textarea.value;
@@ -735,7 +735,7 @@ textarea.onkeyup = function(){
 <div class="hidden">
 <h6 id="Active_learning_2">Active learning 2</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 &lt;div class="output" style="height: 100px;overflow: auto;"&gt;
   &lt;p class="admitted"&gt;Admit: &lt;/p&gt;
   &lt;p class="refused"&gt;Refuse: &lt;/p&gt;
@@ -764,7 +764,7 @@ refused.textContent = 'Refuse: '
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -784,7 +784,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">const textarea = document.getElementById('code');
+<pre class="brush: js">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 let code = textarea.value;
@@ -870,13 +870,13 @@ textarea.onkeyup = function(){
 
 <p>First <code>for</code>:</p>
 
-<pre class="notranslate">for (initializer; condition; final-expression) {
+<pre>for (initializer; condition; final-expression) {
   // code to run
 }</pre>
 
 <p><code>while</code>:</p>
 
-<pre class="notranslate">initializer
+<pre>initializer
 while (condition) {
   // code to run
 
@@ -885,7 +885,7 @@ while (condition) {
 
 <p>and finally <code>do...while</code>:</p>
 
-<pre class="notranslate">initializer
+<pre>initializer
 do {
   // code to run
 

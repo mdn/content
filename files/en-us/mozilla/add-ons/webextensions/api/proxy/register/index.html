@@ -37,7 +37,7 @@ tags:
 
 <p>To send a message to the PAC file, you must set the <code>toProxyScript</code> option:</p>
 
-<pre class="notranslate brush: js">// background.js
+<pre class="brush: js">// background.js
 
 // Log any messages from the proxy.
 browser.runtime.onMessage.addListener((message, sender) =&gt; {
@@ -54,7 +54,7 @@ let messageToProxy = {
 
 browser.runtime.sendMessage(messageToProxy, {toProxyScript: true});</pre>
 
-<pre class="notranslate brush: js">// pac.js
+<pre class="brush: js">// pac.js
 
 browser.runtime.onMessage.addListener((message) =&gt; {
   if (message.enabled) {
@@ -76,7 +76,7 @@ browser.runtime.onMessage.addListener((message) =&gt; {
 
 <p>For example:</p>
 
-<pre class="notranslate brush: js" id="ct-0">const proxySpecification = [
+<pre class="brush: js" id="ct-0">const proxySpecification = [
   {
     type: "socks",
     host: "foo.com",
@@ -105,12 +105,12 @@ browser.runtime.onMessage.addListener((message) =&gt; {
  <li>the <a href="/en-US/docs/Web/API/Console">console API</a> - to log messages from a PAC, send a message to the background script:</li>
 </ul>
 
-<pre class="notranslate brush: js">//  pac.js
+<pre class="brush: js">//  pac.js
 
 // send the log message to the background script
 browser.runtime.sendMessage(`Proxy-blocker: blocked ${url}`);</pre>
 
-<pre class="notranslate brush: js">// background-script.js
+<pre class="brush: js">// background-script.js
 
 function handleMessage(message, sender) {
   // only handle messages from the proxy script
@@ -142,7 +142,7 @@ browser.runtime.onMessage.addListener(handleMessage);</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="notranslate brush: js">const proxyScriptURL = "proxy/proxy-script.js";
+<pre class="brush: js">const proxyScriptURL = "proxy/proxy-script.js";
 
 browser.proxy.register(proxyScriptURL);</pre>
 

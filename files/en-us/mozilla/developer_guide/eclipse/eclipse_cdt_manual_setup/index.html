@@ -126,7 +126,7 @@ slug: Mozilla/Developer_guide/Eclipse/Eclipse_CDT_Manual_Setup
 <div class="warning">
 <p><strong>If the main object directory for your source tree is a Fennec build</strong>: In the "CDT GCC Build Output Parser", change the compiler command pattern to</p>
 
-<pre class="notranslate">(.*gcc)|(.*[gc]\+\+)|(clang)</pre>
+<pre>(.*gcc)|(.*[gc]\+\+)|(clang)</pre>
 
 <p>(before this change it should have been "(gcc)|([gc]\+\+)|(clang)"). This pattern is what CDT uses to identify compiler commands when parsing the build output. By default, it recognizes commands of the form "gcc", "g++", "c++", and "clang". This is fine for a desktop build, where the commands are in fact "gcc" and "g++". For Fennec builds, however, most of the commands are something like "arm-linux-androideabi-g++", which will not be recognized by the default regex. The modified regex accepts any command that ends with "gcc" or "g++". <strong>This may also affect other non-desktop builds besides Fennec.</strong></p>
 </div>

@@ -69,7 +69,7 @@ browser.browserAction.onClicked.hasListener(listener)
 
  <p>When the user clicks the icon, disable it for the active tab, and log the tab's URL:</p>
 
- <pre class="notranslate brush: js">browser.browserAction.onClicked.addListener((tab) =&gt; {
+ <pre class="brush: js">browser.browserAction.onClicked.addListener((tab) =&gt; {
   // disable the active tab
   browser.browserAction.disable(tab.id);
   // requires the "tabs" or "activeTab" permission, or host permissions for the URL

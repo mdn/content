@@ -59,7 +59,7 @@ tags:
 
 <p>Get the last focused window, and log the tabs it contains. Note that you'll need the "tabs" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> or matching <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> to access tab URLs.</p>
 
-<pre class="notranslate brush: js">function logTabs(windowInfo) {
+<pre class="brush: js">function logTabs(windowInfo) {
   for (tabInfo of windowInfo.tabs) {
     console.log(tabInfo.url);
   }

@@ -78,7 +78,7 @@ tags:
 
 <p>This example registers the <code>defaultCode</code> content script for all <code>.org</code> URLs:</p>
 
-<pre class="notranslate brush: js">const defaultHosts = "*://*.org/*";
+<pre class="brush: js">const defaultHosts = "*://*.org/*";
 const defaultCode = "document.body.innerHTML = '&lt;h1&gt;This page has been eaten&lt;h1&gt;'";
 
 async function register(hosts, code) {
@@ -95,7 +95,7 @@ var registered = register(defaultHosts, defaultCode);</pre>
 
 <p>This code registers the JS file at content_scripts/example.js:</p>
 
-<pre class="notranslate brush: js" id="ct-3">const scriptObj = await browser.contentScripts.register({
+<pre class="brush: js" id="ct-3">const scriptObj = await browser.contentScripts.register({
   "js": [{file: "/content_scripts/example.js"}],
   "matches": ["&lt;all_urls&gt;"],
   "allFrames": true,

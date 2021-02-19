@@ -23,7 +23,7 @@ tags:
 
 <p>This mechanism enables you to get a file from your website (or any location you can define as a URL) to the user’s computer. The key method is {{WebExtAPIRef("downloads.download()")}}, which in its simplest form accepts a URL and downloads the file from that URL to the user’s default downloads folder:</p>
 
-<pre class="notranslate brush: js">browser.downloads.download({url: "https://example.org/image.png"})</pre>
+<pre class="brush: js">browser.downloads.download({url: "https://example.org/image.png"})</pre>
 
 <p>You can let the user download to a location of their choice by specifying the <code><var>saveAs</var></code> parameter.</p>
 
@@ -88,7 +88,7 @@ tags:
 
 <h3 id="Creating_the_store_and_saving_the_images">Creating the store and saving the images</h3>
 
-<pre class="notranslate brush: js">async function saveCollectedBlobs(collectionName, collectedBlobs) {
+<pre class="brush: js">async function saveCollectedBlobs(collectionName, collectedBlobs) {
  const storedImages = await getFileStorage({name: "stored-images"});
 
  for (const item of collectedBlobs) {
@@ -104,7 +104,7 @@ tags:
 
 <h3 id="Retrieving_stored_images_for_display">Retrieving stored images for display</h3>
 
-<pre class="notranslate brush: js">export async function loadStoredImages(filter) {
+<pre class="brush: js">export async function loadStoredImages(filter) {
  const imagesStore = await getFileStorage({name: "stored-images"});
  let listOptions = filter ? {includes: filter} : undefined;
  const imagesList = await imagesStore.list(listOptions);
@@ -123,7 +123,7 @@ tags:
 
 <h3 id="Delete_collected_images">Delete collected images</h3>
 
-<pre class="notranslate brush: js">async function removeStoredImages(storedImages) {
+<pre class="brush: js">async function removeStoredImages(storedImages) {
  const imagesStore = await getFileStorage({name: "stored-images"});
  for (const storedImage of storedImages) {
     URL.revokeObjectURL(storedImage.blobUrl);

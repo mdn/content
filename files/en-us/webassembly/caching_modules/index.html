@@ -36,7 +36,7 @@ tags:
 
 <p>The function starts off by defining some necessary constants:</p>
 
-<pre class="brush: js notranslate">function instantiateCachedURL(dbVersion, url, importObject) {
+<pre class="brush: js">function instantiateCachedURL(dbVersion, url, importObject) {
   const dbName = 'wasm-cache';
   const storeName = 'wasm-cache';</pre>
 
@@ -44,7 +44,7 @@ tags:
 
 <p class="brush: js">The first helper function contained inside <code>instantiateCachedURL()</code> — <code>openDatabase()</code> — creates an object store for storing wasm modules, and also handles clearing out the database if the <code>dbVersion</code> is updated; it returns a promise resolving to the new database.</p>
 
-<pre class="brush: js notranslate">  function openDatabase() {
+<pre class="brush: js">  function openDatabase() {
     return new Promise((resolve, reject) =&gt; {
       var request = indexedDB.open(dbName, dbVersion);
       request.onerror = reject.bind(null, 'Error opening wasm cache database');
@@ -65,7 +65,7 @@ tags:
 
 <p>Our next function — <code>lookupInDatabase()</code> — provides a simple promise-based operation for looking up the given <code>url</code> in the object store we created above. It resolves with the stored compiled module, or rejects with an error.</p>
 
-<pre class="brush: js notranslate">  function lookupInDatabase(db) {
+<pre class="brush: js">  function lookupInDatabase(db) {
     return new Promise((resolve, reject) =&gt; {
       var store = db.transaction([storeName]).objectStore(storeName);
       var request = store.get(url);
@@ -83,7 +83,7 @@ tags:
 
 <p>Next, we define a function <code>storeInDatabase()</code> that fires off an async operation to store a given wasm module in a given database.</p>
 
-<pre class="brush: js notranslate">  function storeInDatabase(db, module) {
+<pre class="brush: js">  function storeInDatabase(db, module) {
     var store = db.transaction([storeName], 'readwrite').objectStore(storeName);
     var request = store.put(module, url);
     request.onerror = err =&gt; { console.log(`Failed to store in wasm cache: ${err}`) };
@@ -94,18 +94,18 @@ tags:
 
 <p>With all the Promise-based helper functions defined, we can now express the core logic of an IndexedDB cache lookup. We start by trying to open a database, then see if we already have a compiled Module with the key <code>url</code> stored in the given <code>db</code>:</p>
 
-<pre class="brush: js notranslate">  return openDatabase().then(db =&gt; {
+<pre class="brush: js">  return openDatabase().then(db =&gt; {
     return lookupInDatabase(db).then(module =&gt; {</pre>
 
 <p>If we do, we instantiate it with the given import object:</p>
 
-<pre class="brush: js notranslate">      console.log(`Found ${url} in wasm cache`);
+<pre class="brush: js">      console.log(`Found ${url} in wasm cache`);
       return WebAssembly.instantiate(module, importObject);
     },</pre>
 
 <p>If not, we compile it from scratch and then store the compiled Module in the database with a key of url, for next time we want to use it:</p>
 
-<pre class="brush: js notranslate">    errMsg =&gt; {
+<pre class="brush: js">    errMsg =&gt; {
       console.log(errMsg);
       return WebAssembly.instantiateStreaming(fetch(url)).then(results =&gt; {
         storeInDatabase(db, results.module);
@@ -120,7 +120,7 @@ tags:
 
 <p>If opening the database failed (for example due to permissions or quota), we fall back to fetching and compiling the module and don't try to store the results (since there is no database to store them into).</p>
 
-<pre class="brush: js notranslate">  errMsg =&gt; {
+<pre class="brush: js">  errMsg =&gt; {
     console.log(errMsg);
     return WebAssembly.instantiateStreaming(fetch(url)).then(results =&gt; {
       return results.instance
@@ -138,7 +138,7 @@ tags:
  <li>An import object, if required.</li>
 </ul>
 
-<pre class="brush: js notranslate">const wasmCacheVersion = 1;
+<pre class="brush: js">const wasmCacheVersion = 1;
 
 instantiateCachedURL(wasmCacheVersion, 'test.wasm').then(instance =&gt;
   console.log("Instance says the answer is: " + instance.exports.answer())

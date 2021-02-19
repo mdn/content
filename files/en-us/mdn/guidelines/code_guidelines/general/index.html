@@ -40,11 +40,11 @@ tags:
 
 <p>All code should use 2 spaces for indentation, for example:</p>
 
-<pre class="brush: html example-good notranslate">&lt;div&gt;
+<pre class="brush: html example-good">&lt;div&gt;
   &lt;p&gt;This is my paragraph.&lt;/p&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: js example-good notranslate">function myFunc() {
+<pre class="brush: js example-good">function myFunc() {
   if(thingy) {
     console.log('Yup, that worked.');
   }
@@ -56,18 +56,18 @@ tags:
 
 <p>For example, this is not great:</p>
 
-<pre class="brush: js example-bad notranslate">let tommyCat = 'Said Tommy the Cat as he reeled back to clear whatever foreign matter may have nestled its way into his mighty throat. Many a fat alley rat had met its demise while staring point blank down the cavernous barrel of this awesome prowling machine.';</pre>
+<pre class="brush: js example-bad">let tommyCat = 'Said Tommy the Cat as he reeled back to clear whatever foreign matter may have nestled its way into his mighty throat. Many a fat alley rat had met its demise while staring point blank down the cavernous barrel of this awesome prowling machine.';</pre>
 
 <p>This is better, but somewhat awkward:</p>
 
-<pre class="brush: js notranslate">let tommyCat = 'Said Tommy the Cat as he reeled back to clear whatever foreign '
+<pre class="brush: js">let tommyCat = 'Said Tommy the Cat as he reeled back to clear whatever foreign '
 + 'matter may have nestled its way into his mighty throat. Many a fat alley rat '
 + 'had met its demise while staring point blank down the cavernous barrel of '
 + 'this awesome prowling machine.';</pre>
 
 <p>Even better is to use a template literal:</p>
 
-<pre class="brush: js example-good notranslate">let tommyCat = `Said Tommy the Cat as he reeled back to clear whatever foreign
+<pre class="brush: js example-good">let tommyCat = `Said Tommy the Cat as he reeled back to clear whatever foreign
   matter may have nestled its way into his mighty throat. Many a fat alley rat
   had met its demise while staring point blank down the cavernous barrel of
   this awesome prowling machine.`;</pre>
@@ -105,23 +105,23 @@ tags:
 
 <p>Prefer to use keywords for primary and other "basic" colors, for example:</p>
 
-<pre class="brush: css example-good notranslate">color: black;
+<pre class="brush: css example-good">color: black;
 color: white;
 color: red;</pre>
 
 <p>Use rgb() for more complex colors (including semi-transparent ones):</p>
 
-<pre class="brush: css example-good notranslate">color: rgb(0, 0, 0, 0.5);
+<pre class="brush: css example-good">color: rgb(0, 0, 0, 0.5);
 color: rgb(248, 242, 230);</pre>
 
 <p>If you have to use hex colors, then use lower-case:</p>
 
-<pre class="brush: css example-good notranslate">color: #058ed9;
+<pre class="brush: css example-good">color: #058ed9;
 color: #a39a92;</pre>
 
 <p>and use the short form where relevant:</p>
 
-<pre class="brush: css example-good notranslate">color: #ff0;
+<pre class="brush: css example-good">color: #ff0;
 color: #fff;</pre>
 
 <p>The <a href="https://github.com/mdn/mdn-minimalist/blob/main/sass/vars/_color-palette.scss">sass/vars/_color-palette.scss</a> file in the <a href="https://github.com/mdn/mdn-minimalist">mdn-minimalist</a> repository has a set of useful colors that complement the overall MDN design.</p>
@@ -132,19 +132,19 @@ color: #fff;</pre>
 
 <p>To do this, you first use the MDN editor controls to put your code block in a <code>&lt;pre&gt;</code> block and give it appropriate syntax highlighting. The source of the code will look something like this:</p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 function myFunc() {
   console.log('Hello!');
 };&lt;/pre&gt;</pre>
 
 <p>To make it into a good example, you insert <code>example-good</code> just before the closing quote of the <code>class</code> attribute:</p>
 
-<pre class="brush: html notranslate">&lt;pre class="brush: js example-good notranslate"&gt;
+<pre class="brush: html">&lt;pre class="brush: js example-good"&gt;
   ...</pre>
 
 <p>To make it into a bad example, you insert <code>example-bad</code> just before the closing quote of the <code>class</code> attribute:</p>
 
-<pre class="brush: html notranslate">&lt;pre class="brush: js example-bad notranslate"&gt;
+<pre class="brush: html">&lt;pre class="brush: js example-bad"&gt;
   ...</pre>
 
 <p>We would like to encourage you to use these. You don't need to use these everywhere — only when you are specifically calling out good and bad practices in your code.</p>

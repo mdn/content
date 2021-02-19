@@ -24,7 +24,7 @@ tags:
 
 <p>This example will append "extra stuff" to the response:</p>
 
-<pre class="notranslate brush: js">function listener(details) {
+<pre class="brush: js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let encoder = new TextEncoder();
 
@@ -47,7 +47,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>Here's another version of the example above:</p>
 
-<pre class="notranslate brush: js">function listener(details) {
+<pre class="brush: js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let encoder = new TextEncoder();
 

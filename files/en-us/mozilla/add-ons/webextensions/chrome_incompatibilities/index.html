@@ -50,11 +50,11 @@ tags:
 <dl>
  <dt>In Chrome</dt>
  <dd>Extensions access privileged JavaScript APIs using the <code>chrome</code> namespace.
- <pre class="notranslate brush: js">chrome.browserAction.setIcon({path: "path/to/icon.png"});</pre>
+ <pre class="brush: js">chrome.browserAction.setIcon({path: "path/to/icon.png"});</pre>
  </dd>
  <dt>In Firefox (via the WebExtension API)</dt>
  <dd>The equivalent APIs are accessed using the <code>browser</code> namespace.
- <pre class="notranslate brush: js">browser.browserAction.setIcon({path: "path/to/icon.png"});</pre>
+ <pre class="brush: js">browser.browserAction.setIcon({path: "path/to/icon.png"});</pre>
  </dd>
 </dl>
 
@@ -63,7 +63,7 @@ tags:
 <dl>
  <dt>In Chrome</dt>
  <dd>Asynchronous APIs use callbacks to return values, and {{WebExtAPIRef("runtime.lastError")}} to communicate errors.
- <pre class="notranslate brush: js">function logCookie(c) {
+ <pre class="brush: js">function logCookie(c) {
   if (chrome.runtime.lastError) {
     console.error(chrome.runtime.lastError);
   } else {
@@ -78,7 +78,7 @@ chrome.cookies.set(
  </dd>
  <dt>In Firefox (via the WebExtension API)</dt>
  <dd>Asynchronous APIs use <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a> to return values instead.
- <pre class="notranslate brush: js">function logCookie(c) {
+ <pre class="brush: js">function logCookie(c) {
   console.log(c);
 }
 

@@ -42,7 +42,7 @@ tags:
 
 <p>This example will replace the page content with "replacement text":</p>
 
-<pre class="notranslate brush: js">function listener(details) {
+<pre class="brush: js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
   filter.onstart = event =&gt; {

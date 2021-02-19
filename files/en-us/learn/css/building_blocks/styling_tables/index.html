@@ -36,7 +36,7 @@ tags:
 
 <p>Let's start by looking at a typical HTML table. Well, I say typical — most HTML table examples are about shoes, or the weather, or employees; we decided to make things more interesting by making it about famous punk bands from the UK. The markup looks like so:</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;caption&gt;A summary of the UK's most famous punk bands&lt;/caption&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -91,7 +91,7 @@ tags:
  <li>To start with, make a local copy of the <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-unstyled.html">sample markup</a>, download both images (<a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/noise.png">noise</a> and <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/leopardskin.jpg">leopardskin</a>), and put the three resulting files in a working directory somewhere on your local computer.</li>
  <li>Next, create a new file called <code>style.css</code> and save it in the same directory as your other files.</li>
  <li>Link the CSS to the HTML by placing the following line of HTML inside your {{htmlelement("head")}}:
-  <pre class="brush: html notranslate">&lt;link href="style.css" rel="stylesheet" type="text/css"&gt;</pre>
+  <pre class="brush: html">&lt;link href="style.css" rel="stylesheet" type="text/css"&gt;</pre>
  </li>
 </ol>
 
@@ -99,7 +99,7 @@ tags:
 
 <p>The first thing we need to do is sort out the spacing/layout — default table styling is so cramped! To do this, add the following CSS to your <code>style.css</code> file:</p>
 
-<pre class="brush: css notranslate">/* spacing */
+<pre class="brush: css">/* spacing */
 
 table {
   table-layout: fixed;
@@ -151,11 +151,11 @@ th, td {
 
 <p>First, add the following {{htmlelement("link")}} element into your HTML head, just above your existing <code>&lt;link&gt;</code> element:</p>
 
-<pre class="brush: html notranslate">&lt;link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'&gt;</pre>
+<pre class="brush: html">&lt;link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'&gt;</pre>
 
 <p>Now add the following CSS into your <code>style.css</code> file, below the previous addition:</p>
 
-<pre class="brush: css notranslate">/* typography */
+<pre class="brush: css">/* typography */
 
 html {
   font-family: 'helvetica neue', helvetica, arial, sans-serif;
@@ -200,7 +200,7 @@ tfoot th {
 
 <p>Start by adding the following CSS to your <code>style.css</code> file, again at the bottom:</p>
 
-<pre class="brush: css notranslate">/* graphics and colors */
+<pre class="brush: css">/* graphics and colors */
 
 thead, tfoot {
   background: url(leopardskin.jpg);
@@ -224,7 +224,7 @@ thead th, tfoot th, tfoot td {
 
 <p>We wanted to dedicate a separate section to showing you how to implement <strong>zebra stripes</strong> — alternating rows of color that make the different data rows in your table easier to parse and read. Add the following CSS to the bottom of your <code>style.css</code> file:</p>
 
-<pre class="brush: css notranslate">/* zebra striping */
+<pre class="brush: css">/* zebra striping */
 
 tbody tr:nth-child(odd) {
   background-color: #ff33cc;
@@ -258,7 +258,7 @@ table {
 
 <p>There is one last thing to do with our table — style the caption. To do this, add the following to the bottom of your <code>style.css</code> file:</p>
 
-<pre class="brush: css notranslate">/* caption */
+<pre class="brush: css">/* caption */
 
 caption {
   font-family: 'Rock Salt', cursive;

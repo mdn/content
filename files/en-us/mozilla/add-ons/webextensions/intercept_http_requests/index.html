@@ -47,7 +47,7 @@ tags:
 
 <p>Next, create a file called "background.js" with the following contents:</p>
 
-<pre class="notranslate brush: js">function logURL(requestDetails) {
+<pre class="brush: js">function logURL(requestDetails) {
   console.log("Loading: " + requestDetails.url);
 }
 
@@ -92,7 +92,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>Next, replace "background.js" with this:</p>
 
-<pre class="notranslate brush: js">var pattern = "https://mdn.mozillademos.org/*";
+<pre class="brush: js">var pattern = "https://mdn.mozillademos.org/*";
 
 function redirect(requestDetails) {
   console.log("Redirecting: " + requestDetails.url);
@@ -125,7 +125,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>Replace "background.js" with code like this:</p>
 
-<pre class="notranslate brush: js">var targetPage = "http://useragentstring.com/*";
+<pre class="brush: js">var targetPage = "http://useragentstring.com/*";
 
 var ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 

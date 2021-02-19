@@ -43,7 +43,7 @@ tags:
 
 <p>We will be rendering our game on Canvas, but we won't do it manually — this will be taken care of by the framework. Let’s set it up: our starting point is the <code>index.html</code> file with the following content. You can create this yourself if you want to follow along:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
     &lt;meta charset="utf-8" /&gt;
@@ -73,11 +73,11 @@ tags:
 
 <p>So far we have a simple HTML website with some basic content in the <code>&lt;head&gt;</code> section: charset, title, CSS styling and the inclusion of the JavaScript files. The <code>&lt;body&gt;</code> contains initialization of the Phaser framework and the definitions of the game states.</p>
 
-<pre class="brush: js notranslate">var game = new Phaser.Game(320, 480, Phaser.CANVAS, 'game');</pre>
+<pre class="brush: js">var game = new Phaser.Game(320, 480, Phaser.CANVAS, 'game');</pre>
 
 <p>The line above will initialize the Phaser instance — the arguments are the width of the Canvas, height of the Canvas, rendering method (we're using <code>CANVAS</code>, but there are also <code>WEBGL</code> and <code>AUTO</code> options available) and the optional ID of the DOM container we want to put the Canvas in. If there's nothing specified in that last argument or the element is not found, the Canvas will be added to the &lt;body&gt; tag. Without the framework, to add the Canvas element to the page, you would have to write something like this inside the &lt;body&gt; tag:</p>
 
-<pre class="brush: html notranslate">&lt;canvas id='game' width='320' height='480'&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html">&lt;canvas id='game' width='320' height='480'&gt;&lt;/canvas&gt;</pre>
 
 <p>The important thing to remember is that the framework is setting up helpful methods to speed up a lot of things like image manipulation or assets management, which would be a lot harder to do manually.</p>
 
@@ -87,7 +87,7 @@ tags:
 
 <p>Back to game states: the line below is adding a new state called <code>Boot</code> to the game:</p>
 
-<pre class="brush: html notranslate">game.state.add('Boot', Ball.Boot);</pre>
+<pre class="brush: html">game.state.add('Boot', Ball.Boot);</pre>
 
 <p>The first value is the name of the state and the second one is the object we want to assign to it. The <code>start</code> method is starting the given state and making it active. Let's see what the states are actually.</p>
 
@@ -99,7 +99,7 @@ tags:
 
 <p>The <code>Boot</code> state is the first one in the game.</p>
 
-<pre class="brush: js notranslate">var Ball = {
+<pre class="brush: js">var Ball = {
     _WIDTH: 320,
     _HEIGHT: 480
 };
@@ -123,7 +123,7 @@ Ball.Boot.prototype = {
 
 <p>The <code>Preloader</code> state takes care of loading all the assets:</p>
 
-<pre class="brush: js notranslate">Ball.Preloader = function(game) {};
+<pre class="brush: js">Ball.Preloader = function(game) {};
 Ball.Preloader.prototype = {
     preload: function() {
         this.preloadBg = this.add.sprite((Ball._WIDTH-297)*0.5, (Ball._HEIGHT-145)*0.5, 'preloaderBg');
@@ -147,7 +147,7 @@ Ball.Preloader.prototype = {
 
 <p>The <code>MainMenu</code> state shows the main menu of the game, where you can start playing by clicking the button.</p>
 
-<pre class="brush: js notranslate">Ball.MainMenu = function(game) {};
+<pre class="brush: js">Ball.MainMenu = function(game) {};
 Ball.MainMenu.prototype = {
     create: function() {
         this.add.sprite(0, 0, 'screen-mainmenu');
@@ -181,7 +181,7 @@ Ball.MainMenu.prototype = {
 
 <h3 id="Howto.js">Howto.js</h3>
 
-<pre class="brush: js notranslate">Ball.Howto = function(game) {
+<pre class="brush: js">Ball.Howto = function(game) {
 };
 Ball.Howto.prototype = {
     create: function() {
@@ -198,7 +198,7 @@ Ball.Howto.prototype = {
 
 <p>The <code>Game</code> state from the <code>Game.js</code> file is where all the magic happens. All the initialization is in the <code>create()</code> function (launched once at the beginning of the game). After that some functionality will require further code to control — we will write our own functions to handle more complicated tasks. In particular, take note of the <code>update()</code> function (executed at every frame), which updates things such as the ball position.</p>
 
-<pre class="brush: js notranslate">Ball.Game = function(game) {};
+<pre class="brush: js">Ball.Game = function(game) {};
 Ball.Game.prototype = {
     create: function() {},
     initLevels: function() {},
@@ -229,7 +229,7 @@ Ball.Game.prototype = {
 
 <p>First, let’s go to the <code>create()</code> function, initialize the ball object itself and assign a few properties to it:</p>
 
-<pre class="brush: js notranslate">this.ball = this.add.sprite(this.ballStartPos.x, this.ballStartPos.y, 'ball');
+<pre class="brush: js">this.ball = this.add.sprite(this.ballStartPos.x, this.ballStartPos.y, 'ball');
 this.ball.anchor.set(0.5);
 this.physics.enable(this.ball, Phaser.Physics.ARCADE);
 this.ball.body.setSize(18, 18);
@@ -241,13 +241,13 @@ this.ball.body.bounce.set(0.3, 0.3);</pre>
 
 <p>It’s cool to have the ball ready to be thrown around in the play area, but it’s also important to be able to actually move it! Now we will add the ability to control the ball with the keyboard on the desktop devices, and then we will move to the implementation of the Device Orientation API. Let’s focus on the keyboard first by adding the following to the <code>create()</code> function :</p>
 
-<pre class="brush: js notranslate">this.keys = this.game.input.keyboard.createCursorKeys();</pre>
+<pre class="brush: js">this.keys = this.game.input.keyboard.createCursorKeys();</pre>
 
 <p>As you can see there’s a special Phaser function called <code>createCursorKeys()</code>, which will give us an object with event handlers for the four arrow keys to play with: up, down, left and right.</p>
 
 <p>Next we will add the following code to the <code>update()</code> function, so it will be fired on every frame. The <code>this.keys</code> object will be checked against player input, so the ball can react accordingly with the predefined force:</p>
 
-<pre class="brush: js notranslate">if(this.keys.left.isDown) {
+<pre class="brush: js">if(this.keys.left.isDown) {
     this.ball.body.velocity.x -= this.movementForce;
 }
 else if(this.keys.right.isDown) {
@@ -266,11 +266,11 @@ else if(this.keys.down.isDown) {
 
 <p>Probably the most interesting part of the game is its usage of the <strong>Device Orientation API</strong> for control on mobile devices. Thanks to this you can play the game by tilting the device in the direction you want the ball to roll. Here’s the code from the <code>create()</code> function responsible for this:</p>
 
-<pre class="brush: js notranslate">window.addEventListener("deviceorientation", this.handleOrientation, true);</pre>
+<pre class="brush: js">window.addEventListener("deviceorientation", this.handleOrientation, true);</pre>
 
 <p>We’re adding an event listener to the <code>"deviceorientation"</code> event and binding the <code>handleOrientation</code> function which looks like this:</p>
 
-<pre class="brush: js notranslate">handleOrientation: function(e) {
+<pre class="brush: js">handleOrientation: function(e) {
     var x = e.gamma;
     var y = e.beta;
     Ball._player.body.velocity.x += x;
@@ -289,7 +289,7 @@ else if(this.keys.down.isDown) {
 
 <p>The main objective in the game is to move the ball from the starting position to the ending position: a hole in the ground. Implementation looks very similar to the part where we created the ball, and it's also added in the <code>create()</code> function of our <code>Game</code> state:</p>
 
-<pre class="brush: js notranslate">this.hole = this.add.sprite(Ball._WIDTH*0.5, 90, 'hole');
+<pre class="brush: js">this.hole = this.add.sprite(Ball._WIDTH*0.5, 90, 'hole');
 this.physics.enable(this.hole, Phaser.Physics.ARCADE);
 this.hole.anchor.set(0.5);
 this.hole.body.setSize(2, 2);</pre>
@@ -302,7 +302,7 @@ this.hole.body.setSize(2, 2);</pre>
 
 <p>To hold the block information we'll use a level data array: for each block we'll store the top and left absolute positions in pixels (<code>x</code> and <code>y</code>) and the type of the block — horizontal or vertical (<code>t</code> with the <code>'w'</code> value meaning width and <code>'h'</code> meaning height). Then, to load the level we'll parse the data and show the blocks specific for that level. In the <code>initLevels</code> function we have:</p>
 
-<pre class="brush: js notranslate">this.levelData = [
+<pre class="brush: js">this.levelData = [
     [
         { x: 96, y: 224, t: 'w' }
     ],
@@ -316,7 +316,7 @@ this.hole.body.setSize(2, 2);</pre>
 
 <p>Every array element holds a collection of blocks with an <code>x</code> and <code>y</code> position and <code>t</code> value for each. After <code>levelData</code>, but still in the <code>initLevels</code> function, we're adding the blocks into an array in the <code>for</code> loop using some of the framework-specific methods:</p>
 
-<pre class="brush: js notranslate">for(var i=0; i&lt;this.maxLevels; i++) {
+<pre class="brush: js">for(var i=0; i&lt;this.maxLevels; i++) {
     var newLevel = this.add.group();
     newLevel.enableBody = true;
     newLevel.physicsBodyType = Phaser.Physics.ARCADE;
@@ -333,7 +333,7 @@ this.hole.body.setSize(2, 2);</pre>
 
 <p>The objects are stored in the <code>this.levels</code> array, which is by default invisible. To load specific levels, we make sure the previous levels are hidden, and show the current one:</p>
 
-<pre class="brush: js notranslate">showLevel: function(level) {
+<pre class="brush: js">showLevel: function(level) {
     var lvl = level | this.level;
     if(this.levels[lvl-2]) {
         this.levels[lvl-2].visible = false;
@@ -347,7 +347,7 @@ this.hole.body.setSize(2, 2);</pre>
 
 <p>At this point we've got the ball that is controlled by the player, the hole to reach and the obstacles blocking the way. There’s a problem though — our game doesn’t have any collision detection yet, so nothing happens when the ball hits the blocks — it just goes through. Let’s fix it! The good news is that the framework will take care of calculating the collision detection, we only have to specify the colliding objects in the <code>update()</code> function:</p>
 
-<pre class="brush: js notranslate">this.physics.arcade.collide(this.ball, this.borderGroup, this.wallCollision, null, this);
+<pre class="brush: js">this.physics.arcade.collide(this.ball, this.borderGroup, this.wallCollision, null, this);
 this.physics.arcade.collide(this.ball, this.levels[this.level-1], this.wallCollision, null, this);</pre>
 
 <p>This will tell the framework to execute the <code>wallCollision</code> function when the ball hits any of the walls. We can use the <code>wallCollision</code> function to add any functionality we want like playing the bounce sound and implementing the <strong>Vibration API</strong>.</p>
@@ -356,11 +356,11 @@ this.physics.arcade.collide(this.ball, this.levels[this.level-1], this.wallColli
 
 <p>Among the preloaded assets there was an audio track (in various formats for browser compatibility), which we can use now. It has to be defined in the <code>create()</code> function first:</p>
 
-<pre class="brush: js notranslate">this.bounceSound = this.game.add.audio('audio-bounce');</pre>
+<pre class="brush: js">this.bounceSound = this.game.add.audio('audio-bounce');</pre>
 
 <p>If the status of the audio is <code>true</code> (so the sounds in the game are enabled), we can play it in the <code>wallCollision</code> function:</p>
 
-<pre class="brush: js notranslate">if(this.audioStatus) {
+<pre class="brush: js">if(this.audioStatus) {
     this.bounceSound.play();
 }</pre>
 
@@ -374,7 +374,7 @@ this.physics.arcade.collide(this.ball, this.levels[this.level-1], this.wallColli
 
 <p>The best way to use it in our case is to vibrate the phone every time the ball hits the walls — inside the <code>wallCollision</code> function:</p>
 
-<pre class="brush: js notranslate">if("vibrate" in window.navigator) {
+<pre class="brush: js">if("vibrate" in window.navigator) {
     window.navigator.vibrate(100);
 }</pre>
 
@@ -384,21 +384,21 @@ this.physics.arcade.collide(this.ball, this.levels[this.level-1], this.wallColli
 
 <p>To improve replayability and give players the option to compete with each other we will store the elapsed time — players can then try to improve on their best game completion time. To implement this we have to create a variable for storing the actual number of seconds elapsed from the start of the game, and to show it for the player in the game. Let’s define the variables in the <code>create</code> function first:</p>
 
-<pre class="brush: js notranslate">this.timer = 0; // time elapsed in the current level
+<pre class="brush: js">this.timer = 0; // time elapsed in the current level
 this.totalTimer = 0; // time elapsed in the whole game</pre>
 
 <p>Then, right after that, we can initialize the necessary text objects to display this information to the user:</p>
 
-<pre class="brush: js notranslate">this.timerText = this.game.add.text(15, 15, "Time: "+this.timer, this.fontBig);
+<pre class="brush: js">this.timerText = this.game.add.text(15, 15, "Time: "+this.timer, this.fontBig);
 this.totalTimeText = this.game.add.text(120, 30, "Total time: "+this.totalTimer, this.fontSmall);</pre>
 
 <p>We’re defining the top and left positions of the text, the content that will be shown and the styling applied to the text. We have this printed out on the screen, but it would be good to update the values every second:</p>
 
-<pre class="brush: js notranslate">this.time.events.loop(Phaser.Timer.SECOND, this.updateCounter, this);</pre>
+<pre class="brush: js">this.time.events.loop(Phaser.Timer.SECOND, this.updateCounter, this);</pre>
 
 <p>This loop, also in the <code>create</code> function, will execute the <code>updateCounter</code> function every single second from the beginning of the game, so we can apply the changes accordingly. This is how the complete <code>updateCounter</code> function looks:</p>
 
-<pre class="brush: js notranslate">updateCounter: function() {
+<pre class="brush: js">updateCounter: function() {
     this.timer++;
     this.timerText.setText("Time: "+this.timer);
     this.totalTimeText.setText("Total time: "+(this.totalTimer+this.timer));
@@ -410,11 +410,11 @@ this.totalTimeText = this.game.add.text(120, 30, "Total time: "+this.totalTimer,
 
 <p>The ball is rolling on the screen, the timer is working and we have the hole created that we have to reach. Now let’s set up the possibility to actually finish the level! The following line in the <code>update()</code> function adds a listener that fires when the ball gets to the hole.</p>
 
-<pre class="brush: js notranslate">this.physics.arcade.overlap(this.ball, this.hole, this.finishLevel, null, this);</pre>
+<pre class="brush: js">this.physics.arcade.overlap(this.ball, this.hole, this.finishLevel, null, this);</pre>
 
 <p>This works similarly to the <code>collide</code> method explained earlier. When the ball overlaps with the hole (instead of colliding), the <code>finishLevel</code> function is executed:</p>
 
-<pre class="brush: js notranslate">finishLevel: function() {
+<pre class="brush: js">finishLevel: function() {
     if(this.level &gt;= this.maxLevels) {
         this.totalTimer += this.timer;
         alert('Congratulations, game completed!\nTotal time of play: '+this.totalTimer+' seconds!');

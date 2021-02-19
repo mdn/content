@@ -82,7 +82,7 @@ tags:
 
 <p>For debugging purposes, it's easiest to trigger storage clearing by triggering the service directly via the <a href="/en-US/docs/Tools/Browser_Console#Browser_Console_command_line">Browser Console command line</a>. Note that this is different from the normal <a href="/en-US/docs/Tools/Web_Console">Web Console</a> you might use to debug a website, and requires the <code>devtools.chrome.enabled</code> pref to be set to <code>true</code> to use it interactively. Once you've enabled the Browser Console you can trigger storage clearing by running the following command:</p>
 
-<pre class="brush: js notranslate">await Components.classes["@mozilla.org/purge-tracker-service;1"].getService(Components.interfaces.nsIPurgeTrackerService).purgeTrackingCookieJars()</pre>
+<pre class="brush: js">await Components.classes["@mozilla.org/purge-tracker-service;1"].getService(Components.interfaces.nsIPurgeTrackerService).purgeTrackingCookieJars()</pre>
 
 <p>The time until user interaction permissions expire can be set to a lower amount using the <code>privacy.userInteraction.expiration</code> pref. Note that you will have to set this pref before visiting the sites you want to test — it will not apply retroactively.</p>
 

@@ -93,12 +93,12 @@ tags:
 
   <p>The {{domxref("Storage.setItem()")}} method allows you to save a data item in storage — it takes two parameters: the name of the item, and its value. Try typing this into your JavaScript console (change the value to your own name, if you wish!):</p>
 
-  <pre class="brush: js   notranslate">localStorage.setItem('name','Chris');</pre>
+  <pre class="brush: js">localStorage.setItem('name','Chris');</pre>
  </li>
  <li>
   <p>The {{domxref("Storage.getItem()")}} method takes one parameter — the name of a data item you want to retrieve — and returns the item's value. Now type these lines into your JavaScript console:</p>
 
-  <pre class="brush: js   notranslate">let myName = localStorage.getItem('name');
+  <pre class="brush: js">let myName = localStorage.getItem('name');
 myName</pre>
 
   <p>Upon typing in the second line, you should see that the <code>myName</code> variable now contains the value of the <code>name</code> data item.</p>
@@ -106,7 +106,7 @@ myName</pre>
  <li>
   <p>The {{domxref("Storage.removeItem()")}} method takes one parameter — the name of a data item you want to remove — and removes that item out of web storage. Type the following lines into your JavaScript console:</p>
 
-  <pre class="brush: js   notranslate">localStorage.removeItem('name');
+  <pre class="brush: js">localStorage.removeItem('name');
 let myName = localStorage.getItem('name');
 myName</pre>
 
@@ -125,7 +125,7 @@ myName</pre>
  <li>
   <p>Type these lines into the browser's JavaScript console:</p>
 
-  <pre class="brush: js   notranslate">localStorage.setItem('name','Chris');
+  <pre class="brush: js">localStorage.setItem('name','Chris');
 let myName = localStorage.getItem('name');
 myName</pre>
 
@@ -137,7 +137,7 @@ myName</pre>
  <li>
   <p>Enter the following lines again:</p>
 
-  <pre class="brush: js   notranslate">let myName = localStorage.getItem('name');
+  <pre class="brush: js">let myName = localStorage.getItem('name');
 myName</pre>
 
   <p>You should see that the value is still available, even though the browser has been closed and then opened again.</p>
@@ -170,7 +170,7 @@ myName</pre>
  <li>
   <p>We'll start off by creating references to all the HTML features we need to manipulate in this example — we'll create them all as constants, as these references do not need to change in the lifecycle of the app. Add the following lines to your JavaScript file:</p>
 
-  <pre class="brush: js   notranslate">// create needed constants
+  <pre class="brush: js">// create needed constants
 const rememberDiv = document.querySelector('.remember');
 const forgetDiv = document.querySelector('.forget');
 const form = document.querySelector('form');
@@ -184,7 +184,7 @@ const personalGreeting = document.querySelector('.personal-greeting');</pre>
  <li>
   <p>Next up, we need to include a small event listener to stop the form from actually submitting itself when the submit button is pressed, as this is not the behavior we want. Add this snippet below your previous code:</p>
 
-  <pre class="brush: js   notranslate">// Stop the form from submitting when a button is pressed
+  <pre class="brush: js">// Stop the form from submitting when a button is pressed
 form.addEventListener('submit', function(e) {
   e.preventDefault();
 });</pre>
@@ -192,7 +192,7 @@ form.addEventListener('submit', function(e) {
  <li>
   <p>Now we need to add an event listener, the handler function of which will run when the "Say hello" button is clicked. The comments explain in detail what each bit does, but in essence here we are taking the name the user has entered into the text input box and saving it in web storage using <code>setItem()</code>, then running a function called <code>nameDisplayCheck()</code> that will handle updating the actual website text. Add this to the bottom of your code:</p>
 
-  <pre class="brush: js   notranslate">// run function when the 'Say hello' button is clicked
+  <pre class="brush: js">// run function when the 'Say hello' button is clicked
 submitBtn.addEventListener('click', function() {
   // store the entered name in web storage
   localStorage.setItem('name', nameInput.value);
@@ -204,7 +204,7 @@ submitBtn.addEventListener('click', function() {
  <li>
   <p>At this point we also need an event handler to run a function when the "Forget" button is clicked — this is only displayed after the "Say hello" button has been clicked (the two form states toggle back and forth). In  this function we remove the <code>name</code> item from web storage using <code>removeItem()</code>, then again run <code>nameDisplayCheck()</code> to update the display. Add this to the bottom:</p>
 
-  <pre class="brush: js   notranslate">// run function when the 'Forget' button is clicked
+  <pre class="brush: js">// run function when the 'Forget' button is clicked
 forgetBtn.addEventListener('click', function() {
   // Remove the stored name from web storage
   localStorage.removeItem('name');
@@ -216,7 +216,7 @@ forgetBtn.addEventListener('click', function() {
  <li>
   <p>It is now time to define the <code>nameDisplayCheck()</code> function itself. Here we check whether the name item has been stored in web storage by using <code>localStorage.getItem('name')</code> as a conditional test. If it has been stored, this call will evaluate to <code>true</code>; if not, it will be <code>false</code>. If it is <code>true</code>, we display a personalized greeting, display the "forget" part of the form, and hide the "Say hello" part of the form. If it is <code>false</code>, we display a generic greeting and do the opposite. Again, put the following code at the bottom:</p>
 
-  <pre class="brush: js   notranslate">// define the nameDisplayCheck() function
+  <pre class="brush: js">// define the nameDisplayCheck() function
 function nameDisplayCheck() {
   // check whether the 'name' data item is stored in web Storage
   if(localStorage.getItem('name')) {
@@ -240,7 +240,7 @@ function nameDisplayCheck() {
  <li>
   <p>Last but not least, we need to run the <code>nameDisplayCheck()</code> function every time the page is loaded. If we don't do this, then the personalized greeting will not persist across page reloads. Add the following to the bottom of your code:</p>
 
-  <pre class="brush: js   notranslate">document.body.onload = nameDisplayCheck;</pre>
+  <pre class="brush: js">document.body.onload = nameDisplayCheck;</pre>
  </li>
 </ol>
 
@@ -286,7 +286,7 @@ function nameDisplayCheck() {
  <li>
   <p>Below the constant declarations, add the following lines:</p>
 
-  <pre class="brush: js   notranslate">// Create an instance of a db object for us to store the open database in
+  <pre class="brush: js">// Create an instance of a db object for us to store the open database in
 let db;</pre>
 
   <p>Here we are declaring a variable called <code>db</code> — this will later be used to store an object representing our database. We will use this in a few places, so we've declared it globally here to make things easier.</p>
@@ -294,7 +294,7 @@ let db;</pre>
  <li>
   <p>Next, add the following to the bottom of your code:</p>
 
-  <pre class="brush: js   notranslate">window.onload = function() {
+  <pre class="brush: js">window.onload = function() {
 
 };</pre>
 
@@ -303,7 +303,7 @@ let db;</pre>
  <li>
   <p>Inside the <code>window.onload</code> handler, add the following:</p>
 
-  <pre class="brush: js   notranslate">// Open our database; it is created if it doesn't already exist
+  <pre class="brush: js">// Open our database; it is created if it doesn't already exist
 // (see onupgradeneeded below)
 let request = window.indexedDB.open('notes_db', 1);</pre>
 
@@ -318,7 +318,7 @@ let request = window.indexedDB.open('notes_db', 1);</pre>
  <li>
   <p>Now add the following event handlers just below your previous addition — again inside the <code>window.onload</code> handler:</p>
 
-  <pre class="brush: js   notranslate">// onerror handler signifies that the database didn't open successfully
+  <pre class="brush: js">// onerror handler signifies that the database didn't open successfully
 request.onerror = function() {
   console.log('Database failed to open');
 };
@@ -341,7 +341,7 @@ request.onsuccess = function() {
  <li>
   <p>Finally for this section, we'll add probably the most important event handler for setting up the database: {{domxref("IDBOpenDBRequest.onupgradeneeded", "request.onupgradeneeded")}}. This handler runs if the database has not already been set up, or if the database is opened with a bigger version number than the existing stored database (when performing an upgrade). Add the following code, below your previous handler:</p>
 
-  <pre class="brush: js   notranslate">// Setup the database tables if this has not already been done
+  <pre class="brush: js">// Setup the database tables if this has not already been done
 request.onupgradeneeded = function(e) {
   // Grab a reference to the opened database
   let db = e.target.result;
@@ -367,7 +367,7 @@ request.onupgradeneeded = function(e) {
 
 <p>So with this simple database schema set up, when we start adding records to the database; each one will be represented as an object along these lines:</p>
 
-<pre class="brush: js   notranslate">{
+<pre class="brush: js">{
   title: "Buy milk",
   body: "Need both cows milk and soy.",
   id: 8
@@ -379,12 +379,12 @@ request.onupgradeneeded = function(e) {
 
 <p>Below your previous event handler (but still inside the <code>window.onload</code> handler), add the following line, which sets up an <code>onsubmit</code> handler that runs a function called <code>addData()</code> when the form is submitted (when the submit {{htmlelement("button")}} is pressed leading to a successful form submission):</p>
 
-<pre class="brush: js   notranslate">// Create an onsubmit handler so that when the form is submitted the addData() function is run
+<pre class="brush: js">// Create an onsubmit handler so that when the form is submitted the addData() function is run
 form.onsubmit = addData;</pre>
 
 <p>Now let's define the <code>addData()</code> function. Add this below your previous line:</p>
 
-<pre class="brush: js   notranslate">// Define the addData() function
+<pre class="brush: js">// Define the addData() function
 function addData(e) {
   // prevent default - we don't want the form to submit in the conventional way
   e.preventDefault();
@@ -434,7 +434,7 @@ function addData(e) {
 
 <p>We've referenced <code>displayData()</code> twice in our code already, so we'd probably better define it. Add this to your code, below the previous function definition:</p>
 
-<pre class="brush: js   notranslate">// Define the displayData() function
+<pre class="brush: js">// Define the displayData() function
 function displayData() {
   // Here we empty the contents of the list element each time the display is updated
   // If you didn't do this, you'd get duplicates listed each time a new note is added
@@ -509,7 +509,7 @@ function displayData() {
 
 <p>As stated above, when a note's delete button is pressed, the note is deleted. This is achieved by the <code>deleteItem()</code> function, which looks like so:</p>
 
-<pre class="brush: js   notranslate">// Define the deleteItem() function
+<pre class="brush: js">// Define the deleteItem() function
 function deleteItem(e) {
   // retrieve the name of the task we want to delete. We need
   // to convert it to a number before trying it use it with IDB; IDB key
@@ -559,7 +559,7 @@ function deleteItem(e) {
  <li>
   <p>For this simple example, we've stored the names of the videos to fetch in an array of objects:</p>
 
-  <pre class="brush: js   notranslate">const videos = [
+  <pre class="brush: js">const videos = [
   { 'name' : 'crystal' },
   { 'name' : 'elf' },
   { 'name' : 'frog' },
@@ -573,7 +573,7 @@ function deleteItem(e) {
 
   <p>If each video is found in the database (easily checked by seeing whether <code>request.result</code> evaluates to <code>true</code> — if the record is not present, it will be <code>undefined</code>), its video files (stored as blobs) and the video name are passed straight to the <code>displayVideo()</code> function to place them in the UI. If not, the video name is passed to the <code>fetchVideoFromNetwork()</code> function to ... you guessed it — fetch the video from the network.</p>
 
-  <pre class="brush: js   notranslate">function init() {
+  <pre class="brush: js">function init() {
   // Loop through the video names one by one
   for(let i = 0; i &lt; videos.length; i++) {
     // Open transaction, get object store, and get() each video by name
@@ -600,7 +600,7 @@ function deleteItem(e) {
 
   <p>When all those promises have fulfilled, the <code>all()</code> promise fulfills with an array containing all the individual fulfillment values. Inside the <code>all()</code> block, you can see that we then call the <code>displayVideo()</code> function like we did before to display the videos in the UI, then we also call the <code>storeVideo()</code> function to store those videos inside the database.</p>
 
-  <pre class="brush: js   notranslate">let mp4Blob = fetch('videos/' + video.name + '.mp4').then(response =&gt;
+  <pre class="brush: js">let mp4Blob = fetch('videos/' + video.name + '.mp4').then(response =&gt;
   response.blob()
 );
 let webmBlob = fetch('videos/' + video.name + '.webm').then(response =&gt;
@@ -618,7 +618,7 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
  <li>
   <p>Let's look at <code>storeVideo()</code> first. This is very similar to the pattern you saw in the previous example for adding data to the database — we open a <code>readwrite</code> transaction and get a reference to our <code>videos_os</code> object store, create an object representing the record to add to the database, then add it using {{domxref("IDBObjectStore.add()")}}.</p>
 
-  <pre class="brush: js   notranslate">function storeVideo(mp4Blob, webmBlob, name) {
+  <pre class="brush: js">function storeVideo(mp4Blob, webmBlob, name) {
   // Open transaction, get object store; make it a readwrite so we can write to the IDB
   let objectStore = db.transaction(['videos_os'], 'readwrite').objectStore('videos_os');
   // Create a record to add to the IDB
@@ -638,7 +638,7 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
  <li>
   <p>Last but not least, we have <code>displayVideo()</code>, which creates the DOM elements needed to insert the video in the UI and then appends them to the page. The most interesting parts of this are those shown below — to actually display our video blobs in a <code>&lt;video&gt;</code> element, we need to create object URLs (internal URLs that point to the video blobs stored in memory) using the {{domxref("URL.createObjectURL()")}} method. Once that is done, we can set the object URLs to be the values of our {{htmlelement("source")}} element's <code>src</code> attributes, and it works fine.</p>
 
-  <pre class="brush: js   notranslate">function displayVideo(mp4Blob, webmBlob, title) {
+  <pre class="brush: js">function displayVideo(mp4Blob, webmBlob, title) {
   // Create object URLs out of the blobs
   let mp4URL = URL.createObjectURL(mp4Blob);
   let webmURL = URL.createObjectURL(webmBlob);
@@ -683,7 +683,7 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
 
 <p>The first thing to note is that there's an extra bit of code placed in the main JavaScript file (see <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js">index.js</a>). First we do a feature detection test to see if the <code>serviceWorker</code> member is available in the {{domxref("Navigator")}} object. If this returns true, then we know that at least the basics of service workers are supported. Inside here we use the {{domxref("ServiceWorkerContainer.register()")}} method to register a service worker contained in the <code>sw.js</code> file against the origin it resides at, so it can control pages in the same directory as it, or subdirectories. When its promise fulfills, the service worker is deemed registered.</p>
 
-<pre class="brush: js   notranslate">  // Register service worker to control making site work offline
+<pre class="brush: js">  // Register service worker to control making site work offline
 
   if('serviceWorker' in navigator) {
     navigator.serviceWorker
@@ -705,7 +705,7 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
 
 <p>Here is where we see the Cache API in action. We use the {{domxref("CacheStorage.open()")}} method to open a new cache object in which responses can be stored (similar to an IndexedDB object store). This promise fulfills with a {{domxref("Cache")}} object representing the <code>video-store</code> cache. We then use the {{domxref("Cache.addAll()")}} method to fetch a series of assets and add their responses to the cache.</p>
 
-<pre class="brush: js   notranslate">self.addEventListener('install', function(e) {
+<pre class="brush: js">self.addEventListener('install', function(e) {
  e.waitUntil(
    caches.open('video-store').then(function(cache) {
      return cache.addAll([
@@ -732,7 +732,7 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
 
 <p>If a match is found, we return it as the custom response. If not, we <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a> the response from the network and return that instead.</p>
 
-<pre class="brush: js   notranslate">self.addEventListener('fetch', function(e) {
+<pre class="brush: js">self.addEventListener('fetch', function(e) {
   console.log(e.request.url);
   e.respondWith(
     caches.match(e.request).then(function(response) {

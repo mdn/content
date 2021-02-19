@@ -41,36 +41,36 @@ tags:
 
 <p>Try typing the following lines into your browser's JS console:</p>
 
-<pre class="brush: js notranslate">function hello() { return "Hello" };
+<pre class="brush: js">function hello() { return "Hello" };
 hello();</pre>
 
 <p>The function returns "Hello" — nothing special, right?</p>
 
 <p>But what if we turn this into an async function? Try the following:</p>
 
-<pre class="brush: js notranslate">async function hello() { return "Hello" };
+<pre class="brush: js">async function hello() { return "Hello" };
 hello();</pre>
 
 <p>Ah. Invoking the function now returns a promise. This is one of the traits of async functions — their return values are guaranteed to be converted to promises.</p>
 
 <p>You can also create an <a href="/en-US/docs/Web/JavaScript/Reference/Operators/async_function">async function expression</a>, like so:</p>
 
-<pre class="brush: js notranslate">let hello = async function() { return "Hello" };
+<pre class="brush: js">let hello = async function() { return "Hello" };
 hello();</pre>
 
 <p>And you can use arrow functions:</p>
 
-<pre class="brush: js notranslate">let hello = async () =&gt; { return "Hello" };</pre>
+<pre class="brush: js">let hello = async () =&gt; { return "Hello" };</pre>
 
 <p>These all do basically the same thing.</p>
 
 <p>To actually consume the value returned when the promise fulfills, since it is returning a promise, we could use a <code>.then()</code> block:</p>
 
-<pre class="brush: js notranslate">hello().then((value) =&gt; console.log(value))</pre>
+<pre class="brush: js">hello().then((value) =&gt; console.log(value))</pre>
 
 <p>or even just shorthand such as</p>
 
-<pre class="brush: js notranslate">hello().then(console.log)</pre>
+<pre class="brush: js">hello().then(console.log)</pre>
 
 <p>Like we saw in the last article.</p>
 
@@ -86,7 +86,7 @@ hello();</pre>
 
 <p>Here is a trivial example:</p>
 
-<pre class="brush: js notranslate">async function hello() {
+<pre class="brush: js">async function hello() {
   return greeting = await Promise.resolve("Hello");
 };
 
@@ -98,7 +98,7 @@ hello().then(alert);</pre>
 
 <p>Let's look back at a simple fetch example that we saw in the previous article:</p>
 
-<pre class="brush: js notranslate">fetch('coffee.jpg')
+<pre class="brush: js">fetch('coffee.jpg')
 .then(response =&gt; {
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
@@ -118,7 +118,7 @@ hello().then(alert);</pre>
 
 <p>By now, you should have a reasonable understanding of promises and how they work, but let's convert this to use async/await to see how much simpler it makes things:</p>
 
-<pre class="brush: js notranslate">async function myFetch() {
+<pre class="brush: js">async function myFetch() {
   let response = await fetch('coffee.jpg');
 
   if (!response.ok) {
@@ -142,7 +142,7 @@ myFetch()
 
 <p>Since an <code>async</code> keyword turns a function into a promise, you could refactor your code to use a hybrid approach of promises and await, bringing the second half of the function out into a new block to make it more flexible:</p>
 
-<pre class="brush: js notranslate">async function myFetch() {
+<pre class="brush: js">async function myFetch() {
   let response = await fetch('coffee.jpg');
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
@@ -168,7 +168,7 @@ myFetch().then((blob) =&gt; {
 
 <p>Once that's complete, your code continues to execute starting on the next line. For example:</p>
 
-<pre class="brush: js notranslate">let response = await fetch('coffee.jpg');</pre>
+<pre class="brush: js">let response = await fetch('coffee.jpg');</pre>
 
 <p>The response returned by the fulfilled <code>fetch()</code> promise is assigned to the <code>response</code> variable when that response becomes available, and the parser pauses on this line until that occurs. Once the response is available, the parser moves to the next line, which creates a <code><a href="/en-US/docs/Web/API/Blob">Blob</a></code> out of it. This line also invokes an async promise-based method, so we use <code>await</code> here as well. When the result of operation returns, we return it out of the <code>myFetch()</code> function.</p>
 
@@ -182,7 +182,7 @@ myFetch().then((blob) =&gt; {
 
 <p>You can use a synchronous <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> structure with <code>async</code>/<code>await</code>. This example expands on the first version of the code we showed above:</p>
 
-<pre class="brush: js notranslate">async function myFetch() {
+<pre class="brush: js">async function myFetch() {
   try {
     let response = await fetch('coffee.jpg');
 
@@ -206,7 +206,7 @@ myFetch();</pre>
 
 <p>If you wanted to use the second (refactored) version of the code that we showed above, you would be better off just continuing the hybrid approach and chaining a <code>.catch()</code> block onto the end of the <code>.then()</code> call, like this:</p>
 
-<pre class="brush: js notranslate">async function myFetch() {
+<pre class="brush: js">async function myFetch() {
   let response = await fetch('coffee.jpg');
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
@@ -240,7 +240,7 @@ myFetch().then((blob) =&gt; {
 
 <p>Converting this to async/await (see <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-all-async-await.html">live demo</a> and <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-all-async-await.html">source code</a>), this now looks like so:</p>
 
-<pre class="brush: js notranslate">async function fetchAndDecode(url, type) {
+<pre class="brush: js">async function fetchAndDecode(url, type) {
   let response = await fetch(url);
 
   let content;
@@ -289,7 +289,7 @@ displayContent()
 
 <p>You'll see that the <code>fetchAndDecode()</code> function has been converted easily into an async function with just a few changes. See the <code>Promise.all()</code> line:</p>
 
-<pre class="brush: js notranslate">let values = await Promise.all([coffee, tea, description]);</pre>
+<pre class="brush: js">let values = await Promise.all([coffee, tea, description]);</pre>
 
 <p>By using <code>await</code> here we are able to get all the results of the three promises returned into the <code>values</code> array, when they are all available, in a way that looks very much like sync code. We've had to wrap all the code in a new async function, <code>displayContent()</code>, and we've not reduced the code by a lot of lines, but being able to move the bulk of the code out of the <code>.then()</code> block provides a nice, useful simplification, leaving us with a much more readable program.</p>
 
@@ -305,7 +305,7 @@ displayContent()
 
 <p>Async/await makes your code look synchronous, and in a way it makes it behave more synchronously. The <code>await</code> keyword blocks execution of all the code that follows it until the promise fulfills, exactly as it would with a synchronous operation. It does allow other tasks to continue to run in the meantime, but the awaited code is blocked.</p>
 
-<pre class="brush: js notranslate">async function makeResult(items) {
+<pre class="brush: js">async function makeResult(items) {
  let newArr = [];
  for(let i=0; i &lt; items.length; i++) {
   newArr.push('word_'+i);
@@ -326,7 +326,7 @@ async function getResult() {
 
 <p>We've got two examples available — <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/slow-async-await.html">slow-async-await.html</a> (see <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/slow-async-await.html">source code</a>) and <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/fast-async-await.html">fast-async-await.html</a> (see <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/fast-async-await.html">source code</a>). Both of them start off with a custom promise function that fakes an async process with a <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> call:</p>
 
-<pre class="brush: js notranslate">function timeoutPromise(interval) {
+<pre class="brush: js">function timeoutPromise(interval) {
   return new Promise((resolve, reject) =&gt; {
     setTimeout(function(){
       resolve("done");
@@ -336,13 +336,13 @@ async function getResult() {
 
 <p>Then each one includes a <code>timeTest()</code> async function that awaits three <code>timeoutPromise()</code> calls:</p>
 
-<pre class="brush: js notranslate">async function timeTest() {
+<pre class="brush: js">async function timeTest() {
   ...
 }</pre>
 
 <p>Each one ends by recording a start time, seeing how long the <code>timeTest()</code> promise takes to fulfill, then recording an end time and reporting how long the operation took in total:</p>
 
-<pre class="brush: js notranslate">let startTime = Date.now();
+<pre class="brush: js">let startTime = Date.now();
 timeTest().then(() =&gt; {
   let finishTime = Date.now();
   let timeTaken = finishTime - startTime;
@@ -353,7 +353,7 @@ timeTest().then(() =&gt; {
 
 <p>In the <code>slow-async-await.html</code> example, <code>timeTest()</code> looks like this:</p>
 
-<pre class="brush: js notranslate">async function timeTest() {
+<pre class="brush: js">async function timeTest() {
   await timeoutPromise(3000);
   await timeoutPromise(3000);
   await timeoutPromise(3000);
@@ -363,7 +363,7 @@ timeTest().then(() =&gt; {
 
 <p>In the <code>fast-async-await.html</code> example, <code>timeTest()</code> looks like this:</p>
 
-<pre class="brush: js notranslate">async function timeTest() {
+<pre class="brush: js">async function timeTest() {
   const timeoutPromise1 = timeoutPromise(3000);
   const timeoutPromise2 = timeoutPromise(3000);
   const timeoutPromise3 = timeoutPromise(3000);
@@ -385,7 +385,7 @@ timeTest().then(() =&gt; {
 
 <p>As a final note before we move on, you can even add <code>async</code> in front of class/object methods to make them return promises, and <code>await</code> promises inside them. Take a look at the <a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance#ecmascript_2015_classes">ES class code we saw in our object-oriented JavaScript article</a>, and then look at our modified version with an <code>async</code> method:</p>
 
-<pre class="brush: js notranslate">class Person {
+<pre class="brush: js">class Person {
   constructor(first, last, age, gender, interests) {
     this.name = {
       first,
@@ -409,7 +409,7 @@ let han = new Person('Han', 'Solo', 25, 'male', ['Smuggling']);</pre>
 
 <p>The first class method could now be used something like this:</p>
 
-<pre class="brush: js notranslate">han.greeting().then(console.log);</pre>
+<pre class="brush: js">han.greeting().then(console.log);</pre>
 
 <h2 id="Browser_support">Browser support</h2>
 
