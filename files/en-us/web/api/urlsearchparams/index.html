@@ -105,6 +105,7 @@ let getBin = searchParams.get("bin"); // "E AXQB A" + char is replaced by spaces
 btoa(atob(getBin)); // "EAXQBA==" no error thrown
 btoa(String.fromCharCode(16,5,208,4)) // "EAXQBA==" decodes to wrong binary value
 getBin.replace(/ /g, "+"); // "E+AXQB+A" is one solution
+
 // or use set to add the parameter, but this increases the query string length 
 searchParams.set("bin2", base64) // "q=foo&bin=E+AXQB+A&bin2=E%2BAXQB%2BA" encodes + as %2B
 searchParams.get("bin2"); // "E+AXQB+A"</code></pre>
