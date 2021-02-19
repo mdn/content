@@ -242,11 +242,11 @@ tags:
 
 <p>Media types describe the general category of a given device. Although websites are commonly designed with screens in mind, you may want to create styles that target special devices such as printers or audio-based screenreaders. For example, this CSS targets printers:</p>
 
-<pre class="brush: css notranslate">@media print { ... }</pre>
+<pre class="brush: css">@media print { ... }</pre>
 
 <p>You can also target multiple devices. For instance, this <code>@media</code> rule uses two media queries to target both screen and print devices:</p>
 
-<pre class="brush: css notranslate">@media screen, print { ... }</pre>
+<pre class="brush: css">@media screen, print { ... }</pre>
 
 <p>See <a class="internal" href="#Media_types">Media types</a> for a list of all media types. Because they describe devices in only very broad terms, just a few are available; to target more specific attributes, use <em>media features</em> instead.</p>
 
@@ -254,19 +254,19 @@ tags:
 
 <p>Media features describe the specific characteristics of a given {{glossary("user agent")}}, output device, or environment. For instance, you can apply specific styles to widescreen monitors, computers that use mice, or to devices that are being used in low-light conditions. This example applies styles when the user's <em>primary</em> input mechanism (such as a mouse) can hover over elements:</p>
 
-<pre class="brush: css notranslate">@media (hover: hover) { ... }</pre>
+<pre class="brush: css">@media (hover: hover) { ... }</pre>
 
 <p>Many media features are <em>range features</em>, which means they can be prefixed with "min-" or "max-" to express "minimum condition" or "maximum condition" constraints. For example, this CSS will apply styles only if your browser's {{glossary("viewport")}} width is equal to or narrower than 12450px:</p>
 
-<pre class="brush: css notranslate">@media (max-width: 12450px) { ... }</pre>
+<pre class="brush: css">@media (max-width: 12450px) { ... }</pre>
 
 <p>If you create a media feature query without specifying a value, the nested styles will be used as long as the feature's value is not zero (or <code>none</code>, in Level 4). For example, this CSS will apply to any device with a color screen:</p>
 
-<pre class="brush: css notranslate">@media (color) { ... }</pre>
+<pre class="brush: css">@media (color) { ... }</pre>
 
 <p>If a feature doesn't apply to the device on which the browser is running, expressions involving that media feature are always false. For example, the styles nested inside the following query will never be used, because no speech-only device has a screen aspect ratio:</p>
 
-<pre class="brush: css notranslate">@media speech and (aspect-ratio: 11/5) { ... }</pre>
+<pre class="brush: css">@media speech and (aspect-ratio: 11/5) { ... }</pre>
 
 <p>For more <a href="#media_features">media feature</a> examples, please see the reference page for each specific feature.</p>
 
@@ -284,17 +284,17 @@ tags:
 
 <p>The <code>and</code> keyword combines a media feature with a media type <em>or</em> other media features. This example combines two media features to restrict styles to landscape-oriented devices with a width of at least 30 ems:</p>
 
-<pre class="brush: css notranslate">@media (min-width: 30em) and (orientation: landscape) { ... }</pre>
+<pre class="brush: css">@media (min-width: 30em) and (orientation: landscape) { ... }</pre>
 
 <p>To limit the styles to devices with a screen, you can chain the media features to the <code>screen</code> media type:</p>
 
-<pre class="brush: css notranslate">@media screen and (min-width: 30em) and (orientation: landscape) { ... }</pre>
+<pre class="brush: css">@media screen and (min-width: 30em) and (orientation: landscape) { ... }</pre>
 
 <h3 id="Testing_for_multiple_queries">Testing for multiple queries</h3>
 
 <p>You can use a comma-separated list to apply styles when the user's device matches any one of various media types, features, or states. For instance, the following rule will apply its styles if the user's device has either a minimum height of 680px <em>or</em> is a screen device in portrait mode:</p>
 
-<pre class="brush: css notranslate">@media (min-height: 680px), screen and (orientation: portrait) { ... }</pre>
+<pre class="brush: css">@media (min-height: 680px), screen and (orientation: portrait) { ... }</pre>
 
 <p>Taking the above example, if the user had a printer with a page height of 800px, the media statement would return true because the first query would apply. Likewise, if the user were on a smartphone in portrait mode with a viewport height of 480px, the second query would apply and the media statement would still return true.</p>
 
@@ -302,32 +302,32 @@ tags:
 
 <p>The <code>not</code> keyword inverts the meaning of an entire media query. It will only negate the specific media query it is applied to. (Thus, it will not apply to every media query in a comma-separated list of media queries.) The <code>not</code> keyword can't be used to negate an individual feature query, only an entire media query. The <code>not</code> is evaluated last in the following query:</p>
 
-<pre class="brush: css notranslate">@media not all and (monochrome) { ... }
+<pre class="brush: css">@media not all and (monochrome) { ... }
 </pre>
 
 <p>... so that the above query is evaluated like this:</p>
 
-<pre class="brush: css notranslate">@media not (all and (monochrome)) { ... }
+<pre class="brush: css">@media not (all and (monochrome)) { ... }
 </pre>
 
 <p>... rather than like this:</p>
 
-<pre class="brush: css example-bad notranslate">@media (not all) and (monochrome) { ... }</pre>
+<pre class="brush: css example-bad">@media (not all) and (monochrome) { ... }</pre>
 
 <p>As another example, the following media query:</p>
 
-<pre class="brush: css notranslate">@media not screen and (color), print and (color) { ... }
+<pre class="brush: css">@media not screen and (color), print and (color) { ... }
 </pre>
 
 <p>... is evaluated like this:</p>
 
-<pre class="brush: css notranslate">@media (not (screen and (color))), print and (color) { ... }</pre>
+<pre class="brush: css">@media (not (screen and (color))), print and (color) { ... }</pre>
 
 <h3 id="Improving_compatibility_with_older_browsers">Improving compatibility with older browsers</h3>
 
 <p>The <code>only</code> keyword prevents older browsers that do not support media queries with media features from applying the given styles. <em>It has no effect on modern browsers.</em></p>
 
-<pre class="brush: css notranslate">@media only screen and (color) { ... }
+<pre class="brush: css">@media only screen and (color) { ... }
 </pre>
 
 <h2 id="Syntax_improvements_in_Level_4">Syntax improvements in Level 4</h2>
@@ -338,19 +338,19 @@ tags:
 <p><strong>Note:</strong> The Media Queries Level 4 specification has reasonable support in modern browsers, but some media features are not well supported. See the <a href="/en-US/docs/Web/CSS/@media#Browser_compatibility"><code>@media</code> browser compatibility table</a> for more details.</p>
 </div>
 
-<pre class="brush: css notranslate">@media (max-width: 30em) { ... }</pre>
+<pre class="brush: css">@media (max-width: 30em) { ... }</pre>
 
 <p>In Media Queries Level 4 this can be written as:</p>
 
-<pre class="brush: css notranslate">@media (width &lt;= 30em) { ... }</pre>
+<pre class="brush: css">@media (width &lt;= 30em) { ... }</pre>
 
 <p>Using <code>min-</code> and <code>max-</code> we might test for a width between two values like so:</p>
 
-<pre class="brush: css notranslate">@media (min-width: 30em) and (max-width: 50em) { ... }</pre>
+<pre class="brush: css">@media (min-width: 30em) and (max-width: 50em) { ... }</pre>
 
 <p>This would convert to the Level 4 syntax as:</p>
 
-<pre class="brush: css notranslate">@media (30em &lt;= width &lt;= 50em ) { ... }
+<pre class="brush: css">@media (30em &lt;= width &lt;= 50em ) { ... }
 </pre>
 
 <p>Media Queries Level 4 also adds ways to combine media queries using full boolean algebra with <strong>and</strong>, <strong>not</strong>, and <strong>or</strong>.</p>
@@ -359,13 +359,13 @@ tags:
 
 <p>Using <code>not()</code> around a media feature negates that feature in the query. For example, <code>not(hover)</code> would match if the device had no hover capability:</p>
 
-<pre class="brush: css notranslate">@media (not(hover)) { ... }</pre>
+<pre class="brush: css">@media (not(hover)) { ... }</pre>
 
 <h3 id="Testing_for_multiple_features_with_or">Testing for multiple features with <code>or</code></h3>
 
 <p>You can use <code>or</code> to test for a match among more than one feature, resolving to <code>true</code> if any of the features are true. For example, the following query tests for devices that have a monochrome display or hover capability:</p>
 
-<pre class="brush: css notranslate">@media (not (color)) or (hover) { ... }
+<pre class="brush: css">@media (not (color)) or (hover) { ... }
 </pre>
 
 <h2 id="See_also">See also</h2>

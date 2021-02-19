@@ -13,7 +13,7 @@ tags:
 
 <p>The <strong><code>mask-size</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies the sizes of the mask images. The size of the image can be fully or partially constrained in order to preserve its intrinsic ratio.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Keywords syntax */
+<pre class="brush: css no-line-numbers">/* Keywords syntax */
 mask-size: cover;
 mask-size: contain;
 
@@ -102,14 +102,14 @@ mask-size: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Setting_mask_size_as_a_percentage">Setting mask size as a percentage</h3>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css; highlight[6] notranslate">#masked {
+<pre class="brush: css; highlight[6]">#masked {
   width: 200px;
   height: 200px;
   background: blue linear-gradient(red, blue);
@@ -124,7 +124,7 @@ mask-size: unset;
 <div class="hidden">
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div id="masked"&gt;
+<pre class="brush: html">&lt;div id="masked"&gt;
 &lt;/div&gt;
 &lt;select id="maskSize"&gt;
   &lt;option value="auto"&gt;auto&lt;/option&gt;
@@ -138,7 +138,7 @@ mask-size: unset;
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">var maskSize = document.getElementById("maskSize");
+<pre class="brush: js">var maskSize = document.getElementById("maskSize");
 maskSize.addEventListener("change", function (evt) {
   document.getElementById("masked").style.maskSize = evt.target.value;
 });

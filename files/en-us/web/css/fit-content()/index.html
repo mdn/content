@@ -26,7 +26,7 @@ tags:
 
 <p>The <code>fit-content()</code> function accepts a <code>&lt;length&gt;</code> or a <code>&lt;percentage&gt;</code> as an argument.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* &lt;length&gt; values */
+<pre class="brush: css no-line-numbers">/* &lt;length&gt; values */
 fit-content(200px)
 fit-content(5cm)
 fit-content(30vw)
@@ -52,7 +52,7 @@ fit-content(40%)
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div id="container"&gt;
+<pre class="brush: html">&lt;div id="container"&gt;
   &lt;div&gt;Item as wide as the content.&lt;/div&gt;
   &lt;div&gt;
     Item with more text in it. Because the contents of it are
@@ -63,7 +63,7 @@ fit-content(40%)
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css; highlight[3] notranslate">#container {
+<pre class="brush: css; highlight[3]">#container {
   display: grid;
   grid-template-columns: fit-content(300px) fit-content(300px) 1fr;
   grid-gap: 5px;

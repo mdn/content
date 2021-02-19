@@ -33,12 +33,12 @@ tags:
 
 <p>The width of the viewport is not always the width of the window. If you query the width or height of the window and document in Chrome or Firefox, you may get:</p>
 
-<pre class="brush: js notranslate">document.documentElement.clientWidth /* 1200 */
+<pre class="brush: js">document.documentElement.clientWidth /* 1200 */
 window.innerWidth /* 1200 */
 window.outerWidth /* 1200 */
 </pre>
 
-<pre class="brush: js notranslate">document.documentElement.clientHeight /* 800 */
+<pre class="brush: js">document.documentElement.clientHeight /* 800 */
 window.innerHeight /* 800 */
 window.outerHeight /* 900 */
 </pre>
@@ -57,19 +57,19 @@ window.outerHeight /* 900 */
 
 <p>When zoomed in, both Firefox and Chrome report the new CSS pixel size for <code>innerWidth</code> and <code>clientWidth</code>. The values returned for the <code>outerWidth</code> and <code>outerHeight</code> depend on the browser: Firefox reports the new value in CSS pixels, but Chrome returns the length in the default pixel size. When zoomed in you may get:</p>
 
-<pre class="brush: js notranslate">document.documentElement.clientWidth /* 800 */
+<pre class="brush: js">document.documentElement.clientWidth /* 800 */
 window.innerWidth /* 800 */
 window.outerWidth /* 800 in Firefox, 1200 in chrome */
 </pre>
 
-<pre class="brush: js notranslate">document.documentElement.clientHeight /* 533 */
+<pre class="brush: js">document.documentElement.clientHeight /* 533 */
 window.innerHeight /* 533 */
 window.outerHeight /* 596 in Firefox, 900 in chrome */
 </pre>
 
 <p>The viewport was originally 1200 x 800 pixels. Upon zooming in, the viewport became 800 x 533 pixels. This is the <em>layout viewport</em>. Sticky headers or footers, with the following styles, will stick to the top and bottom of the <em>layout viewport</em> respectively.</p>
 
-<pre class="brush: css notranslate">body &gt; header {
+<pre class="brush: css">body &gt; header {
   position: fixed;
   top: 0;
 }
@@ -101,7 +101,7 @@ body &gt; footer {
 
 <p>If you use viewport length units in your CSS within the iframe document, <code>1vh</code> will be 1% of the height of the iframe, and <code>1vw</code> will be 1% of the width of the document.</p>
 
-<pre class="brush: css notranslate">iframe {
+<pre class="brush: css">iframe {
     width: 50vw;
 }
 </pre>
@@ -110,7 +110,7 @@ body &gt; footer {
 
 <p>A width-based media query within the iframe document is relative to the iframe's viewport.</p>
 
-<pre class="brush: css notranslate">@media screen and (min-width: 500px) {
+<pre class="brush: css">@media screen and (min-width: 500px) {
     p {
         color: red;
     }
@@ -123,7 +123,7 @@ body &gt; footer {
 
 <p>In an SVG document, the viewport is the visible area of the SVG image. You can set any height and width on an SVG, but the whole image might not be visible. The area that is visible is called the viewport. The size of the viewport can be defined using the width and height attributes of the {{SVGElement("svg")}} element.</p>
 
-<pre class="brush: html notranslate">&lt;svg height="300" width="400"&gt;&lt;/svg&gt;</pre>
+<pre class="brush: html">&lt;svg height="300" width="400"&gt;&lt;/svg&gt;</pre>
 
 <p>In this examples, the viewport has an aspect ratio of 3::4, and is, but default, 400 by 300 units, with a unit generally being a CSS pixel.</p>
 
@@ -131,7 +131,7 @@ body &gt; footer {
 
 <p>If you include an SVG file in your HTML, the viewport of the SVG is the initial containing block, or the width and height of the SVG container. Using the {{CSSxRef("@media")}} query in your SVG's CSS is relative to that container, not the browser.</p>
 
-<pre class="brush: css notranslate">@media screen and (min-width: 400px) and (max-width: 500px) {
+<pre class="brush: css">@media screen and (min-width: 400px) and (max-width: 500px) {
   /* css goes here */
 }</pre>
 
@@ -145,7 +145,7 @@ body &gt; footer {
 
 <p>Mobile devices come in all <s>shapes and</s> sizes, with screens of differing device pixel ratios. The mobile browser's viewport is the area of the window in which web content can be seen, which is not necessarily the same size as the rendered page. Mobile browsers render pages in a virtual window or viewport, generally at 980px, which is usually wider than the screen, and then shrink the rendered result down so it can all be seen at once. Users can then pan and zoom to see different areas of the page. For example, if a mobile screen has a width of 320px, a website might be rendered with a virtual viewport of 980px, and then it will be shrunk down to fit into the 320px space, which, depending on the design, is illegible for many if not everyone. To tell a mobile browser to use the viewport width instead of the default 980px as the width of the screen, developers can include a viewport meta tag, like the following:</p>
 
-<pre class="brush: html notranslate">&lt;meta name="viewport" content="width=device-width"&gt;</pre>
+<pre class="brush: html">&lt;meta name="viewport" content="width=device-width"&gt;</pre>
 
 <p>The <code>width</code> property controls the size of the viewport. It should preferably be set to <code>device-width</code>, which is the width of the screen in CSS pixels at a scale of 100%. There are other properties, including <code>maximum-scale</code>, <code>minimum-scale</code>, and <code>user-scalable</code>, which control whether users can zoom the page in or out, but the default values are the best for accessibility and user experience, so these can be omitted.</p>
 

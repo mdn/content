@@ -100,7 +100,7 @@ tags:
 
 <p>If the {{HTMLElement("source")}}'s media condition evaluates to <code>false</code>, the browser skips it and evaluates the next element inside <code>&lt;picture&gt;</code>.</p>
 
-<pre class="brush: html notranslate">&lt;picture&gt;
+<pre class="brush: html">&lt;picture&gt;
   &lt;source srcset="mdn-logo-wide.png" media="(min-width: 600px)"&gt;
   &lt;img src="mdn-logo-narrow.png" alt="MDN"&gt;
 &lt;/picture&gt;
@@ -118,7 +118,7 @@ tags:
  <li>a <em>pixel density descriptor</em>, followed by an <code>x</code> (such as <code>2x</code>) to serve a high-res image for high-DPI screens.</li>
 </ul>
 
-<pre class="brush: html notranslate">&lt;picture&gt;
+<pre class="brush: html">&lt;picture&gt;
   &lt;source srcset="logo-768.png 768w, logo-768-1.5x.png 1.5x"&gt;
   &lt;source srcset="logo-480.png, logo-480-2x.png 2x"&gt;
   &lt;img src="logo-320.png" alt="logo"&gt;
@@ -128,7 +128,7 @@ tags:
 
 <p>The <code>type</code> attribute specifies a <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a> for the resource URL(s) in the {{HTMLElement("source")}} element's <code>srcset</code> attribute. If the user agent does not support the given type, the {{HTMLElement("source")}} element is skipped.</p>
 
-<pre class="brush: html notranslate">&lt;picture&gt;
+<pre class="brush: html">&lt;picture&gt;
   &lt;source srcset="logo.webp" type="image/webp"&gt;
   &lt;img src="logo.png" alt="logo"&gt;
 &lt;/picture&gt;

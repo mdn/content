@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css no-line-numbers notranslate">/* &lt;inflexible-breadth&gt;, &lt;track-breadth&gt; values */
+<pre class="brush: css no-line-numbers">/* &lt;inflexible-breadth&gt;, &lt;track-breadth&gt; values */
 minmax(200px, 1fr)
 minmax(400px, 50%)
 minmax(30%, 300px)
@@ -70,7 +70,7 @@ minmax(auto, 300px)
 
 <h3 id="Formal_syntax">Formal syntax</h3>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h3 id="CSS_properties">CSS properties</h3>
 
@@ -87,7 +87,7 @@ minmax(auto, 300px)
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css; highlight[3] notranslate">#container {
+<pre class="brush: css; highlight[3]">#container {
   display: grid;
   grid-template-columns: minmax(min-content, 300px) minmax(200px, 1fr) 150px;
   grid-gap: 5px;
@@ -106,7 +106,7 @@ minmax(auto, 300px)
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;div id="container"&gt;
+<pre class="brush: html">&lt;div id="container"&gt;
   &lt;div&gt;
     Item as wide as the content, but at most 300 pixels.
   &lt;/div&gt;

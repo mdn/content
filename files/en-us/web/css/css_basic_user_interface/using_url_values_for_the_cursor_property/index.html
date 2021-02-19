@@ -16,24 +16,24 @@ tags:
 
 <p>The basic (CSS 2.1) syntax for this property is:</p>
 
-<pre class="brush: css notranslate">{{CSSxRef("cursor")}}: <a href="/en-US/docs/CSS/Value_definition_syntax#Brackets" title="Brackets: enclose several entities, combinators, and multipliers to transform them as a single component">[</a> {{CSSxRef("&lt;url&gt;")}} , <a href="/en-US/docs/CSS/Value_definition_syntax#Brackets" title="Brackets: enclose several entities, combinators, and multipliers to transform them as a single component">]</a><a href="/en-US/docs/CSS/Value_definition_syntax#Asterisk" title="Asterisk: the entity may occur zero, one or several times">*</a> {{CSSxRef("cursor", "<var>&lt;keyword&gt;</var>", "#Values")}}</pre>
+<pre class="brush: css">{{CSSxRef("cursor")}}: <a href="/en-US/docs/CSS/Value_definition_syntax#Brackets" title="Brackets: enclose several entities, combinators, and multipliers to transform them as a single component">[</a> {{CSSxRef("&lt;url&gt;")}} , <a href="/en-US/docs/CSS/Value_definition_syntax#Brackets" title="Brackets: enclose several entities, combinators, and multipliers to transform them as a single component">]</a><a href="/en-US/docs/CSS/Value_definition_syntax#Asterisk" title="Asterisk: the entity may occur zero, one or several times">*</a> {{CSSxRef("cursor", "<var>&lt;keyword&gt;</var>", "#Values")}}</pre>
 
 <p>This means that zero or more URLs may be specified (comma-separated), which <strong>must</strong> be followed by one of the keywords defined in the CSS specification, such as <code>auto</code> or <code>pointer</code>.</p>
 
 <p>For example, the following value would be allowed:</p>
 
-<pre class="brush: css notranslate">cursor: url(foo.cur), url(http://www.example.com/bar.gif), auto;</pre>
+<pre class="brush: css">cursor: url(foo.cur), url(http://www.example.com/bar.gif), auto;</pre>
 
 <p>This will first try loading <em>foo.cur</em>. If that file does not exist or is not valid for some other reason, <em>bar.gif</em> is tried, and if that can't be used either, <code>auto</code> will be used.</p>
 
 <p>Support for the CSS 3 syntax for cursor values got added in Gecko 1.8 (Firefox 1.5):</p>
 
-<pre class="brush: css notranslate">{{CSSxRef("cursor")}}: <a href="/en-US/docs/CSS/Value_definition_syntax#Brackets" title="Brackets: enclose several entities, combinators, and multipliers to transform them as a single component">[</a> {{CSSxRef("&lt;uri&gt;")}} <a href="/en-US/docs/CSS/Value_definition_syntax#Brackets" title="Brackets: enclose several entities, combinators, and multipliers to transform them as a single component">[</a> &lt;x&gt; &lt;y&gt; <a href="/en-US/docs/CSS/Value_definition_syntax#Brackets" title="Brackets: enclose several entities, combinators, and multipliers to transform them as a single component">]</a><a href="/en-US/docs/CSS/Value_definition_syntax#Question_mark" title="Question mark: the entity is optional">?</a> , <a href="/en-US/docs/CSS/Value_definition_syntax#Brackets" title="Brackets: enclose several entities, combinators, and multipliers to transform them as a single component">]</a><a href="/en-US/docs/CSS/Value_definition_syntax#Asterisk" title="Asterisk: the entity may occur zero, one or several times">*</a> {{CSSxRef("cursor", "<var>&lt;keyword&gt;</var>", "#Values")}}
+<pre class="brush: css">{{CSSxRef("cursor")}}: <a href="/en-US/docs/CSS/Value_definition_syntax#Brackets" title="Brackets: enclose several entities, combinators, and multipliers to transform them as a single component">[</a> {{CSSxRef("&lt;uri&gt;")}} <a href="/en-US/docs/CSS/Value_definition_syntax#Brackets" title="Brackets: enclose several entities, combinators, and multipliers to transform them as a single component">[</a> &lt;x&gt; &lt;y&gt; <a href="/en-US/docs/CSS/Value_definition_syntax#Brackets" title="Brackets: enclose several entities, combinators, and multipliers to transform them as a single component">]</a><a href="/en-US/docs/CSS/Value_definition_syntax#Question_mark" title="Question mark: the entity is optional">?</a> , <a href="/en-US/docs/CSS/Value_definition_syntax#Brackets" title="Brackets: enclose several entities, combinators, and multipliers to transform them as a single component">]</a><a href="/en-US/docs/CSS/Value_definition_syntax#Asterisk" title="Asterisk: the entity may occur zero, one or several times">*</a> {{CSSxRef("cursor", "<var>&lt;keyword&gt;</var>", "#Values")}}
 </pre>
 
 <p>It allows specifying the coordinates of the cursor's hotspot, which will be clamped to the boundaries of the cursor image. If none are specified, the coordinates of the hotspot are read from the file itself (for CUR and XBM files) or are set to the top left corner of the image. An example of the CSS3 syntax is:</p>
 
-<pre class="brush: css; notranslate">.foo  {
+<pre class="brush: css;">.foo  {
   cursor: auto;
   cursor: url(cursor1.png) 4 12, auto;
 }

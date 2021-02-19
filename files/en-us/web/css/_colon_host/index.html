@@ -22,7 +22,7 @@ tags:
 <p><strong>Note</strong>: This has no effect when used outside a shadow DOM.</p>
 </div>
 
-<pre class="brush: css no-line-numbers notranslate">/* Selects a shadow root host */
+<pre class="brush: css no-line-numbers">/* Selects a shadow root host */
 :host {
   font-weight: bold;
 }
@@ -30,7 +30,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate">:host
+<pre>:host
 </pre>
 
 <h2 id="Examples">Examples</h2>
@@ -41,11 +41,11 @@ tags:
 
 <p>In this example we have a simple custom element — <code>&lt;context-span&gt;</code> — that you can wrap around text:</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Host selectors &lt;a href="#"&gt;&lt;context-span&gt;example&lt;/context-span&gt;&lt;/a&gt;&lt;/h1&gt;</pre>
+<pre class="brush: html">&lt;h1&gt;Host selectors &lt;a href="#"&gt;&lt;context-span&gt;example&lt;/context-span&gt;&lt;/a&gt;&lt;/h1&gt;</pre>
 
 <p>Inside the element's constructor, we create <code>style</code> and <code>span</code> elements, fill the <code>span</code> with the content of the custom element, and fill the <code>style</code> element with some CSS rules:</p>
 
-<pre class="brush: js notranslate">let style = document.createElement('style');
+<pre class="brush: js">let style = document.createElement('style');
 let span = document.createElement('span');
 span.textContent = this.textContent;
 

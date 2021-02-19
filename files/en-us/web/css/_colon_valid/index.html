@@ -13,7 +13,7 @@ tags:
 
 <p>The <strong><code>:valid</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents any {{HTMLElement("input")}} or other {{HTMLElement("form")}} element whose contents <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">validate</a> successfully. This allows to easily make valid fields adopt an appearance that helps the user confirm that their data is formatted properly.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Selects any valid &lt;input&gt; */
+<pre class="brush: css no-line-numbers">/* Selects any valid &lt;input&gt; */
 input:valid {
   background-color: powderblue;
 }</pre>
@@ -22,7 +22,7 @@ input:valid {
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -30,7 +30,7 @@ input:valid {
 
 <p>In this example, we use structures like this, which include extra <code>&lt;span&gt;</code>s to generate content on; we'll use these to provide indicators of valid/invalid data:</p>
 
-<pre class="brush: html notranslate">&lt;div&gt;
+<pre class="brush: html">&lt;div&gt;
   &lt;label for="fname"&gt;First name *: &lt;/label&gt;
   &lt;input id="fname" name="fname" type="text" required&gt;
   &lt;span&gt;&lt;/span&gt;
@@ -38,7 +38,7 @@ input:valid {
 
 <p>To provide these indicators, we use the following CSS:</p>
 
-<pre class="brush: css notranslate">input + span {
+<pre class="brush: css">input + span {
   position: relative;
 }
 

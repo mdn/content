@@ -18,7 +18,7 @@ tags:
 
 <p>A feature query consists of the <code>@supports</code> rule, followed by the property name and value you would like to test for. You may not test for a bare property name such as <code>display</code>; the rule requires a property name and a value:</p>
 
-<pre class="brush: css notranslate">@supports (<em>property</em>: <em>value</em>) {
+<pre class="brush: css">@supports (<em>property</em>: <em>value</em>) {
   <em>CSS rules to apply</em>
 }</pre>
 
@@ -32,7 +32,7 @@ tags:
 
 <p>In addition to asking the browser if it supports a feature, you can test for the opposite by adding in the <code>not</code> keyword:</p>
 
-<pre class="brush: css notranslate">@supports not (<em>property</em>: <em>value</em>) {
+<pre class="brush: css">@supports not (<em>property</em>: <em>value</em>) {
   <em>CSS rules to apply</em>
 }</pre>
 
@@ -44,7 +44,7 @@ tags:
 
 <p>You may need to test support for more than one property in your feature query. To do so, you can include a list of features to test for, separated by <code>and</code> keywords:</p>
 
-<pre class="brush: css notranslate">@supports (<em>property1</em>: <em>value</em>) and (<em>property</em>2: <em>value</em>) {
+<pre class="brush: css">@supports (<em>property1</em>: <em>value</em>) and (<em>property</em>2: <em>value</em>) {
 <em>  CSS rules to apply</em>
 }</pre>
 
@@ -54,7 +54,7 @@ tags:
 
 <p>You can also use <code>or</code>, if one property out of a selection could match to enable the CSS you want to use:</p>
 
-<pre class="brush: css notranslate">@supports (<em>property1</em>: <em>value</em>) or (<em>property</em>2: <em>value</em>) {<em>
+<pre class="brush: css">@supports (<em>property1</em>: <em>value</em>) or (<em>property</em>2: <em>value</em>) {<em>
   CSS rules to apply</em>
 }</pre>
 

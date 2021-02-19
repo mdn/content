@@ -27,7 +27,7 @@ tags:
 <dl>
  <dt><code><a id="inset()"></a>inset()</code></dt>
  <dd>
- <pre class="brush: css notranslate">inset( &lt;shape-arg&gt;{1,4} [round &lt;border-radius&gt;]? )</pre>
+ <pre class="brush: css">inset( &lt;shape-arg&gt;{1,4} [round &lt;border-radius&gt;]? )</pre>
 
  <p>Defines an inset rectangle.</p>
 
@@ -39,7 +39,7 @@ tags:
  </dd>
  <dt><code><a id="circle()"></a>circle()</code></dt>
  <dd>
- <pre class="brush: css notranslate">circle( [&lt;shape-radius&gt;]? [at &lt;position&gt;]? )</pre>
+ <pre class="brush: css">circle( [&lt;shape-radius&gt;]? [at &lt;position&gt;]? )</pre>
 
  <p>The <code>&lt;shape-radius&gt;</code> argument represents <em>r</em>, the radius of the circle. Negative values are invalid. A percentage value here is resolved from the used width and height of the reference box as <code>sqrt(width^2+height^2)/sqrt(2)</code>.</p>
 
@@ -47,7 +47,7 @@ tags:
  </dd>
  <dt><code><a id="ellipse()"></a>ellipse()</code></dt>
  <dd>
- <pre class="brush: css notranslate">ellipse( [&lt;shape-radius&gt;{2}]? [at &lt;position&gt;]? )</pre>
+ <pre class="brush: css">ellipse( [&lt;shape-radius&gt;{2}]? [at &lt;position&gt;]? )</pre>
 
  <p>The <code>&lt;shape-radius&gt;</code> arguments represent r<sub>x</sub> and r<sub>y</sub>, the x-axis and y-axis radii of the ellipse, in that order. Negative values for either radius are invalid. Percentage values here are resolved against the used width (for the r<sub>x</sub> value) and the used height (for the r<sub>y</sub> value) of the reference box.</p>
 
@@ -55,7 +55,7 @@ tags:
  </dd>
  <dt><code><a id="polygon()"></a>polygon()</code></dt>
  <dd>
- <pre class="brush: css notranslate">polygon( [&lt;fill-rule&gt;,]? [&lt;shape-arg&gt; &lt;shape-arg&gt;]# )</pre>
+ <pre class="brush: css">polygon( [&lt;fill-rule&gt;,]? [&lt;shape-arg&gt; &lt;shape-arg&gt;]# )</pre>
 
  <p><code>&lt;fill-rule&gt;</code> represents the <a href="/en-US/docs/Web/SVG/Attribute/fill-rule">filling rule</a> used to determine the interior of the polygon. Possible values are <code>nonzero</code> and <code>evenodd</code>. Default value when omitted is <code>nonzero</code>.</p>
 
@@ -63,7 +63,7 @@ tags:
  </dd>
  <dt><code><a id="path()"></a>path()</code></dt>
  <dd>
- <pre class="brush: css notranslate">path( [&lt;fill-rule&gt;,]? &lt;string&gt;)</pre>
+ <pre class="brush: css">path( [&lt;fill-rule&gt;,]? &lt;string&gt;)</pre>
 
  <p>The optional <code>&lt;fill-rule&gt;</code> represents the <a href="/en-US/docs/Web/SVG/Attribute/fill-rule">filling rule</a> used to determine the interior of the path. Possible values are <code>nonzero</code> and <code>evenodd</code>. Default value when omitted is <code>nonzero</code>.</p>
 
@@ -73,7 +73,7 @@ tags:
 
 <p>The arguments not defined above are defined as follows:</p>
 
-<pre class="brush: css notranslate">&lt;shape-arg&gt; = &lt;length&gt; | &lt;percentage&gt;
+<pre class="brush: css">&lt;shape-arg&gt; = &lt;length&gt; | &lt;percentage&gt;
 &lt;shape-radius&gt; = &lt;length&gt; | &lt;percentage&gt; | closest-side | farthest-side</pre>
 
 <p>Defines a radius for a circle or ellipse. If omitted it defaults to <code>closest-side</code>.</p>
@@ -115,11 +115,11 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div&gt;&lt;/div&gt;</pre>
+<pre class="brush: html">&lt;div&gt;&lt;/div&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   width: 300px;
   height: 300px;
   background: repeating-linear-gradient(red, orange 50px);

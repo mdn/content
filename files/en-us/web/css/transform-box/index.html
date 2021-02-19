@@ -14,7 +14,7 @@ tags:
 
 <p>The <strong><code>transform-box</code></strong> CSS property defines the layout box to which the {{cssxref("transform")}} and {{cssxref("transform-origin")}} properties relate.</p>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush:css no-line-numbers">/* Keyword values */
 transform-box: content-box;
 transform-box: border-box;
 transform-box: fill-box;
@@ -54,7 +54,7 @@ transform-box: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -62,7 +62,7 @@ transform-box: unset;
 
 <p>In this example we have an SVG:</p>
 
-<pre class="brush: html notranslate">&lt;svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"&gt;
+<pre class="brush: html">&lt;svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"&gt;
   &lt;g&gt;
     &lt;circle id="center" fill="red" r="1" transform="translate(25 25)" /&gt;
     &lt;circle id="boxcenter" fill="blue" r=".5" transform="translate(15 15)" /&gt;
@@ -72,7 +72,7 @@ transform-box: unset;
 
 <p>In the CSS we have an animation that uses a transform to rotate the rectangle infinitely. <code>transform-box: fill-box</code> is used to make the <code>transform-origin</code> the center of the bounding box, so the rectangle spins in place. Without it, the transform origin is the center of the SVG canvas, and so you get a very different effect.</p>
 
-<pre class="brush: css notranslate">svg{
+<pre class="brush: css">svg{
   width:80vh;
   border:1px solid #d9d9d9;
   position:absolute;

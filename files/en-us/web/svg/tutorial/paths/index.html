@@ -26,7 +26,7 @@ tags:
 
 <p>There are five line commands for {{SVGElement("path")}} nodes. The first command is the "Move To" or <code>M</code>, which was described above. It takes two parameters, a coordinate (<code>x</code>) and coordinate (<code>y</code>) to move to. If the cursor was already somewhere on the page, no line is drawn to connect the two positions. The "Move To" command appears at the beginning of paths to specify where the drawing should start. For example:</p>
 
-<pre class="brush: html notranslate"><strong>M</strong> <var>x</var> <var>y</var>
+<pre class="brush: html"><strong>M</strong> <var>x</var> <var>y</var>
 (or)
 <strong>m</strong> <var>dx</var> <var>dy</var>
 </pre>
@@ -35,7 +35,7 @@ tags:
 
 <p><img alt="" class="internal" src="blank_path_area.png" style="float: right;"></p>
 
-<pre class="brush: xml notranslate">&lt;svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: xml">&lt;svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"&gt;
 
   &lt;path d="M10 10"/&gt;
 
@@ -46,14 +46,14 @@ tags:
 
 <p>There are three commands that draw lines. The most generic is the "Line To" command, called with <code>L</code>. <code>L</code> takes two parameters—x and y coordinates—and draws a line from the current position to a new position.</p>
 
-<pre class="brush: html notranslate"> <strong>L</strong> <var>x</var> <var>y</var>
+<pre class="brush: html"> <strong>L</strong> <var>x</var> <var>y</var>
  (or)
  <strong>l</strong> <var>dx</var> <var>dy</var>
 </pre>
 
 <p>There are two abbreviated forms for drawing horizontal and vertical lines. <code>H</code> draws a horizontal line, and <code>V</code> draws a vertical line. Both commands only take one parameter since they only move in one direction.</p>
 
-<pre class="brush: html notranslate"> <strong>H</strong> <var>x</var>
+<pre class="brush: html"> <strong>H</strong> <var>x</var>
  (or)
  <strong>h</strong> <var>dx</var>
 
@@ -66,7 +66,7 @@ tags:
 
 <p><img alt="" class="internal" src="path_line_commands.png" style="float: right;"></p>
 
-<pre class="brush: xml notranslate">&lt;svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: xml">&lt;svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"&gt;
 
   &lt;path d="M 10 10 H 90 V 90 H 10 L 10 10"/&gt;
 
@@ -80,19 +80,19 @@ tags:
 
 <p>We can shorten the above path declaration a little bit by using the "Close Path" command, called with <code>Z</code>. This command draws a straight line from the current position back to the first point of the path. It is often placed at the end of a path node, although not always. There is no difference between the uppercase and lowercase command.</p>
 
-<pre class="brush: html notranslate"> <strong>Z</strong>
+<pre class="brush: html"> <strong>Z</strong>
  (or)
  <strong>z</strong>
 </pre>
 
 <p>So our path above could be shortened to:</p>
 
-<pre class="brush: xml notranslate"> &lt;path d="M 10 10 H 90 V 90 H 10 Z" fill="transparent" stroke="black"/&gt;
+<pre class="brush: xml"> &lt;path d="M 10 10 H 90 V 90 H 10 Z" fill="transparent" stroke="black"/&gt;
 </pre>
 
 <p>The relative forms of these commands can also be used to draw the same picture. Relative commands are called by using lowercase letters, and rather than moving the cursor to an exact coordinate, they move it relative to its last position. For instance, since our box is 80×80, the <code>&lt;path&gt;</code> element could have been written as:</p>
 
-<pre class="brush: xml notranslate"> &lt;path d="M 10 10 h 80 v 80 h -80 Z" fill="transparent" stroke="black"/&gt;
+<pre class="brush: xml"> &lt;path d="M 10 10 h 80 v 80 h -80 Z" fill="transparent" stroke="black"/&gt;
 </pre>
 
 <p>The path will move to point (<code>10</code>,<code>10</code>) and then move horizontally 80 points to the right, then 80 points down, then 80 points to the left, and then back to the start.</p>
@@ -107,7 +107,7 @@ tags:
 
 <p>The cubic curve, <code>C</code>, is the slightly more complex curve. Cubic Béziers take in two control points for each point. Therefore, to create a cubic Bézier, three sets of coordinates need to be specified.</p>
 
-<pre class="brush: html notranslate"> <strong>C</strong> <var>x1</var> <var>y1</var>, <var>x2</var> <var>y2</var>, <var>x</var> <var>y</var>
+<pre class="brush: html"> <strong>C</strong> <var>x1</var> <var>y1</var>, <var>x2</var> <var>y2</var>, <var>x</var> <var>y</var>
  (or)
  <strong>c</strong> <var>dx1</var> <var>dy1</var>, <var>dx2</var> <var>dy2</var>, <var>dx</var> <var>dy</var>
 </pre>
@@ -116,7 +116,7 @@ tags:
 
 <p><img alt="Cubic Bézier Curves with grid" class="internal" src="cubic_bézier_curves_with_grid.png" style="float: right;"></p>
 
-<pre class="brush: xml notranslate">&lt;svg width="190" height="160" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: xml">&lt;svg width="190" height="160" xmlns="http://www.w3.org/2000/svg"&gt;
 
   &lt;path d="M 10 10 C 20 20, 40 20, 50 10" stroke="black" fill="transparent"/&gt;
   &lt;path d="M 70 10 C 70 20, 110 20, 110 10" stroke="black" fill="transparent"/&gt;
@@ -135,7 +135,7 @@ tags:
 
 <p>Several Bézier curves can be stringed together to create extended, smooth shapes. Often, the control point on one side of a point will be a reflection of the control point used on the other side to keep the slope constant. In this case, a shortcut version of the cubic Bézier can be used, designated by the command <code>S</code> (or <code>s</code>).</p>
 
-<pre class="brush: html notranslate"> <strong>S</strong> <var>x2</var> <var>y2</var>, <var>x</var> <var>y</var>
+<pre class="brush: html"> <strong>S</strong> <var>x2</var> <var>y2</var>, <var>x</var> <var>y</var>
  (or)
  <strong>s</strong> <var>dx2</var> <var>dy2</var>, <var>dx</var> <var>dy</var>
 </pre>
@@ -146,7 +146,7 @@ tags:
 
 <p><img class="internal" src="shortcut_cubic_bézier_with_grid.png" style="float: right;"></p>
 
-<pre class="brush: xml notranslate">&lt;svg width="190" height="160" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: xml">&lt;svg width="190" height="160" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;path d="M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80" stroke="black" fill="transparent"/&gt;
 &lt;/svg&gt;</pre>
 
@@ -156,20 +156,20 @@ tags:
 <p><strong>Note:</strong> The co-ordinate deltas for <code>q</code> are both relative to the previous point (that is, <code>dx</code> and <code>dy</code> are not relative to <code>dx1</code> and <code>dy1</code>).</p>
 </div>
 
-<pre class="brush: html notranslate"> <strong>Q</strong> <var>x1</var> <var>y1</var>, <var>x</var> <var>y</var>
+<pre class="brush: html"> <strong>Q</strong> <var>x1</var> <var>y1</var>, <var>x</var> <var>y</var>
  (or)
  <strong>q</strong> <var>dx1</var> <var>dy1</var>, <var>dx</var> <var>dy</var>
 </pre>
 
 <p><img alt="Quadratic Bézier with grid" class="internal" src="quadratic_bézier_with_grid.png" style="float: right;"></p>
 
-<pre class="brush: xml notranslate">&lt;svg width="190" height="160" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: xml">&lt;svg width="190" height="160" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;path d="M 10 80 Q 95 10 180 80" stroke="black" fill="transparent"/&gt;
 &lt;/svg&gt;</pre>
 
 <p>As with the cubic Bézier curve, there is a shortcut for stringing together multiple quadratic Béziers, called with <code>T</code>.</p>
 
-<pre class="brush: html notranslate"> <strong>T</strong> <var>x</var> <var>y</var>
+<pre class="brush: html"> <strong>T</strong> <var>x</var> <var>y</var>
  (or)
  <strong>t</strong> <var>dx</var> <var>dy</var>
 </pre>
@@ -180,7 +180,7 @@ tags:
 
 <p><img class="internal" src="shortcut_quadratic_bézier_with_grid.png" style="float: right;"></p>
 
-<pre class="brush: xml notranslate">&lt;svg width="190" height="160" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: xml">&lt;svg width="190" height="160" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;path d="M 10 80 Q 52.5 10, 95 80 T 180 80" stroke="black" fill="transparent"/&gt;
 &lt;/svg&gt;</pre>
 
@@ -194,7 +194,7 @@ tags:
 
 <p>Because of that, arcs require quite a few parameters:</p>
 
-<pre class="brush: html notranslate"> <strong>A</strong> <var>rx</var> <var>ry</var> <var>x-axis-rotation</var> <var>large-arc-flag</var> <var>sweep-flag</var> <var>x</var> <var>y</var>
+<pre class="brush: html"> <strong>A</strong> <var>rx</var> <var>ry</var> <var>x-axis-rotation</var> <var>large-arc-flag</var> <var>sweep-flag</var> <var>x</var> <var>y</var>
  <strong>a</strong> <var>rx</var> <var>ry</var> <var>x-axis-rotation</var> <var>large-arc-flag</var> <var>sweep-flag</var> <var>dx</var> <var>dy</var>
 </pre>
 
@@ -204,7 +204,7 @@ tags:
 
 <p><img alt="SVGArcs_XAxisRotation_with_grid" class="internal" src="svgarcs_xaxisrotation_with_grid.png" style="float: right;"></p>
 
-<pre class="brush: xml notranslate">&lt;svg width="320" height="320" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: xml">&lt;svg width="320" height="320" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;path d="M 10 315
            L 110 215
            A 30 50 0 0 1 162.55 162.45
@@ -219,7 +219,7 @@ tags:
 
 <p><img alt="Show the 4 arcs on the Ellipse example" src="svgarcs_xaxisrotation_with_grid_ellipses.png"></p>
 
-<pre class="brush: xml notranslate">&lt;svg xmlns="http://www.w3.org/2000/svg" width="320" height="320"&gt;
+<pre class="brush: xml">&lt;svg xmlns="http://www.w3.org/2000/svg" width="320" height="320"&gt;
   &lt;path d="M 10 315
            L 110 215
            A 36 60 0 0 1 150.71 170.29
@@ -241,7 +241,7 @@ tags:
 
 <p><img alt="" class="internal" src="svgarcs_flags.png" style="float: right;"></p>
 
-<pre class="brush: xml notranslate">&lt;svg width="325" height="325" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: xml">&lt;svg width="325" height="325" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;path d="M 80 80
            A 45 45, 0, 0, 0, 125 125
            L 125 80 Z" fill="green"/&gt;

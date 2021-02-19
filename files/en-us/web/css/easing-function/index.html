@@ -58,7 +58,7 @@ tags:
 
 <h5 id="Syntax_2">Syntax</h5>
 
-<pre class="brush: css notranslate">cubic-bezier(<var>x<sub>1</sub></var>, <var>y<sub>1</sub></var>, <var>x<sub>2</sub></var>, <var>y<sub>2</sub></var>)
+<pre class="brush: css">cubic-bezier(<var>x<sub>1</sub></var>, <var>y<sub>1</sub></var>, <var>x<sub>2</sub></var>, <var>y<sub>2</sub></var>)
 </pre>
 
 <p>where:</p>
@@ -100,7 +100,7 @@ tags:
 
 <h5 id="Syntax_3">Syntax</h5>
 
-<pre class="brush: css notranslate">steps(<var>number_of_steps</var>, <var>direction</var>)
+<pre class="brush: css">steps(<var>number_of_steps</var>, <var>direction</var>)
 </pre>
 
 <p>where:</p>
@@ -158,7 +158,7 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div&gt;
+<pre class="brush: html">&lt;div&gt;
   &lt;div&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;ul&gt;
@@ -184,7 +184,7 @@ tags:
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">body &gt; div {
+<pre class="brush: css">body &gt; div {
   position: relative;
   height: 100px;
 }
@@ -219,7 +219,7 @@ li {
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">const selectElem = document.querySelector('select');
+<pre class="brush: js">const selectElem = document.querySelector('select');
 const startBtn = document.querySelector('button');
 const divElem = document.querySelector('div &gt; div');
 
@@ -246,7 +246,7 @@ selectElem.addEventListener('change', () =&gt; {
 
 <p>These cubic Bézier curves are valid for use in CSS:</p>
 
-<pre class="brush: css notranslate">/* The canonical Bézier curve with four &lt;number&gt; in the [0,1] range. */
+<pre class="brush: css">/* The canonical Bézier curve with four &lt;number&gt; in the [0,1] range. */
 cubic-bezier(0.1, 0.7, 1.0, 0.1)
 
 /* Using &lt;integer&gt; is valid as any &lt;integer&gt; is also a &lt;number&gt;. */
@@ -261,7 +261,7 @@ cubic-bezier(0, 1.1, 0.8, 4)
 
 <p>These cubic Bézier curves definitions are invalid:</p>
 
-<pre class="brush: css example-bad notranslate">/* Though the animated output type may be a color,
+<pre class="brush: css example-bad">/* Though the animated output type may be a color,
    Bézier curves work w/ numerical ratios.*/
 cubic-bezier(0.1, red, 1.0, green)
 
@@ -280,7 +280,7 @@ cubic-bezier(-1.9, 0.3, -0.2, 2.1) </pre>
 
 <p>These easing functions are valid:</p>
 
-<pre class="brush: css notranslate">/* There is 5 treads, the last one happens
+<pre class="brush: css">/* There is 5 treads, the last one happens
    right before the end of the animation. */
 steps(5, end)
 
@@ -299,7 +299,7 @@ steps(2)
 
 <p>These easing function are invalid:</p>
 
-<pre class="brush: css example-bad notranslate">/* The first parameter must be an <a href="/en-US/docs/Web/CSS/integer">&lt;integer&gt;</a> and
+<pre class="brush: css example-bad">/* The first parameter must be an <a href="/en-US/docs/Web/CSS/integer">&lt;integer&gt;</a> and
    cannot be a real value, even if it is equal to one. */
 steps(2.0, jump-end)
 

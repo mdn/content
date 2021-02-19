@@ -28,7 +28,7 @@ tags:
 
 <p>Alternatively, you can nest the <code>&lt;input&gt;</code> directly inside the <code>&lt;label&gt;</code>, in which case the <code>for</code> and <code>id</code> attributes are not needed because the association is implicit:</p>
 
-<pre class="brush: html notranslate">&lt;label&gt;Do you like peas?
+<pre class="brush: html">&lt;label&gt;Do you like peas?
   &lt;input type="checkbox" name="peas"&gt;
 &lt;/label&gt;
 </pre>
@@ -59,13 +59,13 @@ tags:
 
 <h3 id="Simple_label_example">Simple label example</h3>
 
-<pre class="brush: html notranslate">&lt;label&gt;Click me &lt;input type="text"&gt;&lt;/label&gt;</pre>
+<pre class="brush: html">&lt;label&gt;Click me &lt;input type="text"&gt;&lt;/label&gt;</pre>
 
 <p>{{EmbedLiveSample('Simple_label_example', '200', '50', '')}}</p>
 
 <h3 id="Using_the_for_attribute">Using the "for" attribute</h3>
 
-<pre class="brush: html notranslate">&lt;label for="username"&gt;Click me&lt;/label&gt;
+<pre class="brush: html">&lt;label for="username"&gt;Click me&lt;/label&gt;
 &lt;input type="text" id="username"&gt;</pre>
 
 <p>{{EmbedLiveSample('Using_the_for_attribute', '200', '50', '')}}</p>
@@ -78,7 +78,7 @@ tags:
 
 <h4 id="Dont">Don't</h4>
 
-<pre class="brush: html example-bad notranslate">&lt;label for="tac"&gt;
+<pre class="brush: html example-bad">&lt;label for="tac"&gt;
   &lt;input id="tac" type="checkbox" name="terms-and-conditions"&gt;
   I agree to the &lt;a href="terms-and-conditions.html"&gt;Terms and Conditions&lt;/a&gt;
 &lt;/label&gt;
@@ -86,7 +86,7 @@ tags:
 
 <h4 id="Do">Do</h4>
 
-<pre class="brush: html example-good notranslate">&lt;label for="tac"&gt;
+<pre class="brush: html example-good">&lt;label for="tac"&gt;
   &lt;input id="tac" type="checkbox" name="terms-and-conditions"&gt;
   I agree to the Terms and Conditions
 &lt;/label&gt;
@@ -103,7 +103,7 @@ tags:
 
 <h4 id="Dont_2">Don't</h4>
 
-<pre class="brush: html example-bad notranslate">&lt;label for="your-name"&gt;
+<pre class="brush: html example-bad">&lt;label for="your-name"&gt;
   &lt;h3&gt;Your name&lt;/h3&gt;
   &lt;input id="your-name" name="your-name" type="text"&gt;
 &lt;/label&gt;
@@ -111,7 +111,7 @@ tags:
 
 <h4 id="Do_2">Do</h4>
 
-<pre class="brush: html example-good notranslate">&lt;label class="large-label" for="your-name"&gt;
+<pre class="brush: html example-good">&lt;label class="large-label" for="your-name"&gt;
   Your name
   &lt;input id="your-name" name="your-name" type="text"&gt;
 &lt;/label&gt; </pre>

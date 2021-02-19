@@ -10,7 +10,7 @@ tags:
 ---
 <p>The <strong><code>font-size-adjust</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the size of lower-case letters relative to the current font size (which defines the size of upper-case letters).</p>
 
-<pre class="brush:css no-line-numbers notranslate">/* Use the specified font size */
+<pre class="brush:css no-line-numbers">/* Use the specified font size */
 font-size-adjust: none;
 
 /* Use a font size that makes lowercase
@@ -27,7 +27,7 @@ font-size-adjust: unset;
 
 <p>To use this property in a way that is compatible with browsers that do not support <code>font-size-adjust</code>, it is specified as a number that the {{ Cssxref("font-size") }} property is multiplied by. This means the value specified for the property should generally be the aspect ratio of the first choice font. For example, a style sheet that specifies:</p>
 
-<pre class="brush: css notranslate">font-size: 14px;
+<pre class="brush: css">font-size: 14px;
 font-size-adjust: 0.5;
 </pre>
 
@@ -55,7 +55,7 @@ font-size-adjust: 0.5;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -63,13 +63,13 @@ font-size-adjust: 0.5;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p class="times"&gt;This text uses the Times font (10px), which is hard to read in small sizes.&lt;/p&gt;
+<pre class="brush: html">&lt;p class="times"&gt;This text uses the Times font (10px), which is hard to read in small sizes.&lt;/p&gt;
 &lt;p class="verdana"&gt;This text uses the Verdana font (10px), which has relatively large lowercase letters.&lt;/p&gt;
 &lt;p class="adjtimes"&gt;This is the 10px Times, but now adjusted to the same aspect ratio as the Verdana.&lt;/p&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">.times {
+<pre class="brush: css">.times {
   font-family: Times, serif;
   font-size: 10px;
 }

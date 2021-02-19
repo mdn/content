@@ -19,7 +19,7 @@ tags:
 <p><img alt="Our Grid highlighted in DevTools" src="3_hilighted_grid.png"></p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -37,14 +37,14 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    grid-template-rows: repeat(3, 100px);
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
    &lt;div class="box2"&gt;Two&lt;/div&gt;
    &lt;div class="box3"&gt;Three&lt;/div&gt;
@@ -59,7 +59,7 @@ tags:
 <p>We can use line-based placement to control where these items sit on the grid. I would like the first item to start on the far left of the grid and span a single column track. It should also start on the first row line, at the top of the grid and span to the fourth row line.</p>
 
 <div id="Line_Number">
-<pre class="brush: css notranslate">.box1 {
+<pre class="brush: css">.box1 {
    grid-column-start: 1;
    grid-column-end: 2;
    grid-row-start: 1;
@@ -72,7 +72,7 @@ tags:
 <p>Addressing each item individually we can place all four items spanning row and column tracks. Note that we can leave cells empty if we wish. One of the very nice things about Grid Layout is this ability to have white space in our designs without having to push things around using margins to prevent floats from rising up into the space we have left.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -93,7 +93,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
    &lt;div class="box2"&gt;Two&lt;/div&gt;
    &lt;div class="box3"&gt;Three&lt;/div&gt;
@@ -101,7 +101,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.box1 {
+<pre class="brush: css">.box1 {
    grid-column-start: 1;
    grid-column-end: 2;
    grid-row-start: 1;
@@ -136,7 +136,7 @@ tags:
 <p>We have quite a lot of code here to position each item. It should come as no surprise to know there is a {{glossary("shorthand properties", "shorthand")}}. The {{cssxref("grid-column-start")}} and {{cssxref("grid-column-end")}} properties can be combined into {{cssxref("grid-column")}}, {{cssxref("grid-row-start")}} and {{cssxref("grid-row-end")}} into {{cssxref("grid-row")}}.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -157,7 +157,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
    &lt;div class="box2"&gt;Two&lt;/div&gt;
    &lt;div class="box3"&gt;Three&lt;/div&gt;
@@ -165,7 +165,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.box1 {
+<pre class="brush: css">.box1 {
    grid-column: 1 / 2;
    grid-row: 1 / 4;
 }
@@ -192,7 +192,7 @@ tags:
 
 <div id="End_Lines">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -213,7 +213,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
    &lt;div class="box2"&gt;Two&lt;/div&gt;
    &lt;div class="box3"&gt;Three&lt;/div&gt;
@@ -221,7 +221,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.box1 {
+<pre class="brush: css">.box1 {
    grid-column-start: 1;
    grid-row-start: 1;
    grid-row-end: 4;
@@ -249,7 +249,7 @@ tags:
 
 <div id="New_Shorthand">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -270,7 +270,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
    &lt;div class="box2"&gt;Two&lt;/div&gt;
    &lt;div class="box3"&gt;Three&lt;/div&gt;
@@ -278,7 +278,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.box1 {
+<pre class="brush: css">.box1 {
    grid-column: 1 ;
    grid-row: 1 / 4;
 }
@@ -311,7 +311,7 @@ tags:
 </ul>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -332,7 +332,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
    &lt;div class="box2"&gt;Two&lt;/div&gt;
    &lt;div class="box3"&gt;Three&lt;/div&gt;
@@ -340,7 +340,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.box1 {
+<pre class="brush: css">.box1 {
    grid-area: 1 / 1 / 4 / 2;
 }
 .box2 {
@@ -376,7 +376,7 @@ tags:
 <p>In this next example I have flipped the layout we were working with by working from the right and bottom of our grid when placing the items.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -397,7 +397,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
    &lt;div class="box2"&gt;Two&lt;/div&gt;
    &lt;div class="box3"&gt;Three&lt;/div&gt;
@@ -405,7 +405,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.box1 {
+<pre class="brush: css">.box1 {
    grid-column-start: -1;
    grid-column-end: -2;
    grid-row-start: -1;
@@ -437,7 +437,7 @@ tags:
 
 <p>Being able to address the start and end lines of the grid is useful as you can then stretch an item right across the grid with:</p>
 
-<pre class="brush: css notranslate">.item {
+<pre class="brush: css">.item {
     grid-column: 1 / -1;
 }
 </pre>
@@ -455,7 +455,7 @@ tags:
 <p>Gaps only appear between tracks of the grid, they do not add space to the top and bottom, left or right of the container. We can add gaps to our earlier example by using these properties on the grid container.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -476,7 +476,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
    &lt;div class="box2"&gt;Two&lt;/div&gt;
    &lt;div class="box3"&gt;Three&lt;/div&gt;
@@ -484,7 +484,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.box1 {
+<pre class="brush: css">.box1 {
     grid-column: 1 ;
     grid-row: 1 / 4;
 }
@@ -515,7 +515,7 @@ tags:
 
 <p>The two properties can also be expressed as a shorthand, {{cssxref("gap")}}. If you only give one value for <code>gap</code> it will apply to both column and row gaps. If you specify two values, the first is used for <code>row-gap</code> and the second for <code>column-gap</code>.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 100px);
@@ -530,7 +530,7 @@ tags:
 <p>In addition to specifying the start and end lines by number, you can specify a start line and then the number of tracks you would like the area to span.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -551,7 +551,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
    &lt;div class="box2"&gt;Two&lt;/div&gt;
    &lt;div class="box3"&gt;Three&lt;/div&gt;
@@ -559,7 +559,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.box1 {
+<pre class="brush: css">.box1 {
     grid-column: 1;
     grid-row: 1 / span 3;
 }
@@ -581,7 +581,7 @@ tags:
 
 <p>You can also use the <code>span</code> keyword in the value of <code>grid-row-start</code>/<code>grid-row-end</code> and <code>grid-column-start/grid-column-end</code>. The following two examples will create the same grid area. In the first we set the start row line, then the end line we explain that we want to span 3 lines. The area will start at line 1 and span 3 lines to line 4.</p>
 
-<pre class="brush: css notranslate">.box1 {
+<pre class="brush: css">.box1 {
     grid-column-start: 1;
     grid-row-start: 1;
     grid-row-end: span 3;
@@ -590,7 +590,7 @@ tags:
 
 <p>In the second example, we specify the end row line we want the item to finish at and then set the start line as <code>span 3</code>. This means the item will need to span upwards from the specified row line. The area will start at line 4 and span 3 lines to line 1.</p>
 
-<pre class="brush: css notranslate">.box1 {
+<pre class="brush: css">.box1 {
     grid-column-start: 1;
     grid-row-start: span 3;
     grid-row-end: 4;

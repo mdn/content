@@ -39,7 +39,7 @@ tags:
 
 <h3 id="Formal_syntax">Formal syntax</h3>
 
-<pre class="brush: css notranslate">{{CSSSyntax}}</pre>
+<pre class="brush: css">{{CSSSyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -49,7 +49,7 @@ tags:
 
 <p>Let's look at some CSS:</p>
 
-<pre class="brush: css; notranslate">h1 {
+<pre class="brush: css;">h1 {
   font-size: 2rem;
 }
 h1.responsive {
@@ -59,7 +59,7 @@ h1.responsive {
 
 <p>The font-size will at minimum be 2rems, or twice the default size of font for the page. This ensure it is legible and ensures accessibility</p>
 
-<pre class="brush: html; notranslate">&lt;h1&gt;This text is always legible, but doesn't change size&lt;/h1&gt;
+<pre class="brush: html;">&lt;h1&gt;This text is always legible, but doesn't change size&lt;/h1&gt;
 &lt;h1 class="responsive"&gt;This text is always legible, and is responsive, to a point&lt;/h1&gt;
 </pre>
 
@@ -71,7 +71,7 @@ h1.responsive {
 
 <p>When <code>max()</code> is used for controlling text size, make sure the text is always large enough to read. A suggestion is to use the {{CSSxRef("min", "min()")}} function nested within a <code>max()</code> that has as its second value a <a href="/en-US/docs/Web/CSS/length#Relative_length_units">relative length unit</a> that is always large enough to read. For example:</p>
 
-<pre class="brush: css; notranslate">small {
+<pre class="brush: css;">small {
   font-size: max(min(0.5vw, 0.5em), 1rem);
 }</pre>
 

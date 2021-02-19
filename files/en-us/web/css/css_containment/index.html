@@ -15,7 +15,7 @@ The aim of the CSS Containment specification is to improve performance of web pa
 
 <p>Many webpages contain a number of sections which are independent of each other. For example a listing of article headlines and content, as in the mark-up below.</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;My blog&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;My blog&lt;/h1&gt;
 &lt;article&gt;
   &lt;h2&gt;Heading of a nice article&lt;/h2&gt;
   &lt;p&gt;Content here.&lt;/p&gt;
@@ -27,7 +27,7 @@ The aim of the CSS Containment specification is to improve performance of web pa
 
 <p>Each article has the {{cssxref("contain")}} property with a value of <code>content</code> applied in the CSS.</p>
 
-<pre class="brush: css notranslate">article {
+<pre class="brush: css">article {
   contain: content;
 }</pre>
 
@@ -47,7 +47,7 @@ The aim of the CSS Containment specification is to improve performance of web pa
 
 <h3 id="Layout_containment">Layout containment</h3>
 
-<pre class="brush: css notranslate">article {
+<pre class="brush: css">article {
   contain: layout;
 }</pre>
 
@@ -64,7 +64,7 @@ The aim of the CSS Containment specification is to improve performance of web pa
 
 <h3 id="Paint_containment">Paint containment</h3>
 
-<pre class="brush: css notranslate">article {
+<pre class="brush: css">article {
   contain: paint;
 }</pre>
 
@@ -74,7 +74,7 @@ The aim of the CSS Containment specification is to improve performance of web pa
 
 <h3 id="Size_containment">Size containment</h3>
 
-<pre class="brush: css notranslate">article {
+<pre class="brush: css">article {
   contain: size;
 }</pre>
 
@@ -84,7 +84,7 @@ The aim of the CSS Containment specification is to improve performance of web pa
 
 <h3 id="Style_containment">Style containment</h3>
 
-<pre class="brush: css notranslate">article {
+<pre class="brush: css">article {
   contain: style;
 }</pre>
 
@@ -109,7 +109,7 @@ The aim of the CSS Containment specification is to improve performance of web pa
 
 <p>To gain as much containment as possible use <code>contain: strict</code>, which behaves the same as <code>contain: size layout paint</code>, or perhaps the following to also add <code>style</code> containment in browsers that support it:</p>
 
-<pre class="brush: css notranslate">contain: strict;
+<pre class="brush: css">contain: strict;
 contain: strict style;</pre>
 
 <h2 id="Reference">Reference</h2>

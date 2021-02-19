@@ -66,7 +66,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: html notranslate">&lt;p&gt;&lt;del&gt;This text has been deleted&lt;/del&gt;,
+<pre class="brush: html">&lt;p&gt;&lt;del&gt;This text has been deleted&lt;/del&gt;,
 here is the rest of the paragraph.&lt;/p&gt;
 &lt;del&gt;&lt;p&gt;This paragraph has been deleted.&lt;/p&gt;&lt;/del&gt;</pre>
 
@@ -78,7 +78,7 @@ here is the rest of the paragraph.&lt;/p&gt;
 
 <p>The presence of the <code>del</code> element is not announced by most screen reading technology in its default configuration. It can be made to be announced by using the CSS {{cssxref("content")}} property, along with the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements.</p>
 
-<pre class="notranslate">del::before,
+<pre>del::before,
 del::after {
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);

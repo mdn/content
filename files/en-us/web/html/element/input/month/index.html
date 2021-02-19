@@ -66,7 +66,7 @@ tags:
 <p>You can set a default value for the input control by including a month and year inside the {{htmlattrxref("value", "input")}} attribute, like so:</p>
 
 <div id="value-example-1">
-<pre class="brush: html notranslate">&lt;label for="bday-month"&gt;What month were you born in?&lt;/label&gt;
+<pre class="brush: html">&lt;label for="bday-month"&gt;What month were you born in?&lt;/label&gt;
 &lt;input id="bday-month" type="month" name="bday-month" value="2017-06"&gt;</pre>
 
 <p>{{EmbedLiveSample('value-example-1', 600, 60)}}</p>
@@ -80,11 +80,11 @@ tags:
 
 <div id="value-example-2">
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;label for="bday-month"&gt;What month were you born in?&lt;/label&gt;
+<pre class="brush: html">&lt;label for="bday-month"&gt;What month were you born in?&lt;/label&gt;
 &lt;input id="bday-month" type="month" name="bday-month" value="2017-06"&gt;</pre>
 </div>
 
-<pre class="brush: js notranslate">var monthControl = document.querySelector('input[type="month"]');
+<pre class="brush: js">var monthControl = document.querySelector('input[type="month"]');
 monthControl.value = '1978-06';</pre>
 
 <p>{{EmbedLiveSample("value-example-2", 600, 60)}}</p>
@@ -163,7 +163,7 @@ monthControl.value = '1978-06';</pre>
 
 <p>The simplest use of <code>&lt;input type="month"&gt;</code> involves a basic {{HTMLElement("input")}} and {{htmlelement("label")}} element combination, as seen below:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;label for="bday-month"&gt;What month were you born in?&lt;/label&gt;
   &lt;input id="bday-month" type="month" name="bday-month"&gt;
 &lt;/form&gt;</pre>
@@ -174,7 +174,7 @@ monthControl.value = '1978-06';</pre>
 
 <p>You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to restrict the range of dates that the user can choose. In the following example we specify a minimum month of <code>1900-01</code> and a maximum month of <code>1999-12</code>:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;label for="bday-month"&gt;What month were you born in?&lt;/label&gt;
   &lt;input id="bday-month" type="month" name="bday-month"
          min="1900-01" max="1999-12"&gt;
@@ -201,7 +201,7 @@ monthControl.value = '1978-06';</pre>
 
 <p>Let's look at an example; here we've set minimum and maximum dates, and also made the field required:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="month"&gt;What month would you like to visit us (Summer months only, please)?&lt;/label&gt;
     &lt;input id="month" type="month" name="month"
@@ -223,7 +223,7 @@ monthControl.value = '1978-06';</pre>
 
 <p>Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid. We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.</p>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -273,7 +273,7 @@ input:valid+span:after {
 
 <p>One way around this is to put a {{htmlattrxref("pattern", "input")}} attribute on your <code>month</code> input. Even though the <code>month</code> input doesn't use it, if the browser falls back to treating it like a <code>text</code> input, the pattern will be used. For example, try viewing the following demo in a browser that doesn't support <code>month</code> inputs:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="month"&gt;What month would you like to visit us? (Summer months only, yyyy-mm)&lt;/label&gt;
     &lt;input id="month" type="month" name="month"
@@ -293,7 +293,7 @@ input:valid+span:after {
 <p>There's also the problem that the user won't necessarily know which of the many date formats is expected. We have work left to do.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -331,7 +331,7 @@ input:valid+span:after {
 
 <p>The form that requests the month and year looks like this:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div class="nativeDatePicker"&gt;
     &lt;label for="month-visit"&gt;What month would you like to visit us?&lt;/label&gt;
     &lt;input type="month" id="month-visit" name="month-visit"&gt;
@@ -371,7 +371,7 @@ input:valid+span:after {
 <p>The <code>&lt;select&gt;</code> for choosing the month is hardcoded with the names of the months, as they don't change (leaving localization out of things). The list of available year values is dynamically generated depending on the current year (see the code comments below for detailed explanations of how these functions work).</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -403,7 +403,7 @@ input:valid+span:after {
 
 <p>The part of the example that may be of most interest is the feature detection code. In order to detect whether the browser supports <code>&lt;input type="month"&gt;</code>, we create a new {{htmlelement("input")}} element, try setting its <code>type</code> to <code>month</code>, then immediately check what its type is set to. Browsers that don't support type <code>month</code> will return <code>text</code>, since that's What month falls back to when not supported. If <code>&lt;input type="month"&gt;</code> is not supported, we hide the native picker and show the fallback picker UI instead.</p>
 
-<pre class="brush: js notranslate">// define variables
+<pre class="brush: js">// define variables
 var nativePicker = document.querySelector('.nativeDatePicker');
 var fallbackPicker = document.querySelector('.fallbackDatePicker');
 var fallbackLabel = document.querySelector('.fallbackLabel');

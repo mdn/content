@@ -91,7 +91,7 @@ tags:
 
 <p>For example, assume a script from the document at <code>http://store.company.com/dir/other.html</code> executes the following:</p>
 
-<pre class="brush: js notranslate">document.domain = "company.com";
+<pre class="brush: js">document.domain = "company.com";
 </pre>
 
 <p>Afterward, the page can pass the same-origin check with <code>http://company.com/dir/page.html</code> (assuming <code>http://company.com/dir/page.html</code> sets its <code>document.domain</code> to "<code>company.com</code>" to indicate that it wishes to allow that - see {{domxref("document.domain")}} for more). However, <code>company.com</code> could <strong>not</strong> set <code>document.domain</code> to <code>othercompany.com</code>, since that is not a superdomain of <code>company.com</code>.</p>

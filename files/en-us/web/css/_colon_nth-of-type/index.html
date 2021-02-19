@@ -13,7 +13,7 @@ tags:
 
 <p>The <strong><code>:nth-of-type()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> matches elements of a given type (tag name), based on their position among a group of siblings.</p>
 
-<pre class="brush: css no-line-numbers  language-css notranslate">/* Selects every fourth &lt;p&gt; element
+<pre class="brush: css no-line-numbers  language-css">/* Selects every fourth &lt;p&gt; element
    among any group of siblings */
 p:nth-of-type(4n) {
   color: lime;
@@ -27,7 +27,7 @@ p:nth-of-type(4n) {
 
 <h3 id="Formal_syntax">Formal syntax</h3>
 
-<pre class="brush: css notranslate">{{csssyntax}}
+<pre class="brush: css">{{csssyntax}}
 </pre>
 
 <h2 id="Examples">Examples</h2>
@@ -36,7 +36,7 @@ p:nth-of-type(4n) {
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div&gt;
+<pre class="brush: html">&lt;div&gt;
   &lt;div&gt;This element isn't counted.&lt;/div&gt;
   &lt;p&gt;1st paragraph.&lt;/p&gt;
   &lt;p&gt;2nd paragraph.&lt;/p&gt;
@@ -47,7 +47,7 @@ p:nth-of-type(4n) {
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">/* Odd paragraphs */
+<pre class="brush: css">/* Odd paragraphs */
 p:nth-of-type(2n+1) {
   color: red;
 }

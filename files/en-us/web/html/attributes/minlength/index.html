@@ -21,11 +21,11 @@ tags:
 
 <p>By adding <code>minlength="5"</code>, the value must either be empty or five characters or longer to be valid.</p>
 
-<pre class="brush: html notranslate">&lt;label for="fruit"&gt;Enter a fruit name that is at least 5 letters long&lt;/label&gt; &lt;input type="text" minlength="5" id="fruit"&gt;</pre>
+<pre class="brush: html">&lt;label for="fruit"&gt;Enter a fruit name that is at least 5 letters long&lt;/label&gt; &lt;input type="text" minlength="5" id="fruit"&gt;</pre>
 
 <p>We can use pseudoclasses to style the element based on whether the value is valid. The value will be valid as long as it is either null (empty) or five or more characters long. <em>Lime</em> is invalid, <em>lemon is valid</em>.</p>
 
-<pre class="brush: css notranslate">input {
+<pre class="brush: css">input {
   border: 2px solid currentcolor;
 }
 input:invalid {

@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate line-numbers language-css"><code class="language-css"><span class="atrule token"><span class="rule token">@media</span> <span class="punctuation token">(</span>-webkit-transition<span class="punctuation token">)</span></span> <span class="punctuation token">{</span>
+<pre class="brush: cssline-numbers language-css"><code class="language-css"><span class="atrule token"><span class="rule token">@media</span> <span class="punctuation token">(</span>-webkit-transition<span class="punctuation token">)</span></span> <span class="punctuation token">{</span>
   <span class="comment token">/* CSS to use if transitions are supported */</span>
 <span class="punctuation token">}</span></code></pre>
 
@@ -33,7 +33,7 @@ tags:
 
 <p>Do not use the <code>-webkit-transition</code> media feature. Instead, test for transition support using the CSS {{cssxref("@supports")}}<a href="/en-US/docs/Web/CSS/At-rule"> at-rule</a>, like this:</p>
 
-<pre class="brush: css notranslate">@supports (transition: initial) {
+<pre class="brush: css">@supports (transition: initial) {
   /* CSS to use if transitions are supported */
 }
 </pre>
@@ -42,7 +42,7 @@ tags:
 
 <p>Before this became obsolete, you could use <code>-webkit-transition</code> in your CSS like this:</p>
 
-<pre class="brush: css notranslate">@media (-webkit-transition) {
+<pre class="brush: css">@media (-webkit-transition) {
   /* CSS to use if transitions are supported */
 }
 </pre>

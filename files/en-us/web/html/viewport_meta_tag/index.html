@@ -27,7 +27,7 @@ tags:
 
 <p>A typical mobile-optimized site contains something like the following:</p>
 
-<pre class="notranslate">&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</pre>
+<pre>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</pre>
 
 <p>The <code>width</code> property controls the size of the viewport. It can be set to a specific number of pixels like <code>width=600</code> or to the special value <code>device-width</code>, which is the width of the screen in CSS pixels at a scale of 100%. (There are corresponding <code>height</code> and <code>device-height</code> values, which may be useful for pages with elements that change size or position based on the viewport height.)</p>
 
@@ -57,17 +57,17 @@ tags:
 
 <p>For pages that set an initial or maximum scale, this means the <code>width</code> property actually translates into a <em>minimum</em> viewport width. For example, if your layout needs at least 500 pixels of width then you can use the following markup. When the screen is more than 500 pixels wide, the browser will expand the viewport (rather than zoom in) to fit the screen:</p>
 
-<pre class="notranslate">&lt;meta name="viewport" content="width=500, initial-scale=1"&gt;</pre>
+<pre>&lt;meta name="viewport" content="width=500, initial-scale=1"&gt;</pre>
 
 <p>Other <a href="/en-US/docs/Web/HTML/Element/meta#Attributes">attributes</a> that are available are <code>minimum-scale</code>, <code>maximum-scale</code>, and <code>user-scalable</code>. These properties affect the initial scale and width, as well as limiting changes in zoom level.</p>
 
 <p>Not all mobile browsers handle orientation changes in the same way. For example, Mobile Safari often just zooms the page when changing from portrait to landscape, instead of laying out the page as it would if originally loaded in landscape. If web developers want their scale settings to remain consistent when switching orientations on the iPhone, they must add a <code>maximum-scale</code> value to prevent this zooming, which has the sometimes-unwanted side effect of preventing users from zooming in:</p>
 
-<pre class="notranslate">&lt;meta name="viewport" content="initial-scale=1, maximum-scale=1"&gt;</pre>
+<pre>&lt;meta name="viewport" content="initial-scale=1, maximum-scale=1"&gt;</pre>
 
 <p>Suppress the small zoom applied by many smartphones by setting the initial scale and minimum-scale values to 0.86. The result is horizontal scroll is suppressed in any orientation and the user can zoom in if they want to.</p>
 
-<pre class="notranslate">&lt;meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86"&gt;</pre>
+<pre>&lt;meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86"&gt;</pre>
 
 <h2 id="Common_viewport_sizes_for_mobile_and_tablet_devices">Common viewport sizes for mobile and tablet devices</h2>
 

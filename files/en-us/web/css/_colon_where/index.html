@@ -18,7 +18,7 @@ tags:
 
 <p>The <strong><code>:where()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list.</p>
 
-<pre class="brush: css notranslate"><code>/* Selects any paragraph inside a header, main
+<pre class="brush: css"><code>/* Selects any paragraph inside a header, main
    or footer element that is being hovered */
 :where(header, main, footer) p:hover {
   color: red;
@@ -41,13 +41,13 @@ footer p:hover {
 
 <p>In CSS when using a selector list, if any of the selectors are invalid then the whole list is deemed invalid. When using <code>:is()</code> or <code>:where() </code>instead of the whole list of selectors being deemed invalid if one fails to parse, the incorrect or unsupported selector will be ignored and the others used.</p>
 
-<pre class="brush: css notranslate">:where(:valid, :unsupported) {
+<pre class="brush: css">:where(:valid, :unsupported) {
   ...
 }</pre>
 
 <p>Will still parse correctly and match <code>:valid</code> even in browsers which don't support <code>:unsupported</code>, whereas:</p>
 
-<pre class="brush: css notranslate">:valid, :unsupported {
+<pre class="brush: css">:valid, :unsupported {
   ...
 }</pre>
 
@@ -61,7 +61,7 @@ footer p:hover {
 
 <p>Take the following HTML:</p>
 
-<pre class="brush: html notranslate">&lt;article&gt;
+<pre class="brush: html">&lt;article&gt;
   &lt;h2&gt;:is()-styled links&lt;/h2&gt;
   &lt;section class="is-styling"&gt;
     &lt;p&gt;Here is my main content. This &lt;a href="https://mozilla.org"&gt;contains a link&lt;/a&gt;.
@@ -95,7 +95,7 @@ footer p:hover {
 
 <p>To make selecting the links inside them simpler, but still distinct, we <em>could</em> use <code>:is()</code> or <code>:where()</code>, in the following manner:</p>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
   font-size: 150%;
 }
@@ -110,7 +110,7 @@ footer p:hover {
 
 <p>However, what if we later want to override the color of links in the footers using a simple selector?</p>
 
-<pre class="brush: css notranslate">footer a {
+<pre class="brush: css">footer a {
   color: blue;
 }</pre>
 
@@ -124,7 +124,7 @@ footer p:hover {
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">{{CSSSyntax}}</pre>
+<pre class="brush: css">{{CSSSyntax}}</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

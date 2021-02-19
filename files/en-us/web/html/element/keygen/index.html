@@ -64,7 +64,7 @@ tags:
 
 <p>The element is written as follows:</p>
 
-<pre class="brush: html notranslate">&lt;keygen name="<var>name</var>" challenge="<var>challenge string</var>" keytype="<var>type</var>"
+<pre class="brush: html">&lt;keygen name="<var>name</var>" challenge="<var>challenge string</var>" keytype="<var>type</var>"
         keyparams="<var>pqg-params</var>"&gt;</pre>
 
 <p>The <code>keytype</code> parameter is used to specify what type of key is to be generated. Valid values are "<code>RSA</code>", which is the default, "<code>DSA</code>" and "<code>EC</code>". The <code>name</code> and <code>challenge</code> attributes are required in all cases. The <code>keytype</code> attribute is optional for RSA key generation and required for DSA and EC key generation. The <code>keyparams</code> attribute is required for DSA and EC key generation and ignored for RSA key generation. <code>PQG</code> is a synonym for <code>keyparams</code>. That is, you may specify <code>keyparams="pqg-params"</code> or <code>pqg="pqg-params"</code>.</p>
@@ -79,7 +79,7 @@ tags:
 
 <p>When the submit button is pressed, a key pair of the selected size is generated. The private key is encrypted and stored in the local key database.</p>
 
-<pre class="notranslate">PublicKeyAndChallenge ::= SEQUENCE {
+<pre>PublicKeyAndChallenge ::= SEQUENCE {
     spki SubjectPublicKeyInfo,
     challenge IA5STRING
 }
@@ -93,7 +93,7 @@ SignedPublicKeyAndChallenge ::= SEQUENCE {
 
 <p>Here is an example form submission as it would be delivered to a CGI program by the HTTP server:</p>
 
-<pre class="notranslate">   commonname=John+Doe&amp;email=doe@foo.com&amp;org=Foobar+Computing+Corp.&amp;
+<pre>   commonname=John+Doe&amp;email=doe@foo.com&amp;org=Foobar+Computing+Corp.&amp;
    orgunit=Bureau+of+Bureaucracy&amp;locality=Anytown&amp;state=California&amp;country=US&amp;
    key=MIHFMHEwXDANBgkqhkiG9w0BAQEFAANLADBIAkEAnX0TILJrOMUue%2BPtwBRE6XfV%0AWtKQbsshxk5ZhcUwcwyvcnIq9b82QhJdoACdD34rqfCAIND46fXKQUnb0mvKzQID%0AAQABFhFNb3ppbGxhSXNNeUZyaWVuZDANBgkqhkiG9w0BAQQFAANBAAKv2Eex2n%2FS%0Ar%2F7iJNroWlSzSMtTiQTEB%2BADWHGj9u1xrUrOilq%2Fo2cuQxIfZcNZkYAkWP4DubqW%0Ai0%2F%2FrgBvmco%3D</pre>
 

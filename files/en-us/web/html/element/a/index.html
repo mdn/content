@@ -191,7 +191,7 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;a href="https://www.mozilla.com"&gt;
+<pre class="brush: html">&lt;a href="https://www.mozilla.com"&gt;
   Mozilla
 &lt;/a&gt;</pre>
 
@@ -203,7 +203,7 @@ tags:
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;a href="//example.com"&gt;Scheme-relative URL&lt;/a&gt;
+<pre class="brush: html">&lt;a href="//example.com"&gt;Scheme-relative URL&lt;/a&gt;
 &lt;a href="/en-US/docs/Web/HTML"&gt;Origin-relative URL&lt;/a&gt;
 &lt;a href="./p"&gt;Directory-relative URL&lt;/a&gt;
 </pre>
@@ -211,7 +211,7 @@ tags:
 <div class="hidden">
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">a { display: block; margin-bottom: 0.5em }</pre>
+<pre class="brush: css">a { display: block; margin-bottom: 0.5em }</pre>
 </div>
 
 <h4 id="Result_2">Result</h4>
@@ -220,7 +220,7 @@ tags:
 
 <h3 id="Linking_to_an_element_on_the_same_page">Linking to an element on the same page</h3>
 
-<pre class="brush: html notranslate">&lt;!-- &lt;a&gt; element links to the section below --&gt;
+<pre class="brush: html">&lt;!-- &lt;a&gt; element links to the section below --&gt;
 &lt;p&gt;&lt;a href="#Section_further_down"&gt;
   Jump to the heading below
 &lt;/a&gt;&lt;/p&gt;
@@ -238,13 +238,13 @@ tags:
 
 <p>To create links that open in the user's email program to let them send a new message, use the <code>mailto:</code> scheme:</p>
 
-<pre class="brush: html notranslate">&lt;a href="mailto:nowhere@mozilla.org"&gt;Send email to nowhere&lt;/a&gt;</pre>
+<pre class="brush: html">&lt;a href="mailto:nowhere@mozilla.org"&gt;Send email to nowhere&lt;/a&gt;</pre>
 
 <p>For details about <code>mailto:</code> URLs, such as including a subject or body, see <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#E-mail_links">Email links</a> or {{RFC(6068)}}.</p>
 
 <h3 id="Linking_to_telephone_numbers">Linking to telephone numbers</h3>
 
-<pre class="brush: html notranslate">&lt;a href="tel:+49.157.0156"&gt;+49 157 0156&lt;/a&gt;
+<pre class="brush: html">&lt;a href="tel:+49.157.0156"&gt;+49 157 0156&lt;/a&gt;
 &lt;a href="tel:+1(555)5309"&gt;(555) 5309&lt;/a&gt;</pre>
 
 <p><code>tel:</code> link behavior varies with device capabilities:</p>
@@ -266,7 +266,7 @@ tags:
 
 <h5 id="HTML_3">HTML</h5>
 
-<pre class="brush: html notranslate">&lt;p&gt;Paint by holding down the mouse button and moving it.
+<pre class="brush: html">&lt;p&gt;Paint by holding down the mouse button and moving it.
   &lt;a href="" download="my_painting.png"&gt;Download my painting&lt;/a&gt;
 &lt;/p&gt;
 
@@ -275,7 +275,7 @@ tags:
 
 <h5 id="CSS_2">CSS</h5>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 canvas {
@@ -291,7 +291,7 @@ a {
 
 <h5 id="JavaScript">JavaScript</h5>
 
-<pre class="brush: js notranslate">var canvas = document.querySelector('canvas'),
+<pre class="brush: js">var canvas = document.querySelector('canvas'),
     c = canvas.getContext('2d');
 c.fillStyle = 'hotpink';
 
@@ -335,7 +335,7 @@ document.querySelector('a').addEventListener('click', event =&gt;
 
 <p>A sadly common mistake is to only link the words “click here” or “here”:</p>
 
-<pre class="brush: html example-bad notranslate">&lt;p&gt;
+<pre class="brush: html example-bad">&lt;p&gt;
   Learn more about our products &lt;a href="/products"&gt;here&lt;/a&gt;.
 &lt;/p&gt;
 </pre>
@@ -344,7 +344,7 @@ document.querySelector('a').addEventListener('click', event =&gt;
 
 <p>Luckily, this is an easy fix, and it’s actually shorter than the inaccessible version!</p>
 
-<pre class="brush: html example-good notranslate">&lt;p&gt;
+<pre class="brush: html example-good">&lt;p&gt;
   Learn more &lt;a href="/products"&gt;about our products&lt;/a&gt;.
 &lt;/p&gt;</pre>
 
@@ -366,21 +366,21 @@ document.querySelector('a').addEventListener('click', event =&gt;
 
 <h4 id="Link_that_opens_a_new_tabwindow">Link that opens a new tab/window</h4>
 
-<pre class="brush: html notranslate">&lt;a target="_blank" href="https://www.wikipedia.org"&gt;
+<pre class="brush: html">&lt;a target="_blank" href="https://www.wikipedia.org"&gt;
   Wikipedia (opens in new tab)
 &lt;/a&gt;
 </pre>
 
 <h4 id="Link_to_a_non-HTML_resource">Link to a non-HTML resource</h4>
 
-<pre class="brush: html notranslate">&lt;a href="2017-annual-report.ppt"&gt;
+<pre class="brush: html">&lt;a href="2017-annual-report.ppt"&gt;
   2017 Annual Report (PowerPoint)
 &lt;/a&gt;
 </pre>
 
 <p>If an icon is used to signify link behavior, make sure it has {{HTMLAttrxRef("alt", "img", "alt text", "true")}}:</p>
 
-<pre class="brush: html notranslate">&lt;a  target="_blank" href="https://www.wikipedia.org"&gt;
+<pre class="brush: html">&lt;a  target="_blank" href="https://www.wikipedia.org"&gt;
   Wikipedia
   &lt;img alt="(opens in new tab)" src="newtab.svg"&gt;
 &lt;/a&gt;
@@ -401,7 +401,7 @@ document.querySelector('a').addEventListener('click', event =&gt;
 
 <p>A <strong>skip link</strong> is a link placed as early as possible in {{HTMLElement("body")}} content that points to the beginning of the page's main content. Usually, CSS hides a skip link offscreen until focused.</p>
 
-<pre class="notranslate">&lt;body&gt;
+<pre>&lt;body&gt;
   &lt;a href="#content"&gt;Skip to main content&lt;/a&gt;
 
   &lt;header&gt;
@@ -411,7 +411,7 @@ document.querySelector('a').addEventListener('click', event =&gt;
   &lt;main id="content"&gt; &lt;!-- The skip link jumps to here --&gt;
 </pre>
 
-<pre class="brush: css notranslate">.skip-link {
+<pre class="brush: css">.skip-link {
   position: absolute;
   top: -3em;
   background: #fff;
