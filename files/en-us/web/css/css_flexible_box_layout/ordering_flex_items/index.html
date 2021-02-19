@@ -28,19 +28,19 @@ tags:
 
 <p>The first two values keep the items in the same order that they appear in the document source order and display them sequentially from the start line.</p>
 
-<p><img alt="The items are displayed in a row starting on the left." src="basics1.png" style="display: flex; height: 152px; margin: 0px auto; width: 522px;"></p>
+<p><img alt="The items are displayed in a row starting on the left." src="basics1.png" style="display: flex; margin: 0px auto;"></p>
 
-<p><img alt="The items are displayed as a column starting from the top " src="align10.png" style="display: flex; height: 273px; margin: 0px auto; width: 709px;"></p>
+<p><img alt="The items are displayed as a column starting from the top " src="align10.png" style="display: flex; margin: 0px auto;"></p>
 
 <p>The second two values reverse the items by switching the start and end lines.</p>
 
-<p><img alt="The items are displayed in reverse order starting on the right-hand line." src="align9.png" style="display: flex; height: 152px; margin: 0px auto; width: 631px;"></p>
+<p><img alt="The items are displayed in reverse order starting on the right-hand line." src="align9.png" style="display: flex; margin: 0px auto;"></p>
 
-<p><img alt="The items are displayed in a column in reverse order starting at the bottom line." src="align11.png" style="display: flex; height: 273px; margin: 0px auto; width: 709px;"></p>
+<p><img alt="The items are displayed in a column in reverse order starting at the bottom line." src="align11.png" style="display: flex; margin: 0px auto;"></p>
 
 <p>Remember that the start line relates to writing modes. The row-related examples above demonstrate how <code>row</code> and <code>row-reverse</code> work in a left-to-right language such as English. If you are working in a right-to-left language like Arabic then <code>row</code> would start on the right, <code>row-reverse</code> on the left.</p>
 
-<p><img alt="Flex containers with Arabic letters showing how row starts from the right hand side and row-reverse from the left." src="order-rtl.png" style="display: flex; height: 302px; margin: 0px auto; width: 528px;"></p>
+<p><img alt="Flex containers with Arabic letters showing how row starts from the right hand side and row-reverse from the left." src="order-rtl.png" style="display: flex; margin: 0px auto;"></p>
 
 <p>This can seem like a neat way to display things in reverse order however you should be mindful that the items are only <em>visually</em> displayed in reverse order. The specification says the following on this matter:</p>
 
@@ -62,7 +62,7 @@ tags:
 
 <p>In the live example below I have added a focus style in order that as you tab from link to link you can see which is highlighted. If you change the order using <code>flex-direction</code> you can see how the tab order continues to follow the order that the items are listed in the source.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/order/order.html", '100%', 500)}}</p>
+<p>{{EmbedGHLiveSample("css-examples/flexbox/order/negative-order.html", '100%', 520)}}</p>
 
 <p>In the same way that changing the value of <code>flex-direction</code> does not change the order in which items are navigated to, changing this value does not change paint order. It is a visual reversal of the items only.</p>
 
@@ -92,7 +92,7 @@ tags:
  <li>Source item 4: <code>order: 3</code></li>
 </ul>
 
-<p><img alt="Items have a number showing their source order which has been rearranged." src="order-property.png" style="display: flex; height: 100px; margin: 0px auto; width: 634px;"></p>
+<p><img alt="Items have a number showing their source order which has been rearranged." src="order-property.png" style="display: flex; margin: 0px auto;"></p>
 
 <p>You can play around with the values in this live example below and see how that changes the order. Also, try changing <code>flex-direction</code> to <code>row-reverse</code> and see what happens — the start line is switched so the ordering begins from the opposite side.</p>
 
@@ -103,9 +103,7 @@ tags:
 <p>You can also use negative values with order, which can be quite useful. If you want to make one item display first, and leave the order of all other items unchanged, you can give that item an order of <code>-1</code>. As this is lower than 0 the item will always be displayed first.</p>
 
 <p>In the live code example below I have items laid out using Flexbox. By changing which item has the class <code>active</code> assigned to it in the HTML, you can change which item displays first and therefore becomes full width at the top of the layout, with the other items displaying below it.</p>
-
-<p>{{EmbedGHLiveSample("css-examples/flexbox/order/negative-order.html", '100%', 520)}}</p>
-
+<p>{{EmbedGHLiveSample("css-examples/flexbox/order/order.html", '100%', 500)}}</p>
 <p>The items are displayed in what is described in the specification as <em>order-modified document order</em>. The value of the order property is taken into account before the items are displayed.</p>
 
 <p>Order also changes the paint order of the items; items with a lower value for <code>order</code> will be painted first and those with a higher value for <code>order</code> painted afterwards.</p>
@@ -128,7 +126,7 @@ tags:
 
 <p>You might have a design, perhaps a card that will display a news item. The heading of the news item is the key thing to highlight and would be the element that a user might jump to if they were tabbing between headings to find content they wanted to read. The card also has a date; the finished design we want to create is something like this.</p>
 
-<p><img alt="A design component with a date, then heading and then content." src="order-card.png" style="height: 400px; width: 618px;"></p>
+<p><img alt="A design component with a date, then heading and then content." src="order-card.png"></p>
 
 <p>Visually the date appears above the heading, in the source. However, if the card was read out by a screen reader I would prefer that the title was announced first and then the publication date. We can make this so using the <code>order</code> property.</p>
 

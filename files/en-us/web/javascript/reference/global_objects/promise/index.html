@@ -45,34 +45,47 @@ tags:
 
 <h3 id="Chained_Promises">Chained Promises</h3>
 
-<p>The methods <code>promise.then()</code>, <code>promise.catch()</code>, and <code>promise.finally()</code> are used to associate further action with a promise that becomes settled. These methods also return a newly generated promise object, which can optionally be used for chaining; for example, like this:</p>
+<p>The methods <code>promise.then()</code>, <code>promise.catch()</code>, and <code>promise.finally()</code> are used to associate further action with a promise that becomes settled.
+<p>The <code>.then()</code> method takes up to two arguments; the first argument is a callback function for the resolved case of the promise, and the second argument is a callback function for the rejected case. Each <code>.then()</code> returns a newly generated promise object, which can optionally be used for chaining; for example:</p>
 
-<pre class="brush: js notranslate">const myPromise =
-  (new Promise(myExecutorFunc))
-  .then(handleFulfilledA,handleRejectedA)
-  .then(handleFulfilledB,handleRejectedB)
-  .then(handleFulfilledC,handleRejectedC);
+<pre class="brush: js notranslate">
+const myPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('foo');
+  }, 300);
+});
 
-// or, perhaps better ...
+myPromise
+  .then(handleResolvedA, handleRejectedA)
+  .then(handleResolvedB, handleRejectedB)
+  .then(handleResolvedC, handleRejectedC);
+</pre>
 
-const myPromise =
-  (new Promise(myExecutorFunc))
-  .then(handleFulfilledA)
-  .then(handleFulfilledB)
-  .then(handleFulfilledC)
-  .catch(handleRejectedAny);</pre>
+<p>Processing continues to the next link of the chain even when a <code>.then()</code> lacks a callback function that returns a Promise object. Therefore, a chain can safely omit every <i>rejection</i> callback function until the final <code>.catch()</code>.</p>
 
-<p>Handling a rejected promise too early has consequences further down the promise chain. Sometimes there is no choice because an error must be handled immediately; in such cases we must <code>throw</code> something, even if it is a dummy error message like <code>throw -999</code>, to maintain error state down the chain. On the other hand, in the absence of an immediate need it is simpler to leave out error handling until a final <code>.catch()</code> statement.</p>
+<p>Handling a rejected promise in each <code>.then()</code> has consequences further down the promise chain. Sometimes there is no choice, because an error must be handled immediately. In such cases we must throw an error of some type to maintain error state down the chain. On the other hand, in the absence of an immediate need, it is simpler to leave out error handling until a final <code>.catch()</code> statement. A <code>.catch()</code> is really just a <code>.then()</code> without a slot for a callback function for the case when the promise is resolved.</p>
 
-<p>The termination condition of a promise determines the "settled" state of the next promise in the chain. Any termination other than a <code>throw</code> creates a "resolved" state while terminating with a <code>throw</code> creates a "rejected" state.</p>
+<pre class="brush: js notranslate">
+myPromise
+.then(handleResolvedA)
+.then(handleResolvedB)
+.then(handleResolvedC)
+.catch(handleRejectedAny);
+</pre>
 
-<pre class="brush: js notranslate">handleFulfilled(value)       { /*...*/; return nextValue;  }
-handleRejection(reason)  { /*...*/; throw  nextReason; }
-handleRejection(reason)  { /*...*/; return nextValue;  }</pre>
+<p>Using <code>{{JSxRef("Functions.arrow_functions", "Arrow Function Expressions")}}</code> for the callback functions, an implementation of a promise chain might look something like this:</p>
 
-<p>The returned <code>nextValue</code> can be another promise object, in which case the promise gets dynamically inserted into the chain.</p>
+<pre class="brush: js notranslate">
+promise1
+.then(value => { return value + ' and bar'; })
+.then(value => { return value + ' and bar again'; })
+.then(value => { return value + ' and again'; })
+.then(value => { return value + ' and again'; })
+.then(value => { console.log(value) })
+.catch(err => { console.log(err) });
+</pre>
 
-<p>When a <code>.then()</code> lacks the appropriate function that returns a Promise object, processing continues to the next link of the chain. Therefore, a chain can safely omit every <code>handleRejection</code> until the final <code>.catch()</code>. Similarly, <code>.catch()</code> is really just a <code>.then()</code> without a slot for <code>handleFulfilled</code>.</p>
+<p>The termination condition of a promise determines the "settled" state of the next promise in the chain. A "resolved" state indicates a successful completion of the promise, while a "rejected" state indicates a lack of success. The return value of each resolved promise in the chain is passed along to the next <code>.then()</code>, while the reason for rejection is passed along to the next rejection-handler function in the chain.</p>
 
 <p>The promises of a chain are nested like Russian dolls, but get popped like the top of a stack. The first promise in the chain is most deeply nested and is the first to pop.</p>
 

@@ -25,7 +25,7 @@ tags:
 
 <p>Versions of the Apache Web Server <strong>before 2.2.7</strong> were configured to report a MIME type of <code>text/plain</code> or <code>application/octet-stream</code> for unknown content types. Modern versions of Apache report <code>none</code> for files with unknown content types.</p>
 
-<p><a class="external" href="https://nginx.org/">Nginx</a> will report <code>text/plain</code> if you don't define a default content type.</p>
+<p><a href="https://nginx.org/">Nginx</a> will report <code>text/plain</code> if you don't define a default content type.</p>
 
 <p>As new content types are invented or added to web servers, web administrators may fail to add the new MIME types to their web server's configuration. This is a major source of problems for users of browsers that respect the MIME types reported by web servers and applications.</p>
 
@@ -76,8 +76,8 @@ tags:
 
 <ul>
  <li>If your content was created using commercial software, read the vendor's documentation to see what MIME types should be reported for the application.</li>
- <li>Look in IANA's <a class="external" href="https://www.iana.org/assignments/media-types/index.html">MIME Media Types registry</a>, which contains information on all registered MIME types.</li>
- <li>Search for the file extension in <a class="external" href="https://filext.com/">FILExt</a> or the <a class="external" href="https://www.file-extensions.org/">File extensions reference</a> to see what MIME types are associated with that extension. Pay close attention as the application may have multiple MIME types that differ by only one letter.</li>
+ <li>Look in IANA's <a href="https://www.iana.org/assignments/media-types/index.html">MIME Media Types registry</a>, which contains information on all registered MIME types.</li>
+ <li>Search for the file extension in <a href="https://filext.com/">FILExt</a> or the <a href="https://www.file-extensions.org/">File extensions reference</a> to see what MIME types are associated with that extension. Pay close attention as the application may have multiple MIME types that differ by only one letter.</li>
 </ul>
 
 <h2 id="How_to_check_the_MIME_type_of_received_content">How to check the MIME type of received content</h2>
@@ -101,7 +101,7 @@ tags:
  </li>
 </ul>
 
-<p><a class="external" href="https://www.iana.org/">IANA</a> keeps a list of registered <a class="external" href="https://www.iana.org/assignments/media-types/index.html">MIME Media Types</a>. The <a class="external" href="https://www.w3.org/Protocols/HTTP/1.1/spec.html">HTTP specification</a> defines a superset of MIME types, which is used to describe the media types used on the web.</p>
+<p><a href="https://www.iana.org/">IANA</a> keeps a list of registered <a href="https://www.iana.org/assignments/media-types/index.html">MIME Media Types</a>. The <a href="https://www.w3.org/Protocols/HTTP/1.1/spec.html">HTTP specification</a> defines a superset of MIME types, which is used to describe the media types used on the web.</p>
 
 <h2 id="How_to_set_up_your_server_to_send_the_correct_MIME_types">How to set up your server to send the correct MIME types</h2>
 
@@ -117,12 +117,12 @@ tags:
 
 <ul>
  <li><a href="/en-US/Incorrect_MIME_Type_for_CSS_Files">Incorrect MIME Type for CSS Files</a></li>
- <li><a class="external" href="https://www.iana.org/assignments/media-types/index.html">IANA | MIME Media Types</a></li>
- <li><a class="external" href="https://www.w3.org/Protocols/HTTP/1.1/spec.html">Hypertext Transfer Protocol — HTTP/1.1</a></li>
+ <li><a href="https://www.iana.org/assignments/media-types/index.html">IANA | MIME Media Types</a></li>
+ <li><a href="https://www.w3.org/Protocols/HTTP/1.1/spec.html">Hypertext Transfer Protocol — HTTP/1.1</a></li>
  <li><a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME types (IANA media types)</a></li>
- <li><a class="external" href="https://www.digitalocean.com/community/tutorials/apache-vs-nginx-practical-considerations">Apache vs Nginx: Practical Considerations</a></li>
- <li><a class="external" href="https://barryvanveen.nl/blog/56-migrate-apache-htaccess-to-nginx-server-block">Migrate Apache .htaccess to NGINX server block</a></li>
- <li><a class="external" href="https://support.microsoft.com/default.aspx?sd=msdn&amp;scid=kb;en-us;293336">Microsoft - 293336 - INFO: WebCast: MIME Type Handling in Microsoft Internet Explorer</a></li>
+ <li><a href="https://www.digitalocean.com/community/tutorials/apache-vs-nginx-practical-considerations">Apache vs Nginx: Practical Considerations</a></li>
+ <li><a href="https://barryvanveen.nl/blog/56-migrate-apache-htaccess-to-nginx-server-block">Migrate Apache .htaccess to NGINX server block</a></li>
+ <li><a href="https://support.microsoft.com/default.aspx?sd=msdn&amp;scid=kb;en-us;293336">Microsoft - 293336 - INFO: WebCast: MIME Type Handling in Microsoft Internet Explorer</a></li>
 </ul>
 
 <p>{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}</p>

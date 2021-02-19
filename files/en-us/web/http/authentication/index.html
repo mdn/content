@@ -24,7 +24,7 @@ tags:
  <li>Usually a client will present a password prompt to the user and will then issue the request including the correct <code>Authorization</code> header.</li>
 </ol>
 
-<p><img alt="A sequence diagram illustrating HTTP messages between a client and a server lifeline." src="https://mdn.mozillademos.org/files/14689/HTTPAuth.png" style="height: 335px; width: 710px;" title="Sequence Diagram of Client-server HTTP Authentication"></p>
+<p><img alt="A sequence diagram illustrating HTTP messages between a client and a server lifeline." src="httpauth.png" title="Sequence Diagram of Client-server HTTP Authentication"></p>
 
 <p>In the case of a "Basic" authentication like shown in the figure, the exchange <strong>must</strong> happen over an HTTPS (TLS) connection to be secure.</p>
 
@@ -56,7 +56,7 @@ tags:
 Proxy-Authenticate: &lt;type&gt; realm=&lt;realm&gt;
 </pre>
 
-<p>Here, <code>&lt;type&gt;</code> is the authentication scheme ("Basic" is the most common scheme and <a href="/en-US/docs/Web/HTTP/Authentication#Basic_authentication_scheme">introduced below</a>). The <em>realm</em> is used to describe the protected area or to indicate the scope of protection. This could be a message like "Access to the staging site" or similar, so that the user knows to which space they are trying to get access to.</p>
+<p>Here, <code>&lt;type&gt;</code> is the authentication scheme ("Basic" is the most common scheme and <a href="/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme">introduced below</a>). The <em>realm</em> is used to describe the protected area or to indicate the scope of protection. This could be a message like "Access to the staging site" or similar, so that the user knows to which space they are trying to get access to.</p>
 
 <h3 id="Authorization_and_Proxy-Authorization_headers">Authorization and Proxy-Authorization headers</h3>
 

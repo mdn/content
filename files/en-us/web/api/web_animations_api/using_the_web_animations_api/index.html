@@ -40,7 +40,7 @@ tags:
 
 <p>Here’s a tumbling animation written in CSS showing Alice falling down the rabbit hole that leads to Wonderland (see the full <a href="http://codepen.io/rachelnabors/pen/QyOqqW">code on Codepen</a>):</p>
 
-<p><a href="http://codepen.io/rachelnabors/pen/rxpmJL"><img alt="Alice Tumbling down the rabbit's hole." src="https://mdn.mozillademos.org/files/13843/tumbling-alice_optimized.gif" style="display: block; height: 374px; margin-left: auto; margin-right: auto; width: 700px;"></a></p>
+<p><a href="http://codepen.io/rachelnabors/pen/rxpmJL"><img alt="Alice Tumbling down the rabbit's hole." src="tumbling-alice_optimized.gif" style="display: block; margin-left: auto; margin-right: auto;"></a></p>
 
 <p>Notice that the background moves, Alice spins, and her color changes at an offset from her spinning. We’re going to focus on just Alice for this tutorial. Here’s the simplified CSS that controls Alice’s animation:</p>
 
@@ -88,7 +88,7 @@ tags:
 
 <h4 id="Representing_timing_properties">Representing timing properties</h4>
 
-<p>We’ll also need to create an object of timing properties (an {{domxref("AnimationEffectTimingProperties")}} object) corresponding to the values in Alice’s animation:</p>
+<p>We’ll also need to create an object of timing properties (an {{domxref("EffectTiming")}} object) corresponding to the values in Alice’s animation:</p>
 
 <pre class="brush: js notranslate">var aliceTiming = {
   duration: 3000,
@@ -98,7 +98,7 @@ tags:
 <p>You’ll notice a few differences here from how equivalent values are represented in CSS:</p>
 
 <ul>
- <li>For one, the duration is in milliseconds as opposed to seconds — 3000 not 3s. Like {{domxref("WindowTimers.setTimeout()")}} and {{domxref("Window.requestAnimationFrame()")}}, the Web Animations API only takes milliseconds.</li>
+ <li>For one, the duration is in milliseconds as opposed to seconds — 3000 not 3s. Like {{domxref("WindowOrWorkerGlobalScope.setTimeout")}} and {{domxref("Window.requestAnimationFrame()")}}, the Web Animations API only takes milliseconds.</li>
  <li>The other thing you’ll notice is that it’s <code>iterations</code>, not <code>iteration-count</code>.</li>
 </ul>
 
@@ -143,7 +143,7 @@ tags:
 
 <p>While we can write CSS Animations with the Web Animations API, where the API really comes in handy is manipulating the animation’s playback. The Web Animations API provides several useful methods for controlling playback. Let’s take a look at pausing and playing animations in the Growing/Shrinking Alice game (check out the <a href="http://codepen.io/rachelnabors/pen/PNYGZQ">full code on Codepen</a>):</p>
 
-<p><a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010"><img alt="Playing the growing and shrinking game with Alice." src="https://mdn.mozillademos.org/files/13845/growing-shrinking_article_optimized.gif" style="display: block; height: 374px; margin-left: auto; margin-right: auto; width: 700px;"></a></p>
+<p><a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010"><img alt="Playing the growing and shrinking game with Alice." src="growing-shrinking_article_optimized.gif" style="display: block; margin-left: auto; margin-right: auto;"></a></p>
 
 <p>In this game, Alice has an animation that causes her to go from small to big which we control via a bottle and a cupcake. Both of these have their own animations.</p>
 
@@ -208,7 +208,7 @@ bottle.addEventListener("touchstart", shrinkAlice, false);</pre>
 
 <p>In <a href="https://en.wikipedia.org/wiki/Through_the_Looking-Glass">Through the Looking-Glass</a>, Alice travels to a world where she must run to stay in place — and run twice as fast to move forward! In the Red Queen’s Race example, Alice and the Red Queen are running to stay in place (check out the <a href="http://codepen.io/rachelnabors/pen/PNGGaV">full code on Codepen</a>):</p>
 
-<p><a href="http://codepen.io/rachelnabors/pen/PNGGaV"><img alt="Alice and the Red Queen race to get to the next square in this game." src="https://mdn.mozillademos.org/files/13847/red-queen-race_optimized.gif" style="display: block; height: 342px; margin-left: auto; margin-right: auto; width: 640px;"></a></p>
+<p><a href="http://codepen.io/rachelnabors/pen/PNGGaV"><img alt="Alice and the Red Queen race to get to the next square in this game." src="red-queen-race_optimized.gif" style="display: block; margin-left: auto; margin-right: auto;"></a></p>
 
 <p>Because small children tire out easily, unlike automaton chess pieces, Alice is constantly slowing down. We can do this by setting a decay on her animation’s <code>playbackRate</code>. We use <code>updatePlaybackRate()</code> instead of setting the playbackRate directly since that produces a smooth update:</p>
 
@@ -234,7 +234,7 @@ document.addEventListener("touchstart", goFaster);</pre>
 
 <h2 id="Getting_information_out_of_animations">Getting information out of animations</h2>
 
-<p>Imagine other ways we could use playbackRate, such as improving accessibility for users with vestibular disorders by letting them slow down animations across an entire site. That’s impossible to do with CSS without recalculating durations in every CSS rule, but with the Web Animations API, we could use the {{domxref("document.getAnimations()")}} method to loop over each animation on the page and halve their <code>playbackRate</code>s, like so:</p>
+<p>Imagine other ways we could use playbackRate, such as improving accessibility for users with vestibular disorders by letting them slow down animations across an entire site. That’s impossible to do with CSS without recalculating durations in every CSS rule, but with the Web Animations API, we could use the {{domxref("DocumentOrShadowRoot.getAnimations")}} method to loop over each animation on the page and halve their <code>playbackRate</code>s, like so:</p>
 
 <pre class="brush: js notranslate">document.getAnimations().forEach(
   function (animation) {

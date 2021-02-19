@@ -40,7 +40,7 @@ tags:
 
 <p>There are a number of different types of positioning that you can put into effect on HTML elements. To make a specific type of positioning active on an element, we use the {{cssxref("position")}} property.</p>
 
-<h3 id="Static_positioning">Static positioning</h3>
+<h2 id="Static_positioning">Static positioning</h2>
 
 <p>Static positioning is the default that every element gets — it just means "put the element into its normal position in the document layout flow — nothing special to see here."</p>
 
@@ -61,7 +61,7 @@ tags:
 <p><strong>Note</strong>: You can see the example at this point live at <code><a href="https://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html">1_static-positioning.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html">see source code</a>).</p>
 </div>
 
-<h3 id="Relative_positioning">Relative positioning</h3>
+<h2 id="Relative_positioning">Relative positioning</h2>
 
 <p>Relative positioning is the first position type we'll take a look at. This is very similar to static positioning, except that once the positioned element has taken its place in the normal layout flow, you can then modify its final position, including making it overlap other elements on the page. Go ahead and update the <code>position</code> declaration in your code:</p>
 
@@ -126,7 +126,7 @@ span {
 <p><strong>Note</strong>: You can see the example at this point live at <code><a href="https://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html">2_relative-positioning.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/2_relative-positioning.html">see source code</a>).</p>
 </div>
 
-<h3 id="Absolute_positioning">Absolute positioning</h3>
+<h2 id="Absolute_positioning">Absolute positioning</h2>
 
 <p>Absolute positioning brings very different results. Let's try changing the position declaration in your code as follows:</p>
 
@@ -135,6 +135,7 @@ span {
 <p>If you now save and refresh, you should see something like so:</p>
 
 <div class="hidden">
+<h3 id="hidden_abspos_code">hidden abspos code</h3>
 <pre class="brush: html   notranslate">&lt;h1&gt;Absolute positioning&lt;/h1&gt;
 
 &lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
@@ -170,7 +171,7 @@ span {
 }</pre>
 </div>
 
-<p>{{ EmbedLiveSample('Absolute_positioning', '100%', 420) }}</p>
+<p>{{ EmbedLiveSample('hidden_abspos_code', '100%', 450) }}</p>
 
 <p>First of all, note that the gap where the positioned element should be in the document flow is no longer there — the first and third elements have closed together like it no longer exists! Well, in a way, this is true. An absolutely positioned element no longer exists in the normal document layout flow. Instead, it sits on its own layer separate from everything else. This is very useful: it means that we can create isolated UI features that don't interfere with the layout of other elements on the page.  For example, popup information boxes and control menus; rollover panels; UI features that can be dragged and dropped anywhere on the page; and so on...</p>
 
@@ -324,9 +325,9 @@ p:nth-of-type(1) {
 <p><strong>Note</strong>: You can see the example at this point live at <code><a href="https://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html">5_z-index.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/5_z-index.html">see source code</a>).</p>
 </div>
 
-<h3 id="Fixed_positioning">Fixed positioning</h3>
+<h2 id="Fixed_positioning">Fixed positioning</h2>
 
-<p>Let's now look at fixed positioning. This works in exactly the same way as absolute positioning, with one key difference: whereas absolute positioning fixes an element in place relative to its nearest positioned ancestor (the initial containing block if there isn't one),<strong> fixed positioning</strong> <em>usually</em> fixes an element in place relative to the visible portion of the viewport, except if one of its ascendants is a fixed containing block due to its <a href="/en-US/docs/Web/CSS/transform">transform property</a> being different from none. This means that you can create useful UI items that are fixed in place, like persisting navigation menus that are always visible no matter how much the page scrolls.</p>
+<p>Let's now look at fixed positioning. This works in exactly the same way as absolute positioning, with one key difference: whereas absolute positioning fixes an element in place relative to its nearest positioned ancestor (the initial containing block if there isn't one),<strong> fixed positioning</strong> <em>usually</em> fixes an element in place relative to the visible portion of the viewport, except if one of its ancestors is a fixed containing block due to its <a href="/en-US/docs/Web/CSS/transform">transform property</a> being different from none. This means that you can create useful UI items that are fixed in place, like persisting navigation menus that are always visible no matter how much the page scrolls.</p>
 
 <p>Let's put together a simple example to show what we mean. First of all, delete the existing <code>p:nth-of-type(1)</code> and <code>.positioned</code> rules from your CSS.</p>
 
@@ -407,7 +408,7 @@ p:nth-of-type(1) {
 <p><strong>Note</strong>: You can see the example at this point live at <code><a href="https://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html">6_fixed-positioning.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/6_fixed-positioning.html">see source code</a>).</p>
 </div>
 
-<h3 id="position_sticky">position: sticky</h3>
+<h2 id="position_sticky">Sticky positioning</h2>
 
 <p>There is another position value available called <code>position: sticky</code>, which is somewhat newer than the others. This is basically a hybrid between relative and fixed position, which allows a positioned element to act like it is relatively positioned until it is scrolled to a certain threshold point (e.g. 10px from the top of the viewport), after which it becomes fixed. This can be used to for example cause a navigation bar to scroll with the page until a certain point, and then stick to the top of the page. </p>
 
@@ -548,7 +549,7 @@ dt {
 
 <p>{{ EmbedLiveSample('Sticky_2', '100%', 200) }}</p>
 
-<p>Sticky elements are "sticky" relative to the nearest ancestor with a "scrolling mechanism", which is determined by its ascendants' <a href="/en-US/docs/Web/CSS/position">position</a> property.</p>
+<p>Sticky elements are "sticky" relative to the nearest ancestor with a "scrolling mechanism", which is determined by its ancestors' <a href="/en-US/docs/Web/CSS/position">position</a> property.</p>
 
 <div class="note">
 <p><strong>Note</strong>: You can see this example live at <code><a href="https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html">7_sticky-positioning.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/7_sticky-positioning.html">see source code</a>).</p>

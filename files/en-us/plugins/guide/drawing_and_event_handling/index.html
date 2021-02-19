@@ -28,13 +28,13 @@ tags:
 
 <h3 id="The_NPWindow_Structure">The NPWindow Structure</h3>
 
-<p>When a plug-in is loaded, it is drawn into a target area. This target is either the windowed plug-in's native window, or the drawable of a windowless plug-in. The <a href="/en/NPWindow">NPWindow</a> structure represents either the native window or a drawable. This structure contains information about coordinate position, size, the state of the plug-in (windowed or windowless), and some platform-specific information.</p>
+<p>When a plug-in is loaded, it is drawn into a target area. This target is either the windowed plug-in's native window, or the drawable of a windowless plug-in. The <a href="/en-US/NPWindow">NPWindow</a> structure represents either the native window or a drawable. This structure contains information about coordinate position, size, the state of the plug-in (windowed or windowless), and some platform-specific information.</p>
 
 <div class="note">
 <p><strong>NOTE:</strong> When a plug-in is drawn to a window, the plug-in is responsible for preserving state information and ensuring that the original state is restored.</p>
 </div>
 
-<p>For windowless plug-ins, the browser calls the <a href="/en/NPP_SetWindow">NPP_SetWindow</a> method with an <a href="/en/NPWindow">NPWindow</a> structure that represents a drawable. For windowed plug-ins, the browser calls the <code>NPP_SetWindow</code> method with an <code>NPWindow</code> structure that represents a window.</p>
+<p>For windowless plug-ins, the browser calls the <a href="/en-US/NPP_SetWindow">NPP_SetWindow</a> method with an <a href="/en-US/NPWindow">NPWindow</a> structure that represents a drawable. For windowed plug-ins, the browser calls the <code>NPP_SetWindow</code> method with an <code>NPWindow</code> structure that represents a window.</p>
 
 <pre>//The NPWindow Structure
 
@@ -62,13 +62,13 @@ NPWindowType  type;   /* Whether this is a window or a drawable */
 } NPWindow;
 </pre>
 
-<p>The window parameter is a platform-specific handle to a native window element in the browser window hierarchy on Windows and Unix. On Mac OS, window is a pointer to an <a href="/en/NP_Port">NP_Port</a>.</p>
+<p>The window parameter is a platform-specific handle to a native window element in the browser window hierarchy on Windows and Unix. On Mac OS, window is a pointer to an <a href="/en-US/NP_Port">NP_Port</a>.</p>
 
 <p>The <code>x</code> and <code>y</code> fields specify the top-left corner of the plug-in relative to the page.</p>
 
 <p>The <code>width</code> and <code>height</code> fields specify the dimensions of the plug-in area. These values should not be modified by the plug-in.</p>
 
-<p>The <code>clipRect</code> field defines the clipping rectangle of the plug-in in a coordinate system where the origin is the top-left corner of the drawable or window. The browser calls <a href="/en/NPP_SetWindow">NPP_SetWindow</a> whenever the drawable changes. For windowless plugins, a <code>clipRect</code> of <code>0,0,0,0</code> signals that the plugin is not visible.</p>
+<p>The <code>clipRect</code> field defines the clipping rectangle of the plug-in in a coordinate system where the origin is the top-left corner of the drawable or window. The browser calls <a href="/en-US/NPP_SetWindow">NPP_SetWindow</a> whenever the drawable changes. For windowless plugins, a <code>clipRect</code> of <code>0,0,0,0</code> signals that the plugin is not visible.</p>
 
 <p>The type field indicates the <code>NPWindow</code> type of the target area:</p>
 
@@ -94,17 +94,17 @@ NPWindowType  type;   /* Whether this is a window or a drawable */
 <p>Plug-in methods, called by the browser:</p>
 
 <ul>
- <li><a href="/en/NPP_HandleEvent">NPP_HandleEvent</a>: Deliver a platform-specific event to the instance.</li>
- <li><a href="/en/NPP_Print">NPP_Print</a>: Request a platform-specific print operation for the instance.</li>
- <li><a href="/en/NPP_SetWindow">NPP_SetWindow</a>: Set the window in which a plug-in draws.</li>
+ <li><a href="/en-US/NPP_HandleEvent">NPP_HandleEvent</a>: Deliver a platform-specific event to the instance.</li>
+ <li><a href="/en-US/NPP_Print">NPP_Print</a>: Request a platform-specific print operation for the instance.</li>
+ <li><a href="/en-US/NPP_SetWindow">NPP_SetWindow</a>: Set the window in which a plug-in draws.</li>
 </ul>
 
 <p>Browser-side methods, called by the plug-in:</p>
 
 <ul>
- <li><a href="/en/NPN_ForceRedraw">NPN_ForceRedraw</a>: Force a paint message to a windowless plug-in.</li>
- <li><a href="/en/NPN_InvalidateRect">NPN_InvalidateRect</a>: Invalidate an area in a windowless plug-in before repainting or refreshing.</li>
- <li><a href="/en/NPN_InvalidateRegion">NPN_InvalidateRegion</a>: Invalidate a region in a windowless plug-in before repainting or refreshing.</li>
+ <li><a href="/en-US/NPN_ForceRedraw">NPN_ForceRedraw</a>: Force a paint message to a windowless plug-in.</li>
+ <li><a href="/en-US/NPN_InvalidateRect">NPN_InvalidateRect</a>: Invalidate an area in a windowless plug-in before repainting or refreshing.</li>
+ <li><a href="/en-US/NPN_InvalidateRegion">NPN_InvalidateRegion</a>: Invalidate a region in a windowless plug-in before repainting or refreshing.</li>
 </ul>
 
 <h4 id="Printing_the_Plug-in">Printing the Plug-in</h4>
@@ -249,7 +249,7 @@ NPWindowType  type;   /* Whether this is a window or a drawable */
 
 <h4 id="Specifying_That_a_Plug-in_Is_Windowless">Specifying That a Plug-in Is Windowless</h4>
 
-<p>To specify that a plug-in is windowless, use the <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_SetValue">NPN_SetValue</a></code> method.</p>
+<p>To specify that a plug-in is windowless, use the <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_SetValue">NPN_SetValue</a></code> method.</p>
 
 <p>The instance parameter represents the current plug-in. The variable parameter contains plug-in information to set. The value parameter returns the name of the plug-in.</p>
 
@@ -331,7 +331,7 @@ void NPN_InvalidateRegion(NPP instance, NPRegion invalidRegion);
  <dt>Unix/X11</dt>
  <dd>
  <p>The plug-in receives a <code>GraphicsExpose</code> event. The <code>XGraphicsExposeEvent</code> structure contains the Xlib <code>Drawable</code> (which is an offscreen Pixmap), its <code>Display</code>, and the dirty rectangle (optional clip rectangle) specified relative to the top-left corner of the drawable.</p>
- <p>The plugin should draw to the <code>Drawable</code> with the offset specified in the <code>x</code> and <code>y</code> members of the <a href="/en/NPWindow">NPWindow</a> structure, with the clip rectangle specified in the <code>clipRect</code> member, and with the <code>Visual</code> and <code>Colormap</code> specified in the <code>ws_info</code> member.</p>
+ <p>The plugin should draw to the <code>Drawable</code> with the offset specified in the <code>x</code> and <code>y</code> members of the <a href="/en-US/NPWindow">NPWindow</a> structure, with the clip rectangle specified in the <code>clipRect</code> member, and with the <code>Visual</code> and <code>Colormap</code> specified in the <code>ws_info</code> member.</p>
  </dd>
 </dl>
 
@@ -370,22 +370,22 @@ void NPN_InvalidateRegion(NPP instance, NPRegion invalidRegion);
 <dl>
  <dt>Windows</dt>
  <dd>
-  <p>The requested information, a value of type HWND, is returned from <a href="/en/NPN_GetValue">NPN_GetValue</a> in the value parameter.</p>
+  <p>The requested information, a value of type HWND, is returned from <a href="/en-US/NPN_GetValue">NPN_GetValue</a> in the value parameter.</p>
   <p>In many cases, a plug-in may still have to create its own window (a transparent child window of the browser window) to act as the owner window for pop-up menus and modal dialog boxes. You can give this transparent child window its own WindowProc process. The plug-in can use this to deal with <code>WM_COMMAND</code> messages sent to it as a result of tracking the pop-up menu or modal dialog box.</p>
  </dd>
  <dt>Unix/X11</dt>
- <dd>The value parameter for <a href="/en/NPN_GetValue">NPN_GetValue</a> must point to an Xlib <code>Window</code>. On successful return this will contain the browser toplevel window. Use this <code>Window</code> to set the WM_TRANSIENT_FOR property on dialog boxes.</dd>
+ <dd>The value parameter for <a href="/en-US/NPN_GetValue">NPN_GetValue</a> must point to an Xlib <code>Window</code>. On successful return this will contain the browser toplevel window. Use this <code>Window</code> to set the WM_TRANSIENT_FOR property on dialog boxes.</dd>
 </dl>
 
 
 <h4 id="Event_Handling_for_Windowless_Plug-ins">Event Handling for Windowless Plug-ins</h4>
 
-<p>On all platforms, platform-specific events are passed to windowless plug-ins through the <code><a href="/en/NPP_HandleEvent">NPP_HandleEvent</a></code> method. The plug-in must return true from <code>NPP_HandleEvent</code> if it has handled the event and false if it has not. Mac OS uses this mechanism for both windowed and windowless plug-ins; on this platform, <code>NPP_HandleEvent</code> is the only way the plug-in can receive events from its host application.</p>
+<p>On all platforms, platform-specific events are passed to windowless plug-ins through the <code><a href="/en-US/NPP_HandleEvent">NPP_HandleEvent</a></code> method. The plug-in must return true from <code>NPP_HandleEvent</code> if it has handled the event and false if it has not. Mac OS uses this mechanism for both windowed and windowless plug-ins; on this platform, <code>NPP_HandleEvent</code> is the only way the plug-in can receive events from its host application.</p>
 
 <pre>int16 NPP_HandleEvent(NPP instance, NPEvent *event);
 </pre>
 
-<p>The instance parameter represents the current plug-in. For a list of event types the application is responsible for delivering to the plug-in, see the <code><a href="/en/NPEvent">NPEvent</a></code> structure.</p>
+<p>The instance parameter represents the current plug-in. For a list of event types the application is responsible for delivering to the plug-in, see the <code><a href="/en-US/NPEvent">NPEvent</a></code> structure.</p>
 
 <p>This code shows the specific data passed through this method for each platform:</p>
 

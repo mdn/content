@@ -6,7 +6,7 @@ tags:
   - CSS Text
   - Guide
   - overflow
-  - overflow-wrap 
+  - overflow-wrap
   - word-break
 ---
 <div>{{CSSRef}}</div>
@@ -53,6 +53,12 @@ tags:
 
 <p>{{EmbedGHLiveSample("css-examples/css-text/word-break-checkbox.html", '100%', 660)}}</p>
 
+<h2>Adding hyphens</h2>
+
+<p>To add hypens when words are broken use the CSS {{cssxref("hyphens")}} property. Using a value of <code>auto</code> and the browser is free to automatically break words at appropriate hyphenation points, following whatever rules it chooses. To have some control over the process use a value of <code>manual</code>, then insert a hard or soft break character into the string. A hard break (<code>&hyphen;</code>) will always break, even if it is not necessary to do so. A soft break (<code>&shy;</code>) only breaks if breaking is needed.</p>
+
+<p>{{EmbedGHLiveSample("css-examples/css-text/hyphens.html", '100%', 660)}}</p>
+
 <h2>The &lt;wbr&gt; property</h2>
 
 <p>If you know where you want a long string to break then it is also possible to insert the HTML {{HTMLElement("wbr")}} element. This can be useful in cases such as displaying a long URL on a page. You can then add the property in order to break the string in sensible places that will make it easier to read.</p>
@@ -67,5 +73,6 @@ tags:
     <li>The HTML {{HTMLElement("wbr")}} element</li>
     <li>The CSS {{cssxref("word-break")}} property</li>
     <li>The CSS {{cssxref("overflow-wrap")}} property</li>
+    <li>The CSS {{cssxref("hyphens")}} property</li>
     <li><a href="https://www.smashingmagazine.com/2019/09/overflow-data-loss-css/">Overflow and Data Loss in CSS</a></li>
 </ul>

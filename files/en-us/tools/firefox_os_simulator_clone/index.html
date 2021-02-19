@@ -24,13 +24,13 @@ slug: Tools/Firefox_OS_Simulator_clone
 
 <p><span style="line-height: 22.00800132751465px;">The Simulator appears as a separate window, sized so the simulated screen area is 320x480 pixels. </span><span style="line-height: 22.00800132751465px;">To simulate touch events you can click the mouse button and drag while holding the button down. So by clicking and dragging right-to-left from the Home Screen, you'll see the built-in apps, as well as any apps you have added:</span></p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/7173/simulator-1.2.png" style="display: block; height: 623px; margin: 0px auto; width: 810px;"></p>
+<p><img alt="" src="simulator-1.2.png" style="display: block; margin: 0px auto;"></p>
 
 <p>The Simulator has two buttons in a toolbar at the bottom:</p>
 
 <ul>
  <li>The button on the left takes you to the Home screen, or switches the Simulator off if you hold it down.</li>
- <li>The button on the right switches the Simulator between portrait and landscape orientation. This will generate the <a href="/en-US/docs/WebAPI/Managing_screen_orientation#Listening_orientation_change">orientationchange</a> event.</li>
+ <li>The button on the right switches the Simulator between portrait and landscape orientation. This will generate the <a href="/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation#listening_orientation_change">orientationchange</a> event.</li>
 </ul>
 
 <h2 id="Limitations_of_the_Simulator">Limitations of the Simulator</h2>
@@ -54,26 +54,26 @@ slug: Tools/Firefox_OS_Simulator_clone
 
 <p>This means it isn't possible to use the Simulator to test video playback in apps and on websites like YouTube that rely on these codecs.</p>
 
-<h3 id="Unsupported_APIs"><a name="Unsupported-APIs">Unsupported APIs</a></h3>
+<h3 id="Unsupported_APIs">Unsupported APIs</h3>
 
 <p>Certain APIs that work on the device won't work on the Simulator, generally because the supporting hardware is not available on the desktop. We've implemented simulations for some APIs such as geolocation, and expect to add more in future releases. However, at the moment the following APIs are not supported. Using them might throw errors or just return incorrect results:</p>
 
 <ul>
  <li><a href="/en-US/docs/WebAPI/WebTelephony">Telephony</a></li>
  <li><a href="/en-US/docs/WebAPI/WebSMS">WebSMS</a></li>
- <li><a href="/en-US/docs/WebAPI/WebBluetooth">WebBluetooth</a></li>
- <li><a href="/en-US/docs/WebAPI/Using_Light_Events">Ambient Light</a></li>
- <li><a href="/en-US/docs/WebAPI/Proximity">Proximity</a></li>
- <li><a href="/en-US/docs/WebAPI/Network_Information">Network Information</a></li>
- <li><a href="/en-US/docs/Online_and_offline_events">navigator.onLine and offline events</a></li>
- <li><a href="/en-US/docs/WebAPI/Vibration">Vibration</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Bluetooth_API">WebBluetooth</a></li>
+ <li><a href="/en-US/docs/Web/API/Ambient_Light_Events">Ambient Light</a></li>
+ <li><a href="/en-US/docs/Web/API/Proximity_Events">Proximity</a></li>
+ <li><a href="/en-US/docs/Web/API/Network_Information_API">Network Information</a></li>
+ <li><a href="/en-US/docs/Web/API/NavigatorOnLine/Online_and_offline_events">navigator.onLine and offline events</a></li>
+ <li><a href="/en-US/docs/Web/API/Vibration_API">Vibration</a></li>
 </ul>
 
-<h2 id="Getting_help"><a name="Simulator-help"></a>Getting help</h2>
+<h2 id="Getting_help">Getting help</h2>
 
 <p><span style="line-height: 1.5;">If you have a question, try asking us on the </span><a href="https://lists.mozilla.org/listinfo/dev-developer-tools" style="line-height: 1.5;">dev-developer-tools mailing list</a><span style="line-height: 1.5;"> or on </span><a href="irc://irc.mozilla.org/#devtools" style="line-height: 1.5;">#devtools on irc.mozilla.org</a><span style="line-height: 1.5;">.</span></p>
 
-<h3 id="How_to_enable_verbose_logging"><a name="Simulator-verbose-logging"></a>How to enable verbose logging</h3>
+<h3 id="How_to_enable_verbose_logging">How to enable verbose logging</h3>
 
 <p>You can see messages logged from your app in the <a href="/en-US/docs/Tools/Web_Console">Web Console</a>, which you can attach to your app using the <a href="/docs/Tools/WebIDE/Troubleshooting">WebIDE</a>. If you want to catch early messages happening during app startup, before the console gets connected and working, you can enable verbose logging in the Simulator.</p>
 

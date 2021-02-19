@@ -5,9 +5,9 @@ tags:
   - Firefox
   - Releases
 ---
-<div>{{FirefoxSidebar}}</div><div>
+<div>{{FirefoxSidebar}}</div>
+
 <p>Firefox 34 was released on December 1st, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.</p>
-</div>
 
 <h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
 
@@ -18,9 +18,9 @@ tags:
 <ul>
  <li><a href="/en-US/docs/Tools/Storage_Inspector">Storage Inspector: a new tool enabling you to view data stored by web pages</a></li>
  <li><a href="/en-US/docs/Tools/Performance">Performance tool: revamped Profiler UI and frame rate timeline</a></li>
- <li><a href="/en-US/docs/tools/Working_with_iframes">Frame switching: point the developer tools at a specific iframe in the page</a></li>
- <li><a href="/en-US/docs/Web/API/Console.table">console.table support</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector#Examining_event_listeners">jQuery events are visible in the Page Inspector</a></li>
+ <li><a href="/en-US/docs/Tools/Working_with_iframes">Frame switching: point the developer tools at a specific iframe in the page</a></li>
+ <li><a href="/en-US/docs/Web/API/Console/table">console.table support</a></li>
+ <li><a href="/en-US/docs/Tools/Page_Inspector#examining_event_listeners">jQuery events are visible in the Page Inspector</a></li>
 </ul>
 
 <p><a class="external-icon external" href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;chfieldto=2014-09-02&amp;chfield=resolution&amp;query_format=advanced&amp;chfieldfrom=2014-07-21&amp;chfieldvalue=FIXED&amp;component=Developer%20Tools&amp;component=Developer%20Tools%3A%203D%20View&amp;component=Developer%20Tools%3A%20Canvas%20Debugger&amp;component=Developer%20Tools%3A%20Console&amp;component=Developer%20Tools%3A%20Debugger&amp;component=Developer%20Tools%3A%20Framework&amp;component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&amp;component=Developer%20Tools%3A%20Inspector&amp;component=Developer%20Tools%3A%20Memory&amp;component=Developer%20Tools%3A%20Netmonitor&amp;component=Developer%20Tools%3A%20Object%20Inspector&amp;component=Developer%20Tools%3A%20Profiler&amp;component=Developer%20Tools%3A%20Responsive%20Mode&amp;component=Developer%20Tools%3A%20Scratchpad&amp;component=Developer%20Tools%3A%20Source%20Editor&amp;component=Developer%20Tools%3A%20Storage%20Inspector&amp;component=Developer%20Tools%3A%20Style%20Editor&amp;component=Developer%20Tools%3A%20Timeline&amp;component=Developer%20Tools%3A%20User%20Stories&amp;component=Developer%20Tools%3A%20Web%20Audio%20Editor&amp;component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&amp;component=Developer%20Tools%3A%20WebIDE&amp;component=Simulator&amp;product=Firefox&amp;product=Firefox%20OS&amp;list_id=11184176">All devtools bugs fixed between Firefox 33 and Firefox 34</a>.</p>
@@ -53,15 +53,15 @@ tags:
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
- <li>The ES2015 syntax for <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names">computed property names on object literals</a> has been implemented ({{bug(924688)}}).
+ <li>The ES2015 syntax for <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names">computed property names on object literals</a> has been implemented ({{bug(924688)}}).
 
   <ul>
-   <li>This includes <a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">getter</a> and <a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a> method names as well ({{bug(1048384)}}) and can also be used with <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Computed_object_property_names_and_destructuring">destructuring</a>.</li>
+   <li>This includes <a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">getter</a> and <a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a> method names as well ({{bug(1048384)}}) and can also be used with <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#computed_object_property_names_and_destructuring">destructuring</a>.</li>
   </ul>
  </li>
  <li>The ES2015<a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions"> shorthand syntax for defining methods</a> on objects has been implemented ({{bug(924672)}}).</li>
  <li>The ES2015 <code>Object</code> method {{jsxref("Object.assign", "Object.assign()")}} has been implemented ({{bug(937855)}}).</li>
- <li>ES2015 <a href="/en-US/docs/Web/JavaScript/Reference/template_strings">template strings</a> and the {{jsxref("String.raw()")}} method are now supported ({{bug(1038259)}}, {{bug(1039774)}}).</li>
+ <li>ES2015 <a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">template strings</a> and the {{jsxref("String.raw()")}} method are now supported ({{bug(1038259)}}, {{bug(1039774)}}).</li>
  <li>A new ES2015 object {{jsxref("WeakSet")}} has been added ({{bug(792439)}}).</li>
  <li>ES2015 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbols</a> (only available in the Nightly channel) have been updated to conform with recent specification changes ({{bug(1042602)}}):
   <ul>
@@ -70,9 +70,9 @@ tags:
   </ul>
  </li>
  <li>The experimental {{jsxref("TypedArray.prototype.move()")}} method (only available in former Nightly and Aurora channels) has been replaced with the now implemented standard ES2015 {{jsxref("TypedArray.prototype.copyWithin()")}} method ({{bug(1021379)}}).</li>
- <li>In <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>, setting a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Duplicate_property_names">duplicate property name in object literals</a> will no longer throw a <code>SyntaxError</code> as per ES2015 specification ({{bug(1041128)}}).</li>
- <li>In regular expressions (including <code>String.replace</code>), the matched text for a capturing group is now <code>undefined</code> instead of the empty string when that capturing group didn't get consulted because quantifiers prevented its exercise (see {{bug(369778)}} and <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#Gecko_specific_notes">this example code</a>). Note that due to web compatibility, RegExp.$N will still return an empty string ({{bug(1053944)}}).</li>
- <li>The ES2015 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread operator</a> is now supported in <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructuring</a> ({{bug(933276)}}).</li>
+ <li>In <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>, setting a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#duplicate_property_names">duplicate property name in object literals</a> will no longer throw a <code>SyntaxError</code> as per ES2015 specification ({{bug(1041128)}}).</li>
+ <li>In regular expressions (including <code>String.replace</code>), the matched text for a capturing group is now <code>undefined</code> instead of the empty string when that capturing group didn't get consulted because quantifiers prevented its exercise (see {{bug(369778)}} and <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#gecko_specific_notes">this example code</a>). Note that due to web compatibility, RegExp.$N will still return an empty string ({{bug(1053944)}}).</li>
+ <li>The ES2015 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread operator</a> is now supported in <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructuring</a> ({{bug(933276)}}).</li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring</a> now uses iterator protocol instead of array-like protocol ({{bug(933276)}}).</li>
  <li><span class="message"><span class="content">{{jsxref("Proxy.revocable()")}} has been implemented</span></span> ({{bug(978279)}}).</li>
 </ul>
@@ -132,10 +132,10 @@ tags:
 <h4 id="Highlights">Highlights</h4>
 
 <ul>
- <li>New API: <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Low-Level_APIs/dev_panel">dev/panel</a> enables you to extend the Firefox Developer Tools.</li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm">jpm</a> beta released.</li>
+ <li>New API: <a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/dev_panel">dev/panel</a> enables you to extend the Firefox Developer Tools.</li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/SDK/Tools/jpm">jpm</a> beta released.</li>
  <li><code>"./my-file"</code> introduced everywhere as an alias for <code>require("sdk/self").data.url("my-file")</code></li>
- <li>Added the ability to <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs/tabs#Attaching_stylesheets">attach stylesheets to individual tabs</a>.</li>
+ <li>Added the ability to <a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/tabs#attaching_stylesheets">attach stylesheets to individual tabs</a>.</li>
 </ul>
 
 <h4 id="Details">Details</h4>

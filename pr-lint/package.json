@@ -1,0 +1,16 @@
+{
+  "name": "pr-lint",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "scripts": {
+    "check": "node src/index.js"
+  },
+  "dependencies": {
+    "@actions/github": "4.0.0",
+    "boxen": "5.0.0"
+  }
+}

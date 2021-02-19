@@ -120,7 +120,7 @@ tags:
       } else {
         lastResult.textContent = 'Wrong!';
         lastResult.style.backgroundColor = 'red';
-        if(userGuess &lt; randomNumber) {
+        if (userGuess &lt; randomNumber) {
           lowOrHi.textContent = 'Last guess was too low!' ;
         } else if(userGuess &gt; randomNumber) {
           lowOrHi.textContent = 'Last guess was too high!';
@@ -190,7 +190,7 @@ tags:
  </li>
  <li>If it is wrong and the player has turns left:
   <ol>
-   <li>Tell the player they are wrong.</li>
+   <li>Tell the player they are wrong and whether their guess was too high or too low.</li>
    <li>Allow them to enter another guess.</li>
    <li>Increment the turn number by 1.</li>
   </ol>

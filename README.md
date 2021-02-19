@@ -7,6 +7,11 @@ The following is a set of guidelines for contributing to the
 [content of MDN Web Docs](https://github.com/mdn/content), which is
 hosted within the [MDN Organization](https://github.com/mdn) on GitHub.
 
+> **Note:** Just want to find a task and jump in?
+  See [Getting started on MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started)
+  for an overview of how to join, and [Contributing to MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute)
+  for a filtered list of tasks.
+
 <!-- You can quickly regenerate this TOC by running:
   npx markdown-toc@1.2.0 --bullets='-' --no-firsth1 README.md -->
 
@@ -28,11 +33,12 @@ hosted within the [MDN Organization](https://github.com/mdn) on GitHub.
   - [Making a change that depends on a macro update](#making-a-change-that-depends-on-a-macro-update)
 - [Frequently asked questions (FAQ)](#frequently-asked-questions-faq)
   - [When will my change show up on the production MDN site?](#when-will-my-change-show-up-on-the-production-mdn-site)
+  - [Can I copy content from other places to put on MDN?](#can-i-copy-content-from-other-sources-to-put-on-MDN)
 
 ## Code of Conduct
 
-Everyone participating in this project is expected to follow
-[our Code of Conduct](CODE_OF_CONDUCT.md).
+Everyone participating in this project is expected to follow our
+[Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## License
 
@@ -117,10 +123,15 @@ document: `title`, `slug`, and [`tags`](https://developer.mozilla.org/en-US/docs
 
 If you just want to make a simple change to a single file, like fixing a typo,
 the GitHub UI is the simplest way to do that. For example, if you've found
-a typo within the [JavaScript landing page](files/en-us/web/javascript/index.html),
-you can sign into GitHub, go to <https://github.com/mdn/content>, navigate to
-`files/en-us/web/javascript/index.html`, and then click on the edit
-(pencil) button. From there the GitHub UI will take your hand and
+a typo within the [JavaScript landing page](https://developer.mozilla.org/en-US/docs/Web/JavaScript),
+you can sign into GitHub, go to <https://github.com/mdn/content>,
+navigate to the source file `files/en-us/web/javascript/index.html`,
+and then click on the edit (pencil) button.
+
+> **Tip:** Click the **Source on GitHub** link in the footer of any MDN page
+  to jump to its source file on GitHub.
+
+From there the GitHub UI will take your hand and
 [walk you through the rest](https://docs.github.com/en/free-pro-team@latest/github/managing-files-in-a-repository/editing-files-in-your-repository),
 like automatically creating a
 [fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
@@ -128,8 +139,9 @@ and branch to commit your changes to, as well as helping you reach the
 ultimate goal, a [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests).
 Your pull request represents the work you want to be reviewed,
 hopefully approved, and then merged into the `main` branch of this repository.
-**See the [pull request etiquette section](#pull-request-etiquette) for more details**
-**on creating and handling pull requests successfully.**
+
+> **Note:** See the [pull request etiquette section](#pull-request-etiquette)
+  for more details on creating and handling pull requests successfully.
 
 If you're not certain of the changes that you want to make, get in touch
 with us first!
@@ -233,12 +245,14 @@ within your browser.
     ```
 
     Instead of having to type `export EDITOR=code` every time prior to
-    `yarn start`, you can instead store this in your personal `.env` file.
-    It might not exist so you might need to create one. For example:
+    `yarn start`, you can instead store this setting in your personal `.env` file
+    (this goes inside the root of your local `content` directory). If the `.env`
+    file doesn't already exist, you can create one and include the above setting
+    in it. Alternatively, running the following line will add the setting to the
+    `.env` file automatically, creating the file if it doesn't already exist:
 
     ```sh
     echo 'EDITOR=code' >> .env
-    yarn start
     ```
 
     Now, it should be set like that even after you've closed and started a new
@@ -302,9 +316,7 @@ Here are some important rules of etiquette to remember when working
 with pull requests.
 
 1. When you submit a pull request, a number of tests are automatically run
-as GitHub Actions (see [.github/workflows/pr-build.yml](.github/workflows/pr-build.yml),
-[.github/workflows/pr-filecheck.yml](.github/workflows/pr-filecheck.yml),
-and [.github/workflows/preview.yml](.github/workflows/preview.yml)). If
+as GitHub Actions (see [.github/workflows](.github/workflows)). If
 one or more of these tests fail, it is your responsibility to try and
 resolve the underlying issue(s). If you don't know how to resolve the
 underlying issue(s), you can ask for help. Your pull request will not be
@@ -624,10 +636,10 @@ you can follow the below steps to unarchive it:
 directory into the appropriate place inside this repo, and update the
 page's meta data (like `slug`) if needed.
 
-Note: To archive a currently-non-archived page, you need to follow the
+> **Note:** To archive a currently-non-archived page, you need to follow the
 above procedure, but move the page in question the opposite way between repos.
 
-Note: You can have an archived page with non-archived pages below it in the
+**Note:** You can have an archived page with non-archived pages below it in the
 hierarchy, and vice-versa. To achive this you need to have the same directory
 structure in both the `content` and `archive-content` repos. Whether a page
 is non-archived or archived depends on which repo its `index.html` file is
@@ -661,7 +673,7 @@ In such situations:
 
 ## Frequently asked questions (FAQ)
 
-### When my change show up on the production MDN site
+### When will my change show up on the production MDN site
 
 After your pull request is merged, it may take up to 48 hours before the
 change goes live on the production <https://developer.mozilla.org/> site,
@@ -675,3 +687,32 @@ but it will usually be quicker.
 
 You can use <https://whatsdeployed.io/s/DLi/mdn/content> to see if your change
 has been deployed to the production site.
+
+### Can I copy content from other sources to put on MDN
+
+In general, we do not approve of copying content from other sources and putting
+it on MDN. MDN should be made up of original content wherever possible. If we
+receive a pull request and discover that it contains plagiarised content,
+we will close it and request that the submitter resubmit the change with
+the content rewritten into their own words.
+
+If someone wants to donate an article to MDN that they previously published on
+their blog or it makes sense to copy a complex reference sheet to MDN there may
+be justification for republishing it. In these cases you should discuss your
+plan with the MDN team first:
+
+1. Include a comment on the relevant repo issue that explains your intention — say
+what you would like to copy (include the URL) and explain why you think this
+is appropriate.
+1. If the content is published under a closed license:
+   - If you hold the rights to the content, state this, and say that you are
+happy to republish it on MDN.
+   - If you do not hold the rights to the content, include the author/publisher
+   on the issue if possible, or include details of how they could be contacted
+   so we can ask them for permission to republish the content.
+1. If the content is published under an open license, say what it is, and link
+to the license so we can check whether it is compatible with [MDN's license](https://developer.mozilla.org/en-US/docs/MDN/About#using_mdn_web_docs_content).
+1. @-mention chrisdavidmills on the issue, so he can review the request.
+
+Be warned that unless there is a good reason to republish the content, we will
+probably say "no". The MDN writing team's decision is final.

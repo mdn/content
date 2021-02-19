@@ -14,7 +14,7 @@ tags:
 
 <div>{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}</div>
 
-<p class="summary"><span class="seoSummary">In this first Django article, we answer the question "What is Django?" and give you an overview of what makes this web framework special. </span>We'll outline the main features, including some of the advanced functionality that we won't have time to cover in detail in this module. We'll also show you some of the main building blocks of a Django application (although at this point you won't yet have a development environment in which to test it).</p>
+<p class="summary"><span class="seoSummary">In this first Django article, we answer the question "What is Django?" and give you an overview of what makes this web framework special.</span> We'll outline the main features, including some of the advanced functionality that we won't have time to cover in detail in this module. We'll also show you some of the main building blocks of a Django application (although at this point you won't yet have a development environment in which to test it).</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -64,14 +64,14 @@ tags:
 
 <div class="notecard note">
   <h4>Note</h4>
-  <p>Check out <span style="line-height: 1.5;">the <a href="https://docs.djangoproject.com/en/stable/releases/">release notes</a> on the Django website to see what has changed in recent versions, and how much work is going into making Django better.</span></p>
+  <p>Check out the <a href="https://docs.djangoproject.com/en/stable/releases/">release notes</a> on the Django website to see what has changed in recent versions, and how much work is going into making Django better.</p>
 </div>
 
-<p>Django is now a thriving, collaborative open source project, with many thousands of users and contributors. While it does still have some features that reflect its origin<span style="line-height: 1.5;">, Django has evolved into a versatile framework that is capable of developing any type of website. </span></p>
+<p>Django is now a thriving, collaborative open source project, with many thousands of users and contributors. While it does still have some features that reflect its origin, Django has evolved into a versatile framework that is capable of developing any type of website.</p>
 
 <h2 id="How_popular_is_Django">How popular is Django?</h2>
 
-<p>There isn't any readily-available and definitive measurement of popularity of server-side frameworks (although sites like <a href="http://hotframeworks.com/">Hot Frameworks</a> attempt to assess popularity using mechanisms like counting the number of GitHub projects and StackOverflow questions for each platform). A better question is whether Django is "popular enough" to avoid the problems of unpopular platforms. Is it continuing to evolve? Can you get help if you need it? Is there an opportunity for you to get paid work if you learn Django? </p>
+<p>There isn't any readily-available and definitive measurement of popularity of server-side frameworks (although you can estimate popularity using mechanisms like counting the number of GitHub projects and StackOverflow questions for each platform). A better question is whether Django is "popular enough" to avoid the problems of unpopular platforms. Is it continuing to evolve? Can you get help if you need it? Is there an opportunity for you to get paid work if you learn Django? </p>
 
 <p>Based on the number of high profile sites that use Django, the number of people contributing to the codebase, and the number of people providing both free and paid for support, then yes, Django is a popular framework!</p>
 
@@ -104,7 +104,7 @@ tags:
 
 <div class="notecard note">
   <h4>Note</h4>
-  <p>Django refers to this organisation as the "Model View Template (MVT)" architecture. It has many similarities to the more familiar <a href="/en-US/docs/Glossary/MVC">Model View Controller</a> architecture. </p>
+  <p>Django refers to this organization as the "Model View Template (MVT)" architecture. It has many similarities to the more familiar <a href="/en-US/docs/Glossary/MVC">Model View Controller</a> architecture. </p>
 </div>
 
 <p>The sections below will give you an idea of what these main parts of a Django app look like (we'll go into more detail later on in the course, once we've set up a development environment).</p>
@@ -113,7 +113,7 @@ tags:
 
 <p>A URL mapper is typically stored in a file named <strong>urls.py</strong>. In the example below, the mapper (<code>urlpatterns</code>) defines a list of mappings between <em>routes</em> (specific URL <em>patterns)</em> and corresponding view functions. If an HTTP Request is received that has a URL matching a specified pattern, then the associated view function will be called and passed the request.</p>
 
-<pre class="notranslate">urlpatterns = [
+<pre class="brush: python">urlpatterns = [
     <strong>path('admin/', admin.site.urls),</strong>
     path('book/&lt;int:id&gt;/', views.book_detail, name='book_detail'),
     path('catalog/', include('catalog.urls')),
@@ -133,7 +133,7 @@ tags:
 
 <p>The example below shows a minimal view function <code>index()</code>, which could have been called by our URL mapper in the previous section. Like all view functions it receives an <code>HttpRequest</code> object as a parameter (<code>request</code>) and returns an <code>HttpResponse</code> object. In this case we don't do anything with the request, and our response returns a hard-coded string. We'll show you a request that does something more interesting in a later section.</p>
 
-<pre class="brush: python notranslate"># filename: views.py (Django view functions)
+<pre class="brush: python"># filename: views.py (Django view functions)
 
 from django.http import HttpResponse
 
@@ -162,7 +162,7 @@ def index(request):
 
 <p>The code snippet below shows a very simple Django model for a <code>Team</code> object. The <code>Team</code> class is derived from the django class <code>models.Model</code>. It defines the team name and team level as character fields and specifies a maximum number of characters to be stored for each record. The <code>team_level</code> can be one of several values, so we define it as a choice field and provide a mapping between choices to be displayed and data to be stored, along with a default value. </p>
 
-<pre class="brush: python notranslate"># filename: models.py
+<pre class="brush: python"># filename: models.py
 
 from django.db import models
 
@@ -183,7 +183,7 @@ class Team(models.Model):
   <p>A little bit of Python:</p>
 
   <ul>
-   <li>Python supports "object-oriented programming", a style of programming where we organise our code into objects, which include related data and functions for operating on that data. Objects can also inherit/extend/derive from other objects, allowing common behavior between related objects to be shared. In Python we use the keyword <code>class</code> to define the "blueprint" for an object. We can create multiple specific <em>instances</em> of the type of object based on the model in the class.<br>
+   <li>Python supports "object-oriented programming", a style of programming where we organize our code into objects, which include related data and functions for operating on that data. Objects can also inherit/extend/derive from other objects, allowing common behavior between related objects to be shared. In Python we use the keyword <code>class</code> to define the "blueprint" for an object. We can create multiple specific <em>instances</em> of the type of object based on the model in the class.<br>
   <br>
     So for example, here we have a <code>Team</code> class, which derives from the <code>Model</code> class. This means it is a model, and will contain all the methods of a model, but we can also give it specialized features of its own too. In our model we define the fields our database will need to store our data, giving them specific names. Django uses these definitions, including the field names, to create the underlying database.</li>
   </ul>
@@ -195,7 +195,7 @@ class Team(models.Model):
 
 <p>The code snippet shows a view function (resource handler) for displaying all of our U09 teams. The line in bold shows how we can use the model query API to filter for all records where the <code>team_level</code> field has exactly the text 'U09' (note how this criteria is passed to the <code>filter()</code> function as an argument, with the field name and match type separated by a double underscore: <strong>team_level__exact</strong>).</p>
 
-<pre class="brush: python notranslate">## filename: views.py
+<pre class="brush: python">## filename: views.py
 
 from django.shortcuts import render
 from .models import Team
@@ -214,7 +214,7 @@ def index(request):
 
 <p>The code snippet shows what the HTML template called by the <code>render()</code> function in the previous section might look like. This template has been written under the assumption that it will have access to a list variable called <code>youngest_teams</code> when it is rendered (this is contained in the <code>context</code> variable inside the <code>render()</code> function above). Inside the HTML skeleton we have an expression that first checks if the <code>youngest_teams</code> variable exists, and then iterates it in a <code>for</code> loop. On each iteration the template displays each team's <code>team_name</code> value in an <code>{{htmlelement("li")}}</code> element.</p>
 
-<pre class="brush: python notranslate">## filename: best/templates/best/index.html
+<pre class="brush: python">## filename: best/templates/best/index.html
 
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;

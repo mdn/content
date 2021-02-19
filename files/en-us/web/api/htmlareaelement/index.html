@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}, and implements those from {{domxref("HTMLHyperlinkElementUtils")}}.</em></p>
+<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
 
 <dl>
  <dt>{{domxref("Element.accessKey")}}</dt>
@@ -26,25 +26,25 @@ tags:
  <dd>Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("coords", "area") }} HTML attribute, containing coordinates to define the hot-spot region.</dd>
  <dt>{{domxref("HTMLAreaElement.download")}} {{experimental_inline}}</dt>
  <dd>Is a {{domxref("DOMString")}} indicating that the linked resource is intended to be downloaded rather than displayed in the browser. The value represent the proposed name of the file. If the name is not a valid filename of the underlying OS, browser will adapt it.</dd>
- <dt>{{domxref("HTMLHyperlinkElementUtils.hash")}}</dt>
+ <dt>{{domxref("HTMLAreaElement.hash")}}</dt>
  <dd>Is a {{domxref("USVString")}} containing the fragment identifier (including the leading hash mark (#)), if any, in the referenced URL.</dd>
- <dt>{{domxref("HTMLHyperlinkElementUtils.host")}}</dt>
+ <dt>{{domxref("HTMLAreaElement.host")}}</dt>
  <dd>Is a {{domxref("USVString")}} containing the hostname and port (if it's not the default port) in the referenced URL.</dd>
- <dt>{{domxref("HTMLHyperlinkElementUtils.hostname")}}</dt>
+ <dt>{{domxref("HTMLAreaElement.hostname")}}</dt>
  <dd>Is a {{domxref("USVString")}} containing the hostname in the referenced URL.</dd>
- <dt>{{domxref("HTMLHyperlinkElementUtils.href")}}</dt>
+ <dt>{{domxref("HTMLAreaElement.href")}}</dt>
  <dd>Is a {{domxref("USVString")}} containing that reflects the {{ htmlattrxref("href", "area") }} HTML attribute, containing a valid URL of a linked resource.</dd>
  <dt>{{domxref("HTMLAreaElement.noHref")}} {{obsolete_inline}}</dt>
  <dd>Is a {{jsxref("Boolean")}} flag indicating if the area is inactive (<code>true</code>) or active (<code>false</code>).</dd>
- <dt>{{domxref("HTMLHyperlinkElementUtils.password")}}</dt>
- <dd>Is a {{domxref("USVString")}} containing the password specified before the domain name.</dd>
- <dt>{{domxref("HTMLHyperlinkElementUtils.origin")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("HTMLAreaElement.origin")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("USVString")}} containing the origin of the URL, that is its scheme, its domain and its port.</dd>
- <dt>{{domxref("HTMLHyperlinkElementUtils.pathname")}}</dt>
+ <dt>{{domxref("HTMLAreaElement.password")}}</dt>
+ <dd>Is a {{domxref("USVString")}} containing the password specified before the domain name.</dd>
+ <dt>{{domxref("HTMLAreaElement.pathname")}}</dt>
  <dd>Is a {{domxref("USVString")}} containing the path name component, if any, of the referenced URL.</dd>
- <dt>{{domxref("HTMLHyperlinkElementUtils.port")}}</dt>
+ <dt>{{domxref("HTMLAreaElement.port")}}</dt>
  <dd>Is a {{domxref("USVString")}} containing the port component, if any, of the referenced URL.</dd>
- <dt>{{domxref("HTMLHyperlinkElementUtils.protocol")}}</dt>
+ <dt>{{domxref("HTMLAreaElement.protocol")}}</dt>
  <dd>Is a {{domxref("USVString")}} containing the protocol component (including trailing colon <code>':'</code>), of the referenced URL.</dd>
  <dt>{{domxref("HTMLAreaElement.referrerPolicy")}} {{experimental_inline}}</dt>
  <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("referrerpolicy", "area")}} HTML attribute indicating which referrer to use when fetching the linked resource.</dd>
@@ -52,7 +52,7 @@ tags:
  <dd>Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("rel", "area") }} HTML attribute, indicating relationships of the current document to the linked resource.</dd>
  <dt>{{domxref("HTMLAreaElement.relList")}} {{readOnlyInline}}</dt>
  <dd>Returns a {{domxref("DOMTokenList")}} that reflects the {{ htmlattrxref("rel", "area") }} HTML attribute, indicating relationships of the current document to the linked resource, as a list of tokens.</dd>
- <dt>{{domxref("HTMLHyperlinkElementUtils.search")}}</dt>
+ <dt>{{domxref("HTMLAreaElement.search")}}</dt>
  <dd>Is a {{domxref("USVString")}} containing the search element (including leading question mark <code>'?'</code>), if any, of the referenced URL.</dd>
  <dt>{{domxref("HTMLAreaElement.shape")}}</dt>
  <dd>Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("shape", "area") }} HTML attribute, indicating the shape of the hot-spot, limited to known values.</dd>
@@ -60,17 +60,17 @@ tags:
  <dd>Is a <code>long</code> containing the element's position in the tabbing order.</dd>
  <dt>{{domxref("HTMLAreaElement.target")}}</dt>
  <dd>Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("target", "area") }} HTML attribute, indicating the browsing context in which to open the linked resource.</dd>
- <dt>{{domxref("HTMLHyperlinkElementUtils.username")}}</dt>
+ <dt>{{domxref("HTMLAreaElement.username")}}</dt>
  <dd>Is a {{domxref("USVString")}} containing the username specified before the domain name.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>Inherits methods from its parent, {{domxref("HTMLElement")}}, and implements those from {{domxref("HTMLHyperlinkElementUtils")}}.</em></p>
+<p><em>Inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
 
 <dl>
- <dt>{{domxref("HTMLHyperlinkElementUtils.toString()")}}</dt>
- <dd>Returns a {{domxref("USVString")}} containing the whole URL of the script executed in the {{domxref("Worker")}}. It is a synonym for {{domxref("HTMLHyperlinkElementUtils.href")}}.</dd>
+ <dt>{{domxref("HTMLAreaElement.toString()")}}</dt>
+ <dd>Returns a {{domxref("USVString")}} containing the whole URL of the script executed in the {{domxref("Worker")}}. It is a synonym for {{domxref("HTMLAreaElement.href")}}.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
@@ -79,31 +79,9 @@ tags:
  <tbody>
   <tr>
    <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
   </tr>
   <tr>
    <td>{{SpecName('HTML WHATWG', "#htmlareaelement", "HTMLAreaElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>The following property has been added: <code>download</code>.<br>
-    Technically, the URL-related properties, <code>host</code>, <code>hostname</code>, <code>pathname</code>, <code>port</code>, <code>protocol</code>, <code>search</code>, and <code>hash</code>, have been moving to the {{domxref("HTMLHyperlinkElementUtils")}} mixin, and <code>HTMLAreaElement</code> implements this mixin.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#the-area-element", "HTMLAreaElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Technically, the properties <code>tabindex</code> and <code>accesskey</code> are now defined on {{domxref("HTMLElement")}}.<br>
-    The following property is now obsolete: <code>nohref</code>.<br>
-    The following properties have been added: <code>rel</code>, <code>relList</code>, <code>hreflang</code>, <code>type</code>, <code>host</code>, <code>hostname</code>, <code>pathname</code>, <code>port</code>, <code>protocol</code>, <code>search</code>, and <code>hash</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-26019118', 'HTMLAreaElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>No change from {{SpecName("DOM1")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-26019118', 'HTMLAreaElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition</td>
   </tr>
  </tbody>
 </table>

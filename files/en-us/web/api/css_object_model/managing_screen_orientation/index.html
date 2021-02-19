@@ -10,9 +10,9 @@ tags:
 ---
 <p>{{DefaultAPISidebar("Screen Orientation API")}}{{SeeCompatTable}}</p>
 
-<p>Screen orientation is something slightly different than <a href="/en-US/docs/WebAPI/Detecting_device_orientation">device orientation</a>. Even if a device doesn't have the capacity to detect its own orientation, a screen always has one. And if a device is able to know its orientation, it's good to have the ability to control the screen orientation in order to preserve or adapt the interface of a web application.</p>
+<p>Screen orientation is something slightly different than <a href="/en-US/docs/Web/API/Detecting_device_orientation">device orientation</a>. Even if a device doesn't have the capacity to detect its own orientation, a screen always has one. And if a device is able to know its orientation, it's good to have the ability to control the screen orientation in order to preserve or adapt the interface of a web application.</p>
 
-<p>There are several ways to handle screen orientation, both with CSS and JavaScript. The first is the <a href="/en-US/docs/CSS/Media_queries#orientation">orientation media query</a>. This lets content adjust its layout using CSS, based on whether the browser window is in landscape mode (that is, its width is greater than its height) or portrait mode (its height is greater than its width).</p>
+<p>There are several ways to handle screen orientation, both with CSS and JavaScript. The first is the <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#orientation">orientation media query</a>. This lets content adjust its layout using CSS, based on whether the browser window is in landscape mode (that is, its width is greater than its height) or portrait mode (its height is greater than its width).</p>
 
 <p>The second way is the JavaScript Screen orientation API that can be used to get the current orientation of the screen itself and eventually lock it.</p>
 
@@ -163,7 +163,7 @@ li {
 
 <h2 id="Firefox_OS_and_Android_Orientation_lock_using_the_manifest">Firefox OS and Android: Orientation lock using the manifest</h2>
 
-<p>For a Firefox OS and Firefox Android (soon to work on Firefox desktop too) specific way to lock orientation, you can set the <a href="/en-US/Apps/Build/Manifest#orientation">orientation</a> field in app's your manifest file, for example:</p>
+<p>For a Firefox OS and Firefox Android (soon to work on Firefox desktop too) specific way to lock orientation, you can set the <a href="/en-US/docs/Web/Apps/Build/Manifest#orientation">orientation</a> field in app's your manifest file, for example:</p>
 
 <pre class="brush: json">"orientation": "portrait"</pre>
 
@@ -174,6 +174,6 @@ li {
  <li>{{domxref("Screen.lockOrientation()")}}</li>
  <li>{{domxref("Screen.unlockOrientation()")}}</li>
  <li>{{domxref("Screen.onorientationchange")}}</li>
- <li><a href="/en-US/docs/CSS/Media_queries#orientation" title="en-US/CSS/Media queries#orientation">The orientation media query</a></li>
- <li><a class="external" href="http://hacks.mozilla.org/2009/06/media-queries/">A short introduction to media queries in Firefox 3.5</a></li>
+ <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#orientation">The orientation media query</a></li>
+ <li><a href="http://hacks.mozilla.org/2009/06/media-queries/">A short introduction to media queries in Firefox 3.5</a></li>
 </ul>

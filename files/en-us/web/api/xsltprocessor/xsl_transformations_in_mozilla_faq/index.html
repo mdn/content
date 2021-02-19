@@ -7,7 +7,7 @@ tags:
 ---
 <h2 id="Why_isn.27t_my_stylesheet_applied.3F">Why isn't my stylesheet applied?</h2>
 
-<p>Make sure the mime type for both source and stylesheet are set to an XML mimetype, namely <code>text/xml</code> or <code>application/xml</code>. The XSLT namespace is <code>http://www.w3.org/1999/XSL/Transform</code>. Use the &lt;?xml-stylesheet ?&gt; processing instruction instead of the non-standard xml:stylesheet. The most common cause is the MIME type handling. To find out which MIME type your server sends, look at Page Info, use extensions like <a class="external" href="http://livehttpheaders.mozdev.org/">LiveHTTPHeaders</a> or a download manager like <code>wget</code>. Mozilla won't load XSLT stylesheets from a different domain for security reasons.</p>
+<p>Make sure the mime type for both source and stylesheet are set to an XML mimetype, namely <code>text/xml</code> or <code>application/xml</code>. The XSLT namespace is <code>http://www.w3.org/1999/XSL/Transform</code>. Use the &lt;?xml-stylesheet ?&gt; processing instruction instead of the non-standard xml:stylesheet. The most common cause is the MIME type handling. To find out which MIME type your server sends, look at Page Info, use extensions like <a href="http://livehttpheaders.mozdev.org/">LiveHTTPHeaders</a> or a download manager like <code>wget</code>. Mozilla won't load XSLT stylesheets from a different domain for security reasons.</p>
 
 <div class="note">
 <p><strong>Note:</strong> Starting in {{Gecko("7.0") }}, both <code>text/xsl</code> and <code>application/xslt+xml</code> are supported MIME types for XSLT media stylesheets.</p>

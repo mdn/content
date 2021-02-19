@@ -28,6 +28,8 @@ tags:
 <p><em>This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventTarget")}} interfaces.</em></p>
 
 <dl>
+ <dt>{{DOMxRef("Document.activeElement")}} {{ReadOnlyInline}}</dt>
+ <dd>Returns the {{DOMxRef('Element')}} that currently has focus.</dd>
  <dt>{{DOMxRef("Document.body")}}</dt>
  <dd>Returns the {{HTMLElement("body")}} or {{htmlelement("frameset")}} node of the current document.</dd>
  <dt>{{DOMxRef("Document.characterSet")}}{{ReadOnlyInline}}</dt>
@@ -116,8 +118,6 @@ tags:
 <p><em>The <code>Document</code> interface includes the following properties defined on the {{DOMxRef("DocumentOrShadowRoot")}} mixin. Note that this is currently only implemented by Chrome; other browsers still implement them directly on the {{DOMxRef("Document")}} interface.</em></p>
 
 <dl>
- <dt>{{DOMxRef("DocumentOrShadowRoot.activeElement")}}{{ReadOnlyInline}}</dt>
- <dd>Returns the {{DOMxRef('Element')}} within the shadow tree that has focus.</dd>
  <dt>{{DOMxRef("Document.fullscreenElement")}}{{ReadOnlyInline}}</dt>
  <dd>The element that's currently in full screen mode for this document.</dd>
  <dt>{{DOMxRef("DocumentOrShadowRoot.pointerLockElement")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>

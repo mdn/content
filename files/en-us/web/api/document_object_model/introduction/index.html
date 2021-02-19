@@ -18,7 +18,7 @@ tags:
 
 <p>A Web page is a document. This document can be either displayed in the browser window or as the HTML source. But it is the same document in both cases. The Document Object Model (DOM) represents that same document so it can be manipulated. The DOM is an object-oriented representation of the web page, which can be modified with a scripting language such as JavaScript.</p>
 
-<p>The <a class="external" href="https://www.w3.org/DOM/">W3C DOM</a> and <a class="external" href="https://dom.spec.whatwg.org">WHATWG DOM</a> standards are implemented in most modern browsers. Many browsers extend the standard, so care must be exercised when using them on the web where documents may be accessed by various browsers with different DOMs.</p>
+<p>The <a href="https://www.w3.org/DOM/">W3C DOM</a> and <a href="https://dom.spec.whatwg.org">WHATWG DOM</a> standards are implemented in most modern browsers. Many browsers extend the standard, so care must be exercised when using them on the web where documents may be accessed by various browsers with different DOMs.</p>
 
 <p>For example, the standard DOM specifies that the <code>querySelectorAll</code> method in the code below must return a list of all the <code>&lt;p&gt;</code> elements in the document:</p>
 
@@ -201,20 +201,20 @@ table.summary = "note: increased border";
 &lt;/head&gt;
 &lt;body&gt;
   &lt;div style="margin: .5in; height: 400px;"&gt;
-    &lt;p&gt;&lt;b&gt;&lt;tt&gt;text&lt;/tt&gt;&lt;/b&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;&lt;code&gt;text&lt;/code&gt;&lt;/b&gt;&lt;/p&gt;
     &lt;form&gt;
       &lt;select onChange="setBodyAttr('text',
         this.options[this.selectedIndex].value);"&gt;
         &lt;option value="black"&gt;black&lt;/option&gt;
         &lt;option value="red"&gt;red&lt;/option&gt;
       &lt;/select&gt;
-      &lt;p&gt;&lt;b&gt;&lt;tt&gt;bgColor&lt;/tt&gt;&lt;/b&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;b&gt;&lt;code&gt;bgColor&lt;/code&gt;&lt;/b&gt;&lt;/p&gt;
       &lt;select onChange="setBodyAttr('bgColor',
         this.options[this.selectedIndex].value);"&gt;
         &lt;option value="white"&gt;white&lt;/option&gt;
         &lt;option value="lightgrey"&gt;gray&lt;/option&gt;
       &lt;/select&gt;
-      &lt;p&gt;&lt;b&gt;&lt;tt&gt;link&lt;/tt&gt;&lt;/b&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;b&gt;&lt;code&gt;link&lt;/code&gt;&lt;/b&gt;&lt;/p&gt;
       &lt;select onChange="setBodyAttr('link',
         this.options[this.selectedIndex].value);"&gt;
         &lt;option value="blue"&gt;blue&lt;/option&gt;

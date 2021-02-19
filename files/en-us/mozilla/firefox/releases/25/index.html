@@ -23,8 +23,8 @@ tags:
 
 <ul>
  <li>The support for the keyword <code>local</code> as a value of the {{cssxref("background-attachment")}} CSS property has been added ({{bug("483446")}}).</li>
- <li>Support of a non-standard Mozilla-only media query to determine the operating system version has been added: <code><a href="/en-US/docs/Web/Guide/CSS/Media_queries#-moz-os-version">-moz-os-version</a></code> ({{bug("810399")}}). The property is currently only implemented on Windows.</li>
- <li>The {{cssxref("-moz-osx-font-smoothing")}} CSS property has been added ({{bug("857142")}}).</li>
+ <li>Support of a non-standard Mozilla-only media query to determine the operating system version has been added: <code><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#-moz-os-version">-moz-os-version</a></code> ({{bug("810399")}}). The property is currently only implemented on Windows.</li>
+ <li>The <code>-moz-osx-font-smoothing</code> CSS property has been added ({{bug("857142")}}).</li>
  <li>Our experimental support for {{cssxref("filter")}} now supports the <code>hue-rotate()</code> functional notation ({{bug(897392)}}). It is still preffed off by default.</li>
  <li>
   <p><code>page-break-inside</code><code>: avoid</code> is now working with the height of a block ({{bug(883676)}}).</p>
@@ -50,16 +50,16 @@ tags:
  <li>New mathematical methods have been implemented on <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math"><code>Math</code></a>: <code>Math.log10()</code>, <code>Math.log2()</code>, <code>Math.log1p()</code>, <code>Math.expm1()</code>, <code>Math.cosh()</code>, <code>Math.sinh()</code>, <code>Math.tanh()</code>, <code>Math.acosh()</code>, <code>Math.asinh()</code>, <code>Math.atanh()</code>, <code>Math.trunc()</code>, <code>Math.sign()</code> and <code>Math.cbrt()</code> ({{bug("717379")}}).</li>
  <li>Support for binary and octal integer literals has been added: <code>0b10101010</code>, <code>0B1010</code>, <code>0o777</code>, <code>0O237</code> are now valid ({{bug("894026")}}).</li>
  <li>The machine epsilon constant, that is the smallest representible number that added to 1 will not be 1, is now available as {{jsxref("Global_Objects/Number/EPSILON", "Number.EPSILON")}} ({{bug("885798")}}).</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">Typed arrays</a> have been updated to <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Indexed_property_access">no longer search in the prototype chain for indexed properties</a> ({{bug("829896")}}).</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">Typed arrays</a> have been updated to <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#indexed_property_access">no longer search in the prototype chain for indexed properties</a> ({{bug("829896")}}).</li>
 </ul>
 
 <h3 id="InterfacesAPIsDOM">Interfaces/APIs/DOM</h3>
 
 <ul>
- <li>The <a href="/en-US/docs/Web_Audio_API">Web Audio API</a> is now supported. An incomplete implementation was previously available behind a preference ({{bug("779297")}}).</li>
+ <li>The <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> is now supported. An incomplete implementation was previously available behind a preference ({{bug("779297")}}).</li>
  <li>Some IME related keys on Windows are supported by <code>KeyboardEvent.key</code> ({{bug("865565")}}), see <a href="/en-US/docs/Web/API/KeyboardEvent#keyname_table_win">the key name table</a> for the detail.</li>
  <li>Firefox for Metro now dispatches key events in the same way as the desktop version ({{bug("843236")}}).</li>
- <li><code>keypress</code> event is no longer dispatched if <code>preventDefault()</code> of preceding <code>keydown</code> event is called ({{bug("501496")}}), see <a href="/en-US/docs/Web/Reference/Events/keydown#preventDefault()_of_keydown_event">the document of <code>keydown</code> event</a> for the detail.</li>
+ <li><code>keypress</code> event is no longer dispatched if <code>preventDefault()</code> of preceding <code>keydown</code> event is called ({{bug("501496")}}), see <a href="/en-US/docs/Web/API/Document/keydown_event#preventdefault()_of_keydown_event">the document of <code>keydown</code> event</a> for the detail.</li>
  <li>Renamed the <code>Future</code> interface to <code>Promise</code> ({{bug("884279")}}).</li>
  <li>The <code>srcDoc</code> property on the {{domxref("HTMLIFrameElement")}} interface, allowing the inline specification of the content of an {{HTMLElement("iframe")}}, is now supported ({{bug("802895")}}).</li>
  <li>The <code>createTBody()</code> method on the {{domxref("HTMLTableElement")}} interface, allowing to get its {{HTMLElement("tbody")}}, is now supported ({{bug("813034")}}).</li>

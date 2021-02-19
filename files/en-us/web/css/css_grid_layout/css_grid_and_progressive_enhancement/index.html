@@ -95,7 +95,7 @@ img {
 
 <p>The image below shows the media object in a non-supporting browser on the left, and a supporting one on the right:</p>
 
-<p><img alt="A simple example of overriding a floated layout using grid." src="https://mdn.mozillademos.org/files/14743/10-float-simple-override.png" style="height: 308px; width: 1620px;"></p>
+<p><img alt="A simple example of overriding a floated layout using grid." src="10-float-simple-override.png"></p>
 
 <h3 id="Using_feature_queries">Using feature queries</h3>
 
@@ -166,13 +166,13 @@ img {
 
 <p>The example demonstrates the typical problem that we have with floated layouts: if additional content is added to any one card, the layout breaks.</p>
 
-<p><img alt="A floated cards layout demonstrating the problem caused by uneven content height." src="https://mdn.mozillademos.org/files/14745/10-floated-cards.png" style="height: 536px; width: 550px;"></p>
+<p><img alt="A floated cards layout demonstrating the problem caused by uneven content height." src="10-floated-cards.png"></p>
 
 <p>As a concession for older browsers, I have set a {{cssxref("min-height")}} on the items, and hope that my content editors won’t add too much content and make a mess of the layout!</p>
 
 <p>I then enhance the layout using grid. I can turn my {{HTMLElement("ul")}} into a grid container with three column tracks. However, the width I have assigned to the list items themselves still applies, and it now makes those items a third of the width of the track:</p>
 
-<p><img alt="After applying grid to our container, the width of the items is now incorrect as they display at one third of the item width." src="https://mdn.mozillademos.org/files/14747/10-float-width-problem.png" style="height: 721px; width: 550px;"></p>
+<p><img alt="After applying grid to our container, the width of the items is now incorrect as they display at one third of the item width." src="10-float-width-problem.png"></p>
 
 <p>If I reset the width to <code>auto</code>, then this will stop the float behavior happening for older browsers. I need to be able to define the width for older browsers, and remove the width for grid supporting browsers. Thanks to <a href="/en-US/docs/Web/CSS/@supports">CSS Feature Queries</a> I can do this, right in my CSS.</p>
 
@@ -187,7 +187,7 @@ img {
 
 <p>Feature queries have excellent browser support, and all of the browsers that support the updated grid specification support feature queries too. You can use them to deal with the issue we have with our enhanced: floated layout.</p>
 
-<p>I use an <code>@supports</code> rule to check for support of <code>display: grid</code>. I then do my grid code on the {{HTMLElement("ul")}}, set my width and {{cssxref("min-height")}} on the {{HTMLElement("li")}} to <code>auto</code>. I also remove the margins and negative margins, and replace the spacing with the {{cssxref("grid-gap")}} property. This means I don’t get a final margin on the last row of boxes. The layout now works, even if there is more content in one of the cards, than the others:</p>
+<p>I use an <code>@supports</code> rule to check for support of <code>display: grid</code>. I then do my grid code on the {{HTMLElement("ul")}}, set my width and {{cssxref("min-height")}} on the {{HTMLElement("li")}} to <code>auto</code>. I also remove the margins and negative margins, and replace the spacing with the {{cssxref("gap")}} property. This means I don’t get a final margin on the last row of boxes. The layout now works, even if there is more content in one of the cards, than the others:</p>
 
 <div id="enhancement_3">
 <div class="hidden">

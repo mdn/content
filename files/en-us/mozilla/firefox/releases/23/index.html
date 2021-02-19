@@ -11,7 +11,7 @@ tags:
 
 <ul>
  <li>Mixed content blocking. Firefox will no longer load non-secure (http) resources on secure (https) pages ({{bug(834836)}}).</li>
- <li>The standard syntax of <a href="/en-US/docs/Security/CSP">CSP</a> 1.0 policies are now implemented and enforced by default.</li>
+ <li>The standard syntax of <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> 1.0 policies are now implemented and enforced by default.</li>
 </ul>
 
 <h3 id="Developer_Tools">Developer Tools</h3>
@@ -39,7 +39,7 @@ tags:
 <h3 id="DOM">DOM</h3>
 
 <ul>
- <li>D3E <a href="/en-US/docs/DOM/KeyboardEvent#Key_names_and_Char_values"><code>KeyboardEvent.key</code></a> is now supported, but only for non-printable keys ({{bug(842927)}}).</li>
+ <li>D3E <a href="/en-US/docs/Web/API/KeyboardEvent#key_names_and_char_values"><code>KeyboardEvent.key</code></a> is now supported, but only for non-printable keys ({{bug(842927)}}).</li>
  <li>The <code>title</code> attribute of {{domxref("DOMImplementation.createHTMLDocument")}} is now optional as per updated DOM specification.</li>
  <li>The ability to add a sidebar panel (<code>window.sidebar.addPanel</code>) has been dropped ({{bug(691647)}}).</li>
  <li>The unprefixed {{domxref("Window.requestAnimationFrame")}} and {{domxref("Window.cancelAnimationFrame")}} methods has been added ({{bug(704063)}}). The unprefixed {{domxref("Window.requestAnimationFrame")}} receives a {{domxref("DOMHighResTimeStamp")}} as argument; the prefixed version did, and still is, received a {{domxref("DOMTimeStamp")}}({{bug(753453)}}).</li>
@@ -61,9 +61,9 @@ tags:
 <h3 id="CSS">CSS</h3>
 
 <ul>
- <li>The blink effect for <code><a href="/en-US/docs/CSS/text-decoration">text-decoration</a>: blink;</code> has no more effect, but is still a valid value ({{bug(857820)}}).</li>
+ <li>The blink effect for <code><a href="/en-US/docs/Web/CSS/text-decoration">text-decoration</a>: blink;</code> has no more effect, but is still a valid value ({{bug(857820)}}).</li>
  <li>In-flow {{cssxref("::after")}} and {{cssxref("::before")}} pseudo-elements are now flex items ({{bug(867454)}}).</li>
- <li>The way to compute <a href="/en-US/docs/Web/CSS/length#Viewport-percentage_lengths">viewport units</a> has been changed. In conjunction with <code>overflow:auto</code>, space taken by eventual scrollbars is not substracted from the viewport, whereas in the case of <code>overflow:scroll</code>, it is. ({{bug(811403)}})</li>
+ <li>The way to compute <a href="/en-US/docs/Web/CSS/length#viewport-percentage_lengths">viewport units</a> has been changed. In conjunction with <code>overflow:auto</code>, space taken by eventual scrollbars is not substracted from the viewport, whereas in the case of <code>overflow:scroll</code>, it is. ({{bug(811403)}})</li>
 </ul>
 
 <h3 id="MathML">MathML</h3>

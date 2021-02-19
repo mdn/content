@@ -55,7 +55,7 @@ tags:
  <dt>{{domxref("BaseAudioContext.createBuffer()")}}</dt>
  <dd>Creates a new, empty {{ domxref("AudioBuffer") }} object, which can then be populated by data and played via an {{ domxref("AudioBufferSourceNode") }}.</dd>
  <dt>{{domxref("BaseAudioContext.createBufferSource()")}}</dt>
- <dd>Creates an {{domxref("AudioBufferSourceNode")}}, which can be used to play and manipulate audio data contained within an {{ domxref("AudioBuffer") }} object. {{ domxref("AudioBuffer") }}s are created using {{domxref("AudioContext.createBuffer")}} or returned by {{domxref("AudioContext.decodeAudioData")}} when it successfully decodes an audio track.</dd>
+ <dd>Creates an {{domxref("AudioBufferSourceNode")}}, which can be used to play and manipulate audio data contained within an {{ domxref("AudioBuffer") }} object. {{ domxref("AudioBuffer") }}s are created using {{domxref("BaseAudioContext/createBuffer", "AudioContext.createBuffer()")}} or returned by {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} when it successfully decodes an audio track.</dd>
  <dt>{{domxref("BaseAudioContext.createConstantSource()")}}</dt>
  <dd>Creates a {{domxref("ConstantSourceNode")}} object, which is an audio source that continuously outputs a monaural (one-channel) sound signal whose samples all have the same value.</dd>
  <dt>{{domxref("BaseAudioContext.createChannelMerger()")}}</dt>
@@ -123,15 +123,12 @@ const finish = audioContext.destination;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.BaseAudioContext")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul style="margin-left: 40px;">
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
  <li>{{domxref("AudioContext")}}</li>
  <li>{{domxref("OfflineAudioContext")}}</li>
 </ul>

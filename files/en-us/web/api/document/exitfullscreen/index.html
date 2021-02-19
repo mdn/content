@@ -46,7 +46,7 @@ tags:
 <pre class="brush: js notranslate">document.onclick = function (event) {
   if (document.fullscreenElement) {
     document.exitFullscreen()
-      .then(() =&gt; console.log("Document Exited form Full screen mode"))
+      .then(() =&gt; console.log("Document Exited from Full screen mode"))
       .catch((err) =&gt; console.error(err))
   } else {
     document.documentElement.requestFullscreen();

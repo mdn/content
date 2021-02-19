@@ -2,14 +2,14 @@
 title: BaseAudioContext.decodeAudioData()
 slug: Web/API/BaseAudioContext/decodeAudioData
 tags:
-- API
-- Audio
-- AudioContext
-- BaseAudioContext
-- Method
-- Reference
-- Web Audio API
-- decodeAudioData
+  - API
+  - Audio
+  - AudioContext
+  - BaseAudioContext
+  - Method
+  - Reference
+  - Web Audio API
+  - decodeAudioData
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
@@ -72,8 +72,8 @@ tags:
   <code>audioData</code> variable . We then pass this buffer into a
   <code>decodeAudioData()</code> function; the success callback takes the successfully
   decoded PCM data, puts it into an {{ domxref("AudioBufferSourceNode") }} created using
-  {{ domxref("AudioContext.createBufferSource()") }}, connects the source to the
-  {{domxref("AudioContext.destination") }} and sets it to loop.</p>
+  {{domxref("BaseAudioContext/createBufferSource", "AudioContext.createBufferSource()")}}, connects the source to the
+  {{domxref("BaseAudioContext/destination", "AudioContext.destination")}} and sets it to loop.</p>
 
 <p>The buttons in the example run <code>getData()</code> to load the track and start it
   playing, and stop it playing, respectively. When the <code>stop()</code> method is
@@ -171,14 +171,11 @@ pre.innerHTML = myScript.innerHTML;</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.BaseAudioContext.decodeAudioData")}}</p>
-</div>
+<p>{{Compat("api.BaseAudioContext.decodeAudioData")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
   </li>
 </ul>

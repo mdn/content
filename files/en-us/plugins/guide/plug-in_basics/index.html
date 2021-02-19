@@ -7,7 +7,6 @@ tags:
   - NPAPI
   - Plugins
 ---
-
 <div class="prevnext" style="text-align: right;">
 <p><a href="/en-US/docs/Gecko_Plugin_API_Reference:Plug-in_Development_Overview">Next »</a></p>
 </div>
@@ -15,7 +14,7 @@ tags:
 
 <h3 id="How_Plug-ins_Are_Used">How Plug-ins are used</h3>
 
-<p>Plug-ins offer a rich variety of features that can increase the flexibility of <a href="/en/Gecko">Gecko</a>-based browsers. Plug-ins like these are now available:</p>
+<p>Plug-ins offer a rich variety of features that can increase the flexibility of <a href="/en-US/Gecko">Gecko</a>-based browsers. Plug-ins like these are now available:</p>
 
 <ul>
  <li>multimedia viewers such as Adobe Flash and Adobe Acrobat</li>
@@ -34,8 +33,8 @@ tags:
  <li>obtain data from the network using URLs</li>
  <li>post data to URLs</li>
  <li>add hyperlinks or hotspots that link to new URLs</li>
- <li>draw into sections on an <a href="/en/HTML">HTML</a> page</li>
- <li>communicate with <a href="/en/JavaScript">JavaScript</a>/<a href="/en/DOM">DOM</a> from native code</li>
+ <li>draw into sections on an <a href="/en-US/HTML">HTML</a> page</li>
+ <li>communicate with <a href="/en-US/JavaScript">JavaScript</a>/<a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a> from native code</li>
 </ul>
 
 <p>You can see which plug-ins are installed on your system and have been properly associated with the browser by consulting the Installed Plug-ins page. <span class="comment">Go to the Help menu, and click Help and then About Plug-ins.</span> Type "about:plugins" in the Location bar. The Installed Plug-ins page lists each installed plug-in along with its MIME type or types, description, file extensions, and the current state (enabled or disabled) of the plug-in for each MIME type assigned to it. Notice in view-source that this information is gathered from the JavaScript.</p>
@@ -77,16 +76,16 @@ tags:
  <li>When Gecko encounters data of a MIME type registered for a plug-in (either embedded in an HTML page or in a separate file), it dynamically loads the plug-in code into memory, if it hasn't been loaded already, and it creates a new instance of the plug-in.</li>
 </ul>
 
-<p>Gecko calls the plug-in API function <a href="/en/NP_Initialize">NP_Initialize</a> when the plug-in code is first loaded. By convention, all of the plug-in specific functions have the prefix "NPP", and all of the browser-specific functions have the prefix "NPN".</p>
+<p>Gecko calls the plug-in API function <a href="/en-US/NP_Initialize">NP_Initialize</a> when the plug-in code is first loaded. By convention, all of the plug-in specific functions have the prefix "NPP", and all of the browser-specific functions have the prefix "NPN".</p>
 
 <div class="note">
 <p><strong>Note</strong>: <code>NP_Initialize</code> and <code>NP_Shutdown</code> are not technically a part of the function table that the plug-in hands to the browser. The browser calls them when the plug-in software is loaded and unloaded. These functions are exported from the plug-in DLL and accessed with a system table lookup, which means that they are not related to any particular plug-in instance. Again, see <a href="/en-US/docs/Gecko_Plugin_API_Reference/Initialization_and_Destruction">Initialization and Destruction</a> for more information about initializing and destructing.</p>
 </div>
 
 <ul>
- <li>The browser calls the plug-in API function <a href="/en/NPP_New">NPP_New</a> when the instance is created. Multiple instances of the same plug-in can exist (a) if there are multiple embedded objects on a single page, or (b) if several browser windows are open and each displays the same data type.</li>
- <li>A plug-in instance is deleted when a user leaves the instance's page or closes its window; Gecko calls the function <a href="/en/NPP_Destroy">NPP_Destroy</a> to inform the plug-in that the instance is being deleted.</li>
- <li>When the last instance of a plug-in is deleted, the plug-in code is unloaded from memory. Gecko calls the function <a href="/en/NP_Shutdown">NP_Shutdown</a>. Plug-ins consume no resources (other than disk space) when not loaded.</li>
+ <li>The browser calls the plug-in API function <a href="/en-US/NPP_New">NPP_New</a> when the instance is created. Multiple instances of the same plug-in can exist (a) if there are multiple embedded objects on a single page, or (b) if several browser windows are open and each displays the same data type.</li>
+ <li>A plug-in instance is deleted when a user leaves the instance's page or closes its window; Gecko calls the function <a href="/en-US/NPP_Destroy">NPP_Destroy</a> to inform the plug-in that the instance is being deleted.</li>
+ <li>When the last instance of a plug-in is deleted, the plug-in code is unloaded from memory. Gecko calls the function <a href="/en-US/NP_Shutdown">NP_Shutdown</a>. Plug-ins consume no resources (other than disk space) when not loaded.</li>
 </ul>
 
 <div class="note">
@@ -108,7 +107,7 @@ tags:
 <ul>
  <li>Directory pointed to by <code>MOZ_PLUGIN_PATH</code> environment variable.</li>
  <li><code>%APPDATA%\Mozilla\plugins</code>, where <code>%APPDATA%</code> denotes per-user <code>Application Data</code> directory.</li>
- <li><a href="/en/Shipping_a_plugin_as_a_Toolkit_bundle">Plug-ins within toolkit bundles</a>.</li>
+ <li><a href="/en-US/Shipping_a_plugin_as_a_Toolkit_bundle">Plug-ins within toolkit bundles</a>.</li>
  <li><code>Profile directory\plugins</code>, where <code>Profile directory</code> is a user profile directory.</li>
  <li>Directories pointed to by <code>HKEY_CURRENT_USER\Software\MozillaPlugins\*\Path</code> registry value, where <code>*</code> can be replaced by any name.</li>
  <li>Directories pointed to by <code>HKEY_LOCAL_MACHINE\Software\MozillaPlugins\*\Path</code> registry value, where <code>*</code> can be replaced by any name.</li>
@@ -120,7 +119,7 @@ tags:
  <li><code>~/Library/Internet Plug-Ins</code>.</li>
  <li><code>/Library/Internet Plug-Ins</code>.</li>
  <li><code>/System/Library/Frameworks/JavaVM.framework/Versions/Current/Resources</code>.</li>
- <li><a href="/en/Shipping_a_plugin_as_a_Toolkit_bundle">Plug-ins within toolkit bundles</a>.</li>
+ <li><a href="/en-US/Shipping_a_plugin_as_a_Toolkit_bundle">Plug-ins within toolkit bundles</a>.</li>
  <li><code>Profile directory/plugins</code>, where <code>Profile directory</code> is a user profile directory.</li>
 </ul>
 
@@ -179,7 +178,7 @@ access("/usr/lib/mozilla/plugins", F_OK) = 0</pre>
 </blockquote>
 
 <ul>
- <li><a href="/en/Shipping_a_plugin_as_a_Toolkit_bundle">Plug-ins within toolkit bundles</a>.</li>
+ <li><a href="/en-US/Shipping_a_plugin_as_a_Toolkit_bundle">Plug-ins within toolkit bundles</a>.</li>
 </ul>
 
 <p>To find out which plug-ins are currently installed visit about:plugins. Gecko displays a page listing all installed plug-ins and the MIME types they handle, as well as optional descriptive information supplied by the plug-in.</p>
@@ -308,7 +307,7 @@ if (mimetype) {
 <p><strong>Note</strong>: Whether a plug-in is windowed or windowless is not meaningful if the plug-in is invoked with the <code>hidden</code> attribute.</p>
 </div>
 
-<p>You can also create hidden plug-ins using the <code>object</code> element. Though the <code>object</code> element has no <code>hidden</code> attribute, you can create <a href="/en/CSS">CSS</a> rules to override the sizing attributes of the <code>object</code> element</p>
+<p>You can also create hidden plug-ins using the <code>object</code> element. Though the <code>object</code> element has no <code>hidden</code> attribute, you can create <a href="/en-US/docs/Web/CSS">CSS</a> rules to override the sizing attributes of the <code>object</code> element</p>
 
 <pre class="brush: css">object {
   visibility: visible;
@@ -580,4 +579,3 @@ argv = {"movie.avi", "100", "125", "true", "true"}
 <div class="prevnext" style="text-align: right;">
 <p><a href="/en-US/docs/Gecko_Plugin_API_Reference:Preface" style="float: left;">« Previous</a><a href="/en-US/docs/Gecko_Plugin_API_Reference:Plug-in_Development_Overview">Next »</a></p>
 </div>
-

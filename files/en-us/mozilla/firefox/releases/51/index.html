@@ -35,20 +35,20 @@ tags:
 <ul>
  <li>The ES2015 {{jsxref("Symbol.toStringTag")}} property has been implemented ({{bug(1114580)}}).</li>
  <li>The ES2015 {{jsxref("TypedArray.prototype.toString()")}} and {{jsxref("TypedArray.prototype.toLocaleString()")}} methods have been implemented ({{bug(1121938)}}).</li>
- <li>The {{jsxref("DateTimeFormat.prototype.formatToParts()")}} method is now available ({{bug(1289340)}}).</li>
+ <li>The {{jsxref("Intl/DateTimeFormat/formatToParts", "DateTimeFormat.prototype.formatToParts()")}} method is now available ({{bug(1289340)}}).</li>
  <li>{{jsxref("Statements/const", "const")}} and {{jsxref("Statements/let", "let")}} are now fully ES2015-compliant ({{bug(950547)}}).</li>
  <li>Using {{jsxref("Statements/const", "const")}} in <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code> loops now has a fresh binding for each iteration and no longer throws a {{jsxref("SyntaxError")}} ({{bug(1101653)}}).</li>
  <li>The deprecated <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for_each...in">for each...in</a> loop now presents a <a href="/en-US/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated">warning in the console</a> ({{bug(1293205)}}). Please migrate your code to use the standardized <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code> loop.</li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/function*">Generator functions</a> can't have a <a href="/en-US/docs/Web/JavaScript/Reference/Statements/label">label</a> anymore and "<code>let</code>" as a label name is disallowed now ({{bug(1288459)}}).</li>
  <li>Deprecated <a href="/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function">legacy generator functions</a> will now throw when used in <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">method definitions</a> ({{bug(1199296)}}).</li>
- <li>The <code>next()</code> method of the <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol">iterator protocol</a> will now throw a {{jsxref("TypeError")}} if the returned value is not an object ({{bug(1016936)}}).</li>
+ <li>The <code>next()</code> method of the <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol">iterator protocol</a> will now throw a {{jsxref("TypeError")}} if the returned value is not an object ({{bug(1016936)}}).</li>
  <li>Child-indexed pseudo-class selectors should match without a parent ({{bug(1300374)}}).</li>
 </ul>
 
 <h3 id="Developer_Tools">Developer Tools</h3>
 
 <ul>
- <li><a href="/en-US/docs/Tools/Network_Monitor#Timings">Network Monitor now shows a "Blocked" state for network requests.</a></li>
+ <li><a href="/en-US/docs/Tools/Network_Monitor#timings">Network Monitor now shows a "Blocked" state for network requests.</a></li>
  <li><a class="external external-icon" href="https://bugzilla.mozilla.org/buglist.cgi?list_id=13263768&amp;resolution=FIXED&amp;classification=Client%20Software&amp;chfieldto=2016-09-19&amp;query_format=advanced&amp;chfield=resolution&amp;chfieldfrom=2016-08-01&amp;chfieldvalue=FIXED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;component=Developer%20Tools&amp;component=Developer%20Tools%3A%20about%3Adebugging&amp;component=Developer%20Tools%3A%20Animation%20Inspector&amp;component=Developer%20Tools%3A%20Canvas%20Debugger&amp;component=Developer%20Tools%3A%20Computed%20Styles%20Inspector&amp;component=Developer%20Tools%3A%20Console&amp;component=Developer%20Tools%3A%20CSS%20Rules%20Inspector&amp;component=Developer%20Tools%3A%20Debugger&amp;component=Developer%20Tools%3A%20DOM&amp;component=Developer%20Tools%3A%20Font%20Inspector&amp;component=Developer%20Tools%3A%20Framework&amp;component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&amp;component=Developer%20Tools%3A%20Inspector&amp;component=Developer%20Tools%3A%20JSON%20Viewer&amp;component=Developer%20Tools%3A%20Memory&amp;component=Developer%20Tools%3A%20Netmonitor&amp;component=Developer%20Tools%3A%20Object%20Inspector&amp;component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&amp;component=Developer%20Tools%3A%20Responsive%20Design%20Mode&amp;component=Developer%20Tools%3A%20Scratchpad&amp;component=Developer%20Tools%3A%20Shared%20Components&amp;component=Developer%20Tools%3A%20Source%20Editor&amp;component=Developer%20Tools%3A%20Storage%20Inspector&amp;component=Developer%20Tools%3A%20Style%20Editor&amp;component=Developer%20Tools%3A%20User%20Stories&amp;component=Developer%20Tools%3A%20Web%20Audio%20Editor&amp;component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&amp;component=Developer%20Tools%3A%20WebIDE&amp;product=Firefox">All devtools bugs fixed between Firefox 50 and Firefox 51</a>.</li>
 </ul>
 
@@ -63,7 +63,7 @@ tags:
     <ul>
      <li><a href="/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">3D textures</a>,</li>
      <li><a href="/en-US/docs/Web/API/WebGLSampler">Sampler objects</a>,</li>
-     <li><a href="/en-US/docs/Web/API/WebGL2RenderingContext#Uniform_buffer_objects">Uniform Buffer objects</a>,</li>
+     <li><a href="/en-US/docs/Web/API/WebGL2RenderingContext#uniform_buffer_objects">Uniform Buffer objects</a>,</li>
      <li><a href="/en-US/docs/Web/API/WebGLSync">Sync objects</a>,</li>
      <li><a href="/en-US/docs/Web/API/WebGLQuery">Query objects</a>,</li>
      <li><a href="/en-US/docs/Web/API/WebGLTransformFeedback">Transform Feedback objects</a>,</li>
@@ -104,7 +104,7 @@ tags:
 <ul>
  <li>Added {{SVGAttr("tabindex")}} attribute ({{bug(778654)}}).</li>
  <li>Added {{SVGAttr("href")}} attribute, which renders {{SVGAttr("xlink:href")}} obsolete ({{bug(1245751)}}).</li>
- <li>You can now use custom data attributes on SVG elements through the {{domxref("SVGElement.dataset")}} property and the {{SVGAttr("data-*")}} set of SVG attributes ({{bug(921834)}}).</li>
+ <li>You can now use custom data attributes on SVG elements through the {{domxref("HTMLOrForeignElement/dataset", "SVGElement.dataset")}} property and the {{SVGAttr("data-*")}} set of SVG attributes ({{bug(921834)}}).</li>
  <li>CSS Animations used in an SVG image which is presented in an {{HTMLElement("img")}} element now work again; this was an old regression ({{bug(1190881)}}).</li>
 </ul>
 
@@ -146,7 +146,7 @@ tags:
 <ul>
  <li>Added FLAC support (<a href="https://xiph.org/flac/index.html">FLAC codec</a>) in both FLAC and Ogg containers ({{bug(1195723)}}). Supported FLAC MIME types are: <code>audio/flac</code> and <code>audio/x-flac</code>. For FLAC in Ogg, supported MIME types are: <code>audio/ogg; codecs=flac</code>, and <code>video/ogg; codecs=flac</code>.</li>
  <li>Added support for FLAC in MP4 (both with and without MSE) ({{bug(1303888)}}).</li>
- <li>Throttling in background tabs of timers created by {{domxref("WindowTimers.setInterval", "Window.setInterval()")}} and {{domxref("WindowTimers.setTimeout", "Window.setTimeout()")}} was changed in Firefox 50 to no longer occur if a <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> {{domxref("AudioContext")}} is actively playing sound. However, this didn't resolve all scenarios in which timing-sensitive audio playback (such as music players generating individual notes using timers) could fail to work properly. For that reason, Firefox 51 no longer throttles background tabs which have an {{domxref("AudioContext")}}, even if it's not currently playing sound.</li>
+ <li>Throttling in background tabs of timers created by {{domxref("WindowOrWorkerGlobalScope/setInterval", "Window.setInterval()")}} and {{domxref("WindowOrWorkerGlobalScope/setTimeout", "Window.setTimeout()")}} was changed in Firefox 50 to no longer occur if a <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> {{domxref("AudioContext")}} is actively playing sound. However, this didn't resolve all scenarios in which timing-sensitive audio playback (such as music players generating individual notes using timers) could fail to work properly. For that reason, Firefox 51 no longer throttles background tabs which have an {{domxref("AudioContext")}}, even if it's not currently playing sound.</li>
 </ul>
 
 <h3 id="DOM">DOM</h3>
@@ -154,7 +154,7 @@ tags:
 <ul>
  <li>The {{domxref("DOMImplementation.hasFeature()")}} now returns <code>true</code> in all cases ({{bug(984778)}}).</li>
  <li>The {{domxref("HTMLInputElement")}} and {{domxref("HTMLTextAreaElement")}} properties <code>selectionStart</code> and <code>selectionEnd</code> now correctly return the current position of the text input cursor when there's no selection, instead of returning 0 ({{bug(1287655)}}).</li>
- <li>The {{domxref("HTMLImageElement")}} interface and the corresponding {{HTMLElement("img")}} element now support the {{htmlattrxref("onerror")}} event handler, sending {{event("error")}} events to the element whenever <a href="/en-US/docs/Web/API/HTMLImageElement#Errors">errors occur attempting to load or interpret images</a>.</li>
+ <li>The {{domxref("HTMLImageElement")}} interface and the corresponding {{HTMLElement("img")}} element now support the {{htmlattrxref("onerror")}} event handler, sending {{event("error")}} events to the element whenever <a href="/en-US/docs/Web/API/HTMLImageElement#errors">errors occur attempting to load or interpret images</a>.</li>
  <li>You can now change a Web {{domxref("Animation")}}'s effect by setting the value of its {{domxref("Animation.effect", "effect")}} property. Previously, this property was read-only ({{bug(1049975)}}).</li>
  <li>The Permissions API method {{domxref("Permissions.revoke()")}} has been put behind a preference (<code>dom.permissions.revoke.enable</code>) and disabled by default since its design and even its very existence is under discussion in the <a href="https://www.w3.org/2011/webappsec/">Web Application Security Working Group</a>.</li>
  <li>The <a href="/en-US/docs/Web/API/Storage_API">Storage API</a>'s {{domxref("NavigatorStorage.storage", "navigator.storage")}} property and {{domxref("StorageManager.estimate()")}} method have been implemented along with the needed supporting code. Storage unit persistence features are not yet implemented. See {{bug(1267941)}}.</li>
@@ -200,14 +200,14 @@ tags:
  <li>You can now <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions">embed a WebExtension in a legacy add-on type</a> ({{bug(1252215)}}).</li>
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard">Clipboard access</a> is now supported ({{bug(1197451)}})</li>
  <li>The arguments passed to the callback of {{WebExtAPIRef("tabs.executeScript()")}} have been fixed ({{bug(1290157)}})</li>
- <li><a href="/en-US/docs/Web/API/Storage/LocalStorage">localStorage</a> is now cleared when a WebExtension is uninstalled ({{bug(1213990)}})</li>
+ <li><a href="/en-US/docs/Web/API/Window/localStorage">localStorage</a> is now cleared when a WebExtension is uninstalled ({{bug(1213990)}})</li>
  <li>A changed {{HTTPHeader("Content-Type")}} header in Web Extensions is now taken into account ({{bug(1304331)}})</li>
 </ul>
 
 <h3 id="Other">Other</h3>
 
 <ul>
- <li>The <a href="/en-US/Add-ons/Install_Manifests#multiprocessCompatible"><code>multiprocessCompatible</code> property of <code>install.rdf</code></a> must now be explicitly set to <code>false</code> to prevent multiprocess from being enabled in Firefox when the add-on is installed.</li>
+ <li>The <a href="/en-US/docs/Mozilla/Add-ons/Install_Manifests#multiprocesscompatible"><code>multiprocessCompatible</code> property of <code>install.rdf</code></a> must now be explicitly set to <code>false</code> to prevent multiprocess from being enabled in Firefox when the add-on is installed.</li>
  <li>The Mozilla-specific <a href="/en-US/docs/Mozilla/Projects/Social_API">Social API</a> has been substantially changed (largely to remove APIs no longer used), as follows:
   <ul>
    <li>The {{domxref("MozSocial")}} interface and the {{domxref("navigator.mozSocial")}} property which supports it have been removed.</li>

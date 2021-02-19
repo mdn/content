@@ -12,7 +12,7 @@ tags:
   - Same-origin policy
   - Security
   - XMLHttpRequest
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{HTTPSidebar}}</div>
 
@@ -30,7 +30,7 @@ tags:
 
 <p>Everyone, really.</p>
 
-<p>More specifically, this article is for <strong>web administrators</strong>, <strong>server developers</strong>, and <strong>front-end developers</strong>. Modern browsers handle the client side of cross-origin sharing, including headers and policy enforcement. But the CORS standard means servers have to handle new request and response headers. Another article for server developers discussing <a href="/en-US/docs/Web/HTTP/CORS">cross-origin sharing from a server perspective (with PHP code snippets)</a> is supplementary reading.</p>
+<p>More specifically, this article is for <strong>web administrators</strong>, <strong>server developers</strong>, and <strong>front-end developers</strong>. Modern browsers handle the client side of cross-origin sharing, including headers and policy enforcement. But the CORS standard means servers have to handle new request and response headers.</p>
 
 <h2 id="What_requests_use_CORS">What requests use CORS?</h2>
 
@@ -153,7 +153,7 @@ Content-Type: application/xml
 <pre class="notranslate"><code class="plain">Access-Control-Allow-Origin: https://foo.example</code>
 </pre>
 
-<div class="note"><strong>Note:</strong> When responding to a <a href="#Requests_with_credentials">credentialed requests</a> request, the server <strong>must</strong> specify an origin in the value of the <code>Access-Control-Allow-Origin</code> header, instead of specifying the "<code>*</code>" wildcard.</div>
+<div class="note"><strong>Note:</strong> When responding to a <a href="#requests_with_credentials">credentialed requests</a> request, the server <strong>must</strong> specify an origin in the value of the <code>Access-Control-Allow-Origin</code> header, instead of specifying the "<code>*</code>" wildcard.</div>
 
 <h3 id="Preflighted_requests">Preflighted requests</h3>
 
@@ -411,7 +411,7 @@ Vary: Origin</pre>
 <pre class="brush: none notranslate">Access-Control-Allow-Credentials: true
 </pre>
 
-<p><a class="internal" href="#Requests_with_credentials">Credentialed requests</a> are discussed above.</p>
+<p><a class="internal" href="#requests_with_credentials">Credentialed requests</a> are discussed above.</p>
 
 <h3 id="Access-Control-Allow-Methods">Access-Control-Allow-Methods</h3>
 
@@ -420,11 +420,11 @@ Vary: Origin</pre>
 <pre class="brush: none notranslate">Access-Control-Allow-Methods: &lt;method&gt;[, &lt;method&gt;]*
 </pre>
 
-<p>An example of a <a class="internal" href="#Preflighted_requests">preflight request is given above</a>, including an example which sends this header to the browser.</p>
+<p>An example of a <a class="internal" href="#preflighted_requests">preflight request is given above</a>, including an example which sends this header to the browser.</p>
 
 <h3 id="Access-Control-Allow-Headers">Access-Control-Allow-Headers</h3>
 
-<p>The {{HTTPHeader("Access-Control-Allow-Headers")}} header is used in response to a <a class="internal" href="#Preflighted_requests">preflight request</a> to indicate which HTTP headers can be used when making the actual request. This header is the server side response to the browser's {{HTTPHeader("Access-Control-Request-Headers")}} header.</p>
+<p>The {{HTTPHeader("Access-Control-Allow-Headers")}} header is used in response to a <a class="internal" href="#preflighted_requests">preflight request</a> to indicate which HTTP headers can be used when making the actual request. This header is the server side response to the browser's {{HTTPHeader("Access-Control-Request-Headers")}} header.</p>
 
 <pre class="brush: none notranslate">Access-Control-Allow-Headers: &lt;header-name&gt;[, &lt;header-name&gt;]*
 </pre>
@@ -453,7 +453,7 @@ Vary: Origin</pre>
 <pre class="brush: none notranslate">Access-Control-Request-Method: &lt;method&gt;
 </pre>
 
-<p>Examples of this usage can be <a class="internal" href="#Preflighted_requests">found above.</a></p>
+<p>Examples of this usage can be <a class="internal" href="#preflighted_requests">found above.</a></p>
 
 <h3 id="Access-Control-Request-Headers">Access-Control-Request-Headers</h3>
 
@@ -462,7 +462,7 @@ Vary: Origin</pre>
 <pre class="brush: none notranslate">Access-Control-Request-Headers: &lt;field-name&gt;[, &lt;field-name&gt;]*
 </pre>
 
-<p>Examples of this usage can be <a class="internal" href="#Preflighted_requests">found above</a>.</p>
+<p>Examples of this usage can be <a class="internal" href="#preflighted_requests">found above</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

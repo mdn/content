@@ -222,7 +222,7 @@ tags:
 
 <h3 id="The_fr_unit_and_flex-basis">The <code>fr</code> unit and <code>flex-basis</code></h3>
 
-<p>We have already seen how the <code>fr</code> unit works to assign a proportion of available space in the grid container to our grid tracks. The <code>fr</code> unit, when combined with the {{cssxref("minmax", "minmax()")}} function can give us very similar behavior to the <code>flex</code> properties in flexbox while still enabling the creation of a layout in two dimensions.</p>
+<p>We have already seen how the <code>fr</code> unit works to assign a proportion of available space in the grid container to our grid tracks. The <code>fr</code> unit, when combined with the {{cssxref("minmax()", "minmax()")}} function can give us very similar behavior to the <code>flex</code> properties in flexbox while still enabling the creation of a layout in two dimensions.</p>
 
 <p>If we look back at the example where I demonstrated the difference between one and two-dimensional layouts, you can see there is a difference between the way of the two layouts work responsively. With the flex layout, if we drag our window wider and smaller, the flexbox does a nice job of adjusting the number of items in each row according to the available space. If we have a lot of space all five items can fit on one row. If we have a very narrow container we may only have space for one.</p>
 
@@ -270,7 +270,7 @@ tags:
 
 <h3 id="A_flexible_number_of_tracks">A flexible number of tracks</h3>
 
-<p>This isn’t quite the same as flexbox. In the flexbox example, the items are larger than the 200 pixel basis before wrapping. We can achieve the same in grid by combining <code>auto-fit</code> and the {{cssxref("minmax", "minmax()")}} function. In this next example, I create auto filled tracks with <code>minmax</code>. I want my tracks to be a minimum of 200 pixels, so I set the maximum to be <code>1fr</code>. Once the browser has worked out how many times 200 pixels will fit into the container–also taking account of grid gaps–it will treat the <code>1fr</code> maximum as an instruction to share out the remaining space between the items.</p>
+<p>This isn’t quite the same as flexbox. In the flexbox example, the items are larger than the 200 pixel basis before wrapping. We can achieve the same in grid by combining <code>auto-fit</code> and the {{cssxref("minmax()", "minmax()")}} function. In this next example, I create auto filled tracks with <code>minmax</code>. I want my tracks to be a minimum of 200 pixels, so I set the maximum to be <code>1fr</code>. Once the browser has worked out how many times 200 pixels will fit into the container–also taking account of grid gaps–it will treat the <code>1fr</code> maximum as an instruction to share out the remaining space between the items.</p>
 
 <div class="hidden">
 <pre class="brush: css notranslate">* {box-sizing: border-box;}
@@ -375,7 +375,7 @@ tags:
 
 <p>If the absolutely positioned child has a grid container as a parent but that container does not create a new positioning context, then it is taken out of flow as in the previous example. The positioning context will be whatever element creates a positioning context as is common to other layout methods. In our case, if we remove <code>position:</code> <code>relative</code> from the wrapper above, positioning context is from the viewport, as shown in this image.</p>
 
-<p><img alt="Image of grid container as parent" src="https://mdn.mozillademos.org/files/14661/2_abspos_example.png" style="height: 408px; width: 1702px;"></p>
+<p><img alt="Image of grid container as parent" src="2_abspos_example.png"></p>
 
 <p>Once again the item no longer participates in the grid layout in terms of sizing or when other items are auto-placed.</p>
 

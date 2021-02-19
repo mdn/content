@@ -52,7 +52,12 @@ tags:
 <pre class="brush: js">var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
 </pre>
 
-<p><span class="comment">Or alternatively by using the &lt;code&gt;createNSResolver&lt;/code&gt; method of a &lt;code&gt;XPathEvaluator&lt;/code&gt; object. &lt;pre&gt; var xpEvaluator = new XPathEvaluator(); var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement ); &lt;/pre&gt;</span> And then pass <code>document.evaluate</code>, the <code>nsResolver</code> variable as the <code>namespaceResolver</code> parameter.</p>
+<p><span class="comment">Or alternatively by using the <code>createNSResolver</code> method of a <code>XPathEvaluator</code> object.</span></p>
+<pre class="brush: js">var xpEvaluator = new XPathEvaluator();
+var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
+</pre>
+
+<p>And then pass <code>document.evaluate</code>, the <code>nsResolver</code> variable as the <code>namespaceResolver</code> parameter.</p>
 
 <p>Note: XPath defines QNames without a prefix to match only elements in the null namespace. There is no way in XPath to pick up the default namespace as applied to a regular element reference (e.g., <code>p[@id='_myid']</code> for <code>xmlns='http://www.w3.org/1999/xhtml'</code>). To match default elements in a non-null namespace, you either have to refer to a particular element using a form such as <code>['namespace-uri()='http://www.w3.org/1999/xhtml' and name()='p' and @id='_myid']</code> (<a href="#using_xpath_functions_to_reference_elements_with_a_default_namespace">this approach</a> works well for dynamic XPath's where the namespaces might not be known) or use prefixed name tests, and create a namespace resolver mapping the prefix to the namespace. Read more on <a href="#implementing_a_user_defined_namespace_resolver">how to create a user-defined namespace resolver</a>, if you wish to take the latter approach.</p>
 

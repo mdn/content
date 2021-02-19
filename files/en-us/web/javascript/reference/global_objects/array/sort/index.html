@@ -74,16 +74,15 @@ tags:
   being compared, then:</p>
 
 <ul>
-  <li>If <code>compareFunction(a, b)</code> returns less than 0, sort <code>a</code> to an
-    index lower than <code>b</code> (i.e. <code>a</code> comes first).</li>
+  <li>If <code>compareFunction(a, b)</code> returns less than 0, leave <code>a</code> and <code>b</code> unchanged.</li>
   <li>If <code>compareFunction(a, b)</code> returns 0, leave <code>a</code> and
     <code>b</code> unchanged with respect to each other, but sorted with respect to all
     different elements. Note: the ECMAScript standard only started guaranteeing this
     behavior <a
       href="https://www.ecma-international.org/ecma-262/10.0/index.html#sec-intro">in
       2019</a>, thus, older browsers may not respect this.</li>
-  <li>If <code>compareFunction(a, b)</code> returns greater than 0, leave <code>a</code> and
-    <code>b</code> unchanged.</li>
+  <li>If <code>compareFunction(a, b)</code> returns greater than 0, sort <code>b</code> before
+    <code>a</code>.</li>
   <li><code>compareFunction(a, b)</code> must always return the same value when given a
     specific pair of elements <code>a</code> and <code>b</code> as its two arguments. If
     inconsistent results are returned, then the sort order is undefined.</li>
@@ -291,10 +290,7 @@ var result = mapped.map(function(el){
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Array.sort")}}</p>
-</div>
+<p>{{Compat("javascript.builtins.Array.sort")}}</p>
 
 <h2 id="See_also">See also</h2>
 

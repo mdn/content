@@ -239,7 +239,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>Obtaining crisp lines requires understanding how paths are stroked. In the images below, the grid represents the canvas coordinate grid. The squares between gridlines are actual on-screen pixels. In the first grid image below, a rectangle from (2,1) to (5,5) is filled. The entire area between them (light red) falls on pixel boundaries, so the resulting filled rectangle will have crisp edges.</p>
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/201/Canvas-grid.png"></p>
+<p><img alt="" class="internal" src="canvas-grid.png"></p>
 
 <p>If you consider a path from (3,1) to (3,5) with a line thickness of <code>1.0</code>, you end up with the situation in the second image. The actual area to be filled (dark blue) only extends halfway into the pixels on either side of the path. An approximation of this has to be rendered, which means that those pixels being only partially shaded, and results in the entire area (the light blue and dark blue) being filled in with a color only half as dark as the actual stroke color. This is what happens with the <code>1.0</code> width line in the previous example code.</p>
 
@@ -259,7 +259,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>The <code>lineCap</code> property determines how the end points of every line are drawn. There are three possible values for this property and those are: <code>butt</code>, <code>round</code> and <code>square</code>. By default this property is set to <code>butt</code>.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/236/Canvas_linecap.png" style="float: right; height: 190px; width: 190px;"></p>
+<p><img alt="" src="canvas_linecap.png" style="float: right;"></p>
 
 <dl>
  <dt><code>butt</code></dt>
@@ -314,7 +314,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>There are three possible values for this property: <code>round</code>, <code>bevel</code> and <code>miter</code>. By default this property is set to <code>miter</code>. Note that the <code>lineJoin</code> setting has no effect if the two connected segments have the same direction, because no joining area will be added in this case.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/237/Canvas_linejoin.png" style="float: right; height: 190px; width: 190px;"></p>
+<p><img alt="" src="canvas_linejoin.png" style="float: right;"></p>
 
 <dl>
  <dt><code>round</code></dt>
@@ -461,13 +461,15 @@ march();</pre>
 
 <h2 id="Gradients">Gradients</h2>
 
-<p>Just like any normal drawing program, we can fill and stroke shapes using linear and radial gradients. We create a {{domxref("CanvasGradient")}} object by using one of the following methods. We can then assign this object to the <code>fillStyle</code> or <code>strokeStyle</code> properties.</p>
+<p>Just like any normal drawing program, we can fill and stroke shapes using linear, radial and conic gradients. We create a {{domxref("CanvasGradient")}} object by using one of the following methods. We can then assign this object to the <code>fillStyle</code> or <code>strokeStyle</code> properties.</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.createLinearGradient", "createLinearGradient(x1, y1, x2, y2)")}}</dt>
  <dd>Creates a linear gradient object with a starting point of (<code>x1</code>, <code>y1</code>) and an end point of (<code>x2</code>, <code>y2</code>).</dd>
  <dt>{{domxref("CanvasRenderingContext2D.createRadialGradient", "createRadialGradient(x1, y1, r1, x2, y2, r2)")}}</dt>
  <dd>Creates a radial gradient. The parameters represent two circles, one with its center at (<code>x1</code>, <code>y1</code>) and a radius of <code>r1</code>, and the other with its center at (<code>x2</code>, <code>y2</code>) with a radius of <code>r2</code>.</dd>
+ <dt>{{domxref("CanvasRenderingContext2D.createConicGradient", "createConicGradient(angle, x, y)")}}</dt>
+ <dd>Creates a conic gradient object with a starting angle of <code>angle</code> in radians, at the position (<code>x</code>, <code>y</code>).</dd>
 </dl>
 
 <p>For example:</p>
@@ -582,6 +584,53 @@ lineargradient.addColorStop(1, 'black');
 <p>The last color stop in each of the four gradients uses a fully transparent color. If you want to have a nice transition from this to the previous color stop, both colors should be equal. This isn't very obvious from the code because it uses two different CSS color methods as a demonstration, but in the first gradient <code>#019F62 = rgba(1,159,98,1)</code>.</p>
 
 <p>{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "https://mdn.mozillademos.org/files/244/Canvas_radialgradient.png")}}</p>
+
+
+<!-- ------------------------ -->
+
+<h3 id="A_createConicGradient_example">A <code>createConicGradient</code> example</h3>
+
+<p>In this example, we'll define two different conic gradients. A conic gradient differs from a radial gradient as, instead of creating circles, it circles around a point.</p>
+
+<pre class="brush: js notranslate">function draw() {
+  var ctx = document.getElementById('canvas').getContext('2d');
+
+  // Create gradients
+  var conicGrad1 = ctx.createConicGradient(2, 62, 75);
+  conicGrad1.addColorStop(0, '#A7D30C');
+  conicGrad1.addColorStop(1, '#fff');
+
+  var conicGrad2 = ctx.createConicGradient(0, 187, 75);
+  // we multiple our values by Math.PI/180 to convert degrees to radians
+  conicGrad2.addColorStop(0, 'black');
+  conicGrad2.addColorStop(0.25, 'black');
+  conicGrad2.addColorStop(0.25, 'white');
+  conicGrad2.addColorStop(0.5, 'white');
+  conicGrad2.addColorStop(0.5, 'black');
+  conicGrad2.addColorStop(0.75, 'black');
+  conicGrad2.addColorStop(0.75, 'white');
+  conicGrad2.addColorStop(1, 'white');
+
+  // draw shapes
+  ctx.fillStyle = conicGrad1;
+  ctx.fillRect(12, 25, 100, 100);
+  ctx.fillStyle = conicGrad2;
+  ctx.fillRect(137, 25, 100, 100);
+}
+</pre>
+
+<div class="hidden">
+<pre class="brush: html notranslate">&lt;canvas id="canvas" width="250" height="150"&gt;&lt;/canvas&gt;</pre>
+
+<pre class="brush: js notranslate">draw();</pre>
+</div>
+
+<p>The first gradient is positioned in the center of the first rectangle and moves a green color stop at the start, to a white one at the end. The angle starts at 2 radians, which is noticeable because of the beginning/end line pointing south east.</p>
+
+<p>The second gradient is also positioned at the center of it's second rectangle. This one has multiple colour stops, alternating from black to white at each quarter of the rotation. This gives us the checkered effect.</p>
+
+<p>{{EmbedLiveSample("A_createConicGradient_example", "180", "180", "canvas_conicgrad.png")}}</p>
+
 
 <h2 id="Patterns">Patterns</h2>
 
