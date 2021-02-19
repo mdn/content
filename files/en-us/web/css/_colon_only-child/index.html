@@ -13,7 +13,7 @@ tags:
 
 <p>The <strong><code>:only-child</code></strong> CSS <a href="/en-US/docs/Web/CSS/Pseudo-classes" title="Pseudo classes">pseudo-class</a> represents an element without any siblings. This is the same as <code>:first-child:last-child</code> or <code>:nth-child(1):nth-last-child(1)</code>, but with a lower specificity.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Selects each &lt;p&gt;, but only if it is the */
+<pre class="brush: css no-line-numbers">/* Selects each &lt;p&gt;, but only if it is the */
 /* only child of its parent */
 p:only-child {
   background-color: lime;
@@ -25,7 +25,7 @@ p:only-child {
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}
+<pre class="brush: css">{{csssyntax}}
 </pre>
 
 <h2 id="Examples">Examples</h2>
@@ -34,7 +34,7 @@ p:only-child {
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div&gt;
+<pre class="brush: html">&lt;div&gt;
   &lt;div&gt;I am an only child.&lt;/div&gt;
 &lt;/div&gt;
 
@@ -47,7 +47,7 @@ p:only-child {
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">div:only-child {
+<pre class="brush: css">div:only-child {
   color: red;
 }
 
@@ -66,7 +66,7 @@ div {
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;ol&gt;
+<pre class="brush: html">&lt;ol&gt;
   &lt;li&gt;First
     &lt;ul&gt;
       &lt;li&gt;This list has just one element.&lt;/li&gt;
@@ -84,7 +84,7 @@ div {
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">li li {
+<pre class="brush: css">li li {
   list-style-type: disc;
 }
 

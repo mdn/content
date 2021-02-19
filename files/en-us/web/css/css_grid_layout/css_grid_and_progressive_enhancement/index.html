@@ -34,7 +34,7 @@ tags:
 
 <p>The popular tool <em><a href="https://github.com/postcss/autoprefixer">Autoprefixer</a></em> has been updated to support the <code>-ms-</code> grid version. By default, grid prefixes are disabled, but you can enable it with <code>grid: true</code> option.</p>
 
-<pre class="notranslate">autoprefixer({ grid: 'autoplace' })</pre>
+<pre>autoprefixer({ grid: 'autoplace' })</pre>
 
 <p>Grid prefixes are disabled by default because some properties can’t be prefixed.</p>
 
@@ -53,7 +53,7 @@ tags:
 <p>The {{cssxref("float")}} no longer applies, and I can use the CSS Box Alignment property {{cssxref("align-self")}} to align my content to the end of the container:</p>
 
 <div id="enhancement_1">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 img {
     max-width: 100%;
     display: block;
@@ -84,7 +84,7 @@ img {
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="media"&gt;
+<pre class="brush: html">&lt;div class="media"&gt;
     &lt;div class="image"&gt;&lt;img src="http://placehold.it/150x150" alt="placeholder"&gt;&lt;/div&gt;
     &lt;div class="text"&gt;This is a media object example. I am using floats for older browsers and grid for new ones.&lt;/div&gt;
 &lt;/div&gt;
@@ -105,7 +105,7 @@ img {
 
 <div id="enhancement_2">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -124,7 +124,7 @@ img {
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper ul {
+<pre class="brush: css">.wrapper ul {
     overflow: hidden;
     margin: 0 -10px;
     padding: 0;
@@ -137,7 +137,7 @@ img {
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
     &lt;ul&gt;
         &lt;li class="card"&gt;&lt;h2&gt;One&lt;/h2&gt;
             &lt;p&gt;We can use CSS Grid to overwrite older methods.&lt;/p&gt;
@@ -178,7 +178,7 @@ img {
 
 <p><em>Feature queries</em> will look very familiar if you have ever used a <a href="/en-US/docs/Web/CSS/Media_Queries">media query</a> to create a responsive layout. Rather than checking a {{glossary("viewport")}} width, or some feature of the browser or device, we check for support of a CSS property and value pair using an {{cssxref("@supports")}} rule. Inside the feature query, we can then write any CSS we need to apply our modern layout, and remove anything required for the older layout.</p>
 
-<pre class="brush: css notranslate">@supports (display: grid) {
+<pre class="brush: css">@supports (display: grid) {
     .wrapper {
         /* do anything for grid supporting browsers here. */
     }
@@ -191,7 +191,7 @@ img {
 
 <div id="enhancement_3">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -210,7 +210,7 @@ img {
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper ul {
+<pre class="brush: css">.wrapper ul {
     overflow: hidden;
     margin: 0 -10px;
     padding: 0;
@@ -236,7 +236,7 @@ img {
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
     &lt;ul&gt;
         &lt;li class="card"&gt;&lt;h2&gt;One&lt;/h2&gt;
             &lt;p&gt;We can use CSS Grid to overwrite older methods.&lt;/p&gt;
@@ -272,7 +272,7 @@ img {
 
 <div id="enhancement_4">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -292,7 +292,7 @@ img {
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper ul {
+<pre class="brush: css">.wrapper ul {
     margin: 0 -10px;
     padding: 0;
     list-style: none;
@@ -318,7 +318,7 @@ img {
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
     &lt;ul&gt;
         &lt;li class="card"&gt;
             &lt;h2&gt;One&lt;/h2&gt;

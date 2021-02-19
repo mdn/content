@@ -19,7 +19,7 @@ tags:
 
 <p>The <strong><code>:is()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list. This is useful for writing large selectors in a more compact form.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Selects any paragraph inside a header, main
+<pre class="brush: css no-line-numbers">/* Selects any paragraph inside a header, main
    or footer element that is being hovered */
 :is(header, main, footer) p:hover {
   color: red;
@@ -39,7 +39,7 @@ footer p:hover {
 
 <p>These legacy pseudo-classes can be used to provide backwards compatibility.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Backwards-compatible version with :-*-any() and :matches()
+<pre class="brush: css no-line-numbers">/* Backwards-compatible version with :-*-any() and :matches()
    (It is not possible to group selectors into single rule,
    because presence of invalid selector would invalidate whole rule.) */
 :-webkit-any(header, main, footer) p:hover {
@@ -62,13 +62,13 @@ footer p:hover {
 
 <p>In CSS when using a selector list, if any of the selectors are invalid then the whole list is deemed invalid. When using <code>:is()</code> or <code>:where() </code>instead of the whole list of selectors being deemed invalid if one fails to parse, the incorrect or unsupported selector will be ignored and the others used.</p>
 
-<pre class="brush: css notranslate">:is(:valid, :unsupported) {
+<pre class="brush: css">:is(:valid, :unsupported) {
   ...
 }</pre>
 
 <p>Will still parse correctly and match <code>:valid</code> even in browsers which don't support <code>:unsupported</code>, whereas:</p>
 
-<pre class="brush: css notranslate">:valid, :unsupported {
+<pre class="brush: css">:valid, :unsupported {
   ...
 }</pre>
 
@@ -78,7 +78,7 @@ footer p:hover {
 
 <h3 id="Cross-browser_example">Cross-browser example</h3>
 
-<pre class="brush: html notranslate">&lt;header&gt;
+<pre class="brush: html">&lt;header&gt;
   &lt;p&gt;This is my header paragraph&lt;/p&gt;
 &lt;/header&gt;
 
@@ -93,7 +93,7 @@ footer p:hover {
   &lt;p&gt;This is my footer paragraph&lt;/p&gt;
 &lt;/footer&gt;</pre>
 
-<pre class="brush: css notranslate">:-webkit-any(header, main, footer) p:hover {
+<pre class="brush: css">:-webkit-any(header, main, footer) p:hover {
   color: red;
   cursor: pointer;
 }
@@ -114,7 +114,7 @@ footer p:hover {
 }
 </pre>
 
-<pre class="brush: js notranslate">let matchedItems;
+<pre class="brush: js">let matchedItems;
 
 try {
   matchedItems = document.querySelectorAll(':is(header, main, footer) p');
@@ -148,7 +148,7 @@ function applyHandler(elem) {
 
 <p>The <code>:is()</code> pseudo-class can greatly simplify your CSS selectors. For example, the following CSS:</p>
 
-<pre class="brush: css notranslate">/* 3-deep (or more) unordered lists use a square */
+<pre class="brush: css">/* 3-deep (or more) unordered lists use a square */
 ol ol ul,     ol ul ul,     ol menu ul,     ol dir ul,
 ol ol menu,   ol ul menu,   ol menu menu,   ol dir menu,
 ol ol dir,    ol ul dir,    ol menu dir,    ol dir dir,
@@ -167,7 +167,7 @@ dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
 
 <p>... can be replaced with:</p>
 
-<pre class="brush: css notranslate">/* 3-deep (or more) unordered lists use a square */
+<pre class="brush: css">/* 3-deep (or more) unordered lists use a square */
 :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) ul,
 :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) menu,
 :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) dir {
@@ -180,7 +180,7 @@ dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
 
 <p>For example, without <code>:is()</code>, styling all the {{HTMLElement("h1")}} elements at different depths could be very complicated:</p>
 
-<pre class="brush: css notranslate">/* Level 0 */
+<pre class="brush: css">/* Level 0 */
 h1 {
   font-size: 30px;
 }
@@ -201,7 +201,7 @@ nav section h1, nav article h1, nav aside h1, nav nav h1 {
 
 <p>Using <code>:is()</code>, though, it's much easier:</p>
 
-<pre class="brush: css notranslate">/* Level 0 */
+<pre class="brush: css">/* Level 0 */
 h1 {
   font-size: 30px;
 }
@@ -228,7 +228,7 @@ h1 {
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">{{CSSSyntax}}</pre>
+<pre class="brush: css">{{CSSSyntax}}</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

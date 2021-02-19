@@ -92,7 +92,7 @@ tags:
 
 <p>For example, the following code writes a balanced sub-tree:</p>
 
-<pre class="notranslate">&lt;script&gt;
+<pre>&lt;script&gt;
   document.write("&lt;div&gt;");
   document.write("&lt;p&gt;Some content goes here.&lt;/p&gt;");
   document.write("&lt;/div&gt;");
@@ -102,7 +102,7 @@ tags:
 
 <p>In contrast, the following code contains two scripts with unbalanced sub-trees, which causes speculative parsing to fail and therefore the time to parse the document is longer.</p>
 
-<pre class="notranslate">&lt;script&gt;document.write("&lt;div&gt;");&lt;/script&gt;
+<pre>&lt;script&gt;document.write("&lt;div&gt;");&lt;/script&gt;
 &lt;p&gt;Some content goes here.&lt;/p&gt;
 &lt;script&gt;document.write("&lt;/div&gt;");&lt;/script&gt;
 </pre>

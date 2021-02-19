@@ -13,7 +13,7 @@ tags:
 
 <p><span class="seoSummary">In CSS, <strong><code>::before</code></strong> creates a <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> that is the first child of the selected element. It is often used to add cosmetic content to an element with the {{cssxref("content")}} property.</span> It is inline by default.</p>
 
-<pre class="brush: css notranslate">/* Add a heart before links */
+<pre class="brush: css">/* Add a heart before links */
 a::before {
   content: "♥";
 }</pre>
@@ -24,7 +24,7 @@ a::before {
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <div class="note">
 <p><strong>Note:</strong> CSS3 introduced the <code>::before</code> notation (with two colons) to distinguish <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classes</a> from <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>. Browsers also accept <code>:before</code>, introduced in CSS2.</p>
@@ -38,11 +38,11 @@ a::before {
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush:html notranslate">&lt;q&gt;Some quotes&lt;/q&gt;, he said, &lt;q&gt;are better than none.&lt;/q&gt;</pre>
+<pre class="brush:html">&lt;q&gt;Some quotes&lt;/q&gt;, he said, &lt;q&gt;are better than none.&lt;/q&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush:css notranslate">q::before {
+<pre class="brush:css">q::before {
   content: "«";
   color: blue;
 }
@@ -62,11 +62,11 @@ q::after {
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;span class="ribbon"&gt;Notice where the orange box is.&lt;/span&gt;</pre>
+<pre class="brush: html">&lt;span class="ribbon"&gt;Notice where the orange box is.&lt;/span&gt;</pre>
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">.ribbon {
+<pre class="brush: css">.ribbon {
   background-color: #5BC8F7;
 }
 
@@ -87,7 +87,7 @@ q::after {
 
 <h4 id="HTML_3">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;ul&gt;
+<pre class="brush: html">&lt;ul&gt;
   &lt;li&gt;Buy milk&lt;/li&gt;
   &lt;li&gt;Take the dog for a walk&lt;/li&gt;
   &lt;li&gt;Exercise&lt;/li&gt;
@@ -99,7 +99,7 @@ q::after {
 
 <h4 id="CSS_3">CSS</h4>
 
-<pre class="brush: css notranslate">li {
+<pre class="brush: css">li {
   list-style-type: none;
   position: relative;
   margin: 2px;
@@ -128,7 +128,7 @@ li.done::before {
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">var list = document.querySelector('ul');
+<pre class="brush: js">var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
      ev.target.classList.toggle('done');
@@ -148,7 +148,7 @@ list.addEventListener('click', function(ev) {
 
 <h4 id="HTML_4">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;ol&gt;
+<pre class="brush: html">&lt;ol&gt;
   &lt;li&gt;Crack Eggs into bowl&lt;/li&gt;
   &lt;li&gt;Add Milk&lt;/li&gt;
   &lt;li&gt;Add Flour&lt;/li&gt;
@@ -162,7 +162,7 @@ list.addEventListener('click', function(ev) {
 
 <h4 id="CSS_4">CSS</h4>
 
-<pre class="brush: css notranslate">li {
+<pre class="brush: css">li {
   padding:0.5em;
 }
 
