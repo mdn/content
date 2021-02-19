@@ -61,11 +61,11 @@ tags:
  <li>Download the installer for your system from the above site. (If you already have Node and npm installed, jump to point 4)</li>
  <li>Install it like you would any other program. Note that Node comes with <a href="https://www.npmjs.com/">Node Package Manager</a> (npm), which allows you to easily install packages, share your own packages with others, and run useful scripts on your projects.</li>
  <li>Once the install completes, test that node is installed by typing the following into the terminal, which returns the installed versions of Node and npm:
-  <pre class="brush: bash notranslate">node -v
+  <pre class="brush: bash">node -v
 npm -v</pre>
  </li>
  <li>If you've got Node/npm already installed, you should update them to their latest versions. To update Node, the most reliable way is to download and install an updated installer package from their website (see link above). To update npm, use the following command in your terminal:
-  <pre class="brush: bash notranslate">npm install npm@latest -g</pre>
+  <pre class="brush: bash">npm install npm@latest -g</pre>
  </li>
 </ol>
 
@@ -79,10 +79,10 @@ npm -v</pre>
 
 <ol>
  <li>Create a new directory somewhere sensible using your file manager UI, or, on a command line, by navigating to the location you want and running the following command:
-  <pre class="brush: bash notranslate">mkdir node-test</pre>
+  <pre class="brush: bash">mkdir node-test</pre>
  </li>
  <li>To make this directory an npm project, you just need to go inside your test directory and initialize it, with the following:
-  <pre class="brush: bash notranslate">cd node-test
+  <pre class="brush: bash">cd node-test
 npm init</pre>
  </li>
  <li>This second command will ask you many questions to find out the information required to set up the project; you can just select the defaults for now.</li>
@@ -91,7 +91,7 @@ npm init</pre>
 
 <p>This file is basically a config file for the project. You can customize it later, but for now it'll look something like this:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "name": "node-test",
   "version": "1.0.0",
   "description": "Test for npm projects",
@@ -113,13 +113,13 @@ npm init</pre>
  <li>To begin with, create a test npm project using the procedure detailed at the bottom of the previous section.</li>
  <li>Next, you'll need some sample HTML, CSS and JavaScript content to test your system on — make copies of our sample <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/automation/index.html">index.html</a>, <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/automation/main.js">main.js</a>, and <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/automation/style.css">style.css</a> files in a subfolder with the name <code>src</code> inside your project folder. You can try your own test content if you like, but bear in mind that such tools won't work on internal JS/CSS — you need external files.</li>
  <li>First, install gulp globally (meaning, it will be available across all projects) using the following command:
-  <pre class="brush: bash notranslate">npm install --global gulp-cli</pre>
+  <pre class="brush: bash">npm install --global gulp-cli</pre>
  </li>
  <li>Next, run the following command inside your npm project directory root to set up gulp as a dependency of your project:
-  <pre class="brush: bash notranslate">npm install --save-dev gulp</pre>
+  <pre class="brush: bash">npm install --save-dev gulp</pre>
  </li>
  <li>Now create a new file inside your project directory called <code>gulpfile.js</code>. This is the file that will run all our tasks. Inside this file, put the following:
-  <pre class="brush: js notranslate">const gulp = require('gulp');
+  <pre class="brush: js">const gulp = require('gulp');
 
 exports.default = function(cb) {
   console.log('Gulp running');
@@ -127,7 +127,7 @@ exports.default = function(cb) {
 };</pre>
   This requires the <code>gulp</code> module we installed earlier, and then exports a default task that does nothing except for printing a message to the terminal — this is useful for letting us know that Gulp is working. Each gulp task is exported in the same basic format — <code>exports.taskName = taskFunction</code>. Each function takes one parameter — a callback to run when the task is completed.</li>
  <li>You can run your gulp's default task with the following command — try this now:
-  <pre class="brush: bash notranslate">gulp
+  <pre class="brush: bash">gulp
 </pre>
  </li>
 </ol>
@@ -150,7 +150,7 @@ exports.default = function(cb) {
 
 <ol>
  <li>Install using the following line:
-  <pre class="brush: bash notranslate">npm install --save-dev gulp-htmltidy
+  <pre class="brush: bash">npm install --save-dev gulp-htmltidy
 </pre>
 
   <div class="note">
@@ -158,10 +158,10 @@ exports.default = function(cb) {
   </div>
  </li>
  <li>Add the following dependency to <code>gulpfile.js</code>:
-  <pre class="brush: js notranslate">const htmltidy = require('gulp-htmltidy');</pre>
+  <pre class="brush: js">const htmltidy = require('gulp-htmltidy');</pre>
  </li>
  <li>Add the following test to the bottom of <code>gulpfile.js</code>:
-  <pre class="brush: js notranslate">function html(cb) {
+  <pre class="brush: js">function html(cb) {
   return gulp.src('src/index.html')
         .pipe(htmltidy())
         .pipe(gulp.dest('build'));
@@ -170,11 +170,11 @@ exports.default = function(cb) {
 </pre>
  </li>
  <li>Export the html task using:
-  <pre class="brush: js notranslate">exports.html = html;
+  <pre class="brush: js">exports.html = html;
 </pre>
  </li>
  <li>Change the default export to:
-  <pre class="brush: js notranslate">exports.default = html;
+  <pre class="brush: js">exports.default = html;
 </pre>
  </li>
 </ol>
@@ -189,15 +189,15 @@ exports.default = function(cb) {
 
 <ol>
  <li>Install using the following lines:
-  <pre class="brush: bash notranslate">npm install --save-dev gulp-autoprefixer
+  <pre class="brush: bash">npm install --save-dev gulp-autoprefixer
 npm install --save-dev gulp-csslint</pre>
  </li>
  <li>Add the following dependencies to <code>gulpfile.js</code>:
-  <pre class="brush: js notranslate">const autoprefixer = require('gulp-autoprefixer');
+  <pre class="brush: js">const autoprefixer = require('gulp-autoprefixer');
 const csslint = require('gulp-csslint');</pre>
  </li>
  <li>Add the following test to the bottom of <code>gulpfile.js</code>:
-  <pre class="brush: js notranslate">function css(cb) {
+  <pre class="brush: js">function css(cb) {
     return gulp.src('src/style.css')
         .pipe(csslint())
         .pipe(csslint.formatter('compact'))
@@ -210,21 +210,21 @@ const csslint = require('gulp-csslint');</pre>
 </pre>
  </li>
  <li>Add the following property to <code>package.json</code>:
-  <pre class="brush: js notranslate">"browserslist": [
+  <pre class="brush: js">"browserslist": [
   "last 5 versions"
 ]
 </pre>
  </li>
  <li>Add this line after the const definitions:
-  <pre class="brush: js notranslate">const { series } = require('gulp');
+  <pre class="brush: js">const { series } = require('gulp');
 </pre>
  </li>
  <li>Export the css task using:
-  <pre class="brush: js notranslate">exports.css = css;
+  <pre class="brush: js">exports.css = css;
 </pre>
  </li>
  <li>Change the default task to:
-  <pre class="brush: js notranslate">exports.default = series(html, css);
+  <pre class="brush: js">exports.default = series(html, css);
 </pre>
  </li>
 </ol>
@@ -235,18 +235,18 @@ const csslint = require('gulp-csslint');</pre>
 
 <ol>
  <li>Install using the following lines:
-  <pre class="editor editor-colors notranslate">npm install --save-dev gulp-babel @babel/preset-env
+  <pre class="editor editor-colors">npm install --save-dev gulp-babel @babel/preset-env
 npm install --save-dev @babel/core
 npm install jshint gulp-jshint --save-dev
 </pre>
  </li>
  <li>Add the following dependencies to <code>gulpfile.js</code>:
-  <pre class="brush: js editor editor-colors notranslate">const babel = require('gulp-babel');
+  <pre class="brush: js editor editor-colors">const babel = require('gulp-babel');
 const jshint = require('gulp-jshint');
 </pre>
  </li>
  <li>Add the following test to the bottom of <code>gulpfile.js</code>:
-  <pre class="brush: js notranslate">function js(cb) {
+  <pre class="brush: js">function js(cb) {
     return gulp.src('src/main.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'))
@@ -259,11 +259,11 @@ const jshint = require('gulp-jshint');
 </pre>
  </li>
  <li>Export the js task using:
-  <pre class="brush: js notranslate">exports.js = js;
+  <pre class="brush: js">exports.js = js;
 </pre>
  </li>
  <li>Change the default task to:
-  <pre class="brush: js notranslate">exports.default = series(html, css, js);
+  <pre class="brush: js">exports.default = series(html, css, js);
 </pre>
  </li>
 </ol>
@@ -282,7 +282,7 @@ const jshint = require('gulp-jshint');
 
 <p>Gulp comes with a <code>watch()</code> function that you can use to watch your files and run tests whenever you save a file. For example, try adding the following to the bottom of your <code>gulpfile.js</code>:</p>
 
-<pre class="brush: js notranslate">gulp.task('watch', function(){
+<pre class="brush: js">gulp.task('watch', function(){
   gulp.watch('src/*.html', ['html']);
   gulp.watch('src/*.css', ['css']);
   gulp.watch('src/*.js', ['js']);
@@ -404,10 +404,10 @@ const jshint = require('gulp-jshint');
 <ol>
  <li>First, set up a new npm project to test this out, as detailed in {{anch("Setting up Node and npm")}}. Use a different directory name than before, like <code>sauce-test</code> for example.</li>
  <li>Install the Node Sauce Labs wrapper using the following command:
-  <pre class="notranslate">npm install saucelabs</pre>
+  <pre>npm install saucelabs</pre>
  </li>
  <li>Create a new file inside your project root called <code>call_sauce.js</code>. give it the following contents:
-  <pre class="brush: js notranslate">const SauceLabs = require('saucelabs');
+  <pre class="brush: js">const SauceLabs = require('saucelabs');
 
 let myAccount = new SauceLabs({
   username: "your-sauce-username",
@@ -438,7 +438,7 @@ myAccount.getAccountDetails(function (err, res) {
  </li>
  <li>You'll need to fill in your Sauce Labs username and API key in the indicated places. These can be retrieved from your <a href="https://saucelabs.com/beta/user-settings">User Settings</a> page. Fill these in now.</li>
  <li>Make sure everything is saved, and run your file like so:
-  <pre class="brush: bash notranslate">node call_sauce</pre>
+  <pre class="brush: bash">node call_sauce</pre>
  </li>
 </ol>
 
@@ -519,7 +519,7 @@ myAccount.getAccountDetails(function (err, res) {
 <ol>
  <li>First, set up a new npm project to test this out, as detailed in {{anch("Setting up Node and npm")}}. Use a different directory name than before, like <code>bstack-test</code> for example.</li>
  <li>Create a new file inside your project root called <code>call_bstack.js</code>. give it the following contents:
-  <pre class="brush: js notranslate">const request = require("request");
+  <pre class="brush: js">const request = require("request");
 
 let bsUser = "BROWSERSTACK_USERNAME";
 let bsKey = "BROWSERSTACK_ACCESS_KEY";
@@ -546,13 +546,13 @@ getPlanDetails();
  </li>
  <li>You'll need to fill in your BrowserStack username and API key in the indicated places. These can be retrieved from your <a href="https://www.browserstack.com/automate">BrowserStack automation dashboard</a>. Fill these in now.</li>
  <li>Make sure everything is saved, and run your file like so:
-  <pre class="brush: bash notranslate">node call_bstack</pre>
+  <pre class="brush: bash">node call_bstack</pre>
  </li>
 </ol>
 
 <p>Below we've also provided some other ready-made functions you might find useful when working with the BrowserStack restful API.</p>
 
-<pre class="brush: js notranslate">function getBuilds(){
+<pre class="brush: js">function getBuilds(){
 	request({uri: baseUrl + "builds.json"}, function(err, res, body){
 		console.log(JSON.parse(body));
 	});
@@ -715,10 +715,10 @@ function getSessionDetails(session){
 <ol>
  <li>First, set up a new npm project to test this out, as detailed in {{anch("Setting up Node and npm")}}. Use a different directory name than before, like <code>tb-test</code> for example.</li>
  <li>Install the Node TestingBot wrapper using the following command:
-  <pre class="notranslate">npm install testingbot-api</pre>
+  <pre>npm install testingbot-api</pre>
  </li>
  <li>Create a new file inside your project root called <code>tb.js</code>. give it the following contents:
-  <pre class="brush: js notranslate">const TestingBot = require('testingbot-api');
+  <pre class="brush: js">const TestingBot = require('testingbot-api');
 
 let tb = new TestingBot({
   api_key: "your-tb-key",
@@ -731,7 +731,7 @@ tb.getTests(function (err, tests) {
  </li>
  <li>You'll need to fill in your TestingBot Key and Secret in the indicated places. You can find these in the <a href="https://testingbot.com/members/user/edit">TestingBot dashboard</a>.</li>
  <li>Make sure everything is saved, and run the file:
-  <pre class="brush: bash notranslate">node tb.js</pre>
+  <pre class="brush: bash">node tb.js</pre>
  </li>
 </ol>
 

@@ -113,7 +113,7 @@ browser.runtime.onMessage.hasListener(<var>listener</var>)
  <div class="notecard note">
  <p><strong>Important:</strong> Do not call <code>addListener()</code> using an <code>async</code> function:</p>
 
- <pre class="notranslate brush: js example-bad">// don't do this
+ <pre class="brush: js example-bad">// don't do this
 browser.runtime.onMessage.addListener(
   async (data, sender) =&gt; {
     if (data.type === 'handle_me') { return 'done'; }
@@ -125,7 +125,7 @@ browser.runtime.onMessage.addListener(
 
  <p>If you want to take an asynchronous approach, use a Promise instead, like this:</p>
 
- <pre class="notranslate brush: js example-good">browser.runtime.onMessage.addListener(
+ <pre class="brush: js example-good">browser.runtime.onMessage.addListener(
   (data, sender) =&gt; {
     if (data.type === 'handle_me') {
       return Promise.resolve('done');
@@ -149,7 +149,7 @@ browser.runtime.onMessage.addListener(
 
 <p>This content script listens for click events on the web page. If the click was on a link, it messages the background page with the target URL:</p>
 
-<pre class="notranslate brush: js">// content-script.js
+<pre class="brush: js">// content-script.js
 
 window.addEventListener("click", notifyExtension);
 
@@ -163,7 +163,7 @@ function notifyExtension(e) {
 
 <p>The background script listens for these messages and displays a notification using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications">notifications</a></code> API:</p>
 
-<pre class="notranslate brush: js">// background-script.js
+<pre class="brush: js">// background-script.js
 
 browser.runtime.onMessage.addListener(notify);
 
@@ -181,7 +181,7 @@ function notify(message) {
 
 <p>This content script sends a message to the background script when the user clicks on the page. It also logs any response sent by the background script:</p>
 
-<pre class="notranslate brush: js">// content-script.js
+<pre class="brush: js">// content-script.js
 
 function handleResponse(message) {
   console.log(`background script sent a response: ${message.response}`);
@@ -200,7 +200,7 @@ window.addEventListener("click", sendMessage);</pre>
 
 <p>Here is a version of the corresponding background script, that sends a response synchronously, from inside in the listener:</p>
 
-<pre class="notranslate brush: js">// background-script.js
+<pre class="brush: js">// background-script.js
 
 function handleMessage(request, sender, sendResponse) {
   console.log(`content script sent a message: ${request.content}`);
@@ -211,7 +211,7 @@ browser.runtime.onMessage.addListener(handleMessage);</pre>
 
 <p>And here is another version which uses {{jsxref("Promise.resolve()")}}:</p>
 
-<pre class="notranslate brush: js">// background-script.js
+<pre class="brush: js">// background-script.js
 
 function handleMessage(request, sender, sendResponse) {
   console.log(`content script sent a message: ${request.content}`);
@@ -224,7 +224,7 @@ browser.runtime.onMessage.addListener(handleMessage);</pre>
 
 <p>Here is an alternative version of the background script from the previous example. It sends a response asynchronously after the listener has returned. Note <code>return true;</code> in the listener: this tells the browser that you intend to use the <code>sendResponse</code> argument after the listener has returned.</p>
 
-<pre class="notranslate brush: js">// background-script.js
+<pre class="brush: js">// background-script.js
 
 function handleMessage(request, sender, sendResponse) {
   console.log(`content script sent a message: ${request.content}`);
@@ -241,7 +241,7 @@ browser.runtime.onMessage.addListener(handleMessage);
 
 <p>This content script gets the first <code>&lt;a&gt;</code> link on the page and sends a message asking if the link's location is bookmarked. It expects to get a Boolean response (<code>true</code> if the location is bookmarked, <code>false</code> otherwise):</p>
 
-<pre class="notranslate brush: js">// content-script.js
+<pre class="brush: js">// content-script.js
 
 const firstLink = document.querySelector("a");
 
@@ -257,7 +257,7 @@ browser.runtime.sendMessage({
 
 <p>Here is the background script. It uses <code>{{WebExtAPIRef("bookmarks.search()")}}</code> to see if the link is bookmarked, which returns a {{jsxref("Promise")}}:</p>
 
-<pre class="notranslate brush: js">// background-script.js
+<pre class="brush: js">// background-script.js
 
 function isBookmarked(message, sender, response) {
   return browser.bookmarks.search({
@@ -271,7 +271,7 @@ browser.runtime.onMessage.addListener(isBookmarked);</pre>
 
 <p>If the asynchronous handler doesn't return a Promise, you can explicitly construct a promise. This rather contrived example sends a response after a 1-second delay, using <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">Window.setTimeout()</a></code>:</p>
 
-<pre class="notranslate brush: js">// background-script.js
+<pre class="brush: js">// background-script.js
 
 function handleMessage(request, sender, sendResponse) {
   return new Promise(resolve =&gt; {
@@ -293,7 +293,7 @@ browser.runtime.onMessage.addListener(handleMessage);</pre>
 </div>
 
 <div class="hidden">
-<pre class="notranslate brush: js">// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="brush: js">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are

@@ -66,7 +66,7 @@ browser.runtime.onConnect.hasListener(listener)
  <li>sends messages to the background script, using <code>myPort</code>, when the user clicks the document</li>
 </ul>
 
-<pre class="notranslate brush: js line-numbers language-js">// content-script.js
+<pre class="brush: js line-numbers language-js">// content-script.js
 
 var myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
@@ -94,7 +94,7 @@ document.body.addEventListener("click", function() {
  <li>sends messages to the content script, using <code>portFromCS</code>, when the user clicks the extension's browser action</li>
 </ul>
 
-<pre class="notranslate brush: js line-numbers language-js">// background-script.js
+<pre class="brush: js line-numbers language-js">// background-script.js
 
 var portFromCS;
 

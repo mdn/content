@@ -49,7 +49,7 @@ tags:
 
 <p>Whenever a tab is updated, show the page action for that tab, and set its title to show the tab's ID:</p>
 
-<pre class="notranslate brush: js">browser.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) =&gt; {
+<pre class="brush: js">browser.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) =&gt; {
   browser.pageAction.show(tabId);
   browser.pageAction.setTitle({
     tabId: tabId,

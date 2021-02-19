@@ -95,7 +95,7 @@ tags:
 
 <p>For example, here's a manifest for the <code>ping_pong</code> native application:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "name": "ping_pong",
   "description": "Example host for native messaging",
   "path": "/path/to/native-messaging/app/ping_pong.py",
@@ -149,7 +149,7 @@ tags:
 
 <p>For example:</p>
 
-<pre class="brush: json line-numbers  language-json notranslate">{
+<pre class="brush: json line-numbers  language-json">{
   &quot;name&quot;: &quot;favourite-colour-examples@mozilla.org&quot;,
   &quot;description&quot;: &quot;ignored&quot;,
   &quot;type&quot;: &quot;storage&quot;,
@@ -161,7 +161,7 @@ tags:
 
 <p>Given this JSON manifest, the <code>favourite-colour-examples@mozilla.org</code> extension could access the data using code like this:</p>
 
-<pre class="notranslate brush: js line-numbers language-js">let storageItem = browser.storage.managed.get('colour');
+<pre class="brush: js line-numbers language-js">let storageItem = browser.storage.managed.get('colour');
 storageItem.then((res) =&gt; {
   console.log(`Managed colour is: ${res.colour}`);
 });</pre>
@@ -233,7 +233,7 @@ storageItem.then((res) =&gt; {
 
 <p>For example:</p>
 
-<pre class="brush: json line-numbers  language-json notranslate">{
+<pre class="brush: json line-numbers  language-json">{
   "name": "my_module",
   "description": "My test module",
   "type": "pkcs11",
@@ -243,7 +243,7 @@ storageItem.then((res) =&gt; {
 
 <p>Given this JSON manifest, saved as <code>my_module.json</code>, the <code>my-extension@mozilla.org</code> extension could install the security module at <code>/path/to/libpkcs11testmodule.dylib</code> using code like this:</p>
 
-<pre class="notranslate brush: js line-numbers language-js">browser.pkcs11.installModule("my_module");</pre>
+<pre class="brush: js line-numbers language-js">browser.pkcs11.installModule("my_module");</pre>
 
 <h2 id="Manifest_location">Manifest location</h2>
 
@@ -255,7 +255,7 @@ storageItem.then((res) =&gt; {
 
 <p>For global visibility, create a registry key with the following name:</p>
 
-<pre class="notranslate">HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\NativeMessagingHosts\<var>&lt;name&gt;</var>
+<pre>HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\NativeMessagingHosts\<var>&lt;name&gt;</var>
 
 HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\ManagedStorage\<var>&lt;name&gt;</var>
 
@@ -271,7 +271,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\PKCS11Modules\<var>&lt;name&gt;</var></pre>
 
 <p>For per-user visibility, create a registry key with the following name:</p>
 
-<pre class="notranslate">HKEY_CURRENT_USER\SOFTWARE\Mozilla\NativeMessagingHosts\<var>&lt;name&gt;</var>
+<pre>HKEY_CURRENT_USER\SOFTWARE\Mozilla\NativeMessagingHosts\<var>&lt;name&gt;</var>
 
 HKEY_CURRENT_USER\SOFTWARE\Mozilla\ManagedStorage\<var>&lt;name&gt;</var>
 
@@ -283,7 +283,7 @@ HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\<var>&lt;name&gt;</var></pre>
 
 <p>For global visibility, store the manifest in:</p>
 
-<pre class="notranslate">/Library/Application Support/Mozilla/NativeMessagingHosts/<var>&lt;name&gt;</var>.json
+<pre>/Library/Application Support/Mozilla/NativeMessagingHosts/<var>&lt;name&gt;</var>.json
 
 /Library/Application Support/Mozilla/ManagedStorage/<var>&lt;name&gt;</var>.json
 
@@ -291,7 +291,7 @@ HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\<var>&lt;name&gt;</var></pre>
 
 <p>For per-user visibility, store the manifest in:</p>
 
-<pre class="notranslate">~/Library/Application Support/Mozilla/NativeMessagingHosts/<var>&lt;name&gt;</var>.json
+<pre>~/Library/Application Support/Mozilla/NativeMessagingHosts/<var>&lt;name&gt;</var>.json
 
 ~/Library/Application Support/Mozilla/ManagedStorage/<var>&lt;name&gt;</var>.json
 
@@ -302,7 +302,7 @@ HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\<var>&lt;name&gt;</var></pre>
 
 <p>For global visibility, store the manifest in either:</p>
 
-<pre class="notranslate">/usr/lib/mozilla/native-messaging-hosts/<var>&lt;name&gt;</var>.json
+<pre>/usr/lib/mozilla/native-messaging-hosts/<var>&lt;name&gt;</var>.json
 
 /usr/lib/mozilla/managed-storage/<var>&lt;name&gt;</var>.json
 
@@ -311,7 +311,7 @@ HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\<var>&lt;name&gt;</var></pre>
 
 <p>or:</p>
 
-<pre class="notranslate">/usr/lib64/mozilla/native-messaging-hosts/<var>&lt;name&gt;</var>.json
+<pre>/usr/lib64/mozilla/native-messaging-hosts/<var>&lt;name&gt;</var>.json
 
 /usr/lib64/mozilla/managed-storage/<var>&lt;name&gt;</var>.json
 
@@ -319,7 +319,7 @@ HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\<var>&lt;name&gt;</var></pre>
 
 <p>For per-user visibility, store the manifest in:</p>
 
-<pre class="notranslate">~/.mozilla/native-messaging-hosts/<var>&lt;name&gt;</var>.json
+<pre>~/.mozilla/native-messaging-hosts/<var>&lt;name&gt;</var>.json
 
 ~/.mozilla/managed-storage/<var>&lt;name&gt;</var>.json
 

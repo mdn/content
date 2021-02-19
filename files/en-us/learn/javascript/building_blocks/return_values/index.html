@@ -40,7 +40,7 @@ tags:
 
 <p>Let's return to a familiar example (from a <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions#built-in_browser_functions">previous article</a> in this series):</p>
 
-<pre class="brush: js notranslate">let myText = 'The weather is cold';
+<pre class="brush: js">let myText = 'The weather is cold';
 let newString = myText.replace('cold', 'warm');
 console.log(newString); // Should print "The weather is warm"
 // the replace() string function takes a string,
@@ -66,7 +66,7 @@ console.log(newString); // Should print "The weather is warm"
 
 <p>To return a value from a custom function, you need to use the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a> keyword. We saw this in action recently in our <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html">random-canvas-circles.html</a> example. Our <code>draw()</code> function draws 100 random circles somewhere on an HTML {{htmlelement("canvas")}}:</p>
 
-<pre class="brush: js notranslate">function draw() {
+<pre class="brush: js">function draw() {
   ctx.clearRect(0, 0, WIDTH, HEIGHT);
   for (let i = 0; i &lt; 100; i++) {
     ctx.beginPath();
@@ -78,13 +78,13 @@ console.log(newString); // Should print "The weather is warm"
 
 <p>Inside each loop iteration, three calls are made to the <code>random()</code> function, to generate a random value for the current circle's <em>x-coordinate</em>, <em>y-coordinate</em>, and <em>radius</em>, respectively. The <code>random()</code> function takes one parameter — a whole number — and it returns a whole random number between <code>0</code> and that number. It looks like this:</p>
 
-<pre class="brush: js notranslate">function random(number) {
+<pre class="brush: js">function random(number) {
   return Math.floor(Math.random() * number);
 }</pre>
 
 <p>This could be written as follows:</p>
 
-<pre class="brush: js notranslate">function random(number) {
+<pre class="brush: js">function random(number) {
   const result = Math.floor(Math.random() * number);
   return result;
 }</pre>
@@ -95,11 +95,11 @@ console.log(newString); // Should print "The weather is warm"
 
 <p>So when you execute the following:</p>
 
-<pre class="brush: js notranslate">ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);</pre>
+<pre class="brush: js">ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);</pre>
 
 <p>If the three <code>random()</code> calls returned the values <code>500</code>, <code>200</code>, and <code>35</code>, respectively, the line would actually be run as if it were this:</p>
 
-<pre class="brush: js notranslate">ctx.arc(500, 200, 35, 0, 2 * Math.PI);</pre>
+<pre class="brush: js">ctx.arc(500, 200, 35, 0, 2 * Math.PI);</pre>
 
 <p>The function calls on the line are run first, and their return values substituted for the function calls, before the line itself is then executed.</p>
 
@@ -110,7 +110,7 @@ console.log(newString); // Should print "The weather is warm"
 <ol>
  <li>First of all, make a local copy of the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html">function-library.html</a> file from GitHub. This is a simple HTML page containing a text {{htmlelement("input")}} field and a paragraph. There's also a {{htmlelement("script")}} element, in which we have stored a reference to both HTML elements in two variables. This little page will allow you to enter a number into the text box, and display different numbers related to it in the paragraph below.</li>
  <li>Let's add some useful functions to this <code>&lt;script&gt;</code> element. Below the two existing lines of <a href="/en-US/docs/Web/JavaScript">JavaScript</a>, add the following function definitions:
-  <pre class="brush: js notranslate">function squared(num) {
+  <pre class="brush: js">function squared(num) {
   return num * num;
 }
 
@@ -130,7 +130,7 @@ function factorial(num) {
 }</pre>
   The <code>squared()</code> and <code>cubed()</code> functions are fairly obvious — they return the square or cube of the number that was given as a parameter. The <code>factorial()</code> function returns the <a href="https://en.wikipedia.org/wiki/Factorial">factorial</a> of the given number.</li>
  <li>Next, we're going to include a way to print out information about the number entered into the text input. Enter the following event handler below the existing functions:
-  <pre class="brush: js notranslate">input.onchange = function() {
+  <pre class="brush: js">input.onchange = function() {
   const num = input.value;
   if (isNaN(num)) {
     para.textContent = 'You need to enter a number!';

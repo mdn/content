@@ -63,7 +63,7 @@ tags:
 
 <p>Next, create "background.js" in the extension's root directory, and give it the following contents:</p>
 
-<pre class="notranslate brush: js">function openPage() {
+<pre class="brush: js">function openPage() {
   browser.tabs.create({
     url: "https://developer.mozilla.org"
   });
@@ -159,7 +159,7 @@ browser.browserAction.onClicked.addListener(openPage);</pre>
 
 <p>Next, create a "choose_page.js" file inside the "popup" directory, and give it these contents:</p>
 
-<pre class="notranslate brush: js">document.addEventListener("click", function(e) {
+<pre class="brush: js">document.addEventListener("click", function(e) {
   if (!e.target.classList.contains("page-choice")) {
     return;
   }

@@ -36,7 +36,7 @@ tags:
 
 <p>Given this manifest, the "favourite-color-examples@mozilla.org" extension could access the data using code like this:</p>
 
-<pre class="notranslate brush: js">var storageItem = browser.storage.managed.get('color');
+<pre class="brush: js">var storageItem = browser.storage.managed.get('color');
 storageItem.then((res) =&gt; {
   console.log(`Managed color is: ${res.color}`);
 });</pre>

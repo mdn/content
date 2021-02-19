@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:js notranslate">var removing = browser.sessions.removeTabValue(
+<pre class="brush:js">var removing = browser.sessions.removeTabValue(
   tabId,    // integer
   key       // string
 )
@@ -48,7 +48,7 @@ tags:
 
 <p>This code adds two context menu items: one stores a value associated with the current tab, the other one removes it:</p>
 
-<pre class="notranslate brush: js">async function setOnActiveTab() {
+<pre class="brush: js">async function setOnActiveTab() {
   let tabArray = await browser.tabs.query({currentWindow: true, active: true});
   let tabId = tabArray[0].id;
   await browser.sessions.setTabValue(tabId, "my-key", "my-value");

@@ -44,7 +44,7 @@ tags:
 
 <p>This example will prepend "preface text" to the response body. It then disconnects, so the original response body will load normally:</p>
 
-<pre class="notranslate brush: js">function listener(details) {
+<pre class="brush: js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
   filter.onstart = event =&gt; {

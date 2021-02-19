@@ -27,7 +27,7 @@ tags:
 
 <p>Using a TV remote to control the game ended up being surprisingly easy, because the events fired by the controller are emulating conventional keyboard keys. Captain Rogers had the keyboard controls implemented already:</p>
 
-<pre class="brush: js notranslate">this.cursors = this.input.keyboard.createCursorKeys();
+<pre class="brush: js">this.cursors = this.input.keyboard.createCursorKeys();
 //...
 if(this.cursors.right.isDown) {
     // move player right
@@ -35,7 +35,7 @@ if(this.cursors.right.isDown) {
 
 <p>It works out of the box. The cursors are the four directional arrow keys on the keyboard, and these have exactly the same key codes as the arrow keys on the remote. How do you know the codes for the other remote keys? You can check them by printing the responses out in the console:</p>
 
-<pre class="brush: js notranslate">window.addEventListener("keydown", function(event) {
+<pre class="brush: js">window.addEventListener("keydown", function(event) {
     console.log(event.keyCode);
 }, this);</pre>
 
@@ -45,7 +45,7 @@ if(this.cursors.right.isDown) {
 
 <p>You can add moving between states, starting a new game, controlling the ship and blowing stuff up, pausing and restarting the game. All that is needed is checking for key presses:</p>
 
-<pre class="brush: js notranslate">window.addEventListener("keydown", function(event) {
+<pre class="brush: js">window.addEventListener("keydown", function(event) {
     switch(event.keyCode) {
         case 8: {
             // pause the game
@@ -75,7 +75,7 @@ if(this.cursors.right.isDown) {
 
 <p>We will need a few helper variables for our code to work — one for the purpose of calculating the degrees from radians, two for holding the horizontal and vertical amount of degrees our hand is leaning above the controller, one for the threshold of that lean, and one for the state of our hand's grab status. We next add these lines after all the event listeners for keyboard and mouse, but before the <code>draw</code> method:</p>
 
-<pre class="brush: js notranslate">var toDegrees = 1 / (Math.PI / 180);
+<pre class="brush: js">var toDegrees = 1 / (Math.PI / 180);
 var horizontalDegree = 0;
 var verticalDegree = 0;
 var degreeThreshold = 30;
@@ -83,7 +83,7 @@ var grabStrength = 0;</pre>
 
 <p>Right after that we use the Leap's <code>loop</code> method to get the information held in the <code>hand</code> variable on every frame:</p>
 
-<pre class="brush: js notranslate">Leap.loop({
+<pre class="brush: js">Leap.loop({
     hand: function(hand) {
         horizontalDegree = Math.round(hand.roll() * toDegrees);
         verticalDegree = Math.round(hand.pitch() * toDegrees);
@@ -97,7 +97,7 @@ var grabStrength = 0;</pre>
 
 <p>The code above is calculating and assigning the <code>horizontalDegree</code>, <code>verticalDegree</code> and <code>grabStrength</code> values that we will use later on, and outputting it in HTML so we can see the actual values. When those variables are up-to-date, we can use them in the <code>draw()</code> function to move the ship:</p>
 
-<pre class="brush: js notranslate">function draw() {
+<pre class="brush: js">function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // ...
@@ -138,7 +138,7 @@ var grabStrength = 0;</pre>
 
 <p>This can be accomplished using <a href="https://github.com/DanielRapp/doppler">a small library</a> created by Daniel Rapp — it can be as simple as calculating the difference between two frequencies:</p>
 
-<pre class="brush: js notranslate">doppler.init(function(bandwidth) {
+<pre class="brush: js">doppler.init(function(bandwidth) {
     var diff = bandwidth.left - bandwidth.right;
 });</pre>
 
@@ -152,7 +152,7 @@ var grabStrength = 0;</pre>
 
 <p>An event listener for device proximity would look like this:</p>
 
-<pre class="brush: js notranslate">window.addEventListener('deviceproximity', function(event) {
+<pre class="brush: js">window.addEventListener('deviceproximity', function(event) {
     var min = event.min;
     var max = event.max;
     var proximity = event.value;
@@ -174,7 +174,7 @@ var grabStrength = 0;</pre>
 
 <p>There's even a <a href="https://cylonjs.com/documentation/drivers/makey-button/">Cylon.js-supported Makey Button functionality</a> inspired by the MaKey MaKey board, so you can use the popular Cylon robotics framework for your experiments with Arduino or Raspberry Pi. Connecting the boards and using them may look like this:</p>
 
-<pre class="brush: js notranslate">var Cylon = require('cylon');
+<pre class="brush: js">var Cylon = require('cylon');
 Cylon.robot({
   connections: {
     arduino: { adaptor: 'firmata', port: '/dev/ttyACM0' }

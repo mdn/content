@@ -32,10 +32,10 @@ tags:
 
 <h6 id="Syntax">Syntax</h6>
 
-<pre class="eval notranslate">#include &lt;cert.h&gt;
+<pre class="eval">#include &lt;cert.h&gt;
 </pre>
 
-<pre class="eval notranslate">SECStatus CERT_VerifyCertNow(
+<pre class="eval">SECStatus CERT_VerifyCertNow(
   CERTCertDBHandle *handle,
   CERTCertificate *cert,
   PRBool checkSig,
@@ -94,10 +94,10 @@ tags:
 
 <h6 id="Syntax_2">Syntax</h6>
 
-<pre class="eval notranslate">#include &lt;cert.h&gt;
+<pre class="eval">#include &lt;cert.h&gt;
 </pre>
 
-<pre class="eval notranslate">SECStatus CERT_VerifyCert(
+<pre class="eval">SECStatus CERT_VerifyCert(
   CERTCertDBHandle *handle,
   CERTCertificate *cert,
   PRBool checkSig,
@@ -162,10 +162,10 @@ tags:
 
 <h6 id="Syntax_3">Syntax</h6>
 
-<pre class="eval notranslate">#include &lt;cert.h&gt;
+<pre class="eval">#include &lt;cert.h&gt;
 </pre>
 
-<pre class="eval notranslate">SECStatus CERT_VerifyCertName(
+<pre class="eval">SECStatus CERT_VerifyCertName(
   CERTCertificate *cert,
   char *hostname);
 </pre>
@@ -209,11 +209,11 @@ tags:
 
 <h6 id="Syntax_4">Syntax</h6>
 
-<pre class="eval notranslate">#include &lt;cert.h&gt;
+<pre class="eval">#include &lt;cert.h&gt;
 #include &lt;certt.h&gt;
 </pre>
 
-<pre class="eval notranslate">SECCertTimeValidity CERT_CheckCertValidTimes(
+<pre class="eval">SECCertTimeValidity CERT_CheckCertValidTimes(
   CERTCertificate *cert,
   int64 t);
 </pre>
@@ -230,7 +230,7 @@ tags:
 
 <p>The function returns an enumerator of type SECCertTimeValidity:</p>
 
-<pre class="eval notranslate">typedef enum {
+<pre class="eval">typedef enum {
   secCertTimeValid,
   secCertTimeExpired,
   secCertTimeNotValidYet
@@ -243,7 +243,7 @@ tags:
 
 <h6 id="Syntax_5">Syntax</h6>
 
-<pre class="eval notranslate">#include &lt;nss.h&gt;
+<pre class="eval">#include &lt;nss.h&gt;
 
 SECStatus NSS_CmpCertChainWCANames(
   CERTCertificate *cert,
@@ -280,10 +280,10 @@ SECStatus NSS_CmpCertChainWCANames(
 
 <h6 id="Syntax_6">Syntax</h6>
 
-<pre class="eval notranslate">#include &lt;cert.h&gt;
+<pre class="eval">#include &lt;cert.h&gt;
 </pre>
 
-<pre class="eval notranslate">CERTCertificate *CERT_DupCertificate(CERTCertificate *c)
+<pre class="eval">CERTCertificate *CERT_DupCertificate(CERTCertificate *c)
 </pre>
 
 <h6 id="Parameter">Parameter</h6>
@@ -306,11 +306,11 @@ SECStatus NSS_CmpCertChainWCANames(
 
 <h6 id="Syntax_7">Syntax</h6>
 
-<pre class="eval notranslate">#include &lt;cert.h&gt;
+<pre class="eval">#include &lt;cert.h&gt;
 #include &lt;certt.h&gt;
 </pre>
 
-<pre class="eval notranslate">void CERT_DestroyCertificate(CERTCertificate *cert);
+<pre class="eval">void CERT_DestroyCertificate(CERTCertificate *cert);
 </pre>
 
 <h6 id="Parameters_6">Parameters</h6>
@@ -341,10 +341,10 @@ SECStatus NSS_CmpCertChainWCANames(
 
 <h6 id="Syntax_8">Syntax</h6>
 
-<pre class="eval notranslate">#include &lt;cert.h&gt;
+<pre class="eval">#include &lt;cert.h&gt;
 </pre>
 
-<pre class="eval notranslate">CERTCertificate *CERT_FindCertByName (
+<pre class="eval">CERTCertificate *CERT_FindCertByName (
   CERTCertDBHandle *handle,
   SECItem *name);
 </pre>
@@ -367,11 +367,11 @@ SECStatus NSS_CmpCertChainWCANames(
 
 <h6 id="Syntax_9">Syntax</h6>
 
-<pre class="eval notranslate">#include &lt;cert.h&gt;
+<pre class="eval">#include &lt;cert.h&gt;
 #include &lt;certt.h&gt;
 </pre>
 
-<pre class="eval notranslate">CERTCertNicknames *CERT_GetCertNicknames (
+<pre class="eval">CERTCertNicknames *CERT_GetCertNicknames (
   CERTCertDBHandle *handle,
   int what,
   void *wincx);
@@ -408,10 +408,10 @@ SECStatus NSS_CmpCertChainWCANames(
 
 <h6 id="Syntax_10">Syntax</h6>
 
-<pre class="eval notranslate">#include &lt;cert.h&gt;
+<pre class="eval">#include &lt;cert.h&gt;
 </pre>
 
-<pre class="eval notranslate">void CERT_FreeNicknames(CERTCertNicknames *nicknames);
+<pre class="eval">void CERT_FreeNicknames(CERTCertNicknames *nicknames);
 </pre>
 
 <h6 id="Parameters_9">Parameters</h6>
@@ -426,10 +426,10 @@ SECStatus NSS_CmpCertChainWCANames(
 
 <h6 id="Syntax_11">Syntax</h6>
 
-<pre class="eval notranslate">#include &lt;cert.h&gt;
+<pre class="eval">#include &lt;cert.h&gt;
 </pre>
 
-<pre class="eval notranslate">CERTCertDBHandle *CERT_GetDefaultCertDB(void);
+<pre class="eval">CERTCertDBHandle *CERT_GetDefaultCertDB(void);
 </pre>
 
 <h6 id="Returns_9">Returns</h6>
@@ -446,10 +446,10 @@ SECStatus NSS_CmpCertChainWCANames(
 
 <h6 id="Syntax_12">Syntax</h6>
 
-<pre class="eval notranslate">#include &lt;nss.h&gt;
+<pre class="eval">#include &lt;nss.h&gt;
 </pre>
 
-<pre class="eval notranslate">SSLKEAType NSS_FindCertKEAType(CERTCertificate * cert);
+<pre class="eval">SSLKEAType NSS_FindCertKEAType(CERTCertificate * cert);
 </pre>
 
 <h6 id="Parameter_2">Parameter</h6>
@@ -478,11 +478,11 @@ SECStatus NSS_CmpCertChainWCANames(
 
 <h6 id="Syntax_13">Syntax</h6>
 
-<pre class="eval notranslate">#include &lt;secitem.h&gt;
+<pre class="eval">#include &lt;secitem.h&gt;
 #include &lt;seccomon.h&gt;
 </pre>
 
-<pre class="eval notranslate">SECComparison SECITEM_CompareItem(
+<pre class="eval">SECComparison SECITEM_CompareItem(
   SECItem *a,
   SECItem *b);
 </pre>
@@ -499,7 +499,7 @@ SECStatus NSS_CmpCertChainWCANames(
 
 <p>The function returns an enumerator of type SECComparison.</p>
 
-<pre class="eval notranslate">typedef enum _SECComparison {
+<pre class="eval">typedef enum _SECComparison {
   SECLessThan                = -1,
   SECEqual                = 0,
   SECGreaterThan = 1

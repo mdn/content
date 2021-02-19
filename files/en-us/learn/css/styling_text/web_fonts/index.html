@@ -39,7 +39,7 @@ tags:
 
 <p>As we looked at in <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental text and font styling</a>, the fonts applied to your HTML can be controlled using the {{cssxref("font-family")}} property. This takes one or more font family names, and the browser travels down the list until it finds a font it has available on the system it is running on:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
 }</pre>
 
@@ -51,14 +51,14 @@ tags:
 
 <p>First of all, you have a {{cssxref("@font-face")}} block at the start of the CSS, which specifies the font file(s) to download:</p>
 
-<pre class="brush: css notranslate">@font-face {
+<pre class="brush: css">@font-face {
   font-family: "myFont";
   src: url("myFont.woff");
 }</pre>
 
 <p>Below this you can then use the font family name specified inside @font-face to apply your custom font to anything you like, as normal:</p>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: "myFont", "Bitstream Vera Serif", serif;
 }</pre>
 
@@ -142,7 +142,7 @@ tags:
  <li>Open up the <code>stylesheet.css</code> file and copy both the <code>@font-face</code> blocks contained inside into your <code>web-font-start.css</code> file — you need to put them at the very top, before any of your CSS, as the fonts need to be imported before you can use them on your site.</li>
  <li>Each of the <code>url()</code> functions points to a font file that we want to import into our CSS — we need to make sure the paths to the files are correct, so add <code>fonts/</code> to the start of each path (adjust as necessary).</li>
  <li>Now you can use these fonts in your font stacks, just like any web safe or default system font. For example:
-  <pre class="brush: css notranslate">font-family: 'zantrokeregular', serif;</pre>
+  <pre class="brush: css">font-family: 'zantrokeregular', serif;</pre>
  </li>
 </ol>
 
@@ -177,7 +177,7 @@ tags:
 
 <p>Let's explore that <code>@font-face</code> syntax generated for you by fontsquirrel. This is what one of the blocks looks like:</p>
 
-<pre class="brush: css notranslate">@font-face {
+<pre class="brush: css">@font-face {
   font-family: 'ciclefina';
   src: url('fonts/cicle_fina-webfont.eot');
   src: url('fonts/cicle_fina-webfont.eot?#iefix') format('embedded-opentype'),

@@ -65,7 +65,7 @@ tags:
 
 <p>This example logs the IDs of all bookmarks:</p>
 
-<pre class="notranslate brush: js">function onFulfilled(bookmarkItems) {
+<pre class="brush: js">function onFulfilled(bookmarkItems) {
   for (item of bookmarkItems) {
     console.log(item.id);
   }
@@ -81,7 +81,7 @@ searching.then(onFulfilled, onRejected);</pre>
 
 <p>This example looks to see if the currently active tab is bookmarked:</p>
 
-<pre class="notranslate brush: js">function onFulfilled(bookmarkItems) {
+<pre class="brush: js">function onFulfilled(bookmarkItems) {
   if (bookmarkItems.length) {
     console.log("active tab is bookmarked");
   } else {

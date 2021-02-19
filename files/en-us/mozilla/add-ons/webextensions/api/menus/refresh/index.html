@@ -46,7 +46,7 @@ tags:
 
 <p>This example listens for the context menu to be shown over a link, then updates the <code>openLabelledId</code> menu item with the link's hostname:</p>
 
-<pre class="notranslate brush: js line-numbers  language-js">function updateMenuItem(linkHostname) {
+<pre class="brush: js line-numbers  language-js">function updateMenuItem(linkHostname) {
   browser.menus.update(openLabelledId, {
     title: `Open (${linkHostname})`
   });

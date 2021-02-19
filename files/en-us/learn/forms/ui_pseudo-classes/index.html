@@ -60,7 +60,7 @@ tags:
 
 <p>{{htmlelement('input')}}, {{htmlelement('select')}}, and {{htmlelement('textarea')}} elements have a <code>required</code> attribute available which, when set, means that you have to fill in that control before the form will successfully submit. For example:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;fieldset&gt;
     &lt;legend&gt;Feedback form&lt;/legend&gt;
     &lt;div&gt;
@@ -83,7 +83,7 @@ tags:
 
 <p>You can match these two states using the {{cssxref(':required')}} and {{cssxref(':optional')}} pseudo-classes. For example, if we apply the following CSS to the above HTML:</p>
 
-<pre class="brush: css notranslate">input:required {
+<pre class="brush: css">input:required {
   border: 1px solid black;
 }
 
@@ -117,7 +117,7 @@ input:optional {
 
 <p>This is really useful when you want to add a visual indicator to an element, such as a label or icon, but don't want it to be picked up by assistive technologies. For example, in our <a href="https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html">custom radio buttons example</a>, we use generated content to handle the placement and animation of the inner circle when a radio button is selected:</p>
 
-<pre class="brush: css notranslate">input[type="radio"]::before {
+<pre class="brush: css">input[type="radio"]::before {
   display: block;
   content: " ";
   width: 10px;
@@ -145,13 +145,13 @@ input[type="radio"]:checked::before {
 
 <p>First of all, we'll add a paragraph to the top of the form to say what you are looking for:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Required fields are labelled with "required".&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Required fields are labelled with "required".&lt;/p&gt;</pre>
 
 <p>Screenreader users will get "required" read out as an extra bit of information when they get to each required input, which sighted users will get our label.</p>
 
 <p>Since form inputs don't directly support having generated content put on them (this is because generated content is placed relative to an element's formatting box, but form inputs work more like replaced elements and therefore don't have one), we will add an empty <code><a href="/en-US/docs/Web/HTML/Element/span">&lt;span&gt;</a></code> to hang the generated content on:</p>
 
-<pre class="brush: html notranslate">&lt;div&gt;
+<pre class="brush: html">&lt;div&gt;
   &lt;label for="fname"&gt;First name: &lt;/label&gt;
   &lt;input id="fname" name="fname" type="text" required&gt;
   &lt;span&gt;&lt;/span&gt;
@@ -159,7 +159,7 @@ input[type="radio"]:checked::before {
 
 <p>The immediate problem with this was that the span was dropping onto a new line below the input because the input and label are both set with <code>width: 100%</code>. To fix this we style the parent <code>&lt;div&gt;</code> to become a flex container, but also tell it to wrap its contents onto new lines if the content becomes too long:</p>
 
-<pre class="brush: css notranslate">fieldset &gt; div {
+<pre class="brush: css">fieldset &gt; div {
   margin-bottom: 20px;
   display: flex;
   flex-flow: row wrap;
@@ -169,7 +169,7 @@ input[type="radio"]:checked::before {
 
 <p>Now onto the generated content. We create it using this CSS:</p>
 
-<pre class="brush: css notranslate">input + span {
+<pre class="brush: css">input + span {
   position: relative;
 }
 
@@ -210,7 +210,7 @@ input:required + span::after {
 
 <p>As in the previous example, we've got extra <code>&lt;span&gt;</code>s to generate content on, which we'll use to provide indicators of valid/invalid data:</p>
 
-<pre class="brush: html notranslate">&lt;div&gt;
+<pre class="brush: html">&lt;div&gt;
   &lt;label for="fname"&gt;First name *: &lt;/label&gt;
   &lt;input id="fname" name="fname" type="text" required&gt;
   &lt;span&gt;&lt;/span&gt;
@@ -218,7 +218,7 @@ input:required + span::after {
 
 <p>To provide these indicators, we use the following CSS:</p>
 
-<pre class="brush: css notranslate">input + span {
+<pre class="brush: css">input + span {
   position: relative;
 }
 
@@ -268,7 +268,7 @@ input:valid + span::before {
 
 <p>The numeric input looks like this:</p>
 
-<pre class="brush: html notranslate">&lt;div&gt;
+<pre class="brush: html">&lt;div&gt;
   &lt;label for="age"&gt;Age (must be 12+): &lt;/label&gt;
   &lt;input id="age" name="age" type="number" min="12" max="120" required&gt;
   &lt;span&gt;&lt;/span&gt;
@@ -276,7 +276,7 @@ input:valid + span::before {
 
 <p>And the CSS looks like this:</p>
 
-<pre class="brush: css notranslate">input + span {
+<pre class="brush: css">input + span {
   position: relative;
 }
 
@@ -322,7 +322,7 @@ input:out-of-range + span::after {
 
 <p>Let's have a look at an example that does just this. First of all, the HTML is a simple form containing text inputs, plus a checkbox to toggle disabling the billing address on and off. The billing address fields are disabled by default.</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;fieldset id="shipping"&gt;
     &lt;legend&gt;Shipping address&lt;/legend&gt;
     &lt;div&gt;
@@ -363,7 +363,7 @@ input:out-of-range + span::after {
 
 <p>Now onto the CSS. The most relevant parts of this example are as follows:</p>
 
-<pre class="brush: css notranslate">input[type="text"]:disabled {
+<pre class="brush: css">input[type="text"]:disabled {
     background: #eee;
     border: 1px solid #ccc;
 }
@@ -376,7 +376,7 @@ input:out-of-range + span::after {
 
 <p>Now finally, we've used some JavaScript to toggle the disabling of the billing address fields:</p>
 
-<pre class="brush: js notranslate">// Wait for the page to finish loading
+<pre class="brush: js">// Wait for the page to finish loading
 document.addEventListener('DOMContentLoaded', function () {
 
   // Attach `change` event listener to checkbox
@@ -417,7 +417,7 @@ function toggleBilling() {
 
 <p>A fragment of the HTML is as follows — note the readonly attribute:</p>
 
-<pre class="brush: html notranslate">&lt;div&gt;
+<pre class="brush: html">&lt;div&gt;
   &lt;label for="name"&gt;Name: &lt;/label&gt;
   &lt;input id="name" name="name" type="text"
          value="Mr Soft" readonly&gt;
@@ -425,7 +425,7 @@ function toggleBilling() {
 
 <p>If you try the live example, you'll see that the top set of form elements are not focusable, however, the values are submitted when the form is submitted. We've styled the form controls using the <code>:read-only</code> and <code>:read-write</code> pseudo-classes, like so:</p>
 
-<pre class="brush: css notranslate">input:-moz-read-only, textarea:-moz-read-only,
+<pre class="brush: css">input:-moz-read-only, textarea:-moz-read-only,
 input:read-only, textarea:read-only {
   border: 0;
   box-shadow: none;
@@ -464,7 +464,7 @@ textarea:read-write {
 
 <p>As a recap, the <code>:checked</code> code from our <a href="https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html">Styled radio buttons</a> example looks like so:</p>
 
-<pre class="brush: css notranslate">input[type="radio"]::before {
+<pre class="brush: css">input[type="radio"]::before {
   display: block;
   content: " ";
   width: 10px;
@@ -504,7 +504,7 @@ input[type="radio"]:checked::before {
 
 <p>Let's look at a couple of modified versions of the previous example that remind the user what the default option was, and style the radio buttons when indeterminate. Both of these have the following HTML structure for the inputs:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
   &lt;input type="radio" name="fruit" value="cherry" id="cherry"&gt;
   &lt;label for="cherry"&gt;Cherry&lt;/label&gt;
   &lt;span&gt;&lt;/span&gt;
@@ -512,7 +512,7 @@ input[type="radio"]:checked::before {
 
 <p>For the <code>:default</code> example, we've added the <code>checked</code> attribute to the middle radio button input, so it will be selected by default when loaded. We then style this with the following CSS:</p>
 
-<pre class="brush: css notranslate">input ~ span {
+<pre class="brush: css">input ~ span {
   position: relative;
 }
 
@@ -539,7 +539,7 @@ input:default ~ span::after {
 
 <p>For the <code>:indeterminate</code> example, we've got no default selected radio button — this is important — if there was, then there would be no indeterminate state to style. We style the indeterminate radio buttons with the following CSS:</p>
 
-<pre class="brush: css notranslate">input[type="radio"]:indeterminate {
+<pre class="brush: css">input[type="radio"]:indeterminate {
   border: 2px solid red;
   animation: 0.4s linear infinite alternate border-pulse;
 }

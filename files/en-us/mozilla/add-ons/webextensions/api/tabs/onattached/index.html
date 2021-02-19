@@ -70,7 +70,7 @@ browser.tabs.onAttached.hasListener(listener)
 
 <p>Listen for attach events, and log the info:</p>
 
-<pre class="notranslate brush: js">function handleAttached(tabId, attachInfo) {
+<pre class="brush: js">function handleAttached(tabId, attachInfo) {
   console.log("Tab: " + tabId + " attached");
   console.log("New window: " + attachInfo.newWindowId);
   console.log("New index: " + attachInfo.newPosition);

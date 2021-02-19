@@ -54,15 +54,15 @@ tags:
 
 <p>In this example, the data is sent to an absolute URL — <code>https://example.com</code>:</p>
 
-<pre class="brush: html notranslate">&lt;form action="https://example.com"&gt;</pre>
+<pre class="brush: html">&lt;form action="https://example.com"&gt;</pre>
 
 <p>Here, we use a relative URL — the data is sent to a different URL on the same origin:</p>
 
-<pre class="brush: html notranslate">&lt;form action="/somewhere_else"&gt;</pre>
+<pre class="brush: html">&lt;form action="/somewhere_else"&gt;</pre>
 
 <p>When specified with no attributes, as below, the {{HTMLElement("form")}} data is sent to the same page that the form is present on:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;</pre>
+<pre class="brush: html">&lt;form&gt;</pre>
 
 <div class="note">
 <p><strong>Note:</strong> It's possible to specify a URL that uses the HTTPS (secure HTTP) protocol. When you do this, the data is encrypted along with the rest of the request, even if the form itself is hosted on an insecure page accessed using HTTP. On the other hand, if the form is hosted on a secure page but you specify an insecure HTTP URL with the {{htmlattrxref("action","form")}} attribute, all browsers display a security warning to the user each time they try to send data because the data will not be encrypted.</p>
@@ -84,7 +84,7 @@ tags:
 
 <p>Consider the following form:</p>
 
-<pre class="brush: html notranslate">&lt;form action="http://www.foo.com" method="GET"&gt;
+<pre class="brush: html">&lt;form action="http://www.foo.com" method="GET"&gt;
   &lt;div&gt;
     &lt;label for="say"&gt;What greeting do you want to say?&lt;/label&gt;
     &lt;input name="say" id="say" value="Hi"&gt;
@@ -109,7 +109,7 @@ tags:
 
 <p>The HTTP request looks like this:</p>
 
-<pre class="notranslate">GET /?say=Hi&amp;to=Mom HTTP/2.0
+<pre>GET /?say=Hi&amp;to=Mom HTTP/2.0
 Host: foo.com</pre>
 
 <div class="note">
@@ -122,7 +122,7 @@ Host: foo.com</pre>
 
 <p>Let's look at an example — this is the same form we looked at in the <code>GET</code> section above, but with the {{htmlattrxref("method","form")}} attribute set to <code>POST</code>.</p>
 
-<pre class="brush: html notranslate">&lt;form action="http://www.foo.com" method="POST"&gt;
+<pre class="brush: html">&lt;form action="http://www.foo.com" method="POST"&gt;
   &lt;div&gt;
     &lt;label for="say"&gt;What greeting do you want to say?&lt;/label&gt;
     &lt;input name="say" id="say" value="Hi"&gt;
@@ -138,7 +138,7 @@ Host: foo.com</pre>
 
 <p>When the form is submitted using the <code>POST</code> method, you get no data appended to the URL, and the HTTP request looks like so, with the data included in the request body instead:</p>
 
-<pre class="notranslate">POST / HTTP/2.0
+<pre>POST / HTTP/2.0
 Host: foo.com
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 13
@@ -182,7 +182,7 @@ say=Hi&amp;to=Mom</pre>
 
 <p><a href="https://php.net/">PHP</a> offers some global objects to access the data. Assuming you've used the <code>POST</code> method, the following example just takes the data and displays it to the user. Of course, what you do with the data is up to you. You might display it, store it into a database, send it by email, or process it in some other way.</p>
 
-<pre class="brush: php notranslate">&lt;?php
+<pre class="brush: php">&lt;?php
   // The global $_POST variable allows you to access the data sent with the POST method by name
   // To access the data sent with the GET method, you can use $_GET
   $say = htmlspecialchars($_POST['say']);
@@ -205,7 +205,7 @@ say=Hi&amp;to=Mom</pre>
 
 <p>This example shows how you would use Python to do the same thing — display the submitted data on a web page. This uses the <a href="http://flask.pocoo.org/">Flask framework</a> for rendering the templates, handling the form data submission, etc. (see <a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/python-example.py">python-example.py</a>).</p>
 
-<pre class="brush: python notranslate">from flask import Flask, render_template, request
+<pre class="brush: python">from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -266,7 +266,7 @@ if __name__ == "__main__":
 
 <p>For example:</p>
 
-<pre class="brush: html notranslate">&lt;form method="post" action="https://www.foo.com" enctype="multipart/form-data"&gt;
+<pre class="brush: html">&lt;form method="post" action="https://www.foo.com" enctype="multipart/form-data"&gt;
   &lt;div&gt;
     &lt;label for="file"&gt;Choose a file&lt;/label&gt;
     &lt;input type="file" id="file" name="myFile"&gt;

@@ -205,7 +205,7 @@ browser.webRequest.onBeforeRequest.hasListener(listener)
 
 <p>This code logs the URL for every resource requested which matches the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns#all_urls">&lt;all_urls&gt;</a> pattern:</p>
 
-<pre class="notranslate brush: js">function logURL(requestDetails) {
+<pre class="brush: js">function logURL(requestDetails) {
   console.log("Loading: " + requestDetails.url);
 }
 
@@ -216,7 +216,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>This code cancels requests for images that are made to URLs under "https://mdn.mozillademos.org/" (to see the effect, visit any page on MDN that contains images, such as <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest">webRequest</a>):</p>
 
-<pre class="notranslate brush: js">// match pattern for the URLs to redirect
+<pre class="brush: js">// match pattern for the URLs to redirect
 var pattern = "https://mdn.mozillademos.org/*";
 
 // cancel function returns an object
@@ -237,7 +237,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>This code replaces, by redirection, all network requests for images that are made to URLs under "https://mdn.mozillademos.org/" (to see the effect, visit any page on MDN that contains images, such as <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest">webRequest</a>):</p>
 
-<pre class="notranslate brush: js">// match pattern for the URLs to redirect
+<pre class="brush: js">// match pattern for the URLs to redirect
 var pattern = "https://mdn.mozillademos.org/*";
 
 // redirect function
@@ -260,7 +260,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>This code is exactly like the previous example, except that the listener handles the request asynchronously. It returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that sets a timer, and resolves with the redirect URL when the timer expires:</p>
 
-<pre class="notranslate brush: js">// match pattern for the URLs to redirect
+<pre class="brush: js">// match pattern for the URLs to redirect
 var pattern = "https://mdn.mozillademos.org/*";
 
 // URL we will redirect to
@@ -287,7 +287,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>Another example, that redirects all images to a data url:</p>
 
-<pre class="notranslate brush: js">var pattern = "https://mdn.mozillademos.org/*";
+<pre class="brush: js">var pattern = "https://mdn.mozillademos.org/*";
 
 var image = `
   &lt;svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"&gt;
@@ -309,7 +309,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>Here's another version:</p>
 
-<pre class="notranslate brush: js">function randomColor() {
+<pre class="brush: js">function randomColor() {
   return "#" + Math.floor(Math.random()*16777215).toString(16);
 }
 

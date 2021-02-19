@@ -92,7 +92,7 @@ tags:
 
 <p>You could then listen for the <code>"toggle-feature"</code> command with code like this:</p>
 
-<pre class="notranslate brush: js no-line-numbers">browser.commands.onCommand.addListener(function (command) {
+<pre class="brush: js no-line-numbers">browser.commands.onCommand.addListener(function (command) {
   if (command === "toggle-feature") {
     console.log("Toggling the feature!");
   }
@@ -110,7 +110,7 @@ tags:
 
 <p>For example, this JSON defines a key combination that clicks the extension's browser action:</p>
 
-<pre class="notranslate brush: js no-line-numbers">"commands": {
+<pre class="brush: js no-line-numbers">"commands": {
   "_execute_browser_action": {
     "suggested_key": {
       "default": "Ctrl+Shift+Y"

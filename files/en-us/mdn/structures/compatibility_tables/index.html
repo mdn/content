@@ -30,11 +30,11 @@ tags:
 
 <p>Go to your local clone of your fork in your terminal/command line, and add a remote pointing to the main (upstream) repo like so (you only need to do this once):</p>
 
-<pre class="brush: bash notranslate">git remote add upstream https://github.com/mdn/browser-compat-data.git</pre>
+<pre class="brush: bash">git remote add upstream https://github.com/mdn/browser-compat-data.git</pre>
 
 <p>If you are unsure whether you've done this, you can check what remotes your repo has using</p>
 
-<pre class="brush: bash notranslate">git remote -v</pre>
+<pre class="brush: bash">git remote -v</pre>
 
 <h3 id="Updating_your_fork_with_the_remotes_content">Updating your fork with the remote's content</h3>
 
@@ -44,22 +44,22 @@ tags:
  <li>
   <p>Making sure you are in the master branch:</p>
 
-  <pre class="brush: bash notranslate">git checkout master</pre>
+  <pre class="brush: bash">git checkout master</pre>
  </li>
  <li>
   <p>fetching the up-to-date repo contents using the following:</p>
 
-  <pre class="brush: bash notranslate">git fetch upstream</pre>
+  <pre class="brush: bash">git fetch upstream</pre>
  </li>
  <li>
   <p>rebasing the contents of your master with the main repo's contents:</p>
 
-  <pre class="brush: bash notranslate">git rebase upstream/master</pre>
+  <pre class="brush: bash">git rebase upstream/master</pre>
  </li>
  <li>
   <p>pushing these updates back to your remote fork using this:</p>
 
-  <pre class="brush: bash notranslate">git push</pre>
+  <pre class="brush: bash">git push</pre>
  </li>
 </ol>
 
@@ -79,11 +79,11 @@ tags:
 
 <p>At this point, go back to your terminal/command line, and update your fork's local clone to include your new branch using the following command:</p>
 
-<pre class="brush: bash notranslate">git pull</pre>
+<pre class="brush: bash">git pull</pre>
 
 <p>Now switch to your new branch using this:</p>
 
-<pre class="brush: bash notranslate">git checkout <em>name-of-branch</em></pre>
+<pre class="brush: bash">git checkout <em>name-of-branch</em></pre>
 
 <p>You should now be ready to start adding your data!</p>
 
@@ -104,7 +104,7 @@ tags:
 
 <p>Let's look at an example. CSS property JSON files for example need the following basic structure:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "css": {
     "properties": {
       "border-width": {
@@ -162,7 +162,7 @@ tags:
 
 <p>The feature data for <a href="/en-US/docs/Web/CSS/border-width#browser_compatibility">border-width</a> (also see <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json">border-width.json</a>) is shown below as an example:</p>
 
-<pre class="brush: json notranslate">"__compat": {
+<pre class="brush: json">"__compat": {
   "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/border-width",
   "support": {
     "chrome": {
@@ -213,7 +213,7 @@ tags:
 
 <p>There is a fourth, optional, member that can go inside the <code>__compat</code> member — <code>description</code>. This can be used to include a human-readable description of the feature. You should only include this if it is hard to see what the feature is from glancing at the data. For example, it might not be that obvious what a constructor is from looking at the data structure, so you can include a description like so:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "api": {
     "AbortController": {
       "__compat": {
@@ -240,7 +240,7 @@ tags:
 
 <p>As an example, see the <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/background-color.json">compat data</a> and <a href="/en-US/docs/Web/CSS/background-color">corresponding MDN page</a> for the <code>background-color</code> property. The basic support exists inside the <code>__compat</code> object as explained above, then you have an additional row for browsers' support for "alpha channel for hex values", which contains its own <code>__compat</code> object.</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "css": {
     "properties": {
       "background-color": {
@@ -259,7 +259,7 @@ tags:
 
 <p>For an API, you've got the top two levels defined as <code>api.<em>name-of-the-interface</em></code>, then a top-level <code>__compat</code> section to define the overall browser compatibility of the interface, then a sub-feature for each of the methods, properties, and constructors contained inside the interface. The basic structure looks like this:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "api": {
     "VRDisplay": {
       "__compat": {
@@ -293,7 +293,7 @@ tags:
 
 <p>Often compat tables will include footnotes related to certain entries that explain useful details or strange behavior that developers will find useful. As an example, the Chrome Android entry for {{domxref("VRDisplay.capabilities")}} (see also <a href="https://github.com/mdn/browser-compat-data/blob/master/api/VRDisplay.json">VRDisplay.json</a>) (at the time of writing) had a footnote "Currently supported only by Google Daydream." To include this in the capabilities data, we added a "notes" submember inside the relevant "chrome_android" submember; it would look like this:</p>
 
-<pre class="brush: json notranslate">"chrome_android": {
+<pre class="brush: json">"chrome_android": {
   "version_added": true,
   "notes": "Currently supported only by Google Daydream."
 }</pre>
@@ -302,7 +302,7 @@ tags:
 
 <p>If a feature is supported behind a vendor prefix in one or more browsers, you'll want to make that clear in the browser compat data. imagine you had a feature that was supported with a <code>-moz-</code> prefix in Firefox. To specify this in the compat data, you'd need to add a "prefix" submember inside the relevant "firefox" submember. It would look something like this:</p>
 
-<pre class="brush: json notranslate">"firefox": {
+<pre class="brush: json">"firefox": {
   "version_added": true,
   "prefix": "-moz-"
 }</pre>
@@ -321,7 +321,7 @@ tags:
 
 <p>So to add a preference/flag to the Chrome support for a feature, you'd do something like this:</p>
 
-<pre class="brush: json notranslate">"chrome": {
+<pre class="brush: json">"chrome": {
   "version_added": "50",
   "flags": [
     {
@@ -334,7 +334,7 @@ tags:
 
 <p>If a feature is behind two or more flags, you can add additional objects to the "flags" array, like in this case, for example:</p>
 
-<pre class="brush: json notranslate">"firefox": {
+<pre class="brush: json">"firefox": {
   "version_added": "57",
   "flags": [
     {
@@ -354,7 +354,7 @@ tags:
 
 <p>Sometimes a feature will be added in a certain browser version, but then removed again as the feature is deprecated. This can be easily represented using the "version_removed" submember, which takes as its value a string representing the version number it was removed on. For example:</p>
 
-<pre class="brush: json notranslate">"firefox": {
+<pre class="brush: json">"firefox": {
   "version_added": "35",
   "version_removed": "47",
 },</pre>
@@ -369,7 +369,7 @@ tags:
 
 <p>To include both of these data points, you can make the value of the "chrome" submember an array containing two support information objects, rather than just a single support information object:</p>
 
-<pre class="brush: json notranslate">"chrome": [
+<pre class="brush: json">"chrome": [
   {
     "version_added": "47"
   },
@@ -410,7 +410,7 @@ tags:
 
 <p>To represent this in the data, we used the following JSON:</p>
 
-<pre class="brush: json notranslate">"firefox": [
+<pre class="brush: json">"firefox": [
   {
     "version_added": "4",
     "notes": "Prior to Firefox 50.0, border styles of rounded corners were always rendered as if &lt;code&gt;border-style&lt;/code&gt; was solid. This has been fixed in Firefox 50.0."
@@ -438,7 +438,7 @@ tags:
 
 <p>If it is looking OK, you then need to commit it and push it back up to your remote fork on GitHub. You can do this easily with terminal commands like this:</p>
 
-<pre class="brush: bash notranslate">git add .
+<pre class="brush: bash">git add .
 git commit -m 'adding compat data for <em>name-of-feature</em>'
 git push</pre>
 
@@ -452,7 +452,7 @@ git push</pre>
 
 <p>Above the macro call, to help other contributors finding their way, you should add a hidden text that is only visible in MDN contributors in edit mode:</p>
 
-<pre class="brush: html notranslate">&lt;div class="hidden"&gt;
+<pre class="brush: html">&lt;div class="hidden"&gt;
 The compatibility table on this page is generated from structured data.
 If you'd like to contribute to the data, please check out
 &lt;a href="https://github.com/mdn/browser-compat-data"&gt;https://github.com/mdn/browser-compat-data&lt;/a&gt;
