@@ -27,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html notranslate">Cross-Origin-Embedder-Policy: unsafe-none | require-corp
+<pre class="brush: html">Cross-Origin-Embedder-Policy: unsafe-none | require-corp
 </pre>
 
 <h3 id="Directives">Directives</h3>
@@ -46,7 +46,7 @@ tags:
 
 <p>You can only access certain features like {{jsxref("SharedArrayBuffer")}} objects or {{domxref("Performance.now()")}} with unthrottled timers, if your document has a COEP header with the value <code>require-corp</code> value set.</p>
 
-<pre class="notranslate">Cross-Origin-Embedder-Policy: require-corp
+<pre>Cross-Origin-Embedder-Policy: require-corp
 Cross-Origin-Opener-Policy: same-origin
 </pre>
 
@@ -54,7 +54,7 @@ Cross-Origin-Opener-Policy: same-origin
 
 <p>To check if cross origin isolation has been successful, you can test against the <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated">crossOriginIsolated</a></code> property available to window and worker contexts:</p>
 
-<pre class="brush: js notranslate">if (crossOriginIsolated) {
+<pre class="brush: js">if (crossOriginIsolated) {
   // Post SharedArrayBuffer
 } else {
   // Do something else
@@ -64,7 +64,7 @@ Cross-Origin-Opener-Policy: same-origin
 
 <p>If you enable COEP using <code>require-corp</code> and have a cross origin resource that needs to be loaded, it needs to support <a href="/en-US/docs/Web/HTTP/CORS">CORS</a> and you need to explicitly mark the resource as loadable from another origin to avoid blockage from COEP. For example, you can use the <code><a href="/en-US/docs/Web/HTML/Attributes/crossorigin">crossorigin</a></code> attribute for this image from a third-party site:</p>
 
-<pre class="brush: html notranslate">&lt;img src="https://thirdparty.com/img.png" crossorigin&gt;</pre>
+<pre class="brush: html">&lt;img src="https://thirdparty.com/img.png" crossorigin&gt;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

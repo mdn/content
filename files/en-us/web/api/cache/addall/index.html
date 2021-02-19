@@ -29,7 +29,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>cache</em>.addAll(<em>requests</em>[]).then(function() {
+<pre class="brush: js"><em>cache</em>.addAll(<em>requests</em>[]).then(function() {
   // requests have been added to the cache
 });
 </pre>
@@ -77,7 +77,7 @@ tags:
   the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new
   cache, then using <code>addAll()</code> to add a series of assets to it.</p>
 
-<pre class="brush: js notranslate">this.addEventListener('install', function(event) {
+<pre class="brush: js">this.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.addAll([

@@ -35,7 +35,7 @@ tags:
 
 <p>You can use the <code>error</code> event in an <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> method:</p>
 
-<pre class="brush: js notranslate">var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+<pre class="brush: js">var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
 recognition.addEventListener('error', function(event) {
   console.log('Speech recognition error detected: ' + event.error);
@@ -43,7 +43,7 @@ recognition.addEventListener('error', function(event) {
 
 <p>Or use the <code><a href="/en-US/docs/Web/API/SpeechRecognition/onerror">onerror</a></code> event handler property:</p>
 
-<pre class="brush: js notranslate">recognition.onerror = function(event) {
+<pre class="brush: js">recognition.onerror = function(event) {
   console.log('Speech recognition error detected: ' + event.error);
 }</pre>
 

@@ -43,7 +43,7 @@ tags:
 
 <p>First up is the addition of the function <code>sendToOneUser()</code>. As the name suggests, this sends a stringified JSON message to a particular username.</p>
 
-<pre class="brush: js notranslate">function sendToOneUser(target, msgString) {
+<pre class="brush: js">function sendToOneUser(target, msgString) {
   var isUnique = true;
   var i;
 
@@ -59,7 +59,7 @@ tags:
 
 <p>Our original chat demo didn't support sending messages to a specific user. The next task is to update the main WebSocket message handler to support doing so. This involves a change near the end of the <code>"connection"</code> message handler:</p>
 
-<pre class="brush: js notranslate">if (sendToClients) {
+<pre class="brush: js">if (sendToClients) {
   var msgString = JSON.stringify(msg);
   var i;
 
@@ -177,7 +177,7 @@ tags:
 
 <p>The HTML for our client needs a location for video to be presented. This requires video elements, and a button to hang up the call:</p>
 
-<pre class="brush: html notranslate">&lt;div class="flexChild" id="camera-container"&gt;
+<pre class="brush: html">&lt;div class="flexChild" id="camera-container"&gt;
   &lt;div class="camera-box"&gt;
     &lt;video id="received_video" autoplay&gt;&lt;/video&gt;
     &lt;video id="local_video" autoplay muted&gt;&lt;/video&gt;
@@ -201,7 +201,7 @@ tags:
 
 <p>Throughout our code, we call <code>sendToServer()</code> in order to send messages to the signaling server. This function uses the <a href="/en-US/docs/Web/API/WebSockets_API">WebSocket</a> connection to do its work:</p>
 
-<pre class="brush: js notranslate">function sendToServer(msg) {
+<pre class="brush: js">function sendToServer(msg) {
   var msgJSON = JSON.stringify(msg);
 
   connection.send(msgJSON);
@@ -213,7 +213,7 @@ tags:
 
 <p>The code which handles the <code>"userlist"</code> message calls <code>handleUserlistMsg()</code>. Here we set up the handler for each connected user in the user list displayed to the left of the chat panel. This function receives a message object whose <code>users</code> property is an array of strings specifying the user names of every connected user.</p>
 
-<pre class="brush: js notranslate">function handleUserlistMsg(msg) {
+<pre class="brush: js">function handleUserlistMsg(msg) {
   var i;
   var listElem = document.querySelector(".userlistbox");
 
@@ -244,7 +244,7 @@ tags:
 
 <p>When the user clicks on a username they want to call, the <code>invite()</code> function is invoked as the event handler for that {{event("click")}} event:</p>
 
-<pre class="brush: js notranslate">var mediaConstraints = {
+<pre class="brush: js">var mediaConstraints = {
   audio: true, // We want an audio track
   video: true // ...and we want a video track
 };
@@ -296,7 +296,7 @@ function invite(evt) {
 
 <p>If the promise returned by <code>getUserMedia()</code> concludes in a failure, our <code>handleGetUserMediaError()</code> function performs.</p>
 
-<pre class="brush: js notranslate">function handleGetUserMediaError(e) {
+<pre class="brush: js">function handleGetUserMediaError(e) {
   switch(e.name) {
     case "NotFoundError":
       alert("Unable to open your call because no camera and/or microphone" +
@@ -322,7 +322,7 @@ function invite(evt) {
 
 <p>The <code>createPeerConnection()</code> function is used by both the caller and the callee to construct their {{domxref("RTCPeerConnection")}} objects, their respective ends of the WebRTC connection. It's invoked by <code>invite()</code> when the caller tries to start a call, and by <code>handleVideoOfferMsg()</code> when the callee receives an offer message from the caller.</p>
 
-<pre class="brush: js notranslate">function createPeerConnection() {
+<pre class="brush: js">function createPeerConnection() {
   myPeerConnection = new RTCPeerConnection({
       iceServers: [     // Information about ICE servers - Use your own!
         {
@@ -374,7 +374,7 @@ function invite(evt) {
 
 <p>Once the caller has created its  {{domxref("RTCPeerConnection")}}, created a media stream, and added its tracks to the connection as shown in {{anch("Starting a call")}}, the browser will deliver a {{event("negotiationneeded")}} event to the {{domxref("RTCPeerConnection")}} to indicate that it's ready to begin negotiation with the other peer. Here's our code for handling the {{event("negotiationneeded")}} event:</p>
 
-<pre class="brush: js notranslate">function handleNegotiationNeededEvent() {
+<pre class="brush: js">function handleNegotiationNeededEvent() {
   myPeerConnection.createOffer().then(function(offer) {
     return myPeerConnection.setLocalDescription(offer);
   })
@@ -422,7 +422,7 @@ function invite(evt) {
 
 <p>When the offer arrives, the callee's <code>handleVideoOfferMsg()</code> function is called with the <code>"video-offer"</code> message that was received. This function needs to do two things. First, it needs to create its own {{domxref("RTCPeerConnection")}} and add the tracks containing the audio and video from its microphone and webcam to that. Second, it needs to process the received offer, constructing and sending its answer.</p>
 
-<pre class="brush: js notranslate">function handleVideoOfferMsg(msg) {
+<pre class="brush: js">function handleVideoOfferMsg(msg) {
   var localStream = null;
 
   targetUsername = msg.name;
@@ -476,7 +476,7 @@ function invite(evt) {
 
 <p>Your {{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}} handler receives an event whose <code>candidate</code> property is the SDP describing the candidate (or is <code>null</code> to indicate that the ICE layer has run out of potential configurations to suggest). The contents of <code>candidate</code> are what you need to transmit using your signaling server. Here's our example's implementation:</p>
 
-<pre class="brush: js notranslate">function handleICECandidateEvent(event) {
+<pre class="brush: js">function handleICECandidateEvent(event) {
   if (event.candidate) {
     sendToServer({
       type: "new-ice-candidate",
@@ -507,7 +507,7 @@ function invite(evt) {
 
 <p>The signaling server delivers each ICE candidate to the destination peer using whatever method it chooses; in our example this is as JSON objects, with a <code>type</code> property containing the string <code>"new-ice-candidate"</code>. Our <code>handleNewICECandidateMsg()</code> function is called by our main <a href="/en-US/docs/Web/API/WebSockets_API">WebSocket</a> incoming message code to handle these messages:</p>
 
-<pre class="brush: js notranslate">function handleNewICECandidateMsg(msg) {
+<pre class="brush: js">function handleNewICECandidateMsg(msg) {
   var candidate = new RTCIceCandidate(msg.candidate);
 
   myPeerConnection.addIceCandidate(candidate)
@@ -530,7 +530,7 @@ function invite(evt) {
 
 <p>When new tracks are added to the <code>RTCPeerConnection</code>— either by calling its {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} method or because of renegotiation of the stream's format—a {{event("track")}} event is set to the <code>RTCPeerConnection</code> for each track added to the connection. Making use of newly added media requires implementing a handler for the <code>track</code> event. A common need is to attach the incoming media to an appropriate HTML element. In our example, we add the track's stream to the {{HTMLElement("video")}} element that displays the incoming video:</p>
 
-<pre class="brush: js notranslate">function handleTrackEvent(event) {
+<pre class="brush: js">function handleTrackEvent(event) {
   document.getElementById("received_video").srcObject = event.streams[0];
   document.getElementById("hangup-button").disabled = false;
 }</pre>
@@ -543,7 +543,7 @@ function invite(evt) {
 
 <p>Your code receives a {{event("removetrack")}} event when the remote peer removes a track from the connection by calling {{domxref("RTCPeerConnection.removeTrack()")}}. Our handler for <code>"removetrack"</code> is:</p>
 
-<pre class="brush: js notranslate">function handleRemoveTrackEvent(event) {
+<pre class="brush: js">function handleRemoveTrackEvent(event) {
   var stream = document.getElementById("received_video").srcObject;
   var trackList = stream.getTracks();
 
@@ -564,7 +564,7 @@ function invite(evt) {
 
 <p>When the user clicks the "Hang Up" button to end the call, the <code>hangUpCall()</code> function is called:</p>
 
-<pre class="brush: js notranslate">function hangUpCall() {
+<pre class="brush: js">function hangUpCall() {
   closeVideoCall();
   sendToServer({
     name: myUsername,
@@ -579,7 +579,7 @@ function invite(evt) {
 
 <p>The <code>closeVideoCall()</code> function, shown below, is responsible for stopping the streams, cleaning up, and disposing of the {{domxref("RTCPeerConnection")}} object:</p>
 
-<pre class="brush: js notranslate">function closeVideoCall() {
+<pre class="brush: js">function closeVideoCall() {
   var remoteVideo = document.getElementById("received_video");
   var localVideo = document.getElementById("local_video");
 
@@ -636,7 +636,7 @@ function invite(evt) {
 
 <p>{{event("iceconnectionstatechange")}} events are sent to the {{domxref("RTCPeerConnection")}} by the ICE layer when the connection state changes (such as when the call is terminated from the other end).</p>
 
-<pre class="brush: js notranslate">function handleICEConnectionStateChangeEvent(event) {
+<pre class="brush: js">function handleICEConnectionStateChangeEvent(event) {
   switch(myPeerConnection.iceConnectionState) {
     case "closed":
     case "failed":
@@ -655,7 +655,7 @@ function invite(evt) {
 
 <p>Similarly, we watch for {{event("signalingstatechange")}} events. If the signaling state changes to <code>closed</code>, we likewise close the call out.</p>
 
-<pre class="brush: js notranslate">function handleSignalingStateChangeEvent(event) {
+<pre class="brush: js">function handleSignalingStateChangeEvent(event) {
   switch(myPeerConnection.signalingState) {
     case "closed":
       closeVideoCall();
@@ -671,7 +671,7 @@ function invite(evt) {
 
 <p>{{event("icegatheringstatechange")}} events are used to let you know when the ICE candidate gathering process state changes. Our example doesn't use this for anything, but it can be useful to watch these events for debugging purposes, as well as to detect when candidate collection has finished.</p>
 
-<pre class="brush: js notranslate">function handleICEGatheringStateChangeEvent(event) {
+<pre class="brush: js">function handleICEGatheringStateChangeEvent(event) {
   // Our sample just logs information to console here,
   // but you can do whatever you need.
 }

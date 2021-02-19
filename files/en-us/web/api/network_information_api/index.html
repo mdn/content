@@ -20,7 +20,7 @@ tags:
 
 <p>This example watches for changes to the user's connection.</p>
 
-<pre class="brush: js notranslate">var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+<pre class="brush: js">var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 var type = connection.effectiveType;
 
 function updateConnectionStatus() {
@@ -35,7 +35,7 @@ connection.addEventListener('change', updateConnectionStatus);
 
 <p>The connection object is useful for deciding whether to preload resources that take large amounts of bandwidth or memory. This example would be called soon after page load to check for a connection type where preloading a video may not be desirable. If a cellular connection is found, then the <code>preloadVideo</code> flag is set to <code>false</code>. For simplicity and clarity, this example only tests for one connection type. A real-world use case would likely use a switch statement or some other method to check all of the possible values of {{domxref("NetworkInformation.type")}}. Regardless of the <code>type</code> value you can get an estimate of connection speed through the {{domxref("NetworkInformation.effectiveType")}} property.</p>
 
-<pre class="brush: js notranslate">let preloadVideo = true;
+<pre class="brush: js">let preloadVideo = true;
 var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 if (connection) {
   if (connection.effectiveType === 'slow-2g') {

@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>WebGLActiveInfo</em> <em>WebGLRenderingContext</em>.getActiveUniform(<em>program</em>, <em>index</em>);
+<pre class="brush: js"><em>WebGLActiveInfo</em> <em>WebGLRenderingContext</em>.getActiveUniform(<em>program</em>, <em>index</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -133,7 +133,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">const numUniforms = gl.getProgramParameter(program, gl.ACTIVE_UNIFORMS);
+<pre class="brush: js">const numUniforms = gl.getProgramParameter(program, gl.ACTIVE_UNIFORMS);
 for (let i = 0; i &lt; numUniforms; ++i) {
   const info = gl.getActiveUniform(program, i);
   console.log('name:', info.name, 'type:', info.type, 'size:', info.size);

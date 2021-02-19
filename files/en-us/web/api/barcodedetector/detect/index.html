@@ -17,7 +17,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>detectedBarcode</var> = BarcodeDetector.detect(ImageBitmapSource);</pre>
+  class="brush: js">var <var>detectedBarcode</var> = BarcodeDetector.detect(ImageBitmapSource);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -59,7 +59,7 @@ tags:
 <p>This example uses the <code>detect()</code> method to detect the barcodes within the
   given image. These are iterated over and the barcode data is logged to the console.</p>
 
-<pre class="brush: js notranslate">barcodeDetector.detect(imageEl)
+<pre class="brush: js">barcodeDetector.detect(imageEl)
   .then(barcodes =&gt; {
     barcodes.forEach(barcode =&gt; console.log(barcode.rawData));
   }

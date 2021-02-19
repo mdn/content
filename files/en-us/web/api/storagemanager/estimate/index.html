@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <var>estimatePromise</var> = <var>StorageManager</var>.estimate();</pre>
+<pre class="brush: js">const <var>estimatePromise</var> = <var>StorageManager</var>.estimate();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -49,7 +49,7 @@ tags:
 
 <h3 id="HTML_content">HTML content</h3>
 
-<pre class="brush: html notranslate">&lt;label&gt;
+<pre class="brush: html">&lt;label&gt;
   You’re currently using about &lt;output id="percent"&gt;
   &lt;/output&gt;% of your available storage.
 &lt;/label&gt;
@@ -57,7 +57,7 @@ tags:
 
 <h3 id="JavaScript_content">JavaScript content</h3>
 
-<pre class="brush: js notranslate">navigator.storage.estimate().then(function(estimate) {
+<pre class="brush: js">navigator.storage.estimate().then(function(estimate) {
   document.getElementById("percent").value =
       (estimate.usage / estimate.quota * 100).toFixed(2);
 });

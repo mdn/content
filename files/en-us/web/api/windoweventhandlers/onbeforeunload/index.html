@@ -33,7 +33,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">window.addEventListener("beforeunload", function(event) { ... });
+<pre class="brush: js">window.addEventListener("beforeunload", function(event) { ... });
 window.onbeforeunload = function(event) { ... };</pre>
 
 <p>Typically, it is better to use {{domxref("EventTarget.addEventListener",
@@ -48,7 +48,7 @@ window.onbeforeunload = function(event) { ... };</pre>
   {{domxref("Event.preventDefault()")}} method instead of using
   {{domxref("Event.returnValue")}} to prompt the user.</p>
 
-<pre class="brush:js notranslate">window.addEventListener('beforeunload', function (e) {
+<pre class="brush:js">window.addEventListener('beforeunload', function (e) {
   // Cancel the event
   e.preventDefault(); // If you prevent default behavior in Mozilla Firefox prompt will always be shown
   // Chrome requires returnValue to be set
@@ -59,7 +59,7 @@ window.onbeforeunload = function(event) { ... };</pre>
 <p>Guarantee the browser unload by removing the <em>returnValue</em> property of the event
 </p>
 
-<pre class="brush:js notranslate">window.addEventListener('beforeunload', function (e) {
+<pre class="brush:js">window.addEventListener('beforeunload', function (e) {
   // the absence of a returnValue property on the event will guarantee the browser unload happens
   delete e['returnValue'];
 });</pre>

@@ -38,7 +38,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html notranslate">Feature-Policy: &lt;directive&gt; &lt;allowlist&gt;</pre>
+<pre class="brush: html">Feature-Policy: &lt;directive&gt; &lt;allowlist&gt;</pre>
 
 <dl>
  <dt><code>&lt;directive&gt;</code></dt>
@@ -116,7 +116,7 @@ tags:
 
 <p>SecureCorp Inc. wants to disable Microphone and Geolocation APIs in its application. It can do so by delivering the following HTTP response header to define a feature policy:</p>
 
-<pre class="notranslate">Feature-Policy: microphone 'none'; geolocation 'none'</pre>
+<pre>Feature-Policy: microphone 'none'; geolocation 'none'</pre>
 
 <p>By specifying the <code>'none'</code> keyword for the origin list, the specified features will be disabled for all browsing contexts (this includes all iframes), regardless of their origin.</p>
 

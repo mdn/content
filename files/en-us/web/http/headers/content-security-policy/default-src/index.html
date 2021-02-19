@@ -52,7 +52,7 @@ tags:
 
 <p>One or more sources can be allowed for the <code>default-src</code> policy:</p>
 
-<pre class="brush: html notranslate">Content-Security-Policy: default-src &lt;source&gt;;
+<pre class="brush: html">Content-Security-Policy: default-src &lt;source&gt;;
 Content-Security-Policy: default-src &lt;source&gt; &lt;source&gt;;
 </pre>
 
@@ -122,11 +122,11 @@ Content-Security-Policy: default-src &lt;source&gt; &lt;source&gt;;
 
 <p>If there are other directives specified, <code>default-src</code> does not influence them. The following header:</p>
 
-<pre class="brush: bash notranslate">Content-Security-Policy: default-src 'self'; script-src https://example.com</pre>
+<pre class="brush: bash">Content-Security-Policy: default-src 'self'; script-src https://example.com</pre>
 
 <p>is the same as:</p>
 
-<pre class="brush: bash notranslate">Content-Security-Policy: connect-src 'self';
+<pre class="brush: bash">Content-Security-Policy: connect-src 'self';
                          font-src 'self';
                          frame-src 'self';
                          img-src 'self';

@@ -63,7 +63,7 @@ tags:
 
 <p>This snippet, taken from {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion", "Drawing a frame")}}, shows how the <code>XRWebGLLayer</code> is obtained from the {{domxref("XRSession")}} object's rendering state and is then bound as the current rendering WebGL framebuffer by calling the WebGL {{domxref("WebGLRenderingContext.bindFrameBuffer", "bindFrameBuffer()")}} function.</p>
 
-<pre class="brush: js notranslate">let glLayer = xrSession.renderState.baseLayer;
+<pre class="brush: js">let glLayer = xrSession.renderState.baseLayer;
 gl.bindFrameBuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
 </pre>
 
@@ -73,7 +73,7 @@ gl.bindFrameBuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
 
 <p>That function receives as input an {{domxref("XRFrame")}} which encapsulates the data needed to render the frame. This information includes the pose (an {{domxref("XRViewerPose")}} object) that describes the position and facing direction of the viewer within the scene as well as a list of {{domxref("XRView")}} objects, each representing one perspective on the scene. In current WebXR implementations, there will never be more than two entries in this list: one describing the position and viewing angle of the left eye and another doing the same for the right.</p>
 
-<pre class="brush: js notranslate">let pose = xrFrame.getViewerPose(xrReferenceSpace);
+<pre class="brush: js">let pose = xrFrame.getViewerPose(xrReferenceSpace);
 
 if (pose) {
   let glLayer = xrSession.renderState.baseLayer;

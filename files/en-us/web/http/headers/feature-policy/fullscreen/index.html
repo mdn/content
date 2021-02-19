@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html notranslate">Feature-Policy: fullscreen &lt;allowlist&gt;;</pre>
+<pre class="brush: html">Feature-Policy: fullscreen &lt;allowlist&gt;;</pre>
 
 <dl>
  <dt>&lt;allowlist&gt;</dt>
@@ -37,17 +37,17 @@ tags:
 
 <p>SecureCorp Inc. wants to disable the Fullscreen API within all browsing contexts except for its own origin and those whose origin is <code>https://example.com</code>. It can do so by delivering the following HTTP response header to define a feature policy:</p>
 
-<pre class="brush: bash notranslate">Feature-Policy: fullscreen 'self' https://example.com</pre>
+<pre class="brush: bash">Feature-Policy: fullscreen 'self' https://example.com</pre>
 
 <h3 id="With_an_&lt;iframe&gt;_element">With an &lt;iframe&gt; element</h3>
 
 <p>FastCorp Inc. wants to disable <code>fullscreen</code> for all cross-origin child frames, except for a specific &lt;iframe&gt;. It can do so by delivering the following HTTP response header to define a feature policy:</p>
 
-<pre class="brush: bash notranslate">Feature-Policy: fullscreen 'self'</pre>
+<pre class="brush: bash">Feature-Policy: fullscreen 'self'</pre>
 
 <p>Then include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on the <code>&lt;iframe&gt;</code> element:</p>
 
-<pre class="brush: html notranslate">&lt;iframe src="https://other.com/videoplayer" allow="fullscreen"&gt;&lt;/iframe&gt;</pre>
+<pre class="brush: html">&lt;iframe src="https://other.com/videoplayer" allow="fullscreen"&gt;&lt;/iframe&gt;</pre>
 
 <p>iframe attributes can selectively enable features in certain frames, and not in others, even if those frames contain documents from the same origin.</p>
 

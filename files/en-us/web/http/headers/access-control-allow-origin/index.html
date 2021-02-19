@@ -34,7 +34,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html notranslate">Access-Control-Allow-Origin: *
+<pre class="brush: html">Access-Control-Allow-Origin: *
 Access-Control-Allow-Origin: &lt;origin&gt;
 Access-Control-Allow-Origin: null
 </pre>
@@ -56,11 +56,11 @@ Access-Control-Allow-Origin: null
 
 <p>A response that tells the browser to allow code from any origin to access a resource will include the following:</p>
 
-<pre class="notranslate">Access-Control-Allow-Origin: *</pre>
+<pre>Access-Control-Allow-Origin: *</pre>
 
 <p>A response that tells the browser to allow requesting code from the origin <code>https://developer.mozilla.org</code> to access a resource will include the following:</p>
 
-<pre class="notranslate">Access-Control-Allow-Origin: https://developer.mozilla.org</pre>
+<pre>Access-Control-Allow-Origin: https://developer.mozilla.org</pre>
 
 <p>Limiting the possible <code>Access-Control-Allow-Origin</code> values to a set of allowed origins requires code on the server side to check the value of the {{HTTPHeader("Origin")}} request header, compare that to a list of allowed origins, and then if the {{HTTPHeader("Origin")}} value is in the list, to set the <code>Access-Control-Allow-Origin</code> value to the same value as the {{HTTPHeader("Origin")}} value.</p>
 
@@ -68,7 +68,7 @@ Access-Control-Allow-Origin: null
 
 <p>If the server sends a response with an <code>Access-Control-Allow-Origin</code> value that is an explicit origin (rather than the "<code>*</code>" wildcard), then the response should also include a {{HTTPHeader("Vary")}} response header with the value <code>Origin</code> — to indicate to browsers that server responses can differ based on the value of the <code>Origin</code> request header.</p>
 
-<pre class="notranslate">Access-Control-Allow-Origin: https://developer.mozilla.org
+<pre>Access-Control-Allow-Origin: https://developer.mozilla.org
 Vary: Origin</pre>
 
 <h2 id="Specifications">Specifications</h2>

@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>enumeratorPromise</em> = navigator.mediaDevices.enumerateDevices();
+<pre class="brush: js">var <em>enumeratorPromise</em> = navigator.mediaDevices.enumerateDevices();
 </pre>
 
 <h3 id="Return_value">Return value</h3>
@@ -36,7 +36,7 @@ tags:
     href="/en-US/docs/Web/API/MediaDeviceInfo/deviceId">device IDs</a>, with their labels
   if available.</p>
 
-<pre class="brush: js notranslate">if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
+<pre class="brush: js">if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
   console.log("enumerateDevices() not supported.");
   return;
 }
@@ -57,7 +57,7 @@ navigator.mediaDevices.enumerateDevices()
 
 <p>This might produce:</p>
 
-<pre class="brush: bash notranslate">videoinput: id = csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
+<pre class="brush: bash">videoinput: id = csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
 audioinput: id = RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
 audioinput: id = r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 </pre>
@@ -65,7 +65,7 @@ audioinput: id = r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 <p>or if one or more {{domxref("MediaStream")}}s are active or persistent permissions are
   granted:</p>
 
-<pre class="brush: bash notranslate">videoinput: FaceTime HD Camera (Built-in) id=csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
+<pre class="brush: bash">videoinput: FaceTime HD Camera (Built-in) id=csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
 audioinput: default (Built-in Microphone) id=RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
 audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 </pre>

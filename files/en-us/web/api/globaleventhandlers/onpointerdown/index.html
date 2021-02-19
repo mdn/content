@@ -33,7 +33,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>target</var>.onpointerdown = <var>downHandler</var>;
+<pre class="brush: js"><var>target</var>.onpointerdown = <var>downHandler</var>;
 
 var <var>downHandler</var> = <var>target</var>.onpointerdown;
 </pre>
@@ -56,7 +56,7 @@ var <var>downHandler</var> = <var>target</var>.onpointerdown;
 <p>First, let's look at the JavaScript code that handles the <code>pointerdown</code>
   event.</p>
 
-<pre class="brush: js notranslate">var targetBox = document.getElementById("target");
+<pre class="brush: js">var targetBox = document.getElementById("target");
 
 targetBox.onpointerdown = handleDown;
 
@@ -97,7 +97,7 @@ function handleDown(evt) {
 
 <p>We also have a handler for {{event("pointerup")}} events:</p>
 
-<pre class="brush: js notranslate">targetBox.onpointerup = handleUp;
+<pre class="brush: js">targetBox.onpointerup = handleUp;
 
 function handleUp(evt) {
   targetBox.textContent = "Tap me, click me, or touch me!";
@@ -119,7 +119,7 @@ function handleUp(evt) {
 
   <p>The HTML is extremely simple:</p>
 
-  <pre class="brush: html notranslate">&lt;div id="target"&gt;
+  <pre class="brush: html">&lt;div id="target"&gt;
   Tap me, click me, or touch me!
 &lt;/div&gt;</pre>
 </details>
@@ -132,7 +132,7 @@ function handleUp(evt) {
   <p>The CSS sets up the appearance of the target, and doesn't affect its functionality at
     all.</p>
 
-  <pre class="brush: css notranslate">#target {
+  <pre class="brush: css">#target {
   width: 400px;
   height: 30px;
   text-align: center;

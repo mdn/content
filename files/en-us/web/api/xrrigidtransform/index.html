@@ -63,7 +63,7 @@ tags:
 
 <p>This code snippet creates an <code>XRRigidTransform</code> to specify the offset and orientation in relation to the current reference space to use when creating a new reference space. It then requests the first animation frame callback by calling the session's {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} method.</p>
 
-<pre class="brush: js notranslate">xrSession.requestReferenceSpace(refSpaceType)
+<pre class="brush: js">xrSession.requestReferenceSpace(refSpaceType)
 .then((refSpace) =&gt; {
   xrReferenceSpace = refSpace;
   xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(

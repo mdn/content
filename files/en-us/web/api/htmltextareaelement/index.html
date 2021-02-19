@@ -197,7 +197,7 @@ tags:
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">function autoGrow (oField) {
+<pre class="brush: js">function autoGrow (oField) {
   if (oField.scrollHeight &gt; oField.clientHeight) {
     oField.style.height = oField.scrollHeight + "px";
   }
@@ -205,7 +205,7 @@ tags:
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">textarea.noscrollbars {
+<pre class="brush: css">textarea.noscrollbars {
   overflow: hidden;
   width: 300px;
   height: 100px;
@@ -213,7 +213,7 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;fieldset&gt;
     &lt;legend&gt;Your comments&lt;/legend&gt;
     &lt;p&gt;&lt;textarea class="noscrollbars" onkeyup="autoGrow(this);"&gt;&lt;/textarea&gt;&lt;/p&gt;
@@ -230,7 +230,7 @@ tags:
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<pre class="brush: js notranslate">function insertMetachars(sStartTag, sEndTag) {
+<pre class="brush: js">function insertMetachars(sStartTag, sEndTag) {
   var bDouble = arguments.length &gt; 1, oMsgInput = document.myForm.myTxtArea, nSelStart = oMsgInput.selectionStart, nSelEnd = oMsgInput.selectionEnd, sOldText = oMsgInput.value;
   oMsgInput.value = sOldText.substring(0, nSelStart) + (bDouble ? sStartTag + sOldText.substring(nSelStart, nSelEnd) + sEndTag : sStartTag) + sOldText.substring(nSelEnd);
   oMsgInput.setSelectionRange(bDouble || nSelStart === nSelEnd ? nSelStart + sStartTag.length : nSelStart, (bDouble ? nSelEnd : nSelStart) + sStartTag.length);
@@ -241,7 +241,7 @@ tags:
 
 <p>CSS to decorate the internal span to behave like a link:</p>
 
-<pre class="brush: css notranslate">.intLink {
+<pre class="brush: css">.intLink {
   cursor: pointer;
   text-decoration: underline;
   color: #0000ff;
@@ -249,7 +249,7 @@ tags:
 
 <p>HTML:</p>
 
-<pre class="brush: html notranslate">&lt;form name="myForm"&gt;
+<pre class="brush: html">&lt;form name="myForm"&gt;
 &lt;p&gt;[&amp;nbsp;&lt;span class="intLink" onclick="insertMetachars('&amp;lt;strong&amp;gt;','&amp;lt;\/strong&amp;gt;');"&gt;&lt;strong&gt;Bold&lt;/strong&gt;&lt;/span&gt; | &lt;span class="intLink" onclick="insertMetachars('&amp;lt;em&amp;gt;','&amp;lt;\/em&amp;gt;');"&gt;&lt;em&gt;Italic&lt;/em&gt;&lt;/span&gt; | &lt;span class="intLink" onclick="var newURL=prompt('Enter the full URL for the link');if(newURL){insertMetachars('&amp;lt;a href=\u0022'+newURL+'\u0022&amp;gt;','&amp;lt;\/a&amp;gt;');}else{document.myForm.myTxtArea.focus();}"&gt;URL&lt;/span&gt; | &lt;span class="intLink" onclick="insertMetachars('\n&amp;lt;code&amp;gt;\n','\n&amp;lt;\/code&amp;gt;\n');"&gt;code&lt;/span&gt; | &lt;span class="intLink" onclick="insertMetachars(' :-)');"&gt;smile&lt;/span&gt; | etc. etc.&amp;nbsp;]&lt;/p&gt;
 &lt;p&gt;&lt;textarea name="myTxtArea" rows="10" cols="50"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis, arcu vitae adipiscing placerat, nisl lectus accumsan nisi, vitae iaculis sem neque vel lectus. Praesent tristique commodo lorem quis fringilla. Sed ac tellus eros. Sed consectetur eleifend felis vitae luctus. Praesent sagittis, est eget bibendum tincidunt, ligula diam tincidunt augue, a fermentum odio velit eget mi. Phasellus mattis, elit id fringilla semper, orci magna cursus ligula, non venenatis lacus augue sit amet dui. Pellentesque lacinia odio id nisi pulvinar commodo tempus at odio. Ut consectetur eros porttitor nunc mollis ultrices. Aenean porttitor, purus sollicitudin viverra auctor, neque erat blandit sapien, sit amet tincidunt massa mi ac nibh. Proin nibh sem, bibendum ut placerat nec, cursus et lacus. Phasellus vel augue turpis. Nunc eu mauris eu leo blandit mollis interdum eget lorem. &lt;/textarea&gt;&lt;/p&gt;
 &lt;/form&gt;
@@ -263,7 +263,7 @@ tags:
 
 <p>First, create a function that takes the text field and a key event as input and determines if any of the limits have been reached. If the limit has not been reached, it will return the key.</p>
 
-<pre class="brush: js notranslate">function checkRows(oField, oKeyEvent) {
+<pre class="brush: js">function checkRows(oField, oKeyEvent) {
   var nKey = (oKeyEvent || /* old IE */ window.event || /* check is not supported! */ { keyCode: 38 }).keyCode,
 
     // put here the maximum number of characters per line:
@@ -287,7 +287,7 @@ tags:
 
 <p>In the HTML we just need to hook our function to the `onkeypress` event and specify that our textarea does not accept pasting:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;p&gt;Textarea with fixed number of characters per line:&lt;br /&gt;
     &lt;textarea cols="50" rows="10" onkeypress="return checkRows(this, event);"
               onpaste="return false;"&gt;&lt;/textarea&gt;

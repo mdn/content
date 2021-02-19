@@ -30,7 +30,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">let <em>xrRigidTransform</em> = new XRRigidTransform(<em>position</em>, <em>orientation</em>);</pre>
+  class="brush: js">let <em>xrRigidTransform</em> = new XRRigidTransform(<em>position</em>, <em>orientation</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -69,7 +69,7 @@ tags:
   request for a reference space of a given type, then shifting the coordinate system based
   on a transform before requesting the first animation frame.</p>
 
-<pre class="brush: js notranslate">let animationFrameRequestID = 0;
+<pre class="brush: js">let animationFrameRequestID = 0;
 
 xrSession.requestReferenceSpace("local-floor")
 .then((refSpace) =&gt; {

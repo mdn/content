@@ -28,7 +28,7 @@ tags:
 
 <h3 id="window.onerror">window.onerror</h3>
 
-<pre class="brush: js notranslate">window.onerror = function(message, source, lineno, colno, error) { ... };
+<pre class="brush: js">window.onerror = function(message, source, lineno, colno, error) { ... };
 </pre>
 
 <p>Function parameters:</p>
@@ -45,21 +45,21 @@ tags:
 
 <h3 id="window.addEventListenererror">window.addEventListener('error')</h3>
 
-<pre class="brush: js notranslate">window.addEventListener('error', function(event) { ... })
+<pre class="brush: js">window.addEventListener('error', function(event) { ... })
 </pre>
 
 <p><code>event</code> of type {{domxref("ErrorEvent")}} contains all the information about the event and the error.</p>
 
 <h3 id="element.onerror">element.onerror</h3>
 
-<pre class="brush: js notranslate">element.onerror = function(event) { ... }
+<pre class="brush: js">element.onerror = function(event) { ... }
 </pre>
 
 <p><code>element.onerror</code> accepts a function with a single argument of type {{domxref("Event")}}.</p>
 
 <p>A good example for this is when you are using an image tag, and need to specify a backup image in case the one you need is not available on the server for any reason.</p>
 
-<pre class="brush: html notranslate"><code>&lt;img src="imagenotfound.gif" onerror="this.onerror=null;this.src='imagefound.gif';" /&gt;</code>
+<pre class="brush: html"><code>&lt;img src="imagenotfound.gif" onerror="this.onerror=null;this.src='imagefound.gif';" /&gt;</code>
 </pre>
 
 <p>The reason we have the <code>this.onerror=null</code> in the function is that the browser will be stuck in an endless loop if the onerror image itself generates an error.</p>
@@ -68,7 +68,7 @@ tags:
 
 <p>When an error occurs in a script, loaded from a <a href="/en-US/docs/Web/Security/Same-origin_policy">different origin</a>, the details of the error are not reported to prevent leaking information (see {{bug("363897")}}). Instead the error reported is <code><strong>"Script error."</strong></code> This behavior can be overridden in some browsers using the <code>{{htmlattrxref("crossorigin","script")}}</code> attribute on {{HTMLElement("script")}} and having the server send the appropriate <a href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a> HTTP response headers.  A workaround is to isolate "Script error." and handle it knowing that the error detail is only viewable in the browser console and not accessible via JavaScript.</p>
 
-<pre class="brush: js notranslate">window.onerror = function (msg, url, lineNo, columnNo, error) {
+<pre class="brush: js">window.onerror = function (msg, url, lineNo, columnNo, error) {
   var string = msg.toLowerCase();
   var substring = "script error";
   if (string.indexOf(substring) &gt; -1){

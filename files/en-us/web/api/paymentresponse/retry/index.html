@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>retryPromise</em> = <em>paymentRequest</em>.retry(<em>errorFields</em>);
+<pre class="brush: js"><em>retryPromise</em> = <em>paymentRequest</em>.retry(<em>errorFields</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -77,7 +77,7 @@ tags:
     <code>complete("fail")</code> to close the payment request.</li>
 </ol>
 
-<pre class="brush: js notranslate">async function handlePayment() {
+<pre class="brush: js">async function handlePayment() {
   const payRequest = new PaymentRequest(methodData, details, options);
 
   try {
@@ -100,7 +100,7 @@ tags:
 <p><u><strong>try { await paymentRequest.retry(errorFields); } catch (DOMException err) {
       ... }</strong></u></p>
 
-<pre class="brush: JS notranslate">async function doPaymentRequest() {
+<pre class="brush: JS">async function doPaymentRequest() {
   const request = new PaymentRequest(methodData, details, options);
   const response = await request.show();
   await recursiveValidate(request, response);

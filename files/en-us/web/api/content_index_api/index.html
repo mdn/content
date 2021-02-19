@@ -57,7 +57,7 @@ tags:
 
 <p>Here we get a reference to the {{domxref('ServiceWorkerRegistration')}}, then check for the <code>index</code> property, which gives us access to the content index interface.</p>
 
-<pre class="brush: js notranslate">// reference registration
+<pre class="brush: js">// reference registration
 const registration = await navigator.serviceWorker.ready;
 
 // feature detection
@@ -73,7 +73,7 @@ if ('index' in registration) {
 
 <p>Here we're declaring an item in the correct format and creating an asynchronous function which uses the {{domxref('ContentIndex.add','add()')}} method to register it with the {{domxref('Content Index API','content index')}}.</p>
 
-<pre class="brush: js notranslate">// our content
+<pre class="brush: js">// our content
 const item = {
   id: 'post-1',
   url: '/posts/amet.html',
@@ -109,7 +109,7 @@ async function registerContent(data) {
 
 <p>The below example shows an asynchronous function that retrieves items within the {{domxref('Content Index API','content index')}} and iterates over each entry, building a list for the interface.</p>
 
-<pre class="brush: js notranslate">async function createReadingList() {
+<pre class="brush: js">async function createReadingList() {
   // access our service worker registration
   const registration = await navigator.serviceWorker.ready;
 
@@ -154,7 +154,7 @@ async function registerContent(data) {
 
 <p>Below is an asynchronous function, that removes an item from the {{domxref('Content Index API','content index')}}.</p>
 
-<pre class="brush: js notranslate">async function unregisterContent(article) {
+<pre class="brush: js">async function unregisterContent(article) {
 
   // reference registration
   const registration = await navigator.serviceWorker.ready;
@@ -170,7 +170,7 @@ async function registerContent(data) {
 
 <p>All the above methods are available within the scope of the {{domxref('ServiceWorker','service worker')}}. They are accessible from the {{domxref('WorkerGlobalScope.self')}} property:</p>
 
-<pre class="brush: js notranslate">// service worker script
+<pre class="brush: js">// service worker script
 
 self.registration.index.add(item);
 
@@ -183,7 +183,7 @@ const contentIndexItems = self.registration.index.getAll();
 
 <p>When an item is removed from the user agent interface, a <code>contentdelete</code> event is received by the service worker.</p>
 
-<pre class="brush: js notranslate">self.addEventListener('contentdelete', (event) =&gt; {
+<pre class="brush: js">self.addEventListener('contentdelete', (event) =&gt; {
   console.log(event.id);
 
   // logs content index id, which can then be used to determine what content to delete from your cache

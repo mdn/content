@@ -93,7 +93,7 @@ tags:
 
 <p>You'll notice that since we are requesting an image, we need to run {{domxref("Body.blob")}} ({{domxref("Response")}} implements Body) to give the response its correct MIME type.</p>
 
-<pre class="brush: js notranslate">const image = document.querySelector('.my-image');
+<pre class="brush: js">const image = document.querySelector('.my-image');
 fetch('flowers.jpg').then(function(response) {
   return response.blob();
 }).then(function(blob) {
@@ -103,13 +103,13 @@ fetch('flowers.jpg').then(function(response) {
 
 <p>You can also use the {{domxref("Response.Response()")}} constructor to create your own custom <code>Response</code> object:</p>
 
-<pre class="brush: js notranslate">const response = new Response();</pre>
+<pre class="brush: js">const response = new Response();</pre>
 
 <h3 id="An_Ajax_Call">An Ajax Call</h3>
 
 <p>Here we call a PHP program file that generates a JSON string, displaying the result as a JSON value, including simple error handling.</p>
 
-<pre class="brush: js notranslate">// Function to do an Ajax call
+<pre class="brush: js">// Function to do an Ajax call
 const doAjax = async () =&gt; {
     const response = await fetch('Ajax.php'); // Generate the Response object
     if (response.ok) {

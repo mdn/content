@@ -51,12 +51,12 @@ tags:
 
 <p>Given these two {{HTMLElement("canvas")}} elements</p>
 
-<pre class="brush: html notranslate">&lt;canvas id="one"&gt;&lt;/canvas&gt;
+<pre class="brush: html">&lt;canvas id="one"&gt;&lt;/canvas&gt;
 &lt;canvas id="two"&gt;&lt;/canvas&gt;</pre>
 
 <p>the following code will provide the rendering using an <code>OffscreenCanvas</code> as described above.</p>
 
-<pre class="brush: js notranslate">var one = document.getElementById("one").getContext("bitmaprenderer");
+<pre class="brush: js">var one = document.getElementById("one").getContext("bitmaprenderer");
 var two = document.getElementById("two").getContext("bitmaprenderer");
 
 var offscreen = new OffscreenCanvas(256, 256);
@@ -81,7 +81,7 @@ two.transferFromImageBitmap(bitmapTwo);
 
 <p>main.js (main thread code):</p>
 
-<pre class="brush: js notranslate">var htmlCanvas = document.getElementById("canvas");
+<pre class="brush: js">var htmlCanvas = document.getElementById("canvas");
 var offscreen = htmlCanvas.transferControlToOffscreen();
 
 var worker = new Worker("offscreencanvas.js");
@@ -90,7 +90,7 @@ worker.postMessage({canvas: offscreen}, [offscreen]);
 
 <p>offscreencanvas.js (worker code):</p>
 
-<pre class="brush: js notranslate">onmessage = function(evt) {
+<pre class="brush: js">onmessage = function(evt) {
   var canvas = evt.data.canvas;
   var gl = canvas.getContext("webgl");
 
@@ -100,7 +100,7 @@ worker.postMessage({canvas: offscreen}, [offscreen]);
 
 <p>You can also use requestAnimationFrame in workers</p>
 
-<pre class="brush: js notranslate">onmessage = function(evt) {
+<pre class="brush: js">onmessage = function(evt) {
   const canvas = evt.data.canvas;
   const gl = canvas.getContext("webgl");
 

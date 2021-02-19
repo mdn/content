@@ -40,7 +40,7 @@ tags:
 
 <p>The markup is very simple:</p>
 
-<pre class="brush: html notranslate">&lt;x-deck selected-index="0"&gt;
+<pre class="brush: html">&lt;x-deck selected-index="0"&gt;
   &lt;x-card&gt;
     …
   &lt;/x-card&gt;
@@ -58,7 +58,7 @@ tags:
 
 <p>To get these sitting side-by-side we have used the following rules:</p>
 
-<pre class="brush: css notranslate">x-card {
+<pre class="brush: css">x-card {
   width: 100%;
 }
 
@@ -82,7 +82,7 @@ x-card:nth-child(3) {
 
 <p>The padding does not affect the overall width and height of the containers because we have set the {{cssxref("box-sizing")}} of all elements to <code>border-box</code>:</p>
 
-<pre class="brush: css notranslate">*, *:before, *:after {
+<pre class="brush: css">*, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -98,13 +98,13 @@ x-card:nth-child(3) {
 
 <p>Because the size of replaced elements is dictated by the size of the media inserted into them, and the media is a fixed size, they explode out of their containing elements and make a mess of the layout. This is pretty horrible, but generally this kind of problem is easily fixed with some simple CSS:</p>
 
-<pre class="brush: css notranslate">img, video {
+<pre class="brush: css">img, video {
   max-width: 100%;
 }</pre>
 
 <p>This tells the replaced elements to remain constrained inside their container's widths, no matter what. However, if they aren't as wide as their containers, they will not stretch to fill them. In the snapshot example, we ended up with slightly different code:</p>
 
-<pre class="brush: css notranslate">x-card:nth-child(1) video, x-card:nth-child(2) img {
+<pre class="brush: css">x-card:nth-child(1) video, x-card:nth-child(2) img {
   width: 100%;
     …
 }</pre>
@@ -131,7 +131,7 @@ x-card:nth-child(3) {
 
 <p>We also have a mid-width layout, which is aimed at working well on tablets and narrow laptop screens. This is created by all of the CSS inside the first media query:</p>
 
-<pre class="brush: css notranslate">@media all and (max-width: 1024px) {
+<pre class="brush: css">@media all and (max-width: 1024px) {
   x-card:nth-child(1), x-card:nth-child(2) {
     width: 50%;
   }
@@ -154,7 +154,7 @@ x-card:nth-child(3) {
 
 <p>We then have a narrow screen layout, designed to fit the bill for a mobile app/open Web app experience. This is created in multiple parts. First of all, as expected, there is a media query in our main CSS, which is quite weighty, so we'll go through it in parts:</p>
 
-<pre class="brush: css notranslate">@media all and (max-width: 480px) {
+<pre class="brush: css">@media all and (max-width: 480px) {
   x-card:nth-child(1), x-card:nth-child(2), x-card:nth-child(3) {
     width: 100%;
     float: none;
@@ -175,7 +175,7 @@ x-card:nth-child(3) {
 
 <p>This first block resets a number of different things from the widescreen layouts that were't required for the mobile app.</p>
 
-<pre class="brush: css notranslate">  x-card:nth-child(1) video, x-card:nth-child(2) img, x-card:nth-child(3) {
+<pre class="brush: css">  x-card:nth-child(1) video, x-card:nth-child(2) img, x-card:nth-child(3) {
     margin-top: 17.5vw;
   }
 
@@ -198,13 +198,13 @@ x-card:nth-child(3) {
 
 <p>The next rules do some sizing on the buttons inside the first two cards, and give all card contents a top margin so that their content won't be lost under the navigation buttons (see below). This was necessary because Mozilla Brick (also see below) forces its components to be 100% of the screen width and height. We have used <code>vw</code> (viewport width) units for these — <code>1vw</code> is equivalent to  1% of the viewport width. This makes the dimensions scale up and down nicely along with the viewport width. Last for this section, we absolutely positioned all buttons at the bottom of the cards they are in, so the layout looks OK at different viewport size variations. We then add a rule that positions the second button in any card a button's width higher up the card. When you click on an image in the gallery it brings up options to delete or cancel deletion of the card, and you don't want two buttons on top of one another.</p>
 
-<pre class="brush: css notranslate">x-card:nth-child(3) img {
+<pre class="brush: css">x-card:nth-child(3) img {
   width: 50%;
 }</pre>
 
 <p>This rule changes the width of the gallery images so now there are two per line.</p>
 
-<pre class="brush: css notranslate">  nav {
+<pre class="brush: css">  nav {
     width: 100%;
     position: absolute;
     z-index: 1000;
@@ -241,11 +241,11 @@ x-card:nth-child(3) {
 
 <p>What's more relevant to this article is that we didn't want the Brick CSS and JavaScript files being applied to the markup unless we were looking at the mobile app view. To achieve this, we applied the Brick CSS to the page using a separate {{HTMLElement("link")}} element with a <code>media</code> attribute:</p>
 
-<pre class="brush: html notranslate">&lt;link href="dist/brick.css" type="text/css" rel="stylesheet" media="all and (max-width: 480px)"&gt;</pre>
+<pre class="brush: html">&lt;link href="dist/brick.css" type="text/css" rel="stylesheet" media="all and (max-width: 480px)"&gt;</pre>
 
 <p>This says that the whole stylesheet will not be linked to the HTML unless the viewport width is 480px or less. Moving on to the JavaScript, {{HTMLElement("script")}} elements don't accept <code>media</code> attributes, so I had to do this a different way. Fortunately there is a JavaScript construct called {{domxref("window.matchMedia()")}}, which can conditionally run JavaScript constructs depending on whether a media query returns <code>true</code> or not. We opened up the <code>brick.js</code> file and wrapped the whole lot in the following:</p>
 
-<pre class="brush: js notranslate">if (window.matchMedia("(max-width: 480px)").matches) {
+<pre class="brush: js">if (window.matchMedia("(max-width: 480px)").matches) {
   // The whole of brick.js goes here!
 }</pre>
 
@@ -255,7 +255,7 @@ x-card:nth-child(3) {
 
 <p>One thing you might notice is that when the viewport gets very wide (such as on a cinema display), the layout stops getting wider, and just centers in the space available. This is pretty simple to achieve. You could use a <code>min-width</code> media query to fix the {{HTMLElement("body")}} width at a certain point:</p>
 
-<pre class="brush: css notranslate">@media all and (min-width: 1400px) {
+<pre class="brush: css">@media all and (min-width: 1400px) {
   body {
     width: 1400px;
     margin: 0 auto;
@@ -264,7 +264,7 @@ x-card:nth-child(3) {
 
 <p>But it's actually easier to just set the following rule instead, and get rid of the media query altogether:</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   max-width: 1400px;
   margin: 0 auto;
 }</pre>
@@ -273,7 +273,7 @@ x-card:nth-child(3) {
 
 <p>We also came across some problems with orientation: the mobile-app layout of our example app is designed for portrait orientation, and looks terrible when viewed on a device in landscape orientation. To fix this, we added in a media query that only applies its contents to the markup when device is viewed in landscape orientation:</p>
 
-<pre class="brush: css notranslate">@media all and (max-width: 480px) and (orientation: landscape) {
+<pre class="brush: css">@media all and (max-width: 480px) and (orientation: landscape) {
   nav {
     width: auto;
 
@@ -325,7 +325,7 @@ x-card:nth-child(3) {
 
 <p>There is a way to override this mobile rendering behavior — viewport, which is inserted into our HTML pages in the form of a {{HTMLElement("meta")}} tag. In my example, let's add the following into our HTML {{HTMLElement("head")}}:</p>
 
-<pre class="notranslate">&lt;meta name="viewport" content="width=480"&gt;</pre>
+<pre>&lt;meta name="viewport" content="width=480"&gt;</pre>
 
 <p>This causes our browser to render our mobile app layout properly — <code>width=480</code> tells the browser <em>"render this markup at 480 pixels wide"</em>, hence the media queries kick in appropriately. There are many more options available in the viewport meta tag, which you can read about in <a href="/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">Using the viewport meta tag to control layout on mobile browsers</a>.</p>
 
@@ -343,7 +343,7 @@ x-card:nth-child(3) {
 
 <p>For CSS background images this is a fairly easy problem to solve. If you use the <a href="/en-US/docs/Web/Apps/app_layout/Mobile_first">mobile first</a> methodology, you will be creating your mobile layout inside your default CSS, before any media queries have been applied. The media queries then supply CSS that is only applied to the markup when the viewport is <strong>above</strong> a certain width. Let's look at a quick example:</p>
 
-<pre class="brush: css notranslate">header {
+<pre class="brush: css">header {
   height: 300px;
   width: 100%;
   background: url(images/small-header.jpg) center;
@@ -357,7 +357,7 @@ x-card:nth-child(3) {
 
 <p>This means that mobile browsers only download the mobile background image asset — not the desktop mobile assets — because they fail the media query tests and therefore ignore the media queries. You can also serve a larger graphic to a higher resolution device using a resolution media query, like so:</p>
 
-<pre class="brush: css notranslate">button {
+<pre class="brush: css">button {
   background: url(images/low-res-header.jpg) 1rem center ;
 }
 
@@ -375,14 +375,14 @@ x-card:nth-child(3) {
 
 <p>HTML5 video is fairly well catered for in terms of responsive capabilities. If you wish, you can point to multiple video files via {{HTMLElement("source")}} attributes, each with their own source and MIME type:</p>
 
-<pre class="brush: html notranslate">&lt;video controls&gt;
+<pre class="brush: html">&lt;video controls&gt;
   &lt;source src="videos/720/crystal720.mp4" type="video/mp4"&gt;
   &lt;source src="videos/720/crystal720.webm" type="video/webm"&gt;
 &lt;/video&gt;</pre>
 
 <p>But you can go one step further. You can include <code>media</code> attributes on the <code>&lt;source&gt;</code> element containing media queries — the video loaded in the browser will depend on both the format the browser supports, and the results of the media tests. So for example:</p>
 
-<pre class="brush: html notranslate">&lt;video controls&gt;
+<pre class="brush: html">&lt;video controls&gt;
   &lt;source src="videos/320/crystal320.mp4" type="video/mp4" media="all and (max-width: 480px)"&gt;
   &lt;source src="videos/320/crystal320.webm" type="video/webm" media="all and (max-width: 480px)"&gt;
   &lt;source src="videos/720/crystal720.mp4" type="video/mp4" media="all and (min-width: 481px)"&gt;

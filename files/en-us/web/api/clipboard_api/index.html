@@ -29,7 +29,7 @@ tags:
 
 <p>Instead of creating a <code>Clipboard</code> object through instantiation, you access the system clipboard through the {{domxref("Navigator.clipboard")}} global:</p>
 
-<pre class="brush: js notranslate">navigator.clipboard.readText().then(
+<pre class="brush: js">navigator.clipboard.readText().then(
   clipText =&gt; document.querySelector(".editor").innerText += clipText);</pre>
 
 <p>This snippet fetches the text from the clipboard and appends it to the first element found with the class <code>editor</code>. Since {{domxref("Clipboard.readText", "readText()")}} (and {{domxref("Clipboard.read", "read()")}}, for that matter) returns an empty string if the clipboard isn't text, this code is safe.</p>

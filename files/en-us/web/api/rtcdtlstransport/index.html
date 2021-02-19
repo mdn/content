@@ -35,7 +35,7 @@ tags:
 
 <p>For example, to create the connection using the highest level of bundling:</p>
 
-<pre class="brush: js notranslate">const rtcConfig = {
+<pre class="brush: js">const rtcConfig = {
   bundlePolicy: "max-bundle"
 };
 
@@ -64,7 +64,7 @@ const pc = new RTCPeerConnection(rtcConfig);
 
 <p>This example presents a function, <code>tallySenders()</code>, which iterates over an <code>RTCPeerConnection</code>'s {{domxref("RTCRtpSender")}}s, tallying up how many of them are in various states. The function returns an object containing properties whose values indicate how many of the senders are in each state.</p>
 
-<pre class="brush: js notranslate">let pc = new RTCPeerConnection({ bundlePolicy: "max-bundle" });
+<pre class="brush: js">let pc = new RTCPeerConnection({ bundlePolicy: "max-bundle" });
 
 /* ... */
 

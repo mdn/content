@@ -48,11 +48,11 @@ tags:
 
 <p>The {{HTTPHeader("Set-Cookie")}} HTTP response header sends cookies from the server to the user agent. A simple cookie is set like this:</p>
 
-<pre class="brush: html notranslate">Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;</pre>
+<pre class="brush: html">Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;</pre>
 
 <p>This shows the server sending headers to tell the client to store a pair of cookies:</p>
 
-<pre class="notranslate">HTTP/2.0 200 OK
+<pre>HTTP/2.0 200 OK
 Content-Type: text/html
 Set-Cookie: yummy_cookie=choco
 Set-Cookie: tasty_cookie=strawberry
@@ -61,7 +61,7 @@ Set-Cookie: tasty_cookie=strawberry
 
 <p id="The_client_sends_back_to_the_server_its_cookies_previously_stored">Then, with every subsequent request to the server, the browser sends back all previously stored cookies to the server using the {{HTTPHeader("Cookie")}} header.</p>
 
-<pre class="notranslate">GET /sample_page.html HTTP/2.0
+<pre>GET /sample_page.html HTTP/2.0
 Host: www.example.org
 Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 
@@ -86,7 +86,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 
 <p>For example:</p>
 
-<pre class="notranslate">Set-Cookie: id=a3fWa; Expires=Thu, 31 Oct 2021 07:28:00 GMT;</pre>
+<pre>Set-Cookie: id=a3fWa; Expires=Thu, 31 Oct 2021 07:28:00 GMT;</pre>
 
 <div class="note">
 <p><strong>Note</strong>: When an <code>Expires</code> date is set, the time and date set is relative to the client the cookie is being set on, not the server.</p>
@@ -104,7 +104,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 
 <p>Here is an example:</p>
 
-<pre class="notranslate">Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly</pre>
+<pre>Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly</pre>
 
 <h3 id="Define_where_cookies_are_sent">Define where cookies are sent</h3>
 
@@ -136,7 +136,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 
 <p>Here is an example:</p>
 
-<pre class="notranslate">Set-Cookie: mykey=myvalue; SameSite=Strict</pre>
+<pre>Set-Cookie: mykey=myvalue; SameSite=Strict</pre>
 
 <div class="notecard note">
 <p>Standard related to <code>SameSite</code> recently changed (MDN documents the new behavior above). See the cookies <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#Browser_compatibility">Browser compatibility</a> table for information about how the attribute is handled in specific browser versions:</p>
@@ -174,7 +174,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 
 <p>New cookies can be created via JavaScript using the {{domxref("Document.cookie")}} property, and existing cookies can be accessed from JavaScript as well, if the <code>HttpOnly</code> flag is not set.</p>
 
-<pre class="brush: js notranslate">document.cookie = "yummy_cookie=choco";
+<pre class="brush: js">document.cookie = "yummy_cookie=choco";
 document.cookie = "tasty_cookie=strawberry";
 console.log(document.cookie);
 // logs "yummy_cookie=choco; tasty_cookie=strawberry"</pre>

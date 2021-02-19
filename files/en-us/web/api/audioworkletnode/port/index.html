@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>audioWorkletNodeInstance</em>.port;</pre>
+<pre class="brush: js"><em>audioWorkletNodeInstance</em>.port;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -40,7 +40,7 @@ tags:
 <p>First, we need to define a custom <code>AudioWorkletProcessor</code>, and register it.
   Note that this should be done in a separate file.</p>
 
-<pre class="brush: js notranslate">// ping-pong-processor.js
+<pre class="brush: js">// ping-pong-processor.js
 class PingPongProcessor extends AudioWorkletProcessor {
   constructor (...args) {
     super(...args)
@@ -61,7 +61,7 @@ registerProcessor('ping-pong-processor', PingPongProcessor)
   <code>AudioWorkletNode</code> passing the name of the processor, and connect the node to
   an audio graph.</p>
 
-<pre class="brush: js notranslate">const audioContext = new AudioContext()
+<pre class="brush: js">const audioContext = new AudioContext()
 await audioContext.audioWorklet.addModule('ping-pong-processor.js')
 const pingPongNode = new AudioWorkletNode(audioContext, 'ping-pong-processor')
 // send the message containing 'ping' string

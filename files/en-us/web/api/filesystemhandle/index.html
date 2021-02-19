@@ -51,7 +51,7 @@ tags:
 
 <p>The below code allows the user to choose a file from the file picker and then tests to see whether the handle returned is a file or directory</p>
 
-<pre class="brush: js notranslate">// store a reference to our file handle
+<pre class="brush: js">// store a reference to our file handle
 let fileHandle;
 
 async function getFile() {
@@ -71,7 +71,7 @@ async function getFile() {
 
 <p>The following asynchronous function returns true if user has granted read or readwrite permissions to the file handle. Permission is requested if not.</p>
 
-<pre class="brush: js notranslate">// fileHandle is a FileSystemFileHandle
+<pre class="brush: js">// fileHandle is a FileSystemFileHandle
 // withWrite is a boolean set to true if write
 
 async function verifyPermission(fileHandle, withWrite) {
@@ -99,7 +99,7 @@ async function verifyPermission(fileHandle, withWrite) {
 
 <p>The following function compares a single entry with an array of entries, and returns a new array with any matching entries removed.</p>
 
-<pre class="brush: js notranslate">function removeMatches(fileEntry, entriesArr) {
+<pre class="brush: js">function removeMatches(fileEntry, entriesArr) {
 
   let newArr = entriesArr.filter( entry =&gt; !fileEntry.isSameEntry(entry) )
 

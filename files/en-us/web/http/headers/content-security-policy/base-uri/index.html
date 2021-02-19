@@ -33,7 +33,7 @@ tags:
 
 <p>One or more<em>sources</em> can be allowed for the base-uri policy:</p>
 
-<pre class="brush: html notranslate">Content-Security-Policy: base-uri &lt;source&gt;;
+<pre class="brush: html">Content-Security-Policy: base-uri &lt;source&gt;;
 Content-Security-Policy: base-uri &lt;source&gt; &lt;source&gt;;
 </pre>
 
@@ -47,23 +47,23 @@ Content-Security-Policy: base-uri &lt;source&gt; &lt;source&gt;;
 
 <h3 id="Meta_tag_configuration">Meta tag configuration</h3>
 
-<pre class="brush: html notranslate">&lt;meta http-equiv="Content-Security-Policy" content="base-uri 'self'"&gt;</pre>
+<pre class="brush: html">&lt;meta http-equiv="Content-Security-Policy" content="base-uri 'self'"&gt;</pre>
 
 <h3 id="Apache_configuration">Apache configuration</h3>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_headers.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_headers.c&gt;
 Header set Content-Security-Policy "base-uri 'self'";
 &lt;/IfModule&gt;</pre>
 
 <h3 id="Nginx_configuration">Nginx configuration</h3>
 
-<pre class="brush: bash notranslate">add_header Content-Security-Policy "base-uri 'self';"</pre>
+<pre class="brush: bash">add_header Content-Security-Policy "base-uri 'self';"</pre>
 
 <h3 id="Violation_case">Violation case</h3>
 
 <p>Since your domain isn't <code>example.com</code>, a {{HTMLElement("base")}} element with its <code>href</code> set to <code>https://example.com</code> will result in a CSP violation.</p>
 
-<pre class="brush: html; example-bad notranslate">&lt;meta http-equiv="Content-Security-Policy" content="base-uri 'self'"&gt;
+<pre class="brush: html; example-bad">&lt;meta http-equiv="Content-Security-Policy" content="base-uri 'self'"&gt;
 &lt;base href="https://example.com/"&gt;
 
 // Error: Refused to set the document's base URI to 'https://example.com/'

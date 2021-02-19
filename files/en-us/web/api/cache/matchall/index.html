@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>cache</em>.matchAll(<em>request</em>, {<em>options</em>}).then(function(<em>response</em>) {
+<pre class="brush: js"><em>cache</em>.matchAll(<em>request</em>, {<em>options</em>}).then(function(<em>response</em>) {
   // do something with the response array
 });
 </pre>
@@ -67,7 +67,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">caches.open('v1').then(function(cache) {
+<pre class="brush: js">caches.open('v1').then(function(cache) {
   cache.matchAll('/images/').then(function(response) {
     response.forEach(function(element, index, array) {
       cache.delete(element);
