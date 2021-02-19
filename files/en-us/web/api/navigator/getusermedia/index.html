@@ -37,7 +37,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-   class="brush: js notranslate">navigator.getUserMedia(<var>constraints</var>, <var>successCallback</var>, <var>errorCallback</var>);</pre>
+   class="brush: js">navigator.getUserMedia(<var>constraints</var>, <var>successCallback</var>, <var>errorCallback</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -56,7 +56,7 @@ tags:
       contains the media stream. Your callback can then assign the stream to the desired
       object (such as an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element), as
       shown in the following example:
-      <pre class="brush: js notranslate">function(stream) {
+      <pre class="brush: js">function(stream) {
    var video = document.querySelector('video');
    video.srcObject = stream;
    video.onloadedmetadata = function(e) {
@@ -88,7 +88,7 @@ tags:
    <a href="/en-US/docs/Web/API/MediaDevices/getUserMedia#Frame_rate">Examples</a> section
    under the {{domxref("MediaDevices.getUserMedia()")}} for modern examples.</p>
 
-<pre class="brush: js notranslate">navigator.getUserMedia = navigator.getUserMedia ||
+<pre class="brush: js">navigator.getUserMedia = navigator.getUserMedia ||
                          navigator.webkitGetUserMedia ||
                          navigator.mozGetUserMedia;
 
@@ -117,7 +117,7 @@ if (navigator.getUserMedia) {
       OS app</a>), you need to specify one or both of the following fields inside your
    manifest file:</p>
 
-<pre class="brush: js notranslate">"permissions": {
+<pre class="brush: js">"permissions": {
   "audio-capture": {
     "description": "Required to capture audio using getUserMedia()"
   },

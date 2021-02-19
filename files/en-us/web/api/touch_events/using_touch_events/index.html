@@ -57,7 +57,7 @@ tags:
 
 <p>Register an event handler for each touch event type.</p>
 
-<pre class="brush: js notranslate">// Register touch event handlers
+<pre class="brush: js">// Register touch event handlers
 someElement.addEventListener('touchstart', process_touchstart, false);
 someElement.addEventListener('touchmove', process_touchmove, false);
 someElement.addEventListener('touchcancel', process_touchcancel, false);
@@ -66,7 +66,7 @@ someElement.addEventListener('touchend', process_touchend, false);
 
 <p>Process an event in an event handler, implementing the application's gesture semantics.</p>
 
-<pre class="brush: js notranslate">// touchstart handler
+<pre class="brush: js">// touchstart handler
 function process_touchstart(ev) {
   // Use the event's data to call out to the appropriate gesture handlers
   switch (ev.touches.length) {
@@ -80,7 +80,7 @@ function process_touchstart(ev) {
 
 <p>Access the attributes of a touch point.</p>
 
-<pre class="brush: js notranslate">// Create touchstart handler
+<pre class="brush: js">// Create touchstart handler
 someElement.addEventListener('touchstart', function(ev) {
   // Iterate through the touch points that were activated
   // for this element and process each event 'target'
@@ -92,7 +92,7 @@ someElement.addEventListener('touchstart', function(ev) {
 
 <p>Prevent the browser from processing <em>emulated mouse events</em>.</p>
 
-<pre class="brush: js notranslate">// touchmove handler
+<pre class="brush: js">// touchmove handler
 function process_touchmove(ev) {
   // Set call preventDefault()
   ev.preventDefault();

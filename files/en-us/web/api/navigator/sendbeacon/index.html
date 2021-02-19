@@ -26,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">navigator.sendBeacon(<var>url</var>, <var>data</var>);
+<pre class="brush: js">navigator.sendBeacon(<var>url</var>, <var>data</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -79,7 +79,7 @@ tags:
   a server with a synchronous <code>XMLHttpRequest</code> in an <code>unload</code>
   handler. This results in the next page load to be delayed.</p>
 
-<pre class="brush: js notranslate">window.addEventListener("unload", function logData() {
+<pre class="brush: js">window.addEventListener("unload", function logData() {
   var xhr = new XMLHttpRequest();
   xhr.open("POST", "/log", false); // third parameter of `false` means synchronous
   xhr.send(analyticsData);

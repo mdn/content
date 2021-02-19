@@ -15,14 +15,14 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>self</em>.oninstall = function(event) { ... };
+<pre class="brush: js"><em>self</em>.oninstall = function(event) { ... };
 </pre>
 
 <h2 id="Examples">Examples</h2>
 
 <p>The following snippet shows how an <code>install</code> event handler can be used to populate a cache with a number of responses, which the service worker can then use to serve assets offline:</p>
 
-<pre class="brush: js notranslate">self.oninstall = function(event) {
+<pre class="brush: js">self.oninstall = function(event) {
   event.waitUntil(
    caches.open('v1').then(function(cache) {
          return cache.add(
