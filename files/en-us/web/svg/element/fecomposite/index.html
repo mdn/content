@@ -19,46 +19,45 @@ tags:
     <th>Description</th>
   </tr>
   <tr>
-    <td><p>over <img src="operation_over.png" title="over operator" width="300"></p></td>
+    <td><p>over <img src="operation_over.png" alt="over operator" width="300"></p></td>
     <td>The source graphic defined by the {{SVGAttr("in")}} attribute (the MDN logo) is placed over the destination graphic defined by the {{SVGAttr("in2")}} attribute (the circle).
       <p>This is the <em>default operation</em>, which will be used if no operation or an unsupported operation is specified.</p>
     </td>
   </tr>
   <tr>
-    <td><p>in <img src="operation_in.png" title="in operator"></p></td>
+    <td><p>in <img src="operation_in.png" alt="in operator"></p></td>
     <td>The parts of the source graphic defined by the <code>in</code> attribute that overlap the destination graphic defined in the <code>in2</code> attribute, replace the destination graphic.</td>
   </tr>
   <tr>
-    <td><p>over <img src="operation_out.png" title="out operator"> </p></td>
+    <td><p>out <img src="operation_out.png" alt="out operator"> </p></td>
     <td>The parts of the source graphic defined by the <code>in</code> attribute that fall outside the destination graphic defined in the <code>in2</code> attribute, are displayed.</td>
   </tr>
   <tr>
-    <td><p>atop <img src="operation_atop.png" title="atop operator"></p></td>
+    <td><p>atop <img src="operation_atop.png" alt="atop operator"></p></td>
     <td>The parts of the source graphic defined in the <code>in</code> attribute, which overlap the destination graphic defined in the <code>in2</code> attribute, replace the destination graphic. The parts of the destination graphic that do not overlap with the source graphic stay untouched.</td>
   </tr>
   <tr>
-    <td><p>xor <img src="operation_xor.png" title="xor operator"></p></td>
+    <td><p>xor <img src="operation_xor.png" alt="xor operator"></p></td>
     <td>The non-overlapping regions of the source graphic defined in the <code>in</code> attribute and the destination graphic defined in the <code>in2</code> attribute are combined.</td>
   </tr>
   <tr>
-    <td><p>lighter <img src="operation_lighter.png" title="lighter operator"> </p></td>
+    <td><p>lighter <img src="operation_lighter.png" alt="lighter operator"> </p></td>
     <td>The sum of the source graphic defined in the <code>in</code> attribute and the destination graphic defined in the <code>in2</code> attribute is displayed.</td>
   </tr>
   <tr>
-      <td><p>arithmetic <img src="operation_arithmetic.png" title="arithmetic operator"></p></td>
-      <td>
-        <p>The <code>arithmetic</code> operation is useful for combining the output from the {{SVGElement("feDiffuseLighting")}} and {{SVGElement("feSpecularLighting")}} filters with texture data. If the <code>arithmetic</code> operation is chosen, each result pixel is computed using the following formula:</p>
+    <td><p>arithmetic <img src="operation_arithmetic.png" alt="arithmetic operator"></p></td>
+    <td>
+      <p>The <code>arithmetic</code> operation is useful for combining the output from the {{SVGElement("feDiffuseLighting")}} and {{SVGElement("feSpecularLighting")}} filters with texture data. If the <code>arithmetic</code> operation is chosen, each result pixel is computed using the following formula:</p>
 
-        <pre class="brush: plain">result = k1*i1*i2 + k2*i1 + k3*i2 + k4</pre>
+      <pre class="brush: plain">result = k1*i1*i2 + k2*i1 + k3*i2 + k4</pre>
 
-        <p>where:</p>
-        <ul>
-          <li><code>i1</code> and <code>i2</code> indicate the corresponding pixel channel values of the input image, which map to {{SVGAttr("in")}} and {{SVGAttr("in2")}} respectively</li>
-          <li>{{SVGAttr("k1")}},{{SVGAttr("k2")}},{{SVGAttr("k3")}},and {{SVGAttr("k4")}} indicate the values of the attributes with the same name.</li>
-        </ul>
-        </td>
+      <p>where:</p>
+      <ul>
+        <li><code>i1</code> and <code>i2</code> indicate the corresponding pixel channel values of the input image, which map to {{SVGAttr("in")}} and {{SVGAttr("in2")}} respectively</li>
+        <li>{{SVGAttr("k1")}}, {{SVGAttr("k2")}}, {{SVGAttr("k3")}}, and {{SVGAttr("k4")}} indicate the values of the attributes with the same name.</li>
+      </ul>
+    </td>
   </tr>
-
 </table>
 
 <h2 id="Usage_context">Usage context</h2>
@@ -70,27 +69,25 @@ tags:
 <h3 id="Global_attributes">Global attributes</h3>
 
 <ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#presentation_attributes">Presentation attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes">Filter primitive attributes</a> »</li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
+  <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a> »</li>
+  <li><a href="/en-US/docs/Web/SVG/Attribute#presentation_attributes">Presentation attributes</a> »</li>
+  <li><a href="/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes">Filter primitive attributes</a> »</li>
+  <li>{{SVGAttr("class")}}</li>
+  <li>{{SVGAttr("style")}}</li>
 </ul>
 
 <h3 id="Specific_attributes">Specific attributes</h3>
 
 <ul>
- <li>{{SVGAttr("in")}}: First input for the given filter primitive.</li>
- <li>{{SVGAttr("in2")}}: Second input for the given filter primitive (works the same as the <code>in</code> attribute).</li>
- <li>{{SVGAttr("operator")}}: <code>over</code> | <code>in</code> | <code>out</code> | <code>atop</code> | <code>xor</code> | <code>lighter</code> | <code>arithmetic</code></li>
- <li>{{SVGAttr("k1")}}, {{SVGAttr("k2")}}, {{SVGAttr("k3")}}, {{SVGAttr("k4")}}: Values used for calculating the result pixel in <code>arithmetic</code> {{SVGAttr("operator")}} filter primitives.</li>
+  <li>{{SVGAttr("in")}}: First input for the given filter primitive.</li>
+  <li>{{SVGAttr("in2")}}: Second input for the given filter primitive (works the same as the <code>in</code> attribute).</li>
+  <li>{{SVGAttr("operator")}}: <code>over</code> | <code>in</code> | <code>out</code> | <code>atop</code> | <code>xor</code> | <code>lighter</code> | <code>arithmetic</code></li>
+  <li>{{SVGAttr("k1")}}, {{SVGAttr("k2")}}, {{SVGAttr("k3")}}, {{SVGAttr("k4")}}: Values used for calculating the result pixel in <code>arithmetic</code> {{SVGAttr("operator")}} filter primitives.</li>
 </ul>
-
 
 <h2 id="DOM_Interface">DOM Interface</h2>
 
 <p>This element implements the {{domxref("SVGFECompositeElement")}} interface.</p>
-
 
 <h2 id="Example">Example</h2>
 
@@ -108,7 +105,7 @@ tags:
 
 <div class="notecard note">
   <h4>Note</h4>
-  <p><code>BackgroundImage</code> cannot be used as a compositing source on modern browsers, so we can't define a filter that composites using whatever pixels happen to be under the filter as one of the sources. The approach above is a <a href="/en-US/docs/Web/SVG/Attribute/in#workaround_for_backgroundimage">Workaround because we can't use <code>BackgroundImage</code></a>.</p>
+  <p><code>BackgroundImage</code> cannot be used as a compositing source on modern browsers, so we can't define a filter that composites using whatever pixels happen to be under the filter as one of the sources. The approach above is a <a href="/en-US/docs/Web/SVG/Attribute/in#workaround_for_backgroundimage">workaround because we can't use <code>BackgroundImage</code></a>.</p>
 </div>
 
 <h3 id="SVG">SVG</h3>
@@ -176,7 +173,6 @@ tags:
 </pre>
 
 <h3 id="Result">Result</h3>
-
 
 <p>The image below shows the rendered file.</p>
 
@@ -246,25 +242,25 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Filters 1.0', '#feCompositeElement', '&lt;feComposite&gt;')}}</td>
-   <td>{{Spec2('Filters 1.0')}}</td>
-   <td>Added <code>lighter</code> value for <code>operator</code> attribute.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'filters.html#feCompositeElement', '&lt;feComposite&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Filters 1.0', '#feCompositeElement', '&lt;feComposite&gt;')}}</td>
+      <td>{{Spec2('Filters 1.0')}}</td>
+      <td>Added <code>lighter</code> value for <code>operator</code> attribute.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('SVG1.1', 'filters.html#feCompositeElement', '&lt;feComposite&gt;')}}</td>
+      <td>{{Spec2('SVG1.1')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -274,23 +270,23 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{SVGElement("filter")}}</li>
- <li>{{SVGElement("animate")}}</li>
- <li>{{SVGElement("set")}}</li>
- <li>{{SVGElement("feBlend")}}</li>
- <li>{{SVGElement("feColorMatrix")}}</li>
- <li>{{SVGElement("feComponentTransfer")}}</li>
- <li>{{SVGElement("feConvolveMatrix")}}</li>
- <li>{{SVGElement("feDiffuseLighting")}}</li>
- <li>{{SVGElement("feDisplacementMap")}}</li>
- <li>{{SVGElement("feFlood")}}</li>
- <li>{{SVGElement("feGaussianBlur")}}</li>
- <li>{{SVGElement("feImage")}}</li>
- <li>{{SVGElement("feMerge")}}</li>
- <li>{{SVGElement("feMorphology")}}</li>
- <li>{{SVGElement("feOffset")}}</li>
- <li>{{SVGElement("feSpecularLighting")}}</li>
- <li>{{SVGElement("feTile")}}</li>
- <li>{{SVGElement("feTurbulence")}}</li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Filter_effects">SVG tutorial: Filter effects</a></li>
+  <li>{{SVGElement("filter")}}</li>
+  <li>{{SVGElement("animate")}}</li>
+  <li>{{SVGElement("set")}}</li>
+  <li>{{SVGElement("feBlend")}}</li>
+  <li>{{SVGElement("feColorMatrix")}}</li>
+  <li>{{SVGElement("feComponentTransfer")}}</li>
+  <li>{{SVGElement("feConvolveMatrix")}}</li>
+  <li>{{SVGElement("feDiffuseLighting")}}</li>
+  <li>{{SVGElement("feDisplacementMap")}}</li>
+  <li>{{SVGElement("feFlood")}}</li>
+  <li>{{SVGElement("feGaussianBlur")}}</li>
+  <li>{{SVGElement("feImage")}}</li>
+  <li>{{SVGElement("feMerge")}}</li>
+  <li>{{SVGElement("feMorphology")}}</li>
+  <li>{{SVGElement("feOffset")}}</li>
+  <li>{{SVGElement("feSpecularLighting")}}</li>
+  <li>{{SVGElement("feTile")}}</li>
+  <li>{{SVGElement("feTurbulence")}}</li>
+  <li><a href="/en-US/docs/Web/SVG/Tutorial/Filter_effects">SVG tutorial: Filter effects</a></li>
 </ul>
