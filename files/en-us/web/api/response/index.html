@@ -94,9 +94,9 @@ tags:
 <p>You'll notice that since we are requesting an image, we need to run {{domxref("Body.blob")}} ({{domxref("Response")}} implements Body) to give the response its correct MIME type.</p>
 
 <pre class="brush: js">const image = document.querySelector('.my-image');
-fetch('flowers.jpg').then(function(response) {
+fetch('flowers.jpg').then((response) =&gt; {
   return response.blob();
-}).then(function(blob) {
+}).then((blob) =&gt; {
   const objectURL = URL.createObjectURL(blob);
   image.src = objectURL;
 });</pre>
@@ -113,10 +113,9 @@ fetch('flowers.jpg').then(function(response) {
 const doAjax = async () =&gt; {
     const response = await fetch('Ajax.php'); // Generate the Response object
     if (response.ok) {
-        const jVal = await response.json(); // Get JSON value from the response body
-        return Promise.resolve(jVal);
-        }
-    else {
+        const jsonValue = await response.json(); // Get JSON value from the response body
+        return Promise.resolve(jsonValue);
+    } else {
         return Promise.reject('*** PHP file not found');
     }
 }
