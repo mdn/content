@@ -252,10 +252,10 @@ let a = Math.PI * 0.3; //Rotation amount in radians
 
 // Rotate around Z axis
 let rotateZMatrix = [
-   cos(a), sin(a),    0,    0,
-  -sin(a), cos(a),    0,    0,
-        0,      0,    1,    0,
-        0,      0,    0,    1
+  cos(a), -sin(a),    0,    0,
+  sin(a),  cos(a),    0,    0,
+       0,       0,    1,    0,
+       0,       0,    0,    1
 ];
 </pre>
 
@@ -267,28 +267,28 @@ let rotateZMatrix = [
 
 <pre class="brush: js notranslate">function rotateAroundXAxis(a) {
   return [
-       1,        0,       0,     0,
-       0,   cos(a),  sin(a),     0,
-       0,  -sin(a),  cos(a),     0,
-       0,        0,       0,     1
+       1,       0,        0,     0,
+       0,  cos(a),  -sin(a),     0,
+       0,  sin(a),   cos(a),     0,
+       0,       0,        0,     1
   ];
 }
 
 function rotateAroundYAxis(a) {
   return [
-    cos(a),   0, -sin(a),   0,
-         0,   1,       0,   0,
-    sin(a),   0,  cos(a),   0,
-         0,   0,       0,   1
+     cos(a),   0, sin(a),   0,
+          0,   1,      0,   0,
+    -sin(a),   0, cos(a),   0,
+          0,   0,      0,   1
   ];
 }
 
 function rotateAroundZAxis(a) {
   return [
-     cos(a), sin(a),    0,    0,
-    -sin(a), cos(a),    0,    0,
-          0,      0,    1,    0,
-          0,      0,    0,    1
+    cos(a), -sin(a),    0,    0,
+    sin(a),  cos(a),    0,    0,
+         0,       0,    1,    0,
+         0,       0,    0,    1
   ];
 }
 </pre>
