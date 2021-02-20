@@ -80,7 +80,7 @@ o3 instanceof C        // true since C.prototype is now in o3's prototype chain
   different built-ins (different global object, different constructors, etc.). This may
   result in unexpected results. For instance,
   <code>[] instanceof window.frames[0].Array</code> will return <code>false</code>,
-  because <code>Array.prototype !== </code><code>window.frames[0].Array</code> and arrays
+  because <code>Array.prototype !== </code><code>window.frames[0].Array.prototype</code> and arrays
   inherit from the former.</p>
 
 <p>This may not make sense at first, but for scripts dealing with multiple frames or
@@ -88,7 +88,7 @@ o3 instanceof C        // true since C.prototype is now in o3's prototype chain
   valid and strong issue. For instance, you can securely check if a given object is, in
   fact, an Array using <code>Array.isArray(<var>myObj</var>)</code></p>
 
-<p>For example, checking if a <a href="/en-US/docs/Web/API/Node">Nodes</a> is a <a
+<p>For example, checking if a <a href="/en-US/docs/Web/API/Node">Node</a> is a <a
     href="/en-US/docs/Web/API/SVGElement">SVGElement</a> in a different context, you can
   use <code>myNode instanceof myNode.ownerDocument.defaultView.SVGElement</code>.</p>
 
@@ -112,15 +112,12 @@ o3 instanceof C        // true since C.prototype is now in o3's prototype chain
 
 <h3 id="Demonstrating_that_String_and_Date_are_of_type_Object_and_exceptional_cases">
   Demonstrating that <code>String</code> and <code>Date</code> are of type
-  <code>Object</code> and exceptional cases</h3>
+  <code>Object</code></h3>
 
 <p>The following code uses <code>instanceof</code> to demonstrate that <code>String</code>
   and <code>Date</code> objects are also of type <code>Object</code> (they are derived
   from <code>Object</code>).</p>
 
-<p>However, objects created with the object literal notation are an exception here:
-  Although the prototype is <code>undefined</code>, <code>instanceof Object</code> returns
-  <code>true</code>.</p>
 
 <pre class="brush: js">let simpleStr = 'This is a simple string'
 let myString  = new String()
