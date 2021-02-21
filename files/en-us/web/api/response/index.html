@@ -94,9 +94,9 @@ tags:
 <p>You'll notice that since we are requesting an image, we need to run {{domxref("Body.blob")}} ({{domxref("Response")}} implements Body) to give the response its correct MIME type.</p>
 
 <pre class="brush: js">const image = document.querySelector('.my-image');
-fetch('flowers.jpg').then((response) =&gt; {
-  return response.blob();
-}).then((blob) =&gt; {
+fetch('flowers.jpg')
+.then(response =&gt; response.blob())
+.then(blob =&gt; {
   const objectURL = URL.createObjectURL(blob);
   image.src = objectURL;
 });</pre>
