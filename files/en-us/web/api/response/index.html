@@ -111,13 +111,13 @@ fetch('flowers.jpg')
 
 <pre class="brush: js">// Function to do an Ajax call
 const doAjax = async () =&gt; {
-    const response = await fetch('Ajax.php'); // Generate the Response object
-    if (response.ok) {
-        const jsonValue = await response.json(); // Get JSON value from the response body
-        return Promise.resolve(jsonValue);
-    } else {
-        return Promise.reject('*** PHP file not found');
-    }
+  const response = await fetch('Ajax.php'); // Generate the Response object
+  if (response.ok) {
+    const jsonValue = await response.json(); // Get JSON value from the response body
+    return Promise.resolve(jsonValue);
+  } else {
+    return Promise.reject('*** PHP file not found');
+  }
 }
 
 // Call the function and output value or error message to console
