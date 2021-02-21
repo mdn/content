@@ -48,9 +48,7 @@ tags:
     <td><p>arithmetic <img src="operation_arithmetic.png" alt="arithmetic operator"></p></td>
     <td>
       <p>The <code>arithmetic</code> operation is useful for combining the output from the {{SVGElement("feDiffuseLighting")}} and {{SVGElement("feSpecularLighting")}} filters with texture data. If the <code>arithmetic</code> operation is chosen, each result pixel is computed using the following formula:</p>
-
       <pre class="brush: plain">result = k1*i1*i2 + k2*i1 + k3*i2 + k4</pre>
-
       <p>where:</p>
       <ul>
         <li><code>i1</code> and <code>i2</code> indicate the corresponding pixel channel values of the input image, which map to {{SVGAttr("in")}} and {{SVGAttr("in2")}} respectively</li>
@@ -69,9 +67,9 @@ tags:
 <h3 id="Global_attributes">Global attributes</h3>
 
 <ul>
-  <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a> »</li>
-  <li><a href="/en-US/docs/Web/SVG/Attribute#presentation_attributes">Presentation attributes</a> »</li>
-  <li><a href="/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes">Filter primitive attributes</a> »</li>
+  <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a></li>
+  <li><a href="/en-US/docs/Web/SVG/Attribute#presentation_attributes">Presentation attributes</a></li>
+  <li><a href="/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes">Filter primitive attributes</a></li>
   <li>{{SVGAttr("class")}}</li>
   <li>{{SVGAttr("style")}}</li>
 </ul>
@@ -93,15 +91,14 @@ tags:
 
 <p>This example defines filters for each of the supported operations (<code>over</code>, <code>atop</code>, <code>lighter</code>, etc.), which composite an input <code>SourceGraphic</code> with an image of the MDN logo. The filters are each applied to a circle element, which is then used as the <code>SourceGraphic</code>. The relevant code for just one filter (<code>lighter</code>) is shown below:</p>
 
-  <pre class="brush: xml">
-    &lt;defs&gt;
-      &lt;filter id="imageLighter"&gt;
-        &lt;feImage xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png" x="10px" y="10px" width="160px" /&gt;
-        &lt;feComposite in2="SourceGraphic" operator="lighter"/&gt;
-      &lt;/filter&gt;
-    &lt;/defs&gt;
-    &lt;circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageLighter)"/&gt;
-  </pre>
+<pre class="brush: xml">&lt;defs&gt;
+  &lt;filter id="imageLighter"&gt;
+    &lt;feImage xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png" x="10px" y="10px" width="160px" /&gt;
+    &lt;feComposite in2="SourceGraphic" operator="lighter"/&gt;
+  &lt;/filter&gt;
+&lt;/defs&gt;
+&lt;circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageLighter)"/&gt;
+</pre>
 
 <div class="notecard note">
   <h4>Note</h4>
