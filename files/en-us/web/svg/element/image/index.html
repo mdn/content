@@ -15,8 +15,9 @@ tags:
 
 <p>SVG files displayed with <code>&lt;image&gt;</code> are <a href="/en-US/docs/Web/SVG/SVG_as_an_Image">treated as an image</a>: external resources aren't loaded, {{cssxref(":visited")}} styles <a href="/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector">aren't applied</a>, and they cannot be interactive. To include dynamic SVG elements, try {{SVGElement("use")}} with an external URL. To include SVG files and run scripts inside them, try {{HTMLElement("object")}} inside of {{SVGElement("foreignObject")}}.</p>
 
-<div class="note">
-<p><strong>Note:</strong> The HTML spec defines <code>&lt;image&gt;</code> as a synonym for {{HTMLElement("img")}} while parsing HTML. This specific element and its behavior only apply inside SVG documents or <a href="/en-US/docs/SVG_In_HTML_Introduction">inline SVG</a>.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>The HTML spec defines <code>&lt;image&gt;</code> as a synonym for {{HTMLElement("img")}} while parsing HTML. This specific element and its behavior only apply inside SVG documents or <a href="/en-US/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction">inline SVG</a>.</p>
 </div>
 
 <h2 id="Usage_context">Usage context</h2>
@@ -28,26 +29,27 @@ tags:
 <h3 id="Global_attributes">Global attributes</h3>
 
 <ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Conditional_processing_attributes">Conditional processing attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Core_attributes">Core attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Graphical_event_attributes">Graphical event attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Presentation_attributes">Presentation attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Xlink_attributes">Xlink attributes</a></li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
- <li>{{SVGAttr("transform")}}</li>
+  <li><a href="/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes">Conditional processing attributes</a></li>
+  <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a></li>
+  <li><a href="/en-US/docs/Web/SVG/Attribute#graphical_event_attributes">Graphical event attributes</a></li>
+  <li><a href="/en-US/docs/Web/SVG/Attribute#presentation_attributes">Presentation attributes</a></li>
+  <li><a href="/en-US/docs/Web/SVG/Attribute#xlink_attributes">Xlink attributes</a></li>
+  <li>{{SVGAttr("class")}}</li>
+  <li>{{SVGAttr("style")}}</li>
+  <li>{{SVGAttr("externalResourcesRequired")}}</li>
+  <li>{{SVGAttr("transform")}}</li>
 </ul>
 
 <h3 id="Specific_attributes">Specific attributes</h3>
 
 <ul>
- <li>{{SVGAttr("x")}}: Positions the image horizontally from the origin.</li>
- <li>{{SVGAttr("y")}}: Positions the image vertically from the origin.</li>
- <li>{{SVGAttr("width")}}: The width the image renders at. Unlike HTML's <code>&lt;img&gt;</code>, this attribute is required.</li>
- <li>{{SVGAttr("height")}}: The height the image renders at. Unlike HTML's <code>&lt;img&gt;</code>, this attribute is required.</li>
- <li>{{SVGAttr("href")}} and {{SVGAttr("xlink:href")}}: Points at a URL for the image file.</li>
- <li>{{SVGAttr("preserveAspectRatio")}}: Controls how the image is scaled.</li>
+  <li>{{SVGAttr("x")}}: Positions the image horizontally from the origin.</li>
+  <li>{{SVGAttr("y")}}: Positions the image vertically from the origin.</li>
+  <li>{{SVGAttr("width")}}: The width the image renders at. Unlike HTML's <code>&lt;img&gt;</code>, this attribute is required.</li>
+  <li>{{SVGAttr("height")}}: The height the image renders at. Unlike HTML's <code>&lt;img&gt;</code>, this attribute is required.</li>
+  <li>{{SVGAttr("href")}} and {{SVGAttr("xlink:href")}}: Points at a URL for the image file.</li>
+  <li>{{SVGAttr("preserveAspectRatio")}}: Controls how the image is scaled.</li>
+  <li>{{SVGAttr("crossorigin")}}: A CORS settings attribute.</li>
 </ul>
 
 <h2 id="DOM_Interface">DOM Interface</h2>
@@ -73,25 +75,25 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('SVG2', 'embedded.html#ImageElement', '&lt;image&gt;')}}</td>
-   <td>{{Spec2('SVG2')}}</td>
-   <td>Allows omitting <code>height</code> and <code>width</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'struct.html#ImageElement', '&lt;image&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('SVG2', 'embedded.html#ImageElement', '&lt;image&gt;')}}</td>
+      <td>{{Spec2('SVG2')}}</td>
+      <td>Allows omitting <code>height</code> and <code>width</code> and introduced <code>crossorigin</code></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('SVG1.1', 'struct.html#ImageElement', '&lt;image&gt;')}}</td>
+      <td>{{Spec2('SVG1.1')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
