@@ -99,8 +99,13 @@ postData('https://example.com/answer', { answer: 42 })
 <div class="notecard note">
   <h4>Note</h4>
   <p><code>Access-Control-Allow-Origin</code> is prohibited from using a wildcard for requests with <code>credentials: 'include'</code>. In such cases, the exact origin must be provided; even if you are using a CORS unblocker extension, the requests will still fail.</p>
-  <p>For more information cross-origin requests with credentials see: <a href="/en-US/docs/Web/HTTP/CORS#requests_with_credentials">CORS > Requests with credentials</a>.</p>
 </div>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Credentials are not usually sent in <em>preflight requests</em> irrespective of this setting. For more information see: <a href="/en-US/docs/Web/HTTP/CORS#requests_with_credentials">CORS > Requests with credentials</a>.</p>
+</div>
+
 
 <p>If you only want to send credentials if the request URL is on the same origin as the calling script, add <code>credentials: 'same-origin'</code>.</p>
 
