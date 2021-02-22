@@ -9,12 +9,18 @@ tags:
   - media feature
   - prefers-color-scheme
 ---
-<div class="notecard note">
-<p>If you have set <code>privacy.resistFingerprinting</code> to <strong>true</strong>, {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} preference is overridden to <code>light</code>.<br>
- Alternately, users can create the numeric preference <code>ui.systemUsesDarkTheme</code> to override the default behavior and return <code>light</code> (value: 0), <code>dark</code> (value: 1), or <code>no-preference</code> (value: 2). (Any other value causes Firefox to return <code>light</code>.)</p>
-</div>
 
-<p>The <strong><code>prefers-color-scheme</code></strong> <a href="/en-US/docs/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">media feature</a> is used to detect if the user has requested the system use a light or dark color theme.</p>
+<p>The <strong><code>prefers-color-scheme</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media feature</a> is used to detect if the host operating system uses a light or dark color theme.</p>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Firefox preferences can override the value returned by {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}:</p>
+  <ul>
+    <li>If <code>privacy.resistFingerprinting</code> is set to <strong>true</strong>, {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} always returns <code>light</code>.</li>
+    <li>Numeric preference <code>ui.systemUsesDarkTheme</code> can be set to <code>0</code> for <code>light</code>, <code>1</code> for <code>dark</code>, <code>2</code> for <code>no-preference</code>. Any other value causes Firefox to return <code>light</code>.</li>
+  </ul>
+   <p>Light and dark modes can also be simulated using the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#view_media_rules_for_color-scheme-preference">Firefox Page Inspector</a>.</li>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 
