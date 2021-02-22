@@ -17,7 +17,8 @@ tags:
 
 <ul>
   <li>The <code>cd()</code> <a href="/en-US/docs/Tools/Web_Console/Helpers">web console helper function</a>, which was deprecated in Firefox 74, has now been removed. The <code>&lt;iframe&gt;</code> context picker tool described in <a href="/en-US/docs/Tools/Working_with_iframes">Working with iframes</a> serves the same purpose, but is much better! For more information see {{bug(1607741)}}.</li>
-  <li>There are two changes regarding warnings for inactive CSS. One marks {{cssxref("margin")}} or {{cssxref("padding")}} properties being set on internal table elements as inactive (see {{bug(1551569)}}). The other one makes {{cssxref("order")}} valid for grid layout (see {{bug(1579017)}}).</li>
+  <li>The different {{cssxref("margin")}} and {{cssxref("padding")}} shorthand and longhand properties are now marked as inactive on internal table elements because they have no effect on them. ({{bug(1551569)}}).</li>
+  <li>The {{cssxref("order")}} property was previously incorrectly marked as inactive for grid items. This got fixed in {{bug(1579017)}}.</li>
 </ul>
 
 <h3 id="HTML">HTML</h3>
