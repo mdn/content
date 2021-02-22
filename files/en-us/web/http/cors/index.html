@@ -361,7 +361,7 @@ Content-Type: text/plain
 <div class="notecard note">
   <h4>Note</h4>
   <p>A small number of enterprise authentication services require TLS client certificates be sent in preflight requests, in contravention of the {{SpecName("Fetch","#cors-protocol-and-credentials")}} specification.</p>
-  <p>Firefox 87 allows this behaviour to be enabled by setting the preference: <code>network.cors_preflight.allow_client_cert</code> to <code>true</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1511151">Bug 1511151</a>). Chromium based browsers currently always send TLS client certificates in CORS preflight requests (<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=775438">Chrome bug 775438</a>).</p>
+  <p>Firefox 87 allows this non-compliant behaviour to be enabled by setting the preference: <code>network.cors_preflight.allow_client_cert</code> to <code>true</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1511151">Bug 1511151</a>). Chromium based browsers currently always send TLS client certificates in CORS preflight requests (<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=775438">Chrome bug 775438</a>).</p>
 </div>
 
 <h4 id="Credentialed_requests_and_wildcards">Credentialed requests and wildcards</h4>

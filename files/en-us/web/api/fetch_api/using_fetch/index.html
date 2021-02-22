@@ -25,7 +25,7 @@ tags:
 
 <ul>
  <li>The Promise returned from <code>fetch()</code> <strong>won’t reject on HTTP error status</strong> even if the response is an HTTP 404 or 500. Instead, it will resolve normally (with <code>ok</code> status set to false), and it will only reject on network failure or if anything prevented the request from completing.</li>
- <li><code>fetch()</code> <strong><s>won't</s> can receive cross-site cookies</strong>; you <s>can’t</s> can establish a cross site session using fetch. <s>{{HTTPHeader("Set-Cookie")}} headers from other sites are silently ignored.</s></li>
+ <li><code>fetch()</code> <strong>can receive cross-site cookies</strong>; you can establish a cross site session using fetch.</li> 
  <li><code>fetch</code><strong> won’t send cookies</strong>, unless you set the <em>credentials</em> <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#parameters">init option</a>. (Since <a href="https://github.com/whatwg/fetch/pull/585" rel="nofollow noopener">Aug 25, 2017</a>. The spec changed the default credentials policy to <code>same-origin</code>. Firefox changed since 61.0b13.)</li>
 </ul>
 
@@ -40,8 +40,9 @@ tags:
 
 <p>This is just an HTTP response, not the actual JSON. To extract the JSON body content from the response, we use the {{domxref("Body.json","json()")}} method (defined on the {{domxref("Body")}} mixin, which is implemented by both the {{domxref("Request")}} and {{domxref("Response")}} objects.)</p>
 
-<div class="note">
-<p><strong>Note</strong>: The Body mixin also has similar methods to extract other types of body content; see the {{anch("Body")}} section for more.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>The Body mixin also has similar methods to extract other types of body content; see the {{anch("Body")}} section for more.</p>
 </div>
 
 <p>Fetch requests are controlled by the <code>connect-src</code> directive of <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content Security Policy</a> rather than the directive of the resources it's retrieving.</p>
@@ -88,16 +89,18 @@ postData('https://example.com/answer', { answer: 42 })
 
 <h3 id="Sending_a_request_with_credentials_included">Sending a request with credentials included</h3>
 
-<p>To cause browsers to send a request with credentials included, even for a cross-origin call, add <code>credentials: 'include'</code> to the <code>init</code> object you pass to the <code>fetch()</code> method.</p>
-
-<div class="note">
-<p><strong>Note</strong>: <code>Access-Control-Allow-Origin</code> is prohibited from using a wildcard for requests with <code>credentials: 'include'</code>. In such cases, the exact origin must be provided; even if you are using a CORS unblocker extension, the requests will still fail.</p>
-</div>
+<p>To cause browsers to send a request with credentials included on both same-origin and cross-origin calls, add <code>credentials: 'include'</code> to the <code>init</code> object you pass to the <code>fetch()</code> method.</p>
 
 <pre class="brush: js">fetch('https://example.com', {
   credentials: 'include'
 });
 </pre>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p><code>Access-Control-Allow-Origin</code> is prohibited from using a wildcard for requests with <code>credentials: 'include'</code>. In such cases, the exact origin must be provided; even if you are using a CORS unblocker extension, the requests will still fail.</p>
+  <p>For more information cross-origin requests with credentials see: <a href="/en-US/docs/Web/HTTP/CORS#requests_with_credentials">CORS > Requests with credentials</a>.</p>
+</div>
 
 <p>If you only want to send credentials if the request URL is on the same origin as the calling script, add <code>credentials: 'same-origin'</code>.</p>
 
@@ -114,6 +117,7 @@ fetch('https://example.com', {
   credentials: 'omit'
 })
 </pre>
+
 
 <h3 id="Uploading_JSON_data">Uploading JSON data</h3>
 
@@ -276,8 +280,9 @@ fetch(myRequest)
 
 <p>This is pretty useful, as request and response bodies are one use only. Making a copy like this allows you to make use of the request/response again while varying the <code>init</code> options if desired. The copy must be made before the body is read, and reading the body in the copy will also mark it as read in the original request.</p>
 
-<div class="note">
-<p><strong>Note</strong>: There is also a {{domxref("Request.clone","clone()")}} method that creates a copy. Both methods of creating a copy will fail if the body of the original request or response has already been read, but reading the body of a cloned response or request will not cause it to be marked as read in the original.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>There is also a {{domxref("Request.clone","clone()")}} method that creates a copy. Both methods of creating a copy will fail if the body of the original request or response has already been read, but reading the body of a cloned response or request will not cause it to be marked as read in the original.</p>
 </div>
 
 <h2 id="Headers">Headers</h2>
@@ -356,8 +361,9 @@ try {
  <li><code>immutable</code>: Mostly used for ServiceWorkers; renders a headers object read-only.</li>
 </ul>
 
-<div class="note">
-<p><strong>Note</strong>: You may not append or set a <code>request</code> guarded Headers’ <code>Content-Length</code> header. Similarly, inserting <code>Set-Cookie</code> into a response header is not allowed: ServiceWorkers are not allowed to set cookies via synthesized responses.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>You may not append or set a <code>request</code> guarded Headers’ <code>Content-Length</code> header. Similarly, inserting <code>Set-Cookie</code> into a response header is not allowed: ServiceWorkers are not allowed to set cookies via synthesized responses.</p>
 </div>
 
 <h2 id="Response_objects">Response objects</h2>
@@ -388,8 +394,9 @@ addEventListener('fetch', function(event) {
 
 <p>The {{domxref("Response.Response","Response()")}} constructor takes two optional arguments — a body for the response, and an init object (similar to the one that {{domxref("Request.Request","Request()")}} accepts.)</p>
 
-<div class="note">
-<p><strong>Note</strong>: The static method {{domxref("Response.error","error()")}} returns an error response. Similarly, {{domxref("Response.redirect","redirect()")}} returns a response resulting in a redirect to a specified URL. These are also only relevant to Service Workers.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>The static method {{domxref("Response.error","error()")}} returns an error response. Similarly, {{domxref("Response.redirect","redirect()")}} returns a response resulting in a redirect to a specified URL. These are also only relevant to Service Workers.</p>
 </div>
 
 <h2 id="Body">Body</h2>
