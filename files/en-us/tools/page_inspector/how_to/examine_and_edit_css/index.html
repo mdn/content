@@ -22,7 +22,7 @@ tags:
  <li><a href="#viewing_common_pseudo-classes">toggle pseudo-classes</a>;</li>
  <li><a href="#viewing_and_changing_classes_on_an_element">toggle classes</a>;</li>
  <li>add a new rule;</li>
- <li>change the display based on the color scheme preference (as of Firefox 72, you must set <code>devtools.inspector.color-scheme-simulation.enabled</code> to <strong>true</strong> in the <a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">Configuration Editor</a> to enable this feature);</li>
+ <li>change the display based on the operating <a href="#view_media_rules_for_color-scheme-preference">color scheme preference</a> (light/dark mode);</li>
  <li>change the display based on <a href="#view_media_rules_for_print">print media rules</a>.</li>
 </ul>
 
@@ -38,8 +38,9 @@ tags:
 
 <p>CSS properties have varied level of support across different browsers. From Firefox 81, compatibility tooltips may be displayed next to any CSS properties that have known compatibility issues, as shown below.</p>
 
-<div class="note">
-<p>This feature is enabled from Firefox 81 by setting the preference <code>devtools.inspector.ruleview.inline-compatibility-warning.enabled</code> to <code>true</code> (open <code>about.config</code> in the URL bar to view/set Firefox preferences).</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>This feature is enabled from Firefox 81 by setting the preference <code>devtools.inspector.ruleview.inline-compatibility-warning.enabled</code> to <code>true</code> (open <code>about.config</code> in the URL bar to view/set Firefox preferences).</p>
 </div>
 
 <p><img alt="Tooltip displayed next to CSS element. Hover to find out browsers with compatibility issues." src="firefox_compatibility_tootips.jpg"></p>
@@ -96,8 +97,9 @@ tags:
 
 <p><img alt="" src="filtered_rules.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;">Click the "X" at the end of the search box to remove the filter.</p>
 
-<div class="note">
-<p>While in the Rules view, you can press <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>F</kbd> to focus the search field. Once you've typed in a filter, you can press <kbd>Esc</kbd> to remove it again.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>While in the Rules view, you can press <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>F</kbd> to focus the search field. Once you've typed in a filter, you can press <kbd>Esc</kbd> to remove it again.</p>
 </div>
 
 <p>{{EmbedYouTube("9w8vDIWqnAE")}}</p>
@@ -198,11 +200,7 @@ tags:
 
 <h3 id="View_media_rules_for_color-scheme-preference">View @media rules for color-scheme-preference</h3>
 
-<div class="notecard note">
-<p>As of Firefox 72, you must set <code>devtools.inspector.color-scheme-simulation.enabled</code> to <strong>true</strong> in the <a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">Configuration Editor</a> to enable this feature.</p>
 
-<p>If you have set <code>privacy.resistFingerprinting</code> to <strong>true</strong>, <code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme"> </a>preference is overridden to <code>light</code>. In order to use this simulator, you must set <code>privacy.resistFingerprinting</code> to <strong>false</strong>.</p>
-</div>
 
 <p>You can use the color scheme simulator to see how the styles display based on the <code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></code> media query, if it is defined for the page. The color scheme simulator has four states, which you can cycle through by clicking the button repeatedly:</p>
 
@@ -235,6 +233,13 @@ tags:
 
 <p>Note that the first three states of the button may be difficult to distinguish visually. They typically produce a similar effect.</p>
 
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>As of Firefox 72, you must set <code>devtools.inspector.color-scheme-simulation.enabled</code> to <strong>true</strong> in the <a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">Configuration Editor</a> to enable this feature.</p>
+  
+  <p>If you have set <code>privacy.resistFingerprinting</code> to <strong>true</strong>, <code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme"> </a>preference is overridden to <code>light</code>. In order to use this simulator, you must set <code>privacy.resistFingerprinting</code> to <strong>false</strong>.</p>
+</div>
+
 <h2 id="Examine_computed_CSS">Examine computed CSS</h2>
 
 <p>To see the complete computed CSS for the selected element, select the <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#computed_view">Computed panel</a> in the righthand pane. This panel shows the calculated value that each CSS property has for the selected element. (This calculated value is exactly the same as what <a href="/en-US/docs/Web/API/Window/getComputedStyle">getComputedStyle </a>would return.)</p>
@@ -251,8 +256,9 @@ tags:
 
 <p>Typing in the search box performs a live filtering of the list, so, for example, if you just want to see font-related settings, you can type "font" in the search box, and only properties with "font" in the name will be listed. You can also search for the values of properties: to find the rule responsible for setting the font to "Lucida Grande", type that in the search box.</p>
 
-<div class="note">
-<p>While in the Computed view, you can press <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>F</kbd> to focus the search field. Once you've typed in a filter, you can press <kbd>Esc</kbd> to remove it again.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>While in the Computed view, you can press <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>F</kbd> to focus the search field. Once you've typed in a filter, you can press <kbd>Esc</kbd> to remove it again.</p>
 </div>
 
 <h2 id="Edit_rules">Edit rules</h2>
@@ -299,9 +305,10 @@ tags:
 <p><img alt="" src="track_changes.png" style="border: 1px solid black; display: block; margin: 0 auto;"></p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> You can view changes made to the rules view only. If you edit the CSS using the Style Editor, the changes will not be shown in the changes pane.</p>
-
-<p>Also remember, as noted above, that changes you make to the CSS rules are temporary and will be reset if you reload the page.</p>
+  <h4>Note</h4>
+  <p>You can view changes made to the rules view only. If you edit the CSS using the Style Editor, the changes will not be shown in the changes pane.</p>
+  
+  <p>Also remember, as noted above, that changes you make to the CSS rules are temporary and will be reset if you reload the page.</p>
 </div>
 
 <p>If you are satisfied with the changes you have made, you can copy the new settings to page the edited rule into your stylesheet. Right-click on the changes panel and select <strong>Copy Rule</strong> from the context menu.</p>
