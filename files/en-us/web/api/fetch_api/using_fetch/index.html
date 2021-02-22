@@ -16,17 +16,17 @@ tags:
 <p>{{DefaultAPISidebar("Fetch API")}}</p>
 
 <div class="summary">
-<p>The <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses. It also provides a global {{domxref("GlobalFetch.fetch","fetch()")}} method that provides an easy, logical way to fetch resources asynchronously across the network.</p>
+<p>The <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses. It also provides a global {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}} method that provides an easy, logical way to fetch resources asynchronously across the network.</p>
 </div>
 
-<p>This kind of functionality was previously achieved using {{domxref("XMLHttpRequest")}}. Fetch provides a better alternative that can be easily used by other technologies such as {{domxref("ServiceWorker_API", "Service Workers")}}. Fetch also provides a single logical place to define other HTTP-related concepts such as CORS and extensions to HTTP.</p>
+<p>This kind of functionality was previously achieved using {{domxref("XMLHttpRequest")}}. Fetch provides a better alternative that can be easily used by other technologies such as {{domxref("Service_Worker_API", "Service Workers")}}. Fetch also provides a single logical place to define other HTTP-related concepts such as CORS and extensions to HTTP.</p>
 
 <p>The <code>fetch</code> specification differs from <code>jQuery.ajax()</code> in three main ways:</p>
 
 <ul>
  <li>The Promise returned from <code>fetch()</code> <strong>won’t reject on HTTP error status</strong> even if the response is an HTTP 404 or 500. Instead, it will resolve normally (with <code>ok</code> status set to false), and it will only reject on network failure or if anything prevented the request from completing.</li>
  <li><code>fetch()</code> <strong><s>won't</s> can receive cross-site cookies</strong>; you <s>can’t</s> can establish a cross site session using fetch. <s>{{HTTPHeader("Set-Cookie")}} headers from other sites are silently ignored.</s></li>
- <li><code>fetch</code><strong> won’t send cookies</strong>, unless you set the <em>credentials</em> <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters">init option</a>. (Since <a href="https://github.com/whatwg/fetch/pull/585" rel="nofollow noopener">Aug 25, 2017</a>. The spec changed the default credentials policy to <code>same-origin</code>. Firefox changed since 61.0b13.)</li>
+ <li><code>fetch</code><strong> won’t send cookies</strong>, unless you set the <em>credentials</em> <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#parameters">init option</a>. (Since <a href="https://github.com/whatwg/fetch/pull/585" rel="nofollow noopener">Aug 25, 2017</a>. The spec changed the default credentials policy to <code>same-origin</code>. Firefox changed since 61.0b13.)</li>
 </ul>
 
 <p>A basic fetch request is really simple to set up. Have a look at the following code:</p>
@@ -44,13 +44,13 @@ tags:
 <p><strong>Note</strong>: The Body mixin also has similar methods to extract other types of body content; see the {{anch("Body")}} section for more.</p>
 </div>
 
-<p>Fetch requests are controlled by the <code>connect-src</code> directive of <a href="/en-US/docs/Security/CSP/CSP_policy_directives">Content Security Policy</a> rather than the directive of the resources it's retrieving.</p>
+<p>Fetch requests are controlled by the <code>connect-src</code> directive of <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content Security Policy</a> rather than the directive of the resources it's retrieving.</p>
 
 <h3 id="Supplying_request_options">Supplying request options</h3>
 
 <p>The <code>fetch()</code> method can optionally accept a second parameter, an <code>init</code> object that allows you to control a number of different settings:</p>
 
-<p>See {{domxref("GlobalFetch.fetch","fetch()")}} for the full options available, and more details.</p>
+<p>See {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}} for the full options available, and more details.</p>
 
 <pre class="brush: js">// Example POST method implementation:
 async function postData(url = '', data = {}) {
@@ -117,7 +117,7 @@ fetch('https://example.com', {
 
 <h3 id="Uploading_JSON_data">Uploading JSON data</h3>
 
-<p>Use {{domxref("GlobalFetch.fetch","fetch()")}} to POST JSON-encoded data.</p>
+<p>Use {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}} to POST JSON-encoded data.</p>
 
 <pre class="brush: js">const data = { username: 'example' };
 
@@ -162,7 +162,7 @@ fetch('https://example.com/profile/avatar', {
 
 <h3 id="Uploading_multiple_files">Uploading multiple files</h3>
 
-<p>Files can be uploaded using an HTML <code>&lt;input type="file" multiple /&gt;</code> input element, {{domxref("FormData.FormData","FormData()")}} and {{domxref("GlobalFetch.fetch","fetch()")}}.</p>
+<p>Files can be uploaded using an HTML <code>&lt;input type="file" multiple /&gt;</code> input element, {{domxref("FormData.FormData","FormData()")}} and {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}}.</p>
 
 <pre class="brush: js">const formData = new FormData();
 const photos = document.querySelector('input[type="file"][multiple]');
@@ -232,7 +232,7 @@ run();
 
 <h3 id="Checking_that_the_fetch_was_successful">Checking that the fetch was successful</h3>
 
-<p>A {{domxref("GlobalFetch.fetch","fetch()")}} promise will reject with a {{jsxref("TypeError")}} when a network error is encountered or CORS is misconfigured on the server-side, although this usually means permission issues or similar — a 404 does not constitute a network error, for example. An accurate check for a successful <code>fetch()</code> would include checking that the promise resolved, then checking that the {{domxref("Response.ok")}} property has a value of true. The code would look something like this:</p>
+<p>A {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}} promise will reject with a {{jsxref("TypeError")}} when a network error is encountered or CORS is misconfigured on the server-side, although this usually means permission issues or similar — a 404 does not constitute a network error, for example. An accurate check for a successful <code>fetch()</code> would include checking that the promise resolved, then checking that the {{domxref("Response.ok")}} property has a value of true. The code would look something like this:</p>
 
 <pre class="brush: js">fetch('flowers.jpg')
   .then(response =&gt; {
@@ -314,7 +314,7 @@ myHeaders.delete('X-Custom-Header');
 console.log(myHeaders.get('X-Custom-Header')); // [ ]
 </pre>
 
-<p>Some of these operations are only useful in {{domxref("ServiceWorker_API","ServiceWorkers")}}, but they provide a much nicer API for manipulating headers.</p>
+<p>Some of these operations are only useful in {{domxref("Service_Worker_API","ServiceWorkers")}}, but they provide a much nicer API for manipulating headers.</p>
 
 <p>All of the Headers methods throw a <code>TypeError</code> if a header name is used that is not a valid HTTP Header name. The mutation operations will throw a <code>TypeError</code> if there is an immutable guard (see below). Otherwise, they fail silently. For example:</p>
 
@@ -372,7 +372,7 @@ try {
  <li>{{domxref("Response.ok")}} — seen in use above, this is a shorthand for checking that status is in the range 200-299 inclusive. This returns a {{domxref("Boolean")}}.</li>
 </ul>
 
-<p>They can also be created programmatically via JavaScript, but this is only really useful in {{domxref("ServiceWorker_API", "ServiceWorkers")}}, when you are providing a custom response to a received request using a {{domxref("FetchEvent.respondWith","respondWith()")}} method:</p>
+<p>They can also be created programmatically via JavaScript, but this is only really useful in {{domxref("Service_Worker_API", "ServiceWorkers")}}, when you are providing a custom response to a received request using a {{domxref("FetchEvent.respondWith","respondWith()")}} method:</p>
 
 <pre class="brush: js">const myBody = new Blob();
 
@@ -430,7 +430,7 @@ fetch('/login', {
 
 <h2 id="Feature_detection">Feature detection</h2>
 
-<p>Fetch API support can be detected by checking for the existence of {{domxref("Headers")}}, {{domxref("Request")}}, {{domxref("Response")}} or {{domxref("GlobalFetch.fetch","fetch()")}} on the {{domxref("Window")}} or {{domxref("Worker")}} scope. For example:</p>
+<p>Fetch API support can be detected by checking for the existence of {{domxref("Headers")}}, {{domxref("Request")}}, {{domxref("Response")}} or {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}} on the {{domxref("Window")}} or {{domxref("Worker")}} scope. For example:</p>
 
 <pre class="brush: js">if (window.fetch) {
   // run my fetch request here
@@ -469,7 +469,7 @@ fetch('/login', {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
+ <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a></li>
  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
  <li><a href="https://github.com/github/fetch">Fetch polyfill</a></li>
