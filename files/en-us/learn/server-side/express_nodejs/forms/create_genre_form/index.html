@@ -44,7 +44,7 @@ exports.genre_create_get = function(req, res, next) {
 <pre class="brush: js">// Handle Genre create on POST.
 exports.genre_create_post =  [
 
-  // Validate and santise the name field.
+  // Validate and santize the name field.
   body('name', 'Genre name required').trim().isLength({ min: 1 }).escape(),
 
   // Process request after validation and sanitization.
@@ -95,13 +95,13 @@ exports.genre_create_post =  [
 <p><strong>Note:</strong> This approach is needed, because the validators are middleware functions.</p>
 </div>
 
-<p>The first method in the array defines a body validator (<code>body()</code>) that validates and sanitises the field. This uses <code>trim()</code> to remove any trailing/leading whitespace, checks that the <em>name</em> field is not empty, and then uses <code>escape()</code> to remove any dangerous HTML characters).</p>
+<p>The first method in the array defines a body validator (<code>body()</code>) that validates and sanitizes the field. This uses <code>trim()</code> to remove any trailing/leading whitespace, checks that the <em>name</em> field is not empty, and then uses <code>escape()</code> to remove any dangerous HTML characters).</p>
 
 <pre class="brush: js">// Validate that the name field is not empty.
 body('name', 'Genre name required').trim().isLength({ min: 1 }).escape(),
 </pre>
 
-<p>After specifying the validators we create a middleware function to extract any validation errors. We use <code>isEmpty()</code> to check whether there are any errors in the validation result. If there are then we render the form again, passing in our sanitised genre object and the array of error messages (<code>errors.array()</code>).</p>
+<p>After specifying the validators we create a middleware function to extract any validation errors. We use <code>isEmpty()</code> to check whether there are any errors in the validation result. If there are then we render the form again, passing in our sanitized genre object and the array of error messages (<code>errors.array()</code>).</p>
 
 <pre class="brush: js">// Process request after validation and sanitization.
 (req, res, next) =&gt; {
