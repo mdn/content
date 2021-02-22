@@ -1944,7 +1944,7 @@
 /en-US/docs/DOM/document.location	/en-US/docs/Web/API/Document/location
 /en-US/docs/DOM/document.mozCancelFullScreen	/en-US/docs/Web/API/Document/exitFullscreen
 /en-US/docs/DOM/document.mozFullScreen	/en-US/docs/Web/API/Document/fullscreen
-/en-US/docs/DOM/document.mozFullScreenElement	/en-US/docs/Web/API/DocumentOrShadowRoot/fullscreenElement
+/en-US/docs/DOM/document.mozFullScreenElement	/en-US/docs/Web/API/Document/fullscreenElement
 /en-US/docs/DOM/document.mozFullScreenEnabled	/en-US/docs/Web/API/Document/fullscreenEnabled
 /en-US/docs/DOM/document.mozSetImageElement	/en-US/docs/Web/API/Document/mozSetImageElement
 /en-US/docs/DOM/document.mozSyntheticDocument	/en-US/docs/Web/API/Document/mozSyntheticDocument
@@ -3312,7 +3312,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/document.location	/en-US/docs/Web/API/Document/location
 /en-US/docs/Document_Object_Model_(DOM)/document.mozCancelFullScreen	/en-US/docs/Web/API/Document/exitFullscreen
 /en-US/docs/Document_Object_Model_(DOM)/document.mozFullScreen	/en-US/docs/Web/API/Document/fullscreen
-/en-US/docs/Document_Object_Model_(DOM)/document.mozFullScreenElement	/en-US/docs/Web/API/DocumentOrShadowRoot/fullscreenElement
+/en-US/docs/Document_Object_Model_(DOM)/document.mozFullScreenElement	/en-US/docs/Web/API/Document/fullscreenElement
 /en-US/docs/Document_Object_Model_(DOM)/document.mozFullScreenEnabled	/en-US/docs/Web/API/Document/fullscreenEnabled
 /en-US/docs/Document_Object_Model_(DOM)/document.mozSetImageElement	/en-US/docs/Web/API/Document/mozSetImageElement
 /en-US/docs/Document_Object_Model_(DOM)/document.mozSyntheticDocument	/en-US/docs/Web/API/Document/mozSyntheticDocument
@@ -7522,13 +7522,12 @@
 /en-US/docs/Web/API/Document/elementFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot/elementFromPoint
 /en-US/docs/Web/API/Document/elementsFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot/elementsFromPoint
 /en-US/docs/Web/API/Document/firstElementChild	/en-US/docs/Web/API/ParentNode/firstElementChild
-/en-US/docs/Web/API/Document/fullscreenElement	/en-US/docs/Web/API/DocumentOrShadowRoot/fullscreenElement
 /en-US/docs/Web/API/Document/getAnimations	/en-US/docs/Web/API/DocumentOrShadowRoot/getAnimations
 /en-US/docs/Web/API/Document/getSelection	/en-US/docs/Web/API/DocumentOrShadowRoot/getSelection
 /en-US/docs/Web/API/Document/inputEncoding	/en-US/docs/Web/API/document/characterSet
 /en-US/docs/Web/API/Document/lastElementChild	/en-US/docs/Web/API/ParentNode/lastElementChild
 /en-US/docs/Web/API/Document/mozCancelFullScreen	/en-US/docs/Web/API/Document/exitFullscreen
-/en-US/docs/Web/API/Document/mozFullScreenElement	/en-US/docs/Web/API/DocumentOrShadowRoot/fullscreenElement
+/en-US/docs/Web/API/Document/mozFullScreenElement	/en-US/docs/Web/API/Document/fullscreenElement
 /en-US/docs/Web/API/Document/mozFullScreenEnabled	/en-US/docs/Web/API/Document/fullscreenEnabled
 /en-US/docs/Web/API/Document/msElementsFromRect	/en-US/docs/Web/API/DocumentOrShadowRoot/msElementsFromRect
 /en-US/docs/Web/API/Document/namespaceURI	/en-US/docs/Web/API/Node/namespaceURI
@@ -7567,6 +7566,7 @@
 /en-US/docs/Web/API/DocumentFragment/firstElementChild	/en-US/docs/Web/API/ParentNode/firstElementChild
 /en-US/docs/Web/API/DocumentFragment/lastElementChild	/en-US/docs/Web/API/ParentNode/lastElementChild
 /en-US/docs/Web/API/DocumentOrShadowRoot/activeElement	/en-US/docs/Web/API/Document/activeElement
+/en-US/docs/Web/API/DocumentOrShadowRoot/fullscreenElement	/en-US/docs/Web/API/Document/fullscreenElement
 /en-US/docs/Web/API/DocumentOrShadowRoot/nodeFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot
 /en-US/docs/Web/API/DocumentOrShadowRoot/nodesFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot
 /en-US/docs/Web/API/DocumentOrShadowRoot/pictureInPictureEnabled	/en-US/docs/Web/API/DocumentOrShadowRoot/pictureInPictureElement
@@ -9318,7 +9318,7 @@
 /en-US/docs/Web/API/document.location	/en-US/docs/Web/API/Document/location
 /en-US/docs/Web/API/document.mozCancelFullScreen	/en-US/docs/Web/API/Document/exitFullscreen
 /en-US/docs/Web/API/document.mozFullScreen	/en-US/docs/Web/API/Document/fullscreen
-/en-US/docs/Web/API/document.mozFullScreenElement	/en-US/docs/Web/API/DocumentOrShadowRoot/fullscreenElement
+/en-US/docs/Web/API/document.mozFullScreenElement	/en-US/docs/Web/API/Document/fullscreenElement
 /en-US/docs/Web/API/document.mozFullScreenEnabled	/en-US/docs/Web/API/Document/fullscreenEnabled
 /en-US/docs/Web/API/document.mozSetImageElement	/en-US/docs/Web/API/Document/mozSetImageElement
 /en-US/docs/Web/API/document.mozSyntheticDocument	/en-US/docs/Web/API/Document/mozSyntheticDocument
