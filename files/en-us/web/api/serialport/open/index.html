@@ -1,0 +1,75 @@
+---
+title: SerialPort.open()
+slug: Web/API/SerialPort/SerialPort/open()
+tags:
+  - API
+  - Method
+  - Reference
+  - open()
+  - SerialPort
+---
+<div>{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}</div>
+
+<p class="summary">The <strong><code>open()</code></strong> method of the {{domxref("SerialPort")}} interface returns a {{jsxref("Promise")}} that resolves when the port is opened. By default the port is opened with 8 data bits, 1 stop bit and no parity checking. The <code>baudRate</code> parameter is required. </p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox notranslate">var <var>promise</var> = SerialPort.open(<var>options</var>);</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt><em><code>options</code></em></dt>
+  <dd>An object with any of the following values:
+    <ul>
+      <li><code>baudRate</code>: (<strong>required</strong>)</li>
+      <li><code>bufferSize</code>: The default value is 255.</li>
+      <li><code>dataBits</code>: The default value is 8.</li>
+      <li><code>flowControl</code>: The default value is <code>"none</code>.</li>
+      <li><code>parity</code>: The default value is <code>"none"</code>.</li>
+      <li><code>stopBits</code>: The default value is 1.</li>
+    </ul>
+  </dd>
+</dl>
+
+<h3 id="Returns">Return value</h3>
+
+<p>A {{jsxref("Promise")}}.</p>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<dl>
+  <dt>{{domxref("DOMException")}} <code>"InvalidStateError"</code></dt>
+  <dd>Indicates that the port is already open.</dd>
+  <dt>{{domxref("DOMException")}} <code>NetworkError</code></dt>
+  <dd>Indicates that the attempt to open the port failed.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>Before communicating on a serial port it must be opened. Opening the port allows the site to specify the necessary parameters that control how data is transmitted and received. Developers should check the documentation for the device they are connecting to for the appropriate parameters.</p>
+  
+<pre class="brush: js notranslate">await port.open({ baudRate: /* pick your baud rate */ });</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Serial API','#dom-serialport-open','SerialPort.open()')}}</td>
+   <td>{{Spec2('Web Serial API')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.SerialPort.open")}}</p>
