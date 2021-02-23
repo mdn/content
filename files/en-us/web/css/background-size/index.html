@@ -84,11 +84,7 @@ background-size: unset;
 </ul>
 
 <div class="note">
-<p><strong>Note:</strong> The behavior of <code>&lt;gradient&gt;</code>s changed in Gecko 8.0 {{geckoRelease("8.0")}}. Before this, they were treated as images with no intrinsic dimensions, but with intrinsic proportions identical to that of the background positioning area.</p>
-</div>
-
-<div class="note">
-<p><strong>Note:</strong> In Gecko, background images created using the {{cssxref("element()")}} function are currently treated as images with the dimensions of the element, or of the background positioning area if the element is SVG, with the corresponding intrinsic proportion. This is non-standard behavior.</p>
+  <p><strong>Note:</strong> In Gecko, background images created using the <a href="/en-US/docs/Web/CSS/element()"><code>element()</code></a> function are currently treated as images with the dimensions of the element, or of the background positioning area if the element is SVG, with the corresponding intrinsic proportion. This is non-standard behavior.</p>
 </div>
 
 <p>Based on the intrinsic dimensions and proportions, the rendered size of the background image is computed as follows:</p>
@@ -109,7 +105,7 @@ background-size: unset;
  </ul>
  </dd>
  <dd>
- <div class="note"><strong>Note:</strong> SVG images have a <code><a href="/en-US/docs/Web/SVG/Attribute/preserveAspectRatio">preserveAspectRatio</a></code> attribute that defaults to the equivalent of <code>contain</code>. In Firefox 43, as opposed to Chrome 52, an explicit <code>background-size</code> causes <code>preserveAspectRatio</code> to be ignored.</div>
+ <div class="note"><strong>Note:</strong> SVG images have a <code><a href="/en-US/docs/Web/SVG/Attribute/preserveAspectRatio">preserveAspectRatio</a></code> attribute that defaults to the equivalent of <code>contain</code>; an explicit <code>background-size</code> causes <code>preserveAspectRatio</code> to be ignored.</div>
  </dd>
  <dt>If the <code>background-size</code> has one <code>auto</code> component and one non-<code>auto</code> component:</dt>
  <dd>
