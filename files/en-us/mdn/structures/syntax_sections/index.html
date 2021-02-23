@@ -37,12 +37,20 @@ tags:
 
 <ul>
  <li>Do <var>not</var> use {{HTMLElement("code")}} within the syntax block (or within any code sample block on MDN, either). Not only is it generally useless, but our markup does not want it, and will not render the way you want it to look if you include it.</li>
- <li>
+ <li>Only specify the function and arguments. Example showing "corrected" examples below
+  <pre class="brush: js">querySelector(<var>selector</var>)
+//<var>responseStr</var> = <var>element</var>.querySelector(<var>selector</var>);
+
+new IntersectionObserver(<var>callback</var>, <var>options</var>)
+// var observer = new IntersectionObserver(<var>callback</var>, <var>options</var>);
+</pre> 
+ </li>
+ <li>  
   <p>All programmer-specified content in a syntax block should be italicized using the {{HTMLElement("var")}} element:</p>
 
-  <pre class="brush: js"><var>responseStr</var> = <var>element</var>.querySelector(<var>selector</var>);</pre> 
+  <pre class="brush: js">querySelector(<var>selector</var>)</pre> 
 
-  <p>Here, <code>responseStr</code> is the return value (a variable named by the developer), <code>element</code> is a placeholder for the variable referencing an {{DOMxRef("Element")}} object, and <code>selector</code> is the placeholder for an input parameter to the method.</p>
+  <p>Here, <code>selector</code> is the placeholder for an input parameter to the method.</p>
  </li>
 </ul>
 
@@ -52,11 +60,11 @@ tags:
 
 <p>Start with a syntax block, like this (from the {{DOMxRef("IntersectionObserver.IntersectionObserver", "IntersectionObserver constructor")}} page):</p>
 
-<pre class="brush: js">new IntersectionObserver(<var>callback</var>, <var>options</var>);</pre>
+<pre class="brush: js">new IntersectionObserver(<var>callback</var>, <var>options</var>)</pre>
 
-<p>or this (from {{DOMxRef("WindowOrWorkerGlobalScope.fetch")}}):</p>
+<p>or this (from {{DOMxRef("Document.hasStorageAccess")}}):</p>
 
-<pre class="brush: js"><var>promiseResponse</var> = fetch(<var>input</var>, <var>init</var>);</pre>
+<pre class="brush: js">hasStorageAccess()</pre>
 
 <h5 id="Multiple_lines">Multiple lines/Optional parameters</h5>
 
@@ -69,20 +77,20 @@ Array slice(<var>begin</var>, <var>end</var>)</pre>
 
 <p>Similarly, for {{DOMxRef("CanvasRenderingContext2D.drawImage")}}:</p>
 
-<pre class="brush: js">drawImage(<var>image</var>, <var>dx</var>, <var>dy</var>);
-drawImage(<var>image</var>, <var>dx</var>, <var>dy</var>, <var>dWidth</var>, <var>dHeight</var>);
-drawImage(<var>image</var>, <var>sx</var>, <var>sy</var>, <var>sWidth</var>, <var>sHeight</var>, <var>dx</var>, <var>dy</var>, <var>dWidth</var>, <var>dHeight</var>);</pre>
+<pre class="brush: js">drawImage(<var>image</var>, <var>dx</var>, <var>dy</var>)
+drawImage(<var>image</var>, <var>dx</var>, <var>dy</var>, <var>dWidth</var>, <var>dHeight</var>)
+drawImage(<var>image</var>, <var>sx</var>, <var>sy</var>, <var>sWidth</var>, <var>sHeight</var>, <var>dx</var>, <var>dy</var>, <var>dWidth</var>, <var>dHeight</var>)</pre>
 
 <p>Similarly for the {{jsxref("Date")}} constructor:</p>
 
 <pre class="brush: js">new Date();
-new Date(<var>value</var>);
-new Date(<var>dateString</var>);
-new Date(<var>year</var>, <var>monthIndex</var>);
-new Date(<var>year</var>, <var>monthIndex</var>, <var>day</var>);
-new Date(<var>year</var>, <var>monthIndex</var>, <var>day</var>, <var>hours</var>);
-new Date(<var>year</var>, <var>monthIndex</var>, <var>day</var>, <var>hours</var>, <var>minutes</var>);
-new Date(<var>year</var>, <var>monthIndex</var>, <var>day</var>, <var>hours</var>, <var>minutes</var>, <var>seconds</var>, <var>milliseconds</var>);
+new Date(<var>value</var>)
+new Date(<var>dateString</var>)
+new Date(<var>year</var>, <var>monthIndex</var>)
+new Date(<var>year</var>, <var>monthIndex</var>, <var>day</var>)
+new Date(<var>year</var>, <var>monthIndex</var>, <var>day</var>, <var>hours</var>)
+new Date(<var>year</var>, <var>monthIndex</var>, <var>day</var>, <var>hours</var>, <var>minutes</var>)
+new Date(<var>year</var>, <var>monthIndex</var>, <var>day</var>, <var>hours</var>, <var>minutes</var>, <var>seconds</var>, <var>milliseconds</var>)
 </pre>
 
 <h5 id="Formal_syntax">Formal syntax</h5>
@@ -106,7 +114,7 @@ new Date(<var>year</var>, <var>monthIndex</var>, <var>day</var>, <var>hours</var
 
 <p>But this version is much more concise, and doesn't include the superfluous {{JSxRef("Promise.prototype.then()")}} method call:</p>
 
-<pre class="brush: js"><var>promiseResponse</var> = <var>caches</var>.match(<var>request</var>, <var>options</var>);</pre>
+<pre class="brush: js">match(<var>request</var>, <var>options</var>)</pre>
 
 <h4 id="Parameters_section">Parameters section</h4>
 
