@@ -6,11 +6,11 @@ tags:
   - CSS Property
   - CSS Tables
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>caption-side</code></strong> <a href="/en-US/docs/CSS">CSS</a> property puts the content of a table's {{HTMLElement("caption")}} on the specified side. The values are relative to the {{cssxref('writing-mode')}} of the table.</p>
+<p>The <strong><code>caption-side</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property puts the content of a table's {{HTMLElement("caption")}} on the specified side. The values are relative to the {{cssxref('writing-mode')}} of the table.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/caption-side.html")}}</div>
 
@@ -20,11 +20,11 @@ tags:
 caption-side: top;
 caption-side: bottom;
 
-/* Warning: non-standard values */
-caption-side: left;
-caption-side: right;
-caption-side: top-outside;
-caption-side: bottom-outside;
+/* Logical values */
+caption-side: block-start;
+caption-side: block-end;
+caption-side: inline-start;
+caption-side: inline-end;
 
 /* Global values */
 caption-side: inherit;
@@ -41,26 +41,14 @@ caption-side: unset;
  <dd>The caption box should be positioned above the table.</dd>
  <dt><code>bottom</code></dt>
  <dd>The caption box should be positioned below the table.</dd>
- <dt><code>left</code> {{non-standard_inline}}</dt>
- <dd>The caption box should be positioned on the left side of the table.</dd>
- <dd>
- <div class="note">This value was proposed for CSS 2, but removed from the final CSS 2.1 specification. It is non-standard.</div>
- </dd>
- <dt><code>right</code> {{non-standard_inline}}</dt>
- <dd>The caption box should be positioned on the right side of the table.</dd>
- <dd>
- <div class="note">This value was proposed for CSS 2, but removed from the final CSS 2.1 specification. It is non-standard.</div>
- </dd>
- <dt><code>top-outside</code> {{non-standard_inline}}</dt>
- <dd>The caption box should be positioned above the table, while the width and horizontal alignment behavior are not bound to the table's horizontal layout.</dd>
- <dd>
- <div class="note">The CSS 2.1 specification notes that the CSS 2 specification described a different behavior for the <code>top</code> value, which will be reintroduced by this value in a future specification.</div>
- </dd>
- <dt><code>bottom-outside</code> {{non-standard_inline}}</dt>
- <dd>The caption box should be positioned below the table, while the width and horizontal alignment behavior are not bound to the table's horizontal layout.</dd>
- <dd>
- <div class="note">The CSS 2.1 specification notes that the CSS 2 specification described a different behavior for the <code>bottom</code> value, which will be reintroduced by this value in a future specification.</div>
- </dd>
+ <dt><code>block-start</code></dt>
+ <dd>The caption box should be positioned at the block start edge of the table.</dd>
+ <dt><code>block-end</code></dt>
+ <dd>The caption box should be positioned at the block end edge of the table.</dd>
+ <dt><code>inline-start</code></dt>
+ <dd>The caption box should be positioned at the inline start edge of the table.</dd>
+ <dt><code>inline-end</code></dt>
+ <dd>The caption box should be positioned at the inline end edge of the table.</dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
