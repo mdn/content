@@ -6473,13 +6473,11 @@
 /en-US/docs/SVG/Namespaces_Crash_Course	/en-US/docs/Web/SVG/Namespaces_Crash_Course
 /en-US/docs/SVG/Namespaces_Crash_Course/Example	/en-US/docs/Web/SVG/Namespaces_Crash_Course/Example
 /en-US/docs/SVG/Other_Resources	/en-US/docs/Web/SVG/Other_Resources
-/en-US/docs/SVG/Project	/en-US/docs/Web/SVG/Project
 /en-US/docs/SVG/Replaced_Element	/en-US/docs/Web/SVG/Replaced_Element
 /en-US/docs/SVG/SVG_animation_with_SMIL	/en-US/docs/Web/SVG/SVG_animation_with_SMIL
 /en-US/docs/SVG/SVG_as_an_Image	/en-US/docs/Web/SVG/SVG_as_an_Image
 /en-US/docs/SVG/Scripting	/en-US/docs/Web/SVG/Scripting
 /en-US/docs/SVG/Server-configuration	/en-US/docs/Web/SVG/Server-configuration
-/en-US/docs/SVG/Sizing	/en-US/docs/Web/SVG/Sizing
 /en-US/docs/SVG/Specification_Deviations	/en-US/docs/Web/SVG/Specification_Deviations
 /en-US/docs/SVG/Tutorial	/en-US/docs/Web/SVG/Tutorial
 /en-US/docs/SVG/Tutorial/Basic_Shapes	/en-US/docs/Web/SVG/Tutorial/Basic_Shapes
@@ -6620,7 +6618,6 @@
 /en-US/docs/The_Do_Not_Track_Field_Guide/Case_studies/3_Media_company	/en-US/docs/Web/HTTP/Headers/DNT
 /en-US/docs/The_Do_Not_Track_Field_Guide/Case_studies/4_Software_company	/en-US/docs/Web/HTTP/Headers/DNT
 /en-US/docs/The_Do_Not_Track_Field_Guide/Case_studies/Additional_issues_to_consider	/en-US/docs/Web/HTTP/Headers/DNT
-/en-US/docs/The_Do_Not_Track_Field_Guide/Case_studies/Case_studies	/en-US/docs/Web/Security/Do_not_track_field_guide/Case_studies/Case_studies
 /en-US/docs/The_Do_Not_Track_Field_Guide/Case_studies/Case_studies/Additional_issues_to_consider	/en-US/docs/Web/HTTP/Headers/DNT
 /en-US/docs/The_Do_Not_Track_Field_Guide/Case_studies/Case_studies/Case_studies_flow_chart	/en-US/docs/Web/HTTP/Headers/DNT
 /en-US/docs/The_Do_Not_Track_Field_Guide/Case_studies/Case_studies_flow_chart	/en-US/docs/Web/HTTP/Headers/DNT
@@ -8896,7 +8893,6 @@
 /en-US/docs/Web/API/URL.createObjectURL	/en-US/docs/Web/API/URL/createObjectURL
 /en-US/docs/Web/API/URL.revokeObjectURL	/en-US/docs/Web/API/URL/revokeObjectURL
 /en-US/docs/Web/API/URLReadOnlyUtils.origin	/en-US/docs/Web/API/URLUtilsReadOnly/origin
-/en-US/docs/Web/API/URLUtils	/en-US/docs/Web/API/HTMLHyperlinkElementUtils
 /en-US/docs/Web/API/URLUtils/createObjectURL	/en-US/docs/Web/API/URL/createObjectURL
 /en-US/docs/Web/API/URLUtilsReadOnly.hash	/en-US/docs/Web/API/URLUtilsReadOnly/hash
 /en-US/docs/Web/API/URLUtilsReadOnly.host	/en-US/docs/Web/API/URLUtilsReadOnly/host
