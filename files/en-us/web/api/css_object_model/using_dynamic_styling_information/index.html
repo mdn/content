@@ -22,7 +22,7 @@ tags:
 
 <p>In this example the background of the page is set to red using CSS. The JavaScript then accesses the property using the CSSOM and changes the background to blue.</p>
 
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
 &lt;head&gt;
 &lt;title&gt;Modifying a stylesheet rule with CSSOM&lt;/title&gt;
 &lt;style type="text/css"&gt;
@@ -57,7 +57,7 @@ The stylesheet declaration for the body's background color is modified via JavaS
 <p>To change a particular element's style, you can adapt the following example for the element(s) you want to style.</p>
 
 <div id="Example2">
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
 &lt;head&gt;
 &lt;title&gt;simple style example&lt;/title&gt;
 
@@ -106,7 +106,7 @@ function resetStyle(elemId) {
 <p>More important than the two properties noted here is the use of the <code>style</code> object to set individual style properties on an element:</p>
 
 <div id="DOM_Style_Object_code_sample">
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
  &lt;head&gt;
   &lt;title&gt;style Property Example&lt;/title&gt;
@@ -139,7 +139,7 @@ function resetStyle(elemId) {
 
 <p>Note that you can also change style of an element by getting a reference to it and then use its <code><a href="/en-US/docs/Web/API/Element/setAttribute">setAttribute</a></code> method to specify the CSS property and its value.</p>
 
-<pre class="brush: js notranslate">var el = document.getElementById('some-element');
+<pre class="brush: js">var el = document.getElementById('some-element');
 el.setAttribute('style', 'background-color:darkblue;');
 </pre>
 

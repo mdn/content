@@ -30,7 +30,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>elements</var> = document.getElementsByClassName(<var>names</var>); // or:
+  class="brush: js">var <var>elements</var> = document.getElementsByClassName(<var>names</var>); // or:
 var <var>elements</var> = <var>rootElement</var>.getElementsByClassName(<var>names</var>);</pre>
 
 <ul>
@@ -46,28 +46,28 @@ var <var>elements</var> = <var>rootElement</var>.getElementsByClassName(<var>nam
 
 <p>Get all elements that have a class of 'test':</p>
 
-<pre class="brush: js notranslate">document.getElementsByClassName('test')</pre>
+<pre class="brush: js">document.getElementsByClassName('test')</pre>
 
 <p>Get all elements that have both the 'red' and 'test' classes:</p>
 
-<pre class="brush: js notranslate">document.getElementsByClassName('red test')</pre>
+<pre class="brush: js">document.getElementsByClassName('red test')</pre>
 
 <p>Get all elements that have a class of 'test', inside of an element that has the ID of
   'main':</p>
 
 <pre
-  class="brush: js notranslate">document.getElementById('main').getElementsByClassName('test')</pre>
+  class="brush: js">document.getElementById('main').getElementsByClassName('test')</pre>
 
 <p>Get the first element with a class of 'test', or <code>undefined</code> if there is no
   matching element:</p>
 
-<pre class="brush: js notranslate">document.getElementsByClassName('test')[0]</pre>
+<pre class="brush: js">document.getElementsByClassName('test')[0]</pre>
 
 <p>We can also use methods of Array.prototype on any {{domxref("HTMLCollection")}} by
   passing the <code>HTMLCollection</code> as the method's <var>this</var> value. Here
   we'll find all div elements that have a class of 'test':</p>
 
-<pre class="brush: js notranslate">var testElements = document.getElementsByClassName('test');
+<pre class="brush: js">var testElements = document.getElementsByClassName('test');
 var testDivs = Array.prototype.filter.call(testElements, function(testElement){
   return testElement.nodeName === 'DIV';
 });</pre>
@@ -77,7 +77,7 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
 
 <p>This is the most commonly used method of operation.</p>
 
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
 &lt;body&gt;
     &lt;div id="parent-id"&gt;
         &lt;p&gt;hello world 1&lt;/p&gt;
@@ -106,7 +106,7 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;span class="orange fruit"&gt;Orange Fruit&lt;/span&gt;
+<pre class="brush: html">&lt;span class="orange fruit"&gt;Orange Fruit&lt;/span&gt;
 &lt;span class="orange juice"&gt;Orange Juice&lt;/span&gt;
 &lt;span class="apple juice"&gt;Apple Juice&lt;/span&gt;
 &lt;span class="foo bar"&gt;Something Random&lt;/span&gt;
@@ -114,7 +114,7 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">// getElementsByClassName only selects elements that have both given classes
+<pre class="brush: js">// getElementsByClassName only selects elements that have both given classes
 var allOrangeJuiceByClass = document.getElementsByClassName('orange juice');
 var result = "document.getElementsByClassName('orange juice')";
 for (var i=0, len=allOrangeJuiceByClass.length|0; i&lt;len; i=i+1|0) {

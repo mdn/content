@@ -13,7 +13,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><code><var>e</var>.toString()</code></pre>
+<pre class="brush: js"><code><var>e</var>.toString()</code></pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -25,7 +25,7 @@ tags:
   method inherited by all objects. Its semantics are as follows (assuming
   {{jsxref("Object")}} and {{jsxref("String")}} have their original values):</p>
 
-<pre class="brush: js notranslate">Error.prototype.toString = function() {
+<pre class="brush: js">Error.prototype.toString = function() {
   'use strict';
 
   var obj = Object(this);
@@ -54,7 +54,7 @@ tags:
 
 <h3 id="Using_toString">Using toString()</h3>
 
-<pre class="brush: js notranslate">var e1 = new Error('fatal error');
+<pre class="brush: js">var e1 = new Error('fatal error');
 console.log(e1.toString()); // 'Error: fatal error'
 
 var e2 = new Error('fatal error');

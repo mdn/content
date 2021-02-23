@@ -27,7 +27,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>dateObj</var>.toLocaleString([<var>locales</var>[, <var>options</var>]])</pre>
+  class="brush: js"><var>dateObj</var>.toLocaleString([<var>locales</var>[, <var>options</var>]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -57,7 +57,7 @@ tags:
 <p>In basic use without specifying a locale, a formatted string in the default locale and
   with default options is returned.</p>
 
-<pre class="brush: js notranslate">let date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
+<pre class="brush: js">let date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
 
 // toLocaleString() without arguments depends on the
 // implementation, the default locale, and the default time zone
@@ -73,7 +73,7 @@ console.log(date.toLocaleString());
   already, you can use the requirement that illegal language tags are rejected with a
   {{jsxref("RangeError")}} exception:</p>
 
-<pre class="brush: js notranslate">function toLocaleStringSupportsLocales() {
+<pre class="brush: js">function toLocaleStringSupportsLocales() {
   try {
     new Date().toLocaleString('i');
   } catch (e) {
@@ -90,7 +90,7 @@ console.log(date.toLocaleString());
   sure to specify that language (and possibly some fallback languages) using the
   <code><var>locales</var></code> argument:</p>
 
-<pre class="brush: js notranslate">let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+<pre class="brush: js">let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // formats below assume the local time zone of the locale;
 // America/Los_Angeles for the US
@@ -127,7 +127,7 @@ console.log(date.toLocaleString(['ban', 'id']));
 <p>The results provided by <code>toLocaleString()</code> can be customized using the
   <code><var>options</var></code> argument:</p>
 
-<pre class="brush: js notranslate">let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+<pre class="brush: js">let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // request a weekday along with a long date
 let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -160,7 +160,7 @@ console.log(date.toLocaleString('en-US', { hour12: false }));
 <p>For this reason, you cannot expect to be able to compare the results of
   <code>toLocaleString()</code> to a static value:</p>
 
-<pre class="brush: js example-bad notranslate">"1/1/2019, 01:00:00" === new Date("2019-01-01T01:00:00Z").toLocaleString("en-US");
+<pre class="brush: js example-bad">"1/1/2019, 01:00:00" === new Date("2019-01-01T01:00:00Z").toLocaleString("en-US");
 // true in Firefox and others
 // false in IE and Edge</pre>
 

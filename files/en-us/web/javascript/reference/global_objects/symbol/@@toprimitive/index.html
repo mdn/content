@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Symbol()[Symbol.toPrimitive](<var>hint</var>)
+<pre class="brush: js">Symbol()[Symbol.toPrimitive](<var>hint</var>)
 </pre>
 
 <h3 id="Return_value">Return value</h3>
@@ -37,7 +37,7 @@ tags:
 
 <h3 id="Using_toPrimitive">Using @@toPrimitive</h3>
 
-<pre class="brush: js notranslate">const sym = Symbol("example");
+<pre class="brush: js">const sym = Symbol("example");
 sym === sym[Symbol.toPrimitive](); // true
 </pre>
 

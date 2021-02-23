@@ -92,7 +92,7 @@ tags:
 
 <p>For example, the following media query tests to see if the current web page is being displayed as screen media (therefore not a printed document) and the viewport is at least 800 pixels wide. The CSS for the <code>.container</code> selector will only be applied if these two things are true.</p>
 
-<pre class="brush: css notranslate">@media screen and (min-width: 800px) {
+<pre class="brush: css">@media screen and (min-width: 800px) {
   .container {
     margin: 1em 2em;
   }
@@ -113,12 +113,12 @@ tags:
 
 <p>In the early days of responsive design, our only option for performing layout was to use <a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">floats</a>. Flexible floated layouts were achieved by giving each element a percentage width, and ensuring that across the layout the totals were not more than 100%. In his original piece on fluid grids, Marcotte detailed a formula for taking a layout designed using pixels and converting it into percentages.</p>
 
-<pre class="notranslate"><code>target / context = result </code>
+<pre><code>target / context = result </code>
 </pre>
 
 <p>For example, if our target column size is 60 pixels, and the context (or container) it is in is 960 pixels, we divide 60 by 960 to get a value we can use in our CSS, after moving the decimal point two places to the right.</p>
 
-<pre class="brush: css notranslate">.col {
+<pre class="brush: css">.col {
   width: 6.25%; /* 60 / 960 = 0.0625 */
 } 
 </pre>
@@ -149,14 +149,14 @@ tags:
 
 <p>The oldest of these layout methods is multicol — when you specify a <code>column-count</code>, this indicates how many columns you want your content to be split into. The browser then works out the size of these, a size that will change according to the screen size.</p>
 
-<pre class="brush: css notranslate">.container {
+<pre class="brush: css">.container {
   column-count: 3;
 } 
 </pre>
 
 <p>If you instead specify a <code>column-width</code>, you are specifying a <em>minimum</em> width. The browser will create as many columns of that width as will comfortably fit into the container, then share out the remaining space between all the columns. Therefore the number of columns will change according to how much space there is.</p>
 
-<pre class="brush: css notranslate">.container {
+<pre class="brush: css">.container {
   column-width: 10em;
 } 
 </pre>
@@ -167,7 +167,7 @@ tags:
 
 <p>In the example below the flex items will each take an equal amount of space in the flex container, using the shorthand of <code>flex: 1</code> as described in the layout topic <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox#flexible_sizing_of_flex_items">Flexbox: Flexible sizing of flex items</a>.</p>
 
-<pre class="brush: css notranslate">.container {
+<pre class="brush: css">.container {
   display: flex;
 }
 
@@ -184,7 +184,7 @@ tags:
 
 <p>In CSS Grid Layout the <code>fr</code> unit allows the distribution of available space across grid tracks. The next example creates a grid container with three tracks sized at <code>1fr</code>. This will create three column tracks, each taking one part of the available space in the container. You can find out more about this approach to create a grid in the Learn Layout Grids topic, under <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids#flexible_grids_with_the_fr_unit">Flexible grids with the fr unit</a>.</p>
 
-<pre class="brush: css notranslate">.container {
+<pre class="brush: css">.container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 } 
@@ -198,7 +198,7 @@ tags:
 
 <p>The simplest approach to responsive images was as described in Marcotte's early articles on responsive design. Basically, you would take an image that was at the largest size that might be needed, and scale it down. This is still an approach used today, and in most stylesheets, you will find the following CSS somewhere:</p>
 
-<pre class="brush: css notranslate">img {
+<pre class="brush: css">img {
   max-width: 100%;
 } 
 </pre>
@@ -217,7 +217,7 @@ tags:
 
 <p>In this example, we want to set our level 1 heading to be <code>4rem</code>, meaning it will be four times our base font size. That's a really large heading! We only want this jumbo heading on larger screen sizes, therefore we first create a smaller heading then use media queries to overwrite it with the larger size if we know that the user has a screen size of at least <code>1200px</code>.</p>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-size: 1em;
 }
 
@@ -256,7 +256,7 @@ h1 {
 
 <p>An interesting approach is to use the viewport unit <code>vw</code> to enable responsive typography. <code>1vw</code> is equal to one percent of the viewport width, meaning that if you set your font size using <code>vw</code>, it will always relate to the size of the viewport.</p>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
   font-size: 6vw;
 }</pre>
 
@@ -264,7 +264,7 @@ h1 {
 
 <p>There is a solution, and it involves using <code><a href="/en-US/docs/Web/CSS/calc()">calc()</a></code>. If you add the <code>vw</code> unit to a value set using a fixed size such as <code>em</code>s or <code>rem</code>s then the text will still be zoomable. Essentially, the <code>vw</code> unit adds on top of that zoomed value:</p>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
   font-size: calc(1.5rem + 3vw);
 }</pre>
 
@@ -278,7 +278,7 @@ h1 {
 
 <p>If you look at the HTML source of a responsive page, you will usually see the following {{htmlelement("meta")}} tag in the <code>&lt;head&gt;</code> of the document.</p>
 
-<pre class="brush: html notranslate">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+<pre class="brush: html">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
 </pre>
 
 <p>This meta tag tells mobile browsers that they should set the width of the viewport to the device width, and scale the document to 100% of its intended size, which shows the document at the mobile-optimized size that you intended.</p>

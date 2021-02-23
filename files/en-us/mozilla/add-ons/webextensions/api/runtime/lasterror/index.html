@@ -18,7 +18,7 @@ tags:
 
 <p>You don't need to check this property if you are using the promise-based version of the APIs: instead, pass an error handler to the promise:</p>
 
-<pre class="notranslate brush: js">const <var>gettingCookies</var> = browser.cookies.getAll();
+<pre class="brush: js">const <var>gettingCookies</var> = browser.cookies.getAll();
 gettingCookies.then(<var>onGot</var>, <var>onError</var>);</pre>
 
 <p>The <code>runtime.lastError</code> property is set when an asynchronous function has an error condition that it needs to report to its caller.</p>
@@ -27,7 +27,7 @@ gettingCookies.then(<var>onGot</var>, <var>onError</var>);</pre>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate brush: js">let <var>myError</var> = browser.runtime.lastError;  // null or Error object</pre>
+<pre class="brush: js">let <var>myError</var> = browser.runtime.lastError;  // null or Error object</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -37,7 +37,7 @@ gettingCookies.then(<var>onGot</var>, <var>onError</var>);</pre>
 
 <p>Set a cookie, using a callback to log the new cookie or report an error:</p>
 
-<pre class="notranslate brush: js">function logCookie(c) {
+<pre class="brush: js">function logCookie(c) {
   if (browser.runtime.lastError) {
     console.error(browser.runtime.lastError);
   } else {
@@ -52,7 +52,7 @@ browser.cookies.set(
 
 <p>The same, but using a promise to handle the result of <code>setCookie()</code>:</p>
 
-<pre class="notranslate brush: js">function logCookie(c) {
+<pre class="brush: js">function logCookie(c) {
   console.log(c);
 }
 

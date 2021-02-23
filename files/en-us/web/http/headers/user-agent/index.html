@@ -30,11 +30,11 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html notranslate">User-Agent: &lt;product&gt; / &lt;product-version&gt; &lt;comment&gt;</pre>
+<pre class="brush: html">User-Agent: &lt;product&gt; / &lt;product-version&gt; &lt;comment&gt;</pre>
 
 <p>Common format for web browsers:</p>
 
-<pre class="brush: html notranslate">User-Agent: Mozilla/5.0 (&lt;system-information&gt;) &lt;platform&gt; (&lt;platform-details&gt;) &lt;extensions&gt;</pre>
+<pre class="brush: html">User-Agent: Mozilla/5.0 (&lt;system-information&gt;) &lt;platform&gt; (&lt;platform-details&gt;) &lt;extensions&gt;</pre>
 
 <h3 id="Directives">Directives</h3>
 
@@ -51,7 +51,7 @@ tags:
 
 <p>For more on Firefox- and Gecko-based user agent strings, see the <a href="/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox">Firefox user agent string reference</a>. The UA string of Firefox is broken down into 4 components:</p>
 
-<pre class="notranslate">Mozilla/5.0 (<strong><em>platform</em></strong>; rv:<strong><em>geckoversion</em></strong>) Gecko/<strong><em>geckotrail</em></strong> Firefox/<strong><em>firefoxversion</em></strong></pre>
+<pre>Mozilla/5.0 (<strong><em>platform</em></strong>; rv:<strong><em>geckoversion</em></strong>) Gecko/<strong><em>geckotrail</em></strong> Firefox/<strong><em>firefoxversion</em></strong></pre>
 
 <ol>
  <li><code>Mozilla/5.0</code> is the general token that says the browser is Mozilla-compatible. For historical reasons, almost every browser today sends it.</li>
@@ -63,7 +63,7 @@ tags:
 
 <h3 id="Examples">Examples</h3>
 
-<pre class="no-line-numbers notranslate">Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0
+<pre class="no-line-numbers">Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0
 Mozilla/5.0 (Macintosh; Intel Mac OS X <em>x.y</em>; rv:42.0) Gecko/20100101 Firefox/42.0
 </pre>
 
@@ -73,7 +73,7 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X <em>x.y</em>; rv:42.0) Gecko/20100101 Fir
 
 <h3 id="Examples_2">Examples</h3>
 
-<pre class="no-line-numbers notranslate">Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36</pre>
+<pre class="no-line-numbers">Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36</pre>
 
 <h2 id="Opera_UA_string">Opera UA string</h2>
 
@@ -81,11 +81,11 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X <em>x.y</em>; rv:42.0) Gecko/20100101 Fir
 
 <h3 id="Examples_3">Examples</h3>
 
-<pre class="no-line-numbers notranslate">Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36 OPR/38.0.2220.41</pre>
+<pre class="no-line-numbers">Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36 OPR/38.0.2220.41</pre>
 
 <p>Older, Presto-based Opera releases used:</p>
 
-<pre class="no-line-numbers notranslate">Opera/9.80 (Macintosh; Intel Mac OS X; U; en) Presto/2.2.15 Version/10.00
+<pre class="no-line-numbers">Opera/9.80 (Macintosh; Intel Mac OS X; U; en) Presto/2.2.15 Version/10.00
 Opera/9.60 (Windows NT 6.0; U; en) Presto/2.1.1</pre>
 
 <h2 id="Safari_UA_string">Safari UA string</h2>
@@ -94,29 +94,29 @@ Opera/9.60 (Windows NT 6.0; U; en) Presto/2.1.1</pre>
 
 <h3 id="Examples_4">Examples</h3>
 
-<pre class="no-line-numbers notranslate">Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/604.1</pre>
+<pre class="no-line-numbers">Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/604.1</pre>
 
 <h2 id="Internet_Explorer_UA_string">Internet Explorer UA string</h2>
 
 <h3 id="Examples_5">Examples</h3>
 
-<pre class="no-line-numbers notranslate">Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)</pre>
+<pre class="no-line-numbers">Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)</pre>
 
 <h2 id="Crawler_and_bot_UA_strings">Crawler and bot UA strings</h2>
 
 <h3 id="Examples_6">Examples</h3>
 
-<pre class="no-line-numbers notranslate">Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</pre>
+<pre class="no-line-numbers">Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</pre>
 
-<pre class="no-line-numbers notranslate">Mozilla/5.0 (compatible; YandexAccessibilityBot/3.0; +http://yandex.com/bots)</pre>
+<pre class="no-line-numbers">Mozilla/5.0 (compatible; YandexAccessibilityBot/3.0; +http://yandex.com/bots)</pre>
 
 <h2 id="Library_and_net_tool_UA_strings">Library and net tool UA strings</h2>
 
 <h3 id="Examples_7">Examples</h3>
 
-<pre class="no-line-numbers notranslate">curl/7.64.1</pre>
+<pre class="no-line-numbers">curl/7.64.1</pre>
 
-<pre class="no-line-numbers notranslate">PostmanRuntime/7.26.5</pre>
+<pre class="no-line-numbers">PostmanRuntime/7.26.5</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

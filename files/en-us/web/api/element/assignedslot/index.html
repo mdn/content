@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var slotElement = elementInstance.assignedSlot</pre>
+<pre class="brush: js">var slotElement = elementInstance.assignedSlot</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -43,7 +43,7 @@ tags:
   <code><a href="/en-US/docs/Web/HTML/Global_attributes/slot">slot</a></code> attribute
   with the value <code>my-text</code>. Here is one such example:</p>
 
-<pre class="brush: html notranslate">&lt;my-paragraph&gt;
+<pre class="brush: html">&lt;my-paragraph&gt;
   &lt;span slot="my-text"&gt;Let's have some different text!&lt;/span&gt;
 &lt;/my-paragraph&gt;</pre>
 
@@ -52,7 +52,7 @@ tags:
   <code>&lt;span&gt;</code> was inserted in.</p>
 
 <pre
-  class="brush: js notranslate">let slottedSpan = document.querySelector('my-paragraph span')
+  class="brush: js">let slottedSpan = document.querySelector('my-paragraph span')
 console.log(slottedSpan.assignedSlot); // logs '&lt;slot name="my-text"&gt;'</pre>
 
 <h2 id="Specifications">Specifications</h2>

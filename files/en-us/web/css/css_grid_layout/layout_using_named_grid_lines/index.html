@@ -14,7 +14,7 @@ tags:
 
 <div id="example_named_lines">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -34,7 +34,7 @@ tags:
 
 <p>When defining the grid, I name my lines inside square brackets. Those names can be anything you like. I have defined a name for the start and end of the container, both for rows and columns. Then defined the centre block of the grid as <code>content-start</code> and <code>content-end</code> again, both for columns and rows although you do not need to name all of the lines on your grid. You might choose to name just some key lines for your layout.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: [main-start] 1fr [content-start] 1fr [content-end] 1fr [main-end];
   grid-template-rows: [main-start] 100px [content-start] 100px [content-end] 100px [main-end];
@@ -43,7 +43,7 @@ tags:
 
 <p>Once the lines have names, we can use the name to place the item rather than the line number.</p>
 
-<pre class="brush: css notranslate">.box1 {
+<pre class="brush: css">.box1 {
   grid-column-start: main-start;
   grid-row-start: main-start;
   grid-row-end: main-end;
@@ -67,7 +67,7 @@ tags:
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box1"&gt;One&lt;/div&gt;
   &lt;div class="box2"&gt;Two&lt;/div&gt;
   &lt;div class="box3"&gt;Three&lt;/div&gt;
@@ -92,7 +92,7 @@ tags:
 
 <div id="implicit_areas_from_lines">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -112,7 +112,7 @@ tags:
 
 <p>I’m using the same grid definitions as above, however this time I am going to place a single item into the named area <code>content</code>.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: [main-start] 1fr [content-start] 1fr [content-end] 1fr [main-end];
   grid-template-rows: [main-start] 100px [content-start] 100px [content-end] 100px [main-end];
@@ -122,7 +122,7 @@ tags:
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="thing"&gt;I am placed in an area named content.&lt;/div&gt;
 &lt;/div&gt;
 </pre>
@@ -166,7 +166,7 @@ tags:
 
 <div id="implicit_lines_from_area">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -184,7 +184,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-auto-rows: minmax(100px, auto);
@@ -221,7 +221,7 @@ tags:
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="header"&gt;Header&lt;/div&gt;
   &lt;div class="sidebar"&gt;Sidebar&lt;/div&gt;
   &lt;div class="content"&gt;Content&lt;/div&gt;
@@ -243,7 +243,7 @@ tags:
 
 <div id="multiple_lines_same_name">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -261,28 +261,28 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
 }</pre>
 
 <p>Once you have created the grid you can place items onto it. As we have multiple lines named <code>col-start</code> if you place an item to start after line <code>col-start</code> grid uses the first line named <code>col-start</code>, in our case that will be the far left line. To address another line use the name, plus the number for that line. To place our item from the first line named col-start to the 5th, we can use:</p>
 
-<pre class="brush: css notranslate">.item1 {
+<pre class="brush: css">.item1 {
   grid-column: col-start / col-start 5
 }
 </pre>
 
 <p>You can also use the <code>span</code> keyword here. My next item will be placed from the 7th line named <code>col-start</code> and span 3 lines.</p>
 
-<pre class="brush: css notranslate">.item2 {
+<pre class="brush: css">.item2 {
   grid-column: col-start 7 / span 3;
 }
 </pre>
 
 <p class="brush: html"></p>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="item1"&gt;I am placed from col-start line 1 to col-start 5&lt;/div&gt;
   &lt;div class="item2"&gt;I am placed from col-start line 7 spanning 3 lines&lt;/div&gt;
 &lt;/div&gt;</pre>
@@ -296,21 +296,21 @@ tags:
 
 <p>The repeat syntax can also take a track list, it doesn’t just need to be a single track size that is being repeated. The code below would create an eight track grid, with a narrower <code>1fr</code> width column named <code>col1-start</code> followed by a wider <code>3fr</code> column named <code>col2-start</code>.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   grid-template-columns: repeat(4, [col1-start] 1fr [col2-start] 3fr);
 }
 </pre>
 
 <p>If your repeating syntax puts two lines next to each other then they will be merged, and create the same result as giving a line multiple names in a non-repeating track definition. The following definition, creates four <code>1fr</code> tracks, which each have a start and end line.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   grid-template-columns: repeat(4, [col-start] 1fr [col-end] );
 }
 </pre>
 
 <p>If we write this definition out without using repeat notation it would look like this.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   grid-template-columns: [col-start] 1fr [col-end col-start] 1fr [col-end col-start] 1fr  [col-end col-start] 1fr [col-end];
 }
 </pre>
@@ -319,7 +319,7 @@ tags:
 
 <div id="span_line_number">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -337,7 +337,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(6, [col1-start] 1fr [col2-start] 3fr);
 }
@@ -352,7 +352,7 @@ tags:
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="item1"&gt;I am placed from col1-start line 1 to col2-start line 2&lt;/div&gt;
   &lt;div class="item2"&gt;I am placed from col1-start line 2 spanning 2 lines named col1-start&lt;/div&gt;
 &lt;/div&gt;
@@ -366,7 +366,7 @@ tags:
 <p>If working with a strict multiple column layout for example the named lines demonstration in the last part of this guide works very well. If you consider grid systems such as those found in frameworks like Foundation or Bootstrap, these are based on a 12 column grid. The framework then imports the code to do all of the calculations to make sure that the columns add up to 100%. With grid layout the only code we need for our grid “framework” is:</p>
 
 <div id="three_column">
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(12, [col-start] 1fr);
@@ -376,7 +376,7 @@ tags:
 <p>We can then use that framework to layout our page. For example, to create a three column layout with a header and footer, I might have the following markup.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -394,7 +394,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;header class="main-header"&gt;I am the header&lt;/header&gt;
   &lt;aside class="side1"&gt;I am sidebar 1&lt;/aside&gt;
   &lt;article class="content"&gt;I am the main article&lt;/article&gt;
@@ -405,7 +405,7 @@ tags:
 
 <p>I could then place this on my grid layout framework like this.</p>
 
-<pre class="brush: css notranslate">.main-header,
+<pre class="brush: css">.main-header,
 .main-footer  {
   grid-column: col-start / span 12;
 }

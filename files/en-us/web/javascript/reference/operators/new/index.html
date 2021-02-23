@@ -19,7 +19,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">new <var>constructor</var>[([<var>arguments</var>])]</pre>
+  class="brush: js">new <var>constructor</var>[([<var>arguments</var>])]</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -52,13 +52,13 @@ tags:
 <ol>
   <li>Define the object type by writing a function that specifies its name and properties.
     For example, a constructor function to create an object <code>Foo</code>might look like this:
-    <pre class="brush: js notranslate">function Foo(bar1, bar2) {
+    <pre class="brush: js">function Foo(bar1, bar2) {
       this.bar1 = bar1;
       this.bar2 = bar2;
     }</pre>
   </li>
   <li>Create an instance of the object with <code>new</code>.
-    <pre class="brush: js notranslate">var myFoo = new Foo('Bar 1', 2021);</pre>
+    <pre class="brush: js">var myFoo = new Foo('Bar 1', 2021);</pre>
   </li>
 </ol>
 
@@ -102,7 +102,7 @@ tags:
     href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">prototype</a>.
 </p>
 
-<pre class="brush: js notranslate">function Car() {}
+<pre class="brush: js">function Car() {}
 car1 = new Car();
 car2 = new Car();
 
@@ -133,7 +133,7 @@ console.log(car2.color);   // 'original color'
   called <code>Car</code>, and you want it to have properties for make, model, and year.
   To do this, you would write the following function:</p>
 
-<pre class="brush: js notranslate">function Car(make, model, year) {
+<pre class="brush: js">function Car(make, model, year) {
   this.make = make;
   this.model = model;
   this.year = year;
@@ -142,7 +142,7 @@ console.log(car2.color);   // 'original color'
 
 <p>Now you can create an object called <code>myCar</code> as follows:</p>
 
-<pre class="brush: js notranslate">var myCar = new Car('Eagle', 'Talon TSi', 1993);
+<pre class="brush: js">var myCar = new Car('Eagle', 'Talon TSi', 1993);
 </pre>
 
 <p>This statement creates <code>myCar</code> and assigns it the specified values for its
@@ -152,7 +152,7 @@ console.log(car2.color);   // 'original color'
 <p>You can create any number of <code>car</code> objects by calls to <code>new</code>. For
   example:</p>
 
-<pre class="brush: js notranslate">var kensCar = new Car('Nissan', '300ZX', 1992);
+<pre class="brush: js">var kensCar = new Car('Nissan', '300ZX', 1992);
 </pre>
 
 <h3 id="Object_property_that_is_itself_another_object">Object property that is itself
@@ -160,7 +160,7 @@ console.log(car2.color);   // 'original color'
 
 <p>Suppose you define an object called <code>Person</code> as follows:</p>
 
-<pre class="brush: js notranslate">function Person(name, age, sex) {
+<pre class="brush: js">function Person(name, age, sex) {
   this.name = name;
   this.age = age;
   this.sex = sex;
@@ -169,14 +169,14 @@ console.log(car2.color);   // 'original color'
 
 <p>And then instantiate two new <code>Person</code> objects as follows:</p>
 
-<pre class="brush: js notranslate">var rand = new Person('Rand McNally', 33, 'M');
+<pre class="brush: js">var rand = new Person('Rand McNally', 33, 'M');
 var ken = new Person('Ken Jones', 39, 'M');
 </pre>
 
 <p>Then you can rewrite the definition of <code>Car</code> to include an
   <code>owner</code> property that takes a <code>Person</code> object, as follows:</p>
 
-<pre class="brush: js notranslate">function Car(make, model, year, owner) {
+<pre class="brush: js">function Car(make, model, year, owner) {
   this.make = make;
   this.model = model;
   this.year = year;
@@ -186,7 +186,7 @@ var ken = new Person('Ken Jones', 39, 'M');
 
 <p>To instantiate the new objects, you then use the following:</p>
 
-<pre class="brush: js notranslate">var car1 = new Car('Eagle', 'Talon TSi', 1993, rand);
+<pre class="brush: js">var car1 = new Car('Eagle', 'Talon TSi', 1993, rand);
 var car2 = new Car('Nissan', '300ZX', 1992, ken);
 </pre>
 
@@ -195,7 +195,7 @@ var car2 = new Car('Nissan', '300ZX', 1992, ken);
   parameters for the owners. To find out the name of the owner of <code>car2</code>, you
   can access the following property:</p>
 
-<pre class="brush: js notranslate">car2.owner.name
+<pre class="brush: js">car2.owner.name
 </pre>
 
 <h2 id="Specifications">Specifications</h2>

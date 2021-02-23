@@ -869,7 +869,7 @@ tags:
 
 <p>SVG files are text files containing source code that, when interpreted, draws the desired image. For instance, this example defines an drawing area with initial size 100 by 100 units, containing a line drawn diagonally through the box:</p>
 
-<pre class="brush: html notranslate">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;line x1="0" y1="80" x2="100" y2="20" stroke="black" /&gt;
 &lt;/svg&gt;</pre>
 
@@ -1201,7 +1201,7 @@ tags:
 
 <p>The image must be a multiple of 8 pixels wide. For example, the following code represents an XBM image which is 8 pixels by 8 pixels, with those pixels in a black-and-white checkerboard pattern:</p>
 
-<pre class="brush: cpp notranslate">#define square8_width 8
+<pre class="brush: cpp">#define square8_width 8
 #define square8_height 8
 static unsigned char square8_bits[] = {
   0xAA, 0x55, 0xAA, 0x55, 0xAA, 0x55, 0xAA, 0x55
@@ -1368,7 +1368,7 @@ static unsigned char square8_bits[] = {
 
 <p>For example, if you're displaying a diagram best displayed with SVG, but wish to offer a fallback to a PNG or GIF of the diagram, you would do something like this:</p>
 
-<pre class="brush: html notranslate">&lt;picture&gt;
+<pre class="brush: html">&lt;picture&gt;
   &lt;source srcset="diagram.svg" type="image/svg+xml"&gt;
   &lt;source srcset="diagram.png" type="image/png"&gt;
   &lt;img src="diagram.gif" width="620" height="540"

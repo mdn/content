@@ -30,7 +30,7 @@ tags:
 
 <p>According to the specification, header names are case-insensitive. This means that be to sure of matching a particular header, the listener should lowercase the name before comparing it:</p>
 
-<pre class="notranslate brush: js">for (let header of e.requestHeaders) {
+<pre class="brush: js">for (let header of e.requestHeaders) {
   if (header.name.toLowerCase() === desiredHeader) {
     // process header
   }
@@ -187,7 +187,7 @@ browser.webRequest.onBeforeSendHeaders.hasListener(listener)
 
 <p>This code changes the "User-Agent" header so the browser identifies itself as Opera 12.16, but only when visiting pages under https://httpbin.org/".</p>
 
-<pre class="notranslate brush: js">"use strict";
+<pre class="brush: js">"use strict";
 
 /*
 This is the page for which we want to rewrite the User-Agent header.
@@ -226,7 +226,7 @@ browser.webRequest.onBeforeSendHeaders.addListener(
 
 <p>This code is exactly like the previous example, except that the listener is asynchronous, returning a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> which is resolved with the new headers:</p>
 
-<pre class="notranslate brush: js">"use strict";
+<pre class="brush: js">"use strict";
 
 /*
 This is the page for which we want to rewrite the User-Agent header.

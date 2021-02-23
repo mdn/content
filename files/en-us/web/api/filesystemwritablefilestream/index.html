@@ -36,7 +36,7 @@ tags:
 
 <p>A user defined {{domxref('Blob')}} is then written to the stream which is subsequently closed.</p>
 
-<pre class="brush: js notranslate">async function saveFile() {
+<pre class="brush: js">async function saveFile() {
 
   // create a new handle
   const newHandle = await window.showSaveFilePicker();
@@ -54,7 +54,7 @@ tags:
 
 <p>The following show different examples of options that can be passed into the <code>write()</code> method.</p>
 
-<pre class="brush: js notranslate">// just pass in the data (no options)
+<pre class="brush: js">// just pass in the data (no options)
 writableStream.write(data)
 
 // writes the data to the stream from the determined position

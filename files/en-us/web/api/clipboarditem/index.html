@@ -59,7 +59,7 @@ tags:
 
 <p>Here we're writing a new {{domxref("ClipboardItem.ClipboardItem()")}} to the {{domxref("Clipboard API", "clipboard")}} by requesting a png image using the {{domxref("Fetch API")}}, and in turn, the {{domxref("Body.blob()", "responses' blob()")}} method, to create the new {{domxref("ClipboardItem")}}.</p>
 
-<pre class="brush: js notranslate">async function writeClipImg() {
+<pre class="brush: js">async function writeClipImg() {
   try {
     const imgURL = '/myimage.png';
     const data = await fetch(imgURL);
@@ -81,7 +81,7 @@ tags:
 
 <p>Here we're returning all items on the clipboard via the {{domxref("clipboard.read()")}} method. Then utilizing the {{domxref("ClipboardItem.types")}} property to set the {{domxref("ClipboardItem.getType", "getType()")}} argument and return the corresponding blob object.</p>
 
-<pre class="brush: js notranslate">async function getClipboardContents() {
+<pre class="brush: js">async function getClipboardContents() {
   try {
     const clipboardItems = await navigator.clipboard.read();
 

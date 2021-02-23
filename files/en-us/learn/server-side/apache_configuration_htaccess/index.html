@@ -23,7 +23,7 @@ tags:
 
 <p>There are times when we need to tell users that a resource has moved, either temporarily or permanently. This is what we use <code>Redirect</code> and <code>RedirectMatch</code> for.</p>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_alias.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_alias.c&gt;
   # Redirect to a URL on a different host
   Redirect "/service" "http://foo2.example.com/service"
 
@@ -64,7 +64,7 @@ tags:
 
 <p>This directive will add the CORS header for all resources in the directory from any website.</p>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_headers.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_headers.c&gt;
   Header set Access-Control-Allow-Origin "*"
 &lt;/IfModule&gt;</pre>
 
@@ -72,7 +72,7 @@ tags:
 
 <p>One alternative is to explicitly state what domains have access to the content of your site. In the example below, we restrict access to a subdomain of our main site (example.com). This is more secure and, likely, what you intended to do.</p>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_headers.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_headers.c&gt;
   Header set Access-Control-Allow-Origin "subdomain.example.com"
 &lt;/IfModule&gt;</pre>
 
@@ -82,7 +82,7 @@ tags:
 
 <p>To mitigate the possibility of these attacks, you should use the <code>crossorigin</code> attribute in the images you request and the code snippet below in your <code>.htaccess</code> to set the CORS header from the server.</p>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_setenvif.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_setenvif.c&gt;
   &lt;IfModule mod_headers.c&gt;
     &lt;FilesMatch "\.(bmp|cur|gif|ico|jpe?g|a?png|svgz?|webp|heic|heif|avif)$"&gt;
       SetEnvIf Origin ":" IS_CORS
@@ -93,7 +93,7 @@ tags:
 
 <p class="brush: bash">Google Chrome's <a href="https://developers.google.com/fonts/docs/troubleshooting">Google Fonts troubleshooting guide</a> tells us that, while Google Fonts may send the CORS header with every response, some proxy servers may strip it before the browser can use it to render the font.</p>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_headers.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_headers.c&gt;
   &lt;FilesMatch "\.(eot|otf|tt[cf]|woff2?)$"&gt;
     Header set Access-Control-Allow-Origin "*"
   &lt;/FilesMatch&gt;
@@ -107,7 +107,7 @@ tags:
 
 <p>If a resource isn't served with a <code>Timing-Allow-Origin</code> or if the header does not include the origin making the request some of the attributes of the <code>PerformanceResourceTiming</code> object will be set to zero.</p>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_headers.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_headers.c&gt;
   Header set Timing-Allow-Origin: "*"
 &lt;/IfModule&gt;</pre>
 
@@ -119,7 +119,7 @@ tags:
 
 <p>See the <a href="https://httpd.apache.org/docs/current/mod/core.html#errordocument">ErrorDocument Directive</a> documentation on the HTTPD documentation site for more information.</p>
 
-<pre class="brush: bash notranslate">ErrorDocument 500 /errors/500.html
+<pre class="brush: bash">ErrorDocument 500 /errors/500.html
 ErrorDocument 404 /errors/400.html
 ErrorDocument 401 https://example.com/subscription_info.html
 ErrorDocument 403 "Sorry, can't allow you access today"
@@ -133,7 +133,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
 
 <p>The setting disables <code>MultiViews</code> for the directory this configuration applies to and prevents Apache from returning a 404 error as the result of a rewrite when the directory with the same name does not exist</p>
 
-<pre class="brush: bash notranslate">Options -MultiViews
+<pre class="brush: bash">Options -MultiViews
 </pre>
 
 <h2 id="Media_Types_and_Character_Encodings">Media Types and Character Encodings</h2>
@@ -150,7 +150,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
 
 <p>Servers should use text/javascript for JavaScript resources as indicated in the <a href="https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages">HTML specification</a></p>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_expires.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_expires.c&gt;
   # Data interchange
     AddType application/atom+xml      atom
     AddType application/json          json map topojson
@@ -215,7 +215,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
 <p>Use <a href="https://httpd.apache.org/docs/current/mod/core.html#adddefaultcharset
 ">AddDefaultCharset</a> to serve all resources labeled as <code>text/html</code> or <code>text/plain</code> with the <code>UTF-8</code> charset.</p>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_mime.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_mime.c&gt;
   AddDefaultCharset utf-8
 &lt;/IfModule&gt;</pre>
 
@@ -223,7 +223,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
 
 <p>Serve the following file types with the <code>charset</code> parameter set to `UTF-8` using the <a href="https://httpd.apache.org/docs/current/mod/mod_mime.html#addcharset">AddCharset</a> directive available in <code>mod_mime</code>.</p>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_mime.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_mime.c&gt;
   AddCharset utf-8 .appcache \
     .bbaw \
     .css \
@@ -268,7 +268,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
  </li>
 </ol>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_rewrite.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_rewrite.c&gt;
   RewriteEngine On
   Options +FollowSymlinks
   # Options +SymLinksIfOwnerMatch
@@ -280,7 +280,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
 
 <p>These Rewrite rules will redirect from the <code>http://</code> insecure version to the <code>https://</code> secure version of the URL as described in the <a href="https://wiki.apache.org/httpd/RewriteHTTPToHTTPS">Apache HTTPD wiki</a>.</p>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_rewrite.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_rewrite.c&gt;
   RewriteEngine On
   RewriteCond %{HTTPS} !=on
   RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
@@ -288,7 +288,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
 
 <p>If you're using cPanel AutoSSL or the Let's Encrypt webroot method to create your SSL certificates, it will fail to validate the certificate if validation requests are redirected to HTTPS. Turn on the condition(s) you need.</p>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_rewrite.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_rewrite.c&gt;
   RewriteEngine On
   RewriteCond %{HTTPS} !=on
   RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/
@@ -307,7 +307,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
 
 <p>The rule assumes by default that both HTTP and HTTPS environments are available for redirection.</p>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_rewrite.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_rewrite.c&gt;
   RewriteEngine On
   RewriteCond %{HTTPS} =on
   RewriteRule ^ - [E=PROTO:https]
@@ -330,7 +330,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
 
 <p>The following might not be a good idea if you use "real" subdomains for certain parts of your website.</p>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_rewrite.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_rewrite.c&gt;
   RewriteEngine On
   RewriteCond %{HTTPS} =on
   RewriteRule ^ - [E=PROTO:https]
@@ -355,7 +355,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
 
 <p>Nonetheless, you should ensure that you send the <code>X-Frame-Options</code> header for all pages that allow a user to make a state-changing operation (e.g: pages that contain one-click purchase links, checkout, or bank-transfer confirmation pages, pages that make permanent configuration changes, etc.).</p>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_headers.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_headers.c&gt;
   Header always set X-Frame-Options "DENY" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
 &lt;/IfModule&gt;</pre>
 
@@ -369,7 +369,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
 
 <p>To make your CSP implementation easier, you can use an online <a href="https://report-uri.com/home/generate/">CSP header generator</a>. You should also use a <a href="https://csp-evaluator.withgoogle.com">validator</a> to make sure your header does what you want it to do.</p>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_headers.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_headers.c&gt;
   Content-Security-Policy "default-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests" "expr=%{CONTENT_TYPE} =~ m#text\/(html|javascript)|application\/pdf|xml#i"
 &lt;/IfModule&gt;</pre>
 
@@ -377,7 +377,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
 
 <p>This directive will prevent access to directories that don't have an index file present in whatever format the server is configured to use, like <code>index.html</code>, or <code>index.php</code>.</p>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_autoindex.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_autoindex.c&gt;
     Options -Indexes
 &lt;/IfModule&gt;</pre>
 
@@ -387,7 +387,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
 
 <p>The <code>.well-known/</code> directory represents <a href="https://tools.ietf.org/html/rfc5785">the standard (RFC 5785)</a> path prefix for "well-known locations" (e.g.: <code>/.well-known/manifest.json</code>, <code>/.well-known/keybase.txt</code>), and therefore, access to its visible content should not be blocked.</p>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_rewrite.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_rewrite.c&gt;
     RewriteEngine On
     RewriteCond %{REQUEST_URI} "!(^|/)\.well-known/([^./]+./?)+$" [NC]
     RewriteCond %{SCRIPT_FILENAME} -d [OR]
@@ -401,7 +401,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
 
 <p>Update the <code>&lt;FilesMatch&gt;</code> regular expression in the following example to include any files that might end up on your production server and can expose sensitive information about your website. These files may include: configuration files or files that contain metadata about the project among others.</p>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_authz_core.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_authz_core.c&gt;
   &lt;FilesMatch "(^#.*#|\.(bak|conf|dist|fla|in[ci]|log|orig|psd|sh|sql|sw[op])|~)$"&gt;
     Require all denied
   &lt;/FilesMatch&gt;
@@ -415,7 +415,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
 
 <p>Be aware that Strict Transport Security is not revokable and you must ensure being able to serve the site over HTTPS for as long as you've specified in the <code>max-age</code> directive. If you don't have a valid TLS connection anymore (e.g. due to an expired TLS certificate) your visitors will see an error message even when attempting to connect over HTTP.</p>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_headers.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_headers.c&gt;
   # Header always set
   Strict-Transport-Security "max-age=16070400; includeSubDomains" "expr=%{HTTPS} == 'on'"
   # (1) Enable your site for HSTS preload inclusion.
@@ -455,7 +455,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
 
 <p>Some older browsers would try and guess the content type of a resource, even when it isn't properly set up on the server configuration. This reduces exposure to drive-by download attacks and cross-origin data leaks.</p>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_headers.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_headers.c&gt;
     Header always set X-Content-Type-Options "nosniff"
 &lt;/IfModule&gt;</pre>
 
@@ -474,7 +474,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
  <li><a href="https://observatory.mozilla.org/">Mozilla Observatory</a></li>
 </ul>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_headers.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_headers.c&gt;
   Header always set Referrer-Policy "strict-origin-when-cross-origin" "expr=%{CONTENT_TYPE} =~ m#text\/(css|html|javascript)|application\/pdf|xml#i"
 &lt;/IfModule&gt;</pre>
 
@@ -486,7 +486,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
 
 <p>If you have access to the main server configuration file, use the <code><a href="https://httpd.apache.org/docs/current/mod/core.html#traceenable">TraceEnable</a></code> directive instead.</p>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_rewrite.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_rewrite.c&gt;
   RewriteEngine On
   RewriteCond %{REQUEST_METHOD} ^TRACE [NC]
   RewriteRule .* - [R=405,L]
@@ -498,27 +498,27 @@ ErrorDocument 403 "Sorry, can't allow you access today"
 
 <p>This header doesn't provide any value, and in some cases, the information it provides can expose vulnerabilities</p>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_headers.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_headers.c&gt;
   Header unset X-Powered-By
   Header always unset X-Powered-By
 &lt;/IfModule&gt;</pre>
 
 <p>If you can, you should disable the <code>X-Powered-By</code> header from the language/framework level (e.g.: for PHP, you can do that by setting the following in <code>php.ini</code>.</p>
 
-<pre class="brush: php notranslate">expose_php = off;</pre>
+<pre class="brush: php">expose_php = off;</pre>
 
 <h2 id="Remove_Apache-generated_Server_Information_Footer">Remove Apache-generated Server Information Footer</h2>
 
 <p>Prevent Apache from adding a trailing footer line containing information about the server to the server-generated documents (e.g.: error messages, directory listings, etc.). See <a href="https://httpd.apache.org/docs/current/mod/core.html#serversignature"> ServerSignature Directive</a> for more information on what the server signature provides and the <a href="https://httpd.apache.org/docs/current/mod/core.html#servertokens">ServerTokens Directive</a> for information about configuring the information provided in the signature.</p>
 
-<pre class="brush: bash notranslate">ServerSignature Off
+<pre class="brush: bash">ServerSignature Off
 </pre>
 
 <h2 id="Fix_broken_AcceptEncoding_Headers">Fix broken AcceptEncoding Headers</h2>
 
 <p>Some proxies and security software mangle or strip the <code>Accept-Encoding</code> HTTP header. See <a href="https://calendar.perfplanet.com/2010/pushing-beyond-gzipping/">Pushing Beyond Gzipping</a> for a more detailed explanation.</p>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_deflate.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_deflate.c&gt;
   &lt;IfModule mod_setenvif.c&gt;
     &lt;IfModule mod_headers.c&gt;
       SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
@@ -531,7 +531,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
 
 <p>Compress all output labeled with one of the following media types using the <a href="https://httpd.apache.org/docs/current/mod/mod_filter.html#addoutputfilterbytype">AddOutputFilterByType Directive</a>.</p>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_deflate.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_deflate.c&gt;
   &lt;IfModule mod_filter.c&gt;
     AddOutputFilterByType DEFLATE "application/atom+xml" \
       "application/javascript" \
@@ -576,7 +576,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
 
 <p>Map the following filename extensions to the specified encoding type using <a href="https://httpd.apache.org/docs/current/mod/mod_mime.html#addencoding">AddEncoding</a> so Apache can serve the file types with the appropriate <code>Content-Encoding</code> response header (this will NOT make Apache compress them!). If these files types would be served without an appropriate <code>Content-Encoding</code> response header, client applications (e.g.: browsers) wouldn't know that they first need to uncompress the response, and thus, wouldn't be able to understand the content.</p>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_deflate.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_deflate.c&gt;
   &lt;IfModule mod_mime.c&gt;
     AddEncoding gzip svgz
   &lt;/IfModule&gt;
@@ -586,7 +586,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
 
 <p>Serve resources with a far-future expiration date using the <a href="https://httpd.apache.org/docs/current/mod/mod_expires.html">mod_expires</a> module, and <a href="/en-US/docs/Web/HTTP/Headers/Cache-Control">Cache-Control</a> and <a href="/en-US/docs/Web/HTTP/Headers/Expires">Expires</a> headers.</p>
 
-<pre class="brush: bash notranslate">&lt;IfModule mod_expires.c&gt;
+<pre class="brush: bash">&lt;IfModule mod_expires.c&gt;
     ExpiresActive on
     ExpiresDefault                                      "access plus 1 month"
 

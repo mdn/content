@@ -51,7 +51,7 @@ tags:
 
 <p>Using <code>addEventListener()</code>:</p>
 
-<pre class="brush: js notranslate">const video = document.querySelector('video');
+<pre class="brush: js">const video = document.querySelector('video');
 
 video.addEventListener('emptied', (event) =&gt; {
   console.log('Uh oh. The media is empty. Did you call load()?');
@@ -59,7 +59,7 @@ video.addEventListener('emptied', (event) =&gt; {
 
 <p>Using the <code>onemptied</code> event handler property:</p>
 
-<pre class="brush: js notranslate">const video = document.querySelector('video');
+<pre class="brush: js">const video = document.querySelector('video');
 
 video.onemptied = (event) =&gt; {
   console.log('Uh oh. The media is empty. Did you call load()?');

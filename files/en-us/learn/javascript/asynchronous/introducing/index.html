@@ -39,7 +39,7 @@ tags:
 
 <p>A lot of the functionality we have looked at in previous learning area modules is synchronous — you run some code, and the result is returned as soon as the browser can do so. Let's look at a simple example (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/basic-function.html">see it live here</a>, and <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/basic-function.html">see the source</a>):</p>
 
-<pre class="brush: js notranslate">const btn = document.querySelector('button');
+<pre class="brush: js">const btn = document.querySelector('button');
 btn.addEventListener('click', () =&gt; {
   alert('You clicked me!');
 
@@ -68,7 +68,7 @@ btn.addEventListener('click', () =&gt; {
 <p>So in the example above, after you've clicked the button the paragraph won't appear until after the OK button is pressed in the alert box. You can try it for yourself:</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;<span class="pl-ent">button</span>&gt;Click me&lt;/<span class="pl-ent">button</span>&gt;</pre>
+<pre class="brush: html">&lt;<span class="pl-ent">button</span>&gt;Click me&lt;/<span class="pl-ent">button</span>&gt;</pre>
 </div>
 
 <p>{{EmbedLiveSample('Synchronous_JavaScript', '100%', '70px')}}</p>
@@ -83,7 +83,7 @@ btn.addEventListener('click', () =&gt; {
 
 <p>Why is this difficult to get to work using synchronous code? Let's look at a quick example. When you fetch an image from a server, you can't return the result immediately. That means that the following (pseudocode) wouldn't work:</p>
 
-<pre class="brush: js notranslate">let response = fetch('myImage.png'); // fetch is asynchronous
+<pre class="brush: js">let response = fetch('myImage.png'); // fetch is asynchronous
 let blob = response.blob();
 // display your image blob in the UI somehow</pre>
 
@@ -97,7 +97,7 @@ let blob = response.blob();
 
 <p>An example of an async callback is the second parameter of the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method (as we saw in action above):</p>
 
-<pre class="brush: js notranslate">btn.addEventListener('click', () =&gt; {
+<pre class="brush: js">btn.addEventListener('click', () =&gt; {
   alert('You clicked me!');
 
   let pElem = document.createElement('p');
@@ -111,7 +111,7 @@ let blob = response.blob();
 
 <p>You can write your own function containing a callback easily enough. Let's look at another example that loads a resource via the <a href="/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code> API</a> (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/xhr-async-callback.html">run it live</a>, and <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/xhr-async-callback.html">see the source</a>):</p>
 
-<pre class="brush: js notranslate">function loadAsset(url, type, callback) {
+<pre class="brush: js">function loadAsset(url, type, callback) {
   let xhr = new XMLHttpRequest();
   xhr.open('GET', url);
   xhr.responseType = type;
@@ -139,7 +139,7 @@ loadAsset('coffee.jpg', 'blob', displayImage);</pre>
 
 <p>Note that not all callbacks are async — some run synchronously. An example is when we use {{jsxref("Array.prototype.forEach()")}} to loop through the items in an array (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/foreach.html">see it live</a>, and <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/foreach.html">the source</a>):</p>
 
-<pre class="brush: js notranslate">const gods = ['Apollo', 'Artemis', 'Ares', 'Zeus'];
+<pre class="brush: js">const gods = ['Apollo', 'Artemis', 'Ares', 'Zeus'];
 
 gods.forEach(function (eachName, index){
   console.log(index + '. ' + eachName);
@@ -151,7 +151,7 @@ gods.forEach(function (eachName, index){
 
 <p>Promises are the new style of async code that you'll see used in modern Web APIs. A good example is the <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code> API, which is basically like a modern, more efficient version of {{domxref("XMLHttpRequest")}}. Let's look at a quick example, from our <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">Fetching data from the server</a> article:</p>
 
-<pre class="brush: js notranslate">fetch('products.json').then(function(response) {
+<pre class="brush: js">fetch('products.json').then(function(response) {
   return response.json();
 }).then(function(json) {
   products = json;
@@ -198,7 +198,7 @@ gods.forEach(function (eachName, index){
 
 <p>Let's explore an example that further illustrates the nature of async code, showing what can happen when we are not fully aware of code execution order and the problems of trying to treat asynchronous code like synchronous code. The following example is fairly similar to what we've seen before (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync.html">see it live</a>, and <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync.html">the source</a>). One difference is that we've included a number of {{domxref("console.log()")}} statements to illustrate an order that you might think the code would execute in.</p>
 
-<pre class="brush: js notranslate">console.log ('Starting');
+<pre class="brush: js">console.log ('Starting');
 let image;
 
 fetch('coffee.jpg').then((response) =&gt; {
@@ -229,7 +229,7 @@ console.log ('All done!');</pre>
 
 <p>If this confuses you, then consider the following smaller example:</p>
 
-<pre class="brush: js notranslate">console.log("registering click handler");
+<pre class="brush: js">console.log("registering click handler");
 
 button.addEventListener('click', () =&gt; {
   console.log("get click");
@@ -243,11 +243,11 @@ console.log("all done");</pre>
 
 <p>To see this in action, try taking a local copy of <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync.html">our example</a>, and changing the fourth <code>console.log()</code> call to the following:</p>
 
-<pre class="brush: js notranslate">console.log ('All done! ' + image.src + 'displayed.');</pre>
+<pre class="brush: js">console.log ('All done! ' + image.src + 'displayed.');</pre>
 
 <p>You should now get an error in your console instead of the third message:</p>
 
-<pre class="notranslate"><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">TypeError: image is undefined; can't access its "src" property</span></span></span></pre>
+<pre><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">TypeError: image is undefined; can't access its "src" property</span></span></span></pre>
 
 <p>This is because at the time the browser tries to run the third <code>console.log()</code> statement, the <code>fetch()</code> block has not finished running so the <code>image</code> variable has not been given a value.</p>
 

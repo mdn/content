@@ -38,7 +38,7 @@ tags:
 
 <p>If you've only written vanilla JavaScript before now, you might be used to having a separate JavaScript file, where you query for some DOM nodes and attach listeners to them. For example:</p>
 
-<pre class="brush: js notranslate">const btn = document.querySelector('button');
+<pre class="brush: js">const btn = document.querySelector('button');
 
 btn.addEventListener('click', () =&gt; {
   alert("hi!");
@@ -46,7 +46,7 @@ btn.addEventListener('click', () =&gt; {
 
 <p>In React, we write event handlers directly on the elements in our JSX, like this:</p>
 
-<pre class="brush: js notranslate">&lt;button
+<pre class="brush: js">&lt;button
   type="button"
   onClick={() =&gt; alert("hi!")}
 &gt;
@@ -72,14 +72,14 @@ btn.addEventListener('click', () =&gt; {
 
 <p>At the top of the <code>Form()</code> component function, create a function named <code>handleSubmit()</code>. This function should <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#preventing_default_behavior">prevent the default behavior of the <code>submit</code> event</a>. After that, it should trigger an <code>alert()</code>, which can say whatever you’d like. It should end up looking something like this:</p>
 
-<pre class="brush: js notranslate">function handleSubmit(e) {
+<pre class="brush: js">function handleSubmit(e) {
   e.preventDefault();
   alert('Hello, world!');
 }</pre>
 
 <p>To use this function, add an <code>onSubmit</code> attribute to the <code><a href="/en-US/docs/Web/HTML/Element/form">&lt;form&gt;</a></code> element, and set its value to the <code>handleSubmit</code> function:</p>
 
-<pre class="brush: js notranslate">&lt;form onSubmit={handleSubmit}&gt;</pre>
+<pre class="brush: js">&lt;form onSubmit={handleSubmit}&gt;</pre>
 
 <p>Now if you head back to your browser and click on the "Add" button, your browser will show you an alert dialog with the words "Hello, world!" — or whatever you chose to write there.</p>
 
@@ -93,17 +93,17 @@ btn.addEventListener('click', () =&gt; {
 
 <p>Inside the top of our <code>App()</code> component function, create a function named <code>addTask()</code> which has a single parameter of <code>name</code>:</p>
 
-<pre class="brush: js notranslate">function addTask(name) {
+<pre class="brush: js">function addTask(name) {
   alert(name);
 }</pre>
 
 <p>Next, we'll pass <code>addTask()</code> into <code>&lt;Form /&gt;</code> as a prop. The prop can have whatever name you want, but pick a name you’ll understand later. Something like <code>addTask</code> works, because it matches the name of the function as well as what the function will do. Your <code>&lt;Form /&gt;</code> component call should be updated as follows:</p>
 
-<pre class="brush: js notranslate">&lt;Form addTask={addTask} /&gt;</pre>
+<pre class="brush: js">&lt;Form addTask={addTask} /&gt;</pre>
 
 <p>Finally, you can use this prop inside the <code>handleSubmit()</code> function in your <code>&lt;Form /&gt;</code> component! Update it as follows:</p>
 
-<pre class="brush: js notranslate">function handleSubmit(e) {
+<pre class="brush: js">function handleSubmit(e) {
   e.preventDefault();
   props.addTask("Say hello!");
 }</pre>
@@ -124,7 +124,7 @@ btn.addEventListener('click', () =&gt; {
 
 <p>To use a React hook, we need to import it from the react module. In <code>Form.js</code>, change your very first line so that it reads like this:</p>
 
-<pre class="brush: js notranslate">import React, { useState } from "react";</pre>
+<pre class="brush: js">import React, { useState } from "react";</pre>
 
 <p>This allows us to import the <code>useState()</code> function by itself, and utilize it anywhere in this file.</p>
 
@@ -134,7 +134,7 @@ btn.addEventListener('click', () =&gt; {
 
 <p>Write the following above your <code>handleSubmit()</code> function, inside <code>Form()</code>:</p>
 
-<pre class="brush: js notranslate">const [name, setName] = useState('Use hooks!');</pre>
+<pre class="brush: js">const [name, setName] = useState('Use hooks!');</pre>
 
 <p>What's going on in this line of code?</p>
 
@@ -148,7 +148,7 @@ btn.addEventListener('click', () =&gt; {
 
 <p>You can see the <code>name</code> state in action right away. Add a <code>value</code> attribute to the form’s input, and set its value to <code>name</code>. Your browser will render "Use hooks!" inside the input.</p>
 
-<pre class="brush: js notranslate">&lt;input
+<pre class="brush: js">&lt;input
   type="text"
   id="new-todo-input"
   className="input input__lg"
@@ -159,13 +159,13 @@ btn.addEventListener('click', () =&gt; {
 
 <p>Change "Use hooks!" to an empty string once you're done; this is what we want for our initial state.</p>
 
-<pre class="brush: js notranslate">const [name, setName] = useState('');</pre>
+<pre class="brush: js">const [name, setName] = useState('');</pre>
 
 <h3 id="Reading_user_input">Reading user input</h3>
 
 <p>Before we can change the value of <code>name</code>, we need to capture a user's input as they type. For this, we can listen to the <code>onChange</code> event. Let’s write a <code>handleChange()</code> function, and listen for it on the <code>&lt;input /&gt;</code> tag.</p>
 
-<pre class="brush: js notranslate">// near the top of the `Form` component
+<pre class="brush: js">// near the top of the `Form` component
 function handleChange(e) {
   console.log("Typing!");
 }
@@ -187,7 +187,7 @@ function handleChange(e) {
 
 <p>You can <code>console.log()</code> this value to see it in your browser’s console.</p>
 
-<pre class="brush: js notranslate">function handleChange(e) {
+<pre class="brush: js">function handleChange(e) {
   console.log(e.target.value);
 }</pre>
 
@@ -195,14 +195,14 @@ function handleChange(e) {
 
 <p>Logging isn’t enough — we want to actually store the updated state of the name as the input value changes! Change the <code>console.log()</code> to <code>setName()</code>, as shown below:</p>
 
-<pre class="brush: js notranslate">function handleChange(e) {
+<pre class="brush: js">function handleChange(e) {
   setName(e.target.value);
 }
 </pre>
 
 <p>Now we need to change our <code>handleSubmit()</code> function so that it calls <code>props.addTask</code> with name as an argument — remember our callback prop? This will serve to send the task back to the <code>App</code> component, so we can add it to our list of tasks at some later date. As a matter of good practice, you should clear the input after your form submits, so we'll call <code>setName()</code> again with an empty string to do so:</p>
 
-<pre class="brush: js notranslate">function handleSubmit(e) {
+<pre class="brush: js">function handleSubmit(e) {
   e.preventDefault();
   props.addTask(name);
   setName("");
@@ -212,7 +212,7 @@ function handleChange(e) {
 
 <p>Your <code>Form.js</code> file should now read like this:</p>
 
-<pre class="brush: js notranslate">import React, { useState } from "react";
+<pre class="brush: js">import React, { useState } from "react";
 
 function Form(props) {
   const [name, setName] = useState("");
@@ -263,15 +263,15 @@ export default Form;</pre>
 
 <p>Import <code>useState</code> into <code>App.js</code>, so that we can store our tasks in state — update your <code>React</code> import line to the following:</p>
 
-<pre class="brush: js notranslate">import React, { useState } from "react";</pre>
+<pre class="brush: js">import React, { useState } from "react";</pre>
 
 <p>We want to pass <code>props.tasks</code> into the <code>useState()</code> hook – this will preserve its initial state. Add the following right at the top of your App() function definition:</p>
 
-<pre class="brush: js notranslate">const [tasks, setTasks] = useState(props.tasks);</pre>
+<pre class="brush: js">const [tasks, setTasks] = useState(props.tasks);</pre>
 
 <p>Now, we can change our <code>taskList</code> mapping so that it is the result of mapping <code>tasks</code>, instead of <code>props.tasks</code>. Your <code>taskList</code> constant declaration should now look like so:</p>
 
-<pre class="brush: js notranslate">const taskList = tasks.map(task =&gt; (
+<pre class="brush: js">const taskList = tasks.map(task =&gt; (
     &lt;Todo
         id={task.id}
         name={task.name}
@@ -291,7 +291,7 @@ export default Form;</pre>
 
 <p>Putting that all together, your <code>addTask()</code> function should read like so:</p>
 
-<pre class="brush: js notranslate">function addTask(name) {
+<pre class="brush: js">function addTask(name) {
   const newTask = { id: "id", name: name, completed: false };
   setTasks([...tasks, newTask]);
 }</pre>
@@ -304,7 +304,7 @@ export default Form;</pre>
 
 <p>Make sure you’re in the root directory of your application and run the following terminal command:</p>
 
-<pre class="brush: bash notranslate">npm install nanoid</pre>
+<pre class="brush: bash">npm install nanoid</pre>
 
 <div class="notecard note">
 <p><strong>Note</strong>: If you're using yarn, you'll need the following instead: <code>yarn add nanoid</code></p>
@@ -312,11 +312,11 @@ export default Form;</pre>
 
 <p>Now we can import <code>nanoid</code> into the top of <code>App.js</code> so we can use it to create unique IDs for our new tasks. First of all, include the following import line at the top of <code>App.js</code>:</p>
 
-<pre class="brush: js notranslate">import { nanoid } from "nanoid";</pre>
+<pre class="brush: js">import { nanoid } from "nanoid";</pre>
 
 <p>Now let's update <code>addTask()</code> so that each task ID becomes a prefix todo- plus a unique string generated by nanoid. Update your <code>newTask</code> constant declaration to this:</p>
 
-<pre class="brush: js notranslate">const newTask = { id: "todo-" + nanoid(), name: name, completed: false };</pre>
+<pre class="brush: js">const newTask = { id: "todo-" + nanoid(), name: name, completed: false };</pre>
 
 <p>Save everything, and try your app again — now you can add tasks without getting that warning about duplicate IDs.</p>
 
@@ -326,16 +326,16 @@ export default Form;</pre>
 
 <p>Add this inside your <code>App()</code> definition, before the return statement:</p>
 
-<pre class="brush: js notranslate">const headingText = `${taskList.length} tasks remaining`;</pre>
+<pre class="brush: js">const headingText = `${taskList.length} tasks remaining`;</pre>
 
 <p>Hrm. This is almost right, except that if our list ever contains a single task, the heading will still use the word “tasks”. We can make this a variable, too. Update the code you just added as follows:</p>
 
-<pre class="brush: js notranslate">const tasksNoun = taskList.length !== 1 ? 'tasks' : 'task';
+<pre class="brush: js">const tasksNoun = taskList.length !== 1 ? 'tasks' : 'task';
 const headingText = `${taskList.length} ${tasksNoun} remaining`;</pre>
 
 <p>Now you can replace the list heading's text content with the <code>headingText</code> variable. Update your <code>&lt;h2&gt;</code> like so:</p>
 
-<pre class="brush: js notranslate">&lt;h2 id="list-heading"&gt;{headingText}&lt;/h2&gt;</pre>
+<pre class="brush: js">&lt;h2 id="list-heading"&gt;{headingText}&lt;/h2&gt;</pre>
 
 <h2 id="Completing_a_task">Completing a task</h2>
 
@@ -349,13 +349,13 @@ const headingText = `${taskList.length} ${tasksNoun} remaining`;</pre>
 
 <p>Add this just above your <code>taskList</code> constant declaration:</p>
 
-<pre class="brush: js notranslate">function toggleTaskCompleted(id) {
+<pre class="brush: js">function toggleTaskCompleted(id) {
   console.log(tasks[0])
 }</pre>
 
 <p>Next, we'll add <code>toggleTaskCompleted</code> to the props of each <code>&lt;Todo/&gt;</code> component rendered inside our <code>taskList</code>; update it like so:</p>
 
-<pre class="brush: js notranslate">const taskList = tasks.map(task =&gt; (
+<pre class="brush: js">const taskList = tasks.map(task =&gt; (
   &lt;Todo
       id={task.id}
       name={task.name}
@@ -367,7 +367,7 @@ const headingText = `${taskList.length} ${tasksNoun} remaining`;</pre>
 
 <p>Next, go over to your <code>Todo.js</code> component and add an <code>onChange</code> handler to your <code>&lt;input /&gt;</code> element, which should use an anonymous function to call <code>props.toggleTaskCompleted()</code> with a parameter of <code>props.id</code>. The <code>&lt;input /&gt;</code> should now look like this:</p>
 
-<pre class="brush: js notranslate">&lt;input
+<pre class="brush: js">&lt;input
   id={props.id}
   type="checkbox"
   defaultChecked={props.completed}
@@ -376,7 +376,7 @@ const headingText = `${taskList.length} ${tasksNoun} remaining`;</pre>
 
 <p>Save everything and return to your browser and notice that our first task, Eat, is checked. Open your JavaScript console, then click on the checkbox next to Eat. It unchecks, as we expect. Your JavaScript console, however, will log something like this:</p>
 
-<pre class="brush: js notranslate">Object { id: "task-0", name: "Eat", completed: true }</pre>
+<pre class="brush: js">Object { id: "task-0", name: "Eat", completed: true }</pre>
 
 <p>The checkbox unchecks in the browser, but our console tells us that Eat is still completed. We will fix that next!</p>
 
@@ -386,7 +386,7 @@ const headingText = `${taskList.length} ${tasksNoun} remaining`;</pre>
 
 <p>Update your <code>toggleTaskCompleted()</code> function to the following:</p>
 
-<pre class="brush: js notranslate">function toggleTaskCompleted(id) {
+<pre class="brush: js">function toggleTaskCompleted(id) {
   const updatedTasks = tasks.map(task =&gt; {
     // if this task has the same ID as the edited task
     if (id === task.id) {
@@ -411,13 +411,13 @@ const headingText = `${taskList.length} ${tasksNoun} remaining`;</pre>
 
 <p>Here we'll start by writing a <code>deleteTask()</code> function in your <code>App</code> component. Like <code>toggleTaskCompleted()</code>, this function will take an <code>id</code> parameter, and we will log that <code>id</code> to the console to start with. Add the following below <code>toggleTaskCompleted()</code>:</p>
 
-<pre class="brush: js notranslate">function deleteTask(id) {
+<pre class="brush: js">function deleteTask(id) {
   console.log(id)
 }</pre>
 
 <p>Next, add another callback prop to our array of <code>&lt;Todo /&gt;</code> components:</p>
 
-<pre class="brush: js notranslate">const taskList = tasks.map(task =&gt; (
+<pre class="brush: js">const taskList = tasks.map(task =&gt; (
   &lt;Todo
     id={task.id}
     name={task.name}
@@ -432,7 +432,7 @@ const headingText = `${taskList.length} ${tasksNoun} remaining`;</pre>
 
 <p>Update the "Delete" button inside Todo.js, like so:</p>
 
-<pre class="brush: js notranslate">&lt;button
+<pre class="brush: js">&lt;button
   type="button"
   className="btn btn__danger"
   onClick={() =&gt; props.deleteTask(props.id)}
@@ -450,7 +450,7 @@ const headingText = `${taskList.length} ${tasksNoun} remaining`;</pre>
 
 <p>Update the <code>deleteTask()</code> function inside your <code>App.js</code> file as follows:</p>
 
-<pre class="brush: js notranslate">function deleteTask(id) {
+<pre class="brush: js">function deleteTask(id) {
   const remainingTasks = tasks.filter(task =&gt; id !== task.id);
   setTasks(remainingTasks);
 }</pre>

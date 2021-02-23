@@ -25,7 +25,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">let <em>address</em> = <em>rtcPeerConnectionIceErrorEvent</em>.address;</pre>
+  class="brush: js">let <em>address</em> = <em>rtcPeerConnectionIceErrorEvent</em>.address;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -52,7 +52,7 @@ tags:
   {{domxref("RTCPeerConnectionIceErrorEvent.errorText", "errorText")}} property's
   contents.</p>
 
-<pre class="brush: js notranslate">pc.addEventListener("icecandidateerror", (event) =&gt; {
+<pre class="brush: js">pc.addEventListener("icecandidateerror", (event) =&gt; {
   let networkInfo = `[Local interface: ${event.address}:${event.port}`;
   let iceServerInfo = `[ICE server: ${event.url}`;
 

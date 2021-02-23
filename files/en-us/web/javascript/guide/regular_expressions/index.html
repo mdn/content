@@ -22,7 +22,7 @@ tags:
  <li>
   <p>Using a regular expression literal, which consists of a pattern enclosed between slashes, as follows:</p>
 
-  <pre class="brush: js notranslate">let re = /ab+c/;
+  <pre class="brush: js">let re = /ab+c/;
 </pre>
 
   <p>Regular expression literals provide compilation of the regular expression when the script is loaded. If the regular expression remains constant, using this can improve performance.</p>
@@ -30,7 +30,7 @@ tags:
  <li>
   <p>Or calling the constructor function of the {{jsxref("RegExp")}} object, as follows:</p>
 
-  <pre class="brush: js notranslate">let re = new RegExp('ab+c');
+  <pre class="brush: js">let re = new RegExp('ab+c');
 </pre>
 
   <p>Using the constructor function provides runtime compilation of the regular expression. Use the constructor function when you know the regular expression pattern will be changing, or you don't know the pattern and are getting it from another source, such as user input.</p>
@@ -126,7 +126,7 @@ tags:
 
 <p>If escape strings are not already part of your pattern you can add them using {{jsxref('String.replace')}}:</p>
 
-<pre class="brush: js notranslate">function escapeRegExp(string) {
+<pre class="brush: js">function escapeRegExp(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&amp;'); // $&amp; means the whole matched string
 }
 </pre>
@@ -191,13 +191,13 @@ tags:
 
 <p>In the following example, the script uses the <code>exec()</code> method to find a match in a string.</p>
 
-<pre class="brush: js notranslate">var myRe = /d(b+)d/g;
+<pre class="brush: js">var myRe = /d(b+)d/g;
 var myArray = myRe.exec('cdbbdbsbz');
 </pre>
 
 <p>If you do not need to access the properties of the regular expression, an alternative way of creating <code>myArray</code> is with this script:</p>
 
-<pre class="brush: js notranslate">var myArray = /d(b+)d/g.exec('cdbbdbsbz');
+<pre class="brush: js">var myArray = /d(b+)d/g.exec('cdbbdbsbz');
     // similar to "cdbbdbsbz".match(/d(b+)d/g); however,
     // "cdbbdbsbz".match(/d(b+)d/g) outputs Array [ "dbbd" ], while
     // /d(b+)d/g.exec('cdbbdbsbz') outputs Array [ 'dbbd', 'bb', index: 1, input: 'cdbbdbsbz' ].
@@ -207,7 +207,7 @@ var myArray = myRe.exec('cdbbdbsbz');
 
 <p>If you want to construct the regular expression from a string, yet another alternative is this script:</p>
 
-<pre class="brush: js notranslate">var myRe = new RegExp('d(b+)d', 'g');
+<pre class="brush: js">var myRe = new RegExp('d(b+)d', 'g');
 var myArray = myRe.exec('cdbbdbsbz');
 </pre>
 
@@ -261,7 +261,7 @@ var myArray = myRe.exec('cdbbdbsbz');
 
 <p>As shown in the second form of this example, you can use a regular expression created with an object initializer without assigning it to a variable. If you do, however, every occurrence is a new regular expression. For this reason, if you use this form without assigning it to a variable, you cannot subsequently access the properties of that regular expression. For example, assume you have this script:</p>
 
-<pre class="brush: js notranslate">var myRe = /d(b+)d/g;
+<pre class="brush: js">var myRe = /d(b+)d/g;
 var myArray = myRe.exec('cdbbdbsbz');
 console.log('The value of lastIndex is ' + myRe.lastIndex);
 
@@ -270,7 +270,7 @@ console.log('The value of lastIndex is ' + myRe.lastIndex);
 
 <p>However, if you have this script:</p>
 
-<pre class="brush: js notranslate">var myArray = /d(b+)d/g.exec('cdbbdbsbz');
+<pre class="brush: js">var myArray = /d(b+)d/g.exec('cdbbdbsbz');
 console.log('The value of lastIndex is ' + /d(b+)d/g.lastIndex);
 
 // "The value of lastIndex is 0"
@@ -327,19 +327,19 @@ console.log('The value of lastIndex is ' + /d(b+)d/g.lastIndex);
 
 <p>To include a flag with the regular expression, use this syntax:</p>
 
-<pre class="brush: js notranslate">var re = /pattern/flags;
+<pre class="brush: js">var re = /pattern/flags;
 </pre>
 
 <p>or</p>
 
-<pre class="brush: js notranslate">var re = new RegExp('pattern', 'flags');
+<pre class="brush: js">var re = new RegExp('pattern', 'flags');
 </pre>
 
 <p>Note that the flags are an integral part of a regular expression. They cannot be added or removed later.</p>
 
 <p>For example, <code>re = /\w+\s/g</code> creates a regular expression that looks for one or more characters followed by a space, and it looks for this combination throughout the string.</p>
 
-<pre class="brush: js notranslate">var re = /\w+\s/g;
+<pre class="brush: js">var re = /\w+\s/g;
 var str = 'fee fi fo fum';
 var myArray = str.match(re);
 console.log(myArray);
@@ -349,19 +349,19 @@ console.log(myArray);
 
 <p>You could replace the line:</p>
 
-<pre class="brush: js notranslate">var re = /\w+\s/g;
+<pre class="brush: js">var re = /\w+\s/g;
 </pre>
 
 <p>with:</p>
 
-<pre class="brush: js notranslate">var re = new RegExp('\\w+\\s', 'g');
+<pre class="brush: js">var re = new RegExp('\\w+\\s', 'g');
 </pre>
 
 <p>and get the same result.</p>
 
 <p id="g-different-behaviors">The behavior associated with the <code>g</code> flag is different when the <code>.exec()</code> method is used.  The roles of "class" and "argument" get reversed: In the case of <code>.match()</code>, the string class (or data type) owns the method and the regular expression is just an argument, while in the case of <code>.exec()</code>, it is the regular expression that owns the method, with the string being the argument.  Contrast this <em><code>str.match(re)</code></em> versus <em><code>re.exec(str)</code></em>.  The <code>g</code> flag is used with the <strong><code>.exec()</code></strong> method to get iterative progression.</p>
 
-<pre class="brush: js notranslate">var xArray; while(xArray = re.exec(str)) console.log(xArray);
+<pre class="brush: js">var xArray; while(xArray = re.exec(str)) console.log(xArray);
 // produces:
 // ["fee ", index: 0, input: "fee fi fo fum"]
 // ["fi ", index: 4, input: "fee fi fo fum"]
@@ -398,7 +398,7 @@ console.log(myArray);
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
   Enter your phone number (with area code) and then click "Check".
   &lt;br&gt;
   The expected format is like ###-###-####.
@@ -410,7 +410,7 @@ console.log(myArray);
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">var re = /(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}/;
+<pre class="brush: js">var re = /(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}/;
 function testInfo(phoneInput) {
   var OK = re.exec(phoneInput.value);
   if (!OK) {

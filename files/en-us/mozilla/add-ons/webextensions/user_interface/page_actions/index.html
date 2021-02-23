@@ -82,7 +82,7 @@ tags:
 <ul>
  <li><strong>Without a popup:</strong> When the user clicks the button, an event is dispatched to the extension, which the extension listens for using <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked" title="Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."><code>pageAction.onClicked</code></a>:</li>
  <li>
-  <pre class="notranslate brush: js line-numbers  language-js">browser.pageAction.onClicked.addListener(handleClick);</pre>
+  <pre class="brush: js line-numbers  language-js">browser.pageAction.onClicked.addListener(handleClick);</pre>
  </li>
  <li><strong>With a popup:</strong> the <code>click</code> event is not dispatched. Instead, the popup appears when the user clicks the button. The user then interacts with the popup. When the user clicks outside of the popup, it closes automatically. See the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">Popup </a>article for more details on creating and managing popups.</li>
 </ul>

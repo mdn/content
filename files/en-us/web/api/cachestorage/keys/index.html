@@ -27,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">caches.keys().then(function(<em>keyList</em>) {
+<pre class="brush: js">caches.keys().then(function(<em>keyList</em>) {
   //do something with your keyList
 });
 </pre>
@@ -52,7 +52,7 @@ tags:
   <code>keys()</code>, then check each key to see if it is in the whitelist. If not, we
   delete it using {{domxref("CacheStorage.delete()")}}.</p>
 
-<pre class="brush: js notranslate">then.addEventListener('activate', function(event) {
+<pre class="brush: js">then.addEventListener('activate', function(event) {
   var cacheWhitelist = ['v2'];
 
   event.waitUntil(

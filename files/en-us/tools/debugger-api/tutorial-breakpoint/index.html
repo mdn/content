@@ -15,7 +15,7 @@ slug: Tools/Debugger-API/Tutorial-Breakpoint
  <li>
   <p>Save the following text to an HTML file:</p>
 
-  <pre class="language-html notranslate"><code>&lt;div onclick="report('the best div');"&gt;Click me!&lt;/div&gt;
+  <pre class="language-html"><code>&lt;div onclick="report('the best div');"&gt;Click me!&lt;/div&gt;
 &lt;div onclick="report('another great div');"&gt;Or me!&lt;/div&gt;
 &lt;script&gt;
 function report(what) {
@@ -32,7 +32,7 @@ function report(what) {
  <li>
   <p>Click on the Scratchpad panel and enter the following code:</p>
 
-  <pre class="language-js notranslate"><code>Components.utils.import("resource://gre/modules/jsdebugger.jsm");
+  <pre class="language-js"><code>Components.utils.import("resource://gre/modules/jsdebugger.jsm");
 Components.utils.import("resource://gre/modules/Console.jsm");
 
 // This defines 'Debugger' in this Scratchpad;

@@ -21,7 +21,7 @@ tags:
 
 <p>You most commonly use <code>&lt;link&gt;</code> to load a CSS file to style your page with:</p>
 
-<pre class="brush: html notranslate">&lt;link rel="stylesheet" href="styles/main.css"&gt;</pre>
+<pre class="brush: html">&lt;link rel="stylesheet" href="styles/main.css"&gt;</pre>
 
 <p>Here however, we will use a <code>rel</code> value of <code>preload</code>, which turns <code>&lt;link&gt;</code> into a preloader for any resource we want. You will also need to specify:</p>
 
@@ -32,7 +32,7 @@ tags:
 
 <p>A simple example might look like this (see our <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/js-and-css">JS and CSS example source</a>, and <a href="https://mdn.github.io/html-examples/link-rel-preload/js-and-css/">also live</a>):</p>
 
-<pre class="brush: html notranslate">&lt;head&gt;
+<pre class="brush: html">&lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;JS and CSS preload example&lt;/title&gt;
 
@@ -99,7 +99,7 @@ tags:
 
 <p>You can see an example of this in our video example (see the <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/video">full source code</a>, and also <a href="https://mdn.github.io/html-examples/link-rel-preload/video/">the live version</a>):</p>
 
-<pre class="brush: html notranslate">&lt;head&gt;
+<pre class="brush: html">&lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Video preload example&lt;/title&gt;
 
@@ -124,7 +124,7 @@ tags:
 
 <p>Let's use this case as an example. You can see the full <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/fonts">example source code on GitHub</a> (<a href="https://mdn.github.io/html-examples/link-rel-preload/fonts/">also see it live</a>):</p>
 
-<pre class="brush: html notranslate">&lt;head&gt;
+<pre class="brush: html">&lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Web font example&lt;/title&gt;
 
@@ -145,7 +145,7 @@ tags:
 
 <p>Let's look at an example (see it on GitHub — <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/media">source code</a>, <a href="https://mdn.github.io/html-examples/link-rel-preload/media/">live example</a>):</p>
 
-<pre class="brush: html notranslate">&lt;head&gt;
+<pre class="brush: html">&lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Responsive preload example&lt;/title&gt;
 
@@ -181,7 +181,7 @@ tags:
 
 <p>Another nice thing about these preloads is that you can execute them with script. For example, here we create a {{domxref("HTMLLinkElement")}} instance, then attach it to the DOM:</p>
 
-<pre class="brush: js notranslate"><code class="language-javascript"><span class="keyword token">var</span> preloadLink <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">"link"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js"><code class="language-javascript"><span class="keyword token">var</span> preloadLink <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">"link"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 preloadLink<span class="punctuation token">.</span>href <span class="operator token">=</span> <span class="string token">"myscript.js"</span><span class="punctuation token">;</span>
 preloadLink<span class="punctuation token">.</span>rel <span class="operator token">=</span> <span class="string token">"preload"</span><span class="punctuation token">;</span>
 preloadLink<span class="punctuation token">.</span><span class="keyword token">as</span> <span class="operator token">=</span> <span class="string token">"script"</span><span class="punctuation token">;</span>
@@ -190,7 +190,7 @@ document<span class="punctuation token">.</span>head<span class="punctuation tok
 
 <p>This means that the browser will preload the <code>myscript.js</code> file, but not actually use it yet. To use it, you could do this:</p>
 
-<pre class="brush: js notranslate"><code class="language-javascript"><span class="keyword token">var</span> preloadedScript <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">"script"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js"><code class="language-javascript"><span class="keyword token">var</span> preloadedScript <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">"script"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 preloadedScript<span class="punctuation token">.</span>src <span class="operator token">=</span> <span class="string token">"myscript.js"</span><span class="punctuation token">;</span>
 document<span class="punctuation token">.</span>body<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>preloadedScript<span class="punctuation token">)</span><span class="punctuation token">;</span>
 </code></pre>

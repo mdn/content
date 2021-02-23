@@ -25,7 +25,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>str</var>.repeat(<var>count</var>)</pre>
+<pre class="brush: js"><var>str</var>.repeat(<var>count</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -53,7 +53,7 @@ tags:
 
 <h3 id="Using_repeat">Using repeat()</h3>
 
-<pre class="brush: js notranslate">'abc'.repeat(-1)    // RangeError
+<pre class="brush: js">'abc'.repeat(-1)    // RangeError
 'abc'.repeat(0)     // ''
 'abc'.repeat(1)     // 'abc'
 'abc'.repeat(2)     // 'abcabc'
@@ -70,7 +70,7 @@ tags:
   available in all JavaScript implementations yet. However, you can polyfill
   <code>String.prototype.repeat()</code> with the following snippet:</p>
 
-<pre class="brush: js notranslate">if (!String.prototype.repeat) {
+<pre class="brush: js">if (!String.prototype.repeat) {
   String.prototype.repeat = function(count) {
     'use strict';
     if (this == null)

@@ -25,7 +25,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>regexObj</var>.toString();</pre>
+<pre class="brush: js"><var>regexObj</var>.toString();</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -45,7 +45,7 @@ tags:
 
 <p>The following example displays the string value of a {{jsxref("RegExp")}} object:</p>
 
-<pre class="brush: js notranslate">var myExp = new RegExp('a+b+c');
+<pre class="brush: js">var myExp = new RegExp('a+b+c');
 console.log(myExp.toString());  // logs '/a+b+c/'
 
 var foo = new RegExp('bar', 'g');
@@ -58,7 +58,7 @@ console.log(foo.toString());    // logs '/bar/g'
 <p>Starting with ECMAScript 5, an empty regular expression returns the string "/(?:)/" and
   line terminators such as "\n" are escaped:</p>
 
-<pre class="brush: js notranslate">new RegExp().toString(); // "/(?:)/"
+<pre class="brush: js">new RegExp().toString(); // "/(?:)/"
 
 new RegExp('\n').toString() === '/\n/';  // true, prior to ES5
 new RegExp('\n').toString() === '/\\n/'; // true, starting with ES5

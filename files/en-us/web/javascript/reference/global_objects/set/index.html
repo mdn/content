@@ -81,7 +81,7 @@ tags:
 
 <h3 id="Using_the_Set_object">Using the Set object</h3>
 
-<pre class="brush: js notranslate">const mySet1 = new Set()
+<pre class="brush: js">const mySet1 = new Set()
 
 mySet1.add(1)           // Set [ 1 ]
 mySet1.add(5)           // Set [ 1, 5 ]
@@ -113,7 +113,7 @@ console.log(mySet1)
 
 <h3 id="Iterating_Sets">Iterating Sets</h3>
 
-<pre class="brush: js notranslate">// iterate over items in set
+<pre class="brush: js">// iterate over items in set
 // logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
 for (let item of mySet1) console.log(item)
 
@@ -157,7 +157,7 @@ mySet1.forEach(function(value) {
 
 <h3 id="Implementing_basic_set_operations">Implementing basic set operations</h3>
 
-<pre class="brush: js notranslate">function isSuperset(set, subset) {
+<pre class="brush: js">function isSuperset(set, subset) {
     for (let elem of subset) {
         if (!set.has(elem)) {
             return false
@@ -219,7 +219,7 @@ difference(setA, setC)          // =&gt; Set [1, 2]
 
 <h3 id="Relation_with_Array_objects">Relation with Array objects</h3>
 
-<pre class="brush: js notranslate">let myArray = ['value1', 'value2', 'value3']
+<pre class="brush: js">let myArray = ['value1', 'value2', 'value3']
 
 // Use the regular Set constructor to transform an Array into a Set
 let mySet = new Set(myArray)
@@ -232,7 +232,7 @@ console.log([...mySet]) // Will show you exactly the same Array as myArray
 
 <h3 id="Remove_duplicate_elements_from_the_array">Remove duplicate elements from the array</h3>
 
-<pre class="brush: js notranslate">// Use to remove duplicate elements from the array
+<pre class="brush: js">// Use to remove duplicate elements from the array
 
 const numbers = [2,3,4,4,2,3,3,4,4,5,5,6,6,7,5,32,3,4,5]
 
@@ -242,7 +242,7 @@ console.log([...new Set(numbers)])
 
 <h3 id="Relation_with_Strings">Relation with Strings</h3>
 
-<pre class="brush: js notranslate">let text = 'India'
+<pre class="brush: js">let text = 'India'
 
 const mySet = new Set(text)  // Set ['I', 'n', 'd', 'i', 'a']
 mySet.size  // 5
@@ -254,7 +254,7 @@ new Set("firefox")  // Set(6) [ "f", "i", "r", "e", "o", "x" ]
 
 <h3 id="Use_Set_to_ensure_the_uniqueness_of_a_list_of_values">Use Set to ensure the uniqueness of a list of values</h3>
 
-<pre class="brush: js notranslate" dir="ltr">const array = Array
+<pre class="brush: js" dir="ltr">const array = Array
   .from(document.querySelectorAll('[id]'))
   .map(function(e) {
       return e.id

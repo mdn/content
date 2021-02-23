@@ -7,7 +7,7 @@ tags:
   - CSS Property
   - NeedsExample
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 ---
 <div>{{CSSRef}}</div>
 
@@ -17,7 +17,7 @@ tags:
 
 <p>The slicing process creates nine regions in total: four corners, four edges, and a middle region. Four slice lines, set a given distance from their respective sides, control the size of the regions.</p>
 
-<p><a href="/files/3814/border-image-slice.png"><img alt="The nine regions defined by the border-image or border-image-slice properties" src="/files/3814/border-image-slice.png" style="margin: 1px; padding: 1em; width: 460px;"></a></p>
+<p><a href="/en-US/docs/Web/CSS/border-image-slice/border-image-slice.png"><img alt="The nine regions defined by the border-image or border-image-slice properties" src="border-image-slice.png" style="margin: 1px; padding: 1em;"></a></p>
 
 <p>The above diagram illustrates the location of each region.</p>
 
@@ -31,7 +31,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* All sides */
+<pre class="brush:css no-line-numbers">/* All sides */
 border-image-slice: 30%;
 
 /* vertical | horizontal */
@@ -80,7 +80,7 @@ border-image-slice: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -88,11 +88,11 @@ border-image-slice: unset;
 
 <p>The following example shows a simple <code>&lt;div&gt;</code> with a border image set on it. The source image for the borders is as follows:</p>
 
-<p><img alt="nice multi-colored diamonds" src="https://interactive-examples.mdn.mozilla.net/media/examples/border-diamonds.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="nice multi-colored diamonds" src="border-diamonds.png" style="display: block; margin: 0 auto;"></p>
 
 <p>The diamonds are 30px across, therefore setting 30 pixels as the value for both <code><a href="/en-US/docs/Web/CSS/border-width">border-width</a></code> and <code>border-image-slice</code> will get you complete and fairly crisp diamonds in your border:</p>
 
-<pre class="brush: css notranslate">border-width: 30px;
+<pre class="brush: css">border-width: 30px;
 border-image-slice: 30;</pre>
 
 <p>These are the default values we have used in this example. However, we have also provided two sliders to allow you to dynamically change the values of the above two properties, allowing you to appreciate the effect they have:</p>
@@ -103,7 +103,7 @@ border-image-slice: 30;</pre>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;&lt;/div&gt;
 &lt;/div&gt;
 
@@ -122,7 +122,7 @@ border-image-slice: 30;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   width: 400px;
   height: 300px;
 }
@@ -144,7 +144,7 @@ li {
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">const widthSlider = document.getElementById('width');
+<pre class="brush: js">const widthSlider = document.getElementById('width');
 const sliceSlider = document.getElementById('slice');
 const widthOutput = document.getElementById('width-output');
 const sliceOutput = document.getElementById('slice-output');
@@ -192,5 +192,5 @@ sliceSlider.addEventListener('input', () =&gt; {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/Shorthand_properties#Tricky_edge_cases">Illustrated description of the 1-to-4-value syntax</a></li>
+ <li><a href="/en-US/docs/Web/CSS/Shorthand_properties#tricky_edge_cases">Illustrated description of the 1-to-4-value syntax</a></li>
 </ul>

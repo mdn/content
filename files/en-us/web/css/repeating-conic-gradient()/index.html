@@ -22,7 +22,7 @@ The source for this interactive example is stored in a GitHub repository. If you
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css language-css notranslate" id="css">/* Starburst: a blue on blue starburst: the gradient
+<pre class="brush: css language-css" id="css">/* Starburst: a blue on blue starburst: the gradient
    is a starburst of lighter and darker blue,
    centered in the upper left quadrant,
    offset by 3degrees so there is no up/down straight line */
@@ -72,7 +72,7 @@ background: repeating-conic-gradient(
 
 <p>The above gradients are defined as being one third blue, one third red, and one third yellow.</p>
 
-<pre class="notranslate">repeating-conic-gradient(from 0deg, red 0deg 30deg, yellow 30deg 60deg, blue 60deg 90deg);
+<pre>repeating-conic-gradient(from 0deg, red 0deg 30deg, yellow 30deg 60deg, blue 60deg 90deg);
 
 repeating-radial-gradient(red 0 8%, yellow 8% 16%, blue 16% 24%);
 
@@ -95,7 +95,7 @@ radial-gradient(red 33%, yellow 33% 66%, blue 66%);
 
 <p>By adding more angled color-stop points on the gradient arc, you can create a highly customized transition between multiple colors. A color-stop's position can be explicitly defined by using an {{CSSxRef("&lt;angle&gt;")}}. If you don't specify the location of a color stop, it is placed halfway between the one that precedes it and the one that follows it. Like the non-repeating gradient counterpart, If you don't specify an angle for the first or last color stop, the values are will be 0deg and 360deg. If you don't declare an angle for either, you'll get a non-repeating conic gradient. If you declare a non 0 or 360degree for the first or last respectively, the gradient will repeat based on that value. For example, if you don't declare an angle for the first color, and declare 10% on the last color stop, the arc will repeat 10 times. Rather, the starting point is the first color stop declared, and the last color stop is the last color stop angle declared.. The following two gradients are equivalent</p>
 
-<pre class="brush: css notranslate">repeating-conic-gradient(red, orange, yellow, green, blue 50%);
+<pre class="brush: css">repeating-conic-gradient(red, orange, yellow, green, blue 50%);
 repeating-conic-gradient(from -45deg, red 45deg, orange, yellow, green, blue 225deg)</pre>
 
 <p>By default, colors transition smoothly from the color at one color stop to the color at the subsequent color stop, with the midpoint between the colors being the half way point between the color transition. You can move this color transition midpoint to any point between two color stops by adding a color hint, indicating where the middle of the color transition should be.</p>
@@ -118,16 +118,16 @@ repeating-conic-gradient(from -45deg, red 45deg, orange, yellow, green, blue 225
 <h3 id="Black_and_white_starburst">Black and white starburst</h3>
 
 <div class="hidden">
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   width: 200px;
   height: 200px;
 }</pre>
 
-<pre class="brush: html notranslate">&lt;div&gt;&lt;/div&gt;
+<pre class="brush: html">&lt;div&gt;&lt;/div&gt;
 </pre>
 </div>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   background-image:
      repeating-conic-gradient(#fff 0 9deg, #000 9deg 18deg);
 }
@@ -140,16 +140,16 @@ repeating-conic-gradient(from -45deg, red 45deg, orange, yellow, green, blue 225
 <p>This gradient repeats 18 times, but since we only see the right half, we only see 9 repeats.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   width: 200px;
   height: 200px;
 }</pre>
 
-<pre class="brush: html notranslate">&lt;div&gt;&lt;/div&gt;
+<pre class="brush: html">&lt;div&gt;&lt;/div&gt;
 </pre>
 </div>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   background: repeating-conic-gradient(
     from 3deg at 25% 25%,
     green, blue 2deg 5deg, green, yellow 15deg 18deg, green 20deg);

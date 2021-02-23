@@ -21,7 +21,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>tags</var> = PeriodicSyncManager.getTags();</pre>
+  class="brush: js">var <var>tags</var> = PeriodicSyncManager.getTags();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -41,7 +41,7 @@ tags:
 <p>The following example uses the <code>getTags()</code> method to check if a periodic
   sync task with a given tag is registered.</p>
 
-<pre class="brush: js notranslate">navigator.serviceWorker.ready.then(registration =&gt; {
+<pre class="brush: js">navigator.serviceWorker.ready.then(registration =&gt; {
   registration.periodicSync.getTags().then(tags =&gt; {
     if (tags.includes('get-latest-news'))
       skipDownloadingLatestNewsOnPageLoad();

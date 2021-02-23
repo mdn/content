@@ -49,7 +49,7 @@ tags:
 
 <p>First of all, make yourself a local copy of our <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-start.html">oojs-class-inheritance-start.html</a> file (see it <a href="https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-start.html">running live</a> also). Inside here you'll find the same <code>Person()</code> constructor example that we've been using all the way through the module, with a slight difference — we've defined only the properties inside the constructor:</p>
 
-<pre class="brush: js notranslate">function Person(first, last, age, gender, interests) {
+<pre class="brush: js">function Person(first, last, age, gender, interests) {
   this.name = {
     first,
     last
@@ -61,7 +61,7 @@ tags:
 
 <p>The methods are <em>all</em> defined on the constructor's prototype. For example:</p>
 
-<pre class="brush: js notranslate">Person.prototype.greeting = function() {
+<pre class="brush: js">Person.prototype.greeting = function() {
   alert('Hi! I\'m ' + this.name.first + '.');
 };</pre>
 
@@ -80,7 +80,7 @@ tags:
 
 <p>The first thing we need to do is create a <code>Teacher()</code> constructor — add the following below the existing code:</p>
 
-<pre class="brush: js notranslate">function Teacher(first, last, age, gender, interests, subject) {
+<pre class="brush: js">function Teacher(first, last, age, gender, interests, subject) {
   Person.call(this, first, last, age, gender, interests);
 
   this.subject = subject;
@@ -94,7 +94,7 @@ tags:
 
 <p>As a note, we could have done this:</p>
 
-<pre class="brush: js notranslate">function Teacher(first, last, age, gender, interests, subject) {
+<pre class="brush: js">function Teacher(first, last, age, gender, interests, subject) {
   this.name = {
     first,
     last
@@ -111,14 +111,14 @@ tags:
 
 <p>Note that if the constructor you are inheriting from doesn't take its property values from parameters, you don't need to specify them as additional arguments in <code>call()</code>. So, for example, if you had something really simple like this:</p>
 
-<pre class="brush: js notranslate">function Brick() {
+<pre class="brush: js">function Brick() {
   this.width = 10;
   this.height = 20;
 }</pre>
 
 <p>You could inherit the <code>width</code> and <code>height</code> properties by doing this (as well as the other steps described below, of course):</p>
 
-<pre class="brush: js notranslate">function BlueGlassBrick() {
+<pre class="brush: js">function BlueGlassBrick() {
   Brick.call(this);
 
   this.opacity = 0.5;
@@ -133,11 +133,11 @@ tags:
 
 <ol>
 	<li>Add the following line below your previous addition:
-	<pre class="brush: js notranslate">Teacher.prototype = Object.create(Person.prototype);</pre>
+	<pre class="brush: js">Teacher.prototype = Object.create(Person.prototype);</pre>
 	Here our friend <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">create()</a></code> comes to the rescue again. In this case we are using it to create a new object and make it the value of <code>Teacher.prototype</code>. The new object has <code>Person.prototype</code> as its prototype and will therefore inherit, if and when needed, all the methods available on <code>Person.prototype</code>.</li>
 	<li>We need to do one more thing before we move on. After adding the last line, <code>Teacher.</code><code>prototype</code>'s <code>constructor</code> property is now equal to <code>Person()</code>, because we just set <code>Teacher.prototype</code> to reference an object that inherits its properties from <code>Person.prototype</code>! Try saving your code, loading the page in a browser, and entering <code>Teacher.prototype.constructor</code> into the console to verify.</li>
 	<li>This can become a problem, so we need to set this right. You can do so by going back to your source code and adding the following line at the bottom:
-	<pre class="brush: js notranslate">Object.defineProperty(Teacher.prototype, 'constructor', {
+	<pre class="brush: js">Object.defineProperty(Teacher.prototype, 'constructor', {
     value: Teacher,
     enumerable: false, // so that it does not appear in 'for in' loop
     writable: true });</pre>
@@ -151,7 +151,7 @@ tags:
 
 <p>The easiest way to do this is to define it on <code>Teacher()</code>'s prototype — add the following at the bottom of your code:</p>
 
-<pre class="brush: js notranslate">Teacher.prototype.greeting = function() {
+<pre class="brush: js">Teacher.prototype.greeting = function() {
   let prefix;
 
   if (this.gender === 'male' || this.gender === 'Male' || this.gender === 'm' || this.gender === 'M') {
@@ -171,11 +171,11 @@ tags:
 
 <p>Now that you've entered all the code, try creating an object instance from <code>Teacher()</code> by putting the following at the bottom of your JavaScript (or something similar of your choosing):</p>
 
-<pre class="brush: js notranslate">let teacher1 = new Teacher('Dave', 'Griffiths', 31, 'male', ['football', 'cookery'], 'mathematics');</pre>
+<pre class="brush: js">let teacher1 = new Teacher('Dave', 'Griffiths', 31, 'male', ['football', 'cookery'], 'mathematics');</pre>
 
 <p>Now save and refresh, and try accessing the properties and methods of your new <code>teacher1</code> object, for example:</p>
 
-<pre class="brush: js notranslate">teacher1.name.first;
+<pre class="brush: js">teacher1.name.first;
 teacher1.interests[0];
 teacher1.bio();
 teacher1.subject;
@@ -225,7 +225,7 @@ teacher1.farewell();</pre>
 
 <p>Let's look at a rewritten version of the Person example, class-style:</p>
 
-<pre class="brush: js notranslate">class Person {
+<pre class="brush: js">class Person {
   constructor(first, last, age, gender, interests) {
     this.name = {
       first,
@@ -255,7 +255,7 @@ teacher1.farewell();</pre>
 
 <p>We can now instantiate object instances using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> operator</a>, in just the same way as we did before:</p>
 
-<pre class="brush: js notranslate">let han = new Person('Han', 'Solo', 25, 'male', ['Smuggling']);
+<pre class="brush: js">let han = new Person('Han', 'Solo', 25, 'male', ['Smuggling']);
 han.greeting();
 // Hi! I'm Han
 
@@ -274,7 +274,7 @@ leia.farewell();
 
 <p>To create a subclass we use the <a href="/en-US/docs/Web/JavaScript/Reference/Classes/extends">extends keyword</a> to tell JavaScript the class we want to base our class on,</p>
 
-<pre class="brush: js notranslate">class Teacher extends Person {
+<pre class="brush: js">class Teacher extends Person {
   constructor(subject, grade) {
     this.subject = subject;
     this.grade = grade;
@@ -287,7 +287,7 @@ leia.farewell();
 
 <p>Therefore running the above code will give an error:</p>
 
-<pre class="brush: js notranslate">Uncaught ReferenceError: Must call super constructor in derived class before
+<pre class="brush: js">Uncaught ReferenceError: Must call super constructor in derived class before
 accessing 'this' or returning from derived constructor</pre>
 
 <p>For sub-classes, the <code>this</code> initialization to a newly allocated object is always dependant on the parent class constructor, i.e the constructor function of the class from which you're extending.</p>
@@ -296,7 +296,7 @@ accessing 'this' or returning from derived constructor</pre>
 
 <p>To call the parent constructor we have to use the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/super"><code>super()</code> operator</a>, like so:</p>
 
-<pre class="brush: js notranslate">class Teacher extends Person {
+<pre class="brush: js">class Teacher extends Person {
   constructor(subject, grade) {
     super(); // Now 'this' is initialized by calling the parent constructor.
     this.subject = subject;
@@ -309,7 +309,7 @@ It is good then, that the <a href="/en-US/docs/Web/JavaScript/Reference/Operator
 
 <p>Looking back to our <code>Person</code> constructor, we can see it has the following block of code in its constructor method:</p>
 
-<pre class="brush: js notranslate"> constructor(first, last, age, gender, interests) {
+<pre class="brush: js"> constructor(first, last, age, gender, interests) {
    this.name = {
      first,
      last
@@ -321,7 +321,7 @@ It is good then, that the <a href="/en-US/docs/Web/JavaScript/Reference/Operator
 
 <p>Since the <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/super">super()</a></code> operator is actually the parent class constructor, passing it the necessary arguments of the <code>Parent</code> class constructor will also initialize the parent class properties in our sub-class, thereby inheriting it:</p>
 
-<pre class="brush: js notranslate">class Teacher extends Person {
+<pre class="brush: js">class Teacher extends Person {
   constructor(first, last, age, gender, interests, subject, grade) {
     super(first, last, age, gender, interests);
 
@@ -334,7 +334,7 @@ It is good then, that the <a href="/en-US/docs/Web/JavaScript/Reference/Operator
 
 <p>Now when we instantiate <code>Teacher</code> object instances, we can call methods and properties defined on both <code>Teacher</code>and <code>Person</code> as we'd expect:</p>
 
-<pre class="brush: js notranslate">let snape = new Teacher('Severus', 'Snape', 58, 'male', ['Potions'], 'Dark arts', 5);
+<pre class="brush: js">let snape = new Teacher('Severus', 'Snape', 58, 'male', ['Potions'], 'Dark arts', 5);
 snape.greeting(); // Hi! I'm Severus.
 snape.farewell(); // Severus has left the building. Bye for now.
 snape.age // 58
@@ -359,7 +359,7 @@ snape.subject; // Dark arts
 
 <p>The modified <code>Teacher</code> class looks like this:</p>
 
-<pre class="brush: js notranslate">class Teacher extends Person {
+<pre class="brush: js">class Teacher extends Person {
   constructor(first, last, age, gender, interests, subject, grade) {
     super(first, last, age, gender, interests);
     // subject and grade are specific to Teacher
@@ -386,7 +386,7 @@ snape.subject; // Dark arts
 
 <p>The example below shows the two features in action:</p>
 
-<pre class="brush: js notranslate">// Check the default value
+<pre class="brush: js">// Check the default value
 console.log(snape.subject) // Returns "Dark arts"
 
 // Change the value

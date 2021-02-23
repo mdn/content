@@ -63,7 +63,7 @@ tags:
 
 <p>The {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} which contains a string representation of the selected number. The value is never an empty string (<code>""</code>). The default value is halfway between the specified minimum and maximum—unless the maximum is actually less than the minimum, in which case the default is set to the value of the <code>min</code> attribute. The algorithm for determining the default value is:</p>
 
-<pre class="brush: js notranslate">defaultValue = (rangeElem.max &lt; rangeElem.min) ? rangeElem.min
+<pre class="brush: js">defaultValue = (rangeElem.max &lt; rangeElem.min) ? rangeElem.min
                : rangeElem.min + (rangeElem.max - rangeElem.min)/2;</pre>
 
 <p>If an attempt is made to set the value lower than the minimum, it is set to the minimum. Similarly, an attempt to set the value higher than the maximum results in it being set to the maximum.</p>
@@ -168,7 +168,7 @@ tags:
 
 <p>For example, to ask the user for a value between -10 and 10, you can use:</p>
 
-<pre class="brush: html notranslate">&lt;input type="range" min="-10" max="10"&gt;</pre>
+<pre class="brush: html">&lt;input type="range" min="-10" max="10"&gt;</pre>
 
 <p>{{EmbedLiveSample("Specifying_the_minimum_and_maximum", 600, 40)}}</p>
 
@@ -177,7 +177,7 @@ tags:
 <p>By default, the granularity, is 1, meaning that the value is always an integer. You can change the {{htmlattrxref("step")}} attribute to control the granularity. For example, If you need a value between 5 and 10, accurate to two decimal places, you should set the value of <code>step</code> to 0.01:</p>
 
 <div id="Granularity_sample1">
-<pre class="brush: html notranslate">&lt;input type="range" min="5" max="10" step="0.01"&gt;</pre>
+<pre class="brush: html">&lt;input type="range" min="5" max="10" step="0.01"&gt;</pre>
 
 <p>{{EmbedLiveSample("Granularity_sample1", 600, 40)}}</p>
 </div>
@@ -185,7 +185,7 @@ tags:
 <p>If you want to accept any value regardless of how many decimal places it extends to, you can specify a value of <code>any</code> for the {{htmlattrxref("step", "input")}} attribute:</p>
 
 <div id="Granularity_sample2">
-<pre class="brush: html notranslate">&lt;input type="range" min="0" max="3.14" step="any"&gt;</pre>
+<pre class="brush: html">&lt;input type="range" min="0" max="3.14" step="any"&gt;</pre>
 
 <p>{{EmbedLiveSample("Granularity_sample2", 600, 40)}}</p>
 
@@ -212,7 +212,7 @@ tags:
   </tr>
   <tr>
    <td rowspan="4">
-    <pre class="brush: html notranslate">
+    <pre class="brush: html">
 &lt;input type="range"&gt;</pre>
    </td>
    <th>Screenshot</th>
@@ -241,7 +241,7 @@ tags:
   </tr>
   <tr>
    <td rowspan="4">
-    <pre class="brush: html notranslate">
+    <pre class="brush: html">
 &lt;input type="range" list="tickmarks"&gt;
 
 &lt;datalist id="tickmarks"&gt;
@@ -285,7 +285,7 @@ tags:
   </tr>
   <tr>
    <td rowspan="4">
-    <pre class="brush: html notranslate">
+    <pre class="brush: html">
 &lt;input type="range" list="tickmarks"&gt;
 
 &lt;datalist id="tickmarks"&gt;
@@ -331,7 +331,7 @@ tags:
 <p>Consider this range control:</p>
 
 <div id="Orientation_sample1">
-<pre class="brush: html notranslate">&lt;input type="range" id="volume" min="0" max="11" value="7" step="1"&gt;</pre>
+<pre class="brush: html">&lt;input type="range" id="volume" min="0" max="11" value="7" step="1"&gt;</pre>
 </div>
 
 <p>{{EmbedLiveSample("Orientation_sample1", 200, 200, "https://mdn.mozillademos.org/files/14983/Orientation_sample1.png")}}</p>
@@ -345,14 +345,14 @@ tags:
 <div id="Orientation_sample2">
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">#volume {
+<pre class="brush: css">#volume {
   height: 150px;
   width: 50px;
 }</pre>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;input type="range" id="volume" min="0" max="11" value="7" step="1"&gt;</pre>
+<pre class="brush: html">&lt;input type="range" id="volume" min="0" max="11" value="7" step="1"&gt;</pre>
 
 <h4 id="Result">Result</h4>
 
@@ -370,7 +370,7 @@ tags:
 
 <p>The HTML needs to be updated to wrap the {{HTMLElement("input")}} in a {{HTMLElement("div")}} to let us correct the layout after the transform is performed (since transforms don't automatically affect the layout of the page):</p>
 
-<pre class="brush: html notranslate">&lt;div class="slider-wrapper"&gt;
+<pre class="brush: html">&lt;div class="slider-wrapper"&gt;
   &lt;input type="range" min="0" max="11" value="7" step="1"&gt;
 &lt;/div&gt;</pre>
 
@@ -378,7 +378,7 @@ tags:
 
 <p>Now we need some CSS. First is the CSS for the wrapper itself; this specifies the display mode and size we want so that the page lays out correctly; in essence, it's reserving an area of the page for the slider so that the rotated slider fits into the reserved space without making a mess of things.</p>
 
-<pre class="brush: css notranslate">.slider-wrapper {
+<pre class="brush: css">.slider-wrapper {
   display: inline-block;
   width: 20px;
   height: 150px;
@@ -388,7 +388,7 @@ tags:
 
 <p>Then comes the style information for the <code>&lt;input&gt;</code> element within the reserved space:</p>
 
-<pre class="brush: css notranslate">.slider-wrapper input {
+<pre class="brush: css">.slider-wrapper input {
   width: 150px;
   height: 20px;
   margin: 0;
@@ -408,14 +408,14 @@ tags:
 
 <p>We use the same HTML as in the previous examples:</p>
 
-<pre class="brush: html notranslate">&lt;input type="range" min="0" max="11" value="7" step="1"&gt;
+<pre class="brush: html">&lt;input type="range" min="0" max="11" value="7" step="1"&gt;
 </pre>
 
 <h4 id="CSS_3">CSS</h4>
 
 <p>We target just the inputs with a type of range:</p>
 
-<pre class="brush: css notranslate">input[type="range"] {
+<pre class="brush: css">input[type="range"] {
   -webkit-appearance: slider-vertical;
 }</pre>
 
@@ -429,7 +429,7 @@ tags:
 
 <p>Use similar HTML as in the previous examples, we add the attribute with a value of <code>vertical</code>:</p>
 
-<pre class="brush: html notranslate">&lt;input type="range" min="0" max="11" value="7" step="1" orient="vertical"&gt;
+<pre class="brush: html">&lt;input type="range" min="0" max="11" value="7" step="1" orient="vertical"&gt;
 </pre>
 
 <p>{{EmbedLiveSample("orient_attribute", 200, 200)}}</p>
@@ -442,14 +442,14 @@ tags:
 
 <p>We use the same HTML as in the previous examples:</p>
 
-<pre class="brush: html notranslate">&lt;input type="range" min="0" max="11" value="7" step="1"&gt;
+<pre class="brush: html">&lt;input type="range" min="0" max="11" value="7" step="1"&gt;
 </pre>
 
 <h4 id="CSS_4">CSS</h4>
 
 <p>We target just the inputs with a type of range, changing the writing mode from the default to <code>bt-lr</code>, or bottom-to-top and left-to-right:</p>
 
-<pre class="brush: css notranslate">input[type="range"] {
+<pre class="brush: css">input[type="range"] {
   writing-mode: bt-lr;
 }</pre>
 
@@ -463,14 +463,14 @@ tags:
 
 <p>We keep the <code>orient</code> attribute with a value of <code>vertical</code> for Firefox:</p>
 
-<pre class="brush: html notranslate">&lt;input type="range" min="0" max="11" value="7" step="1" orient="vertical"&gt;
+<pre class="brush: html">&lt;input type="range" min="0" max="11" value="7" step="1" orient="vertical"&gt;
 </pre>
 
 <h4 id="CSS_5">CSS</h4>
 
 <p>We target just the inputs with a type of range, changing the writing mode from the default to <code>bt-lr</code>, or bottom-to-top and left-to-right, for Edge and Internet Explorer, and add <code>-webkit-appearance: slider-vertical</code> for all -webkit-based browsers:</p>
 
-<pre class="brush: css notranslate">input[type="range"] {
+<pre class="brush: css">input[type="range"] {
   writing-mode: bt-lr;
   -webkit-appearance: slider-vertical;
 }</pre>

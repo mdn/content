@@ -20,7 +20,7 @@ tags:
 
 <p>The structured clone algorithm accepts <code>SharedArrayBuffers</code> and <code>TypedArrays</code> mapped onto <code>SharedArrayBuffers</code>. In both cases, the <code>SharedArrayBuffer</code> object is transmitted to the receiver resulting in a new, private SharedArrayBuffer object in the receiving agent (just as for {{jsxref("ArrayBuffer")}}). However, the shared data block referenced by the two <code>SharedArrayBuffer</code> objects is the same data block, and a side effect to the block in one agent will eventually become visible in the other agent.</p>
 
-<pre class="brush: js notranslate">var sab = new SharedArrayBuffer(1024);
+<pre class="brush: js">var sab = new SharedArrayBuffer(1024);
 worker.postMessage(sab);
 </pre>
 
@@ -49,13 +49,13 @@ worker.postMessage(sab);
  <li><a href="/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy"><code>Cross-Origin-Embedder-Policy</code></a> with <code>require-corp</code> as value (protects victims from your origin)</li>
 </ul>
 
-<pre class="brush: plain notranslate">Cross-Origin-Opener-Policy: same-origin
+<pre class="brush: plain">Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 </pre>
 
 <p>To check if cross origin isolation has been successful, you can test against the <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated">crossOriginIsolated</a></code> property available to window and worker contexts:</p>
 
-<pre class="brush: js notranslate">if (crossOriginIsolated) {
+<pre class="brush: js">if (crossOriginIsolated) {
   // Post SharedArrayBuffer
 } else {
   // Do something else
@@ -67,11 +67,11 @@ Cross-Origin-Embedder-Policy: require-corp
 
 <p><code>SharedArrayBuffer</code> constructors are required to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a <code>SharedArrayBuffer</code> constructor as a function without <code>new</code> will throw a {{jsxref("TypeError")}}.</p>
 
-<pre class="brush: js example-bad notranslate">var sab = SharedArrayBuffer(1024);
+<pre class="brush: js example-bad">var sab = SharedArrayBuffer(1024);
 // TypeError: calling a builtin SharedArrayBuffer constructor
 // without new is forbidden</pre>
 
-<pre class="brush: js example-good notranslate">var sab = new SharedArrayBuffer(1024);</pre>
+<pre class="brush: js example-good">var sab = new SharedArrayBuffer(1024);</pre>
 
 <h2 id="Constructor">Constructor</h2>
 
@@ -98,18 +98,18 @@ Cross-Origin-Embedder-Policy: require-corp
 
 <h3 id="Creating_a_new_SharedArrayBuffer">Creating a new SharedArrayBuffer</h3>
 
-<pre class="brush: js notranslate">var sab = new SharedArrayBuffer(1024);</pre>
+<pre class="brush: js">var sab = new SharedArrayBuffer(1024);</pre>
 
 <h3 id="Slicing_the_SharedArrayBuffer">Slicing the SharedArrayBuffer</h3>
 
-<pre class="brush: js notranslate">sab.slice();    // SharedArrayBuffer { byteLength: 1024 }
+<pre class="brush: js">sab.slice();    // SharedArrayBuffer { byteLength: 1024 }
 sab.slice(2);   // SharedArrayBuffer { byteLength: 1022 }
 sab.slice(-2);  // SharedArrayBuffer { byteLength: 2 }
 sab.slice(0, 1); // SharedArrayBuffer { byteLength: 1 }</pre>
 
 <h3 id="Using_it_in_a_WebGL_buffer">Using it in a WebGL buffer</h3>
 
-<pre class="brush: js notranslate">const canvas = document.querySelector('canvas');
+<pre class="brush: js">const canvas = document.querySelector('canvas');
 const gl = canvas.getContext('webgl');
 const buffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);

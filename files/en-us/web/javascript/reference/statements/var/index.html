@@ -23,7 +23,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>varname1</var> [= <var>value1</var>] [, <var>varname2</var> [= <var>value2</var>] ... [, <var>varname<strong>N</strong></var> [= <var>value<strong>N</strong></var>]]];</pre>
+  class="brush: js">var <var>varname1</var> [= <var>value1</var>] [, <var>varname2</var> [= <var>value2</var>] ... [, <var>varname<strong>N</strong></var> [= <var>value<strong>N</strong></var>]]];</pre>
 
 <dl>
   <dt><code><var>varname<strong>N</strong></var></code></dt>
@@ -37,7 +37,7 @@ tags:
     href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring
     Assignment </a>syntax can also be used to declare variables.</p>
 
-<pre class="brush: js notranslate">var <var>{ bar }</var> = <em>foo</em>; // where foo = { bar:10, baz:12 };
+<pre class="brush: js">var <var>{ bar }</var> = <em>foo</em>; // where foo = { bar:10, baz:12 };
 /* This creates a variable with the name 'bar', which has a value of 10 */</pre>
 
 <h2 id="Description">Description</h2>
@@ -52,7 +52,7 @@ tags:
   in strict mode, and the variable will not lose its value, unless another assignment is
   performed.</p>
 
-<pre class="brush: js notranslate">'use strict';
+<pre class="brush: js">'use strict';
 function foo() {
   var x = 1;
   function bar() {
@@ -71,7 +71,7 @@ foo();
 <p>Variables declared using <code>var</code> are created before any code is executed in a
   process known as hoisting. Their initial value is <code>undefined</code>.</p>
 
-<pre class="brush: js notranslate">'use strict';
+<pre class="brush: js">'use strict';
 console.log(x);                // undefined (note: not ReferenceError)
 console.log('still going...'); // still going...
 var x = 1;
@@ -93,7 +93,7 @@ console.log('still going...'); // still going...</pre>
   management, and it would make no sense to be able to use the <code>delete</code>
   operator on a global variable.</p>
 
-<pre class="brush: js notranslate">'use strict';
+<pre class="brush: js">'use strict';
 var x = 1;
 globalThis.hasOwnProperty('x'); // true
 delete globalThis.x; // TypeError in strict mode. Fails silently otherwise.
@@ -114,13 +114,13 @@ delete x;  // SyntaxError in strict mode. Fails silently otherwise.
 
 <p>So you can just type:</p>
 
-<pre class="brush: js notranslate">function foo() {
+<pre class="brush: js">function foo() {
   String('s') // Note the function `String` is implicitly visible
 }</pre>
 
 <p>...because</p>
 
-<pre class="brush: js notranslate">globalThis.hasOwnProperty('String') // true</pre>
+<pre class="brush: js">globalThis.hasOwnProperty('String') // true</pre>
 
 <p>So the global object will ultimately be searched for unqualified identifiers. You don't
   have to type <code>globalThis.String</code>, you can just type the unqualified
@@ -129,7 +129,7 @@ delete x;  // SyntaxError in strict mode. Fails silently otherwise.
   scope chain, assume you want to create a property with that name on the global object.
 </p>
 
-<pre class="brush: js notranslate">foo = 'f' // In non-strict mode, assumes you want to create a property named `foo` on the global object
+<pre class="brush: js">foo = 'f' // In non-strict mode, assumes you want to create a property named `foo` on the global object
 globalThis.hasOwnProperty('foo') // true
 </pre>
 
@@ -151,7 +151,7 @@ globalThis.hasOwnProperty('foo') // true
   declared. This behavior is called "<dfn>hoisting</dfn>", as it appears that the variable
   declaration is moved to the top of the function or global code.</p>
 
-<pre class="brush: js notranslate">bla = 2;
+<pre class="brush: js">bla = 2;
 var bla;
 
 // ...is implicitly understood as:
@@ -168,7 +168,7 @@ bla = 2;
   not its value's initialization. The value will be indeed assigned when the assignment
   statement is reached:</p>
 
-<pre class="brush: js notranslate">function do_something() {
+<pre class="brush: js">function do_something() {
   console.log(bar); // undefined
   var bar = 111;
   console.log(bar); // 111
@@ -189,13 +189,13 @@ function do_something() {
 <h3 id="Declaring_and_initializing_two_variables">Declaring and initializing two variables
 </h3>
 
-<pre class="brush: js notranslate">var a = 0, b = 0;
+<pre class="brush: js">var a = 0, b = 0;
 </pre>
 
 <h3 id="Assigning_two_variables_with_single_string_value">Assigning two variables with
   single string value</h3>
 
-<pre class="brush: js notranslate">var a = 'A';
+<pre class="brush: js">var a = 'A';
 var b = a;
 
 // ...is equivalent to:
@@ -205,7 +205,7 @@ var a, b = a = 'A';
 
 <p>Be mindful of the order:</p>
 
-<pre class="brush: js notranslate">var x = y, y = 'A';
+<pre class="brush: js">var x = y, y = 'A';
 console.log(x + y); // undefinedA
 </pre>
 
@@ -218,7 +218,7 @@ console.log(x + y); // undefinedA
 
 <h3 id="Initialization_of_several_variables">Initialization of several variables</h3>
 
-<pre class="brush: js notranslate">var x = 0;
+<pre class="brush: js">var x = 0;
 function f() {
   var x = y = 1; // Declares x locally; declares y globally.
 }
@@ -232,7 +232,7 @@ console.log(x, y); // 0 1
 
 <p>The same example as above but with a strict mode:</p>
 
-<pre class="brush: js notranslate">'use strict';
+<pre class="brush: js">'use strict';
 
 var x = 0;
 function f() {
@@ -248,7 +248,7 @@ console.log(x, y);</pre>
 <p>Variables that appear to be implicit globals may be references to variables in an outer
   function scope:</p>
 
-<pre class="brush: js notranslate">var x = 0; // Declares x within file scope, then assigns it a value of 0.
+<pre class="brush: js">var x = 0; // Declares x within file scope, then assigns it a value of 0.
 
 console.log(typeof z); // "undefined", since z doesn't exist yet
 

@@ -24,7 +24,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>dataview</var>.setInt8(<var>byteOffset</var>, <var>value</var>)</pre>
+  class="brush: js"><var>dataview</var>.setInt8(<var>byteOffset</var>, <var>value</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -51,7 +51,7 @@ tags:
 
 <h3 id="Using_the_setInt8_method">Using the setInt8 method</h3>
 
-<pre class="brush:js notranslate">var buffer = new ArrayBuffer(8);
+<pre class="brush:js">var buffer = new ArrayBuffer(8);
 var dataview = new DataView(buffer);
 dataview.setInt8(1, 3);
 dataview.getInt8(1); // 3

@@ -52,7 +52,7 @@ tags:
 
 <p>Remove cookies created in the last week:</p>
 
-<pre class="notranslate brush: js">function onRemoved() {
+<pre class="brush: js">function onRemoved() {
   console.log("removed");
 }
 
@@ -79,7 +79,7 @@ then(onRemoved, onError);</pre>
  If you want to clear all cookies without disrupting local storage facilities, use <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies">browser.cookies</a> to loop through and remove the contents of all cookie stores.</p>
 </div>
 
-<pre class="notranslate brush: js line-numbers  language-js">function onRemoved() {
+<pre class="brush: js line-numbers  language-js">function onRemoved() {
   console.log(&quot;removed&quot;);
 }
 

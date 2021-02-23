@@ -34,7 +34,7 @@ tags:
 
 <p>The following asynchronous function presents a file picker and once a file is chosen, uses the <code>getFile()</code> method to retrieve the contents.</p>
 
-<pre class="brush: js notranslate">async function getTheFile() {
+<pre class="brush: js">async function getTheFile() {
   // open file picker
   [fileHandle] = await window.showOpenFilePicker(pickerOpts);
 
@@ -46,7 +46,7 @@ tags:
 
 <p>The following asynchronous function writes the given contents to the file handle, and thus to disk.</p>
 
-<pre class="brush: js notranslate">async function writeFile(fileHandle, contents) {
+<pre class="brush: js">async function writeFile(fileHandle, contents) {
   // Create a FileSystemWritableFileStream to write to.
   const writable = await fileHandle.createWritable();
 

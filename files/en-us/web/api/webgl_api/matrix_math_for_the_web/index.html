@@ -30,7 +30,7 @@ tags:
 
 <p>The identity matrix looks like this in JavaScript:</p>
 
-<pre class="brush: js notranslate">let identityMatrix = [
+<pre class="brush: js">let identityMatrix = [
   1, 0, 0, 0,
   0, 1, 0, 0,
   0, 0, 1, 0,
@@ -42,7 +42,7 @@ tags:
 
 <p>After adding the w component to the point, notice how neatly the matrix and the point line up:</p>
 
-<pre class="brush: js notranslate">[1, 0, 0, 0,
+<pre class="brush: js">[1, 0, 0, 0,
  0, 1, 0, 0,
  0, 0, 1, 0,
  0, 0, 0, 1]
@@ -56,7 +56,7 @@ tags:
 
 <p>In our example code we have defined a function to multiply a matrix and a point — <code>multiplyMatrixAndPoint()</code>:</p>
 
-<pre class="brush: js notranslate">// point • matrix
+<pre class="brush: js">// point • matrix
 function multiplyMatrixAndPoint(matrix, point) {
   // Give a simple variable name to each part of the matrix, a column and row number
   let c0r0 = matrix[ 0], c1r0 = matrix[ 1], c2r0 = matrix[ 2], c3r0 = matrix[ 3];
@@ -88,7 +88,7 @@ function multiplyMatrixAndPoint(matrix, point) {
 
 <p>Now using the function above we can multiply a point by the matrix. Using the identity matrix it should return a matrix identical to the original, since a matrix multiplied by the identity matrix is always equal to itself:</p>
 
-<pre class="brush: js notranslate">// sets identityResult to [4,3,2,1]
+<pre class="brush: js">// sets identityResult to [4,3,2,1]
 let identityResult = multiplyMatrixAndPoint(identityMatrix, [4, 3, 2, 1]);
 </pre>
 
@@ -98,7 +98,7 @@ let identityResult = multiplyMatrixAndPoint(identityMatrix, [4, 3, 2, 1]);
 
 <p>In addition to multiplying a matrix and a point together, you can also multiply two matrices together. The function from above can be re-used to help out in this process:</p>
 
-<pre class="brush: js notranslate">//matrixB • matrixA
+<pre class="brush: js">//matrixB • matrixA
 function multiplyMatrices(matrixA, matrixB) {
   // Slice the second matrix up into rows
   let row0 = [matrixB[ 0], matrixB[ 1], matrixB[ 2], matrixB[ 3]];
@@ -124,7 +124,7 @@ function multiplyMatrices(matrixA, matrixB) {
 
 <p id="Usage">Let's look at this function in action:</p>
 
-<pre class="brush: js notranslate">let someMatrix = [
+<pre class="brush: js">let someMatrix = [
   4, 0, 0, 0,
   0, 3, 0, 0,
   0, 0, 5, 0,
@@ -152,7 +152,7 @@ let someMatrixResult = multiplyMatrices(identityMatrix, someMatrix);
 
 <p>You can't actually drink the coffee using only a translation matrix, because to drink it, you have to be able to tilt or rotate the cup to pour the coffee into your mouth. We'll look at the type of matrix (cleverly called a <strong>{{anch("Rotation matrix", "rotation matrix")}}</strong>) you use to do this later.</p>
 
-<pre class="brush: js notranslate">let x = 50;
+<pre class="brush: js">let x = 50;
 let y = 100;
 let z = 0;
 
@@ -170,7 +170,7 @@ let translationMatrix = [
 
 <p>A really easy way to start using a matrix is to use the CSS {{cssxref("transform-function/matrix3d","matrix3d()")}} {{cssxref("transform")}}. First we'll set up a simple {{htmlelement("div")}} with some content. The style is not shown, but it's set to a fixed width and height and is centered on the page. The <code>&lt;div&gt;</code> has a transition set for the transform so that matrix is animated in making it easy to see what is being done.</p>
 
-<pre class="brush: html notranslate">&lt;div id='move-me' class='transformable'&gt;
+<pre class="brush: html">&lt;div id='move-me' class='transformable'&gt;
   &lt;h2&gt;Move me with a matrix&lt;/h2&gt;
   &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit...&lt;/p&gt;
 &lt;/div&gt;
@@ -178,7 +178,7 @@ let translationMatrix = [
 
 <p>Finally, for each of the examples we will generate a 4x4 matrix, then update the <code>&lt;div&gt;</code>'s style to have a transform applied to it, set to a <code>matrix3d</code>. Bear in mind that even though the matrix is made up of 4 rows and 4 columns, it collapses into a single line of 16 values. Matrices are always stored in one-dimensional lists in JavaScript.</p>
 
-<pre class="brush: js notranslate">// Create the matrix3d style property from a matrix array
+<pre class="brush: js">// Create the matrix3d style property from a matrix array
 function matrixArrayToCssMatrix(array) {
   return 'matrix3d(' + array.join(',') + ')';
 }
@@ -203,7 +203,7 @@ moveMe.style.transform = matrix3dRule;
 
 <p>The amount of change to apply to each of the width, height, and depth is placed diagonally starting at the top-left corner and making their way down toward the bottom-right.</p>
 
-<pre class="brush: js notranslate">let w = 1.5; // width  (x)
+<pre class="brush: js">let w = 1.5; // width  (x)
 let h = 0.7; // height (y)
 let d = 1;   // depth  (z)
 
@@ -225,7 +225,7 @@ let scaleMatrix = [
 
 <p>First, here's code that rotates a point around the origin without using matrices.</p>
 
-<pre class="brush: js notranslate">// Manually rotating a point about the origin without matrices
+<pre class="brush: js">// Manually rotating a point about the origin without matrices
 let point = [10, 2];
 
 // Calculate the distance from the origin
@@ -240,9 +240,9 @@ let transformedPoint = [
 ];
 </pre>
 
-<p>It is possible to encode these type of steps into a matrix, and do it for each of the x, y, and z dimensions. Below is the representation of a rotation about the X axis:</p>
+<p>It is possible to encode these type of steps into a matrix, and do it for each of the x, y, and z dimensions. Below is the representation of a counterclockwise rotation about the Z axis in a left-handed coordinate system:</p>
 
-<pre class="brush: js notranslate">let sin = Math.sin;
+<pre class="brush: js">let sin = Math.sin;
 let cos = Math.cos;
 
 // NOTE: There is no perspective in these transformations, so a rotation
@@ -265,7 +265,7 @@ let rotateZMatrix = [
 
 <p>Here are a set of functions that return rotation matrices for rotating around each of the three axes. One big note is that there is no perspective applied, so it might not feel very 3D yet. The flatness is equivalent to when a camera zooms in really close onto an object in the distance — the sense of perspective disappears.</p>
 
-<pre class="brush: js notranslate">function rotateAroundXAxis(a) {
+<pre class="brush: js">function rotateAroundXAxis(a) {
   return [
        1,       0,        0,     0,
        0,  cos(a),  -sin(a),     0,
@@ -303,7 +303,7 @@ function rotateAroundZAxis(a) {
 
 <p>Another mind-bender is that matrix multiplication in WebGL and CSS needs to happen in the reverse order that the operations intuitively happen. For instance, to scale something down by 80%, move it down 200 pixels, and then rotate about the origin 90 degrees would look something like the following in pseudo-code.</p>
 
-<pre class="brush: plain notranslate">
+<pre class="brush: plain">
   transformation = rotate * translate * scale
 </pre>
 
@@ -311,7 +311,7 @@ function rotateAroundZAxis(a) {
 
 <p>The function that we will be using to compose our matrices is <code>multiplyArrayOfMatrices()</code>, which is part of the set of <a href="https://github.com/TatumCreative/mdn-webgl">utility functions</a> introduced near the top of this article. It takes an array of matrices and multiplies them together, returning the result. In WebGL shader code, this is built into the language and the <code>*</code> operator can be used. Additionally this example uses <code>scale()</code> and <code>translate()</code> functions, which return matrices as defined above.</p>
 
-<pre class="brush: js notranslate">let transformMatrix = MDN.multiplyArrayOfMatrices([
+<pre class="brush: js">let transformMatrix = MDN.multiplyArrayOfMatrices([
   rotateAroundZAxis(Math.PI * 0.5),    // Step 3: rotate around 90 degrees
   translate(0, 200, 0),                // Step 2: move down 100 pixels
   scale(0.8, 0.8, 0.8),                // Step 1: scale down
@@ -325,7 +325,7 @@ function rotateAroundZAxis(a) {
 
 <p>Finally, a fun step to show how matrices work is to reverse the steps to bring the matrix back to the original identity matrix.</p>
 
-<pre class="brush: js notranslate">let transformMatrix = MDN.multiplyArrayOfMatrices([
+<pre class="brush: js">let transformMatrix = MDN.multiplyArrayOfMatrices([
   scale(1.25, 1.25, 1.25),             // Step 6: scale back up
   translate(0, -200, 0),               // Step 5: move back up
   rotateAroundZAxis(-Math.PI * 0.5),   // Step 4: rotate back

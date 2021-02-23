@@ -47,7 +47,7 @@ tags:
 
 <p>To get information about devices connected to your computer, you can use the {{domxref("Navigator/getVRDisplays")}} method:</p>
 
-<pre class="brush: js notranslate">navigator.getVRDevices().then(function(devices) {
+<pre class="brush: js">navigator.getVRDevices().then(function(devices) {
   for (var i = 0; i &lt; devices.length; ++i) {
     if (devices[i] instanceof HMDVRDevice) {
       gHMD = devices[i];
@@ -67,7 +67,7 @@ tags:
 
 <p>This code will loop through the available devices and assign proper sensors to the headsets — the first <code>devices</code> array contains the connected devices, and a check is done to find the {{domxref("HMDVRDevice")}}, and assign it to the <code>gHMD</code> variable — using this you can set up the scene, getting the eye parameters, setting the field of view, etc. For example:</p>
 
-<pre class="brush: js notranslate">function setCustomFOV(up,right,down,left) {
+<pre class="brush: js">function setCustomFOV(up,right,down,left) {
   var testFOV = new VRFieldOfView(up,right,down,left);
 
   gHMD.setFieldOfView(testFOV,testFOV,0.01,10000.0);
@@ -75,7 +75,7 @@ tags:
 
 <p>The <code>gPositionSensor</code> variable holds the {{domxref("PositionSensorVRDevice")}} — using this you can get the current position or orientation state (for example to update the scene view on every frame), or reset the sensor. For example, the below code outputs position information on the screen:</p>
 
-<pre class="brush: js notranslate">function setView() {
+<pre class="brush: js">function setView() {
   var posState = gPositionSensor.getState();
 
   if(posState.hasPosition) {

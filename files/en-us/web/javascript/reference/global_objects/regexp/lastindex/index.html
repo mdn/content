@@ -33,18 +33,18 @@ tags:
 
 <p>Consider the following sequence of statements:</p>
 
-<pre class="brush: js notranslate">var re = /(hi)?/g;
+<pre class="brush: js">var re = /(hi)?/g;
 </pre>
 
 <p>Matches the empty string.</p>
 
-<pre class="brush: js notranslate">console.log(re.exec('hi'));
+<pre class="brush: js">console.log(re.exec('hi'));
 console.log(re.lastIndex);
 </pre>
 
 <p>Returns <code>["hi", "hi"]</code> with <code>lastIndex</code> equal to 2.</p>
 
-<pre class="brush: js notranslate">console.log(re.exec('hi'));
+<pre class="brush: js">console.log(re.exec('hi'));
 console.log(re.lastIndex);
 </pre>
 

@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>arr</var>.entries()</pre>
+<pre class="brush: js"><var>arr</var>.entries()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -30,7 +30,7 @@ tags:
 
 <h3 id="Iteration_using_for...of_loop">Iteration using for...of loop</h3>
 
-<pre class="brush: js notranslate">var arr = new Uint8Array([10, 20, 30, 40, 50]);
+<pre class="brush: js">var arr = new Uint8Array([10, 20, 30, 40, 50]);
 var eArray = arr.entries();
 // your browser must support for..of loop
 // and let-scoped variables in for loops
@@ -41,7 +41,7 @@ for (let n of eArray) {
 
 <h3 id="Alternative_iteration">Alternative iteration</h3>
 
-<pre class="brush: js notranslate">var arr = new Uint8Array([10, 20, 30, 40, 50]);
+<pre class="brush: js">var arr = new Uint8Array([10, 20, 30, 40, 50]);
 var eArr = arr.entries();
 console.log(eArr.next().value); // [0, 10]
 console.log(eArr.next().value); // [1, 20]

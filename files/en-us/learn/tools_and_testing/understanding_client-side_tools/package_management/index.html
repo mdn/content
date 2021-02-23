@@ -91,7 +91,7 @@ tags:
 
 <p>First of all, create a new directory to store our experimental app in, somewhere sensible that you’ll find again. We’ll call it parcel-experiment, but you can call it whatever you like:</p>
 
-<pre class="brush: bash notranslate">mkdir parcel-experiment
+<pre class="brush: bash">mkdir parcel-experiment
 cd parcel-experiment
 </pre>
 
@@ -99,7 +99,7 @@ cd parcel-experiment
 
 <p>Type the following command, making sure you are inside the <code>parcel-experiment</code> directory:</p>
 
-<pre class="brush: bash notranslate">npm init</pre>
+<pre class="brush: bash">npm init</pre>
 
 <p>You will now be asked some questions; npm will then create a default <code>package.json</code> file based on the answers:</p>
 
@@ -117,7 +117,7 @@ cd parcel-experiment
 
 <p>Go into your <code>parcel-experiment</code> directory and you should now find you've got a package.json file. Open it up and it should look something like this:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "name": "parcel-experiment",
   "version": "1.0.0",
   "description": "A simple npm package to learn about using npm",
@@ -135,11 +135,11 @@ cd parcel-experiment
 
 <p>Run the following command to install Parcel locally:</p>
 
-<pre class="brush: bash notranslate">npm install parcel-bundler</pre>
+<pre class="brush: bash">npm install parcel-bundler</pre>
 
 <p>Once that's done <em>All The Things</em>, we're now ready for some "modern client-side development" (which really means using build tools to make the developer experience a little easier). First of all however, take another look at your package.json file. You'll see that npm has added a new field, dependencies:</p>
 
-<pre class="brush: json notranslate">"dependencies": {
+<pre class="brush: json">"dependencies": {
   "parcel-bundler": "^1.12.4"
 }</pre>
 
@@ -155,7 +155,7 @@ cd parcel-experiment
 
 <p>So now we need to add an <code>index.html</code> file to our working directory. Create <code>index.html</code> in your test directory, and give it the following contents:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en-US"&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -172,11 +172,11 @@ cd parcel-experiment
 
 <p>Now we’ll run our newly installed Parcel tool. In your terminal, run the following command:</p>
 
-<pre class="brush: bash notranslate"> parcel index.html</pre>
+<pre class="brush: bash"> parcel index.html</pre>
 
 <p>You should see something like this printed to your terminal:</p>
 
-<pre class="brush: bash notranslate">Server running at http://localhost:1234
+<pre class="brush: bash">Server running at http://localhost:1234
 ✨  Built in 193ms.</pre>
 
 <div class="notecard note">
@@ -189,7 +189,7 @@ cd parcel-experiment
 
 <p>In the <code>index.js</code> file, add the following code and save it:</p>
 
-<pre class="brush: js notranslate">import { formatDistanceToNow } from 'date-fns'
+<pre class="brush: js">import { formatDistanceToNow } from 'date-fns'
 
 const date = '1996-09-13 10:00:00';
 document.body.textContent = formatDistanceToNow(new Date(date)) + ' ago';</pre>
@@ -198,7 +198,7 @@ document.body.textContent = formatDistanceToNow(new Date(date)) + ' ago';</pre>
 
 <p>What's particularly special about the code above is that it is using the <code>formatDistanceToNow()</code> function from the <code>date-fns</code> package, which we didn’t install! Parcel has spotted that you need the module, searched for it in the <code>npmjs.com</code> package registry, and installed it locally for us, automatically. You can prove this by looking in our <code>package.json</code> file again — you'll see that the <code>dependencies</code> field have been updated for us:</p>
 
-<pre class="brush: json notranslate">"dependencies": {
+<pre class="brush: json">"dependencies": {
   "date-fns": "^2.12.0",
   "parcel-bundler": "^1.12.4"
 }</pre>
@@ -222,11 +222,11 @@ document.body.textContent = formatDistanceToNow(new Date(date)) + ' ago';</pre>
 
 <p>Run the following command:</p>
 
-<pre class="brush: bash notranslate">parcel build index.html</pre>
+<pre class="brush: bash">parcel build index.html</pre>
 
 <p>You should see an output like so:</p>
 
-<pre class="brush: bash notranslate">✨  Built in 9.35s.
+<pre class="brush: bash">✨  Built in 9.35s.
 
 dist/my-project.fb76efcf.js.map    648.58 KB     64ms
 dist/my-project.fb76efcf.js        195.74 KB    8.43s
@@ -256,11 +256,11 @@ dist/index.html                        288 B    806ms</pre>
 
 <p>Let’s stick with Parcel for now, given that we’ve already got it installed. Try running the following command:</p>
 
-<pre class="brush: bash notranslate">parcel build index.html --experimental-scope-hoisting</pre>
+<pre class="brush: bash">parcel build index.html --experimental-scope-hoisting</pre>
 
 <p>You’ll see that this makes a huge difference:                                                         </p>
 
-<pre class="brush: bash notranslate">✨  Built in 7.87s.
+<pre class="brush: bash">✨  Built in 7.87s.
 
 dist/my-project.86f8a5fc.js    10.34 KB    7.17s
 dist/index.html                   288 B    753ms</pre>
@@ -301,14 +301,14 @@ dist/index.html                   288 B    753ms</pre>
 
 <h3 id="Initialise_a_new_project">Initialise a new project</h3>
 
-<pre class="brush: bash notranslate">npm init
+<pre class="brush: bash">npm init
 yarn init</pre>
 
 <p>As shown above, this will prompt and walk you through a series of questions to describe your project (name, license, description and so on) then generate a <code>package.json</code> for you that contains meta information about your project and its dependencies.</p>
 
 <h3 id="Installing_dependencies">Installing dependencies</h3>
 
-<pre class="brush: bash notranslate">npm install date-fns
+<pre class="brush: bash">npm install date-fns
 yarn add date-fns</pre>
 
 <p>We also saw <code>install</code> in action above. This would directly add the <code>date-fns</code> package to the working directory in a sub-directory called <code>node_modules</code>, along with <code>date-fns</code>’s own dependencies.</p>
@@ -317,7 +317,7 @@ yarn add date-fns</pre>
 
 <h3 id="Updating_dependencies">Updating dependencies</h3>
 
-<pre class="brush: bash notranslate">npm update
+<pre class="brush: bash">npm update
 yarn upgrade</pre>
 
 <p>This will look at the currently installed dependencies and update them, if there is an update available, within the range that's specified in the package.</p>
@@ -330,7 +330,7 @@ yarn upgrade</pre>
 
 <h3 id="Audit_for_vulnerabilities">Audit for vulnerabilities</h3>
 
-<pre class="brush: bash notranslate">npm audit
+<pre class="brush: bash">npm audit
 yarn audit</pre>
 
 <p>This will check all of the dependency tree for your project and run the specific versions you're using against a vulnerability database and notify you if there are potential vulnerable packages in your project.</p>
@@ -339,7 +339,7 @@ yarn audit</pre>
 
 <h3 id="Checking_on_a_dependency">Checking on a dependency</h3>
 
-<pre class="brush: bash notranslate">npm ls date-fns
+<pre class="brush: bash">npm ls date-fns
 yarn why date-fns</pre>
 
 <p>This command will show what version of a dependency is installed and how it came to be included in your project. It's possible that another, top level, package could have pulled in <code>date-fns</code>. It's equally possible (and not ideal) that you have multiple versions of a package in your project (this has been seen many times over with the <a href="https://lodash.com/">lodash</a> package, as it's so useful).</p>
@@ -354,7 +354,7 @@ yarn why date-fns</pre>
 
 <p>The package managers also support creating your own commands and executing them from the command line. For instance, we could create the following command:</p>
 
-<pre class="brush: bash notranslate">npm run dev
+<pre class="brush: bash">npm run dev
 # or yarn run dev</pre>
 
 <p>This would run a custom script for starting our project in “development mode”. In fact, we regularly include this in all projects as the local development setup tends to run slightly differently to how it would run in production.</p>
@@ -367,13 +367,13 @@ yarn why date-fns</pre>
 
 <p>If you followed the tutorial from earlier, you should have a <code>package.json</code> file inside your parcel-experiment directory. Open it up, and its <code>scripts</code> member should look like this:</p>
 
-<pre class="brush: json notranslate">"scripts": {
+<pre class="brush: json">"scripts": {
   "test": "echo \"Error: no test specified\" &amp;&amp; exit 1",
 },</pre>
 
 <p>Update it so that it looks like this, and save the file:</p>
 
-<pre class="brush: json notranslate">"scripts": {
+<pre class="brush: json">"scripts": {
   "test": "echo \"Error: no test specified\" &amp;&amp; exit 1",
   "dev": "parcel serve index.html"
 },</pre>
@@ -382,11 +382,11 @@ yarn why date-fns</pre>
 
 <p>Now try running the following in your terminal, making sure you are inside the <code>parcel-experiment</code> directory:</p>
 
-<pre class="brush: bash notranslate"> npm run dev</pre>
+<pre class="brush: bash"> npm run dev</pre>
 
 <p>This should start Parcel and serve up your <code>index.html</code> at the local development server, as we saw before:</p>
 
-<pre class="brush: bash notranslate">Server running at http://localhost:1234
+<pre class="brush: bash">Server running at http://localhost:1234
 ✨  Built in 5.48s.</pre>
 
 <p>In addition, the npm (and yarn) commands are clever in that they will search for command line tools that are locally installed to the project before trying to find them through conventional methods (where your computer will normally store and allow software to be found). You can <a href="https://docs.npmjs.com/cli/run-script">learn more about the technical intricacies of the <code>run</code> command</a>, although in most cases your own scripts will run just fine.</p>

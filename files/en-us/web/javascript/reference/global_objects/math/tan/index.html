@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><code>Math.tan(<var>x</var>)</code></pre>
+<pre class="brush: js"><code>Math.tan(<var>x</var>)</code></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -48,14 +48,14 @@ tags:
 
 <h3 id="Using_Math.tan">Using Math.tan()</h3>
 
-<pre class="brush: js notranslate">Math.tan(1); // 1.5574077246549023
+<pre class="brush: js">Math.tan(1); // 1.5574077246549023
 </pre>
 
 <p>Because the <code>Math.tan()</code> function accepts radians, but it is often easier to
   work with degrees, the following function accepts a value in degrees, converts it to
   radians and returns the tangent.</p>
 
-<pre class="brush: js notranslate">function getTanDeg(deg) {
+<pre class="brush: js">function getTanDeg(deg) {
   var rad = deg * Math.PI/180;
   return Math.tan(rad);
 }

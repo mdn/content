@@ -30,7 +30,7 @@ tags:
 
 <p>This example adds an <code>onerror</code> listener which logs the value of {{WebExtAPIRef("webRequest.StreamFilter.error")}}.</p>
 
-<pre class="notranslate brush: js">function listener(details) {
+<pre class="brush: js">function listener(details) {
   // This example seems not useful because,
   // a extension would use "details.requestId"
   let filter = browser.webRequest.filterResponseData("12345");
@@ -48,7 +48,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>This example uses no <code>"blocking"</code>.</p>
 
-<pre class="notranslate brush: js">function listener(details) {
+<pre class="brush: js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
   filter.onerror = event =&gt; {

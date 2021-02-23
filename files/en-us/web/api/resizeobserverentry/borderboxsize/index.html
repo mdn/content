@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var myBorderBoxSize = ResizeObserverEntry.borderBoxSize;
+<pre class="brush: js">var myBorderBoxSize = ResizeObserverEntry.borderBoxSize;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -49,7 +49,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">const resizeObserver = new ResizeObserver(entries =&gt; {
+<pre class="brush: js">const resizeObserver = new ResizeObserver(entries =&gt; {
   for (let entry of entries) {
     if(entry.borderBoxSize &amp;&amp; entry.borderBoxSize.length &gt; 0) {
       entry.target.style.borderRadius = Math.min(100, (entry.borderBoxSize[0].inlineSize/10) +

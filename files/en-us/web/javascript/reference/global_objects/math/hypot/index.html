@@ -98,7 +98,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">Math.hypot([<var>value1</var>[, <var>value2</var>[, ...]]])</pre>
+  class="brush: js">Math.hypot([<var>value1</var>[, <var>value2</var>[, ...]]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -149,7 +149,7 @@ tags:
 
 <h3 id="Using_Math.hypot">Using Math.hypot()</h3>
 
-<pre class="brush: js notranslate">Math.hypot(3, 4);          // 5
+<pre class="brush: js">Math.hypot(3, 4);          // 5
 Math.hypot(3, 4, 5);       // 7.0710678118654755
 Math.hypot();              // 0
 Math.hypot(NaN);           // NaN
@@ -163,7 +163,7 @@ Math.hypot(-3);            // 3, the same as Math.abs(-3)
 
 <p>A naive approach that does not handle overflow/underflow issues:</p>
 
-<pre class="brush: js notranslate">if (!Math.hypot) Math.hypot = function() {
+<pre class="brush: js">if (!Math.hypot) Math.hypot = function() {
   var y = 0, i = arguments.length, containsInfinity = false;
   while (i--) {
     var arg = arguments[i];
@@ -177,7 +177,7 @@ Math.hypot(-3);            // 3, the same as Math.abs(-3)
 
 <p>A polyfill that avoids underflows and overflows:</p>
 
-<pre class="brush: js notranslate">if (!Math.hypot) Math.hypot = function () {
+<pre class="brush: js">if (!Math.hypot) Math.hypot = function () {
   var max = 0;
   var s = 0;
   var containsInfinity = false;

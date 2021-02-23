@@ -68,10 +68,10 @@ ac_add_options --disable-optimize
  <li>Run <code>./mach bootstrap</code> to install some dependencies. Note that this will install some amd64 packages that are not needed to build 32-bit Firefox.</li>
  <li>Run <code>rustup target install i686-unknown-linux-gnu</code> to install the 32-bit Rust target.</li>
  <li>Install 32-bit dependencies with the following command (this may uninstall some unneeded/conflicting packages that were installed by mach bootstrap):
-<pre class="notranslate brush: js">sudo apt install gcc-multilib g++-multilib libdbus-glib-1-dev:i386 \
+<pre class="brush: js">sudo apt install gcc-multilib g++-multilib libdbus-glib-1-dev:i386 \
   libgtk2.0-dev:i386 libgtk-3-dev:i386 libpango1.0-dev:i386 libxt-dev:i386</pre></li>
  <li>Create a <code>.mozconfig</code> file containing at least the following:
-<pre class="notranslate brush: js">ac_add_options --target=i686-pc-linux
+<pre class="brush: js">ac_add_options --target=i686-pc-linux
 
 CFLAGS="$CFLAGS -march=pentium-m -msse -msse2 -mfpmath=sse"
 CXXFLAGS="$CXXFLAGS -march=pentium-m -msse -msse2 -mfpmath=sse"

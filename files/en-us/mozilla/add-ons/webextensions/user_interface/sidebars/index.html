@@ -18,7 +18,7 @@ tags:
 
 <p>A document for a particular tab can be set using the {{WebExtAPIRef("sidebarAction.setPanel()")}} function. A sidebar can figure out which window it belongs to using the {{WebExtAPIRef("windows.getCurrent()")}} API:</p>
 
-<pre class="notranslate brush: js">// sidebar.js
+<pre class="brush: js">// sidebar.js
 browser.windows.getCurrent({populate: true}).then((windowInfo) =&gt; {
   myWindowId = windowInfo.id;
 });</pre>

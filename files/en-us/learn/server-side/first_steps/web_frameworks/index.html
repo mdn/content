@@ -50,7 +50,7 @@ tags:
 
 <p>The example below shows how this works in the Django (Python) web framework. Every "view" function (a request handler) receives an <code>HttpRequest</code> object containing request information, and is required to return an <code>HttpResponse</code> object with the formatted output (in this case a string).</p>
 
-<pre class="brush: python notranslate"># Django view function
+<pre class="brush: python"># Django view function
 from django.http import HttpResponse
 
 def index(request):
@@ -66,13 +66,13 @@ def index(request):
 
 <p>Different frameworks use different mechanisms for the mapping. For example, the Flask (Python) web framework adds routes to view functions using a decorator.</p>
 
-<pre class="brush: python notranslate">@app.route("/")
+<pre class="brush: python">@app.route("/")
 def hello():
     return "Hello World!"</pre>
 
 <p>While Django expects developers to define a list of URL mappings between a URL pattern and a view function.</p>
 
-<pre class="brush: python notranslate">urlpatterns = [
+<pre class="brush: python">urlpatterns = [
     url(r'^$', views.index),
     # example: /best/myteamname/5/
     url(r'^best/(?P&lt;team_name&gt;\w.+?)/(?P&lt;team_number&gt;[0-9]+)/$', views.best),
@@ -100,7 +100,7 @@ def hello():
 
 <p>The first code snippet below shows a very simple Django model for a <code>Team</code> object. This stores the team name and team level as character fields and specifies a maximum number of characters to be stored for each record. The <code>team_level</code> is a choice field, so we also provide a mapping between choices to be displayed and data to be stored, along with a default value. </p>
 
-<pre class="brush: python notranslate">#best/models.py
+<pre class="brush: python">#best/models.py
 
 from django.db import models
 
@@ -120,7 +120,7 @@ class Team(models.Model):
 
 <p>The second code snippet shows a view function (resource handler) for displaying all of our U09 teams. In this case we specify that we want to filter for all records where the <code>team_level</code> field has exactly the text 'U09' (note below how this criteria is passed to the <code>filter()</code> function as an argument with field name and match type separated by double underscores: <strong>team_level__exact</strong>).</p>
 
-<pre class="brush: python notranslate">#best/views.py
+<pre class="brush: python">#best/views.py
 
 from django.shortcuts import render
 from .models import Team
@@ -145,7 +145,7 @@ def youngest(request):
 
 <p>The code snippet below shows how this works. Continuing the "youngest team" example from the previous section, the HTML template is passed a list variable called <code>youngest_teams</code> by the view. Inside the HTML skeleton we have an expression that first checks if the <code>youngest_teams</code> variable exists, and then iterates it in a <code>for</code> loop. On each iteration the template displays the team's <code>team_name</code> value in a list item.</p>
 
-<pre class="brush: html notranslate">#best/templates/best/index.html
+<pre class="brush: html">#best/templates/best/index.html
 
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;

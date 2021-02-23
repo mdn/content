@@ -30,7 +30,7 @@ tags:
 
 <p>To find out whether a tab is already in Reader Mode, check the <code>isInReaderMode</code> property of {{WebExtAPIRef("tabs.Tab")}}. To track tabs changing into or out of Reader Mode, you'll need to keep track of the current state of all tabs, and check when <code>isInReaderMode</code> changes:</p>
 
-<pre class="notranslate brush: js">function handleUpdated(tabId, changeInfo, tabInfo) {
+<pre class="brush: js">function handleUpdated(tabId, changeInfo, tabInfo) {
   if (changeInfo.status === "complete") {
     console.log(`Tab ${tabId} reader mode: ${tabInfo.isInReaderMode}`);
   }
@@ -60,7 +60,7 @@ browser.tabs.onUpdated.addListener(handleUpdated);</pre>
 
 <p>This code switches every new page into Reader Mode, if that page is eligible for it:</p>
 
-<pre class="notranslate brush: js">function switchToReaderMode(tabId, changeInfo, tabInfo) {
+<pre class="brush: js">function switchToReaderMode(tabId, changeInfo, tabInfo) {
   if (changeInfo.isArticle) {
     browser.tabs.toggleReaderMode(tabId);
   }

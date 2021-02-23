@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <var>p</var> = new Proxy(<var>target</var>, {
+<pre class="brush: js">const <var>p</var> = new Proxy(<var>target</var>, {
   get: function(<var>target</var>, <var>property</var>, <var>receiver</var>) {
   }
 });
@@ -83,7 +83,7 @@ tags:
 
 <p>The following code traps getting a property value.</p>
 
-<pre class="brush: js notranslate">const p = new Proxy({}, {
+<pre class="brush: js">const p = new Proxy({}, {
   get: function(target, property, receiver) {
     console.log('called: ' + property);
     return 10;
@@ -96,7 +96,7 @@ console.log(p.a); // "called: a"
 
 <p>The following code violates an invariant.</p>
 
-<pre class="brush: js notranslate">const obj = {};
+<pre class="brush: js">const obj = {};
 Object.defineProperty(obj, 'a', {
   configurable: false,
   enumerable: false,

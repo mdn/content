@@ -41,7 +41,7 @@ tags:
 
 <p>In the main page of the demo, we have a simple form with a text input for entering messages to be sent to an {{htmlelement("iframe")}}. We also have a paragraph which we will use later on to display confirmation messages that we will receive back from the {{htmlelement("iframe")}}.</p>
 
-<pre class="brush: js notranslate">var input = document.getElementById('message-input');
+<pre class="brush: js">var input = document.getElementById('message-input');
 var output = document.getElementById('message-output');
 var button = document.querySelector('button');
 var iframe = document.querySelector('iframe');
@@ -93,7 +93,7 @@ function onMessage(e) {
 
 <p>Over in the IFrame, we have the following JavaScript:</p>
 
-<pre class="brush: js notranslate">var list = document.querySelector('ul');
+<pre class="brush: js">var list = document.querySelector('ul');
 var port2;
 
 // Listen for the initial port transfer message
@@ -124,7 +124,7 @@ function onMessage(e) {
 
 <p>Returning to the main page, let's now look at the onmessage handler function.</p>
 
-<pre class="brush: js notranslate">// Handle messages received on port1
+<pre class="brush: js">// Handle messages received on port1
 function onMessage(e) {
   output.innerHTML = e.data;
   input.value = '';

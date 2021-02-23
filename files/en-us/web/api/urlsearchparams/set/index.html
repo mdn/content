@@ -20,7 +20,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-	class="brush: js notranslate">URLSearchParams.set(<var>name</var>, <var>value</var>)</pre>
+	class="brush: js">URLSearchParams.set(<var>name</var>, <var>value</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -39,7 +39,7 @@ tags:
 
 <p>Let's start with a simple example:</p>
 
-<pre class="brush: js notranslate">let url = new URL('https://example.com?foo=1&amp;bar=2');
+<pre class="brush: js">let url = new URL('https://example.com?foo=1&amp;bar=2');
 let params = new URLSearchParams(url.search);
 
 //Add a third parameter.
@@ -64,7 +64,7 @@ params.toString(); // <span class="message-body-wrapper"><span class="message-fl
 		(when uncommented).</li>
 </ul>
 
-<pre class="brush: js highlight:[41,43,44] notranslate" id="genurl">'use strict'
+<pre class="brush: js highlight:[41,43,44]" id="genurl">'use strict'
 
 function genURL(rExp, aText, bDebug=false){
 	let theURL

@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">[Throws, Unscopable]
+<pre class="brush: js">[Throws, Unscopable]
 void ChildNode.replaceWith((Node or DOMString)... nodes);
 </pre>
 
@@ -39,7 +39,7 @@ void ChildNode.replaceWith((Node or DOMString)... nodes);
 
 <h3 id="Using_replaceWith">Using <code>replaceWith()</code></h3>
 
-<pre class="brush: js notranslate">var parent = document.createElement("div");
+<pre class="brush: js">var parent = document.createElement("div");
 var child = document.createElement("p");
 parent.appendChild(child);
 var span = document.createElement("span");
@@ -56,7 +56,7 @@ console.log(parent.outerHTML);
 <p>The <code>replaceWith()</code> method is not scoped into the <code>with</code>
   statement. See {{jsxref("Symbol.unscopables")}} for more information.</p>
 
-<pre class="brush: js notranslate">with(node) {
+<pre class="brush: js">with(node) {
   replaceWith("foo");
 }
 // ReferenceError: replaceWith is not defined </pre>
@@ -66,7 +66,7 @@ console.log(parent.outerHTML);
 <p>You can polyfill the <code>replaceWith()</code> method in Internet Explorer 10+ and
   higher with the following code:</p>
 
-<pre class="brush: js notranslate">function ReplaceWithPolyfill() {
+<pre class="brush: js">function ReplaceWithPolyfill() {
   'use-strict'; // For safari, and IE &gt; 10
   var parent = this.parentNode, i = arguments.length, currentNode;
   if (!parent) return;

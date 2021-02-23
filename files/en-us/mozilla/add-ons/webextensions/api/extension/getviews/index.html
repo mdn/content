@@ -61,7 +61,7 @@ tags:
 
 <p>Get all windows belonging to this extension, and log their URLs:</p>
 
-<pre class="notranslate brush: js">var windows = browser.extension.getViews();
+<pre class="brush: js">var windows = browser.extension.getViews();
 
 for (var extensionWindow of windows) {
   console.log(extensionWindow.location.href);
@@ -69,11 +69,11 @@ for (var extensionWindow of windows) {
 
 <p>Get only windows in browser tabs hosting content packaged with the extension:</p>
 
-<pre class="notranslate brush: js">var windows = browser.extension.getViews({type: "tab"});</pre>
+<pre class="brush: js">var windows = browser.extension.getViews({type: "tab"});</pre>
 
 <p>Get only windows in popups:</p>
 
-<pre class="notranslate brush: js">var windows = browser.extension.getViews({type: "popup"});</pre>
+<pre class="brush: js">var windows = browser.extension.getViews({type: "popup"});</pre>
 
 <p>{{WebExtExamples}}</p>
 

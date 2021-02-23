@@ -28,7 +28,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">let <var>rectCollection</var> = <var>object</var>.getClientRects();</pre>
+  class="brush: js">let <var>rectCollection</var> = <var>object</var>.getClientRects();</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -82,7 +82,7 @@ tags:
   paragraph in the second block, and for the <code>&lt;span&gt;</code> element in the
   third block.</p>
 
-<pre class="brush: html notranslate">&lt;h3&gt;A paragraph with a span inside&lt;/h3&gt;
+<pre class="brush: html">&lt;h3&gt;A paragraph with a span inside&lt;/h3&gt;
 &lt;p&gt;Both the span and the paragraph have a border set. The
   client rects are in red. Note that the p has onlyone border
   box, while the span has multiple border boxes.&lt;/p&gt;
@@ -112,7 +112,7 @@ tags:
   <code>&lt;ol&gt;</code> in the second block, and for each <code>&lt;li&gt;</code>
   element in the third block.</p>
 
-<pre class="brush: html notranslate">&lt;h3&gt;A list&lt;/h3&gt;
+<pre class="brush: html">&lt;h3&gt;A list&lt;/h3&gt;
 &lt;p&gt;Note that the border box doesn't include the number, so
   neither do the client rects.&lt;/p&gt;
 
@@ -143,7 +143,7 @@ tags:
 <p>Example 3: This HTML creates two tables with captions. Client rects are painted for the
   <code>&lt;table&gt;</code> in the second block.</p>
 
-<pre class="brush: html notranslate">&lt;h3&gt;A table with a caption&lt;/h3&gt;
+<pre class="brush: html">&lt;h3&gt;A table with a caption&lt;/h3&gt;
 &lt;p&gt;Although the table's border box doesn't include the
   caption, the client rects do include the caption.&lt;/p&gt;
 
@@ -181,7 +181,7 @@ tags:
   <code>&lt;table&gt;</code>, <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code>
   elements for the third example.</p>
 
-<pre class="brush: css notranslate">strong {
+<pre class="brush: css">strong {
   text-align: center;
 }
 div {
@@ -200,7 +200,7 @@ span, li, th, td {
 <p>The JavaScript code draws the client rects for all HTML elements that have CSS class
   <code>withClientRectsOverlay</code> assigned.</p>
 
-<pre class="brush: js notranslate">function addClientRectsOverlay(elt) {
+<pre class="brush: js">function addClientRectsOverlay(elt) {
   /* Absolutely position a div over each client rect so that its border width
      is the same as the rectangle's width.
      Note: the overlays will be out of place if the user resizes or zooms. */

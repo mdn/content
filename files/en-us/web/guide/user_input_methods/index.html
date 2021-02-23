@@ -43,7 +43,7 @@ tags:
 
 <p>Keyboard input can be controlled by your app. For example if you want to add controls when any key gets pressed, you need to add an event listener on the window object:</p>
 
-<pre class="brush: js notranslate">window.addEventListener("keydown", handleKeyDown, true);
+<pre class="brush: js">window.addEventListener("keydown", handleKeyDown, true);
 window.addEventListener("keyup", handleKeyUp, true);</pre>
 
 <p>where <code>handleKeyDown</code> and <code>handleKeyUp</code> are the functions implementing the controls about the <code>keydown</code> and <code>keyup</code> events.</p>
@@ -63,7 +63,7 @@ window.addEventListener("keyup", handleKeyUp, true);</pre>
 
 <p>If you want to use touch events, you need to add event listeners and specify handler functions, which will be called when the event gets fired:</p>
 
-<pre class="brush: js notranslate">element.addEventListener("touchstart", handleStart, false);
+<pre class="brush: js">element.addEventListener("touchstart", handleStart, false);
 element.addEventListener("touchcancel", handleCancel, false);
 element.addEventListener("touchend", handleEnd, false);
 element.addEventListener("touchmove", handleMove, false);</pre>
@@ -90,7 +90,7 @@ element.addEventListener("touchmove", handleMove, false);</pre>
 
 <p>This is the code to request pointer lock on an <code>element</code>:</p>
 
-<pre class="brush: js notranslate">element.requestPointerLock();</pre>
+<pre class="brush: js">element.requestPointerLock();</pre>
 
 <div class="note">
 <p><strong>Note</strong>: For a full tutorial and reference, read our {{domxref("Pointer_Lock_API")}} page.</p>
@@ -110,7 +110,7 @@ element.addEventListener("touchmove", handleMove, false);</pre>
 
 <p>You might need to present an element of your application (such as a {{ htmlelement("video") }}, for example) in fullscreen mode. You can achieve this by calling {{domxref("Element.requestFullscreen()")}} on that element. Bear in mind that many browsers still implement this with a vendor prefix, so you will probably need to fork your code something like this:</p>
 
-<pre class="brush: js notranslate">var elem = document.getElementById("myvideo");
+<pre class="brush: js">var elem = document.getElementById("myvideo");
 if (elem.requestFullscreen) {
   elem.requestFullscreen();
 } else if (elem.msRequestFullscreen) {
@@ -131,7 +131,7 @@ if (elem.requestFullscreen) {
 
 <p>Here is an example that allows a section of content to be dragged.</p>
 
-<pre class="brush: html notranslate">&lt;div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')"&gt;
+<pre class="brush: html">&lt;div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')"&gt;
     This text &lt;strong&gt;may&lt;/strong&gt; be dragged.
 &lt;/div&gt;</pre>
 
@@ -150,7 +150,7 @@ if (elem.requestFullscreen) {
 
 <p>In open web apps any DOM element can be made directly editable using the <a href="/en-US/docs/Web/HTML/Global_attributes#contenteditable"><code>contenteditable</code></a> attribute.</p>
 
-<pre class="brush: html notranslate">&lt;div contenteditable="true"&gt;
+<pre class="brush: html">&lt;div contenteditable="true"&gt;
     This text can be edited by the user.
 &lt;/div&gt;</pre>
 

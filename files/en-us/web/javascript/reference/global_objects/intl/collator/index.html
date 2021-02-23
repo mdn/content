@@ -46,7 +46,7 @@ tags:
 
 <p>The following example demonstrates the different potential results for a string occurring before, after, or at the same level as another:</p>
 
-<pre class="brush: js notranslate">console.log(new Intl.Collator().compare('a', 'c')); // → a negative value
+<pre class="brush: js">console.log(new Intl.Collator().compare('a', 'c')); // → a negative value
 console.log(new Intl.Collator().compare('c', 'a')); // → a positive value
 console.log(new Intl.Collator().compare('a', 'a')); // → 0
 </pre>
@@ -57,7 +57,7 @@ console.log(new Intl.Collator().compare('a', 'a')); // → 0
 
 <p>The results provided by {{jsxref("Collator.prototype.compare()")}} vary between languages. In order to get the sort order of the language used in the user interface of your application, make sure to specify that language (and possibly some fallback languages) using the <code><var>locales</var></code> argument:</p>
 
-<pre class="brush: js notranslate">// in German, ä sorts with a
+<pre class="brush: js">// in German, ä sorts with a
 console.log(new Intl.Collator('de').compare('ä', 'z'));
 // → a negative value
 
@@ -70,7 +70,7 @@ console.log(new Intl.Collator('sv').compare('ä', 'z'));
 
 <p>The results provided by {{jsxref("Collator.prototype.compare()")}} can be customized using the <code><var>options</var></code> argument:</p>
 
-<pre class="brush: js notranslate">// in German, ä has a as the base letter
+<pre class="brush: js">// in German, ä has a as the base letter
 console.log(new Intl.Collator('de', { sensitivity: 'base' }).compare('ä', 'a'));
 // → 0
 

@@ -38,7 +38,7 @@ tags:
 
 <p>Log the <code>sampleList</code> item to the console when the <code>storage</code> event fires:</p>
 
-<pre class="brush: js notranslate">window.addEventListener('storage', () =&gt; {
+<pre class="brush: js">window.addEventListener('storage', () =&gt; {
   // When local storage changes, dump the list to
   // the console.
   console.log(JSON.parse(window.localStorage.getItem('sampleList')));
@@ -46,7 +46,7 @@ tags:
 
 <p>The same action can be achieved using the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onstorage">onstorage</a></code> event handler property:</p>
 
-<pre class="brush: js notranslate">window.onstorage = () =&gt; {
+<pre class="brush: js">window.onstorage = () =&gt; {
   // When local storage changes, dump the list to
   // the console.
   console.log(JSON.parse(window.localStorage.getItem('sampleList')));

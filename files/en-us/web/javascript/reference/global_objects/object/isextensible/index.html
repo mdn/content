@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Object.isExtensible(<var>obj</var>)</pre>
+<pre class="brush: js">Object.isExtensible(<var>obj</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -48,7 +48,7 @@ tags:
 
 <h3 id="Using_Object.isExtensible">Using Object.isExtensible</h3>
 
-<pre class="brush: js notranslate">// New objects are extensible.
+<pre class="brush: js">// New objects are extensible.
 var empty = {};
 Object.isExtensible(empty); // === true
 
@@ -71,7 +71,7 @@ Object.isExtensible(frozen); // === false
   cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if
   it was a non-extensible ordinary object, return <code>false</code>.</p>
 
-<pre class="brush: js notranslate">Object.isExtensible(1);
+<pre class="brush: js">Object.isExtensible(1);
 // TypeError: 1 is not an object (ES5 code)
 
 Object.isExtensible(1);

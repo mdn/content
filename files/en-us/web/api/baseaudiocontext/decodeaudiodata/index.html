@@ -29,12 +29,12 @@ tags:
 <p>Older callback syntax:</p>
 
 <pre
-  class="brush: js notranslate">baseAudioContext.decodeAudioData(<var>ArrayBuffer</var>, <var>successCallback</var>, <var>errorCallback</var>);</pre>
+  class="brush: js">baseAudioContext.decodeAudioData(<var>ArrayBuffer</var>, <var>successCallback</var>, <var>errorCallback</var>);</pre>
 
 <p>Newer promise-based syntax:</p>
 
 <pre
-  class="brush: js notranslate">Promise&lt;decodedData&gt; baseAudioContext.decodeAudioData(<var>ArrayBuffer</var>);</pre>
+  class="brush: js">Promise&lt;decodedData&gt; baseAudioContext.decodeAudioData(<var>ArrayBuffer</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -87,7 +87,7 @@ tags:
       the source</a>.)</p>
 </div>
 
-<pre class="brush: js notranslate">// define variables
+<pre class="brush: js">// define variables
 
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var source;
@@ -145,7 +145,7 @@ pre.innerHTML = myScript.innerHTML;</pre>
 
 <h3 id="New_promise-based_syntax">New promise-based syntax</h3>
 
-<pre class="brush: js notranslate">ctx.decodeAudioData(audioData).then(function(decodedData) {
+<pre class="brush: js">ctx.decodeAudioData(audioData).then(function(decodedData) {
  // use the decoded data here
 });</pre>
 

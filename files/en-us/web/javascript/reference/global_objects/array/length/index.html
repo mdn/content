@@ -19,7 +19,7 @@ tags:
 
 <p>The value of the <code>length</code> property is an integer with a positive sign and a value less than 2 to the 32nd power (2<sup>32</sup>).</p>
 
-<pre class="brush: js notranslate">var namelistA = new Array(4294967296); //2 to the 32nd power<sup> = </sup>4294967296
+<pre class="brush: js">var namelistA = new Array(4294967296); //2 to the 32nd power<sup> = </sup>4294967296
 var namelistC = new Array(-100) //negative sign
 
 console.log(namelistA.length); //RangeError: Invalid array length
@@ -34,7 +34,7 @@ console.log(namelistB.length);
 
 <p>You can set the <code>length</code> property to truncate an array at any time. When you extend an array by changing its <code>length</code> property, the number of actual elements increases; for example, if you set <code>length</code> to 3 when it is currently 2, the array now contains 3 elements, which causes the third element to be a non-iterable empty slot.</p>
 
-<pre class="brush: js notranslate">const arr = [1, 2];
+<pre class="brush: js">const arr = [1, 2];
 console.log(arr);
 // [ 1, 2 ]
 
@@ -63,7 +63,7 @@ arr.forEach(element =&gt; console.log(element));
 
 <p>In the following example, the array <code>numbers</code> is iterated through by looking at the <code>length</code> property. The value in each element is then doubled.</p>
 
-<pre class="brush: js notranslate">var numbers = [1, 2, 3, 4, 5];
+<pre class="brush: js">var numbers = [1, 2, 3, 4, 5];
 var length = numbers.length;
 for (var i = 0; i &lt; length; i++) {
   numbers[i] *= 2;
@@ -75,7 +75,7 @@ for (var i = 0; i &lt; length; i++) {
 
 <p>The following example shortens the array <code>numbers</code> to a length of 3 if the current length is greater than 3.</p>
 
-<pre class="brush: js notranslate">var numbers = [1, 2, 3, 4, 5];
+<pre class="brush: js">var numbers = [1, 2, 3, 4, 5];
 
 if (numbers.length &gt; 3) {
   numbers.length = 3;
@@ -87,7 +87,7 @@ console.log(numbers.length); // 3
 
 <h3 id="Create_empty_array_of_fixed_length">Create empty array of fixed length</h3>
 
-<pre class="brush: js notranslate">var numbers = [];
+<pre class="brush: js">var numbers = [];
 numbers.length = 3;
 console.log(numbers); // [undefined, undefined, undefined]
 </pre>
@@ -109,7 +109,7 @@ console.log(numbers); // [undefined, undefined, undefined]
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("javascript.builtins.Array.length")}}</p>
 

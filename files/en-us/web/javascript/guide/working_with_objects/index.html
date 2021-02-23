@@ -24,12 +24,12 @@ tags:
 
 <p>A JavaScript object has properties associated with it. A property of an object can be explained as a variable that is attached to the object. Object properties are basically the same as ordinary JavaScript variables, except for the attachment to objects. The properties of an object define the characteristics of the object. You access the properties of an object with a simple dot-notation:</p>
 
-<pre class="brush: js notranslate">objectName.propertyName
+<pre class="brush: js">objectName.propertyName
 </pre>
 
 <p>Like all JavaScript variables, both the object name (which could be a normal variable) and property name are case sensitive. You can define a property by assigning it a value. For example, let's create an object named <code>myCar</code> and give it properties named <code>make</code>, <code>model</code>, and <code>year</code> as follows:</p>
 
-<pre class="brush: js notranslate">var myCar = new Object();
+<pre class="brush: js">var myCar = new Object();
 myCar.make = 'Ford';
 myCar.model = 'Mustang';
 myCar.year = 1969;
@@ -37,7 +37,7 @@ myCar.year = 1969;
 
 <p>The above example could also be written using an <strong><a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Object_initializers">object initializer</a></strong>, which is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (<code>{}</code>):</p>
 
-<pre class="brush: js notranslate">var myCar = {
+<pre class="brush: js">var myCar = {
     make: 'Ford',
     model: 'Mustang',
     year: 1969
@@ -46,18 +46,18 @@ myCar.year = 1969;
 
 <p>Unassigned properties of an object are {{jsxref("undefined")}} (and not {{jsxref("null")}}).</p>
 
-<pre class="brush: js notranslate">myCar.color; // undefined</pre>
+<pre class="brush: js">myCar.color; // undefined</pre>
 
 <p>Properties of JavaScript objects can also be accessed or set using a bracket notation (for more details see <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">property accessors</a>). Objects are sometimes called <em>associative arrays</em>, since each property is associated with a string value that can be used to access it. So, for example, you could access the properties of the <code>myCar</code> object as follows:</p>
 
-<pre class="brush: js notranslate">myCar['make'] = 'Ford';
+<pre class="brush: js">myCar['make'] = 'Ford';
 myCar['model'] = 'Mustang';
 myCar['year'] = 1969;
 </pre>
 
 <p>An object property name can be any valid JavaScript string, or anything that can be converted to a string, including the empty string. However, any property name that is not a valid JavaScript identifier (for example, a property name that has a space or a hyphen, or that starts with a number) can only be accessed using the square bracket notation. This notation is also very useful when property names are to be dynamically determined (when the property name is not determined until runtime). Examples are as follows:</p>
 
-<pre class="brush: js notranslate">// four variables are created and assigned in a single go,
+<pre class="brush: js">// four variables are created and assigned in a single go,
 // separated by commas
 var myObj = new Object(),
     str = 'myString',
@@ -78,7 +78,7 @@ console.log(myObj);
 
 <p>You can also access properties by using a string value that is stored in a variable:</p>
 
-<pre class="brush: js notranslate">var propertyName = 'make';
+<pre class="brush: js">var propertyName = 'make';
 myCar[propertyName] = 'Ford';
 
 propertyName = 'model';
@@ -87,7 +87,7 @@ myCar[propertyName] = 'Mustang';
 
 <p>You can use the bracket notation with <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code> to iterate over all the enumerable properties of an object. To illustrate how this works, the following function displays the properties of the object when you pass the object and the object's name as arguments to the function:</p>
 
-<pre class="brush: js notranslate">function showProps(obj, objName) {
+<pre class="brush: js">function showProps(obj, objName) {
   var result = ``;
   for (var i in obj) {
     // obj.hasOwnProperty() is used to filter out properties from the object's prototype chain
@@ -101,7 +101,7 @@ myCar[propertyName] = 'Mustang';
 
 <p>So, the function call <code>showProps(myCar, "myCar")</code> would return the following:</p>
 
-<pre class="brush: js notranslate">myCar.make = Ford
+<pre class="brush: js">myCar.make = Ford
 myCar.model = Mustang
 myCar.year = 1969</pre>
 
@@ -120,7 +120,7 @@ myCar.year = 1969</pre>
 
 <p>Before ECMAScript 5, there was no native way to list all properties of an object. However, this can be achieved with the following function:</p>
 
-<pre class="brush: js notranslate">function listAllProperties(o) {
+<pre class="brush: js">function listAllProperties(o) {
 	var objectToInspect;
 	var result = [];
 
@@ -147,7 +147,7 @@ myCar.year = 1969</pre>
 
 <p>The syntax for an object using an object initializer is:</p>
 
-<pre class="brush: js notranslate">var obj = { property_1:   value_1,   // property_# may be an identifier...
+<pre class="brush: js">var obj = { property_1:   value_1,   // property_# may be an identifier...
             2:            value_2,   // or a number...
             // ...,
             'property n': value_n }; // or a string
@@ -159,12 +159,12 @@ myCar.year = 1969</pre>
 
 <p>The following statement creates an object and assigns it to the variable <code>x</code> if and only if the expression <code>cond</code> is true:</p>
 
-<pre class="brush: js notranslate">if (cond) var x = {greeting: 'hi there'};
+<pre class="brush: js">if (cond) var x = {greeting: 'hi there'};
 </pre>
 
 <p>The following example creates <code>myHonda</code> with three properties. Note that the <code>engine</code> property is also an object with its own properties.</p>
 
-<pre class="brush: js notranslate">var myHonda = {color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}};
+<pre class="brush: js">var myHonda = {color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}};
 </pre>
 
 <p>You can also use object initializers to create arrays. See <a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals">array literals</a>.</p>
@@ -180,7 +180,7 @@ myCar.year = 1969</pre>
 
 <p>To define an object type, create a function for the object type that specifies its name, properties, and methods. For example, suppose you want to create an object type for cars. You want this type of object to be called <code>Car</code>, and you want it to have properties for make, model, and year. To do this, you would write the following function:</p>
 
-<pre class="brush: js notranslate">function Car(make, model, year) {
+<pre class="brush: js">function Car(make, model, year) {
   this.make = make;
   this.model = model;
   this.year = year;
@@ -191,20 +191,20 @@ myCar.year = 1969</pre>
 
 <p>Now you can create an object called <code>mycar</code> as follows:</p>
 
-<pre class="brush: js notranslate">var mycar = new Car('Eagle', 'Talon TSi', 1993);
+<pre class="brush: js">var mycar = new Car('Eagle', 'Talon TSi', 1993);
 </pre>
 
 <p>This statement creates <code>mycar</code> and assigns it the specified values for its properties. Then the value of <code>mycar.make</code> is the string "Eagle", <code>mycar.year</code> is the integer 1993, and so on.</p>
 
 <p>You can create any number of <code>Car</code> objects by calls to <code>new</code>. For example,</p>
 
-<pre class="brush: js notranslate">var kenscar = new Car('Nissan', '300ZX', 1992);
+<pre class="brush: js">var kenscar = new Car('Nissan', '300ZX', 1992);
 var vpgscar = new Car('Mazda', 'Miata', 1990);
 </pre>
 
 <p>An object can have a property that is itself another object. For example, suppose you define an object called <code>person</code> as follows:</p>
 
-<pre class="brush: js notranslate">function Person(name, age, sex) {
+<pre class="brush: js">function Person(name, age, sex) {
   this.name = name;
   this.age = age;
   this.sex = sex;
@@ -213,13 +213,13 @@ var vpgscar = new Car('Mazda', 'Miata', 1990);
 
 <p>and then instantiate two new <code>person</code> objects as follows:</p>
 
-<pre class="brush: js notranslate">var rand = new Person('Rand McKinnon', 33, 'M');
+<pre class="brush: js">var rand = new Person('Rand McKinnon', 33, 'M');
 var ken = new Person('Ken Jones', 39, 'M');
 </pre>
 
 <p>Then, you can rewrite the definition of <code>Car</code> to include an <code>owner</code> property that takes a <code>person</code> object, as follows:</p>
 
-<pre class="brush: js notranslate">function Car(make, model, year, owner) {
+<pre class="brush: js">function Car(make, model, year, owner) {
   this.make = make;
   this.model = model;
   this.year = year;
@@ -229,18 +229,18 @@ var ken = new Person('Ken Jones', 39, 'M');
 
 <p>To instantiate the new objects, you then use the following:</p>
 
-<pre class="brush: js notranslate">var car1 = new Car('Eagle', 'Talon TSi', 1993, rand);
+<pre class="brush: js">var car1 = new Car('Eagle', 'Talon TSi', 1993, rand);
 var car2 = new Car('Nissan', '300ZX', 1992, ken);
 </pre>
 
 <p>Notice that instead of passing a literal string or integer value when creating the new objects, the above statements pass the objects <code>rand</code> and <code>ken</code> as the arguments for the owners. Then if you want to find out the name of the owner of car2, you can access the following property:</p>
 
-<pre class="brush: js notranslate">car2.owner.name
+<pre class="brush: js">car2.owner.name
 </pre>
 
 <p>Note that you can always add a property to a previously defined object. For example, the statement</p>
 
-<pre class="brush: js notranslate">car1.color = 'black';
+<pre class="brush: js">car1.color = 'black';
 </pre>
 
 <p>adds a property <code>color</code> to car1, and assigns it a value of "black." However, this does not affect any other objects. To add the new property to all objects of the same type, you have to add the property to the definition of the <code>Car</code> object type.</p>
@@ -249,7 +249,7 @@ var car2 = new Car('Nissan', '300ZX', 1992, ken);
 
 <p>Objects can also be created using the {{jsxref("Object.create()")}} method. This method can be very useful, because it allows you to choose the prototype object for the object you want to create, without having to define a constructor function.</p>
 
-<pre class="brush: js notranslate">// Animal properties and method encapsulation
+<pre class="brush: js">// Animal properties and method encapsulation
 var Animal = {
   type: 'Invertebrates', // Default value of properties
   displayType: function() {  // Method which will display type of Animal
@@ -282,7 +282,7 @@ fish.displayType(); // Output:Fishes</pre>
 
 <p>You can add a property to a previously defined object type by using the <code>prototype</code> property. This defines a property that is shared by all objects of the specified type, rather than by just one instance of the object. The following code adds a <code>color</code> property to all objects of type <code>Car</code>, and then assigns a value to the <code>color</code> property of the object <code>car1</code>.</p>
 
-<pre class="brush: js notranslate">Car.prototype.color = null;
+<pre class="brush: js">Car.prototype.color = null;
 car1.color = 'black';
 </pre>
 
@@ -292,7 +292,7 @@ car1.color = 'black';
 
 <p>A <em>method</em> is a function associated with an object, or, put differently, a method is a property of an object that is a function. Methods are defined the way normal functions are defined, except that they have to be assigned as the property of an object. See also <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">method definitions</a> for more details. An example is:</p>
 
-<pre class="brush: js notranslate">objectName.methodname = functionName;
+<pre class="brush: js">objectName.methodname = functionName;
 
 var myObj = {
   myMethod: function(params) {
@@ -311,12 +311,12 @@ var myObj = {
 
 <p>You can then call the method in the context of the object as follows:</p>
 
-<pre class="brush: js notranslate">object.methodname(params);
+<pre class="brush: js">object.methodname(params);
 </pre>
 
 <p>You can define methods for an object type by including a method definition in the object constructor function. You could define a function that would format and display the properties of the previously-defined <code>Car</code> objects; for example,</p>
 
-<pre class="brush: js notranslate">function displayCar() {
+<pre class="brush: js">function displayCar() {
   var result = `A Beautiful ${this.year} ${this.make} ${this.model}`;
   pretty_print(result);
 }
@@ -326,12 +326,12 @@ var myObj = {
 
 <p>You can make this function a method of <code>Car</code> by adding the statement</p>
 
-<pre class="brush: js notranslate">this.displayCar = displayCar;
+<pre class="brush: js">this.displayCar = displayCar;
 </pre>
 
 <p>to the object definition. So, the full definition of <code>Car</code> would now look like</p>
 
-<pre class="brush: js notranslate">function Car(make, model, year, owner) {
+<pre class="brush: js">function Car(make, model, year, owner) {
   this.make = make;
   this.model = model;
   this.year = year;
@@ -342,7 +342,7 @@ var myObj = {
 
 <p>Then you can call the <code>displayCar</code> method for each of the objects as follows:</p>
 
-<pre class="brush: js notranslate">car1.displayCar();
+<pre class="brush: js">car1.displayCar();
 car2.displayCar();
 </pre>
 
@@ -350,7 +350,7 @@ car2.displayCar();
 
 <p>JavaScript has a special keyword, <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code>, that you can use within a method to refer to the current object. For example, suppose you have 2 objects, <code>Manager</code>and <code>Intern</code>. Each object have their own <code>name</code>, <code>age</code> and <code>job</code>.  In the function <code>sayHi()</code>, notice there is <code>this.name</code>. When added to the 2 objects they can be called and returns the <code>'Hello, My name is'</code> then adds the <code>name</code> value from that specific object. As shown below. </p>
 
-<pre class="brush: js notranslate">const Manager = {
+<pre class="brush: js">const Manager = {
   name: "John",
   age: 27,
   job: "Software Engineer"
@@ -375,7 +375,7 @@ Intern.sayHi() // Hello, my name is Ben'
 
 <p>The <code>this</code> refers to the object that it is in. You can create a new function called <code>howOldAmI()</code>which logs a sentence saying how old the person is. </p>
 
-<pre class="brush: js notranslate">function howOldAmI (){
+<pre class="brush: js">function howOldAmI (){
   console.log('I am ' + this.age + ' years old.')
 }
 Manager.howOldAmI = howOldAmI;
@@ -395,7 +395,7 @@ Manager.howOldAmI() // I am 27 years old.
 
 <p>When defining getters and setters using <a href="#object_initializers">object initializers</a> all you need to do is to prefix a getter method with <code>get</code> and a setter method with <code>set</code>. Of course, the getter method must not expect a parameter, while the setter method expects exactly one parameter (the new value to set). For instance:</p>
 
-<pre class="brush: js notranslate">var o = {
+<pre class="brush: js">var o = {
   a: 7,
   get b() {
     return this.a + 1;
@@ -423,7 +423,7 @@ console.log(o.a); // 25
 
 <p>Getters and setters can also be added to an object at any time after creation using the <code>Object.defineProperties</code> method. This method's first parameter is the object on which you want to define the getter or setter. The second parameter is an object whose property names are the getter or setter names, and whose property values are objects for defining the getter or setter functions. Here's an example that defines the same getter and setter used in the previous example:</p>
 
-<pre class="brush: js notranslate">var o = { a: 0 };
+<pre class="brush: js">var o = { a: 0 };
 
 Object.defineProperties(o, {
     'b': { get: function() { return this.a + 1; } },
@@ -440,7 +440,7 @@ console.log(o.b); // Runs the getter, which yields a + 1 or 6
 
 <p>You can remove a non-inherited property by using the <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code> operator. The following code shows how to remove a property.</p>
 
-<pre class="brush: js notranslate">// Creates a new object, myobj, with two properties, a and b.
+<pre class="brush: js">// Creates a new object, myobj, with two properties, a and b.
 var myobj = new Object;
 myobj.a = 5;
 myobj.b = 12;
@@ -452,7 +452,7 @@ console.log ('a' in myobj); // output: "false"
 
 <p>You can also use <code>delete</code> to delete a global variable if the <code>var</code> keyword was not used to declare the variable:</p>
 
-<pre class="brush: js notranslate">g = 17;
+<pre class="brush: js">g = 17;
 delete g;
 </pre>
 
@@ -460,14 +460,14 @@ delete g;
 
 <p>In JavaScript, objects are a reference type. Two distinct objects are never equal, even if they have the same properties. Only comparing the same object reference with itself yields true.</p>
 
-<pre class="brush: js notranslate">// Two variables, two distinct objects with the same properties
+<pre class="brush: js">// Two variables, two distinct objects with the same properties
 var fruit = {name: 'apple'};
 var fruitbear = {name: 'apple'};
 
 fruit == fruitbear; // return false
 fruit === fruitbear; // return false</pre>
 
-<pre class="brush: js notranslate">// Two variables, a single object
+<pre class="brush: js">// Two variables, a single object
 var fruit = {name: 'apple'};
 var fruitbear = fruit;  // Assign fruit object reference to fruitbear
 

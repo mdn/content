@@ -12,14 +12,14 @@ tags:
 
 <p>The <strong><code>:placeholder-shown</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents any {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element that is currently displaying <a href="/en-US/docs/Web/HTML/Element/input#attr-placeholder">placeholder text</a>.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Selects any element with an active placeholder */
+<pre class="brush: css no-line-numbers">/* Selects any element with an active placeholder */
 :placeholder-shown {
   border: 2px solid silver;
 }</pre>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">{{CSSSyntax}}</pre>
+<pre class="brush: css">{{CSSSyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -29,11 +29,11 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;input placeholder="Type something here!"&gt;</pre>
+<pre class="brush: html">&lt;input placeholder="Type something here!"&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">input {
+<pre class="brush: css">input {
   border: 1px solid black;
   padding: 3px;
 }
@@ -54,13 +54,13 @@ input:placeholder-shown {
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;input id="input1" placeholder="Name, Rank, and Serial Number"&gt;
+<pre class="brush: html">&lt;input id="input1" placeholder="Name, Rank, and Serial Number"&gt;
 &lt;br&gt;&lt;br&gt;
 &lt;input id="input2" placeholder="Name, Rank, and Serial Number"&gt;</pre>
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">#input2:placeholder-shown {
+<pre class="brush: css">#input2:placeholder-shown {
   text-overflow: ellipsis;
 }</pre>
 
@@ -74,7 +74,7 @@ input:placeholder-shown {
 
 <h4 id="HTML_3">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;form id="test"&gt;
+<pre class="brush: html">&lt;form id="test"&gt;
   &lt;p&gt;
     &lt;label for="name"&gt;Enter Student Name:&lt;/label&gt;
     &lt;input id="name" placeholder="Student Name"/&gt;
@@ -92,7 +92,7 @@ input:placeholder-shown {
 
 <h4 id="CSS_3">CSS</h4>
 
-<pre class="brush: css; highlight[6] notranslate">input {
+<pre class="brush: css; highlight[6]">input {
   background-color: #E8E8E8;
   color: black;
 }

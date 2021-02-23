@@ -35,7 +35,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>regexObj</var>.exec(<var>str</var>)</pre>
+<pre class="brush: js"><var>regexObj</var>.exec(<var>str</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -59,7 +59,7 @@ tags:
 
 <p>Consider the following example:</p>
 
-<pre class="brush: js notranslate">// Match "quick brown" followed by "jumps", ignoring characters in between
+<pre class="brush: js">// Match "quick brown" followed by "jumps", ignoring characters in between
 // Remember "brown" and "jumps"
 // Ignore case
 let re = /quick\s(brown).+?(jumps)/ig;
@@ -157,7 +157,7 @@ let result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
 
 <p>For example, assume you have this script:</p>
 
-<pre class="brush: js notranslate">let myRe = /ab*/g;
+<pre class="brush: js">let myRe = /ab*/g;
 let str = 'abbcdefabh';
 let myArray;
 while ((myArray = myRe.exec(str)) !== null) {
@@ -169,7 +169,7 @@ while ((myArray = myRe.exec(str)) !== null) {
 
 <p>This script displays the following text:</p>
 
-<pre class="brush: plain notranslate">Found abb. Next match starts at 3
+<pre class="brush: plain">Found abb. Next match starts at 3
 Found ab. Next match starts at 9
 </pre>
 
@@ -191,7 +191,7 @@ Found ab. Next match starts at 9
 <p>You can also use <code>exec()</code> without creating a {{jsxref("RegExp")}} object
   explicitly:</p>
 
-<pre class="brush: js notranslate">let matches = /(hello \S+)/.exec('This is a hello world!');
+<pre class="brush: js">let matches = /(hello \S+)/.exec('This is a hello world!');
 console.log(matches[1]);
 </pre>
 

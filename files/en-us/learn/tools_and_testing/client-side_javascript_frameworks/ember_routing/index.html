@@ -44,13 +44,13 @@ tags:
 
 <p>Let's start by creating three new routes: "Index", "Active" and "Completed". To do this you’ll need to enter the following commands into your terminal, inside the root directory of your app:</p>
 
-<pre class="brush: bash notranslate">ember generate route index
+<pre class="brush: bash">ember generate route index
 ember generate route completed
 ember generate route active</pre>
 
 <p>The second and third commands should have not only generated new files, but also updated an existing file, <code>app/router.js</code>. It contains the following contents:</p>
 
-<pre class="brush: js notranslate">import EmberRouter from '@ember/routing/router';
+<pre class="brush: js">import EmberRouter from '@ember/routing/router';
 import config from './config/environment';
 
 export default class Router extends EmberRouter {
@@ -73,21 +73,21 @@ Router.map(function() {
 
 <p>Go to the <code>todomvc/app/templates/application.hbs</code> file and replace</p>
 
-<pre class="brush: html notranslate">&lt;TodoList /&gt;</pre>
+<pre class="brush: html">&lt;TodoList /&gt;</pre>
 
 <p>With</p>
 
-<pre class="brush: js notranslate">\{{outlet}}</pre>
+<pre class="brush: js">\{{outlet}}</pre>
 
 <p>Next, in our <code>index.hbs</code>, <code>completed.hbs</code>, and <code>active.hbs</code> templates (also found in the templates directory) we can for now just enter the TodoList component invocation.</p>
 
 <p>In each case, replace</p>
 
-<pre class="brush: js notranslate">\{{outlet}}</pre>
+<pre class="brush: js">\{{outlet}}</pre>
 
 <p>with</p>
 
-<pre class="brush: html notranslate">&lt;TodoList /&gt;</pre>
+<pre class="brush: html">&lt;TodoList /&gt;</pre>
 
 <p>So at this point, if you try the app again and visit any of the three routes</p>
 
@@ -101,7 +101,7 @@ Router.map(function() {
 
 <p>First of all, return once more to our <code>todo-data.js</code> file. It already contains a getter that returns all todos, and a getter that returns incomplete todos. The getter we are missing is one to return just the completed todos. Add the following below the existing getters:</p>
 
-<pre class="brush: js notranslate">get completed() {
+<pre class="brush: js">get completed() {
   return this.todos.filter(todo =&gt; todo.isCompleted);
 }</pre>
 
@@ -113,7 +113,7 @@ Router.map(function() {
 
 <p>First of all, update <code>todomvc/app/routes/index.js</code> so it looks as follows:</p>
 
-<pre class="brush: js notranslate">import Route from '@ember/routing/route';
+<pre class="brush: js">import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
 
 export default class IndexRoute extends Route {
@@ -134,17 +134,17 @@ export default class IndexRoute extends Route {
 
 <p>In this file, change</p>
 
-<pre class="brush: js notranslate">&lt;TodoList /&gt;</pre>
+<pre class="brush: js">&lt;TodoList /&gt;</pre>
 
 <p>To</p>
 
-<pre class="brush: js notranslate">&lt;TodoList @todos=\{{ @model.allTodos }}/&gt;</pre>
+<pre class="brush: js">&lt;TodoList @todos=\{{ @model.allTodos }}/&gt;</pre>
 
 <h3 id="The_completed_route_model">The completed route model</h3>
 
 <p>Now update <code>todomvc/app/routes/completed.js</code> so it looks as follows:</p>
 
-<pre class="brush: js notranslate">import Route from '@ember/routing/route';
+<pre class="brush: js">import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
 
 export default class CompletedRoute extends Route {
@@ -165,17 +165,17 @@ export default class CompletedRoute extends Route {
 
 <p>In this file, change</p>
 
-<pre class="brush: js notranslate">&lt;TodoList /&gt;</pre>
+<pre class="brush: js">&lt;TodoList /&gt;</pre>
 
 <p>To</p>
 
-<pre class="brush: js notranslate">&lt;TodoList @todos=\{{ @model.completedTodos }}/&gt;</pre>
+<pre class="brush: js">&lt;TodoList @todos=\{{ @model.completedTodos }}/&gt;</pre>
 
 <h3 id="The_active_route_model">The active route model</h3>
 
 <p>Finally for the routes, let's sort out our active route. Start by updating <code>todomvc/app/routes/active.js</code> so it looks as follows:</p>
 
-<pre class="brush: js notranslate">import Route from '@ember/routing/route';
+<pre class="brush: js">import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
 
 export default class ActiveRoute extends Route {
@@ -196,11 +196,11 @@ export default class ActiveRoute extends Route {
 
 <p>In this file, change</p>
 
-<pre class="brush: js notranslate">&lt;TodoList /&gt;</pre>
+<pre class="brush: js">&lt;TodoList /&gt;</pre>
 
 <p>To</p>
 
-<pre class="brush: js notranslate">&lt;TodoList @todos=\{{ @model.activeTodos }}/&gt;</pre>
+<pre class="brush: js">&lt;TodoList @todos=\{{ @model.activeTodos }}/&gt;</pre>
 
 <p>Note that, in each of the route model hooks, we are returning an object with a getter instead of a static object, or more just the static list of todos (for example, <code>this.todos.completed</code>). The reason for this is that we want the template to have a dynamic reference to the todo list, and if we returned the list directly, the data would never re-compute, which would result in the navigations appearing to fail / not actually filter. By having a getter defined in the return object from the model data, the todos are re-looked-up so that our changes to the todo list are represented in the rendered list.</p>
 
@@ -210,13 +210,13 @@ export default class ActiveRoute extends Route {
 
 <p>Go back to <code>todomvc/app/components/footer.hbs</code>, and find the following bit of markup:</p>
 
-<pre class="brush: html notranslate">&lt;a href="#"&gt;All&lt;/a&gt;
+<pre class="brush: html">&lt;a href="#"&gt;All&lt;/a&gt;
 &lt;a href="#"&gt;Active&lt;/a&gt;
 &lt;a href="#"&gt;Completed&lt;/a&gt;</pre>
 
 <p>Update it to</p>
 
-<pre class="brush: js notranslate">&lt;LinkTo @route='index'&gt;All&lt;/LinkTo&gt;
+<pre class="brush: js">&lt;LinkTo @route='index'&gt;All&lt;/LinkTo&gt;
 &lt;LinkTo @route='active'&gt;Active&lt;/LinkTo&gt;
 &lt;LinkTo @route='completed'&gt;Completed&lt;/LinkTo&gt;</pre>
 
@@ -226,11 +226,11 @@ export default class ActiveRoute extends Route {
 
 <p>One small final thing that we need to fix is that previously, inside <code>todomvc/app/components/todo-list.hbs</code>, we were accessing the todo-data service directly and looping over all todos, as shown here:</p>
 
-<pre class="brush: js notranslate">\{{#each this.todos.all as |todo| }}</pre>
+<pre class="brush: js">\{{#each this.todos.all as |todo| }}</pre>
 
 <p>Since we now want to have our TodoList component show a filtered list, we'll want to pass an argument to the TodoList component representing the "current list of todos", as shown here:</p>
 
-<pre class="brush: js notranslate">\{{#each @todos as |todo| }}</pre>
+<pre class="brush: js">\{{#each @todos as |todo| }}</pre>
 
 <p>And that's it for this tutorial! Your app should now have fully working links in the footer that display the "Index"/default, "Active", and "Completed" routes.</p>
 

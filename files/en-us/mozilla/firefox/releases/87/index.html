@@ -13,7 +13,17 @@ tags:
 
 <h2 id="Changes_for_web_developers">Changes for web developers</h2>
 
+<ul>
+  <li>Developers can now use the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#viewing_common_pseudo-classes">Page Inspector</a> to toggle the {{cssxref(":target")}} pseudo-class for the currently selected element (in addition to the pseudo-classes that were previously supported: {{cssxref(":hover")}}, {{cssxref(":active")}} and {{cssxref(":focus")}}, {{cssxref(":focus-within")}}, {{cssxref(":focus-visible")}}, and {{cssxref(":visited")}}). ({{bug(1689899)}}).</li>
+</ul>
+
 <h3 id="Developer_Tools">Developer Tools</h3>
+
+<ul>
+  <li>The {{cssxref("table-layout")}} property is now marked as inactive for non-table elements. ({{bug(1551571)}}).</li>
+  <li>The {{cssxref("scroll-padding")}} shorthand and longhand properties are now marked as inactive for non-scrollable elements. ({{bug(1551577)}}).</li>
+  <li>The {{cssxref("text-overflow")}} property was previously incorrectly marked as inactive for some {{cssxref("overflow")}} values. This got fixed in {{bug(1671457)}}.</li>
+</ul>
 
 <h4 id="Removals">Removals</h4>
 
@@ -23,7 +33,15 @@ tags:
 
 <h3 id="CSS">CSS</h3>
 
+<ul>
+  <li>Some languages have digraphs that are always capitalized together, like the <code>IJ</code> in Dutch. The {{cssxref("::first-letter")}} pseudo-element now respects these digraphs and treats them as a single unit ({{bug(92176)}}).</li>
+</ul>
+
 <h4 id="Removals_3">Removals</h4>
+
+<ul>
+  <li>The non-standard values of {{cssxref("caption-side")}} (<code>left</code>, <code>right</code>, <code>top-outside</code>, and <code>bottom-outside</code>) have been removed and placed behind the <code>layout.css.caption-side-non-standard.enabled</code> flag ({{bug(1688695)}}).</li>
+</ul>
 
 <h3 id="JavaScript">JavaScript</h3>
 

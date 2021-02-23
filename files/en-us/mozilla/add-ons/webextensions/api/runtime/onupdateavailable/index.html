@@ -68,7 +68,7 @@ browser.runtime.onUpdateAvailable.hasListener(listener)
 
 <p>Listen for <code>UpdateAvailable</code> events:</p>
 
-<pre class="notranslate brush: js">function handleUpdateAvailable(details) {
+<pre class="brush: js">function handleUpdateAvailable(details) {
   console.log(details.version);
   // Proceed to upgrade the add-on
   browser.runtime.reload();

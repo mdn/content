@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Promise.resolve(<var>value</var>);
+<pre class="brush: js">Promise.resolve(<var>value</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -46,7 +46,7 @@ tags:
 <h3 id="Using_the_static_Promise.resolve_method">Using the static Promise.resolve method
 </h3>
 
-<pre class="brush: js notranslate">Promise.resolve('Success').then(function(value) {
+<pre class="brush: js">Promise.resolve('Success').then(function(value) {
   console.log(value); // "Success"
 }, function(value) {
   // not called
@@ -55,7 +55,7 @@ tags:
 
 <h3 id="Resolving_an_array">Resolving an array</h3>
 
-<pre class="brush: js notranslate">var p = Promise.resolve([1,2,3]);
+<pre class="brush: js">var p = Promise.resolve([1,2,3]);
 p.then(function(v) {
   console.log(v[0]); // 1
 });
@@ -63,7 +63,7 @@ p.then(function(v) {
 
 <h3 id="Resolving_another_Promise">Resolving another Promise</h3>
 
-<pre class="brush: js notranslate">var original = Promise.resolve(33);
+<pre class="brush: js">var original = Promise.resolve(33);
 var cast = Promise.resolve(original);
 cast.then(function(value) {
   console.log('value: ' + value);
@@ -83,7 +83,7 @@ console.log('original === cast ? ' + (original === cast));
 <h3 id="Resolving_thenables_and_throwing_Errors">Resolving thenables and throwing Errors
 </h3>
 
-<pre class="brush: js notranslate">// Resolving a thenable object
+<pre class="brush: js">// Resolving a thenable object
 var p1 = Promise.resolve({
   then: function(onFulfill, onReject) { onFulfill('fulfilled!'); }
 });

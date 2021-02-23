@@ -20,7 +20,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><code>Object.is(<var>value1</var>, <var>value2</var>);</code></pre>
+  class="brush: js"><code>Object.is(<var>value1</var>, <var>value2</var>);</code></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -76,7 +76,7 @@ tags:
 
 <h3 id="Using_Object.is">Using Object.is</h3>
 
-<pre class="brush: js notranslate">Object.is('foo', 'foo');     // true
+<pre class="brush: js">Object.is('foo', 'foo');     // true
 Object.is(window, window);   // true
 
 Object.is('foo', 'bar');     // false
@@ -98,7 +98,7 @@ Object.is(NaN, 0/0);         // true
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="brush: js notranslate">if (!Object.is) {
+<pre class="brush: js">if (!Object.is) {
   Object.defineProperty(Object, "is", {
     value: function (x, y) {
       // SameValue algorithm

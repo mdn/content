@@ -90,7 +90,7 @@ tags:
 
 <p>Here's a content script that sends a message to the background script when the user clicks the content window. The message payload is <code>{greeting: "Greeting from the content script"}</code>, and the sender also expects to get a response, which is handled in the <code>handleResponse</code> function:</p>
 
-<pre class="notranslate brush: js">// content-script.js
+<pre class="brush: js">// content-script.js
 
 function handleResponse(message) {
   console.log(`Message from the background script:  ${message.response}`);
@@ -111,7 +111,7 @@ window.addEventListener("click", notifyBackgroundPage);</pre>
 
 <p>The corresponding background script looks like this:</p>
 
-<pre class="notranslate brush: js">// background-script.js
+<pre class="brush: js">// background-script.js
 
 function handleMessage(request, sender, sendResponse) {
   console.log("Message from the content script: " +

@@ -25,7 +25,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>FileSystemWritableFileStream</var> = FileSystemFileHandle.createWritable();</pre>
+  class="brush: js">var <var>FileSystemWritableFileStream</var> = FileSystemFileHandle.createWritable();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -57,7 +57,7 @@ tags:
 <p>The following asynchronous function writes the given contents to the file handle, and
   thus to disk.</p>
 
-<pre class="brush: js notranslate">async function writeFile(fileHandle, contents) {
+<pre class="brush: js">async function writeFile(fileHandle, contents) {
   // Create a FileSystemWritableFileStream to write to.
   const writable = await fileHandle.createWritable();
 

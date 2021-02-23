@@ -74,7 +74,7 @@ tags:
 
 <p>This code logs the title and URL for all pages in the "New Tab" page:</p>
 
-<pre class="notranslate brush: js">function logTopSites(topSitesArray) {
+<pre class="brush: js">function logTopSites(topSitesArray) {
   for (topSite of topSitesArray) {
     console.log(`Title: ${topSite.title}, URL: ${topSite.url}`);
   }
@@ -90,7 +90,7 @@ gettingTopSites.then(logTopSites, onError);
 
 <p>This code logs the title and URL for all top pages, including ones the user has blocked, and potentially including multiple pages in the same domain:</p>
 
-<pre class="notranslate brush: js">function logTopSites(topSitesArray) {
+<pre class="brush: js">function logTopSites(topSitesArray) {
   for (topSite of topSitesArray) {
     console.log(`Title: ${topSite.title}, URL: ${topSite.url}`);
   }

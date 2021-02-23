@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Object.keys(<var>obj</var>)</pre>
+<pre class="brush: js">Object.keys(<var>obj</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -49,7 +49,7 @@ tags:
 
 <h3 id="Using_Object.keys">Using Object.keys</h3>
 
-<pre class="brush: js notranslate">// simple array
+<pre class="brush: js">// simple array
 const arr = ['a', 'b', 'c'];
 console.log(Object.keys(arr)); // console: ['0', '1', '2']
 
@@ -81,7 +81,7 @@ console.log(Object.keys(myObj)); // console: ['foo']
 
 <p>From ES2015 onwards, a non-object argument will be coerced to an object.</p>
 
-<pre class="brush: js notranslate">// In ES5
+<pre class="brush: js">// In ES5
 Object.keys('foo');  // TypeError: "foo" is not an object
 
 // In ES2015+
@@ -93,7 +93,7 @@ Object.keys('foo');  // ["0", "1", "2"]
 <p>To add compatible <code>Object.keys</code> support in older environments that do not
   natively support it, copy the following snippet:</p>
 
-<pre class="brush: js notranslate">// From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+<pre class="brush: js">// From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 if (!Object.keys) {
   Object.keys = (function() {
     'use strict';
@@ -161,8 +161,7 @@ if (!Object.keys) {
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div class="hidden">The compatibility table on this page is generated from structured
-  data. If you'd like to contribute to the data, please check out <a class="external"
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+  data. If you'd like to contribute to the data, please check out <a     href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
   and send us a pull request.</div>
 
 <p>{{Compat("javascript.builtins.Object.keys")}}</p>

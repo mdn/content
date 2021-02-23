@@ -40,7 +40,7 @@ tags:
    would still work fine, except that all four would be passed, but only the first three
    would be used unless you added more arguments to the function, e.g.:</p>
 
-<pre class="brush: js notranslate">function sum(x, y, z, n) {
+<pre class="brush: js">function sum(x, y, z, n) {
   return x + y + z + n;
 }</pre>
 
@@ -52,7 +52,7 @@ tags:
    all stored items plus a new addition. A very simple version of this kind of action
    could look like so:</p>
 
-<pre class="brush: js notranslate">let numberStore = [0, 1, 2];
+<pre class="brush: js">let numberStore = [0, 1, 2];
 let newNumber = 12;
 numberStore = [...numberStore, newNumber];</pre>
 
@@ -63,18 +63,18 @@ numberStore = [...numberStore, newNumber];</pre>
 
 <p>For function calls:</p>
 
-<pre class="brush: js notranslate"><var>myFunction</var>(...<var>iterableObj</var>); // pass all elements of <em>iterableObj</em> as arguments to function <em>myFunction</em>
+<pre class="brush: js"><var>myFunction</var>(...<var>iterableObj</var>); // pass all elements of <em>iterableObj</em> as arguments to function <em>myFunction</em>
 </pre>
 
 <p>For array literals or strings:</p>
 
 <pre
-   class="brush: js notranslate">[...<var>iterableObj</var>, '4', 'five', 6]; // combine two arrays by inserting all elements from <em>iterableObj</em></pre>
+   class="brush: js">[...<var>iterableObj</var>, '4', 'five', 6]; // combine two arrays by inserting all elements from <em>iterableObj</em></pre>
 
 <p>For object literals (new in ECMAScript 2018):</p>
 
 <pre
-   class="brush: js notranslate">let <var>objClone</var> = { ...<var>obj</var> }; // pass all <em>key:value</em> pairs from an object </pre>
+   class="brush: js">let <var>objClone</var> = { ...<var>obj</var> }; // pass all <em>key:value</em> pairs from an object </pre>
 
 <h2 id="Rest_syntax_parameters">Rest syntax (parameters)</h2>
 
@@ -92,20 +92,20 @@ numberStore = [...numberStore, newNumber];</pre>
 <p>It is common to use {{jsxref("Function.prototype.apply()")}} in cases where you want to
    use the elements of an array as arguments to a function.</p>
 
-<pre class="brush: js notranslate">function myFunction(x, y, z) { }
+<pre class="brush: js">function myFunction(x, y, z) { }
 let args = [0, 1, 2];
 myFunction.apply(null, args);</pre>
 
 <p>With spread syntax the above can be written as:</p>
 
-<pre class="brush: js notranslate">function myFunction(x, y, z) { }
+<pre class="brush: js">function myFunction(x, y, z) { }
 let args = [0, 1, 2];
 myFunction(...args);</pre>
 
 <p>Any argument in the argument list can use spread syntax, and the spread syntax can be
    used multiple times.</p>
 
-<pre class="brush: js notranslate">function myFunction(v, w, x, y, z) { }
+<pre class="brush: js">function myFunction(v, w, x, y, z) { }
 let args = [0, 1];
 myFunction(-1, ...args, 2, ...[3]);</pre>
 
@@ -116,14 +116,14 @@ myFunction(-1, ...args, 2, ...[3]);</pre>
    does a <code>[[Call]]</code> and not a <code>[[Construct]]</code>). However, an array
    can be easily used with <code>new</code> thanks to spread syntax:</p>
 
-<pre class="brush: js notranslate">let dateFields = [1970, 0, 1];  // 1 Jan 1970
+<pre class="brush: js">let dateFields = [1970, 0, 1];  // 1 Jan 1970
 let d = new Date(...dateFields);
 </pre>
 
 <p>To use <code>new</code> with an array of parameters without spread syntax, you would
    have to do it <strong>indirectly</strong> through partial application:</p>
 
-<pre class="brush: js notranslate">function applyAndNew(constructor, args) {
+<pre class="brush: js">function applyAndNew(constructor, args) {
    function partial () {
       return constructor.apply(this, args);
    };
@@ -158,7 +158,7 @@ console.log(new myConstructorWithArguments);
    {{jsxref("Array.prototype.splice", "splice()")}}, {{jsxref("Array.prototype.concat",
    "concat()")}}, etc. With spread syntax this becomes much more succinct:</p>
 
-<pre class="brush: js notranslate">let parts = ['shoulders', 'knees'];
+<pre class="brush: js">let parts = ['shoulders', 'knees'];
 let lyrics = ['head', ...parts, 'and', 'toes'];
 //  ["head", "shoulders", "knees", "and", "toes"]
 </pre>
@@ -168,7 +168,7 @@ let lyrics = ['head', ...parts, 'and', 'toes'];
 
 <h4 id="Copy_an_array">Copy an array</h4>
 
-<pre class="brush: js notranslate">let arr = [1, 2, 3];
+<pre class="brush: js">let arr = [1, 2, 3];
 let arr2 = [...arr]; // like arr.slice()
 
 arr2.push(4);
@@ -182,7 +182,7 @@ arr2.push(4);
       the following example shows. (The same is true with {{jsxref("Object.assign()")}}
       and spread syntax.)</p>
 
-   <pre class="brush: js example-bad notranslate">let a = [[1], [2], [3]];
+   <pre class="brush: js example-bad">let a = [[1], [2], [3]];
 let b = [...a];
 
 b.shift().shift();
@@ -199,7 +199,7 @@ a
 <p>{{jsxref("Array.prototype.concat()")}} is often used to concatenate an array to the end
    of an existing array. Without spread syntax, this is done as:</p>
 
-<pre class="brush: js notranslate">let arr1 = [0, 1, 2];
+<pre class="brush: js">let arr1 = [0, 1, 2];
 let arr2 = [3, 4, 5];
 
 //  Append all items from arr2 onto arr1
@@ -207,7 +207,7 @@ arr1 = arr1.concat(arr2);</pre>
 
 <p>With spread syntax this becomes:</p>
 
-<pre class="brush: js notranslate">let arr1 = [0, 1, 2];
+<pre class="brush: js">let arr1 = [0, 1, 2];
 let arr2 = [3, 4, 5];
 
 arr1 = [...arr1, ...arr2];
@@ -218,7 +218,7 @@ arr1 = [...arr1, ...arr2];
 <p>{{jsxref("Array.prototype.unshift()")}} is often used to insert an array of values at
    the start of an existing array. Without spread syntax, this is done as:</p>
 
-<pre class="brush: js notranslate">let arr1 = [0, 1, 2];
+<pre class="brush: js">let arr1 = [0, 1, 2];
 let arr2 = [3, 4, 5];
 
 //  Prepend all items from arr2 onto arr1
@@ -228,7 +228,7 @@ Array.prototype.unshift.apply(arr1, arr2)
 
 <p>With spread syntax, this becomes:</p>
 
-<pre class="brush: js notranslate">let arr1 = [0, 1, 2];
+<pre class="brush: js">let arr1 = [0, 1, 2];
 let arr2 = [3, 4, 5];
 
 arr1 = [...arr2, ...arr1];
@@ -251,7 +251,7 @@ arr1 = [...arr2, ...arr1];
 <p>Shallow-cloning (excluding prototype) or merging of objects is now possible using a
    shorter syntax than {{jsxref("Object.assign()")}}.</p>
 
-<pre class="brush: js notranslate">let obj1 = { foo: 'bar', x: 42 };
+<pre class="brush: js">let obj1 = { foo: 'bar', x: 42 };
 let obj2 = { foo: 'baz', y: 13 };
 
 let clonedObj = { ...obj1 };
@@ -265,7 +265,7 @@ let mergedObj = { ...obj1, ...obj2 };
 
 <p>Note that you cannot replace or mimic the {{jsxref("Object.assign()")}} function:</p>
 
-<pre class="brush: js notranslate">let obj1 = { foo: 'bar', x: 42 };
+<pre class="brush: js">let obj1 = { foo: 'bar', x: 42 };
 let obj2 = { foo: 'baz', y: 13 };
 const merge = ( ...objects ) =&gt; ( { ...objects } );
 
@@ -289,7 +289,7 @@ let mergedObj2 = merge ({}, obj1, obj2);
       href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator">iterable</a>
    objects:</p>
 
-<pre class="brush: js notranslate">let obj = {'key1': 'value1'};
+<pre class="brush: js">let obj = {'key1': 'value1'};
 let array = [...obj]; // TypeError: obj is not iterable
 </pre>
 

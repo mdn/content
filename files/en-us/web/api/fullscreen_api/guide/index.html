@@ -24,7 +24,7 @@ tags:
 
 <p>Let's consider this {{HTMLElement("video")}} element:</p>
 
-<pre class="brush: html notranslate">&lt;video controls id="myvideo"&gt;
+<pre class="brush: html">&lt;video controls id="myvideo"&gt;
   &lt;source src="somevideo.webm"&gt;&lt;/source&gt;
   &lt;source src="somevideo.mp4"&gt;&lt;/source&gt;
 &lt;/video&gt;
@@ -32,7 +32,7 @@ tags:
 
 <p>We can put that video into full-screen mode as follows:</p>
 
-<pre class="brush: js notranslate">var elem = document.getElementById("myvideo");
+<pre class="brush: js">var elem = document.getElementById("myvideo");
 if (elem.requestFullscreen) {
   elem.requestFullscreen();
 }</pre>
@@ -43,7 +43,7 @@ if (elem.requestFullscreen) {
 
 <p>It's worth noting a key difference here between the Gecko and WebKit implementations at this time: Gecko automatically adds CSS rules to the element to stretch it to fill the screen: "<code>width: 100%; height: 100%</code>". WebKit doesn't do this; instead, it centers the fullscreen element at the same size in a screen that's otherwise black. To get the same fullscreen behavior in WebKit, you need to add your own "<code>width: 100%; height: 100%;</code>" CSS rules to the element yourself:</p>
 
-<pre class="brush: css notranslate">#myvideo:-webkit-full-screen {
+<pre class="brush: css">#myvideo:-webkit-full-screen {
   width: 100%;
   height: 100%;
 }
@@ -94,7 +94,7 @@ if (elem.requestFullscreen) {
 
 <p>When the page is loaded, this code is run to set up an event listener to watch for the <kbd>Enter</kbd> key.</p>
 
-<pre class="brush: js notranslate">document.addEventListener("keydown", function(e) {
+<pre class="brush: js">document.addEventListener("keydown", function(e) {
   if (e.keyCode == 13) {
     toggleFullScreen();
   }
@@ -105,7 +105,7 @@ if (elem.requestFullscreen) {
 
 <p>This code is called when the user hits the <kbd>Enter</kbd> key, as seen above.</p>
 
-<pre class="brush: js notranslate">function toggleFullScreen() {
+<pre class="brush: js">function toggleFullScreen() {
   if (!document.fullscreenElement) {
     document.documentElement.requestFullscreen();
   } else {

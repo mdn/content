@@ -27,7 +27,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">const <var>name1</var> = <var>value1</var> [, <var>name2</var> = <var>value2</var> [, ... [, <var>nameN</var> = <var>valueN</var>]]];</pre>
+  class="brush: js">const <var>name1</var> = <var>value1</var> [, <var>name2</var> = <var>value2</var> [, ... [, <var>nameN</var> = <var>valueN</var>]]];</pre>
 
 <dl>
   <dt><code><var>nameN</var></code></dt>
@@ -42,7 +42,7 @@ tags:
     href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring
     Assignment </a>syntax can also be used to declare variables.</p>
 
-<pre class="brush: js notranslate">const <var>{ bar }</var> = <em>foo</em>; // where foo = { bar:10, baz:12 };
+<pre class="brush: js">const <var>{ bar }</var> = <em>foo</em>; // where foo = { bar:10, baz:12 };
 /* This creates a constant with the name 'bar', which has a value of 10 */</pre>
 
 <h2 id="Description">Description</h2>
@@ -75,7 +75,7 @@ tags:
 <p>Constants can be declared with uppercase or lowercase, but a common convention is to
   use all-uppercase letters.</p>
 
-<pre class="brush: js; notranslate">// define MY_FAV as a constant and give it the value 7
+<pre class="brush: js;">// define MY_FAV as a constant and give it the value 7
 const MY_FAV = 7;
 
 // this will throw an error - Uncaught TypeError: Assignment to constant variable.
@@ -100,7 +100,7 @@ let MY_FAV = 20;
 
 <p>It's important to note the nature of block scoping.</p>
 
-<pre class="brush: js notranslate">if (MY_FAV === 7) {
+<pre class="brush: js">if (MY_FAV === 7) {
   // this is fine and creates a block scoped MY_FAV variable
   // (works equally well with let to declare a block scoped non const variable)
   let MY_FAV = 20;
@@ -118,7 +118,7 @@ console.log('my favorite number is ' + MY_FAV);
 
 <h3 id="const_needs_to_be_initialized">const needs to be initialized</h3>
 
-<pre class="brush: js notranslate">// throws an error
+<pre class="brush: js">// throws an error
 // Uncaught SyntaxError: Missing initializer in const declaration
 
 const FOO;
@@ -128,7 +128,7 @@ const FOO;
 
 <p>const also works on objects and arrays.</p>
 
-<pre class="brush: js notranslate">const MY_OBJECT = {'key': 'value'};
+<pre class="brush: js">const MY_OBJECT = {'key': 'value'};
 
 // Attempting to overwrite the object throws an error
 // Uncaught TypeError: Assignment to constant variable.

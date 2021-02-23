@@ -29,7 +29,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>typedarray</var>.filter(<var>callback</var>[, <var>thisArg</var>])</pre>
+  class="brush: js"><var>typedarray</var>.filter(<var>callback</var>[, <var>thisArg</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -92,7 +92,7 @@ tags:
 <p>The following example uses <code>filter()</code> to create a filtered typed array that
   has all elements with values less than 10 removed.</p>
 
-<pre class="brush: js notranslate">function isBigEnough(element, index, array) {
+<pre class="brush: js">function isBigEnough(element, index, array) {
   return element &gt;= 10;
 }
 new Uint8Array([12, 5, 8, 130, 44]).filter(isBigEnough);
@@ -105,7 +105,7 @@ new Uint8Array([12, 5, 8, 130, 44]).filter(isBigEnough);
 <p><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow
     functions</a> provide a shorter syntax for the same test.</p>
 
-<pre class="brush: js notranslate">new Uint8Array([12, 5, 8, 130, 44]).filter(elem =&gt; elem &gt;= 10);
+<pre class="brush: js">new Uint8Array([12, 5, 8, 130, 44]).filter(elem =&gt; elem &gt;= 10);
 // Uint8Array [ 12, 130, 44 ]</pre>
 
 <h2 id="Specifications">Specifications</h2>

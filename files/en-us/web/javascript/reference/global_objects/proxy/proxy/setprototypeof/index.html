@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <var>p</var> = new Proxy(<var>target</var>, {
+<pre class="brush: js">const <var>p</var> = new Proxy(<var>target</var>, {
   setPrototypeOf: function(<var>target</var>, <var>prototype</var>) {
   }
 });
@@ -88,7 +88,7 @@ tags:
   <em>doesn't</em> ordinarily throw in case of failure, such as
   {{jsxref("Reflect.setPrototypeOf()")}}, no exception will be thrown.</p>
 
-<pre class="brush: js notranslate">const handlerReturnsFalse = {
+<pre class="brush: js">const handlerReturnsFalse = {
     setPrototypeOf(target, newProto) {
         return false;
     }
@@ -107,7 +107,7 @@ Reflect.setPrototypeOf(p1, newProto); // returns false
   throw. This approach is best if you want even non-throwing operations to throw on
   failure, or you want to throw a custom exception value.</p>
 
-<pre class="brush: js notranslate">const handlerThrows = {
+<pre class="brush: js">const handlerThrows = {
     setPrototypeOf(target, newProto) {
         throw new Error('custom error');
     }
