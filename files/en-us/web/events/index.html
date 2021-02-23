@@ -8,7 +8,7 @@ tags:
 ---
 <p><a href="/en-US/docs/Web/API/Document_Object_Model/Events">DOM Events</a> are fired to notify code of "interesting changes" that may affect code execution. These can arise from user interactions such as using a mouse or resizing a window, changes in the state of the underlying environment (e.g. low battery or media events from the operating system), and other causes.</p>
 
-<p>Each event is represented by an object that is based on the {{domxref("Event")}} interface, and may have additional custom fields and/or functions used to get additional information about what happened. The documentation for every event has a table (near the top) that includes a link to the associated event interface, and other relevant information. A full list of the different event types is given in <a href="/en-US/docs/Web/API/Event#introduction">Events > Interfaces based on Event</a>.</p>
+<p>Each event is represented by an object that is based on the {{domxref("Event")}} interface, and may have additional custom fields and/or functions to provide information about what happened. The documentation for every event has a table (near the top) that includes a link to the associated event interface, and other relevant information. A full list of the different event types is given in <a href="/en-US/docs/Web/API/Event#introduction">Event > Interfaces based on Event</a>.</p>
 
 <p><span class="seoSummary"></span>This topic provides an index to the main <em>sorts</em> of events you might be interested in (animation, clipboard, workers etc.) along with the main classes that implement those sorts of events. At the end is a flat list of all documented events.</span></p>
 
@@ -20,15 +20,21 @@ tags:
 
 <h2 id="Event_index">Event index</h2>
 
+<style>
+table td, table td * {
+  vertical-align: top;
+}
+</style>
+
 <table class="standard-table">
 	<tr>
 		<th>Event type</th>
-		<th width="50%">Description</th>
+		<th  width="50%">Description</th>
 		<th>Documentation</th>
 	</tr>
 
 	<tr>
-		<td>Animation</td>
+		<td><p>Animation</p></td>
 		<td>
 			<p>Events related to the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animation API</a>.</p>
 			<p>Used to respond to changes in animation status (e.g. when an animation starts or ends).</p>
@@ -189,8 +195,8 @@ tags:
 		<td>Mouse</td>
 		<td>
 			<p>Events related to using a <a href="/en-US/docs/Web/API/MouseEvent">computer mouse</a>.</p>
-			<p>Used to notify when the mouse is clicked, doubleclicked, up and down events, right-click, movement in and out of an element, text selection etc.</p>
-			<p>Pointer events provide a hardware agnostic alternative to mouse events. Drag and Wheel events are derived from mouse events.</p>
+			<p>Used to notify when the mouse is clicked, doubleclicked, up and down events, right-click, movement in and out of an element, text selection, etc.</p>
+			<p>Pointer events provide a hardware-agnostic alternative to mouse events. Drag and Wheel events are derived from mouse events.</p>
 		</td>
 		<td>Mouse events fired on <a href="/en-US/docs/Web/API/Element#mouse_events">Element</a></td>
 	</tr>
@@ -202,7 +208,7 @@ tags:
 		</td>
 		<td>
 			<p>Events fired on <a href="/en-US/docs/Web/API/Window#connection_events">Window</a>.</p> 
-			<p>Events fired on <a href="/en-US/docs/Web/API/NetworkInformation#event_handler">NetworkInformation</a> (<a href="/en-US/docs/Web/API/Network_Information_API">Network Infomrmation API)</a>).</p> 
+			<p>Events fired on <a href="/en-US/docs/Web/API/NetworkInformation#event_handler">NetworkInformation</a> (<a href="/en-US/docs/Web/API/Network_Information_API">Network Information API)</a>).</p> 
 		</td>
 	</tr>
 
@@ -314,14 +320,14 @@ tags:
 		<td>
 			<p>Events related to the <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a>.</p>
 		</td>
-		<td>Events fired on <a href="/en-US/docs/Web/API/SpeechSynthesisUtterance#events">SpeechSynthesisUtterance</a>, .</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/SpeechSynthesisUtterance#events">SpeechSynthesisUtterance</a>.</td>
 	</tr>
 
 	<tr>
 		<td>Workers</td>
 		<td>
-			<p>Events related to the <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a>, <a href="/en-US/docs/Web/API/Broadcast_Channel_API">Broadcast Channel API</a> and <a href="/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging API</a>.</p>
-			<p>Used to respond to new messages and message sending errors. For service workers they also allow notification of other events, including push notifications, users clicking on displayed notifications, that push subscription has been invalidated, deletion of items from the content index, etc.</p>
+			<p>Events related to the <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a>, <a href="/en-US/docs/Web/API/Broadcast_Channel_API">Broadcast Channel API</a>, and <a href="/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging API</a>.</p>
+			<p>Used to respond to new messages and message sending errors. Service workers can also be notified of other events, including push notifications, users clicking on displayed notifications, that push subscription has been invalidated, deletion of items from the content index, etc.</p>
 		</td>
 		<td>Events fired on <a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope#events">ServiceWorkerGlobalScope</a>, <a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope#events">DedicatedWorkerGlobalScope</a>, <a href="/en-US/docs/Web/API/SharedWorkerGlobalScope#events">SharedWorkerGlobalScope</a>, <a href="/en-US/docs/Web/API/WorkerGlobalScope#events">WorkerGlobalScope</a>, <a href="/en-US/docs/Web/API/Worker#events">Worker</a>, <a href="/en-US/docs/Web/API/WorkerGlobalScope#events">WorkerGlobalScope</a>, <a href="/en-US/docs/Web/API/BroadcastChannel#events">BroadcastChannel</a>, <a href="/en-US/docs/Web/API/MessagePort#events">MessagePort</a>.
 		</td>
@@ -343,489 +349,661 @@ tags:
 
 <p>This section lists events that have <em>their own</em> reference pages on MDN. If you are interested in an event that isn't listed here, try searching for its name, topic area, or associated specification on the rest of MDN.</p>
 
-<p>AbortSignal</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/AbortSignal/abort_event">abort event</a></li>
-</ul><p>AudioScheduledSourceNode</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/AudioScheduledSourceNode/ended_event">ended event</a></li>
-</ul><p>AudioTrackList</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/AudioTrackList/addtrack_event">addtrack event</a></li>
-  <li><a href="/en-US/docs/Web/API/AudioTrackList/change_event">change event</a></li>
-  <li><a href="/en-US/docs/Web/API/AudioTrackList/removetrack_event">removetrack event</a></li>
-</ul><p>BroadcastChannel</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/BroadcastChannel/messageerror_event">messageerror event</a></li>
-  <li><a href="/en-US/docs/Web/API/BroadcastChannel/message_event">message event</a></li>
-</ul><p>DedicatedWorkerGlobalScope</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event">messageerror event</a></li>
-  <li><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/message_event">message event</a></li>
-</ul><p>Document</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/Document/animationcancel_event">animationcancel event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/animationend_event">animationend event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/animationiteration_event">animationiteration event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/animationstart_event">animationstart event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/copy_event">copy event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/cut_event">cut event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/DOMContentLoaded_event">DOMContentLoaded event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/dragend_event">dragend event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/dragenter_event">dragenter event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/dragleave_event">dragleave event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/dragover_event">dragover event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/dragstart_event">dragstart event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/drag_event">drag event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/drop_event">drop event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/fullscreenchange_event">fullscreenchange event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/fullscreenerror_event">fullscreenerror event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/gotpointercapture_event">gotpointercapture event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/keydown_event">keydown event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/keypress_event">keypress event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/keyup_event">keyup event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/lostpointercapture_event">lostpointercapture event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/paste_event">paste event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/pointercancel_event">pointercancel event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/pointerdown_event">pointerdown event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/pointerenter_event">pointerenter event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/pointerleave_event">pointerleave event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/pointerlockchange_event">pointerlockchange event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/pointerlockerror_event">pointerlockerror event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/pointermove_event">pointermove event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/pointerout_event">pointerout event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/pointerover_event">pointerover event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/pointerup_event">pointerup event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/readystatechange_event">readystatechange event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/scroll_event">scroll event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/selectionchange_event">selectionchange event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/selectstart_event">selectstart event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/touchcancel_event">touchcancel event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/touchend_event">touchend event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/touchmove_event">touchmove event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/touchstart_event">touchstart event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/transitioncancel_event">transitioncancel event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/transitionend_event">transitionend event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/transitionrun_event">transitionrun event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/transitionstart_event">transitionstart event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/visibilitychange_event">visibilitychange event</a></li>
-  <li><a href="/en-US/docs/Web/API/Document/wheel_event">wheel event</a></li>
-</ul><p>Element</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/Element/afterscriptexecute_event">afterscriptexecute event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/auxclick_event">auxclick event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/beforescriptexecute_event">beforescriptexecute event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/blur_event">blur event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/click_event">click event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/compositionend_event">compositionend event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/compositionstart_event">compositionstart event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/compositionupdate_event">compositionupdate event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/contextmenu_event">contextmenu event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/copy_event">copy event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/cut_event">cut event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/dblclick_event">dblclick event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/DOMActivate_event">DOMActivate event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/DOMMouseScroll_event">DOMMouseScroll event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/error_event">error event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/focusin_event">focusin event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/focusout_event">focusout event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/focus_event">focus event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/fullscreenchange_event">fullscreenchange event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/fullscreenerror_event">fullscreenerror event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/gesturechange_event">gesturechange event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/gestureend_event">gestureend event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/gesturestart_event">gesturestart event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/keydown_event">keydown event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/keypress_event">keypress event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/keyup_event">keyup event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/mousedown_event">mousedown event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/mouseenter_event">mouseenter event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/mouseleave_event">mouseleave event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/mousemove_event">mousemove event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/mouseout_event">mouseout event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/mouseover_event">mouseover event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/mouseup_event">mouseup event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/mousewheel_event">mousewheel event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/msContentZoom_event">msContentZoom event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/MSGestureChange_event">MSGestureChange event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/MSGestureEnd_event">MSGestureEnd event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/MSGestureHold_event">MSGestureHold event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/MSGestureStart_event">MSGestureStart event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/MSGestureTap_event">MSGestureTap event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/MSInertiaStart_event">MSInertiaStart event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/MSManipulationStateChanged_event">MSManipulationStateChanged event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/overflow_event">overflow event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/paste_event">paste event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/scroll_event">scroll event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/select_event">select event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/show_event">show event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/touchcancel_event">touchcancel event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/touchend_event">touchend event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/touchmove_event">touchmove event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/touchstart_event">touchstart event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/underflow_event">underflow event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/webkitmouseforcechanged_event">webkitmouseforcechanged event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/webkitmouseforcedown_event">webkitmouseforcedown event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/webkitmouseforceup_event">webkitmouseforceup event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/webkitmouseforcewillbegin_event">webkitmouseforcewillbegin event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/wheel_event">wheel event</a></li>
-</ul><p>EventSource</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/EventSource/error_event">error event</a></li>
-  <li><a href="/en-US/docs/Web/API/EventSource/message_event">message event</a></li>
-  <li><a href="/en-US/docs/Web/API/EventSource/open_event">open event</a></li>
-</ul><p>FileReader</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/FileReader/abort_event">abort event</a></li>
-  <li><a href="/en-US/docs/Web/API/FileReader/error_event">error event</a></li>
-  <li><a href="/en-US/docs/Web/API/FileReader/loadend_event">loadend event</a></li>
-  <li><a href="/en-US/docs/Web/API/FileReader/loadstart_event">loadstart event</a></li>
-  <li><a href="/en-US/docs/Web/API/FileReader/load_event">load event</a></li>
-  <li><a href="/en-US/docs/Web/API/FileReader/progress_event">progress event</a></li>
-</ul><p>HTMLCanvasElement</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event">webglcontextcreationerror event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event">webglcontextlost event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event">webglcontextrestored event</a></li>
-</ul><p>HTMLDetailsElement</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/HTMLDetailsElement/toggle_event">toggle event</a></li>
-</ul><p>HTMLDialogElement</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/HTMLDialogElement/cancel_event">cancel event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLDialogElement/close_event">close event</a></li>
-</ul><p>HTMLElement</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/HTMLElement/animationcancel_event">animationcancel event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLElement/animationend_event">animationend event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLElement/animationiteration_event">animationiteration event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLElement/animationstart_event">animationstart event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLElement/beforeinput_event">beforeinput event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLElement/change_event">change event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLElement/gotpointercapture_event">gotpointercapture event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLElement/input_event">input event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLElement/lostpointercapture_event">lostpointercapture event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLElement/pointercancel_event">pointercancel event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLElement/pointerdown_event">pointerdown event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLElement/pointerenter_event">pointerenter event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLElement/pointerleave_event">pointerleave event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLElement/pointermove_event">pointermove event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLElement/pointerout_event">pointerout event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLElement/pointerover_event">pointerover event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLElement/pointerup_event">pointerup event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLElement/transitioncancel_event">transitioncancel event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLElement/transitionend_event">transitionend event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLElement/transitionrun_event">transitionrun event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLElement/transitionstart_event">transitionstart event</a></li>
-</ul><p>HTMLFormElement</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/HTMLFormElement/formdata_event">formdata event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLFormElement/reset_event">reset event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLFormElement/submit_event">submit event</a></li>
-</ul><p>HTMLInputElement</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/HTMLInputElement/invalid_event">invalid event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLInputElement/search_event">search event</a></li>
-</ul><p>HTMLMediaElement</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/HTMLMediaElement/abort_event">abort event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLMediaElement/canplaythrough_event">canplaythrough event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLMediaElement/canplay_event">canplay event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLMediaElement/durationchange_event">durationchange event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLMediaElement/emptied_event">emptied event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLMediaElement/ended_event">ended event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLMediaElement/error_event">error event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLMediaElement/loadeddata_event">loadeddata event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLMediaElement/loadedmetadata_event">loadedmetadata event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLMediaElement/loadstart_event">loadstart event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLMediaElement/pause_event">pause event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLMediaElement/playing_event">playing event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLMediaElement/play_event">play event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLMediaElement/progress_event">progress event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLMediaElement/ratechange_event">ratechange event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLMediaElement/seeked_event">seeked event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLMediaElement/seeking_event">seeking event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLMediaElement/stalled_event">stalled event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLMediaElement/suspend_event">suspend event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLMediaElement/timeupdate_event">timeupdate event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLMediaElement/volumechange_event">volumechange event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLMediaElement/waiting_event">waiting event</a></li>
-</ul><p>HTMLSlotElement</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/HTMLSlotElement/slotchange_event">slotchange event</a></li>
-</ul><p>HTMLTrackElement</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/HTMLTrackElement/cuechange_event">cuechange event</a></li>
-</ul><p>HTMLVideoElement</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/HTMLVideoElement/enterpictureinpicture_event">enterpictureinpicture event</a></li>
-  <li><a href="/en-US/docs/Web/API/HTMLVideoElement/leavepictureinpicture_event">leavepictureinpicture event</a></li>
-</ul><p>IDBDatabase</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/IDBDatabase/abort_event">abort event</a></li>
-  <li><a href="/en-US/docs/Web/API/IDBDatabase/close_event">close event</a></li>
-  <li><a href="/en-US/docs/Web/API/IDBDatabase/error_event">error event</a></li>
-  <li><a href="/en-US/docs/Web/API/IDBDatabase/versionchange_event">versionchange event</a></li>
-</ul><p>IDBOpenDBRequest</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event">blocked event</a></li>
-  <li><a href="/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event">upgradeneeded event</a></li>
-</ul><p>IDBRequest</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/IDBRequest/error_event">error event</a></li>
-  <li><a href="/en-US/docs/Web/API/IDBRequest/success_event">success event</a></li>
-</ul><p>IDBTransaction</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/IDBTransaction/abort_event">abort event</a></li>
-  <li><a href="/en-US/docs/Web/API/IDBTransaction/complete_event">complete event</a></li>
-  <li><a href="/en-US/docs/Web/API/IDBTransaction/error_event">error event</a></li>
-</ul><p>MediaDevices</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/MediaDevices/devicechange_event">devicechange event</a></li>
-</ul><p>MediaRecorder</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/MediaRecorder/error_event">error event</a></li>
-</ul><p>MediaStream</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/MediaStream/addtrack_event">addtrack event</a></li>
-  <li><a href="/en-US/docs/Web/API/MediaStream/removetrack_event">removetrack event</a></li>
-</ul><p>MediaStreamTrack</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/MediaStreamTrack/ended_event">ended event</a></li>
-  <li><a href="/en-US/docs/Web/API/MediaStreamTrack/mute_event">mute event</a></li>
-  <li><a href="/en-US/docs/Web/API/MediaStreamTrack/unmute_event">unmute event</a></li>
-</ul><p>MessagePort</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/MessagePort/messageerror_event">messageerror event</a></li>
-  <li><a href="/en-US/docs/Web/API/MessagePort/message_event">message event</a></li>
-</ul><p>OfflineAudioContext</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/OfflineAudioContext/complete_event">complete event</a></li>
-</ul><p>PaymentRequest</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/PaymentRequest/merchantvalidation_event">merchantvalidation event</a></li>
-  <li><a href="/en-US/docs/Web/API/PaymentRequest/paymentmethodchange_event">paymentmethodchange event</a></li>
-  <li><a href="/en-US/docs/Web/API/PaymentRequest/shippingaddresschange_event">shippingaddresschange event</a></li>
-  <li><a href="/en-US/docs/Web/API/PaymentRequest/shippingoptionchange_event">shippingoptionchange event</a></li>
-</ul><p>PaymentResponse</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/PaymentResponse/payerdetailchange_event">payerdetailchange event</a></li>
-</ul><p>Performance</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event">resourcetimingbufferfull event</a></li>
-</ul><p>PictureInPictureWindow</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/PictureInPictureWindow/resize_event">resize event</a></li>
-</ul><p>RTCDataChannel</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/RTCDataChannel/bufferedamountlow_event">bufferedamountlow event</a></li>
-  <li><a href="/en-US/docs/Web/API/RTCDataChannel/close_event">close event</a></li>
-  <li><a href="/en-US/docs/Web/API/RTCDataChannel/closing_event">closing event</a></li>
-  <li><a href="/en-US/docs/Web/API/RTCDataChannel/error_event">error event</a></li>
-  <li><a href="/en-US/docs/Web/API/RTCDataChannel/message_event">message event</a></li>
-  <li><a href="/en-US/docs/Web/API/RTCDataChannel/open_event">open event</a></li>
-</ul><p>RTCDtlsTransport</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/RTCDtlsTransport/error_event">error event</a></li>
-</ul><p>RTCDTMFSender</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/RTCDTMFSender/tonechange_event">tonechange event</a></li>
-</ul><p>RTCIceTransport</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/RTCIceTransport/gatheringstatechange_event">gatheringstatechange event</a></li>
-  <li><a href="/en-US/docs/Web/API/RTCIceTransport/selectedcandidatepairchange_event">selectedcandidatepairchange event</a></li>
-  <li><a href="/en-US/docs/Web/API/RTCIceTransport/statechange_event">statechange event</a></li>
-</ul><p>RTCPeerConnection</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/RTCPeerConnection/addstream_event">addstream event</a></li>
-  <li><a href="/en-US/docs/Web/API/RTCPeerConnection/connectionstatechange_event">connectionstatechange event</a></li>
-  <li><a href="/en-US/docs/Web/API/RTCPeerConnection/datachannel_event">datachannel event</a></li>
-  <li><a href="/en-US/docs/Web/API/RTCPeerConnection/icecandidateerror_event">icecandidateerror event</a></li>
-  <li><a href="/en-US/docs/Web/API/RTCPeerConnection/icecandidate_event">icecandidate event</a></li>
-  <li><a href="/en-US/docs/Web/API/RTCPeerConnection/iceconnectionstatechange_event">iceconnectionstatechange event</a></li>
-  <li><a href="/en-US/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event">icegatheringstatechange event</a></li>
-  <li><a href="/en-US/docs/Web/API/RTCPeerConnection/identityresult_event">identityresult event</a></li>
-  <li><a href="/en-US/docs/Web/API/RTCPeerConnection/idpassertionerror_event">idpassertionerror event</a></li>
-  <li><a href="/en-US/docs/Web/API/RTCPeerConnection/idpvalidationerror_event">idpvalidationerror event</a></li>
-  <li><a href="/en-US/docs/Web/API/RTCPeerConnection/negotiationneeded_event">negotiationneeded event</a></li>
-  <li><a href="/en-US/docs/Web/API/RTCPeerConnection/peeridentity_event">peeridentity event</a></li>
-  <li><a href="/en-US/docs/Web/API/RTCPeerConnection/removestream_event">removestream event</a></li>
-  <li><a href="/en-US/docs/Web/API/RTCPeerConnection/signalingstatechange_event">signalingstatechange event</a></li>
-  <li><a href="/en-US/docs/Web/API/RTCPeerConnection/track_event">track event</a></li>
-</ul><p>ScriptProcessorNode</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/ScriptProcessorNode/audioprocess_event">audioprocess event</a></li>
-</ul><p>ServiceWorkerContainer</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/ServiceWorkerContainer/message_event">message event</a></li>
-</ul><p>ServiceWorkerGlobalScope</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event">activate event</a></li>
-  <li><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/contentdelete_event">contentdelete event</a></li>
-  <li><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event">install event</a></li>
-  <li><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/message_event">message event</a></li>
-  <li><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/notificationclick_event">notificationclick event</a></li>
-  <li><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event">pushsubscriptionchange event</a></li>
-  <li><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/push_event">push event</a></li>
-</ul><p>SharedWorkerGlobalScope</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/SharedWorkerGlobalScope/connect_event">connect event</a></li>
-</ul><p>SpeechRecognition</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/SpeechRecognition/audioend_event">audioend event</a></li>
-  <li><a href="/en-US/docs/Web/API/SpeechRecognition/audiostart_event">audiostart event</a></li>
-  <li><a href="/en-US/docs/Web/API/SpeechRecognition/end_event">end event</a></li>
-  <li><a href="/en-US/docs/Web/API/SpeechRecognition/error_event">error event</a></li>
-  <li><a href="/en-US/docs/Web/API/SpeechRecognition/nomatch_event">nomatch event</a></li>
-  <li><a href="/en-US/docs/Web/API/SpeechRecognition/result_event">result event</a></li>
-  <li><a href="/en-US/docs/Web/API/SpeechRecognition/soundend_event">soundend event</a></li>
-  <li><a href="/en-US/docs/Web/API/SpeechRecognition/soundstart_event">soundstart event</a></li>
-  <li><a href="/en-US/docs/Web/API/SpeechRecognition/speechend_event">speechend event</a></li>
-  <li><a href="/en-US/docs/Web/API/SpeechRecognition/speechstart_event">speechstart event</a></li>
-  <li><a href="/en-US/docs/Web/API/SpeechRecognition/start_event">start event</a></li>
-</ul><p>SpeechSynthesis</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/SpeechSynthesis/voiceschanged_event">voiceschanged event</a></li>
-</ul><p>SpeechSynthesisUtterance</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/boundary_event">boundary event</a></li>
-  <li><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/end_event">end event</a></li>
-  <li><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/error_event">error event</a></li>
-  <li><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/mark_event">mark event</a></li>
-  <li><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/pause_event">pause event</a></li>
-  <li><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/resume_event">resume event</a></li>
-  <li><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/start_event">start event</a></li>
-</ul><p>SVGAnimationElement</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/SVGAnimationElement/beginEvent_event">beginEvent event</a></li>
-  <li><a href="/en-US/docs/Web/API/SVGAnimationElement/endEvent_event">endEvent event</a></li>
-  <li><a href="/en-US/docs/Web/API/SVGAnimationElement/repeatEvent_event">repeatEvent event</a></li>
-</ul><p>SVGElement</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/SVGElement/abort_event">abort event</a></li>
-  <li><a href="/en-US/docs/Web/API/SVGElement/error_event">error event</a></li>
-  <li><a href="/en-US/docs/Web/API/SVGElement/load_event">load event</a></li>
-  <li><a href="/en-US/docs/Web/API/SVGElement/resize_event">resize event</a></li>
-  <li><a href="/en-US/docs/Web/API/SVGElement/scroll_event">scroll event</a></li>
-  <li><a href="/en-US/docs/Web/API/SVGElement/unload_event">unload event</a></li>
-</ul><p>SVGGraphicsElement</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/SVGGraphicsElement/copy_event">copy event</a></li>
-  <li><a href="/en-US/docs/Web/API/SVGGraphicsElement/cut_event">cut event</a></li>
-  <li><a href="/en-US/docs/Web/API/SVGGraphicsElement/paste_event">paste event</a></li>
-</ul><p>TextTrack</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/TextTrack/cuechange_event">cuechange event</a></li>
-</ul><p>TextTrackList</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/TextTrackList/addtrack_event">addtrack event</a></li>
-  <li><a href="/en-US/docs/Web/API/TextTrackList/change_event">change event</a></li>
-  <li><a href="/en-US/docs/Web/API/TextTrackList/removeTrack_event">removeTrack event</a></li>
-</ul><p>VideoTrackList</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/VideoTrackList/addtrack_event">addtrack event</a></li>
-  <li><a href="/en-US/docs/Web/API/VideoTrackList/change_event">change event</a></li>
-  <li><a href="/en-US/docs/Web/API/VideoTrackList/removetrack_event">removetrack event</a></li>
-</ul><p>VisualViewport</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/VisualViewport/resize_event">resize event</a></li>
-  <li><a href="/en-US/docs/Web/API/VisualViewport/scroll_event">scroll event</a></li>
-</ul><p>WebSocket</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebSocket/close_event">close event</a></li>
-  <li><a href="/en-US/docs/Web/API/WebSocket/error_event">error event</a></li>
-  <li><a href="/en-US/docs/Web/API/WebSocket/message_event">message event</a></li>
-  <li><a href="/en-US/docs/Web/API/WebSocket/open_event">open event</a></li>
-</ul><p>Window</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/Window/afterprint_event">afterprint event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/animationcancel_event">animationcancel event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/animationend_event">animationend event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/animationiteration_event">animationiteration event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/animationstart_event">animationstart event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/appinstalled_event">appinstalled event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/beforeprint_event">beforeprint event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/beforeunload_event">beforeunload event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/blur_event">blur event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/copy_event">copy event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/cut_event">cut event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/devicemotion_event">devicemotion event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/deviceorientation_event">deviceorientation event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/DOMContentLoaded_event">DOMContentLoaded event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/error_event">error event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/focus_event">focus event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/gamepadconnected_event">gamepadconnected event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/gamepaddisconnected_event">gamepaddisconnected event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/hashchange_event">hashchange event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/languagechange_event">languagechange event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/load_event">load event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/messageerror_event">messageerror event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/message_event">message event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/offline_event">offline event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/online_event">online event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/orientationchange_event">orientationchange event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/pagehide_event">pagehide event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/pageshow_event">pageshow event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/paste_event">paste event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/popstate_event">popstate event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/rejectionhandled_event">rejectionhandled event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/resize_event">resize event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/storage_event">storage event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/transitioncancel_event">transitioncancel event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/transitionend_event">transitionend event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/transitionrun_event">transitionrun event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/transitionstart_event">transitionstart event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/unhandledrejection_event">unhandledrejection event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/unload_event">unload event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/vrdisplayactivate_event">vrdisplayactivate event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/vrdisplayblur_event">vrdisplayblur event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/vrdisplayconnect_event">vrdisplayconnect event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/vrdisplaydeactivate_event">vrdisplaydeactivate event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/vrdisplaydisconnect_event">vrdisplaydisconnect event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/vrdisplayfocus_event">vrdisplayfocus event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/vrdisplaypointerrestricted_event">vrdisplaypointerrestricted event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/vrdisplaypointerunrestricted_event">vrdisplaypointerunrestricted event</a></li>
-  <li><a href="/en-US/docs/Web/API/Window/vrdisplaypresentchange_event">vrdisplaypresentchange event</a></li>
-</ul><p>Worker</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/Worker/messageerror_event">messageerror event</a></li>
-  <li><a href="/en-US/docs/Web/API/Worker/message_event">message event</a></li>
-</ul><p>WorkerGlobalScope</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/WorkerGlobalScope/languagechange_event">languagechange event</a></li>
-</ul><p>XMLHttpRequest</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/XMLHttpRequest/abort_event">abort event</a></li>
-  <li><a href="/en-US/docs/Web/API/XMLHttpRequest/error_event">error event</a></li>
-  <li><a href="/en-US/docs/Web/API/XMLHttpRequest/loadend_event">loadend event</a></li>
-  <li><a href="/en-US/docs/Web/API/XMLHttpRequest/loadstart_event">loadstart event</a></li>
-  <li><a href="/en-US/docs/Web/API/XMLHttpRequest/load_event">load event</a></li>
-  <li><a href="/en-US/docs/Web/API/XMLHttpRequest/progress_event">progress event</a></li>
-  <li><a href="/en-US/docs/Web/API/XMLHttpRequest/timeout_event">timeout event</a></li>
-</ul><p>XRReferenceSpace</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/XRReferenceSpace/reset_event">reset event</a></li>
-</ul><p>XRSession</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/XRSession/end_event">end event</a></li>
-  <li><a href="/en-US/docs/Web/API/XRSession/inputsourceschange_event">inputsourceschange event</a></li>
-  <li><a href="/en-US/docs/Web/API/XRSession/selectend_event">selectend event</a></li>
-  <li><a href="/en-US/docs/Web/API/XRSession/selectstart_event">selectstart event</a></li>
-  <li><a href="/en-US/docs/Web/API/XRSession/select_event">select event</a></li>
-  <li><a href="/en-US/docs/Web/API/XRSession/squeezeend_event">squeezeend event</a></li>
-  <li><a href="/en-US/docs/Web/API/XRSession/squeezestart_event">squeezestart event</a></li>
-  <li><a href="/en-US/docs/Web/API/XRSession/squeeze_event">squeeze event</a></li>
-  <li><a href="/en-US/docs/Web/API/XRSession/visibilitychange_event">visibilitychange event</a></li>
-</ul><p>XRSystem</p>
-<ul>
-  <li><a href="/en-US/docs/Web/API/XRSystem/devicechange_event">devicechange event</a></li>
-</ul>
-
-
-<h2 id="See_also">See also</h2>
-
-<ul>
-	<li>{{DOMxRef("Event")}} (also contains information about <a href="/en-US/docs/Web/API/Event#introduction">interfaces based on <code>Event</code></a>).</li>
-	<li><a href="/en-US/docs/Web/Guide/Events">Event developer guide</a></li>
-	<li><a href="/en-US/docs/Web/API/Document_Object_Model/Events">Events and the DOM</a></li>
-</ul>
+<dl>
+  <dt>AbortSignal</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/abortsignal/abort_event">abort event</a></li>
+    </ul>
+  </dd>
+  <dt>AudioScheduledSourceNode</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/audioscheduledsourcenode/ended_event">ended event</a></li>
+    </ul>
+  </dd>
+  <dt>AudioTrackList</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/audiotracklist/addtrack_event">addtrack event</a></li>
+      <li><a href="/en-US/docs/web/api/audiotracklist/change_event">change event</a></li>
+      <li><a href="/en-US/docs/web/api/audiotracklist/removetrack_event">removetrack event</a></li>
+    </ul>
+  </dd>
+  <dt>BroadcastChannel</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/broadcastchannel/messageerror_event">messageerror event</a></li>
+      <li><a href="/en-US/docs/web/api/broadcastchannel/message_event">message event</a></li>
+    </ul>
+  </dd>
+  <dt>DedicatedWorkerGlobalScope</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/dedicatedworkerglobalscope/messageerror_event">messageerror event</a></li>
+      <li><a href="/en-US/docs/web/api/dedicatedworkerglobalscope/message_event">message event</a></li>
+    </ul>
+  </dd>
+  <dt>Document</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/document/animationcancel_event">animationcancel event</a></li>
+      <li><a href="/en-US/docs/web/api/document/animationend_event">animationend event</a></li>
+      <li><a href="/en-US/docs/web/api/document/animationiteration_event">animationiteration event</a></li>
+      <li><a href="/en-US/docs/web/api/document/animationstart_event">animationstart event</a></li>
+      <li><a href="/en-US/docs/web/api/document/copy_event">copy event</a></li>
+      <li><a href="/en-US/docs/web/api/document/cut_event">cut event</a></li>
+      <li><a href="/en-US/docs/web/api/document/domcontentloaded_event">DOMContentLoaded event</a></li>
+      <li><a href="/en-US/docs/web/api/document/dragend_event">dragend event</a></li>
+      <li><a href="/en-US/docs/web/api/document/dragenter_event">dragenter event</a></li>
+      <li><a href="/en-US/docs/web/api/document/dragleave_event">dragleave event</a></li>
+      <li><a href="/en-US/docs/web/api/document/dragover_event">dragover event</a></li>
+      <li><a href="/en-US/docs/web/api/document/dragstart_event">dragstart event</a></li>
+      <li><a href="/en-US/docs/web/api/document/drag_event">drag event</a></li>
+      <li><a href="/en-US/docs/web/api/document/drop_event">drop event</a></li>
+      <li><a href="/en-US/docs/web/api/document/fullscreenchange_event">fullscreenchange event</a></li>
+      <li><a href="/en-US/docs/web/api/document/fullscreenerror_event">fullscreenerror event</a></li>
+      <li><a href="/en-US/docs/web/api/document/gotpointercapture_event">gotpointercapture event</a></li>
+      <li><a href="/en-US/docs/web/api/document/keydown_event">keydown event</a></li>
+      <li><a href="/en-US/docs/web/api/document/keypress_event">keypress event</a></li>
+      <li><a href="/en-US/docs/web/api/document/keyup_event">keyup event</a></li>
+      <li><a href="/en-US/docs/web/api/document/lostpointercapture_event">lostpointercapture event</a></li>
+      <li><a href="/en-US/docs/web/api/document/paste_event">paste event</a></li>
+      <li><a href="/en-US/docs/web/api/document/pointercancel_event">pointercancel event</a></li>
+      <li><a href="/en-US/docs/web/api/document/pointerdown_event">pointerdown event</a></li>
+      <li><a href="/en-US/docs/web/api/document/pointerenter_event">pointerenter event</a></li>
+      <li><a href="/en-US/docs/web/api/document/pointerleave_event">pointerleave event</a></li>
+      <li><a href="/en-US/docs/web/api/document/pointerlockchange_event">pointerlockchange event</a></li>
+      <li><a href="/en-US/docs/web/api/document/pointerlockerror_event">pointerlockerror event</a></li>
+      <li><a href="/en-US/docs/web/api/document/pointermove_event">pointermove event</a></li>
+      <li><a href="/en-US/docs/web/api/document/pointerout_event">pointerout event</a></li>
+      <li><a href="/en-US/docs/web/api/document/pointerover_event">pointerover event</a></li>
+      <li><a href="/en-US/docs/web/api/document/pointerup_event">pointerup event</a></li>
+      <li><a href="/en-US/docs/web/api/document/readystatechange_event">readystatechange event</a></li>
+      <li><a href="/en-US/docs/web/api/document/scroll_event">scroll event</a></li>
+      <li><a href="/en-US/docs/web/api/document/selectionchange_event">selectionchange event</a></li>
+      <li><a href="/en-US/docs/web/api/document/selectstart_event">selectstart event</a></li>
+      <li><a href="/en-US/docs/web/api/document/touchcancel_event">touchcancel event</a></li>
+      <li><a href="/en-US/docs/web/api/document/touchend_event">touchend event</a></li>
+      <li><a href="/en-US/docs/web/api/document/touchmove_event">touchmove event</a></li>
+      <li><a href="/en-US/docs/web/api/document/touchstart_event">touchstart event</a></li>
+      <li><a href="/en-US/docs/web/api/document/transitioncancel_event">transitioncancel event</a></li>
+      <li><a href="/en-US/docs/web/api/document/transitionend_event">transitionend event</a></li>
+      <li><a href="/en-US/docs/web/api/document/transitionrun_event">transitionrun event</a></li>
+      <li><a href="/en-US/docs/web/api/document/transitionstart_event">transitionstart event</a></li>
+      <li><a href="/en-US/docs/web/api/document/visibilitychange_event">visibilitychange event</a></li>
+      <li><a href="/en-US/docs/web/api/document/wheel_event">wheel event</a></li>
+    </ul>
+  </dd>
+  <dt>Element</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/element/afterscriptexecute_event">afterscriptexecute event</a></li>
+      <li><a href="/en-US/docs/web/api/element/auxclick_event">auxclick event</a></li>
+      <li><a href="/en-US/docs/web/api/element/beforescriptexecute_event">beforescriptexecute event</a></li>
+      <li><a href="/en-US/docs/web/api/element/blur_event">blur event</a></li>
+      <li><a href="/en-US/docs/web/api/element/click_event">click event</a></li>
+      <li><a href="/en-US/docs/web/api/element/compositionend_event">compositionend event</a></li>
+      <li><a href="/en-US/docs/web/api/element/compositionstart_event">compositionstart event</a></li>
+      <li><a href="/en-US/docs/web/api/element/compositionupdate_event">compositionupdate event</a></li>
+      <li><a href="/en-US/docs/web/api/element/contextmenu_event">contextmenu event</a></li>
+      <li><a href="/en-US/docs/web/api/element/copy_event">copy event</a></li>
+      <li><a href="/en-US/docs/web/api/element/cut_event">cut event</a></li>
+      <li><a href="/en-US/docs/web/api/element/dblclick_event">dblclick event</a></li>
+      <li><a href="/en-US/docs/web/api/element/domactivate_event">DOMActivate event</a></li>
+      <li><a href="/en-US/docs/web/api/element/dommousescroll_event">DOMMouseScroll event</a></li>
+      <li><a href="/en-US/docs/web/api/element/error_event">error event</a></li>
+      <li><a href="/en-US/docs/web/api/element/focusin_event">focusin event</a></li>
+      <li><a href="/en-US/docs/web/api/element/focusout_event">focusout event</a></li>
+      <li><a href="/en-US/docs/web/api/element/focus_event">focus event</a></li>
+      <li><a href="/en-US/docs/web/api/element/fullscreenchange_event">fullscreenchange event</a></li>
+      <li><a href="/en-US/docs/web/api/element/fullscreenerror_event">fullscreenerror event</a></li>
+      <li><a href="/en-US/docs/web/api/element/gesturechange_event">gesturechange event</a></li>
+      <li><a href="/en-US/docs/web/api/element/gestureend_event">gestureend event</a></li>
+      <li><a href="/en-US/docs/web/api/element/gesturestart_event">gesturestart event</a></li>
+      <li><a href="/en-US/docs/web/api/element/keydown_event">keydown event</a></li>
+      <li><a href="/en-US/docs/web/api/element/keypress_event">keypress event</a></li>
+      <li><a href="/en-US/docs/web/api/element/keyup_event">keyup event</a></li>
+      <li><a href="/en-US/docs/web/api/element/mousedown_event">mousedown event</a></li>
+      <li><a href="/en-US/docs/web/api/element/mouseenter_event">mouseenter event</a></li>
+      <li><a href="/en-US/docs/web/api/element/mouseleave_event">mouseleave event</a></li>
+      <li><a href="/en-US/docs/web/api/element/mousemove_event">mousemove event</a></li>
+      <li><a href="/en-US/docs/web/api/element/mouseout_event">mouseout event</a></li>
+      <li><a href="/en-US/docs/web/api/element/mouseover_event">mouseover event</a></li>
+      <li><a href="/en-US/docs/web/api/element/mouseup_event">mouseup event</a></li>
+      <li><a href="/en-US/docs/web/api/element/mousewheel_event">mousewheel event</a></li>
+      <li><a href="/en-US/docs/web/api/element/mscontentzoom_event">msContentZoom event</a></li>
+      <li><a href="/en-US/docs/web/api/element/msgesturechange_event">MSGestureChange event</a></li>
+      <li><a href="/en-US/docs/web/api/element/msgestureend_event">MSGestureEnd event</a></li>
+      <li><a href="/en-US/docs/web/api/element/msgesturehold_event">MSGestureHold event</a></li>
+      <li><a href="/en-US/docs/web/api/element/msgesturestart_event">MSGestureStart event</a></li>
+      <li><a href="/en-US/docs/web/api/element/msgesturetap_event">MSGestureTap event</a></li>
+      <li><a href="/en-US/docs/web/api/element/msinertiastart_event">MSInertiaStart event</a></li>
+      <li><a href="/en-US/docs/web/api/element/msmanipulationstatechanged_event">MSManipulationStateChanged event</a></li>
+      <li><a href="/en-US/docs/web/api/element/overflow_event">overflow event</a></li>
+      <li><a href="/en-US/docs/web/api/element/paste_event">paste event</a></li>
+      <li><a href="/en-US/docs/web/api/element/scroll_event">scroll event</a></li>
+      <li><a href="/en-US/docs/web/api/element/select_event">select event</a></li>
+      <li><a href="/en-US/docs/web/api/element/show_event">show event</a></li>
+      <li><a href="/en-US/docs/web/api/element/touchcancel_event">touchcancel event</a></li>
+      <li><a href="/en-US/docs/web/api/element/touchend_event">touchend event</a></li>
+      <li><a href="/en-US/docs/web/api/element/touchmove_event">touchmove event</a></li>
+      <li><a href="/en-US/docs/web/api/element/touchstart_event">touchstart event</a></li>
+      <li><a href="/en-US/docs/web/api/element/underflow_event">underflow event</a></li>
+      <li><a href="/en-US/docs/web/api/element/webkitmouseforcechanged_event">webkitmouseforcechanged event</a></li>
+      <li><a href="/en-US/docs/web/api/element/webkitmouseforcedown_event">webkitmouseforcedown event</a></li>
+      <li><a href="/en-US/docs/web/api/element/webkitmouseforceup_event">webkitmouseforceup event</a></li>
+      <li><a href="/en-US/docs/web/api/element/webkitmouseforcewillbegin_event">webkitmouseforcewillbegin event</a></li>
+      <li><a href="/en-US/docs/web/api/element/wheel_event">wheel event</a></li>
+    </ul>
+  </dd>
+  <dt>EventSource</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/eventsource/error_event">error event</a></li>
+      <li><a href="/en-US/docs/web/api/eventsource/message_event">message event</a></li>
+      <li><a href="/en-US/docs/web/api/eventsource/open_event">open event</a></li>
+    </ul>
+  </dd>
+  <dt>FileReader</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/filereader/abort_event">abort event</a></li>
+      <li><a href="/en-US/docs/web/api/filereader/error_event">error event</a></li>
+      <li><a href="/en-US/docs/web/api/filereader/loadend_event">loadend event</a></li>
+      <li><a href="/en-US/docs/web/api/filereader/loadstart_event">loadstart event</a></li>
+      <li><a href="/en-US/docs/web/api/filereader/load_event">load event</a></li>
+      <li><a href="/en-US/docs/web/api/filereader/progress_event">progress event</a></li>
+    </ul>
+  </dd>
+  <dt>HTMLCanvasElement</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/htmlcanvaselement/webglcontextcreationerror_event">webglcontextcreationerror event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlcanvaselement/webglcontextlost_event">webglcontextlost event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlcanvaselement/webglcontextrestored_event">webglcontextrestored event</a></li>
+    </ul>
+  </dd>
+  <dt>HTMLDetailsElement</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/htmldetailselement/toggle_event">toggle event</a></li>
+    </ul>
+  </dd>
+  <dt>HTMLDialogElement</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/htmldialogelement/cancel_event">cancel event</a></li>
+      <li><a href="/en-US/docs/web/api/htmldialogelement/close_event">close event</a></li>
+    </ul>
+  </dd>
+  <dt>HTMLElement</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/htmlelement/animationcancel_event">animationcancel event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlelement/animationend_event">animationend event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlelement/animationiteration_event">animationiteration event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlelement/animationstart_event">animationstart event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlelement/beforeinput_event">beforeinput event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlelement/change_event">change event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlelement/gotpointercapture_event">gotpointercapture event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlelement/input_event">input event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlelement/lostpointercapture_event">lostpointercapture event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlelement/pointercancel_event">pointercancel event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlelement/pointerdown_event">pointerdown event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlelement/pointerenter_event">pointerenter event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlelement/pointerleave_event">pointerleave event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlelement/pointermove_event">pointermove event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlelement/pointerout_event">pointerout event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlelement/pointerover_event">pointerover event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlelement/pointerup_event">pointerup event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlelement/transitioncancel_event">transitioncancel event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlelement/transitionend_event">transitionend event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlelement/transitionrun_event">transitionrun event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlelement/transitionstart_event">transitionstart event</a></li>
+    </ul>
+  </dd>
+  <dt>HTMLFormElement</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/htmlformelement/formdata_event">formdata event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlformelement/reset_event">reset event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlformelement/submit_event">submit event</a></li>
+    </ul>
+  </dd>
+  <dt>HTMLInputElement</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/htmlinputelement/invalid_event">invalid event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlinputelement/search_event">search event</a></li>
+    </ul>
+  </dd>
+  <dt>HTMLMediaElement</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/htmlmediaelement/abort_event">abort event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlmediaelement/canplaythrough_event">canplaythrough event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlmediaelement/canplay_event">canplay event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlmediaelement/durationchange_event">durationchange event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlmediaelement/emptied_event">emptied event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlmediaelement/ended_event">ended event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlmediaelement/error_event">error event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlmediaelement/loadeddata_event">loadeddata event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlmediaelement/loadedmetadata_event">loadedmetadata event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlmediaelement/loadstart_event">loadstart event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlmediaelement/pause_event">pause event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlmediaelement/playing_event">playing event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlmediaelement/play_event">play event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlmediaelement/progress_event">progress event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlmediaelement/ratechange_event">ratechange event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlmediaelement/seeked_event">seeked event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlmediaelement/seeking_event">seeking event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlmediaelement/stalled_event">stalled event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlmediaelement/suspend_event">suspend event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlmediaelement/timeupdate_event">timeupdate event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlmediaelement/volumechange_event">volumechange event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlmediaelement/waiting_event">waiting event</a></li>
+    </ul>
+  </dd>
+  <dt>HTMLSlotElement</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/htmlslotelement/slotchange_event">slotchange event</a></li>
+    </ul>
+  </dd>
+  <dt>HTMLTrackElement</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/htmltrackelement/cuechange_event">cuechange event</a></li>
+    </ul>
+  </dd>
+  <dt>HTMLVideoElement</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/htmlvideoelement/enterpictureinpicture_event">enterpictureinpicture event</a></li>
+      <li><a href="/en-US/docs/web/api/htmlvideoelement/leavepictureinpicture_event">leavepictureinpicture event</a></li>
+    </ul>
+  </dd>
+  <dt>IDBDatabase</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/idbdatabase/abort_event">abort event</a></li>
+      <li><a href="/en-US/docs/web/api/idbdatabase/close_event">close event</a></li>
+      <li><a href="/en-US/docs/web/api/idbdatabase/error_event">error event</a></li>
+      <li><a href="/en-US/docs/web/api/idbdatabase/versionchange_event">versionchange event</a></li>
+    </ul>
+  </dd>
+  <dt>IDBOpenDBRequest</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/idbopendbrequest/blocked_event">blocked event</a></li>
+      <li><a href="/en-US/docs/web/api/idbopendbrequest/upgradeneeded_event">upgradeneeded event</a></li>
+    </ul>
+  </dd>
+  <dt>IDBRequest</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/idbrequest/error_event">error event</a></li>
+      <li><a href="/en-US/docs/web/api/idbrequest/success_event">success event</a></li>
+    </ul>
+  </dd>
+  <dt>IDBTransaction</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/idbtransaction/abort_event">abort event</a></li>
+      <li><a href="/en-US/docs/web/api/idbtransaction/complete_event">complete event</a></li>
+      <li><a href="/en-US/docs/web/api/idbtransaction/error_event">error event</a></li>
+    </ul>
+  </dd>
+  <dt>MediaDevices</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/mediadevices/devicechange_event">devicechange event</a></li>
+    </ul>
+  </dd>
+  <dt>MediaRecorder</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/mediarecorder/error_event">error event</a></li>
+    </ul>
+  </dd>
+  <dt>MediaStream</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/mediastream/addtrack_event">addtrack event</a></li>
+      <li><a href="/en-US/docs/web/api/mediastream/removetrack_event">removetrack event</a></li>
+    </ul>
+  </dd>
+  <dt>MediaStreamTrack</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/mediastreamtrack/ended_event">ended event</a></li>
+      <li><a href="/en-US/docs/web/api/mediastreamtrack/mute_event">mute event</a></li>
+      <li><a href="/en-US/docs/web/api/mediastreamtrack/unmute_event">unmute event</a></li>
+    </ul>
+  </dd>
+  <dt>MessagePort</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/messageport/messageerror_event">messageerror event</a></li>
+      <li><a href="/en-US/docs/web/api/messageport/message_event">message event</a></li>
+    </ul>
+  </dd>
+  <dt>OfflineAudioContext</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/offlineaudiocontext/complete_event">complete event</a></li>
+    </ul>
+  </dd>
+  <dt>PaymentRequest</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/paymentrequest/merchantvalidation_event">merchantvalidation event</a></li>
+      <li><a href="/en-US/docs/web/api/paymentrequest/paymentmethodchange_event">paymentmethodchange event</a></li>
+      <li><a href="/en-US/docs/web/api/paymentrequest/shippingaddresschange_event">shippingaddresschange event</a></li>
+      <li><a href="/en-US/docs/web/api/paymentrequest/shippingoptionchange_event">shippingoptionchange event</a></li>
+    </ul>
+  </dd>
+  <dt>PaymentResponse</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/paymentresponse/payerdetailchange_event">payerdetailchange event</a></li>
+    </ul>
+  </dd>
+  <dt>Performance</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/performance/resourcetimingbufferfull_event">resourcetimingbufferfull event</a></li>
+    </ul>
+  </dd>
+  <dt>PictureInPictureWindow</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/pictureinpicturewindow/resize_event">resize event</a></li>
+    </ul>
+  </dd>
+  <dt>RTCDataChannel</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/rtcdatachannel/bufferedamountlow_event">bufferedamountlow event</a></li>
+      <li><a href="/en-US/docs/web/api/rtcdatachannel/close_event">close event</a></li>
+      <li><a href="/en-US/docs/web/api/rtcdatachannel/closing_event">closing event</a></li>
+      <li><a href="/en-US/docs/web/api/rtcdatachannel/error_event">error event</a></li>
+      <li><a href="/en-US/docs/web/api/rtcdatachannel/message_event">message event</a></li>
+      <li><a href="/en-US/docs/web/api/rtcdatachannel/open_event">open event</a></li>
+    </ul>
+  </dd>
+  <dt>RTCDtlsTransport</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/rtcdtlstransport/error_event">error event</a></li>
+    </ul>
+  </dd>
+  <dt>RTCDTMFSender</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/rtcdtmfsender/tonechange_event">tonechange event</a></li>
+    </ul>
+  </dd>
+  <dt>RTCIceTransport</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/rtcicetransport/gatheringstatechange_event">gatheringstatechange event</a></li>
+      <li><a href="/en-US/docs/web/api/rtcicetransport/selectedcandidatepairchange_event">selectedcandidatepairchange event</a></li>
+      <li><a href="/en-US/docs/web/api/rtcicetransport/statechange_event">statechange event</a></li>
+    </ul>
+  </dd>
+  <dt>RTCPeerConnection</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/rtcpeerconnection/addstream_event">addstream event</a></li>
+      <li><a href="/en-US/docs/web/api/rtcpeerconnection/connectionstatechange_event">connectionstatechange event</a></li>
+      <li><a href="/en-US/docs/web/api/rtcpeerconnection/datachannel_event">datachannel event</a></li>
+      <li><a href="/en-US/docs/web/api/rtcpeerconnection/icecandidateerror_event">icecandidateerror event</a></li>
+      <li><a href="/en-US/docs/web/api/rtcpeerconnection/icecandidate_event">icecandidate event</a></li>
+      <li><a href="/en-US/docs/web/api/rtcpeerconnection/iceconnectionstatechange_event">iceconnectionstatechange event</a></li>
+      <li><a href="/en-US/docs/web/api/rtcpeerconnection/icegatheringstatechange_event">icegatheringstatechange event</a></li>
+      <li><a href="/en-US/docs/web/api/rtcpeerconnection/identityresult_event">identityresult event</a></li>
+      <li><a href="/en-US/docs/web/api/rtcpeerconnection/idpassertionerror_event">idpassertionerror event</a></li>
+      <li><a href="/en-US/docs/web/api/rtcpeerconnection/idpvalidationerror_event">idpvalidationerror event</a></li>
+      <li><a href="/en-US/docs/web/api/rtcpeerconnection/negotiationneeded_event">negotiationneeded event</a></li>
+      <li><a href="/en-US/docs/web/api/rtcpeerconnection/peeridentity_event">peeridentity event</a></li>
+      <li><a href="/en-US/docs/web/api/rtcpeerconnection/removestream_event">removestream event</a></li>
+      <li><a href="/en-US/docs/web/api/rtcpeerconnection/signalingstatechange_event">signalingstatechange event</a></li>
+      <li><a href="/en-US/docs/web/api/rtcpeerconnection/track_event">track event</a></li>
+    </ul>
+  </dd>
+  <dt>ScriptProcessorNode</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/scriptprocessornode/audioprocess_event">audioprocess event</a></li>
+    </ul>
+  </dd>
+  <dt>ServiceWorkerContainer</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/serviceworkercontainer/message_event">message event</a></li>
+    </ul>
+  </dd>
+  <dt>ServiceWorkerGlobalScope</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/serviceworkerglobalscope/activate_event">activate event</a></li>
+      <li><a href="/en-US/docs/web/api/serviceworkerglobalscope/contentdelete_event">contentdelete event</a></li>
+      <li><a href="/en-US/docs/web/api/serviceworkerglobalscope/install_event">install event</a></li>
+      <li><a href="/en-US/docs/web/api/serviceworkerglobalscope/message_event">message event</a></li>
+      <li><a href="/en-US/docs/web/api/serviceworkerglobalscope/notificationclick_event">notificationclick event</a></li>
+      <li><a href="/en-US/docs/web/api/serviceworkerglobalscope/pushsubscriptionchange_event">pushsubscriptionchange event</a></li>
+      <li><a href="/en-US/docs/web/api/serviceworkerglobalscope/push_event">push event</a></li>
+    </ul>
+  </dd>
+  <dt>SharedWorkerGlobalScope</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/sharedworkerglobalscope/connect_event">connect event</a></li>
+    </ul>
+  </dd>
+  <dt>SpeechRecognition</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/speechrecognition/audioend_event">audioend event</a></li>
+      <li><a href="/en-US/docs/web/api/speechrecognition/audiostart_event">audiostart event</a></li>
+      <li><a href="/en-US/docs/web/api/speechrecognition/end_event">end event</a></li>
+      <li><a href="/en-US/docs/web/api/speechrecognition/error_event">error event</a></li>
+      <li><a href="/en-US/docs/web/api/speechrecognition/nomatch_event">nomatch event</a></li>
+      <li><a href="/en-US/docs/web/api/speechrecognition/result_event">result event</a></li>
+      <li><a href="/en-US/docs/web/api/speechrecognition/soundend_event">soundend event</a></li>
+      <li><a href="/en-US/docs/web/api/speechrecognition/soundstart_event">soundstart event</a></li>
+      <li><a href="/en-US/docs/web/api/speechrecognition/speechend_event">speechend event</a></li>
+      <li><a href="/en-US/docs/web/api/speechrecognition/speechstart_event">speechstart event</a></li>
+      <li><a href="/en-US/docs/web/api/speechrecognition/start_event">start event</a></li>
+    </ul>
+  </dd>
+  <dt>SpeechSynthesis</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/speechsynthesis/voiceschanged_event">voiceschanged event</a></li>
+    </ul>
+  </dd>
+  <dt>SpeechSynthesisUtterance</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/speechsynthesisutterance/boundary_event">boundary event</a></li>
+      <li><a href="/en-US/docs/web/api/speechsynthesisutterance/end_event">end event</a></li>
+      <li><a href="/en-US/docs/web/api/speechsynthesisutterance/error_event">error event</a></li>
+      <li><a href="/en-US/docs/web/api/speechsynthesisutterance/mark_event">mark event</a></li>
+      <li><a href="/en-US/docs/web/api/speechsynthesisutterance/pause_event">pause event</a></li>
+      <li><a href="/en-US/docs/web/api/speechsynthesisutterance/resume_event">resume event</a></li>
+      <li><a href="/en-US/docs/web/api/speechsynthesisutterance/start_event">start event</a></li>
+    </ul>
+  </dd>
+  <dt>SVGAnimationElement</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/svganimationelement/beginevent_event">beginEvent event</a></li>
+      <li><a href="/en-US/docs/web/api/svganimationelement/endevent_event">endEvent event</a></li>
+      <li><a href="/en-US/docs/web/api/svganimationelement/repeatevent_event">repeatEvent event</a></li>
+    </ul>
+  </dd>
+  <dt>SVGElement</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/svgelement/abort_event">abort event</a></li>
+      <li><a href="/en-US/docs/web/api/svgelement/error_event">error event</a></li>
+      <li><a href="/en-US/docs/web/api/svgelement/load_event">load event</a></li>
+      <li><a href="/en-US/docs/web/api/svgelement/resize_event">resize event</a></li>
+      <li><a href="/en-US/docs/web/api/svgelement/scroll_event">scroll event</a></li>
+      <li><a href="/en-US/docs/web/api/svgelement/unload_event">unload event</a></li>
+    </ul>
+  </dd>
+  <dt>SVGGraphicsElement</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/svggraphicselement/copy_event">copy event</a></li>
+      <li><a href="/en-US/docs/web/api/svggraphicselement/cut_event">cut event</a></li>
+      <li><a href="/en-US/docs/web/api/svggraphicselement/paste_event">paste event</a></li>
+    </ul>
+  </dd>
+  <dt>TextTrack</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/texttrack/cuechange_event">cuechange event</a></li>
+    </ul>
+  </dd>
+  <dt>TextTrackList</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/texttracklist/addtrack_event">addtrack event</a></li>
+      <li><a href="/en-US/docs/web/api/texttracklist/change_event">change event</a></li>
+      <li><a href="/en-US/docs/web/api/texttracklist/removetrack_event">removeTrack event</a></li>
+    </ul>
+  </dd>
+  <dt>VideoTrackList</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/videotracklist/addtrack_event">addtrack event</a></li>
+      <li><a href="/en-US/docs/web/api/videotracklist/change_event">change event</a></li>
+      <li><a href="/en-US/docs/web/api/videotracklist/removetrack_event">removetrack event</a></li>
+    </ul>
+  </dd>
+  <dt>VisualViewport</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/visualviewport/resize_event">resize event</a></li>
+      <li><a href="/en-US/docs/web/api/visualviewport/scroll_event">scroll event</a></li>
+    </ul>
+  </dd>
+  <dt>WebSocket</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/websocket/close_event">close event</a></li>
+      <li><a href="/en-US/docs/web/api/websocket/error_event">error event</a></li>
+      <li><a href="/en-US/docs/web/api/websocket/message_event">message event</a></li>
+      <li><a href="/en-US/docs/web/api/websocket/open_event">open event</a></li>
+    </ul>
+  </dd>
+  <dt>Window</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/window/afterprint_event">afterprint event</a></li>
+      <li><a href="/en-US/docs/web/api/window/animationcancel_event">animationcancel event</a></li>
+      <li><a href="/en-US/docs/web/api/window/animationend_event">animationend event</a></li>
+      <li><a href="/en-US/docs/web/api/window/animationiteration_event">animationiteration event</a></li>
+      <li><a href="/en-US/docs/web/api/window/animationstart_event">animationstart event</a></li>
+      <li><a href="/en-US/docs/web/api/window/appinstalled_event">appinstalled event</a></li>
+      <li><a href="/en-US/docs/web/api/window/beforeprint_event">beforeprint event</a></li>
+      <li><a href="/en-US/docs/web/api/window/beforeunload_event">beforeunload event</a></li>
+      <li><a href="/en-US/docs/web/api/window/blur_event">blur event</a></li>
+      <li><a href="/en-US/docs/web/api/window/copy_event">copy event</a></li>
+      <li><a href="/en-US/docs/web/api/window/cut_event">cut event</a></li>
+      <li><a href="/en-US/docs/web/api/window/devicemotion_event">devicemotion event</a></li>
+      <li><a href="/en-US/docs/web/api/window/deviceorientation_event">deviceorientation event</a></li>
+      <li><a href="/en-US/docs/web/api/window/domcontentloaded_event">DOMContentLoaded event</a></li>
+      <li><a href="/en-US/docs/web/api/window/error_event">error event</a></li>
+      <li><a href="/en-US/docs/web/api/window/focus_event">focus event</a></li>
+      <li><a href="/en-US/docs/web/api/window/gamepadconnected_event">gamepadconnected event</a></li>
+      <li><a href="/en-US/docs/web/api/window/gamepaddisconnected_event">gamepaddisconnected event</a></li>
+      <li><a href="/en-US/docs/web/api/window/hashchange_event">hashchange event</a></li>
+      <li><a href="/en-US/docs/web/api/window/languagechange_event">languagechange event</a></li>
+      <li><a href="/en-US/docs/web/api/window/load_event">load event</a></li>
+      <li><a href="/en-US/docs/web/api/window/messageerror_event">messageerror event</a></li>
+      <li><a href="/en-US/docs/web/api/window/message_event">message event</a></li>
+      <li><a href="/en-US/docs/web/api/window/offline_event">offline event</a></li>
+      <li><a href="/en-US/docs/web/api/window/online_event">online event</a></li>
+      <li><a href="/en-US/docs/web/api/window/orientationchange_event">orientationchange event</a></li>
+      <li><a href="/en-US/docs/web/api/window/pagehide_event">pagehide event</a></li>
+      <li><a href="/en-US/docs/web/api/window/pageshow_event">pageshow event</a></li>
+      <li><a href="/en-US/docs/web/api/window/paste_event">paste event</a></li>
+      <li><a href="/en-US/docs/web/api/window/popstate_event">popstate event</a></li>
+      <li><a href="/en-US/docs/web/api/window/rejectionhandled_event">rejectionhandled event</a></li>
+      <li><a href="/en-US/docs/web/api/window/resize_event">resize event</a></li>
+      <li><a href="/en-US/docs/web/api/window/storage_event">storage event</a></li>
+      <li><a href="/en-US/docs/web/api/window/transitioncancel_event">transitioncancel event</a></li>
+      <li><a href="/en-US/docs/web/api/window/transitionend_event">transitionend event</a></li>
+      <li><a href="/en-US/docs/web/api/window/transitionrun_event">transitionrun event</a></li>
+      <li><a href="/en-US/docs/web/api/window/transitionstart_event">transitionstart event</a></li>
+      <li><a href="/en-US/docs/web/api/window/unhandledrejection_event">unhandledrejection event</a></li>
+      <li><a href="/en-US/docs/web/api/window/unload_event">unload event</a></li>
+      <li><a href="/en-US/docs/web/api/window/vrdisplayactivate_event">vrdisplayactivate event</a></li>
+      <li><a href="/en-US/docs/web/api/window/vrdisplayblur_event">vrdisplayblur event</a></li>
+      <li><a href="/en-US/docs/web/api/window/vrdisplayconnect_event">vrdisplayconnect event</a></li>
+      <li><a href="/en-US/docs/web/api/window/vrdisplaydeactivate_event">vrdisplaydeactivate event</a></li>
+      <li><a href="/en-US/docs/web/api/window/vrdisplaydisconnect_event">vrdisplaydisconnect event</a></li>
+      <li><a href="/en-US/docs/web/api/window/vrdisplayfocus_event">vrdisplayfocus event</a></li>
+      <li><a href="/en-US/docs/web/api/window/vrdisplaypointerrestricted_event">vrdisplaypointerrestricted event</a></li>
+      <li><a href="/en-US/docs/web/api/window/vrdisplaypointerunrestricted_event">vrdisplaypointerunrestricted event</a></li>
+      <li><a href="/en-US/docs/web/api/window/vrdisplaypresentchange_event">vrdisplaypresentchange event</a></li>
+    </ul>
+  </dd>
+  <dt>Worker</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/worker/messageerror_event">messageerror event</a></li>
+      <li><a href="/en-US/docs/web/api/worker/message_event">message event</a></li>
+    </ul>
+  </dd>
+  <dt>WorkerGlobalScope</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/workerglobalscope/languagechange_event">languagechange event</a></li>
+    </ul>
+  </dd>
+  <dt>XMLHttpRequest</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/xmlhttprequest/abort_event">abort event</a></li>
+      <li><a href="/en-US/docs/web/api/xmlhttprequest/error_event">error event</a></li>
+      <li><a href="/en-US/docs/web/api/xmlhttprequest/loadend_event">loadend event</a></li>
+      <li><a href="/en-US/docs/web/api/xmlhttprequest/loadstart_event">loadstart event</a></li>
+      <li><a href="/en-US/docs/web/api/xmlhttprequest/load_event">load event</a></li>
+      <li><a href="/en-US/docs/web/api/xmlhttprequest/progress_event">progress event</a></li>
+      <li><a href="/en-US/docs/web/api/xmlhttprequest/timeout_event">timeout event</a></li>
+    </ul>
+  </dd>
+  <dt>XRReferenceSpace</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/xrreferencespace/reset_event">reset event</a></li>
+    </ul>
+  </dd>
+  <dt>XRSession</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/xrsession/end_event">end event</a></li>
+      <li><a href="/en-US/docs/web/api/xrsession/inputsourceschange_event">inputsourceschange event</a></li>
+      <li><a href="/en-US/docs/web/api/xrsession/selectend_event">selectend event</a></li>
+      <li><a href="/en-US/docs/web/api/xrsession/selectstart_event">selectstart event</a></li>
+      <li><a href="/en-US/docs/web/api/xrsession/select_event">select event</a></li>
+      <li><a href="/en-US/docs/web/api/xrsession/squeezeend_event">squeezeend event</a></li>
+      <li><a href="/en-US/docs/web/api/xrsession/squeezestart_event">squeezestart event</a></li>
+      <li><a href="/en-US/docs/web/api/xrsession/squeeze_event">squeeze event</a></li>
+      <li><a href="/en-US/docs/web/api/xrsession/visibilitychange_event">visibilitychange event</a></li>
+    </ul>
+  </dd>
+  <dt>XRSystem</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/web/api/xrsystem/devicechange_event">devicechange event</a></li>
+    </ul>
+  </dd>
+</dl>
