@@ -33,14 +33,23 @@ table td, table td * {
 		<th>Documentation</th>
 	</tr>
 
-	<tr>
-		<td><p>Animation</p></td>
+  <tr>
+		<td>Animation</td>
 		<td>
 			<p>Events related to the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animation API</a>.</p>
 			<p>Used to respond to changes in animation status (e.g. when an animation starts or ends).</p>
 		</td>
 		<td>Animation events fired on <a href="/en-US/docs/Web/API/Document#animation_events"><code>Document</code></a>, <a href="/en-US/docs/Web/API/Window#animation_events"><code>Window</code></a>, <a href="/en-US/docs/Web/API/HTMLElement#animation_events"><code>HTMLElement</code></a>.</td>
 	</tr>
+
+  <tr>
+		<td>Asynchronous data fetching</td>
+		<td>
+			<p>Events related to the fetching data.</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/AbortSignal#events"><code>AbortSignal</code></a>, <a href="/en-US/docs/Web/API/XMLHttpRequest#events"><code>XMLHttpRequest</code></a>, <a href="/en-US/docs/Web/API/FileReader#events"><code>FileReader</code></a>.</td>
+	</tr>
+
 
 	<tr>
 		<td>Clipboard</td>
@@ -138,6 +147,15 @@ table td, table td * {
 		</td>
 	</tr>
 	
+  <tr>
+		<td>HTML element content display management</td>
+		<td>
+			<p>Events related to changing the state of a display or textual element.</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/HTMLDetailsElement#events"><code>HTMLDetailsElement</code></a>, <a href="/en-US/docs/Web/API/HTMLDialogElement#events"><code>HTMLDialogElement</code></a>, <a href="/en-US/docs/Web/API/HTMLSlotElement#events"><code>HTMLSlotElement</code></a>.
+		</td>
+	</tr>
+
 	<tr>
 		<td>Inputs</td>
 		<td>
@@ -177,7 +195,7 @@ table td, table td * {
 	<tr>
 		<td>Media</td>
 		<td>
-			<p>Events related to media usage (including the <a href="/en-US/docs/Web/API/Media_Streams_API#events">Media Capture and Streams API</a>, <a href="/en-US/docs/Web/API/Picture-in-Picture_API#events">Picture-in-Picture API</a>, etc.).</p>
+			<p>Events related to media usage (including the <a href="/en-US/docs/Web/API/Media_Streams_API#events">Media Capture and Streams API</a>, <a href="/en-US/docs/Web/API/Web_Audio_API#events">Web Audio API</a>, <a href="/en-US/docs/Web/API/Picture-in-Picture_API#events">Picture-in-Picture API</a>, etc.).</p>
 		</td>
 		<td>Events fired on <a href="/en-US/docs/Web/API/ScriptProcessorNode#events"><code>ScriptProcessorNode</code></a>, <a href="/en-US/docs/Web/API/HTMLMediaElement#events"><code>HTMLMediaElement</code></a>, <a href="/en-US/docs/Web/API/AudioTrackList#events"><code>AudioTrackList</code></a>, <a href="/en-US/docs/Web/API/AudioScheduledSourceNode#events"><code>AudioScheduledSourceNode</code></a>, <a href="/en-US/docs/Web/API/MediaRecorder#events"><code>MediaRecorder</code></a>, <a href="/en-US/docs/Web/API/MediaStream#events"><code>MediaStream</code></a>, <a href="/en-US/docs/Web/API/MediaStreamTrack"><code>MediaStreamTrack</code></a>, <a href="/en-US/docs/Web/API/VideoTrackList#events"><code>VideoTrackList</code></a>, <a href="/en-US/docs/Web/API/HTMLTrackElement#events"><code>HTMLTrackElement</code></a>, <a href="/en-US/docs/Web/API/OfflineAudioContext#events"><code>OfflineAudioContext</code></a>, <a href="/en-US/docs/Web/API/TextTrack#events"><code>TextTrack</code></a>, <a href="/en-US/docs/Web/API/TextTrackList#events"><code>TextTrackList</code></a>, <a href="/en-US/docs/Web/HTML/Element/audio#events">Element/audio</a>, <a href="/en-US/docs/Web/HTML/Element/video#events">Element/video</a>.
 		</td>
@@ -315,6 +333,15 @@ table td, table td * {
 		<td>Events fired on <a href="/en-US/docs/Web/API/RTCDataChannel#events"><code>RTCDataChannel</code></a>, <a href="/en-US/docs/Web/API/RTCDTMFSender#events"><code>RTCDTMFSender</code></a>, <a href="/en-US/docs/Web/API/RTCIceTransport#events"><code>RTCIceTransport</code></a>, <a href="/en-US/docs/Web/API/RTCPeerConnection#events"><code>RTCPeerConnection</code></a>.</td>
 	</tr>
 	
+  <tr>
+		<td>Server-sent events</td>
+		<td>
+			<p>Events related to the <a href="/en-US/docs/Web/API/Server-sent_events">server sent events API</a>.</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/EventSource#events"><code>EventSource</code></a>.
+		</td>
+	</tr>
+
 	<tr>
 		<td>Speech</td>
 		<td>
@@ -330,15 +357,6 @@ table td, table td * {
 			<p>Used to respond to new messages and message sending errors. Service workers can also be notified of other events, including push notifications, users clicking on displayed notifications, that push subscription has been invalidated, deletion of items from the content index, etc.</p>
 		</td>
 		<td>Events fired on <a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope#events"><code>ServiceWorkerGlobalScope</code></a>, <a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope#events"><code>DedicatedWorkerGlobalScope</code></a>, <a href="/en-US/docs/Web/API/SharedWorkerGlobalScope#events"><code>SharedWorkerGlobalScope</code></a>, <a href="/en-US/docs/Web/API/WorkerGlobalScope#events"><code>WorkerGlobalScope</code></a>, <a href="/en-US/docs/Web/API/Worker#events"><code>Worker</code></a>, <a href="/en-US/docs/Web/API/WorkerGlobalScope#events"><code>WorkerGlobalScope</code></a>, <a href="/en-US/docs/Web/API/BroadcastChannel#events"><code>BroadcastChannel</code></a>, <a href="/en-US/docs/Web/API/MessagePort#events"><code>MessagePort</code></a>.
-		</td>
-	</tr>
-
-	<tr>
-		<td><strong>Miscellaneous</strong></td>
-		<td>
-			<p>Events not in any of the other groups.</p>
-		</td>
-		<td>Events fired on <a href="/en-US/docs/Web/API/AbortSignal#events"><code>AbortSignal</code></a>, <a href="/en-US/docs/Web/API/EventSource#events"><code>EventSource</code></a>, <a href="/en-US/docs/Web/API/FileReader#events"><code>FileReader</code></a>, <a href="/en-US/docs/Web/API/HTMLDetailsElement#events"><code>HTMLDetailsElement</code></a>, <a href="/en-US/docs/Web/API/HTMLDialogElement#events"><code>HTMLDialogElement</code></a>, <a href="/en-US/docs/Web/API/HTMLSlotElement#events"><code>HTMLSlotElement</code></a>, <a href="/en-US/docs/Web/API/XMLHttpRequest#events"><code>XMLHttpRequest</code></a>, <a href="/en-US/docs/Web/HTML/Element/details#events">Element/details</a>.
 		</td>
 	</tr>
 
