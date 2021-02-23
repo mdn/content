@@ -152,6 +152,33 @@ noBtn.addEventListener('click', () =&gt; {
 
 <p>{{EmbedLiveSample('Transferring_nodes_between_parents', '100%', '350')}}</p>
 
+<h2 id="Polyfill">Polyfill</h2>
+
+<p>You can polyfill the <code>replaceChildren() method</code> in Safari
+  with the following code:</p>
+
+<pre class="brush: js">// Source: https://github.com/XboxYan/dom-polyfill/blob/main/src/replaceChildren.js
+/**
+* replaceChildren.js
+* @mdn https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/replaceChildren
+* @email yanwenbin1991@live.com
+**/
+(function (item) {
+    if (!item.replaceChildren) {
+        item.replaceChildren = function () {
+            var parentNode = this;
+            var oldNodes = [].slice.call(parentNode.childNodes);
+            var newNodes = [].slice.call(arguments);
+            oldNodes.forEach(function (nodes) {
+                if (!newNodes.find(function(el){ return el === nodes})) {
+                    parentNode.removeChild(nodes)
+                }
+            });
+            parentNode.append.apply(this,newNodes);
+        }
+    }
+})(HTMLElement.prototype);</pre>
+
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
