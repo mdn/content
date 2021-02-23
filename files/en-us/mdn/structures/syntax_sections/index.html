@@ -25,9 +25,9 @@ tags:
 <pre class="brush: html">
   &lt;h2 id="Syntax"&gt;Syntax&lt;/h2&gt;
 
-  &lt;pre class="brush: js"&gt;slice()
-  slice(start)
-  slice(start, end)
+  &lt;pre class="brush: js"&gt;slice();
+  slice(start);
+  slice(start, end);
   &lt;/pre&gt;
 </pre>
 
@@ -36,21 +36,14 @@ tags:
 <p>A few rules to follow in terms of markup within the syntax block:</p>
 
 <ul>
- <li>Do <var>not</var> use {{HTMLElement("code")}} within the syntax block (or within any code sample block on MDN, either). Not only is it generally useless, but our markup does not want it, and will not render the way you want it to look if you include it.</li>
+ <li>Do <strong>not</strong> use &lt;code&gt; within the syntax block (or within any code sample block on MDN, either). Not only is it generally useless, but our markup does not want it, and will not render the way you want it to look if you include it.</li>
  <li>Only specify the function and arguments. Example showing "corrected" examples below
-  <pre class="brush: js">querySelector(<var>selector</var>)
-//<var>responseStr</var> = <var>element</var>.querySelector(<var>selector</var>);
+  <pre class="brush: js">querySelector(selector);
+//responseStr = element.querySelector(selector);
 
-new IntersectionObserver(<var>callback</var>, <var>options</var>)
-// var observer = new IntersectionObserver(<var>callback</var>, <var>options</var>);
+new IntersectionObserver(callback, options);
+// var observer = new IntersectionObserver(callback, options);
 </pre> 
- </li>
- <li>  
-  <p>All programmer-specified content in a syntax block should be italicized using the {{HTMLElement("var")}} element:</p>
-
-  <pre class="brush: js">querySelector(<var>selector</var>)</pre> 
-
-  <p>Here, <code>selector</code> is the placeholder for an input parameter to the method.</p>
  </li>
 </ul>
 
@@ -60,37 +53,37 @@ new IntersectionObserver(<var>callback</var>, <var>options</var>)
 
 <p>Start with a syntax block, like this (from the {{DOMxRef("IntersectionObserver.IntersectionObserver", "IntersectionObserver constructor")}} page):</p>
 
-<pre class="brush: js">new IntersectionObserver(<var>callback</var>, <var>options</var>)</pre>
+<pre class="brush: js">new IntersectionObserver(callback, options);</pre>
 
 <p>or this (from {{DOMxRef("Document.hasStorageAccess")}}):</p>
 
-<pre class="brush: js">hasStorageAccess()</pre>
+<pre class="brush: js">hasStorageAccess();</pre>
 
 <h5 id="Multiple_lines">Multiple lines/Optional parameters</h5>
 
 <p>Methods that can be used in many different different ways should be expanded out into multiple lines, showing all possible variations.</p>
 
 <p>Each option should be on its own line, omitting both per-option comments and assignment. For example, {{jsxref("Array.prototype.slice()")}} has two optional parameters, and would be documented as shown below:</p>
-<pre class="brush: js">Array slice()
-Array slice(<var>begin</var>)
-Array slice(<var>begin</var>, <var>end</var>)</pre>
+<pre class="brush: js">Array slice();
+Array slice(begin);
+Array slice(begin, end);</pre>
 
 <p>Similarly, for {{DOMxRef("CanvasRenderingContext2D.drawImage")}}:</p>
 
-<pre class="brush: js">drawImage(<var>image</var>, <var>dx</var>, <var>dy</var>)
-drawImage(<var>image</var>, <var>dx</var>, <var>dy</var>, <var>dWidth</var>, <var>dHeight</var>)
-drawImage(<var>image</var>, <var>sx</var>, <var>sy</var>, <var>sWidth</var>, <var>sHeight</var>, <var>dx</var>, <var>dy</var>, <var>dWidth</var>, <var>dHeight</var>)</pre>
+<pre class="brush: js">drawImage(image, dx, dy);
+drawImage(image, dx, dy, dWidth, dHeight);
+drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);</pre>
 
 <p>Similarly for the {{jsxref("Date")}} constructor:</p>
 
 <pre class="brush: js">new Date();
-new Date(<var>value</var>)
-new Date(<var>dateString</var>)
-new Date(<var>year</var>, <var>monthIndex</var>)
-new Date(<var>year</var>, <var>monthIndex</var>, <var>day</var>)
-new Date(<var>year</var>, <var>monthIndex</var>, <var>day</var>, <var>hours</var>)
-new Date(<var>year</var>, <var>monthIndex</var>, <var>day</var>, <var>hours</var>, <var>minutes</var>)
-new Date(<var>year</var>, <var>monthIndex</var>, <var>day</var>, <var>hours</var>, <var>minutes</var>, <var>seconds</var>, <var>milliseconds</var>)
+new Date(value);
+new Date(dateString);
+new Date(year, monthIndex);
+new Date(year, monthIndex, day);
+new Date(year, monthIndex, day, hours);
+new Date(year, monthIndex, day, hours, minutes);
+new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds);
 </pre>
 
 <h5 id="Formal_syntax">Formal syntax</h5>
@@ -108,13 +101,13 @@ new Date(<var>year</var>, <var>monthIndex</var>, <var>day</var>, <var>hours</var
 
 <p>The aim is to make the syntax block as pure and unambiguous as definition of the feature's syntax as possible — don't include any irrelevant syntax. For example, you may see this syntax form used to describe promises in many places on the site:</p>
 
-<pre class="brush: js"><var>caches</var>.match(<var>request</var>, <var>options</var>).then(function(<var>response</var>) {
+<pre class="brush: js">caches.match(request, options).then(function(response) {
   // Do something with the response
 });</pre>
 
 <p>But this version is much more concise, and doesn't include the superfluous {{JSxRef("Promise.prototype.then()")}} method call:</p>
 
-<pre class="brush: js">match(<var>request</var>, <var>options</var>)</pre>
+<pre class="brush: js">match(request, options);</pre>
 
 <h4 id="Parameters_section">Parameters section</h4>
 
@@ -150,12 +143,12 @@ new Date(<var>year</var>, <var>monthIndex</var>, <var>day</var>, <var>hours</var
 
 <p>Start with a syntax block, like this (see {{DOMxRef("IntersectionObserver.root")}}):</p>
 
-<pre class="brush: js"><var>var <var>root</var> = IntersectionObserver</var>.root;</pre>
+<pre class="brush: js">var root = IntersectionObserver.root;</pre>
 
 <p>For a non-read-only property, it is a good idea to include two lines, which show getting and setting the property (see {{DOMxRef("AudioParam.value")}}):</p>
 
-<pre class="brush: js"><var>gain</var> = <var>gainNode</var>.gain.value;
-<var>gainNode</var>.gain.value = 0;</pre>
+<pre class="brush: js">gain = gainNode.gain.value;
+gainNode.gain.value = 0;</pre>
 
 <h4 id="Value_section">Value section</h4>
 
@@ -173,7 +166,7 @@ new Date(<var>year</var>, <var>monthIndex</var>, <var>day</var>, <var>hours</var
 
 <p>Start with a syntax block, like this (see {{DOMxRef("Window.onvrdisplaypresentchange")}}):</p>
 
-<pre class="brush: js"><var>window</var>.onvrdisplaypresentchange = <var>functionRef</var>;</pre>
+<pre class="brush: js">window.onvrdisplaypresentchange = functionRef;</pre>
 
 <p>And that's it — event handler properties are always settable, and always contain a function, therefore no more information is needed.</p>
 
