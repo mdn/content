@@ -18,7 +18,7 @@ tags:
 ---
 <p>{{WebGLSidebar}}</p>
 
-<p class="summary"><span class="seoSummary">Matrices can be used to represent transformations of objects in space, and are used for performing many key types of computation when constructing images and visualizing data on the Web. This article explores how to create matrices and how to use them with <a href="/en-US/docs/Web/Guide/CSS/Using_CSS_transforms">CSS transforms</a> and the <code>matrix3d</code> transform type.</span></p>
+<p class="summary"><span class="seoSummary">Matrices can be used to represent transformations of objects in space, and are used for performing many key types of computation when constructing images and visualizing data on the Web. This article explores how to create matrices and how to use them with <a href="/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">CSS transforms</a> and the <code>matrix3d</code> transform type.</span></p>
 
 <p>While this article uses <a href="/en-US/docs/Web/CSS">CSS</a> to simplify explanations, matrices are a core concept used by many different technologies including <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a>, the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR</a> (VR and AR) API, and <a href="/en-US/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders">GLSL shaders</a>. This article is also available as an <a href="https://github.com/TatumCreative/mdn-matrix-math">MDN content kit</a>. The live examples use a collection of <a href="https://github.com/TatumCreative/mdn-webgl">utility functions</a> available under a global object named <code>MDN</code>.</p>
 
@@ -168,7 +168,7 @@ let translationMatrix = [
 
 <h2 id="Manipulating_the_DOM_with_a_matrix">Manipulating the DOM with a matrix</h2>
 
-<p>A really easy way to start using a matrix is to use the CSS {{cssxref("transform-function/matrix3d","matrix3d()")}} {{cssxref("transform")}}. First we'll set up a simple {{htmlelement("div")}} with some content. The style is not shown, but it's set to a fixed width and height and is centered on the page. The <code>&lt;div&gt;</code> has a transition set for the transform so that matrix is animated in making it easy to see what is being done.</p>
+<p>A really easy way to start using a matrix is to use the CSS {{cssxref("transform-function/matrix3d()","matrix3d()")}} {{cssxref("transform")}}. First we'll set up a simple {{htmlelement("div")}} with some content. The style is not shown, but it's set to a fixed width and height and is centered on the page. The <code>&lt;div&gt;</code> has a transition set for the transform so that matrix is animated in making it easy to see what is being done.</p>
 
 <pre class="brush: html">&lt;div id='move-me' class='transformable'&gt;
   &lt;h2&gt;Move me with a matrix&lt;/h2&gt;
@@ -195,7 +195,7 @@ moveMe.style.transform = matrix3dRule;
 
 <p><a href="https://jsfiddle.net/g24mgw6y">View on JSFiddle</a></p>
 
-<p><img alt="An example of matrix translation" src="https://mdn.mozillademos.org/files/11409/matrix-translation.jpg" style="height: 385px; width: 339px;"></p>
+<p><img alt="An example of matrix translation" src="matrix-translation.jpg"></p>
 
 <h2 id="Scale_matrix">Scale matrix</h2>
 
@@ -217,7 +217,7 @@ let scaleMatrix = [
 
 <p><a href="https://jsfiddle.net/fndd6e1b">View on JSFiddle</a></p>
 
-<p><img alt="An example of matrix scaling" src="https://mdn.mozillademos.org/files/11407/matrix-scale.jpg" style="height: 291px; width: 398px;"></p>
+<p><img alt="An example of matrix scaling" src="matrix-scale.jpg"></p>
 
 <h2 id="Rotation_matrix">Rotation matrix</h2>
 
@@ -261,7 +261,7 @@ let rotateZMatrix = [
 
 <p><a href="https://jsfiddle.net/9vr2dorz">View on JSFiddle</a></p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11405/matrix-rotation.jpg" style="height: 363px; width: 417px;"></p>
+<p><img alt="" src="matrix-rotation.jpg"></p>
 
 <p>Here are a set of functions that return rotation matrices for rotating around each of the three axes. One big note is that there is no perspective applied, so it might not feel very 3D yet. The flatness is equivalent to when a camera zooms in really close onto an object in the distance — the sense of perspective disappears.</p>
 
@@ -321,7 +321,7 @@ function rotateAroundZAxis(a) {
 
 <p><a href="https://jsfiddle.net/qxxg3yvc">View on JSFiddle</a></p>
 
-<p><img alt="An example of matrix composition" src="https://mdn.mozillademos.org/files/11403/matrix-composition.jpg" style="height: 292px; width: 488px;"></p>
+<p><img alt="An example of matrix composition" src="matrix-composition.jpg"></p>
 
 <p>Finally, a fun step to show how matrices work is to reverse the steps to bring the matrix back to the original identity matrix.</p>
 
