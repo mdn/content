@@ -139,13 +139,13 @@ const yesBtn = document.getElementById('to-yes');
 yesBtn.addEventListener('click', () =&gt; {
   const selectedTransferOptions = document.querySelectorAll('#no option:checked');
   const existingYesOptions = document.querySelectorAll('#yes option');
-  yesSelect.replaceChildren(...selectedTransferOptions, ...existingYesOptions);
+  yesSelect.replaceChildren(...selectedTransferOptions);
 });
 
 noBtn.addEventListener('click', () =&gt; {
   const selectedTransferOptions = document.querySelectorAll('#yes option:checked');
   const existingNoOptions = document.querySelectorAll('#no option');
-  noSelect.replaceChildren(...selectedTransferOptions, ...existingNoOptions);
+  noSelect.replaceChildren(...selectedTransferOptions);
 });</pre>
 
 <p>The end result looks like this:</p>
