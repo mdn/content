@@ -169,29 +169,29 @@ items.sort(function(a, b) {
   sorted arrays. The numeric arrays are sorted without a compare function, then sorted
   using one.</p>
 
-<pre class="brush: js">var stringArray = ['Blue', 'Humpback', 'Beluga'];
-var numericStringArray = ['80', '9', '700'];
-var numberArray = [40, 1, 5, 200];
-var mixedNumericArray = ['80', '9', '700', 40, 1, 5, 200];
+<pre class="brush: js">let stringArray = ['Blue', 'Humpback', 'Beluga'];
+let numericStringArray = ['80', '9', '700'];
+let numberArray = [40, 1, 5, 200];
+let mixedNumericArray = ['80', '9', '700', 40, 1, 5, 200];
 
 function compareNumbers(a, b) {
   return a - b;
 }
 
-console.log('stringArray:', stringArray.join());
-console.log('Sorted:', stringArray.sort().join());
-console.log('\n');
-console.log('numberArray:', numberArray.join());
-console.log('Sorted without a compare function:', numberArray.sort().join());
-console.log('Sorted with compareNumbers:', numberArray.sort(compareNumbers).join());
-console.log('\n');
-console.log('numericStringArray:', numericStringArray.join());
-console.log('Sorted without a compare function:', numericStringArray.sort().join());
-console.log('Sorted with compareNumbers:', numericStringArray.sort(compareNumbers).join());
-console.log('\n');
-console.log('mixedNumericArray:', mixedNumericArray.join());
-console.log('Sorted without a compare function:', mixedNumericArray.sort().join());
-console.log('Sorted with compareNumbers:', mixedNumericArray.sort(compareNumbers).join());
+stringArray.join(); // 'Blue,Humpback,Beluga'
+stringArray.sort(); // ['Beluga', 'Blue', 'Humpback']
+
+numberArray.join(); // '40,1,5,200'
+numberArray.sort(); // [1, 200, 40, 5]
+numberArray.sort(compareNumbers); // [1, 5, 40, 200]
+
+numericStringArray.join(); // '80,9,700'
+numericStringArray.sort(); // [700, 80, 9]
+numericStringArray.sort(compareNumbers); // [9, 80, 700]
+
+mixedNumericArray.join(); // '80,9,700,40,1,5,200'
+mixedNumericArray.sort(); // [1, 200, 40, 5, 700, 80, 9]
+mixedNumericArray.sort(compareNumbers); // [1, 5, 9, 40, 80, 200, 700]
 </pre>
 
 <p>This example produces the following output. As the output shows, when a compare
