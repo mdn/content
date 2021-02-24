@@ -44371,29 +44371,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/fullscreenElement": {
-    "modified": "2020-10-15T21:03:34.946Z",
-    "contributors": [
-      "mfuji09",
-      "Sheppy",
-      "sideshowbarker",
-      "jpmedley",
-      "fscholz",
-      "chrisdavidmills",
-      "jabcreations",
-      "atpc",
-      "shivarajnaidu",
-      "Sebastianz",
-      "teoli",
-      "khanalom",
-      "MHasan",
-      "cvrebert",
-      "kscarfone",
-      "Reachmeatshivam",
-      "ziyunfei",
-      "ernestd"
-    ]
-  },
   "Web/API/DocumentOrShadowRoot/getAnimations": {
     "modified": "2020-12-13T19:52:52.030Z",
     "contributors": [
@@ -165875,6 +165852,29 @@
       "fscholz",
       "bede",
       "david_ross"
+    ]
+  },
+  "Web/API/Document/fullscreenElement": {
+    "modified": "2020-10-15T21:03:34.946Z",
+    "contributors": [
+      "mfuji09",
+      "Sheppy",
+      "sideshowbarker",
+      "jpmedley",
+      "fscholz",
+      "chrisdavidmills",
+      "jabcreations",
+      "atpc",
+      "shivarajnaidu",
+      "Sebastianz",
+      "teoli",
+      "khanalom",
+      "MHasan",
+      "cvrebert",
+      "kscarfone",
+      "Reachmeatshivam",
+      "ziyunfei",
+      "ernestd"
     ]
   }
 }

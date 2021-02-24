@@ -50,6 +50,8 @@ tags:
  <dd>Returns the {{DOMxRef("FontFaceSet")}} interface of the current document.</dd>
  <dt>{{DOMxRef("Document.forms")}}{{ReadOnlyInline}}</dt>
  <dd>Returns a list of the {{HTMLElement("form")}} elements within the current document.</dd>
+ <dt>{{DOMxRef("Document.fullscreenElement")}} {{ReadOnlyInline}}</dt>
+ <dd>The element that's currently in full screen mode for this document.</dd>
  <dt>{{DOMxRef("Document.head")}}{{ReadOnlyInline}}</dt>
  <dd>Returns the {{HTMLElement("head")}} element of the current document.</dd>
  <dt>{{DOMxRef("Document.hidden")}}{{ReadOnlyInline}}</dt>
@@ -118,8 +120,6 @@ tags:
 <p><em>The <code>Document</code> interface includes the following properties defined on the {{DOMxRef("DocumentOrShadowRoot")}} mixin. Note that this is currently only implemented by Chrome; other browsers still implement them directly on the {{DOMxRef("Document")}} interface.</em></p>
 
 <dl>
- <dt>{{DOMxRef("Document.fullscreenElement")}}{{ReadOnlyInline}}</dt>
- <dd>The element that's currently in full screen mode for this document.</dd>
  <dt>{{DOMxRef("DocumentOrShadowRoot.pointerLockElement")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns the element set as the target for mouse events while the pointer is locked. <code>null</code> if lock is pending, pointer is unlocked, or if the target is in another document.</dd>
  <dt>{{DOMxRef("DocumentOrShadowRoot.styleSheets")}}{{ReadOnlyInline}}</dt>
