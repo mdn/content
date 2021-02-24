@@ -2,31 +2,37 @@
 title: Element.getAttribute()
 slug: Web/API/Element/getAttribute
 tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
+- API
+- DOM
+- Element
+- Method
+- Reference
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">The <strong><code>getAttribute()</code></strong> method of the {{domxref("Element")}} interface returns the value of a specified attribute on the element.</span> If the given attribute does not exist, the value returned will either be <code>null</code> or <code>""</code> (the empty string); see <a href="#Non-existing_attributes">Non-existing attributes</a> for details.</p>
+<p><span class="seoSummary">The <strong><code>getAttribute()</code></strong> method of the
+		{{domxref("Element")}} interface returns the value of a specified attribute on the
+		element.</span> If the given attribute does not exist, the value returned will
+	either be <code>null</code> or <code>""</code> (the empty string); see <a
+		href="#Non-existing_attributes">Non-existing attributes</a> for details.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">let <var>attribute</var> = <var>element</var>.getAttribute(<var>attributeName</var>);
+<pre class="brush: js">let <var>attribute</var> = <var>element</var>.getAttribute(<var>attributeName</var>);
 </pre>
 
 <p>where</p>
 
 <ul>
-	<li><code><var>attribute</var></code> is a string containing the value of <code><var>attributeName</var></code>.</li>
-	<li><code><var>attributeName</var></code> is the name of the attribute whose value you want to get.</li>
+	<li><code><var>attribute</var></code> is a string containing the value of
+		<code><var>attributeName</var></code>.</li>
+	<li><code><var>attributeName</var></code> is the name of the attribute whose value you
+		want to get.</li>
 </ul>
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush:js notranslate">&lt;!-- example div in an html DOC --&gt;
+<pre class="brush:js">&lt;!-- example div in an html DOC --&gt;
 &lt;div id="div1"&gt;Hi Champ!&lt;/div&gt;
 
 // in a console
@@ -45,23 +51,38 @@ const align = div1.getAttribute('align')
 
 <h3 id="Lower_casing">Lower casing</h3>
 
-<p>When called on an HTML element in a DOM flagged as an HTML document, <code>getAttribute()</code> lower-cases its argument before proceeding.</p>
+<p>When called on an HTML element in a DOM flagged as an HTML document,
+	<code>getAttribute()</code> lower-cases its argument before proceeding.</p>
 
 <h3 id="Non-existing_attributes">Non-existing attributes</h3>
 
-<p>Essentially all web browsers (Firefox, Internet Explorer, recent versions of Opera, Safari, Konqueror, and iCab, as a non-exhaustive list) return <code>null</code> when the specified attribute does not exist on the specified element; this is what <a href="http://dom.spec.whatwg.org/#dom-element-getattribute">the current DOM specification draft</a> specifies. The old DOM 3 Core specification, on the other hand, says that the correct return value in this case is actually the <em>empty string</em>, and some DOM implementations implement this behavior. The implementation of <code>getAttribute()</code> in XUL (Gecko) actually follows the DOM 3 Core specification and returns an empty string. Consequently, you should use {{domxref("element.hasAttribute()")}} to check for an attribute's existence prior to calling <code>getAttribute()</code> if it is possible that the requested attribute does not exist on the specified element.</p>
+<p>Essentially all web browsers (Firefox, Internet Explorer, recent versions of Opera,
+	Safari, Konqueror, and iCab, as a non-exhaustive list) return <code>null</code> when
+	the specified attribute does not exist on the specified element; this is what <a
+		href="http://dom.spec.whatwg.org/#dom-element-getattribute">the current DOM
+		specification draft</a> specifies. The old DOM 3 Core specification, on the other
+	hand, says that the correct return value in this case is actually the <em>empty
+		string</em>, and some DOM implementations implement this behavior. The
+	implementation of <code>getAttribute()</code> in XUL (Gecko) actually follows the DOM
+	3 Core specification and returns an empty string. Consequently, you should use
+	{{domxref("element.hasAttribute()")}} to check for an attribute's existence prior to
+	calling <code>getAttribute()</code> if it is possible that the requested attribute
+	does not exist on the specified element.</p>
 
 <h3 id="Retrieving_nonce_values">Retrieving nonce values</h3>
 
-<p>For security reasons, <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> nonces from non-script sources, such as CSS selectors, and  <code>.getAttribute("nonce")</code> calls are hidden.</p>
+<p>For security reasons, <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> nonces from non-script
+	sources, such as CSS selectors, and  <code>.getAttribute("nonce")</code> calls are
+	hidden.</p>
 
-<pre class="brush: js example-bad notranslate">let nonce =  script.getAttribute('nonce');
+<pre class="brush: js example-bad">let nonce =  script.getAttribute('nonce');
 // returns empty string
 </pre>
 
-<p>Instead of retrieving the nonce from the content attribute, use the {{domxref("HTMLOrForeignElement/nonce", "nonce")}} property:</p>
+<p>Instead of retrieving the nonce from the content attribute, use the
+	{{domxref("HTMLOrForeignElement/nonce", "nonce")}} property:</p>
 
-<pre class="brush: js notranslate">let nonce =  script.nonce;</pre>
+<pre class="brush: js">let nonce =  script.nonce;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -75,7 +96,8 @@ const align = div1.getAttribute('align')
 	</thead>
 	<tbody>
 		<tr>
-			<td>{{SpecName('DOM WHATWG','#dom-element-getattribute','getAttribute()')}}</td>
+			<td>{{SpecName('DOM WHATWG','#dom-element-getattribute','getAttribute()')}}
+			</td>
 			<td>{{Spec2('DOM WHATWG')}}</td>
 			<td></td>
 		</tr>
@@ -86,5 +108,5 @@ const align = div1.getAttribute('align')
 
 <div>
 
-<p>{{Compat("api.Element.getAttribute")}}</p>
+	<p>{{Compat("api.Element.getAttribute")}}</p>
 </div>

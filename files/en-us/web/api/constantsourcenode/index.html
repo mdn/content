@@ -33,7 +33,7 @@ tags:
 
 <dl>
  <dt>{{domxref("ConstantSourceNode.ConstantSourceNode", "ConstantSourceNode()")}}</dt>
- <dd>Creates and returns a new <code>ConstantSourceNode</code> instance, optionally specifying an object which establishes initial values for the object's properties. You can also create a <code>ConstantSourceNode</code> whose properties are initialized to their default values by calling {{domxref("AudioContext.createConstantSource()")}}.</dd>
+ <dd>Creates and returns a new <code>ConstantSourceNode</code> instance, optionally specifying an object which establishes initial values for the object's properties. You can also create a <code>ConstantSourceNode</code> whose properties are initialized to their default values by calling {{domxref("BaseAudioContext/createConstantSource", "AudioContext.createConstantSource()")}}.</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>
@@ -91,7 +91,7 @@ gainNode2.connect(context.destination);
 gainNode3.connect(context.destination);
 </pre>
 
-<p>This code starts by creating the gain nodes and setting them and the volume control that will adjust their value all to 0.5. Then the <code>ConstantSourceNode</code> is created by calling {{domxref("AudioContext.createConstantSource()")}}, and the gain parameters of each of the two gain nodes are connected to the <code>ConstantSourceNode</code>. After starting the constant source by calling its {{domxref("AudioScheduledSourceNode.start", "start()")}} method. Finally, the two gain nodes are connected to the audio destination (typically speakers or headphones).</p>
+<p>This code starts by creating the gain nodes and setting them and the volume control that will adjust their value all to 0.5. Then the <code>ConstantSourceNode</code> is created by calling {{domxref("BaseAudioContext/createConstantSource", "AudioContext.createConstantSource()")}}, and the gain parameters of each of the two gain nodes are connected to the <code>ConstantSourceNode</code>. After starting the constant source by calling its {{domxref("AudioScheduledSourceNode.start", "start()")}} method. Finally, the two gain nodes are connected to the audio destination (typically speakers or headphones).</p>
 
 <p>Now, whenever the value of {{domxref("ConstantSourceNode.offset", "constantNode.offset")}} changes, the gain on both <code>gainNode2</code> and <code>gainNode3</code> will change to have that same value.</p>
 
@@ -109,17 +109,14 @@ gainNode3.connect(context.destination);
   <tr>
    <td>{{SpecName('Web Audio API', '#ConstantSourceNode', 'ConstantSourceNode')}}</td>
    <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.ConstantSourceNode")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

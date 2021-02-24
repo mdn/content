@@ -15,7 +15,7 @@ tags:
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}</p>
 
 <div class="summary">
-<p>This is the <strong>5th step</strong> out of 10 of the <a href="/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html">Gamedev-Canvas-workshop/lesson5.html</a>.</p>
+<p>This is the <strong>5th step</strong> out of 10 of the <a href="/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript">Gamedev Canvas tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html">Gamedev-Canvas-workshop/lesson5.html</a>.</p>
 </div>
 
 <p><span class="seoSummary">It's fun to watch the ball bouncing off the walls and be able to move the paddle around, but other than that the game does nothing and doesn't have any progression or end goal. It would be good from the gameplay point of view to be able to lose. The logic behind losing in breakout is simple. If you miss the ball with the paddle and let it reach the bottom edge of the screen, then it's game over.</span></p>
@@ -24,7 +24,7 @@ tags:
 
 <p>Let's try to implement game over in our game. Here's the piece of code from the third lesson where we made the ball bounce off the walls:</p>
 
-<pre class="brush: js notranslate">if(x + dx &gt; canvas.width-ballRadius || x + dx &lt; ballRadius) {
+<pre class="brush: js">if(x + dx &gt; canvas.width-ballRadius || x + dx &lt; ballRadius) {
     dx = -dx;
 }
 
@@ -36,17 +36,17 @@ if(y + dy &gt; canvas.height-ballRadius || y + dy &lt; ballRadius) {
 
 <p>First, replace where you initially called <code>setInterval()</code></p>
 
-<pre class="notranslate">setInterval(draw, 10);
+<pre class="brush: js ">setInterval(draw, 10);
 </pre>
 
 <p>with:</p>
 
-<pre class="notranslate">var interval = setInterval(draw, 10);
+<pre class="brush: js">var interval = setInterval(draw, 10);
 </pre>
 
 <p>Then replace the second if statement with the following:</p>
 
-<pre class="brush: js notranslate">if(y + dy &lt; ballRadius) {
+<pre class="brush: js">if(y + dy &lt; ballRadius) {
     dy = -dy;
 } else if(y + dy &gt; canvas.height-ballRadius) {
     alert("GAME OVER");
@@ -59,7 +59,7 @@ if(y + dy &gt; canvas.height-ballRadius || y + dy &lt; ballRadius) {
 
 <p>The last thing to do in this lesson is to create some kind of collision detection between the ball and the paddle, so it can bounce off it and get back into the play area. The easiest thing to do is to check whether the center of the ball is between the left and right edges of the paddle. Update the last bit of code you modified again, to the following:</p>
 
-<pre class="brush: js notranslate">if(y + dy &lt; ballRadius) {
+<pre class="brush: js">if(y + dy &lt; ballRadius) {
     dy = -dy;
 } else if(y + dy &gt; canvas.height-ballRadius) {
     if(x &gt; paddleX &amp;&amp; x &lt; paddleX + paddleWidth) {
@@ -86,6 +86,6 @@ if(y + dy &gt; canvas.height-ballRadius || y + dy &lt; ballRadius) {
 
 <h2 id="Next_steps">Next steps</h2>
 
-<p>We're doing quite well so far and our game is starting to feel a lot more worth playing now you can lose! But it is still missing something. Let's move on  to the sixth chapter — <a href="/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Build_the_brick_field">Build the brick field</a> — and create some bricks for the ball to destroy.</p>
+<p>We're doing quite well so far and our game is starting to feel a lot more worth playing now you can lose! But it is still missing something. Let's move on  to the sixth chapter — <a href="/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field">Build the brick field</a> — and create some bricks for the ball to destroy.</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}</p>

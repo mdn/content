@@ -2,20 +2,22 @@
 title: SharedWorker.port
 slug: Web/API/SharedWorker/port
 tags:
-  - API
-  - Property
-  - Reference
-  - SharedWorker
-  - Web Workers
-  - port
+- API
+- Property
+- Reference
+- SharedWorker
+- Web Workers
+- port
 ---
 <div>{{APIRef("Web Workers API")}}</div>
 
-<p>The <code><strong>port</strong></code> property of the {{domxref("SharedWorker")}} interface returns a {{domxref("MessagePort")}} object used to communicate and control the shared worker.</p>
+<p>The <code><strong>port</strong></code> property of the {{domxref("SharedWorker")}}
+  interface returns a {{domxref("MessagePort")}} object used to communicate and control
+  the shared worker.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">myWorker.port;</pre>
+<pre class="brush: js">myWorker.port;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -23,28 +25,36 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>The following code snippet shows creation of a <code>SharedWorker</code> object using the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor. Multiple scripts can then access the worker through a {{domxref("MessagePort")}} object accessed using the <code>SharedWorker.port</code> property — the port is started using its <code>start()</code> method:</p>
+<p>The following code snippet shows creation of a <code>SharedWorker</code> object using
+  the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor. Multiple
+  scripts can then access the worker through a {{domxref("MessagePort")}} object accessed
+  using the <code>SharedWorker.port</code> property — the port is started using its
+  <code>start()</code> method:</p>
 
 <pre class="brush: js">var myWorker = new SharedWorker('worker.js');
 myWorker.port.start();</pre>
 
-<p>For a full example, see our <a class="external external-icon" href="https://github.com/mdn/simple-shared-worker">Basic shared worker example</a> (<a class="external external-icon" href="https://mdn.github.io/simple-shared-worker/">run shared worker</a>.)</p>
+<p>For a full example, see our <a class="external external-icon"
+    href="https://github.com/mdn/simple-shared-worker">Basic shared worker example</a> (<a
+    class="external external-icon" href="https://mdn.github.io/simple-shared-worker/">run
+    shared worker</a>.)</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#dom-sharedworker-port", "AbstractWorker.onerror")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', "#dom-sharedworker-port", "AbstractWorker.onerror")}}
+      </td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -54,6 +64,6 @@ myWorker.port.start();</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{domxref("SharedWorker")}} interface it belongs to.</li>
- <li><a href="https://anlexn.github.io/shared-worker-mdn/">another multiply demo</a></li>
+  <li>The {{domxref("SharedWorker")}} interface it belongs to.</li>
+  <li><a href="https://anlexn.github.io/shared-worker-mdn/">another multiply demo</a></li>
 </ul>

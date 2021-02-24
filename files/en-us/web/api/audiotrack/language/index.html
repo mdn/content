@@ -2,84 +2,96 @@
 title: AudioTrack.language
 slug: Web/API/AudioTrack/language
 tags:
-  - API
-  - Audio
-  - AudioTrack
-  - HTML DOM
-  - Language
-  - Localization
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Translated
-  - Translation
-  - track
+- API
+- Audio
+- AudioTrack
+- HTML DOM
+- Language
+- Localization
+- Media
+- Property
+- Read-only
+- Reference
+- Translated
+- Translation
+- track
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The read-only <strong>{{domxref("AudioTrack")}}</strong> property <strong><code>language</code></strong> returns a string identifying the language used in the audio track.</span> For tracks that include multiple languages (such as a movie in English in which a few lines are spoken in other languages), this should be the video's primary language.</p>
+<p><span class="seoSummary">The read-only <strong>{{domxref("AudioTrack")}}</strong>
+    property <strong><code>language</code></strong> returns a string identifying the
+    language used in the audio track.</span> For tracks that include multiple languages
+  (such as a movie in English in which a few lines are spoken in other languages), this
+  should be the video's primary language.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>audioTrackLanguage</em> = <em>AudioTrack</em>.language;</pre>
+<pre class="brush: js">var <em>audioTrackLanguage</em> = <em>AudioTrack</em>.language;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("DOMString")}} specifying the BCP 47 ({{RFC(5646)}}) format language tag of the primary language used in the audio track, or an empty string (<code>""</code>) if the language is not specified or known, or if the track doesn't contain speech.</p>
+<p>A {{domxref("DOMString")}} specifying the BCP 47 ({{RFC(5646)}}) format language tag of
+  the primary language used in the audio track, or an empty string (<code>""</code>) if
+  the language is not specified or known, or if the track doesn't contain speech.</p>
 
-<p>For example, if the primary language used in the track is United States English, this value would be <code>"en-US"</code>. For Brazilian Portuguese, the value would be <code>"pt-BR"</code>.</p>
+<p>For example, if the primary language used in the track is United States English, this
+  value would be <code>"en-US"</code>. For Brazilian Portuguese, the value would be
+  <code>"pt-BR"</code>.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>This example locates all of a media element's primary language and translated audio tracks and returns a list of objects containing each of those tracks' {{domxref("AudioTrack.id", "id")}}, {{domxref("AudioTrack.kind", "kind")}}, and <code>language</code>.</p>
+<p>This example locates all of a media element's primary language and translated audio
+  tracks and returns a list of objects containing each of those tracks'
+  {{domxref("AudioTrack.id", "id")}}, {{domxref("AudioTrack.kind", "kind")}}, and
+  <code>language</code>.</p>
 
-<p>This could then be used to build a user interface for selecting the language the user would like to listen to while watching a movie, for example.</p>
+<p>This could then be used to build a user interface for selecting the language the user
+  would like to listen to while watching a movie, for example.</p>
 
-<div class="codecopy codecopy-lg">
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> getAvailableLanguages<span class="punctuation token">(</span>el<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> trackList <span class="operator token">=</span> <span class="punctuation token">[</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
-  <span class="keyword token">const</span> wantedKinds <span class="operator token">=</span> <span class="punctuation token">[</span>
-    <span class="string token">"main"</span><span class="punctuation token">,</span> <span class="string token">"translation"</span>
-  <span class="punctuation token">]</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers language-js">function getAvailableLanguages(el) {
+  var trackList = [];
+  const wantedKinds = [
+    "main", "translation"
+  ];
 
-  el<span class="punctuation token">.</span>audioTracks<span class="punctuation token">.</span><span class="function token">forEach</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>track<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">if</span> <span class="punctuation token">(</span>wantedKinds<span class="punctuation token">.</span><span class="function token">includes</span><span class="punctuation token">(</span>track<span class="punctuation token">.</span>kind<span class="punctuation token">)</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      trackList<span class="punctuation token">.</span><span class="function token">push</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-        id<span class="punctuation token">:</span> track<span class="punctuation token">.</span>id<span class="punctuation token">,</span>
-        kind<span class="punctuation token">:</span> track<span class="punctuation token">.</span>kind<span class="punctuation token">,</span>
-        language<span class="punctuation token">:</span> track<span class="punctuation token">.language</span>
-      <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="keyword token">return</span> trackList<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+  el.audioTracks.forEach(function(track) {
+    if (wantedKinds.includes(track.kind)) {
+      trackList.push({
+        id: track.id,
+        kind: track.kind,
+        language: track.language
+      });
+    }
+  });
+  return trackList;
+}</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'media.html#dom-audiotrack-language', 'AudioTrack.language')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'embedded-content-0.html#dom-audiotrack-language', 'AudioTrack.language')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', 'media.html#dom-audiotrack-language',
+        'AudioTrack.language')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML5 W3C', 'embedded-content-0.html#dom-audiotrack-language',
+        'AudioTrack.language')}}</td>
+      <td>{{Spec2('HTML5 W3C')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat("api.AudioTrack.language")}}</p>
-</div>

@@ -2,22 +2,28 @@
 title: NodeIterator.previousNode()
 slug: Web/API/NodeIterator/previousNode
 tags:
-  - API
-  - DOM
-  - Method
-  - NodeIterator
+- API
+- DOM
+- Method
+- NodeIterator
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <code><strong>NodeIterator.previousNode()</strong></code> method returns the previous node in the set represented by the {{domxref("NodeIterator")}} and moves the position of the iterator backwards within the set.</p>
+<p>The <code><strong>NodeIterator.previousNode()</strong></code> method returns the
+	previous node in the set represented by the {{domxref("NodeIterator")}} and moves the
+	position of the iterator backwards within the set.</p>
 
-<p>This method returns <code>null</code> when the current node is the first node in the set.</p>
+<p>This method returns <code>null</code> when the current node is the first node in the
+	set.</p>
 
-<p>In old browsers, as specified in old versions of the specifications, the method may throws the <code>INVALID_STATE_ERR</code> {{domxref("DOMException")}} if this method is called after the {{domxref("NodeIterator.detach()")}}method. Recent browsers never throw.</p>
+<p>In old browsers, as specified in old versions of the specifications, the method may
+	throws the <code>INVALID_STATE_ERR</code> {{domxref("DOMException")}} if this method
+	is called after the {{domxref("NodeIterator.detach()")}}method. Recent browsers never
+	throw.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>node</em> = <em>nodeIterator</em>.previousNode();
+<pre class="brush: js"><em>node</em> = <em>nodeIterator</em>.previousNode();
 </pre>
 
 <h2 id="Example">Example</h2>
@@ -42,12 +48,16 @@ previousNode = nodeIterator.previousNode(); // same result, since we backtracked
 			<th scope="col">Comment</th>
 		</tr>
 		<tr>
-			<td>{{SpecName('DOM WHATWG', '#dom-nodeiterator-previousnode', 'NodeIterator.previousNode')}}</td>
+			<td>{{SpecName('DOM WHATWG', '#dom-nodeiterator-previousnode',
+				'NodeIterator.previousNode')}}</td>
 			<td>{{Spec2('DOM WHATWG')}}</td>
-			<td>As <code>detach()</code> is now a no-op method, this method cannot throw anymore.</td>
+			<td>As <code>detach()</code> is now a no-op method, this method cannot throw
+				anymore.</td>
 		</tr>
 		<tr>
-			<td>{{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-NodeIterator-previousNode', 'NodeIterator.previousNode')}}</td>
+			<td>{{SpecName('DOM2 Traversal_Range',
+				'traversal.html#Traversal-NodeIterator-previousNode',
+				'NodeIterator.previousNode')}}</td>
 			<td>{{Spec2('DOM2 Traversal_Range')}}</td>
 			<td>Initial definition.</td>
 		</tr>

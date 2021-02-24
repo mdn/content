@@ -35,7 +35,7 @@ tags:
 
 <p>If that doesn't work, you can try running the firefox binary under the debugger with the MOZ_RUN_GTEST environment variable set to 1.</p>
 
-<pre class="syntaxbox">MOZ_RUN_GTEST=1 ./mach run --debug [--debugger gdb]</pre>
+<pre class="brush: js">MOZ_RUN_GTEST=1 ./mach run --debug [--debugger gdb]</pre>
 
 <div class="warning">
 <p>Don't forget to build + run 'mach gtest' to relink when using MOZ_RUN_GTEST since it's not part of a top level build.</p>
@@ -45,7 +45,7 @@ tags:
 
 <p>Note that you can debug a subset of the tests (including a single test) by using the GTEST_FILTER environment variable:</p>
 
-<pre class="syntaxbox">GTEST_FILTER='AsyncPanZoom*' MOZ_RUN_GTEST=1 ./mach run --debug [--debugger gdb]</pre>
+<pre class="brush: js">GTEST_FILTER='AsyncPanZoom*' MOZ_RUN_GTEST=1 ./mach run --debug [--debugger gdb]</pre>
 
 <h3 id="Debugging_with_Xcode">Debugging with Xcode</h3>
 

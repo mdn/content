@@ -40,14 +40,15 @@ tags:
 <p>We won't be teaching you how to produce audio and video files — that requires a completely different skillset. We have provided you with <a href="https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content">sample audio and video files and example code</a> for your own experimentation, in case you are unable to get hold of your own.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Before you begin here, you should also know that there are quite a few OVPs (online video providers) like <a href="https://www.youtube.com/">YouTube</a>, <a href="https://www.dailymotion.com">Dailymotion</a>, and <a href="https://vimeo.com/">Vimeo</a>, and online audio providers like <a href="https://soundcloud.com/">Soundcloud</a>. Such companies offer a convenient, easy way to host and consume videos, so you don't have to worry about the enormous bandwidth consumption. OVPs even usually offer ready-made code for embedding video/audio in your webpages; if you use that route, you can avoid some of the difficulties we discuss in this article. We'll be discussing this kind of service a bit more in the next article.</p>
+  <h3>Note</h3>
+<p>Before you begin here, you should also know that there are quite a few OVPs (online video providers) like <a href="https://www.youtube.com/">YouTube</a>, <a href="https://www.dailymotion.com">Dailymotion</a>, and <a href="https://vimeo.com/">Vimeo</a>, and online audio providers like <a href="https://soundcloud.com/">Soundcloud</a>. Such companies offer a convenient, easy way to host and consume videos, so you don't have to worry about the enormous bandwidth consumption. OVPs even usually offer ready-made code for embedding video/audio in your webpages; if you use that route, you can avoid some of the difficulties we discuss in this article. We'll be discussing this kind of service a bit more in the next article.</p>
 </div>
 
 <h3 id="The_&lt;video&gt;_element">The &lt;video&gt; element</h3>
 
 <p>The {{htmlelement("video")}} element allows you to embed a video very easily. A really simple example looks like this:</p>
 
-<pre class="brush: html notranslate">&lt;video src="rabbit320.webm" controls&gt;
+<pre class="brush: html">&lt;video src="rabbit320.webm" controls&gt;
   &lt;p&gt;Your browser doesn't support HTML5 video. Here is a &lt;a href="rabbit320.webm"&gt;link to the video&lt;/a&gt; instead.&lt;/p&gt;
 &lt;/video&gt;</pre>
 
@@ -64,7 +65,7 @@ tags:
 
 <p>The embedded video will look something like this:</p>
 
-<p><img alt="A simple video player showing a video of a small white rabbit" src="https://mdn.mozillademos.org/files/12794/simple-video.png" style="display: block; height: 592px; margin: 0px auto; width: 589px;"></p>
+<p><img alt="A simple video player showing a video of a small white rabbit" src="simple-video.png" style="display: block; margin: 0px auto;"></p>
 
 <p>You can <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/simple-video.html">try the example live</a> here (see also the <a href="https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/video-and-audio-content/simple-video.html">source code</a>.)</p>
 
@@ -78,7 +79,7 @@ tags:
 
 <p>A WebM file containing a movie which has a main video track and one alternate angle track, plus audio for both English and Spanish, in addition to audio for an English commentary track can be conceptualized as shown in the diagram below. Also included are text tracks containing closed captions for the feature film, Spanish subtitles for the film, and English captions for the commentary.</p>
 
-<p><a href="https://mdn.mozillademos.org/files/16898/ContainersAndTracks.svg"><img alt="Diagram conceptualizing the contents of a media file at the track level." src="https://mdn.mozillademos.org/files/16898/ContainersAndTracks.svg" style="height: 472px; width: 640px;"></a></p>
+<p><a href="https://mdn.mozillademos.org/files/16898/ContainersAndTracks.svg"><img alt="Diagram conceptualizing the contents of a media file at the track level." src="containersandtracks.svg"></a></p>
 
 <p>The audio and video tracks within the container hold data in the appropriate format for the codec used to encode that media. Different formats are used for audio tracks versus video tracks. Each audio track is encoded using an <a href="/en-US/docs/Web/Media/Formats/Audio_codecs">audio codec</a>, while video tracks are encoded using (as you probably have guessed) <a href="/en-US/docs/Web/Media/Formats/Video_codecs">a video codec</a>. As we talked about before, different browsers support different video and audio formats, and different container formats (like MP3, MP4, and WebM, which in turn can contain different types of video and audio).</p>
 
@@ -98,7 +99,8 @@ tags:
 
 <h4 id="Media_file_support_in_browsers">Media file support in browsers</h4>
 
-<div class="callout-box">
+<div class="notecard note">
+  <h4>Note</h4>
 <p>Why do we have this problem? It turns out that several popular formats, such as MP3 and MP4/H.264, are excellent but are encumbered by patents; that is, there are patents covering some or all of the technology that they're based upon. In the United States, patents covered MP3 until 2017, and H.264 is encumbered by patents through at least 2027.</p>
 
 <p>Because of those patents, browsers that wish to implement support for those codecs must pay typically enormous license fees. In addition, some people prefer to avoid restricted software and prefer to use only open formats. Due to these legal and preferential reasons, web developers find themselves having to support multiple formats to capture their entire audience.</p>
@@ -114,7 +116,7 @@ tags:
 
 <p>So how do we do this? Take a look at the following <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html">updated example</a> (<a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html">try it live here</a>, also):</p>
 
-<pre class="brush: html notranslate">&lt;video controls&gt;
+<pre class="brush: html">&lt;video controls&gt;
   &lt;source src="rabbit320.mp4" type="video/mp4"&gt;
   &lt;source src="rabbit320.webm" type="video/webm"&gt;
   &lt;p&gt;Your browser doesn't support HTML5 video. Here is a &lt;a href="rabbit320.mp4"&gt;link to the video&lt;/a&gt; instead.&lt;/p&gt;
@@ -130,7 +132,7 @@ tags:
 
 <p>There are a number of other features you can include when displaying an HTML video. Take a look at our next example:</p>
 
-<pre class="brush: html notranslate">&lt;video controls width="400" height="400"
+<pre class="brush: html">&lt;video controls width="400" height="400"
        autoplay loop muted preload="auto"
        poster="poster.png"&gt;
   &lt;source src="rabbit320.mp4" type="video/mp4"&gt;
@@ -141,7 +143,7 @@ tags:
 
 <p>The resulting UI looks something like this:</p>
 
-<p><img alt="A video player showing a poster image before it plays. The poster image says HTML5 video example, OMG hell yeah!" src="https://mdn.mozillademos.org/files/16949/poster_screenshot_updated.png" style="border-style: solid; border-width: 1px; display: block; height: 470px; margin: 0px auto; width: 413px;"></p>
+<p><img alt="A video player showing a poster image before it plays. The poster image says HTML5 video example, OMG hell yeah!" src="poster_screenshot_updated.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>The new features are:</p>
 
@@ -174,7 +176,7 @@ tags:
 
 <p>The {{htmlelement("audio")}} element works just like the {{htmlelement("video")}} element, with a few small differences as outlined below. A typical example might look like so:</p>
 
-<pre class="brush: html notranslate">&lt;audio controls&gt;
+<pre class="brush: html">&lt;audio controls&gt;
   &lt;source src="viper.mp3" type="audio/mp3"&gt;
   &lt;source src="viper.ogg" type="audio/ogg"&gt;
   &lt;p&gt;Your browser doesn't support HTML5 audio. Here is a &lt;a href="viper.mp3"&gt;link to the audio&lt;/a&gt; instead.&lt;/p&gt;
@@ -182,7 +184,7 @@ tags:
 
 <p>This produces something like the following in a browser:</p>
 
-<p><img alt="A simple audio player with a play button, timer, volume control, and progress bar" src="https://mdn.mozillademos.org/files/12798/audio-player.png" style="display: block; height: 413px; margin: 0px auto; width: 626px;"></p>
+<p><img alt="A simple audio player with a play button, timer, volume control, and progress bar" src="audio-player.png" style="display: block; margin: 0px auto;"></p>
 
 <div class="note">
 <p><strong>Note</strong>: You can <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html">run the audio demo live</a> on Github (also see the <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html">audio player source code</a>.)</p>
@@ -208,7 +210,7 @@ tags:
  <li>People who don't speak the language of the video might want a text transcript or even translation to help them understand the media content.</li>
 </ul>
 
-<p>Wouldn't it be nice to be able to provide these people with a transcript of the words being spoken in the audio/video? Well, thanks to HTML video, you can. To do so we use the <a href="/en-US/docs/Web/API/Web_Video_Text_Tracks_Format">WebVTT</a> file format and the {{htmlelement("track")}} element.</p>
+<p>Wouldn't it be nice to be able to provide these people with a transcript of the words being spoken in the audio/video? Well, thanks to HTML video, you can. To do so we use the <a href="/en-US/docs/Web/API/WebVTT_API">WebVTT</a> file format and the {{htmlelement("track")}} element.</p>
 
 <div class="note">
 <p><strong>Note</strong>: "Transcribe" means "to write down spoken words as text." The resulting text is a "transcript."</p>
@@ -227,7 +229,7 @@ tags:
 
 <p>A typical WebVTT file will look something like this:</p>
 
-<pre class="eval line-numbers  language-html notranslate"><code class="language-html">WEBVTT
+<pre class="eval line-numbers  language-html"><code class="language-html">WEBVTT
 
 1
 00:00:22.230 --&gt; 00:00:24.606
@@ -249,7 +251,7 @@ This is the second.
 
 <p>Here's an example:</p>
 
-<pre class="brush: html notranslate">&lt;video controls&gt;
+<pre class="brush: html">&lt;video controls&gt;
     &lt;source src="example.mp4" type="video/mp4"&gt;
     &lt;source src="example.webm" type="video/webm"&gt;
     &lt;track kind="subtitles" src="subtitles_es.vtt" srclang="es" label="Spanish"&gt;
@@ -257,9 +259,9 @@ This is the second.
 
 <p>This will result in a video that has subtitles displayed, kind of like this:</p>
 
-<p><img alt='Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."' src="https://mdn.mozillademos.org/files/7887/video-player-with-captions.png" style="display: block; height: 365px; margin: 0px auto; width: 593px;"></p>
+<p><img alt='Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."' src="video-player-with-captions.png" style="display: block; margin: 0px auto;"></p>
 
-<p>For more details, including on how to add labels please read <a href="/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a>. You can <a href="https://iandevlin.github.io/mdn/video-player-with-captions/">find the example</a> that goes along with this article on Github, written by Ian Devlin (see the <a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions">source code</a> too.) This example uses some JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.</p>
+<p>For more details, including on how to add labels please read <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a>. You can <a href="https://iandevlin.github.io/mdn/video-player-with-captions/">find the example</a> that goes along with this article on Github, written by Ian Devlin (see the <a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions">source code</a> too.) This example uses some JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Text tracks also help you with {{glossary("SEO")}}, since search engines especially thrive on text. Text tracks even allow search engines to link directly to a spot partway through the video.</p>
@@ -295,9 +297,9 @@ This is the second.
 
 <ul>
  <li>The HTML media elements: {{htmlelement("audio")}}, {{htmlelement("video")}}, {{htmlelement("source")}}, and {{htmlelement("track")}}</li>
- <li><a href="/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a></li>
- <li><a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery">Audio and Video delivery</a>: A LOT of detail about putting audio and video onto web pages using HTML and JavaScript.</li>
- <li><a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation">Audio and Video manipulation</a>: A LOT of detail about manipulating audio and video using JavaScript (for example adding filters.)</li>
+ <li><a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a></li>
+ <li><a href="/en-US/docs/Web/Guide/Audio_and_video_delivery">Audio and Video delivery</a>: A LOT of detail about putting audio and video onto web pages using HTML and JavaScript.</li>
+ <li><a href="/en-US/docs/Web/Guide/Audio_and_video_manipulation">Audio and Video manipulation</a>: A LOT of detail about manipulating audio and video using JavaScript (for example adding filters.)</li>
  <li>Automated options to <a href="http://www.inwhatlanguage.com/blog/translate-video-audio/">translate multimedia</a>.</li>
  <li><a href="/en-US/docs/Web/Media">Web media technologies</a></li>
  <li><a href="/en-US/docs/Web/Media/Formats">Guide to media types and formats on the web</a></li>

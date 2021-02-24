@@ -2,21 +2,25 @@
 title: Navigator.contacts
 slug: Web/API/Navigator/contacts
 tags:
-  - Contact Picker API
-  - Contacts
-  - Navigator
-  - PWA
-  - Property
-  - Read-only
-  - contact picker
+- Contact Picker API
+- Contacts
+- Navigator
+- PWA
+- Property
+- Read-only
+- contact picker
 ---
 <div>{{draft}}{{DefaultAPISidebar("Contact Picker API")}}</div>
 
-<p class="summary">The <strong><code>contacts</code></strong> read-only property of the {{domxref("Navigator")}} interface returns a {{domxref('ContactsManager')}} interface which allows users to select entries from their contact list and share limited details of the selected entries with a website or application.</p>
+<p class="summary">The <strong><code>contacts</code></strong> read-only property of the
+  {{domxref("Navigator")}} interface returns a {{domxref('ContactsManager')}} interface
+  which allows users to select entries from their contact list and share limited details
+  of the selected entries with a website or application.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>ContactsManager</var> = Navigator.contacts;</pre>
+<pre
+  class="brush: js">var <var>ContactsManager</var> = Navigator.contacts;</pre>
 
 <h3 id="Return_Value">Return Value</h3>
 
@@ -26,24 +30,25 @@ tags:
 
 <p>The following code checks whether the Contact Picker API is supported.</p>
 
-<pre class="brush: js notranslate">const supported = ('contacts' in navigator &amp;&amp; 'ContactsManager' in window);
+<pre class="brush: js">const supported = ('contacts' in navigator &amp;&amp; 'ContactsManager' in window);
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Contact Picker API','#extensions-to-navigator','Navigator.contacts')}}</td>
-   <td>{{Spec2('Contact Picker API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Contact Picker
+        API','#extensions-to-navigator','Navigator.contacts')}}</td>
+      <td>{{Spec2('Contact Picker API')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -53,6 +58,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://web.dev/contact-picker/">A Contact Picker for the Web</a></li>
- <li><a href="https://contact-picker.glitch.me/">A Contact Picker demo on glitch</a></li>
+  <li><a href="https://web.dev/contact-picker/">A Contact Picker for the Web</a></li>
+  <li><a href="https://contact-picker.glitch.me/">A Contact Picker demo on glitch</a></li>
 </ul>

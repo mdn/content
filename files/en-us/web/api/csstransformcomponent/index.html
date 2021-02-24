@@ -11,9 +11,9 @@ tags:
   - Interface
   - Reference
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}</div>
+<div>{{APIRef("CSS Typed OM")}}</div>
 
-<p class="summary">The <strong><code>CSSTransformComponent</code></strong> interface of the of the {{domxref('CSS Typed Object Model API','','',' ')}} is part of the {{domxref('CSSTransformValue')}} interface.</p>
+<p class="summary">The <strong><code>CSSTransformComponent</code></strong> interface of the of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} is part of the {{domxref('CSSTransformValue')}} interface.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -28,7 +28,9 @@ tags:
  <dt>{{domxref("CSSTransformComponent.toMatrix()")}}</dt>
  <dd>Returns a new {{domxref('DOMMatrix')}} object.</dd>
  <dt>{{domxref("CSSTransformComponent.toString()")}}</dt>
- <dd>Returns a string in the form of a CSS Transforms <a href="/en-US/docs/Web/CSS/transform-function/matrix()">matrix()</a> function.</dd>
+ <dd><p>A {{domxref("DOMString")}} in the form of a CSS {{cssxref("transform-function","Transforms function")}}. </p>
+  
+  <p>This will use the value of <code>is2D</code> to return either a 2D or 3D transform. For example if the component represents {{domxref("CSSRotate")}} and <code>is2D</code> is false then the string returned will be in the form of the CSS transformation <code><a href="/en-US/docs/Web/CSS/transform-function/rotate3d()">rotate3D()</a></code> function. If true the string returned will be in the form of the 2-dimensional <code><a href="/en-US/docs/Web/CSS/transform-function/rotate()">rotate3D()</a></code> function.</p></dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>

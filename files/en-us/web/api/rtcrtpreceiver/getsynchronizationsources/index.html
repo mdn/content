@@ -2,22 +2,27 @@
 title: RTCRtpReceiver.getSynchronizationSources()
 slug: Web/API/RTCRtpReceiver/getSynchronizationSources
 tags:
-  - API
-  - Media
-  - Method
-  - RTCRtpReceiver
-  - RTP
-  - Web
-  - WebRTC
-  - getSynchronizationSources
+- API
+- Media
+- Method
+- RTCRtpReceiver
+- RTP
+- Web
+- WebRTC
+- getSynchronizationSources
 ---
 <div>{{APIRef("WebRTC API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>getSynchronizationSources()</code></strong> method of the {{domxref("RTCRtpReceiver")}} interface returns an array of {{domxref("RTCRtpContributingSource")}} instances, each corresponding to one SSRC (synchronization source) identifier received by the current <code>RTCRtpReceiver</code> in the last ten seconds.</span></p>
+<p><span class="seoSummary">The <strong><code>getSynchronizationSources()</code></strong>
+    method of the {{domxref("RTCRtpReceiver")}} interface returns an array of
+    {{domxref("RTCRtpContributingSource")}} instances, each corresponding to one SSRC
+    (synchronization source) identifier received by the current
+    <code>RTCRtpReceiver</code> in the last ten seconds.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>rtcRtpContributingSources</em> = <em>rtcRtpReceiver</em>.getContributingSources()</pre>
+<pre
+  class="brush: js">var <em>rtcRtpContributingSources</em> = <em>rtcRtpReceiver</em>.getContributingSources()</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -25,32 +30,39 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>An array of {{domxref("RTCRtpSynchronizationSource")}} instances. Each instance describes one of the synchronization sources that provided data to the incoming stream in the past ten seconds.</p>
+<p>An array of {{domxref("RTCRtpSynchronizationSource")}} instances. Each instance
+  describes one of the synchronization sources that provided data to the incoming stream
+  in the past ten seconds.</p>
 
-<p>As you'll see in the documentarion for <code>RTCRtpSynchronizationSource</code>, it inherits the properties of {{domxref("RTCRtpContributingSource")}}, including {{domxref("RTCRtpContributingSource.timestamp", "timestamp")}}, {{domxref("RTCRtpContributingSource.source", "source")}}, and {{domxref("RTCRtpContributingSource.audioLevel", "audioLevel")}}.</p>
+<p>As you'll see in the documentarion for <code>RTCRtpSynchronizationSource</code>, it
+  inherits the properties of {{domxref("RTCRtpContributingSource")}},
+  including {{domxref("RTCRtpContributingSource.timestamp",
+  "timestamp")}}, {{domxref("RTCRtpContributingSource.source", "source")}},
+  and {{domxref("RTCRtpContributingSource.audioLevel", "audioLevel")}}.</p>
 
-<p>The synchronization source objects add a {{domxref("RTCRtpSynchronizationSource.voiceActivityFlag", "voiceActivityFlag")}} property, which indicates if the last RTP packet received contained voice activity.</p>
+<p>The synchronization source objects add a
+  {{domxref("RTCRtpSynchronizationSource.voiceActivityFlag", "voiceActivityFlag")}}
+  property, which indicates if the last RTP packet received contained voice activity.</p>
 
 <h3 id="Specifications">Specifications</h3>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebRTC 1.0','#dom-rtcrtpreceiver-getsynchronizationsources','getSynchronizationSources()')}}</td>
-   <td>{{Spec2('WebRTC 1.0')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('WebRTC
+        1.0','#dom-rtcrtpreceiver-getsynchronizationsources','getSynchronizationSources()')}}
+      </td>
+      <td>{{Spec2('WebRTC 1.0')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.RTCRtpReceiver.getSynchronizationSources")}}</p>
-</div>

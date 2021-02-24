@@ -10,6 +10,8 @@ tags:
   - ServiceWorker
   - Workers
 ---
+<div>{{securecontext_header}}</div>
+
 <div>{{APIRef("Service Workers API")}}</div>
 
 <p>The <strong><code>ServiceWorker</code></strong> interface of the <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a> provides a reference to a service worker. Multiple {{glossary("browsing context", "browsing contexts")}} (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique <code>ServiceWorker</code> object.</p>
@@ -44,7 +46,7 @@ tags:
 
 <p>This code snippet is from the <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html">service worker registration-events sample</a> (<a href="https://googlechrome.github.io/samples/service-worker/registration-events/">live demo</a>). The code listens for any change in the {{domxref("ServiceWorker.state")}} and returns its value.</p>
 
-<pre class="brush: js notranslate">if ('serviceWorker' in navigator) {
+<pre class="brush: js">if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js', {
         scope: './'
     }).then(function (registration) {
@@ -71,6 +73,7 @@ tags:
     });
 } else {
     // The current browser doesn't support service workers.
+    // Perhaps it is too old or we are not in a Secure Context.
 }</pre>
 
 <h2 id="Specifications">Specifications</h2>
@@ -92,16 +95,13 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.ServiceWorker")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="https://serviceworke.rs">ServiceWorker Cookbook</a></li>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
+ <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a></li>
  <li><a href="https://github.com/mdn/sw-test">Service worker basic code example</a></li>
  <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
  <li>{{jsxref("Promise")}}</li>

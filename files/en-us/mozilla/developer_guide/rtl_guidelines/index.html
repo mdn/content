@@ -124,7 +124,7 @@ tags:
 
 <p>The most common way is by flipping the X axis:</p>
 
-<pre class="brush: css" dir="ltr">{{cssxref("transform")}}: <a href="/en-US/docs/Web/CSS/transform-function/scaleX">scaleX</a>(-1);</pre>
+<pre class="brush: css" dir="ltr">{{cssxref("transform")}}: <a href="/en-US/docs/Web/CSS/transform-function/scaleX()">scaleX</a>(-1);</pre>
 
 <h3 id="LTR_text_inside_RTL_contexts">LTR text inside RTL contexts</h3>
 
@@ -151,7 +151,7 @@ tags:
 
 <p>Since the direction of such elements is forced to LTR, the text will also be aligned to the left, which is undesirable from an UI perspective, given that is inconsistent with the rest of the RTL UI which has text usually aligned to the right. You can fix this using <code>text-align: match-parent</code>. In the following screenshot, both text fields (username and password) and the URL have their direction set to LTR (to display text correctly), but the text itself is aligned to the right for consistency with the rest of the UI:</p>
 
-<p><img alt="about:logins textboxes in RTL layout" src="https://mdn.mozillademos.org/files/16969/about-logins-rtl.png" style="height: 280px; width: 300px;"></p>
+<p><img alt="about:logins textboxes in RTL layout" src="about-logins-rtl.png"></p>
 
 <p>However, since the direction in LTR, this also means that the start/end properties will correspond to left/right respectively, which is probably not what you expect. This means you have to use extra rules instead of using logical properties.</p>
 
@@ -191,7 +191,7 @@ tags:
 <div class="notecard note">
 <p>When testing with <code>intl.uidirection</code> set to <code>1</code>, you may see some oddities regarding text ordering due to the nature of displaying LTR text in RTL layout.</p>
 
-<p><img alt="about:protections in RTL layout- English vs. Hebrew" src="https://mdn.mozillademos.org/files/16970/about-protections-rtl.png" style="height: 124px; width: 350px;"></p>
+<p><img alt="about:protections in RTL layout- English vs. Hebrew" src="about-protections-rtl.png"></p>
 
 <p>This shouldn't be an issue when using an actual RTL locale or with <span dir="auto"><code class="c-mrkdwn__code"><span class="c-mrkdwn__highlight">intl.l10n.pseudo</span></code> set to <code class="c-mrkdwn__code">bidi</code> .</span></p>
 </div>

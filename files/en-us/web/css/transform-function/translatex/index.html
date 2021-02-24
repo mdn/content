@@ -14,19 +14,18 @@ tags:
     href="/en-US/docs/Web/CSS/CSS_Functions">function</a> repositions an element horizontally on the 2D plane. Its
   result is a {{cssxref("&lt;transform-function&gt;")}} data type.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/3544/transform-functions-translateX_2.png"
-    style="height: 146px; width: 243px;"></p>
+<p><img alt="" src="transform-functions-translatex_2.png"></p>
 
 <div class="note">
   <p><strong>Note:</strong> <code>translateX(tx)</code> is equivalent to
-    <code><a href="/en-US/docs/Web/CSS/transform-function/translate">translate</a>(tx, 0)</code> or
-    <code><a href="/en-US/docs/Web/CSS/transform-function/translate3d">translate3d</a>(tx, 0, 0)</code>.
+    <code><a href="/en-US/docs/Web/CSS/transform-function/translate()">translate</a>(tx, 0)</code> or
+    <code><a href="/en-US/docs/Web/CSS/transform-function/translate3d()">translate3d</a>(tx, 0, 0)</code>.
   </p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">/* &lt;length-percentage&gt; values */
+<pre class="brush: css">/* &lt;length-percentage&gt; values */
 transform: translateX(200px);
 transform: translateX(50%);
 </pre>
@@ -204,20 +203,20 @@ transform: translateX(50%);
 
 <h3 id="Formal_syntax">Formal syntax</h3>
 
-<pre class="syntaxbox notranslate">translateX({{cssxref("&lt;length-percentage&gt;")}})
+<pre class="brush: css">translateX({{cssxref("&lt;length-percentage&gt;")}})
 </pre>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;div&gt;Static&lt;/div&gt;
+<pre class="brush: html">&lt;div&gt;Static&lt;/div&gt;
 &lt;div class="moved"&gt;Moved&lt;/div&gt;
 &lt;div&gt;Static&lt;/div&gt;</pre>
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   width: 60px;
   height: 60px;
   background-color: skyblue;

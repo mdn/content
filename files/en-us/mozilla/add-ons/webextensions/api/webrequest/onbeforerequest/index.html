@@ -29,11 +29,11 @@ tags:
 
 <p>From Firefox 52 onwards, instead of returning <code>BlockingResponse</code>, the listener can return a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> which is resolved with a <code>BlockingResponse</code>. This enables the listener to process the request asynchronously.</p>
 
-<p>If you use <code>"blocking"</code>, you must have the <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">"webRequestBlocking" API permission</a> in your manifest.json.</p>
+<p>If you use <code>"blocking"</code>, you must have the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">"webRequestBlocking" API permission</a> in your manifest.json.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.webRequest.onBeforeRequest.addListener(
+<pre class="brush:js">browser.webRequest.onBeforeRequest.addListener(
   listener,             // function
   filter,               //  object
   extraInfoSpec         //  optional array of strings
@@ -203,7 +203,7 @@ browser.webRequest.onBeforeRequest.hasListener(listener)
 
 <h2 id="Examples">Examples</h2>
 
-<p>This code logs the URL for every resource requested which matches the <a href="/en-US/Add-ons/WebExtensions/Match_patterns#all_urls">&lt;all_urls&gt;</a> pattern:</p>
+<p>This code logs the URL for every resource requested which matches the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns#all_urls">&lt;all_urls&gt;</a> pattern:</p>
 
 <pre class="brush: js">function logURL(requestDetails) {
   console.log("Loading: " + requestDetails.url);

@@ -2,38 +2,54 @@
 title: PerformanceEntry.startTime
 slug: Web/API/PerformanceEntry/startTime
 tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
+- API
+- Property
+- Reference
+- Web Performance
 ---
 <div>{{APIRef("Performance Timeline API")}}</div>
 
-<p>The <strong><code>startTime</code></strong> property returns the first recorded {{domxref("DOMHighResTimeStamp","timestamp")}} of the {{domxref("PerformanceEntry","performance entry")}}.</p>
+<p>The <strong><code>startTime</code></strong> property returns the first recorded
+  {{domxref("DOMHighResTimeStamp","timestamp")}} of the
+  {{domxref("PerformanceEntry","performance entry")}}.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
-<p>The value returned by this property depends on the performance entry's {{domxref("PerformanceEntry.entryType","type")}}:</p>
+<p>The value returned by this property depends on the performance entry's
+  {{domxref("PerformanceEntry.entryType","type")}}:</p>
 
 <ul>
- <li>"<code>frame</code>" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the frame was started.</li>
- <li>"<code>mark</code>" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the mark was created by a call to {{domxref("Performance.mark","performance.mark()")}}.</li>
- <li>"<code>measure</code>" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the measure was created by a call to {{domxref("Performance.measure","performance.measure()")}}.</li>
- <li>"<code>navigation</code>" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}} with a value of "<code>0</code>".</li>
- <li>"<code>resource</code>" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}} immediately before the browser {{domxref("PerformanceEntry.fetchStart","starts fetching the resource")}}.</li>
+  <li>"<code>frame</code>" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}}
+    when the frame was started.</li>
+  <li>"<code>mark</code>" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}}
+    when the mark was created by a call to
+    {{domxref("Performance.mark","performance.mark()")}}.</li>
+  <li>"<code>measure</code>" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}}
+    when the measure was created by a call to
+    {{domxref("Performance.measure","performance.measure()")}}.</li>
+  <li>"<code>navigation</code>" - returns the
+    {{domxref("DOMHighResTimeStamp","timestamp")}} with a value of "<code>0</code>".</li>
+  <li>"<code>resource</code>" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}}
+    immediately before the browser {{domxref("PerformanceEntry.fetchStart","starts
+    fetching the resource")}}.</li>
 </ul>
 
 <p>This property is {{readonlyInline}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>entry</em>.startTime;</pre>
+<pre class="brush: js"><em>entry</em>.startTime;</pre>
 
 <h3 id="Return_Value">Return value</h3>
 
-<p>A {{domxref("DOMHighResTimeStamp")}} representing the first timestamp when the {{domxref("PerformanceEntry","performance entry")}} was created.</p>
+<p>A {{domxref("DOMHighResTimeStamp")}} representing the first timestamp when the
+  {{domxref("PerformanceEntry","performance entry")}} was created.</p>
 
-<p class="note">Note: if the performance entry has an {{domxref("PerformanceEntry.entryType","entryType")}} of "<code>resource</code>" (i.e. the entry is a {{domxref("PerformanceResourceTiming")}} object), this property returns the {{domxref("PerformanceEntry.fetchStart")}} {{domxref("DOMHighResTimeStamp","timestamp")}}.</p>
+<p class="note">Note: if the performance entry has an
+  {{domxref("PerformanceEntry.entryType","entryType")}} of "<code>resource</code>" (i.e.
+  the entry is a {{domxref("PerformanceResourceTiming")}} object), this property returns
+  the {{domxref("PerformanceEntry.fetchStart")}}
+  {{domxref("DOMHighResTimeStamp","timestamp")}}.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -87,28 +103,27 @@ function check_PerformanceEntry(obj) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Performance Timeline Level 2', '#dom-performanceentry-starttime', 'startTime')}}</td>
-   <td>{{Spec2('Performance Timeline Level 2')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Performance Timeline', '#dom-performanceentry-starttime', 'startTime')}}</td>
-   <td>{{Spec2('Performance Timeline')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Performance Timeline Level 2', '#dom-performanceentry-starttime',
+        'startTime')}}</td>
+      <td>{{Spec2('Performance Timeline Level 2')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('Performance Timeline', '#dom-performanceentry-starttime',
+        'startTime')}}</td>
+      <td>{{Spec2('Performance Timeline')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.PerformanceEntry.startTime")}}</p>
-</div>

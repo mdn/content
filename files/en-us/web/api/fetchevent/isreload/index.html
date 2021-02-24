@@ -2,23 +2,28 @@
 title: FetchEvent.isReload
 slug: Web/API/FetchEvent/isReload
 tags:
-  - API
-  - Experimental
-  - FetchEvent
-  - Property
-  - Reference
-  - Service
-  - Service Workers
-  - Workers
-  - isReload
+- API
+- Experimental
+- FetchEvent
+- Property
+- Reference
+- Service
+- Service Workers
+- Workers
+- isReload
 ---
-<div>{{APIRef("Service Workers API")}}{{Obsolete_Header}}</div>
+<div>{{APIRef("Service Workers API")}}{{deprecated_header}}</div>
 
-<p>The <strong><code>isReload</code></strong> read-only property of the {{domxref("FetchEvent")}} interface returns <code>true</code> if the event was dispatched by the user attempting to reload the page, and <code>false</code> otherwise. Pressing the refresh button is a reload while clicking a link and pressing the back button is not.</p>
+<p>The <strong><code>isReload</code></strong> read-only property of the
+  {{domxref("FetchEvent")}} interface returns <code>true</code> if the event was
+  dispatched by the user attempting to reload the page, and <code>false</code> otherwise.
+  Pressing the refresh button is a reload while clicking a link and pressing the back
+  button is not.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>reloaded</em> = <em>FetchEvent</em>.isReload</pre>
+<pre
+  class="brush: js">var <em>reloaded</em> = <em>FetchEvent</em>.isReload</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -43,9 +48,14 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a class="external external-icon" href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
+  <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service
+      Workers</a></li>
+  <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Service
+      workers basic code example</a></li>
+  <li><a class="external external-icon"
+      href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker
+      ready?</a></li>
+  <li>{{jsxref("Promise")}}</li>
+  <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a>
+  </li>
 </ul>

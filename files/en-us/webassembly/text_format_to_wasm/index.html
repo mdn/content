@@ -23,7 +23,7 @@ tags:
 
 <p>Let’s look at a simple example of this — the following program imports a function called <code>imported_func</code> from a module called <code>imports</code>, and exports a function called <code>exported_func</code>:</p>
 
-<pre class="brush: wasm; notranslate">(module
+<pre class="brush: wasm">(module
   (func $i (import "imports" "imported_func") (param i32))
   (func (export "exported_func")
     i32.const 42
@@ -42,7 +42,7 @@ tags:
  <li>We need to assemble this textual representation into the assembly language the browser actually reads before we can use it. To do this, we can use the wabt tool, which includes compilers to convert between WebAssembly’s text representation and wasm, and vice versa, plus more besides. Go to <a href="https://github.com/webassembly/wabt">https://github.com/webassembly/wabt</a> — follow the instructions on this page to set up the tool.</li>
  <li>Once you’ve got the tool built, add the <code>/wabt/out/clang/Debug</code> directory to your system <code>PATH</code>.</li>
  <li>Next, execute the wat2wasm program, passing it the path to the input file, followed by an <code>-o</code> parameter, followed by the path to the output file:
-  <pre class="brush: bash; no-line-numbers notranslate">wat2wasm simple.wat -o simple.wasm</pre>
+  <pre class="brush: bash no-line-numbers">wat2wasm simple.wat -o simple.wasm</pre>
  </li>
 </ol>
 
@@ -56,7 +56,7 @@ tags:
 
 <p>Because the output file is assembly-based, it can’t be viewed in a normal text editor. However, you can view it using the wat2wasm tool’s <code>-v</code> option. Try this:</p>
 
-<pre class="brush: bash; no-line-numbers notranslate">wat2wasm simple.wat -v</pre>
+<pre class="brush: bash no-line-numbers">wat2wasm simple.wat -v</pre>
 
 <p>This will give you an output in your terminal in the following way:</p>
 

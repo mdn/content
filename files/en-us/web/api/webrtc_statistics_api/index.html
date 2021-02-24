@@ -23,7 +23,7 @@ tags:
 
 <p>That function, in turn, uses {{domxref("RTCPeerConnection.getStats", "getStats()")}} to obtain statistics for the connection and to make use of that data.</p>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   myPeerConnection = new RTCPeerConnection(pcOptions);
 
   statsInterval = window.setInterval(getConnectionStats, 1000);

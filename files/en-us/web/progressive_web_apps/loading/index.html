@@ -47,7 +47,7 @@ tags:
 
 <p>Besides JavaScript and CSS, websites will likely contain a number of images. When you include {{htmlelement("img")}} elements in your HTML, then every referenced image will be fetched and downloaded during initial website access. It's not unusual to have megabytes of image data to download before announcing the site is ready, but this again creates a bad perception of performance. We don't need all of the images in the best possible quality at the very beginning of viewing the site.</p>
 
-<p>This can be optimized. First of all, you should use tools or services similar to <a href="https://tinypng.com/">TinyPNG</a>, which will reduce the file size of your images without altering the quality too much. If you're past that point, then you can start thinking about optimizing the image loading using JavaScript. We'll expain this below.</p>
+<p>This can be optimized. First of all, you should use tools or services similar to <a href="https://tinypng.com/">TinyPNG</a>, which will reduce the file size of your images without altering the quality too much. If you're past that point, then you can start thinking about optimizing the image loading using JavaScript. We'll explain this below.</p>
 
 <h3 id="Placeholder_image">Placeholder image</h3>
 
@@ -80,7 +80,7 @@ const loadImages = (image) =&gt; {
 
 <p>To make the whole process more visually appealing, the placeholder is blurred in CSS.</p>
 
-<p><img alt="Screenshot of placeholder images in the js13kPWA app." src="https://mdn.mozillademos.org/files/15992/js13kpwa-placeholders.png" style="height: 684px; width: 675px;"></p>
+<p><img alt="Screenshot of placeholder images in the js13kPWA app." src="js13kpwa-placeholders.png"></p>
 
 <p>We render the images with a blur at the beginning, so a transition to the sharp one can be achieved:</p>
 

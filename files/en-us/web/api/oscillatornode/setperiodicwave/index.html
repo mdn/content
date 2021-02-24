@@ -2,30 +2,35 @@
 title: OscillatorNode.setPeriodicWave()
 slug: Web/API/OscillatorNode/setPeriodicWave
 tags:
-  - API
-  - Method
-  - OscillatorNode
-  - Reference
-  - Web Audio API
-  - setPeriodicWave
+- API
+- Method
+- OscillatorNode
+- Reference
+- Web Audio API
+- setPeriodicWave
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<p>The <strong><code>setPeriodicWave()</code></strong> method of the {{ domxref("OscillatorNode") }} interface is used to point to a {{domxref("PeriodicWave")}} defining a periodic waveform that can be used to shape the oscillator's output, when {{domxref("OscillatorNode.type", "type")}} is <code>custom</code>.</p>
+<p>The <strong><code>setPeriodicWave()</code></strong> method of the {{
+  domxref("OscillatorNode") }} interface is used to point to a {{domxref("PeriodicWave")}}
+  defining a periodic waveform that can be used to shape the oscillator's output, when
+  {{domxref("OscillatorNode.type", "type")}} is <code>custom</code>.</p>
 
 <div class="note">
-<p>This replaces the now-obsolete {{ domxref("OscillatorNode.setWaveTable()")}}.</p>
+  <p>This replaces the now-obsolete {{ domxref("OscillatorNode.setWaveTable()")}}.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>OscillatorNode</em>.setPeriodicWave(<em>wave</em>);</pre>
+<pre
+  class="brush: js"><em>OscillatorNode</em>.setPeriodicWave(<em>wave</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>wave</code></dt>
- <dd>A {{domxref("PeriodicWave")}} object representing the waveform to use as the shape of the oscillator's output.</dd>
+  <dt><code>wave</code></dt>
+  <dd>A {{domxref("PeriodicWave")}} object representing the waveform to use as the shape
+    of the oscillator's output.</dd>
 </dl>
 
 <h3 id="Returns">Returns</h3>
@@ -34,7 +39,8 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>The following example illustrates simple usage of <code>createPeriodicWave()</code>, recreating a sine wave from a periodic wave.</p>
+<p>The following example illustrates simple usage of <code>createPeriodicWave()</code>,
+  recreating a sine wave from a periodic wave.</p>
 
 <pre class="brush: js;highlight[13]">var real = new Float32Array(2);
 var imag = new Float32Array(2);
@@ -55,39 +61,49 @@ osc.connect(ac.destination);
 osc.start();
 osc.stop(2);</pre>
 
-<p>This works because a sound that contains only a fundamental tone is by definition a sine wave.<br>
- <br>
- Here, we create a {{domxref("PeriodicWave")}} with two values. The first value is the DC offset, which is the value at which the oscillator starts. 0 is good here, because we want to start the curve at the middle of the [-1.0; 1.0] range.</p>
+<p>This works because a sound that contains only a fundamental tone is by definition a
+  sine wave.<br>
+  <br>
+  Here, we create a {{domxref("PeriodicWave")}} with two values. The first value is the DC
+  offset, which is the value at which the oscillator starts. 0 is good here, because we
+  want to start the curve at the middle of the [-1.0; 1.0] range.
+</p>
 
-<p>The second and subsequent values are sine and cosine components. You can think of it as the result of a Fourier transform, where you get frequency domain values from time domain value. Here, with <code>createPeriodicWave()</code>, you specify the frequencies, and the browser performs a an inverse Fourier transform to get a time domain buffer for the frequency of the oscillator. Here, we only set one component at full volume (1.0) on the fundamental tone, so we get a sine wave.</p>
+<p>The second and subsequent values are sine and cosine components. You can think of it as
+  the result of a Fourier transform, where you get frequency domain values from time
+  domain value. Here, with <code>createPeriodicWave()</code>, you specify the frequencies,
+  and the browser performs a an inverse Fourier transform to get a time domain buffer for
+  the frequency of the oscillator. Here, we only set one component at full volume (1.0) on
+  the fundamental tone, so we get a sine wave.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-oscillatornode-setperiodicwave', 'setPeriodicWave')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web Audio API', '#dom-oscillatornode-setperiodicwave',
+        'setPeriodicWave')}}</td>
+      <td>{{Spec2('Web Audio API')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.OscillatorNode.setPeriodicWave")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
- <li><a href="/en-US/docs/Web/API/AudioContext/createPeriodicWave">AudioContext.createPeriodicWave</a></li>
+  <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  </li>
+  <li><a
+      href="/en-US/docs/Web/API/AudioContext/createPeriodicWave">AudioContext.createPeriodicWave</a>
+  </li>
 </ul>

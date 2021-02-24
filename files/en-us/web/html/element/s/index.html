@@ -58,7 +58,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: html notranslate">&lt;s&gt;Today's Special: Salmon&lt;/s&gt; SOLD OUT&lt;br&gt;
+<pre class="brush: html">&lt;s&gt;Today's Special: Salmon&lt;/s&gt; SOLD OUT&lt;br&gt;
 &lt;span style="text-decoration:line-through;"&gt;Today's Special:
   Salmon&lt;/span&gt; SOLD OUT</pre>
 
@@ -68,7 +68,7 @@ tags:
 
 <p>The presence of the <code>s</code> element is not announced by most screen reading technology in its default configuration. It can be made to be announced by using the CSS {{cssxref("content")}} property, along with the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements.</p>
 
-<pre class="brush: css notranslate">s::before,
+<pre class="brush: css">s::before,
 s::after {
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);

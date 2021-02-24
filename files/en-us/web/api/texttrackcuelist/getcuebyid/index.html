@@ -1,0 +1,73 @@
+---
+title: TextTrackCueList.getCueById()
+slug: Web/API/TextTrackCueList/getCueById
+tags:
+  - API
+  - Method
+  - Reference
+  - getCueById()
+  - TextTrackCueList
+  - WebVTT
+  - Media
+---
+<div>{{APIRef("WebVTT")}}</div>
+
+<p class="summary">The <strong><code>getCueById()</code></strong> method of the {{domxref("TextTrackCueList")}} interface returns the first {{domxref("VTTCue")}} in the list represented by the <code>TextTrackCueList</code> object whose identifier matches the value of <code>id</code>.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <var>cue</var> = <var>TextTrackCueList</var>.getCueById(<var>id</var>);</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt>id</dt>
+  <dd>A {{domxref("DOMString")}} which is an identifier for the cue.</dd>
+</dl>
+
+<h3 id="Returns">Return value</h3>
+
+<p>A {{domxref("VTTCue")}} object.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The {{domxref("TextTrack.cues")}} property returns a {{domxref("TextTrackCueList")}} containing the current cues for that particular track. Calling <code>cues.getCueById("second")</code> returns the {{domxref("VTTCue")}} with an ID of "second".</p>
+
+<pre>WEBVTT
+
+first
+00:00:00.000 --> 00:00:00.999  line:80%
+Hildy!
+
+second
+00:00:01.000 --> 00:00:01.499 line:80%
+How are you?
+</pre>
+
+<pre class="brush: js">let video = document.getElementById("video");
+video.onplay = function () {
+  console.log(video.textTracks[0].cues.getCueById("second")) // a VTTCue object;
+}</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+    <td>{{ SpecName('HTML WHATWG', '#dom-texttrackcuelist-length', 'TextTrackCueList.length') }}</td>
+    <td>{{ Spec2('HTML WHATWG') }}</td>
+    <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.TextTrackCueList.getCueById")}}</p>

@@ -4,31 +4,33 @@ slug: Web/API/CharacterData
 tags:
   - API
   - DOM
+  - Interface
+  - Node
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p>The <code><strong>CharacterData</strong></code> abstract interface represents a {{domxref("Node")}} object that contains characters. This is an abstract interface, meaning there aren't any object of type <code>CharacterData</code>: it is implemented by other interfaces, like {{domxref("Text")}}, {{domxref("Comment")}}, or {{domxref("ProcessingInstruction")}} which aren't abstract.</p>
+<p>The <code><strong>CharacterData</strong></code> abstract interface represents a {{domxref("Node")}} object that contains characters. This is an abstract interface, meaning there aren't any objects of type <code>CharacterData</code>: it is implemented by other interfaces like {{domxref("Text")}}, {{domxref("Comment")}}, or {{domxref("ProcessingInstruction")}}, which aren't abstract.</p>
 
 <p>{{InheritanceDiagram}}</p>
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>Inherits properties from its parent, {{domxref("Node")}}, and implements the {{domxref("ChildNode")}} and {{domxref("NonDocumentTypeChildNode")}} interface.</em></p>
+<p><em><code>CharacterData</code> inherits properties from its parent, {{domxref("Node")}}.</em></p>
 
 <dl>
  <dt>{{domxref("CharacterData.data")}}</dt>
  <dd>Is a {{domxref("DOMString")}} representing the textual data contained in this object.</dd>
  <dt>{{domxref("CharacterData.length")}} {{readonlyInline}}</dt>
  <dd>Returns an <code>unsigned long</code> representing the size of the string contained in <code>CharacterData.data</code>.</dd>
- <dt>{{domxref("NonDocumentTypeChildNode.nextElementSibling")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("CharacterData.nextElementSibling")}} {{readonlyInline}}</dt>
  <dd>Returns the {{domxref("Element")}} immediately following the specified one in its parent's children list, or <code>null</code> if the specified element is the last one in the list.</dd>
- <dt>{{domxref("NonDocumentTypeChildNode.previousElementSibling")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("CharacterData.previousElementSibling")}} {{readonlyInline}}</dt>
  <dd>Returns the {{domxref("Element")}} immediately prior to the specified one in its parent's children list, or <code>null</code> if the specified element is the first one in the list.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>Inherits methods from its parent, {{domxref("Node")}}, and implements the {{domxref("ChildNode")}} and {{domxref("NonDocumentTypeChildNode")}} interface.</em></p>
+<p><em><code>CharacterData</code> inherits methods from its parent, {{domxref("Node")}}.</em></p>
 
 <dl>
  <dt>{{domxref("CharacterData.appendData()")}}</dt>
@@ -57,7 +59,7 @@ tags:
   <tr>
    <td>{{SpecName('DOM WHATWG', '#characterdata', 'CharacterData')}}</td>
    <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Added implemention of the {{domxref("ChildNode")}} and {{domxref("NonDocumentTypeChildNode")}} interface.</td>
+   <td>Added implementation of the {{domxref("ChildNode")}} and {{domxref("NonDocumentTypeChildNode")}} interface.</td>
   </tr>
   <tr>
    <td>{{SpecName('DOM3 Core', 'core.html#ID-FF21A306', 'CharacterData')}}</td>
@@ -83,12 +85,10 @@ tags:
 <p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 </div>
 
-
 <p>{{Compat("api.CharacterData")}}</p>
 
 <h2 id="See_also">See also</h2>
 
-
 <ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a>.</li>
+ <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a>.</li>
 </ul>

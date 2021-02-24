@@ -2,25 +2,30 @@
 title: URLSearchParams.toString()
 slug: Web/API/URLSearchParams/toString
 tags:
-  - API
-  - Method
-  - URL API
-  - URLSearchParams
-  - toString
+- API
+- Method
+- URL API
+- URLSearchParams
+- toString
 ---
 <p>{{ApiRef("URL API")}}</p>
 
-<p>The <strong><code>toString()</code></strong> method of the {{domxref("URLSearchParams")}} interface returns a query string suitable for use in a URL.</p>
+<p>The <strong><code>toString()</code></strong> method of the
+  {{domxref("URLSearchParams")}} interface returns a query string suitable for use in a
+  URL.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: This method returns the query string without the question mark. This is different from <a href="/en-US/docs/Web/API/HTMLHyperlinkElementUtils/search">window.location.search</a>, which includes it.</p>
+  <p><strong>Note</strong>: This method returns the query string without the question
+    mark. This is different from <a
+      href="/en-US/docs/Web/API/HTMLHyperlinkElementUtils/search">window.location.search</a>,
+    which includes it.</p>
 </div>
 
 <p>{{availableinworkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">URLSearchParams.toString()</pre>
+<pre class="brush: js">URLSearchParams.toString()</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -28,11 +33,12 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{domxref("DOMString")}}, without the question mark. (Returns an empty string if no search parameters have been set.)</p>
+<p>A {{domxref("DOMString")}}, without the question mark. (Returns an empty string if no
+  search parameters have been set.)</p>
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">let url = new URL('https://example.com?foo=1&amp;bar=2');
+<pre class="brush: js">let url = new URL('https://example.com?foo=1&amp;bar=2');
 let params = new URLSearchParams(url.search.slice(1));
 
 //Add a second foo parameter.
@@ -51,32 +57,32 @@ let params = new URLSearchParams('foo=1&amp;bar=2');
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('URL', '#interface-urlsearchparams', "toString() (see \"stringifier\")")}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('URL', '#interface-urlsearchparams', "toString() (see
+        \"stringifier\")")}}</td>
+      <td>{{Spec2('URL')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.URLSearchParams.toString")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{domxref("URL")}} interface.</li>
- <li><a href="https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en">Google Developers: Easy URL manipulation with URLSearchParams</a></li>
+  <li>The {{domxref("URL")}} interface.</li>
+  <li><a
+      href="https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en">Google
+      Developers: Easy URL manipulation with URLSearchParams</a></li>
 </ul>

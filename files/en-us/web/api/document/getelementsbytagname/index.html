@@ -2,33 +2,52 @@
 title: Document.getElementsByTagName()
 slug: Web/API/Document/getElementsByTagName
 tags:
-  - API
-  - DOM
-  - Method
-  - Reference
+- API
+- DOM
+- Method
+- Reference
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <strong><code>getElementsByTagName</code></strong> method of {{domxref("Document")}} interface <span class="seoSummary">returns an {{domxref("HTMLCollection")}} of elements with the given tag name.</span> The complete document is searched, including the root node. The returned <code>HTMLCollection</code> is live, meaning that it updates itself automatically to stay in sync with the DOM tree without having to call <code>document.getElementsByTagName()</code> again.</p>
+<p>The <strong><code>getElementsByTagName</code></strong> method of
+  {{domxref("Document")}} interface <span class="seoSummary">returns an
+    {{domxref("HTMLCollection")}} of elements with the given tag name.</span> The complete
+  document is searched, including the root node. The returned <code>HTMLCollection</code>
+  is live, meaning that it updates itself automatically to stay in sync with the DOM tree
+  without having to call <code>document.getElementsByTagName()</code> again.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>elements</var> = document.getElementsByTagName(<var>name</var>);</pre>
+<pre
+  class="brush: js">var <var>elements</var> = document.getElementsByTagName(<var>name</var>);</pre>
 
 <ul>
- <li><var>elements</var> is a live {{domxref("HTMLCollection")}} (but see the note below) of found elements in the order they appear in the tree.</li>
- <li><var>name</var> is a string representing the name of the elements. The special string "*" represents all elements.</li>
+  <li><var>elements</var> is a live {{domxref("HTMLCollection")}} (but see the note below)
+    of found elements in the order they appear in the tree.</li>
+  <li><var>name</var> is a string representing the name of the elements. The special
+    string "*" represents all elements.</li>
 </ul>
 
-<div class="note"><a href="https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">The latest W3C specification</a> says <var>elements</var> is an <code>HTMLCollection</code>; however, this method returns a {{domxref("NodeList")}} in WebKit browsers. See {{bug(14869)}} for details.</div>
+<div class="note"><a href="https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">The
+    latest W3C specification</a> says <var>elements</var> is an
+  <code>HTMLCollection</code>; however, this method returns a {{domxref("NodeList")}} in
+  WebKit browsers. See {{bug(14869)}} for details.</div>
 
 <h2 id="Example">Example</h2>
 
-<p>In the following example, <code>getElementsByTagName()</code> starts from a particular parent element and searches top-down recursively through the DOM from that parent element, building a collection of all descendant elements which match the tag <code>name</code> parameter. This demonstrates both <code>document.getElementsByTagName()</code> and the functionally identical {{domxref("Element.getElementsByTagName()")}}, which starts the search at a specific element within the DOM tree.</p>
+<p>In the following example, <code>getElementsByTagName()</code> starts from a particular
+  parent element and searches top-down recursively through the DOM from that parent
+  element, building a collection of all descendant elements which match the tag
+  <code>name</code> parameter. This demonstrates both
+  <code>document.getElementsByTagName()</code> and the functionally identical
+  {{domxref("Element.getElementsByTagName()")}}, which starts the search at a specific
+  element within the DOM tree.</p>
 
-<p>Clicking the buttons uses <code>getElementsByTagName()</code> to count the descendant paragraph elements of a particular parent (either the document itself or one of two nested {{HTMLElement("div")}} elements).</p>
+<p>Clicking the buttons uses <code>getElementsByTagName()</code> to count the descendant
+  paragraph elements of a particular parent (either the document itself or one of two
+  nested {{HTMLElement("div")}} elements).</p>
 
-<pre class="brush:html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;meta charset="UTF-8" /&gt;
@@ -88,27 +107,35 @@ tags:
 
 <h2 id="Notes">Notes</h2>
 
-<p>When called on an HTML document, <code>getElementsByTagName()</code> lower-cases its argument before proceeding. This is undesirable when trying to match camelCase SVG elements in a subtree in an HTML document. {{Domxref("document.getElementsByTagNameNS()")}} is useful in that case. See also {{Bug(499656)}}.</p>
+<p>When called on an HTML document, <code>getElementsByTagName()</code> lower-cases its
+  argument before proceeding. This is undesirable when trying to match camelCase SVG
+  elements in a subtree in an HTML document.
+  {{Domxref("document.getElementsByTagNameNS()")}} is useful in that case. See also
+  {{Bug(499656)}}.</p>
 
-<p><code>document.getElementsByTagName()</code> is similar to {{domxref("Element.getElementsByTagName()")}}, except that its search encompasses the whole document.</p>
+<p><code>document.getElementsByTagName()</code> is similar to
+  {{domxref("Element.getElementsByTagName()")}}, except that its search encompasses the
+  whole document.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-document-getelementsbytagname','document.getElementsByTagName')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM
+        WHATWG','#dom-document-getelementsbytagname','document.getElementsByTagName')}}
+      </td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -118,8 +145,11 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("Element.getElementsByTagName()")}}</li>
- <li>{{domxref("document.getElementById()")}} to return a reference to an element by its <code>id</code></li>
- <li>{{domxref("document.getElementsByName()")}} to return a reference to an element by its <code>name</code></li>
- <li>{{domxref("document.querySelector()")}} for powerful selectors via queries like <code>'div.myclass'</code></li>
+  <li>{{domxref("Element.getElementsByTagName()")}}</li>
+  <li>{{domxref("document.getElementById()")}} to return a reference to an element by its
+    <code>id</code></li>
+  <li>{{domxref("document.getElementsByName()")}} to return a reference to an element by
+    its <code>name</code></li>
+  <li>{{domxref("document.querySelector()")}} for powerful selectors via queries like
+    <code>'div.myclass'</code></li>
 </ul>

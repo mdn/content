@@ -2,65 +2,93 @@
 title: Object.defineProperties()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 tags:
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Object
+- ECMAScript 5
+- JavaScript
+- Method
+- Object
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>Object.defineProperties()</code></strong> method defines new or modifies existing properties directly on an object, returning the object.</p>
+<p>The <strong><code>Object.defineProperties()</code></strong> method defines new or
+  modifies existing properties directly on an object, returning the object.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/object-defineproperties.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<div class="hidden">The source for this interactive example is stored in a GitHub
+  repository. If you'd like to contribute to the interactive examples project, please
+  clone <a
+    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
+  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">Object.defineProperties(<var>obj</var>, <var>props</var>)</pre>
+<pre
+  class="brush: js">Object.defineProperties(<var>obj</var>, <var>props</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>obj</var></code></dt>
- <dd>The object on which to define or modify properties.</dd>
- <dt><code><var>props</var></code></dt>
- <dd>An object whose keys represent the names of properties to be defined or modified and whose values are objects describing those properties. Each value in <code>props</code> must be either a data descriptor or an accessor descriptor; it cannot be both (see {{jsxref("Object.defineProperty()")}} for more details).</dd>
- <dd>Data descriptors and accessor descriptors may optionally contain the following keys:</dd>
- <dd>
- <dl>
-  <dt><code>configurable</code></dt>
-  <dd><code>true</code> if and only if the type of this property descriptor may be changed and if the property may be deleted from the corresponding object.<br>
-  <strong>Defaults to <code>false</code>.</strong></dd>
-  <dt><code>enumerable</code></dt>
-  <dd><code>true</code> if and only if this property shows up during enumeration of the properties on the corresponding object.<br>
-  <strong>Defaults to <code>false</code>.</strong></dd>
- </dl>
+  <dt><code><var>obj</var></code></dt>
+  <dd>The object on which to define or modify properties.</dd>
+  <dt><code><var>props</var></code></dt>
+  <dd>An object whose keys represent the names of properties to be defined or modified and
+    whose values are objects describing those properties. Each value in <code>props</code>
+    must be either a data descriptor or an accessor descriptor; it cannot be both (see
+    {{jsxref("Object.defineProperty()")}} for more details).</dd>
+  <dd>Data descriptors and accessor descriptors may optionally contain the following keys:
+  </dd>
+  <dd>
+    <dl>
+      <dt><code>configurable</code></dt>
+      <dd><code>true</code> if and only if the type of this property descriptor may be
+        changed and if the property may be deleted from the corresponding object.<br>
+        <strong>Defaults to <code>false</code>.</strong>
+      </dd>
+      <dt><code>enumerable</code></dt>
+      <dd><code>true</code> if and only if this property shows up during enumeration of
+        the properties on the corresponding object.<br>
+        <strong>Defaults to <code>false</code>.</strong>
+      </dd>
+    </dl>
 
- <p>A data descriptor also has the following optional keys:</p>
+    <p>A data descriptor also has the following optional keys:</p>
 
- <dl>
-  <dt><code>value</code></dt>
-  <dd>The value associated with the property. Can be any valid JavaScript value (number, object, function, etc).<br>
-  <strong>Defaults to {{jsxref("undefined")}}.</strong></dd>
-  <dt><code>writable</code></dt>
-  <dd><code>true</code> if and only if the value associated with the property may be changed with an {{jsxref("Operators/Assignment_Operators", "assignment operator", "", 1)}}.<br>
-  <strong>Defaults to <code>false</code>.</strong></dd>
- </dl>
+    <dl>
+      <dt><code>value</code></dt>
+      <dd>The value associated with the property. Can be any valid JavaScript value
+        (number, object, function, etc).<br>
+        <strong>Defaults to {{jsxref("undefined")}}.</strong>
+      </dd>
+      <dt><code>writable</code></dt>
+      <dd><code>true</code> if and only if the value associated with the property may be
+        changed with an {{jsxref("Operators/Assignment_Operators", "assignment operator",
+        "", 1)}}.<br>
+        <strong>Defaults to <code>false</code>.</strong>
+      </dd>
+    </dl>
 
- <p>An accessor descriptor also has the following optional keys:</p>
+    <p>An accessor descriptor also has the following optional keys:</p>
 
- <dl>
-  <dt><code>get</code></dt>
-  <dd>A function which serves as a getter for the property, or {{jsxref("undefined")}} if there is no getter. The function's return value will be used as the value of the property.<br>
-  <strong>Defaults to {{jsxref("undefined")}}.</strong></dd>
-  <dt><code>set</code></dt>
-  <dd>A function which serves as a setter for the property, or {{jsxref("undefined")}} if there is no setter. The function will receive as its only argument the new value being assigned to the property.<br>
-  <strong>Defaults to {{jsxref("undefined")}}.</strong></dd>
- </dl>
+    <dl>
+      <dt><code>get</code></dt>
+      <dd>A function which serves as a getter for the property, or {{jsxref("undefined")}}
+        if there is no getter. The function's return value will be used as the value of
+        the property.<br>
+        <strong>Defaults to {{jsxref("undefined")}}.</strong>
+      </dd>
+      <dt><code>set</code></dt>
+      <dd>A function which serves as a setter for the property, or {{jsxref("undefined")}}
+        if there is no setter. The function will receive as its only argument the new
+        value being assigned to the property.<br>
+        <strong>Defaults to {{jsxref("undefined")}}.</strong>
+      </dd>
+    </dl>
 
- <p>If a descriptor has neither of <code>value</code>, <code>writable</code>, <code>get</code> and <code>set</code> keys, it is treated as a data descriptor. If a descriptor has both <code>value</code> or <code>writable</code> and <code>get</code> or <code>set</code> keys, an exception is thrown.</p>
- </dd>
+    <p>If a descriptor has neither of <code>value</code>, <code>writable</code>,
+      <code>get</code> and <code>set</code> keys, it is treated as a data descriptor. If a
+      descriptor has both <code>value</code> or <code>writable</code> and <code>get</code>
+      or <code>set</code> keys, an exception is thrown.</p>
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -71,7 +99,7 @@ tags:
 
 <h3 id="Using_Object.defineProperties">Using Object.defineProperties</h3>
 
-<pre class="brush: js notranslate">var obj = {};
+<pre class="brush: js">var obj = {};
 Object.defineProperties(obj, {
   'property1': {
     value: true,
@@ -87,9 +115,12 @@ Object.defineProperties(obj, {
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>Assuming a pristine execution environment with all names and properties referring to their initial values, <code>Object.defineProperties</code> is almost completely equivalent (note the comment in <code>isCallable</code>) to the following reimplementation in JavaScript:</p>
+<p>Assuming a pristine execution environment with all names and properties referring to
+  their initial values, <code>Object.defineProperties</code> is almost completely
+  equivalent (note the comment in <code>isCallable</code>) to the following
+  reimplementation in JavaScript:</p>
 
-<pre class="brush: js;highlight:[8] notranslate">function defineProperties(obj, properties) {
+<pre class="brush: js highlight:[8]">function defineProperties(obj, properties) {
   function convertToDescriptor(desc) {
     function hasProperty(obj, prop) {
       return Object.prototype.hasOwnProperty.call(obj, prop);
@@ -154,16 +185,17 @@ Object.defineProperties(obj, {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.defineproperties', 'Object.defineProperties')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-object.defineproperties',
+        'Object.defineProperties')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -173,7 +205,9 @@ Object.defineProperties(obj, {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Enumerability and ownership of properties</a></li>
+  <li>{{jsxref("Object.defineProperty()")}}</li>
+  <li>{{jsxref("Object.keys()")}}</li>
+  <li><a
+      href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Enumerability
+      and ownership of properties</a></li>
 </ul>

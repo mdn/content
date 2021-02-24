@@ -19,11 +19,11 @@ tags:
 
 <p>You can only call this function from inside the {{WebExtAPIRef("webRequest.onHeadersReceived")}} listener. The <code>requestId</code> can be found in the <code>details</code> object which is passed into the listener.</p>
 
-<p>You must also pass the "blocking" option to <code>webRequest.onHeadersReceived.addListener()</code>. So to use this API you must have the "webRequestBlocking" <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a>, as well as the normal permissions needed for using <code>webRequest</code> listeners (the "webRequest" permission and the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission </a>for the host).</p>
+<p>You must also pass the "blocking" option to <code>webRequest.onHeadersReceived.addListener()</code>. So to use this API you must have the "webRequestBlocking" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a>, as well as the normal permissions needed for using <code>webRequest</code> listeners (the "webRequest" permission and the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permission </a>for the host).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var gettingInfo = browser.webRequest.getSecurityInfo(
+<pre class="brush:js">var gettingInfo = browser.webRequest.getSecurityInfo(
   requestId,       // string
   options          // object
 )

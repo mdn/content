@@ -37,19 +37,19 @@ tags:
 
 <p>In this basic example, an <code>EventSource</code> is created to receive events from the server; a page with the name <code>sse.php</code> is responsible for generating the events.</p>
 
-<pre class="brush: js line-numbers language-js notranslate"><code class="language-js"><span class="keyword token">var</span> evtSource <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">EventSource</span><span class="punctuation token">(</span><span class="string token">'sse.php'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> eventList <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'ul'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers language-js">var evtSource = new EventSource('sse.php');
+var eventList = document.querySelector('ul');
 
-evtSource<span class="punctuation token">.</span><span class="function function-variable token">addEventListener('message',</span> <span class="punctuation token">(</span><span class="parameter token">e</span><span class="punctuation token">) =&gt;</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> newElement <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">"li"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+evtSource.addEventListener('message', (e) =&gt; {
+  var newElement = document.createElement("li");
 
-  newElement<span class="punctuation token">.</span>textContent <span class="operator token">=</span> <span class="string token">"message: "</span> <span class="operator token">+</span> e<span class="punctuation token">.</span>data<span class="punctuation token">;</span>
-  eventList<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>newElement<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">});</span></code></pre>
+  newElement.textContent = "message: " + e.data;
+  eventList.appendChild(newElement);
+});</pre>
 
 <h3 id="onmessage_equivalent">onmessage equivalent</h3>
 
-<pre class="brush: js notranslate">evtSource.onmessage = (e) =&gt; {
+<pre class="brush: js">evtSource.onmessage = (e) =&gt; {
   var newElement = document.createElement("li");
 
   newElement.textContent = "message: " + e.data;

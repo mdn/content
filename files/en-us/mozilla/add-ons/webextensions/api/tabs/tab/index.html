@@ -38,7 +38,7 @@ tags:
  <dt><code>discarded</code> {{optional_inline}}</dt>
  <dd><code>boolean</code>. Whether the tab is discarded. A discarded tab is one whose content has been unloaded from memory, but is still visible in the tab strip. Its content gets reloaded the next time it's activated.</dd>
  <dt><code>favIconUrl</code> {{optional_inline}}</dt>
- <dd><code>string</code>. The URL of the tab's favicon. Only present if the extension has the <code>"tabs"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>. It may also be an empty string if the tab is loading.</dd>
+ <dd><code>string</code>. The URL of the tab's favicon. Only present if the extension has the <code>"tabs"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a>. It may also be an empty string if the tab is loading.</dd>
  <dt><code>height</code> {{optional_inline}}</dt>
  <dd><code>integer</code>. The height of the tab in pixels.</dd>
  <dt><code>hidden</code></dt>
@@ -56,9 +56,9 @@ tags:
  <dt><code>index</code></dt>
  <dd><code>integer</code>. The zero-based index of the tab within its window.</dd>
  <dt><code>isArticle</code></dt>
- <dd><code>boolean</code>. True if the tab can be <a href="/en-US/Add-ons/WebExtensions/API/tabs/toggleReaderMode">rendered in Reader Mode</a>, false otherwise.</dd>
+ <dd><code>boolean</code>. True if the tab can be <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode">rendered in Reader Mode</a>, false otherwise.</dd>
  <dt><code>isInReaderMode</code></dt>
- <dd><code>boolean</code>. True if the tab is currently being <a href="/en-US/Add-ons/WebExtensions/API/tabs/toggleReaderMode">rendered in Reader Mode</a>, false otherwise.</dd>
+ <dd><code>boolean</code>. True if the tab is currently being <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode">rendered in Reader Mode</a>, false otherwise.</dd>
  <dt><code>lastAccessed</code></dt>
  <dd><code>double</code>. Time at which the tab was last accessed, in <a class="external external-icon" href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>.</dd>
  <dt><code>mutedInfo</code> {{optional_inline}}</dt>
@@ -76,9 +76,9 @@ tags:
  <dt><code>successorTabId</code> {{optional_inline}}</dt>
  <dd><code>integer</code> The ID of the tab's successor.</dd>
  <dt><code>title</code> {{optional_inline}}</dt>
- <dd><code>string</code>. The title of the tab. Only present if the extension has the <code>"tabs"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</dd>
+ <dd><code>string</code>. The title of the tab. Only present if the extension has the <code>"tabs"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> that matches the tab's URL.</dd>
  <dt><code>url</code> {{optional_inline}}</dt>
- <dd><code>string</code>. The URL of the document that the tab is displaying. Only present if the extension has the <code>"tabs"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</dd>
+ <dd><code>string</code>. The URL of the document that the tab is displaying. Only present if the extension has the <code>"tabs"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> or a matching <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a>.</dd>
  <dt><code>width</code> {{optional_inline}}</dt>
  <dd><code>integer</code>. The width of the tab in pixels.</dd>
  <dt><code>windowId</code></dt>
@@ -101,7 +101,7 @@ tags:
 </div>
 
 <div class="hidden">
-<pre class="notranslate">// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are

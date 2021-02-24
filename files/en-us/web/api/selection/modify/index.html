@@ -2,44 +2,62 @@
 title: Selection.modify()
 slug: Web/API/Selection/modify
 tags:
-  - API
-  - 'API:Mozilla Extensions'
-  - 'API:WebKit Extensions'
-  - HTML Editing
-  - Method
-  - Non-standard
-  - Reference
-  - Selection
+- API
+- 'API:Mozilla Extensions'
+- 'API:WebKit Extensions'
+- HTML Editing
+- Method
+- Non-standard
+- Reference
+- Selection
 ---
 <div>{{APIRef("DOM")}}{{Non-standard_Header}}</div>
 
-<p>The <strong><code>Selection.modify()</code></strong> method applies a change to the current selection or cursor position, using simple textual commands.</p>
+<p>The <strong><code>Selection.modify()</code></strong> method applies a change to the
+  current selection or cursor position, using simple textual commands.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>sel</em>.modify(<em>alter</em>, <em>direction</em>, <em>granularity</em>)
+<pre class="brush: js"><em>sel</em>.modify(<em>alter</em>, <em>direction</em>, <em>granularity</em>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>alter</code></dt>
- <dd>The type of change to apply. Specify <code>"move"</code> to move the current cursor position or <code>"extend"</code> to extend the current selection.</dd>
- <dt><code>direction</code></dt>
- <dd>The direction in which to adjust the current selection. You can specify <code>"forward"</code> or <code>"backward"</code> to adjust in the appropriate direction based on the language at the selection point. If you want to adjust in a specific direction, you can specify <code>"left"</code> or <code>"right"</code>.</dd>
- <dt><code>granularity</code></dt>
- <dd>The distance to adjust the current selection or cursor position. You can move by <code>"character"</code>, <code>"word"</code>, <code>"sentence"</code>, <code>"line"</code>, <code>"paragraph"</code>, <code>"lineboundary"</code>, <code>"sentenceboundary"</code>, <code>"paragraphboundary"</code>, or <code>"documentboundary"</code>.</dd>
+  <dt><code>alter</code></dt>
+  <dd>The type of change to apply. Specify <code>"move"</code> to move the current cursor
+    position or <code>"extend"</code> to extend the current selection.</dd>
+  <dt><code>direction</code></dt>
+  <dd>The direction in which to adjust the current selection. You can specify
+    <code>"forward"</code> or <code>"backward"</code> to adjust in the appropriate
+    direction based on the language at the selection point. If you want to adjust in a
+    specific direction, you can specify <code>"left"</code> or <code>"right"</code>.</dd>
+  <dt><code>granularity</code></dt>
+  <dd>The distance to adjust the current selection or cursor position. You can move by
+    <code>"character"</code>, <code>"word"</code>, <code>"sentence"</code>,
+    <code>"line"</code>, <code>"paragraph"</code>, <code>"lineboundary"</code>,
+    <code>"sentenceboundary"</code>, <code>"paragraphboundary"</code>, or
+    <code>"documentboundary"</code>.</dd>
 </dl>
 
-<div class="note"><strong>Note:</strong> Gecko does <strong>not</strong> implement <code>"sentence"</code>, <code>"paragraph"</code>, <code>"sentenceboundary"</code>, <code>"paragraphboundary"</code>, or <code>"documentboundary"</code>. WebKit and Blink do.</div>
+<div class="note"><strong>Note:</strong> Gecko does <strong>not</strong> implement
+  <code>"sentence"</code>, <code>"paragraph"</code>, <code>"sentenceboundary"</code>,
+  <code>"paragraphboundary"</code>, or <code>"documentboundary"</code>. WebKit and Blink
+  do.</div>
 
 <div class="note">
-<p><strong>Note:</strong> Starting in {{Gecko("5.0")}}, the <code>"word"</code> granularity no longer includes the following space, regardless of the default platform behavior. This makes the behavior more consistent, as well as making it work the same way WebKit used to work, but unfortunately they have recently changed their behavior.</p>
+  <p><strong>Note:</strong> Starting in {{Gecko("5.0")}}, the <code>"word"</code>
+    granularity no longer includes the following space, regardless of the default platform
+    behavior. This makes the behavior more consistent, as well as making it work the same
+    way WebKit used to work, but unfortunately they have recently changed their behavior.
+  </p>
 </div>
 
 <h2 id="Example">Example</h2>
 
-<p>This example demonstrates the various <code>granularity</code> options for modifying a selection. Click somewhere inside the example (optionally selecting some text), and then click the button to expand the selection.</p>
+<p>This example demonstrates the various <code>granularity</code> options for modifying a
+  selection. Click somewhere inside the example (optionally selecting some text), and then
+  click the button to expand the selection.</p>
 
 <h3 id="HTML">HTML</h3>
 
@@ -90,5 +108,5 @@ function modify() {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{DOMxRef("Selection")}}, the interface it belongs to.</li>
+  <li>{{DOMxRef("Selection")}}, the interface it belongs to.</li>
 </ul>

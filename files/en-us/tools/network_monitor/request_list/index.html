@@ -2,7 +2,7 @@
 title: Network request list
 slug: Tools/Network_Monitor/request_list
 tags:
-  - '110n:priority'
+  - 110n:priority
   - Debugging
   - Dev Tools
   - Firefox
@@ -18,7 +18,7 @@ tags:
 
 <p>By default, the Network Monitor shows a list of all the network requests made in the course of loading the page. Each request is displayed in its own row:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16258/Network_request_list.png" style="border: 1px solid black; display: block; height: 328px; margin: 0px auto; width: 900px;">By default, the Network Monitor is cleared each time you navigate to a new page or reload the current page. You can override this behavior by checking "Enable persistent logs" in the <a href="/en-US/docs/Tools_Toolbox#Common_preferences">Settings</a>.</p>
+<p><img alt="" src="network_request_list.png" style="border: 1px solid black; display: block; margin: 0px auto;">By default, the Network Monitor is cleared each time you navigate to a new page or reload the current page. You can override this behavior by checking "Enable persistent logs" in the <a href="/en-US/docs/Tools/Tools_Toolbox#common_preferences">Settings</a>.</p>
 
 <h3 id="Network_request_columns">Network request columns</h3>
 
@@ -32,24 +32,24 @@ tags:
 
 <p>Clicking the column header label sorts the request list by that column. You can reset the sort to the default by selecting "Reset Sorting" from the context menu.</p>
 
-<p><img alt="Screenshot of the context menu for selecting columns to display in the Network monitor" src="https://mdn.mozillademos.org/files/17301/Network_monitor_columns_menu.png" style="display: block; height: 416px; margin: 0px auto; width: 248px;"></p>
+<p><img alt="Screenshot of the context menu for selecting columns to display in the Network monitor" src="network_monitor_columns_menu.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Here is a list of all available columns:</p>
 
 <ul>
- <li><strong>Status</strong>: The HTTP status code returned. The numeric code is displayed on a colored background, to help unusual ones stand out. If there was no response, this column is empty. Or you might see a <img alt="Red circle with a diagonal slash" src="https://mdn.mozillademos.org/files/17302/blocked_nw_icon.png" style="height: 17px; width: 17px;"> red circle with a diagonal slash for responses that were blocked by the browser or the server.</li>
+ <li><strong>Status</strong>: The HTTP status code returned. The numeric code is displayed on a colored background, to help unusual ones stand out. If there was no response, this column is empty. Or you might see a <img alt="Red circle with a diagonal slash" src="blocked_nw_icon.png"> red circle with a diagonal slash for responses that were blocked by the browser or the server.</li>
  <li><strong>Method</strong>: The HTTP request method used.</li>
  <li><strong>Domain</strong>: Domain of the path requested.
   <ul>
    <li>If the request used SSL/TLS and the connection had security weaknesses such as weak ciphers, you'll see a warning triangle next to the domain. Y</li>
    <li>Hover over the domain to see the IP address.</li>
-   <li>There's an icon next to the domain that gives you extra information about the security status of that request. See <a href="/en-US/docs/Tools/Network_Monitor/request_list#Security_icons">Security icons</a>.</li>
+   <li>There's an icon next to the domain that gives you extra information about the security status of that request. See <a href="/en-US/docs/Tools/Network_Monitor/request_list#security_icons">Security icons</a>.</li>
   </ul>
  </li>
  <li><strong>File</strong>: The basename of the file requested.
   <ul>
    <li>(Starting in Firefox 80) On the right edge of the File column, a turtle icon appears if the server waiting time exceeds a threshold (default: 500 ms). A tooltip explains the problem. You can configure the threshold in the <a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">Configuration Editor</a> (about:config) by modifying the <code>devtools.netmonitor.audits.slow</code> setting.</li>
-   <li><img alt="Screenshot of a network request with a turtle icon, and a tooltip explaining the problem" src="https://mdn.mozillademos.org/files/17369/nwmon-turtle-tooltip.png" style="border-style: solid; border-width: 1px; height: 58px; width: 840px;"></li>
+   <li><img alt="Screenshot of a network request with a turtle icon, and a tooltip explaining the problem" src="nwmon-turtle-tooltip.png" style="border-style: solid; border-width: 1px;"></li>
   </ul>
  </li>
  <li><strong>URL</strong>: The {{glossary("URL")}} of the file requested.</li>
@@ -73,13 +73,13 @@ tags:
 
 <p>If the request is for an Image, hovering over its filename shows a preview of the image in a tooltip:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16257/image_preview.png" style="border: 1px solid black; display: block; height: 334px; margin: 0px auto; width: 900px;"></p>
+<p><img alt="" src="image_preview.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
 <h4 id="Security_icons">Security icons</h4>
 
 <p>The Network Monitor displays an icon in the Domain column:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16194/network_message_list_63.png" style="border: 1px solid black; display: block; height: 191px; margin: 0 auto; width: 845px;"></p>
+<p><img alt="" src="network_message_list_63.png" style="border: 1px solid black; display: block; margin: 0 auto;"></p>
 
 <p>This gives you extra information about the security status of the request:</p>
 
@@ -92,27 +92,27 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/11655/https.svg" style="height: 16px; width: 16px;"></td>
+   <td><img alt="" src="https.svg"></td>
    <td>HTTPS</td>
   </tr>
   <tr>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/11653/https-weak.svg" style="height: 16px; width: 16px;"></td>
+   <td><img alt="" src="https-weak.svg"></td>
    <td>Weak HTTPS (for example, a weak cipher was used)</td>
   </tr>
   <tr>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/11649/https-failed.svg" style="height: 16px; width: 16px;"></td>
+   <td><img alt="" src="https-failed.svg"></td>
    <td>Failed HTTPS (for example, a certificate was invalid)</td>
   </tr>
   <tr>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/11651/http.svg" style="height: 16px; width: 16px;"></td>
+   <td><img alt="" src="http.svg"></td>
    <td>HTTP</td>
   </tr>
   <tr>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/11657/localhost.svg" style="height: 16px; width: 16px;"></td>
+   <td><img alt="" src="localhost.svg"></td>
    <td>Localhost</td>
   </tr>
   <tr>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/16192/tracker_icon.png" style="height: 16px; width: 16px;"></td>
+   <td><img alt="" src="tracker_icon.png"></td>
    <td>Indicates that the URL belongs to a known tracker that would be blocked with content blocking enabled.</td>
   </tr>
  </tbody>
@@ -122,15 +122,15 @@ tags:
 
 <p>The request list also displays a timeline for the different parts of each request.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16259/timeline.png" style="border: 1px solid black; display: block; height: 331px; margin: 0px auto; width: 900px;"></p>
+<p><img alt="" src="timeline.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
-<p>Each timeline is given a horizontal position in its row relative to the other network requests, so you can see the total time taken to load the page. For more details on the color-coding used here, see the section on the <a href="/en-US/docs/Tools/Network_Monitor#Timings">Timings</a> page.</p>
+<p>Each timeline is given a horizontal position in its row relative to the other network requests, so you can see the total time taken to load the page. For more details on the color-coding used here, see the section on the <a href="/en-US/docs/Tools/Network_Monitor#timings">Timings</a> page.</p>
 
 <p>Starting in Firefox 45, the timeline also contains two vertical lines:</p>
 
 <ul>
- <li>The <span style="color: blue;">blue</span> line marks the point at which the page's <code><a href="/en-US/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a></code> event is triggered.</li>
- <li>The <span style="color: red;">red</span> line marks the point at which the page's <code><a href="/en-US/docs/Web/Events/load">load</a></code> event is triggered.</li>
+ <li>The <span style="color: blue;">blue</span> line marks the point at which the page's <code><a href="/en-US/docs/Web/API/Window/DOMContentLoaded_event">DOMContentLoaded</a></code> event is triggered.</li>
+ <li>The <span style="color: red;">red</span> line marks the point at which the page's <code><a href="/en-US/docs/Web/API/Window/load_event">load</a></code> event is triggered.</li>
 </ul>
 
 <h3 id="Blocking_specific_URLs">Blocking specific URLs</h3>
@@ -139,7 +139,7 @@ tags:
 
 <ol>
  <li>Click the <strong>Request Blocking</strong> icon in the toolbar. This opens the <strong>Blocking</strong> sidebar. (Click the icon again when you want to close the sidebar.)<br>
-  <img alt="Screen shot of the Blocking panel, with arrows indicating the panel and the Request Blocking toolbar icon" src="https://mdn.mozillademos.org/files/16959/request_blocking_panel.png" style="border-style: solid; border-width: 1px; height: 918px; width: 1908px;"></li>
+  <img alt="Screen shot of the Blocking panel, with arrows indicating the panel and the Request Blocking toolbar icon" src="request_blocking_panel.png" style="border-style: solid; border-width: 1px;"></li>
  <li>Enter a string in the field with the placeholder text <em>Block resource when URL contains</em>.</li>
  <li>Reload the page to test it with the specified URL blocked.</li>
 </ol>
@@ -163,7 +163,7 @@ tags:
 
 <p>You can also block a URL from the request list:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16701/beforeBlocking.png" style="border: 1px solid black; display: block; margin: 0 auto;"></p>
+<p><img alt="" src="beforeblocking.png" style="border: 1px solid black; display: block; margin: 0 auto;"></p>
 
 <ol>
  <li>Hover over the item you want to block in the Request List.</li>
@@ -171,11 +171,11 @@ tags:
  <li>When you refresh the page, that specific URL will be blocked and a message will be added to the item in the list indicating that it has been blocked by the DevTools.</li>
 </ol>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16700/afterBlocking.png" style="border: 1px solid black; display: block; height: 865px; margin: 0px auto; width: 1136px;"></p>
+<p><img alt="" src="afterblocking.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
 <h4 id="Stop_blocking_a_URL_from_the_Request_List">Stop blocking a URL from the Request List</h4>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16702/unblockUrl.png" style="border: 1px solid black; display: block; margin: 0 auto;"></p>
+<p><img alt="" src="unblockurl.png" style="border: 1px solid black; display: block; margin: 0 auto;"></p>
 
 <ol>
  <li>Hover over the item.</li>
@@ -201,29 +201,29 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Content type</th>
-   <td>Use the buttons in the <a href="/en-US/docs/Tools/Network_Monitor#Toolbar">toolbar</a> (<strong>HTML</strong>, <strong>CSS</strong>, <strong>JS</strong>).</td>
+   <td>Use the buttons in the <a href="/en-US/docs/Tools/Network_Monitor#toolbar">toolbar</a> (<strong>HTML</strong>, <strong>CSS</strong>, <strong>JS</strong>).</td>
   </tr>
   <tr>
    <th scope="row">{{Glossary("XHR (XMLHttpRequest)", "XHR")}} requests</th>
-   <td>Use the <strong>XHR</strong> button in the <a href="/en-US/docs/Tools/Network_Monitor#Toolbar">toolbar</a>.</td>
+   <td>Use the <strong>XHR</strong> button in the <a href="/en-US/docs/Tools/Network_Monitor#toolbar">toolbar</a>.</td>
   </tr>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/API/WebSockets_API">WebSocket</a> connections</th>
-   <td>Use the <strong>WS</strong> button in the <a href="/en-US/docs/Tools/Network_Monitor#Toolbar">toolbar</a>. You can filter by plain text (in which case the text is used to find partial matches; entering "for" will match any message that contains the word "for") or—as of <a href="/en-US/docs/Mozilla/Firefox/Releases/75">Firefox 75</a>—using <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expressions</a> (by writing the regexp bracketed within slashes; "/.+Corp.*/" will look for any occurrence of "Corp" which has at least one character before it and may or may not have any characters after it, for example).
+   <td>Use the <strong>WS</strong> button in the <a href="/en-US/docs/Tools/Network_Monitor#toolbar">toolbar</a>. You can filter by plain text (in which case the text is used to find partial matches; entering "for" will match any message that contains the word "for") or—as of <a href="/en-US/docs/Mozilla/Firefox/Releases/75">Firefox 75</a>—using <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expressions</a> (by writing the regexp bracketed within slashes; "/.+Corp.*/" will look for any occurrence of "Corp" which has at least one character before it and may or may not have any characters after it, for example).
     <p>The third-party add-on <a href="https://addons.mozilla.org/en-US/firefox/addon/websocketsniff">WebSocket Sniffer</a> may be helpful as well.</p>
    </td>
   </tr>
   <tr>
    <th scope="row">URL</th>
    <td>
-    <p>Use the <em>Filter URLs</em> box in the <a href="/en-US/docs/Tools/Network_Monitor#Toolbar">toolbar</a>. You can focus it by clicking in the filter box, or by pressing <kbd>Ctrl</kbd> + <kbd>F</kbd> (or <kbd>Cmd</kbd> + <kbd>F</kbd> on a Mac); then start typing. The list of network requests is filtered to include only requests that contain your filter string, in either the Domain or the File portions.</p>
+    <p>Use the <em>Filter URLs</em> box in the <a href="/en-US/docs/Tools/Network_Monitor#toolbar">toolbar</a>. You can focus it by clicking in the filter box, or by pressing <kbd>Ctrl</kbd> + <kbd>F</kbd> (or <kbd>Cmd</kbd> + <kbd>F</kbd> on a Mac); then start typing. The list of network requests is filtered to include only requests that contain your filter string, in either the Domain or the File portions.</p>
 
     <p>You can filter requests that <em>don't</em> contain your filter string by prefixing your query with the "-" operator. For example, the query "-google.com" will show all requests that don't have "google.com" in the URL.</p>
    </td>
   </tr>
   <tr>
    <th scope="row">Request properties</th>
-   <td>Use the search box in the <a href="/en-US/docs/Tools/Network_Monitor#Toolbar">toolbar</a>. See next section.</td>
+   <td>Use the search box in the <a href="/en-US/docs/Tools/Network_Monitor#toolbar">toolbar</a>. See next section.</td>
   </tr>
  </tbody>
 </table>
@@ -262,7 +262,7 @@ tags:
   </tr>
   <tr>
    <th scope="row"><code>cause</code></th>
-   <td>Shows resources matching a specific cause type. The types can be found in the description of the <a href="#Cause_column">cause column</a>.</td>
+   <td>Shows resources matching a specific cause type. The types can be found in the description of the <a href="#cause_column">cause column</a>.</td>
    <td><code>cause:js</code><br>
     <code>cause:stylesheet<br>
     cause:img</code></td>
@@ -334,17 +334,17 @@ tags:
 
 <p>For example, to find all 404, not found, errors, you can type "404" into the search and auto-complete suggests "status-code:404" so you'll end up with something like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16677/404_filter.png" style="border: 1px solid black; display: block; margin: 0 auto;"></p>
+<p><img alt="" src="404_filter.png" style="border: 1px solid black; display: block; margin: 0 auto;"></p>
 
-<h3 id="Search_in_requests"><a id="Search_Requests">Search in requests</a></h3>
+<h3 id="Search_in_requests">Search in requests</h3>
 
 <p>Use the <em>Search</em> panel to run a full-text search on headers and content.</p>
 
 <ol>
  <li>Click the <strong>Search</strong> icon in the toolbar. This opens the Search sidebar.<br>
-  <img alt="Screenshot of the Network monitor, with the request search sidebar displayed, and arrows indicating the search toolbar icon and the search box." src="https://mdn.mozillademos.org/files/16967/search_panel.png" style="border-style: solid; border-width: 1px; height: 772px; width: 1946px;"></li>
+  <img alt="Screenshot of the Network monitor, with the request search sidebar displayed, and arrows indicating the search toolbar icon and the search box." src="search_panel.png" style="border-style: solid; border-width: 1px;"></li>
  <li>Enter a string in the search field of the sidebar, and press <kbd>Enter</kbd> or <kbd>Return</kbd>. The search results area below the search field displays the requests that contain that string in the request or response headers or in the content of the response. You can expand each item to show the specific item that matches the string. Clicking an item in the search results highlights that item in the monitor list, and displays the corresponding information in the request details pane.<br>
-  <img alt='Screenshot of the search panel, with "newsletter" as the search string, and callouts for the expanded results, and corresponding items displayed in the request list and headers tab.' src="https://mdn.mozillademos.org/files/16968/search_panel_matches.png" style="border-style: solid; border-width: 1px; height: 774px; width: 1950px;"></li>
+  <img alt='Screenshot of the search panel, with "newsletter" as the search string, and callouts for the expanded results, and corresponding items displayed in the request list and headers tab.' src="search_panel_matches.png" style="border-style: solid; border-width: 1px;"></li>
 </ol>
 
 <p>Other ways to use the search panel:</p>
@@ -378,7 +378,7 @@ tags:
   </tr>
   <tr>
    <td>Copy &gt; Copy as cURL</td>
-   <td>Copies the network request to the clipboard as a <a href="http://curl.haxx.se/">cURL</a> command, so you can execute it from a command line. See <a href="#Copy_as_cURL">Copy as cURL</a>, below.</td>
+   <td>Copies the network request to the clipboard as a <a href="http://curl.haxx.se/">cURL</a> command, so you can execute it from a command line. See <a href="#copy_as_curl">Copy as cURL</a>, below.</td>
   </tr>
   <tr>
    <td>Copy &gt; Copy as Fetch</td>
@@ -414,7 +414,7 @@ tags:
   </tr>
   <tr>
    <td>Block URL</td>
-   <td>Blocks the selected URL for future requests. See <a href="#Blocking_a_specific_URL_from_the_Request_List">Blocking a specific URL from the Request List</a>.</td>
+   <td>Blocks the selected URL for future requests. See <a href="#blocking_a_specific_url_from_the_request_list">Blocking a specific URL from the Request List</a>.</td>
   </tr>
   <tr>
    <td>Open in New Tab</td>
@@ -425,7 +425,7 @@ tags:
    <td>For a CSS resource, opens it in the <a href="/en-US/docs/Tools/Style_Editor">Style Editor</a>.</td>
   </tr>
   <tr>
-   <td>Start <a href="/en-US/docs/Tools/Network_Monitor#Performance_analysis">Performance Analysis</a></td>
+   <td>Start <a href="/en-US/docs/Tools/Network_Monitor#performance_analysis">Performance Analysis</a></td>
    <td></td>
   </tr>
   <tr>
@@ -480,14 +480,14 @@ tags:
 
 <p>The HAR format enables you to export detailed information about network requests. In addition to the <strong>Copy</strong> and <strong>Save</strong> menu items for HAR in the context menu, similar menu items are available in the <strong>HAR</strong> dropdown menu in the toolbar,  as well as an <strong>Import</strong> menuitem.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16056/har-dropdown.png" style="border-style: solid; border-width: 1px; height: 131px; width: 362px;"></p>
+<p><img alt="" src="har-dropdown.png" style="border-style: solid; border-width: 1px;"></p>
 
 <h2 id="Network_Monitor_features">Network Monitor features</h2>
 
 <p>The following articles cover different aspects of using the network monitor:</p>
 
 <ul>
- <li><a href="/en-US/docs/Tools/Network_Monitor/Toolbar">Toolbar</a></li>
+ <li><a href="/en-US/docs/Tools/Network_Monitor/toolbar">Toolbar</a></li>
  <li><a href="/en-US/docs/Tools/Network_Monitor/request_details">Network request details</a></li>
  <li><a href="/en-US/docs/Tools/Network_Monitor/recording">Network traffic recording</a></li>
  <li><a href="/en-US/docs/Tools/Network_Monitor/Performance_Analysis">Performance analysis</a></li>

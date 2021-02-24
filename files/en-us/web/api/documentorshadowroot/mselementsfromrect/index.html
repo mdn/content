@@ -2,52 +2,59 @@
 title: DocumentOrShadowRoot.msElementsFromRect()
 slug: Web/API/DocumentOrShadowRoot/msElementsFromRect
 tags:
-  - API
-  - 'API:Microsoft Extensions'
-  - Method
-  - Non-standard
-  - Reference
-  - msElementsFromRect
+- API
+- 'API:Microsoft Extensions'
+- Method
+- Non-standard
+- Reference
+- msElementsFromRect
 ---
 <div>{{APIRef("Microsoft Extensions")}}{{Non-standard_Header}}</div>
 
-<p>The <strong><code>msElementsFromRect</code></strong> method returns the node list of elements that are under a rectangle defined by left, top, width, and height.</p>
+<p>The <strong><code>msElementsFromRect</code></strong> method returns the node list of
+  elements that are under a rectangle defined by left, top, width, and height.</p>
 
 <p>This proprietary method is specific to Internet Explorer and Microsoft Edge.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><em>object</em>.msElementsFromRect(left, top, width, height, retVal)
+<pre class="brush: js"><em>object</em>.msElementsFromRect(left, top, width, height, retVal)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><em>left </em>[in]</dt>
- <dd>Type: <strong>Floating-point</strong></dd>
- <dt><em>top</em>[in]</dt>
- <dd>Type: <strong>Floating-point</strong></dd>
- <dt><em>width</em>[in]</dt>
- <dd>Type: <strong>Floating-point</strong></dd>
- <dt><em>height </em>[in]</dt>
- <dd>Type: <strong>Floating-point</strong></dd>
- <dt><em>retVal </em>[out, reval]</dt>
- <dd>Type: <strong>NodeList</strong></dd>
+  <dt><em>left </em>[in]</dt>
+  <dd>Type: <strong>Floating-point</strong></dd>
+  <dt><em>top</em>[in]</dt>
+  <dd>Type: <strong>Floating-point</strong></dd>
+  <dt><em>width</em>[in]</dt>
+  <dd>Type: <strong>Floating-point</strong></dd>
+  <dt><em>height </em>[in]</dt>
+  <dd>Type: <strong>Floating-point</strong></dd>
+  <dt><em>retVal </em>[out, reval]</dt>
+  <dd>Type: <strong>NodeList</strong></dd>
 </dl>
 
 <h2 id="Example">Example</h2>
 
-<p>To find all of the elements under a given point, use <code>msElementsFromPoint(x, y)</code>. To find all of the elements which intersect a rectangle, use <code>msElementsFromRect(top, left, width, height)</code>.</p>
+<p>To find all of the elements under a given point, use
+  <code>msElementsFromPoint(x, y)</code>. To find all of the elements which intersect a
+  rectangle, use <code>msElementsFromRect(top, left, width, height)</code>.</p>
 
-<pre class="brush: js notranslate">var nodeList = document.msElementsFromRect(x,y,width,height)
+<pre class="brush: js">var nodeList = document.msElementsFromRect(x,y,width,height)
 var nodeList = document.msElementsFromPoint(x,y)
 </pre>
 
-<p>The returned nodeList is sorted by z-index so that you can tell the relative stacking order of the elements.</p>
+<p>The returned nodeList is sorted by z-index so that you can tell the relative stacking
+  order of the elements.</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://testdrive-archive.azurewebsites.net/HTML5/HitTest/Default.html">Advanced Hit Testing APIs Demo for msElementsFromPoint() and msElementsFromRect() </a></li>
- <li><a href="/en-US/docs/Web/API/Microsoft_API_extensions">Microsoft API extensions </a></li>
+  <li><a
+      href="https://testdrive-archive.azurewebsites.net/HTML5/HitTest/Default.html">Advanced
+      Hit Testing APIs Demo for msElementsFromPoint() and msElementsFromRect() </a></li>
+  <li><a href="/en-US/docs/Web/API/Microsoft_API_extensions">Microsoft API extensions </a>
+  </li>
 </ul>

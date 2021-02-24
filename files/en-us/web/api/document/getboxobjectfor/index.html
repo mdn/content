@@ -2,26 +2,27 @@
 title: Document.getBoxObjectFor()
 slug: Web/API/Document/getBoxObjectFor
 tags:
-  - API
-  - DOM
-  - Method
-  - Obsolete
-  - Reference
+- API
+- DOM
+- Method
+- Obsolete
+- Reference
 ---
-<div>{{ApiRef("DOM")}} {{obsolete_header}}</div>
+<div>{{ApiRef("DOM")}} {{deprecated_header}}</div>
 
 <p>Returns a <code>boxObject</code> (x, y, width, height) for a specified element.</p>
 
-<div class="note"><strong>Note:</strong> This method is obsolete. You should use the {{domxref("element.getBoundingClientRect()")}} method instead.</div>
+<div class="note"><strong>Note:</strong> This method is obsolete. You should use the
+  {{domxref("element.getBoundingClientRect()")}} method instead.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>boxObject</var> = <var>document</var>.getBoxObjectFor(<var>element</var>);
+<pre class="brush: js"><var>boxObject</var> = <var>document</var>.getBoxObjectFor(<var>element</var>);
 </pre>
 
 <ul>
- <li><var>boxObject</var> is an {{interface("nsIBoxObject")}}.</li>
- <li><var>element</var> is a {{domxref("element","DOMElement")}}.</li>
+  <li><var>boxObject</var> is an {{interface("nsIBoxObject")}}.</li>
+  <li><var>element</var> is a {{domxref("element","DOMElement")}}.</li>
 </ul>
 
 <h2 id="Example">Example</h2>
@@ -38,7 +39,9 @@ alert (
 
 <h2 id="Notes">Notes</h2>
 
-<p>Specified in <a href="http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/xul/nsIDOMXULDocument.idl">nsIXULDocument.idl</a></p>
+<p>Specified in <a
+    href="http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/xul/nsIDOMXULDocument.idl">nsIXULDocument.idl</a>
+</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

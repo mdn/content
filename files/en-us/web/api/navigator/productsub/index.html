@@ -2,28 +2,29 @@
 title: Navigator.productSub
 slug: Web/API/Navigator/productSub
 tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - Navigator
-  - Property
-  - Read-only
+- API
+- Deprecated
+- HTML DOM
+- Navigator
+- Property
+- Read-only
 ---
 <div>{{ ApiRef("HTML DOM") }}</div>
 
-<p>The <code><strong>Navigator.productSub</strong></code> read-only property returns the build number of the current browser.</p>
+<p>The <code><strong>Navigator.productSub</strong></code> read-only property returns the
+  build number of the current browser.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><em>prodSub</em> = window.navigator.productSub</pre>
+<pre class="brush: js"><em>prodSub</em> = window.navigator.productSub</pre>
 
 <ul>
- <li><code>prodSub</code> is a string.</li>
+  <li><code>prodSub</code> is a string.</li>
 </ul>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush:js notranslate">&lt;script&gt;
+<pre class="brush:js">&lt;script&gt;
 function prodsub() {
   var dt = document.getElementById("d").childNodes[0];
   dt.data = window.navigator.productSub;
@@ -37,25 +38,27 @@ function prodsub() {
 
 <p>On IE, this property returns undefined.</p>
 
-<p>On Apple Safari and Google Chrome this property always returns <code>20030107</code>.</p>
+<p>On Apple Safari and Google Chrome this property always returns <code>20030107</code>.
+</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-navigator-productsub', 'NavigatorID: productSub')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#dom-navigator-productsub', 'NavigatorID:
+        productSub')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

@@ -2,50 +2,64 @@
 title: BarcodeDetector.detect()
 slug: Web/API/BarcodeDetector/detect
 tags:
-  - Barcode Detection API
-  - BarcodeDetector
-  - Method
-  - barcode
-  - shape detection
+- Barcode Detection API
+- BarcodeDetector
+- Method
+- barcode
+- shape detection
 ---
 <div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}</div>
 
-<p class="summary">The <strong><code>detect()</code></strong> method of the {{domxref("BarcodeDetector")}} interface returns a {{jsxref('Promise')}} which fulfills with an {{jsxref('Array')}} of detected barcodes within an image.</p>
+<p class="summary">The <strong><code>detect()</code></strong> method of the
+  {{domxref("BarcodeDetector")}} interface returns a {{jsxref('Promise')}} which fulfills
+  with an {{jsxref('Array')}} of detected barcodes within an image.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>detectedBarcode</var> = BarcodeDetector.detect(ImageBitmapSource);</pre>
+<pre
+  class="brush: js">var <var>detectedBarcode</var> = BarcodeDetector.detect(ImageBitmapSource);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><em>image</em></dt>
- <dd>Receives an <code>ImageBitmapSource</code> as a parameter. This can be an {{HTMLElement('img', ' element')}}, a {{domxref('Blob')}} of type image or an {{domxref('ImageData')}} object.</dd>
+  <dt><em>image</em></dt>
+  <dd>Receives an <code>ImageBitmapSource</code> as a parameter. This can be an
+    {{HTMLElement('img', ' element')}}, a {{domxref('Blob')}} of type image or an
+    {{domxref('ImageData')}} object.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>Returns a {{domxref('Promise')}} which fulfills with an array of <code>detectedBarcode</code> objects with the following properties:</p>
+<p>Returns a {{domxref('Promise')}} which fulfills with an array of
+  <code>detectedBarcode</code> objects with the following properties:</p>
 
 <ul>
- <li><code>boundingBox</code>: A {{domxref('DOMRectReadOnly')}}, which returns the dimensions of a rectangle representing the extent of a detected barcode, aligned with the image.</li>
- <li><code>cornerPoints</code>: The x and y co-ordinates of the four corner points of the detected barcode relative to the image, starting with the top left and working clockwise. This may not be square due to perspective distortions within the image.</li>
- <li><code>format</code>: The detected barcode format. (For a full list of formats see the {{domxref('Barcode Detection API', 'Barcode Detection API overview page')}}).</li>
- <li><code>rawValue</code>: A {{jsxref('String')}} decoded from the barcode data.</li>
+  <li><code>boundingBox</code>: A {{domxref('DOMRectReadOnly')}}, which returns the
+    dimensions of a rectangle representing the extent of a detected barcode, aligned with
+    the image.</li>
+  <li><code>cornerPoints</code>: The x and y co-ordinates of the four corner points of the
+    detected barcode relative to the image, starting with the top left and working
+    clockwise. This may not be square due to perspective distortions within the image.
+  </li>
+  <li><code>format</code>: The detected barcode format. (For a full list of formats see
+    the {{domxref('Barcode Detection API', 'Barcode Detection API overview page')}}).</li>
+  <li><code>rawValue</code>: A {{jsxref('String')}} decoded from the barcode data.</li>
 </ul>
 
 <h3 id="Exceptions">Exceptions</h3>
 
 <dl>
- <dt><code>TypeError</code></dt>
- <dd>No parameter is specified or the <code>type</code> is not that of an <code>ImageBitmapSource</code>.</dd>
+  <dt><code>TypeError</code></dt>
+  <dd>No parameter is specified or the <code>type</code> is not that of an
+    <code>ImageBitmapSource</code>.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>This example uses the <code>detect()</code> method to detect the barcodes within the given image. These are iterated over and the barcode data is logged to the console.</p>
+<p>This example uses the <code>detect()</code> method to detect the barcodes within the
+  given image. These are iterated over and the barcode data is logged to the console.</p>
 
-<pre class="brush: js notranslate">barcodeDetector.detect(imageEl)
+<pre class="brush: js">barcodeDetector.detect(imageEl)
   .then(barcodes =&gt; {
     barcodes.forEach(barcode =&gt; console.log(barcode.rawData));
   }
@@ -57,18 +71,19 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Shape Detection API','#dom-barcodedetector-detect','BarcodeDetector.detect()')}}</td>
-   <td>{{Spec2('Shape Detection API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Shape Detection
+        API','#dom-barcodedetector-detect','BarcodeDetector.detect()')}}</td>
+      <td>{{Spec2('Shape Detection API')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

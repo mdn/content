@@ -15,16 +15,16 @@ tags:
   - rgba
   - unit
 ---
-<div>{{CSSReF}}</div>
+<div>{{CSSRef}}</div>
 
-<p>The <strong><code>&lt;color&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> represents a color in the <a class="external" href="https://en.wikipedia.org/wiki/SRGB">sRGB color space</a>. A <code>&lt;color&gt;</code> may also include an <a class="external" href="https://en.wikipedia.org/wiki/Alpha_compositing">alpha-channel</a> <em>transparency value</em>, indicating how the color should <a class="external" href="https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending">composite</a> with its background.</p>
+<p>The <strong><code>&lt;color&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> represents a color in the <a href="https://en.wikipedia.org/wiki/SRGB">sRGB color space</a>. A <code>&lt;color&gt;</code> may also include an <a href="https://en.wikipedia.org/wiki/Alpha_compositing">alpha-channel</a> <em>transparency value</em>, indicating how the color should <a href="https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending">composite</a> with its background.</p>
 
 <p>A <code>&lt;color&gt;</code> can be defined in any of the following ways:</p>
 
 <ul>
  <li>Using a keyword (such as <code>blue</code> or <code>transparent</code>)</li>
- <li>Using the <a class="external" href="https://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation">RGB cubic-coordinate</a> system (via the #-hexadecimal or the <code>rgb()</code> and <code>rgba()</code> functional notations)</li>
- <li>Using the <a class="external" href="https://en.wikipedia.org/wiki/HSL_and_HSV">HSL cylindrical-coordinate</a> system (via the <code>hsl()</code> and <code>hsla()</code> functional notations)</li>
+ <li>Using the <a href="https://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation">RGB cubic-coordinate</a> system (via the #-hexadecimal or the <code>rgb()</code> and <code>rgba()</code> functional notations)</li>
+ <li>Using the <a href="https://en.wikipedia.org/wiki/HSL_and_HSV">HSL cylindrical-coordinate</a> system (via the <code>hsl()</code> and <code>hsla()</code> functional notations)</li>
 </ul>
 
 <div class="note">
@@ -36,7 +36,7 @@ tags:
 <p>The <code>&lt;color&gt;</code> data type is specified using one of the options listed below.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Although <code>&lt;color&gt;</code> values are precisely defined, their actual appearance may vary (sometimes significantly) from device to device. This is because most devices are not calibrated, and some browsers do not support output devices' <a class="external" href="https://en.wikipedia.org/wiki/ICC_profile">color profiles</a>.</p>
+<p><strong>Note:</strong> Although <code>&lt;color&gt;</code> values are precisely defined, their actual appearance may vary (sometimes significantly) from device to device. This is because most devices are not calibrated, and some browsers do not support output devices' <a href="https://en.wikipedia.org/wiki/ICC_profile">color profiles</a>.</p>
 </div>
 
 <h3 id="Color_keywords">Color keywords</h3>
@@ -69,7 +69,7 @@ tags:
 <p><strong>Note:</strong> The list of accepted keywords has undergone many changes during the evolution of CSS:</p>
 
 <ul>
- <li>CSS Level 1 only included 16 basic colors, called the <em>VGA colors</em> as they were taken from the set of displayable colors on <a class="external" href="https://en.wikipedia.org/wiki/VGA">VGA</a> graphics cards.</li>
+ <li>CSS Level 1 only included 16 basic colors, called the <em>VGA colors</em> as they were taken from the set of displayable colors on <a href="https://en.wikipedia.org/wiki/VGA">VGA</a> graphics cards.</li>
  <li>CSS Level 2 added the <code>orange</code> keyword.</li>
  <li>Although various colors not in the specification (mostly adapted from the X11 colors list) were supported by early browsers, it wasn't until SVG 1.0 and CSS Colors Level 3 that they were formally defined. They are called the <em>extended color keywords</em>, the <em>X11 colors</em>, or the <em>SVG colors</em>.</li>
  <li>CSS Colors Level 4 added the <code>rebeccapurple</code> keyword <a href="https://codepen.io/trezy/post/honoring-a-great-man">to honor web pioneer Eric Meyer</a>.</li>
@@ -855,7 +855,7 @@ tags:
 
 <h4 id="currentcolor_example">currentcolor example</h4>
 
-<pre class="brush: html notranslate">&lt;div style="color:blue; border: 1px dashed currentcolor;"&gt;
+<pre class="brush: html">&lt;div style="color:blue; border: 1px dashed currentcolor;"&gt;
   The color of this text is blue.
   &lt;div style="background:currentcolor; height:9px;"&gt;&lt;/div&gt;
   This block is surrounded by a blue border.
@@ -963,6 +963,14 @@ tags:
  <dt>LinkText</dt>
  <dd>
  <p>Text of non-active, non-visited links</p>
+ </dd>
+ <dt>Mark</dt>
+ <dd>
+ <p>Background of text that has been specially marked (such as by the HTML <code>mark</code> element)</p>
+ </dd>
+ <dt>MarkText</dt>
+ <dd>
+ <p>Text that has been specially marked (such as by the HTML <code>mark</code> element)</p>
  </dd>
  <dt>VisitedText</dt>
  <dd>
@@ -1215,11 +1223,11 @@ tags:
 
 <h2 id="Interpolation">Interpolation</h2>
 
-<p>In animations and <a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">gradients</a>, <code>&lt;color&gt;</code> values are interpolated on each of their red, green, and blue components. Each component is interpolated as a real, floating-point number. Note that interpolation of colors happens in the <a class="external" href="https://www.gimp.org/docs/plug-in/appendix-alpha.html">alpha-premultiplied sRGBA color space</a> to prevent unexpected gray colors from appearing. In animations, the interpolation's speed is determined by the <a href="/en-US/docs/Web/CSS/single-transition-timing-function">timing function</a>.</p>
+<p>In animations and <a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">gradients</a>, <code>&lt;color&gt;</code> values are interpolated on each of their red, green, and blue components. Each component is interpolated as a real, floating-point number. Note that interpolation of colors happens in the <a href="https://www.gimp.org/docs/plug-in/appendix-alpha.html">alpha-premultiplied sRGBA color space</a> to prevent unexpected gray colors from appearing. In animations, the interpolation's speed is determined by the <a href="/en-US/docs/Web/CSS/single-transition-timing-function">timing function</a>.</p>
 
 <h2 id="Accessibility_considerations">Accessibility considerations</h2>
 
-<p>Some people have difficulty distinguishing colors. The <a class="external" href="https://www.w3.org/TR/WCAG/#visual-audio-contrast">WCAG 2.0</a> recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color contrast</a> for more information.</p>
+<p>Some people have difficulty distinguishing colors. The <a href="https://www.w3.org/TR/WCAG/#visual-audio-contrast">WCAG 2.0</a> recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color contrast</a> for more information.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -1229,14 +1237,14 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div&gt;&lt;/div&gt;
+<pre class="brush: html">&lt;div&gt;&lt;/div&gt;
 &lt;hr&gt;
 &lt;label for="color"&gt;Enter a valid color value:&lt;/label&gt;
 &lt;input type="text" id="color"&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   width: 100%;
   height: 200px;
 }</pre>
@@ -1244,7 +1252,7 @@ tags:
 <div class="hidden">
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">const inputElem = document.querySelector('input');
+<pre class="brush: js">const inputElem = document.querySelector('input');
 const divElem = document.querySelector('div');
 
 function validTextColor(stringToTest) {
@@ -1280,7 +1288,7 @@ inputElem.addEventListener('change', () =&gt; {
 
 <p>This example shows the many ways in which a single color can be created with the various RGB color syntaxes.</p>
 
-<pre class="notranslate">/* These syntax variations all specify the same color: a fully opaque hot pink. */
+<pre>/* These syntax variations all specify the same color: a fully opaque hot pink. */
 
 /* Hexadecimal syntax */
 #f09
@@ -1318,7 +1326,7 @@ rgb(1e2, .5e1, .5e0, +.25e2%)
 
 <h3 id="RGB_transparency_variations">RGB transparency variations</h3>
 
-<pre class="notranslate">/* Hexadecimal syntax */
+<pre>/* Hexadecimal syntax */
 #3a30                   <span style="background: #3a30;"> /*   0% opaque green */ </span>
 #3A3F                   <span style="background: #3A3F;"> /* full opaque green */ </span>
 #33aa3300               <span style="background: #33aa3300;"> /*   0% opaque green */ </span>
@@ -1331,8 +1339,8 @@ rgba(51, 170, 51, .7)   <span style="background: rgba(51, 170, 51, .7);"> /*  70
 rgba(51, 170, 51,  1)   <span style="background: rgba(51, 170, 51,  1);"> /* full opaque green */ </span>
 
 /* Whitespace syntax */
-rgba(51 170 51 / 0.4)   <span> /*  40% opaque green */ </span>
-rgba(51 170 51 / 40%)   <span> /*  40% opaque green */ </span>
+rgba(51 170 51 / 0.4)    /*  40% opaque green */ 
+rgba(51 170 51 / 40%)    /*  40% opaque green */ 
 
 /* Functional syntax with floats value */
 rgba(255, 0, 153.6, 1)
@@ -1340,7 +1348,7 @@ rgba(1e2, .5e1, .5e0, +.25e2%)</pre>
 
 <h3 id="HSL_syntax_variations">HSL syntax variations</h3>
 
-<pre class="notranslate">/* These examples all specify the same color: a lavender. */
+<pre>/* These examples all specify the same color: a lavender. */
 hsl(270,60%,70%)
 hsl(270, 60%, 70%)
 hsl(270 60% 70%)
@@ -1524,7 +1532,7 @@ hsl(270 60% 50% / 15%)
 
 <h3 id="HSL_transparency_variations">HSL transparency variations</h3>
 
-<pre class="notranslate">hsla(240, 100%, 50%, .05)    <span style="background: hsla(240,100%,50%,0.05);"> /*   5% opaque blue */ </span>
+<pre>hsla(240, 100%, 50%, .05)    <span style="background: hsla(240,100%,50%,0.05);"> /*   5% opaque blue */ </span>
 hsla(240, 100%, 50%, .4)     <span style="background: hsla(240,100%,50%,0.4);"> /*  40% opaque blue */ </span>
 hsla(240, 100%, 50%, .7)     <span style="background: hsla(240,100%,50%,0.7);"> /*  70% opaque blue */ </span>
 hsla(240, 100%, 50%, 1)      <span style="background: hsla(240,100%,50%,1);"> /* full opaque blue */ </span>

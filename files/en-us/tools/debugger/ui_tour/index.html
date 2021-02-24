@@ -11,15 +11,15 @@ tags:
 <p>This article is a quick tour of the main sections of the JavaScript Debugger's user interface. The UI is split vertically into three panels</p>
 
 <ul>
- <li><a href="/en-US/docs/Tools/Debugger/UI_Tour#Source_list_pane">Source list pane</a></li>
- <li><a href="/en-US/docs/Tools/Debugger/UI_Tour#Source_pane">Source pane</a></li>
+ <li><a href="/en-US/docs/Tools/Debugger/UI_Tour#source_list_pane">Source list pane</a></li>
+ <li><a href="/en-US/docs/Tools/Debugger/UI_Tour#source_pane">Source pane</a></li>
  <li>The contents of the third pane depend on the current state of the debugger and may include the following sections:
   <ul>
-   <li><a href="/en-US/docs/Tools/Debugger/UI_Tour#Toolbar">Toolbar</a></li>
+   <li><a href="/en-US/docs/Tools/Debugger/UI_Tour#toolbar">Toolbar</a></li>
    <li>Watch expressions</li>
-   <li><a href="/en-US/docs/Tools/Debugger/UI_Tour#Breakpoints_list">Breakpoints</a></li>
-   <li><a href="/en-US/docs/Tools/Debugger/UI_Tour#Call_stack">Call stack</a></li>
-   <li><a href="/en-US/docs/Tools/Debugger/UI_Tour#Scopes">Scopes</a></li>
+   <li><a href="/en-US/docs/Tools/Debugger/UI_Tour#breakpoints_list">Breakpoints</a></li>
+   <li><a href="/en-US/docs/Tools/Debugger/UI_Tour#call_stack">Call stack</a></li>
+   <li><a href="/en-US/docs/Tools/Debugger/UI_Tour#scopes">Scopes</a></li>
    <li>XHR Breakpoints</li>
    <li>Event Listener Breakpoints</li>
    <li>DOM Mutation Breakpoints</li>
@@ -27,25 +27,25 @@ tags:
  </li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16840/debugger_uiTour_01.png" style="border: 1px solid black; display: block; height: 598px; margin-left: auto; margin-right: auto; width: 922px;"></p>
+<p><img alt="" src="debugger_uitour_01.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h2 id="Source_list_pane">Source list pane</h2>
 
-<p>The source list pane lists all the JavaScript source files loaded into the page (<a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#Debugging_worker_threads">including scripts for active web workers</a>), and enables you to select one to debug. At the top level sources are organized by origin, and under that they're organized by the directory structure from which they are served.</p>
+<p>The source list pane lists all the JavaScript source files loaded into the page (<a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#debugging_worker_threads">including scripts for active web workers</a>), and enables you to select one to debug. At the top level sources are organized by origin, and under that they're organized by the directory structure from which they are served.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16841/debugger_uiTour_02.png" style="border: 1px solid black; display: block; height: 598px; margin-left: auto; margin-right: auto; width: 922px;"></p>
+<p><img alt="" src="debugger_uitour_02.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
-<p>You can <a href="/en-US/docs/Tools/Debugger/How_to/Search#Searching_for_files">search for a file</a> using <kbd>Ctrl</kbd> + <kbd>P</kbd> (<kbd>Cmd</kbd> + <kbd>P</kbd> on a Mac).</p>
+<p>You can <a href="/en-US/docs/Tools/Debugger/How_to/Search#searching_for_files">search for a file</a> using <kbd>Ctrl</kbd> + <kbd>P</kbd> (<kbd>Cmd</kbd> + <kbd>P</kbd> on a Mac).</p>
 
 <p>Web Extensions are listed in the Source List pane using the extension's name.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16868/source_list_pane.png" style="border: 1px solid black; display: block; height: 324px; margin: 0px auto; width: 373px;"></p>
+<p><img alt="" src="source_list_pane.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
 <p>There are several context menu options available for individual files and folders or groups; typically viewed by right-clicking on the item.</p>
 
 <p>For files, the following context menu options are available:</p>
 
-<p><img alt="Screenshot showing the context menu options for files in the source list pane" src="https://mdn.mozillademos.org/files/17324/debugger-source-list-cxt-menu.png" style="border-style: solid; border-width: 1px; height: 203px; width: 294px;"></p>
+<p><img alt="Screenshot showing the context menu options for files in the source list pane" src="debugger-source-list-cxt-menu.png" style="border-style: solid; border-width: 1px;"></p>
 
 <ul>
  <li><strong>Copy source URI</strong> copies the full identifier of the file to the clipboard.</li>
@@ -55,7 +55,7 @@ tags:
 
 <p>For folders and groups, the following context menu options are available:</p>
 
-<p><img alt="Screenshot showing context menu options for folders in the source list pane" src="https://mdn.mozillademos.org/files/17325/debugger-source-folder-cxt-menu.png" style="border-style: solid; border-width: 1px; height: 194px; width: 510px;"></p>
+<p><img alt="Screenshot showing context menu options for folders in the source list pane" src="debugger-source-folder-cxt-menu.png" style="border-style: solid; border-width: 1px;"></p>
 
 <ul>
  <li><strong>Collapse all</strong> collapses all subfolders of the item.</li>
@@ -77,7 +77,7 @@ tags:
 
 <p>This shows the JavaScript file currently loaded.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16843/debugger_uiTour_02.5.png" style="border: 1px solid black; display: block; height: 598px; margin-left: auto; margin-right: auto; width: 922px;">When the source pane is focused you can <a href="/en-US/docs/Tools/Debugger/How_to/Search#Searching_within_a_file">search for a string in the file</a> using <kbd>Ctrl</kbd> + <kbd>F</kbd> (<kbd>Cmd</kbd> + <kbd>F</kbd> on a Mac).</p>
+<p><img alt="" src="debugger_uitour_02.5.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;">When the source pane is focused you can <a href="/en-US/docs/Tools/Debugger/How_to/Search#searching_within_a_file">search for a string in the file</a> using <kbd>Ctrl</kbd> + <kbd>F</kbd> (<kbd>Cmd</kbd> + <kbd>F</kbd> on a Mac).</p>
 
 <p><a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">Breakpoints</a> have a blue arrow overlaid on the line number. <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_conditional_breakpoint">Conditional breakpoints</a> have an orange arrow. If you're stopped at a breakpoint, the entire line gets a green overlay. In the screenshot below there are three breakpoints:</p>
 
@@ -87,13 +87,13 @@ tags:
  <li>line 100 has a conditional breakpoint</li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16842/debugger_uiTour_03.png" style="border: 1px solid black; display: block; height: 445px; margin-left: auto; margin-right: auto; width: 922px;"></p>
+<p><img alt="" src="debugger_uitour_03.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>The third column shows more information about the breakpoints. For example, the logpoint at line 85 logs the value of the tableRow variable to the console and the conditional breakpoint at line 100 breaks if the contents of the todoList is undefined.</p>
 
 <p>The source pane provides the following context menu options:</p>
 
-<p><img alt="Debugger Source Pane Context Menu v2" src="https://mdn.mozillademos.org/files/17412/firefox_source_pane_context_menu.jpg" style="height: 463px; width: 658px;"></p>
+<p><img alt="Debugger Source Pane Context Menu v2" src="firefox_source_pane_context_menu.jpg"></p>
 
 <ul>
  <li><strong>Jump to generated location</strong> is used when you have a sourcemap in a project and are currently viewing the original file. Selecting it takes you to the generated file where the selected item was placed.</li>
@@ -108,11 +108,11 @@ tags:
  <li><strong>Wrap lines</strong>/<strong>Unwap lines</strong> toggles the wrapping of long lines in the pane.</li>
 </ul>
 
-<h2 id="Toolbar"><a name="toolbar">Toolbar</a></h2>
+<h2 id="Toolbar">Toolbar</h2>
 
 <p>At the top of the right-hand pane, there's a toolbar:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/17413/debugger_toolbar_with_settings_menu_four_items.jpg" style="height: 253px; width: 373px;"></p>
+<p><img alt="" src="debugger_toolbar_with_settings_menu_four_items.jpg"></p>
 
 <p>The toolbar consists of:</p>
 
@@ -131,7 +131,7 @@ tags:
   <ul>
    <li><strong>Disable JavaScript</strong>: disables JavaScript for this tab. This option enables you to see how your web page looks if the user has disabled JavaScript via an extension or a configuration setting. The setting is reset when the Developer Tools are closed (except in Firefox 77, see {{bug("1640318")}}).</li>
    <li><strong>Inline Variable Preview</strong>: enabled by default, this option displays variable values within the source pane when the debugger is paused.</li>
-   <li><strong>Wrap Lines</strong>: Toggles wrapping of long lines in the <a href="#Source_pane">source pane</a>.</li>
+   <li><strong>Wrap Lines</strong>: Toggles wrapping of long lines in the <a href="#source_pane">source pane</a>.</li>
    <li><strong>Source Maps</strong>: enabled by default, this option directs the Debugger to load the original versions of files, and map them to the generated ones loaded in a page, to ease debugging of transformed sources. See <a href="/en-US/docs/Tools/Debugger/How_to/Use_a_source_map">Use a source map</a> for details.</li>
   </ul>
  </li>
@@ -141,27 +141,27 @@ tags:
 
 <p>Under the toolbar, you'll see all the breakpoints you've set. Next to each breakpoint is a checkbox which you can use to <a href="/en-US/docs/Tools/Debugger/How_to/Disable_breakpoints">enable/disable it</a>:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16845/debugger_uiTour_breakpoints.png" style="border: 1px solid black; display: block; height: 445px; margin-left: auto; margin-right: auto; width: 922px;"></p>
+<p><img alt="" src="debugger_uitour_breakpoints.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h2 id="Watch_expressions">Watch expressions</h2>
 
 <p>You can add watch expressions in the right pane. They will be evaluated when code execution is paused:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14845/watch-expressions.png" style="display: block; height: 769px; margin-left: auto; margin-right: auto; width: 504px;"></p>
+<p><img alt="" src="watch-expressions.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h2 id="Variable_tooltip">Variable tooltip</h2>
 
 <p>Hover on a variable show a tooltip with its value inside:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14851/tooltip-1.gif" style="display: block; height: 522px; margin-left: auto; margin-right: auto; width: 988px;"></p>
+<p><img alt="" src="tooltip-1.gif" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h2 id="Call_stack">Call stack</h2>
 
 <p>The <em>call stack</em> becomes visible when the debugger is paused.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16846/debugger_uiTour_call_stack.png" style="border: 1px solid black; display: block; height: 445px; margin-left: auto; margin-right: auto; width: 922px;"></p>
+<p><img alt="" src="debugger_uitour_call_stack.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
-<p>The stack lists the chain of functions that are waiting to complete, with the frame for the function that was called last at the top (i.e. the most deeply nested function). Selecting a line opens the associated file in the source pane, at the specified location. It also updates the <a href="#Scopes">Scopes</a> section with the variables for that frame/scope.</p>
+<p>The stack lists the chain of functions that are waiting to complete, with the frame for the function that was called last at the top (i.e. the most deeply nested function). Selecting a line opens the associated file in the source pane, at the specified location. It also updates the <a href="#scopes">Scopes</a> section with the variables for that frame/scope.</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: The call stack is a useful tool for tracking execution flow through your application! It allows you to confirm that functions are called in the order you expect, and with sensible variable values.</p>
@@ -177,7 +177,7 @@ tags:
  <br>
  You can also use the context menu to <strong>Ignore source</strong> for a particular line. This will remove the line from the call stack, and the debugger will subsequently skip through any calls into that file. Note that you'll have to use the source pane "eye icon" or source list if you want to <em>Unignore</em> the source later!</p>
 
-<p><img alt='FF Debugger showing callstack with right-menu and marked up unignore/ignore source "eye"' src="https://mdn.mozillademos.org/files/17447/ff_debugger_callstack_ignore_source.png" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt='FF Debugger showing callstack with right-menu and marked up unignore/ignore source "eye"' src="ff_debugger_callstack_ignore_source.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>Right-/Ctrl- clicking in the call stack pane opens a context menu with the following items:</p>
 
@@ -193,6 +193,6 @@ tags:
 
 <p>In the right-hand pane you'll see a label "Scopes" with a disclosure arrow next to it. When the debugger's paused, you'll be able to expand this section to see all objects that are in scope at this point in the program:</p>
 
-<p><img alt="A screenshot of the Debugger, with the Scopes pane highlighted" src="https://mdn.mozillademos.org/files/17300/Debugger_scopes_Fx78.png" style="border: 1px solid black; display: block; height: 438px; margin-left: auto; margin-right: auto; width: 1096px;">Objects are organized by scope: the most local appears first, and the global scope (Window, in the case of page scripts) appears last.</p>
+<p><img alt="A screenshot of the Debugger, with the Scopes pane highlighted" src="debugger_scopes_fx78.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;">Objects are organized by scope: the most local appears first, and the global scope (Window, in the case of page scripts) appears last.</p>
 
 <p>Within the Scopes pane, you can create <a href="/en-US/docs/Tools/Debugger/How_to/Use_watchpoints">watchpoints</a> that pause the debugger when a value is read or assigned.</p>

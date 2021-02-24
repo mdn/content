@@ -2,28 +2,31 @@
 title: ParentNode.prepend()
 slug: Web/API/ParentNode/prepend
 tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - ParentNode
-  - Reference
-  - prepend
+- API
+- DOM
+- Method
+- Node
+- ParentNode
+- Reference
+- prepend
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p>The <strong><code>ParentNode.prepend()</code></strong> method inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects before the first child of the {{domxref("ParentNode")}}. {{domxref("DOMString")}} objects are inserted as equivalent {{domxref("Text")}} nodes.</p>
+<p>The <strong><code>ParentNode.prepend()</code></strong> method inserts a set of
+  {{domxref("Node")}} objects or {{domxref("DOMString")}} objects before the first child
+  of the {{domxref("ParentNode")}}. {{domxref("DOMString")}} objects are inserted as
+  equivalent {{domxref("Text")}} nodes.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><em>ParentNode</em>.prepend(<em>...nodesOrDOMStrings</em>);
+<pre class="brush: js"><em>ParentNode</em>.prepend(<em>...nodesOrDOMStrings</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>nodesOrDOMStrings</code></dt>
- <dd>A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to insert.</dd>
+  <dt><code>nodesOrDOMStrings</code></dt>
+  <dd>A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to insert.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -33,14 +36,15 @@ tags:
 <h3 id="Exceptions">Exceptions</h3>
 
 <ul>
- <li>{{domxref("HierarchyRequestError")}}: Node cannot be inserted at the specified point in the hierarchy.</li>
+  <li>{{domxref("HierarchyRequestError")}}: Node cannot be inserted at the specified point
+    in the hierarchy.</li>
 </ul>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Prepending_an_element">Prepending an element</h3>
 
-<pre class="brush: js notranslate">var parent = document.createElement("div");
+<pre class="brush: js">var parent = document.createElement("div");
 var p = document.createElement("p");
 var span = document.createElement("span");
 parent.append(p);
@@ -51,7 +55,7 @@ console.log(parent.childNodes); // NodeList [ &lt;span&gt;, &lt;p&gt; ]
 
 <h3 id="Prepending_text">Prepending text</h3>
 
-<pre class="brush: js notranslate">var parent = document.createElement("div");
+<pre class="brush: js">var parent = document.createElement("div");
 parent.append("Some text");
 parent.prepend("Headline: ");
 
@@ -59,7 +63,7 @@ console.log(parent.textContent); // "Headline: Some text"</pre>
 
 <h3 id="Appending_an_element_and_text">Appending an element and text</h3>
 
-<pre class="brush: js notranslate">var parent = document.createElement("div");
+<pre class="brush: js">var parent = document.createElement("div");
 var p = document.createElement("p");
 parent.prepend("Some text", p);
 
@@ -67,9 +71,10 @@ console.log(parent.childNodes); // NodeList [ #text "Some text", &lt;p&gt; ]</pr
 
 <h3 id="ParentNode.prepend_is_unscopable">ParentNode.prepend() is unscopable</h3>
 
-<p>The <code>prepend()</code> method is not scoped into the <code>with</code> statement. See {{jsxref("Symbol.unscopables")}} for more information.</p>
+<p>The <code>prepend()</code> method is not scoped into the <code>with</code> statement.
+  See {{jsxref("Symbol.unscopables")}} for more information.</p>
 
-<pre class="brush: js notranslate">var parent = document.createElement("div");
+<pre class="brush: js">var parent = document.createElement("div");
 
 with(parent) {
   prepend("foo");
@@ -80,7 +85,7 @@ with(parent) {
 
 <p>You can polyfill the <code>prepend()</code> method if it's not available:</p>
 
-<pre class="brush: js notranslate">// Source: https://github.com/jserz/js_piece/blob/master/DOM/ParentNode/prepend()/prepend().md
+<pre class="brush: js">// Source: https://github.com/jserz/js_piece/blob/master/DOM/ParentNode/prepend()/prepend().md
 (function (arr) {
   arr.forEach(function (item) {
     if (item.hasOwnProperty('prepend')) {
@@ -108,20 +113,21 @@ with(parent) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-parentnode-prepend', 'ParentNode.prepend()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-parentnode-prepend', 'ParentNode.prepend()')}}
+      </td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -131,11 +137,11 @@ with(parent) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("ParentNode")}} and {{domxref("ChildNode")}}</li>
- <li>{{domxref("ParentNode.append()")}}</li>
- <li>{{domxref("Node.appendChild()")}}</li>
- <li>{{domxref("Node.insertBefore()")}}</li>
- <li>{{domxref("ChildNode.before()")}}</li>
- <li>{{domxref("Element.insertAdjacentElement()")}}</li>
- <li>{{domxref("NodeList")}}</li>
+  <li>{{domxref("ParentNode")}} and {{domxref("ChildNode")}}</li>
+  <li>{{domxref("ParentNode.append()")}}</li>
+  <li>{{domxref("Node.appendChild()")}}</li>
+  <li>{{domxref("Node.insertBefore()")}}</li>
+  <li>{{domxref("ChildNode.before()")}}</li>
+  <li>{{domxref("Element.insertAdjacentElement()")}}</li>
+  <li>{{domxref("NodeList")}}</li>
 </ul>

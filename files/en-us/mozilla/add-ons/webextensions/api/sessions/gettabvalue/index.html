@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js notranslate">var retrieving = browser.sessions.getTabValue(
+<pre class="brush:js">var retrieving = browser.sessions.getTabValue(
   tabId,    // integer
   key       // string
 )
@@ -50,7 +50,7 @@ tags:
 
 <p>Log the value of "my-key" for all newly created tabs (this will include any tabs that have been restored):</p>
 
-<pre class="brush: js notranslate">function onGetResolved(r) {
+<pre class="brush: js">function onGetResolved(r) {
   console.log(`success: ${r}`);
 }
 

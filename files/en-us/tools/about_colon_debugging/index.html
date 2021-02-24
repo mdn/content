@@ -1,10 +1,10 @@
 ---
-title: 'about:debugging'
-slug: 'Tools/about:debugging'
+title: about:debugging
+slug: Tools/about:debugging
 tags:
   - Debugger
   - Remote debugging
-  - 'about:debugging'
+  - about:debugging
 ---
 <p>{{ToolsSidebar}}</p>
 
@@ -28,7 +28,7 @@ tags:
  <dd>Provides information about temporary extensions you have loaded for debugging, extensions that are installed in Firefox, the tabs that you currently have open, and service workers running on Firefox.</dd>
 </dl>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16650/about_debugging_setup.png" style="border: 1px solid black; display: block; height: 751px; margin: 0px auto; width: 918px;"></p>
+<p><img alt="" src="about_debugging_setup.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
 <p>If your <code>about:debugging</code> page is different from the one displayed here, go to <code>about:config</code>, find and set the option <code>devtools.aboutdebugging.new-enabled</code> to <strong>true</strong>.</p>
 
@@ -57,23 +57,23 @@ tags:
 
 <p>To start a debugging session, first open the page that you wish to debug and then click <strong>Connect</strong> next to the device name to open a connection to it. If the connection was successful, you can now click the name of the device to switch to a tab with information about the device.</p>
 
-<p><img alt="Screenshot of the debugging page for an Android device" src="https://mdn.mozillademos.org/files/16915/device_information.png" style="border: 1px solid black; display: block; margin: 0 auto;"></p>
+<p><img alt="Screenshot of the debugging page for an Android device" src="device_information.png" style="border: 1px solid black; display: block; margin: 0 auto;"></p>
 
 <p>The information on this page is the same as the information on the <strong>This Firefox</strong> tab, but instead of displaying information for your computer, it displays the information for the remote device with the addition of a <strong>Tabs</strong> section with an entry for each of the tabs open on the remote device.</p>
 
 <p>Note: If the version of Firefox on your remote device is more than one major version older than the version running on your computer, you may see a message like the following:</p>
 
-<p><img alt="The connected browser has an old version (68.2.0). The minimum supported version (69.0a1). This is an unsupported setup and may cause DevTools to fail. Please update the connected browser." src="https://mdn.mozillademos.org/files/16917/version_warning.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="The connected browser has an old version (68.2.0). The minimum supported version (69.0a1). This is an unsupported setup and may cause DevTools to fail. Please update the connected browser." src="version_warning.png" style="display: block; margin: 0 auto;"></p>
 
 <p>In Firefox 76 and above, the message can look like the following:</p>
 
-<p><img alt="This version of Firefox cannot debug Firefox for Android (68). We recommend installing Firefox for Android Nightly on your phone for testing. More details" src="https://mdn.mozillademos.org/files/17171/fxand-68-error.png" style="height: 64px; width: 675px;"></p>
+<p><img alt="This version of Firefox cannot debug Firefox for Android (68). We recommend installing Firefox for Android Nightly on your phone for testing. More details" src="fxand-68-error.png"></p>
 
 <p>See <a href="#">Connection for Firefox for Android 68</a> for more information.</p>
 
 <p>In the image above, there are three tabs open: <strong>Network or cache Recipe</strong>, <strong>Nightly Home</strong>, and <strong>About Nightly</strong>. To debug the contents of one of these tabs, click the <strong>Inspect</strong> button next to its title. When you do, the Developer Tools open in a new tab.</p>
 
-<p><img alt="Screenshot showing the remote debugging window, with the editable URL bar" src="https://mdn.mozillademos.org/files/17317/remote-debugger-w-URL-buttons.png" style="border: 1px solid black; display: block; height: 471px; margin: 0px auto; width: 1014px;"></p>
+<p><img alt="Screenshot showing the remote debugging window, with the editable URL bar" src="remote-debugger-w-url-buttons.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
 <p>Above the usual list of tools, you can see information about the device you are connected to, including the fact that you are connected (in this example) via USB, to Firefox Preview, on a Pixel 2, as well as the title of the page that you are debugging, and the address of the page.</p>
 
@@ -83,11 +83,11 @@ tags:
 
 <p>You can connect to a Firefox Debug server on your network, or on your debugging machine using the <strong>Network Location</strong> settings of the about:debugging page.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16942/network_location.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="network_location.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Enter the location and port on which the debugger server is running. When you do, it is added to the Network locations list along with the devices, as shown below:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16943/connect_network_location.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="connect_network_location.png" style="display: block; margin: 0 auto;"></p>
 
 <h2 id="This_Firefox">This Firefox</h2>
 
@@ -102,7 +102,7 @@ tags:
  <dd>There are three sections on this page that deal with Service Workers, Shared Workers, and Other Workers.</dd>
 </dl>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16654/about_debugging_this_firefox.png" style="border: 1px solid black; display: block; height: 867px; margin: 0px auto; width: 1138px;"></p>
+<p><img alt="" src="about_debugging_this_firefox.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
 <p>Whether internal extensions appear in the list on this page depends on the setting of the <code>devtools.aboutdebugging.showHiddenAddons</code> preference. If you need to see these extensions, navigate to <code>about:config</code> and make sure that the preference is set to <code>true</code>.</p>
 
@@ -123,7 +123,7 @@ tags:
 
 <p>Once you have loaded a temporary extension, you can see information about it and perform operations on it.</p>
 
-<p><img alt="Screenshot of the debugging information panel for a temporary extension" src="https://mdn.mozillademos.org/files/16652/temporary_extension.png" style="display: block; height: 322px; margin: 0 auto; width: 680px;"></p>
+<p><img alt="Screenshot of the debugging information panel for a temporary extension" src="temporary_extension.png" style="display: block; margin: 0 auto;"></p>
 
 <p>You can use the following buttons:</p>
 
@@ -154,10 +154,10 @@ tags:
 <p>If you install an extension in this way, what happens when you update the extension?</p>
 
 <ul>
- <li>If you change files that are loaded on demand, like <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> or <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">popups</a>, then changes you make are picked up automatically, and you'll see them the next time the content script is loaded or the popup is shown.</li>
+ <li>If you change files that are loaded on demand, like <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2">popups</a>, then changes you make are picked up automatically, and you'll see them the next time the content script is loaded or the popup is shown.</li>
  <li>For other changes, click the <strong>Reload</strong> button. This does what it says:
   <ul>
-   <li>Reloads any persistent scripts, such as <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">background scripts</a></li>
+   <li>Reloads any persistent scripts, such as <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts">background scripts</a></li>
    <li>Parses the <code>manifest.json</code> file again, so changes to <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> or any other keys take effect</li>
   </ul>
  </li>
@@ -167,14 +167,14 @@ tags:
 
 <p>The permanently installed extensions are listed in the next section, <strong>Extensions</strong>. For each one, you see something like the following:</p>
 
-<p><img alt="Screenshot of the debugging information panel for an installed extension" src="https://mdn.mozillademos.org/files/16651/installed_extension.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="Screenshot of the debugging information panel for an installed extension" src="installed_extension.png" style="display: block; margin: 0 auto;"></p>
 
 <p>The <strong>Inspect</strong> button, and the <strong>Extension ID</strong> and <strong>Internal UUID</strong> fields are the same as for temporary extensions.</p>
 
 <p>Just as it does with temporarily loaded extensions, the link next to <strong>Manifest URL</strong> opens the loaded manifest in a new tab.</p>
 
 <div class="note">
-<p><strong>Note:</strong> It's recommended that you use the Browser Toolbox, not the Add-on Debugger, for debugging WebExtensions. See <a href="/en-US/Add-ons/WebExtensions/Debugging">Debugging WebExtensions</a> for all the details.</p>
+<p><strong>Note:</strong> It's recommended that you use the Browser Toolbox, not the Add-on Debugger, for debugging WebExtensions. See <a href="https://extensionworkshop.com/documentation/develop/debugging/">Debugging WebExtensions</a> for all the details.</p>
 </div>
 
 <p>The Add-ons section in about:debugging lists all web extensions that are currently installed. Next to each entry is a button labeled <strong>Inspect</strong>.</p>
@@ -196,12 +196,12 @@ tags:
 <ul>
  <li>All registered <a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a></li>
  <li>All registered <a href="/en-US/docs/Web/API/SharedWorker">Shared Workers</a></li>
- <li>Other workers, including <a href="/en-US/docs/Web/API/ChromeWorker">Chrome Workers</a> and <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#Dedicated_workers">Dedicated Workers</a></li>
+ <li>Other workers, including <a href="/en-US/docs/Web/API/ChromeWorker">Chrome Workers</a> and <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#dedicated_workers">Dedicated Workers</a></li>
 </ul>
 
 <p>You can connect the developer tools to each worker, and send push notifications to service workers.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16657/about_debugging_workers.png" style="border: 1px solid black; display: block; height: 642px; margin-left: auto; margin-right: auto; width: 567px;"></p>
+<p><img alt="" src="about_debugging_workers.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h3 id="Service_worker_state">Service worker state</h3>
 
@@ -213,7 +213,7 @@ tags:
  <li><em>Stopped</em>: the service worker is installed and activated, but has been terminated after being idle.</li>
 </ul>
 
-<p><img alt="Screenshot of the debugging panel for a service worker that is in the Running state" src="https://mdn.mozillademos.org/files/16659/sample_service_worker.png" style="display: block; height: 237px; margin-left: auto; margin-right: auto; width: 556px;"></p>
+<p><img alt="Screenshot of the debugging panel for a service worker that is in the Running state" src="sample_service_worker.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>This section uses a simple ServiceWorker demo, hosted at <a href="https://serviceworke.rs/push-simple/">https://serviceworke.rs/push-simple/</a>.</p>
 
@@ -234,7 +234,7 @@ tags:
 <div>
 <p>A warning message is displayed at the top of the <strong>This Firefox</strong> tab if service workers are incompatible with the current browser configuration, and therefore cannot be used or debugged.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16655/worker_warning.png" style="display: block; height: 44px; margin: 0px auto; width: 551px;"></p>
+<p><img alt="" src="worker_warning.png" style="display: block; margin: 0px auto;"></p>
 </div>
 
 <p>Service workers can be unavailable if the <code>dom.serviceWorkers.enable</code> preference is set to false in <code>about:config</code>.</p>

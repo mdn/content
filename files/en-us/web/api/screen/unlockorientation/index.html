@@ -2,29 +2,34 @@
 title: Screen.unlockOrientation()
 slug: Web/API/Screen/unlockOrientation
 tags:
-  - API
-  - CSSOM View
-  - Deprecated
-  - Method
-  - NeedsMarkupWork
-  - Screen Orientation
+- API
+- CSSOM View
+- Deprecated
+- Method
+- NeedsMarkupWork
+- Screen Orientation
 ---
 <p>{{APIRef("Screen Orientation API")}}{{Deprecated_Header}}</p>
 
-<p>The <strong><code>Screen.unlockOrientation()</code></strong> method removes all the previous screen locks set by the page/app. The {{DOMxRef("ScreenOrientation.unlock()")}} method should be used instead.</p>
+<p>The <strong><code>Screen.unlockOrientation()</code></strong> method removes all the
+  previous screen locks set by the page/app. The {{DOMxRef("ScreenOrientation.unlock()")}}
+  method should be used instead.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> This method only works for installed Web apps or for Web pages in <a href="/en-US/docs/Web/Guide/DOM/Using_full_screen_mode">full-screen mode</a>.</p>
+  <p><strong>Note:</strong> This method only works for installed Web apps or for Web pages
+    in <a href="/en-US/docs/Web/Guide/DOM/Using_full_screen_mode">full-screen mode</a>.
+  </p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>unlocked</var> = window.screen.unlockOrientation();
+<pre class="brush: js">var <var>unlocked</var> = window.screen.unlockOrientation();
 </pre>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>Returns <code>true</code> if the orientation was successfully unlocked or <code>false</code> if the orientation couldn't be unlocked.</p>
+<p>Returns <code>true</code> if the orientation was successfully unlocked or
+  <code>false</code> if the orientation couldn't be unlocked.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -40,20 +45,22 @@ if (unlockOrientation()) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Screen Orientation', 'published/20140220.html#extensions-to-the-screen-interface', 'lockOrientation()')}}</td>
-   <td>{{Spec2('Screen Orientation')}}</td>
-   <td>Initial definition (Not present in the draft anymore)</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Screen Orientation',
+        'published/20140220.html#extensions-to-the-screen-interface',
+        'lockOrientation()')}}</td>
+      <td>{{Spec2('Screen Orientation')}}</td>
+      <td>Initial definition (Not present in the draft anymore)</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -63,8 +70,9 @@ if (unlockOrientation()) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{DOMxRef("Screen.orientation")}}</li>
- <li>{{DOMxRef("Screen.lockOrientation()")}}</li>
- <li>{{DOMxRef("Screen.onorientationchange")}}</li>
- <li><a href="/en-US/docs/Managing_screen_orientation">Managing screen orientation</a></li>
+  <li>{{DOMxRef("Screen.orientation")}}</li>
+  <li>{{DOMxRef("Screen.lockOrientation()")}}</li>
+  <li>{{DOMxRef("Screen.onorientationchange")}}</li>
+  <li><a href="/en-US/docs/Managing_screen_orientation">Managing screen orientation</a>
+  </li>
 </ul>

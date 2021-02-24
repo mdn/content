@@ -27,7 +27,7 @@ tags:
 
 <p>The following three expressions create the same regular expression object:</p>
 
-<pre class="brush: js notranslate">let re = /ab+c/i; // literal notation
+<pre class="brush: js">let re = /ab+c/i; // literal notation
 let re = new RegExp('ab+c', 'i') // constructor with string pattern as first argument
 let re = new RegExp(/ab+c/, 'i') // constructor with regular expression literal as first argument (Starting with ECMAScript 6)
 </pre>
@@ -44,7 +44,7 @@ let re = new RegExp(/ab+c/, 'i') // constructor with regular expression literal 
 
 <p>For example, the following are equivalent:</p>
 
-<pre class="brush: js notranslate">let re = /\w+/
+<pre class="brush: js">let re = /\w+/
 let re = new RegExp('\\w+')
 </pre>
 
@@ -120,7 +120,7 @@ let re = new RegExp('\\w+')
 
 <p>In the replacement text, the script uses <code>$1</code> and <code>$2</code> to indicate the results of the corresponding matching parentheses in the regular expression pattern.</p>
 
-<pre class="brush: js notranslate">let re = /(\w+)\s(\w+)/
+<pre class="brush: js">let re = /(\w+)\s(\w+)/
 let str = 'John Smith'
 let newstr = str.replace(re, '$2, $1')
 console.log(newstr)
@@ -132,7 +132,7 @@ console.log(newstr)
 
 <p>The default line ending varies depending on the platform (Unix, Windows, etc.). The line splitting provided in this example works on all platforms.</p>
 
-<pre class="brush: js notranslate">let text = 'Some text\nAnd some more\r\nAnd yet\rThis is the end'
+<pre class="brush: js">let text = 'Some text\nAnd some more\r\nAnd yet\rThis is the end'
 let lines = text.split(/\r\n|\r|\n/)
 console.log(lines) // logs [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
 </pre>
@@ -141,7 +141,7 @@ console.log(lines) // logs [ 'Some text', 'And some more', 'And yet', 'This is t
 
 <h3 id="Using_regular_expression_on_multiple_lines">Using regular expression on multiple lines</h3>
 
-<pre class="brush: js notranslate">let s = 'Please yes\nmake my day!'
+<pre class="brush: js">let s = 'Please yes\nmake my day!'
 
 s.match(/yes.*day/);
 // Returns null
@@ -154,7 +154,7 @@ s.match(/yes[^]*day/);
 
 <p>The {{JSxRef("Global_Objects/RegExp/sticky", "sticky")}} flag indicates that the regular expression performs sticky matching in the target string by attempting to match starting at {{jsxref("RegExp.prototype.lastIndex")}}.</p>
 
-<pre class="brush: js notranslate">let str = '#foo#'
+<pre class="brush: js">let str = '#foo#'
 let regex = /foo/y
 
 regex.lastIndex = 1
@@ -167,7 +167,7 @@ regex.lastIndex      // 0 (reset after match failure)</pre>
 
 <p>With the sticky flag <code>y</code>, the next match has to happen at the <code>lastIndex</code> position, while with the global flag <code>g</code>, the match can happen at the <code>lastIndex</code> position or later:</p>
 
-<pre class="brush: js notranslate">re = /\d/y;
+<pre class="brush: js">re = /\d/y;
 while (r = re.exec("123 456")) console.log(r, "AND re.lastIndex", re.lastIndex);
 
 // [ '1', index: 0, input: '123 456', groups: undefined ] AND re.lastIndex 1
@@ -185,7 +185,7 @@ while (r = re.exec("123 456")) console.log(r, "AND re.lastIndex", re.lastIndex);
 
 <p>This example demonstrates how one can separate out Unicode characters from a word.</p>
 
-<pre class="brush: js notranslate">let text = 'Образец text на русском языке'
+<pre class="brush: js">let text = 'Образец text на русском языке'
 let regex = /[\u0400-\u04FF]+/g
 
 let match = regex.exec(text)
@@ -203,7 +203,7 @@ console.log(regex.lastIndex) // logs '15'
 
 <h3 id="Extracting_sub-domain_name_from_URL">Extracting sub-domain name from URL</h3>
 
-<pre class="brush: js notranslate">let url = 'http://xxx.domain.com'
+<pre class="brush: js">let url = 'http://xxx.domain.com'
 console.log(/[^.]+/.exec(url)[0].substr(7)) // logs 'xxx'
 </pre>
 
@@ -228,16 +228,13 @@ console.log(/[^.]+/.exec(url)[0].substr(7)) // logs 'xxx'
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("javascript.builtins.RegExp")}}</p>
-</div>
 
 <h3 id="Firefox-specific_notes">Firefox-specific notes</h3>
 
 <p>Starting with Firefox 34, in the case of a capturing group with quantifiers preventing its exercise, the matched text for a capturing group is now <code>undefined</code> instead of an empty string:</p>
 
-<pre class="brush: js notranslate">// Firefox 33 or older
+<pre class="brush: js">// Firefox 33 or older
 'x'.replace(/x(.)?/g, function(m, group) {
   console.log("'group:" + group + "'");
 });

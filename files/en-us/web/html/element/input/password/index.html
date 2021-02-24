@@ -121,7 +121,7 @@ tags:
 
 <p>Use of a pattern is strongly recommended for password inputs, in order to help ensure that valid passwords using a wide assortment of character classes are selected and used by your users. With a pattern, you can mandate case rules, require the use of some number of digits and/or punctuation characters, and so forth. See the section {{anch("Validation")}} for details and an example.</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "placeholder", 0, 1, 2)}}</p>
+<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdefplaceholder", 0, 1, 2)}}</p>
 
 <h3 id="htmlattrdefreadonly">{{htmlattrdef("readonly")}}</h3>
 
@@ -131,7 +131,7 @@ tags:
 <p><strong>Note:</strong> Because a read-only field cannot have a value, <code>required</code> does not have any effect on inputs with the <code>readonly</code> attribute also specified.</p>
 </div>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "size", 0, 1, 2)}}</p>
+<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdefsize", 0, 1, 2)}}</p>
 
 <h2 id="Using_password_inputs">Using password inputs</h2>
 
@@ -141,7 +141,7 @@ tags:
 
 <p>Here we see the most basic password input, with a label established using the {{HTMLElement("label")}} element.</p>
 
-<pre class="brush: html notranslate">&lt;label for="userPassword"&gt;Password: &lt;/label&gt;
+<pre class="brush: html">&lt;label for="userPassword"&gt;Password: &lt;/label&gt;
 &lt;input id="userPassword" type="password"&gt;</pre>
 
 <p>{{EmbedLiveSample("A_simple_password_input", 600, 40)}}</p>
@@ -162,7 +162,7 @@ tags:
 </dl>
 
 <div id="Autocomplete_sample1">
-<pre class="brush: html notranslate">&lt;label for="userPassword"&gt;Password:&lt;/label&gt;
+<pre class="brush: html">&lt;label for="userPassword"&gt;Password:&lt;/label&gt;
 &lt;input id="userPassword" type="password" autocomplete="current-password"&gt;</pre>
 </div>
 
@@ -172,7 +172,7 @@ tags:
 
 <p>To tell the user's browser that the password field must have a valid value before the form can be submitted, specify the Boolean {{htmlattrxref("required", "input")}} attribute.</p>
 
-<pre class="brush: html notranslate">&lt;label for="userPassword"&gt;Password: &lt;/label&gt;
+<pre class="brush: html">&lt;label for="userPassword"&gt;Password: &lt;/label&gt;
 &lt;input id="userPassword" type="password" required&gt;
 &lt;input type="submit" value="Submit"&gt;</pre>
 
@@ -182,7 +182,7 @@ tags:
 
 <p>If your recommended (or required) password syntax rules would benefit from an alternate text entry interface than the standard keyboard, you can use the {{htmlattrxref("inputmode", "input")}} attribute to request a specific one. The most obvious use case for this is if the password is required to be numeric (such as a PIN). Mobile devices with virtual keyboards, for example, may opt to switch to a numeric keypad layout instead of a full keyboard, to make entering the password easier. If the PIN is for one-time use, set the {{htmlattrxref("autocomplete", "input")}} attribute to either <code>off</code> or <code>one-time-code</code> to suggest that it's not saved.</p>
 
-<pre class="brush: html notranslate">&lt;label for="pin"&gt;PIN: &lt;/label&gt;
+<pre class="brush: html">&lt;label for="pin"&gt;PIN: &lt;/label&gt;
 &lt;input id="pin" type="password" inputmode="numeric"&gt;</pre>
 
 <p>{{EmbedLiveSample("Specifying_an_input_mode", 600, 40)}}</p>
@@ -191,7 +191,7 @@ tags:
 
 <p>As usual, you can use the {{htmlattrxref("minlength", "input")}} and {{htmlattrxref("maxlength", "input")}} attributes to establish minimum and maximum acceptable lengths for the password. This example expands on the previous one by specifying that the user's PIN must be at least four and no more than eight digits. The {{htmlattrxref("size", "input")}} attribute is used to ensure that the password entry control is eight characters wide.</p>
 
-<pre class="brush: html notranslate">&lt;label for="pin"&gt;PIN:&lt;/label&gt;
+<pre class="brush: html">&lt;label for="pin"&gt;PIN:&lt;/label&gt;
 &lt;input id="pin" type="password" inputmode="numeric" minlength="4"
        maxlength="8" size="8"&gt;</pre>
 
@@ -203,14 +203,14 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;label for="userPassword"&gt;Password: &lt;/label&gt;
+<pre class="brush: html">&lt;label for="userPassword"&gt;Password: &lt;/label&gt;
 &lt;input id="userPassword" type="password" size="12"&gt;
 &lt;button id="selectAll"&gt;Select All&lt;/button&gt;
 </pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">document.getElementById("selectAll").onclick = function() {
+<pre class="brush: js">document.getElementById("selectAll").onclick = function() {
   document.getElementById("userPassword").select();
 }</pre>
 
@@ -227,7 +227,7 @@ tags:
 <p>In this example, only values consisting of at least four and no more than eight hexadecimal digits are valid.</p>
 
 <div id="Validation_sample1">
-<pre class="brush: html notranslate">&lt;label for="hexId"&gt;Hex ID: &lt;/label&gt;
+<pre class="brush: html">&lt;label for="hexId"&gt;Hex ID: &lt;/label&gt;
 &lt;input id="hexId" type="password" pattern="[0-9a-fA-F]{4,8}"
        title="Enter an ID consisting of 4-8 hexadecimal digits"
        autocomplete="new-password"&gt;</pre>
@@ -250,7 +250,7 @@ tags:
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;label for="ssn"&gt;SSN:&lt;/label&gt;
+<pre class="brush: html">&lt;label for="ssn"&gt;SSN:&lt;/label&gt;
 &lt;input type="password" id="ssn" inputmode="numeric" minlength="9" maxlength="12"
     pattern="(?!000)([0-6]\d{2}|7([0-6]\d|7[012]))([ -])?(?!00)\d\d\3(?!0000)\d{4}"
     required autocomplete="off"&gt;
@@ -266,7 +266,7 @@ tags:
 
 <p>This is just some simple code to display the entered SSN onscreen so you can see it. Obviously this defeats the purpose of a password field, but it's helpful for experimenting with the <code>pattern</code>.</p>
 
-<pre class="brush: js notranslate">var ssn = document.getElementById("ssn");
+<pre class="brush: js">var ssn = document.getElementById("ssn");
 var current = document.getElementById("current");
 
 ssn.oninput = function(event) {

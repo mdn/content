@@ -45,13 +45,13 @@ tags:
 
 <p>For example, the BBC homepage contains many links that point not only to multiple news stories, but also different areas of the site (navigation functionality), login/registration pages (user tools), and more.</p>
 
-<p><img alt="frontpage of bbc.co.uk, showing many news items, and navigation menu functionality" src="https://mdn.mozillademos.org/files/17032/updated-bbc-website.png" style="display: block; height: 455px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="frontpage of bbc.co.uk, showing many news items, and navigation menu functionality" src="updated-bbc-website.png" style="display: block; margin: 0px auto;"></p>
 
 <h2 id="Anatomy_of_a_link">Anatomy of a link</h2>
 
 <p>A basic link is created by wrapping the text or other content, see {{anch("Block level links")}}, inside an {{htmlelement("a")}} element and using the {{htmlattrxref("href", "a")}} attribute, also known as a <strong>Hypertext Reference</strong>, or <strong>target</strong>, that contains the web address.</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;I'm creating a link to
+<pre class="brush: html">&lt;p&gt;I'm creating a link to
 &lt;a href="https://www.mozilla.org/en-US/"&gt;the Mozilla homepage&lt;/a&gt;.
 &lt;/p&gt;</pre>
 
@@ -63,7 +63,7 @@ tags:
 
 <p>Another attribute you may want to add to your links is <code>title</code>. The title contains additional information about the link, such as which kind of information the page contains, or things to be aware of on the web site.</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;I'm creating a link to
+<pre class="brush: html">&lt;p&gt;I'm creating a link to
 &lt;a href="https://www.mozilla.org/en-US/"
    title="The best place to find more information about Mozilla's
           mission and how to contribute"&gt;the Mozilla homepage&lt;/a&gt;.
@@ -89,9 +89,9 @@ tags:
 
 <h3 id="Block_level_links">Block level links</h3>
 
-<p>As mentioned before, almost any content can be made into a link, even <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Block_versus_inline_elements">block-level elements</a>. If you have an image you want to make into a link, use the {{htmlelement("a")}} element and reference the image file with the {{htmlelement("img")}} element.</p>
+<p>As mentioned before, almost any content can be made into a link, even <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#block_versus_inline_elements">block-level elements</a>. If you have an image you want to make into a link, use the {{htmlelement("a")}} element and reference the image file with the {{htmlelement("img")}} element.</p>
 
-<pre class="brush: html notranslate">&lt;a href="https://www.mozilla.org/en-US/"&gt;
+<pre class="brush: html">&lt;a href="https://www.mozilla.org/en-US/"&gt;
   &lt;img src="mozilla-image.png" alt="mozilla logo that links to the mozilla homepage"&gt;
 &lt;/a&gt;</pre>
 
@@ -107,7 +107,7 @@ tags:
 
 <p>URLs use paths to find files. Paths specify where the file you're interested in is located in the filesystem. Let's look at an example of a directory structure, see the <a href="https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/creating-hyperlinks">creating-hyperlinks</a> directory.</p>
 
-<p><img alt="A simple directory structure. The parent directory is called creating-hyperlinks and contains two files called index.html and contacts.html, and two directories called projects and pdfs, which contain an index.html and a project-brief.pdf file, respectively" src="https://mdn.mozillademos.org/files/12409/simple-directory.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="A simple directory structure. The parent directory is called creating-hyperlinks and contains two files called index.html and contacts.html, and two directories called projects and pdfs, which contain an index.html and a project-brief.pdf file, respectively" src="simple-directory.png" style="display: block; margin: 0 auto;"></p>
 
 <p>The <strong>root</strong> of this directory structure is called <code>creating-hyperlinks</code>. When working locally with a web site, you'll have one directory that contains the entire site. Inside the <strong>root</strong>, we have an <code>index.html</code> file and a <code>contacts.html</code>. In a real website, <code>index.html</code> would be our home page or landing page (a web page that serves as the entry point for a website or a particular section of a website.).</p>
 
@@ -117,18 +117,18 @@ tags:
  <li>
   <p><strong>Same directory</strong>: If you wanted to include a hyperlink inside <code>index.html</code> (the top level <code>index.html</code>) pointing to <code>contacts.html</code>, you would specify the filename that you want to link to, because it's in the same directory as the current file. The URL you would use is <code>contacts.html</code>:</p>
 
-  <pre class="brush: html notranslate">&lt;p&gt;Want to contact a specific staff member?
+  <pre class="brush: html">&lt;p&gt;Want to contact a specific staff member?
 Find details on our &lt;a href="contacts.html"&gt;contacts page&lt;/a&gt;.&lt;/p&gt;</pre>
  </li>
  <li>
   <p><strong>Moving down into subdirectories</strong>: If you wanted to include a hyperlink inside <code>index.html</code> (the top level <code>index.html</code>) pointing to <code>projects/index.html</code>, you would need to go down into the <code>projects</code> directory before indicating the file you want to link to. This is done by specifying the directory's name, then a forward slash, then the name of the file. The URL you would use is <code>projects/index.html</code>:</p>
 
-  <pre class="brush: html notranslate">&lt;p&gt;Visit my &lt;a href="projects/index.html"&gt;project homepage&lt;/a&gt;.&lt;/p&gt;</pre>
+  <pre class="brush: html">&lt;p&gt;Visit my &lt;a href="projects/index.html"&gt;project homepage&lt;/a&gt;.&lt;/p&gt;</pre>
  </li>
  <li>
   <p><strong>Moving back up into parent directories</strong>: If you wanted to include a hyperlink inside <code>projects/index.html</code> pointing to <code>pdfs/project-brief.pdf</code>, you'd have to go up a directory level, then back down into the <code>pdf</code> directory. To go up a directory, use two dots — <code>..</code> — so the URL you would use is <code>../pdfs/project-brief.pdf</code>:</p>
 
-  <pre class="brush: html notranslate">&lt;p&gt;A link to my &lt;a href="../pdfs/project-brief.pdf"&gt;project brief&lt;/a&gt;.&lt;/p&gt;</pre>
+  <pre class="brush: html">&lt;p&gt;A link to my &lt;a href="../pdfs/project-brief.pdf"&gt;project brief&lt;/a&gt;.&lt;/p&gt;</pre>
  </li>
 </ul>
 
@@ -140,15 +140,15 @@ Find details on our &lt;a href="contacts.html"&gt;contacts page&lt;/a&gt;.&lt;/p
 
 <p>It's possible to link to a specific part of an HTML document, known as a <strong>document fragment</strong>, rather than just to the top of the document. To do this you first have to assign an {{htmlattrxref("id")}} attribute to the element you want to link to. It normally makes sense to link to a specific heading, so this would look something like the following:</p>
 
-<pre class="brush: html notranslate">&lt;h2 id="Mailing_address"&gt;Mailing address&lt;/h2&gt;</pre>
+<pre class="brush: html">&lt;h2 id="Mailing_address"&gt;Mailing address&lt;/h2&gt;</pre>
 
 <p>Then to link to that specific <code>id</code>, you'd include it at the end of the URL, preceded by a hash/pound symbol (<code>#</code>), for example:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Want to write us a letter? Use our &lt;a href="contacts.html#Mailing_address"&gt;mailing address&lt;/a&gt;.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Want to write us a letter? Use our &lt;a href="contacts.html#Mailing_address"&gt;mailing address&lt;/a&gt;.&lt;/p&gt;</pre>
 
 <p>You can even use the document fragment reference on its own to link to <em>another part of the current document</em>:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;The &lt;a href="#Mailing_address"&gt;company mailing address&lt;/a&gt; can be found at the bottom of this page.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;The &lt;a href="#Mailing_address"&gt;company mailing address&lt;/a&gt; can be found at the bottom of this page.&lt;/p&gt;</pre>
 
 <h3 id="Absolute_versus_relative_URLs">Absolute versus relative URLs</h3>
 
@@ -182,13 +182,13 @@ Find details on our &lt;a href="contacts.html"&gt;contacts page&lt;/a&gt;.&lt;/p
 
 <p><em><strong>Good</strong> link text:</em> <a href="https://firefox.com">Download Firefox</a></p>
 
-<pre class="brush: html notranslate">&lt;p&gt;&lt;a href="https://firefox.com/"&gt;
+<pre class="brush: html">&lt;p&gt;&lt;a href="https://firefox.com/"&gt;
   Download Firefox
 &lt;/a&gt;&lt;/p&gt;</pre>
 
 <p><em><strong>Bad</strong> link text:</em> <a href="https://firefox.com/">Click here</a> to download Firefox</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;&lt;a href="https://firefox.com/"&gt;
+<pre class="brush: html">&lt;p&gt;&lt;a href="https://firefox.com/"&gt;
   Click here
 &lt;/a&gt;
 to download Firefox&lt;/p&gt;
@@ -225,7 +225,7 @@ to download Firefox&lt;/p&gt;
 
 <p>Let's look at some examples, to see what kind of text can be used here:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;&lt;a href="https://www.example.com/large-report.pdf"&gt;
+<pre class="brush: html">&lt;p&gt;&lt;a href="https://www.example.com/large-report.pdf"&gt;
   Download the sales report (PDF, 10MB)
 &lt;/a&gt;&lt;/p&gt;
 
@@ -241,7 +241,7 @@ to download Firefox&lt;/p&gt;
 
 <p>When you are linking to a resource that's to be downloaded rather than opened in the browser, you can use the <code>download</code> attribute to provide a default save filename. Here's an example with a download link to the latest Windows version of Firefox:</p>
 
-<pre class="brush: html notranslate">&lt;a href="https://download.mozilla.org/?product=firefox-latest-ssl&amp;os=win64&amp;lang=en-US"
+<pre class="brush: html">&lt;a href="https://download.mozilla.org/?product=firefox-latest-ssl&amp;os=win64&amp;lang=en-US"
    download="firefox-latest-64bit-installer.exe"&gt;
   Download Latest Firefox for Windows (64-bit) (English, US)
 &lt;/a&gt;</pre>
@@ -270,7 +270,7 @@ to download Firefox&lt;/p&gt;
 
 <p>The finished example should look similar to the following page:</p>
 
-<p><img alt="An example of a simple HTML navigation menu, with home, pictures, projects, and social menu items" src="https://mdn.mozillademos.org/files/12411/navigation-example.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="An example of a simple HTML navigation menu, with home, pictures, projects, and social menu items" src="navigation-example.png" style="display: block; margin: 0 auto;"></p>
 
 <div class="note">
 <p><strong>Note</strong>: If you get stuck, or aren't sure if you have got it right, you can check the <a href="https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-marked-up">navigation-menu-marked-up</a> directory to see the correct answer.</p>
@@ -282,7 +282,7 @@ to download Firefox&lt;/p&gt;
 
 <p>In its most basic and commonly used form, a <code>mailto:</code> link indicates the email address of the intended recipient. For example:</p>
 
-<pre class="brush: html notranslate">&lt;a href="mailto:nowhere@mozilla.org"&gt;Send email to nowhere&lt;/a&gt;
+<pre class="brush: html">&lt;a href="mailto:nowhere@mozilla.org"&gt;Send email to nowhere&lt;/a&gt;
 </pre>
 
 <p>This results in a link that looks like this: <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>.</p>
@@ -295,12 +295,12 @@ to download Firefox&lt;/p&gt;
 
 <p>Here's an example that includes a cc, bcc, subject and body:</p>
 
-<pre class="brush: html notranslate">&lt;a href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&amp;bcc=name3@rapidtables.com&amp;subject=The%20subject%20of%20the%20email&amp;body=The%20body%20of%20the%20email"&gt;
+<pre class="brush: html">&lt;a href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&amp;bcc=name3@rapidtables.com&amp;subject=The%20subject%20of%20the%20email&amp;body=The%20body%20of%20the%20email"&gt;
   Send mail with cc, bcc, subject and body
 &lt;/a&gt;</pre>
 
 <div class="note">
-<p><strong>Note:</strong> The values of each field must be URL-encoded, that is with non-printing characters (invisible characters like tabs, carriage returns, and page breaks) and spaces <a href="https://en.wikipedia.org/wiki/Percent-encoding">percent-escaped</a>. Also, note the use of the question mark (<code>?</code>) to separate the main URL from the field values, and ampersands (&amp;) to separate each field in the <code>mailto:</code> URL. This is standard URL query notation. Read <a href="/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_GET_method">The GET method</a> to understand what URL query notation is more commonly used for.</p>
+<p><strong>Note:</strong> The values of each field must be URL-encoded, that is with non-printing characters (invisible characters like tabs, carriage returns, and page breaks) and spaces <a href="https://en.wikipedia.org/wiki/Percent-encoding">percent-escaped</a>. Also, note the use of the question mark (<code>?</code>) to separate the main URL from the field values, and ampersands (&amp;) to separate each field in the <code>mailto:</code> URL. This is standard URL query notation. Read <a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data#the_get_method">The GET method</a> to understand what URL query notation is more commonly used for.</p>
 </div>
 
 <p>Here are a few other sample <code>mailto</code> URLs:</p>

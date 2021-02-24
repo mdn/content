@@ -2,38 +2,45 @@
 title: Event()
 slug: Web/API/Event/Event
 tags:
-  - API
-  - Constructor
-  - DOM
-  - Event
-  - Reference
+- API
+- Constructor
+- DOM
+- Event
+- Reference
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">The <code><strong>Event()</strong></code> constructor creates a new {{domxref("Event")}}.</span></p>
+<p><span class="seoSummary">The <code><strong>Event()</strong></code> constructor creates
+    a new {{domxref("Event")}}.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">new Event(<var>typeArg</var>[, <var>eventInit</var>]);</pre>
+<pre
+  class="brush: js">new Event(<var>typeArg</var>[, <var>eventInit</var>]);</pre>
 
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt><code><var>typeArg</var></code></dt>
- <dd>This is a {{domxref("DOMString")}} representing the name of the event.</dd>
- <dt><code><var>eventInit</var></code> {{optional_inline}}</dt>
- <dd>
- <p>This is an <code>EventInit</code> dictionary, having the following optional fields:</p>
+  <dt><code><var>typeArg</var></code></dt>
+  <dd>This is a {{domxref("DOMString")}} representing the name of the event.</dd>
+  <dt><code><var>eventInit</var></code> {{optional_inline}}</dt>
+  <dd>
+    <p>This is an <code>EventInit</code> dictionary, having the following optional fields:
+    </p>
 
- <dl>
-  <dt><code>bubbles</code> {{optional_inline}}</dt>
-  <dd>A {{jsxref("Boolean")}} indicating whether the event bubbles. The default is <code>false</code>.</dd>
-  <dt><code>cancelable</code> {{optional_inline}}</dt>
-  <dd>A {{jsxref("Boolean")}} indicating whether the event can be cancelled. The default is <code>false</code>.</dd>
-  <dt><code>composed</code> {{optional_inline}}</dt>
-  <dd>A {{jsxref("Boolean")}} indicating whether the event will trigger listeners outside of a shadow root (see {{domxref("Event.composed")}} for more details). The default is <code>false</code>.</dd>
- </dl>
- </dd>
+    <dl>
+      <dt><code>bubbles</code> {{optional_inline}}</dt>
+      <dd>A {{jsxref("Boolean")}} indicating whether the event bubbles. The default is
+        <code>false</code>.</dd>
+      <dt><code>cancelable</code> {{optional_inline}}</dt>
+      <dd>A {{jsxref("Boolean")}} indicating whether the event can be cancelled. The
+        default is <code>false</code>.</dd>
+      <dt><code>composed</code> {{optional_inline}}</dt>
+      <dd>A {{jsxref("Boolean")}} indicating whether the event will trigger listeners
+        outside of a shadow root (see {{domxref("Event.composed")}} for more details). The
+        default is <code>false</code>.</dd>
+    </dl>
+  </dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -50,20 +57,20 @@ myDiv.dispatchEvent(evt);
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-event-event','Event()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM WHATWG','#dom-event-event','Event()')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -73,7 +80,8 @@ myDiv.dispatchEvent(evt);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("Event")}}</li>
- <li>{{domxref("EventTarget.dispatchEvent()")}}</li>
- <li><a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and triggering events</a></li>
+  <li>{{domxref("Event")}}</li>
+  <li>{{domxref("EventTarget.dispatchEvent()")}}</li>
+  <li><a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and
+      triggering events</a></li>
 </ul>

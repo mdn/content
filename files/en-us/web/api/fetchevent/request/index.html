@@ -2,25 +2,30 @@
 title: FetchEvent.request
 slug: Web/API/FetchEvent/request
 tags:
-  - API
-  - Experimental
-  - FetchEvent
-  - Offline
-  - Property
-  - Reference
-  - Service Workers
-  - Workers
-  - request
+- API
+- Experimental
+- FetchEvent
+- Offline
+- Property
+- Reference
+- Service Workers
+- Workers
+- request
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
-<p>The <strong><code>request</code></strong> read-only property of the {{domxref("FetchEvent")}} interface returns the {{domxref("Request")}} that triggered the event handler.</p>
+<p>The <strong><code>request</code></strong> read-only property of the
+  {{domxref("FetchEvent")}} interface returns the {{domxref("Request")}} that triggered
+  the event handler.</p>
 
-<p>This property is non-nullable (since version 46, in the case of Firefox.) If a request is not provided by some other means, the constructor <code>init</code> object must contain a request (see {{domxref("FetchEvent.FetchEvent()")}}.)</p>
+<p>This property is non-nullable (since version 46, in the case of Firefox.) If a request
+  is not provided by some other means, the constructor <code>init</code> object must
+  contain a request (see {{domxref("FetchEvent.FetchEvent()")}}.)</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>recentRequest</em> = <em>fetchEvent</em>.request;</pre>
+<pre
+  class="brush: js">var <em>recentRequest</em> = <em>fetchEvent</em>.request;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -28,9 +33,20 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>This code snippet is from the <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js">service worker fetch sample</a> (<a class="external external-icon" href="https://googlechrome.github.io/samples/service-worker/prefetch/">run the fetch sample live</a>). The {{domxref("ServiceWorkerGlobalScope.onfetch")}} event handler listens for the <code>fetch</code> event. When fired, pass a promise that back to the controlled page to {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}}. This promise resolves to the first matching URL request in the {{domxref("Cache")}} object. If no match is found, the code fetches a response from the network.</p>
+<p>This code snippet is from the <a
+    href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js">service
+    worker fetch sample</a> (<a class="external external-icon"
+    href="https://googlechrome.github.io/samples/service-worker/prefetch/">run the fetch
+    sample live</a>). The {{domxref("ServiceWorkerGlobalScope.onfetch")}} event handler
+  listens for the <code>fetch</code> event. When fired, pass a promise that back to the
+  controlled page to {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}}.
+  This promise resolves to the first matching URL request in the {{domxref("Cache")}}
+  object. If no match is found, the code fetches a response from the network.</p>
 
-<p>The code also handles exceptions thrown from the {{domxref("ServiceWorkerGlobalScope.fetch")}} operation. Note that an HTTP error response (e.g., 404) will not trigger an exception. It will return a normal response object that has the appropriate error code set.</p>
+<p>The code also handles exceptions thrown from the
+  {{domxref("ServiceWorkerGlobalScope.fetch")}} operation. Note that an HTTP error
+  response (e.g., 404) will not trigger an exception. It will return a normal response
+  object that has the appropriate error code set.</p>
 
 <pre class="brush: js">self.addEventListener('fetch', function(event) {
   console.log('Handling fetch event for', event.request.url);
@@ -60,33 +76,35 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#fetch-event-request', 'request')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Service Workers', '#fetch-event-request', 'request')}}</td>
+      <td>{{Spec2('Service Workers')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.FetchEvent.request")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a class="external external-icon" href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a></li>
+  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
+      Workers</a></li>
+  <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Service
+      workers basic code example</a></li>
+  <li><a class="external external-icon"
+      href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker
+      ready?</a></li>
+  <li>{{jsxref("Promise")}}</li>
+  <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web
+      workers</a></li>
 </ul>

@@ -2,28 +2,32 @@
 title: GlobalEventHandlers.onloadend
 slug: Web/API/GlobalEventHandlers/onloadend
 tags:
-  - API
-  - Event Handler
-  - GlobalEventHandlers
-  - HTML DOM
-  - Property
-  - Reference
-  - Web
-  - events
-  - onloadend
+- API
+- Event Handler
+- GlobalEventHandlers
+- HTML DOM
+- Property
+- Reference
+- Web
+- events
+- onloadend
 ---
 <div>{{ApiRef}}</div>
 
-<p>The <strong><code>onloadend</code></strong> property of the {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} representing the code to be called when the {{event("loadend")}} event is raised (when progress has stopped on the loading of a resource.)</p>
+<p>The <strong><code>onloadend</code></strong> property of the
+  {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} representing
+  the code to be called when the {{event("loadend")}} event is raised (when progress has
+  stopped on the loading of a resource.)</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>img</var>.onloadend = <var>funcRef</var>;
+<pre class="brush: js"><var>img</var>.onloadend = <var>funcRef</var>;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p><code>funcRef</code> is the handler function to be called when the resource's <code>loadend</code> event fires.</p>
+<p><code>funcRef</code> is the handler function to be called when the resource's
+  <code>loadend</code> event fires.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -49,7 +53,4 @@ image.addEventListener('loadend', function(e) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.GlobalEventHandlers.onloadend")}}</p>
-</div>

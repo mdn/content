@@ -24,7 +24,7 @@ tags:
 this.message=message
 </pre>
 
-<pre class="eval"> this.rect=document.createElementNS("<span class="nowiki">http://www.w3.org/2000/svg</span>","rect")
+<pre class="eval"> this.rect=document.createElementNS("http://www.w3.org/2000/svg","rect")
  this.rect.setAttributeNS(null,"x",x)
  this.rect.setAttributeNS(null,"y",y)
  this.rect.setAttributeNS(null,"width",w)
@@ -71,10 +71,10 @@ this.message=message
 <p>When calling a JavaScript function that resides in the HTML file from an SVG file that is embedded in an HTML document, you should use <code>parent.functionname()</code> to reference the function. Although the Adobe SVG viewer plugin allows the use of <code>functionname()</code>, it's not the preferred way to do things.</p>
 
 <div class="note">
-<p>According to the <a class="external" href="http://web.archive.org/web/20100223210744/http://wiki.svg.org/Inter-Document_Communication">SVG wiki</a> the <code>"parent"</code> JS variable is broken in Adobe's SVG version 6 preview plugin. The suggested workaround is to use <code>"top"</code> instead of <code>"parent"</code>. Since it is a beta version of their plugin, we can probably safely ignore this.</p>
+<p>According to the <a href="http://web.archive.org/web/20100223210744/http://wiki.svg.org/Inter-Document_Communication">SVG wiki</a> the <code>"parent"</code> JS variable is broken in Adobe's SVG version 6 preview plugin. The suggested workaround is to use <code>"top"</code> instead of <code>"parent"</code>. Since it is a beta version of their plugin, we can probably safely ignore this.</p>
 </div>
 
-<p>More information and some examples can be found on the <a class="external" href="http://web.archive.org/web/20100223210744/http://wiki.svg.org/Inter-Document_Communication">SVG wiki inter-document scripting page</a>.</p>
+<p>More information and some examples can be found on the <a href="http://web.archive.org/web/20100223210744/http://wiki.svg.org/Inter-Document_Communication">SVG wiki inter-document scripting page</a>.</p>
 
 <h3 id="setProperty_has_three_parameters"><code>setProperty</code> has three parameters</h3>
 
@@ -82,4 +82,4 @@ this.message=message
 
 <h3 id="Links">Links</h3>
 
-<p><a class="external" href="http://web.archive.org/web/20100212202713/http://wiki.svg.org/Main_Page#Scripting_and_Programming">SVG wiki on Scripting and Programming</a></p>
+<p><a href="http://web.archive.org/web/20100212202713/http://wiki.svg.org/Main_Page#Scripting_and_Programming">SVG wiki on Scripting and Programming</a></p>

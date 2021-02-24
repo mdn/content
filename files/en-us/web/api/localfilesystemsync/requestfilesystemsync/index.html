@@ -4,14 +4,14 @@ slug: Web/API/LocalFileSystemSync/requestFileSystemSync
 ---
 <p>{{APIRef("File System API")}}{{SeeCompatTable}}{{deprecated_header}}{{Draft}}</p>
 
-<p>The <strong><code>requestFileSystemSync</code></strong> method of the <code>LocalFileSystemSync</code> interface of the <a href="/en/DOM/File_API/File_System_API">File System API</a> creates a new a sandboxed file system. It is intended to be used with <a href="/en/DOM/Worker"> WebWorkers</a>. The methods are implemented by <a href="/en/DOM/Worker">worker</a> objects.</p>
+<p>The <strong><code>requestFileSystemSync</code></strong> method of the <code>LocalFileSystemSync</code> interface of the <a href="/en-US/docs/DOM/File_API/File_System_API">File System API</a> creates a new a sandboxed file system. It is intended to be used with <a href="/en-US/docs/DOM/Worker"> WebWorkers</a>. The methods are implemented by <a href="/en-US/docs/DOM/Worker">worker</a> objects.</p>
 
 <div class="notecard warning">
 <p><strong>Warning:</strong></p>
 
-<p>This document was last updated on March 2, 2012 and follows the <a class="external" href="https://www.w3.org/TR/file-system-api/">W3C Specifications (Working Draft)</a> drafted on April 19, 2011.</p>
+<p>This document was last updated on March 2, 2012 and follows the <a href="https://www.w3.org/TR/file-system-api/">W3C Specifications (Working Draft)</a> drafted on April 19, 2011.</p>
 
-<p>This specification is more or less abandonned, failing to get significant traction.</p>
+<p>This specification is more or less abandoned, failing to get significant traction.</p>
 </div>
 
 <h2 id="requestFileSystem">Syntax</h2>
@@ -39,7 +39,7 @@ slug: Web/API/LocalFileSystemSync/requestFileSystemSync
 
 <h2 id="Exceptions">Exceptions</h2>
 
-<p>This method can raise an <a href="/en/DOM/File_API/File_System_API/FileException">FileException</a> with the following code:</p>
+<p>This method can raise an <a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a> with the following code:</p>
 
 <table class="standard-table">
  <thead>
@@ -49,7 +49,7 @@ slug: Web/API/LocalFileSystemSync/requestFileSystemSync
   </tr>
   <tr>
    <td><code>SECURITY_ERROR</code></td>
-   <td>The application does not have permission to access the file system interface. For example, you cannot run from <code>file://</code>. For more details, see the <a href="/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API#You_cannot_run_your_app_from_file:.2F.2F">article on basic concepts</a>.</td>
+   <td>The application does not have permission to access the file system interface. For example, you cannot run from <code>file://</code>. For more details, see the <a href="/en-US/docs/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API#You_cannot_run_your_app_from_file:.2F.2F">article on basic concepts</a>.</td>
   </tr>
  </thead>
 </table>
@@ -95,7 +95,7 @@ var fs = requestFileSystemSync(TEMPORARY, 1024*1024 /*1MB*/);</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("LocalFileSystem.requestFileSystem")}}, asyncronous equivalent of this interface</li>
- <li><a href="/en/DOM/File_API/File_System_API">File System API</a></li>
- <li><a href="/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">Basic Concepts About the File System API</a></li>
+ <li>{{domxref("LocalFileSystem.requestFileSystem")}}, asynchronous equivalent of this interface</li>
+ <li><a href="/en-US/docs/DOM/File_API/File_System_API">File System API</a></li>
+ <li><a href="/en-US/docs/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">Basic Concepts About the File System API</a></li>
 </ul>

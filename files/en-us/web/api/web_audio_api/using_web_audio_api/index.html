@@ -25,7 +25,7 @@ tags:
 
 <p>Our boombox looks like this:</p>
 
-<p><img alt="A boombox with play, pan, and volume controls" src="https://mdn.mozillademos.org/files/16197/boombox.png" style="border-style: solid; border-width: 1px; height: 646px; width: 1200px;"></p>
+<p><img alt="A boombox with play, pan, and volume controls" src="boombox.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>Note the retro cassette deck with a play button, and vol and pan sliders to allow you to alter the volume and stereo panning. We could make this a lot more complex, but this is ideal for simple learning at this stage.</p>
 
@@ -47,7 +47,7 @@ tags:
 
 <p>To be able to do anything with the Web Audio API, we need to create an instance of the audio context. This then gives us access to all the features and functionality of the API.</p>
 
-<pre class="brush: js notranslate">// for legacy browsers
+<pre class="brush: js">// for legacy browsers
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 
 const audioContext = new AudioContext();
@@ -63,7 +63,7 @@ const audioContext = new AudioContext();
 
 <p>Now, the audio context we've created needs some sound to play through it. There are a few ways to do this with the API. Let's begin with a simple method — as we have a boombox, we most likely want to play a full song track. Also, for accessibility, it's nice to expose that track in the DOM. We'll expose the song on the page using an {{htmlelement("audio")}} element.</p>
 
-<pre class="brush: html notranslate">&lt;audio src="myCoolTrack.mp3"&gt;&lt;/audio&gt;
+<pre class="brush: html">&lt;audio src="myCoolTrack.mp3"&gt;&lt;/audio&gt;
 </pre>
 
 <div class="note">
@@ -72,7 +72,7 @@ const audioContext = new AudioContext();
 
 <p>To use all the nice things we get with the Web Audio API, we need to grab the source from this element and <em>pipe</em> it into the context we have created. Lucky for us there's a method that allows us to do just that — {{domxref("AudioContext.createMediaElementSource")}}:</p>
 
-<pre class="brush: js notranslate">// get the audio element
+<pre class="brush: js">// get the audio element
 const audioElement = document.querySelector('audio');
 
 // pass it into the audio context
@@ -93,7 +93,7 @@ const track = audioContext.createMediaElementSource(audioElement);
 
 <p>Since our scripts are playing audio in response to a user input event (a click on a play button, for instance), we're in good shape and should have no problems from autoplay blocking. So, let's start by taking a look at our play and pause functionality. We have a play button that changes to a pause button when the track is playing:</p>
 
-<pre class="brush: html notranslate">&lt;button data-playing="false" role="switch" aria-checked="false"&gt;
+<pre class="brush: html">&lt;button data-playing="false" role="switch" aria-checked="false"&gt;
     &lt;span&gt;Play/Pause&lt;/span&gt;
 &lt;/button&gt;
 </pre>
@@ -102,16 +102,16 @@ const track = audioContext.createMediaElementSource(audioElement);
 
 <p>We've already created an input node by passing our audio element into the API. For the most part, you don't need to create an output node, you can just connect your other nodes to {{domxref("BaseAudioContext.destination")}}, which handles the situation for you:</p>
 
-<pre class="brush: js notranslate">track.connect(audioContext.destination);
+<pre class="brush: js">track.connect(audioContext.destination);
 </pre>
 
 <p>A good way to visualise these nodes is by drawing an audio graph so you can visualize it. This is what our current audio graph looks like:</p>
 
-<p><img alt="an audio graph with an audio element source connected to the default destination" src="https://mdn.mozillademos.org/files/16195/graph1.jpg" style="border-style: solid; border-width: 1px; height: 486px; width: 1426px;"></p>
+<p><img alt="an audio graph with an audio element source connected to the default destination" src="graph1.jpg" style="border-style: solid; border-width: 1px;"></p>
 
 <p>Now we can add the play and pause functionality.</p>
 
-<pre class="brush: js notranslate">// select our play button
+<pre class="brush: js">// select our play button
 const playButton = document.querySelector('button');
 
 playButton.addEventListener('click', function() {
@@ -135,7 +135,7 @@ playButton.addEventListener('click', function() {
 
 <p>We also need to take into account what to do when the track finishes playing. Our <code>HTMLMediaElement</code> fires an <code>ended</code> event once it's finished playing, so we can listen for that and run code accordingly:</p>
 
-<pre class="brush: js notranslate">audioElement.addEventListener('ended', () =&gt; {
+<pre class="brush: js">audioElement.addEventListener('ended', () =&gt; {
     playButton.dataset.playing = 'false';
 }, false);
 </pre>
@@ -146,23 +146,23 @@ playButton.addEventListener('click', function() {
 
 <p>There are two ways you can create nodes with the Web Audio API. You can use the factory method on the context itself (e.g. <code>audioContext.createGain()</code>) or via a constructor of the node (e.g. <code>new GainNode()</code>). We'll use the factory method in our code:</p>
 
-<pre class="brush: js notranslate">const gainNode = audioContext.createGain();
+<pre class="brush: js">const gainNode = audioContext.createGain();
 </pre>
 
 <p>Now we have to update our audio graph from before, so the input is connected to the gain, then the gain node is connected to the destination:</p>
 
-<pre class="brush: js notranslate">track.connect(gainNode).connect(audioContext.destination);
+<pre class="brush: js">track.connect(gainNode).connect(audioContext.destination);
 </pre>
 
 <p>This will make our audio graph look like this:</p>
 
-<p><img alt="an audio graph with an audio element source, connected to a gain node that modifies the audio source, and then going to the default destination" src="https://mdn.mozillademos.org/files/16196/graph2.jpg" style="border-style: solid; border-width: 1px; height: 550px; width: 1774px;"></p>
+<p><img alt="an audio graph with an audio element source, connected to a gain node that modifies the audio source, and then going to the default destination" src="graph2.jpg" style="border-style: solid; border-width: 1px;"></p>
 
 <p>The default value for gain is 1; this keeps the current volume the same. Gain can be set to a minimum of about -3.4 and a max of about 3.4. Here we'll allow the boombox to move the gain up to 2 (double the original volume) and down to 0 (this will effectively mute our sound).</p>
 
 <p>Let's give the user control to do this — we'll use a <a href="/en-US/docs/Web/HTML/Element/input/range">range input</a>:</p>
 
-<pre class="brush: html notranslate">&lt;input type="range" id="volume" min="0" max="2" value="1" step="0.01"&gt;
+<pre class="brush: html">&lt;input type="range" id="volume" min="0" max="2" value="1" step="0.01"&gt;
 </pre>
 
 <div class="note">
@@ -171,7 +171,7 @@ playButton.addEventListener('click', function() {
 
 <p>So let's grab this input's value and update the gain value when the input node has its value changed by the user:</p>
 
-<pre class="brush: js notranslate">const volumeControl = document.querySelector('#volume');
+<pre class="brush: js">const volumeControl = document.querySelector('#volume');
 
 volumeControl.addEventListener('input', function() {
     gainNode.gain.value = this.value;
@@ -194,11 +194,11 @@ volumeControl.addEventListener('input', function() {
 
 <p>To visualise it, we will be making our audio graph look like this:</p>
 
-<p><img alt="An image showing the audio graph showing an input node, two modification nodes (a gain node and a stereo panner node) and a destination node." src="https://mdn.mozillademos.org/files/16229/graphPan.jpg" style="border-style: solid; border-width: 1px; height: 532px; width: 2236px;"></p>
+<p><img alt="An image showing the audio graph showing an input node, two modification nodes (a gain node and a stereo panner node) and a destination node." src="graphpan.jpg" style="border-style: solid; border-width: 1px;"></p>
 
 <p>Let's use the constructor method of creating a node this time. When we do it this way, we have to pass in the context and any options that the particular node may take:</p>
 
-<pre class="brush: js notranslate">const pannerOptions = { pan: 0 };
+<pre class="brush: js">const pannerOptions = { pan: 0 };
 const panner = new StereoPannerNode(audioContext, pannerOptions);
 </pre>
 
@@ -208,12 +208,12 @@ const panner = new StereoPannerNode(audioContext, pannerOptions);
 
 <p>Here our values range from -1 (far left) and 1 (far right). Again let's use a range type input to vary this parameter:</p>
 
-<pre class="brush: html notranslate">&lt;input type="range" id="panner" min="-1" max="1" value="0" step="0.01"&gt;
+<pre class="brush: html">&lt;input type="range" id="panner" min="-1" max="1" value="0" step="0.01"&gt;
 </pre>
 
 <p>We use the values from that input to adjust our panner values in the same way as we did before:</p>
 
-<pre class="brush: js notranslate">const pannerControl = document.querySelector('#panner');
+<pre class="brush: js">const pannerControl = document.querySelector('#panner');
 
 pannerControl.addEventListener('input', function() {
     panner.pan.value = this.value;
@@ -222,7 +222,7 @@ pannerControl.addEventListener('input', function() {
 
 <p>Let's adjust our audio graph again, to connect all the nodes together:</p>
 
-<pre class="brush: js notranslate">track.connect(gainNode).connect(panner).connect(audioContext.destination);
+<pre class="brush: js">track.connect(gainNode).connect(panner).connect(audioContext.destination);
 </pre>
 
 <p>The only thing left to do is give the app a try: <a href="https://codepen.io/Rumyra/pen/qyMzqN/">Check out the final demo here on Codepen</a>.</p>
@@ -239,10 +239,10 @@ pannerControl.addEventListener('input', function() {
 
 <p>The <a href="https://github.com/mdn/voice-change-o-matic">Voice-change-O-matic</a> is a fun voice manipulator and sound visualization web app that allows you to choose different effects and visualizations. The application is fairly rudimentary, but it demonstrates the simultaneous use of multiple Web Audio API features. (<a href="https://mdn.github.io/voice-change-o-matic/">run the Voice-change-O-matic live</a>).</p>
 
-<p><img alt="A UI with a sound wave being shown, and options for choosing voice effects and visualizations." src="https://mdn.mozillademos.org/files/7921/voice-change-o-matic.png" style="border-style: solid; border-width: 1px; display: block; height: 500px; margin: 0px auto; width: 640px;"></p>
+<p><img alt="A UI with a sound wave being shown, and options for choosing voice effects and visualizations." src="voice-change-o-matic.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>Another application developed specifically to demonstrate the Web Audio API is the <a href="https://mdn.github.io/violent-theremin/">Violent Theremin</a>, a simple web application that allows you to change pitch and volume by moving your mouse pointer. It also provides a psychedelic lightshow (<a href="https://github.com/mdn/violent-theremin">see Violent Theremin source code</a>).</p>
 
-<p><img alt="A page full of rainbow colors, with two buttons labeled Clear screen and mute." src="https://mdn.mozillademos.org/files/7919/violent-theremin.png" style="border-style: solid; border-width: 1px; display: block; height: 458px; margin: 0px auto; width: 640px;"></p>
+<p><img alt="A page full of rainbow colors, with two buttons labeled Clear screen and mute." src="violent-theremin.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>Also see our <a href="https://github.com/mdn/webaudio-examples">webaudio-examples repo</a> for more examples.</p>

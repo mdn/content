@@ -2,45 +2,48 @@
 title: WheelEvent.deltaMode
 slug: Web/API/WheelEvent/deltaMode
 tags:
-  - API
-  - DOM
-  - Property
-  - Read-only
-  - Reference
-  - WheelEvent
+- API
+- DOM
+- Property
+- Read-only
+- Reference
+- WheelEvent
 ---
 <p>{{APIRef("DOM Events")}}</p>
 
-<p>The <code><strong>WheelEvent.deltaMode</strong></code> read-only property returns an <code>unsigned long</code> representing the unit of the delta values scroll amount. Permitted values are:</p>
+<p>The <code><strong>WheelEvent.deltaMode</strong></code> read-only property returns an
+  <code>unsigned long</code> representing the unit of the delta values scroll amount.
+  Permitted values are:</p>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Constant</td>
-   <td class="header">Value</td>
-   <td class="header">Description</td>
-  </tr>
-  <tr>
-   <td><code>DOM_DELTA_PIXEL</code></td>
-   <td><code>0x00</code></td>
-   <td>The delta values are specified in pixels.</td>
-  </tr>
-  <tr>
-   <td><code>DOM_DELTA_LINE</code></td>
-   <td><code>0x01</code></td>
-   <td>The delta values are specified in lines.</td>
-  </tr>
-  <tr>
-   <td><code>DOM_DELTA_PAGE</code></td>
-   <td><code>0x02</code></td>
-   <td>The delta values are specified in pages.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td class="header">Constant</td>
+      <td class="header">Value</td>
+      <td class="header">Description</td>
+    </tr>
+    <tr>
+      <td><code>DOM_DELTA_PIXEL</code></td>
+      <td><code>0x00</code></td>
+      <td>The delta values are specified in pixels.</td>
+    </tr>
+    <tr>
+      <td><code>DOM_DELTA_LINE</code></td>
+      <td><code>0x01</code></td>
+      <td>The delta values are specified in lines.</td>
+    </tr>
+    <tr>
+      <td><code>DOM_DELTA_PAGE</code></td>
+      <td><code>0x02</code></td>
+      <td>The delta values are specified in pages.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <code><em>unit</em> = <em>event</em>.deltaMode;</code></pre>
+<pre
+  class="brush: js">var <code><em>unit</em> = <em>event</em>.deltaMode;</code></pre>
 
 <h2 id="Example">Example</h2>
 
@@ -52,18 +55,19 @@ console.log(syntheticEvent.deltaMode);
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events','#widl-WheelEvent-deltaMode','WheelEvent.deltaMode')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM3 Events','#widl-WheelEvent-deltaMode','WheelEvent.deltaMode')}}
+      </td>
+      <td>{{Spec2('DOM3 Events')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -73,6 +77,6 @@ console.log(syntheticEvent.deltaMode);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{ event("wheel") }}</li>
- <li>{{domxref("WheelEvent")}}</li>
+  <li>{{ event("wheel") }}</li>
+  <li>{{domxref("WheelEvent")}}</li>
 </ul>

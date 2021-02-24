@@ -2,20 +2,23 @@
 title: Request.method
 slug: Web/API/Request/method
 tags:
-  - API
-  - Experimental
-  - Fetch
-  - Property
-  - Reference
-  - request
+- API
+- Experimental
+- Fetch
+- Property
+- Reference
+- request
 ---
 <div>{{APIRef("Fetch")}}</div>
 
-<p>The <strong><code>method</code></strong> read-only property of the {{domxref("Request")}} interface contains the request's method (<code>GET</code>, <code>POST</code>, etc.)</p>
+<p>The <strong><code>method</code></strong> read-only property of the
+  {{domxref("Request")}} interface contains the request's method (<code>GET</code>,
+  <code>POST</code>, etc.)</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>myMethod</var> = <var>request</var>.method;</pre>
+<pre
+  class="brush: js">var <var>myMethod</var> = <var>request</var>.method;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -23,7 +26,9 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>In the following snippet, we create a new request using the {{domxref("Request.Request()")}} constructor (for an image file in the same directory as the script), then save the method of the request in a variable:</p>
+<p>In the following snippet, we create a new request using the
+  {{domxref("Request.Request()")}} constructor (for an image file in the same directory as
+  the script), then save the method of the request in a variable:</p>
 
 <pre class="brush: js">var myRequest = new Request('flowers.jpg');
 var myMethod = myRequest.method; // GET</pre>
@@ -31,18 +36,18 @@ var myMethod = myRequest.method; // GET</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#dom-request-method','method')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Fetch','#dom-request-method','method')}}</td>
+      <td>{{Spec2('Fetch')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -52,7 +57,8 @@ var myMethod = myRequest.method; // GET</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
+  <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
+  <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a>
+  </li>
+  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
 </ul>

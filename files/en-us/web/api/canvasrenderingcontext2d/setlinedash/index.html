@@ -2,34 +2,43 @@
 title: CanvasRenderingContext2D.setLineDash()
 slug: Web/API/CanvasRenderingContext2D/setLineDash
 tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Dashes
-  - LInes
-  - Method
-  - Reference
-  - patterns
-  - setLineDash
+- API
+- Canvas
+- CanvasRenderingContext2D
+- Dashes
+- LInes
+- Method
+- Reference
+- patterns
+- setLineDash
 ---
 <div>{{APIRef}}</div>
 
-<p>The <strong><code>setLineDash()</code></strong> method of the Canvas 2D API's {{domxref("CanvasRenderingContext2D")}} interface sets the line dash pattern used when stroking lines. It uses an array of values that specify alternating lengths of lines and gaps which describe the pattern.</p>
+<p>The <strong><code>setLineDash()</code></strong> method of the Canvas 2D API's
+	{{domxref("CanvasRenderingContext2D")}} interface sets the line dash pattern used when
+	stroking lines. It uses an array of values that specify alternating lengths of lines
+	and gaps which describe the pattern.</p>
 
 <div class="note">
-<p><strong>Note:</strong> To return to using solid lines, set the line dash list to an empty array.</p>
+	<p><strong>Note:</strong> To return to using solid lines, set the line dash list to an
+		empty array.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>ctx</em>.setLineDash(<em>segments</em>);
+<pre class="brush: js"><em>ctx</em>.setLineDash(<em>segments</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
 	<dt><code>segments</code></dt>
-	<dd>An {{jsxref("Array")}} of numbers that specify distances to alternately draw a line and a gap (in coordinate space units). If the number of elements in the array is odd, the elements of the array get copied and concatenated. For example, <code>[5, 15, 25]</code> will become <code>[5, 15, 25, 5, 15, 25]</code>. If the array is empty, the line dash list is cleared and line strokes return to being solid.</dd>
+	<dd>An {{jsxref("Array")}} of numbers that specify distances to alternately draw a
+		line and a gap (in coordinate space units). If the number of elements in the array
+		is odd, the elements of the array get copied and concatenated. For example,
+		<code>[5, 15, 25]</code> will become <code>[5, 15, 25, 5, 15, 25]</code>. If the
+		array is empty, the line dash list is cleared and line strokes return to being
+		solid.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -40,7 +49,8 @@ tags:
 
 <h3 id="Basic_example">Basic example</h3>
 
-<p>This example uses the <code>setLineDash()</code> method to draw a dashed line above a solid line.</p>
+<p>This example uses the <code>setLineDash()</code> method to draw a dashed line above a
+	solid line.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -82,7 +92,8 @@ ctx.stroke();
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<p>The <code>drawDashedLine()</code> function created below makes the drawing of multiple dashed lines simple. It receives a pattern array as its only parameter.</p>
+<p>The <code>drawDashedLine()</code> function created below makes the drawing of multiple
+	dashed lines simple. It receives a pattern array as its only parameter.</p>
 
 <pre class="brush: js">function drawDashedLine(pattern) {
   ctx.beginPath();
@@ -121,7 +132,8 @@ drawDashedLine([12, 3, 3]);  // Equals [12, 3, 3, 12, 3, 3]
 			<th scope="col">Comment</th>
 		</tr>
 		<tr>
-			<td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-setlinedash", "CanvasRenderingContext2D.setLineDash")}}</td>
+			<td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-setlinedash",
+				"CanvasRenderingContext2D.setLineDash")}}</td>
 			<td>{{Spec2('HTML WHATWG')}}</td>
 			<td></td>
 		</tr>

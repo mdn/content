@@ -20,7 +20,7 @@ tags:
 
 <p>Let's say we want to render a gradient in which each corner of the square is a different color: red, blue, green, and white. The first thing to do is to establish these colors for the four vertices. To do this, we first need to create an array of vertex colors, then store it into a WebGL buffer. We'll do that by adding the following code to our <code>initBuffers()</code> function:</p>
 
-<pre class="brush: js notranslate">function initBuffers(){
+<pre class="brush: js">function initBuffers(){
   ...
   const colors = [
     1.0,  1.0,  1.0,  1.0,    // white
@@ -44,7 +44,7 @@ tags:
 
 <p>To use these colors, the vertex shader needs to be updated to pull the appropriate color from the color buffer:</p>
 
-<pre class="brush: js notranslate">  const vsSource = `
+<pre class="brush: js">  const vsSource = `
     attribute vec4 aVertexPosition;
     attribute vec4 aVertexColor;
 
@@ -66,7 +66,7 @@ tags:
 
 <p>As a refresher, here's what our fragment shader looked like previously:</p>
 
-<pre class="brush: js notranslate">  const fsSource = `
+<pre class="brush: js">  const fsSource = `
     void main() {
       gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
     }
@@ -75,7 +75,7 @@ tags:
 
 <p>In order to pick up the interpolated color for each pixel, we need to change this to fetch the value from the <code>vColor</code> varying:</p>
 
-<pre class="brush: js notranslate">  const fsSource = `
+<pre class="brush: js">  const fsSource = `
     varying lowp vec4 vColor;
 
     void main(void) {
@@ -90,7 +90,7 @@ tags:
 
 <p>Next, it's necessary to add code to look up the attribute location for the colors and setup that attribute for the shader program:</p>
 
-<pre class="brush: js notranslate">  const programInfo = {
+<pre class="brush: js">  const programInfo = {
     program: shaderProgram,
     attribLocations: {
       vertexPosition: gl.getAttribLocation(shaderProgram, 'aVertexPosition'),
@@ -100,7 +100,7 @@ tags:
 
 <p>Then, <code>drawScene()</code> can have the following added to it so it actually uses these colors when drawing the square:</p>
 
-<pre class="brush: js notranslate">  // Tell WebGL how to pull out the colors from the color buffer
+<pre class="brush: js">  // Tell WebGL how to pull out the colors from the color buffer
   // into the vertexColor attribute.
   {
     const numComponents = 4;

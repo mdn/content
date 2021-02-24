@@ -2,26 +2,43 @@
 title: SubtleCrypto.deriveBits()
 slug: Web/API/SubtleCrypto/deriveBits
 tags:
-  - API
-  - Crypto
-  - Method
-  - Reference
-  - SubtleCrypto
-  - deriveBits
+- API
+- Crypto
+- Method
+- Reference
+- SubtleCrypto
+- deriveBits
 ---
 <p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
 
-<p>The <code><strong>deriveBits()</strong></code> method of the {{domxref("SubtleCrypto")}} interface can be used to derive an array of bits from a base key.</p>
+<p>The <code><strong>deriveBits()</strong></code> method of the
+  {{domxref("SubtleCrypto")}} interface can be used to derive an array of bits from a base
+  key.</p>
 
-<p>It takes as its arguments the base key, the derivation algorithm to use, and the length of the bit string to derive. It returns a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a> which will be fulfilled with an <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code> containing the derived bits.</p>
+<p>It takes as its arguments the base key, the derivation algorithm to use, and the length
+  of the bit string to derive. It returns a <a
+    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
+    title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a>
+  which will be fulfilled with an
+  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code>
+  containing the derived bits.</p>
 
-<p>This method is very similar to <code><a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey">SubtleCrypto.deriveKey()</a></code>, except that <code>deriveKey()</code> returns a <code><a href="/en-US/docs/Web/API/CryptoKey">CryptoKey</a></code> object rather than an <code>ArrayBuffer</code>. Essentially <code>deriveKey()</code> is composed of <code>deriveBits()</code> followed by <code><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">importKey()</a></code>.</p>
+<p>This method is very similar to
+  <code><a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey">SubtleCrypto.deriveKey()</a></code>,
+  except that <code>deriveKey()</code> returns a
+  <code><a href="/en-US/docs/Web/API/CryptoKey">CryptoKey</a></code> object rather than an
+  <code>ArrayBuffer</code>. Essentially <code>deriveKey()</code> is composed of
+  <code>deriveBits()</code> followed by
+  <code><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">importKey()</a></code>.</p>
 
-<p>This function supports the same derivation algorithms as <code>deriveKey()</code>: ECDH, HKDF, and PBKDF2. See <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#Supported_algorithms">Supported algorithms</a> for some more detail on these algorithms.</p>
+<p>This function supports the same derivation algorithms as <code>deriveKey()</code>:
+  ECDH, HKDF, and PBKDF2. See <a
+    href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#Supported_algorithms">Supported
+    algorithms</a> for some more detail on these algorithms.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">const <em>result</em> = crypto<code>.subtle.deriveBits(
+<pre class="brush: js">const <em>result</em> = crypto<code>.subtle.deriveBits(
     <em>algorithm</em>,
     <em>baseKey</em>,
     <em>length
@@ -31,22 +48,44 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <ul>
- <li><code><em>algorithm</em></code> is an object defining the <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#Supported_algorithms">derivation algorithm</a> to use.
+  <li><code><em>algorithm</em></code> is an object defining the <a
+      href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#Supported_algorithms">derivation
+      algorithm</a> to use.
 
-  <ul>
-   <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#ECDH">ECDH</a>, pass an <code><a href="/en-US/docs/Web/API/EcdhKeyDeriveParams">EcdhKeyDeriveParams</a></code> object.</li>
-   <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#HKDF">HKDF</a>, pass an <code><a href="/en-US/docs/Web/API/HkdfParams">HkdfParams</a></code> object.</li>
-   <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#PBKDF2">PBKDF2</a>, pass a <code><a href="/en-US/docs/Web/API/Pbkdf2Params">Pbkdf2Params</a></code> object.</li>
-  </ul>
- </li>
- <li><em><code>baseKey</code></em> is a {{domxref("CryptoKey")}} representing the input to the derivation algorithm. If <code>algorithm</code> is ECDH, this will be the ECDH private key. Otherwise it will be the initial key material for the derivation function: for example, for PBKDF2 it might be a password, imported as a <code>CryptoKey</code> using <code><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey()</a></code>.</li>
- <li><code><em>length</em></code> is a number representing the number of bits to derive.</li>
+    <ul>
+      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#ECDH">ECDH</a>, pass
+        an
+        <code><a href="/en-US/docs/Web/API/EcdhKeyDeriveParams">EcdhKeyDeriveParams</a></code>
+        object.</li>
+      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#HKDF">HKDF</a>, pass
+        an <code><a href="/en-US/docs/Web/API/HkdfParams">HkdfParams</a></code> object.
+      </li>
+      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#PBKDF2">PBKDF2</a>,
+        pass a <code><a href="/en-US/docs/Web/API/Pbkdf2Params">Pbkdf2Params</a></code>
+        object.</li>
+    </ul>
+  </li>
+  <li><em><code>baseKey</code></em> is a {{domxref("CryptoKey")}} representing the input
+    to the derivation algorithm. If <code>algorithm</code> is ECDH, this will be the ECDH
+    private key. Otherwise it will be the initial key material for the derivation
+    function: for example, for PBKDF2 it might be a password, imported as a
+    <code>CryptoKey</code> using
+    <code><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey()</a></code>.
+  </li>
+  <li><code><em>length</em></code> is a number representing the number of bits to derive.
+  </li>
 </ul>
 
 <h3 id="Return_value">Return value</h3>
 
 <ul>
- <li><code><em>result</em></code> is a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a> that fulfills with an <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer" title="The ArrayBuffer object is used to represent a generic, fixed-length raw binary data buffer. You cannot directly manipulate the contents of an ArrayBuffer; instead, you create one of the typed array objects or a DataView object which represents the buffer in a specific format, and use that to read and write the contents of the buffer."><code>ArrayBuffer</code></a> containing the derived bits.</li>
+  <li><code><em>result</em></code> is a <a
+      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
+      title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a>
+    that fulfills with an <a
+      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"
+      title="The ArrayBuffer object is used to represent a generic, fixed-length raw binary data buffer. You cannot directly manipulate the contents of an ArrayBuffer; instead, you create one of the typed array objects or a DataView object which represents the buffer in a specific format, and use that to read and write the contents of the buffer."><code>ArrayBuffer</code></a>
+    containing the derived bits.</li>
 </ul>
 
 <h3 id="Exceptions">Exceptions</h3>
@@ -54,27 +93,38 @@ tags:
 <p>The promise is rejected when one of the following exceptions are encountered:</p>
 
 <dl>
- <dt>{{exception("InvalidAccessError")}}</dt>
- <dd>Raised when the base key is not a key for the requested derivation algorithm or if the {{domxref("CryptoKey.usages")}} value of that key doesn't contain <code>deriveKey</code>.</dd>
- <dt>{{exception("NotSupported")}}</dt>
- <dd>Raised when trying to use an algorithm that is either unknown or isn't suitable for derivation, or if the algorithm requested for the derived key doesn't define a key length.</dd>
+  <dt>{{exception("InvalidAccessError")}}</dt>
+  <dd>Raised when the base key is not a key for the requested derivation algorithm or if
+    the {{domxref("CryptoKey.usages")}} value of that key doesn't contain
+    <code>deriveKey</code>.</dd>
+  <dt>{{exception("NotSupported")}}</dt>
+  <dd>Raised when trying to use an algorithm that is either unknown or isn't suitable for
+    derivation, or if the algorithm requested for the derived key doesn't define a key
+    length.</dd>
 </dl>
 
 <h2 id="Supported_algorithms">Supported algorithms</h2>
 
-<p>See the <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#Supported_algorithms">Supported algorithms section of the <code>deriveKey()</code> documentation</a>.</p>
+<p>See the <a
+    href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#Supported_algorithms">Supported
+    algorithms section of the <code>deriveKey()</code> documentation</a>.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You can <a href="https://mdn.github.io/dom-examples/web-crypto/derive-bits/index.html">try the working examples</a> on GitHub.</p>
+  <p><strong>Note</strong>: You can <a
+      href="https://mdn.github.io/dom-examples/web-crypto/derive-bits/index.html">try the
+      working examples</a> on GitHub.</p>
 </div>
 
 <h3 id="ECDH">ECDH</h3>
 
 <p>In this example Alice and Bob each generate an ECDH key pair.</p>
 
-<p>We then use Alice's private key and Bob's public key to derive a shared secret. <a class="external external-icon" href="https://github.com/mdn/dom-examples/blob/master/web-crypto/derive-bits/ecdh.js" rel="noopener">See the complete code on GitHub.</a></p>
+<p>We then use Alice's private key and Bob's public key to derive a shared secret. <a
+    class="external external-icon"
+    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/derive-bits/ecdh.js"
+    rel="noopener">See the complete code on GitHub.</a></p>
 
 <pre class="brush: js">async function deriveSharedSecret(privateKey, publicKey) {
   const sharedSecret = await window.crypto.subtle.deriveBits(
@@ -131,7 +181,10 @@ Promise.all([generateAlicesKeyPair, generateBobsKeyPair]).then(values =&gt; {
 
 <h3 id="PBKDF2">PBKDF2</h3>
 
-<p>In this example we ask the user for a password, then use it to derive some bits using PBKDF2. <a class="external external-icon" href="https://github.com/mdn/dom-examples/blob/master/web-crypto/derive-bits/pbkdf2.js" rel="noopener">See the complete code on GitHub.</a></p>
+<p>In this example we ask the user for a password, then use it to derive some bits using
+  PBKDF2. <a class="external external-icon"
+    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/derive-bits/pbkdf2.js"
+    rel="noopener">See the complete code on GitHub.</a></p>
 
 <pre class="brush: js">let salt;
 
@@ -185,18 +238,19 @@ deriveBitsButton.addEventListener("click", () =&gt; {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-deriveBits', 'SubtleCrypto.deriveBits()') }}</td>
-   <td>{{ Spec2('Web Crypto API') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{ SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-deriveBits',
+        'SubtleCrypto.deriveBits()') }}</td>
+      <td>{{ Spec2('Web Crypto API') }}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -206,8 +260,12 @@ deriveBitsButton.addEventListener("click", () =&gt; {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://tools.ietf.org/html/rfc5869">HKDF specification</a>.</li>
- <li><a href="https://csrc.nist.gov/publications/detail/sp/800-132/final">NIST guidelines for password-based key derivation</a>.</li>
- <li><a href="https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet">Password storage cheat sheet</a>.</li>
- <li><a href="https://security.stackexchange.com/questions/3959/recommended-of-iterations-when-using-pkbdf2-sha256/3993#3993">Advice on choosing an iteration count for PBKDF2</a>.</li>
+  <li><a href="https://tools.ietf.org/html/rfc5869">HKDF specification</a>.</li>
+  <li><a href="https://csrc.nist.gov/publications/detail/sp/800-132/final">NIST guidelines
+      for password-based key derivation</a>.</li>
+  <li><a href="https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet">Password
+      storage cheat sheet</a>.</li>
+  <li><a
+      href="https://security.stackexchange.com/questions/3959/recommended-of-iterations-when-using-pkbdf2-sha256/3993#3993">Advice
+      on choosing an iteration count for PBKDF2</a>.</li>
 </ul>

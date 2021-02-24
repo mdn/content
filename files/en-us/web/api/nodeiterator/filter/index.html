@@ -2,20 +2,27 @@
 title: NodeIterator.filter
 slug: Web/API/NodeIterator/filter
 tags:
-  - API
-  - DOM
-  - NodeIterator
-  - Property
+- API
+- DOM
+- NodeIterator
+- Property
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <strong><code>NodeIterator.filter</code></strong> read-only method returns a {{domxref("NodeFilter")}} object, that is an object implement an <code>acceptNode(<em>node</em>)</code> method, used to screen nodes.</p>
+<p>The <strong><code>NodeIterator.filter</code></strong> read-only method returns a
+	{{domxref("NodeFilter")}} object, that is an object implement an
+	<code>acceptNode(<em>node</em>)</code> method, used to screen nodes.</p>
 
-<p>When creating the {{domxref("NodeIterator")}}, the filter object is passed in as the third parameter, and the object method <code>acceptNode(<em>node</em>)</code> is called on every single node to determine whether or not to accept it. This function should return the constant <code>NodeFilter.FILTER_ACCEPT</code> for cases when the node should be accepted and <code>NodeFilter.FILTER_REJECT</code> for cases when the node should be rejected.</p>
+<p>When creating the {{domxref("NodeIterator")}}, the filter object is passed in as the
+	third parameter, and the object method <code>acceptNode(<em>node</em>)</code> is
+	called on every single node to determine whether or not to accept it. This function
+	should return the constant <code>NodeFilter.FILTER_ACCEPT</code> for cases when the
+	node should be accepted and <code>NodeFilter.FILTER_REJECT</code> for cases when the
+	node should be rejected.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>nodeFilter</em> = <em>nodeIterator</em>.filter;
+<pre class="brush: js"><em>nodeFilter</em> = <em>nodeIterator</em>.filter;
 </pre>
 
 <h2 id="Example">Example</h2>
@@ -40,12 +47,15 @@ nodeFilter = nodeIterator.filter;</pre>
 	</thead>
 	<tbody>
 		<tr>
-			<td>{{SpecName('DOM WHATWG', '#dom-nodeiterator-filter', 'NodeIterator.filter')}}</td>
+			<td>{{SpecName('DOM WHATWG', '#dom-nodeiterator-filter',
+				'NodeIterator.filter')}}</td>
 			<td>{{Spec2('DOM WHATWG')}}</td>
 			<td>No change from {{SpecName('DOM2 Traversal_Range')}}.</td>
 		</tr>
 		<tr>
-			<td>{{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-NodeIterator-filter', 'NodeIterator.filter')}}</td>
+			<td>{{SpecName('DOM2 Traversal_Range',
+				'traversal.html#Traversal-NodeIterator-filter', 'NodeIterator.filter')}}
+			</td>
 			<td>{{Spec2('DOM2 Traversal_Range')}}</td>
 			<td>Initial definition.</td>
 		</tr>

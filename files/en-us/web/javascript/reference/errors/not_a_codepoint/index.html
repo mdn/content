@@ -2,18 +2,20 @@
 title: 'RangeError: argument is not a valid code point'
 slug: Web/JavaScript/Reference/Errors/Not_a_codepoint
 tags:
-  - Error
-  - Errors
-  - JavaScript
-  - RangeError
+- Error
+- Errors
+- JavaScript
+- RangeError
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<p>The JavaScript exception "Invalid code point" occurs when {{jsxref("NaN")}} values, negative Integers (-1), non-Integers (5.4), or values larger than 0x10FFFF (1114111) are used with {{jsxref("String.fromCodePoint()")}}.</p>
+<p>The JavaScript exception "Invalid code point" occurs when {{jsxref("NaN")}} values,
+  negative Integers (-1), non-Integers (5.4), or values larger than 0x10FFFF (1114111) are
+  used with {{jsxref("String.fromCodePoint()")}}.</p>
 
 <h2 id="Message">Message</h2>
 
-<pre class="syntaxbox">RangeError: {0} is not a valid code point (Firefox)
+<pre class="brush: js">RangeError: {0} is not a valid code point (Firefox)
 RangeError: Invalid code point {0} (Chromium)
 </pre>
 
@@ -23,9 +25,13 @@ RangeError: Invalid code point {0} (Chromium)
 
 <h2 id="What_went_wrong">What went wrong?</h2>
 
-<p>{{jsxref("String.fromCodePoint()")}} throws this error when passed {{jsxref("NaN")}} values, negative Integers (-1), non-Integers (5.4), or values larger than 0x10FFFF (1114111).</p>
+<p>{{jsxref("String.fromCodePoint()")}} throws this error when passed {{jsxref("NaN")}}
+  values, negative Integers (-1), non-Integers (5.4), or values larger than 0x10FFFF
+  (1114111).</p>
 
-<p>A <a href="https://en.wikipedia.org/wiki/Code_point">code point</a> is a value in the Unicode codespace; that is, the range of integers from <code>0</code> to <code>0x10FFFF</code>.</p>
+<p>A <a href="https://en.wikipedia.org/wiki/Code_point">code point</a> is a value in the
+  Unicode codespace; that is, the range of integers from <code>0</code> to
+  <code>0x10FFFF</code>.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -51,5 +57,5 @@ String.fromCodePoint(0x1D306, 0x61, 0x1D307) // "\uD834\uDF06a\uD834\uDF07"
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("String.fromCodePoint()")}}</li>
+  <li>{{jsxref("String.fromCodePoint()")}}</li>
 </ul>

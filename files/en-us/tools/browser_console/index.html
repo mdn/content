@@ -6,7 +6,7 @@ tags:
   - Debugging
   - Tools
   - Web Development
-  - 'WebDevelopment:Tools'
+  - WebDevelopment:Tools
 ---
 <div>{{ToolsSidebar}}</div>
 
@@ -33,32 +33,32 @@ tags:
 
 <p>You can also start the Browser Console by launching Firefox from the command line and passing the <code>-jsconsole</code> argument:</p>
 
-<pre class="notranslate">/Applications/FirefoxAurora.app/Contents/MacOS/firefox-bin -jsconsole</pre>
+<pre>/Applications/FirefoxAurora.app/Contents/MacOS/firefox-bin -jsconsole</pre>
 
 <p>The Browser Console looks like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16787/browser_console_68.png" style="display: block; height: 339px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="browser_console_68.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>You can see that the Browser Console looks and behaves very much like the <a href="/en-US/docs/Tools/Web_Console">Web Console</a>:</p>
 
 <ul>
- <li>most of the window is occupied by a <a href="/en-US/docs/Tools/Web_Console#Message_Display_Pane">pane that display messages</a>.</li>
- <li>at the top, a <a href="/en-US/docs/Tools/Web_Console#Filtering_and_searching">toolbar</a> enables you to filter the messages that appear.</li>
- <li>at the bottom, a <a href="/en-US/docs/Tools/Web_Console#The_command_line_interpreter">command line interpreter</a> enables you to evaluate JavaScript expressions.</li>
+ <li>most of the window is occupied by a <a href="/en-US/docs/Tools/Web_Console#message_display_pane">pane that display messages</a>.</li>
+ <li>at the top, a <a href="/en-US/docs/Tools/Web_Console#filtering_and_searching">toolbar</a> enables you to filter the messages that appear.</li>
+ <li>at the bottom, a <a href="/en-US/docs/Tools/Web_Console#the_command_line_interpreter">command line interpreter</a> enables you to evaluate JavaScript expressions.</li>
 </ul>
 
 <p>Beginning with Firefox 68, the Browser Console allows you to show or hide messages from the content process (i.e. the messages from scripts in all the opened pages) by setting or clearing the checkbox labeled <strong>Show Content Messages</strong>. The following image shows the browser console focused on the same page as above after clicking on the <strong>Show Content Messages</strong> checkbox.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16788/browser_console_68_02.png" style="display: block; height: 339px; margin: 0 auto; width: 800px;"></p>
+<p><img alt="" src="browser_console_68_02.png" style="display: block; margin: 0 auto;"></p>
 
 <h2 id="Browser_Console_logging">Browser Console logging</h2>
 
 <p>The Browser console logs the same sorts of messages as the Web Console:</p>
 
 <ul>
- <li><a href="/en-US/docs/Tools/Web_Console#HTTP_requests">HTTP requests</a></li>
- <li><a href="/en-US/docs/Tools/Web_Console#Warnings_and_errors">Warnings and errors</a> (including JavaScript, CSS, security warnings and errors, and messages explicitly logged by JavaScript code using the <a href="/en-US/docs/Web/API/console">console</a> API)</li>
- <li><a href="/en-US/docs/Tools/Web_Console#Input.2Foutput_messages">Input/output messages</a>: commands send to the browser via the command line, and the result of executing them</li>
+ <li><a href="/en-US/docs/Tools/Web_Console#http_requests">HTTP requests</a></li>
+ <li><a href="/en-US/docs/Tools/Web_Console#warnings_and_errors">Warnings and errors</a> (including JavaScript, CSS, security warnings and errors, and messages explicitly logged by JavaScript code using the <a href="/en-US/docs/Web/API/Console">console</a> API)</li>
+ <li><a href="/en-US/docs/Tools/Web_Console#input.2foutput_messages">Input/output messages</a>: commands send to the browser via the command line, and the result of executing them</li>
 </ul>
 
 <p>However, it displays such messages from:</p>
@@ -79,13 +79,13 @@ tags:
 
 <p>One exported symbol from <code>Console.jsm</code> is <code>console</code>. Below is an example of how to access it, which adds a message to the Browser Console.</p>
 
-<pre class="brush: js notranslate">Components.utils.import("resource://gre/modules/Console.jsm");
+<pre class="brush: js">Components.utils.import("resource://gre/modules/Console.jsm");
 console.log("Hello from Firefox code"); //output messages to the console</pre>
 
 <p>Learn more:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/console">console API reference</a></li>
+ <li><a href="/en-US/docs/Web/API/Console">console API reference</a></li>
  <li><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/modules/Console.jsm">Console.jsm source code in the Mozilla DXR</a></li>
 </ul>
 
@@ -95,7 +95,7 @@ console.log("Hello from Firefox code"); //output messages to the console</pre>
 
 <p>Here is an example on how to clear the contents of the Browser console:</p>
 
-<pre class="brush: js notranslate">Components.utils.import("resource://devtools/shared/Loader.jsm");
+<pre class="brush: js">Components.utils.import("resource://devtools/shared/Loader.jsm");
 var HUDService = devtools.require("devtools/client/webconsole/hudservice");
 
 var hud = HUDService.getBrowserConsole();
@@ -103,7 +103,7 @@ hud.jsterm.clearOutput(true);</pre>
 
 <p>If you would like to access the content document of the Browser Console this can be done with the HUDService. This example here makes it so that when you mouse over the "Clear" button it will clear the Browser Console:</p>
 
-<pre class="brush: js notranslate">Components.utils.import("resource://devtools/shared/Loader.jsm");
+<pre class="brush: js">Components.utils.import("resource://devtools/shared/Loader.jsm");
 var HUDService = devtools.require("devtools/client/webconsole/hudservice");
 
 var hud = HUDService.getBrowserConsole();
@@ -117,7 +117,7 @@ clearBtn.addEventListener('mouseover', function() {
 
 <p>For <a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/index.html">Add-on SDK</a> add-ons, the console API is available automatically. Here's an example add-on that just logs an error when the user clicks a widget:</p>
 
-<pre class="brush: js notranslate">widget = require("sdk/widget").Widget({
+<pre class="brush: js">widget = require("sdk/widget").Widget({
   id: "an-error-happened",
   label: "Error!",
   width: 40,
@@ -131,11 +131,11 @@ function logError() {
 
 <p>If you <a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/tutorials/installation.html">build this as an XPI file</a>, then open the Browser Console, then open the XPI file in Firefox and install it, you'll see a widget labeled "Error!" in the Add-on bar:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/5937/browser-console-addon.png" style="display: block; margin-left: auto; margin-right: auto;">Click the icon. You'll see output like this in the Browser Console:</p>
+<p><img alt="" src="browser-console-addon.png" style="display: block; margin-left: auto; margin-right: auto;">Click the icon. You'll see output like this in the Browser Console:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/5851/browser-console-addon-output.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="browser-console-addon-output.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
-<p>For Add-on SDK-based add-ons only, the message is prefixed with the name of the add-on ("log-error"), making it easy to find all messages from this add-on using the <a href="/en-US/docs/Tools/Web_Console#Filtering_and_searching">"Filter output"</a> search box. By default, only error messages are logged to the console, although <a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/console.html#Logging%20Levels">you can change this in the browser's preferences</a>.</p>
+<p>For Add-on SDK-based add-ons only, the message is prefixed with the name of the add-on ("log-error"), making it easy to find all messages from this add-on using the <a href="/en-US/docs/Tools/Web_Console#filtering_and_searching">"Filter output"</a> search box. By default, only error messages are logged to the console, although <a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/console.html#Logging%20Levels">you can change this in the browser's preferences</a>.</p>
 
 <h2 id="Browser_Console_command_line">Browser Console command line</h2>
 
@@ -143,11 +143,11 @@ function logError() {
 <p>The Browser Console command line is disabled by default. To enable it set the <code>devtools.chrome.enabled</code> preference to <code>true</code> in <code>about:config</code>, or set the "Enable chrome debugging" option in the <a href="/en-US/docs/Tools/Settings">developer tool settings</a>.</p>
 </div>
 
-<p>Like the Web Console, the command line interpreter enables you to evaluate JavaScript expressions in real time:<img alt="" src="https://mdn.mozillademos.org/files/5855/browser-console-commandline.png" style="display: block; margin-left: auto; margin-right: auto;">Also like the Web Console's command line interpreter, this command line supports <a href="/en-US/docs/Tools/Web_Console#Autocomplete">autocomplete</a>, <a href="/en-US/docs/Tools/Web_Console#Command_history">history</a>, and various <a href="/en-US/docs/Tools/Web_Console#Keyboard_shortcuts">keyboard shortcuts </a>and <a href="/en-US/docs/Tools/Web_Console#Helper_commands">helper commands</a>. If the result of a command is an object, you can <a href="/en-US/docs/Tools/Web_Console#Inspecting_objects">click on the object to see its details</a>.</p>
+<p>Like the Web Console, the command line interpreter enables you to evaluate JavaScript expressions in real time:<img alt="" src="browser-console-commandline.png" style="display: block; margin-left: auto; margin-right: auto;">Also like the Web Console's command line interpreter, this command line supports <a href="/en-US/docs/Tools/Web_Console#autocomplete">autocomplete</a>, <a href="/en-US/docs/Tools/Web_Console#command_history">history</a>, and various <a href="/en-US/docs/Tools/Web_Console#keyboard_shortcuts">keyboard shortcuts </a>and <a href="/en-US/docs/Tools/Web_Console#helper_commands">helper commands</a>. If the result of a command is an object, you can <a href="/en-US/docs/Tools/Web_Console#inspecting_objects">click on the object to see its details</a>.</p>
 
 <p>But while the Web Console executes code in the scope of the content window it's attached to, the browser console executes code in the scope of the chrome window of the browser. You can confirm this by evaluating <code>window</code>:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/5867/browser-console-chromewindow.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="browser-console-chromewindow.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>This means you can control the browser: opening, closing tabs and windows and changing the content that they host, and modify the browser's UI by creating, changing and removing XUL elements.</p>
 
@@ -155,7 +155,7 @@ function logError() {
 
 <p>The command line interpreter gets access to the <a href="/en-US/docs/XUL/tabbrowser"><code>tabbrowser</code></a> object, through the <code>gBrowser</code> global, and that enables you to control the browser through the command line. Try running this code in the Browser Console's command line (remember that to send multiple lines to the Browser Console, use <kbd>Shift</kbd>+<kbd>Enter</kbd>):</p>
 
-<pre class="brush: js notranslate">var newTabBrowser = gBrowser.getBrowserForTab(gBrowser.selectedTab);
+<pre class="brush: js">var newTabBrowser = gBrowser.getBrowserForTab(gBrowser.selectedTab);
 newTabBrowser.addEventListener("load", function() {
   newTabBrowser.contentDocument.body.innerHTML = "&lt;h1&gt;this page has been eaten&lt;/h1&gt;";
 }, true);
@@ -171,16 +171,16 @@ newTabBrowser.contentDocument.location.href = "https://mozilla.org/";</pre>
 
 <p>Since the global <code>window</code> object is the browser's chrome window, you can also modify the browser's user interface. On Windows, the following code will add a new item to the browser's main menu:</p>
 
-<pre class="brush: js notranslate">var parent = window.document.getElementById("appmenuPrimaryPane");
+<pre class="brush: js">var parent = window.document.getElementById("appmenuPrimaryPane");
 var makeTheTea = gBrowser.ownerDocument.defaultView.document.createElementNS("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul", "menuitem");
 makeTheTea.setAttribute("label", "A nice cup of tea?");
 parent.appendChild(makeTheTea);</pre>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/5859/browser-console-modify-ui-windows.png" style="display: block; margin-left: auto; margin-right: auto;">On macOS, this similar code will add a new item to the <strong>Tools</strong> menu:</p>
+<p><img alt="" src="browser-console-modify-ui-windows.png" style="display: block; margin-left: auto; margin-right: auto;">On macOS, this similar code will add a new item to the <strong>Tools</strong> menu:</p>
 
-<pre class="brush: js notranslate">var parent = window.document.getElementById("menu_ToolsPopup");
+<pre class="brush: js">var parent = window.document.getElementById("menu_ToolsPopup");
 var makeTheTea = gBrowser.ownerDocument.defaultView.document.createElementNS("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul", "menuitem");
 makeTheTea.setAttribute("label", "A nice cup of tea?");
 parent.appendChild(makeTheTea);</pre>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/5861/browser-console-modify-ui-osx.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="browser-console-modify-ui-osx.png" style="display: block; margin-left: auto; margin-right: auto;"></p>

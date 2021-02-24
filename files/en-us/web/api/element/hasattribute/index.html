@@ -2,26 +2,28 @@
 title: Element.hasAttribute()
 slug: Web/API/Element/hasAttribute
 tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
+- API
+- DOM
+- Element
+- Method
+- Reference
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <strong><code>Element.hasAttribute()</code></strong> method returns a <strong>Boolean</strong> value indicating whether the specified element has the specified attribute or not.</p>
+<p>The <strong><code>Element.hasAttribute()</code></strong> method returns a
+    <strong>Boolean</strong> value indicating whether the specified element has the
+    specified attribute or not.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>var <em>result</em></var> = <em><var>element</var></em>.hasAttribute(<em><var>name</var></em>);
+<pre class="brush: js"><var>var <em>result</em></var> = <em><var>element</var></em>.hasAttribute(<em><var>name</var></em>);
 </pre>
 
 <dl>
- <dt><code>result</code></dt>
- <dd>holds the return value <code>true</code> or <code>false</code>.</dd>
- <dt><code>name</code></dt>
- <dd>is a string representing the name of the attribute.</dd>
+    <dt><code>result</code></dt>
+    <dd>holds the return value <code>true</code> or <code>false</code>.</dd>
+    <dt><code>name</code></dt>
+    <dd>is a string representing the name of the attribute.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -49,28 +51,32 @@ if (foo.hasAttribute("bar")) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-hasattribute', 'Element.hasAttribute()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>From {{SpecName('DOM3 Core')}}, moved from {{domxref("Node")}} to {{domxref("Element")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-ElHasAttr', 'Element.hasAttribute()')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>No change from {{SpecName('DOM2 Core')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-ElHasAttr', 'Element.hasAttribute()')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+    <tbody>
+        <tr>
+            <th scope="col">Specification</th>
+            <th scope="col">Status</th>
+            <th scope="col">Comment</th>
+        </tr>
+        <tr>
+            <td>{{SpecName('DOM WHATWG', '#dom-element-hasattribute',
+                'Element.hasAttribute()')}}</td>
+            <td>{{Spec2('DOM WHATWG')}}</td>
+            <td>From {{SpecName('DOM3 Core')}}, moved from {{domxref("Node")}} to
+                {{domxref("Element")}}</td>
+        </tr>
+        <tr>
+            <td>{{SpecName('DOM3 Core', 'core.html#ID-ElHasAttr',
+                'Element.hasAttribute()')}}</td>
+            <td>{{Spec2('DOM3 Core')}}</td>
+            <td>No change from {{SpecName('DOM2 Core')}}</td>
+        </tr>
+        <tr>
+            <td>{{SpecName('DOM2 Core', 'core.html#ID-ElHasAttr',
+                'Element.hasAttribute()')}}</td>
+            <td>{{Spec2('DOM2 Core')}}</td>
+            <td>Initial definition.</td>
+        </tr>
+    </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

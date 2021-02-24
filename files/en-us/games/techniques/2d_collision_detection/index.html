@@ -17,7 +17,7 @@ tags:
 
 <p>One of the simpler forms of collision detection is between two rectangles that are axis aligned — meaning no rotation. The algorithm works by ensuring there is no gap between any of the 4 sides of the rectangles. Any gap means a collision does not exist.</p>
 
-<pre class="brush: js notranslate">var rect1 = {x: 5, y: 5, width: 50, height: 50}
+<pre class="brush: js">var rect1 = {x: 5, y: 5, width: 50, height: 50}
 var rect2 = {x: 20, y: 10, width: 10, height: 10}
 
 if (rect1.x &lt; rect2.x + rect2.width &amp;&amp;
@@ -40,12 +40,12 @@ if (5 &lt; 30 &amp;&amp;
 <div class="hidden">
 <h5 id="Rect_code">Rect code</h5>
 
-<pre class="brush: html notranslate">&lt;div id="cr-stage"&gt;&lt;/div&gt;
+<pre class="brush: html">&lt;div id="cr-stage"&gt;&lt;/div&gt;
 &lt;p&gt;Move the rectangle with arrow keys. Green means collision, blue means no collision.&lt;/p&gt;
 &lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"&gt;&lt;/script&gt;
 </pre>
 
-<pre class="brush: js notranslate">Crafty.init(200, 200);
+<pre class="brush: js">Crafty.init(200, 200);
 
 var dim1 = {x: 5, y: 5, w: 50, h: 50}
 var dim2 = {x: 20, y: 10, w: 60, h: 40}
@@ -83,18 +83,18 @@ rect2.bind("EnterFrame", function () {
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;div id="cr-stage"&gt;&lt;/div&gt;
+<pre class="brush: html">&lt;div id="cr-stage"&gt;&lt;/div&gt;
 &lt;p&gt;Move the circle with arrow keys. Green means collision, blue means no collision.&lt;/p&gt;
 &lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"&gt;&lt;/script&gt;
 </pre>
 
-<pre class="brush: css notranslate">#cr-stage {
+<pre class="brush: css">#cr-stage {
     position: static !important;
     height: 200px !important;
 }
 </pre>
 
-<pre class="brush: js notranslate">Crafty.init(200, 200);
+<pre class="brush: js">Crafty.init(200, 200);
 
 var dim1 = {x: 5, y: 5}
 var dim2 = {x: 20, y: 20}
@@ -148,7 +148,7 @@ circle2.bind("EnterFrame", function () {
 </pre>
 </div>
 
-<pre class="brush: js notranslate"><code>var circle1 = {radius: 20, x: 5, y: 5};
+<pre class="brush: js">var circle1 = {radius: 20, x: 5, y: 5};
 var circle2 = {radius: 12, x: 10, y: 5};
 
 var dx = circle1.x - circle2.x;
@@ -157,7 +157,7 @@ var distance = Math.sqrt(dx * dx + dy * dy);
 
 if (distance &lt; circle1.radius + circle2.radius) {
     // collision detected!
-}</code>
+}
 </pre>
 
 <p>{{ EmbedLiveSample('Playable_code', '700', '300', '', 'Games/Techniques/2D_collision_detection') }}</p>

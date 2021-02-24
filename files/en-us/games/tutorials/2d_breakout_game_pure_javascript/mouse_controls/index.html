@@ -15,7 +15,7 @@ tags:
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Finishing_up")}}</p>
 
 <div class="summary">
-<p>This is the <strong>9th step</strong> out of 10 of the <a href="/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html">Gamedev-Canvas-workshop/lesson9.html</a>.</p>
+<p>This is the <strong>9th step</strong> out of 10 of the <a href="/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript">Gamedev Canvas tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html">Gamedev-Canvas-workshop/lesson9.html</a>.</p>
 </div>
 
 <p><span class="seoSummary">The game itself is actually finished, so let's work on polishing it up. We have already added keyboard controls, but we could easily add mouse controls too.</span></p>
@@ -24,13 +24,13 @@ tags:
 
 <p>Listening for mouse movement is even easier than listening for key presses: all we need is the listener for the {{event("mousemove")}} event. Add the following line in the same place as the other event listeners, just below the <code>keyup event</code>:</p>
 
-<pre class="brush: js notranslate">document.addEventListener("mousemove", mouseMoveHandler, false);</pre>
+<pre class="brush: js">document.addEventListener("mousemove", mouseMoveHandler, false);</pre>
 
 <h2 id="Anchoring_the_paddle_movement_to_the_mouse_movement">Anchoring the paddle movement to the mouse movement</h2>
 
 <p>We can update the paddle position based on the pointer coordinates — the following handler function will do exactly that. Add the following function to your code, below the previous line you added:</p>
 
-<pre class="brush: js notranslate">function mouseMoveHandler(e) {
+<pre class="brush: js">function mouseMoveHandler(e) {
     var relativeX = e.clientX - canvas.offsetLeft;
     if(relativeX &gt; 0 &amp;&amp; relativeX &lt; canvas.width) {
         paddleX = relativeX - paddleWidth/2;
@@ -53,6 +53,6 @@ tags:
 
 <h2 id="Next_steps">Next steps</h2>
 
-<p>Now we've got a complete game we'll finish our series of lessons with some more small tweaks — <a href="/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Finishing_up">Finishing up</a>.</p>
+<p>Now we've got a complete game we'll finish our series of lessons with some more small tweaks — <a href="/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up">Finishing up</a>.</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Finishing_up")}}</p>

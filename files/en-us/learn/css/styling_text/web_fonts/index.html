@@ -26,7 +26,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), CSS basics (study <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a>), <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">CSS text and font fundamentals</a>.</td>
+   <td>Basic computer literacy, HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), CSS basics (study <a href="/en-US/docs/Learn/CSS/First_steps">Introduction to CSS</a>), <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">CSS text and font fundamentals</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -39,11 +39,11 @@ tags:
 
 <p>As we looked at in <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental text and font styling</a>, the fonts applied to your HTML can be controlled using the {{cssxref("font-family")}} property. This takes one or more font family names, and the browser travels down the list until it finds a font it has available on the system it is running on:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
 }</pre>
 
-<p>This system works well, but traditionally web developers' font choices were limited. There are only a handful of fonts that you can guarantee to be available across all common systems — the so-called <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Web_safe_fonts">Web-safe fonts</a>. You can use the font stack to specify preferable fonts, followed by web-safe alternatives, followed by the default system font, but this adds overhead in terms of testing to make sure that your designs look ok with each font, etc.</p>
+<p>This system works well, but traditionally web developers' font choices were limited. There are only a handful of fonts that you can guarantee to be available across all common systems — the so-called <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals#web_safe_fonts">Web-safe fonts</a>. You can use the font stack to specify preferable fonts, followed by web-safe alternatives, followed by the default system font, but this adds overhead in terms of testing to make sure that your designs look ok with each font, etc.</p>
 
 <h2 id="Web_fonts">Web fonts</h2>
 
@@ -51,14 +51,14 @@ tags:
 
 <p>First of all, you have a {{cssxref("@font-face")}} block at the start of the CSS, which specifies the font file(s) to download:</p>
 
-<pre class="brush: css notranslate">@font-face {
+<pre class="brush: css">@font-face {
   font-family: "myFont";
   src: url("myFont.woff");
 }</pre>
 
 <p>Below this you can then use the font family name specified inside @font-face to apply your custom font to anything you like, as normal:</p>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: "myFont", "Bitstream Vera Serif", serif;
 }</pre>
 
@@ -115,7 +115,15 @@ tags:
  <li>Click <em>Download your kit</em>.</li>
 </ol>
 
-<p>After the generator has finished processing, you should get a ZIP file to download — save it in the same directory as your HTML and CSS.</p>
+<p>After the generator has finished processing, you should get a ZIP file to download — save it in the same directory as your HTML and CSS.</p> 
+
+  <p>Web services for font generation typically limit file sizes. In such a case, consider using tools such as:</p>
+<ol>
+  <li><a href="https://github.com/bramstein/sfnt2woff-zopfli">sfnt2woff-zopfli</a> for converting ttf to woff</li>
+  <li><a href="https://fontforge.org/">fontforge</a> for converting from ttf to svg</li>
+  <li><a href="http://people.apache.org/~clay/batik/ttf2svg.html">batik ttf2svf</a>for converting from ttf to svg</li>
+  <li><a href="https://github.com/google/woff2">woff2</a>for converting from ttf to woff2</li>
+</ol>
 
 <h3 id="Implementing_the_code_in_your_demo">Implementing the code in your demo</h3>
 
@@ -134,13 +142,13 @@ tags:
  <li>Open up the <code>stylesheet.css</code> file and copy both the <code>@font-face</code> blocks contained inside into your <code>web-font-start.css</code> file — you need to put them at the very top, before any of your CSS, as the fonts need to be imported before you can use them on your site.</li>
  <li>Each of the <code>url()</code> functions points to a font file that we want to import into our CSS — we need to make sure the paths to the files are correct, so add <code>fonts/</code> to the start of each path (adjust as necessary).</li>
  <li>Now you can use these fonts in your font stacks, just like any web safe or default system font. For example:
-  <pre class="brush: css notranslate">font-family: 'zantrokeregular', serif;</pre>
+  <pre class="brush: css">font-family: 'zantrokeregular', serif;</pre>
  </li>
 </ol>
 
 <p>You should end up with a demo page with some nice fonts implemented on them. Because different fonts are created at different sizes, you may have to adjust the size, spacing, etc., to sort out the look and feel.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12984/web-font-example.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="web-font-example.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <div class="note">
 <p><strong>Note</strong>: If you have any problems getting this to work, feel free to compare your version to our finished files — see <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.html">web-font-finished.html</a> and <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.css">web-font-finished.css</a> (<a href="https://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html">run the finished example live</a>).</p>
@@ -169,7 +177,7 @@ tags:
 
 <p>Let's explore that <code>@font-face</code> syntax generated for you by fontsquirrel. This is what one of the blocks looks like:</p>
 
-<pre class="brush: css notranslate">@font-face {
+<pre class="brush: css">@font-face {
   font-family: 'ciclefina';
   src: url('fonts/cicle_fina-webfont.eot');
   src: url('fonts/cicle_fina-webfont.eot?#iefix') format('embedded-opentype'),
@@ -190,7 +198,7 @@ tags:
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: You can also specify particular {{cssxref("font-variant")}} and {{cssxref("font-stretch")}} values for your web fonts. In newer browsers, you can also specify a {{cssxref("unicode-range")}} value, which is a specific range of characters you want to use out of the web font — in supporting browsers, only the specified characters will be downloaded, saving unnecessary downloading. <a href="https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/">Creating Custom Font Stacks with Unicode-Range</a> by Drew McLellan provides some useful ideas on how to make use of this.</p>
+<p><strong>Note</strong>: You can also specify particular {{cssxref("font-variant")}} and {{cssxref("font-stretch")}} values for your web fonts. In newer browsers, you can also specify a {{cssxref("@font-face/unicode-range", "unicode-range")}} value, which is a specific range of characters you want to use out of the web font — in supporting browsers, only the specified characters will be downloaded, saving unnecessary downloading. <a href="https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/">Creating Custom Font Stacks with Unicode-Range</a> by Drew McLellan provides some useful ideas on how to make use of this.</p>
 </div>
 
 <h2 id="Variable_fonts">Variable fonts</h2>

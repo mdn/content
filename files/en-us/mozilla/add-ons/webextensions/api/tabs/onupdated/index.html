@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.tabs.onUpdated.addListener(listener[, extraParameters])
+<pre class="brush:js">browser.tabs.onUpdated.addListener(listener[, extraParameters])
 browser.tabs.onUpdated.removeListener(listener)
 browser.tabs.onUpdated.hasListener(listener)
 </pre>
@@ -51,7 +51,7 @@ browser.tabs.onUpdated.hasListener(listener)
   <dt><code>tabId</code></dt>
   <dd><code>integer</code>. ID of the tab that was updated.</dd>
   <dt><code>changeInfo</code></dt>
-  <dd><a href="#changeInfo"><code>object</code></a>. Contains properties for the tab properties that have changed. See <code><a href="/en-US/Add-ons/WebExtensions/API/tabs/onUpdated#changeInfo">changeInfo</a></code> below.</dd>
+  <dd><a href="#changeinfo"><code>object</code></a>. Contains properties for the tab properties that have changed. See <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated#changeinfo">changeInfo</a></code> below.</dd>
   <dt><code>tab</code></dt>
   <dd>{{WebExtAPIRef('tabs.Tab')}}. The new state of the tab.</dd>
  </dl>
@@ -147,7 +147,7 @@ browser.tabs.onUpdated.addListener(handleUpdated);</pre>
 
 <h3 id="Filtering_examples">Filtering examples</h3>
 
-<p>Log changes only to tabs whose <code>url</code> property is <a href="/en-US/Add-ons/WebExtensions/Match_patterns">matched</a> by "https://developer.mozilla.org/*" or "https://twitter.com/mozdevnet":</p>
+<p>Log changes only to tabs whose <code>url</code> property is <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">matched</a> by "https://developer.mozilla.org/*" or "https://twitter.com/mozdevnet":</p>
 
 <pre class="brush: js">const pattern1 = "https://developer.mozilla.org/*";
 const pattern2 = "https://twitter.com/mozdevnet";
@@ -182,7 +182,7 @@ browser.tabs.onUpdated.addListener(handleUpdated, filter);</pre>
 
 <ul>
  <li>to the <code>pinned</code> property of tabs</li>
- <li>whose <code>url</code> property is <a href="/en-US/Add-ons/WebExtensions/Match_patterns">matched</a> by "https://developer.mozilla.org/*" or "https://twitter.com/mozdevnet":</li>
+ <li>whose <code>url</code> property is <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">matched</a> by "https://developer.mozilla.org/*" or "https://twitter.com/mozdevnet":</li>
 </ul>
 
 <pre class="brush: js">const pattern1 = "https://developer.mozilla.org/*";
@@ -207,7 +207,7 @@ browser.tabs.onUpdated.addListener(
 
 <ul>
  <li>to the <code>pinned</code> property of tabs</li>
- <li>whose <code>url</code> property is <a href="/en-US/Add-ons/WebExtensions/Match_patterns">matched</a> by "https://developer.mozilla.org/*" or "https://twitter.com/mozdevnet"</li>
+ <li>whose <code>url</code> property is <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">matched</a> by "https://developer.mozilla.org/*" or "https://twitter.com/mozdevnet"</li>
  <li>and which are part of the current browser window at the time the update event is fired:</li>
 </ul>
 

@@ -28,7 +28,7 @@ tags:
 
 <h3 id="Prerequisites">Prerequisites</h3>
 
-<p>The universal build system is supported on the trunk, Mozilla 1.9.1 and Mozilla 1.9.2 branches. You should be familiar with the <a href="/En/Developer_Guide/Build_Instructions/Mac_OS_X_Prerequisites">macOS build prerequisites</a> before attempting to build a universal binary of a Mozilla product. The prerequisites for universal binaries are the same. "libIDL" and "GLib" need only be installed in the host architecture.</p>
+<p>The universal build system is supported on the trunk, Mozilla 1.9.1 and Mozilla 1.9.2 branches. You should be familiar with the <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Prerequisites">macOS build prerequisites</a> before attempting to build a universal binary of a Mozilla product. The prerequisites for universal binaries are the same. "libIDL" and "GLib" need only be installed in the host architecture.</p>
 
 <h3 id="Configuration">Configuration</h3>
 
@@ -36,9 +36,9 @@ tags:
 
 <h4 id="Your_.mozconfig_File">Your .mozconfig file</h4>
 
-<p>When preparing your own <code><a href="/en/Configuring_Build_Options">.mozconfig</a></code> file, you must source the <code>$topsrcdir/build/macosx/universal/mozconfig</code> config fragment . It should be sourced after any product-specific <code>mozconfig</code>, in case it needs to override any options.</p>
+<p>When preparing your own <code><a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options">.mozconfig</a></code> file, you must source the <code>$topsrcdir/build/macosx/universal/mozconfig</code> config fragment . It should be sourced after any product-specific <code>mozconfig</code>, in case it needs to override any options.</p>
 
-<p>Universal binaries must be built as <a href="/en/Configuring_Build_Options#Building_with_an_Objdir">objdir builds</a>, so <code>MOZ_OBJDIR</code> must be set. The location of your objdir is unimportant, so long as you provide one.</p>
+<p>Universal binaries must be built as <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options#building_with_an_objdir">objdir builds</a>, so <code>MOZ_OBJDIR</code> must be set. The location of your objdir is unimportant, so long as you provide one.</p>
 
 <p>Here is a sample <code>.mozconfig</code> suitable for building a universal binary of Firefox in a release configuration:</p>
 
@@ -60,7 +60,7 @@ ac_add_options --disable-tests
 
 <h4 id="Packaging">Packaging</h4>
 
-<p>For most products, when configured as a universal binary, the packaging phase will produce a disk image containing the merged universal binary. In order to perform the packaging phase, you must keep the new objdir structure in mind. If you had used the <a href="#Your_.mozconfig_File">sample <code>.mozconfig</code></a> above, you would build a universal disk image of Firefox by typing:</p>
+<p>For most products, when configured as a universal binary, the packaging phase will produce a disk image containing the merged universal binary. In order to perform the packaging phase, you must keep the new objdir structure in mind. If you had used the <a href="#your_.mozconfig_file">sample <code>.mozconfig</code></a> above, you would build a universal disk image of Firefox by typing:</p>
 
 <pre class="eval">cd myobjdir/x86_64
 MOZ_CURRENT_PROJECT=i386 make -C ../i386/ package

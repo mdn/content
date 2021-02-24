@@ -19,12 +19,12 @@ tags:
 
 <p>We created our index page routes in a <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes">previous tutorial.</a> As a reminder, all the route functions are defined in <strong>/routes/catalog.js</strong>:</p>
 
-<pre class="brush: js  notranslate">// GET catalog home page.
+<pre class="brush: js">// GET catalog home page.
 router.get('/', book_controller.index);  //This actually maps to /catalog/ because we import the route with a /catalog prefix</pre>
 
 <p>Where the callback function parameter (<code>book_controller.index</code>) is defined in <strong>/controllers/bookController.js</strong>:</p>
 
-<pre class="brush: js notranslate">exports.index = function(req, res, next) {
+<pre class="brush: js">exports.index = function(req, res, next) {
     res.send('NOT IMPLEMENTED: Site Home Page');
 }</pre>
 
@@ -37,7 +37,7 @@ router.get('/', book_controller.index);  //This actually maps to /catalog/ becau
 <div class="note">
 <p><strong>Note:</strong> We use the <code><a class="external external-icon" href="http://mongoosejs.com/docs/api.html#model_Model.countDocuments" rel="noopener">countDocuments()</a></code> method to get the number of instances of each model. This is called on a model, with an optional set of conditions to match against in the first argument, and a callback in the second argument (as discussed in <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">Using a Database (with Mongoose)</a>, and you can also return a <code>Query</code> and then execute it with a callback later). The callback will be invoked when the database returns the count, with an error value as the first parameter (or <code>null</code>) and the count of documents as the second parameter (or <code>null</code> if there was an error) .</p>
 
-<pre class="brush: js  notranslate">SomeModel.countDocuments({ a_model_field: 'match_value' }, function (err, count) {
+<pre class="brush: js">SomeModel.countDocuments({ a_model_field: 'match_value' }, function (err, count) {
  // ... do something if there is an err
  // ... do something with the count if there was no error
  });</pre>
@@ -45,7 +45,7 @@ router.get('/', book_controller.index);  //This actually maps to /catalog/ becau
 
 <p>Open <strong>/controllers/bookController.js</strong>. Near the top of the file you should see the exported <code>index()</code> function.</p>
 
-<pre class="brush: python  notranslate">var Book = require('../models/book')
+<pre class="brush: python">var Book = require('../models/book')
 
 exports.index = function(req, res, next) {
  res.send('NOT IMPLEMENTED: Site Home Page');
@@ -53,7 +53,7 @@ exports.index = function(req, res, next) {
 
 <p>Replace all the code above with the following code fragment. The first thing this does is import (<code>require()</code>) all the models (highlighted in bold). We need to do this because we'll be using them to get our counts of documents. It then imports the <em>async</em> module (which we discussed previously in <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async">Asynchronous flow control using async</a>).</p>
 
-<pre class="brush: js  notranslate">var Book = require('../models/book');
+<pre class="brush: js">var Book = require('../models/book');
 var Author = require('../models/author');
 var Genre = require('../models/genre');
 var BookInstance = require('../models/bookinstance');
@@ -95,7 +95,7 @@ exports.index = function(req, res) {
 
 <p>Open <strong>/views/index.pug</strong> and replace its content with the text below.</p>
 
-<pre class="brush: js  notranslate">extends layout
+<pre class="brush: js">extends layout
 
 block content
   h1= title
@@ -127,7 +127,7 @@ block content
 
 <p>At this point we should have created everything needed to display the index page. Run the application and open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>. If everything is set up correctly, your site should look something like the following screenshot.</p>
 
-<p><img alt="Home page - Express Local Library site" src="https://mdn.mozillademos.org/files/14458/LocalLibary_Express_Home.png" style="display: block; height: 440px; margin: 0px auto; width: 1000px;"></p>
+<p><img alt="Home page - Express Local Library site" src="locallibary_express_home.png" style="display: block; margin: 0px auto;"></p>
 
 <div class="note">
 <p><strong>Note:</strong> You won't be able to <em>use</em> the sidebar links yet because the urls, views, and templates for those pages haven't been defined. If you try you'll get errors like "NOT IMPLEMENTED: Book list" for example, depending on the link you click on.  These string literals (which will be replaced with proper data) were specified in the different controllers that live inside your "controllers" file.</p>

@@ -2,30 +2,35 @@
 title: ShadowRoot.delegatesFocus
 slug: Web/API/ShadowRoot/delegatesFocus
 tags:
-  - API
-  - Non-standard
-  - Property
-  - Reference
-  - ShadowRoot
-  - Web Components
-  - delegatesFocus
-  - shadow dom
+- API
+- Non-standard
+- Property
+- Reference
+- ShadowRoot
+- Web Components
+- delegatesFocus
+- shadow dom
 ---
 <div>{{APIRef("Shadow DOM")}}</div>
 
-<p>The <strong><code>delegatesFocus</code></strong> read-only property of the {{domxref("ShadowRoot")}} interface returns a boolean that indicates whether delegatesFocus was set when the shadow was attached (see {{domxref("Element.attachShadow()")}}).</p>
+<p>The <strong><code>delegatesFocus</code></strong> read-only property of the
+  {{domxref("ShadowRoot")}} interface returns a boolean that indicates whether
+  delegatesFocus was set when the shadow was attached (see
+  {{domxref("Element.attachShadow()")}}).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>df</var> = <var>shadowRoot</var>.delegatesFocus</pre>
+<pre
+  class="brush: js">var <var>df</var> = <var>shadowRoot</var>.delegatesFocus</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A boolean value — <code>true</code> if the shadow root does delegate focus, <code>false</code> if it doesn't.</p>
+<p>A boolean value — <code>true</code> if the shadow root does delegate focus,
+  <code>false</code> if it doesn't.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">let customElem = document.querySelector('my-shadow-dom-element');
+<pre class="brush: js">let customElem = document.querySelector('my-shadow-dom-element');
 let shadow = customElem.shadowRoot;
 
   ...
@@ -36,20 +41,22 @@ let hostElem = shadow.delegatesFocus;</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'https://dom.spec.whatwg.org/#shadowroot-delegates-focus', 'delegatesFocus')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG',
+        '#shadowroot-delegates-focus', 'delegatesFocus')}}
+      </td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

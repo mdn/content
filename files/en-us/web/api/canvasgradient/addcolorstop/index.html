@@ -2,36 +2,45 @@
 title: CanvasGradient.addColorStop()
 slug: Web/API/CanvasGradient/addColorStop
 tags:
-  - API
-  - Canvas
-  - CanvasGradient
-  - Gradients
-  - Method
-  - Reference
+- API
+- Canvas
+- CanvasGradient
+- Gradients
+- Method
+- Reference
 ---
 <div>{{APIRef("Canvas API")}}</div>
 
-<p>The <code><strong>CanvasGradient</strong></code><strong><code>.addColorStop()</code></strong> method adds a new color stop, defined by an <code>offset</code> and a <code>color</code>, to a given canvas gradient.</p>
+<p>The
+  <code><strong>CanvasGradient</strong></code><strong><code>.addColorStop()</code></strong>
+  method adds a new color stop, defined by an <code>offset</code> and a
+  <code>color</code>, to a given canvas gradient.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">void <em>gradient</em>.addColorStop(<em>offset</em>, <em>color</em>);
+<pre class="brush: js">void <em>gradient</em>.addColorStop(<em>offset</em>, <em>color</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>offset</code></dt>
- <dd>A number between <code>0</code> and <code>1</code>, inclusive, representing the position of the color stop. <code>0</code> represents the start of the gradient and <code>1</code> represents the end; an <code>INDEX_SIZE_ERR</code> is raised if the number is outside that range.</dd>
- <dt><code>color</code></dt>
- <dd>A <a href="/en-US/docs/Web/CSS">CSS</a> {{cssxref("&lt;color&gt;")}} value representing the color of the stop. A <code>SYNTAX_ERR</code> is raised if the value cannot be parsed as a CSS <code>&lt;color&gt;</code> value.</dd>
+  <dt><code>offset</code></dt>
+  <dd>A number between <code>0</code> and <code>1</code>, inclusive, representing the
+    position of the color stop. <code>0</code> represents the start of the gradient and
+    <code>1</code> represents the end; an <code>INDEX_SIZE_ERR</code> is raised if the
+    number is outside that range.</dd>
+  <dt><code>color</code></dt>
+  <dd>A <a href="/en-US/docs/Web/CSS">CSS</a> {{cssxref("&lt;color&gt;")}} value
+    representing the color of the stop. A <code>SYNTAX_ERR</code> is raised if the value
+    cannot be parsed as a CSS <code>&lt;color&gt;</code> value.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Adding_stops_to_a_gradient">Adding stops to a gradient</h3>
 
-<p>This example uses the <code>addColorStop</code> method to add stops to a linear {{domxref("CanvasGradient")}} object. The gradient is then used to fill a rectangle.</p>
+<p>This example uses the <code>addColorStop</code> method to add stops to a linear
+  {{domxref("CanvasGradient")}} object. The gradient is then used to fill a rectangle.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -58,18 +67,19 @@ ctx.fillRect(10, 10, 200, 100);
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-canvasgradient-addcolorstop", "CanvasGradient.addColorStop")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', "scripting.html#dom-canvasgradient-addcolorstop",
+        "CanvasGradient.addColorStop")}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -79,7 +89,7 @@ ctx.fillRect(10, 10, 200, 100);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The interface defining this method: {{domxref("CanvasGradient")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.createLinearGradient()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.createRadialGradient()")}}</li>
+  <li>The interface defining this method: {{domxref("CanvasGradient")}}</li>
+  <li>{{domxref("CanvasRenderingContext2D.createLinearGradient()")}}</li>
+  <li>{{domxref("CanvasRenderingContext2D.createRadialGradient()")}}</li>
 </ul>

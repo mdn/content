@@ -52,7 +52,7 @@ tags:
 
 <h4 id="EmbedLiveSample_macro">EmbedLiveSample macro</h4>
 
-<pre class="syntaxbox notranslate"> \{{EmbedLiveSample(<em>block_ID</em>, <em>width</em>, <em>height</em>, <em>screenshot_URL</em>, <em>page_slug</em>)}}</pre>
+<pre class="brush: js"> \{{EmbedLiveSample(<em>block_ID</em>, <em>width</em>, <em>height</em>, <em>screenshot_URL</em>, <em>page_slug</em>)}}</pre>
 
 <div class="note notecard">
 <p><strong>Note</strong>: If the heading is translated, its ID is automatically updated to match the translated text. Therefore, you must change the value of <em>block_ID</em> in the macro call in the translated article, in order for the macro to work properly.</p>
@@ -78,7 +78,7 @@ tags:
 
 <h4 id="LiveSampleLink_macro">LiveSampleLink macro</h4>
 
-<pre class="syntaxbox notranslate"> \{{LiveSampleLink(<em>block_ID</em>, <em>link_text</em>)}}</pre>
+<pre class="brush: js"> \{{LiveSampleLink(<em>block_ID</em>, <em>link_text</em>)}}</pre>
 
 <dl>
  <dt>block_ID</dt>
@@ -119,7 +119,7 @@ tags:
 
 <p>This HTML creates a paragraph and some blocks to help us position and style a message.</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;A simple example of the live sample system in action.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;A simple example of the live sample system in action.&lt;/p&gt;
 &lt;div class="box"&gt;
   &lt;div id="item"&gt;Hello world! Welcome to MDN&lt;/div&gt;
 &lt;/div&gt;
@@ -129,7 +129,7 @@ tags:
 
 <p>The CSS code styles the box as well as the text inside it.</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   width: 200px;
   border-radius: 6px;
   padding: 20px;
@@ -148,7 +148,7 @@ tags:
 
 <p>This code is very simple. All it does is attach an event handler to the "Hello world!" text that makes an alert appear when it is clicked.</p>
 
-<pre class="brush: js notranslate">var el = document.getElementById('item');
+<pre class="brush: js">var el = document.getElementById('item');
 el.onclick = function() {
   alert('Owww, stop poking me!');
 }
@@ -164,7 +164,7 @@ el.onclick = function() {
 
 <p>{{LiveSampleLink('Live_sample_demo', 'Live sample demo link')}}</p>
 
-<h2 id="Conventions_regarding_live_samples"><a id="conventions">Conventions regarding live samples</a></h2>
+<h2 id="Conventions_regarding_live_samples">Conventions regarding live samples</h2>
 
 <dl>
  <dt>Orders of code blocks</dt>

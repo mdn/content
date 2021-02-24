@@ -8,30 +8,41 @@ tags:
   - FileSystemHandle
   - Method
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}</div>
+<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+</div>
 
-<p class="summary">The <strong><code>queryPermission()</code></strong> method of the {{domxref("FileSystemHandle")}} interface queries the current permission state of the current handle.</p>
+<p class="summary">The <strong><code>queryPermission()</code></strong> method of the
+  {{domxref("FileSystemHandle")}} interface queries the current permission state of the
+  current handle.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>PermissionState</var> = FileSystemHandle.queryPermission(FileSystemHandlePermissionDescriptor);</pre>
+<pre
+  class="brush: js">var <var>PermissionState</var> = FileSystemHandle.queryPermission(FileSystemHandlePermissionDescriptor);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>FileSystemHandlePermissionDescriptor {{optional_inline}}</dt>
- <dd>An object which specifies the permission mode to query for. Options are as follows:
- <ul>
-  <li><code>'mode'</code>: Can be either <code>'read'</code> or <code>'readwrite'</code>.</li>
- </ul>
- </dd>
+  <dt>FileSystemHandlePermissionDescriptor {{optional_inline}}</dt>
+  <dd>An object which specifies the permission mode to query for. Options are as follows:
+    <ul>
+      <li><code>'mode'</code>: Can be either <code>'read'</code> or
+        <code>'readwrite'</code>.</li>
+    </ul>
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>{{domxref('PermissionStatus.state')}} which is one of <code>'granted'</code>, <code>'denied'</code> or <code>'prompt'</code>.</p>
+<p>{{domxref('PermissionStatus.state')}} which is one of <code>'granted'</code>,
+  <code>'denied'</code> or <code>'prompt'</code>.</p>
 
-<p>If this returns "prompt" the website will have to call requestPermission() before any operations on the handle can be done. If this returns "denied" any operations will reject. Usually handles returned by the local file system handle factories will initially return "granted" for their read permission state. However, other than through the user revoking permission, a handle retrieved from IndexedDB is also likely to return "prompt".</p>
+<p>If this returns "prompt" the website will have to call requestPermission() before any
+  operations on the handle can be done. If this returns "denied" any operations will
+  reject. Usually handles returned by the local file system handle factories will
+  initially return "granted" for their read permission state. However, other than through
+  the user revoking permission, a handle retrieved from IndexedDB is also likely to return
+  "prompt".</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
@@ -39,9 +50,10 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following asynchronous function returns true if user has granted read or readwrite permissions to the file handle. Permission is requested if not.</p>
+<p>The following asynchronous function returns true if user has granted read or readwrite
+  permissions to the file handle. Permission is requested if not.</p>
 
-<pre class="brush: js notranslate">// fileHandle is a FileSystemFileHandle
+<pre class="brush: js">// fileHandle is a FileSystemFileHandle
 // withWrite is a boolean set to true if write
 
 async function verifyPermission(fileHandle, withWrite) {
@@ -68,18 +80,18 @@ async function verifyPermission(fileHandle, withWrite) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File System Access','#api-filesystemhandle-querypermission','queryPermission')}}</td>
-   <td>{{Spec2('File System Access')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('File System Access API','#api-filesystemhandle-querypermission','queryPermission')}}</td>
+      <td>{{Spec2('File System Access API')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -89,6 +101,7 @@ async function verifyPermission(fileHandle, withWrite) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/docs/Web/API/File_System_Access_API">File System Access API</a></li>
- <li><a href="https://web.dev/file-system-access/">The File System Access API: simplifying access to local files</a></li>
+  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
+  <li><a href="https://web.dev/file-system-access/">The File System Access API:
+      simplifying access to local files</a></li>
 </ul>

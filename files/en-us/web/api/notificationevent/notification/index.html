@@ -13,7 +13,7 @@ tags:
 ---
 <p>{{APIRef("Web Notifications")}}</p>
 
-<p>The <code>notification</code> read-only property of the {{domxref("NotificationEvent")}} interface returns the instance of the {{domxref("Notification")}} that was clicked to fire the event. The {{domxref("Notification")}} provides read-only access to many properties that were set at the instantiation time of the Notification such as <code>tag</code> and <code>data</code> attributes that allow you to store information for defered use in the <code>notificationclick</code> event.</p>
+<p>The <code>notification</code> read-only property of the {{domxref("NotificationEvent")}} interface returns the instance of the {{domxref("Notification")}} that was clicked to fire the event. The {{domxref("Notification")}} provides read-only access to many properties that were set at the instantiation time of the Notification such as <code>tag</code> and <code>data</code> attributes that allow you to store information for deferred use in the <code>notificationclick</code> event.</p>
 
 <h2 id="Returns">Returns</h2>
 
@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">self.addEventListener('notificationclick', function(event) {
+<pre class="brush: js">self.addEventListener('notificationclick', function(event) {
   console.log('On notification click');
 
   // Data can be attached to the notification so that you

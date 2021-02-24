@@ -1,0 +1,30 @@
+# Checks the PR itself for hygiene things.
+
+name: PR Lint
+
+on:
+  pull_request:
+    # Necessary to re-run if someone edits the PR without a new pushed commit.
+    types: [opened, edited, synchronize, reopened]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.4
+        with:
+          node-version: "12"
+
+      - name: Install all yarn packages
+        run: |
+          cd pr-lint
+          yarn --frozen-lockfile
+
+      - name: Run checks
+        run: |
+          cd pr-lint
+          yarn run check

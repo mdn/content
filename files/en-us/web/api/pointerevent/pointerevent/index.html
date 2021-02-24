@@ -2,43 +2,70 @@
 title: PointerEvent.PointerEvent()
 slug: Web/API/PointerEvent/PointerEvent
 tags:
-  - API
-  - Constructor
-  - PointerEvent
-  - Reference
+- API
+- Constructor
+- PointerEvent
+- Reference
 ---
 <p>{{APIRef("Pointer Events")}}</p>
 
-<p>The <strong><code>PointerEvent()</code></strong> constructor creates a new synthetic and untrusted {{domxref("PointerEvent")}} object instance.</p>
+<p>The <strong><code>PointerEvent()</code></strong> constructor creates a new synthetic
+	and untrusted {{domxref("PointerEvent")}} object instance.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"> <em>event</em> = new PointerEvent(<em>type</em>, <em>PointerEventInit</em>);</pre>
+<pre
+	class="brush: js"> <em>event</em> = new PointerEvent(<em>type</em>, <em>PointerEventInit</em>);</pre>
 
 <h3 id="Arguments">Arguments</h3>
 
 <dl>
 	<dt><em>type</em></dt>
-	<dd>Is a {{domxref("DOMString")}} representing the name of the event (see <a href="/Web/API/PointerEvent#Pointer_event_types">PointerEvent event types</a>).</dd>
+	<dd>Is a {{domxref("DOMString")}} representing the name of the event (see <a
+			href="/Web/API/PointerEvent#Pointer_event_types">PointerEvent event
+			types</a>).</dd>
 	<dt><em>PointerEventInit</em>{{optional_inline}}</dt>
 	<dd>Is a <code>PointerEventInit</code> dictionary, having the following fields:
 
-	<ul>
-		<li><code>pointerId</code> — optional and defaulting to <code>0</code>, of type <code>long</code>, that sets the value of the instance's {{domxref("PointerEvent.pointerId")}}.</li>
-		<li><code>width</code> — optional and defaulting to <code>1</code>, of type <code>double</code>, that sets the value of the instance's {{domxref("PointerEvent.width")}}.</li>
-		<li><code>height</code> — optional and defaulting to <code>1</code>, of type <code>double</code>, that sets the value of the instance's {{domxref("PointerEvent.height")}}.</li>
-		<li><code>pressure</code> — optional and defaulting to <code>0</code>, of type <code>float</code>, that sets the value of the instance's {{domxref("PointerEvent.pressure")}}.</li>
-		<li><code>tangentialPressure</code> — optional and defaulting to <code>0</code>, of type <code>float</code>, that sets the value of the instance's {{domxref("PointerEvent.tangentialPressure")}}.</li>
-		<li><code>tiltX</code> — optional and defaulting to <code>0</code>, of type <code>long</code>, that sets the value of the instance's {{domxref("PointerEvent.tiltX")}}.</li>
-		<li><code>tiltY</code> — optional and defaulting to <code>0</code>, of type <code>long</code>, that sets the value of the instance's {{domxref("PointerEvent.tiltY")}}.</li>
-		<li><code>twist</code> — optional and defaulting to <code>0</code>, of type <code>long</code>, that sets the value of the instance's {{domxref("PointerEvent.twist")}}.</li>
-		<li><code>pointerType</code> — optional and defaulting to <code>""</code>, of type {{domxref("DOMString")}}, that sets the value of the instance's {{domxref("PointerEvent.pointerType")}}.</li>
-		<li><code>isPrimary</code> — optional and defaulting to <code>false</code>, of type {{jsxref("Boolean")}}, that sets the value of the instance's {{domxref("PointerEvent.isPrimary")}}.</li>
-	</ul>
+		<ul>
+			<li><code>pointerId</code> — optional and defaulting to <code>0</code>, of
+				type <code>long</code>, that sets the value of the instance's
+				{{domxref("PointerEvent.pointerId")}}.</li>
+			<li><code>width</code> — optional and defaulting to <code>1</code>, of type
+				<code>double</code>, that sets the value of the instance's
+				{{domxref("PointerEvent.width")}}.</li>
+			<li><code>height</code> — optional and defaulting to <code>1</code>, of type
+				<code>double</code>, that sets the value of the instance's
+				{{domxref("PointerEvent.height")}}.</li>
+			<li><code>pressure</code> — optional and defaulting to <code>0</code>, of type
+				<code>float</code>, that sets the value of the instance's
+				{{domxref("PointerEvent.pressure")}}.</li>
+			<li><code>tangentialPressure</code> — optional and defaulting to
+				<code>0</code>, of type <code>float</code>, that sets the value of the
+				instance's {{domxref("PointerEvent.tangentialPressure")}}.</li>
+			<li><code>tiltX</code> — optional and defaulting to <code>0</code>, of type
+				<code>long</code>, that sets the value of the instance's
+				{{domxref("PointerEvent.tiltX")}}.</li>
+			<li><code>tiltY</code> — optional and defaulting to <code>0</code>, of type
+				<code>long</code>, that sets the value of the instance's
+				{{domxref("PointerEvent.tiltY")}}.</li>
+			<li><code>twist</code> — optional and defaulting to <code>0</code>, of type
+				<code>long</code>, that sets the value of the instance's
+				{{domxref("PointerEvent.twist")}}.</li>
+			<li><code>pointerType</code> — optional and defaulting to <code>""</code>, of
+				type {{domxref("DOMString")}}, that sets the value of the instance's
+				{{domxref("PointerEvent.pointerType")}}.</li>
+			<li><code>isPrimary</code> — optional and defaulting to <code>false</code>, of
+				type {{jsxref("Boolean")}}, that sets the value of the instance's
+				{{domxref("PointerEvent.isPrimary")}}.</li>
+		</ul>
 
-	<div class="note">
-	<p><strong>Note</strong>: The <code>PointerEventInit</code> dictionary also accepts fields from the {{domxref("MouseEvent.MouseEvent","MouseEvent")}}, {{domxref("UIEvent.UIEvent", "UIEventInit")}} and {{domxref("Event.Event", "EventInit")}} dictionaries.</p>
-	</div>
+		<div class="note">
+			<p><strong>Note</strong>: The <code>PointerEventInit</code> dictionary also
+				accepts fields from the {{domxref("MouseEvent.MouseEvent","MouseEvent")}},
+				{{domxref("UIEvent.UIEvent", "UIEventInit")}} and {{domxref("Event.Event",
+				"EventInit")}} dictionaries.</p>
+		</div>
 	</dd>
 </dl>
 
@@ -60,7 +87,10 @@ var downEvent = new PointerEvent("pointerdown",
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div class="hidden">
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+	<p>The compatibility table on this page is generated from structured data. If you'd
+		like to contribute to the data, please check out <a
+			href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+		and send us a pull request.</p>
 </div>
 
 <p>{{Compat("api.PointerEvent.PointerEvent")}}</p>

@@ -1,0 +1,50 @@
+---
+title: TextDecoderStream.readable
+slug: Web/API/TextDecoderStream/readable
+tags:
+  - API
+  - Property
+  - Reference
+  - readable
+  - TextDecoderStream
+---
+<p>{{APIRef("Encoding API")}}</p>
+
+<p class="summary">The <strong><code>readable</code></strong> read-only property of the {{domxref("TextDecoderStream")}} interface returns a {{domxref("ReadableStream")}}.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <var>readable</var> = <var>TextDecoderStream</var>.readable;</pre>
+
+<h3>Value</h3>
+<p>A {{domxref("ReadableStream")}}.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>This example shows how to return a {{domxref("ReadableStream")}} from a <code>TextDecoderStream</code>.</p>
+
+<pre class="brush:js">stream = new TextDecoderStream();
+console.log(stream.readable); //a ReadableStream</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+    <td>{{SpecName("Streams", "#dom-generictransformstream-readable", "readable")}}</td>
+    <td>{{Spec2("Streams")}}</td>
+    <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.TextDecoderStream.readable")}}</p>

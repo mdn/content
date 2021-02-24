@@ -2,29 +2,35 @@
 title: PerformanceResourceTiming.decodedBodySize
 slug: Web/API/PerformanceResourceTiming/decodedBodySize
 tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
+- API
+- Property
+- Reference
+- Web Performance
 ---
 <div>{{APIRef("Resource Timing API")}}</div>
 
-<p>The <strong><code>decodedBodySize</code></strong> read-only property returns the size (in octets) received from the fetch (HTTP or cache) of the message body, after removing any applied content-codings. If the resource is retrieved from an application cache or local resources, it returns the size of the payload after removing any applied content-codings.</p>
+<p>The <strong><code>decodedBodySize</code></strong> read-only property returns the size
+  (in octets) received from the fetch (HTTP or cache) of the message body, after removing
+  any applied content-codings. If the resource is retrieved from an application cache or
+  local resources, it returns the size of the payload after removing any applied
+  content-codings.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>resource</em>.decodedBodySize;
+<pre class="brush: js"><em>resource</em>.decodedBodySize;
 </pre>
 
 <h3 id="Return_Value">Return value</h3>
 
-<p>The size (in octets) received from the fetch (HTTP or cache) of the message body, after removing any applied content-codings.</p>
+<p>The size (in octets) received from the fetch (HTTP or cache) of the message body, after
+  removing any applied content-codings.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>The following example, the value of the size properties of all "<code>resource</code>" {{domxref("PerformanceEntry.entryType","type")}} events are logged.</p>
+<p>The following example, the value of the size properties of all "<code>resource</code>"
+  {{domxref("PerformanceEntry.entryType","type")}} events are logged.</p>
 
 <pre class="brush: js">function log_sizes(perfEntry){
   // Check for support of the *size properties and print their values
@@ -56,23 +62,21 @@ function check_PerformanceEntries() {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Resource Timing 2', '#dom-performanceresourcetiming-decodedbodysize', 'decodedBodySize')}}</td>
-   <td>{{Spec2('Resource Timing 2')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Resource Timing 2',
+        '#dom-performanceresourcetiming-decodedbodysize', 'decodedBodySize')}}</td>
+      <td>{{Spec2('Resource Timing 2')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.PerformanceResourceTiming.decodedBodySize")}}</p>
-</div>

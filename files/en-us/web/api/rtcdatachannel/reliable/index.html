@@ -2,30 +2,34 @@
 title: RTCDataChannel.reliable
 slug: Web/API/RTCDataChannel/reliable
 tags:
-  - Experimental
-  - Obsolete
-  - Property
-  - RTCDataChannel
-  - Read-only
-  - WebRTC
-  - reliable
+- Experimental
+- Obsolete
+- Property
+- RTCDataChannel
+- Read-only
+- WebRTC
+- reliable
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}{{obsolete_header}}</p>
+<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}{{deprecated_header}}</p>
 
-<p>The read-only <code>RTCDataChannel</code> property <code><strong>reliable</strong></code> indicates whether or not the data channel is reliable.</p>
+<p>The read-only <code>RTCDataChannel</code> property
+  <code><strong>reliable</strong></code> indicates whether or not the data channel is
+  reliable.</p>
 
 <div class="warning">
-<p>This property is obsolete. Use {{domxref("RTCDataChannel.ordered")}} instead in any new code, and update existing code as soon as possible.</p>
+  <p>This property is obsolete. Use {{domxref("RTCDataChannel.ordered")}} instead in any
+    new code, and update existing code as soon as possible.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>reliable</em> = <em>aDataChannel</em>.reliable;
+<pre class="brush: js">var <em>reliable</em> = <em>aDataChannel</em>.reliable;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p><code>true</code> if the {{domxref("RTCDataChannel")}}'s connection is reliable; <code>false</code> if it isn't.</p>
+<p><code>true</code> if the {{domxref("RTCDataChannel")}}'s connection is reliable;
+  <code>false</code> if it isn't.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -43,7 +47,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
- <li>{{domxref("RTCDataChannel")}}</li>
- <li>{{domxref("RTCDataChannel.ordered")}}</li>
+  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+  <li>{{domxref("RTCDataChannel")}}</li>
+  <li>{{domxref("RTCDataChannel.ordered")}}</li>
 </ul>

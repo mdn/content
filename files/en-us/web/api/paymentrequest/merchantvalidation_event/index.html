@@ -47,7 +47,7 @@ tags:
 
 <p>In this example, an event handler is established for the <code>merchantvalidation</code> event. It uses the {{domxref("WindowOrWorkerGlobalScope.fetch", "fetch()")}} to send a request to its own server with an argument of the payment method's validation URL, obtained from the event's {{domxref("MerchantValidationEvent.validationURL", "validationURL")}} property. The merchant server should access the validation URL in accordance with the payment method documention. Typically, a client should not access the validation URL.</p>
 
-<pre class="brush: js notranslate">request.addEventListener("merchantvalidation", event =&gt; {
+<pre class="brush: js">request.addEventListener("merchantvalidation", event =&gt; {
   event.complete(async () =&gt; {
     const merchantServerUrl = window.location.origin +
         '/validate?url=' + encodeURIComponent(event.validationURL);
@@ -62,7 +62,7 @@ const response = await request.show();</pre>
 
 <p>You can also use the {{domxref("PaymentRequest.onmerchantvalidation", "onmerchantvalidation")}} event handler property to set up the handler for this event:</p>
 
-<pre class="brush: js notranslate">request.onmerchantvalidation = event =&gt; {
+<pre class="brush: js">request.onmerchantvalidation = event =&gt; {
   event.complete(async () =&gt; {
     const merchantServerUrl = window.location.origin +
         '/validate?url=' + encodeURIComponent(event.validationURL);

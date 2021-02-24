@@ -2,35 +2,42 @@
 title: MediaStreamEvent()
 slug: Web/API/MediaStreamEvent/MediaStreamEvent
 tags:
-  - Constructor
-  - Experimental
-  - Expérimental(2)
-  - MediaStreamEvent
-  - Reference
-  - Référence(2)
-  - WebRTC
+- Constructor
+- Experimental
+- Expérimental(2)
+- MediaStreamEvent
+- Reference
+- Référence(2)
+- WebRTC
 ---
-<p>{{APIRef("WebRTC")}}{{obsolete_header}}</p>
+<p>{{APIRef("WebRTC")}}{{deprecated_header}}</p>
 
-<p>The <code><strong>MediaStreamEvent()</strong></code> constructor creates a new {{domxref("MediaStreamEvent")}}.</p>
+<p>The <code><strong>MediaStreamEvent()</strong></code> constructor creates a new
+  {{domxref("MediaStreamEvent")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"> var event = new MediaStreamEvent(<em>type</em>, <em>mediaStreamEventInit</em>);</pre>
+<pre
+  class="brush: js"> var event = new MediaStreamEvent(<em>type</em>, <em>mediaStreamEventInit</em>);</pre>
 
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt><em>type</em></dt>
- <dd>Is a {{domxref("DOMString")}} containing the name of the event, like <code>addstream</code> or <code>removestream</code>.</dd>
- <dt><em>mediaStreamEventInit</em></dt>
- <dd>Is a <code>MediaStreamEventInit</code> dictionary, having the following fields:
- <ul>
-  <li><code>"stream"</code> of type {{domxref("MediaStream")}} representing the stream being concerned by the event.</li>
-  <li><code>"bubbles"</code>, optional and defaulting to <code>false</code>, inherited from <code>EventInit</code>, and indicating if the event must bubble or not.</li>
-  <li><code>"cancelable"</code>, optional and defaulting to <code>false</code>, inherited from <code>EventInit</code>, and indicating if the event can be canceled or not.</li>
- </ul>
- </dd>
+  <dt><em>type</em></dt>
+  <dd>Is a {{domxref("DOMString")}} containing the name of the event, like
+    <code>addstream</code> or <code>removestream</code>.</dd>
+  <dt><em>mediaStreamEventInit</em></dt>
+  <dd>Is a <code>MediaStreamEventInit</code> dictionary, having the following fields:
+    <ul>
+      <li><code>"stream"</code> of type {{domxref("MediaStream")}} representing the stream
+        being concerned by the event.</li>
+      <li><code>"bubbles"</code>, optional and defaulting to <code>false</code>, inherited
+        from <code>EventInit</code>, and indicating if the event must bubble or not.</li>
+      <li><code>"cancelable"</code>, optional and defaulting to <code>false</code>,
+        inherited from <code>EventInit</code>, and indicating if the event can be canceled
+        or not.</li>
+    </ul>
+  </dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -45,5 +52,5 @@ var event = new MediaStreamEvent("addstream", {"stream": s});</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
 </ul>

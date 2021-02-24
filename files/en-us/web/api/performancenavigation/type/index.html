@@ -2,74 +2,84 @@
 title: PerformanceNavigation.type
 slug: Web/API/PerformanceNavigation/type
 tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceNavigation
-  - Property
-  - Read-only
-  - legacy
+- API
+- Backwards compatibility
+- Deprecated
+- Navigation Timing
+- PerformanceNavigation
+- Property
+- Read-only
+- legacy
 ---
 <p>{{APIRef("Navigation Timing")}}</p>
 
 <div class="warning">
-<p>This interface of this property is deprecated in the <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</a>. Please use the {{domxref("PerformanceNavigationTiming")}} interface instead.</p>
+  <p>This interface of this property is deprecated in the <a
+      href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2
+      specification</a>. Please use the {{domxref("PerformanceNavigationTiming")}}
+    interface instead.</p>
 </div>
 
-<p>The legacy <code><strong>PerformanceNavigation</strong></code><strong><code>.type</code></strong> read-only property returns an <code>unsigned short</code> containing a constant describing how the navigation to this page was done. Possible values are:</p>
+<p>The legacy
+  <code><strong>PerformanceNavigation</strong></code><strong><code>.type</code></strong>
+  read-only property returns an <code>unsigned short</code> containing a constant
+  describing how the navigation to this page was done. Possible values are:</p>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Value</th>
-   <th scope="col">Constant name</th>
-   <th scope="col">Meaning</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>0</code></td>
-   <td><code>TYPE_NAVIGATE</code></td>
-   <td>The page was accessed by following a link, a bookmark, a form submission, a script, or typing the URL in the address bar.</td>
-  </tr>
-  <tr>
-   <td><code>1</code></td>
-   <td><code>TYPE_RELOAD</code></td>
-   <td>The page was accessed by clicking the Reload button or via the {{domxref("Location.reload()")}} method.</td>
-  </tr>
-  <tr>
-   <td><code>2</code></td>
-   <td><code>TYPE_BACK_FORWARD</code></td>
-   <td>The page was accessed by navigating into the history.</td>
-  </tr>
-  <tr>
-   <td><code>255</code></td>
-   <td><code>TYPE_RESERVED</code></td>
-   <td>Any other way.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Value</th>
+      <th scope="col">Constant name</th>
+      <th scope="col">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>0</code></td>
+      <td><code>TYPE_NAVIGATE</code></td>
+      <td>The page was accessed by following a link, a bookmark, a form submission, a
+        script, or typing the URL in the address bar.</td>
+    </tr>
+    <tr>
+      <td><code>1</code></td>
+      <td><code>TYPE_RELOAD</code></td>
+      <td>The page was accessed by clicking the Reload button or via the
+        {{domxref("Location.reload()")}} method.</td>
+    </tr>
+    <tr>
+      <td><code>2</code></td>
+      <td><code>TYPE_BACK_FORWARD</code></td>
+      <td>The page was accessed by navigating into the history.</td>
+    </tr>
+    <tr>
+      <td><code>255</code></td>
+      <td><code>TYPE_RESERVED</code></td>
+      <td>Any other way.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>type</em> = <em>performanceNavigation</em>.type;</pre>
+<pre
+  class="brush: js"><em>type</em> = <em>performanceNavigation</em>.type;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Navigation Timing', '#dom-performancenavigation-type', 'PerformanceNavigation.type')}}</td>
-   <td>{{Spec2('Navigation Timing')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Navigation Timing', '#dom-performancenavigation-type',
+        'PerformanceNavigation.type')}}</td>
+      <td>{{Spec2('Navigation Timing')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -79,5 +89,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{domxref("PerformanceNavigation")}} interface it belongs to.</li>
+  <li>The {{domxref("PerformanceNavigation")}} interface it belongs to.</li>
 </ul>

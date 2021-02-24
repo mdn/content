@@ -2,44 +2,63 @@
 title: Intl.DisplayNames() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames
 tags:
-  - Constructor
-  - DisplayNames
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
+- Constructor
+- DisplayNames
+- Internationalization
+- Intl
+- JavaScript
+- Localization
+- Reference
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>Intl.DisplayNames()</code></strong> constructor creates {{jsxref("DisplayNames", "Intl.DisplayNames")}} objects that enable the consistent translation of language, region and script display names.</p>
+<p>The <strong><code>Intl.DisplayNames()</code></strong> constructor creates
+	{{jsxref("DisplayNames", "Intl.DisplayNames")}} objects that enable the consistent
+	translation of language, region and script display names.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/intl-displaynames.html")}}</div>
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">new Intl.DisplayNames([<var>locales</var>[, <var>options</var>]])</pre>
+<pre
+	class="brush: js">new Intl.DisplayNames([<var>locales</var>[, <var>options</var>]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
 	<dt><code><var>locales</var></code> {{optional_inline}}</dt>
 	<dd>
-		<p>A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the <code><var>locales</var></code> argument, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page. The following Unicode extension key is allowed:</p>
-		
+		<p>A string with a BCP 47 language tag, or an array of such strings. For the
+			general form and interpretation of the <code><var>locales</var></code>
+			argument, see the {{jsxref("Global_Objects/Intl", "Intl",
+			"#Locale_identification_and_negotiation", 1)}} page. The following Unicode
+			extension key is allowed:</p>
+
 		<dl>
 			<dt><code>nu</code></dt>
-			<dd>The numbering system to be used. Possible values include: "<code>arab</code>", "<code>arabext</code>", "<code>bali</code>", "<code>beng</code>", "<code>deva</code>", "<code>fullwide</code>", "<code>gujr</code>", "<code>guru</code>", "<code>hanidec</code>", "<code>khmr</code>", "<code>knda</code>", "<code>laoo</code>", "<code>latn</code>", "<code>limb</code>", "<code>mlym</code>", "<code>mong</code>", "<code>mymr</code>", "<code>orya</code>", "<code>tamldec</code>", "<code>telu</code>", "<code>thai</code>", "<code>tibt</code>".</dd>
+			<dd>The numbering system to be used. Possible values include:
+				"<code>arab</code>", "<code>arabext</code>", "<code>bali</code>",
+				"<code>beng</code>", "<code>deva</code>", "<code>fullwide</code>",
+				"<code>gujr</code>", "<code>guru</code>", "<code>hanidec</code>",
+				"<code>khmr</code>", "<code>knda</code>", "<code>laoo</code>",
+				"<code>latn</code>", "<code>limb</code>", "<code>mlym</code>",
+				"<code>mong</code>", "<code>mymr</code>", "<code>orya</code>",
+				"<code>tamldec</code>", "<code>telu</code>", "<code>thai</code>",
+				"<code>tibt</code>".</dd>
 		</dl>
 	</dd>
 	<dt><code><var>options</var></code> {{optional_inline}}</dt>
 	<dd>
 		<p>An object with some or all of the following properties:</p>
-		
+
 		<dl>
 			<dt><code>localeMatcher</code></dt>
-			<dd>The locale matching algorithm to use. Possible values are "<code>lookup</code>" and "<code>best fit</code>"; the default is "<code>best fit</code>". For information about this option, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.</dd>
+			<dd>The locale matching algorithm to use. Possible values are
+				"<code>lookup</code>" and "<code>best fit</code>"; the default is
+				"<code>best fit</code>". For information about this option, see the
+				{{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.
+			</dd>
 			<dt><code>style</code></dt>
 			<dd>The formatting style to use, the default is "<code>long</code>".
 				<ul>
@@ -72,9 +91,10 @@ tags:
 
 <h3 id="Basic_usage">Basic usage</h3>
 
-<p>In basic use without specifying a locale, a formatted string in the default locale and with default options is returned.</p>
+<p>In basic use without specifying a locale, a formatted string in the default locale and
+	with default options is returned.</p>
 
-<pre class="brush: js notranslate">console.log((new Intl.DisplayNames([], {type: 'language'})).of('US'));
+<pre class="brush: js">console.log((new Intl.DisplayNames([], {type: 'language'})).of('US'));
 // Expected output: 'us'
 </pre>
 
@@ -88,7 +108,8 @@ tags:
 	</thead>
 	<tbody>
 		<tr>
-			<td>{{SpecName('Intl.DisplayNames', '#sec-intl-displaynames-constructor', 'the Intl.DisplayNames constructor')}}</td>
+			<td>{{SpecName('Intl.DisplayNames', '#sec-intl-displaynames-constructor', 'the
+				Intl.DisplayNames constructor')}}</td>
 		</tr>
 	</tbody>
 </table>

@@ -2,39 +2,59 @@
 title: Request.destination
 slug: Web/API/Request/destination
 tags:
-  - API
-  - Experimental
-  - Fetch
-  - Fetch API
-  - Files
-  - Loading
-  - Networking
-  - Property
-  - Read-only
-  - Reference
-  - data
-  - destination
-  - request
+- API
+- Experimental
+- Fetch
+- Fetch API
+- Files
+- Loading
+- Networking
+- Property
+- Read-only
+- Reference
+- data
+- destination
+- request
 ---
 <div>{{APIRef("Fetch")}}</div>
 
-<p><span class="seoSummary">The <strong><code>destination</code></strong> read-only property of the <strong>{{domxref("Request")}}</strong> interface returns a string describing the type of content being requested.</span> The string must be one of those found in the {{domxref("RequestDestination")}} enumerated type or the empty string, which is the default value.</p>
+<p><span class="seoSummary">The <strong><code>destination</code></strong> read-only
+    property of the <strong>{{domxref("Request")}}</strong> interface returns a string
+    describing the type of content being requested.</span> The string must be one of those
+  found in the {{domxref("RequestDestination")}} enumerated type or the empty string,
+  which is the default value.</p>
 
-<p>The <code>destination</code> is used by the {{Glossary("user agent")}} to, for example, help determine which set of rules to follow for CORS purposes, or how to navigate any complicated code paths that affect how specific types of request get handled.</p>
+<p>The <code>destination</code> is used by the {{Glossary("user agent")}} to, for example,
+  help determine which set of rules to follow for CORS purposes, or how to navigate any
+  complicated code paths that affect how specific types of request get handled.</p>
 
-<p>These destinations vary substantially in how they operate. Some are data receptacles, where the received data is stored for processing later. Others are script-based, in which case the received data is delivered to a script by calling it and passing the data along. Script-based destinations include {{HTMLElement("script")}} elements, as well as any of the {{domxref("Worklet")}}-based destinations (including {{domxref("AudioWorklet")}} and {{domxref("PaintWorklet")}}), and the {{domxref("Worker")}}-based destinations, including {{domxref("ServiceWorker")}} and {{domxref("SharedWorker")}}.</p>
+<p>These destinations vary substantially in how they operate. Some are data receptacles,
+  where the received data is stored for processing later. Others are script-based, in
+  which case the received data is delivered to a script by calling it and passing the data
+  along. Script-based destinations include {{HTMLElement("script")}} elements, as well as
+  any of the {{domxref("Worklet")}}-based destinations
+  (including {{domxref("AudioWorklet")}} and {{domxref("PaintWorklet")}}), and the
+  {{domxref("Worker")}}-based destinations, including {{domxref("ServiceWorker")}}
+  and {{domxref("SharedWorker")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>destination</em> = <var>request</var>.destination;</pre>
+<pre
+  class="brush: js">var <em>destination</em> = <var>request</var>.destination;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A string from the {{domxref("RequestDestination")}} enumerated type which indicates the type of content the request is asking for. This type is much broader than the usual document type values (such as <code>"document"</code> or <code>"manifest"</code>), and may include contextual cues such as <code>"image"</code> or <code>"worker"</code> or <code>"audioworklet"</code>.</p>
+<p>A string from the {{domxref("RequestDestination")}} enumerated type which indicates the
+  type of content the request is asking for. This type is much broader than the usual
+  document type values (such as <code>"document"</code> or <code>"manifest"</code>), and
+  may include contextual cues such as <code>"image"</code> or <code>"worker"</code> or
+  <code>"audioworklet"</code>.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>In the following snippet, we create a new request using the {{domxref("Request.Request", "Request()")}} constructor (for an image file in the same directory as the script), then save the request's destination:</p>
+<p>In the following snippet, we create a new request using the
+  {{domxref("Request.Request", "Request()")}} constructor (for an image file in the same
+  directory as the script), then save the request's destination:</p>
 
 <pre class="brush: js">var myRequest = new Request('flowers.jpg');
 var myDestination = myRequest.destination; // returns the empty string by default</pre>
@@ -42,18 +62,18 @@ var myDestination = myRequest.destination; // returns the empty string by defaul
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#dom-request-destination','destination')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Fetch','#dom-request-destination','destination')}}</td>
+      <td>{{Spec2('Fetch')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -63,7 +83,8 @@ var myDestination = myRequest.destination; // returns the empty string by defaul
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
+  <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
+  <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a>
+  </li>
+  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
 </ul>

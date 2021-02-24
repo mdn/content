@@ -2,21 +2,23 @@
 title: HTMLElement.isContentEditable
 slug: Web/API/HTMLElement/isContentEditable
 tags:
-  - API
-  - Editing
-  - HTML DOM
-  - HTMLElement
-  - Property
-  - Read-only
-  - Reference
+- API
+- Editing
+- HTML DOM
+- HTMLElement
+- Property
+- Read-only
+- Reference
 ---
 <div>{{ APIRef("HTML DOM") }}</div>
 
-<p>The <strong><code>HTMLElement.isContentEditable</code></strong> read-only property returns a {{jsxref("Boolean")}} that is <code>true</code> if the contents of the element are editable; otherwise it returns <code>false</code>.</p>
+<p>The <strong><code>HTMLElement.isContentEditable</code></strong> read-only property
+  returns a {{jsxref("Boolean")}} that is <code>true</code> if the contents of the element
+  are editable; otherwise it returns <code>false</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>editable</em> = <em>element</em>.isContentEditable
+<pre class="brush: js"><em>editable</em> = <em>element</em>.isContentEditable
 </pre>
 
 <h2 id="Example">Example</h2>
@@ -31,7 +33,8 @@ tags:
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js">document.getElementById('infoText1').innerHTML += document.getElementById('myText1').isContentEditable;
+<pre
+  class="brush: js">document.getElementById('infoText1').innerHTML += document.getElementById('myText1').isContentEditable;
 document.getElementById('infoText2').innerHTML += document.getElementById('myText2').isContentEditable;</pre>
 
 <h3 id="Result">Result</h3>
@@ -41,30 +44,34 @@ document.getElementById('infoText2').innerHTML += document.getElementById('myTex
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "editing.html#dom-iscontenteditable", "HTMLElement.contenteditable")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from latest snapshot, {{SpecName('HTML5.1')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "editing.html#dom-iscontenteditable", "HTMLElement.contenteditable")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Snapshot of {{SpecName('HTML WHATWG')}}, no change from {{SpecName('HTML5 W3C')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "editing.html#dom-iscontenteditable", "HTMLElement.contenteditable")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Snapshot of {{SpecName('HTML WHATWG')}}, initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', "editing.html#dom-iscontenteditable",
+        "HTMLElement.contenteditable")}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td>No change from latest snapshot, {{SpecName('HTML5.1')}}</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML5.1', "editing.html#dom-iscontenteditable",
+        "HTMLElement.contenteditable")}}</td>
+      <td>{{Spec2('HTML5.1')}}</td>
+      <td>Snapshot of {{SpecName('HTML WHATWG')}}, no change from {{SpecName('HTML5
+        W3C')}}</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML5 W3C', "editing.html#dom-iscontenteditable",
+        "HTMLElement.contenteditable")}}</td>
+      <td>{{Spec2('HTML5 W3C')}}</td>
+      <td>Snapshot of {{SpecName('HTML WHATWG')}}, initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -74,6 +81,6 @@ document.getElementById('infoText2').innerHTML += document.getElementById('myTex
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("HTMLElement/contentEditable")}}</li>
- <li>The {{htmlattrxref("contenteditable")}} global attribute.</li>
+  <li>{{domxref("HTMLElement/contentEditable")}}</li>
+  <li>The {{htmlattrxref("contenteditable")}} global attribute.</li>
 </ul>

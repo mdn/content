@@ -13,7 +13,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="eval notranslate"><em>attributeNode</em> = element.getAttributeNodeNS(<em>namespace</em>, <em>nodeName</em>)
+<pre class="eval"><em>attributeNode</em> = element.getAttributeNodeNS(<em>namespace</em>, <em>nodeName</em>)
 </pre>
 
 <ul>
@@ -22,11 +22,11 @@ tags:
  <li><code>nodeName</code> is a string specifying the name of the attribute.</li>
 </ul>
 
-<p><span class="comment">== Example == TBD The example needs to be fixed pre&gt; // html: &lt;div id="top" /&gt; t = document.getElementById("top"); specialNode = t.getAttributeNodeNS( "<a class="external" href="https://www.mozilla.org/ns/specialspace" rel="freelink">http://www.mozilla.org/ns/specialspace</a>", "id"); // iNode.value = "full-top" &lt;/pre</span></p>
+<p><span class="comment">== Example == TBD The example needs to be fixed pre&gt; // html: &lt;div id="top" /&gt; t = document.getElementById("top"); specialNode = t.getAttributeNodeNS( "<a href="https://www.mozilla.org/ns/specialspace">http://www.mozilla.org/ns/specialspace</a>", "id"); // iNode.value = "full-top" &lt;/pre</span></p>
 
 <h2 id="Notes">Notes</h2>
 
-<p><code>getAttributeNodeNS</code> is more specific than <a href="getAttributeNode">getAttributeNode</a> in that it allows you to specify attributes that are part of a particular namespace. The corresponding setter method is <a href="/en-US/DOM/element.setAttributeNodeNS">setAttributeNodeNS</a>.</p>
+<p><code>getAttributeNodeNS</code> is more specific than <a href="getAttributeNode">getAttributeNode</a> in that it allows you to specify attributes that are part of a particular namespace. The corresponding setter method is <a href="/en-US/docs/DOM/element.setAttributeNodeNS">setAttributeNodeNS</a>.</p>
 
 <p>{{ DOMAttributeMethods() }}</p>
 

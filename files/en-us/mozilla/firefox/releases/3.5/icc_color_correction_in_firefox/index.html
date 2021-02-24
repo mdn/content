@@ -9,7 +9,7 @@ tags:
 <div>{{FirefoxSidebar}}</div><p>{{ fx_minversion_header(3) }}</p>
 <p>Although support for color correction was introduced in Firefox 3, it was disabled by default, requiring some tinkering about in the about:config window to enable it.  Firefox 3.5 addresses the issues that caused it be disabled by default in the previous version, and now images with <a class="external" href="http://www.color.org/">International Color Consortium</a> (ICC) tagging are, by default, color corrected.</p>
 <p>The image below is split into three sections.  The top left corner shows the image as rendered by Firefox 2.  The top right corner shows how the image renders in Firefox 3.  The bottom shows the image rendered in Photoshop.</p>
-<p><img alt="iccsample.jpg" class="internal default" src="/@api/deki/files/3218/=iccsample.jpg" style="width: 500px; height: 334px;"></p>
+<p><img class="internal default" src="iccsample.jpg"></p>
 <p>As you can see, Firefox 3 and Photoshop render the image identically, because both support the embedded color correction profile.  Firefox 2 ignores the profile, resulting in mismatched color.</p>
 <h2 id="Configuring_color_correction">Configuring color correction</h2>
 <p>Color correction can be controlled by setting the value of the <code>gfx.color_management.mode</code> preference, as follows:</p>

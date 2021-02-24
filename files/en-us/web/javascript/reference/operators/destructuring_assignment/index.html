@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:js notranslate">let a, b, rest;
+<pre class="brush: js">let a, b, rest;
 [a, b] = [10, 20];
 console.log(a); // 10
 console.log(b); // 20
@@ -46,11 +46,11 @@ console.log(rest); // {c: 30, d: 40}
 
 <p>The object and array literal expressions provide an easy way to create <em>ad hoc</em> packages of data.</p>
 
-<pre class="brush: js notranslate">const x = [1, 2, 3, 4, 5];</pre>
+<pre class="brush: js">const x = [1, 2, 3, 4, 5];</pre>
 
 <p>The destructuring assignment uses similar syntax, but on the left-hand side of the assignment to define what values to unpack from the sourced variable.</p>
 
-<pre class="brush: js notranslate">const x = [1, 2, 3, 4, 5];
+<pre class="brush: js">const x = [1, 2, 3, 4, 5];
 const [y, z] = x;
 console.log(y); // 1
 console.log(z); // 2
@@ -64,7 +64,7 @@ console.log(z); // 2
 
 <h4 id="Basic_variable_assignment">Basic variable assignment</h4>
 
-<pre class="brush: js notranslate">const foo = ['one', 'two', 'three'];
+<pre class="brush: js">const foo = ['one', 'two', 'three'];
 
 const [red, yellow, green] = foo;
 console.log(red); // "one"
@@ -76,7 +76,7 @@ console.log(green); // "three"
 
 <p>A variable can be assigned its value via destructuring separate from the variable's declaration.</p>
 
-<pre class="brush:js notranslate">let a, b;
+<pre class="brush: js">let a, b;
 
 [a, b] = [1, 2];
 console.log(a); // 1
@@ -87,7 +87,7 @@ console.log(b); // 2
 
 <p>A variable can be assigned a default, in the case that the value unpacked from the array is <code>undefined</code>.</p>
 
-<pre class="brush: js notranslate">let a, b;
+<pre class="brush: js">let a, b;
 
 [a=5, b=7] = [1];
 console.log(a); // 1
@@ -98,9 +98,9 @@ console.log(b); // 7
 
 <p>Two variables values can be swapped in one destructuring expression.</p>
 
-<p>Without destructuring assignment, swapping two values requires a temporary variable (or, in some low-level languages, the <a class="external" href="https://en.wikipedia.org/wiki/XOR_swap_algorithm">XOR-swap trick</a>).</p>
+<p>Without destructuring assignment, swapping two values requires a temporary variable (or, in some low-level languages, the <a href="https://en.wikipedia.org/wiki/XOR_swap_algorithm">XOR-swap trick</a>).</p>
 
-<pre class="brush:js notranslate">let a = 1;
+<pre class="brush: js">let a = 1;
 let b = 3;
 
 [a, b] = [b, a];
@@ -119,7 +119,7 @@ console.log(arr); // [1,3,2]
 
 <p>In this example, <code>f()</code> returns the values <code>[1, 2]</code> as its output, which can be parsed in a single line with destructuring.</p>
 
-<pre class="brush:js notranslate">function f() {
+<pre class="brush: js">function f() {
   return [1, 2];
 }
 
@@ -133,7 +133,7 @@ console.log(b); // 2
 
 <p>You can ignore return values that you're not interested in:</p>
 
-<pre class="brush:js notranslate">function f() {
+<pre class="brush: js">function f() {
   return [1, 2, 3];
 }
 
@@ -147,20 +147,20 @@ console.log(c); // 1
 
 <p>You can also ignore all returned values:</p>
 
-<pre class="brush:js notranslate">[,,] = f();
+<pre class="brush: js">[,,] = f();
 </pre>
 
 <h4 id="Assigning_the_rest_of_an_array_to_a_variable">Assigning the rest of an array to a variable</h4>
 
 <p>When destructuring an array, you can unpack and assign the remaining part of it to a variable using the rest pattern:</p>
 
-<pre class="brush: js notranslate">const [a, ...b] = [1, 2, 3];
+<pre class="brush: js">const [a, ...b] = [1, 2, 3];
 console.log(a); // 1
 console.log(b); // [2, 3]</pre>
 
 <p>Be aware that a {{jsxref("SyntaxError")}} will be thrown if a trailing comma is used on the right-hand side of a rest element:</p>
 
-<pre class="brush: js example-bad notranslate">const [a, ...b,] = [1, 2, 3];
+<pre class="brush: js example-bad">const [a, ...b,] = [1, 2, 3];
 
 // SyntaxError: rest element may not have a trailing comma
 // Always consider using rest operator as the last element
@@ -170,7 +170,7 @@ console.log(b); // [2, 3]</pre>
 
 <p>When the regular expression <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec"> exec()</a></code> method finds a match, it returns an array containing first the entire matched portion of the string and then the portions of the string that matched each parenthesized group in the regular expression. Destructuring assignment allows you to unpack the parts out of this array easily, ignoring the full match if it is not needed.</p>
 
-<pre class="brush:js notranslate">function parseProtocol(url) {
+<pre class="brush: js">function parseProtocol(url) {
   const parsedURL = /^(\w+)\:\/\/([^\/]+)\/(.*)$/.exec(url);
   if (!parsedURL) {
     return false;
@@ -191,7 +191,7 @@ console.log(parseProtocol('https://developer.mozilla.org/en-US/docs/Web/JavaScri
 
 <h4 id="Basic_assignment">Basic assignment</h4>
 
-<pre class="brush: js notranslate">const user = {
+<pre class="brush: js">const user = {
     id: 42,
     is_verified: true
 };
@@ -206,7 +206,7 @@ console.log(is_verified); // true
 
 <p>A variable can be assigned its value with destructuring separate from its declaration.</p>
 
-<pre class="brush:js notranslate">let a, b;
+<pre class="brush: js">let a, b;
 
 ({a, b} = {a: 1, b: 2});</pre>
 
@@ -224,7 +224,7 @@ console.log(is_verified); // true
 
 <p>A property can be unpacked from an object and assigned to a variable with a different name than the object property.</p>
 
-<pre class="brush: js notranslate">const o = {p: 42, q: true};
+<pre class="brush: js">const o = {p: 42, q: true};
 const {p: foo, q: bar} = o;
 
 console.log(foo); // 42
@@ -236,7 +236,7 @@ console.log(bar); // true</pre>
 
 <p>A variable can be assigned a default, in the case that the value unpacked from the object is <code>undefined</code>.</p>
 
-<pre class="brush: js notranslate">const {a = 10, b = 5} = {a: 3};
+<pre class="brush: js">const {a = 10, b = 5} = {a: 3};
 
 console.log(a); // 3
 console.log(b); // 5</pre>
@@ -250,7 +250,7 @@ console.log(b); // 5</pre>
  <li>Assigned a default value in case the unpacked value is <code>undefined</code>.</li>
 </ul>
 
-<pre class="brush: js notranslate">const {a: aa = 10, b: bb = 5} = {a: 3};
+<pre class="brush: js">const {a: aa = 10, b: bb = 5} = {a: 3};
 
 console.log(aa); // 3
 console.log(bb); // 5
@@ -258,7 +258,7 @@ console.log(bb); // 5
 
 <h4 id="Unpacking_fields_from_objects_passed_as_a_function_parameter">Unpacking fields from objects passed as a function parameter</h4>
 
-<pre class="brush:js notranslate">const user = {
+<pre class="brush: js">const user = {
   id: 42,
   displayName: 'jdoe',
   fullName: {
@@ -282,7 +282,7 @@ console.log(whois(user));  // "jdoe is John"</pre>
 
 <h4 id="Setting_a_function_parameters_default_value">Setting a function parameter's default value</h4>
 
-<pre class="brush: js notranslate">function drawChart({size = 'big', coords = {x: 0, y: 0}, radius = 25} = {}) {
+<pre class="brush: js">function drawChart({size = 'big', coords = {x: 0, y: 0}, radius = 25} = {}) {
   console.log(size, coords, radius);
   // do some chart drawing
 }
@@ -298,7 +298,7 @@ drawChart({
 
 <h4 id="Nested_object_and_array_destructuring">Nested object and array destructuring</h4>
 
-<pre class="brush:js notranslate">const metadata = {
+<pre class="brush: js">const metadata = {
   title: 'Scratchpad',
   translations: [
     {
@@ -326,7 +326,7 @@ console.log(localeTitle);  // "JavaScript-Umgebung"</pre>
 
 <h4 id="For_of_iteration_and_destructuring">For of iteration and destructuring</h4>
 
-<pre class="brush: js notranslate">const people = [
+<pre class="brush: js">const people = [
   {
     name: 'Mike Smith',
     family: {
@@ -359,7 +359,7 @@ for (const {name: n, family: {father: f}} of people) {
 
 <p>Computed property names, like on <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names">object literals</a>, can be used with destructuring.</p>
 
-<pre class="brush: js notranslate">let key = 'z';
+<pre class="brush: js">let key = 'z';
 let {[key]: foo} = {z: 'bar'};
 
 console.log(foo); // "bar"
@@ -369,7 +369,7 @@ console.log(foo); // "bar"
 
 <p>The <a class="external external-icon" href="https://github.com/tc39/proposal-object-rest-spread">Rest/Spread Properties for ECMAScript</a> proposal (stage 4) adds the <a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest</a> syntax to destructuring. Rest properties collect the remaining own enumerable property keys that are not already picked off by the destructuring pattern.</p>
 
-<pre class="brush: js notranslate">let {a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40}
+<pre class="brush: js">let {a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40}
 a; // 10
 b; // 20
 rest; // { c: 30, d: 40 }</pre>
@@ -378,7 +378,7 @@ rest; // { c: 30, d: 40 }</pre>
 
 <p>Destructuring can be used with property names that are not valid JavaScript {{glossary("Identifier", "identifiers")}} by providing an alternative identifier that is valid.</p>
 
-<pre class="brush: js notranslate">const foo = { 'fizz-buzz': true };
+<pre class="brush: js">const foo = { 'fizz-buzz': true };
 const { 'fizz-buzz': fizzBuzz } = foo;
 
 console.log(fizzBuzz); // "true"
@@ -388,7 +388,7 @@ console.log(fizzBuzz); // "true"
 
 <p>Array and Object destructuring can be combined. Say you want the third element in the array <code>props</code> below, and then you want the <code>name</code> property in the object, you can do the following:</p>
 
-<pre class="brush: js notranslate">const props = [
+<pre class="brush: js">const props = [
   { id: 1, name: 'Fizz'},
   { id: 2, name: 'Buzz'},
   { id: 3, name: 'FizzBuzz'}
@@ -403,7 +403,7 @@ console.log(name); // "FizzBuzz"
 
 <p>When deconstructing an object, if a property is not accessed in itself, it will continue to look up along the prototype chain.</p>
 
-<pre class="brush: js notranslate">let obj = {self: '123'};
+<pre class="brush: js">let obj = {self: '123'};
 obj.__proto__.prot = '456';
 const {self, prot} = obj;
 // self "123"
@@ -426,10 +426,7 @@ const {self, prot} = obj;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("javascript.operators.destructuring")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

@@ -2,26 +2,30 @@
 title: RTCIdentityErrorEvent.protocol
 slug: Web/API/RTCIdentityErrorEvent/protocol
 tags:
-  - Experimental
-  - Expérimental(2)
-  - Property
-  - RTCIdentityErrorEvent
-  - Read-only
-  - Reference
-  - Référence(2)
-  - WebRTC
+- Experimental
+- Expérimental(2)
+- Property
+- RTCIdentityErrorEvent
+- Read-only
+- Reference
+- Référence(2)
+- WebRTC
 ---
-<p>{{APIRef("WebRTC")}}{{obsolete_header}}</p>
+<p>{{APIRef("WebRTC")}}{{deprecated_header}}</p>
 
-<p>The read-only property <code><strong>RTCIdentityErrorEvent.protocol</strong></code> is a {{domxref("DOMString")}} describing the Idp protocol in use.</p>
+<p>The read-only property <code><strong>RTCIdentityErrorEvent.protocol</strong></code> is
+  a {{domxref("DOMString")}} describing the Idp protocol in use.</p>
 
 <div class="note">
-<p>Firefox implements the interface of this property under the following name: <code>RTCPeerConnectionIdentityErrorEvent.</code> It is likely that it will correct this name when it will unprefix {{domxref("RTCPeerConnection")}}, once spec and implementation will have been stabilized.</p>
+  <p>Firefox implements the interface of this property under the following name:
+    <code>RTCPeerConnectionIdentityErrorEvent.</code> It is likely that it will correct
+    this name when it will unprefix {{domxref("RTCPeerConnection")}}, once spec and
+    implementation will have been stabilized.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var protocol = <em>event</em>.protocol;
+<pre class="brush: js">var protocol = <em>event</em>.protocol;
 <em>event</em>.protocol = "idp.html";
 </pre>
 
@@ -40,6 +44,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{event("idpassertionerror")}}, {{event("idpvalidationerror")}}</li>
- <li>{{domxref("RTCPeerConnection")}}</li>
+  <li>{{event("idpassertionerror")}}, {{event("idpvalidationerror")}}</li>
+  <li>{{domxref("RTCPeerConnection")}}</li>
 </ul>

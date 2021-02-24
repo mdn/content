@@ -2,62 +2,82 @@
 title: window.requestIdleCallback()
 slug: Web/API/Window/requestIdleCallback
 tags:
-  - API
-  - HTML DOM
-  - JavaScript timers
-  - Method
-  - Reference
-  - Window
-  - requestIdleCallback
+- API
+- HTML DOM
+- JavaScript timers
+- Method
+- Reference
+- Window
+- requestIdleCallback
 ---
 <div>{{APIRef("HTML DOM")}}{{SeeCompatTable}}</div>
 
-<p>The <code><strong>window.requestIdleCallback()</strong></code> method queues a function to be called during a browser's idle periods. This enables developers to perform background and low priority work on the main event loop, without impacting latency-critical events such as animation and input response. Functions are generally called in first-in-first-out order; however, callbacks which have a <code>timeout</code> specified may be called out-of-order if necessary in order to run them before the timeout elapses.</p>
+<p>The <code><strong>window.requestIdleCallback()</strong></code> method queues a function
+  to be called during a browser's idle periods. This enables developers to perform
+  background and low priority work on the main event loop, without impacting
+  latency-critical events such as animation and input response. Functions are generally
+  called in first-in-first-out order; however, callbacks which have a <code>timeout</code>
+  specified may be called out-of-order if necessary in order to run them before the
+  timeout elapses.</p>
 
-<p>You can call <code>requestIdleCallback()</code> within an idle callback function to schedule another callback to take place no sooner than the next pass through the event loop.</p>
+<p>You can call <code>requestIdleCallback()</code> within an idle callback function to
+  schedule another callback to take place no sooner than the next pass through the event
+  loop.</p>
 
-<div class="note">A <code>timeout</code> option is strongly recommended for required work, as otherwise it's possible multiple seconds will elapse before the callback is fired.</div>
+<div class="note">A <code>timeout</code> option is strongly recommended for required work,
+  as otherwise it's possible multiple seconds will elapse before the callback is fired.
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code>var <em>handle</em> = <em>window</em>.requestIdleCallback(<em>callback</em>[, <em>options</em>])</code></pre>
+<pre
+  class="brush: js"><code>var <em>handle</em> = <em>window</em>.requestIdleCallback(<em>callback</em>[, <em>options</em>])</code></pre>
 
 <h3 id="Returns">Return value</h3>
 
-<p>An ID which can be used to cancel the callback by passing it into the {{domxref("window.cancelIdleCallback()")}} method.</p>
+<p>An ID which can be used to cancel the callback by passing it into the
+  {{domxref("window.cancelIdleCallback()")}} method.</p>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>callback</code></dt>
- <dd>A reference to a function that should be called in the near future, when the event loop is idle. The callback function is passed an {{domxref("IdleDeadline")}} object describing the amount of time available and whether or not the callback has been run because the timeout period expired.</dd>
- <dt><code>options</code> {{optional_inline}}</dt>
- <dd>Contains optional configuration parameters. Currently only one property is defined:
- <ul>
-  <li><code>timeout</code>: If <code>timeout</code> is specified and has a positive value, and the callback has not already been called by the time <em>timeout</em> milliseconds have passed, the callback will be called during the next idle period, even if doing so risks causing a negative performance impact.</li>
- </ul>
- </dd>
+  <dt><code>callback</code></dt>
+  <dd>A reference to a function that should be called in the near future, when the event
+    loop is idle. The callback function is passed an {{domxref("IdleDeadline")}} object
+    describing the amount of time available and whether or not the callback has been run
+    because the timeout period expired.</dd>
+  <dt><code>options</code> {{optional_inline}}</dt>
+  <dd>Contains optional configuration parameters. Currently only one property is defined:
+    <ul>
+      <li><code>timeout</code>: If <code>timeout</code> is specified and has a positive
+        value, and the callback has not already been called by the time <em>timeout</em>
+        milliseconds have passed, the callback will be called during the next idle period,
+        even if doing so risks causing a negative performance impact.</li>
+    </ul>
+  </dd>
 </dl>
 
 <h2 id="Example">Example</h2>
 
-<p>See our <a href="/en-US/docs/Web/API/Background_Tasks_API#Example">complete example</a> in the article <a href="/en-US/docs/Web/API/Background_Tasks_API">Cooperative Scheduling of Background Tasks API</a>.</p>
+<p>See our <a href="/en-US/docs/Web/API/Background_Tasks_API#Example">complete example</a>
+  in the article <a href="/en-US/docs/Web/API/Background_Tasks_API">Cooperative Scheduling
+    of Background Tasks API</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Background Tasks')}}</td>
-   <td>{{Spec2('Background Tasks')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Specification</th>
+      <th>Status</th>
+      <th>Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Background Tasks')}}</td>
+      <td>{{Spec2('Background Tasks')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -67,9 +87,9 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("window.cancelIdleCallback()")}}</li>
- <li>{{domxref("IdleDeadline")}}</li>
- <li>{{domxref("window.setTimeout()")}}</li>
- <li>{{domxref("window.setInterval()")}}</li>
- <li>{{domxref("window.requestAnimationFrame")}}</li>
+  <li>{{domxref("window.cancelIdleCallback()")}}</li>
+  <li>{{domxref("IdleDeadline")}}</li>
+  <li>{{domxref("window.setTimeout()")}}</li>
+  <li>{{domxref("window.setInterval()")}}</li>
+  <li>{{domxref("window.requestAnimationFrame")}}</li>
 </ul>

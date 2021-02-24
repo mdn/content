@@ -8,16 +8,16 @@ tags:
   - JavaScript
   - Reference
 ---
-<p><span class="seoSummary">The <strong>structured clone algorithm</strong> copies complex JavaScript objects. It is used internally to transfer data between <a href="/en-US/docs/Web/API/Worker">Workers</a> via {{domxref("Worker.postMessage()", "postMessage()")}}, storing objects with <a href="/en-US/docs/Glossary/IndexedDB">IndexedDB</a>, or copying objects for <a href="#See_Also">other APIs</a>.</span> It clones by recursing through the input object while maintaining a map of previously visited references, to avoid infinitely traversing cycles.</p>
+<p><span class="seoSummary">The <strong>structured clone algorithm</strong> copies complex JavaScript objects. It is used internally to transfer data between <a href="/en-US/docs/Web/API/Worker">Workers</a> via {{domxref("Worker.postMessage()", "postMessage()")}}, storing objects with <a href="/en-US/docs/Glossary/IndexedDB">IndexedDB</a>, or copying objects for <a href="#see_also">other APIs</a>.</span> It clones by recursing through the input object while maintaining a map of previously visited references, to avoid infinitely traversing cycles.</p>
 
 <h2 id="Things_that_dont_work_with_structured_clone">Things that don't work with structured clone</h2>
 
 <ul>
- <li><a href="/en/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a> objects cannot be duplicated by the structured clone algorithm; attempting to throws a <code>DATA_CLONE_ERR</code> exception.</li>
+ <li><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a> objects cannot be duplicated by the structured clone algorithm; attempting to throws a <code>DATA_CLONE_ERR</code> exception.</li>
  <li>Cloning DOM nodes likewise throws a <code>DATA_CLONE_ERR</code> exception.</li>
  <li>Certain object properties are not preserved:
   <ul>
-   <li>The <code>lastIndex</code> property of <a href="/en/JavaScript/Reference/Global_Objects/RegExp"><code>RegExp</code></a> objects is not preserved.</li>
+   <li>The <code>lastIndex</code> property of <a href="/en-US/docs/JavaScript/Reference/Global_Objects/RegExp"><code>RegExp</code></a> objects is not preserved.</li>
    <li>Property descriptors, setters, getters, and similar metadata-like features are not duplicated. For example, if an object is marked readonly with a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor">property descriptor</a>, it will be read/write in the duplicate, since that's the default.</li>
    <li>The prototype chain is not walked or duplicated.</li>
   </ul>
@@ -25,7 +25,7 @@ tags:
 </ul>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Native <a href="/en/JavaScript/Reference/Global_Objects/Error"><code>Error</code></a> types can be cloned in Chrome, and Firefox is <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1556604">working on it</a>.</p>
+<p><strong>Note</strong>: Native <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Error"><code>Error</code></a> types can be cloned in Chrome, and Firefox is <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1556604">working on it</a>.</p>
 </div>
 
 <h2 id="Supported_types">Supported types</h2>

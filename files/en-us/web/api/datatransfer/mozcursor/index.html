@@ -2,36 +2,40 @@
 title: DataTransfer.mozCursor
 slug: Web/API/DataTransfer/mozCursor
 tags:
-  - API
-  - Non-standard
-  - Property
-  - Reference
-  - drag and drop
+- API
+- Non-standard
+- Property
+- Reference
+- drag and drop
 ---
 <div>{{APIRef("HTML Drag and Drop API")}}</div>
 
 <p>{{ Non-standard_header() }}</p>
 
-<p>The <strong><code>DataTransfer.mozCursor</code></strong> property returns or sets the drag cursor's state. This is primarily used to control the cursor during tab drags.</p>
+<p>The <strong><code>DataTransfer.mozCursor</code></strong> property returns or sets the
+  drag cursor's state. This is primarily used to control the cursor during tab drags.</p>
 
 <p>The possible values are:</p>
 
 <dl>
- <dt>auto</dt>
- <dd>Uses the default system behavior.</dd>
- <dt>default</dt>
- <dd>Uses the default Gecko behavior, which is to set the cursor to an arrow during the drag operation.</dd>
+  <dt>auto</dt>
+  <dd>Uses the default system behavior.</dd>
+  <dt>default</dt>
+  <dd>Uses the default Gecko behavior, which is to set the cursor to an arrow during the
+    drag operation.</dd>
 </dl>
 
-<div class="note"><strong>Note:</strong> If any value other than <code>default</code> is set, <code>auto</code> is assumed.</div>
+<div class="note"><strong>Note:</strong> If any value other than <code>default</code> is
+  set, <code>auto</code> is assumed.</div>
 
-<div class="note"><strong>Note:</strong> This property is currently only implemented on Windows.</div>
+<div class="note"><strong>Note:</strong> This property is currently only implemented on
+  Windows.</div>
 
 <div class="note"><strong>Note:</strong> This property is Gecko-specific.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>dataTransfer</em>.mozCursor;
+<pre class="brush: js"><em>dataTransfer</em>.mozCursor;
 </pre>
 
 <h3 id="Return_Value">Return value</h3>

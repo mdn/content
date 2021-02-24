@@ -2,27 +2,28 @@
 title: AudioBuffer.sampleRate
 slug: Web/API/AudioBuffer/sampleRate
 tags:
-  - API
-  - AudioBuffer
-  - Property
-  - Reference
-  - Web Audio API
-  - sampleRate
+- API
+- AudioBuffer
+- Property
+- Reference
+- Web Audio API
+- sampleRate
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<div>
-<p>The <strong><code>sampleRate</code></strong> property of the {{ domxref("AudioBuffer") }} interface returns a float representing the sample rate, in samples per second, of the PCM data stored in the buffer.</p>
-</div>
+<p>The <strong><code>sampleRate</code></strong> property of the {{
+  domxref("AudioBuffer") }} interface returns a float representing the sample rate, in
+  samples per second, of the PCM data stored in the buffer.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+<pre class="brush: js">var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 myArrayBuffer.sampleRate;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A floating-point value indicating the current sample rate of the buffers data, in samples per second.</p>
+<p>A floating-point value indicating the current sample rate of the buffers data, in
+  samples per second.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -53,29 +54,27 @@ button.onclick = function() {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-audiobuffer-samplerate', 'sampleRate')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web Audio API', '#dom-audiobuffer-samplerate', 'sampleRate')}}</td>
+      <td>{{Spec2('Web Audio API')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.AudioBuffer.sampleRate")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio
+      API</a></li>
 </ul>

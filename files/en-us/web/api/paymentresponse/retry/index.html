@@ -2,58 +2,82 @@
 title: PaymentResponse.retry()
 slug: Web/API/PaymentResponse/retry
 tags:
-  - API
-  - Commerce
-  - Method
-  - Payment Request
-  - Payment Request API
-  - PaymentResponse
-  - Reference
-  - Web Payments
-  - payment
-  - retry
+- API
+- Commerce
+- Method
+- Payment Request
+- Payment Request API
+- PaymentResponse
+- Reference
+- Web Payments
+- payment
+- retry
 ---
 <p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
 
-<p><span class="seoSummary">The {{domxref("PaymentResponse")}} interface's <code><strong>retry()</strong></code> method makes it possible to ask the user to retry a payment after an error occurs during processing.</span> This lets your app gracefully deal with situations such as invalid shipping addresses or declined credit cards.</p>
+<p><span class="seoSummary">The {{domxref("PaymentResponse")}} interface's
+    <code><strong>retry()</strong></code> method makes it possible to ask the user to
+    retry a payment after an error occurs during processing.</span> This lets your app
+  gracefully deal with situations such as invalid shipping addresses or declined credit
+  cards.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><em>retryPromise</em> = <em>paymentRequest</em>.retry(<em>errorFields</em>);
+<pre class="brush: js"><em>retryPromise</em> = <em>paymentRequest</em>.retry(<em>errorFields</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-	<dt><code>errorFields</code></dt>
-	<dd>
-	<p>A {{domxref("PaymentValidationErrors")}} object, with the following properties:</p>
+  <dt><code>errorFields</code></dt>
+  <dd>
+    <p>A {{domxref("PaymentValidationErrors")}} object, with the following properties:</p>
 
-	<p>{{page("/en-US/docs/Web/API/PaymentValidationErrors", "Properties")}}</p>
-	</dd>
+    <p>{{page("/en-US/docs/Web/API/PaymentValidationErrors", "Properties")}}</p>
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{jsxref("Promise")}} which is resolved when the payment is successfully completed. The promise is rejected with an appropriate exception value if the payment fails again.</p>
+<p>A {{jsxref("Promise")}} which is resolved when the payment is successfully completed.
+  The promise is rejected with an appropriate exception value if the payment fails again.
+</p>
 
-<p>Typically you will use this by calling {{domxref("PaymentRequest.show", "show()")}}, then entering a loop or recursive function that checks the {{domxref("PaymentResponse")}} for errors or other reasons to retry the payment request. If a retry is needed, the loop calls <code>retry()</code>, then loops back to check the response when it comes in. The loop exits only when the user either cancels the payment request or the request is successful.</p>
+<p>Typically you will use this by calling {{domxref("PaymentRequest.show", "show()")}},
+  then entering a loop or recursive function that checks the
+  {{domxref("PaymentResponse")}} for errors or other reasons to retry the payment request.
+  If a retry is needed, the loop calls <code>retry()</code>, then loops back to check the
+  response when it comes in. The loop exits only when the user either cancels the payment
+  request or the request is successful.</p>
 
-<p>See the {{anch("Examples", "example")}} below for a thorough example, but the basic concept, in outline form, is:</p>
+<p>See the {{anch("Examples", "example")}} below for a thorough example, but the basic
+  concept, in outline form, is:</p>
 
 <ol>
-	<li>Create a new {{domxref("PaymentRequest")}} (<code>new </code>{{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}})</li>
-	<li>Display the payment request ({{domxref("PaymentRequest.show()")}}</li>
-	<li>If <code>show()</code> resolves, the returned {{domxref("PaymentResponse")}} describes the requested payment and the options chosen by the user. Continue by...
-	<ol>
-		<li>Validate the returned response; if there are any fields whose values are not acceptable, call the response's {{domxref("PaymentResponse.complete", "complete()")}} method with a value of <code>"fail"</code> to indicate failure.</li>
-		<li>If the response's data is valid and acceptable, call <code>complete("success")</code> to finalize the payment and proces it.</li>
-	</ol>
-	</li>
-	<li>If <code>show()</code> is rejected, the payment request failed, usually because either there's already one being processed, because the {{Glossary("user agent")}} doesn't support any of the specified payment methods, or because of a security issue. See the <a href="/en-US/docs/Web/API/PaymentRequest/show#Exceptions">list of exceptions</a> for <code>show()</code> for further details. Call <code>complete("fail")</code> to close the payment request.</li>
+  <li>Create a new {{domxref("PaymentRequest")}}
+    (<code>new </code>{{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}})
+  </li>
+  <li>Display the payment request ({{domxref("PaymentRequest.show()")}}</li>
+  <li>If <code>show()</code> resolves, the returned {{domxref("PaymentResponse")}}
+    describes the requested payment and the options chosen by the user. Continue by...
+    <ol>
+      <li>Validate the returned response; if there are any fields whose values are not
+        acceptable, call the response's {{domxref("PaymentResponse.complete",
+        "complete()")}} method with a value of <code>"fail"</code> to indicate failure.
+      </li>
+      <li>If the response's data is valid and acceptable, call
+        <code>complete("success")</code> to finalize the payment and proces it.</li>
+    </ol>
+  </li>
+  <li>If <code>show()</code> is rejected, the payment request failed, usually because
+    either there's already one being processed, because the {{Glossary("user agent")}}
+    doesn't support any of the specified payment methods, or because of a security issue.
+    See the <a href="/en-US/docs/Web/API/PaymentRequest/show#Exceptions">list of
+      exceptions</a> for <code>show()</code> for further details. Call
+    <code>complete("fail")</code> to close the payment request.</li>
 </ol>
 
-<pre class="brush: js notranslate">async function handlePayment() {
+<pre class="brush: js">async function handlePayment() {
   const payRequest = new PaymentRequest(methodData, details, options);
 
   try {
@@ -73,9 +97,10 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p><u><strong>try { await paymentRequest.retry(errorFields); } catch (DOMException err) { ... }</strong></u></p>
+<p><u><strong>try { await paymentRequest.retry(errorFields); } catch (DOMException err) {
+      ... }</strong></u></p>
 
-<pre class="brush: JS notranslate">async function doPaymentRequest() {
+<pre class="brush: JS">async function doPaymentRequest() {
   const request = new PaymentRequest(methodData, details, options);
   const response = await request.show();
   await recursiveValidate(request, response);
@@ -124,29 +149,26 @@ doPaymentRequest();
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Payment','#dom-paymentresponse-retry','retry()')}}</td>
-			<td>{{Spec2('Payment')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Payment','#dom-paymentresponse-retry','retry()')}}</td>
+      <td>{{Spec2('Payment')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.PaymentResponse.retry")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li>{{domxref("PaymentResponse")}} interface.</li>
+  <li>{{domxref("PaymentResponse")}} interface.</li>
 </ul>

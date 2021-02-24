@@ -43,7 +43,7 @@ tags:
 
 <p>Here's an example that uses {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}} to get a list of devices.</p>
 
-<pre class="brush:js notranslate">if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
+<pre class="brush:js">if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
   console.log("enumerateDevices() not supported.");
   return;
 }
@@ -64,13 +64,13 @@ navigator.mediaDevices.enumerateDevices()
 
 <p>This might produce:</p>
 
-<pre class="eval notranslate">videoinput: id = csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
+<pre class="brush: bash">videoinput: id = csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
 audioinput: id = RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
 audioinput: id = r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=</pre>
 
 <p>or if one or more media streams are active, or if persistent permissions have been granted:</p>
 
-<pre class="eval notranslate">videoinput: FaceTime HD Camera (Built-in) id=csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
+<pre class="brush: bash">videoinput: FaceTime HD Camera (Built-in) id=csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
 audioinput: default (Built-in Microphone) id=RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
 audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 </pre>
@@ -94,10 +94,7 @@ audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.MediaDeviceInfo")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

@@ -2,31 +2,40 @@
 title: PublicKeyCredential.id
 slug: Web/API/PublicKeyCredential/id
 tags:
-  - API
-  - Credential Management API
-  - Property
-  - PublicKeyCredential
-  - Reference
-  - Web Authentication API
-  - WebAuthn
+- API
+- Credential Management API
+- Property
+- PublicKeyCredential
+- Reference
+- Web Authentication API
+- WebAuthn
 ---
 <p>{{APIRef("Web Authentication API")}}{{securecontext_header}}</p>
 
-<p>The <strong><code>id</code></strong> read-only property of the {{domxref("PublicKeyCredential")}} interface is a {{domxref("DOMString")}}, inherited from {{domxref("Credential")}}, which represents the identifier of the current <code>PublicKeyCredential</code> instance.</p>
+<p>The <strong><code>id</code></strong> read-only property of the
+  {{domxref("PublicKeyCredential")}} interface is a {{domxref("DOMString")}}, inherited
+  from {{domxref("Credential")}}, which represents the identifier of the current
+  <code>PublicKeyCredential</code> instance.</p>
 
-<p>This property is a <a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64url encoded</a> version of {{domxref("PublicKeyCredential.rawId")}}.</p>
+<p>This property is a <a
+    href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64url
+    encoded</a> version of {{domxref("PublicKeyCredential.rawId")}}.</p>
 
 <div class="note">
-<p><strong>Note:</strong> This property may only be used in top-level contexts and will not be available in an {{HTMLElement("iframe")}} for example.</p>
+  <p><strong>Note:</strong> This property may only be used in top-level contexts and will
+    not be available in an {{HTMLElement("iframe")}} for example.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>id</em> = <em>publicKeyCredential</em>.id</pre>
+<pre
+  class="brush: js"><em>id</em> = <em>publicKeyCredential</em>.id</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("DOMString")}} being the <a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64url encoded</a> version of {{domxref("PublicKeyCredential.rawId")}}.</p>
+<p>A {{domxref("DOMString")}} being the <a
+    href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64url
+    encoded</a> version of {{domxref("PublicKeyCredential.rawId")}}.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -65,25 +74,26 @@ navigator.credentials.create({ publicKey })
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebAuthn','#iface-pkcredential','id')}}</td>
-   <td>{{Spec2('WebAuthn')}}</td>
-   <td>Specified in the context of <code>PublicKeyCredential</code>. Overrides the getter defined in <code>Credential</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Credential Management','#dom-credential-id','id')}}</td>
-   <td>{{Spec2('Credential Management')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('WebAuthn','#iface-pkcredential','id')}}</td>
+      <td>{{Spec2('WebAuthn')}}</td>
+      <td>Specified in the context of <code>PublicKeyCredential</code>. Overrides the
+        getter defined in <code>Credential</code>.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('Credential Management','#dom-credential-id','id')}}</td>
+      <td>{{Spec2('Credential Management')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -93,5 +103,5 @@ navigator.credentials.create({ publicKey })
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("Credential.id")}}</li>
+  <li>{{domxref("Credential.id")}}</li>
 </ul>

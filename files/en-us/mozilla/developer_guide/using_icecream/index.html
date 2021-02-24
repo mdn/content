@@ -27,11 +27,11 @@ tags:
 <pre>sudo apt install icecc
 </pre>
 
-<p class="syntaxbox">This will automatically start an IceCC Daemon, which should be able to automatically locate and connect to the scheduler running on your network using UDP multi-cast.</p>
+<p>This will automatically start an IceCC Daemon, which should be able to automatically locate and connect to the scheduler running on your network using UDP multi-cast.</p>
 
-<p class="syntaxbox">Note that Debian/Ubuntu prior to 2018 ship icecream 1.0.1 which has some stability issues. We recommend <a href="https://github.com/jyavenard/mozilla-icecream/tree/master/packages/ubuntu">upgrading to 1.1</a>.</p>
+<p>Note that Debian/Ubuntu prior to 2018 ship icecream 1.0.1 which has some stability issues. We recommend <a href="https://github.com/jyavenard/mozilla-icecream/tree/master/packages/ubuntu">upgrading to 1.1</a>.</p>
 
-<h4 class="syntaxbox" id="Fedora">Fedora</h4>
+<h4 id="Fedora">Fedora</h4>
 
 <pre>sudo dnf install icecream
 sudo systemctl enable iceccd
@@ -43,7 +43,7 @@ sudo systemctl start iceccd</pre>
 CC="/usr/lib/icecc/bin/cc"
 CXX="/usr/lib/icecc/bin/c++"</span></span></pre>
 
-<h3 class="syntaxbox" id="IceCC_Client_on_Mac">IceCC Client on Mac</h3>
+<h3 id="IceCC_Client_on_Mac">IceCC Client on Mac</h3>
 
 <p>The following instructions are for setting up IceCC as a client on macOS. Your macOS machine will not service requests, but will distribute jobs to any x86-64 machines on the network (linux machines), and use them to compile, in addition to local compiles.</p>
 

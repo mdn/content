@@ -26,11 +26,11 @@ tags:
 
 <h2 id="The_reference_box">The reference box</h2>
 
-<p>Understanding the reference box used by CSS Shapes is important when using Basic Shapes, as it defines each shape's coordinate system. You have already met the reference box in <a href="/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values">the guide on creating shapes from Box Values</a>, which directly uses the reference box to create the shape.</p>
+<p>Understanding the reference box used by CSS Shapes is important when using Basic Shapes, as it defines each shape's coordinate system. You have already met the reference box in <a href="/en-US/docs/Web/CSS/CSS_Shapes/From_box_values">the guide on creating shapes from Box Values</a>, which directly uses the reference box to create the shape.</p>
 
 <p>The Firefox Shapes Inspector helpfully shows the reference box in use when you inspect a shape. In the screenshot below I have created a circle, using <code>shape-outside: circle(50%)</code>. The floated element has 20 pixels of padding, border and margin applied, and the Shapes Inspector highlights these reference boxes. When using a Basic Shape the reference box used by default is the margin-box. You can see in the screenshot that the shape is being defined with reference to that part of the Box Model.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15904/shapes-reference-box.png" style="height: 840px; width: 1536px;"></p>
+<p><img alt="" src="shapes-reference-box.png"></p>
 
 <p>You can add the various Box Values after your Basic Shape definition. Therefore the default behavior is as if you have defined.</p>
 
@@ -111,7 +111,7 @@ tags:
 }
 </pre>
 
-<p><img alt="The circle shape is clipped by the margin box" src="https://mdn.mozillademos.org/files/15903/shapes-circle-clipped.png" style="height: 602px; width: 1536px;"></p>
+<p><img alt="The circle shape is clipped by the margin box" src="shapes-circle-clipped.png"></p>
 
 <h2 id="ellipse()">ellipse()</h2>
 
@@ -135,6 +135,6 @@ tags:
 
 <p>You may well find the Firefox Shape Inspector very useful here to create your polygon shape. The screenshot below shows the shape highlighted in the tool.</p>
 
-<p><img alt="The polygon basic shape, highlighted with the Shapes Inspector." src="https://mdn.mozillademos.org/files/15902/shapes-polygon.png" style="height: 540px; width: 1524px;"></p>
+<p><img alt="The polygon basic shape, highlighted with the Shapes Inspector." src="shapes-polygon.png"></p>
 
 <p>Another useful resource is <a href="http://bennettfeely.com/clippy/">Clippy</a> - a tool for creating shapes for <code>clip-path</code>, as the values for Basic Shapes are the same as those used for <code>clip-path</code>.</p>

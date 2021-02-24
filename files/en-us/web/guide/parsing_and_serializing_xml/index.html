@@ -41,7 +41,7 @@ tags:
 <p>This example converts an XML fragment in a string into a DOM tree using a {{domxref("DOMParser")}}:</p>
 
 <div style="overflow: hidden;">
-<pre class="brush: js notranslate">const xmlStr = '&lt;a id="a"&gt;&lt;b id="b"&gt;hey!&lt;/b&gt;&lt;/a&gt;';
+<pre class="brush: js">const xmlStr = '&lt;a id="a"&gt;&lt;b id="b"&gt;hey!&lt;/b&gt;&lt;/a&gt;';
 const parser = new DOMParser();
 const dom = parser.parseFromString(xmlStr, "application/xml");
 // print the name of the root element or error message
@@ -55,7 +55,7 @@ console.log(dom.documentElement.nodeName == "parsererror" ? "error while parsing
 
 <p>Here is sample code that reads and parses a URL-addressable XML file into a DOM tree:</p>
 
-<pre class="brush: js notranslate">const xhr = new XMLHttpRequest();
+<pre class="brush: js">const xhr = new XMLHttpRequest();
 
 xhr.onload = function() {
   dump(xhr.responseXML.documentElement.nodeName);
@@ -90,21 +90,21 @@ xhr.send();
 
 <p>To serialize the DOM tree <code>doc</code> into XML text, call {{domxref("XMLSerializer.serializeToString()")}}:</p>
 
-<pre class="brush: js notranslate">const serializer = new XMLSerializer();
+<pre class="brush: js">const serializer = new XMLSerializer();
 const xmlStr = serializer.serializeToString(doc);</pre>
 
 <h3 id="Serializing_HTML_documents">Serializing HTML documents</h3>
 
 <p>If the DOM you have is an HTML document, you can serialize using <code>serializeToString()</code>, but there is a simpler option: just use the {{domxref("Element.innerHTML")}} property (if you want just the descendants of the specified node) or the {{domxref("Element.outerHTML")}} property if you want the node and all its descendants.</p>
 
-<pre class="brush: js notranslate">const docInnerHtml = document.documentElement.innerHTML;
+<pre class="brush: js">const docInnerHtml = document.documentElement.innerHTML;
 </pre>
 
 <p>As a result, <code>docHTML</code> is a {{domxref("DOMString")}} containing the HTML of the contents of the document; that is, the {{HTMLElement("body")}} element's contents.</p>
 
 <p>You can get HTML corresponding to the <code>&lt;body&gt;</code> <em>and</em> its descendants with this code:</p>
 
-<pre class="brush: js notranslate">const docOuterHtml = document.documentElement.outerHTML;</pre>
+<pre class="brush: js">const docOuterHtml = document.documentElement.outerHTML;</pre>
 
 <h2 id="See_also">See also</h2>
 

@@ -2,29 +2,36 @@
 title: MediaQueryList.addListener()
 slug: Web/API/MediaQueryList/addListener
 tags:
-  - API
-  - CSSOM View
-  - Media Queries
-  - MediaQueryList
-  - Method
-  - Reference
-  - addListener
+- API
+- CSSOM View
+- Media Queries
+- MediaQueryList
+- Method
+- Reference
+- addListener
 ---
 <p>{{APIRef("CSSOM")}}</p>
 
-<p>The <code><strong>addListener()</strong></code> method of the {{DOMxRef("MediaQueryList")}} interface adds a listener to the <code>MediaQueryListener</code> that will run a custom callback function in response to the media query status changing.</p>
+<p>The deprecated <code><strong>addListener()</strong></code> method of the
+  {{DOMxRef("MediaQueryList")}} interface adds a listener to the
+  <code>MediaQueryListener</code> that will run a custom callback function in response to
+  the media query status changing.</p>
 
-<p>This is basically an alias of {{DOMxRef("EventTarget.addEventListener()")}}, for backwards compatibility purposes. Older browsers should use <code>addListener</code> instead of <code>addEventListener</code> since <code>MediaQueryList</code> only inherits from <code>EventTarget</code> in newer browsers.</p>
+<p>This is basically an alias of {{DOMxRef("EventTarget.addEventListener()")}}, retained for
+  backwards compatibility purposes. Older browsers should use <code>addListener</code>
+  instead of <code>addEventListener</code> since <code>MediaQueryList</code> only inherits
+  from <code>EventTarget</code> in newer browsers.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><em>MediaQueryList.addListener(func)</em></pre>
+<pre class="brush: js"><em>MediaQueryList.addListener(func)</em></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>func</dt>
- <dd>A function or function reference representing the callback function you want to run when the media query status changes.</dd>
+  <dt>func</dt>
+  <dd>A function or function reference representing the callback function you want to run
+    when the media query status changes.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -33,7 +40,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">var paragraph = document.querySelector('p');
+<pre class="brush: js">var paragraph = document.querySelector('p');
 var mediaQueryList = window.matchMedia('(max-width: 600px)');
 
 function screenTest(e) {
@@ -53,18 +60,19 @@ mediaQueryList.addListener(screenTest);</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSSOM View", "#dom-mediaquerylist-addlistener", "addListener")}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Specification</th>
+      <th>Status</th>
+      <th>Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("CSSOM View", "#dom-mediaquerylist-addlistener", "addListener")}}
+      </td>
+      <td>{{Spec2("CSSOM View")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -74,9 +82,10 @@ mediaQueryList.addListener(screenTest);</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/CSS/Media_queries">Media queries</a></li>
- <li><a href="/en-US/docs/CSS/Using_media_queries_from_code">Using media queries from code</a></li>
- <li>{{DOMxRef("window.matchMedia()")}}</li>
- <li>{{DOMxRef("MediaQueryList")}}</li>
- <li>{{DOMxRef("MediaQueryListEvent")}}</li>
+  <li><a href="/en-US/docs/CSS/Media_queries">Media queries</a></li>
+  <li><a href="/en-US/docs/CSS/Using_media_queries_from_code">Using media queries from
+      code</a></li>
+  <li>{{DOMxRef("window.matchMedia()")}}</li>
+  <li>{{DOMxRef("MediaQueryList")}}</li>
+  <li>{{DOMxRef("MediaQueryListEvent")}}</li>
 </ul>

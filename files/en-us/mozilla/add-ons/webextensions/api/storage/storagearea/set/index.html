@@ -19,13 +19,13 @@ tags:
 
 <p>When you store or update a value using this API, the {{WebExtAPIRef("storage.onChanged")}} event will fire.</p>
 
-<p>Note that when storing items in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync">sync</a></code> storage area, the browser enforces quotas on the amount of data each extension can store. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync#Storage_quotas_for_sync_data">Storage quotas for sync data</a>.</p>
+<p>Note that when storing items in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync">sync</a></code> storage area, the browser enforces quotas on the amount of data each extension can store. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync#storage_quotas_for_sync_data">Storage quotas for sync data</a>.</p>
 
 <p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js notranslate">let <var>settingItem</var> = browser.storage.<var>&lt;storageType&gt;</var>.set(
+<pre class="brush:js">let <var>settingItem</var> = browser.storage.<var>&lt;storageType&gt;</var>.set(
   <var>keys</var>             // object
 )
 </pre>
@@ -55,7 +55,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">function setItem() {
+<pre class="brush: js">function setItem() {
   console.log("OK");
 }
 

@@ -2,36 +2,48 @@
 title: Window.showSaveFilePicker()
 slug: Web/API/Window/showSaveFilePicker
 tags:
-  - Directory
-  - File
-  - File System Access API
-  - Method
-  - Window
-  - working with files
+- Directory
+- File
+- File System Access API
+- Method
+- Window
+- working with files
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}</div>
+<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+</div>
 
-<p class="summary">The <strong><code>showSaveFilePicker()</code></strong> method of the {{domxref("Window")}} interface shows a file picker that allows a user to save a file. Either by selecting an existing file, or entering a name for a new file.</p>
+<p class="summary">The <strong><code>showSaveFilePicker()</code></strong> method of the
+  {{domxref("Window")}} interface shows a file picker that allows a user to save a file.
+  Either by selecting an existing file, or entering a name for a new file.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>FileSystemFileHandle</var> = Window.showSaveFilePicker();</pre>
+<pre
+  class="brush: js">var <var>FileSystemFileHandle</var> = Window.showSaveFilePicker();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><em>options</em> {{optional_inline}}</dt>
- <dd>An optional object containing options, which are as follows:
- <ul>
-  <li><code>excludeAcceptAllOption</code>:A {{jsxref('Boolean')}}. Default <code>false</code>. By default the picker should include an option to not apply any file type filters (instigated with the type option below). Setting this option to <code>true</code> means that option is <em>not</em> available.</li>
-  <li><code>types</code>: An {{jsxref('Array')}} of allowed file types to save. Each item is an object with the following options:
-   <ul>
-    <li><code>description</code>: An optional description of the category of files types allowed.</li>
-    <li><code>accept</code>: An {{jsxref('Object')}} with the keys set to the <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">MIME type</a> and the values an {{jsxref('Array')}} of file extensions (see below for an example).</li>
-   </ul>
-  </li>
- </ul>
- </dd>
+  <dt><em>options</em> {{optional_inline}}</dt>
+  <dd>An optional object containing options, which are as follows:
+    <ul>
+      <li><code>excludeAcceptAllOption</code>:A {{jsxref('Boolean')}}. Default
+        <code>false</code>. By default the picker should include an option to not apply
+        any file type filters (instigated with the type option below). Setting this option
+        to <code>true</code> means that option is <em>not</em> available.</li>
+      <li><code>types</code>: An {{jsxref('Array')}} of allowed file types to save. Each
+        item is an object with the following options:
+        <ul>
+          <li><code>description</code>: An optional description of the category of files
+            types allowed.</li>
+          <li><code>accept</code>: An {{jsxref('Object')}} with the keys set to the <a
+              href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">MIME
+              type</a> and the values an {{jsxref('Array')}} of file extensions (see below
+            for an example).</li>
+        </ul>
+      </li>
+    </ul>
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -41,15 +53,17 @@ tags:
 <h3 id="Exceptions">Exceptions</h3>
 
 <dl>
- <dt><code>AbortError</code></dt>
- <dd>Thrown if the user dismisses the file picker without selecting or inputting a file, or if the user agent deems any selected files too sensitive or dangerous.</dd>
+  <dt><code>AbortError</code></dt>
+  <dd>Thrown if the user dismisses the file picker without selecting or inputting a file,
+    or if the user agent deems any selected files too sensitive or dangerous.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following function shows a file picker, with text files highlighted for selection.</p>
+<p>The following function shows a file picker, with text files highlighted for selection.
+</p>
 
-<pre class="brush: js notranslate">function getNewFileHandle() {
+<pre class="brush: js">function getNewFileHandle() {
   const opts = {
     types: [{
       description: 'Text file',
@@ -62,18 +76,19 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File System Access','#api-showsavefilepicker','showSaveFilePicker')}}</td>
-   <td>{{Spec2('File System Access')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('File System
+        Access','#api-showsavefilepicker','showSaveFilePicker')}}</td>
+      <td>{{Spec2('File System Access')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -83,6 +98,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/docs/Web/API/File_System_Access_API">File System Access API</a></li>
- <li><a href="https://web.dev/file-system-access/">The File System Access API: simplifying access to local files</a></li>
+  <li><a href="/docs/Web/API/File_System_Access_API">File System Access API</a></li>
+  <li><a href="https://web.dev/file-system-access/">The File System Access API:
+      simplifying access to local files</a></li>
 </ul>

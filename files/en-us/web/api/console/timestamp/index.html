@@ -12,22 +12,27 @@ tags:
 ---
 <div>{{APIRef("Console API")}}{{Non-standard_header}}</div>
 
-<p>Adds a single marker to the browser's <a href="https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference">Performance</a> or <a href="/en-US/docs/Tools/Performance/Waterfall">Waterfall</a> tool. This lets you correlate a point in your code with the other events recorded in the timeline, such as layout and paint events.</p>
+<p>Adds a single marker to the browser's <a
+    href="https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference">Performance</a>
+  or <a href="/en-US/docs/Tools/Performance/Waterfall">Waterfall</a> tool. This lets you
+  correlate a point in your code with the other events recorded in the timeline, such as
+  layout and paint events.</p>
 
-<p>You can optionally supply an argument to label the timestamp, and this label will then be shown alongside the marker.</p>
+<p>You can optionally supply an argument to label the timestamp, and this label will then
+  be shown alongside the marker.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">console.timeStamp(label);
+<pre class="brush: js">console.timeStamp(label);
 </pre>
 
 <h2 id="Parameters">Parameters</h2>
 
 <dl>
- <dt><code>label</code></dt>
- <dd>Label for the timestamp. Optional.</dd>
+  <dt><code>label</code></dt>
+  <dd>Label for the timestamp. Optional.</dd>
 </dl>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -37,7 +42,8 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("Console.time()")}}</li>
- <li>{{domxref("Console.timeEnd()")}}</li>
- <li><a href="/en-US/docs/Tools/Performance/Waterfall#Timestamp_markers">Adding timestamps to the Waterfall</a></li>
+  <li>{{domxref("Console.time()")}}</li>
+  <li>{{domxref("Console.timeEnd()")}}</li>
+  <li><a href="/en-US/docs/Tools/Performance/Waterfall#timestamp_markers">Adding
+      timestamps to the Waterfall</a></li>
 </ul>

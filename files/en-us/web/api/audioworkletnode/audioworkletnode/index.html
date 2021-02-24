@@ -2,31 +2,43 @@
 title: AudioWorkletNode()
 slug: Web/API/AudioWorkletNode/AudioWorkletNode
 tags:
-  - API
-  - AudioWorkletNode
-  - Constructor
-  - Reference
-  - Web Audio API
+- API
+- AudioWorkletNode
+- Constructor
+- Reference
+- Web Audio API
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>AudioWorkletNode()</code></strong> constructor creates a new {{domxref("AudioWorkletNode")}} object, which represents an {{domxref("AudioNode")}} that uses a JavaScript function to perform custom audio processing.</span></p>
+<p><span class="seoSummary">The <strong><code>AudioWorkletNode()</code></strong>
+    constructor creates a new {{domxref("AudioWorkletNode")}} object, which represents an
+    {{domxref("AudioNode")}} that uses a JavaScript function to perform custom audio
+    processing.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>node</em> = new AudioWorkletNode(<em>context</em>, <em>name</em>);
+<pre class="brush: js">var <em>node</em> = new AudioWorkletNode(<em>context</em>, <em>name</em>);
 var <em>node</em> = new AudioWorkletNode(<em>context</em>, <em>name</em>, <em>options</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>context</code></dt>
- <dd>The {{domxref("BaseAudioContext")}} instance this node will be associated with.</dd>
- <dt><code>name</code></dt>
- <dd>A string, which represents the name of the {{domxref("AudioWorkletProcessor")}} this node will be based on. A processor with the provided name must first be registered using the {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} method.</dd>
- <dt><code>options</code> {{optional_inline}}</dt>
- <dd>An object based on the {{domxref("AudioWorkletNodeOptions")}} dictionary, which contains zero or more optional properties to configure the new node. The result of <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">the structured clone algorithm</a> applied to the object is also internally passed into the associated {{domxref("AudioWorkletProcessor.AudioWorkletProcessor", "AudioWorkletProcessor()")}} constructor — this allows custom initialization of an underlying user-defined {{domxref("AudioWorkletProcessor")}}. Available properties are as follows: {{page("/en-US/docs/Web/API/AudioWorkletNodeOptions", "Properties")}}</dd>
+  <dt><code>context</code></dt>
+  <dd>The {{domxref("BaseAudioContext")}} instance this node will be associated with.</dd>
+  <dt><code>name</code></dt>
+  <dd>A string, which represents the name of the {{domxref("AudioWorkletProcessor")}} this
+    node will be based on. A processor with the provided name must first be registered
+    using the {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} method.</dd>
+  <dt><code>options</code> {{optional_inline}}</dt>
+  <dd>An object based on the {{domxref("AudioWorkletNodeOptions")}} dictionary, which
+    contains zero or more optional properties to configure the new node. The result of <a
+      href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">the structured
+      clone algorithm</a> applied to the object is also internally passed into the
+    associated {{domxref("AudioWorkletProcessor.AudioWorkletProcessor",
+    "AudioWorkletProcessor()")}} constructor — this allows custom initialization of an
+    underlying user-defined {{domxref("AudioWorkletProcessor")}}. Available properties are
+    as follows: {{page("/en-US/docs/Web/API/AudioWorkletNodeOptions", "Properties")}}</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -36,44 +48,46 @@ var <em>node</em> = new AudioWorkletNode(<em>context</em>, <em>name</em>, <em>op
 <h3 id="Exceptions">Exceptions</h3>
 
 <dl>
- <dt><code>NotSupportedError</code></dt>
- <dd>The specified <code>options.outputChannelCount</code> is <code>0</code> or larger than the current implementation supports.</dd>
- <dt><code>IndexSizeError</code></dt>
- <dd>The length of <code>options.outputChannelCount</code> array does not match <code>options.numberOfOutputs</code>.</dd>
+  <dt><code>NotSupportedError</code></dt>
+  <dd>The specified <code>options.outputChannelCount</code> is <code>0</code> or larger
+    than the current implementation supports.</dd>
+  <dt><code>IndexSizeError</code></dt>
+  <dd>The length of <code>options.outputChannelCount</code> array does not match
+    <code>options.numberOfOutputs</code>.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
 
-<p><em>For a complete example demonstrating user-defined audio processing, see the {{domxref("AudioWorkletNode")}} page.</em></p>
+<p><em>For a complete example demonstrating user-defined audio processing, see the
+    {{domxref("AudioWorkletNode")}} page.</em></p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API','#dom-audioworkletnode-audioworkletnode','AudioWorkletNode()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web Audio
+        API','#dom-audioworkletnode-audioworkletnode','AudioWorkletNode()')}}</td>
+      <td>{{Spec2('Web Audio API')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.AudioWorkletNode.AudioWorkletNode")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API </a></li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_AudioWorklet">Background audio processing using AudioWorklet</a></li>
- <li>{{domxref("AudioWorkletNode", "AudioWorkletNode")}} interface</li>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API </a></li>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_AudioWorklet">Background audio
+      processing using AudioWorklet</a></li>
+  <li>{{domxref("AudioWorkletNode", "AudioWorkletNode")}} interface</li>
 </ul>

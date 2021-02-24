@@ -2,29 +2,41 @@
 title: PaymentRequest.shippingOption
 slug: Web/API/PaymentRequest/shippingOption
 tags:
-  - API
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Property
-  - Reference
-  - Secure context
-  - shippingOption
+- API
+- Payment Request
+- Payment Request API
+- PaymentRequest
+- Property
+- Reference
+- Secure context
+- shippingOption
 ---
 <p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Payment Request API")}}</p>
 
-<p>The <strong><code>shippingOption</code></strong> read-only attribute of the {{domxref('PaymentRequest')}} interface returns either the id of a selected shipping option, null (if no shipping option was set to be selected) or a shipping option selected by the user. It is initially <code>null</code> by when no "selected" shipping options are provided.</p>
+<p>The <strong><code>shippingOption</code></strong> read-only attribute of
+  the {{domxref('PaymentRequest')}} interface returns either the id of a selected shipping
+  option, null (if no shipping option was set to be selected) or a shipping option
+  selected by the user. It is initially <code>null</code> by when no "selected" shipping
+  options are provided.</p>
 
-<p>This attribute is only populated if the constructor is called with the <code>requestShipping</code> flag set to <code>true</code>. If <code>requestShipping</code> was <code>false</code> (or missing),  <code>shippingOption</code> returns <code>null</code>, even the developer provides a  selected a shipping option.</p>
+<p>This attribute is only populated if the constructor is called with the
+  <code>requestShipping</code> flag set to <code>true</code>. If
+  <code>requestShipping</code> was <code>false</code> (or missing),
+   <code>shippingOption</code> returns <code>null</code>, even the developer provides
+  a  selected a shipping option.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code>// Returns the id of the selected PaymentShippingOption
+<pre class="brush: js"><code>// Returns the id of the selected PaymentShippingOption
 var shippingOption = request.shippingOption; </code></pre>
 
 <h2 id="Example">Example</h2>
 
-<p>In the example below, the {{domxref('PaymentRequest.onshippingoptionchange')}} and the {{domxref('PaymentRequest.onshippingaoptionchange')}} events are dispatched. In each calls to <code>updateDetails()</code>  are made, one using a promise, and the other with a plain JS object. This demotrates synchrounous and asynchronous updates to a payment sheet. </p>
+<p>In the example below, the {{domxref('PaymentRequest.onshippingoptionchange')}} and
+  the {{domxref('PaymentRequest.onshippingaoptionchange')}} events are dispatched. In
+  each calls to <code>updateDetails()</code>  are made, one using a promise, and the other
+  with a plain JS object. This demotrates synchrounous and asynchronous updates to a
+  payment sheet. </p>
 
 <pre class="brush: js">const request = new PaymentRequest(methodData, details, options);
 // Async update to details
@@ -60,23 +72,20 @@ async function checkShipping(request) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Payment','#shippingoption-attribute','shippingOption')}}</td>
-   <td>{{Spec2('Payment')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Payment','#shippingoption-attribute','shippingOption')}}</td>
+      <td>{{Spec2('Payment')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.PaymentRequest.shippingOption")}}</p>
-</div>

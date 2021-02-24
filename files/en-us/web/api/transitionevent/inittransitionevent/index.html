@@ -2,63 +2,78 @@
 title: TransitionEvent.initTransitionEvent()
 slug: Web/API/TransitionEvent/initTransitionEvent
 tags:
-  - API
-  - CSS
-  - CSS3 Transitions
-  - CSSOM
-  - Deprecated
-  - Experimental
-  - Method
-  - Reference
-  - TransitionEvent
+- API
+- CSS
+- CSS3 Transitions
+- CSSOM
+- Deprecated
+- Experimental
+- Method
+- Reference
+- TransitionEvent
 ---
 <p>{{ apiref("CSSOM") }} {{deprecated_header}}{{non-standard_header}}</p>
 
-<p>The <code><strong>TransitionEvent.initTransitionEvent()</strong></code> method Initializes a transition event created using the deprecated {{domxref("Document.createEvent()", "Document.createEvent(\"TransitionEvent\")")}} method.</p>
+<p>The <code><strong>TransitionEvent.initTransitionEvent()</strong></code> method
+  Initializes a transition event created using the deprecated
+  {{domxref("Document.createEvent()", "Document.createEvent(\"TransitionEvent\")")}}
+  method.</p>
 
 <p><code>TransitionEvent</code> created that way are untrusted.</p>
 
 <div class="note">
-<p><strong>Note:</strong> this method has been dropped during the standard process. It has been deprecated and is in the progress of been removed from most implementation. Do not use it anymore, use the standard constructor, {{domxref("TransitionEvent.TransitionEvent", "TransitionEvent()")}}, to create a synthetic {{domxref("TransitionEvent")}}</p>
+  <p><strong>Note:</strong> this method has been dropped during the standard process. It
+    has been deprecated and is in the progress of been removed from most implementation.
+    Do not use it anymore, use the standard constructor,
+    {{domxref("TransitionEvent.TransitionEvent", "TransitionEvent()")}}, to create a
+    synthetic {{domxref("TransitionEvent")}}</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>transitionEvent</em>.initTransitionEvent(<em>typeArg</em>, <em>canBubbleArg</em>, <em>cancelableArg</em>, <em>transitionNameArg</em>, <em>elapsedTimeArg</em>);</pre>
+<pre
+  class="brush: js"><em>transitionEvent</em>.initTransitionEvent(<em>typeArg</em>, <em>canBubbleArg</em>, <em>cancelableArg</em>, <em>transitionNameArg</em>, <em>elapsedTimeArg</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><em>typeArg</em></dt>
- <dd>Is a {{domxref("DOMString")}} identifying the specific type of transition event that occurred. The following value is allowed:
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col">Value</th>
-    <th scope="col">Meaning</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>transitionend</code></td>
-    <td>The transition completed.</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt><em>canBubbleArg</em></dt>
- <dd>Is a {{domxref("Boolean")}} flag indicating if the event can bubble (<code>true</code>) or not (<code>false)</code>.</dd>
- <dt><em>cancelableArg</em></dt>
- <dd>Is a {{domxref("Boolean")}} flag indicating if the event associated action can be avoided (<code>true</code>) or not (<code>false)</code>.</dd>
- <dt><em>transitionNameArg</em></dt>
- <dd>Is a {{domxref("DOMString")}} containing the name of the CSS property associated with the transition. This value is not affected by the {{cssxref("transition-delay")}} property.</dd>
- <dt><em>elapsedTimeArg</em></dt>
- <dd>Is <code>float</code> giving the amount of time the transition has been running, in seconds, when this event fired.</dd>
+  <dt><em>typeArg</em></dt>
+  <dd>Is a {{domxref("DOMString")}} identifying the specific type of transition event that
+    occurred. The following value is allowed:
+    <table class="standard-table">
+      <thead>
+        <tr>
+          <th scope="col">Value</th>
+          <th scope="col">Meaning</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>transitionend</code></td>
+          <td>The transition completed.</td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
+  <dt><em>canBubbleArg</em></dt>
+  <dd>Is a {{domxref("Boolean")}} flag indicating if the event can bubble
+    (<code>true</code>) or not (<code>false)</code>.</dd>
+  <dt><em>cancelableArg</em></dt>
+  <dd>Is a {{domxref("Boolean")}} flag indicating if the event associated action can be
+    avoided (<code>true</code>) or not (<code>false)</code>.</dd>
+  <dt><em>transitionNameArg</em></dt>
+  <dd>Is a {{domxref("DOMString")}} containing the name of the CSS property associated
+    with the transition. This value is not affected by the {{cssxref("transition-delay")}}
+    property.</dd>
+  <dt><em>elapsedTimeArg</em></dt>
+  <dd>Is <code>float</code> giving the amount of time the transition has been running, in
+    seconds, when this event fired.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
 
-<p><em>This method is non-standard and not part of any specification, though it was present in early drafts of {{SpecName("CSS3 Transitions")}}.</em></p>
+<p><em>This method is non-standard and not part of any specification, though it was
+    present in early drafts of {{SpecName("CSS3 Transitions")}}.</em></p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
@@ -67,6 +82,9 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/CSS/Using_CSS_transitions">Using CSS transitions</a></li>
- <li>CSS properties: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}.</li>
+  <li><a href="/en-US/docs/Web/Guide/CSS/Using_CSS_transitions">Using CSS transitions</a>
+  </li>
+  <li>CSS properties: {{cssxref("transition")}}, {{cssxref("transition-delay")}},
+    {{cssxref("transition-duration")}}, {{cssxref("transition-property")}},
+    {{cssxref("transition-timing-function")}}.</li>
 </ul>

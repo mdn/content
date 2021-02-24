@@ -48,7 +48,7 @@ tags:
 
 <h3 id="Catching_a_TypeError">Catching a TypeError</h3>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   null.f()
 } catch (e) {
   console.log(e instanceof TypeError)  // true
@@ -63,7 +63,7 @@ tags:
 
 <h3 id="Creating_a_TypeError">Creating a TypeError</h3>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   throw new TypeError('Hello', "someFile.js", 10)
 } catch (e) {
   console.log(e instanceof TypeError)  // true
@@ -93,10 +93,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("javascript.builtins.TypeError")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

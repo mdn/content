@@ -2,50 +2,81 @@
 title: MediaRecorder.onerror
 slug: Web/API/MediaRecorder/onerror
 tags:
-  - API
-  - Audio
-  - Media Capture
-  - Media Recorder API
-  - MediaRecorder
-  - Property
-  - Reference
-  - Video
-  - onerror
+- API
+- Audio
+- Media Capture
+- Media Recorder API
+- MediaRecorder
+- Property
+- Reference
+- Video
+- onerror
 ---
 <div>{{APIRef("MediaStream Recording")}}</div>
 
-<p><span class="seoSummary">The {{domxref("MediaRecorder")}} interface's <strong><code>onerror</code></strong> event handler is called by the <a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</a> when an error occurs. You can provide an event handler to deal with errors that occur while creating or using a media recorder</span>. The error object is of type {{domxref("MediaRecorderErrorEvent")}}, and its {{domxref("MediaRecorderErrorEvent.error", "error")}} property contains a {{domxref("DOMException")}} object that describes the error that occurred.</p>
+<p><span class="seoSummary">The {{domxref("MediaRecorder")}} interface's
+    <strong><code>onerror</code></strong> event handler is called by the <a
+      href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</a>
+    when an error occurs. You can provide an event handler to deal with errors that occur
+    while creating or using a media recorder</span>. The error object is of type
+  {{domxref("MediaRecorderErrorEvent")}}, and its
+  {{domxref("MediaRecorderErrorEvent.error", "error")}} property contains a
+  {{domxref("DOMException")}} object that describes the error that occurred.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><em>MediaRecorder</em>.onerror = <em>errorHandlerFunction</em>;
+<pre class="brush: js"><em>MediaRecorder</em>.onerror = <em>errorHandlerFunction</em>;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A function to be called whenever an error occurs during the recorder's lifetime. In addition to other general errors that might occur, the following errors are specifically possible when using the MediaStream Recording API; to determine which occurred, check the value of {{domxref("DOMException.name", "MediaRecorderErrorEvent.error.name")}}.</p>
+<p>A function to be called whenever an error occurs during the recorder's lifetime. In
+  addition to other general errors that might occur, the following errors are specifically
+  possible when using the MediaStream Recording API; to determine which occurred, check
+  the value of {{domxref("DOMException.name", "MediaRecorderErrorEvent.error.name")}}.</p>
 
 <dl>
- <dt><code>InvalidStateError</code></dt>
- <dd>An attempt was made to stop or pause or an inactive recorder, start or resume an active recorder, or otherwise manipulate the <code>MediaRecorder</code> while in the wrong state. This exception can also occur when a request is made on a source that has been deleted or removed.</dd>
- <dt><code>SecurityError</code></dt>
- <dd>The {{domxref("MediaStream")}} is configured to disallow recording. This may be the case, for example, with sources obtained using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} when the user denies permission to use an input device.  This also happens when a {{domxref("MediaStreamTrack")}} within the stream is marked as {{domxref("MediaStreamTrack.isolated", "isolated")}} due to the {{domxref("MediaStreamConstraints.peerIdentity", "peerIdentity")}} constraint on the source stream.</dd>
- <dt><code>NotSupportedError</code></dt>
- <dd>An attempt was made to instantiate a <code>MediaRecorder</code> using a MIME type that isn't supported on the user's device; one or more of the requested container, codecs, or profiles as well as other information may be invalid.</dd>
- <dt><code>InvalidModificationError</code></dt>
- <dd>The number of tracks on the stream being recorded has changed. You can't add or remove tracks while recording media.</dd>
- <dt><code>UnknownError</code></dt>
- <dd>An non-security related error occurred that cannot otherwise be categorized. Recording stops, the <code>MediaRecorder</code>'s {{domxref("MediaRecorder.state", "state")}} becomes <code>inactive</code>, one last {{event("dataavailable")}} event is sent to the <code>MediaRecorder</code> with the remaining received data, and finally a {{event("stop")}} event is sent.</dd>
+  <dt><code>InvalidStateError</code></dt>
+  <dd>An attempt was made to stop or pause or an inactive recorder, start or resume an
+    active recorder, or otherwise manipulate the <code>MediaRecorder</code> while in the
+    wrong state. This exception can also occur when a request is made on a source that has
+    been deleted or removed.</dd>
+  <dt><code>SecurityError</code></dt>
+  <dd>The {{domxref("MediaStream")}} is configured to disallow recording. This may be the
+    case, for example, with sources obtained using {{domxref("MediaDevices.getUserMedia",
+    "getUserMedia()")}} when the user denies permission to use an input device.  This also
+    happens when a {{domxref("MediaStreamTrack")}} within the stream is marked as
+    {{domxref("MediaStreamTrack.isolated", "isolated")}} due to the
+    {{domxref("MediaStreamConstraints.peerIdentity", "peerIdentity")}} constraint on the
+    source stream.</dd>
+  <dt><code>NotSupportedError</code></dt>
+  <dd>An attempt was made to instantiate a <code>MediaRecorder</code> using a MIME type
+    that isn't supported on the user's device; one or more of the requested container,
+    codecs, or profiles as well as other information may be invalid.</dd>
+  <dt><code>InvalidModificationError</code></dt>
+  <dd>The number of tracks on the stream being recorded has changed. You can't add or
+    remove tracks while recording media.</dd>
+  <dt><code>UnknownError</code></dt>
+  <dd>An non-security related error occurred that cannot otherwise be categorized.
+    Recording stops, the <code>MediaRecorder</code>'s {{domxref("MediaRecorder.state",
+    "state")}} becomes <code>inactive</code>, one last {{event("dataavailable")}} event is
+    sent to the <code>MediaRecorder</code> with the remaining received data, and finally a
+    {{event("stop")}} event is sent.</dd>
 </dl>
 
-<p>These errors may occur either directly because of a call to a <code>MediaRecorder</code> method, or indirectly due to a problem arising during the recording process.</p>
+<p>These errors may occur either directly because of a call to a
+  <code>MediaRecorder</code> method, or indirectly due to a problem arising during the
+  recording process.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>This example creates a new {{domxref("MediaRecorder")}} instance and starts recording using the {{Glossary("user agent", "user agent's")}} default media format. It returns either the <code>MediaRecorder</code> or the name of the error that occurred if any exceptions are thrown during the setup process.</p>
+<p>This example creates a new {{domxref("MediaRecorder")}} instance and starts recording
+  using the {{Glossary("user agent", "user agent's")}} default media format. It returns
+  either the <code>MediaRecorder</code> or the name of the error that occurred if any
+  exceptions are thrown during the setup process.</p>
 
 <div class="codecopy codecopy-lg">
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">function</span> <span class="function token">recordStream</span><span class="punctuation token">(</span>stream<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  <pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">recordStream</span><span class="punctuation token">(</span>stream<span class="punctuation token">)</span> <span class="punctuation token">{</span>
   <span class="keyword token">let</span> recorder <span class="operator token">=</span> <span class="keyword token">null</span><span class="punctuation token">;</span>
   <span class="keyword token">let</span> bufferList <span class="operator token">=</span> <span class="punctuation token">[</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
 
@@ -90,18 +121,19 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("MediaStream Recording", "#dom-mediarecorder-onerror", "MediaRecorder.onerror")}}</td>
-   <td>{{Spec2("MediaStream Recording")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("MediaStream Recording", "#dom-mediarecorder-onerror",
+        "MediaRecorder.onerror")}}</td>
+      <td>{{Spec2("MediaStream Recording")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -111,8 +143,13 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API">Using the MediaRecorder API</a></li>
- <li><a href="https://mdn.github.io/web-dictaphone/">Web Dictaphone</a>: MediaRecorder + getUserMedia + Web Audio API visualization demo, by <a href="https://twitter.com/chrisdavidmills">Chris Mills</a> (<a href="https://github.com/mdn/web-dictaphone/">source on Github</a>.)</li>
- <li><a href="http://simpl.info/mediarecorder/">simpl.info MediaStream Recording demo</a>, by <a href="https://twitter.com/sw12">Sam Dutton</a>.</li>
- <li>{{domxref("Navigator.getUserMedia")}}</li>
+  <li><a href="/en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API">Using
+      the MediaRecorder API</a></li>
+  <li><a href="https://mdn.github.io/web-dictaphone/">Web Dictaphone</a>: MediaRecorder +
+    getUserMedia + Web Audio API visualization demo, by <a
+      href="https://twitter.com/chrisdavidmills">Chris Mills</a> (<a
+      href="https://github.com/mdn/web-dictaphone/">source on Github</a>.)</li>
+  <li><a href="http://simpl.info/mediarecorder/">simpl.info MediaStream Recording
+      demo</a>, by <a href="https://twitter.com/sw12">Sam Dutton</a>.</li>
+  <li>{{domxref("Navigator.getUserMedia")}}</li>
 </ul>

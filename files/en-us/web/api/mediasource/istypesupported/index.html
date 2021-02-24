@@ -2,45 +2,66 @@
 title: MediaSource.isTypeSupported()
 slug: Web/API/MediaSource/isTypeSupported
 tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - MediaSource
-  - Method
-  - Reference
-  - Static
-  - Static Method
-  - Video
-  - isTypeSupported
+- API
+- Audio
+- Experimental
+- MSE
+- Media Source Extensions
+- MediaSource
+- Method
+- Reference
+- Static
+- Static Method
+- Video
+- isTypeSupported
 ---
 <div>{{APIRef("Media Source Extensions")}}</div>
 
-<p><span class="seoSummary">The <code><strong>MediaSource.isTypeSupported()</strong></code> static method returns a {{jsxref("Boolean")}} value which is <code>true</code> if the given MIME type is <em>likely</em> to be supported by the current {{Glossary("user agent")}}.</span> That is, if it can successfully create {{domxref("SourceBuffer")}} objects for that MIME type. If the returned value is <code>false</code>, then the user agent is certain that it <em>cannot</em> access media of the specified format.</p>
+<p><span class="seoSummary">The
+    <code><strong>MediaSource.isTypeSupported()</strong></code> static method returns a
+    {{jsxref("Boolean")}} value which is <code>true</code> if the given MIME type is
+    <em>likely</em> to be supported by the current {{Glossary("user agent")}}.</span> That
+  is, if it can successfully create {{domxref("SourceBuffer")}} objects for that MIME
+  type. If the returned value is <code>false</code>, then the user agent is certain that
+  it <em>cannot</em> access media of the specified format.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>isItSupported</em> = <em>mediaSource</em>.isTypeSupported(<em>mimeType</em>);</pre>
+<pre
+  class="brush: js">var <em>isItSupported</em> = <em>mediaSource</em>.isTypeSupported(<em>mimeType</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>mimeType</code></dt>
- <dd>The MIME media type that you want to test support for in the current browser. This may include the <code>codecs</code> parameter to provide added details about the codecs used within the file.</dd>
+  <dt><code>mimeType</code></dt>
+  <dd>The MIME media type that you want to test support for in the current browser. This
+    may include the <code>codecs</code> parameter to provide added details about the
+    codecs used within the file.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{jsxref("Boolean")}} which is <code>true</code> if the browser feels that it can <em>probably</em> play media of the specified type. This is <em>not</em> a guarantee, however, and your code must be prepared for the possibility that the media will not play correctly if at all. A value of <code>false</code> is a guarantee that media of the given type will <em>not</em> play, however.</p>
+<p>A {{jsxref("Boolean")}} which is <code>true</code> if the browser feels that it can
+  <em>probably</em> play media of the specified type. This is <em>not</em> a guarantee,
+  however, and your code must be prepared for the possibility that the media will not play
+  correctly if at all. A value of <code>false</code> is a guarantee that media of the
+  given type will <em>not</em> play, however.</p>
 
-<p>All web APIs that work with media files use a "no/maybe/probably" approach (or, in this case, "no or probably") when determining if a media type can be used. This is because media files are complex, intricate constructs with far too many subtle variations to be absolutely certain of anything until you actually use the contents of the media.</p>
+<p>All web APIs that work with media files use a "no/maybe/probably" approach (or, in this
+  case, "no or probably") when determining if a media type can be used. This is because
+  media files are complex, intricate constructs with far too many subtle variations to be
+  absolutely certain of anything until you actually use the contents of the media.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>The following snippet is from an example written by Nick Desaulniers (<a href="https://nickdesaulniers.github.io/netfix/demo/bufferAll.html">view the full demo live</a>, or <a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">download the source</a> for further investigation.)</p>
+<p>The following snippet is from an example written by Nick Desaulniers (<a
+    href="https://nickdesaulniers.github.io/netfix/demo/bufferAll.html">view the full demo
+    live</a>, or <a
+    href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">download
+    the source</a> for further investigation.)</p>
 
-<pre class="brush: js  language-js">var assetURL = 'frag_bunny.mp4';
+<pre
+  class="brush: js  language-js">var assetURL = 'frag_bunny.mp4';
 // Need to be specific for Blink regarding codecs
 // ./mp4info frag_bunny.mp4 | grep Codec
 var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
@@ -71,33 +92,34 @@ var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Source Extensions', '#dom-mediasource-istypesupported', 'isTypeSupported()')}}</td>
-   <td>{{Spec2('Media Source Extensions')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Media Source Extensions', '#dom-mediasource-istypesupported',
+        'isTypeSupported()')}}</td>
+      <td>{{Spec2('Media Source Extensions')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.MediaSource.isTypeSupported")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions API</a></li>
- <li><a href="/en-US/docs/Web/Media/Formats">Guide to media types and formats on the web</a></li>
- <li><a href="/en-US/docs/Web/Media/Formats/codecs_parameter">The "codecs" parameter in common media types</a></li>
- <li>{{domxref("SourceBuffer")}}</li>
- <li>{{domxref("SourceBufferList")}}</li>
+  <li><a href="/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions
+      API</a></li>
+  <li><a href="/en-US/docs/Web/Media/Formats">Guide to media types and formats on the
+      web</a></li>
+  <li><a href="/en-US/docs/Web/Media/Formats/codecs_parameter">The "codecs" parameter in
+      common media types</a></li>
+  <li>{{domxref("SourceBuffer")}}</li>
+  <li>{{domxref("SourceBufferList")}}</li>
 </ul>

@@ -2,21 +2,25 @@
 title: MessageEvent.ports
 slug: Web/API/MessageEvent/ports
 tags:
-  - API
-  - DOM
-  - MessagingEvent
-  - Property
-  - Reference
-  - messaging
-  - ports
+- API
+- DOM
+- MessagingEvent
+- Property
+- Reference
+- messaging
+- ports
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p>The <code><strong>ports</strong></code> read-only property of the {{domxref("MessageEvent")}} interface is an array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).</p>
+<p>The <code><strong>ports</strong></code> read-only property of the
+  {{domxref("MessageEvent")}} interface is an array of {{domxref("MessagePort")}} objects
+  representing the ports associated with the channel the message is being sent through
+  (where appropriate, e.g. in channel messaging or when sending a message to a shared
+  worker).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var myPorts = messageEvent.ports;</pre>
+<pre class="brush: js">var myPorts = messageEvent.ports;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -38,18 +42,18 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "#dom-messageevent-ports", "ports")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("HTML WHATWG", "#dom-messageevent-ports", "ports")}}</td>
+      <td>{{Spec2("HTML WHATWG")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -59,5 +63,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("ExtendableMessageEvent")}} — similar to this interface but used in interfaces that needs to give more flexibility to authors.</li>
+  <li>{{domxref("ExtendableMessageEvent")}} — similar to this interface but used in
+    interfaces that needs to give more flexibility to authors.</li>
 </ul>

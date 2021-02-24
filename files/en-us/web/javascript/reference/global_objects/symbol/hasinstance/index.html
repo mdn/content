@@ -24,7 +24,7 @@ tags:
 
 <p>You could implement your custom <code>instanceof</code> behavior like this, for example:</p>
 
-<pre class="brush: js notranslate">class MyArray {
+<pre class="brush: js">class MyArray {
   static [Symbol.hasInstance](instance) {
     return Array.isArray(instance)
   }
@@ -32,7 +32,7 @@ tags:
 console.log([] instanceof MyArray); // true
 </pre>
 
-<pre class="brush: js notranslate">function MyArray() { }
+<pre class="brush: js">function MyArray() { }
 Object.defineProperty(MyArray, Symbol.hasInstance, {
   value: function(instance) { return Array.isArray(instance); }
 });
@@ -42,7 +42,7 @@ console.log([] instanceof MyArray); // true</pre>
 
 <p>Just in the same manner at which you can check if an object is an instance of a  class using the <code>instanceof</code> keyword, we can also use <code>Symbol.hasInstance</code> for such checks also.</p>
 
-<pre class="brush: js notranslate">class Animal {
+<pre class="brush: js">class Animal {
   constructor() {}
 }
 

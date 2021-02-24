@@ -2,22 +2,26 @@
 title: DataTransferItemList.clear()
 slug: Web/API/DataTransferItemList/clear
 tags:
-  - API
-  - DataTransferItemList
-  - HTML DOM
-  - HTML Drag and Drop API
-  - Method
-  - Reference
-  - clear
-  - drag and drop
+- API
+- DataTransferItemList
+- HTML DOM
+- HTML Drag and Drop API
+- Method
+- Reference
+- clear
+- drag and drop
 ---
-<p><span class="seoSummary">The {{domxref("DataTransferItemList")}} method <strong><code>clear()</code></strong> removes all {{domxref("DataTransferItem")}} objects from the drag data items list, leaving the list empty.</span></p>
+<p><span class="seoSummary">The {{domxref("DataTransferItemList")}} method
+    <strong><code>clear()</code></strong> removes all {{domxref("DataTransferItem")}}
+    objects from the drag data items list, leaving the list empty.</span></p>
 
-<p>The drag data store in which this list is kept is only writable while handling the {{event("dragstart")}} event. While handling {{event("drop")}}, the drag data store is in read-only mode, and this method silently does nothing. No exception is thrown.</p>
+<p>The drag data store in which this list is kept is only writable while handling the
+  {{event("dragstart")}} event. While handling {{event("drop")}}, the drag data store is
+  in read-only mode, and this method silently does nothing. No exception is thrown.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>DataTransferItemList</em>.clear();
+<pre class="brush: js"><em>DataTransferItemList</em>.clear();
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -34,7 +38,8 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html"> &lt;div&gt;
+<pre
+  class="brush: html"> &lt;div&gt;
    &lt;p id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true"&gt;
      Select this element, drag it to the Drop Zone and then release the selection to move the element.&lt;/p&gt;
  &lt;/div&gt;
@@ -118,25 +123,27 @@ function dragend_handler(ev) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'interaction.html#dom-datatransferitemlist-clear','clear()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'editing.html#dom-datatransferitemlist-clear','clear()')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Not included in W3C HTML5 {{Spec2('HTML5 W3C')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG',
+        'interaction.html#dom-datatransferitemlist-clear','clear()')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML5.1', 'editing.html#dom-datatransferitemlist-clear','clear()')}}
+      </td>
+      <td>{{Spec2('HTML5.1')}}</td>
+      <td>Not included in W3C HTML5 {{Spec2('HTML5 W3C')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

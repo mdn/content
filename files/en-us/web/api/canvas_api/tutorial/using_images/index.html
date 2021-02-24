@@ -54,7 +54,7 @@ tags:
 
 <h3 id="Using_images_from_other_domains">Using images from other domains</h3>
 
-<p>Using the {{htmlattrxref("crossorigin", "img")}} attribute of an {{HTMLElement("img")}} element (reflected by the {{domxref("HTMLImageElement.crossOrigin")}} property), you can request permission to load an image from another domain for use in your call to <code>drawImage()</code>. If the hosting domain permits cross-domain access to the image, the image can be used in your canvas without tainting it; otherwise using the image will <a href="/en-US/docs/Web/HTML/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F" rel="internal">taint the canvas</a>.</p>
+<p>Using the {{htmlattrxref("crossorigin", "img")}} attribute of an {{HTMLElement("img")}} element (reflected by the {{domxref("HTMLImageElement.crossOrigin")}} property), you can request permission to load an image from another domain for use in your call to <code>drawImage()</code>. If the hosting domain permits cross-domain access to the image, the image can be used in your canvas without tainting it; otherwise using the image will <a href="/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f" rel="internal">taint the canvas</a>.</p>
 
 <h3 id="Using_other_canvas_elements">Using other canvas elements</h3>
 
@@ -85,7 +85,7 @@ img.src = 'myImage.png'; // Set source path
 
 <h3 id="Embedding_an_image_via_data_URL">Embedding an image via data: URL</h3>
 
-<p>Another possible way to include images is via the <a class="external" href="/en-US/docs/Web/HTTP/data_URIs" rel="external">data: url</a>. Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.</p>
+<p>Another possible way to include images is via the <a class="external" href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs" rel="external">data: url</a>. Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.</p>
 
 <pre class="brush: js">var img = new Image();   // Create new img element
 img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAsAAAIUhA+hkcuO4lmNVindo7qyrIXiGBYAOw==';
@@ -208,7 +208,7 @@ img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAs
  <dd>Given an <code>image</code>, this function takes the area of the source image specified by the rectangle whose top-left corner is (<code>sx</code>, <code>sy</code>) and whose width and height are <code>sWidth</code> and <code>sHeight</code> and draws it into the canvas, placing it on the canvas at (<code>dx</code>, <code>dy</code>) and scaling it to the size specified by <code>dWidth</code> and <code>dHeight</code>.</dd>
 </dl>
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/225/Canvas_drawimage.jpg" style="float: right; height: 290px; width: 300px;">To really understand what this does, it may help to look at the image to the right. The first four parameters define the location and size of the slice on the source image. The last four parameters define the rectangle into which to draw the image on the destination canvas.</p>
+<p><img alt="" class="internal" src="canvas_drawimage.jpg" style="float: right;">To really understand what this does, it may help to look at the image to the right. The first four parameters define the location and size of the slice on the source image. The last four parameters define the rectangle into which to draw the image on the destination canvas.</p>
 
 <p>Slicing can be a useful tool when you want to make compositions. You could have all elements in a single image file and use this method to composite a complete drawing. For instance, if you want to make a chart you could have a PNG image containing all the necessary text in a single file and depending on your data could change the scale of your chart fairly easily. Another advantage is that you don't need to load every image individually, which can improve load performance.</p>
 

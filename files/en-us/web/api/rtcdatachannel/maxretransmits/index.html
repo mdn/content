@@ -2,27 +2,36 @@
 title: RTCDataChannel.maxRetransmits
 slug: Web/API/RTCDataChannel/maxRetransmits
 tags:
-  - Experimental
-  - NeedsExample
-  - Property
-  - RTCDataChannel
-  - Read-only
-  - Reference
-  - WebRTC
-  - maxRetransmits
+- Experimental
+- NeedsExample
+- Property
+- RTCDataChannel
+- Read-only
+- Reference
+- WebRTC
+- maxRetransmits
 ---
 <p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
 
-<p><span class="seoSummary">The read-only <code>RTCDataChannel</code> property <code><strong>maxRetransmits</strong></code> returns the maximum number of times the browser should try to retransmit a message before giving up, as set when the data channel was created, or <code>null</code>, which indicates that there is no maximum.</span> This can only be set when the {{domxref("RTCDataChannel")}} is created by calling {{domxref("RTCPeerConnection.createDataChannel()")}}, using the <code>maxRetransmits</code> field in the specified <code>options</code>.</p>
+<p><span class="seoSummary">The read-only <code>RTCDataChannel</code> property
+    <code><strong>maxRetransmits</strong></code> returns the maximum number of times the
+    browser should try to retransmit a message before giving up, as set when the data
+    channel was created, or <code>null</code>, which indicates that there is no
+    maximum.</span> This can only be set when the {{domxref("RTCDataChannel")}} is created
+  by calling {{domxref("RTCPeerConnection.createDataChannel()")}}, using the
+  <code>maxRetransmits</code> field in the specified <code>options</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>tries</em> = <em>aDataChannel</em>.maxRetransmits;
+<pre class="brush: js">var <em>tries</em> = <em>aDataChannel</em>.maxRetransmits;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>The maximum number of times the browser will try to retransmit a message before giving up, or <code>null</code> if not set when {{domxref("RTCPeerConnection.createDataChannel()")}} was called. The default is <code>null</code>.</p>
+<p>The maximum number of times the browser will try to retransmit a message before giving
+  up, or <code>null</code> if not set when
+  {{domxref("RTCPeerConnection.createDataChannel()")}} was called. The default is
+  <code>null</code>.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -32,20 +41,21 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('WebRTC 1.0', '#dom-datachannel-maxretransmits', 'RTCDataChannel.maxRetransmits') }}</td>
-   <td>{{ Spec2('WebRTC 1.0') }}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ SpecName('WebRTC 1.0', '#dom-datachannel-maxretransmits',
+        'RTCDataChannel.maxRetransmits') }}</td>
+      <td>{{ Spec2('WebRTC 1.0') }}</td>
+      <td>Initial specification.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -55,8 +65,8 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
- <li>{{domxref("RTCDataChannel")}}</li>
- <li>{{domxref("RTCDataChannel.maxPacketLifetime")}}</li>
- <li>{{domxref("RTCPeerConnection.createDataChannel()")}}</li>
+  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+  <li>{{domxref("RTCDataChannel")}}</li>
+  <li>{{domxref("RTCDataChannel.maxPacketLifetime")}}</li>
+  <li>{{domxref("RTCPeerConnection.createDataChannel()")}}</li>
 </ul>

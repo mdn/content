@@ -2,21 +2,26 @@
 title: PeriodicSyncEvent.tag
 slug: Web/API/PeriodicSyncEvent/tag
 tags:
-  - Offline
-  - PWA
-  - PeriodicSyncEvent
-  - Property
-  - Service Worker
-  - Web Periodic Background Synchronization API
-  - periodic sync
+- Offline
+- PWA
+- PeriodicSyncEvent
+- Property
+- Service Worker
+- Web Periodic Background Synchronization API
+- periodic sync
 ---
 <div>{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}</div>
 
-<p class="summary">The <strong><code>tag</code></strong> read-only property of the {{domxref("PeriodicSyncEvent")}} interface returns the developer-defined identifier for the {{domxref('PeriodicSyncEvent')}}. This is specified when calling the {{domxref('PeriodicSyncManager.register()')}} method of the {{domxref('PeriodicSyncManager')}} interface. Multiple tags can be used by the web app to run different periodic tasks at different frequencies.</p>
+<p class="summary">The <strong><code>tag</code></strong> read-only property of the
+  {{domxref("PeriodicSyncEvent")}} interface returns the developer-defined identifier for
+  the {{domxref('PeriodicSyncEvent')}}. This is specified when calling the
+  {{domxref('PeriodicSyncManager.register()')}} method of the
+  {{domxref('PeriodicSyncManager')}} interface. Multiple tags can be used by the web app
+  to run different periodic tasks at different frequencies.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">const <var>tag</var> = PeriodicSyncEvent.tag;</pre>
+<pre class="brush: js">const <var>tag</var> = PeriodicSyncEvent.tag;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -24,9 +29,10 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following example demonstrates listening for a periodic sync event in the service worker, and accessing the <code>tag</code> property.</p>
+<p>The following example demonstrates listening for a periodic sync event in the service
+  worker, and accessing the <code>tag</code> property.</p>
 
-<pre class="brush: js notranslate">self.addEventListener('periodicsync', event =&gt; {
+<pre class="brush: js">self.addEventListener('periodicsync', event =&gt; {
   console.log(event.tag); // logs the events tag
 });
 </pre>
@@ -34,18 +40,18 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Periodic Background Sync','#dom-periodicsyncevent-tag','tag')}}</td>
-   <td>{{Spec2('Periodic Background Sync')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Periodic Background Sync','#dom-periodicsyncevent-tag','tag')}}</td>
+      <td>{{Spec2('Periodic Background Sync')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -55,6 +61,8 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://web.dev/periodic-background-sync/">Richer offline experiences with the Periodic Background Sync API</a></li>
- <li><a href="https://webplatformapis.com/periodic_sync/periodicSync_improved.html">A Periodic Background Sync demo app</a></li>
+  <li><a href="https://web.dev/periodic-background-sync/">Richer offline experiences with
+      the Periodic Background Sync API</a></li>
+  <li><a href="https://webplatformapis.com/periodic_sync/periodicSync_improved.html">A
+      Periodic Background Sync demo app</a></li>
 </ul>

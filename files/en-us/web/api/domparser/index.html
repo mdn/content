@@ -2,125 +2,148 @@
 title: DOMParser
 slug: Web/API/DOMParser
 tags:
-  - API
-  - DOM
-  - DOM Parsing
-  - Document
-  - HTML
-  - HTMLDocument
-  - MakeBrowserAgnostic
-  - NeedsMarkupWork
-  - Parsing
-  - Reference
-  - SVG
-  - XML
-  - XMLDocument
+- API
+- DOM
+- DOM Parsing
+- Document
+- HTML
+- HTMLDocument
+- MakeBrowserAgnostic
+- NeedsMarkupWork
+- Parsing
+- Reference
+- SVG
+- XML
+- XMLDocument
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p><span class="seoSummary">The <strong><code>DOMParser</code></strong> interface provides the ability to parse {{Glossary("XML")}} or {{Glossary("HTML")}} source code from a string into a DOM {{domxref("Document")}}.</span></p>
+<p><span class="seoSummary">The <strong><code>DOMParser</code></strong> interface provides
+    the ability to parse {{Glossary("XML")}} or {{Glossary("HTML")}} source code from a
+    string into a DOM {{domxref("Document")}}.</span></p>
 
 <div class="note">
-<p><strong>Note:</strong> {{domxref("XMLHttpRequest")}} can parse XML and HTML directly from a URL-addressable resource, returning a <code>Document</code> in its {{domxref("XMLHttpRequest.response", "response")}} property.</p>
+  <p><strong>Note:</strong> {{domxref("XMLHttpRequest")}} can parse XML and HTML directly
+    from a URL-addressable resource, returning a <code>Document</code> in its
+    {{domxref("XMLHttpRequest.response", "response")}} property.</p>
 </div>
 
-<p>You can perform the opposite operation—converting a DOM tree into XML or HTML source—using the {{domxref("XMLSerializer")}} interface.</p>
+<p>You can perform the opposite operation—converting a DOM tree into XML or HTML
+  source—using the {{domxref("XMLSerializer")}} interface.</p>
 
-<p>In the case of an HTML document, you can also replace portions of the DOM with new DOM trees built from HTML by setting the value of the {{domxref("Element.innerHTML")}} and {{domxref("Element.outerHTML", "outerHTML")}} properties. These properties can also be read to fetch HTML fragments corresponding to the corresponding DOM subtree.</p>
+<p>In the case of an HTML document, you can also replace portions of the DOM with new DOM
+  trees built from HTML by setting the value of the {{domxref("Element.innerHTML")}} and
+  {{domxref("Element.outerHTML", "outerHTML")}} properties. These properties can also be
+  read to fetch HTML fragments corresponding to the corresponding DOM subtree.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">const <var>domparser</var> = new DOMParser()</pre>
+<pre class="brush: js">const <var>domparser</var> = new DOMParser()</pre>
 
 <h2 id="Methods">Methods</h2>
 
-<h3 id="domxrefDOMParser.parseFromString_1">{{domxref("DOMParser.parseFromString()", "", "", "1")}}</h3>
+<h3 id="domxrefDOMParser.parseFromString_1">{{domxref("DOMParser.parseFromString()", "",
+  "", "1")}}</h3>
 
 <h4 id="Syntax_2">Syntax</h4>
 
-<pre class="syntaxbox notranslate">const <var>doc</var> = domparser.parseFromString(<var>string, <var>mimeType</var>)</var></pre>
+<pre
+  class="brush: js">const <var>doc</var> = domparser.parseFromString(<var>string, <var>mimeType</var>)</var></pre>
 
 <h4 id="Return">Return</h4>
 
-<p>Either {{domxref("Document")}} or {{domxref("XMLDocument")}} depending on the <strong><code><a href="#Argument02">mimeType</a></code></strong> argument.</p>
+<p>Either {{domxref("Document")}} or {{domxref("XMLDocument")}} depending on the
+  <strong><code><a href="#argument02">mimeType</a></code></strong> argument.</p>
 
 <h4 id="Parameters">Parameters</h4>
 
 <p>This method has 2 parameters (both required):</p>
 
 <dl>
- <dt><code><var>string</var></code></dt>
- <dd>The {{domxref("DOMString")}} to be parsed. It must contain either {{Glossary("HTML")}}, {{Glossary("xml")}}, {{Glossary("xhtml+xml")}}, or {{Glossary("svg")}} document.</dd>
- <dt id="Argument02"><code><var>mimeType</var></code></dt>
- <dd>
- <p>A {{domxref("DOMString")}}. This string determines a class of the method's return value. The possible values are the following:</p>
+  <dt><code><var>string</var></code></dt>
+  <dd>The {{domxref("DOMString")}} to be parsed. It must contain either
+    {{Glossary("HTML")}}, {{Glossary("xml")}}, {{Glossary("xhtml+xml")}}, or
+    {{Glossary("svg")}} document.</dd>
+  <dt id="Argument02"><code><var>mimeType</var></code></dt>
+  <dd>
+    <p>A {{domxref("DOMString")}}. This string determines a class of the method's return
+      value. The possible values are the following:</p>
 
- <table class="standard-table" style="max-width: 60ch;">
-  <thead>
-   <tr>
-    <th scope="col"><code><var>mimeType</var></code></th>
-    <th scope="col"><code><var>doc</var>.constructor</code></th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>text/html</code></td>
-    <td><code>{{domxref("Document")}}</code></td>
-   </tr>
-   <tr>
-    <td><code>text/xml</code></td>
-    <td><code>{{domxref("XMLDocument")}}</code></td>
-   </tr>
-   <tr>
-    <td><code>application/xml</code></td>
-    <td><code>{{domxref("XMLDocument")}}</code></td>
-   </tr>
-   <tr>
-    <td><code>application/xhtml+xml</code></td>
-    <td><code>{{domxref("XMLDocument")}}</code></td>
-   </tr>
-   <tr>
-    <td><code>image/svg+xml</code></td>
-    <td><code>{{domxref("XMLDocument")}}</code></td>
-   </tr>
-  </tbody>
- </table>
- </dd>
+    <table class="standard-table" style="max-width: 60ch;">
+      <thead>
+        <tr>
+          <th scope="col"><code><var>mimeType</var></code></th>
+          <th scope="col"><code><var>doc</var>.constructor</code></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>text/html</code></td>
+          <td><code>{{domxref("Document")}}</code></td>
+        </tr>
+        <tr>
+          <td><code>text/xml</code></td>
+          <td><code>{{domxref("XMLDocument")}}</code></td>
+        </tr>
+        <tr>
+          <td><code>application/xml</code></td>
+          <td><code>{{domxref("XMLDocument")}}</code></td>
+        </tr>
+        <tr>
+          <td><code>application/xhtml+xml</code></td>
+          <td><code>{{domxref("XMLDocument")}}</code></td>
+        </tr>
+        <tr>
+          <td><code>image/svg+xml</code></td>
+          <td><code>{{domxref("XMLDocument")}}</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Parsing_XML">Parsing XML</h3>
 
-<p>Once you have created a parser object, you can parse XML from a string using the <code>parseFromString()</code> method:</p>
+<p>Once you have created a parser object, you can parse XML from a string using the
+  <code>parseFromString()</code> method:</p>
 
-<pre class="brush: js notranslate">let <var>parser</var> = new DOMParser()
+<pre class="brush: js">let <var>parser</var> = new DOMParser()
 let <var>doc</var> = parser.parseFromString(<var>stringContainingXMLSource</var>, "application/xml")
 </pre>
 
 <h4 id="Error_handling">Error handling</h4>
 
-<p>Note that if the parsing process fails, the <code>DOMParser</code> does not throw an exception, but instead returns an error document:</p>
+<p>Note that if the parsing process fails, the <code>DOMParser</code> does not throw an
+  exception, but instead returns an error document:</p>
 
-<pre class="brush:xml notranslate">&lt;parsererror xmlns="http://www.mozilla.org/newlayout/xml/parsererror.xml"&gt;
+<pre class="brush:xml">&lt;parsererror xmlns="http://www.mozilla.org/newlayout/xml/parsererror.xml"&gt;
   <var>(error description)</var>
   &lt;sourcetext&gt;<var>(a snippet of the source XML)</var>&lt;/sourcetext&gt;
 &lt;/parsererror&gt;
 </pre>
 
-<p>The parsing errors are also reported to the <a href="/en-US/docs/Error_Console" title="Error Console">Error Console</a>, with the document URI (see below) as the source of the error.</p>
+<p>The parsing errors are also reported to the <a href="/en-US/docs/Error_Console"
+    title="Error Console">Error Console</a>, with the document URI (see below) as the
+  source of the error.</p>
 
 <h3 id="Parsing_SVG_or_HTML">Parsing SVG or HTML</h3>
 
-<p>The <code>DOMParser</code> can also be used to parse an SVG document {{geckoRelease("10.0")}} or an HTML document {{geckoRelease("12.0")}}. There are three different results possible, selected by the MIME type given.</p>
+<p>The <code>DOMParser</code> can also be used to parse an SVG document
+  {{geckoRelease("10.0")}} or an HTML document {{geckoRelease("12.0")}}. There are three
+  different results possible, selected by the MIME type given.</p>
 
 <ol>
- <li>If the MIME type is <code>text/xml</code>, the result will be an <code>XMLDocument</code></li>
- <li>If the MIME type is <code>image/svg+xml</code>, the result will be an <code>SVGDocument</code></li>
- <li>If the MIME type is <code>text/html</code>, the result will be an <code>HTMLDocument</code></li>
+  <li>If the MIME type is <code>text/xml</code>, the result will be an
+    <code>XMLDocument</code></li>
+  <li>If the MIME type is <code>image/svg+xml</code>, the result will be an
+    <code>SVGDocument</code></li>
+  <li>If the MIME type is <code>text/html</code>, the result will be an
+    <code>HTMLDocument</code></li>
 </ol>
 
-<pre class="brush: js notranslate">let parser = new DOMParser()
+<pre class="brush: js">let parser = new DOMParser()
 let doc = parser.parseFromString(stringContainingXMLSource, "application/xml")
 // returns a Document, but not an SVGDocument nor an HTMLDocument
 
@@ -135,7 +158,7 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html")
 
 <h2 id="DOMParser_HTML_extension">DOMParser HTML extension</h2>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
  * DOMParser HTML extension
  * 2012-09-04
  *
@@ -181,20 +204,21 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html")
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-parsing-and-serialization', 'DOM parsing')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#dom-parsing-and-serialization', 'DOM parsing')}}
+      </td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -204,8 +228,9 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html")
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Parsing_and_serializing_XML">Parsing and serializing XML</a></li>
- <li>{{domxref("XMLHttpRequest")}}</li>
- <li>{{domxref("XMLSerializer")}}</li>
- <li>{{jsxref("JSON.parse()")}} - counterpart for {{jsxref("JSON")}} documents.</li>
+  <li><a href="/en-US/docs/Parsing_and_serializing_XML">Parsing and serializing XML</a>
+  </li>
+  <li>{{domxref("XMLHttpRequest")}}</li>
+  <li>{{domxref("XMLSerializer")}}</li>
+  <li>{{jsxref("JSON.parse()")}} - counterpart for {{jsxref("JSON")}} documents.</li>
 </ul>

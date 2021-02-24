@@ -2,28 +2,35 @@
 title: 'Array.prototype[@@iterator]()'
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 tags:
-  - Array
-  - Beginner
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+- Array
+- Beginner
+- ECMAScript 2015
+- Iterator
+- JavaScript
+- Method
+- Prototype
+- Reference
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>@@iterator</strong></code> method is part of <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">The iterable protocol</a>, that defines how to synchronously iterate over a sequence of values.</p>
+<p>The <code><strong>@@iterator</strong></code> method is part of <a
+    href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">The
+    iterable protocol</a>, that defines how to synchronously iterate over a sequence of
+  values.</p>
 
-<p>The initial value of the <code><strong>@@iterator</strong></code> property is the same function object as the initial value of the {{jsxref("Array.prototype.values()", "values()")}} property.</p>
+<p>The initial value of the <code><strong>@@iterator</strong></code> property is the same
+  function object as the initial value of the {{jsxref("Array.prototype.values()",
+  "values()")}} property.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><code><var>arr</var>[Symbol.iterator]()</code></pre>
+<pre class="brush: js"><code><var>arr</var>[Symbol.iterator]()</code></pre>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>The initial value given by the {{jsxref("Array.prototype.values()", "values()")}} <strong>iterator</strong>. By default, using <code>arr[Symbol.iterator]</code> will return the {{jsxref("Array.prototype.values()", "values()")}} function.</p>
+<p>The initial value given by the {{jsxref("Array.prototype.values()", "values()")}}
+  <strong>iterator</strong>. By default, using <code>arr[Symbol.iterator]</code> will
+  return the {{jsxref("Array.prototype.values()", "values()")}} function.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -31,12 +38,12 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;ul id="letterResult"&gt;
+<pre class="brush: html">&lt;ul id="letterResult"&gt;
 &lt;/ul&gt;</pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">const arr = ['a', 'b', 'c'];
+<pre class="brush: js">const arr = ['a', 'b', 'c'];
 const eArr = arr[Symbol.iterator]();
 const letterResult = document.getElementById('letterResult');
 // your browser must support for..of loop
@@ -51,11 +58,12 @@ for (let letter of eArr) {
 
 <h4 id="Result">Result</h4>
 
-<p>{{EmbedLiveSample('Iteration_using_for...of_loop', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/@@iterator')}}</p>
+<p>{{EmbedLiveSample('Iteration_using_for...of_loop', '', '', '',
+  'Web/JavaScript/Reference/Global_Objects/Array/@@iterator')}}</p>
 
 <h3 id="Alternative_iteration">Alternative iteration</h3>
 
-<pre class="brush: js notranslate">var arr = ['a', 'b', 'c', 'd', 'e'];
+<pre class="brush: js">var arr = ['a', 'b', 'c', 'd', 'e'];
 var eArr = arr[Symbol.iterator]();
 console.log(eArr.next().value); // a
 console.log(eArr.next().value); // b
@@ -66,9 +74,15 @@ console.log(eArr.next().value); // e
 
 <h3 id="Use_Case_for_brace_notation">Use Case for brace notation</h3>
 
-<p>The use case for this syntax over using the dot notation (<code>Array.prototype.values()</code>) is in a case where you don't know what object is going to be ahead of time. If you have a function that takes an iterator and then iterate over the value, but don't know if that Object is going to have a [Iterable].prototype.values method. This could be a built-in object like <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator">String</a> object or a custom object.</p>
+<p>The use case for this syntax over using the dot notation
+  (<code>Array.prototype.values()</code>) is in a case where you don't know what object is
+  going to be ahead of time. If you have a function that takes an iterator and then
+  iterate over the value, but don't know if that Object is going to have a
+  [Iterable].prototype.values method. This could be a built-in object like <a
+    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator">String</a>
+  object or a custom object.</p>
 
-<pre class="brush: js notranslate">function logIterable(it) {
+<pre class="brush: js">function logIterable(it) {
  if (!(Symbol.iterator in Object.getPrototypeOf(it)
  /* or "Symbol.iterator in Object.__proto__"
     or "it[Symbol.iterator]" */)) {
@@ -103,16 +117,17 @@ logIterable(123);
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype-@@iterator', 'Array.prototype[@@iterator]()')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-array.prototype-@@iterator',
+        'Array.prototype[@@iterator]()')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -122,10 +137,10 @@ logIterable(123);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Array.prototype.keys()")}}</li>
- <li>{{jsxref("Array.prototype.entries()")}}</li>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li>{{jsxref("Array.prototype.values()")}}</li>
+  <li>{{jsxref("Array.prototype.keys()")}}</li>
+  <li>{{jsxref("Array.prototype.entries()")}}</li>
+  <li>{{jsxref("Array.prototype.forEach()")}}</li>
+  <li>{{jsxref("Array.prototype.every()")}}</li>
+  <li>{{jsxref("Array.prototype.some()")}}</li>
+  <li>{{jsxref("Array.prototype.values()")}}</li>
 </ul>

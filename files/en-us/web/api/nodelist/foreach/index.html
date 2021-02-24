@@ -2,40 +2,48 @@
 title: NodeList.prototype.forEach()
 slug: Web/API/NodeList/forEach
 tags:
-  - DOM
-  - Iterable
-  - Method
-  - NodeList
-  - Reference
-  - Web
+- DOM
+- Iterable
+- Method
+- NodeList
+- Reference
+- Web
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p>The <strong><code>forEach()</code></strong> method of the {{domxref("NodeList")}} interface calls the callback given in parameter once for each value pair in the list, in insertion order.</p>
+<p>The <strong><code>forEach()</code></strong> method of the {{domxref("NodeList")}}
+  interface calls the callback given in parameter once for each value pair in the list, in
+  insertion order.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>someNodeList</var>.forEach(<var>callback</var>[, <var>thisArg</var>]);
+<pre class="brush: js"><var>someNodeList</var>.forEach(<var>callback</var>[, <var>thisArg</var>]);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>callback</var></code></dt>
- <dd>
- <p>A function to execute on each element of <code><var>someNodeList</var></code>. It accepts 3 parameters:</p>
+  <dt><code><var>callback</var></code></dt>
+  <dd>
+    <p>A function to execute on each element of <code><var>someNodeList</var></code>. It
+      accepts 3 parameters:</p>
 
- <dl>
-  <dt><code><var>currentValue</var></code></dt>
-  <dd>The current element being processed in <code><var>someNodeList</var></code>.</dd>
-  <dt><code><var>currentIndex</var></code> {{Optional_inline}}</dt>
-  <dd>The index of the <code><var>currentValue</var></code> being processed in <code><var>someNodeList</var></code>.</dd>
-  <dt><code><var>listObj</var></code> {{Optional_inline}}</dt>
-  <dd>The <code><var>someNodeList</var></code> that <code>forEach()</code> is being applied to.</dd>
- </dl>
- </dd>
- <dt><code><var>thisArg</var></code> {{Optional_inline}}</dt>
- <dd>Value to use as <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code> when executing <code><var>callback</var></code>.</dd>
+    <dl>
+      <dt><code><var>currentValue</var></code></dt>
+      <dd>The current element being processed in <code><var>someNodeList</var></code>.
+      </dd>
+      <dt><code><var>currentIndex</var></code> {{Optional_inline}}</dt>
+      <dd>The index of the <code><var>currentValue</var></code> being processed in
+        <code><var>someNodeList</var></code>.</dd>
+      <dt><code><var>listObj</var></code> {{Optional_inline}}</dt>
+      <dd>The <code><var>someNodeList</var></code> that <code>forEach()</code> is being
+        applied to.</dd>
+    </dl>
+  </dd>
+  <dt><code><var>thisArg</var></code> {{Optional_inline}}</dt>
+  <dd>Value to use as
+    <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code>
+    when executing <code><var>callback</var></code>.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -70,7 +78,8 @@ list.forEach(
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>This {{Glossary("Polyfill","polyfill")}} adds compatibility to all Browsers supporting <a href="https://caniuse.com/#search=es5">ES5</a>:</p>
+<p>This {{Glossary("Polyfill","polyfill")}} adds compatibility to all Browsers supporting
+  <a href="https://caniuse.com/#search=es5">ES5</a>:</p>
 
 <pre class="brush: js">if (window.NodeList &amp;&amp; !NodeList.prototype.forEach) {
     NodeList.prototype.forEach = function (callback, thisArg) {
@@ -87,25 +96,26 @@ list.forEach(
    NodeList.prototype.forEach = Array.prototype.forEach;
 }</pre>
 
-<p>The above behavior is how many browsers actually implement <code>NodeList.prototype.forEach()</code> (Chrome, for example).</p>
+<p>The above behavior is how many browsers actually implement
+  <code>NodeList.prototype.forEach()</code> (Chrome, for example).</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("WebIDL", "#es-forEach", "forEach")}}</td>
-   <td>{{Spec2("WebIDL")}}</td>
-   <td>Defines <code>forEach</code> on <code>iterable</code> declarations</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("WebIDL", "#es-forEach", "forEach")}}</td>
+      <td>{{Spec2("WebIDL")}}</td>
+      <td>Defines <code>forEach</code> on <code>iterable</code> declarations</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -115,6 +125,6 @@ list.forEach(
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("Node")}}</li>
- <li>{{domxref("NodeList")}}</li>
+  <li>{{domxref("Node")}}</li>
+  <li>{{domxref("NodeList")}}</li>
 </ul>

@@ -2,53 +2,57 @@
 title: CSSValueList.item()
 slug: Web/API/CSSValueList/item
 tags:
-  - API
-  - CSSValueList
-  - Method
-  - Reference
-  - item
+- API
+- CSSValueList
+- Method
+- Reference
+- item
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <code><strong>item()</strong></code> method of the {{domxref("CSSValueList")}} interface is used to retrieve a {{domxref("CSSValue")}} by ordinal index.</p>
+<p>The <code><strong>item()</strong></code> method of the {{domxref("CSSValueList")}}
+  interface is used to retrieve a {{domxref("CSSValue")}} by ordinal index.</p>
 
-<p>The order in this collection represents the order of the values in the CSS style property. If the index is greater than or equal to the number of values in the list, this method returns <code>null</code>.</p>
+<p>The order in this collection represents the order of the values in the CSS style
+  property. If the index is greater than or equal to the number of values in the list,
+  this method returns <code>null</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>cssValue</var> = <var>cssValueList</var>.item(<var>index</var>);</pre>
+<pre
+  class="brush: js">var <var>cssValue</var> = <var>cssValueList</var>.item(<var>index</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>index</dt>
- <dd>An <code>unsigned long</code> representing the index of the CSS value within the collection.</dd>
+  <dt>index</dt>
+  <dd>An <code>unsigned long</code> representing the index of the CSS value within the
+    collection.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{domxref("CSSValue")}} object at the <code>index</code> position in the <code>CSSValueList</code>, or <code>null</code> if that is not a valid index.</p>
+<p>A {{domxref("CSSValue")}} object at the <code>index</code> position in the
+  <code>CSSValueList</code>, or <code>null</code> if that is not a valid index.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSValueList-item', 'CSSValueList.item')}}</td>
-   <td>{{Spec2('DOM2 Style')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSValueList-item',
+        'CSSValueList.item')}}</td>
+      <td>{{Spec2('DOM2 Style')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.CSSValueList.item")}}</p>
-</div>

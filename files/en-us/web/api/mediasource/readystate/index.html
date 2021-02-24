@@ -2,30 +2,35 @@
 title: MediaSource.readyState
 slug: Web/API/MediaSource/readyState
 tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - MediaSource
-  - Property
-  - Reference
-  - Video
-  - readyState
+- API
+- Audio
+- Experimental
+- MSE
+- Media Source Extensions
+- MediaSource
+- Property
+- Reference
+- Video
+- readyState
 ---
 <div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
 
-<p>The <code><strong>readyState</strong></code> read-only property of the {{domxref("MediaSource")}} interface returns an enum representing the state of the current <code>MediaSource</code>. The three possible values are:</p>
+<p>The <code><strong>readyState</strong></code> read-only property of the
+  {{domxref("MediaSource")}} interface returns an enum representing the state of the
+  current <code>MediaSource</code>. The three possible values are:</p>
 
 <ul>
- <li><code>closed</code>: The source is not currently attached to a media element.</li>
- <li><code>open</code>: The source is attached to a media element and ready to receive {{domxref("SourceBuffer")}} objects.</li>
- <li><code>ended</code>: The source is attached to a media element but the stream has been ended via a call to {{domxref("MediaSource.endOfStream()")}}.</li>
+  <li><code>closed</code>: The source is not currently attached to a media element.</li>
+  <li><code>open</code>: The source is attached to a media element and ready to receive
+    {{domxref("SourceBuffer")}} objects.</li>
+  <li><code>ended</code>: The source is attached to a media element but the stream has
+    been ended via a call to {{domxref("MediaSource.endOfStream()")}}.</li>
 </ul>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>myReadyState</em> = <em>mediaSource</em>.readyState;</pre>
+<pre
+  class="brush: js">var <em>myReadyState</em> = <em>mediaSource</em>.readyState;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -33,9 +38,14 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>The following snippet is from a simple example written by Nick Desaulniers (<a href="https://nickdesaulniers.github.io/netfix/demo/bufferAll.html">view the full demo live</a>, or <a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">download the source</a> for further investigation.)</p>
+<p>The following snippet is from a simple example written by Nick Desaulniers (<a
+    href="https://nickdesaulniers.github.io/netfix/demo/bufferAll.html">view the full demo
+    live</a>, or <a
+    href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">download
+    the source</a> for further investigation.)</p>
 
-<pre class="brush: js  language-js"><code class="language-js"><span class="keyword token">if</span> <span class="punctuation token">(</span><span class="string token">'MediaSource'</span> <span class="keyword token">in</span> window <span class="operator token">&amp;&amp;</span> MediaSource<span class="punctuation token">.</span><span class="function token">isTypeSupported<span class="punctuation token">(</span></span>mimeCodec<span class="punctuation token">)</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+<pre
+  class="brush: js  language-js"><code class="language-js"><span class="keyword token">if</span> <span class="punctuation token">(</span><span class="string token">'MediaSource'</span> <span class="keyword token">in</span> window <span class="operator token">&amp;&amp;</span> MediaSource<span class="punctuation token">.</span><span class="function token">isTypeSupported<span class="punctuation token">(</span></span>mimeCodec<span class="punctuation token">)</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
   <span class="keyword token">var</span> mediaSource <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">MediaSource</span><span class="punctuation token">;</span>
  <span class="comment token"> //console.log(mediaSource.readyState); // closed
 </span>  video<span class="punctuation token">.</span>src <span class="operator token">=</span> URL<span class="punctuation token">.</span><span class="function token">createObjectURL<span class="punctuation token">(</span></span>mediaSource<span class="punctuation token">)</span><span class="punctuation token">;</span>
@@ -61,30 +71,28 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Source Extensions', '#idl-def-mediasource-readystate', 'readyState')}}</td>
-   <td>{{Spec2('Media Source Extensions')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Media Source Extensions', '#idl-def-mediasource-readystate',
+        'readyState')}}</td>
+      <td>{{Spec2('Media Source Extensions')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.MediaSource.readyState")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("SourceBuffer")}}</li>
- <li>{{domxref("SourceBufferList")}}</li>
+  <li>{{domxref("SourceBuffer")}}</li>
+  <li>{{domxref("SourceBufferList")}}</li>
 </ul>

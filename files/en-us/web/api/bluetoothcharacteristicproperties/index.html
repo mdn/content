@@ -41,7 +41,7 @@ tags:
 
 <p>The following example shows how tell if a GATT characteristic supports value change notifications.</p>
 
-<pre class="brush: js notranslate">let device = await navigator.bluetooth.requestDevice({
+<pre class="brush: js">let device = await navigator.bluetooth.requestDevice({
   filters: [{services: ['heart_rate']}]
 });
 let gatt = await device.gatt.connect();
@@ -75,7 +75,4 @@ if (characteristic.properties.notify) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.BluetoothCharacteristicProperties")}}</p>
-</div>

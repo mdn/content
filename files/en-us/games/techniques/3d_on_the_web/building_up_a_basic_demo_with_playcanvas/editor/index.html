@@ -16,30 +16,13 @@ tags:
   - editor
   - rendering
 ---
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td> </td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td> </td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td> </td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-
 <p class="summary"><span class="seoSummary">Instead of coding everything from scratch you can also use the online <strong>PlayCanvas editor</strong>. This can be a more pleasant working environment if you are not someone who likes to code.</span></p>
 
 <h2 id="Creating_an_account">Creating an account</h2>
 
 <p>The PlayCanvas Editor is free — all you have to do to begin with is <a href="https://login.playcanvas.com/signup">register</a> your account and login:</p>
 
-<p><img alt="PlayCanvas Editor - Login" src="http://enclavegames.com/_tmp/pc-mdn/playcanvas-editor-login.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="PlayCanvas Editor - Login" src="playcanvas-editor-login.png" style="display: block; margin: 0px auto;"></p>
 
 <p>When you first sign up, you are taken straight into the editor and given a simple starter tutorial involving editing a 3D rolling ball game. You can finish this before you continue our tutorial if you like. When you are ready to continue with our tutorial, go to your canvas homepage — for example mine is <code>https://playcanvas.com/end3r</code>. Here's what the page looks like — you can create projects and manage them, change their settings etc.</p>
 
@@ -47,7 +30,7 @@ tags:
 
 <p>Start a brand new project by clicking on the <em>New</em> button:</p>
 
-<p><img alt="PlayCanvas Editor - Panel" src="http://enclavegames.com/_tmp/pc-mdn/playcanvas-editor-panel.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="PlayCanvas Editor - Panel" src="playcanvas-editor-panel.png" style="display: block; margin: 0px auto;"></p>
 
 <p>The resulting dialog box will show a few different options. There are starter kits available, but we don't want to load models or start a platform game.</p>
 
@@ -57,33 +40,33 @@ tags:
  <li>Click <em>Create</em> to have it created.</li>
 </ol>
 
-<p><img alt="PlayCanvas Editor - New project" src="http://enclavegames.com/_tmp/pc-mdn/playcanvas-editor-newproject.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="PlayCanvas Editor - New project" src="playcanvas-editor-newproject.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Next you'll see your project's page — there's not much yet. By clicking the <em>Editor</em> button we'll launch the online PlayCanvas editor where we'll create our scene with the shapes. Do this now.</p>
 
-<p><img alt="PlayCanvas Editor - Project" src="http://enclavegames.com/_tmp/pc-mdn/playcanvas-editor-project.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="PlayCanvas Editor - Project" src="playcanvas-editor-project.png" style="display: block; margin: 0px auto;"></p>
 
 <h2 id="Creating_the_scene">Creating the scene</h2>
 
 <p>Here's how the scene looks initially in the editor. Even though it's a blank new project we don't have to start entirely from scratch — the camera and directional light are prepared already, so you don't have to worry about them.</p>
 
-<p><img alt="PlayCanvas Editor - Scene" src="http://enclavegames.com/_tmp/pc-mdn/playcanvas-editor-scene.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="PlayCanvas Editor - Scene" src="playcanvas-editor-scene.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Now onto the creative part. To add an entity to the scene you have to click on the big plus button located in the top left area of the editor, next to the Hierarchy text. When hovering over that button with your mouse the label will say 'Add Entity' — that's exactly what we want to do. An Entity is any object used in the scene — it cna be an object like a box, cylinder or cone, but it can also be a camera, light or sound source. After clicking the button you'll see a dropdown list containing a lot of various entities to choose from. Go ahead and click <em>Box</em> — it will be added to the scene.</p>
 
-<p><img alt="PlayCanvas Editor - New box" src="http://enclavegames.com/_tmp/pc-mdn/playcanvas-editor-newbox.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="PlayCanvas Editor - New box" src="playcanvas-editor-newbox.png" style="display: block; margin: 0px auto;"></p>
 
 <p>The box is created with the default values — width, height and depth are set to 1, and it is placed in the middle of the scene. You can drag it around or apply new values in the right panel.</p>
 
-<p><img alt="PlayCanvas Editor - Box" src="http://enclavegames.com/_tmp/pc-mdn/playcanvas-editor-box.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="PlayCanvas Editor - Box" src="playcanvas-editor-box.png" style="display: block; margin: 0px auto;"></p>
 
 <p>To add some colors to the scene we need a new material that will be used on the newly created box. Click on the plus button in the <em>Assets</em> tab, and click on the <em>Material</em> option in the dropdown list that appears to create a new material.</p>
 
-<p><img alt="PlayCanvas Editor - New material" src="http://enclavegames.com/_tmp/pc-mdn/playcanvas-editor-newmaterial.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="PlayCanvas Editor - New material" src="playcanvas-editor-newmaterial.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Click on your new material in the assets tab and its entity inspector will appear on the right hand side of the display. Now edit the <em>Name</em> text field to give it a unique name (we've chosen <em>boxMaterial</em>). A unique name will help us remember what this material is for — we will add more later!</p>
 
-<p><img alt="PlayCanvas Editor - Box material" src="http://enclavegames.com/_tmp/pc-mdn/playcanvas-editor-boxmaterial.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="PlayCanvas Editor - Box material" src="playcanvas-editor-boxmaterial.png" style="display: block; margin: 0px auto;"></p>
 
 <p>To change its color we'll use the <em>Diffuse</em> option in the entity inspector. Click <em>Diffuse</em>, then select the colored box next to the Color label — it will open a color wheel. From here you can click your desired color or enter it in the bottom text field as a hex value. We've chosen a blue color with a hex value of <code>0095DD</code> — enter this code in the text field and press return for it to be accepted.</p>
 
@@ -91,23 +74,23 @@ tags:
 <p><strong>Note</strong>: Yes, you read that right — you need to enter the hex value without the hash/pound symbol.</p>
 </div>
 
-<p><img alt="PlayCanvas Editor - Diffuse color" src="http://enclavegames.com/_tmp/pc-mdn/playcanvas-editor-diffusecolor.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="PlayCanvas Editor - Diffuse color" src="playcanvas-editor-diffusecolor.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Now we can apply the colored material to the shape by clicking and dragging its icon from the bottom part of the screen (the little dot on the left hand side of the material's name — it can be a bit fiddly to select; just persevere) onto the box on the scene.</p>
 
-<p><img alt="PlayCanvas Editor - Box drop" src="http://enclavegames.com/_tmp/pc-mdn/playcanvas-editor-boxdrop.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="PlayCanvas Editor - Box drop" src="playcanvas-editor-boxdrop.png" style="display: block; margin: 0px auto;"></p>
 
 <p>So, at this point we've created a blue box. Click on the box to bring up its entity sidebar — you'll see options for changing its position, rotation, and scale. Try applying the rotation values X: 10 and Y: 20.</p>
 
-<p><img alt="PlayCanvas Editor - Rotate" src="http://enclavegames.com/_tmp/pc-mdn/playcanvas-editor-rotate.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="PlayCanvas Editor - Rotate" src="playcanvas-editor-rotate.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Now click on the play arrow in the top right corner of the scene to launch and render the scene — it will be opened in a separate browser tab.</p>
 
-<p><img alt="PlayCanvas Editor - Launch" src="http://enclavegames.com/_tmp/pc-mdn/playcanvas-editor-launch.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="PlayCanvas Editor - Launch" src="playcanvas-editor-launch.png" style="display: block; margin: 0px auto;"></p>
 
 <p>This looks great! Let's add more shapes to the scene to make it look more interesting.</p>
 
-<p><img alt="PlayCanvas Editor - Boxrender" src="http://enclavegames.com/_tmp/pc-mdn/playcanvas-editor-boxrender.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="PlayCanvas Editor - Boxrender" src="playcanvas-editor-boxrender.png" style="display: block; margin: 0px auto;"></p>
 
 <h2 id="Adding_more_shapes">Adding more shapes</h2>
 
@@ -115,7 +98,7 @@ tags:
 
 <p>Adding other shapes involves a very similar process to adding the box. Click on the Root folder in the hierarchy panel (to make sure that the new shape appears in the root, and not as a child of the Box) then Click on the big <em>Add Entity</em> (plus) button and select cylinder from the dropdown list — it will add a new cylinder shape to the scene.</p>
 
-<p><img alt="PlayCanvas Editor - Cylinder" src="http://enclavegames.com/_tmp/pc-mdn/playcanvas-editor-cylinder.png" style="display: block; margin: 0px auto;">Now follow the same steps as we did before when coloring the cube:</p>
+<p><img alt="PlayCanvas Editor - Cylinder" src="playcanvas-editor-cylinder.png" style="display: block; margin: 0px auto;">Now follow the same steps as we did before when coloring the cube:</p>
 
 <ul>
  <li>Create a new material using the <em>Add Asset</em> (plus) button.</li>
@@ -125,17 +108,17 @@ tags:
  <li>Drag and drop the <code>cylinderMaterial</code> icon onto the cylinder object on the screen to apply that color.</li>
 </ul>
 
-<p><img alt="PlayCanvas Editor - Cylinder material" src="http://enclavegames.com/_tmp/pc-mdn/playcanvas-editor-cylindermaterial.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="PlayCanvas Editor - Cylinder material" src="playcanvas-editor-cylindermaterial.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Follow the same approach again to add a cone to the scene, giving it a grayish color (we used EAEFF2.) You should now have three shapes on your scene, something like the below screenshot.</p>
 
-<p><img alt="PlayCanvas Editor - Cone" src="http://enclavegames.com/_tmp/pc-mdn/playcanvas-editor-cone.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="PlayCanvas Editor - Cone" src="playcanvas-editor-cone.png" style="display: block; margin: 0px auto;"></p>
 
 <h2 id="Animating_our_scene">Animating our scene</h2>
 
 <p>Animating 3D models might be considered an <a href="http://developer.playcanvas.com/en/tutorials/intermediate/animation-blending/">advanced</a> thing to do, but all we want to do is to control a few properties of a given object — we can use a script component to do that. Click on the plus button in the Assets panel, select the Script option, and name your new script file <code>boxAnimation.js</code>.</p>
 
-<p><img alt="PlayCanvas Editor - Box animation" src="http://enclavegames.com/_tmp/pc-mdn/playcanvas-editor-boxanimation.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="PlayCanvas Editor - Box animation" src="playcanvas-editor-boxanimation.png" style="display: block; margin: 0px auto;"></p>
 
 <p>If you double click on it, you'll be moved to a code editor. As you can see, the file contains some boilerplate code already:</p>
 
@@ -171,7 +154,7 @@ tags:
  <li>At the bottom of the screen you can see the list of scripts available — for now there's only <code>boxAnimation.js</code> — clicking it will add the animation script to the box object.</li>
 </ol>
 
-<p><img alt="PlayCanvas Editor - Box script" src="http://enclavegames.com/_tmp/pc-mdn/playcanvas-editor-boxscript.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="PlayCanvas Editor - Box script" src="playcanvas-editor-boxscript.png" style="display: block; margin: 0px auto;"></p>
 
 <h3 id="The_cylinder">The cylinder</h3>
 
@@ -217,7 +200,7 @@ this.entity.setPosition(2, Math.sin(this.timer*2), 0);</pre>
 
 <p>Launch the demo to see the effects — all the shapes should animate. Congratulations, you've completed the tutorial!</p>
 
-<p><img alt="PlayCanvas Editor - Shapes" src="http://enclavegames.com/_tmp/pc-mdn/playcanvas-editor-shapes.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="PlayCanvas Editor - Shapes" src="playcanvas-editor-shapes.png" style="display: block; margin: 0px auto;"></p>
 
 <h2 id="Summary">Summary</h2>
 

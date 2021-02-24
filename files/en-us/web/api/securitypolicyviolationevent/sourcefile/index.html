@@ -2,27 +2,31 @@
 title: SecurityPolicyViolationEvent.sourceFile
 slug: Web/API/SecurityPolicyViolationEvent/sourceFile
 tags:
-  - API
-  - CSP
-  - Experimental
-  - HTTP
-  - Property
-  - Reference
-  - Security
-  - SecurityPolicyViolationEvent
-  - sourceFile
+- API
+- CSP
+- Experimental
+- HTTP
+- Property
+- Reference
+- Security
+- SecurityPolicyViolationEvent
+- sourceFile
 ---
 <div>{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}</div>
 
-<p>The <code><strong>sourceFile</strong></code> read-only property of the {{domxref("SecurityPolicyViolationEvent")}} interface is a {{domxref("USVString")}} representing the URI of the document or worker in which the violation was found.</p>
+<p>The <code><strong>sourceFile</strong></code> read-only property of the
+  {{domxref("SecurityPolicyViolationEvent")}} interface is a {{domxref("USVString")}}
+  representing the URI of the document or worker in which the violation was found.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">let <var>source</var> = <var>violationEventInstance</var>.sourceFile;</pre>
+<pre
+  class="brush: js">let <var>source</var> = <var>violationEventInstance</var>.sourceFile;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("USVString")}} representing the URI of the document or worker in which the violation was found.</p>
+<p>A {{domxref("USVString")}} representing the URI of the document or worker in which the
+  violation was found.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -33,29 +37,27 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSP 3.0','#dom-securitypolicyviolationevent-sourcefile','sourceFile')}}</td>
-   <td>{{Spec2('CSP 3.0')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('CSP
+        3.0','#dom-securitypolicyviolationevent-sourcefile','sourceFile')}}</td>
+      <td>{{Spec2('CSP 3.0')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.SecurityPolicyViolationEvent.sourceFile")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a></li>
+  <li><a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a></li>
 </ul>

@@ -2,29 +2,39 @@
 title: FileReader.readAsDataURL()
 slug: Web/API/FileReader/readAsDataURL
 tags:
-  - API
-  - Base 64
-  - File API
-  - FileReader
-  - Files
-  - Method
-  - Reference
+- API
+- Base 64
+- File API
+- FileReader
+- Files
+- Method
+- Reference
 ---
-<p>The <code>readAsDataURL</code> method is used to read the contents of the specified {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is finished, the {{domxref("FileReader.readyState","readyState")}} becomes <code>DONE</code>, and the {{event("loadend")}} is triggered. At that time, the {{domxref("FileReader.result","result")}} attribute contains the data as a <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">data: URL</a> representing the file's data as a base64 encoded string.</p>
+<p>The <code>readAsDataURL</code> method is used to read the contents of the specified
+  {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is finished, the
+  {{domxref("FileReader.readyState","readyState")}} becomes <code>DONE</code>, and the
+  {{event("loadend")}} is triggered. At that time, the
+  {{domxref("FileReader.result","result")}} attribute contains the data as a <a
+    href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">data: URL</a> representing the
+  file's data as a base64 encoded string.</p>
 
 <div class="note">
-<p><strong>Note:</strong> The blob's {{domxref("FileReader.result","result")}} cannot be directly decoded as Base64 without first removing the Data-URL declaration preceding the Base64-encoded data. To retrieve only the Base64 encoded string, first remove <code>data:*/*;base64,</code> from the result.</p>
+  <p><strong>Note:</strong> The blob's {{domxref("FileReader.result","result")}} cannot be
+    directly decoded as Base64 without first removing the Data-URL declaration preceding
+    the Base64-encoded data. To retrieve only the Base64 encoded string, first
+    remove <code>data:*/*;base64,</code> from the result.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>instanceOfFileReader</em>.readAsDataURL(blob);</pre>
+<pre
+  class="brush: js"><em>instanceOfFileReader</em>.readAsDataURL(blob);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>blob</code></dt>
- <dd>The {{domxref("Blob")}} or {{domxref("File")}} from which to read.</dd>
+  <dt><code>blob</code></dt>
+  <dd>The {{domxref("Blob")}} or {{domxref("File")}} from which to read.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -95,25 +105,33 @@ tags:
 }
 </pre>
 
-<div class="note"><strong>Note:</strong> The <a href="/en-US/docs/Web/API/FileReader"><code>FileReader()</code></a> constructor was not supported by Internet Explorer for versions before 10. For a full compatibility code you can see our <a class="internal" href="https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html" title="crossbrowser_image_preview.html">crossbrowser possible solution for image preview</a>. See also <a href="https://mdn.mozillademos.org/files/3698/image_upload_preview.html">this more powerful example</a>.</div>
+<div class="note"><strong>Note:</strong> The <a
+    href="/en-US/docs/Web/API/FileReader"><code>FileReader()</code></a> constructor was
+  not supported by Internet Explorer for versions before 10. For a full compatibility code
+  you can see our <a class="internal"
+    href="https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html"
+    title="crossbrowser_image_preview.html">crossbrowser possible solution for image
+    preview</a>. See also <a
+    href="https://mdn.mozillademos.org/files/3698/image_upload_preview.html">this more
+    powerful example</a>.</div>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("File API", "#readAsDataURL", "readAsDataURL()")}}</td>
-   <td>{{Spec2("File API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("File API", "#readAsDataURL", "readAsDataURL()")}}</td>
+      <td>{{Spec2("File API")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -123,8 +141,8 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("FileReader")}}</li>
- <li>{{domxref("URL.createObjectURL()")}}</li>
+  <li>{{domxref("FileReader")}}</li>
+  <li>{{domxref("URL.createObjectURL()")}}</li>
 </ul>
 
 <div>{{APIRef("File API")}}</div>

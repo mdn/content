@@ -10,31 +10,39 @@ tags:
   - Read-only
   - handle
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}</div>
+<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+</div>
 
-<p class="summary">The <strong><code>kind</code></strong> read-only property of the {{domxref("FileSystemHandle")}} interface returns the type of entry. This is <code>'file'</code> if the associated entry is a file or <code>'directory'</code>. It is used to distinguish files from directories when iterating over the contents of a directory.</p>
+<p class="summary">The <strong><code>kind</code></strong> read-only property of the
+  {{domxref("FileSystemHandle")}} interface returns the type of entry. This is
+  <code>'file'</code> if the associated entry is a file or <code>'directory'</code>. It is
+  used to distinguish files from directories when iterating over the contents of a
+  directory.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>FileSystemHandleKind</var> = FileSystemHandle.kind;</pre>
+<pre
+  class="brush: js">var <var>FileSystemHandleKind</var> = FileSystemHandle.kind;</pre>
 
 <h3 id="Value">Value</h3>
 
 <dl>
- <dt><em>FileSystemHandleKind</em></dt>
- <dd>Can be either:
- <ul>
-  <li><code>'file'</code>: If handle is a {{domxref('FileSystemFileHandle')}}.</li>
-  <li><code>'directory'</code>: If handle is a {{domxref('FileSystemDirectoryHandle')}}.</li>
- </ul>
- </dd>
+  <dt><em>FileSystemHandleKind</em></dt>
+  <dd>Can be either:
+    <ul>
+      <li><code>'file'</code>: If handle is a {{domxref('FileSystemFileHandle')}}.</li>
+      <li><code>'directory'</code>: If handle is a
+        {{domxref('FileSystemDirectoryHandle')}}.</li>
+    </ul>
+  </dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following function allows the user to choose a file from the file picker and then tests to see whether the handle returned is a file or directory</p>
+<p>The following function allows the user to choose a file from the file picker and then
+  tests to see whether the handle returned is a file or directory</p>
 
-<pre class="brush: js notranslate">// store a reference to our file handle
+<pre class="brush: js">// store a reference to our file handle
 let fileHandle;
 
 async function getFile() {
@@ -53,18 +61,18 @@ async function getFile() {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File System Access','#dom-filesystemhandle-kind','kind')}}</td>
-   <td>{{Spec2('File System Access')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('File System Access API','#dom-filesystemhandle-kind','kind')}}</td>
+      <td>{{Spec2('File System Access API')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -74,6 +82,7 @@ async function getFile() {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/docs/Web/API/File_System_Access_API">File System Access API</a></li>
- <li><a href="https://web.dev/file-system-access/">The File System Access API: simplifying access to local files</a></li>
+  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
+  <li><a href="https://web.dev/file-system-access/">The File System Access API:
+      simplifying access to local files</a></li>
 </ul>

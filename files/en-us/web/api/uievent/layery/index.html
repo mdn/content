@@ -2,26 +2,30 @@
 title: UIEvent.layerY
 slug: Web/API/UIEvent/layerY
 tags:
-  - API
-  - DOM
-  - Property
-  - Read-only
-  - Reference
-  - UIEvent
+- API
+- DOM
+- Property
+- Read-only
+- Reference
+- UIEvent
 ---
 <p>{{APIRef("DOM Events")}}{{Non-standard_header}}</p>
 
-<p>The <code><strong>UIEvent.layerY</strong></code> read-only property returns the vertical coordinate of the event relative to the current layer.</p>
+<p>The <code><strong>UIEvent.layerY</strong></code> read-only property returns the
+  vertical coordinate of the event relative to the current layer.</p>
 
-<p>This property takes scrolling of the page into account, and returns a value relative to the whole of the document, unless the event occurs inside a positioned element, where the returned value is relative to the top left of the positioned element.</p>
+<p>This property takes scrolling of the page into account, and returns a value relative to
+  the whole of the document, unless the event occurs inside a positioned element, where
+  the returned value is relative to the top left of the positioned element.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>ypos</em> = <em>event</em>.layerY;
+<pre class="brush: js">var <em>ypos</em> = <em>event</em>.layerY;
 </pre>
 
 <ul>
- <li><code>ypos</code> is an integer value in pixels for the y-coordinate of the mouse pointer, when the mouse event fired.</li>
+  <li><code>ypos</code> is an integer value in pixels for the y-coordinate of the mouse
+    pointer, when the mouse event fired.</li>
 </ul>
 
 <h2 id="Example">Example</h2>

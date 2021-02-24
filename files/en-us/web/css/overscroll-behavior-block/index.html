@@ -6,7 +6,6 @@ tags:
   - CSS Box Model
   - CSS Logical Properties
   - CSS Property
-  - NeedsExample
   - Reference
   - overscroll-behavior-block
   - 'recipe:css-property'
@@ -17,7 +16,7 @@ tags:
 
 <p>See {{cssxref("overscroll-behavior")}} for a full explanation.</p>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush:css no-line-numbers">/* Keyword values */
 overscroll-behavior-block: auto; /* default */
 overscroll-behavior-block: contain;
 overscroll-behavior-block: none;
@@ -38,9 +37,9 @@ overscroll-behavior-block: unset;
  <dt><code>auto</code></dt>
  <dd>The default scroll overflow behavior occurs as normal.</dd>
  <dt><code>contain</code></dt>
- <dd>Default scroll overflow behavior is observed inside the element this value is set on (e.g. "bounce" effects or refreshes), but no scroll chaining occurs to neighbouring scrolling areas, e.g. underlying elements will not scroll.</dd>
+ <dd>Default scroll overflow behavior is observed inside the element this value is set on (e.g. "bounce" effects or refreshes), but no scroll chaining occurs to neighboring scrolling areas, e.g. underlying elements will not scroll.</dd>
  <dt><code>none</code></dt>
- <dd>No scroll chaining occurs to neighbouring scrolling areas, and default scroll overflow behavior is prevented.</dd>
+ <dd>No scroll chaining occurs to neighboring scrolling areas, and default scroll overflow behavior is prevented.</dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -49,19 +48,19 @@ overscroll-behavior-block: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Preventing_block_overscrolling">Preventing block overscrolling</h3>
 
-<p>In this demo we have two block-level boxes, one inside the other. The outer box has a large {{cssxref("height")}} set on it so the page will scroll vertically. The inner box has a small {{cssxref("width")}} (and <code>height</code>) set on it so it sits comforably inside the viewport, but its content is given a large <code>height</code> so it will also scroll vertically.</p>
+<p>In this demo we have two block-level boxes, one inside the other. The outer box has a large {{cssxref("height")}} set on it so the page will scroll vertically. The inner box has a small {{cssxref("width")}} (and <code>height</code>) set on it so it sits comfortably inside the viewport, but its content is given a large <code>height</code> so it will also scroll vertically.</p>
 
 <p>By default, when the inner box is scrolled and a scroll boundary is reached, the whole page will begin to scroll, which is probably not what we want. To avoid this happening in the block direction, we've set <code>overscroll-behavior-block: contain</code> on the inner box.</p>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;main&gt;
+<pre class="brush: html">&lt;main&gt;
   &lt;div&gt;
     &lt;div&gt;
       &lt;p&gt;&lt;code&gt;overscroll-behavior-block&lt;/code&gt; has been used to make it so that when the scroll boundaries of the yellow inner box are reached, the whole page does not begin to scroll.&lt;/p&gt;
@@ -71,7 +70,7 @@ overscroll-behavior-block: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">main {
+<pre class="brush: css">main {
   height: 3000px;
   width: 500px;
   background-color: white;

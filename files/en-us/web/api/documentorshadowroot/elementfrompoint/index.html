@@ -2,45 +2,60 @@
 title: DocumentOrShadowRoot.elementFromPoint()
 slug: Web/API/DocumentOrShadowRoot/elementFromPoint
 tags:
-  - API
-  - Coordinates
-  - Document
-  - DocumentOrShadowRoot
-  - Find Element
-  - Method
-  - Point
-  - Reference
-  - ShadowRoot
-  - elementFromPoint
-  - elementFromPoint()
-  - find
-  - shadow dom
+- API
+- Coordinates
+- Document
+- DocumentOrShadowRoot
+- Find Element
+- Method
+- Point
+- Reference
+- ShadowRoot
+- elementFromPoint
+- elementFromPoint()
+- find
+- shadow dom
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">The <strong><code>elementFromPoint()</code></strong> method—available on both the {{domxref("Document")}} and {{domxref("ShadowRoot")}} objects—returns the topmost {{domxref("Element")}} at the specified coordinates (relative to the viewport).</span></p>
+<p><span class="seoSummary">The <strong><code>elementFromPoint()</code></strong>
+    method—available on both the {{domxref("Document")}} and {{domxref("ShadowRoot")}}
+    objects—returns the topmost {{domxref("Element")}} at the specified coordinates
+    (relative to the viewport).</span></p>
 
-<p>If the element at the specified point belongs to another document (for example, the document of an {{HTMLElement("iframe")}}), that document's parent element is returned (the <code>&lt;iframe&gt;</code> itself). If the element at the given point is anonymous or XBL generated content, such as a textbox's scroll bars, then the first non-anonymous ancestor element (for example, the textbox) is returned.</p>
+<p>If the element at the specified point belongs to another document (for example, the
+  document of an {{HTMLElement("iframe")}}), that document's parent element is returned
+  (the <code>&lt;iframe&gt;</code> itself). If the element at the given point is anonymous
+  or XBL generated content, such as a textbox's scroll bars, then the first non-anonymous
+  ancestor element (for example, the textbox) is returned.</p>
 
-<p>Elements with {{cssxref("pointer-events")}} set to <code>none</code> will be ignored, and the element below it will be returned.</p>
+<p>Elements with {{cssxref("pointer-events")}} set to <code>none</code> will be ignored,
+  and the element below it will be returned.</p>
 
-<p>If the method is run on another document (like an <code>&lt;iframe&gt;</code>'s subdocument), the coordinates are relative to the document where the method is being called.</p>
+<p>If the method is run on another document (like an <code>&lt;iframe&gt;</code>'s
+  subdocument), the coordinates are relative to the document where the method is being
+  called.</p>
 
-<p>If the specified point is outside the visible bounds of the document or either coordinate is negative, the result is <code>null</code>.</p>
+<p>If the specified point is outside the visible bounds of the document or either
+  coordinate is negative, the result is <code>null</code>.</p>
 
-<p>If you need to find the specific position inside the element, use {{domxref("Document.caretPositionFromPoint()")}}.</p>
+<p>If you need to find the specific position inside the element, use
+  {{domxref("Document.caretPositionFromPoint()")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">const <var>element</var> = document.elementFromPoint(<var>x</var>, <var>y</var>)</pre>
+<pre
+  class="brush: js">const <var>element</var> = document.elementFromPoint(<var>x</var>, <var>y</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>x</var></code></dt>
- <dd>The horizontal coordinate of a point, relative to the left edge of the current {{Glossary("viewport")}}.</dd>
- <dt><code><var>y</var></code></dt>
- <dd>The vertical coordinate of a point, relative to the top edge of the current viewport.</dd>
+  <dt><code><var>x</var></code></dt>
+  <dd>The horizontal coordinate of a point, relative to the left edge of the current
+    {{Glossary("viewport")}}.</dd>
+  <dt><code><var>y</var></code></dt>
+  <dd>The vertical coordinate of a point, relative to the top edge of the current
+    viewport.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -49,25 +64,29 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>This example creates two buttons which let you set the current color of the paragraph element located under the coordinates <code>(2, 2)</code>.</p>
+<p>This example creates two buttons which let you set the current color of the paragraph
+  element located under the coordinates <code>(2, 2)</code>.</p>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">function changeColor(newColor) {
+<pre class="brush: js">function changeColor(newColor) {
   elem = document.elementFromPoint(2, 2);
   elem.style.color = newColor;
 }</pre>
 
-<p>The <code>changeColor()</code> method obtains the element located at the specified point, then sets that element's current foreground {{cssxref("color")}} property to the color specified by the <code>newColor</code> parameter.</p>
+<p>The <code>changeColor()</code> method obtains the element located at the specified
+  point, then sets that element's current foreground {{cssxref("color")}} property to the
+  color specified by the <code>newColor</code> parameter.</p>
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush:html notranslate" id="ExampleCode">&lt;p id="para1"&gt;Some text here&lt;/p&gt;
+<pre class="brush:html" id="ExampleCode">&lt;p id="para1"&gt;Some text here&lt;/p&gt;
 &lt;button onclick="changeColor('blue');"&gt;Blue&lt;/button&gt;
 &lt;button onclick="changeColor('red');"&gt;Red&lt;/button&gt;
 </pre>
 
-<p>The HTML provides the paragraph whose color will be affected, as well as two buttons: one to change the color to blue, and another to change the color to red.</p>
+<p>The HTML provides the paragraph whose color will be affected, as well as two buttons:
+  one to change the color to blue, and another to change the color to red.</p>
 
 <h3 id="Result">Result</h3>
 
@@ -76,22 +95,24 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Shadow DOM','#dom-documentorshadowroot-elementsfrompoint','elementsFromPoint()')}}</td>
-   <td>{{Spec2('Shadow DOM')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#dom-document-elementsfrompoint', 'elementsFromPoint()')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Shadow
+        DOM','#dom-documentorshadowroot-elementsfrompoint','elementsFromPoint()')}}</td>
+      <td>{{Spec2('Shadow DOM')}}</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('CSSOM View', '#dom-document-elementsfrompoint',
+        'elementsFromPoint()')}}</td>
+      <td>{{Spec2('CSSOM View')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -101,5 +122,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("DocumentOrShadowRoot.elementsFromPoint()")}}</li>
+  <li>{{domxref("DocumentOrShadowRoot.elementsFromPoint()")}}</li>
 </ul>

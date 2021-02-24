@@ -26,7 +26,7 @@ tags:
 
 <p>These handles represent the file or directory on the users system. You gain access to them by showing the user a file or directory picker. The methods which allow this are {{domxref('window.showOpenFilePicker')}} and {{domxref('window.showDirectoryPicker')}}. Once these are called the picker presents itself and the user selects either a file or directory. Once this happens successfully a handle is returned. You can also gain access to file handles via the {{domxref('DataTransferItem.getAsFileSystemHandle()')}} method of the {{domxref('HTML Drag and Drop API')}}.</p>
 
-<p>The handle provides it's own functionality and there are a few differences depending on whether a file or directory was selected (see the below <a href="#Interfaces">interfaces</a> section for specific details). For the main part you gain access to the file data, or information (including children) of the directory selected.</p>
+<p>The handle provides it's own functionality and there are a few differences depending on whether a file or directory was selected (see the below <a href="#interfaces">interfaces</a> section for specific details). For the main part you gain access to the file data, or information (including children) of the directory selected.</p>
 
 <p>There is also save functionality, which is where the {{domxref('FilesystemWritableFileStream')}} interface comes in. Once the data you'd like to save is in a format of {{domxref('Blob')}}, {{domxref('USVString')}} or {{jsxref('ArrayBuffer', 'buffer')}}, you can open a stream and save the data to a file. That can be the existing file or a new file.</p>
 
@@ -51,7 +51,7 @@ tags:
 
 <p>The below code allows the user to choose a file from the file picker and then tests to see whether the handle returned is a file or directory</p>
 
-<pre class="brush: js notranslate">// store a reference to our file handle
+<pre class="brush: js">// store a reference to our file handle
 let fileHandle;
 
 async function getFile() {
@@ -69,7 +69,7 @@ async function getFile() {
 
 <p>The following asynchronous function presents a file picker and once a file is chosen, uses the <code>getFile()</code> method to retrieve the contents.</p>
 
-<pre class="brush: js notranslate">const pickerOpts = {
+<pre class="brush: js">const pickerOpts = {
   types: [
     {
       description: 'Images',
@@ -94,14 +94,14 @@ async function getTheFile() {
 
 <p>The following example returns a directory handle with the specified name, if the directory does not exist it is created.</p>
 
-<pre class="brush: js notranslate">const dirName = 'directoryToGetName';
+<pre class="brush: js">const dirName = 'directoryToGetName';
 
 // assuming we have a directory handle: 'currentDirHandle'
 const subDir = currentDirHandle.getDirectoryHandle(dirName, {create: true});</pre>
 
 <p>The following asynchronous function uses <code>resolve()</code> to find the path to a chosen file, relative to a specified directory handle.</p>
 
-<pre class="brush: js notranslate">async function returnPathDirectories(directoryHandle) {
+<pre class="brush: js">async function returnPathDirectories(directoryHandle) {
 
   // Get a file handle by showing a file picker:
   const handle = await self.showOpenFilePicker();
@@ -132,7 +132,7 @@ const subDir = currentDirHandle.getDirectoryHandle(dirName, {create: true});</pr
 
 <p>A user defined {{domxref('Blob')}} is then written to the stream which is subsequently closed.</p>
 
-<pre class="brush: js notranslate">async function saveFile() {
+<pre class="brush: js">async function saveFile() {
 
   // create a new handle
   const newHandle = await window.showSaveFilePicker();
@@ -150,7 +150,7 @@ const subDir = currentDirHandle.getDirectoryHandle(dirName, {create: true});</pr
 
 <p>The following show different examples of options that can be passed into the <code>write()</code> method.</p>
 
-<pre class="brush: js notranslate">// just pass in the data (no options)
+<pre class="brush: js">// just pass in the data (no options)
 writableStream.write(data)
 
 // writes the data to the stream from the determined position

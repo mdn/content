@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("CSS Typed Object Model API")}}</div>
 
-<p>The CSS Typed Object Model API simplifies CSS property manipulation by exposing CSS values as typed JavaScript objects rather than strings. This not only simplifies CSS manipulation, but also lessens the negative impact on performance as compared to {{domxref('HTMLElement.style')}}.</p>
+<p>The CSS Typed Object Model API simplifies CSS property manipulation by exposing CSS values as typed JavaScript objects rather than strings. This not only simplifies CSS manipulation, but also lessens the negative impact on performance as compared to {{domxref('ElementCSSInlineStyle.style')}}.</p>
 
 <p>Generally, CSS values can be read and written in JavaScript as strings, which can be slow and cumbersome. CSS Typed Object Model API provides interfaces to interact with underlying values, by representing them with specialized JS objects that can be manipulated and understood more easily and more reliably than string parsing and concatenation. This is easier for authors (for example, numeric values are reflected with actual JS numbers, and have unit-aware mathematical operations defined for them). It is also generally faster, as values can be directly manipulated and then cheaply translated back into underlying values without having to both build and parse strings of CSS.</p>
 
@@ -78,6 +78,17 @@ tags:
 	<dd>An interface representing values for properties that take an image, for example <code><a href="/en-US/docs/Web/CSS/background-image">background-image</a></code>, <code><a href="/en-US/docs/Web/CSS/list-style-image">list-style-image</a></code>, or <code><a href="/en-US/docs/Web/CSS/border-image-source">border-image-source</a></code>.</dd>
 	<dt>{{domxref('CSSKeywordValue')}}</dt>
 	<dd>An interface which creates an object to represent CSS keywords and other identifiers. When used where a string is expected, it will return the value of CSSKeyword.value.</dd>
+	<dt>{{domxref('CSSMathValue')}}</dt>
+	<dd>A tree of subclasses representing numeric values that are more complicated than a single value and unit, including:
+		<ul>
+			<li>{{domxref('CSSMathInvert')}} - represents a CSS {{cssxref("calc()","calc()")}} value used as <code>calc(1 / &lt;value&gt;)</code>.</li>
+			<li>{{domxref('CSSMathMax')}} - represents the CSS {{cssxref("max()","max()")}} function.</li>
+			<li>{{domxref('CSSMathMin')}} - represents the CSS {{cssxref("min()","min()")}} function.</li>
+			<li>{{domxref('CSSMathNegate')}} - negates the value passed into it.</li>
+			<li>{{domxref('CSSMathProduct')}} - represents the result obtained by calling {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}.</li>
+			<li>{{domxref('CSSMathSum')}} - represents the result obtained by calling {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}.</li>
+		</ul>
+	</dd>
 	<dt>{{domxref('CSSNumericValue')}}</dt>
 	<dd>An interface representing operations that all numeric values can perform, including:
 	<ul>
@@ -100,6 +111,8 @@ tags:
 	<dd>
 	<p>An interface representing a list of <code><a href="/en-US/docs/Web/CSS/transform">transform</a></code> list values. They "contain" one or more {{domxref('CSSTransformComponent')}}s, which represent individual <code>transform</code> function values.</p>
 	</dd>
+	<dt>{{domxref('CSSUnitValue')}}</dt>
+	<dd>An interface representing numeric values that can be represented as a single unit, or a named number and percentage.</dd>
 	<dt>{{domxref('CSSUnparsedValue')}}</dt>
 	<dd>Represents property values that reference <a href="/en-US/docs/Web/CSS/--*">custom properties</a>. It consists of a list of string fragments and variable references.</dd>
 </dl>
@@ -126,10 +139,10 @@ tags:
 <p>See individual interfaces</p>
 
 <ul>
-	<li><a href="/en-US/docs/Web/API/CSSStyleValue#Browser_compatibility">CSSStyleValue</a></li>
-	<li><a href="/en-US/docs/Web/API/StylePropertyMap#Browser_compatibility">StylePropertyMap</a></li>
-	<li><a href="/en-US/docs/Web/API/CSSUnparsedValue#Browser_compatibility">CSSUnparsedValue</a></li>
-	<li><a href="/en-US/docs/Web/API/CSSKeywordValue#Browser_compatibility">CSSKeywordValue</a></li>
+	<li><a href="/en-US/docs/Web/API/CSSStyleValue#browser_compatibility">CSSStyleValue</a></li>
+	<li><a href="/en-US/docs/Web/API/StylePropertyMap#browser_compatibility">StylePropertyMap</a></li>
+	<li><a href="/en-US/docs/Web/API/CSSUnparsedValue#browser_compatibility">CSSUnparsedValue</a></li>
+	<li><a href="/en-US/docs/Web/API/CSSKeywordValue#browser_compatibility">CSSKeywordValue</a></li>
 </ul>
 
 <h2 id="See_also">See also</h2>
@@ -139,23 +152,3 @@ tags:
 	<li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API/Guide">Using the CSS Typed Object Model</a></li>
 	<li><a href="/en-US/docs/Web/Houdini">CSS Houdini</a></li>
 </ul>
-
-<div class="hidden">
-<ul>
-	<li>
-	<p>{{domxref('CSSUnitValue')}} Serialization</p>
-	</li>
-	<li>
-	<p>{{domxref('CSSMathValue')}} Serialization</p>
-	</li>
-	<li>
-	<p>{{domxref('CSSTransformComponent')}}</p>
-	</li>
-	<li>
-	<p>{{domxref('CSSURLImageValue')}}</p>
-	</li>
-	<li>
-	<p>Serialization from CSSOM Values</p>
-	</li>
-</ul>
-</div>

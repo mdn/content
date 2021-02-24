@@ -14,80 +14,89 @@ tags:
 <p>{{ APIRef("IndexedDB") }}</p>
 
 <div>
-<p>The <strong><code>openCursor()</code></strong> method of the {{domxref("IDBIndex")}} interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a <a href="/en/IndexedDB#gloss_cursor">cursor</a> over the specified key range.</p>
+  <p>The <strong><code>openCursor()</code></strong> method of the {{domxref("IDBIndex")}}
+    interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread,
+    creates a <a href="/en-US/docs/Web/API/IndexedDB_API#gloss_cursor">cursor</a> over the specified key
+    range.</p>
 </div>
 
-<p>The method sets the position of the cursor to the appropriate record, based on the specified direction.</p>
+<p>The method sets the position of the cursor to the appropriate record, based on the
+  specified direction.</p>
 
-<ul>
- <li>If the key range is not specified or is null, then the range includes all the records.</li>
- <li>A <a href="/en/IndexedDB/IDBSuccessEvent">success event</a> is always fired on the result object.
-  <ul>
-   <li>If at least one record matches the key range, then the <code>result</code> property of the event is set to the new {{domxref("IDBCursorWithValue")}} object; the <code><a href="/en/IndexedDB/IDBCursor#attr_value">value</a></code> of the cursor object is set to a structured clone of the referenced value.</li>
-   <li>If no records match the key range then the <code>result</code> property of the event is set to <code>null</code>.</li>
-  </ul>
- </li>
-</ul>
+<p>If the key range is not specified or is null, then the range includes all the records.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox" style="font-size: 14px;">var <em>request</em> = <em>myIndex</em>.openCursor();
+<pre class="brush: js">var <em>request</em> = <em>myIndex</em>.openCursor();
 var <em>request</em> = <em>myIndex</em>.openCursor(range);
 var <em>request</em> = <em>myIndex</em>.openCursor(range, direction);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>range {{optional_inline}}</dt>
- <dd>A key or {{domxref("IDBKeyRange")}} to use as the cursor's range. If nothing is passed, this will default to a key range that selects all the records in this object store.</dd>
- <dt>direction {{optional_inline}}</dt>
- <dd>The cursor's <a href="/en/IndexedDB/IDBCursor#Constants">direction</a>. See <a href="/en/IndexedDB/IDBCursor#Constants">IDBCursor Constants</a> for possible values.</dd>
+  <dt>range {{optional_inline}}</dt>
+  <dd>A key or {{domxref("IDBKeyRange")}} to use as the cursor's range. If nothing is
+    passed, this will default to a key range that selects all the records in this object
+    store.</dd>
+  <dt>direction {{optional_inline}}</dt>
+  <dd>The cursor's <a href="/en-US/docs/Web/API/IDBCursor#constants">direction</a>. See <a
+      href="/en-US/docs/Web/API/IDBCursor#constants">IDBCursor Constants</a> for possible
+    values.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.</p>
+<p>An {{domxref("IDBRequest")}} object on which subsequent events related to this
+  operation are fired.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
 <p>This method may raise a {{domxref("DOMException")}} of one of the following types:</p>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>TransactionInactiveError</code></td>
-   <td>This {{domxref("IDBIndex")}}'s transaction is inactive.</td>
-  </tr>
-  <tr>
-   <td><code>TypeError</code></td>
-   <td>The value for the direction parameter is invalid.</td>
-  </tr>
-  <tr>
-   <td><code>DataError</code></td>
-   <td>
-    <p>The key or key range provided contains an invalid key.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>InvalidStateError</code></td>
-   <td>The {{domxref("IDBIndex")}} has been deleted or removed.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Exception</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>TransactionInactiveError</code></td>
+      <td>This {{domxref("IDBIndex")}}'s transaction is inactive.</td>
+    </tr>
+    <tr>
+      <td><code>TypeError</code></td>
+      <td>The value for the direction parameter is invalid.</td>
+    </tr>
+    <tr>
+      <td><code>DataError</code></td>
+      <td>
+        <p>The key or key range provided contains an invalid key.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>InvalidStateError</code></td>
+      <td>The {{domxref("IDBIndex")}} has been deleted or removed.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Example">Example</h2>
 
-<p>In the following example we open a transaction and an object store, then get the index <code>lName</code> from a simple contacts database. We then open a basic cursor on the index using <code>openCursor()</code> — this works the same as opening a cursor directly on an <code>ObjectStore</code> using {{domxref("IDBObjectStore.openCursor")}} except that the returned records are sorted based on the index, not the primary key.</p>
+<p>In the following example we open a transaction and an object store, then get the
+  index <code>lName</code> from a simple contacts database. We then open a basic cursor on
+  the index using <code>openCursor()</code> — this works the same as opening a cursor
+  directly on an <code>ObjectStore</code> using {{domxref("IDBObjectStore.openCursor")}}
+  except that the returned records are sorted based on the index, not the primary key.</p>
 
-<p>Finally, we iterate through each record, and insert the data into an HTML table. For a complete working example, see our <a href="https://github.com/mdn/indexeddb-examples/tree/master/idbindex">IndexedDB-examples demo repo</a> (<a href="https://mdn.github.io/indexeddb-examples/idbindex">View the example live</a>.)</p>
+<p>Finally, we iterate through each record, and insert the data into an HTML table. For a
+  complete working example, see our <a
+    href="https://github.com/mdn/indexeddb-examples/tree/master/idbindex">IndexedDB-examples
+    demo repo</a> (<a href="https://mdn.github.io/indexeddb-examples/idbindex">View the
+    example live</a>.)</p>
 
 <pre class="brush: js">function displayDataByIndex() {
   tableEntry.innerHTML = '';
@@ -117,43 +126,43 @@ var <em>request</em> = <em>myIndex</em>.openCursor(range, direction);</pre>
   };
 };</pre>
 
-<h2 id="Specification"><span style="font-size: 2.14285714285714rem;">Specification</span></h2>
+<h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#dom-idbindex-opencursor', 'openCursor()')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("IndexedDB 2", "#dom-idbindex-opencursor", "openCursor()")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('IndexedDB', '#dom-idbindex-opencursor', 'openCursor()')}}</td>
+      <td>{{Spec2('IndexedDB')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName("IndexedDB 2", "#dom-idbindex-opencursor", "openCursor()")}}</td>
+      <td>{{Spec2("IndexedDB 2")}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.IDBIndex.openCursor")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
+  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
+  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
+  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
+  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
+  <li>Using cursors: {{domxref("IDBCursor")}}</li>
+  <li>Reference example: <a class="external"
+      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
+      Notifications</a> (<a class="external"
+      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>

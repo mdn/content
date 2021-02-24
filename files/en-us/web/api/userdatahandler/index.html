@@ -7,13 +7,15 @@ tags:
   - NeedsMarkupWork
   - Obsolete
 ---
-<p>{{APIRef("DOM")}}</p>
+<p>{{APIRef("DOM")}}{{deprecated_header}}</p>
 
-<p>{{obsolete_header(26)}}</p>
+<div class="note notebox">
+  <p><strong>Note:</strong>This method was removed from Firefox 26 and onward.</p>
+</div>
 
 <h2 id="Summary">Summary</h2>
 
-<p>When associating user data with a key on a node, <code><a class="internal" href="/en-us/DOM/Node.setUserData">Node.setUserData</a>()</code> can also accept, in its third argument, a handler which will be called when the object is cloned, imported, deleted, renamed, or adopted. Per the specification, exceptions should not be thrown in a <code>UserDataHandler</code>. In both <code><a class="internal" href="/en/DOM/document.importNode">document.importNode</a>()</code> and <code><a class="internal" href="/en-us/DOM/Node.cloneNode">Node.cloneNode</a>()</code>, although user data is not copied over, the handler will be called.</p>
+<p>When associating user data with a key on a node, <code><a class="internal" href="/en-US/docs/DOM/Node.setUserData">Node.setUserData</a>()</code> can also accept, in its third argument, a handler which will be called when the object is cloned, imported, deleted, renamed, or adopted. Per the specification, exceptions should not be thrown in a <code>UserDataHandler</code>. In both <code><a class="internal" href="/en-US/docs/DOM/document.importNode">document.importNode</a>()</code> and <code><a class="internal" href="/en-US/docs/DOM/Node.cloneNode">Node.cloneNode</a>()</code>, although user data is not copied over, the handler will be called.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -45,36 +47,36 @@ tags:
   <tr>
    <td><code>NODE_CLONED</code></td>
    <td>1</td>
-   <td><code><a href="/En/DOM/Node.cloneNode">Node.cloneNode</a>()</code></td>
+   <td><code><a href="/en-US/docs/DOM/Node.cloneNode">Node.cloneNode</a>()</code></td>
   </tr>
   <tr>
    <td><code>NODE_IMPORTED</code></td>
    <td>2</td>
-   <td><code><a href="/en/DOM/document.importNode">Document.importNode</a>()</code></td>
+   <td><code><a href="/en-US/docs/DOM/document.importNode">Document.importNode</a>()</code></td>
   </tr>
   <tr>
    <td><code>NODE_DELETED</code> {{ unimplemented_inline("550400") }}</td>
    <td>3</td>
-   <td> </td>
+   <td></td>
   </tr>
   <tr>
    <td><code>NODE_RENAMED</code> {{ unimplemented_inline() }}</td>
    <td>4</td>
-   <td><code><a href="/En/DOM/Node.renameNode">Node.renameNode</a>()</code></td>
+   <td><code><a href="/en-US/docs/DOM/Node.renameNode">Node.renameNode</a>()</code></td>
   </tr>
   <tr>
    <td><code>NODE_ADOPTED</code></td>
    <td>5</td>
-   <td><code><a href="/en/DOM/document.adoptNode">Document.adoptNode</a>()</code></td>
+   <td><code><a href="/en-US/docs/DOM/document.adoptNode">Document.adoptNode</a>()</code></td>
   </tr>
  </tbody>
 </table>
 
-<p>(<code>NODE_RENAMED</code> is currently not supported since <code><a href="/En/DOM/Node.renameNode">Node.renameNode</a>()</code> is not supported.)</p>
+<p>(<code>NODE_RENAMED</code> is currently not supported since <code><a href="/en-US/docs/DOM/Node.renameNode">Node.renameNode</a>()</code> is not supported.)</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<p><a class="external" href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#UserDataHandler">DOM Level 3 Core: UserDataHandler</a></p>
+<p><a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#UserDataHandler">DOM Level 3 Core: UserDataHandler</a></p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
@@ -83,6 +85,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/En/DOM/DOMUserData"><code>DOMUserData</code></a></li>
- <li><a href="/En/DOM/Node.getUserData"><code>Node.getUserData</code></a>, <a href="/En/DOM/Node.setUserData"><code>Node.setUserData</code></a></li>
+ <li><a href="/en-US/docs/DOM/DOMUserData"><code>DOMUserData</code></a></li>
+ <li><a href="/en-US/docs/DOM/Node.getUserData"><code>Node.getUserData</code></a>, <a href="/en-US/docs/DOM/Node.setUserData"><code>Node.setUserData</code></a></li>
 </ul>

@@ -2,29 +2,34 @@
 title: PerformanceResourceTiming.domainLookupStart
 slug: Web/API/PerformanceResourceTiming/domainLookupStart
 tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
+- API
+- Property
+- Reference
+- Web Performance
 ---
 <div>{{APIRef("Resource Timing API")}}</div>
 
-<p>The <strong><code>domainLookupStart</code></strong> read-only property returns the {{domxref("DOMHighResTimeStamp","timestamp")}} immediately before the browser starts the domain name lookup for the resource.</p>
+<p>The <strong><code>domainLookupStart</code></strong> read-only property returns the
+  {{domxref("DOMHighResTimeStamp","timestamp")}} immediately before the browser starts the
+  domain name lookup for the resource.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>resource</em>.domainLookupStart;
+<pre class="brush: js"><em>resource</em>.domainLookupStart;
 </pre>
 
 <h3 id="Return_Value">Return value</h3>
 
-<p>A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts the domain name lookup for the resource.</p>
+<p>A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts the domain
+  name lookup for the resource.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>In the following example, the value of the <code>*Start</code> and <code>*End</code> properties of all "<code>resource</code>" {{domxref("PerformanceEntry.entryType","type")}} events are logged.</p>
+<p>In the following example, the value of the <code>*Start</code> and <code>*End</code>
+  properties of all "<code>resource</code>"
+  {{domxref("PerformanceEntry.entryType","type")}} events are logged.</p>
 
 <pre class="brush: js">function print_PerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
@@ -59,18 +64,19 @@ function print_start_and_end_properties(perfEntry) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Resource Timing', '#dom-performanceresourcetiming-domainlookupstart', 'domainLookupStart')}}</td>
-			<td>{{Spec2('Resource Timing')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Resource Timing',
+        '#dom-performanceresourcetiming-domainlookupstart', 'domainLookupStart')}}</td>
+      <td>{{Spec2('Resource Timing')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

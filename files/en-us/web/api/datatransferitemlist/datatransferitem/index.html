@@ -2,34 +2,40 @@
 title: DataTransferItemList.DataTransferItem()
 slug: Web/API/DataTransferItemList/DataTransferItem
 tags:
-  - API
-  - DataTransferItemList
-  - Getter
-  - HTML DOM
-  - HTML Drag and Drop API
-  - Method
-  - Reference
-  - drag and drop
+- API
+- DataTransferItemList
+- Getter
+- HTML DOM
+- HTML Drag and Drop API
+- Method
+- Reference
+- drag and drop
 ---
 <div>{{APIRef("HTML Drag and Drop API")}}</div>
 
-<p>The <strong><code>DataTransferItem()</code></strong> getter method implements support for accessing items in the {{domxref("DataTransferItemList")}} using array-style syntax (that is <code><em>DataTransferItem</em>[<em>index</em>]</code>).</p>
+<p>The <strong><code>DataTransferItem()</code></strong> getter method implements support
+  for accessing items in the {{domxref("DataTransferItemList")}} using array-style syntax
+  (that is <code><em>DataTransferItem</em>[<em>index</em>]</code>).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>dataItem</em> = <em>DataTransferItem</em>[<em>index</em>];
+<pre class="brush: js"><em>dataItem</em> = <em>DataTransferItem</em>[<em>index</em>];
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>index</code></dt>
- <dd>The zero-based index of the item in the drag data list to return.</dd>
+  <dt><code>index</code></dt>
+  <dd>The zero-based index of the item in the drag data list to return.</dd>
 </dl>
 
 <h3 id="Return_Value">Return value</h3>
 
-<p>The {{domxref("DataTransferItem")}} object at the specified index in the item list. If the index is less than zero or greater than or equal to the number of items in the list (as indicated by the list's {{domxref("DataTransferItemList.length","length")}} property, <code>undefined</code> is returned. The returned value is never <code>null</code>.</p>
+<p>The {{domxref("DataTransferItem")}} object at the specified index in the item list. If
+  the index is less than zero or greater than or equal to the number of items in the list
+  (as indicated by the list's {{domxref("DataTransferItemList.length","length")}}
+  property, <code>undefined</code> is returned. The returned value is never
+  <code>null</code>.</p>
 
 <h2 id="Example_Drag_and_Drop">Example</h2>
 
@@ -124,18 +130,19 @@ function dragend_handler(ev) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#the-datatransferitemlist-interface','DataTransferItem getter')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG',
+        '#the-datatransferitemlist-interface','DataTransferItem getter')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

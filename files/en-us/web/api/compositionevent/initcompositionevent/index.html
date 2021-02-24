@@ -2,36 +2,43 @@
 title: CompositionEvent.initCompositionEvent()
 slug: Web/API/CompositionEvent/initCompositionEvent
 tags:
-  - API
-  - CompositionEvent
-  - Deprecated
-  - Method
-  - Reference
-  - initCompositionEvent
+- API
+- CompositionEvent
+- Deprecated
+- Method
+- Reference
+- initCompositionEvent
 ---
 <p>{{deprecated_header}}{{APIRef("DOM Events")}}</p>
 
-<p>The <code><strong>initCompositionEvent</strong></code><strong><code>()</code></strong> method of the {{domxref("CompositionEvent")}} interface initializes the attributes of a <code>CompositionEvent</code> object instance.</p>
+<p>The <code><strong>initCompositionEvent</strong></code><strong><code>()</code></strong>
+  method of the {{domxref("CompositionEvent")}} interface initializes the attributes of a
+  <code>CompositionEvent</code> object instance.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"> compositionEventInstance.initCompositionEvent(<em>typeArg, canBubbleArg, cancelableArg, viewArg, dataArg, localeArg</em>)</pre>
+<pre
+  class="brush: js"> compositionEventInstance.initCompositionEvent(<em>typeArg, canBubbleArg, cancelableArg, viewArg, dataArg, localeArg</em>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>typeArg</code></dt>
- <dd>A {{domxref("DOMString")}} representing the type of composition event; this will be one of <code>compositionstart</code>, <code>compositionupdate</code>, or <code>compositionend</code>.</dd>
- <dt><code>canBubbleArg</code></dt>
- <dd>A {{domxref("Boolean")}} specifying whether or not the event can bubble.</dd>
- <dt><code>cancelableArg</code></dt>
- <dd>A {{domxref("Boolean")}} shether or not the event can be canceled.</dd>
- <dt><code>viewArg</code></dt>
- <dd>The {{domxref("Window")}} object from which the event was generated.</dd>
- <dt><code>dataArg</code></dt>
- <dd>A {{domxref("DOMString")}} representing the value of the <code>data</code> attribute.</dd>
- <dt><code>localeArg</code></dt>
- <dd>A {{domxref("DOMString")}} representing the value of the <code>locale</code> attribute.</dd>
+  <dt><code>typeArg</code></dt>
+  <dd>A {{domxref("DOMString")}} representing the type of composition event; this will be
+    one of <code>compositionstart</code>, <code>compositionupdate</code>, or
+    <code>compositionend</code>.</dd>
+  <dt><code>canBubbleArg</code></dt>
+  <dd>A {{domxref("Boolean")}} specifying whether or not the event can bubble.</dd>
+  <dt><code>cancelableArg</code></dt>
+  <dd>A {{domxref("Boolean")}} whether or not the event can be canceled.</dd>
+  <dt><code>viewArg</code></dt>
+  <dd>The {{domxref("Window")}} object from which the event was generated.</dd>
+  <dt><code>dataArg</code></dt>
+  <dd>A {{domxref("DOMString")}} representing the value of the <code>data</code>
+    attribute.</dd>
+  <dt><code>localeArg</code></dt>
+  <dd>A {{domxref("DOMString")}} representing the value of the <code>locale</code>
+    attribute.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -41,20 +48,22 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM3 Events','#idl-interface-CompositionEvent-initializers','initCompositionEvent()')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM3
+        Events','#idl-interface-CompositionEvent-initializers','initCompositionEvent()')}}
+      </td>
+      <td>{{Spec2('DOM3 Events')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -64,5 +73,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("CompositionEvent")}}</li>
+  <li>{{domxref("CompositionEvent")}}</li>
 </ul>

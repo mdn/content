@@ -2,59 +2,81 @@
 title: GlobalEventHandlers.ontransitionend
 slug: Web/API/GlobalEventHandlers/ontransitionend
 tags:
-  - API
-  - CSS Transitions
-  - CSS3 Transitions
-  - Document
-  - Element
-  - Event Handler
-  - GlobalEventHandlers
-  - Property
-  - Reference
-  - Window
-  - ontransitionend
+- API
+- CSS Transitions
+- CSS3 Transitions
+- Document
+- Element
+- Event Handler
+- GlobalEventHandlers
+- Property
+- Reference
+- Window
+- ontransitionend
 ---
 <div>{{APIRef("CSS3 Transitions")}}</div>
 
-<p>The <strong><code>ontransitionend</code></strong> property of the {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} that processes {{event("transitionend")}} events.</p>
+<p>The <strong><code>ontransitionend</code></strong> property of the
+  {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} that
+  processes {{event("transitionend")}} events.</p>
 
-<p>The <code>transitionend</code> event is sent to when a <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS transition</a> completes.</p>
+<p>The <code>transitionend</code> event is sent to when a <a
+    href="/en-US/docs/Web/CSS/CSS_Transitions">CSS transition</a> completes.</p>
 
 <div class="note">
-<p>If the transition is removed from its target node before the transition completes execution, the {{event("transitionend")}} event won't be generated. One way this can happen is by changing the value of the {{cssxref("transition-property")}} attribute which applies to the target. Another is if the {{cssxref("display")}} attribute is set to <code>none</code>.</p>
+  <p>If the transition is removed from its target node before the transition completes
+    execution, the {{event("transitionend")}} event won't be generated. One way this can
+    happen is by changing the value of the {{cssxref("transition-property")}} attribute
+    which applies to the target. Another is if the {{cssxref("display")}} attribute is set
+    to <code>none</code>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>transitionEndHandler</var> = <var>target</var>.ontransitionend;
+<pre class="brush: js">var <var>transitionEndHandler</var> = <var>target</var>.ontransitionend;
 
 <var>target</var>.ontransitionend = <var>{{jsxref("Function")}}</var>
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{jsxref("Function")}} to be called when a {{event("transitionend")}} event occurs indicating that a CSS transition has completed on the <code><var>target</var></code>, where the target object is an HTML element ({{domxref("HTMLElement")}}), document ({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as input a single parameter: a {{domxref("TransitionEvent")}} object describing the event which occurred; the event's {{domxref("TransitionEvent.elapsedTime")}} property's value should be the same as the value of {{cssxref("transition-duration")}}.</p>
+<p>A {{jsxref("Function")}} to be called when a {{event("transitionend")}} event occurs
+  indicating that a CSS transition has completed on the <code><var>target</var></code>,
+  where the target object is an HTML element ({{domxref("HTMLElement")}}), document
+  ({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as
+  input a single parameter: a {{domxref("TransitionEvent")}} object describing the event
+  which occurred; the event's {{domxref("TransitionEvent.elapsedTime")}} property's value
+  should be the same as the value of {{cssxref("transition-duration")}}.</p>
 
 <div class="note">
-<p><code>elapsedTime</code> does not include time prior to the transition effect beginning; that means that the value of {{cssxref("transition-delay")}} doesn't affect the value of <code>elapsedTime</code>, which is zero until the delay period ends and the animation begins.</p>
+  <p><code>elapsedTime</code> does not include time prior to the transition effect
+    beginning; that means that the value of {{cssxref("transition-delay")}} doesn't affect
+    the value of <code>elapsedTime</code>, which is zero until the delay period ends and
+    the animation begins.</p>
 </div>
 
 <h2 id="Example">Example</h2>
 
-<p>In this example, we use the {{event("transitionrun")}} and {{event("transitionend")}} events to detect when the transition begins and ends, to cause a text update to occur during the transition. This could also be used to trigger animations or other effects, to allow chaining of reactions.</p>
+<p>In this example, we use the {{event("transitionrun")}} and {{event("transitionend")}}
+  events to detect when the transition begins and ends, to cause a text update to occur
+  during the transition. This could also be used to trigger animations or other effects,
+  to allow chaining of reactions.</p>
 
 <h3 id="HTML">HTML</h3>
 
-<p>This creates a {{HTMLElement("div")}} which we'll style with CSS below to make into a box that resizes and changes color and such.</p>
+<p>This creates a {{HTMLElement("div")}} which we'll style with CSS below to make into a
+  box that resizes and changes color and such.</p>
 
-<pre class="brush: html; notranslate">&lt;div class="box"&gt;&lt;/div&gt;
+<pre class="brush: html;">&lt;div class="box"&gt;&lt;/div&gt;
 </pre>
 
 <h3 id="CSS">CSS</h3>
 
-<p>The CSS below styles the box and applies a transition effect which makes the box's color and size change, and causes the box to rotate, while the mouse cursor hovers over it.</p>
+<p>The CSS below styles the box and applies a transition effect which makes the box's
+  color and size change, and causes the box to rotate, while the mouse cursor hovers over
+  it.</p>
 
-<pre class="brush: css; highlight:[13,14] notranslate">.box {
+<pre class="brush: css highlight:[13,14]">.box {
   margin-left: 70px;
   margin-top: 30px;
   border-style: solid;
@@ -80,9 +102,10 @@ tags:
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<p>Next, we need to establish our event handlers to change the text content of the box when the transition begins and ends.</p>
+<p>Next, we need to establish our event handlers to change the text content of the box
+  when the transition begins and ends.</p>
 
-<pre class="brush: js notranslate">let box = document.querySelector(".box");
+<pre class="brush: js">let box = document.querySelector(".box");
 box.ontransitionrun = function(event) {
   box.textContent = "Zooming...";
 }
@@ -97,25 +120,27 @@ box.ontransitionend = function(event) {
 
 <p>{{EmbedLiveSample('Example', 600, 280)}}</p>
 
-<p>Notice what happens when you hover your mouse cursor over the box, then move it away.</p>
+<p>Notice what happens when you hover your mouse cursor over the box, then move it away.
+</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions','#dom-globaleventhandlers-ontransitionend','ontransitionend')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('CSS3
+        Transitions','#dom-globaleventhandlers-ontransitionend','ontransitionend')}}</td>
+      <td>{{Spec2('CSS3 Transitions')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -125,7 +150,7 @@ box.ontransitionend = function(event) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{event("transitionend")}} event this event handler is triggered by</li>
- <li>{{domxref("TransitionEvent")}}</li>
- <li>The {{event("transitionrun")}} event, which occurs when the transition begins</li>
+  <li>The {{event("transitionend")}} event this event handler is triggered by</li>
+  <li>{{domxref("TransitionEvent")}}</li>
+  <li>The {{event("transitionrun")}} event, which occurs when the transition begins</li>
 </ul>

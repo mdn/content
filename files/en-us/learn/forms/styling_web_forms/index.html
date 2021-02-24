@@ -13,7 +13,7 @@ tags:
 ---
 <p>{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}</p>
 
-<p class="summary">In the previous few articles we looked at all the HTML you'll need to create and structure your web forms. In this article we will move on to looking at how to use <a href="/en-US/docs/CSS">CSS</a> to style your form controls. This has historically been difficult — form controls vary greatly in how easy they are to customize with CSS — but it is getting easier as old browsers are retired and modern browsers give us more features to use.</p>
+<p class="summary">In the previous few articles we looked at all the HTML you'll need to create and structure your web forms. In this article we will move on to looking at how to use <a href="/en-US/docs/Web/CSS">CSS</a> to style your form controls. This has historically been difficult — form controls vary greatly in how easy they are to customize with CSS — but it is getting easier as old browsers are retired and modern browsers give us more features to use.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -63,7 +63,7 @@ tags:
  <li><code><a href="/en-US/docs/Web/HTML/Element/input/search">&lt;input type="search"&gt;</a></code></li>
 </ul>
 
-<p>We describe how to handle these more specific features in the article <a href="/en-US/docs/Learn/Forms/Advanced_form_styling">Advanced form styling</a><a href="/en-US/docs/Advanced_styling_for_HTML_forms">.</a></p>
+<p>We describe how to handle these more specific features in the article <a href="/en-US/docs/Learn/Forms/Advanced_form_styling">Advanced form styling</a><a href="/en-US/docs/Learn/Forms/Advanced_form_styling">.</a></p>
 
 <h4 id="The_ugly">The ugly</h4>
 
@@ -78,11 +78,11 @@ tags:
  <li>{{HTMLElement("progress")}} and {{HTMLElement("meter")}}</li>
 </ul>
 
-<p>Again, we'll describe what can be done in terms of styling these elements in <a href="/en-US/docs/Learn/Forms/Advanced_form_styling">Advanced form styling</a><a href="/en-US/docs/Advanced_styling_for_HTML_forms">.</a></p>
+<p>Again, we'll describe what can be done in terms of styling these elements in <a href="/en-US/docs/Learn/Forms/Advanced_form_styling">Advanced form styling</a><a href="/en-US/docs/Learn/Forms/Advanced_form_styling">.</a></p>
 
 <p>The real problem with all these controls is that they have a very complex structure, and beyond some basic styling (such as changing the width or margin of the control) you generally don't have the ability to style the controls' internal components (such as the date picker calendar, or the button on the &lt;select&gt; that causes the options list to display) making up those widgets.</p>
 
-<p>If you want to thoroughly customize those widgets, you really have to create your own using HTML, CSS, and JavaScript. This is beyond the scope of the core form articles, but we do look at this in an advanced article <a href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets">How to build custom form controls</a>.</p>
+<p>If you want to thoroughly customize those widgets, you really have to create your own using HTML, CSS, and JavaScript. This is beyond the scope of the core form articles, but we do look at this in an advanced article <a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form controls</a>.</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: there are some proprietary CSS pseudo-elements available that allow you to style internal components of these form controls, such as {{cssxref('::-moz-range-track')}}, but these are not consistent across browsers, so can't be relied upon. We will mention these later as well.</p>
@@ -90,7 +90,7 @@ tags:
 
 <h2 id="The_good_2">The good</h2>
 
-<p>To style form controls that are easy to style with CSS, you shouldn't face much if any difficulties, since they mostly behave like any other HTML element. We already looked at some simple form styling in <a href="/en-US/docs/Learn/Forms/Your_first_form">Your first form</a>, and the <a href="/en-US/docs/Learn/CSS/Building_blocks">CSS building blocks</a> module contains some <a href="/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements#Form_elements">useful form styling essentials</a> too.</p>
+<p>To style form controls that are easy to style with CSS, you shouldn't face much if any difficulties, since they mostly behave like any other HTML element. We already looked at some simple form styling in <a href="/en-US/docs/Learn/Forms/Your_first_form">Your first form</a>, and the <a href="/en-US/docs/Learn/CSS/Building_blocks">CSS building blocks</a> module contains some <a href="/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements#form_elements">useful form styling essentials</a> too.</p>
 
 <p>As well as the basic CSS tools covered above, we've also been provided with several selectors — UI pseudo-classes — that enable styling based on the current state of the UI. We cover these in detail in the next article, <a href="/en-US/docs/Learn/Forms/UI_pseudo-classes">UI pseudo-classes</a>.</p>
 
@@ -100,7 +100,7 @@ tags:
 
 <p>CSS font and text features can be used easily with any widget (and yes, you can use {{cssxref("@font-face")}} with form widgets). However, browser behavior is often inconsistent. By default, some widgets do not inherit {{cssxref("font-family")}} and {{cssxref("font-size")}} from their parents. Many browsers use the system default appearance instead. To make your forms' appearance consistent with the rest of your content, you can add the following rules to your stylesheet:</p>
 
-<pre class="brush: css notranslate">button, input, select, textarea {
+<pre class="brush: css">button, input, select, textarea {
   font-family: inherit;
   font-size: 100%;
 }</pre>
@@ -109,7 +109,7 @@ tags:
 
 <p>The screenshots below show the difference. On the left is the default rendering of an <code>&lt;input type="text"&gt;</code>, <code>&lt;input type="date"&gt;</code>, {{htmlelement('select')}}, {{htmlelement('textarea')}}, <code>&lt;input type="submit"&gt;</code>, and a <code>&lt;button&gt;</code> in Chrome on macOS, with the platform's default font style in use. On the right are the same elements, with our above style rule applied.</p>
 
-<p><img alt="Form controls with default and inherited font families. By default, some types are serif and others are sans serif. Inheriting should change the fonts of all to the parent's font family - in this case a paragraph. Oddly, input of type submit does not inherit from the parent paragraph." src="https://mdn.mozillademos.org/files/16903/forms_fontfamily.png" style="height: 260px; width: 483px;"></p>
+<p><img alt="Form controls with default and inherited font families. By default, some types are serif and others are sans serif. Inheriting should change the fonts of all to the parent's font family - in this case a paragraph. Oddly, input of type submit does not inherit from the parent paragraph." src="forms_fontfamily.png"></p>
 
 <p>The defaults differed in a number of ways. Inheriting should change their fonts to that of the parent's font family — in this case the default serif font of the parent container. They all do, with a strange exception — <code>&lt;input type="submit"&gt;</code> does not inherit from the parent paragraph in Chrome. Rather, it uses the {{cssxref('font-family#Values', 'font-family: system-ui')}}. This is another reason to use <code>&lt;button&gt;</code> elements over their equivalent input types!</p>
 
@@ -121,7 +121,7 @@ tags:
 
 <p><strong>This is because each widget has their own rules for border, padding and margin.</strong> To give the same size to several different widgets, you can use the {{cssxref("box-sizing")}} property along with some consistent values for other properties:</p>
 
-<pre class="brush: css notranslate">input, textarea, select, button {
+<pre class="brush: css">input, textarea, select, button {
   width : 150px;
   padding: 0;
   margin: 0;
@@ -130,7 +130,7 @@ tags:
 
 <p>In the screenshot below, the left column shows the default rendering of an &lt;input type="radio"&gt;, &lt;input type="checkbox"&gt;, &lt;input type="range"&gt;, &lt;input type="text"&gt;, &lt;input type="date"&gt; input, {{htmlelement('select')}}, {{htmlelement('textarea')}},&lt;input type="submit"&gt;, and {{htmlelement('button')}}. The right column on the other hand shows the same elements with our above rule applied to them. Notice how this lets us ensure that all of the elements occupy the same amount of space, despite the platform's default rules for each kind of widget.</p>
 
-<p><img alt="box model properties effect most input types." src="https://mdn.mozillademos.org/files/16904/boxmodel_formcontrols1.png" style="height: 365px; width: 359px;"></p>
+<p><img alt="box model properties effect most input types." src="boxmodel_formcontrols1.png"></p>
 
 <p>What may not be apparent via the screenshot is that the radio and checkbox controls still look the same, but they are centered in the 150px of horizontal space provided by the {{cssxref('width')}} property. Other browsers may not center the widgets, but they do adhere to the space allotted.</p>
 
@@ -144,7 +144,7 @@ tags:
 
 <p>To position the legend in this manner, we used the following CSS (other declarations removed for brevity):</p>
 
-<pre class="brush: css notranslate">fieldset {
+<pre class="brush: css">fieldset {
   position: relative;
 }
 
@@ -170,9 +170,9 @@ legend {
 
 <h3 id="The_HTML">The HTML</h3>
 
-<p>The HTML is only slightly more involved than the example we used in <a href="/en-US/docs/HTML/Forms/My_first_HTML_form">the first article of this guide</a>; it just has a few extra IDs and a heading.</p>
+<p>The HTML is only slightly more involved than the example we used in <a href="/en-US/docs/Learn/Forms/Your_first_form">the first article of this guide</a>; it just has a few extra IDs and a heading.</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;h1&gt;to: Mozilla&lt;/h1&gt;
 
   &lt;div id="from"&gt;
@@ -224,7 +224,7 @@ legend {
 
 <p>First, we prepare by defining our {{cssxref("@font-face")}} rules, and all the basic styles set on the {{HTMLElement("body")}} and {{HTMLElement("form")}} elements. If the fontsquirrel output was different to what we described above, you can find the correct <code>@font-face</code> blocks inside your downloaded webfont kit, in the <code>stylesheet.css</code> file (you'll need to replace the below <code>@font-face</code> blocks with them, and update the paths to the font files):</p>
 
-<pre class="brush: css notranslate">@font-face {
+<pre class="brush: css">@font-face {
     font-family: 'handwriting';
     src: url('fonts/journal-webfont.woff2') format('woff2'),
          url('fonts/journal-webfont.woff') format('woff');
@@ -265,7 +265,7 @@ form {
 
 <p>Notice that we've used some <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid</a> and <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexbox</a> to lay out the form. Using this we can easily position our elements, including the title and all the form elements:</p>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
   font : 1em "typewriter", monospace;
   align-self : end;
 }
@@ -283,13 +283,13 @@ form {
 
 <p>Now we can start working on the form elements themselves. First, let's ensure that the {{HTMLElement("label")}}s are given the right font:</p>
 
-<pre class="brush: css notranslate">label {
+<pre class="brush: css">label {
   font : .8em "typewriter", sans-serif;
 }</pre>
 
 <p>The text fields require some common rules. In other words, we remove their {{cssxref("border","borders")}} and {{cssxref("background","backgrounds")}}, and redefine their {{cssxref("padding")}} and {{cssxref("margin")}}:</p>
 
-<pre class="brush: css notranslate">input, textarea {
+<pre class="brush: css">input, textarea {
   font    : 1.4em/1.5em "handwriting", cursive, sans-serif;
   border  : none;
   padding : 0 10px;
@@ -300,7 +300,7 @@ form {
 
 <p>When one of these fields gains focus, we highlight them with a light grey, transparent, background (it is always important to have focus style, for usability and keyboard accessibility):</p>
 
-<pre class="brush: css notranslate">input:focus, textarea:focus {
+<pre class="brush: css">input:focus, textarea:focus {
   background   : rgba(0,0,0,.1);
   border-radius: 5px;
 }
@@ -312,7 +312,7 @@ form {
 
 <p>{{HTMLElement("textarea")}} elements default to being rendered as an inline-block element. The two important things here are the {{cssxref("resize")}} and {{cssxref("overflow")}} properties. While our design is a fixed-size design, and we could use the <code>resize</code> property to prevent users from resizing our multi-line text field, it is best to not prevent users from resizing a textarea if they so choose. The {{cssxref("overflow")}} property is used to make the field render more consistently across browsers. Some browsers default to the value <code>auto</code>, while some default to the value <code>scroll</code>. In our case, it's better to be sure every one will use <code>auto</code>:</p>
 
-<pre class="brush: css notranslate">textarea {
+<pre class="brush: css">textarea {
   display : block;
 
   padding : 10px;
@@ -328,9 +328,9 @@ form {
 
 <h4 id="Styling_the_submit_button">Styling the submit button</h4>
 
-<p>The {{HTMLElement("button")}} element is really convenient to style with CSS; you can do whatever you want, even using <a href="/en-US/docs/CSS/Pseudo-elements">pseudo-elements</a>:</p>
+<p>The {{HTMLElement("button")}} element is really convenient to style with CSS; you can do whatever you want, even using <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>:</p>
 
-<pre class="brush: css notranslate">button {
+<pre class="brush: css">button {
   padding      : 5px;
   font         : bold .6em sans-serif;
   border       : 2px solid #333;
@@ -355,7 +355,7 @@ button:focus {
 
 <p>And voila! Your form should now look like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/17063/updated-form-screenshot.jpg" style="border-style: solid; border-width: 1px; height: 497px; width: 740px;"></p>
+<p><img alt="" src="updated-form-screenshot.jpg" style="border-style: solid; border-width: 1px;"></p>
 
 <div class="note">
 <p><strong>Note</strong>: If your example does not work quite like you expected and you want to check it against our version, you can find it on GitHub — see it <a href="https://mdn.github.io/learning-area/html/forms/postcard-example/">running live</a> (also see <a href="https://github.com/mdn/learning-area/tree/master/html/forms/postcard-example">the source code</a>).</p>
@@ -391,5 +391,5 @@ button:focus {
 <ul>
  <li><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form controls</a></li>
  <li><a href="/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript">Sending forms through JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_widgets">Property compatibility table for form widgets</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Property compatibility table for form widgets</a></li>
 </ul>

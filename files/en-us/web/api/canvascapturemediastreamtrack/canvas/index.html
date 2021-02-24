@@ -2,28 +2,31 @@
 title: CanvasCaptureMediaStreamTrack.canvas
 slug: Web/API/CanvasCaptureMediaStreamTrack/canvas
 tags:
-  - Canvas
-  - CanvasCaptureMediaStreamTrack
-  - Experimental
-  - Frame Capture
-  - Media Capture
-  - Property
-  - Read-only
-  - Reference
-  - Web
+- Canvas
+- CanvasCaptureMediaStreamTrack
+- Experimental
+- Frame Capture
+- Media Capture
+- Property
+- Read-only
+- Reference
+- Web
 ---
 <div>{{APIRef}}</div>
 
-<p>The {{domxref("CanvasCaptureMediaStreamTrack")}} <strong><code>canvas</code></strong> read-only property returns the {{domxref("HTMLCanvasElement")}} from which frames are being captured.</p>
+<p>The {{domxref("CanvasCaptureMediaStreamTrack")}} <strong><code>canvas</code></strong>
+  read-only property returns the {{domxref("HTMLCanvasElement")}} from which frames are
+  being captured.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>elt</var> = <var>stream</var>.canvas;
+<pre class="brush: js">var <var>elt</var> = <var>stream</var>.canvas;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>An <code>HTMLCanvasElement</code> indicating the canvas which is the source of the frames being captured.</p>
+<p>An <code>HTMLCanvasElement</code> indicating the canvas which is the source of the
+  frames being captured.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -43,32 +46,32 @@ var canvas = stream.canvas;
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Media Capture DOM Elements', '#dom-canvascapturemediastreamtrack-canvas', 'CanvasCaptureMediaStreamTrack.canvas')}}</td>
-   <td>{{Spec2('Media Capture DOM Elements')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Media Capture DOM Elements',
+        '#dom-canvascapturemediastreamtrack-canvas',
+        'CanvasCaptureMediaStreamTrack.canvas')}}</td>
+      <td>{{Spec2('Media Capture DOM Elements')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.CanvasCaptureMediaStreamTrack.canvas")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("HTMLCanvasElement.captureStream()")}} to create a stream to capture a given canvas element.</li>
- <li>{{HTMLElement("canvas")}}</li>
+  <li>{{domxref("HTMLCanvasElement.captureStream()")}} to create a stream to capture a
+    given canvas element.</li>
+  <li>{{HTMLElement("canvas")}}</li>
 </ul>

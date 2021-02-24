@@ -2,26 +2,33 @@
 title: ServiceWorker.onstatechange
 slug: Web/API/ServiceWorker/onstatechange
 tags:
-  - API
-  - Property
-  - Reference
-  - Référence(2)
-  - Service Workers
-  - ServiceWorker
-  - onstatechange
+- API
+- Property
+- Reference
+- Référence(2)
+- Service Workers
+- ServiceWorker
+- onstatechange
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
-<p>An {{domxref("EventListener")}} property called whenever an event of type <code>statechange</code> is fired; it is basically fired anytime the {{domxref("ServiceWorker.state")}} changes.</p>
+<p>An {{domxref("EventListener")}} property called whenever an event of type
+  <code>statechange</code> is fired; it is basically fired anytime the
+  {{domxref("ServiceWorker.state")}} changes.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">ServiceWorker.onstatechange = function(statechangeevent) { ... }
+<pre class="brush: js">ServiceWorker.onstatechange = function(statechangeevent) { ... }
 ServiceWorker.addEventListener('statechange', function(statechangeevent) { ... } )</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<p>This code snippet is from the <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html">service worker registration-events sample</a> (<a href="https://googlechrome.github.io/samples/service-worker/registration-events/">live demo</a>). The code listens for any change in the {{domxref("ServiceWorker.state")}} and returns its value.</p>
+<p>This code snippet is from the <a
+    href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html">service
+    worker registration-events sample</a> (<a
+    href="https://googlechrome.github.io/samples/service-worker/registration-events/">live
+    demo</a>). The code listens for any change in the {{domxref("ServiceWorker.state")}}
+  and returns its value.</p>
 
 <pre class="brush: js">var serviceWorker;
 if (registration.installing) {
@@ -42,7 +49,8 @@ if (serviceWorker) {
   });
 }</pre>
 
-<p>Note that when <code>statechange</code> fires, the service worker's references may have changed. For example:</p>
+<p>Note that when <code>statechange</code> fires, the service worker's references may have
+  changed. For example:</p>
 
 <pre class="brush: js">navigator.serviceWorker.register(..).then(function(swr) {
   swr.installing.state == "installing"
@@ -57,23 +65,21 @@ if (serviceWorker) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#dom-serviceworker-onstatechange', 'ServiceWorker.onstatechange')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Service Workers', '#dom-serviceworker-onstatechange',
+        'ServiceWorker.onstatechange')}}</td>
+      <td>{{Spec2('Service Workers')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.ServiceWorker.onstatechange")}}</p>
-</div>

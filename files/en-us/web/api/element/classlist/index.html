@@ -2,29 +2,37 @@
 title: Element.classList
 slug: Web/API/Element/classList
 tags:
-  - API
-  - DOM
-  - Element
-  - Property
-  - Read-only
-  - Reference
+- API
+- DOM
+- Element
+- Property
+- Read-only
+- Reference
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <code><strong>Element.classList</strong></code> is a read-only property that returns a live {{domxref("DOMTokenList")}} collection of the <code>class</code> attributes of the element. This can then be used to manipulate the class list.</p>
+<p>The <code><strong>Element.classList</strong></code> is a read-only property that
+    returns a live {{domxref("DOMTokenList")}} collection of the <code>class</code>
+    attributes of the element. This can then be used to manipulate the class list.</p>
 
-<p>Using <code>classList</code> is a convenient alternative to accessing an element's list of classes as a space-delimited string via {{domxref("element.className")}}.</p>
+<p>Using <code>classList</code> is a convenient alternative to accessing an element's list
+    of classes as a space-delimited string via {{domxref("element.className")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">const <var>elementClasses</var> = <var>elementNodeReference</var>.classList;
+<pre class="brush: js">const <var>elementClasses</var> = <var>elementNodeReference</var>.classList;
 </pre>
 
 <h3 id="Returns">Returns</h3>
 
-<p>A {{domxref("DOMTokenList")}} representing the contents of the element's <code>class</code> attribute. If the <code>class</code> attribute is not set or empty, it returns an empty <code>DOMTokenList</code>, i.e. a <code>DOMTokenList</code> with the <code>length</code> property equal to <code>0</code>.</p>
+<p>A {{domxref("DOMTokenList")}} representing the contents of the element's
+    <code>class</code> attribute. If the <code>class</code> attribute is not set or empty,
+    it returns an empty <code>DOMTokenList</code>, i.e. a <code>DOMTokenList</code> with
+    the <code>length</code> property equal to <code>0</code>.</p>
 
-<p>The <code>DOMTokenList</code> itself is read-only, although you can modify it using the {{domxref("DOMTokenList/add", "add()")}} and {{domxref("DOMTokenList/remove", "remove()")}} methods.</p>
+<p>The <code>DOMTokenList</code> itself is read-only, although you can modify it using the
+    {{domxref("DOMTokenList/add", "add()")}} and {{domxref("DOMTokenList/remove",
+    "remove()")}} methods.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -62,14 +70,25 @@ div.classList.remove(...cls);
 div.classList.replace("foo", "bar");</pre>
 
 <div class="note">
-<p>Versions of Firefox before 26 do not implement the use of several arguments in the add/remove/toggle methods. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=814014">https://bugzilla.mozilla.org/show_bug.cgi?id=814014</a></p>
+    <p>Versions of Firefox before 26 do not implement the use of several arguments in the
+        add/remove/toggle methods. See <a
+            href="https://bugzilla.mozilla.org/show_bug.cgi?id=814014">https://bugzilla.mozilla.org/show_bug.cgi?id=814014</a>
+    </p>
 </div>
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>The legacy <code><a href="https://msdn.microsoft.com/en-us/windows/ms536956(v=vs.71)">onpropertychange</a></code> event can be used to create a living <code>classList</code> mockup thanks to a <code>Element.prototype.className</code> property that fires the specified event once it is changed.</p>
+<p>The legacy
+    <code><a href="https://msdn.microsoft.com/en-us/windows/ms536956(v=vs.71)">onpropertychange</a></code>
+    event can be used to create a living <code>classList</code> mockup thanks to a
+    <code>Element.prototype.className</code> property that fires the specified event once
+    it is changed.</p>
 
-<p>The following polyfill for both <code>classList</code> and <code>DOMTokenList</code> ensures <strong>full</strong> compliance (coverage) for all standard methods and properties of <code>Element.prototype.classList</code> for <strong>IE10</strong>-<strong>IE11</strong> browsers plus <em>nearly</em> compliant behavior for <strong>IE 6-9</strong>. Check it out:</p>
+<p>The following polyfill for both <code>classList</code> and <code>DOMTokenList</code>
+    ensures <strong>full</strong> compliance (coverage) for all standard methods and
+    properties of <code>Element.prototype.classList</code> for
+    <strong>IE10</strong>-<strong>IE11</strong> browsers plus <em>nearly</em> compliant
+    behavior for <strong>IE 6-9</strong>. Check it out:</p>
 
 <pre class="brush: js">// 1. String.prototype.trim polyfill
 if (!"".trim) String.prototype.trim = function(){ return this.replace(/^[\s]+|[\s]+$/g, ''); };
@@ -119,7 +138,7 @@ if (typeof DOMTokenList !== "function") (function(window){
                 for(var innerI=0; innerI!==cI; ++innerI) if(tokens[innerI]===tokens[cI]) {sub++; continue a;}
                 resTokenList[cI-sub] = tokens[cI];
             }
-            for (var i=cLen-sub; i &lt; oldLen; ++i) delete resTokenList[i]; //remove trailing indexs
+            for (var i=cLen-sub; i &lt; oldLen; ++i) delete resTokenList[i]; //remove trailing indexes
             if(prop !== "classList") return;
             skipPropChange = 1, target.classList = resTokenList, target.className = strval;
             skipPropChange = 0, resTokenList.length = tokens.length - sub;
@@ -146,7 +165,7 @@ if (typeof DOMTokenList !== "function") (function(window){
                     for(var innerI=0; innerI!==cI; ++innerI) if(toks[innerI]===toks[cI]) {sub++; continue a;}
                     resTokenList[cI-sub] = toks[cI];
                 }
-                for (var i=cLen-sub; i &lt; oldLen; ++i) delete resTokenList[i]; //remove trailing indexs
+                for (var i=cLen-sub; i &lt; oldLen; ++i) delete resTokenList[i]; //remove trailing indexes
             }
         }); defineProperty(ele, " uCLp", { // for accessing the hidden prototype
             enumerable: 0, configurable: 0, writeable: 0, value: protoObj.prototype
@@ -221,34 +240,52 @@ if (typeof DOMTokenList !== "function") (function(window){
 
 <h3 id="Caveats">Caveats</h3>
 
-<p>The polyfill is limited in functionality. It's currently unable to polyfill out-of-document-elements (e.g. elements created by <code>document.createElement</code> before they are appended to a parent node) in IE6-7.</p>
+<p>The polyfill is limited in functionality. It's currently unable to polyfill
+    out-of-document-elements (e.g. elements created by <code>document.createElement</code>
+    before they are appended to a parent node) in IE6-7.</p>
 
-<p>However, it should work just fine in IE9. A major discrepancy between the polyfilled version of <code>classList</code> and the W3 specs is that for IE6-8, there is no way to create an immutable object (an object whose properties cannot be directly modified). In IE9, however, it is possible through extending the prototype, freezing the visible object, and overwritting native property methods. However, such actions would not work in IE6-IE8 and, in IE9, slow the performance of the entire webpage to a snail's crawl, making these modifications completely impractical for this polyfill.</p>
+<p>However, it should work just fine in IE9. A major discrepancy between the polyfilled
+    version of <code>classList</code> and the W3 specs is that for IE6-8, there is no way
+    to create an immutable object (an object whose properties cannot be directly
+    modified). In IE9, however, it is possible through extending the prototype, freezing
+    the visible object, and overwriting native property methods. However, such actions
+    would not work in IE6-IE8 and, in IE9, slow the performance of the entire webpage to a
+    snail's crawl, making these modifications completely impractical for this polyfill.
+</p>
 
-<p>A minor note is that in IE6-7, this polyfill uses the <code>window[" uCL"]</code> property on the window object for communicating with the CSS expressions, the <code>x-uCLp</code> css property on all elements, and the <code>element[" uCL"]</code> property on all elements to allow garbage collection and boost performance. In all polyfilled browsers (IE6-9), an additional <code>element[" uCLp"]</code> property is added to element to ensure standards compliant prototyping, and a <code>DOMTokenList[" uCL"]</code> property is added to each <code>element["classList"]</code> object to ensure that the DOMTokenList is bounded to its own element.</p>
+<p>A minor note is that in IE6-7, this polyfill uses the <code>window[" uCL"]</code>
+    property on the window object for communicating with the CSS expressions, the
+    <code>x-uCLp</code> css property on all elements, and the <code>element[" uCL"]</code>
+    property on all elements to allow garbage collection and boost performance. In all
+    polyfilled browsers (IE6-9), an additional <code>element[" uCLp"]</code> property is
+    added to element to ensure standards compliant prototyping, and a
+    <code>DOMTokenList[" uCL"]</code> property is added to each
+    <code>element["classList"]</code> object to ensure that the DOMTokenList is bounded to
+    its own element.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-element-classlist", "Element.classList")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>Initial definition</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-element-classlist", "Element.classList")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td></td>
-  </tr>
- </tbody>
+    <thead>
+        <tr>
+            <th scope="col">Specification</th>
+            <th scope="col">Status</th>
+            <th scope="col">Comment</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{SpecName("DOM WHATWG", "#dom-element-classlist", "Element.classList")}}
+            </td>
+            <td>{{Spec2("DOM WHATWG")}}</td>
+            <td>Initial definition</td>
+        </tr>
+        <tr>
+            <td>{{SpecName("DOM4", "#dom-element-classlist", "Element.classList")}}</td>
+            <td>{{Spec2("DOM4")}}</td>
+            <td></td>
+        </tr>
+    </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -258,6 +295,6 @@ if (typeof DOMTokenList !== "function") (function(window){
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("element.className")}}</li>
- <li>{{domxref("DOMTokenList")}}</li>
+    <li>{{domxref("element.className")}}</li>
+    <li>{{domxref("DOMTokenList")}}</li>
 </ul>

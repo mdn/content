@@ -2,29 +2,32 @@
 title: Path2D.addPath()
 slug: Web/API/Path2D/addPath
 tags:
-  - API
-  - Canvas
-  - Method
-  - Path2D
-  - Path2D.addPath
-  - Reference
+- API
+- Canvas
+- Method
+- Path2D
+- Path2D.addPath
+- Reference
 ---
 <div>{{APIRef("Canvas API")}}</div>
 
-<p>The <code><strong>Path2D</strong></code><strong><code>.addPath()</code></strong> method of the Canvas 2D API adds one {{domxref("Path2D")}} object to another <code>Path2D</code> object.</p>
+<p>The <code><strong>Path2D</strong></code><strong><code>.addPath()</code></strong> method
+  of the Canvas 2D API adds one {{domxref("Path2D")}} object to another
+  <code>Path2D</code> object.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">void <em>path</em>.addPath(<em>path</em> [, <em>transform</em>]);
+<pre class="brush: js">void <em>path</em>.addPath(<em>path</em> [, <em>transform</em>]);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>path</code></dt>
- <dd>A {{domxref("Path2D")}} path to add.</dd>
- <dt><code>transform</code> {{optional_inline}}</dt>
- <dd>A {{domxref("DOMMatrix")}} to be used as the transformation matrix for the path that is added. (Technically a <code>DOMMatrixInit</code> object).</dd>
+  <dt><code>path</code></dt>
+  <dd>A {{domxref("Path2D")}} path to add.</dd>
+  <dt><code>transform</code> {{optional_inline}}</dt>
+  <dd>A {{domxref("DOMMatrix")}} to be used as the transformation matrix for the path that
+    is added. (Technically a <code>DOMMatrixInit</code> object).</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -39,7 +42,13 @@ tags:
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<p>First, we create two separate {{domxref("Path2D")}} objects, each of which contains a rectangle made using the {{domxref("CanvasRenderingContext2D.rect()", "rect()")}} method. We then create a matrix using {{Domxref("document.createElementNS()")}} and <code>createSVGMatrix()</code>. We then add the second path to the first using <code>addPath()</code>, also applying the matrix to move the second path to the right. Finally, we draw the first path (which now contains both rectangles) using {{domxref("CanvasRenderingContext2D.fill()", "fill()")}}.</p>
+<p>First, we create two separate {{domxref("Path2D")}} objects, each of which contains a
+  rectangle made using the {{domxref("CanvasRenderingContext2D.rect()", "rect()")}}
+  method. We then create a matrix using {{Domxref("document.createElementNS()")}} and
+  <code>createSVGMatrix()</code>. We then add the second path to the first using
+  <code>addPath()</code>, also applying the matrix to move the second path to the right.
+  Finally, we draw the first path (which now contains both rectangles) using
+  {{domxref("CanvasRenderingContext2D.fill()", "fill()")}}.</p>
 
 <pre class="brush: js; highlight:[19]">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
@@ -72,18 +81,19 @@ ctx.fill(p1);
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-path2d-addpath", "Path2D.addPath()")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', "scripting.html#dom-path2d-addpath",
+        "Path2D.addPath()")}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -93,5 +103,5 @@ ctx.fill(p1);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The interface defining this method: {{domxref("Path2D")}}</li>
+  <li>The interface defining this method: {{domxref("Path2D")}}</li>
 </ul>

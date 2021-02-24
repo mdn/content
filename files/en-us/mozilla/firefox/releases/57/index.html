@@ -38,7 +38,7 @@ tags:
 
 <ul>
  <li>The <code>minimal-ui</code> and <code>standalone</code> values of the <code><a href="/en-US/docs/Web/CSS/@media/display-mode">display-mode</a></code> media query are now supported ({{bug(1369815)}}). See also the <a href="/en-US/docs/Web/Manifest#display">Web app manifest <code>display</code> field</a>.</li>
- <li>The {{CSSxRef("grid-row-gap")}} and {{CSSxRef("grid-column-gap")}} properties are no longer reset by the {{CSSxRef("grid")}} shorthand ({{bug(1387410)}}).</li>
+ <li>The <code>grid-row-gap</code> and <code>grid-column-gap</code> properties are no longer reset by the {{CSSxRef("grid")}} shorthand ({{bug(1387410)}}).</li>
  <li>The <code>layout.css.clip-path-shapes.enabled</code> preference has been removed ({{bug(1399767)}}).  This preference allowed disabling the {{CSSxRef("&lt;basic-shape&gt;")}} support in {{CSSxRef("clip-path")}}.  This support was shipped in Firefox 54 and can no longer be disabled.</li>
 </ul>
 
@@ -57,7 +57,7 @@ tags:
  <li>Gecko reuses the same mechanism used when parsing a url-token when parsing the <code>domain()</code> or <code>url-prefix()</code> URL matching functions for a {{CSSxRef("@document", "@-moz-document")}} rule. Quantum CSS does not use the same mechanism and it does not consider tokens invalid when they contain brackets or quotes ({{bug(1362333)}}).</li>
  <li>In Gecko, when you set a system font as the value of a canvas 2D context's {{DOMxRef("CanvasRenderingContext2D.font", "font")}} (e.g. <code>menu</code>), getting the font value fails to return the expected font (it returns nothing). This has been fixed in Quantum. ({{bug(1374885)}}).</li>
  <li>In Gecko, when you create a detached subtree (e.g. a {{htmlelement("div")}} created using {{DOMxRef("Document.createElement","createElement()")}} that is not yet inserted into the DOM), the subtree's root element is set as a block-level element. In Quantum CSS this is set as inline, as per spec ({{bug(1374994)}}).</li>
- <li>In Gecko, {{CSSxRef("calc")}} expressions are rejected — causing the value to be invalid — when used as the radius component of a {{CSSxRef("radial-gradient")}} function ({{bug(1376019)}}).</li>
+ <li>In Gecko, {{CSSxRef("calc()")}} expressions are rejected — causing the value to be invalid — when used as the radius component of a {{CSSxRef("radial-gradient()")}} function ({{bug(1376019)}}).</li>
  <li>In Gecko, <code>calc(1*2*3)</code> is not parsed successfully; Quantum CSS fixes this ({{bug(1379467)}}).</li>
  <li>In Quantum CSS, <a href="https://drafts.csswg.org/css-values-3/#calc-notation"><code>calc()</code> is supported everywhere that the spec explains it should be</a> ({{bug(1350857)}}). In Gecko it is not.</li>
  <li>Gecko has a bug whereby the {{CSSxRef("::before")}} and {{CSSxRef("::after")}} pseudo-elements are still generated even if the {{CSSxRef("content")}} property value is set to <code>normal</code> or <code>none</code>. As per spec, they shouldn't be ({{bug(1387931)}}).</li>
@@ -91,10 +91,10 @@ tags:
 <h4 id="DOM">DOM</h4>
 
 <ul>
- <li>The {{DOMxRef("Selection.type")}} property of the <a href="/en-US/docs/Web/API/Selection_API">Selection API</a> is now implemented ({{bug(1359157)}}).</li>
+ <li>The {{DOMxRef("Selection.type")}} property of the <a href="/en-US/docs/Web/API/Selection">Selection API</a> is now implemented ({{bug(1359157)}}).</li>
  <li>{{DOMxRef("Document.createEvent", "Document.createEvent('FocusEvent')")}} is now supported ({{bug(1388069)}}).</li>
  <li>The <code>files</code> property of the {{DOMxRef("HTMLInputElement")}} interface is now settable ({{bug(1384030)}}).</li>
- <li>The <code>HTMLDocument.getSelection()</code> method has been moved to the {{DOMxRef("Document.getSelection","Document")}} interface so it is available to XML documents ({{bug(718711)}}).</li>
+ <li>The <code>HTMLDocument.getSelection()</code> method has been moved to the {{DOMxRef("DocumentOrShadowRoot/getSelection","Document")}} interface so it is available to XML documents ({{bug(718711)}}).</li>
  <li>The {{Event("messageerror")}} event is now implemented, and can have code run in response to it firing via event handlers implemented on message targets — see {{DOMxRef("MessagePort.onmessageerror")}}, {{DOMxRef("DedicatedWorkerGlobalScope.onmessageerror")}}, {{DOMxRef("Worker.onmessageerror")}}, {{DOMxRef("BroadcastChannel.onmessageerror")}}, and {{DOMxRef("Window.onmessageerror")}} ({{bug(1359017)}}).</li>
  <li>When {{DOMxRef("Headers")}} values are iterated over, they are automatically sorted in lexicographical order, and values from duplicate header names are combined ({{bug(1396848)}}).</li>
 </ul>
@@ -153,7 +153,7 @@ tags:
 <h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
 
 <div class="note">
-<p>Starting in Firefox 57, all support for XPCOM-based add-ons has been removed. All extensions must be converted into the new <a href="/en-US/Add-ons/WebExtensions">browser extensions</a> (also known as WebExtensions) or they will not work.</p>
+<p>Starting in Firefox 57, all support for XPCOM-based add-ons has been removed. All extensions must be converted into the new <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">browser extensions</a> (also known as WebExtensions) or they will not work.</p>
 </div>
 
 <h3 id="WebExtensions">WebExtensions</h3>
@@ -203,9 +203,9 @@ tags:
    <li><code>colorCode</code> and <code>iconUrl</code> in <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/ContextualIdentity">contextualIdentities.ContextualIdentity</a></code></li>
   </ul>
  </li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels">devtools.panels</a></code>
+ <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels">devtools.panels</a></code>
   <ul>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/createSidebarPane">devtools.panels.ElementsPanel.createSidebarPane()</a></code></li>
+   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane">devtools.panels.ElementsPanel.createSidebarPane()</a></code></li>
   </ul>
  </li>
  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads">downloads</a></code>
@@ -214,7 +214,7 @@ tags:
    <li><code>estimatedEndTime</code> property in <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem">downloads.DownloadItem</a></code></li>
   </ul>
  </li>
- <li><code><a href="/en-US/Add-ons/WebExtensions/API/find">find</a></code>
+ <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/find">find</a></code>
   <ul>
    <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/find/find">find()</a></code></li>
    <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/find/highlightResults">highlightResults()</a></code></li>
@@ -222,9 +222,9 @@ tags:
   </ul>
  </li>
  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/openPopup">pageAction.openPopup()</a></code></li>
- <li><code><a href="/en-US/Add-ons/WebExtensions/API/privacy/websites">privacy</a></code>
+ <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites">privacy</a></code>
   <ul>
-   <li><code><a href="/en-US/Add-ons/WebExtensions/API/privacy/websites">websites.trackingProtectionMode</a></code></li>
+   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites">websites.trackingProtectionMode</a></code></li>
   </ul>
  </li>
  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy">proxy</a></code>
@@ -275,7 +275,7 @@ tags:
  </li>
  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme">theme</a></code>
   <ul>
-   <li><code>windowId</code> option to <code><a href="/en-US/Add-ons/WebExtensions/API/theme/update">theme.update()</a></code></li>
+   <li><code>windowId</code> option to <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/update">theme.update()</a></code></li>
   </ul>
  </li>
  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest">webRequest</a></code>

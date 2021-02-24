@@ -2,39 +2,49 @@
 title: Number.prototype.toPrecision()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 tags:
-  - JavaScript
-  - Method
-  - Number
-  - Prototype
+- JavaScript
+- Method
+- Number
+- Prototype
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>toPrecision()</code></strong> method returns a string representing the {{jsxref("Number")}} object to the specified precision.</p>
+<p>The <strong><code>toPrecision()</code></strong> method returns a string representing
+  the {{jsxref("Number")}} object to the specified precision.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/number-toprecision.html")}}</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>numObj</var>.toPrecision([<var>precision</var>])</pre>
+<pre
+  class="brush: js"><var>numObj</var>.toPrecision([<var>precision</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>precision</code> {{optional_inline}}</dt>
- <dd>An integer specifying the number of significant digits.</dd>
+  <dt><code>precision</code> {{optional_inline}}</dt>
+  <dd>An integer specifying the number of significant digits.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A string representing a {{jsxref("Number")}} object in fixed-point or exponential notation rounded to <code>precision</code> significant digits. See the discussion of rounding in the description of the {{jsxref("Number.prototype.toFixed()")}} method, which also applies to <code>toPrecision()</code>.</p>
+<p>A string representing a {{jsxref("Number")}} object in fixed-point or exponential
+  notation rounded to <code>precision</code> significant digits. See the discussion of
+  rounding in the description of the {{jsxref("Number.prototype.toFixed()")}} method,
+  which also applies to <code>toPrecision()</code>.</p>
 
-<p>If the <code>precision</code> argument is omitted, behaves as {{jsxref("Number.prototype.toString()")}}. If the <code>precision</code> argument is a non-integer value, it is rounded to the nearest integer.</p>
+<p>If the <code>precision</code> argument is omitted, behaves as
+  {{jsxref("Number.prototype.toString()")}}. If the <code>precision</code> argument is a
+  non-integer value, it is rounded to the nearest integer.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
 <dl>
- <dt>{{jsxref("Global_Objects/RangeError", "RangeError")}}</dt>
- <dd>If <code>precision</code> is not between <code>1</code> and <code>100</code> (inclusive), a {{jsxref("RangeError")}} is thrown. Implementations are allowed to support larger and smaller values as well. ECMA-262 only requires a precision of up to 21 significant digits.</dd>
+  <dt>{{jsxref("Global_Objects/RangeError", "RangeError")}}</dt>
+  <dd>If <code>precision</code> is not between <code>1</code> and <code>100</code>
+    (inclusive), a {{jsxref("RangeError")}} is thrown. Implementations are allowed to
+    support larger and smaller values as well. ECMA-262 only requires a precision of up to
+    21 significant digits.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -62,26 +72,30 @@ console.log((1234.5).toPrecision(2)) // logs '1.2e+3'
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.prototype.toprecision', 'Number.prototype.toPrecision')}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-number.prototype.toprecision',
+        'Number.prototype.toPrecision')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+<p class="hidden">The compatibility table in this page is generated from structured data.
+  If you'd like to contribute to the data, please check out <a
+    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+  and send us a pull request.</p>
 
 <p>{{Compat("javascript.builtins.Number.toPrecision")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Number.prototype.toFixed()")}}</li>
- <li>{{jsxref("Number.prototype.toExponential()")}}</li>
- <li>{{jsxref("Number.prototype.toString()")}}</li>
+  <li>{{jsxref("Number.prototype.toFixed()")}}</li>
+  <li>{{jsxref("Number.prototype.toExponential()")}}</li>
+  <li>{{jsxref("Number.prototype.toString()")}}</li>
 </ul>

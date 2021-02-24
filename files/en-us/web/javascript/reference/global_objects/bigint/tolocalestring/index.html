@@ -2,28 +2,36 @@
 title: BigInt.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
 tags:
-  - BigInt
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Method
-  - Prototype
+- BigInt
+- Internationalization
+- Intl
+- JavaScript
+- Method
+- Prototype
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>toLocaleString()</code></strong> method returns a string with a language-sensitive representation of this BigInt.</p>
+<p>The <strong><code>toLocaleString()</code></strong> method returns a string with a
+  language-sensitive representation of this BigInt.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/bigint-tolocalestring.html")}}</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code><em>bigIntObj</em>.toLocaleString(</code><code>[locales [, options]])</code></pre>
+<pre
+  class="brush: js"><code><em>bigIntObj</em>.toLocaleString(</code><code>[locales [, options]])</code></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
-<p>The <code>locales</code> and <code>options</code> arguments customize the behavior of the function and let applications specify the language whose formatting conventions should be used. In implementations that ignore the <code>locales</code> and <code>options</code> arguments, the locale used and the form of the string returned are entirely implementation-dependent.</p>
+<p>The <code>locales</code> and <code>options</code> arguments customize the behavior of
+  the function and let applications specify the language whose formatting conventions
+  should be used. In implementations that ignore the <code>locales</code> and
+  <code>options</code> arguments, the locale used and the form of the string returned are
+  entirely implementation-dependent.</p>
 
-<div>See the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/NumberFormat"><code>Intl.NumberFormat()</code> constructor</a> for details on these parameters and how to use them.</div>
+<div>See the <a
+    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/NumberFormat"><code>Intl.NumberFormat()</code>
+    constructor</a> for details on these parameters and how to use them.</div>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -31,13 +39,16 @@ tags:
 
 <h2 id="Performance">Performance</h2>
 
-<p>When formatting large numbers of numbers, it is better to create a {{jsxref("NumberFormat")}} object and use the function provided by its {{jsxref("NumberFormat.format")}} property.</p>
+<p>When formatting large numbers of numbers, it is better to create a
+  {{jsxref("NumberFormat")}} object and use the function provided by its
+  {{jsxref("NumberFormat.format")}} property.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_toLocaleString">Using <code>toLocaleString</code></h3>
 
-<p>In basic use without specifying a locale, a formatted string in the default locale and with default options is returned.</p>
+<p>In basic use without specifying a locale, a formatted string in the default locale and
+  with default options is returned.</p>
 
 <pre class="brush: js">var bigint = 3500n;
 
@@ -47,7 +58,10 @@ bigint.toLocaleString();
 
 <h3 id="Using_locales">Using <code>locales</code></h3>
 
-<p>This example shows some of the variations in localized number formats. In order to get the format of the language used in the user interface of your application, make sure to specify that language (and possibly some fallback languages) using the <code>locales</code> argument:</p>
+<p>This example shows some of the variations in localized number formats. In order to get
+  the format of the language used in the user interface of your application, make sure to
+  specify that language (and possibly some fallback languages) using the
+  <code>locales</code> argument:</p>
 
 <pre class="brush: js">var bigint = 123456789123456789n;
 
@@ -75,7 +89,8 @@ console.log(bigint.toLocaleString(['ban', 'id']));
 
 <h3 id="Using_options">Using <code>options</code></h3>
 
-<p>The results provided by <code>toLocaleString</code> can be customized using the <code>options</code> argument:</p>
+<p>The results provided by <code>toLocaleString</code> can be customized using the
+  <code>options</code> argument:</p>
 
 <pre class="brush: js">var bigint = 123456789123456789n;
 
@@ -95,27 +110,32 @@ console.log(bigint.toLocaleString('en-IN', { maximumSignificantDigits: 3 }));
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-bigint.prototype.tolocalestring', 'BigInt.prototype.toLocaleString()')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sup-bigint.prototype.tolocalestring', 'BigInt.prototype.toLocaleString()')}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-bigint.prototype.tolocalestring',
+        'BigInt.prototype.toLocaleString()')}}</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('ES Int Draft', '#sup-bigint.prototype.tolocalestring',
+        'BigInt.prototype.toLocaleString()')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+<p class="hidden">The compatibility table in this page is generated from structured data.
+  If you'd like to contribute to the data, please check out <a
+    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+  and send us a pull request.</p>
 
 <p>{{Compat("javascript.builtins.BigInt.toLocaleString")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("BigInt.toString()")}}</li>
+  <li>{{jsxref("BigInt.toString()")}}</li>
 </ul>

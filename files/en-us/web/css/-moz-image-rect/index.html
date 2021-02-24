@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">-moz-image-rect({{CSSxRef("&lt;uri&gt;")}}, <em>top</em>, <em>right</em>, <em>bottom</em>, <em>left</em>);</pre>
+<pre class="brush: css">-moz-image-rect({{CSSxRef("&lt;uri&gt;")}}, <em>top</em>, <em>right</em>, <em>bottom</em>, <em>left</em>);</pre>
 
 <h3 id="Values">Values</h3>
 
@@ -51,7 +51,7 @@ tags:
 
 <p>The container looks like this:</p>
 
-<pre class="brush: css notranslate">#container {
+<pre class="brush: css">#container {
   width:267px;
   height:272px;
   top:100px;
@@ -64,7 +64,7 @@ tags:
 
 <p>Then the four boxes defining the segments of the image are defined. Let's look at them one at a time.</p>
 
-<pre class="brush: css notranslate">#box1 {
+<pre class="brush: css">#box1 {
   background-image: -moz-image-rect(url(https://mdn.mozillademos.org/files/12053/firefox.png), 0%, 50%, 50%, 0%);
   width:133px;
   height:136px;
@@ -74,7 +74,7 @@ tags:
 
 <p>This is the top-left corner of the image. It defines a rectangle containing the top-left quarter of the image in the file <code>firefox.jpg</code>.</p>
 
-<pre class="brush: css notranslate">#box2 {
+<pre class="brush: css">#box2 {
   background-image: -moz-image-rect(url(https://mdn.mozillademos.org/files/12053/firefox.png), 0%, 100%, 50%, 50%);
   width:133px;
   height:136px;
@@ -86,7 +86,7 @@ tags:
 
 <p>The other corners follow a similar pattern:</p>
 
-<pre class="brush: css notranslate">#box3 {
+<pre class="brush: css">#box3 {
   background-image: -moz-image-rect(url(https://mdn.mozillademos.org/files/12053/firefox.png), 50%, 50%, 100%, 0%);
   width:133px;
   height:136px;
@@ -104,7 +104,7 @@ tags:
 
 <p>The HTML is quite simple:</p>
 
-<pre class="brush: html notranslate">&lt;div id="container" onclick="rotate()"&gt;
+<pre class="brush: html">&lt;div id="container" onclick="rotate()"&gt;
   &lt;div id="box1" style="left:0px;top:0px;"&gt;Top left&lt;/div&gt;
   &lt;div id="box2" style="left:133px;top:0px;"&gt;Top right&lt;/div&gt;
   &lt;div id="box3" style="left:0px;top:136px;"&gt;Bottom left&lt;/div&gt;
@@ -118,7 +118,7 @@ tags:
 
 <p>This code handles the click event when the container receives a mouse click.</p>
 
-<pre class="brush:js notranslate">function rotate() {
+<pre class="brush:js">function rotate() {
   var prevStyle = window.getComputedStyle(document.getElementById("box4"), null).getPropertyValue("background-image");
 
   // Now that we've saved the last one, start rotating

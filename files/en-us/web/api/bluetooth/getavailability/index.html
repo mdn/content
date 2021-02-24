@@ -2,22 +2,32 @@
 title: Bluetooth.getAvailability()
 slug: Web/API/Bluetooth/getAvailability
 tags:
-  - API
-  - Bluetooth
-  - Reference
-  - Web Bluetooth API
+- API
+- Bluetooth
+- Reference
+- Web Bluetooth API
 ---
 <p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Bluetooth API")}}</p>
 
-<p><span class="seoSummary">The <strong><code>getAvailability()</code></strong> method of {{DOMxRef("Bluetooth")}} interface of <a href="/en-US/docs/Web/API/Web_Bluetooth_API">Web Bluetooth API</a> interface exposes the Bluetooth capabilities of the current device. For a returns a {{JSxRef("Boolean")}} which is <code>true</code> if the deveice has a Bluetooth adapter and false otherwise (unless user configured {{Glossary("User Agent")}} not to expose a real value).</span></p>
+<p><span class="seoSummary">The <strong><code>getAvailability()</code></strong> method of
+    {{DOMxRef("Bluetooth")}} interface of <a
+      href="/en-US/docs/Web/API/Web_Bluetooth_API">Web Bluetooth API</a> interface exposes
+    the Bluetooth capabilities of the current device. For a returns a
+    {{JSxRef("Boolean")}} which is <code>true</code> if the device has a Bluetooth
+    adapter and false otherwise (unless user configured {{Glossary("User Agent")}} not to
+    expose a real value).</span></p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> User might not allow use of Web Bluetooth API, even if <code>getAvailability()</code> returned <code>true</code> ({{DOMxRef("Bluetooth.requestDevice","navigator.bluetooth.requestDevice()")}} might not resolve with a {{DOMxRef("BluetoothDevice")}}). Also, user can configure User Agent to return a fixed value instead of a real one.</p>
+  <p><strong>Note:</strong> User might not allow use of Web Bluetooth API, even if
+    <code>getAvailability()</code> returned <code>true</code>
+    ({{DOMxRef("Bluetooth.requestDevice","navigator.bluetooth.requestDevice()")}} might
+    not resolve with a {{DOMxRef("BluetoothDevice")}}). Also, user can configure User
+    Agent to return a fixed value instead of a real one.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <em>readerPromise = Bluetooth</em>.getAvailability();
+<pre class="brush: js">var <em>readerPromise = Bluetooth</em>.getAvailability();
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -34,9 +44,10 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following snippet prints out a message in the console specifying wheter or not Bluetooth is supported:</p>
+<p>The following snippet prints out a message in the console specifying whether or not
+  Bluetooth is supported:</p>
 
-<pre class="notranslate">navigator.bluetooth.getAvailability().then(available =&gt; {
+<pre class="brush: js">navigator.bluetooth.getAvailability().then(available =&gt; {
   if (available)
       console.log("This device supports Bluetooth!");
   else
@@ -46,23 +57,21 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Web Bluetooth", "#dom-bluetooth-getavailability", "getAvailability()")}}</td>
-   <td>{{Spec2("Web Bluetooth")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("Web Bluetooth", "#dom-bluetooth-getavailability",
+        "getAvailability()")}}</td>
+      <td>{{Spec2("Web Bluetooth")}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.Bluetooth.getAvailability")}}</p>
-</div>

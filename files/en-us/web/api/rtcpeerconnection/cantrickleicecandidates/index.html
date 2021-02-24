@@ -2,41 +2,61 @@
 title: RTCPeerConnection.canTrickleIceCandidates
 slug: Web/API/RTCPeerConnection/canTrickleIceCandidates
 tags:
-  - API
-  - ICE
-  - Media
-  - Property
-  - RTCPeerConnection
-  - Reference
-  - Trickle
-  - Trickling
-  - WebRTC
-  - WebRTC API
-  - canTrickleIceCandidates
+- API
+- ICE
+- Media
+- Property
+- RTCPeerConnection
+- Reference
+- Trickle
+- Trickling
+- WebRTC
+- WebRTC API
+- canTrickleIceCandidates
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The read-only <strong>{{domxref("RTCPeerConnection")}}</strong> property <code><strong>canTrickleIceCandidates</strong></code> returns a {{jsxref("Boolean")}} which indicates whether or not the remote peer can accept <a href="https://tools.ietf.org/html/draft-ietf-mmusic-trickle-ice">trickled ICE candidates</a>.</span></p>
+<p><span class="seoSummary">The read-only
+        <strong>{{domxref("RTCPeerConnection")}}</strong> property
+        <code><strong>canTrickleIceCandidates</strong></code> returns a
+        {{jsxref("Boolean")}} which indicates whether or not the remote peer can accept <a
+            href="https://tools.ietf.org/html/draft-ietf-mmusic-trickle-ice">trickled ICE
+            candidates</a>.</span></p>
 
-<p><strong>ICE trickling</strong> is the process of continuing to send candidates after the initial offer or answer has already been sent to the other peer.</p>
+<p><strong>ICE trickling</strong> is the process of continuing to send candidates after
+    the initial offer or answer has already been sent to the other peer.</p>
 
-<p>This property is only set after having called {{domxref("RTCPeerConnection.setRemoteDescription()")}}.  Ideally, your signaling protocol provides a way to detect trickling support, so that you don't need to rely on this property. A WebRTC browser will always support trickle ICE. If trickling isn't supported, or you aren't able to tell, you can check for a falsy value for this property and then wait until the value of {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} changes to <code>"completed"</code> before creating and sending the initial offer. That way, the offer contains all of the candidates.</p>
+<p>This property is only set after having called
+    {{domxref("RTCPeerConnection.setRemoteDescription()")}}.  Ideally, your signaling
+    protocol provides a way to detect trickling support, so that you don't need to rely on
+    this property. A WebRTC browser will always support trickle ICE. If trickling isn't
+    supported, or you aren't able to tell, you can check for a falsy value for this
+    property and then wait until the value of
+    {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} changes to
+    <code>"completed"</code> before creating and sending the initial offer. That way, the
+    offer contains all of the candidates.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"> var <em>canTrickle</em> = <em>RTCPeerConnection</em>.canTrickleIceCandidates;</pre>
+<pre
+    class="brush: js"> var <em>canTrickle</em> = <em>RTCPeerConnection</em>.canTrickleIceCandidates;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{jsxref("Boolean")}} that is <code>true</code> if the remote peer can accept trickled ICE candidates and <code>false</code> if it cannot. If no remote peer has been established, this value is <code>null</code>.</p>
+<p>A {{jsxref("Boolean")}} that is <code>true</code> if the remote peer can accept
+    trickled ICE candidates and <code>false</code> if it cannot. If no remote peer has
+    been established, this value is <code>null</code>.</p>
 
 <div class="note">
-<p><strong>Note:</strong> This property's value is determined once the local peer has called {{domxref("RTCPeerConnection.setRemoteDescription()")}}; the provided description is used by the ICE agent to determine whether or not the remote peer supports trickled ICE candidates.</p>
+    <p><strong>Note:</strong> This property's value is determined once the local peer has
+        called {{domxref("RTCPeerConnection.setRemoteDescription()")}}; the provided
+        description is used by the ICE agent to determine whether or not the remote peer
+        supports trickled ICE candidates.</p>
 </div>
 
 <h2 id="Example">Example</h2>
 
-<pre class="notranslate">const pc = new RTCPeerConnection();
+<pre>const pc = new RTCPeerConnection();
 
 function waitToCompleteIceGathering(pc) {
     return new Promise(resolve =&gt; {
@@ -62,20 +82,22 @@ pc.addEventListener('icecandidate', e =&gt; (pc.canTrickleIceCandidates) &amp;&a
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('WebRTC 1.0', '#dom-rtcpeerconnection-cantrickleicecandidates', 'RTCPeerConnection.canTrickleIceCandidates') }}</td>
-   <td>{{ Spec2('WebRTC 1.0') }}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
+    <thead>
+        <tr>
+            <th scope="col">Specification</th>
+            <th scope="col">Status</th>
+            <th scope="col">Comment</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ SpecName('WebRTC 1.0',
+                '#dom-rtcpeerconnection-cantrickleicecandidates',
+                'RTCPeerConnection.canTrickleIceCandidates') }}</td>
+            <td>{{ Spec2('WebRTC 1.0') }}</td>
+            <td>Initial specification.</td>
+        </tr>
+    </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -85,7 +107,8 @@ pc.addEventListener('icecandidate', e =&gt; (pc.canTrickleIceCandidates) &amp;&a
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
- <li>{{domxref("RTCPeerConnection.addIceCandidate()")}}</li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</a></li>
+    <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+    <li>{{domxref("RTCPeerConnection.addIceCandidate()")}}</li>
+    <li><a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC
+            session</a></li>
 </ul>

@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">let querying = browser.tabs.query(<var>queryObj</var>)
+<pre class="brush:js">let querying = browser.tabs.query(<var>queryObj</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -60,9 +60,9 @@ tags:
   <dt><code>status</code>{{optional_inline}}</dt>
   <dd>{{WebExtAPIRef('tabs.TabStatus')}}. Whether the tabs have completed loading.</dd>
   <dt><code>title</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. Match page titles against a pattern.</dd>
+  <dd><code>string</code>. Match page titles against a pattern. Requires the "tabs" permission or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> for the tab to match.</dd>
   <dt><code>url</code>{{optional_inline}}</dt>
-  <dd><code>string</code> or <code>array</code> of <code>string</code>. Match tabs against one or more <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. Note that fragment identifiers are not matched.</dd>
+  <dd><code>string</code> or <code>array</code> of <code>string</code>. Match tabs against one or more <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. Note that fragment identifiers are not matched. Requires the "tabs" permission or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> for the tab to match.</dd>
   <dt><code>windowId</code>{{optional_inline}}</dt>
   <dd><code>integer</code>. The <code>id</code> of the parent window, or {{WebExtAPIRef('windows.WINDOW_ID_CURRENT')}} for the current window.</dd>
   <dt><code>windowType</code>{{optional_inline}}</dt>
@@ -83,7 +83,7 @@ tags:
 
 <pre class="brush: js">function logTabs(tabs) {
   for (let tab of tabs) {
-    // tab.url requires the `tabs` permission
+    // tab.url requires the `tabs` permission or a matching host permission.
     console.log(tab.url);
   }
 }
@@ -99,7 +99,7 @@ querying.then(logTabs, onError);</pre>
 
 <pre class="brush: js">function logTabs(tabs) {
   for (let tab of tabs) {
-    // tab.url requires the `tabs` permission
+    // tab.url requires the `tabs` permission or a matching host permission.
     console.log(tab.url);
   }
 }
@@ -114,7 +114,7 @@ querying.then(logTabs, onError);</pre>
 <p>Get the active tab in the current window:</p>
 
 <pre class="brush: js">function logTabs(tabs) {
-  // tabs[0].url requires the `tabs` permission
+  // tabs[0].url requires the `tabs` permission or a matching host permission.
   console.log(tabs[0].url);
 }
 
@@ -129,7 +129,7 @@ querying.then(logTabs, onError);</pre>
 
 <pre class="brush: js">function logTabs(tabs) {
   for (let tab of tabs) {
-    // tab.url requires the `tabs` permission
+    // tab.url requires the `tabs` permission or a matching host permission.
     console.log(tab.url);
   }
 }

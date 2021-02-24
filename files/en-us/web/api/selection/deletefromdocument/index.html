@@ -2,21 +2,23 @@
 title: Selection.deleteFromDocument()
 slug: Web/API/Selection/deleteFromDocument
 tags:
-  - API
-  - Experimental
-  - HTML Editing
-  - Method
-  - Reference
-  - Selection
-  - deleteFromDocument
+- API
+- Experimental
+- HTML Editing
+- Method
+- Reference
+- Selection
+- deleteFromDocument
 ---
 <div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
 
-<p>The <strong><code>deleteFromDocument()</code></strong> method of the {{domxref("Selection")}} interface deletes the selected text from the document's DOM.</p>
+<p>The <strong><code>deleteFromDocument()</code></strong> method of the
+  {{domxref("Selection")}} interface deletes the selected text from the document's DOM.
+</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>sel</em>.deleteFromDocument()
+<pre class="brush: js"><em>sel</em>.deleteFromDocument()
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -25,8 +27,10 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>This example lets you delete selected text by clicking a button. Upon clicking the button, the<br>
- {{domxref("Window.getSelection()")}} method gets the selected text, and the <code>deleteFromDocument()</code> method removes it.</p>
+<p>This example lets you delete selected text by clicking a button. Upon clicking the
+  button, the<br>
+  {{domxref("Window.getSelection()")}} method gets the selected text, and the
+  <code>deleteFromDocument()</code> method removes it.</p>
 
 <h3 id="HTML">HTML</h3>
 
@@ -50,18 +54,19 @@ function deleteSelection() {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selection API', '#dom-selection-deletefromdocument', 'Selection.deleteFromDocument()')}}</td>
-   <td>{{Spec2('Selection API')}}</td>
-   <td>Current</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Selection API', '#dom-selection-deletefromdocument',
+        'Selection.deleteFromDocument()')}}</td>
+      <td>{{Spec2('Selection API')}}</td>
+      <td>Current</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -71,5 +76,5 @@ function deleteSelection() {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("Selection")}}, the interface defining this method</li>
+  <li>{{domxref("Selection")}}, the interface defining this method</li>
 </ul>

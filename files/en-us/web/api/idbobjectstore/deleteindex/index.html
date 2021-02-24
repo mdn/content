@@ -2,34 +2,39 @@
 title: IDBObjectStore.deleteIndex()
 slug: Web/API/IDBObjectStore/deleteIndex
 tags:
-  - API
-  - Database
-  - IDBObjectStore
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - deleteIndex
+- API
+- Database
+- IDBObjectStore
+- IndexedDB
+- Method
+- Reference
+- Storage
+- deleteIndex
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
 <div>
-<p>The <strong><code>deleteIndex()</code></strong> method of the {{domxref("IDBObjectStore")}} interface destroys the index with the specified name in the connected database, used during a version upgrade.</p>
+  <p>The <strong><code>deleteIndex()</code></strong> method of the
+    {{domxref("IDBObjectStore")}} interface destroys the index with the specified name in
+    the connected database, used during a version upgrade.</p>
 </div>
 
-<p>Note that this method must be called only from a <code>VersionChange</code> transaction mode callback. Note that this method synchronously modifies the {{domxref("IDBObjectStore.indexNames")}} property.</p>
+<p>Note that this method must be called only from a <code>VersionChange</code> transaction
+  mode callback. Note that this method synchronously modifies the
+  {{domxref("IDBObjectStore.indexNames")}} property.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>objectStore</em>.deleteIndex(<em>indexName</em>);</pre>
+<pre
+  class="brush: js"><em>objectStore</em>.deleteIndex(<em>indexName</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>indexName</dt>
- <dd>The name of the existing index to remove.</dd>
+  <dt>indexName</dt>
+  <dd>The name of the existing index to remove.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -38,35 +43,49 @@ tags:
 
 <h3 id="Exceptions">Exceptions</h3>
 
-<p><span style="font-weight: normal; line-height: 1.5;">This method may raise a {{domxref("DOMException")}} of one of the following types:</span></p>
+<p><span style="font-weight: normal; line-height: 1.5;">This method may raise a
+    {{domxref("DOMException")}} of one of the following types:</span></p>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>InvalidStateError</code></td>
-   <td>Occurs if the method was not called from a <code>versionchange</code> transaction mode callback.</td>
-  </tr>
-  <tr>
-   <td><code>TransactionInactiveError</code></td>
-   <td>Occurs if the transaction this {{domxref("IDBObjectStore")}} belongs to is not active (e.g. has been deleted or removed.) In Firefox previous to version 41, an <code>InvalidStateError</code> was raised in this case as well, which was misleading; this has now been fixed (see {{Bug("1176165")}}.)</td>
-  </tr>
-  <tr>
-   <td><code>NotFoundError</code></td>
-   <td>Occurs if there is no index with the given name (case-sensitive) in the database.<br>
-     </td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Exception</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>InvalidStateError</code></td>
+      <td>Occurs if the method was not called from
+        a <code>versionchange</code> transaction mode callback.</td>
+    </tr>
+    <tr>
+      <td><code>TransactionInactiveError</code></td>
+      <td>Occurs if the transaction this {{domxref("IDBObjectStore")}} belongs to is not
+        active (e.g. has been deleted or removed.) In Firefox previous to version 41, an
+        <code>InvalidStateError</code> was raised in this case as well, which was
+        misleading; this has now been fixed (see {{Bug("1176165")}}.)</td>
+    </tr>
+    <tr>
+      <td><code>NotFoundError</code></td>
+      <td>Occurs if there is no index with the given name (case-sensitive) in the
+        database.<br>
+         </td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Example">Example</h2>
 
-<p>In the following example you can see the {{domxref("IDBOpenDBRequest.onupgradeneeded")}} handler being used to update the database structure if a database with a higher version number is loaded. {{domxref("IDBObjectStore.createIndex")}} is used to create new indexes on the object store, after which we delete the unneeded old indexes with <code>deleteIndex()</code>.  For a full working example, see our <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> app (<a class="external" href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
+<p>In the following example you can see
+  the {{domxref("IDBOpenDBRequest.onupgradeneeded")}} handler being used to update the
+  database structure if a database with a higher version number is loaded.
+  {{domxref("IDBObjectStore.createIndex")}} is used to create new indexes on the object
+  store, after which we delete the unneeded old indexes with <code>deleteIndex()</code>.
+   For a full working example, see our <a class="external"
+    href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
+    Notifications</a> app (<a class="external"
+    href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
 
 <pre class="brush: js" style="font-size: 14px;">var db;
 
@@ -116,43 +135,45 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
 };</pre>
 
-<h2 id="Specifications"><span style="font-size: 2.14285714285714rem; letter-spacing: -1px; line-height: 30px;">Specifications</span></h2>
+<h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#dom-idbobjectstore-deleteindex', 'deleteIndex()')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("IndexedDB 2", "#dom-idbobjectstore-deleteindex", "deleteIndex()")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('IndexedDB', '#dom-idbobjectstore-deleteindex', 'deleteIndex()')}}
+      </td>
+      <td>{{Spec2('IndexedDB')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName("IndexedDB 2", "#dom-idbobjectstore-deleteindex", "deleteIndex()")}}
+      </td>
+      <td>{{Spec2("IndexedDB 2")}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.IDBObjectStore.deleteIndex")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
+  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
+  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
+  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
+  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
+  <li>Using cursors: {{domxref("IDBCursor")}}</li>
+  <li>Reference example: <a class="external"
+      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
+      Notifications</a> (<a class="external"
+      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>

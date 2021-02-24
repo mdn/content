@@ -2,89 +2,126 @@
 title: Element.requestFullscreen()
 slug: Web/API/Element/requestFullScreen
 tags:
-  - API
-  - DOM
-  - Element
-  - Full
-  - Fullscreen API
-  - Graphics
-  - Method
-  - Reference
-  - Video
-  - full screen
-  - fullscreen
-  - requestFullscreen
-  - screen
+- API
+- DOM
+- Element
+- Full
+- Fullscreen API
+- Graphics
+- Method
+- Reference
+- Video
+- full screen
+- fullscreen
+- requestFullscreen
+- screen
 ---
 <div>{{APIRef("Fullscreen API")}}</div>
 
-<p><span class="seoSummary">The <code><strong>Element.requestFullscreen()</strong></code> method issues an asynchronous request to make the element be displayed in full-screen mode.</span></p>
+<p><span class="seoSummary">The <code><strong>Element.requestFullscreen()</strong></code>
+    method issues an asynchronous request to make the element be displayed in full-screen
+    mode.</span></p>
 
-<p>It's not guaranteed that the element will be put into full screen mode. If permission to enter full screen mode is granted, the returned {{JSxRef("Promise")}} will resolve and the element will receive a {{Event("fullscreenchange")}} event to let it know that it's now in full screen mode. If permission is denied, the promise is rejected and the element receives a {{Event('fullscreenerror')}} event instead. If the element has been detached from the original document, then the document receives these events instead.</p>
+<p>It's not guaranteed that the element will be put into full screen mode. If permission
+  to enter full screen mode is granted, the returned {{JSxRef("Promise")}} will resolve
+  and the element will receive a {{Event("fullscreenchange")}} event to let it know that
+  it's now in full screen mode. If permission is denied, the promise is rejected and the
+  element receives a {{Event('fullscreenerror')}} event instead. If the element has been
+  detached from the original document, then the document receives these events instead.
+</p>
 
-<p>Earlier implementations of the Fullscreen API would always send these events to the document rather than the element, and you may need to be able to handle that situation. Check {{SectionOnPage("/en-US/docs/Web/Events/fullscreen", "Browser compatibility")}} for specifics on when each browser made this change.</p>
+<p>Earlier implementations of the Fullscreen API would always send these events to the
+  document rather than the element, and you may need to be able to handle that situation.
+  Check {{SectionOnPage("/en-US/docs/Web/Events/fullscreen", "Browser compatibility")}}
+  for specifics on when each browser made this change.</p>
 
 <div class="note">
-<p><strong>Note:</strong> This method must be called while responding to a user interaction or a device orientation change; otherwise it will fail.</p>
+  <p><strong>Note:</strong> This method must be called while responding to a user
+    interaction or a device orientation change; otherwise it will fail.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var p<em>romise </em>= <em>Element</em>.requestFullscreen(<em>options</em>);
+<pre class="brush: js">var promise = Element.requestFullscreen(options);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>options</code> {{optional_inline}}</dt>
- <dd>A {{domxref("FullscreenOptions")}} object  providing options that control the behavior of the transition to full-screen mode. Currently, the only option is {{domxref("FullscreenOptions.navigationUI", "navigationUI")}}, which controls whether or not to show navigation UI while the element is in full-screen mode. The default value is <code>"auto"</code>, which indicates that the browser should decide what to do.</dd>
+  <dt><code>options</code> {{optional_inline}}</dt>
+  <dd>A {{domxref("FullscreenOptions")}} object  providing options that control the
+    behavior of the transition to full-screen mode. Currently, the only option is
+    {{domxref("FullscreenOptions.navigationUI", "navigationUI")}}, which controls whether
+    or not to show navigation UI while the element is in full-screen mode. The default
+    value is <code>"auto"</code>, which indicates that the browser should decide what to
+    do.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{JSxRef("Promise")}} which is resolved with a value of <code>undefined</code> when the transition to full screen is complete.</p>
+<p>A {{JSxRef("Promise")}} which is resolved with a value of <code>undefined</code> when
+  the transition to full screen is complete.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
-<p><em>Rather than throw a traditional exception, the <code>requestFullscreen()</code> procedure announces error conditions by rejecting the <code>Promise</code> it has returned. The rejection handler receives one of the following exception values:</em></p>
+<p><em>Rather than throw a traditional exception, the <code>requestFullscreen()</code>
+    procedure announces error conditions by rejecting the <code>Promise</code> it has
+    returned. The rejection handler receives one of the following exception values:</em>
+</p>
 
 <dl>
- <dt>{{jsxref("TypeError")}}</dt>
- <dd>The <code>TypeError</code> exception may be delivered in any of the following situations:
- <ul>
-  <li>The document containing the element isn't fully active; that is, it's not the current active document.</li>
-  <li>The element is not contained by a document.</li>
-  <li>The element is not permitted to use the <code>"fullscreen"</code> feature, either because of Feature Policy configuration or other access control features.</li>
-  <li>The element and its document are the same node.</li>
- </ul>
- </dd>
+  <dt>{{jsxref("TypeError")}}</dt>
+  <dd>The <code>TypeError</code> exception may be delivered in any of the following
+    situations:
+    <ul>
+      <li>The document containing the element isn't fully active; that is, it's not the
+        current active document.</li>
+      <li>The element is not contained by a document.</li>
+      <li>The element is not permitted to use the <code>"fullscreen"</code> feature,
+        either because of Feature Policy configuration or other access control features.
+      </li>
+      <li>The element and its document are the same node.</li>
+    </ul>
+  </dd>
 </dl>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
 <h3 id="Compatible_elements">Compatible elements</h3>
 
-<p>An element that you wish to place into full-screen mode has to meet a small number of simple requirements:</p>
+<p>An element that you wish to place into full-screen mode has to meet a small number of
+  simple requirements:</p>
 
 <ul>
- <li>It must be one of the standard HTML elements or {{SVGElement("svg")}} or {{MathMLElement("math")}}.</li>
- <li>It is <em>not</em> a {{HTMLElement("dialog")}} element.</li>
- <li>It must either be located within the top-level document or in an {{HTMLElement("iframe")}} which has the {{htmlattrxref("allowfullscreen","iframe")}} attribute applied to it.</li>
+  <li>It must be one of the standard HTML elements or {{SVGElement("svg")}} or
+    {{MathMLElement("math")}}.</li>
+  <li>It is <em>not</em> a {{HTMLElement("dialog")}} element.</li>
+  <li>It must either be located within the top-level document or in an
+    {{HTMLElement("iframe")}} which has the {{htmlattrxref("allowfullscreen","iframe")}}
+    attribute applied to it.</li>
 </ul>
 
-<p>Additionally, of course, the Feature Policy <code>"fullscreen"</code> permission must be granted.</p>
+<p>Additionally, of course, the Feature Policy <code>"fullscreen"</code> permission must
+  be granted.</p>
 
 <h3 id="Detecting_full-screen_activation">Detecting full-screen activation</h3>
 
-<p>You can determine whether or not your attempt to switch to full-screen mode is successful by using the {{jsxref("Promise")}} returned by <code>requestFullscreen()</code>, as seen in the {{anch("Example")}} below.</p>
+<p>You can determine whether or not your attempt to switch to full-screen mode is
+  successful by using the {{jsxref("Promise")}} returned by
+  <code>requestFullscreen()</code>, as seen in the {{anch("Example")}} below.</p>
 
-<p>To learn when other code has toggled full-screen mode on and off, you should establish listeners for the {{event("fullscreenchange")}} event on the {{domxref("Document")}}. It's also important to listen for <code>fullscreenchange</code> to be aware when, for example, the user manually toggles full-screen mode, or when the user switches applications, causing your application to temporarily exit full-screen mode.</p>
+<p>To learn when other code has toggled full-screen mode on and off, you should establish
+  listeners for the {{event("fullscreenchange")}} event on the {{domxref("Document")}}.
+  It's also important to listen for <code>fullscreenchange</code> to be aware when, for
+  example, the user manually toggles full-screen mode, or when the user switches
+  applications, causing your application to temporarily exit full-screen mode.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>This function toggles the first {{HTMLElement("video")}} element found in the document into and out of full-screen mode.</p>
+<p>This function toggles the first {{HTMLElement("video")}} element found in the document
+  into and out of full-screen mode.</p>
 
-<pre class="brush: js notranslate">function toggleFullscreen() {
+<pre class="brush: js">function toggleFullscreen() {
   let elem = document.querySelector("video");
 
   if (!document.fullscreenElement) {
@@ -96,45 +133,51 @@ tags:
   }
 }</pre>
 
-<p>If the document isn't already in full-screen mode—detected by looking to see if {{domxref("document.fullscreenElement")}} has a value—we call the video's <code>requestFullscreen()</code> method. We don't need to do anything special if successful, but if the request fails, our promise's <code>catch()</code> handler presents an alert with an appropriate error message.</p>
+<p>If the document isn't already in full-screen mode—detected by looking to see if
+  {{domxref("document.fullscreenElement")}} has a value—we call the video's
+  <code>requestFullscreen()</code> method. We don't need to do anything special if
+  successful, but if the request fails, our promise's <code>catch()</code> handler
+  presents an alert with an appropriate error message.</p>
 
-<p>If, on the other hand, full-screen mode is already in effect, we call {{domxref("document.exitFullscreen()")}} to disable full-screen mode.</p>
+<p>If, on the other hand, full-screen mode is already in effect, we call
+  {{domxref("document.exitFullscreen()")}} to disable full-screen mode.</p>
 
-<p>You can <a href="https://fullscreen-requestfullscreen-demo.glitch.me/">see this example in action</a> or <a href="https://glitch.com/edit/#!/fullscreen-requestfullscreen-demo">view or remix the code</a> on <a href="http://glitch.com/">Glitch</a>.</p>
+<p>You can <a href="https://fullscreen-requestfullscreen-demo.glitch.me/">see this example
+    in action</a> or <a
+    href="https://glitch.com/edit/#!/fullscreen-requestfullscreen-demo">view or remix the
+    code</a> on <a href="http://glitch.com/">Glitch</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Fullscreen", "#dom-element-requestfullscreen", "Element.requestFullscreen()")}}</td>
-   <td>{{Spec2("Fullscreen")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("Fullscreen", "#dom-element-requestfullscreen",
+        "Element.requestFullscreen()")}}</td>
+      <td>{{Spec2("Fullscreen")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.Element.requestFullscreen")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a></li>
- <li>{{DOMxRef("Document.exitFullscreen()")}}</li>
- <li>{{DOMxRef("Document.fullscreen")}}</li>
- <li>{{DOMxRef("Document.fullscreenElement")}}</li>
- <li>{{CSSxRef(":fullscreen")}}</li>
- <li>{{HTMLAttrxRef("allowfullscreen", "iframe")}}</li>
+  <li><a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a></li>
+  <li>{{DOMxRef("Document.exitFullscreen()")}}</li>
+  <li>{{DOMxRef("Document.fullscreen")}}</li>
+  <li>{{DOMxRef("Document.fullscreenElement")}}</li>
+  <li>{{CSSxRef(":fullscreen")}}</li>
+  <li>{{HTMLAttrxRef("allowfullscreen", "iframe")}}</li>
 </ul>

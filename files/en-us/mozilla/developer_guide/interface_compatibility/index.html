@@ -6,8 +6,8 @@ tags:
 ---
 <p>The Mozilla platform is constantly evolving. As we add new features to the web and to our applications, programming interfaces change. The rules which govern interface changes are different depending on the consumers and the languages involved.</p>
 <h2 id="Web_Content">Web Content</h2>
-<p>APIs which are visible to web content are not modified, except as a last resort when inherent security vulnerabilities or incompatibility with other browsers make it the only option. Any changes, including new features, must have <a href="/en/Code_Review_FAQ#What_is_super-review.3f">super-review</a>.</p>
-<p>One exception to this rule is APIs which are explicitly shipped with Mozilla prefixes as a technology preview. This includes CSS properties that begin with the -moz- prefix (e.g. <a href="/en/CSS/-moz-box-shadow">-moz-box-shadow</a>), or JavaScript APIs that begin with the moz prefix (e.g. <a href="/en/Drawing_text_using_a_canvas#mozDrawText()">canvasrenderingcontext.mozDrawText</a>). These APIs may be removed or replaced with standard interfaces in future releases of Mozilla.</p>
+<p>APIs which are visible to web content are not modified, except as a last resort when inherent security vulnerabilities or incompatibility with other browsers make it the only option. Any changes, including new features, must have <a href="/en-US/docs/Mozilla/Developer_guide/Code_Review_FAQ#what_is_super-review.3f">super-review</a>.</p>
+<p>One exception to this rule is APIs which are explicitly shipped with Mozilla prefixes as a technology preview. This includes CSS properties that begin with the -moz- prefix (e.g. <a href="/en-US/docs/Web/CSS/box-shadow">-moz-box-shadow</a>), or JavaScript APIs that begin with the moz prefix (e.g. <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text#mozdrawtext()">canvasrenderingcontext.mozDrawText</a>). These APIs may be removed or replaced with standard interfaces in future releases of Mozilla.</p>
 <h2 id="Jetpack">Jetpack</h2>
 <div class="note">
  The Jetpack SDK and APIs are not yet complete. The stable version 1.0 of the Jetpack SDK is planned for later in 2010.</div>
@@ -22,7 +22,7 @@ tags:
 <h2 id="Binary_Interfaces">Binary Interfaces</h2>
 <p>Traditionally, Mozilla has maintained a set of XPCOM interfaces and functions with the @status FROZEN marking. Using these interfaces, and using dynamic calls to QueryInterface, it has been possible to write binary XPCOM components which were compatible with multiple versions of Firefox. Beginning with Mozilla 2 (Firefox 4), this will no longer be supported: all @status markings have been removed, and extensions that use binary components will need to recompile for each major version they wish to support.</p>
 <ul>
- <li><a href="/en/js-ctypes">JS-ctypes</a> is the recommended way for extensions to call into OS or third-party native code. You should strongly consider migrating existing code to use js-ctypes instead of binary components.</li>
- <li>If necessary, it is possible for an extension to support multiple versions by shipping multiple shared libraries (DLLs) in the same extension package, and selecting the correct version using <a href="/en/Chrome_Registration#Manifest_Flags">versioning flags</a> in its chrome.manifest file.</li>
+ <li><a href="/en-US/docs/js-ctypes">JS-ctypes</a> is the recommended way for extensions to call into OS or third-party native code. You should strongly consider migrating existing code to use js-ctypes instead of binary components.</li>
+ <li>If necessary, it is possible for an extension to support multiple versions by shipping multiple shared libraries (DLLs) in the same extension package, and selecting the correct version using <a href="/en-US/docs/Chrome_Registration#Manifest_Flags">versioning flags</a> in its chrome.manifest file.</li>
  <li>JSAPI, NSPR, NSS, and other libraries which are currently shipped as separate shared libraries may be integrated into libxul, and extension authors should avoid linking against them.</li>
 </ul>

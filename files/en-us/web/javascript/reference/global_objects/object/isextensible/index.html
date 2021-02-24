@@ -2,29 +2,34 @@
 title: Object.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
+- ECMAScript 5
+- JavaScript
+- JavaScript 1.8.5
+- Method
+- Object
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>Object.isExtensible()</code></strong> method determines if an object is extensible (whether it can have new properties added to it).</p>
+<p>The <strong><code>Object.isExtensible()</code></strong> method determines if an object
+  is extensible (whether it can have new properties added to it).</p>
 
 <div>{{EmbedInteractiveExample("pages/js/object-isextensible.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<div class="hidden">The source for this interactive example is stored in a GitHub
+  repository. If you'd like to contribute to the interactive examples project, please
+  clone <a
+    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
+  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">Object.isExtensible(<var>obj</var>)</pre>
+<pre class="brush: js">Object.isExtensible(<var>obj</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>obj</var></code></dt>
- <dd>The object which should be checked.</dd>
+  <dt><code><var>obj</var></code></dt>
+  <dd>The object which should be checked.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -33,13 +38,17 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>Objects are extensible by default: they can have new properties added to them, and (in engines that support {{jsxref("Object.proto", "__proto__")}}) their <code>__proto__</code> property can be modified. An object can be marked as non-extensible using {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}}, or {{jsxref("Object.freeze()")}}.</p>
+<p>Objects are extensible by default: they can have new properties added to them, and (in
+  engines that support {{jsxref("Object.proto", "__proto__")}}) their
+  <code>__proto__</code> property can be modified. An object can be marked as
+  non-extensible using {{jsxref("Object.preventExtensions()")}},
+  {{jsxref("Object.seal()")}}, or {{jsxref("Object.freeze()")}}.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_Object.isExtensible">Using Object.isExtensible</h3>
 
-<pre class="brush: js notranslate">// New objects are extensible.
+<pre class="brush: js">// New objects are extensible.
 var empty = {};
 Object.isExtensible(empty); // === true
 
@@ -58,9 +67,11 @@ Object.isExtensible(frozen); // === false
 
 <h3 id="Non-object_coercion">Non-object coercion</h3>
 
-<p>In ES5, if the argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if it was a non-extensible ordinary object, return <code>false</code>.</p>
+<p>In ES5, if the argument to this method is not an object (a primitive), then it will
+  cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if
+  it was a non-extensible ordinary object, return <code>false</code>.</p>
 
-<pre class="brush: js notranslate">Object.isExtensible(1);
+<pre class="brush: js">Object.isExtensible(1);
 // TypeError: 1 is not an object (ES5 code)
 
 Object.isExtensible(1);
@@ -70,32 +81,29 @@ Object.isExtensible(1);
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.isextensible', 'Object.isExtensible')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-object.isextensible', 'Object.isExtensible')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("javascript.builtins.Object.isExtensible")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Object.preventExtensions()")}}</li>
- <li>{{jsxref("Object.seal()")}}</li>
- <li>{{jsxref("Object.isSealed()")}}</li>
- <li>{{jsxref("Object.freeze()")}}</li>
- <li>{{jsxref("Object.isFrozen()")}}</li>
- <li>{{jsxref("Reflect.isExtensible()")}}</li>
+  <li>{{jsxref("Object.preventExtensions()")}}</li>
+  <li>{{jsxref("Object.seal()")}}</li>
+  <li>{{jsxref("Object.isSealed()")}}</li>
+  <li>{{jsxref("Object.freeze()")}}</li>
+  <li>{{jsxref("Object.isFrozen()")}}</li>
+  <li>{{jsxref("Reflect.isExtensible()")}}</li>
 </ul>

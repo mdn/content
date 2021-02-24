@@ -2,28 +2,31 @@
 title: WorkerGlobalScope.performance
 slug: Web/API/WorkerGlobalScope/performance
 tags:
-  - API
-  - CheckExample
-  - Performance
-  - Property
-  - Read-only
-  - Reference
-  - Référence(2)
-  - WorkerGlobalScope
+- API
+- CheckExample
+- Performance
+- Property
+- Read-only
+- Reference
+- Référence(2)
+- WorkerGlobalScope
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
-<p>The  <code><strong>performance</strong></code> read-only property of the {{domxref("WorkerGlobalScope")}} interface returns a {{domxref("Performance")}} object to be used on the worker.</p>
+<p>The  <code><strong>performance</strong></code> read-only property of the
+  {{domxref("WorkerGlobalScope")}} interface returns a {{domxref("Performance")}} object
+  to be used on the worker.</p>
 
 <div class="note">
-<p>Not all {{domxref("Performance")}} properties and methods are available to Web workers.</p>
+  <p>Not all {{domxref("Performance")}} properties and methods are available to Web
+    workers.</p>
 </div>
 
 <p>This property is {{readonlyInline}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var perfObj = <em>self</em>.performance;
+<pre class="brush: js">var perfObj = <em>self</em>.performance;
 </pre>
 
 <h3 id="Return_value">Return Value</h3>
@@ -36,7 +39,11 @@ tags:
 
 <pre class="brush: js">console.log(performance);</pre>
 
-<p>inside a worker (which would basically be the equivalent of <code>self.console.log(self.performance);</code>, as these are being called on the worker scope, which can be referenced with {{domxref("WorkerGlobalScope.self")}}), you will get a {{domxref("WorkerPerformance")}} object written to the console — something like the following:</p>
+<p>inside a worker (which would basically be the equivalent of
+  <code>self.console.log(self.performance);</code>, as these are being called on the
+  worker scope, which can be referenced with {{domxref("WorkerGlobalScope.self")}}), you
+  will get a {{domxref("WorkerPerformance")}} object written to the console — something
+  like the following:</p>
 
 <pre class="brush: js">WorkerPerformance {now: function}
   __proto__: WorkerPerformance
@@ -44,29 +51,33 @@ tags:
     now: function now() { [native code] }
     __proto__: Object</pre>
 
-<p>You could use this performance object to return performance data, as you might do with a normal {{domxref("Performance")}} object.</p>
+<p>You could use this performance object to return performance data, as you might do with
+  a normal {{domxref("Performance")}} object.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Firefox has a bug with using <code>console.log</code> inside shared/service workers (see {{Bug("1058644")}}), which may return strange results, but this should be fixed soon.</p>
+  <p><strong>Note</strong>: Firefox has a bug with using <code>console.log</code> inside
+    shared/service workers (see {{Bug("1058644")}}), which may return strange results, but
+    this should be fixed soon.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Highres Time Level 2', '#the-performance-attribute', 'performance')}}</td>
-   <td>{{Spec2('Highres Time Level 2')}}</td>
-   <td>Defines WorkerGlobalScope.performance.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Highres Time Level 2', '#the-performance-attribute',
+        'performance')}}</td>
+      <td>{{Spec2('Highres Time Level 2')}}</td>
+      <td>Defines WorkerGlobalScope.performance.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -76,5 +87,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("Performance")}}</li>
+  <li>{{domxref("Performance")}}</li>
 </ul>

@@ -2,37 +2,49 @@
 title: MediaRecorder.requestData()
 slug: Web/API/MediaRecorder/requestData
 tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture
-  - Media Recorder API
-  - MediaRecorder
-  - MediaStream Recording
-  - Method
-  - Reference
-  - Video
-  - requestData
+- API
+- Audio
+- Media
+- Media Capture
+- Media Recorder API
+- MediaRecorder
+- MediaStream Recording
+- Method
+- Reference
+- Video
+- requestData
 ---
 <p>{{APIRef("MediaStream Recording")}}</p>
 
-<p><span class="seoSummary">The <strong><code>MediaRecorder.requestData()</code></strong> method (part of the <a href="/en-US/docs/Web/API/MediaRecorder_API">MediaRecorder API</a>) is used to raise a {{domxref("dataavailable")}} event containing a {{domxref("Blob")}} object of the captured media as it was when the method was called.</span> This can then be grabbed and manipulated as you wish.</p>
+<p><span class="seoSummary">The <strong><code>MediaRecorder.requestData()</code></strong>
+    method (part of the <a href="/en-US/docs/Web/API/MediaRecorder_API">MediaRecorder
+      API</a>) is used to raise a {{domxref("dataavailable")}} event containing a
+    {{domxref("Blob")}} object of the captured media as it was when the method was
+    called.</span> This can then be grabbed and manipulated as you wish.</p>
 
-<p>When the <code>requestData()</code> method is invoked, the browser queues a task that runs the following steps:</p>
+<p>When the <code>requestData()</code> method is invoked, the browser queues a task that
+  runs the following steps:</p>
 
 <ol>
- <li>If {{domxref("MediaRecorder.state")}} is not "recording", raise a DOM <code>InvalidState</code> error and terminate these steps. If {{domxref("MediaRecorder.state")}} is "recording", continue to the next step.</li>
- <li>Raise a {{event("dataavailable")}} event containing a {{domxref("Blob")}} of the currently captured data (the Blob is available under the event's <code>data</code> attribute.)</li>
- <li>Create a new Blob and place subsequently captured data into it.</li>
+  <li>If {{domxref("MediaRecorder.state")}} is "inactive", raise a DOM
+    <code>InvalidState</code> error and terminate these steps. If
+    {{domxref("MediaRecorder.state")}} is not "inactive", continue to the next step.</li>
+  <li>Raise a {{event("dataavailable")}} event containing a {{domxref("Blob")}} of the
+    currently captured data (the Blob is available under the event's <code>data</code>
+    attribute.)</li>
+  <li>Create a new Blob and place subsequently captured data into it.</li>
 </ol>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">MediaRecorder.requestData()</pre>
+<pre class="brush: js">MediaRecorder.requestData()</pre>
 
 <h3 id="Errors">Errors</h3>
 
-<p>An <code>InvalidState</code> error is raised if the <code>requestData()</code> method is called while the <code>MediaRecorder</code> object’s {{domxref("MediaRecorder.state")}} is not "recording" — the media cannot be captured if recording is not occurring.</p>
+<p>An <code>InvalidState</code> error is raised if the <code>requestData()</code> method
+  is called while the <code>MediaRecorder</code> object’s
+  {{domxref("MediaRecorder.state")}} is not "recording" — the media cannot be captured if
+  recording is not occurring.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -50,18 +62,19 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("MediaStream Recording", "#dom-mediarecorder-requestdata", "MediaRecorder.requestData()")}}</td>
-   <td>{{Spec2("MediaStream Recording")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("MediaStream Recording", "#dom-mediarecorder-requestdata",
+        "MediaRecorder.requestData()")}}</td>
+      <td>{{Spec2("MediaStream Recording")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -71,8 +84,13 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API">Using the MediaRecorder API</a></li>
- <li><a href="https://mdn.github.io/web-dictaphone/">Web Dictaphone</a>: MediaRecorder + getUserMedia + Web Audio API visualization demo, by <a href="https://twitter.com/chrisdavidmills">Chris Mills</a> (<a href="https://github.com/mdn/web-dictaphone/">source on Github</a>.)</li>
- <li><a href="http://simpl.info/mediarecorder/">simpl.info MediaStream Recording demo</a>, by <a href="https://twitter.com/sw12">Sam Dutton</a>.</li>
- <li>{{domxref("Navigator.getUserMedia")}}</li>
+  <li><a href="/en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API">Using
+      the MediaRecorder API</a></li>
+  <li><a href="https://mdn.github.io/web-dictaphone/">Web Dictaphone</a>: MediaRecorder +
+    getUserMedia + Web Audio API visualization demo, by <a
+      href="https://twitter.com/chrisdavidmills">Chris Mills</a> (<a
+      href="https://github.com/mdn/web-dictaphone/">source on Github</a>.)</li>
+  <li><a href="http://simpl.info/mediarecorder/">simpl.info MediaStream Recording
+      demo</a>, by <a href="https://twitter.com/sw12">Sam Dutton</a>.</li>
+  <li>{{domxref("Navigator.getUserMedia")}}</li>
 </ul>

@@ -26,11 +26,11 @@ tags:
 
 <p>Enable the extension:</p>
 
-<pre class="notranslate">var ext = gl.getExtension('KHR_parallel_shader_compile');</pre>
+<pre class="brush: js">var ext = gl.getExtension('KHR_parallel_shader_compile');</pre>
 
 <p>In general, best practice with or without the extension is:</p>
 
-<pre class="brush: js notranslate">// Assuming lists of `shaders` and `programs`:
+<pre class="brush: js">// Assuming lists of `shaders` and `programs`:
 for (const x of shaders)
     gl.compileShader(x); // Never check compile status unless subsequent linking fails.
 for (const x of programs)
@@ -39,7 +39,7 @@ for (const x of programs)
 
 <p>With the extension, apps would be able to poll whether programs have linked without janking, but these are likely to take the same total wall time to link:</p>
 
-<pre class="brush: js notranslate">// Generator yielding a progress ratio [0.0, 1.0].
+<pre class="brush: js">// Generator yielding a progress ratio [0.0, 1.0].
 // Without the extension, this will jank and only check one program per generation.
 function* linkingProgress(programs) {
     const ext = gl.getExtension('KHR_parallel_shader_compile');

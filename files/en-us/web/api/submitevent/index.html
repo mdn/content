@@ -41,7 +41,7 @@ tags:
 
 <p>In this example, a shopping cart may have an assortment of different submit buttons depending on factors such as the user's settings, the shop's settings, and any minimum or maximum shopping card totals established by the payment processors. Each of the submit elements' {{domxref("Element.id", "id")}} is used to identify which payment processor the button corresponds to.</p>
 
-<pre class="brush: js notranslate">let form = document.querySelector("form");
+<pre class="brush: js">let form = document.querySelector("form");
 form.addEventListener("submit", (event) =&gt; {
   let submitter = event.submitter;
   let handler = submitter.id;

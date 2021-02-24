@@ -1,0 +1,73 @@
+---
+title: onSelectionChanged
+slug: >-
+  Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/onSelectionChanged
+tags:
+  - API
+  - Add-ons
+  - DevTools
+  - Event
+  - Extensions
+  - Reference
+  - WebExtensions
+  - devtools.panels
+  - devtools.panelsElementsPanel
+---
+<div>{{AddonSidebar()}}</div>
+
+<p>Fires when the user selects a different page element for inspection with the browser's developer tools, for example by selecting the "Inspect Element" context menu item in Firefox.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush:js">browser.devtools.panels.elements.onSelectionChanged.addListener(listener)
+browser.devtools.panels.elements.onSelectionChanged.removeListener(listener)
+browser.devtools.panels.elements.onSelectionChanged.hasListener(listener)
+</pre>
+
+<p>Events have three functions:</p>
+
+<dl>
+ <dt><code>addListener(listener)</code></dt>
+ <dd>Adds a listener to this event.</dd>
+ <dt><code>removeListener(listener)</code></dt>
+ <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
+ <dt><code>hasListener(listener)</code></dt>
+ <dd>Check whether <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
+</dl>
+
+<h2 id="addListener_syntax">addListener syntax</h2>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+ <dt><code>callback</code></dt>
+ <dd>
+ <p>Function that will be called when this event occurs. The function will be passed no arguments.</p>
+ </dd>
+</dl>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("webextensions.api.devtools.panels.ElementsPanel.onSelectionChanged", 10)}}</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>Listen for selection changed events, and log the text content of the newly selected element:</p>
+
+<pre class="brush: js">function handleSelectedElement() {
+  browser.devtools.inspectedWindow.eval("$0.textContent")
+    .then((result) =&gt; {
+      console.log(result[0]);
+    });
+}
+
+browser.devtools.panels.elements.onSelectionChanged.addListener(handleSelectedElement);</pre>
+
+<p>{{WebExtExamples}}</p>
+
+<div class="note"><strong>Acknowledgements</strong>
+
+<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/devtools"><code>chrome.devtools</code></a> API.</p>
+</div>

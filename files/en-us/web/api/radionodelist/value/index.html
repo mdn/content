@@ -2,18 +2,26 @@
 title: RadioNodeList.value
 slug: Web/API/RadioNodeList/value
 tags:
-  - HTML DOM
-  - Property
-  - RadioNodeList
-  - Reference
+- HTML DOM
+- Property
+- RadioNodeList
+- Reference
 ---
 <div>{{ APIRef("HTML DOM") }}</div>
 
-<p>If the underlying element collection contains radio buttons, the <strong><code>RadioNodeList.value</code></strong> property represents the checked radio button. On retrieving the <code>value</code> property, the <code>value</code> of the currently <code>checked</code> radio button is returned as a string. If the collection does not contain any radio buttons or none of the radio buttons in the collection is in <code>checked</code> state, the empty string is returned. On setting the <code>value</code> property, the first radio button input element whose <code>value</code> property is equal to the new value will be set to <code>checked</code>.</p>
+<p>If the underlying element collection contains radio buttons, the
+  <strong><code>RadioNodeList.value</code></strong> property represents the checked radio
+  button. On retrieving the <code>value</code> property, the <code>value</code> of the
+  currently <code>checked</code> radio button is returned as a string. If the collection
+  does not contain any radio buttons or none of the radio buttons in the collection is in
+  <code>checked</code> state, the empty string is returned. On setting the
+  <code>value</code> property, the first radio button input element whose
+  <code>value</code> property is equal to the new value will be set to
+  <code>checked</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>value</em> = <em>radioNodeList</em>.value;
+<pre class="brush: js"><em>value</em> = <em>radioNodeList</em>.value;
 <em>radioNodeList</em>.value = <em>string</em>;
 </pre>
 
@@ -44,20 +52,21 @@ radios.value = 'red';</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table" style="height: 57px; width: 1246px;">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comments</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-radionodelist-value', 'RadioNodeList.value')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#dom-radionodelist-value', 'RadioNodeList.value')}}
+      </td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -67,5 +76,6 @@ radios.value = 'red';</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{HTMLElement("form")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}} elements.</li>
+  <li>The {{HTMLElement("form")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}
+    elements.</li>
 </ul>

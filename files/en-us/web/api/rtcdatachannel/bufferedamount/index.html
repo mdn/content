@@ -2,38 +2,55 @@
 title: RTCDataChannel.bufferedAmount
 slug: Web/API/RTCDataChannel/bufferedAmount
 tags:
-  - Experimental
-  - Property
-  - RTCDataChannel
-  - Read-only
-  - Reference
-  - WebRTC
-  - bufferedAmount
+- Experimental
+- Property
+- RTCDataChannel
+- Read-only
+- Reference
+- WebRTC
+- bufferedAmount
 ---
 <p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
 
-<p><span class="seoSummary">The read-only <code>RTCDataChannel</code> property <code><strong>bufferedAmount</strong></code> returns the number of bytes of data currently queued to be sent over the data channel.</span> The queue may build up as a result of calls to the {{domxref("RTCDataChannel.send", "send()")}} method. This only includes data buffered by the user agent itself; it doesn't include any framing overhead or buffering done by the operating system or network hardware.</p>
+<p><span class="seoSummary">The read-only <code>RTCDataChannel</code> property
+    <code><strong>bufferedAmount</strong></code> returns the number of bytes of data
+    currently queued to be sent over the data channel.</span> The queue may build up as a
+  result of calls to the {{domxref("RTCDataChannel.send", "send()")}} method. This only
+  includes data buffered by the user agent itself; it doesn't include any framing overhead
+  or buffering done by the operating system or network hardware.</p>
 
-<p>The user agent may implement the process of actually sending data in any way it chooses; this may be done periodically during the event loop or truly asynchronously. As messages are actually sent, this value is reduced accordingly.</p>
+<p>The user agent may implement the process of actually sending data in any way it
+  chooses; this may be done periodically during the event loop or truly asynchronously. As
+  messages are actually sent, this value is reduced accordingly.</p>
 
 <div class="note">
-<p>Closing the data channel doesn't reset this count, even though the user agent purges the queued messages. However, even after closing the channel, attempts to send messages continue to add to the <code>bufferedAmount</code> value, even though the messages are neither sent nor buffered.</p>
+  <p>Closing the data channel doesn't reset this count, even though the user agent purges
+    the queued messages. However, even after closing the channel, attempts to send
+    messages continue to add to the <code>bufferedAmount</code> value, even though the
+    messages are neither sent nor buffered.</p>
 </div>
 
-<p>Whenever this value decreases to fall to or below the value specified in the {{domxref("RTCDataChannel.bufferedAmountLowThreshold", "bufferedAmountLowThreshold")}} property, the user agent fires the {{event("bufferedamountlow")}} event. This event may be used, for example, to implement code which queues more messages to be sent whenever there's room to buffer them.</p>
+<p>Whenever this value decreases to fall to or below the value specified in the
+  {{domxref("RTCDataChannel.bufferedAmountLowThreshold", "bufferedAmountLowThreshold")}}
+  property, the user agent fires the {{event("bufferedamountlow")}} event. This event may
+  be used, for example, to implement code which queues more messages to be sent whenever
+  there's room to buffer them.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>amount</em> = <em>aDataChannel</em>.bufferedAmount;
+<pre class="brush: js">var <em>amount</em> = <em>aDataChannel</em>.bufferedAmount;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>The number of bytes of data currently queued to be sent over the data channel but have not yet been sent.</p>
+<p>The number of bytes of data currently queued to be sent over the data channel but have
+  not yet been sent.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>The snippet below includes a function which changes the contents of a block with the ID "bufferSize" to a string indicating the number of bytes currently buffered on an {{domxref("RTCDataChannel")}}.</p>
+<p>The snippet below includes a function which changes the contents of a block with the ID
+  "bufferSize" to a string indicating the number of bytes currently buffered on an
+  {{domxref("RTCDataChannel")}}.</p>
 
 <pre>var dc = peerConnection.createDataChannel("File Transfer");
 <code>
@@ -49,20 +66,21 @@ function showBufferedAmount(channel) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table" style="height: 49px; width: 1000px;">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('WebRTC 1.0', '#dom-datachannel-bufferedamount', 'RTCDataChannel.bufferedAmount') }}</td>
-   <td>{{ Spec2('WebRTC 1.0') }}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ SpecName('WebRTC 1.0', '#dom-datachannel-bufferedamount',
+        'RTCDataChannel.bufferedAmount') }}</td>
+      <td>{{ Spec2('WebRTC 1.0') }}</td>
+      <td>Initial specification.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -72,10 +90,11 @@ function showBufferedAmount(channel) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Using_data_channels">Using WebRTC data channels</a></li>
- <li>{{domxref("RTCDataChannel")}}</li>
- <li>{{domxref("RTCDataChannel.bufferedAmountLowThreshold")}}</li>
- <li>{{event("bufferedamountlow")}} event</li>
- <li>{{domxref("RTCDataChannel.onbufferedamountlow")}}</li>
+  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+  <li><a href="/en-US/docs/Web/API/WebRTC_API/Using_data_channels">Using WebRTC data
+      channels</a></li>
+  <li>{{domxref("RTCDataChannel")}}</li>
+  <li>{{domxref("RTCDataChannel.bufferedAmountLowThreshold")}}</li>
+  <li>{{event("bufferedamountlow")}} event</li>
+  <li>{{domxref("RTCDataChannel.onbufferedamountlow")}}</li>
 </ul>

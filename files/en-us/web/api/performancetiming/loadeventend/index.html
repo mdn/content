@@ -2,55 +2,63 @@
 title: PerformanceTiming.loadEventEnd
 slug: Web/API/PerformanceTiming/loadEventEnd
 tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Event Handler
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Read-only
-  - Reference
-  - legacy
+- API
+- Backwards compatibility
+- Deprecated
+- Event Handler
+- Navigation Timing
+- PerformanceTiming
+- Property
+- Read-only
+- Reference
+- legacy
 ---
 <p>{{APIRef("Navigation Timing")}}</p>
 
 <div class="warning">
-<p>This interface of this property is deprecated in the <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</a>. Please use the {{domxref("PerformanceNavigationTiming")}} interface's  {{domxref("PerformanceNavigationTiming.loadEventEnd")}} read-only property instead.</p>
+  <p>This interface of this property is deprecated in the <a
+      href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2
+      specification</a>. Please use the {{domxref("PerformanceNavigationTiming")}}
+    interface's  {{domxref("PerformanceNavigationTiming.loadEventEnd")}} read-only
+    property instead.</p>
 </div>
 
-<p>The legacy <code><strong>PerformanceTiming</strong></code><strong><code>.loadEventEnd</code></strong> read-only property returns an <code>unsigned long long</code> representing the moment, in milliseconds since the UNIX epoch, when the {{event("load")}} event handler terminated, that is when the load event is completed. If this event has not yet been sent, or is not yet completed, it returns <code>0.</code></p>
+<p>The legacy
+  <code><strong>PerformanceTiming</strong></code><strong><code>.loadEventEnd</code></strong>
+  read-only property returns an <code>unsigned long long</code> representing the moment,
+  in milliseconds since the UNIX epoch, when the {{event("load")}} event handler
+  terminated, that is when the load event is completed. If this event has not yet been
+  sent, or is not yet completed, it returns <code>0.</code></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>time</em> = <em>performanceTiming</em>.loadEventEnd;</pre>
+<pre
+  class="brush: js"><em>time</em> = <em>performanceTiming</em>.loadEventEnd;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Navigation Timing', '#dom-performancetiming-loadedeventend', 'PerformanceTiming.loadEventEnd')}}</td>
-   <td>{{Spec2('Navigation Timing')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Navigation Timing', '#dom-performancetiming-loadedeventend',
+        'PerformanceTiming.loadEventEnd')}}</td>
+      <td>{{Spec2('Navigation Timing')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.PerformanceTiming.loadEventEnd")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{domxref("PerformanceTiming")}} interface it belongs to.</li>
+  <li>The {{domxref("PerformanceTiming")}} interface it belongs to.</li>
 </ul>

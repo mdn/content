@@ -2,43 +2,48 @@
 title: GeolocationCoordinates.altitudeAccuracy
 slug: Web/API/GeolocationCoordinates/altitudeAccuracy
 tags:
-  - API
-  - Geolocation API
-  - GeolocationCoordinates
-  - Property
-  - Secure context
-  - altitudeAccuracy
+- API
+- Geolocation API
+- GeolocationCoordinates
+- Property
+- Secure context
+- altitudeAccuracy
 ---
 <div>{{securecontext_header}}{{APIRef("Geolocation API")}}</div>
 
-<p>The <code><strong>GeolocationCoordinates.altitudeAccuracy</strong></code> read-only property is a strictly positive <code>double</code> representing the accuracy, with a 95% confidence level, of the <code>altitude</code> expressed in meters. This value is <code>null</code> if the implementation doesn't support measuring altitude.</p>
+<p>The <code><strong>GeolocationCoordinates.altitudeAccuracy</strong></code> read-only
+  property is a strictly positive <code>double</code> representing the accuracy, with a
+  95% confidence level, of the <code>altitude</code> expressed in meters. This value is
+  <code>null</code> if the implementation doesn't support measuring altitude.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>let altAcc</var> = <var>geolocationCoordinates</var>Instance.altitudeAccuracy
+<pre class="brush: js"><var>let altAcc</var> = <var>geolocationCoordinates</var>Instance.altitudeAccuracy
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A positive <code>double</code> representing the accuracy, with a 95% confidence level, of the <code>altitude</code> expressed in meters.</p>
+<p>A positive <code>double</code> representing the accuracy, with a 95% confidence level,
+  of the <code>altitude</code> expressed in meters.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Geolocation', '#dom-geolocationcoordinates-altitudeaccuracy', 'GeolocationCoordinates.altitudeAccuracy')}}</td>
-   <td>{{Spec2('Geolocation')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Geolocation', '#dom-geolocationcoordinates-altitudeaccuracy',
+        'GeolocationCoordinates.altitudeAccuracy')}}</td>
+      <td>{{Spec2('Geolocation')}}</td>
+      <td>Initial specification.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -48,6 +53,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Geolocation_API/Using">Using the Geolocation API</a></li>
- <li>{{domxref("GeolocationCoordinates")}}</li>
+  <li><a href="/en-US/docs/Web/API/Geolocation_API/Using">Using the Geolocation API</a>
+  </li>
+  <li>{{domxref("GeolocationCoordinates")}}</li>
 </ul>

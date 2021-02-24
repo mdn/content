@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate"><em>IDBCursor</em>.request;</pre>
+<pre class="brush: js"><em>IDBCursor</em>.request;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -29,7 +29,7 @@ tags:
 
 <p>When you open a cursor, the <code>request</code> property is then available on that cursor object, to tell you what request object the cursor originated from. For example:</p>
 
-<pre class="brush: js notranslate">function displayData() {
+<pre class="brush: js">function displayData() {
   list.textContent = '';
   const transaction = db.transaction(['rushAlbumList'], 'readonly');
   const objectStore = transaction.objectStore('rushAlbumList');

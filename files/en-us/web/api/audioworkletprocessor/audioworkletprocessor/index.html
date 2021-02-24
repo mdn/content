@@ -2,30 +2,46 @@
 title: AudioWorkletProcessor()
 slug: Web/API/AudioWorkletProcessor/AudioWorkletProcessor
 tags:
-  - API
-  - Audio
-  - AudioWorkletNode
-  - AudioWorkletProcessor
-  - Constructor
-  - Reference
-  - Web Audio API
+- API
+- Audio
+- AudioWorkletNode
+- AudioWorkletProcessor
+- Constructor
+- Reference
+- Web Audio API
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>AudioWorkletProcessor()</code></strong> constructor creates a new {{domxref("AudioWorkletProcessor")}} object, which represents an underlying audio processing mechanism of an {{domxref("AudioWorkletNode")}}.</span></p>
+<p><span class="seoSummary">The <strong><code>AudioWorkletProcessor()</code></strong>
+    constructor creates a new {{domxref("AudioWorkletProcessor")}} object, which
+    represents an underlying audio processing mechanism of an
+    {{domxref("AudioWorkletNode")}}.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<div class="note">The <code>AudioWorkletProcessor</code> and classes that derive from it cannot be instantiated directly from a user-supplied code. Instead, they are created only internally by the creation of an associated {{domxref("AudioWorkletNode")}}s.</div>
+<div class="note">The <code>AudioWorkletProcessor</code> and classes that derive from it
+  cannot be instantiated directly from a user-supplied code. Instead, they are created
+  only internally by the creation of an associated {{domxref("AudioWorkletNode")}}s.</div>
 
-<pre class="syntaxbox">var <em>processor</em> = new AudioWorkletProcessor(<em>options</em>);
+<pre class="brush: js">var <em>processor</em> = new AudioWorkletProcessor(<em>options</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>options</code></dt>
- <dd>An object that is passed as <em>options</em> parameter to {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}} and passed through <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">the structured clone algorithm</a>. The object is based on {{domxref("AudioWorkletNodeOptions")}} dictionary. Available properties are as follows: {{page("/en-US/docs/Web/API/AudioWorkletNodeOptions", "Properties")}}Note that there are default values for the first two properties, so even if there are no <em>options</em> object passed to the {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}}, the <em>options</em> object passed by the node to the <code>AudioWorkletProcessor</code> constructor will exist and at minimum have <code>numberOfInputs</code> and <code>numberOfOutputs</code>.</dd>
+  <dt><code>options</code></dt>
+  <dd>An object that is passed as <em>options</em> parameter to
+    {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}} and
+    passed through <a
+      href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">the structured
+      clone algorithm</a>. The object is based on {{domxref("AudioWorkletNodeOptions")}}
+    dictionary. Available properties are as follows:
+    {{page("/en-US/docs/Web/API/AudioWorkletNodeOptions", "Properties")}}Note that there
+    are default values for the first two properties, so even if there are no
+    <em>options</em> object passed to the {{domxref("AudioWorkletNode.AudioWorkletNode",
+    "AudioWorkletNode constructor")}}, the <em>options</em> object passed by the node to
+    the <code>AudioWorkletProcessor</code> constructor will exist and at minimum have
+    <code>numberOfInputs</code> and <code>numberOfOutputs</code>.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -34,9 +50,15 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>In this example we pass custom options to the {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}} and observe how a <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone</a> of them gets passed to our <code>AudioWorkletProcessor</code> constructor.</p>
+<p>In this example we pass custom options to the
+  {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}} and
+  observe how a <a
+    href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured
+    clone</a> of them gets passed to our <code>AudioWorkletProcessor</code> constructor.
+</p>
 
-<p>First, we need to define a custom {{domxref("AudioWorkletProcessor")}} and register it. Note that this should be done in a separate file.</p>
+<p>First, we need to define a custom {{domxref("AudioWorkletProcessor")}} and register it.
+  Note that this should be done in a separate file.</p>
 
 <pre class="brush: js">// test-processor.js
 class TestProcessor extends AudioWorkletProcessor {
@@ -53,9 +75,13 @@ class TestProcessor extends AudioWorkletProcessor {
 registerProcessor('test-processor', TestProcessor)
 </pre>
 
-<p>Next, in our main script file we'll load the processor, create an instance of <code>AudioWorkletNode</code> passing it the name of the processor and <em>options</em> object.</p>
+<p>Next, in our main script file we'll load the processor, create an instance of
+  <code>AudioWorkletNode</code> passing it the name of the processor and <em>options</em>
+  object.</p>
 
-<p>In the <em>options</em> object we pass <code>processorOptions</code> with a {{jsxref("Map")}} instance under <code>someUsefulVariable</code> key. We don't pass <code>numberOfInputs</code> and see how it gets its default value.</p>
+<p>In the <em>options</em> object we pass <code>processorOptions</code> with a
+  {{jsxref("Map")}} instance under <code>someUsefulVariable</code> key. We don't pass
+  <code>numberOfInputs</code> and see how it gets its default value.</p>
 
 <pre class="brush: js">const audioContext = new AudioContext()
 await audioContext.audioWorklet.addModule('test-processor.js')
@@ -75,29 +101,28 @@ const testNode = new AudioWorkletNode(audioContext, 'test-processor', {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API','#dom-audioworkletprocessor-audioworkletprocessor','AudioWorkletProcessor()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web Audio
+        API','#dom-audioworkletprocessor-audioworkletprocessor','AudioWorkletProcessor()')}}
+      </td>
+      <td>{{Spec2('Web Audio API')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.AudioWorkletProcessor.AudioWorkletProcessor")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("AudioWorkletNode", "AudioWorkletNode")}} interface</li>
+  <li>{{domxref("AudioWorkletNode", "AudioWorkletNode")}} interface</li>
 </ul>

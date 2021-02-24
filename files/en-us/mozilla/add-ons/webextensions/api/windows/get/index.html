@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var getting = browser.windows.get(
+<pre class="brush:js">var getting = browser.windows.get(
   windowId,              // integer
   getInfo                // optional object
 )
@@ -35,7 +35,7 @@ tags:
  <dd><code>object</code>. Contains options to filter the type of window.
  <dl class="reference-values">
   <dt><code>populate</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. If <code>true</code>, the {{WebExtAPIRef('windows.Window')}} object will have a <code>tabs</code> property that contains a list of {{WebExtAPIRef('tabs.Tab')}} objects representing the tabs open in the window. The <code>Tab</code> objects only contain the <code>url</code>, <code>title</code> and <code>favIconUrl</code> properties if the extension's manifest file includes the <code>"tabs"</code> permission.</dd>
+  <dd><code>boolean</code>. If <code>true</code>, the {{WebExtAPIRef('windows.Window')}} object will have a <code>tabs</code> property that contains a list of {{WebExtAPIRef('tabs.Tab')}} objects representing the tabs open in the window. The <code>Tab</code> objects only contain the <code>url</code>, <code>title</code> and <code>favIconUrl</code> properties if the extension's manifest file includes the <code>"tabs"</code> permission or a matching <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permission</a>.</dd>
   <dt><code>windowTypes</code>{{optional_inline}}</dt>
   <dd><code>array</code> of {{WebExtAPIRef('windows.WindowType')}} objects. If set, the {{WebExtAPIRef('windows.Window')}} returned will be filtered based on its type. If unset the default filter is set to <code>['normal', 'panel', 'popup']</code>, with <code>'panel'</code> window types limited to the extension's own windows.</dd>
  </dl>
@@ -59,7 +59,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>This example gets the current window and logs the URLs of the tabs it contains. Note that you'll need the "tabs" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> to access tab URLs.</p>
+<p>This example gets the current window and logs the URLs of the tabs it contains. Note that you'll need the "tabs" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> or matching <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> to access tab URLs.</p>
 
 <div class="note">
 <p><strong>Note</strong>: This example is a bit unrealistic: in this situation you would more probably use {{WebExtAPIRef("windows.getCurrent()")}}.</p>

@@ -33,21 +33,21 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">const</span> queueingStrategy <span class="operator token">=</span> <span class="keyword token">new</span> ByteLength<span class="class-name token">QueuingStrategy</span><span class="punctuation token">(</span><span class="punctuation token">{</span> highWaterMark<span class="punctuation token">:</span> <span class="number token">1</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers  language-js">const queueingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
 
-<span class="keyword token">const</span> readableStream <span class="operator token">=</span> <span class="keyword token">new</span> Readable<span class="class-name token">Stream</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-  <span class="function token">start</span><span class="punctuation token">(</span>controller<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  pull<span class="punctuation token">(controller</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="function token">cancel</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"stream error:"</span><span class="punctuation token">,</span> err<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">,</span> queueingStrategy<span class="punctuation token">)</span><span class="punctuation token">;</span>
+const readableStream = new ReadableStream({
+  start(controller) {
+    ...
+  },
+  pull(controller) {
+    ...
+  },
+  cancel(err) {
+    console.log("stream error:", err);
+  }
+}, queueingStrategy);
 
-<span class="keyword token">var</span> size <span class="operator token">=</span> queueingStrategy<span class="punctuation token">.</span><span class="function token">size</span><span class="punctuation token">(</span><span class="punctuation token">chunk)</span></code>;</pre>
+var size = queueingStrategy.size(chunk);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -68,7 +68,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.ByteLengthQueuingStrategy")}}</p>
-</div>

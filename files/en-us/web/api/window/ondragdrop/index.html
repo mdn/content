@@ -9,7 +9,7 @@ tags:
   - Window
   - ondragdrop
 ---
-<p>{{ APIRef() }}{{obsolete_header}}{{non-standard_header}}</p>
+<p>{{ APIRef() }}{{deprecated_header}}{{non-standard_header}}</p>
 
 <div class="warning">
 <p>Removed in Firefox 50, and never implemented in any other browser. Use the modern standard <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML5 drag and drop</a> feature instead.</p>
@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="eval notranslate"><s>window.ondragdrop = funcRef;</s>
+<pre class="brush: js"><s>window.ondragdrop = funcRef;</s>
 window.addEventListener("dragdrop", funcRef, useCapturing);
 </pre>
 
@@ -30,7 +30,7 @@ window.addEventListener("dragdrop", funcRef, useCapturing);
  <dd>The event handler function to be registered.</dd>
 </dl>
 
-<p>The <code>window.ondragdrop</code> property and the <code>ondragdrop</code> attribute are not implemented in <a href="/en-US/Gecko">Gecko</a> ({{ Bug(112288) }}), you have to use <code>addEventListener</code>. See <a href="/en-US/DOM/element.addEventListener">addEventListener</a> for details.</p>
+<p>The <code>window.ondragdrop</code> property and the <code>ondragdrop</code> attribute are not implemented in <a href="/en-US/Gecko">Gecko</a> ({{ Bug(112288) }}), you have to use <code>addEventListener</code>. See <a href="/en-US/docs/DOM/element.addEventListener">addEventListener</a> for details.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -38,7 +38,7 @@ window.addEventListener("dragdrop", funcRef, useCapturing);
 
 <p>In this example, an event listener is added to the window (the event target). If, from an external source, a tab, a link, marked text or a file is dragged and dropped onto this window, the alert is fired. Note how <code>event.stopPropagation();</code> prevents the browser from loading the dropped tab, link or file.</p>
 
-<pre class="notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
 &lt;head&gt;&lt;title&gt;dragdroptest&lt;/title&gt;
 
 &lt;script type="text/javascript"&gt;

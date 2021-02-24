@@ -1,0 +1,77 @@
+---
+title: TextTrackCueList.length
+slug: Web/API/TextTrackCueList/length
+tags:
+  - API
+  - Property
+  - Reference
+  - length
+  - TextTrackCueList
+  - WebVTT
+  - Media
+---
+<div>{{APIRef("WebVTT")}}</div>
+
+<p class="summary">The <strong><code>length</code></strong> read-only property of the {{domxref("TextTrackCueList")}} interface returns the number of cues in the list.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <var>length</var> = <var>TextTrackCueList</var>.length;</pre>
+
+<h3>Value</h3>
+<p>An <code>unsigned long</code> which is the number of cues in the list.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The {{domxref("TextTrack.cues")}} property returns a {{domxref("TextTrackCueList")}} containing the current cues for that particular track. Calling <code>cues.length</code> returns the number of cues in the list. Using the WebVTT track below, the value of <code>length</code> is 5.</p>
+
+<pre>WEBVTT
+
+first
+00:00:00.000 --> 00:00:00.999  line:80%
+Hildy!
+
+second
+00:00:01.000 --> 00:00:01.499 line:80%
+How are you?
+
+third
+00:00:01.500 --> 00:00:02.999 line:80%
+Tell me, is the lord of the universe in?
+
+fourth
+00:00:03.000 --> 00:00:04.299 line:80%
+Yes, he's in - in a bad humor
+
+fifth
+00:00:04.300 --> 00:00:06.000 line:80%
+Somebody must've stolen the crown jewels
+</pre>
+
+<pre class="brush: js">let video = document.getElementById("video");
+video.onplay = function () {
+  console.log(video.textTracks[0].cues.length) //5;
+}</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+    <td>{{ SpecName('HTML WHATWG', '#dom-texttrackcuelist-length', 'TextTrackCueList.length') }}</td>
+    <td>{{ Spec2('HTML WHATWG') }}</td>
+    <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.TextTrackCueList.length")}}</p>

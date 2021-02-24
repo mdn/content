@@ -26,7 +26,7 @@ tags:
 &lt;/svg&gt;
 </pre>
 
-<p>The namespace declaration is provided by the <code>xmlns</code> parameter. This parameter says that the <code>&lt;svg&gt;</code> element and its child elements belong to whichever XML dialect has the namespace name <span class="nowiki">'http://www.w3.org/2000/svg'</span> which is, of course, SVG. Note that the namespace declaration only needs to be provided once on a root element. The declaration defines the <em>default</em> namespace, so the user agent knows that all the <code>&lt;svg&gt;</code> element's descendants also belong to the same namespace. User agents check to see if they recognize the namespace name to determine if they know how to handle the markup.</p>
+<p>The namespace declaration is provided by the <code>xmlns</code> parameter. This parameter says that the <code>&lt;svg&gt;</code> element and its child elements belong to whichever XML dialect has the namespace name <code>http://www.w3.org/2000/svg</code> which is, of course, SVG. Note that the namespace declaration only needs to be provided once on a root element. The declaration defines the <em>default</em> namespace, so the user agent knows that all the <code>&lt;svg&gt;</code> element's descendants also belong to the same namespace. User agents check to see if they recognize the namespace name to determine if they know how to handle the markup.</p>
 
 <p>Note that namespace names are just strings, so the fact that the SVG namespace name also looks like a URI isn't important. URIs are commonly used because they are unique, the intention is not to "link" somewhere. (In fact URIs are used so frequently that the term "namespace URI" is commonly used instead of "namespace name".)</p>
 
@@ -84,7 +84,7 @@ tags:
 
 <p>Namespaces affect not only markup, but also scripting. If you write scripts for namespaced XML such as SVG, read on.</p>
 
-<p>The <a class="external" href="https://www.w3.org/TR/REC-DOM-Level-1/">DOM Level 1</a> recommendation was created before the <a class="external" href="https://www.w3.org/TR/REC-xml-names/">original Namespaces in XML</a> recommendation was released; therefore, DOM1 isn't namespace aware. This causes problems for namespaced XML such as SVG. To resolve these problems, <a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/">DOM Level 2 Core</a> added namespace aware equivalents of all the applicable DOM Level 1 methods. When scripting SVG, it is important to use the <a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#Namespaces-Considerations">namespace aware methods</a>. The table below lists the DOM1 methods that shouldn't be used in SVG, along with their equivalent DOM2 counterparts that should be used instead.</p>
+<p>The <a href="https://www.w3.org/TR/REC-DOM-Level-1/">DOM Level 1</a> recommendation was created before the <a href="https://www.w3.org/TR/REC-xml-names/">original Namespaces in XML</a> recommendation was released; therefore, DOM1 isn't namespace aware. This causes problems for namespaced XML such as SVG. To resolve these problems, <a href="https://www.w3.org/TR/DOM-Level-2-Core/">DOM Level 2 Core</a> added namespace aware equivalents of all the applicable DOM Level 1 methods. When scripting SVG, it is important to use the <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#Namespaces-Considerations">namespace aware methods</a>. The table below lists the DOM1 methods that shouldn't be used in SVG, along with their equivalent DOM2 counterparts that should be used instead.</p>
 
 <table class="fullwidth-table">
  <tbody>
@@ -93,57 +93,57 @@ tags:
    <th>DOM2 (use these instead!)</th>
   </tr>
   <tr>
-   <td><a class="external" href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createAttribute">createAttribute</a></td>
-   <td><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-DocCrAttrNS">createAttributeNS</a></td>
+   <td><a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createAttribute">createAttribute</a></td>
+   <td><a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-DocCrAttrNS">createAttributeNS</a></td>
   </tr>
   <tr>
-   <td><a class="external" href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createElement">createElement</a></td>
-   <td><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-DocCrElNS">createElementNS</a></td>
+   <td><a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createElement">createElement</a></td>
+   <td><a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-DocCrElNS">createElementNS</a></td>
   </tr>
   <tr>
-   <td><a class="external" href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttributeNode">getAttributeNode</a></td>
-   <td><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAtNodeNS">getAttributeNodeNS</a></td>
+   <td><a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttributeNode">getAttributeNode</a></td>
+   <td><a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAtNodeNS">getAttributeNodeNS</a></td>
   </tr>
   <tr>
-   <td><a class="external" href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttribute">getAttribute</a></td>
-   <td><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAttrNS">getAttributeNS</a></td>
+   <td><a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttribute">getAttribute</a></td>
+   <td><a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAttrNS">getAttributeNS</a></td>
   </tr>
   <tr>
-   <td><a class="external" href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getElementsByTagName">getElementsByTagName</a></td>
-   <td><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBTNNS">getElementsByTagNameNS</a> (also <a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C90942">added to Element</a>)</td>
+   <td><a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getElementsByTagName">getElementsByTagName</a></td>
+   <td><a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBTNNS">getElementsByTagNameNS</a> (also <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C90942">added to Element</a>)</td>
   </tr>
   <tr>
-   <td><a class="external" href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getNamedItem">getNamedItem</a></td>
-   <td><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getNamedItemNS">getNamedItemNS</a></td>
+   <td><a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getNamedItem">getNamedItem</a></td>
+   <td><a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getNamedItemNS">getNamedItemNS</a></td>
   </tr>
   <tr>
-   <td><a class="external" href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#">hasAttribute</a></td>
-   <td><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElHasAttrNS">hasAttributeNS</a></td>
+   <td><a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#">hasAttribute</a></td>
+   <td><a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElHasAttrNS">hasAttributeNS</a></td>
   </tr>
   <tr>
-   <td><a class="external" href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttribute">removeAttribute</a></td>
-   <td><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElRemAtNS">removeAttributeNS</a></td>
+   <td><a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttribute">removeAttribute</a></td>
+   <td><a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElRemAtNS">removeAttributeNS</a></td>
   </tr>
   <tr>
-   <td><a class="external" href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeNamedItem">removeNamedItem</a></td>
-   <td><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-removeNamedItemNS">removeNamedItemNS</a></td>
+   <td><a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeNamedItem">removeNamedItem</a></td>
+   <td><a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-removeNamedItemNS">removeNamedItemNS</a></td>
   </tr>
   <tr>
-   <td><a class="external" href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttribute">setAttribute</a></td>
-   <td><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS">setAttributeNS</a></td>
+   <td><a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttribute">setAttribute</a></td>
+   <td><a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS">setAttributeNS</a></td>
   </tr>
   <tr>
-   <td><a class="external" href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttributeNode">setAttributeNode</a></td>
-   <td><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAtNodeNS">setAttributeNodeNS</a></td>
+   <td><a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttributeNode">setAttributeNode</a></td>
+   <td><a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAtNodeNS">setAttributeNodeNS</a></td>
   </tr>
   <tr>
-   <td><a class="external" href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setNamedItem">setNamedItem</a></td>
-   <td><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-setNamedItemNS">setNamedItemNS</a></td>
+   <td><a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setNamedItem">setNamedItem</a></td>
+   <td><a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-setNamedItemNS">setNamedItemNS</a></td>
   </tr>
  </tbody>
 </table>
 
-<p>The first parameter for all the DOM2 namespace aware methods must be the namespace name (also known as the namespace URI) of the element or parameter in question. For SVG <strong>elements</strong> this is <span class="nowiki">'http://www.w3.org/2000/svg'</span>. However, note carefully: the <a class="external" href="https://www.w3.org/TR/xml-names11/#defaulting">Namespaces in XML 1.1</a> recommendation states that the namespace name for parameters without a prefix does not have a value. In other words, although the parameters belong to the namespace of the element, you do not use the tag's namespace name. Instead, <strong>you must use null as the namespace name for unqualified (prefixless) parameters</strong>. So, to create an SVG <code>rect</code> <em>element</em> using <code>document.createElementNS()</code>, you must write:</p>
+<p>The first parameter for all the DOM2 namespace aware methods must be the namespace name (also known as the namespace URI) of the element or parameter in question. For SVG <strong>elements</strong> this is <code>http://www.w3.org/2000/svg</code>. However, note carefully: the <a href="https://www.w3.org/TR/xml-names11/#defaulting">Namespaces in XML 1.1</a> recommendation states that the namespace name for parameters without a prefix does not have a value. In other words, although the parameters belong to the namespace of the element, you do not use the tag's namespace name. Instead, <strong>you must use null as the namespace name for unqualified (prefixless) parameters</strong>. So, to create an SVG <code>rect</code> <em>element</em> using <code>document.createElementNS()</code>, you must write:</p>
 
 <pre><code class="language-javascript">document.createElementNS('http://www.w3.org/2000/svg', 'rect');</code></pre>
 
@@ -151,7 +151,7 @@ tags:
 
 <pre class="eval"><code class="language-javascript">rect.getAttributeNS(<strong>null</strong>, 'x');</code></pre>
 
-<p>Note that this isn't the case for parameters <em>with</em> a namespace prefix (parameters that don't belong to the same XML dialect as the element). Parameters such as <code>xlink:href</code> require the namespace name that was assigned to that prefix (<span class="nowiki">http://www.w3.org/1999/xlink</span> for XLink). Hence to get the value of the <code>xlink:href</code> parameter of an <code>&lt;a&gt;</code> element in SVG you would write:</p>
+<p>Note that this isn't the case for parameters <em>with</em> a namespace prefix (parameters that don't belong to the same XML dialect as the element). Parameters such as <code>xlink:href</code> require the namespace name that was assigned to that prefix (<code>http://www.w3.org/1999/xlink</code> for XLink). Hence to get the value of the <code>xlink:href</code> parameter of an <code>&lt;a&gt;</code> element in SVG you would write:</p>
 
 <pre><code class="language-javascript">elt.getAttributeNS('http://www.w3.org/1999/xlink', 'href');</code></pre>
 

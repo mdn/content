@@ -32,7 +32,7 @@ tags:
 <h3 id="CSS">CSS</h3>
 
 <ul>
- <li>Support for multi-line <a href="/en-US/docs/Web/Guide/CSS/Flexible_boxes">flexbox</a> has been added ({{bug("939901")}}).</li>
+ <li>Support for multi-line <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">flexbox</a> has been added ({{bug("939901")}}).</li>
  <li>Longhand East Asian <a href="/en-US/docs/Web/CSS/list-style-type">counter styles</a> have been implemented ({{bug("934072")}}).</li>
  <li>Experimental support for the {{cssxref("background-blend-mode")}} property has been added, but is disabled by default ({{bug("841601")}}).</li>
  <li>The <code>none</code> value has been added to {{cssxref("font-variant-ligatures")}} ({{bug("913264")}}).</li>
@@ -66,7 +66,7 @@ tags:
  <li>The {{domxref("File")}} constructor, e.g. <code>new File(["foo"], "foo.txt")</code> has been implemented. ({{bug("819900")}}).</li>
  <li>The {{domxref("NavigatorPlugins.plugins", "navigator.plugins")}} is no more enumerable, for privacy reasons ({{bug(757726)}}).</li>
  <li>The two attributes {{domxref("Window.screenX")}} and {{domxref("Window.screenY")}} now return CSS pixels (and no more device pixels) ({{bug(943668)}}).</li>
- <li>The two methods {{domxref("CanvasRenderingContext2D.drawSystemFocusRing()")}} and {{domxref("CanvasRenderingContext2D.drawCustomFocusRing()")}} have been implemented. The preference <code>canvas.focusring.enabled</code> must be set to <code>true</code> to activate both ({{bug(540456)}}).</li>
+ <li>The two methods {{domxref("CanvasRenderingContext2D.drawSystemFocusRing()")}} and {{domxref("CanvasRenderingContext2D/drawFocusIfNeeded", "CanvasRenderingContext2D.drawCustomFocusRing()")}} have been implemented. The preference <code>canvas.focusring.enabled</code> must be set to <code>true</code> to activate both ({{bug(540456)}}).</li>
  <li>The <code>willReadFrequently</code> context attribute for "<code>2d</code>" canvas contexts has been implemented (see {{domxref("HTMLCanvasElement.getContext()")}}) ({{bug(884226)}}).</li>
  <li>The following attributes and methods of {{domxref("NavigatorID")}} have been implemented on {{domxref("WorkerNavigator")}} to allow their use in workers: {{domxref("NavigatorID.appCodeName", "appCodeName")}}, {{domxref("NavigatorID.product", "product")}}, and {{domxref("NavigatorID.taintEnabled", "taintEnabled()")}} ({{bug(925847)}}).</li>
  <li>The {{domxref("NonDocumentTypeChildNode.previousElementSibling" , "previousElementSibling")}} and {{domxref("NonDocumentTypeChildNode.nextElementSibling" , "nextElementSibling")}} properties has been removed from {{domxref("DocumentType")}}, because of compatibility problems ({{bug(932501)}}).</li>

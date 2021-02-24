@@ -2,48 +2,58 @@
 title: Date.prototype.setDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setDate
 tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+- Date
+- JavaScript
+- Method
+- Prototype
+- Reference
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>setDate()</code></strong> method sets the day of the {{jsxref("Date")}} object relative to the beginning of the currently set month.</p>
+<p>The <strong><code>setDate()</code></strong> method sets the day of the
+  {{jsxref("Date")}} object relative to the beginning of the currently set month.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/date-setdate.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<div class="hidden">The source for this interactive example is stored in a GitHub
+  repository. If you'd like to contribute to the interactive examples project, please
+  clone <a
+    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
+  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>dateObj</var>.setDate(<var>dayValue</var>)</pre>
+<pre class="brush: js"><var>dateObj</var>.setDate(<var>dayValue</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>dayValue</var></code></dt>
- <dd>An integer representing the day of the month.</dd>
+  <dt><code><var>dayValue</var></code></dt>
+  <dd>An integer representing the day of the month.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>The number of milliseconds between 1 January 1970 00:00:00 UTC and the given date (the {{jsxref("Date")}} object is also changed in place).</p>
+<p>The number of milliseconds between 1 January 1970 00:00:00 UTC and the given date (the
+  {{jsxref("Date")}} object is also changed in place).</p>
 
 <h2 id="Description">Description</h2>
 
-<p>If the <code><var>dayValue</var></code> is outside of the range of date values for the month, <code>setDate()</code> will update the {{jsxref("Date")}} object accordingly.</p>
+<p>If the <code><var>dayValue</var></code> is outside of the range of date values for the
+  month, <code>setDate()</code> will update the {{jsxref("Date")}} object accordingly.</p>
 
-<p>For example, if 0 is provided for <code><var>dayValue</var></code>, the date will be set to the last day of the previous month.</p>
+<p>For example, if 0 is provided for <code><var>dayValue</var></code>, the date will be
+  set to the last day of the previous month.</p>
 
-<p>If a negative number is provided for <code><var>dayValue</var></code>, the date will be set counting backwards from the last day of the previous month. -1 would result in the date being set to 1 day before the last day of the previous month.</p>
+<p>If a negative number is provided for <code><var>dayValue</var></code>, the date will be
+  set counting backwards from the last day of the previous month. -1 would result in the
+  date being set to 1 day before the last day of the previous month.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_setDate">Using setDate()</h3>
 
-<pre class="brush: js notranslate">var theBigDay = new Date(1962, 6, 7); // 1962-07-07 (7th of July 1962)
+<pre class="brush: js">var theBigDay = new Date(1962, 6, 7); // 1962-07-07 (7th of July 1962)
 theBigDay.setDate(24);  // 1962-07-24 (24th of July 1962)
 theBigDay.setDate(32);  // 1962-08-01 (1st of August 1962)
 theBigDay.setDate(22);  // 1962-08-22 (22th of August 1962)
@@ -55,16 +65,17 @@ theBigDay.setDate(-50); // 1962-08-11 (11th of August 1962)
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.setdate', 'Date.prototype.setDate')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-date.prototype.setdate', 'Date.prototype.setDate')}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -74,6 +85,6 @@ theBigDay.setDate(-50); // 1962-08-11 (11th of August 1962)
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Date.prototype.getDate()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCDate()")}}</li>
+  <li>{{jsxref("Date.prototype.getDate()")}}</li>
+  <li>{{jsxref("Date.prototype.setUTCDate()")}}</li>
 </ul>

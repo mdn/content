@@ -17,7 +17,7 @@ tags:
 
 <p><span class="seoSummary">The <strong><code>:indeterminate</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents any form element whose state is indeterminate, such as checkboxes which have their HTML <code><a href="/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate">indeterminate</a></code> attribute set to <code>true</code>, radio buttons which are members of a group in which all radio buttons are unchecked, and indeterminate {{HTMLElement("progress")}} elements.</span></p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Selects any &lt;input&gt; whose state is indeterminate */
+<pre class="brush: css no-line-numbers">/* Selects any &lt;input&gt; whose state is indeterminate */
 input:indeterminate {
   background: lime;
 }</pre>
@@ -32,7 +32,7 @@ input:indeterminate {
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -42,7 +42,7 @@ input:indeterminate {
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div&gt;
+<pre class="brush: html">&lt;div&gt;
   &lt;input type="checkbox" id="checkbox"&gt;
   &lt;label for="checkbox"&gt;This label starts out lime.&lt;/label&gt;
 &lt;/div&gt;
@@ -53,14 +53,14 @@ input:indeterminate {
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css; highlight[5] notranslate">input:indeterminate + label {
+<pre class="brush: css; highlight[5]">input:indeterminate + label {
   background: lime;
 }
 </pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">var inputs = document.getElementsByTagName("input");
+<pre class="brush: js">var inputs = document.getElementsByTagName("input");
 
 for (var i = 0; i &lt; inputs.length; i++) {
   inputs[i].indeterminate = true;
@@ -73,12 +73,12 @@ for (var i = 0; i &lt; inputs.length; i++) {
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;progress&gt;
+<pre class="brush: html">&lt;progress&gt;
 </pre>
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css; highlight[5] notranslate">progress {
+<pre class="brush: css; highlight[5]">progress {
   margin: 4px;
 }
 

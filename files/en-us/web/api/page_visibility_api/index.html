@@ -76,7 +76,7 @@ tags:
 
 <p>The example, which pauses the video when you switch to another tab and plays again when you return to its tab, was created with the following code:</p>
 
-<pre class="brush: js notranslate">// Set the name of the hidden property and the change event for visibility
+<pre class="brush: js">// Set the name of the hidden property and the change event for visibility
 var hidden, visibilityChange;
 if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support
   hidden = "hidden";
@@ -150,7 +150,7 @@ if (typeof document.addEventListener === "undefined" || hidden === undefined) {
  <dd>An {{domxref("EventListener")}} providing the code to be called when the {{event("visibilitychange")}} event is fired.</dd>
 </dl>
 
-<pre class="brush: js notranslate">//startSimulation and pauseSimulation defined elsewhere
+<pre class="brush: js">//startSimulation and pauseSimulation defined elsewhere
 function handleVisibilityChange() {
   if (document.hidden) {
     pauseSimulation();

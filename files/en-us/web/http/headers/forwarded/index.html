@@ -31,7 +31,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">Forwarded: by=&lt;identifier&gt;;for=&lt;identifier&gt;;host=&lt;host&gt;;proto=&lt;http|https&gt;
+<pre class="brush: html">Forwarded: by=&lt;identifier&gt;;for=&lt;identifier&gt;;host=&lt;host&gt;;proto=&lt;http|https&gt;
 </pre>
 
 <h2 id="Directives">Directives</h2>
@@ -61,7 +61,7 @@ tags:
 
 <h3 id="Using_the_Forwarded_header">Using the <code>Forwarded</code> header</h3>
 
-<pre class="notranslate">Forwarded: for="_mdn"
+<pre>Forwarded: for="_mdn"
 
 # case insensitive
 Forwarded: For="[2001:db8:cafe::17]:4711"
@@ -77,7 +77,7 @@ Forwarded: for=192.0.2.43, for=198.51.100.17
 
 <p>If your application, server, or proxy supports the standardized <code>Forwarded</code> header, the {{HTTPHeader("X-Forwarded-For")}} header can be replaced. Note that IPv6 address are quoted and enclosed in square brackets in <code>Forwarded</code>.</p>
 
-<pre class="notranslate">X-Forwarded-For: 123.34.567.89
+<pre>X-Forwarded-For: 123.34.567.89
 Forwarded: for=123.34.567.89
 
 X-Forwarded-For: 192.0.2.43, "[2001:db8:cafe::17]"

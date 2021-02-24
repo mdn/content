@@ -2,26 +2,31 @@
 title: WindowClient.visibilityState
 slug: Web/API/WindowClient/visibilityState
 tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - WindowClient
-  - visibilityState
+- API
+- Experimental
+- Property
+- Reference
+- Service Workers
+- ServiceWorker
+- WindowClient
+- visibilityState
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
-<p>The <strong><code>visibilityState</code></strong> read-only property of the {{domxref("WindowClient")}} interface indicates the visibility of the current client. This value can be one of <code>"hidden"</code>, <code>"visible"</code>, or <code>"prerender"</code>.</p>
+<p>The <strong><code>visibilityState</code></strong> read-only property of the
+  {{domxref("WindowClient")}} interface indicates the visibility of the current client.
+  This value can be one of <code>"hidden"</code>, <code>"visible"</code>, or
+  <code>"prerender"</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>myVisState</em> = <em>windowClient</em>.visibilityState;</pre>
+<pre
+  class="brush: js">var <em>myVisState</em> = <em>windowClient</em>.visibilityState;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("DOMString")}} (See {{domxref("Document.visibilityState")}} for values).</p>
+<p>A {{domxref("DOMString")}} (See {{domxref("Document.visibilityState")}} for values).
+</p>
 
 <h2 id="Example">Example</h2>
 
@@ -46,23 +51,21 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#dom-windowclient-visibilitystate', 'visibilityState')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Service Workers', '#dom-windowclient-visibilitystate',
+        'visibilityState')}}</td>
+      <td>{{Spec2('Service Workers')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.WindowClient.visibilityState")}}</p>
-</div>

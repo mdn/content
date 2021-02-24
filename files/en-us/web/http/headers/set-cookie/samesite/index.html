@@ -19,7 +19,7 @@ tags:
  <li>Cookies with <code>SameSite=None</code> must now also specify the <code>Secure</code> attribute (they require a secure context/HTTPS).</li>
 </ul>
 
-<p>This article documents the new standard. See <a href="#Browser_compatibility">Browser Compatibility</a> below for information about specific versions where the behavior changed.</p>
+<p>This article documents the new standard. See <a href="#browser_compatibility">Browser Compatibility</a> below for information about specific versions where the behavior changed.</p>
 </div>
 
 <h2 id="Values">Values</h2>
@@ -50,24 +50,24 @@ tags:
 
 <p>Warnings like the ones below might appear in your console:</p>
 
-<pre class="syntaxbox notranslate">Cookie “<em>myCookie</em>” rejected because it has the “SameSite=None” attribute but is missing the “secure” attribute.
+<pre class="brush: html">Cookie “<em>myCookie</em>” rejected because it has the “SameSite=None” attribute but is missing the “secure” attribute.
 
 This Set-Cookie was blocked because it had the "SameSite=None" attribute but did not have the "Secure" attribute, which is required in order to use "SameSite=None".</pre>
 
 <p>The warning appears because any cookie that requests <code>SameSite=None</code> but is not marked <code>Secure</code> will be rejected.</p>
 
-<pre class="example-bad notranslate">Set-Cookie: flavor=choco; SameSite=None</pre>
+<pre class="example-bad">Set-Cookie: flavor=choco; SameSite=None</pre>
 
 <p>To fix this, you will have to add the <code>Secure</code> attribute to your <code>SameSite=None</code> cookies.</p>
 
-<pre class="example-good notranslate">Set-Cookie: flavor=choco; SameSite=None; <strong>Secure</strong></pre>
+<pre class="example-good">Set-Cookie: flavor=choco; SameSite=None; <strong>Secure</strong></pre>
 
-<p>A <a href="#Secure"><code>Secure</code></a> cookie is only sent to the server with an encrypted request over the HTTPS protocol. Note that insecure sites (<code>http:</code>) can't set cookies with the <code>Secure</code> directive.</p>
+<p>A <a href="#secure"><code>Secure</code></a> cookie is only sent to the server with an encrypted request over the HTTPS protocol. Note that insecure sites (<code>http:</code>) can't set cookies with the <code>Secure</code> directive.</p>
 
 <div class="notecard note">
 <p>On older browser versions you might get a warning that the cookie will be blocked in future. For example:</p>
 
-<pre class="syntaxbox notranslate">Cookie “<em>myCookie</em>” will be soon rejected because it has the “SameSite” attribute set to “None” or an invalid value, without the “secure” attribute. To know more about the “SameSite” attribute, read https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie/SameSite
+<pre class="brush: html">Cookie “<em>myCookie</em>” will be soon rejected because it has the “SameSite” attribute set to “None” or an invalid value, without the “secure” attribute. To know more about the “SameSite” attribute, read https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie/SameSite
 </pre>
 </div>
 
@@ -75,20 +75,20 @@ This Set-Cookie was blocked because it had the "SameSite=None" attribute but did
 
 <p>Recent versions of modern browsers provide a more secure default for <code>SameSite</code> to your cookies and so the following message might appear in your console:</p>
 
-<pre class="syntaxbox notranslate">Cookie “<em>myCookie</em>” has “SameSite” policy set to “Lax” because it is missing a “SameSite” attribute, and “SameSite=Lax” is the default value for this attribute.
+<pre class="brush: html">Cookie “<em>myCookie</em>” has “SameSite” policy set to “Lax” because it is missing a “SameSite” attribute, and “SameSite=Lax” is the default value for this attribute.
 </pre>
 
 <p>The warning appears because the <code>SameSite</code> policy for a cookie was not explicitly specified:</p>
 
-<pre class="example-bad notranslate">Set-Cookie: flavor=choco</pre>
+<pre class="example-bad">Set-Cookie: flavor=choco</pre>
 
 <p>You should explicitly communicate the intended <code>SameSite</code> policy for your cookie (rather than relying on browsers to apply <code>SameSite=Lax</code> automatically). This will also improve the experience across browsers as not all of them default to <code>Lax</code> yet.</p>
 
-<pre class="example-good notranslate">Set-Cookie: flavor=choco; <strong>SameSite=Lax</strong></pre>
+<pre class="example-good">Set-Cookie: flavor=choco; <strong>SameSite=Lax</strong></pre>
 
 <h2 id="Example">Example:</h2>
 
-<pre class="notranslate">RewriteEngine on
+<pre>RewriteEngine on
 RewriteBase "/"
 RewriteCond "%{HTTP_HOST}"       "^example\.org$" [NC]
 RewriteRule "^(.*)"              "https://www.example.org/index.html" [R=301,L,QSA]

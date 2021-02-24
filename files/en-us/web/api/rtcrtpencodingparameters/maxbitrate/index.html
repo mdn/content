@@ -2,28 +2,30 @@
 title: RTCRtpEncodingParameters.maxBitrate
 slug: Web/API/RTCRtpEncodingParameters/maxBitrate
 tags:
-  - API
-  - BPS
-  - Bandwidth
-  - Bit Rate
-  - Codec
-  - Encoding
-  - Property
-  - RTCRtpEncodingParameters
-  - Reference
-  - Settings
-  - WebRTC
-  - WebRTC API
-  - maxBitrate
-  - parameters
+- API
+- BPS
+- Bandwidth
+- Bit Rate
+- Codec
+- Encoding
+- Property
+- RTCRtpEncodingParameters
+- Reference
+- Settings
+- WebRTC
+- WebRTC API
+- maxBitrate
+- parameters
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The {{domxref("RTCRtpEncodingParameters")}} dictionary's <strong><code>maxBitrate</code></strong> property specifies the maximum number of bits per second to allow a track encoded with this encoding to use.</span></p>
+<p><span class="seoSummary">The {{domxref("RTCRtpEncodingParameters")}} dictionary's
+    <strong><code>maxBitrate</code></strong> property specifies the maximum number of bits
+    per second to allow a track encoded with this encoding to use.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>rtpEncodingParameters</em>.maxBitrate = <em>maxBitsPerSecond</em>;
+<pre class="brush: js"><em>rtpEncodingParameters</em>.maxBitrate = <em>maxBitsPerSecond</em>;
 
 <em>rtpEncodingParameters</em> = {
   maxBitrate: <em>maxBitsPerSecond</em>
@@ -34,27 +36,37 @@ tags:
 
 <h3 id="Value">Value</h3>
 
-<p>An unsigned long integer value specifying the maximum bandwidth this encoding is permitted to use for a track of media it encodes in terms of bits per second. Other parameters may further reduce the bandwidth used by the track; for example, {{domxref("RTCRtpEncodingParameters.maxFramerate", "maxFramerate")}} will, if set low enough, constrain the bandwidth as well.</p>
+<p>An unsigned long integer value specifying the maximum bandwidth this encoding is
+  permitted to use for a track of media it encodes in terms of bits per second. Other
+  parameters may further reduce the bandwidth used by the track; for example,
+  {{domxref("RTCRtpEncodingParameters.maxFramerate", "maxFramerate")}} will, if set low
+  enough, constrain the bandwidth as well.</p>
 
-<p>In addition, there's no guarantee that the network interface can support the specified bandwidth, in which case the actual bandwidth will be lower.</p>
+<p>In addition, there's no guarantee that the network interface can support the specified
+  bandwidth, in which case the actual bandwidth will be lower.</p>
 
-<p>This value is computed using the standard Transport Independent Application Specific Maximum (TIAS) bandwidth as defined by {{RFC(3890, "", "6.2.2")}}; this is the maximum bandwidth needed without considering protocol overheads from IP, TCP or UDP, and so forth.</p>
+<p>This value is computed using the standard Transport Independent Application Specific
+  Maximum (TIAS) bandwidth as defined by {{RFC(3890, "", "6.2.2")}}; this is the maximum
+  bandwidth needed without considering protocol overheads from IP, TCP or UDP, and so
+  forth.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebRTC 1.0','#dom-rtcrtpencodingparameters-maxbitrate','RTCRtpEncodingParameters.maxBitrate')}}</td>
-   <td>{{Spec2('WebRTC 1.0')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('WebRTC
+        1.0','#dom-rtcrtpencodingparameters-maxbitrate','RTCRtpEncodingParameters.maxBitrate')}}
+      </td>
+      <td>{{Spec2('WebRTC 1.0')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -64,5 +76,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("RTCRtpEncodingParameters.maxFramerate")}}</li>
+  <li>{{domxref("RTCRtpEncodingParameters.maxFramerate")}}</li>
 </ul>

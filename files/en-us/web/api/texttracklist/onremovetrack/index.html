@@ -2,67 +2,80 @@
 title: TextTrackList.onremovetrack
 slug: Web/API/TextTrackList/onremovetrack
 tags:
-  - API
-  - Event Handler
-  - HTML DOM
-  - Media
-  - Property
-  - Reference
-  - Removing Tracks
-  - TextTrack
-  - TextTrackList
-  - VideoTrackList
-  - onremovetrack
-  - remove
-  - removeTrack
-  - track
+- API
+- Event Handler
+- HTML DOM
+- Media
+- Property
+- Reference
+- Removing Tracks
+- TextTrack
+- TextTrackList
+- VideoTrackList
+- onremovetrack
+- remove
+- removeTrack
+- track
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The <strong>{{domxref("TextTrackList")}}</strong> <strong><code>onremovetrack</code></strong> event handler is called when the {{event("removetrack")}} event occurs, indicating that a text track has been removed from the media element, and therefore also from the <code>TextTrackList</code>.</span></p>
+<p><span class="seoSummary">The <strong>{{domxref("TextTrackList")}}</strong>
+    <strong><code>onremovetrack</code></strong> event handler is called when the
+    {{event("removetrack")}} event occurs, indicating that a text track has been removed
+    from the media element, and therefore also from the <code>TextTrackList</code>.</span>
+</p>
 
-<p>The event is passed into the event handler in the form of a {{domxref("TrackEvent")}} object, whose {{domxref("TrackEvent.track", "track")}} property identifies the track that was removed from the media element's <code>TextTrackList</code>.</p>
+<p>The event is passed into the event handler in the form of a {{domxref("TrackEvent")}}
+  object, whose {{domxref("TrackEvent.track", "track")}} property identifies the track
+  that was removed from the media element's <code>TextTrackList</code>.</p>
 
 <div class="note">
-<p><strong>Note:</strong> You can also add a handler for the <code>removetrack</code> event using {{domxref("EventTarget.addEventListener", "addEventListener()")}}.</p>
+  <p><strong>Note:</strong> You can also add a handler for the <code>removetrack</code>
+    event using {{domxref("EventTarget.addEventListener", "addEventListener()")}}.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>TextTrackList</em>.onremovetrack = <em>eventHandler</em>;</pre>
+<pre
+  class="brush: js"><em>TextTrackList</em>.onremovetrack = <em>eventHandler</em>;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>Set <code>onremovetrack</code> to a function that accepts as input a {{domxref("TrackEvent")}} object which indicates in its {{domxref("TrackEvent.track", "track")}} property which text track has been removed from the media element.</p>
+<p>Set <code>onremovetrack</code> to a function that accepts as input a
+  {{domxref("TrackEvent")}} object which indicates in its {{domxref("TrackEvent.track",
+  "track")}} property which text track has been removed from the media element.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>This simple example just fetches the current number of text tracks in the first media element whenever a track is removed from the media element.</p>
+<p>This simple example just fetches the current number of text tracks in the first media
+  element whenever a track is removed from the media element.</p>
 
 <pre class="brush: js">document.querySelectorAll("video, audio")[0].textTracks.onremovetrack = function(event) {
   myTrackCount = document.querySelectorAll("video, audio")[0].textTracks.length;
 };
 </pre>
 
-<p>The current number of text tracks remaining in the media element is obtained from <code>TextTrackList</code> property {{domxref("TextTrackList.length", "length")}}.</p>
+<p>The current number of text tracks remaining in the media element is obtained from
+  <code>TextTrackList</code> property {{domxref("TextTrackList.length", "length")}}.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#handler-tracklist-onremovetrack', 'TextTrackList: onremovetrack')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#handler-tracklist-onremovetrack', 'TextTrackList:
+        onremovetrack')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

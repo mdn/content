@@ -1,5 +1,5 @@
 ---
-title: '<meta>: The Document-level Metadata element'
+title: '<meta>: The metadata element'
 slug: Web/HTML/Element/meta
 tags:
   - Document
@@ -21,7 +21,7 @@ tags:
  <tbody>
   <tr>
    <th><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td>Metadata content. If the {{htmlattrxref("itemprop")}} attribute is present: <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content">Metadata content</a>. If the {{htmlattrxref("itemprop")}} attribute is present: <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th>Permitted content</th>
@@ -33,7 +33,13 @@ tags:
   </tr>
   <tr>
    <th>Permitted parents</th>
-   <td><code>&lt;meta charset&gt;</code>, <code>&lt;meta http-equiv&gt;</code>: a {{HTMLElement("head")}} element. If the {{htmlattrxref("http-equiv", "meta")}} is not an encoding declaration, it can also be inside a {{HTMLElement("noscript")}} element, itself inside a {{HTMLElement("head")}} element.</td>
+   <td>
+    <ul>
+     <li><code>&lt;meta charset&gt;</code>, <code>&lt;meta http-equiv&gt;</code>: a {{HTMLElement("head")}} element. If the {{htmlattrxref("http-equiv", "meta")}} is not an encoding declaration, it can also be inside a {{HTMLElement("noscript")}} element, itself inside a <code>&lt;head&gt;</code> element.</li>
+     <li><code>&lt;meta name&gt;</code>: any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content">metadata content</a>.</li>
+     <li><code>&lt;meta itemprop&gt;</code>: any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content">metadata content</a> or <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>.</li>
+    </ul>
+   </td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -50,13 +56,13 @@ tags:
  </tbody>
 </table>
 
-<p>The type of metadata provided by the <code>meta</code> element can be one of the following:</p>
+<p>The type of metadata provided by the <code>&lt;meta&gt;</code> element can be one of the following:</p>
 
 <ul>
- <li>If the {{htmlattrxref("name", "meta")}} attribute is set, the <code>meta</code> element provides <em>document-level metadata</em>, applying to the whole page.</li>
- <li>If the {{htmlattrxref("http-equiv", "meta")}} attribute is set, the <code>meta</code> element is a <em>pragma directive</em>, providing information equivalent to what can be given by a similarly-named HTTP header.</li>
- <li>If the {{htmlattrxref("charset", "meta")}} attribute is set, the <code>meta</code> element is a <em>charset declaration</em>, giving the character encoding in which the document is encoded.</li>
- <li>If the {{htmlattrxref("itemprop")}} attribute is set, the <code>meta</code> element provides <em>user-defined metadata</em>.</li>
+ <li>If the {{htmlattrxref("name", "meta")}} attribute is set, the <code>&lt;meta&gt;</code> element provides <em>document-level metadata</em>, applying to the whole page.</li>
+ <li>If the {{htmlattrxref("http-equiv", "meta")}} attribute is set, the <code>&lt;meta&gt;</code> element is a <em>pragma directive</em>, providing information equivalent to what can be given by a similarly-named HTTP header.</li>
+ <li>If the {{htmlattrxref("charset", "meta")}} attribute is set, the <code>&lt;meta&gt;</code> element is a <em>charset declaration</em>, giving the character encoding in which the document is encoded.</li>
+ <li>If the {{htmlattrxref("itemprop")}} attribute is set, the <code>&lt;meta&gt;</code> element provides <em>user-defined metadata</em>.</li>
 </ul>
 
 <h2 id="Attributes">Attributes</h2>
@@ -69,7 +75,7 @@ tags:
 
 <dl>
  <dt>{{htmlattrdef("charset")}}</dt>
- <dd>This attribute declares the document's character encoding. If the attribute is present, its value must be an ASCII case-insensitive match for the string "<code>utf-8</code>", because UTF-8 is the only valid encoding for HTML5 documents. <code>meta</code> elements which declare a character encoding must be located entirely within the first 1024 bytes of the document.</dd>
+ <dd>This attribute declares the document's character encoding. If the attribute is present, its value must be an ASCII case-insensitive match for the string "<code>utf-8</code>", because UTF-8 is the only valid encoding for HTML5 documents. <code>&lt;meta&gt;</code> elements which declare a character encoding must be located entirely within the first 1024 bytes of the document.</dd>
  <dt>{{htmlattrdef("content")}}</dt>
  <dd>This attribute contains the value for the {{htmlattrxref("http-equiv", "meta")}} or {{htmlattrxref("name", "meta")}} attribute, depending on which is used.</dd>
  <dt>{{htmlattrdef("http-equiv")}}</dt>
@@ -82,7 +88,7 @@ tags:
    <p>Allows page authors to define a <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">content policy</a> for the current page. Content policies mostly specify allowed server origins and script endpoints which help guard against cross-site scripting attacks.</p>
   </li>
   <li><code>content-type</code>
-   <p>Declares the <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a> and character encoding of the document. If specified, the <code>content</code> attribute must have the value "<code>text/html; charset=utf-8</code>". This is equivalent to a <code>meta</code> element with the {{htmlattrxref("charset", "meta")}} attribute specified, and carries the same restriction on placement within the document. <strong>Note:</strong> Can only be used in documents served with a <code>text/html</code> — not in documents served with an XML MIME type.</p>
+   <p>Declares the <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a> and character encoding of the document. If specified, the <code>content</code> attribute must have the value "<code>text/html; charset=utf-8</code>". This is equivalent to a <code>&lt;meta&gt;</code> element with the {{htmlattrxref("charset", "meta")}} attribute specified, and carries the same restriction on placement within the document. <strong>Note:</strong> Can only be used in documents served with a <code>text/html</code> — not in documents served with an XML MIME type.</p>
   </li>
   <li><code>default-style</code>
    <p>Sets the name of the default <a href="/en-US/docs/Web/CSS">CSS style sheet</a> set.</p>
@@ -122,7 +128,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: html notranslate">&lt;meta charset="utf-8"&gt;
+<pre class="brush: html">&lt;meta charset="utf-8"&gt;
 
 &lt;!-- Redirect page after 3 seconds --&gt;
 &lt;meta http-equiv="refresh" content="3;url=https://www.mozilla.org"&gt;

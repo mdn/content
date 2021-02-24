@@ -37,7 +37,7 @@ tags:
  <li><code>chrome.*</code> used by Chrome and Opera.</li>
 </ul>
 
-<p>Firefox also supports the <code>chrome.*</code> namespace for APIs that are compatible with Chrome, primarily to assist with <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension">porting</a>. However, using the <code>browser.*</code> namespace is preferred.  In addition to being the proposed standard, <code>browser.*</code> uses promises—a modern and convenient mechanism for handling asynchronous events.</p>
+<p>Firefox also supports the <code>chrome.*</code> namespace for APIs that are compatible with Chrome, primarily to assist with <a href="https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/">porting</a>. However, using the <code>browser.*</code> namespace is preferred.  In addition to being the proposed standard, <code>browser.*</code> uses promises—a modern and convenient mechanism for handling asynchronous events.</p>
 
 <p>Only in the most trivial extensions is namespace likely to be the only cross-platform issue that has to be addressed. It’s therefore rarely, if ever, helpful to attempt to address this issue alone. The best approach is to address this with asynchronous event handling.</p>
 
@@ -74,7 +74,7 @@ tags:
 
 <p>So, for example, this <code>manifest.json</code> code makes the polyfill available to your background scripts:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
  // ...
  "background": {
    "scripts": [
@@ -98,11 +98,11 @@ tags:
 
 <ol>
  <li><strong>Lack of support for an entire function.</strong><br>
-  For example, at the time of writing, Edge didn’t provide support for the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy#Browser_compatibility">privacy</a></code> function.</li>
+  For example, at the time of writing, Edge didn’t provide support for the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy#browser_compatibility">privacy</a></code> function.</li>
  <li><strong>Variations in the support for features within a function.</strong><br>
-  For example, at the time of writing, Firefox doesn’t support the notification function method <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onButtonClicked#Browser_compatibility">onButtonClicked</a></code> while Firefox is the only browser that supports <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onShown#Browser_compatibility">onShown</a></code>.</li>
+  For example, at the time of writing, Firefox doesn’t support the notification function method <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onButtonClicked#browser_compatibility">onButtonClicked</a></code> while Firefox is the only browser that supports <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onShown#browser_compatibility">onShown</a></code>.</li>
  <li><strong>Proprietary functions, supporting browser-specific features.</strong><br>
-  For example, at the time of writing, containers was a Firefox-specific feature supported by the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities#Browser_compatibility">contextualIdentities</a></code> function.</li>
+  For example, at the time of writing, containers was a Firefox-specific feature supported by the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities#browser_compatibility">contextualIdentities</a></code> function.</li>
 </ol>
 
 <p>You can find details about the support for the extension APIs among the four main browsers and Firefox for Android on the Mozilla Developer Network <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">Browser support for JavaScript APIs</a> page. Browser compatibility information is also included with each function and its methods, types, and events in the Mozilla Developer Network <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API">JavaScript APIs</a> reference pages.</p>
@@ -117,7 +117,7 @@ tags:
 
 <p>The following code enables you to perform a runtime check:</p>
 
-<pre class="brush: js notranslate">if (typeof &lt;function&gt; === "function") {
+<pre class="brush: js">if (typeof &lt;function&gt; === "function") {
    // safe to use the function
 }</pre>
 
@@ -127,11 +127,11 @@ tags:
 
 <ol>
  <li><strong>Extension information attributes.</strong><br>
-  For example, at the time of writing, Firefox and Opera include the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer#Browser_compatibility">developer</a></code> key for details about the developer, as well as the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#Browser_compatibility">author</a></code>, of the extension.</li>
+  For example, at the time of writing, Firefox and Opera include the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer#browser_compatibility">developer</a></code> key for details about the developer, as well as the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#browser_compatibility">author</a></code>, of the extension.</li>
  <li><strong>Extension features.</strong><br>
-  For example, at the time of writing, Edge did not support the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#Browser_compatibility">commands</a></code> key that enables shortcut keys to be defined for an extension.</li>
+  For example, at the time of writing, Edge did not support the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#browser_compatibility">commands</a></code> key that enables shortcut keys to be defined for an extension.</li>
  <li><strong>Key optionality.</strong><br>
-  For example, at the time of writing, the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#Browser_compatibility">author</a></code> key is mandatory in Edge, but optional in the other main browsers.</li>
+  For example, at the time of writing, the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#browser_compatibility">author</a></code> key is mandatory in Edge, but optional in the other main browsers.</li>
 </ol>
 
 <p>Browser compatibility information is included with each key in the Mozilla Developer Network <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json"><code>manifest.json</code> key reference pages</a>.</p>
@@ -176,7 +176,7 @@ tags:
     <p>No</p>
    </td>
    <td>
-    <p><a href="/en-US/Add-ons/WebExtensions/web-ext_command_reference">web-ext</a></p>
+    <p><a href="https://extensionworkshop.com/documentation/develop/web-ext-command-reference/">web-ext</a></p>
    </td>
    <td>
     <p>Automatic, a few seconds<sup>1</sup></p>

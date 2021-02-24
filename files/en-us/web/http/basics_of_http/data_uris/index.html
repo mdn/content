@@ -20,7 +20,7 @@ tags:
 
 <p>Data URLs are composed of four parts: a prefix (<code>data:</code>), a <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a> indicating the type of data, an optional <code>base64</code> token if non-textual, and the data itself:</p>
 
-<pre class="syntaxbox notranslate">data:[&lt;mediatype&gt;][;base64],&lt;data&gt;
+<pre class="brush: html">data:[&lt;mediatype&gt;][;base64],&lt;data&gt;
 </pre>
 
 <p>The <code>mediatype</code> is a <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a> string, such as <code>'image/jpeg'</code> for a JPEG image file. If omitted, defaults to <code>text/plain;charset=US-ASCII</code></p>
@@ -52,7 +52,7 @@ tags:
 
 <p>Base64 encoding of a file or string on Linux and Mac OS X systems can be achieved using the command-line <code>base64</code> (or, as an alternative, the <code>uuencode</code> utility with <code>-m</code> argument).</p>
 
-<pre class="brush: bash notranslate">echo -n hello|base64
+<pre class="brush: bash">echo -n hello|base64
 # outputs to console: aGVsbG8=
 
 echo -n hello&gt;a.txt
@@ -67,13 +67,13 @@ base64 a.txt&gt;b.txt
 
 <p>On Windows, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.convert.tobase64string?view=net-5.0">Convert.ToBase64String</a> from PowerShell can be used to perform the Base64 encoding:</p>
 
-<pre class="syntaxbox notranslate">[convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes("hello"))
+<pre class="brush: html">[convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes("hello"))
 # outputs to console: aGVsbG8=
 </pre>
 
 <p>Alternatively, a GNU/Linux shell (such as <a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux">WSL</a>) provides the utility <code>base64</code>:</p>
 
-<pre class="syntaxbox notranslate">bash$ echo -n hello | base64
+<pre class="brush: html">bash$ echo -n hello | base64
 # outputs to console: aGVsbG8=
 </pre>
 
@@ -81,19 +81,19 @@ base64 a.txt&gt;b.txt
 
 <p>This section describes problems that commonly occur when creating and using <code>data</code> URLs.</p>
 
-<pre class="notranslate">data:text/html,lots of text...&lt;p&gt;&lt;a name%3D"bottom"&gt;bottom&lt;/a&gt;?arg=val
+<pre>data:text/html,lots of text...&lt;p&gt;&lt;a name%3D"bottom"&gt;bottom&lt;/a&gt;?arg=val
 </pre>
 
 <p>This represents an HTML resource whose contents are:</p>
 
-<pre class="notranslate">lots of text...&lt;p&gt;&lt;a name="bottom"&gt;bottom&lt;/a&gt;?arg=val
+<pre>lots of text...&lt;p&gt;&lt;a name="bottom"&gt;bottom&lt;/a&gt;?arg=val
 </pre>
 
 <dl>
  <dt>Syntax</dt>
  <dd>The format for <code>data</code> URLs is very simple, but it's easy to forget to put a comma before the "data" segment, or to incorrectly encode the data into base64 format.</dd>
  <dt>Formatting in HTML</dt>
- <dd>A <code>data</code> URL provides a file within a file, which can potentially be very wide relative to the width of the enclosing document. As a URL, the <code>data</code> should be formatable with whitespace (linefeed, tab, or spaces), but there are practical issues that arise <a class="external" href="http://bugzilla.mozilla.org/show_bug.cgi?id=73026#c12">when using base64 encoding</a>.</dd>
+ <dd>A <code>data</code> URL provides a file within a file, which can potentially be very wide relative to the width of the enclosing document. As a URL, the <code>data</code> should be formatable with whitespace (linefeed, tab, or spaces), but there are practical issues that arise <a href="http://bugzilla.mozilla.org/show_bug.cgi?id=73026#c12">when using base64 encoding</a>.</dd>
  <dt>Length limitations</dt>
  <dd>Although Firefox supports <code>data</code> URLs of essentially unlimited length, browsers are not required to support any particular maximum length of data. For example, the Opera 11 browser limited URLs to 65535 characters long which limits <code>data</code> URLs to 65529 characters (65529 characters being the length of the encoded data, not the source, if you use the plain <code>data:</code>, without specifying a MIME type).</dd>
  <dt>Lack of error handling</dt>

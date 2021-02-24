@@ -38,7 +38,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">self.addEventListener('push', function(event) {
+<pre class="brush: js">self.addEventListener('push', function(event) {
   var obj = event.data.json();
 
   if(obj.action === 'subscribe' || obj.action === 'unsubscribe') {
@@ -68,7 +68,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.PushMessageData")}}</p>
-</div>

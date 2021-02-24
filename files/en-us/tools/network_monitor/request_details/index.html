@@ -2,7 +2,7 @@
 title: Network request details
 slug: Tools/Network_Monitor/request_details
 tags:
-  - '110n:priority'
+  - 110n:priority
   - Debugging
   - Dev Tools
   - Firefox
@@ -18,7 +18,7 @@ tags:
 
 <p>Clicking on a row displays a new pane in the right-hand side of the network monitor, which provides more detailed information about the request.</p>
 
-<p><img alt="Screenshot of the Network Request details pane, without callouts for the close-pane button and the detail tabs" src="https://mdn.mozillademos.org/files/17285/Network-details-Fx78.png" style="display: block; height: 399px; margin-left: auto; margin-right: auto; width: 520px;"></p>
+<p><img alt="Screenshot of the Network Request details pane, without callouts for the close-pane button and the detail tabs" src="network-details-fx78.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <div class="notecard note">
 <p>The screenshots and descriptions in this section reflect Firefox 78. Earlier versions appeared similarly, but might not include some functionality.</p>
@@ -37,7 +37,7 @@ tags:
  <li><strong><a href="#stack_trace_tab">Stack trace</a></strong> (only when the request has a stack trace, e.g. a script called by another script).</li>
 </ul>
 
-<p>Clicking the icon at the right-hand end of the <a href="/en-US/docs/Tools/Network_Monitor#Toolbar">toolbar</a> closes the details pane and returns you to the list view.</p>
+<p>Clicking the icon at the right-hand end of the <a href="/en-US/docs/Tools/Network_Monitor#toolbar">toolbar</a> closes the details pane and returns you to the list view.</p>
 
 <h3 id="Headers_tab">Headers tab</h3>
 
@@ -66,7 +66,7 @@ tags:
 
 <ul>
  <li>Filter the headers in the Response Headers and Request Headers sections.</li>
- <li><strong>Block</strong> the domain involved in this request. The domain is added to the <a href="/en-US/docs/Tools/Network_Monitor/request_list#Blocking_specific_URLs">Blocking sidebar</a>.</li>
+ <li><strong>Block</strong> the domain involved in this request. The domain is added to the <a href="/en-US/docs/Tools/Network_Monitor/request_list#blocking_specific_urls">Blocking sidebar</a>.</li>
  <li>Resend the request. The <strong>Resend</strong> button opens a menu with two items:
   <ul>
    <li><strong>Resend</strong>: Resends the request.</li>
@@ -106,13 +106,13 @@ tags:
 <p>Note that the keys in the response header are all in lowercase, while the request headers keys are not. <a href="https://tools.ietf.org/html/rfc7540#section-8.1.2">HTTP/2 requires that all headers be lowercase</a>; response headers are shown as they are received from the server. (There may be some exceptions, such as <code>X-Firefox-Spdy</code>, which is added by Firefox.)</p>
 </div>
 
-<p><img alt="Screenshot showing the Request headers section of the Request details pane" src="https://mdn.mozillademos.org/files/17287/Response-headers-Fx78.png" style="border: 1px solid black; display: block; height: 324px; margin: 0px auto; width: 523px;"></p>
+<p><img alt="Screenshot showing the Request headers section of the Request details pane" src="response-headers-fx78.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
 <p>You can copy some or all of the response header in JSON format by using the context menu:</p>
 
-<p><img alt='Screenshot showing the Response headers pane, and its context menu with "Copy" and "Copy all" items' src="https://mdn.mozillademos.org/files/17286/Copy-response-headers-Fx78.png" style="border: 1px solid black; display: block; height: 167px; margin: 0px auto; width: 514px;">If you select <strong>Copy</strong>, a single key word, value pair is copied. If you select <strong>Copy All</strong>, the entire header is copied in JSON format, giving you something like this (after running the results through a JSON validator):</p>
+<p><img alt='Screenshot showing the Response headers pane, and its context menu with "Copy" and "Copy all" items' src="copy-response-headers-fx78.png" style="border: 1px solid black; display: block; margin: 0px auto;">If you select <strong>Copy</strong>, a single key word, value pair is copied. If you select <strong>Copy All</strong>, the entire header is copied in JSON format, giving you something like this (after running the results through a JSON validator):</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "Response headers (1.113 KB)": {
     "headers": [
       {
@@ -273,17 +273,17 @@ tags:
 
 <p>A <strong>Raw</strong> toggle button in the section heading controls whether the headers are shown with formatting, or as plain, unformatted text.</p>
 
-<p><img alt="Screenshot showing the Request headers section of the Request details pane" src="https://mdn.mozillademos.org/files/17288/Request-headers-Fx78.png" style="border: 1px solid black; display: block; height: 108px; margin: 0px auto; width: 523px;"></p>
+<p><img alt="Screenshot showing the Request headers section of the Request details pane" src="request-headers-fx78.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
 <h3 id="Cookies_tab">Cookies tab</h3>
 
 <p>This tab lists full details of any cookies sent with the request or response:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16265/network_cookies.png" style="border: 1px solid black; display: block; height: 748px; margin-left: auto; margin-right: auto; width: 2276px;"></p>
+<p><img alt="" src="network_cookies.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>As with headers, you can filter the list of cookies displayed. The full list of cookie attributes is shown—see the following screenshot showing Response cookies with further attributes shown.</p>
 
-<p><img alt="cookies panel in firefox devtools network monitor, showing a number of cookie attributes including samesite" src="https://mdn.mozillademos.org/files/16108/highlight-samesite-attribute.png" style="display: block; height: 394px; margin: 0px auto; width: 1047px;"></p>
+<p><img alt="cookies panel in firefox devtools network monitor, showing a number of cookie attributes including samesite" src="highlight-samesite-attribute.png" style="display: block; margin: 0px auto;"></p>
 
 <p>The <code>samesite</code> attribute has been shown since Firefox 62 ({{bug("1452715")}}).</p>
 
@@ -291,21 +291,21 @@ tags:
 
 <p>This tab displays the GET parameters and POST data of a request:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16333/params.png" style="display: block; height: 215px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+<p><img alt="" src="params.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h3 id="Response_tab">Response tab</h3>
 
 <p>The complete content of the response. If the response is HTML, JS, or CSS, it will be shown as text:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16268/network_response.png" style="border: 1px solid black; display: block; height: 747px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+<p><img alt="" src="network_response.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>If the response is JSON, it will be shown as an inspectable object:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16332/response_json.png" style="display: block; height: 268px; margin: 0 auto; width: 900px;"></p>
+<p><img alt="" src="response_json.png" style="display: block; margin: 0 auto;"></p>
 
 <p>If the response is an image, the tab displays a preview:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16331/response_pane_image.png" style="display: block; height: 347px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+<p><img alt="" src="response_pane_image.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>For network responses that are initiated by a <a href="/en-US/docs/Web/API/WebSockets_API">WebSocket</a> connection, the details pane shows any associated messages. For more information, see <a href="/en-US/docs/Tools/Network_Monitor/Inspecting_web_sockets">Inspecting web sockets</a>.</p>
 
@@ -313,7 +313,7 @@ tags:
 
 <p>If the response is cached (i.e. a 304), the Cache tab displays details about that cached resource.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16329/response_cache.png" style="border: 1px solid black; display: block; height: 245px; margin: 0px auto; width: 567px;"></p>
+<p><img alt="" src="response_cache.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
 <p>These details include:</p>
 
@@ -334,7 +334,7 @@ tags:
 
 <p>The Timings tab provides information about how long each stage of a network request took, with a more detailed, annotated, view of the timeline bar, so it is easy to locate performance bottlenecks.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16998/network-timings-tab.png" style="border: 1px solid black; display: block; height: 508px; margin-left: auto; margin-right: auto; width: 1000px;"></p>
+<p><img alt="" src="network-timings-tab.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>This tab can include the following sections.</p>
 
@@ -405,7 +405,7 @@ tags:
 
 <p>If the site is being served over HTTPS, you get an extra tab labeled "Security". This contains details about the secure connection used including the protocol, the cipher suite, and certificate details:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16269/network_security.png" style="border: 1px solid black; display: block; height: 748px; margin-left: auto; margin-right: auto; width: 2276px;"></p>
+<p><img alt="" src="network_security.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>The Security tab shows a warning for security weaknesses. Currently it warns you about two weaknesses:</p>
 
@@ -414,20 +414,20 @@ tags:
  <li>Using the RC4 cipher</li>
 </ol>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10165/security-warning.png" style="display: block; height: 93px; margin-left: auto; margin-right: auto; width: 591px;"></p>
+<p><img alt="" src="security-warning.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h3 id="Stack_trace_tab">Stack trace tab</h3>
 
 <p>Stack traces are shown in the <em>Stack Trace</em> tab, for responses that have a stack trace of course.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16270/network_stack_trace.png" style="border: 1px solid black; display: block; height: 205px; margin: 0px auto; width: 900px;"></p>
+<p><img alt="" src="network_stack_trace.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
 <h2 id="Network_Monitor_Features">Network Monitor Features</h2>
 
 <p>The following articles cover different aspects of using the network monitor:</p>
 
 <ul>
- <li><a href="/en-US/docs/Tools/Network_Monitor/Toolbar">Toolbar</a></li>
+ <li><a href="/en-US/docs/Tools/Network_Monitor/toolbar">Toolbar</a></li>
  <li><a href="/en-US/docs/Tools/Network_Monitor/request_list">Network request list</a></li>
  <li><a href="/en-US/docs/Tools/Network_Monitor/recording">Network traffic recording</a></li>
  <li><a href="/en-US/docs/Tools/Network_Monitor/Performance_Analysis">Performance analysis</a></li>

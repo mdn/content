@@ -2,23 +2,30 @@
 title: HTMLCanvasElement.mozOpaque
 slug: Web/API/HTMLCanvasElement/mozOpaque
 tags:
-  - API
-  - Canvas
-  - Deprecated
-  - HTMLCanvasElement
-  - Non-standard
-  - Property
-  - Reference
+- API
+- Canvas
+- Deprecated
+- HTMLCanvasElement
+- Non-standard
+- Property
+- Reference
 ---
 <div>{{APIRef("Canvas API")}}{{non-standard_header}}</div>
 
-<p>The non-standard <strong><code>HTMLCanvasElement.mozOpaque</code></strong> property is a {{jsxref("Boolean")}} reflecting the {{htmlattrxref("moz-opaque", "canvas")}} HTML attribute of the {{HTMLElement("canvas")}} element. It lets the canvas know whether or not translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized.</p>
+<p>The non-standard <strong><code>HTMLCanvasElement.mozOpaque</code></strong> property is
+  a {{jsxref("Boolean")}} reflecting the {{htmlattrxref("moz-opaque", "canvas")}} HTML
+  attribute of the {{HTMLElement("canvas")}} element. It lets the canvas know whether or
+  not translucency will be a factor. If the canvas knows there's no translucency, painting
+  performance can be optimized.</p>
 
-<p class="note">This has been standardized as setting the <code>alpha</code> option to <code>false</code> when creating a drawing context with {{domxref("HTMLCanvasElement.getContext()")}}. Use of <code>mozOpaque</code> should be avoided. Firefox will stop supporting it in the future.</p>
+<p class="note">This has been standardized as setting the <code>alpha</code> option to
+  <code>false</code> when creating a drawing context with
+  {{domxref("HTMLCanvasElement.getContext()")}}. Use of <code>mozOpaque</code> should be
+  avoided. Firefox will stop supporting it in the future.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>opaque</em> = <em>canvas</em>.mozOpaque;
+<pre class="brush: js">var <em>opaque</em> = <em>canvas</em>.mozOpaque;
 <em>canvas</em>.mozOpaque = true;
 </pre>
 
@@ -29,7 +36,9 @@ tags:
 <pre class="brush: html">&lt;canvas id="canvas" width="300" height="300" moz-opaque&gt;&lt;/canvas&gt;
 </pre>
 
-<p>You can get or set the <code>mozOpaque</code> property. For example, you could conditionally set it to <code>true</code> if <code>mimeType == 'image/jpeg'</code>, or similar, to gain performance in your application when translucency is not needed.</p>
+<p>You can get or set the <code>mozOpaque</code> property. For example, you could
+  conditionally set it to <code>true</code> if <code>mimeType == 'image/jpeg'</code>, or
+  similar, to gain performance in your application when translucency is not needed.</p>
 
 <pre class="brush: js">var canvas = document.getElementById('canvas');
 console.log(canvas.mozOpaque); // true
@@ -48,7 +57,10 @@ canvas.mozOpaque = false;
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The interface defining it, {{domxref("HTMLCanvasElement")}}.</li>
- <li>The {{htmlattrxref("moz-opaque", "canvas")}} HTML attribute of the {{HTMLElement("canvas")}} element.</li>
- <li><a href="https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/">Optimizing your JavaScript game for Firefox OS</a></li>
+  <li>The interface defining it, {{domxref("HTMLCanvasElement")}}.</li>
+  <li>The {{htmlattrxref("moz-opaque", "canvas")}} HTML attribute of the
+    {{HTMLElement("canvas")}} element.</li>
+  <li><a
+      href="https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/">Optimizing
+      your JavaScript game for Firefox OS</a></li>
 </ul>

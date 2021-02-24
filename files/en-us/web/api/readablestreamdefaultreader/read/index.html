@@ -11,11 +11,14 @@ tags:
 ---
 <div>{{APIRef("Streams")}}</div>
 
-<p class="summary">The <strong><code>read()</code></strong> method of the {{domxref("ReadableStreamDefaultReader")}} interface returns a promise providing access to the next chunk in the stream's internal queue.</p>
+<p class="summary">The <strong><code>read()</code></strong> method of the
+  {{domxref("ReadableStreamDefaultReader")}} interface returns a {{jsxref("Promise")}} providing access
+  to the next chunk in the stream's internal queue.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>promise</em> = <em>readableStreamDefaultReader</em>.read();</pre>
+<pre
+  class="brush: js">var <em>promise</em> = <em>readableStreamDefaultReader</em>.read();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -23,28 +26,41 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{jsxref("Promise")}}, which fulfills/rejects with a result depending on the state of the stream. The different possibilities are as follows:</p>
+<p>A {{jsxref("Promise")}}, which fulfills/rejects with a result depending on the state of
+  the stream. The different possibilities are as follows:</p>
 
 <ul>
- <li>If a chunk is available, the promise will be fulfilled with an object of the form <code>{ value: theChunk, done: false }</code>.</li>
- <li>If the stream becomes closed, the promise will be fulfilled with an object of the form <code>{ value: undefined, done: true }</code>.</li>
- <li>If the stream becomes errored, the promise will be rejected with the relevant error.</li>
+  <li>If a chunk is available, the promise will be fulfilled with an object of the form
+    <code>{ value: theChunk, done: false }</code>.</li>
+  <li>If the stream becomes closed, the promise will be fulfilled with an object of the
+    form <code>{ value: undefined, done: true }</code>.</li>
+  <li>If the stream becomes errored, the promise will be rejected with the relevant error.
+  </li>
 </ul>
 
 <h3 id="Exceptions">Exceptions</h3>
 
 <dl>
- <dt>TypeError</dt>
- <dd>The source object is not a <code>ReadableStreamDefaultReader</code>, or the stream has no owner.</dd>
+  <dt>TypeError</dt>
+  <dd>The source object is not a <code>ReadableStreamDefaultReader</code>, or the stream
+    has no owner.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Example_1_-_simple_example">Example 1 - simple example</h3>
 
-<p>This example shows the basic API usage, but doesn't try to deal with complications like stream chunks not ending on line boundaries for example.</p>
+<p>This example shows the basic API usage, but doesn't try to deal with complications like
+  stream chunks not ending on line boundaries for example.</p>
 
-<p>In this example <code>stream</code> is a previously-created custom <code>ReadableStream</code>. It is read using a {{domxref("ReadableStreamDefaultReader")}} created using <code>getReader()</code>. (see our <a href="https://mdn.github.io/dom-examples/streams/simple-random-stream/">Simple random stream example</a> for the full code). Each chunk is read sequentially and output to the UI as an array of UTF-8 bytes, until the stream has finished being read, at which point we return out of the recursive function and print the entire stream to another part of the UI.</p>
+<p>In this example <code>stream</code> is a previously-created custom
+  <code>ReadableStream</code>. It is read using a
+  {{domxref("ReadableStreamDefaultReader")}} created using <code>getReader()</code>. (see
+  our <a href="https://mdn.github.io/dom-examples/streams/simple-random-stream/">Simple
+    random stream example</a> for the full code). Each chunk is read sequentially and
+  output to the UI as an array of UTF-8 bytes, until the stream has finished being read,
+  at which point we return out of the recursive function and print the entire stream to
+  another part of the UI.</p>
 
 <pre class="brush: js">function fetchStream() {
   const reader = stream.getReader();
@@ -76,16 +92,19 @@ tags:
   });
 }</pre>
 
-<h3 id="Example_2_-_handling_text_line_by_line">Example 2 - handling text line by line</h3>
+<h3 id="Example_2_-_handling_text_line_by_line">Example 2 - handling text line by line
+</h3>
 
-<p>This example shows how you might fetch a text file and handle it as a stream of text lines. It deals with stream chunks not ending on line boundaries and converting from Uint8Array to strings.</p>
+<p>This example shows how you might fetch a text file and handle it as a stream of text
+  lines. It deals with stream chunks not ending on line boundaries and converting from
+  Uint8Array to strings.</p>
 
 <pre class="brush: js">async function* makeTextFileLineIterator(fileURL) {
   const utf8Decoder = new TextDecoder("utf-8");
   let response = await fetch(fileURL);
   let reader = response.body.getReader();
   let {value: chunk, done: readerDone} = await reader.read();
-  chunk = chunk ? utf8Decoder.decode(chunk) : "";
+  chunk = chunk ? utf8Decoder.decode(chunk, {stream: true}) : "";
 
   let re = /\r\n|\n|\r/gm;
   let startIndex = 0;
@@ -99,7 +118,7 @@ tags:
       }
       let remainder = chunk.substr(startIndex);
       ({value: chunk, done: readerDone} = await reader.read());
-      chunk = remainder + (chunk ? utf8Decoder.decode(chunk) : "");
+      chunk = remainder + (chunk ? utf8Decoder.decode(chunk, {stream: true}) : "");
       startIndex = re.lastIndex = 0;
       continue;
     }
@@ -119,18 +138,18 @@ for await (let line of makeTextFileLineIterator(urlOfFile)) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Streams","#default-reader-read","read()")}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("Streams","#default-reader-read","read()")}}</td>
+      <td>{{Spec2('Streams')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

@@ -76,7 +76,7 @@ slug: Mozilla/Developer_guide/Eclipse/Eclipse_CDT_Manual_Setup
 
 <p>Select "C/C++ &gt; Build &gt; Console" and set "Limit console output (number of lines)" to something large, like "1000000".</p>
 
-<p>Eclipse CDT will try to format C/C++ code that you add as you type. However, its default formats are not a good match to <a href="/en-US/docs/Mozilla/Developer_Guide/Coding_Style" title="Mozilla Coding Style Guide">Mozilla's style rules</a>. Download this <a href="/@api/deki/files/6241/=eclipse-formatter-for-mozilla.xml">first pass at an Eclipse formatter configuration for Mozilla C/C++ coding style</a>, and install it by opening the workspace preferences, selecting "C/C++ &gt; Code Style &gt; Formatter", and then using the "Import" button to import that file. The "Active profile" field should then automatically change to "Mozilla". Depending on the area of the code that you work on, you may need to tweak this configuration using the "Edit" button. (Note that the format settings under "General &gt; Editors &gt; Text Editors" have no effect in C/C++ views, since the C/C++ settings are more specific and override those settings. However, you may still want to tweak those settings if you'll be editing other file types in Eclipse.)</p>
+<p>Eclipse CDT will try to format C/C++ code that you add as you type. However, its default formats are not a good match to <a href="/en-US/docs/Mozilla/Developer_guide/Coding_Style" title="Mozilla Coding Style Guide">Mozilla's style rules</a>. Download this <a href="/@api/deki/files/6241/=eclipse-formatter-for-mozilla.xml">first pass at an Eclipse formatter configuration for Mozilla C/C++ coding style</a>, and install it by opening the workspace preferences, selecting "C/C++ &gt; Code Style &gt; Formatter", and then using the "Import" button to import that file. The "Active profile" field should then automatically change to "Mozilla". Depending on the area of the code that you work on, you may need to tweak this configuration using the "Edit" button. (Note that the format settings under "General &gt; Editors &gt; Text Editors" have no effect in C/C++ views, since the C/C++ settings are more specific and override those settings. However, you may still want to tweak those settings if you'll be editing other file types in Eclipse.)</p>
 
 <p>Select "C/C++ &gt; Editor" and set "Workspace default" to "Doxygen".</p>
 
@@ -126,7 +126,7 @@ slug: Mozilla/Developer_guide/Eclipse/Eclipse_CDT_Manual_Setup
 <div class="warning">
 <p><strong>If the main object directory for your source tree is a Fennec build</strong>: In the "CDT GCC Build Output Parser", change the compiler command pattern to</p>
 
-<pre class="notranslate">(.*gcc)|(.*[gc]\+\+)|(clang)</pre>
+<pre>(.*gcc)|(.*[gc]\+\+)|(clang)</pre>
 
 <p>(before this change it should have been "(gcc)|([gc]\+\+)|(clang)"). This pattern is what CDT uses to identify compiler commands when parsing the build output. By default, it recognizes commands of the form "gcc", "g++", "c++", and "clang". This is fine for a desktop build, where the commands are in fact "gcc" and "g++". For Fennec builds, however, most of the commands are something like "arm-linux-androideabi-g++", which will not be recognized by the default regex. The modified regex accepts any command that ends with "gcc" or "g++". <strong>This may also affect other non-desktop builds besides Fennec.</strong></p>
 </div>

@@ -8,20 +8,20 @@ tags:
   - part 6
   - server-side
 ---
-<p><a class="button section-edit only-icon" href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms$edit#Create_book_form" rel="nofollow, noindex">Edit</a>This subarticle shows how to define a page/form to create <code>Book</code> objects. This is a little more complicated than the equivalent <code>Author</code> or <code>Genre</code> pages because we need to get and display available <code>Author</code> and <code>Genre</code> records in our <code>Book</code> form.</p>
+<p class="summary">This subarticle shows how to define a page/form to create <code>Book</code> objects. This is a little more complicated than the equivalent <code>Author</code> or <code>Genre</code> pages because we need to get and display available <code>Author</code> and <code>Genre</code> records in our <code>Book</code> form.</p>
 
 <h2 id="Import_validation_and_sanitisation_methods">Import validation and sanitisation methods</h2>
 
 <p>Open <strong>/controllers/bookController.js</strong>, and add the following line at the top of the file:</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">const { body,validationResult } = require('express-validator');
-</code></pre>
+<pre class="brush: js line-numbers  language-js">const { body,validationResult } = require('express-validator');
+</pre>
 
 <h2 id="Controller—get_route">Controller—get route</h2>
 
 <p>Find the exported <code>book_create_get()</code> controller method and replace it with the following code.</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">// Display book create form on GET.
+<pre class="brush: js line-numbers language-js">// Display book create form on GET.
 exports.book_create_get = function(req, res, next) {
 
     // Get all authors and genres, which we can use for adding to our book.
@@ -37,7 +37,7 @@ exports.book_create_get = function(req, res, next) {
         res.render('book_form', { title: 'Create Book', authors: results.authors, genres: results.genres });
     });
 
-};</code></pre>
+};</pre>
 
 <p>This uses the async module (described in <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>) to get all <code>Author</code> and <code>Genre</code> objects. These are then passed to the view <code><strong>book_form.pug</strong></code> as variables named <code>authors</code> and <code>genres</code> (along with the page <code>title</code>).</p>
 
@@ -45,7 +45,7 @@ exports.book_create_get = function(req, res, next) {
 
 <p>Find the exported <code>book_create_post()</code> controller method and replace it with the following code.</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">// Handle book create on POST.
+<pre class="brush: js line-numbers language-js">// Handle book create on POST.
 exports.book_create_post = [
     // Convert the genre to an array.
     (req, res, next) =&gt; {
@@ -113,13 +113,13 @@ exports.book_create_post = [
                 });
         }
     }
-];</code></pre>
+];</pre>
 
 <p>The structure and behavior of this code is almost exactly the same as for creating a <code>Genre</code> or <code>Author</code> object. First we validate and sanitize the data. If the data is invalid then we re-display the form along with the data that was originally entered by the user and a list of error messages. If the data is valid, we then save the new <code>Book</code> record and redirect the user to the book detail page.</p>
 
 <p>The main difference with respect to the other form handling code is how we sanitize the genre information. The form returns an array of <code>Genre</code> items (while for other fields it returns a string). In order to validate the information we first convert the request to an array (required for the next step).</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">// Convert the genre to an array.
+<pre class="brush: js line-numbers language-js">// Convert the genre to an array.
 (req, res, next) =&gt; {
     if(!(req.body.genre instanceof Array)){
         if(typeof req.body.genre === 'undefined')
@@ -128,27 +128,27 @@ exports.book_create_post = [
         req.body.genre = new Array(req.body.genre);
     }
     next();
-},</code></pre>
+},</pre>
 
 <p>We then use a wildcard (<code>*</code>) in the sanitiser to individually validate each of the genre array entries. The code below shows how - this translates to "sanitise every item below key <code>genre</code>".</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">body('genre.*').escape(),</code></pre>
+<pre class="brush: js line-numbers language-js">body('genre.*').escape(),</pre>
 
 <p>The final difference with respect to the other form handling code is that we need to pass in all existing genres and authors to the form. In order to mark the genres that were checked by the user we iterate through all the genres and add the <code>checked='true'</code> parameter to those that were in our post data (as reproduced in the code fragment below).</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">// Mark our selected genres as checked.
+<pre class="brush: js line-numbers language-js">// Mark our selected genres as checked.
 for (let i = 0; i &lt; results.genres.length; i++) {
     if (book.genre.indexOf(results.genres[i]._id) &gt; -1) {
         // Current genre is selected. Set "checked" flag.
         results.genres[i].checked = 'true';
     }
-}</code></pre>
+}</pre>
 
 <h2 id="View">View</h2>
 
 <p>Create <strong>/views/book_form.pug</strong> and copy in the text below.</p>
 
-<pre class="line-numbers  language-html notranslate"><code class="language-html">extends layout
+<pre class="line-numbers language-html">extends layout
 
 block content
   h1= title
@@ -161,11 +161,11 @@ block content
       label(for='author') Author:
       select#author.form-control(type='select', placeholder='Select author' name='author' required='true' )
         - authors.sort(function(a, b) {let textA = a.family_name.toUpperCase(); let textB = b.family_name.toUpperCase(); return (textA &lt; textB) ? -1 : (textA &gt; textB) ? 1 : 0;});
-<strong>        for author in authors
+        for author in authors
           if book
             option(value=author._id selected=(author._id.toString()===book.author._id.toString() ? 'selected' : false) ) #{author.name}
           else
-            option(value=author._id) #{author.name}</strong>
+            option(value=author._id) #{author.name}
     div.form-group
       label(for='summary') Summary:
       textarea#summary.form-control(type='textarea', placeholder='Summary' name='summary' required='true') #{undefined===book ? '' : book.summary}
@@ -184,7 +184,7 @@ block content
   if errors
     ul
       for error in errors
-        li!= error.msg</code></pre>
+        li!= error.msg</pre>
 
 <p>The view structure and behavior is almost the same as for the <strong>genre_form.pug</strong> template.</p>
 
@@ -203,7 +203,7 @@ block content
 
 <p>Run the application, open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>, then select the <em>Create new book</em> link. If everything is set up correctly, your site should look something like the following screenshot. After you submit a valid book, it should be saved and you'll be taken to the book detail page.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14484/LocalLibary_Express_Book_Create_Empty.png" style="display: block; height: 498px; margin: 0px auto; width: 1000px;"></p>
+<p><img alt="" src="locallibary_express_book_create_empty.png" style="display: block; margin: 0px auto;"></p>
 
 <h2 id="Next_steps">Next steps</h2>
 

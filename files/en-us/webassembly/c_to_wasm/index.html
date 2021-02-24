@@ -39,14 +39,14 @@ tags:
 <ol>
 	<li>First we need an example to compile. Take a copy of the following simple C example, and save it in a file called <code>hello.c</code> in a new directory on your local drive:
 
-	<pre class="brush: cpp; notranslate">#include &lt;stdio.h&gt;
+	<pre class="brush: cpp">#include &lt;stdio.h&gt;
 
 int main(int argc, char ** argv) {
     printf("Hello World\n");
 }</pre>
 	</li>
 	<li>Now, using the terminal window you used to enter the Emscripten compiler environment, navigate to the same directory as your <code>hello.c</code> file, and run the following command:
-	<pre class="brush: bash; no-line-numbers notranslate">emcc hello.c -s WASM=1 -o hello.html</pre>
+	<pre class="brush: bash no-line-numbers">emcc hello.c -s WASM=1 -o hello.html</pre>
 	</li>
 </ol>
 
@@ -83,7 +83,7 @@ int main(int argc, char ** argv) {
 	<li>
 	<p>First of all, save the following C code in a file called <code>hello2.c</code>, in a new directory:</p>
 
-	<pre class="brush: cpp; notranslate">#include &lt;stdio.h&gt;
+	<pre class="brush: cpp">#include &lt;stdio.h&gt;
 
 int main(int argc, char ** argv) {
     printf("Hello World\n");
@@ -95,7 +95,7 @@ int main(int argc, char ** argv) {
 	<li>
 	<p>Now navigate into your new directory (again, in your Emscripten compiler environment terminal window), and run the following command:</p>
 
-	<pre class="brush: bash; no-line-numbers notranslate">emcc -o hello2.html hello2.c -O3 -s WASM=1 --shell-file html_template/shell_minimal.html</pre>
+	<pre class="brush: bash no-line-numbers">emcc -o hello2.html hello2.c -O3 -s WASM=1 --shell-file html_template/shell_minimal.html</pre>
 
 	<p>The options we've passed are slightly different this time:</p>
 
@@ -125,7 +125,7 @@ int main(int argc, char ** argv) {
 	<li>
 	<p>To start with, save the following code as <code>hello3.c</code> in a new directory:</p>
 
-	<pre class="brush: cpp; notranslate">#include &lt;stdio.h&gt;
+	<pre class="brush: cpp">#include &lt;stdio.h&gt;
 #include &lt;emscripten/emscripten.h&gt;
 
 int main(int argc, char ** argv) {
@@ -156,7 +156,7 @@ EMSCRIPTEN_KEEPALIVE void myFunction(int argc, char ** argv) {
 	<li>
 	<p>Now let's run the compilation step again. From inside your latest directory (and while inside your Emscripten compiler environment terminal window), compile your C code with the following command. (Note that we need to compile with <code>NO_EXIT_RUNTIME</code>, which is necessary as otherwise when <code>main()</code> exits the runtime would be shut down — necessary for proper C emulation, e.g., atexits are called — and it wouldn't be valid to call compiled code.)</p>
 
-	<pre class="brush: bash; no-line-numbers notranslate">emcc -o hello3.html hello3.c -O3 -s WASM=1 --shell-file html_template/shell_minimal.html -s NO_EXIT_RUNTIME=1  -s "EXTRA_EXPORTED_RUNTIME_METHODS=['ccall']"</pre>
+	<pre class="brush: bash no-line-numbers">emcc -o hello3.html hello3.c -O3 -s WASM=1 --shell-file html_template/shell_minimal.html -s NO_EXIT_RUNTIME=1  -s "EXTRA_EXPORTED_RUNTIME_METHODS=['ccall']"</pre>
 	</li>
 	<li>
 	<p>If you load the example in your browser again, you'll see the same thing as before!</p>
@@ -167,12 +167,12 @@ EMSCRIPTEN_KEEPALIVE void myFunction(int argc, char ** argv) {
 	<li>
 	<p>Add a {{HTMLElement("button")}} element as shown below, just above the first opening <code>&lt;script type='text/javascript'&gt;</code> tag.</p>
 
-	<pre class="brush: html; no-line-numbers notranslate">&lt;button class="mybutton"&gt;Run myFunction&lt;/button&gt;</pre>
+	<pre class="brush: html no-line-numbers">&lt;button class="mybutton"&gt;Run myFunction&lt;/button&gt;</pre>
 	</li>
 	<li>
 	<p>Now add the following code at the end of the first {{HTMLElement("script")}} element:</p>
 
-	<pre class="brush: js; notranslate">document.querySelector('.mybutton')
+	<pre class="brush: js">document.querySelector('.mybutton')
     .addEventListener('click', function() {
         alert('check console');
         var result = Module.ccall(

@@ -2,20 +2,23 @@
 title: PasswordCredential
 slug: Web/API/PasswordCredential/PasswordCredential
 tags:
-  - API
-  - Constructor
-  - Credential Management API
-  - PasswordCredential
-  - Reference
-  - credential management
+- API
+- Constructor
+- Credential Management API
+- PasswordCredential
+- Reference
+- credential management
 ---
 <p>{{APIRef("")}}{{Non-standard_header}}</p>
 
-<p><span class="seoSummary">The <strong><code>PasswordCredential</code></strong> constructor creates a new {{domxref("PasswordCredential")}} object.</span> In supporting browsers, an instance of this class may be passed the <code>credential</code> from the <code>init</code> object for global {{domxref('fetch')}}.</p>
+<p><span class="seoSummary">The <strong><code>PasswordCredential</code></strong>
+    constructor creates a new {{domxref("PasswordCredential")}} object.</span> In
+  supporting browsers, an instance of this class may be passed the <code>credential</code>
+  from the <code>init</code> object for global {{domxref('fetch')}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var myCredential = new PasswordCredential(passwordCredentialData)
+<pre class="brush: js">var myCredential = new PasswordCredential(passwordCredentialData)
 var myCredential = new PasswordCredential(HTMLFormElement)</pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -23,22 +26,25 @@ var myCredential = new PasswordCredential(HTMLFormElement)</pre>
 <p>Either of the following:</p>
 
 <dl>
- <dt><em>passwordCredentialData</em> </dt>
- <dd>A PasswordCredentialData dictionary containing the following fields:
- <ul>
-  <li><code>iconURL</code>: (Optional) the URL of a user's avatar image.</li>
-  <li><code>id</code>: The ID of the user signing in.</li>
-  <li><code>name</code>: (Optional) The name of the user signing in.</li>
-  <li><code>password</code>: The password of the user signing in.</li>
- </ul>
- </dd>
- <dt><em>htmlFormElement</em></dt>
- <dd>A reference to an {{domxref("HTMLFormElement")}} with appropriate input fields. The form should, at the very least, contain an id and password. It could also require a CSRF token.</dd>
+  <dt><em>passwordCredentialData</em> </dt>
+  <dd>A PasswordCredentialData dictionary containing the following fields:
+    <ul>
+      <li><code>iconURL</code>: (Optional) the URL of a user's avatar image.</li>
+      <li><code>id</code>: The ID of the user signing in.</li>
+      <li><code>name</code>: (Optional) The name of the user signing in.</li>
+      <li><code>password</code>: The password of the user signing in.</li>
+    </ul>
+  </dd>
+  <dt><em>htmlFormElement</em></dt>
+  <dd>A reference to an {{domxref("HTMLFormElement")}} with appropriate input fields. The
+    form should, at the very least, contain an id and password. It could also require a
+    CSRF token.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>This example shows how to set up an {{domxref("HTMLFormElement")}} to caputure data which we'll use to create a {{domxref("PasswordCredential")}} object.</p>
+<p>This example shows how to set up an {{domxref("HTMLFormElement")}} to caputure data
+  which we'll use to create a {{domxref("PasswordCredential")}} object.</p>
 
 <p>Starting with the form element.</p>
 
@@ -48,7 +54,9 @@ var myCredential = new PasswordCredential(HTMLFormElement)</pre>
   &lt;input type="hidden" name="csrf_token" value="*****" /&gt;
 &lt;/form&gt;</pre>
 
-<p>Then, a reference to this form element, using it to create a {{domxref("PasswordCredential")}} object, and storing it in the browser's password system.</p>
+<p>Then, a reference to this form element, using it to create
+  a {{domxref("PasswordCredential")}} object, and storing it in the browser's password
+  system.</p>
 
 <pre class="brush: js">var form = document.querySelector('#form');
 var creds = new PasswordCredential(form);
@@ -61,23 +69,20 @@ navigator.credentials.store(creds)
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Credential Management')}}</td>
-   <td>{{Spec2('Credential Management')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Credential Management')}}</td>
+      <td>{{Spec2('Credential Management')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.PasswordCredential.PasswordCredential")}}</p>
-</div>

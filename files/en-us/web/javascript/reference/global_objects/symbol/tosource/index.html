@@ -2,21 +2,22 @@
 title: Symbol.prototype.toSource()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toSource
 tags:
-  - JavaScript
-  - Method
-  - Obsolete
-  - Prototype
-  - Symbol
+- JavaScript
+- Method
+- Obsolete
+- Prototype
+- Symbol
 ---
-<div>{{JSRef}} {{obsolete_header}}</div>
+<div>{{JSRef}} {{deprecated_header}}</div>
 
-<p>The <strong><code>toSource()</code></strong> method returns a string representing the source code of the object.</p>
+<p>The <strong><code>toSource()</code></strong> method returns a string representing the
+  source code of the object.</p>
 
 <p>This method is usually called internally by JavaScript.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>Symbol</var>.toSource()
+<pre class="brush: js"><var>Symbol</var>.toSource()
 
 var sym = Symbol()
 sym.toSource()</pre>
@@ -29,15 +30,17 @@ sym.toSource()</pre>
 
 <h3 id="Native_function">Native function</h3>
 
-<p>For the built-in <code>Symbol</code> object, <code>toSource</code> returns the following string indicating that the source code is not available:</p>
+<p>For the built-in <code>Symbol</code> object, <code>toSource</code> returns the
+  following string indicating that the source code is not available:</p>
 
-<pre class="brush:js notranslate">"function Symbol() {
+<pre class="brush: js">"function Symbol() {
    [native code]
 }"</pre>
 
-<p>For instances of <code>Symbol</code>, <code>toSource</code> returns a string representing the source code.</p>
+<p>For instances of <code>Symbol</code>, <code>toSource</code> returns a string
+  representing the source code.</p>
 
-<pre class="brush: js notranslate">"Symbol()"</pre>
+<pre class="brush: js">"Symbol()"</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -50,5 +53,5 @@ sym.toSource()</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Object.prototype.toSource()")}}</li>
+  <li>{{jsxref("Object.prototype.toSource()")}}</li>
 </ul>

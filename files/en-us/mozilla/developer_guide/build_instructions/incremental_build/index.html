@@ -10,11 +10,11 @@ tags:
 <p>With the move to mach, moz.build, and non-recursive builds, much of this page is out of date. Use with caution!</p>
 </div>
 
-<p>Now that you have <a href="/en/Build_and_Install">set up and built</a> your source tree for the first time, you're ready to start your own development cycle.</p>
+<p>Now that you have <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions">set up and built</a> your source tree for the first time, you're ready to start your own development cycle.</p>
 
-<p>The best way to proceed is to use an <a href="/en/Configuring_Build_Options#Building_with_an_Objdir">Objdir</a> approach. For example, if you're enhancing <a class="external" href="http://mxr.mozilla.org/mozilla/source/storage/">Mozilla storage</a> and have made changes to <code><a class="external" href="http://mxr.mozilla.org/mozilla/source/storage/src/mozStorageConnection.cpp">mozStorageConnection.cpp</a></code>.</p>
+<p>The best way to proceed is to use an <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options#building_with_an_objdir">Objdir</a> approach. For example, if you're enhancing <a class="external" href="http://mxr.mozilla.org/mozilla/source/storage/">Mozilla storage</a> and have made changes to <code><a class="external" href="http://mxr.mozilla.org/mozilla/source/storage/src/mozStorageConnection.cpp">mozStorageConnection.cpp</a></code>.</p>
 
-<p>Assuming that your Objdir has <a href="/en/Build_and_Install">already been built</a> and you used <a href="/en/Configuring_Build_Options#Statically_Linking_Components">separate shared libraries build options</a>, you will find that the corresponding <code>components</code> folder (for Thunderbird in this example) contains these files that include compiled <code>mozStorageConnection.cpp</code> functions (note that "<em>obj-i686-pc-cygwin</em>" might be different in your case):</p>
+<p>Assuming that your Objdir has <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions">already been built</a> and you used <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options#statically_linking_components">separate shared libraries build options</a>, you will find that the corresponding <code>components</code> folder (for Thunderbird in this example) contains these files that include compiled <code>mozStorageConnection.cpp</code> functions (note that "<em>obj-i686-pc-cygwin</em>" might be different in your case):</p>
 
 <pre class="eval">/c/mozilla/obj-i686-pc-cygwin/dist/bin/components:
 ...
@@ -43,7 +43,7 @@ strgcmps.dll
 <pre class="eval">/c/mozilla/obj-i686-pc-cygwin/dist/bin/thunderbird.exe
 </pre>
 
-<p>If you will be performing incremental builds, it is also recommended that you use ccache to speed up subsequent compilation times. See <a href="/en/ccache">en/ccache</a> for info on configuring ccache.</p>
+<p>If you will be performing incremental builds, it is also recommended that you use ccache to speed up subsequent compilation times. See <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/ccache">en/ccache</a> for info on configuring ccache.</p>
 
 <h3 id="Two-stage_build">Two-stage build</h3>
 

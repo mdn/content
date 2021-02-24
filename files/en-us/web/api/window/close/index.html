@@ -2,30 +2,40 @@
 title: Window.close()
 slug: Web/API/Window/close
 tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
+- API
+- Gecko
+- HTML DOM
+- Method
+- Reference
+- Window
 ---
 <div>{{APIRef}}</div>
 
-<p>The <code><strong>Window.close()</strong></code> method closes the current window, or the window on which it was called.</p>
+<p>The <code><strong>Window.close()</strong></code> method closes the current window, or
+  the window on which it was called.</p>
 
-<p>This method can only be called on windows that were opened by a script using the {{domxref("Window.open()")}} method. If the window was not opened by a script, an error similar to this one appears in the console: <code>Scripts may not close windows that were not opened by script.</code></p>
+<p>This method can only be called on windows that were opened by a script using the
+  {{domxref("Window.open()")}} method. If the window was not opened by a script, an error
+  similar to this one appears in the console:
+  <code>Scripts may not close windows that were not opened by script.</code></p>
 
-<p>Note also that <code>close()</code> has no effect when called on {{domxref("Window")}} objects returned by <code><a href="/en-US/docs/Web/API/HTMLIFrameElement/contentWindow">HTMLIFrameElement.contentWindow</a></code>.</p>
+<p>Note also that <code>close()</code> has no effect when called on {{domxref("Window")}}
+  objects returned by
+  <code><a href="/en-US/docs/Web/API/HTMLIFrameElement/contentWindow">HTMLIFrameElement.contentWindow</a></code>.
+</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">window.close();</pre>
+<pre class="brush: js">window.close();</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Closing_a_window_opened_with_window.open">Closing a window opened with <code>window.open()</code></h3>
+<h3 id="Closing_a_window_opened_with_window.open">Closing a window opened with
+  <code>window.open()</code></h3>
 
-<p>This example shows a method which opens a window and a second one which closes the window; this demonstrates how to use <code>Window.close()</code> to close a window opened by calling {{domxref("window.open()")}}.</p>
+<p>This example shows a method which opens a window and a second one which closes the
+  window; this demonstrates how to use <code>Window.close()</code> to close a window
+  opened by calling {{domxref("window.open()")}}.</p>
 
 <pre class="brush: js">//Global var to store a reference to the opened window
 var openedWindow;
@@ -41,7 +51,12 @@ function closeOpenedWindow() {
 
 <h3 id="Closing_the_current_window">Closing the current window</h3>
 
-<p>In the past, when you called the <code>window</code> object's <code>close()</code> method directly, rather than calling <code>close()</code> on a <code>window</code> <strong>instance</strong>, the browser closed the frontmost window, whether your script created that window or not. This is no longer the case; for security reasons, scripts are no longer allowed to close windows they didn't open. (Firefox 46.0.1: scripts can not close windows, they had not opened)</p>
+<p>In the past, when you called the <code>window</code> object's <code>close()</code>
+  method directly, rather than calling <code>close()</code> on a <code>window</code>
+  <strong>instance</strong>, the browser closed the frontmost window, whether your script
+  created that window or not. This is no longer the case; for security reasons, scripts
+  are no longer allowed to close windows they didn't open. (Firefox 46.0.1: scripts can
+  not close windows, they had not opened)</p>
 
 <pre class="brush: js">function closeCurrentWindow() {
   window.close();
@@ -51,23 +66,24 @@ function closeOpenedWindow() {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-window-close', 'window.close()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "browsers.html#dom-window-close", "Window.close()")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#dom-window-close', 'window.close()')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML5 W3C', "browsers.html#dom-window-close", "Window.close()")}}
+      </td>
+      <td>{{Spec2('HTML5 W3C')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

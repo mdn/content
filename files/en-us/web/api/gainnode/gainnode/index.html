@@ -2,25 +2,30 @@
 title: GainNode()
 slug: Web/API/GainNode/GainNode
 tags:
-  - API
-  - Audio
-  - Constructor
-  - GainNode
-  - Media
-  - Reference
-  - Web Audio API
+- API
+- Audio
+- Constructor
+- GainNode
+- Media
+- Reference
+- Web Audio API
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
-<p>The <strong><code>GainNode()</code></strong> constructor of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> creates a new {{domxref("GainNode")}} object which an {{domxref("AudioNode")}} that represents a change in volume.</p>
+<p>The <strong><code>GainNode()</code></strong> constructor of the <a
+		href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> creates a new
+	{{domxref("GainNode")}} object which an {{domxref("AudioNode")}} that represents a
+	change in volume.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You should typically call {{domxref("AudioContext.createGain()")}} to create a gain node.</p>
+	<p><strong>Note</strong>: You should typically call
+		{{domxref("AudioContext.createGain()")}} to create a gain node.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>gainNode</em> = new GainNode(<em>context</em>, <em>options</em>)</pre>
+<pre
+	class="brush: js">var <em>gainNode</em> = new GainNode(<em>context</em>, <em>options</em>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -31,9 +36,10 @@ tags:
 	<dd>A reference to an {{domxref("AudioContext")}}.</dd>
 	<dt><code>options</code> {{optional_inline}}</dt>
 	<dd>Options are as follows:
-	<ul>
-		<li><code>gain</code>: The amount of gain to apply. This parameter is a-rate and it's nominal range is (-∞,+∞). The default is <code>1</code>.</li>
-	</ul>
+		<ul>
+			<li><code>gain</code>: The amount of gain to apply. This parameter is a-rate
+				and it's nominal range is (-∞,+∞). The default is <code>1</code>.</li>
+		</ul>
 	</dd>
 </dl>
 
@@ -62,5 +68,5 @@ tags:
 
 <div>
 
-<p>{{Compat("api.GainNode.GainNode")}}</p>
+	<p>{{Compat("api.GainNode.GainNode")}}</p>
 </div>

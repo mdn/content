@@ -2,34 +2,45 @@
 title: MediaRecorder.stop()
 slug: Web/API/MediaRecorder/stop
 tags:
-  - API
-  - Media Capture
-  - Media Recorder API
-  - MediaRecorder
-  - Method
-  - Reference
-  - stop
+- API
+- Media Capture
+- Media Recorder API
+- MediaRecorder
+- Method
+- Reference
+- stop
 ---
 <div>{{APIRef("MediaStream Recording")}}</div>
 
-<p><span class="seoSummary">The <strong><code>MediaRecorder.stop()</code></strong> method (part of the <a href="/en-US/docs/Web/API/MediaRecorder_API">MediaRecorder API</a>) is used to stop media capture.</span></p>
+<p><span class="seoSummary">The <strong><code>MediaRecorder.stop()</code></strong> method
+    (part of the <a href="/en-US/docs/Web/API/MediaRecorder_API">MediaRecorder API</a>) is
+    used to stop media capture.</span></p>
 
-<p>When the <code>stop()</code> method is invoked, the UA queues a task that runs the following steps:</p>
+<p>When the <code>stop()</code> method is invoked, the UA queues a task that runs the
+  following steps:</p>
 
 <ol>
- <li>If {{domxref("MediaRecorder.state")}} is "inactive", raise a DOM <code>InvalidState</code> error and terminate these steps. If the {{domxref("MediaRecorder.state")}} is not "inactive", continue on to the next step.</li>
- <li>Set the {{domxref("MediaRecorder.state")}} to "inactive" and stop capturing media.</li>
- <li>Raise a <code>dataavailable</code> event containing the Blob of data that has been gathered.</li>
- <li>Raise a <code>stop</code> event.</li>
+  <li>If {{domxref("MediaRecorder.state")}} is "inactive", raise a DOM
+    <code>InvalidState</code> error and terminate these steps. If the
+    {{domxref("MediaRecorder.state")}} is not "inactive", continue on to the next step.
+  </li>
+  <li>Set the {{domxref("MediaRecorder.state")}} to "inactive" and stop capturing media.
+  </li>
+  <li>Raise a <code>dataavailable</code> event containing the Blob of data that has been
+    gathered.</li>
+  <li>Raise a <code>stop</code> event.</li>
 </ol>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><span class="idlMethType">MediaRecorder.stop()</span></pre>
+<pre
+  class="brush: js"><span class="idlMethType">MediaRecorder.stop()</span></pre>
 
 <h3 id="Errors">Errors</h3>
 
-<p>An <code>InvalidState</code> error is raised if the <code>stop()</code> method is called while the <code>MediaRecorder</code> object’s {{domxref("MediaRecorder.state")}} is "inactive" — it makes no sense to stop media capture if it is already stopped.</p>
+<p>An <code>InvalidState</code> error is raised if the <code>stop()</code> method is
+  called while the <code>MediaRecorder</code> object’s {{domxref("MediaRecorder.state")}}
+  is "inactive" — it makes no sense to stop media capture if it is already stopped.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -45,18 +56,19 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("MediaStream Recording", "#dom-mediarecorder-stop", "MediaRecorder.stop()")}}</td>
-   <td>{{Spec2("MediaStream Recording")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("MediaStream Recording", "#dom-mediarecorder-stop",
+        "MediaRecorder.stop()")}}</td>
+      <td>{{Spec2("MediaStream Recording")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -66,8 +78,13 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API">Using the MediaRecorder API</a></li>
- <li><a href="https://mdn.github.io/web-dictaphone/">Web Dictaphone</a>: MediaRecorder + getUserMedia + Web Audio API visualization demo, by <a href="https://twitter.com/chrisdavidmills">Chris Mills</a> (<a href="https://github.com/mdn/web-dictaphone/">source on Github</a>.)</li>
- <li><a href="http://simpl.info/mediarecorder/">simpl.info MediaStream Recording demo</a>, by <a href="https://twitter.com/sw12">Sam Dutton</a>.</li>
- <li>{{domxref("Navigator.getUserMedia")}}</li>
+  <li><a href="/en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API">Using
+      the MediaRecorder API</a></li>
+  <li><a href="https://mdn.github.io/web-dictaphone/">Web Dictaphone</a>: MediaRecorder +
+    getUserMedia + Web Audio API visualization demo, by <a
+      href="https://twitter.com/chrisdavidmills">Chris Mills</a> (<a
+      href="https://github.com/mdn/web-dictaphone/">source on Github</a>.)</li>
+  <li><a href="http://simpl.info/mediarecorder/">simpl.info MediaStream Recording
+      demo</a>, by <a href="https://twitter.com/sw12">Sam Dutton</a>.</li>
+  <li>{{domxref("Navigator.getUserMedia")}}</li>
 </ul>

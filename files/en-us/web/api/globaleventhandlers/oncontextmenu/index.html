@@ -2,39 +2,50 @@
 title: GlobalEventHandlers.oncontextmenu
 slug: Web/API/GlobalEventHandlers/oncontextmenu
 tags:
-  - API
-  - Event Handler
-  - GlobalEventHandlers
-  - HTML DOM
-  - Property
-  - Reference
+- API
+- Event Handler
+- GlobalEventHandlers
+- HTML DOM
+- Property
+- Reference
 ---
 <div>{{ ApiRef("HTML DOM") }}</div>
 
-<p>The <strong><code>oncontextmenu</code></strong> property of the {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} that processes {{event("contextmenu")}} events.</p>
+<p>The <strong><code>oncontextmenu</code></strong> property of the
+  {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} that
+  processes {{event("contextmenu")}} events.</p>
 
-<p>The <code>contextmenu</code> event typically fires when the right mouse button is clicked on the window. Unless the default behavior is prevented, the browser context menu will activate.</p>
+<p>The <code>contextmenu</code> event typically fires when the right mouse button is
+  clicked on the window. Unless the default behavior is prevented, the browser context
+  menu will activate.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>target</em>.oncontextmenu = <em>functionRef</em>;
+<pre class="brush: js"><em>target</em>.oncontextmenu = <em>functionRef</em>;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p><code>functionRef</code> is a function name or a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</a>. The function receives an {{domxref("Event")}} object as its sole argument.</p>
+<p><code>functionRef</code> is a function name or a <a
+    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
+    expression</a>. The function receives an {{domxref("Event")}} object as its sole
+  argument.</p>
 
-<p>Only one <code>oncontextmenu</code> handler can be assigned to an object at a time. You may prefer to use the {{domxref("EventTarget.addEventListener()")}} method instead, since it's more flexible.</p>
+<p>Only one <code>oncontextmenu</code> handler can be assigned to an object at a time. You
+  may prefer to use the {{domxref("EventTarget.addEventListener()")}} method instead,
+  since it's more flexible.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Disabling_context_menus">Disabling context menus</h3>
 
-<p>This snippet prevents context menus from opening in the window. The context menu typically appears upon a right click.</p>
+<p>This snippet prevents context menus from opening in the window. The context menu
+  typically appears upon a right click.</p>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html">&lt;p&gt;Try opening the context menu. Is it disabled?&lt;p&gt;</pre>
+<pre
+  class="brush: html">&lt;p&gt;Try opening the context menu. Is it disabled?&lt;p&gt;</pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
@@ -112,31 +123,34 @@ window.onpointerdown = play;</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('HTML WHATWG','webappapis.html#handler-oncontextmenu','oncontextmenu')}}</td>
-			<td>{{Spec2('HTML WHATWG')}}</td>
-			<td> </td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML
+        WHATWG','webappapis.html#handler-oncontextmenu','oncontextmenu')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
 
-<p>{{Compat("api.GlobalEventHandlers.oncontextmenu")}}</p>
+  <p>{{Compat("api.GlobalEventHandlers.oncontextmenu")}}</p>
 
-<p>Unless the default behavior is prevented, the browser context menu will activate upon right-click. However, IE8 has a bug with this and will not activate the context menu if a <code>contextmenu</code> event handler is defined.</p>
+  <p>Unless the default behavior is prevented, the browser context menu will activate upon
+    right-click. However, IE8 has a bug with this and will not activate the context menu
+    if a <code>contextmenu</code> event handler is defined.</p>
 </div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li>{{event("contextmenu")}} event</li>
+  <li>{{event("contextmenu")}} event</li>
 </ul>

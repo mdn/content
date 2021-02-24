@@ -11,7 +11,7 @@ tags:
   - Learn
   - Pop
   - Push
-  - 'l10n:priority'
+  - l10n:priority
   - shift
   - split
   - unshift
@@ -61,7 +61,7 @@ let random = ['tree', 795, [0, 1, 2]];</pre>
 
 <h3 id="Accessing_and_modifying_array_items">Accessing and modifying array items</h3>
 
-<p>You can then access individual items in the array using bracket notation, in the same way that you <a href="/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#Retrieving_a_specific_string_character">accessed the letters in a string</a>.</p>
+<p>You can then access individual items in the array using bracket notation, in the same way that you <a href="/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#retrieving_a_specific_string_character">accessed the letters in a string</a>.</p>
 
 <ol>
  <li>Enter the following into your console:
@@ -192,10 +192,10 @@ removedItem;</pre>
 
 <ol>
  <li>Below the <code>// number 1</code> comment are a number of strings, each one containing a product name and price separated by a colon. We'd like you to turn this into an array and store it in an array called <code>products</code>.</li>
- <li>On the same line as the <code>// number 2</code> comment is the beginning of a for loop. In this line we currently have <code>i &lt;= 0</code>, which is a conditional test that causes the <a href="/en-US/docs/Learn/JavaScript/First_steps/A_first_splash#Loops">for loop</a> to only run once, because it is saying "stop when <code>i</code> is no longer less than or equal to 0", and <code>i</code> starts at 0. We'd like you to replace this with a conditional test that stops the loop when <code>i</code> is no longer less than the <code>products</code> array's length.</li>
+ <li>On the same line as the <code>// number 2</code> comment is the beginning of a for loop. In this line we currently have <code>i &lt;= 0</code>, which is a conditional test that causes the <a href="/en-US/docs/Learn/JavaScript/First_steps/A_first_splash#loops">for loop</a> to only run once, because it is saying "stop when <code>i</code> is no longer less than or equal to 0", and <code>i</code> starts at 0. We'd like you to replace this with a conditional test that stops the loop when <code>i</code> is no longer less than the <code>products</code> array's length.</li>
  <li>Just below the <code>// number 3</code> comment we want you to write a line of code that splits the current array item (<code>name:price</code>) into two separate items, one containing just the name and one containing just the price. If you are not sure how to do this, consult the <a href="/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods">Useful string methods</a> article for some help, or even better, look at the {{anch("Converting between strings and arrays")}} section of this article.</li>
- <li>As part of the above line of code, you'll also want to convert the price from a string to a number. If you can't remember how to do this, check out the <a href="/en-US/docs/Learn/JavaScript/First_steps/Strings#Numbers_versus_strings">first strings article</a>.</li>
- <li>There is a variable called <code>total</code> that is created and given a value of 0 at the top of the code. Inside the loop (below <code>// number 4</code>) we want you to add a line that adds the current item price to that total in each iteration of the loop, so that at the end of the code the correct total is printed onto the invoice. You might need an <a href="/en-US/docs/Learn/JavaScript/First_steps/Math#Assignment_operators">assignment operator</a> to do this.</li>
+ <li>As part of the above line of code, you'll also want to convert the price from a string to a number. If you can't remember how to do this, check out the <a href="/en-US/docs/Learn/JavaScript/First_steps/Strings#numbers_versus_strings">first strings article</a>.</li>
+ <li>There is a variable called <code>total</code> that is created and given a value of 0 at the top of the code. Inside the loop (below <code>// number 4</code>) we want you to add a line that adds the current item price to that total in each iteration of the loop, so that at the end of the code the correct total is printed onto the invoice. You might need an <a href="/en-US/docs/Learn/JavaScript/First_steps/Math#assignment_operators">assignment operator</a> to do this.</li>
  <li>We want you to change the line just below <code>// number 5</code> so that the <code>itemText</code> variable is made equal to "current item name — $current item price", for example "Shoes — $23.99" in each case, so the correct information for each item is printed on the invoice. This is just simple string concatenation, which should be familiar to you.</li>
 </ol>
 
@@ -304,7 +304,7 @@ textarea.onkeydown = function(e){
 
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
-  const caretPos = textarea.selectionStart;
+  let caretPos = textarea.selectionStart;
   const front = (textarea.value).substring(0, caretPos);
   const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
 
@@ -503,7 +503,7 @@ textarea.onkeydown = function(e){
 
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
-  const caretPos = textarea.selectionStart;
+  let caretPos = textarea.selectionStart;
   const front = (textarea.value).substring(0, caretPos);
   const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
 

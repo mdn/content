@@ -22,7 +22,7 @@ tags:
 
 <p>To modify the headers asynchronously: pass <code>"blocking"</code> in <code>extraInfoSpec</code>, then in your event listener, return a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> which is resolved with a <code>BlockingResponse</code>.</p>
 
-<p>If you use <code>"blocking"</code>, you must have the <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">"webRequestBlocking" API permission</a> in your manifest.json.</p>
+<p>If you use <code>"blocking"</code>, you must have the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">"webRequestBlocking" API permission</a> in your manifest.json.</p>
 
 <p>It is possible for extensions to conflict here. If two extensions listen to <code>onBeforeSendHeaders</code> for the same request, then the second listener will see modifications made by the first listener, and will be able to undo any changes made by the first listener. For example, if the first listener adds a <code>Cookie</code> header, and the second listener strips all <code>Cookie</code> headers, then the first listener's modifications will be lost. If you want to see the headers that are actually sent, without the risk that another extension will subsequently alter them, use {{WebExtAPIRef("webRequest.onSendHeaders", "onSendHeaders")}}, although you can't modify headers on this event.</p>
 
@@ -40,7 +40,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.webRequest.onBeforeSendHeaders.addListener(
+<pre class="brush:js">browser.webRequest.onBeforeSendHeaders.addListener(
   listener,             //  function
   filter,               //  object
   extraInfoSpec         //  optional array of strings

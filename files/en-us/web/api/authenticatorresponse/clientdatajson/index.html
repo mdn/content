@@ -11,11 +11,19 @@ tags:
 ---
 <p>{{APIRef("Web Authentication API")}}{{securecontext_header}}</p>
 
-<p>The <strong><code>clientDataJSON</code></strong> property of the {{domxref("AuthenticatorResponse")}} interface stores a <a href="/en-US/docs/Learn/JavaScript/Objects/JSON">JSON</a> string in an {{domxref("ArrayBuffer")}}, representing the client data that was passed to {{domxref("CredentialsContainer.create()")}} or {{domxref("CredentialsContainer.get()")}}. This property is only accessed on one of the child objects of <code>AuthenticatorResponse</code>, specifically {{domxref("AuthenticatorAttestationResponse")}} or {{domxref("AuthenticatorAssertionResponse")}}.</p>
+<p>The <strong><code>clientDataJSON</code></strong> property of the
+  {{domxref("AuthenticatorResponse")}} interface stores a <a
+    href="/en-US/docs/Learn/JavaScript/Objects/JSON">JSON</a> string in an
+  {{domxref("ArrayBuffer")}}, representing the client data that was passed to
+  {{domxref("CredentialsContainer.create()")}} or
+  {{domxref("CredentialsContainer.get()")}}. This property is only accessed on one of the
+  child objects of <code>AuthenticatorResponse</code>, specifically
+  {{domxref("AuthenticatorAttestationResponse")}} or
+  {{domxref("AuthenticatorAssertionResponse")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var arrayBuffer = AuthenticatorAttestationResponse.clientDataJSON;
+<pre class="brush: js">var arrayBuffer = AuthenticatorAttestationResponse.clientDataJSON;
 var arrayBuffer = AuthenticatorAssertionResponse.clientDataJSON;
 </pre>
 
@@ -25,26 +33,44 @@ var arrayBuffer = AuthenticatorAssertionResponse.clientDataJSON;
 
 <h2 id="Properties">Properties</h2>
 
-<p>After the <code>clientDataJSON</code> object is converted from an <code>ArrayBuffer</code> to a JavaScript object, it will have the following properties:</p>
+<p>After the <code>clientDataJSON</code> object is converted from an
+  <code>ArrayBuffer</code> to a JavaScript object, it will have the following properties:
+</p>
 
 <dl>
- <dt><code>type</code></dt>
- <dd>A string which is either <code>"webauthn.get"</code> when an existing credential is retrieved or <code>"webauthn.create"</code> when a new credential is created.</dd>
- <dt><code>challenge</code></dt>
- <dd>The <a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64url</a> encoded version of the cryptographic challenge sent from the relying party's server. The original value is passed via {{domxref("PublicKeyCredentialRequestOptions.challenge")}} or {{domxref("PublicKeyCredentialCreationOptions.challenge")}}.</dd>
- <dt><code>origin</code></dt>
- <dd>The fully qualified origin of the requester which has been given by the client/browser to the authenticator. We should expect the <a href="/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/rpId">relying party's id</a> to be a suffix of this value.</dd>
- <dt><code>tokenBindingId</code> {{optional_inline}}</dt>
- <dd>
- <p>An object describing the state of <a href="https://tools.ietf.org/html/rfc8471">the token binding protocol</a> for the communication with the relying party. It has two properties:</p>
+  <dt><code>type</code></dt>
+  <dd>A string which is either <code>"webauthn.get"</code> when an existing credential is
+    retrieved or <code>"webauthn.create"</code> when a new credential is created.</dd>
+  <dt><code>challenge</code></dt>
+  <dd>The <a
+      href="/en-US/docs/Glossary/Base64">base64url</a>
+    encoded version of the cryptographic challenge sent from the relying party's server.
+    The original value is passed via
+    {{domxref("PublicKeyCredentialRequestOptions.challenge")}} or
+    {{domxref("PublicKeyCredentialCreationOptions.challenge")}}.</dd>
+  <dt><code>origin</code></dt>
+  <dd>The fully qualified origin of the requester which has been given by the
+    client/browser to the authenticator. We should expect the <a
+      href="/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/rpId">relying party's
+      id</a> to be a suffix of this value.</dd>
+  <dt><code>tokenBindingId</code> {{optional_inline}}</dt>
+  <dd>
+    <p>An object describing the state of <a href="https://tools.ietf.org/html/rfc8471">the
+        token binding protocol</a> for the communication with the relying party. It has
+      two properties:</p>
 
- <ul>
-  <li><code>status</code>: A string which is either <code>"supported"</code> which indicates the client support token binding but did not negotiate with the relying party or <code>"present"</code> when token binding was used already</li>
-  <li><code>id</code>: A {{domxref("DOMString")}} which is the <a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64url</a> encoding of the token binding ID which was used for the communication.</li>
- </ul>
+    <ul>
+      <li><code>status</code>: A string which is either <code>"supported"</code> which
+        indicates the client support token binding but did not negotiate with the relying
+        party or <code>"present"</code> when token binding was used already</li>
+      <li><code>id</code>: A {{domxref("DOMString")}} which is the <a
+          href="/en-US/docs/Glossary/Base64">base64url</a>
+        encoding of the token binding ID which was used for the communication.</li>
+    </ul>
 
- <p>Should this property be absent, it would indicate that the client does not support token binding.</p>
- </dd>
+    <p>Should this property be absent, it would indicate that the client does not support
+      token binding.</p>
+  </dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -65,18 +91,19 @@ console.log(clientDataObj.origin);    // the window.origin
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebAuthn','#dom-authenticatorresponse-clientdatajson', 'clientDataJSON')}}</td>
-   <td>{{Spec2('WebAuthn')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('WebAuthn','#dom-authenticatorresponse-clientdatajson',
+        'clientDataJSON')}}</td>
+      <td>{{Spec2('WebAuthn')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

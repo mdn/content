@@ -30,11 +30,11 @@ tags:
 
 <p>The initial version of HTTP had no version number; it has been later called 0.9 to differentiate it from the later versions. HTTP/0.9 is extremely simple: requests consist of a single line and start with the only possible method {{HTTPMethod("GET")}} followed by the path to the resource (not the URL as both the protocol, server, and port are unnecessary once connected to the server).</p>
 
-<pre class="notranslate">GET /mypage.html</pre>
+<pre>GET /mypage.html</pre>
 
 <p>The response is extremely simple too: it only consisted of the file itself.</p>
 
-<pre class="notranslate">&lt;HTML&gt;
+<pre>&lt;HTML&gt;
 A very simple HTML page
 &lt;/HTML&gt;</pre>
 
@@ -53,7 +53,7 @@ A very simple HTML page
 
 <p>At this point, a typical request and response looked like this:</p>
 
-<pre class="notranslate">GET /mypage.html HTTP/1.0
+<pre>GET /mypage.html HTTP/1.0
 User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)
 
 200 OK
@@ -67,7 +67,7 @@ A page with an image
 
 <p>Followed by a second connection and request to fetch the image (followed by a response to that request):</p>
 
-<pre class="notranslate">GET /myimage.gif HTTP/1.0
+<pre>GET /myimage.gif HTTP/1.0
 User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)
 
 200 OK
@@ -95,7 +95,7 @@ Content-Type: text/gif
 
 <p>A typical flow of requests, all through one single connection is now looking like this:</p>
 
-<pre class="notranslate">GET /en-US/docs/Glossary/Simple_header HTTP/1.1
+<pre>GET /en-US/docs/Glossary/Simple_header HTTP/1.1
 Host: developer.mozilla.org
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -153,7 +153,7 @@ Server: Apache
 
 <p>The original vision of Tim Berners-Lee for the Web wasn't a read-only medium. He envisioned a Web where people can add and move documents remotely, a kind of distributed file system. Around 1996, HTTP has been extended to allow authoring, and a standard called WebDAV was created. It has been further extended for specific applications like CardDAV to handle address book entries and CalDAV to deal with calendars. But all these *DAV extensions had a flaw: they had to be implemented by the servers to be used, which was quite complex. Their use on Web realms stayed confidential.</p>
 
-<p>In 2000, a new pattern for using HTTP was designed: {{glossary("REST", "representational state transfer")}} (or REST). The actions induced by the API were no more conveyed by new HTTP methods, but only by accessing specific URIs with basic HTTP/1.1 methods. This allowed any Web application to provide an API to allow retrieval and modification of its data without having to update the browsers or the servers: all what is needed was embedded in the files served by the Web sites through standard HTTP/1.1. The drawback of the REST model resides in the fact that each website defines its own non-standard RESTful API and has total control on it; unlike the *DAV extensions were clients and servers are interoperable. RESTful APIs became very common in the 2010s.</p>
+<p>In 2000, a new pattern for using HTTP was designed: {{glossary("REST", "representational state transfer")}} (or REST). The actions induced by the API were no more conveyed by new HTTP methods, but only by accessing specific URIs with basic HTTP/1.1 methods. This allowed any Web application to provide an API to allow retrieval and modification of its data without having to update the browsers or the servers: all what is needed was embedded in the files served by the Web sites through standard HTTP/1.1. The drawback of the REST model resides in the fact that each website defines its own non-standard RESTful API and has total control on it; unlike the *DAV extensions where clients and servers are interoperable. RESTful APIs became very common in the 2010s.</p>
 
 <p>Since 2005, the set of APIs available to Web pages greatly increased and several of these APIs created extensions, mostly new specific HTTP headers, to the HTTP protocol for specific purposes:</p>
 

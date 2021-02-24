@@ -2,29 +2,38 @@
 title: RTCPeerConnection.close()
 slug: Web/API/RTCPeerConnection/close
 tags:
-  - Experimental
-  - Method
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
-  - close
+- Experimental
+- Method
+- RTCPeerConnection
+- Reference
+- WebRTC
+- close
 ---
 <p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
 
-<p>The <code><strong>RTCPeerConnection.close()</strong></code> method closes the current peer connection.</p>
+<p>The <code><strong>RTCPeerConnection.close()</strong></code> method closes the current
+	peer connection.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>peerConnection</em>.close();
+<pre class="brush: js"><em>peerConnection</em>.close();
 </pre>
 
 <p><em>This method has no parameters, and returns nothing.</em></p>
 
-<p>Calling this method terminates the RTCPeerConnection's ICE agent, ending any ongoing ICE processing and any active streams. This also releases any resources in use by the ICE agent, including TURN permissions. All {{domxref("RTCRtpSender")}} objects are considered to be stopped once this returns (they may still be in the process of stopping, but for all intents and purposes, they're stopped).</p>
+<p>Calling this method terminates the RTCPeerConnection's ICE agent, ending any ongoing
+	ICE processing and any active streams. This also releases any resources in use by the
+	ICE agent, including TURN permissions. All {{domxref("RTCRtpSender")}} objects are
+	considered to be stopped once this returns (they may still be in the process of
+	stopping, but for all intents and purposes, they're stopped).</p>
 
-<p>Once this method returns, the signaling state as returned by {{domxref("RTCPeerConnection.signalingState")}} is <code>closed</code>.</p>
+<p>Once this method returns, the signaling state as returned by
+	{{domxref("RTCPeerConnection.signalingState")}} is <code>closed</code>.</p>
 
-<p>Make sure that you <code>delete</code> all references to the previous {{domxref("RTCPeerConnection")}} before attempting to create a new one that connects to the same remote peer, as not doing so might result in some errors depending on the browser.</p>
+<p>Make sure that you <code>delete</code> all references to the previous
+	{{domxref("RTCPeerConnection")}} before attempting to create a new one that connects
+	to the same remote peer, as not doing so might result in some errors depending on the
+	browser.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -56,7 +65,8 @@ dc.onclose = function () {
 	</thead>
 	<tbody>
 		<tr>
-			<td>{{ SpecName('WebRTC 1.0', '#dom-rtcpeerconnection-close', 'RTCPeerConnection.close()') }}</td>
+			<td>{{ SpecName('WebRTC 1.0', '#dom-rtcpeerconnection-close',
+				'RTCPeerConnection.close()') }}</td>
 			<td>{{ Spec2('WebRTC 1.0') }}</td>
 			<td>Initial specification.</td>
 		</tr>

@@ -2,40 +2,47 @@
 title: GlobalEventHandlers.onkeydown
 slug: Web/API/GlobalEventHandlers/onkeydown
 tags:
-  - API
-  - Event Handler
-  - GlobalEventHandlers
-  - HTML DOM
-  - Property
-  - Reference
-  - events
+- API
+- Event Handler
+- GlobalEventHandlers
+- HTML DOM
+- Property
+- Reference
+- events
 ---
 <div>{{ApiRef("HTML DOM")}}</div>
 
-<p>The <code><strong>onkeydown</strong></code> property of the {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} that processes {{event("keydown")}} events.</p>
+<p>The <code><strong>onkeydown</strong></code> property of the
+  {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} that
+  processes {{event("keydown")}} events.</p>
 
 <p>The <code>keydown</code> event fires when the user presses a keyboard key.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>target</var>.onkeydown = <var>functionRef</var>;</pre>
+<pre
+  class="brush: js"><var>target</var>.onkeydown = <var>functionRef</var>;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p><code>functionRef</code> is a function name or a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</a>. The function receives a {{domxref("KeyboardEvent")}} object as its sole argument.</p>
+<p><code>functionRef</code> is a function name or a <a
+    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
+    expression</a>. The function receives a {{domxref("KeyboardEvent")}} object as its
+  sole argument.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>This example logs the {{domxref("KeyboardEvent.code")}} value whenever you press down a key inside the {{HtmlElement("input")}} element.</p>
+<p>This example logs the {{domxref("KeyboardEvent.code")}} value whenever you press down a
+  key inside the {{HtmlElement("input")}} element.</p>
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;input&gt;
+<pre class="brush: html">&lt;input&gt;
 &lt;p id="log"&gt;&lt;/p&gt;</pre>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">const input = document.querySelector('input');
+<pre class="brush: js">const input = document.querySelector('input');
 const log = document.getElementById('log');
 
 input.onkeydown = logKey;
@@ -51,20 +58,20 @@ function logKey(e) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onkeydown','onkeydown')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onkeydown','onkeydown')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -73,9 +80,17 @@ function logKey(e) {
 
 <h3 id="Compatibility_notes">Compatibility notes</h3>
 
-<p>Since Firefox 65, the <code><a href="/en-US/docs/Web/Events/keyup">keyup</a></code> and <code><a href="/en-US/docs/Web/Events/keydown">keydown</a></code> events are now fired during IME composition, to improve cross-browser compatibility for CJKT users ({{bug(354358)}}, also see <a href="https://www.fxsitecompat.com/en-CA/docs/2018/keydown-and-keyup-events-are-now-fired-during-ime-composition/">keydown and keyup events are now fired during IME composition</a> for more useful details). To ignore all <code>keydown</code> events that are part of composition, do something like this (229 is a special value set for a <code>keyCode</code> relating to an event that has been processed by an IME):</p>
+<p>Since Firefox 65, the <code><a href="/en-US/docs/Web/Events/keyup">keyup</a></code> and
+  <code><a href="/en-US/docs/Web/Events/keydown">keydown</a></code> events are now fired
+  during IME composition, to improve cross-browser compatibility for CJKT users
+  ({{bug(354358)}}, also see <a
+    href="https://www.fxsitecompat.com/en-CA/docs/2018/keydown-and-keyup-events-are-now-fired-during-ime-composition/">keydown
+    and keyup events are now fired during IME composition</a> for more useful details). To
+  ignore all <code>keydown</code> events that are part of composition, do something like
+  this (229 is a special value set for a <code>keyCode</code> relating to an event that
+  has been processed by an IME):</p>
 
-<pre class="brush: js notranslate">eventTarget.addEventListener("keydown", event =&gt; {
+<pre class="brush: js">eventTarget.addEventListener("keydown", event =&gt; {
   if (event.isComposing || event.keyCode === 229) {
     return;
   }
@@ -86,11 +101,11 @@ function logKey(e) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{Event("keydown")}} event</li>
- <li>Related event handlers
- <ul>
-  <li>{{domxref("GlobalEventHandlers.onkeypress")}}</li>
-  <li>{{domxref("GlobalEventHandlers.onkeyup")}}</li>
- </ul>
- </li>
+  <li>{{Event("keydown")}} event</li>
+  <li>Related event handlers
+    <ul>
+      <li>{{domxref("GlobalEventHandlers.onkeypress")}}</li>
+      <li>{{domxref("GlobalEventHandlers.onkeyup")}}</li>
+    </ul>
+  </li>
 </ul>

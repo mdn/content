@@ -2,44 +2,53 @@
 title: CanvasPattern.setTransform()
 slug: Web/API/CanvasPattern/setTransform
 tags:
-  - API
-  - Canvas
-  - CanvasPattern
-  - Experimental
-  - Method
-  - Reference
+- API
+- Canvas
+- CanvasPattern
+- Experimental
+- Method
+- Reference
 ---
 <div>{{APIRef("Canvas API")}}</div>
 
-<p>The <code><strong>CanvasPattern</strong></code><strong><code>.setTransform()</code></strong> method uses an {{domxref("SVGMatrix")}} or {{domxref("DOMMatrix")}} object as the pattern's transformation matrix and invokes it on the pattern.</p>
+<p>The
+  <code><strong>CanvasPattern</strong></code><strong><code>.setTransform()</code></strong>
+  method uses an {{domxref("SVGMatrix")}} or {{domxref("DOMMatrix")}} object as the
+  pattern's transformation matrix and invokes it on the pattern.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">void <em>pattern</em>.setTransform(<em>matrix</em>);
+<pre class="brush: js">void <em>pattern</em>.setTransform(<em>matrix</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>matrix</code></dt>
- <dd>An {{domxref("SVGMatrix")}} or {{domxref("DOMMatrix")}} to use as the pattern's transformation matrix.</dd>
+  <dt><code>matrix</code></dt>
+  <dd>An {{domxref("SVGMatrix")}} or {{domxref("DOMMatrix")}} to use as the pattern's
+    transformation matrix.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_the_setTransform_method">Using the <code>setTransform</code> method</h3>
 
-<p>This is just a simple code snippet which uses the <code>setTransform</code> method to create a {{domxref("CanvasPattern")}} with the specified pattern transformation from an {{domxref("SVGMatrix")}}. The pattern gets applied if you set it as the current {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} and gets drawn onto the canvas when using the {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} method, for example.</p>
+<p>This is just a simple code snippet which uses the <code>setTransform</code> method to
+  create a {{domxref("CanvasPattern")}} with the specified pattern transformation from an
+  {{domxref("SVGMatrix")}}. The pattern gets applied if you set it as the current
+  {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} and gets drawn onto the
+  canvas when using the {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}}
+  method, for example.</p>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
 &lt;svg id="svg1"&gt;&lt;/svg&gt;
 </pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js; highlight:[12] notranslate">var canvas = document.getElementById('canvas');
+<pre class="brush: js highlight:[12]">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 var svg1 = document.getElementById('svg1');
@@ -56,16 +65,19 @@ img.onload = function() {
 };
 </pre>
 
-<p>Note that newer browser versions started to support {{domxref("DOMMatrix")}} as an input to <code>setTransform()</code>, so for example you could replace the <code>SVGMatrix</code> in the above example with the following:</p>
+<p>Note that newer browser versions started to support {{domxref("DOMMatrix")}} as an
+  input to <code>setTransform()</code>, so for example you could replace the
+  <code>SVGMatrix</code> in the above example with the following:</p>
 
-<pre class="brush: js notranslate">const matrix = new DOMMatrix([1, .2, .8, 1, 0, 0]);</pre>
+<pre
+  class="brush: js">const matrix = new DOMMatrix([1, .2, .8, 1, 0, 0]);</pre>
 
 <p>Edit the code below and see your changes update live in the canvas:</p>
 
 <div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
+  <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
+  <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;svg id="svg1" style="display:none"&gt;&lt;/svg&gt;
 &lt;div class="playable-buttons"&gt;
   &lt;input id="edit" type="button" value="Edit" /&gt;
@@ -82,7 +94,7 @@ img.onload = function() {
 };&lt;/textarea&gt;
 </pre>
 
-<pre class="brush: js notranslate">var canvas = document.getElementById('canvas');
+  <pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
@@ -116,18 +128,19 @@ window.addEventListener('load', drawCanvas);
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-canvaspattern-settransform", "CanvasPattern.setTransform")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', "scripting.html#dom-canvaspattern-settransform",
+        "CanvasPattern.setTransform")}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -137,7 +150,7 @@ window.addEventListener('load', drawCanvas);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The interface defining this method: {{domxref("CanvasPattern")}}</li>
- <li>{{domxref("SVGMatrix")}}</li>
- <li>{{domxref("DOMMatrix")}}</li>
+  <li>The interface defining this method: {{domxref("CanvasPattern")}}</li>
+  <li>{{domxref("SVGMatrix")}}</li>
+  <li>{{domxref("DOMMatrix")}}</li>
 </ul>

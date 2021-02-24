@@ -2,22 +2,24 @@
 title: Array.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Array/entries
 tags:
-  - Array
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
+- Array
+- ECMAScript 2015
+- Iterator
+- JavaScript
+- Method
+- Prototype
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>entries()</code></strong> method returns a new <strong>Array Iterator</strong> object that contains the key/value pairs for each index in the array.</p>
+<p>The <strong><code>entries()</code></strong> method returns a new <strong>Array
+    Iterator</strong> object that contains the key/value pairs for each index in the
+  array.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/array-entries.html")}}</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>array</var>.entries()</pre>
+<pre class="brush: js"><var>arr</var>.entries()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -27,7 +29,7 @@ tags:
 
 <h3 id="Iterating_with_index_and_element">Iterating with index and element</h3>
 
-<pre class="brush:js notranslate">const a = ['a', 'b', 'c'];
+<pre class="brush:js">const a = ['a', 'b', 'c'];
 
 for (const [index, element] of a.entries())
   console.log(index, element);
@@ -37,9 +39,10 @@ for (const [index, element] of a.entries())
 // 2 'c'
 </pre>
 
-<h3 id="Using_a_for…of_loop">Using a <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for…of</a> loop</h3>
+<h3 id="Using_a_for…of_loop">Using a <a
+    href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for…of</a> loop</h3>
 
-<pre class="brush:js notranslate">var a = ['a', 'b', 'c'];
+<pre class="brush:js">var a = ['a', 'b', 'c'];
 var iterator = a.entries();
 
 for (let e of iterator) {
@@ -53,33 +56,32 @@ for (let e of iterator) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.entries', 'Array.prototype.entries')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-array.prototype.entries',
+        'Array.prototype.entries')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("javascript.builtins.Array.entries")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Array.prototype.keys()")}}</li>
- <li>{{jsxref("Array.prototype.values()")}}</li>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">Iteration protocols</a></li>
+  <li>{{jsxref("Array.prototype.keys()")}}</li>
+  <li>{{jsxref("Array.prototype.values()")}}</li>
+  <li>{{jsxref("Array.prototype.forEach()")}}</li>
+  <li>{{jsxref("Array.prototype.every()")}}</li>
+  <li>{{jsxref("Array.prototype.some()")}}</li>
+  <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></li>
+  <li><a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">Iteration
+      protocols</a></li>
 </ul>

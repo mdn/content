@@ -2,33 +2,38 @@
 title: Gamepad.id
 slug: Web/API/Gamepad/id
 tags:
-  - API
-  - Gamepad API
-  - Games
-  - NeedsBetterSpecLink
-  - NeedsMarkupWork
-  - Property
-  - Reference
-  - Référence(2)
+- API
+- Gamepad API
+- Games
+- NeedsBetterSpecLink
+- NeedsMarkupWork
+- Property
+- Reference
+- Référence(2)
 ---
 <div>{{APIRef("Gamepad API")}}</div>
 
-<p>The <strong><code>Gamepad.id</code></strong> property of the {{domxref("Gamepad") }} interface returns a string containing some information about the controller.</p>
+<p>The <strong><code>Gamepad.id</code></strong> property of the {{domxref("Gamepad") }}
+	interface returns a string containing some information about the controller.</p>
 
-<p>The exact syntax is not strictly specified, but in Firefox it will contain three pieces of information separated by dashes (<code>-</code>):</p>
+<p>The exact syntax is not strictly specified, but in Firefox it will contain three pieces
+	of information separated by dashes (<code>-</code>):</p>
 
 <ul>
-	<li>Two 4-digit hexadecimal strings containing the USB vendor and product id of the controller</li>
+	<li>Two 4-digit hexadecimal strings containing the USB vendor and product id of the
+		controller</li>
 	<li>The name of the controller as provided by the driver.</li>
 </ul>
 
 <p>For example, a PS2 controller returned <strong>810-3-USB Gamepad</strong>.</p>
 
-<p>This information is intended to allow you to find a mapping for the controls on the device as well as display useful feedback to the user.</p>
+<p>This information is intended to allow you to find a mapping for the controls on the
+	device as well as display useful feedback to the user.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><span class="idlInterface" id="idl-def-Gamepad"><span class="idlAttribute">readonly    attribute <span class="idlAttrType">DOMString</span>           <span class="idlAttrName">id</span>;</span></span></pre>
+<pre
+	class="brush: js"><span class="idlInterface" id="idl-def-Gamepad"><span class="idlAttribute">readonly    attribute <span class="idlAttrType">DOMString</span>           <span class="idlAttrName">id</span>;</span></span></pre>
 
 <h2 id="Example">Example</h2>
 

@@ -2,30 +2,34 @@
 title: MediaSource.removeSourceBuffer()
 slug: Web/API/MediaSource/removeSourceBuffer
 tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - MediaSource
-  - Method
-  - Reference
-  - Video
-  - removeSourceBuffer
+- API
+- Audio
+- Experimental
+- MSE
+- Media Source Extensions
+- MediaSource
+- Method
+- Reference
+- Video
+- removeSourceBuffer
 ---
 <div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
 
-<p>The <code><strong>removeSourceBuffer()</strong></code> method of the {{domxref("MediaSource")}} interface removes the given {{domxref("SourceBuffer")}} from the {{domxref("SourceBuffers")}} list associated with this <code>MediaSource</code> object.</p>
+<p>The <code><strong>removeSourceBuffer()</strong></code> method of the
+  {{domxref("MediaSource")}} interface removes the given {{domxref("SourceBuffer")}} from
+  the {{domxref("SourceBuffers")}} list associated with this <code>MediaSource</code>
+  object.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>mediaSource</em>.removeSourceBuffer(<em>sourceBuffer</em>);</pre>
+<pre
+  class="brush: js"><em>mediaSource</em>.removeSourceBuffer(<em>sourceBuffer</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>sourceBuffer</dt>
- <dd>The {{domxref("SourceBuffer")}} object to be removed.</dd>
+  <dt>sourceBuffer</dt>
+  <dd>The {{domxref("SourceBuffer")}} object to be removed.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -35,18 +39,19 @@ tags:
 <h3 id="Exceptions">Exceptions</h3>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Explanation</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>NotFoundError</code></td>
-   <td>The supplied sourceBuffer doesn't exist in {{domxref("MediaSource.sourceBuffers")}}.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Exception</th>
+      <th scope="col">Explanation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>NotFoundError</code></td>
+      <td>The supplied sourceBuffer doesn't exist in
+        {{domxref("MediaSource.sourceBuffers")}}.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Examples">Examples</h2>
@@ -61,30 +66,28 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Source Extensions', '#dom-mediasource-removesourcebuffer', 'removeSourceBuffer()')}}</td>
-   <td>{{Spec2('Media Source Extensions')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Media Source Extensions', '#dom-mediasource-removesourcebuffer',
+        'removeSourceBuffer()')}}</td>
+      <td>{{Spec2('Media Source Extensions')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.MediaSource.removeSourceBuffer")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("SourceBuffer")}}</li>
- <li>{{domxref("SourceBufferList")}}</li>
+  <li>{{domxref("SourceBuffer")}}</li>
+  <li>{{domxref("SourceBufferList")}}</li>
 </ul>

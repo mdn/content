@@ -40,7 +40,7 @@ tags:
 
 <p>Your extension may optionally also supply an associated popup whose content is specified using HTML, CSS, and JavaScript.</p>
 
-<p>If you supply a popup, then the popup is opened when the user clicks the icon, and your JavaScript running in the popup can handle the user's interaction with it. If you don't supply a popup, then a click event is dispatched to your extension's <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_pages">background scripts</a> when the user clicks the icon.</p>
+<p>If you supply a popup, then the popup is opened when the user clicks the icon, and your JavaScript running in the popup can handle the user's interaction with it. If you don't supply a popup, then a click event is dispatched to your extension's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_pages">background scripts</a> when the user clicks the icon.</p>
 
 <p>You can also create and manipulate page actions programmatically using the {{WebExtAPIRef("pageAction", "pageAction API")}}.</p>
 
@@ -108,9 +108,9 @@ tags:
 
     <p>The HTML file may include CSS and JavaScript files using <code><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a></code> elements, just like a normal web page. However, don't use <code><a href="/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a></code> with embedded code, because you'll get a Content Violation Policy error. Instead, <code><a href="/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a></code> must use the <code><a href="/en-US/docs/Web/HTML/Element/script">src</a></code> attribute to load a separate script file.</p>
 
-    <p>Unlike a normal web page, JavaScript running in the popup can access all the <a href="/en-US/Add-ons/WebExtensions/API">WebExtension APIs</a> (subject, of course, to the extension having the appropriate <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a>).</p>
+    <p>Unlike a normal web page, JavaScript running in the popup can access all the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API">WebExtension APIs</a> (subject, of course, to the extension having the appropriate <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a>).</p>
 
-    <p>This is a <a href="/en-US/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json">localizable property</a>.</p>
+    <p>This is a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json">localizable property</a>.</p>
    </td>
   </tr>
   <tr>
@@ -119,14 +119,14 @@ tags:
    <td>
     <p>Tooltip for the icon, displayed when the user moves their mouse over it.</p>
 
-    <p>This is a <a href="/en-US/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json">localizable property</a>.</p>
+    <p>This is a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json">localizable property</a>.</p>
    </td>
   </tr>
   <tr>
    <td><code>hide_matches</code></td>
    <td><code>Array</code> of <code>Match Pattern</code> except <code>&lt;all_urls&gt;</code></td>
    <td>
-    <p>Hide the page action by default for pages whose URLs match any of the given <a href="/en-US/Add-ons/WebExtensions/match_patterns">match patterns</a>.</p>
+    <p>Hide the page action by default for pages whose URLs match any of the given <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>.</p>
 
     <p>Note that page actions are always hidden by default unless <code>show_matches</code> is given. Therefore, it only makes sense to include this property if <code>show_matches</code> is also given, and will override the patterns in <code>show_matches</code>.</p>
 

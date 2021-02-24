@@ -2,25 +2,32 @@
 title: SpeechSynthesis.paused
 slug: Web/API/SpeechSynthesis/paused
 tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechSynthesis
-  - Web Speech API
-  - paused
-  - speech
-  - synthesis
+- API
+- Experimental
+- Property
+- Reference
+- SpeechSynthesis
+- Web Speech API
+- paused
+- speech
+- synthesis
 ---
 <div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
 
-<p>The <strong><code>paused</code></strong> read-only property of the {{domxref("SpeechSynthesis")}} interface is a {{domxref("Boolean")}} that returns <code>true</code> if the <code>SpeechSynthesis</code> object is in a paused state, or <code>false</code> if not.</p>
+<p>The <strong><code>paused</code></strong> read-only property of the
+	{{domxref("SpeechSynthesis")}} interface is a {{domxref("Boolean")}} that returns
+	<code>true</code> if the <code>SpeechSynthesis</code> object is in a paused state, or
+	<code>false</code> if not.</p>
 
-<p>It can be set to {{domxref("SpeechSynthesis.pause()", "paused")}} even if nothing is currently being spoken through it. If {{domxref("SpeechSynthesisUtterance","utterances")}} are then added to the utterance queue, they will not be spoken until the <code>SpeechSynthesis</code> object is unpaused, using {{domxref("SpeechSynthesis.resume()")}}.</p>
+<p>It can be set to {{domxref("SpeechSynthesis.pause()", "paused")}} even if nothing is
+	currently being spoken through it. If
+	{{domxref("SpeechSynthesisUtterance","utterances")}} are then added to the utterance
+	queue, they will not be spoken until the <code>SpeechSynthesis</code> object is
+	unpaused, using {{domxref("SpeechSynthesis.resume()")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var amIPaused = speechSynthesisInstance.paused;
+<pre class="brush: js">var amIPaused = speechSynthesisInstance.paused;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -46,22 +53,20 @@ var amIPaused = synth.paused; // will return true
 			<th scope="col">Comment</th>
 		</tr>
 		<tr>
-			<td>{{SpecName('Web Speech API', '#dom-speechsynthesis-paused', 'paused')}}</td>
+			<td>{{SpecName('Web Speech API', '#dom-speechsynthesis-paused', 'paused')}}
+			</td>
 			<td>{{Spec2('Web Speech API')}}</td>
-			<td> </td>
+			<td></td>
 		</tr>
 	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.SpeechSynthesis.paused")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
+  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
 </ul>

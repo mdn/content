@@ -17,71 +17,91 @@ tags:
 ---
 <p>{{APIRef("Console API")}}</p>
 
-<p><span class="seoSummary">The {{domxref("Console")}} method <strong><code>log()</code></strong> outputs a message to the web console.</span> The message may be a single string (with optional substitution values), or it may be any one or more JavaScript objects.</p>
+<p><span class="seoSummary">The {{domxref("Console")}} method
+    <strong><code>log()</code></strong> outputs a message to the web console.</span> The
+  message may be a single string (with optional substitution values), or it may be any one
+  or more JavaScript objects.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">console.log(<var>obj1</var> [, <var>obj2</var>, ..., <var>objN</var>]);
+<pre class="brush: js">console.log(<var>obj1</var> [, <var>obj2</var>, ..., <var>objN</var>]);
 console.log(<var>msg</var> [, <var>subst1</var>, ..., <var>substN</var>]);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>obj1</code> ... <code>objN</code></dt>
- <dd>A list of JavaScript objects to output. The string representations of each of these objects are appended together in the order listed and output. Please be warned that if you log objects in the latest versions of Chrome and Firefox what you get logged on the console is a <em>reference to the object</em>, which is not necessarily the 'value' of the object at the moment in time you call <code>console.log()</code>, but it is the value of the object at the moment you open the console.</dd>
- <dt><code>msg</code></dt>
- <dd>A JavaScript string containing zero or more substitution strings.</dd>
- <dt><code>subst1</code> ... <code>substN</code></dt>
- <dd>JavaScript objects with which to replace substitution strings within <code>msg</code>. This gives you additional control over the format of the output.</dd>
+  <dt><code>obj1</code> ... <code>objN</code></dt>
+  <dd>A list of JavaScript objects to output. The string representations of each of these
+    objects are appended together in the order listed and output. Please be warned that if
+    you log objects in the latest versions of Chrome and Firefox what you get logged on
+    the console is a <em>reference to the object</em>, which is not necessarily the
+    'value' of the object at the moment in time you call <code>console.log()</code>, but
+    it is the value of the object at the moment you open the console.</dd>
+  <dt><code>msg</code></dt>
+  <dd>A JavaScript string containing zero or more substitution strings.</dd>
+  <dt><code>subst1</code> ... <code>substN</code></dt>
+  <dd>JavaScript objects with which to replace substitution strings within
+    <code>msg</code>. This gives you additional control over the format of the output.
+  </dd>
 </dl>
 
-<p>See <a href="/en-US/docs/DOM/console#Outputting_text_to_the_console">Outputting text to the console</a> in the documentation of {{domxref("console")}} for details.</p>
+<p>See <a href="/en-US/docs/Web/API/Console#outputting_text_to_the_console">Outputting text to
+    the console</a> in the documentation of {{domxref("console")}} for details.</p>
 
 <h2 id="Difference_between_log_and_dir">Difference between log() and dir()</h2>
 
-<p>You might ask yourself what's the difference between {{domxref("console.dir()")}} and <code>console.log()</code>.</p>
+<p>You might ask yourself what's the difference between {{domxref("console.dir()")}} and
+  <code>console.log()</code>.</p>
 
-<p>Another useful difference in Chrome exists when sending DOM elements to the console.</p>
+<p>Another useful difference in Chrome exists when sending DOM elements to the console.
+</p>
 
-<p><img alt="" src="https://i.imgur.com/DozDcYR.png"></p>
+<p><img alt="" src="dozdcyr.png"></p>
 
 <p>Notice:</p>
 
 <ul>
- <li><code>console.log</code> prints the element in an HTML-like tree</li>
- <li><code>console.dir</code> prints the element in a JSON-like tree</li>
+  <li><code>console.log</code> prints the element in an HTML-like tree</li>
+  <li><code>console.dir</code> prints the element in a JSON-like tree</li>
 </ul>
 
-<p>Specifically, <code>console.log</code> gives special treatment to DOM elements, whereas <code>console.dir</code> does not. This is often useful when trying to see the full representation of the DOM JS object.</p>
+<p>Specifically, <code>console.log</code> gives special treatment to DOM elements, whereas
+  <code>console.dir</code> does not. This is often useful when trying to see the full
+  representation of the DOM JS object.</p>
 
-<p>There's more information in the <a href="https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject">Chrome Console API reference</a> about this and other functions.</p>
+<p>There's more information in the <a
+    href="https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject">Chrome
+    Console API reference</a> about this and other functions.</p>
 
 <h2 id="Logging_objects">Logging objects</h2>
 
-<p>Don't use <code>console.log(obj)</code>, use <code>console.log(JSON.parse(JSON.stringify(obj)))</code>.</p>
+<p>Don't use <code>console.log(obj)</code>, use
+  <code>console.log(JSON.parse(JSON.stringify(obj)))</code>.</p>
 
-<p>This way you are sure you are seeing the value of <code>obj</code> at the moment you log it. Otherwise, many browsers provide a live view that constantly updates as values change. This may not be what you want.</p>
+<p>This way you are sure you are seeing the value of <code>obj</code> at the moment you
+  log it. Otherwise, many browsers provide a live view that constantly updates as values
+  change. This may not be what you want.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#log", "console.log()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("Console API", "#log", "console.log()")}}</td>
+      <td>{{Spec2("Console API")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -91,8 +111,17 @@ console.log(<var>msg</var> [, <var>subst1</var>, ..., <var>substN</var>]);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a class="external" href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
- <li><a class="external" href="https://msdn.microsoft.com/library/gg589530">MSDN: Using the F12 Tools Console to View Errors and Status</a></li>
- <li><a href="http://getfirebug.com/wiki/index.php/Console_API">Firebug wiki: Console API</a> - Firebug supports additional features in its console.log() implementation, such as <a href="http://www.softwareishard.com/blog/firebug/firebug-tip-styled-logging/">styled logging</a>.</li>
- <li><a href="http://nodejs.org/docs/latest/api/console.html#console_console_log_data">NodeJS: Console API</a></li>
+  <li><a class="external"
+      href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly
+      documentation: Console</a></li>
+  <li><a href="https://msdn.microsoft.com/library/gg589530">MSDN: Using
+      the F12 Tools Console to View Errors and Status</a></li>
+  <li><a href="http://getfirebug.com/wiki/index.php/Console_API">Firebug wiki: Console
+      API</a> - Firebug supports additional features in its console.log() implementation,
+    such as <a
+      href="http://www.softwareishard.com/blog/firebug/firebug-tip-styled-logging/">styled
+      logging</a>.</li>
+  <li><a
+      href="http://nodejs.org/docs/latest/api/console.html#console_console_log_data">NodeJS:
+      Console API</a></li>
 </ul>

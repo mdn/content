@@ -8,7 +8,7 @@ tags:
   - Obsolete
   - Non-standard
 ---
-<div>{{Obsolete_header}}{{Non-standard_header}}</div>
+<div>{{deprecated_header}}{{Non-standard_header}}</div>
 
 <div>{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}</div>
 
@@ -33,20 +33,20 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">DPR: &lt;number&gt;
+<pre class="brush: html">DPR: &lt;number&gt;
 </pre>
 
 <h2 id="Examples">Examples</h2>
 
 <p>Server first needs to opt in to receive <code>DPR</code> header by sending the response headers {{HTTPHeader("Accept-CH")}} containing <code>DPR</code> and {{HTTPHeader("Accept-CH-Lifetime")}}.</p>
 
-<pre class="notranslate">Accept-CH: DPR
+<pre>Accept-CH: DPR
 Accept-CH-Lifetime: 86400
 </pre>
 
 <p>Then on subsequent requests the client might send <code>DPR</code> header back:</p>
 
-<pre class="notranslate">DPR: 1.0
+<pre>DPR: 1.0
 </pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

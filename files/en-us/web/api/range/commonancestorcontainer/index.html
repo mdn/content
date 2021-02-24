@@ -2,26 +2,40 @@
 title: Range.commonAncestorContainer
 slug: Web/API/Range/commonAncestorContainer
 tags:
-  - API
-  - DOM
-  - Property
-  - Range
+- API
+- DOM
+- Property
+- Range
 ---
 <div>{{ApiRef("DOM")}}</div>
 
-<p>The <code><strong>Range.commonAncestorContainer</strong></code> read-only property returns the deepest — or furthest down the document tree — {{domxref("Node")}} that contains both <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-Position-h3">boundary points</a> of the {{domxref("Range")}}. This means that if {{domxref("Range.startContainer")}} and {{domxref("Range.endContainer")}} both refer to the same node, this node is the <strong>common ancestor container</strong>.</p>
+<p>The <code><strong>Range.commonAncestorContainer</strong></code> read-only property
+  returns the deepest — or furthest down the document tree — {{domxref("Node")}} that
+  contains both <a
+    href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-Position-h3">boundary
+    points</a> of the {{domxref("Range")}}. This means that if
+  {{domxref("Range.startContainer")}} and {{domxref("Range.endContainer")}} both refer to
+  the same node, this node is the <strong>common ancestor container</strong>.</p>
 
-<p>Since a <code>Range</code> need not be continuous, and may also partially select nodes, this is a convenient way to find a <code>Node</code> which encloses a <code>Range</code>.</p>
+<p>Since a <code>Range</code> need not be continuous, and may also partially select nodes,
+  this is a convenient way to find a <code>Node</code> which encloses a
+  <code>Range</code>.</p>
 
-<p>This property is read-only. To change the ancestor container of a <code>Node</code>, consider using the various methods available to set the start and end positions of the <code>Range</code>, such as {{domxref("Range.setStart()")}} and {{domxref("Range.setEnd()")}}.</p>
+<p>This property is read-only. To change the ancestor container of a <code>Node</code>,
+  consider using the various methods available to set the start and end positions of the
+  <code>Range</code>, such as {{domxref("Range.setStart()")}} and
+  {{domxref("Range.setEnd()")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>rangeAncestor</em> = <em>range</em>.commonAncestorContainer;</pre>
+<pre
+  class="brush: js"><em>rangeAncestor</em> = <em>range</em>.commonAncestorContainer;</pre>
 
 <h2 id="Example">Example</h2>
 
-<p>In this example, we create an event listener to handle {{Event("pointerup")}} events on a list. The listener gets the common ancestors of each piece of selected text, and triggers an animation to highlight them.</p>
+<p>In this example, we create an event listener to handle {{Event("pointerup")}} events on
+  a list. The listener gets the common ancestors of each piece of selected text, and
+  triggers an animation to highlight them.</p>
 
 <h3 id="HTML">HTML</h3>
 
@@ -47,7 +61,8 @@ tags:
 
 <h3 id="CSS">CSS</h3>
 
-<p>The <code>.highlight</code> class created below uses a set of CSS {{cssxref("@keyframes")}} to animate a fading outline.</p>
+<p>The <code>.highlight</code> class created below uses a set of CSS
+  {{cssxref("@keyframes")}} to animate a fading outline.</p>
 
 <pre class="brush: css">.highlight {
   animation: highlight linear 1s;
@@ -59,7 +74,7 @@ tags:
 }</pre>
 
 <div class="hidden">
-<pre class="brush: css">body {
+  <pre class="brush: css">body {
   padding: 1px;
 }</pre>
 </div>
@@ -95,23 +110,26 @@ function playAnimation(el) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-range-commonancestorcontainer', 'Range.commonAncestorContainer')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'ranges.html#Level-2-Range-attr-commonParent', 'Range.commonAncestorContainer')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-range-commonancestorcontainer',
+        'Range.commonAncestorContainer')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>No change.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 Traversal_Range',
+        'ranges.html#Level-2-Range-attr-commonParent', 'Range.commonAncestorContainer')}}
+      </td>
+      <td>{{Spec2('DOM2 Traversal_Range')}}</td>
+      <td>Initial specification.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -121,5 +139,5 @@ function playAnimation(el) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
+  <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
 </ul>

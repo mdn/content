@@ -16,7 +16,7 @@ tags:
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Win_the_game", "Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens")}}</p>
 
 <div class="summary">
-<p>This is the <strong>13th step</strong> out of 16 of the <a href="/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson13.html">Gamedev-Phaser-Content-Kit/demos/lesson13.html</a>.</p>
+<p>This is the <strong>13th step</strong> out of 16 of the <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser">Gamedev Phaser tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson13.html">Gamedev-Phaser-Content-Kit/demos/lesson13.html</a>.</p>
 </div>
 
 <p><span class="seoSummary">We can make the game enjoyable for longer by adding lives. In this article we'll implement a lives system, so that the player can continue playing until they have lost three lives, not just one.</span></p>
@@ -25,7 +25,7 @@ tags:
 
 <p>Add the following new variables below the existing ones in your code:</p>
 
-<pre class="brush: js notranslate">var lives = 3;
+<pre class="brush: js">var lives = 3;
 var livesText;
 var lifeLostText;
 </pre>
@@ -34,9 +34,9 @@ var lifeLostText;
 
 <h2 id="Defining_the_new_text_labels">Defining the new text labels</h2>
 
-<p>Defining the texts look like something we already did in <a href="/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/The_score">the score</a> lesson. Add the following lines below the existing <code>scoreText</code> definition inside your <code>create()</code> function:</p>
+<p>Defining the texts look like something we already did in <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score">the score</a> lesson. Add the following lines below the existing <code>scoreText</code> definition inside your <code>create()</code> function:</p>
 
-<pre class="brush: js notranslate">livesText = game.add.text(game.world.width-5, 5, 'Lives: '+lives, { font: '18px Arial', fill: '#0095DD' });
+<pre class="brush: js">livesText = game.add.text(game.world.width-5, 5, 'Lives: '+lives, { font: '18px Arial', fill: '#0095DD' });
 livesText.anchor.set(1,0);
 lifeLostText = game.add.text(game.world.width*0.5, game.world.height*0.5, 'Life lost, click to continue', { font: '18px Arial', fill: '#0095DD' });
 lifeLostText.anchor.set(0.5);
@@ -51,12 +51,12 @@ lifeLostText.visible = false;
 
 <p>As you probably noticed we're using the same styling for all three texts: <code>scoreText</code>, <code>livesText</code> and <code>lifeLostText</code>. If we ever want to change the font size or color we will have to do it in multiple places. To make it easier for us to maintain in the future we can create a separate variable that will hold our styling, let's call it <code>textStyle</code> and place it before the text definitions:</p>
 
-<pre class="brush: js notranslate">textStyle = { font: '18px Arial', fill: '#0095DD' };
+<pre class="brush: js">textStyle = { font: '18px Arial', fill: '#0095DD' };
 </pre>
 
 <p>We can now use this variable when styling our text labels — update your code so that the multiple instances of the text styling are replaced with the variable:</p>
 
-<pre class="brush: js notranslate">scoreText = game.add.text(5, 5, 'Points: 0', textStyle);
+<pre class="brush: js">scoreText = game.add.text(5, 5, 'Points: 0', textStyle);
 livesText = game.add.text(game.world.width-5, 5, 'Lives: '+lives, textStyle);
 livesText.anchor.set(1,0);
 lifeLostText = game.add.text(game.world.width*0.5, game.world.height*0.5, 'Life lost, click to continue', textStyle);
@@ -70,7 +70,7 @@ lifeLostText.visible = false;
 
 <p>To implement lives in our game, let's first change the ball's function bound to the <code>onOutOfBounds</code> event. Instead of executing an anonymous function and showing the alert right away :</p>
 
-<pre class="brush: js notranslate"><s>ball.events.onOutOfBounds.add(function(){
+<pre class="brush: js"><s>ball.events.onOutOfBounds.add(function(){
     alert('Game over!');
     location.reload();
 }, this);</s>
@@ -78,12 +78,12 @@ lifeLostText.visible = false;
 
 <p>We will assign a new function called <code>ballLeaveScreen</code>; delete the previous event handler (shown above) and replace it with the following line:</p>
 
-<pre class="brush: js notranslate">ball.events.onOutOfBounds.add(ballLeaveScreen, this);
+<pre class="brush: js">ball.events.onOutOfBounds.add(ballLeaveScreen, this);
 </pre>
 
 <p>We want to decrease the number of lives every time the ball leaves the canvas. Add the <code>ballLeaveScreen()</code> function definition at the end of our code:</p>
 
-<pre class="brush: js notranslate">function ballLeaveScreen() {
+<pre class="brush: js">function ballLeaveScreen() {
     lives--;
     if(lives) {
         livesText.setText('Lives: '+lives);
@@ -118,6 +118,6 @@ lifeLostText.visible = false;
 
 <h2 id="Next_steps">Next steps</h2>
 
-<p>Lives made the game more forgiving — if you lose one life, you still have two more left and can continue to play. Now let's expand the look and feel of the game by adding <a href="/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens">animations and tweens</a>.</p>
+<p>Lives made the game more forgiving — if you lose one life, you still have two more left and can continue to play. Now let's expand the look and feel of the game by adding <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens">animations and tweens</a>.</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Win_the_game", "Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens")}}</p>

@@ -2,27 +2,32 @@
 title: Range.collapse()
 slug: Web/API/Range/collapse
 tags:
-  - API
-  - DOM
-  - Method
-  - Range
+- API
+- DOM
+- Method
+- Range
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <code><strong>Range.collapse()</strong></code> method collapses the {{domxref("Range")}} to one of its boundary points.</p>
+<p>The <code><strong>Range.collapse()</strong></code> method collapses the
+  {{domxref("Range")}} to one of its boundary points.</p>
 
-<p>A collapsed {{domxref("Range")}} is empty, containing no content, specifying a single-point in a DOM tree. To determine if a {{domxref("Range")}} is already collapsed, see the {{domxref("Range.collapsed")}} property.</p>
+<p>A collapsed {{domxref("Range")}} is empty, containing no content, specifying a
+  single-point in a DOM tree. To determine if a {{domxref("Range")}} is already collapsed,
+  see the {{domxref("Range.collapsed")}} property.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>range</em>.collapse(<em>toStart</em>);
+<pre class="brush: js"><em>range</em>.collapse(<em>toStart</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>toStart</code> {{optional_inline}}</dt>
- <dd>A {{jsxref("Boolean")}} value: <code>true</code> collapses the {{domxref("Range")}} to its start, <code>false</code> to its end. If omitted, it defaults to <code>false</code> {{experimental_inline}}.</dd>
+  <dt><code>toStart</code> {{optional_inline}}</dt>
+  <dd>A {{jsxref("Boolean")}} value: <code>true</code> collapses the {{domxref("Range")}}
+    to its start, <code>false</code> to its end. If omitted, it defaults to
+    <code>false</code> {{experimental_inline}}.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -37,23 +42,24 @@ range.collapse(true);
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-range-collapse', 'Range.collapse()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>The parameter is now optional and default to <code>false</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'ranges.html#Level2-Range-method-collapse', 'Range.collapse()')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-range-collapse', 'Range.collapse()')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>The parameter is now optional and default to <code>false</code>.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 Traversal_Range', 'ranges.html#Level2-Range-method-collapse',
+        'Range.collapse()')}}</td>
+      <td>{{Spec2('DOM2 Traversal_Range')}}</td>
+      <td>Initial specification.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -63,5 +69,5 @@ range.collapse(true);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
+  <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
 </ul>

@@ -52,9 +52,9 @@ tags:
  </dd>
 </dl>
 
-<p>See <a href="/en-US/Add-ons/WebExtensions/API/webRequest/onAuthRequired#Examples">Examples</a>.</p>
+<p>See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired#examples">Examples</a>.</p>
 
-<p>If you use <code>"blocking"</code> you must have the <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">"webRequestBlocking" API permission</a> in your <code>manifest.json</code>.</p>
+<p>If you use <code>"blocking"</code> you must have the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">"webRequestBlocking" API permission</a> in your <code>manifest.json</code>.</p>
 
 <p>If your extension provides bad credentials, then the listener will be called again. For this reason, take care not to enter an infinite loop by repeatedly providing bad credentials.</p>
 
@@ -66,7 +66,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">browser.webRequest.onAuthRequired.addListener(
+<pre class="brush: js">browser.webRequest.onAuthRequired.addListener(
   <var>listener</var>,                    // function
   <var>filter</var>,                      //  object
   <var>extraInfoSpec</var>                //  optional array of strings
@@ -175,7 +175,7 @@ browser.webRequest.onAuthRequired.hasListener(<var>listener</var>)
   <dt><code>proxyDNS</code></dt>
   <dd><code>boolean</code>. True if the proxy will perform domain name resolution based on the hostname supplied, meaning that the client should not do its own DNS lookup.</dd>
   <dt><code>failoverTimeout</code></dt>
-  <dd><code>integer</code>. Failover timeout in seconds. If the connection fails to connect the proxy server after this number of seconds, the next proxy server in the array returned from <a href="/en-US/docs/Add-ons/WebExtensions/API/proxy#FindProxyForURL()_return_value">FindProxyForURL()</a> will be used.</dd>
+  <dd><code>integer</code>. Failover timeout in seconds. If the connection fails to connect the proxy server after this number of seconds, the next proxy server in the array returned from <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy#findproxyforurl()_return_value">FindProxyForURL()</a> will be used.</dd>
  </dl>
  </dd>
  <dt><code>realm</code>{{optional_inline}}</dt>

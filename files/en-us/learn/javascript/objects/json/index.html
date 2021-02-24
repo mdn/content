@@ -15,7 +15,7 @@ tags:
   - Learn
   - Objects
   - Tutorial
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{LearnSidebar}}</div>
 
@@ -27,7 +27,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, a basic understanding of HTML and CSS, familiarity with JavaScript basics (see <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and <a href="/en-US/docs/Learn/JavaScript/Building_blocks">Building blocks</a>) and OOJS basics (see <a href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction">Introduction to objects</a>).</td>
+   <td>Basic computer literacy, a basic understanding of HTML and CSS, familiarity with JavaScript basics (see <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and <a href="/en-US/docs/Learn/JavaScript/Building_blocks">Building blocks</a>) and OOJS basics (see <a href="/en-US/docs/Learn/JavaScript/Objects/Basics">Introduction to objects</a>).</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -52,7 +52,7 @@ tags:
 
 <p>As described above, JSON is a string whose format very much resembles JavaScript object literal format. You can include the same basic data types inside JSON as you can in a standard JavaScript object — strings, numbers, arrays, booleans, and other object literals. This allows you to construct a data hierarchy, like so:</p>
 
-<pre class="brush: json notranslate">'{
+<pre class="brush: json">'{
   "squadName": "Super hero squad",
   "homeTown": "Metro City",
   "formed": 2016,
@@ -96,12 +96,12 @@ tags:
 
 <p>If we loaded this string into a JavaScript program, parsed it into a variable called <code>superHeroes</code> for example, we could then access the data inside it using the same dot/bracket notation we looked at in the <a href="/en-US/docs/Learn/JavaScript/Objects/Basics">JavaScript object basics</a> article. For example:</p>
 
-<pre class="brush: js notranslate">superHeroes.homeTown
+<pre class="brush: js">superHeroes.homeTown
 superHeroes['active']</pre>
 
 <p>To access data further down the hierarchy, you have to chain the required property names and array indexes together.  For example, to access the third superpower of the second hero listed in the members list, you'd do this:</p>
 
-<pre class="brush: js notranslate">superHeroes['members'][1]['powers'][2]</pre>
+<pre class="brush: js">superHeroes['members'][1]['powers'][2]</pre>
 
 <ol>
  <li>First we have the variable name — <code>superHeroes</code>.</li>
@@ -119,7 +119,7 @@ superHeroes['active']</pre>
 
 <p>Above we mentioned that JSON text basically looks like a JavaScript object inside a string. We can also convert arrays to/from JSON. Below is also valid JSON, for example:</p>
 
-<pre class="brush: json notranslate">'[
+<pre class="brush: json">'[
   {
     "name": "Molecule Man",
     "age": 29,
@@ -162,7 +162,7 @@ superHeroes['active']</pre>
 
 <p>To begin with, make local copies of our <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes.html">heroes.html</a> and <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/style.css">style.css</a> files. The latter contains some simple CSS to style our page, while the former contains some very simple body HTML:</p>
 
-<pre class="brush: html notranslate">&lt;header&gt;
+<pre class="brush: html">&lt;header&gt;
 &lt;/header&gt;
 
 &lt;section&gt;
@@ -170,14 +170,14 @@ superHeroes['active']</pre>
 
 <p>Plus a {{HTMLElement("script")}} element to contain the JavaScript code we will be writing in this exercise. At the moment it only contains two lines, which grab references to the {{HTMLElement("header")}} and {{HTMLElement("section")}} elements and store them in variables:</p>
 
-<pre class="brush: js notranslate">const header = document.querySelector('header');
+<pre class="brush: js">const header = document.querySelector('header');
 const section = document.querySelector('section');</pre>
 
 <p>We have made our JSON data available on our GitHub, at <a href="https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json">https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json</a>.</p>
 
 <p>We are going to load it into our page, and use some nifty DOM manipulation to display it, like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13857/json-superheroes.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="json-superheroes.png" style="display: block; margin: 0 auto;"></p>
 
 <h3 id="Obtaining_the_JSON">Obtaining the JSON</h3>
 
@@ -185,13 +185,13 @@ const section = document.querySelector('section');</pre>
 
 <ol>
  <li>To start with, we store the URL of the JSON we want to retrieve in a variable. Add the following at the bottom of your JavaScript code:
-  <pre class="brush: js notranslate">let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';</pre>
+  <pre class="brush: js">let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';</pre>
  </li>
  <li>To create a request, we need to create a new request object instance from the <code>XMLHttpRequest</code> constructor, using the <code>new</code> keyword. Add the following below your last line:
-  <pre class="brush: js notranslate">let request = new XMLHttpRequest();</pre>
+  <pre class="brush: js">let request = new XMLHttpRequest();</pre>
  </li>
  <li>Now we need to open the request using the <code><a href="/en-US/docs/Web/API/XMLHttpRequest/open">open()</a></code> method. Add the following line:
-  <pre class="brush: js notranslate">request.open('GET', requestURL);</pre>
+  <pre class="brush: js">request.open('GET', requestURL);</pre>
 
   <p>This takes at least two parameters — there are other optional parameters available. We only need the two mandatory ones for this simple example:</p>
 
@@ -201,11 +201,11 @@ const section = document.querySelector('section');</pre>
   </ul>
  </li>
  <li>Next, add the following two lines — here we are setting the <code><a href="/en-US/docs/Web/API/XMLHttpRequest/responseType">responseType</a></code> to JSON, so that XHR knows that the server will be returning JSON, and that this should be converted behind the scenes into a JavaScript object. Then we send the request with the <code><a href="/en-US/docs/Web/API/XMLHttpRequest/send">send()</a></code> method:
-  <pre class="brush: js notranslate">request.responseType = 'json';
+  <pre class="brush: js">request.responseType = 'json';
 request.send();</pre>
  </li>
  <li>The last bit of this section involves waiting for the response to return from the server, then dealing with it. Add the following code below your previous code:
-  <pre class="brush: js notranslate">request.onload = function() {
+  <pre class="brush: js">request.onload = function() {
   const superHeroes = request.response;
   populateHeader(superHeroes);
   showHeroes(superHeroes);
@@ -221,7 +221,7 @@ request.send();</pre>
 
 <p>Now that we've retrieved the JSON data and converted it into a JavaScript object, let's make use of it by writing the two functions we referenced above. First of all, add the following function definition below the previous code:</p>
 
-<pre class="brush: js notranslate">function populateHeader(obj) {
+<pre class="brush: js">function populateHeader(obj) {
   const myH1 = document.createElement('h1');
   myH1.textContent = obj['squadName'];
   header.appendChild(myH1);
@@ -237,7 +237,7 @@ request.send();</pre>
 
 <p>Next, add the following function at the bottom of the code, which creates and displays the superhero cards:</p>
 
-<pre class="brush: js notranslate">function showHeroes(obj) {
+<pre class="brush: js">function showHeroes(obj) {
   const heroes = obj['members'];
 
   for (let i = 0; i &lt; heroes.length; i++) {
@@ -272,7 +272,7 @@ request.send();</pre>
 
 <p>To start with, we store the <code>members</code> property of the JavaScript object in a new variable. This array contains multiple objects that contain the information for each hero.</p>
 
-<p>Next, we use a <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop">for loop</a> to loop through each object in the array. For each one, we:</p>
+<p>Next, we use a <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#the_standard_for_loop">for loop</a> to loop through each object in the array. For each one, we:</p>
 
 <ol>
  <li>Create several new elements: an <code>&lt;article&gt;</code>, an <code>&lt;h2&gt;</code>, three <code>&lt;p&gt;</code>s, and a <code>&lt;ul&gt;</code>.</li>
@@ -295,7 +295,7 @@ request.send();</pre>
 
 <p>The above example was simple in terms of accessing the JavaScript object, because we set the XHR request to convert the JSON response directly into a JavaScript object using:</p>
 
-<pre class="brush: js notranslate">request.responseType = 'json';</pre>
+<pre class="brush: js">request.responseType = 'json';</pre>
 
 <p>But sometimes we aren't so lucky — sometimes we receive a raw JSON string, and we need to convert it to an object ourselves. And when we want to send a JavaScript object across the network, we need to convert it to JSON (a string) before sending. Luckily, these two problems are so common in web development that a built-in <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a> object is available in browsers, which contains the following two methods:</p>
 
@@ -306,7 +306,7 @@ request.send();</pre>
 
 <p>You can see the first one in action in our <a href="https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html">heroes-finished-json-parse.html</a> example (see the <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished-json-parse.html">source code</a>) — this does exactly the same thing as the example we built up earlier, except that we set the XHR to return the raw JSON text, then used <code>parse()</code> to convert it to an actual JavaScript object. The key snippet of code is here:</p>
 
-<pre class="brush: js notranslate">request.open('GET', requestURL);
+<pre class="brush: js">request.open('GET', requestURL);
 request.responseType = 'text'; // now we're getting a string!
 request.send();
 
@@ -319,7 +319,7 @@ request.onload = function() {
 
 <p>As you might guess, <code>stringify()</code> works the opposite way. Try entering the following lines into your browser's JavaScript console one by one to see it in action:</p>
 
-<pre class="brush: js notranslate">let myObj = { name: "Chris", age: 38 };
+<pre class="brush: js">let myObj = { name: "Chris", age: 38 };
 myObj
 let myString = JSON.stringify(myObj);
 myString</pre>

@@ -2,32 +2,43 @@
 title: MediaSource.activeSourceBuffers
 slug: Web/API/MediaSource/activeSourceBuffers
 tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - MediaSource
-  - MediaSourceExtensions
-  - Property
-  - Reference
-  - Video
-  - activeSourceBuffers
+- API
+- Audio
+- Experimental
+- MSE
+- MediaSource
+- MediaSourceExtensions
+- Property
+- Reference
+- Video
+- activeSourceBuffers
 ---
 <div>{{APIRef("Media Source Extensions")}}</div>
 
-<p>The <code><strong>activeSourceBuffers</strong></code> read-only property of the {{domxref("MediaSource")}} interface returns a {{domxref("SourceBufferList")}} object containing a subset of the {{domxref("SourceBuffer")}} objects contained within {{domxref("MediaSource.sourceBuffers", "sourceBuffers")}} — the list of objects providing the selected video track, enabled audio tracks, and shown/hidden text tracks.</p>
+<p>The <code><strong>activeSourceBuffers</strong></code> read-only property of the
+  {{domxref("MediaSource")}} interface returns a {{domxref("SourceBufferList")}} object
+  containing a subset of the {{domxref("SourceBuffer")}} objects contained within
+  {{domxref("MediaSource.sourceBuffers", "sourceBuffers")}} — the list of objects
+  providing the selected video track, enabled audio tracks, and shown/hidden text tracks.
+</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>myActiveSourceBuffers</em> = <em>mediaSource</em>.activeSourceBuffers;</pre>
+<pre
+  class="brush: js">var <em>myActiveSourceBuffers</em> = <em>mediaSource</em>.activeSourceBuffers;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("SourceBufferList")}} containing the {{domxref("SourceBuffer")}} objects for each of the active tracks.</p>
+<p>A {{domxref("SourceBufferList")}} containing the {{domxref("SourceBuffer")}} objects
+  for each of the active tracks.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>The following snippet is based on a simple example written by Nick Desaulniers (<a href="https://nickdesaulniers.github.io/netfix/demo/bufferAll.html">view the full demo live</a>, or <a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">download the source</a> for further investigation.)</p>
+<p>The following snippet is based on a simple example written by Nick Desaulniers (<a
+    href="https://nickdesaulniers.github.io/netfix/demo/bufferAll.html">view the full demo
+    live</a>, or <a
+    href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">download
+    the source</a> for further investigation.)</p>
 
 <pre class="brush: js  language-js"><code class="language-js"><span class="keyword token">function</span> sourceOpen <span class="punctuation token">(</span>_<span class="punctuation token">)</span> <span class="punctuation token">{</span>
  <span class="comment token"> //console.log(this.readyState); // open
@@ -51,30 +62,28 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Source Extensions', '#idl-def-mediasource-activesourcebuffers', 'activeSourceBuffers')}}</td>
-   <td>{{Spec2('Media Source Extensions')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Media Source Extensions',
+        '#idl-def-mediasource-activesourcebuffers', 'activeSourceBuffers')}}</td>
+      <td>{{Spec2('Media Source Extensions')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.MediaSource.activeSourceBuffers")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("SourceBuffer")}}</li>
- <li>{{domxref("SourceBufferList")}}</li>
+  <li>{{domxref("SourceBuffer")}}</li>
+  <li>{{domxref("SourceBufferList")}}</li>
 </ul>

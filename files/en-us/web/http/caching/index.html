@@ -16,7 +16,7 @@ tags:
 
 <p>There are several kinds of caches: these can be grouped into two main categories: private or shared caches. A <em>shared cache</em> is a cache that stores responses for reuse by more than one user. A <em>private cache</em> is dedicated to a single user. This page will mostly talk about browser and proxy caches, but there are also gateway caches, CDN, reverse proxy caches and load balancers that are deployed on web servers for better reliability, performance and scaling of web sites and web applications.</p>
 
-<p><img alt="What a cache provide, advantages/disadvantages of shared/private caches." src="https://mdn.mozillademos.org/files/13777/HTTPCachtType.png" style="height: 573px; width: 910px;"></p>
+<p><img alt="What a cache provide, advantages/disadvantages of shared/private caches." src="http_cache_type.png"></p>
 
 <h3 id="Private_browser_caches">Private browser caches</h3>
 
@@ -40,7 +40,7 @@ tags:
  <li>Responses other than {{HTTPMethod("GET")}} if something suitable for use as a cache key is defined.</li>
 </ul>
 
-<p>A cache entry might also consist of multiple stored responses differentiated by a secondary key, if the request is target of content negotiation. For more details see the information about the {{HTTPHeader("Vary")}} header <a href="#Varying_responses">below</a>.</p>
+<p>A cache entry might also consist of multiple stored responses differentiated by a secondary key, if the request is target of content negotiation. For more details see the information about the {{HTTPHeader("Vary")}} header <a href="#varying_responses">below</a>.</p>
 
 <h2 id="Controlling_caching">Controlling caching</h2>
 
@@ -52,14 +52,13 @@ tags:
 
 <p>The cache should not store anything about the client request or server response. A request is sent to the server and a full response is downloaded each and every time.</p>
 
-<pre class="notranslate">Cache-Control: no-store
-</pre>
+<pre>Cache-Control: no-store</pre>
 
 <h4 id="Cache_but_revalidate">Cache but revalidate</h4>
 
 <p>A cache will send the request to the origin server for validation before releasing a cached copy.</p>
 
-<pre class="notranslate">Cache-Control: no-cache</pre>
+<pre>Cache-Control: no-cache</pre>
 
 <h4 id="Private_and_public_caches">Private and public caches</h4>
 
@@ -67,7 +66,7 @@ tags:
 
 <p>On the other hand, "private" indicates that the response is intended for a single user only and must not be stored by a shared cache. A private browser cache may store the response in this case.</p>
 
-<pre class="notranslate">Cache-Control: private
+<pre>Cache-Control: private
 Cache-Control: public
 </pre>
 
@@ -75,15 +74,15 @@ Cache-Control: public
 
 <p>The most important directive here is <code>max-age=&lt;seconds&gt;</code>, which is the maximum amount of time in which a resource will be considered fresh. This directive is relative to the time of the request, and overrides the {{HTTPHeader("Expires")}} header (if set). For the files in the application that will not change, you can normally use aggressive caching. This includes static files such as images, CSS files, and JavaScript files, for example.</p>
 
-<p>For more details, see also the <a href="#Freshness">Freshness</a> section below.</p>
+<p>For more details, see also the <a href="#freshness">Freshness</a> section below.</p>
 
-<pre class="notranslate">Cache-Control: max-age=31536000</pre>
+<pre>Cache-Control: max-age=31536000</pre>
 
 <h4 id="Validation">Validation</h4>
 
-<p>When using the "<code>must-revalidate</code>" directive, the cache must verify the status of the stale resources before using it and expired ones should not be used. For more details, see the <a href="#Cache_validation">Validation</a> section below.</p>
+<p>When using the "<code>must-revalidate</code>" directive, the cache must verify the status of the stale resources before using it and expired ones should not be used. For more details, see the <a href="#cache_validation">Validation</a> section below.</p>
 
-<pre class="notranslate">Cache-Control: must-revalidate</pre>
+<pre>Cache-Control: must-revalidate</pre>
 
 <h3 id="The_Pragma_header">The <code>Pragma</code> header</h3>
 
@@ -97,7 +96,7 @@ Cache-Control: public
 
 <p>Here is an example of this process with a shared cache proxy:</p>
 
-<p><img alt="Show how a proxy cache acts when a doc is not cache, in the cache and fresh, in the cache and stale." src="https://mdn.mozillademos.org/files/13771/HTTPStaleness.png" style="height: 910px; width: 822px;"></p>
+<p><img alt="Show how a proxy cache acts when a doc is not cache, in the cache and fresh, in the cache and stale." src="http_staleness.png"></p>
 
 <p>The freshness lifetime is calculated based on several headers. If a "<code>Cache-Control: max-age=N</code>" header is specified, then the freshness lifetime is equal to N. If this header is not present, which is very often the case, it is checked if an {{HTTPHeader("Expires")}} header is present. If an <code>Expires</code> header exists, then its value minus the value of the {{HTTPHeader("Date")}} header determines the freshness lifetime.</p>
 
@@ -107,8 +106,7 @@ Cache-Control: public
 
 <p>In this case look for a {{HTTPHeader("Last-Modified")}} header. If this header is present, then the cache's freshness lifetime is equal to the value of the <code>Date</code> header minus the value of the <code>Last-modified</code> header divided by 10. The expiration time is computed as follows:</p>
 
-<pre class="notranslate">expirationTime = responseTime + freshnessLifetime - currentAge
-</pre>
+<pre>expirationTime = responseTime + freshnessLifetime - currentAge</pre>
 
 <p>where <code>responseTime</code> is the time at which the response was received according to the browser. For more information see <a href="https://tools.ietf.org/html/rfc7234#section-4.2.2">RFC 7234: Hypertext Transfer Protocol (HTTP/1.1): 4.2.2.  Calculating Heuristic Freshness</a>.</p>
 
@@ -120,7 +118,7 @@ Cache-Control: public
 
 <p>This technique has an additional benefit: updating two cached resources at the same time will not lead to the situation where the out-dated version of one resource is used in combination with the new version of the other one. This is very important when web sites have CSS stylesheets or JS scripts that have mutual dependencies, i.e., they depend on each other because they refer to the same HTML elements.</p>
 
-<p><img alt="How the revved cache mechanism works. With minor typo fix to grammar issue: https://github.com/mdn/sprints/issues/2618" src="https://mdn.mozillademos.org/files/17432/HTTPRevved_fix_typo.png" style="height: 897px; width: 787px;"></p>
+<p><img alt="How the revved cache mechanism works. With minor typo fix to grammar issue: https://github.com/mdn/sprints/issues/2618" src="http_revved_fix_typo.png"></p>
 
 <p>The revision version added to revved resources doesn't need to be a classical revision string like 1.1.3, or even a monotonously growing suite of number. It can be anything that prevent collisions, like a hash or a date.</p>
 
@@ -146,17 +144,18 @@ Cache-Control: public
 
 <p>When a cache receives a request that has a <code>Vary</code> header field, it must not use a cached response by default unless all header fields specified in the <code>Vary</code> header match in both the original (cached) request and the new request.</p>
 
-<p><img alt="The Vary header leads cache to use more HTTP headers as key for the cache." src="https://mdn.mozillademos.org/files/13769/HTTPVary.png" style="height: 817px; width: 752px;">This feature is commonly used to allow a resource to be cached in uncompressed and (various) compressed forms, and served appropriately to user agents based on the encodings that they support. For example, a server can set <code>Vary: Accept-Encoding</code> to ensure that a separate version of a resource is cached for all requests that specify support for a particular set of encodings, e.g. <code>Accept-Encoding: gzip,deflate,sdch</code>.</p>
+<p><img alt="The Vary header leads cache to use more HTTP headers as key for the cache." src="http_vary.png">This feature is commonly used to allow a resource to be cached in uncompressed and (various) compressed forms, and served appropriately to user agents based on the encodings that they support. For example, a server can set <code>Vary: Accept-Encoding</code> to ensure that a separate version of a resource is cached for all requests that specify support for a particular set of encodings, e.g. <code>Accept-Encoding: gzip,deflate,sdch</code>.</p>
 
-<pre class="notranslate">Vary: <code>Accept-Encoding</code>
-</pre>
+<pre>Vary: Accept-Encoding</pre>
 
-<div class="note"><strong>Note:</strong> Use <code>Vary</code> with care—it can easily reduce the effectiveness of caching! A caching server should use <a href="#Normalization">normalization</a> to reduce duplicated cache entries and unnecessary requests to the origin server. This is particularly true when using <code>Vary</code> with headers and header values that can have many values.</div>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Use <code>Vary</code> with care—it can easily reduce the effectiveness of caching! A caching server should use <a href="#normalization">normalization</a> to reduce duplicated cache entries and unnecessary requests to the origin server. This is particularly true when using <code>Vary</code> with headers and header values that can have many values.</p>
+</div>
 
 <p>The <code>Vary</code> header can also be useful for serving different content to desktop and mobile users, or to allow search engines to discover the mobile version of a page (and perhaps also tell them that no <a href="https://en.wikipedia.org/wiki/Cloaking">Cloaking</a> is intended). This is usually achieved with the <code>Vary: User-Agent</code> header, and works because the {{HTTPHeader("User-Agent")}} header value is different for mobile and desktop clients.</p>
 
-<pre class="notranslate">Vary: User-Agent
-</pre>
+<pre>Vary: User-Agent</pre>
 
 <h3 id="Normalization">Normalization</h3>
 
@@ -166,7 +165,7 @@ Cache-Control: public
 
 <p>To avoid unnecessary requests and duplicated cache entries, caching servers should use <strong>normalization</strong> to pre-process the request and cache only files that are needed. For example, in the case of <code>Accept-Encoding</code> you could check for <code>gzip</code> and other compression types in the header before doing further processing, and otherwise unset the header. In "pseudo code" this might look like:</p>
 
-<pre class="notranslate"><code>// Normalize Accept-Encoding
+<pre>// Normalize Accept-Encoding
 if (req.http.Accept-Encoding) {
   if (req.http.Accept-Encoding ~ "gzip") {
     set req.http.Accept-Encoding = "gzip";
@@ -175,7 +174,7 @@ if (req.http.Accept-Encoding) {
 else {
   unset req.http.Accept-Encoding;
   }
-}</code>
+}
 </pre>
 
 <p><code>User-Agent</code> has even more variation than <code>Accept-Encoding</code>. So if using <code>Vary: User-Agent</code> for caching mobile/desktop variants of files you'd similarly check for the presence of <code>"mobile"</code> and <code>"desktop"</code> in the request <code>User-Agent</code> header, and then clear it.</p>

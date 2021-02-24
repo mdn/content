@@ -2,30 +2,35 @@
 title: MouseEvent.screenX
 slug: Web/API/MouseEvent/screenX
 tags:
-  - API
-  - CSSOM View
-  - DOM Events
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
+- API
+- CSSOM View
+- DOM Events
+- MouseEvent
+- Property
+- Read-only
+- Reference
 ---
 <div>{{APIRef("DOM Events")}}</div>
 
-<p>The <strong><code>screenX</code></strong> read-only property of the {{domxref("MouseEvent")}} interface provides the horizontal coordinate (offset) of the mouse pointer in global (screen) coordinates.</p>
+<p>The <strong><code>screenX</code></strong> read-only property of the
+  {{domxref("MouseEvent")}} interface provides the horizontal coordinate (offset) of the
+  mouse pointer in global (screen) coordinates.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>x</em> = <em>instanceOfMouseEvent</em>.screenX
+<pre class="brush: js">var <em>x</em> = <em>instanceOfMouseEvent</em>.screenX
 </pre>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code>double</code> floating point value. Early versions of the spec defined this as an integer referring to the number of pixels. See the "Browser compatibility" section for details.</p>
+<p>A <code>double</code> floating point value. Early versions of the spec defined this as
+  an integer referring to the number of pixels. See the "Browser compatibility" section
+  for details.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>This example displays your mouse's coordinates whenever you trigger the {{Event("mousemove")}} event.</p>
+<p>This example displays your mouse's coordinates whenever you trigger the
+  {{Event("mousemove")}} event.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -49,7 +54,9 @@ function logKey(e) {
 
 <h3 id="Routing_an_event">Routing an event</h3>
 
-<p>When you trap events on the window, document, or other roomy elements, you can get the coordinates of that event (e.g., a click) and route it properly, as the following example demonstrates:</p>
+<p>When you trap events on the window, document, or other roomy elements, you can get the
+  coordinates of that event (e.g., a click) and route it properly, as the following
+  example demonstrates:</p>
 
 <pre class="brush: js">function checkClickMap(e) {
   if (e.screenX &lt; 50) doRedButton();
@@ -61,28 +68,28 @@ function logKey(e) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM View','#dom-mouseevent-screenx', 'screenX')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>Redefines {{domxref("MouseEvent")}} from long to double.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events','#widl-MouseEvent-screenX','MouseEvent.screenX')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>No change from {{SpecName('DOM2 Events')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events','#Events-MouseEvent','MouseEvent.sceenX')}}</td>
-   <td>{{Spec2('DOM2 Events')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('CSSOM View','#dom-mouseevent-screenx', 'screenX')}}</td>
+      <td>{{Spec2('CSSOM View')}}</td>
+      <td>Redefines {{domxref("MouseEvent")}} from long to double.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM3 Events','#widl-MouseEvent-screenX','MouseEvent.screenX')}}</td>
+      <td>{{Spec2('DOM3 Events')}}</td>
+      <td>No change from {{SpecName('DOM2 Events')}}.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 Events','#Events-MouseEvent','MouseEvent.sceenX')}}</td>
+      <td>{{Spec2('DOM2 Events')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -92,7 +99,8 @@ function logKey(e) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{ domxref("MouseEvent") }}</li>
- <li>{{ domxref("MouseEvent.screenY","screenY") }}</li>
- <li>{{ domxref("MouseEvent.clientX","clientX") }} / {{ domxref("MouseEvent.clientY", "clientY") }}</li>
+  <li>{{ domxref("MouseEvent") }}</li>
+  <li>{{ domxref("MouseEvent.screenY","screenY") }}</li>
+  <li>{{ domxref("MouseEvent.clientX","clientX") }} / {{ domxref("MouseEvent.clientY",
+    "clientY") }}</li>
 </ul>

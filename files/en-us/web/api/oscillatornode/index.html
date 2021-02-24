@@ -86,10 +86,10 @@ tags:
 <p>The following example shows basic usage of an {{domxref("AudioContext")}} to create an oscillator node and to start playing a tone on it. For an applied example, check out our <a href="https://mdn.github.io/violent-theremin/">Violent Theremin demo</a> (<a href="https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js">see app.js</a> for relevant code).</p>
 
 <pre class="brush: js">// create web audio api context
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // create Oscillator node
-var oscillator = audioCtx.createOscillator();
+const oscillator = audioCtx.createOscillator();
 
 oscillator.type = 'square';
 oscillator.frequency.setValueAtTime(440, audioCtx.currentTime); // value in hertz
@@ -108,17 +108,14 @@ oscillator.start();</pre>
   <tr>
    <td>{{SpecName('Web Audio API', '#oscillatornode', 'OscillatorNode')}}</td>
    <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.OscillatorNode")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

@@ -9,13 +9,13 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>trusted-types</strong></code> {{experimental_inline}} directive instructs user agents to restrict the creation of Trusted Types policies - functions that build<span> non-spoofable, typed values intended to be passed to DOM XSS sinks in place of strings. </span></p>
+<p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>trusted-types</strong></code> {{experimental_inline}} directive instructs user agents to restrict the creation of Trusted Types policies - functions that build non-spoofable, typed values intended to be passed to DOM XSS sinks in place of strings.</p>
 
-<p><span>Together with <code><strong><a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for">require-trusted-types-for</a></strong></code> directive, this allows authors to</span><span> define rules guarding writing values to the DOM and thus reducing the DOM XSS attack surface to small, isolated parts of the web application codebase, facilitating their monitoring and code review.</span> This directive declares an allow-list of trusted type policy names created with <code>TrustedTypes.createPolicy</code> from Trusted Types API.</p>
+<p>Together with <code><strong><a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for">require-trusted-types-for</a></strong></code> directive, this allows authors to define rules guarding writing values to the DOM and thus reducing the DOM XSS attack surface to small, isolated parts of the web application codebase, facilitating their monitoring and code review. This directive declares an allow-list of trusted type policy names created with <code>TrustedTypes.createPolicy</code> from Trusted Types API.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate">Content-Security-Policy: trusted-types;
+<pre>Content-Security-Policy: trusted-types;
 Content-Security-Policy: trusted-types 'none';
 Content-Security-Policy: trusted-types &lt;policyName&gt;;
 Content-Security-Policy: trusted-types &lt;policyName&gt; &lt;policyName&gt; 'allow-duplicates';
@@ -32,7 +32,7 @@ Content-Security-Policy: trusted-types &lt;policyName&gt; &lt;policyName&gt; 'al
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">// Content-Security-Policy: trusted-types foo bar 'allow-duplicates';
+<pre class="brush: js">// Content-Security-Policy: trusted-types foo bar 'allow-duplicates';
 
 if (typeof trustedTypes !== 'undefined') {
   const policyFoo = trustedTypes.createPolicy('foo', {});

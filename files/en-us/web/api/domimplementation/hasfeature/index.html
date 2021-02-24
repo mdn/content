@@ -2,66 +2,77 @@
 title: DOMImplementation.hasFeature()
 slug: Web/API/DOMImplementation/hasFeature
 tags:
-  - API
-  - DOM
-  - DOMImplementation
-  - Deprecated
-  - Method
-  - Reference
+- API
+- DOM
+- DOMImplementation
+- Deprecated
+- Method
+- Reference
 ---
 <p>{{ApiRef("DOM")}}</p>
 
 <p>{{deprecated_header()}}</p>
 
-<p><span class="seoSummary">The <strong><code>DOMImplementation.hasFeature()</code></strong> method returns a {{domxref("Boolean")}} flag indicating if a given feature is supported. It is deprecated and modern browsers return <code>true</code> in all cases.</span></p>
+<p><span class="seoSummary">The
+    <strong><code>DOMImplementation.hasFeature()</code></strong> method returns a
+    {{domxref("Boolean")}} flag indicating if a given feature is supported. It is
+    deprecated and modern browsers return <code>true</code> in all cases.</span></p>
 
-<p>The different implementations fairly diverged in what kind of features were reported. The latest version of the spec settled to force this method to always return <code>true</code>, where the functionality was accurate and in use.</p>
+<p>The different implementations fairly diverged in what kind of features were reported.
+  The latest version of the spec settled to force this method to always return
+  <code>true</code>, where the functionality was accurate and in use.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">const <var>flag</var> = document.implementation.hasFeature(<var>feature</var>, <var>version</var>);</pre>
+<pre
+  class="brush: js">const <var>flag</var> = document.implementation.hasFeature(<var>feature</var>, <var>version</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>feature</var></code></dt>
- <dd>A {{domxref("DOMString")}} representing the feature name.</dd>
- <dt><code><var>version</var></code></dt>
- <dd>A {{domxref("DOMString")}} representing the version of the specification defining the feature.</dd>
+  <dt><code><var>feature</var></code></dt>
+  <dd>A {{domxref("DOMString")}} representing the feature name.</dd>
+  <dt><code><var>version</var></code></dt>
+  <dd>A {{domxref("DOMString")}} representing the version of the specification defining
+    the feature.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-domimplementation-hasfeature', 'DOMImplementation.hasFeature')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Modified to always return <code>true</code> except for SVG features.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-5CED94D7', 'DOMImplementation.hasFeature')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>No change from {{SpecName("DOM2 Core")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-5CED94D7', 'DOMImplementation.hasFeature')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>No change from {{SpecName("DOM1")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-5CED94D7', 'DOMImplementation.hasFeature')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-domimplementation-hasfeature',
+        'DOMImplementation.hasFeature')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>Modified to always return <code>true</code> except for SVG features.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM3 Core', 'core.html#ID-5CED94D7',
+        'DOMImplementation.hasFeature')}}</td>
+      <td>{{Spec2('DOM3 Core')}}</td>
+      <td>No change from {{SpecName("DOM2 Core")}}</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 Core', 'core.html#ID-5CED94D7',
+        'DOMImplementation.hasFeature')}}</td>
+      <td>{{Spec2('DOM2 Core')}}</td>
+      <td>No change from {{SpecName("DOM1")}}</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM1', 'level-one-core.html#ID-5CED94D7',
+        'DOMImplementation.hasFeature')}}</td>
+      <td>{{Spec2('DOM1')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -71,5 +82,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{domxref("DOMImplementation")}} interface it belongs to.</li>
+  <li>The {{domxref("DOMImplementation")}} interface it belongs to.</li>
 </ul>

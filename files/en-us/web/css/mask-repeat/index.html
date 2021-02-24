@@ -13,7 +13,7 @@ tags:
 
 <p>The <strong><code>mask-repeat</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets how mask images are repeated. A mask image can be repeated along the horizontal axis, the vertical axis, both axes, or not repeated at all.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* One-value syntax */
+<pre class="brush: css no-line-numbers">/* One-value syntax */
 mask-repeat: repeat-x;
 mask-repeat: repeat-y;
 mask-repeat: repeat;
@@ -112,14 +112,14 @@ mask-repeat: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Setting_repeat_for_a_single_mask">Setting repeat for a single mask</h3>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css; highlight[6] notranslate">#masked {
+<pre class="brush: css; highlight[6]">#masked {
   width: 250px;
   height: 250px;
   background: blue linear-gradient(red, blue);
@@ -132,7 +132,7 @@ mask-repeat: unset;
 <div class="hidden">
 <h4 id="HTML_Content">HTML Content</h4>
 
-<pre class="brush: html notranslate">&lt;div id="masked"&gt;
+<pre class="brush: html">&lt;div id="masked"&gt;
 &lt;/div&gt;
 &lt;select id="repetition"&gt;
   &lt;option value="repeat-x"&gt;repeat-x&lt;/option&gt;
@@ -146,7 +146,7 @@ mask-repeat: unset;
 
 <h4 id="JavaScript_Content">JavaScript Content</h4>
 
-<pre class="brush: js notranslate">var repetition = document.getElementById("repetition");
+<pre class="brush: js">var repetition = document.getElementById("repetition");
 repetition.addEventListener("change", function (evt) {
   document.getElementById("masked").style.maskRepeat = evt.target.value;
 });
@@ -161,7 +161,7 @@ repetition.addEventListener("change", function (evt) {
 
 <p>You can specify a different <code>&lt;repeat-style&gt;</code> for each mask image, separated by commas:</p>
 
-<pre class="brush: css notranslate">.examplethree {
+<pre class="brush: css">.examplethree {
   mask-image: url('mask1.png'), url('mask2.png');
   mask-repeat: repeat-x, repeat-y;
 }

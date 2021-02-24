@@ -12,15 +12,15 @@ tags:
   - Sensors
   - illuminance
 ---
-<p>{{APIRef("Generic Sensor API")}}{{seecompattable}}</p>
+<p>{{APIRef("Generic Sensor API")}}{{SeeCompatTable}}</p>
 
 <p><span class="seoSummary">The <strong><code>illuminance</code></strong> property of the {{domxref("AmbientLightSensor")}} interface returns the current light level in <a href="https://en.wikipedia.org/wiki/Lux">lux</a> of the ambient light level around the hosting device.</span></p>
 
-<p>If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. See {{httpheader('Feature-Policy')}} for implementation insfructions.</p>
+<p>If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. See {{httpheader('Feature-Policy')}} for implementation instructions.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <em>level</em> = AmbientLightSensor.illuminance</pre>
+<pre class="brush: js">var <em>level</em> = AmbientLightSensor.illuminance</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -28,7 +28,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">if ( 'AmbientLightSensor' in window ) {
+<pre class="brush: js">if ( 'AmbientLightSensor' in window ) {
   const sensor = new AmbientLightSensor();
   sensor.onreading = () =&gt; {
     console.log('Current light level:', sensor.illuminance);

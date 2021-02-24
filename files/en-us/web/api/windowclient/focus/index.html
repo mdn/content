@@ -2,22 +2,25 @@
 title: WindowClient.focus()
 slug: Web/API/WindowClient/focus
 tags:
-  - API
-  - Client
-  - Experimental
-  - Focus
-  - Method
-  - Reference
-  - Service Workers
-  - WindowClient
+- API
+- Client
+- Experimental
+- Focus
+- Method
+- Reference
+- Service Workers
+- WindowClient
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
-<p>The <strong><code>focus()</code></strong> method of the {{domxref("WindowClient")}} interface gives user input focus to the current client and returns a {{jsxref("Promise")}} that resolves<span> to the existing {{domxref("WindowClient")}}.</span></p>
+<p>The <strong><code>focus()</code></strong> method of the {{domxref("WindowClient")}}
+  interface gives user input focus to the current client and returns a
+  {{jsxref("Promise")}} that resolves to the existing
+    {{domxref("WindowClient")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>windowClient</em>.focus().then(function(<em>windowClient</em>) {
+<pre class="brush: js"><em>windowClient</em>.focus().then(function(<em>windowClient</em>) {
   // do something with your WindowClient once it has been focused
 });</pre>
 
@@ -53,23 +56,20 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#dom-windowclient-focus', 'focus()')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Service Workers', '#dom-windowclient-focus', 'focus()')}}</td>
+      <td>{{Spec2('Service Workers')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.WindowClient.focus")}}</p>
-</div>

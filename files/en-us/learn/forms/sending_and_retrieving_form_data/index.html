@@ -34,9 +34,9 @@ tags:
 
 <h2 id="Clientserver_architecture">Client/server architecture</h2>
 
-<p>At it's most basic, the web uses a client/server architecture that can be summarized as follows. a client (usually a web browser) sends a request to a server (most of the time a web server like <a href="https://httpd.apache.org/" rel="external">Apache</a>, <a href="https://www.nginx.com/" rel="external">Nginx</a>, <a href="https://www.iis.net/" rel="external">IIS</a>, <a href="https://tomcat.apache.org/" rel="external">Tomcat</a>, etc.), using the <a href="/en-US/docs/HTTP">HTTP protocol</a>. The server answers the request using the same protocol.</p>
+<p>At it's most basic, the web uses a client/server architecture that can be summarized as follows. a client (usually a web browser) sends a request to a server (most of the time a web server like <a href="https://httpd.apache.org/" rel="external">Apache</a>, <a href="https://www.nginx.com/" rel="external">Nginx</a>, <a href="https://www.iis.net/" rel="external">IIS</a>, <a href="https://tomcat.apache.org/" rel="external">Tomcat</a>, etc.), using the <a href="/en-US/docs/Web/HTTP">HTTP protocol</a>. The server answers the request using the same protocol.</p>
 
-<p><img alt="A basic schema of the Web client/server architecture" src="/files/4291/client-server.png" style="display: block; height: 141px; margin: 0px auto; width: 400px;"></p>
+<p><img alt="A basic schema of the Web client/server architecture" src="client-server.png" style="display: block; margin: 0px auto;"></p>
 
 <p>An HTML form on a web page is nothing more than a convenient user-friendly way to configure an HTTP request to send data to a server. This enables the user to provide information to be delivered in the HTTP request.</p>
 
@@ -54,15 +54,15 @@ tags:
 
 <p>In this example, the data is sent to an absolute URL — <code>https://example.com</code>:</p>
 
-<pre class="brush: html notranslate">&lt;form action="https://example.com"&gt;</pre>
+<pre class="brush: html">&lt;form action="https://example.com"&gt;</pre>
 
 <p>Here, we use a relative URL — the data is sent to a different URL on the same origin:</p>
 
-<pre class="brush: html notranslate">&lt;form action="/somewhere_else"&gt;</pre>
+<pre class="brush: html">&lt;form action="/somewhere_else"&gt;</pre>
 
 <p>When specified with no attributes, as below, the {{HTMLElement("form")}} data is sent to the same page that the form is present on:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;</pre>
+<pre class="brush: html">&lt;form&gt;</pre>
 
 <div class="note">
 <p><strong>Note:</strong> It's possible to specify a URL that uses the HTTPS (secure HTTP) protocol. When you do this, the data is encrypted along with the rest of the request, even if the form itself is hosted on an insecure page accessed using HTTP. On the other hand, if the form is hosted on a secure page but you specify an insecure HTTP URL with the {{htmlattrxref("action","form")}} attribute, all browsers display a security warning to the user each time they try to send data because the data will not be encrypted.</p>
@@ -74,7 +74,7 @@ tags:
 
 <h3 id="The_method_attribute">The method attribute</h3>
 
-<p>The <code><a href="/en-US/docs/Web/HTML/Attributes/method">method</a></code> attribute defines how data is sent. The <a href="/en-US/docs/HTTP">HTTP protocol</a> provides several ways to perform a request; HTML form data can be transmitted via a number of different methods, the most common being the <code>GET</code> method and the <code>POST</code> method</p>
+<p>The <code><a href="/en-US/docs/Web/HTML/Attributes/method">method</a></code> attribute defines how data is sent. The <a href="/en-US/docs/Web/HTTP">HTTP protocol</a> provides several ways to perform a request; HTML form data can be transmitted via a number of different methods, the most common being the <code>GET</code> method and the <code>POST</code> method</p>
 
 <p>To understand the difference between those two methods, let's step back and examine <a href="/en-US/docs/Web/HTTP/Overview">how HTTP works</a>. Each time you want to reach a resource on the Web, the browser sends a request to a URL. An HTTP request consists of two parts: a <a href="/en-US/docs/Web/HTTP/Headers">header</a> that contains a set of global metadata about the browser's capabilities, and a body that can contain information necessary for the server to process the specific request.</p>
 
@@ -84,7 +84,7 @@ tags:
 
 <p>Consider the following form:</p>
 
-<pre class="brush: html notranslate">&lt;form action="http://www.foo.com" method="GET"&gt;
+<pre class="brush: html">&lt;form action="http://www.foo.com" method="GET"&gt;
   &lt;div&gt;
     &lt;label for="say"&gt;What greeting do you want to say?&lt;/label&gt;
     &lt;input name="say" id="say" value="Hi"&gt;
@@ -100,7 +100,7 @@ tags:
 
 <p>Since the <code>GET</code> method has been used, you'll see the URL <code>www.foo.com/?say=Hi&amp;to=Mom</code> appear in the browser address bar when you submit the form.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14685/url-parameters.png" style="display: block; margin: 0 auto;">The data is appended to the URL as a series of name/value pairs. After the URL web address has ended, we include a question mark (<code>?</code>) followed by the name/value pairs, each one separated by an ampersand (<code>&amp;</code>). In this case we are passing two pieces of data to the server:</p>
+<p><img alt="" src="url-parameters.png" style="display: block; margin: 0 auto;">The data is appended to the URL as a series of name/value pairs. After the URL web address has ended, we include a question mark (<code>?</code>) followed by the name/value pairs, each one separated by an ampersand (<code>&amp;</code>). In this case we are passing two pieces of data to the server:</p>
 
 <ul>
  <li><code>say</code>, which has a value of <code>Hi</code></li>
@@ -109,7 +109,7 @@ tags:
 
 <p>The HTTP request looks like this:</p>
 
-<pre class="notranslate">GET /?say=Hi&amp;to=Mom HTTP/2.0
+<pre>GET /?say=Hi&amp;to=Mom HTTP/2.0
 Host: foo.com</pre>
 
 <div class="note">
@@ -122,7 +122,7 @@ Host: foo.com</pre>
 
 <p>Let's look at an example — this is the same form we looked at in the <code>GET</code> section above, but with the {{htmlattrxref("method","form")}} attribute set to <code>POST</code>.</p>
 
-<pre class="brush: html notranslate">&lt;form action="http://www.foo.com" method="POST"&gt;
+<pre class="brush: html">&lt;form action="http://www.foo.com" method="POST"&gt;
   &lt;div&gt;
     &lt;label for="say"&gt;What greeting do you want to say?&lt;/label&gt;
     &lt;input name="say" id="say" value="Hi"&gt;
@@ -138,7 +138,7 @@ Host: foo.com</pre>
 
 <p>When the form is submitted using the <code>POST</code> method, you get no data appended to the URL, and the HTTP request looks like so, with the data included in the request body instead:</p>
 
-<pre class="notranslate">POST / HTTP/2.0
+<pre>POST / HTTP/2.0
 Host: foo.com
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 13
@@ -165,7 +165,7 @@ say=Hi&amp;to=Mom</pre>
 
 <p>You can then get the form data, as shown in the image below.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14691/network-monitor.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="network-monitor.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>The only thing displayed to the user is the URL called. As we mentioned above, with a <code>GET</code> request the user will see the data in their URL bar, but with a <code>POST</code> request they won't. This can be very important for two reasons:</p>
 
@@ -182,7 +182,7 @@ say=Hi&amp;to=Mom</pre>
 
 <p><a href="https://php.net/">PHP</a> offers some global objects to access the data. Assuming you've used the <code>POST</code> method, the following example just takes the data and displays it to the user. Of course, what you do with the data is up to you. You might display it, store it into a database, send it by email, or process it in some other way.</p>
 
-<pre class="brush: php notranslate">&lt;?php
+<pre class="brush: php">&lt;?php
   // The global $_POST variable allows you to access the data sent with the POST method by name
   // To access the data sent with the GET method, you can use $_GET
   $say = htmlspecialchars($_POST['say']);
@@ -193,7 +193,7 @@ say=Hi&amp;to=Mom</pre>
 
 <p>This example displays a page with the data we sent. You can see this in action in our example <a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/php-example.html">php-example.html</a> file — which contains the same example form as we saw before, with a <code>method</code> of <code>POST</code> and an <code>action</code> of <code>php-example.php</code>. When it is submitted, it sends the form data to <a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/php-example.php">php-example.php</a>, which contains the PHP code seen in the above block. When this code is executed, the output in the browser is <code>Hi Mom</code>.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14693/php-result.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="php-result.png" style="display: block; margin: 0 auto;"></p>
 
 <div class="note">
 <p><strong>Note</strong>: This example won't work when you load it into a browser locally — browsers cannnot interpret PHP code, so when the form is submitted the browser will just offer to download the PHP file for you. To get it to work, you need to run the example through a PHP server of some kind. Good options for local PHP testing are <a href="https://www.mamp.info/en/downloads/">MAMP</a> (Mac and Windows) and <a href="http://ampps.com/download">AMPPS</a> (Mac, Windows, Linux).<br>
@@ -205,7 +205,7 @@ say=Hi&amp;to=Mom</pre>
 
 <p>This example shows how you would use Python to do the same thing — display the submitted data on a web page. This uses the <a href="http://flask.pocoo.org/">Flask framework</a> for rendering the templates, handling the form data submission, etc. (see <a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/python-example.py">python-example.py</a>).</p>
 
-<pre class="brush: python notranslate">from flask import Flask, render_template, request
+<pre class="brush: python">from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -228,7 +228,7 @@ if __name__ == "__main__":
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: Again, this code won't work if you just try to load it into a browser directly. Python works a bit differently to PHP — to run this code locally you'll need to <a href="/en-US/docs/Learn/Server-side/Django/development_environment#Installing_Python_3">install Python/PIP</a>, then install Flask using <code>pip3 install flask</code>. At this point you should be able to run the example using <code>python3 python-example.py</code>, then navigating to <code>localhost:5000</code> in your browser.</p>
+<p><strong>Note</strong>: Again, this code won't work if you just try to load it into a browser directly. Python works a bit differently to PHP — to run this code locally you'll need to <a href="/en-US/docs/Learn/Server-side/Django/development_environment#installing_python_3">install Python/PIP</a>, then install Flask using <code>pip3 install flask</code>. At this point you should be able to run the example using <code>python3 python-example.py</code>, then navigating to <code>localhost:5000</code> in your browser.</p>
 </div>
 
 <h3 id="Other_languages_and_frameworks">Other languages and frameworks</h3>
@@ -266,7 +266,7 @@ if __name__ == "__main__":
 
 <p>For example:</p>
 
-<pre class="brush: html notranslate">&lt;form method="post" action="https://www.foo.com" enctype="multipart/form-data"&gt;
+<pre class="brush: html">&lt;form method="post" action="https://www.foo.com" enctype="multipart/form-data"&gt;
   &lt;div&gt;
     &lt;label for="file"&gt;Choose a file&lt;/label&gt;
     &lt;input type="file" id="file" name="myFile"&gt;
@@ -284,7 +284,7 @@ if __name__ == "__main__":
 
 <p>Each time you send data to a server, you need to consider security. HTML forms are by far the most common server attack vectors (places where attacks can occur). The problems never come from the HTML forms themselves — they come from how the server handles data.</p>
 
-<p>The <a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a> article of our <a href="/en-US/docs/Learn/Server-side">server-side</a> learning topic discusses a number of common attacks and potential defences against them in detail. You should go and check that article out, to get an idea of what's possible.</p>
+<p>The <a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a> article of our <a href="/en-US/docs/Learn/Server-side">server-side</a> learning topic discusses a number of common attacks and potential defenses against them in detail. You should go and check that article out, to get an idea of what's possible.</p>
 
 <h3 id="Be_paranoid_Never_trust_your_users">Be paranoid: Never trust your users</h3>
 
@@ -338,5 +338,5 @@ if __name__ == "__main__":
 <ul>
  <li><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form controls</a></li>
  <li><a href="/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript">Sending forms through JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_widgets">Property compatibility table for form widgets</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Property compatibility table for form widgets</a></li>
 </ul>

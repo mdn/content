@@ -2,67 +2,75 @@
 title: PerformanceEntry.name
 slug: Web/API/PerformanceEntry/name
 tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
+- API
+- Property
+- Reference
+- Web Performance
 ---
 <div>{{APIRef("Performance Timeline API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>name</code></strong> property of the {{domxref("PerformanceEntry")}} interface returns a value that further specifies the value returned by the {{domxref("PerformanceEntry.entryType")}} property. This property is read only.</span></p>
+<p><span class="seoSummary">The <strong><code>name</code></strong> property of the
+    {{domxref("PerformanceEntry")}} interface returns a value that further specifies the
+    value returned by the {{domxref("PerformanceEntry.entryType")}} property. This
+    property is read only.</span></p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>name</em> = <em>entry</em>.name;
+<pre class="brush: js">var <em>name</em> = <em>entry</em>.name;
 </pre>
 
 <h3 id="Return_Value">Return value</h3>
 
-<p>The return value depends on the subtype of the <code>PerformanceEntry</code> object and the value of {{domxref("PerformanceEntry.entryType")}}, as shown by the table below.</p>
+<p>The return value depends on the subtype of the <code>PerformanceEntry</code> object and
+  the value of {{domxref("PerformanceEntry.entryType")}}, as shown by the table below.</p>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Value</th>
-   <th scope="col">Subtype</th>
-   <th scope="col">entryType values</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{domxref("URL")}}</td>
-   <td>{{domxref('PerformanceFrameTiming')}}, {{domxref('PerformanceNavigationTiming')}}</td>
-   <td><code>frame</code>, <code>navigation</code></td>
-   <td>The document's address.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("URL")}}</td>
-   <td>{{domxref('PerformanceResourceTiming')}}</td>
-   <td><code>resource</code></td>
-   <td>The resolved URL of the requested resource. This value doesn't change even if the request is redirected.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("DOMString")}}</td>
-   <td>{{domxref('PerformanceMark')}}</td>
-   <td><code>mark</code></td>
-   <td>The name used when the mark was created by calling {{domxref("Performance.mark","performance.mark()")}}.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("DOMString")}}</td>
-   <td>{{domxref('PerformanceMeasure')}}</td>
-   <td><code>measure</code></td>
-   <td>name used when the measure was created by calling {{domxref("Performance.measure","performance.measure()")}}.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("DOMString")}}</td>
-   <td>{{domxref('PerformancePaintTiming')}}</td>
-   <td><code>paint</code></td>
-   <td>Either <code>'first-paint'</code> or <code>'first-contentful-paint'</code>.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Value</th>
+      <th scope="col">Subtype</th>
+      <th scope="col">entryType values</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{domxref("URL")}}</td>
+      <td>{{domxref('PerformanceFrameTiming')}},
+        {{domxref('PerformanceNavigationTiming')}}</td>
+      <td><code>frame</code>, <code>navigation</code></td>
+      <td>The document's address.</td>
+    </tr>
+    <tr>
+      <td>{{domxref("URL")}}</td>
+      <td>{{domxref('PerformanceResourceTiming')}}</td>
+      <td><code>resource</code></td>
+      <td>The resolved URL of the requested resource. This value doesn't change even if
+        the request is redirected.</td>
+    </tr>
+    <tr>
+      <td>{{domxref("DOMString")}}</td>
+      <td>{{domxref('PerformanceMark')}}</td>
+      <td><code>mark</code></td>
+      <td>The name used when the mark was created by calling
+        {{domxref("Performance.mark","performance.mark()")}}.</td>
+    </tr>
+    <tr>
+      <td>{{domxref("DOMString")}}</td>
+      <td>{{domxref('PerformanceMeasure')}}</td>
+      <td><code>measure</code></td>
+      <td>name used when the measure was created by calling
+        {{domxref("Performance.measure","performance.measure()")}}.</td>
+    </tr>
+    <tr>
+      <td>{{domxref("DOMString")}}</td>
+      <td>{{domxref('PerformancePaintTiming')}}</td>
+      <td><code>paint</code></td>
+      <td>Either <code>'first-paint'</code> or <code>'first-contentful-paint'</code>.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Example">Example</h2>
@@ -117,28 +125,26 @@ function check_PerformanceEntry(obj) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Performance Timeline Level 2', '#dom-performanceentry-name', 'name')}}</td>
-   <td>{{Spec2('Performance Timeline Level 2')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Performance Timeline', '#dom-performanceentry-name', 'name')}}</td>
-   <td>{{Spec2('Performance Timeline')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Performance Timeline Level 2', '#dom-performanceentry-name',
+        'name')}}</td>
+      <td>{{Spec2('Performance Timeline Level 2')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('Performance Timeline', '#dom-performanceentry-name', 'name')}}</td>
+      <td>{{Spec2('Performance Timeline')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.PerformanceEntry.name")}}</p>
-</div>

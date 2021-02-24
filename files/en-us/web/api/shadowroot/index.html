@@ -18,8 +18,12 @@ tags:
 <h2 id="Properties">Properties</h2>
 
 <dl>
+ <dt>{{domxref("ShadowRoot.activeElement")}} {{readonlyInline}}</dt>
+ <dd>Returns the {{domxref('Element')}} within the shadow tree that has focus.</dd>
  <dt>{{domxref("ShadowRoot.delegatesFocus")}} {{readonlyinline}} {{non-standard_inline}}</dt>
  <dd>Returns a boolean that indicates whether delegatesFocus was set when the shadow was attached (see {{domxref("Element.attachShadow()")}}).</dd>
+ <dt>{{DOMxRef("ShadowRoot.fullscreenElement")}} {{ReadOnlyInline}}</dt>
+ <dd>The element that's currently in full screen mode for this shadow tree.</dd>
  <dt>{{domxref("ShadowRoot.host")}} {{readonlyinline}}</dt>
  <dd>Returns a reference to the DOM element the <code>ShadowRoot</code> is attached to.</dd>
  <dt>{{domxref("ShadowRoot.innerHTML")}} {{non-standard_inline}}</dt>
@@ -33,8 +37,6 @@ tags:
 <p><em>The <code>ShadowRoot</code> interface includes the following properties defined on the {{domxref("DocumentOrShadowRoot")}} mixin. Note that this is currently only implemented by Chrome; other browsers still implement them on the {{domxref("Document")}} interface.</em></p>
 
 <dl>
- <dt>{{domxref("DocumentOrShadowRoot.activeElement")}} {{readonlyInline}}</dt>
- <dd>Returns the {{domxref('Element')}} within the shadow tree that has focus.</dd>
  <dt>{{domxref("DocumentOrShadowRoot.styleSheets")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects for stylesheets explicitly linked into, or embedded in a document.</dd>
 </dl>
@@ -101,7 +103,7 @@ attributeChangedCallback(name, oldValue, newValue) {
   <tr>
    <td>{{SpecName('DOM WHATWG','#interface-shadowroot','Interface ShadowRoot')}}</td>
    <td>{{Spec2('DOM WHATWG')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>

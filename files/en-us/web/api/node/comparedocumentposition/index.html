@@ -2,73 +2,85 @@
 title: Node.compareDocumentPosition()
 slug: Web/API/Node/compareDocumentPosition
 tags:
-  - API
-  - Compare Nodes
-  - DOM
-  - Method
-  - Node
-  - Position
-  - Reference
-  - compareDocumentPosition
+- API
+- Compare Nodes
+- DOM
+- Method
+- Node
+- Position
+- Reference
+- compareDocumentPosition
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">The <code><strong>Node.compareDocumentPosition()</strong></code> method reports the position of the given node relative to another node in any document — not just the given node’s document.</span></p>
+<p><span class="seoSummary">The
+    <code><strong>Node.compareDocumentPosition()</strong></code> method reports the
+    position of the given node relative to another node in any document — not just the
+    given node’s document.</span></p>
 
-<p>The return value is a <a href="https://en.wikipedia.org/wiki/Mask_(computing)">bitmask</a> of the following values:</p>
+<p>The return value is a <a
+    href="https://en.wikipedia.org/wiki/Mask_(computing)">bitmask</a> of the following
+  values:</p>
 
 <table>
- <thead>
-  <tr>
-   <th scope="col">Name</th>
-   <th scope="col">Value</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>DOCUMENT_POSITION_DISCONNECTED</code></td>
-   <td>1</td>
-  </tr>
-  <tr>
-   <td><code>DOCUMENT_POSITION_PRECEDING</code></td>
-   <td>2</td>
-  </tr>
-  <tr>
-   <td><code>DOCUMENT_POSITION_FOLLOWING</code></td>
-   <td>4</td>
-  </tr>
-  <tr>
-   <td><code>DOCUMENT_POSITION_CONTAINS</code></td>
-   <td>8</td>
-  </tr>
-  <tr>
-   <td><code>DOCUMENT_POSITION_CONTAINED_BY</code></td>
-   <td>16</td>
-  </tr>
-  <tr>
-   <td><code>DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC</code></td>
-   <td>32</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>DOCUMENT_POSITION_DISCONNECTED</code></td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td><code>DOCUMENT_POSITION_PRECEDING</code></td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td><code>DOCUMENT_POSITION_FOLLOWING</code></td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td><code>DOCUMENT_POSITION_CONTAINS</code></td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td><code>DOCUMENT_POSITION_CONTAINED_BY</code></td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td><code>DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC</code></td>
+      <td>32</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>compareMask</em> = <em>node</em>.compareDocumentPosition(<em>otherNode</em>)
+<pre class="brush: js"><em>compareMask</em> = <em>node</em>.compareDocumentPosition(<em>otherNode</em>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>otherNode</code></dt>
- <dd>The other <code>Node</code> with which to compare the first <em><code>node</code></em>’s document position.</dd>
+  <dt><code>otherNode</code></dt>
+  <dd>The other <code>Node</code> with which to compare the first
+    <em><code>node</code></em>’s document position.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>An integer value whose bits represent the <code>otherNode</code>'s relationship to the calling <code>node</code>.</p>
+<p>An integer value whose bits represent the <code>otherNode</code>'s relationship to the
+  calling <code>node</code>.</p>
 
-<p>More than one bit is set if multiple scenarios apply. For example, if <code>otherNode</code> is located earlier in the document <strong><em>and</em></strong> contains the <code>node</code> on which <code>compareDocumentPosition()</code> was called, then both the <code>DOCUMENT_POSITION_CONTAINS</code> and <code>DOCUMENT_POSITION_PRECEDING</code> bits would be set, producing a value of 10 (<code>0x0A</code>).</p>
+<p>More than one bit is set if multiple scenarios apply. For example, if
+  <code>otherNode</code> is located earlier in the document <strong><em>and</em></strong>
+  contains the <code>node</code> on which <code>compareDocumentPosition()</code> was
+  called, then both the <code>DOCUMENT_POSITION_CONTAINS</code> and
+  <code>DOCUMENT_POSITION_PRECEDING</code> bits would be set, producing a value of 10
+  (<code>0x0A</code>).</p>
 
 <h2 id="Example">Example</h2>
 
@@ -83,29 +95,36 @@ if (head.compareDocumentPosition(body) &amp; Node.DOCUMENT_POSITION_FOLLOWING) {
 </pre>
 
 <div class="note">
-<p><strong>Note:</strong> Because the result returned by <code>compareDocumentPosition()</code> is a bitmask, the <a href="/en-US/docs/JavaScript/Reference/Operators/Bitwise_Operators">bitwise AND operator</a> must be used for meaningful results.</p>
+  <p><strong>Note:</strong> Because the result returned by
+    <code>compareDocumentPosition()</code> is a bitmask, the <a
+      href="/en-US/docs/JavaScript/Reference/Operators/Bitwise_Operators">bitwise AND
+      operator</a> must be used for meaningful results.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-node-comparedocumentposition','Node.compareDocumentPosition()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core','core.html#Node3-compareDocumentPosition','Node.compareDocumentPosition()')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM
+        WHATWG','#dom-node-comparedocumentposition','Node.compareDocumentPosition()')}}
+      </td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM3
+        Core','core.html#Node3-compareDocumentPosition','Node.compareDocumentPosition()')}}
+      </td>
+      <td>{{Spec2('DOM3 Core')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -115,5 +134,5 @@ if (head.compareDocumentPosition(body) &amp; Node.DOCUMENT_POSITION_FOLLOWING) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><code><a href="/en-US/docs/DOM/Node.contains">Node.contains()</a></code></li>
+  <li><code><a href="/en-US/docs/DOM/Node.contains">Node.contains()</a></code></li>
 </ul>

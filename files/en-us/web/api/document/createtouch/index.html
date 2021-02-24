@@ -2,26 +2,28 @@
 title: Document.createTouch()
 slug: Web/API/Document/createTouch
 tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - Method
-  - Mobile
-  - Reference
-  - createTouch
-  - touch
+- API
+- Deprecated
+- HTML DOM
+- Method
+- Mobile
+- Reference
+- createTouch
+- touch
 ---
 <div>{{APIRef("DOM")}}{{Deprecated_Header}}</div>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Before {{Gecko("25.0")}}, this method was defined on the {{DOMxRef("DocumentTouch")}} mixin.</p>
+  <p><strong>Note:</strong> Before {{Gecko("25.0")}}, this method was defined on the
+    {{DOMxRef("DocumentTouch")}} mixin.</p>
 </div>
 
-<p>The <strong><code>Document.createTouch()</code></strong> method <span class="seosummary">creates and returns a new {{DOMxRef("Touch")}} object.</span></p>
+<p>The <strong><code>Document.createTouch()</code></strong> method <span
+    class="seosummary">creates and returns a new {{DOMxRef("Touch")}} object.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>touch</var> = DocumentTouch.createTouch(view, target, identifier, pageX, pageY,
+<pre class="brush: js">var <var>touch</var> = DocumentTouch.createTouch(view, target, identifier, pageX, pageY,
                                       screenX, screenY);
 </pre>
 
@@ -30,51 +32,56 @@ tags:
 <div class="note"><strong>Note:</strong> All parameters are optional.</div>
 
 <dl>
- <dt><code>view</code></dt>
- <dd>The {{DOMxRef("window")}} in which the touch occurred.</dd>
- <dt><code>target</code></dt>
- <dd>The {{DOMxRef("EventTarget")}} for the touch.</dd>
- <dt><code>identifier</code></dt>
- <dd>The value for {{DOMxRef("Touch.identifier")}}.</dd>
- <dt><code>pageX</code></dt>
- <dd>The value for {{DOMxRef("Touch.pageX")}}.</dd>
- <dt><code>pageY</code></dt>
- <dd>The value for {{DOMxRef("Touch.pageY")}}.</dd>
- <dt><code>screenX</code></dt>
- <dd>The value for {{DOMxRef("Touch.screenX")}}.</dd>
- <dt><code>screenY</code></dt>
- <dd>The value for {{DOMxRef("Touch.screenY")}}.</dd>
+  <dt><code>view</code></dt>
+  <dd>The {{DOMxRef("window")}} in which the touch occurred.</dd>
+  <dt><code>target</code></dt>
+  <dd>The {{DOMxRef("EventTarget")}} for the touch.</dd>
+  <dt><code>identifier</code></dt>
+  <dd>The value for {{DOMxRef("Touch.identifier")}}.</dd>
+  <dt><code>pageX</code></dt>
+  <dd>The value for {{DOMxRef("Touch.pageX")}}.</dd>
+  <dt><code>pageY</code></dt>
+  <dd>The value for {{DOMxRef("Touch.pageY")}}.</dd>
+  <dt><code>screenX</code></dt>
+  <dd>The value for {{DOMxRef("Touch.screenX")}}.</dd>
+  <dt><code>screenY</code></dt>
+  <dd>The value for {{DOMxRef("Touch.screenY")}}.</dd>
 </dl>
 
-<div class="note"><strong>Note:</strong> Previous versions of this method included the following additional parameters but those parameters are not included in either of the standards listed below. Consequently, these parameters should be considered deprecated and not used.</div>
+<div class="note"><strong>Note:</strong> Previous versions of this method included the
+  following additional parameters but those parameters are not included in either of the
+  standards listed below. Consequently, these parameters should be considered deprecated
+  and not used.</div>
 
 <dl>
- <dt><code>clientX</code></dt>
- <dd>The value for {{DOMxRef("Touch.clientX")}}.</dd>
- <dt><code>clientY</code></dt>
- <dd>The value for {{DOMxRef("Touch.clientY")}}.</dd>
- <dt><code>radiusX</code></dt>
- <dd>The value for {{DOMxRef("Touch.radiusX")}}.</dd>
- <dt><code>radiusY</code></dt>
- <dd>The value for {{DOMxRef("Touch.radiusY")}}.</dd>
- <dt><code>rotationAngle</code></dt>
- <dd>The value for {{DOMxRef("Touch.rotationAngle")}}.</dd>
- <dt><code>force</code></dt>
- <dd>The value for {{DOMxRef("Touch.force")}}.</dd>
+  <dt><code>clientX</code></dt>
+  <dd>The value for {{DOMxRef("Touch.clientX")}}.</dd>
+  <dt><code>clientY</code></dt>
+  <dd>The value for {{DOMxRef("Touch.clientY")}}.</dd>
+  <dt><code>radiusX</code></dt>
+  <dd>The value for {{DOMxRef("Touch.radiusX")}}.</dd>
+  <dt><code>radiusY</code></dt>
+  <dd>The value for {{DOMxRef("Touch.radiusY")}}.</dd>
+  <dt><code>rotationAngle</code></dt>
+  <dd>The value for {{DOMxRef("Touch.rotationAngle")}}.</dd>
+  <dt><code>force</code></dt>
+  <dd>The value for {{DOMxRef("Touch.force")}}.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
 <dl>
- <dt><code>touch</code></dt>
- <dd>A {{DOMxRef("Touch")}} object configured as described by the input parameters.</dd>
+  <dt><code>touch</code></dt>
+  <dd>A {{DOMxRef("Touch")}} object configured as described by the input parameters.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
 
-<p>This example illustrates using the {{DOMxRef("Document.createTouch()")}} method to create {{DOMxRef("Touch")}} objects.</p>
+<p>This example illustrates using the {{DOMxRef("Document.createTouch()")}} method to
+  create {{DOMxRef("Touch")}} objects.</p>
 
-<p>In following code snippet, two {{DOMxRef("Touch")}} objects are created for the <code>target</code> element.</p>
+<p>In following code snippet, two {{DOMxRef("Touch")}} objects are created for the
+  <code>target</code> element.</p>
 
 <pre class="brush: js">var target = document.getElementById("target");
 
@@ -85,20 +92,22 @@ var touch2 = Document.createTouch(window, target, 2, 25, 30, 45, 50);
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Touch Events", "#widl-Document-createTouch-Touch-WindowProxy-view-EventTarget-target-long-identifier-long-pageX-long-pageY-long-screenX-long-screenY", "Document.createTouch()")}}</td>
-   <td>{{Spec2("Touch Events")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("Touch Events",
+        "#widl-Document-createTouch-Touch-WindowProxy-view-EventTarget-target-long-identifier-long-pageX-long-pageY-long-screenX-long-screenY",
+        "Document.createTouch()")}}</td>
+      <td>{{Spec2("Touch Events")}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -108,8 +117,8 @@ var touch2 = Document.createTouch(window, target, 2, 25, 30, 45, 50);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Touch_events">Touch events</a></li>
- <li>{{DOMxRef("TouchList")}}</li>
- <li>{{DOMxRef("Touch")}}</li>
- <li>{{DOMxRef("Document.createTouchList()")}}</li>
+  <li><a href="/en-US/docs/Web/API/Touch_events">Touch events</a></li>
+  <li>{{DOMxRef("TouchList")}}</li>
+  <li>{{DOMxRef("Touch")}}</li>
+  <li>{{DOMxRef("Document.createTouchList()")}}</li>
 </ul>

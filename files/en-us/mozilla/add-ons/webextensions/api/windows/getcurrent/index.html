@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var gettingCurrent = browser.windows.getCurrent(
+<pre class="brush:js">var gettingCurrent = browser.windows.getCurrent(
   getInfo               // optional object
 )
 </pre>
@@ -35,7 +35,7 @@ tags:
  <dd>
  <dl class="reference-values">
   <dt><code>populate</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. If true, the {{WebExtAPIRef('windows.Window')}} object will have a <code>tabs</code> property that contains a list of {{WebExtAPIRef('tabs.Tab')}} objects representing the tabs in the window. The <code>Tab</code> objects only contain the <code>url</code>, <code>title</code> and <code>favIconUrl</code> properties if the extension's manifest file includes the <code>"tabs"</code> permission.</dd>
+  <dd><code>boolean</code>. If true, the {{WebExtAPIRef('windows.Window')}} object will have a <code>tabs</code> property that contains a list of {{WebExtAPIRef('tabs.Tab')}} objects representing the tabs in the window. The <code>Tab</code> objects only contain the <code>url</code>, <code>title</code> and <code>favIconUrl</code> properties if the extension's manifest file includes the <code>"tabs"</code> permission or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> that match the tab's URL.</dd>
   <dt><code>windowTypes</code>{{deprecated_inline}}{{optional_inline}}</dt>
   <dd>An <code>array</code> of <code>{{WebExtAPIRef('windows.WindowType')}}</code> objects. If set, the {{WebExtAPIRef('windows.Window')}} returned will be filtered based on its type. If unset the default filter is set to <code>['normal', 'panel', 'popup']</code>, with <code>'panel'</code> window types limited to the extension's own windows.</dd>
  </dl>
@@ -59,7 +59,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>When the user clicks a browser action's icon, this example gets the current window and logs the URLs of the tabs it contains. Note that you'll need the "tabs" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> to access tab URLs.</p>
+<p>When the user clicks a browser action's icon, this example gets the current window and logs the URLs of the tabs it contains. Note that you'll need the "tabs" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> or matching <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> to access tab URLs.</p>
 
 <pre class="brush: js">function logTabs(windowInfo) {
   for (let tabInfo of windowInfo.tabs) {

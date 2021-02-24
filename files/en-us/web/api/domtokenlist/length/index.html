@@ -2,20 +2,22 @@
 title: DOMTokenList.length
 slug: Web/API/DOMTokenList/length
 tags:
-  - API
-  - DOM
-  - DOMTokenList
-  - Property
-  - Reference
-  - length
+- API
+- DOM
+- DOMTokenList
+- Property
+- Reference
+- length
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p>The <strong><code>length</code></strong> read-only property of the {{domxref("DOMTokenList")}} interface is an <code>integer</code> representing the number of objects stored in the object.</p>
+<p>The <strong><code>length</code></strong> read-only property of the
+  {{domxref("DOMTokenList")}} interface is an <code>integer</code> representing the number
+  of objects stored in the object.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>tokenList</var>.length;</pre>
+<pre class="brush: js"><var>tokenList</var>.length;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -23,7 +25,10 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>In the following example we retrieve the list of classes set on a {{htmlelement("span")}} element as a <code>DOMTokenList</code> using {{domxref("Element.classList")}}, then write the length of the list to the <code>&lt;span&gt;</code>'s {{domxref("Node.textContent")}}.</p>
+<p>In the following example we retrieve the list of classes set on a
+  {{htmlelement("span")}} element as a <code>DOMTokenList</code> using
+  {{domxref("Element.classList")}}, then write the length of the list to the
+  <code>&lt;span&gt;</code>'s {{domxref("Node.textContent")}}.</p>
 
 <p>First, the HTML:</p>
 
@@ -45,25 +50,22 @@ span.textContent = `classList length = ${length}`;
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-domtokenlist-length','length')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM WHATWG','#dom-domtokenlist-length','length')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.DOMTokenList.length")}}</p>
-</div>

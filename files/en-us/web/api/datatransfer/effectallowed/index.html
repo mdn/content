@@ -2,57 +2,72 @@
 title: DataTransfer.effectAllowed
 slug: Web/API/DataTransfer/effectAllowed
 tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - drag and drop
+- API
+- HTML DOM
+- Property
+- Reference
+- drag and drop
 ---
 <div>{{APIRef("HTML Drag and Drop API")}}</div>
 
-<p>The <strong><code>DataTransfer.effectAllowed</code></strong> property specifies the effect that is allowed for a drag operation. The <em>copy</em> operation is used to indicate that the data being dragged will be copied from its present location to the drop location. The <em>move</em> operation is used to indicate that the data being dragged will be moved, and the <em>link</em> operation is used to indicate that some form of relationship or connection will be created between the source and drop locations.</p>
+<p>The <strong><code>DataTransfer.effectAllowed</code></strong> property specifies the
+  effect that is allowed for a drag operation. The <em>copy</em> operation is used to
+  indicate that the data being dragged will be copied from its present location to the
+  drop location. The <em>move</em> operation is used to indicate that the data being
+  dragged will be moved, and the <em>link</em> operation is used to indicate that some
+  form of relationship or connection will be created between the source and drop
+  locations.</p>
 
-<p>This property should be set in the {{event("dragstart")}} event to set the desired drag effect for the drag source. Within the {{event("dragenter")}} and {{event("dragover")}} event handlers, this property will be set to whatever value was assigned during the {{event("dragstart")}} event, thus <code>effectAllowed</code> may be used to determine which effect is permitted.</p>
+<p>This property should be set in the {{event("dragstart")}} event to set the desired drag
+  effect for the drag source. Within the {{event("dragenter")}} and {{event("dragover")}}
+  event handlers, this property will be set to whatever value was assigned during the
+  {{event("dragstart")}} event, thus <code>effectAllowed</code> may be used to determine
+  which effect is permitted.</p>
 
-<p>Assigning a value to <code>effectAllowed</code> in events other than {{event("dragstart")}} has no effect.</p>
+<p>Assigning a value to <code>effectAllowed</code> in events other than
+  {{event("dragstart")}} has no effect.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>dataTransfer</var>.effectAllowed;
+<pre class="brush: js"><var>dataTransfer</var>.effectAllowed;
 </pre>
 
 <h3 id="Values">Values</h3>
 
-<p>A {{domxref("DOMString")}} representing the drag operation that is allowed. The possible values are:</p>
+<p>A {{domxref("DOMString")}} representing the drag operation that is allowed. The
+  possible values are:</p>
 
 <dl>
- <dt>none</dt>
- <dd>The item may not be dropped.</dd>
- <dt>copy</dt>
- <dd>A copy of the source item may be made at the new location.</dd>
- <dt>copyLink</dt>
- <dd>A copy or link operation is permitted.</dd>
- <dt>copyMove</dt>
- <dd>A copy or move operation is permitted.</dd>
- <dt>link</dt>
- <dd>A link may be established to the source at the new location.</dd>
- <dt>linkMove</dt>
- <dd>A link or move operation is permitted.</dd>
- <dt>move</dt>
- <dd>An item may be moved to a new location.</dd>
- <dt>all</dt>
- <dd>All operations are permitted.</dd>
- <dt>uninitialized</dt>
- <dd>The default value when the effect has not been set, equivalent to all.</dd>
+  <dt>none</dt>
+  <dd>The item may not be dropped.</dd>
+  <dt>copy</dt>
+  <dd>A copy of the source item may be made at the new location.</dd>
+  <dt>copyLink</dt>
+  <dd>A copy or link operation is permitted.</dd>
+  <dt>copyMove</dt>
+  <dd>A copy or move operation is permitted.</dd>
+  <dt>link</dt>
+  <dd>A link may be established to the source at the new location.</dd>
+  <dt>linkMove</dt>
+  <dd>A link or move operation is permitted.</dd>
+  <dt>move</dt>
+  <dd>An item may be moved to a new location.</dd>
+  <dt>all</dt>
+  <dd>All operations are permitted.</dd>
+  <dt>uninitialized</dt>
+  <dd>The default value when the effect has not been set, equivalent to all.</dd>
 </dl>
 
-<p>Assigning any other value to <code>effectAllowed</code> has no effect and the old value is retained.</p>
+<p>Assigning any other value to <code>effectAllowed</code> has no effect and the old value
+  is retained.</p>
 
-<p>Internet Explorer will change the value to be lowercased; thus, <code>linkMove</code> will become <code>linkmove</code>, and so on.</p>
+<p>Internet Explorer will change the value to be lowercased; thus, <code>linkMove</code>
+  will become <code>linkmove</code>, and so on.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>This example shows the use of the <code>effectAllowed</code> and {{domxref("DataTransfer.dropEffect", "dropEffect")}} properties.</p>
+<p>This example shows the use of the <code>effectAllowed</code> and
+  {{domxref("DataTransfer.dropEffect", "dropEffect")}} properties.</p>
 
 <pre class="brush: js">&lt;!DOCTYPE html&gt;
 &lt;html lang=en&gt;
@@ -109,23 +124,25 @@ function dragover_handler(ev) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "interaction.html#dom-datatransfer-effectallowed", "effectAllowed")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.1", "editing.html#dom-datatransfer-effectallowed", "effectAllowed")}}</td>
-   <td>{{Spec2("HTML5.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("HTML WHATWG", "interaction.html#dom-datatransfer-effectallowed",
+        "effectAllowed")}}</td>
+      <td>{{Spec2("HTML WHATWG")}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName("HTML5.1", "editing.html#dom-datatransfer-effectallowed",
+        "effectAllowed")}}</td>
+      <td>{{Spec2("HTML5.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

@@ -2,40 +2,58 @@
 title: SharedWorker()
 slug: Web/API/SharedWorker/SharedWorker
 tags:
-  - API
-  - Constructor
-  - Reference
-  - SharedWorker
-  - Web Workers
+- API
+- Constructor
+- Reference
+- SharedWorker
+- Web Workers
 ---
 <div>{{APIRef("Web Workers API")}}</div>
 
-<p>The <code><strong>SharedWorker()</strong></code> constructor creates a {{domxref("SharedWorker")}} object that executes the script at the specified URL. This script must obey the <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a>.</p>
+<p>The <code><strong>SharedWorker()</strong></code> constructor creates a
+  {{domxref("SharedWorker")}} object that executes the script at the specified URL. This
+  script must obey the <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin
+    policy</a>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: there is disagreement among browser manufacturers about whether a data URI is of the same origin or not. Although Gecko 10.0 {{geckoRelease("10.0")}} and later accept data URIs, that's not the case in all other browsers.</p>
+  <p><strong>Note</strong>: there is disagreement among browser manufacturers about
+    whether a data URI is of the same origin or not. Although Gecko 10.0
+    {{geckoRelease("10.0")}} and later accept data URIs, that's not the case in all other
+    browsers.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var myWorker = new SharedWorker(<em>aURL</em>, <em>name</em>);
+<pre class="brush: js">var myWorker = new SharedWorker(<em>aURL</em>, <em>name</em>);
 var myWorker = new SharedWorker(<em>aURL</em>, <em>options</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><em>aURL</em></dt>
- <dd>A {{domxref("DOMString")}} representing the URL of the script the worker will execute. It must obey the same-origin policy.</dd>
- <dt>name {{optional_inline}}</dt>
- <dd>A {{domxref("DOMString")}} specifying an identifying name for the {{domxref("SharedWorkerGlobalScope")}} representing the scope of the worker, which is mainly useful for debugging purposes.</dd>
- <dt><em>options</em> {{optional_inline}}</dt>
- <dd>An object containing option properties that can set when creating the object instance. Available properties are as follows:
- <ul>
-  <li><code>type</code>: A {{domxref("DOMString")}} specifying the type of worker to create. The value can be <code>classic</code> or <code>module</code>. If not specified, the default used is <code>classic</code>.</li>
-  <li><code>credentials</code>: A {{domxref("DOMString")}} specifying the type of credentials to use for the worker. The value can be<dfn> <code>omit</code></dfn>, <code><dfn>same-origin</dfn></code>, or <dfn><code>include</code>. If not specified, or if type is <code>classic</code>, the default used is <code>omit</code> (no credentials required).</dfn></li>
-  <li><dfn><code>name</code>: A </dfn>{{domxref("DOMString")}} specifying an identifying name for the {{domxref("SharedWorkerGlobalScope")}} representing the scope of the worker, which is mainly useful for debugging purposes.</li>
- </ul>
- </dd>
+  <dt><em>aURL</em></dt>
+  <dd>A {{domxref("DOMString")}} representing the URL of the script the worker will
+    execute. It must obey the same-origin policy.</dd>
+  <dt>name {{optional_inline}}</dt>
+  <dd>A {{domxref("DOMString")}} specifying an identifying name for the
+    {{domxref("SharedWorkerGlobalScope")}} representing the scope of the worker, which is
+    mainly useful for debugging purposes.</dd>
+  <dt><em>options</em> {{optional_inline}}</dt>
+  <dd>An object containing option properties that can set when creating the object
+    instance. Available properties are as follows:
+    <ul>
+      <li><code>type</code>: A {{domxref("DOMString")}} specifying the type of worker to
+        create. The value can be <code>classic</code> or <code>module</code>. If not
+        specified, the default used is <code>classic</code>.</li>
+      <li><code>credentials</code>: A {{domxref("DOMString")}} specifying the type of
+        credentials to use for the worker. The value can be<dfn> <code>omit</code></dfn>,
+        <code><dfn>same-origin</dfn></code>, or <dfn><code>include</code>. If not
+          specified, or if type is <code>classic</code>, the default used is
+          <code>omit</code> (no credentials required).</dfn></li>
+      <li><dfn><code>name</code>: A </dfn>{{domxref("DOMString")}} specifying an
+        identifying name for the {{domxref("SharedWorkerGlobalScope")}} representing the
+        scope of the worker, which is mainly useful for debugging purposes.</li>
+    </ul>
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -45,16 +63,23 @@ var myWorker = new SharedWorker(<em>aURL</em>, <em>options</em>);</pre>
 <h3 id="Exceptions">Exceptions</h3>
 
 <ul>
- <li>A <code>SecurityError</code> is raised if the document is not allowed to start workers, for example if the URL has an invalid syntax or if the same-origin policy is violated.</li>
- <li>A <code>NetworkError</code> is raised if the MIME type of the worker script is incorrect. It should <em>always</em> be <code>text/javascript</code> (for historical reasons <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types">other JavaScript MIME types</a> may be accepted).</li>
- <li>A <code>SyntaxError</code> is raised if <em>aURL</em> cannot be parsed.</li>
+  <li>A <code>SecurityError</code> is raised if the document is not allowed to start
+    workers, for example if the URL has an invalid syntax or if the same-origin policy is
+    violated.</li>
+  <li>A <code>NetworkError</code> is raised if the MIME type of the worker script is
+    incorrect. It should <em>always</em> be <code>text/javascript</code> (for historical
+    reasons <a
+      href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types">other
+      JavaScript MIME types</a> may be accepted).</li>
+  <li>A <code>SyntaxError</code> is raised if <em>aURL</em> cannot be parsed.</li>
 </ul>
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following code snippet shows creation of a {{domxref("SharedWorker")}} object using the <code>SharedWorker()</code> constructor and subsequent usage of the object:</p>
+<p>The following code snippet shows creation of a {{domxref("SharedWorker")}} object using
+  the <code>SharedWorker()</code> constructor and subsequent usage of the object:</p>
 
-<pre class="brush: js notranslate">var myWorker = new SharedWorker('worker.js');
+<pre class="brush: js">var myWorker = new SharedWorker('worker.js');
 
 myWorker.port.start();
 
@@ -73,23 +98,26 @@ myWorker.port.onmessage = function(e) {
   console.log('Message received from worker');
 }</pre>
 
-<p>For a full example, see our <a class="external-icon external" href="https://github.com/mdn/simple-shared-worker">Basic shared worker example</a> (<a class="external-icon external" href="https://mdn.github.io/simple-shared-worker/">run shared worker</a>.)</p>
+<p>For a full example, see our <a class="external-icon external"
+    href="https://github.com/mdn/simple-shared-worker">Basic shared worker example</a> (<a
+    class="external-icon external" href="https://mdn.github.io/simple-shared-worker/">run
+    shared worker</a>.)</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#dom-sharedworker", "SharedWorker()")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', "#dom-sharedworker", "SharedWorker()")}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -99,6 +127,6 @@ myWorker.port.onmessage = function(e) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{domxref("SharedWorker")}} interface it belongs to.</li>
- <li><a href="https://anlexn.github.io/shared-worker-mdn/">another multiply demo</a></li>
+  <li>The {{domxref("SharedWorker")}} interface it belongs to.</li>
+  <li><a href="https://anlexn.github.io/shared-worker-mdn/">another multiply demo</a></li>
 </ul>

@@ -2,36 +2,44 @@
 title: RTCIceCandidateStats.networkType
 slug: Web/API/RTCIceCandidateStats/networkType
 tags:
-  - API
-  - Candidate
-  - Connection
-  - Connectivity
-  - Network
-  - Networking
-  - Property
-  - RTCIceCandidateStats
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - networkType
+- API
+- Candidate
+- Connection
+- Connectivity
+- Network
+- Networking
+- Property
+- RTCIceCandidateStats
+- Reference
+- Statistics
+- Stats
+- WebRTC
+- WebRTC API
+- networkType
 ---
-<p>{{APIRef("WebRTC")}}{{obsolete_header}}</p>
+<p>{{APIRef("WebRTC")}}{{deprecated_header}}</p>
 
-<p>The {{domxref("RTCIceCandidateStats")}} dictionary's <code><strong>networkType</strong></code> property specifies the type of network used by a local candidate to communicate with a remote peer.</p>
+<p>The {{domxref("RTCIceCandidateStats")}} dictionary's
+  <code><strong>networkType</strong></code> property specifies the type of network used by
+  a local candidate to communicate with a remote peer.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> The <code>networkType</code> property is only included in <code>RTCIceCandidateStats</code> objects for local candidates (that is, candidates generated locally and included in an {{Glossary("SDP")}} offer or answer that has been sent to the remote peer).</p>
+  <p><strong>Note:</strong> The <code>networkType</code> property is only included in
+    <code>RTCIceCandidateStats</code> objects for local candidates (that is, candidates
+    generated locally and included in an {{Glossary("SDP")}} offer or answer that has been
+    sent to the remote peer).</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>networkType</em> = <em>rtcIceCandidateStats</em>.networkType;</pre>
+<pre
+  class="brush: js"><em>networkType</em> = <em>rtcIceCandidateStats</em>.networkType;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("DOMString")}} whose value is taken from the {{domxref("RTCNetworkType")}} enumerated type. The string indicates the type of network connection that the described candidate would use to communicate with the other peer.</p>
+<p>A {{domxref("DOMString")}} whose value is taken from the {{domxref("RTCNetworkType")}}
+  enumerated type. The string indicates the type of network connection that the described
+  candidate would use to communicate with the other peer.</p>
 
 <p>The permitted values are:</p>
 
@@ -39,7 +47,10 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>This example sets up a periodic function using {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} that outputs statistics reports for candidates that use or would use a cellular data network to a log view.</p>
+<p>This example sets up a periodic function using
+  {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} that outputs
+  statistics reports for candidates that use or would use a cellular data network to a log
+  view.</p>
 
 <pre class="brush: js; highlight[4]">window.setInterval(function() {
   myPeerConnection.getStats(null).then(stats =&gt; {

@@ -2,22 +2,25 @@
 title: FontFace.load
 slug: Web/API/FontFace/load
 tags:
-  - API
-  - CSS Font Loading API
-  - CSSOM
-  - FontFace
-  - Fonts
-  - Method
-  - Reference
-  - load
+- API
+- CSS Font Loading API
+- CSSOM
+- FontFace
+- Fonts
+- Method
+- Reference
+- load
 ---
 <div>{{draft}}{{APIRef("CSS Font Loading API")}}{{SeeCompatTable}}</div>
 
-<p class="summary">The <strong><code>load()</code></strong> method of the {{domxref("FontFace")}} interface loads a font based on current object's constructor-passed requirements, including a location or source buffer, and returns a {{jsxref('Promise')}} that resolves with the current FontFace object.</p>
+<p class="summary">The <strong><code>load()</code></strong> method of the
+  {{domxref("FontFace")}} interface loads a font based on current object's
+  constructor-passed requirements, including a location or source buffer, and returns a
+  {{jsxref('Promise')}} that resolves with the current FontFace object.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var promise = FontFace.load();</pre>
+<pre class="brush: js">var promise = FontFace.load();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -25,30 +28,33 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{jsxref('Promise')}} that resolves with a reference to the current <code>FontFace</code> object when the font loads or rejects with a <a href="/en-US/docs/Web/API/DOMException#exception-NetworkError">NetworkError</a> if the loading process fails.</p>
+<p>A {{jsxref('Promise')}} that resolves with a reference to the current
+  <code>FontFace</code> object when the font loads or rejects with a <a
+    href="/en-US/docs/Web/API/DOMException#exception-NetworkError">NetworkError</a> if the
+  loading process fails.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
 <dl>
- <dt>NetworkError</dt>
- <dd>Indicates that the attempt to load the font failed.</dd>
+  <dt>NetworkError</dt>
+  <dd>Indicates that the attempt to load the font failed.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Font Loading','#font-face-load','load')}}</td>
-   <td>{{Spec2('CSS3 Font Loading')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('CSS3 Font Loading','#font-face-load','load')}}</td>
+      <td>{{Spec2('CSS3 Font Loading')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

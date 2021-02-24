@@ -2,57 +2,73 @@
 title: PerformanceTiming.domInteractive
 slug: Web/API/PerformanceTiming/domInteractive
 tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Read-only
-  - domInteractive
-  - legacy
+- API
+- Backwards compatibility
+- Deprecated
+- Navigation Timing
+- PerformanceTiming
+- Property
+- Read-only
+- domInteractive
+- legacy
 ---
 <p>{{APIRef("Navigation Timing")}}</p>
 
 <div class="warning">
-<p>This interface of this property is deprecated in the <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</a>. Please use the {{domxref("PerformanceNavigationTiming")}} interface instead.</p>
+  <p>This interface of this property is deprecated in the <a
+      href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2
+      specification</a>. Please use the {{domxref("PerformanceNavigationTiming")}}
+    interface instead.</p>
 </div>
 
-<p>The legacy <code><strong>PerformanceTiming</strong></code><strong><code>.domInteractive</code></strong> read-only property returns an <code>unsigned long long</code> representing the moment, in milliseconds since the UNIX epoch, when the parser finished its work on the main document, that is when its {{domxref("Document.readyState")}} changes to <code>'interactive'</code> and the corresponding {{event("readystatechange")}} event is thrown.</p>
+<p>The legacy
+  <code><strong>PerformanceTiming</strong></code><strong><code>.domInteractive</code></strong>
+  read-only property returns an <code>unsigned long long</code> representing the moment,
+  in milliseconds since the UNIX epoch, when the parser finished its work on the main
+  document, that is when its {{domxref("Document.readyState")}} changes to
+  <code>'interactive'</code> and the corresponding {{event("readystatechange")}} event is
+  thrown.</p>
 
-<p>This property can be used to measure the speed of loading Web sites that users <em>feels</em>. Nevertheless there are a few caveats that happens if scripts are blocking rendering and not loaded asynchronously or with custom Web fonts. <a href="http://www.stevesouders.com/blog/2015/08/07/dominteractive-is-it-really/">Check if you are in one of these cases</a> before using this property as a proxy for the user experience of a Web site's speed of loading.</p>
+<p>This property can be used to measure the speed of loading Web sites that users
+  <em>feels</em>. Nevertheless there are a few caveats that happens if scripts are
+  blocking rendering and not loaded asynchronously or with custom Web fonts. <a
+    href="http://www.stevesouders.com/blog/2015/08/07/dominteractive-is-it-really/">Check
+    if you are in one of these cases</a> before using this property as a proxy for the
+  user experience of a Web site's speed of loading.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>time</em> = <em>performanceTiming</em>.domInteractive;</pre>
+<pre
+  class="brush: js"><em>time</em> = <em>performanceTiming</em>.domInteractive;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Navigation Timing', '#dom-performancetiming-dominteractive', 'PerformanceTiming.domInteractive')}}</td>
-   <td>{{Spec2('Navigation Timing')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Navigation Timing', '#dom-performancetiming-dominteractive',
+        'PerformanceTiming.domInteractive')}}</td>
+      <td>{{Spec2('Navigation Timing')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.PerformanceTiming.domInteractive")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{domxref("PerformanceTiming")}} interface it belongs to.</li>
- <li>The article "<a href="http://www.stevesouders.com/blog/2015/08/07/dominteractive-is-it-really/">domInteractive: is it? really?</a>" explaining when you can use this property as a proxy for the user experience of loading a Web site.</li>
+  <li>The {{domxref("PerformanceTiming")}} interface it belongs to.</li>
+  <li>The article "<a
+      href="http://www.stevesouders.com/blog/2015/08/07/dominteractive-is-it-really/">domInteractive:
+      is it? really?</a>" explaining when you can use this property as a proxy for the
+    user experience of loading a Web site.</li>
 </ul>

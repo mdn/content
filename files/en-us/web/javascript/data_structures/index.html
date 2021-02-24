@@ -15,7 +15,7 @@ tags:
 
 <p>JavaScript is a <em>loosely typed</em> and <em>dynamic</em> language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:</p>
 
-<pre class="brush: js notranslate">let foo = 42;    // foo is now a number
+<pre class="brush: js">let foo = 42;    // foo is now a number
 foo     = 'bar'; // foo is now a string
 foo     = true;  // foo is now a boolean
 </pre>
@@ -32,24 +32,24 @@ foo     = true;  // foo is now a boolean
    <li><a href="/en-US/docs/Glossary/Boolean">Boolean</a> : <code>typeof instance === "boolean"</code></li>
    <li><a href="/en-US/docs/Glossary/Number">Number</a> : <code>typeof instance === "number"</code></li>
    <li><a href="/en-US/docs/Glossary/String">String</a> : <code>typeof instance === "string"</code></li>
-   <li><a href="/en-US/docs/Glossary/BigInt">BigInt</a><span> : </span><code>typeof instance === "bigint"</code></li>
-   <li><a href="/en-US/docs/Glossary/Symbol">Symbol</a><span> : </span><code>typeof instance === "symbol"</code></li>
+   <li><a href="/en-US/docs/Glossary/BigInt">BigInt</a> : <code>typeof instance === "bigint"</code></li>
+   <li><a href="/en-US/docs/Glossary/Symbol">Symbol</a> : <code>typeof instance === "symbol"</code></li>
   </ul>
  </li>
  <li><strong>Structural</strong> <strong>Types</strong>:
   <ul>
-   <li><a href="/en-US/docs/Glossary/Object">Object</a><span> : </span><code>typeof instance === "<strong>object</strong>"</code>. Special non-data but <strong>Structural</strong> <strong>type</strong> for any <a href="/en-US/docs/Learn/JavaScript/Objects#The_Constructor">constructed</a> object instance also used as data structures: new {{jsxref("Object")}}, new {{jsxref("Array")}}, new {{jsxref("Map")}}, new {{jsxref("Set")}}, new {{jsxref("WeakMap")}}, new {{jsxref("WeakSet")}}, new {{jsxref("Date")}} and almost everything made with <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new keyword</a>;</li>
-   <li><a href="/en-US/docs/Glossary/Function">Function</a><span> : a non-data structure, though it also answers for <code>typeof</code> operator: </span><code>typeof instance === "<strong>function</strong>"</code>. This is merely a special shorthand for Functions, though every Function constructor is derived from Object constructor.</li>
+   <li><a href="/en-US/docs/Glossary/Object">Object</a> : <code>typeof instance === "<strong>object</strong>"</code>. Special non-data but <strong>Structural</strong> <strong>type</strong> for any <a href="/en-US/docs/Learn/JavaScript/Objects#The_Constructor">constructed</a> object instance also used as data structures: new {{jsxref("Object")}}, new {{jsxref("Array")}}, new {{jsxref("Map")}}, new {{jsxref("Set")}}, new {{jsxref("WeakMap")}}, new {{jsxref("WeakSet")}}, new {{jsxref("Date")}} and almost everything made with <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new keyword</a>;</li>
+   <li><a href="/en-US/docs/Glossary/Function">Function</a> : a non-data structure, though it also answers for <code>typeof</code> operator: <code>typeof instance === "<strong>function</strong>"</code>. This is merely a special shorthand for Functions, though every Function constructor is derived from Object constructor.</li>
   </ul>
  </li>
  <li><strong>Structural Root</strong> Primitive:
   <ul>
-   <li><strong><a href="/en-US/docs/Glossary/Null">null</a></strong><span> : </span><code>typeof instance === "<strong>object</strong>"</code>. Special <a href="/en-US/docs/Glossary/Primitive">primitive</a> type having additional usage for its value: if object is not inherited, then <code>null</code> is shown;</li>
+   <li><strong><a href="/en-US/docs/Glossary/Null">null</a></strong> : <code>typeof instance === "<strong>object</strong>"</code>. Special <a href="/en-US/docs/Glossary/Primitive">primitive</a> type having additional usage for its value: if object is not inherited, then <code>null</code> is shown;</li>
   </ul>
  </li>
 </ul>
 
-<p>Keep in mind the only valuable purpose of <code>typeof</code> operator usage is checking the Data Type. If we wish to check any Structural Type derived from Object it is pointless to use <code>typeof</code> for that, as we will always receive <code>"object"</code>. The indeed proper way to check what sort of Object we are using is {{jsxref("Operators/instanceof", "instanceof")}} keyword. But even in that case there might be misconceptions.</p>
+<p>Keep in mind the only valuable purpose of <code>typeof</code> operator usage is checking the Data Type. If we wish to check any Structural Type derived from Object it is pointless to use <code>typeof</code> for that, as we will always receive <code>"object"</code>. The proper way to check what sort of Object we are using is the {{jsxref("Operators/instanceof", "instanceof")}} keyword. But even in that case there might be misconceptions.</p>
 
 <p>As we can see the meaning of every primitive type is obvious except of undefined and null which are almost the same. This happens as the concept of Time is strictly connected with the purpose of algorithms. We can purport something that does not yet exist or does not exist anymore: <strong>undefined</strong>. But when we wish to be able to represent something that exists being empty, we have to invent another keyword. And that is what <strong>null</strong> stands for: the beginning of structural meaning.</p>
 
@@ -87,7 +87,7 @@ foo     = true;  // foo is now a boolean
 
 <p>In the praxis, this has almost no impact. For example, <code>+0 === -0</code> is <code>true</code>. However, you are able to notice this when you divide by zero:</p>
 
-<pre class="brush: js notranslate">&gt; 42 / +0
+<pre class="brush: js">&gt; 42 / +0
 Infinity
 &gt; 42 / -0
 -Infinity
@@ -96,7 +96,7 @@ Infinity
 <p>Although a number often represents only its value, JavaScript provides {{jsxref("Operators/Bitwise_Operators", "binary (bitwise) operators")}}.</p>
 
 <div class="notecard note">
-<p><strong>Caution:</strong> Although bitwise operators <em>can</em> be used to represent several Boolean values within a single number using <a class="external" href="https://en.wikipedia.org/wiki/Mask_%28computing%29">bit masking</a>, this is usually considered a bad practice. JavaScript offers other means to represent a set of Booleans (like an array of Booleans, or an object with Boolean values assigned to named properties). Bit masking also tends to make the code more difficult to read, understand, and maintain.</p>
+<p><strong>Caution:</strong> Although bitwise operators <em>can</em> be used to represent several Boolean values within a single number using <a href="https://en.wikipedia.org/wiki/Mask_%28computing%29">bit masking</a>, this is usually considered a bad practice. JavaScript offers other means to represent a set of Booleans (like an array of Booleans, or an object with Boolean values assigned to named properties). Bit masking also tends to make the code more difficult to read, understand, and maintain.</p>
 </div>
 
 <p>It may be necessary to use such techniques in very constrained environments, like when trying to cope with the limitations of local storage, or in extreme cases (such as when each bit over the network counts). This technique should only be considered when it is the last measure that can be taken to optimize size.</p>
@@ -111,7 +111,7 @@ Infinity
 
 <p>This example demonstrates, where incrementing the {{jsxref("Number.MAX_SAFE_INTEGER")}} returns the expected result:</p>
 
-<pre class="brush: js notranslate">&gt; const x = 2n ** 53n;
+<pre class="brush: js">&gt; const x = 2n ** 53n;
 9007199254740992n
 &gt; const y = x + 1n;
 9007199254740993n
@@ -291,7 +291,7 @@ Infinity
 
 <h3 id="Normal_objects_and_functions">"Normal" objects, and functions</h3>
 
-<p>A JavaScript object is a mapping between <em>keys</em> and <em>values</em>. Keys are strings (or {{jsxref("Symbol")}}s), and <em>values</em> can be anything. This makes objects a natural fit for <a class="external" href="https://en.wikipedia.org/wiki/Hash_table">hashmaps</a>.</p>
+<p>A JavaScript object is a mapping between <em>keys</em> and <em>values</em>. Keys are strings (or {{jsxref("Symbol")}}s), and <em>values</em> can be anything. This makes objects a natural fit for <a href="https://en.wikipedia.org/wiki/Hash_table">hashmaps</a>.</p>
 
 <p>Functions are regular objects with the additional capability of being <em>callable</em>.</p>
 
@@ -377,7 +377,7 @@ Infinity
   </tr>
   <tr>
    <td>{{jsxref("Float32Array")}}</td>
-   <td><code>1.2</code><span>×</span><code>10<sup>-38</sup></code> to <code>3.4</code><span>×</span><code>10<sup>38</sup></code></td>
+   <td><code>1.2</code>×<code>10<sup>-38</sup></code> to <code>3.4</code>×<code>10<sup>38</sup></code></td>
    <td>4</td>
    <td>32-bit IEEE floating point number (7 significant digits e.g., <code>1.1234567</code>)</td>
    <td><code>unrestricted float</code></td>
@@ -385,7 +385,7 @@ Infinity
   </tr>
   <tr>
    <td>{{jsxref("Float64Array")}}</td>
-   <td><code>5.0</code><span>×</span><code>10<sup>-324</sup></code> to <code>1.8</code><span>×</span><code>10<sup>308</sup></code></td>
+   <td><code>5.0</code>×<code>10<sup>-324</sup></code> to <code>1.8</code>×<code>10<sup>308</sup></code></td>
    <td>8</td>
    <td>64-bit IEEE floating point number (16 significant digits e.g., <code>1.123...15</code>)</td>
    <td><code>unrestricted double</code></td>

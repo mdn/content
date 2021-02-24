@@ -35,7 +35,7 @@ tags:
 
 <p>Kicking off the renderer thus looks like this:</p>
 
-<pre class="brush: js notranslate">let worldRefSpace;
+<pre class="brush: js">let worldRefSpace;
 
 async function runXR(xrSession) {
   worldRefSpace = await xrSession.requestReferenceSpace("immersive-vr");
@@ -113,11 +113,11 @@ async function runXR(xrSession) {
 
 <p>We have two eyes for a reason: by having two eyes, each inherently sees the world from a slightly different angle. Since they're a known, fixed distance apart, our brains can do basic geometry and trigonometry and figure out the 3D nature of reality from that information. We also make use of perspective, size differences, and even our understanding of  how things usually look to figure out the details of that third dimension. These factors, among others, are the source of our {{interwiki("wikipedia", "depth perception")}}.</p>
 
-<p>To create the illusion of three dimensions when rendering graphics, we need to simulate as many of these factors as we can. The more of these we simulate—and the more accurately we do so—the better able we are to trick the human brain into perceiving our images in 3D. The advantage to XR is that not only can we use the classic monocular techniques to simulate 3D graphics (perspective, size, and simulated parallax), but we can also simulate binocular vision—that is, vision using two eyes—by rendering the scene twice for each frame of animation—once for each eye.</p>
+<p>To create the illusion of three dimensions when rendering graphics, we need to simulate as many of these factors as we can. The more of these we simulate—and the more accurately we do so—the better we are able to trick the human brain into perceiving our images in 3D. The advantage to XR is that not only can we use the classic monocular techniques to simulate 3D graphics (perspective, size, and simulated parallax), but we can also simulate binocular vision—that is, vision using two eyes—by rendering the scene twice for each frame of animation—once for each eye.</p>
 
 <p>The typical human's {{interwiki("wikipedia", "pupillary distance")}}—the distance between the centers of the pupils—is between 54 and 74 millimeters (0.054 to 0.074 meters). So if the center of the viewer's head is located at <code>[0.0, 2.0, 0.0]</code> (about two meters above ground level at the center of the space horizontally), we first need to render the scene from, say, <code>[-0.032, 2.0, 0.0]</code> (32mm to the left of center) and then render it again at <code>[0.032, 2.0, 0.0]</code> (32mm right of center.) This way, we place the positions of the viewer's eyes at an average human pupillary distance of 64mm.</p>
 
-<p>That distance (or whatever pupillary distance the XR system is configured to use) is enouigh to allow our minds to see just enough difference due to retinal disparity (the difference in what each retina sees) and the parallax effect to allow our brains to calculate the distance to and depth of objects, thus enabling us to percieve three dimensions despite our retinas only being 2D surfaces.</p>
+<p>That distance (or whatever pupillary distance the XR system is configured to use) is enough to allow our minds to see just enough difference due to retinal disparity (the difference in what each retina sees) and the parallax effect to allow our brains to calculate the distance to and depth of objects, thus enabling us to percieve three dimensions despite our retinas only being 2D surfaces.</p>
 
 <p>This is illustrated in the diagram below, in which we see how each eye perceives a die located directly in front of the viewer. While this diagram exaggerates the effect in some respects for illustrative purposes, the concept is the same. Each eye sees an area whose boundaries make up an arc in front of the eye. Because each eye is offset to one side or the other of the head's centerline, and each eye sees about the same field of view, the result is that each eye sees a slightly different part of the world in front of it, and from a slightly different angle.</p>
 
@@ -147,7 +147,7 @@ async function runXR(xrSession) {
 
 <p>In this version of the WebXR rendering callback, we use a very straightforward approach that works great for relatively simple projects. This pseudocode outlines that process:</p>
 
-<pre class="brush: js notranslate">for each view in the pose's views list:
+<pre class="brush: js">for each view in the pose's views list:
   get the WebXR GL layer's viewport
   set the WebGL viewport to match
   for each object in the scene
@@ -168,7 +168,7 @@ async function runXR(xrSession) {
 
 <p>Let's take a look at some real code that follows this basic pattern. Since in the example above we gave this function the name <code>myDrawFrame()</code>, we'll continue to use that here.</p>
 
-<pre class="brush: js notranslate">let lastFrameTime = 0;
+<pre class="brush: js">let lastFrameTime = 0;
 
 function myDrawFrame(currentFrameTime, frame) {
   let session = frame.session;
@@ -242,7 +242,7 @@ function myDrawFrame(currentFrameTime, frame) {
 
 <p>The resulting pseudocode looks like this:</p>
 
-<pre class="brush: js notranslate">for each object in the scene
+<pre class="brush: js">for each object in the scene
   bindProgram()
   bindUniforms()
   bindBuffers()
@@ -263,7 +263,7 @@ function myDrawFrame(currentFrameTime, frame) {
 
 <p>For example, to reduce the frame rate by 50%, just skip every other frame:</p>
 
-<pre class="brush: js notranslate">let tick = 0;
+<pre class="brush: js">let tick = 0;
 
 function drawFrame(time, frame) {
   animationFrameRequestID = frame.session.requestAnimationFrame(drawFrame);
@@ -284,7 +284,7 @@ function drawFrame(time, frame) {
 
 <p>For that reason, you need to use the timestamp provided to ensure your animation renders at precisely the desired speed. To do so, the first thing you need to do is to compute the time that has elapsed since the last frame was rendered:</p>
 
-<pre class="brush: js notranslate">let lastFrameTime = 0;
+<pre class="brush: js">let lastFrameTime = 0;
 
 function drawFrame(time, frame) {
   /* ... schedule next frame, prepare the buffer, etc ... */
@@ -302,7 +302,7 @@ function drawFrame(time, frame) {
 
 <p>With the elapsed time in hand, your rendering code has the means to compute just how much every moving object has moved in the time elapsed. For instance, if an object is rotating, you might apply the rotation like this:</p>
 
-<pre class="brush: js notranslate">const xDeltaRotation = (xRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
+<pre class="brush: js">const xDeltaRotation = (xRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
 const yDeltaRotation = (yRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
 const zDeltaRotation = (zRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
 </pre>
@@ -311,7 +311,7 @@ const zDeltaRotation = (zRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaT
 
 <p>The same concept applied for objects that are moving rather than rotating:</p>
 
-<pre class="brush: js notranslate">const xDistanceMoved = xSpeedPerSecond * deltaTime;
+<pre class="brush: js">const xDistanceMoved = xSpeedPerSecond * deltaTime;
 const yDistanceMoved = ySpeedPerSecond * deltaTime;
 const ZDistanceMoved = zSpeedPerSecond * deltaTime;
 </pre>

@@ -5,12 +5,11 @@ tags:
   - ARIA
   - Accessibility
   - NeedsContent
-  - Role(2)
-  - Rôle
+  - Role
 ---
 <p>{{Page("/en-US/docs/Web/Accessibility/ARIA/Roles", "Subnav")}}</p>
 
-<p><span class="seoSummary">The <a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#checkbox">checkbox role</a> is used for checkable interactive controls. Elements containing <code>role="checkbox"</code> must also include the <code>aria-checked</code> attribute to expose the checkbox's state to assistive technology.</span></p>
+<p><span class="seoSummary">The <a href="https://www.w3.org/TR/wai-aria-1.1/#checkbox">checkbox role</a> is used for checkable interactive controls. Elements containing <code>role="checkbox"</code> must also include the <code>aria-checked</code> attribute to expose the checkbox's state to assistive technology.</span></p>
 
 <pre class="brush: html">&lt;span role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="chk1-label"&gt;
 &lt;/span&gt; &lt;label id="chk1-label"&gt;Remember my preferences&lt;/label&gt;</pre>
@@ -22,7 +21,7 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>The native <a href="/en-US/docs/Web/HTML/Element/input/checkbox">HTML checkbox</a>  form control can only have two checked states ("checked" or "not checked"), with an <a href="/en-US/docs/Web/HTML/Element/input/checkbox#Indeterminate_state_checkboxes">indeterminate</a> state settable via JavaScript. Similarly, an element with <code>role="checkbox"</code>  can expose three states through the <code>aria-checked</code> attribute: <code>true</code>, <code>false</code>, or <code>mixed</code>.</p>
+<p>The native <a href="/en-US/docs/Web/HTML/Element/input/checkbox">HTML checkbox</a>  form control can only have two checked states ("checked" or "not checked"), with an <a href="/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes">indeterminate</a> state settable via JavaScript. Similarly, an element with <code>role="checkbox"</code>  can expose three states through the <code>aria-checked</code> attribute: <code>true</code>, <code>false</code>, or <code>mixed</code>.</p>
 
 <p>Since a checkbox is an interactive control, it must be focusable and keyboard accessible. If the role is applied to a non-focusable element, use the <code>tabindex</code> attribute to change this. The expected keyboard shortcut for activating a checkbox is the <kbd>Space</kbd> key.</p>
 
@@ -144,4 +143,3 @@ tags:
  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Switch_role">ARIA: switch role</a></li>
  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Option_role">ARIA: option role</a></li>
 </ul>
-

@@ -2,30 +2,36 @@
 title: BroadcastChannel.onmessage
 slug: Web/API/BroadcastChannel/onmessage
 tags:
-  - API
-  - Broadcast Channel API
-  - BroadcastChannel
-  - Event Handler
-  - Experimental
-  - HTML API
-  - Property
-  - Reference
+- API
+- Broadcast Channel API
+- BroadcastChannel
+- Event Handler
+- Experimental
+- HTML API
+- Property
+- Reference
 ---
 <p>{{APIRef("BroadCastChannel API")}}</p>
 
-<p>The <code><strong>BroadcastChannel.onmessage</strong></code> event handler is a property that specifies the function to execute when a {{event("message")}} event, of type {{domxref("MessageEvent")}}, is received by this {{domxref("BroadcastChannel")}}. Such an event is sent by the browser with a message broadcasted to the channel.</p>
+<p>The <code><strong>BroadcastChannel.onmessage</strong></code> event handler is a
+	property that specifies the function to execute when a {{event("message")}} event, of
+	type {{domxref("MessageEvent")}}, is received by this {{domxref("BroadcastChannel")}}.
+	Such an event is sent by the browser with a message broadcasted to the channel.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>channel</em>.onmessage = <em>function</em>;
+<pre class="brush: js"><em>channel</em>.onmessage = <em>function</em>;
 </pre>
 
 <h3 id="Values">Values</h3>
 
 <ul>
-	<li><code>function</code> is the name of a user-defined function, without the <code>()</code> suffix or any parameters, or an anonymous function declaration, such as <code>function(event) {...}</code>. An event handler always has one single parameter, containing the event, here of type {{domxref("MessageEvent")}}.</li>
+	<li><code>function</code> is the name of a user-defined function, without the
+		<code>()</code> suffix or any parameters, or an anonymous function declaration,
+		such as <code>function(event) {...}</code>. An event handler always has one single
+		parameter, containing the event, here of type {{domxref("MessageEvent")}}.</li>
 </ul>
 
 <h2 id="Example">Example</h2>
@@ -43,7 +49,8 @@ tags:
 			<th scope="col">Comment</th>
 		</tr>
 		<tr>
-			<td>{{SpecName('HTML WHATWG', "comms.html#handler-broadcastchannel-onmessage", "BroadcastChannel.onmessage")}}</td>
+			<td>{{SpecName('HTML WHATWG', "comms.html#handler-broadcastchannel-onmessage",
+				"BroadcastChannel.onmessage")}}</td>
 			<td>{{Spec2('HTML WHATWG')}}</td>
 			<td>Initial definition.</td>
 		</tr>
@@ -57,5 +64,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li>Another, more heavy weight, way of communicating between browser contexts: {{domxref("ServiceWorker")}}</li>
+	<li>Another, more heavy weight, way of communicating between browser contexts:
+		{{domxref("ServiceWorker")}}</li>
 </ul>

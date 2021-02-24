@@ -2,27 +2,30 @@
 title: Element.removeAttributeNS()
 slug: Web/API/Element/removeAttributeNS
 tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - NeedsSpecTable
-  - Reference
+- API
+- DOM
+- Element
+- Method
+- NeedsSpecTable
+- Reference
 ---
 <div>{{ APIRef("DOM") }}</div>
 
-<p>The <strong><code>removeAttributeNS()</code></strong> method of the {{domxref("Element")}} interface removes the specified attribute from an element.</p>
+<p>The <strong><code>removeAttributeNS()</code></strong> method of the
+  {{domxref("Element")}} interface removes the specified attribute from an element.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>element</em>.removeAttributeNS(<em>namespace</em>, <em>attrName</em>);
+<pre class="brush: js"><em>element</em>.removeAttributeNS(<em>namespace</em>, <em>attrName</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <ul>
- <li><code>namespace</code> is a string that contains the namespace of the attribute.</li>
- <li><code>attrName</code> is a string that names the attribute to be removed from the current node.</li>
+  <li><code>namespace</code> is a string that contains the namespace of the attribute.
+  </li>
+  <li><code>attrName</code> is a string that names the attribute to be removed from the
+    current node.</li>
 </ul>
 
 <h2 id="Example">Example</h2>
@@ -42,24 +45,26 @@ d.removeAttributeNS("http://www.mozilla.org/ns/specialspace", "specialAlign");
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-removeattributens', 'Element: removeAttributeNS')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-element-removeattributens', 'Element:
+        removeAttributeNS')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat("api.Element.removeAttributeNS")}}</p>
 
-<p>{{ Fx_minversion_inline(3) }} In Firefox 3 and later, this method resets DOM values to their defaults.</p>
+<p>{{ Fx_minversion_inline(3) }} In Firefox 3 and later, this method resets DOM values to
+  their defaults.</p>

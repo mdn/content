@@ -9,18 +9,18 @@ tags:
   - Video
 ---
 <div class="summary">
-<p><span class="seoSummary">In the previous <a href="https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/cross_browser_video_player">Cross browser video player article</a> we described how to build a cross-browser HTML5 video player using the Media and Fullscreen APIs. This follow-up article looks at how to style this custom player, including making it responsive.</span></p>
+<p><span class="seoSummary">In the previous <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player">Cross browser video player article</a> we described how to build a cross-browser HTML5 video player using the Media and Fullscreen APIs. This follow-up article looks at how to style this custom player, including making it responsive.</span></p>
 </div>
 
 <h2 id="The_example_in_action">The example in action</h2>
 
-<p><img alt="A video player with play, stop, volume and fullscreen controls, showing an image of a soldier." src="https://mdn.mozillademos.org/files/7729/video-player-styled.png" style="display: block; height: 297px; margin: 0px auto; width: 600px;"></p>
+<p><img alt="A video player with play, stop, volume and fullscreen controls, showing an image of a soldier." src="video-player-styled.png" style="display: block; margin: 0px auto;"></p>
 
 <p>You can find the code for the <a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-styled">updated, styled example</a> on Github, and <a href="https://iandevlin.github.io/mdn/video-player-styled/">view it live</a>.</p>
 
 <h2 id="Preliminary_modifications_from_the_original_example">Preliminary modifications from the original example</h2>
 
-<p>This section summarises the modifications that were made to the <a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player">original video player example</a> to make the styling task easier, before the bulk of the work was started.</p>
+<p>This section summarizes the modifications that were made to the <a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player">original video player example</a> to make the styling task easier, before the bulk of the work was started.</p>
 
 <h3 id="HTML_Markup">HTML Markup</h3>
 
@@ -44,7 +44,7 @@ tags:
 
 <h3 id="Related_CSS_alteration">Related CSS alteration</h3>
 
-<p>The previous article set the <code>display</code> property of the video controls to <code>block</code> in order to display them. This has now been changed to use a <a href="http://toddmotto.com/stop-toggling-classes-with-js-use-behavior-driven-dom-manipulation-with-data-states/"><code>data-state</code> attribute</a>, which this code already uses to handle its <a href="https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/cross_browser_video_player#Fullscreen">fullscreen implementation</a>.</p>
+<p>The previous article set the <code>display</code> property of the video controls to <code>block</code> in order to display them. This has now been changed to use a <a href="http://toddmotto.com/stop-toggling-classes-with-js-use-behavior-driven-dom-manipulation-with-data-states/"><code>data-state</code> attribute</a>, which this code already uses to handle its <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player#fullscreen">fullscreen implementation</a>.</p>
 
 <p>This "data-state" idea is also used for setting the current state of buttons within the video control set, which allows specific state styling.</p>
 
@@ -173,7 +173,7 @@ tags:
 
 <p>Like the {{htmlelement("button") }} elements, {{htmlelement("progress") }} also has a default border, which is removed here. It is also given a slight rounded corner for aesthetic reasons. The <code>color</code> property is also defined here as Internet Explorer uses this defined color for styling the progress bar's background color as it increases.<br>
  <br>
- As mentioned in the <a href="https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/cross_browser_video_player">previous article</a>, there is a fallback provided for browsers that do not support the {{htmlelement("progress") }} element; this also needs to be styled appropriately:</p>
+ As mentioned in the <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player">previous article</a>, there is a fallback provided for browsers that do not support the {{htmlelement("progress") }} element; this also needs to be styled appropriately:</p>
 
 <pre class="brush: css">.controls progress[data-state="fake"] {
    background:#e6e6e6;
@@ -310,7 +310,7 @@ var alterVolume = function(dir) {
 
 <h4 id="Fullscreen">Fullscreen</h4>
 
-<p>The <a href="/en-US/Apps/Build/Manipulating_media/cross_browser_video_player#Fullscreen">FullScreen implemention</a> hasn't changed.</p>
+<p>The <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player#fullscreen">FullScreen implementation</a> hasn't changed.</p>
 
 <h2 id="Responsive_styling">Responsive styling</h2>
 

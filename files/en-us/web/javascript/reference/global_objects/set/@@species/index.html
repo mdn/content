@@ -21,13 +21,13 @@ tags:
 
 <p>The <code>species</code> property returns the default constructor function, which is the <code>Set</code> constructor for <code>Set</code> objects:</p>
 
-<pre class="brush: js notranslate">Set[Symbol.species]; // function Set()</pre>
+<pre class="brush: js">Set[Symbol.species]; // function Set()</pre>
 
 <h3 id="Species_in_derived_objects">Species in derived objects</h3>
 
 <p>In a derived collection object (e.g. your custom set <code>MySet</code>), the <code>MySet</code> species is the <code>MySet</code> constructor. However, you might want to overwrite this, in order to return parent <code>Set</code> objects in your derived class methods:</p>
 
-<pre class="brush: js notranslate">class MySet extends Set {
+<pre class="brush: js">class MySet extends Set {
   // Overwrite MySet species to the parent Set constructor
   static get [Symbol.species]() { return Set; }
 }</pre>
@@ -49,10 +49,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("javascript.builtins.Set.@@species")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

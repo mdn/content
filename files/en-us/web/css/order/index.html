@@ -6,7 +6,7 @@ tags:
   - CSS Flexible Boxes
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 ---
 <div>{{CSSRef}}</div>
 
@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* &lt;integer&gt; values */
+<pre class="brush:css no-line-numbers">/* &lt;integer&gt; values */
 order: 5;
 order: -5;
 
@@ -41,7 +41,7 @@ order: unset;</pre>
 <ul>
  <li><a href="https://tink.uk/flexbox-the-keyboard-navigation-disconnect/">Flexbox &amp; the keyboard navigation disconnect — Tink</a></li>
  <li><a href="http://adrianroselli.com/2015/09/source-order-matters.html">Source Order Matters | Adrian Roselli</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways">MDN Understanding WCAG, Guideline 1.3 explanations</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_%e2%80%94_create_content_that_can_be_presented_in_different_ways">MDN Understanding WCAG, Guideline 1.3 explanations</a></li>
  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html">Understanding Success Criterion 1.3.2 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
@@ -51,7 +51,7 @@ order: unset;</pre>
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -61,7 +61,7 @@ order: unset;</pre>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush:html; notranslate">&lt;header&gt;...&lt;/header&gt;
+<pre class="brush:html;">&lt;header&gt;...&lt;/header&gt;
 &lt;main&gt;
   &lt;article&gt;Article&lt;/article&gt;
   &lt;nav&gt;Nav&lt;/nav&gt;
@@ -71,7 +71,7 @@ order: unset;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush:css; notranslate">main { display: flex;  text-align:center; }
+<pre class="brush:css;">main { display: flex;  text-align:center; }
 main &gt; article { flex:1;        order: 2; }
 main &gt; nav     { width: 200px;  order: 1; }
 main &gt; aside   { width: 200px;  order: 3; }</pre>

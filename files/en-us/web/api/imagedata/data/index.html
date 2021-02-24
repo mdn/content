@@ -2,26 +2,32 @@
 title: ImageData.data
 slug: Web/API/ImageData/data
 tags:
-  - API
-  - Canvas
-  - ImageData
-  - Property
-  - Reference
+- API
+- Canvas
+- ImageData
+- Property
+- Reference
 ---
 <div>{{APIRef("Canvas API")}}</div>
 
-<p>The readonly <code><strong>ImageData.data</strong></code> property returns a {{jsxref("Uint8ClampedArray")}} that contains the {{domxref("ImageData")}} object's pixel data. Data is stored as a one-dimensional array in the RGBA order, with integer values between <code>0</code> and <code>255</code> (inclusive).</p>
+<p>The readonly <code><strong>ImageData.data</strong></code> property returns a
+  {{jsxref("Uint8ClampedArray")}} that contains the {{domxref("ImageData")}} object's
+  pixel data. Data is stored as a one-dimensional array in the RGBA order, with integer
+  values between <code>0</code> and <code>255</code> (inclusive).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>imageData</em>.data
+<pre class="brush: js"><em>imageData</em>.data
 </pre>
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Getting_an_ImageData_object's_pixel_data">Getting an ImageData object's pixel data</h3>
+<h3 id="Getting_an_ImageData_object's_pixel_data">Getting an ImageData object's pixel data
+</h3>
 
-<p>This example creates an <code>ImageData</code> object that is 100 pixels wide and 100 pixels tall, making 10,000 pixels in all. The <code>data</code> array stores four values for each pixel, making 4 x 10,000, or 40,000 values in all.</p>
+<p>This example creates an <code>ImageData</code> object that is 100 pixels wide and 100
+  pixels tall, making 10,000 pixels in all. The <code>data</code> array stores four values
+  for each pixel, making 4 x 10,000, or 40,000 values in all.</p>
 
 <pre class="brush: js  language-js">let imageData = new ImageData(100, 100);
 console.log(imageData.data);         // Uint8ClampedArray[40000]
@@ -30,7 +36,8 @@ console.log(imageData.data.length);  // 40000
 
 <h3 id="Filling_a_blank_ImageData_object">Filling a blank ImageData object</h3>
 
-<p>This example creates and fills a new <code>ImageData</code> object with colorful pixels.</p>
+<p>This example creates and fills a new <code>ImageData</code> object with colorful
+  pixels.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -39,7 +46,9 @@ console.log(imageData.data.length);  // 40000
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<p>Since each pixel consists of four values within the <code>data</code> array, the <code>for</code> loop iterates by multiples of four. The values associated with each pixel are R (red), G (green), B (blue), and A (alpha), in that order.</p>
+<p>Since each pixel consists of four values within the <code>data</code> array, the
+  <code>for</code> loop iterates by multiples of four. The values associated with each
+  pixel are R (red), G (green), B (blue), and A (alpha), in that order.</p>
 
 <pre class="brush: js">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
@@ -68,23 +77,28 @@ ctx.putImageData(imageData, 20, 20);</pre>
 
 <h3 id="More_examples">More examples</h3>
 
-<p>For more examples using <code>ImageData.data</code>, see <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel manipulation with canvas</a>, {{domxref("CanvasRenderingContext2D.createImageData()")}}, and {{domxref("CanvasRenderingContext2D.putImageData()")}}.</p>
+<p>For more examples using <code>ImageData.data</code>, see <a
+    href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel
+    manipulation with canvas</a>,
+  {{domxref("CanvasRenderingContext2D.createImageData()")}}, and
+  {{domxref("CanvasRenderingContext2D.putImageData()")}}.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'scripting.html#dom-imagedata-data', 'ImageData.data')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', 'scripting.html#dom-imagedata-data',
+        'ImageData.data')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -94,10 +108,12 @@ ctx.putImageData(imageData, 20, 20);</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("ImageData.height")}}</li>
- <li>{{domxref("ImageData.width")}}</li>
- <li>{{domxref("ImageData")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.createImageData()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.putImageData()")}}</li>
- <li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel manipulation with canvas</a></li>
+  <li>{{domxref("ImageData.height")}}</li>
+  <li>{{domxref("ImageData.width")}}</li>
+  <li>{{domxref("ImageData")}}</li>
+  <li>{{domxref("CanvasRenderingContext2D.createImageData()")}}</li>
+  <li>{{domxref("CanvasRenderingContext2D.putImageData()")}}</li>
+  <li><a
+      href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel
+      manipulation with canvas</a></li>
 </ul>

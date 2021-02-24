@@ -18,26 +18,26 @@ tags:
 <p><a href="/en-US/docs/Tools/Web_Console">Console</a>:</p>
 
 <ul>
- <li>In the <a href="/en-US/docs/Tools/Web_Console/The_command_line_interpreter#Multi-line_mode">multi-line mode of the interactive JS interpreter</a>, you can open and save files using the keyboard shortcuts <kbd>Ctrl</kbd> + <kbd>O</kbd> and <kbd>Ctrl</kbd> + <kbd>S</kbd>, respectively ({{bug(1592308)}}).</li>
- <li>You can set a <a href="/en-US/docs/Tools/Web_Console/Console_messages#Async_stack_frames">preference so that asynchronous messages are visually separated</a> ({{bug(1592969)}}).</li>
+ <li>In the <a href="/en-US/docs/Tools/Web_Console/The_command_line_interpreter#multi-line_mode">multi-line mode of the interactive JS interpreter</a>, you can open and save files using the keyboard shortcuts <kbd>Ctrl</kbd> + <kbd>O</kbd> and <kbd>Ctrl</kbd> + <kbd>S</kbd>, respectively ({{bug(1592308)}}).</li>
+ <li>You can set a <a href="/en-US/docs/Tools/Web_Console/Console_messages#async_stack_frames">preference so that asynchronous messages are visually separated</a> ({{bug(1592969)}}).</li>
 </ul>
 
 <p><a href="/en-US/docs/Tools/Debugger">JavaScript debugger</a>:</p>
 
 <ul>
- <li>You can now right/<kbd>Ctrl</kbd> click on objects in the Scopes panel, and choose <em>Property set</em> or <em>Property get</em> to <a href="/en-US/docs/Tools/Debugger/How_to/Use_watchpoints#Set_a_watchpoint">set watchpoints</a> ({{bug(1574192)}}).</li>
+ <li>You can now right/<kbd>Ctrl</kbd> click on objects in the Scopes panel, and choose <em>Property set</em> or <em>Property get</em> to <a href="/en-US/docs/Tools/Debugger/How_to/Use_watchpoints#set_a_watchpoint">set watchpoints</a> ({{bug(1574192)}}).</li>
 </ul>
 
 <p><a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a>:</p>
 
 <ul>
- <li>The Timings tab now shows <a href="/en-US/docs/Tools/Network_Monitor/request_details#Queued_Started_Downloaded">queued, started, and downloaded</a> times for each resource ({{bug(1580431)}}).</li>
+ <li>The Timings tab now shows <a href="/en-US/docs/Tools/Network_Monitor/request_details#queued_started_downloaded">queued, started, and downloaded</a> times for each resource ({{bug(1580431)}}).</li>
 </ul>
 
 <p><a href="/en-US/docs/Tools/Page_Inspector">Page Inspector</a>:</p>
 
 <ul>
- <li>You can set a <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#View_media_rules_for_color-scheme-preference">preference to enable a simulator</a> for different values of the <code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></code> media feature ({{bug(1550804)}}).</li>
+ <li>You can set a <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#view_media_rules_for_color-scheme-preference">preference to enable a simulator</a> for different values of the <code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></code> media feature ({{bug(1550804)}}).</li>
 </ul>
 
 <h4 id="Removals">Removals</h4>
@@ -83,7 +83,7 @@ tags:
 <h4 id="New_APIs">New APIs</h4>
 
 <ul>
- <li>{{domxref("FormDataEvent")}} and <a href="/en-US/docs/Web/API/FormData/Using_FormData_Objects#Using_a_formdata_event">event-based form participation</a> is now enabled by default ({{bug(1594708)}}).</li>
+ <li>{{domxref("FormDataEvent")}} and <a href="/en-US/docs/Web/API/FormData/Using_FormData_Objects#using_a_formdata_event">event-based form participation</a> is now enabled by default ({{bug(1594708)}}).</li>
 </ul>
 
 <h4 id="DOM">DOM</h4>
@@ -92,9 +92,9 @@ tags:
  <li>The <a href="/en-US/docs/Web/API/Geolocation_API">Geolocation API</a> has had some interface name updates, as per recent spec changes ({{bug(1575144)}}):
 
   <ul>
-   <li>{{domxref("Coordinates")}} has been changed to {{domxref("GeolocationCoordinates")}}.</li>
-   <li>{{domxref("Position")}} has been changed to {{domxref("GeolocationPosition")}}.</li>
-   <li>{{domxref("PositionError")}} has been changed to {{domxref("GeolocationPositionError")}}.</li>
+   <li><code>Coordinates</code> has been changed to {{domxref("GeolocationCoordinates")}}.</li>
+   <li><code>Position</code> has been changed to {{domxref("GeolocationPosition")}}.</li>
+   <li><code>PositionError</code> has been changed to {{domxref("GeolocationPositionError")}}.</li>
   </ul>
  </li>
  <li>A number of properties have been updated to use standard stringifiers ({{bug(824857)}}):
@@ -104,7 +104,7 @@ tags:
    <li>{{domxref("Location.href")}}</li>
    <li>{{domxref("MediaList.mediaText")}}</li>
    <li>{{domxref("URL.href")}}</li>
-   <li>{{domxref("WorkerLocation.href")}}</li>
+   <li>{{domxref("URLUtilsReadOnly/href", "WorkerLocation.href")}}</li>
   </ul>
  </li>
 </ul>

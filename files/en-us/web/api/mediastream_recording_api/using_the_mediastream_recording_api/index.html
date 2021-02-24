@@ -34,7 +34,7 @@ tags:
 
 <p>For example, in Web Dictaphone we have three main UI areas, stacked vertically. We wanted to give the first two (the header and the controls) fixed heights:</p>
 
-<pre class="brush: css notranslate">header {
+<pre class="brush: css">header {
   height: 70px;
 }
 
@@ -45,7 +45,7 @@ tags:
 
 <p>However, we wanted to make the third area (which contains the recorded samples you can play back) take up whatever space is left, regardless of the device height. Flexbox could be the answer here, but it's a bit overkill for such a simple layout. Instead, the problem was solved by making the third container's height equal to 100% of the parent height, minus the heights and padding of the other two:</p>
 
-<pre class="brush: css;highlight[4] notranslate">.sound-clips {
+<pre class="brush: css highlight[4]">.sound-clips {
   box-shadow: inset 0 3px 4px rgba(0,0,0,0.7);
   background-color: rgba(0,0,0,0.1);
   height: calc(100% - 240px - 0.7rem);
@@ -60,7 +60,7 @@ tags:
 
 <p>This is fairly well documented already, but we thought we'd give a mention to the checkbox hack, which abuses the fact that you can click on the {{htmlelement("label")}} of a checkbox to toggle it checked/unchecked. In Web Dictaphone this powers the Information screen, which is shown/hidden by clicking the question mark icon in the top right hand corner. First of all, we style the <code>&lt;label&gt;</code> how we want it, making sure that it has enough z-index to always sit above the other elements and therefore be focusable/clickable:</p>
 
-<pre class="brush: css notranslate">label {
+<pre class="brush: css">label {
     font-family: 'NotoColorEmoji';
     font-size: 3rem;
     position: absolute;
@@ -72,14 +72,14 @@ tags:
 
 <p>Then we hide the actual checkbox, because we don't want it cluttering up our UI:</p>
 
-<pre class="brush: css notranslate">input[type=checkbox] {
+<pre class="brush: css">input[type=checkbox] {
    position: absolute;
    top: -100px;
 }</pre>
 
 <p>Next, we style the Information screen (wrapped in an {{htmlelement("aside")}} element) how we want it, give it fixed position so that it doesn't appear in the layout flow and affect the main UI, transform it to the position we want it to sit in by default, and give it a transition for smooth showing/hiding:</p>
 
-<pre class="brush: css notranslate">aside {
+<pre class="brush: css">aside {
    position: fixed;
    top: 0;
    left: 0;
@@ -94,7 +94,7 @@ tags:
 
 <p>Last, we write a rule to say that when the checkbox is checked (when we click/focus the label), the adjacent <code>&lt;aside&gt;</code> element will have its horizontal translation value changed and transition smoothly into view:</p>
 
-<pre class="brush: css notranslate">input[type=checkbox]:checked ~ aside {
+<pre class="brush: css">input[type=checkbox]:checked ~ aside {
   transform: translateX(0);
 }</pre>
 
@@ -104,13 +104,13 @@ tags:
 
 <p>We'll declare some variables for the record and stop buttons, and the {{htmlelement("article")}} that will contain the generated audio players:</p>
 
-<pre class="brush: js notranslate">const record = document.querySelector('.record');
+<pre class="brush: js">const record = document.querySelector('.record');
 const stop = document.querySelector('.stop');
 const soundClips = document.querySelector('.sound-clips');</pre>
 
 <p>Finally for this section, we set up the basic <code>getUserMedia</code> structure:</p>
 
-<pre class="brush: js notranslate">if (navigator.mediaDevices &amp;&amp; navigator.mediaDevices.getUserMedia) {
+<pre class="brush: js">if (navigator.mediaDevices &amp;&amp; navigator.mediaDevices.getUserMedia) {
    console.log('getUserMedia supported.');
    navigator.mediaDevices.getUserMedia (
       // constraints - only audio needed for this app
@@ -148,11 +148,11 @@ const soundClips = document.querySelector('.sound-clips');</pre>
 
 <p>Once <code>getUserMedia</code> has created a media stream successfully, you create a new Media Recorder instance with the <code>MediaRecorder()</code> constructor and pass it the stream directly. This is your entry point into using the MediaRecorder API — the stream is now ready to be captured into a {{domxref("Blob")}}, in the default encoding format of your browser.</p>
 
-<pre class="brush: js notranslate">const mediaRecorder = new MediaRecorder(stream);</pre>
+<pre class="brush: js">const mediaRecorder = new MediaRecorder(stream);</pre>
 
 <p>There are a series of methods available in the {{domxref("MediaRecorder")}} interface that allow you to control recording of the media stream; in Web Dictaphone we just make use of two, and listen to some events. First of all, {{domxref("MediaRecorder.start()")}} is used to start recording the stream once the record button is pressed:</p>
 
-<pre class="brush: js notranslate">record.onclick = function() {
+<pre class="brush: js">record.onclick = function() {
   mediaRecorder.start();
   console.log(mediaRecorder.state);
   console.log("recorder started");
@@ -164,7 +164,7 @@ const soundClips = document.querySelector('.sound-clips');</pre>
 
 <p>As recording progresses, we need to collect the audio data. We register an event handler to do this using {{domxref("mediaRecorder.ondataavailable")}}:</p>
 
-<pre class="brush: js notranslate">let chunks = [];
+<pre class="brush: js">let chunks = [];
 
 mediaRecorder.ondataavailable = function(e) {
   <span class="pl-smi">chunks</span>.<span class="pl-c1">push</span>(<span class="pl-smi">e</span>.<span class="pl-c1">data</span>);
@@ -176,7 +176,7 @@ mediaRecorder.ondataavailable = function(e) {
 
 <p>Lastly, we use the {{domxref("MediaRecorder.stop()")}} method to stop the recording when the stop button is pressed, and finalize the {{domxref("Blob")}} ready for use somewhere else in our application.</p>
 
-<pre class="brush: js notranslate">stop.onclick = function() {
+<pre class="brush: js">stop.onclick = function() {
   mediaRecorder.stop();
   console.log(mediaRecorder.state);
   console.log("recorder stopped");
@@ -190,7 +190,7 @@ mediaRecorder.ondataavailable = function(e) {
 
 <p>When recording has stopped, the <code>state</code> property returns a value of "inactive", and a stop event is fired. We register an event handler for this using {{domxref("mediaRecorder.onstop")}}, and finalize our blob there from all the chunks we have received:</p>
 
-<pre class="brush: js notranslate">mediaRecorder.onstop = function(e) {
+<pre class="brush: js">mediaRecorder.onstop = function(e) {
   console.log("recorder stopped");
 
   const clipName = prompt('Enter a name for your sound clip');
@@ -227,7 +227,7 @@ mediaRecorder.ondataavailable = function(e) {
 
 <p>Next, we create an HTML structure like the following, inserting it into our clip container, which is an {{htmlelement("article")}} element.</p>
 
-<pre class="brush: html notranslate">&lt;article class="clip"&gt;
+<pre class="brush: html">&lt;article class="clip"&gt;
   &lt;audio controls&gt;&lt;/audio&gt;
   &lt;p&gt;<em>your clip name</em>&lt;/p&gt;
   &lt;button&gt;Delete&lt;/button&gt;

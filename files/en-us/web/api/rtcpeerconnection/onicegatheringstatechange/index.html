@@ -2,33 +2,46 @@
 title: RTCPeerConnection.onicegatheringstatechange
 slug: Web/API/RTCPeerConnection/onicegatheringstatechange
 tags:
-  - Event Handler
-  - Experimental
-  - ICE
-  - Property
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
-  - onicegatheringstatechange
+- Event Handler
+- Experimental
+- ICE
+- Property
+- RTCPeerConnection
+- Reference
+- WebRTC
+- onicegatheringstatechange
 ---
 <p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
 
-<p>The <code><strong>RTCPeerConnection.onicegatheringstatechange</strong></code> property is an {{domxref("EventHandler")}} which specifies a function to be called when the {{event("icegatheringstatechange")}} event is sent to an {{domxref("RTCPeerConnection")}} instance. This happens when the ICE gathering state—that is, whether or not the ICE agent is actively gathering candidates—changes.</p>
+<p>The <code><strong>RTCPeerConnection.onicegatheringstatechange</strong></code> property
+  is an {{domxref("EventHandler")}} which specifies a function to be called when the
+  {{event("icegatheringstatechange")}} event is sent to an
+  {{domxref("RTCPeerConnection")}} instance. This happens when the ICE gathering
+  state—that is, whether or not the ICE agent is actively gathering candidates—changes.
+</p>
 
-<p>You don't need to watch for this event unless you have specific reasons to want to closely monitor the state of ICE gathering.</p>
+<p>You don't need to watch for this event unless you have specific reasons to want to
+  closely monitor the state of ICE gathering.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>RTCPeerConnection</em>.onicegatheringstatechange = <em>eventHandler</em>;
+<pre class="brush: js"><em>RTCPeerConnection</em>.onicegatheringstatechange = <em>eventHandler</em>;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A function you provide which is passed a single parameter: an {{domxref("Event")}} object containing the {{event("icegatheringstatechange")}} event. You can determine the new state of ICE gathering by looking at the value of the {{domxref("RTCPeerConnection.iceGatheringState")}} property.</p>
+<p>A function you provide which is passed a single parameter: an {{domxref("Event")}}
+  object containing the {{event("icegatheringstatechange")}} event. You can determine the
+  new state of ICE gathering by looking at the value of the
+  {{domxref("RTCPeerConnection.iceGatheringState")}} property.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>This example updates status information presented to the user to let them know what's happening by examining the current value of the {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} property each time it changes and changing the contents of a status display based on the new information.</p>
+<p>This example updates status information presented to the user to let them know what's
+  happening by examining the current value of the
+  {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} property each
+  time it changes and changing the contents of a status display based on the new
+  information.</p>
 
 <p>The status is presented as text in a {{HTMLElement("div")}} element:</p>
 
@@ -56,20 +69,21 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('WebRTC 1.0', '#dom-rtcpeerconnection-onicegatheringstatechange', 'RTCPeerConnection.onicegatheringstatechange') }}</td>
-   <td>{{ Spec2('WebRTC 1.0') }}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ SpecName('WebRTC 1.0', '#dom-rtcpeerconnection-onicegatheringstatechange',
+        'RTCPeerConnection.onicegatheringstatechange') }}</td>
+      <td>{{ Spec2('WebRTC 1.0') }}</td>
+      <td>Initial specification.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -79,6 +93,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{event("icegatheringstatechange")}} event and its type, {{domxref("Event")}}.</li>
- <li>{{domxref("RTCPeerConnection.iceGatheringState")}}</li>
+  <li>The {{event("icegatheringstatechange")}} event and its type, {{domxref("Event")}}.
+  </li>
+  <li>{{domxref("RTCPeerConnection.iceGatheringState")}}</li>
 </ul>

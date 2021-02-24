@@ -41,7 +41,7 @@ tags:
 
 <p>Event handlers can also be set with properties on non-element objects that generate events, like {{ domxref("window") }}, {{ domxref("document") }}, {{ domxref("XMLHttpRequest") }}, and others. For example, for the <code>progress</code> event on instances of <code>XMLHttpRequest</code>:</p>
 
-<pre class="brush: js notranslate">const xhr = new XMLHttpRequest();
+<pre class="brush: js">const xhr = new XMLHttpRequest();
 xhr.onprogress = function() { … };</pre>
 
 <h2 id="HTML_onevent_attributes">HTML onevent attributes</h2>
@@ -54,7 +54,7 @@ xhr.onprogress = function() { … };</pre>
 
 <p>Given this HTML document:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Demonstrating quirks of &lt;code&gt;on&lt;em&gt;event&lt;/em&gt;&lt;/code&gt; HTML attributes on
+<pre class="brush: html">&lt;p&gt;Demonstrating quirks of &lt;code&gt;on&lt;em&gt;event&lt;/em&gt;&lt;/code&gt; HTML attributes on
    &lt;a onclick="log('Click!')"&gt;these three words&lt;/a&gt;.
 &lt;/p&gt;
 
@@ -64,7 +64,7 @@ xhr.onprogress = function() { … };</pre>
 
 <p>Then this JavaScript demonstrates that the value of the HTML attribute is unaffected by changes to the JavaScript object's property.</p>
 
-<pre class="brush: js notranslate">let logElement = document.querySelector('div');
+<pre class="brush: js">let logElement = document.querySelector('div');
 let el = document.querySelector("a");
 
 function log(msg) { logElement.innerHTML += `${msg}&lt;br&gt;` };
@@ -159,7 +159,7 @@ log(`Now even the HTML attribute has changed: &lt;code&gt; ${el.getAttribute("on
 
 <p>You can detect the presence of an event handler property with the JavaScript {{jsxref("Operators/in", "in")}} operator. For example:</p>
 
-<pre class="brush: js notranslate">if ("onsomenewfeature" in window) {
+<pre class="brush: js">if ("onsomenewfeature" in window) {
   /* do something amazing */
 }
 </pre>

@@ -28,21 +28,21 @@ tags:
 
 <p>For example, the following code defines a simple function named <code>square</code>:</p>
 
-<pre class="brush: js notranslate">function square(number) {
+<pre class="brush: js">function square(number) {
   return number * number;
 }
 </pre>
 
 <p>The function <code>square</code> takes one parameter, called <code>number</code>. The function consists of one statement that says to return the parameter of the function (that is, <code>number</code>) multiplied by itself. The statement <a href="/en-US/docs/Web/JavaScript/Reference/Statements/return"><code>return</code></a> specifies the value returned by the function:</p>
 
-<pre class="brush: js notranslate">return number * number;
+<pre class="brush: js">return number * number;
 </pre>
 
 <p>Primitive parameters (such as a number) are passed to functions <strong>by value</strong>; the value is passed to the function, but if the function changes the value of the parameter, <strong>this change is not reflected globally or in the calling function</strong>.</p>
 
 <p>If you pass an object (i.e. a non-primitive value, such as {{jsxref("Array")}} or a user-defined object) as a parameter and the function changes the object's properties, that change is visible outside the function, as shown in the following example:</p>
 
-<pre class="brush: js notranslate">function myFunc(theObject) {
+<pre class="brush: js">function myFunc(theObject) {
   theObject.make = 'Toyota';
 }
 
@@ -62,19 +62,19 @@ y = mycar.make; // y gets the value "Toyota"
 
 <p>Such a function can be <strong>anonymous</strong>; it does not have to have a name. For example, the function <code>square</code> could have been defined as:</p>
 
-<pre class="brush: js notranslate">const square = function(number) { return number * number }
+<pre class="brush: js">const square = function(number) { return number * number }
 var x = square(4) // x gets the value 16</pre>
 
 <p>However, a name <em>can</em> be provided with a function expression. Providing a name allows the function to refer to itself, and also makes it easier to identify the function in a debugger's stack traces:</p>
 
-<pre class="brush: js notranslate">const factorial = function fac(n) { return n &lt; 2 ? 1 : n * fac(n - 1) }
+<pre class="brush: js">const factorial = function fac(n) { return n &lt; 2 ? 1 : n * fac(n - 1) }
 
 console.log(factorial(3))
 </pre>
 
 <p>Function expressions are convenient when passing a function as an argument to another function. The following example shows a <code>map</code> function that should receive a function as first argument and an array as second argument. </p>
 
-<pre class="brush: js notranslate">function map(f, a) {
+<pre class="brush: js">function map(f, a) {
   let result = []; // Create a new Array
   let i; // Declare variable
   for (i = 0; i != a.length; i++)
@@ -85,7 +85,7 @@ console.log(factorial(3))
 
 <p>In the following code, the function receives a function defined by a function expression and executes it for every element of the array received as a second argument. </p>
 
-<pre class="brush: js notranslate">function map(f, a) {
+<pre class="brush: js">function map(f, a) {
   let result = []; // Create a new Array
   let i; // Declare variable
   for (i = 0; i != a.length; i++)
@@ -103,7 +103,7 @@ console.log(cube);</pre>
 
 <p>In JavaScript, a function can be defined based on a condition. For example, the following function definition defines <code>myFunc</code> only if <code>num</code> equals <code>0</code>:</p>
 
-<pre class="brush: js notranslate">var myFunc;
+<pre class="brush: js">var myFunc;
 if (num === 0) {
   myFunc = function(theObject) {
     theObject.make = 'Toyota';
@@ -112,7 +112,7 @@ if (num === 0) {
 
 <p>In addition to defining functions as described here, you can also use the {{jsxref("Function")}} constructor to create functions from a string at runtime, much like {{jsxref("eval", "eval()")}}.</p>
 
-<p>A <strong>method</strong> is a function that is a property of an object. Read more about objects and methods in <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects" title="en-US/docs/JavaScript/Guide/Working with Objects">Working with objects</a>.</p>
+<p>A <strong>method</strong> is a function that is a property of an object. Read more about objects and methods in <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects">Working with objects</a>.</p>
 
 <h2 id="Calling_functions">Calling functions</h2>
 
@@ -120,14 +120,14 @@ if (num === 0) {
 
 <p><strong>Calling</strong> the function actually performs the specified actions with the indicated parameters. For example, if you define the function <code>square</code>, you could call it as follows:</p>
 
-<pre class="brush: js notranslate">square(5);
+<pre class="brush: js">square(5);
 </pre>
 
 <p>The preceding statement calls the function with an argument of <code>5</code>. The function executes its statements and returns the value <code>25</code>.</p>
 
 <p>Functions must be <em>in scope</em> when they are called, but the function declaration can be hoisted (appear below the call in the code), as in this example:</p>
 
-<pre class="brush: js notranslate">console.log(square(5));
+<pre class="brush: js">console.log(square(5));
 /* ... */
 function square(n) { return n * n }
 </pre>
@@ -139,7 +139,7 @@ function square(n) { return n * n }
 
 <p>This means that function hoisting only works with function <em>declarations</em>—not with function <em>expressions</em>.</p>
 
-<pre class="brush: js example-bad notranslate">console.log(square)    // square is hoisted with an initial value undefined.
+<pre class="brush: js example-bad">console.log(square)    // square is hoisted with an initial value undefined.
 console.log(square(5)) // Uncaught TypeError: square is not a function
 const square = function(n) {
   return n * n;
@@ -151,7 +151,7 @@ const square = function(n) {
 
 <p>A function can call itself. For example, here is a function that computes factorials recursively:</p>
 
-<pre class="brush: js notranslate">function factorial(n) {
+<pre class="brush: js">function factorial(n) {
   if ((n === 0) || (n === 1))
     return 1;
   else
@@ -161,7 +161,7 @@ const square = function(n) {
 
 <p>You could then compute the factorials of <code>1</code> through <code>5</code> as follows:</p>
 
-<pre class="brush: js notranslate">var a, b, c, d, e;
+<pre class="brush: js">var a, b, c, d, e;
 a = factorial(1); // a gets the value 1
 b = factorial(2); // b gets the value 2
 c = factorial(3); // c gets the value 6
@@ -179,7 +179,7 @@ e = factorial(5); // e gets the value 120
 
 <p>In other words, a function defined in the global scope can access all variables defined in the global scope. A function defined inside another function can also access all variables defined in its parent function, and any other variables to which the parent function has access.</p>
 
-<pre class="brush: js notranslate">// The following variables are defined in the global scope
+<pre class="brush: js">// The following variables are defined in the global scope
 var num1 = 20,
     num2 = 3,
     name = 'Chamahk';
@@ -220,7 +220,7 @@ getScore(); // Returns "Chamahk scored 5"
 
 <p>For example, consider the following function definition:</p>
 
-<pre class="brush: js notranslate">var foo = function bar() {
+<pre class="brush: js">var foo = function bar() {
    // statements go here
 }
 </pre>
@@ -237,7 +237,7 @@ getScore(); // Returns "Chamahk scored 5"
 
 <p>For example, the following loop...</p>
 
-<pre class="brush: js notranslate">var x = 0;
+<pre class="brush: js">var x = 0;
 while (x &lt; 10) { // "x &lt; 10" is the loop condition
    // do stuff
    x++;
@@ -246,7 +246,7 @@ while (x &lt; 10) { // "x &lt; 10" is the loop condition
 
 <p>...can be converted into a recursive function declaration, followed by a call to that function:</p>
 
-<pre class="brush: js notranslate">function loop(x) {
+<pre class="brush: js">function loop(x) {
   if (x &gt;= 10) // "x &gt;= 10" is the exit condition (equivalent to "!(x &lt; 10)")
     return;
   // do stuff
@@ -257,7 +257,7 @@ loop(0);
 
 <p>However, some algorithms cannot be simple iterative loops. For example, getting all the nodes of a tree structure (such as the <a href="/en-US/docs/DOM">DOM</a>) is easier via recursion:</p>
 
-<pre class="brush: js notranslate">function walkTree(node) {
+<pre class="brush: js">function walkTree(node) {
   if (node == null) //
     return;
   // do something with node
@@ -273,7 +273,7 @@ loop(0);
 
 <p>In fact, recursion itself uses a stack: the function stack. The stack-like behavior can be seen in the following example:</p>
 
-<pre class="brush: js notranslate">function foo(i) {
+<pre class="brush: js">function foo(i) {
   if (i &lt; 0)
     return;
   console.log('begin: ' + i);
@@ -313,7 +313,7 @@ foo(3);
 
 <p>The following example shows nested functions:</p>
 
-<pre class="brush: js notranslate">function addSquares(a, b) {
+<pre class="brush: js">function addSquares(a, b) {
   function square(x) {
     return x * x;
   }
@@ -326,7 +326,7 @@ c = addSquares(4, 5); // returns 41
 
 <p>Since the inner function forms a closure, you can call the outer function and specify arguments for both the outer and inner function:</p>
 
-<pre class="brush: js notranslate">function outside(x) {
+<pre class="brush: js">function outside(x) {
   function inside(y) {
     return x + y;
   }
@@ -359,7 +359,7 @@ result1 = outside(3)(5); // returns 8
 
 <p>Consider the following example:</p>
 
-<pre class="brush: js notranslate">function A(x) {
+<pre class="brush: js">function A(x) {
   function B(y) {
     function C(z) {
       console.log(x + y + z);
@@ -387,7 +387,7 @@ A(1); // logs 6 (1 + 2 + 3)
 
 <p>When two arguments or variables in the scopes of a closure have the same name, there is a <em>name conflict</em>. More nested scopes take precedence. So, the inner-most scope takes the highest precedence, while the outer-most scope takes the lowest. This is the scope chain. The first on the chain is the inner-most scope, and the last is the outer-most scope. Consider the following:</p>
 
-<pre class="brush: js notranslate">function outside() {
+<pre class="brush: js">function outside() {
   var x = 5;
   function inside(x) {
     return x * 2;
@@ -408,7 +408,7 @@ outside()(10); // returns 20 instead of 10
 
 <p>Also, since the inner function has access to the scope of the outer function, the variables and functions defined in the outer function will live longer than the duration of the outer function execution, if the inner function manages to survive beyond the life of the outer function. A closure is created when the inner function is somehow made available to any scope outside the outer function.</p>
 
-<pre class="brush: js notranslate">var pet = function(name) {   // The outer function defines a variable called "name"
+<pre class="brush: js">var pet = function(name) {   // The outer function defines a variable called "name"
   var getName = function() {
     return name;             // The inner function has access to the "name" variable of the outer
                              //function
@@ -422,7 +422,7 @@ myPet();                     // Returns "Vivie"
 
 <p>It can be much more complex than the code above. An object containing methods for manipulating the inner variables of the outer function can be returned.</p>
 
-<pre class="brush: js notranslate">var createPet = function(name) {
+<pre class="brush: js">var createPet = function(name) {
   var sex;
 
   return {
@@ -458,7 +458,7 @@ pet.getName();                  // Oliver
 
 <p>In the code above, the <code>name</code> variable of the outer function is accessible to the inner functions, and there is no other way to access the inner variables except through the inner functions. The inner variables of the inner functions act as safe stores for the outer arguments and variables. They hold "persistent" and "encapsulated" data for the inner functions to work with. The functions do not even have to be assigned to a variable, or have a name.</p>
 
-<pre class="brush: js notranslate">var getCode = (function() {
+<pre class="brush: js">var getCode = (function() {
   var apiCode = '0]Eal(eh&amp;2';    // A code we do not want outsiders to be able to modify...
 
   return function() {
@@ -474,7 +474,7 @@ getCode();    // Returns the apiCode
 
 <p>If an enclosed function defines a variable with the same name as a variable in the outer scope, then there is no way to refer to the variable in the outer scope again.  (The inner scope variable "overrides" the outer one, until the program exits the inner scope.)</p>
 
-<pre class="example-bad brush: js notranslate">var createPet = function(name) {  // The outer function defines a variable called "name".
+<pre class="example-bad brush: js">var createPet = function(name) {  // The outer function defines a variable called "name".
   return {
     setName: function(name) {    // The enclosed function also defines a variable called "name".
       name = name;               // How do we access the "name" defined by the outer function?
@@ -488,7 +488,7 @@ getCode();    // Returns the apiCode
 
 <p>The arguments of a function are maintained in an array-like object. Within a function, you can address the arguments passed to it as follows:</p>
 
-<pre class="brush: js notranslate">arguments[i]
+<pre class="brush: js">arguments[i]
 </pre>
 
 <p>where <code>i</code> is the ordinal number of the argument, starting at <code>0</code>. So, the first argument passed to a function would be <code>arguments[0]</code>. The total number of arguments is indicated by <code>arguments.length</code>.</p>
@@ -497,7 +497,7 @@ getCode();    // Returns the apiCode
 
 <p>For example, consider a function that concatenates several strings. The only formal argument for the function is a string that specifies the characters that separate the items to concatenate. The function is defined as follows:</p>
 
-<pre class="brush: js notranslate">function myConcat(separator) {
+<pre class="brush: js">function myConcat(separator) {
    var result = ''; // initialize list
    var i;
    // iterate through arguments
@@ -510,7 +510,7 @@ getCode();    // Returns the apiCode
 
 <p>You can pass any number of arguments to this function, and it concatenates each argument into a string "list":</p>
 
-<pre class="brush: js notranslate">// returns "red, orange, blue, "
+<pre class="brush: js">// returns "red, orange, blue, "
 myConcat(', ', 'red', 'orange', 'blue');
 
 // returns "elephant; giraffe; lion; cheetah; "
@@ -540,7 +540,7 @@ myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');
 
 <p>In the following example, if no value is provided for <code>b</code>, its value would be <code>undefined</code> when evaluating <code>a*b</code>, and a call to <code>multiply</code> would normally have returned <code>NaN</code>. However, this is prevented by the second line in this example:</p>
 
-<pre class="brush: js notranslate">function multiply(a, b) {
+<pre class="brush: js">function multiply(a, b) {
   b = typeof b !== 'undefined' ?  b : 1;
 
   return a * b;
@@ -553,7 +553,7 @@ multiply(5); // 5
 
 <p>With <em>default parameters</em>, a manual check in the function body is no longer necessary. You can put <code>1</code> as the default value for <code>b</code> in the function head:</p>
 
-<pre class="brush: js notranslate">function multiply(a, b = 1) {
+<pre class="brush: js">function multiply(a, b = 1) {
   return a * b;
 }
 
@@ -567,7 +567,7 @@ multiply(5); // 5</pre>
 
 <p>In the following example, the function <code>multiply</code> uses <em>rest parameters</em> to collect arguments from the second one to the end. The function then multiplies these by the first argument . </p>
 
-<pre class="brush: js notranslate">function multiply(multiplier, ...theArgs) {
+<pre class="brush: js">function multiply(multiplier, ...theArgs) {
   return theArgs.map(x =&gt; multiplier * x);
 }
 
@@ -584,7 +584,7 @@ console.log(arr); // [2, 4, 6]</pre>
 
 <p>In some functional patterns, shorter functions are welcome. Compare:</p>
 
-<pre class="brush: js notranslate">var a = [
+<pre class="brush: js">var a = [
   'Hydrogen',
   'Helium',
   'Lithium',
@@ -604,7 +604,7 @@ console.log(a3); // logs [8, 6, 7, 9]
 
 <p>Until arrow functions, every new function defined its own <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code> value (a new object in the case of a constructor, undefined in <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> function calls, the base object if the function is called as an "object method", etc.). This proved to be less than ideal with an object-oriented style of programming.</p>
 
-<pre class="brush: js notranslate">function Person() {
+<pre class="brush: js">function Person() {
   // The Person() constructor defines `this` as itself.
   this.age = 0;
 
@@ -620,7 +620,7 @@ var p = new Person();</pre>
 
 <p>In ECMAScript 3/5, this issue was fixed by assigning the value in <code>this</code> to a variable that could be closed over.</p>
 
-<pre class="brush: js notranslate">function Person() {
+<pre class="brush: js">function Person() {
   var self = this; // Some choose `that` instead of `self`.
                    // Choose one and be consistent.
   self.age = 0;
@@ -636,7 +636,7 @@ var p = new Person();</pre>
 
 <p>An arrow function does not have its own <code>this;</code> the <code>this</code> value of the enclosing execution context is used. Thus, in the following code, the <code>this</code> within the function that is passed to <code>setInterval</code> has the same value as <code>this</code> in the enclosing function:</p>
 
-<pre class="brush: js notranslate">function Person() {
+<pre class="brush: js">function Person() {
   this.age = 0;
 
   setInterval(() =&gt; {

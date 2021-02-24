@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush: css no-line-numbers">/* Keyword values */
 system: cyclic;
 system: numeric;
 system: alphabetic;
@@ -40,7 +40,7 @@ system: extends decimal;
 
 <dl>
  <dt>
- <div class="syntaxbox"><code>cyclic</code></div>
+ <div class="brush: css"><code>cyclic</code></div>
  </dt>
  <dd>Cycles through the list of symbols provided. Once the end of the list of symbols is reached, it will loop back to the beginning and start over. This system is useful for simple bullet styles with just one symbol, or for styles having multiple symbols. At least one symbol must be specified in the <code>symbols</code> descriptor, or the counter style is not valid.</dd>
  <dt><code>fixed</code></dt>
@@ -62,7 +62,7 @@ system: extends decimal;
  <dt><code>extends</code></dt>
  <dd>Allows authors to use the algorithm of another counter style, but alter its other aspects. If a counter style rule is using the <code>extends</code> system, any unspecified descriptors, and their values will be taken from the extended counter style specified. If the specified counter style name in extends, is not a currently defined counter style name, it will instead extend from the decimal counter style.<br>
  <br>
- It must not contain a <code>symbols</code> or <code>additive-symbols</code> descriptor, or else the counter style rule is invalid. If one or more counter styles defenitions form a cycle with their extends values, the browser will treat all the participating counter styles as extending from the decimal style.</dd>
+ It must not contain a <code>symbols</code> or <code>additive-symbols</code> descriptor, or else the counter style rule is invalid. If one or more counter styles definitions form a cycle with their extends values, the browser will treat all the participating counter styles as extending from the decimal style.</dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -71,7 +71,7 @@ system: extends decimal;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -85,7 +85,7 @@ system: extends decimal;
 <h4 id="CSS">CSS</h4>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;ul&gt;
+<pre class="brush: html">&lt;ul&gt;
   &lt;li&gt;One&lt;/li&gt;
   &lt;li&gt;Two&lt;/li&gt;
   &lt;li&gt;Three&lt;/li&gt;
@@ -93,7 +93,7 @@ system: extends decimal;
 </pre>
 </div>
 
-<pre class="brush: css notranslate">@counter-style fisheye {
+<pre class="brush: css">@counter-style fisheye {
  system: cyclic;
  symbols: ◉;
  suffix: " ";
@@ -120,7 +120,7 @@ ul {
 <h4 id="CSS_2">CSS</h4>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;ul&gt;
+<pre class="brush: html">&lt;ul&gt;
  &lt;li&gt;One&lt;/li&gt;
  &lt;li&gt;Two&lt;/li&gt;
  &lt;li&gt;Three&lt;/li&gt;
@@ -129,7 +129,7 @@ ul {
 &lt;/ul&gt;</pre>
 </div>
 
-<pre class="brush: css notranslate">@counter-style circled-digits {
+<pre class="brush: css">@counter-style circled-digits {
  system: fixed;
  symbols: ➀ ➁ ➂;
  suffix: ' ';
@@ -159,7 +159,7 @@ ul {
 <h4 id="CSS_3">CSS</h4>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;ul&gt;
+<pre class="brush: html">&lt;ul&gt;
  &lt;li&gt;One&lt;/li&gt;
  &lt;li&gt;Two&lt;/li&gt;
  &lt;li&gt;Three&lt;/li&gt;
@@ -171,7 +171,7 @@ ul {
 &lt;/ul&gt;</pre>
 </div>
 
-<pre class="brush: css notranslate">@counter-style abc {
+<pre class="brush: css">@counter-style abc {
  system: symbolic;
  symbols: a b c;
  suffix: ". ";
@@ -201,7 +201,7 @@ ul {
 <h4 id="CSS_4">CSS</h4>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;ul&gt;
+<pre class="brush: html">&lt;ul&gt;
  &lt;li&gt;One&lt;/li&gt;
  &lt;li&gt;Two&lt;/li&gt;
  &lt;li&gt;Three&lt;/li&gt;
@@ -214,7 +214,7 @@ ul {
 </pre>
 </div>
 
-<pre class="brush: css notranslate">@counter-style abc {
+<pre class="brush: css">@counter-style abc {
  system: alphabetic;
  symbols: a b c;
  suffix: ". ";
@@ -248,7 +248,7 @@ ul {
   </h4>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;ul&gt;
+<pre class="brush: html">&lt;ul&gt;
  &lt;li&gt;One&lt;/li&gt;
  &lt;li&gt;Two&lt;/li&gt;
  &lt;li&gt;Three&lt;/li&gt;
@@ -260,7 +260,7 @@ ul {
 &lt;/ul&gt;</pre>
 </div>
 
-<pre class="brush: css notranslate">@counter-style abc {
+<pre class="brush: css">@counter-style abc {
  system: numeric;
  symbols: a b c;
  suffix: ". ";
@@ -281,7 +281,7 @@ ul {
 <h4 id="CSS_6">CSS</h4>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;ul class="list"&gt;
+<pre class="brush: html">&lt;ul class="list"&gt;
  &lt;li&gt;One&lt;/li&gt;
  &lt;li&gt;Two&lt;/li&gt;
  &lt;li&gt;Three&lt;/li&gt;
@@ -295,7 +295,7 @@ ul {
 &lt;/ul&gt;</pre>
 </div>
 
-<pre class="brush: css notranslate">@counter-style numbers {
+<pre class="brush: css">@counter-style numbers {
  system: numeric;
  symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
  suffix: ".";
@@ -315,7 +315,7 @@ ul {
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;ul class="list"&gt;
+<pre class="brush: html">&lt;ul class="list"&gt;
  &lt;li&gt;One&lt;/li&gt;
  &lt;li&gt;Two&lt;/li&gt;
  &lt;li&gt;Three&lt;/li&gt;
@@ -326,7 +326,7 @@ ul {
 
 <h4 id="CSS_7">CSS</h4>
 
-<pre class="brush: css notranslate">@counter-style upper-roman {
+<pre class="brush: css">@counter-style upper-roman {
  system: additive;
  range: 1 3999;
  additive-symbols: 1000 M, 900 CM, 500 D, 400 CD, 100 C, 90 XC, 50 L, 40 XL, 10 X, 9 IX, 5 V, 4 IV, 1 I;
@@ -342,11 +342,11 @@ ul {
 
 <h3 id="Extends_example">Extends example</h3>
 
-<p>This example will use the algorithm, symbols, and other properties of the <code>lower-alpha</code> counter style, but will remove the period (<code>'.'</code>) after the counter representation, and enclose the characters in paranthesis; like <code>(a)</code>, <code>(b)</code>, etc.</p>
+<p>This example will use the algorithm, symbols, and other properties of the <code>lower-alpha</code> counter style, but will remove the period (<code>'.'</code>) after the counter representation, and enclose the characters in parenthesis; like <code>(a)</code>, <code>(b)</code>, etc.</p>
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;ul class="list"&gt;
+<pre class="brush: html">&lt;ul class="list"&gt;
  &lt;li&gt;One&lt;/li&gt;
  &lt;li&gt;Two&lt;/li&gt;
  &lt;li&gt;Three&lt;/li&gt;
@@ -357,7 +357,7 @@ ul {
 
 <h4 id="CSS_8">CSS</h4>
 
-<pre class="brush: css notranslate">@counter-style alpha-modified {
+<pre class="brush: css">@counter-style alpha-modified {
  system: extends lower-alpha;
  prefix: "(";
  suffix: ") ";

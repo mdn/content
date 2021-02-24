@@ -4,11 +4,14 @@ slug: Web/API/HTMLIFrameElement/src
 ---
 <div>{{APIRef}}</div>
 
-<p>The <code><strong>HTMLIFrameElement</strong></code><strong><code>.src</code></strong> property reflects the HTML {{htmlattrxref("referrerpolicy","src")}} attribute of the {{HTMLElement("iframe")}} element defining which referrer is sent when fetching the resource.</p>
+<p>The <code><strong>HTMLIFrameElement</strong></code><strong><code>.src</code></strong>
+    property reflects the HTML {{htmlattrxref("referrerpolicy","src")}} attribute of the
+    {{HTMLElement("iframe")}} element defining which referrer is sent when fetching the
+    resource.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>refStr</var> = <var>iframeElt</var>.src;
+<pre class="brush: js"><var>refStr</var> = <var>iframeElt</var>.src;
 <var>iframeElt</var>.src= <var>refStr</var>;
 </pre>
 
@@ -23,20 +26,21 @@ body.appendChild(iframe); // Fetch the image using the complete URL as the refer
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "#dom-iframe-src", "HTMLIFrameElement: src")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td></td>
-  </tr>
- </tbody>
+    <thead>
+        <tr>
+            <th scope="col">Specification</th>
+            <th scope="col">Status</th>
+            <th scope="col">Comment</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{SpecName("HTML WHATWG", "#dom-iframe-src", "HTMLIFrameElement: src")}}
+            </td>
+            <td>{{Spec2("HTML WHATWG")}}</td>
+            <td></td>
+        </tr>
+    </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -46,7 +50,7 @@ body.appendChild(iframe); // Fetch the image using the complete URL as the refer
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{DOMxRef("HTMLAnchorElement.src")}}</li>
- <li>{{DOMxRef("HTMLAreaElement.src")}}</li>
- <li>{{DOMxRef("HTMLAreaElement.src")}}.</li>
+    <li>{{DOMxRef("HTMLAnchorElement.src")}}</li>
+    <li>{{DOMxRef("HTMLAreaElement.src")}}</li>
+    <li>{{DOMxRef("HTMLAreaElement.src")}}.</li>
 </ul>

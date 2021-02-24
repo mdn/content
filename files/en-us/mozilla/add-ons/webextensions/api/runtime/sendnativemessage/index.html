@@ -26,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var sending = browser.runtime.sendNativeMessage(
+<pre class="brush:js">var sending = browser.runtime.sendNativeMessage(
   application,             // string
   message                  // object
 )
@@ -36,7 +36,7 @@ tags:
 
 <dl>
  <dt><code>application</code></dt>
- <dd><code>string</code>. The name of the native application. This must match the "name" property in the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Native_messaging#App_manifest">native application's manifest file</a>.</dd>
+ <dd><code>string</code>. The name of the native application. This must match the "name" property in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging#app_manifest">native application's manifest file</a>.</dd>
  <dt><code>message</code></dt>
  <dd><code>object</code>. A JSON object that will be sent to the native application.</dd>
 </dl>

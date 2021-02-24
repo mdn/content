@@ -4,17 +4,17 @@ slug: Web/API/FileReader/onerror
 ---
 <p>The <a href="/en-US/docs/Web/API/FileReader">FileReader</a> onerror handler receives an Event object, not an Error object, as a parameter, but an error can be accessed from the FileReader object, as <code><a href="/en-US/docs/Web/API/FileReader/error">instanceOfFileReader.error</a></code></p>
 
-<pre class="brush:js; line-numbers  language-js notranslate"><code class="language-js"><span class="comment token">// Callback from a &lt;input type="file" onchange="onChange(event)"&gt;</span>
-<span class="keyword token">function</span> <span class="function token">onChange</span><span class="punctuation token">(</span>event<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> file <span class="operator token">=</span> event<span class="punctuation token">.</span>target<span class="punctuation token">.</span>files<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
-  <span class="keyword token">var</span> reader <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">FileReader</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  reader<span class="punctuation token">.onerror </span><span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>event<span class="punctuation token">)</span> <span class="punctuation token">{
-    alert("Failed to read file!\n\n" + reader.error);</span>
-    <span class="punctuation token">reader.abort(); // (...does this do anything useful in an onerror handler?)</span>
-  <span class="punctuation token">}</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers language-js">// Callback from a &lt;input type="file" onchange="onChange(event)"&gt;
+function onChange(event) {
+  var file = event.target.files[0];
+  var reader = new FileReader();
+  reader.onerror = function(event) {
+    alert("Failed to read file!\n\n" + reader.error);
+    reader.abort(); // (...does this do anything useful in an onerror handler?)
+  };
 
-  reader<span class="punctuation token">.</span><span class="function token">readAsText</span><span class="punctuation token">(</span>file<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code>
+  reader.readAsText(file);
+}
 </pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

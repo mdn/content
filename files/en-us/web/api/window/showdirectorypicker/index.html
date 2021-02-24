@@ -2,20 +2,24 @@
 title: Window.showDirectoryPicker()
 slug: Web/API/Window/showDirectoryPicker
 tags:
-  - Directory
-  - File
-  - File System Access API
-  - Method
-  - Window
-  - working with files
+- Directory
+- File
+- File System Access API
+- Method
+- Window
+- working with files
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}</div>
+<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+</div>
 
-<p class="summary">The <strong><code>showDirectoryPicker()</code></strong> method of the {{domxref("Window")}} interface displays a directory picker which allows the user to select a directory.</p>
+<p class="summary">The <strong><code>showDirectoryPicker()</code></strong> method of the
+  {{domxref("Window")}} interface displays a directory picker which allows the user to
+  select a directory.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>FileSystemDirectoryHandle</var> = Window.showDirectoryPicker();</pre>
+<pre
+  class="brush: js">var <var>FileSystemDirectoryHandle</var> = Window.showDirectoryPicker();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -28,15 +32,17 @@ tags:
 <h3 id="Exceptions">Exceptions</h3>
 
 <dl>
- <dt><code>AbortError</code></dt>
- <dd>Thrown if the user dismisses the prompt without making a selection, or if the user agent deems the selected content to be too sensitive or dangerous</dd>
+  <dt><code>AbortError</code></dt>
+  <dd>Thrown if the user dismisses the prompt without making a selection, or if the user
+    agent deems the selected content to be too sensitive or dangerous</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>This asynchronous function shows a directory picker and returns a {{domxref('FileSystemDirectoryHandle')}} once selected.</p>
+<p>This asynchronous function shows a directory picker and returns a
+  {{domxref('FileSystemDirectoryHandle')}} once selected.</p>
 
-<pre class="brush: js notranslate">async function getDir() {
+<pre class="brush: js">async function getDir() {
   const dirHandle = await window.showDirectoryPicker();
 
   // run code for dirHandle
@@ -46,18 +52,19 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File System Access','#api-showdirectorypicker','showDirectoryPicker')}}</td>
-   <td>{{Spec2('File System Access')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('File System
+        Access','#api-showdirectorypicker','showDirectoryPicker')}}</td>
+      <td>{{Spec2('File System Access')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -67,6 +74,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/docs/Web/API/File_System_Access_API">File System Access API</a></li>
- <li><a href="https://web.dev/file-system-access/">The File System Access API: simplifying access to local files</a></li>
+  <li><a href="/docs/Web/API/File_System_Access_API">File System Access API</a></li>
+  <li><a href="https://web.dev/file-system-access/">The File System Access API:
+      simplifying access to local files</a></li>
 </ul>

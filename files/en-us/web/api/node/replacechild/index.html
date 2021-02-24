@@ -2,39 +2,44 @@
 title: Node.replaceChild()
 slug: Web/API/Node/replaceChild
 tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Reference
+- API
+- DOM
+- Method
+- Node
+- Reference
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <strong><code>Node.replaceChild()</code></strong> method replaces a child node within the given (parent) node.</p>
+<p>The <strong><code>Node.replaceChild()</code></strong> method replaces a child node
+	within the given (parent) node.</p>
 
-<p>Note the idiosyncratic argument order (new before old). <code><a href="/en-US/docs/Web/API/ChildNode/replaceWith">ChildNode.replaceWith()</a></code> may be easier to read and use.</p>
+<p>Note the idiosyncratic argument order (new before old).
+	<code><a href="/en-US/docs/Web/API/ChildNode/replaceWith">ChildNode.replaceWith()</a></code>
+	may be easier to read and use.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><em>let oldChild = parentNode</em>.replaceChild(<em>newChild</em>, <em>oldChild</em>);
+<pre class="brush: js"><em>let oldChild = parentNode</em>.replaceChild(<em>newChild</em>, <em>oldChild</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
 	<dt><strong>newChild</strong></dt>
-	<dd>The new node to replace <code>oldChild</code>. If it already exists in the DOM, it is first removed.</dd>
+	<dd>The new node to replace <code>oldChild</code>. If it already exists in the DOM, it
+		is first removed.</dd>
 	<dt><strong>oldChild</strong></dt>
 	<dd>The child to be replaced.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>The returned value is the replaced node. This is the same node as <code>oldChild</code>.</p>
+<p>The returned value is the replaced node. This is the same node as
+	<code>oldChild</code>.</p>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush:js notranslate">// Given:
+<pre class="brush:js">// Given:
 // &lt;div&gt;
 //  &lt;span id="childSpan"&gt;foo bar&lt;/span&gt;
 // &lt;/div&gt;
@@ -77,7 +82,8 @@ parentDiv.replaceChild(sp1, sp2);
 	</thead>
 	<tbody>
 		<tr>
-			<td>{{SpecName("DOM WHATWG", "#dom-node-replacechild", "Node: replaceChild")}}</td>
+			<td>{{SpecName("DOM WHATWG", "#dom-node-replacechild", "Node: replaceChild")}}
+			</td>
 			<td>{{Spec2("DOM WHATWG")}}</td>
 			<td></td>
 		</tr>

@@ -2,42 +2,48 @@
 title: CustomEvent()
 slug: Web/API/CustomEvent/CustomEvent
 tags:
-  - API
-  - Constructor
-  - CustomEvent
-  - Reference
-  - events
+- API
+- Constructor
+- CustomEvent
+- Reference
+- events
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p>The <code><strong>CustomEvent()</strong></code> constructor creates a new {{domxref("CustomEvent")}}.</p>
+<p>The <code><strong>CustomEvent()</strong></code> constructor creates a new
+  {{domxref("CustomEvent")}}.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"> <var>event</var> = new CustomEvent(<var>typeArg</var>, <var>customEventInit</var>);</pre>
+<pre
+  class="brush: js"> <var>event</var> = new CustomEvent(<var>typeArg</var>, <var>customEventInit</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>typeArg</code></dt>
- <dd>A {{domxref("DOMString")}} representing the name of the event.</dd>
- <dt><code>customEventInit</code> {{optional_inline}}</dt>
- <dd>A <code>CustomEventInit</code> dictionary, having the following fields:
- <ul>
-  <li><code>"detail"</code>, optional and defaulting to <code>null</code>, of type any, that is an event-dependent value associated with the event.</li>
- </ul>
+  <dt><code>typeArg</code></dt>
+  <dd>A {{domxref("DOMString")}} representing the name of the event.</dd>
+  <dt><code>customEventInit</code> {{optional_inline}}</dt>
+  <dd>A <code>CustomEventInit</code> dictionary, having the following fields:
+    <ul>
+      <li><code>"detail"</code>, optional and defaulting to <code>null</code>, of type
+        any, that is an event-dependent value associated with the event.</li>
+    </ul>
 
- <div class="note">
- <p><var>The <code>CustomEventInit</code></var><var> dictionary also accepts fields from the {{domxref("Event.Event", "EventInit")}} dictionary.</var></p>
- </div>
- </dd>
+    <div class="note">
+      <p><var>The <code>CustomEventInit</code></var><var> dictionary also accepts fields
+          from the {{domxref("Event.Event", "EventInit")}} dictionary.</var></p>
+    </div>
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A new <code>CustomEvent</code> object of the specified type, with any other properties configured according to the <code>CustomEventInit</code> dictionary (if one was provided).</p>
+<p>A new <code>CustomEvent</code> object of the specified type, with any other properties
+  configured according to the <code>CustomEventInit</code> dictionary (if one was
+  provided).</p>
 
 <h2 id="Example">Example</h2>
 
@@ -52,25 +58,27 @@ var event = new CustomEvent("cat", {
 });
 obj.dispatchEvent(event);</pre>
 
-<p>Additional examples can be found at <a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and triggering events</a>.</p>
+<p>Additional examples can be found at <a
+    href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and
+    triggering events</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table" style="height: 49px; width: 1000px;">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-customevent-customevent','CustomEvent()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM WHATWG','#dom-customevent-customevent','CustomEvent()')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -79,7 +87,8 @@ obj.dispatchEvent(event);</pre>
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>You can polyfill the <code>CustomEvent()</code> constructor functionality in Internet Explorer 9 and higher with the following code:</p>
+<p>You can polyfill the <code>CustomEvent()</code> constructor functionality in Internet
+  Explorer 9 and higher with the following code:</p>
 
 <pre class="brush: js">(function () {
 
@@ -95,11 +104,13 @@ obj.dispatchEvent(event);</pre>
   window.CustomEvent = CustomEvent;
 })();</pre>
 
-<p>Internet Explorer &gt;= 9 adds a CustomEvent object to the window, but with correct implementations, this is a function.</p>
+<p>Internet Explorer &gt;= 9 adds a CustomEvent object to the window, but with correct
+  implementations, this is a function.</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("CustomEvent")}}</li>
- <li><a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and triggering events</a></li>
+  <li>{{domxref("CustomEvent")}}</li>
+  <li><a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and
+      triggering events</a></li>
 </ul>

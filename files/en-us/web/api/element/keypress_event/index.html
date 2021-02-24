@@ -43,13 +43,13 @@ tags:
 
 <p>This example logs the {{domxref("KeyboardEvent.code")}} value whenever you press a key after focussing the {{htmlelement("input")}} element.</p>
 
-<pre class="brush: html notranslate">&lt;div&gt;
+<pre class="brush: html">&lt;div&gt;
   &lt;label for="sample"&gt;Focus the input and type something:&lt;/label&gt;
   &lt;input type="text" name="text" id="sample"&gt;
 &lt;/div&gt;
 &lt;p id="log"&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: js notranslate">const log = document.getElementById('log');
+<pre class="brush: js">const log = document.getElementById('log');
 const input = document.querySelector('input');
 
 input.addEventListener('keypress', logKey);
@@ -62,7 +62,7 @@ function logKey(e) {
 
 <h3 id="onkeypress_equivalent">onkeypress equivalent</h3>
 
-<pre class="brush: js notranslate">input.onkeypress = logKey;</pre>
+<pre class="brush: js">input.onkeypress = logKey;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

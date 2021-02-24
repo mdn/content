@@ -16,13 +16,13 @@ tags:
 
 <p>By creating a {{domxref("BroadcastChannel")}} object, you can receive any messages that are posted to it. You don't have to maintain a reference to the frames or workers you wish to communicate with: they can “subscribe” to a particular channel by constructing their own {{domxref("BroadcastChannel")}} with the same name, and have bi-directional communication between all of them.</p>
 
-<p><img alt="The principle of the Broadcast Channel API" src="https://mdn.mozillademos.org/files/9945/BroadcastChannel.png" style="height: 448px; width: 784px;"></p>
+<p><img alt="The principle of the Broadcast Channel API" src="broadcastchannel.png"></p>
 
 <h2 id="Broadcast_Channel_interface">Broadcast Channel interface</h2>
 
 <h3 id="Creating_or_joining_a_channel">Creating or joining a channel</h3>
 
-<p>A client joins a broadcast channel by creating a {{domxref("BroadcastChannel")}} object. Its <a href="/en-US/docs/Web/API/BroadcastChannel.BroadcastChannel">constructor</a> takes one single parameter: the <em>name</em> of the channel. If it is the first to connect to that broadcast channel name, the underlying channel is created.</p>
+<p>A client joins a broadcast channel by creating a {{domxref("BroadcastChannel")}} object. Its <a href="/en-US/docs/Web/API/BroadcastChannel/BroadcastChannel">constructor</a> takes one single parameter: the <em>name</em> of the channel. If it is the first to connect to that broadcast channel name, the underlying channel is created.</p>
 
 <pre class="brush: js">// Connection to a broadcast channel
 const bc = new BroadcastChannel('test_channel');

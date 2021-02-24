@@ -2,29 +2,33 @@
 title: ReadableStreamDefaultReader.ReadableStreamDefaultReader()
 slug: Web/API/ReadableStreamDefaultReader/ReadableStreamDefaultReader
 tags:
-  - API
-  - Constructor
-  - ReadableStreamDefaultReader
-  - Reference
-  - Streams
+- API
+- Constructor
+- ReadableStreamDefaultReader
+- Reference
+- Streams
 ---
 <div>{{APIRef("Streams")}}</div>
 
-<p class="summary">The <strong><code>ReadableStreamDefaultReader()</code></strong> constructor creates and returns a <code>ReadableStreamDefaultReader</code> object instance.</p>
+<p class="summary">The <strong><code>ReadableStreamDefaultReader()</code></strong>
+  constructor creates and returns a <code>ReadableStreamDefaultReader</code> object
+  instance.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You generally wouldn't use this constructor manually; instead, you'd use the {{domxref("ReadableStream.getReader()")}} method.</p>
+  <p><strong>Note</strong>: You generally wouldn't use this constructor manually; instead,
+    you'd use the {{domxref("ReadableStream.getReader()")}} method.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>readableStreamDefaultReader</em> = new ReadableStreamDefaultReader(<em>stream</em>);</pre>
+<pre
+  class="brush: js">var <em>readableStreamDefaultReader</em> = new ReadableStreamDefaultReader(<em>stream</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>stream</dt>
- <dd>The {{domxref("ReadableStream")}} to be read.</dd>
+  <dt>stream</dt>
+  <dd>The {{domxref("ReadableStream")}} to be read.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -34,13 +38,20 @@ tags:
 <h3 id="Exceptions">Exceptions</h3>
 
 <dl>
- <dt>TypeError</dt>
- <dd>The supplied <code>stream</code> parameter is not a {{domxref("ReadableStream")}}, or it is already locked for reading by another reader.</dd>
+  <dt>TypeError</dt>
+  <dd>The supplied <code>stream</code> parameter is not a {{domxref("ReadableStream")}},
+    or it is already locked for reading by another reader.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>In the following simple example, a previously-created custom <code>ReadableStream</code> is read using a {{domxref("ReadableStreamDefaultReader")}} created using <code>getReader()</code>. (see our <a href="https://mdn.github.io/dom-examples/streams/simple-random-stream/">Simple random stream example</a> for the full code). Each chunk is read sequentially and output to the UI, until the stream has finished being read, at which point we return out of the recursive function and print the entire stream to another part of the UI.</p>
+<p>In the following simple example, a previously-created custom
+  <code>ReadableStream</code> is read using a {{domxref("ReadableStreamDefaultReader")}}
+  created using <code>getReader()</code>. (see our <a
+    href="https://mdn.github.io/dom-examples/streams/simple-random-stream/">Simple random
+    stream example</a> for the full code). Each chunk is read sequentially and output to
+  the UI, until the stream has finished being read, at which point we return out of the
+  recursive function and print the entire stream to another part of the UI.</p>
 
 <pre class="brush: js">function fetchStream() {
   const reader = stream.getReader();
@@ -75,18 +86,20 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Streams","#default-reader-constructor","ReadableStreamDefaultReader()")}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("Streams","#default-reader-constructor","ReadableStreamDefaultReader()")}}
+      </td>
+      <td>{{Spec2('Streams')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

@@ -2,29 +2,33 @@
 title: DataTransferItemList.length
 slug: Web/API/DataTransferItemList/length
 tags:
-  - API
-  - DataTransferItemList
-  - Draggged Items
-  - Drop Items
-  - HTML DOM
-  - HTML Drag and Drop API
-  - Item List
-  - Property
-  - Read-only
-  - Reference
-  - drag and drop
-  - length
+- API
+- DataTransferItemList
+- Dragged Items
+- Drop Items
+- HTML DOM
+- HTML Drag and Drop API
+- Item List
+- Property
+- Read-only
+- Reference
+- drag and drop
+- length
 ---
-<p>The read-only <code><strong>length</strong></code> property of the {{domxref("DataTransferItemList")}} interface returns the number of items currently in the drag item list.</p>
+<p>The read-only <code><strong>length</strong></code> property of the
+  {{domxref("DataTransferItemList")}} interface returns the number of items currently in
+  the drag item list.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>length</em> = <em>DataTransferItemList</em>.length;
+<pre class="brush: js"><em>length</em> = <em>DataTransferItemList</em>.length;
 </pre>
 
 <h3 id="Return_Value">Value</h3>
 
-<p>The number of drag data items in the list, or 0 if the list is empty or disabled. The drag item list is considered to be disabled if the item list's {{domxref("DataTransfer")}} object is not associated with a drag data store.</p>
+<p>The number of drag data items in the list, or 0 if the list is empty or disabled. The
+  drag item list is considered to be disabled if the item list's
+  {{domxref("DataTransfer")}} object is not associated with a drag data store.</p>
 
 <h2 id="Example_Drag_and_Drop">Example</h2>
 
@@ -119,23 +123,25 @@ function dragend_handler(ev) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'interaction.html#dom-datatransferitemlist-length','length')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'editing.html#dom-datatransferitemlist-length','length')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Not included in W3C HTML5 {{Spec2('HTML5 W3C')}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG',
+        'interaction.html#dom-datatransferitemlist-length','length')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML5.1', 'editing.html#dom-datatransferitemlist-length','length')}}
+      </td>
+      <td>{{Spec2('HTML5.1')}}</td>
+      <td>Not included in W3C HTML5 {{Spec2('HTML5 W3C')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

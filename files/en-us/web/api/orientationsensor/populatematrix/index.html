@@ -2,45 +2,54 @@
 title: OrientationSensor.populateMatrix()
 slug: Web/API/OrientationSensor/populateMatrix
 tags:
-  - API
-  - Generic Sensor API
-  - Method
-  - Orientation Sensor API
-  - OrientationSensor
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - populateMatrix()
+- API
+- Generic Sensor API
+- Method
+- Orientation Sensor API
+- OrientationSensor
+- Reference
+- Sensor
+- Sensor APIs
+- Sensors
+- populateMatrix()
 ---
 <div>{{APIRef("Generic Sensor API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>populateMatrix</code></strong> method of the {{domxref("OrientationSensor")}} interface populates the given target matrix with the rotation matrix based on the latest sensor reading. The rotation matrix is shown below. </span></p>
+<p><span class="seoSummary">The <strong><code>populateMatrix</code></strong> method of the
+    {{domxref("OrientationSensor")}} interface populates the given target matrix with the
+    rotation matrix based on the latest sensor reading. The rotation matrix is shown
+    below. </span></p>
 
-<p><img alt="The formulas used to convert the sensor's quaternion to the provided matrix." src="https://mdn.mozillademos.org/files/16180/quaternion_to_rotation_matrix.png" style="height: 205px; width: 795px;"></p>
+<p><img alt="The formulas used to convert the sensor's quaternion to the provided matrix."
+    src="https://mdn.mozillademos.org/files/16180/quaternion_to_rotation_matrix.png"
+    style="height: 205px; width: 795px;"></p>
 
 <p>where:</p>
 
 <ul>
- <li>W = cos(θ/2)</li>
- <li>X = Vx * sin(θ/2)</li>
- <li>Y = Vy * sin(θ/2)</li>
- <li>Z = Vz * sin(θ/2)</li>
+  <li>W = cos(θ/2)</li>
+  <li>X = Vx * sin(θ/2)</li>
+  <li>Y = Vy * sin(θ/2)</li>
+  <li>Z = Vz * sin(θ/2)</li>
 </ul>
 
-<p>If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. See {{httpheader('Feature-Policy')}} for implementation instructions.</p>
+<p>If a feature policy blocks use of a feature it is because your code is inconsistent
+  with the policies set on your server. This is not something that would ever be shown to
+  a user. See {{httpheader('Feature-Policy')}} for implementation instructions.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>orientationInstance</var>.populateMatrix(targetMatrix)</pre>
+<pre
+  class="brush: js"><var>orientationInstance</var>.populateMatrix(targetMatrix)</pre>
 
-<p>Because {{domxref('OrientationSensor')}} is a base class, <code>populateMatrix</code> may only be read from one of its derived classes.</p>
+<p>Because {{domxref('OrientationSensor')}} is a base class, <code>populateMatrix</code>
+  may only be read from one of its derived classes.</p>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><em>targetMatrix</em></dt>
- <dd>TBD</dd>
+  <dt><em>targetMatrix</em></dt>
+  <dd>TBD</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -54,18 +63,19 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Orientation Sensor','#orientationsensor-populatematrix','populateMatrix')}}</td>
-   <td>{{Spec2('Orientation Sensor')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Orientation
+        Sensor','#orientationsensor-populatematrix','populateMatrix')}}</td>
+      <td>{{Spec2('Orientation Sensor')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

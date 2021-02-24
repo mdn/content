@@ -12,36 +12,52 @@ tags:
 ---
 <p>{{APIRef("Web Audio API")}}{{deprecated_header}}</p>
 
-<div>
-<p>The <code>createScriptProcessor()</code> method of the {{domxref("BaseAudioContext")}} interface creates a {{domxref("ScriptProcessorNode")}} used for direct audio processing.</p>
-</div>
+<p>The <code>createScriptProcessor()</code> method of the {{domxref("BaseAudioContext")}} interface
+  creates a {{domxref("ScriptProcessorNode")}} used for direct audio processing.</p>
 
 <div class="note">
-<p><strong>Note</strong>: As of the August 29 2014 Web Audio API spec publication, this feature has been marked as deprecated, and was replaced by <a href="https://webaudio.github.io/web-audio-api/#audioworklet">AudioWorklet</a> (see {{domxref("AudioWorkletNode")}}).</p>
+  <p><strong>Note</strong>: As of the August 29 2014 Web Audio API spec publication, this
+    feature has been marked as deprecated, and was replaced by <a
+      href="https://webaudio.github.io/web-audio-api/#audioworklet">AudioWorklet</a> (see
+    {{domxref("AudioWorkletNode")}}).</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>scriptProcessor</em> = <em>audioCtx</em>.createScriptProcessor(<em>bufferSize</em>, <em>numberOfInputChannels</em>, <em>numberOfOutputChannels</em>);</pre>
+<pre
+  class="brush: js">var <em>scriptProcessor</em> = <em>audioCtx</em>.createScriptProcessor(<em>bufferSize</em>, <em>numberOfInputChannels</em>, <em>numberOfOutputChannels</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>bufferSize</code></dt>
- <dd>The buffer size in units of sample-frames. If specified, the bufferSize must be one of the following values: 256, 512, 1024, 2048, 4096, 8192, 16384. If it's not passed in, or if the value is 0, then the implementation will choose the best buffer size for the given environment, which will be a constant power of 2 throughout the lifetime of the node.</dd>
- <dd>This value controls how frequently the <code>audioprocess</code> event is dispatched and how many sample-frames need to be processed each call. Lower values for <code>bufferSize</code> will result in a lower (better) latency. Higher values will be necessary to avoid audio breakup and glitches. It is recommended for authors to not specify this buffer size and allow the implementation to pick a good buffer size to balance between latency and audio quality.</dd>
- <dt><code>numberOfInputChannels</code></dt>
- <dd>Integer specifying the number of channels for this node's input, defaults to 2. Values of up to 32 are supported.</dd>
- <dt><code>numberOfOutputChannels</code></dt>
- <dd>Integer specifying the number of channels for this node's output, defaults to 2. Values of up to 32 are supported.</dd>
+  <dt><code>bufferSize</code></dt>
+  <dd>The buffer size in units of sample-frames. If specified, the bufferSize must be one
+    of the following values: 256, 512, 1024, 2048, 4096, 8192, 16384. If it's not passed
+    in, or if the value is 0, then the implementation will choose the best buffer size for
+    the given environment, which will be a constant power of 2 throughout the lifetime of
+    the node.</dd>
+  <dd>This value controls how frequently the <code>audioprocess</code> event is dispatched
+    and how many sample-frames need to be processed each call. Lower values for
+    <code>bufferSize</code> will result in a lower (better) latency. Higher values will be
+    necessary to avoid audio breakup and glitches. It is recommended for authors to not
+    specify this buffer size and allow the implementation to pick a good buffer size to
+    balance between latency and audio quality.</dd>
+  <dt><code>numberOfInputChannels</code></dt>
+  <dd>Integer specifying the number of channels for this node's input, defaults to 2.
+    Values of up to 32 are supported.</dd>
+  <dt><code>numberOfOutputChannels</code></dt>
+  <dd>Integer specifying the number of channels for this node's output, defaults to 2.
+    Values of up to 32 are supported.</dd>
 </dl>
 
 <div class="warning">
-<p><strong>Important</strong>: Webkit currently (version 31) requires that a valid <code>bufferSize</code> be passed when calling this method.</p>
+  <p><strong>Important</strong>: Webkit currently (version 31) requires that a valid
+    <code>bufferSize</code> be passed when calling this method.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: It is invalid for both <code>numberOfInputChannels</code> and <code>numberOfOutputChannels</code> to be zero.</p>
+  <p><strong>Note</strong>: It is invalid for both <code>numberOfInputChannels</code> and
+    <code>numberOfOutputChannels</code> to be zero.</p>
 </div>
 
 <h3 id="Description">Returns</h3>
@@ -50,10 +66,21 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>The following example shows basic usage of a <code>ScriptProcessorNode</code> to take a track loaded via {{domxref("AudioContext.decodeAudioData()")}}, process it, adding a bit of white noise to each audio sample of the input track (buffer) and play it through the {{domxref("AudioDestinationNode")}}. For each channel and each sample frame, the <code>scriptNode.onaudioprocess</code> function takes the associated <code>audioProcessingEvent</code> and uses it to loop through each channel of the input buffer, and each sample in each channel, and add a small amount of white noise, before setting that result to be the output sample in each case.</p>
+<p>The following example shows basic usage of a <code>ScriptProcessorNode</code> to take a
+  track loaded via {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}}, process it, adding a bit
+  of white noise to each audio sample of the input track (buffer) and play it through the
+  {{domxref("AudioDestinationNode")}}. For each channel and each sample frame, the
+  <code>scriptNode.onaudioprocess</code> function takes the associated
+  <code>audioProcessingEvent</code> and uses it to loop through each channel of the input
+  buffer, and each sample in each channel, and add a small amount of white noise, before
+  setting that result to be the output sample in each case.</p>
 
 <div class="note">
-<p><strong>Note</strong>: For a full working example, see our <a href="https://mdn.github.io/webaudio-examples/script-processor-node/">script-processor-node</a> github repo (also view the <a href="https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html">source code</a>.)</p>
+  <p><strong>Note</strong>: For a full working example, see our <a
+      href="https://mdn.github.io/webaudio-examples/script-processor-node/">script-processor-node</a>
+    github repo (also view the <a
+      href="https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html">source
+      code</a>.)</p>
 </div>
 
 <pre class="brush: js">var myScript = document.querySelector('script');
@@ -129,31 +156,28 @@ source.onended = function() {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createscriptprocessor', 'createScriptProcessor')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createscriptprocessor',
+        'createScriptProcessor')}}</td>
+      <td>{{Spec2('Web Audio API')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-<div>
-
 <p>{{Compat("api.BaseAudioContext.createScriptProcessor")}}</p>
-</div>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  </li>
 </ul>

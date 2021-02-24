@@ -9,7 +9,7 @@ tags:
   - Layout
   - Reference
   - Web
-  - 'recipe:css-property'
+  - recipe:css-property
   - text-decoration-skip-ink
 ---
 <div>{{CSSRef}}</div>
@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* Single keyword */
+<pre class="brush:css no-line-numbers">/* Single keyword */
 text-decoration-skip-ink: none;
 text-decoration-skip-ink: auto;
 text-decoration-skip-ink: all;
@@ -42,7 +42,7 @@ text-decoration-skip: unset;
  <dd>The default — the browser <em>may</em> interrupt underlines and overlines so that they do not touch or closely approach a glyph. That is, they are interrupted where they would otherwise cross over a glyph.</dd>
  <dt><code>all</code></dt>
  <dd>The browser <em>must</em> interrupt underlines and overlines so that they do not touch or closely approach a glyph. This can be helpful with certain Chinese, Japanese, or Korean (CJK) fonts, where the <code>auto</code> behavior might not create interruptions.</dd>
- <dd><img alt='An example of "text-decoration-skip-ink".' src="https://mdn.mozillademos.org/files/13464/decoration-skip-ink.png"></dd>
+ <dd><img alt='An example of "text-decoration-skip-ink".' src="decoration-skip-ink.png"></dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -51,13 +51,13 @@ text-decoration-skip: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;You should go on a quest for a cup of coffee.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;You should go on a quest for a cup of coffee.&lt;/p&gt;
 &lt;p class="no-skip-ink"&gt;Or maybe you'd prefer some tea?&lt;/p&gt;
 &lt;p&gt;この文は、 text-decoration-skip-ink: auto の使用例を示しています。&lt;/p&gt;
 &lt;p class="skip-ink-all"&gt;この文は、 text-decoration-skip-ink: all の使用例を示しています。&lt;/p&gt;
@@ -65,7 +65,7 @@ text-decoration-skip: unset;
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css; highlight[4] notranslate">p {
+<pre class="brush: css; highlight[4]">p {
   font-size: 1.5em;
   text-decoration: underline blue;
   text-decoration-skip-ink: auto; /* this is the default anyway */

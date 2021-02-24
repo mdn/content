@@ -16,7 +16,7 @@ tags:
 
 <p>If the object exists, geolocation services are available. You can test for the presence of geolocation thusly:</p>
 
-<pre class="brush: js notranslate">if('geolocation' in navigator) {
+<pre class="brush: js">if('geolocation' in navigator) {
   /* geolocation is available */
 } else {
   /* geolocation IS NOT available */
@@ -31,7 +31,7 @@ tags:
 <p><strong>Note:</strong> By default, {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} tries to answer as fast as possible with a low accuracy result. It is useful if you need a quick answer regardless of the accuracy. Devices with a GPS, for example, can take a minute or more to get a GPS fix, so less accurate data (IP location or wifi) may be returned to <code>getCurrentPosition()</code>.</p>
 </div>
 
-<pre class="brush: js notranslate">navigator.geolocation.getCurrentPosition((position) =&gt; {
+<pre class="brush: js">navigator.geolocation.getCurrentPosition((position) =&gt; {
   doSomething(position.coords.latitude, position.coords.longitude);
 });</pre>
 
@@ -45,13 +45,13 @@ tags:
 <p><strong>Note:</strong> You can use {{domxref("Geolocation.watchPosition","watchPosition()")}} without an initial {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} call.</p>
 </div>
 
-<pre class="brush: js notranslate">const watchID = navigator.geolocation.watchPosition((position) =&gt; {
+<pre class="brush: js">const watchID = navigator.geolocation.watchPosition((position) =&gt; {
   doSomething(position.coords.latitude, position.coords.longitude);
 });</pre>
 
 <p>The {{domxref("Geolocation.watchPosition","watchPosition()")}} method returns an ID number that can be used to uniquely identify the requested position watcher; you use this value in tandem with the {{domxref("Geolocation.clearWatch","clearWatch()")}} method to stop watching the user's location.</p>
 
-<pre class="brush: js notranslate">navigator.geolocation.clearWatch(watchID);
+<pre class="brush: js">navigator.geolocation.clearWatch(watchID);
 </pre>
 
 <h3 id="Fine_tuning_the_response">Fine tuning the response</h3>
@@ -62,7 +62,7 @@ tags:
 
 <p>A call to {{domxref("Geolocation.watchPosition","watchPosition")}} could look like:</p>
 
-<pre class="brush: js notranslate">function success(position) {
+<pre class="brush: js">function success(position) {
   doSomething(position.coords.latitude, position.coords.longitude);
 }
 
@@ -86,7 +86,7 @@ const watchID = navigator.geolocation.watchPosition(success, error, options);</p
 
 <p>The <code>GeolocationCoordinates</code> instance contains a number of properties, but the two you'll use most commonly are <code>latitude</code> and <code>longitude</code>, which are what you need to draw your position on a map. Hence many Geolocation success callbacks look fairly simple:</p>
 
-<pre class="brush: js notranslate">function success(position) {
+<pre class="brush: js">function success(position) {
   const latitude  = position.coords.latitude;
   const longitude = position.coords.longitude;
 
@@ -101,7 +101,7 @@ const watchID = navigator.geolocation.watchPosition(success, error, options);</p
 
 <p>You could use it like so:</p>
 
-<pre class="brush: js notranslate">function errorCallback(error) {
+<pre class="brush: js">function errorCallback(error) {
   alert(`ERROR(${error.code}): ${error.message}`);
 };
 </pre>
@@ -111,7 +111,7 @@ const watchID = navigator.geolocation.watchPosition(success, error, options);</p
 <p>In the following example the Geolocation API is used to retrieve the user's latitude and longitude. If sucessful, the available hyperlink is populated with an <code>openstreetmap.org</code> URL that will show their location.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   padding: 20px;
   background-color:#ffffc9
 }
@@ -124,14 +124,14 @@ button {
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html; notranslate">&lt;button id = "find-me"&gt;Show my location&lt;/button&gt;&lt;br/&gt;
+<pre class="brush: html">&lt;button id = "find-me"&gt;Show my location&lt;/button&gt;&lt;br/&gt;
 &lt;p id = "status"&gt;&lt;/p&gt;
 &lt;a id = "map-link" target="_blank"&gt;&lt;/a&gt;
 </pre>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">function geoFindMe() {
+<pre class="brush: js">function geoFindMe() {
 
   const status = document.querySelector('#status');
   const mapLink = document.querySelector('#map-link');
@@ -166,4 +166,4 @@ document.querySelector('#find-me').addEventListener('click', geoFindMe);
 
 <h3 id="Result">Result</h3>
 
-<p>{{EmbedLiveSample('Examples', 350, 150)}}</p>
+<p>{{EmbedLiveSample('Examples', 350, 150, "", "", "", "geolocation")}}</p>

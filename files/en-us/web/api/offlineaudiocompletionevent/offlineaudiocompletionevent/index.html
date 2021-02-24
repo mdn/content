@@ -2,24 +2,29 @@
 title: OfflineAudioCompletionEvent.OfflineAudioCompletionEvent()
 slug: Web/API/OfflineAudioCompletionEvent/OfflineAudioCompletionEvent
 tags:
-  - API
-  - Audio
-  - Constructor
-  - OfflineAudioCompletionEvent
-  - Reference
-  - Web Audio API
+- API
+- Audio
+- Constructor
+- OfflineAudioCompletionEvent
+- Reference
+- Web Audio API
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
-<p>The <code><strong>OfflineAudioCompletionEvent()</strong></code> constructor of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> creates a new {{domxref("OfflineAudioCompletionEvent")}} object instance.</p>
+<p>The <code><strong>OfflineAudioCompletionEvent()</strong></code> constructor of the <a
+		href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> creates a new
+	{{domxref("OfflineAudioCompletionEvent")}} object instance.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You wouldn't generally use the constructor manually. <code>OfflineAudioCompletionEvent</code>s are despatched to {{domxref("OfflineAudioContext")}} instances for legacy reasons.</p>
+	<p><strong>Note</strong>: You wouldn't generally use the constructor manually.
+		<code>OfflineAudioCompletionEvent</code>s are despatched to
+		{{domxref("OfflineAudioContext")}} instances for legacy reasons.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var offlineAudioCompletionEvent = new OfflineAudioCompletionEvent(<em>type</em>, <em>init</em>)</pre>
+<pre
+	class="brush: js">var offlineAudioCompletionEvent = new OfflineAudioCompletionEvent(<em>type</em>, <em>init</em>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -28,9 +33,10 @@ tags:
 	<dd>A {{domxref("DOMString")}} representing the type of object to create.</dd>
 	<dt><em>init</em> {{optional_inline}}</dt>
 	<dd>Options are as follows:
-	<ul>
-		<li><code>renderedBuffer</code>: The rendered {{domxref("AudioBuffer")}} containing the audio data.</li>
-	</ul>
+		<ul>
+			<li><code>renderedBuffer</code>: The rendered {{domxref("AudioBuffer")}}
+				containing the audio data.</li>
+		</ul>
 	</dd>
 </dl>
 
@@ -48,7 +54,9 @@ tags:
 			<th scope="col">Comment</th>
 		</tr>
 		<tr>
-			<td>{{SpecName('Web Audio API','#dom-offlineaudiocompletionevent-offlineaudiocompletionevent','OfflineAudioCompletionEvent()')}}</td>
+			<td>{{SpecName('Web Audio
+				API','#dom-offlineaudiocompletionevent-offlineaudiocompletionevent','OfflineAudioCompletionEvent()')}}
+			</td>
 			<td>{{Spec2('Web Audio API')}}</td>
 			<td>Initial definition.</td>
 		</tr>
@@ -59,5 +67,5 @@ tags:
 
 <div>
 
-<p>{{Compat("api.OfflineAudioCompletionEvent.OfflineAudioCompletionEvent")}}</p>
+	<p>{{Compat("api.OfflineAudioCompletionEvent.OfflineAudioCompletionEvent")}}</p>
 </div>

@@ -2,29 +2,37 @@
 title: MouseEvent.initMouseEvent()
 slug: Web/API/MouseEvent/initMouseEvent
 tags:
-  - API
-  - DOM
-  - DOM Events
-  - Deprecated
-  - Method
-  - MouseEvent
-  - Reference
+- API
+- DOM
+- DOM Events
+- Deprecated
+- Method
+- MouseEvent
+- Reference
 ---
 <p>{{APIRef("DOM Events")}}{{deprecated_header}}</p>
 
-<p>The <code><strong>MouseEvent.initMouseEvent()</strong></code> method initializes the value of a mouse event once it's been created (normally using the {{domxref("Document.createEvent()")}} method).</p>
+<p>The <code><strong>MouseEvent.initMouseEvent()</strong></code> method initializes the
+  value of a mouse event once it's been created (normally using the
+  {{domxref("Document.createEvent()")}} method).</p>
 
-<p>Events initialized in this way must have been created with the {{ domxref("Document.createEvent()") }} method. This method must be called to set the event before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}. Once dispatched, it doesn't do anything anymore.</p>
+<p>Events initialized in this way must have been created with the {{
+  domxref("Document.createEvent()") }} method. This method must be called to set the event
+  before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}. Once
+  dispatched, it doesn't do anything anymore.</p>
 
 <div class="note">
-<p><strong>Do not use this method anymore as it is deprecated.</strong></p>
+  <p><strong>Do not use this method anymore as it is deprecated.</strong></p>
 
-<p>Instead use specific event constructors, like {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}. The page on <a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and triggering events</a> gives more information about the way to use these.</p>
+  <p>Instead use specific event constructors, like {{domxref("MouseEvent.MouseEvent",
+    "MouseEvent()")}}. The page on <a
+      href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and
+      triggering events</a> gives more information about the way to use these.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>event</em>.initMouseEvent(<em>type</em>, <em>canBubble</em>, <em>cancelable</em>, <em>view</em>,
+<pre class="brush: js"><em>event</em>.initMouseEvent(<em>type</em>, <em>canBubble</em>, <em>cancelable</em>, <em>view</em>,
 <em>                     detail</em>, <em>screenX</em>, <em>screenY</em>, <em>clientX</em>, <em>clientY</em>,
 <em>                     ctrlKey</em>, <em>altKey</em>, <em>shiftKey</em>, <em>metaKey</em>,
 <em>                     button</em>, <em>relatedTarget</em>);</pre>
@@ -32,36 +40,52 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>type</code></dt>
- <dd>the string to set the event's {{domxref("Event.type", "type")}} to. Possible types for mouse events include: <code>click</code>, <code>mousedown</code>, <code>mouseup</code>, <code>mouseover</code>, <code>mousemove</code>, <code>mouseout</code>.</dd>
- <dt><code>canBubble</code></dt>
- <dd>whether or not the event can bubble. Sets the value of {{domxref("Event.bubbles")}}.</dd>
- <dt><code>cancelable</code></dt>
- <dd>whether or not the event's default action can be prevented. Sets the value of {{domxref("Event.cancelable")}}.</dd>
- <dt><code>view</code></dt>
- <dd>the event's AbstractView. You should pass the {{domxref("window")}} object here. Sets the value of {{domxref("UIEvent.view")}}.</dd>
- <dt><code>detail</code></dt>
- <dd>the event's mouse click count. Sets the value of {{domxref("UIEvent.detail")}}.</dd>
- <dt><code>screenX</code></dt>
- <dd>the event's screen x coordinate. Sets the value of {{domxref("MouseEvent.screenX")}}.</dd>
- <dt><code>screenY</code></dt>
- <dd>the event's screen y coordinate. Sets the value of {{domxref("MouseEvent.screenY")}}.</dd>
- <dt><code>clientX</code></dt>
- <dd>the event's client x coordinate. Sets the value of {{domxref("MouseEvent.clientX")}}.</dd>
- <dt><code>clientY</code></dt>
- <dd>the event's client y coordinate. Sets the value of {{domxref("MouseEvent.clientY")}}.</dd>
- <dt><code>ctrlKey</code></dt>
- <dd>whether or not <kbd>control</kbd> key was depressed during the Event. Sets the value of {{domxref("MouseEvent.ctrlKey")}}.</dd>
- <dt><code>altKey</code></dt>
- <dd>whether or not <kbd>alt</kbd> key was depressed during the Event. Sets the value of {{domxref("MouseEvent.altKey")}}.</dd>
- <dt><code>shiftKey</code></dt>
- <dd>whether or not <kbd>shift</kbd> key was depressed during the Event. Sets the value of {{domxref("MouseEvent.shiftKey")}}.</dd>
- <dt><code>metaKey</code></dt>
- <dd>whether or not <kbd>meta</kbd> key was depressed during the Event. Sets the value of {{domxref("MouseEvent.metaKey")}}.</dd>
- <dt><code>button</code></dt>
- <dd>the event's mouse {{domxref("MouseEvent.button", "button")}}.</dd>
- <dt><code>relatedTarget</code></dt>
- <dd>the event's <a href="/en/DOM/event.relatedTarget">related EventTarget</a>. Only used with some event types (e.g., <code>mouseover</code> and <code>mouseout</code>). In other cases, pass <code>null</code>.</dd>
+  <dt><code>type</code></dt>
+  <dd>the string to set the event's {{domxref("Event.type", "type")}} to. Possible types
+    for mouse events include: <code>click</code>, <code>mousedown</code>,
+    <code>mouseup</code>, <code>mouseover</code>, <code>mousemove</code>,
+    <code>mouseout</code>.</dd>
+  <dt><code>canBubble</code></dt>
+  <dd>whether or not the event can bubble. Sets the value of {{domxref("Event.bubbles")}}.
+  </dd>
+  <dt><code>cancelable</code></dt>
+  <dd>whether or not the event's default action can be prevented. Sets the value of
+    {{domxref("Event.cancelable")}}.</dd>
+  <dt><code>view</code></dt>
+  <dd>the event's AbstractView. You should pass the {{domxref("window")}} object here.
+    Sets the value of {{domxref("UIEvent.view")}}.</dd>
+  <dt><code>detail</code></dt>
+  <dd>the event's mouse click count. Sets the value of {{domxref("UIEvent.detail")}}.</dd>
+  <dt><code>screenX</code></dt>
+  <dd>the event's screen x coordinate. Sets the value of
+    {{domxref("MouseEvent.screenX")}}.</dd>
+  <dt><code>screenY</code></dt>
+  <dd>the event's screen y coordinate. Sets the value of
+    {{domxref("MouseEvent.screenY")}}.</dd>
+  <dt><code>clientX</code></dt>
+  <dd>the event's client x coordinate. Sets the value of
+    {{domxref("MouseEvent.clientX")}}.</dd>
+  <dt><code>clientY</code></dt>
+  <dd>the event's client y coordinate. Sets the value of
+    {{domxref("MouseEvent.clientY")}}.</dd>
+  <dt><code>ctrlKey</code></dt>
+  <dd>whether or not <kbd>control</kbd> key was depressed during the Event. Sets the value
+    of {{domxref("MouseEvent.ctrlKey")}}.</dd>
+  <dt><code>altKey</code></dt>
+  <dd>whether or not <kbd>alt</kbd> key was depressed during the Event. Sets the value of
+    {{domxref("MouseEvent.altKey")}}.</dd>
+  <dt><code>shiftKey</code></dt>
+  <dd>whether or not <kbd>shift</kbd> key was depressed during the Event. Sets the value
+    of {{domxref("MouseEvent.shiftKey")}}.</dd>
+  <dt><code>metaKey</code></dt>
+  <dd>whether or not <kbd>meta</kbd> key was depressed during the Event. Sets the value of
+    {{domxref("MouseEvent.metaKey")}}.</dd>
+  <dt><code>button</code></dt>
+  <dd>the event's mouse {{domxref("MouseEvent.button", "button")}}.</dd>
+  <dt><code>relatedTarget</code></dt>
+  <dd>the event's <a href="/en-US/docs/DOM/event.relatedTarget">related EventTarget</a>. Only used
+    with some event types (e.g., <code>mouseover</code> and <code>mouseout</code>). In
+    other cases, pass <code>null</code>.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -98,23 +122,25 @@ simulateClick();
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events', '#idl-interface-MouseEvent-initializers', 'MouseEvent.initMouseEvent()')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>From {{SpecName('DOM2 Events')}}, deprecated.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events', '#Events-Event-initMouseEvent', 'MouseEvent.initMouseEvent()')}}</td>
-   <td>{{Spec2('DOM2 Events')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM3 Events', '#idl-interface-MouseEvent-initializers',
+        'MouseEvent.initMouseEvent()')}}</td>
+      <td>{{Spec2('DOM3 Events')}}</td>
+      <td>From {{SpecName('DOM2 Events')}}, deprecated.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 Events', '#Events-Event-initMouseEvent',
+        'MouseEvent.initMouseEvent()')}}</td>
+      <td>{{Spec2('DOM2 Events')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -124,6 +150,8 @@ simulateClick();
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("MouseEvent.MouseEvent()","MouseEvent()")}} constructor, the modern standard way of creating a {{domxref("MouseEvent")}}</li>
- <li>{{domxref("Event.initEvent()")}} is a simpler method serving a similar purpose. It is also obsolete and shouldn't be used any more.</li>
+  <li>{{domxref("MouseEvent.MouseEvent()","MouseEvent()")}} constructor, the modern
+    standard way of creating a {{domxref("MouseEvent")}}</li>
+  <li>{{domxref("Event.initEvent()")}} is a simpler method serving a similar purpose. It
+    is also obsolete and shouldn't be used any more.</li>
 </ul>

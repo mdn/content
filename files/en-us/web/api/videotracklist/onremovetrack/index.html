@@ -2,67 +2,80 @@
 title: VideoTrackList.onremovetrack
 slug: Web/API/VideoTrackList/onremovetrack
 tags:
-  - API
-  - Event Handler
-  - HTML DOM
-  - Media
-  - Property
-  - Reference
-  - Removing Tracks
-  - Removing Video Tracks
-  - Video
-  - VideoTrackList
-  - onremovetrack
-  - remove
-  - removeTrack
-  - track
+- API
+- Event Handler
+- HTML DOM
+- Media
+- Property
+- Reference
+- Removing Tracks
+- Removing Video Tracks
+- Video
+- VideoTrackList
+- onremovetrack
+- remove
+- removeTrack
+- track
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The <strong>{{domxref("VideoTrackList")}}</strong> <strong><code>onremovetrack</code></strong> event handler is called when the {{event("removetrack")}} event occurs, indicating that a video track has been removed from the media element, and therefore also from the <code>VideoTrackList</code>.</span></p>
+<p><span class="seoSummary">The <strong>{{domxref("VideoTrackList")}}</strong>
+    <strong><code>onremovetrack</code></strong> event handler is called when the
+    {{event("removetrack")}} event occurs, indicating that a video track has been removed
+    from the media element, and therefore also from the
+    <code>VideoTrackList</code>.</span></p>
 
-<p>The event is passed into the event handler in the form of a {{domxref("TrackEvent")}} object, whose {{domxref("TrackEvent.track", "track")}} property identifies the track that was removed from the media element's <code>VideoTrackList</code>.</p>
+<p>The event is passed into the event handler in the form of a {{domxref("TrackEvent")}}
+  object, whose {{domxref("TrackEvent.track", "track")}} property identifies the track
+  that was removed from the media element's <code>VideoTrackList</code>.</p>
 
 <div class="note">
-<p><strong>Note:</strong> You can also add a handler for the <code>removetrack</code> event using {{domxref("EventTarget.addEventListener", "addEventListener()")}}.</p>
+  <p><strong>Note:</strong> You can also add a handler for the <code>removetrack</code>
+    event using {{domxref("EventTarget.addEventListener", "addEventListener()")}}.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>VideoTrackList</em>.onremovetrack = <em>eventHandler</em>;</pre>
+<pre
+  class="brush: js"><em>VideoTrackList</em>.onremovetrack = <em>eventHandler</em>;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>Set <code>onremovetrack</code> to a function that accepts as input a {{domxref("TrackEvent")}} object which indicates in its {{domxref("TrackEvent.track", "track")}} property which video track has been removed from the media element.</p>
+<p>Set <code>onremovetrack</code> to a function that accepts as input a
+  {{domxref("TrackEvent")}} object which indicates in its {{domxref("TrackEvent.track",
+  "track")}} property which video track has been removed from the media element.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>This simple example just fetches the current number of video tracks in the media element whenever a track is removed from the media element.</p>
+<p>This simple example just fetches the current number of video tracks in the media
+  element whenever a track is removed from the media element.</p>
 
 <pre class="brush: js">document.querySelector("my-video").videoTracks.onremovetrack = function(event) {
   myTrackCount = document.querySelector("my-video").videoTracks.length;
 };
 </pre>
 
-<p>The current number of video tracks remaining in the media element is obtained from <code>VideoTrackList</code> property {{domxref("VideoTrackList.length", "length")}}.</p>
+<p>The current number of video tracks remaining in the media element is obtained from
+  <code>VideoTrackList</code> property {{domxref("VideoTrackList.length", "length")}}.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#handler-tracklist-onremovetrack', 'VideoTrackList: onremovetrack')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#handler-tracklist-onremovetrack', 'VideoTrackList:
+        onremovetrack')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

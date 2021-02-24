@@ -2,21 +2,24 @@
 title: LockManager.query()
 slug: Web/API/LockManager/query
 tags:
-  - API
-  - Experimental
-  - LockManager
-  - Method
-  - Reference
-  - Web Locks API
-  - query()
+- API
+- Experimental
+- LockManager
+- Method
+- Reference
+- Web Locks API
+- query()
 ---
 <p>{{APIRef("Web Locks")}}{{SeeCompatTable}}</p>
 
-<p><span class="seoSummary">The <strong><code>query()</code></strong> method of the {{domxref("LockManager")}} interface returns a {{jsxref('Promise')}} which resolves with an object containing information about held and pending locks. </span></p>
+<p><span class="seoSummary">The <strong><code>query()</code></strong> method of the
+    {{domxref("LockManager")}} interface returns a {{jsxref('Promise')}} which resolves
+    with an object containing information about held and pending locks. </span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var promise&lt;LockManagerSnapshot&gt; = LockManager.query()</pre>
+<pre
+  class="brush: js">var promise&lt;LockManagerSnapshot&gt; = LockManager.query()</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -24,11 +27,13 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{jsxref('Promise')}} that resolves with a <code>LockManagerSnapshot</code> containing the following properties.</p>
+<p>A {{jsxref('Promise')}} that resolves with a <code>LockManagerSnapshot</code>
+  containing the following properties.</p>
 
 <ul>
- <li><code>held</code>: An array of {{domxref('Lock')}} objects for held locks.</li>
- <li><code>pending</code>: An array of {{domxref('Lock')}} objects for pending lock requests.</li>
+  <li><code>held</code>: An array of {{domxref('Lock')}} objects for held locks.</li>
+  <li><code>pending</code>: An array of {{domxref('Lock')}} objects for pending lock
+    requests.</li>
 </ul>
 
 <h2 id="Example">Example</h2>
@@ -45,18 +50,18 @@ for (const request of state.pending) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Locks','#dom-lockmanager-query','query()')}}</td>
-   <td>{{Spec2('Web Locks')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web Locks','#dom-lockmanager-query','query()')}}</td>
+      <td>{{Spec2('Web Locks')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

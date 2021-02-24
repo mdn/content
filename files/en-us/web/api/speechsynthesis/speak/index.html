@@ -2,23 +2,26 @@
 title: SpeechSynthesis.speak()
 slug: Web/API/SpeechSynthesis/speak
 tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - SpeechSynthesis
-  - Web Speech API
-  - speak
-  - speech
-  - synthesis
+- API
+- Experimental
+- Method
+- Reference
+- SpeechSynthesis
+- Web Speech API
+- speak
+- speech
+- synthesis
 ---
 <div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
 
-<p>The <code><strong>speak()</strong></code> method of the {{domxref("SpeechSynthesis")}} interface adds an {{domxref("SpeechSynthesisUtterance", "utterance")}} to the utterance queue; it will be spoken when any other utterances queued before it have been spoken.</p>
+<p>The <code><strong>speak()</strong></code> method of the {{domxref("SpeechSynthesis")}}
+  interface adds an {{domxref("SpeechSynthesisUtterance", "utterance")}} to the utterance
+  queue; it will be spoken when any other utterances queued before it have been spoken.
+</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">speechSynthesisInstance.speak(utterance);
+<pre class="brush: js">speechSynthesisInstance.speak(utterance);
 </pre>
 
 <h3 id="Returns">Returns</h3>
@@ -28,13 +31,17 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-	<dt>utterance</dt>
-	<dd>A {{domxref("SpeechSynthesisUtterance")}} object.</dd>
+  <dt>utterance</dt>
+  <dd>A {{domxref("SpeechSynthesisUtterance")}} object.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>This snippet is excerpted from our <a href="https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis">Speech synthesiser demo</a>. When a form containing the text we want to speak is submitted, we (amongst other things) create a new utterance containing this text, then speak it by passing it into <code>speak()</code> as a parameter.</p>
+<p>This snippet is excerpted from our <a
+    href="https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis">Speech
+    synthesiser demo</a>. When a form containing the text we want to speak is submitted,
+  we (amongst other things) create a new utterance containing this text, then speak it by
+  passing it into <code>speak()</code> as a parameter.</p>
 
 <pre class="brush: js line-numbers  language-js">var synth = window.speechSynthesis;
 
@@ -57,26 +64,23 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Web Speech API', '#dom-speechsynthesis-speak', 'speak()')}}</td>
-			<td>{{Spec2('Web Speech API')}}</td>
-			<td> </td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web Speech API', '#dom-speechsynthesis-speak', 'speak()')}}</td>
+      <td>{{Spec2('Web Speech API')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.SpeechSynthesis.speak")}}</p>
-</div>
 
 <div id="compat-mobile">
 
@@ -85,5 +89,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
+  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
 </ul>

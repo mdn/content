@@ -2,39 +2,42 @@
 title: DOMTokenList.forEach()
 slug: Web/API/DOMTokenList/forEach
 tags:
-  - DOM
-  - DOMTokenList
-  - Iterable
-  - Method
-  - Reference
-  - Web
-  - forEach
+- DOM
+- DOMTokenList
+- Iterable
+- Method
+- Reference
+- Web
+- forEach
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p>The <strong><code>forEach()</code></strong> method of the {{domxref("DOMTokenList")}} interface calls the callback given in parameter once for each value pair in the list, in insertion order.</p>
+<p>The <strong><code>forEach()</code></strong> method of the {{domxref("DOMTokenList")}}
+  interface calls the callback given in parameter once for each value pair in the list, in
+  insertion order.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>tokenList</var>.forEach(<var>callback</var> [, <var>thisArg</var>]);
+<pre class="brush: js"><var>tokenList</var>.forEach(<var>callback</var> [, <var>thisArg</var>]);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>callback</var></code></dt>
- <dd>Function to execute for each element, eventually taking three arguments:
- <dl>
-  <dt><code><var>currentValue</var></code></dt>
-  <dd>The current element being processed in the array.</dd>
-  <dt><code><var>currentIndex</var></code></dt>
-  <dd>The index of the current element being processed in the array.</dd>
-  <dt><code><var>listObj</var></code></dt>
-  <dd>The array that <code>forEach()</code> is being applied to.</dd>
- </dl>
- </dd>
- <dt><code><var>thisArg</var></code> {{Optional_inline}}</dt>
- <dd>Value to use as {{jsxref("this")}} when executing <code><var>callback</var></code>.</dd>
+  <dt><code><var>callback</var></code></dt>
+  <dd>Function to execute for each element, eventually taking three arguments:
+    <dl>
+      <dt><code><var>currentValue</var></code></dt>
+      <dd>The current element being processed in the array.</dd>
+      <dt><code><var>currentIndex</var></code></dt>
+      <dd>The index of the current element being processed in the array.</dd>
+      <dt><code><var>listObj</var></code></dt>
+      <dd>The array that <code>forEach()</code> is being applied to.</dd>
+    </dl>
+  </dd>
+  <dt><code><var>thisArg</var></code> {{Optional_inline}}</dt>
+  <dd>Value to use as {{jsxref("this")}} when executing <code><var>callback</var></code>.
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -43,15 +46,19 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>In the following example we retrieve the list of classes set on a {{htmlelement("span")}} element as a <code>DOMTokenList</code> using {{domxref("Element.classList")}}. We when retrieve an iterator containing the values using <code>forEach()</code>, writing each one to the <code>&lt;span&gt;</code>'s {{domxref("Node.textContent")}} inside the <code>forEach()</code> inner function.</p>
+<p>In the following example we retrieve the list of classes set on a
+  {{htmlelement("span")}} element as a <code>DOMTokenList</code> using
+  {{domxref("Element.classList")}}. We when retrieve an iterator containing the values
+  using <code>forEach()</code>, writing each one to the <code>&lt;span&gt;</code>'s
+  {{domxref("Node.textContent")}} inside the <code>forEach()</code> inner function.</p>
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">let span = document.querySelector("span");
+<pre class="brush: js">let span = document.querySelector("span");
 let classes = span.classList;
 let iterator = classes.values();
 
@@ -68,9 +75,10 @@ classes.forEach(
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>This {{Glossary("Polyfill","polyfill")}} adds compatibility to all Browsers supporting <a href="https://caniuse.com/#search=es5">ES5</a>:</p>
+<p>This {{Glossary("Polyfill","polyfill")}} adds compatibility to all Browsers supporting
+  <a href="https://caniuse.com/#search=es5">ES5</a>:</p>
 
-<pre class="notranslate">if (window.DOMTokenList &amp;&amp; !DOMTokenList.prototype.forEach) {
+<pre class="brush: js">if (window.DOMTokenList &amp;&amp; !DOMTokenList.prototype.forEach) {
   DOMTokenList.prototype.forEach = function (callback, thisArg) {
     thisArg = thisArg || window;
     for (var i = 0; i &lt; this.length; i++) {
@@ -83,31 +91,30 @@ classes.forEach(
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#domtokenlist','forEach() (as iterable&lt;Node&gt;)')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM WHATWG','#domtokenlist','forEach() (as iterable&lt;Node&gt;)')}}
+      </td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.DOMTokenList.forEach")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("DOMSettableTokenList")}} (object that extends DOMTokenList with settable <em>.value</em> property)</li>
+  <li>{{domxref("DOMSettableTokenList")}} (object that extends DOMTokenList with settable
+    <em>.value</em> property)</li>
 </ul>

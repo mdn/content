@@ -12,7 +12,7 @@ tags:
   - ServiceWorker
   - Workers
 ---
-<div>{{non-standard_header}}{{obsolete_header}}</div>
+<div>{{non-standard_header}}{{deprecated_header}}</div>
 
 <p><span class="seoSummary">The parameter passed into the {{domxref("ServiceWorkerGlobalScope.oninstall", "oninstall")}} handler, the <code>InstallEvent</code> interface represents an install action that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}. As a child of {{domxref("ExtendableEvent")}}, it ensures that functional events such as {{domxref("FetchEvent")}} are not dispatched during installation. </span></p>
 
@@ -50,7 +50,7 @@ tags:
 <p><strong>Note</strong>: Logging statements are visible in Google Chrome via the "Inspect" interface for the relevant service worker accessed via chrome://serviceworker-internals.</p>
 </div>
 
-<pre class="brush: js notranslate">var CACHE_VERSION = 1;
+<pre class="brush: js">var CACHE_VERSION = 1;
 var CURRENT_CACHES = {
   prefetch: 'prefetch-cache-v' + CACHE_VERSION
 };
@@ -79,10 +79,7 @@ console.log('Handling install event. Resources to pre-fetch:', urlsToPrefetch);
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.InstallEvent")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

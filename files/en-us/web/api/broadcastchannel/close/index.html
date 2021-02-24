@@ -12,13 +12,16 @@ tags:
 ---
 <p>{{APIRef("BroadCastChannel API")}}</p>
 
-<p>The <strong><code>BroadcastChannel.close()</code></strong> terminates the connection to the underlying channel, allowing the object to be garbage collected. This is a necessary step to perform as there is no other way for a browser to know that this channel is not needed anymore.</p>
+<p>The <strong><code>BroadcastChannel.close()</code></strong> terminates the connection to
+  the underlying channel, allowing the object to be garbage collected. This is a necessary
+  step to perform as there is no other way for a browser to know that this channel is not
+  needed anymore.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>str</em> = <em>channe<code>l</code></em><code>.close();</code>
+<pre class="brush: js">var str = channel.close();
 </pre>
 
 <h2 id="Example">Example</h2>
@@ -35,18 +38,19 @@ bc.close();
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "comms.html#dom-broadcastchannel-close", "BroadcastChannel.close()")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', "comms.html#dom-broadcastchannel-close",
+        "BroadcastChannel.close()")}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -56,5 +60,5 @@ bc.close();
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("BroadcastChannel")}}, the interface it belongs to.</li>
+  <li>{{domxref("BroadcastChannel")}}, the interface it belongs to.</li>
 </ul>

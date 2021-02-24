@@ -29,7 +29,7 @@ tags:
 
 <p>The <code>Clear-Site-Data</code> header accepts one or more directives. If all types of data should be cleared, the wildcard directive (<code>"*"</code>) can be used.</p>
 
-<pre class="notranslate">// Single directive
+<pre>// Single directive
 Clear-Site-Data: "cache"
 
 // Multiple directives (comma separated)
@@ -73,31 +73,27 @@ Clear-Site-Data: "*"
 
 <p>If a user signs out of your website or service, you might want to remove locally stored data. You can achieve that by adding the <code>Clear-Site-Data</code> header when sending the page confirming that logging out from the site has been accomplished successfully (https://example.com/logout, for example):</p>
 
-<pre class="notranslate">Clear-Site-Data: "cache", "cookies", "storage", "executionContexts"</pre>
+<pre>Clear-Site-Data: "cache", "cookies", "storage", "executionContexts"</pre>
 
 <h3 id="Clearing_cookies">Clearing cookies</h3>
 
 <p>If this header is delivered with the response at https://example.com/clear-cookies, all cookies on the same domain https://example.com and any subdomains (like https://stage.example.com, etc), will be cleared out.</p>
 
-<pre class="notranslate">Clear-Site-Data: "cookies"</pre>
+<pre>Clear-Site-Data: "cookies"</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Title</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://w3c.github.io/webappsec-clear-site-data">Clear Site Data</a></td>
-   <td>Working Draft</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://w3c.github.io/webappsec-clear-site-data">Clear Site Data</a> (Latest Editor's Draft)</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

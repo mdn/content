@@ -2,29 +2,33 @@
 title: HTMLDialogElement.close()
 slug: Web/API/HTMLDialogElement/close
 tags:
-  - API
-  - Experimental
-  - HTML DOM
-  - HTMLDialogElement
-  - Method
-  - Reference
-  - close
+- API
+- Experimental
+- HTML DOM
+- HTMLDialogElement
+- Method
+- Reference
+- close
 ---
 <div>
-<div>{{ APIRef("HTML DOM") }}</div>
+  <div>{{ APIRef("HTML DOM") }}</div>
 
-<p>{{ SeeCompatTable() }}</p>
-The <strong><code>close()</code></strong> method of the {{domxref("HTMLDialogElement")}} interface closes the dialog. An optional {{domxref("DOMString")}} may be passed as an argument, updating the <code>returnValue</code> of the dialog.</div>
+  <p>{{ SeeCompatTable() }}</p>
+  The <strong><code>close()</code></strong> method of the {{domxref("HTMLDialogElement")}}
+  interface closes the dialog. An optional {{domxref("DOMString")}} may be passed as an
+  argument, updating the <code>returnValue</code> of the dialog.
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">dialogInstance.close(returnValue);</pre>
+<pre class="brush: js">dialogInstance.close(returnValue);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>returnValue {{optional_inline}}</dt>
- <dd>A {{domxref("DOMString")}} representing an updated value for the {{domxref("HTMLDialogElement.returnValue")}} of the dialog.</dd>
+  <dt>returnValue {{optional_inline}}</dt>
+  <dd>A {{domxref("DOMString")}} representing an updated value for the
+    {{domxref("HTMLDialogElement.returnValue")}} of the dialog.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -33,7 +37,11 @@ The <strong><code>close()</code></strong> method of the {{domxref("HTMLDialogEle
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following example shows a simple button that, when clicked, opens a {{htmlelement("dialog")}} containing a form via the <code>showModal()</code> method. From there you can click the <em>Cancel</em> button to close the dialog (via the {{domxref("HTMLDialogElement.close()")}} method), or submit the form via the submit button.</p>
+<p>The following example shows a simple button that, when clicked, opens a
+  {{htmlelement("dialog")}} containing a form via the <code>showModal()</code> method.
+  From there you can click the <em>Cancel</em> button to close the dialog (via the
+  {{domxref("HTMLDialogElement.close()")}} method), or submit the form via the submit
+  button.</p>
 
 <pre class="brush: html">  &lt;!-- Simple pop-up dialog box, containing a form --&gt;
   &lt;dialog id="favDialog"&gt;
@@ -89,31 +97,35 @@ The <strong><code>close()</code></strong> method of the {{domxref("HTMLDialogEle
   &lt;/script&gt;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: You can find this example on GitHub as <a href="https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html">htmldialogelement-basic</a> (<a href="https://mdn.github.io/dom-examples/htmldialogelement-basic/">see it live also</a>).</p>
+  <p><strong>Note</strong>: You can find this example on GitHub as <a
+      href="https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html">htmldialogelement-basic</a>
+    (<a href="https://mdn.github.io/dom-examples/htmldialogelement-basic/">see it live
+      also</a>).</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#dom-dialog-close', 'close()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'interactive-elements.html#dom-htmldialogelement-close', 'close()')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', 'forms.html#dom-dialog-close', 'close()')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML5.1', 'interactive-elements.html#dom-htmldialogelement-close',
+        'close()')}}</td>
+      <td>{{Spec2('HTML5.1')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -123,5 +135,5 @@ The <strong><code>close()</code></strong> method of the {{domxref("HTMLDialogEle
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The HTML element implementing this interface: {{ HTMLElement("dialog") }}.</li>
+  <li>The HTML element implementing this interface: {{ HTMLElement("dialog") }}.</li>
 </ul>

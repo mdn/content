@@ -9,9 +9,9 @@ tags:
   - Web
   - cascading variables
 ---
-<div>{{cssref}}</div>
+<div>{{CSSRef}}</div>
 
-<p><strong>Custom properties</strong> (sometimes referred to as <strong>CSS variables</strong> or <strong>cascading variables</strong>) are entities defined by CSS authors that contain specific values to be reused throughout a document. They are set using custom property notation (e.g., <strong><code>--main-color: black;</code></strong>) and are accessed using the {{cssxref("var", "var()")}} function (e.g., <code>color: <strong>var(--main-color)</strong>;</code>).</p>
+<p><strong>Custom properties</strong> (sometimes referred to as <strong>CSS variables</strong> or <strong>cascading variables</strong>) are entities defined by CSS authors that contain specific values to be reused throughout a document. They are set using custom property notation (e.g., <strong><code>--main-color: black;</code></strong>) and are accessed using the {{cssxref("var()", "var()")}} function (e.g., <code>color: <strong>var(--main-color)</strong>;</code>).</p>
 
 <p>Complex websites have very large amounts of CSS, often with a lot of repeated values. For example, the same color might be used in hundreds of different places, requiring global search and replace if that color needs to change. Custom properties allow a value to be stored in one place, then referenced in multiple other places. An additional benefit is semantic identifiers. For example, <code>--main-text-color</code> is easier to understand than <code>#00ff00</code>, especially if this same color is also used in other contexts.</p>
 
@@ -38,7 +38,7 @@ tags:
 <p><strong>Note</strong>: Custom property names are case sensitive — <code>--my-color</code> will be treated as a separate custom property to <code>--My-color</code>.</p>
 </div>
 
-<p>As mentioned earlier, you use the custom property value by specifying your custom property name inside the {{cssxref("var", "var()")}} function, in place of a regular property value:</p>
+<p>As mentioned earlier, you use the custom property value by specifying your custom property name inside the {{cssxref("var()", "var()")}} function, in place of a regular property value:</p>
 
 <pre class="brush:css; highlight:[2]  language-css"><em>element</em> {
   background-color: var(--main-bg-color);
@@ -142,7 +142,7 @@ tags:
 }
 </pre>
 
-<div style="display: none;">
+<div class="hidden">
 <pre class="brush:html">&lt;div&gt;
     &lt;div class="one"&gt;&lt;/div&gt;
     &lt;div class="two"&gt;Text &lt;span class="five"&gt;- more text&lt;/span&gt;&lt;/div&gt;
@@ -150,6 +150,8 @@ tags:
     &lt;textarea class="four"&gt;Lorem Ipsum&lt;/textarea&gt;
 &lt;/div&gt;
 </pre>
+</div>
+
 </div>
 
 <p>This leads to the same result as the previous example, yet allows for one canonical declaration of the desired property value; very useful if you want to change the value across the entire page later.</p>
@@ -164,7 +166,7 @@ tags:
     &lt;div class="four"&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
-</div>
+
 
 <p>... with the following CSS:</p>
 
@@ -190,7 +192,7 @@ tags:
 
 <h2 id="Custom_property_fallback_values">Custom property fallback values</h2>
 
-<p>Using the <code><a href="/en-US/docs/Web/CSS/var">var()</a></code> function, you can define multiple <strong>fallback values</strong> when the given variable is not yet defined; this can be useful when working with <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">Custom Elements</a> and <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a>.</p>
+<p>Using the <code><a href="/en-US/docs/Web/CSS/var()">var()</a></code> function, you can define multiple <strong>fallback values</strong> when the given variable is not yet defined; this can be useful when working with <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">Custom Elements</a> and <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a>.</p>
 
 <div class="notecard note">
 <p><strong><u>Fallback values</u> aren't used to fix the browser compatibility.</strong> If the browser doesn't support CSS custom Properties, the fallback value won't help. <u><strong>It's just a backup for the browser which supports CSS Custom Properties</strong></u> to choose a different value if the given variable isn't defined or has an invalid value.</p>

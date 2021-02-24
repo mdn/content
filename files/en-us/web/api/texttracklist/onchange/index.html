@@ -2,36 +2,43 @@
 title: TextTrackList.onchange
 slug: Web/API/TextTrackList/onchange
 tags:
-  - API
-  - Adding Tracks
-  - Event Handler
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Property
-  - Reference
-  - TextTrack
-  - TextTrackList
-  - addTrack
-  - onchange
-  - text track
-  - track
+- API
+- Adding Tracks
+- Event Handler
+- HTML DOM
+- HTMLMediaElement
+- Media
+- Property
+- Reference
+- TextTrack
+- TextTrackList
+- addTrack
+- onchange
+- text track
+- track
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The <strong>{{domxref("TextTrackList")}}</strong> property <strong><code>onchange</code></strong> is an event handler which is called when the {{event("change")}} event occurs, indicating that a change has occurred on a {{domxref("TextTrack")}} in the <code>VideoTrackList</code>.</span></p>
+<p><span class="seoSummary">The <strong>{{domxref("TextTrackList")}}</strong> property
+    <strong><code>onchange</code></strong> is an event handler which is called when the
+    {{event("change")}} event occurs, indicating that a change has occurred on a
+    {{domxref("TextTrack")}} in the <code>VideoTrackList</code>.</span></p>
 
 <div class="note">
-<p><strong>Note:</strong> You can also add a handler for the <code>change</code> event using {{domxref("EventTarget.addEventListener", "addEventListener()")}}.</p>
+  <p><strong>Note:</strong> You can also add a handler for the <code>change</code> event
+    using {{domxref("EventTarget.addEventListener", "addEventListener()")}}.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>TextTrackList</em>.onchange = <em>eventHandler</em>;</pre>
+<pre
+  class="brush: js"><em>TextTrackList</em>.onchange = <em>eventHandler</em>;</pre>
 
 <h2 id="Example">Example</h2>
 
-<p>This snippet establishes a handler for the {{event("change")}} event that looks at each of the tracks in the list, calling a function to update the state of a user interface control that indicates the current state of the track.</p>
+<p>This snippet establishes a handler for the {{event("change")}} event that looks at each
+  of the tracks in the list, calling a function to update the state of a user interface
+  control that indicates the current state of the track.</p>
 
 <pre class="brush: js">var trackList = document.querySelector("video, audio").textTracks;
 
@@ -43,20 +50,21 @@ trackList.onchange = function(event) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#handler-tracklist-onchange', 'TextTrackList: onchange')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#handler-tracklist-onchange', 'TextTrackList:
+        onchange')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

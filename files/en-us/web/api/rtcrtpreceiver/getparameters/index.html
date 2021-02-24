@@ -2,28 +2,33 @@
 title: RTCRtpReceiver.getParameters()
 slug: Web/API/RTCRtpReceiver/getParameters
 tags:
-  - API
-  - Configuration
-  - Media
-  - Method
-  - Options
-  - RTCRtpReceiver
-  - RTP
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - getParameters
-  - parameters
-  - rtc
+- API
+- Configuration
+- Media
+- Method
+- Options
+- RTCRtpReceiver
+- RTP
+- Reference
+- WebRTC
+- WebRTC API
+- WebRTC Device API
+- getParameters
+- parameters
+- rtc
 ---
 <p>{{APIRef("WebRTC API")}}</p>
 
-<p><span class="seoSummary">The <strong><code>getParameters()</code></strong> method of the {{domxref("RTCRtpReceiver")}} interface returns an {{domxref("RTCRtpReceiveParameters")}} object describing the current configuration for the encoding and transmission of media on the receiver's {{domxref("RTCRtpReceiver.track", "track")}}.</span></p>
+<p><span class="seoSummary">The <strong><code>getParameters()</code></strong> method of
+    the {{domxref("RTCRtpReceiver")}} interface returns an
+    {{domxref("RTCRtpReceiveParameters")}} object describing the current configuration for
+    the encoding and transmission of media on the receiver's
+    {{domxref("RTCRtpReceiver.track", "track")}}.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">let <em>rtpReceiveParameters</em> = <em>rtpReceiver</em>.getParameters();</pre>
+<pre
+  class="brush: js">let <em>rtpReceiveParameters</em> = <em>rtpReceiver</em>.getParameters();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -31,13 +36,15 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>An {{domxref("RTCRtpReceiveParameters")}} object indicating the current configuration of the receiver.</p>
+<p>An {{domxref("RTCRtpReceiveParameters")}} object indicating the current configuration
+  of the receiver.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>This example obtains the canonical name (CNAME) being used for {{Glossary("RTCP")}} on an  {{domxref("RTCRtpReceiver")}}.</p>
+<p>This example obtains the canonical name (CNAME) being used for {{Glossary("RTCP")}} on
+  an  {{domxref("RTCRtpReceiver")}}.</p>
 
-<pre class="brush: js notranslate">function getRtcpCNAME(receiver) {
+<pre class="brush: js">function getRtcpCNAME(receiver) {
   let parameters = receiver.getParameters();
 
   return parameters.rtcp.cname;
@@ -46,18 +53,19 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebRTC 1.0','#dom-rtcrtpreceiver-getparameters','RTCRtpReceiver.getParameters()')}}</td>
-   <td>{{Spec2('WebRTC 1.0')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('WebRTC
+        1.0','#dom-rtcrtpreceiver-getparameters','RTCRtpReceiver.getParameters()')}}</td>
+      <td>{{Spec2('WebRTC 1.0')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

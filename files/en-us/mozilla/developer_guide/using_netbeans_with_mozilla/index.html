@@ -6,7 +6,7 @@ slug: Mozilla/Developer_guide/Using_NetBeans_with_Mozilla
 
 <h2 id="Building_the_Firefox_source">Building the Firefox source</h2>
 
-<p>First, <a href="/En/Simple_Firefox_build">get a copy of the Mozilla source and build it</a>, and when that page talks about creating a .mozconfig file, create a .mozconfig containing something like the following:</p>
+<p>First, <a href="/en-US/Simple_Firefox_build">get a copy of the Mozilla source and build it</a>, and when that page talks about creating a .mozconfig file, create a .mozconfig containing something like the following:</p>
 
 <pre># Put the object files in an object directory:
 mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-debug
@@ -51,18 +51,18 @@ mk_add_options MOZ_MAKE_FLAGS="-j4 -s"
 
 <ol>
  <li>Open NetBeans, open its global preferences ("NetBeans &gt; Preferences" on Mac; "Tools &gt; Options" on Linux), select the "C/C++" tab and then the "Project Options" tab, make sure that "Use Smart Build Analyzer to Configure Code Assistance" is selected, then close the preferences window.</li>
- <li>Click the New Project button, select<span> "C/C++ Project with Existing Sources", then click "Next".</span></li>
- <li><span>Select the root source directory of your copy of the Firefox source, select the configuration mode "Custom", then click "Next".</span></li>
- <li><span>Select "Use an existing makefile", set "Existing makefile" to the path of the client.mk file in the root source directory, untick "Clean and Build after Finish", then c</span>lick Next.</li>
+ <li>Click the New Project button, select "C/C++ Project with Existing Sources", then click "Next".</li>
+ <li>Select the root source directory of your copy of the Firefox source, select the configuration mode "Custom", then click "Next".</li>
+ <li>Select "Use an existing makefile", set "Existing makefile" to the path of the client.mk file in the root source directory, untick "Clean and Build after Finish", then click Next.</li>
  <li>Set the working directory to the root source directory, set the build command to 'bash -l -c "make -f client.mk"' (invoking bash to run make is necessary to avoid errors due to dependencies not being found because NetBeans' PATH is missing certain paths), set the clean command to 'rm -rf obj-debug' ('make clean' is not 100% reliable), set the build result to "obj-debug/dist/bin/firefox", then click Next.</li>
  <li>Change the exclude pattern to "^(nbproject|test|tests)$", then click Next.</li>
- <li>Select <span>Automatic Configuration then click Next.</span></li>
- <li><span>Give the project a meaningful name, and probably you should change the "Project Location" to be the root source directory (rather than that directory's parent, which is what NetBeans chooses by default), deselect "Set as Main Project", then click "Finish".</span></li>
+ <li>Select Automatic Configuration then click Next.</li>
+ <li>Give the project a meaningful name, and probably you should change the "Project Location" to be the root source directory (rather than that directory's parent, which is what NetBeans chooses by default), deselect "Set as Main Project", then click "Finish".</li>
 </ol>
 
 <p>After a moment or two the New Project wizard window will close, and you should see the message "Analyzing project" in the status bar at the bottom right of the window.</p>
 
-<p>ARGH! After the "Analyzing project" stage (30 second or so) NetBeans will start parsing the source files in the project, even though you deselected <span>"Clean and Build after Finish" and therefore it won't yet have the build information it needs to make sense of the code</span>. Cancel it.</p>
+<p>ARGH! After the "Analyzing project" stage (30 second or so) NetBeans will start parsing the source files in the project, even though you deselected "Clean and Build after Finish" and therefore it won't yet have the build information it needs to make sense of the code. Cancel it.</p>
 
 <p>Once you've turned off code assistance (for now), right click on the project name in the Projects tab on the left, and open the project specific properties by selecting Properties. Make the following changes:</p>
 
@@ -76,7 +76,7 @@ mk_add_options MOZ_MAKE_FLAGS="-j4 -s"
 
 <p>Just getting started on this list.</p>
 
-<p>After clicking "Finish" in step 7, NetBeans did a clean and rebuild despite <span>UNselect the "Clean and Build after Finish" option in step 3</span>, which was rather annoying given how long it takes to build. (Really this checkbox should probably be on the finish screen anyway, no, since that's when you're finishing?)</p>
+<p>After clicking "Finish" in step 7, NetBeans did a clean and rebuild despite UNselect the "Clean and Build after Finish" option in step 3, which was rather annoying given how long it takes to build. (Really this checkbox should probably be on the finish screen anyway, no, since that's when you're finishing?)</p>
 
 <p>Why is NetBeans 7.1 on Fedora 16 refusing to allow the build to happen without first selecting an assembler? The Mozilla build system should be the only thing to check for the required tools.</p>
 

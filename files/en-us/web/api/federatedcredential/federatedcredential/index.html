@@ -2,48 +2,53 @@
 title: FederatedCredential
 slug: Web/API/FederatedCredential/FederatedCredential
 tags:
-  - API
-  - Constructor
-  - Credential Management API
-  - FederatedCredential
-  - NeedsExample
-  - Reference
-  - credential management
+- API
+- Constructor
+- Credential Management API
+- FederatedCredential
+- NeedsExample
+- Reference
+- credential management
 ---
 <p>{{APIRef("")}}{{Non-standard_header}}</p>
 
-<p><span class="seoSummary">The <strong><code>FederatedCredential</code></strong> constructor creates a new {{domxref("FederatedCredential")}} object.</span> In supporting browsers, an instance of this class may be passed the <code>credential</code> received from the <code>init</code> object for global {{domxref('fetch')}}.</p>
+<p><span class="seoSummary">The <strong><code>FederatedCredential</code></strong>
+    constructor creates a new {{domxref("FederatedCredential")}} object.</span> In
+  supporting browsers, an instance of this class may be passed the <code>credential</code>
+  received from the <code>init</code> object for global {{domxref('fetch')}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var myCredential = new FederatedCredential(init)</pre>
+<pre
+  class="brush: js">var myCredential = new FederatedCredential(init)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><em>init</em> </dt>
- <dd>Options are:
- <ul>
-  <li><code>provider</code>: A {{domxref("USVString")}}; identifying the credential provider.</li>
- </ul>
- </dd>
+  <dt><em>init</em> </dt>
+  <dd>Options are:
+    <ul>
+      <li><code>provider</code>: A {{domxref("USVString")}}; identifying the credential
+        provider.</li>
+    </ul>
+  </dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Credential Management')}}</td>
-   <td>{{Spec2('Credential Management')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Credential Management')}}</td>
+      <td>{{Spec2('Credential Management')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

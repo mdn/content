@@ -2,21 +2,25 @@
 title: TreeWalker.expandEntityReferences
 slug: Web/API/TreeWalker/expandEntityReferences
 tags:
-  - API
-  - DOM
-  - Obsolete
-  - Property
-  - TreeWalker
+- API
+- DOM
+- Obsolete
+- Property
+- TreeWalker
 ---
-<p>{{ APIRef("DOM") }}{{obsolete_header}}</p>
+<p>{{ APIRef("DOM") }}{{deprecated_header}}</p>
 
-<p>The <code><strong>TreeWalker.expandEntityReferences</strong></code> read-only property returns a {{domxref("Boolean")}} flag indicating whether or not the children of entity reference nodes are visible to the {{domxref("TreeWalker")}}.</p>
+<p>The <code><strong>TreeWalker.expandEntityReferences</strong></code> read-only property
+  returns a {{domxref("Boolean")}} flag indicating whether or not the children of entity
+  reference nodes are visible to the {{domxref("TreeWalker")}}.</p>
 
-<p>If this value is <code>false</code>, the children of entity reference nodes (as well as all of their descendants) are rejected. This takes precedence over the value of the  {{domxref("TreeWalker.whatToShow")}} method and the associated filter.</p>
+<p>If this value is <code>false</code>, the children of entity reference nodes (as well as
+  all of their descendants) are rejected. This takes precedence over the value of the 
+  {{domxref("TreeWalker.whatToShow")}} method and the associated filter.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>expand</em> = <em>treeWalker</em>.expandEntityReferences;
+<pre class="brush: js"><em>expand</em> = <em>treeWalker</em>.expandEntityReferences;
 </pre>
 
 <h2 id="Example">Example</h2>
@@ -32,13 +36,15 @@ expand = treeWalker.expandEntityReferences;</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-TreeWalker-expandEntityReferences', 'TreeWalker.expandEntityReferences')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM2 Traversal_Range',
+        'traversal.html#Traversal-TreeWalker-expandEntityReferences',
+        'TreeWalker.expandEntityReferences')}}</td>
+      <td>{{Spec2('DOM2 Traversal_Range')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -48,5 +54,5 @@ expand = treeWalker.expandEntityReferences;</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The interface this property belongs to: {{domxref("TreeWalker")}}.</li>
+  <li>The interface this property belongs to: {{domxref("TreeWalker")}}.</li>
 </ul>

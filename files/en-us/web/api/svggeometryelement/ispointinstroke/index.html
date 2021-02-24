@@ -2,27 +2,33 @@
 title: SVGGeometryElement.isPointInStroke()
 slug: Web/API/SVGGeometryElement/isPointInStroke
 tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-  - SVG
-  - SVG DOM
+- API
+- DOM
+- Method
+- Reference
+- SVG
+- SVG DOM
 ---
 <div>{{APIRef("SVG")}}</div>
 
-<p>The <code><strong>SVGGeometryElement.isPointInStroke()</strong></code> method determines whether a given point is within the stroke shape of an element. Normal hit testing rules apply; the value of the {{cssxref("pointer-events")}} property on the element determines whether a point is considered to be within the stroke. The <code>point</code> argument is interpreted as a point in the local coordiante system of the element.</p>
+<p>The <code><strong>SVGGeometryElement.isPointInStroke()</strong></code> method
+  determines whether a given point is within the stroke shape of an element. Normal hit
+  testing rules apply; the value of the {{cssxref("pointer-events")}} property on the
+  element determines whether a point is considered to be within the stroke. The
+  <code>point</code> argument is interpreted as a point in the local coordiante system of
+  the element.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">boolean <var>someElement</var>.isPointInStroke(DOMPointInit <var>point</var>);
+<pre class="brush: js">boolean <var>someElement</var>.isPointInStroke(DOMPointInit <var>point</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>point</dt>
- <dd>A {{domxref("DOMPointInit")}} interpreted as a point in the local coordinate system of the element.</dd>
+  <dt>point</dt>
+  <dd>A {{domxref("DOMPointInit")}} interpreted as a point in the local coordinate system
+    of the element.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -63,18 +69,19 @@ console.log('Point at 83,17:', circle.isPointInStroke(new DOMPoint(83, 17)));</p
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "types.html#__svg__SVGGeometryElement__isPointInStroke", "SVGGeometryElement.isPointInStroke()")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("SVG2", "types.html#__svg__SVGGeometryElement__isPointInStroke",
+        "SVGGeometryElement.isPointInStroke()")}}</td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

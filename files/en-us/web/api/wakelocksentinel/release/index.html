@@ -2,21 +2,24 @@
 title: WakeLockSentinel.release()
 slug: Web/API/WakeLockSentinel/release
 tags:
-  - API
-  - Method
-  - Reference
-  - Screen Wake Lock API
-  - Wake Lock
-  - WakeLockSentinel
-  - screen
+- API
+- Method
+- Reference
+- Screen Wake Lock API
+- Wake Lock
+- WakeLockSentinel
+- screen
 ---
 <div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}</div>
 
-<p class="summary">The <strong><code>release()</code></strong> method of the {{domxref("WakeLockSentinel")}} interface releases the {{domxref("WakeLockSentinel")}}, returning a {{jsxref("Promise")}} that is resolved once the sentinel has been successfully released.</p>
+<p class="summary">The <strong><code>release()</code></strong> method of the
+	{{domxref("WakeLockSentinel")}} interface releases the
+	{{domxref("WakeLockSentinel")}}, returning a {{jsxref("Promise")}} that is resolved
+	once the sentinel has been successfully released.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">WakeLockSentinel.release().then(...);</pre>
+<pre class="brush: js">WakeLockSentinel.release().then(...);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -28,13 +31,15 @@ tags:
 
 <h3 id="Exceptions">Exceptions</h3>
 
-<p>No exceptions are thrown. You should always listen for the {{domxref('onrelease')}} event to check if a wake lock has been released.</p>
+<p>No exceptions are thrown. You should always listen for the {{domxref('onrelease')}}
+	event to check if a wake lock has been released.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>In this example, when a user clicks a button the {{domxref("WakeLockSentinel")}} is released.</p>
+<p>In this example, when a user clicks a button the {{domxref("WakeLockSentinel")}} is
+	released.</p>
 
-<pre class="brush: js notranslate">wakeLockOffButton.addEventListener('click', () =&gt; {
+<pre class="brush: js">wakeLockOffButton.addEventListener('click', () =&gt; {
   WakeLockSentinel.release();
 })
 </pre>

@@ -30,7 +30,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var creating = browser.windows.create(
+<pre class="brush:js">var creating = browser.windows.create(
   createData            // optional object
 )
 </pre>
@@ -48,7 +48,7 @@ tags:
 
   <ul>
    <li>this only applies to the tabs that were opened when the window was created. If the user opens more tabs in this window, then scripts will not be able to close those new tabs.</li>
-   <li>if the url(s) given in <code>url</code> point to <a href="/en-US/Add-ons/WebExtensions/user_interface/Bundled_web_pages">extension pages</a> (that is, they are pages included with this extension and loaded with the "moz-extension:" protocol) then scripts <em>are</em> by default allowed to close those tabs.</li>
+   <li>if the url(s) given in <code>url</code> point to <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">extension pages</a> (that is, they are pages included with this extension and loaded with the "moz-extension:" protocol) then scripts <em>are</em> by default allowed to close those tabs.</li>
   </ul>
   </dd>
   <dt><code>cookieStoreId</code> {{optional_inline}}</dt>

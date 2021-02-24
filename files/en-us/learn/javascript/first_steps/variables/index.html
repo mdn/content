@@ -11,7 +11,7 @@ tags:
   - Variables
   - declaring
   - initializing
-  - 'l10n:priority'
+  - l10n:priority
   - loose typing
   - strings
 ---
@@ -42,9 +42,9 @@ tags:
 
 <p>A variable is a container for a value, like a number we might use in a sum, or a string that we might use as part of a sentence. But one special thing about variables is that their contained values can change. Let's look at a simple example:</p>
 
-<pre class="brush: html notranslate">&lt;button&gt;Press me&lt;/button&gt;</pre>
+<pre class="brush: html">&lt;button&gt;Press me&lt;/button&gt;</pre>
 
-<pre class="brush: js notranslate">const button = document.querySelector('button');
+<pre class="brush: js">const button = document.querySelector('button');
 
 button.onclick = function() {
   let name = prompt('What is your name?');
@@ -57,7 +57,7 @@ button.onclick = function() {
 
 <p>To understand why this is so useful, let's think about how we'd write this example without using a variable. It would end up looking something like this:</p>
 
-<pre class="example-bad notranslate">let name = prompt('What is your name?');
+<pre class="example-bad">let name = prompt('What is your name?');
 
 if (name === 'Adam') {
   alert('Hello Adam, nice to see you!');
@@ -83,13 +83,13 @@ if (name === 'Adam') {
 <p><strong>Note</strong>: We say variables contain values. This is an important distinction to make. Variables aren't the values themselves; they are containers for values. You can think of them being like little cardboard boxes that you can store things in.</p>
 </div>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13506/boxes.png" style="display: block; height: 436px; margin: 0px auto; width: 1052px;"></p>
+<p><img alt="" src="boxes.png" style="display: block; margin: 0px auto;"></p>
 
 <h2 id="Declaring_a_variable">Declaring a variable</h2>
 
 <p>To use a variable, you've first got to create it — more accurately, we call this declaring the variable. To do this, we type the keyword <code>var</code> or <code>let</code> followed by the name you want to call your variable:</p>
 
-<pre class="brush: js notranslate">let myName;
+<pre class="brush: js">let myName;
 let myAge;</pre>
 
 <p>Here we're creating two variables called <code>myName</code> and <code>myAge</code>. Try typing these lines into your web browser's console. After that, try creating a variable (or two) with your own name choices.</p>
@@ -100,12 +100,12 @@ let myAge;</pre>
 
 <p>You can test whether these values now exist in the execution environment by typing just the variable's name, e.g.</p>
 
-<pre class="brush: js notranslate">myName;
+<pre class="brush: js">myName;
 myAge;</pre>
 
 <p>They currently have no value; they are empty containers. When you enter the variable names, you should get a value of <code>undefined</code> returned. If they don't exist, you'll get an error message — try typing in</p>
 
-<pre class="brush: js notranslate">scoobyDoo;</pre>
+<pre class="brush: js">scoobyDoo;</pre>
 
 <div class="note">
 <p><strong>Note</strong>: Don't confuse a variable that exists but has no defined value with a variable that doesn't exist at all — they are very different things. In the box analogy you saw above, not existing would mean there's no box (variable) for a value to go in. No value defined would mean that there IS a box, but it has no value inside it.</p>
@@ -115,17 +115,17 @@ myAge;</pre>
 
 <p>Once you've declared a variable, you can initialize it with a value. You do this by typing the variable name, followed by an equals sign (<code>=</code>), followed by the value you want to give it. For example:</p>
 
-<pre class="brush: js notranslate">myName = 'Chris';
+<pre class="brush: js">myName = 'Chris';
 myAge = 37;</pre>
 
 <p>Try going back to the console now and typing in these lines. You should see the value you've assigned to the variable returned in the console to confirm it, in each case. Again, you can return your variable values by typing their name into the console — try these again:</p>
 
-<pre class="brush: js notranslate">myName;
+<pre class="brush: js">myName;
 myAge;</pre>
 
 <p>You can declare and initialize a variable at the same time, like this:</p>
 
-<pre class="brush: js notranslate">let myDog = 'Rover';</pre>
+<pre class="brush: js">let myDog = 'Rover';</pre>
 
 <p>This is probably what you'll do most of the time, as it is quicker than doing the two actions on two separate lines.</p>
 
@@ -139,7 +139,7 @@ myAge;</pre>
 
 <p>For a start, if you write a multiline JavaScript program that declares and initializes a variable, you can actually declare a variable with <code>var</code> after you initialize it and it will still work. For example:</p>
 
-<pre class="brush: js notranslate">myName = 'Chris';
+<pre class="brush: js">myName = 'Chris';
 
 function logName() {
   console.log(myName);
@@ -159,17 +159,17 @@ var myName;</pre>
 
 <p>Secondly, when you use <code>var</code>, you can declare the same variable as many times as you like, but with <code>let</code> you can't. The following would work:</p>
 
-<pre class="brush: js notranslate">var myName = 'Chris';
+<pre class="brush: js">var myName = 'Chris';
 var myName = 'Bob';</pre>
 
 <p>But the following would throw an error on the second line:</p>
 
-<pre class="brush: js notranslate">let myName = 'Chris';
+<pre class="brush: js">let myName = 'Chris';
 let myName = 'Bob';</pre>
 
 <p>You'd have to do this instead:</p>
 
-<pre class="brush: js notranslate">let myName = 'Chris';
+<pre class="brush: js">let myName = 'Chris';
 myName = 'Bob';</pre>
 
 <p>Again, this is a sensible language decision. There is no reason to redeclare variables — it just makes things more confusing.</p>
@@ -180,7 +180,7 @@ myName = 'Bob';</pre>
 
 <p>Once a variable has been initialized with a value, you can change (or update) that value by giving it a different value. Try entering the following lines into your console:</p>
 
-<pre class="brush: js notranslate">myName = 'Bob';
+<pre class="brush: js">myName = 'Bob';
 myAge = 40;</pre>
 
 <h3 id="An_aside_on_variable_naming_rules">An aside on variable naming rules</h3>
@@ -198,12 +198,12 @@ myAge = 40;</pre>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: You can find a fairly complete list of reserved keywords to avoid at <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords">Lexical grammar — keywords</a>.</p>
+<p><strong>Note</strong>: You can find a fairly complete list of reserved keywords to avoid at <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords">Lexical grammar — keywords</a>.</p>
 </div>
 
 <p>Good name examples:</p>
 
-<pre class="example-good notranslate">age
+<pre class="example-good">age
 myAge
 init
 initialColor
@@ -213,7 +213,7 @@ audio2</pre>
 
 <p>Bad name examples:</p>
 
-<pre class="example-bad notranslate">1
+<pre class="example-bad">1
 a
 _12
 myage
@@ -235,23 +235,23 @@ thisisareallylongstupidvariablenameman</pre>
 
 <p>You can store numbers in variables, either whole numbers like 30 (also called integers) or decimal numbers like 2.456 (also called floats or floating point numbers). You don't need to declare variable types in JavaScript, unlike some other programming languages. When you give a variable a number value, you don't include quotes:</p>
 
-<pre class="brush: js notranslate">let myAge = 17;</pre>
+<pre class="brush: js">let myAge = 17;</pre>
 
 <h3 id="Strings">Strings</h3>
 
 <p>Strings are pieces of text. When you give a variable a string value, you need to wrap it in single or double quote marks; otherwise, JavaScript tries to interpret it as another variable name.</p>
 
-<pre class="brush: js notranslate">let dolphinGoodbye = 'So long and thanks for all the fish';</pre>
+<pre class="brush: js">let dolphinGoodbye = 'So long and thanks for all the fish';</pre>
 
 <h3 id="Booleans">Booleans</h3>
 
 <p>Booleans are true/false values — they can have two values, <code>true</code> or <code>false</code>. These are generally used to test a condition, after which code is run as appropriate. So for example, a simple case would be:</p>
 
-<pre class="brush: js notranslate">let iAmAlive = true;</pre>
+<pre class="brush: js">let iAmAlive = true;</pre>
 
 <p>Whereas in reality it would be used more like this:</p>
 
-<pre class="brush: js notranslate">let test = 6 &lt; 3;</pre>
+<pre class="brush: js">let test = 6 &lt; 3;</pre>
 
 <p>This is using the "less than" operator (<code>&lt;</code>) to test whether 6 is less than 3. As you might expect, it returns <code>false</code>, because 6 is not less than 3! You will learn a lot more about such operators later on in the course.</p>
 
@@ -259,12 +259,12 @@ thisisareallylongstupidvariablenameman</pre>
 
 <p>An array is a single object that contains multiple values enclosed in square brackets and separated by commas. Try entering the following lines into your console:</p>
 
-<pre class="brush: js notranslate">let myNameArray = ['Chris', 'Bob', 'Jim'];
+<pre class="brush: js">let myNameArray = ['Chris', 'Bob', 'Jim'];
 let myNumberArray = [10, 15, 40];</pre>
 
 <p>Once these arrays are defined, you can access each value by their location within the array. Try these lines:</p>
 
-<pre class="brush: js notranslate">myNameArray[0]; // should return 'Chris'
+<pre class="brush: js">myNameArray[0]; // should return 'Chris'
 myNumberArray[2]; // should return 40</pre>
 
 <p>The square brackets specify an index value corresponding to the position of the value you want returned. You might have noticed that arrays in JavaScript are zero-indexed: the first element is at index 0.</p>
@@ -277,11 +277,11 @@ myNumberArray[2]; // should return 40</pre>
 
 <p>Try entering the following line into your console:</p>
 
-<pre class="brush: js notranslate">let dog = { name : 'Spot', breed : 'Dalmatian' };</pre>
+<pre class="brush: js">let dog = { name : 'Spot', breed : 'Dalmatian' };</pre>
 
 <p>To retrieve the information stored in the object, you can use the following syntax:</p>
 
-<pre class="brush: js notranslate">dog.name</pre>
+<pre class="brush: js">dog.name</pre>
 
 <p>We won't be looking at objects any more for now — you can learn more about those in <a href="/en-US/docs/Learn/JavaScript/Objects">a future module</a>.</p>
 
@@ -291,11 +291,11 @@ myNumberArray[2]; // should return 40</pre>
 
 <p>For example, if you declare a variable and give it a value enclosed in quotes, the browser treats the variable as a string:</p>
 
-<pre class="brush: js notranslate">let myString = 'Hello';</pre>
+<pre class="brush: js">let myString = 'Hello';</pre>
 
 <p>Even if the value contains numbers, it is still a string, so be careful:</p>
 
-<pre class="brush: js notranslate">let myNumber = '500'; // oops, this is still a string
+<pre class="brush: js">let myNumber = '500'; // oops, this is still a string
 typeof myNumber;
 myNumber = 500; // much better — now this is a number
 typeof myNumber;</pre>
@@ -308,12 +308,12 @@ typeof myNumber;</pre>
 
 <p>In the early days of JavaScript, constants didn't exist. In modern JavaScript, we have the keyword <code>const</code>, which lets us store values that can never be changed:</p>
 
-<pre class="brush: js notranslate">const daysInWeek = 7<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-number">;
+<pre class="brush: js">const daysInWeek = 7<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-number">;
 const hoursInDay = 24;</span></span></span></span></pre>
 
 <p><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-number"><code>const</code> works in exactly the same way as <code>let</code>, except that you can't give a <code>const</code> a new value. In the following example, the second line would throw an error:</span></span></span></span></p>
 
-<pre class="brush: js notranslate">const daysInWeek = 7<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-number">;
+<pre class="brush: js">const daysInWeek = 7<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-number">;
 daysInWeek = 8;</span></span></span></span></pre>
 
 <h2 id="Test_your_skills!">Test your skills!</h2>

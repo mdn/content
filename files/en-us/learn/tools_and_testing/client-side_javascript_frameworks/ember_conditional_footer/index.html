@@ -47,12 +47,12 @@ tags:
  <li>
   <p>Because we need access to our service from the footer component, we need to generate a class for the footer. Enter the following terminal command to do so:</p>
 
-  <pre class="brush: bash notranslate">ember generate component-class footer</pre>
+  <pre class="brush: bash">ember generate component-class footer</pre>
  </li>
  <li>
   <p>Next, go and find the newly-created <code>todomvc/app/components/footer.js</code> file and update it to the following:</p>
 
-  <pre class="brush: js notranslate">import Component from '@glimmer/component';
+  <pre class="brush: js">import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
 
 export default class FooterComponent extends Component {
@@ -64,7 +64,7 @@ export default class FooterComponent extends Component {
 
   <p>In <code>todo-data.js</code>, add the following getter underneath the existing <code>all()</code> getter to define what the incomplete todos actually are:</p>
 
-  <pre class="brush: js notranslate">get incomplete() {
+  <pre class="brush: js">get incomplete() {
   return this.todos.filter(todo =&gt; {
     return todo.isCompleted === false;
   });
@@ -75,7 +75,7 @@ export default class FooterComponent extends Component {
  <li>
   <p>Next, add the following action underneath the existing <code>add(text)</code> action:</p>
 
-  <pre class="brush: js notranslate">@action
+  <pre class="brush: js">@action
 clearCompleted() {
   this.todos = this.incomplete;
 }</pre>
@@ -88,20 +88,20 @@ clearCompleted() {
  <li>
   <p>First of all, replace this line:</p>
 
-  <pre class="brush: js notranslate">&lt;strong&gt;0&lt;/strong&gt; todos left</pre>
+  <pre class="brush: js">&lt;strong&gt;0&lt;/strong&gt; todos left</pre>
 
   <p>With this, which populates the incomplete number with the length of the <code>incomplete</code> array:</p>
 
-  <pre class="brush: js notranslate">&lt;strong&gt;\{{this.todos.incomplete.length}}&lt;/strong&gt; todos left</pre>
+  <pre class="brush: js">&lt;strong&gt;\{{this.todos.incomplete.length}}&lt;/strong&gt; todos left</pre>
  </li>
  <li>
   <p>Next, replace this:</p>
 
-  <pre class="brush: html notranslate">&lt;button type="button" class="clear-completed"&gt;</pre>
+  <pre class="brush: html">&lt;button type="button" class="clear-completed"&gt;</pre>
 
   <p>With this:</p>
 
-  <pre class="brush: js notranslate">&lt;button type="button" class="clear-completed" \{{on 'click' this.todos.clearCompleted}}&gt;</pre>
+  <pre class="brush: js">&lt;button type="button" class="clear-completed" \{{on 'click' this.todos.clearCompleted}}&gt;</pre>
  </li>
 </ol>
 
@@ -114,17 +114,17 @@ clearCompleted() {
 
 <p>To fix this, we need to update this part of the template to include some conditional rendering. In ember, you can conditionally render parts of the template using <a href="https://guides.emberjs.com/v3.18.0/components/conditional-content/">conditional content</a>; a simple block example looks something like this:</p>
 
-<pre class="brush: js notranslate">\{{#if this.thingIsTrue}}
+<pre class="brush: js">\{{#if this.thingIsTrue}}
   Content for the block form of "if"
 \{{/if}}</pre>
 
 <p>So let's try replacing this part of <code>footer.hbs</code>:</p>
 
-<pre class="brush: js notranslate">&lt;strong&gt;\{{this.todos.incomplete.length}}&lt;/strong&gt; todos left</pre>
+<pre class="brush: js">&lt;strong&gt;\{{this.todos.incomplete.length}}&lt;/strong&gt; todos left</pre>
 
 <p>with the following:</p>
 
-<pre class="brush: js notranslate">&lt;strong&gt;\{{this.todos.incomplete.length}}&lt;/strong&gt;
+<pre class="brush: js">&lt;strong&gt;\{{this.todos.incomplete.length}}&lt;/strong&gt;
   \{{#if this.todos.incomplete.length === 1}}
     todo
   \{{else}}
@@ -136,13 +136,13 @@ clearCompleted() {
 
 <p>Add the following new getter to <code>todo-data.js</code>, just below the existing getters. Note that here we need <code>this.incomplete.length</code>, not <code>this.todos.incomplete.length</code>, because we are doing this inside the service, where the <code>incomplete()</code> getter is available directly (in the template, the contents of the service has been made available as <code>todos</code> via the <code>@service('todo-data') todos;</code> line inside the footer class, hence it being <code>this.todos.incomplete.length</code> there).</p>
 
-<pre class="brush: js notranslate">get todoCountIsOne() {
+<pre class="brush: js">get todoCountIsOne() {
   return this.incomplete.length === 1;
 }</pre>
 
 <p>Then go back over to <code>footer.hbs</code> and update the previous template section we edited to the following:</p>
 
-<pre class="brush: js notranslate">&lt;strong&gt;\{{this.todos.incomplete.length}}&lt;/strong&gt;
+<pre class="brush: js">&lt;strong&gt;\{{this.todos.incomplete.length}}&lt;/strong&gt;
   \{{#if this.todos.todoCountIsOne}}
     todo
   \{{else}}
@@ -154,7 +154,7 @@ clearCompleted() {
 
 <p>Note that this is the block form of <code>if</code> in ember; you could also use the inline form:</p>
 
-<pre class="brush: js notranslate">\{{if this.todos.todoCountIsOne "todo" "todos"}}</pre>
+<pre class="brush: js">\{{if this.todos.todoCountIsOne "todo" "todos"}}</pre>
 
 <h2 id="Completing_todos">Completing todos</h2>
 
@@ -166,12 +166,12 @@ clearCompleted() {
  <li>
   <p>Run the following command in your terminal:</p>
 
-  <pre class="brush: bash notranslate">ember generate component-class todo</pre>
+  <pre class="brush: bash">ember generate component-class todo</pre>
  </li>
  <li>
   <p>Now go to the newly-created <code>todomvc/app/components/todo.js</code> file and update the contents to look like so, to give the todo component access to the service:</p>
 
-  <pre class="brush: js notranslate">import Component from '@glimmer/component';
+  <pre class="brush: js">import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
 
 export default class TodoComponent extends Component {
@@ -181,7 +181,7 @@ export default class TodoComponent extends Component {
  <li>
   <p>Next, go back again to our <code>todo-data.js</code> service file and add the following action just below the previous ones, which will allow us to toggle a completion state for each todo:</p>
 
-  <pre class="brush: js notranslate">@action
+  <pre class="brush: js">@action
 toggleCompletion(todo) {
   todo.isCompleted = !todo.isCompleted;
 }</pre>
@@ -196,16 +196,16 @@ toggleCompletion(todo) {
  <li>
   <p>In <code>todo.hbs</code>, first find the following line:</p>
 
-  <pre class="brush: html notranslate">&lt;li&gt;</pre>
+  <pre class="brush: html">&lt;li&gt;</pre>
 
   <p>And replace it with this — you'll notice that here we're using some more conditional content to add the class value if appropriate:</p>
 
-  <pre class="brush: js notranslate">&lt;li class="\{{ if @todo.isCompleted 'completed' }}"&gt;</pre>
+  <pre class="brush: js">&lt;li class="\{{ if @todo.isCompleted 'completed' }}"&gt;</pre>
  </li>
  <li>
   <p>Next, find the following line:</p>
 
-  <pre class="brush: html notranslate">&lt;input
+  <pre class="brush: html">&lt;input
   aria-label="Toggle the completion of this todo"
   class="toggle"
   type="checkbox"
@@ -213,7 +213,7 @@ toggleCompletion(todo) {
 
   <p>And replace it with this:</p>
 
-  <pre class="brush: js notranslate">&lt;input
+  <pre class="brush: js">&lt;input
   class="toggle"
   type="checkbox"
   aria-label="Toggle the completion of this todo"
@@ -222,14 +222,14 @@ toggleCompletion(todo) {
 &gt;</pre>
 
   <div class="notecard note">
-  <p><strong>Note</strong>: The above snippet uses a new Ember-specific keyword — <code>fn</code>. <code>fn</code> allows for <a href="https://en.wikipedia.org/wiki/Partial_application">partial application</a>, which is similar to <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind">bind</a></code>, but it never changes the invocation context; this is equivalent to using <code>bind</code> with a <code>null</code> first argument.</p>
+  <p><strong>Note</strong>: The above snippet uses a new Ember-specific keyword — <code>fn</code>. <code>fn</code> allows for <a href="https://en.wikipedia.org/wiki/Partial_application">partial application</a>, which is similar to <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">bind</a></code>, but it never changes the invocation context; this is equivalent to using <code>bind</code> with a <code>null</code> first argument.</p>
   </div>
  </li>
 </ol>
 
 <p>Try restarting the dev server and going to <code>localhost:4200</code> again, and you'll now see that we have a fully-operational <s>battlestation</s> “todos left” counter and Clear button:</p>
 
-<p><img alt="todos being marked as complete, and cleared" src="https://mdn.mozillademos.org/files/17233/todos-being-marked-completed-and-cleared.gif" style="height: 731px; width: 854px;"></p>
+<p><img alt="todos being marked as complete, and cleared" src="todos-being-marked-completed-and-cleared.gif"></p>
 
 <p>If you're asking yourself why we're not just doing the toggle on the component, since the function is entirely self-contained and not at all needing anything from the service, then you are 100% right to ask that question! However, because *eventually*, we'll want to persist or sync all changes to the todos list to <a href="/en-US/docs/Web/API/Window/localStorage">local storage</a> (see the <a href="https://nullvoxpopuli.github.io/ember-todomvc-tutorial/">final version of the app</a>), it makes sense to have all persistent-state-changing operations be in the same place.</p>
 

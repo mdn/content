@@ -2,23 +2,30 @@
 title: URLUtilsReadOnly.origin
 slug: Web/API/URLUtilsReadOnly/origin
 tags:
-  - API
-  - Experimental
-  - Expérimental(2)
-  - Property
-  - Read-only
-  - URL API
-  - URLUtilsReadOnly
+- API
+- Experimental
+- Expérimental(2)
+- Property
+- Read-only
+- URL API
+- URLUtilsReadOnly
 ---
 <p>{{ApiRef("URL API")}}{{SeeCompatTable}}</p>
 
-<p>The <code><strong>URLUtilsReadOnly</strong></code><strong><code>.origin</code></strong> read-only property is a {{domxref("DOMString")}} containing the Unicode serialization of the origin of the represented URL, that is, for http and https, the scheme followed by <code>'://'</code>, followed by the domain, followed by <code>':'</code>, followed by the port (the default port, <code>80</code> and <code>443</code> respectively, if explicitely specified). For URL using <code>file:</code> scheme, the value is browser dependant.</p>
+<p>The <code><strong>URLUtilsReadOnly</strong></code><strong><code>.origin</code></strong>
+	read-only property is a {{domxref("DOMString")}} containing the Unicode serialization
+	of the origin of the represented URL, that is, for http and https, the scheme followed
+	by <code>'://'</code>, followed by the domain, followed by <code>':'</code>, followed
+	by the port (the default port, <code>80</code> and <code>443</code> respectively, if
+	explicitly specified). For URL using <code>file:</code> scheme, the value is browser
+	dependant.</p>
 
-<p>This version of <code>origin</code> is implemented by {{domxref("WorkerLocation")}} for use on workers.</p>
+<p>This version of <code>origin</code> is implemented by {{domxref("WorkerLocation")}} for
+	use on workers.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.origin;
+<pre class="brush: js"><em>string</em> = <em>object</em>.origin;
 </pre>
 
 <h2 id="Examples">Examples</h2>

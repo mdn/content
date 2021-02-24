@@ -2,32 +2,40 @@
 title: Document.createEvent()
 slug: Web/API/Document/createEvent
 tags:
-  - API
-  - DOM
-  - Method
-  - Reference
+- API
+- DOM
+- Method
+- Reference
 ---
 <div class="warning">
-<p>Many methods used with <code>createEvent</code>, such as <code>initCustomEvent</code>, are deprecated. Use <a href="/en-US/docs/Web/API/CustomEvent">event constructors</a> instead.</p>
+  <p>Many methods used with <code>createEvent</code>, such as
+    <code>initCustomEvent</code>, are deprecated. Use <a
+      href="/en-US/docs/Web/API/CustomEvent">event constructors</a> instead.</p>
 </div>
 
 <div>{{ApiRef("DOM")}}</div>
 
-<p>Creates an <a href="/en-US/docs/DOM/event">event</a> of the type specified. The returned object should be first initialized and can then be passed to {{domxref("EventTarget.dispatchEvent")}}.</p>
+<p>Creates an <a href="/en-US/docs/DOM/event">event</a> of the type specified. The
+  returned object should be first initialized and can then be passed to
+  {{domxref("EventTarget.dispatchEvent")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>event</var> = <var>document</var>.createEvent(<var>type</var>);
+<pre class="brush: js">var <var>event</var> = <var>document</var>.createEvent(<var>type</var>);
 </pre>
 
 <ul>
- <li><code><var>event</var></code> is the created <a href="/en-US/docs/DOM/event">Event</a> object.</li>
- <li><code><var>type</var></code> is a string that represents the type of event to be created. Possible event types include <code>"UIEvents"</code>, <code>"MouseEvents"</code>, <code>"MutationEvents"</code>, and <code>"HTMLEvents"</code>. See {{Anch("Notes")}} section for details.</li>
+  <li><code><var>event</var></code> is the created <a
+      href="/en-US/docs/DOM/event">Event</a> object.</li>
+  <li><code><var>type</var></code> is a string that represents the type of event to be
+    created. Possible event types include <code>"UIEvents"</code>,
+    <code>"MouseEvents"</code>, <code>"MutationEvents"</code>, and
+    <code>"HTMLEvents"</code>. See {{Anch("Notes")}} section for details.</li>
 </ul>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">// Create the event.
+<pre class="brush: js">// Create the event.
 var event = document.createEvent('Event');
 
 // Define that the event name is 'build'.
@@ -44,52 +52,56 @@ elem.dispatchEvent(event);
 
 <h2 id="Notes">Notes</h2>
 
-<p>Event type strings suitable for passing to <code>createEvent()</code> are listed in the <a href="https://dom.spec.whatwg.org/#dom-document-createevent">DOM standard — see the table in step 2</a>. Bear in mind that most event objects now have constructors, which are the modern recommended way to create event object instances.</p>
+<p>Event type strings suitable for passing to <code>createEvent()</code> are listed in the
+  <a href="https://dom.spec.whatwg.org/#dom-document-createevent">DOM standard — see the
+    table in step 2</a>. Bear in mind that most event objects now have constructors, which
+  are the modern recommended way to create event object instances.</p>
 
 <p>Gecko supports some non-standard event object aliases, which are listed below.</p>
 
 <table class="fullwidth-table">
- <tbody>
-  <tr>
-   <th>Event Module</th>
-   <th>Standard event object</th>
-   <th>Gecko also supports</th>
-  </tr>
-  <tr>
-   <td>Text event module</td>
-   <td><code>TextEvent</code></td>
-   <td><code>TextEvents</code></td>
-  </tr>
-  <tr>
-   <td>Keyboard event module</td>
-   <td><code>KeyboardEvent</code></td>
-   <td><code>KeyEvents</code></td>
-  </tr>
-  <tr>
-   <td>Basic events module</td>
-   <td><code>Event</code></td>
-   <td><code>Events</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Event Module</th>
+      <th>Standard event object</th>
+      <th>Gecko also supports</th>
+    </tr>
+    <tr>
+      <td>Text event module</td>
+      <td><code>TextEvent</code></td>
+      <td><code>TextEvents</code></td>
+    </tr>
+    <tr>
+      <td>Keyboard event module</td>
+      <td><code>KeyboardEvent</code></td>
+      <td><code>KeyEvents</code></td>
+    </tr>
+    <tr>
+      <td>Basic events module</td>
+      <td><code>Event</code></td>
+      <td><code>Events</code></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-document-createevent', 'document.createEvent')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-document-createevent', 'document.createEvent')}}
+      </td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -99,5 +111,6 @@ elem.dispatchEvent(event);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and triggering events</a></li>
+  <li><a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and
+      triggering events</a></li>
 </ul>

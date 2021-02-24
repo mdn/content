@@ -27,7 +27,7 @@ tags:
 
 <p>The first argument to the function is the name of the custom property to be substituted. An optional second argument to the function serves as a fallback value. If the custom property referenced by the first argument is invalid, the function uses the second value.</p>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}
+<pre class="brush: css">{{csssyntax}}
 </pre>
 
 <div class="note">
@@ -47,7 +47,7 @@ tags:
 
 <h3 id="Using_a_custom_property_set_on_root">Using a custom property set on :root</h3>
 
-<pre class="brush: css notranslate">:root {
+<pre class="brush: css">:root {
   --main-bg-color: pink;
 }
 
@@ -58,7 +58,7 @@ body {
 
 <h3 id="Custom_properties_with_fallbacks_for_use_when_the_property_has_not_been_set">Custom properties with fallbacks for use when the property has not been set</h3>
 
-<pre class="brush: css notranslate">/* Fallback */
+<pre class="brush: css">/* Fallback */
 /* In the component’s style: */
 .component .header {
   color: var(--header-color, blue); /* header-color isn’t set, and so remains blue, the fallback value */

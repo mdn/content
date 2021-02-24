@@ -2,27 +2,30 @@
 title: Attr.localName
 slug: Web/API/Attr/localName
 tags:
-  - API
-  - DOM
-  - Property
-  - Reference
+- API
+- DOM
+- Property
+- Reference
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <code><strong>Attr.localName</strong></code> read-only property returns the local part of the qualified name of an attribute.</p>
+<p>The <code><strong>Attr.localName</strong></code> read-only property returns the local
+  part of the qualified name of an attribute.</p>
 
 <div class="note">
-<p>In previous DOM specifications this API was defined within the {{domxref("Node")}} interface.</p>
+  <p>In previous DOM specifications this API was defined within the {{domxref("Node")}}
+    interface.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>name</var> = <var>attribute</var>.localName
+<pre class="brush: js"><var>name</var> = <var>attribute</var>.localName
 </pre>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{domxref("DOMString")}} representing the local part of the attribute's qualified name.</p>
+<p>A {{domxref("DOMString")}} representing the local part of the attribute's qualified
+  name.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -45,29 +48,35 @@ element.addEventListener("click", function() {
 
 <h2 id="Notes">Notes</h2>
 
-<p>The local name of an attribute is the part of the attribute's qualified name that comes after the colon. Qualified names are typically used in XML as part of the namespace(s) of the particular XML documents.</p>
+<p>The local name of an attribute is the part of the attribute's qualified name that comes
+  after the colon. Qualified names are typically used in XML as part of the namespace(s)
+  of the particular XML documents.</p>
 
 <div class="note">
-<p><strong>Note:</strong> In {{Gecko("1.9.2")}} and earlier, the property returns the upper-cased version of the local name for HTML attributes in HTML DOMs (as opposed to XHTML attributes in XML DOMs). In later versions, in compliance with HTML5, the property returns in the case of the internal DOM storage, which is lower case for both HTML attributes in HTML DOMs and XHTML attributes in XML DOMs.</p>
+  <p><strong>Note:</strong> In {{Gecko("1.9.2")}} and earlier, the property returns the
+    upper-cased version of the local name for HTML attributes in HTML DOMs (as opposed to
+    XHTML attributes in XML DOMs). In later versions, in compliance with HTML5, the
+    property returns in the case of the internal DOM storage, which is lower case for both
+    HTML attributes in HTML DOMs and XHTML attributes in XML DOMs.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-attr-localname', 'Attr.localName')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-attr-localname', 'Attr.localName')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -77,8 +86,8 @@ element.addEventListener("click", function() {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("Attr.namespaceURI")}}</li>
- <li>{{domxref("Attr.prefix")}}</li>
- <li>{{domxref("Element.localName")}}</li>
- <li>{{domxref("Node.localName")}}</li>
+  <li>{{domxref("Attr.namespaceURI")}}</li>
+  <li>{{domxref("Attr.prefix")}}</li>
+  <li>{{domxref("Element.localName")}}</li>
+  <li>{{domxref("Node.localName")}}</li>
 </ul>

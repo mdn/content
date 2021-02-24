@@ -2,25 +2,34 @@
 title: SubtleCrypto.deriveKey()
 slug: Web/API/SubtleCrypto/deriveKey
 tags:
-  - API
-  - Crypto
-  - Method
-  - Reference
-  - SubtleCrypto
-  - Web
-  - deriveKey
+- API
+- Crypto
+- Method
+- Reference
+- SubtleCrypto
+- Web
+- deriveKey
 ---
 <p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
 
-<p>The <code><strong>deriveKey()</strong></code> method of the {{domxref("SubtleCrypto")}} interface can be used to derive a secret key from a master key.</p>
+<p>The <code><strong>deriveKey()</strong></code> method of the {{domxref("SubtleCrypto")}}
+  interface can be used to derive a secret key from a master key.</p>
 
-<p>It takes as arguments some initial key material, the derivation algorithm to use, and the desired properties for the key to derive. It returns a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a> which will be fulfilled with a {{domxref("CryptoKey")}} object representing the new key.</p>
+<p>It takes as arguments some initial key material, the derivation algorithm to use, and
+  the desired properties for the key to derive. It returns a <a
+    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
+    title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a>
+  which will be fulfilled with a {{domxref("CryptoKey")}} object representing the new key.
+</p>
 
-<p>It's worth noting that the three key derivation algorithms you can use have quite different characteristics and are appropriate in quite different situations. See <a href="#Supported_algorithms">Supported algorithms</a> for some more detail on this.</p>
+<p>It's worth noting that the three key derivation algorithms you can use have quite
+  different characteristics and are appropriate in quite different situations. See <a
+    href="#Supported_algorithms">Supported algorithms</a> for some more detail on this.
+</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">const <em>result</em> = crypto<code>.subtle.deriveKey(
+<pre class="brush: js">const <em>result</em> = crypto<code>.subtle.deriveKey(
     <em>algorithm</em>,
     <em>baseKey</em>,
     <em>derivedKeyAlgorithm</em>,
@@ -32,40 +41,74 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <ul>
- <li><code><em>algorithm</em></code> is an object defining the <a href="#Supported_algorithms">derivation algorithm</a> to use.
+  <li><code><em>algorithm</em></code> is an object defining the <a
+      href="#Supported_algorithms">derivation algorithm</a> to use.
 
-  <ul>
-   <li>To use <a href="#ECDH">ECDH</a>, pass an <code><a href="/en-US/docs/Web/API/EcdhKeyDeriveParams">EcdhKeyDeriveParams</a></code> object.</li>
-   <li>To use <a href="#HKDF">HKDF</a>, pass an <code><a href="/en-US/docs/Web/API/HkdfParams">HkdfParams</a></code> object.</li>
-   <li>To use <a href="#PBKDF2">PBKDF2</a>, pass a <code><a href="/en-US/docs/Web/API/Pbkdf2Params">Pbkdf2Params</a></code> object.</li>
-  </ul>
- </li>
- <li><em><code>baseKey</code></em> is a {{domxref("CryptoKey")}} representing the input to the derivation algorithm. If <code>algorithm</code> is ECDH, then this will be the ECDH private key. Otherwise it will be the initial key material for the derivation function: for example, for PBKDF2 it might be a password, imported as a <code>CryptoKey</code> using <code><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey()</a></code>.</li>
- <li><code><em>derivedKeyAlgorithm</em></code> is an object defining the algorithm the derived key will be used for.
-  <ul>
-   <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#HMAC">HMAC</a>: pass an <code><a href="/en-US/docs/Web/API/HmacKeyGenParams">HmacKeyGenParams</a></code> object.</li>
-   <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-CTR">AES-CTR</a>, <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-CBC">AES-CBC</a>, <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-GCM">AES-GCM</a>, or <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-KW">AES-KW</a>: pass an <code><a href="/en-US/docs/Web/API/AesKeyGenParams">AesKeyGenParams</a></code> object.</li>
-  </ul>
- </li>
- <li><code><em>extractable</em></code> is a {{jsxref("Boolean")}} indicating whether it will be possible to export  the key using {{domxref("SubtleCrypto.exportKey()")}} or {{domxref("SubtleCrypto.wrapKey()")}}.</li>
- <li><code><em>keyUsages</em></code>  is an {{jsxref("Array")}} indicating what can be done with the derived key. Note that the key usages must be allowed by the algorithm set in <code>derivedKeyAlgorithm</code>. Possible values of the array are:
-  <ul>
-   <li><code>encrypt</code>: The key may be used to {{domxref("SubtleCrypto.encrypt()", "encrypt")}} messages.</li>
-   <li><code>decrypt</code>: The key may be used to {{domxref("SubtleCrypto.decrypt()", "decrypt")}} messages.</li>
-   <li><code>sign</code>: The key may be used to {{domxref("SubtleCrypto.sign()", "sign")}} messages.</li>
-   <li><code>verify</code>: The key may be used to {{domxref("SubtleCrypto.verify()", "verify")}} signatures.</li>
-   <li><code>deriveKey</code>: The key may be used in {{domxref("SubtleCrypto.deriveKey()", "deriving a new key")}}.</li>
-   <li><code>"deriveBits"</code>: The key may be used in {{domxref("SubtleCrypto.deriveBits()", "deriving bits")}}.</li>
-   <li><code>"wrapKey"</code>: The key may be used to {{domxref("SubtleCrypto.wrapKey()", "wrap a key")}}.</li>
-   <li><code>"unwrapKey"</code>: The key may be used to {{domxref("SubtleCrypto.unwrapKey()", "unwrap a key")}}.</li>
-  </ul>
- </li>
+    <ul>
+      <li>To use <a href="#ecdh">ECDH</a>, pass an
+        <code><a href="/en-US/docs/Web/API/EcdhKeyDeriveParams">EcdhKeyDeriveParams</a></code>
+        object.</li>
+      <li>To use <a href="#hkdf">HKDF</a>, pass
+        an <code><a href="/en-US/docs/Web/API/HkdfParams">HkdfParams</a></code> object.
+      </li>
+      <li>To use <a href="#pbkdf2">PBKDF2</a>, pass
+        a <code><a href="/en-US/docs/Web/API/Pbkdf2Params">Pbkdf2Params</a></code> object.
+      </li>
+    </ul>
+  </li>
+  <li><em><code>baseKey</code></em> is a {{domxref("CryptoKey")}} representing the input
+    to the derivation algorithm. If <code>algorithm</code> is ECDH, then this will be the
+    ECDH private key. Otherwise it will be the initial key material for the derivation
+    function: for example, for PBKDF2 it might be a password, imported as a
+    <code>CryptoKey</code> using
+    <code><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey()</a></code>.
+  </li>
+  <li><code><em>derivedKeyAlgorithm</em></code> is an object defining the algorithm the
+    derived key will be used for.
+    <ul>
+      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#HMAC">HMAC</a>: pass an
+        <code><a href="/en-US/docs/Web/API/HmacKeyGenParams">HmacKeyGenParams</a></code>
+        object.</li>
+      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-CTR">AES-CTR</a>, <a
+          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-CBC">AES-CBC</a>, <a
+          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-GCM">AES-GCM</a>, or <a
+          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-KW">AES-KW</a>: pass an
+        <code><a href="/en-US/docs/Web/API/AesKeyGenParams">AesKeyGenParams</a></code>
+        object.</li>
+    </ul>
+  </li>
+  <li><code><em>extractable</em></code> is a {{jsxref("Boolean")}} indicating whether it
+    will be possible to export  the key using {{domxref("SubtleCrypto.exportKey()")}} or
+    {{domxref("SubtleCrypto.wrapKey()")}}.</li>
+  <li><code><em>keyUsages</em></code>  is an {{jsxref("Array")}} indicating what can be
+    done with the derived key. Note that the key usages must be allowed by the algorithm
+    set in <code>derivedKeyAlgorithm</code>. Possible values of the array are:
+    <ul>
+      <li><code>encrypt</code>: The key may be used to {{domxref("SubtleCrypto.encrypt()",
+        "encrypt")}} messages.</li>
+      <li><code>decrypt</code>: The key may be used to {{domxref("SubtleCrypto.decrypt()",
+        "decrypt")}} messages.</li>
+      <li><code>sign</code>: The key may be used to {{domxref("SubtleCrypto.sign()",
+        "sign")}} messages.</li>
+      <li><code>verify</code>: The key may be used to {{domxref("SubtleCrypto.verify()",
+        "verify")}} signatures.</li>
+      <li><code>deriveKey</code>: The key may be used in
+        {{domxref("SubtleCrypto.deriveKey()", "deriving a new key")}}.</li>
+      <li><code>"deriveBits"</code>: The key may be used in
+        {{domxref("SubtleCrypto.deriveBits()", "deriving bits")}}.</li>
+      <li><code>"wrapKey"</code>: The key may be used to
+        {{domxref("SubtleCrypto.wrapKey()", "wrap a key")}}.</li>
+      <li><code>"unwrapKey"</code>: The key may be used to
+        {{domxref("SubtleCrypto.unwrapKey()", "unwrap a key")}}.</li>
+    </ul>
+  </li>
 </ul>
 
 <h3 id="Return_value">Return value</h3>
 
 <ul>
- <li><code><em>result</em></code> is a {{jsxref("Promise")}} that fulfills with a {{domxref("CryptoKey")}}.</li>
+  <li><code><em>result</em></code> is a {{jsxref("Promise")}} that fulfills with a
+    {{domxref("CryptoKey")}}.</li>
 </ul>
 
 <h3 id="Exceptions">Exceptions</h3>
@@ -73,47 +116,70 @@ tags:
 <p>The promise is rejected when one of the following exceptions are encountered:</p>
 
 <ul>
- <li>{{exception("InvalidAccessError")}}</li>
- <li>Raised when the master key is not a key for the requested derivation algorithm or if the {{domxref("CryptoKey.usages")}} value of that key doesn't contain <code>deriveKey</code>.</li>
- <li>{{exception("NotSupported")}}</li>
- <li>Raised when trying to use an algorithm that is either unknown or isn't suitable for derivation, or if the algorithm requested for the derived key doesn't define a key length.</li>
- <li>{{exception("SyntaxError")}}</li>
- <li>Raised when <em><code>keyUsages</code></em> is empty but the unwrapped key is of type <code>secret</code> or <code>private</code>.</li>
+  <li>{{exception("InvalidAccessError")}}</li>
+  <li>Raised when the master key is not a key for the requested derivation algorithm or if
+    the {{domxref("CryptoKey.usages")}} value of that key doesn't contain
+    <code>deriveKey</code>.</li>
+  <li>{{exception("NotSupported")}}</li>
+  <li>Raised when trying to use an algorithm that is either unknown or isn't suitable for
+    derivation, or if the algorithm requested for the derived key doesn't define a key
+    length.</li>
+  <li>{{exception("SyntaxError")}}</li>
+  <li>Raised when <em><code>keyUsages</code></em> is empty but the unwrapped key is of
+    type <code>secret</code> or <code>private</code>.</li>
 </ul>
 
 <h2 id="Supported_algorithms">Supported algorithms</h2>
 
-<p>The three algorithms supported by <code>deriveKey()</code> have quite different characteristics and are appropriate in different situations.</p>
+<p>The three algorithms supported by <code>deriveKey()</code> have quite different
+  characteristics and are appropriate in different situations.</p>
 
 <h3 id="ECDH">ECDH</h3>
 
-<p>ECDH (Elliptic Curve Diffie-Hellman) is a <em>key-agreement algorithm</em>. It enables two people who each have an ECDH public/private key pair to generate a shared secret: that is, a secret that they — and noone else — share. They can then use this shared secret as a symmetric key to secure their communication, or can use the secret as an input to derive such a key (for example, using the HKDF algorithm).</p>
+<p>ECDH (Elliptic Curve Diffie-Hellman) is a <em>key-agreement algorithm</em>. It enables
+  two people who each have an ECDH public/private key pair to generate a shared secret:
+  that is, a secret that they — and noone else — share. They can then use this shared
+  secret as a symmetric key to secure their communication, or can use the secret as an
+  input to derive such a key (for example, using the HKDF algorithm).</p>
 
 <p>ECDH is specified in <a href="https://tools.ietf.org/html/rfc6090">RFC 6090</a>.</p>
 
 <h3 id="HKDF">HKDF</h3>
 
-<p>HKDF is a <em>key derivation function</em>. It's designed to derive key material from some high-entropy input, such as the output of an ECDH key agreement operation.</p>
+<p>HKDF is a <em>key derivation function</em>. It's designed to derive key material from
+  some high-entropy input, such as the output of an ECDH key agreement operation.</p>
 
-<p>It's <em>not</em> designed to derive keys from relatively low-entropy inputs such as passwords. For that, use PBKDF2.</p>
+<p>It's <em>not</em> designed to derive keys from relatively low-entropy inputs such as
+  passwords. For that, use PBKDF2.</p>
 
 <p>HKDF is specified in <a href="https://tools.ietf.org/html/rfc5869">RFC 5869</a>.</p>
 
 <h3 id="PBKDF2">PBKDF2</h3>
 
-<p>PBKDF2 is also a <em>key derivation function</em>. It's designed to derive key material from some relatively low-entropy input, such as a password. It derives key material by applying a function such as HMAC to the input password along with some salt, and repeating this process many times. The more times the process is repeated, the more computationally expensive key derivation is: this makes it harder for an attacker to use brute-force to discover the key using a dictionary attack.</p>
+<p>PBKDF2 is also a <em>key derivation function</em>. It's designed to derive key material
+  from some relatively low-entropy input, such as a password. It derives key material by
+  applying a function such as HMAC to the input password along with some salt, and
+  repeating this process many times. The more times the process is repeated, the more
+  computationally expensive key derivation is: this makes it harder for an attacker to use
+  brute-force to discover the key using a dictionary attack.</p>
 
 <p>PBKDF2 is specified in <a href="https://tools.ietf.org/html/rfc2898">RFC 2898</a>.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You can <a href="https://mdn.github.io/dom-examples/web-crypto/derive-key/index.html">try the working examples</a> on GitHub.</p>
+  <p><strong>Note</strong>: You can <a
+      href="https://mdn.github.io/dom-examples/web-crypto/derive-key/index.html">try the
+      working examples</a> on GitHub.</p>
 </div>
 
 <h3 id="ECDH_2">ECDH</h3>
 
-<p>In this example Alice and Bob each generate an ECDH key pair, then exchange public keys. They then use <code>deriveKey()</code> to derive a shared AES key, that they could use to encrypt messages. <a class="external external-icon" href="https://github.com/mdn/dom-examples/blob/master/web-crypto/derive-key/ecdh.js" rel="noopener">See the complete code on GitHub.</a></p>
+<p>In this example Alice and Bob each generate an ECDH key pair, then exchange public
+  keys. They then use <code>deriveKey()</code> to derive a shared AES key, that they could
+  use to encrypt messages. <a class="external external-icon"
+    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/derive-key/ecdh.js"
+    rel="noopener">See the complete code on GitHub.</a></p>
 
 <pre class="brush: js">/*
 Derive an AES key, given:
@@ -179,7 +245,10 @@ async function agreeSharedSecretKey() {
 
 <h3 id="PBKDF2_2">PBKDF2</h3>
 
-<p>In this example we ask the user for a password, then use it to derive an AES key using PBKDF2, then use the AES key to encrypt a message. <a class="external external-icon" href="https://github.com/mdn/dom-examples/blob/master/web-crypto/derive-key/pbkdf2.js" rel="noopener">See the complete code on GitHub.</a></p>
+<p>In this example we ask the user for a password, then use it to derive an AES key using
+  PBKDF2, then use the AES key to encrypt a message. <a class="external external-icon"
+    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/derive-key/pbkdf2.js"
+    rel="noopener">See the complete code on GitHub.</a></p>
 
 <pre class="brush: js">/*
 Get some key material to use as input to the deriveKey method.
@@ -226,18 +295,19 @@ async function encrypt(plaintext, salt, iv) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-deriveKey', 'SubtleCrypto.deriveKey()') }}</td>
-   <td>{{ Spec2('Web Crypto API') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{ SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-deriveKey',
+        'SubtleCrypto.deriveKey()') }}</td>
+      <td>{{ Spec2('Web Crypto API') }}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -247,8 +317,12 @@ async function encrypt(plaintext, salt, iv) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://tools.ietf.org/html/rfc5869">HKDF specification</a>.</li>
- <li><a href="https://csrc.nist.gov/publications/detail/sp/800-132/final">NIST guidelines for password-based key derivation</a>.</li>
- <li><a href="https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet">Password storage cheat sheet</a>.</li>
- <li><a href="https://security.stackexchange.com/questions/3959/recommended-of-iterations-when-using-pkbdf2-sha256/3993#3993">Advice on choosing an iteration count for PBKDF2</a>.</li>
+  <li><a href="https://tools.ietf.org/html/rfc5869">HKDF specification</a>.</li>
+  <li><a href="https://csrc.nist.gov/publications/detail/sp/800-132/final">NIST guidelines
+      for password-based key derivation</a>.</li>
+  <li><a href="https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet">Password
+      storage cheat sheet</a>.</li>
+  <li><a
+      href="https://security.stackexchange.com/questions/3959/recommended-of-iterations-when-using-pkbdf2-sha256/3993#3993">Advice
+      on choosing an iteration count for PBKDF2</a>.</li>
 </ul>

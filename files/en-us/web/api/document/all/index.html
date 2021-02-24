@@ -2,22 +2,25 @@
 title: Document.all
 slug: Web/API/Document/all
 tags:
-  - API
-  - Deprecated
-  - Document
-  - HTML DOM
-  - HTMLAllCollection
-  - Property
-  - Reference
-  - all
+- API
+- Deprecated
+- Document
+- HTML DOM
+- HTMLAllCollection
+- Property
+- Reference
+- all
 ---
 <div>{{APIRef("DOM")}}{{Draft}}{{Deprecated_Header("HTML5")}}</div>
 
-<p>The {{DOMxRef("Document")}} interface's read-only <strong><code>all</code></strong> property returns an {{DOMxRef("HTMLAllCollection")}} rooted at the document node. In other words, it returns all of the document's elements, accessible by order (like an array) and by ID (like a regular object).</p>
+<p>The {{DOMxRef("Document")}} interface's read-only <strong><code>all</code></strong>
+  property returns an {{DOMxRef("HTMLAllCollection")}} rooted at the document node. In
+  other words, it returns all of the document's elements, accessible by order (like an
+  array) and by ID (like a regular object).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>htmlAllCollection</var> = document.all;</pre>
+<pre class="brush: js">var <var>htmlAllCollection</var> = document.all;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -25,26 +28,31 @@ tags:
 
 <h2 id="Conversion_to_boolean">Conversion to boolean</h2>
 
-<p><code>document.all</code> is the only {{Glossary("falsy")}} object accessible to JavaScript, because it has the <a href="https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot">[[IsHTMLDDA]] internal slot</a>. This was done because of compatibility with older versions of Internet Explorer. More information about this can be found in <a href="https://stackoverflow.com/a/62005426">this answer from StackOverflow</a>.</p>
+<p><code>document.all</code> is the only {{Glossary("falsy")}} object accessible to
+  JavaScript, because it has the <a
+    href="https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot">[[IsHTMLDDA]] internal
+    slot</a>. This was done because of compatibility with older versions of Internet
+  Explorer. More information about this can be found in <a
+    href="https://stackoverflow.com/a/62005426">this answer from StackOverflow</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'obsolete.html#dom-document-all', 'all')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition.<br>
-    Defined in the obsolete and legacy APIs section.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', 'obsolete.html#dom-document-all', 'all')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td>Initial definition.<br>
+        Defined in the obsolete and legacy APIs section.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

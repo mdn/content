@@ -2,18 +2,20 @@
 title: 'InternalError: too much recursion'
 slug: Web/JavaScript/Reference/Errors/Too_much_recursion
 tags:
-  - Error
-  - Errors
-  - InternalError
-  - JavaScript
+- Error
+- Errors
+- InternalError
+- JavaScript
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<p>The JavaScript exception "too much recursion" or "Maximum call stack size exceeded" occurs when there are too many function calls, or a function is missing a base case.</p>
+<p>The JavaScript exception "too much recursion" or "Maximum call stack size exceeded"
+	occurs when there are too many function calls, or a function is missing a base case.
+</p>
 
 <h2 id="Message">Message</h2>
 
-<pre class="syntaxbox">Error: Out of stack space (Edge)
+<pre class="brush: js">Error: Out of stack space (Edge)
 InternalError: too much recursion (Firefox)
 RangeError: Maximum call stack size exceeded (Chrome)
 </pre>
@@ -24,9 +26,13 @@ RangeError: Maximum call stack size exceeded (Chrome)
 
 <h2 id="What_went_wrong">What went wrong?</h2>
 
-<p>A function that calls itself is called a <em>recursive function</em>. Once a condition is met, the function stops calling itself. This is called a <em>base case</em>.</p>
+<p>A function that calls itself is called a <em>recursive function</em>. Once a condition
+	is met, the function stops calling itself. This is called a <em>base case</em>.</p>
 
-<p>In some ways, recursion is analogous to a loop. Both execute the same code multiple times, and both require a condition (to avoid an infinite loop, or rather, infinite recursion in this case). When there are too many function calls, or a function is missing a base case, JavaScript will throw this error.</p>
+<p>In some ways, recursion is analogous to a loop. Both execute the same code multiple
+	times, and both require a condition (to avoid an infinite loop, or rather, infinite
+	recursion in this case). When there are too many function calls, or a function is
+	missing a base case, JavaScript will throw this error.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -52,7 +58,8 @@ loop(0);
 
 // InternalError: too much recursion</pre>
 
-<p>This recursive function is missing a base case. As there is no exit condition, the function will call itself infinitely.</p>
+<p>This recursive function is missing a base case. As there is no exit condition, the
+	function will call itself infinitely.</p>
 
 <pre class="brush: js example-bad">function loop(x) {
  // The base case is missing
@@ -77,7 +84,8 @@ const tony = new Person();
 tony.name = "Tonisha"; // InternalError: too much recursion
 </pre>
 
-<p>When a value is assigned to the property name (this.name = name;) JavaScript needs to set that property. When this happens, the setter function is triggered.</p>
+<p>When a value is assigned to the property name (this.name = name;) JavaScript needs to
+	set that property. When this happens, the setter function is triggered.</p>
 
 <pre class="brush: js example-bad">set name(name){
 	this.name = name; // Recursive call
@@ -85,7 +93,9 @@ tony.name = "Tonisha"; // InternalError: too much recursion
 </pre>
 
 <div class="note">
-<p>In this example when the setter is triggered, it is told to do the same thing again: <em>to set the same property that it is meant to handle.</em> This causes the function to call itself, again and again, making it infinitely recursive.</p>
+	<p>In this example when the setter is triggered, it is told to do the same thing
+		again: <em>to set the same property that it is meant to handle.</em> This causes
+		the function to call itself, again and again, making it infinitely recursive.</p>
 </div>
 
 <p>This issue also appears if the same variable is used in the getter.</p>
@@ -95,7 +105,9 @@ tony.name = "Tonisha"; // InternalError: too much recursion
 }
 </pre>
 
-<p>To avoid this problem, make sure that the property being assigned to inside the setter function is different from the one that initially triggered the setter.The same goes for the getter.</p>
+<p>To avoid this problem, make sure that the property being assigned to inside the setter
+	function is different from the one that initially triggered the setter.The same goes
+	for the getter.</p>
 
 <pre class="brush: js">class Person{
 	constructor(){}
@@ -114,6 +126,7 @@ console.log(tony);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{Glossary("Recursion")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Functions#Recursion">Recursive functions</a></li>
+	<li>{{Glossary("Recursion")}}</li>
+	<li><a href="/en-US/docs/Web/JavaScript/Guide/Functions#Recursion">Recursive
+			functions</a></li>
 </ul>

@@ -2,18 +2,20 @@
 title: 'ReferenceError: invalid assignment left-hand side'
 slug: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
 tags:
-  - Error
-  - Errors
-  - JavaScript
-  - ReferenceError
+- Error
+- Errors
+- JavaScript
+- ReferenceError
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<p>The JavaScript exception "invalid assignment left-hand side" occurs when there was an unexpected assignment somewhere. For example, a single "<code>=</code>" sign was used instead of "<code>==</code>" or "<code>===</code>".</p>
+<p>The JavaScript exception "invalid assignment left-hand side" occurs when there was an
+  unexpected assignment somewhere. For example, a single "<code>=</code>" sign was used
+  instead of "<code>==</code>" or "<code>===</code>".</p>
 
 <h2 id="Message">Message</h2>
 
-<pre class="syntaxbox">ReferenceError: invalid assignment left-hand side
+<pre class="brush: js">ReferenceError: invalid assignment left-hand side
 </pre>
 
 <h2 id="Error_type">Error type</h2>
@@ -22,7 +24,12 @@ tags:
 
 <h2 id="What_went_wrong">What went wrong?</h2>
 
-<p>There was an unexpected assignment somewhere. This might be due to a mismatch of a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">assignment operator</a> and a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">comparison operator</a>, for example. While a single "<code>=</code>" sign assigns a value to a variable, the "<code>==</code>" or "<code>===</code>" operators compare a value.</p>
+<p>There was an unexpected assignment somewhere. This might be due to a mismatch of a <a
+    href="/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">assignment
+    operator</a> and a <a
+    href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">comparison
+    operator</a>, for example. While a single "<code>=</code>" sign assigns a value to a
+  variable, the "<code>==</code>" or "<code>===</code>" operators compare a value.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -39,7 +46,8 @@ var str = 'Hello, '
 // ReferenceError: invalid assignment left-hand side
 </pre>
 
-<p>In the <code>if</code> statement, you want to use a comparison operator ("=="), and for the string concatenation, the plus ("+") operator is needed.</p>
+<p>In the <code>if</code> statement, you want to use a comparison operator ("=="), and for
+  the string concatenation, the plus ("+") operator is needed.</p>
 
 <pre class="brush: js example-good">if (Math.PI == 3 || Math.PI == 4) {
   console.log('no way!');
@@ -53,6 +61,10 @@ var str = 'Hello, '
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">Assignment operators</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">Comparison operators</a></li>
+  <li><a
+      href="/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">Assignment
+      operators</a></li>
+  <li><a
+      href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">Comparison
+      operators</a></li>
 </ul>

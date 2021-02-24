@@ -2,20 +2,22 @@
 title: Range.deleteContents()
 slug: Web/API/Range/deleteContents
 tags:
-  - API
-  - DOM
-  - Method
-  - Range
+- API
+- DOM
+- Method
+- Range
 ---
 <div>{{ApiRef("DOM")}}</div>
 
-<p>The <strong><code>Range.deleteContents()</code></strong> method removes the contents of the {{ domxref("Range") }} from the {{ domxref("Document") }}.</p>
+<p>The <strong><code>Range.deleteContents()</code></strong> method removes the contents of
+  the {{ domxref("Range") }} from the {{ domxref("Document") }}.</p>
 
-<p>Unlike {{ domxref("Range.extractContents()") }}, this method does not return a {{domxref("DocumentFragment")}} containing the deleted content.</p>
+<p>Unlike {{ domxref("Range.extractContents()") }}, this method does not return a
+  {{domxref("DocumentFragment")}} containing the deleted content.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>range</em>.deleteContents()
+<pre class="brush: js"><em>range</em>.deleteContents()
 </pre>
 
 <h2 id="Example">Example</h2>
@@ -28,23 +30,25 @@ range.deleteContents();
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-range-deletecontents', 'Range.deleteContents()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'ranges.html#Level2-Range-method-deleteContents', 'Range.deleteContents()')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-range-deletecontents',
+        'Range.deleteContents()')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>No change.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 Traversal_Range',
+        'ranges.html#Level2-Range-method-deleteContents', 'Range.deleteContents()')}}</td>
+      <td>{{Spec2('DOM2 Traversal_Range')}}</td>
+      <td>Initial specification.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -54,5 +58,5 @@ range.deleteContents();
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
+  <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
 </ul>

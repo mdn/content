@@ -2,34 +2,39 @@
 title: performance.clearResourceTimings()
 slug: Web/API/Performance/clearResourceTimings
 tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
+- API
+- Method
+- Reference
+- Web Performance
 ---
 <div>{{APIRef("Resource Timing API")}}</div>
 
-<p>The <strong><code>clearResourceTimings()</code></strong> method removes all {{domxref("PerformanceEntry","performance entries")}} with an {{domxref("PerformanceEntry.entryType","entryType")}} of "<code>resource</code>" from the browser's performance data buffer and sets the size of the performance data buffer to zero. To set the size of the browser's performance data buffer, use the {{domxref("Performance.setResourceTimingBufferSize()")}} method.</p>
+<p>The <strong><code>clearResourceTimings()</code></strong> method removes all
+  {{domxref("PerformanceEntry","performance entries")}} with an
+  {{domxref("PerformanceEntry.entryType","entryType")}} of "<code>resource</code>" from
+  the browser's performance data buffer and sets the size of the performance data buffer
+  to zero. To set the size of the browser's performance data buffer, use the
+  {{domxref("Performance.setResourceTimingBufferSize()")}} method.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>performance</em>.clearResourceTimings();
+<pre class="brush: js"><em>performance</em>.clearResourceTimings();
 </pre>
 
 <h3 id="Arguments">Arguments</h3>
 
 <dl>
- <dt>void</dt>
- <dd> </dd>
+  <dt>void</dt>
+  <dd> </dd>
 </dl>
 
 <h3 id="Return_Value">Return value</h3>
 
 <dl>
- <dt>none</dt>
- <dd>This method has no return value.</dd>
+  <dt>none</dt>
+  <dd>This method has no return value.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -66,23 +71,21 @@ function clear_performance_timings() {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Resource Timing', '#dom-performance-clearresourcetimings', 'clearResourceTimings()')}}</td>
-   <td>{{Spec2('Resource Timing')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Resource Timing', '#dom-performance-clearresourcetimings',
+        'clearResourceTimings()')}}</td>
+      <td>{{Spec2('Resource Timing')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.Performance.clearResourceTimings")}}</p>
-</div>

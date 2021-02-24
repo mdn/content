@@ -2,34 +2,39 @@
 title: MouseEvent.ctrlKey
 slug: Web/API/MouseEvent/ctrlKey
 tags:
-  - API
-  - DOM
-  - DOM Events
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
+- API
+- DOM
+- DOM Events
+- MouseEvent
+- Property
+- Read-only
+- Reference
 ---
 <div>{{APIRef("DOM Events")}}</div>
 
-<p>The <strong><code>MouseEvent.ctrlKey</code></strong> read-only property is a {{jsxref("Boolean")}} that indicates whether the <kbd>ctrl</kbd> key was pressed or not when a given mouse event occurs.</p>
+<p>The <strong><code>MouseEvent.ctrlKey</code></strong> read-only property is a
+  {{jsxref("Boolean")}} that indicates whether the <kbd>ctrl</kbd> key was pressed or not
+  when a given mouse event occurs.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> On Macintosh keyboards, this key is the <kbd>control</kbd> key.</p>
+  <p><strong>Note:</strong> On Macintosh keyboards, this key is the <kbd>control</kbd>
+    key.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>ctrlKeyPressed</em> = <em>instanceOfMouseEvent</em>.ctrlKey
+<pre class="brush: js">var <em>ctrlKeyPressed</em> = <em>instanceOfMouseEvent</em>.ctrlKey
 </pre>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{jsxref("Boolean")}}, where <code>true</code> indicates that the key is pressed, and <code>false</code> indicates that the key is <em>not</em> pressed.</p>
+<p>A {{jsxref("Boolean")}}, where <code>true</code> indicates that the key is pressed, and
+  <code>false</code> indicates that the key is <em>not</em> pressed.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>This example logs the <code>ctrlKey</code> property when you trigger a {{Event("click")}} event.</p>
+<p>This example logs the <code>ctrlKey</code> property when you trigger a
+  {{Event("click")}} event.</p>
 
 <h3 id="HTML">HTML</h3>
 
@@ -52,23 +57,23 @@ function logKey(e) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events','#widl-MouseEvent-ctrlKey','MouseEvent.ctrlKey')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>No change from {{SpecName('DOM2 Events')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events','#Events-MouseEvent','MouseEvent.ctrlKey')}}</td>
-   <td>{{Spec2('DOM2 Events')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM3 Events','#widl-MouseEvent-ctrlKey','MouseEvent.ctrlKey')}}</td>
+      <td>{{Spec2('DOM3 Events')}}</td>
+      <td>No change from {{SpecName('DOM2 Events')}}.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 Events','#Events-MouseEvent','MouseEvent.ctrlKey')}}</td>
+      <td>{{Spec2('DOM2 Events')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -78,5 +83,5 @@ function logKey(e) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{ domxref("MouseEvent") }}</li>
+  <li>{{ domxref("MouseEvent") }}</li>
 </ul>

@@ -20,9 +20,11 @@ tags:
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>Inherits properties from its parent interface, {{DOMxRef("Node")}}, and by extension that interface's parent, {{DOMxRef("EventTarget")}}. It implements the properties of {{DOMxRef("ParentNode")}}, {{DOMxRef("ChildNode")}}, {{DOMxRef("NonDocumentTypeChildNode")}},</em> and {{DOMxRef("Animatable")}}.</p>
+<p><em><code>Element</code> inherits properties from its parent interface, {{DOMxRef("Node")}}, and by extension that interface's parent, {{DOMxRef("EventTarget")}}.</em></p>
 
 <dl>
+ <dt>{{DOMxRef("Element.assignedSlot")}}{{readonlyInline}}</dt>
+ <dd>Returns a {{DOMxRef("HTMLSlotElement")}} representing the {{htmlelement("slot")}} the node is inserted in.</dd>
  <dt>{{DOMxRef("Element.attributes")}} {{readOnlyInline}}</dt>
  <dd>Returns a {{DOMxRef("NamedNodeMap")}} object containing the assigned attributes of the corresponding HTML element.</dd>
  <dt>{{DOMxRef("Element.classList")}} {{readOnlyInline}}</dt>
@@ -53,7 +55,7 @@ tags:
  <p><strong>Note:</strong> In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the <code><a class="linkification-ext external" href="https://www.w3.org/1999/xhtml" title="Linkification: http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a></code> namespace in both HTML and XML trees. {{ gecko_minversion_inline("1.9.2")}}</p>
  </div>
  </dd>
- <dt>{{DOMxRef("NonDocumentTypeChildNode.nextElementSibling")}} {{readOnlyInline}}</dt>
+ <dt>{{DOMxRef("Element.nextElementSibling")}} {{readOnlyInline}}</dt>
  <dd>Is an {{DOMxRef("Element")}}, the element immediately following the given one in the tree, or <code>null</code> if there's no sibling node.</dd>
  <dt>{{DOMxRef("Element.outerHTML")}}</dt>
  <dd>Is a {{DOMxRef("DOMString")}} representing the markup of the element including its content. When used as a setter, replaces the element with nodes parsed from the given string.</dd>
@@ -61,7 +63,7 @@ tags:
  <dd>Represents the part identifier(s) of the element (i.e. set using the <code>part</code> attribute), returned as a {{domxref("DOMTokenList")}}.</dd>
  <dt>{{DOMxRef("Element.prefix")}} {{readOnlyInline}}</dt>
  <dd>A {{DOMxRef("DOMString")}} representing the namespace prefix of the element, or <code>null</code> if no prefix is specified.</dd>
- <dt>{{DOMxRef("NonDocumentTypeChildNode.previousElementSibling")}} {{readOnlyInline}}</dt>
+ <dt>{{DOMxRef("Element.previousElementSibling")}} {{readOnlyInline}}</dt>
  <dd>Is a {{DOMxRef("Element")}}, the element immediately preceding the given one in the tree, or <code>null</code> if there is no sibling element.</dd>
  <dt>{{DOMxRef("Element.scrollHeight")}} {{readOnlyInline}}</dt>
  <dd>Returns a {{jsxref("Number")}} representing the scroll view height of an element.</dd>
@@ -97,15 +99,6 @@ tags:
 <p>This change is implemented in Chrome since version 46.0 and Firefox since version 48.0.</p>
 </div>
 
-<h3 id="Properties_included_from_Slotable">Properties included from Slotable</h3>
-
-<p><em>The <code>Element</code> interface includes the following property, defined on the {{DOMxRef("Slotable")}} mixin.</em></p>
-
-<dl>
- <dt>{{DOMxRef("Slotable.assignedSlot")}}{{readonlyInline}}</dt>
- <dd>Returns a {{DOMxRef("HTMLSlotElement")}} representing the {{htmlelement("slot")}} the node is inserted in.</dd>
-</dl>
-
 <h3 id="Handlers">Event handlers</h3>
 
 <dl>
@@ -117,7 +110,7 @@ tags:
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>Inherits methods from its parents {{DOMxRef("Node")}}, and its own parent, {{DOMxRef("EventTarget")}}, and implements those of {{DOMxRef("ParentNode")}}, {{DOMxRef("ChildNode")}}, {{DOMxRef("NonDocumentTypeChildNode")}}, and {{DOMxRef("Animatable")}}.</em></p>
+<p><em><code>Element</code> inherits methods from its parents {{DOMxRef("Node")}}, and its own parent, {{DOMxRef("EventTarget")}}.</em></p>
 
 <dl>
  <dt>{{DOMxRef("EventTarget.addEventListener()")}}</dt>

@@ -22,7 +22,7 @@ tags:
 
 <h3 id="Processing_instructions">Processing instructions</h3>
 
-<p>The attributes in the <code>xslt-param</code> and <code>xslt-param-namespace</code> PIs are parsed using the rules defined in <a class="external" href="https://www.w3.org/TR/xml-stylesheet/">xml-stylesheet</a>. Any unrecognized attributes must be ignored. Parsing of any attribute must not fail due to the presence of an unrecognized attribute as long as that attribute follows the syntax in <code>xml-stylesheet</code>.</p>
+<p>The attributes in the <code>xslt-param</code> and <code>xslt-param-namespace</code> PIs are parsed using the rules defined in <a href="https://www.w3.org/TR/xml-stylesheet/">xml-stylesheet</a>. Any unrecognized attributes must be ignored. Parsing of any attribute must not fail due to the presence of an unrecognized attribute as long as that attribute follows the syntax in <code>xml-stylesheet</code>.</p>
 
 <p>Both the <code>xslt-param</code> and the <code>xslt-param-namespace</code> PIs must appear in the prolog of the document, i.e. before the first element tag. All PIs in the prolog must be honored, both ones occurring before and onces occurring after any <code>xml-stylesheet</code> PIs.</p>
 
@@ -34,7 +34,7 @@ tags:
 
 <dl>
  <dt>name </dt>
- <dd>The local-name part of the parameter name. No syntax checking is done on the attribute, however if it is not a valid <a class="external" href="https://www.w3.org/TR/REC-xml-names/#NT-NCName">NCName</a> it will never match any parameter in the stylesheet.</dd>
+ <dd>The local-name part of the parameter name. No syntax checking is done on the attribute, however if it is not a valid <a href="https://www.w3.org/TR/REC-xml-names/#NT-NCName">NCName</a> it will never match any parameter in the stylesheet.</dd>
  <dt>namespace </dt>
  <dd>The namespace of the parameter name. No syntax checking is done on the attribute.</dd>
  <dt>value </dt>
@@ -111,9 +111,9 @@ tags:
 
 <h5 id="Examples_2">Examples</h5>
 
-<p>Set the parameter 'books' to a nodeset containing all <code>&lt;book&gt;</code> elements in the '<span class="nowiki">http://www.example.org/myNamespace</span>' namespace:</p>
+<p>Set the parameter 'books' to a nodeset containing all <code>&lt;book&gt;</code> elements in the 'http://www.example.org/myNamespace' namespace:</p>
 
-<pre class="eval">&lt;?xslt-param-namespace prefix="my" namespace="<span class="nowiki">http://www.example.org/myNamespace</span>"?&gt;
+<pre class="eval">&lt;?xslt-param-namespace prefix="my" namespace="http://www.example.org/myNamespace"?&gt;
 &lt;?xslt-param name="books" select="//my:book"?&gt;
 </pre>
 

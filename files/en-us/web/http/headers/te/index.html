@@ -2,34 +2,42 @@
 title: TE
 slug: Web/HTTP/Headers/TE
 tags:
-  - HTTP
-  - Reference
-  - header
+- HTTP
+- Reference
+- header
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>The <code><strong>TE</strong></code> request header specifies the transfer encodings the user agent is willing to accept. (you could informally call it <em><code>Accept-Transfer-Encoding</code></em>, which would be more intuitive).</p>
+<p>The <code><strong>TE</strong></code> request header specifies the transfer encodings
+  the user agent is willing to accept. (you could informally call it
+  <em><code>Accept-Transfer-Encoding</code></em>, which would be more intuitive).</p>
 
-<div class="note"><a href="https://tools.ietf.org/html/rfc7540#section-8.1.2.2">In HTTP/2 - the <code>TE</code> header field is only accepted if the <code>trailers</code> value is set.</a></div>
+<div class="note"><a href="https://tools.ietf.org/html/rfc7540#section-8.1.2.2">In HTTP/2
+    - the <code>TE</code> header field is only accepted if the <code>trailers</code> value
+    is set.</a></div>
 
-<p>See also the {{HTTPHeader("Transfer-Encoding")}} response header for more details on transfer encodings. Note that <code>chunked</code> is always acceptable for HTTP/1.1 recipients and you don't have to specify <code>"chunked"</code> using the <code>TE</code> header. However, it is useful for setting if the client is accepting trailer fields in a chunked transfer coding using the "trailers" value.</p>
+<p>See also the {{HTTPHeader("Transfer-Encoding")}} response header for more details on
+  transfer encodings. Note that <code>chunked</code> is always acceptable for HTTP/1.1
+  recipients and you don't have to specify <code>"chunked"</code> using the
+  <code>TE</code> header. However, it is useful for setting if the client is accepting
+  trailer fields in a chunked transfer coding using the "trailers" value.</p>
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Request header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>yes</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">TE: compress
+<pre class="brush: html">TE: compress
 TE: deflate
 TE: gzip
 TE: trailers
@@ -41,47 +49,57 @@ TE: trailers, deflate;q=0.5
 <h2 id="Directives">Directives</h2>
 
 <dl>
- <dt><code>compress</code></dt>
- <dd>A format using the <a class="external" href="https://en.wikipedia.org/wiki/LZW">Lempel-Ziv-Welch</a> (LZW) algorithm is accepted as a transfer coding name.</dd>
- <dt><code>deflate</code></dt>
- <dd>Using the <a class="external" href="https://en.wikipedia.org/wiki/Zlib">zlib</a> structure is accepted as a transfer coding name.</dd>
- <dt><code>gzip</code></dt>
- <dd>A format using the <a class="external" href="https://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77">Lempel-Ziv coding</a> (LZ77), with a 32-bit CRC is accepted as a transfer coding name.</dd>
- <dt><code>trailers</code></dt>
- <dd>Indicates that the client is willing to accept trailer fields in a chunked transfer coding.</dd>
- <dt><code>q</code></dt>
- <dd>
- <p>When multiple transfer codings are acceptable, the <code>q</code> parameter of the <a href="/en-US/docs/Glossary/Quality_values">quality value</a> syntax can rank codings by preference.</p>
- </dd>
+  <dt><code>compress</code></dt>
+  <dd>A format using the <a       href="https://en.wikipedia.org/wiki/LZW">Lempel-Ziv-Welch</a> (LZW) algorithm is
+    accepted as a transfer coding name.</dd>
+  <dt><code>deflate</code></dt>
+  <dd>Using the <a href="https://en.wikipedia.org/wiki/Zlib">zlib</a>
+    structure is accepted as a transfer coding name.</dd>
+  <dt><code>gzip</code></dt>
+  <dd>A format using the <a       href="https://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77">Lempel-Ziv coding</a>
+    (LZ77), with a 32-bit CRC is accepted as a transfer coding name.</dd>
+  <dt><code>trailers</code></dt>
+  <dd>Indicates that the client is willing to accept trailer fields in a chunked transfer
+    coding.</dd>
+  <dt><code>q</code></dt>
+  <dd>
+    <p>When multiple transfer codings are acceptable, the <code>q</code> parameter of the
+      <a href="/en-US/docs/Glossary/Quality_values">quality value</a> syntax can rank
+      codings by preference.</p>
+  </dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7230", "TE", "4.3")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Title</th>
+    </tr>
+    <tr>
+      <td>{{RFC("7230", "TE", "4.3")}}</td>
+      <td>Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+<p class="hidden">The compatibility table in this page is generated from structured data.
+  If you'd like to contribute to the data, please check out <a
+    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+  and send us a pull request.</p>
 
 <p>{{Compat("http.headers.TE")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{HTTPHeader("Transfer-Encoding")}}</li>
- <li>{{HTTPHeader("Trailer")}}</li>
- <li>
-  <p><a href="https://en.wikipedia.org/wiki/Chunked_transfer_encoding">Chunked transfer encoding</a></p>
- </li>
+  <li>{{HTTPHeader("Transfer-Encoding")}}</li>
+  <li>{{HTTPHeader("Trailer")}}</li>
+  <li>
+    <p><a href="https://en.wikipedia.org/wiki/Chunked_transfer_encoding">Chunked transfer
+        encoding</a></p>
+  </li>
 </ul>

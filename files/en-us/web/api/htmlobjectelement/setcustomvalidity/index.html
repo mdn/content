@@ -2,21 +2,23 @@
 title: HTMLObjectElement.setCustomValidity
 slug: Web/API/HTMLObjectElement/setCustomValidity
 tags:
-  - API
-  - HTML DOM
-  - HTMLObjectElement
-  - Method
-  - NeedsExample
-  - Reference
-  - setCustomValidity()
+- API
+- HTML DOM
+- HTMLObjectElement
+- Method
+- NeedsExample
+- Reference
+- setCustomValidity()
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p class="summary">The <strong><code>setCustomValidity()</code></strong> method of the {{domxref("HTMLObjectElement")}} interface sets a custom validity message for the element.</p>
+<p class="summary">The <strong><code>setCustomValidity()</code></strong> method of the
+	{{domxref("HTMLObjectElement")}} interface sets a custom validity message for the
+	element.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">HTMLObjectElement.setCustomValidity(message);</pre>
+<pre class="brush: js">HTMLObjectElement.setCustomValidity(message);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -35,9 +37,13 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>In this example, we pass the ID of an input element, and set different error messages depending on whether the value is missing, too low or too high. Additionally you <em>must</em> call the <a href="/en-US/docs/Web/API/HTMLFormElement/reportValidity">reportValidity</a> method on the same element or nothing will happen.</p>
+<p>In this example, we pass the ID of an input element, and set different error messages
+	depending on whether the value is missing, too low or too high. Additionally you
+	<em>must</em> call the <a
+		href="/en-US/docs/Web/API/HTMLFormElement/reportValidity">reportValidity</a>
+	method on the same element or nothing will happen.</p>
 
-<pre class="brush: js notranslate">function validate(inputID)
+<pre class="brush: js">function validate(inputID)
 {
  var input = document.getElementById(inputID);
  var validityState_object = input.validity;
@@ -64,7 +70,9 @@ tags:
  }
 }</pre>
 
-<p>It's vital to set the message to an empty string if there are no errors. As long as the error message is not null, the form will not pass validation and will not be submitted.</p>
+<p>It's vital to set the message to an empty string if there are no errors. As long as the
+	error message is not null, the form will not pass validation and will not be
+	submitted.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -76,7 +84,8 @@ tags:
 			<th scope="col">Comment</th>
 		</tr>
 		<tr>
-			<td>{{SpecName('HTML WHATWG','#dom-cva-setcustomvalidity','setCustomValidity')}}</td>
+			<td>{{SpecName('HTML
+				WHATWG','#dom-cva-setcustomvalidity','setCustomValidity')}}</td>
 			<td>{{Spec2('HTML WHATWG')}}</td>
 			<td>Initial definition.</td>
 		</tr>

@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate"><code><var>func</var></code>.apply(<var>thisArg,</var> [ <var>argsArray</var>])</pre>
+<pre class="brush: js"><code><var>func</var></code>.apply(<var>thisArg,</var> [ <var>argsArray</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -32,7 +32,7 @@ tags:
  <dd>
  <p>An array-like object, specifying the arguments with which <code><var>func</var></code> should be called, or {{jsxref("null")}} or {{jsxref("undefined")}} if no arguments should be provided to the function.</p>
 
- <p>Starting with ECMAScript 5 these arguments can be a generic array-like object instead of an array. See below for <a href="#Browser_compatibility">browser compatibility</a> information.</p>
+ <p>Starting with ECMAScript 5 these arguments can be a generic array-like object instead of an array. See below for <a href="#browser_compatibility">browser compatibility</a> information.</p>
  </dd>
 </dl>
 
@@ -76,7 +76,7 @@ tags:
 
 <p><code>apply</code> to the rescue!</p>
 
-<pre class="brush: js notranslate">const array = ['a', 'b'];
+<pre class="brush: js">const array = ['a', 'b'];
 const elements = [0, 1, 2];
 array.push.apply(array, elements);
 console.info(array); // ["a", "b", 0, 1, 2]
@@ -88,7 +88,7 @@ console.info(array); // ["a", "b", 0, 1, 2]
 
 <p>As an example, here are <code>Math.max</code>/<code>Math.min</code>, used to find out the maximum/minimum value in an array.</p>
 
-<pre class="brush: js notranslate">// min/max number in an array
+<pre class="brush: js">// min/max number in an array
 const numbers = [5, 6, 2, 3, 7];
 
 // using Math.min/Math.max apply
@@ -117,7 +117,7 @@ for (let i = 0; i &lt; numbers.length; i++) {
 
 <p>If your value array might grow into the tens of thousands, use a hybrid strategy: apply your function to chunks of the array at a time:</p>
 
-<pre class="brush: js notranslate">function minOfArray(arr) {
+<pre class="brush: js">function minOfArray(arr) {
   let min = Infinity;
   let QUANTUM = 32768;
 
@@ -139,7 +139,7 @@ let min = minOfArray([5, 6, 2, 3, 7]);
 
 <p>In the following example we will create a global {{jsxref("Function")}} method called <code>construct</code>, which will enable you to use an array-like object with a constructor instead of an arguments list.</p>
 
-<pre class="brush: js notranslate">Function.prototype.construct = function(aArgs) {
+<pre class="brush: js">Function.prototype.construct = function(aArgs) {
   let oNew = Object.create(this.prototype);
   this.apply(oNew, aArgs);
   return oNew;
@@ -151,7 +151,7 @@ let min = minOfArray([5, 6, 2, 3, 7]);
 
 <p>Using {{jsxref("Object/__proto__", "Object.__proto__")}}:</p>
 
-<pre class="brush: js notranslate">Function.prototype.construct = function (aArgs) {
+<pre class="brush: js">Function.prototype.construct = function (aArgs) {
   let oNew = {};
   oNew.__proto__ = this.prototype;
   this.apply(oNew, aArgs);
@@ -161,7 +161,7 @@ let min = minOfArray([5, 6, 2, 3, 7]);
 
 <p>Using <a href="/en-US/docs/Web/JavaScript/Closures">closures</a>:</p>
 
-<pre class="brush: js notranslate">Function.prototype.construct = function(aArgs) {
+<pre class="brush: js">Function.prototype.construct = function(aArgs) {
   let fConstructor = this, fNewConstr = function() {
     fConstructor.apply(this, aArgs);
   };
@@ -171,7 +171,7 @@ let min = minOfArray([5, 6, 2, 3, 7]);
 
 <p>Using the {{jsxref("Function")}} constructor:</p>
 
-<pre class="brush: js notranslate">Function.prototype.construct = function (aArgs) {
+<pre class="brush: js">Function.prototype.construct = function (aArgs) {
   let fNewConstr = new Function("");
   fNewConstr.prototype = this.prototype;
   let oNew = new fNewConstr();
@@ -183,7 +183,7 @@ let min = minOfArray([5, 6, 2, 3, 7]);
 
 <p>Example usage:</p>
 
-<pre class="brush: js notranslate">function MyConstructor() {
+<pre class="brush: js">function MyConstructor() {
   for (let nProp = 0; nProp &lt; arguments.length; nProp++) {
     this['property' + nProp] = arguments[nProp];
   }
@@ -222,10 +222,7 @@ console.log(myInstance.constructor);              // logs 'MyConstructor'
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("javascript.builtins.Function.apply")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

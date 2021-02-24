@@ -2,28 +2,37 @@
 title: encodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 tags:
-  - JavaScript
-  - Method
-  - Reference
-  - URI
+- JavaScript
+- Method
+- Reference
+- URI
 ---
 <div>{{jsSidebar("Objects")}}</div>
 
-<p>The <code><strong>encodeURIComponent()</strong></code> function encodes a {{glossary("URI")}} by replacing each instance of certain characters by one, two, three, or four escape sequences representing the {{glossary("UTF-8")}} encoding of the character (will only be four escape sequences for characters composed of two "surrogate" characters).</p>
+<p>The <code><strong>encodeURIComponent()</strong></code> function encodes a
+  {{glossary("URI")}} by replacing each instance of certain characters by one, two, three,
+  or four escape sequences representing the {{glossary("UTF-8")}} encoding of the
+  character (will only be four escape sequences for characters composed of two "surrogate"
+  characters).</p>
 
-<div>{{EmbedInteractiveExample("pages/js/globalprops-encodeuricomponent.html","shorter")}}</div>
+<div>{{EmbedInteractiveExample("pages/js/globalprops-encodeuricomponent.html","shorter")}}
+</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<div class="hidden">The source for this interactive example is stored in a GitHub
+  repository. If you'd like to contribute to the interactive examples project, please
+  clone <a
+    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
+  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">encodeURIComponent(<var>str</var>);</pre>
+<pre class="brush: js">encodeURIComponent(<var>str</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>str</var></code></dt>
- <dd>String. A component of a URI.</dd>
+  <dt><code><var>str</var></code></dt>
+  <dd>String. A component of a URI.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -34,15 +43,16 @@ tags:
 
 <p><code>encodeURIComponent()</code> escapes all characters <strong>except</strong>:</p>
 
-<pre class="notranslate"><strong>Not Escaped</strong>:
+<pre class="brush: plain"><strong>Not Escaped</strong>:
 
     A-Z a-z 0-9 <code>-</code> <code>_</code> <code>.</code> <code>!</code> <code>~</code> <code>*</code> <code>'</code> <code>(</code> <code>)
 </code>
 </pre>
 
-<p><code>encodeURIComponent()</code> differs from <strong><code>encodeURI</code></strong> as follows:</p>
+<p><code>encodeURIComponent()</code> differs from <strong><code>encodeURI</code></strong>
+  as follows:</p>
 
-<pre class="brush: js notranslate">var set1 = ";,/?:@&amp;=+$";  // Reserved Characters
+<pre class="brush: js">var set1 = ";,/?:@&amp;=+$";  // Reserved Characters
 var set2 = "-_.!~*'()";   // Unescaped Characters
 var set3 = "#";           // Number Sign
 var set4 = "ABC abc 123"; // Alphanumeric Characters + Space
@@ -59,9 +69,10 @@ console.log(encodeURIComponent(set4)); // ABC%20abc%20123 (the space gets encode
 
 </pre>
 
-<p>Note that a {{jsxref("URIError")}} will be thrown if one attempts to encode a surrogate which is not part of a high-low pair, e.g.,</p>
+<p>Note that a {{jsxref("URIError")}} will be thrown if one attempts to encode a surrogate
+  which is not part of a high-low pair, e.g.,</p>
 
-<pre class="brush: js notranslate">// high-low pair ok
+<pre class="brush: js">// high-low pair ok
 console.log(encodeURIComponent('\uD800\uDFFF'));
 
 // lone high surrogate throws "URIError: malformed URI sequence"
@@ -71,15 +82,23 @@ console.log(encodeURIComponent('\uD800'));
 console.log(encodeURIComponent('\uDFFF'));
 </pre>
 
-<p>Use <code>encodeURIComponent()</code> on user-entered fields from forms {{HTTPMethod("POST")}}'d to the server. This will encode <code>&amp;</code> symbols that may inadvertently be generated during data entry for special HTML entities or other characters that require encoding/decoding.</p>
+<p>Use <code>encodeURIComponent()</code> on user-entered fields from forms
+  {{HTTPMethod("POST")}}'d to the server. This will encode <code>&amp;</code> symbols that
+  may inadvertently be generated during data entry for special HTML entities or other
+  characters that require encoding/decoding.</p>
 
-<p>For example, if a user writes <code>Jack &amp; Jill</code>, the text may get encoded as <code>Jack &amp;amp; Jill</code>. Without <code>encodeURIComponent()</code> the ampersand could be interpretted on the server as the start of a new field and jeopardize the integrity of the data.</p>
+<p>For example, if a user writes <code>Jack &amp; Jill</code>, the text may get encoded as
+  <code>Jack &amp;amp; Jill</code>. Without <code>encodeURIComponent()</code> the
+  ampersand could be interpretted on the server as the start of a new field and jeopardize
+  the integrity of the data.</p>
 
-<p>For <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#application/x-www-form-urlencoded-encoding-algorithm"><code>application/x-www-form-urlencoded</code></a>, spaces are to be replaced by <code>+</code>, so one may wish to follow a <code>encodeURIComponent()</code> replacement with an additional replacement of <code>%20</code> with <code>+</code>.</p>
+<p>For <a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#application/x-www-form-urlencoded-encoding-algorithm"><code>application/x-www-form-urlencoded</code></a>, spaces are to be replaced by <code>+</code>, so one may wish to follow a <code>encodeURIComponent()</code> replacement with an additional replacement of <code>%20</code> with <code>+</code>.</p>
 
-<p>To be more stringent in adhering to <a class="external" href="https://tools.ietf.org/html/rfc3986">RFC 3986</a> (which reserves !, ', (, ), and *), even though these characters have no formalized URI delimiting uses, the following can be safely used:</p>
+<p>To be more stringent in adhering to <a     href="https://tools.ietf.org/html/rfc3986">RFC 3986</a> (which reserves !, ', (, ),
+  and *), even though these characters have no formalized URI delimiting uses, the
+  following can be safely used:</p>
 
-<pre class="brush: js notranslate">function fixedEncodeURIComponent(str) {
+<pre class="brush: js">function fixedEncodeURIComponent(str) {
   return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
     return '%' + c.charCodeAt(0).toString(16);
   });
@@ -88,11 +107,14 @@ console.log(encodeURIComponent('\uDFFF'));
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Encoding_for_Content-Disposition_and_Link_headers">Encoding for Content-Disposition and Link headers</h3>
+<h3 id="Encoding_for_Content-Disposition_and_Link_headers">Encoding for
+  Content-Disposition and Link headers</h3>
 
-<p>The following example provides the special encoding required within UTF-8 {{HTTPHeader("Content-Disposition")}} and {{HTTPHeader("Link")}} server response header parameters (e.g., UTF-8 filenames):</p>
+<p>The following example provides the special encoding required within UTF-8
+  {{HTTPHeader("Content-Disposition")}} and {{HTTPHeader("Link")}} server response header
+  parameters (e.g., UTF-8 filenames):</p>
 
-<pre class="brush: js notranslate">var fileName = 'my file(2).txt';
+<pre class="brush: js">var fileName = 'my file(2).txt';
 var header = "Content-Disposition: attachment; filename*=UTF-8''"
              + encodeRFC5987ValueChars(fileName);
 
@@ -125,16 +147,17 @@ function encodeRFC5987ValueChars2(str) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-encodeuricomponent-uricomponent', 'encodeURIComponent')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-encodeuricomponent-uricomponent',
+        'encodeURIComponent')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -144,7 +167,7 @@ function encodeRFC5987ValueChars2(str) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("decodeURI")}}</li>
- <li>{{jsxref("encodeURI")}}</li>
- <li>{{jsxref("decodeURIComponent")}}</li>
+  <li>{{jsxref("decodeURI")}}</li>
+  <li>{{jsxref("encodeURI")}}</li>
+  <li>{{jsxref("decodeURIComponent")}}</li>
 </ul>

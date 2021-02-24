@@ -64,7 +64,7 @@ tags:
  <dt>{{DOMxRef("XRSession")}}</dt>
  <dd>Provides the interface for interacting with XR hardware. Once an <code>XRSession</code> is obtained from {{domxref("XRSystem.requestSession", "navigator.xr.requestSession()")}}, the session can be used to check the position and orientation of the viewer, query the device for environment information, and present the virtual or augmented world to the user.</dd>
  <dt>{{DOMxRef("XRSpace")}}</dt>
- <dd><code>XRSpace</code> is an opaque base class on which all virtual coordinate system interfaces are based. Positions in WebXR are always expressed in relation to a particular <code>XRSpace</code> at the time at which a particular {{domxref("XRFrame")}} takes place. The space's coordinate system has its origin at the a given physical position.</dd>
+ <dd><code>XRSpace</code> is an opaque base class on which all virtual coordinate system interfaces are based. Positions in WebXR are always expressed in relation to a particular <code>XRSpace</code> at the time at which a particular {{domxref("XRFrame")}} takes place. The space's coordinate system has its origin at a given physical position.</dd>
  <dt>{{DOMxRef("XRReferenceSpace")}}</dt>
  <dd>A subclass of {{domxref("XRSpace")}} which is used to identify a spatial relationship in relation to the user's physical environment. The <code>XRReferenceSpace</code> coordinate system is expected to remain unchanged through the lifespan of the {{domxref("XRSession")}}.The world has no boundaries and extends infinitely in every direction.</dd>
  <dt>{{DOMxRef("XRBoundedReferenceSpace")}}</dt>

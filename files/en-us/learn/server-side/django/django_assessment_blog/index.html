@@ -163,11 +163,12 @@ tags:
  <li>The BlogListView paginates records by 5 (at least on the first page)</li>
 </ul>
 
-<div class="note">
-<p><strong>Note</strong>: There are of course many other tests you can run. Use your discretion, but we'll expect you to do at least the tests above.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>There are of course many other tests you can run. Use your discretion, but we'll expect you to do at least the tests above.</p>
 </div>
 
-<p>The following section shows <a href="#Screenshots">screenshots</a> of a site that implements the requirements above.</p>
+<p>The following section shows <a href="#screenshots">screenshots</a> of a site that implements the requirements above.</p>
 
 <h2 id="Screenshots">Screenshots</h2>
 
@@ -184,35 +185,35 @@ tags:
  <li>Ordering is newest to oldest.</li>
 </ul>
 
-<p><img alt="List of all blogs" src="https://mdn.mozillademos.org/files/14319/diyblog_allblogs.png" style="border-style: solid; border-width: 1px; display: block; height: 363px; margin: 0px auto; width: 986px;"></p>
+<p><img alt="List of all blogs" src="diyblog_allblogs.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h3 id="List_of_all_bloggers">List of all bloggers</h3>
 
 <p>This provides links to all bloggers, as linked from the "All bloggers" link in the sidebar. In this case we can see from the sidebar that no user is logged in.</p>
 
-<p><img alt="List of all bloggers" src="https://mdn.mozillademos.org/files/14321/diyblog_blog_allbloggers.png" style="border-style: solid; border-width: 1px; display: block; height: 256px; margin: 0px auto; width: 493px;"></p>
+<p><img alt="List of all bloggers" src="diyblog_blog_allbloggers.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h3 id="Blog_detail_page">Blog detail page</h3>
 
 <p>This shows the detail page for a particular blog.</p>
 
-<p><img alt="Blog detail with add comment link" src="https://mdn.mozillademos.org/files/14323/diyblog_blog_detail_add_comment.png" style="border-style: solid; border-width: 1px; display: block; height: 640px; margin: 0px auto; width: 986px;"></p>
+<p><img alt="Blog detail with add comment link" src="diyblog_blog_detail_add_comment.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>Note that the comments have a date <em>and</em> time, and are ordered from oldest to newest (opposite of blog ordering). At the end we have a link for accessing the form to add a new comment. If a user is not logged in we'd instead see a suggestion to log in.</p>
 
-<p><img alt="Comment link when not logged in" src="https://mdn.mozillademos.org/files/14325/diyblog_blog_detail_not_logged_in.png" style="border-style: solid; border-width: 1px; display: block; height: 129px; margin: 0px auto; width: 646px;"></p>
+<p><img alt="Comment link when not logged in" src="diyblog_blog_detail_not_logged_in.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h3 id="Add_comment_form">Add comment form</h3>
 
 <p>This is the form to add comments. Note that we're logged in. When this succeeds we should be taken back to the associated blog post page.</p>
 
-<p><img alt="Add comment form" src="https://mdn.mozillademos.org/files/14329/diyblog_comment_form.png" style="border-style: solid; border-width: 1px; display: block; height: 385px; margin: 0px auto; width: 778px;"></p>
+<p><img alt="Add comment form" src="diyblog_comment_form.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h3 id="Author_bio">Author bio</h3>
 
 <p>This displays bio information for a blogger along with their blog posts list.</p>
 
-<p><img alt="Blogger detail page" src="https://mdn.mozillademos.org/files/14327/diyblog_blogger_detail.png" style="border-style: solid; border-width: 1px; display: block; height: 379px; margin: 0px auto; width: 982px;"></p>
+<p><img alt="Blogger detail page" src="diyblog_blogger_detail.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h2 id="Steps_to_complete">Steps to complete</h2>
 
@@ -254,7 +255,7 @@ tags:
   <ul>
    <li>You will also need to pass the name of the blog post to the comment page in the context (implement <code>get_context_data()</code> as discussed below).</li>
    <li>The form should only display the comment "description" for user entry (date and associated blog post should not be editable). Since they won't be in the form itself, your code will need to set the comment's author in the<code> form_valid()</code> function so it can be saved into the model (<a href="https://docs.djangoproject.com/en/3.1/topics/class-based-views/generic-editing/#models-and-request-user">as described here</a> — Django docs). In that same function we set the associated blog. A possible implementation is shown below (<code>pk</code> is a blog id passed in from the URL/URL configuration).
-    <pre class="brush: python notranslate">    def form_valid(self, form):
+    <pre class="brush: python">    def form_valid(self, form):
         """
         Add author and associated blog to form data before setting it as valid (so it is saved to model)
         """
@@ -271,9 +272,9 @@ tags:
  </li>
 </ol>
 
-<p>We briefly talked about passing a context to the template in a class-based view in the <a href="/en-US/docs/Learn/Server-side/Django/Generic_views#Overriding_methods_in_class-based_views">Django Tutorial Part 6: Generic list and detail views</a> topic. To do this you need to override <code>get_context_data()</code> (first getting the existing context, updating it with whatever additional variables you want to pass to the template, and then returning the updated context). For example, the code fragment below shows how you can add a blogger object to the context based on their <code>BlogAuthor</code> id.</p>
+<p>We briefly talked about passing a context to the template in a class-based view in the <a href="/en-US/docs/Learn/Server-side/Django/Generic_views#overriding_methods_in_class-based_views">Django Tutorial Part 6: Generic list and detail views</a> topic. To do this you need to override <code>get_context_data()</code> (first getting the existing context, updating it with whatever additional variables you want to pass to the template, and then returning the updated context). For example, the code fragment below shows how you can add a blogger object to the context based on their <code>BlogAuthor</code> id.</p>
 
-<pre class="brush: python notranslate">class SomeView(generic.ListView):
+<pre class="brush: python">class SomeView(generic.ListView):
     ...
 
     def get_context_data(self, **kwargs):

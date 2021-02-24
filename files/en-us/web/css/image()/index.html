@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">{{CSSSyntax("image()")}}</pre>
+<pre class="brush: css">{{CSSSyntax("image()")}}</pre>
 
 <p>where:</p>
 
@@ -40,13 +40,13 @@ tags:
 
 <p>One key difference between <code>url()</code> and <code>image()</code> is the ability to add a media fragment identifier — a starting point along the x and y axis, along with a width and height — onto the image source to display only a section of the source image. The section of the image defined in the parameter becomes a standalone image. The syntax looks like so:</p>
 
-<pre class="brush: css; notranslate">background-image: image('myimage.webp#xywh=0,20,40,60');</pre>
+<pre class="brush: css;">background-image: image('myimage.webp#xywh=0,20,40,60');</pre>
 
 <p>The background image of the element will be the portion of the image <em>myImage.webp</em> that starts at the coordinate 0px, 20px (the top left hand corner) and is 40px wide and 60px tall.</p>
 
-<p>The <code>#xywh=#,#,#,#</code> media fragment syntax takes four comma separated numeric values. The first two represent the X and Y coordates for the starting point of the box that will be created. The third value is the width of the box, and the last value is the height. By default, these are pixel values. The <a href="https://www.w3.org/TR/media-frags/#naming-space">spacial dimension definition in the media specification</a> indicates that percentages will be supported as well:</p>
+<p>The <code>#xywh=#,#,#,#</code> media fragment syntax takes four comma separated numeric values. The first two represent the X and Y coordinates for the starting point of the box that will be created. The third value is the width of the box, and the last value is the height. By default, these are pixel values. The <a href="https://www.w3.org/TR/media-frags/#naming-space">spacial dimension definition in the media specification</a> indicates that percentages will be supported as well:</p>
 
-<pre class="brush: css; notranslate">xywh=160,120,320,240        /* results in a 320x240 image at x=160 and y=120 */
+<pre class="brush: css;">xywh=160,120,320,240        /* results in a 320x240 image at x=160 and y=120 */
 xywh=pixel:160,120,320,240  /* results in a 320x240 image at x=160 and y=120 */
 xywh=percent:25,25,50,50    /* results in a 50%x50% image at x=25% and y=25% */</pre>
 
@@ -77,25 +77,25 @@ xywh=percent:25,25,50,50    /* results in a 50%x50% image at x=25% and y=25% */<
 
 <h3 id="Directionally-sensitive_images">Directionally-sensitive images</h3>
 
-<pre class="brush: html; notranslate">&lt;ul&gt;
+<pre class="brush: html;">&lt;ul&gt;
   &lt;li dir="ltr"&gt;Bullet is a right facing arrow on the left&lt;/li&gt;
   &lt;li dir="rtl"&gt;Bullet is the same arrow, flipped to point left.&lt;/li&gt;
 &lt;/ul&gt;</pre>
 
-<pre class="brush: css; notranslate">ul {
+<pre class="brush: css;">ul {
   list-style-image: image(ltr 'https://mdn.mozillademos.org/files/16412/rightarrow.png');
 }</pre>
 
-<p>In the left-to-right list items — those with <code>dir="ltr"</code> set on the element itself or inheriting the directionality from an ancestor or default value for the page — the image will be used as-is. List items with <code>dir="rtl"</code> set on the <code>&lt;li&gt;</code> or inheriting the right-to-left directionality from an ancestor, such as documents set to Arabic or Hebrew, will have the bullet display on the right, horizontally flippled, as if <code>transform: scalex(-1)</code> had been set. The text will also be displayed left-to-right.</p>
+<p>In the left-to-right list items — those with <code>dir="ltr"</code> set on the element itself or inheriting the directionality from an ancestor or default value for the page — the image will be used as-is. List items with <code>dir="rtl"</code> set on the <code>&lt;li&gt;</code> or inheriting the right-to-left directionality from an ancestor, such as documents set to Arabic or Hebrew, will have the bullet display on the right, horizontally flipped, as if <code>transform: scalex(-1)</code> had been set. The text will also be displayed left-to-right.</p>
 
 <p>{{EmbedLiveSample("Directionally-sensitive_images", "100%", 200)}}</p>
 
 <h3 id="Displaying_a_section_of_the_background_image">Displaying a section of the background image</h3>
 
-<pre class="brush: html; notranslate">&lt;div class="box"&gt;Hover over me. What cursor do you see?&lt;/div&gt;
+<pre class="brush: html;">&lt;div class="box"&gt;Hover over me. What cursor do you see?&lt;/div&gt;
 </pre>
 
-<pre class="brush: css; notranslate">.box:hover {
+<pre class="brush: css;">.box:hover {
   cursor: image("https://mdn.mozillademos.org/files/16411/sprite.png#xywh=32,64,16,16");
 }</pre>
 
@@ -105,7 +105,7 @@ xywh=percent:25,25,50,50    /* results in a 50%x50% image at x=25% and y=25% */<
 
 <h3 id="Providing_fallback_images">Providing fallback images</h3>
 
-<pre class="brush: css; notranslate">.help::before {
+<pre class="brush: css;">.help::before {
   content: image("try.webp", "try.svg", "try.gif");
 }</pre>
 
@@ -118,10 +118,10 @@ xywh=percent:25,25,50,50    /* results in a 50%x50% image at x=25% and y=25% */<
 <h3 id="Putting_color_on_top_of_a_background_image">Putting color on top of a background image</h3>
 
 <div class="hidden">
-<pre class="brush: css; notranslate">.quarterlogo {height: 200px; width: 200px; border: 1px solid;}</pre>
+<pre class="brush: css;">.quarterlogo {height: 200px; width: 200px; border: 1px solid;}</pre>
 </div>
 
-<pre class="brush: css; notranslate">.quarterlogo {
+<pre class="brush: css;">.quarterlogo {
   background-image:
     image(rgba(0, 0, 0, 0.25)),
     url("https://mdn.mozillademos.org/files/12053/firefox.png");
@@ -129,7 +129,7 @@ xywh=percent:25,25,50,50    /* results in a 50%x50% image at x=25% and y=25% */<
   background-repeat: no-repeat;
 }</pre>
 
-<pre class="brush: html; notranslate">&lt;div class="quarterlogo"&gt;If supported, a quarter of this div has a darkened logo&lt;/div&gt;
+<pre class="brush: html;">&lt;div class="quarterlogo"&gt;If supported, a quarter of this div has a darkened logo&lt;/div&gt;
 </pre>
 
 <p>The above will put a semi-transparent black mask over the Firefox logo background image. Had we used the {{cssxref("background-color")}} property instead, the color would have appeared behind the logo image instead of on top of it. Additionally, the entire container would have had the same background color. Because we used <code>image()</code> along with the {{CSSxRef("background-size")}} property (and prevented the image from repeating with the {{CSSxRef("background-repeat")}} property, the color swatch will only cover a quarter of the container.</p>
