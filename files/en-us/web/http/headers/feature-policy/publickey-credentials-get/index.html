@@ -4,7 +4,7 @@ slug: Web/HTTP/Headers/Feature-Policy/publickey-credentials-get
 ---
 <div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
 
-<p><span class="seoSummary">The HTTP {{HTTPHeader("Feature-Policy")}} header <code>publickey-credentials-get</code> directive controls whether the current document is allowed to access <a href="/en-US/docs/Web/API/Web_Authentication_API">Web Authentcation API</a> to retrieve public-key credentials, i.e, via {{DOMxRef("CredentialsContainer.get", "navigator.credentials.get({publicKey: ..., ...})")}}.</span></p>
+<p><span class="seoSummary">The HTTP {{HTTPHeader("Feature-Policy")}} header <code>publickey-credentials-get</code> directive controls whether the current document is allowed to access the <a href="/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API</a> to retrieve public-key credentials; i.e, via {{DOMxRef("CredentialsContainer.get", "navigator.credentials.get({publicKey: ..., ...})")}}.</span></p>
 
 <p>When this policy is enabled, any attempt to query public key credentials will result in an error.</p>
 
