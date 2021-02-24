@@ -194,26 +194,6 @@ mixedNumericArray.sort(); // [1, 200, 40, 5, 700, 80, 9]
 mixedNumericArray.sort(compareNumbers); // [1, 5, 9, 40, 80, 200, 700]
 </pre>
 
-<p>This example produces the following output. As the output shows, when a compare
-  function is used, numbers sort correctly whether they are numbers or numeric strings.
-</p>
-
-<pre class="brush: js">stringArray: Blue,Humpback,Beluga
-Sorted: Beluga,Blue,Humpback
-
-numberArray: 40,1,5,200
-Sorted without a compare function: 1,200,40,5
-Sorted with compareNumbers: 1,5,40,200
-
-numericStringArray: 80,9,700
-Sorted without a compare function: 700,80,9
-Sorted with compareNumbers: 9,80,700
-
-mixedNumericArray: 80,9,700,40,1,5,200
-Sorted without a compare function: 1,200,40,5,700,80,9
-Sorted with compareNumbers: 1,5,9,40,80,200,700
-</pre>
-
 <h3 id="Sorting_non-ASCII_characters">Sorting non-ASCII characters</h3>
 
 <p>For sorting strings with non-ASCII characters, i.e. strings with accented characters
