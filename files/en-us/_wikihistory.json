@@ -98862,15 +98862,6 @@
       "jsx"
     ]
   },
-  "Web/API/XMLHttpRequest/openRequest": {
-    "modified": "2019-03-23T22:33:20.958Z",
-    "contributors": [
-      "Sheppy",
-      "david_ross",
-      "chrisdavidmills",
-      "MashKao"
-    ]
-  },
   "Web/API/XMLHttpRequest/overrideMimeType": {
     "modified": "2020-10-15T21:39:59.857Z",
     "contributors": [
@@ -99003,14 +98994,6 @@
       "freaktechnik",
       "MashKao",
       "Sebastianz",
-      "jsx"
-    ]
-  },
-  "Web/API/XMLHttpRequest/sendAsBinary": {
-    "modified": "2020-10-15T21:39:58.281Z",
-    "contributors": [
-      "Sheppy",
-      "ExE-Boss",
       "jsx"
     ]
   },
