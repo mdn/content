@@ -10,9 +10,10 @@ tags:
 ---
 <div>{{MDNSidebar}}</div>
 
-<div class="note">
-<h2 id="Remove_before_publishing">Remove before publishing</h2>
+<!-- Remove below here before publishing -->
 
+<h2 id="Remove_this_section_before_publishing">Remove this section before publishing</h4>
+<div class="notecard note">
 <h3 id="Title_and_slug">Title and slug</h3>
 
 <p>An API event subpage should have a <em>title</em> of <em>Name</em>Of<em>TheParentInterface + ": " + NameOfTheEvent + " event"</em>. For example, the <a href="/en-US/docs/Web/API/Window/vrdisplaypresentchange_event">vrdisplaypresentchange</a> event of the <a href="/en-US/docs/Web/API/Window">Window</a> interface has a <em>title</em> of <em>Window: vrdisplaypresentchange</em> event.</p>
@@ -44,7 +45,18 @@ tags:
 <p>To fill in the browser compat data, you first need to fill in an entry for the API into our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a> — see our <a href="/en-US/docs/MDN/Structures/Compatibility_tables#the_new_way_the_browser_compat_data_repo_and_dynamic_tables">guide on how to do this</a>.</p>
 
 <p>Once that is done, you can show the compat data for the method with a \{{Compat()}} macro call.</p>
+
+<h3 id="Event_reference_link">Event reference link</h3>
+
+<p>Add a link to this new page from the <a href="/en-US/docs/Web/Events">Event reference</a>.</p>
+
+<h3 id="Parent_object_link">Parent object link</h3>
+
+<p>Add a link to this new page from its parent object's <em>Events</em> section (add this section if needed). For example <a href="/en-US/docs/Web/API/Element/wheel_event">Element: wheel event</a> is linked from <a href="/en-US/docs/Web/API/Element#events"><code>Element</code> > Events</a>.</p>
+
 </div>
+
+<!-- Remove above here before publishing -->
 
 <div>{{draft}}{{SeeCompatTable}}{{securecontext_header}}{{deprecated_header}}{{APIRef("GroupDataName")}}</div>
 
