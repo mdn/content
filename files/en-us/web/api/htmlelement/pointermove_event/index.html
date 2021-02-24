@@ -41,7 +41,7 @@ tags:
 
 <p>To add a handler for <code>pointermove</code> events using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:</p>
 
-<pre class="brush: js notranslate">const para = document.querySelector('p');
+<pre class="brush: js">const para = document.querySelector('p');
 
 para.addEventListener('pointermove', (event) =&gt; {
   console.log('Pointer moved');
@@ -49,7 +49,7 @@ para.addEventListener('pointermove', (event) =&gt; {
 
 <p>You can also use the <code>onpointermove</code> event handler property:</p>
 
-<pre class="brush: js notranslate">const para = document.querySelector('p');
+<pre class="brush: js">const para = document.querySelector('p');
 
 para.onpointermove = (event) =&gt; {
   console.log('Pointer moved');

@@ -13,7 +13,7 @@ tags:
 
 <p>The <strong><code>:defined</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents any element that has been defined. This includes any standard element built in to the browser, and custom elements that have been successfully defined (i.e. with the {{domxref("CustomElementRegistry.define()")}} method).</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Selects any defined element */
+<pre class="brush: css no-line-numbers">/* Selects any defined element */
 :defined {
   font-style: italic;
 }
@@ -26,7 +26,7 @@ simple-custom:defined {
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -36,7 +36,7 @@ simple-custom:defined {
 
 <p>In this demo we define a very simple trivial custom element:</p>
 
-<pre class="brush: js notranslate">customElements.define('simple-custom',
+<pre class="brush: js">customElements.define('simple-custom',
   class extends HTMLElement {
     constructor() {
       super();
@@ -51,13 +51,13 @@ simple-custom:defined {
 
 <p>Then insert a copy of this element into the document, along with a standard <code>&lt;p&gt;</code>:</p>
 
-<pre class="brush: html notranslate">&lt;simple-custom text="Custom element example text"&gt;&lt;/simple-custom&gt;
+<pre class="brush: html">&lt;simple-custom text="Custom element example text"&gt;&lt;/simple-custom&gt;
 
 &lt;p&gt;Standard paragraph example text&lt;/p&gt;</pre>
 
 <p>In the CSS we first include the following rules:</p>
 
-<pre class="brush: css notranslate">// Give the two elements distinctive backgrounds
+<pre class="brush: css">// Give the two elements distinctive backgrounds
 p {
   background: yellow;
 }
@@ -73,7 +73,7 @@ simple-custom {
 
 <p>Then provide the following two rules to hide any instances of our custom element that are not defined, and display instances that are defined as block level elements:</p>
 
-<pre class="brush: css notranslate">simple-custom:not(:defined) {
+<pre class="brush: css">simple-custom:not(:defined) {
   display: none;
 }
 

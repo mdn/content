@@ -36,7 +36,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">if ( 'AmbientLightSensor' in window ) {
+<pre class="brush: js">if ( 'AmbientLightSensor' in window ) {
   const sensor = new AmbientLightSensor();
   sensor.onreading = () =&gt; {
     console.log('Current light level:', sensor.illuminance);

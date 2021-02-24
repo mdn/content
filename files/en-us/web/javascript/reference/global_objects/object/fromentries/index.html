@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Object.fromEntries(<var>iterable</var>);</pre>
+<pre class="brush: js">Object.fromEntries(<var>iterable</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -58,7 +58,7 @@ tags:
 <p>With <code>Object.fromEntries</code>, you can convert from {{jsxref("Map")}} to
   {{jsxref("Object")}}:</p>
 
-<pre class="brush: js notranslate">const map = new Map([ ['foo', 'bar'], ['baz', 42] ]);
+<pre class="brush: js">const map = new Map([ ['foo', 'bar'], ['baz', 42] ]);
 const obj = Object.fromEntries(map);
 console.log(obj); // { foo: "bar", baz: 42 }
 </pre>
@@ -68,7 +68,7 @@ console.log(obj); // { foo: "bar", baz: 42 }
 <p>With <code>Object.fromEntries</code>, you can convert from {{jsxref("Array")}} to
   {{jsxref("Object")}}:</p>
 
-<pre class="brush: js notranslate">const arr = [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ];
+<pre class="brush: js">const arr = [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ];
 const obj = Object.fromEntries(arr);
 console.log(obj); // { 0: "a", 1: "b", 2: "c" }
 </pre>
@@ -80,7 +80,7 @@ console.log(obj); // { 0: "a", 1: "b", 2: "c" }
     href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods_2">array
     manipulation methods</a>, you are able to transform objects like this:</p>
 
-<pre class="brush: js notranslate">const object1 = { a: 1, b: 2, c: 3 };
+<pre class="brush: js">const object1 = { a: 1, b: 2, c: 3 };
 
 const object2 = Object.fromEntries(
   Object.entries(object1)

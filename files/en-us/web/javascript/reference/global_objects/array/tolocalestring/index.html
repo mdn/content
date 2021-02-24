@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>arr</var>.toLocaleString([<var>locales[</var>, <var>options]]</var>);
+<pre class="brush: js"><var>arr</var>.toLocaleString([<var>locales[</var>, <var>options]]</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -41,7 +41,7 @@ tags:
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="brush: js notranslate">// https://tc39.github.io/ecma402/#sup-array.prototype.tolocalestring
+<pre class="brush: js">// https://tc39.github.io/ecma402/#sup-array.prototype.tolocalestring
 if (!Array.prototype.toLocaleString) {
   Object.defineProperty(Array.prototype, 'toLocaleString', {
     value: function(locales, options) {
@@ -145,7 +145,7 @@ if (!Array.prototype.toLocaleString) {
 <p>Always display the currency for the strings and numbers in the <code>prices</code>
   array:</p>
 
-<pre class="brush: js notranslate">var prices = ['￥7', 500, 8123, 12];
+<pre class="brush: js">var prices = ['￥7', 500, 8123, 12];
 prices.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
 
 // "￥7,￥500,￥8,123,￥12"

@@ -26,7 +26,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>obj</var>.__defineGetter__(<var>prop</var>, <var>func</var>)</pre>
+  class="brush: js"><var>obj</var>.__defineGetter__(<var>prop</var>, <var>func</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -50,14 +50,14 @@ tags:
 
 <h3 id="Non-standard_and_deprecated_way">Non-standard and deprecated way</h3>
 
-<pre class="brush: js notranslate">var o = {};
+<pre class="brush: js">var o = {};
 o.__defineGetter__('gimmeFive', function() { return 5; });
 console.log(o.gimmeFive); // 5
 </pre>
 
 <h3 id="Standard-compliant_ways">Standard-compliant ways</h3>
 
-<pre class="brush: js notranslate">// Using the get operator
+<pre class="brush: js">// Using the get operator
 var o = { get gimmeFive() { return 5; } };
 console.log(o.gimmeFive); // 5
 

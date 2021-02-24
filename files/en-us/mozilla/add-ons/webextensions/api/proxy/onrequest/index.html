@@ -89,7 +89,7 @@ browser.proxy.onRequest.hasListener(listener)
 
 <p>This code intercepts requests to <code>&lt;all_urls&gt;</code>, and proxies them if they are not for a top-level frame.</p>
 
-<pre class="notranslate brush: js">function shouldProxyRequest(requestInfo) {
+<pre class="brush: js">function shouldProxyRequest(requestInfo) {
   return requestInfo.parentFrameId != -1;
 }
 

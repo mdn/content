@@ -43,7 +43,7 @@ tags:
 
 <p>Here is an example which can do just that. It allows creation of a simple range iterator which defines a sequence of integers from <code><var>start</var></code> (inclusive) to <code><var>end</var></code> (exclusive) spaced <code><var>step</var></code> apart. Its final return value is the size of the sequence it created, tracked by the variable <code><var>iterationCount</var></code>.</p>
 
-<pre class="brush: js notranslate">function makeRangeIterator(<var>start</var> = 0, <var>end</var> = Infinity, <var>step</var> = 1) {
+<pre class="brush: js">function makeRangeIterator(<var>start</var> = 0, <var>end</var> = Infinity, <var>step</var> = 1) {
     let nextIndex = start;
     let iterationCount = 0;
 
@@ -65,7 +65,7 @@ tags:
 
 <p>Using the iterator then looks like this:</p>
 
-<pre class="brush: js notranslate">const it = makeRangeIterator(1, 10, 2);
+<pre class="brush: js">const it = makeRangeIterator(1, 10, 2);
 
 let result = it.next();
 while (!result.done) {
@@ -91,7 +91,7 @@ console.log("Iterated over sequence of size: ", result.value); // [5 numbers ret
 
 <p>We can now adapt the example from above. The behavior of this code is identical, but the implementation is much easier to write and read.</p>
 
-<pre class="brush: js notranslate">function* makeRangeIterator(<var>start</var> = 0, <var>end</var> = 100, <var>step</var> = 1) {
+<pre class="brush: js">function* makeRangeIterator(<var>start</var> = 0, <var>end</var> = 100, <var>step</var> = 1) {
     let iterationCount = 0;
     for (let i = start; i &lt; end; i += step) {
         iterationCount++;
@@ -110,7 +110,7 @@ console.log("Iterated over sequence of size: ", result.value); // [5 numbers ret
 
 <p>Iterables which can iterate only once (such as Generators) customarily return <code>this</code> from their <strong>@@iterator</strong> method, whereas iterables which can be iterated many times must return a new iterator on each invocation of <strong>@@iterator</strong>.</p>
 
-<pre class="brush: js notranslate">function* makeIterator() {
+<pre class="brush: js">function* makeIterator() {
     yield 1;
     yield 2;
 }
@@ -141,7 +141,7 @@ console.log(<var>it</var>[Symbol.iterator]() === <var>it</var>) // true;
 
 <p>You can make your own iterables like this:</p>
 
-<pre class="brush: js notranslate">const myIterable = {
+<pre class="brush: js">const myIterable = {
     *[Symbol.iterator]() {
         yield 1;
         yield 2;
@@ -169,7 +169,7 @@ or
 
 <p>Some statements and expressions expect iterables. For example: the {{jsxref("Statements/for...of","for-of")}} loops, {{jsxref("Operators/yield*","yield*")}}.</p>
 
-<pre class="brush: js notranslate">for (let value of ['a', 'b', 'c']) {
+<pre class="brush: js">for (let value of ['a', 'b', 'c']) {
     console.log(value);
 }
 // "a"
@@ -204,7 +204,7 @@ a;
 
 <p>Here is the fibonacci generator using <code>next(<var>x</var>)</code> to restart the sequence:</p>
 
-<pre class="brush: js notranslate">function* fibonacci() {
+<pre class="brush: js">function* fibonacci() {
   let current = 0;
   let next = 1;
   while (true) {

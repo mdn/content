@@ -16,7 +16,7 @@ tags:
 
 <p>On supported platforms, showing a system notification generally involves two things. First, the user needs to grant the current origin permission to display system notifications, which is generally done when the app or site initialises, using the {{domxref("Notification.requestPermission()")}} method. This should be done in response to a user gesture, such as clicking a button, for example:</p>
 
-<pre class="brush: js notranslate">btn.addEventListener('click', function() {
+<pre class="brush: js">btn.addEventListener('click', function() {
   let promise = Notification.requestPermission();
   // wait for permission
 })</pre>

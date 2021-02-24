@@ -120,7 +120,7 @@ tags:
 <ul>
  <li><code>DEBUG</code>. This should be set as <code>False</code> in production (<code>DEBUG = False</code>). This stops the sensitive/confidential debug trace and variable information from being displayed.</li>
  <li><code>SECRET_KEY</code>. This is a large random value used for CSRF protection etc. It is important that the key used in production is not in source control or accessible outside the production server. The Django documents suggest that this might best be loaded from an environment variable or read from a server-only file.
-  <pre class="brush: python notranslate"># Read SECRET_KEY from an environment variable
+  <pre class="brush: python"># Read SECRET_KEY from an environment variable
 import os
 SECRET_KEY = os.environ['SECRET_KEY']
 
@@ -136,7 +136,7 @@ with open('/etc/secret_key.txt') as f:
 
 <p>Open <strong>/locallibrary/settings.py</strong>, disable the original <code>SECRET_KEY</code> configuration and add the new lines as shown below in <strong>bold</strong>. During development no environment variable will be specified for the key, so the default value will be used (it shouldn't matter what key you use here, or if the key "leaks", because you won't use it in production).</p>
 
-<pre class="brush: python notranslate"># SECURITY WARNING: keep the secret key used in production secret!
+<pre class="brush: python"># SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = "cg#p$g+j9tax!#a3cup@1$8obt2_+&amp;k3q+pmu)5%asj6yjpkag"
 <strong>import os</strong>
 <strong>SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&amp;k3q+pmu)5%asj6yjpkag')</strong>
@@ -144,7 +144,7 @@ with open('/etc/secret_key.txt') as f:
 
 <p>Then comment out the existing <code>DEBUG</code> setting and add the new line shown below.</p>
 
-<pre class="brush: python notranslate"># SECURITY WARNING: don't run with debug turned on in production!
+<pre class="brush: python"># SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 <strong>DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'</strong>
 </pre>
@@ -153,11 +153,11 @@ with open('/etc/secret_key.txt') as f:
 
 <p>You can set the environment variable to False by issuing the following command:</p>
 
-<pre class="brush: bash notranslate">export DJANGO_DEBUG=False</pre>
+<pre class="brush: bash">export DJANGO_DEBUG=False</pre>
 
 <p>A full checklist of settings you might want to change is provided in <a href="https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/">Deployment checklist</a> (Django docs). You can also list a number of these using the terminal command below:</p>
 
-<pre class="brush: python notranslate">python3 manage.py check --deploy
+<pre class="brush: python">python3 manage.py check --deploy
 </pre>
 
 <h2 id="Example_Installing_LocalLibrary_on_Heroku">Example: Installing LocalLibrary on Heroku</h2>
@@ -246,11 +246,11 @@ with open('/etc/secret_key.txt') as f:
 <ol>
  <li>Install <em>git</em> for your local computer (you can find versions for different platforms <a href="https://git-scm.com/downloads">here</a>).</li>
  <li>Open a command prompt/terminal and clone your repository using the URL you copied above:
-  <pre class="brush: bash notranslate">git clone https://github.com/<strong><em>&lt;your_git_user_id&gt;</em></strong>/django_local_library.git
+  <pre class="brush: bash">git clone https://github.com/<strong><em>&lt;your_git_user_id&gt;</em></strong>/django_local_library.git
 </pre>
   This will create the repository in a new folder in the current working directory.</li>
  <li>Navigate into the new repo.
-  <pre class="brush: bash notranslate">cd django_local_library</pre>
+  <pre class="brush: bash">cd django_local_library</pre>
  </li>
 </ol>
 
@@ -259,18 +259,18 @@ with open('/etc/secret_key.txt') as f:
 <ol>
  <li>Copy your Django application into this folder (all the files at the same level as <strong>manage.py</strong> and below, <strong>not</strong> their containing locallibrary folder).</li>
  <li>Open the <strong>.gitignore</strong> file, copy the following lines into the bottom of it, and then save (this file is used to identify files that should not be uploaded to git by default).
-  <pre class="notranslate"># Text backup files
+  <pre># Text backup files
 *.bak
 
 # Database
 *.sqlite3</pre>
  </li>
  <li>Open a command prompt/terminal and use the <code>add</code> command to add all files to git. This adds the files which aren't ignored by the <strong>.gitignore</strong> file to the "staging area".
-  <pre class="brush: bash notranslate">git add -A
+  <pre class="brush: bash">git add -A
 </pre>
  </li>
  <li>Use the <code>status</code> command to check that all files you are about to <code>commit</code> are correct (you want to include source files, not binaries, temporary files etc.). It should look a bit like the listing below.
-  <pre class="notranslate">&gt; git status
+  <pre>&gt; git status
 On branch main
 Your branch is up-to-date with 'origin/main'.
 Changes to be committed:
@@ -284,10 +284,10 @@ Changes to be committed:
         new file:   templates/registration/password_reset_form.html</pre>
  </li>
  <li>When you're satisfied, <code>commit</code> the files to your local repository. This is essentially equivalent to signing off on the changes and making them an official part of the local repository.
-  <pre class="brush: bash notranslate">git commit -m "First version of application moved into github"</pre>
+  <pre class="brush: bash">git commit -m "First version of application moved into github"</pre>
  </li>
  <li>At this point, the remote repository has not been changed. Synchronise (<code>push</code>) your local repository to the remote Github repository using the following command:
-  <pre class="notranslate">git push origin main</pre>
+  <pre>git push origin main</pre>
  </li>
 </ol>
 
@@ -317,7 +317,7 @@ Changes to be committed:
 
 <p>Create the file <code>Procfile</code> (no extension) in the root of your GitHub repository to declare the application's process types and entry points. Copy the following text into it:</p>
 
-<pre class="notranslate">web: gunicorn locallibrary.wsgi --log-file -</pre>
+<pre>web: gunicorn locallibrary.wsgi --log-file -</pre>
 
 <p>The "<code>web:</code>" tells Heroku that this is a web dyno and can be sent HTTP traffic. The process to start in this dyno is <em>gunicorn</em>, which is a popular web application server that Heroku recommends. We start Gunicorn using the configuration information in the module <code>locallibrary.wsgi</code> (created with our application skeleton: <strong>/locallibrary/wsgi.py</strong>).</p>
 
@@ -334,7 +334,7 @@ Changes to be committed:
   <p>Make sure that you're in your Python virtual environment (use the <code>workon [name-of-virtual-environment]</code> command) before you install <em>Gunicorn</em> and further modules with <em>pip</em>, or you might experience problems with importing these modules in your <strong>/locallibrary/settings.py</strong> file in the later sections. </p>
 </div>
 
-<pre class="brush: bash notranslate">pip3 install gunicorn
+<pre class="brush: bash">pip3 install gunicorn
 </pre>
 
 <h4 id="Database_configuration">Database configuration</h4>
@@ -349,14 +349,14 @@ Changes to be committed:
 
 <p>Install <em>dj-database-url</em> locally so that it becomes part of our <a href="#requirements">requirements</a> for Heroku to set up on the remote server:</p>
 
-<pre class="notranslate">$ pip3 install dj-database-url
+<pre>$ pip3 install dj-database-url
 </pre>
 
 <h5 id="settings.py">settings.py</h5>
 
 <p>Open <strong>/locallibrary/settings.py</strong> and copy the following configuration into the bottom of the file:</p>
 
-<pre class="notranslate"># Heroku: Update database configuration from $DATABASE_URL.
+<pre># Heroku: Update database configuration from $DATABASE_URL.
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)</pre>
@@ -465,7 +465,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 <p>The Python requirements of your web application must be stored in a file <strong>requirements.txt</strong> in the root of your repository. Heroku will then install these automatically when it rebuilds your environment. You can create this file using <em>pip</em> on the command line (run the following in the repo root):</p>
 
-<pre class="brush: bash notranslate">pip3 freeze &gt; requirements.txt</pre>
+<pre class="brush: bash">pip3 freeze &gt; requirements.txt</pre>
 
 <p>After installing all the different dependencies above, your <strong>requirements.txt</strong> file should have <em>at least</em> these items listed (though the version numbers may be different). Please delete any other dependencies not listed below, unless you've explicitly added them for this application.</p>
 
@@ -496,11 +496,11 @@ whitenoise==5.2.0
 
 <p>Before we proceed, lets test the site again locally and make sure it wasn't broken by any of our changes above. Run the development web server as usual and then check the site still works as you expect on your browser.</p>
 
-<pre class="brush: bash notranslate">python3 manage.py runserver</pre>
+<pre class="brush: bash">python3 manage.py runserver</pre>
 
 <p>Next, lets <code>push</code> our changes to Github. In the terminal (after having navigated to our local repository), enter the following commands:</p>
 
-<pre class="brush: python notranslate">git add -A
+<pre class="brush: python">git add -A
 git commit -m "Added files and changes required for deployment to heroku"
 git push origin main
 </pre>
@@ -525,14 +525,14 @@ git push origin main
 
 <p>After the client is installed you will be able run commands. For example to get help on the client:</p>
 
-<pre class="brush: bash notranslate">heroku help
+<pre class="brush: bash">heroku help
 </pre>
 
 <h3 id="Create_and_upload_the_website">Create and upload the website</h3>
 
 <p>To create the app we run the "create" command in the root directory of our repository. This creates a git remote ("pointer to a remote repository") named <em>heroku</em> in our local git environment.</p>
 
-<pre class="brush: bash notranslate">heroku create</pre>
+<pre class="brush: bash">heroku create</pre>
 
 <div class="notecard note">
   <h4>Note</h4>

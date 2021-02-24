@@ -83,14 +83,14 @@ tags:
 
 <p>To add a handler for the <code>reset</code> event, you can use either of two approaches. First, you can use the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method:</p>
 
-<pre class="brush: js notranslate">viewerRefSpace.addEventListener("reset", (event) =&gt; {
+<pre class="brush: js">viewerRefSpace.addEventListener("reset", (event) =&gt; {
   /* perform reset related tasks */
 });
 </pre>
 
 <p>The second option is to set the <code>XRReferenceSpace</code> object's {{domxref("XRReferenceSpace.onreset", "onreset")}} event handler property:</p>
 
-<pre class="brush: js notranslate">viewerRefSpace.onreset = (event) =&gt; {
+<pre class="brush: js">viewerRefSpace.onreset = (event) =&gt; {
   /* perform reset related tasks */
 };
 </pre>

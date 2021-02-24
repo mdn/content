@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">new ArrayBuffer(<var>length</var>)
+<pre class="brush: js">new ArrayBuffer(<var>length</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -49,11 +49,11 @@ tags:
   <code>ArrayBuffer</code> constructor as a function without <code>new</code>, will throw
   a {{jsxref("TypeError")}} from now on.</p>
 
-<pre class="brush: js example-bad notranslate">var dv = ArrayBuffer(10);
+<pre class="brush: js example-bad">var dv = ArrayBuffer(10);
 // TypeError: calling a builtin ArrayBuffer constructor
 // without new is forbidden</pre>
 
-<pre class="brush: js example-good notranslate">var dv = new ArrayBuffer(10);</pre>
+<pre class="brush: js example-good">var dv = new ArrayBuffer(10);</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -62,7 +62,7 @@ tags:
 <p>In this example, we create a 8-byte buffer with a {{jsxref("Global_Objects/Int32Array",
   "Int32Array")}} view referring to the buffer:</p>
 
-<pre class="brush: js notranslate">var buffer = new ArrayBuffer(8);
+<pre class="brush: js">var buffer = new ArrayBuffer(8);
 var view   = new Int32Array(buffer);</pre>
 
 <h2 id="Specifications">Specifications</h2>

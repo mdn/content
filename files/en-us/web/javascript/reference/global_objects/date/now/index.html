@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <var>timeInMs</var> = Date.now();</pre>
+<pre class="brush: js">var <var>timeInMs</var> = Date.now();</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -30,7 +30,7 @@ tags:
   been updated to support this method can work around the absence of this method using the
   following shim:</p>
 
-<pre class="brush: js notranslate">if (!Date.now) {
+<pre class="brush: js">if (!Date.now) {
   Date.now = function now() {
     return new Date().getTime();
   };
@@ -46,7 +46,7 @@ tags:
   In Firefox, the <code>privacy.reduceTimerPrecision</code>  preference is enabled by
   default and defaults to 20µs in Firefox 59; in 60 it will be 2ms.</p>
 
-<pre class="brush: js notranslate">// reduced time precision (2ms) in Firefox 60
+<pre class="brush: js">// reduced time precision (2ms) in Firefox 60
 Date.now()
 // 1519211809934
 // 1519211810362

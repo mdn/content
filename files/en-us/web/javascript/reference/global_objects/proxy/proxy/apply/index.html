@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <var>p</var> = new Proxy(<var>target</var>, {
+<pre class="brush: js">const <var>p</var> = new Proxy(<var>target</var>, {
   apply: function(<var>target</var>, <var>thisArg</var>, <var>argumentsList</var>) {
   }
 });
@@ -76,7 +76,7 @@ tags:
 
 <p>The following code traps a function call.</p>
 
-<pre class="brush: js notranslate">const p = new Proxy(function() {}, {
+<pre class="brush: js">const p = new Proxy(function() {}, {
   apply: function(target, thisArg, argumentsList) {
     console.log('called: ' + argumentsList.join(', '));
     return argumentsList[0] + argumentsList[1] + argumentsList[2];

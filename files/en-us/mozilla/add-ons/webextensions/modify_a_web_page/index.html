@@ -29,7 +29,7 @@ tags:
 
 <p>First of all, create a new directory called "modify-page". In that directory, create a file called "manifest.json", with the following contents:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
 
   "manifest_version": 2,
   "name": "modify-page",
@@ -56,7 +56,7 @@ tags:
 
 <p>Next, create a file called "page-eater.js" inside the "modify-page" directory, and give it the following contents:</p>
 
-<pre class="notranslate brush: js">document.body.textContent = "";
+<pre class="brush: js">document.body.textContent = "";
 
 var header = document.createElement('h1');
 header.textContent = "This page has been eaten";
@@ -76,7 +76,7 @@ document.body.appendChild(header);</pre>
 
 <p>First, update "manifest.json" so it has the following contents:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
 
   "manifest_version": 2,
   "name": "modify-page",
@@ -102,7 +102,7 @@ document.body.appendChild(header);</pre>
 
 <p>Let's create this file. Create a new file called <code>background.js</code> in the <code>modify-page</code> directory, and give it the following contents:</p>
 
-<pre class="notranslate brush: js">browser.contextMenus.create({
+<pre class="brush: js">browser.contextMenus.create({
   id: "eat-page",
   title: "Eat this page"
 });
@@ -120,7 +120,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 
 <p>At this point the extension should look like this:</p>
 
-<pre class="line-numbers  language-html notranslate"><code class="language-html">modify-page/
+<pre class="line-numbers  language-html"><code class="language-html">modify-page/
     background.js
     manifest.json
     page-eater.js</code></pre>
@@ -165,7 +165,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 
 <p>First, edit <code>background.js</code> so that it has these contents:</p>
 
-<pre class="notranslate brush: js">browser.contextMenus.create({
+<pre class="brush: js">browser.contextMenus.create({
   id: "eat-page",
   title: "Eat this page"
 });
@@ -198,7 +198,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 
 <p>Next, update <code>page-eater.js</code> like this:</p>
 
-<pre class="notranslate brush: js">function eatPageReceiver(request, sender, sendResponse) {
+<pre class="brush: js">function eatPageReceiver(request, sender, sendResponse) {
   document.body.textContent = "";
   let header = document.createElement('h1');
   header.textContent = request.replacement;
@@ -219,7 +219,7 @@ browser.runtime.onMessage.addListener(eatPageReceiver);
 
 <p>If we want send messages back from the content script to the background page,  we would use <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage">runtime.sendMessage()</a></code> instead of <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage">tabs.sendMessage()</a></code>, e.g.:</p>
 
-<pre class="notranslate brush: js">browser.runtime.sendMessage({
+<pre class="brush: js">browser.runtime.sendMessage({
     title: "from page-eater.js"
 });</pre>
 

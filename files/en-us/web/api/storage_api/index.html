@@ -81,7 +81,7 @@ tags:
 
 <p>To determine the estimated quota and usage values for a given origin, use the {{domxref("StorageManager.estimate", "navigator.storage.estimate()")}} method, which returns a promise that, when resolved, receives a {{domxref("StorageEstimate")}} that contains these figures. For example:</p>
 
-<pre class="brush: js notranslate">navigator.storage.estimate().then(estimate =&gt; {
+<pre class="brush: js">navigator.storage.estimate().then(estimate =&gt; {
   // estimate.quota is the estimated quota
   // estimate.usage is the estimated number of bytes used
 });</pre>

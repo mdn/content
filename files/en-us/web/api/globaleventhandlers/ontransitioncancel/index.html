@@ -31,7 +31,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <var>transitionCancelHandler</var> = <var>target</var>.ontransitioncancel;
+<pre class="brush: js">var <var>transitionCancelHandler</var> = <var>target</var>.ontransitioncancel;
 
 <var>target</var>.ontransitioncancel = <var>{{jsxref("Function")}}</var>
 </pre>
@@ -70,7 +70,7 @@ tags:
 <p>This creates a {{HTMLElement("div")}} which we'll style with CSS below to make into a
   box that resizes and changes color and such.</p>
 
-<pre class="brush: html; notranslate">&lt;div class="box"&gt;&lt;/div&gt;
+<pre class="brush: html;">&lt;div class="box"&gt;&lt;/div&gt;
 </pre>
 
 <h3 id="CSS">CSS</h3>
@@ -79,7 +79,7 @@ tags:
   color and size change, and causes the box to rotate, while the mouse cursor hovers over
   it.</p>
 
-<pre class="brush: css highlight:[13,14] notranslate">.box {
+<pre class="brush: css highlight:[13,14]">.box {
   margin-left: 70px;
   margin-top: 30px;
   border-style: solid;
@@ -110,7 +110,7 @@ tags:
 <p>Next, we need to establish our event handlers to change the text content of the box
   when the transition begins and ends.</p>
 
-<pre class="brush: js notranslate">let box = document.querySelector(".box");
+<pre class="brush: js">let box = document.querySelector(".box");
 box.ontransitionrun = function(event) {
   box.textContent = "Zooming...";
 }

@@ -54,8 +54,8 @@ tags:
 <p><em>The {{DOMxRef("Document")}} interface provides properties that can be used to determine if full-screen mode is supported and available, and if full-screen mode is currently active, which element is using the screen.</em></p>
 
 <dl>
- <dt>{{DOMxRef("DocumentOrShadowRoot.fullscreenElement")}}</dt>
- <dd>The <code>fullscreenElement</code> property tells you the {{DOMxRef("Element")}} that's currently being displayed in full-screen mode on the DOM (or shadow DOM). If this is <code>null</code>, the document is not in full-screen mode.</dd>
+ <dt>{{DOMxRef("Document.fullscreenElement")}} / {{DOMxRef("ShadowRoot.fullscreenElement")}}</dt>
+ <dd>The <code>fullscreenElement</code> property tells you the {{DOMxRef("Element")}} that's currently being displayed in full-screen mode on the DOM (or shadow DOM). If this is <code>null</code>, the document (or shadow DOM) is not in full-screen mode.</dd>
  <dt>{{DOMxRef("document.fullscreenEnabled")}}</dt>
  <dd>The <code>fullscreenEnabled</code> property tells you whether or not it is possible to engage full-screen mode. This is <code>false</code> if full-screen mode is not available for any reason (such as the <code>"fullscreen"</code> feature not being allowed, or full-screen mode not being supported).</dd>
 </dl>
@@ -139,7 +139,7 @@ tags:
 
 <p>When the page is loaded, this code is run to set up an event listener to watch for the <kbd>Enter</kbd> key.</p>
 
-<pre class="brush: js notranslate">document.addEventListener("keypress", function(e) {
+<pre class="brush: js">document.addEventListener("keypress", function(e) {
   if (e.keyCode === 13) {
     toggleFullScreen();
   }
@@ -150,7 +150,7 @@ tags:
 
 <p>This code is called by the event handler above when the user hits the <kbd>Enter</kbd> key.</p>
 
-<pre class="brush: js notranslate">function toggleFullScreen() {
+<pre class="brush: js">function toggleFullScreen() {
   if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen();
   } else {
@@ -191,7 +191,7 @@ tags:
 
 <div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
-<p>{{Compat("api.DocumentOrShadowRoot.fullscreenElement")}}</p>
+<p>{{Compat("api.Document.fullscreenElement")}}</p>
 
 <h3 id="Document.fullscreenEnabled"><code>Document.fullscreenEnabled</code></h3>
 

@@ -48,7 +48,7 @@ tags:
 
 <p>The value of the global is then changed, first to <code>42</code> using the <code>Global.value</code> property, and then to 43 using the <code>incGlobal()</code> function exported out of the <code>global.wasm</code> module (this adds 1 to whatever value is given to it and then returns the new value).</p>
 
-<pre class="brush: js notranslate">const output = document.getElementById('output');
+<pre class="brush: js">const output = document.getElementById('output');
 
 function assertEq(msg, got, expected) {
   output.innerHTML += `Testing ${msg}: `;

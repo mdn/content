@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">parseInt(<var>string</var> [, <var>radix</var>])</pre>
+<pre class="brush: js">parseInt(<var>string</var> [, <var>radix</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -123,7 +123,7 @@ tags:
   implementations had interpreted a numeric string beginning with a leading <code>0</code> as
   octal. The following might have had an octal result, or it might have had a decimal result.</p>
 
-<pre class="brush: js notranslate">parseInt('0e0')  // 0
+<pre class="brush: js">parseInt('0e0')  // 0
 parseInt('08')   // 0, because '8' is not an octal digit.
 </pre>
 
@@ -131,7 +131,7 @@ parseInt('08')   // 0, because '8' is not an octal digit.
   implementations to treat Strings beginning with a <code>0</code> character as octal
   values. Many implementations have adopted this behavior as of 2021.</p>
 
-<pre class="brush: js notranslate">parseInt('0e0')  // 0
+<pre class="brush: js">parseInt('0e0')  // 0
 parseInt('08')   // 8
 </pre>
 
@@ -141,7 +141,7 @@ parseInt('08')   // 8
 
 <p>Regular expressions can help:</p>
 
-<pre class="brush: js notranslate">function filterInt(value) {
+<pre class="brush: js">function filterInt(value) {
   if (/^[-+]?(\d+|Infinity)$/.test(value)) {
     return Number(value)
   } else {
@@ -165,7 +165,7 @@ console.log(filterInt('1.61803398875'))      // NaN
 
 <p>The following examples all return <code>15</code>:</p>
 
-<pre class="brush: js notranslate">parseInt('0xF', 16)
+<pre class="brush: js">parseInt('0xF', 16)
 parseInt('F', 16)
 parseInt('17', 8)
 parseInt(021, 8)
@@ -182,13 +182,13 @@ parseInt('12', 13)
 
 <p>The following examples all return <code>NaN</code>:</p>
 
-<pre class="brush: js notranslate">parseInt('Hello', 8)  // Not a number at all
+<pre class="brush: js">parseInt('Hello', 8)  // Not a number at all
 parseInt('546', 2)    // Digits other than 0 or 1 are invalid for binary radix
 </pre>
 
 <p>The following examples all return <code>-15</code>:</p>
 
-<pre class="brush: js notranslate">parseInt('-F', 16)
+<pre class="brush: js">parseInt('-F', 16)
 parseInt('-0F', 16)
 parseInt('-0XF', 16)
 parseInt(-15.1, 10)
@@ -201,7 +201,7 @@ parseInt('-12', 13)
 
 <p>The following examples all return <code>4</code>.</p>
 
-<pre class="brush: js notranslate">parseInt(4.7, 10)
+<pre class="brush: js">parseInt(4.7, 10)
 parseInt(4.7 * 1e22, 10)        // Very large number becomes 4
 parseInt(0.00000000000434, 10)  // Very small number becomes 4
 </pre>
@@ -209,7 +209,7 @@ parseInt(0.00000000000434, 10)  // Very small number becomes 4
 <p>If the number is greater than 1e+21 (including) or less than 1e-7 (including), it will
   return <code>1</code>. (when using radix 10).</p>
 
-<pre class="brush: js notranslate">parseInt(0.0000001,10);
+<pre class="brush: js">parseInt(0.0000001,10);
 parseInt(0.000000123,10);
 parseInt(1e-7,10);
 parseInt(1000000000000000000000,10);
@@ -219,25 +219,25 @@ parseInt(1e+21,10);
 
 <p>The following example returns <code>224</code>:</p>
 
-<pre class="brush: js notranslate">parseInt('0e0', 16)
+<pre class="brush: js">parseInt('0e0', 16)
 </pre>
 
 <p>{{jsxref("BigInt")}} values lose precision:</p>
 
-<pre class="brush: js notranslate">parseInt('900719925474099267n')
+<pre class="brush: js">parseInt('900719925474099267n')
 // 900719925474099300</pre>
 
 <p><code>parseInt</code> doesn't work with <a
     href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Numeric_separators">numeric
     separators</a>:</p>
 
-<pre class="brush: js notranslate">parseInt('123_456')
+<pre class="brush: js">parseInt('123_456')
 // 123
 </pre>
 
 <p>The radix is coerced to a <code>Number</code>:</p>
 
-<pre class="brush: js notranslate">const obj = {
+<pre class="brush: js">const obj = {
   valueOf() {return 8}
 };
 parseInt('11', obj); // 9

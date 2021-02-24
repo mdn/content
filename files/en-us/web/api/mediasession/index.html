@@ -39,7 +39,7 @@ tags:
 
 <p>The following example creates a new media session and assigns action handlers to it:</p>
 
-<pre class="brush: js notranslate">if ('mediaSession' in navigator) {
+<pre class="brush: js">if ('mediaSession' in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
     title: 'Unforgettable',
     artist: 'Nat King Cole',
@@ -67,7 +67,7 @@ tags:
 
 <p>The following example sets up two functions for playing and pausing, then uses them as callbacks with the relevant action handlers.</p>
 
-<pre class="brush: js notranslate">const actionHandlers = [
+<pre class="brush: js">const actionHandlers = [
   // play
   [
     'play',

@@ -98,7 +98,7 @@ tags:
 
 <p>To create your starter app template, run the following terminal commands:</p>
 
-<pre class="brush: bash notranslate">npx degit sveltejs/template moz-todo-svelte
+<pre class="brush: bash">npx degit sveltejs/template moz-todo-svelte
 cd moz-todo-svelte
 npm install
 npm run dev</pre>
@@ -115,7 +115,7 @@ npm run dev</pre>
 
 <p>The starter template comes with the following structure:</p>
 
-<pre class="notranslate">moz-todo-svelte
+<pre>moz-todo-svelte
 ├── readme.md
 ├── package.json
 ├── package-lock.json
@@ -170,7 +170,7 @@ npm run dev</pre>
 
 <p>All three sections — <code>&lt;script&gt;</code>, <code>&lt;styles&gt;</code>, and markup — are optional, and can appear in any order you like.</p>
 
-<pre class="brush: html notranslate">&lt;script&gt;
+<pre class="brush: html">&lt;script&gt;
   // logic goes here
 &lt;/script&gt;
 
@@ -186,7 +186,7 @@ npm run dev</pre>
 
 <p>With this in mind, let's have a look at the <code>src/App.svelte</code> file that came with the starter template. You should see something like the following:</p>
 
-<pre class="brush: html notranslate">&lt;script&gt;
+<pre class="brush: html">&lt;script&gt;
   export let name;
 &lt;/script&gt;
 
@@ -221,7 +221,7 @@ npm run dev</pre>
 
 <p>The <code>&lt;script&gt;</code> block contains JavaScript that runs when a component instance is created. Variables declared (or imported) at the top level are 'visible' from the component's markup. Top-level variables is the way Svelte handles the component state, and they are reactive by default. We will explain in detail what this means later on.</p>
 
-<pre class="brush: html notranslate">&lt;script&gt;
+<pre class="brush: html">&lt;script&gt;
   export let name;
 &lt;/script&gt;</pre>
 
@@ -231,7 +231,7 @@ npm run dev</pre>
 
 <p>In the markup section you can insert any HTML you like, and in addition you can insert valid JavaScript expression inside single curly brackets (<code>{}</code>). In this case we are embedding the value of the <code>name</code> prop right after the <code>Hello</code> text.</p>
 
-<pre class="brush: html notranslate">&lt;main&gt;
+<pre class="brush: html">&lt;main&gt;
   &lt;h1&gt;Hello {name}!&lt;/h1&gt;
   &lt;p&gt;Visit the &lt;a href="https://svelte.dev/tutorial"&gt;Svelte tutorial&lt;/a&gt; to learn how to build Svelte apps.&lt;/p&gt;
 &lt;/main&gt;</pre>
@@ -242,7 +242,7 @@ npm run dev</pre>
 
 <p>If you have experience working with CSS, the following snippet should make sense:</p>
 
-<pre class="brush: html notranslate">&lt;style&gt;
+<pre class="brush: html">&lt;style&gt;
   main {
     text-align: center;
     padding: 1em;
@@ -283,7 +283,7 @@ npm run dev</pre>
 <p>Now that we have a general idea of how it all fits together, we can start making a few changes.<br>
  At this point you can try updating your <code>App.svelte</code> component — for example change the <code>&lt;h1&gt;</code> element on line 6 of <code>App.svelte</code> so that it reads like this:</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Hello {name} from MDN!&lt;/h1&gt;</pre>
+<pre class="brush: html">&lt;h1&gt;Hello {name} from MDN!&lt;/h1&gt;</pre>
 
 <p>Just save your changes and the app running at <code>localhost:5000</code> will be automatically updated.</p>
 
@@ -295,7 +295,7 @@ npm run dev</pre>
 
 <p>Try updating your <code>&lt;script&gt;</code> and markup sections like so:</p>
 
-<pre class="brush: html notranslate">&lt;script&gt;
+<pre class="brush: html">&lt;script&gt;
   export let name;
 
   function toggleName() {
@@ -323,7 +323,7 @@ npm run dev</pre>
 
 <p>Let’s open <code>src/main.js</code>, which is where the <code>App</code> component is being imported and used. This file is the entry point for our app, and it initially looks like this:</p>
 
-<pre class="brush: js notranslate">import App from './App.svelte';
+<pre class="brush: js">import App from './App.svelte';
 
 const app = new App({
   target: document.body,
@@ -351,7 +351,7 @@ export default app;</pre>
 
 <p>Finally the file <code>public/index.html</code> includes the generated <code>bundle.css</code> and <code>bundle.js</code> files:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;meta charset='utf-8'&gt;
@@ -390,11 +390,11 @@ export default app;</pre>
 
 <p>After <a href="https://git-scm.com/downloads">installing git</a>, to clone the repository you should execute:</p>
 
-<pre class="brush: bash notranslate">git clone https://github.com/opensas/mdn-svelte-tutorial.git</pre>
+<pre class="brush: bash">git clone https://github.com/opensas/mdn-svelte-tutorial.git</pre>
 
 <p>Then at the beginning of each article, you can just <code>cd</code> into the corresponding folder and start the app in dev mode to see what its current state should be, like this:</p>
 
-<pre class="brush: bash notranslate">cd 02-starting-our-todo-app
+<pre class="brush: bash">cd 02-starting-our-todo-app
 npm install
 npm run dev</pre>
 
@@ -450,15 +450,15 @@ npm run dev</pre>
 
 <p>Clone the github repo (if you haven't already done it) with:</p>
 
-<pre class="brush: bash notranslate">git clone https://github.com/opensas/mdn-svelte-tutorial.git</pre>
+<pre class="brush: bash">git clone https://github.com/opensas/mdn-svelte-tutorial.git</pre>
 
 <p>Then to get to the current app state, run</p>
 
-<pre class="brush: bash notranslate">cd mdn-svelte-tutorial/01-getting-started</pre>
+<pre class="brush: bash">cd mdn-svelte-tutorial/01-getting-started</pre>
 
 <p>Or directly download the folder's content:</p>
 
-<pre class="brush: bash notranslate">npx degit opensas/mdn-svelte-tutorial/01-getting-started</pre>
+<pre class="brush: bash">npx degit opensas/mdn-svelte-tutorial/01-getting-started</pre>
 
 <p>Remember to run <code>npm install &amp;&amp; npm run dev</code> to start your app in development mode.</p>
 

@@ -60,7 +60,7 @@ tags:
 
 <p>This example listens for all HTTPS requests to "mozilla.org" or its subdomains, and logs the subject name in the server certificate:</p>
 
-<pre class="notranslate brush: js">async function logSubject(details) {
+<pre class="brush: js">async function logSubject(details) {
   try {
     let securityInfo = await browser.webRequest.getSecurityInfo(details.requestId, {});
     console.log(details.url);
@@ -80,7 +80,7 @@ browser.webRequest.onHeadersReceived.addListener(logSubject,
 
 <p>This example listens for all HTTPS requests to "mozilla.org" or its subdomains, and logs the name in the trusted root certificate:</p>
 
-<pre class="notranslate brush: js">async function logRoot(details) {
+<pre class="brush: js">async function logRoot(details) {
   try {
     let securityInfo = await browser.webRequest.getSecurityInfo(
       details.requestId,

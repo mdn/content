@@ -27,7 +27,7 @@ tags:
 
 <p>Add two new variables right after the previously defined ones:</p>
 
-<pre class="brush: js notranslate">// ...
+<pre class="brush: js">// ...
 var scoreText;
 var score = 0;
 </pre>
@@ -36,7 +36,7 @@ var score = 0;
 
 <p>Now add this line at the end of the <code>create()</code> function:</p>
 
-<pre class="brush: js notranslate">scoreText = game.add.text(5, 5, 'Points: 0', { font: '18px Arial', fill: '#0095DD' });
+<pre class="brush: js">scoreText = game.add.text(5, 5, 'Points: 0', { font: '18px Arial', fill: '#0095DD' });
 </pre>
 
 <p>The <code>text()</code> method can take four parameters:</p>
@@ -53,7 +53,7 @@ var score = 0;
 
 <p>We will increase the number of points every time the ball hits a brick and update the <code>scoreText</code> to display the current score. This can be done using the <code>setText()</code> method — add the two new lines seen below to the <code>ballHitBrick()</code> function:</p>
 
-<pre class="brush: js notranslate">function ballHitBrick(ball, brick) {
+<pre class="brush: js">function ballHitBrick(ball, brick) {
     brick.kill();
     score += 10;
     scoreText.setText('Points: '+score);

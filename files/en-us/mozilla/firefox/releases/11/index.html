@@ -69,7 +69,7 @@ tags:
  <li>The support for <a href="/en-US/docs/Web/API/IDBFactory#cmp%28%29">IDBFactory.cmp()</a> has been added.</li>
  <li>An <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#section_6">IndexedDB key</a> can also be of one of the following types: Date, Arrays and Float (and not only String and Integer).</li>
  <li>From now on, transactions are started when the transaction is created, not when the first request is placed; for example consider this:
-  <pre class="notranslate brush: js">var trans1 = db.transaction("foo", READ_WRITE);
+  <pre class="brush: js">var trans1 = db.transaction("foo", READ_WRITE);
 var trans2 = db.transaction("foo", READ_WRITE);
 
 trans2.put("2", "key");

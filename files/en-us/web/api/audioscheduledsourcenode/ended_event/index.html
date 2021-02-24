@@ -46,13 +46,13 @@ tags:
 
 <p>In this simple example, an event listener for the <code>ended</code> event is set up to enable a "Start" button in the user interface when the node stops playing:</p>
 
-<pre class="brush: js notranslate">node.addEventListener('ended', () =&gt; {
+<pre class="brush: js">node.addEventListener('ended', () =&gt; {
   document.getElementById("startButton").disabled = false;
 })</pre>
 
 <p>You can also set up the event handler using the {{domxref("AudioScheduledSourceNode.onended")}} property:</p>
 
-<pre class="brush: js notranslate">node.onended = function() {
+<pre class="brush: js">node.onended = function() {
   document.getElementById("startButton").disabled = false;
 }</pre>
 

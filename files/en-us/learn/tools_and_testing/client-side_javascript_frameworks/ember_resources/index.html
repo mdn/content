@@ -78,7 +78,7 @@ tags:
 
 <p>Using the design patterns provided by the framework, a <code>Route</code> using <code>fetch()</code> would look something  like this:</p>
 
-<pre class="brush: js notranslate">import Route from '@ember/routing/route';
+<pre class="brush: js">import Route from '@ember/routing/route';
 
 export default class MyRoute extends Route {
   async model() {
@@ -109,14 +109,14 @@ export default class MyRoute extends Route {
 
 <p>More concretely, using <code>mut</code> allows for template-only settings functions to be declared:</p>
 
-<pre class="brush: js notranslate">&lt;Checkbox
+<pre class="brush: js">&lt;Checkbox
   @value=\{{this.someData}}
   @onToggle=\{{fn (mut this.someData) (not this.someData)}}
 /&gt;</pre>
 
 <p>Whereas, without <code>mut</code>, a component class would be needed:</p>
 
-<pre class="brush: js notranslate">import Component from '@glimmer/component';
+<pre class="brush: js">import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 
@@ -131,7 +131,7 @@ export default class Example extends Component {
 
 <p>Which would then be called in the template like so:</p>
 
-<pre class="brush: js notranslate">&lt;Checkbox @data=\{{this.someData}} @onChange=\{{this.setData}} /&gt;</pre>
+<pre class="brush: js">&lt;Checkbox @data=\{{this.someData}} @onChange=\{{this.setData}} /&gt;</pre>
 
 <p>Due to the conciseness of using <code>mut</code>, it may be desireable to reach for it. However, <code>mut</code> has unnatural semantics and has caused much confusion over the term of its existence.</p>
 
@@ -141,14 +141,14 @@ export default class Example extends Component {
 
 <p>With <code>ember-set-helper</code>:</p>
 
-<pre class="brush: js notranslate">&lt;Checkbox
+<pre class="brush: js">&lt;Checkbox
   @value=\{{this.someData}}
   @onToggle=\{{set this "someData" (not this.someData)}}
 /&gt;</pre>
 
 <p>With <code>ember-box</code>:</p>
 
-<pre class="brush: js notranslate">\{{#let (box this.someData) as |someData|}}
+<pre class="brush: js">\{{#let (box this.someData) as |someData|}}
   &lt;Checkbox
     @value=\{{unwrap someData}}
     @onToggle=\{{update someData (not this.someData)}}

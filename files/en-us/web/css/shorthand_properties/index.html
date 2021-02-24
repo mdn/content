@@ -23,7 +23,7 @@ tags:
 <ol>
  <li>A value which is not specified is set to its initial value. That sounds anecdotal, but it really means that it <strong>overrides</strong> previously set values. Therefore:
 
-  <pre class="brush:css notranslate">background-color: red;
+  <pre class="brush:css">background-color: red;
 background: url(images/bg.gif) no-repeat left top;
 </pre>
   will not set the color of the background to <code>red</code> but to {{cssxref("background-color")}}'s default, <code>transparent</code>, as the second rule has precedence.</li>
@@ -86,14 +86,14 @@ background: url(images/bg.gif) no-repeat left top;
 
 <p>A background with the following properties ...</p>
 
-<pre class="brush:css notranslate">background-color: #000;
+<pre class="brush:css">background-color: #000;
 background-image: url(images/bg.gif);
 background-repeat: no-repeat;
 background-position: left top;</pre>
 
 <p>... can be shortened to just one declaration:</p>
 
-<pre class="brush:css notranslate">background: #000 url(images/bg.gif) no-repeat left top;</pre>
+<pre class="brush:css">background: #000 url(images/bg.gif) no-repeat left top;</pre>
 
 <p>(The shorthand form is actually the equivalent of the longhand properties above plus <code>background-attachment: scroll</code> and, in CSS3, some additional properties.)</p>
 
@@ -103,7 +103,7 @@ background-position: left top;</pre>
 
 <p>The following declarations ...</p>
 
-<pre class="brush:css notranslate">font-style: italic;
+<pre class="brush:css">font-style: italic;
 font-weight: bold;
 font-size: .8em;
 line-height: 1.2;
@@ -111,7 +111,7 @@ font-family: Arial, sans-serif;</pre>
 
 <p>... can be shortened to the following:</p>
 
-<pre class="brush:css notranslate">font: italic bold .8em/1.2 Arial, sans-serif;</pre>
+<pre class="brush:css">font: italic bold .8em/1.2 Arial, sans-serif;</pre>
 
 <p>This shorthand declaration is actually equivalent to the longhand declarations above plus <code>font-variant: normal</code> and <code>font-size-adjust: none</code> (CSS2.0 / CSS3), <code>font-stretch: normal</code> (CSS3).</p>
 
@@ -119,26 +119,26 @@ font-family: Arial, sans-serif;</pre>
 
 <p>With borders, the width, color, and style can be simplified into one declaration. For example, the following CSS ...</p>
 
-<pre class="brush:css notranslate">border-width: 1px;
+<pre class="brush:css">border-width: 1px;
 border-style: solid;
 border-color: #000;</pre>
 
 <p>... can be simplified as:</p>
 
-<pre class="brush:css notranslate">border: 1px solid #000;</pre>
+<pre class="brush:css">border: 1px solid #000;</pre>
 
 <h2 id="Margin_and_Padding_Properties">Margin and padding properties</h2>
 
 <p>Shorthand versions of margin and padding values work similarly; the margin property allows for shorthand values to be specified using one, two, three, or four values. The following CSS declarations ...</p>
 
-<pre class="brush:css notranslate">margin-top: 10px;
+<pre class="brush:css">margin-top: 10px;
 margin-right: 5px;
 margin-bottom: 10px;
 margin-left: 5px;</pre>
 
 <p>... are the same as the following declaration using the four value shorthand. Note that the values are in clockwise order, beginning at the top: top, right, bottom, then left (TRBL, the consonants in "trouble").</p>
 
-<pre class="brush:css notranslate">margin: 10px 5px 10px 5px;</pre>
+<pre class="brush:css">margin: 10px 5px 10px 5px;</pre>
 
 <p>Margin shorthand rules for one, two, three and four value declarations are:</p>
 

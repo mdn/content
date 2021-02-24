@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>relativeTimeFormat</var>.format(<var>value</var>, <var>unit</var>)</pre>
+<pre class="brush: js"><var>relativeTimeFormat</var>.format(<var>value</var>, <var>unit</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -41,7 +41,7 @@ tags:
 
 <p>The following example shows how to create a relative time formatter using the English language.</p>
 
-<pre class="brush: js notranslate">// Create a relative time formatter in your locale
+<pre class="brush: js">// Create a relative time formatter in your locale
 // with default values explicitly passed in.
 const rtf = new Intl.RelativeTimeFormat("en", {
     localeMatcher: "best fit", // other values: "lookup"
@@ -61,7 +61,7 @@ rtf.format(1, "day");
 
 <p>If <code>numeric:auto</code> option is passed, it will produce the string <code>yesterday</code> or <code>tomorrow</code> instead of <code>1 day ago</code> or <code>in 1 day</code>. This allows to not always have to use numeric values in the output.</p>
 
-<pre class="brush: js notranslate">// Create a relative time formatter in your locale
+<pre class="brush: js">// Create a relative time formatter in your locale
 // with numeric: "auto" option value passed in.
 const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 

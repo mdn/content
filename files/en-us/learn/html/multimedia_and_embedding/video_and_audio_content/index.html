@@ -48,7 +48,7 @@ tags:
 
 <p>The {{htmlelement("video")}} element allows you to embed a video very easily. A really simple example looks like this:</p>
 
-<pre class="brush: html notranslate">&lt;video src="rabbit320.webm" controls&gt;
+<pre class="brush: html">&lt;video src="rabbit320.webm" controls&gt;
   &lt;p&gt;Your browser doesn't support HTML5 video. Here is a &lt;a href="rabbit320.webm"&gt;link to the video&lt;/a&gt; instead.&lt;/p&gt;
 &lt;/video&gt;</pre>
 
@@ -116,7 +116,7 @@ tags:
 
 <p>So how do we do this? Take a look at the following <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html">updated example</a> (<a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html">try it live here</a>, also):</p>
 
-<pre class="brush: html notranslate">&lt;video controls&gt;
+<pre class="brush: html">&lt;video controls&gt;
   &lt;source src="rabbit320.mp4" type="video/mp4"&gt;
   &lt;source src="rabbit320.webm" type="video/webm"&gt;
   &lt;p&gt;Your browser doesn't support HTML5 video. Here is a &lt;a href="rabbit320.mp4"&gt;link to the video&lt;/a&gt; instead.&lt;/p&gt;
@@ -132,7 +132,7 @@ tags:
 
 <p>There are a number of other features you can include when displaying an HTML video. Take a look at our next example:</p>
 
-<pre class="brush: html notranslate">&lt;video controls width="400" height="400"
+<pre class="brush: html">&lt;video controls width="400" height="400"
        autoplay loop muted preload="auto"
        poster="poster.png"&gt;
   &lt;source src="rabbit320.mp4" type="video/mp4"&gt;
@@ -176,7 +176,7 @@ tags:
 
 <p>The {{htmlelement("audio")}} element works just like the {{htmlelement("video")}} element, with a few small differences as outlined below. A typical example might look like so:</p>
 
-<pre class="brush: html notranslate">&lt;audio controls&gt;
+<pre class="brush: html">&lt;audio controls&gt;
   &lt;source src="viper.mp3" type="audio/mp3"&gt;
   &lt;source src="viper.ogg" type="audio/ogg"&gt;
   &lt;p&gt;Your browser doesn't support HTML5 audio. Here is a &lt;a href="viper.mp3"&gt;link to the audio&lt;/a&gt; instead.&lt;/p&gt;
@@ -229,7 +229,7 @@ tags:
 
 <p>A typical WebVTT file will look something like this:</p>
 
-<pre class="eval line-numbers  language-html notranslate"><code class="language-html">WEBVTT
+<pre class="eval line-numbers  language-html"><code class="language-html">WEBVTT
 
 1
 00:00:22.230 --&gt; 00:00:24.606
@@ -251,7 +251,7 @@ This is the second.
 
 <p>Here's an example:</p>
 
-<pre class="brush: html notranslate">&lt;video controls&gt;
+<pre class="brush: html">&lt;video controls&gt;
     &lt;source src="example.mp4" type="video/mp4"&gt;
     &lt;source src="example.webm" type="video/webm"&gt;
     &lt;track kind="subtitles" src="subtitles_es.vtt" srclang="es" label="Spanish"&gt;

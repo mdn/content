@@ -19,7 +19,7 @@ tags:
 
 <p>The <code>typeof</code> operator is followed by its operand:</p>
 
-<pre class="brush: js notranslate">typeof <var>operand</var>
+<pre class="brush: js">typeof <var>operand</var>
 typeof(<var>operand</var>)
 </pre>
 
@@ -100,7 +100,7 @@ typeof(<var>operand</var>)
 
 <h3 id="Basic_usage">Basic usage</h3>
 
-<pre class="brush: js notranslate">// Numbers
+<pre class="brush: js">// Numbers
 typeof 37 === 'number';
 typeof 3.14 === 'number';
 typeof(42) === 'number';
@@ -158,7 +158,7 @@ typeof Math.sin === 'function';</pre>
 
 <h3 id="typeof_null"><code>typeof null</code></h3>
 
-<pre class="brush: js no-line-numbers notranslate">// This stands since the beginning of JavaScript
+<pre class="brush: js no-line-numbers">// This stands since the beginning of JavaScript
 typeof null === 'object';</pre>
 
 <p>In the first implementation of JavaScript, JavaScript values were represented as a type
@@ -168,13 +168,12 @@ typeof null === 'object';</pre>
   value <code>"object"</code>. (<a
     href="http://www.2ality.com/2013/10/typeof-null.html">reference</a>)</p>
 
-<p>A fix was proposed for ECMAScript (via an opt-in), but <a class="external"
-    href="https://web.archive.org/web/20160331031419/http://wiki.ecmascript.org:80/doku.php?id=harmony:typeof_null">was
+<p>A fix was proposed for ECMAScript (via an opt-in), but <a     href="https://web.archive.org/web/20160331031419/http://wiki.ecmascript.org:80/doku.php?id=harmony:typeof_null">was
     rejected</a>. It would have resulted in <code>typeof null === 'null'</code>.</p>
 
 <h3 id="Using_new_operator">Using <code>new</code> operator</h3>
 
-<pre class="brush: js; notranslate">// All constructor functions, with the exception of the Function constructor, will always be typeof 'object'
+<pre class="brush: js;">// All constructor functions, with the exception of the Function constructor, will always be typeof 'object'
 let str = new String('String');
 let num = new Number(100);
 
@@ -188,7 +187,7 @@ typeof func; // It will return 'function'
 
 <h3 id="Need_for_parentheses_in_Syntax">Need for parentheses in Syntax</h3>
 
-<pre class="brush:js notranslate">// Parentheses can be used for determining the data type of expressions.
+<pre class="brush:js">// Parentheses can be used for determining the data type of expressions.
 let iData = 99;
 
 typeof iData + ' Wisen'; // 'number Wisen'
@@ -199,7 +198,7 @@ typeof (iData + ' Wisen'); // 'string'
 
 <p>Callable regular expressions were a non-standard addition in some browsers.</p>
 
-<pre class="brush: js no-line-numbers notranslate">typeof /s/ === 'function'; // Chrome 1-12 Non-conform to ECMAScript 5.1
+<pre class="brush: js no-line-numbers">typeof /s/ === 'function'; // Chrome 1-12 Non-conform to ECMAScript 5.1
 typeof /s/ === 'object';   // Firefox 5+  Conform to ECMAScript 5.1</pre>
 
 <h3 id="Errors">Errors</h3>
@@ -218,7 +217,7 @@ typeof /s/ === 'object';   // Firefox 5+  Conform to ECMAScript 5.1</pre>
     dead zone</a>" from the start of the block until the initialization is processed,
   during which, it will throw an error if accessed.</p>
 
-<pre class="brush: js no-line-numbers notranslate">typeof undeclaredVariable === 'undefined';
+<pre class="brush: js no-line-numbers">typeof undeclaredVariable === 'undefined';
 
 typeof newLetVariable; // ReferenceError
 typeof newConstVariable; // ReferenceError
@@ -236,7 +235,7 @@ class newClass{};</pre>
   with type <code>undefined</code>.</p>
 
 <pre
-  class="brush: js no-line-numbers notranslate">typeof document.all === 'undefined';</pre>
+  class="brush: js no-line-numbers">typeof document.all === 'undefined';</pre>
 
 <p>Although the specification allows custom type tags for non-standard exotic objects, it
   requires those type tags to be different from the predefined ones. The case of
@@ -252,7 +251,7 @@ class newClass{};</pre>
 <p>For greater specificity in checking types, a <code>typeof</code> wrapper for usage in
   production-level code would be as follows (provided <code>obj</code> exists):</p>
 
-<pre class="brush: js notranslate">  function type(obj, fullClass) {
+<pre class="brush: js">  function type(obj, fullClass) {
 
     // get toPrototypeString() of obj (handles all types)
     // Early JS environments return '[object Object]' for null, so it's best to directly check for it.
@@ -299,13 +298,13 @@ class newClass{};</pre>
 
 <p>On IE 6, 7, and 8 a lot of host objects are objects and not functions. For example:</p>
 
-<pre class="brush: js no-line-numbers notranslate">typeof alert === 'object'</pre>
+<pre class="brush: js no-line-numbers">typeof alert === 'object'</pre>
 
 <p>Some non-standard IE properties return other values (<a
     href="https://github.com/tc39/ecma262/issues/1440#issuecomment-461963872">tc39/ecma262#1440
     (comment)</a>):</p>
 
-<pre class="brush: js no-line-numbers notranslate">typeof window.external.AddSearchProvider === "unknown";
+<pre class="brush: js no-line-numbers">typeof window.external.AddSearchProvider === "unknown";
 typeof window.external.IsSearchProviderInstalled === "unknown";</pre>
 
 <h2 id="See_also">See also</h2>

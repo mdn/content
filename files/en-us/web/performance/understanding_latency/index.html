@@ -25,7 +25,7 @@ tags:
 
 <p>To emulate the latency of a low bandwidth network, you can use developer tools and switch to a lower end network connection.</p>
 
-<p><img alt="Emulate latency by emulating throttling" src="https://mdn.mozillademos.org/files/16805/emulate_latency.png" style="height: 268px; width: 829px;"></p>
+<p><img alt="Emulate latency by emulating throttling" src="emulate_latency.png"></p>
 
 <p>In the developer tools, under the network table, you can switch the throttling option to 2G, 3G, etc. Different browser developer tools have different preset options, the characteristics emulated include download speed, upload speed, and minimum latency, or the minimum amount of type it takes to send a packet of data. The approximate values of some presets include:</p>
 
@@ -94,7 +94,7 @@ tags:
 
 <p>Also, on the network tab, you can see how long each request took to complete. We can look at how long a 267.5Kb SVG image asset took to download.</p>
 
-<img alt="The time it took for a large SVG asset to load." src="https://mdn.mozillademos.org/files/16807/latencymlw.png">
+<img alt="The time it took for a large SVG asset to load." src="latencymlw.png">
 
 <p>When a request is in a queue, waiting for a network connection it is considered <strong>blocked</strong>. Blocking happens when there are too many simultaneous connections made to a single server over HTTP. If all connections are in use, the browser can't download more resources until a connection is released, meaning those requests and resources are blocked.</p>
 

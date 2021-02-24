@@ -41,7 +41,7 @@ tags:
 
 <p>This example shows the {{domxref('ServiceWorker','sevice worker')}} script listening for the {{domxref('ContentIndexEvent', 'contentdelete')}} event and logs the removed content index id.</p>
 
-<pre class="brush: js notranslate">self.addEventListener('contentdelete', (event) =&gt; {
+<pre class="brush: js">self.addEventListener('contentdelete', (event) =&gt; {
   console.log(event.id);
 
   // logs content index id, which can then be used to determine what content to delete from your cache

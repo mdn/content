@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">new WebAssembly.Memory(memoryDescriptor);</pre>
+<pre class="brush: js">new WebAssembly.Memory(memoryDescriptor);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -73,7 +73,7 @@ tags:
 </p>
 
 <pre
-  class="brush: js notranslate">var memory = new WebAssembly.Memory({initial:10, maximum:100});</pre>
+  class="brush: js">var memory = new WebAssembly.Memory({initial:10, maximum:100});</pre>
 
 <p>The second way to get a <code>WebAssembly.Memory</code> object is to have it exported
   by a WebAssembly module. The following example (see <a
@@ -85,7 +85,7 @@ tags:
   created in the line above. It then stores some values in that memory, then exports a
   function and uses it to sum some values.</p>
 
-<pre class="brush: js notranslate">WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
+<pre class="brush: js">WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
 .then(obj =&gt; {
   var i32 = new Uint32Array(memory.buffer);
   for (var i = 0; i &lt; 10; i++) {
@@ -103,7 +103,7 @@ tags:
   object:</p>
 
 <pre
-  class="brush: js notranslate">let memory = new WebAssembly.Memory({initial:10, maximum:100, shared:true});</pre>
+  class="brush: js">let memory = new WebAssembly.Memory({initial:10, maximum:100, shared:true});</pre>
 
 <p>This memory's <code>buffer</code> property will return a
   <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer">SharedArrayBuffer</a></code>.

@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const p = new Proxy(<var>target</var>, {
+<pre class="brush: js">const p = new Proxy(<var>target</var>, {
   deleteProperty: function(<var>target</var>, <var>property</var>) {
   }
 });
@@ -77,7 +77,7 @@ tags:
 
 <p>The following code traps the {{jsxref("Operators/delete", "delete")}} operator.</p>
 
-<pre class="brush: js notranslate">const p = new Proxy({}, {
+<pre class="brush: js">const p = new Proxy({}, {
   deleteProperty: function(target, prop) {
     if (prop in target){
       delete target[prop]

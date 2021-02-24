@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>numberFormat</var>.format(<var>number</var>)</pre>
+<pre class="brush: js"><var>numberFormat</var>.format(<var>number</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -44,7 +44,7 @@ tags:
 <p>Use the <code>format</code> getter function for formatting a single currency value,
 	here for Russia:</p>
 
-<pre class="brush: js notranslate">var options = { style: 'currency', currency: 'RUB' };
+<pre class="brush: js">var options = { style: 'currency', currency: 'RUB' };
 var numberFormat = new Intl.NumberFormat('ru-RU', options);
 console.log(numberFormat.format(654321.987));
 // → "654 321,99 руб."
@@ -59,7 +59,7 @@ console.log(numberFormat.format(654321.987));
 	for new features, but is preserved to maintain compatibility with existing programs.
 </p>
 
-<pre class="brush: js notranslate">var a = [123456.789, 987654.321, 456789.123];
+<pre class="brush: js">var a = [123456.789, 987654.321, 456789.123];
 var numberFormat = new Intl.NumberFormat('es-ES');
 var formatted = a.map(n =&gt; numberFormat.format(n));
 console.log(formatted.join('; '));

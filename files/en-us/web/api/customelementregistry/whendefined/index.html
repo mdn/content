@@ -19,7 +19,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">customElements.whenDefined(<em>name</em>): Promise&lt;CustomElementConstructor&gt;;</pre>
+  class="brush: js">customElements.whenDefined(<em>name</em>): Promise&lt;CustomElementConstructor&gt;;</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -65,7 +65,7 @@ tags:
   make up a menu are defined. The menu displays placeholder content until the actual menu
   content is ready to display.</p>
 
-<pre class="brush: html notranslate">&lt;nav id="menu-container"&gt;
+<pre class="brush: html">&lt;nav id="menu-container"&gt;
   &lt;div class="menu-placeholder"&gt;Loading...&lt;/div&gt;
   &lt;nav-menu&gt;
     &lt;menu-item&gt;Item 1&lt;/menu-item&gt;
@@ -76,7 +76,7 @@ tags:
 &lt;/nav&gt;
 </pre>
 
-<pre class="brush: js notranslate">const container = document.getElementById('menu-container');
+<pre class="brush: js">const container = document.getElementById('menu-container');
 const placeholder = container.querySelector('.menu-placeholder');
 // Fetch all the children of menu that are not yet defined.
 const undefinedElements = container.querySelectorAll(':not(:defined)');

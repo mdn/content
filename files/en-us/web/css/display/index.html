@@ -19,7 +19,7 @@ tags:
 
 <p>The CSS <code>display</code> property is specified using keyword values. Keyword values are grouped into six value categories:</p>
 
-<pre class="brush: css notranslate">.container {
+<pre class="brush: css">.container {
   display:  [ &lt;display-outside&gt; | &lt;display-inside&gt; ] | &lt;display-listitem&gt; | &lt;display-internal&gt; | &lt;display-box&gt; | &lt;display-legacy&gt; ;
 }
 </pre>
@@ -84,13 +84,13 @@ tags:
 
 <p>The <code>&lt;display-legacy&gt;</code> methods allow the same results with single keyword values, and should be favoured by developers until the two keyword values are better supported. For example, using two values you might specify an inline flex container as follows:</p>
 
-<pre class="brush: css notranslate">.container {
+<pre class="brush: css">.container {
   display: inline flex;
 }</pre>
 
 <p>This can currently be specified using a single value.</p>
 
-<pre class="brush: css notranslate">.container {
+<pre class="brush: css">.container {
   display: inline-flex;
 }</pre>
 
@@ -98,7 +98,7 @@ tags:
 
 <h3 id="Global">Global</h3>
 
-<pre class="brush:css notranslate">/* Global values */
+<pre class="brush:css">/* Global values */
 display: inherit;
 display: initial;
 display: unset;
@@ -186,7 +186,7 @@ display: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -202,7 +202,7 @@ display: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;article class="container"&gt;
+<pre class="brush: html">&lt;article class="container"&gt;
   &lt;span&gt;First&lt;/span&gt;
   &lt;span&gt;Second&lt;/span&gt;
   &lt;span&gt;Third&lt;/span&gt;
@@ -232,7 +232,7 @@ display: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: helvetica, arial, sans-serif;
   letter-spacing: 1px;
   padding-top: 10px;
@@ -259,7 +259,7 @@ article, div {
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">const articles = document.querySelectorAll('.container');
+<pre class="brush: js">const articles = document.querySelectorAll('.container');
 const select = document.querySelector('select');
 
 function updateDisplay() {

@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <var>yAcceleration</var> = <var>accelerometer</var>.y</pre>
+<pre class="brush: js">var <var>yAcceleration</var> = <var>accelerometer</var>.y</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -31,7 +31,7 @@ tags:
 
 <p>Acceleration is typically read in the {{domxref('Sensor.onreading')}} event callback. In the example below this occurs sixty times a second.</p>
 
-<pre class="brush: js notranslate">let accelerometer = new Accelerometer({frequency: 60});
+<pre class="brush: js">let accelerometer = new Accelerometer({frequency: 60});
 
 accelerometer.addEventListener('reading', e =&gt; {
   console.log("Acceleration along the X-axis " + accelerometer.x);

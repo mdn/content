@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>arr</var>.sort(<var>[compareFunction]</var>)
+<pre class="brush: js"><var>arr</var>.sort(<var>[compareFunction]</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -90,7 +90,7 @@ tags:
 
 <p>So, the compare function has the following form:</p>
 
-<pre class="brush: js notranslate">function compare(a, b) {
+<pre class="brush: js">function compare(a, b) {
   if (a is less than b by some ordering criterion) {
     return -1;
   }
@@ -106,7 +106,7 @@ tags:
   from <code>a</code>. The following function will sort the array in ascending order (if
   it doesn't contain <code>Infinity</code> and <code>NaN</code>):</p>
 
-<pre class="brush: js notranslate">function compareNumbers(a, b) {
+<pre class="brush: js">function compareNumbers(a, b) {
   return a - b;
 }
 </pre>
@@ -114,7 +114,7 @@ tags:
 <p>The <code>sort</code> method can be conveniently used with
   {{jsxref("Operators/function", "function expressions", "", 1)}}:</p>
 
-<pre class="brush: js notranslate">var numbers = [4, 2, 5, 1, 3];
+<pre class="brush: js">var numbers = [4, 2, 5, 1, 3];
 numbers.sort(function(a, b) {
   return a - b;
 });
@@ -126,7 +126,7 @@ console.log(numbers);
 <p>ES2015 provides {{jsxref("Functions/Arrow_functions", "arrow function expressions", "",
   1)}} with even shorter syntax.</p>
 
-<pre class="brush: js notranslate">let numbers = [4, 2, 5, 1, 3];
+<pre class="brush: js">let numbers = [4, 2, 5, 1, 3];
 numbers.sort((a, b) =&gt; a - b);
 console.log(numbers);
 
@@ -134,7 +134,7 @@ console.log(numbers);
 
 <p>Arrays of objects can be sorted by comparing the value of one of their properties.</p>
 
-<pre class="brush: js notranslate">var items = [
+<pre class="brush: js">var items = [
   { name: 'Edward', value: 21 },
   { name: 'Sharpe', value: 37 },
   { name: 'And', value: 45 },
@@ -172,7 +172,7 @@ items.sort(function(a, b) {
   sorted arrays. The numeric arrays are sorted without a compare function, then sorted
   using one.</p>
 
-<pre class="brush: js notranslate">var stringArray = ['Blue', 'Humpback', 'Beluga'];
+<pre class="brush: js">var stringArray = ['Blue', 'Humpback', 'Beluga'];
 var numericStringArray = ['80', '9', '700'];
 var numberArray = [40, 1, 5, 200];
 var mixedNumericArray = ['80', '9', '700', 40, 1, 5, 200];
@@ -201,7 +201,7 @@ console.log('Sorted with compareNumbers:', mixedNumericArray.sort(compareNumbers
   function is used, numbers sort correctly whether they are numbers or numeric strings.
 </p>
 
-<pre class="brush: js notranslate">stringArray: Blue,Humpback,Beluga
+<pre class="brush: js">stringArray: Blue,Humpback,Beluga
 Sorted: Beluga,Blue,Humpback
 
 numberArray: 40,1,5,200
@@ -224,7 +224,7 @@ Sorted with compareNumbers: 1,5,9,40,80,200,700
   {{jsxref("String.localeCompare")}}. This function can compare those characters so they
   appear in the right order.</p>
 
-<pre class="brush: js notranslate">var items = ['réservé', 'premier', 'communiqué', 'café', 'adieu', 'éclair'];
+<pre class="brush: js">var items = ['réservé', 'premier', 'communiqué', 'café', 'adieu', 'éclair'];
 items.sort(function (a, b) {
   return a.localeCompare(b);
 });
@@ -243,7 +243,7 @@ items.sort(function (a, b) {
   sorting into a temporary array, sort the temporary array, and then traverse the
   temporary array to achieve the right order.</p>
 
-<pre class="brush: js notranslate">// the array to be sorted
+<pre class="brush: js">// the array to be sorted
 var list = ['Delta', 'alpha', 'CHARLIE', 'bravo'];
 
 // temporary array holds objects with position and sort-value

@@ -176,7 +176,7 @@ tags:
 
 <p>In our <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a> example, the<a href="https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/background-script.js"> background script</a> contains the following lines:</p>
 
-<pre class="notranslate brush: js">var title = browser.i18n.getMessage("notificationTitle");
+<pre class="brush: js">var title = browser.i18n.getMessage("notificationTitle");
 var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
 
 <p>The first one just retrieves the <code>notificationTitle message</code> field from the available <code>messages.json</code> file most appropriate for the browser's current locale. The second one is similar, but it is being passed a URL as a second parameter. What gives? This is how you specify the content to replace the <code>$URL$</code> placeholder we see in the <code>notificationContent message</code> field:</p>

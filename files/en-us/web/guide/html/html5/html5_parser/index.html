@@ -18,10 +18,10 @@ tags:
  <li>You can now use SVG and MathML inline in HTML5 pages, without XML namespace syntax.</li>
  <li>Parsing is now done in a separate thread from Firefox’s main UI thread, improving overall browser responsiveness.</li>
  <li>Calls to {{DOMxRef("Element.innerHTML","innerHTML")}} are a lot faster.</li>
- <li><a class="external" href="http://tinyurl.com/html-parser-bugs">Dozens of long-standing parser related bugs</a> are now fixed.</li>
+ <li><a href="http://tinyurl.com/html-parser-bugs">Dozens of long-standing parser related bugs</a> are now fixed.</li>
 </ul>
 
-<p>The <a class="external" href="https://www.w3.org/TR/html5/">HTML5 specification</a> provides a more detailed description than previous HTML standards of how to turn a stream of bytes into a DOM tree. This will result in more consistent behavior across browser implementations. In other words, in supporting HTML5, Gecko, WebKit, and Internet Explorer (IE) will behave more consistently with each other.</p>
+<p>The <a href="https://www.w3.org/TR/html5/">HTML5 specification</a> provides a more detailed description than previous HTML standards of how to turn a stream of bytes into a DOM tree. This will result in more consistent behavior across browser implementations. In other words, in supporting HTML5, Gecko, WebKit, and Internet Explorer (IE) will behave more consistently with each other.</p>
 
 <h2 id="Changed_parser_behaviors">Changed parser behaviors</h2>
 
@@ -33,7 +33,7 @@ tags:
 
 <h3 id="Calling_document.write_during_parsing">Calling document.write() during parsing</h3>
 
-<p>Prior to HTML5, Gecko and WebKit allowed calls to <a href="/en-US/docs/DOM/document.write"><code>document.write()</code></a> <em>during parsing</em> to insert content into the source stream. This behavior was inherently <a class="external" href="https://en.wikipedia.org/wiki/Race_condition">racy</a>, as the content was inserted into a timing-dependent point in the source stream. If the call happened after the parser was done, the inserted content replaced the document. In IE, such calls are either ignored or imply a call to <a href="/en-US/docs/DOM/document.open"><code>document.open()</code></a>, replacing the document. In HTML5, <code>document.write()</code> can only be called from a script that is created by a {{ HTMLElement("script") }} tag that does not have the <code><a href="/En/HTML/Element/Script#attr_async">async</a></code> or <code><a href="/En/HTML/Element/Script#attr_defer">defer</a></code> attributes set. With the HTML5 parser, calls to <code>document.write()</code> in any other context either are ignored or replace the document.</p>
+<p>Prior to HTML5, Gecko and WebKit allowed calls to <a href="/en-US/docs/DOM/document.write"><code>document.write()</code></a> <em>during parsing</em> to insert content into the source stream. This behavior was inherently <a href="https://en.wikipedia.org/wiki/Race_condition">racy</a>, as the content was inserted into a timing-dependent point in the source stream. If the call happened after the parser was done, the inserted content replaced the document. In IE, such calls are either ignored or imply a call to <a href="/en-US/docs/DOM/document.open"><code>document.open()</code></a>, replacing the document. In HTML5, <code>document.write()</code> can only be called from a script that is created by a {{ HTMLElement("script") }} tag that does not have the <code><a href="/En/HTML/Element/Script#attr_async">async</a></code> or <code><a href="/En/HTML/Element/Script#attr_defer">defer</a></code> attributes set. With the HTML5 parser, calls to <code>document.write()</code> in any other context either are ignored or replace the document.</p>
 
 <p>Some contexts from which you should <em>not</em> call <code>document.write()</code> include:</p>
 
@@ -92,7 +92,7 @@ tags:
 
 <p>For example, the following code writes a balanced sub-tree:</p>
 
-<pre class="notranslate">&lt;script&gt;
+<pre>&lt;script&gt;
   document.write("&lt;div&gt;");
   document.write("&lt;p&gt;Some content goes here.&lt;/p&gt;");
   document.write("&lt;/div&gt;");
@@ -102,7 +102,7 @@ tags:
 
 <p>In contrast, the following code contains two scripts with unbalanced sub-trees, which causes speculative parsing to fail and therefore the time to parse the document is longer.</p>
 
-<pre class="notranslate">&lt;script&gt;document.write("&lt;div&gt;");&lt;/script&gt;
+<pre>&lt;script&gt;document.write("&lt;div&gt;");&lt;/script&gt;
 &lt;p&gt;Some content goes here.&lt;/p&gt;
 &lt;script&gt;document.write("&lt;/div&gt;");&lt;/script&gt;
 </pre>

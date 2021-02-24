@@ -32,7 +32,7 @@ tags:
 
 <p>When printing the document, the navigation area has no purpose. This CSS (below) removes the navigation area when printing the document:</p>
 
-<pre class="brush:css notranslate">@media print {
+<pre class="brush:css">@media print {
   #nav-area {display: none;}
   }
 </pre>
@@ -92,12 +92,12 @@ tags:
 
 <p>This rule sets the page margins to one inch on all four sides:</p>
 
-<pre class="brush:css notranslate">@page {margin: 1in;}
+<pre class="brush:css">@page {margin: 1in;}
 </pre>
 
 <p>This rule ensures that every <small>H1</small> element starts on a new page:</p>
 
-<pre class="brush:css notranslate">h1 {page-break-before: always;}
+<pre class="brush:css">h1 {page-break-before: always;}
 </pre>
 </div>
 
@@ -186,7 +186,7 @@ tags:
 
 <p>These rules specify styles for a button that changes dynamically as the user interacts with it:</p>
 
-<pre class="brush:css notranslate">.green-button {
+<pre class="brush:css">.green-button {
   background-color:#cec;
   color:#black;
   border:2px outset #cec;
@@ -203,7 +203,7 @@ tags:
   }
 </pre>
 
-<pre class="brush:html notranslate">&lt;table&gt;
+<pre class="brush:html">&lt;table&gt;
  &lt;tbody&gt;
   &lt;tr&gt;
    &lt;td&gt;&lt;button class="green-button" disabled&gt;Click me&lt;/button&gt;&lt;/td&gt;
@@ -244,7 +244,7 @@ tags:
 <ol>
  <li>Make a new HTML document, <code>doc4.html</code>. Copy and paste the content from here:
 
-  <pre class="brush:html notranslate">&lt;!DOCTYPE html&gt;
+  <pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;title&gt;Print sample&lt;/title&gt;
@@ -266,7 +266,7 @@ tags:
 </pre>
  </li>
  <li>Make a new stylesheet, <code>style4.css</code>. Copy and paste the content from here:
-  <pre class="brush:css notranslate">/*** Print sample ***/
+  <pre class="brush:css">/*** Print sample ***/
 
 /* defaults  for screen */
 #print-head,

@@ -124,15 +124,15 @@ tags:
 
 <p><strong>User-agent CSS:</strong></p>
 
-<pre class="brush:css; notranslate">li { margin-left: 10px }</pre>
+<pre class="brush:css;">li { margin-left: 10px }</pre>
 
 <p><strong class="brush:css;">Author CSS 1:</strong></p>
 
-<pre class="brush:css; notranslate">li { margin-left: 0 } /* This is a reset */</pre>
+<pre class="brush:css;">li { margin-left: 0 } /* This is a reset */</pre>
 
 <p><strong class="brush:css;">Author CSS 2:</strong></p>
 
-<pre class="brush:css; notranslate">@media screen {
+<pre class="brush:css;">@media screen {
   li { margin-left: 3px }
 }
 
@@ -143,11 +143,11 @@ tags:
 
 <p><strong class="brush:css;">User CSS:</strong></p>
 
-<pre class="brush:css; notranslate">.specific { margin-left: 1em }</pre>
+<pre class="brush:css;">.specific { margin-left: 1em }</pre>
 
 <p><strong>HTML:</strong></p>
 
-<pre class="brush:html; notranslate">&lt;ul&gt;
+<pre class="brush:html;">&lt;ul&gt;
   &lt;li class="specific"&gt;1&lt;sup&gt;st&lt;/sup&gt;&lt;/li&gt;
   &lt;li&gt;2&lt;sup&gt;nd&lt;/sup&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -157,15 +157,15 @@ tags:
 
 <p>So three declarations are in competition:</p>
 
-<pre class="brush:css; notranslate">margin-left: 0</pre>
+<pre class="brush:css;">margin-left: 0</pre>
 
-<pre class="brush:css; notranslate">margin-left: 3px</pre>
+<pre class="brush:css;">margin-left: 3px</pre>
 
-<pre class="brush:css; notranslate">margin-left: 1px</pre>
+<pre class="brush:css;">margin-left: 1px</pre>
 
 <p>The last one is ignored (on a screen), and the first two have the same selector, hence the same specificity. Therefore, it is the last one that is then selected:</p>
 
-<pre class="brush:css; notranslate">margin-left: 3px</pre>
+<pre class="brush:css;">margin-left: 3px</pre>
 
 <p>Note that the declaration defined in the user CSS, though having a greater specificity, is not chosen as the cascade algorithm is applied before the specificity algorithm.</p>
 

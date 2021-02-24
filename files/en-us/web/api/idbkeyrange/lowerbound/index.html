@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.lowerBound(<em>lower</em>);
+<pre class="brush: js">var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.lowerBound(<em>lower</em>);
 var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.lowerBound(<em>lower</em>, <em>open</em>);
 </pre>
 
@@ -82,7 +82,7 @@ var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.lowerBound(<em>lower</em>, <em
       too</a>.)</p>
 </div>
 
-<pre class="brush: js notranslate" style="font-size: 14px;">function displayData() {
+<pre class="brush: js" style="font-size: 14px;">function displayData() {
   var keyRangeValue = IDBKeyRange.lowerBound("F");
 
   var transaction = db.transaction(['fThings'], 'readonly');

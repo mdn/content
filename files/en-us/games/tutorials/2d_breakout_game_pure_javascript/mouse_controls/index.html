@@ -24,13 +24,13 @@ tags:
 
 <p>Listening for mouse movement is even easier than listening for key presses: all we need is the listener for the {{event("mousemove")}} event. Add the following line in the same place as the other event listeners, just below the <code>keyup event</code>:</p>
 
-<pre class="brush: js notranslate">document.addEventListener("mousemove", mouseMoveHandler, false);</pre>
+<pre class="brush: js">document.addEventListener("mousemove", mouseMoveHandler, false);</pre>
 
 <h2 id="Anchoring_the_paddle_movement_to_the_mouse_movement">Anchoring the paddle movement to the mouse movement</h2>
 
 <p>We can update the paddle position based on the pointer coordinates — the following handler function will do exactly that. Add the following function to your code, below the previous line you added:</p>
 
-<pre class="brush: js notranslate">function mouseMoveHandler(e) {
+<pre class="brush: js">function mouseMoveHandler(e) {
     var relativeX = e.clientX - canvas.offsetLeft;
     if(relativeX &gt; 0 &amp;&amp; relativeX &lt; canvas.width) {
         paddleX = relativeX - paddleWidth/2;

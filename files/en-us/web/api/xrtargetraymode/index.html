@@ -55,7 +55,7 @@ tags:
 
 <p>The code should continue to perform tasks such as drawing controllers or any objects representative of the user's hands' positions in the virtual space, as well as any other input-related tasks.</p>
 
-<pre class="brush: js notranslate">function updateInputSources(session, frame, refSpace) {
+<pre class="brush: js">function updateInputSources(session, frame, refSpace) {
   for (let source of session.getInputSources()) {
     let targetRayPose = frame.getPose(inputSource.targetRaySpace, refSpace);
 

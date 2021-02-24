@@ -34,7 +34,7 @@ tags:
 <p>The original header name {{HTTPHeader("Referer")}} is a misspelling of the word "referrer". The <code>Referrer-Policy</code> header does not share this misspelling.</p>
 </div>
 
-<pre class="brush: html notranslate">Referrer-Policy: no-referrer
+<pre class="brush: html">Referrer-Policy: no-referrer
 Referrer-Policy: no-referrer-when-downgrade
 Referrer-Policy: origin
 Referrer-Policy: origin-when-cross-origin
@@ -76,15 +76,15 @@ Referrer-Policy: unsafe-url
 
 <p>You can also set referrer policies inside HTML. For example, you can set the referrer policy for the entire document with a {{HTMLElement("meta")}} element with a <a href="/en-US/docs/Web/HTML/Element/meta#attr-name">name</a> of <code>referrer</code>:</p>
 
-<pre class="brush: html notranslate">&lt;meta name="referrer" content="origin"&gt;</pre>
+<pre class="brush: html">&lt;meta name="referrer" content="origin"&gt;</pre>
 
 <p>Or set it for individual requests with <a href="https://developer.mozilla.org/en-US/search?q=referrerPolicy">the <code>referrerpolicy</code> attribute</a> on {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}}, {{HTMLElement("script")}}, or {{HTMLElement("link")}} elements:</p>
 
-<pre class="brush: html notranslate">&lt;a href="http://example.com" referrerpolicy="origin"&gt;</pre>
+<pre class="brush: html">&lt;a href="http://example.com" referrerpolicy="origin"&gt;</pre>
 
 <p>Alternatively, a <code>noreferrer</code> <a href="/en-US/docs/Web/HTML/Link_types">link relation</a> on an <code>a</code>, <code>area</code>, or <code>link</code> element can be set:</p>
 
-<pre class="brush: html notranslate">&lt;a href="http://example.com" rel="noreferrer"&gt;</pre>
+<pre class="brush: html">&lt;a href="http://example.com" rel="noreferrer"&gt;</pre>
 
 <div class="notecard warning">
 <p>As seen above, the <code>noreferrer</code> link relation is written without a dash — <code>noreferrer</code>. When the referrer policy is specified for the entire document with a {{HTMLElement("meta")}} element, it's written <em>with</em> a dash: <code>&lt;meta name="referrer" content="no-referrer"&gt;</code>.</p>
@@ -203,7 +203,7 @@ Referrer-Policy: unsafe-url
 
 <p>If you want to specify a fallback policy in any case the desired policy hasn't got wide enough browser support, use a comma-separated list with the desired policy specified last:</p>
 
-<pre class="notranslate">Referrer-Policy: no-referrer, strict-origin-when-cross-origin</pre>
+<pre>Referrer-Policy: no-referrer, strict-origin-when-cross-origin</pre>
 
 <p>In the above scenario, <code>no-referrer</code> will only be used if <code>strict-origin-when-cross-origin</code> is not supported by the browser.</p>
 
@@ -228,7 +228,7 @@ Referrer-Policy: unsafe-url
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("http.headers.Referrer-Policy")}}</p>
 

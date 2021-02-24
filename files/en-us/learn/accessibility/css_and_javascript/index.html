@@ -53,7 +53,7 @@ tags:
 
 <p>Headings, paragraphs, lists — the core text content of your page:</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Heading&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Heading&lt;/h1&gt;
 
 &lt;p&gt;Paragraph&lt;/p&gt;
 
@@ -64,7 +64,7 @@ tags:
 
 <p>Some typical CSS might look like this:</p>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
   font-size: 5rem;
 }
 
@@ -87,13 +87,13 @@ p, li {
 
 <p>Inline markup that confers specific emphasis to the text that it wraps:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;The water is &lt;em&gt;very hot&lt;/em&gt;.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;The water is &lt;em&gt;very hot&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;Water droplets collecting on surfaces is called &lt;strong&gt;condensation&lt;/strong&gt;.&lt;/p&gt;</pre>
 
 <p>You might want to add some simple coloring to your emphasised text:</p>
 
-<pre class="brush: css notranslate">strong, em {
+<pre class="brush: css">strong, em {
   color: #a60000;
 }</pre>
 
@@ -103,11 +103,11 @@ p, li {
 
 <p>An element that allows an abbreviation, acronym, or initialization to be associated with its expansion:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Web content is marked up using &lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt;.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Web content is marked up using &lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt;.&lt;/p&gt;</pre>
 
 <p>Again, you might want to style it in some simple way:</p>
 
-<pre class="brush: css notranslate">abbr {
+<pre class="brush: css">abbr {
   color: #a60000;
 }</pre>
 
@@ -117,11 +117,11 @@ p, li {
 
 <p>Hyperlinks — the way you get to new places on the web:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Visit the &lt;a href="https://www.mozilla.org"&gt;Mozilla homepage&lt;/a&gt;.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Visit the &lt;a href="https://www.mozilla.org"&gt;Mozilla homepage&lt;/a&gt;.&lt;/p&gt;</pre>
 
 <p>Some very simple link styling is shown below:</p>
 
-<pre class="brush: css notranslate">a {
+<pre class="brush: css">a {
   color: #ff0000;
 }
 
@@ -147,7 +147,7 @@ a:active {
 
 <p>Elements to allow users to input data into websites:</p>
 
-<pre class="brush: html notranslate">&lt;div&gt;
+<pre class="brush: html">&lt;div&gt;
   &lt;label for="name"&gt;Enter your name&lt;/label&gt;
   &lt;input type="text" id="name" name="name"&gt;
 &lt;/div&gt;</pre>
@@ -249,12 +249,12 @@ a:active {
 
 <p>We've made this form validation pretty accessible too. We've used {{htmlelement("label")}} elements to make sure the form labels are unambiguously linked to their inputs, so screen readers can read them out alongside:</p>
 
-<pre class="brush: html notranslate">&lt;label for="name"&gt;Enter your name:&lt;/label&gt;
+<pre class="brush: html">&lt;label for="name"&gt;Enter your name:&lt;/label&gt;
 &lt;input type="text" name="name" id="name"&gt;</pre>
 
 <p>We only do the validation when the form is submitted — this is so that we don't update the UI too often and potentially confuse screen reader (and possibly other) users:</p>
 
-<pre class="brush: js notranslate">form.onsubmit = validate;
+<pre class="brush: js">form.onsubmit = validate;
 
 function validate(e) {
   errorList.innerHTML = '';
@@ -281,7 +281,7 @@ function validate(e) {
 
 <p>For each input that doesn't have a value filled in when the form is submitted, we create a list item with a link and insert it in the <code>errorList</code>.</p>
 
-<pre class="brush: js notranslate">function createLink(testItem) {
+<pre class="brush: js">function createLink(testItem) {
   const listItem = document.createElement('li');
   const anchor = document.createElement('a');
 
@@ -304,7 +304,7 @@ function validate(e) {
 
 <p>As a final note, we have used some WAI-ARIA attributes in our demo to help solve accessibility problems caused by areas of content constantly updating without a page reload (screen readers won't pick this up or alert users to it by default):</p>
 
-<pre class="notranslate">&lt;div class="errors" role="alert" aria-relevant="all"&gt;
+<pre>&lt;div class="errors" role="alert" aria-relevant="all"&gt;
   &lt;ul&gt;
   &lt;/ul&gt;
 &lt;/div&gt;</pre>
@@ -333,7 +333,7 @@ function validate(e) {
 
 <p>We've made a very simple example, which you can find at <a href="https://mdn.github.io/learning-area/accessibility/css/mouse-and-keyboard-events.html">mouse-and-keyboard-events.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/accessibility/css/mouse-and-keyboard-events.html">source code</a>). The code features two functions that show and hide the zoomed-in image; these are run by the following lines that set them as event handlers:</p>
 
-<pre class="brush: js notranslate">imgThumb.onmouseover = showImg;
+<pre class="brush: js">imgThumb.onmouseover = showImg;
 imgThumb.onmouseout = hideImg;
 
 imgThumb.onfocus = showImg;

@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>str</var>.codePointAt(<var>pos</var>)</pre>
+<pre class="brush: js"><var>str</var>.codePointAt(<var>pos</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -50,7 +50,7 @@ tags:
 
 <h3 id="Using_codePointAt">Using codePointAt()</h3>
 
-<pre class="brush: js notranslate">'ABC'.codePointAt(1)           // 66
+<pre class="brush: js">'ABC'.codePointAt(1)           // 66
 '\uD800\uDC00'.codePointAt(0)  // 65536
 
 'XYZ'.codePointAt(42)          // undefined
@@ -58,7 +58,7 @@ tags:
 
 <h3 id="Looping_with_codePointAt">Looping with codePointAt()</h3>
 
-<pre class="brush: js notranslate">for (let codePoint of '\ud83d\udc0e\ud83d\udc71\u2764') {
+<pre class="brush: js">for (let codePoint of '\ud83d\udc0e\ud83d\udc71\u2764') {
    console.log(codePoint.codePointAt(0).toString(16))
 }
 // '1f40e', '1f471', '2764'
@@ -69,7 +69,7 @@ tags:
 <p>The following extends Strings to include the <code>codePointAt()</code> function as
   specified in ECMAScript 2015 for browsers without native support.</p>
 
-<pre class="brush: js notranslate">/*! https://mths.be/codepointat v0.2.0 by @mathias */
+<pre class="brush: js">/*! https://mths.be/codepointat v0.2.0 by @mathias */
 if (!String.prototype.codePointAt) {
   (function() {
     'use strict'; // needed to support `apply`/`call` with `undefined`/`null`

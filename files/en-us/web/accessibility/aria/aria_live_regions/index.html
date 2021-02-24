@@ -30,7 +30,7 @@ tags:
 
 <p>A website specializing in providing information about planets provides a dropdown box. When a planet is selected from the dropdown, a region on the page is updated with information about the selected planet.</p>
 
-<pre class="brush: html notranslate">&lt;fieldset&gt;
+<pre class="brush: html">&lt;fieldset&gt;
   &lt;legend&gt;Planet information&lt;/legend&gt;
   &lt;label for="planetsSelect"&gt;Planet:&lt;/label&gt;
   &lt;select id="planetsSelect" aria-controls="planetInfo"&gt;
@@ -51,7 +51,7 @@ tags:
 &lt;p&gt;&lt;small&gt;Information courtesy &lt;a href="https://en.wikipedia.org/wiki/Solar_System#Inner_Solar_System"&gt;Wikipedia&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
 </pre>
 
-<pre class="brush: js notranslate">const PLANETS_INFO = {
+<pre class="brush: js">const PLANETS_INFO = {
   mercury: {
     title: 'Mercury',
     description: 'Mercury is the smallest and innermost planet in the Solar System. It is named after the Roman deity Mercury, the messenger to the gods.'
@@ -167,13 +167,13 @@ renderPlanetInfoButton.addEventListener('click', event =&gt; {
 
 <p>As an illustration of <code>aria-atomic</code>, consider a site with a simple clock, showing hours and minutes. The clock is updated each minute, with the new remaining time overwriting the current content.</p>
 
-<pre class="brush: html notranslate">&lt;div id="clock" role="timer" aria-live="polite"&gt;
+<pre class="brush: html">&lt;div id="clock" role="timer" aria-live="polite"&gt;
   &lt;span id="clock-hours"&gt;&lt;/span&gt;
   &lt;span id="clock-mins"&gt;&lt;/span&gt;
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js notranslate">/* basic JavaScript to update the clock */
+<pre class="brush: js">/* basic JavaScript to update the clock */
 function updateClock() {
   var now = new Date();
   document.getElementById('clock-hours').innerHTML = now.getHours();
@@ -193,14 +193,14 @@ setInterval(updateClock, 60000);
 
 <p><code>aria-atomic="true"</code> ensures that each time the live region is updated, the entirety of the content is announced in full (e.g. "17:34").</p>
 
-<pre class="brush: html notranslate">&lt;div id="clock" role="timer" aria-live="polite" aria-atomic="true"&gt;
+<pre class="brush: html">&lt;div id="clock" role="timer" aria-live="polite" aria-atomic="true"&gt;
   ...
 &lt;/div&gt;
 </pre>
 
 <p>Another example of <code>aria-atomic</code> - an update/notification made as a result of a user action.</p>
 
-<pre class="brush: html notranslate">&lt;div id="date-input"&gt;
+<pre class="brush: html">&lt;div id="date-input"&gt;
 &lt;label&gt;Year:
 &lt;input type="text" id="year" value="1990" onblur="change(event)"/&gt;
 &lt;/label&gt;
@@ -211,7 +211,7 @@ The set year is:
 &lt;span id="year-output"&gt;1990&lt;/span&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 function change(event) {
   var yearOut = document.getElementById("year-output");
 
@@ -232,7 +232,7 @@ function change(event) {
 
 <p>As an example, consider a chat site that wants to display a list of users currently logged in. Rather than just announcing the users that are currently logged in, we also want to trigger an announcement specifically when a user is <em>removed</em> from the list. We can achieve this by specifying <code>aria-relevant="additions removals"</code>.</p>
 
-<pre class="brush: html notranslate">&lt;ul id="roster" aria-live="polite" aria-relevant="additions removals"&gt;
+<pre class="brush: html">&lt;ul id="roster" aria-live="polite" aria-relevant="additions removals"&gt;
 	&lt;!-- use JavaScript to add remove users here--&gt;
 &lt;/ul&gt;
 </pre>

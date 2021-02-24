@@ -18,7 +18,7 @@ tags:
 
 <p>This object cannot be instantiated directly. Instead, a <code>Generator</code> instance can be returned from a <a href="/en-US/docs/Web/JavaScript/Reference/Statements/function*">generator function</a>:</p>
 
-<pre class="brush: js notranslate">function* generator() {
+<pre class="brush: js">function* generator() {
   yield 1;
   yield 2;
   yield 3;
@@ -45,7 +45,7 @@ console.log(generator().next().value); // 1</pre>
 
 <h3 id="An_infinite_iterator">An infinite iterator</h3>
 
-<pre class="brush: js; notranslate">function* infinite() {
+<pre class="brush: js;">function* infinite() {
     let index = 0;
 
     while (true) {

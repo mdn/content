@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">undefined</pre>
+<pre class="brush: js">undefined</pre>
 
 <h2 id="Description">Description</h2>
 
@@ -48,7 +48,7 @@ tags:
     "", 1)}}), doing so is a very bad idea that will make your code difficult to maintain
     and debug.</p>
 
-  <pre class="brush: js example-bad notranslate">//  DON'T DO THIS
+  <pre class="brush: js example-bad">//  DON'T DO THIS
 
 //  logs "foo string"
 (function() {
@@ -72,7 +72,7 @@ tags:
   <code>x</code> is not initialized, and the <code>if</code> statement evaluates to true.
 </p>
 
-<pre class="brush: js notranslate">var x;
+<pre class="brush: js">var x;
 if (x === undefined) {
   // these statements execute
 }
@@ -96,7 +96,7 @@ else {
 
 <p>Alternatively, {{jsxref("Operators/typeof", "typeof")}} can be used:</p>
 
-<pre class="brush: js notranslate">var x;
+<pre class="brush: js">var x;
 if (typeof x === 'undefined') {
    // these statements execute
 }
@@ -105,7 +105,7 @@ if (typeof x === 'undefined') {
 <p>One reason to use {{jsxref("Operators/typeof", "typeof")}} is that it does not throw an
   error if the variable has not been declared.</p>
 
-<pre class="brush: js notranslate">//  x has not been declared before
+<pre class="brush: js">//  x has not been declared before
 if (typeof x === 'undefined') { //  evaluates to true without errors
    //  these statements execute
 }
@@ -124,7 +124,7 @@ if (x === undefined) { //  throws a ReferenceError
   existence of a property on the <em>global object</em>, using the
   {{jsxref("Operators/in", "in")}} operator, for instance:</p>
 
-<pre class="brush: js notranslate">if ('x' in window) {
+<pre class="brush: js">if ('x' in window) {
   //  these statements execute only if x is defined globally
 }</pre>
 
@@ -132,7 +132,7 @@ if (x === undefined) { //  throws a ReferenceError
 
 <p>The {{jsxref("Operators/void", "void")}} operator is a third alternative.</p>
 
-<pre class="brush: js notranslate">var x;
+<pre class="brush: js">var x;
 if (x === void 0) {
   //  these statements execute
 }

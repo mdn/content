@@ -25,7 +25,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">async function <var>name</var>([<var>param</var>[, <var>param</var>[, ...<var>param</var>]]]) {
+<pre class="brush: js">async function <var>name</var>([<var>param</var>[, <var>param</var>[, ...<var>param</var>]]]) {
    <var>statements</var>
 }
 </pre>
@@ -70,14 +70,14 @@ tags:
 
 <p>For example, the following:</p>
 
-<pre class="brush: js notranslate">async function <var>foo</var>() {
+<pre class="brush: js">async function <var>foo</var>() {
    <var>return 1</var>
 }
 </pre>
 
 <p>...is equivalent to:</p>
 
-<pre class="brush: js notranslate">function <var>foo</var>() {
+<pre class="brush: js">function <var>foo</var>() {
    <var>return Promise.resolve(1)</var>
 }
 </pre>
@@ -90,14 +90,14 @@ tags:
 
 <p>For example:</p>
 
-<pre class="brush: js notranslate">async function <var>foo</var>() {
+<pre class="brush: js">async function <var>foo</var>() {
    <var>await 1</var>
 }
 </pre>
 
 <p>...is equivalent to:</p>
 
-<pre class="brush: js notranslate">function <var>foo</var>() {
+<pre class="brush: js">function <var>foo</var>() {
    <var>return Promise.resolve(1).then(() =&gt; undefined)</var>
 }
 </pre>
@@ -128,7 +128,7 @@ tags:
     current promise.</li>
 </ol>
 
-<pre class="brush: js notranslate">async function <var>foo</var>() {
+<pre class="brush: js">async function <var>foo</var>() {
    const result1 = <var>await new Promise((resolve) =&gt; setTimeout(() =&gt; resolve('1')))
 </var>   const result2 = <var>await new Promise((resolve) =&gt; setTimeout(() =&gt; resolve('2')))</var>
 }
@@ -144,7 +144,7 @@ foo()</pre>
   chain. This is because <code>p2</code> will not be "wired into" the promise chain until
   control returns from <code>p1</code>.</p>
 
-<pre class="brush: js notranslate">async function <var>foo</var>() {
+<pre class="brush: js">async function <var>foo</var>() {
    const p1 = <var>new Promise((resolve) =&gt; setTimeout(() =&gt; resolve('1'), 1000))
 </var>   const p2 = <var>new Promise((_,reject) =&gt; setTimeout(() =&gt; reject('2'), 500))
    const results = [await p1, await p2] // Do not do this! Use Promise.all or Promise.allSettled instead.</var>
@@ -156,7 +156,7 @@ foo().catch(() =&gt; {}) // Attempt to swallow all errors...
 
 <h3 id="Async_functions_and_execution_order">Async functions and execution order</h3>
 
-<pre class="brush: js notranslate">function resolveAfter2Seconds() {
+<pre class="brush: js">function resolveAfter2Seconds() {
   console.log("starting slow promise")
   return new Promise(resolve =&gt; {
     setTimeout(function() {
@@ -269,7 +269,7 @@ setTimeout(parallel, 10000) // truly parallel: after 1 second, logs "fast", then
 <p>An API that returns a {{jsxref("Promise")}} will result in a promise chain, and it
   splits the function into many parts. Consider the following code:</p>
 
-<pre class="brush: js notranslate">function getProcessedData(url) {
+<pre class="brush: js">function getProcessedData(url) {
   return downloadData(url) // returns a promise
     .catch(e =&gt; {
       return downloadFallbackData(url)  // returns a promise
@@ -282,7 +282,7 @@ setTimeout(parallel, 10000) // truly parallel: after 1 second, logs "fast", then
 
 <p>it can be rewritten with a single async function as follows:</p>
 
-<pre class="brush: js notranslate">async function getProcessedData(url) {
+<pre class="brush: js">async function getProcessedData(url) {
   let v
   try {
     v = await downloadData(url)
@@ -309,7 +309,7 @@ setTimeout(parallel, 10000) // truly parallel: after 1 second, logs "fast", then
   <p>Consider the following rewrite of the above code. It returns <code>null</code> if
     <code>processDataInWorker</code> rejects with an error:</p>
 
-  <pre class="brush: js notranslate">async function getProcessedData(url) {
+  <pre class="brush: js">async function getProcessedData(url) {
   let v
   try {
     v = await downloadData(url)

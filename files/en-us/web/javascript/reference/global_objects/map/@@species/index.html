@@ -21,13 +21,13 @@ tags:
 
 <p>The species property returns the default constructor function, which is the <code>Map</code> constructor for <code>Map</code> objects:</p>
 
-<pre class="brush: js notranslate">Map[Symbol.species]; // function Map()</pre>
+<pre class="brush: js">Map[Symbol.species]; // function Map()</pre>
 
 <h3 id="Species_in_derived_objects">Species in derived objects</h3>
 
 <p>In a derived collection object (e.g. your custom map <code>MyMap</code>), the <code>MyMap</code> species is the <code>MyMap</code> constructor. However, you might want to overwrite this, in order to return parent <code>Map</code> objects in your derived class methods:</p>
 
-<pre class="brush: js notranslate">class MyMap extends Map {
+<pre class="brush: js">class MyMap extends Map {
   // Overwrite MyMap species to the parent Map constructor
   static get [Symbol.species]() { return Map; }
 }</pre>

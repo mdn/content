@@ -23,11 +23,11 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><span class="idlInterface" id="idl-def-Gamepad"><span class="idlAttribute">readonly    attribute <span class="idlAttrType">double[]</span>            <span class="idlAttrName">axes</span>;</span></span></pre>
+  class="brush: js"><span class="idlInterface" id="idl-def-Gamepad"><span class="idlAttribute">readonly    attribute <span class="idlAttrType">double[]</span>            <span class="idlAttrName">axes</span>;</span></span></pre>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">function gameLoop() {
+<pre class="brush: js">function gameLoop() {
   if(navigator.webkitGetGamepads) {
     var gp = navigator.webkitGetGamepads()[0];
   } else {

@@ -37,7 +37,7 @@ tags:
 
 <p>This code snippet demonstrates the creation of a new <code>Worker</code> using the {{domxref("Worker.Worker", "Worker()")}} constructor; it also shows how to then send a message to the worker.</p>
 
-<pre class="brush: js notranslate">var myWorker = new Worker('worker.js');
+<pre class="brush: js">var myWorker = new Worker('worker.js');
 
 first.onchange = function() {
   myWorker.postMessage([first.value, second.value]);

@@ -8,7 +8,7 @@ tags:
 </p>
 <h3 id="Symptoms"> Symptoms </h3>
 <p>Previously you were able to open and display SVG content with Mozilla, but for no apparent reason its behavior changes and now it always pops up the "Open or Save File" dialog when you try to open local SVG files, and displays the "Additional plugins are required to display all the media on this page" bar when you try to view HTML with embedded SVG.
-</p><p>Note: the "Additional plugins are required" bar can appear for legitimate reasons when the SVG or its embedding HTML is broken or served incorrectly over the network (see <a class="external" href="https://www.mozilla.org/projects/svg/faq.html">the SVG FAQ</a>). If the blue square with the white cross displays when you load <a class="external" href="http://jwatt.org/svg/demos/scripting-across-embed.html">this scripting across embed</a> demo, then you are <strong>not</strong> experiencing this problem. If it doesn't, then you almost certainly are.
+</p><p>Note: the "Additional plugins are required" bar can appear for legitimate reasons when the SVG or its embedding HTML is broken or served incorrectly over the network (see <a href="https://www.mozilla.org/projects/svg/faq.html">the SVG FAQ</a>). If the blue square with the white cross displays when you load <a href="http://jwatt.org/svg/demos/scripting-across-embed.html">this scripting across embed</a> demo, then you are <strong>not</strong> experiencing this problem. If it doesn't, then you almost certainly are.
 </p>
 <h3 id="Background"> Background </h3>
 <p>Mozilla decides if and how it can open files by using their media (MIME) type. It obtains the media type for files in various ways. For files loaded over the network via HTTP, it requires and uses the value assigned to the Content-type HTTP header. For files loaded locally, it first looks in a cache of filename extension to media type mappings (stored in a Mozilla profile file called mimeTypes.rdf), and if it doesn't find a media type there, it asks the operating system.
@@ -19,7 +19,7 @@ tags:
 <p>...
 </p>
 <h3 id="Possible_Solutions"> Possible Solutions </h3>
-<p>How you solve this problem depends on whether it's your operating system or your Mozilla profile (mimeTypes.rdf) that are corrupt. The latter is more common, so we'll start with that. However, it seems that the former may also cause the latter. One way to check is to <a class="external" href="https://www.mozilla.org/support/firefox/profile#new">create a new profile</a> and restart Mozilla using that profile. If SVG works with the new profile, then delete the new profile and go about cleaning your old profile using the steps in the section below. If the new profile doesn't work, clean your OS file associations, then your mimeTypes.rdf.
+<p>How you solve this problem depends on whether it's your operating system or your Mozilla profile (mimeTypes.rdf) that are corrupt. The latter is more common, so we'll start with that. However, it seems that the former may also cause the latter. One way to check is to <a href="https://www.mozilla.org/support/firefox/profile#new">create a new profile</a> and restart Mozilla using that profile. If SVG works with the new profile, then delete the new profile and go about cleaning your old profile using the steps in the section below. If the new profile doesn't work, clean your OS file associations, then your mimeTypes.rdf.
 </p>
 <h4 id="Create_and_Remove_a_Bogus_File_Association"> Create and Remove a Bogus File Association </h4>
 <p>This solution should work for mimeTypes.rdf corruption, and requires little technical knowledge. It's adapted from <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=303581#c3">JP Fiset's comment in bug 303581</a> which in turn was adapted from <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=303581#c0">Jeff Schiller's comment in bug 303581</a>.
@@ -28,7 +28,7 @@ tags:
 </p><p>3. Click OK, and when the program you chose tries to open the file, just close it.
 </p><p>4. In Firefox, go to Tools &gt; Options... &gt; Downloads &gt; View &amp; Edit Actions... to open the Download Actions window.
 </p><p>5. Select the SVG entry, click the Remove Action button and then click Close to close the Download Actions window.
-</p><p>6. Try and load a local .svg file and <a class="external" href="http://jwatt.org/svg/demos/scripting-across-embed.html">this scripting across embed</a> demo.
+</p><p>6. Try and load a local .svg file and <a href="http://jwatt.org/svg/demos/scripting-across-embed.html">this scripting across embed</a> demo.
 </p><p>If the files you attempt to load in step 6 work, then your problem was mimeTypes.rdf corruption. If they still don't work, then you operating system is the likely culprit.
 </p>
 <h4 id="Fix_for_OS_file_associations"> Fix for OS file associations </h4>
@@ -39,9 +39,9 @@ tags:
 </p><p>Normally, this matters just for the entry "HKEY_CLASSES_ROOT\.svg\Content Type".
 </p>
 <hr>
-<p>After correcting the OS file associations you will probably need to re-clean your mimeTypes.rdf as described in the <a class="external" href="#Create_and_Remove_a_Bogus_File_Association">section above</a>.
+<p>After correcting the OS file associations you will probably need to re-clean your mimeTypes.rdf as described in the <a href="#Create_and_Remove_a_Bogus_File_Association">section above</a>.
 </p>
 <h3 id="Fixing_the_Bug"> Fixing the Bug </h3>
-<p>Need to look at <a class="external" href="https://lxr.mozilla.org/seamonkey/source/uriloader/exthandler/">the exthandler code</a>.
+<p>Need to look at <a href="https://lxr.mozilla.org/seamonkey/source/uriloader/exthandler/">the exthandler code</a>.
 </p><p>Related bugs: <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=332690">bug 332690</a> and <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=303581">bug 303581</a>.
 </p>

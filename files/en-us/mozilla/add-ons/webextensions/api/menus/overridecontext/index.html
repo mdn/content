@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:js notranslate">browser.menus.overrideContext(
+<pre class="brush:js">browser.menus.overrideContext(
   contextOptions // object
 )</pre>
 
@@ -47,7 +47,7 @@ tags:
 
 <p>Open the tab context menu on your custom UI, in this case :</p>
 
-<pre class="brush:js notranslate">document.addEventListener('contextmenu', event =&gt; {
+<pre class="brush:js">document.addEventListener('contextmenu', event =&gt; {
   const foo = event.target.closest('.foo');
   if (foo) {
     // When the context menu is opened on an element with the foo class

@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Atomics.store(<var>typedArray</var>, <var>index</var>, <var>value</var>)
+<pre class="brush: js">Atomics.store(<var>typedArray</var>, <var>index</var>, <var>value</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -58,7 +58,7 @@ tags:
 
 <h3 id="Using_store">Using store()</h3>
 
-<pre class="brush: js notranslate">var sab = new SharedArrayBuffer(1024);
+<pre class="brush: js">var sab = new SharedArrayBuffer(1024);
 var ta = new Uint8Array(sab);
 
 Atomics.store(ta, 0, 12); // 12</pre>

@@ -54,7 +54,7 @@ tags:
 
 <p>Take the following HTML code:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
   Let's use:
   &lt;span&gt;Cascading&lt;/span&gt;
   &lt;span&gt;Style&lt;/span&gt;
@@ -64,7 +64,7 @@ tags:
 
 <p>In the DOM, the node corresponding to our <code>&lt;p&gt;</code> element is a parent. Its children are a text node and the three nodes corresponding to our <code>&lt;span&gt;</code> elements. The <code>SPAN</code> nodes are also <span style="background-color: #f5f6f5;">parents</span>, with text nodes as their children:</p>
 
-<pre class="notranslate">P
+<pre>P
 ├─ "Let's use:"
 ├─ SPAN
 |  └─ "Cascading"
@@ -79,14 +79,14 @@ tags:
 <p>{{EmbedLiveSample('A_real_DOM_representation', '100%', 55)}}</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">p {margin:0;}</pre>
+<pre class="brush: css">p {margin:0;}</pre>
 </div>
 
 <h2 id="Applying_CSS_to_the_DOM">Applying CSS to the DOM</h2>
 
 <p>Let's say we added some CSS to our document, to style it. Again, the HTML is as follows:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
   Let's use:
   &lt;span&gt;Cascading&lt;/span&gt;
   &lt;span&gt;Style&lt;/span&gt;
@@ -95,7 +95,7 @@ tags:
 
 <p>Let's suppose we apply the following CSS to it:</p>
 
-<pre class="brush: css notranslate">span {
+<pre class="brush: css">span {
   border: 1px solid black;
   background-color: lime;
 }</pre>
@@ -121,9 +121,9 @@ tags:
 <p>In the example below I have used the British English spelling for color, which makes that property invalid as it is not recognized. So my paragraph has not been colored blue. All of the other CSS have been applied however; only the invalid line is ignored.</p>
 
 <div id="Skipping_example">
-<pre class="brush: html notranslate">&lt;p&gt; I want this text to be large, bold and blue.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt; I want this text to be large, bold and blue.&lt;/p&gt;</pre>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   font-weight: bold;
   colour: blue; /* incorrect spelling of the color property */
   font-size: 200%;
@@ -136,7 +136,7 @@ tags:
 
 <p>This works particularly well when you want to use a value that is quite new and not supported everywhere. For example, some older browsers do not support <code>calc()</code> as a value. I might give a fallback width for a box in pixels, then go on to give a width with a <code>calc()</code> value of <code>100% - 50px</code>. Old browsers will use the pixel version, ignoring the line about <code>calc()</code> as they don't understand it. New browsers will interpret the line using pixels, but then override it with the line using <code>calc()</code> as that line appears later in the cascade.</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   width: 500px;
   width: calc(100% - 50px);
 }</pre>
