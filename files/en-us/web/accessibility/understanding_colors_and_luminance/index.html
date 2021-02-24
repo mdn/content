@@ -31,10 +31,10 @@ tags:
 <p>When designing visual and readable content with the aim of accessibility for all sighted users, it is important to have an understanding of light, color, and perception. This page specifically discusses:</p>
 
 <ul>
-  <li>luminance which is a linear measure of light</li>
-  <li>color, which is measured as hue, chroma, and saturation</li>
-  <li>lightness, brightness, and contrast which are measures of perception</li>
-  <li>how these interrelate and interact with design elements</li>
+  <li>luminance, which is a linear measure of light,</li>
+  <li>Color, which is measured as hue, chroma, and saturation,</li>
+  <li>lightness, brightness, and contrast which are measures of perception, and</li>
+  <li>how these interrelate and interact with design elements.</li>
 </ul>
 
 <p>While understanding these concepts are important for design and readability for all sighted users, they are especially important for those with reduced vision and color deficient vision, and also for those with certain neurological, cognitive, and other impairments.</p>
@@ -53,7 +53,7 @@ tags:
 
 <p>We normally associate L, M, or S cone sensitivity with the sensation of red, green, and blue colors, respectively, the three primary colors of light. Specific red, green, and blue hues are used for the "color primaries" used in an RGB additive color model. The sRGB colorspace, the default standard colorspace for web content, is an example of an additive RGB color model.</p>
 
-<h3>RGB additive model</h3>
+<h3 id="RGB_additive_model">RGB additive model</h3>
 
 <p>RGB is called an additive color model because it functions by adding light of different wavelengths in different proportions to stimulate the L, M, S cones in the eye to create a particular color sensation. For instance when you see the color yellow on your monitor, the monitor is still only emitting red and green light. The separate red and green stimulate the L and M cones similarly to how a "yellow" wavelength of light might, as yellow is "in between" red and green. The red and green light do not "mix" in the air as if paint, they remain separate. The "mixing" happens in our vision system's neurological processing.</p>
 
@@ -62,12 +62,12 @@ tags:
   <figcaption>The monitor is only emitting the red and green light shown on top to create the yellow bar underneath.</figcaption>
 </figure>
 
-<h4>CMYK subtractive model</h4>
+<h4 id="CMYK_subtractive_model">CMYK subtractive model</h4>
 
 <p>CMYK is another form of color model, known as a subtractive model. Here, the cyan, magenta, yellow, black inks <em>remove</em> certain wavelengths of light, reflecting back only the narrow range each is associated with. In this article we will be focusing on displayed web content, and so we discuss mainly the RGB color model.</p>
 
-<p>For a deeper dive into how the eye and vision system functions, <a href="https://www.olympus-lifescience.com/en/microscope-resource/primer/lightandcolor/humanvisionintro/
-">see this overview.</a>
+<p>See this overview for <a href="https://www.olympus-lifescience.com/en/microscope-resource/primer/lightandcolor/humanvisionintro/
+">a deeper dive into how the eye and vision system functions</a>.
 
 <h2 id="Perception_of_Color_and_Contrast">Perception of Color and Contrast</h2>
 
@@ -90,11 +90,13 @@ tags:
 <figcaption>The yellow dots in this image are identical colors coming from your monitor, but they appear different due to context. Image D.Lyon</figcaption>
 </figure>
 
-<p>Our contrast, lightness, and color perception is affected by the context of the nearby colors and other features of a design or image. This makes predicting contrast challenging. It is clearly not as simple as the distance or ratio between two colors.</p>
+<p>Our contrast, lightness, and color perception is affected by the context of the nearby colors, and other features of a design or image. This makes predicting contrast challenging. It is clearly not as simple as the distance or ratio between two colors.</p>
 
 <h3 id="Readability_Contrast">Readability Contrast</h3>
 
-<p>For web content, readability is one very important goal. Readability is not the same as legibility. Readability is the point where a particular user can read at their best speed and best comprehension. Legibility refers to the "just noticeable difference" (<abbr>JND</abbr>) where a figure such as a letter just becomes discernible. For normal vision, the contrast sensitivity (<abbr title="contrast sensitivity">CS</abbr>) JND legibility level is about 1%, while someone with a mild impairment might have a CS of 3%. 10% would be represent profound impairment in the area of low vision. These levels are for large, bold fonts on a special chart used for testing contrast sensitivity.</p>
+<p>For web content, readability is one very important goal. Readability is not the same as legibility. Readability is the point where a particular user can read at their best speed and best comprehension. Legibility refers to the "just noticeable difference" (<abbr>JND</abbr>) where a figure such as a letter just becomes discernible.</p> 
+
+<p>For normal vision, the contrast sensitivity (<abbr>CS</abbr>) JND legibility level is about 1%, while someone with a mild impairment might have a CS of 3%. 10% would be represent profound impairment in the area of low vision. These levels are for large, bold fonts on a special chart used for testing contrast sensitivity.</p>
 
 <p>But the threshold of 1% to 3% is wholly insufficient for fluent, easy reading. The minimum critical contrast level is ten times the CS JND, and 20 times the JND is considered the better target to allow for "contrast reserve." <a href="https://pubmed.ncbi.nlm.nih.gov/8430009/"><cite> (Visual requirements for reading, S G Whittaker, J Lovie-Kitchin)</cite></a>.</p>
 
@@ -107,7 +109,7 @@ tags:
 
 <p>"Normal" print is usually considered 11.5pt to 12pt, this is equivalent of 16px on screen. And this is for normal vision. To relate this to real world visual acuity, if you think of an eye doctor's chart, and focusing on a capital E. If that E is at the legibility or acuity limit for 20/20 vision, and that is at full contrast, it is equivalent to a Helvetica capital E that is 3.9px on screen, meaning a 5.5px CSS font-size. (In print, this is a 4pt font on coated paper).</p>
 
-<p>But that is the minimum for "just making out" the letters at ~70% accuracy. That is legibility, not readability. For readability, the lower case <a href="https://kazdesignworks.com/graphic-design-terms-x-height-and-cap-height/">x-height</a> needs to be a minimum of twice that <a href="https://kazdesignworks.com/graphic-design-terms-x-height-and-cap-height/">cap height</a>. This is called the critical font size for readability.</p>
+<p>This is the minimum for "just making out" letters at ~70% accuracy. That is legibility, not readability. For readability, the lower case <a href="https://kazdesignworks.com/graphic-design-terms-x-height-and-cap-height/">x-height</a> needs to be a minimum of twice that <a href="https://kazdesignworks.com/graphic-design-terms-x-height-and-cap-height/">cap height</a>. This is called the critical font size for readability.</p>
 
 <p>This means that while a 5.5px font may be the minimum for 20/20 legibility, the minimum for <em>read</em>ability is 15.6px (in print, about 12pt, the typical standard in books). And this is for normal vision. Someone with 20/40 needs twice that, about a 31px font. This is why the <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html">WCAG standard requires</a> that users have the ability to zoom text larger.</p>
 
@@ -128,7 +130,7 @@ tags:
 
 <h3 id="CSS_Color_Level_3_notations">CSS Color Level 3 notations:</h3>
 
-<p>These are examples of the CSS notations used to define a color. Here the example color for each is magenta</p>
+<p>These are examples of the CSS notations used to define a color. Here the example color for each is magenta:</p>
 
 <pre class="brush: css">
 /* by name (from a defined set of names) */
@@ -191,7 +193,7 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <p>This is because the peak sensitivity of the L cone is actually a green/yellow, and the L cone response almost entirely overlaps the M cone response. The reason we often refer to the L cone as the "red" cone is that it responds more to long wave red light than the M cone. It is this differential between M and L cones that results in the sensation of red.</p>
 
-<p>At 611nm, the red primary in an sRGB monitor is spectrally distant from the L cone's peak sensitivity at 565nm. But the sRGB green primary is 549nm, in between the L cont peak and the M cone's peak at 540nm. This explains why the green primary makes up such a large portion of total luminance on a monitor.</p>
+<p>At 611nm, the red primary in an sRGB monitor is spectrally distant from the L cone's peak sensitivity at 565nm. But the sRGB green primary is 549nm, in between the L cone peak and the M cone's peak at 540nm. This explains why the green primary makes up such a large portion of total luminance on a monitor.</p>
 
 <p>Handprint.com has <a href="https://www.handprint.com/HP/WCL/color1.html"> an excellent deep dive into the nuances of spectral response, luminance, and color perception</a></a>.</p>
 
@@ -218,23 +220,25 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <p>This incredibly wide range is possible due to a mechanism known as light and dark adaptation, where the eye adjusts to the current overall light level.</p>
 
-<h4>Dark adaptation</h4>
+<h4 id="Dark_adaptation">Dark adaptation</h4>
 
 <p>Also known as scotopic or "night vision." Here the eye is adapted to a very dark level. Instead of the "color" sensitive cones, another type of cell called rods becomes active. Rods are sensitive to very low light levels and don't sense color. Despite being very sensitive to light, with night vision the resolution is very poor, and details can be hard to see.</p>
 
 <p>When adapting to a dark condition, it can take thirty minutes to achieve full dark adaptation. Yet a brief exposure to a bright light can throw off that night vision, taking substantial time once again to adapt. In situations where it is important to maintain dark adaptation but something needs to be illuminate (such as a map or a control) a red light is often used, as that is less likely to interfere with the rods which are sensitive between green and blue.</p>
 
-<h4>Light adaptation</h4>
+<h4 id="Light_adaptation">Light adaptation</h4>
 
-<p>This is also known as photopic or "daylight vision." Here the eye is adapted to much higher levels of light, typically a luminance greater than 8 cd/m<sup>2</sup>. The equates to a CSS value of between <code>#444</code> and <code>#555</code> for a typical desktop monitor. While dark adaption may take 30 minutes, light adaptation is much faster, taking only a few minutes. An example is leaving a dark theater on a Saturday afternoon, and being dazed by the bright sunlight for a minute or two. This adaptation period can even be painful for some people.</p>
+<p>This is also known as photopic or "daylight vision." Here the eye is adapted to much higher levels of light, typically a luminance greater than 8 cd/m<sup>2</sup>. The equates to a CSS value of between <code>#444</code> and <code>#555</code> for a typical desktop monitor.</p> 
 
-<h4>The twilight zone</h4>
+<p>While dark adaption may take 30 minutes, light adaptation is much faster, taking only a few minutes. An example is leaving a dark theater on a Saturday afternoon, and being dazed by the bright sunlight for a minute or two. This adaptation period can even be painful for some people.</p>
+
+<h4 id="The_twilight_zone">The twilight zone</h4>
 
 <p>There is a transitional area between dark and light adaptation known as mesopic vision, where both rods and cones operate at the same time. On a monitor, we'd consider this black (about <code>#000005</code>) up to as high as <code>#555</code> for a bright desktop monitor.</p>
 
-<h4>Other adaptations</h4>
+<h4 ="Other_adaptations">Other adaptations</h4>
 
-<p>We also adapt to contrast levels, and chroma and hue. Our perception is relative to context. If a page is very high contrast, we adapt to that high contrast causing a low contrast item to seem even lower in contrast. We will adapt to the overall hue cast of a page, as a result other colors on that page will be affected and perceived relative to the overall page color.</p>
+<p>We also adapt to contrast levels, and chroma and hue. Our perception is relative to context. If a page is very high contrast, we adapt to that high contrast. This will cause a low contrast item to seem even lower in contrast. We will also adapt to the overall hue cast of a page, as a result other colors on that page will be affected and perceived relative to the overall page color.</p>
 
 <p>Here is <a href="https://webvision.med.utah.edu/book/part-viii-psychophysics-of-vision/light-and-dark-adaptation/">a much deeper discussion of the nature of eye adaptation</a>.</p>
 
@@ -257,15 +261,15 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <p class="note notecard">TIP: when searching the CIE glossary use the UK spelling of "colour."</p>
 
-<h4>Colourfulness</h4>
+<h4 id="Colourfulness">Colourfulness</h4>
 
-<p>Colorfulness is the “Attribute of a visual perception according to which the perceived colour of an area appears to be more or less chromatic.” (CIE 17-233). For a color of a given chromaticity this attribute usually increases as the luminance is raised except when the brightness is very high.</p>
+<p>Colorfulness is the “Attribute of a visual perception according to which the perceived colour of an area appears to be more or less chromatic.” (CIE 17-233). For a color of a given chromaticity this attribute usually increases as the luminance is raised, except when the brightness is very high.</p>
 
-<h4>Saturation</h4>
+<h4 id="Saturation">Saturation</h4>
 
 <p>Saturation is the “Colourfulness of an area judged in proportion to its brightness.” (CIE 17-1136). For normal day viewing conditions a given chromaticity exhibits approximately constant saturation for all luminance levels, except when the brightness is very high. </p>
 
-<h4>Chroma</h4>
+<h4 id="Chroma">Chroma</h4>
 
 <p>Chroma is the “Colourfulness of an area judged as a proportion of the brightness of a similarly illuminated area that appears white or highly transmitting.” (CIE 17-139). A color exhibits approximately constant chroma for all levels of illuminance in normal day viewing conditions (except when the brightness is very high). If the luminance is increased, the chroma usually increases in the same circumstances.</p>
 
@@ -288,10 +292,8 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 <h3 id="Working_with_Blue">Working with Blue</h3>
 
 <ul>
-  <li>Pure blues should typically be the darkest of two colors</li>
-
+  <li>Pure blues should typically be the darkest of two colors.</li>
   <li>To use blue as the lighter of two colors, green needs to be added, otherwise there will be insufficient contrast and poor readability.</li>
-
   <li>This is both due to the low contrast and due to the human eye seeing blue at a lower resolution than green and red.</li>
 </ul>
 
@@ -306,7 +308,7 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <img src="colorcomb02.png" alt="An example of blue against red, and blue and purple, as seen by protanopia.">
 
-<p>Adding green to the brightest of the two colors, in this case the background, improves the luminance contrast, which improves readability for everyone.</p>
+<p>Adding green to the brightest of the two colors, in this case the background, improves the luminance contrast. This improves readability for everyone.</p>
 
 <img src="colorcomb03.png" alt="the previous examples, but adding green to the brightest color to improve contrast.">
 
@@ -318,7 +320,7 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <img src="colorcomb04.png" alt="pure red on black, and how someone with protanopia sees it, which is reduced to being illegible.">
 
-<p>Here again, adding a small amount of green (#77) makes an noticeable difference for protanopia, and in fact improves readability for all users by improving the luminance contrast.</p>
+<p>Adding a small amount of green (#77) makes a noticeable difference for protanopia, and in fact improves readability for all users by improving the luminance contrast.</p>
 
 <img src="colorcomb05.png" alt="the previous example, but adding a small amount of green to increase the luminance contrast of the text against black.">
 
@@ -336,46 +338,20 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 <h3 id="Examples_of_colors_effect_beyond_vision">Examples of color's effect beyond vision</h3>
 
 <ul>
-  <li>Color can be culturally dependent</li>
-  <ul>
-    <li><a href="https://journals.sagepub.com/doi/10.1177/002202217300400201">A Cross-Cultural Study of the Affective Meanings of Color</a></li>
-  </ul>
+  <li><strong>Color can be culturally dependent:</strong> <a href="https://journals.sagepub.com/doi/10.1177/002202217300400201">A Cross-Cultural Study of the Affective Meanings of Color</a></li>
 
-<li>Color affects our emotions</li>
-  <ul>
-    <li><a href="https://pubmed.ncbi.nlm.nih.gov/28612080/">Color and emotion: effects of hue, saturation, and brightness</a></li>
-  </ul>
+<li><strong>Color affects our emotions:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/28612080/">Color and emotion: effects of hue, saturation, and brightness</a></li>
 
-<li>Higher contrasts can also have a positive affect on our emotions</li>
-  <ul>
-    <li><a href="https://pubmed.ncbi.nlm.nih.gov/32823741/">Emotion Variation from Controlling Contrast of Visual Contents through EEG-Based Deep Emotion Recognition</a></li>
-  </ul>
+<li><strong>Higher contrasts can also have a positive affect on our emotions:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/32823741/">Emotion Variation from Controlling Contrast of Visual Contents through EEG-Based Deep Emotion Recognition</a></li>
 
-<li>Some colors can affect our perception of time</li>
-  <ul>
-    <li><a href="https://pubmed.ncbi.nlm.nih.gov/29374198/">Color and time perception: Evidence for temporal overestimation of blue stimuli</a></li>
-  </ul>
+<li><strong>Some colors can affect our perception of time:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/29374198/">Color and time perception: Evidence for temporal overestimation of blue stimuli</a></li>
 
-<li>Blue also has a significant effect on brightness and glare</li>
-  <ul>
-    <li><a href="https://pubmed.ncbi.nlm.nih.gov/31288107/">Blue and glare & brightness</a></li>
-  </ul>
+<li><strong>Blue also has a significant effect on brightness and glare:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/31288107/">Blue and glare & brightness</a></li>
 
-<li>Red tinted glasses can provide increased happiness or joy</li>
-  <ul>
-    <li><a href="https://pubmed.ncbi.nlm.nih.gov/31244627/">Looking Through "Rose-Tinted" Glasses: The Influence of Tint on Visual Affective Processing</a></li>
-  </ul>
+<li><strong>Red tinted glasses can provide increased happiness or joy:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/31244627/">Looking Through "Rose-Tinted" Glasses: The Influence of Tint on Visual Affective Processing</a></li>
 
-<li>Red is well known to have significant effects on our behavior</li>
-  <ul>
-    <li><a href="https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/">How the Color Red Influences Our Behavior</a> Scientific American, S. Martinez-Conde, S,Macknik</li>
-  </ul>
-
-<li>Red Environment</li>
-
-  <ul>
-    <li><a href="https://www.ncbi.nlm.nih.gov/pubmed/20649469">Studies have shown that a red environment stimulates cognition</a>, but for those who suffer Traumatic Brain Injury cognitive function may be reduced in a red environment, while a green environment had no measurable effect according.</li>
-  </ul>
+<li><strong>Red is well known to have significant effects on our behavior:<strong> <a href="https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/">How the Color Red Influences Our Behavior</a>, Scientific American, S. Martinez-Conde, S,Macknik</li>
+<li><strong>Red Environment:</strong> <a href="https://www.ncbi.nlm.nih.gov/pubmed/20649469">Studies have shown that a red environment stimulates cognition</a>, but for those who suffer Traumatic Brain Injury cognitive function may be reduced in a red environment, while a green environment had no measurable effect according.</li>
 </ul>
 
 <h3 id="Flashing_and_Seizures">Flashing and Seizures</h3>
@@ -405,11 +381,12 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 <h2 id="Modeling_Light_Color_and_Vision">Modeling Light Color and Vision</h2>
 
 <p>To help us in our work, be it content design or determining accessibility, or calibrating a monitor, we need a way to model and predict the behavior and perception of light and color. These models are built with basic math, and are specific to the given task. A colorimetric model is one that is involved in measuring light, an appearance model is designed to predict how we will perceive the light as measured.</p>
+
 <h3 id="Calculating_Relative_Luminance">Calculating Relative Luminance</h3>
 
 <p>The IEC standard for calculating relative luminance (Y) from an sRGB color is as follows:</p>
 
-<h4>Step one: 8 bit integer to float</h4>
+<h4 id="Step_one_8_bit_integer_to_float">Step one: 8 bit integer to float</h4>
 
 <p>Convert 8 bit sRGB values to float (0.0 to 1.0) by dividing by 255.0:</p>
 
@@ -417,7 +394,7 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <p>If your sRGB values are 16 bit then convert to decimal by dividing by 65535.</p>
 
-<h4>Step two: Linearize</h4>
+<h4 id="Step_two_Linearize">Step two: Linearize</h4>
 
 <p>Linearize the data to remove the encoded transfer curve.</p>
 
@@ -440,7 +417,7 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
   <p>Those familiar with the WCAG 2.x contrast math may notice that the above code uses the threshold value of 0.04045. This is the official IEC standard. The WCAG 2.x guidelines were drafted citing an obsolete value. While the WCAG 2.x version is technically incorrect, with 8-bit color there is no functional difference for the purpose of WCAG 2.x contrast. For the record, the WCAG 2.x value is 0.03928.</p>
 </div>
 
-<h4>Step three: Spectrally Weighted Luminance</h4>
+<h4 id="Step_three_Spectrally_Weighted_Luminance">Step three: Spectrally Weighted Luminance</h4>
 
 <p>The normal human eye has three types of cones that are sensitive to red, green, and blue light. But our spectral sensitivity is not uniform, as we are most sensitive to green (555 nm), and blue is a distant last place. Luminance is spectrally weighted to reflect this using the following coefficients for sRGB:</p>
 
@@ -448,7 +425,7 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <p>Multiply each linearized color channel by their coefficient and sum them all together to find Y, Luminance.</p>
 
-<h4>Alternate: sRGB to Y, simple</h4>
+<h4 id="Alternate_sRGB_to_Y_simple">Alternate: sRGB to Y, simple</h4>
 
 <p>Use this version instead of the piecewise version above if you are less concerned with accuracy and more concerned with performance.</p>
 
