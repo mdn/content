@@ -52,7 +52,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Math.cosh(<var>x</var>)</pre>
+<pre class="brush: js">Math.cosh(<var>x</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -75,7 +75,7 @@ tags:
 
 <h3 id="Using_Math.cosh">Using Math.cosh()</h3>
 
-<pre class="brush: js notranslate">Math.cosh(0);  // 1
+<pre class="brush: js">Math.cosh(0);  // 1
 Math.cosh(1);  // 1.5430806348152437
 Math.cosh(-1); // 1.5430806348152437
 </pre>
@@ -84,14 +84,14 @@ Math.cosh(-1); // 1.5430806348152437
 
 <p>This can be emulated with the help of the {{jsxref("Math.exp()")}} function:</p>
 
-<pre class="brush: js notranslate">Math.cosh = Math.cosh || function(x) {
+<pre class="brush: js">Math.cosh = Math.cosh || function(x) {
   return (Math.exp(x) + Math.exp(-x)) / 2;
 }
 </pre>
 
 <p>or using only one call to the {{jsxref("Math.exp()")}} function:</p>
 
-<pre class="brush: js notranslate">Math.cosh = Math.cosh || function(x) {
+<pre class="brush: js">Math.cosh = Math.cosh || function(x) {
   var y = Math.exp(x);
   return (y + 1 / y) / 2;
 };

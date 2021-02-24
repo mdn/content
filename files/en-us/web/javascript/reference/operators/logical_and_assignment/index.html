@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>expr1</em> &amp;&amp;= <em>expr2</em>
+<pre class="brush: js"><em>expr1</em> &amp;&amp;= <em>expr2</em>
 </pre>
 
 <h2 id="Description">Description</h2>
@@ -44,18 +44,18 @@ tags:
 <p>Logical AND assignment short-circuits as well meaning that <code>x &amp;&amp;= y</code>
   is equivalent to:</p>
 
-<pre class="brush: js notranslate">x &amp;&amp; (x = y);</pre>
+<pre class="brush: js">x &amp;&amp; (x = y);</pre>
 
 <p>And not equivalent to the following which would always perform an assignment:</p>
 
-<pre class="brush: js notranslate example-bad">x = x &amp;&amp; y;
+<pre class="brush: jsexample-bad">x = x &amp;&amp; y;
 </pre>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_logical_AND_assignment">Using logical AND assignment</h3>
 
-<pre class="brush: js notranslate">let x = 0;
+<pre class="brush: js">let x = 0;
 let y = 1;
 
 x &amp;&amp;= 0; // 0

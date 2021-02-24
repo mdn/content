@@ -26,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Atomics.compareExchange(<var>typedArray</var>, <var>index</var>, <var>expectedValue</var>, <var>replacementValue</var>)
+<pre class="brush: js">Atomics.compareExchange(<var>typedArray</var>, <var>index</var>, <var>expectedValue</var>, <var>replacementValue</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -64,7 +64,7 @@ tags:
 
 <h3 id="Using_compareExchange">Using compareExchange()</h3>
 
-<pre class="brush: js notranslate">const sab = new SharedArrayBuffer(1024);
+<pre class="brush: js">const sab = new SharedArrayBuffer(1024);
 const ta = new Uint8Array(sab);
 ta[0] = 7;
 

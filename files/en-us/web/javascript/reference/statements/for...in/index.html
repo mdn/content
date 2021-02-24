@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">for (<var>variable</var> in <var>object</var>)
+<pre class="brush: js">for (<var>variable</var> in <var>object</var>)
   statement</pre>
 
 <dl>
@@ -108,7 +108,7 @@ tags:
 <p>The <code>for...in</code> loop below iterates over all of the object's enumerable,
   non-Symbol properties and logs a string of the property names and their values.</p>
 
-<pre class="brush: js notranslate">var obj = {a: 1, b: 2, c: 3};
+<pre class="brush: js">var obj = {a: 1, b: 2, c: 3};
 
 for (const prop in obj) {
   console.log(`obj.${prop} = ${obj[prop]}`);
@@ -125,7 +125,7 @@ for (const prop in obj) {
   {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}}: the inherited
   properties are not displayed.</p>
 
-<pre class="brush: js notranslate">var triangle = {a: 1, b: 2, c: 3};
+<pre class="brush: js">var triangle = {a: 1, b: 2, c: 3};
 
 function ColoredTriangle() {
   this.color = 'red';
@@ -169,7 +169,7 @@ for (const prop in obj) {
 <p>Prior to Firefox 40, it was possible to use an initializer expression
   (<code>i=0</code>) in a <code>for...in</code> loop:</p>
 
-<pre class="brush: js example-bad notranslate">var obj = {a: 1, b: 2, c: 3};
+<pre class="brush: js example-bad">var obj = {a: 1, b: 2, c: 3};
 for (var i = 0 in obj) {
   console.log(obj[i]);
 }

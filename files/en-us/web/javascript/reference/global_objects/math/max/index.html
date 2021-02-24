@@ -31,7 +31,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">Math.max([<var>value1</var>[, <var>value2</var>[, ...]]])</pre>
+  class="brush: js">Math.max([<var>value1</var>[, <var>value2</var>[, ...]]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -61,7 +61,7 @@ tags:
 
 <h3 id="Using_Math.max">Using Math.max()</h3>
 
-<pre class="brush: js notranslate">Math.max(10, 20);   //  20
+<pre class="brush: js">Math.max(10, 20);   //  20
 Math.max(-10, -20); // -10
 Math.max(-10, 20);  //  20
 </pre>
@@ -72,7 +72,7 @@ Math.max(-10, 20);  //  20
 <p>{{jsxref("Array.prototype.reduce", "Array.reduce()")}} can be used to find the maximum
   element in a numeric array, by comparing each value:</p>
 
-<pre class="brush: js notranslate">var arr = [1,2,3];
+<pre class="brush: js">var arr = [1,2,3];
 var max = arr.reduce(function(a, b) {
     return Math.max(a, b);
 });
@@ -84,7 +84,7 @@ var max = arr.reduce(function(a, b) {
   programmatically constructed arrays. This should only be used for arrays with relatively
   few elements.</p>
 
-<pre class="brush: js notranslate">function getMaxOfArray(numArray) {
+<pre class="brush: js">function getMaxOfArray(numArray) {
   return Math.max.apply(null, numArray);
 }</pre>
 
@@ -92,7 +92,7 @@ var max = arr.reduce(function(a, b) {
     operator</a> is a shorter way of writing the <code>apply</code> solution to get the
   maximum of an array:</p>
 
-<pre class="brush: js notranslate">var arr = [1, 2, 3];
+<pre class="brush: js">var arr = [1, 2, 3];
 var max = Math.max(...arr);
 </pre>
 

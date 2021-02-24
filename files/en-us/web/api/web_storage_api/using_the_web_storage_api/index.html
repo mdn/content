@@ -19,7 +19,7 @@ tags:
 
 <p>Storage objects are simple key-value stores, similar to objects, but they stay intact through page loads. The keys and the values are always strings (note that, as with objects, integer keys will be automatically converted to strings). You can access these values like an object, or with the {{domxref("Storage.getItem()")}} and {{domxref("Storage.setItem()")}} methods. These three lines all set the (same) colorSetting entry:</p>
 
-<pre class="brush: js notranslate" style="white-space: pre;">localStorage.colorSetting = '#a4509b';
+<pre class="brush: js" style="white-space: pre;">localStorage.colorSetting = '#a4509b';
 localStorage['colorSetting'] = '#a4509b';
 localStorage.setItem('colorSetting', '#a4509b');</pre>
 
@@ -54,7 +54,7 @@ localStorage.setItem('colorSetting', '#a4509b');</pre>
 
 <p>Here is a function that detects whether localStorage is both supported and available:</p>
 
-<pre class="brush: js notranslate">function storageAvailable(type) {
+<pre class="brush: js">function storageAvailable(type) {
     var storage;
     try {
         storage = window[type];
@@ -81,7 +81,7 @@ localStorage.setItem('colorSetting', '#a4509b');</pre>
 
 <p>And here is how you would use it:</p>
 
-<pre class="brush: js notranslate">if (storageAvailable('localStorage')) {
+<pre class="brush: js">if (storageAvailable('localStorage')) {
   // Yippee! We can use localStorage awesomeness
 }
 else {
@@ -96,11 +96,11 @@ else {
 
 <p>To illustrate some typical web storage usage, we have created an example, imaginatively called <strong>Web Storage Demo</strong>. The <a href="https://mdn.github.io/dom-examples/web-storage/">landing page</a> provides controls that can be used to customize the color, font, and decorative image:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9685/landing.png" style="display: block; height: 482px; margin: 0px auto; width: 700px;">When you choose different options, the page is instantly updated; in addition, your choices are stored in <code>localStorage</code>, so that when you leave the page and load it again, later on, your choices are remembered.</p>
+<p><img alt="" src="landing.png" style="display: block; margin: 0px auto;">When you choose different options, the page is instantly updated; in addition, your choices are stored in <code>localStorage</code>, so that when you leave the page and load it again, later on, your choices are remembered.</p>
 
 <p>We have also provided an <a href="https://mdn.github.io/dom-examples/web-storage/event.html">event output page</a> — if you load this page in another tab, then make changes to your choices in the landing page, you'll see the updated storage information outputted as a {{domxref("StorageEvent")}} is fired.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9687/event-output.png" style="display: block; height: 482px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="event-output.png" style="display: block; margin: 0px auto;"></p>
 
 <div class="note">
 <p><strong>Note</strong>: As well as viewing the example pages live using the above links, you can also <a href="https://github.com/mdn/dom-examples/tree/master/web-storage">check out the source code</a>.</p>
@@ -110,7 +110,7 @@ else {
 
 <p>To start with, in <a href="https://github.com/mdn/dom-examples/blob/master/web-storage/main.js">main.js</a>, we test whether the storage object has already been populated (i.e., the page was previously accessed):</p>
 
-<pre class="brush: js notranslate">if(!localStorage.getItem('bgcolor')) {
+<pre class="brush: js">if(!localStorage.getItem('bgcolor')) {
   populateStorage();
 } else {
   setStyles();
@@ -124,7 +124,7 @@ else {
 
 <p>As noted above, values can be retrieved from storage using {{domxref("Storage.getItem()")}}. This takes the key of the data item as an argument, and returns the data value. For example:</p>
 
-<pre class="brush: js notranslate">function setStyles() {
+<pre class="brush: js">function setStyles() {
   var currentColor = localStorage.getItem('bgcolor');
   var currentFont = localStorage.getItem('font');
   var currentImage = localStorage.getItem('image');
@@ -144,7 +144,7 @@ else {
 
 <p>{{domxref("Storage.setItem()")}} is used both to create new data items, and (if the data item already exists) update existing values. This takes two arguments — the key of the data item to create/modify, and the value to store in it.</p>
 
-<pre class="brush: js notranslate">function populateStorage() {
+<pre class="brush: js">function populateStorage() {
   localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
   localStorage.setItem('font', document.getElementById('font').value);
   localStorage.setItem('image', document.getElementById('image').value);
@@ -156,7 +156,7 @@ else {
 
 <p>We've also included an <code>onchange</code> handler on each form element so that the data and styling are updated whenever a form value is changed:</p>
 
-<pre class="brush: js notranslate">bgcolorForm.onchange = populateStorage;
+<pre class="brush: js">bgcolorForm.onchange = populateStorage;
 fontForm.onchange = populateStorage;
 imageForm.onchange = populateStorage;</pre>
 
@@ -166,7 +166,7 @@ imageForm.onchange = populateStorage;</pre>
 
 <p>On the events page (see <a href="https://github.com/mdn/dom-examples/blob/master/web-storage/event.js">events.js</a>) the only JavaScript is as follows:</p>
 
-<pre class="brush: js notranslate">window.addEventListener('storage', function(e) {
+<pre class="brush: js">window.addEventListener('storage', function(e) {
   document.querySelector('.my-key').textContent = e.key;
   document.querySelector('.my-old').textContent = e.oldValue;
   document.querySelector('.my-new').textContent = e.newValue;

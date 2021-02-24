@@ -33,7 +33,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">// Printing all messages to console
+<pre class="brush: js">// Printing all messages to console
 navigator.requestMIDIAccess().then(midiAccess =&gt; {
   Array.from(midiAccess.inputs).forEach(input =&gt; {
     input[1].onmidimessage = (msg) =&gt; { console.log(msg); }

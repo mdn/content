@@ -37,7 +37,7 @@ tags:
 
 <p>If you need to know whether or not a given constraint is supported by the user agent, you can find out by calling {{domxref("MediaDevices.getSupportedConstraints", "navigator.mediaDevices.getSupportedConstraints()")}} to get a list of the constrainable properties which the browser knows, like this:</p>
 
-<pre class="brush: js notranslate">let supported = navigator.mediaDevices.getSupportedConstraints();
+<pre class="brush: js">let supported = navigator.mediaDevices.getSupportedConstraints();
 
 document.getElementById("frameRateSlider").disabled = !supported["frameRate"];</pre>
 
@@ -53,7 +53,7 @@ document.getElementById("frameRateSlider").disabled = !supported["frameRate"];</
 
 <p>Most, each constraint may be a specific value indicating a desired value for the setting. For example:</p>
 
-<pre class="brush: js notranslate">let constraints = {
+<pre class="brush: js">let constraints = {
   width: 1920,
   height: 1080,
   aspectRatio: 1.777777778
@@ -71,7 +71,7 @@ myTrack.applyConstraints(constraints);</pre>
 
 <p>Sometimes, any value within a range is acceptable for a property's value. You can specify ranges with either or both minimum and maximum values, and you can even specify an ideal value within the range, if you choose. If you provide an ideal value, the browser will try to get as close as possible to matching that value, given the other constraints specified.</p>
 
-<pre class="brush: js notranslate">let supports = navigator.mediaDevices.getSupportedConstraints();
+<pre class="brush: js">let supports = navigator.mediaDevices.getSupportedConstraints();
 
 if (!supports["width"] || !supports["height"] || !supports["frameRate"] || !supports["facingMode"]) {
   // We're missing needed properties, so handle that error.
@@ -114,7 +114,7 @@ if (!supports["width"] || !supports["height"] || !supports["frameRate"] || !supp
 
 <p>The first and most common way to use constraints is to specify them when you call {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}:</p>
 
-<pre class="brush: js notranslate">navigator.mediaDevices.getUserMedia({
+<pre class="brush: js">navigator.mediaDevices.getUserMedia({
   video: {
     width: { min: 640, ideal: 1920 },
     height: { min: 400, ideal: 1080 },
@@ -137,7 +137,7 @@ if (!supports["width"] || !supports["height"] || !supports["frameRate"] || !supp
 
 <p>You can also change the constraints of an existing {{domxref("MediaStreamTrack")}} on the fly, by calling the track's {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} method, passing into it an object representing the constraints you wish to apply to the track:</p>
 
-<pre class="brush: js notranslate">videoTrack.applyConstraints({
+<pre class="brush: js">videoTrack.applyConstraints({
   width: 1920,
   height: 1080
 });
@@ -153,7 +153,7 @@ if (!supports["width"] || !supports["height"] || !supports["frameRate"] || !supp
 
 <p>If at any time you need to fetch the set of constraints that are currently applied to the media, you can get that information by calling {{domxref("MediaStreamTrack.getConstraints()")}}, as shown in the example below.</p>
 
-<pre class="brush: js notranslate">function switchCameras(track, camera) {
+<pre class="brush: js">function switchCameras(track, camera) {
   let constraints = track.getConstraints();
   constraints.facingMode = camera;
   track.applyConstraints(constraints);
@@ -165,7 +165,7 @@ if (!supports["width"] || !supports["height"] || !supports["frameRate"] || !supp
 
 <p>Unless you only use exact constraints (which is pretty restrictive, so be sure you mean it!), there's no guarantee exactly what you're going to actually get after the constraints are applied. The values of the constrainable properties as they actually are in the resulting media are referred to as the settings. If you need to know the true format and other properties of the media, you can obtain those settings by calling {{domxref("MediaStreamTrack.getSettings()")}}. This returns an object based on the dictionary {{domxref("MediaTrackSettings")}}. For example:</p>
 
-<pre class="brush: js notranslate">function whichCamera(track) {
+<pre class="brush: js">function whichCamera(track) {
   return track.getSettings().facingMode;
 }</pre>
 
@@ -180,7 +180,7 @@ if (!supports["width"] || !supports["height"] || !supports["frameRate"] || !supp
 <div class="hidden">
 <h3 id="HTML_content">HTML content</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;Experiment with media constraints! Edit the constraint sets for the
+<pre class="brush: html">&lt;p&gt;Experiment with media constraints! Edit the constraint sets for the
    video and audio tracks in the edit boxes on the left, then click the
    "Apply Constraints" button to try them out. The actual settings the
    browser selected and is using are shown in the boxes on the right.
@@ -230,7 +230,7 @@ if (!supports["width"] || !supports["height"] || !supports["frameRate"] || !supp
 
 <h3 id="CSS_content">CSS content</h3>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   font: 14px "Open Sans", "Arial", sans-serif;
 }
 
@@ -296,7 +296,7 @@ h3 {
 
 <p>First we have the default constraint sets, as strings. These strings are presented in editable {{HTMLElement("textarea")}}s, but this is the initial configuration of the stream.</p>
 
-<pre class="brush: js notranslate">let videoDefaultConstraintString = '{\n  "width": 320,\n  "height": 240,\n  "frameRate": 30\n}';
+<pre class="brush: js">let videoDefaultConstraintString = '{\n  "width": 320,\n  "height": 240,\n  "frameRate": 30\n}';
 let audioDefaultConstraintString = '{\n  "sampleSize": 16,\n  "channelCount": 2,\n  "echoCancellation": false\n}';
 </pre>
 
@@ -304,7 +304,7 @@ let audioDefaultConstraintString = '{\n  "sampleSize": 16,\n  "channelCount": 2,
 
 <p>Then we initialize the variables which will hold the {{domxref("MediaTrackConstraints")}} objects for the video and audio tracks, as well as the variables which will hold references to the video and audio tracks themselves, to <code>null</code>.</p>
 
-<pre class="brush: js notranslate">let videoConstraints = null;
+<pre class="brush: js">let videoConstraints = null;
 let audioConstraints = null;
 
 let audioTrack = null;
@@ -313,7 +313,7 @@ let videoTrack = null;
 
 <p>And we get references to all of the elements we'll need to access.</p>
 
-<pre class="brush: js notranslate">let videoElement = document.getElementById("video");
+<pre class="brush: js">let videoElement = document.getElementById("video");
 let logElement = document.getElementById("log");
 let supportedConstraintList = document.getElementById("supportedConstraints");
 let videoConstraintEditor = document.getElementById("videoConstraintEditor");
@@ -343,14 +343,14 @@ let audioSettingsText = document.getElementById("audioSettingsText");
 
 <p>Finally, we set the current contents of the two constraint set editor elements to the defaults.</p>
 
-<pre class="brush: js notranslate">videoConstraintEditor.value = videoDefaultConstraintString;
+<pre class="brush: js">videoConstraintEditor.value = videoDefaultConstraintString;
 audioConstraintEditor.value = audioDefaultConstraintString;</pre>
 
 <h4 id="Updating_the_settings_display">Updating the settings display</h4>
 
 <p>To the right of each of the constraint set editors is a second text box which we use to display the current configuration of the track's configurable properties. This display is updated by the function <code>getCurrentSettings()</code>, which gets the current settings for the audio and video tracks and inserts the corresponding code into the tracks' settings display boxes by setting their {{htmlattrxref("value", "textarea")}}.</p>
 
-<pre class="brush: js notranslate">function getCurrentSettings() {
+<pre class="brush: js">function getCurrentSettings() {
   if (videoTrack) {
     videoSettingsText.value = JSON.stringify(videoTrack.getSettings(), null, 2);
   }
@@ -366,7 +366,7 @@ audioConstraintEditor.value = audioDefaultConstraintString;</pre>
 
 <p>The <code>buildConstraints()</code> function builds the {{domxref("MediaTrackConstraints")}} objects for the audio and video tracks using the code in the two tracks' constraint set edit boxes.</p>
 
-<pre class="brush: js notranslate">function buildConstraints() {
+<pre class="brush: js">function buildConstraints() {
   try {
     videoConstraints = JSON.parse(videoConstraintEditor.value);
     audioConstraints = JSON.parse(audioConstraintEditor.value);
@@ -382,7 +382,7 @@ audioConstraintEditor.value = audioDefaultConstraintString;</pre>
 
 <p>The <code>startVideo()</code> method handles setting up and starting the video stream.</p>
 
-<pre class="brush: js notranslate">function startVideo() {
+<pre class="brush: js">function startVideo() {
   buildConstraints();
   navigator.mediaDevices.getUserMedia({
     video: videoConstraints,
@@ -421,7 +421,7 @@ audioConstraintEditor.value = audioDefaultConstraintString;</pre>
 
 <p>We also need to set up an event listener to watch for the "Start Video" button to be clicked:</p>
 
-<pre class="brush: js notranslate">document.getElementById("startButton").addEventListener("click", function() {
+<pre class="brush: js">document.getElementById("startButton").addEventListener("click", function() {
   startVideo();
 }, false);
 </pre>
@@ -437,7 +437,7 @@ audioConstraintEditor.value = audioDefaultConstraintString;</pre>
 	<li>If an error occurs applying either set of constraints, <code>handleError()</code> is used to output a message into the log.</li>
 </ol>
 
-<pre class="brush: js notranslate">document.getElementById("applyButton").addEventListener("click", function() {
+<pre class="brush: js">document.getElementById("applyButton").addEventListener("click", function() {
   if (!videoTrack &amp;&amp; !audioTrack) {
     startVideo();
   } else {
@@ -461,7 +461,7 @@ audioConstraintEditor.value = audioDefaultConstraintString;</pre>
 
 <p>Then we set up the handler for the stop button.</p>
 
-<pre class="brush: js notranslate">document.getElementById("stopButton").addEventListener("click", function() {
+<pre class="brush: js">document.getElementById("stopButton").addEventListener("click", function() {
   if (videoTrack) {
     videoTrack.stop();
   }
@@ -480,7 +480,7 @@ audioConstraintEditor.value = audioDefaultConstraintString;</pre>
 
 <p>This code adds simple support for tabs to the {{HTMLElement("textarea")}} elements by making the tab key insert two space characters when either constraint edit box is focused.</p>
 
-<pre class="brush: js notranslate">function keyDownHandler(event) {
+<pre class="brush: js">function keyDownHandler(event) {
   if (event.key == "Tab") {
     let elem = event.target;
     let str = elem.value;
@@ -506,7 +506,7 @@ audioConstraintEditor.addEventListener("keydown", keyDownHandler, false);
 <p>Of course, there may be non-standard properties in this list, in which case you probably will find that the documentation link doesn't help much.</p>
 </div>
 
-<pre class="brush: js notranslate">let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
+<pre class="brush: js">let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
 for (let constraint in supportedConstraints) {
   if (supportedConstraints.hasOwnProperty(constraint)) {
     let elem = document.createElement("li");
@@ -522,7 +522,7 @@ for (let constraint in supportedConstraints) {
 
 <p>We also have some simple error handling code; <code>handleError()</code> is called to handle promises which fail, and the <code>log()</code> function appends the error message to a special logging {{HTMLElement("div")}} box under the video.</p>
 
-<pre class="brush: js notranslate">function log(msg) {
+<pre class="brush: js">function log(msg) {
   logElement.innerHTML += (msg + "&lt;br&gt;");
 }
 

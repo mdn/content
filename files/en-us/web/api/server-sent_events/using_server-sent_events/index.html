@@ -21,15 +21,15 @@ tags:
 
 <p>The server-sent event API is contained in the {{domxref("EventSource")}} interface; to open a connection to the server to begin receiving events from it, create a new <code>EventSource</code> object with the URL of a script that generates the events. For example:</p>
 
-<pre class="brush: js notranslate">const evtSource = new EventSource("ssedemo.php");</pre>
+<pre class="brush: js">const evtSource = new EventSource("ssedemo.php");</pre>
 
 <p>If the event generator script is hosted on a different origin, a new <code>EventSource</code> object should be created with both the URL and an options dictionary. For example, assuming the client script is on <code>example.com</code>:</p>
 
-<pre class="brush: js notranslate">const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );</pre>
+<pre class="brush: js">const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );</pre>
 
 <p>Once you've instantiated your event source, you can begin listening for messages from the server by attaching a handler for the {{event("message")}} event:</p>
 
-<pre class="brush: js notranslate">evtSource.onmessage = function(event) {
+<pre class="brush: js">evtSource.onmessage = function(event) {
   const newElement = document.createElement("li");
   const eventList = document.getElementById("list");
 
@@ -42,7 +42,7 @@ tags:
 
 <p>You can also listen for events with <code>addEventListener()</code>:</p>
 
-<pre class="brush: js notranslate">evtSource.addEventListener("ping", function(event) {
+<pre class="brush: js">evtSource.addEventListener("ping", function(event) {
   const newElement = document.createElement("li");
   const time = JSON.parse(event.data).time;
   newElement.textContent = "ping at " + time;
@@ -62,7 +62,7 @@ tags:
 
 <p>The {{Glossary("PHP")}} code for the example we're using here follows:</p>
 
-<pre class="brush: php notranslate">date_default_timezone_set("America/New_York");
+<pre class="brush: php">date_default_timezone_set("America/New_York");
 header("Cache-Control: no-cache");
 header("Content-Type: text/event-stream");
 
@@ -107,7 +107,7 @@ while (true) {
 
 <p>When problems occur (such as a network timeout or issues pertaining to <a href="/en-US/docs/HTTP/Access_control_CORS">access control</a>), an error event is generated. You can take action on this programmatically by implementing the <code>onerror</code> callback on the <code>EventSource</code> object:</p>
 
-<pre class="brush: js notranslate">evtSource.onerror = function(err) {
+<pre class="brush: js">evtSource.onerror = function(err) {
   console.error("EventSource failed:", err);
 };
 </pre>
@@ -116,7 +116,7 @@ while (true) {
 
 <p>By default, if the connection between the client and server closes, the connection is restarted. The connection is terminated with the <code>.close()</code> method.</p>
 
-<pre class="brush: js notranslate">evtSource.close();</pre>
+<pre class="brush: js">evtSource.close();</pre>
 
 <h2 id="Event_stream_format">Event stream format</h2>
 
@@ -153,7 +153,7 @@ while (true) {
 
 <p>The second message contains a data field with the value "some text". The third message contains a data field with the value "another message\nwith two lines". Note the newline special character in the value.</p>
 
-<pre class="brush: bash notranslate">: this is a test stream
+<pre class="brush: bash">: this is a test stream
 
 data: some text
 
@@ -165,7 +165,7 @@ data: with two lines
 
 <p>This example sends named events. Each has an event name specified by the <code>event</code> field, and a <code>data</code> field whose value is an appropriate JSON string with the data needed for the client to act on the event. The <code>data</code> field could, of course, have any string data; it doesn't have to be JSON.</p>
 
-<pre class="brush: bash notranslate">event: userconnect
+<pre class="brush: bash">event: userconnect
 data: {"username": "bobby", "time": "02:33:48"}
 
 event: usermessage
@@ -182,7 +182,7 @@ data: {"username": "sean", "time": "02:34:36", "text": "Bye, bobby."}
 
 <p>You don't have to use just unnamed messages or typed events; you can mix them together in a single event stream.</p>
 
-<pre class="brush: bash notranslate">event: userconnect
+<pre class="brush: bash">event: userconnect
 data: {"username": "bobby", "time": "02:33:48"}
 
 data: Here's a system message of some kind that will get used

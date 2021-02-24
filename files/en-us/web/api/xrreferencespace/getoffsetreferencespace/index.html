@@ -48,7 +48,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>offsetReferenceSpace</em> = <em>xrReferenceSpace</em>.getOffsetReferenceSpace(<em>originOffset</em>);</pre>
+  class="brush: js"><em>offsetReferenceSpace</em> = <em>xrReferenceSpace</em>.getOffsetReferenceSpace(<em>originOffset</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -83,7 +83,7 @@ tags:
 <p>Upon first creating a scene, you may need to set the user's position within the 3D
   world. You can do that using <code>getOffsetReferenceSpace()</code>.</p>
 
-<pre class="brush: js notranslate">xrSession.requestReferenceSpace("local")
+<pre class="brush: js">xrSession.requestReferenceSpace("local")
 .then((refSpace) =&gt; {
   xrReferenceSpace = refSpace;
   xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(
@@ -117,7 +117,7 @@ tags:
   events. This prevents the right-clicks from causing the context menu from appearing in
   the browser.</p>
 
-<pre class="brush: js notranslate">canvas.oncontextmenu = (event) =&gt; { event.preventDefault(); };
+<pre class="brush: js">canvas.oncontextmenu = (event) =&gt; { event.preventDefault(); };
 canvas.addEventListener("mousemove", (event) =&gt; {
   if (event.buttons &amp; 2) {
     rotateViewBy(event.movementX, event.movementY);
@@ -131,7 +131,7 @@ canvas.addEventListener("mousemove", (event) =&gt; {
   straight up and straight down. Each time this is called, the new offsets are used to
   update the current values of <code>mousePitch</code> and <code>mouseYaw</code>.</p>
 
-<pre class="brush: js notranslate">let mouseYaw = 0.0;
+<pre class="brush: js">let mouseYaw = 0.0;
 let mousePitch = 0.0;
 const inverseOrientation = quat.create();
 const MOUSE_SPEED = 0.003;
@@ -150,7 +150,7 @@ function rotateViewBy(dx, dy) {
 <p>Finally, we need code that actually applies the computed yaw and pitch to the viewer's
   orientation. This function, <code>applyMouseMovement()</code>, handles that:</p>
 
-<pre class="brush: js notranslate">function applyMouseMovement(refSpace) {
+<pre class="brush: js">function applyMouseMovement(refSpace) {
   if (!mouseYaw &amp;&amp; !mousePitch) {
     return refSpace;
   }

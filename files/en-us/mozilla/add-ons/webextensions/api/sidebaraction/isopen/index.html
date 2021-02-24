@@ -58,13 +58,13 @@ tags:
 
 <p>Check the topmost window:</p>
 
-<pre class="notranslate brush: js">browser.sidebarAction.isOpen({}).then(result =&gt; {
+<pre class="brush: js">browser.sidebarAction.isOpen({}).then(result =&gt; {
   console.log(result);
 });</pre>
 
 <p>  Check all open windows:</p>
 
-<pre class="notranslate brush: js">async function checkWindow(windowId) {
+<pre class="brush: js">async function checkWindow(windowId) {
   let result = await browser.sidebarAction.isOpen({windowId});
   console.log(`window: ${windowId} status: ${result}`);
 }

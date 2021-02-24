@@ -71,7 +71,7 @@ tags:
 
 <p>Models are usually defined in an application's <strong>models.py</strong> file. They are implemented as subclasses of <code>django.db.models.Model</code>, and can include fields, methods and metadata. The code fragment below shows a "typical" model, named <code>MyModelName</code>:</p>
 
-<pre class="brush: python notranslate">from django.db import models
+<pre class="brush: python">from django.db import models
 
 class MyModelName(models.Model):
     """A typical class defining a model, derived from the Model class."""
@@ -99,7 +99,7 @@ class MyModelName(models.Model):
 
 <p>A model can have an arbitrary number of fields, of any type — each one represents a column of data that we want to store in one of our database tables. Each database record (row) will consist of one of each field value. Let's look at the example seen below:</p>
 
-<pre class="brush: python notranslate">my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')</pre>
+<pre class="brush: python">my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')</pre>
 
 <p>Our above example has a single field called <code>my_field_name</code>, of type <code>models.CharField</code> — which means that this field will contain strings of alphanumeric characters. The field types are assigned using specific classes, which determine the type of record that is used to store the data in the database, along with validation criteria to be used when values are received from an HTML form (i.e. what constitutes a valid value). The field types can also take arguments that further specify how the field is stored or can be used. In this case we are giving our field two arguments:</p>
 
@@ -150,7 +150,7 @@ class MyModelName(models.Model):
 
 <p>You can declare model-level metadata for your Model by declaring <code>class Meta</code>, as shown.</p>
 
-<pre class="brush: python notranslate">class Meta:
+<pre class="brush: python">class Meta:
     ordering = ['-my_field_name']
 </pre>
 
@@ -158,13 +158,13 @@ class MyModelName(models.Model):
 
 <p>So as an example, if we chose to sort books like this by default:</p>
 
-<pre class="brush: python notranslate">ordering = ['title', '-pubdate']</pre>
+<pre class="brush: python">ordering = ['title', '-pubdate']</pre>
 
 <p>the books would be sorted alphabetically by title, from A-Z, and then by publication date inside each title, from newest to oldest.</p>
 
 <p>Another common attribute is <code>verbose_name</code>, a verbose name for the class in singular and plural form:</p>
 
-<pre class="brush: python notranslate">verbose_name = 'BetterName'</pre>
+<pre class="brush: python">verbose_name = 'BetterName'</pre>
 
 <p>Other useful attributes allow you to create and apply new "access permissions" for the model (default permissions are applied automatically), allow ordering based on another field, or to declare that the class is "abstract" (a base class that you cannot create records for, and will instead be derived from to create other models).</p>
 
@@ -178,12 +178,12 @@ class MyModelName(models.Model):
 
 <p><strong>Minimally, in every model you should define the standard Python class method <code>__str__()</code> to return a human-readable string for each object.</strong> This string is used to represent individual records in the administration site (and anywhere else you need to refer to a model instance). Often this will return a title or name field from the model.</p>
 
-<pre class="brush: python notranslate">def __str__(self):
+<pre class="brush: python">def __str__(self):
     return self.field_name</pre>
 
 <p>Another common method to include in Django models is <code>get_absolute_url()</code>, which returns a URL for displaying individual model records on the website (if you define this method then Django will automatically add a "View on Site" button to the model's record editing screens in the Admin site). A typical pattern for <code>get_absolute_url()</code> is shown below.</p>
 
-<pre class="brush: python notranslate">def get_absolute_url(self):
+<pre class="brush: python">def get_absolute_url(self):
     """Returns the url to access a particular instance of the model."""
     return reverse('model-detail-view', args=[str(self.id)])
 </pre>
@@ -204,7 +204,7 @@ class MyModelName(models.Model):
 
 <p>To create a record you can define an instance of the model and then call <code>save()</code>.</p>
 
-<pre class="brush: python notranslate"># Create a new record using the model's constructor.
+<pre class="brush: python"># Create a new record using the model's constructor.
 record = MyModelName(my_field_name="Instance #1")
 
 # Save the object into the database.
@@ -217,7 +217,7 @@ record.save()
 
 <p>You can access the fields in this new record using the dot syntax, and change the values. You have to call <code>save()</code> to store modified values to the database.</p>
 
-<pre class="brush: python notranslate"># Access model field values using Python attributes.
+<pre class="brush: python"># Access model field values using Python attributes.
 print(record.id) # should return 1 for the first record.
 print(record.my_field_name) # should print 'Instance #1'
 
@@ -235,12 +235,12 @@ record.save()</pre>
 
 <p>We can get all records for a model as a <code>QuerySet</code>, using <code>objects.all()</code>. The <code>QuerySet</code> is an iterable object, meaning that it contains a number of objects that we can iterate/loop through.</p>
 
-<pre class="brush: python notranslate">all_books = Book.objects.all()
+<pre class="brush: python">all_books = Book.objects.all()
 </pre>
 
 <p>Django's <code>filter()</code> method allows us to filter the returned <code>QuerySet</code> to match a specified <strong>text</strong> or <strong>numeric</strong> field against particular criteria. For example, to filter for books that contain "wild" in the title and then count them, we could do the following.</p>
 
-<pre class="brush: python notranslate">wild_books = Book.objects.filter(title__contains='wild')
+<pre class="brush: python">wild_books = Book.objects.filter(title__contains='wild')
 number_wild_books = wild_books.count()
 </pre>
 
@@ -248,7 +248,7 @@ number_wild_books = wild_books.count()
 
 <p>In some cases you'll need to filter on a field that defines a one-to-many relationship to another model (e.g. a <code>ForeignKey</code>). In this case you can "index" to fields within the related model with additional double underscores. So for example to filter for books with a specific genre pattern, you will have to index to the <code>name</code> through the <code>genre</code> field, as shown below:</p>
 
-<pre class="brush: python notranslate"># Will match on: Fiction, Science fiction, non-fiction etc.
+<pre class="brush: python"># Will match on: Fiction, Science fiction, non-fiction etc.
 books_containing_genre = Book.objects.filter(genre<strong>__</strong>name<strong>__</strong>icontains='fiction')
 </pre>
 
@@ -262,7 +262,7 @@ books_containing_genre = Book.objects.filter(genre<strong>__</strong>name<strong
 
 <p>In this section we will start defining the models for the library. Open <em>models.py (in /locallibrary/catalog/)</em>. The boilerplate at the top of the page imports the <em>models</em> module, which contains the model base class <code>models.Model</code> that our models will inherit from.</p>
 
-<pre class="brush: python notranslate">from django.db import models
+<pre class="brush: python">from django.db import models
 
 # Create your models here.</pre>
 
@@ -270,7 +270,7 @@ books_containing_genre = Book.objects.filter(genre<strong>__</strong>name<strong
 
 <p>Copy the <code>Genre</code> model code shown below and paste it into the bottom of your <code>models.py</code> file. This model is used to store information about the book category — for example whether it is fiction or non-fiction, romance or military history, etc. As mentioned above, we've created the Genre as a model rather than as free text or a selection list so that the possible values can be managed through the database rather than being hard coded.</p>
 
-<pre class="brush: python notranslate">class Genre(models.Model):
+<pre class="brush: python">class Genre(models.Model):
     """Model representing a book genre."""
     name = models.CharField(max_length=200, help_text='Enter a book genre (e.g. Science Fiction)')
 
@@ -284,7 +284,7 @@ books_containing_genre = Book.objects.filter(genre<strong>__</strong>name<strong
 
 <p>Copy the <code>Book</code> model below and again paste it into the bottom of your file. The <code>Book</code> model represents all information about an available book in a general sense, but not a particular physical "instance" or "copy" available for loan. The model uses a <code>CharField</code> to represent the book's <code>title</code> and <code>isbn</code> . For <code>isbn</code>, note how the first unnamed parameter explicitly sets the label as "ISBN" (otherwise it would default to "Isbn").  We also set parameter <code>unique</code> as <code>true</code> in order to ensure all books have a unique ISBN (the unique parameter makes the field value globally unique in a table). The model uses <code>TextField</code> for the <code>summary</code>, because this text may need to be quite long.</p>
 
-<pre class="brush: python notranslate">from django.urls import reverse # Used to generate URLs by reversing the URL patterns
+<pre class="brush: python">from django.urls import reverse # Used to generate URLs by reversing the URL patterns
 
 class Book(models.Model):
     """Model representing a book (but not a specific copy of a book)."""
@@ -333,7 +333,7 @@ class Book(models.Model):
  <li><code>CharField</code> to represent the imprint (specific release) of the book.</li>
 </ul>
 
-<pre class="brush: python notranslate">import uuid # Required for unique book instances
+<pre class="brush: python">import uuid # Required for unique book instances
 
 class BookInstance(models.Model):
     """Model representing a specific copy of a book (i.e. that can be borrowed from the library)."""
@@ -387,7 +387,7 @@ class BookInstance(models.Model):
 
 <p>Copy the <code>Author</code> model (shown below) underneath the existing code in <strong>models.py</strong>.</p>
 
-<pre class="brush: python notranslate">class Author(models.Model):
+<pre class="brush: python">class Author(models.Model):
     """Model representing an author."""
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
@@ -412,7 +412,7 @@ class BookInstance(models.Model):
 
 <p>All your models have now been created. Now re-run your database migrations to add them to your database.</p>
 
-<pre class="brush: bash notranslate">python3 manage.py makemigrations
+<pre class="brush: bash">python3 manage.py makemigrations
 python3 manage.py migrate</pre>
 
 <h2 id="Language_model_—_challenge">Language model — challenge</h2>
@@ -430,7 +430,7 @@ python3 manage.py migrate</pre>
 
 <p>Don't forget that after a change to your model, you should again re-run your database migrations to add the changes.</p>
 
-<pre class="brush: bash notranslate">python3 manage.py makemigrations
+<pre class="brush: bash">python3 manage.py makemigrations
 python3 manage.py migrate</pre>
 
 <h2 id="Summary">Summary</h2>

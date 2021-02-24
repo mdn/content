@@ -19,7 +19,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>declarationBlock</var> = StylePropertyMapReadOnly.get(<var>property</var>)</pre>
+  class="brush: js">var <var>declarationBlock</var> = StylePropertyMapReadOnly.get(<var>property</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -38,14 +38,14 @@ tags:
   paragraph in our HTML, and adding a definition list which we will populate with
   JavaScript:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
    &lt;a href="https://example.com"&gt;Link&lt;/a&gt;
 &lt;/p&gt;
 &lt;dl id="results"&gt;&lt;/dl&gt;</pre>
 
 <p>We add a bit of CSS, including a custom property and an inheritable property:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   font-weight: bold;
 }
 a {
@@ -59,7 +59,7 @@ a {
   of interest and use the StylePropertyMapReadOnly's <code>get()</code> method to get only
   those values.</p>
 
-<pre class="brush: js notranslate">// get the element
+<pre class="brush: js">// get the element
 const myElement = document.querySelector('a');
 
 // Retrieve all computed styles with computedStyleMap()

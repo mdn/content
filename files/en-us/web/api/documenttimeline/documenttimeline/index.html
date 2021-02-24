@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var sharedTimeline = new DocumentTimeline(<em>options</em>);</pre>
+<pre class="brush: js">var sharedTimeline = new DocumentTimeline(<em>options</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -30,7 +30,7 @@ tags:
 
 <p>We could share a single <code>documentTimeline</code> among multiple animations, thus allowing us to manipulate just that group of animations via their shared timeline. This bit of code would start all the cats animating 500 milliseconds into their animations:</p>
 
-<pre class="brush: js notranslate">var cats = document.querySelectorAll('.sharedTimelineCat');
+<pre class="brush: js">var cats = document.querySelectorAll('.sharedTimelineCat');
 cats = Array.prototype.slice.call(cats);
 
 var sharedTimeline = new DocumentTimeline({ originTime: 500 });

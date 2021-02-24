@@ -1,0 +1,59 @@
+---
+title: CharacterData.insertData()
+slug: Web/API/CharacterData/insertData
+tags:
+- API
+- DOM
+- Method
+- Node
+- Reference
+- CharacterData
+---
+<div>{{APIRef("DOM")}}</div>
+
+<p>
+  The <code>insertData()</code> method of the {{domxref("CharacterData")}}
+  interface inserts the provided data into this <code>CharacterData</code>
+  Node's current data, at the provided offset from the start of the existing
+  data. The provided data is spliced into the existing data.
+</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js notranslate">
+  <var>characterData</var>.insertData(<var>offset</var>, <var>data</var>)
+</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt><code><var>offset</var></code></dt>
+  <dd>The offset number of characters to insert the provided data at.</dd>
+  <dt><code><var>data</var></code></dt>
+  <dd>The data to insert to the given <code>CharacterData</code> object.</dd>
+</dl>
+
+<h3 id="Returns">Return value</h3>
+
+<p>{{jsxref("undefined")}}.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+  <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+  </tr>
+  <tr>
+    <td>{{SpecName('DOM WHATWG','#dom-characterdata-insertdata','insertData()')}}</td>
+    <td>{{Spec2('DOM WHATWG')}}</td>
+    <td></td>
+  </tr>
+  </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+<p>{{Compat("api.CharacterData.insertData")}}</p>

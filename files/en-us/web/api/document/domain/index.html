@@ -20,7 +20,7 @@ tags:
 <h3 id="Getter">Getter</h3>
 
 <pre
-  class="brush: js notranslate">const <var>domainString</var> = <var>document</var>.domain</pre>
+  class="brush: js">const <var>domainString</var> = <var>document</var>.domain</pre>
 
 <p>The getter for this property returns the domain portion of the current document's
   origin. In most cases, this will be the hostname portion of the document's URL. However,
@@ -39,14 +39,14 @@ tags:
 <h3 id="Setter">Setter</h3>
 
 <pre
-  class="brush: js notranslate"><var>document</var>.domain = <var>domainString</var></pre>
+  class="brush: js"><var>document</var>.domain = <var>domainString</var></pre>
 
 <p>The setter for this property can be used to <em>change</em> a page's
   {{glossary("origin")}}, and thus modify how certain security checks are performed. It
   can only be set to the same or a parent domain. For example, if
   <code>https://a.example.com</code> and <code>https://b.example.com</code> both use</p>
 
-<pre class="brush:js notranslate">document.domain = "example.com";</pre>
+<pre class="brush:js">document.domain = "example.com";</pre>
 
 <p>then they have both modified their origin to have the same domain, and they can now
   access each other's DOM directly—despite being cross-origin, which would normally
@@ -55,7 +55,7 @@ tags:
 <p>Note that setting <code>document.domain</code> to its current value is not a no-op. It
   still changes the origin. For example, if one page sets</p>
 
-<pre class="brush:js notranslate">document.domain = document.domain;</pre>
+<pre class="brush:js">document.domain = document.domain;</pre>
 
 <p>then it will be counted as cross-origin from any other normally-same-origin pages that
   have not done the same thing.</p>
@@ -133,13 +133,13 @@ tags:
   this example would set <code>currentDomain</code> to the string
   "<code>developer.mozilla.org</code>".</p>
 
-<pre class="brush:js notranslate">const currentDomain = document.domain;</pre>
+<pre class="brush:js">const currentDomain = document.domain;</pre>
 
 <p>Although the getter is not dangerous in the same way that the setter is, it is likely
   simpler and more useful to use the {{domxref("Location.hostname")}} property instead.
   Then you can avoid <code>document.domain</code> entirely:</p>
 
-<pre class="brush:js notranslate">const currentHostname = location.hostname;</pre>
+<pre class="brush:js">const currentHostname = location.hostname;</pre>
 
 <p>For the URL <code>https://developer.mozilla.org/en-US/docs/Web</code>,
   <code>currentHostname</code> is also the string "<code>developer.mozilla.org</code>".

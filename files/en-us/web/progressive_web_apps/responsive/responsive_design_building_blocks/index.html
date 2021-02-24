@@ -18,10 +18,10 @@ tags:
 
 <p>This is much more reliable, more maintainable, and more future proof. You don't get caught in the situation of having to bring out more new site versions as more new browsers and platforms come out, and adjust code as feature support in existing browsers changes.</p>
 
-<p>There are disadvantages to this approach as well. If the content, layout, and functionality need to change greatly for different devices, it may not be such a good approach. Also, taking an existing site and adding responsiveness to it, to make it mobile/tablet friendly, can be a lot more effort than just creating a separate mobile site or app, especially if it is a sprawling enterprise site. Read more about <a href="/en-US/docs/Web_Development/Mobile/Responsive_design">responsive design advantages and disadvantages</a>.</p>
+<p>There are disadvantages to this approach as well. If the content, layout, and functionality need to change greatly for different devices, it may not be such a good approach. Also, taking an existing site and adding responsiveness to it, to make it mobile/tablet friendly, can be a lot more effort than just creating a separate mobile site or app, especially if it is a sprawling enterprise site. Read more about <a href="/en-US/docs/Web/Progressive_web_apps">responsive design advantages and disadvantages</a>.</p>
 
 <div class="note">
-<p>You can also read our discussion on the basics of <a href="/en-US/docs/Web_Development/Mobile/Responsive_design">responsive design</a>, if you need some more background information and basics.</p>
+<p>You can also read our discussion on the basics of <a href="/en-US/docs/Web/Progressive_web_apps">responsive design</a>, if you need some more background information and basics.</p>
 </div>
 
 <h2 id="Fluid_grids">Fluid grids</h2>
@@ -36,11 +36,11 @@ tags:
 
 <p>Our desktop layout for Snapshot is three columns, containing the camera viewer, image capture view, and gallery, respectively.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/5917/desktop-layout.png" style="display: block; height: 184px; margin: 0px auto; width: 600px;"></p>
+<p><img alt="" src="desktop-layout.png" style="display: block; margin: 0px auto;"></p>
 
 <p>The markup is very simple:</p>
 
-<pre class="brush: html notranslate">&lt;x-deck selected-index="0"&gt;
+<pre class="brush: html">&lt;x-deck selected-index="0"&gt;
   &lt;x-card&gt;
     …
   &lt;/x-card&gt;
@@ -58,7 +58,7 @@ tags:
 
 <p>To get these sitting side-by-side we have used the following rules:</p>
 
-<pre class="brush: css notranslate">x-card {
+<pre class="brush: css">x-card {
   width: 100%;
 }
 
@@ -82,7 +82,7 @@ x-card:nth-child(3) {
 
 <p>The padding does not affect the overall width and height of the containers because we have set the {{cssxref("box-sizing")}} of all elements to <code>border-box</code>:</p>
 
-<pre class="brush: css notranslate">*, *:before, *:after {
+<pre class="brush: css">*, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -94,44 +94,44 @@ x-card:nth-child(3) {
 
 <p>Things are working fairly well now, but there are still some issues just waiting to present themselves. For a start, let's have a look at what happens when we include the {{HTMLElement("video")}} and {{HTMLElement("img")}} elements inside our first two columns, naked and unstyled.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/5913/broken-images.png" style="display: block; height: 316px; margin: 0px auto; width: 480px;"></p>
+<p><img alt="" src="broken-images.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Because the size of replaced elements is dictated by the size of the media inserted into them, and the media is a fixed size, they explode out of their containing elements and make a mess of the layout. This is pretty horrible, but generally this kind of problem is easily fixed with some simple CSS:</p>
 
-<pre class="brush: css notranslate">img, video {
+<pre class="brush: css">img, video {
   max-width: 100%;
 }</pre>
 
 <p>This tells the replaced elements to remain constrained inside their container's widths, no matter what. However, if they aren't as wide as their containers, they will not stretch to fill them. In the snapshot example, we ended up with slightly different code:</p>
 
-<pre class="brush: css notranslate">x-card:nth-child(1) video, x-card:nth-child(2) img {
+<pre class="brush: css">x-card:nth-child(1) video, x-card:nth-child(2) img {
   width: 100%;
     …
 }</pre>
 
 <p>This is because in our case, we do in fact want the video and image to stretch to always fill their containers no matter what — a subtle but important difference from {{cssxref("max-width")}} — and therefore always be the same size. The video always resizes dynamically, but the screen captures taken from it do not, so upon resizing the screen it was possible to end up with a messy layout with different sized elements when using <code>max-width: 100%</code>, such as:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/5915/broken-max-width-layout.png" style="display: block; height: 220px; margin: 0px auto; width: 480px;"></p>
+<p><img alt="" src="broken-max-width-layout.png" style="display: block; margin: 0px auto;"></p>
 
 <h2 id="Media_queries">Media queries</h2>
 
 <p>Fluid grids are a great start, but you'll notice that at certain points (known as breakpoints) the layout starts to break down. At these points you'll want to change the layout to rectify the layout problem, and this can be done using media queries.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Media queries are a CSS3 feature that allow you to selectively apply CSS depending on the results of media feature tests — for more on the basics, read <a href="/en-US/docs/Web/Guide/CSS/Media_queries">Media queries</a>.</p>
+<p><strong>Note:</strong> Media queries are a CSS3 feature that allow you to selectively apply CSS depending on the results of media feature tests — for more on the basics, read <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Media queries</a>.</p>
 </div>
 
 <h3 id="Typical_desktop_layout">Typical desktop layout</h3>
 
 <p>In our example, we have a desktop layout, as we've already seen. This is created using the CSS rules included at the top of the stylesheet, before any media queries are encountered.<br>
  <br>
- <img alt="" src="https://mdn.mozillademos.org/files/5917/desktop-layout.png" style="display: block; height: 184px; margin: 0px auto; width: 600px;"></p>
+ <img alt="" src="desktop-layout.png" style="display: block; margin: 0px auto;"></p>
 
 <h3 id="Mid-width_layout">Mid-width layout</h3>
 
 <p>We also have a mid-width layout, which is aimed at working well on tablets and narrow laptop screens. This is created by all of the CSS inside the first media query:</p>
 
-<pre class="brush: css notranslate">@media all and (max-width: 1024px) {
+<pre class="brush: css">@media all and (max-width: 1024px) {
   x-card:nth-child(1), x-card:nth-child(2) {
     width: 50%;
   }
@@ -148,13 +148,13 @@ x-card:nth-child(3) {
 
 <p>So here we're altering the widths of the columns and removing the float of the third column (and adding clearing to guard against any float funny business). We've also altered the width of the images inside the third container (no longer a column — this is the gallery) so that now you get five per line (it was previously three per line).</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/5919/middle-layout.png" style="display: block; height: 390px; margin: 0px auto; width: 480px;"></p>
+<p><img alt="" src="middle-layout.png" style="display: block; margin: 0px auto;"></p>
 
 <h3 id="Narrow_screenmobile_layout">Narrow screen/mobile layout</h3>
 
 <p>We then have a narrow screen layout, designed to fit the bill for a mobile app/open Web app experience. This is created in multiple parts. First of all, as expected, there is a media query in our main CSS, which is quite weighty, so we'll go through it in parts:</p>
 
-<pre class="brush: css notranslate">@media all and (max-width: 480px) {
+<pre class="brush: css">@media all and (max-width: 480px) {
   x-card:nth-child(1), x-card:nth-child(2), x-card:nth-child(3) {
     width: 100%;
     float: none;
@@ -175,7 +175,7 @@ x-card:nth-child(3) {
 
 <p>This first block resets a number of different things from the widescreen layouts that were't required for the mobile app.</p>
 
-<pre class="brush: css notranslate">  x-card:nth-child(1) video, x-card:nth-child(2) img, x-card:nth-child(3) {
+<pre class="brush: css">  x-card:nth-child(1) video, x-card:nth-child(2) img, x-card:nth-child(3) {
     margin-top: 17.5vw;
   }
 
@@ -198,13 +198,13 @@ x-card:nth-child(3) {
 
 <p>The next rules do some sizing on the buttons inside the first two cards, and give all card contents a top margin so that their content won't be lost under the navigation buttons (see below). This was necessary because Mozilla Brick (also see below) forces its components to be 100% of the screen width and height. We have used <code>vw</code> (viewport width) units for these — <code>1vw</code> is equivalent to  1% of the viewport width. This makes the dimensions scale up and down nicely along with the viewport width. Last for this section, we absolutely positioned all buttons at the bottom of the cards they are in, so the layout looks OK at different viewport size variations. We then add a rule that positions the second button in any card a button's width higher up the card. When you click on an image in the gallery it brings up options to delete or cancel deletion of the card, and you don't want two buttons on top of one another.</p>
 
-<pre class="brush: css notranslate">x-card:nth-child(3) img {
+<pre class="brush: css">x-card:nth-child(3) img {
   width: 50%;
 }</pre>
 
 <p>This rule changes the width of the gallery images so now there are two per line.</p>
 
-<pre class="brush: css notranslate">  nav {
+<pre class="brush: css">  nav {
     width: 100%;
     position: absolute;
     z-index: 1000;
@@ -237,15 +237,15 @@ x-card:nth-child(3) {
 
 <p>Last, we have used <code>flex: 1;</code> to make the buttons always take up the same proportion of space on the line. Let's have a look at the mobile layout, in the below image.</p>
 
-<p><img alt="single column layout for mobile app view, with three buttons to navigate between cards, an image viewer, and a Save Picture button at the button." src="https://mdn.mozillademos.org/files/5939/mobile-layout.png" style="float: left; height: 417px; margin-right: 2rem; width: 304px;">But there are more tricks up our sleeves for this mobile app layout! As mentioned above, we used <a href="https://mozilla.github.io/brick/">Mozilla Brick</a>, a collection of ready-rolled mobile UI components, in the making of the mobile app layout. In particular, we used the <a href="https://mozilla.github.io/brick/docs.html#deck">deck</a> component for the nice transition effect between cards when the buttons are pressed. For more on using Brick, read <a href="/en-US/docs/Web/Apps/app_layout/Mozilla_Brick_ready_made_UI_components">Mozilla Brick: ready made UI components</a>.</p>
+<p><img alt="single column layout for mobile app view, with three buttons to navigate between cards, an image viewer, and a Save Picture button at the button." src="mobile-layout.png" style="float: left; margin-right: 2rem;">But there are more tricks up our sleeves for this mobile app layout! As mentioned above, we used <a href="https://mozilla.github.io/brick/">Mozilla Brick</a>, a collection of ready-rolled mobile UI components, in the making of the mobile app layout. In particular, we used the <a href="https://mozilla.github.io/brick/docs.html#deck">deck</a> component for the nice transition effect between cards when the buttons are pressed. For more on using Brick, read <a href="/en-US/docs/Web/Apps/app_layout/Mozilla_Brick_ready_made_UI_components">Mozilla Brick: ready made UI components</a>.</p>
 
 <p>What's more relevant to this article is that we didn't want the Brick CSS and JavaScript files being applied to the markup unless we were looking at the mobile app view. To achieve this, we applied the Brick CSS to the page using a separate {{HTMLElement("link")}} element with a <code>media</code> attribute:</p>
 
-<pre class="brush: html notranslate">&lt;link href="dist/brick.css" type="text/css" rel="stylesheet" media="all and (max-width: 480px)"&gt;</pre>
+<pre class="brush: html">&lt;link href="dist/brick.css" type="text/css" rel="stylesheet" media="all and (max-width: 480px)"&gt;</pre>
 
 <p>This says that the whole stylesheet will not be linked to the HTML unless the viewport width is 480px or less. Moving on to the JavaScript, {{HTMLElement("script")}} elements don't accept <code>media</code> attributes, so I had to do this a different way. Fortunately there is a JavaScript construct called {{domxref("window.matchMedia()")}}, which can conditionally run JavaScript constructs depending on whether a media query returns <code>true</code> or not. We opened up the <code>brick.js</code> file and wrapped the whole lot in the following:</p>
 
-<pre class="brush: js notranslate">if (window.matchMedia("(max-width: 480px)").matches) {
+<pre class="brush: js">if (window.matchMedia("(max-width: 480px)").matches) {
   // The whole of brick.js goes here!
 }</pre>
 
@@ -255,7 +255,7 @@ x-card:nth-child(3) {
 
 <p>One thing you might notice is that when the viewport gets very wide (such as on a cinema display), the layout stops getting wider, and just centers in the space available. This is pretty simple to achieve. You could use a <code>min-width</code> media query to fix the {{HTMLElement("body")}} width at a certain point:</p>
 
-<pre class="brush: css notranslate">@media all and (min-width: 1400px) {
+<pre class="brush: css">@media all and (min-width: 1400px) {
   body {
     width: 1400px;
     margin: 0 auto;
@@ -264,7 +264,7 @@ x-card:nth-child(3) {
 
 <p>But it's actually easier to just set the following rule instead, and get rid of the media query altogether:</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   max-width: 1400px;
   margin: 0 auto;
 }</pre>
@@ -273,7 +273,7 @@ x-card:nth-child(3) {
 
 <p>We also came across some problems with orientation: the mobile-app layout of our example app is designed for portrait orientation, and looks terrible when viewed on a device in landscape orientation. To fix this, we added in a media query that only applies its contents to the markup when device is viewed in landscape orientation:</p>
 
-<pre class="brush: css notranslate">@media all and (max-width: 480px) and (orientation: landscape) {
+<pre class="brush: css">@media all and (max-width: 480px) and (orientation: landscape) {
   nav {
     width: auto;
 
@@ -310,10 +310,10 @@ x-card:nth-child(3) {
 
 <p>This results in the following layout:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/5923/viewport-fail-fixed.png" style="display: block; height: 320px; margin: 0px auto; width: 479px;"></p>
+<p><img alt="" src="viewport-fail-fixed.png" style="display: block; margin: 0px auto;"></p>
 
 <div class="note">
-<p><strong>Note</strong>: Another solution with respect to orientation might be to just lock the orientation of your app, to portrait or landscape. If you are working on an installed app, you can easily do this with the <a href="https://developer.mozilla.org/en-US/Apps/Build/Manifest#orientation">orientation manifest field</a>. If you want a solution that works across general web apps, you could use the <a href="/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation#Locking_the_screen_orientation">Screen orientation API</a>, and/or provide a message asking the user to rotate their screen if they are using the wrong orientation (for example, if <code>window.innerWidth</code> is larger than <code>window.innerHeight</code>, assume the<br>
+<p><strong>Note</strong>: Another solution with respect to orientation might be to just lock the orientation of your app, to portrait or landscape. If you are working on an installed app, you can easily do this with the <a href="/en-US/docs/Web/Apps/Build/Manifest#orientation">orientation manifest field</a>. If you want a solution that works across general web apps, you could use the <a href="/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation#locking_the_screen_orientation">Screen orientation API</a>, and/or provide a message asking the user to rotate their screen if they are using the wrong orientation (for example, if <code>window.innerWidth</code> is larger than <code>window.innerHeight</code>, assume the<br>
  game is landscape mode and show a "please rotate" message.)</p>
 </div>
 
@@ -321,11 +321,11 @@ x-card:nth-child(3) {
 
 <p>One last problem to mention for our example app is concerned with mobile browsers and media queries. If we viewed my example in a mobile browser in its current state, we wouldn't see our nice mobile layout. Instead, we'd see the below image.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/5925/viewport-fail.png" style="float: left; height: 569px; margin-right: 2rem; width: 320px;">I'm sure you'll agree that this really isn't what we wanted — why is this happening? In short, mobile browsers lie. They don't render web pages at their true viewport width. Instead, they render pages at a higher assumed viewport width (something approaching a laptop screen), and then shrink the result down to fit inside the mobile screen. This is a sensible defensive mechanism — most old school sites that don't have media queries would look terrible when rendered at say, 320px or 480px wide. But this doesn't help us responsible web developers, who have written small screen layouts into our CSS using media queries and want mobile devices to display those!</p>
+<p><img alt="" src="viewport-fail.png" style="float: left; margin-right: 2rem;">I'm sure you'll agree that this really isn't what we wanted — why is this happening? In short, mobile browsers lie. They don't render web pages at their true viewport width. Instead, they render pages at a higher assumed viewport width (something approaching a laptop screen), and then shrink the result down to fit inside the mobile screen. This is a sensible defensive mechanism — most old school sites that don't have media queries would look terrible when rendered at say, 320px or 480px wide. But this doesn't help us responsible web developers, who have written small screen layouts into our CSS using media queries and want mobile devices to display those!</p>
 
 <p>There is a way to override this mobile rendering behavior — viewport, which is inserted into our HTML pages in the form of a {{HTMLElement("meta")}} tag. In my example, let's add the following into our HTML {{HTMLElement("head")}}:</p>
 
-<pre class="notranslate">&lt;meta name="viewport" content="width=480"&gt;</pre>
+<pre>&lt;meta name="viewport" content="width=480"&gt;</pre>
 
 <p>This causes our browser to render our mobile app layout properly — <code>width=480</code> tells the browser <em>"render this markup at 480 pixels wide"</em>, hence the media queries kick in appropriately. There are many more options available in the viewport meta tag, which you can read about in <a href="/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">Using the viewport meta tag to control layout on mobile browsers</a>.</p>
 
@@ -341,9 +341,9 @@ x-card:nth-child(3) {
 
 <h3 id="CSS_background_images">CSS background images</h3>
 
-<p>For CSS background images this is a fairly easy problem to solve. If you use the <a href="/en-US/docs/Web/Apps/app_layout/Mobile_first">mobile first</a> methodology, you will be creating your mobile layout inside your default CSS, before any media queries have been applied. The media queries then supply CSS that is only applied to the markup when the viewport is <strong>above</strong> a certain width. Let's look at a quick example:</p>
+<p>For CSS background images this is a fairly easy problem to solve. If you use the <a href="/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first">mobile first</a> methodology, you will be creating your mobile layout inside your default CSS, before any media queries have been applied. The media queries then supply CSS that is only applied to the markup when the viewport is <strong>above</strong> a certain width. Let's look at a quick example:</p>
 
-<pre class="brush: css notranslate">header {
+<pre class="brush: css">header {
   height: 300px;
   width: 100%;
   background: url(images/small-header.jpg) center;
@@ -357,7 +357,7 @@ x-card:nth-child(3) {
 
 <p>This means that mobile browsers only download the mobile background image asset — not the desktop mobile assets — because they fail the media query tests and therefore ignore the media queries. You can also serve a larger graphic to a higher resolution device using a resolution media query, like so:</p>
 
-<pre class="brush: css notranslate">button {
+<pre class="brush: css">button {
   background: url(images/low-res-header.jpg) 1rem center ;
 }
 
@@ -375,14 +375,14 @@ x-card:nth-child(3) {
 
 <p>HTML5 video is fairly well catered for in terms of responsive capabilities. If you wish, you can point to multiple video files via {{HTMLElement("source")}} attributes, each with their own source and MIME type:</p>
 
-<pre class="brush: html notranslate">&lt;video controls&gt;
+<pre class="brush: html">&lt;video controls&gt;
   &lt;source src="videos/720/crystal720.mp4" type="video/mp4"&gt;
   &lt;source src="videos/720/crystal720.webm" type="video/webm"&gt;
 &lt;/video&gt;</pre>
 
 <p>But you can go one step further. You can include <code>media</code> attributes on the <code>&lt;source&gt;</code> element containing media queries — the video loaded in the browser will depend on both the format the browser supports, and the results of the media tests. So for example:</p>
 
-<pre class="brush: html notranslate">&lt;video controls&gt;
+<pre class="brush: html">&lt;video controls&gt;
   &lt;source src="videos/320/crystal320.mp4" type="video/mp4" media="all and (max-width: 480px)"&gt;
   &lt;source src="videos/320/crystal320.webm" type="video/webm" media="all and (max-width: 480px)"&gt;
   &lt;source src="videos/720/crystal720.mp4" type="video/mp4" media="all and (min-width: 481px)"&gt;
@@ -421,6 +421,6 @@ x-card:nth-child(3) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Development">Web development</a></li>
+ <li><a href="/en-US/docs/Web/Guide">Web development</a></li>
  <li><a href="/en-US/docs/Web/Guide/Mobile">Mobile Web development</a></li>
 </ul>

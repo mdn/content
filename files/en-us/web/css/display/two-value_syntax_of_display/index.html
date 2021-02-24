@@ -10,15 +10,15 @@ tags:
 ---
 <p>{{CSSRef}}</p>
 
-<p>Firefox 70 implemented the two-value syntax for the <code><a href="/en-US/docs/Web/CSS/display">display</a></code> property, which is part of the <a href="https://drafts.csswg.org/css-display/">CSS Display Module Level 3</a>. This guide explains the change to the syntax, including the reasoning behind this change. It also details the in-built backwards compatibility for the <code>display</code> property.</p>
+<p><a href="https://drafts.csswg.org/css-display/">CSS Display Module Level 3</a> describes the two-value syntax for the <code><a href="/en-US/docs/Web/CSS/display">display</a></code> property. This guide explains the change to the syntax, including the reasoning behind this change. It also details the in-built backwards compatibility for the <code>display</code> property.</p>
 
 <h2 id="What_happens_when_we_change_the_value_of_the_display_property">What happens when we change the value of the display property?</h2>
 
 <p>One of the first things we learn about CSS is that some elements are block-level and some are inline-level. For example, an <code>&lt;h1&gt;</code> or a <code>&lt;p&gt;</code> are block-level by default, and a <code>&lt;span&gt;</code> is inline-level. Using the {{cssxref("display")}} property we can switch between block and inline. For example to make a heading inline we would use the following CSS:</p>
 
-<pre class="brush: css notranslate"><code>h1 {
+<pre class="brush: css">h1 {
   display: inline;
-} </code>
+}
 </pre>
 
 <p>More recently we have gained <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a> and <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexbox</a>. To access these we also use values of the <code>display</code> property — <code>display: grid</code> and <code>display: flex</code>. Only when the value of <code>display</code> is changed do the children become flex or grid items and begin to respond to the other properties in the grid or flexbox specifications. Changing an element's <code>display</code> value changes the formatting context of its direct children.</p>

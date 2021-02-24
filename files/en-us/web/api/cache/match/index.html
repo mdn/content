@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>cache</em>.match(<em>request</em>, {<em>options</em>}).then(function(<em>response</em>) {
+<pre class="brush: js"><em>cache</em>.match(<em>request</em>, {<em>options</em>}).then(function(<em>response</em>) {
   // Do something with the response
 });
 </pre>
@@ -87,7 +87,7 @@ tags:
   response with an response code in the 4xx or 5xx range, the <code>catch()</code> will
   NOT be called. </p>
 
-<pre class="brush: js notranslate">self.addEventListener('fetch', function(event) {
+<pre class="brush: js">self.addEventListener('fetch', function(event) {
   // We only want to call event.respondWith() if this is a GET request for an HTML document.
   if (event.request.method === 'GET' &amp;&amp;
       event.request.headers.get('accept').indexOf('text/html') !== -1) {

@@ -27,7 +27,7 @@ tags:
 
 <div class="hidden">The following section is also duplicated on <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet">this cheatsheet</a>. Do not forget to edit it as well, thanks!</div>
 
-<pre class="brush: js notranslate">// Non-binary values
+<pre class="brush: js">// Non-binary values
 \p{<em>UnicodePropertyValue</em>}
 \p{<em>UnicodePropertyName</em>=<em>UnicodePropertyValue</em>}
 
@@ -72,7 +72,7 @@ tags:
 
 <p>They can be used to match letters, numbers, symbols, punctuations, spaces, etc. For a more exhaustive list of general categories, please refer to <a href="https://unicode.org/reports/tr18/#General_Category_Property">the Unicode specification</a>.</p>
 
-<pre class="brush: js notranslate">// finding all the letters of a text
+<pre class="brush: js">// finding all the letters of a text
 let story = "It’s the Cheshire Cat: now I shall have somebody to talk to.";
 
 // Most explicit form
@@ -94,7 +94,7 @@ story.match(/\p{Lu}|\p{Ll}|\p{Lt}|\p{Lm}|\p{Lo}/gu);
 
 <p>For example, <code>A</code> belongs to the <code>Latin</code> script and <code>ε</code> to the <code>Greek</code> script.</p>
 
-<pre class="brush: js notranslate">let mixedCharacters = "aεЛ";
+<pre class="brush: js">let mixedCharacters = "aεЛ";
 
 // Using the canonical "long" name of the script
 mixedCharacters.match(/\p{Script=Latin}/u); // a
@@ -110,7 +110,7 @@ mixedCharacters.match(/\p{Sc=Cyrillic}/u); // Л
 
 <p>If a character is used in a limited set of scripts, the <code>Script</code> property will only match for the "predominant" used script. If we want to match characters based on a "non-predominant" script, we could use the <code>Script_Extensions</code> property (<code>Scx</code> for short).</p>
 
-<pre class="brush: js notranslate">// ٢ is the digit 2 in Arabic-Indic notation
+<pre class="brush: js">// ٢ is the digit 2 in Arabic-Indic notation
 // while it is predominantly written within the Arabic script
 // it can also be written in the Thaana script
 
@@ -127,7 +127,7 @@ mixedCharacters.match(/\p{Sc=Cyrillic}/u); // Л
 
 <p>Unicode property escapes categories encompass much more characters and <code>\p{Letter}</code> or <code>\p{Number}</code> will work for any script.</p>
 
-<pre class="brush: js notranslate">// Trying to use ranges to avoid \w limitations:
+<pre class="brush: js">// Trying to use ranges to avoid \w limitations:
 
 const nonEnglishText = "Приключения Алисы в Стране чудес";
 const regexpBMPWord = /([\u0000-\u0019\u0021-\uFFFF])+/gu;

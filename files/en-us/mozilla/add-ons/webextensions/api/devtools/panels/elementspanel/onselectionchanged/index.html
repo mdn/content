@@ -56,7 +56,7 @@ browser.devtools.panels.elements.onSelectionChanged.hasListener(listener)
 
 <p>Listen for selection changed events, and log the text content of the newly selected element:</p>
 
-<pre class="notranslate brush: js">function handleSelectedElement() {
+<pre class="brush: js">function handleSelectedElement() {
   browser.devtools.inspectedWindow.eval("$0.textContent")
     .then((result) =&gt; {
       console.log(result[0]);

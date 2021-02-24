@@ -42,7 +42,7 @@ tags:
 
 <p>DNS lookups usually only need to be done once per hostname for a page load. However, DNS lookups must be done for each unique hostname the requested page references. If your fonts, images, scripts, ads, and metrics all have different hostnames, a DNS lookup will have to be made for each one.</p>
 
-<p><img alt="Mobile requests go first to the cell tower, then to a central phone company computer before being sent to the internet" src="https://mdn.mozillademos.org/files/16743/latency.jpg" style="height: 281px; width: 792px;"></p>
+<p><img alt="Mobile requests go first to the cell tower, then to a central phone company computer before being sent to the internet" src="latency.jpg"></p>
 
 <p>This can be problematic for performance, particularly on mobile networks. When a user is on a mobile network, each DNS lookup has to go from the phone to the cell tower to reach an authoritative DNS server. The distance between a phone, a cell tower, and the name server can add significant latency.</p>
 
@@ -56,7 +56,7 @@ tags:
 
 <p>For secure connections established over HTTPS, another "handshake" is required. This handshake, or rather the {{glossary('TLS')}} negotiation, determines which cipher will be used to encrypt the communication, verifies the server, and establishes that a secure connection is in place before beginning the actual transfer of data. This requires three more round trips to the server before the request for content is actually sent.</p>
 
-<p><img alt="The DNS lookup, the TCP handshake, and 5 steps of the TLS handshake including clienthello, serverhello and certificate, clientkey and finished for both server and client." src="https://mdn.mozillademos.org/files/16746/ssl.jpg" style="height: 412px; width: 729px;"></p>
+<p><img alt="The DNS lookup, the TCP handshake, and 5 steps of the TLS handshake including clienthello, serverhello and certificate, clientkey and finished for both server and client." src="ssl.jpg"></p>
 
 <p>While making the connection secure adds time to the page load, a secure connection is worth the latency expense, as the data transmitted between the browser and the web server cannot be decrypted by a third party.</p>
 
@@ -94,7 +94,7 @@ tags:
 
 <p>In {{glossary('TCP slow start')}}, after receipt of the initial packet, the server doubles the size of the next packet to around 28Kb. Subsequent packets increase in size until a predetermined threshold is reached, or congestion is experienced.</p>
 
-<p><img alt="TCP slow start" src="https://mdn.mozillademos.org/files/16754/congestioncontrol.jpg" style="height: 412px; width: 729px;"></p>
+<p><img alt="TCP slow start" src="congestioncontrol.jpg"></p>
 
 <p>If you’ve ever heard of the 14Kb rule for initial page load, TCP slow start is the reason why the initial response is 14Kb, and why web performance optimization calls for focusing optimizations with this initial 14Kb response in mind. TCP slow start gradually builds up transmission speeds appropriate for the network's capabilities to avoid congestion.</p>
 
@@ -118,7 +118,7 @@ tags:
 
 <p>The DOM tree describes the content of the document. The <code><a href="/en-US/docs/Web/HTML/Element/html">&lt;html&gt;</a></code> element is the first tag and root node of the document tree. The tree reflects the relationships and hierarchies between different tags. Tags nested within other tags are child nodes. The greater the number of DOM nodes, the longer it takes to construct the DOM tree.</p>
 
-<p><img alt="The DOM tree for our sample code, showing all the nodes, including text nodes." src="https://mdn.mozillademos.org/files/16759/DOM.gif" style="height: 689px; width: 754px;"></p>
+<p><img alt="The DOM tree for our sample code, showing all the nodes, including text nodes." src="dom.gif"></p>
 
 <p>When the parser finds non-blocking resources, such as an image, the browser will request those resources and continue parsing. Parsing can continue when a CSS file is encountered, but <code>&lt;script&gt;</code> tags—particularly those without an <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async</a></code> or <code>defer</code> attribute—block rendering, and pause the parsing of HTML. Though the browser's preload scanner hastens this process, excessive scripts can still be a significant bottleneck.</p>
 
@@ -204,7 +204,7 @@ tags:
 
 <p>In our example, maybe the image loaded quickly, but perhaps the <code>anotherscript.js</code> file was 2MB and our user's network connection was slow.  In this case the user would see the page super quickly, but wouldn't be able to scroll without jank until the script was downloaded, parsed and executed. That is not a good user experience. Avoid occupying the main thread, as demonstrated in this WebPageTest example:</p>
 
-<p><img alt="The main thread is occupied by the downloading, parsing and execution of a  javascript file - over a fast connection" src="https://mdn.mozillademos.org/files/16760/visa_network.png" style="height: 699px; width: 1200px;"></p>
+<p><img alt="The main thread is occupied by the downloading, parsing and execution of a  javascript file - over a fast connection" src="visa_network.png"></p>
 
 <p>In this example, the DOM content load process took over 1.5 seconds, and the main thread was fully occupied that entire time, unresponsive to click events or screen taps.</p>
 

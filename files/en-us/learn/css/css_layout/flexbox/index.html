@@ -59,7 +59,7 @@ tags:
 
 <p>To start with, we need to select which elements are to be laid out as flexible boxes. To do this, we set a special value of {{cssxref("display")}} on the parent element of the elements you want to affect. In this case we want to lay out the {{htmlelement("article")}} elements, so we set this on the {{htmlelement("section")}}:</p>
 
-<pre class="brush: css  notranslate">section {
+<pre class="brush: css">section {
   display: flex;
 }</pre>
 
@@ -92,7 +92,7 @@ tags:
 
 <p>Try adding the following declaration to your {{htmlelement("section")}} rule:</p>
 
-<pre class="brush: css  notranslate">flex-direction: column;</pre>
+<pre class="brush: css">flex-direction: column;</pre>
 
 <p>You'll see that this puts the items back in a column layout, much like they were before we added any CSS. Before you move on, delete this declaration from your example.</p>
 
@@ -108,11 +108,11 @@ tags:
 
 <p>Here we see that the children are indeed breaking out of their container. One way in which you can fix this is to add the following declaration to your {{htmlelement("section")}} rule:</p>
 
-<pre class="brush: css  notranslate">flex-wrap: wrap;</pre>
+<pre class="brush: css">flex-wrap: wrap;</pre>
 
 <p>Also, add the following declaration to your {{htmlelement("article")}} rule:</p>
 
-<pre class="brush: css  notranslate">flex: 200px;</pre>
+<pre class="brush: css">flex: 200px;</pre>
 
 <p>Try this now; you'll see that the layout looks much better with this included:</p>
 
@@ -124,12 +124,12 @@ tags:
 
 <p>At this point it is worth noting that a shorthand exists for {{cssxref("flex-direction")}} and {{cssxref("flex-wrap")}} — {{cssxref("flex-flow")}}. So for example, you can replace</p>
 
-<pre class="brush: css  notranslate">flex-direction: row;
+<pre class="brush: css">flex-direction: row;
 flex-wrap: wrap;</pre>
 
 <p>with</p>
 
-<pre class="brush: css  notranslate">flex-flow: row wrap;</pre>
+<pre class="brush: css">flex-flow: row wrap;</pre>
 
 <h2 id="Flexible_sizing_of_flex_items">Flexible sizing of flex items</h2>
 
@@ -137,7 +137,7 @@ flex-wrap: wrap;</pre>
 
 <p>First, add the following rule to the bottom of your CSS:</p>
 
-<pre class="brush: css  notranslate">article {
+<pre class="brush: css">article {
   flex: 1;
 }</pre>
 
@@ -145,7 +145,7 @@ flex-wrap: wrap;</pre>
 
 <p>Now add the following rule below the previous one:</p>
 
-<pre class="brush: css  notranslate">article:nth-of-type(3) {
+<pre class="brush: css">article:nth-of-type(3) {
   flex: 2;
 }</pre>
 
@@ -153,7 +153,7 @@ flex-wrap: wrap;</pre>
 
 <p>You can also specify a minimum size value inside the flex value. Try updating your existing article rules like so:</p>
 
-<pre class="brush: css  notranslate">article {
+<pre class="brush: css">article {
   flex: 1 200px;
 }
 
@@ -189,7 +189,7 @@ article:nth-of-type(3) {
 
 <p>Now, add the following to the bottom of the example's CSS:</p>
 
-<pre class="brush: css  notranslate">div {
+<pre class="brush: css">div {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -209,7 +209,7 @@ article:nth-of-type(3) {
 
 <p>You can override the {{cssxref("align-items")}} behavior for individual flex items by applying the {{cssxref("align-self")}} property to them. For example, try adding the following to your CSS:</p>
 
-<pre class="brush: css  notranslate">button:first-child {
+<pre class="brush: css">button:first-child {
   align-self: flex-end;
 }</pre>
 
@@ -235,7 +235,7 @@ article:nth-of-type(3) {
 
 <p>The code for this is simple; try adding the following CSS to your button bar example code:</p>
 
-<pre class="brush: css  notranslate">button:first-child {
+<pre class="brush: css">button:first-child {
   order: 1;
 }</pre>
 
@@ -250,7 +250,7 @@ article:nth-of-type(3) {
 
 <p>You can set negative order values to make items appear earlier than items with 0 set. For example, you could make the "Blush" button appear at the start of the main axis using the following rule:</p>
 
-<pre class="brush: css  notranslate">button:last-child {
+<pre class="brush: css">button:last-child {
   order: -1;
 }</pre>
 
@@ -262,7 +262,7 @@ article:nth-of-type(3) {
 
 <p>The HTML for this is fairly simple. We've got a {{htmlelement("section")}} element containing three {{htmlelement("article")}}s. The third {{htmlelement("article")}} contains three {{htmlelement("div")}}s. :</p>
 
-<pre class="notranslate">section - article
+<pre>section - article
           article
           article - div - button
                     div   button
@@ -274,13 +274,13 @@ article:nth-of-type(3) {
 
 <p>First of all, we set the children of the {{htmlelement("section")}} to be laid out as flexible boxes.</p>
 
-<pre class="brush: css  notranslate">section {
+<pre class="brush: css">section {
   display: flex;
 }</pre>
 
 <p>Next, we set some flex values on the {{htmlelement("article")}}s themselves. Take special note of the 2nd rule here — we are setting the third {{htmlelement("article")}} to have its children laid out like flex items too, but this time we are laying them out like a column.</p>
 
-<pre class="brush: css  notranslate">article {
+<pre class="brush: css">article {
   flex: 1 200px;
 }
 
@@ -293,7 +293,7 @@ article:nth-of-type(3) {
 
 <p>Next, we select the first {{htmlelement("div")}}. We first use <code>flex:1 100px;</code> to effectively give it a minimum height of 100px, then we set its children (the {{htmlelement("button")}} elements) to also be laid out like flex items. Here we lay them out in a wrapping row, and align them in the center of the available space, as we did in the individual button example we saw earlier.</p>
 
-<pre class="brush: css  notranslate">article:nth-of-type(3) div:first-child {
+<pre class="brush: css">article:nth-of-type(3) div:first-child {
   flex:1 100px;
   display: flex;
   flex-flow: row wrap;
@@ -303,7 +303,7 @@ article:nth-of-type(3) {
 
 <p>Finally, we set some sizing on the button, but more interestingly we give it a flex value of 1 auto. This has a very interesting effect, which you'll see if you try resizing your browser window width. The buttons will take up as much space as they can, and sit as many on the same line as they can, but when they can no longer fit comfortably on the same line, they'll drop down to create new lines.</p>
 
-<pre class="brush: css  notranslate">button {
+<pre class="brush: css">button {
   flex: 1 auto;
   margin: 5px;
   font-size: 18px;

@@ -40,7 +40,7 @@ tags:
 <p>Given the following:</p>
 
 <div id="example1">
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
  &lt;label&gt;Enter your phone number in the format (123)456-7890
   (&lt;input name="tel1" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit area code" size="2"/&gt;)-
    &lt;input name="tel2" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit prefix" size="2"/&gt; -
@@ -52,7 +52,7 @@ tags:
 
 <p>If the values are too long or too short, or contain characters that aren't digits, the patternMismatch will be true. When <code>true</code>, the element matches the {{cssxref(":invalid")}} CSS pseudo-classes.</p>
 
-<pre class="brush: css notranslate">input:invalid {
+<pre class="brush: css">input:invalid {
   border: red solid 3px;
 }</pre>
 
@@ -67,7 +67,7 @@ tags:
 
 <p>The example below restricts the value to 4-8 characters and requires that it contain only lower-case letters.</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="uname"&gt;Choose a username: &lt;/label&gt;
     &lt;input type="text" id="uname" name="name" required size="45"
@@ -81,7 +81,7 @@ tags:
 &lt;/form&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   margin-bottom: 10px;
   position: relative;
 }

@@ -26,13 +26,13 @@ tags:
 <p><strong>Since ECMAScript 2017:</strong></p>
 
 <pre
-  class="brush: js notranslate">Date.UTC(<var>year</var>[, <var>month</var>[, <var>day</var>[, <var>hour</var>[, <var>minute</var>[, <var>second</var>[, <var>millisecond</var>]]]]]])</pre>
+  class="brush: js">Date.UTC(<var>year</var>[, <var>month</var>[, <var>day</var>[, <var>hour</var>[, <var>minute</var>[, <var>second</var>[, <var>millisecond</var>]]]]]])</pre>
 
 <p><strong>ECMAScript 2016 and earlier:</strong> <em>(<code><var>month</var></code> used
     to be required)</em></p>
 
 <pre
-  class="brush: js notranslate">Date.UTC(<var>year</var>, <var>month</var>[, <var>day</var>[, <var>hour</var>[, <var>minute</var>[, <var>second</var>[, <var>millisecond</var>]]]]])</pre>
+  class="brush: js">Date.UTC(<var>year</var>, <var>month</var>[, <var>day</var>[, <var>hour</var>[, <var>minute</var>[, <var>second</var>[, <var>millisecond</var>]]]]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -100,7 +100,7 @@ tags:
 <p>The following statement creates a {{jsxref("Date")}} object with the arguments treated
   as UTC instead of local:</p>
 
-<pre class="brush:js notranslate">let utcDate = new Date(Date.UTC(2018, 11, 1, 0, 0, 0));
+<pre class="brush:js">let utcDate = new Date(Date.UTC(2018, 11, 1, 0, 0, 0));
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
@@ -133,7 +133,7 @@ tags:
     href="https://bugzilla.mozilla.org/show_bug.cgi?id=1050755">bug 1050755</a>, <a
     href="https://github.com/tc39/ecma262/pull/642">ecma-262 #642</a>).</p>
 
-<pre class="brush: js notranslate">Date.UTC();
+<pre class="brush: js">Date.UTC();
 Date.UTC(1);
 
 // Safari: NaN

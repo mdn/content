@@ -41,7 +41,7 @@ tags:
 
 <p>The manifest file is used primarily to build lists of samples, but will eventually be used to help improve the startup and shutdown processes for each sample. It's a JSON object which looks like this:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "name": "WebSocket based chat server with WebRTC video chat support",
   "docsUrl": "https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling",
   "description": "Uses Node.js to set up a WebSocket-based chat server, and provides a web page you can use to join the chat. Adds a feature to start a video call with another chat participant."
@@ -63,7 +63,7 @@ tags:
 
 <p>When the sample server starts up or samples are restarted, each sample's base directory is scanned to see if there's a shell script file named <code>startup.sh</code>. If the file exists, it is executed, so that the sample has the opportunity to install support files, run any scripts, and start up any server processes that are needed to support the sample. For example, the <a href="/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">WebSocket chat sample's</a> startup.sh script looks like this:</p>
 
-<pre class="brush: bash notranslate">npm install websocket
+<pre class="brush: bash">npm install websocket
 node chatserver.js</pre>
 
 <p>The first line uses the Node package manager, <code>npm</code>, to install the module named <code>websocket</code>, which provides support for creating and/or talking to <a href="/en-US/docs/Web/API/WebSockets_API">WebSocket</a> servers.</p>

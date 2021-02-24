@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">/* &lt;length&gt; values */
+<pre class="brush: css">/* &lt;length&gt; values */
 scroll-margin-inline-end: 10px;
 scroll-margin-inline-end: 1em;
 
@@ -38,7 +38,7 @@ scroll-margin-inline-end: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -52,7 +52,7 @@ scroll-margin-inline-end: unset;
 
 <p>The HTML that represents the blocks is very simple:</p>
 
-<pre class="brush: html notranslate">&lt;div class="scroller"&gt;
+<pre class="brush: html">&lt;div class="scroller"&gt;
   &lt;div&gt;1&lt;/div&gt;
   &lt;div&gt;2&lt;/div&gt;
   &lt;div&gt;3&lt;/div&gt;
@@ -63,7 +63,7 @@ scroll-margin-inline-end: unset;
 
 <p>Let's walk through the CSS. the outer container is styled like this:</p>
 
-<pre class="brush: css notranslate">.scroller {
+<pre class="brush: css">.scroller {
   text-align: left;
   width: 250px;
   height: 250px;
@@ -78,7 +78,7 @@ scroll-margin-inline-end: unset;
 
 <p>The child elements are styled as follows:</p>
 
-<pre class="brush: css notranslate">.scroller &gt; div {
+<pre class="brush: css">.scroller &gt; div {
   flex: 0 0 250px;
   width: 250px;
   background-color: #663399;
@@ -99,7 +99,7 @@ scroll-margin-inline-end: unset;
 
 <p>Last of all we specify the scroll margin values, a different one for the second and third child elements:</p>
 
-<pre class="brush: css notranslate">.scroller &gt; div:nth-child(2) {
+<pre class="brush: css">.scroller &gt; div:nth-child(2) {
   scroll-margin-inline-end: 1rem;
 }
 

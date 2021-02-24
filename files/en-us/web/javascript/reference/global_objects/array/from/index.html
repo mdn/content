@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Array.from(<var>arrayLike </var>[, <var>mapFn </var>[, <var>thisArg</var>]])
+<pre class="brush: js">Array.from(<var>arrayLike </var>[, <var>mapFn </var>[, <var>thisArg</var>]])
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -76,18 +76,18 @@ tags:
 
 <h3 id="Array_from_a_String">Array from a <code>String</code></h3>
 
-<pre class="brush: js notranslate">Array.from('foo');
+<pre class="brush: js">Array.from('foo');
 // [ "f", "o", "o" ]</pre>
 
 <h3 id="Array_from_a_Set">Array from a <code>Set</code></h3>
 
-<pre class="brush: js notranslate">const set = new Set(['foo', 'bar', 'baz', 'foo']);
+<pre class="brush: js">const set = new Set(['foo', 'bar', 'baz', 'foo']);
 Array.from(set);
 // [ "foo", "bar", "baz" ]</pre>
 
 <h3 id="Array_from_a_Map">Array from a <code>Map</code></h3>
 
-<pre class="brush: js notranslate">const map = new Map([[1, 2], [2, 4], [4, 8]]);
+<pre class="brush: js">const map = new Map([[1, 2], [2, 4], [4, 8]]);
 Array.from(map);
 // [[1, 2], [2, 4], [4, 8]]
 
@@ -101,7 +101,7 @@ Array.from(mapper.keys());
 
 <h3 id="Array_from_a_NodeList">Array from a <code>NodeList</code></h3>
 
-<pre class="brush: js notranslate">// Create an array based on a property of DOM Elements
+<pre class="brush: js">// Create an array based on a property of DOM Elements
 const images = document.getElementsByTagName('img');
 const sources = Array.from(images, image =&gt; image.src);
 const insecureSources = sources.filter(link =&gt; link.startsWith('http://'));</pre>
@@ -109,7 +109,7 @@ const insecureSources = sources.filter(link =&gt; link.startsWith('http://'));</
 <h3 id="Array_from_an_Array-like_object_arguments">Array from an Array-like object
     (arguments)</h3>
 
-<pre class="brush: js notranslate">function f() {
+<pre class="brush: js">function f() {
   return Array.from(arguments);
 }
 
@@ -120,7 +120,7 @@ f(1, 2, 3);
 <h3 id="Using_arrow_functions_and_Array.from">Using arrow functions and
     <code>Array.from()</code></h3>
 
-<pre class="brush: js notranslate">// Using an arrow function as the map function to
+<pre class="brush: js">// Using an arrow function as the map function to
 // manipulate the elements
 Array.from([1, 2, 3], x =&gt; x + x);
 // [2, 4, 6]
@@ -134,7 +134,7 @@ Array.from({length: 5}, (v, i) =&gt; i);
 
 <h3 id="Sequence_generator_range">Sequence generator (range)</h3>
 
-<pre class="brush: js notranslate">// Sequence generator function (commonly referred to as "range", e.g. Clojure, PHP etc)
+<pre class="brush: js">// Sequence generator function (commonly referred to as "range", e.g. Clojure, PHP etc)
 const range = (start, stop, step) =&gt; Array.from({ length: (stop - start) / step + 1}, (_, i) =&gt; start + (i * step));
 
 // Generate numbers range 0..4
@@ -193,7 +193,7 @@ range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map(x =&gt; String.fromCharCode(x
         ECMA-262.</p>
 </div>
 
-<pre class="brush: js notranslate">// Production steps of ECMA-262, Edition 6, 22.1.2.1
+<pre class="brush: js">// Production steps of ECMA-262, Edition 6, 22.1.2.1
 if (!Array.from) {
     Array.from = (function () {
         var symbolIterator;

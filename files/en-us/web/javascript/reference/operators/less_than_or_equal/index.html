@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"> x &lt;= y</pre>
+<pre class="brush: js"> x &lt;= y</pre>
 
 <h2 id="Description">Description</h2>
 
@@ -27,14 +27,14 @@ tags:
 
 <h3 id="String_to_string_comparison">String to string comparison</h3>
 
-<pre class="brush: js notranslate">console.log("a" &lt;= "b");     // true
+<pre class="brush: js">console.log("a" &lt;= "b");     // true
 console.log("a" &lt;= "a");     // true
 console.log("a" &lt;= "3");     // false
 </pre>
 
 <h3 id="String_to_number_comparison">String to number comparison</h3>
 
-<pre class="brush: js notranslate">console.log("5" &lt;= 3);       // false
+<pre class="brush: js">console.log("5" &lt;= 3);       // false
 console.log("3" &lt;= 3);       // true
 console.log("3" &lt;= 5);       // true
 
@@ -43,19 +43,19 @@ console.log(5 &lt;= "hello");   // false</pre>
 
 <h3 id="Number_to_Number_comparison">Number to Number comparison</h3>
 
-<pre class="brush: js notranslate">console.log(5 &lt;= 3);         // false
+<pre class="brush: js">console.log(5 &lt;= 3);         // false
 console.log(3 &lt;= 3);         // true
 console.log(3 &lt;= 5);         // true</pre>
 
 <h3 id="Number_to_BigInt_comparison">Number to BigInt comparison</h3>
 
-<pre class="brush: js notranslate">console.log(5n &lt;= 3);        // false
+<pre class="brush: js">console.log(5n &lt;= 3);        // false
 console.log(3 &lt;= 3n);        // true
 console.log(3 &lt;= 5n);        // true</pre>
 
 <h3 id="Comparing_Boolean_null_undefined_NaN">Comparing Boolean, null, undefined, NaN</h3>
 
-<pre class="brush: js notranslate">console.log(true &lt;= false);  // false
+<pre class="brush: js">console.log(true &lt;= false);  // false
 console.log(true &lt;= true);   // true
 console.log(false &lt;= true);  // true
 

@@ -24,7 +24,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>product</var> = Math.imul(<var>a</var>, <var>b</var>);</pre>
+  class="brush: js">var <var>product</var> = Math.imul(<var>a</var>, <var>b</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -62,7 +62,7 @@ tags:
 
 <h3 id="Using_Math.imul">Using Math.imul()</h3>
 
-<pre class="brush: js notranslate">Math.imul(2, 4);          // 8
+<pre class="brush: js">Math.imul(2, 4);          // 8
 Math.imul(-1, 8);         // -8
 Math.imul(-2, -2);        // 4
 Math.imul(0xffffffff, 5); // -5
@@ -73,7 +73,7 @@ Math.imul(0xfffffffe, 5); // -10
 
 <p>This can be emulated with the following function:</p>
 
-<pre class="brush: js notranslate">if (!Math.imul) Math.imul = function(a, b) {
+<pre class="brush: js">if (!Math.imul) Math.imul = function(a, b) {
   var aHi = (a &gt;&gt;&gt; 16) &amp; 0xffff;
   var aLo = a &amp; 0xffff;
   var bHi = (b &gt;&gt;&gt; 16) &amp; 0xffff;
@@ -87,7 +87,7 @@ Math.imul(0xfffffffe, 5); // -10
   in which this polyfill would be used do not optimize with an internal integer type in
   JavaScript, instead using floating points for all numbers.</p>
 
-<pre class="brush: js notranslate">if (!Math.imul) Math.imul = function(opA, opB) {
+<pre class="brush: js">if (!Math.imul) Math.imul = function(opA, opB) {
   opB |= 0; // ensure that opB is an integer. opA will automatically be coerced.
   // floating points give us 53 bits of precision to work with plus 1 sign bit
   // automatically handled for our convienence:

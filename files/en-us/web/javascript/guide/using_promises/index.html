@@ -20,7 +20,7 @@ tags:
 
 <p>Here's some code that uses <code>createAudioFileAsync()</code>:</p>
 
-<pre class="brush: js line-numbers notranslate">function successCallback(result) {
+<pre class="brush: js line-numbers">function successCallback(result) {
   console.log("Audio file ready at URL: " + result);
 }
 
@@ -33,7 +33,7 @@ createAudioFileAsync(audioSettings, successCallback, failureCallback);
 
 <p>If <code>createAudioFileAsync()</code> were rewritten to return a promise, you would attach your callbacks to it instead:</p>
 
-<pre class="brush: js line-numbers notranslate">createAudioFileAsync(audioSettings).then(successCallback, failureCallback);</pre>
+<pre class="brush: js line-numbers">createAudioFileAsync(audioSettings).then(successCallback, failureCallback);</pre>
 
 <p>This convention has several advantages. We will explore each one.</p>
 
@@ -55,13 +55,13 @@ createAudioFileAsync(audioSettings, successCallback, failureCallback);
 
 <p>Here's the magic: the <code>then()</code> function returns a <strong>new promise</strong>, different from the original:</p>
 
-<pre class="brush: js notranslate">const promise = doSomething();
+<pre class="brush: js">const promise = doSomething();
 const promise2 = promise.then(successCallback, failureCallback);
 </pre>
 
 <p>or</p>
 
-<pre class="brush: js notranslate">const promise2 = doSomething().then(successCallback, failureCallback);
+<pre class="brush: js">const promise2 = doSomething().then(successCallback, failureCallback);
 </pre>
 
 <p>This second promise (<code>promise2</code>) represents the completion not just of <code>doSomething()</code>, but also of the <code>successCallback</code> or <code>failureCallback</code> you passed in, which can be other asynchronous functions returning a promise. When that's the case, any callbacks added to <code>promise2</code> get queued behind the promise returned by either <code>successCallback</code> or <code>failureCallback</code>.</p>
@@ -70,7 +70,7 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 <p>In the old days, doing several asynchronous operations in a row would lead to the classic callback pyramid of doom:</p>
 
-<pre class="brush: js notranslate">doSomething(function(result) {
+<pre class="brush: js">doSomething(function(result) {
   doSomethingElse(result, function(newResult) {
     doThirdThing(newResult, function(finalResult) {
       console.log('Got the final result: ' + finalResult);
@@ -81,7 +81,7 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 <p>With modern functions, we attach our callbacks to the returned promises instead, forming a promise chain:</p>
 
-<pre class="brush: js notranslate">doSomething()
+<pre class="brush: js">doSomething()
 .then(function(result) {
   return doSomethingElse(result);
 })
@@ -96,7 +96,7 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 <p>The arguments to <code>then</code> are optional, and <code>catch(failureCallback)</code> is short for <code>then(null, failureCallback)</code>. You might see this expressed with <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a> instead:</p>
 
-<pre class="brush: js notranslate">doSomething()
+<pre class="brush: js">doSomething()
 .then(result =&gt; doSomethingElse(result))
 .then(newResult =&gt; doThirdThing(newResult))
 .then(finalResult =&gt; {
@@ -111,7 +111,7 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 <p>It's possible to chain <em>after</em> a failure, i.e. a <code>catch</code>, which is useful to accomplish new actions even after an action failed in the chain. Read the following example:</p>
 
-<pre class="brush: js notranslate">new Promise((resolve, reject) =&gt; {
+<pre class="brush: js">new Promise((resolve, reject) =&gt; {
     console.log('Initial');
 
     resolve();
@@ -131,7 +131,7 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 <p>This will output the following text:</p>
 
-<pre class="brush: plain notranslate">Initial
+<pre class="brush: plain">Initial
 Do that
 Do this, no matter what happened before
 </pre>
@@ -142,7 +142,7 @@ Do this, no matter what happened before
 
 <p>You might recall seeing <code>failureCallback</code> three times in the pyramid of doom earlier, compared to only once at the end of the promise chain:</p>
 
-<pre class="brush: js notranslate">doSomething()
+<pre class="brush: js">doSomething()
 .then(result =&gt; doSomethingElse(result))
 .then(newResult =&gt; doThirdThing(newResult))
 .then(finalResult =&gt; console.log(`Got the final result: ${finalResult}`))
@@ -151,7 +151,7 @@ Do this, no matter what happened before
 
 <p>If there's an exception, the browser will look down the chain for <code>.catch()</code> handlers or <code>onRejected</code>. This is very much modeled after how synchronous code works:</p>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   const result = syncDoSomething();
   const newResult = syncDoSomethingElse(result);
   const finalResult = syncDoThirdThing(newResult);
@@ -163,7 +163,7 @@ Do this, no matter what happened before
 
 <p>This symmetry with asynchronous code culminates in the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function"><code>async</code>/<code>await</code></a> syntactic sugar in ECMAScript 2017:</p>
 
-<pre class="brush: js notranslate">async function foo() {
+<pre class="brush: js">async function foo() {
   try {
     const result = await doSomething();
     const newResult = await doSomethingElse(result);
@@ -196,7 +196,7 @@ Do this, no matter what happened before
 
 <p>One case of special usefulness: when writing code for <a href="/en-US/docs/Glossary/Node.js">Node.js</a>, it's common that modules you include in your project may have unhandled rejected promises, logged to the console by the Node.js runtime. You can capture them for analysis and handling by your code—or just to avoid having them cluttering up your output—by adding a handler for the Node.js <code>unhandledRejection</code> event (notice the difference in capitalization of the name), like this:</p>
 
-<pre class="brush: js notranslate">process.on("unhandledRejection", (reason, promise) =&gt; {
+<pre class="brush: js">process.on("unhandledRejection", (reason, promise) =&gt; {
   /* You might start here by adding code to examine the
    * "promise" and "reason" values. */
 });
@@ -212,14 +212,14 @@ Do this, no matter what happened before
 
 <p>In an ideal world, all asynchronous functions would already return promises. Unfortunately, some APIs still expect success and/or failure callbacks to be passed in the old way. The most obvious example is the <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout"><code>setTimeout()</code></a> function:</p>
 
-<pre class="brush: js notranslate">setTimeout(() =&gt; saySomething("10 seconds passed"), 10*1000);
+<pre class="brush: js">setTimeout(() =&gt; saySomething("10 seconds passed"), 10*1000);
 </pre>
 
 <p>Mixing old-style callbacks and promises is problematic. If <code>saySomething()</code> fails or contains a programming error, nothing catches it. <code>setTimeout</code> is to blame for this.</p>
 
 <p>Luckily we can wrap <code>setTimeout</code> in a promise. Best practice is to wrap problematic functions at the lowest possible level, and then never call them directly again:</p>
 
-<pre class="brush: js notranslate">const wait = ms =&gt; new Promise(resolve =&gt; setTimeout(resolve, ms));
+<pre class="brush: js">const wait = ms =&gt; new Promise(resolve =&gt; setTimeout(resolve, ms));
 
 wait(10*1000).then(() =&gt; saySomething("10 seconds")).catch(failureCallback);
 </pre>
@@ -234,13 +234,13 @@ wait(10*1000).then(() =&gt; saySomething("10 seconds")).catch(failureCallback);
 
 <p>We can start operations in parallel and wait for them all to finish like this:</p>
 
-<pre class="brush: js notranslate">Promise.all([func1(), func2(), func3()])
+<pre class="brush: js">Promise.all([func1(), func2(), func3()])
 .then(([result1, result2, result3]) =&gt; { /* use result1, result2 and result3 */ });
 </pre>
 
 <p>Sequential composition is possible using some clever JavaScript:</p>
 
-<pre class="brush: js notranslate">[func1, func2, func3].reduce((p, f) =&gt; p.then(f), Promise.resolve())
+<pre class="brush: js">[func1, func2, func3].reduce((p, f) =&gt; p.then(f), Promise.resolve())
 .then(result3 =&gt; { /* use result3 */ });
 </pre>
 
@@ -248,18 +248,18 @@ wait(10*1000).then(() =&gt; saySomething("10 seconds")).catch(failureCallback);
 
 <p>This can be made into a reusable compose function, which is common in functional programming:</p>
 
-<pre class="brush: js notranslate">const applyAsync = (acc,val) =&gt; acc.then(val);
+<pre class="brush: js">const applyAsync = (acc,val) =&gt; acc.then(val);
 const composeAsync = (...funcs) =&gt; x =&gt; funcs.reduce(applyAsync, Promise.resolve(x));</pre>
 
 <p>The <code>composeAsync()</code> function will accept any number of functions as arguments, and will return a new function that accepts an initial value to be passed through the composition pipeline:</p>
 
-<pre class="brush: js notranslate">const transformData = composeAsync(func1, func2, func3);
+<pre class="brush: js">const transformData = composeAsync(func1, func2, func3);
 const result3 = transformData(data);
 </pre>
 
 <p>In ECMAScript 2017, sequential composition can be done more with async/await:</p>
 
-<pre class="brush: js notranslate">let result;
+<pre class="brush: js">let result;
 for (const f of [func1, func2, func3]) {
   result = await f(result);
 }
@@ -270,15 +270,15 @@ for (const f of [func1, func2, func3]) {
 
 <p>To avoid surprises, functions passed to <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> will never be called synchronously, even with an already-resolved promise:</p>
 
-<pre class="brush: js notranslate">Promise.resolve().then(() =&gt; console.log(2));
+<pre class="brush: js">Promise.resolve().then(() =&gt; console.log(2));
 console.log(1); // 1, 2
 </pre>
 
-<p>Instead of running immediately, the passed-in function is put on a microtask queue, which means it runs later when the queue is emptied at the end of the current run of the JavaScript event loop, i.e. pretty soon:</p>
+<p>Instead of running immediately, the passed-in function is put on a microtask queue, which means it runs later (only after the function which created it exits, and when the JavaScript execution stack is empty), just before control is returned to the event loop; i.e. pretty soon:</p>
 
-<pre class="brush: js notranslate">const wait = ms =&gt; new Promise(resolve =&gt; setTimeout(resolve, ms));
+<pre class="brush: js">const wait = ms =&gt; new Promise(resolve =&gt; setTimeout(resolve, ms));
 
-wait().then(() =&gt; console.log(4));
+wait(0).then(() =&gt; console.log(4));
 Promise.resolve().then(() =&gt; console.log(2)).then(() =&gt; console.log(3));
 console.log(1); // 1, 2, 3, 4
 </pre>
@@ -287,7 +287,7 @@ console.log(1); // 1, 2, 3, 4
 
 <p>Promise callbacks are handled as a <a href="/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide">Microtask</a> whereas <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> callbacks are handled as Task queues.</p>
 
-<pre class="brush: js notranslate">const promise = new Promise(function(resolve, reject) {
+<pre class="brush: js">const promise = new Promise(function(resolve, reject) {
   console.log("Promise callback");
   resolve();
 }).then(function(result) {
@@ -303,7 +303,7 @@ console.log("Promise (pending)", promise);
 
 <p>The code above will output:</p>
 
-<pre class="brush: plain notranslate">Promise callback
+<pre class="brush: plain">Promise callback
 Promise (pending) Promise {&lt;pending&gt;}
 Promise callback (.then)
 event-loop cycle: Promise (fulfilled) Promise {&lt;fulfilled&gt;}</pre>
@@ -316,7 +316,7 @@ event-loop cycle: Promise (fulfilled) Promise {&lt;fulfilled&gt;}</pre>
 
 <p>Nesting is a control structure to limit the scope of <code>catch</code> statements. Specifically, a nested <code>catch</code> only catches failures in its scope and below, not errors higher up in the chain outside the nested scope. When used correctly, this gives greater precision in error recovery:</p>
 
-<pre class="brush: js notranslate">doSomethingCritical()
+<pre class="brush: js">doSomethingCritical()
 .then(result =&gt; doSomethingOptional(result)
   .then(optionalResult =&gt; doSomethingExtraNice(optionalResult))
   .catch(e =&gt; {})) // Ignore if optional stuff fails; proceed.
@@ -332,7 +332,7 @@ event-loop cycle: Promise (fulfilled) Promise {&lt;fulfilled&gt;}</pre>
 
 <p>Here are some common mistakes to watch out for when composing promise chains. Several of these mistakes manifest in the following example:</p>
 
-<pre class="brush: js example-bad notranslate">// Bad example! Spot 3 mistakes!
+<pre class="brush: js example-bad">// Bad example! Spot 3 mistakes!
 
 doSomething().then(function(result) {
   doSomethingElse(result) // Forgot to return promise from inner chain + unnecessary nesting
@@ -349,7 +349,7 @@ doSomething().then(function(result) {
 
 <p>A good rule-of-thumb is to always either return or terminate promise chains, and as soon as you get a new promise, return it immediately, to flatten things:</p>
 
-<pre class="brush: js example-good notranslate">doSomething()
+<pre class="brush: js example-good">doSomething()
 .then(function(result) {
   return doSomethingElse(result);
 })

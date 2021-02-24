@@ -30,7 +30,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">import <em>defaultExport</em> from "<em>module-name</em>";
+<pre class="brush: js">import <em>defaultExport</em> from "<em>module-name</em>";
 import * as <em>name</em> from "<em>module-name</em>";
 import { <em>export1</em> } from "<em>module-name</em>";
 import { <em>export1</em> as <em>alias1</em> } from "<em>module-name</em>";
@@ -72,14 +72,14 @@ var promise = import("<em>module-name</em>");
 <p>This inserts <code>myModule</code> into the current scope, containing all the exports
   from the module in the file located in <code>/modules/my-module.js</code>.</p>
 
-<pre class="brush: js notranslate">import * as <em>myModule</em> from '/modules/my-module.js';
+<pre class="brush: js">import * as <em>myModule</em> from '/modules/my-module.js';
 </pre>
 
 <p>Here, accessing the exports means using the module name ("myModule" in this case) as a
   namespace. For example, if the module imported above includes an export
   <code>doAllTheAmazingThings()</code>, you would call it like this:</p>
 
-<pre class="brush: js notranslate">myModule.doAllTheAmazingThings();</pre>
+<pre class="brush: js">myModule.doAllTheAmazingThings();</pre>
 
 <h3 id="Import_a_single_export_from_a_module">Import a single export from a module</h3>
 
@@ -89,13 +89,13 @@ var promise = import("<em>module-name</em>");
   {{JSxRef("Statements/export", "export")}} statement), this inserts <code>myExport</code>
   into the current scope.</p>
 
-<pre class="brush: js notranslate">import {myExport} from '/modules/my-module.js';</pre>
+<pre class="brush: js">import {myExport} from '/modules/my-module.js';</pre>
 
 <h3 id="Import_multiple_exports_from_module">Import multiple exports from module</h3>
 
 <p>This inserts both <code>foo</code> and <code>bar</code> into the current scope.</p>
 
-<pre class="brush: js notranslate">import {foo, bar} from '/modules/my-module.js';</pre>
+<pre class="brush: js">import {foo, bar} from '/modules/my-module.js';</pre>
 
 <h3 id="Import_an_export_with_a_more_convenient_alias">Import an export with a more
   convenient alias</h3>
@@ -103,14 +103,14 @@ var promise = import("<em>module-name</em>");
 <p>You can rename an export when importing it. For example, this inserts
   <code>shortName</code> into the current scope.</p>
 
-<pre class="brush: js notranslate">import {reallyReallyLongModuleExportName as shortName}
+<pre class="brush: js">import {reallyReallyLongModuleExportName as shortName}
   from '/modules/my-module.js';</pre>
 
 <h3 id="Rename_multiple_exports_during_import">Rename multiple exports during import</h3>
 
 <p>Import multiple exports from a module with convenient aliases.</p>
 
-<pre class="brush: js notranslate">import {
+<pre class="brush: js">import {
   reallyReallyLongModuleExportName as shortName,
   anotherLongModuleName as short
 } from '/modules/my-module.js';</pre>
@@ -121,12 +121,12 @@ var promise = import("<em>module-name</em>");
 <p>Import an entire module for side effects only, without importing anything. This runs
   the module's global code, but doesn't actually import any values.</p>
 
-<pre class="brush: js notranslate">import '/modules/my-module.js';
+<pre class="brush: js">import '/modules/my-module.js';
 </pre>
 
 <p>This works with {{anch("Dynamic Imports", "dynamic imports")}} as well:</p>
 
-<pre class="brush: js notranslate">(async () =&gt; {
+<pre class="brush: js">(async () =&gt; {
   if (somethingIsTrue) {
     // import module for side effects
     await import('/modules/my-module.js');
@@ -145,18 +145,18 @@ var promise = import("<em>module-name</em>");
 
 <p>The simplest version directly imports the default:</p>
 
-<pre class="brush: js notranslate">import myDefault from '/modules/my-module.js';</pre>
+<pre class="brush: js">import myDefault from '/modules/my-module.js';</pre>
 
 <p>It is also possible to use the default syntax with the ones seen above (namespace
   imports or named imports). In such cases, the default import will have to be declared
   first. For instance:</p>
 
-<pre class="brush: js notranslate">import myDefault, * as myModule from '/modules/my-module.js';
+<pre class="brush: js">import myDefault, * as myModule from '/modules/my-module.js';
 // myModule used as a namespace</pre>
 
 <p>or</p>
 
-<pre class="brush: js notranslate">import myDefault, {foo, bar} from '/modules/my-module.js';
+<pre class="brush: js">import myDefault, {foo, bar} from '/modules/my-module.js';
 // specific, named imports
 </pre>
 
@@ -164,7 +164,7 @@ var promise = import("<em>module-name</em>");
   works a bit differently. You need to destructure and rename the "default" key from the
   returned object.</p>
 
-<pre class="brush: js notranslate">(async () =&gt; {
+<pre class="brush: js">(async () =&gt; {
   if (somethingIsTrue) {
     const { default: myDefault, foo, bar } = await import('/modules/my-module.js');
   }
@@ -198,7 +198,7 @@ var promise = import("<em>module-name</em>");
 <p>To dynamically import a module, the <code>import</code> keyword may be called as a
   function. When used this way, it returns a promise.</p>
 
-<pre class="brush: js notranslate">import('/modules/my-module.js')
+<pre class="brush: js">import('/modules/my-module.js')
   .then((module) =&gt; {
     // Do something with the module.
   });
@@ -206,7 +206,7 @@ var promise = import("<em>module-name</em>");
 
 <p>This form also supports the <code>await</code> keyword.</p>
 
-<pre class="brush: js notranslate">let module = await import('/modules/my-module.js');
+<pre class="brush: js">let module = await import('/modules/my-module.js');
 </pre>
 
 <h2 id="Examples">Examples</h2>
@@ -218,7 +218,7 @@ var promise = import("<em>module-name</em>");
 
 <h4 id="The_module_file.js">The module: file.js</h4>
 
-<pre class="brush: js notranslate">function getJSON(url, callback) {
+<pre class="brush: js">function getJSON(url, callback) {
   let xhr = new XMLHttpRequest();
   xhr.onload = function () {
     callback(this.responseText)
@@ -233,7 +233,7 @@ export function getUsefulContents(url, callback) {
 
 <h4 id="The_main_program_main.js">The main program: main.js</h4>
 
-<pre class="brush: js notranslate">import { getUsefulContents } from '/modules/file.js';
+<pre class="brush: js">import { getUsefulContents } from '/modules/file.js';
 
 getUsefulContents('http://www.example.com',
     data =&gt; { doSomethingUseful(data); });</pre>
@@ -245,7 +245,7 @@ getUsefulContents('http://www.example.com',
   only way to implement this functionality. The <code>import()</code> function also
   supports <code>await</code>.</p>
 
-<pre class="brush: js notranslate">const main = document.querySelector("main");
+<pre class="brush: js">const main = document.querySelector("main");
 for (const link of document.querySelectorAll("nav &gt; a")) {
   link.addEventListener("click", e =&gt; {
     e.preventDefault();
@@ -309,8 +309,6 @@ for (const link of document.querySelectorAll("nav &gt; a")) {
   <li>Hacks blog post by Lin Clark: <a
       href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/">ES modules:
       A cartoon deep-dive</a></li>
-  <li>Axel Rauschmayer's book: <a class="external"
-      href="http://exploringjs.com/es6/ch_modules.html">"Exploring JS: Modules"</a></li>
-  <li>The Modern JavaScript Tutorial(javascript.info): <a class="external"
-      href="https://javascript.info/import-export">Export and Import</a></li>
+  <li>Axel Rauschmayer's book: <a       href="http://exploringjs.com/es6/ch_modules.html">"Exploring JS: Modules"</a></li>
+  <li>The Modern JavaScript Tutorial(javascript.info): <a       href="https://javascript.info/import-export">Export and Import</a></li>
 </ul>

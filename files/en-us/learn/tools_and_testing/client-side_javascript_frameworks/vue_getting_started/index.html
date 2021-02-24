@@ -52,12 +52,12 @@ tags:
  <li>
   <p>Development Script (Unoptimized, but includes console warnings. Great for development</p>
 
-  <pre class="brush: html notranslate">&lt;script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"&gt;&lt;/script&gt;</pre>
+  <pre class="brush: html">&lt;script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"&gt;&lt;/script&gt;</pre>
  </li>
  <li>
   <p>Production Script (Optimized version, minimal console warnings. It is recommended that you specify a version number when including Vue on your site so that any framework updates do not break your live site without you knowing.)</p>
 
-  <pre class="brush: html notranslate">&lt;script src="https://cdn.jsdelivr.net/npm/vue@2"&gt;&lt;/script&gt;</pre>
+  <pre class="brush: html">&lt;script src="https://cdn.jsdelivr.net/npm/vue@2"&gt;&lt;/script&gt;</pre>
  </li>
 </ul>
 
@@ -74,11 +74,11 @@ tags:
 
 <p>To install the CLI, run the following command in your terminal:</p>
 
-<pre class="brush: bash notranslate">npm install --global @vue/cli</pre>
+<pre class="brush: bash">npm install --global @vue/cli</pre>
 
 <p>Or if you'd prefer to use yarn:</p>
 
-<pre class="brush: bash notranslate">yarn global add @vue/cli</pre>
+<pre class="brush: bash">yarn global add @vue/cli</pre>
 
 <p>Once installed, to initialize a new project you can then open a terminal in the directory you want to create the project in, and run <code>vue create &lt;project-name&gt;</code>. The CLI will then give you a list of project configurations you can use. There are a few preset ones, and you can make your own. These options let you configure things like TypeScript, linting, vue-router, testing, and more.</p>
 
@@ -160,7 +160,7 @@ tags:
 
 <p>In the case of <code>App.vue</code>, our default export sets the name of the component to <code>app</code> and registers the <code>HelloWorld</code> component by adding it into the <code>components</code> property. When you register a component in this way, you're registering it locally. Locally registered components can only be used inside the components that register them, so you need to import and register them in every component file that uses them. This can be useful for bundle splitting/tree shaking since not every page in your app necessarily needs every component.</p>
 
-<pre class="brush: js notranslate">import HelloWorld from './components/HelloWorld.vue';
+<pre class="brush: js">import HelloWorld from './components/HelloWorld.vue';
 
 export default {
   name: 'app',
@@ -186,7 +186,7 @@ export default {
 
 <p>In your terminal, try running <code>npm run serve</code> (or <code>yarn serve</code> if you prefer yarn). Your terminal should output something like the following:</p>
 
-<pre class="notranslate">INFO  Starting development server...
+<pre>INFO  Starting development server...
 98% after emitting CopyPlugin
 
  DONE  Compiled successfully in 18121ms
@@ -206,21 +206,21 @@ export default {
 
 <p>Let's make our first change to the app — we’ll delete the Vue logo. Open the <code>App.vue</code> file, and delete the <code><a href="/en-US/docs/Web/HTML/Element/img">&lt;img&gt;</a></code> element from the template section:</p>
 
-<pre class="brush: html notranslate"><span class="author-d-iz88z86z86za0dz67zz78zz78zz74zz68zjz80zz71z9iz90z8h7gz67ziz76zcz77zz80zz71zncfz69zz69ziaz82zz71zz72zhz77zz122zz90z14mcyd">&lt;img alt="Vue logo" src="./assets/logo.png"&gt;</span></pre>
+<pre class="brush: html"><span class="author-d-iz88z86z86za0dz67zz78zz78zz74zz68zjz80zz71z9iz90z8h7gz67ziz76zcz77zz80zz71zncfz69zz69ziaz82zz71zz72zhz77zz122zz90z14mcyd">&lt;img alt="Vue logo" src="./assets/logo.png"&gt;</span></pre>
 
 <p>If your server is still running, you should see the logo removed from the rendered site almost instantly. Let’s also remove the <code>HelloWorld</code> component from our template.</p>
 
 <p>First of all delete this line:</p>
 
-<pre class="brush: html notranslate">&lt;HelloWorld msg="Welcome to Your Vue.js App"/&gt;</pre>
+<pre class="brush: html">&lt;HelloWorld msg="Welcome to Your Vue.js App"/&gt;</pre>
 
 <p>If you save your <code>App.vue</code> file now, the rendered app will throw an error because we’ve registered the component but are not using it. We also need to remove the lines from inside the <code>&lt;script&gt;</code> element that import and register the component:</p>
 
 <p>Delete these lines now:</p>
 
-<pre class="brush: js notranslate">import HelloWorld from './components/HelloWorld.vue'</pre>
+<pre class="brush: js">import HelloWorld from './components/HelloWorld.vue'</pre>
 
-<pre class="brush: js notranslate">components: {
+<pre class="brush: js">components: {
   HelloWorld
 }</pre>
 
@@ -228,7 +228,7 @@ export default {
 
 <p>Let’s add a new <code>&lt;h1&gt;</code> inside <code>&lt;div id="app"&gt;</code>. Since we’re going to be creating a todo list app below, let's set our header text to "To-Do List". Add it like so:</p>
 
-<pre class="brush: html notranslate">&lt;template&gt;
+<pre class="brush: html">&lt;template&gt;
   &lt;div id="app"&gt;
     &lt;h1&gt;To-Do List&lt;/h1&gt;
   &lt;/div&gt;

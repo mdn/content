@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><code>isNaN(v<em>alue</em>)</code></pre>
+<pre class="brush: js"><code>isNaN(v<em>alue</em>)</code></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -79,14 +79,14 @@ tags:
 <p>A polyfill for <code>isNaN</code> would be (the polyfill leverages the unique
   never-equal-to-itself characteristic of <code>NaN</code>):</p>
 
-<pre class="brush: js notranslate">var isNaN = function(value) {
+<pre class="brush: js">var isNaN = function(value) {
     var n = Number(value);
     return n !== n;
 };</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">isNaN(NaN);       // true
+<pre class="brush: js">isNaN(NaN);       // true
 isNaN(undefined); // true
 isNaN({});        // true
 

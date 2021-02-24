@@ -79,7 +79,7 @@ browser.cookies.onChanged.hasListener(listener)
 
 <p>This example listens for <code>onChanged</code> events and logs details from the <code>changeInfo</code> argument:</p>
 
-<pre class="notranslate brush: js line-numbers  language-js">browser.cookies.onChanged.addListener(function(changeInfo) {
+<pre class="brush: js line-numbers  language-js">browser.cookies.onChanged.addListener(function(changeInfo) {
   console.log('Cookie changed: ' +
               '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
               '\n * Cause: ' + changeInfo.cause +

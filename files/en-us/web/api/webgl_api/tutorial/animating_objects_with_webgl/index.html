@@ -17,12 +17,12 @@ tags:
 
 <p>Let's start by making the square rotate. The first thing we'll need is a variable in which to track the current rotation of the square:</p>
 
-<pre class="brush: js notranslate">var squareRotation = 0.0;
+<pre class="brush: js">var squareRotation = 0.0;
 </pre>
 
 <p>Now we need to update the <code>drawScene()</code> function to apply the current rotation to the square when drawing it. After translating to the initial drawing position for the square, we apply the rotation like this:</p>
 
-<pre class="brush: js notranslate">  mat4.rotate(modelViewMatrix,  // destination matrix
+<pre class="brush: js">  mat4.rotate(modelViewMatrix,  // destination matrix
               modelViewMatrix,  // matrix to rotate
               squareRotation,   // amount to rotate in radians
               [0, 0, 1]);       // axis to rotate around
@@ -32,7 +32,7 @@ tags:
 
 <p>To actually animate, we need to add code that changes the value of <code>squareRotation</code> over time. We can do that by creating a new variable to track the time at which we last animated (let's call it <code>then</code>), then adding the following code to the end of the main function</p>
 
-<pre class="brush: js notranslate">  var then = 0;
+<pre class="brush: js">  var then = 0;
 
   // Draw the scene repeatedly
   function render(now) {
@@ -49,7 +49,7 @@ tags:
 
 <p>This code uses <code>requestAnimationFrame</code> to ask the browser to call the function "<code>render</code>" on each frame. <code>requestAnimationFrame</code> passes us the time in milliseconds since the page loaded. We convert that to seconds and then subtract from it the last time to compute <code>deltaTime</code> which is the number of second since the last frame was rendered. At the end of drawscene we add the code to update <code>squareRotation.</code></p>
 
-<pre class="brush: js notranslate">squareRotation += deltaTime;</pre>
+<pre class="brush: js">squareRotation += deltaTime;</pre>
 
 <p>This code uses the amount of time that's passed since the last time we updated the value of <code>squareRotation</code> to determine how far to rotate the square.</p>
 

@@ -855,7 +855,7 @@ tags:
 
 <h4 id="currentcolor_example">currentcolor example</h4>
 
-<pre class="brush: html notranslate">&lt;div style="color:blue; border: 1px dashed currentcolor;"&gt;
+<pre class="brush: html">&lt;div style="color:blue; border: 1px dashed currentcolor;"&gt;
   The color of this text is blue.
   &lt;div style="background:currentcolor; height:9px;"&gt;&lt;/div&gt;
   This block is surrounded by a blue border.
@@ -1237,14 +1237,14 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div&gt;&lt;/div&gt;
+<pre class="brush: html">&lt;div&gt;&lt;/div&gt;
 &lt;hr&gt;
 &lt;label for="color"&gt;Enter a valid color value:&lt;/label&gt;
 &lt;input type="text" id="color"&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   width: 100%;
   height: 200px;
 }</pre>
@@ -1252,7 +1252,7 @@ tags:
 <div class="hidden">
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">const inputElem = document.querySelector('input');
+<pre class="brush: js">const inputElem = document.querySelector('input');
 const divElem = document.querySelector('div');
 
 function validTextColor(stringToTest) {
@@ -1288,7 +1288,7 @@ inputElem.addEventListener('change', () =&gt; {
 
 <p>This example shows the many ways in which a single color can be created with the various RGB color syntaxes.</p>
 
-<pre class="notranslate">/* These syntax variations all specify the same color: a fully opaque hot pink. */
+<pre>/* These syntax variations all specify the same color: a fully opaque hot pink. */
 
 /* Hexadecimal syntax */
 #f09
@@ -1326,7 +1326,7 @@ rgb(1e2, .5e1, .5e0, +.25e2%)
 
 <h3 id="RGB_transparency_variations">RGB transparency variations</h3>
 
-<pre class="notranslate">/* Hexadecimal syntax */
+<pre>/* Hexadecimal syntax */
 #3a30                   <span style="background: #3a30;"> /*   0% opaque green */ </span>
 #3A3F                   <span style="background: #3A3F;"> /* full opaque green */ </span>
 #33aa3300               <span style="background: #33aa3300;"> /*   0% opaque green */ </span>
@@ -1348,7 +1348,7 @@ rgba(1e2, .5e1, .5e0, +.25e2%)</pre>
 
 <h3 id="HSL_syntax_variations">HSL syntax variations</h3>
 
-<pre class="notranslate">/* These examples all specify the same color: a lavender. */
+<pre>/* These examples all specify the same color: a lavender. */
 hsl(270,60%,70%)
 hsl(270, 60%, 70%)
 hsl(270 60% 70%)
@@ -1532,7 +1532,7 @@ hsl(270 60% 50% / 15%)
 
 <h3 id="HSL_transparency_variations">HSL transparency variations</h3>
 
-<pre class="notranslate">hsla(240, 100%, 50%, .05)    <span style="background: hsla(240,100%,50%,0.05);"> /*   5% opaque blue */ </span>
+<pre>hsla(240, 100%, 50%, .05)    <span style="background: hsla(240,100%,50%,0.05);"> /*   5% opaque blue */ </span>
 hsla(240, 100%, 50%, .4)     <span style="background: hsla(240,100%,50%,0.4);"> /*  40% opaque blue */ </span>
 hsla(240, 100%, 50%, .7)     <span style="background: hsla(240,100%,50%,0.7);"> /*  70% opaque blue */ </span>
 hsla(240, 100%, 50%, 1)      <span style="background: hsla(240,100%,50%,1);"> /* full opaque blue */ </span>

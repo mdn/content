@@ -43,7 +43,7 @@ tags:
 
 <p>In this example, I have a containing div with a class of wrapper and, inside are five child elements.</p>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
   &lt;div&gt;Two&lt;/div&gt;
   &lt;div&gt;Three&lt;/div&gt;
@@ -54,13 +54,13 @@ tags:
 
 <p>I make the <code>.wrapper</code> a grid container.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
 }
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -99,7 +99,7 @@ tags:
 <p>I have now created a grid with three 200-pixel-wide column tracks. The child items will be laid out on this grid one in each grid cell.</p>
 
 <div id="grid_first">
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
   &lt;div&gt;Two&lt;/div&gt;
   &lt;div&gt;Three&lt;/div&gt;
@@ -108,14 +108,14 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: 200px 200px 200px;
 }
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -141,7 +141,7 @@ tags:
 <p>Tracks can be defined using any length unit. Grid also introduces an additional length unit to help us create flexible grid tracks. The new <code>fr</code> unit represents a fraction of the available space in the grid container. The next grid definition would create three equal width tracks that grow and shrink according to the available space.</p>
 
 <div id="fr_unit_ls">
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
   &lt;div&gt;Two&lt;/div&gt;
   &lt;div&gt;Three&lt;/div&gt;
@@ -150,14 +150,14 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -181,7 +181,7 @@ tags:
 
 <p>In this next example, we create a definition with a <code>2fr</code> track then two <code>1fr</code> tracks. The available space is split into four. Two parts are given to the first track and one part each to the next two tracks.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
 }
@@ -189,7 +189,7 @@ tags:
 
 <p>In this final example, we mix absolute sized tracks with fraction units. The first track is 500 pixels, so the fixed width is taken away from the available space. The remaining space is divided into three and assigned in proportion to the two flexible tracks.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: 500px 1fr 2fr;
 }
@@ -199,7 +199,7 @@ tags:
 
 <p>Large grids with many tracks can use the <code>repeat()</code> notation, to repeat all or a section of the track listing. For example the grid definition:</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -207,7 +207,7 @@ tags:
 
 <p>Can also be written as:</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -215,7 +215,7 @@ tags:
 
 <p>Repeat notation can be used for a part of the track listing. In this next example I have created a grid with an initial 20-pixel track, then a repeating section of 6 <code>1fr</code> tracks then a final 20-pixel track.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: 20px repeat(6, 1fr) 20px;
 }
@@ -223,7 +223,7 @@ tags:
 
 <p>Repeat notation takes the track listing, and uses it to create a repeating pattern of tracks. In this next example, my grid will consist of 10 tracks, a <code>1fr</code> track, and then followed by a <code>2fr</code> track. This pattern will be repeated five times.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(5, 1fr 2fr);
 }
@@ -239,7 +239,7 @@ tags:
 
 <p>In the below example we use <code>grid-auto-rows</code> to ensure that tracks created in the implicit grid are 200 pixels tall.</p>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
   &lt;div&gt;Two&lt;/div&gt;
   &lt;div&gt;Three&lt;/div&gt;
@@ -248,7 +248,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 200px;
@@ -256,7 +256,7 @@ tags:
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -282,7 +282,7 @@ tags:
 
 <p>Grid has a solution for this with the {{cssxref("minmax()", "minmax()")}} function. In this next example I am using <code>minmax()</code> in the value of {{cssxref("grid-auto-rows")}}. This means automatically created rows will be a minimum of 100 pixels tall, and a maximum of <code>auto</code>. Using <code>auto</code> means that the size will look at the content size and will stretch to give space for the tallest item in a cell, in this row.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(100px, auto);
@@ -290,7 +290,7 @@ tags:
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -308,7 +308,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
   &lt;div&gt;Two
     &lt;p&gt;I have some more content in.&lt;/p&gt;
@@ -338,7 +338,7 @@ tags:
 
 <p>The second item starts on grid column line 1, and spans one track. This is the default so I do not need to specify the end line. It also spans two row tracks from row line 3 to row line 5. The other items will place themselves into empty spaces on the grid.</p>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box1"&gt;One&lt;/div&gt;
   &lt;div class="box2"&gt;Two&lt;/div&gt;
   &lt;div class="box3"&gt;Three&lt;/div&gt;
@@ -347,7 +347,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 100px;
@@ -368,7 +368,7 @@ tags:
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -406,7 +406,7 @@ tags:
 
 <p><em>Gutters</em> or <em>alleys</em> between grid cells can be created using the {{cssxref("column-gap")}} and {{cssxref("row-gap")}} properties, or the shorthand {{cssxref("gap")}}. In the below example, I am creating a 10-pixel gap between columns and a <code>1em</code> gap between rows.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 10px;
@@ -420,7 +420,7 @@ tags:
  Browsers are updating to remove this prefix, however the prefixed versions will be maintained as aliases making them safe to use. </p>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
   &lt;div&gt;Two&lt;/div&gt;
   &lt;div&gt;Three&lt;/div&gt;
@@ -430,7 +430,7 @@ tags:
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   column-gap: 10px;
@@ -459,7 +459,7 @@ tags:
 <p>A grid item can become a grid container. In the following example, I have the three-column grid that I created earlier, with our two positioned items. In this case the first item has some sub-items. As these items are not direct children of the grid they do not participate in grid layout and so display in a normal document flow.</p>
 
 <div id="nesting">
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box box1"&gt;
     &lt;div class="nested"&gt;a&lt;/div&gt;
     &lt;div class="nested"&gt;b&lt;/div&gt;
@@ -476,7 +476,7 @@ tags:
 
 <p>If I set <code>box1</code> to <code>display: grid</code> I can give it a track definition and it too will become a grid. The items then lay out on this new grid.</p>
 
-<pre class="brush: css notranslate">.box1 {
+<pre class="brush: css">.box1 {
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
@@ -487,7 +487,7 @@ tags:
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -533,7 +533,7 @@ tags:
 
 <p>In the current specification, we would edit the above nested grid example to change the track definition of <code>grid-template-columns: repeat(3, 1fr)</code>, to <code>grid-template-columns: subgrid</code>. The nested grid will then use the parent grid tracks to layout items.</p>
 
-<pre class="brush: css notranslate">.box1 {
+<pre class="brush: css">.box1 {
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
@@ -548,7 +548,7 @@ tags:
 <p>Grid items can occupy the same cell. If we return to our example with items positioned by line number, we can change this to make two items overlap.</p>
 
 <div id="l_ex">
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box box1"&gt;One&lt;/div&gt;
   &lt;div class="box box2"&gt;Two&lt;/div&gt;
   &lt;div class="box box3"&gt;Three&lt;/div&gt;
@@ -557,7 +557,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 100px;
@@ -578,7 +578,7 @@ tags:
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -605,7 +605,7 @@ tags:
 
 <p>We can control the order in which items stack up by using the <code>z-index</code> property - just like positioned items. If we give <code>box2</code> a lower <code>z-index</code> than <code>box1</code> it will display below <code>box1</code> in the stack.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 100px;
@@ -628,7 +628,7 @@ tags:
 </pre>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box box1"&gt;One&lt;/div&gt;
   &lt;div class="box box2"&gt;Two&lt;/div&gt;
   &lt;div class="box box3"&gt;Three&lt;/div&gt;
@@ -637,7 +637,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;

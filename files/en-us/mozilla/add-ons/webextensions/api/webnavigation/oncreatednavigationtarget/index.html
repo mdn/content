@@ -27,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate brush: js">browser.webNavigation.onCreatedNavigationTarget.addListener(
+<pre class="brush: js">browser.webNavigation.onCreatedNavigationTarget.addListener(
   <var>listener</var>,                   // function
   <var>filter</var>                      // optional object
 )
@@ -95,7 +95,7 @@ browser.webNavigation.onCreatedNavigationTarget.hasListener(<var>listener</var>)
 
 <p>Logs the target URL, source Tab ID, and source frame ID for <code>onCreatedNavigationTarget</code>, if the target's hostname contains "example.com" or starts with "developer".</p>
 
-<pre class="notranslate brush: js">const filter = {
+<pre class="brush: js">const filter = {
   url:
   [
     {hostContains: "example.com"},

@@ -26,7 +26,7 @@ slug: Mozilla/Developer_guide/Source_Code/CVS
 
 <p>The "cvsroot" (repository identification string) used for anonymous access to Mozilla CVS is</p>
 
-<pre class="eval"><a class="link-mailto" href="mailto::pserver:anonymous@cvs-mirror.mozilla.org">:pserver:anonymous@cvs-mirror.mozilla.org</a>:/cvsroot
+<pre class="eval">:pserver:anonymous@cvs-mirror.mozilla.org:/cvsroot
 </pre>
 
 <p>If you are using a graphical CVS interface, use the following server data:</p>
@@ -78,7 +78,7 @@ slug: Mozilla/Developer_guide/Source_Code/CVS
 
 <p>To check out a new source tree from scratch, get the <code>client.mk</code> file which contains makefile instructions which are used to pull the rest of the tree:</p>
 
-<pre class="eval">$ cvs -d <a class="link-mailto" href="mailto::pserver:anonymous@cvs-mirror.mozilla.org">:pserver:anonymous@cvs-mirror.mozilla.org</a>:/cvsroot co mozilla/client.mk
+<pre class="eval">$ cvs -d :pserver:anonymous@cvs-mirror.mozilla.org:/cvsroot co mozilla/client.mk
 </pre>
 
 <p>Note: if you have already set up a <code><a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options#using_a_.mozconfig_configuration_file">.mozconfig</a></code> file, you may also need to check out the following files:</p>
@@ -100,7 +100,7 @@ slug: Mozilla/Developer_guide/Source_Code/CVS
 
 <p>If you want to check out the source code of a specific <a class="external" href="https://mozilla-version-control-tools.readthedocs.io/en/latest/hgmozilla/dag.html#creating-dag-branches">CVS branch</a>, use</p>
 
-<pre class="eval">$ cvs -d <a class="link-mailto" href="mailto::pserver:anonymous@cvs-mirror.mozilla.org">:pserver:anonymous@cvs-mirror.mozilla.org</a>:/cvsroot co -r BRANCH mozilla/client.mk
+<pre class="eval">$ cvs -d :pserver:anonymous@cvs-mirror.mozilla.org:/cvsroot co -r BRANCH mozilla/client.mk
 </pre>
 
 <p>instead. To, for example, pull the Firefox 2.0/Thunderbird 2.0/SeaMonkey 1.1 development branch, replace BRANCH above with MOZILLA_1_8_BRANCH. For available branch tags in Mozilla, see <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/CVS_Tags">CVS Tags</a>.</p>

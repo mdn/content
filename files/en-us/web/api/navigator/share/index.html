@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <em>sharePromise</em> = navigator.share(<var>data</var>);
+<pre class="brush: js">const <em>sharePromise</em> = navigator.share(<var>data</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -49,7 +49,7 @@ tags:
     source code</a>) there is a button which, when clicked, invokes the Web Share API to
   share MDN's URL. The JavaScript looks like this:</p>
 
-<pre class="brush: js notranslate">const shareData = {
+<pre class="brush: js">const shareData = {
   title: 'MDN',
   text: 'Learn web development on MDN!',
   url: 'https://developer.mozilla.org',
@@ -78,7 +78,7 @@ btn.addEventListener('click', async () =&gt; {
   data object passed to <code>canShare()</code> only supports the <code>files</code>
   property. Image, video, audio, and text files can be shared.</p>
 
-<pre class="brush: js notranslate">if (navigator.canShare &amp;&amp; navigator.canShare({ files: filesArray })) {
+<pre class="brush: js">if (navigator.canShare &amp;&amp; navigator.canShare({ files: filesArray })) {
   navigator.share({
     files: filesArray,
     title: 'Pictures',

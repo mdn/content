@@ -13,7 +13,7 @@ tags:
 
 <p>The <strong><code>mask-position</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the initial position, relative to the mask position layer set by {{cssxref("mask-origin")}}, for each defined mask image.</p>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush:css no-line-numbers">/* Keyword values */
 mask-position: top;
 mask-position: bottom;
 mask-position: left;
@@ -52,7 +52,7 @@ mask-position: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -60,7 +60,7 @@ mask-position: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css; highlight[13] notranslate">#wrapper {
+<pre class="brush: css; highlight[13]">#wrapper {
   border: 1px solid black;
   width: 250px;
   height: 250px;
@@ -80,7 +80,7 @@ mask-position: unset;
 <div class="hidden">
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div id="wrapper"&gt;
+<pre class="brush: html">&lt;div id="wrapper"&gt;
   &lt;div id="masked"&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -98,7 +98,7 @@ mask-position: unset;
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">var maskPosition = document.getElementById("maskPosition");
+<pre class="brush: js">var maskPosition = document.getElementById("maskPosition");
 maskPosition.addEventListener("change", function (evt) {
   document.getElementById("masked").style.maskPosition = evt.target.value;
 });

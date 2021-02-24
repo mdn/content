@@ -45,7 +45,7 @@ tags:
 
 <p>When the user clicks a browser action's icon, close the window in which the icon was clicked:</p>
 
-<pre class="notranslate brush: js">function onRemoved() {
+<pre class="brush: js">function onRemoved() {
   console.log(`Removed window`);
 }
 
@@ -63,7 +63,7 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
 <p><br>
  Close the current, e.g. popup, window when the user clicks a button on the page:</p>
 
-<pre class="notranslate brush: js">// in a script loaded by the page in the window
+<pre class="brush: js">// in a script loaded by the page in the window
 document.querySelector('#close').addEventListener(async ({ button, }) =&gt; { try {
   if (button) return; // not a left click
   const windowId = (await browser.windows.getCurrent()).id;

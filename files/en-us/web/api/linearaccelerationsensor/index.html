@@ -36,7 +36,7 @@ tags:
 
 <p>Linear acceleration is typically read in the {{domxref('Sensor.onreading')}} event callback. In the example below this occurs sixty times a second.</p>
 
-<pre class="brush: js notranslate">let laSensor = new LinearAccelerationSensor({frequency: 60});
+<pre class="brush: js">let laSensor = new LinearAccelerationSensor({frequency: 60});
 
 laSensor.addEventListener('reading', e =&gt; {
   console.log("Linear acceleration along the X-axis " + laSensor.x);

@@ -63,11 +63,11 @@ tags:
 
 <p>Let's look at an example:</p>
 
-<pre class="brush: html notranslate">&lt;button&gt;Click Me!&lt;/button&gt;</pre>
+<pre class="brush: html">&lt;button&gt;Click Me!&lt;/button&gt;</pre>
 
 <p>And now the JavaScript:</p>
 
-<pre class="brush: js notranslate">const btn = document.querySelector('button');
+<pre class="brush: js">const btn = document.querySelector('button');
 
 function sendData( data ) {
   console.log( 'Sending data' );
@@ -130,11 +130,11 @@ btn.addEventListener( 'click', function() {
 
 <h4 id="Using_a_standalone_FormData_object">Using a standalone FormData object</h4>
 
-<pre class="brush: html notranslate">&lt;button&gt;Click Me!&lt;/button&gt;</pre>
+<pre class="brush: html">&lt;button&gt;Click Me!&lt;/button&gt;</pre>
 
 <p>You should be familiar with that HTML sample. Now for the JavaScript:</p>
 
-<pre class="brush: js notranslate">const btn = document.querySelector('button');
+<pre class="brush: js">const btn = document.querySelector('button');
 
 function sendData( data ) {
   const XHR = new XMLHttpRequest(),
@@ -176,7 +176,7 @@ btn.addEventListener( 'click', function()
 
 <p>The HTML is typical:</p>
 
-<pre class="brush: html notranslate">&lt;form id="myForm"&gt;
+<pre class="brush: html">&lt;form id="myForm"&gt;
   &lt;label for="myName"&gt;Send me your name:&lt;/label&gt;
   &lt;input id="myName" name="name" value="John"&gt;
   &lt;input type="submit" value="Send Me!"&gt;
@@ -184,7 +184,7 @@ btn.addEventListener( 'click', function()
 
 <p>But JavaScript takes over the form:</p>
 
-<pre class="brush: js notranslate">window.addEventListener( "load", function () {
+<pre class="brush: js">window.addEventListener( "load", function () {
   function sendData() {
     const XHR = new XMLHttpRequest();
 
@@ -235,7 +235,7 @@ btn.addEventListener( 'click', function()
 
 <p>In the following example, we use the {{domxref("FileReader")}} API to access binary data and then build the multi-part form data request by hand:</p>
 
-<pre class="brush: html notranslate">&lt;form id="theForm"&gt;
+<pre class="brush: html">&lt;form id="theForm"&gt;
   &lt;p&gt;
     &lt;label for="theText"&gt;text data:&lt;/label&gt;
     &lt;input id="theText" name="myText" value="Some text data" type="text"&gt;
@@ -249,7 +249,7 @@ btn.addEventListener( 'click', function()
 
 <p>As you see, the HTML is a standard <code>&lt;form&gt;</code>. There's nothing magical going on. The "magic" is in the JavaScript:</p>
 
-<pre class="brush: js notranslate">// Because we want to access DOM nodes,
+<pre class="brush: js">// Because we want to access DOM nodes,
 // we initialize our script at page load.
 window.addEventListener( 'load', function () {
 

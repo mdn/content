@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <var>p</var> = new Proxy(<var>target</var>, {
+<pre class="brush: js">const <var>p</var> = new Proxy(<var>target</var>, {
   preventExtensions: function(<var>target</var>) {
   }
 });
@@ -63,7 +63,7 @@ tags:
 
 <p>The following code traps {{jsxref("Object.preventExtensions()")}}.</p>
 
-<pre class="brush: js notranslate">const p = new Proxy({}, {
+<pre class="brush: js">const p = new Proxy({}, {
   preventExtensions: function(target) {
     console.log('called');
     Object.preventExtensions(target);
@@ -77,7 +77,7 @@ console.log(Object.preventExtensions(p)); // "called"
 
 <p>The following code violates the invariant.</p>
 
-<pre class="brush: js example-bad notranslate">const p = new Proxy({}, {
+<pre class="brush: js example-bad">const p = new Proxy({}, {
   preventExtensions: function(target) {
     return true;
   }

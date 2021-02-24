@@ -45,7 +45,7 @@ tags:
 
 <p>First we need to define the processor, and register it. Note that this should be done in a separate file.</p>
 
-<pre class="brush: js notranslate">// test-processor.js
+<pre class="brush: js">// test-processor.js
 class TestProcessor extends AudioWorkletProcessor {
   constructor () {
     super()
@@ -76,7 +76,7 @@ registerProcessor('test-processor', TestProcessor)
 
 <p>Next, in our main scripts file we'll load the processor, create an instance of <code>AudioWorkletNode</code> — passing the name of the processor to it — and connect the node to an audio graph. We should see the output of <code>console.log</code> calls in the console:</p>
 
-<pre class="brush: js notranslate">const audioContext = new AudioContext()
+<pre class="brush: js">const audioContext = new AudioContext()
 await audioContext.audioWorklet.addModule('test-processor.js')
 const testNode = new AudioWorkletNode(audioContext, 'test-processor')
 testNode.connect(audioContext.destination)

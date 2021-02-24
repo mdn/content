@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var><code>var <em>isIntersecting</em> = </code>IntersectionObserverEntry</var>.isIntersecting;
+<pre class="brush: js"><var><code>var <em>isIntersecting</em> = </code>IntersectionObserverEntry</var>.isIntersecting;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -39,7 +39,7 @@ tags:
   many targeted elements are currently intersecting with the
   {{domxref("IntersectionObserver.root", "intersection root", "", 1)}}.</p>
 
-<pre class="brush: js notranslate">function intersectionCallback(entries) {
+<pre class="brush: js">function intersectionCallback(entries) {
   entries.forEach(function(entry) {
     if (entry.isIntersecting) {
       intersectingCount += 1;

@@ -13,7 +13,7 @@ tags:
 
 <p class="summary">This pattern is a list of "card" components with optional footers.</p>
 
-<p><img alt="Three card components in a row" src="https://mdn.mozillademos.org/files/16278/cards.png" style="height: 1172px; width: 1629px;"></p>
+<p><img alt="Three card components in a row" src="cards.png"></p>
 
 <h2 id="Requirements">Requirements</h2>
 
@@ -35,7 +35,7 @@ tags:
 
 <p>The card is laid out using <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a> despite being a single dimensional layout, as it enables the use of content sizing for the grid tracks. When setting up the single column grid I use the following:</p>
 
-<pre class="brush: css notranslate">.card {
+<pre class="brush: css">.card {
   display: grid;
   grid-template-rows: max-content 200px 1fr;
 }</pre>
@@ -79,6 +79,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{Cssxref("grid-template-columns")}}, {{Cssxref("grid-template-rows")}}, {{Cssxref("grid-gap")}}</li>
+ <li>{{Cssxref("grid-template-columns")}}, {{Cssxref("grid-template-rows")}}, {{Cssxref("gap")}}</li>
  <li><a href="https://inclusive-components.design/cards/">Inclusive Components: Card</a></li>
 </ul>

@@ -92,7 +92,7 @@ browser.runtime.onMessageExternal.hasListener(listener)
 
 <p>In this example the extension "blue@mozilla.org" sends a message to the extension "red@mozilla.org":</p>
 
-<pre class="notranslate brush: js">// sender: browser.runtime.id == "blue@mozilla.org"
+<pre class="brush: js">// sender: browser.runtime.id == "blue@mozilla.org"
 
 // Send a message to the extension whose ID is "red@mozilla.org"
 browser.runtime.sendMessage(
@@ -100,7 +100,7 @@ browser.runtime.sendMessage(
     "my message"
   );</pre>
 
-<pre class="notranslate brush: js">// recipient: browser.runtime.id == "red@mozilla.org"
+<pre class="brush: js">// recipient: browser.runtime.id == "red@mozilla.org"
 
 function handleMessage(message, sender) {
   // check that the message is from "blue@mozilla.org"

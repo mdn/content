@@ -14,7 +14,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">[<em>rv</em>] = await <em>expression</em>;</pre>
+<pre class="brush: js">[<em>rv</em>] = await <em>expression</em>;</pre>
 
 <dl>
   <dt><code>expression</code></dt>
@@ -55,7 +55,7 @@ tags:
 <p>If a <code>Promise</code> is passed to an <code>await</code> expression, it waits for
   the <code>Promise</code> to be fulfilled and returns the fulfilled value.</p>
 
-<pre class="brush: js notranslate">function resolveAfter2Seconds(x) {
+<pre class="brush: js">function resolveAfter2Seconds(x) {
   return new Promise(resolve =&gt; {
     setTimeout(() =&gt; {
       resolve(x);
@@ -76,7 +76,7 @@ f1();
 <p>{{jsxref("Global_Objects/Promise/then", "Thenable objects")}} will be fulfilled just
   the same.</p>
 
-<pre class="brush: js notranslate">async function f2() {
+<pre class="brush: js">async function f2() {
   const thenable = {
     then: function(resolve, _reject) {
       resolve('resolved!')
@@ -93,7 +93,7 @@ f2();
 <p>If the value is not a <code>Promise</code>, it converts the value to a resolved
   <code>Promise</code>, and waits for it.</p>
 
-<pre class="brush: js notranslate">async function f3() {
+<pre class="brush: js">async function f3() {
   var y = await 20;
   console.log(y); // 20
 }
@@ -104,7 +104,7 @@ f3();</pre>
 
 <p>If the <code>Promise</code> is rejected, the rejected value is thrown.</p>
 
-<pre class="brush: js notranslate">async function f4() {
+<pre class="brush: js">async function f4() {
   try {
     var z = await Promise.reject(30);
   } catch(e) {
@@ -118,7 +118,7 @@ f4();</pre>
 
 <p>Handle rejected <code>Promise</code> without try block.</p>
 
-<pre class="brush: js notranslate">var response = await promisedFunction().catch((err) =&gt; { console.error(err); });
+<pre class="brush: js">var response = await promisedFunction().catch((err) =&gt; { console.error(err); });
 // response will be undefined if the promise is rejected
 </pre>
 
@@ -128,7 +128,7 @@ f4();</pre>
 
 <p>Here is an example of a simple module using the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> and specifying await within the <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/export">export statement</a></code>. Any modules that include this will wait for the fetch to resolve before running any code.</p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 // fetch request
 const colors = fetch('../data/colors.json')
   .then(response => response.json());

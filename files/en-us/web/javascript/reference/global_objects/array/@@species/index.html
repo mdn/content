@@ -14,7 +14,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Array[Symbol.species]
+<pre class="brush: js">Array[Symbol.species]
 </pre>
 
 <h3 id="Return_value">Return value</h3>
@@ -34,7 +34,7 @@ tags:
 <p>The <code>species</code> property returns the default constructor function, which is
   the <code>Array</code> constructor for <code>Array</code> objects:</p>
 
-<pre class="brush: js notranslate">Array[Symbol.species]; // function Array()</pre>
+<pre class="brush: js">Array[Symbol.species]; // function Array()</pre>
 
 <h3 id="Species_in_derived_objects">Species in derived objects</h3>
 
@@ -43,7 +43,7 @@ tags:
   want to overwrite this, in order to return parent <code>Array</code> objects in your
   derived class methods:</p>
 
-<pre class="brush: js notranslate">class MyArray extends Array {
+<pre class="brush: js">class MyArray extends Array {
   // Overwrite MyArray species to the parent Array constructor
   static get [Symbol.species]() { return Array; }
 }</pre>

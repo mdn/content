@@ -37,7 +37,7 @@ tags:
 
 <p>For example, if your app uses a WebGL uniform named <code>uProjectionMatrix</code> to pass the projection matrix to your shaders, you might use code like this to pass the projection matrix for the <code>view</code> currently being rendered:</p>
 
-<pre class="brush: js notranslate">gl.uniformMatrix4fv(uProjectionMatrix, false, view.projectionMatrix);</pre>
+<pre class="brush: js">gl.uniformMatrix4fv(uProjectionMatrix, false, view.projectionMatrix);</pre>
 
 <h3 id="Customizing_the_projection_matrix">Customizing the projection matrix</h3>
 
@@ -51,7 +51,7 @@ tags:
 
 <p>Once you have the viewing frustum, you can compute the perspective projection matrix that WebGL uses when rendering the scene using a function like this:</p>
 
-<pre class="brush: js notranslate">function makePerspectiveMatrix(fieldOfViewInRadians, aspectRatio, near, far) {
+<pre class="brush: js">function makePerspectiveMatrix(fieldOfViewInRadians, aspectRatio, near, far) {
   var f = 1.0 / Math.tan(fieldOfViewInRadians / 2);
   var rangeInv = 1 / (near - far);
 

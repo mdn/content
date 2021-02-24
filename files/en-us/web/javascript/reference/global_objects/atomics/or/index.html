@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Atomics.or(<var>typedArray</var>, <var>index</var>, <var>value</var>)
+<pre class="brush: js">Atomics.or(<var>typedArray</var>, <var>index</var>, <var>value</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -96,7 +96,7 @@ tags:
 <p>For example, a bitwise OR of <code>5 | 1</code> results in <code>0101</code> which is 5
   in decimal.</p>
 
-<pre class="brush: plain notranslate">5  0101
+<pre class="brush: plain">5  0101
 1  0001
    ----
 5  0101
@@ -106,7 +106,7 @@ tags:
 
 <h3 id="Using_or">Using or</h3>
 
-<pre class="brush: js notranslate">const sab = new SharedArrayBuffer(1024);
+<pre class="brush: js">const sab = new SharedArrayBuffer(1024);
 const ta = new Uint8Array(sab);
 ta[0] = 2;
 

@@ -48,16 +48,16 @@ tags:
 
 <p>Before we can make a component, we should create a new file for it. In fact, we should make a directory just for our components. The following commands make a <code>components</code> directory and then, within that, a file called <code>Todo.js</code>. Make sure you're in the root of your app before you run these!</p>
 
-<pre class="brush: bash notranslate">mkdir src/components
+<pre class="brush: bash">mkdir src/components
 touch src/components/Todo.js</pre>
 
 <p>Our new <code>Todo.js</code> file is currently empty! Open it up and give it its first line:</p>
 
-<pre class="brush: js notranslate">import React from "react";</pre>
+<pre class="brush: js">import React from "react";</pre>
 
 <p>Since we're going to make a component called <code>Todo</code>, you can start adding the code for that to <code>Todo.js</code> too, as follows. In this code, we define the function and export it on the same line:</p>
 
-<pre class="brush: js notranslate">export default function Todo() {
+<pre class="brush: js">export default function Todo() {
   return (
 
   );
@@ -65,7 +65,7 @@ touch src/components/Todo.js</pre>
 
 <p>This is OK so far, but our component has to return something! Go back to <code>src/App.js</code>, copy the first <code><a href="/en-US/docs/Web/HTML/Element/li">&lt;li&gt;</a></code> from inside the unordered list, and paste it into <code>Todo.js</code> so that it reads like this:</p>
 
-<pre class="brush: js notranslate">export default function Todo() {
+<pre class="brush: js">export default function Todo() {
   return (
     &lt;li className="todo stack-small"&gt;
       &lt;div className="c-cb"&gt;
@@ -92,11 +92,11 @@ touch src/components/Todo.js</pre>
 
 <p>Our <code>Todo</code> component is complete, at least for now; now we can use it. In <code>App.js</code>, add the following line near the top of the file to import <code>Todo</code>:</p>
 
-<pre class="brush: js notranslate">import Todo from "./components/Todo";</pre>
+<pre class="brush: js">import Todo from "./components/Todo";</pre>
 
 <p>With this component imported, you can replace all of the <code>&lt;li&gt;</code> elements in <code>App.js</code> with <code>&lt;Todo /&gt;</code> component calls. Your <code>&lt;ul&gt;</code> should read like this:</p>
 
-<pre class="brush: js notranslate">&lt;ul
+<pre class="brush: js">&lt;ul
   role="list"
   className="todo-list stack-large stack-exception"
   aria-labelledby="list-heading"
@@ -122,7 +122,7 @@ touch src/components/Todo.js</pre>
 
 <p>In <code>App.js</code>, give each <code>&lt;Todo /&gt;</code> a name prop. Let’s use the names of our tasks that we had before:</p>
 
-<pre class="brush: js notranslate">&lt;Todo name="Eat" /&gt;
+<pre class="brush: js">&lt;Todo name="Eat" /&gt;
 &lt;Todo name="Sleep" /&gt;
 &lt;Todo name="Repeat" /&gt;</pre>
 
@@ -134,7 +134,7 @@ touch src/components/Todo.js</pre>
 
 <p>Putting all that together, your <code>Todo()</code> function should read like this:</p>
 
-<pre class="brush: js notranslate">export default function Todo(props) {
+<pre class="brush: js">export default function Todo(props) {
   return (
     &lt;li className="todo stack-small"&gt;
       &lt;div className="c-cb"&gt;
@@ -163,13 +163,13 @@ touch src/components/Todo.js</pre>
 
 <p>In our original static list, only <code>Eat</code> was checked. Once again, we want to reuse <em>most</em> of the UI that makes up a <code>&lt;Todo /&gt;</code>  component, but change one thing. That's a good job for another prop!  Give each <code>&lt;Todo /&gt;</code> call in <code>App.js</code> a new prop of <code>completed</code>. The first (<code>Eat</code>) should have a value of <code>true</code>; the rest should be <code>false</code>:</p>
 
-<pre class="brush: js notranslate">&lt;Todo name="Eat" completed={true} /&gt;
+<pre class="brush: js">&lt;Todo name="Eat" completed={true} /&gt;
 &lt;Todo name="Sleep" completed={false} /&gt;
 &lt;Todo name="Repeat" completed={false} /&gt;</pre>
 
 <p>As before, we must go back to <code>Todo.js</code> to actually use these props. Change the <code>defaultChecked</code> attribute on the <code>&lt;input /&gt;</code> so that its value is equal to the <code>completed</code> prop. Once you’re done, the Todo component's <code>&lt;input /&gt;</code> element will read like this:</p>
 
-<pre class="brush: js notranslate">&lt;input id="todo-0" type="checkbox" defaultChecked={props.completed} /&gt;</pre>
+<pre class="brush: js">&lt;input id="todo-0" type="checkbox" defaultChecked={props.completed} /&gt;</pre>
 
 <p>And your browser should update to show only <code>Eat</code> being checked:</p>
 
@@ -183,13 +183,13 @@ touch src/components/Todo.js</pre>
 
 <p>To follow the same pattern we had initially, let's give each instance of the <code>&lt;Todo /&gt;</code> component an ID in the format of <code>todo-i</code>, where <code>i</code> gets larger by one every time:</p>
 
-<pre class="brush: js notranslate">&lt;Todo name="Eat" completed={true} id="todo-0" /&gt;
+<pre class="brush: js">&lt;Todo name="Eat" completed={true} id="todo-0" /&gt;
 &lt;Todo name="Sleep" completed={false} id="todo-1" /&gt;
 &lt;Todo name="Repeat" completed={false} id="todo-2" /&gt;</pre>
 
 <p>Now go back to <code>Todo.js</code> and make use of the <code>id</code> prop. It needs to replace the value of the <code>id</code> attribute of the <code>&lt;input /&gt;</code> element, as well as the value of its label's <code>htmlFor</code> attribute:</p>
 
-<pre class="brush: js notranslate">&lt;div className="c-cb"&gt;
+<pre class="brush: js">&lt;div className="c-cb"&gt;
   &lt;input id={props.id} type="checkbox" defaultChecked={props.completed} /&gt;
   &lt;label className="todo-label" htmlFor={props.id}&gt;
     {props.name}
@@ -208,7 +208,7 @@ touch src/components/Todo.js</pre>
 
 <p>In <code>src/index.js</code>, make a new <code>const</code> beneath the final import, but above <code>ReactDOM.render()</code>:</p>
 
-<pre class="brush: js notranslate">const DATA = [
+<pre class="brush: js">const DATA = [
   { id: "todo-0", name: "Eat", completed: true },
   { id: "todo-1", name: "Sleep", completed: false },
   { id: "todo-2", name: "Repeat", completed: false }
@@ -216,7 +216,7 @@ touch src/components/Todo.js</pre>
 
 <p>Next, we'll pass <code>DATA</code> to <code>&lt;App /&gt;</code> as a prop, called <code>tasks</code>. The final line of <code>src/index.js</code> should read like this:</p>
 
-<pre class="brush: js notranslate">ReactDOM.render(&lt;App tasks={DATA} /&gt;, document.getElementById("root"));</pre>
+<pre class="brush: js">ReactDOM.render(&lt;App tasks={DATA} /&gt;, document.getElementById("root"));</pre>
 
 <p>This array is now available to the App component as <code>props.tasks</code>. You can <code>console.log()</code> it to check, if you’d like.</p>
 
@@ -230,11 +230,11 @@ touch src/components/Todo.js</pre>
 
 <p>Above the return statement of <code>App()</code>, make a new <code>const</code> called <code>taskList</code> and use <code>map()</code> to transform it. Let's start by turning our <code>tasks</code> array into something simple: the <code>name</code> of each task:</p>
 
-<pre class="brush: js notranslate">const taskList = props.tasks.map(task =&gt; task.name);</pre>
+<pre class="brush: js">const taskList = props.tasks.map(task =&gt; task.name);</pre>
 
 <p>Let’s try replacing all the children of the <code>&lt;ul&gt;</code> with <code>taskList</code>:</p>
 
-<pre class="brush: js notranslate">&lt;ul
+<pre class="brush: js">&lt;ul
   role="list"
   className="todo-list stack-large stack-exception"
   aria-labelledby="list-heading"
@@ -248,11 +248,11 @@ touch src/components/Todo.js</pre>
 
 <p>To fix this, we need to return a <code>&lt;Todo /&gt;</code> component from our <code>map()</code> function — remember that JSX allows us to mix up JavaScript and markup structures! Let's try the following instead of what we have already:</p>
 
-<pre class="brush: js notranslate"> const taskList = props.tasks.map(task =&gt; &lt;Todo /&gt;);</pre>
+<pre class="brush: js"> const taskList = props.tasks.map(task =&gt; &lt;Todo /&gt;);</pre>
 
 <p>Look again at your app; now our tasks look more like they used to, but they’re missing the names of the tasks themselves.  Remember that each task we map over has the <code>id</code>, <code>name</code>, and <code>checked</code> properties we want to pass into our <code>&lt;Todo /&gt;</code> component. If we put that knowledge together, we get code like this:</p>
 
-<pre class="brush: js notranslate">const taskList = props.tasks.map(task =&gt; (
+<pre class="brush: js">const taskList = props.tasks.map(task =&gt; (
   &lt;Todo id={task.id} name={task.name} completed={task.completed} /&gt;
 ));</pre>
 
@@ -264,7 +264,7 @@ touch src/components/Todo.js</pre>
 
 <p>Because keys should be unique, we're going to re-use the <code>id</code> of each task object as its key. Update your <code>taskList</code> constant like so:</p>
 
-<pre class="brush: js notranslate">const taskList = props.tasks.map(task =&gt; (
+<pre class="brush: js">const taskList = props.tasks.map(task =&gt; (
     &lt;Todo
       id={task.id}
       name={task.name}
@@ -287,7 +287,7 @@ touch src/components/Todo.js</pre>
 
 <p>Since we know we need both, we can batch some of the file creation work together with a terminal command. Run this command in your terminal, taking care that you're in the root directory of your app:</p>
 
-<pre class="brush: bash notranslate">touch src/components/Form.js src/components/FilterButton.js</pre>
+<pre class="brush: bash">touch src/components/Form.js src/components/FilterButton.js</pre>
 
 <h3 id="The_&lt;Form_&gt;">The <code>&lt;Form /&gt;</code></h3>
 
@@ -302,7 +302,7 @@ touch src/components/Todo.js</pre>
 
 <p>Your <code>Form.js</code> file should read like this:</p>
 
-<pre class="brush: js notranslate">import React from "react";
+<pre class="brush: js">import React from "react";
 
 function Form(props) {
   return (
@@ -334,7 +334,7 @@ export default Form;</pre>
 
 <p>The file should read like this:</p>
 
-<pre class="brush: js notranslate">import React from "react";
+<pre class="brush: js">import React from "react";
 
 function FilterButton(props) {
   return (
@@ -360,7 +360,7 @@ export default FilterButton;</pre>
 
 <p>Then, update the <code>return</code> statement of <code>App()</code> so that it renders our components. When you’re done, <code>App.js</code> will read like this:</p>
 
-<pre class="brush: js notranslate">import React from "react";
+<pre class="brush: js">import React from "react";
 import Form from "./components/Form";
 import FilterButton from "./components/FilterButton";
 import Todo from "./components/Todo";

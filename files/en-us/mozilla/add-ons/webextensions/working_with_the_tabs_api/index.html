@@ -161,11 +161,11 @@ Define the other menu items
 
 <p>First, an event handler is added to execute <code>listTabs()</code> when <code>tabs.html</code> is loaded:</p>
 
-<pre class="notranslate brush: js">document.addEventListener("DOMContentLoaded", listTabs);</pre>
+<pre class="brush: js">document.addEventListener("DOMContentLoaded", listTabs);</pre>
 
 <p>The first thing that <code>listTabs()</code> does is to call <code>getCurrentWindowTabs()</code>. This is where {{WebExtAPIRef("tabs.query()")}} is used to get a {{WebExtAPIRef("tabs.Tab")}} object for the tabs in the current window:</p>
 
-<pre class="notranslate brush: js">function getCurrentWindowTabs() {
+<pre class="brush: js">function getCurrentWindowTabs() {
   return browser.tabs.query({currentWindow: true});
 }
 </pre>
@@ -181,7 +181,7 @@ Define the other menu items
 	<li>Clear the content of the <code>tabs-list</code> <code>div</code>.</li>
 </ol>
 
-<pre class="notranslate brush: js">function listTabs() {
+<pre class="brush: js">function listTabs() {
  getCurrentWindowTabs().then((tabs) =&gt; {
     let tabsList = document.getElementById('tabs-list');
     let currentTabs = document.createDocumentFragment();
@@ -203,7 +203,7 @@ Define the other menu items
 	</li>
 </ol>
 
-<pre class="notranslate brush: js">    for (let tab of tabs) {
+<pre class="brush: js">    for (let tab of tabs) {
      if (!tab.active &amp;&amp; counter &lt;= limit) {
         let tabLink = document.createElement('a');
 
@@ -221,7 +221,7 @@ Define the other menu items
 
 <p>Finally, the document fragment is written to the <code>tabs-list</code> <code>div</code>:</p>
 
-<pre class="notranslate brush: js">    tabsList.appendChild(currentTabs);
+<pre class="brush: js">    tabsList.appendChild(currentTabs);
   });
 }
 </pre>
@@ -230,7 +230,7 @@ Define the other menu items
 
 <p>Another related example feature is the “Alert active tab” info option that dumps all the {{WebExtAPIRef("tabs.Tab")}} object properties for the active tab into an alert:</p>
 
-<pre class="notranslate brush: js"> else if (e.target.id === "tabs-alertinfo") {
+<pre class="brush: js"> else if (e.target.id === "tabs-alertinfo") {
    callOnActiveTab((tab) =&gt; {
      let props = "";
      for (let item in tab) {
@@ -243,7 +243,7 @@ Define the other menu items
 
 <p>Where <code>callOnActiveTab()</code> finds the active tab object by looping through the {{WebExtAPIRef("tabs.Tab")}} objects looking for the item with active set:</p>
 
-<pre class="notranslate brush: js">document.addEventListener("click", function(e) {
+<pre class="brush: js">document.addEventListener("click", function(e) {
  function callOnActiveTab(callback) {
    getCurrentWindowTabs().then((tabs) =&gt; {
      for (var tab of tabs) {
@@ -321,7 +321,7 @@ Define the other menu items
 
 <p>To implement the “menu” defined in <code>tabs.html</code>, <code>tabs.js</code> includes a listener for clicks in <code>tabs.html</code>:</p>
 
-<pre class="notranslate brush: js">document.addEventListener("click", function(e) {
+<pre class="brush: js">document.addEventListener("click", function(e) {
  function callOnActiveTab(callback) {
 
    getCurrentWindowTabs().then((tabs) =&gt; {
@@ -339,7 +339,7 @@ Define the other menu items
 
 <p>This code snippet is for the “Move active tab to the beginning of the window list” option:</p>
 
-<pre class="notranslate brush: js"> if (e.target.id === "tabs-move-beginning") {
+<pre class="brush: js"> if (e.target.id === "tabs-move-beginning") {
    callOnActiveTab((tab, tabs) =&gt; {
      var index = 0;
      if (!tab.pinned) {
@@ -357,7 +357,7 @@ Define the other menu items
 
 <p>The move code first calls <code>callOnActiveTab()</code> which in turn calls <code>getCurrentWindowTabs()</code> to get a {{WebExtAPIRef("tabs.Tab")}} object containing the active window’s tabs. It then loops through the object to find and return the active tab object:</p>
 
-<pre class="notranslate brush: js"> function callOnActiveTab(callback) {
+<pre class="brush: js"> function callOnActiveTab(callback) {
    getCurrentWindowTabs().then((tabs) =&gt; {
      for (var tab of tabs) {
        if (tab.active) {
@@ -372,7 +372,7 @@ Define the other menu items
 
 <p>A feature of tabs is that the user can <dfn>pin</dfn> tabs in a window. Pinned tabs are placed at the start of the tab list and cannot be moved. This means that the earliest position a tab can move to is the first position after any pinned tabs. So, <code>firstUnpinnedTab()</code> is called to find the position of the first unpinned tab by looping through the <code>tabs</code> object:</p>
 
-<pre class="notranslate brush: js">function firstUnpinnedTab(tabs) {
+<pre class="brush: js">function firstUnpinnedTab(tabs) {
  for (let tab of tabs) {
    if (!tab.pinned) {
      return tab.index;
@@ -383,7 +383,7 @@ Define the other menu items
 
 <p>We now have everything needed to move the tab: the active tab object from which we can get the tab <code>id</code> and the position the tab is to be moved to. So, we can implement the move:</p>
 
-<pre class="notranslate brush: js">     browser.tabs.move([tab.id], {index});</pre>
+<pre class="brush: js">     browser.tabs.move([tab.id], {index});</pre>
 
 <p>The remaining functions to duplicate, reload, create, and remove tabs are implemented similarly.</p>
 
@@ -421,7 +421,7 @@ Define the other menu items
 
 <p><code>tabs.js</code> starts by defining several constants used in the zoom code:</p>
 
-<pre class="notranslate brush: js">const ZOOM_INCREMENT = 0.2;
+<pre class="brush: js">const ZOOM_INCREMENT = 0.2;
 const MAX_ZOOM = 3;
 const MIN_ZOOM = 0.3;
 const DEFAULT_ZOOM = 1;
@@ -431,7 +431,7 @@ const DEFAULT_ZOOM = 1;
 
 <p>For the zoom in feature, this runs:</p>
 
-<pre class="notranslate brush: js"> else if (e.target.id === "tabs-add-zoom") {
+<pre class="brush: js"> else if (e.target.id === "tabs-add-zoom") {
    callOnActiveTab((tab) =&gt; {
      var gettingZoom = browser.tabs.getZoom(tab.id);
      gettingZoom.then((zoomFactor) =&gt; {
@@ -517,7 +517,7 @@ const DEFAULT_ZOOM = 1;
 
 <p>On startup, background.js sets some constants to define the CSS to be applied, titles for the “page action”, and a list of protocols the extension will work in:</p>
 
-<pre class="notranslate brush: js">const CSS = "body { border: 20px solid red; }";
+<pre class="brush: js">const CSS = "body { border: 20px solid red; }";
 const TITLE_APPLY = "Apply CSS";
 const TITLE_REMOVE = "Remove CSS";
 const APPLICABLE_PROTOCOLS = ["http:", "https:"];
@@ -525,7 +525,7 @@ const APPLICABLE_PROTOCOLS = ["http:", "https:"];
 
 <p>When first loaded, the extension uses {{WebExtAPIRef("tabs.query()")}} to get a list of all the tabs in the current browser window. It then loops through the tabs calling <code>initializePageAction()</code>.</p>
 
-<pre class="notranslate brush: js">var gettingAllTabs = browser.tabs.query({});
+<pre class="brush: js">var gettingAllTabs = browser.tabs.query({});
 
 gettingAllTabs.then((tabs) =&gt; {
  for (let tab of tabs) {
@@ -536,7 +536,7 @@ gettingAllTabs.then((tabs) =&gt; {
 
 <p><code>initializePageAction</code> uses <code>protocolIsApplicable()</code> to determine whether the active tab’s URL is one the CSS can be applied to:</p>
 
-<pre class="notranslate brush: js">function protocolIsApplicable(url) {
+<pre class="brush: js">function protocolIsApplicable(url) {
  var anchor =  document.createElement('a');
  anchor.href = url;
  return APPLICABLE_PROTOCOLS.includes(anchor.protocol);
@@ -545,7 +545,7 @@ gettingAllTabs.then((tabs) =&gt; {
 
 <p>Then, if the example can act on the tab, <code>initializePageAction()</code> sets the tab’s <code>pageAction</code> (navigation bar) icon and title to use the “off” versions before making the <code>pageAction</code> visible:</p>
 
-<pre class="notranslate brush: js">function initializePageAction(tab) {
+<pre class="brush: js">function initializePageAction(tab) {
 
  if (protocolIsApplicable(tab.url)) {
    browser.pageAction.setIcon({tabId: tab.id, path: "icons/off.svg"});
@@ -557,7 +557,7 @@ gettingAllTabs.then((tabs) =&gt; {
 
 <p>Next, a listener on <code>pageAction.onClicked</code> waits for the <code>pageAction</code> icon to be clicked, and calls <code>toggleCSS</code> when it is.</p>
 
-<pre class="notranslate brush: js">browser.pageAction.onClicked.addListener(toggleCSS);</pre>
+<pre class="brush: js">browser.pageAction.onClicked.addListener(toggleCSS);</pre>
 
 <p><code>toggleCSS()</code> gets the title of the <code>pageAction</code> and then takes the action described:</p>
 
@@ -577,7 +577,7 @@ gettingAllTabs.then((tabs) =&gt; {
 	</li>
 </ul>
 
-<pre class="notranslate brush: js">function toggleCSS(tab) {
+<pre class="brush: js">function toggleCSS(tab) {
 
  function gotTitle(title) {
 
@@ -600,7 +600,7 @@ gettingAllTabs.then((tabs) =&gt; {
 
 <p>Finally, to ensure that the <code>pageAction</code> is valid after each update to the tab, a listener on {{WebExtAPIRef("tabs.onUpdated")}} calls <code>initializePageAction()</code> each time the tab is updated to check that the tab is still using a protocol to which the CSS can be applied.</p>
 
-<pre class="notranslate brush: js">browser.tabs.onUpdated.addListener((id, changeInfo, tab) =&gt; {
+<pre class="brush: js">browser.tabs.onUpdated.addListener((id, changeInfo, tab) =&gt; {
  initializePageAction(tab);
 });
 </pre>

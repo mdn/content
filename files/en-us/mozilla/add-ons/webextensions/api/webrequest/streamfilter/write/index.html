@@ -44,7 +44,7 @@ tags:
 
 <p>This example uses <code>write()</code>, to replace "Example" in the first chunk of the response with "WebExtension Example".</p>
 
-<pre class="notranslate brush: js">function listener(details) {
+<pre class="brush: js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let decoder = new TextDecoder("utf-8");
   let encoder = new TextEncoder();

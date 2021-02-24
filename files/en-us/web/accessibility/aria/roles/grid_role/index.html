@@ -9,7 +9,7 @@ tags:
 
 <p><span class="seoSummary">The grid role is for a widget that contains one or more rows of cells. The position of each cell is significant and can be focused using keyboard input.</span></p>
 
-<pre class="brush: html notranslate">&lt;table role="grid" aria-labelledby="id-select-your-seat"&gt;
+<pre class="brush: html">&lt;table role="grid" aria-labelledby="id-select-your-seat"&gt;
   &lt;caption id="id-select-your-seat"&gt;Select your seat&lt;/caption&gt;
   &lt;tbody role="presentation"&gt;
     &lt;tr role="presentation"&gt;
@@ -180,7 +180,7 @@ tags:
 <div class="hidden">
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;table role="grid" aria-labelledby="calendarheader" aria-readonly=true&gt;
+<pre class="brush: html">&lt;table role="grid" aria-labelledby="calendarheader" aria-readonly=true&gt;
   &lt;caption id="calendarheader"&gt;September 2018&lt;/caption&gt;
   &lt;thead role="rowgroup"&gt;
     &lt;tr role="row"&gt;
@@ -318,7 +318,7 @@ tags:
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   margin: 2rem;
   font-family: "Helvetica Neue", sans-serif;
 }
@@ -351,7 +351,7 @@ tbody td[role="gridcell"]:hover, tbody td[role="gridcell"]:focus {
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">var selectables = document.querySelectorAll('table td[role="gridcell"]');
+<pre class="brush: js">var selectables = document.querySelectorAll('table td[role="gridcell"]');
 
 selectables[0].setAttribute('tabindex', 0);
 
@@ -462,7 +462,7 @@ document.querySelector('table').addEventListener("keydown", function(event) {
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;table role="grid" aria-labelledby="calendarheader"&gt;
+<pre class="brush: html">&lt;table role="grid" aria-labelledby="calendarheader"&gt;
   &lt;caption id="calendarheader"&gt;September 2018&lt;/caption&gt;
   &lt;thead role="rowgroup"&gt;
     &lt;tr role="row"&gt;
@@ -517,7 +517,7 @@ document.querySelector('table').addEventListener("keydown", function(event) {
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">table {
+<pre class="brush: css">table {
   margin: 0;
   border-collapse: collapse;
   font-variant-numeric: tabular-nums;
@@ -544,7 +544,7 @@ tbody td[role="gridcell"]:hover, tbody td[role="gridcell"]:focus {
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<pre class="brush: js notranslate">var selectables = document.querySelectorAll('table td[role="gridcell"]');
+<pre class="brush: js">var selectables = document.querySelectorAll('table td[role="gridcell"]');
 
 selectables[0].setAttribute('tabindex', 0);
 

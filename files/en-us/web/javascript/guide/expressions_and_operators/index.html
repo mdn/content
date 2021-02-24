@@ -41,19 +41,19 @@ tags:
   ternary operator, the conditional operator. A binary operator requires two operands, one
   before the operator and one after the operator:</p>
 
-<pre class="brush: js notranslate"><em>operand1</em> <em>operator</em> <em>operand2</em>
+<pre class="brush: js"><em>operand1</em> <em>operator</em> <em>operand2</em>
 </pre>
 
 <p>For example, <code>3+4</code> or <code>x*y</code>.</p>
 
 <p>A unary operator requires a single operand, either before or after the operator:</p>
 
-<pre class="brush: js notranslate"><em>operator</em> <em>operand</em>
+<pre class="brush: js"><em>operator</em> <em>operand</em>
 </pre>
 
 <p>or</p>
 
-<pre class="brush: js notranslate"><em>operand</em> <em>operator</em>
+<pre class="brush: js"><em>operand</em> <em>operator</em>
 </pre>
 
 <p>For example, <code>x++</code> or <code>++x</code>.</p>
@@ -198,7 +198,7 @@ tags:
 <p>Like most expressions, assignments like <code>x = y</code> have a return value. It can
   be retrieved by e.g. assigning the expression or logging it:</p>
 
-<pre class="notranslate">const z = (x = y); // Or equivalently: const z = x = y;
+<pre>const z = (x = y); // Or equivalently: const z = x = y;
 
 console.log(z); // Log the return value of the assignment x = y.
 console.log(x = y); // Or log the return value directly.
@@ -235,7 +235,7 @@ console.log(x = y); // Or log the return value directly.
   data from arrays or objects using a syntax that mirrors the construction of array and
   object literals.</p>
 
-<pre class="brush: js notranslate">var foo = ['one', 'two', 'three'];
+<pre class="brush: js">var foo = ['one', 'two', 'three'];
 
 // without destructuring
 var one   = foo[0];
@@ -258,7 +258,7 @@ var [one, two, three] = foo;</pre>
   not attempt to convert the operands to compatible types before checking equality. The
   following table describes the comparison operators in terms of this sample code:</p>
 
-<pre class="brush: js notranslate">var var1 = 3;
+<pre class="brush: js">var var1 = 3;
 var var2 = 4;
 </pre>
 
@@ -363,7 +363,7 @@ var var2 = 4;
   other programming languages when used with floating point numbers (in particular, note
   that division by zero produces {{jsxref("Infinity")}}). For example:</p>
 
-<pre class="brush: js notranslate">1 / 2; // 0.5
+<pre class="brush: js">1 / 2; // 0.5
 1 / 2 == 1.0 / 2.0; // this is true
 </pre>
 
@@ -521,7 +521,7 @@ var var2 = 4;
     bits (zeros and ones). Numbers with more than 32 bits get their most significant bits
     discarded. For example, the following integer with more than 32 bits will be converted
     to a 32 bit integer:
-    <pre class="notranslate">Before: 1110 0110 1111 1010 0000 0000 0000 0110 0000 0000 0001
+    <pre>Before: 1110 0110 1111 1010 0000 0000 0000 0110 0000 0000 0001
 After:               1010 0000 0000 0000 0110 0000 0000 0001</pre>
   </li>
   <li>Each bit in the first operand is paired with the corresponding bit in the second
@@ -687,7 +687,7 @@ After:               1010 0000 0000 0000 0110 0000 0000 0001</pre>
 <p>The following code shows examples of the <code>&amp;&amp;</code> (logical AND)
   operator.</p>
 
-<pre class="brush: js notranslate">var a1 =  true &amp;&amp; true;     // t &amp;&amp; t returns true
+<pre class="brush: js">var a1 =  true &amp;&amp; true;     // t &amp;&amp; t returns true
 var a2 =  true &amp;&amp; false;    // t &amp;&amp; f returns false
 var a3 = false &amp;&amp; true;     // f &amp;&amp; t returns false
 var a4 = false &amp;&amp; (3 == 4); // f &amp;&amp; f returns false
@@ -698,7 +698,7 @@ var a7 = 'Cat' &amp;&amp; false;    // t &amp;&amp; f returns false
 
 <p>The following code shows examples of the || (logical OR) operator.</p>
 
-<pre class="brush: js notranslate">var o1 =  true || true;     // t || t returns true
+<pre class="brush: js">var o1 =  true || true;     // t || t returns true
 var o2 = false || true;     // f || t returns true
 var o3 =  true || false;    // t || f returns true
 var o4 = false || (3 == 4); // f || f returns false
@@ -709,7 +709,7 @@ var o7 = 'Cat' || false;    // t || f returns Cat
 
 <p>The following code shows examples of the ! (logical NOT) operator.</p>
 
-<pre class="brush: js notranslate">var n1 = !true;  // !t returns false
+<pre class="brush: js">var n1 = !true;  // !t returns false
 var n2 = !false; // !f returns true
 var n3 = !'Cat'; // !t returns false
 </pre>
@@ -750,13 +750,13 @@ var n3 = !'Cat'; // !t returns false
 <p>For example,</p>
 
 <pre
-  class="brush: js notranslate">console.log('my ' + 'string'); // console logs the string "my string".</pre>
+  class="brush: js">console.log('my ' + 'string'); // console logs the string "my string".</pre>
 
 <p>The shorthand assignment operator += can also be used to concatenate strings.</p>
 
 <p>For example,</p>
 
-<pre class="brush: js notranslate">var mystring = 'alpha';
+<pre class="brush: js">var mystring = 'alpha';
 mystring += 'bet'; // evaluates to "alphabet" and assigns this value to mystring.</pre>
 
 <h3 id="Conditional_ternary_operator">Conditional (ternary) operator</h3>
@@ -766,7 +766,7 @@ mystring += 'bet'; // evaluates to "alphabet" and assigns this value to mystring
     operator</a> is the only JavaScript operator that takes three operands. The operator
   can have one of two values based on a condition. The syntax is:</p>
 
-<pre class="brush: js notranslate"><em>condition</em> ? <em>val1</em> : <em>val2</em>
+<pre class="brush: js"><em>condition</em> ? <em>val1</em> : <em>val2</em>
 </pre>
 
 <p>If <code>condition</code> is true, the operator has the value of <code>val1</code>.
@@ -775,7 +775,7 @@ mystring += 'bet'; // evaluates to "alphabet" and assigns this value to mystring
 
 <p>For example,</p>
 
-<pre class="brush: js notranslate">var status = (age &gt;= 18) ? 'adult' : 'minor';
+<pre class="brush: js">var status = (age &gt;= 18) ? 'adult' : 'minor';
 </pre>
 
 <p>This statement assigns the value "adult" to the variable <code>status</code> if
@@ -795,7 +795,7 @@ mystring += 'bet'; // evaluates to "alphabet" and assigns this value to mystring
   following code uses the comma operator to update two variables at once. The code prints
   the values of the diagonal elements in the array:</p>
 
-<pre class="brush: js notranslate">var x = [0,1,2,3,4,5,6,7,8,9]
+<pre class="brush: js">var x = [0,1,2,3,4,5,6,7,8,9]
 var a = [x, x, x, x, x];
 
 for (var i = 0, j = 9; i &lt;= j; i++, j--)
@@ -813,7 +813,7 @@ for (var i = 0, j = 9; i &lt;= j; i++, j--)
   <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code>
   operator deletes an object's property. The syntax is:</p>
 
-<pre class="brush: js notranslate">delete object.property;
+<pre class="brush: js">delete object.property;
 delete object[propertyKey];
 delete objectName[index];
 delete property; // legal only within a with statement
@@ -833,7 +833,7 @@ delete property; // legal only within a with statement
   <code>delete</code> operator returns <code>true</code> if the operation is possible; it
   returns <code>false</code> if the operation is not possible.</p>
 
-<pre class="brush: js notranslate">x = 42; // implicitly creates window.x
+<pre class="brush: js">x = 42; // implicitly creates window.x
 var y = 43;
 var myobj = {h: 4}; // create object with property h
 
@@ -859,7 +859,7 @@ delete myobj.h; // returns true (can delete user-defined properties)
 <p>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof"><code>typeof</code>
     operator</a> is used in either of the following ways:</p>
 
-<pre class="brush: js notranslate">typeof operand
+<pre class="brush: js">typeof operand
 typeof (operand)
 </pre>
 
@@ -869,7 +869,7 @@ typeof (operand)
 
 <p>Suppose you define the following variables:</p>
 
-<pre class="brush: js notranslate">var myFun = new Function('5 + 2');
+<pre class="brush: js">var myFun = new Function('5 + 2');
 var shape = 'round';
 var size = 1;
 var foo = ['Apple', 'Mango', 'Orange'];
@@ -878,7 +878,7 @@ var today = new Date();
 
 <p>The <code>typeof</code> operator returns the following results for these variables:</p>
 
-<pre class="brush: js notranslate">typeof myFun;       // returns "function"
+<pre class="brush: js">typeof myFun;       // returns "function"
 typeof shape;       // returns "string"
 typeof size;        // returns "number"
 typeof foo;         // returns "object"
@@ -889,21 +889,21 @@ typeof doesntExist; // returns "undefined"
 <p>For the keywords <code>true</code> and <code>null</code>, the <code>typeof</code>
   operator returns the following results:</p>
 
-<pre class="brush: js notranslate">typeof true; // returns "boolean"
+<pre class="brush: js">typeof true; // returns "boolean"
 typeof null; // returns "object"
 </pre>
 
 <p>For a number or string, the <code>typeof</code> operator returns the following results:
 </p>
 
-<pre class="brush: js notranslate">typeof 62;            // returns "number"
+<pre class="brush: js">typeof 62;            // returns "number"
 typeof 'Hello world'; // returns "string"
 </pre>
 
 <p>For property values, the <code>typeof</code> operator returns the type of value the
   property contains:</p>
 
-<pre class="brush: js notranslate">typeof document.lastModified; // returns "string"
+<pre class="brush: js">typeof document.lastModified; // returns "string"
 typeof window.length;         // returns "number"
 typeof Math.LN2;              // returns "number"
 </pre>
@@ -911,7 +911,7 @@ typeof Math.LN2;              // returns "number"
 <p>For methods and functions, the <code>typeof</code> operator returns results as follows:
 </p>
 
-<pre class="brush: js notranslate">typeof blur;        // returns "function"
+<pre class="brush: js">typeof blur;        // returns "function"
 typeof eval;        // returns "function"
 typeof parseInt;    // returns "function"
 typeof shape.split; // returns "function"
@@ -920,7 +920,7 @@ typeof shape.split; // returns "function"
 <p>For predefined objects, the <code>typeof</code> operator returns results as follows:
 </p>
 
-<pre class="brush: js notranslate">typeof Date;     // returns "function"
+<pre class="brush: js">typeof Date;     // returns "function"
 typeof Function; // returns "function"
 typeof Math;     // returns "object"
 typeof Option;   // returns "function"
@@ -932,7 +932,7 @@ typeof String;   // returns "function"
 <p>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code>
     operator</a> is used in either of the following ways:</p>
 
-<pre class="brush: js notranslate">void (expression)
+<pre class="brush: js">void (expression)
 void expression
 </pre>
 
@@ -952,7 +952,7 @@ void expression
     operator</a> returns <code>true</code> if the specified property is in the specified
   object. The syntax is:</p>
 
-<pre class="brush: js notranslate">propNameOrNumber in objectName
+<pre class="brush: js">propNameOrNumber in objectName
 </pre>
 
 <p>where <code>propNameOrNumber</code> is a string, numeric, or symbol expression
@@ -961,7 +961,7 @@ void expression
 
 <p>The following examples show some uses of the <code>in</code> operator.</p>
 
-<pre class="brush: js notranslate">// Arrays
+<pre class="brush: js">// Arrays
 var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 0 in trees;        // returns true
 3 in trees;        // returns true
@@ -988,7 +988,7 @@ var mycar = { make: 'Honda', model: 'Accord', year: 1998 };
     operator</a> returns <code>true</code> if the specified object is of the specified
   object type. The syntax is:</p>
 
-<pre class="brush: js notranslate">objectName instanceof objectType
+<pre class="brush: js">objectName instanceof objectType
 </pre>
 
 <p>where <code>objectName</code> is the name of the object to compare to
@@ -1003,7 +1003,7 @@ var mycar = { make: 'Honda', model: 'Accord', year: 1998 };
   <code>theDay</code> is a <code>Date</code> object. Because <code>theDay</code> is a
   <code>Date</code> object, the statements in the <code>if</code> statement execute.</p>
 
-<pre class="brush: js notranslate">var theDay = new Date(1995, 12, 17);
+<pre class="brush: js">var theDay = new Date(1995, 12, 17);
 if (theDay instanceof Date) {
   // statements to execute
 }
@@ -1140,14 +1140,14 @@ if (theDay instanceof Date) {
   the calling object in a method. Use <code>this</code> either with the dot or the bracket
   notation:</p>
 
-<pre class="brush: js notranslate">this['propertyName']
+<pre class="brush: js">this['propertyName']
 this.propertyName
 </pre>
 
 <p>Suppose a function called <code>validate</code> validates an object's
   <code>value</code> property, given the object and the high and low values:</p>
 
-<pre class="brush: js notranslate">function validate(obj, lowval, hival) {
+<pre class="brush: js">function validate(obj, lowval, hival) {
   if ((obj.value &lt; lowval) || (obj.value &gt; hival))
     console.log('Invalid Value!');
 }
@@ -1157,7 +1157,7 @@ this.propertyName
   handler, using <code>this</code> to pass it to the form element, as in the following
   example:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Enter a number between 18 and 99:&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Enter a number between 18 and 99:&lt;/p&gt;
 &lt;input type="text" name="age" size=3 onChange="validate(this, 18, 99);"&gt;
 </pre>
 
@@ -1167,7 +1167,7 @@ this.propertyName
   expressions. For example, you can override multiplication and division first, then
   addition and subtraction to evaluate addition first.</p>
 
-<pre class="brush:js notranslate">var a = 1;
+<pre class="brush:js">var a = 1;
 var b = 2;
 var c = 3;
 
@@ -1195,7 +1195,7 @@ a * c + b * c // 9
     operator</a> to create an instance of a user-defined object type or of one of the
   built-in object types. Use <code>new</code> as follows:</p>
 
-<pre class="brush: js notranslate">var objectName = new objectType([param1, param2, ..., paramN]);
+<pre class="brush: js">var objectName = new objectType([param1, param2, ..., paramN]);
 </pre>
 
 <h4 id="super">super</h4>
@@ -1205,7 +1205,7 @@ a * c + b * c // 9
     href="/en-US/docs/Web/JavaScript/Reference/Classes">classes</a> to call the parent
   constructor, for example.</p>
 
-<pre class="brush: js notranslate">super([arguments]); // calls the parent constructor.
+<pre class="brush: js">super([arguments]); // calls the parent constructor.
 super.functionOnParent([arguments]);
 </pre>
 

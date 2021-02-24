@@ -18,9 +18,9 @@ tags:
 
 <p>To tell the browser to use the whole available space on the screen, and so enabling us to use the <code>env()</code> variables, we need to add a new viewport meta value:</p>
 
-<pre class="brush: html; no-line-numbers notranslate">&lt;meta name="viewport" content="viewport-fit=cover" /&gt;</pre>
+<pre class="brush: html; no-line-numbers">&lt;meta name="viewport" content="viewport-fit=cover" /&gt;</pre>
 
-<pre class="brush: css; no-line-numbers notranslate">body {
+<pre class="brush: css; no-line-numbers">body {
   padding:
     env(safe-area-inset-top, 20px)
     env(safe-area-inset-right, 20px)
@@ -34,7 +34,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css; no-line-numbers notranslate">/* Using the four safe area inset values with no fallback values */
+<pre class="brush: css; no-line-numbers">/* Using the four safe area inset values with no fallback values */
 env(safe-area-inset-top);
 env(safe-area-inset-right);
 env(safe-area-inset-bottom);
@@ -58,13 +58,13 @@ env(safe-area-inset-left, 1.4rem);
 
 <h3 id="Formal_syntax">Formal syntax</h3>
 
-<pre class="brush: css notranslate">{{CSSSyntax}}</pre>
+<pre class="brush: css">{{CSSSyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
 <p>The below example makes use of the optional second parameter of <code>env()</code>, which allows you to provide a fallback value in case the environment variable is not available.</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
   If the &lt;code&gt;env()&lt;/code&gt; function is supported in your browser,
   this paragraph’s text will have 50px of padding between it and
   the left border — but not the top, right and bottom.
@@ -73,7 +73,7 @@ env(safe-area-inset-left, 1.4rem);
   properties, user agent property names are case-sensitive.
 &lt;/p&gt;</pre>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   width: 300px;
   border: 2px solid red;
   padding:
@@ -87,7 +87,7 @@ env(safe-area-inset-left, 1.4rem);
 
 <h3 id="Example_values">Example values</h3>
 
-<pre class="brush: css notranslate">padding: env(safe-area-inset-bottom, 50px); /* zero for all rectangular user agents */
+<pre class="brush: css">padding: env(safe-area-inset-bottom, 50px); /* zero for all rectangular user agents */
 padding: env(Safe-area-inset-bottom, 50px); /* 50px because UA properties are case sensitive */
 padding: env(x, 50px 20px); /* as if padding: '50px 20px' were set because x is not a valid environment variable */
 padding: env(x, 50px, 20px); /* ignored because '50px, 20px' is not a valid padding value and x is not a valid environment variable */

@@ -14,7 +14,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">new FinalizationRegistry([<var>callback</var>]);
+<pre class="brush: js">new FinalizationRegistry([<var>callback</var>]);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -30,7 +30,7 @@ tags:
 
 <p>You create the registry passing in the callback:</p>
 
-<pre class="brush: js notranslate">const registry = new FinalizationRegistry(heldValue =&gt; {
+<pre class="brush: js">const registry = new FinalizationRegistry(heldValue =&gt; {
   // ....
 });
 </pre>

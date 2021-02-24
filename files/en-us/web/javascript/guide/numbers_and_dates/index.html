@@ -33,7 +33,7 @@ tags:
 
 <h3 id="Decimal_numbers">Decimal numbers</h3>
 
-<pre class="brush: js notranslate">1234567890
+<pre class="brush: js">1234567890
 42
 
 // Caution when using leading zeros:
@@ -48,7 +48,7 @@ tags:
 
 <p>Binary number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "B" (<code>0b</code> or <code>0B</code>). If the digits after the <code>0b</code> are not 0 or 1, the following {{jsxref("SyntaxError")}} is thrown: "Missing binary digits after 0b".</p>
 
-<pre class="brush: js notranslate">var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
+<pre class="brush: js">var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
 var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
 var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607</pre>
 
@@ -56,27 +56,27 @@ var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607</pre>
 
 <p>Octal number syntax uses a leading zero. If the digits after the <code>0</code> are outside the range 0 through 7, the number will be interpreted as a decimal number.</p>
 
-<pre class="brush: js notranslate">var n = 0755; // 493
+<pre class="brush: js">var n = 0755; // 493
 var m = 0644; // 420
 </pre>
 
 <p>Strict mode in ECMAScript 5 forbids octal syntax. Octal syntax isn't part of ECMAScript 5, but it's supported in all browsers by prefixing the octal number with a zero: <code>0644 === 420</code> and <code>"\045" === "%"</code>. In ECMAScript 2015, octal numbers are supported if they are prefixed with <code>0o</code>, e.g.:</p>
 
-<pre class="brush: js notranslate">var a = 0o10; // ES2015: 8
+<pre class="brush: js">var a = 0o10; // ES2015: 8
 </pre>
 
 <h3 id="Hexadecimal_numbers">Hexadecimal numbers</h3>
 
 <p>Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (<code>0x</code> or <code>0X</code>). If the digits after 0x are outside the range (0123456789ABCDEF), the following {{jsxref("SyntaxError")}} is thrown: "Identifier starts immediately after numeric literal".</p>
 
-<pre class="brush: js notranslate">0xFFFFFFFFFFFFFFFFF // 295147905179352830000
+<pre class="brush: js">0xFFFFFFFFFFFFFFFFF // 295147905179352830000
 0x123456789ABCDEF   // 81985529216486900
 0XA                 // 10
 </pre>
 
 <h3 id="Exponentiation">Exponentiation</h3>
 
-<pre class="brush: js notranslate">1E3   // 1000
+<pre class="brush: js">1E3   // 1000
 2e6   // 2000000
 0.1e2 // 10</pre>
 
@@ -84,7 +84,7 @@ var m = 0644; // 420
 
 <p>The built-in {{jsxref("Number")}} object has properties for numerical constants, such as maximum value, not-a-number, and infinity. You cannot change the values of these properties and you use them as follows:</p>
 
-<pre class="brush: js notranslate">var biggestNum = Number.MAX_VALUE;
+<pre class="brush: js">var biggestNum = Number.MAX_VALUE;
 var smallestNum = Number.MIN_VALUE;
 var infiniteNum = Number.POSITIVE_INFINITY;
 var negInfiniteNum = Number.NEGATIVE_INFINITY;
@@ -207,12 +207,12 @@ var notANum = Number.NaN;
 
 <p>The built-in {{jsxref("Math")}} object has properties and methods for mathematical constants and functions. For example, the <code>Math</code> object's <code>PI</code> property has the value of pi (3.141...), which you would use in an application as</p>
 
-<pre class="brush: js notranslate">Math.PI
+<pre class="brush: js">Math.PI
 </pre>
 
 <p>Similarly, standard mathematical functions are methods of <code>Math</code>. These include trigonometric, logarithmic, exponential, and other functions. For example, if you want to use the trigonometric function sine, you would write</p>
 
-<pre class="brush: js notranslate">Math.sin(1.56)
+<pre class="brush: js">Math.sin(1.56)
 </pre>
 
 <p>Note that all trigonometric methods of <code>Math</code> take arguments in radians.</p>
@@ -299,7 +299,7 @@ var notANum = Number.NaN;
 
 <p>To create a <code>Date</code> object:</p>
 
-<pre class="brush: js notranslate">var dateObjectName = new Date([parameters]);
+<pre class="brush: js">var dateObjectName = new Date([parameters]);
 </pre>
 
 <p>where <code>dateObjectName</code> is the name of the <code>Date</code> object being created; it can be a new object or a property of an existing object.</p>
@@ -339,7 +339,7 @@ var notANum = Number.NaN;
 
 <p>For example, suppose you define the following date:</p>
 
-<pre class="brush: js notranslate">var Xmas95 = new Date('December 25, 1995');
+<pre class="brush: js">var Xmas95 = new Date('December 25, 1995');
 </pre>
 
 <p>Then <code>Xmas95.getMonth()</code> returns 11, and <code>Xmas95.getFullYear()</code> returns 1995.</p>
@@ -348,7 +348,7 @@ var notANum = Number.NaN;
 
 <p>For example, the following code displays the number of days left in the current year:</p>
 
-<pre class="brush: js notranslate">var today = new Date();
+<pre class="brush: js">var today = new Date();
 var endYear = new Date(1995, 11, 31, 23, 59, 59, 999); // Set day and month
 endYear.setFullYear(today.getFullYear()); // Set year to this year
 var msPerDay = 24 * 60 * 60 * 1000; // Number of milliseconds per day
@@ -360,7 +360,7 @@ var daysLeft = Math.round(daysLeft); //returns days left in the year
 
 <p>The <code>parse</code> method is useful for assigning values from date strings to existing <code>Date</code> objects. For example, the following code uses <code>parse</code> and <code>setTime</code> to assign a date value to the <code>IPOdate</code> object:</p>
 
-<pre class="brush: js notranslate">var IPOdate = new Date();
+<pre class="brush: js">var IPOdate = new Date();
 IPOdate.setTime(Date.parse('Aug 9, 1995'));
 </pre>
 
@@ -368,7 +368,7 @@ IPOdate.setTime(Date.parse('Aug 9, 1995'));
 
 <p>In the following example, the function <code>JSClock()</code> returns the time in the format of a digital clock.</p>
 
-<pre class="brush: js notranslate">function JSClock() {
+<pre class="brush: js">function JSClock() {
   var time = new Date();
   var hour = time.getHours();
   var minute = time.getMinutes();

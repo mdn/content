@@ -51,7 +51,7 @@ tags:
 
 <p>The code will usually follow this kind of pattern (taken from resize-observer-border-radius.html):</p>
 
-<pre class="brush: js notranslate">const resizeObserver = new ResizeObserver(entries =&gt; {
+<pre class="brush: js">const resizeObserver = new ResizeObserver(entries =&gt; {
   for (let entry of entries) {
     if(entry.contentBoxSize) {
       entry.target.style.borderRadius = Math.min(100, (entry.contentBoxSize.inlineSize/10) +

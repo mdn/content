@@ -12,14 +12,14 @@ slug: Mozilla/Virtualenv
 
 <p>If you have <a class="external" href="http://pypi.python.org/pypi/pip">pip</a> or <a class="external" href="http://packages.python.org/distribute/easy_install.html">easy_install</a>, you can install virtualenv directly from the web:</p>
 
-<pre class="notranslate">pip install virtualenv
+<pre>pip install virtualenv
 # -or-
 easy_install virtualenv
 </pre>
 
 <p>This will fetch virtualenv from <a class="external" href="http://pypi.python.org/pypi/virtualenv">PyPI</a> and install it in your <a class="external" href="http://docs.python.org/install/index.html">site-packages</a>. You may need to use <code>sudo</code> to obtain appropriate permissions for the system. If you do not have <code>pip</code> or <code>easy_install</code>, you will need to download <a class="external" href="http://pypi.python.org/pypi/virtualenv">from PyPI</a> or clone <a class="link-https" href="https://github.com/pypa/virtualenv">from the github virtualenv repository</a>, extract from the tarball (in the PyPI case), and run <code>python setup.py install</code>.  Again, you may need to use <code>sudo</code> to install globally.  If you're running Ubuntu, there is also an Ubuntu package available:</p>
 
-<pre class="notranslate">sudo apt-get install python-virtualenv
+<pre>sudo apt-get install python-virtualenv
 </pre>
 
 <p><a class="link-https" href="https://raw.github.com/pypa/virtualenv/develop/virtualenv.py">virtualenv.py</a> may also be run as standalone software with the same functionality.  It will require it to be part of a clone of <a class="link-https" href="https://github.com/pypa/virtualenv">the github repository</a> or have internet access to fetch setuptools.</p>
@@ -30,7 +30,7 @@ easy_install virtualenv
 
 <p>Once you have virtualenv installed, you can make virtual environments:</p>
 
-<pre class="notranslate">&gt; virtualenv tmp
+<pre>&gt; virtualenv tmp
 New python executable in tmp/bin/python
 Installing setuptools............done.
 Installing pip...............done.
@@ -38,7 +38,7 @@ Installing pip...............done.
 
 <p>A python binary, as well as <code>easy_install</code> and <code>pip</code> are available in the <code>bin/</code> subdirectory (or <code>Scripts</code> on windows).</p>
 
-<pre class="notranslate">&gt; ls tmp/bin/
+<pre>&gt; ls tmp/bin/
 activate      activate.fish     easy_install      pip      python
 activate.csh  activate_this.py  easy_install-2.7  pip-2.7
 </pre>
@@ -47,7 +47,7 @@ activate.csh  activate_this.py  easy_install-2.7  pip-2.7
 
 <h3 id="Unix_example">Unix example</h3>
 
-<pre class="notranslate">. bin/activate
+<pre>. bin/activate
 </pre>
 
 <p>Once the virtualenv is activated, the virtualenv's python (and other executables) will be on your <code>PATH</code> and you will have a new environment variable, <code>VIRTUAL_ENV</code>, that points to the path of the virtualenv, as well as a <code>deactivate</code> function for deactivating the virtualenv.</p>

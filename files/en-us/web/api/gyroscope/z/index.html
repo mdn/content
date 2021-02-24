@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <var>z</var> = <var>gyroscope</var>.z</pre>
+<pre class="brush: js">var <var>z</var> = <var>gyroscope</var>.z</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -35,7 +35,7 @@ tags:
 <p>The gyroscope is typically read in the {{domxref('Sensor.onreading')}} event callback.
   In the example below this occurs sixty times a second.</p>
 
-<pre class="brush: js notranslate">let gyroscope = new Gyroscope({frequency: 60});
+<pre class="brush: js">let gyroscope = new Gyroscope({frequency: 60});
 
 gyroscope.addEventListener('reading', e =&gt; {
   console.log("Angular velocity along the X-axis " + gyroscope.x);

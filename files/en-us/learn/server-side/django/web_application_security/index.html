@@ -71,7 +71,7 @@ tags:
 
 <p>If you view the page HTML source code, you can see that the dangerous characters for the script tags have been turned into their harmless escape code equivalents (e.g. <code>&gt;</code> is now <code>&amp;gt;</code>)</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Author: Boon&amp;lt;script&amp;gt;alert(&amp;#39;Test alert&amp;#39;);&amp;lt;/script&amp;gt;, David (Boonie) &lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Author: Boon&amp;lt;script&amp;gt;alert(&amp;#39;Test alert&amp;#39;);&amp;lt;/script&amp;gt;, David (Boonie) &lt;/h1&gt;
 </pre>
 
 <p>Using Django templates protects you against the majority of XSS attacks. However it is possible to turn off this protection, and the protection isn't automatically applied to all tags that wouldn't normally be populated by user input (for example, the <code>help_text</code> in a form field is usually not user-supplied, so Django doesn't escape those values).</p>
@@ -89,7 +89,7 @@ tags:
 
 <p>In order to do this, they might create an HTML file like the one below, which contains an author-creation form (like the one we used in the previous section) that is submitted as soon as the file is loaded. They would then send the file to all the Librarians and suggest that they open the file (it contains some harmless information, honest!). If the file is opened by any logged in librarian, then the form would be submitted with their credentials and a new author would be created.</p>
 
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
 &lt;body onload='document.EvilForm.submit()'&gt;
 
 &lt;form action="http://127.0.0.1:8000/catalog/author/create/" method="post" name='EvilForm'&gt;
@@ -110,7 +110,7 @@ tags:
 
 <p>The way the protection is enabled is that you include the <code>{% csrf_token %}</code> template tag in your form definition. This token is then rendered in your HTML as shown below, with a value that is specific to the user on the current browser.</p>
 
-<pre class="brush: html notranslate">&lt;input type='hidden' name='csrfmiddlewaretoken' value='0QRWHnYVg776y2l66mcvZqp8alrv4lb8S8lZ4ZJUWGZFA5VHrVfL2mpH29YZ39PW' /&gt;
+<pre class="brush: html">&lt;input type='hidden' name='csrfmiddlewaretoken' value='0QRWHnYVg776y2l66mcvZqp8alrv4lb8S8lZ4ZJUWGZFA5VHrVfL2mpH29YZ39PW' /&gt;
 </pre>
 
 <p>Django generates a user/browser specific key and will reject forms that do not contain the field, or that contain an incorrect field value for the user/browser.</p>

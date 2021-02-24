@@ -36,7 +36,7 @@ tags:
 
 <p>In HTML text fundamentals, we walked through how to <a href="/en-US/docs/Learn/HTML#lists">mark up basic lists</a> in HTML, but we didn't mention the third type of list you'll occasionally come across — <strong>description lists</strong>. The purpose of these lists is to mark up a set of items and their associated descriptions, such as terms and definitions, or questions and answers. Let's look at an example of a set of terms and definitions:</p>
 
-<pre class="notranslate">soliloquy
+<pre>soliloquy
 In drama, where a character speaks to themselves, representing their inner thoughts or feelings and in the process relaying them to the audience (but not to other characters.)
 monologue
 In drama, where a character speaks their thoughts out loud to share them with the audience and any other characters present.
@@ -46,7 +46,7 @@ In drama, where a character shares a comment only with the audience for humorous
 <p>Description lists use a different wrapper than the other list types — {{htmlelement("dl")}}; in addition each term is wrapped in a {{htmlelement("dt")}} (description term) element, and each description is wrapped in a {{htmlelement("dd")}} (description definition) element. Let's finish marking up our example:</p>
 
 <div id="description-lists-live-sample-1">
-<pre class="brush: html notranslate">&lt;dl&gt;
+<pre class="brush: html">&lt;dl&gt;
   &lt;dt&gt;soliloquy&lt;/dt&gt;
   &lt;dd&gt;In drama, where a character speaks to themselves, representing their inner thoughts or feelings and in the process relaying them to the audience (but not to other characters.)&lt;/dd&gt;
   &lt;dt&gt;monologue&lt;/dt&gt;
@@ -63,7 +63,7 @@ In drama, where a character shares a comment only with the audience for humorous
 <p>Note that it is permitted to have a single term with multiple descriptions, for example:</p>
 
 <div id="description-lists-live-sample-2">
-<pre class="brush: html notranslate">&lt;dl&gt;
+<pre class="brush: html">&lt;dl&gt;
   &lt;dt&gt;aside&lt;/dt&gt;
   &lt;dd&gt;In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought, or piece of additional background information.&lt;/dd&gt;
   &lt;dd&gt;In writing, a section of content that is related to the current topic, but doesn't fit directly into the main flow of content so is presented nearby (often in a box off to the side.)&lt;/dd&gt;
@@ -81,7 +81,7 @@ In drama, where a character shares a comment only with the audience for humorous
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -103,7 +103,7 @@ A light brown color.&lt;/textarea&gt;
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -123,7 +123,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">const textarea = document.getElementById('code');
+<pre class="brush: js">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 const output = document.querySelector('.output');
@@ -212,13 +212,13 @@ textarea.onkeyup = function(){
 
 <p>If a section of block level content (be it a paragraph, multiple paragraphs, a list, etc.) is quoted from somewhere else, you should wrap it inside a {{htmlelement("blockquote")}} element to signify this, and include a URL pointing to the source of the quote inside a {{htmlattrxref("cite","blockquote")}} attribute. For example, the following markup is taken from the MDN <code>&lt;blockquote&gt;</code> element page:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;The &lt;strong&gt;HTML &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt; Element&lt;/strong&gt; (or &lt;em&gt;HTML Block
+<pre class="brush: html">&lt;p&gt;The &lt;strong&gt;HTML &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt; Element&lt;/strong&gt; (or &lt;em&gt;HTML Block
 Quotation Element&lt;/em&gt;) indicates that the enclosed text is an extended quotation.&lt;/p&gt;</pre>
 
 <p>To turn this into a block quote, we would just do this:</p>
 
 <div id="blockquote-live-sample">
-<pre class="brush: html notranslate">&lt;p&gt;Here below is a blockquote...&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Here below is a blockquote...&lt;/p&gt;
 &lt;blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"&gt;
   &lt;p&gt;The &lt;strong&gt;HTML &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt; Element&lt;/strong&gt; (or &lt;em&gt;HTML Block
   Quotation Element&lt;/em&gt;) indicates that the enclosed text is an extended quotation.&lt;/p&gt;
@@ -233,7 +233,7 @@ Quotation Element&lt;/em&gt;) indicates that the enclosed text is an extended qu
 
 <p>Inline quotations work in exactly the same way, except that they use the {{htmlelement("q")}} element. For example, the below bit of markup contains a quotation from the MDN <code>&lt;q&gt;</code> page:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;The quote element — &lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt; — is &lt;q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"&gt;intended
+<pre class="brush: html">&lt;p&gt;The quote element — &lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt; — is &lt;q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"&gt;intended
 for short quotations that don't require paragraph breaks.&lt;/q&gt;&lt;/p&gt;</pre>
 
 <p>Browser default styling will render this as normal text put in quotes to indicate a quotation, like so:</p>
@@ -246,7 +246,7 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt;&lt;/p&gt;</p
 
 <p>There is a {{htmlelement("cite")}} element, but this is meant to contain the title of the resource being quoted, e.g. the name of the book. There is no reason, however, why you couldn't link the text inside <code>&lt;cite&gt;</code> to the quote source in some way:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;According to the &lt;a href="/en-US/docs/Web/HTML/Element/blockquote"&gt;
+<pre class="brush: html">&lt;p&gt;According to the &lt;a href="/en-US/docs/Web/HTML/Element/blockquote"&gt;
 &lt;cite&gt;MDN blockquote page&lt;/cite&gt;&lt;/a&gt;:
 &lt;/p&gt;
 
@@ -277,7 +277,7 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
 
 <ul>
  <li>http://www.brainyquote.com/quotes/authors/c/confucius.html for the Confucius quote</li>
- <li>http://www.affirmationsforpositivethinking.com for "The Need To Eliminate Negative Self Talk".</li>
+ <li>http://example.com/affirmationsforpositivethinking for "The Need To Eliminate Negative Self Talk".</li>
 </ul>
 
 <p>If you make a mistake, you can always reset it using the <em>Reset</em> button. If you get really stuck, press the <em>Show solution</em> button to see the answer.</p>
@@ -285,7 +285,7 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
 <div class="hidden">
 <h6 id="Playable_code_2">Playable code 2</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -304,7 +304,7 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -324,7 +324,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">const textarea = document.getElementById('code');
+<pre class="brush: js">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 const output = document.querySelector('.output');
@@ -354,7 +354,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-const htmlSolution = '&lt;p&gt;Hello and welcome to my motivation page. As &lt;a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"&gt;&lt;cite&gt;Confucius\' quotes site&lt;/cite&gt;&lt;/a&gt; says:&lt;/p&gt;\n\n&lt;blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html"&gt;\n &lt;p&gt;It does not matter how slowly you go as long as you do not stop.&lt;/p&gt;\n&lt;/blockquote&gt;\n\n&lt;p&gt;I also love the concept of positive thinking, and &lt;q cite="http://www.affirmationsforpositivethinking.com"&gt;The Need To Eliminate Negative Self Talk&lt;/q&gt; (as mentioned in &lt;a href="http://www.affirmationsforpositivethinking.com"&gt;&lt;cite&gt;Affirmations for Positive Thinking&lt;/cite&gt;&lt;/a&gt;.)&lt;/p&gt;';
+const htmlSolution = '&lt;p&gt;Hello and welcome to my motivation page. As &lt;a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"&gt;&lt;cite&gt;Confucius\' quotes site&lt;/cite&gt;&lt;/a&gt; says:&lt;/p&gt;\n\n&lt;blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html"&gt;\n &lt;p&gt;It does not matter how slowly you go as long as you do not stop.&lt;/p&gt;\n&lt;/blockquote&gt;\n\n&lt;p&gt;I also love the concept of positive thinking, and &lt;q cite="http://example.com/affirmationsforpositivethinking"&gt;The Need To Eliminate Negative Self Talk&lt;/q&gt; (as mentioned in &lt;a href="http://example.com/affirmationsforpositivethinking"&gt;&lt;cite&gt;Affirmations for Positive Thinking&lt;/cite&gt;&lt;/a&gt;.)&lt;/p&gt;';
 let solutionEntry = htmlSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -410,7 +410,7 @@ textarea.onkeyup = function(){
 <p>Another fairly common element you'll meet when looking around the Web is {{htmlelement("abbr")}} — this is used to wrap around an abbreviation or acronym, and provide a full expansion of the term (included inside a {{htmlattrxref("title")}} attribute.) Let's look at a couple of examples:</p>
 
 <div id="abbreviations-live-sample">
-<pre class="brush: html notranslate">&lt;p&gt;We use &lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt; to structure our web documents.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;We use &lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt; to structure our web documents.&lt;/p&gt;
 
 &lt;p&gt;I think &lt;abbr title="Reverend"&gt;Rev.&lt;/abbr&gt; Green did it in the kitchen with the chainsaw.&lt;/p&gt;</pre>
 </div>
@@ -430,7 +430,7 @@ textarea.onkeyup = function(){
 <div class="hidden">
 <h6 id="Playable_code_3">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -447,7 +447,7 @@ textarea.onkeyup = function(){
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -467,7 +467,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">const textarea = document.getElementById('code');
+<pre class="brush: js">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 const output = document.querySelector('.output');
@@ -552,13 +552,13 @@ textarea.onkeyup = function(){
 
 <p>HTML has an element for marking up contact details — {{htmlelement("address")}}. This wraps around your contact details, for example:</p>
 
-<pre class="brush: html notranslate">&lt;address&gt;
+<pre class="brush: html">&lt;address&gt;
   &lt;p&gt;Chris Mills, Manchester, The Grim North, UK&lt;/p&gt;
 &lt;/address&gt;</pre>
 
 <p>It could also include more complex markup, and other forms of contact information, for example:</p>
 
-<pre class="brush: html notranslate">&lt;address&gt;
+<pre class="brush: html">&lt;address&gt;
   &lt;p&gt;
     Chris Mills&lt;br&gt;
     Manchester&lt;br&gt;
@@ -574,7 +574,7 @@ textarea.onkeyup = function(){
 
 <p>Note that something like this would also be ok, if the linked page contained the contact information:</p>
 
-<pre class="brush: html notranslate">&lt;address&gt;
+<pre class="brush: html">&lt;address&gt;
   &lt;p&gt;Page written by &lt;a href="../authors/chris-mills/"&gt;Chris Mills&lt;/a&gt;.&lt;/p&gt;
 &lt;/address&gt;</pre>
 
@@ -582,7 +582,7 @@ textarea.onkeyup = function(){
 
 <p>You will occasionally need to use superscript and subscript when marking up items like dates, chemical formulae, and mathematical equations so they have the correct meaning. The {{htmlelement("sup")}} and {{htmlelement("sub")}} elements handle this job. For example:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;My birthday is on the 25&lt;sup&gt;th&lt;/sup&gt; of May 2001.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;My birthday is on the 25&lt;sup&gt;th&lt;/sup&gt; of May 2001.&lt;/p&gt;
 &lt;p&gt;Caffeine's chemical formula is C&lt;sub&gt;8&lt;/sub&gt;H&lt;sub&gt;10&lt;/sub&gt;N&lt;sub&gt;4&lt;/sub&gt;O&lt;sub&gt;2&lt;/sub&gt;.&lt;/p&gt;
 &lt;p&gt;If x&lt;sup&gt;2&lt;/sup&gt; is 9, x must equal 3 or -3.&lt;/p&gt;</pre>
 
@@ -604,7 +604,7 @@ textarea.onkeyup = function(){
 
 <p>Let's look at a few examples. You should try having a play with these (try grabbing a copy of our <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/other-semantics.html">other-semantics.html</a> sample file):</p>
 
-<pre class="brush: html notranslate">&lt;pre&gt;&lt;code&gt;var para = document.querySelector('p');
+<pre class="brush: html">&lt;pre&gt;&lt;code&gt;var para = document.querySelector('p');
 
 para.onclick = function() {
   alert('Owww, stop poking me!');
@@ -628,7 +628,7 @@ para.onclick = function() {
 
 <p>HTML also provides the {{htmlelement("time")}} element for marking up times and dates in a machine-readable format. For example:</p>
 
-<pre class="brush: html notranslate">&lt;time datetime="2016-01-20"&gt;20 January 2016&lt;/time&gt;
+<pre class="brush: html">&lt;time datetime="2016-01-20"&gt;20 January 2016&lt;/time&gt;
 </pre>
 
 <p>Why is this useful? Well, there are many different ways that humans write down dates. The above date could be written as:</p>
@@ -649,7 +649,7 @@ para.onclick = function() {
 
 <p>The basic example above just provides a simple machine readable date, but there are many other options that are possible, for example:</p>
 
-<pre class="brush: html notranslate">&lt;!-- Standard simple date --&gt;
+<pre class="brush: html">&lt;!-- Standard simple date --&gt;
 &lt;time datetime="2016-01-20"&gt;20 January 2016&lt;/time&gt;
 &lt;!-- Just year and month --&gt;
 &lt;time datetime="2016-01"&gt;January 2016&lt;/time&gt;

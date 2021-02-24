@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">registerPaint(name, class);</pre>
+<pre class="brush: js">registerPaint(name, class);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -54,7 +54,7 @@ tags:
   through <code>CSS.paintWorklet.addModule()</code> (documented here on the parent class
   of PaintWorklet, at {{domxref('Worklet.addModule()')}}.</p>
 
-<pre class="brush: js notranslate">/* checkboardWorklet.js */
+<pre class="brush: js">/* checkboardWorklet.js */
 
 class CheckerboardPainter {
   paint(ctx, geom, properties) {
@@ -80,14 +80,14 @@ registerPaint('checkerboard', CheckerboardPainter);</pre>
   <code>registerPaint()</code> function, as done above. To use it, you register it with
   the <code>CSS.paintWorklet.addModule()</code> method:</p>
 
-<pre class="brush: html notranslate">&lt;script&gt;
+<pre class="brush: html">&lt;script&gt;
    CSS.paintWorklet.addModule('checkboardWorklet.js');
 &lt;/script&gt;</pre>
 
 <p>You can then use the <code>{{cssxref('paint', 'paint()')}}</code> CSS function in your
   CSS anywhere an <code>{{cssxref('&lt;image&gt;')}}</code> value is valid.</p>
 
-<pre class="brush: css notranslate">li {
+<pre class="brush: css">li {
    background-image: paint(checkerboard);
 }</pre>
 

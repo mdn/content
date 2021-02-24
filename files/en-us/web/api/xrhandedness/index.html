@@ -36,7 +36,7 @@ tags:
 
 <p>One important usage scentario for <code>handedness</code> is to determine which hand a controller is in so you can draw a representation of that hand (or the device that hand is controlling) in virtual space.</p>
 
-<pre class="brush: js notranslate">function updateInputSources(session, frame, refSpace) {
+<pre class="brush: js">function updateInputSources(session, frame, refSpace) {
   for (let source of session.inputSources) {
     if (source.gripSpace) {
       let gripPose = frame.getPose(source.gripSpace, refSpace);

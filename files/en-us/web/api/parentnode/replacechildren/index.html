@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">// [Throws, Unscopable]
+<pre class="brush: js">// [Throws, Unscopable]
 ParentNode.replaceChildren(...<var>nodesOrDOMStrings</var>) // returns undefined
 </pre>
 
@@ -46,7 +46,7 @@ ParentNode.replaceChildren(...<var>nodesOrDOMStrings</var>) // returns undefined
 <p><code>replaceChildren()</code> provides a very convenient mechanism for emptying a node
   of all its children. You call it on the parent node without any argument specified:</p>
 
-<pre class="brush: js notranslate">myNode.replaceChildren();</pre>
+<pre class="brush: js">myNode.replaceChildren();</pre>
 
 <h3 id="Transferring_nodes_between_parents">Transferring nodes between parents</h3>
 
@@ -55,7 +55,7 @@ ParentNode.replaceChildren(...<var>nodesOrDOMStrings</var>) // returns undefined
   application allowing you to choose what food you want for your party. This HTML might
   look something like this:</p>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Party food option list&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Party food option list&lt;/h2&gt;
 
 &lt;main&gt;
   &lt;div&gt;
@@ -99,7 +99,7 @@ ParentNode.replaceChildren(...<var>nodesOrDOMStrings</var>) // returns undefined
 <p>It would make sense to use some simple CSS to lay out the two select lists in a line
   alongside one another, with the control buttons in between them:</p>
 
-<pre class="brush: css notranslate">main {
+<pre class="brush: css">main {
   display: flex;
 }
 
@@ -131,7 +131,7 @@ select {
   <code>replaceChildren()</code> on the list to transfer the options to, using the spread
   operator to pass in all the options contained in both constants.</p>
 
-<pre class="brush: js notranslate">const noSelect = document.getElementById('no');
+<pre class="brush: js">const noSelect = document.getElementById('no');
 const yesSelect = document.getElementById('yes');
 const noBtn = document.getElementById('to-no');
 const yesBtn = document.getElementById('to-yes');

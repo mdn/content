@@ -40,11 +40,11 @@ tags:
 
 <p>Here’s a tumbling animation written in CSS showing Alice falling down the rabbit hole that leads to Wonderland (see the full <a href="http://codepen.io/rachelnabors/pen/QyOqqW">code on Codepen</a>):</p>
 
-<p><a href="http://codepen.io/rachelnabors/pen/rxpmJL"><img alt="Alice Tumbling down the rabbit's hole." src="https://mdn.mozillademos.org/files/13843/tumbling-alice_optimized.gif" style="display: block; height: 374px; margin-left: auto; margin-right: auto; width: 700px;"></a></p>
+<p><a href="http://codepen.io/rachelnabors/pen/rxpmJL"><img alt="Alice Tumbling down the rabbit's hole." src="tumbling-alice_optimized.gif" style="display: block; margin-left: auto; margin-right: auto;"></a></p>
 
 <p>Notice that the background moves, Alice spins, and her color changes at an offset from her spinning. We’re going to focus on just Alice for this tutorial. Here’s the simplified CSS that controls Alice’s animation:</p>
 
-<pre class="brush: css notranslate">#alice {
+<pre class="brush: css">#alice {
   animation: aliceTumbling infinite 3s linear;
 }
 
@@ -72,7 +72,7 @@ tags:
 
 <p>The first thing we need is to create a <a href="/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats">Keyframe Object</a> corresponding to our CSS <a href="/en-US/docs/Web/CSS/@keyframes">@keyframes</a> block:</p>
 
-<pre class="brush: js notranslate">var aliceTumbling = [
+<pre class="brush: js">var aliceTumbling = [
   { transform: 'rotate(0) translate3D(-50%, -50%, 0)', color: '#000' },
   { color: '#431236', offset: 0.3},
   { transform: 'rotate(360deg) translate3D(-50%, -50%, 0)', color: '#000' }
@@ -88,9 +88,9 @@ tags:
 
 <h4 id="Representing_timing_properties">Representing timing properties</h4>
 
-<p>We’ll also need to create an object of timing properties (an {{domxref("AnimationEffectTimingProperties")}} object) corresponding to the values in Alice’s animation:</p>
+<p>We’ll also need to create an object of timing properties (an {{domxref("EffectTiming")}} object) corresponding to the values in Alice’s animation:</p>
 
-<pre class="brush: js notranslate">var aliceTiming = {
+<pre class="brush: js">var aliceTiming = {
   duration: 3000,
   iterations: Infinity
 }</pre>
@@ -98,7 +98,7 @@ tags:
 <p>You’ll notice a few differences here from how equivalent values are represented in CSS:</p>
 
 <ul>
- <li>For one, the duration is in milliseconds as opposed to seconds — 3000 not 3s. Like {{domxref("WindowTimers.setTimeout()")}} and {{domxref("Window.requestAnimationFrame()")}}, the Web Animations API only takes milliseconds.</li>
+ <li>For one, the duration is in milliseconds as opposed to seconds — 3000 not 3s. Like {{domxref("WindowOrWorkerGlobalScope.setTimeout")}} and {{domxref("Window.requestAnimationFrame()")}}, the Web Animations API only takes milliseconds.</li>
  <li>The other thing you’ll notice is that it’s <code>iterations</code>, not <code>iteration-count</code>.</li>
 </ul>
 
@@ -110,7 +110,7 @@ tags:
 
 <p>Now it’s time to bring them both together with the {{domxref("Element.animate()")}} method:</p>
 
-<pre class="brush: js notranslate">document.getElementById("alice").animate(
+<pre class="brush: js">document.getElementById("alice").animate(
   aliceTumbling,
   aliceTiming
 )</pre>
@@ -119,7 +119,7 @@ tags:
 
 <p>The <code>animate()</code> method can be called on any DOM element that could be animated with CSS. And it can be written in several ways. Instead of making objects for keyframes and timing properties, we could just pass their values in directly, like so:</p>
 
-<pre class="brush: js notranslate">document.getElementById("alice").animate(
+<pre class="brush: js">document.getElementById("alice").animate(
   [
     { transform: 'rotate(0) translate3D(-50%, -50%, 0)', color: '#000' },
     { color: '#431236', offset: 0.3},
@@ -132,7 +132,7 @@ tags:
 
 <p>What’s more, if we only wanted to specify the duration of the animation and not its iterations (by default, animations iterate once), we could pass in the milliseconds alone:</p>
 
-<pre class="brush: js notranslate">document.getElementById("alice").animate(
+<pre class="brush: js">document.getElementById("alice").animate(
   [
     { transform: 'rotate(0) translate3D(-50%, -50%, 0)', color: '#000' },
     { color: '#431236', offset: 0.3},
@@ -143,7 +143,7 @@ tags:
 
 <p>While we can write CSS Animations with the Web Animations API, where the API really comes in handy is manipulating the animation’s playback. The Web Animations API provides several useful methods for controlling playback. Let’s take a look at pausing and playing animations in the Growing/Shrinking Alice game (check out the <a href="http://codepen.io/rachelnabors/pen/PNYGZQ">full code on Codepen</a>):</p>
 
-<p><a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010"><img alt="Playing the growing and shrinking game with Alice." src="https://mdn.mozillademos.org/files/13845/growing-shrinking_article_optimized.gif" style="display: block; height: 374px; margin-left: auto; margin-right: auto; width: 700px;"></a></p>
+<p><a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010"><img alt="Playing the growing and shrinking game with Alice." src="growing-shrinking_article_optimized.gif" style="display: block; margin-left: auto; margin-right: auto;"></a></p>
 
 <p>In this game, Alice has an animation that causes her to go from small to big which we control via a bottle and a cupcake. Both of these have their own animations.</p>
 
@@ -151,7 +151,7 @@ tags:
 
 <p>We’ll talk more about Alice’s animation later, but for now, let’s look closer at the cupcake’s animation:</p>
 
-<pre class="brush: js notranslate">var nommingCake = document.getElementById('eat-me_sprite').animate(
+<pre class="brush: js">var nommingCake = document.getElementById('eat-me_sprite').animate(
 [
   { transform: 'translateY(0)' },
   { transform: 'translateY(-80%)' }
@@ -163,15 +163,15 @@ tags:
 
 <p>The {{domxref("Element.animate()")}} method will immediately run after it is called. To prevent the cake from eating itself up before the user has had the chance to click on it, we call {{domxref("Animation.pause()")}} on it immediately after it is defined, like so:</p>
 
-<pre class="brush: js notranslate">nommingCake.pause();</pre>
+<pre class="brush: js">nommingCake.pause();</pre>
 
 <p>We can now use the {{domxref("Animation.play()")}} method to run it whenever we’re ready:</p>
 
-<pre class="brush: js notranslate">nommingCake.play();</pre>
+<pre class="brush: js">nommingCake.play();</pre>
 
 <p>Specifically, we want to link it to Alice’s animation, so she gets bigger as the cupcake gets eaten. We can achieve this via the following function:</p>
 
-<pre class="brush: js notranslate">var growAlice = function() {
+<pre class="brush: js">var growAlice = function() {
 
   // Play Alice's animation.
   aliceChange.play();
@@ -183,7 +183,7 @@ tags:
 
 <p>When a user holds their mouse down or presses their finger on the cake on a touch screen, we can now call <code>growAlice</code> to make all the animations play:</p>
 
-<pre class="brush: js notranslate">cake.addEventListener("mousedown", growAlice, false);
+<pre class="brush: js">cake.addEventListener("mousedown", growAlice, false);
 cake.addEventListener("touchstart", growAlice, false);</pre>
 
 <h3 id="Other_useful_methods">Other useful methods</h3>
@@ -198,7 +198,7 @@ cake.addEventListener("touchstart", growAlice, false);</pre>
 
 <p>Let’s take a look at <code>playbackRate</code> first — a negative playbackRate will cause an animation to run in reverse. When Alice drinks from the bottle, she grows smaller. This is because the bottle changes her animation’s playbackRate from 1 to -1:</p>
 
-<pre class="brush: js notranslate">var shrinkAlice = function() {
+<pre class="brush: js">var shrinkAlice = function() {
   aliceChange.playbackRate = -1;
   aliceChange.play();
 }
@@ -208,11 +208,11 @@ bottle.addEventListener("touchstart", shrinkAlice, false);</pre>
 
 <p>In <a href="https://en.wikipedia.org/wiki/Through_the_Looking-Glass">Through the Looking-Glass</a>, Alice travels to a world where she must run to stay in place — and run twice as fast to move forward! In the Red Queen’s Race example, Alice and the Red Queen are running to stay in place (check out the <a href="http://codepen.io/rachelnabors/pen/PNGGaV">full code on Codepen</a>):</p>
 
-<p><a href="http://codepen.io/rachelnabors/pen/PNGGaV"><img alt="Alice and the Red Queen race to get to the next square in this game." src="https://mdn.mozillademos.org/files/13847/red-queen-race_optimized.gif" style="display: block; height: 342px; margin-left: auto; margin-right: auto; width: 640px;"></a></p>
+<p><a href="http://codepen.io/rachelnabors/pen/PNGGaV"><img alt="Alice and the Red Queen race to get to the next square in this game." src="red-queen-race_optimized.gif" style="display: block; margin-left: auto; margin-right: auto;"></a></p>
 
 <p>Because small children tire out easily, unlike automaton chess pieces, Alice is constantly slowing down. We can do this by setting a decay on her animation’s <code>playbackRate</code>. We use <code>updatePlaybackRate()</code> instead of setting the playbackRate directly since that produces a smooth update:</p>
 
-<pre class="brush: js notranslate">setInterval( function() {
+<pre class="brush: js">setInterval( function() {
 
   // Make sure the playback rate never falls below .4
   if (redQueen_alice.playbackRate &gt; .4) {
@@ -223,7 +223,7 @@ bottle.addEventListener("touchstart", shrinkAlice, false);</pre>
 
 <p>But urging them on by clicking or tapping causes them to speed up by multiplying their playbackRate:</p>
 
-<pre class="brush: js notranslate">var goFaster = function() {
+<pre class="brush: js">var goFaster = function() {
   redQueen_alice.updatePlaybackRate(redQueen_alice.playbackRate * 1.1);
 }
 
@@ -234,9 +234,9 @@ document.addEventListener("touchstart", goFaster);</pre>
 
 <h2 id="Getting_information_out_of_animations">Getting information out of animations</h2>
 
-<p>Imagine other ways we could use playbackRate, such as improving accessibility for users with vestibular disorders by letting them slow down animations across an entire site. That’s impossible to do with CSS without recalculating durations in every CSS rule, but with the Web Animations API, we could use the {{domxref("document.getAnimations()")}} method to loop over each animation on the page and halve their <code>playbackRate</code>s, like so:</p>
+<p>Imagine other ways we could use playbackRate, such as improving accessibility for users with vestibular disorders by letting them slow down animations across an entire site. That’s impossible to do with CSS without recalculating durations in every CSS rule, but with the Web Animations API, we could use the {{domxref("DocumentOrShadowRoot.getAnimations")}} method to loop over each animation on the page and halve their <code>playbackRate</code>s, like so:</p>
 
-<pre class="brush: js notranslate">document.getAnimations().forEach(
+<pre class="brush: js">document.getAnimations().forEach(
   function (animation) {
     animation.updatePlaybackRate(animation.playbackRate * .5);
   }
@@ -246,11 +246,11 @@ document.addEventListener("touchstart", goFaster);</pre>
 
 <p>Another thing that’s tough to do with CSS Animations alone is creating dependencies on values provided by other animations. For instance, in the Growing and Shrinking Alice game example, you might have noticed something odd about the cake’s duration:</p>
 
-<pre class="brush: js notranslate">duration: aliceChange.effect.getComputedTiming().duration / 2</pre>
+<pre class="brush: js">duration: aliceChange.effect.getComputedTiming().duration / 2</pre>
 
 <p>To understand what’s happening here, let’s take a look at Alice’s animation:</p>
 
-<pre class="brush: js notranslate">var aliceChange = document.getElementById('alice').animate(
+<pre class="brush: js">var aliceChange = document.getElementById('alice').animate(
   [
     { transform: 'translate(-50%, -50%) scale(.5)' },
     { transform: 'translate(-50%, -50%) scale(2)' }
@@ -262,21 +262,21 @@ document.addEventListener("touchstart", goFaster);</pre>
 
 <p>Alice’s animation has her going from half her size to twice her size over 8 seconds. Then we pause her:</p>
 
-<pre class="brush: js notranslate">aliceChange.pause();</pre>
+<pre class="brush: js">aliceChange.pause();</pre>
 
 <p>If we had left her paused at the beginning of her animation, she’d start at half her full size, as if she’d drunk the entire bottle already! We want to set her animation’s “playhead” in the middle, so she’s already halfway done. We could do that by setting her {{domxref("Animation.currentTime")}} to 4 seconds, like so:</p>
 
-<pre class="brush: js notranslate">aliceChange.currentTime = 4000;</pre>
+<pre class="brush: js">aliceChange.currentTime = 4000;</pre>
 
 <p>But while working on this animation, we might change Alice’s duration a lot. Wouldn’t it be better if we set her <code>currentTime</code> dynamically, so we don’t have to make two updates at a time? We can, in fact, do so by referencing aliceChange’s {{domxref("Animation.effect")}} property, which returns an object containing all the details of the effect(s) active on Alice:</p>
 
-<pre class="brush: js notranslate">aliceChange.currentTime = aliceChange.effect.getComputedTiming().duration / 2;</pre>
+<pre class="brush: js">aliceChange.currentTime = aliceChange.effect.getComputedTiming().duration / 2;</pre>
 
 <p><code>effect</code> lets us access the animation’s keyframes and timing properties — <code>aliceChange.effect.getComputedTiming()</code> points to Alice’s timing object (which is of type {{domxref("ComputedEffectTiming")}}) — this contains her {{domxref("ComputedEffectTiming.duration")}}. We can divide her duration in half to get the midpoint for her animation’s timeline, setting her to be normal height. Now we can reverse and play her animation in either direction to make her grow smaller or larger!</p>
 
 <p>And we can do the same thing when setting the cake and bottle durations:</p>
 
-<pre class="brush: js notranslate">var drinking = document.getElementById('liquid').animate(
+<pre class="brush: js">var drinking = document.getElementById('liquid').animate(
 [
   { height: '100%' },
   { height: '0' }
@@ -290,7 +290,7 @@ drinking.pause();</pre>
 
 <p>We can also use the Web Animations API to figure out the animation's current time. The game ends when you run out of cake to eat or empty the bottle. Which vignette players are presented with depends on how far along Alice was in her animation, whether she grew too big and can't get in the tiny door anymore or too small and cannot reach the key to open the door. We can figure out whether she's on the large end or small end of her animation by getting her animation's <code><a href="/en-US/docs/Web/API/Animation/currentTime">currentTime</a></code> and dividing it by her <code>activeDuration</code>:</p>
 
-<pre class="brush: js notranslate">var endGame = function() {
+<pre class="brush: js">var endGame = function() {
 
   // get Alice's timeline's playhead location
   var alicePlayhead = aliceChange.currentTime;
@@ -333,7 +333,7 @@ drinking.pause();</pre>
 
 <p>Here we set the callbacks for the cake, bottle, and Alice to fire the <code>endGame</code> function:</p>
 
-<pre class="brush: js notranslate">// When the cake or bottle runs out...
+<pre class="brush: js">// When the cake or bottle runs out...
 nommingCake.onfinish = endGame;
 drinking.onfinish = endGame;
 

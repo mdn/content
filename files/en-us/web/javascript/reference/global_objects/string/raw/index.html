@@ -16,7 +16,7 @@ tags:
     This is <em>similar</em> to the <code>r</code> prefix in Python, or the <code>@</code>
     prefix in C# for string literals. (But it is not <em>identical</em>; see explanations
     in <a href="https://bugs.chromium.org/p/v8/issues/detail?id=5016">this issue</a>.)
-    It's used to get the raw string form of template strings, that is, substitutions (e.g.
+    It's used to get the raw string form of template literals, that is, substitutions (e.g.
     <code>${foo}</code>) are processed, but escapes (e.g. <code>\n</code>) are not.</span>
 </p>
 
@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><code>String.raw(<var>callSite</var>, <var>...substitutions</var>)
+<pre class="brush: js"><code>String.raw(<var>callSite</var>, <var>...substitutions</var>)
 
 String.raw`<var>templateString</var>`
 </code></pre>
@@ -38,13 +38,13 @@ String.raw`<var>templateString</var>`
   <dt><code><var>...substitutions</var></code></dt>
   <dd>Contains substitution values.</dd>
   <dt><code><var>templateString</var></code></dt>
-  <dd>A {{jsxref("template_strings", "template string", "", 1)}}, optionally with
+  <dd>A {{jsxref("template_literals", "template literal", "", 1)}}, optionally with
     substitutions (<code>${...}</code>).</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>The raw string form of a given template string.</p>
+<p>The raw string form of a given template literal.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
@@ -56,13 +56,13 @@ String.raw`<var>templateString</var>`
 
 <h2 id="Description">Description</h2>
 
-<p>In most cases, <code>String.raw()</code> is used with template strings. The first
+<p>In most cases, <code>String.raw()</code> is used with template literal. The first
   syntax mentioned above is only rarely used, because the JavaScript engine will call this
   with proper arguments for you, (just like with other <a
     href="/en-US/docs/Web/JavaScript/Reference/template_strings#Tagged_template_literals">tag
     functions</a>).</p>
 
-<p><code>String.raw()</code> is the only built-in tag function of template strings. It
+<p><code>String.raw()</code> is the only built-in tag function of template literals. It
   works just like the default template function and performs concatenation. You can even
   re-implement it with normal JavaScript code.</p>
 
@@ -70,7 +70,7 @@ String.raw`<var>templateString</var>`
 
 <h3 id="Using_String.raw">Using String.raw()</h3>
 
-<pre class="brush: js notranslate">String.raw`Hi\n${2+3}!`;
+<pre class="brush: js">String.raw`Hi\n${2+3}!`;
 // 'Hi\n5!', the character after 'Hi'
 // is not a newline character,
 // '\' and 'n' are two characters.
@@ -126,7 +126,7 @@ String.raw({ raw: 'test' }, 0, 1, 2); // 't0e1s2t'
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/template_strings">Template strings</a>
+  <li><a href="/en-US/docs/Web/JavaScript/Reference/template_strings">Template literals</a>
   </li>
   <li>{{jsxref("String")}}</li>
   <li><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">Lexical grammar</a>

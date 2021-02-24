@@ -28,7 +28,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>typedarray</var>.join([<var>separator</var> = ',']);</pre>
+  class="brush: js"><var>typedarray</var>.join([<var>separator</var> = ',']);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -47,7 +47,7 @@ tags:
 
 <h3 id="Using_join">Using join()</h3>
 
-<pre class="brush: js notranslate">var uint8 = new Uint8Array([1,2,3]);
+<pre class="brush: js">var uint8 = new Uint8Array([1,2,3]);
 uint8.join();      // '1,2,3'
 uint8.join(' / '); // '1 / 2 / 3'
 uint8.join('');    // '123'
@@ -58,7 +58,7 @@ uint8.join('');    // '123'
 <p>Since there is no global object with the name <em>TypedArray</em>, polyfilling must be
   done on an "as needed" basis.</p>
 
-<pre class="brush: js notranslate">// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.join
+<pre class="brush: js">// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.join
 if (!Uint8Array.prototype.join) {
   Object.defineProperty(Uint8Array.prototype, 'join', {
     value: Array.prototype.join

@@ -16,14 +16,14 @@ tags:
 
 <p>For example, a client might be asking a server if it would allow a {{HTTPMethod("DELETE")}} request, before sending a <code>DELETE</code> request, by using a preflight request:</p>
 
-<pre class="brush: plain notranslate">OPTIONS /resource/foo
+<pre class="brush: plain">OPTIONS /resource/foo
 Access-Control-Request-Method: DELETE
 Access-Control-Request-Headers: origin, x-requested-with
 Origin: https://foo.bar.org</pre>
 
 <p>If the server allows it, then it will respond to the preflight request with an {{HTTPHeader("Access-Control-Allow-Methods")}} response header, which lists <code>DELETE</code>:</p>
 
-<pre class="brush: plain notranslate">HTTP/1.1 204 No Content
+<pre class="brush: plain">HTTP/1.1 204 No Content
 Connection: keep-alive
 Access-Control-Allow-Origin: https://foo.bar.org
 Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE

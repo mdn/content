@@ -95,7 +95,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Math.tanh(<var>x</var>)</pre>
+<pre class="brush: js">Math.tanh(<var>x</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -118,7 +118,7 @@ tags:
 
 <p>This can be emulated with the help of the {{jsxref("Math.exp()")}} function:</p>
 
-<pre class="brush: js notranslate">Math.tanh = Math.tanh || function(x){
+<pre class="brush: js">Math.tanh = Math.tanh || function(x){
     var a = Math.exp(+x), b = Math.exp(-x);
     return a == Infinity ? 1 : b == Infinity ? -1 : (a - b) / (a + b);
 }
@@ -128,7 +128,7 @@ tags:
 
 <h3 id="Using_Math.tanh">Using Math.tanh()</h3>
 
-<pre class="brush: js notranslate">Math.tanh(0);        // 0
+<pre class="brush: js">Math.tanh(0);        // 0
 Math.tanh(Infinity); // 1
 Math.tanh(1);        // 0.7615941559557649
 </pre>

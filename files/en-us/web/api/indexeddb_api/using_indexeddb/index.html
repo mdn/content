@@ -47,7 +47,7 @@ tags:
 
 <p>In case you want to test your code in browsers that still use a prefix, you can use the following code:  </p>
 
-<pre class="brush: js notranslate">// In the following line, you should include the prefixes of implementations you want to test.
+<pre class="brush: js">// In the following line, you should include the prefixes of implementations you want to test.
 window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
 // DON'T use "var indexedDB = ..." if you're not in a function.
 // Moreover, you may need references to some window.IDB* objects:
@@ -57,7 +57,7 @@ window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.ms
 
 <p>Beware that implementations that use a prefix may be buggy, or incomplete, or following an old version of the specification. Therefore, it is not recommended to use it in production code. It may be preferable to not support a browser than to claim to support it and fail:</p>
 
-<pre class="brush: js notranslate">if (!window.indexedDB) {
+<pre class="brush: js">if (!window.indexedDB) {
     console.log("Your browser doesn't support a stable version of IndexedDB. Such and such feature will not be available.");
 }
 </pre>
@@ -66,7 +66,7 @@ window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.ms
 
 <p>We start the whole process like this:</p>
 
-<pre class="brush: js notranslate">// Let us open our database
+<pre class="brush: js">// Let us open our database
 var request = window.indexedDB.open("MyTestDatabase", 3);
 </pre>
 
@@ -85,7 +85,7 @@ var request = window.indexedDB.open("MyTestDatabase", 3);
 
 <p>The first thing you'll want to do with almost all of the requests you generate is to add success and error handlers:</p>
 
-<pre class="brush: js notranslate">request.onerror = function(event) {
+<pre class="brush: js">request.onerror = function(event) {
   // Do something with request.errorCode!
 };
 request.onsuccess = function(event) {
@@ -100,7 +100,7 @@ request.onsuccess = function(event) {
 
 <p>Now, assuming that the user allowed your request to create a database, and you've received a success event to trigger the success callback; What's next? The request here was generated with a call to <code>indexedDB.open()</code>, so <code>request.result</code> is an instance of <code>IDBDatabase</code>, and you definitely want to save that for later. Your code might look something like this:</p>
 
-<pre class="brush: js notranslate">var db;
+<pre class="brush: js">var db;
 var request = indexedDB.open("MyTestDatabase");
 request.onerror = function(event) {
   console.log("Why didn't you allow my web app to use IndexedDB?!");
@@ -114,7 +114,7 @@ request.onsuccess = function(event) {
 
 <p>As mentioned above, error events bubble. Error events are targeted at the request that generated the error, then the event bubbles to the transaction, and then finally to the database object. If you want to avoid adding error handlers to every request, you can instead add a single error handler on the database object, like so:</p>
 
-<pre class="brush: js notranslate">db.onerror = function(event) {
+<pre class="brush: js">db.onerror = function(event) {
   // Generic error handler for all errors targeted at this database's
   // requests!
   console.error("Database error: " + event.target.errorCode);
@@ -127,7 +127,7 @@ request.onsuccess = function(event) {
 
 <p><a name="Updating_the_version_of_the_database"></a>When you create a new database or increase the version number of an existing database (by specifying a higher version number than you did previously, when {{ anch("Opening a database") }}), the <code style="font-size: 14px; color: rgb(51, 51, 51);">onupgradeneeded</code><span style="line-height: 21px;"> event will be triggered and an </span><a href="/en-US/docs/Web/API/IDBVersionChangeEvent">IDBVersionChangeEvent</a> object will be passed to any <code>onversionchange</code> event handler set up on <code>request.result</code> (i.e., <code>db</code> in the example). In the handler for the <code>upgradeneeded</code> event, you should create the object stores needed for this version of the database:</p>
 
-<pre class="brush:js; notranslate">// This event is only implemented in recent browsers
+<pre class="brush:js;">// This event is only implemented in recent browsers
 request.onupgradeneeded = function(event) {
   // Save the IDBDatabase interface
   var db = event.target.result;
@@ -186,7 +186,7 @@ request.onupgradeneeded = function(event) {
 
 <p>That may sound confusing, but this simple example should illustrate the concepts. First, we'll define some customer data to use in our example:</p>
 
-<pre class="brush: js notranslate">// This is what our customer data looks like.
+<pre class="brush: js">// This is what our customer data looks like.
 const customerData = [
   { ssn: "444-44-4444", name: "Bill", age: 35, email: "bill@company.com" },
   { ssn: "555-55-5555", name: "Donna", age: 32, email: "donna@home.org" }
@@ -197,7 +197,7 @@ const customerData = [
 
 <p>Now let's look at creating an IndexedDB to store our data:</p>
 
-<pre class="brush: js notranslate">const dbName = "the_name";
+<pre class="brush: js">const dbName = "the_name";
 
 var request = indexedDB.open(dbName, 2);
 
@@ -248,7 +248,7 @@ request.onupgradeneeded = function(event) {
 
 <p>We can create another object store with the key generator as below:</p>
 
-<pre class="brush: js notranslate">// Open the indexedDB.
+<pre class="brush: js">// Open the indexedDB.
 var request = indexedDB.open(dbName, 3);
 
 request.onupgradeneeded = function (event) {
@@ -292,7 +292,7 @@ request.onupgradeneeded = function (event) {
 
 <p>If you've just created a database, then you probably want to write to it. Here's what that looks like:</p>
 
-<pre class="brush:js; notranslate">var transaction = db.transaction(["customers"], "readwrite");
+<pre class="brush:js;">var transaction = db.transaction(["customers"], "readwrite");
 // Note: Older experimental implementations use the deprecated constant IDBTransaction.READ_WRITE instead of "readwrite".
 // In case you want to support such an implementation, you can write:
 // var transaction = db.transaction(["customers"], IDBTransaction.READ_WRITE);</pre>
@@ -305,7 +305,7 @@ request.onupgradeneeded = function (event) {
 
 <p>Now that you have a transaction, you'll need to get the object store from it. Transactions only let you have an object store that you specified when creating the transaction. Then you can add all the data you need.</p>
 
-<pre class="brush: js notranslate">// Do something when all the data is added to the database.
+<pre class="brush: js">// Do something when all the data is added to the database.
 transaction.oncomplete = function(event) {
   console.log("All done!");
 };
@@ -328,7 +328,7 @@ customerData.forEach(function(customer) {
 
 <p>Removing data is very similar:</p>
 
-<pre class="brush: js notranslate">var request = db.transaction(["customers"], "readwrite")
+<pre class="brush: js">var request = db.transaction(["customers"], "readwrite")
                 .objectStore("customers")
                 .delete("444-44-4444");
 request.onsuccess = function(event) {
@@ -339,7 +339,7 @@ request.onsuccess = function(event) {
 
 <p>Now that the database has some info in it, you can retrieve it in several ways. First, the simple <code>get()</code>. You need to provide the key to retrieve the value, like so:</p>
 
-<pre class="brush: js notranslate">var transaction = db.transaction(["customers"]);
+<pre class="brush: js">var transaction = db.transaction(["customers"]);
 var objectStore = transaction.objectStore("customers");
 var request = objectStore.get("444-44-4444");
 request.onerror = function(event) {
@@ -352,7 +352,7 @@ request.onsuccess = function(event) {
 
 <p>That's a lot of code for a "simple" retrieval. Here's how you can shorten it up a bit, assuming that you handle errors at the database level:</p>
 
-<pre class="brush: js notranslate">db.transaction("customers").objectStore("customers").get("444-44-4444").onsuccess = function(event) {
+<pre class="brush: js">db.transaction("customers").objectStore("customers").get("444-44-4444").onsuccess = function(event) {
   console.log("Name for SSN 444-44-4444 is " + event.target.result.name);
 };</pre>
 
@@ -369,7 +369,7 @@ request.onsuccess = function(event) {
 
 <p>Now we've retrieved some data, updating it and inserting it back into the IndexedDB is pretty simple. Let's update the previous example somewhat:</p>
 
-<pre class="brush: js notranslate">var objectStore = db.transaction(["customers"], "readwrite").objectStore("customers");
+<pre class="brush: js">var objectStore = db.transaction(["customers"], "readwrite").objectStore("customers");
 var request = objectStore.get("444-44-4444");
 request.onerror = function(event) {
   // Handle errors!
@@ -401,7 +401,7 @@ request.onsuccess = function(event) {
 
 <p>Using <code>get()</code> requires that you know which key you want to retrieve. If you want to step through all the values in your object store, then you can use a cursor. Here's what it looks like:</p>
 
-<pre class="brush: js notranslate">var objectStore = db.transaction("customers").objectStore("customers");
+<pre class="brush: js">var objectStore = db.transaction("customers").objectStore("customers");
 
 objectStore.openCursor().onsuccess = function(event) {
   var cursor = event.target.result;
@@ -418,7 +418,7 @@ objectStore.openCursor().onsuccess = function(event) {
 
 <p>One common pattern with cursors is to retrieve all objects in an object store and add them to an array, like this:</p>
 
-<pre class="brush: js notranslate">var customers = [];
+<pre class="brush: js">var customers = [];
 
 objectStore.openCursor().onsuccess = function(event) {
   var cursor = event.target.result;
@@ -434,7 +434,7 @@ objectStore.openCursor().onsuccess = function(event) {
 <div class="note">
 <p><strong>Note</strong>: Alternatively, you can use <code>getAll()</code> to handle this case (and <code>getAllKeys()</code>) . The following code does precisely the same thing as above:</p>
 
-<pre class="brush: js notranslate">objectStore.getAll().onsuccess = function(event) {
+<pre class="brush: js">objectStore.getAll().onsuccess = function(event) {
   console.log("Got all customers: " + event.target.result);
 };</pre>
 
@@ -445,7 +445,7 @@ objectStore.openCursor().onsuccess = function(event) {
 
 <p>Storing customer data using the SSN as a key is logical since the SSN uniquely identifies an individual. (Whether this is a good idea for privacy is a different question, and outside the scope of this article.) If you need to look up a customer by name, however, you'll need to iterate over every SSN in the database until you find the right one. Searching in this fashion would be very slow, so instead you can use an index.</p>
 
-<pre class="brush: js notranslate">// First, make sure you created index in request.onupgradeneeded:
+<pre class="brush: js">// First, make sure you created index in request.onupgradeneeded:
 // objectStore.createIndex("name", "name");
 // Otherwise you will get DOMException.
 
@@ -460,7 +460,7 @@ index.get("Donna").onsuccess = function(event) {
 
 <p>If you need to access all the entries with a given <code>name</code> you can use a cursor. You can open two different types of cursors on indexes. A normal cursor maps the index property to the object in the object store. A key cursor maps the index property to the key used to store the object in the object store. The differences are illustrated here:</p>
 
-<pre class="brush: js notranslate">// Using a normal cursor to grab whole customer record objects
+<pre class="brush: js">// Using a normal cursor to grab whole customer record objects
 index.openCursor().onsuccess = function(event) {
   var cursor = event.target.result;
   if (cursor) {
@@ -485,7 +485,7 @@ index.openKeyCursor().onsuccess = function(event) {
 
 <p>If you would like to limit the range of values you see in a cursor, you can use an <code>IDBKeyRange</code> object and pass it as the first argument to <code>openCursor()</code> or <code>openKeyCursor()</code>. You can make a key range that only allows a single key, or one that has a lower or upper bound, or one that has both a lower and upper bound. The bound may be "closed" (i.e., the key range includes the given value(s)) or "open" (i.e., the key range does not include the given value(s)). Here's how it works:</p>
 
-<pre class="brush: js notranslate">// Only match "Donna"
+<pre class="brush: js">// Only match "Donna"
 var singleKeyRange = IDBKeyRange.only("Donna");
 
 // Match anything past "Bill", including "Bill"
@@ -511,7 +511,7 @@ index.openCursor(boundKeyRange).onsuccess = function(event) {
 
 <p>Sometimes you may want to iterate in descending order rather than in ascending order (the default direction for all cursors). Switching direction is accomplished by passing <code>prev</code> to the <code>openCursor()</code> function as the second argument:</p>
 
-<pre class="brush: js notranslate">objectStore.openCursor(boundKeyRange, "prev").onsuccess = function(event) {
+<pre class="brush: js">objectStore.openCursor(boundKeyRange, "prev").onsuccess = function(event) {
   var cursor = event.target.result;
   if (cursor) {
     // Do something with the entries.
@@ -521,7 +521,7 @@ index.openCursor(boundKeyRange).onsuccess = function(event) {
 
 <p>If you just want to specify a change of direction but not constrain the results shown, you can just pass in null as the first argument:</p>
 
-<pre class="brush: js notranslate">objectStore.openCursor(null, "prev").onsuccess = function(event) {
+<pre class="brush: js">objectStore.openCursor(null, "prev").onsuccess = function(event) {
   var cursor = event.target.result;
   if (cursor) {
     // Do something with the entries.
@@ -531,7 +531,7 @@ index.openCursor(boundKeyRange).onsuccess = function(event) {
 
 <p>Since the "name" index isn't unique, there might be multiple entries where <code>name</code> is the same. Note that such a situation cannot occur with object stores since the key must always be unique. If you wish to filter out duplicates during cursor iteration over indexes, you can pass <code>nextunique</code> (or <code>prevunique</code> if you're going backwards) as the direction parameter. When <code>nextunique</code> or <code>prevunique</code> is used, the entry with the lowest key is always the one returned.</p>
 
-<pre class="brush: js notranslate">index.openKeyCursor(null, "nextunique").onsuccess = function(event) {
+<pre class="brush: js">index.openKeyCursor(null, "nextunique").onsuccess = function(event) {
   var cursor = event.target.result;
   if (cursor) {
     // Do something with the entries.
@@ -545,7 +545,7 @@ index.openCursor(boundKeyRange).onsuccess = function(event) {
 
 <p>When your web app changes in such a way that a version change is required for your database, you need to consider what happens if the user has the old version of your app open in one tab and then loads the new version of your app in another. When you call <code>open()</code> with a greater version than the actual version of the database, all other open databases must explicitly acknowledge the request before you can start making changes to the database (an <code>onblocked</code> event is fired until they are closed or reloaded). Here's how it works:</p>
 
-<pre class="brush: js notranslate">var openReq = mozIndexedDB.open("MyTestDatabase", 2);
+<pre class="brush: js">var openReq = mozIndexedDB.open("MyTestDatabase", 2);
 
 openReq.onblocked = function(event) {
   // If some other tab is loaded with the database, then it needs to be closed
@@ -635,7 +635,7 @@ function useDatabase(db) {
 
 <h3 id="HTML_Content">HTML Content</h3>
 
-<pre class="brush: html notranslate">&lt;script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"&gt;&lt;/script&gt;
+<pre class="brush: html">&lt;script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"&gt;&lt;/script&gt;
 
     &lt;h1&gt;IndexedDB Demo: storing blobs, e-publication example&lt;/h1&gt;
     &lt;div class="note"&gt;
@@ -770,7 +770,7 @@ function useDatabase(db) {
 
 <h3 id="CSS_Content">CSS Content</h3>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   font-size: 0.8em;
   font-family: Sans-Serif;
 }
@@ -859,7 +859,7 @@ input {
 
 <h3 id="JavaScript_Content">JavaScript Content</h3>
 
-<pre class="brush: js notranslate">(function () {
+<pre class="brush: js">(function () {
   var COMPAT_ENVS = [
     ['Firefox', "&gt;= 16.0"],
     ['Google Chrome',

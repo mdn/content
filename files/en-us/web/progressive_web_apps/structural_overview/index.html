@@ -98,7 +98,7 @@ tags:
 
 <p>The HTML in the file <code>index.html</code> creates the structure of the app. The parts that are directly relevant to the app shell model are found outside the {{HTMLElement("section")}} with the ID <code>content</code> within this page.</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
 	&lt;meta charset="utf-8"&gt;
@@ -151,7 +151,7 @@ tags:
 
 <p>The first thing it does is to generate the app's displayed content using the following template:</p>
 
-<pre class="brush: js notranslate">var template = "&lt;article&gt;\n\
+<pre class="brush: js">var template = "&lt;article&gt;\n\
     &lt;img src='data/img/SLUG.jpg' alt='NAME'&gt;\n\
     &lt;h3&gt;#POS. NAME&lt;/h3&gt;\n\
     &lt;ul&gt;\n\
@@ -181,14 +181,14 @@ document.getElementById('content').innerHTML = content;
 
 <p>Then it registers a <a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a>:</p>
 
-<pre class="brush: js notranslate">if ("serviceWorker" in navigator) {
+<pre class="brush: js">if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("/pwa-examples/js13kpwa/sw.js");
 }
 </pre>
 
 <p>After that, the app adds a handler for clicks on a button whose ID is <code>notifications</code>; this handler requests permission to send notifications to the user, then generates and sends a random notification.</p>
 
-<pre class="brush: js notranslate">var button = document.getElementById("notifications");
+<pre class="brush: js">var button = document.getElementById("notifications");
 button.addEventListener('click', function(e) {
   Notification.requestPermission().then(function(result) {
     if (result === 'granted') {
@@ -200,7 +200,7 @@ button.addEventListener('click', function(e) {
 
 <p>The <code>randomNotification()</code> function follows, rounding out the last of the code in the file:</p>
 
-<pre class="brush: js notranslate">function randomNotification() {
+<pre class="brush: js">function randomNotification() {
   var randomItem = Math.floor(Math.random()*games.length);
   var notifTitle = games[randomItem].name;
   var notifBody = 'Created by '+games[randomItem].author+'.';
@@ -218,11 +218,11 @@ button.addEventListener('click', function(e) {
 
 <p>The last file we'll briefly look at here is the service worker, which is found in the file <code>sw.js</code>. This script begins by importing data from the file <code>games.js</code> in the <code>data</code> directory:</p>
 
-<pre class="brush: js notranslate">self.importScripts("data/games.js");</pre>
+<pre class="brush: js">self.importScripts("data/games.js");</pre>
 
 <p>Then it creates a list of all the files that the service worker needs to cache. This list includes both app shell and content files:</p>
 
-<pre class="brush: js notranslate">var cacheName = 'js13kPWA-v1';
+<pre class="brush: js">var cacheName = 'js13kPWA-v1';
 var appShellFiles = [
   '/pwa-examples/js13kpwa/',
   '/pwa-examples/js13kpwa/index.html',
@@ -252,7 +252,7 @@ var contentToCache = appShellFiles.concat(gamesImages);
 
 <p>With the file list prepared, it's time to install the service worker itself. The service worker will actually handle caching all the listed files.</p>
 
-<pre class="brush: js notranslate">self.addEventListener('install', function(e) {
+<pre class="brush: js">self.addEventListener('install', function(e) {
   console.log('[Service Worker] Install');
   e.waitUntil(
     caches.open(cacheName).then(function(cache) {
@@ -265,7 +265,7 @@ var contentToCache = appShellFiles.concat(gamesImages);
 
 <p>With that done, we implement the service worker's <a href="/en-US/docs/Web/API/FetchEvent">fetch event</a> handler; its job is to return the contents of the specified file, either from the cache or by loading it over the network (caching it upon doing so):</p>
 
-<pre class="brush: js notranslate">self.addEventListener('fetch', function(e) {
+<pre class="brush: js">self.addEventListener('fetch', function(e) {
   e.respondWith(
     caches.match(e.request).then(function(r) {
       console.log('[Service Worker] Fetching resource: '+e.request.url);
@@ -285,7 +285,7 @@ var contentToCache = appShellFiles.concat(gamesImages);
 
 <p>The games data for this app example is provided in a JavaScript source file called <code>games.js</code>. Other apps might use JSON or other formats for this data.</p>
 
-<pre class="brush: js notranslate">var games = [
+<pre class="brush: js">var games = [
     {
         slug: 'lost-in-cyberspace',
         name: 'Lost in Cyberspace',

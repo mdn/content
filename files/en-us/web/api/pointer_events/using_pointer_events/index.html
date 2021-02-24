@@ -34,7 +34,7 @@ tags:
 
 <p>The {{cssxref("touch-action")}} property is set to <code>none</code> to prevent the browser from applying its default touch behavior to the application.</p>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="600" height="600" style="border:solid black 1px; touch-action:none"&gt;
+<pre class="brush: html">&lt;canvas id="canvas" width="600" height="600" style="border:solid black 1px; touch-action:none"&gt;
   Your browser does not support canvas element.
 &lt;/canvas&gt;
 &lt;br&gt;
@@ -47,7 +47,7 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;
 
 <p>When the page loads, the <code>startup()</code> function shown below should be called by our {{HTMLElement("body")}} element's <code>onload</code> attribute (but in the example we use a button to trigger it, due to limitations of the MDN live example system).</p>
 
-<pre class="brush: js notranslate">function startup() {
+<pre class="brush: js">function startup() {
   var el = document.getElementsByTagName("canvas")[0];
   el.addEventListener("pointerdown", handleStart, false);
   el.addEventListener("pointerup", handleEnd, false);
@@ -63,12 +63,12 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;
 
 <p>We'll keep track of the touches in-progress.</p>
 
-<pre class="brush: js notranslate">var ongoingTouches = new Array();
+<pre class="brush: js">var ongoingTouches = new Array();
 </pre>
 
 <p>When a {{event("pointerdown")}} event occurs, indicating that a new touch on the surface has occurred, the <code>handleStart()</code> function below is called.</p>
 
-<pre class="brush: js notranslate">function handleStart(evt) {
+<pre class="brush: js">function handleStart(evt) {
   log("pointerdown.");
   var el = document.getElementsByTagName("canvas")[0];
   var ctx = el.getContext("2d");
@@ -90,7 +90,7 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;
 
 <p>Each time one or more pointers moves, a {{event("pointermove")}} event is delivered, resulting in our <code>handleMove()</code> function being called. Its responsibility in this example is to update the cached touch information and to draw a line from the previous position to the current position of each touch.</p>
 
-<pre class="brush: js notranslate">function handleMove(evt) {
+<pre class="brush: js">function handleMove(evt) {
   var el = document.getElementsByTagName("canvas")[0];
   var ctx = el.getContext("2d");
   var color = colorForTouch(evt);
@@ -125,7 +125,7 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;
 
 <p>When the user lifts a finger off the surface, a {{event("pointerup")}} event is sent. We handle this event by calling the <code>handleEnd()</code> function below. Its job is to draw the last line segment for the touch that ended and remove the touch point from the ongoing touch list.</p>
 
-<pre class="brush: js notranslate">function handleEnd(evt) {
+<pre class="brush: js">function handleEnd(evt) {
   log("pointerup");
   var el = document.getElementsByTagName("canvas")[0];
   var ctx = el.getContext("2d");
@@ -152,7 +152,7 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;
 
 <p>If the user's finger wanders into browser UI, or the touch otherwise needs to be canceled, the {{event("pointercancel")}} event is sent, and we call the <code>handleCancel()</code> function below.</p>
 
-<pre class="brush: js notranslate">function handleCancel(evt) {
+<pre class="brush: js">function handleCancel(evt) {
   log("pointercancel: id = " + evt.pointerId);
   var idx = ongoingTouchIndexById(evt.pointerId);
   ongoingTouches.splice(idx, 1);  // remove it; we're done
@@ -169,7 +169,7 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;
 
 <p>In order to make each touch's drawing look different, the <code>colorForTouch()</code> function is used to pick a color based on the touch's unique identifier. This identifier is an opaque number, but we can at least rely on it differing between the currently-active touches.</p>
 
-<pre class="brush: js notranslate">function colorForTouch(touch) {
+<pre class="brush: js">function colorForTouch(touch) {
   var r = touch.pointerId % 16;
   var g = Math.floor(touch.pointerId / 3) % 16;
   var b = Math.floor(touch.pointerId / 7) % 16;
@@ -188,7 +188,7 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;
 
 <p>Some browsers may re-use touch objects between events, so it's best to copy the bits you care about, rather than referencing the entire object.</p>
 
-<pre class="brush: js notranslate">function copyTouch(touch) {
+<pre class="brush: js">function copyTouch(touch) {
   return { identifier: touch.pointerId, pageX: touch.clientX, pageY: touch.clientY };
 }
 </pre>
@@ -197,7 +197,7 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;
 
 <p>The <code>ongoingTouchIndexById()</code> function below scans through the <code>ongoingTouches</code> array to find the touch matching the given identifier, then returns that touch's index into the array.</p>
 
-<pre class="brush: js notranslate">function ongoingTouchIndexById(idToFind) {
+<pre class="brush: js">function ongoingTouchIndexById(idToFind) {
   for (var i = 0; i &lt; ongoingTouches.length; i++) {
     var id = ongoingTouches[i].identifier;
 
@@ -211,7 +211,7 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;
 
 <h4 id="Showing_whats_going_on">Showing what's going on</h4>
 
-<pre class="brush: js notranslate">function log(msg) {
+<pre class="brush: js">function log(msg) {
   var p = document.getElementById('log');
   p.innerHTML = msg + "\n" + p.innerHTML;
 }</pre>

@@ -58,7 +58,7 @@ tags:
 
 <p>The HTML specification states that authors should use the {{domxref("Event.preventDefault()")}} method instead of using {{domxref("Event.returnValue")}}. However, this is not supported by all browsers.</p>
 
-<pre class="brush: js notranslate">window.addEventListener('beforeunload', (event) =&gt; {
+<pre class="brush: js">window.addEventListener('beforeunload', (event) =&gt; {
   // Cancel the event as stated by the standard.
   event.preventDefault();
   // Older browsers supported custom message

@@ -21,7 +21,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">JSON.stringify(<var>value</var>[, <var>replacer</var>[, <var>space</var>]])</pre>
+  class="brush: js">JSON.stringify(<var>value</var>[, <var>replacer</var>[, <var>space</var>]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -92,7 +92,7 @@ tags:
 
 <h3 id="Using_JSON.stringify">Using JSON.stringify</h3>
 
-<pre class="brush: js notranslate">JSON.stringify({});                    // '{}'
+<pre class="brush: js">JSON.stringify({});                    // '{}'
 JSON.stringify(true);                  // 'true'
 JSON.stringify('foo');                 // '"foo"'
 JSON.stringify([1, 'false', false]);   // '[1,"false",false]'
@@ -196,7 +196,7 @@ JSON.stringify({x: 2n});
 
 <h4 id="Example_replacer_as_a_function">Example replacer, as a function</h4>
 
-<pre class="brush: js notranslate">function replacer(key, value) {
+<pre class="brush: js">function replacer(key, value) {
   // Filtering out properties
   if (typeof value === 'string') {
     return undefined;
@@ -215,7 +215,7 @@ JSON.stringify(foo, replacer);
   of the properties in the object that should be included in the resulting JSON string.
 </p>
 
-<pre class="brush: js notranslate">JSON.stringify(foo, ['week', 'month']);
+<pre class="brush: js">JSON.stringify(foo, ['week', 'month']);
 // '{"week":45,"month":7}', only keep "week" and "month" properties
 </pre>
 
@@ -230,7 +230,7 @@ JSON.stringify(foo, replacer);
     string (or the first ten characters of it).</li>
 </ul>
 
-<pre class="brush: js notranslate">JSON.stringify({ a: 2 }, null, ' ');
+<pre class="brush: js">JSON.stringify({ a: 2 }, null, ' ');
 // '{
 //  "a": 2
 // }'
@@ -238,7 +238,7 @@ JSON.stringify(foo, replacer);
 
 <p>Using a tab character mimics standard pretty-print appearance:</p>
 
-<pre class="brush: js notranslate">JSON.stringify({ uno: 1, dos: 2 }, null, '\t');
+<pre class="brush: js">JSON.stringify({ uno: 1, dos: 2 }, null, '\t');
 // returns the string:
 // '{
 //     "uno": 1,
@@ -263,7 +263,7 @@ JSON.stringify(foo, replacer);
 
 <p>For example:</p>
 
-<pre class="brush: js notranslate">var obj = {
+<pre class="brush: js">var obj = {
     data: 'data',
 
     toJSON (key) {
@@ -293,7 +293,7 @@ JSON.stringify([ obj ]);
     exists</a>), a {{JSxRef("TypeError")}} will be thrown if one attempts to encode an
   object with circular references.</p>
 
-<pre class="brush: js example-bad notranslate">const circularReference = {};
+<pre class="brush: js example-bad">const circularReference = {};
 circularReference.myself = circularReference;
 
 // Serializing circular references throws "TypeError: cyclic object value"
@@ -323,7 +323,7 @@ JSON.stringify(circularReference);
   part of a <a href="https://en.wikipedia.org/wiki/JSONP">JSONP</a> URL, and the following
   utility can be used:</p>
 
-<pre class="brush: js notranslate">function jsFriendlyJSONStringify (s) {
+<pre class="brush: js">function jsFriendlyJSONStringify (s) {
     return JSON.stringify(s).
         replace(/\u2028/g, '\\u2028').
         replace(/\u2029/g, '\\u2029');
@@ -353,7 +353,7 @@ alert(jsFriendlyJSONStringify(s)); // {"a":"\u2028","b":"\u2029"}
     same object within the stringification.</p>
 </div>
 
-<pre class="brush: js notranslate">var a = JSON.stringify({ foo: "bar", baz: "quux" })
+<pre class="brush: js">var a = JSON.stringify({ foo: "bar", baz: "quux" })
 //'{"foo":"bar","baz":"quux"}'
 var b = JSON.stringify({ baz: "quux", foo: "bar" })
 //'{"baz":"quux","foo":"bar"}'
@@ -370,7 +370,7 @@ console.log(a !== b) // true
   restored even after the browser has been closed, the following example is a model for
   the applicability of <code>JSON.stringify()</code>:</p>
 
-<pre class="brush: js notranslate">// Creating an example of JSON
+<pre class="brush: js">// Creating an example of JSON
 var session = {
   'screens': [],
   'state': true
@@ -405,13 +405,13 @@ console.log(restoredSession);
   any lone surrogates; such strings could not be encoded in valid UTF-8 or UTF-16:</p>
 
 <pre
-  class="brush: js no-line-numbers notranslate">JSON.stringify("\uD800"); // '"�"'</pre>
+  class="brush: js no-line-numbers">JSON.stringify("\uD800"); // '"�"'</pre>
 
 <p>But with this change <code>JSON.stringify</code> represents lone surrogates using JSON
   escape sequences that <em>can</em> be encoded in valid UTF-8 or UTF-16:</p>
 
 <pre
-  class="brush: js no-line-numbers notranslate">JSON.stringify("\uD800"); // '"\\ud800"'</pre>
+  class="brush: js no-line-numbers">JSON.stringify("\uD800"); // '"\\ud800"'</pre>
 
 <p>This change should be backwards-compatible as long as you pass the result of
   <code>JSON.stringify</code> to APIs such as <code>JSON.parse</code> that will accept any

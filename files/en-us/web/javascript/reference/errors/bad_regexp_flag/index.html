@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Message">Message</h2>
 
-<pre class="brush: js notranslate">SyntaxError: Syntax error in regular expression (Edge)
+<pre class="brush: js">SyntaxError: Syntax error in regular expression (Edge)
 SyntaxError: invalid regular expression flag "x" (Firefox)
 SyntaxError: Invalid regular expression flags (Chrome)
 </pre>
@@ -34,12 +34,12 @@ SyntaxError: Invalid regular expression flags (Chrome)
 
 <p>To include a flag with the regular expression, use this syntax:</p>
 
-<pre class="brush: js notranslate">var re = /pattern/flags;
+<pre class="brush: js">var re = /pattern/flags;
 </pre>
 
 <p>or</p>
 
-<pre class="brush: js notranslate">var re = new RegExp('pattern', 'flags');</pre>
+<pre class="brush: js">var re = new RegExp('pattern', 'flags');</pre>
 
 <table class="standard-table">
   <caption>Regular expression flags</caption>
@@ -82,7 +82,7 @@ SyntaxError: Invalid regular expression flags (Chrome)
 
 <p>There are only six valid regular expression flags.</p>
 
-<pre class="brush: js example-bad notranslate">/foo/bar;
+<pre class="brush: js example-bad">/foo/bar;
 
 // SyntaxError: invalid regular expression flag "b"
 </pre>
@@ -90,7 +90,7 @@ SyntaxError: Invalid regular expression flags (Chrome)
 <p>Did you intend to create a regular expression? An expression containing two slashes is
   interpreted as a regular expression literal.</p>
 
-<pre class="brush: js example-bad notranslate">let obj = {
+<pre class="brush: js example-bad">let obj = {
   url: /docs/Web
 };
 
@@ -100,7 +100,7 @@ SyntaxError: Invalid regular expression flags (Chrome)
 <p>Or did you mean to create a string instead? Add single or double quotes to create a
   string literal.</p>
 
-<pre class="brush: js example-good notranslate">let obj = {
+<pre class="brush: js example-good">let obj = {
   url: '/docs/Web'
 };</pre>
 
@@ -109,7 +109,7 @@ SyntaxError: Invalid regular expression flags (Chrome)
 <p>See the table above for the six valid regular expression flags that are allowed in
   JavaScript.</p>
 
-<pre class="brush: js example-good notranslate">/foo/g;
+<pre class="brush: js example-good">/foo/g;
 /foo/gims;
 /foo/uy;
 </pre>

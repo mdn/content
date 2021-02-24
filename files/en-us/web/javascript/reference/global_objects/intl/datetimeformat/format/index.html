@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>dateTimeFormat</var>.format(<var>date</var>)</pre>
+<pre class="brush: js"><var>dateTimeFormat</var>.format(<var>date</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -45,7 +45,7 @@ tags:
 <p>Use the <code>format</code> getter function for formatting a single date, here for
 	Serbia:</p>
 
-<pre class="brush: js notranslate">var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+<pre class="brush: js">var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 var dateTimeFormat = new Intl.DateTimeFormat('sr-RS', options);
 console.log(dateTimeFormat.format(new Date()));
 // → "недеља, 7. април 2013."
@@ -58,7 +58,7 @@ console.log(dateTimeFormat.format(new Date()));
 	from which it was obtained, so it can be passed directly to
 	{{jsxref("Array.prototype.map()")}}.</p>
 
-<pre class="brush: js notranslate">var a = [new Date(2012, 08), new Date(2012, 11), new Date(2012, 03)];
+<pre class="brush: js">var a = [new Date(2012, 08), new Date(2012, 11), new Date(2012, 03)];
 var options = { year: 'numeric', month: 'long' };
 var dateTimeFormat = new Intl.DateTimeFormat('pt-BR', options);
 var formatted = a.map(dateTimeFormat.format);
@@ -78,7 +78,7 @@ console.log(formatted.join('; '));
 <p>For this reason you cannot expect to be able to compare the results of
 	<code>format()</code> to a static value:</p>
 
-<pre class="brush: js; example-bad notranslate">let d = new Date("2019-01-01T00:00:00.000000Z");
+<pre class="brush: js; example-bad">let d = new Date("2019-01-01T00:00:00.000000Z");
 let formattedDate = Intl.DateTimeFormat(undefined, {
   year: 'numeric',
   month: 'numeric',
