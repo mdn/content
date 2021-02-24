@@ -17,7 +17,7 @@ tags:
 
 <p><span class="seoSummary">The
     <code><strong>Document.pictureInPictureElement</strong></code> read-only
-    property returns the {{ domxref("HTMLVideoElement") }} that is currently being
+    property returns the {{ domxref("Element") }} that is currently being
     presented in picture-in-picture mode in this document, or <code>null</code> if
     picture-in-picture mode is not currently in use.</span></p>
 
@@ -27,11 +27,11 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js"><var>var video</var> = <var>document</var>.pictureInPictureElement;</pre>
+  class="brush: js"><var>document</var>.pictureInPictureElement;</pre>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A reference to the {{domxref("HTMLVideoElement")}} object that's currently in
+<p>A reference to the {{domxref("Element")}} object that's currently in
   picture-in-picture mode; if picture-in-picture mode isn't currently in use by the
   <code><var>document</var></code>, the returned value is <code>null</code>.</p>
 
