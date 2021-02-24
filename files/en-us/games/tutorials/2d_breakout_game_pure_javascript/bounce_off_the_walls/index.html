@@ -28,17 +28,17 @@ tags:
 
 <p>To make the calculations easier let's define a variable called <code>ballRadius</code> that will hold the radius of the drawn circle and be used for calculations. Add this to your code, somewhere below the existing variable declarations:</p>
 
-<pre class="brush: js notranslate">var ballRadius = 10;</pre>
+<pre class="brush: js">var ballRadius = 10;</pre>
 
 <p>Now update the line that draws the ball inside the <code>drawBall()</code> function to this:</p>
 
-<pre class="brush: js notranslate">ctx.arc(x, y, ballRadius, 0, Math.PI*2);</pre>
+<pre class="brush: js">ctx.arc(x, y, ballRadius, 0, Math.PI*2);</pre>
 
 <h3 id="Bouncing_off_the_top_and_bottom">Bouncing off the top and bottom</h3>
 
 <p>There are four walls to bounce the ball off — let's focus on the top one first. We need to check, on every frame, whether the ball is touching the top edge of the Canvas — if yes, we'll reverse the ball movement so it will start to move in the opposite direction and stay within the visible boundaries. Remembering that the coordinate system starts from the top left, we can come up with something like this:</p>
 
-<pre class="brush: js notranslate">if(y + dy &lt; 0) {
+<pre class="brush: js">if(y + dy &lt; 0) {
     dy = -dy;
 }</pre>
 
@@ -46,7 +46,7 @@ tags:
 
 <p>The code above would deal with the ball bouncing off the top edge, so now let's think about the bottom edge:</p>
 
-<pre class="brush: js notranslate">if(y + dy &gt; canvas.height) {
+<pre class="brush: js">if(y + dy &gt; canvas.height) {
     dy = -dy;
 }</pre>
 
@@ -54,7 +54,7 @@ tags:
 
 <p>We could merge those two statements into one to save on code verbosity:</p>
 
-<pre class="brush: js notranslate">if(y + dy &gt; canvas.height || y + dy &lt; 0) {
+<pre class="brush: js">if(y + dy &gt; canvas.height || y + dy &lt; 0) {
     dy = -dy;
 }</pre>
 
@@ -64,7 +64,7 @@ tags:
 
 <p>We have the top and bottom edge covered, so let's think about the left and right ones. It is very similar actually, all you have to do is to repeat the statements for <code>x</code> instead of <code>y</code>:</p>
 
-<pre class="brush: js notranslate">if(x + dx &gt; canvas.width || x + dx &lt; 0) {
+<pre class="brush: js">if(x + dx &gt; canvas.width || x + dx &lt; 0) {
     dx = -dx;
 }
 
@@ -82,7 +82,7 @@ if(y + dy &gt; canvas.height || y + dy &lt; 0) {
 
 <p>This is because we're calculating the collision point of the wall and the center of the ball, while we should be doing it for its circumference. The ball should bounce right after if touches the wall, not when it's already halfway in the wall, so let's adjust our statements a bit to include that. Update the last code you added to this:</p>
 
-<pre class="brush: js notranslate">if(x + dx &gt; canvas.width-ballRadius || x + dx &lt; ballRadius) {
+<pre class="brush: js">if(x + dx &gt; canvas.width-ballRadius || x + dx &lt; ballRadius) {
     dx = -dx;
 }
 if(y + dy &gt; canvas.height-ballRadius || y + dy &lt; ballRadius) {

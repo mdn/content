@@ -28,7 +28,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>firstRequestTimestamp</em> = <em>rtcIceCandidatePairStats</em>.firstRequestTimestamp;</pre>
+  class="brush: js"><em>firstRequestTimestamp</em> = <em>rtcIceCandidatePairStats</em>.firstRequestTimestamp;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -41,7 +41,7 @@ tags:
   {{domxref("RTCIceCandidatePairStats.requestsSent", "requestsSent")}} to compute the
   average interval between consecutive connectivity checks:</p>
 
-<pre class="brush: js notranslate">avgCheckInterval = (candidatePairStats.lastRequestTimestamp -
+<pre class="brush: js">avgCheckInterval = (candidatePairStats.lastRequestTimestamp -
                     candidatePairStats.firstRequestTimestamp) /
                    candidatePairStats.requestsSent;</pre>
 

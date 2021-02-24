@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><code>decodeURI(<var>encodedURI</var>)</code></pre>
+<pre class="brush: js"><code>decodeURI(<var>encodedURI</var>)</code></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -52,13 +52,13 @@ tags:
 
 <h3 id="Decoding_a_Cyrillic_URL">Decoding a Cyrillic URL</h3>
 
-<pre class="brush: js notranslate">decodeURI('https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B');
+<pre class="brush: js">decodeURI('https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B');
 // "https://developer.mozilla.org/ru/docs/JavaScript_шеллы"
 </pre>
 
 <h3 id="Catching_errors">Catching errors</h3>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   var a = decodeURI('%E0%A4%A');
 } catch(e) {
   console.error(e);

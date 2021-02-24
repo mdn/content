@@ -22,7 +22,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>arr</var>.reduceRight(<var>callback</var>(<var>accumulator</var>, <var>currentValue</var>[, <var>index</var>[, <var>array</var>]])[, <var>initialValue</var>])</pre>
+  class="brush: js"><var>arr</var>.reduceRight(<var>callback</var>(<var>accumulator</var>, <var>currentValue</var>[, <var>index</var>[, <var>array</var>]])[, <var>initialValue</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -62,7 +62,7 @@ tags:
 <p>The call to the reduceRight <code><var>callback</var></code> would look something like
   this:</p>
 
-<pre class="brush: js notranslate">arr.reduceRight(function(accumulator, currentValue, index, array) {
+<pre class="brush: js">arr.reduceRight(function(accumulator, currentValue, index, array) {
   // ...
 });
 </pre>
@@ -85,7 +85,7 @@ tags:
 
 <p>Some example run-throughs of the function would look like this:</p>
 
-<pre class="brush: js notranslate">[0, 1, 2, 3, 4].reduceRight(function(accumulator, currentValue, index, array) {
+<pre class="brush: js">[0, 1, 2, 3, 4].reduceRight(function(accumulator, currentValue, index, array) {
   return accumulator + currentValue;
 });
 </pre>
@@ -146,7 +146,7 @@ tags:
 <p>And if you were to provide an <code><var>initialValue</var></code>, the result would
   look like this:</p>
 
-<pre class="brush: js notranslate">[0, 1, 2, 3, 4].reduceRight(function(accumulator, currentValue, index, array) {
+<pre class="brush: js">[0, 1, 2, 3, 4].reduceRight(function(accumulator, currentValue, index, array) {
   return accumulator + currentValue;
 }, 10);
 </pre>
@@ -216,7 +216,7 @@ tags:
   by inserting the following code at the beginning of your scripts, allowing use of
   <code>reduceRight</code> in implementations which do not natively support it.</p>
 
-<pre class="brush: js notranslate">// Production steps of ECMA-262, Edition 5, 15.4.4.22
+<pre class="brush: js">// Production steps of ECMA-262, Edition 5, 15.4.4.22
 // Reference: https://es5.github.io/#x15.4.4.22
 if ('function' !== typeof Array.prototype.reduceRight) {
   Array.prototype.reduceRight = function(callback /*, initialValue*/) {
@@ -253,7 +253,7 @@ if ('function' !== typeof Array.prototype.reduceRight) {
 
 <h3 id="Sum_up_all_values_within_an_array">Sum up all values within an array</h3>
 
-<pre class="brush: js notranslate">var sum = [0, 1, 2, 3].reduceRight(function(a, b) {
+<pre class="brush: js">var sum = [0, 1, 2, 3].reduceRight(function(a, b) {
   return a + b;
 });
 // sum is 6
@@ -261,7 +261,7 @@ if ('function' !== typeof Array.prototype.reduceRight) {
 
 <h3 id="Flatten_an_array_of_arrays">Flatten an array of arrays</h3>
 
-<pre class="brush: js notranslate">var flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
+<pre class="brush: js">var flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
     return a.concat(b);
 }, []);
 // flattened is [4, 5, 2, 3, 0, 1]
@@ -273,7 +273,7 @@ if ('function' !== typeof Array.prototype.reduceRight) {
   Run a list of asynchronous functions with callbacks in series each passing their results
   to the next</h3>
 
-<pre class="brush: js notranslate">const waterfall = (...functions) =&gt; (callback, ...args) =&gt;
+<pre class="brush: js">const waterfall = (...functions) =&gt; (callback, ...args) =&gt;
   functions.reduceRight(
     (composition, fn) =&gt; (...results) =&gt; fn(composition, ...results),
     callback
@@ -317,7 +317,7 @@ const computation2 = (input, callback) =&gt; {
 <h3 id="Difference_between_reduce_and_reduceRight">Difference between <code>reduce</code>
   and <code>reduceRight</code></h3>
 
-<pre class="brush: js notranslate">var a = ['1', '2', '3', '4', '5'];
+<pre class="brush: js">var a = ['1', '2', '3', '4', '5'];
 var left  = a.reduce(function(prev, cur)      { return prev + cur; });
 var right = a.reduceRight(function(prev, cur) { return prev + cur; });
 
@@ -329,7 +329,7 @@ console.log(right); // "54321"</pre>
 <p>The concept of compose function is simple it combines n functions. It’s a flowing
   right-to-left, calling each function with the output of the last one.</p>
 
-<pre class="brush: js notranslate">/**
+<pre class="brush: js">/**
  * Function Composition is way in which result of one function can
  * be passed to another and so on.
  *

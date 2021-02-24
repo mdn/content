@@ -46,7 +46,7 @@ tags:
 
 <p>One use of the universal selector is to make selectors easier to read and more obvious in terms of what they are doing. For example, if we wanted to select any descendant elements of an <code>&lt;article&gt;</code> element that are the first child of their parent, including direct children, and make them bold, we could use the {{cssxref(":first-child")}} pseudo-class, which we will learn more about in the lesson on <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">pseudo-classes and pseudo-elements</a>, as a descendant selector along with the <code>&lt;article&gt;</code> element selector: </p>
 
-<pre class="brush: css notranslate">article :first-child {
+<pre class="brush: css">article :first-child {
   font-weight: bold;
 }</pre>
 
@@ -54,7 +54,7 @@ tags:
 
 <p>To avoid this confusion, we can add the universal selector to the <code>:first-child</code> pseudo-class, so it is more obvious what the selector is doing. It is selecting <em>any</em> element which is the first-child of an <code>&lt;article&gt;</code> element, or the first-child of any descendant element of <code>&lt;article&gt;</code>:</p>
 
-<pre class="brush: css notranslate">article *:first-child {
+<pre class="brush: css">article *:first-child {
   font-weight: bold;
 } </pre>
 

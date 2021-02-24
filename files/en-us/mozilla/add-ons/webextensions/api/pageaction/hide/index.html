@@ -42,7 +42,7 @@ tags:
 
 <p>Hide the page action for the current tab when the user clicks it:</p>
 
-<pre class="notranslate brush: js">browser.pageAction.onClicked.addListener((tab) =&gt; {
+<pre class="brush: js">browser.pageAction.onClicked.addListener((tab) =&gt; {
   browser.pageAction.hide(tab.id);
 });</pre>
 

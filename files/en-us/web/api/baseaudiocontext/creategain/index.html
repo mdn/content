@@ -22,7 +22,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>gainNode</em> = <em>AudioContext</em>.createGain();</pre>
+  class="brush: js">var <em>gainNode</em> = <em>AudioContext</em>.createGain();</pre>
 
 <h3 id="Description">Return value</h3>
 
@@ -42,11 +42,11 @@ tags:
     href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js">view
     source</a>.)</p>
 
-<pre class="brush: html notranslate">&lt;div&gt;
+<pre class="brush: html">&lt;div&gt;
   &lt;button class="mute"&gt;Mute button&lt;/button&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: js notranslate">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var gainNode = audioCtx.createGain();
 var mute = document.querySelector('.mute');
 var source;

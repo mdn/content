@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <var>result</var> = <var>element</var>.matches(<var>selectorString</var>);
+<pre class="brush: js">var <var>result</var> = <var>element</var>.matches(<var>selectorString</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -40,7 +40,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: html notranslate">&lt;ul id="birds"&gt;
+<pre class="brush: html">&lt;ul id="birds"&gt;
   &lt;li&gt;Orange-winged parrot&lt;/li&gt;
   &lt;li class="endangered"&gt;Philippine eagle&lt;/li&gt;
   &lt;li&gt;Great white pelican&lt;/li&gt;
@@ -66,7 +66,7 @@ tags:
   <code>Element.matchesSelector()</code>, but include support for
   <code>document.querySelectorAll()</code>, a polyfill exists:</p>
 
-<pre class="brush: js notranslate">if (!Element.prototype.matches) {
+<pre class="brush: js">if (!Element.prototype.matches) {
   Element.prototype.matches =
       Element.prototype.matchesSelector ||
       Element.prototype.mozMatchesSelector ||
@@ -84,7 +84,7 @@ tags:
 <p>However, given the practicality of supporting older browsers, the following should
   suffice for most (if not all) practical cases (i.e. IE9+ support).</p>
 
-<pre class="brush: js notranslate">if (!Element.prototype.matches) {
+<pre class="brush: js">if (!Element.prototype.matches) {
   Element.prototype.matches = Element.prototype.msMatchesSelector ||
                               Element.prototype.webkitMatchesSelector;
 }

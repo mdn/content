@@ -42,7 +42,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html notranslate">Transfer-Encoding: chunked
+<pre class="brush: html">Transfer-Encoding: chunked
 Transfer-Encoding: compress
 Transfer-Encoding: deflate
 Transfer-Encoding: gzip
@@ -62,23 +62,19 @@ Transfer-Encoding: gzip, chunked</pre>
     regular chunk, with the exception that its length is zero. It is followed by the
     trailer, which consists of a (possibly empty) sequence of entity header fields.</dd>
   <dt><code>compress</code></dt>
-  <dd>A format using the <a class="external"
-      href="https://en.wikipedia.org/wiki/LZW">Lempel-Ziv-Welch</a> (LZW) algorithm. The
+  <dd>A format using the <a       href="https://en.wikipedia.org/wiki/LZW">Lempel-Ziv-Welch</a> (LZW) algorithm. The
     value name was taken from the UNIX <em>compress</em> program, which implemented this
     algorithm.<br>
     Like the compress program, which has disappeared from most UNIX distributions, this
     content-encoding is used by almost no browsers today, partly because of a patent issue
     (which expired in 2003).</dd>
   <dt><code>deflate</code></dt>
-  <dd>Using the <a class="external" href="https://en.wikipedia.org/wiki/Zlib">zlib</a>
-    structure (defined in <a class="external"
-      href="https://tools.ietf.org/html/rfc1950">RFC 1950</a>), with the <a
-      class="external" href="https://en.wikipedia.org/wiki/DEFLATE"><em>deflate</em></a>
-    compression algorithm (defined in <a class="external"
-      href="https://tools.ietf.org/html/rfc1952">RFC 1951</a>).</dd>
+  <dd>Using the <a href="https://en.wikipedia.org/wiki/Zlib">zlib</a>
+    structure (defined in <a       href="https://tools.ietf.org/html/rfc1950">RFC 1950</a>), with the <a
+      href="https://en.wikipedia.org/wiki/DEFLATE"><em>deflate</em></a>
+    compression algorithm (defined in <a       href="https://tools.ietf.org/html/rfc1952">RFC 1951</a>).</dd>
   <dt><code>gzip</code></dt>
-  <dd>A format using the <a class="external"
-      href="https://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77">Lempel-Ziv coding</a>
+  <dd>A format using the <a       href="https://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77">Lempel-Ziv coding</a>
     (LZ77), with a 32-bit CRC. This is originally the format of the UNIX <em>gzip</em>
     program. The HTTP/1.1 standard also recommends that the servers supporting this
     content-encoding should recognize <code>x-gzip</code> as an alias, for compatibility

@@ -38,7 +38,7 @@ tags:
 
 <p>This example listens for the <code>lostpointercapture</code> event, and captures the pointer for an element on <code>pointerdown</code>. When the user subsequently releases the pointer, the <code>lostpointercapture</code> event will be fired.</p>
 
-<pre class="brush: js notranslate">const para = document.querySelector('p');
+<pre class="brush: js">const para = document.querySelector('p');
 
 document.addEventListener('lostpointercapture', () =&gt; {
   console.log('I\'ve been released!')
@@ -51,7 +51,7 @@ para.addEventListener('pointerdown', (event) =&gt; {
 
 <p>The same example, but using the <code>onlostpointercapture</code> event handler property:</p>
 
-<pre class="brush: js notranslate">const para = document.querySelector('p');
+<pre class="brush: js">const para = document.querySelector('p');
 
 document.onlostpointercapture = () =&gt; {
   console.log('I\'ve been released!')

@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>ctx</em>.filter = "<em>&lt;filter-function1&gt;</em> [<em>&lt;filter-function2&gt;</em>] [<em>&lt;filter-functionN&gt;</em>]";
+<pre class="brush: js"><em>ctx</em>.filter = "<em>&lt;filter-function1&gt;</em> [<em>&lt;filter-function2&gt;</em>] [<em>&lt;filter-functionN&gt;</em>]";
 <em>ctx</em>.filter = "none";
 </pre>
 
@@ -99,12 +99,12 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
 </pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js highlight[4] notranslate">const canvas = document.getElementById('canvas');
+<pre class="brush: js highlight[4]">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.filter = 'blur(4px)';
@@ -124,7 +124,7 @@ ctx.fillText('Hello world', 50, 100);
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="400" height="150"&gt;&lt;/canvas&gt;
+<pre class="brush: html">&lt;canvas id="canvas" width="400" height="150"&gt;&lt;/canvas&gt;
 &lt;div style="display:none;"&gt;
   &lt;img id="source"
        src="https://mdn.mozillademos.org/files/5397/rhino.jpg"&gt;
@@ -132,7 +132,7 @@ ctx.fillText('Hello world', 50, 100);
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<pre class="brush: js notranslate">const canvas = document.getElementById('canvas');
+<pre class="brush: js">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const image = document.getElementById('source');
 

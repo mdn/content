@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">new Uint32Array(); // new in ES2017
+<pre class="brush: js">new Uint32Array(); // new in ES2017
 new Uint32Array(<var>length</var>);
 new Uint32Array(<var>typedArray</var>);
 new Uint32Array(<var>object</var>);
@@ -58,7 +58,7 @@ new Uint32Array(<var>buffer</var> [, <var>byteOffset</var> [, <var>length</var>]
 <h3 id="Different_ways_to_create_a_Uint32Array">Different ways to create a Uint32Array
 </h3>
 
-<pre class="brush: js notranslate">// From a length
+<pre class="brush: js">// From a length
 var uint32 = new Uint32Array(2);
 uint32[0] = 42;
 console.log(uint32[0]); // 42
@@ -111,11 +111,11 @@ var uint32 = new Uint32Array(iterable);
   <code>Uint32Array</code> constructor as a function without <code>new</code>, will throw
   a {{jsxref("TypeError")}} from now on.</p>
 
-<pre class="brush: js example-bad notranslate">var dv = Uint32Array([1, 2, 3]);
+<pre class="brush: js example-bad">var dv = Uint32Array([1, 2, 3]);
 // TypeError: calling a builtin Uint32Array constructor
 // without new is forbidden</pre>
 
-<pre class="brush: js example-good notranslate">var dv = new Uint32Array([1, 2, 3]);</pre>
+<pre class="brush: js example-good">var dv = new Uint32Array([1, 2, 3]);</pre>
 
 <h2 id="See_also">See also</h2>
 

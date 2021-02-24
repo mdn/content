@@ -85,7 +85,7 @@ tags:
 
 <p>Building HTML elements and rendering them in the browser at the appropriate time takes a surprising amount of code. Let's say that our state is an array of objects structured like this:</p>
 
-<pre class="brush: js notranslate">const state = [
+<pre class="brush: js">const state = [
   {
     id: 'todo-0',
     name: 'Learn some frameworks!'
@@ -94,7 +94,7 @@ tags:
 
 <p>How do we show one of those tasks to our user? We want to represent each task as a list item – an HTML <code><a href="/en-US/docs/Web/HTML/Element/li">&lt;li&gt;</a></code> element inside of an unordered list element (a <code><a href="/en-US/docs/Web/HTML/Element/ul">&lt;ul&gt;</a></code>). How do we make it? That could look something like this:</p>
 
-<pre class="brush: js notranslate">function buildTodoItemEl(id, name) {
+<pre class="brush: js">function buildTodoItemEl(id, name) {
   const item = document.createElement('li');
   const span = document.createElement('span');
   const textContent = document.createTextNode(name);
@@ -112,7 +112,7 @@ tags:
 
 <p>The tenth line of this snippet references another build function: <code>buildDeleteButtonEl()</code>. It follows a similar pattern to the one we used to build a list item element:</p>
 
-<pre class="brush: js notranslate">function buildDeleteButtonEl(id) {
+<pre class="brush: js">function buildDeleteButtonEl(id) {
   const button = document.createElement('button');
   const textContent = document.createTextNode('Delete');
 
@@ -124,7 +124,7 @@ tags:
 
 <p>This button doesn't do anything yet, but it will later once we decide to implement our delete feature. The code that will render our items on the page might read something like this:</p>
 
-<pre class="brush: js notranslate">function renderTodoList() {
+<pre class="brush: js">function renderTodoList() {
   const frag = document.createDocumentFragment();
   state.tasks.forEach(task =&gt; {
     const item = buildTodoItemEl(task.id, task.name);
@@ -162,7 +162,7 @@ tags:
 
 <p>The vanilla JavaScript approach to building out new DOM elements in repetition was difficult to understand at a glance.  By contrast, the following block of code illustrates the way you might use Vue to describe our list of tasks:</p>
 
-<pre class="brush: html notranslate">&lt;ul&gt;
+<pre class="brush: html">&lt;ul&gt;
   &lt;li v-for="task in tasks" v-bind:key="task.id"&gt;
     &lt;span&gt;\{{task.name\}}&lt;/span&gt;
     &lt;button type="button"&gt;Delete&lt;/button&gt;

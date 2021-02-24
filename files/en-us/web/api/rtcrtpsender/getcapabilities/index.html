@@ -30,7 +30,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">let <em>rtpCapabilities</em> = RTCRtpSender.getCapabilities(<em>kind</em>);</pre>
+  class="brush: js">let <em>rtpCapabilities</em> = RTCRtpSender.getCapabilities(<em>kind</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -53,7 +53,7 @@ tags:
 <p>As a static function, this is always called using the form:</p>
 
 <pre
-  class="brush: js notranslate">capabilities = RTCRtpSender.getCapabilities("audio");</pre>
+  class="brush: js">capabilities = RTCRtpSender.getCapabilities("audio");</pre>
 
 <p>The returned set of capabilities is the most optimistic possible list. It is entirely
   possible that certain combinations of options may fail to work when you actually try to
@@ -81,7 +81,7 @@ tags:
     positive response from this function.</p>
 </div>
 
-<pre class="brush: js notranslate">function canSendH264() {
+<pre class="brush: js">function canSendH264() {
   let capabilities = RTCRtpSender.getCapabilities("video");
 
   capabilities.codecs.forEach((codec) =&gt; {

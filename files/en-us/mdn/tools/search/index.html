@@ -70,31 +70,31 @@ tags:
 
 <h4 id="Searching_by_locale">Searching by locale</h4>
 
-<pre class="brush: html notranslate">https://developer.mozilla.org/en-US/search?locale=<var>en-US</var></pre>
+<pre class="brush: html">https://developer.mozilla.org/en-US/search?locale=<var>en-US</var></pre>
 
 <p>This example returns a list of all articles that are in English, with no other restrictions. At the time of writing, this results in 13513 pages (that'll be higher by the time you see this, of course, since we're constantly growing)!</p>
 
 <h4 id="Searching_by_CSS_class_name">Searching by CSS class name</h4>
 
-<pre class="brush: html notranslate">https://developer.mozilla.org/en-US/search?locale=en-US&amp;css_classnames=<var>smaller</var></pre>
+<pre class="brush: html">https://developer.mozilla.org/en-US/search?locale=en-US&amp;css_classnames=<var>smaller</var></pre>
 
 <p>In this example, we add a search for uses of the CSS class <code>smaller</code>; at the time of writing, this narrowed the results down to 35 pages.</p>
 
 <h4 id="Searching_by_HTML_attribute_string">Searching by HTML attribute string</h4>
 
-<pre class="brush: html notranslate">https://developer.mozilla.org/en-US/search?locale=en-US&amp;html_attributes=<var>style</var></pre>
+<pre class="brush: html">https://developer.mozilla.org/en-US/search?locale=en-US&amp;html_attributes=<var>style</var></pre>
 
 <p>Now we're looking for uses of the <code>style</code> attribute on HTML elements. At the time of writing, we found 6416 of them. This usage is deprecated on MDN; we are going to be replacing them all with uses of our standard classes instead.</p>
 
 <p>You can also include the value of the attribute, but keep in mind that if you wish to include characters like <code>=</code> and <code>/</code> in your search, you'll need to URL-encode them. For example, to find pages that link to www.mozilla.org, you would do:</p>
 
-<pre class="brush: html notranslate">https://developer.mozilla.org/en-US/search?locale=en-US&amp;html_attributes=<var>href%3D%22https%3A%2F%2Fwww.mozilla.org</var></pre>
+<pre class="brush: html">https://developer.mozilla.org/en-US/search?locale=en-US&amp;html_attributes=<var>href%3D%22https%3A%2F%2Fwww.mozilla.org</var></pre>
 
 <p>This search results in 98 results. That's a relatively low number of links to the www.mozilla.org site!</p>
 
 <h4 id="Searching_for_KumaScript_macro_usage">Searching for KumaScript macro usage</h4>
 
-<pre class="brush: html notranslate">https://developer.mozilla.org/en-US/search?locale=en-US&amp;kumascript_macros=<var>TemplateLink</var></pre>
+<pre class="brush: html">https://developer.mozilla.org/en-US/search?locale=en-US&amp;kumascript_macros=<var>TemplateLink</var></pre>
 
 <p>This searches for uses of the macro {{TemplateLink("TemplateLink")}}. This lets us find macros whose parameters have changed, or that we wish to stop using.</p>
 

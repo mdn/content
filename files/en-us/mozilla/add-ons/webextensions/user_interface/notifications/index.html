@@ -20,7 +20,7 @@ tags:
 
 <p>You then use {{WebExtAPIRef("notifications.create")}} to create your notifications, as in this example from <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n:</a></p>
 
-<pre class="notranslate brush: js">var title = browser.i18n.getMessage("notificationTitle");
+<pre class="brush: js">var title = browser.i18n.getMessage("notificationTitle");
 var content = browser.i18n.getMessage("notificationContent", message.url);
 browser.notifications.create({
   "type": "basic",
@@ -33,7 +33,7 @@ browser.notifications.create({
 
 <p>If the notification includes a call to action, you can listen for the user clicking the notification to call the function to handle the action:</p>
 
-<pre class="notranslate brush: js line-numbers  language-js">browser.notifications.onClicked.addListener(handleClick);
+<pre class="brush: js line-numbers  language-js">browser.notifications.onClicked.addListener(handleClick);
 </pre>
 
 <p>If you are issuing calls to action through notifications, you will also want to define the optional notification <code>id</code>, so you can figure out which call to action the user has selected.</p>

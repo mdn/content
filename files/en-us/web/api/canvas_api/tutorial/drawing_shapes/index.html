@@ -42,7 +42,7 @@ tags:
 <h3 id="Rectangular_shape_example">Rectangular shape example</h3>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
  &lt;body onload="draw();"&gt;
    &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
  &lt;/body&gt;
@@ -50,7 +50,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: js notranslate">function draw() {
+<pre class="brush: js">function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
@@ -111,7 +111,7 @@ tags:
 <p>For example, the code for drawing a triangle would look something like this:</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
  &lt;body onload="draw();"&gt;
    &lt;canvas id="canvas" width="100" height="100"&gt;&lt;/canvas&gt;
  &lt;/body&gt;
@@ -119,7 +119,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: js notranslate">function draw() {
+<pre class="brush: js">function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
@@ -151,7 +151,7 @@ tags:
 <p>To try this for yourself, you can use the code snippet below. Just paste it into the <code>draw()</code> function we saw earlier.</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
  &lt;body onload="draw();"&gt;
    &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
  &lt;/body&gt;
@@ -159,7 +159,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: js highlight:[8,10,12] notranslate">function draw() {
+<pre class="brush: js highlight:[8,10,12]">function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
      var ctx = canvas.getContext('2d');
@@ -201,7 +201,7 @@ tags:
 <p>The example below draws two triangles, one filled and one outlined.</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
  &lt;body onload="draw();"&gt;
    &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
  &lt;/body&gt;
@@ -209,7 +209,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: js highlight[9,10,16,17] notranslate">function draw() {
+<pre class="brush: js highlight[9,10,16,17]">function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
@@ -268,7 +268,7 @@ tags:
 </div>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
  &lt;body onload="draw();"&gt;
    &lt;canvas id="canvas" width="150" height="200"&gt;&lt;/canvas&gt;
  &lt;/body&gt;
@@ -276,7 +276,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: js highlight[16] notranslate">function draw() {
+<pre class="brush: js highlight[16]">function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
@@ -330,7 +330,7 @@ tags:
 <p>This example uses multiple quadratic Bézier curves to render a speech balloon.</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
  &lt;body onload="draw();"&gt;
    &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
  &lt;/body&gt;
@@ -338,7 +338,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: js highlight[9,10,11,12,13,14] notranslate">function draw() {
+<pre class="brush: js highlight[9,10,11,12,13,14]">function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
@@ -364,7 +364,7 @@ tags:
 <p>This example draws a heart using cubic Bézier curves.</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
  &lt;body onload="draw();"&gt;
    &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
  &lt;/body&gt;
@@ -372,7 +372,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: js highlight[9,10,11,12,13,14] notranslate">function draw() {
+<pre class="brush: js highlight[9,10,11,12,13,14]">function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
@@ -409,7 +409,7 @@ tags:
 <p>So far, each example on this page has used only one type of path function per shape. However, there's no limitation to the number or types of paths you can use to create a shape. So in this final example, let's combine all of the path functions to make a set of very famous game characters.</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
  &lt;body onload="draw();"&gt;
    &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
  &lt;/body&gt;
@@ -417,7 +417,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: js notranslate">function draw() {
+<pre class="brush: js">function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
@@ -520,7 +520,7 @@ function roundedRect(ctx, x, y, width, height, radius) {
  <dd>The <code><strong>Path2D()</strong></code> constructor returns a newly instantiated <code>Path2D</code> object, optionally with another path as an argument (creates a copy), or optionally with a string consisting of <a href="/en-US/docs/Web/SVG/Tutorial/Paths">SVG path</a> data.</dd>
 </dl>
 
-<pre class="brush: js notranslate">new Path2D();     // empty path object
+<pre class="brush: js">new Path2D();     // empty path object
 new Path2D(path); // copy from another Path2D object
 new Path2D(d);    // path from SVG path data</pre>
 
@@ -538,7 +538,7 @@ new Path2D(d);    // path from SVG path data</pre>
 <p>In this example, we are creating a rectangle and a circle. Both are stored as a <code>Path2D</code> object, so that they are available for later usage. With the new <code>Path2D</code> API, several methods got updated to optionally accept a <code>Path2D</code> object to use instead of the current path. Here, <code>stroke</code> and <code>fill</code> are used with a path argument to draw both objects onto the canvas, for example.</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
  &lt;body onload="draw();"&gt;
    &lt;canvas id="canvas" width="130" height="100"&gt;&lt;/canvas&gt;
  &lt;/body&gt;
@@ -546,7 +546,7 @@ new Path2D(d);    // path from SVG path data</pre>
 </pre>
 </div>
 
-<pre class="brush: js highlight[6,9] notranslate">function draw() {
+<pre class="brush: js highlight[6,9]">function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
@@ -571,6 +571,6 @@ new Path2D(d);    // path from SVG path data</pre>
 
 <p>The path will move to point (<code>M10 10</code>) and then move horizontally 80 points to the right (<code>h 80</code>), then 80 points down (<code>v 80</code>), then 80 points to the left (<code>h -80</code>), and then back to the start (<code>z</code>). You can see this example on the <a href="/en-US/docs/Web/API/Path2D/Path2D#using_svg_paths"><code>Path2D</code> constructor</a> page.</p>
 
-<pre class="brush: js notranslate">var p = new Path2D('M10 10 h 80 v 80 h -80 Z');</pre>
+<pre class="brush: js">var p = new Path2D('M10 10 h 80 v 80 h -80 Z');</pre>
 
 <div>{{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}</div>

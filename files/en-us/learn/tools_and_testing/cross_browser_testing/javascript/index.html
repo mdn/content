@@ -105,7 +105,7 @@ tags:
 
 <p>It is worth mentioning command line uses — you can install these tools as command line utilities (available via the CLI — command line interface) using npm (Node Package Manager — you'll have to install <a href="https://nodejs.org/en/">NodeJS</a> first). For example, the following command installs JSHint:</p>
 
-<pre class="brush: bash notranslate">npm install -g jshint
+<pre class="brush: bash">npm install -g jshint
 </pre>
 
 <p>You can then point these tools at JavaScript files you want to lint, for example:</p>
@@ -124,7 +124,7 @@ tags:
 
 <p>If you look at the console, you'll see the error message "<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">Uncaught <span class="objectBox-stackTrace reps-custom-format">TypeError: <span class="objectBox objectBox-string">can't access property "length", heroes is undefined</span></span></span></span></span>", and the referenced line number is 49. If we look at the source code, the relevant code section is this:</p>
 
-<pre class="brush: js notranslate">function showHeroes(jsonObj) {
+<pre class="brush: js">function showHeroes(jsonObj) {
   let heroes = jsonObj['members'];
 
   <strong>for(i = 0; i &lt; heroes.length; i++) {</strong>
@@ -132,7 +132,7 @@ tags:
 
 <p>So the code falls over as soon as we try to access a property of <code>jsonObj</code> (which as you might expect, is supposed to be a <a href="/en-US/docs/Learn/JavaScript/Objects/JSON">JSON object</a>). This is supposed to be fetched from an external <code>.json</code> file using the following XMLHttpRequest call:</p>
 
-<pre class="brush: js notranslate">let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+<pre class="brush: js">let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
 let request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.send();
@@ -149,19 +149,19 @@ showHeroes(superHeroes);</pre>
 
 <p>Try inserting the following line just below line 31 (bolded above):</p>
 
-<pre class="brush: js notranslate">console.log('Response value: ' + superHeroes);</pre>
+<pre class="brush: js">console.log('Response value: ' + superHeroes);</pre>
 
 <p>Refresh the page in the browser, and you will get an output in the console of "Response value:", plus the same error message we saw before</p>
 
 <p>The <code>console.log()</code> output shows that the <code>superHeroes</code> object doesn't appear to contain anything. A very common problem with async requests like this is when you try to do something with the <code>response</code> object before it has actually been returned from the network. Let's fix this problem by running the code once the <code>load</code> event has been fired — remove the <code>console.log()</code> line, and update this code block:</p>
 
-<pre class="brush: js notranslate">let superHeroes = request.response;
+<pre class="brush: js">let superHeroes = request.response;
 populateHeader(superHeroes);
 showHeroes(superHeroes);</pre>
 
 <p>to the following:</p>
 
-<pre class="brush: js notranslate">request.onload = function() {
+<pre class="brush: js">request.onload = function() {
   let superHeroes = request.response;
   populateHeader(superHeroes);
   showHeroes(superHeroes);
@@ -276,7 +276,7 @@ showHeroes(superHeroes);</pre>
 
 <p>The idea behind feature detection is that you can run a test to determine whether a JavaScript feature is supported in the current browser, and then conditionally run code to provide an acceptable experience both in browsers that do and don't support the feature. As a quick example, the <a href="/en-US/docs/Web/API/Geolocation_API">Geolocation API</a>  (which exposes available location data for the device the web browser is running on) has a main entry point for its use — a <code>geolocation</code> property available on the global <a href="/en-US/docs/Web/API/Navigator">Navigator</a> object. Therefore, you can detect whether the browser supports geolocation or not by using something like the following:</p>
 
-<pre class="language-js notranslate"><span class="keyword token">if</span><span class="punctuation token">(</span><span class="string token">"geolocation"</span> <span class="keyword token">in</span> navigator<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+<pre class="language-js"><span class="keyword token">if</span><span class="punctuation token">(</span><span class="string token">"geolocation"</span> <span class="keyword token">in</span> navigator<span class="punctuation token">)</span> <span class="punctuation token">{</span>
   navigator<span class="punctuation token">.</span>geolocation<span class="punctuation token">.</span><span class="function token">getCurrentPosition</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>position<span class="punctuation token">)</span> <span class="punctuation token">{</span>
     // show the location on a map, perhaps using the Google Maps API
   <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;
@@ -334,13 +334,13 @@ showHeroes(superHeroes);</pre>
  <li class="gh-header-title instapaper_title">To get started, make a local copy of our <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill.html">fetch-polyfill.html</a> example and <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/flowers.jpg">our nice image of some flowers</a> in a new directory. We are going to write code to fetch the flowers image and display it in the page.</li>
  <li class="gh-header-title instapaper_title">Next, save a copy of the <a href="https://raw.githubusercontent.com/github/fetch/master/fetch.js">Fetch polyfill</a> in the same directory as the HTML.</li>
  <li class="gh-header-title instapaper_title">Apply the polyfill scripts to the page using the following code — place these above the existing {{htmlelement("script")}} element so they will be available on the page already when we start trying to use Fetch (we are also loading a Promise polyfill from a CDN, as IE11 does support promises, which fetch requires):
-  <pre class="brush: js notranslate">&lt;script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"&gt;&lt;/script&gt;
+  <pre class="brush: js">&lt;script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"&gt;&lt;/script&gt;
 &lt;script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"&gt;&lt;/script&gt;
 &lt;script src="fetch.js"&gt;&lt;/script&gt;</pre>
  </li>
  <li>Inside the original {{htmlelement("script")}}, add the following code:</li>
  <li>
-  <pre class="brush: js notranslate">var myImage = document.querySelector('.my-image');
+  <pre class="brush: js">var myImage = document.querySelector('.my-image');
 
 fetch('flowers.jpg').then(function(response) {
   response.blob().then(function(myBlob) {
@@ -365,7 +365,7 @@ fetch('flowers.jpg').then(function(response) {
 
 <p>Doing this requires some extra setup in your JavaScript. You need some kind of a feature detection test that detects whether the browser supports the feature we are trying to use:</p>
 
-<pre class="brush: js notranslate">if (browserSupportsAllFeatures()) {
+<pre class="brush: js">if (browserSupportsAllFeatures()) {
   main();
 } else {
   loadScript('polyfills.js', main);
@@ -377,13 +377,13 @@ function main(err) {
 
 <p>So first we run a conditional that checks whether the function <code>browserSupportsAllFeatures()</code> returns true. If it does, we run the <code>main()</code> function, which will contain all our app's code. <code>browserSupportsAllFeatures()</code> looks like this:</p>
 
-<pre class="brush: js notranslate">function browserSupportsAllFeatures() {
+<pre class="brush: js">function browserSupportsAllFeatures() {
   return window.Promise &amp;&amp; window.fetch;
 }</pre>
 
 <p>Here we are testing whether the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> object and <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code> function exist in the browser. If both do, the function returns true. If the function returns <code>false</code>, then we run the code inside the second part of the conditional  — this runs a function called loadScript(), which loads the polyfills into the page, then runs <code>main()</code> after the loading has finished. <code>loadScript()</code> looks like this:</p>
 
-<pre class="brush: js notranslate">function loadScript(src, done) {
+<pre class="brush: js">function loadScript(src, done) {
   const js = document.createElement('script');
   js.src = src;
   js.onload = function() {
@@ -416,11 +416,11 @@ function main(err) {
 
 <p>So for example, we talked about arrow functions (see <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html">arrow-function.html</a> live, and see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/arrow-function.html">source code</a>) earlier in the article, which only work in the newest browsers:</p>
 
-<pre class="brush: js notranslate">() =&gt; { ... }</pre>
+<pre class="brush: js">() =&gt; { ... }</pre>
 
 <p>We could transpile this across to a traditional old-fashioned anonymous function, so it would work in older browsers:</p>
 
-<pre class="brush: js notranslate">function() { ... }</pre>
+<pre class="brush: js">function() { ... }</pre>
 
 <p>The recommended tool for JavaScript transpiling is currently <a href="https://babeljs.io/">Babel</a>. This offers transpilation capabilities for language features that are appropriate for transpilation. For features that can't just be easily transpiled into an older equivalent, Babel also offers polyfills to provide support.</p>
 
@@ -436,7 +436,7 @@ function main(err) {
 
 <p>The code used to look something like this (although this is a simplified example):</p>
 
-<pre class="brush: js notranslate">let ua = navigator.userAgent;
+<pre class="brush: js">let ua = navigator.userAgent;
 
 if(ua.indexOf('Firefox') !== -1) {
   // run Firefox-specific code
@@ -474,7 +474,7 @@ if(ua.indexOf('Firefox') !== -1) {
 
 <p>Here's an example, taken from our <a href="https://mdn.github.io/violent-theremin/">violent-theremin demo</a> (see <a href="https://github.com/mdn/violent-theremin">source code</a>), which uses a combination of the <a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a> and the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> to create a fun (and noisy) drawing tool:</p>
 
-<pre class="brush: js notranslate">const AudioContext = window.AudioContext || window.webkitAudioContext;
+<pre class="brush: js">const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();</pre>
 
 <p>In the case of the Web Audio API, the key entry points to using the API were supported in Chrome/Opera via <code>webkit</code> prefixed versions (they now support the unprefixed versions). The easy way to get around this situation is to create a new version of the objects that are prefixed in some browsers, and make it equal to the non-prefixed version, OR the prefixed version (OR any other prefixed versions that need consideration) — whichever one is supported by the browser currently viewing the site will be used.</p>
@@ -487,7 +487,7 @@ const audioCtx = new AudioContext();</pre>
 
 <p>For example, try going into your browser's developer console and start typing</p>
 
-<pre class="brush: js notranslate">window.AudioContext</pre>
+<pre class="brush: js">window.AudioContext</pre>
 
 <p>If this feature is supported in your browser, it will autocomplete.</p>
 

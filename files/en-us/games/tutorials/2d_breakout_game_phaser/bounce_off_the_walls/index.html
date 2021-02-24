@@ -25,12 +25,12 @@ tags:
 
 <p>The easiest way to get our ball bouncing off the walls is to tell the framework that we want to treat the boundaries of the {{htmlelement("canvas")}} element as walls and not let the ball move past them. In Phaser this can be easily accomplished using the <code>collideWorldsBound</code> property. Add this line right after the existing <code>game.physics.enable()</code> method call:</p>
 
-<pre class="brush: js notranslate">ball.body.collideWorldBounds = true;
+<pre class="brush: js">ball.body.collideWorldBounds = true;
 </pre>
 
 <p>Now the ball will stop at the edge of the screen instead of disappearing, but it doesn't bounce. To make this occur we have to set its bounciness. Add the following line below the previous one:</p>
 
-<pre class="brush: js notranslate">ball.body.bounce.set(1);
+<pre class="brush: js">ball.body.bounce.set(1);
 </pre>
 
 <p>Try reloading index.html again — now you should see the ball bouncing off all the walls and moving inside the canvas area.</p>

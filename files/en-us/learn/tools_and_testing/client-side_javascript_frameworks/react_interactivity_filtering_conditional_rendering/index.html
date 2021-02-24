@@ -39,7 +39,7 @@ tags:
 
 <p>Add the <code>editTask()</code> function inside your App component, in the same place as the other functions:</p>
 
-<pre class="brush: js notranslate">function editTask(id, newName) {
+<pre class="brush: js">function editTask(id, newName) {
   const editedTaskList = tasks.map(task =&gt; {
   // if this task has the same ID as the edited task
     if (id === task.id) {
@@ -53,7 +53,7 @@ tags:
 
 <p>Pass <code>editTask</code> into our <code>&lt;Todo /&gt;</code> components as a prop in the same way we did with <code>deleteTask</code>:</p>
 
-<pre class="brush: js notranslate">const taskList = tasks.map(task =&gt; (
+<pre class="brush: js">const taskList = tasks.map(task =&gt; (
   &lt;Todo
     id={task.id}
     name={task.name}
@@ -71,11 +71,11 @@ tags:
 
 <p>In order to allow users to edit a task, we have to provide a user interface for them to do so. First, import <code>useState</code> into the <code>Todo</code> component like we did before with the <code>App</code> component, by updating the first import statement to this:</p>
 
-<pre class="brush: js notranslate">import React, { useState } from "react";</pre>
+<pre class="brush: js">import React, { useState } from "react";</pre>
 
 <p>We'll now use this to set an <code>isEditing</code> state, the default state of which should be <code>false</code>. Add the following line just inside the top of your <code>Todo(props) { … }</code> component definition:</p>
 
-<pre class="brush: js notranslate">const [isEditing, setEditing] = useState(false);</pre>
+<pre class="brush: js">const [isEditing, setEditing] = useState(false);</pre>
 
 <p>Next, we're going to rethink the <code>&lt;Todo /&gt;</code> component — from now on, we want it to display one of two possible “templates", rather than the single template it's used so far:</p>
 
@@ -86,7 +86,7 @@ tags:
 
 <p>Copy this block of code into the <code>Todo()</code> function, beneath your <code>useState()</code> hook but above the <code>return</code> statement:</p>
 
-<pre class="brush: js notranslate">const editingTemplate = (
+<pre class="brush: js">const editingTemplate = (
   &lt;form className="stack-small"&gt;
     &lt;div className="form-group"&gt;
       &lt;label className="todo-label" htmlFor={props.id}&gt;
@@ -142,7 +142,7 @@ const viewTemplate = (
 
 <p>In the case of our <code>&lt;Todo /&gt;</code> component, our condition is "Is this task being edited?" Change the <code>return</code> statement inside <code>Todo()</code> so that it reads like so:</p>
 
-<pre class="brush: js notranslate">return &lt;li className="todo"&gt;{isEditing ? editingTemplate : viewTemplate}&lt;/li&gt;;</pre>
+<pre class="brush: js">return &lt;li className="todo"&gt;{isEditing ? editingTemplate : viewTemplate}&lt;/li&gt;;</pre>
 
 <p>Your browser should render all your tasks just like before. To see the editing template, you will have to change the default <code>isEditing</code> state from <code>false</code> to <code>true</code> in your code for now; we will look at making the edit button toggle this in the next section!</p>
 
@@ -152,7 +152,7 @@ const viewTemplate = (
 
 <p>Update the "Edit" button in the <code>viewTemplate</code> like so:</p>
 
-<pre class="brush: js notranslate">&lt;button type="button" className="btn" onClick={() =&gt; setEditing(true)}&gt;
+<pre class="brush: js">&lt;button type="button" className="btn" onClick={() =&gt; setEditing(true)}&gt;
   Edit &lt;span className="visually-hidden"&gt;{props.name}&lt;/span&gt;
 &lt;/button&gt;</pre>
 
@@ -160,7 +160,7 @@ const viewTemplate = (
 
 <p>Update the "Cancel" button in the <code>editingTemplate</code> like so:</p>
 
-<pre class="brush: js notranslate">&lt;button
+<pre class="brush: js">&lt;button
   type="button"
   className="btn todo-cancel"
   onClick={() =&gt; setEditing(false)}
@@ -183,17 +183,17 @@ const viewTemplate = (
 
 <p>We'll start by making a new hook for storing and setting the new name. Still in <code>Todo.js</code>, put the following underneath the existing hook:</p>
 
-<pre class="brush: js notranslate">const [newName, setNewName] = useState('');</pre>
+<pre class="brush: js">const [newName, setNewName] = useState('');</pre>
 
 <p>Next, create a <code>handleChange()</code> function that will set the new name; put this underneath the hooks but before the templates:</p>
 
-<pre class="brush: js notranslate">function handleChange(e) {
+<pre class="brush: js">function handleChange(e) {
   setNewName(e.target.value);
 }</pre>
 
 <p>Now we'll update our <code>editingTemplate</code>'s <code>&lt;input /&gt;</code> field, setting a <code>value</code> attribute of <code>newName</code>, and binding our <code>handleChange()</code> function to its <code>onChange</code> event. Update it as follows:</p>
 
-<pre class="brush: js notranslate">&lt;input
+<pre class="brush: js">&lt;input
   id={props.id}
   className="todo-text"
   type="text"
@@ -203,7 +203,7 @@ const viewTemplate = (
 
 <p>Finally, we need to create a function to handle the edit form’s <code>onSubmit</code> event; add the following just below the previous function you added:</p>
 
-<pre class="brush: js notranslate">function handleSubmit(e) {
+<pre class="brush: js">function handleSubmit(e) {
   e.preventDefault();
   props.editTask(props.id, newName);
   setNewName("");
@@ -214,7 +214,7 @@ const viewTemplate = (
 
 <p>Bind this function to the form’s <code>submit</code> event by adding the following <code>onSubmit</code> handler to the <code>editingTemplate</code>'s <code>&lt;form&gt;</code>:</p>
 
-<pre class="brush: js notranslate">&lt;form className="stack-small" onSubmit={handleSubmit}&gt;</pre>
+<pre class="brush: js">&lt;form className="stack-small" onSubmit={handleSubmit}&gt;</pre>
 
 <p>You should now be able to edit a task in your browser!</p>
 
@@ -231,7 +231,7 @@ const viewTemplate = (
 
 <p>Add a new hook to your <code>App()</code> function that reads and sets a filter. We want the default filter to be <code>All</code> because all of our tasks should be shown initially:</p>
 
-<pre class="brush: js notranslate">const [filter, setFilter] = useState('All');</pre>
+<pre class="brush: js">const [filter, setFilter] = useState('All');</pre>
 
 <h3 id="Defining_our_filters">Defining our filters</h3>
 
@@ -246,7 +246,7 @@ const viewTemplate = (
 
 <p>At the top of <code>App.js</code>, beneath our imports but above our <code>App()</code> function, let's add an object called <code>FILTER_MAP</code>:</p>
 
-<pre class="brush: js notranslate">const FILTER_MAP = {
+<pre class="brush: js">const FILTER_MAP = {
   All: () =&gt; true,
   Active: task =&gt; !task.completed,
   Completed: task =&gt; task.completed
@@ -262,7 +262,7 @@ const viewTemplate = (
 
 <p>Beneath our previous addition, add the following — here we are using the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys()</a></code> method to collect an array of <code>FILTER_NAMES</code>:</p>
 
-<pre class="brush: js notranslate">const FILTER_NAMES = Object.keys(FILTER_MAP);</pre>
+<pre class="brush: js">const FILTER_NAMES = Object.keys(FILTER_MAP);</pre>
 
 <div class="notecard note">
 <p><strong>Note</strong>: We are defining these constants outside our <code>App()</code> function because if they were defined inside it, they would be recalculated every time the <code>&lt;App /&gt;</code> component re-renders, and we don’t want that. This information will never change no matter what our application does.</p>
@@ -274,19 +274,19 @@ const viewTemplate = (
 
 <p>Add the following underneath your <code>taskList</code> constant declaration:</p>
 
-<pre class="brush: js notranslate">const filterList = FILTER_NAMES.map(name =&gt; (
+<pre class="brush: js">const filterList = FILTER_NAMES.map(name =&gt; (
   &lt;FilterButton key={name} name={name}/&gt;
 ));</pre>
 
 <p>Now we'll replace the three repeated <code>&lt;FilterButton /&gt;</code>s in <code>App.js</code> with this <code>filterList</code>. Replace the following:</p>
 
-<pre class="brush: js notranslate">&lt;FilterButton /&gt;
+<pre class="brush: js">&lt;FilterButton /&gt;
 &lt;FilterButton /&gt;
 &lt;FilterButton /&gt;</pre>
 
 <p>With this:</p>
 
-<pre class="brush: js notranslate">{filterList}</pre>
+<pre class="brush: js">{filterList}</pre>
 
 <p>This won't work yet. We've got a bit more work to do first.</p>
 
@@ -301,7 +301,7 @@ const viewTemplate = (
 
 <p>Update your <code>filterList</code> constant as follows:</p>
 
-<pre class="brush: js notranslate">const filterList = FILTER_NAMES.map(name =&gt; (
+<pre class="brush: js">const filterList = FILTER_NAMES.map(name =&gt; (
   &lt;FilterButton
     key={name}
     name={name}
@@ -320,7 +320,7 @@ const viewTemplate = (
 
 <p>With all of that done, your <code>FilterButton()</code> function should read like this:</p>
 
-<pre class="brush: js notranslate">function FilterButton(props) {
+<pre class="brush: js">function FilterButton(props) {
   return (
     &lt;button
       type="button"
@@ -347,7 +347,7 @@ const viewTemplate = (
 
 <p>Update your <code>taskList</code> like so:</p>
 
-<pre class="brush: js notranslate">const taskList = tasks
+<pre class="brush: js">const taskList = tasks
 .filter(FILTER_MAP[filter])
 .map(task =&gt; (
   &lt;Todo

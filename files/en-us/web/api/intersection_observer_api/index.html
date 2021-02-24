@@ -52,7 +52,7 @@ tags:
 
 <p>Create the intersection observer by calling its constructor and passing it a callback function to be run whenever a threshold is crossed in one direction or the other:</p>
 
-<pre class="brush: js notranslate">let options = {
+<pre class="brush: js">let options = {
   root: document.querySelector('#scrollArea'),
   rootMargin: '0px',
   threshold: 1.0
@@ -80,7 +80,7 @@ let observer = new IntersectionObserver(callback, options);
 
 <p>Once you have created the observer, you need to give it a target element to watch:</p>
 
-<pre class="brush: js notranslate">let target = document.querySelector('#listItem');
+<pre class="brush: js">let target = document.querySelector('#listItem');
 observer.observe(target);
 
 // the callback we setup for the observer will be executed now for the first time
@@ -89,7 +89,7 @@ observer.observe(target);
 
 <p>Whenever the target meets a threshold specified for the <code>IntersectionObserver</code>, the callback is invoked. The callback receives a list of {{domxref("IntersectionObserverEntry")}} objects and the observer:</p>
 
-<pre class="brush: js notranslate">let callback = (entries, observer) =&gt; {
+<pre class="brush: js">let callback = (entries, observer) =&gt; {
   entries.forEach(entry =&gt; {
     // Each entry describes an intersection change for one observed
     // target element:
@@ -154,7 +154,7 @@ observer.observe(target);
 <div class="hidden">
 <h5 id="Threshold_example">Threshold example</h5>
 
-<pre class="brush: html notranslate">&lt;template id="boxTemplate"&gt;
+<pre class="brush: html">&lt;template id="boxTemplate"&gt;
   &lt;div class="sampleBox"&gt;
     &lt;div class="label topLeft"&gt;&lt;/div&gt;
     &lt;div class="label topRight"&gt;&lt;/div&gt;
@@ -170,7 +170,7 @@ observer.observe(target);
   &lt;/div&gt;
 &lt;/main&gt;</pre>
 
-<pre class="brush: css notranslate">.contents {
+<pre class="brush: css">.contents {
   position: absolute;
   width: 700px;
   height: 1725px;
@@ -240,7 +240,7 @@ observer.observe(target);
 }
 </pre>
 
-<pre class="brush: js notranslate">let observers = [];
+<pre class="brush: js">let observers = [];
 
 startup = () =&gt; {
   let wrapper = document.querySelector(".wrapper");
@@ -329,7 +329,7 @@ startup();
 
 <p>The code snippet below shows a callback which keeps a counter of how many times elements transition from not intersecting the root to intersecting by at least 75%. For a threshold value of 0.0 (default) the callback is called <a href="https://www.w3.org/TR/intersection-observer/#dom-intersectionobserverentry-isintersecting">approximately</a> upon transition of the boolean value of {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}}. The snippet thus first checks that the transition is a positive one, then determines whether {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} is above 75%, in which case it increments the counter.</p>
 
-<pre class="brush: js notranslate">intersectionCallback(entries) =&gt; {
+<pre class="brush: js">intersectionCallback(entries) =&gt; {
   entries.forEach(entry =&gt; {
     if (entry.isIntersecting) {
       let elem = entry.target;
@@ -359,7 +359,7 @@ startup();
 
 <p>The HTML for this example is very short, with a primary element which is the box that we'll be targeting (with the creative ID <code>"box"</code>) and some contents within the box.</p>
 
-<pre class="brush: html notranslate">&lt;div id="box"&gt;
+<pre class="brush: html">&lt;div id="box"&gt;
   &lt;div class="vertical"&gt;
     Welcome to &lt;strong&gt;The Box!&lt;/strong&gt;
   &lt;/div&gt;
@@ -369,7 +369,7 @@ startup();
 
 <p>The CSS isn't terribly important for the purposes of this example; it lays out the element and establishes that the {{cssxref("background-color")}} and {{cssxref("border")}} attributes can participate in <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS transitions</a>, which we'll use to affect the changes to the element as it becomes more or less obscured.</p>
 
-<pre class="brush: css notranslate">#box {
+<pre class="brush: css">#box {
   background-color: rgba(40, 40, 190, 255);
   border: 4px solid rgb(20, 20, 120);
   transition: background-color 1s, border 1s;
@@ -403,7 +403,7 @@ startup();
 
 <p>First, we need to prepare some variables and install the observer.</p>
 
-<pre class="brush: js notranslate">const numSteps = 20.0;
+<pre class="brush: js">const numSteps = 20.0;
 
 let boxElement;
 let prevRatio = 0.0;
@@ -436,7 +436,7 @@ window.addEventListener("load", (event) =&gt; {
 
 <p>The <code>createObserver()</code> method is called once page load is complete to handle actually creating the new {{domxref("IntersectionObserver")}} and starting the process of observing the target element.</p>
 
-<pre class="brush: js notranslate">function createObserver() {
+<pre class="brush: js">function createObserver() {
   let observer;
 
   let options = {
@@ -461,7 +461,7 @@ window.addEventListener("load", (event) =&gt; {
 
 <p>The <code>buildThresholdList()</code> function, which builds the list of thresholds, looks like this:</p>
 
-<pre class="brush: js notranslate">function buildThresholdList() {
+<pre class="brush: js">function buildThresholdList() {
   let thresholds = [];
   let numSteps = 20;
 
@@ -553,7 +553,7 @@ window.addEventListener("load", (event) =&gt; {
 
 <p>When the browser detects that the target element (in our case, the one with the ID <code>"box"</code>) has been unveiled or obscured such that its visibility ratio crosses one of the thresholds in our list, it calls our handler function, <code>handleIntersect()</code>:</p>
 
-<pre class="brush: js notranslate">function handleIntersect(entries, observer) {
+<pre class="brush: js">function handleIntersect(entries, observer) {
   entries.forEach((entry) =&gt; {
     if (entry.intersectionRatio &gt; prevRatio) {
       entry.target.style.backgroundColor = increasingColor.replace("ratio", entry.intersectionRatio);

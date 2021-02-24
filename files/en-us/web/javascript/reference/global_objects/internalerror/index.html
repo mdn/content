@@ -50,7 +50,7 @@ tags:
 
 <p>This recursive function runs 10 times, as per the exit condition.</p>
 
-<pre class="brush: js notranslate">function loop(x) {
+<pre class="brush: js">function loop(x) {
   if (x &gt;= 10) // "x &gt;= 10" is the exit condition
     return;
   // do stuff
@@ -60,7 +60,7 @@ loop(0);</pre>
 
 <p>Setting this condition to an extremely high value, won't work:</p>
 
-<pre class="brush: js example-bad notranslate">function loop(x) {
+<pre class="brush: js example-bad">function loop(x) {
   if (x &gt;= 1000000000000)
     return;
   // do stuff

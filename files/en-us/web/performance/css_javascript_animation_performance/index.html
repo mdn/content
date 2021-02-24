@@ -17,15 +17,15 @@ tags:
 <p>Both CSS transitions and animations can be used to write animation. They each have their own user scenarios:</p>
 
 <ul>
- <li>CSS {{cssxref("transition","transitions")}} provide an easy way to make animations occur between the current style and an end CSS state, e.g., a resting button state and a hover state. Even if an element is in the middle of a transition, the new transition starts from the current style immediately instead of jumping to the end CSS state. See <a href="/en-US/docs/Web/Guide/CSS/Using_CSS_transitions">Using CSS transitions</a> for more details.</li>
- <li>CSS {{cssxref("animation","animations")}}, on the other hand, allow developers to make animations between a set of starting property values and a final set rather than between two states. CSS animations consist of two components: a style describing the CSS animation, and a set of key frames that indicate the start and end states of the animation's style, as well as possible intermediate points. See <a href="/en-US/docs/Web/Guide/CSS/Using_CSS_animations">Using CSS animations</a> for more details.</li>
+ <li>CSS {{cssxref("transition","transitions")}} provide an easy way to make animations occur between the current style and an end CSS state, e.g., a resting button state and a hover state. Even if an element is in the middle of a transition, the new transition starts from the current style immediately instead of jumping to the end CSS state. See <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">Using CSS transitions</a> for more details.</li>
+ <li>CSS {{cssxref("animation","animations")}}, on the other hand, allow developers to make animations between a set of starting property values and a final set rather than between two states. CSS animations consist of two components: a style describing the CSS animation, and a set of key frames that indicate the start and end states of the animation's style, as well as possible intermediate points. See <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">Using CSS animations</a> for more details.</li>
 </ul>
 
 <p>In terms of performance, there is no difference between implementing an animation with CSS transitions or animations. Both of them are classified under the same CSS-based umbrella in this article.</p>
 
 <h2 id="requestAnimationFrame">requestAnimationFrame</h2>
 
-<p>The {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}} API provides an efficient way to make animations in JavaScript. The callback function of the method is called by the browser before the next repaint on each frame. Compared to {{domxref("WindowTimers.setTimeout","setTimeout()")}}/{{domxref("WindowTimers.setInterval","setInterval()")}}, which need a specific delay parameter, <code>requestAnimationFrame()</code> is much more efficient. Developers can create an animation by changing an element's style each time the loop is called (or updating the Canvas draw, or whatever.)</p>
+<p>The {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}} API provides an efficient way to make animations in JavaScript. The callback function of the method is called by the browser before the next repaint on each frame. Compared to {{domxref("WindowOrWorkerGlobalScope/setTimeout","setTimeout()")}}/{{domxref("WindowOrWorkerGlobalScope/setInterval","setInterval()")}}, which need a specific delay parameter, <code>requestAnimationFrame()</code> is much more efficient. Developers can create an animation by changing an element's style each time the loop is called (or updating the Canvas draw, or whatever.)</p>
 
 <div class="note">
 <p><strong>Note</strong>: Like CSS transitions and animations, <code>requestAnimationFrame()</code> pauses when the current tab is pushed into the background.</p>
@@ -46,11 +46,11 @@ tags:
 
 <ol>
  <li>In the URL bar, enter <em>about:config</em>; click the <em>I’ll be careful, I promise!</em> button to enter the config screen.<br>
-  <img alt="" src="https://mdn.mozillademos.org/files/11137/Pic1.png" style="height: 349px; width: 600px;"><br>
+  <img alt="" src="pic1.png"><br>
    </li>
  <li>In the search bar, search for the <code>layers.acceleration.draw-fps</code> preference.</li>
  <li>Double-click the entry to set the value to <code>true</code>. Now you will be able to see three little purple boxes at the upper left corner of the Firefox window. The first box represents FPS.<br>
-  <img alt="" src="https://mdn.mozillademos.org/files/11139/Pic2.png" style="height: 215px; width: 562px;"></li>
+  <img alt="" src="pic2.png"></li>
 </ol>
 
 <h3 id="Running_the_performance_test">Running the performance test</h3>
@@ -69,7 +69,7 @@ tags:
 
 <p>To enable the OMTA (Off Main Thread Animation) in Firefox, you can go to <em>about:config</em> and search for the <code>layers.offmainthreadcomposition.async-animations</code>. Toggle its value to <code>true</code>.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11141/Pic3.png" style="height: 210px; width: 536px;"></p>
+<p><img alt="" src="pic3.png"></p>
 
 <p>After enabling OMTA, try running the above test again. You should see that the FPS of the CSS animations will now be significantly higher.</p>
 

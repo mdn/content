@@ -19,7 +19,7 @@ tags:
 
 <p>You may pulse the vibration hardware one time by specifying either a single value or an array consisting of only one value:</p>
 
-<pre class="brush:js notranslate">window.navigator.vibrate(200);
+<pre class="brush:js">window.navigator.vibrate(200);
 window.navigator.vibrate([200]);
 </pre>
 
@@ -29,7 +29,7 @@ window.navigator.vibrate([200]);
 
 <p>An array of values describes alternating periods in which the device is vibrating and not vibrating. Each value in the array is converted to an integer, then interpreted alternately as the number of milliseconds the device should vibrate and the number of milliseconds it should not be vibrating. For example:</p>
 
-<pre class="brush: js notranslate">window.navigator.vibrate([200, 100, 200]);
+<pre class="brush: js">window.navigator.vibrate([200, 100, 200]);
 </pre>
 
 <p>This vibrates the device for 200 ms, then pauses for 100 ms before vibrating the device again for another 200 ms.</p>
@@ -44,7 +44,7 @@ window.navigator.vibrate([200]);
 
 <p>Some basic <code>setInterval</code> and <code>clearInterval</code> action will allow you to create persistent vibration:</p>
 
-<pre class="brush: js notranslate">var vibrateInterval;
+<pre class="brush: js">var vibrateInterval;
 
 // Starts vibration at passed in level
 function startVibrate(duration) {

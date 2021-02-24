@@ -26,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Reflect.isExtensible(<var>target</var>)
+<pre class="brush: js">Reflect.isExtensible(<var>target</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -56,7 +56,7 @@ tags:
 
 <p>See also {{jsxref("Object.isExtensible()")}}.</p>
 
-<pre class="brush: js notranslate">// New objects are extensible.
+<pre class="brush: js">// New objects are extensible.
 let empty = {}
 Reflect.isExtensible(empty)  // === true
 
@@ -80,7 +80,7 @@ Reflect.isExtensible(frozen)  // === false
   {{jsxref("Object.isExtensible()")}}, a non-object first argument will be coerced to an
   object at first.</p>
 
-<pre class="brush: js notranslate">Reflect.isExtensible(1)
+<pre class="brush: js">Reflect.isExtensible(1)
 // TypeError: 1 is not an object
 
 Object.isExtensible(1)

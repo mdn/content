@@ -61,11 +61,11 @@ tags:
 
 <p>Basic audio context declaration:</p>
 
-<pre class="brush: js notranslate">var audioCtx = new AudioContext();</pre>
+<pre class="brush: js">var audioCtx = new AudioContext();</pre>
 
 <p>Cross browser variant:</p>
 
-<pre class="brush: js notranslate">var AudioContext = window.AudioContext || window.webkitAudioContext;
+<pre class="brush: js">var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
 var oscillatorNode = audioCtx.createOscillator();

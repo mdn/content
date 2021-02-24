@@ -24,7 +24,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var myIDBKeyRange = IDBKeyRange.upperBound(upper[, open=false])</pre>
+  class="brush: js">var myIDBKeyRange = IDBKeyRange.upperBound(upper[, open=false])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -79,7 +79,7 @@ tags:
       too</a>.)</p>
 </div>
 
-<pre class="brush: js notranslate" style="font-size: 14px;">function displayData() {
+<pre class="brush: js" style="font-size: 14px;">function displayData() {
   var keyRangeValue = IDBKeyRange.upperBound("F");
 
   var transaction = db.transaction(['fThings'], 'readonly');

@@ -41,15 +41,15 @@ tags:
 
 <p>Clone the github repo (if you haven't already done it) with:</p>
 
-<pre class="brush: bash notranslate">git clone https://github.com/opensas/mdn-svelte-tutorial.git</pre>
+<pre class="brush: bash">git clone https://github.com/opensas/mdn-svelte-tutorial.git</pre>
 
 <p>Then to get to the current app state, run</p>
 
-<pre class="brush: bash notranslate">cd mdn-svelte-tutorial/08-next-steps</pre>
+<pre class="brush: bash">cd mdn-svelte-tutorial/08-next-steps</pre>
 
 <p>Or directly download the folder's content:</p>
 
-<pre class="brush: bash notranslate">npx degit opensas/mdn-svelte-tutorial/08-next-steps</pre>
+<pre class="brush: bash">npx degit opensas/mdn-svelte-tutorial/08-next-steps</pre>
 
 <p>Remember to run <code>npm install &amp;&amp; npm run dev</code> to start your app in development mode.</p>
 
@@ -59,14 +59,14 @@ tags:
 
 <p>Your generated <code>bundle.js</code> and <code>bundle.css</code> files will be something like this (file size on the left):</p>
 
-<pre class="notranslate">  504 Jul 13 02:43 bundle.css
+<pre>  504 Jul 13 02:43 bundle.css
 95981 Jul 13 02:43 bundle.js</pre>
 
 <p>To compile our application for production we have to run <code>npm run build</code> instead. In this case, Svelte won't launch a web server or keep watching for changes. It will however minify and compress our JavaScript files using <a href="https://terser.org/">terser</a>.</p>
 
 <p>So, after running <code>npm run build</code>, our generated <code>bundle.js</code> and <code>bundle.css</code> files will be more like this:</p>
 
-<pre class="notranslate">  504 Jul 13 02:43 bundle.css
+<pre>  504 Jul 13 02:43 bundle.css
 21782 Jul 13 02:43 bundle.js</pre>
 
 <p>Try running <code>npm run build</code> in your app's root directory now. You might get a warning, but you can ignore this for now.</p>
@@ -83,7 +83,7 @@ tags:
 
 <p>In the file <code>package.json</code> you can see that the <code>dev</code> and <code>start</code> scripts are just calling rollup:</p>
 
-<pre class="brush: json notranslate">"scripts": {
+<pre class="brush: json">"scripts": {
   "build": "rollup -c",
   "dev": "rollup -c -w",
   "start": "sirv public"
@@ -93,7 +93,7 @@ tags:
 
 <p>If we have a look at the <code>rollup.config.js</code> file, we can see that the Svelte compiler is just a rollup plugin:</p>
 
-<pre class="brush: js notranslate">import svelte from 'rollup-plugin-svelte';
+<pre class="brush: js">import svelte from 'rollup-plugin-svelte';
 [...]
 import { terser } from 'rollup-plugin-terser';
 
@@ -122,7 +122,7 @@ export default {
 
 <p>Later on in the same file you'll also see how rollup minimizes our scripts in production mode and launches a local server in development mode:</p>
 
-<pre class="brush: js notranslate">    // In dev mode, call `npm run start` once
+<pre class="brush: js">    // In dev mode, call `npm run start` once
     // the bundle has been generated
     !production &amp;&amp; serve(),
 
@@ -161,7 +161,7 @@ export default {
  <li>
   <p>Run <code>npx vercel</code> again, and you'll be prompted to answer a few questions, like this:</p>
 
-  <pre class="brush: bash notranslate">&gt; npx vercel
+  <pre class="brush: bash">&gt; npx vercel
 Vercel CLI 19.1.2
 ? Set up and deploy “./mdn-svelte-tutorial”? [Y/n] y
 ? Which scope do you want to deploy to? opensas
@@ -206,12 +206,12 @@ Auto-detected Project Settings (Svelte):
  <li>
   <p>Before you start to upload content to your git repository, it is a good practice to add a <code>.gitignore</code> file to tell git which files to exclude from source control. In our case we will tell git to exclude files in the <code>node_modules</code> directory by creating a <code>.gitignore</code> file in the root folder of your local project, with the following content:</p>
 
-  <pre class="brush: bash notranslate">node_modules/</pre>
+  <pre class="brush: bash">node_modules/</pre>
  </li>
  <li>
   <p>Now let's go back to GitLab. After creating a new repo GitLab will greet you with a message explaining different options to upload your existing files. Follow the steps listed under the <em>Push an existing folder</em> heading:</p>
 
-  <pre class="brush: bash notranslate">cd your_root_directory # Go into your project's root directory
+  <pre class="brush: bash">cd your_root_directory # Go into your project's root directory
 git init
 git remote add origin https://gitlab.com/[your-user]/mdn-svelte-todo.git
 git add .
@@ -234,7 +234,7 @@ git push -u origin master</pre>
  <li>
   <p>Create a <code>.gitlab-ci.yml</code> file inside your project's root and give it the following content:</p>
 
-  <pre class="notranslate">image: node:latest
+  <pre>image: node:latest
 pages:
   stage: deploy
   script:
@@ -251,7 +251,7 @@ pages:
  <li>
   <p>Since our app will be published at a subdirectory (like <code>https://your-user.gitlab.io/mdn-svelte-todo</code>), we'll have to make the references to the JavaScript and CSS files in our <code>public/index.html</code> file relative. To do this, we just remove the leading slashes (<code>/</code>) from the <code>/global.css</code>, <code>/build/bundle.css</code>, and <code>/build/bundle.js</code> URLs, like this:</p>
 
-  <pre class="brush: html notranslate">&lt;title&gt;Svelte To-Do list&lt;/title&gt;
+  <pre class="brush: html">&lt;title&gt;Svelte To-Do list&lt;/title&gt;
 
 &lt;link rel='icon' type='image/png' href='favicon.png'&gt;
 &lt;link rel='stylesheet' href='global.css'&gt;
@@ -264,7 +264,7 @@ pages:
  <li>
   <p>Now we just have to commit and push our changes to GitLab. Do this by running the following commands:</p>
 
-  <pre class="brush: bash notranslate">&gt; git add public/index.html
+  <pre class="brush: bash">&gt; git add public/index.html
 &gt; git add .gitlab-ci.yml
 &gt; git commit -m "Added .gitlab-ci.yml file and fixed index.html absolute paths"
 &gt; git push

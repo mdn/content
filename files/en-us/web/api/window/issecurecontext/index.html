@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>isSecure</em> = window.isSecureContext</pre>
+<pre class="brush: js">var <em>isSecure</em> = window.isSecureContext</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -25,7 +25,7 @@ tags:
 <p>You can use feature detection to check whether they are in a secure context or not by
   using the <code>isSecureContext</code> boolean which is exposed on the global scope.</p>
 
-<pre class="brush: js notranslate">if (window.isSecureContext) {
+<pre class="brush: js">if (window.isSecureContext) {
   // Page is a secure context so service workers are now available
   navigator.serviceWorker.register("/offline-worker.js").then(function () {
     ...

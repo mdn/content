@@ -53,7 +53,7 @@ tags:
 
 <p>This code creates a sidebar pane that displays the <code><a href="/en-US/docs/Web/API/Element/tagName">tagName</a></code> of the currently selected element:</p>
 
-<pre class="notranslate brush: js">function onCreated(sidebarPane) {
+<pre class="brush: js">function onCreated(sidebarPane) {
 
   browser.devtools.panels.elements.onSelectionChanged.addListener(() =&gt; {
     const exp = "$0 &amp;&amp; $0.tagName";

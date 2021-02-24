@@ -18,7 +18,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-	class="brush: js notranslate">var <var>wakeLock</var> = navigator.wakeLock.request(<var>type</var>);</pre>
+	class="brush: js">var <var>wakeLock</var> = navigator.wakeLock.request(<var>type</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -58,7 +58,7 @@ tags:
 	The <code>request()</code> method is wrapped in a <code>try...catch</code> statement
 	to account for if the browser refuses the request for any reason.</p>
 
-<pre class="brush: js notranslate">const requestWakeLock = async () =&gt; {
+<pre class="brush: js">const requestWakeLock = async () =&gt; {
   try {
 
     const wakeLock = await navigator.wakeLock.request('screen');

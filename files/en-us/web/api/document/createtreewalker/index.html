@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>document</em>.createTreeWalker(<em>root</em>[, <em>whatToShow</em>[, <em>filter</em>[, <em>entityReferenceExpansion</em>]]]);
+<pre class="brush: js"><em>document</em>.createTreeWalker(<em>root</em>[, <em>whatToShow</em>[, <em>filter</em>[, <em>entityReferenceExpansion</em>]]]);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -140,7 +140,7 @@ tags:
   that is created to advance through the nodes (now all elements) and push them into an
   array.</p>
 
-<pre class="brush: js notranslate">var treeWalker = document.createTreeWalker(
+<pre class="brush: js">var treeWalker = document.createTreeWalker(
   document.body,
   NodeFilter.SHOW_ELEMENT,
   { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },

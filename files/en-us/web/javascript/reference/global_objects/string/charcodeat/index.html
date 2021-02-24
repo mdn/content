@@ -31,7 +31,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>str</var>.charCodeAt(<var>index</var>)</pre>
+<pre class="brush: js"><var>str</var>.charCodeAt(<var>index</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -86,7 +86,7 @@ tags:
 
 <p>The following example returns <code>65</code>, the Unicode value for A.</p>
 
-<pre class="brush: js notranslate">'ABC'.charCodeAt(0)  // returns 65
+<pre class="brush: js">'ABC'.charCodeAt(0)  // returns 65
 </pre>
 
 <h3
@@ -97,7 +97,7 @@ tags:
 <p>This version might be used in for loops and the like when it is unknown whether non-BMP
   characters exist before the specified index position.</p>
 
-<pre class="brush: js notranslate">function fixedCharCodeAt(str, idx) {
+<pre class="brush: js">function fixedCharCodeAt(str, idx) {
   // ex. fixedCharCodeAt('\uD800\uDC00', 0); // 65536
   // ex. fixedCharCodeAt('\uD800\uDC00', 1); // false
   idx = idx || 0;
@@ -137,7 +137,7 @@ tags:
   Fixing charCodeAt() to handle non-Basic-Multilingual-Plane characters if their presence
   earlier in the string is known</h3>
 
-<pre class="brush: js notranslate">function knownCharCodeAt(str, idx) {
+<pre class="brush: js">function knownCharCodeAt(str, idx) {
   str += '';
   var code,
       end = str.length;

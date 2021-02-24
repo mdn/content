@@ -26,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>target</var>.onclick = <var>functionRef</var>;
+<pre class="brush: js"><var>target</var>.onclick = <var>functionRef</var>;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -50,11 +50,11 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush:html notranslate">&lt;div id="demo"&gt;Click here&lt;/div&gt;</pre>
+<pre class="brush:html">&lt;div id="demo"&gt;Click here&lt;/div&gt;</pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">document.getElementById('demo').onclick = function changeContent() {
+<pre class="brush: js">document.getElementById('demo').onclick = function changeContent() {
 
    document.getElementById('demo').textContent = "Help me";
    document.getElementById('demo').style = "Color: red";
@@ -72,12 +72,12 @@ tags:
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush:html notranslate">&lt;p&gt;Click anywhere in this example.&lt;/p&gt;
+<pre class="brush:html">&lt;p&gt;Click anywhere in this example.&lt;/p&gt;
 &lt;p id="log"&gt;&lt;/p&gt;</pre>
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<pre class="brush: js notranslate">let log = document.getElementById('log');
+<pre class="brush: js">let log = document.getElementById('log');
 
 document.onclick = inputChange;
 

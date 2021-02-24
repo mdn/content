@@ -25,7 +25,7 @@ tags:
 
 <p>Here's a simple code snippet to sum it up:</p>
 
-<pre class="brush: js notranslate">const elem = document.getElementById("view3d");
+<pre class="brush: js">const elem = document.getElementById("view3d");
 
 window.addEventListener("deviceorientation", function(e) {
   elem.style.transform =
@@ -37,7 +37,7 @@ window.addEventListener("deviceorientation", function(e) {
 
 <p>Should you ever need to convert a rotate3d axis-angle to orientation Euler angles, you can use the following algorithm:</p>
 
-<pre class="brush: js notranslate">// convert a rotate3d axis-angle to deviceorientation angles
+<pre class="brush: js">// convert a rotate3d axis-angle to deviceorientation angles
 function orient( aa ) {
     var x = aa.x, y = aa.y, z = aa.z, a = aa.a,
         c = Math.cos( aa.a ),

@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const digest = <var>crypto</var><code>.subtle.digest(<var>algorithm</var>, <var>data</var>)</code>;
+<pre class="brush: js">const digest = <var>crypto</var><code>.subtle.digest(<var>algorithm</var>, <var>data</var>)</code>;
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -100,7 +100,7 @@ tags:
 <p>This example encodes a message, then calculates its SHA-256 digest and logs the digest
   length:</p>
 
-<pre class="brush: js notranslate">const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
+<pre class="brush: js">const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
 
 async function digestMessage(message) {
   const encoder = new TextEncoder();
@@ -119,7 +119,7 @@ console.log(digestBuffer.byteLength);
   digests are often represented as hex strings. This example calculates a digest, then
   converts the <code>ArrayBuffer</code> to a hex string:</p>
 
-<pre class="brush: js notranslate">const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
+<pre class="brush: js">const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
 
 async function digestMessage(message) {
   const msgUint8 = new TextEncoder().encode(message);                           // encode as (utf-8) Uint8Array

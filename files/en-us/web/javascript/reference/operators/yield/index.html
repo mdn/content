@@ -27,7 +27,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">[<var>rv</var>] = <strong>yield</strong> [<var>expression</var>]</pre>
+  class="brush: js">[<var>rv</var>] = <strong>yield</strong> [<var>expression</var>]</pre>
 
 <dl>
   <dt><code><var>expression</var></code> {{optional_inline}}</dt>
@@ -99,7 +99,7 @@ tags:
 
 <p>The following code is the declaration of an example generator function.</p>
 
-<pre class="brush: js notranslate">function* countAppleSales () {
+<pre class="brush: js">function* countAppleSales () {
   let saleList = [3, 7, 5]
   for (let i = 0; i &lt; saleList.length; i++) {
     yield saleList[i]
@@ -109,7 +109,7 @@ tags:
 <p>Once a generator function is defined, it can be used by constructing an iterator as
   shown.</p>
 
-<pre class="brush: js notranslate">let appleStore = countAppleSales()  // Generator { }
+<pre class="brush: js">let appleStore = countAppleSales()  // Generator { }
 console.log(appleStore.next())      // { value: 3, done: false }
 console.log(appleStore.next())      // { value: 7, done: false }
 console.log(appleStore.next())      // { value: 5, done: false }
@@ -119,7 +119,7 @@ console.log(appleStore.next())      // { value: undefined, done: true }</pre>
   return value in this syntax [<var>rv</var>] = <strong>yield</strong>
   [<var>expression</var>]</p>
 
-<pre class="brush: js notranslate">function* counter(value) {
+<pre class="brush: js">function* counter(value) {
  let step;
 
  while (true) {

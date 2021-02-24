@@ -45,7 +45,7 @@ tags:
 
 <p>This code checks for wake lock support and updates the UI accordingly.</p>
 
-<pre class="brush: js notranslate">if ('wakeLock' in navigator) {
+<pre class="brush: js">if ('wakeLock' in navigator) {
   isSupported = true;
   statusElem.textContent = 'Screen Wake Lock API supported!';
 } else {
@@ -58,7 +58,7 @@ tags:
 
 <p>The following example demonstrates how to request a {{domxref('WakeLockSentinel')}} object. The {{domxref('WakeLock.request')}} method is {{jsxref('Promise')}}-based and so we can create an asynchronous function, which in turn updates the UI to reflect the wake lock is active.</p>
 
-<pre class="brush: js notranslate">// Create a reference for the Wake Lock.
+<pre class="brush: js">// Create a reference for the Wake Lock.
 let wakeLock = null;
 
 // create an async function to request a wake lock
@@ -74,7 +74,7 @@ try {
 
 <p>The following example shows how to release the previously acquired wake lock.</p>
 
-<pre class="brush: js notranslate">wakeLock.release()
+<pre class="brush: js">wakeLock.release()
   .then(() =&gt; {
     wakeLock = null;
   });</pre>
@@ -83,7 +83,7 @@ try {
 
 <p>This example updates the UI if the wake lock has been released for any reason (such as navigating away from the active window/tab).</p>
 
-<pre class="brush: js notranslate">wakeLock.addEventListener('release', () =&gt; {
+<pre class="brush: js">wakeLock.addEventListener('release', () =&gt; {
   // the wake lock has been released
   statusElem.textContent = 'Wake Lock has been released';
 });</pre>
@@ -92,7 +92,7 @@ try {
 
 <p>The following code reacquires the wake lock should the visibility of the document change and the wake lock is released.</p>
 
-<pre class="brush: js notranslate">document.addEventListener('visibilitychange', async () =&gt; {
+<pre class="brush: js">document.addEventListener('visibilitychange', async () =&gt; {
   if (wakeLock !== null &amp;&amp; document.visibilityState === 'visible') {
     wakeLock = await navigator.wakeLock.request('screen');
   }

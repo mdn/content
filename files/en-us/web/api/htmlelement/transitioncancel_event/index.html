@@ -41,7 +41,7 @@ tags:
 
 <p>This code gets an element that has a transition defined and adds a listener to the <code>transitioncancel</code> event:</p>
 
-<pre class="brush: js notranslate">const transition = document.querySelector('.transition');
+<pre class="brush: js">const transition = document.querySelector('.transition');
 
 transition.addEventListener('transitioncancel', () =&gt; {
   console.log('Transition canceled');
@@ -49,7 +49,7 @@ transition.addEventListener('transitioncancel', () =&gt; {
 
 <p>The same, but using the {{domxref("GlobalEventHandlers.ontransitioncancel", "ontransitioncancel")}} property instead of <code>addEventListener()</code>:</p>
 
-<pre class="brush: js notranslate">const transition = document.querySelector('.transition');
+<pre class="brush: js">const transition = document.querySelector('.transition');
 
 transition.ontransitioncancel = () =&gt; {
   console.log('Transition canceled');
@@ -60,10 +60,10 @@ transition.ontransitioncancel = () =&gt; {
 
 <p>In the following example, we have a simple {{htmlelement("div")}} element, styled with a transition that includes a delay:</p>
 
-<pre class="brush: html notranslate">&lt;div class="transition"&gt;&lt;/div&gt;
+<pre class="brush: html">&lt;div class="transition"&gt;&lt;/div&gt;
 &lt;div class="message"&gt;&lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">.transition {
+<pre class="brush: css">.transition {
   width: 100px;
   height: 100px;
   background: rgba(255,0,0,1);
@@ -79,7 +79,7 @@ transition.ontransitioncancel = () =&gt; {
 
 <p>To this, we'll add some JavaScript to indicate that the <code><a href="/en-US/docs/Web/API/HTMLElement/transitionstart_event">transitionstart</a></code>, <code><a href="/en-US/docs/Web/API/HTMLElement/transitionrun_event">transitionrun</a></code>, <code><a href="/en-US/docs/Web/API/Window/transitioncancel_event">transitioncancel</a></code> and <code><a href="/en-US/docs/Web/API/Window/transitionend_event">transitionend</a></code> events fire. In this example, to cancel the transition, stop hovering over the transitioning box before the transition ends. For the transition end event to fire, stay hovered over the transition until the transition ends.</p>
 
-<pre class="brush: js notranslate">const message = document.querySelector('.message');
+<pre class="brush: js">const message = document.querySelector('.message');
 const el = document.querySelector('.transition');
 
 el.addEventListener('transitionrun', function() {

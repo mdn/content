@@ -35,7 +35,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-    class="brush: js notranslate"><var>condition</var> ? <var>exprIfTrue</var> : <var>exprIfFalse</var></pre>
+    class="brush: js"><var>condition</var> ? <var>exprIfTrue</var> : <var>exprIfFalse</var></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -64,7 +64,7 @@ tags:
 
 <h3 id="A_simple_example">A simple example</h3>
 
-<pre class="brush: js notranslate">var age = 26;
+<pre class="brush: js">var age = 26;
 var beverage = (age &gt;= 21) ? "Beer" : "Juice";
 console.log(beverage); // "Beer"
 </pre>
@@ -73,7 +73,7 @@ console.log(beverage); // "Beer"
 
 <p>One common usage is to handle a value that may be <code>null</code>:</p>
 
-<pre class="brush: js notranslate">let greeting = person =&gt; {
+<pre class="brush: js">let greeting = person =&gt; {
     let name = person ? person.name : `stranger`
     return `Howdy, ${name}`
 }
@@ -87,7 +87,7 @@ console.log(greeting(null));             // "Howdy, stranger"
 <p>The ternary operator is right-associative, which means it can be "chained" in the
     following way, similar to an <code>if … else if … else if … else</code> chain:</p>
 
-<pre class="brush: js notranslate">function example(…) {
+<pre class="brush: js">function example(…) {
     return condition1 ? value1
          : condition2 ? value2
          : condition3 ? value3
@@ -123,8 +123,7 @@ function example(…) {
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div class="hidden">The compatibility table on this page is generated from structured
-    data. If you'd like to contribute to the data, please check out <a class="external"
-        href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+    data. If you'd like to contribute to the data, please check out <a         href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
     and send us a pull request.</div>
 
 <p>{{Compat("javascript.operators.conditional")}}</p>

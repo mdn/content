@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <var>timeoutID</var> = <var>scope</var>.setTimeout(<var>function</var>[, <var>delay</var>, <var>arg1</var>, <var>arg2</var>, ...]);
+<pre class="brush: js">var <var>timeoutID</var> = <var>scope</var>.setTimeout(<var>function</var>[, <var>delay</var>, <var>arg1</var>, <var>arg2</var>, ...]);
 var <var>timeoutID</var> = <var>scope</var>.setTimeout(<var>function</var>[, <var>delay</var>]);
 var <var>timeoutID</var> = <var>scope</var>.setTimeout(<var>code</var>[, <var>delay</var>]);
 </pre>
@@ -87,7 +87,7 @@ var <var>timeoutID</var> = <var>scope</var>.setTimeout(<var>code</var>[, <var>de
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;Live Example&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Live Example&lt;/p&gt;
 &lt;button onclick="delayedAlert();"&gt;Show an alert box after two seconds&lt;/button&gt;
 &lt;p&gt;&lt;/p&gt;
 &lt;button onclick="clearAlert();"&gt;Cancel alert before it happens&lt;/button&gt;
@@ -95,7 +95,7 @@ var <var>timeoutID</var> = <var>scope</var>.setTimeout(<var>code</var>[, <var>de
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">var timeoutID;
+<pre class="brush: js">var timeoutID;
 
 function delayedAlert() {
   timeoutID = window.setTimeout(window.alert, 2*1000, 'That was really slow!');
@@ -127,14 +127,14 @@ function clearAlert() {
 
 <h3 id="HTML2">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;Live Example&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Live Example&lt;/p&gt;
 &lt;button onclick="run();"&gt;Run&lt;/button&gt;
 &lt;div id="log"&gt;&lt;/div&gt;
 </pre>
 
 <h3 id="JavaScript2">JavaScript</h3>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 var to_timer = 0; // duration is zero milliseconds
 var interval_timer = 0; // expires immediately
 var cleanup_timer = 0; // fires at end of run
@@ -173,7 +173,7 @@ function logline(msec) { // msec can't wrap: run duration &gt; 1 second
 </pre>
 
 <div class="hidden">
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 function cleanup() {
   clearTimeout(to_timer);
   clearInterval(interval_timer);
@@ -200,7 +200,7 @@ function pad(d, len) {
   below), you can include this polyfill to enable the HTML5 standard arguments-passing
   functionality. Just add this code to the top of your script:</p>
 
-<pre class="brush: js notranslate">/*\
+<pre class="brush: js">/*\
 |*|
 |*|  Polyfill which enables the passage of arbitrary arguments to the
 |*|  callback functions of JavaScript timers (HTML5 standard syntax).
@@ -252,7 +252,7 @@ function pad(d, len) {
 <p>If you want a completely unobtrusive fix for every other mobile or desktop browser,
   including IE 9 and below, you can either use JavaScript conditional comments:</p>
 
-<pre class="brush: js notranslate">/*@cc_on
+<pre class="brush: js">/*@cc_on
   // conditional IE &lt; 9 only fix
   @if (@_jscript_version &lt;= 9)
   (function(f){
@@ -265,7 +265,7 @@ function pad(d, len) {
 
 <p>... or go for a very clean approach based on the IE HTML conditional feature:</p>
 
-<pre class="brush: html notranslate">&lt;!--[if lte IE 9]&gt;&lt;script&gt;
+<pre class="brush: html">&lt;!--[if lte IE 9]&gt;&lt;script&gt;
 (function(f){
 window.setTimeout=f(window.setTimeout);
 window.setInterval=f(window.setInterval);
@@ -280,21 +280,21 @@ var a=[].slice.call(arguments,2);return f(function(){c instanceof Function?c.app
 <p>Another possibility is to use an anonymous function to call your callback, but this
   solution is a bit more expensive. Example:</p>
 
-<pre class="brush: js notranslate">var intervalID = setTimeout(function() { myFunc('one', 'two', 'three'); }, 1000);
+<pre class="brush: js">var intervalID = setTimeout(function() { myFunc('one', 'two', 'three'); }, 1000);
 </pre>
 
 <p>The above example can also be written with the help of an <a
     href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions"> arrow
     function</a>:</p>
 
-<pre class="brush: js notranslate">var intervalID = setTimeout(() =&gt; { myFunc('one', 'two', 'three'); }, 1000);
+<pre class="brush: js">var intervalID = setTimeout(() =&gt; { myFunc('one', 'two', 'three'); }, 1000);
 </pre>
 
 <p>Yet another possibility is to use <a
     href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">function's
     <code>bind</code></a>. Example:</p>
 
-<pre class="brush: js notranslate">setTimeout(function(arg1){}.bind(undefined, 10), 1000);
+<pre class="brush: js">setTimeout(function(arg1){}.bind(undefined, 10), 1000);
 </pre>
 
 <h2 id="The_this_problem">The "this" problem</h2>
@@ -316,7 +316,7 @@ var a=[].slice.call(arguments,2);return f(function(){c instanceof Function?c.app
 
 <p>See the following example:</p>
 
-<pre class="brush: js notranslate">myArray = ['zero', 'one', 'two'];
+<pre class="brush: js">myArray = ['zero', 'one', 'two'];
 myArray.myMethod = function (sProperty) {
   alert(arguments.length &gt; 0 ? this[sProperty] : this);
 };
@@ -330,7 +330,7 @@ myArray.myMethod(1); // prints "one"</pre>
   in the following:</p>
 
 <pre
-  class="brush: js notranslate">setTimeout(myArray.myMethod, 1.0*1000); // prints "[object Window]" after 1 second
+  class="brush: js">setTimeout(myArray.myMethod, 1.0*1000); // prints "[object Window]" after 1 second
 setTimeout(myArray.myMethod, 1.5*1000, '1'); // prints "undefined" after 1.5 seconds</pre>
 
 <p>The <code>myArray.myMethod</code> function is passed to <code>setTimeout</code>, then
@@ -339,7 +339,7 @@ setTimeout(myArray.myMethod, 1.5*1000, '1'); // prints "undefined" after 1.5 sec
   setTimeout as there is in Array methods like forEach, reduce, etc. and as shown below,
   using <code>call</code> to set <code>this</code> doesn't work either.</p>
 
-<pre class="brush: js notranslate">setTimeout.call(myArray, myArray.myMethod, 2.0*1000); // error: "NS_ERROR_XPC_BAD_OP_ON_WN_PROTO: Illegal operation on WrappedNative prototype object"
+<pre class="brush: js">setTimeout.call(myArray, myArray.myMethod, 2.0*1000); // error: "NS_ERROR_XPC_BAD_OP_ON_WN_PROTO: Illegal operation on WrappedNative prototype object"
 setTimeout.call(myArray, myArray.myMethod, 2.5*1000, 2); // same error
 </pre>
 
@@ -349,13 +349,13 @@ setTimeout.call(myArray, myArray.myMethod, 2.5*1000, 2); // same error
   <code>this</code> to the required value:</p>
 
 <pre
-  class="brush: js notranslate">setTimeout(function(){myArray.myMethod()}, 2.0*1000); // prints "zero,one,two" after 2 seconds
+  class="brush: js">setTimeout(function(){myArray.myMethod()}, 2.0*1000); // prints "zero,one,two" after 2 seconds
 setTimeout(function(){myArray.myMethod('1')}, 2.5*1000); // prints "one" after 2.5 seconds</pre>
 
 <p>Arrow functions are a possible alternative, too:</p>
 
 <pre
-  class="brush: js notranslate">setTimeout(() =&gt; {myArray.myMethod()}, 2.0*1000); // prints "zero,one,two" after 2 seconds
+  class="brush: js">setTimeout(() =&gt; {myArray.myMethod()}, 2.0*1000); // prints "zero,one,two" after 2 seconds
 setTimeout(() =&gt; {myArray.myMethod('1')}, 2.5*1000); // prints "one" after 2.5 seconds</pre>
 
 <p>Another possible way to solve the "<code>this</code>" problem is to replace the host
@@ -364,7 +364,7 @@ setTimeout(() =&gt; {myArray.myMethod('1')}, 2.5*1000); // prints "one" after 2.
     href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call"><code>Function.prototype.call</code></a>,
   e.g.:</p>
 
-<pre class="brush: js notranslate">// Enable setting 'this' in JavaScript timers
+<pre class="brush: js">// Enable setting 'this' in JavaScript timers
 
 var __nativeST__ = window.setTimeout,
     __nativeSI__ = window.setInterval;
@@ -392,7 +392,7 @@ window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentTo
 
 <p>New feature test:</p>
 
-<pre class="brush: js notranslate">myArray = ['zero', 'one', 'two'];
+<pre class="brush: js">myArray = ['zero', 'one', 'two'];
 myArray.myMethod = function (sProperty) {
     alert(arguments.length &gt; 0 ? this[sProperty] : this);
 };
@@ -410,7 +410,7 @@ setTimeout.call(myArray, myArray.myMethod, 2.5*1000, 2); // prints "two" after 2
 
 <p>Example using <code>bind()</code>:</p>
 
-<pre class="brush: js notranslate">myArray = ['zero', 'one', 'two'];
+<pre class="brush: js">myArray = ['zero', 'one', 'two'];
 myBoundMethod = (function (sProperty) {
     console.log(arguments.length &gt; 0 ? this[sProperty] : this);
 }).bind(myArray);
@@ -436,7 +436,7 @@ setTimeout(myBoundMethod, 1.5*1000, "1"); // prints "one" after 1.5 seconds
   <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#Don.27t_use_eval.21">eval</a>. </code>
 </p>
 
-<pre class="brush: js notranslate">// Recommended
+<pre class="brush: js">// Recommended
 window.setTimeout(function() {
   alert('Hello World!');
 }, 500);
@@ -522,7 +522,7 @@ window.setTimeout("alert('Hello World!');", 500);
 
 <p>In addition to {{anch("Clamping")}}, the timeout can also fire later when the page (or the OS/browser itself) is busy with other tasks. One important case to note is that the function or code snippet cannot be executed until the thread that called <code>{{domxref("WindowOrworkerGlobalScope.setTimeout()","setTimeout()")}}</code> has terminated. For example:</p>
 
-<pre class="brush: js notranslate">function foo() {
+<pre class="brush: js">function foo() {
   console.log('foo has been called');
 }
 setTimeout(foo, 0);
@@ -530,7 +530,7 @@ console.log('After setTimeout');</pre>
 
 <p>Will write to the console:</p>
 
-<pre class="notranslate">After setTimeout
+<pre>After setTimeout
 foo has been called</pre>
 
 <p>This is because even though <code>setTimeout</code> was called with a delay of zero,

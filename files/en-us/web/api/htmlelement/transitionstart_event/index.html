@@ -39,13 +39,13 @@ tags:
 
 <p>This code adds a listener to the <code>transitionstart</code> event:</p>
 
-<pre class="brush: js notranslate">element.addEventListener('transitionstart', () =&gt; {
+<pre class="brush: js">element.addEventListener('transitionstart', () =&gt; {
   console.log('Started transitioning');
 });</pre>
 
 <p>The same, but using the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/ontransitionrun">ontransitionstart</a></code> property instead of <code>addEventListener()</code>:</p>
 
-<pre class="brush: js notranslate">element.ontransitionrun = () =&gt; {
+<pre class="brush: js">element.ontransitionrun = () =&gt; {
   console.log('Started transitioning');
 };</pre>
 
@@ -53,10 +53,10 @@ tags:
 
 <p>In the following example, we have a simple {{htmlelement("div")}} element, styled with a transition that includes a delay:</p>
 
-<pre class="brush: html notranslate">&lt;div class="transition"&gt;Hover over me&lt;/div&gt;
+<pre class="brush: html">&lt;div class="transition"&gt;Hover over me&lt;/div&gt;
 &lt;div class="message"&gt;&lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">.transition {
+<pre class="brush: css">.transition {
   width: 100px;
   height: 100px;
   background: rgba(255,0,0,1);
@@ -72,7 +72,7 @@ tags:
 
 <p>To this, we'll add some JavaScript to indicate where the {{domxref("HTMLElement/transitionstart_event", "transitionstart")}} and {{domxref("HTMLElement/transitionrun_event", "transitionrun")}} events fire.</p>
 
-<pre class="brush: js notranslate">const transition = document.querySelector('.transition');
+<pre class="brush: js">const transition = document.querySelector('.transition');
 const message = document.querySelector('.message');
 
 transition.addEventListener('transitionrun', function() {

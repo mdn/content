@@ -29,7 +29,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>p</var>.catch(<var>onRejected</var>);
+<pre class="brush: js"><var>p</var>.catch(<var>onRejected</var>);
 
 p.catch(function(<var>reason</var>) {
    // rejection
@@ -69,7 +69,7 @@ p.catch(function(<var>reason</var>) {
 
 <p><strong>Demonstration of the internal call:</strong></p>
 
-<pre class="brush: js notranslate">// overriding original Promise.prototype.then/catch just to add some logs
+<pre class="brush: js">// overriding original Promise.prototype.then/catch just to add some logs
 (function(Promise){
     var originalThen = Promise.prototype.then;
     var originalCatch = Promise.prototype.catch;
@@ -105,7 +105,7 @@ Promise.resolve().catch(function XXX(){});
 
 <h3 id="Using_and_chaining_the_catch_method">Using and chaining the catch method</h3>
 
-<pre class="brush: js notranslate">var p1 = new Promise(function(resolve, reject) {
+<pre class="brush: js">var p1 = new Promise(function(resolve, reject) {
   resolve('Success');
 });
 
@@ -135,7 +135,7 @@ p1.then(function(value) {
 
 <h3 id="Gotchas_when_throwing_errors">Gotchas when throwing errors</h3>
 
-<pre class="brush: js notranslate">// Throwing an error will call the catch method most of the time
+<pre class="brush: js">// Throwing an error will call the catch method most of the time
 var p1 = new Promise(function(resolve, reject) {
   throw new Error('Uh-oh!');
 });
@@ -167,7 +167,7 @@ p3.catch(function(e) {
 
 <h3 id="If_it_is_resolved">If it is resolved</h3>
 
-<pre class="brush: js notranslate">//Create a promise which would not call onReject
+<pre class="brush: js">//Create a promise which would not call onReject
 var p1 = Promise.resolve("calling next");
 
 var p2 = p1.catch(function (reason) {

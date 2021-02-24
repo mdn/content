@@ -255,7 +255,7 @@ tags:
   <ul>
    <li>You will also need to pass the name of the blog post to the comment page in the context (implement <code>get_context_data()</code> as discussed below).</li>
    <li>The form should only display the comment "description" for user entry (date and associated blog post should not be editable). Since they won't be in the form itself, your code will need to set the comment's author in the<code> form_valid()</code> function so it can be saved into the model (<a href="https://docs.djangoproject.com/en/3.1/topics/class-based-views/generic-editing/#models-and-request-user">as described here</a> — Django docs). In that same function we set the associated blog. A possible implementation is shown below (<code>pk</code> is a blog id passed in from the URL/URL configuration).
-    <pre class="brush: python notranslate">    def form_valid(self, form):
+    <pre class="brush: python">    def form_valid(self, form):
         """
         Add author and associated blog to form data before setting it as valid (so it is saved to model)
         """
@@ -274,7 +274,7 @@ tags:
 
 <p>We briefly talked about passing a context to the template in a class-based view in the <a href="/en-US/docs/Learn/Server-side/Django/Generic_views#overriding_methods_in_class-based_views">Django Tutorial Part 6: Generic list and detail views</a> topic. To do this you need to override <code>get_context_data()</code> (first getting the existing context, updating it with whatever additional variables you want to pass to the template, and then returning the updated context). For example, the code fragment below shows how you can add a blogger object to the context based on their <code>BlogAuthor</code> id.</p>
 
-<pre class="brush: python notranslate">class SomeView(generic.ListView):
+<pre class="brush: python">class SomeView(generic.ListView):
     ...
 
     def get_context_data(self, **kwargs):

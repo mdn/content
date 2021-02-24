@@ -160,7 +160,7 @@ tags:
 
 <p>Therefore, this appears to work in a way:</p>
 
-<pre class="brush: js example-bad brush js notranslate">let wrongMap = new Map()
+<pre class="brush: js example-bad brush js">let wrongMap = new Map()
 wrongMap['bla'] = 'blaa'
 wrongMap['bla2'] = 'blaaa2'
 
@@ -171,14 +171,14 @@ console.log(wrongMap)  // Map { bla: 'blaa', bla2: 'blaaa2' }
   uses the feature of the generic object. The value of 'bla' is not stored in the Map for
   queries. Other operations on the data fail:</p>
 
-<pre class="brush: js example-bad brush js notranslate">wrongMap.has('bla')    // false
+<pre class="brush: js example-bad brush js">wrongMap.has('bla')    // false
 wrongMap.delete('bla') // false
 console.log(wrongMap)  // Map { bla: 'blaa', bla2: 'blaaa2' }</pre>
 
 <p>The correct usage for storing data in the Map is through the
   <code>set(<var>key</var>, <var>value</var>)</code> method.</p>
 
-<pre class="brush: js brush js example-good notranslate">let contacts = new Map()
+<pre class="brush: js brush js example-good">let contacts = new Map()
 contacts.set('Jessie', {phone: "213-555-1234", address: "123 N 1st Ave"})
 contacts.has('Jessie') // true
 contacts.get('Hilary') // undefined
@@ -261,7 +261,7 @@ console.log(contacts.size) // 1
 
 <h3 id="Using_the_Map_object">Using the Map object</h3>
 
-<pre class="brush: js notranslate">let myMap = new Map()
+<pre class="brush: js">let myMap = new Map()
 
 let keyString = 'a string'
 let keyObj    = {}
@@ -291,7 +291,7 @@ myMap.get(function() {}) // undefined, because keyFunc !== function () {}
   equal to itself (<code>NaN !== NaN</code> is true), the following example works because
   <code>NaN</code>s are indistinguishable from each other:</p>
 
-<pre class="brush: js notranslate">let myMap = new Map()
+<pre class="brush: js">let myMap = new Map()
 myMap.set(NaN, 'not a number')
 
 myMap.get(NaN)
@@ -306,7 +306,7 @@ myMap.get(otherNaN)
 
 <p>Maps can be iterated using a <code>for..of</code> loop:</p>
 
-<pre class="brush: js notranslate">let myMap = new Map()
+<pre class="brush: js">let myMap = new Map()
 myMap.set(0, 'zero')
 myMap.set(1, 'one')
 
@@ -340,7 +340,7 @@ for (let [key, value] of myMap.entries()) {
 <p>Maps can be iterated using the {{jsxref("Map.prototype.forEach", "forEach()")}} method:
 </p>
 
-<pre class="brush: js notranslate">myMap.forEach(function(value, key) {
+<pre class="brush: js">myMap.forEach(function(value, key) {
   console.log(key + ' = ' + value)
 })
 // 0 = zero
@@ -349,7 +349,7 @@ for (let [key, value] of myMap.entries()) {
 
 <h3 id="Relation_with_Array_objects">Relation with Array objects</h3>
 
-<pre class="brush: js notranslate">let kvArray = [['key1', 'value1'], ['key2', 'value2']]
+<pre class="brush: js">let kvArray = [['key1', 'value1'], ['key2', 'value2']]
 
 // Use the regular Map constructor to transform a 2D key-value Array into a map
 let myMap = new Map(kvArray)
@@ -370,7 +370,7 @@ console.log(Array.from(myMap.keys())) // ["key1", "key2"]
 
 <p>Just like <code>Array</code>s, <code>Map</code>s can be cloned:</p>
 
-<pre class="brush: js notranslate">let original = new Map([
+<pre class="brush: js">let original = new Map([
   [1, 'one']
 ])
 
@@ -386,7 +386,7 @@ console.log(original === clone) // false (useful for shallow comparison)</pre>
 
 <p>Maps can be merged, maintaining key uniqueness:</p>
 
-<pre class="brush: js notranslate">let first = new Map([
+<pre class="brush: js">let first = new Map([
   [1, 'one'],
   [2, 'two'],
   [3, 'three'],
@@ -407,7 +407,7 @@ console.log(merged.get(3)) // three</pre>
 
 <p>Maps can be merged with Arrays, too:</p>
 
-<pre class="brush: js notranslate">let first = new Map([
+<pre class="brush: js">let first = new Map([
   [1, 'one'],
   [2, 'two'],
   [3, 'three'],

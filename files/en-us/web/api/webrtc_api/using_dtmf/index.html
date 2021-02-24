@@ -59,7 +59,7 @@ tags:
 	<li>A {{HTMLElement("div")}} to receive and display log text to show status information.</li>
 </ul>
 
-<pre class="brush: html notranslate">  &lt;p&gt;This example demonstrates the use of DTMF in WebRTC. Note that this
+<pre class="brush: html">  &lt;p&gt;This example demonstrates the use of DTMF in WebRTC. Note that this
      example is "cheating" by generating both peers in one code stream,
      rather than having each be a truly separate entity.&lt;/p&gt;
 
@@ -76,7 +76,7 @@ tags:
 
 <p>First, we establish global variables.</p>
 
-<pre class="brush: js notranslate">let dialString = "12024561111";
+<pre class="brush: js">let dialString = "12024561111";
 
 let callerPC = null;
 let receiverPC = null;
@@ -121,7 +121,7 @@ let logElement = null;
 
 <p>When the page loads, we do some basic setup: we fetch references to the dial button and the log output box elements, and we use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to add an event listener to the dial button so that clicking it calls the <code>connectAndDial()</code> function to begin the connection process.</p>
 
-<pre class="brush: js notranslate">window.addEventListener("load", function() {
+<pre class="brush: js">window.addEventListener("load", function() {
   logElement = document.querySelector(".log");
   dialButton = document.querySelector("#dial");
 
@@ -133,7 +133,7 @@ let logElement = null;
 
 <p>When the dial button is clicked, <code>connectAndDial()</code> is called. This starts building the WebRTC connection in preparation for sending the DTMF codes.</p>
 
-<pre class="brush: js notranslate">function connectAndDial() {
+<pre class="brush: js">function connectAndDial() {
   callerPC = new RTCPeerConnection();
 
   hasAddTrack = (callerPC.addTrack !== undefined);
@@ -173,7 +173,7 @@ let logElement = null;
 
 <p>As mentioned above, when the audio input from the microphone is obtained, <code>gotStream()</code> is called. Its job is to build the stream being sent to the receiver, so the actual process of starting to transmit can begin. It also gets access to the <code>RTCDTMFSender</code> we'll use to issue DTMF on the connection.</p>
 
-<pre class="brush: js notranslate">function gotStream(stream) {
+<pre class="brush: js">function gotStream(stream) {
   log("Got access to the microphone.");
 
   let audioTracks = stream.getAudioTracks();
@@ -215,7 +215,7 @@ let logElement = null;
 
 <p>Each time a DTMF tone finishes playing, a {{event("tonechange")}} event is delivered to <code>callerPC</code>. The event listener for these is implemented as the <code>handleToneChangeEvent()</code> function.</p>
 
-<pre class="brush: js notranslate">function handleToneChangeEvent(event) {
+<pre class="brush: js">function handleToneChangeEvent(event) {
   if (event.tone !== "") {
     log("Tone played: " + event.tone);
   } else {
@@ -253,7 +253,7 @@ let logElement = null;
 
 <p>When the caller's <code>RTCPeerConnection</code> ICE layer comes up with a new candidate to propose, it issues an {{event("icecandidate")}} event to <code>callerPC</code>. The <code>icecandidate</code> event handler's job is to transmit the candidate to the receiver. In our example, we are directly controlling both the caller and the receiver, so we can just directly add the candidate to the receiver by calling its {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} method. That's handled by <code>handleCallerIceEvent()</code>:</p>
 
-<pre class="brush: js notranslate">function handleCallerIceEvent(event) {
+<pre class="brush: js">function handleCallerIceEvent(event) {
   if (event.candidate) {
     log("Adding candidate to receiver: " + event.candidate.candidate);
 
@@ -273,7 +273,7 @@ let logElement = null;
 
 <p>Our design requires that when the connection is established, we immediately send the DTMF string. To accomplish that, we watch for the caller to receive an {{event("iceconnectionstatechange")}} event. This event is sent when one of a number of changes occurs to the state of the ICE connection process, including the successful establishment of a connection.</p>
 
-<pre class="brush: js notranslate">function handleCallerIceConnectionStateChange() {
+<pre class="brush: js">function handleCallerIceConnectionStateChange() {
   log("Caller's connection state changed to " + callerPC.iceConnectionState);
   if (callerPC.iceConnectionState === "connected") {
     log("Sending DTMF: \"" + dialString + "\"");
@@ -290,7 +290,7 @@ let logElement = null;
 
 <p>When the calling {{domxref("RTCPeerConnection")}} begins to receive media (after the microphone's stream is added to it), a {{event("negotiationneeded")}} event is delivered to the caller, letting it know that it's time to start negotiating the connection with the receiver. As previously mentioned, our example is simplified somewhat because we control both the caller and the receiver, so <code>handleCallerNegotiationNeeded()</code> is able to quickly construct the connection by chaining the required calls together for both the caller and receiver, as shown below.</p>
 
-<pre class="brush: js notranslate">function handleCallerNegotiationNeeded() {
+<pre class="brush: js">function handleCallerNegotiationNeeded() {
   log("Negotiating...");
   callerPC.createOffer(offerOptions)
   .then(function(offer) {
@@ -333,7 +333,7 @@ let logElement = null;
 
 <p>We can also watch for changes to the signaling state (by accepting {{event("signalingstatechange")}} events) and the ICE gathering state (by accepting {{event("icegatheringstatechange")}} events). We aren't using these for anything, so all we do is log them. We could have not set up these event listeners at all.</p>
 
-<pre class="brush: js notranslate">function handleCallerSignalingStateChangeEvent() {
+<pre class="brush: js">function handleCallerSignalingStateChangeEvent() {
   log("Caller's signaling state changed to " + callerPC.signalingState);
 }
 
@@ -348,7 +348,7 @@ function handleCallerGatheringStateChangeEvent() {
 
 <p>This code is analogous to the <code>icecandidate</code> event handler for the caller, seen in {{anch("Adding candidates to the caller")}} above.</p>
 
-<pre class="brush: js notranslate">function handleReceiverIceEvent(event) {
+<pre class="brush: js">function handleReceiverIceEvent(event) {
   if (event.candidate) {
     log("Adding candidate to caller: " + event.candidate.candidate);
 
@@ -368,7 +368,7 @@ function handleCallerGatheringStateChangeEvent() {
 
 <p>When the receiver begins to receive media, an event is delivered to the receiver's {{domxref("RTCPeerConnection")}}, <code>receiverPC</code>. As explained in {{anch("Starting the connection process")}}, the current WebRTC specification uses the {{event("track")}} event for this, but some browsers haven't been updated to support this yet, so we also need to handle the {{event("addstream")}} event. The <code>handleReceiverTrackEvent()</code> and <code>handleReceiverAddStreamEvent()</code> methods, shown below, handle these.</p>
 
-<pre class="brush: js notranslate">function handleReceiverTrackEvent(event) {
+<pre class="brush: js">function handleReceiverTrackEvent(event) {
   audio.srcObject = event.streams[0];
 }
 
@@ -385,7 +385,7 @@ function handleReceiverAddStreamEvent(event) {
 
 <p>A simple <code>log()</code> function is used throughout the code to append HTML to a {{HTMLElement("div")}} box for displaying status and errors to the user.</p>
 
-<pre class="brush: js notranslate">function log(msg) {
+<pre class="brush: js">function log(msg) {
   logElement.innerHTML += msg + "&lt;br/&gt;";
 }</pre>
 

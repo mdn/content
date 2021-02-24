@@ -19,17 +19,17 @@ tags:
 
 <p>To get a <code>CanvasRenderingContext2D</code> instance, you must first have an HTML <code>&lt;canvas&gt;</code> element to work with:</p>
 
-<pre class="brush: html notranslate">&lt;canvas id="my-house" width="300" height="300"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html">&lt;canvas id="my-house" width="300" height="300"&gt;&lt;/canvas&gt;</pre>
 
 <p>To get the canvas' 2D rendering context, call {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} on the <code>&lt;canvas&gt;</code> element, supplying <code>'2d'</code> as the argument:</p>
 
-<pre class="brush: js notranslate">const canvas = document.getElementById('my-house');
+<pre class="brush: js">const canvas = document.getElementById('my-house');
 const ctx = canvas.getContext('2d');
 </pre>
 
 <p>With the context in hand, you can draw anything you like. This code draws a house:</p>
 
-<pre class="brush: js notranslate">// Set line width
+<pre class="brush: js">// Set line width
 ctx.lineWidth = 10;
 
 // Wall

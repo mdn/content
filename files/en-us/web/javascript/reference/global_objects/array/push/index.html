@@ -24,7 +24,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>arr</var>.push([<var>element1</var>[, ...[, <var>elementN</var>]]])</pre>
+  class="brush: js"><var>arr</var>.push([<var>element1</var>[, ...[, <var>elementN</var>]]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -63,7 +63,7 @@ tags:
   appends two elements to it. The <code>total</code> variable contains the new length of
   the array.</p>
 
-<pre class="brush: js notranslate">let sports = ['soccer', 'baseball']
+<pre class="brush: js">let sports = ['soccer', 'baseball']
 let total = sports.push('football', 'swimming')
 
 console.log(sports)  // ['soccer', 'baseball', 'football', 'swimming']
@@ -80,7 +80,7 @@ console.log(total)   // 4
   take is limited in practice. See {{jsxref("Function.apply", "apply()")}} for more
   details.</p>
 
-<pre class="brush: js notranslate">let vegetables = ['parsnip', 'potato']
+<pre class="brush: js">let vegetables = ['parsnip', 'potato']
 let moreVegs = ['celery', 'beetroot']
 
 // Merge the second array into the first one
@@ -103,7 +103,7 @@ console.log(vegetables)  // ['parsnip', 'potato', 'celery', 'beetroot']
   an array—and it just works, thanks to the way JavaScript allows us to establish the
   execution context in any way we want.</p>
 
-<pre class="brush: js notranslate">let obj = {
+<pre class="brush: js">let obj = {
     length: 0,
 
     addElem: function addElem(elem) {

@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>IDBDatabase</em>.transaction(<em>storeNames</em>);
+<pre class="brush: js"><em>IDBDatabase</em>.transaction(<em>storeNames</em>);
 <em>IDBDatabase</em>.transaction(<em>storeNames</em>, <em>mode</em>);
 <em>IDBDatabase</em>.transaction(<em>storeNames</em>, <em>mode, options</em>);
 </pre>
@@ -38,13 +38,13 @@ tags:
     If you need to access only one object store, you can specify its name as a string.
     Therefore the following lines are equivalent:</dd>
   <dd>
-    <pre class="brush: js notranslate">var transaction = db.transaction(['my-store-name']);
+    <pre class="brush: js">var transaction = db.transaction(['my-store-name']);
 var transaction = db.transaction('my-store-name');</pre>
   </dd>
   <dd>If you need to access all object stores in the database, you can use the property
     {{domxref("IDBDatabase.objectStoreNames")}}:
     <pre
-      class="brush: js notranslate">var transaction = db.transaction(db.objectStoreNames);</pre>
+      class="brush: js">var transaction = db.transaction(db.objectStoreNames);</pre>
   </dd>
   <dd>Passing an empty array will throw an exception.</dd>
   <dt><code>mode</code> {{optional_inline}}</dt>
@@ -58,7 +58,7 @@ var transaction = db.transaction('my-store-name');</pre>
   <dd>If you need to open the object store in <code>readwrite</code> mode to change data,
     you would use the following:
     <pre
-      class="brush:js; notranslate">var transaction = db.transaction('my-store-name', "readwrite");</pre>
+      class="brush:js;">var transaction = db.transaction('my-store-name', "readwrite");</pre>
 
     <p>As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to
       increase performance (see {{Bug("1112702")}}), which is the same behavior as other
@@ -147,7 +147,7 @@ var transaction = db.transaction('my-store-name');</pre>
     href="https://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">view
     example live</a>.)</p>
 
-<pre class="brush: js notranslate">var db;
+<pre class="brush: js">var db;
 
 // Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);

@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>p</var>.finally(<var>onFinally</var>);
+<pre class="brush: js"><var>p</var>.finally(<var>onFinally</var>);
 
 <var>p</var>.finally(function() {
    // settled (fulfilled or rejected)
@@ -79,7 +79,7 @@ tags:
 
 <h3 id="Using_finally">Using finally</h3>
 
-<pre class="brush: js notranslate">let isLoading = true;
+<pre class="brush: js">let isLoading = true;
 
 fetch(myRequest).then(function(response) {
     var contentType = response.headers.get("content-type");

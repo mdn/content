@@ -24,7 +24,7 @@ tags:
 
 <p>This example will replace the page content with "replacement text":</p>
 
-<pre class="notranslate brush: js line-numbers  language-js">function listener(details) {
+<pre class="brush: js line-numbers  language-js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
   filter.onstart = event =&gt; {

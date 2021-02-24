@@ -69,7 +69,7 @@ browser.pageAction.onClicked.hasListener(listener)
 
 	<p>When the user clicks the page action, hide it, and navigate the active tab to "<a href="https://giphy.com/explore/cat">https://giphy.com/explore/cat</a>":</p>
 
-	<pre class="notranslate brush: js">var CATGIFS = "https://giphy.com/explore/cat";
+	<pre class="brush: js">var CATGIFS = "https://giphy.com/explore/cat";
 
 browser.pageAction.onClicked.addListener((tab) =&gt; {
   browser.pageAction.hide(tab.id);

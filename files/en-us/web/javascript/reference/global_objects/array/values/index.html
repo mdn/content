@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>arr</var>.values()</pre>
+<pre class="brush: js"><var>arr</var>.values()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -31,7 +31,7 @@ tags:
 
 <h3 id="Iteration_using_for...of_loop">Iteration using for...of loop</h3>
 
-<pre class="brush: js notranslate">var arr = ['a', 'b', 'c', 'd', 'e'];
+<pre class="brush: js">var arr = ['a', 'b', 'c', 'd', 'e'];
 var iterator = arr.values();
 
 for (let letter of iterator) {
@@ -43,11 +43,11 @@ for (let letter of iterator) {
   <strong>Array.prototype[Symbol.iterator]</strong>.</p>
 
 <pre
-  class="brush: js notranslate">Array.prototype.values === Array.prototype[Symbol.iterator]      //true</pre>
+  class="brush: js">Array.prototype.values === Array.prototype[Symbol.iterator]      //true</pre>
 
 <h3 id="Iteration_using_.next">Iteration using .next()</h3>
 
-<pre class="brush: js notranslate">var arr = ['a', 'b', 'c', 'd', 'e'];
+<pre class="brush: js">var arr = ['a', 'b', 'c', 'd', 'e'];
 var iterator = arr.values();
 iterator.next();               // Object { value: "a", done: false }
 iterator.next().value;         // "b"
@@ -63,7 +63,7 @@ iteraror.next().value;         // undefined </pre>
 
 <p>example:</p>
 
-<pre class="brush: js notranslate">var arr = ['a', 'b', 'c', 'd', 'e'];
+<pre class="brush: js">var arr = ['a', 'b', 'c', 'd', 'e'];
  var iterator = arr.values();
  for (let letter of iterator) {
  console.log(letter);
@@ -82,7 +82,7 @@ console.log(letter);
   object; instead it stores the address of the array used in its creation and so depends
   on the values stored in that array.</p>
 
-<pre class="brush: js notranslate">var arr = ['a', 'b', 'c', 'd', 'e'];
+<pre class="brush: js">var arr = ['a', 'b', 'c', 'd', 'e'];
 var iterator = arr.values();
 console.log(iterator);        // Array Iterator {  }
 iterator.next().value;        // "a"

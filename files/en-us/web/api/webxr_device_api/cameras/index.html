@@ -99,7 +99,7 @@ tags:
 
 <p>This can also be represented as an array:</p>
 
-<pre class="brush: js notranslate">let directionVector = [3, 1, -2];
+<pre class="brush: js">let directionVector = [3, 1, -2];
 </pre>
 
 <p>For the purposes of performing operations involving both the coordinates and the facing direction vector, the vector needs to include the <code>w</code> component. The value of <code>w</code> is always 0 for vectors, so the aforementioned vector can also be represented using <code>[3, 1, -2, 0]</code> or:</p>
@@ -112,7 +112,7 @@ tags:
 
 <p>This is why the {{domxref("XRRigidTransform")}} object used by WebXR to represent transforms includes an {{domxref("XRRigidTransform.inverse", "inverse")}} property. The <code>inverse</code> property is another <code>XRRigidTransform</code> object which is the inverse of the parent transform. Since the {{domxref("XRView")}} representing the view has a {{domxref("XRView.transform", "transform")}} property which is an <code>XRRigidTransform</code> providing the camera view, you can get the model view matrix—the transform matrix needed to move the world to simulate the desired camera position—like this:</p>
 
-<pre class="brush: js notranslate">let viewMatrix = view.transform.inverse.matrix;</pre>
+<pre class="brush: js">let viewMatrix = view.transform.inverse.matrix;</pre>
 
 <p>If the library you're using accepts an <code>XRRigidTransform</code> object directly, you can instead get <code>view.transform.inverse</code>, rather than pulling out just the array representing the view matrix.</p>
 
@@ -142,7 +142,7 @@ tags:
 
 <p>Is represented in array form like this:</p>
 
-<pre class="brush: js notranslate">let matrixArray = [a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub>, a<sub>4</sub>, a<sub>5</sub>, a<sub>6</sub>, a<sub>7</sub>, a<sub>8</sub>,
+<pre class="brush: js">let matrixArray = [a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub>, a<sub>4</sub>, a<sub>5</sub>, a<sub>6</sub>, a<sub>7</sub>, a<sub>8</sub>,
                    a<sub>9</sub>, a<sub>10</sub>, a<sub>11</sub>, a<sub>12</sub>, a<sub>13</sub>, a<sub>14</sub>, a<sub>15</sub>, a<sub>16</sub>];</pre>
 
 <p>In this array, the leftmost column contains the entries a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub>, and a<sub>4</sub>. The topmost row contains the entries a<sub>1</sub>, a<sub>5</sub>, a<sub>9</sub>, and a<sub>13</sub>.</p>
@@ -171,7 +171,7 @@ tags:
 
 <p>The following function returns a projection perspective matrix that integrates the specified field of view angle as well as the given near and far clipping plane distances:</p>
 
-<pre class="brush: js notranslate">function createPerspectiveMatrix(viewport, fovDegrees, nearClip, farClip) {
+<pre class="brush: js">function createPerspectiveMatrix(viewport, fovDegrees, nearClip, farClip) {
   const fovRadians = fovDegrees * (Math.PI / 180.0);
   const aspectRatio = viewport.width / viewport.height;
 
@@ -191,7 +191,7 @@ tags:
 
 <p>If you start each frame's rendering pass by computing the perspective matrix, you can then multply into that matrix all the other transforms you need to apply in order to result in the frame's desired geometry. For example:</p>
 
-<pre class="brush: js notranslate">const transform = createPerspectiveMatrix(viewport, 130, 1, 100);
+<pre class="brush: js">const transform = createPerspectiveMatrix(viewport, 130, 1, 100);
 const translateVec = vec3.fromValues(-trackDistance, -craneDistance, pushDistance);
 mat4.translate(transform, transform, translateVec);
 </pre>
@@ -204,7 +204,7 @@ mat4.translate(transform, transform, translateVec);
 
 <p>If you want to scale up by a factor of 2, you need to multiply each component by 2.0. To scale down by the same amount, multiply them by -2.0. In matrix terms, this is performed using a transform matrix with scaling factored into it, like this:</p>
 
-<pre class="brush: js notranslate">let scaleTransform = [
+<pre class="brush: js">let scaleTransform = [
   Sx,  0,  0,  0,
    0, Sy,  0,  0,
    0,  0, Sz,  0,
@@ -216,7 +216,7 @@ mat4.translate(transform, transform, translateVec);
 
 <p>If the same scaling factor is to be applied in every direction, you can create a simple function to generate the scaling transform matrix for you:</p>
 
-<pre class="brush: js notranslate">function createScalingMatrix(f) {
+<pre class="brush: js">function createScalingMatrix(f) {
   return [
     f, 0, 0, 0,
     0, f, 0, 0,
@@ -228,7 +228,7 @@ mat4.translate(transform, transform, translateVec);
 
 <p>With the transform matrix in hand, we apply the transform <code>scaleTransform</code> to the vector (or vertex) <code>myVector</code>:</p>
 
-<pre class="brush: js notranslate">let myVector = [2, 1, -3];
+<pre class="brush: js">let myVector = [2, 1, -3];
 let scaleTransform = [
   2, 0, 0, 0,
   0, 2, 0, 0,
@@ -240,7 +240,7 @@ vec4.transformMat4(myVector, myVector, scaleTransform);
 
 <p>Or, using scaling along every axis by the same factor using the <code>createScalingMatrix()</code> function shown above:</p>
 
-<pre class="brush: js notranslate">let myVector = [2, 1, -3];
+<pre class="brush: js">let myVector = [2, 1, -3];
 vec4.transformMat4(myVector, myVector, createScalingMatrix(2.0));</pre>
 
 <h3 id="Panning_Yawing_left_or_right">Panning (Yawing left or right)</h3>
@@ -251,7 +251,7 @@ vec4.transformMat4(myVector, myVector, createScalingMatrix(2.0));</pre>
 
 <p>To do this, then, we need to rotate around the Y axis, to simulate the left and right rotation of the camera. Using the <a href="http://glmatrix.net/">glMatrix</a> library we've used previously, this can be performed using the <code>rotateY()</code> method on the <code>mat4</code> class, which represents a standard 4x4 matrix. To rotate the viewpoint defined by the matrix <code>viewMatrix</code> by <code>panAngle</code> radians:</p>
 
-<pre class="brush: js notranslate">mat4.rotateY(viewMatrix, viewMatrix, panAngle);
+<pre class="brush: js">mat4.rotateY(viewMatrix, viewMatrix, panAngle);
 </pre>
 
 <p>If <code>panAngle</code> is positive, this transform will pan the camera to the right; a negative value for <code>panAngle</code> will pan to the left.</p>
@@ -264,7 +264,7 @@ vec4.transformMat4(myVector, myVector, createScalingMatrix(2.0));</pre>
 
 <p>Thus, tilting the camera can be achieved by rotating the camera around the X axis, so that it pivots to look up and down. This can be done using the appropriate method in your matrix math library, such as the <code>rotateX()</code> method in glMatrix's <code>mat4</code> class:</p>
 
-<pre class="brush: js notranslate">mat4.rotateX(viewMatrix, viewMatrix, angle);</pre>
+<pre class="brush: js">mat4.rotateX(viewMatrix, viewMatrix, angle);</pre>
 
 <p>Positive values for <code>angle</code> will tilt the camera downward, while negative values of <code>angle</code> will tilt upward.</p>
 
@@ -278,7 +278,7 @@ vec4.transformMat4(myVector, myVector, createScalingMatrix(2.0));</pre>
 
 <p>To perform a dolly operation, translate the camera view forward and backward along the Z axis:</p>
 
-<pre class="brush: js notranslate">mat4.translate(viewMatrix, viewMatrix, [0, 0, dollyDistance]);</pre>
+<pre class="brush: js">mat4.translate(viewMatrix, viewMatrix, [0, 0, dollyDistance]);</pre>
 
 <p>Here, <code>[0, 0, dollyDistance]</code> is a vector wherein <code>dollyDistance</code> is the distance to dolly the camera. Since this works by moving the entire world around the camera, what really happens here is that the entire world moves along the Z axis by <code>dollyDistance</code> meters relative to the camera. If <code>dollyDistance</code> is positive, the world moves toward the user by that amount, resulting in the camera being closer to the scene. Contrariwise, negative values of <code>dollyDistance</code> move the world away from the user, causing the camera to appear to move backward from the target.</p>
 
@@ -290,7 +290,7 @@ vec4.transformMat4(myVector, myVector, createScalingMatrix(2.0));</pre>
 
 <p>To move the camera left and right, translate the view matrix along the X axis in the opposite direction from the desired camera movement:</p>
 
-<pre class="brush: js notranslate">mat4.translate(viewMatrix, viewMatrix, [-truckDistance, 0, 0]);</pre>
+<pre class="brush: js">mat4.translate(viewMatrix, viewMatrix, [-truckDistance, 0, 0]);</pre>
 
 <p>Note the vector <code>[-truckDistance, 0, 0]</code>. This compensates for the fact that the truck operation works by moving the world rather than the camera. By moving the entire world in the opposite direction from the direction indicated by <code>truckDistance</code>, we achieve the effect of moving the camera the expected direction. This way, positive values of <code>truckDistance</code> will move the camera to the right (by moving the world to the left) and negative values of <code>truckDistance</code> will move the camera to the left by moving the world to the right.</p>
 
@@ -302,7 +302,7 @@ vec4.transformMat4(myVector, myVector, createScalingMatrix(2.0));</pre>
 
 <p>This is similar to a <strong>crane</strong> shot, which involves moving a camera attached to a crane up and down. To perform a pedestal or crane motion, translate the view along the Y axis in the opposite direction from the direction you want to move the camera:</p>
 
-<pre class="brush: js notranslate">mat4.translate(viewMatrix, viewMatrix, [0, -pedestalDistance, 0]);</pre>
+<pre class="brush: js">mat4.translate(viewMatrix, viewMatrix, [0, -pedestalDistance, 0]);</pre>
 
 <p>By negating the value of <code>pedestalDistance</code>, we compensate for the fact that we're actually moving the world rather than the camera. So positive values of <code>pedestalDistance</code> will move the camera up, while negative values will move it down.</p>
 
@@ -316,7 +316,7 @@ vec4.transformMat4(myVector, myVector, createScalingMatrix(2.0));</pre>
 
 <p>To accomplish this rotation around the Z axis using glMatrix:</p>
 
-<pre class="brush: js notranslate">mat4.rotateZ(viewMatrix, viewMatrix, cantAngle);</pre>
+<pre class="brush: js">mat4.rotateZ(viewMatrix, viewMatrix, cantAngle);</pre>
 
 <h2 id="Combining_movements">Combining movements</h2>
 
@@ -326,14 +326,14 @@ vec4.transformMat4(myVector, myVector, createScalingMatrix(2.0));</pre>
 
 <p>Translating along multiple axes is quite easy. Previously, we performed our translations like this:</p>
 
-<pre class="brush: js notranslate">mat4.translate(viewMatrix, viewMatrix, [-truckDistance, 0, 0]);
+<pre class="brush: js">mat4.translate(viewMatrix, viewMatrix, [-truckDistance, 0, 0]);
 mat4.translate(viewMatrix, viewMatrix, [0, -pedestalDistance, 0]);
 mat4.translate(viewMatrix, viewMatrix, [0, 0, dollyDistance]);
 </pre>
 
 <p>The solution here is obvious. SInce the translation is expressed as a vector providing the distance to move along each axis, we can combine them like this:</p>
 
-<pre class="brush: js notranslate">mat4.translate(viewMatrix, viewMatrix,
+<pre class="brush: js">mat4.translate(viewMatrix, viewMatrix,
      [-truckDistance, -pedestalDistance, dollyDistance]);</pre>
 
 <p>This will shift the origin of the matrix <code>viewMatrix</code> by the specified amount along each axis.</p>
@@ -342,14 +342,14 @@ mat4.translate(viewMatrix, viewMatrix, [0, 0, dollyDistance]);
 
 <p>You can also combine rotations around multiple axes into a single rotation around a quaternion representing a shared axis for the rotations. To perform the rotations separately, you use <a href="https://en.wikipedia.org/wiki/Euler_angles">Euler angles</a> (separate angles around each axis) to apply pitch, yaw, and roll like this:</p>
 
-<pre class="brush: js notranslate">mat4.rotateX(viewMatrix, viewMatrix, pitchAngle);
+<pre class="brush: js">mat4.rotateX(viewMatrix, viewMatrix, pitchAngle);
 mat4.rotateY(viewMatrix, viewMatrix, yawAngle);
 mat4.rotateZ(viewMatrix, viewMatrix, rollAngle);
 </pre>
 
 <p>You can instead construct a {{Glossary("quaternion")}} representing a combined rotation axis from the Euler angles, then rotate the matrix using multiplication, like this:</p>
 
-<pre class="brush: js notranslate">const axisQuat = quat.create();
+<pre class="brush: js">const axisQuat = quat.create();
 const rotateMatrix = mat4.create();
 quat.fromEuler(axisQuat, pitchAngle, yawAngle, rollAngle);
 mat4.fromQuat(rotateMatrix, axisQuat);
@@ -383,7 +383,7 @@ mat4.multiply(viewMatrix, viewMatrix, rotateMatrix);</pre>
 
 <p>A fairly basic (but typical) callback for rendering frames might look like this:</p>
 
-<pre class="brush: js notranslate">function myAnimationFrameCallback(time, frame) {
+<pre class="brush: js">function myAnimationFrameCallback(time, frame) {
   let adjustedRefSpace = applyPositionOffsets(xrReferenceSpace);
   let pose = frame.getViewerPose(adjustedRefSpace);
 

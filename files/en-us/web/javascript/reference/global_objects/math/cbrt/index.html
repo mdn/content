@@ -65,7 +65,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><code>Math.cbrt(<var>x</var>)</code></pre>
+<pre class="brush: js"><code>Math.cbrt(<var>x</var>)</code></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -116,7 +116,7 @@ tags:
     </semantics>
   </math> so this can be emulated by the following function:</p>
 
-<pre class="brush: js notranslate">if (!Math.cbrt) {
+<pre class="brush: js">if (!Math.cbrt) {
   Math.cbrt = (function(pow) {
     return function cbrt(x){
       // ensure negative numbers remain negative:
@@ -130,7 +130,7 @@ tags:
 
 <h3 id="Using_Math.cbrt">Using Math.cbrt()</h3>
 
-<pre class="brush: js notranslate">Math.cbrt(NaN); // NaN
+<pre class="brush: js">Math.cbrt(NaN); // NaN
 Math.cbrt(-1); // -1
 Math.cbrt(-0); // -0
 Math.cbrt(-Infinity); // -Infinity

@@ -12,7 +12,7 @@ tags:
 
 <p>CSS is full of <strong>physical</strong> positioning keywords – left and right, top and bottom. If we position an item using absolute positioning, we use these physical keywords as offset values to push the item around. In the code snippet below, the item is placed 20 pixels from the top, and 30 pixels from the left of the container:</p>
 
-<pre class="brush:css notranslate">.container {
+<pre class="brush:css">.container {
   position: relative;
 }
 .item {
@@ -22,7 +22,7 @@ tags:
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="container"&gt;
+<pre class="brush: html">&lt;div class="container"&gt;
   &lt;div class="item"&gt;Item&lt;/div&gt;
 &lt;/div&gt;
 </pre>
@@ -67,7 +67,7 @@ tags:
 
 <div id="writing_1">
 <div class="hidden">
-<pre class="brush: css notranslate">.wrapper &gt; p {
+<pre class="brush: css">.wrapper &gt; p {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
@@ -79,7 +79,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;p style="writing-mode: horizontal-tb"&gt;I have writing mode set to the default &lt;code&gt;horizontal-tb&lt;/code&gt;&lt;/p&gt;
   &lt;p style="writing-mode: vertical-rl"&gt;I have writing mode set to &lt;code&gt;vertical-rl&lt;/code&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -96,7 +96,7 @@ tags:
 
 <div id="writing_2">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -114,7 +114,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(2, 100px);
@@ -122,7 +122,7 @@ gap: 10px;
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="item1"&gt;Item 1&lt;/div&gt;
   &lt;div class="item2"&gt;Item 2&lt;/div&gt;
   &lt;div class="item3"&gt;Item 3&lt;/div&gt;
@@ -138,7 +138,7 @@ gap: 10px;
 
 <div id="writing_3">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -156,7 +156,7 @@ gap: 10px;
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   writing-mode: vertical-lr;
   display: grid;
   grid-template-columns: repeat(3, 100px);
@@ -165,7 +165,7 @@ gap: 10px;
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="item1"&gt;Item 1&lt;/div&gt;
   &lt;div class="item2"&gt;Item 2&lt;/div&gt;
   &lt;div class="item3"&gt;Item 3&lt;/div&gt;
@@ -187,7 +187,7 @@ gap: 10px;
 
 <div id="writing_4">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -205,7 +205,7 @@ gap: 10px;
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   writing-mode: vertical-lr;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -232,7 +232,7 @@ gap: 10px;
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="item1"&gt;Item 1&lt;/div&gt;
   &lt;div class="item2"&gt;Item 2&lt;/div&gt;
   &lt;div class="item3"&gt;Item 3&lt;/div&gt;
@@ -262,7 +262,7 @@ gap: 10px;
 
 <div id="writing_5">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -280,7 +280,7 @@ gap: 10px;
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 100px);
@@ -298,7 +298,7 @@ gap: 10px;
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
         &lt;div class="item1"&gt;Item 1&lt;/div&gt;
         &lt;div class="item2"&gt;Item 2&lt;/div&gt;
         &lt;div class="item3"&gt;Item 3&lt;/div&gt;
@@ -312,7 +312,7 @@ gap: 10px;
 
 <div id="writing_6">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -330,7 +330,7 @@ gap: 10px;
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   direction: rtl;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -349,7 +349,7 @@ gap: 10px;
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
         &lt;div class="item1"&gt;Item 1&lt;/div&gt;
         &lt;div class="item2"&gt;Item 2&lt;/div&gt;
         &lt;div class="item3"&gt;Item 3&lt;/div&gt;
@@ -390,7 +390,7 @@ gap: 10px;
 <p>In addition to displaying documents, using the correct writing mode for the language, writing modes can be used creatively within documents that are otherwise <code>ltr</code>. In this next example I have a grid layout with a set of links down one side. I’ve used writing modes to turn these on their side in the column track:</p>
 
 <div id="writing_7">
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr auto;
@@ -411,7 +411,7 @@ gap: 10px;
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
         &lt;div class="content"&gt;
             &lt;p&gt;Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.&lt;/p&gt;
             &lt;p&gt;Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter purslane fennel azuki bean earthnut pea sierra leone bologi leek soko chicory celtuce parsley jícama salsify.&lt;/p&gt;

@@ -66,7 +66,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Math.log10(<var>x</var>)</pre>
+<pre class="brush: js">Math.log10(<var>x</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -96,7 +96,7 @@ tags:
 
 <h3 id="Using_Math.log10">Using Math.log10()</h3>
 
-<pre class="brush: js notranslate">Math.log10(2);      // 0.3010299956639812
+<pre class="brush: js">Math.log10(2);      // 0.3010299956639812
 Math.log10(1);      // 0
 Math.log10(0);      // -Infinity
 Math.log10(-2);     // NaN
@@ -107,7 +107,7 @@ Math.log10(100000); // 5
 
 <p>This can be emulated with the following function:</p>
 
-<pre class="brush: js notranslate">Math.log10 = Math.log10 || function(x) {
+<pre class="brush: js">Math.log10 = Math.log10 || function(x) {
   return Math.log(x) * Math.LOG10E;
 };
 </pre>

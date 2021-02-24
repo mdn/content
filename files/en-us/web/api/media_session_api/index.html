@@ -29,7 +29,7 @@ tags:
 
 <p>The primary interface for the Media Session API is the {{domxref("MediaSession")}} interface. Rather than creating your own <code>MediaSession</code> instance, you access the API using the {{domxref("navigator.mediaSession")}} property. For example, to set the current state of the media session to <code>playing</code>:</p>
 
-<pre class="brush: js notranslate">navigator.mediaSession.playbackState = "playing";</pre>
+<pre class="brush: js">navigator.mediaSession.playbackState = "playing";</pre>
 
 <h2 id="Interfaces">Interfaces</h2>
 
@@ -55,7 +55,7 @@ tags:
 
 <p>The following example shows feature detection for the Media Session API. It then instantiates a metadata object for the session, and adds action handlers for the user control actions:</p>
 
-<pre class="brush: js notranslate">if ('mediaSession' in navigator) {
+<pre class="brush: js">if ('mediaSession' in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
     title: 'Unforgettable',
     artist: 'Nat King Cole',
@@ -83,7 +83,7 @@ tags:
 
 <p>Some user agents disable autoplay for media elements on mobile devices and require a user gesture to start media. The following example adds a <code>pointerup</code> event to an on-page play button, which is then used to kick off the media session code:</p>
 
-<pre class="brush: js notranslate">playButton.addEventListener('pointerup', function(event) {
+<pre class="brush: js">playButton.addEventListener('pointerup', function(event) {
   var audio = document.querySelector('audio');
 
   // User interacted with the page. Let's play audio...

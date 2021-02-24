@@ -8,13 +8,13 @@ tags:
 ---
 <div>{{SVGRef}}</div>
 
-<p>The <strong><code>&lt;feColorMatrix&gt;</code></strong> SVG filter element changes colors based on a transformation matrix. Every pixel's color value <code>[R,G,B,A]</code> is <a class="external" href="https://en.wikipedia.org/wiki/Matrix_multiplication">matrix multiplied</a> by a 5 by 5 color matrix to create new color <code>[R<em>'</em>,G<em>'</em>,B<em>'</em>,A<em>'</em>]</code>.</p>
+<p>The <strong><code>&lt;feColorMatrix&gt;</code></strong> SVG filter element changes colors based on a transformation matrix. Every pixel's color value <code>[R,G,B,A]</code> is <a href="https://en.wikipedia.org/wiki/Matrix_multiplication">matrix multiplied</a> by a 5 by 5 color matrix to create new color <code>[R<em>'</em>,G<em>'</em>,B<em>'</em>,A<em>'</em>]</code>.</p>
 
 <div class="notecard note">
 <p>The prime symbol <em><code><strong>'</strong></code></em> is used in mathematics indicate the result of a transformation.</p>
 </div>
 
-<pre class="notranslate">| R<em>'</em> |     | r<sub>1</sub> r<sub>2</sub> r<sub>3</sub> r<sub>4</sub> r<sub>5</sub> |   | R |
+<pre>| R<em>'</em> |     | r<sub>1</sub> r<sub>2</sub> r<sub>3</sub> r<sub>4</sub> r<sub>5</sub> |   | R |
 | G<em>'</em> |     | g<sub>1</sub> g<sub>2</sub> g<sub>3</sub> g<sub>4</sub> g<sub>5</sub> |   | G |
 | B<em>'</em> |  =  | b<sub>1</sub> b<sub>2</sub> b<sub>3</sub> b<sub>4</sub> b<sub>5</sub> | * | B |
 | A<em>'</em> |     | a<sub>1</sub> a<sub>2</sub> a<sub>3</sub> a<sub>4</sub> a<sub>5</sub> |   | A |
@@ -22,7 +22,7 @@ tags:
 
 <p>In simplified terms, below is how each color channel in the new pixel is calculated. The last row is ignored because its values are constant.</p>
 
-<pre class="notranslate">R<em>'</em> = r<sub>1</sub>*R + r<sub>2</sub>*G + r<sub>3</sub>*B + r<sub>4</sub>*A + r<sub>5</sub>
+<pre>R<em>'</em> = r<sub>1</sub>*R + r<sub>2</sub>*G + r<sub>3</sub>*B + r<sub>4</sub>*A + r<sub>5</sub>
 G<em>'</em> = g<sub>1</sub>*R + g<sub>2</sub>*G + g<sub>3</sub>*B + g<sub>4</sub>*A + g<sub>5</sub>
 B<em>'</em> = b<sub>1</sub>*R + b<sub>2</sub>*G + b<sub>3</sub>*B + b<sub>4</sub>*A + b<sub>5</sub>
 A<em>'</em> = a<sub>1</sub>*R + a<sub>2</sub>*G + a<sub>3</sub>*B + a<sub>4</sub>*A + a<sub>5</sub>
@@ -42,14 +42,14 @@ A<em>'</em> = a<sub>1</sub>*R + a<sub>2</sub>*G + a<sub>3</sub>*B + a<sub>4</sub
 
 <p>These specified amounts can be any real number, though the final <strong>R'</strong> will be clamped between 0 and 1. The same goes for <strong>G'</strong>, <strong>B'</strong>, and <strong>A'</strong>.</p>
 
-<pre class="notranslate">R'      =      r1 * R      +        r2 * G      +       r3 * B      +       r4 * A       +       r5
+<pre>R'      =      r1 * R      +        r2 * G      +       r3 * B      +       r4 * A       +       r5
 New red = [ r1 * old red ] + [ r2 * old green ] + [ r3 * old Blue ] + [ r4 * old Alpha ] + [ shift of r5 ]</pre>
 
 <p>If, say, we want to make a completely black image redder, we can make the <code>r<sub>5</sub></code> a positive real number <em>x</em>, boosting the redness on every pixel of the new image by <em>x</em>.</p>
 
 <p>An <strong>identity matrix</strong> looks like this:</p>
 
-<pre class="notranslate">     R G B A W
+<pre>     R G B A W
 R' | 1 0 0 0 0 |
 G' | 0 1 0 0 0 |
 B' | 0 0 1 0 0 |
@@ -90,7 +90,7 @@ A' | 0 0 0 1 0 |
 
 <h3 id="SVG">SVG</h3>
 
-<pre class="brush: html; highlight[19-24,31-33,40-42,49-50] notranslate">&lt;svg width="100%" height="100%" viewBox="0 0 150 500"
+<pre class="brush: html; highlight[19-24,31-33,40-42,49-50]">&lt;svg width="100%" height="100%" viewBox="0 0 150 500"
     preserveAspectRatio="xMidYMid meet"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"&gt;

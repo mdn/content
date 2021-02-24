@@ -21,7 +21,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>blob</em> = <em>clipboardItem</em>.getType(type);</pre>
+  class="brush: js">var <em>blob</em> = <em>clipboardItem</em>.getType(type);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -51,7 +51,7 @@ tags:
   {{domxref("ClipboardItem.types")}} property to set the <code>getType()</code> argument
   and return the corresponding blob object.</p>
 
-<pre class="brush: js notranslate">async function getClipboardContents() {
+<pre class="brush: js">async function getClipboardContents() {
   try {
     const clipboardItems = await navigator.clipboard.read();
 

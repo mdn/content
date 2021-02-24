@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Message">Message</h2>
 
-<pre class="brush: js notranslate">SyntaxError: Let/Const redeclaration (Edge)
+<pre class="brush: js">SyntaxError: Let/Const redeclaration (Edge)
 SyntaxError: redeclaration of formal parameter "x" (Firefox)
 SyntaxError: Identifier "x" has already been declared (Chrome)
 </pre>
@@ -37,7 +37,7 @@ SyntaxError: Identifier "x" has already been declared (Chrome)
 
 <p>In this case, the variable "arg" redeclares the argument.</p>
 
-<pre class="brush: js example-bad notranslate">function f(arg) {
+<pre class="brush: js example-bad">function f(arg) {
   let arg = 'foo';
 }
 
@@ -49,7 +49,7 @@ SyntaxError: Identifier "x" has already been declared (Chrome)
   <code>let</code> keyword. If you want to create a new variable, you need to rename it as
   conflicts with the function parameter already.</p>
 
-<pre class="brush: js example-good notranslate">function f(arg) {
+<pre class="brush: js example-good">function f(arg) {
   arg = 'foo';
 }
 

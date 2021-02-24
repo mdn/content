@@ -42,7 +42,7 @@ tags:
 
 <p>This example obtains the canonical name (CNAME) being used for {{Glossary("RTCP")}} on an {{domxref("RTCRtpSender")}} or {{domxref("RTCRtpReceiver")}}.</p>
 
-<pre class="brush: js notranslate">function getRtpCNAME(rtpObject) {
+<pre class="brush: js">function getRtpCNAME(rtpObject) {
   let parameters = rtpObject.getParameters();
 
   return parameters.rtcp.cname;

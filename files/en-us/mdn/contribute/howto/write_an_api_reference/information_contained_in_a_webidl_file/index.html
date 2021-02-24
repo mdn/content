@@ -51,7 +51,7 @@ tags:
 
 <p>The interface name is the string that appears after the keyword <code>interface</code> and before the next opening bracket (<code>'{'</code>) or colon (<code>':'</code>).</p>
 
-<pre class="brush: js notranslate" lang="en"><strong>interface</strong> URL {};</pre>
+<pre class="brush: js" lang="en"><strong>interface</strong> URL {};</pre>
 
 <p>Each WebIDL interface, being a true interface or a mixin, has its own page in the documentation, listing every constructor, property and method defined for it.</p>
 
@@ -59,7 +59,7 @@ tags:
 
 <p>The parent, if any, of a given interface is defined after the interface name, following a colon (<code>':'</code>). There can be only one parent per interface.</p>
 
-<pre class="brush: js notranslate" lang="en">interface HTMLMediaElement : <strong>HTMLElement</strong> {…}</pre>
+<pre class="brush: js" lang="en">interface HTMLMediaElement : <strong>HTMLElement</strong> {…}</pre>
 
 <p>The inheritance chain is listed automatically in the sidebar (using the \{{APIRef}} macro). It can also be added as an SVG image via the macro \{{InheritanceDiagram}}.</p>
 
@@ -69,7 +69,7 @@ tags:
 
 <p>As of September 2019, mixin syntax was updated. In the new syntax, you use <code>interface mixin</code> to define a mixin interface, like so:</p>
 
-<pre class="brush: js notranslate">interface MyInterface {};
+<pre class="brush: js">interface MyInterface {};
 
 interface mixin MyMixin {
   void somethingMixedIn();
@@ -78,11 +78,11 @@ interface mixin MyMixin {
 
 <p>You then use the <code>includes</code> keyword to say that the properties defined inside a mixin are available on an interface:</p>
 
-<pre class="brush: js notranslate">MyInterface includes MyMixin;</pre>
+<pre class="brush: js">MyInterface includes MyMixin;</pre>
 
 <p>Mixins have no inheritance and cannot include other mixins. They do however support partials, so you will see things like this:</p>
 
-<pre class="brush: js notranslate">interface MyInterface {};
+<pre class="brush: js">interface MyInterface {};
 interface mixin MyMixin {};
 
 partial interface mixin MyMixin {
@@ -115,18 +115,18 @@ and <a href="/en-US/docs/Web/API/HTMLAreaElement"><code>HTMLAreaElement</code></
 
 <p>In the old-style WebIDL mixin syntax, which you still might encounter in some places, mixins are prefixed using the <code>[NoInterfaceObject]</code> annotation:</p>
 
-<pre class="brush: js notranslate" lang="en"><strong>[NoInterfaceObject]</strong>
+<pre class="brush: js" lang="en"><strong>[NoInterfaceObject]</strong>
    <strong>interface</strong> MyMixin {…}</pre>
 
 <p>In the old-style syntax, mixins implemented on an interface are defined using the <code>implements</code> keyword.</p>
 
-<pre class="brush: js notranslate" lang="en">MyInterface <strong>implements</strong> MyMixin;</pre>
+<pre class="brush: js" lang="en">MyInterface <strong>implements</strong> MyMixin;</pre>
 
 <h3 id="Availability_in_window_and_workers">Availability in window and workers</h3>
 
 <p>Availability in Web workers (of any type) and on the Window scope is defined using an annotation: <code>[Exposed=(Window,Worker)]</code>. The annotation applies to the partial interface it is listed with.</p>
 
-<pre class="brush: js notranslate" lang="en"><strong>[Exposed=(Window,Worker)]</strong>
+<pre class="brush: js" lang="en"><strong>[Exposed=(Window,Worker)]</strong>
 interface Performance {
    [DependsOn=DeviceState, Affects=Nothing]<a class="l d1" href="http://mxr.mozilla.org/mozilla-central/source/dom/webidl/Performance.webidl#19">
 </a>   DOMHighResTimeStamp now();
@@ -163,7 +163,7 @@ partial interface Performance {
 
 <p>Note that these possible values are themselves defined in WebIDL files. Interfaces may have a <code>[Global=xyz]</code> annotation. It means that when an object of this type is used as a global scope, any interface, property or method, with <code>xyz</code> as a value of <code>[Exposed]</code> is available.</p>
 
-<pre class="brush: js notranslate" lang="en">[Global=(Worker,DedicatedWorker), Exposed=DedicatedWorker]
+<pre class="brush: js" lang="en">[Global=(Worker,DedicatedWorker), Exposed=DedicatedWorker]
 interface DedicatedWorkerGlobalScope : WorkerGlobalScope {…}</pre>
 
 <p>Here, it is defined that when the global scope is of type <code>DedicatedWorkerGlobalScope</code>, that is if we are in a dedicated worker, any interface, property or method exposed – using the <code>[Exposed]</code> annotation – to <code>Worker</code> or <code>DedicatedWorker</code> is available.</p>
@@ -176,7 +176,7 @@ interface DedicatedWorkerGlobalScope : WorkerGlobalScope {…}</pre>
 
 <p>In Gecko, the availability of a partial interface, including its constructor, properties and methods may be controlled by a preference (usually called a "pref"). This is marked in the WebIDL too.</p>
 
-<pre class="brush: js notranslate" lang="en"><strong>[Pref="media.webspeech.synth.enabled"]</strong>
+<pre class="brush: js" lang="en"><strong>[Pref="media.webspeech.synth.enabled"]</strong>
 interface SpeechSynthesis {
    readonly attribute boolean pending;
    readonly attribute boolean speaking;
@@ -193,7 +193,7 @@ interface SpeechSynthesis {
 
 <p>Some interface features might only be available in browser internal system code, or chrome code. To signify this, in Gecko we use [ChromeOnly], for example the property propName in the following example is only callable via chrome code:</p>
 
-<pre class="brush: js notranslate">interface MyInterface {
+<pre class="brush: js">interface MyInterface {
   [ChromeOnly]
   readonly attribute PropValue propName;
 };</pre>
@@ -204,19 +204,19 @@ interface SpeechSynthesis {
 
 <h3 id="Name_of_the_property">Name of the property</h3>
 
-<pre class="brush: js notranslate" lang="en">readonly attribute MediaError? <strong>error</strong>;</pre>
+<pre class="brush: js" lang="en">readonly attribute MediaError? <strong>error</strong>;</pre>
 
 <p>In the above example the name of the property is <code>error</code>; in the docs we will refer to it as <code>HTMLMediaElement.error</code> as it belongs to the <code>HTMLMediaElement</code> interface. Linking to the page is either done <strong>with</strong> the interface prefix using \{{domxref('HTMLMediaElement.error')}} or <strong>without</strong> the prefix using \{{domxref('HTMLMediaElement.error', 'error')}} when the context is obvious and unambiguous.</p>
 
 <h3 id="Type_of_the_property">Type of the property</h3>
 
-<pre class="brush: js notranslate">readonly attribute <strong>MediaError?</strong> error;</pre>
+<pre class="brush: js">readonly attribute <strong>MediaError?</strong> error;</pre>
 
 <p>The property value is an object of type <code>MediaError</code>. The question mark (<code>'?'</code>) indicates that it can take a value of <code>null</code>, and the documentation must explain <em>when</em> this may occur. If no question mark is present, the <code>error</code> property can't be <code>null</code>.</p>
 
 <h3 id="Writing_permissions_on_the_property">Writing permissions on the property</h3>
 
-<pre class="brush: js notranslate"><strong>readonly</strong> attribute MediaError? error;</pre>
+<pre class="brush: js"><strong>readonly</strong> attribute MediaError? error;</pre>
 
 <p>If the keyword <code>readonly</code> is present, the property can't be modified. It must be marked as read-only:</p>
 
@@ -233,7 +233,7 @@ interface SpeechSynthesis {
 
 <h3 id="Throwing_exceptions">Throwing exceptions</h3>
 
-<pre class="brush: js notranslate" lang="en"><strong>[SetterThrows]</strong>
+<pre class="brush: js" lang="en"><strong>[SetterThrows]</strong>
             attribute DOMString src;</pre>
 
 <p>In some cases, like when some values are illegal, setting a new value can lead to an exception being raised. This is marked using the <code>[SetterThrows]</code> annotation. When this happens, the Syntax section of the property page <em>must</em> have an Exceptions subsection. The list of exceptions and the conditions to have them thrown are listed, as textual information, in the specification of that API.</p>
@@ -242,7 +242,7 @@ interface SpeechSynthesis {
 
 <p>It is uncommon to have getters throwing exceptions, though it happens in a few cases. In this case the <code>[GetterThrows]</code> annotation is used. Here also, the Syntax section of the property page <em>must</em> have an Exceptions subsection.</p>
 
-<pre class="brush: js notranslate">partial interface Blob {
+<pre class="brush: js">partial interface Blob {
   [GetterThrows]
   readonly attribute unsigned long long size;
 };
@@ -254,7 +254,7 @@ interface SpeechSynthesis {
 
 <p>Mostly for compatibility purpose, this behavior is sometimes annoying. To prevent this by creating a no-op setter (that is by silently ignoring any attempt to set the property to a new value), the <code>[LenientSetter]</code> annotation can be used.</p>
 
-<pre class="brush: js notranslate">partial interface Document {
+<pre class="brush: js">partial interface Document {
   [LenientSetter]
   readonly attribute boolean fullscreen;
   [LenientSetter]
@@ -280,7 +280,7 @@ interface SpeechSynthesis {
 
 <p>Sometimes an API must return a <em>new</em> object, or a <em>copy</em> of an internal one. This case is indicated in the WebIDL using the <code>[NewObject]</code> annotation.</p>
 
-<pre class="brush: js notranslate" lang="en"><strong>[NewObject]</strong>
+<pre class="brush: js" lang="en"><strong>[NewObject]</strong>
    readonly attribute TimeRanges buffered;</pre>
 
 <p>In this case, each call to <code>buffered</code> returns a different object: changing it will not change the internal value, and a change in the internal value will not affect each object instance. In the documentation, we will mark it by using the adjective <em>new</em> next to object:</p>
@@ -317,7 +317,7 @@ interface SpeechSynthesis {
 
 <p>In Gecko, the availability of some properties may be controlled by a preference. This is marked in the WebIDL too.</p>
 
-<pre class="brush: js notranslate" lang="en"><strong>[Pref="media.webvtt.enabled"]</strong>
+<pre class="brush: js" lang="en"><strong>[Pref="media.webvtt.enabled"]</strong>
     readonly attribute TextTrackList? textTracks;</pre>
 
 <p>Here <code>media.webvtt.enabled</code> controls the <code>textTracks</code> property.</p>
@@ -332,13 +332,13 @@ interface SpeechSynthesis {
 
 <h3 id="Name_of_the_method">Name of the method</h3>
 
-<pre class="brush: js notranslate" lang="en">DOMString <strong>canPlayType</strong>(DOMString type);</pre>
+<pre class="brush: js" lang="en">DOMString <strong>canPlayType</strong>(DOMString type);</pre>
 
 <p>The name of the method is <code>canPlayType</code>, and we will refer to it as <code>HTMLMediaElement.canPlayType()</code> (with the parentheses that indicate that it is a method) in the docs, as it belongs to the <code>HTMLMediaElement</code> interface. Linking to the page is either done <strong>with</strong> the interface prefix using \{{domxref('HTMLMediaElement.canPlayType()')}}, or <strong>without</strong> the prefix using \{{domxref('HTMLMediaElement.canPlayType', 'canPlayType()')}} when the context is obvious and unambiguous. The parentheses should always be included.</p>
 
 <h3 id="Parameters">Parameters</h3>
 
-<pre class="brush: js notranslate">TextTrack addTextTrack(TextTrackKind <strong>kind</strong>,
+<pre class="brush: js">TextTrack addTextTrack(TextTrackKind <strong>kind</strong>,
                        optional DOMString <strong>label</strong> = "",
                        optional DOMString <strong>language</strong> = "");</pre>
 
@@ -346,7 +346,7 @@ interface SpeechSynthesis {
 
 <h3 id="Type_of_the_return_value">Type of the return value</h3>
 
-<pre class="brush: js notranslate" lang="en">DOMString <strong>canPlayType</strong>(DOMString type);</pre>
+<pre class="brush: js" lang="en">DOMString <strong>canPlayType</strong>(DOMString type);</pre>
 
 <p>The return value type is indicated first inside the parentheses — in the above case the value is an object of type <code>DOMString</code>. if followed by a question mark (<code>'?'</code>), a value of <code>null</code> can be returned too, and the documentation must explain <em>when</em> this may happen. If no question mark is present, like here,  the return value can't be <code>null</code>.</p>
 
@@ -354,7 +354,7 @@ interface SpeechSynthesis {
 
 <h3 id="Throwing_exceptions_2">Throwing exceptions</h3>
 
-<pre class="brush: js notranslate" lang="en"><strong>[Throws]</strong>
+<pre class="brush: js" lang="en"><strong>[Throws]</strong>
    void fastSeek(double time);</pre>
 
 <p>Some methods can throw exceptions. This is marked using the <code>[Throws]</code> annotation. When this happens, the Syntax section of the method page <em>must</em> have an Exceptions subsection. The list of exceptions and the conditions to have them thrown are listed, as textual information, in the specification of that API.</p>
@@ -377,7 +377,7 @@ interface SpeechSynthesis {
 
 <p>In Gecko, the availability of some properties may be controlled by a preference. This is marked in the WebIDL too.</p>
 
-<pre class="brush: js notranslate" lang="en"><strong>[Pref="media.webvtt.enabled"]</strong>
+<pre class="brush: js" lang="en"><strong>[Pref="media.webvtt.enabled"]</strong>
    TextTrack addTextTrack(TextTrackKind kind,
                           optional DOMString label = "",
                           optional DOMString language = "");</pre>
@@ -396,13 +396,13 @@ interface SpeechSynthesis {
 
 <p>A stringifier specifies how an object based on an interface is resolved in contexts expecting a string. (See the <a href="#stringifiers">Stringifiers</a> section.) Additionally, the keyword is mapped to <code>toString()</code> and defined as:</p>
 
-<pre class="brush: js notranslate"><strong>stringifier;</strong></pre>
+<pre class="brush: js"><strong>stringifier;</strong></pre>
 
 <p>The <code>toString()</code> method is listed just like any other method of the interface and has its own sub-page (E.g. {{domxref("Range.toString()")}})</p>
 
 <p>A jsonifier is mapped to <code>toJSON()</code> and defined as:</p>
 
-<pre class="brush: js notranslate" lang="en"><strong>jsonifier;</strong> // Gecko version<strong>
+<pre class="brush: js" lang="en"><strong>jsonifier;</strong> // Gecko version<strong>
 serializer;</strong> // Standard version
 </pre>
 
@@ -420,7 +420,7 @@ serializer;</strong> // Standard version
 
 <h4 id="Value_iterator">Value iterator</h4>
 
-<pre class="brush: js notranslate">iterable&lt;<em>valueType</em>&gt;</pre>
+<pre class="brush: js">iterable&lt;<em>valueType</em>&gt;</pre>
 
 <p>The iterator will iterate over values of type <em>valueType</em>. The generated methods will be:</p>
 
@@ -437,14 +437,14 @@ serializer;</strong> // Standard version
 <p><strong>Note:</strong> the value pairs to iterate over can be defined in two different ways:</p>
 
 <ol>
- <li>Outside the webidl file, in the prose accompanying it. Such a prose is in the spec and usually starts with: <em>"The <a class="external" href="https://heycam.github.io/webidl/#dfn-values-to-iterate-over">values to iterate over</a>…"</em>.</li>
+ <li>Outside the webidl file, in the prose accompanying it. Such a prose is in the spec and usually starts with: <em>"The <a href="https://heycam.github.io/webidl/#dfn-values-to-iterate-over">values to iterate over</a>…"</em>.</li>
  <li>In the webidl file, implicitly, if the interface supports indexed properties, that is when the interface has a <code>getter</code> methods with a parameter of type <code>unsigned long</code>.</li>
 </ol>
 </div>
 
 <h4 id="Pair_iterator">Pair iterator</h4>
 
-<pre class="brush: js notranslate">iterable&lt;<em>keyType, valueType</em>&gt;</pre>
+<pre class="brush: js">iterable&lt;<em>keyType, valueType</em>&gt;</pre>
 
 <p>The iterator will iterate over values of type <em>valueType</em>, with keys of type <em>keyType</em>. The generated methods will be:</p>
 
@@ -458,15 +458,15 @@ serializer;</strong> // Standard version
 <p>Such an iterator allows to use the syntax <code>for (var p in object)</code> as a shorthand of <code>for (var p in object.entries())</code>. We add a sentence about it in the interface description. E.g. {{domxref('FormData')}}.</p>
 
 <div class="note notecard">
-<p><strong>Note:</strong> the value pairs to iterate over are <em>not</em> defined in the webidl file, but in the prose accompanying it. Such a prose is in the spec and usually starts with: <em>"The <a class="external" href="https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over">value pairs to iterate over</a>…"</em><br>
- E.g, for {{domxref('FormData')}} you find in the spec: <em>"The <a class="external" href="https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over">value pairs to iterate over</a> are the <a href="https://xhr.spec.whatwg.org/#concept-formdata-entry" title="concept-FormData-entry">entries</a> with the key being the <a href="https://xhr.spec.whatwg.org/#concept-formdata-entry-name" title="concept-FormData-entry-name">name</a> and the value the <a href="https://xhr.spec.whatwg.org/#concept-formdata-entry-value" title="concept-FormData-entry-value">value</a>. "</em></p>
+<p><strong>Note:</strong> the value pairs to iterate over are <em>not</em> defined in the webidl file, but in the prose accompanying it. Such a prose is in the spec and usually starts with: <em>"The <a href="https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over">value pairs to iterate over</a>…"</em><br>
+ E.g, for {{domxref('FormData')}} you find in the spec: <em>"The <a href="https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over">value pairs to iterate over</a> are the <a href="https://xhr.spec.whatwg.org/#concept-formdata-entry" title="concept-FormData-entry">entries</a> with the key being the <a href="https://xhr.spec.whatwg.org/#concept-formdata-entry-name" title="concept-FormData-entry-name">name</a> and the value the <a href="https://xhr.spec.whatwg.org/#concept-formdata-entry-value" title="concept-FormData-entry-value">value</a>. "</em></p>
 </div>
 
 <h3 id="Set-like_methods">Set-like methods</h3>
 
 <p>An interface may be defined as <em>set-like</em>, meaning that it represents an <em>ordered set of values</em> will have the following methods: <code>entries()</code>, <code>keys()</code>,  <code>values()</code>, <code>forEach(),</code> and <code>has()</code> (it also has the <code>size</code> property). They also supports the use of {{jsxref("Statements/for...of", "for...of")}} on an object implementing this interface. The set-like can be prefixed <code>readonly</code> or not. If not read-only, the methods to modify the set are also implemented: <code>add()</code>, <code>clear()</code>, and <code>delete()</code>.</p>
 
-<pre class="brush: js notranslate">setlike&lt;<em>valueType</em>&gt;</pre>
+<pre class="brush: js">setlike&lt;<em>valueType</em>&gt;</pre>
 
 <p>The generated properties will be:</p>
 
@@ -497,19 +497,19 @@ serializer;</strong> // Standard version
 
 <p>When the <code>stringifier</code> keyword accompanies an attribute name, referencing the object name has the same result as referencing the attribute name. Consider the following IDL:</p>
 
-<pre class="brush: js notranslate" lang="en">interface InterfaceIdentifier {
+<pre class="brush: js" lang="en">interface InterfaceIdentifier {
   stringifier attribute DOMString DOMString name;
 };</pre>
 
 <p>For a class based on this interface, the following lines of code below are equivalent. The behavior should be noted on the property page in addition to the interface page.</p>
 
-<pre class="brush: js notranslate" lang="en">console.log(interfaceIdentifier);
+<pre class="brush: js" lang="en">console.log(interfaceIdentifier);
 console.log(interfaceIdentifier.name);
 </pre>
 
 <p>When the <code>stringifier</code> keyword is used by itself, an object of the interface may be used as above, but the behavior is defined in source code.</p>
 
-<pre class="brush: js notranslate" lang="en">interface InterfaceIdentifier {
+<pre class="brush: js" lang="en">interface InterfaceIdentifier {
   stringifier;
 };</pre>
 
@@ -523,7 +523,7 @@ console.log(interfaceIdentifier.name);
 
 <p>This is the most common case for constructors. The constructor of a given interface A, can be used as <code>a = new A(<em>parameters</em>);</code></p>
 
-<pre class="brush: js notranslate" lang="en">[<strong>Constructor</strong>, Func="MessageChannel::Enabled",
+<pre class="brush: js" lang="en">[<strong>Constructor</strong>, Func="MessageChannel::Enabled",
   Exposed=(Window,Worker)]
     interface MessageChannel {…};</pre>
 
@@ -531,20 +531,20 @@ console.log(interfaceIdentifier.name);
 
 <p>Another example of an unnamed constructor, with parameters:</p>
 
-<pre class="brush: js notranslate" lang="en">[<strong>Constructor</strong>(DOMString type, optional MessageEventInit eventInitDict),
+<pre class="brush: js" lang="en">[<strong>Constructor</strong>(DOMString type, optional MessageEventInit eventInitDict),
  Exposed=(Window,Worker,System)]
    interface MessageEvent : Event {…};</pre>
 
 <p>There can also be several unnamed constructors, differing by their parameter lists. All syntax is documented in one single sub-page.</p>
 
-<pre class="brush: js notranslate" lang="en">[<strong>Constructor</strong>(DOMString url, URL base),
+<pre class="brush: js" lang="en">[<strong>Constructor</strong>(DOMString url, URL base),
  <strong>Constructor</strong>(DOMString url, optional DOMString base),
  Exposed=(Window,Worker)]
     interface URL {};</pre>
 
 <h3 id="Named_constructors">Named constructors</h3>
 
-<pre class="brush: js notranslate" lang="en">[<strong>NamedConstructor</strong>=Image(optional unsigned long width, optional unsigned long height)]
+<pre class="brush: js" lang="en">[<strong>NamedConstructor</strong>=Image(optional unsigned long width, optional unsigned long height)]
     interface HTMLImageElement : HTMLElement {…</pre>
 
 <p>A named constructor is a constructor that has a different name than that of its interface. For example<code> new Image(…)</code> creates a new <code>HTMLImageElement</code> object. They are defined in the WebIDL using the <code>NamedConstructor</code> annotation on the interface, followed by the name of the constructor after the equality sign (<code>'='</code>) and the parameter inside the parenthesis, in the same format as you'll see for methods.</p>
@@ -555,20 +555,20 @@ console.log(interfaceIdentifier.name);
 
 <p>As of September 2019, WebIDL constructor syntax was updated. Constructor syntax no longer involves an extended attribute on the interface:</p>
 
-<pre class="brush: js notranslate">[Constructor(DOMString str)]
+<pre class="brush: js">[Constructor(DOMString str)]
     interface MyInterface {
       ...
 };</pre>
 
 <p>New specs instead use a method-like syntax named <code>constructor</code> with no explicitly-defined return type, written like so:</p>
 
-<pre class="brush: js notranslate">interface MyInterface {
+<pre class="brush: js">interface MyInterface {
   constructor(DOMString str);
 };</pre>
 
 <p>This means extended attributes can now be specified on the constructor, and it is no longer assumed that all constructors throw. If a constructor does throw, <code>[Throws]</code> will be used to indicate that:</p>
 
-<pre class="brush: js notranslate">interface MyInterface {
+<pre class="brush: js">interface MyInterface {
   [Throws] constructor();
 };</pre>
 

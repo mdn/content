@@ -171,7 +171,7 @@ tags:
 
 <p>This example registers a handler for every event type for the given element.</p>
 
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
   &lt;script&gt;
     function over_handler(event) { }
     function enter_handler(event) { }
@@ -209,7 +209,7 @@ tags:
 
 <p>This example illustrates accessing all of a touch event's properties.</p>
 
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
   &lt;script&gt;
     var id = -1;
 
@@ -355,7 +355,7 @@ tags:
 
 <p>The following example shows pointer capture being set on an element.</p>
 
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
 &lt;script&gt;
   function downHandler(ev) {
     let el = document.getElementById("target");
@@ -376,7 +376,7 @@ tags:
 
 <p>The following example shows a pointer capture being released (when a {{event("pointercancel")}} event occurs. The browser does this automatically when a {{event("pointerup")}} or {{event("pointercancel")}} event occurs.</p>
 
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
   &lt;script&gt;
     function downHandler(ev) {
       let el = document.getElementById("target");
@@ -411,7 +411,7 @@ tags:
 
 <p>In the following example, the browser's default touch behavior is disabled for the <code>div</code> element.</p>
 
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
   &lt;body&gt;
     &lt;div style="touch-action:none;"&gt;Can't touch this ... &lt;/div&gt;
   &lt;/body&gt;
@@ -420,14 +420,14 @@ tags:
 
 <p>In the following example, default touch behavior is disabled for some <code>button</code> elements.</p>
 
-<pre class="brush: css notranslate">button#tiny {
+<pre class="brush: css">button#tiny {
   touch-action: none;
 }
 </pre>
 
 <p>In the following example, when the <code>target</code> element is touched, it will only pan in the horizontal direction.</p>
 
-<pre class="brush: css notranslate">#target {
+<pre class="brush: css">#target {
   touch-action: pan-x;
 }
 </pre>

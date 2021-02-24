@@ -49,7 +49,7 @@ tags:
 
  <p>The following example shows the creation of a <code>WritableStream</code> with a custom sink and an API-supplied queuing strategy. It then calls a function called <code>sendMessage()</code>, passing the newly created stream and a string. Inside this function it calls the stream's <code>getWriter()</code> method, which returns an instance of {{domxref("WritableStreamDefaultWriter")}}. A <code>forEach()</code> call is used to write each chunk of the string to the stream. Finally, <code>write()</code> and <code>close()</code> return promises that are processed to deal with success or failure of chunks and streams.</p>
 
- <pre class="brush: js notranslate"> const list = document.querySelector('ul');
+ <pre class="brush: js"> const list = document.querySelector('ul');
 
  function sendMessage(message, writableStream) {
    // defaultWriter is of type WritableStreamDefaultWriter

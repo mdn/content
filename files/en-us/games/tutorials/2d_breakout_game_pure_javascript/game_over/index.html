@@ -24,7 +24,7 @@ tags:
 
 <p>Let's try to implement game over in our game. Here's the piece of code from the third lesson where we made the ball bounce off the walls:</p>
 
-<pre class="brush: js notranslate">if(x + dx &gt; canvas.width-ballRadius || x + dx &lt; ballRadius) {
+<pre class="brush: js">if(x + dx &gt; canvas.width-ballRadius || x + dx &lt; ballRadius) {
     dx = -dx;
 }
 
@@ -41,12 +41,12 @@ if(y + dy &gt; canvas.height-ballRadius || y + dy &lt; ballRadius) {
 
 <p>with:</p>
 
-<pre class="brush: js notranslate">var interval = setInterval(draw, 10);
+<pre class="brush: js">var interval = setInterval(draw, 10);
 </pre>
 
 <p>Then replace the second if statement with the following:</p>
 
-<pre class="brush: js notranslate">if(y + dy &lt; ballRadius) {
+<pre class="brush: js">if(y + dy &lt; ballRadius) {
     dy = -dy;
 } else if(y + dy &gt; canvas.height-ballRadius) {
     alert("GAME OVER");
@@ -59,7 +59,7 @@ if(y + dy &gt; canvas.height-ballRadius || y + dy &lt; ballRadius) {
 
 <p>The last thing to do in this lesson is to create some kind of collision detection between the ball and the paddle, so it can bounce off it and get back into the play area. The easiest thing to do is to check whether the center of the ball is between the left and right edges of the paddle. Update the last bit of code you modified again, to the following:</p>
 
-<pre class="brush: js notranslate">if(y + dy &lt; ballRadius) {
+<pre class="brush: js">if(y + dy &lt; ballRadius) {
     dy = -dy;
 } else if(y + dy &gt; canvas.height-ballRadius) {
     if(x &gt; paddleX &amp;&amp; x &lt; paddleX + paddleWidth) {

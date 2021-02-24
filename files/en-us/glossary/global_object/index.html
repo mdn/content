@@ -22,7 +22,7 @@ tags:
 
 <h3 id="Access_Global_Variables">Access Global Variables</h3>
 
-<pre class="brush: js notranslate">var foo = "foobar";
+<pre class="brush: js">var foo = "foobar";
 foo === window.foo; // Returns: true
 </pre>
 
@@ -32,11 +32,11 @@ foo === window.foo; // Returns: true
 
 <p>The global variable <code>foo</code> was stored in the <code>window</code> object, like this:</p>
 
-<pre class="brush: js notranslate">foo: "foobar"</pre>
+<pre class="brush: js">foo: "foobar"</pre>
 
 <h3 id="Access_Global_Functions">Access Global Functions</h3>
 
-<pre class="brush: js notranslate">function greeting() {
+<pre class="brush: js">function greeting() {
    console.log("Hi!");
 }
 
@@ -49,7 +49,7 @@ window.greeting(); // It is the same as the normal invoking: greeting();
 
 <p>The global function <code>greeting</code> was stored in the <code>window</code> object, like this:</p>
 
-<pre class="brush: js notranslate">greeting: function greeting() {
+<pre class="brush: js">greeting: function greeting() {
    console.log("Hi!");
 }</pre>
 

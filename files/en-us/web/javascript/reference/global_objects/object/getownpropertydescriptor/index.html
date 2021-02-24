@@ -20,7 +20,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">Object.getOwnPropertyDescriptor(<var>obj</var>, <var>prop</var>)</pre>
+  class="brush: js">Object.getOwnPropertyDescriptor(<var>obj</var>, <var>prop</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -71,7 +71,7 @@ tags:
 
 <h3 id="Using_Object.getOwnPropertyDescriptor">Using Object.getOwnPropertyDescriptor</h3>
 
-<pre class="brush: js notranslate">var o, d;
+<pre class="brush: js">var o, d;
 
 o = { get foo() { return 17; } };
 d = Object.getOwnPropertyDescriptor(o, 'foo');
@@ -121,7 +121,7 @@ d = Object.getOwnPropertyDescriptor(o, 'qux');
   will cause a {{jsxref("TypeError")}}. In ES2015, a non-object first argument will be
   coerced to an object at first.</p>
 
-<pre class="brush: js notranslate">Object.getOwnPropertyDescriptor('foo', 0);
+<pre class="brush: js">Object.getOwnPropertyDescriptor('foo', 0);
 // TypeError: "foo" is not an object  // ES5 code
 
 Object.getOwnPropertyDescriptor('foo', 0);

@@ -18,7 +18,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">const <var>animationName</var> = CSSAnimation.animationName;</pre>
+  class="brush: js">const <var>animationName</var> = CSSAnimation.animationName;</pre>
 
 <h3>Value</h3>
 <p>A {{domxref("CSSOMString")}}.</p>
@@ -32,7 +32,7 @@ tags:
   of all {{domxref("Animation")}} objects. The <code>animationName</code> property returns
   the name given to the animation, in our case <code>slide-in</code>.</p>
 
-<pre class="brush: css notranslate">.animate {
+<pre class="brush: css">.animate {
   animation: slide-in 0.7s both;
 }
 
@@ -45,7 +45,7 @@ tags:
   }
 }</pre>
 
-<pre class="brush: js notranslate">let animations = document.querySelector(".animate").getAnimations();
+<pre class="brush: js">let animations = document.querySelector(".animate").getAnimations();
 console.log(animations[0].animationName);</pre>
 
 <h2 id="Specifications">Specifications</h2>

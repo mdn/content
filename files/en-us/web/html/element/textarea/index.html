@@ -112,7 +112,7 @@ tags:
 
 <p>In most browsers, <code>&lt;textarea&gt;</code>s are resizable — you'll notice the drag handle in the right hand corner, which can be used to alter the size of the element on the page. This is controlled by the {{ cssxref("resize") }} CSS property — resizing is enabled by default, but you can explicitly disable it using a <code>resize</code> value of <code>none</code>:</p>
 
-<pre class="brush: html notranslate">textarea {
+<pre class="brush: html">textarea {
   resize: none;
 }
 </pre>
@@ -121,7 +121,7 @@ tags:
 
 <p>Valid and invalid values of a <code>&lt;textarea&gt;</code> element (e.g. those within, and outside the bounds set by <code>minlength</code>, <code>maxlength</code>, or <code>required</code>) can be highlighted using the {{cssxref(":valid")}} and {{cssxref(":invalid")}} pseudo-classes. For example, to give your textarea a different border depending on whether it is valid or invalid:</p>
 
-<pre class="brush: css notranslate">textarea:invalid {
+<pre class="brush: css">textarea:invalid {
   border: 2px dashed red;
 }
 
@@ -135,7 +135,7 @@ textarea:valid {
 
 <p>The following example show a very simple textarea, with a set numbers of rows and columns and some default content.</p>
 
-<pre class="brush: html notranslate">&lt;textarea name="textarea"
+<pre class="brush: html">&lt;textarea name="textarea"
    rows="10" cols="50"&gt;Write something here&lt;/textarea&gt;</pre>
 
 <p>{{ EmbedLiveSample('Basic_example','600','150') }}</p>
@@ -144,7 +144,7 @@ textarea:valid {
 
 <p>This example has a minimum and maximum number of characters — of 10 and 20 respectively. Try it and see.</p>
 
-<pre class="brush: html notranslate">&lt;textarea name="textarea"
+<pre class="brush: html">&lt;textarea name="textarea"
    rows="5" cols="30"
    minlength="10" maxlength="20"&gt;Write something here&lt;/textarea&gt;</pre>
 
@@ -156,7 +156,7 @@ textarea:valid {
 
 <p>This example has a placeholder set. Notice how it disappears when you start typing into the box.</p>
 
-<pre class="brush: html notranslate">&lt;textarea name="textarea"
+<pre class="brush: html">&lt;textarea name="textarea"
    rows="5" cols="30"
    placeholder="Comment text."&gt;&lt;/textarea&gt;</pre>
 
@@ -174,7 +174,7 @@ textarea:valid {
 <p><strong>Note:</strong> In browsers other than firefox, such as chrome, the <code>disabled</code> textarea content may be selectable and copyable.</p>
 </div>
 
-<pre class="brush: html notranslate">&lt;textarea name="textarea"
+<pre class="brush: html">&lt;textarea name="textarea"
    rows="5" cols="30"
    disabled&gt;I am a disabled textarea&lt;/textarea&gt;
 &lt;textarea name="textarea"

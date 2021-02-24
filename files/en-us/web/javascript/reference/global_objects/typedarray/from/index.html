@@ -26,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>TypedArray</var>.from(<var>source</var>[, <var>mapFn</var>[, <var>thisArg</var>]])
+<pre class="brush: js"><var>TypedArray</var>.from(<var>source</var>[, <var>mapFn</var>[, <var>thisArg</var>]])
 </pre>
 
 <p>Where <code><var>TypedArray</var></code> is one of:</p>
@@ -123,14 +123,14 @@ tags:
 
 <h3 id="From_an_iterable_object_Set">From an iterable object (Set)</h3>
 
-<pre class="brush: js notranslate">const s = new Set([1, 2, 3]);
+<pre class="brush: js">const s = new Set([1, 2, 3]);
 Uint8Array.from(s);
 // Uint8Array [ 1, 2, 3 ]
 </pre>
 
 <h3 id="From_a_string">From a string</h3>
 
-<pre class="brush: js notranslate">Int16Array.from('123');
+<pre class="brush: js">Int16Array.from('123');
 // Int16Array [ 1, 2, 3 ]
 </pre>
 
@@ -138,13 +138,13 @@ Uint8Array.from(s);
 
 <p>Using an arrow function as the map function to manipulate the elements</p>
 
-<pre class="brush: js notranslate">Float32Array.from([1, 2, 3], x =&gt; x + x);
+<pre class="brush: js">Float32Array.from([1, 2, 3], x =&gt; x + x);
 // Float32Array [ 2, 4, 6 ]
 </pre>
 
 <h3 id="Generate_a_sequence_of_numbers">Generate a sequence of numbers</h3>
 
-<pre class="brush: js notranslate">Uint8Array.from({length: 5}, (v, k) =&gt; k);
+<pre class="brush: js">Uint8Array.from({length: 5}, (v, k) =&gt; k);
 // Uint8Array [ 0, 1, 2, 3, 4 ]
 </pre>
 
@@ -154,7 +154,7 @@ Uint8Array.from(s);
     your scripts, allowing use of much of the functionality of <code>from()</code> in
     implementations that do not natively support it.</p>
 
-<pre class="brush: js notranslate">if (!Int8Array.__proto__.from) {
+<pre class="brush: js">if (!Int8Array.__proto__.from) {
     (function () {
         Int8Array.__proto__.from = function (obj, func, thisObj) {
 

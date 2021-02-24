@@ -26,7 +26,7 @@ tags:
 <p><strong>Note</strong>: <a href="https://github.com/dorukeker/gyronorm.js">gyronorm.js</a> is a polyfill for normalizing the accelerometer and gyroscope data on mobile devices. This is useful for overcoming some of the differences in device support for device orientation.</p>
 </div>
 
-<pre class="brush: js notranslate">window.addEventListener("deviceorientation", handleOrientation, true);
+<pre class="brush: js">window.addEventListener("deviceorientation", handleOrientation, true);
 </pre>
 
 <p>After registering your event listener (in this case, a JavaScript function called handleOrientation()), your listener function periodically gets called with updated orientation data.</p>
@@ -42,7 +42,7 @@ tags:
 
 <p>The event handler function can look something like this:</p>
 
-<pre class="brush: js notranslate">function handleOrientation(event) {
+<pre class="brush: js">function handleOrientation(event) {
   var absolute = event.absolute;
   var alpha    = event.alpha;
   var beta     = event.beta;
@@ -68,7 +68,7 @@ tags:
 
 <p>So let's imagine a ball in a garden:</p>
 
-<pre class="brush: html notranslate">&lt;div class="garden"&gt;
+<pre class="brush: html">&lt;div class="garden"&gt;
   &lt;div class="ball"&gt;&lt;/div&gt;
 &lt;/div&gt;
 
@@ -77,7 +77,7 @@ tags:
 
 <p>This garden is 200 pixel wide (Yes, it's a tiny one), and the ball is in the center:</p>
 
-<pre class="brush: css notranslate">.garden {
+<pre class="brush: css">.garden {
   position: relative;
   width : 200px;
   height: 200px;
@@ -98,7 +98,7 @@ tags:
 
 <p>Now, if we move our device, the ball will move accordingly:</p>
 
-<pre class="brush: js notranslate">var ball   = document.querySelector('.ball');
+<pre class="brush: js">var ball   = document.querySelector('.ball');
 var garden = document.querySelector('.garden');
 var output = document.querySelector('.output');
 
@@ -139,7 +139,7 @@ window.addEventListener('deviceorientation', handleOrientation);
 
 <p>Motion events are handled the same way as the orientation events except that they have their own event's name: {{event("devicemotion")}}</p>
 
-<pre class="brush: js notranslate">window.addEventListener("devicemotion", <em>handleMotion</em>, true);</pre>
+<pre class="brush: js">window.addEventListener("devicemotion", <em>handleMotion</em>, true);</pre>
 
 <p>What's really changed are the information provided within the {{domxref("DeviceMotionEvent")}} object passed as a parameter of the <em>HandleMotion</em> function.</p>
 

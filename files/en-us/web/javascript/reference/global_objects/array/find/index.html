@@ -35,7 +35,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>arr</var>.find(<var>callback(element[, index[, array]])</var>[, <var>thisArg</var>])</pre>
+  class="brush: js"><var>arr</var>.find(<var>callback(element[, index[, array]])</var>[, <var>thisArg</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -102,7 +102,7 @@ tags:
   available in all JavaScript implementations yet. However, you can polyfill
   <code>Array.prototype.find</code> with the following snippet:</p>
 
-<pre class="brush: js notranslate">// https://tc39.github.io/ecma262/#sec-array.prototype.find
+<pre class="brush: js">// https://tc39.github.io/ecma262/#sec-array.prototype.find
 if (!Array.prototype.find) {
   Object.defineProperty(Array.prototype, 'find', {
     value: function(predicate) {
@@ -160,7 +160,7 @@ if (!Array.prototype.find) {
 <h3 id="Find_an_object_in_an_array_by_one_of_its_properties">Find an object in an array by
   one of its properties</h3>
 
-<pre class="brush: js notranslate">const inventory = [
+<pre class="brush: js">const inventory = [
   {name: 'apples', quantity: 2},
   {name: 'bananas', quantity: 0},
   {name: 'cherries', quantity: 5}
@@ -176,7 +176,7 @@ console.log(inventory.find(isCherries));
 <h4 id="Using_arrow_function_and_destructuring">Using arrow function and destructuring
 </h4>
 
-<pre class="brush: js notranslate">const inventory = [
+<pre class="brush: js">const inventory = [
   {name: 'apples', quantity: 2},
   {name: 'bananas', quantity: 0},
   {name: 'cherries', quantity: 5}
@@ -191,7 +191,7 @@ console.log(result) // { name: 'cherries', quantity: 5 }</pre>
 <p>The following example finds an element in the array that is a prime number (or returns
   {{jsxref("undefined")}} if there is no prime number):</p>
 
-<pre class="brush: js notranslate">function isPrime(element, index, array) {
+<pre class="brush: js">function isPrime(element, index, array) {
   let start = 2;
   while (start &lt;= Math.sqrt(element)) {
     if (element % start++ &lt; 1) {
@@ -208,7 +208,7 @@ console.log([4, 5, 8, 12].find(isPrime)); // 5
 <p>The following examples show that nonexistent and deleted elements <em>are</em> visited,
   and that the value passed to the callback is their value when visited:</p>
 
-<pre class="brush: js notranslate">// Declare array with no elements at indexes 2, 3, and 4
+<pre class="brush: js">// Declare array with no elements at indexes 2, 3, and 4
 const array = [0,1,,,,5,6];
 
 // Shows all indexes, not just those with assigned values

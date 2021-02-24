@@ -21,7 +21,7 @@ tags:
   <tr>
    <th scope="row">Example</th>
    <td>
-    <pre class="brush: json no-line-numbers notranslate">
+    <pre class="brush: json no-line-numbers">
 "browser_action": {
   "browser_style": true,
   "default_icon": {
@@ -120,12 +120,12 @@ tags:
 
     <p>You can specify a single icon file by supplying a string here:</p>
 
-    <pre class="brush: json no-line-numbers notranslate">
+    <pre class="brush: json no-line-numbers">
 "default_icon": "path/to/geo.svg"</pre>
 
     <p>To specify multiple icons in different sizes, specify an object here. The name of each property is the icon's height in pixels, and must be convertible to an integer. The value is the URL. For example:</p>
 
-    <pre class="brush: json no-line-numbers notranslate">
+    <pre class="brush: json no-line-numbers">
     "default_icon": {
       "16": "path/to/geo-16.png",
       "32": "path/to/geo-32.png"
@@ -196,7 +196,7 @@ tags:
 
 <p>There are two main approaches to this. You can supply a single icon as an SVG file, and it will be scaled correctly:</p>
 
-<pre class="brush: json no-line-numbers notranslate">"default_icon": "path/to/geo.svg"</pre>
+<pre class="brush: json no-line-numbers">"default_icon": "path/to/geo.svg"</pre>
 
 <p>Alternatively, you can supply several icons in different sizes, and the browser will pick the best match.</p>
 
@@ -209,7 +209,7 @@ tags:
 
 <p>So you can specify icons that match exactly, on both normal and Retina displays, by supplying three icon files, and specifying them like this:</p>
 
-<pre class="brush: json no-line-numbers notranslate">"default_icon": {
+<pre class="brush: json no-line-numbers">"default_icon": {
   "16": "path/to/geo-16.png",
   "32": "path/to/geo-32.png",
   "64": "path/to/geo-64.png"
@@ -219,7 +219,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: json no-line-numbers notranslate">"browser_action": {
+<pre class="brush: json no-line-numbers">"browser_action": {
   "default_icon": {
     "16": "button/geo-16.png",
     "32": "button/geo-32.png"
@@ -228,9 +228,9 @@ tags:
 
 <p>A browser action with just an icon, specified in 2 different sizes. The extension's background scripts can receive click events when the user clicks the icon using code like this:</p>
 
-<pre class="notranslate brush: js no-line-numbers"> browser.browserAction.onClicked.addListener(handleClick);</pre>
+<pre class="brush: js no-line-numbers"> browser.browserAction.onClicked.addListener(handleClick);</pre>
 
-<pre class="brush: json notranslate">"browser_action": {
+<pre class="brush: json">"browser_action": {
   "default_icon": {
     "16": "button/geo-16.png",
     "32": "button/geo-32.png"

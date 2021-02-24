@@ -13,13 +13,13 @@ tags:
 
 <p>The <strong><code>getFloatFrequencyData()</code></strong> method of the {{domxref("AnalyserNode")}} Interface copies the current frequency data into a {{domxref("Float32Array")}} array passed into it.</p>
 
-<p>Each item in the array represents the decibel value for a specific frequency. The frequencies are spread linearly from 0 to 1/2 of the sample rate. For example, for <code>48000</code> sample rate, the last item of the array will represent the decibel value for <code>24000</code> Hz.</p>
+<p>Each item in the array represents the decibel value for a specific frequency. The frequencies are spread linearly from 0 to 1/2 of the sample rate. For example, for a <code>48000</code> Hz sample rate, the last item of the array will represent the decibel value for <code>24000</code> Hz.</p>
 
 <p>If you need higher performance and don't care about precision, you can use {{domxref("AnalyserNode.getByteFrequencyData()")}} instead, which works on a {{domxref("Uint8Array")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var audioCtx = new AudioContext();
+<pre class="brush: js">var audioCtx = new AudioContext();
 var analyser = audioCtx.createAnalyser();
 var dataArray = new Float32Array(analyser.frequencyBinCount); // Float32Array should be the same length as the frequencyBinCount
 

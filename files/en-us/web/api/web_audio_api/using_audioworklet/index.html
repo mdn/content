@@ -68,7 +68,7 @@ tags:
 
 <p>The barest framework of an audio processor class looks like this:</p>
 
-<pre class="brush: js notranslate">class MyAudioProcessor extends AudioWorkletProcessor {
+<pre class="brush: js">class MyAudioProcessor extends AudioWorkletProcessor {
   constructor() {
     super();
   }
@@ -100,7 +100,7 @@ registerProcessor("my-audio-processor", MyAudioProcessor);
 
 <p>Thus, given the input list <code>inputList</code>:</p>
 
-<pre class="brush: js notranslate">const numberOfInputs = inputList.length;
+<pre class="brush: js">const numberOfInputs = inputList.length;
 const firstInput = inputList[0];
 
 const firstInputChannelCount = firstInput.length;
@@ -120,7 +120,7 @@ const firstByteOfFirstChannel = firstInputFirstChannel[0]; // (or inputList[0][0
 
 <p>Let's take a look at an implementation of <code>process()</code> that can process multiple inputs, with each input being used to generate the corresponding output. Any excess inputs are ignored.</p>
 
-<pre class="brush: js notranslate">process(inputList, outputList, parameters) {
+<pre class="brush: js">process(inputList, outputList, parameters) {
   const sourceLimit = Math.min(inputList.length, outputList.length);
 
   for (let inputNum = 0; inputNum &lt; sourceLimit; inputNum++) {
@@ -151,7 +151,7 @@ const firstByteOfFirstChannel = firstInputFirstChannel[0]; // (or inputList[0][0
 
 <p>Many nodes perform <strong>mixing</strong> operations, where the inputs are combined in some way into a single output. This is demonstrated in the following example.</p>
 
-<pre class="brush: js notranslate">process(inputList, outputList, parameters) {
+<pre class="brush: js">process(inputList, outputList, parameters) {
   const sourceLimit = Math.min(inputList.length, outputList.length);
    for (let inputNum = 0; inputNum &lt; sourceLimit; inputNum++) {
      let input = inputList[inputNum];
@@ -207,7 +207,7 @@ const firstByteOfFirstChannel = firstInputFirstChannel[0]; // (or inputList[0][0
 
 <p>To use an audio worklet processor, you can use code similar to the following:</p>
 
-<pre class="brush: js notranslate">let audioContext = null;
+<pre class="brush: js">let audioContext = null;
 
 async function createMyAudioProcessor() {
   if (!audioContext) {
@@ -230,7 +230,7 @@ async function createMyAudioProcessor() {
 
 <p>You can then create a new audio processor node by doing this:</p>
 
-<pre class="brush: js notranslate">let newProcessorNode = createMyAudioProcessor();</pre>
+<pre class="brush: js">let newProcessorNode = createMyAudioProcessor();</pre>
 
 <p>If the returned value, <code>newProcessorNode</code>, is non-<code>null</code>, we have a valid audio context with its hiss processor node in place and ready to use.</p>
 
@@ -244,7 +244,7 @@ async function createMyAudioProcessor() {
 
 <p>In the following implementation of <code>parameterDescriptors()</code>, the returned array has two <code>AudioParam</code> objects. The first defines <code>gain</code> as a value between 0 and 1, with a default value of 0.5. The second parameter is named <code>frequency</code> and defaults to 440.0, with a range from 27.5 to 4186.009, inclusively.</p>
 
-<pre class="brush: js notranslate">static get parameterDescriptors() {
+<pre class="brush: js">static get parameterDescriptors() {
   return [
    {
       name: "gain",
@@ -272,7 +272,7 @@ async function createMyAudioProcessor() {
 
 <p>In the code below, we see a <code>process()</code> function that handles a <code>gain</code> parameter which can be used as either an a-rate or k-rate parameter. Our node only supports one input, so it just takes the first input in the list, applies the gain to it, and writes the resulting data to the first output's buffer.</p>
 
-<pre class="brush: js notranslate">process(inputList, outputList, parameters) {
+<pre class="brush: js">process(inputList, outputList, parameters) {
   const input = inputList[0];
   const output = outputList[0];
   const gain = parameters.gain;
@@ -306,20 +306,20 @@ async function createMyAudioProcessor() {
 
 <p>Your main thread script can access the parameters just like it can any other node. To do so, first you need to get a reference to the parameter by calling the {{domxref("AudioWorkletNode")}}'s {{domxref("AudioWorkletNode.parameters", "parameters")}} property's {{domxref("AudioParamMap.get", "get()")}} method:</p>
 
-<pre class="brush: js notranslate">let gainParam = myAudioWorkletNode.parameters.get("gain");
+<pre class="brush: js">let gainParam = myAudioWorkletNode.parameters.get("gain");
 </pre>
 
 <p>The value returned and stored in <code>gainParam</code> is the {{domxref("AudioParam")}} used to store the <code>gain</code> parameter. You can then change its value effective at a given time using the {{domxref("AudioParam")}} method {{domxref("AudioParam.setValueAtTime", "setValueAtTime()")}}.</p>
 
 <p>Here, for example, we set the value to <code>newValue</code>, effective immediately.</p>
 
-<pre class="brush: js notranslate">gainParam.setValueAtTime(newValue, audioContext.currentTime);</pre>
+<pre class="brush: js">gainParam.setValueAtTime(newValue, audioContext.currentTime);</pre>
 
 <p>You can similarly use any of the other methods in the {{domxref("AudioParam")}} interface to apply changes over time, to cancel scheduled changes, and so forth.</p>
 
 <p>Reading the value of a parameter is as simple as looking at its {{domxref("AudioParam.value", "value")}} property:</p>
 
-<pre class="brush: js notranslate">let currentGain = gainParam.value;</pre>
+<pre class="brush: js">let currentGain = gainParam.value;</pre>
 
 <h2 id="See_also">See also</h2>
 

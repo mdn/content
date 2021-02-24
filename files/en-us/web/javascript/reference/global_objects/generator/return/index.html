@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>gen</var>.return(<var>value</var>)</pre>
+<pre class="brush: js"><var>gen</var>.return(<var>value</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -35,7 +35,7 @@ tags:
 
 <p>The following example shows a simple generator and the <code>return</code> method.</p>
 
-<pre class="brush: js notranslate">function* gen() {
+<pre class="brush: js">function* gen() {
   yield 1;
   yield 2;
   yield 3;
@@ -55,7 +55,7 @@ g.next();        // { value: undefined, done: true }
   same as if <code>.next()</code>. If an argument is provided, it will be set to the value
   of the <code>value</code> property of the returned object.</p>
 
-<pre class="brush: js notranslate">function* gen() {
+<pre class="brush: js">function* gen() {
   yield 1;
   yield 2;
   yield 3;

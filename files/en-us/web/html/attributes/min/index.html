@@ -97,13 +97,13 @@ tags:
 
 <p>We add a big red border around invalid inputs:</p>
 
-<pre class="brush: css notranslate">input:invalid {
+<pre class="brush: css">input:invalid {
   border: solid red 3px;
 }</pre>
 
 <p>Then define an input with a minimum value of 7.2, omitting the step attribute, wherein it defaults to 1.</p>
 
-<pre class="brush: html notranslate">&lt;input id="myNumber" name="myNumber" type="number" min="7.2" value="8"&gt;</pre>
+<pre class="brush: html">&lt;input id="myNumber" name="myNumber" type="number" min="7.2" value="8"&gt;</pre>
 
 <p>Because <code>step</code> defaults to 1, valid values include <code>7.2</code>, <code>8.2</code>, <code>9.2</code>, and so on. The value 8 is not valid. As we included an invalid value, supporting browsers will show the value as invalid.</p>
 

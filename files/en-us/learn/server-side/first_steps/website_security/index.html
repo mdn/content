@@ -82,11 +82,11 @@ tags:
 
 <p>This vulnerability is present if user input that is passed to an underlying SQL statement can change the meaning of the statement. For example, the following code is intended to list all users with a particular name (<code>userName</code>) that has been supplied from an HTML form:</p>
 
-<pre class="brush: sql notranslate">statement = "SELECT * FROM users WHERE name = '" + <strong>userName</strong> + "';"</pre>
+<pre class="brush: sql">statement = "SELECT * FROM users WHERE name = '" + <strong>userName</strong> + "';"</pre>
 
 <p>If the user specifies a real name, the statement will work as intended. However, a malicious user could completely change the behavior of this SQL statement to the new statement in the following example, by specifying the text in bold for the <code>userName</code>.</p>
 
-<pre class="brush: sql notranslate">SELECT * FROM users WHERE name = '<strong>a';DROP TABLE users; SELECT * FROM userinfo WHERE 't' = 't</strong>';
+<pre class="brush: sql">SELECT * FROM users WHERE name = '<strong>a';DROP TABLE users; SELECT * FROM userinfo WHERE 't' = 't</strong>';
 </pre>
 
 <p>The modified statement creates a valid SQL statement that deletes the <code>users</code> table and selects all data from the <code>userinfo</code> table (which reveals the information of every user). This works because the first part of the injected text (<code>a';</code>) completes the original statement.</p>
@@ -99,7 +99,7 @@ tags:
 
 <p>In the following statement, we escape the <strong>'</strong> character. The SQL will now interpret the name as the whole string in bold (which is a very odd name indeed, but not harmful).</p>
 
-<pre class="brush: sql notranslate">SELECT * FROM users WHERE name = '<strong>a\';DROP TABLE users; SELECT * FROM userinfo WHERE \'t\' = \'t'</strong>;
+<pre class="brush: sql">SELECT * FROM users WHERE name = '<strong>a\';DROP TABLE users; SELECT * FROM userinfo WHERE \'t\' = \'t'</strong>;
 
 </pre>
 

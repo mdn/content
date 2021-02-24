@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">new Intl.NumberFormat([<var>locales</var>[, <var>options</var>]])
+<pre class="brush: js">new Intl.NumberFormat([<var>locales</var>[, <var>options</var>]])
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -220,14 +220,14 @@ tags:
 <p>In basic use without specifying a locale, a formatted string in the default locale and
 	with default options is returned.</p>
 
-<pre class="brush: js notranslate">let amount = 3500;
+<pre class="brush: js">let amount = 3500;
 
 console.log(new Intl.NumberFormat().format(amount));
 // → '3,500' if in US English locale</pre>
 
 <h3 id="Decimal_and_percent_formatting">Decimal and percent formatting</h3>
 
-<pre class="brush: js notranslate">let amount = 3500;
+<pre class="brush: js">let amount = 3500;
 
 new Intl.NumberFormat('en-US', {style: 'decimal'}).format(amount);
 // → '3,500'
@@ -240,7 +240,7 @@ new Intl.NumberFormat('en-US', {style: 'percent'}).format(amount);
 <p>If the <code>style</code> is <code>'unit'</code>, a <code>unit</code> property must be
 	provided. Optionally, <code>unitDisplay</code> controls the unit formatting.</p>
 
-<pre class="brush: js notranslate">let amount = 3500;
+<pre class="brush: js">let amount = 3500;
 
 new Intl.NumberFormat('en-US', {style: 'unit', unit: 'liter'}).format(amount);
 // → '3,500 L'
@@ -255,7 +255,7 @@ new Intl.NumberFormat('en-US', {style: 'unit', unit: 'liter', unitDisplay: 'long
 	must be provided. Optionally, <code>currencyDisplay</code> and
 	<code>currencySign</code> control the unit formatting.</p>
 
-<pre class="brush: js notranslate">let amount = -3500;
+<pre class="brush: js">let amount = -3500;
 new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(amount);
 // → '-$3,500.00'
 
@@ -280,7 +280,7 @@ new Intl.NumberFormat('bn', {
 <p>Scientific and compact notation are represented by the <code>notation</code> option and
 	can be formatted like this:</p>
 
-<pre class="brush: js notranslate">new Intl.NumberFormat('en-US', { notation: "scientific" }).format(987654321);
+<pre class="brush: js">new Intl.NumberFormat('en-US', { notation: "scientific" }).format(987654321);
 // → 9.877E8
 
 new Intl.NumberFormat('pt-PT', { notation: "scientific" }).format(987654321);
@@ -311,7 +311,7 @@ new Intl.NumberFormat('en-GB', {
 
 <p>Display a sign for positive and negative numbers, but not zero:</p>
 
-<pre class="brush: js notranslate">new Intl.NumberFormat("en-US", {
+<pre class="brush: js">new Intl.NumberFormat("en-US", {
     style: "percent",
     signDisplay: "exceptZero"
 }).format(0.55);
@@ -320,7 +320,7 @@ new Intl.NumberFormat('en-GB', {
 <p>Note that when the currency sign is "accounting", parentheses might be used instead of
 	a minus sign:</p>
 
-<pre class="brush: js notranslate">new Intl.NumberFormat('bn', {
+<pre class="brush: js">new Intl.NumberFormat('bn', {
   style: 'currency',
   currency: 'USD',
   currencySign: 'accounting',

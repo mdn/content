@@ -49,7 +49,7 @@ slug: Tools/Debugger.Object
 
  <p>If a function has no name, SpiderMonkey attempts to infer an appropriate name for it given its context. For example:</p>
 
- <pre class="notranslate"><code>function f() {}          // display name: f (the given name)
+ <pre><code>function f() {}          // display name: f (the given name)
 var g = function () {};  // display name: g
 o.p = function () {};    // display name: o.p
 var q = {
@@ -58,7 +58,7 @@ var q = {
 
  <p>Note that the display name may not be a proper JavaScript identifier, or even a proper expression: we attempt to find helpful names even when the function is not immediately assigned as the value of some variable or property. Thus, we use <code><em>a</em>/<em>b</em></code> to refer to the <em>b</em> defined within <em>a</em>, and <code><em>a</em>&lt;</code> to refer to a function that occurs somewhere within an expression that is assigned to <em>a</em>. For example:</p>
 
- <pre class="notranslate"><code>function h() {
+ <pre><code>function h() {
   var i = function() {};    // display name: h/i
   f(function () {});        // display name: h/&lt;
 }
@@ -75,11 +75,11 @@ var s = f(function () {});  // display name: s&lt;</code></pre>
 
  <p>If the referent uses destructuring parameters, then the array's elements reflect the structure of the parameters. For example, if the referent is a function declared in this way:</p>
 
- <pre class="notranslate"><code>function f(a, [b, c], {d, e:f}) { ... }</code></pre>
+ <pre><code>function f(a, [b, c], {d, e:f}) { ... }</code></pre>
 
  <p>then this <code>Debugger.Object</code> instance's <code>parameterNames</code> property would have the value:</p>
 
- <pre class="notranslate"><code>["a", ["b", "c"], {d:"d", e:"f"}]</code></pre>
+ <pre><code>["a", ["b", "c"], {d:"d", e:"f"}]</code></pre>
  </dd>
  <dt><code>script</code></dt>
  <dd>
@@ -113,7 +113,7 @@ var s = f(function () {});  // display name: s&lt;</code></pre>
 
  <p>By convention, host annotation objects have a string-valued <code>"type"</code> property that, taken together with the object's class, indicate what sort of thing the referent is. The host annotation object's other properties provide further details, as appropriate for the type. For example, in Firefox, a metadata object for a JavaScript Module's global object might look like this:</p>
 
- <pre class="notranslate"><code>{ "type":"jsm", "uri":"resource:://gre/modules/XPCOMUtils.jsm" }</code></pre>
+ <pre><code>{ "type":"jsm", "uri":"resource:://gre/modules/XPCOMUtils.jsm" }</code></pre>
 
  <p>Firefox provides [DebuggerHostAnnotationsForFirefox annotations] for its host objects.</p>
  </dd>

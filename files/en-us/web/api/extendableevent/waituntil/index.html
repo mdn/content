@@ -45,7 +45,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>extendableEvent</em>.waitUntil(<em>promise</em>);</pre>
+  class="brush: js"><em>extendableEvent</em>.waitUntil(<em>promise</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -56,7 +56,7 @@ tags:
 <p>Using <code>waitUntil()</code> within a service worker's <code>install</code> event:
 </p>
 
-<pre class="brush: js;highlight:[10] notranslate">addEventListener('install', event =&gt; {
+<pre class="brush: js;highlight:[10]">addEventListener('install', event =&gt; {
   const preCache = async () =&gt; {
     const cache = await caches.open('static-v1');
     return cache.addAll([

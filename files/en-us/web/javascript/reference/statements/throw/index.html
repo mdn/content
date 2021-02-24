@@ -26,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">throw <var>expression</var>; </pre>
+<pre class="brush: js">throw <var>expression</var>; </pre>
 
 <dl>
   <dt><code><var>expression</var></code></dt>
@@ -59,7 +59,7 @@ throw new Error('Required');  // generates an error object with the message of R
   object of type <code>UserException</code> and uses it in a <code>throw</code> statement.
 </p>
 
-<pre class="brush: js notranslate">function UserException(message) {
+<pre class="brush: js">function UserException(message) {
   this.message = message;
   this.name = 'UserException';
 }
@@ -163,7 +163,7 @@ e = verifyZipCode('95060 1234');  // returns 95060 1234
   is over 50. The rethrown exception propagates up to the enclosing function or to the top
   level so that the user sees it.</p>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   throw n; // throws an exception with a numeric value
 } catch (e) {
   if (e &lt;= 50) {
