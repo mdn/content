@@ -36,7 +36,7 @@ tags:
 
 <p>Let's start by looking at a typical HTML table. Well, I say typical — most HTML table examples are about shoes, or the weather, or employees; we decided to make things more interesting by making it about famous punk bands from the UK. The markup looks like so:</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;caption&gt;A summary of the UK's most famous punk bands&lt;/caption&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -79,7 +79,7 @@ tags:
 
 <p>The table is nicely marked up, easily stylable, and accessible, thanks to features such as {{htmlattrxref("scope","th")}}, {{htmlelement("caption")}}, {{htmlelement("thead")}}, {{htmlelement("tbody")}}, etc. Unfortunately, it doesn't look good when rendered on the screen (see it live at <a href="https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html">punk-bands-unstyled.html</a>):</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13064/table-unstyled.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="table-unstyled.png" style="display: block; margin: 0 auto;"></p>
 
 <p>With only the default browser styling it looks cramped, hard to read, and boring. We need to use some CSS to fix this up.</p>
 
@@ -91,7 +91,7 @@ tags:
  <li>To start with, make a local copy of the <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-unstyled.html">sample markup</a>, download both images (<a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/noise.png">noise</a> and <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/leopardskin.jpg">leopardskin</a>), and put the three resulting files in a working directory somewhere on your local computer.</li>
  <li>Next, create a new file called <code>style.css</code> and save it in the same directory as your other files.</li>
  <li>Link the CSS to the HTML by placing the following line of HTML inside your {{htmlelement("head")}}:
-  <pre class="brush: html notranslate">&lt;link href="style.css" rel="stylesheet" type="text/css"&gt;</pre>
+  <pre class="brush: html">&lt;link href="style.css" rel="stylesheet" type="text/css"&gt;</pre>
  </li>
 </ol>
 
@@ -99,7 +99,7 @@ tags:
 
 <p>The first thing we need to do is sort out the spacing/layout — default table styling is so cramped! To do this, add the following CSS to your <code>style.css</code> file:</p>
 
-<pre class="brush: css notranslate">/* spacing */
+<pre class="brush: css">/* spacing */
 
 table {
   table-layout: fixed;
@@ -134,14 +134,14 @@ th, td {
  <li>A {{cssxref("table-layout")}} value of <code>fixed</code> is generally a good idea to set on your table, as it makes the table behave a bit more predictably by default. Normally, table columns tend to be sized according to how much content they contain, which produces some strange results. With <code>table-layout: fixed</code>, you can size your columns according to the width of their headings, and then deal with their content as appropriate. This is why we've selected the four different headings with the <code>thead th:nth-child(<em>n</em>)</code> ({{cssxref(":nth-child")}}) selector ("Select the <em>n</em>th child that is a {{htmlelement("th")}} element in a sequence, inside a {{htmlelement("thead")}} element") and given them set percentage widths. The entire column width follows the width of its heading, making for a nice way to size your table columns. Chris Coyier discusses this technique in more detail in <a href="https://css-tricks.com/fixing-tables-long-strings/">Fixed Table Layouts</a>.<br>
   <br>
   We've coupled this with a {{cssxref("width")}} of 100%, meaning that the table will fill any container it is put in, and be nicely responsive (although it would still need some more work to get it looking good on narrow screen widths).</li>
- <li>A {{cssxref("border-collapse")}} value of <code>collapse</code> is a standard best practice for any table styling effort. By default, when you set borders on table elements, they will all have spacing between them, as the below image illustrates: <img alt="" src="https://mdn.mozillademos.org/files/13068/no-border-collapse.png" style="display: block; margin: 0 auto;"> This doesn't look very nice (although it might be the look you want, who knows?) With <code>border-collapse: collapse;</code> set, the borders collapse down into one, which looks much better: <img alt="" src="https://mdn.mozillademos.org/files/13066/border-collapse.png" style="display: block; margin: 0 auto;"></li>
+ <li>A {{cssxref("border-collapse")}} value of <code>collapse</code> is a standard best practice for any table styling effort. By default, when you set borders on table elements, they will all have spacing between them, as the below image illustrates: <img alt="" src="no-border-collapse.png" style="display: block; margin: 0 auto;"> This doesn't look very nice (although it might be the look you want, who knows?) With <code>border-collapse: collapse;</code> set, the borders collapse down into one, which looks much better: <img alt="" src="border-collapse.png" style="display: block; margin: 0 auto;"></li>
  <li>We've put a {{cssxref("border")}} around the whole table, which is needed because we'll be putting some borders round the table header and footer later on — it looks really odd and disjointed when you don't have a border round the whole outside of the table and end up with gaps.</li>
  <li>We've set some {{cssxref("padding")}} on the {{htmlelement("th")}} and {{htmlelement("td")}} elements — this gives the data items some space to breathe, making the table look a lot more legible.</li>
 </ul>
 
 <p>At this point, our table already looks a lot better:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13070/table-with-spacing.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="table-with-spacing.png" style="display: block; margin: 0 auto;"></p>
 
 <h3 id="Some_simple_typography">Some simple typography</h3>
 
@@ -151,11 +151,11 @@ th, td {
 
 <p>First, add the following {{htmlelement("link")}} element into your HTML head, just above your existing <code>&lt;link&gt;</code> element:</p>
 
-<pre class="brush: html notranslate">&lt;link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'&gt;</pre>
+<pre class="brush: html">&lt;link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'&gt;</pre>
 
 <p>Now add the following CSS into your <code>style.css</code> file, below the previous addition:</p>
 
-<pre class="brush: css notranslate">/* typography */
+<pre class="brush: css">/* typography */
 
 html {
   font-family: 'helvetica neue', helvetica, arial, sans-serif;
@@ -192,7 +192,7 @@ tfoot th {
 
 <p>The result looks a bit neater:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13072/table-with-typography.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="table-with-typography.png" style="display: block; margin: 0 auto;"></p>
 
 <h3 id="Graphics_and_colors">Graphics and colors</h3>
 
@@ -200,7 +200,7 @@ tfoot th {
 
 <p>Start by adding the following CSS to your <code>style.css</code> file, again at the bottom:</p>
 
-<pre class="brush: css notranslate">/* graphics and colors */
+<pre class="brush: css">/* graphics and colors */
 
 thead, tfoot {
   background: url(leopardskin.jpg);
@@ -224,7 +224,7 @@ thead th, tfoot th, tfoot td {
 
 <p>We wanted to dedicate a separate section to showing you how to implement <strong>zebra stripes</strong> — alternating rows of color that make the different data rows in your table easier to parse and read. Add the following CSS to the bottom of your <code>style.css</code> file:</p>
 
-<pre class="brush: css notranslate">/* zebra striping */
+<pre class="brush: css">/* zebra striping */
 
 tbody tr:nth-child(odd) {
   background-color: #ff33cc;
@@ -250,7 +250,7 @@ table {
 
 <p>This color explosion results in the following look:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13074/table-with-color.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="table-with-color.png" style="display: block; margin: 0 auto;"></p>
 
 <p>Now, this may be a bit over the top and not to your taste, but the point we are trying to make here is that tables don't have to be boring and academic.</p>
 
@@ -258,7 +258,7 @@ table {
 
 <p>There is one last thing to do with our table — style the caption. To do this, add the following to the bottom of your <code>style.css</code> file:</p>
 
-<pre class="brush: css notranslate">/* caption */
+<pre class="brush: css">/* caption */
 
 caption {
   font-family: 'Rock Salt', cursive;
@@ -272,7 +272,7 @@ caption {
 
 <p>There is nothing remarkable here, except for the {{cssxref("caption-side")}} property, which has been given a value of <code>bottom</code>. This causes the caption to be positioned on the bottom of the table, which along with the other declarations gives us this final look (see it live at <a href="https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html">punk-bands-complete.html</a>):</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13076/table-with-caption.png" style="display: block; height: 357px; margin: 0px auto; width: 723px;"></p>
+<p><img alt="" src="table-with-caption.png" style="display: block; margin: 0px auto;"></p>
 
 <h2 id="Table_styling_quick_tips">Table styling quick tips</h2>
 

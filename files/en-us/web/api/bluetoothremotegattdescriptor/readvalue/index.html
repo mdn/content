@@ -2,23 +2,28 @@
 title: readValue()
 slug: Web/API/BluetoothRemoteGATTDescriptor/readValue
 tags:
-  - API
-  - Bluetooth
-  - BluetoothGattDescriptor
-  - BluetoothRemoteGATTDescriptor
-  - Experimental
-  - Method
-  - Reference
-  - Web Bluetooth API
-  - readValue()
+- API
+- Bluetooth
+- BluetoothGattDescriptor
+- BluetoothRemoteGATTDescriptor
+- Experimental
+- Method
+- Reference
+- Web Bluetooth API
+- readValue()
 ---
 <p>{{APIRef("Web Bluetooth API")}}{{SeeCompatTable}}</p>
 
-<p>The <strong><code>BluetoothRemoteGATTDescriptor</code><code>.readValue()</code></strong> method returns a {{jsxref("Promise")}} that resolves to an {{jsxref("ArrayBuffer")}} holding a duplicate  of the <code>value</code> property if it is available and supported. Otherwise it throws an error.</p>
+<p>The
+  <strong><code>BluetoothRemoteGATTDescriptor</code><code>.readValue()</code></strong>
+  method returns a {{jsxref("Promise")}} that resolves to
+  an {{jsxref("ArrayBuffer")}} holding a duplicate  of the <code>value</code> property if
+  it is available and supported. Otherwise it throws an error.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">BluetoothRemoteGATTDescriptor.readValue().then(function(<em>value</em>[]) { ... })</pre>
+<pre
+  class="brush: js">BluetoothRemoteGATTDescriptor.readValue().then(function(<em>value</em>[]) { ... })</pre>
 
 <h3 id="Returns">Returns</h3>
 
@@ -27,23 +32,21 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Bluetooth','#dom-bluetoothremotegattdescriptor-readvalue','readValue()')}}</td>
-   <td>{{Spec2('Web Bluetooth')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web
+        Bluetooth','#dom-bluetoothremotegattdescriptor-readvalue','readValue()')}}</td>
+      <td>{{Spec2('Web Bluetooth')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.BluetoothRemoteGATTDescriptor.readValue")}}</p>
-</div>

@@ -12,20 +12,24 @@ tags:
 ---
 <div>{{ApiRef("Window")}}</div>
 
-<p>The <code>Window.prompt()</code> displays a dialog with an optional message prompting the user to input some text.</p>
+<p>The <code>Window.prompt()</code> displays a dialog with an optional message prompting
+  the user to input some text.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>result</em> = window.prompt(<em>message</em>, <em>default</em>);
+<pre class="brush: js"><em>result</em> = window.prompt(<em>message</em>, <em>default</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>message</code> {{optional_inline}}</dt>
- <dd>A string of text to display to the user. Can be omitted if there is nothing to show in the prompt window.</dd>
- <dt><code>default</code> {{optional_inline}}</dt>
- <dd>A string containing the default value displayed in the text input field. Note that in Internet Explorer 7 and 8, if you do not provide this parameter, the string <code>"undefined"</code> is the default value.</dd>
+  <dt><code>message</code> {{optional_inline}}</dt>
+  <dd>A string of text to display to the user. Can be omitted if there is nothing to show
+    in the prompt window.</dd>
+  <dt><code>default</code> {{optional_inline}}</dt>
+  <dd>A string containing the default value displayed in the text input field. Note that
+    in Internet Explorer 7 and 8, if you do not provide this parameter, the string
+    <code>"undefined"</code> is the default value.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -34,7 +38,8 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">let sign = prompt("What's your sign?");
+<pre
+  class="brush: js">let sign = prompt("What's your sign?");
 
 if (sign.toLowerCase() == "scorpio") {
   alert("Wow! I'm a Scorpio too!");
@@ -46,37 +51,49 @@ sign = prompt();       //  open the blank prompt window
 sign = window.prompt('Are you feeling lucky'); // open the window with Text "Are you feeling lucky"
 sign = window.prompt('Are you feeling lucky', 'sure'); // open the window with Text "Are you feeling lucky" and default value "sure"</pre>
 
-<p>When the user clicks the OK button, text entered in the input field is returned. If the user clicks OK without entering any text, an empty string is returned. If the user clicks the Cancel button, this function returns <code>null</code>.</p>
+<p>When the user clicks the OK button, text entered in the input field is returned. If the
+  user clicks OK without entering any text, an empty string is returned. If the user
+  clicks the Cancel button, this function returns <code>null</code>.</p>
 
 <p>The above prompt appears as follows (in Chrome on OS X):</p>
 
-<p><a href="https://mdn.mozillademos.org/files/11303/prompt.png"><img alt="prompt() dialog in Chrome on OS X" src="https://mdn.mozillademos.org/files/11303/prompt.png" style="height: 298px; width: 535px;"></a></p>
+<p><a href="https://mdn.mozillademos.org/files/11303/prompt.png"><img
+      alt="prompt() dialog in Chrome on OS X"
+      src="prompt.png"></a></p>
 
 <h2 id="Notes">Notes</h2>
 
-<p>A prompt dialog contains a single-line textbox, a Cancel button, and an OK button, and returns the (possibly empty) text the user entered into that textbox.</p>
+<p>A prompt dialog contains a single-line textbox, a Cancel button, and an OK button, and
+  returns the (possibly empty) text the user entered into that textbox.</p>
 
-<p><span class="comment">The following text is shared between this article, DOM:window.confirm and DOM:window.alert</span> Dialog boxes are modal windows; they prevent the user from accessing the rest of the program's interface until the dialog box is closed. For this reason, you should not overuse any function that creates a dialog box (or modal window).</p>
+<p><span class="comment">The following text is shared between this article,
+    DOM:window.confirm and DOM:window.alert</span> Dialog boxes are modal windows; they
+  prevent the user from accessing the rest of the program's interface until the dialog box
+  is closed. For this reason, you should not overuse any function that creates a dialog
+  box (or modal window).</p>
 
-<p>Please note that result is a string. That means you should sometimes cast the value given by the user. For example, if their answer should be a Number, you should cast the value to Number.</p>
+<p>Please note that result is a string. That means you should sometimes cast the value
+  given by the user. For example, if their answer should be a Number, you should cast the
+  value to Number.</p>
 
 <pre class="brush: js">const aNumber = Number(window.prompt("Type a number", ""));</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'timers-and-user-prompts.html#dom-prompt', 'prompt()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', 'timers-and-user-prompts.html#dom-prompt',
+        'prompt()')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -86,6 +103,6 @@ sign = window.prompt('Are you feeling lucky', 'sure'); // open the window with T
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("window.alert", "alert")}}</li>
- <li>{{domxref("window.confirm", "confirm")}}</li>
+  <li>{{domxref("window.alert", "alert")}}</li>
+  <li>{{domxref("window.confirm", "confirm")}}</li>
 </ul>

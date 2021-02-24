@@ -2,30 +2,32 @@
 title: GlobalEventHandlers.ondrag
 slug: Web/API/GlobalEventHandlers/ondrag
 tags:
-  - API
-  - HTML DOM
-  - Reference
-  - drag and drop
+- API
+- HTML DOM
+- Reference
+- drag and drop
 ---
 <div>{{ApiRef("HTML DOM")}}</div>
 
-<p>A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("drag")}} event.</p>
+<p>A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("drag")}}
+  event.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>dragHandler</var> = <var>targetElement</var>.ondrag;
+<pre class="brush: js">var <var>dragHandler</var> = <var>targetElement</var>.ondrag;
 </pre>
 
 <h3 id="Return_value">Return value</h3>
 
 <dl>
- <dt><code>dragHandler</code></dt>
- <dd>The <em>drag</em> event handler for element <code>targetElement</code>.</dd>
+  <dt><code>dragHandler</code></dt>
+  <dd>The <em>drag</em> event handler for element <code>targetElement</code>.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
 
-<p>This example includes the use of the <em>ondrag</em> attribute handler to set an element's <em>drag</em> event handler.</p>
+<p>This example includes the use of the <em>ondrag</em> attribute handler to set an
+  element's <em>drag</em> event handler.</p>
 
 <pre class="brush: js">&lt;!DOCTYPE html&gt;
 &lt;html lang=en&gt;
@@ -83,23 +85,23 @@ function dragover_handler(ev) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "indices.html#ix-handler-ondrag", "ondrag")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.1", "index.html#ix-handler-ondrag", "ondrag")}}</td>
-   <td>{{Spec2("HTML5.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("HTML WHATWG", "indices.html#ix-handler-ondrag", "ondrag")}}</td>
+      <td>{{Spec2("HTML WHATWG")}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName("HTML5.1", "index.html#ix-handler-ondrag", "ondrag")}}</td>
+      <td>{{Spec2("HTML5.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -109,5 +111,5 @@ function dragover_handler(ev) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{event("drag")}}</li>
+  <li>{{event("drag")}}</li>
 </ul>

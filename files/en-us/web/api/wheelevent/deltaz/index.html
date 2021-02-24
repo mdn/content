@@ -2,26 +2,29 @@
 title: WheelEvent.deltaZ
 slug: Web/API/WheelEvent/deltaZ
 tags:
-  - API
-  - DOM
-  - Interface
-  - Property
-  - Read-only
-  - Reference
-  - Référence(2)
-  - WheelEvent
+- API
+- DOM
+- Interface
+- Property
+- Read-only
+- Reference
+- Référence(2)
+- WheelEvent
 ---
 <p>{{APIRef("DOM Events")}}</p>
 
-<p>The <code><strong>WheelEvent.deltaZ</strong></code> read-only property is a <code>double</code> representing the scroll amount along the z-axis, in the {{domxref("WheelEvent.deltaMode")}} unit.</p>
+<p>The <code><strong>WheelEvent.deltaZ</strong></code> read-only property is a
+	<code>double</code> representing the scroll amount along the z-axis, in the
+	{{domxref("WheelEvent.deltaMode")}} unit.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <code><em>dZ</em> = <em>event</em>.deltaZ;</code></pre>
+<pre
+	class="brush: js">var <code><em>dZ</em> = <em>event</em>.deltaZ;</code></pre>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaZ": 4, "deltaMode": 0});
+<pre class="brush: js">var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaZ": 4, "deltaMode": 0});
 
 console.log(syntheticEvent.deltaZ);
 </pre>
@@ -36,7 +39,8 @@ console.log(syntheticEvent.deltaZ);
 			<th scope="col">Comment</th>
 		</tr>
 		<tr>
-			<td>{{SpecName('DOM3 Events','#widl-WheelEvent-deltaZ','WheelEvent.deltaZ')}}</td>
+			<td>{{SpecName('DOM3 Events','#widl-WheelEvent-deltaZ','WheelEvent.deltaZ')}}
+			</td>
 			<td>{{Spec2('DOM3 Events')}}</td>
 			<td>Initial definition.</td>
 		</tr>

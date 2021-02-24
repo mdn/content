@@ -14,7 +14,7 @@ tags:
   - color
   - colors
 ---
-<div style="display: none;">
+<div class="hidden">
 <h2 id="ColorPicker_Tool">ColorPicker tool</h2>
 
 <h3 id="HTML">HTML</h3>
@@ -40,7 +40,7 @@ tags:
 
         &lt;div id="canvas" data-tutorial="drop"&gt;
             &lt;div id="zindex" class="ui-input-slider" data-topic="z-index" data-info="z-index"
-                data-max="20" data-sensivity="10"&gt;&lt;/div&gt;
+                data-max="20" data-sensitivity="10"&gt;&lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 
@@ -2011,7 +2011,7 @@ var InputSliderManager = (function InputSliderManager() {
 
 		var sliderMotion = function sliderMotion(e) {
 			slider.style.cursor = "e-resize";
-			var delta = (e.clientX - startX) / obj.sensivity | 0;
+			var delta = (e.clientX - startX) / obj.sensitivity | 0;
 			var value = delta * obj.step + start_value;
 			setValue(obj.topic, value);
 		};
@@ -2027,7 +2027,7 @@ var InputSliderManager = (function InputSliderManager() {
 		var topic	= node.getAttribute('data-topic');
 		var unit	= node.getAttribute('data-unit');
 		var name 	= node.getAttribute('data-info');
-		var sensivity = node.getAttribute('data-sensivity') | 0;
+		var sensitivity = node.getAttribute('data-sensitivity') | 0;
 		var precision = node.getAttribute('data-precision') | 0;
 
 		this.min = isNaN(min) ? 0 : min;
@@ -2037,7 +2037,7 @@ var InputSliderManager = (function InputSliderManager() {
 		this.topic = topic;
 		this.node = node;
 		this.unit = unit === null ? '' : unit;
-		this.sensivity = sensivity &gt; 0 ? sensivity : 5;
+		this.sensitivity = sensitivity &gt; 0 ? sensitivity : 5;
 		value = isNaN(value) ? this.min : value;
 
 		var input = new InputComponent(this);
@@ -2139,14 +2139,14 @@ var InputSliderManager = (function InputSliderManager() {
 		setValue(topic, slider.value);
 	};
 
-	var setSensivity = function setSensivity(topic, value) {
+	var setSensitivity = function setSensitivity(topic, value) {
 		var slider = sliders[topic];
 		if (slider === undefined)
 			return;
 
 		value = value | 0;
 
-		slider.sensivity = value &gt; 0 ? value : 5;
+		slider.sensitivity = value &gt; 0 ? value : 5;
 	};
 
 	var getNode =  function getNode(topic) {
@@ -2210,7 +2210,7 @@ var InputSliderManager = (function InputSliderManager() {
 		subscribe : subscribe,
 		unsubscribe : unsubscribe,
 		setPrecision : setPrecision,
-		setSensivity : setSensivity,
+		setSensitivity : setSensitivity,
 		getPrecision : getPrecision,
 		createSlider : createSlider,
 	};

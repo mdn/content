@@ -16,7 +16,7 @@ tags:
 
 <p>JavaScript is <strong>case-sensitive</strong> and uses the <strong>Unicode</strong> character set. For example, the word Früh (which means "early" in German) could be used as a variable name.</p>
 
-<pre class="brush: js notranslate">let Früh = "foobar"</pre>
+<pre class="brush: js">let Früh = "foobar"</pre>
 
 <p>But, the variable <code>früh</code> is not the same as <code>Früh</code> because JavaScript is case sensitive.</p>
 
@@ -36,7 +36,7 @@ tags:
 
 <p>The syntax of <strong>comments</strong> is the same as in C++ and in many other languages:</p>
 
-<pre class="brush: js notranslate">// a one line comment
+<pre class="brush: js">// a one line comment
 
 /* this is a longer,
  * multi-line comment
@@ -84,7 +84,7 @@ tags:
 
 <ul>
  <li>With the keyword {{jsxref("Statements/var", "var")}}. For example, <code>var x = 42</code>. This syntax can be used to declare both <strong>local</strong> and <strong>global</strong> variables, depending on the <em>execution context</em>.</li>
- <li>With the keyword {{jsxref("Statements/const", "const")}} or {{jsxref("Statements/let", "let")}}. For example, <code>let y = 13</code>. This syntax can be used to declare a block-scope local variable. (See <a href="#Variable_scope">Variable scope</a> below.)</li>
+ <li>With the keyword {{jsxref("Statements/const", "const")}} or {{jsxref("Statements/let", "let")}}. For example, <code>let y = 13</code>. This syntax can be used to declare a block-scope local variable. (See <a href="#variable_scope">Variable scope</a> below.)</li>
 </ul>
 
 <p>You can declare variables to unpack values from <a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Object_literals">Object Literals</a> using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring Assignment</a> syntax. For example, <code>let { bar } = foo</code>. This will create a variable named <code>bar</code> and assign to it the value corresponding to the key of the same name from our object <code>foo</code>.  </p>
@@ -97,7 +97,7 @@ tags:
 
 <p>An attempt to access an undeclared variable results in a {{jsxref("ReferenceError")}} exception being thrown:</p>
 
-<pre class="brush: js notranslate">var a;
+<pre class="brush: js">var a;
 console.log('The value of a is ' + a); // The value of a is undefined
 
 console.log('The value of b is ' + b); // The value of b is undefined
@@ -114,7 +114,7 @@ let y; </pre>
 
 <p>You can use <code>undefined</code> to determine whether a variable has a value. In the following code, the variable <code>input</code> is not assigned a value, and the <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if</a></code> statement evaluates to <code>true</code>.</p>
 
-<pre class="brush: js notranslate">var input;
+<pre class="brush: js">var input;
 if (input === undefined) {
   doThis();
 } else {
@@ -124,18 +124,18 @@ if (input === undefined) {
 
 <p>The <code>undefined</code> value behaves as <code>false</code> when used in a boolean context. For example, the following code executes the function <code>myFunction</code> because the <code>myArray</code> element is <code>undefined</code>:</p>
 
-<pre class="brush: js notranslate">var myArray = [];
+<pre class="brush: js">var myArray = [];
 if (!myArray[0]) myFunction();
 </pre>
 
 <p>The <code>undefined</code> value converts to <code>NaN</code> when used in numeric context.</p>
 
-<pre class="brush: js notranslate">var a;
+<pre class="brush: js">var a;
 a + 2;  // Evaluates to NaN</pre>
 
 <p>When you evaluate a {{jsxref("null")}} variable, the null value behaves as <code>0</code> in numeric contexts and as <code>false</code> in boolean contexts. For example:</p>
 
-<pre class="brush: js notranslate">var n = null;
+<pre class="brush: js">var n = null;
 console.log(n * 32); // Will log 0 to the console
 </pre>
 
@@ -147,7 +147,7 @@ console.log(n * 32); // Will log 0 to the console
 
 <p>For example, the following code will log <code>5</code>, because the scope of <code>x</code> is the global context (or the function context if the code is part of a function). The scope of <code>x</code> is not limited to the immediate <code>if</code> statement block.</p>
 
-<pre class="brush: js notranslate">if (true) {
+<pre class="brush: js">if (true) {
   var x = 5;
 }
 console.log(x);  // x is 5
@@ -155,7 +155,7 @@ console.log(x);  // x is 5
 
 <p>This behavior changes when using the <code>let</code> declaration (introduced in ECMAScript 2015).</p>
 
-<pre class="brush: js notranslate">if (true) {
+<pre class="brush: js">if (true) {
   let y = 5;
 }
 console.log(y);  // ReferenceError: y is not defined
@@ -167,7 +167,7 @@ console.log(y);  // ReferenceError: y is not defined
 
 <p>This concept is known as <strong>hoisting.</strong> Variables in JavaScript are, in a sense, "hoisted" (or "lifted") to the top of the function or statement. However, variables that are hoisted return a value of <code>undefined</code>. So even if you declare and initialize after you use or refer to this variable, it still returns <code>undefined</code>.</p>
 
-<pre class="brush: js notranslate">/**
+<pre class="brush: js">/**
  * Example 1
  */
 console.log(x === undefined); // true
@@ -187,7 +187,7 @@ var myvar = 'my value';
 
 <p>The above examples will be interpreted the same as:</p>
 
-<pre class="brush: js notranslate">/**
+<pre class="brush: js">/**
  * Example 1
  */
 var x;
@@ -210,14 +210,14 @@ var myvar = 'my value';
 
 <p>In ECMAScript 2015, <code>let</code> and <code>const</code> <strong>are hoisted but not initialized</strong>. Referencing the variable in the block before the variable declaration results in a {{jsxref("ReferenceError")}}, because the variable is in a "temporal dead zone" from the start of the block until the declaration is processed.</p>
 
-<pre class="brush: js notranslate">console.log(x); // ReferenceError
+<pre class="brush: js">console.log(x); // ReferenceError
 let x = 3;</pre>
 
 <h3 id="Function_hoisting">Function hoisting</h3>
 
 <p>In the case of functions, only function <em>declarations</em> are hoisted—but <em>not</em> the function <em>expressions</em>.</p>
 
-<pre class="brush: js notranslate">/* Function declaration */
+<pre class="brush: js">/* Function declaration */
 
 foo(); // "bar"
 
@@ -248,7 +248,7 @@ var baz = function() {
 
 <p>The syntax of a constant identifier is the same as any variable identifier: it must start with a letter, underscore, or dollar sign (<code>$</code>), and can contain alphabetic, numeric, or underscore characters.</p>
 
-<pre class="brush: js notranslate">const PI = 3.14;
+<pre class="brush: js">const PI = 3.14;
 </pre>
 
 <p>A constant cannot change value through assignment or be re-declared while the script is running. It must be initialized to a value.</p>
@@ -257,7 +257,7 @@ var baz = function() {
 
 <p>You cannot declare a constant with the same name as a function or variable in the same scope. For example:</p>
 
-<pre class="brush: js notranslate">// THIS WILL CAUSE AN ERROR
+<pre class="brush: js">// THIS WILL CAUSE AN ERROR
 function f() {};
 const f = 5;
 
@@ -272,12 +272,12 @@ function f() {
 
 <p>However, the properties of objects assigned to constants are not protected, so the following statement is executed without problems.</p>
 
-<pre class="brush: js notranslate">const MY_OBJECT = {'key': 'value'};
+<pre class="brush: js">const MY_OBJECT = {'key': 'value'};
 MY_OBJECT.key = 'otherValue';</pre>
 
 <p>Also, the contents of an array are not protected, so the following statement is executed without problems.</p>
 
-<pre class="brush: js notranslate">const MY_ARRAY = ['HTML','CSS'];
+<pre class="brush: js">const MY_ARRAY = ['HTML','CSS'];
 MY_ARRAY.push('JAVASCRIPT');
 console.log(MY_ARRAY); //logs ['HTML','CSS','JAVASCRIPT'];
 </pre>
@@ -311,12 +311,12 @@ console.log(MY_ARRAY); //logs ['HTML','CSS','JAVASCRIPT'];
 
 <p>So, for example, you could define a variable as follows:</p>
 
-<pre class="brush: js notranslate">var answer = 42;
+<pre class="brush: js">var answer = 42;
 </pre>
 
 <p>And later, you could assign the same variable a string value, for example:</p>
 
-<pre class="brush: js notranslate">answer = 'Thanks for all the fish...';
+<pre class="brush: js">answer = 'Thanks for all the fish...';
 </pre>
 
 <p>Because JavaScript is dynamically typed, this assignment does not cause an error message.</p>
@@ -325,13 +325,13 @@ console.log(MY_ARRAY); //logs ['HTML','CSS','JAVASCRIPT'];
 
 <p>In expressions involving numeric and string values with the <code>+</code> operator, JavaScript converts numeric values to strings. For example, consider the following statements:</p>
 
-<pre class="brush: js notranslate">x = 'The answer is ' + 42 // "The answer is 42"
+<pre class="brush: js">x = 'The answer is ' + 42 // "The answer is 42"
 y = 42 + ' is the answer' // "42 is the answer"
 </pre>
 
 <p>With all other operators, JavaScript does <em>not</em> convert numeric values to strings. For example:</p>
 
-<pre class="brush: js notranslate">'37' - 7 // 30
+<pre class="brush: js">'37' - 7 // 30
 '37' + 7 // "377"
 </pre>
 
@@ -350,11 +350,11 @@ y = 42 + ' is the answer' // "42 is the answer"
 <p>Additionally, a best practice for <code>parseInt</code> is to always include the <em>radix</em> parameter. The radix parameter is used to specify which numerical system is to be used.</p>
 </div>
 
-<pre class="brush: js notranslate">parseInt('101', 2) // 5</pre>
+<pre class="brush: js">parseInt('101', 2) // 5</pre>
 
 <p>An alternative method of retrieving a number from a string is with the <code>+</code> (unary plus) operator:</p>
 
-<pre class="brush: js notranslate">'1.1' + '1.1' // '1.11.1'
+<pre class="brush: js">'1.1' + '1.1' // '1.11.1'
 (+'1.1') + (+'1.1') // 2.2
 // Note: the parentheses are added for clarity, not required.</pre>
 
@@ -363,13 +363,13 @@ y = 42 + ' is the answer' // "42 is the answer"
 <p><em>Literals</em> represent values in JavaScript. These are fixed values—not variables—that you <em>literally</em> provide in your script. This section describes the following types of literals:</p>
 
 <ul>
- <li><a href="#Array_literals">Array literals</a></li>
- <li><a href="#Boolean_literals">Boolean literals</a></li>
- <li><a href="#Floating-point_literals">Floating-point literals</a></li>
- <li><a href="#Numeric_literals">Numeric literals</a></li>
- <li><a href="#Object_literals">Object literals</a></li>
- <li><a href="#RegExp_literals">RegExp literals</a></li>
- <li><a href="#String_literals">String literals</a></li>
+ <li><a href="#array_literals">Array literals</a></li>
+ <li><a href="#boolean_literals">Boolean literals</a></li>
+ <li><a href="#floating-point_literals">Floating-point literals</a></li>
+ <li><a href="#numeric_literals">Numeric literals</a></li>
+ <li><a href="#object_literals">Object literals</a></li>
+ <li><a href="#regexp_literals">RegExp literals</a></li>
+ <li><a href="#string_literals">String literals</a></li>
 </ul>
 
 <h3 id="Array_literals">Array literals</h3>
@@ -378,7 +378,7 @@ y = 42 + ' is the answer' // "42 is the answer"
 
 <p>The following example creates the <code>coffees</code> array with three elements and a <code>length</code> of three:</p>
 
-<pre class="brush: js notranslate">let coffees = ['French Roast', 'Colombian', 'Kona'];
+<pre class="brush: js">let coffees = ['French Roast', 'Colombian', 'Kona'];
 </pre>
 
 <div class="note">
@@ -395,7 +395,7 @@ y = 42 + ' is the answer' // "42 is the answer"
 
 <p>You do not have to specify all elements in an array literal. If you put two commas in a row, the array fills in the value <code>undefined</code> for the unspecified elements. The following example creates the <code>fish</code> array:</p>
 
-<pre class="brush: js notranslate">let fish = ['Lion', , 'Angel'];
+<pre class="brush: js">let fish = ['Lion', , 'Angel'];
 </pre>
 
 <p>This array has two elements with values and one empty element:</p>
@@ -414,17 +414,17 @@ y = 42 + ' is the answer' // "42 is the answer"
 <p><strong>Note :</strong> Trailing commas can create errors in older browser versions and it is a best practice to remove them.</p>
 </div>
 
-<pre class="brush: js notranslate">let myList = ['home', , 'school', ];
+<pre class="brush: js">let myList = ['home', , 'school', ];
 </pre>
 
 <p>In the following example, the <code>length</code> of the array is four, and <code>myList[0]</code> and <code>myList[2]</code> are missing.</p>
 
-<pre class="brush: js notranslate">let myList = [ ,'home', , 'school'];
+<pre class="brush: js">let myList = [ ,'home', , 'school'];
 </pre>
 
 <p>In the following example, the <code>length</code> of the array is four, and <code>myList[1]</code> and <code>myList[3]</code> are missing. <strong>Only the last comma is ignored.</strong></p>
 
-<pre class="brush: js notranslate">let myList = ['home', , 'school', , ];
+<pre class="brush: js">let myList = ['home', , 'school', , ];
 </pre>
 
 <p>Understanding the behavior of extra commas is important to understanding JavaScript as a language.</p>
@@ -456,7 +456,7 @@ y = 42 + ' is the answer' // "42 is the answer"
 
 <p>Some examples of numeric literals are:</p>
 
-<pre class="eval notranslate">0, 117, -345, 123456789123456789n             (decimal, base 10)
+<pre class="eval">0, 117, -345, 123456789123456789n             (decimal, base 10)
 015, 0001, -0o77, 0o777777777777n             (octal, base 8)
 0x1123, 0x00111, -0xF1A7, 0x123456789ABCDEFn  (hexadecimal, "hex" or base 16)
 0b11, 0b0011, -0b11, 0b11101001010101010101n  (binary, base 2)
@@ -479,12 +479,12 @@ y = 42 + ' is the answer' // "42 is the answer"
 
 <p>More succinctly, the syntax is:</p>
 
-<pre class="eval notranslate">[(+|-)][digits].[digits][(E|e)[(+|-)]digits]
+<pre class="eval">[(+|-)][digits].[digits][(E|e)[(+|-)]digits]
 </pre>
 
 <p>For example:</p>
 
-<pre class="eval notranslate">3.1415926
+<pre class="eval">3.1415926
 -.123456789
 -3.1E+12
 .1e-23
@@ -498,9 +498,9 @@ y = 42 + ' is the answer' // "42 is the answer"
 <p><strong>Do not use an object literal at the beginning of a statement!</strong> This will lead to an error (or not behave as you expect), because the <code>{</code> will be interpreted as the beginning of a block.</p>
 </div>
 
-<p>The following is an example of an object literal. The first element of the <code>car</code> object defines a property, <code>myCar</code>, and assigns to it a new string, "<code>Saturn</code>"; the second element, the <code>getCar</code> property, is immediately assigned the result of invoking the function <code>(carTypes("Honda"));</code> the third element, the <code>special</code> property, uses an existing variable (<code>sales</code>).</p>
+<p>The following is an example of an object literal. The first element of the <code>car</code> object defines a property, <code>myCar</code>, and assigns to it a new string, "<code>Saturn</code>"; the second element, the <code>getCar</code> property, is immediately assigned the result of invoking the function <code>(carTypes("Honda"))</code>; the third element, the <code>special</code> property, uses an existing variable (<code>sales</code>).</p>
 
-<pre class="brush: js notranslate">var sales = 'Toyota';
+<pre class="brush: js">var sales = 'Toyota';
 
 function carTypes(name) {
   if (name === 'Honda') {
@@ -519,7 +519,7 @@ console.log(car.special); // Toyota
 
 <p>Additionally, you can use a numeric or string literal for the name of a property or nest an object inside another. The following example uses these options.</p>
 
-<pre class="brush: js notranslate">var car = { manyCars: {a: 'Saab', b: 'Jeep'}, 7: 'Mazda' };
+<pre class="brush: js">var car = { manyCars: {a: 'Saab', b: 'Jeep'}, 7: 'Mazda' };
 
 console.log(car.manyCars.b); // Jeep
 console.log(car[7]); // Mazda
@@ -529,7 +529,7 @@ console.log(car[7]); // Mazda
 
 <p>Property names that are not valid identifiers cannot be accessed as a dot (<code>.</code>) property, but <em>can</em> be accessed and set with the array-like notation("<code>[]</code>").</p>
 
-<pre class="brush: js notranslate">var unusualPropertyNames = {
+<pre class="brush: js">var unusualPropertyNames = {
   '': 'An empty string',
   '!': 'Bang!'
 }
@@ -544,7 +544,7 @@ console.log(unusualPropertyNames['!']); // Bang!</pre>
 
 <p>Together, these also bring object literals and class declarations closer together, and allow object-based design to benefit from some of the same conveniences.</p>
 
-<pre class="brush: js notranslate">var obj = {
+<pre class="brush: js">var obj = {
     // __proto__
     __proto__: theProtoObj,
     // Shorthand for ‘handler: handler’
@@ -563,7 +563,7 @@ console.log(unusualPropertyNames['!']); // Bang!</pre>
 
 <p>A regex literal (which is defined in detail <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">later</a>) is a pattern enclosed between slashes. The following is an example of a regex literal.</p>
 
-<pre class="brush: js notranslate">var re = /ab+c/;</pre>
+<pre class="brush: js">var re = /ab+c/;</pre>
 
 <h3 id="String_literals">String literals</h3>
 
@@ -571,7 +571,7 @@ console.log(unusualPropertyNames['!']); // Bang!</pre>
 
 <p>The following are examples of string literals:</p>
 
-<pre class="brush: js notranslate">'foo'
+<pre class="brush: js">'foo'
 "bar"
 '1234'
 'one line \n another line'
@@ -580,7 +580,7 @@ console.log(unusualPropertyNames['!']); // Bang!</pre>
 
 <p>You can call any of the {{jsxref("String")}} object's methods on a string literal value. JavaScript automatically converts the string literal to a temporary String object, calls the method, then discards the temporary String object. You can also use the <code>String.length</code> property with a string literal:</p>
 
-<pre class="brush: js notranslate">// Will print the number of symbols in the string including whitespace.
+<pre class="brush: js">// Will print the number of symbols in the string including whitespace.
 console.log("John's cat".length)  // In this case, 10.
 </pre>
 
@@ -590,7 +590,7 @@ console.log("John's cat".length)  // In this case, 10.
 
 <p>Optionally, a tag can be added to allow the string construction to be customized, avoiding injection attacks, or constructing higher-level data structures from string contents.</p>
 
-<pre class="brush: js notranslate">// Basic literal string creation
+<pre class="brush: js">// Basic literal string creation
 `In JavaScript '\n' is a line-feed.`
 
 // Multiline strings
@@ -615,7 +615,7 @@ POST`http://foo.org/bar?a=${a}&amp;b=${b}
 
 <p>In addition to ordinary characters, you can also include special characters in strings, as shown in the following example.</p>
 
-<pre class="brush: js notranslate">'one line \n another line'
+<pre class="brush: js">'one line \n another line'
 </pre>
 
 <p>The following table lists the special characters that you can use in JavaScript strings.</p>
@@ -700,23 +700,23 @@ POST`http://foo.org/bar?a=${a}&amp;b=${b}
 
 <p>You can insert a quotation mark inside a string by preceding it with a backslash. This is known as <em>escaping</em> the quotation mark. For example:</p>
 
-<pre class="brush: js notranslate">var quote = "He read \"The Cremation of Sam McGee\" by R.W. Service.";
+<pre class="brush: js">var quote = "He read \"The Cremation of Sam McGee\" by R.W. Service.";
 console.log(quote);
 </pre>
 
 <p>The result of this would be:</p>
 
-<pre class="eval notranslate">He read "The Cremation of Sam McGee" by R.W. Service.
+<pre class="eval">He read "The Cremation of Sam McGee" by R.W. Service.
 </pre>
 
 <p>To include a literal backslash inside a string, you must escape the backslash character. For example, to assign the file path <code>c:\temp</code> to a string, use the following:</p>
 
-<pre class="brush: js notranslate">var home = 'c:\\temp';
+<pre class="brush: js">var home = 'c:\\temp';
 </pre>
 
 <p>You can also escape line breaks by preceding them with backslash. The backslash and line break are both removed from the value of the string.</p>
 
-<pre class="brush: js notranslate">var str = 'this string \
+<pre class="brush: js">var str = 'this string \
 is broken \
 across multiple \
 lines.'
@@ -725,7 +725,7 @@ console.log(str);   // this string is broken across multiple lines.
 
 <p>Although JavaScript does not have "heredoc" syntax, you can get close by adding a line break escape and an escaped line break at the end of each line:</p>
 
-<pre class="brush: js notranslate">var poem =
+<pre class="brush: js">var poem =
 'Roses are red,\n\
 Violets are blue.\n\
 Sugar is sweet,\n\
@@ -734,7 +734,7 @@ and so is foo.'
 
 <p>ECMAScript 2015 introduces a new type of literal, namely <a href="/en-US/docs/Web/JavaScript/Reference/template_strings"><strong>template literals</strong></a>. This allows for many new features, including multiline strings!</p>
 
-<pre class="brush: js notranslate">var poem =
+<pre class="brush: js">var poem =
 `Roses are red,
 Violets are blue.
 Sugar is sweet,

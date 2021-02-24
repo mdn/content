@@ -2,61 +2,71 @@
 title: PointerEvent.height
 slug: Web/API/PointerEvent/height
 tags:
-  - API
-  - DOM
-  - Interface
-  - PointerEvent
-  - Property
-  - Reference
+- API
+- DOM
+- Interface
+- PointerEvent
+- Property
+- Reference
 ---
 <div>{{ APIRef("Pointer Events") }}</div>
 
-<p>The <code><strong>height</strong></code> read-only property of the {{domxref("PointerEvent")}} interface represents the height of the pointer's contact geometry, along the y-axis (in CSS pixels). Depending on the source of the pointer device (for example a finger), for a given pointer, each event may produce a different value.</p>
+<p>The <code><strong>height</strong></code> read-only property of the
+  {{domxref("PointerEvent")}} interface represents the height of the pointer's contact
+  geometry, along the y-axis (in CSS pixels). Depending on the source of the pointer
+  device (for example a finger), for a given pointer, each event may produce a different
+  value.</p>
 
-<p>If the input hardware cannot report the contact geometry to the browser, the height defaults to <code>1</code>.</p>
+<p>If the input hardware cannot report the contact geometry to the browser, the height
+  defaults to <code>1</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>contactHeight</em> = <em>pointerEvent</em>.height;
+<pre class="brush: js">var <em>contactHeight</em> = <em>pointerEvent</em>.height;
 </pre>
 
 <h3 id="Return_value">Return value</h3>
 
 <dl>
- <dt><code>contactHeight</code></dt>
- <dd>The height of the event's contact area (in CSS pixels).</dd>
+  <dt><code>contactHeight</code></dt>
+  <dd>The height of the event's contact area (in CSS pixels).</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
 
-<p>An example of this property is included in the <a href="/en-US/docs/Web/API/PointerEvent/width#Example">PointerEvent.width example</a>.</p>
+<p>An example of this property is included in the <a
+    href="/en-US/docs/Web/API/PointerEvent/width#Example">PointerEvent.width example</a>.
+</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events 2','#dom-pointerevent-height', 'height')}}</td>
-   <td>{{Spec2('Pointer Events 2')}}</td>
-   <td>Non-stable version.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events', '#widl-PointerEvent-height', 'height')}}</td>
-   <td>{{Spec2('Pointer Events')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Pointer Events 2','#dom-pointerevent-height', 'height')}}</td>
+      <td>{{Spec2('Pointer Events 2')}}</td>
+      <td>Non-stable version.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('Pointer Events', '#widl-PointerEvent-height', 'height')}}</td>
+      <td>{{Spec2('Pointer Events')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div class="hidden">
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+  <p>The compatibility table on this page is generated from structured data. If you'd like
+    to contribute to the data, please check out <a
+      href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+    and send us a pull request.</p>
 </div>
 
 <p>{{Compat("api.PointerEvent.height")}}</p>

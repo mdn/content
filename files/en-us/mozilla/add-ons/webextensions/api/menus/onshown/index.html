@@ -23,7 +23,7 @@ tags:
 
 <p>Note that an extension should not take too much time before calling <code>refresh()</code>, or the update will be noticeable to the user.</p>
 
-<p>The handler is passed some information about the menu and its contents, and some information from the page (such as the link and/or selection text). To get access to the information from the page, your extension must have the <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission</a> for it.</p>
+<p>The handler is passed some information about the menu and its contents, and some information from the page (such as the link and/or selection text). To get access to the information from the page, your extension must have the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permission</a> for it.</p>
 
 <p>If the <code>onShown</code> handler calls any asynchronous APIs, then it's possible that the menu has been closed again before the handler resumes execution. Because of this, if a handler calls any asynchronous APIs, it should check that the menu is still being displayed before it updates the menu. For example:</p>
 
@@ -74,7 +74,7 @@ browser.menus.onHidden.addListener(function() {
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.menus.onShown.addListener(listener)
+<pre class="brush:js">browser.menus.onShown.addListener(listener)
 browser.menus.onShown.removeListener(listener)
 browser.menus.onShown.hasListener(listener)
 </pre>
@@ -111,7 +111,7 @@ browser.menus.onShown.hasListener(listener)
 
   <p>Compared with <code>menus.OnClickData</code>, the <code>info</code> object also omits the <code>menuItemId</code> and <code>modifiers</code> properties, because of course these are not available until a menu item has been selected.</p>
 
-  <p>The <code>contexts</code>, <code>menuIds</code>, <code>frameId</code>, and <code>editable</code> properties are always provided. All the other properties in <code>info</code> are only provided if the extension has the <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission</a> for the page.</p>
+  <p>The <code>contexts</code>, <code>menuIds</code>, <code>frameId</code>, and <code>editable</code> properties are always provided. All the other properties in <code>info</code> are only provided if the extension has the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permission</a> for the page.</p>
   </dd>
  </dl>
 

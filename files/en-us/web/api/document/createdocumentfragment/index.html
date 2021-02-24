@@ -2,48 +2,60 @@
 title: Document.createDocumentFragment()
 slug: Web/API/Document/createDocumentFragment
 tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
-  - createDocumentFragment
+- API
+- DOM
+- Document
+- Method
+- Reference
+- createDocumentFragment
 ---
 <p>{{APIRef("DOM WHATWG")}}</p>
 
-<p><span class="seoSummary">Creates a new empty {{domxref("DocumentFragment")}} into which DOM nodes can be added to build an offscreen DOM tree.</span></p>
+<p><span class="seoSummary">Creates a new empty {{domxref("DocumentFragment")}} into which
+    DOM nodes can be added to build an offscreen DOM tree.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>fragment</var> = document.createDocumentFragment();
+<pre class="brush: js">var <var>fragment</var> = document.createDocumentFragment();
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A newly created, empty, {{domxref("DocumentFragment")}} object, which is ready to have nodes inserted into it.</p>
+<p>A newly created, empty, {{domxref("DocumentFragment")}} object, which is ready to have
+  nodes inserted into it.</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
-<p><code>DocumentFragment</code>s are DOM {{domxref("Node")}} objects which are never part of the main DOM tree. The usual use case is to create the document fragment, append elements to the document fragment and then append the document fragment to the DOM tree. In the DOM tree, the document fragment is replaced by all its children.</p>
+<p><code>DocumentFragment</code>s are DOM {{domxref("Node")}} objects which are never part
+  of the main DOM tree. The usual use case is to create the document fragment, append
+  elements to the document fragment and then append the document fragment to the DOM tree.
+  In the DOM tree, the document fragment is replaced by all its children.</p>
 
-<p>Since the document fragment is <em>in memory</em> and not part of the main DOM tree, appending children to it does not cause page <a href="https://developers.google.com/speed/articles/reflow?csw=1">reflow</a> (computation of element's position and geometry). Historically, using document fragments could result in <a href="http://ejohn.org/blog/dom-documentfragments/">better performance</a>.</p>
+<p>Since the document fragment is <em>in memory</em> and not part of the main DOM tree,
+  appending children to it does not cause page <a
+    href="https://developers.google.com/speed/articles/reflow?csw=1">reflow</a>
+  (computation of element's position and geometry). Historically, using document fragments
+  could result in <a href="http://ejohn.org/blog/dom-documentfragments/">better
+    performance</a>.</p>
 
-<p>You can also use the <code>DocumentFragment</code> constructor to create a new fragment:</p>
+<p>You can also use the <code>DocumentFragment</code> constructor to create a new
+  fragment:</p>
 
-<pre class="brush: js notranslate">let fragment = new DocumentFragment();</pre>
+<pre class="brush: js">let fragment = new DocumentFragment();</pre>
 
 <h2 id="Example">Example</h2>
 
-<p>This example creates a list of major web browsers in a <code>DocumentFragment</code>, then adds the new DOM subtree to the document to be displayed.</p>
+<p>This example creates a list of major web browsers in a <code>DocumentFragment</code>,
+  then adds the new DOM subtree to the document to be displayed.</p>
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;ul id="ul"&gt;
+<pre class="brush: html">&lt;ul id="ul"&gt;
 &lt;/ul&gt;</pre>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">var element  = document.getElementById('ul'); // assuming ul exists
+<pre class="brush: js">var element  = document.getElementById('ul'); // assuming ul exists
 var fragment = document.createDocumentFragment();
 var browsers = ['Firefox', 'Chrome', 'Opera',
     'Safari', 'Internet Explorer'];
@@ -64,32 +76,31 @@ element.appendChild(fragment);
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-document-createdocumentfragment', 'Document.createDocumentFragment()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Initial definition in the DOM 1 specification.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-document-createdocumentfragment',
+        'Document.createDocumentFragment()')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>Initial definition in the DOM 1 specification.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.Document.createDocumentFragment")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("DOMImplementation.createDocument", "document.implementation.createDocument()")}}</li>
- <li>{{domxref("documentFragment")}}</li>
+  <li>{{domxref("DOMImplementation.createDocument",
+    "document.implementation.createDocument()")}}</li>
+  <li>{{domxref("documentFragment")}}</li>
 </ul>

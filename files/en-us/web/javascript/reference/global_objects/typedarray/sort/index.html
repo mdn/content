@@ -2,30 +2,40 @@
 title: TypedArray.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
 tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
+- ECMAScript 2015
+- JavaScript
+- Method
+- Prototype
+- TypedArray
+- TypedArrays
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>sort()</strong></code> method sorts the elements of a typed array numerically <em>in place</em> and returns the typed array. This method has the same algorithm as {{jsxref("Array.prototype.sort()")}}, except that sorts the values numerically instead of as strings. <em>TypedArray</em> is one of the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed array types</a> here.</p>
+<p>The <code><strong>sort()</strong></code> method sorts the elements of a typed array
+  numerically <em>in place</em> and returns the typed array. This method has the same
+  algorithm as {{jsxref("Array.prototype.sort()")}}, except that sorts the values
+  numerically instead of as strings. <em>TypedArray</em> is one of the <a
+    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed
+    array types</a> here.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/typedarray-sort.html","shorter")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<div class="hidden">The source for this interactive example is stored in a GitHub
+  repository. If you'd like to contribute to the interactive examples project, please
+  clone <a
+    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
+  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>typedarray</var>.sort([<var>compareFunction</var>])</pre>
+<pre
+  class="brush: js"><var>typedarray</var>.sort([<var>compareFunction</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>compareFunction</var></code> {{optional_inline}}</dt>
- <dd>Specifies a function that defines the sort order.</dd>
+  <dt><code><var>compareFunction</var></code> {{optional_inline}}</dt>
+  <dd>Specifies a function that defines the sort order.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -56,16 +66,17 @@ numbers.sort((a, b) =&gt; a - b); // compare numbers
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.sort', 'TypedArray.prototype.sort')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.sort',
+        'TypedArray.prototype.sort')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -75,5 +86,5 @@ numbers.sort((a, b) =&gt; a - b); // compare numbers
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Array.prototype.sort()")}}</li>
+  <li>{{jsxref("Array.prototype.sort()")}}</li>
 </ul>

@@ -2,19 +2,22 @@
 title: CanvasRenderingContext2D.textBaseline
 slug: Web/API/CanvasRenderingContext2D/textBaseline
 tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
+- API
+- Canvas
+- CanvasRenderingContext2D
+- Property
+- Reference
 ---
 <div>{{APIRef}}</div>
 
-<p>The <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.textBaseline</code></strong> property of the Canvas 2D API specifies the current text baseline used when drawing text.</p>
+<p>The
+  <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.textBaseline</code></strong>
+  property of the Canvas 2D API specifies the current text baseline used when drawing
+  text.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>ctx</em>.textBaseline = "top" || "hanging" || "middle" || "alphabetic" || "ideographic" || "bottom";
+<pre class="brush: js"><em>ctx</em>.textBaseline = "top" || "hanging" || "middle" || "alphabetic" || "ideographic" || "bottom";
 </pre>
 
 <h3 id="Options">Options</h3>
@@ -22,18 +25,23 @@ tags:
 <p>Possible values:</p>
 
 <dl>
- <dt><code>"top"</code></dt>
- <dd>The text baseline is the top of the em square.</dd>
- <dt><code>"hanging"</code></dt>
- <dd>The text baseline is the hanging baseline. (Used by Tibetan and other Indic scripts.)</dd>
- <dt><code>"middle"</code></dt>
- <dd>The text baseline is the middle of the em square.</dd>
- <dt><code>"alphabetic"</code></dt>
- <dd>The text baseline is the normal alphabetic baseline. Default value.</dd>
- <dt><code>"ideographic"</code></dt>
- <dd>The text baseline is the ideographic baseline; this is the bottom of the body of the characters, if the main body of characters protrudes beneath the alphabetic baseline. (Used by Chinese, Japanese, and Korean scripts.)</dd>
- <dt><code>"bottom"</code></dt>
- <dd>The text baseline is the bottom of the bounding box. This differs from the ideographic baseline in that the ideographic baseline doesn't consider descenders.</dd>
+  <dt><code>"top"</code></dt>
+  <dd>The text baseline is the top of the em square.</dd>
+  <dt><code>"hanging"</code></dt>
+  <dd>The text baseline is the hanging baseline. (Used by Tibetan and other Indic
+    scripts.)</dd>
+  <dt><code>"middle"</code></dt>
+  <dd>The text baseline is the middle of the em square.</dd>
+  <dt><code>"alphabetic"</code></dt>
+  <dd>The text baseline is the normal alphabetic baseline. Default value.</dd>
+  <dt><code>"ideographic"</code></dt>
+  <dd>The text baseline is the ideographic baseline; this is the bottom of the body of the
+    characters, if the main body of characters protrudes beneath the alphabetic baseline.
+    (Used by Chinese, Japanese, and Korean scripts.)</dd>
+  <dt><code>"bottom"</code></dt>
+  <dd>The text baseline is the bottom of the bounding box. This differs from the
+    ideographic baseline in that the ideographic baseline doesn't consider descenders.
+  </dd>
 </dl>
 
 <p>The default value is <code>"alphabetic"</code>.</p>
@@ -76,18 +84,19 @@ baselines.forEach(function (baseline, index) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-textbaseline", "CanvasRenderingContext2D.textBaseline")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-textbaseline",
+        "CanvasRenderingContext2D.textBaseline")}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -97,5 +106,5 @@ baselines.forEach(function (baseline, index) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The interface defining this property: {{domxref("CanvasRenderingContext2D")}}</li>
+  <li>The interface defining this property: {{domxref("CanvasRenderingContext2D")}}</li>
 </ul>

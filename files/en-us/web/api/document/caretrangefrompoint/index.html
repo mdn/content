@@ -2,31 +2,33 @@
 title: Document.caretRangeFromPoint()
 slug: Web/API/Document/caretRangeFromPoint
 tags:
-  - API
-  - CSSOM View
-  - Document
-  - HTML DOM
-  - Method
-  - Non-standard
-  - Reference
-  - caretRangeFromPoint
+- API
+- CSSOM View
+- Document
+- HTML DOM
+- Method
+- Non-standard
+- Reference
+- caretRangeFromPoint
 ---
 <div>{{APIRef("DOM")}}{{Non-standard_header}}</div>
 
-<p>The <strong><code>caretRangeFromPoint()</code></strong> method of the {{domxref("Document")}} interface returns a {{domxref("Range")}} object for the document fragment under the specified coordinates.</p>
+<p>The <strong><code>caretRangeFromPoint()</code></strong> method of the
+  {{domxref("Document")}} interface returns a {{domxref("Range")}} object for the document
+  fragment under the specified coordinates.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>range</var> = <var>document</var>.caretRangeFromPoint(float <var>x</var>, float <var>y</var>);
+<pre class="brush: js">var <var>range</var> = <var>document</var>.caretRangeFromPoint(float <var>x</var>, float <var>y</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><var>x</var></dt>
- <dd>A horizontal position within the current viewport.</dd>
- <dt><var>y</var></dt>
- <dd>A vertical position within the current viewport.</dd>
+  <dt><var>x</var></dt>
+  <dd>A horizontal position within the current viewport.</dd>
+  <dt><var>y</var></dt>
+  <dd>A vertical position within the current viewport.</dd>
 </dl>
 
 <h3 id="Returns">Returns</h3>
@@ -34,8 +36,9 @@ tags:
 <p>One of the following:</p>
 
 <ul>
- <li>A {{domxref("Range")}}.</li>
- <li><code>Null</code>, if <var>x</var> or <var>y</var> are negative, outside viewport, or there is no text entry node.</li>
+  <li>A {{domxref("Range")}}.</li>
+  <li><code>Null</code>, if <var>x</var> or <var>y</var> are negative, outside viewport,
+    or there is no text entry node.</li>
 </ul>
 
 <h2 id="Example">Example</h2>
@@ -44,7 +47,8 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html">&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+<pre
+  class="brush: html">&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
 sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
 sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
 Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;</pre>
@@ -80,7 +84,8 @@ for (let i = 0; i &lt; paragraphs.length; i++) {
 
 <h3 id="Result">Result</h3>
 
-<p>{{ EmbedLiveSample('Example', '', '', '', 'Web/API/Document/caretRangeFromPoint') }}</p>
+<p>{{ EmbedLiveSample('Example', '', '', '', 'Web/API/Document/caretRangeFromPoint') }}
+</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

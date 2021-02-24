@@ -8,7 +8,7 @@ tags:
   - Reference
   - Web
 ---
-<div>{{HTMLRef}}{{Obsolete_header}}</div>
+<div>{{HTMLRef}}{{deprecated_header}}</div>
 
 <p><span class="seoSummary"><strong><code>&lt;isindex&gt;</code></strong> was an obsolete HTML element that put a text field in a page for querying the document.</span> <code>&lt;isindex&gt;</code> provided a single line text input for entering a query string. When sent, the server would return a list of pages matching the query. Its support depended on both the browser and the server to react to the query.</p>
 
@@ -27,13 +27,13 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: html notranslate">&lt;head&gt;
+<pre class="brush: html">&lt;head&gt;
   &lt;isindex prompt="Search Document..." action="/search"&gt;
 &lt;/head&gt;</pre>
 
 <p>In past browsers, this would generate, at parse time, a DOM tree equivalent to the following HTML:</p>
 
-<pre class="brush: html notranslate">&lt;form action="/search"&gt;
+<pre class="brush: html">&lt;form action="/search"&gt;
   &lt;hr&gt;
   &lt;label&gt;
     Search Document...

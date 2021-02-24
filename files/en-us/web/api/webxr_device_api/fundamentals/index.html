@@ -19,23 +19,23 @@ tags:
 ---
 <p>{{DefaultAPISidebar("WebXR Device API")}}{{Draft}}</p>
 
-<p>WebXR, with the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a> at its core, provides the functionality needed to bring both augmented and virtual reality (AR and VR) to the web. Together, these technologies are referred to as <strong>mixed reality</strong>, which is abbreviated <strong>MR</strong> or <strong>cross reality</strong> which is abbreviated <strong>XR</strong> and is the new trend. Mixed reality is a large and complex subject, with much to learn and many other APIs to bring together in order to create an engaging experience for users.</p>
+<p>WebXR, with the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a> at its core, provides the functionality needed to bring both augmented and virtual reality (AR and VR) to the web. Together, these technologies are referred to as <strong>mixed reality (MR)</strong> or <strong>cross reality (XR)</strong>. Mixed reality is a large and complex subject, with much to learn and many other APIs to bring together to create an engaging experience for users.</p>
 
-<p><span class="seoSummary">In this guide, we provide a fundamental overview of what WebXR is and how it works, as well as providing a foundation for what you'll need to know before you even begin to learn to develop augmented reality and virtual reality experiences for the web.</span></p>
+<p><span class="seoSummary">This guide provides an overview of what WebXR is and how it works, as well as the preliminary foundation needed to start developing augmented and virtual reality experiences for the web.</span></p>
 
 <h2 id="What_WebXR_is_and_isnt">What WebXR is and isn't</h2>
 
-<p>WebXR is an API for web content and apps to use to interface with mixed reality hardware such as VR headsets and glasses with integrated augmented reality features. This includes both managing the process of rendering the views needed to simulate the 3D experience and the ability to sense the movement of the headset or other motion sensing apparatus to provide the needed data to let you update the imagery shown to the user based on that movement.</p>
+<p>WebXR is an API for web content and apps to use to interface with mixed reality hardware such as VR headsets and glasses with integrated augmented reality features. This includes both managing the process of rendering the views needed to simulate the 3D experience and the ability to sense the movement of the headset (or other motion-sensing gear) and provide the needed data to update the imagery shown to the user.</p>
 
 <p>WebXR additionally provides support for accepting inputs from control devices such as handheld VR controllers or specialized mixed reality gamepads.</p>
 
-<p><em>WebXR is not a rendering technology, and provides no features for actually managing 3D data or rendering it to the display.</em> This is an important fact to keep in mind; while WebXR manages the timing, scheduling, and the various points of view relevant when drawing the scene, it does <em>not</em> actually know how to load and manage models, render and texture them, and so forth. That part is entirely up to you. Fortunately, WebGL and the various WebGL-based frameworks and libraries are available to make it much easier to deal with all of that.</p>
+<p><em>WebXR is not a rendering technology and does not provide features for managing 3D data or rendering it to the display.</em> This is an important fact to keep in mind. While WebXR manages the timing, scheduling, and the various points of view relevant when drawing the scene, it does <em>not</em> know how to load and manage models, nor how to render and texture them, and so forth. That part is entirely up to you. Fortunately, WebGL and the various WebGL-based frameworks and libraries are available to make it much easier to deal with all of that.</p>
 
 <h3 id="How_is_WebXR_different_from_WebVR">How is WebXR different from WebVR?</h3>
 
-<p>WebVR was generally considered to be an experimental API designed to help specification writers determine the best approaches to creating an API for virtual reality on the Web. As browser developers built support for WebVR and allowed developers to experiment, it became clear that in order to finish an API for virtual environments on the web, it would make more sense to start a new specification than to try to "fix" WebVR.</p>
+<p>WebVR was considered an experimental API designed to help specification writers determine the best approaches for creating a virtual reality API on the Web. Browser implementors added WebVR support to browsers, allowing web developers to experiment. But soon it became clear that to finish an API for virtual reality on the web, it would make more sense to start a new specification than to try to "fix" WebVR.</p>
 
-<p>Thus, WebXR was created. The most obvious difference, at the highest level, is that WebXR supports not just virtual reality applications, but also augmented reality, which blends virtual objects with the user's true physical environment.</p>
+<p>That led to the birth of WebXR. The fundamental difference is that WebXR supports not only virtual reality, but also augmented reality, which blends virtual objects with the user's ambient environment.</p>
 
 <p>Another key difference is that WebXR has integrated support for the advanced <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs">input controllers</a> that are used with most mixed reality headsets, while WebVR relied on the <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> to support the controllers. In WebXR, the primary select and squeeze actions are directly supported using events, while other controls are available through a special WebXR-specific implementation of the {{domxref("Gamepad")}} object.</p>
 
@@ -49,13 +49,13 @@ tags:
 
 <h4 id="What_is_field_of_view">What is field of view?</h4>
 
-<p>The field of view is, at its essence, the extent of the environment you are able to see at any one time. The width of the field of view is measured as the angle defining the arc from the far left edge of your field of view to the far right edge, and is specified in either degrees or radians.</p>
+<p>The field of view is the extent to which you are able to see the environment. The width of the field of view, specified in either degrees or radians, is measured as the angle defining the arc from the far left edge of your field of view to the far right edge.</p>
 
-<p>A human eye is typically able to take in a FOV of around 135°. Assuming a person has two healthy eyes, their total field of view is about 200° to 220° wide. Why is the FOV wider with two eyes, but not double the single-eye FOV? It's because the two eyes FOVs overlap a lot. That overlap is what gives us depth perception; within the overlap area — which is around 115° across — we have depth perception. Outside that overlap area, our vision is monocular and lacks good depth perception.</p>
+<p>A human eye is able to take in a FOV of around 135°. Assuming a person has two healthy eyes, the total field of view ends up being about 200° to 220° wide. Why is the FOV wider with two eyes, but not double the single-eye FOV? It's because the two eyes' FOVs overlap a lot. That overlap gives us depth perception, which is around 115° wide. Outside the overlap area, our vision falls back to monocular.</p>
 
-<p>The drawing shown here demonstrates the concept of FOV.  The blue wedge represents the field of view of the leflt eye; the red wedge is the FOV of the right eye. The overlapping area, which is sort of a shade of purple, is the area in which the viewer has binocular vision and, as a result, depth perception. If you look carefully, you'll see that each eye sees the die slightly differently, and the combined view blends the two into a 3D shape.</p>
+<p>The drawing shown here demonstrates the concept of FOV: blue wedge for the left eye, red wedge for the right eye. The light brown overlapping area is where the viewer has binocular vision and can perceive depth. If you look carefully, you'll see that each eye sees the die slightly differently, and the combined view blends the two into a 3D shape.</p>
 
-<p>Generally, only the horizontal FOV is specifically defined and managed by applications. For more details about this, see {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Rendering", "The optics of 3D")}}.</p>
+<p>Generally, applications only define and manage the horizontal FOV. For more details, see {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Rendering", "The optics of 3D")}}.</p>
 
 <h4 id="Field_of_view_and_mixed_reality_devices">Field of view and mixed reality devices</h4>
 
@@ -138,7 +138,7 @@ tags:
 
 <p><img alt="Drawing of a standard VR headset" src="https://mdn.mozillademos.org/files/17273/publicdomainq-virtual_reality_headset.svg" style="float: left; height: 270px; margin-bottom: 1em; margin-right: 1em; width: 360px;">Most immersive VR experiences take place using goggles or a headset of some kind. A VR headset is worn on the head, with a strap that goes behind the head to fasten it in place, and one or two displays whose screens are focused into the eyes using lenses. By presenting a slightly different image to each eye, the illusion of depth is created, giving the user a simulated 3D experience.</p>
 
-<p>The vast majority of headsets use a single display whose frame is divided in half, with one half focused onto each of the user's eyes. For example, if a headset uses a 2560x1440 screen, with the left half being used for the left eye's view and the right half or the right eye's view, the framebuffer is used like this:</p>
+<p>The vast majority of headsets use a single display whose frame is divided in half, with one half focused onto each of the user's eyes. For example, if a headset uses a 2560x1440 screen, with the left half being used for the left eye's view and the right half for the right eye's view, the framebuffer is used like this:</p>
 
 <p><img alt="Diagram showing how a framebuffer is divided between two eyes' viewpoints" src="https://mdn.mozillademos.org/files/17011/TwoViewsOneFramebuffer.svg"></p>
 

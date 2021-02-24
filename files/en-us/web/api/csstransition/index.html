@@ -35,7 +35,7 @@ tags:
 
 <p>The transition in the following example changes the width of the box on hover. Calling {{domxref("Element.getAnimations()")}} returns an array of all {{domxref("Animation")}} objects. In our case this returns a <code>CSSTransition</code> object, representing the animation created.</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   background-color: #165baa;
   color: #fff;
   width: 100px;
@@ -47,7 +47,7 @@ tags:
   width: 200px;
 }</pre>
 
-<pre class="brush: js notranslate">const item = document.querySelector(".box");
+<pre class="brush: js">const item = document.querySelector(".box");
 item.addEventListener('transitionrun', () => {
   let animations = document.querySelector(".box").getAnimations();
   console.log(animations[0]);

@@ -41,7 +41,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">OPTIONS /index.html HTTP/1.1
+<pre class="brush: html">OPTIONS /index.html HTTP/1.1
 OPTIONS * HTTP/1.1
 </pre>
 
@@ -51,11 +51,11 @@ OPTIONS * HTTP/1.1
 
 <p>To find out which request methods a server supports, one can use the <code>curl</code> command-line program to issue an <code>OPTIONS</code> request:</p>
 
-<pre class="brush: bash notranslate">curl -X OPTIONS https://example.org -i</pre>
+<pre class="brush: bash">curl -X OPTIONS https://example.org -i</pre>
 
 <p>The response then contains an {{HTTPHeader("Allow")}} header that holds the allowed methods:</p>
 
-<pre class="notranslate">HTTP/1.1 204 No Content
+<pre>HTTP/1.1 204 No Content
 <mark>Allow: OPTIONS, GET, HEAD, POST</mark>
 Cache-Control: max-age=604800
 Date: Thu, 13 Oct 2016 11:45:00 GMT
@@ -71,7 +71,7 @@ Server: EOS (lax004/2813)
  <li>The {{HTTPHeader("Access-Control-Request-Headers")}} header tells the server that when the actual request is sent, it will have the <code>X-PINGOTHER</code> and <code>Content-Type</code> headers.</li>
 </ul>
 
-<pre class="notranslate">OPTIONS /resources/post-here/ HTTP/1.1
+<pre>OPTIONS /resources/post-here/ HTTP/1.1
 Host: bar.example
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: en-us,en;q=0.5
@@ -94,7 +94,7 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type</mark></pre>
  <dd>The above permissions may be cached for 86,400 seconds (1 day).</dd>
 </dl>
 
-<pre class="notranslate">HTTP/1.1 204 No Content
+<pre>HTTP/1.1 204 No Content
 Date: Mon, 01 Dec 2008 01:15:39 GMT
 Server: Apache/2.0.61 (Unix)
 <mark>Access-Control-Allow-Origin: https://foo.example

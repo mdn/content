@@ -14,9 +14,7 @@ tags:
 ---
 <div>{{AddonSidebar()}}</div>
 
-<div>
-<div>Use this event to listen for messages from another extension.</div>
-
+<p>Use this event to listen for messages from another extension.</p>
 
 <p>To send a message which will be received by the <code>onMessageExternal</code> listener, use {{WebExtAPIRef("runtime.sendMessage()")}}, passing the ID of the recipient in the <code>extensionId</code> parameter.</p>
 
@@ -26,13 +24,12 @@ tags:
  <li>a <code>sender</code> object giving details about the message sender</li>
  <li>a <code>sendResponse</code> function which it can use to send a response back to the sender.</li>
 </ul>
-</div>
 
 <p>This API can't be used in a content script.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.runtime.onMessageExternal.addListener()
+<pre class="brush:js">browser.runtime.onMessageExternal.addListener()
 browser.runtime.onMessageExternal.removeListener(listener)
 browser.runtime.onMessageExternal.hasListener(listener)
 </pre>

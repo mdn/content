@@ -2,37 +2,50 @@
 title: DocumentOrShadowRoot.pictureInPictureElement
 slug: Web/API/DocumentOrShadowRoot/pictureInPictureElement
 tags:
-  - API
-  - Document
-  - DocumentOrShadowRoot
-  - Graphics
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Property
-  - Read-only
-  - Reference
-  - pictureInPictureElement
-  - pip
+- API
+- Document
+- DocumentOrShadowRoot
+- Graphics
+- Picture-in-Picture
+- Picture-in-Picture API
+- Property
+- Read-only
+- Reference
+- pictureInPictureElement
+- pip
 ---
 <div>{{ApiRef("Fullscreen API")}}</div>
 
-<p><span class="seoSummary">The <code><strong>DocumentOrShadowRoot.pictureInPictureElement</strong></code> read-only property returns the {{ domxref("HTMLVideoElement") }} that is currently being presented in picture-in-picture mode in this document, or <code>null</code> if picture-in-picture mode is not currently in use.</span></p>
+<p><span class="seoSummary">The
+    <code><strong>DocumentOrShadowRoot.pictureInPictureElement</strong></code> read-only
+    property returns the {{ domxref("HTMLVideoElement") }} that is currently being
+    presented in picture-in-picture mode in this document, or <code>null</code> if
+    picture-in-picture mode is not currently in use.</span></p>
 
-<p>Although this property is read-only, it will not throw if it is modified (even in strict mode); the setter is a no-operation and will be ignored.</p>
+<p>Although this property is read-only, it will not throw if it is modified (even in
+  strict mode); the setter is a no-operation and will be ignored.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>var video</var> = <var>document</var>.pictureInPictureElement;</pre>
+<pre
+  class="brush: js"><var>var video</var> = <var>document</var>.pictureInPictureElement;</pre>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A reference to the {{domxref("HTMLVideoElement")}} object that's currently in picture-in-picture mode; if picture-in-picture mode isn't currently in use by the <code><var>document</var></code>, the returned value is <code>null</code>.</p>
+<p>A reference to the {{domxref("HTMLVideoElement")}} object that's currently in
+  picture-in-picture mode; if picture-in-picture mode isn't currently in use by the
+  <code><var>document</var></code>, the returned value is <code>null</code>.</p>
 
 <h2 id="Example">Examples</h2>
 
-<p>This example presents a function, <code><a href="/en-US/docs/Web/API/Document/exitPictureInPicture">Document.exitPictureInPicture()</a></code>, which tests the value returned by <code>pictureInPictureElement</code>. If the document is in picture-in-picture mode (<code>pictureInPictureElement</code> isn't <code>null</code>), <code>exitPictureInPicture()</code> is run to exit picture-in-picture mode.</p>
+<p>This example presents a function,
+  <code><a href="/en-US/docs/Web/API/Document/exitPictureInPicture">Document.exitPictureInPicture()</a></code>,
+  which tests the value returned by <code>pictureInPictureElement</code>. If the document
+  is in picture-in-picture mode (<code>pictureInPictureElement</code> isn't
+  <code>null</code>), <code>exitPictureInPicture()</code> is run to exit
+  picture-in-picture mode.</p>
 
-<pre class="brush: js notranslate">function exitPictureInPicture() {
+<pre class="brush: js">function exitPictureInPicture() {
   if (document.pictureInPictureElement) {
     document.exitPictureInPicture();
   }
@@ -41,20 +54,22 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Picture-in-Picture", "#dom-documentorshadowroot-pictureinpictureelement", "Document.pictureInPictureElement")}}</td>
-   <td>{{Spec2("Picture-in-Picture")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("Picture-in-Picture",
+        "#dom-documentorshadowroot-pictureinpictureelement",
+        "Document.pictureInPictureElement")}}</td>
+      <td>{{Spec2("Picture-in-Picture")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -64,10 +79,10 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}</li>
- <li>{{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}</li>
- <li>{{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}</li>
- <li>{{DOMxRef("Document.pictureInPictureEnabled")}}</li>
- <li>{{DOMxRef("Document.exitPictureInPicture()")}}</li>
- <li>{{CSSxRef(":picture-in-picture")}}</li>
+  <li>{{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}</li>
+  <li>{{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}</li>
+  <li>{{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}</li>
+  <li>{{DOMxRef("Document.pictureInPictureEnabled")}}</li>
+  <li>{{DOMxRef("Document.exitPictureInPicture()")}}</li>
+  <li>{{CSSxRef(":picture-in-picture")}}</li>
 </ul>

@@ -12,7 +12,7 @@ tags:
   - conditions
   - else
   - if
-  - 'l10n:priority'
+  - l10n:priority
   - ternary
 ---
 <div>{{LearnSidebar}}</div>
@@ -40,7 +40,7 @@ tags:
 
 <p>Conditional statements allow us to represent such decision making in JavaScript, from the choice that must be made (for example, "one cookie or two"), to the resulting outcome of those choices (perhaps the outcome of "ate one cookie" might be "still felt hungry", and the outcome of "ate two cookies" might be "felt full, but mom scolded me for eating all the cookies".)</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13703/cookie-choice-small.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="cookie-choice-small.png" style="display: block; margin: 0 auto;"></p>
 
 <h2 id="if...else_statements">if...else statements</h2>
 
@@ -60,7 +60,7 @@ tags:
 
 <ol>
  <li>The keyword <code>if</code> followed by some parentheses.</li>
- <li>A condition to test, placed inside the parentheses (typically "is this value bigger than this other value?", or "does this value exist?"). The condition makes use of the <a href="/en-US/docs/Learn/JavaScript/First_steps/Math#Comparison_operators">comparison operators</a> we discussed in the last module and returns <code>true</code> or <code>false</code>.</li>
+ <li>A condition to test, placed inside the parentheses (typically "is this value bigger than this other value?", or "does this value exist?"). The condition makes use of the <a href="/en-US/docs/Learn/JavaScript/First_steps/Math#comparison_operators">comparison operators</a> we discussed in the last module and returns <code>true</code> or <code>false</code>.</li>
  <li>A set of curly braces, inside which we have some code — this can be any code we like, and it only runs if the condition returns <code>true</code>.</li>
  <li>The keyword <code>else</code>.</li>
  <li>Another set of curly braces, inside which we have some more code — this can be any code we like, and it only runs if the condition is not <code>true</code> — or in other words, the condition is <code>false</code>.</li>
@@ -90,11 +90,12 @@ else run some other code instead</pre>
 <p>To understand this syntax better, let's consider a real example. Imagine a child being asked for help with a chore by their mother or father. The parent might say "Hey sweetheart! If you help me by going and doing the shopping, I'll give you some extra allowance so you can afford that toy you wanted." In JavaScript, we could represent this like so:</p>
 
 <pre class="brush: js">let shoppingDone = false;
+let childsAllowance;
 
 if (shoppingDone === true) {
-  let childsAllowance = 10;
+  childsAllowance = 10;
 } else {
-  let childsAllowance = 5;
+  childsAllowance = 5;
 }</pre>
 
 <p>This code as shown always results in the <code>shoppingDone</code> variable returning <code>false</code>, meaning disappointment for our poor child. It'd be up to us to provide a mechanism for the parent to set the <code>shoppingDone</code> variable to <code>true</code> if the child did the shopping.</p>
@@ -158,7 +159,7 @@ function setWeather() {
 
 <h3 id="A_note_on_comparison_operators">A note on comparison operators</h3>
 
-<p>Comparison operators are used to test the conditions inside our conditional statements. We first looked at comparison operators back in our <a href="/en-US/docs/Learn/JavaScript/First_steps/Math#Comparison_operators">Basic math in JavaScript — numbers and operators</a> article. Our choices are:</p>
+<p>Comparison operators are used to test the conditions inside our conditional statements. We first looked at comparison operators back in our <a href="/en-US/docs/Learn/JavaScript/First_steps/Math#comparison_operators">Basic math in JavaScript — numbers and operators</a> article. Our choices are:</p>
 
 <ul>
  <li><code>===</code> and <code>!==</code> — test if one value is identical to, or not identical to, another.</li>
@@ -183,11 +184,12 @@ if (cheese) {
 <p>And, returning to our previous example about the child doing a chore for their parent, you could write it like this:</p>
 
 <pre class="brush: js">let shoppingDone = false;
+let childsAllowance;
 
 if (shoppingDone) { // don't need to explicitly specify '=== true'
-  let childsAllowance = 10;
+  childsAllowance = 10;
 } else {
-  let childsAllowance = 5;
+  childsAllowance = 5;
 }</pre>
 
 <h3 id="Nesting_if_..._else">Nesting if ... else</h3>
@@ -206,7 +208,7 @@ if (shoppingDone) { // don't need to explicitly specify '=== true'
 
 <h3 id="Logical_operators_AND_OR_and_NOT">Logical operators: AND, OR and NOT</h3>
 
-<p>If you want to test multiple conditions without writing nested <code>if...else</code> statements, <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators">logical operators</a> can help you. When used in conditions, the first two do the following:</p>
+<p>If you want to test multiple conditions without writing nested <code>if...else</code> statements, <a href="/en-US/docs/Web/JavaScript/Reference/Operators">logical operators</a> can help you. When used in conditions, the first two do the following:</p>
 
 <ul>
  <li><code>&amp;&amp;</code> — AND; allows you to chain together two or more expressions so that all of them have to individually evaluate to <code>true</code> for the whole expression to return <code>true</code>.</li>
@@ -568,7 +570,7 @@ textarea.onkeydown = function(e){
 
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
-  const caretPos = textarea.selectionStart;
+  let caretPos = textarea.selectionStart;
   const front = (textarea.value).substring(0, caretPos);
   const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
 
@@ -603,7 +605,7 @@ textarea.onkeyup = function(){
 
 <ul>
  <li>It should accept the <code>choice</code> variable as its input expression.</li>
- <li>For each case, the choice should equal one of the possible values that can be selected, that is, white, black, purple, yellow, or psychedelic. Note that the values are case sensitive, and should equal the <code>&lt;option&gt;</code> element <code>value</code> values rather than the visual labels.</li>
+ <li>For each case, the choice should equal one of the possible <code>&lt;option&gt; value</code>s that can be selected, that is, <code>white</code>, <code>black</code>, <code>purple</code>, <code>yellow</code>, or <code>psychedelic</code>.</li>
  <li>For each case, the <code>update()</code> function should be run, and be passed two color values, the first one for the background color, and the second one for the text color. Remember that color values are strings, so need to be wrapped in quotes. </li>
 </ul>
 
@@ -721,7 +723,7 @@ textarea.onkeydown = function(e){
 
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
-  const caretPos = textarea.selectionStart;
+  let caretPos = textarea.selectionStart;
   const front = (textarea.value).substring(0, caretPos);
   const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
 
@@ -756,13 +758,13 @@ textarea.onkeyup = function(){
 
 <h2 id="Conclusion">Conclusion</h2>
 
-<p>And that's all you really need to know about conditional structures in JavaScript right now! If there is anything you didn't understand, feel free to read through the article again, or <a href="/en-US/docs/Learn#Contact_us">contact us</a> to ask for help.</p>
+<p>And that's all you really need to know about conditional structures in JavaScript right now! If there is anything you didn't understand, feel free to read through the article again, or <a href="/en-US/docs/Learn#contact_us">contact us</a> to ask for help.</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Math#Comparison_operators">Comparison operators</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Conditional_statements">Conditional statements in detail</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Math#comparison_operators">Comparison operators</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#conditional_statements">Conditional statements in detail</a></li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if...else reference</a></li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">Conditional (ternary) operator reference</a></li>
 </ul>

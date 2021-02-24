@@ -2,56 +2,89 @@
 title: Window.requestAnimationFrame()
 slug: Web/API/window/requestAnimationFrame
 tags:
-  - API
-  - Animations
-  - Drawing
-  - Games
-  - Graphics
-  - HTML DOM
-  - Intermediate
-  - JavaScript timers
-  - Method
-  - Performance
-  - Reference
-  - Scheduling
-  - Window
-  - requestAnimationFrame
+- API
+- Animations
+- Drawing
+- Games
+- Graphics
+- HTML DOM
+- Intermediate
+- JavaScript timers
+- Method
+- Performance
+- Reference
+- Scheduling
+- Window
+- requestAnimationFrame
 ---
 <div>{{APIRef}}</div>
 
-<p>The <strong><code>window.requestAnimationFrame()</code></strong> method tells the browser that you wish to perform an animation and requests that the browser calls a specified function to update an animation before the next repaint. The method takes a callback as an argument to be invoked before the repaint.</p>
+<p>The <strong><code>window.requestAnimationFrame()</code></strong> method tells the
+  browser that you wish to perform an animation and requests that the browser calls a
+  specified function to update an animation before the next repaint. The method takes a
+  callback as an argument to be invoked before the repaint.</p>
 
-<div class="note"><strong>Note:</strong> Your callback routine must itself call <code>requestAnimationFrame()</code> again if you want to animate another frame at the next repaint. <code>requestAnimationFrame()</code> is 1 shot.</div>
+<div class="note"><strong>Note:</strong> Your callback routine must itself call
+  <code>requestAnimationFrame()</code> again if you want to animate another frame at the
+  next repaint. <code>requestAnimationFrame()</code> is 1 shot.</div>
 
-<p>You should call this method whenever you're ready to update your animation onscreen. This will request that your animation function be called before the browser performs the next repaint. The number of callbacks is usually 60 times per second, but will generally match the display refresh rate in most web browsers as per W3C recommendation. <code>requestAnimationFrame()</code> calls are paused in most browsers when running in background tabs or hidden {{ HTMLElement("iframe") }}s in order to improve performance and battery life.</p>
+<p>You should call this method whenever you're ready to update your animation onscreen.
+  This will request that your animation function be called before the browser performs the
+  next repaint. The number of callbacks is usually 60 times per second, but will generally
+  match the display refresh rate in most web browsers as per W3C recommendation.
+  <code>requestAnimationFrame()</code> calls are paused in most browsers when running in
+  background tabs or hidden {{ HTMLElement("iframe") }}s in order to improve performance
+  and battery life.</p>
 
-<p>The callback method is passed a single argument, a {{domxref("DOMHighResTimeStamp")}}, which indicates the current time (based on the number of milliseconds since <a href="/en-US/docs/Web/API/DOMHighResTimeStamp#The_time_origin">time origin</a>). When multiple callbacks queued by <code>requestAnimationFrame()</code> begin to fire in a single frame, each receives the same timestamp even though time has passed during the computation of every previous callback's workload (in the code example below we only animate the frame when the timestamp changes, i.e. on the first callback). This timestamp is a decimal number, in milliseconds, but with a minimal precision of 1ms (1000 µs).</p>
+<p>The callback method is passed a single argument, a {{domxref("DOMHighResTimeStamp")}},
+  which indicates the current time (based on the number of milliseconds since <a
+    href="/en-US/docs/Web/API/DOMHighResTimeStamp#The_time_origin">time origin</a>). When
+  multiple callbacks queued by <code>requestAnimationFrame()</code> begin to fire in a
+  single frame, each receives the same timestamp even though time has passed during the
+  computation of every previous callback's workload (in the code example below we only
+  animate the frame when the timestamp changes, i.e. on the first callback). This
+  timestamp is a decimal number, in milliseconds, but with a minimal precision of 1ms
+  (1000 µs).</p>
 
 <div class="notecard warning">
-<p>Be sure to always use the first argument (or some other method for getting the current time) to calculate how much the animation will progress in a frame, <strong>otherwise the animation will run faster on high refresh rate screens</strong>. Check the example below for a way to do this.</p>
+  <p>Be sure to always use the first argument (or some other method for getting the
+    current time) to calculate how much the animation will progress in a frame,
+    <strong>otherwise the animation will run faster on high refresh rate screens</strong>.
+    Check the example below for a way to do this.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">window.requestAnimationFrame(<em>callback</em>);
+<pre class="brush: js">window.requestAnimationFrame(<em>callback</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>callback</code></dt>
- <dd>The function to call when it's time to update your animation for the next repaint. The callback function is passed one single argument, a {{domxref("DOMHighResTimeStamp")}} similar to the one returned by {{domxref('performance.now()')}}, indicating the point in time when <code>requestAnimationFrame()</code> starts to execute callback functions.</dd>
+  <dt><code>callback</code></dt>
+  <dd>The function to call when it's time to update your animation for the next repaint.
+    The callback function is passed one single argument, a
+    {{domxref("DOMHighResTimeStamp")}} similar to the one returned by
+    {{domxref('performance.now()')}}, indicating the point in time when
+    <code>requestAnimationFrame()</code> starts to execute callback functions.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code>long</code> integer value, the request id, that uniquely identifies the entry in the callback list. This is a non-zero value, but you may not make any other assumptions about its value. You can pass this value to {{domxref("window.cancelAnimationFrame()")}} to cancel the refresh callback request.</p>
+<p>A <code>long</code> integer value, the request id, that uniquely identifies the entry
+  in the callback list. This is a non-zero value, but you may not make any other
+  assumptions about its value. You can pass this value to
+  {{domxref("window.cancelAnimationFrame()")}} to cancel the refresh callback request.</p>
 
 <h2 id="Notes">Example</h2>
 
-<p>In this example, an element is animated for 2 seconds (2000 milliseconds). The element moves at a speed of 0.1px/ms to the right, so its relative position (in CSS pixels) can be calculated in function of the time elapsed since the start of the animation (in milliseconds) with <code>0.1 * elapsed</code>. The element's final position is 200px (<code>0.1 * 2000</code>) to the right of its initial position.</p>
+<p>In this example, an element is animated for 2 seconds (2000 milliseconds). The element
+  moves at a speed of 0.1px/ms to the right, so its relative position (in CSS pixels) can
+  be calculated in function of the time elapsed since the start of the animation (in
+  milliseconds) with <code>0.1 * elapsed</code>. The element's final position is 200px
+  (<code>0.1 * 2000</code>) to the right of its initial position.</p>
 
-<pre class="brush: js notranslate">const element = document.getElementById('some-element-you-want-to-animate');
+<pre class="brush: js">const element = document.getElementById('some-element-you-want-to-animate');
 let start;
 
 function step(timestamp) {
@@ -72,47 +105,60 @@ window.requestAnimationFrame(step);
 
 <h2 id="Notes_2">Notes</h2>
 
-<p>Edge versions below 17 and Internet Explorer do not reliably fire <code>requestAnimationFrame</code> before the paint cycle.</p>
+<p>Edge versions below 17 and Internet Explorer do not reliably fire
+  <code>requestAnimationFrame</code> before the paint cycle.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#animation-frames', 'requestAnimationFrame')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change, supersedes the previous one.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('RequestAnimationFrame', '#dom-windowanimationtiming-requestanimationframe', 'requestAnimationFrame')}}</td>
-   <td>{{Spec2('RequestAnimationFrame')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#animation-frames', 'requestAnimationFrame')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td>No change, supersedes the previous one.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('RequestAnimationFrame',
+        '#dom-windowanimationtiming-requestanimationframe', 'requestAnimationFrame')}}
+      </td>
+      <td>{{Spec2('RequestAnimationFrame')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
 <p>{{Compat("api.Window.requestAnimationFrame")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("Window.mozAnimationStartTime")}}</li>
- <li>{{domxref("Window.cancelAnimationFrame()")}}</li>
- <li><a href="http://weblogs.mozillazine.org/roc/archives/2010/08/mozrequestanima.html">mozRequestAnimationFrame</a> - Blog post</li>
- <li><a href="http://paulirish.com/2011/requestanimationframe-for-smart-animating/">requestAnimationFrame for smart animating</a> - Blog post</li>
- <li><a href="http://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/">Animating with javascript: from setInterval to requestAnimationFrame</a> - Blog post</li>
- <li><a href="http://blogs.msdn.com/b/ie/archive/2011/07/05/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-1.aspx">Using PC Hardware more efficiently in HTML5: New Web Performance APIs, Part 1</a> - Blog post</li>
- <li><a href="http://www.testufo.com/#test=animation-time-graph">TestUFO: Test your web browser for requestAnimationFrame() Timing Deviations</a></li>
- <li>Paul Irish: <a class="external external-icon" href="http://updates.html5rocks.com/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision">requestAnimationFrame API: now with sub-millisecond precision</a></li>
+  <li>{{domxref("Window.mozAnimationStartTime")}}</li>
+  <li>{{domxref("Window.cancelAnimationFrame()")}}</li>
+  <li><a
+      href="http://weblogs.mozillazine.org/roc/archives/2010/08/mozrequestanima.html">mozRequestAnimationFrame</a>
+    - Blog post</li>
+  <li><a
+      href="http://paulirish.com/2011/requestanimationframe-for-smart-animating/">requestAnimationFrame
+      for smart animating</a> - Blog post</li>
+  <li><a
+      href="http://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/">Animating
+      with javascript: from setInterval to requestAnimationFrame</a> - Blog post</li>
+  <li><a
+      href="http://blogs.msdn.com/b/ie/archive/2011/07/05/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-1.aspx">Using
+      PC Hardware more efficiently in HTML5: New Web Performance APIs, Part 1</a> - Blog
+    post</li>
+  <li><a href="http://www.testufo.com/#test=animation-time-graph">TestUFO: Test your web
+      browser for requestAnimationFrame() Timing Deviations</a></li>
+  <li>Paul Irish: <a class="external external-icon"
+      href="http://updates.html5rocks.com/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision">requestAnimationFrame
+      API: now with sub-millisecond precision</a></li>
 </ul>

@@ -124,7 +124,7 @@ tags:
 
 <p>This section shows how to use very simple (and comparatively inflexible) definitions to demonstrate how to get the inheritance to work. In these definitions, you cannot specify any property values when you create an object. The newly-created object gets the default values, which you can change at a later time.</p>
 
-<p>In a real application, you would probably define constructors that allow you to provide property values at object creation time (see <a href="#More_flexible_constructors">More flexible constructors</a> for information). For now, these simple definitions demonstrate how the inheritance occurs.</p>
+<p>In a real application, you would probably define constructors that allow you to provide property values at object creation time (see <a href="#more_flexible_constructors">More flexible constructors</a> for information). For now, these simple definitions demonstrate how the inheritance occurs.</p>
 
 <p>The following Java and JavaScript <code>Employee</code> definitions are similar. The only difference is that you need to specify the type for each property in Java but not in JavaScript (this is due to Java being a <a href="https://en.wikipedia.org/wiki/Strong_and_weak_typing">strongly typed language</a> while JavaScript is a weakly typed language).</p>
 
@@ -291,7 +291,7 @@ mark.dept = 'general';
 mark.projects = [];
 </pre>
 
-<p>The <code>mark</code> object is assigned local values for the <code>name</code> and <code>dept</code> properties by the Employee constructor. It is assigned a local value for the <code>projects</code> property by the <code>WorkerBee</code> constructor. This gives you inheritance of properties and their values in JavaScript. Some subtleties of this process are discussed in <a href="#Property_inheritance_revisited">Property inheritance revisited</a>.</p>
+<p>The <code>mark</code> object is assigned local values for the <code>name</code> and <code>dept</code> properties by the Employee constructor. It is assigned a local value for the <code>projects</code> property by the <code>WorkerBee</code> constructor. This gives you inheritance of properties and their values in JavaScript. Some subtleties of this process are discussed in <a href="#property_inheritance_revisited">Property inheritance revisited</a>.</p>
 
 <p>Because these constructors do not let you supply instance-specific values, this information is generic. The property values are the default ones shared by all new objects created from <code>WorkerBee</code>. You can, of course, change the values of any of these properties. So, you could give specific information for <code>mark</code> as follows:</p>
 
@@ -469,7 +469,7 @@ Employee.prototype.specialty = 'none';
 
 <p>Now the value of the <code>jane</code> object's <code>specialty</code> property is "none".</p>
 
-<p>Another way of inheriting is by using the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call" title="en-US/docs/JavaScript/Reference/Global Objects/Function/call">call()</a></code> / <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" title="en-US/docs/JavaScript/Reference/Global Objects/Function/apply"><code>apply()</code></a> methods. Below are equivalent:</p>
+<p>Another way of inheriting is by using the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call()</a></code> / <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply"><code>apply()</code></a> methods. Below are equivalent:</p>
 
 <pre class="brush: js">function Engineer(name, projs, mach) {
   this.base = WorkerBee;
@@ -567,7 +567,7 @@ Employee.prototype.name = 'Unknown';
 <pre class="brush: js">var f = new Foo();
 var isTrue = (f instanceof Foo);</pre>
 
-<p>For a more detailed example, suppose you have the same set of definitions shown in <a href="#Inheriting_properties">Inheriting properties</a>. Create an <code>Engineer</code> object as follows:</p>
+<p>For a more detailed example, suppose you have the same set of definitions shown in <a href="#inheriting_properties">Inheriting properties</a>. Create an <code>Engineer</code> object as follows:</p>
 
 <pre class="brush: js">var chris = new Engineer('Pigman, Chris', ['jsd'], 'fiji');
 </pre>

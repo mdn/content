@@ -2,30 +2,35 @@
 title: Math.trunc()
 slug: Web/JavaScript/Reference/Global_Objects/Math/trunc
 tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Method
-  - Reference
+- ECMAScript 2015
+- JavaScript
+- Math
+- Method
+- Reference
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>Math.trunc()</code></strong> function returns the integer part of a number by removing any fractional digits.</p>
+<p>The <strong><code>Math.trunc()</code></strong> function returns the integer part of a
+  number by removing any fractional digits.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/math-trunc.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<div class="hidden">The source for this interactive example is stored in a GitHub
+  repository. If you'd like to contribute to the interactive examples project, please
+  clone <a
+    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
+  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">Math.trunc(<var>x</var>)
+<pre class="brush: js">Math.trunc(<var>x</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>x</var></code></dt>
- <dd>A number.</dd>
+  <dt><code><var>x</var></code></dt>
+  <dd>A number.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -34,15 +39,21 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>Unlike the other three <code>Math</code> methods: {{jsxref("Math.floor()")}}, {{jsxref("Math.ceil()")}} and {{jsxref("Math.round()")}}, the way <code>Math.trunc()</code> works is very simple. It <em>truncates</em> (cuts off) the dot and the digits to the right of it, no matter whether the argument is a positive or negative number.</p>
+<p>Unlike the other three <code>Math</code> methods: {{jsxref("Math.floor()")}},
+  {{jsxref("Math.ceil()")}} and {{jsxref("Math.round()")}}, the way
+  <code>Math.trunc()</code> works is very simple. It <em>truncates</em> (cuts off) the dot
+  and the digits to the right of it, no matter whether the argument is a positive or
+  negative number.</p>
 
 <p>The argument passed to this method will be converted to number type implicitly.</p>
 
-<p>Because <code>trunc()</code> is a static method of <code>Math</code>, you always use it as <code>Math.trunc()</code>, rather than as a method of a <code>Math</code> object you created (<code>Math</code> is not a constructor).</p>
+<p>Because <code>trunc()</code> is a static method of <code>Math</code>, you always use it
+  as <code>Math.trunc()</code>, rather than as a method of a <code>Math</code> object you
+  created (<code>Math</code> is not a constructor).</p>
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="brush: js notranslate">if (!Math.trunc) {
+<pre class="brush: js">if (!Math.trunc) {
   Math.trunc = function(v) {
     v = +v;
     if (!isFinite(v)) return v;
@@ -66,7 +77,7 @@ tags:
 
 <p>or:</p>
 
-<pre class="brush: js notranslate">if (!Math.trunc) {
+<pre class="brush: js">if (!Math.trunc) {
   Math.trunc = function (v) {
     return v &lt; 0 ? Math.ceil(v) : Math.floor(v);
   };
@@ -77,7 +88,7 @@ tags:
 
 <h3 id="Using_Math.trunc">Using Math.trunc()</h3>
 
-<pre class="brush: js notranslate">Math.trunc(13.37);    // 13
+<pre class="brush: js">Math.trunc(13.37);    // 13
 Math.trunc(42.84);    // 42
 Math.trunc(0.123);    //  0
 Math.trunc(-0.123);   // -0
@@ -90,16 +101,16 @@ Math.trunc();         // NaN
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.trunc', 'Math.trunc')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-math.trunc', 'Math.trunc')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -109,9 +120,9 @@ Math.trunc();         // NaN
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Math.abs()")}}</li>
- <li>{{jsxref("Math.ceil()")}}</li>
- <li>{{jsxref("Math.floor()")}}</li>
- <li>{{jsxref("Math.round()")}}</li>
- <li>{{jsxref("Math.sign()")}}</li>
+  <li>{{jsxref("Math.abs()")}}</li>
+  <li>{{jsxref("Math.ceil()")}}</li>
+  <li>{{jsxref("Math.floor()")}}</li>
+  <li>{{jsxref("Math.round()")}}</li>
+  <li>{{jsxref("Math.sign()")}}</li>
 </ul>

@@ -2,19 +2,21 @@
 title: KeyboardEvent()
 slug: Web/API/KeyboardEvent/KeyboardEvent
 tags:
-  - API
-  - Constructor
-  - DOM
-  - KeyboardEvent
-  - Reference
+- API
+- Constructor
+- DOM
+- KeyboardEvent
+- Reference
 ---
 <p>{{APIRef("DOM Events")}}</p>
 
-<p>The <strong><code>KeyboardEvent()</code></strong> constructor creates a new {{domxref("KeyboardEvent")}}.</p>
+<p>The <strong><code>KeyboardEvent()</code></strong> constructor creates a new
+	{{domxref("KeyboardEvent")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"> <em>event</em> = new KeyboardEvent(<em>typeArg</em>, <em>KeyboardEventInit</em>);</pre>
+<pre
+	class="brush: js"> <em>event</em> = new KeyboardEvent(<em>typeArg</em>, <em>KeyboardEventInit</em>);</pre>
 
 <h3 id="Values">Values</h3>
 
@@ -24,24 +26,50 @@ tags:
 	<dt><em>KeyboardEventInit</em>{{optional_inline}}</dt>
 	<dd>Is a <code>KeyboardEventInit</code> dictionary, having the following fields:
 
-	<ul>
-		<li><code>"key"</code>, optional and defaulting to <code>""</code>, of type {{domxref("DOMString")}}, that sets the value of {{domxref("KeyboardEvent.key")}}.</li>
-		<li><code>"code"</code>, optional and defaulting to <code>""</code>, of type {{domxref("DOMString")}}, that sets the value of {{domxref("KeyboardEvent.code")}}.</li>
-		<li><code>"location"</code>, optional and defaulting to <code>0</code>, of type <code>unsigned long</code>, that sets the value of {{domxref("KeyboardEvent.location")}}.</li>
-		<li><code>"ctrlKey"</code>, optional and defaulting to <code>false</code>, of type {{jsxref("Boolean")}}, that sets the value of {{domxref("KeyboardEvent.ctrlKey")}}.</li>
-		<li><code>"shiftKey"</code>, optional and defaulting to <code>false</code>, of type {{jsxref("Boolean")}}, that sets the value of {{domxref("KeyboardEvent.shiftKey")}}.</li>
-		<li><code>"altKey"</code>, optional and defaulting to <code>false</code>, of type {{jsxref("Boolean")}}, that sets the value of {{domxref("KeyboardEvent.altKey")}}.</li>
-		<li><code>"metaKey"</code>, optional and defaulting to <code>false</code>, of type {{jsxref("Boolean")}}, that sets the value of {{domxref("KeyboardEvent.metaKey")}}.</li>
-		<li><code>"repeat"</code>, optional and defaulting to <code>false</code>, of type {{jsxref("Boolean")}}, that sets the value of {{domxref("KeyboardEvent.repeat")}}.</li>
-		<li><code>"isComposing"</code>, optional and defaulting to <code>false</code>, of type {{jsxref("Boolean")}}, that sets the value of {{domxref("KeyboardEvent.isComposing")}}.</li>
-		<li><code>"charCode"</code>, optional and defaulting to <code>0</code>, of type <code>unsigned long</code>, that sets the value of the deprecated {{domxref("KeyboardEvent.charCode")}}.</li>
-		<li><code>"keyCode"</code>, optional and defaulting to <code>0</code>, of type <code>unsigned long</code>, that sets the value of the deprecated {{domxref("KeyboardEvent.keyCode")}}.</li>
-		<li><code>"which"</code>, optional and defaulting to <code>0</code>, of type <code>unsigned long</code>, that sets the value of the deprecated {{domxref("KeyboardEvent.which")}}.</li>
-	</ul>
+		<ul>
+			<li><code>"key"</code>, optional and defaulting to <code>""</code>, of type
+				{{domxref("DOMString")}}, that sets the value of
+				{{domxref("KeyboardEvent.key")}}.</li>
+			<li><code>"code"</code>, optional and defaulting to <code>""</code>, of type
+				{{domxref("DOMString")}}, that sets the value of
+				{{domxref("KeyboardEvent.code")}}.</li>
+			<li><code>"location"</code>, optional and defaulting to <code>0</code>, of
+				type <code>unsigned long</code>, that sets the value of
+				{{domxref("KeyboardEvent.location")}}.</li>
+			<li><code>"ctrlKey"</code>, optional and defaulting to <code>false</code>, of
+				type {{jsxref("Boolean")}}, that sets the value of
+				{{domxref("KeyboardEvent.ctrlKey")}}.</li>
+			<li><code>"shiftKey"</code>, optional and defaulting to <code>false</code>, of
+				type {{jsxref("Boolean")}}, that sets the value of
+				{{domxref("KeyboardEvent.shiftKey")}}.</li>
+			<li><code>"altKey"</code>, optional and defaulting to <code>false</code>, of
+				type {{jsxref("Boolean")}}, that sets the value of
+				{{domxref("KeyboardEvent.altKey")}}.</li>
+			<li><code>"metaKey"</code>, optional and defaulting to <code>false</code>, of
+				type {{jsxref("Boolean")}}, that sets the value of
+				{{domxref("KeyboardEvent.metaKey")}}.</li>
+			<li><code>"repeat"</code>, optional and defaulting to <code>false</code>, of
+				type {{jsxref("Boolean")}}, that sets the value of
+				{{domxref("KeyboardEvent.repeat")}}.</li>
+			<li><code>"isComposing"</code>, optional and defaulting to <code>false</code>,
+				of type {{jsxref("Boolean")}}, that sets the value of
+				{{domxref("KeyboardEvent.isComposing")}}.</li>
+			<li><code>"charCode"</code>, optional and defaulting to <code>0</code>, of
+				type <code>unsigned long</code>, that sets the value of the deprecated
+				{{domxref("KeyboardEvent.charCode")}}.</li>
+			<li><code>"keyCode"</code>, optional and defaulting to <code>0</code>, of type
+				<code>unsigned long</code>, that sets the value of the deprecated
+				{{domxref("KeyboardEvent.keyCode")}}.</li>
+			<li><code>"which"</code>, optional and defaulting to <code>0</code>, of type
+				<code>unsigned long</code>, that sets the value of the deprecated
+				{{domxref("KeyboardEvent.which")}}.</li>
+		</ul>
 
-	<div class="note">
-	<p><em>The <code>KeyboardEventInit</code> dictionary also accepts fields from the {{domxref("UIEvent.UIEvent", "UIEventInit")}} and {{domxref("Event.Event", "EventInit")}} dictionaries.</em></p>
-	</div>
+		<div class="note">
+			<p><em>The <code>KeyboardEventInit</code> dictionary also accepts fields from
+					the {{domxref("UIEvent.UIEvent", "UIEventInit")}} and
+					{{domxref("Event.Event", "EventInit")}} dictionaries.</em></p>
+		</div>
 	</dd>
 </dl>
 
@@ -57,12 +85,14 @@ tags:
 	</thead>
 	<tbody>
 		<tr>
-			<td>{{SpecName('UI Events','#dom-keyboardevent-keyboardevent','KeyboardEvent()')}}</td>
+			<td>{{SpecName('UI
+				Events','#dom-keyboardevent-keyboardevent','KeyboardEvent()')}}</td>
 			<td>{{Spec2('UI Events')}}</td>
 			<td>Current definition.</td>
 		</tr>
 		<tr>
-			<td>{{SpecName('DOM3 Events','#interface-KeyboardEvent','KeyboardEvent()')}}</td>
+			<td>{{SpecName('DOM3 Events','#interface-KeyboardEvent','KeyboardEvent()')}}
+			</td>
 			<td>{{Spec2('DOM3 Events')}}</td>
 			<td>Initial definition.</td>
 		</tr>

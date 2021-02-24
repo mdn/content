@@ -2,22 +2,24 @@
 title: XPathResult.snapshotLength
 slug: Web/API/XPathResult/snapshotLength
 tags:
-  - API
-  - DOM XPath API
-  - Property
-  - Reference
-  - XPath
-  - XPathResult
+- API
+- DOM XPath API
+- Property
+- Reference
+- XPath
+- XPathResult
 ---
 <div>{{APIRef("DOM XPath")}}</div>
 
-<p>The read-only <strong><code>snapshotLength</code></strong> property of the {{domxref("XPathResult")}} interface represents the number of nodes in the result snapshot.</p>
+<p>The read-only <strong><code>snapshotLength</code></strong> property of the
+  {{domxref("XPathResult")}} interface represents the number of nodes in the result
+  snapshot.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>snapshotLength</var> = <var>result</var>.snapshotLength;
+<pre class="brush: js">var <var>snapshotLength</var> = <var>result</var>.snapshotLength;
 </pre>
 
 <h3 id="Return_Value">Return value</h3>
@@ -28,7 +30,9 @@ tags:
 
 <h4 id="TYPE_ERR">TYPE_ERR</h4>
 
-<p>In case {{domxref("XPathResult.resultType")}} is not <code>UNORDERED_NODE_SNAPSHOT_TYPE</code> or <code>ORDERED_NODE_SNAPSHOT_TYPE</code>, an {{domxref("XPathException")}} of type <code>TYPE_ERR</code> is thrown.</p>
+<p>In case {{domxref("XPathResult.resultType")}} is not
+  <code>UNORDERED_NODE_SNAPSHOT_TYPE</code> or <code>ORDERED_NODE_SNAPSHOT_TYPE</code>, an
+  {{domxref("XPathException")}} of type <code>TYPE_ERR</code> is thrown.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -54,23 +58,21 @@ document.querySelector("output").textContent = result.snapshotLength;
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM3 XPath", "xpath.html#XPathResult-snapshotLength", "XPathResult.snapshotLength")}}</td>
-   <td>{{Spec2("DOM3 XPath")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("DOM3 XPath", "xpath.html#XPathResult-snapshotLength",
+        "XPathResult.snapshotLength")}}</td>
+      <td>{{Spec2("DOM3 XPath")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.XPathResult.snapshotLength")}}</p>
-</div>

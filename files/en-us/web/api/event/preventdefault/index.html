@@ -2,28 +2,38 @@
 title: Event.preventDefault()
 slug: Web/API/Event/preventDefault
 tags:
-  - API
-  - DOM
-  - Event
-  - Method
-  - Reference
+- API
+- DOM
+- Event
+- Method
+- Reference
 ---
 <div>{{apiref("DOM")}}</div>
 
-<p><span class="seoSummary">The {{domxref("Event")}} interface's <strong><code>preventDefault()</code></strong> method tells the {{Glossary("user agent")}} that if the event does not get explicitly handled, its default action should not be taken as it normally would be.</span> The event continues to propagate as usual, unless one of its event listeners calls {{domxref("Event.stopPropagation", "stopPropagation()")}} or {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}}, either of which terminates propagation at once.</p>
+<p><span class="seoSummary">The {{domxref("Event")}} interface's
+    <strong><code>preventDefault()</code></strong> method tells the {{Glossary("user
+    agent")}} that if the event does not get explicitly handled, its default action should
+    not be taken as it normally would be.</span> The event continues to propagate as
+  usual, unless one of its event listeners calls {{domxref("Event.stopPropagation",
+  "stopPropagation()")}} or {{domxref("Event.stopImmediatePropagation",
+  "stopImmediatePropagation()")}}, either of which terminates propagation at once.</p>
 
-<p>As noted below, calling <code><strong>preventDefault()</strong></code> for a non-cancelable event, such as one dispatched via {{domxref("EventTarget.dispatchEvent()")}}, without specifying <code>cancelable: true</code> has no effect.</p>
+<p>As noted below, calling <code><strong>preventDefault()</strong></code> for a
+  non-cancelable event, such as one dispatched via
+  {{domxref("EventTarget.dispatchEvent()")}}, without specifying
+  <code>cancelable: true</code> has no effect.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>event</em>.preventDefault();
+<pre class="brush: js"><em>event</em>.preventDefault();
 </pre>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Blocking_default_click_handling">Blocking default click handling</h3>
 
-<p>Toggling a checkbox is the default action of clicking on a checkbox. This example demonstrates how to prevent that from happening:</p>
+<p>Toggling a checkbox is the default action of clicking on a checkbox. This example
+  demonstrates how to prevent that from happening:</p>
 
 <h4 id="JavaScript">JavaScript</h4>
 
@@ -47,9 +57,13 @@ tags:
 
 <p>{{EmbedLiveSample("Blocking_default_click_handling")}}</p>
 
-<h3 id="Stopping_keystrokes_from_reaching_an_edit_field">Stopping keystrokes from reaching an edit field</h3>
+<h3 id="Stopping_keystrokes_from_reaching_an_edit_field">Stopping keystrokes from reaching
+  an edit field</h3>
 
-<p>The following example demonstrates how invalid text input can be stopped from reaching the input field with <code>preventDefault()</code>. Nowadays, you should usually use <a href="/en-US/docs/Learn/HTML/Forms/Form_validation">native HTML form validation</a> instead.</p>
+<p>The following example demonstrates how invalid text input can be stopped from reaching
+  the input field with <code>preventDefault()</code>. Nowadays, you should usually use <a
+    href="/en-US/docs/Learn/HTML/Forms/Form_validation">native HTML form validation</a>
+  instead.</p>
 
 <h4 id="HTML_2">HTML</h4>
 
@@ -65,7 +79,8 @@ tags:
 
 <h4 id="CSS">CSS</h4>
 
-<p>We use a little bit of CSS for the warning box we'll draw when the user presses an invalid key:</p>
+<p>We use a little bit of CSS for the warning box we'll draw when the user presses an
+  invalid key:</p>
 
 <pre class="brush: css">.warning {
   border: 2px solid #f39389;
@@ -78,13 +93,15 @@ tags:
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<p>And here's the JavaScript code that does the job. First, listen for {{domxref("Element/keypress_event", "keypress")}} events:</p>
+<p>And here's the JavaScript code that does the job. First, listen for
+  {{domxref("Element/keypress_event", "keypress")}} events:</p>
 
 <pre class="brush: js">var myTextbox = document.getElementById('my-textbox');
 myTextbox.addEventListener('keypress', checkName, false);
 </pre>
 
-<p>The <code>checkName()</code> function, which looks at the pressed key and decides whether to allow it:</p>
+<p>The <code>checkName()</code> function, which looks at the pressed key and decides
+  whether to allow it:</p>
 
 <pre class="brush: js">function checkName(evt) {
   var charCode = evt.charCode;
@@ -100,7 +117,8 @@ myTextbox.addEventListener('keypress', checkName, false);
 }
 </pre>
 
-<p>The <code>displayWarning()</code> function presents a notification of a problem. It's not an elegant function but does the job for the purposes of this example:</p>
+<p>The <code>displayWarning()</code> function presents a notification of a problem. It's
+  not an elegant function but does the job for the purposes of this example:</p>
 
 <pre class="brush: js">var warningTimeout;
 var warningBox = document.createElement("div");
@@ -128,32 +146,37 @@ function displayWarning(msg) {
 
 <h2 id="Notes">Notes</h2>
 
-<p>Calling <code>preventDefault()</code> during any stage of event flow cancels the event, meaning that any default action normally taken by the implementation as a result of the event will not occur.</p>
+<p>Calling <code>preventDefault()</code> during any stage of event flow cancels the event,
+  meaning that any default action normally taken by the implementation as a result of the
+  event will not occur.</p>
 
-<p>You can use {{domxref("Event.cancelable")}} to check if the event is cancelable. Calling <code>preventDefault()</code> for a non-cancelable event has no effect.</p>
+<p>You can use {{domxref("Event.cancelable")}} to check if the event is cancelable.
+  Calling <code>preventDefault()</code> for a non-cancelable event has no effect.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-event-preventdefault', 'Event.preventDefault()')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events', '#Events-Event-preventDefault', 'Event.preventDefault()')}}</td>
-   <td>{{ Spec2('DOM2 Events') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-event-preventdefault',
+        'Event.preventDefault()')}}</td>
+      <td>{{ Spec2('DOM WHATWG') }}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 Events', '#Events-Event-preventDefault',
+        'Event.preventDefault()')}}</td>
+      <td>{{ Spec2('DOM2 Events') }}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

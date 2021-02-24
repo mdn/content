@@ -33,7 +33,7 @@ tags:
  <li>The {{domxref("XRReferenceSpaceEvent")}} event's {{domxref("XRReferenceSpaceEvent.transform", "transform")}} property, as found in the {{domxref("XRReferenceSpace.reset_event", "reset")}} event received by an {{domxref("XRReferenceSpace")}}.</li>
 </ul>
 
-<p>The advantage to using <code>XRRigidTransform</code> in these places rather than bare arrays that providing the matrix data is that the <code>XRRigidTransform</code> automatically does things like computing the inverse of the transform. Even better, once it's been computed, it's cached so that subsequent requests are significantly faster.</p>
+<p>Using <code>XRRigidTransform</code> in these places rather than bare arrays that provide the matrix data has an advantage. It automatically computes the inverse of the transform and even caches it making subsequent requests significantly faster.</p>
 
 <h2 id="Constructor">Constructor</h2>
 
@@ -63,7 +63,7 @@ tags:
 
 <p>This code snippet creates an <code>XRRigidTransform</code> to specify the offset and orientation in relation to the current reference space to use when creating a new reference space. It then requests the first animation frame callback by calling the session's {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} method.</p>
 
-<pre class="brush: js notranslate">xrSession.requestReferenceSpace(refSpaceType)
+<pre class="brush: js">xrSession.requestReferenceSpace(refSpaceType)
 .then((refSpace) =&gt; {
   xrReferenceSpace = refSpace;
   xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(

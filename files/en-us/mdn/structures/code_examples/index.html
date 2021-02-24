@@ -23,7 +23,7 @@ tags:
  <li>Static examples — plain code blocks, possibly with a screenshot to statically show the result of such code if it were to be run.</li>
  <li>Traditional MDN "live samples" — A macro that takes plain code blocks, dynamically puts them into a document inside an {{htmlelement("iframe")}} element, and embeds it into the page to show the code running live.</li>
  <li>GitHub "live samples" — A macro that takes a document in a GitHub repo inside the <a href="https://github.com/mdn/">mdn organization</a>, puts it inside an {{htmlelement("iframe")}} element, and embeds it into the page to show the code running live.</li>
- <li>Interactive examples — Our system for creating <a href="https://github.com/mdn/interactive-examples">live interactive examples</a> that show the code running live but also allow you to change code on the fly to see what the effect is.</li>
+ <li>Interactive examples — Our system for creating <a href="https://github.com/mdn/interactive-examples">live interactive examples</a> that show the code running live but also allow you to change code on the fly to see what the effect is and easily copy the results.</li>
 </ul>
 
 <p>We'll discuss each one in later sections.</p>
@@ -36,10 +36,10 @@ tags:
  <li>Static examples are useful if you just need to show some code, and it isn't super important to show what the live result is. Some people just want something to copy and paste. Maybe you are just showing an intermediate step, or the source code is enough. (For example, the article is for an advanced audience, and they just need to see the code.) Also, you might be demonstrating an API feature that doesn't work well as an embedded example, which might need its own separate page to link to.</li>
  <li>Traditional live samples are useful if you want to show source code on a page, then show it running, and you’re not that bothered about it being accessible as a standalone example. This approach also has the advantage that if you are showing source code and live examples side by side, you only need to update the code once to update both. They can however be awkward to edit and get working.</li>
  <li>GitHub live samples are useful when you’ve got an existing example you want to embed, don’t want to show the source code for, and/or you want to make sure the example is available in standalone form. They have a better contribution workflow, but it does require you to know GitHub. Also because on-page code and source code are in two different places, it is easier for them to get out of sync.</li>
- <li>The new interactive examples are great as readers can modify values on the fly — this is very valuable for learning. However, they are more complex to set up than the other forms, with more limitations, and are intended for specific purposes.</li>
+ <li>The interactive examples are great as readers can modify values on the fly — this is very valuable for learning. However, they are more complex to set up than the other forms, with more limitations, and are intended for specific purposes.</li>
 </ul>
 
-<p>If you are not sure which one to use, you should default to traditional or GitHub live samples, depending on which one you are most comfortable with. You are also welcome to ask for advice on our <a href="https://discourse.mozilla.org/c/mdn">Discourse forum</a>.</p>
+<p>If you are not sure which one to use, you should default to traditional or GitHub live samples, depending on which one you are most comfortable with. You are also welcome to <a href="/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help">ask for help</a>.</p>
 
 <h2 id="General_guidelines">General guidelines</h2>
 
@@ -55,118 +55,32 @@ tags:
 
 <h2 id="Static_examples">Static examples</h2>
 
-<p>By static examples, we are talking about static code blocks that show how a feature might be used in code. These are put on a page using the <strong>PRE</strong> and <strong>Syntax Highlighter</strong> buttons on the MDN editor UI. An example result might look like this:</p>
+<p>By static examples, we are talking about static code blocks that show how a feature might be used in code. These are put on a page using <code>&lt;pre&gt;</code> elements, as described in <a href="/en-US/docs/MDN/Guidelines/CSS_style_guide#code_syntax_highlighting">Code syntax highlighting</a>. An example result might look like this:</p>
 
-<pre class="brush: js notranslate">// This is a JS example
+<pre class="brush: js">// This is a JS example
 var test = "Hello";
 console.log(test);</pre>
 
-<div class="note">
-<p><strong>Note</strong>: For more details on adding code blocks to MDN pages, see our <a href="/en-US/docs/MDN/Contribute/Editor/Syntax_highlighting">Syntax highlighting</a> article.</p>
-</div>
-
 <p>Optionally, you might want to show a static image of the code's resulting output. For example:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15523/console-example.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
-
-<div class="note">
-<p><strong>Note</strong>: For more details on adding images to MDN pages, see our <a href="/en-US/docs/MDN/Contribute/Editor/Images">Images</a> article.</p>
-</div>
+<p><img alt="" src="console-example.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h2 id="Traditional_live_samples">Traditional live samples</h2>
 
-<p>Traditional live samples are inserted into the page using the <span class="templateLink"><code><a class="external external-icon" href="https://github.com/mdn/kumascript/blob/master/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code></span> macro. An \{{EmbedLiveSample}} call dynamically grabs the code blocks in the same document section as itself and puts them into a document, which it then inserts into the page inside an {{htmlelement("iframe")}}. This is most easily demonstrated with an example, so let's look at one in this section and the next.</p>
-
-<ol>
- <li>The easiest way is to press the <strong>Insert Code Sample Template</strong> button, which asks us for a title. For the example in the "{{anch("test")}}" section below, we entered "test" for the title, and the button generated the entire section for us.</li>
- <li>Next, we entered some very simple sample code into the HTML, CSS, and JavaScript code blocks.</li>
- <li>Finally, we published the page; the \{{EmbedLiveSample('test')}} call you can see in the edit view was replaced with an <code>&lt;iframe&gt;</code> containing the code running live.</li>
-</ol>
-
-<p>If you look at the source inside the <code>&lt;iframe&gt;</code>, you'll see this:</p>
-
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;link href="https://developer.cdn.mozilla.net/static/build/styles/samples.37902ba3b7fe.css"
-          rel="stylesheet" type="text/css"&gt;
-
-    &lt;style type="text/css"&gt;
-      h1 {
-        color: blue;
-      }
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Your example?&lt;/h1&gt;
-
-    &lt;script type="text/javascript"&gt;
-      document.querySelector('h1').onclick = function() {
-        document.querySelector('h1').textContent = 'Your example?';
-      };
-    &lt;/script&gt;
-
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
-
-<h3 id="Other_macro_parameters">Other macro parameters</h3>
-
-<p>The call we've used in the below example only uses one parameter — \{{EmbedLiveSample('test')}}. This defines which section of the document the code blocks should be grabbed from — <code>test</code> is the ID defined on the heading "test" below, so the macro will grab all the code blocks inside that heading. Put another way, it will grab all the blocks below that heading, up until another {{htmlelement("h2")}} is encountered.</p>
-
-<p>There are some other optional parameters available too. You can include a second and third parameter, which will be a set width and height for the <code>&lt;iframe&gt;</code>. For example \{{EmbedLiveSample('test', '100%', '100px')}}. You can use pixel values or percentage values. Reasonable defaults are used if you omit these.</p>
-
-<p>There are also optional fourth and fifth parameters available, a screenshot URL that points to a screenshot showing the example should look like, and a page slug that points to another page on MDN —this is only used if you want to embed an example from another page. You won't use these two very often.</p>
-
-<p>See <a href="/en-US/docs/MDN/Contribute/Structures/Live_samples#EmbedLiveSample_macro">EmbedLiveSample macro</a> for more details on all these parameters.</p>
-
-<h3 id="Tips_for_using_traditional_live_samples">Tips for using traditional live samples</h3>
-
-<ul>
- <li>You don't need to use the <strong>Insert Code Sample Template</strong> button — but it is easier when you are getting used to using it. It is possible to just insert a \{{EmbedLiveSample('test')}} macro call inside any section of your page that contains code blocks, and it will work — as long as you set the first parameter to the ID of the document section it is inside.</li>
- <li>You don't need the <em>HTML</em>, <em>CSS</em>, <em>JavaScript</em>, and <em>Result</em> headings, but it is considered best practice to include them where appropriate as it makes it easier to see what is going on. If you don't include them, you should include descriptive text to tell the reader what is happening.</li>
- <li>You don't need HTML, CSS, and JavaScript code blocks — you can embed any combination you like — HTML and CSS, HTML and JavaScript, or even HTML only.</li>
- <li>Another approach is to wrap your code blocks inside a block-level element with an ID, and then give the macro call that ID. For example, you could put your code blocks inside <code>&lt;div id="test"&gt;&lt;/div&gt;</code>, then use \{{EmbedLiveSample('test')}}.</li>
- <li>In fact, this is a better option when you have a complex document hierarchy, and you are having trouble getting just the right code blocks to be embedded. In a complex document, this can be troublesome.</li>
-</ul>
-
-<div class="note">
-<p><strong>Note</strong>: You can find a lot more information about traditional Live samples in our <a href="/en-US/docs/MDN/Contribute/Structures/Live_samples">Live samples</a> article.</p>
-</div>
-
-<h2 id="test">test</h2>
-
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html notranslate">&lt;h1&gt;My example?&lt;/h1&gt;</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css notranslate">h1 {
-  color: blue;
-}</pre>
-
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre class="brush: js notranslate">document.querySelector('h1').onclick = function() {
-  document.querySelector('h1').textContent = 'Your example?';
-};</pre>
-
-<h3 id="Result">Result</h3>
-
-<p>{{EmbedLiveSample('test')}}</p>
+<p>Traditional live samples are inserted into the page using the <code><a href="https://github.com/mdn/yari/blob/master/kumascript/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code> macro. An \{{EmbedLiveSample}} call dynamically grabs the code blocks in the same document section as itself and puts them into a document, which it then inserts into the page inside an {{htmlelement("iframe")}}. See our <a href="/en-US/docs/MDN/Structures/Live_samples">Live samples guide</a> for more information.</p>
 
 <h2 id="GitHub_live_samples">GitHub live samples</h2>
 
-<p>GitHub live samples are inserted into the page using the <span class="templateLink"><code><a class="external external-icon" href="https://github.com/mdn/kumascript/blob/master/macros/EmbedGHLiveSample.ejs">EmbedGHLiveSample</a></code></span> macro. An \{{EmbedGHLiveSample}} call dynamically grabs the document at a specified URL (which has to be inside the <strong>mdn</strong> GitHub organization), and inserts into the page inside an {{htmlelement("iframe")}}.</p>
+<p>GitHub live samples are inserted into the page using the <code><a href="https://github.com/mdn/yari/blob/master/kumascript/macros/EmbedGHLiveSample.ejs">EmbedGHLiveSample</a></code> macro. An \{{EmbedGHLiveSample}} call dynamically grabs the document at a specified URL (which has to be inside the <strong>mdn</strong> GitHub organization), and inserts into the page inside an {{htmlelement("iframe")}}.</p>
 
-<p>These work in a very similar way to the {{anch("Traditional live samples")}}, but they are a lot simpler:</p>
+<p>These work in a very similar way to Traditional live samples, but they are a lot simpler:</p>
 
 <p>You don't have to worry about placement of code blocks on the page — it grabs an HTML document in a GitHub repo, and puts it in the <code>&lt;iframe&gt;</code>.</p>
 
 <p>The macro only has three parameters:</p>
 
 <ol>
- <li>The URL of the document to embed — this is relative to the mdn organization, the top level directory of which is at <span class="pl-s1"><span class="pl-s"><code>https://mdn.github.io/</code>. So this parameter needs to contain the part of the URL after that, e.g. </span></span><code>my-subdirectory/example.html</code>. You can omit the filename if it is called <code>index.html</code>.</li>
+ <li>The URL of the document to embed — this is relative to the mdn organization, the top level directory of which is at <code>https://mdn.github.io/</code>. So this parameter needs to contain the part of the URL after that, e.g. <code>my-subdirectory/example.html</code>. You can omit the filename if it is called <code>index.html</code>.</li>
  <li>The width of the <code>&lt;iframe&gt;</code>, which can be expressed as a percentage or in pixels.</li>
  <li>The height of the <code>&lt;iframe&gt;</code>, which can be expressed as a percentage or in pixels.</li>
 </ol>
@@ -182,8 +96,8 @@ console.log(test);</pre>
 <h3 id="Tips_for_using_GitHub_live_samples">Tips for using GitHub live samples</h3>
 
 <ul>
- <li>You obviously need to get a suitable code sample onto the <a href="https://github.com/mdn/">mdn GitHub organization</a> first. This needs to be done using Git. If you are not familiar with Git, check out our <a href="/en-US/docs/Learn/Common_questions/Using_Github_pages">How do I use GitHub Pages?</a> article, and <a href="/en-US/docs/MDN/Contribute/Structures/Compatibility_tables#Preparing_to_add_the_data">Preparing to add the data</a> for more advanced uses.</li>
- <li>Your code sample needs to be suitable to show what you are trying to demonstrate — it should contain one simple example that does one thing well, should have no offensive content in it, and should follow the MDN <a href="/en-US/docs/MDN/Contribute/Guidelines/Code_samples">Code sample guidelines</a>.</li>
+ <li>You obviously need to get a suitable code sample onto the <a href="https://github.com/mdn/">mdn GitHub organization</a> first. This needs to be done using Git. If you are not familiar with Git, check out our <a href="/en-US/docs/Learn/Common_questions/Using_Github_pages">How do I use GitHub Pages?</a> article, and <a href="/en-US/docs/MDN/Structures/Compatibility_tables#preparing_to_add_the_data">Preparing to add the data</a> for more advanced uses.</li>
+ <li>Your code sample needs to be suitable to show what you are trying to demonstrate — it should contain one simple example that does one thing well, should have no offensive content in it, and should follow the MDN <a href="/en-US/docs/MDN/Guidelines/Code_guidelines">Code sample guidelines</a>.</li>
 </ul>
 
 <h2 id="Interactive_examples">Interactive examples</h2>
@@ -201,11 +115,11 @@ console.log(test);</pre>
 
 <p>If you want to submit an example, you can find out how at the <a href="https://github.com/mdn/interactive-examples/blob/master/CONTRIBUTING.md">interactive examples repo Contribution guide</a>.</p>
 
-<p>If you find a page that doesn't have an associated interactive example, you are welcome to contribute one! The <a href="https://discourse.mozilla.org/c/mdn">MDN Discourse forum</a> is a good place to ask for help or advice.</p>
+<p>If you find a page that doesn't have an associated interactive example, you are welcome to contribute one!</p>
 
 <h3 id="Interactive_example_demo">Interactive example demo</h3>
 
-<p>The \{{EmbedInteractiveExample}} macro is used to embed finished examples into MDN pages. For example, the macro call \{{EmbedInteractiveExample("pages/js/array-push.html")}} displays the following code example:</p>
+<p>The <code><a href="https://github.com/mdn/yari/blob/master/kumascript/macros/EmbedInteractiveExample.ejs">EmbedInteractiveExample</a></code> macro is used to embed finished examples into MDN pages. For example, the macro call \{{EmbedInteractiveExample("pages/js/array-push.html")}} displays the following code example:</p>
 
 <div>{{EmbedInteractiveExample("pages/js/array-push.html")}}</div>
 

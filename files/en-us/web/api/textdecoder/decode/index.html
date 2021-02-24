@@ -2,19 +2,21 @@
 title: TextDecoder.prototype.decode()
 slug: Web/API/TextDecoder/decode
 tags:
-  - API
-  - Encoding
-  - Experimental
-  - Method
-  - TextDecoder
+- API
+- Encoding
+- Experimental
+- Method
+- TextDecoder
 ---
 <div>{{APIRef("Encoding API")}}{{SeeCompatTable}}</div>
 
-<p>The <strong><code>TextDecoder.prototype.decode()</code></strong> method returns a {{DOMxRef("DOMString")}} containing the text, given in parameters, decoded with the specific method for that <code>TextDecoder</code> object.</p>
+<p>The <strong><code>TextDecoder.prototype.decode()</code></strong> method returns a
+  {{DOMxRef("DOMString")}} containing the text, given in parameters, decoded with the
+  specific method for that <code>TextDecoder</code> object.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>b1</em> = <em>decoder</em>.decode(<em>buffer</em>, <em>options</em>);
+<pre class="brush: js"><em>b1</em> = <em>decoder</em>.decode(<em>buffer</em>, <em>options</em>);
 <em>b2</em> = <em>decoder</em>.decode(<em>buffer</em>);
 <em>b3</em> = <em>decoder<code>.decode();</code></em>
 </pre>
@@ -22,15 +24,22 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>buffer</code> {{Optional_Inline}}</dt>
- <dd>Is either an <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code> or an <a href="/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBufferView"><code>ArrayBufferView</code></a> containing the text to decode.</dd>
- <dt><code>options</code> {{Optional_Inline}}</dt>
- <dd>Is a <code>TextDecodeOptions</code> dictionary with the property:
- <dl>
-  <dt><code>stream</code></dt>
-  <dd>A {{DOMxRef("Boolean")}} flag indicating that additional data will follow in subsequent calls to decode(). Set to true if processing the data in chunks, and false for the final chunk or if the data is not chunked. It defaults to false.</dd>
- </dl>
- </dd>
+  <dt><code>buffer</code> {{Optional_Inline}}</dt>
+  <dd>Is either an
+    <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code>
+    or an <a
+      href="/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBufferView"><code>ArrayBufferView</code></a>
+    containing the text to decode.</dd>
+  <dt><code>options</code> {{Optional_Inline}}</dt>
+  <dd>Is a <code>TextDecodeOptions</code> dictionary with the property:
+    <dl>
+      <dt><code>stream</code></dt>
+      <dd>A {{DOMxRef("Boolean")}} flag indicating that additional data will follow in
+        subsequent calls to decode(). Set to true if processing the data in chunks, and
+        false for the final chunk or if the data is not chunked. It defaults to false.
+      </dd>
+    </dl>
+  </dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -59,29 +68,26 @@ document.getElementById('decoded-value').textContent = str;</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Encoding", "#dom-textdecoder-decode", "TextDecoder.decode()")}}</td>
-   <td>{{Spec2("Encoding")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("Encoding", "#dom-textdecoder-decode", "TextDecoder.decode()")}}</td>
+      <td>{{Spec2("Encoding")}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.TextDecoder.decode")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{DOMxRef("TextDecoder")}} interface it belongs to.</li>
+  <li>The {{DOMxRef("TextDecoder")}} interface it belongs to.</li>
 </ul>

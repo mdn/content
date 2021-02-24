@@ -2,24 +2,35 @@
 title: ReadableStream.tee()
 slug: Web/API/ReadableStream/tee
 tags:
-  - API
-  - Method
-  - ReadableStream
-  - Reference
-  - Streams
-  - tee
+- API
+- Method
+- ReadableStream
+- Reference
+- Streams
+- tee
 ---
 <div>{{APIRef("Streams")}}</div>
 
-<p class="summary">The <strong><code>tee()</code></strong> method of the {{domxref("ReadableStream")}} interface <a href="https://streams.spec.whatwg.org/#tee-a-readable-stream" id="ref-for-tee-a-readable-stream②">tees</a> the current readable stream, returning a two-element array containing the two resulting branches as new {{domxref("ReadableStream")}} instances.</p>
+<p class="summary">The <strong><code>tee()</code></strong> method of the
+  {{domxref("ReadableStream")}} interface <a
+    href="https://streams.spec.whatwg.org/#tee-a-readable-stream"
+    id="ref-for-tee-a-readable-stream②">tees</a> the current readable stream, returning a
+  two-element array containing the two resulting branches as
+  new {{domxref("ReadableStream")}} instances.</p>
 
-<p>This is useful for allowing two readers to read a stream simultaneously, perhaps at different speeds. You might do this for example in a ServiceWorker if you want to fetch a response from the server and stream it to the browser, but also stream it to the ServiceWorker cache. Since a response body cannot be consumed more than once, you’d need two copies to do this.</p>
+<p>This is useful for allowing two readers to read a stream simultaneously, perhaps at
+  different speeds. You might do this for example in a ServiceWorker if you want to fetch
+  a response from the server and stream it to the browser, but also stream it to the
+  ServiceWorker cache. Since a response body cannot be consumed more than once, you’d need
+  two copies to do this.</p>
 
-<p>To cancel the stream you then need to cancel both resulting branches. Teeing a stream will generally lock it for the duration, preventing other readers from locking it.</p>
+<p>To cancel the stream you then need to cancel both resulting branches. Teeing a stream
+  will generally lock it for the duration, preventing other readers from locking it.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>teedStreams</em> = <em>readableStream</em>.tee();</pre>
+<pre
+  class="brush: js">var <em>teedStreams</em> = <em>readableStream</em>.tee();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -32,13 +43,18 @@ tags:
 <h3 id="Exceptions">Exceptions</h3>
 
 <dl>
- <dt>TypeError</dt>
- <dd>The source stream is not a <code>ReadableStream</code>.</dd>
+  <dt>TypeError</dt>
+  <dd>The source stream is not a <code>ReadableStream</code>.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>In the following simple example, a previously-created stream is teed, then both resulting streams (contained in two members of a generated array) are passed to a function that reads the data out of the two streams and prints each stream's chunks sequentially to a different part of the UI. See <a href="https://mdn.github.io/dom-examples/streams/simple-tee-example/">Simple tee example</a> for the full code.</p>
+<p>In the following simple example, a previously-created stream is teed, then both
+  resulting streams (contained in two members of a generated array) are passed to a
+  function that reads the data out of the two streams and prints each stream's chunks
+  sequentially to a different part of the UI. See <a
+    href="https://mdn.github.io/dom-examples/streams/simple-tee-example/">Simple tee
+    example</a> for the full code.</p>
 
 <pre class="brush: js">function teeStream() {
   const teedOff = stream.tee();
@@ -76,24 +92,27 @@ function fetchStream(stream, list) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Streams","#rs-tee","tee()")}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("Streams","#rs-tee","tee()")}}</td>
+      <td>{{Spec2('Streams')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div class="hidden">
-<p>The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+  <p>The compatibility table in this page is generated from structured data. If you'd like
+    to contribute to the data, please check out <a
+      href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+    and send us a pull request.</p>
 </div>
 
 <p>{{Compat("api.ReadableStream.tee")}}</p>

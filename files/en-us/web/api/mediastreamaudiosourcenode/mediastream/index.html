@@ -2,30 +2,42 @@
 title: MediaStreamAudioSourceNode.mediaStream
 slug: Web/API/MediaStreamAudioSourceNode/mediaStream
 tags:
-  - API
-  - Audio
-  - Media
-  - MediaStream
-  - MediaStreamAudioSourceNode
-  - Reference
-  - Web
-  - Web Audio
-  - Web Audio API
-  - stream
+- API
+- Audio
+- Media
+- MediaStream
+- MediaStreamAudioSourceNode
+- Reference
+- Web
+- Web Audio
+- Web Audio API
+- stream
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
-<p><span class="seoSummary">The {{domxref("MediaStreamAudioSourceNode")}} interface's read-only <code><strong>mediaStream</strong></code> property indicates the {{domxref("MediaStream")}} that contains the audio track from which the node is receiving audio.</span> This stream was specified when the node was first created, either using the {{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNode", "MediaStreamAudioSourceNode()")}} constructor or the {{domxref("AudioContext.createMediaStreamSource()")}} method.</p>
+<p><span class="seoSummary">The {{domxref("MediaStreamAudioSourceNode")}} interface's
+    read-only <code><strong>mediaStream</strong></code> property indicates the
+    {{domxref("MediaStream")}} that contains the audio track from which the node is
+    receiving audio.</span> This stream was specified when the node was first created,
+  either using the {{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNode",
+  "MediaStreamAudioSourceNode()")}} constructor or the
+  {{domxref("AudioContext.createMediaStreamSource()")}} method.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>audioSourceStream</em> = <em>mediaStreamAudioSourceNode</em>.mediaStream;</pre>
+<pre
+  class="brush: js"><em>audioSourceStream</em> = <em>mediaStreamAudioSourceNode</em>.mediaStream;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("MediaStream")}} representing the stream which contains the {{domxref("MediaStreamTrack")}} serving as the source of audio for the node.</p>
+<p>A {{domxref("MediaStream")}} representing the stream which contains the
+  {{domxref("MediaStreamTrack")}} serving as the source of audio for the node.</p>
 
-<p>The {{Glossary("user agent")}} uses the first audio track it finds on the specified stream as the audio source for this node. However, there is no way to be certain which track that will be on multi-track streams. If the specific track matters to you, or you need to have access to the track itself, you should use a {{domxref("MediaStreamTrackAudioSourceNode")}} instead.</p>
+<p>The {{Glossary("user agent")}} uses the first audio track it finds on the specified
+  stream as the audio source for this node. However, there is no way to be certain which
+  track that will be on multi-track streams. If the specific track matters to you, or you
+  need to have access to the track itself, you should use a
+  {{domxref("MediaStreamTrackAudioSourceNode")}} instead.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -40,18 +52,20 @@ console.log(source.mediaStream);</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API','#dom-mediastreamaudiosourcenode-mediastream','MediaStreamAudioSourceNode.mediaStream')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web Audio
+        API','#dom-mediastreamaudiosourcenode-mediastream','MediaStreamAudioSourceNode.mediaStream')}}
+      </td>
+      <td>{{Spec2('Web Audio API')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

@@ -14,7 +14,7 @@ tags:
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p>Gets all commands for the extension that you have registered using the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/commands"><code>commands</code> manifest.json key</a>.</p>
+<p>Gets all commands for the extension that you have registered using the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands"><code>commands</code> manifest.json key</a>.</p>
 
 <p>The commands are returned as an array of {{WebExtAPIRef('commands.Command')}} objects. Alternately, if you are using the promise-based version of the API, <code>browser.commands.getAll()</code>, the commands are passed into the <code>onFulfilled</code> argument to <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">Promise.then()</a></code>.</p>
 
@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var getCommands = browser.commands.getAll();
+<pre class="brush:js">var getCommands = browser.commands.getAll();
 </pre>
 
 <h3 id="Parameters">Parameters</h3>

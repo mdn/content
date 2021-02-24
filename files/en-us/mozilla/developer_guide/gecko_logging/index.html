@@ -18,7 +18,7 @@ tags:
 
 <p>Note: Log module names can only contain specific characters. The first character must be a lowercase or uppercase ASCII char, underscore, dash, or dot. Subsequent characters may be any of those, or an ASCII digit.</p>
 
-<pre class="brush: cpp notranslate">#include "mozilla/Logging.h"
+<pre class="brush: cpp">#include "mozilla/Logging.h"
 
 static mozilla::LazyLogModule sFooLog("foo");</pre>
 
@@ -102,7 +102,7 @@ static mozilla::LazyLogModule sFooLog("foo");</pre>
 
 <h3 id="Code_Sample">Code Sample</h3>
 
-<pre class="brush: cpp notranslate">#include "mozilla/Logging.h"
+<pre class="brush: cpp">#include "mozilla/Logging.h"
 
 using mozilla::LogLevel;
 
@@ -140,16 +140,16 @@ static void DoStuff()
 <p>By default all logging output is disabled.</p>
 </div>
 
-<pre class="notranslate">set MOZ_LOG="example_logger:3"
+<pre>set MOZ_LOG="example_logger:3"
 </pre>
 
 <p>In the Windows Command Prompt (<code>cmd.exe</code>), don't use quotes:</p>
 
-<pre class="notranslate">set MOZ_LOG=example_logger:3</pre>
+<pre>set MOZ_LOG=example_logger:3</pre>
 
 <p>If you want this on GeckoView example, use the following adb command to launch process:</p>
 
-<pre class="notranslate">adb shell am start -n org.mozilla.geckoview_example/.GeckoViewActivity --es env0 "MOZ_LOG=example_logger:3"</pre>
+<pre>adb shell am start -n org.mozilla.geckoview_example/.GeckoViewActivity --es env0 "MOZ_LOG=example_logger:3"</pre>
 
 <p>There are special module names to change logging behavior. You can specify one or more special module names without logging level.</p>
 
@@ -184,7 +184,7 @@ static void DoStuff()
 
 <p>For example, if you want to specify "sync", "timestamp" and "rotate":</p>
 
-<pre class="notranslate">set MOZ_LOG="example_logger:3,timestamp,sync,rotate:10"</pre>
+<pre>set MOZ_LOG="example_logger:3,timestamp,sync,rotate:10"</pre>
 
 <p>To adjust the logging after Firefox has started, you can set prefs under the <code>logging.</code> prefix. For example, setting <code>logging.foo</code> to <code>3</code> will set the log module <code>foo</code> to start logging at level 3. The special boolean prefs <code>logging.config.sync</code> and <code>logging.config.add_timestamp</code> can be used to control the sync and timestamp properties described above.</p>
 
@@ -196,7 +196,7 @@ static void DoStuff()
 <p>By default logging output goes to <code>stderr</code>.</p>
 </div>
 
-<pre class="notranslate">set MOZ_LOG_FILE="log.txt"</pre>
+<pre>set MOZ_LOG_FILE="log.txt"</pre>
 
 <p>The <code>rotate</code> and <code>append</code> options described above only apply when logging to a file.</p>
 
@@ -212,11 +212,11 @@ static void DoStuff()
 
 <p>You can set an overall logging level, though it could be quite verbose:</p>
 
-<pre class="notranslate">set RUST_LOG="debug"</pre>
+<pre>set RUST_LOG="debug"</pre>
 
 <p>You can also target individual modules by path:</p>
 
-<pre class="notranslate">set RUST_LOG="style::style_resolver=debug"</pre>
+<pre>set RUST_LOG="style::style_resolver=debug"</pre>
 
 <div class="note">
 <p>For Linux/MacOS users, you need to use <code>export</code> rather than <code>set</code>.</p>

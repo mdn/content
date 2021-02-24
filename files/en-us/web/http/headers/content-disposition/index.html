@@ -34,7 +34,7 @@ tags:
 
 <p>The first parameter in the HTTP context is either <code>inline</code> (default value, indicating it can be displayed inside the Web page, or as the Web page) or <code>attachment</code> (indicating it should be downloaded; most browsers presenting a 'Save as' dialog, prefilled with the value of the <code>filename</code> parameters if present).</p>
 
-<pre class="syntaxbox notranslate">Content-Disposition: inline
+<pre class="brush: html">Content-Disposition: inline
 Content-Disposition: attachment
 Content-Disposition: attachment; filename="filename.jpg"</pre>
 
@@ -46,7 +46,7 @@ Content-Disposition: attachment; filename="filename.jpg"</pre>
 
 <p>A <code>multipart/form-data</code> body requires a <code>Content-Disposition</code> header to provide information for each subpart of the form (e.g. for every form field and any files that are part of field data). The first directive is always <code>form-data</code>, and the header <em>must</em> also include a <code>name</code> parameter to identify the relevant field. Additional directives are case-insensitive and have arguments that use quoted-string syntax after the <code>'='</code> sign. Multiple parameters are separated by a semi-colon (<code>';'</code>).</p>
 
-<pre class="syntaxbox notranslate">Content-Disposition: form-data; name="fieldName"
+<pre class="brush: html">Content-Disposition: form-data; name="fieldName"
 Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"</pre>
 
 <h3 id="Directives">Directives</h3>
@@ -71,7 +71,7 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"</pre>
 
 <p>A response triggering the "Save As" dialog:</p>
 
-<pre class="notranslate">200 OK
+<pre>200 OK
 Content-Type: text/html; charset=utf-8
 Content-Disposition: attachment; filename="cool.html"
 Content-Length: 21
@@ -84,7 +84,7 @@ Content-Length: 21
 
 <p>An example of an HTML form posted using the <code>multipart/form-data</code> format that makes use of the <code>Content-Disposition</code> header:</p>
 
-<pre class="notranslate">POST /test.html HTTP/1.1
+<pre>POST /test.html HTTP/1.1
 Host: example.org
 Content-Type: multipart/form-data;boundary="boundary"
 

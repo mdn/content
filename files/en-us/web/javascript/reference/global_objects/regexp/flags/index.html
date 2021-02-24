@@ -28,13 +28,13 @@ tags:
 
 <h3 id="Using_flags">Using flags</h3>
 
-<pre class="brush: js; notranslate">/foo/ig.flags;   // "gi"
+<pre class="brush: js">/foo/ig.flags;   // "gi"
 /bar/myu.flags;  // "muy"
 </pre>
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="brush: js; notranslate">if (RegExp.prototype.flags === undefined) {
+<pre class="brush: js">if (RegExp.prototype.flags === undefined) {
   Object.defineProperty(RegExp.prototype, 'flags', {
     configurable: true,
     get: function() {

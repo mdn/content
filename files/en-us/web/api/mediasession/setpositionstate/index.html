@@ -2,37 +2,46 @@
 title: MediaSession.setPositionState()
 slug: Web/API/MediaSession/setPositionState
 tags:
-  - API
-  - Audio
-  - Media
-  - Media Session API
-  - MediaSession
-  - Method
-  - Playback
-  - Position
-  - Reference
-  - Session
-  - Video
-  - rate
-  - setPositionState
-  - speed
+- API
+- Audio
+- Media
+- Media Session API
+- MediaSession
+- Method
+- Playback
+- Position
+- Reference
+- Session
+- Video
+- rate
+- setPositionState
+- speed
 ---
 <p>{{APIRef("Media Session API")}}</p>
 
-<p><span class="seoSummary">The {{domxref("MediaSession")}} method <code><strong>setPositionState()</strong></code> is used to update the current document's media playback position and speed for presentation by user's device in any kind of interface that provides details about ongoing media.</span> This can be particularly useful if your code implements a player for type of media not directly supported by the browser.</p>
+<p><span class="seoSummary">The {{domxref("MediaSession")}} method
+    <code><strong>setPositionState()</strong></code> is used to update the current
+    document's media playback position and speed for presentation by user's device in any
+    kind of interface that provides details about ongoing media.</span> This can be
+  particularly useful if your code implements a player for type of media not directly
+  supported by the browser.</p>
 
-<p>Call this method on the <code>navigator</code> object's {{domxref("navigator.mediaSession", "mediaSession")}} object.</p>
+<p>Call this method on the <code>navigator</code> object's
+  {{domxref("navigator.mediaSession", "mediaSession")}} object.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">navigator.mediaSession.setPositionState(<em>stateDict</em>);
+<pre class="brush: js">navigator.mediaSession.setPositionState(<em>stateDict</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>stateDict</code> {{optional_inline}}</dt>
- <dd>An object conforming to the {{domxref("MediaPositionState")}} dictionary, providing updated information about the playback position and speed of the document's ongoing media. If the object is empty, the existing playback state information is cleared.</dd>
+  <dt><code>stateDict</code> {{optional_inline}}</dt>
+  <dd>An object conforming to the {{domxref("MediaPositionState")}} dictionary, providing
+    updated information about the playback position and speed of the document's ongoing
+    media. If the object is empty, the existing playback state information is cleared.
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -42,23 +51,27 @@ tags:
 <h3 id="Exceptions">Exceptions</h3>
 
 <dl>
- <dt><code>TypeError</code></dt>
- <dd>
- <p>This error can occur in an array of circumstances:</p>
+  <dt><code>TypeError</code></dt>
+  <dd>
+    <p>This error can occur in an array of circumstances:</p>
 
- <ul>
-  <li>The specified {{domxref("MediaPositionState")}} object's {{domxref("MediaPositionState.duration", "duration")}} is missing, negative, or <code>null</code>.</li>
-  <li>{{domxref("MediaPositionState.position", "position")}} is missing or null, or is either negative or greater than <code>duration</code>.</li>
-  <li>The {{domxref("MediaPositionState.playbackRate", "playbackRate")}} is zero.</li>
- </ul>
- </dd>
+    <ul>
+      <li>The specified {{domxref("MediaPositionState")}} object's
+        {{domxref("MediaPositionState.duration", "duration")}} is missing, negative, or
+        <code>null</code>.</li>
+      <li>{{domxref("MediaPositionState.position", "position")}} is missing or null, or is
+        either negative or greater than <code>duration</code>.</li>
+      <li>The {{domxref("MediaPositionState.playbackRate", "playbackRate")}} is zero.</li>
+    </ul>
+  </dd>
 </dl>
 
 <h2 id="Example">Example</h2>
 
-<p>Below is a function which updates the position state of the current {{domxref('MediaSession')}} track.</p>
+<p>Below is a function which updates the position state of the current
+  {{domxref('MediaSession')}} track.</p>
 
-<pre class="brush: js notranslate">function updatePositionState() {
+<pre class="brush: js">function updatePositionState() {
   navigator.mediaSession.setPositionState({
     duration: audioEl.duration,
     playbackRate: audioEl.playbackRate,
@@ -67,9 +80,10 @@ tags:
 }
 </pre>
 
-<p>We can use this function when updating {{domxref('MediaMetadata', 'media session metadata')}} and within callbacks for actions, such as below.</p>
+<p>We can use this function when updating {{domxref('MediaMetadata', 'media session
+  metadata')}} and within callbacks for actions, such as below.</p>
 
-<pre class="brush: js notranslate">navigator.mediaSession.setActionHandler('seekbackward', details =&gt; {
+<pre class="brush: js">navigator.mediaSession.setActionHandler('seekbackward', details =&gt; {
 
   // our time to skip
   const skipTime = details.seekOffset || 10;
@@ -84,24 +98,29 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Media Session','#dom-mediasession-setpositionstate','MediaSession.setPositionState()')}}</td>
-   <td>{{Spec2('Media Session')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Media
+        Session','#dom-mediasession-setpositionstate','MediaSession.setPositionState()')}}
+      </td>
+      <td>{{Spec2('Media Session')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+<p class="hidden">The compatibility table on this page is generated from structured data.
+  If you'd like to contribute to the data, please check out <a
+    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+  and send us a pull request.</p>
 
 <p>{{Compat("api.MediaSession.setPositionState")}}</p>

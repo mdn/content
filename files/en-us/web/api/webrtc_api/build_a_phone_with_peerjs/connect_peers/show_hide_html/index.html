@@ -1,43 +1,53 @@
 ---
-title: Showing and Hiding the HTML
-slug: Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/show_hide_html
+title: Showing and hiding HTML
+slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Show_hide_html
 ---
 <p>{{WebRTCSidebar}}</p>
 
-{{PreviousMenuNext("Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/get_microphone_permission", "Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/create_a_peer_connection")}}
+{{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Get_microphone_permission", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Create_a_peer_connection")}}
 
-<p id="4434">Alright, so you’ve got the permissions, now you’ll want to make sure each user knows what their peer ID is so that they can make connections. The peerJS framework gives us a bunch of event listeners we can call on the peer we created earlier on. So when the peer is open, display the peer’s ID:</p>
+<p>Alright, so you've got the microphone permissions set up. The next step is to make sure each user knows what their peer ID is so that they can make connections. The peerJS framework gives us a bunch of event listeners we can call on the peer we created earlier on.</p>
 
-<pre class="brush: js notranslate"><strong><em>peer</em></strong>.on('open', function () {
-    <strong><em>window</em></strong>.caststatus.textContent = `Your device ID is: ${<strong><em>peer</em></strong>.id}`;
+<ol>
+  <li>
+    <p>Let's use the <code>open</code> event to create a listener that displays the peer's ID when it is open. Add the following code to the bottom of <code>script.js</code>:</p>
+
+<pre class="brush: js">peer.on('open', function () {
+    window.caststatus.textContent = `Your device ID is: ${peer.id}`;
 });</pre>
 
-<p id="8563">Here you’re replacing the text in the HTML element with the ID <code>caststatus</code> so instead of <code>connecting...</code> , you should see <code>Your device ID is: &lt;peer ID&gt;</code></p>
+    <p>Here you’re replacing the text in the HTML element with the ID <code>caststatus</code>.</p>
+  </li>
+  <li>
+    <p>Try reloading the app in your browser. Instead of <code>connecting...</code>, you should see <code>Your device ID is: &lt;peer ID&gt;</code>.</p>
 
-<p><img alt="A cream background with the words 'phone a friend' in bold, dark green font as the heading. 'Your device ID is: 3b77' is immediately below that and 'please use headphones!' below that. Following on, a big dark green button with 'Call' written in the same cream color of the background." src="https://miro.medium.com/max/1400/1*58clu6Q0bCAXYhQRT9lVRA.png" style="height: 841px; width: 1400px;"></p>
+    <p><img alt="A cream background with the words 'phone a friend' in bold, dark green font as the heading. 'Your device ID is: 3b77' is immediately below that and 'please use headphones!' below that. Following on, a big dark green button with 'Call' written in the same cream color of the background." src="158clu6q0bcaxyhqrt9lvra.png"></p>
+  </li>
+  <li>
+    <p>While you're here, you may as well create some functions to display and hide various content, which you'll use later. There are two functions you should create, <code>showCallContent()</code> and <code>showConnectedContent()</code>. These functions will be responsible for showing the call button and showing the hang up button and audio elements when appropriate.</p>
 
-<p><span>While you’re here, you may as well create the functions to display and hide various content, which you’ll use later. There are two functions you should create, </span><code>showCallContent</code><span> and </span><code>showConnectedContent</code><span>. These functions will be responsible for showing the call button and showing the hang up button and audio elements.</span></p>
-
-<pre class="brush: js notranslate">const <strong><em>audioContainer </em></strong>= <strong><em>document</em></strong>.querySelector('.call-container');<em>/**
+<pre class="brush: js">const audioContainer = document.querySelector('.call-container');/**
  * Displays the call button and peer ID
- * </em><strong><em>@returns</em></strong><em>{void}
+ * @returns{void}
  */
-</em>
+
 function showCallContent() {
-    <strong><em>window</em></strong>.caststatus.textContent = `Your device ID is: ${<strong><em>peer</em></strong>.id}`;
-    <strong><em>callBtn</em></strong>.hidden = false;
-    <strong><em>audioContainer</em></strong>.hidden = true;
+    window.caststatus.textContent = `Your device ID is: ${peer.id}`;
+    callBtn.hidden = false;
+    audioContainer.hidden = true;
 }
 
-<em>/**
+/**
  * Displays the audio controls and correct copy
- * </em><strong><em>@returns</em></strong><em>{void}
+ * @returns{void}
  */
-</em>
+
 function showConnectedContent() {
-    <strong><em>window</em></strong>.caststatus.textContent = `You're connected`;
-    <strong><em>callBtn</em></strong>.hidden = true;
-    <strong><em>audioContainer</em></strong>.hidden = false;
-}
-</pre>
-{{PreviousMenuNext("Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/get_microphone_permission", "Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/create_a_peer_connection")}}
+    window.caststatus.textContent = `You're connected`;
+    callBtn.hidden = true;
+    audioContainer.hidden = false;
+}</pre>
+  </li>
+</ol>
+
+{{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Get_microphone_permission", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Create_a_peer_connection")}}

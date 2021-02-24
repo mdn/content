@@ -18,24 +18,22 @@ tags:
 
 <p>Syntax sections for API reference pages are written manually, and they differ depending on which page type includes them. Yet, all have things in common. In each case the section is titled "Syntax", and included at the top of the reference page, just below the introductory material.</p>
 
-<p>In addition, each syntax section starts with a "code" block showing the feature's exact syntax, styled using the "Syntax Box" block style:</p>
+<p>In addition, each syntax section starts with a "code" block showing the feature's exact syntax, styled using the <code>brush: [syntax] notranslate</code> class:</p>
 
-<pre class="syntaxbox notranslate">A syntax block example</pre>
+<pre class="brush: js">A syntax block example</pre>
 
 <h3 id="General_style_rules">General style rules</h3>
 
 <p>A few rules to follow in terms of markup within the syntax block:</p>
 
 <ul>
- <li>Do <em>not</em> use {{HTMLElement("code")}} within the syntax block (or within any code sample block on MDN, either). Not only is it generally useless, but our markup does not want it, and will not render the way you want it to look if you include it.</li>
+ <li>Do <var>not</var> use {{HTMLElement("code")}} within the syntax block (or within any code sample block on MDN, either). Not only is it generally useless, but our markup does not want it, and will not render the way you want it to look if you include it.</li>
  <li>
-  <p>All programmer-specified content in a syntax block should be italicized using {{HTMLElement("em")}} (the "Italic" button in the editor toolbar):</p>
+  <p>All programmer-specified content in a syntax block should be italicized using the {{HTMLElement("var")}} element:</p>
 
-  <pre class="syntaxbox notranslate"><em>responseStr</em> = <em>element</em>.querySelector(<em>selector</em>);</pre>
+  <pre class="brush: js"><var>responseStr</var> = <var>element</var>.querySelector(<var>selector</var>);</pre>
 
   <p>Here, <code>responseStr</code> is the return value (a variable named by the developer), <code>element</code> is a placeholder for the variable referencing an {{DOMxRef("Element")}} object, and <code>selector</code> is the placeholder for an input parameter to the method.</p>
-
-  <p>You may find some pages where <code>&lt;var&gt;</code> is used instead of <code>&lt;em&gt;</code>; this is also OK, but we generally prefer <code>&lt;em&gt;</code>.</p>
  </li>
 </ul>
 
@@ -45,53 +43,51 @@ tags:
 
 <p>Start with a syntax block, like this (see the {{DOMxRef("IntersectionObserver.IntersectionObserver", "IntersectionObserver constructor")}} page):</p>
 
-<pre class="syntaxbox notranslate">var <em>observer</em> = new IntersectionObserver(<em>callback</em>, <em>options</em>);</pre>
+<pre class="brush: js">var <var>observer</var> = new IntersectionObserver(<var>callback</var>, <var>options</var>);</pre>
 
 <p>or this (see {{DOMxRef("WindowOrWorkerGlobalScope.fetch")}}):</p>
 
-<pre class="syntaxbox notranslate"><em>promiseResponse</em> = fetch(<em>input</em>, <em>init</em>);</pre>
+<pre class="brush: js"><var>promiseResponse</var> = fetch(<var>input</var>, <var>init</var>);</pre>
 
 <p>Sometimes syntax is written using formal syntax notation, for example see the following on {{jsxref("Array.prototype.slice()")}}:</p>
 
-<pre class="syntaxbox notranslate">arr.slice([begin[, end]])</pre>
+<pre class="brush: js">arr.slice([begin[, end]])</pre>
 
-<p>The square brackets mean that the enclosed parameter is optional. We prefer to not use these as they confuse many of our readers. You could instead just omit the square brackets and explain that these parameters are optional in the <em>Parameters</em> section found below the syntax block.</p>
+<p>The square brackets mean that the enclosed parameter is optional.</p>
 
 <h5 id="Multiple_lines">Multiple lines</h5>
 
 <p>Sometimes you'll want to include multiple lines, because the method can be used in different forms. For example, see this example ({{DOMxRef("CanvasRenderingContext2D.drawImage")}}):</p>
 
-<pre class="syntaxbox notranslate">void <em>ctx</em>.drawImage(<em>image</em>, <em>dx</em>, <em>dy</em>);
-void <em>ctx</em>.drawImage(<em>image</em>, <em>dx</em>, <em>dy</em>, <em>dWidth</em>, <em>dHeight</em>);
-void <em>ctx</em>.drawImage(<em>image</em>, <em>sx</em>, <em>sy</em>, <em>sWidth</em>, <em>sHeight</em>, <em>dx</em>, <em>dy</em>, <em>dWidth</em>, <em>dHeight</em>);</pre>
+<pre class="brush: js">void <var>ctx</var>.drawImage(<var>image</var>, <var>dx</var>, <var>dy</var>);
+void <var>ctx</var>.drawImage(<var>image</var>, <var>dx</var>, <var>dy</var>, <var>dWidth</var>, <var>dHeight</var>);
+void <var>ctx</var>.drawImage(<var>image</var>, <var>sx</var>, <var>sy</var>, <var>sWidth</var>, <var>sHeight</var>, <var>dx</var>, <var>dy</var>, <var>dWidth</var>, <var>dHeight</var>);</pre>
 
 <p>The <code>slice()</code> syntax example could be rewritten like so, to show all possible variations and make it arguably easier to understand:</p>
 
-<pre class="syntaxbox notranslate"><var>arr</var>.slice()<var>
+<pre class="brush: js"><var>arr</var>.slice()<var>
 arr</var>.slice(<var>begin</var>)
 <var>arr</var>.slice(<var>begin</var>, <var>end</var>)</pre>
 
 <p>Another good multiple line example is found on the {{jsxref("Date")}} constructor page, which has many quite different possibilities for its parameters:</p>
 
-<pre class="syntaxbox notranslate">new Date();
+<pre class="brush: js">new Date();
 new Date(<var>value</var>);
 new Date(<var>dateString</var>);
 new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours</var> [, <var>minutes</var> [, <var>seconds</var> [, <var>milliseconds</var>]]]]]);
 </pre>
 
-<p>Although as mentioned above, we could omit the square brackets and make optional status of parameters clear in the <em>Parameters</em> section.</p>
-
 <h5 id="Concise_syntax_blocks">Concise syntax blocks</h5>
 
 <p>The aim is to make the syntax block as pure and unambiguous as definition of the feature's syntax as possible — don't include any irrelevant syntax. For example, you may see this syntax form used to describe promises in many places on the site:</p>
 
-<pre class="syntaxbox notranslate"><em>caches</em>.match(<em>request</em>, <em>options</em>).then(function(<em>response</em>) {
+<pre class="brush: js"><var>caches</var>.match(<var>request</var>, <var>options</var>).then(function(<var>response</var>) {
   // Do something with the response
 });</pre>
 
 <p>But this version is much more concise, and doesn't include the superfluous {{JSxRef("Promise.prototype.then()")}} method call:</p>
 
-<pre class="syntaxbox notranslate"><em>promiseResponse</em> = <em>caches</em>.match(<em>request</em>, <em>options</em>);</pre>
+<pre class="brush: js"><var>promiseResponse</var> = <var>caches</var>.match(<var>request</var>, <var>options</var>);</pre>
 
 <h4 id="Parameters_section">Parameters section</h4>
 
@@ -125,12 +121,12 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours<
 
 <p>Start with a syntax block, like this (see {{DOMxRef("IntersectionObserver.root")}}):</p>
 
-<pre class="syntaxbox notranslate"><var>var <em>root</em> = IntersectionObserver</var>.root;</pre>
+<pre class="brush: js"><var>var <var>root</var> = IntersectionObserver</var>.root;</pre>
 
 <p>For a non-read-only property, it is a good idea to include two lines, which show getting and setting the property (see {{DOMxRef("AudioParam.value")}}):</p>
 
-<pre class="syntaxbox notranslate"><em>gain</em> = <em>gainNode</em>.gain.value;
-<em>gainNode</em>.gain.value = 0;</pre>
+<pre class="brush: js"><var>gain</var> = <var>gainNode</var>.gain.value;
+<var>gainNode</var>.gain.value = 0;</pre>
 
 <h4 id="Value_section">Value section</h4>
 
@@ -148,7 +144,7 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours<
 
 <p>Start with a syntax block, like this (see {{DOMxRef("Window.onvrdisplaypresentchange")}}):</p>
 
-<pre class="syntaxbox notranslate"><em>window</em>.onvrdisplaypresentchange = <em>functionRef</em>;</pre>
+<pre class="brush: js"><var>window</var>.onvrdisplaypresentchange = <var>functionRef</var>;</pre>
 
 <p>And that's it — event handler properties are always settable, and always contain a function, therefore no more information is needed.</p>
 
@@ -183,21 +179,21 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours<
 
 <h4 id="Formal_syntax">Formal syntax</h4>
 
-<p>the last section, "Formal syntax", is automatically generated from the data included in the <a href="https://github.com/mdn/data">MDN data repo</a>'s CSS directory. You just need to include a {{TemplateLink("CSSSyntax")}} macro call below the title, and it will take care of the rest.</p>
+<p>the last section, "Formal syntax", is automatically generated from the data included in the <a href="https://github.com/mdn/data">MDN data repo</a>'s CSS directory. You just need to include a <code>CSSSyntax</code> macro call below the title, and it will take care of the rest.</p>
 
 <p>The only complication arises from making sure the data you need is present. The <a href="https://github.com/mdn/data/blob/master/css/properties.json">properties.json</a> file needs to contain an entry for the property you are documenting, and the <a href="https://github.com/mdn/data/blob/master/css/types.json">types.json</a> file needs to contain an entry for all of the value types used in the property's value.</p>
 
-<p>You need to do this by forking the <a href="https://github.com/mdn/data">MDN data repo</a>, cloning your fork locally, making the changes in a new branch, then submitting a pull request against the upstream repo. You can <a href="/en-US/docs/MDN/Contribute/Structures/Compatibility_tables#Preparing_to_add_the_data">find more details about using Git here</a>.</p>
+<p>You need to do this by forking the <a href="https://github.com/mdn/data">MDN data repo</a>, cloning your fork locally, making the changes in a new branch, then submitting a pull request against the upstream repo. You can <a href="/en-US/docs/MDN/Structures/Compatibility_tables#preparing_to_add_the_data">find more details about using Git here</a>.</p>
 
 <h3 id="Selectors">Selectors</h3>
 
 <p>The "Syntax" section of selector reference pages is much simpler than that of property pages. It contains one block styled using the "Syntax Box" style, which shows the basic syntax of the selector, whether it is just a simple keyword (e.g. {{CSSxRef(":hover")}}), or a more complex function value that takes a parameter (e.g. {{CSSxRef(":not", ":not()")}}). Sometimes the parameter is explained in a further entry inside the syntax block (see {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}} for an example).</p>
 
-<p>This block is automatically generated from the data included in the <a href="https://github.com/mdn/data">MDN data repo</a>'s CSS directory. You just need to include a {{TemplateLink("CSSSyntax")}} macro call below the title, and it will take care of the rest.</p>
+<p>This block is automatically generated from the data included in the <a href="https://github.com/mdn/data">MDN data repo</a>'s CSS directory. You just need to include a <code>CSSSyntax</code> macro call below the title, and it will take care of the rest.</p>
 
 <p>The only complication arises from making sure the data you need is present. The <a href="https://github.com/mdn/data/blob/master/css/selectors.json">selectors.json</a> file needs to contain an entry for the selector you are documenting.</p>
 
-<p>You need to do this by forking the <a href="https://github.com/mdn/data">MDN data repo</a>, cloning your fork locally, making the changes in a new branch, then submitting a pull request against the upstream repo. You can <a href="/en-US/docs/MDN/Contribute/Structures/Compatibility_tables#Preparing_to_add_the_data">find more details about using Git here</a>.</p>
+<p>You need to do this by forking the <a href="https://github.com/mdn/data">MDN data repo</a>, cloning your fork locally, making the changes in a new branch, then submitting a pull request against the upstream repo. You can <a href="/en-US/docs/MDN/Structures/Compatibility_tables#preparing_to_add_the_data">find more details about using Git here</a>.</p>
 
 <h2 id="HTML_reference_syntax">HTML reference syntax</h2>
 
@@ -215,7 +211,7 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours<
 
 <p>The "Syntax" section shows what a header's syntax will look like, using a syntax block styled using the "Syntax Box" style, including formal syntax to show exactly what directives can be included in the value, in what order, etc. For example, the {{HTTPHeader("If-None-Match")}} header's syntax block looks like this:</p>
 
-<pre class="syntaxbox notranslate">If-None-Match: &lt;etag_value&gt;
+<pre class="brush: plain">If-None-Match: &lt;etag_value&gt;
 If-None-Match: &lt;etag_value&gt;, &lt;etag_value&gt;, …
 If-None-Match: *</pre>
 
@@ -229,13 +225,13 @@ If-None-Match: *</pre>
 
 <p>Request method syntax is really simple, just containing a syntax block styled using the "Syntax Box" style that shows how the method syntax is structured. The syntax for the <a href="/en-US/docs/Web/HTTP/Methods/GET">GET method</a> looks like this:</p>
 
-<pre class="syntaxbox notranslate">GET /index.html</pre>
+<pre class="brush: plain">GET /index.html</pre>
 
 <h3 id="HTTP_response_status_codes">HTTP response status codes</h3>
 
 <p>Again, the syntax for HTTP response status codes is really simple — a syntax block including the code and name. For example:</p>
 
-<pre class="syntaxbox notranslate">404 Not Found</pre>
+<pre class="brush: plain">404 Not Found</pre>
 
 <h2 id="SVG_reference_syntax">SVG reference syntax</h2>
 

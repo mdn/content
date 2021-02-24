@@ -2,24 +2,30 @@
 title: 'HTMLTableElement: createTHead()'
 slug: Web/API/HTMLTableElement/createTHead
 tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - Method
-  - NeedsSpecTable
-  - Reference
+- API
+- HTML DOM
+- HTMLTableElement
+- Method
+- NeedsSpecTable
+- Reference
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p>The <code><strong>createTHead()</strong></code> method of {{domxref("HTMLTableElement")}} objects returns the {{HTMLElement("thead")}} element associated with a given {{HtmlElement("table")}}. If no header exists in the table, this method creates it, and then returns it.</p>
+<p>The <code><strong>createTHead()</strong></code> method of
+  {{domxref("HTMLTableElement")}} objects returns the {{HTMLElement("thead")}} element
+  associated with a given {{HtmlElement("table")}}. If no header exists in the table, this
+  method creates it, and then returns it.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> If no header exists, <code>createTHead()</code> inserts a new header directly into the table. The header does not need to be added separately as would be the case if {{domxref("Document.createElement()")}} had been used to create the new <code>&lt;thead&gt;</code> element.</p>
+  <p><strong>Note:</strong> If no header exists, <code>createTHead()</code> inserts a new
+    header directly into the table. The header does not need to be added separately as
+    would be the case if {{domxref("Document.createElement()")}} had been used to create
+    the new <code>&lt;thead&gt;</code> element.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>table</var>.createTHead();</pre>
+<pre class="brush: js"><var>table</var>.createTHead();</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -33,25 +39,23 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-table-createthead', 'HTMLTableElement: createTHead')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#dom-table-createthead', 'HTMLTableElement:
+        createTHead')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.HTMLTableElement.createTHead")}}</p>
-</div>

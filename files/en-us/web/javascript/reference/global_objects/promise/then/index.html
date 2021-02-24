@@ -2,27 +2,37 @@
 title: Promise.prototype.then()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/then
 tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Promise
-  - Prototype
+- ECMAScript 2015
+- JavaScript
+- Method
+- Promise
+- Prototype
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>then()</strong></code> method returns a {{jsxref("Promise")}}. It takes up to two arguments: callback functions for the success and failure cases of the <code>Promise</code>.</p>
+<p>The <code><strong>then()</strong></code> method returns a {{jsxref("Promise")}}. It
+  takes up to two arguments: callback functions for the success and failure cases of the
+  <code>Promise</code>.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/promise-then.html")}}</div>
 
-<p class="hidden">The source for this interactive demo is stored in a GitHub repository. If you'd like to contribute to the interactive demo project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
+<p class="hidden">The source for this interactive demo is stored in a GitHub repository.
+  If you'd like to contribute to the interactive demo project, please clone <a
+    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
+  and send us a pull request.</p>
 
 <div class="note">
-<p>If one or both arguments are omitted or are provided non-functions, then <code>then</code> will be missing the handler(s), but will not generate any errors. If the <code>Promise</code> that <code>then</code> is called on adopts a state (<code>fulfillment</code> or <code>rejection</code>) for which <code>then</code> has no handler, the returned promise adopts the final state of the original <code>Promise</code> on which <code>then</code> was called.</p>
+  <p>If one or both arguments are omitted or are provided non-functions, then
+    <code>then</code> will be missing the handler(s), but will not generate any errors. If
+    the <code>Promise</code> that <code>then</code> is called on adopts a state
+    (<code>fulfillment</code> or <code>rejection</code>) for which <code>then</code> has
+    no handler, the returned promise adopts the final state of the original
+    <code>Promise</code> on which <code>then</code> was called.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>p.then(onFulfilled[, onRejected])</var>;
+<pre class="brush: js"><var>p.then(onFulfilled[, onRejected])</var>;
 
 p.then(value =&gt; {
   // fulfillment
@@ -34,28 +44,47 @@ p.then(value =&gt; {
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>onFulfilled</code> {{optional_inline}}</dt>
- <dd>A {{jsxref("Function")}} called if the <code>Promise</code> is fulfilled. This function has one argument, the <code>fulfillment value</code>. If it is not a function, it is internally replaced with an "Identity" function (it returns the received argument).</dd>
- <dt><code>onRejected</code> {{optional_inline}}</dt>
- <dd>A {{jsxref("Function")}} called if the <code>Promise</code> is rejected. This function has one argument, the <code>rejection reason</code>. If it is not a function, it is internally replaced with a "Thrower" function (it throws an error it received as argument).</dd>
+  <dt><code>onFulfilled</code> {{optional_inline}}</dt>
+  <dd>A {{jsxref("Function")}} called if the <code>Promise</code> is fulfilled. This
+    function has one argument, the <code>fulfillment value</code>. If it is not a
+    function, it is internally replaced with an "Identity" function (it returns the
+    received argument).</dd>
+  <dt><code>onRejected</code> {{optional_inline}}</dt>
+  <dd>A {{jsxref("Function")}} called if the <code>Promise</code> is rejected. This
+    function has one argument, the <code>rejection reason</code>. If it is not a function,
+    it is internally replaced with a "Thrower" function (it throws an error it received as
+    argument).</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>Once a {{jsxref("Promise")}} is fulfilled or rejected, the respective handler function (<code>onFulfilled</code> or <code>onRejected</code>) will be called <strong>asynchronously</strong> (scheduled in the current thread loop). The behavior of the handler function follows a specific set of rules. If a handler function:</p>
+<p>Once a {{jsxref("Promise")}} is fulfilled or rejected, the respective handler function
+  (<code>onFulfilled</code> or <code>onRejected</code>) will be called
+  <strong>asynchronously</strong> (scheduled in the current thread loop). The behavior of
+  the handler function follows a specific set of rules. If a handler function:</p>
 
 <ul>
- <li>returns a value, the promise returned by <code>then</code> gets resolved with the returned value as its value.</li>
- <li>doesn't return anything, the promise returned by <code>then</code> gets resolved with an <code>undefined</code> value.</li>
- <li>throws an error, the promise returned by <code>then</code> gets rejected with the thrown error as its value.</li>
- <li>returns an already fulfilled promise, the promise returned by <code>then</code> gets fulfilled with that promise's value as its value.</li>
- <li>returns an already rejected promise, the promise returned by <code>then</code> gets rejected with that promise's value as its value.</li>
- <li>returns another <strong>pending</strong> promise object, the resolution/rejection of the promise returned by <code>then</code> will be subsequent to the resolution/rejection of the promise returned by the handler. Also, the resolved value of the promise returned by <code>then</code> will be the same as the resolved value of the promise returned by the handler.</li>
+  <li>returns a value, the promise returned by <code>then</code> gets resolved with the
+    returned value as its value.</li>
+  <li>doesn't return anything, the promise returned by <code>then</code> gets resolved
+    with an <code>undefined</code> value.</li>
+  <li>throws an error, the promise returned by <code>then</code> gets rejected with the
+    thrown error as its value.</li>
+  <li>returns an already fulfilled promise, the promise returned by <code>then</code> gets
+    fulfilled with that promise's value as its value.</li>
+  <li>returns an already rejected promise, the promise returned by <code>then</code> gets
+    rejected with that promise's value as its value.</li>
+  <li>returns another <strong>pending</strong> promise object, the resolution/rejection of
+    the promise returned by <code>then</code> will be subsequent to the
+    resolution/rejection of the promise returned by the handler. Also, the resolved value
+    of the promise returned by <code>then</code> will be the same as the resolved value of
+    the promise returned by the handler.</li>
 </ul>
 
-<p>Following, an example to demonstrate the asynchronicity of the <code>then</code> method.</p>
+<p>Following, an example to demonstrate the asynchronicity of the <code>then</code>
+  method.</p>
 
-<pre class="brush: js notranslate">// using a resolved promise, the 'then' block will be triggered instantly,
+<pre class="brush: js">// using a resolved promise, the 'then' block will be triggered instantly,
 // but its handlers will be triggered asynchronously as demonstrated by the console.logs
 const resolvedProm = Promise.resolve(33);
 
@@ -78,13 +107,15 @@ setTimeout(() =&gt; {
 
 <h2 id="Description">Description</h2>
 
-<p>As the <code>then</code> and {{jsxref("Promise.prototype.catch()")}} methods return promises, they <a href="/en-US/docs/Web/JavaScript/Guide/Using_promises#Chaining">can be chained</a> — an operation called <em>composition</em>.</p>
+<p>As the <code>then</code> and {{jsxref("Promise.prototype.catch()")}} methods return
+  promises, they <a href="/en-US/docs/Web/JavaScript/Guide/Using_promises#Chaining">can be
+    chained</a> — an operation called <em>composition</em>.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_the_then_method">Using the <code>then</code> method</h3>
 
-<pre class="brush: js notranslate">var p1 = new Promise((resolve, reject) =&gt; {
+<pre class="brush: js">var p1 = new Promise((resolve, reject) =&gt; {
   resolve('Success!');
   // or
   // reject(new Error("Error!"));
@@ -99,11 +130,15 @@ p1.then(value =&gt; {
 
 <h3 id="Chaining">Chaining</h3>
 
-<p>The <code>then</code> method returns a <code>Promise</code> which allows for method chaining.</p>
+<p>The <code>then</code> method returns a <code>Promise</code> which allows for method
+  chaining.</p>
 
-<p>If the function passed as handler to <code>then</code> returns a <code>Promise</code>, an equivalent <code>Promise</code> will be exposed to the subsequent <code>then</code> in the method chain. The below snippet simulates asynchronous code with the <code>setTimeout</code> function.</p>
+<p>If the function passed as handler to <code>then</code> returns a <code>Promise</code>,
+  an equivalent <code>Promise</code> will be exposed to the subsequent <code>then</code>
+  in the method chain. The below snippet simulates asynchronous code with the
+  <code>setTimeout</code> function.</p>
 
-<pre class="brush: js notranslate">Promise.resolve('foo')
+<pre class="brush: js">Promise.resolve('foo')
   // 1. Receive "foo", concatenate "bar" to it, and resolve that to the next then
   .then(function(string) {
     return new Promise(function(resolve, reject) {
@@ -141,9 +176,12 @@ p1.then(value =&gt; {
 // foobar
 // foobarbaz</pre>
 
-<p>When a value is returned from within a <code>then</code> handler, it will effectively return <code>Promise.resolve(&lt;value returned by whichever handler was called&gt;)</code>.</p>
+<p>When a value is returned from within a <code>then</code> handler, it will effectively
+  return
+  <code>Promise.resolve(&lt;value returned by whichever handler was called&gt;)</code>.
+</p>
 
-<pre class="brush: js notranslate">var p2 = new Promise(function(resolve, reject) {
+<pre class="brush: js">var p2 = new Promise(function(resolve, reject) {
   resolve(1);
 });
 
@@ -159,9 +197,10 @@ p2.then(function(value) {
 });
 </pre>
 
-<p>A <code>then</code> call will return a rejected promise if the function throws an error or returns a rejected Promise.</p>
+<p>A <code>then</code> call will return a rejected promise if the function throws an error
+  or returns a rejected Promise.</p>
 
-<pre class="brush: js notranslate">Promise.resolve()
+<pre class="brush: js">Promise.resolve()
   .then(() =&gt; {
     // Makes .then() return a rejected promise
     throw new Error('Oh no!');
@@ -172,15 +211,18 @@ p2.then(function(value) {
     console.error('onRejected function called: ' + error.message);
   });</pre>
 
-<p>In all other cases, a resolving Promise is returned. In the following example, the first <code>then()</code> will return <code>42</code> wrapped in a resolving Promise even though the previous Promise in the chain was rejected.</p>
+<p>In all other cases, a resolving Promise is returned. In the following example, the
+  first <code>then()</code> will return <code>42</code> wrapped in a resolving Promise
+  even though the previous Promise in the chain was rejected.</p>
 
-<pre class="brush: js notranslate">Promise.reject()
+<pre class="brush: js">Promise.reject()
   .then(() =&gt; 99, () =&gt; 42) // onRejected returns 42 which is wrapped in a resolving Promise
   .then(solution =&gt; console.log('Resolved with ' + solution)); // Resolved with 42</pre>
 
-<p>In practice, it is often desirable to catch rejected promises rather than use <code>then</code>'s two case syntax, as demonstrated below.</p>
+<p>In practice, it is often desirable to catch rejected promises rather than use
+  <code>then</code>'s two case syntax, as demonstrated below.</p>
 
-<pre class="brush: js notranslate">Promise.resolve()
+<pre class="brush: js">Promise.resolve()
   .then(() =&gt; {
     // Makes .then() return a rejected promise
     throw new Error('Oh no!');
@@ -192,9 +234,10 @@ p2.then(function(value) {
     console.log("I am always called even if the prior then's promise rejects");
   });</pre>
 
-<p>You can also use chaining to implement one function with a Promise-based API on top of another such function.</p>
+<p>You can also use chaining to implement one function with a Promise-based API on top of
+  another such function.</p>
 
-<pre class="brush: js notranslate">function fetch_current_data() {
+<pre class="brush: js">function fetch_current_data() {
   // The <a href="/en-US/docs/Web/API/GlobalFetch/fetch">fetch</a>() API returns a Promise.  This function
   // exposes a similar API, except the fulfillment
   // value of this function's Promise has had more
@@ -211,9 +254,10 @@ p2.then(function(value) {
 }
 </pre>
 
-<p>If <code>onFulfilled</code> returns a promise, the return value of <code>then</code> will be resolved/rejected by the promise.</p>
+<p>If <code>onFulfilled</code> returns a promise, the return value of <code>then</code>
+  will be resolved/rejected by the promise.</p>
 
-<pre class="brush: js notranslate">function resolveLater(resolve, reject) {
+<pre class="brush: js">function resolveLater(resolve, reject) {
   setTimeout(function() {
     resolve(10);
   }, 1000);
@@ -248,11 +292,14 @@ p3.then(function(v) {
 });
 </pre>
 
-<h3 id="window.setImmediate_style_promise-based_polyfill">window.setImmediate style promise-based polyfill</h3>
+<h3 id="window.setImmediate_style_promise-based_polyfill">window.setImmediate style
+  promise-based polyfill</h3>
 
-<p>Using a {{jsxref("Function.prototype.bind()")}} <code>Reflect.apply</code> ({{jsxref("Reflect.apply()")}}) method to create a (non-cancellable) {{domxref("window.setImmediate")}}-style function.</p>
+<p>Using a {{jsxref("Function.prototype.bind()")}} <code>Reflect.apply</code>
+  ({{jsxref("Reflect.apply()")}}) method to create a (non-cancellable)
+  {{domxref("window.setImmediate")}}-style function.</p>
 
-<pre class="brush: js notranslate">const nextTick = (() =&gt; {
+<pre class="brush: js">const nextTick = (() =&gt; {
   const noop = () =&gt; {}; // literally
   const nextTickPromise = () =&gt; Promise.resolve().then(noop);
 
@@ -272,27 +319,31 @@ p3.then(function(v) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-promise.prototype.then', 'Promise.prototype.then')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-promise.prototype.then', 'Promise.prototype.then')}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">To contribute to this compatibility data, please write a pull request against this repository: <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.</div>
+<div class="hidden">To contribute to this compatibility data, please write a pull request
+  against this repository: <a
+    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.
+</div>
 
 <p>{{Compat("javascript.builtins.Promise.then")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Promise")}}</li>
- <li>{{jsxref("Promise.prototype.catch()")}}</li>
+  <li>{{jsxref("Promise")}}</li>
+  <li>{{jsxref("Promise.prototype.catch()")}}</li>
 </ul>

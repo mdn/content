@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Learn_about_the_issues">Learn about the issues</h2>
 
-<p>To understand common patterns, it helps to read browser documentation. If you are reading this on <a href="https://developer.mozilla.org/">MDN</a>, you are at the right place to start. Just check the support of the elements (or DOM interface) you want to use. MDN has compatibility tables available for most elements, properties and APIs that can be used in a web page. There are other resources that can be amazingly helpful:</p>
+<p>To understand common patterns, it helps to read browser documentation. If you are reading this on <a href="/">MDN</a>, you are at the right place to start. Just check the support of the elements (or DOM interface) you want to use. MDN has compatibility tables available for most elements, properties and APIs that can be used in a web page. There are other resources that can be amazingly helpful:</p>
 
 <h3 id="Browser_vendor_documentation">Browser vendor documentation</h3>
 
@@ -33,7 +33,7 @@ tags:
 
 <h2 id="Make_things_simple">Make things simple</h2>
 
-<p>Because <a href="/en-US/docs/HTML/Forms">HTML forms</a> involves complex interaction, there is one rule of thumb: keep it simple, also known as the "<a href="https://en.wikipedia.org/wiki/KISS_principle">KISS principal</a>". There are so many cases where we want forms that are "nicer" or "with advanced functionality", but building efficient HTML Forms is not a question of design or technology. Rather, it's about simplicity, intuitiveness, and ease of user interaction. The tutorial, <a href="http://www.uxforthemasses.com/forms-usability/" rel="external">forms usability on UX For The Masses,</a> explains it well.</p>
+<p>Because <a href="/en-US/docs/Learn/Forms">HTML forms</a> involves complex interaction, there is one rule of thumb: keep it simple, also known as the "<a href="https://en.wikipedia.org/wiki/KISS_principle">KISS principal</a>". There are so many cases where we want forms that are "nicer" or "with advanced functionality", but building efficient HTML Forms is not a question of design or technology. Rather, it's about simplicity, intuitiveness, and ease of user interaction. The tutorial, <a href="http://www.uxforthemasses.com/forms-usability/" rel="external">forms usability on UX For The Masses,</a> explains it well.</p>
 
 <h3 id="Graceful_degradation_is_web_developers_best_friend">Graceful degradation is web developer's best friend</h3>
 
@@ -59,8 +59,8 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <th style="text-align: center;"><img alt="Screen shot of the color input on Chrome for Mac OSX" src="/files/4575/color-fallback-chrome.png" style="height: 35px; width: 139px;"></th>
-   <th style="text-align: center;"><img alt="Screen shot of the color input on Firefox for Mac OSX" src="/files/4577/color-fallback-firefox.png" style="height: 30px; width: 245px;"></th>
+   <th style="text-align: center;"><img alt="Screen shot of the color input on Chrome for Mac OSX" src="color-fallback-chrome.png"></th>
+   <th style="text-align: center;"><img alt="Screen shot of the color input on Firefox for Mac OSX" src="color-fallback-firefox.png"></th>
   </tr>
  </tbody>
 </table>
@@ -125,7 +125,7 @@ input[type="button"] {
 
 <p>It's generally a good idea to not alter the default appearance of form control because altering one CSS property value may alter some input types but not others. For example, if you declare <code>input { font-size: 2rem; }</code>, it will impact <code>number</code>, <code>date</code>, and <code>text</code>, but not <code>color</code> or <code>range</code>. If you alter a property, that may impact the appearance of the widget in unexpected ways. For example, <code>[value] { background-color: #ccc; }</code> may have been used to target every {{HTMLElement("input")}} with a <code>value</code> attribute, but changing the background-color or border radius on a {{HTMLElement("meter")}} will lead to likely unexpected results that differ across browsers. You can declare {{cssxref('appearance', 'appearance: none;')}} to remove the browser styles, but that generally defeats the purpose: as you lose all styling, removing the default look and feel your visitors are used to. </p>
 
-<p>To summarize, when it comes to styling form control widgets, the side effects of styling them with CSS can be unpredictable. So don't. As you can see from the complexity of the <a href="/en-US/docs/Property_compatibility_table_for_form_widgets">Property compatibility table for form widgets</a> article, it's very difficult. Even if it's still possible to do a few adjustments on text elements (such as sizing or font color), there are always side effects. The best approach remains to not style HTML Form widgets at all. But you can still apply styles to all the surrounding items. And, if you must alter the default styles of your form widgets, define a style guide to ensure consistency among all your form controls so user experience is not destroyed. You can also investigate some hard techniques such as <a href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets">rebuilding widgets with JavaScript</a>. But in that case, do not hesitate to <a href="http://www.smashingmagazine.com/2011/11/03/but-the-client-wants-ie-6-support/" rel="external">charge your client for such foolishness</a>.</p>
+<p>To summarize, when it comes to styling form control widgets, the side effects of styling them with CSS can be unpredictable. So don't. As you can see from the complexity of the <a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Property compatibility table for form widgets</a> article, it's very difficult. Even if it's still possible to do a few adjustments on text elements (such as sizing or font color), there are always side effects. The best approach remains to not style HTML Form widgets at all. But you can still apply styles to all the surrounding items. And, if you must alter the default styles of your form widgets, define a style guide to ensure consistency among all your form controls so user experience is not destroyed. You can also investigate some hard techniques such as <a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">rebuilding widgets with JavaScript</a>. But in that case, do not hesitate to <a href="http://www.smashingmagazine.com/2011/11/03/but-the-client-wants-ie-6-support/" rel="external">charge your client for such foolishness</a>.</p>
 
 <h2 id="Feature_detection_and_polyfills">Feature detection and polyfills</h2>
 
@@ -192,30 +192,30 @@ input[type="button"] {
 
 <p>As you can see, considering browser and operating system default form control appearance is important. There are many techniques to handle these issue; however mastering all of them is beyond the scope of this article. The basic premise is to consider whether altering the default implementation is worth the work before embarking on the challenge.</p>
 
-<p>If you read all the articles of this <a href="/en-US/docs/HTML/Forms">HTML Forms guide</a>, you should now be at ease with using forms. If you discover new techniques or hints, please help <a href="/en-US/docs/Project:How_to_help">improve the guide</a>.</p>
+<p>If you read all the articles of this <a href="/en-US/docs/Learn/Forms">HTML Forms guide</a>, you should now be at ease with using forms. If you discover new techniques or hints, please help <a href="/en-US/docs/Project:How_to_help">improve the guide</a>.</p>
 
 <h2 id="See_also">See also</h2>
 
 <h3 id="Learning_path">Learning path</h3>
 
 <ul>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form">Your first HTML form</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form">How to structure an HTML form</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/The_native_form_widgets">The native form widgets</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/HTML5_input_types">HTML5 input types</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Additional_form_controls">Additional form controls</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/UI_pseudo-classes">UI pseudo-classes</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Styling_HTML_forms">Styling HTML forms</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">Sending form data</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Your_first_form">Your first HTML form</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form">How to structure an HTML form</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls">The native form widgets</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/HTML5_input_types">HTML5 input types</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Other_form_controls">Additional form controls</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/UI_pseudo-classes">UI pseudo-classes</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling HTML forms</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Form_validation">Form data validation</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data">Sending form data</a></li>
 </ul>
 
 <h3 id="Advanced_Topics">Advanced Topics</h3>
 
 <ul>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript">Sending forms through JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets">How to build custom form widgets</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers">HTML forms in legacy browsers</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms">Advanced styling for HTML forms</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">Property compatibility table for form widgets</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript">Sending forms through JavaScript</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form widgets</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/HTML_forms_in_legacy_browsers">HTML forms in legacy browsers</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Advanced_form_styling">Advanced styling for HTML forms</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Property compatibility table for form widgets</a></li>
 </ul>

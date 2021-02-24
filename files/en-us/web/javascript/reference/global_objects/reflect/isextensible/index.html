@@ -2,30 +2,38 @@
 title: Reflect.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
 tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
+- ECMAScript 2015
+- JavaScript
+- Method
+- Reference
+- Reflect
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary">The static <strong><code>Reflect.isExtensible()</code></strong> method determines if an object is extensible (whether it can have new properties added to it). It is similar to {{jsxref("Object.isExtensible()")}}, but with some <a href="#Difference_to_Object.isExtensible">differences</a>.</span></p>
+<p><span class="seoSummary">The static
+    <strong><code>Reflect.isExtensible()</code></strong> method determines if an object is
+    extensible (whether it can have new properties added to it). It is similar to
+    {{jsxref("Object.isExtensible()")}}, but with some <a
+      href="#Difference_to_Object.isExtensible">differences</a>.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/js/reflect-isextensible.html", "taller")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<div class="hidden">The source for this interactive example is stored in a GitHub
+  repository. If you'd like to contribute to the interactive examples project, please
+  clone <a
+    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
+  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">Reflect.isExtensible(<var>target</var>)
+<pre class="brush: js">Reflect.isExtensible(<var>target</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>target</var></code></dt>
- <dd>The target object which to check if it is extensible.</dd>
+  <dt><code><var>target</var></code></dt>
+  <dd>The target object which to check if it is extensible.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -38,7 +46,9 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>The <code>Reflect.isExtensible</code> method allows you determine if an object is extensible (whether it can have new properties added to it). It is the same method as {{jsxref("Object.isExtensible()")}}.</p>
+<p>The <code>Reflect.isExtensible</code> method allows you determine if an object is
+  extensible (whether it can have new properties added to it). It is the same method as
+  {{jsxref("Object.isExtensible()")}}.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -46,7 +56,7 @@ tags:
 
 <p>See also {{jsxref("Object.isExtensible()")}}.</p>
 
-<pre class="brush: js notranslate">// New objects are extensible.
+<pre class="brush: js">// New objects are extensible.
 let empty = {}
 Reflect.isExtensible(empty)  // === true
 
@@ -65,9 +75,12 @@ Reflect.isExtensible(frozen)  // === false
 
 <h3 id="Difference_to_Object.isExtensible">Difference to Object.isExtensible()</h3>
 
-<p>If the <code><var>target</var></code> argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. With {{jsxref("Object.isExtensible()")}}, a non-object first argument will be coerced to an object at first.</p>
+<p>If the <code><var>target</var></code> argument to this method is not an object (a
+  primitive), then it will cause a {{jsxref("TypeError")}}. With
+  {{jsxref("Object.isExtensible()")}}, a non-object first argument will be coerced to an
+  object at first.</p>
 
-<pre class="brush: js notranslate">Reflect.isExtensible(1)
+<pre class="brush: js">Reflect.isExtensible(1)
 // TypeError: 1 is not an object
 
 Object.isExtensible(1)
@@ -77,16 +90,17 @@ Object.isExtensible(1)
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-reflect.isextensible', 'Reflect.isExtensible')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-reflect.isextensible', 'Reflect.isExtensible')}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -96,6 +110,6 @@ Object.isExtensible(1)
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Reflect")}}</li>
- <li>{{jsxref("Object.isExtensible()")}}</li>
+  <li>{{jsxref("Reflect")}}</li>
+  <li>{{jsxref("Object.isExtensible()")}}</li>
 </ul>

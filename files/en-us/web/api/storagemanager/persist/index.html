@@ -2,19 +2,23 @@
 title: StorageManager.persist()
 slug: Web/API/StorageManager/persist
 tags:
-  - Method
-  - Reference
-  - Secure context
-  - Storage API
-  - persist()
+- Method
+- Reference
+- Secure context
+- Storage API
+- persist()
 ---
 <p>{{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}</p>
 
-<p><span class="seoSummary">The <strong><code>persist()</code></strong> method of the {{domxref("StorageManager")}} interface requests permission to use persistent storage, and returns a {{jsxref('Promise')}} that resolves to <code>true</code> if permission is granted and box mode is persistent, and <code>false</code> otherwise.</span></p>
+<p><span class="seoSummary">The <strong><code>persist()</code></strong> method of the
+    {{domxref("StorageManager")}} interface requests permission to use persistent storage,
+    and returns a {{jsxref('Promise')}} that resolves to <code>true</code> if permission
+    is granted and box mode is persistent, and <code>false</code> otherwise.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">navigator.storage.persist().then(function(persistent) { ... })</pre>
+<pre
+  class="brush: js">navigator.storage.persist().then(function(persistent) { ... })</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -37,18 +41,18 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Storage','#dom-storagemanager-persist','persist')}}</td>
-   <td>{{Spec2('Storage')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Storage','#dom-storagemanager-persist','persist')}}</td>
+      <td>{{Spec2('Storage')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

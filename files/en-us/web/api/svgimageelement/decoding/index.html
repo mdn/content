@@ -2,22 +2,24 @@
 title: SVGImageElement.decoding
 slug: Web/API/SVGImageElement/decoding
 tags:
-  - API
-  - Image
-  - Property
-  - Reference
-  - SVG
-  - SVG DOM
-  - SVGImageElement
-  - decoding
+- API
+- Image
+- Property
+- Reference
+- SVG
+- SVG DOM
+- SVGImageElement
+- decoding
 ---
 <div>{{APIRef}}</div>
 
-<p class="summary">The <strong><code>decoding</code></strong> property of the {{domxref("SVGImageElement")}} interface represents a hint given to the browser on how it should decode the image.</p>
+<p class="summary">The <strong><code>decoding</code></strong> property of the
+  {{domxref("SVGImageElement")}} interface represents a hint given to the browser on how
+  it should decode the image.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var refStr = SVGImageElement.decoding
+<pre class="brush: js">var refStr = SVGImageElement.decoding
 SVGImageElement.decoding = refStr;</pre>
 
 <h3 id="Values">Values</h3>
@@ -25,9 +27,12 @@ SVGImageElement.decoding = refStr;</pre>
 <p>A {{domxref("DOMString")}} representing the decoding hint. Possible values are:</p>
 
 <ul>
-  <li><strong><code>sync</code></strong>: Decode the image synchronously for atomic presentation with other content.</li>
-  <li><strong><code>async</code></strong>: Decode the image asynchronously to reduce delay in presenting other content.</li>
-  <li><strong><code>auto</code></strong>: Default mode, which indicates no preference for the decoding mode. The browser decides what is best for the user.</li>
+  <li><strong><code>sync</code></strong>: Decode the image synchronously for atomic
+    presentation with other content.</li>
+  <li><strong><code>async</code></strong>: Decode the image asynchronously to reduce delay
+    in presenting other content.</li>
+  <li><strong><code>auto</code></strong>: Default mode, which indicates no preference for
+    the decoding mode. The browser decides what is best for the user.</li>
 </ul>
 
 <h2 id="Examples">Examples</h2>
@@ -40,18 +45,18 @@ img.src = 'img/logo.svg';
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','#image-decoding-hint','decoding')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG','#image-decoding-hint','decoding')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -61,6 +66,6 @@ img.src = 'img/logo.svg';
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/HTML/Element/img">&lt;img&gt;: The Image Embed element</a></li>
+  <li><a href="/en-US/docs/Web/HTML/Element/img">&lt;img&gt;: The Image Embed element</a>
+  </li>
 </ul>
-

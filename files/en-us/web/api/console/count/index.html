@@ -2,29 +2,32 @@
 title: console.count()
 slug: Web/API/Console/count
 tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Reference
-  - Web Development
-  - web console
+- API
+- DOM
+- Debugging
+- Method
+- Reference
+- Web Development
+- web console
 ---
 <div>{{APIRef("Console API")}}</div>
 
-<p>The <strong><code>console.count()</code></strong> method logs the number of times that this particular call to <code>count()</code> has been called.</p>
+<p>The <strong><code>console.count()</code></strong> method logs the number of times that
+  this particular call to <code>count()</code> has been called.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">console.count(<var>[label]</var>);</pre>
+<pre class="brush: js">console.count(<var>[label]</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>label</code> {{Optional_Inline}}</dt>
- <dd>A {{jsxref("String")}}. If supplied, <code>count()</code> outputs the number of times it has been called with that label. If omitted, <code>count()</code> behaves as though it was called with the "default" label.</dd>
+  <dt><code>label</code> {{Optional_Inline}}</dt>
+  <dd>A {{jsxref("String")}}. If supplied, <code>count()</code> outputs the number of
+    times it has been called with that label. If omitted, <code>count()</code> behaves as
+    though it was called with the "default" label.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -52,9 +55,11 @@ console.count();</pre>
 "default: 3"
 "default: 4"</pre>
 
-<p>The label is displayed as <code>default</code> because no explicit label was supplied.</p>
+<p>The label is displayed as <code>default</code> because no explicit label was supplied.
+</p>
 
-<p>If we pass the <code>user</code> variable as the <code>label</code> argument to the first invocation of <code>count()</code>, and the string "alice" to the second:</p>
+<p>If we pass the <code>user</code> variable as the <code>label</code> argument to the
+  first invocation of <code>count()</code>, and the string "alice" to the second:</p>
 
 <pre class="brush: js; highlight[4, 13]">let user = "";
 
@@ -77,25 +82,26 @@ console.count("alice");</pre>
 "alice: 2"
 "alice: 3"</pre>
 
-<p>We're now maintaining separate counts based only on the value of <code>label</code>.</p>
+<p>We're now maintaining separate counts based only on the value of <code>label</code>.
+</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#count", "console.count()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("Console API", "#count", "console.count()")}}</td>
+      <td>{{Spec2("Console API")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

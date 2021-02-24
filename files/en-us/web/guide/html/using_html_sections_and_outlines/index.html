@@ -95,7 +95,7 @@ tags:
 
 <h3 id="Nav_Element">Nav Element</h3>
 
-<p>The <code>&lt;nav&gt;</code> element indicates a navigation block and should be used for major navigational menus.</p>
+<p>The <code>&lt;nav&gt;</code> element indicates a navigation block and should be used to mark up a document's primary navigation functionality.</p>
 
 <pre>&lt;nav&gt;
   &lt;ul&gt;
@@ -106,7 +106,7 @@ tags:
 
 <h4 id="Nesting_Menus">Nesting Menus</h4>
 
-<p>You do not nest <code>&lt;nav&gt;</code> elements. The <code>&lt;nav&gt;</code> can contain both primary and secondary menus.</p>
+<p>You shouldn't nest multiple <code>&lt;nav&gt;</code> elements. A single <code>&lt;nav&gt;</code> can contain multiple levels of menu hierarchy, or related navigation features.</p>
 
 <pre>&lt;nav&gt;
   &lt;ul&gt;
@@ -124,7 +124,7 @@ tags:
 
 <h4 id="Collection_of_Links">Collection of Links</h4>
 
-<p>Use the <code>&lt;nav&gt;</code> element only for site navigation menus. Collections of links such as social media profiles or a blogroll should not be wrapped in the <code>&lt;nav&gt;</code> element.</p>
+<p>The <code>&lt;nav&gt;</code> element should be used to mark up the page's <em>primary</em> navigation, for example, a navigation menu or a search box. For other collections of links — such as social media profiles or related links — a <code>&lt;aside&gt;</code> or <code>&lt;section&gt;</code> element may be more suitable.</p>
 
 <h4 id="HTML_Elements_in_&lt;nav&gt;">HTML Elements in &lt;nav&gt;</h4>
 
@@ -278,7 +278,7 @@ tags:
 </pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: This code will also cause the <a href="https://validator.w3.org/">HTML validator</a> to return errors. This isn't a really bad thing neccessarily — sites will often have a few validation errors — but it's something to be aware of still.</p>
+<p><strong>Note</strong>: This code will also cause the <a href="https://validator.w3.org/">HTML validator</a> to return errors. This isn't a really bad thing necessarily — sites will often have a few validation errors — but it's something to be aware of still.</p>
 </div>
 
 <h2 id="Conclusion">Conclusion</h2>

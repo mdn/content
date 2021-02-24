@@ -2,40 +2,51 @@
 title: Window.crypto
 slug: Web/API/Window/crypto
 tags:
-  - API
-  - Crypto
-  - Cryptography
-  - Encoding
-  - Encryption
-  - HTML DOM
-  - Property
-  - Read-only
-  - Reference
-  - Security
-  - Window
+- API
+- Crypto
+- Cryptography
+- Encoding
+- Encryption
+- HTML DOM
+- Property
+- Read-only
+- Reference
+- Security
+- Window
 ---
 <div>{{APIRef}}</div>
 
-<p><span class="seoSummary">The read-only <strong><code>Window.crypto</code></strong> property returns the {{domxref("Crypto")}} object associated to the global object. This object allows web pages access to certain cryptographic related services.</span> Although the property itself is read-only, all of its methods (and the methods of its child object, {{domxref("SubtleCrypto")}}) are not read-only, and therefore vulnerable to attack by {{glossary("polyfill")}}.</p>
+<p><span class="seoSummary">The read-only <strong><code>Window.crypto</code></strong>
+    property returns the {{domxref("Crypto")}} object associated to the global object.
+    This object allows web pages access to certain cryptographic related services.</span>
+  Although the property itself is read-only, all of its methods (and the methods of its
+  child object, {{domxref("SubtleCrypto")}}) are not read-only, and therefore vulnerable
+  to attack by {{glossary("polyfill")}}.</p>
 
-<p>Although <code>window.crypto</code> is available on all windows, the returned <code>Crypto</code> object only has one usable feature in insecure contexts: the {{domxref("Crypto.getRandomValues", "getRandomValues()")}} method. In general, you should use this API only in secure contexts.</p>
+<p>Although <code>window.crypto</code> is available on all windows, the
+  returned <code>Crypto</code> object only has one usable feature in insecure contexts:
+  the {{domxref("Crypto.getRandomValues", "getRandomValues()")}} method. In general, you
+  should use this API only in secure contexts.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">let <em>cryptoObj</em> = window.crypto || window.msCrypto; // for IE 11
+<pre class="brush: js">let <em>cryptoObj</em> = window.crypto || window.msCrypto; // for IE 11
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>An instance of the {{domxref("Crypto")}} interface, providing access to general-purpose cryptography and a strong random-number generator.</p>
+<p>An instance of the {{domxref("Crypto")}} interface, providing access to general-purpose
+  cryptography and a strong random-number generator.</p>
 
 <h2 id="Example">Example</h2>
 
-<p id="Using_the_domxrefWindow.crypto_property_to_access_the_getRandomValues_method.">This example uses the {{domxref("Window.crypto")}} property to access the {{domxref("Crypto.getRandomValues", "getRandomValues()")}} method.</p>
+<p id="Using_the_domxrefWindow.crypto_property_to_access_the_getRandomValues_method.">This
+  example uses the {{domxref("Window.crypto")}} property to access the
+  {{domxref("Crypto.getRandomValues", "getRandomValues()")}} method.</p>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">genRandomNumbers = function getRandomNumbers() {
+<pre class="brush: js">genRandomNumbers = function getRandomNumbers() {
   const array = new Uint32Array(10);
   window.crypto.getRandomValues(array);
 
@@ -48,7 +59,8 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;p id="myRandText"&gt;The random numbers are: &lt;/p&gt;
+<pre
+  class="brush: html">&lt;p id="myRandText"&gt;The random numbers are: &lt;/p&gt;
 &lt;button type="button" onClick='genRandomNumbers()'&gt;Generate 10 random numbers&lt;/button&gt;</pre>
 
 <h3 id="Result">Result</h3>
@@ -58,18 +70,18 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Web Crypto API", "#dfn-GlobalCrypto", "Window.crypto")}}</td>
-   <td>{{Spec2("Web Crypto API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("Web Crypto API", "#dfn-GlobalCrypto", "Window.crypto")}}</td>
+      <td>{{Spec2("Web Crypto API")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -79,6 +91,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{domxref("Window")}} global object</li>
- <li>The {{domxref("Crypto")}} interface</li>
+  <li>The {{domxref("Window")}} global object</li>
+  <li>The {{domxref("Crypto")}} interface</li>
 </ul>

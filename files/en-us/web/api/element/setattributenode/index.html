@@ -2,24 +2,26 @@
 title: Element.setAttributeNode()
 slug: Web/API/Element/setAttributeNode
 tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
+- API
+- DOM
+- Element
+- Method
+- Reference
 ---
 <div>{{ APIRef("DOM") }}</div>
 
-<p>The <strong><code>setAttributeNode()</code></strong> method adds a new <code>Attr</code> node to the specified element.</p>
+<p>The <strong><code>setAttributeNode()</code></strong> method adds a new
+  <code>Attr</code> node to the specified element.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>replacedAttr</em> = <em>element</em>.setAttributeNode(<em>attribute</em>);
+<pre class="brush: js">var <em>replacedAttr</em> = <em>element</em>.setAttributeNode(<em>attribute</em>);
 </pre>
 
 <ul>
- <li><code>attribute</code> is the <code>Attr</code> node to set on the element.</li>
- <li><code>replacedAttr</code> is the replaced attribute node, if any, returned by this function.</li>
+  <li><code>attribute</code> is the <code>Attr</code> node to set on the element.</li>
+  <li><code>replacedAttr</code> is the replaced attribute node, if any, returned by this
+    function.</li>
 </ul>
 
 <h2 id="Example">Example</h2>
@@ -45,27 +47,30 @@ alert(d2.attributes[1].value);
 
 <h2 id="Notes">Notes</h2>
 
-<p>If the attribute named already exists on the element, that attribute is replaced with the new one and the replaced one is returned.</p>
+<p>If the attribute named already exists on the element, that attribute is replaced with
+  the new one and the replaced one is returned.</p>
 
-<p>This method is seldom used, with {{domxref("Element.setAttribute()")}} usually being used to change element's attributes.</p>
+<p>This method is seldom used, with {{domxref("Element.setAttribute()")}} usually being
+  used to change element's attributes.</p>
 
 <p>{{ DOMAttributeMethods() }}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-element-setattributenode','setAttributeNode()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM WHATWG','#dom-element-setattributenode','setAttributeNode()')}}
+      </td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

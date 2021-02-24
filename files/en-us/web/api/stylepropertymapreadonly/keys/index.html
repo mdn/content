@@ -2,22 +2,24 @@
 title: StylePropertyMapReadOnly.keys()
 slug: Web/API/StylePropertyMapReadOnly/keys
 tags:
-  - API
-  - CSS Typed Object Model API
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - StylePropertyMapReadOnly
-  - keys()
+- API
+- CSS Typed Object Model API
+- Experimental
+- Houdini
+- Method
+- Reference
+- StylePropertyMapReadOnly
+- keys()
 ---
 <p>{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}</p>
 
-<p>The <strong><code>StylePropertyMapReadOnly.keys()</code></strong> method returns a new Array Iterator containing the keys for each item in <code>StylePropertyMapReadOnly</code></p>
+<p>The <strong><code>StylePropertyMapReadOnly.keys()</code></strong> method returns a new
+  Array Iterator containing the keys for each item
+  in <code>StylePropertyMapReadOnly</code></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>StylePropertyMapReadOnly</var>.keys()</pre>
+<pre class="brush: js"><var>StylePropertyMapReadOnly</var>.keys()</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -29,9 +31,10 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>In this example we use the <code>keys()</code> method to be able to access the properties within our {{domxref('Element.computedStyleMap()')}}.</p>
+<p>In this example we use the <code>keys()</code> method to be able to access the
+  properties within our {{domxref('Element.computedStyleMap()')}}.</p>
 
-<pre class="brush: js notranslate">// get a button element
+<pre class="brush: js">// get a button element
 const buttonEl = document.querySelector('button');
 
 // we can retrieve all computed styles with `computedStyleMap`
@@ -45,18 +48,18 @@ console.log(props.next().value); // returns align-content
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS Typed OM','#the-stylepropertymap','keys()')}}</td>
-   <td>{{Spec2('CSS Typed OM')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('CSS Typed OM','#the-stylepropertymap','keys()')}}</td>
+      <td>{{Spec2('CSS Typed OM')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

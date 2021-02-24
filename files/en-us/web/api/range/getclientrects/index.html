@@ -2,20 +2,23 @@
 title: Range.getClientRects()
 slug: Web/API/Range/getClientRects
 tags:
-  - API
-  - CSSOM View
-  - Experimental
-  - Method
-  - Range
-  - Reference
+- API
+- CSSOM View
+- Experimental
+- Method
+- Range
+- Reference
 ---
 <div>{{ApiRef("DOM")}}</div>
 
-<p>The <strong><code>Range.getClientRects()</code></strong> method returns a list of {{ domxref("DOMRect") }} objects representing the area of the screen occupied by the <a href="/en/DOM/range">range</a>. This is created by aggregating the results of calls to {{ domxref("Element.getClientRects()") }} for all the elements in the range.</p>
+<p>The <strong><code>Range.getClientRects()</code></strong> method returns a list of {{
+  domxref("DOMRect") }} objects representing the area of the screen occupied by the <a
+    href="/en-US/docs/DOM/range">range</a>. This is created by aggregating the results of calls to
+  {{ domxref("Element.getClientRects()") }} for all the elements in the range.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>rectList</em> = <em>range</em>.getClientRects()
+<pre class="brush: js"><em>rectList</em> = <em>range</em>.getClientRects()
 </pre>
 
 <h2 id="Example">Example</h2>
@@ -28,18 +31,19 @@ rectList = range.getClientRects();
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#dom-range-getclientrects', 'Range.getClientRects()')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('CSSOM View', '#dom-range-getclientrects',
+        'Range.getClientRects()')}}</td>
+      <td>{{Spec2('CSSOM View')}}</td>
+      <td>Initial specification.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -49,5 +53,5 @@ rectList = range.getClientRects();
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("Range")}}</li>
+  <li>{{domxref("Range")}}</li>
 </ul>

@@ -2,28 +2,31 @@
 title: Node.childNodes
 slug: Web/API/Node/childNodes
 tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Property
-  - Reference
+- API
+- DOM
+- DOM Reference
+- Property
+- Reference
 ---
 <div>
-<div>{{APIRef("DOM")}}</div>
+  <div>{{APIRef("DOM")}}</div>
 </div>
 
-<p>The <code><strong>Node.childNodes</strong></code> read-only property returns a live {{domxref("NodeList")}} of child {{domxref("Node","nodes")}} of the given element where the first child node is assigned index 0. Child nodes include elements, text and comments.</p>
+<p>The <code><strong>Node.childNodes</strong></code> read-only property returns a live
+  {{domxref("NodeList")}} of child {{domxref("Node","nodes")}} of the given element where
+  the first child node is assigned index 0. Child nodes include elements, text and
+  comments.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">let <var>nodeList</var> = <var>elementNodeReference</var>.childNodes;
+<pre class="brush: js">let <var>nodeList</var> = <var>elementNodeReference</var>.childNodes;
 </pre>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Simple_usage">Simple usage</h3>
 
-<pre class="brush:js notranslate">// parg is an object reference to a &lt;p&gt; element
+<pre class="brush:js">// parg is an object reference to a &lt;p&gt; element
 
 // First check that the element has child nodes
 if (parg.hasChildNodes()) {
@@ -37,7 +40,7 @@ if (parg.hasChildNodes()) {
 
 <h3 id="Remove_all_children_from_a_node">Remove all children from a node</h3>
 
-<pre class="brush:js notranslate">// This is one way to remove all children from a node
+<pre class="brush:js">// This is one way to remove all children from a node
 // box is an object reference to an element
 
 while (box.firstChild) {
@@ -47,44 +50,51 @@ while (box.firstChild) {
 
 <h2 id="Notes">Notes</h2>
 
-<p>The items in the collection of nodes are objects, not strings. To get data from node objects, use their properties. (For example, to get the name of the first childNode: <code><var>elementNodeReference</var>.childNodes[0].nodeName</code>.)</p>
+<p>The items in the collection of nodes are objects, not strings. To get data from node
+  objects, use their properties. (For example, to get the name of the first
+  childNode: <code><var>elementNodeReference</var>.childNodes[0].nodeName</code>.)</p>
 
-<p>The <code>document</code> object itself has 2 children: the Doctype declaration and the root element, typically referred to as <code>documentElement</code>. (In (X)HTML documents this is the <code>HTML</code> element.)</p>
+<p>The <code>document</code> object itself has 2 children: the Doctype declaration and the
+  root element, typically referred to as <code>documentElement</code>. (In (X)HTML
+  documents this is the <code>HTML</code> element.)</p>
 
-<p><code>childNodes</code> includes <em>all</em> child nodes—including non-element nodes like text and comment nodes. To get a collection of only elements, use {{domxref("ParentNode.children")}} instead.</p>
+<p><code>childNodes</code> includes <em>all</em> child nodes—including non-element nodes
+  like text and comment nodes. To get a collection of only elements, use
+  {{domxref("ParentNode.children")}} instead.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-node-childnodes', 'Node.childNodes')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-1451460987', 'Node.childNodes')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-1451460987', 'Node.childNodes')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-1451460987', 'Node.childNodes')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-node-childnodes', 'Node.childNodes')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM3 Core', 'core.html#ID-1451460987', 'Node.childNodes')}}</td>
+      <td>{{Spec2('DOM3 Core')}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 Core', 'core.html#ID-1451460987', 'Node.childNodes')}}</td>
+      <td>{{Spec2('DOM2 Core')}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM1', 'level-one-core.html#ID-1451460987', 'Node.childNodes')}}
+      </td>
+      <td>{{Spec2('DOM1')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -94,9 +104,9 @@ while (box.firstChild) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("Node.firstChild")}}</li>
- <li>{{domxref("Node.lastChild")}}</li>
- <li>{{domxref("Node.nextSibling")}}</li>
- <li>{{domxref("Node.previousSibling")}}</li>
- <li>{{domxref("ParentNode.children")}}</li>
+  <li>{{domxref("Node.firstChild")}}</li>
+  <li>{{domxref("Node.lastChild")}}</li>
+  <li>{{domxref("Node.nextSibling")}}</li>
+  <li>{{domxref("Node.previousSibling")}}</li>
+  <li>{{domxref("ParentNode.children")}}</li>
 </ul>

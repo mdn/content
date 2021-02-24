@@ -2,35 +2,44 @@
 title: DOMTokenList.item()
 slug: Web/API/DOMTokenList/item
 tags:
-  - API
-  - DOM
-  - DOMTokenList
-  - Method
-  - Reference
-  - item
+- API
+- DOM
+- DOMTokenList
+- Method
+- Reference
+- item
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p>The <code><strong>item()</strong></code> method of the {{domxref("DOMTokenList")}} interface returns an item in the list by its index.</p>
+<p>The <code><strong>item()</strong></code> method of the {{domxref("DOMTokenList")}}
+  interface returns an item in the list by its index.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>tokenList</var>.item(<var>index</var>)</pre>
+<pre
+  class="brush: js"><var>tokenList</var>.item(<var>index</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>index</var></code></dt>
- <dd>A {{domxref("DOMString")}} representing the index of the item you want to return.</dd>
+  <dt><code><var>index</var></code></dt>
+  <dd>A {{domxref("DOMString")}} representing the index of the item you want to return.
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{domxref("DOMString")}} representing the returned item. It returns <code>null</code> if the number is greater than or equal to the <code>length</code> of the list.</p>
+<p>A {{domxref("DOMString")}} representing the returned item. It returns
+  <code>null</code> if the number is greater than or equal to the <code>length</code> of
+  the list.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>In the following example we retrieve the list of classes set on a {{htmlelement("span")}} element as a <code>DOMTokenList</code> using {{domxref("Element.classList")}}. We then retrieve the last item in the list using <code>item(<var>tokenList</var>.length - 1)</code>, and write it into the <code>&lt;span&gt;</code>'s {{domxref("Node.textContent")}}.</p>
+<p>In the following example we retrieve the list of classes set on a
+  {{htmlelement("span")}} element as a <code>DOMTokenList</code> using
+  {{domxref("Element.classList")}}. We then retrieve the last item in the list using
+  <code>item(<var>tokenList</var>.length - 1)</code>, and write it into the
+  <code>&lt;span&gt;</code>'s {{domxref("Node.textContent")}}.</p>
 
 <p>First, the HTML:</p>
 
@@ -50,25 +59,22 @@ span.textContent = item;</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-domtokenlist-item','item()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM WHATWG','#dom-domtokenlist-item','item()')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.DOMTokenList.item")}}</p>
-</div>

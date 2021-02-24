@@ -6,25 +6,21 @@ tags:
 ---
 <p>{{DefaultAPISidebar("Device Memory API")}}{{securecontext_header}}{{SeeCompatTable}}</p>
 
-<p class="summary">Capabilities of the client devices largely depend on the amount of available RAM. Traditionally, developrs had to use heruistics and either benchmark the device or infer the device capabilities based on other factors like device manufacturer or User Agent strings.</p>
+<p class="summary">The capabilities of a client device largely depend on the amount of available RAM. Traditionally, developers had to use heuristics and either benchmark a device or infer device capabilities based on other factors like the device manufacturer or User Agent strings.</p>
 
-<h2 id="Accessing_device_memory_capacity">Accessing device memory capacity</h2>
+<h2 id="Determining_device_memory">Determining device memory</h2>
 
-<p>There are two ways to acces the approximate amount of RAM device has: via JavaScript API and via Client Hints HTTP header.</p>
+<p>There are two ways to determine the approximate amount of RAM a device has: use the Device Memory JavaScript API or accept Client Hints.</p>
 
 <h3 id="JavaScript_API">JavaScript API</h3>
 
-<p>You may query the approximate amount of ram device has by retrieving {{DOMxRef("Navigator.deviceMemory")}}</p>
+<p>You may query the approximate amount of RAM a device has by retrieving {{DOMxRef("Navigator.deviceMemory")}}</p>
 
-<pre class="brush:js notranslate">var ram1 = window.navigator.deviceMemory;
-var ram2 = navigator.deviceMemory;
-</pre>
+<pre class="brush:js">var RAM = navigator.deviceMemory;</pre>
 
-<p>Both of these will return the same result.</p>
+<h3 id="Client_Hints">Client Hints</h3>
 
-<h3 id="Client_Hints_Header">Client Hints Header</h3>
-
-<p>You also may use <a href="/en-US/docs/Glossary/Client_hints">Client Hints</a> directive <code>Device-Memory</code> to retreive the same approximate RAM capacity.</p>
+<p>You may also use the <a href="/en-US/docs/Glossary/Client_hints">Client Hints</a> HTTP Header with the <code>Device-Memory</code> directive to retrieve the same approximate RAM capacity.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

@@ -2,21 +2,25 @@
 title: WritableStream.getWriter()
 slug: Web/API/WritableStream/getWriter
 tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - Streams
-  - WritableStream
-  - getWriter
+- API
+- Experimental
+- Method
+- Reference
+- Streams
+- WritableStream
+- getWriter
 ---
 <div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
 
-<p class="summary">The <strong><code>getWriter()</code></strong> method of the {{domxref("WritableStream")}} interface returns a new instance of {{domxref("WritableStreamDefaultWriter")}} and locks the stream to that instance. While the stream is locked, no other writer can be acquired until this one is released. </p>
+<p class="summary">The <strong><code>getWriter()</code></strong> method of the
+  {{domxref("WritableStream")}} interface returns a new instance of
+  {{domxref("WritableStreamDefaultWriter")}} and locks the stream to that instance. While
+  the stream is locked, no other writer can be acquired until this one is released. </p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>writer</em> = <em>writableStream</em>.getWriter();</pre>
+<pre
+  class="brush: js">var <em>writer</em> = <em>writableStream</em>.getWriter();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -29,13 +33,22 @@ tags:
 <h3 id="Exceptions">Exceptions</h3>
 
 <dl>
- <dt>TypeError</dt>
- <dd>The stream you are trying to create a writer for is not a {{domxref("WritableStream")}}.</dd>
+  <dt>TypeError</dt>
+  <dd>The stream you are trying to create a writer for is not a
+    {{domxref("WritableStream")}}.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following example illustrates several features of this interface.  It shows the creation of the <code>WritableStream</code> with a custom sink and an API-supplied queuing strategy. It then calls a function called <code>sendMessage()</code>, passing the newly created stream and a string. Inside this function it calls the stream's <code>getWriter()</code> method, which returns an instance of {{domxref("WritableStreamDefaultWriter")}}. A <code>forEach()</code> call is used to write each chunk of the string to the stream. Finally, <code>write()</code> and <code>close()</code> return promises that are processed to deal with success or failure of chunks and streams.</p>
+<p>The following example illustrates several features of this interface.  It shows the
+  creation of the <code>WritableStream</code> with a custom sink and an API-supplied
+  queuing strategy. It then calls a function called <code>sendMessage()</code>, passing
+  the newly created stream and a string. Inside this function it calls the stream's
+  <code>getWriter()</code> method, which returns an instance of
+  {{domxref("WritableStreamDefaultWriter")}}. A <code>forEach()</code> call is used to
+  write each chunk of the string to the stream. Finally, <code>write()</code> and
+  <code>close()</code> return promises that are processed to deal with success or failure
+  of chunks and streams.</p>
 
 <pre class="brush: js">const list = document.querySelector('ul');
 
@@ -100,29 +113,34 @@ const writableStream = new WritableStream({
 
 sendMessage("Hello, world.", writableStream);</pre>
 
-<p>You can find the full code in our <a href="https://mdn.github.io/dom-examples/streams/simple-writer/">Simple writer example</a>.</p>
+<p>You can find the full code in our <a
+    href="https://mdn.github.io/dom-examples/streams/simple-writer/">Simple writer
+    example</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Streams","#ws-get-writer","getWriter()")}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("Streams","#ws-get-writer","getWriter()")}}</td>
+      <td>{{Spec2('Streams')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div class="hidden">
-<p>The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+  <p>The compatibility table in this page is generated from structured data. If you'd like
+    to contribute to the data, please check out <a
+      href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+    and send us a pull request.</p>
 </div>
 
 <p>{{Compat("api.WritableStream.getWriter")}}</p>

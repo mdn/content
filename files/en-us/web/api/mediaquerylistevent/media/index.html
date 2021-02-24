@@ -2,21 +2,24 @@
 title: MediaQueryListEvent.media
 slug: Web/API/MediaQueryListEvent/media
 tags:
-  - API
-  - CSSOM View
-  - Media
-  - Media Queries
-  - MediaQueryListEvent
-  - Property
-  - Reference
+- API
+- CSSOM View
+- Media
+- Media Queries
+- MediaQueryListEvent
+- Property
+- Reference
 ---
 <p>{{APIRef("CSSOM")}}</p>
 
-<p>The <strong><code>media</code></strong> read-only property of the {{DOMxRef("MediaQueryListEvent")}} interface is a {{DOMxRef("DOMString")}} representing a serialized media query.</p>
+<p>The <strong><code>media</code></strong> read-only property of the
+  {{DOMxRef("MediaQueryListEvent")}} interface is a {{DOMxRef("DOMString")}} representing
+  a serialized media query.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <em>media</em> = <em>MediaQueryListEvent.media;</em></pre>
+<pre
+  class="brush: js">var <em>media</em> = <em>MediaQueryListEvent.media;</em></pre>
 
 <h3 id="Value">Value</h3>
 
@@ -24,7 +27,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">var mql = window.matchMedia('(max-width: 600px)');
+<pre class="brush: js">var mql = window.matchMedia('(max-width: 600px)');
 
 function screenTest(e) {
   if (e.matches) {
@@ -46,18 +49,18 @@ mql.addListener(screenTest);
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSSOM View", "#dom-mediaquerylistevent-media", "media")}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Specification</th>
+      <th>Status</th>
+      <th>Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("CSSOM View", "#dom-mediaquerylistevent-media", "media")}}</td>
+      <td>{{Spec2("CSSOM View")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -67,9 +70,10 @@ mql.addListener(screenTest);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/CSS/Media_queries">Media queries</a></li>
- <li><a href="/en-US/docs/CSS/Using_media_queries_from_code">Using media queries from code</a></li>
- <li>{{DOMxRef("window.matchMedia()")}}</li>
- <li>{{DOMxRef("MediaQueryList")}}</li>
- <li>{{DOMxRef("MediaQueryListEvent")}}</li>
+  <li><a href="/en-US/docs/CSS/Media_queries">Media queries</a></li>
+  <li><a href="/en-US/docs/CSS/Using_media_queries_from_code">Using media queries from
+      code</a></li>
+  <li>{{DOMxRef("window.matchMedia()")}}</li>
+  <li>{{DOMxRef("MediaQueryList")}}</li>
+  <li>{{DOMxRef("MediaQueryListEvent")}}</li>
 </ul>

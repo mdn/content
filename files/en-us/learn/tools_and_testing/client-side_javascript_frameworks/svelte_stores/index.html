@@ -42,15 +42,15 @@ tags:
 
 <p>Clone the github repo (if you haven't already done it) with:</p>
 
-<pre class="brush: bash notranslate">git clone https://github.com/opensas/mdn-svelte-tutorial.git</pre>
+<pre class="brush: bash">git clone https://github.com/opensas/mdn-svelte-tutorial.git</pre>
 
 <p>Then to get to the current app state, run</p>
 
-<pre class="brush: bash notranslate">cd mdn-svelte-tutorial/06-stores</pre>
+<pre class="brush: bash">cd mdn-svelte-tutorial/06-stores</pre>
 
 <p>Or directly download the folder's content:</p>
 
-<pre class="brush: bash notranslate">npx degit opensas/mdn-svelte-tutorial/06-stores</pre>
+<pre class="brush: bash">npx degit opensas/mdn-svelte-tutorial/06-stores</pre>
 
 <p>Remember to run <code>npm install &amp;&amp; npm run dev</code> to start your app in development mode.</p>
 
@@ -93,7 +93,7 @@ tags:
  <li>
   <p>Give it the following content:</p>
 
-  <pre class="brush: js notranslate">import { writable } from 'svelte/store'
+  <pre class="brush: js">import { writable } from 'svelte/store'
 
 export const alert = writable('Welcome to the To-Do list app!')</pre>
  </li>
@@ -116,7 +116,7 @@ export const alert = writable('Welcome to the To-Do list app!')</pre>
  <li>
   <p>Give it the following content:</p>
 
-  <pre class="brush: html notranslate">&lt;script&gt;
+  <pre class="brush: html">&lt;script&gt;
   import { alert } from '../stores.js'
   import { onDestroy } from 'svelte'
 
@@ -188,18 +188,18 @@ div svg {
  <li>
   <p>In <code>App.svelte</code> we'll import the component; add the following import statement below the existing one:</p>
 
-  <pre class="brush: js notranslate">import Alert from './components/Alert.svelte'</pre>
+  <pre class="brush: js">import Alert from './components/Alert.svelte'</pre>
  </li>
  <li>
   <p>Then call the <code>Alert</code> component just above the <code>Todos</code> call, like this:</p>
 
-  <pre class="brush: html notranslate">&lt;Alert /&gt;
+  <pre class="brush: html">&lt;Alert /&gt;
 &lt;Todos {todos} /&gt;</pre>
  </li>
  <li>
   <p>Load your test app now, and you should now see the <code>Alert</code> message on screen. You may click on it to dismiss it.</p>
 
-  <p><img alt="A simple notification in the top right hand corner of an app saying welcome to todo list app" src="https://mdn.mozillademos.org/files/17351/01-alert-message.png" style="border-style: solid; border-width: 1px; height: 359px; width: 827px;"></p>
+  <p><img alt="A simple notification in the top right hand corner of an app saying welcome to todo list app" src="01-alert-message.png" style="border-style: solid; border-width: 1px;"></p>
  </li>
 </ol>
 
@@ -207,7 +207,7 @@ div svg {
 
 <p>This works, but you'll have to copy and paste all this code every time you want to subscribe to a store:</p>
 
-<pre class="brush: js notranslate">&lt;script&gt;
+<pre class="brush: js">&lt;script&gt;
   import myStore from './stores.js'
   import { onDestroy } from 'svelte'
 
@@ -222,7 +222,7 @@ div svg {
 
 <p>That's too much boilerplate for Svelte! Being a compiler, Svelte has more resources to make our lives easier. In this case Svelte provides the reactive <code>$store</code> syntax, also known as auto-subscription. In simple terms, you just prefix the store with the <code>$</code> sign and Svelte will generate the code to make it reactive automatically. So our previous code block can be replaced with this:</p>
 
-<pre class="brush: html notranslate">&lt;script&gt;
+<pre class="brush: html">&lt;script&gt;
   import myStore from './stores.js'
 &lt;/script&gt;
 
@@ -234,7 +234,7 @@ div svg {
  <li>
   <p>Let's apply this to our <code>Alert</code> component. Update the <code>&lt;script&gt;</code> and markup sections of <code>Alert.svelte</code> as follows:</p>
 
-  <pre class="brush: html notranslate">&lt;script&gt;
+  <pre class="brush: html">&lt;script&gt;
   import { alert } from '../stores.js'
 &lt;/script&gt;
 
@@ -265,12 +265,12 @@ div svg {
  <li>
   <p>Add the following <code>import</code> statement below the existing ones:</p>
 
-  <pre class="brush: js notranslate">import { alert } from '../stores.js'</pre>
+  <pre class="brush: js">import { alert } from '../stores.js'</pre>
  </li>
  <li>
   <p>Update your <code>addTodo()</code> function like so:</p>
 
-  <pre class="brush: js notranslate">function addTodo(name) {
+  <pre class="brush: js">function addTodo(name) {
   todos = [...todos, { id: newTodoId, name, completed: false }]
   $alert = `Todo '${name}' has been added`
 }</pre>
@@ -278,7 +278,7 @@ div svg {
  <li>
   <p>Update <code>removeTodo()</code> like so:</p>
 
-  <pre class="brush: js notranslate">function removeTodo(todo) {
+  <pre class="brush: js">function removeTodo(todo) {
   todos = todos.filter(t =&gt; t.id !== todo.id)
   todosStatus.focus()             // give focus to status heading
   $alert = `Todo '${todo.name}' has been deleted`
@@ -287,7 +287,7 @@ div svg {
  <li>
   <p>Update the <code>updateTodo()</code> function to this:</p>
 
-  <pre class="brush: js notranslate">function updateTodo(todo) {
+  <pre class="brush: js">function updateTodo(todo) {
   const i = todos.findIndex(t =&gt; t.id === todo.id)
   if (todos[i].name !== todo.name)            $alert = `todo '${todos[i].name}' has been renamed to '${todo.name}'`
   if (todos[i].completed !== todo.completed)  $alert = `todo '${todos[i].name}' marked as ${todo.completed ? 'completed' : 'active'}`
@@ -297,7 +297,7 @@ div svg {
  <li>
   <p>Add the following reactive block beneath the block that starts with <code>let filter = 'all'</code>:</p>
 
-  <pre class="brush: js notranslate">$: {
+  <pre class="brush: js">$: {
   if (filter === 'all')               $alert = 'Browsing all todos'
   else if (filter === 'active')       $alert = 'Browsing active todos'
   else if (filter === 'completed')    $alert = 'Browsing completed todos'
@@ -306,7 +306,7 @@ div svg {
  <li>
   <p>And finally for now, update the <code>const checkAllTodos</code> and <code>const removeCompletedTodos</code> blocks as follows:</p>
 
-  <pre class="brush: js notranslate">const checkAllTodos = (completed) =&gt; {
+  <pre class="brush: js">const checkAllTodos = (completed) =&gt; {
   todos = todos.map(t =&gt; ({...t, completed}))
   $alert = `${completed ? 'Checked' : 'Unchecked'} ${todos.length} todos`
 }
@@ -338,7 +338,7 @@ const removeCompletedTodos = () =&gt; {
  <li>
   <p>Update the <code>&lt;script&gt;</code> section of your <code>Alert.svelte</code> component like so:</p>
 
-  <pre class="brush: js notranslate">&lt;script&gt;
+  <pre class="brush: js">&lt;script&gt;
   import { onDestroy } from 'svelte'
   import { alert } from '../stores.js'
 
@@ -364,7 +364,7 @@ const removeCompletedTodos = () =&gt; {
  <li>
   <p>And update the <code>Alert.svelte</code> markup section like so:</p>
 
-  <pre class="brush: html notranslate">{#if visible}
+  <pre class="brush: html">{#if visible}
 &lt;div on:click={() =&gt; visible = false}&gt;
   &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"&gt;&lt;path d="M12.432 0c1.34 0 2.01.912 2.01 1.957 0 1.305-1.164 2.512-2.679 2.512-1.269 0-2.009-.75-1.974-1.99C9.789 1.436 10.67 0 12.432 0zM8.309 20c-1.058 0-1.833-.652-1.093-3.524l1.214-5.092c.211-.814.246-1.141 0-1.141-.317 0-1.689.562-2.502 1.117l-.528-.88c2.572-2.186 5.531-3.467 6.801-3.467 1.057 0 1.233 1.273.705 3.23l-1.391 5.352c-.246.945-.141 1.271.106 1.271.317 0 1.357-.392 2.379-1.207l.6.814C12.098 19.02 9.365 20 8.309 20z"/&gt;&lt;/svg&gt;
   &lt;p&gt;{ $alert }&lt;/p&gt;
@@ -391,7 +391,7 @@ const removeCompletedTodos = () =&gt; {
 
 <p>In our case, just adding a <code>role="alert"</code> to the <code>&lt;div&gt;</code> container will do the trick, like this:</p>
 
-<pre class="brush: html notranslate">&lt;div role="alert" on:click={() =&gt; visible = false}&gt;</pre>
+<pre class="brush: html">&lt;div role="alert" on:click={() =&gt; visible = false}&gt;</pre>
 
 <p>In general, testing your applications using screen readers is a good idea, not only to discover accessibility issues but also to get used to how visually impaired people use the Web. You have several options, like <a href="http://www.nvaccess.org/">NVDA</a> for Windows, <a href="http://www.chromevox.com/">ChromeVox</a> for Chrome, <a href="https://wiki.gnome.org/Projects/Orca">Orca</a> on Linux, and <a href="http://www.apple.com/accessibility/osx/voiceover/">VoiceOver</a> for Mac OS X and iOS, among other options.</p>
 
@@ -407,12 +407,12 @@ const removeCompletedTodos = () =&gt; {
  <li>
   <p>First of all, add the following line below your <code>todos</code> array:</p>
 
-  <pre class="brush: js notranslate">$: console.log('todos', todos)</pre>
+  <pre class="brush: js">$: console.log('todos', todos)</pre>
  </li>
  <li>
   <p>Next, update your <code>Todos</code> component call as follows:</p>
 
-  <pre class="brush: html notranslate">&lt;Todos bind:todos /&gt;</pre>
+  <pre class="brush: html">&lt;Todos bind:todos /&gt;</pre>
 
   <div class="notecard note">
   <p><strong>Remember</strong>: <code>&lt;Todos bind:todos /&gt;</code> is just a shortcut for <code>&lt;Todos bind:todos={todos} /&gt;</code>.</p>
@@ -434,14 +434,14 @@ const removeCompletedTodos = () =&gt; {
  <li>
   <p>Open the file <code>stores.js</code> and add the following store below the existing one:</p>
 
-  <pre class="brush: js notranslate">export const todos = writable([])</pre>
+  <pre class="brush: js">export const todos = writable([])</pre>
  </li>
  <li>
   <p>That was easy. Now we need to import the store and use it in <code>App.svelte</code>. Just remember that to access the todos now we have to use the <code>$todos</code> reactive <code>$store</code> syntax.</p>
 
   <p>Update your <code>App.svelte</code> file like this:</p>
 
-  <pre class="brush: html notranslate">&lt;script&gt;
+  <pre class="brush: html">&lt;script&gt;
   import Todos from './components/Todos.svelte'
   import Alert from './components/Alert.svelte'
 
@@ -475,18 +475,18 @@ const removeCompletedTodos = () =&gt; {
 
 <p>First of all, let's add the following <code>console.log()</code> statements to our <code>App.svelte</code> component to see the <code>todos</code> store and its content in action. Add these lines below the <code>todos</code> array:</p>
 
-<pre class="brush: js notranslate">console.log('todos store - todos:', todos)
+<pre class="brush: js">console.log('todos store - todos:', todos)
 console.log('todos store content - $todos:', $todos)</pre>
 
 <p>When you run the app now, you'll see something like this in your web console:</p>
 
-<p><img alt="web console showing the functions and contents of the todos store" src="https://mdn.mozillademos.org/files/17352/02-svelte-store-in-action.png" style="border-style: solid; border-width: 1px; height: 230px; width: 845px;"></p>
+<p><img alt="web console showing the functions and contents of the todos store" src="02-svelte-store-in-action.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>As you can see, our store is just an object containing <code>subscribe()</code>, <code>set()</code>, and <code>update()</code> methods, and <code>$todos</code> is our array of todos.</p>
 
 <p>Just for reference, here's a basic working store implemented from scratch:</p>
 
-<pre class="brush: js notranslate">export const writable = (initial_value = 0) =&gt; {
+<pre class="brush: js">export const writable = (initial_value = 0) =&gt; {
 
   let value = initial_value         // content of the store
   let subs = []                     // subscriber's handlers
@@ -514,7 +514,7 @@ console.log('todos store content - $todos:', $todos)</pre>
 
 <p>Anyway, usually you don't implement stores from scratch; instead you'd use the writable store to create <a href="https://svelte.dev/tutorial/custom-stores">custom stores</a> with domain-specific logic. In the following example we create a counter store, which will only allow us to add one to the counter or reset its value:</p>
 
-<pre class="brush: js notranslate">import { writable } from 'svelte/store';
+<pre class="brush: js">import { writable } from 'svelte/store';
 function myStore() {
   const { subscribe, set, update } = writable(0);
 
@@ -553,7 +553,7 @@ function myStore() {
  <li>
   <p>Give it the following content:</p>
 
-  <pre class="brush: js notranslate">import { writable } from 'svelte/store';
+  <pre class="brush: js">import { writable } from 'svelte/store';
 
 export const localStore = (key, initial) =&gt; {                 // receives the key of the local storage and an initial value
 
@@ -593,7 +593,7 @@ export const localStore = (key, initial) =&gt; {                 // receives the
 
   <p>Update <code>stores.js</code> like so:</p>
 
-  <pre class="brush: js notranslate">import { writable } from 'svelte/store'
+  <pre class="brush: js">import { writable } from 'svelte/store'
 import { localStore } from './localStore.js'
 
 export const alert = writable('Welcome to the To-Do list app!')
@@ -610,7 +610,7 @@ export const todos = localStore('mdn-svelte-todo', initialTodos)</pre>
  <li>
   <p>Now let's get rid of the hardcoded todos in <code>App.svelte</code>. Update its contents like this — we are basically just deleting the <code>$todos</code> array and the <code>console.log()</code> statements:</p>
 
-  <pre class="brush: html notranslate">&lt;script&gt;
+  <pre class="brush: html">&lt;script&gt;
   import Todos from './components/Todos.svelte'
   import Alert from './components/Alert.svelte'
 
@@ -630,7 +630,7 @@ export const todos = localStore('mdn-svelte-todo', initialTodos)</pre>
  <li>
   <p>You can also inspect it in the DevTools console. In the web console, enter the command <code>localStorage.getItem('mdn-svelte-todo')</code>. Make some changes to your app, like pressing the <em>Uncheck All</em> button, and check the web storage content once more. You will get something like this:</p>
 
-  <p><img alt="todo app with web console view alongside it, showing that when a todo is changed in the app, the corresponding entry is changed in web storage" src="https://mdn.mozillademos.org/files/17353/03-persisting-todos-to-local-storage.png" style="border-style: solid; border-width: 1px; height: 729px; width: 1019px;"></p>
+  <p><img alt="todo app with web console view alongside it, showing that when a todo is changed in the app, the corresponding entry is changed in web storage" src="03-persisting-todos-to-local-storage.png" style="border-style: solid; border-width: 1px;"></p>
  </li>
 </ol>
 
@@ -648,18 +648,18 @@ export const todos = localStore('mdn-svelte-todo', initialTodos)</pre>
  <li>
   <p>Put the following <code>import</code> statement below the existing ones:</p>
 
-  <pre class="brush: js notranslate">import { fly } from 'svelte/transition'</pre>
+  <pre class="brush: js">import { fly } from 'svelte/transition'</pre>
  </li>
  <li>
   <p>To use it, update your opening <code>&lt;div&gt;</code> tag like so:</p>
 
-  <pre class="brush: html notranslate">&lt;div role="alert" on:click={() =&gt; visible = false}
+  <pre class="brush: html">&lt;div role="alert" on:click={() =&gt; visible = false}
   transition:fly
 &gt;</pre>
 
   <p>Transitions can also receive parameters, like this:</p>
 
-  <pre class="brush: html notranslate">&lt;div role="alert" on:click={() =&gt; visible = false}
+  <pre class="brush: html">&lt;div role="alert" on:click={() =&gt; visible = false}
   transition:fly="\{{delay: 250, duration: 300, x: 0, y: -100, opacity: 0.5}}"
 &gt;</pre>
 
@@ -684,11 +684,11 @@ export const todos = localStore('mdn-svelte-todo', initialTodos)</pre>
 
 <p>To see the state of the code as it should be at the end of this article, access your copy of our repo like this:</p>
 
-<pre class="brush: bash notranslate">cd mdn-svelte-tutorial/07-next-steps</pre>
+<pre class="brush: bash">cd mdn-svelte-tutorial/07-next-steps</pre>
 
 <p>Or directly download the folder's content:</p>
 
-<pre class="brush: bash notranslate">npx degit opensas/mdn-svelte-tutorial/07-next-steps</pre>
+<pre class="brush: bash">npx degit opensas/mdn-svelte-tutorial/07-next-steps</pre>
 
 <p>Remember to run <code>npm install &amp;&amp; npm run dev</code> to start your app in development mode.</p>
 

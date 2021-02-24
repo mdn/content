@@ -6,7 +6,7 @@ slug: 'Web/CSS/:target-within'
 
 <p>The <strong><code>:target-within</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents an element that is a target element or <em>contains</em> an element that is a target. A target element is a unique element with an <code><a href="/en-US/docs/Web/HTML/Global_attributes#attr-id">id</a></code> matching the URL's fragment. In other words, it represents an element that is itself matched by the {{CSSxRef(":target")}} pseudo-class or has a descendant that is matched by <code>:target</code>. (This includes descendants in <a href="/en-US/docs/Web/Web_Components/Shadow_DOM">shadow trees</a>.)</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Selects a &lt;div&gt; when one of its descendants is a target */
+<pre class="brush: css no-line-numbers">/* Selects a &lt;div&gt; when one of its descendants is a target */
 div:target-within {
   background: cyan;
 }
@@ -14,7 +14,7 @@ div:target-within {
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">{{CSSSyntax}}</pre>
+<pre class="brush: css">{{CSSSyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -24,7 +24,7 @@ div:target-within {
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;h3&gt;Table of Contents&lt;/h3&gt;
+<pre class="brush: html">&lt;h3&gt;Table of Contents&lt;/h3&gt;
 &lt;ol&gt;
  &lt;li&gt;&lt;a href="#p1"&gt;Jump to the first paragraph!&lt;/a&gt;&lt;/li&gt;
  &lt;li&gt;&lt;a href="#p2"&gt;Jump to the second paragraph!&lt;/a&gt;&lt;/li&gt;
@@ -43,7 +43,7 @@ div:target-within {
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">article:target-within {
+<pre class="brush: css">article:target-within {
   background-color: gold;
 }
 

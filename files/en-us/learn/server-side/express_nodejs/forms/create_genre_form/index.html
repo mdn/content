@@ -16,13 +16,13 @@ tags:
 
 <p>Open <strong>/controllers/genreController.js</strong>, and add the following line at the top of the file:</p>
 
-<pre class="brush: js notranslate">const { body,validationResult } = require("express-validator");
+<pre class="brush: js">const { body,validationResult } = require("express-validator");
 </pre>
 
 <div class="note">
 <p><strong>Note:</strong> This syntax allows us to use <code>body</code> and <code>validationResult</code> as the associated middleware functions, as you will see in the post route section below. It is equivalent to:</p>
 
-<pre class="notranslate">validator = require("express-validator");
+<pre>validator = require("express-validator");
 body = validator.body();
 validationResult = validator.validationResult();
 </pre>
@@ -32,7 +32,7 @@ validationResult = validator.validationResult();
 
 <p>Find the exported <code>genre_create_get()</code> controller method and replace it with the following code. This renders the <strong>genre_form.pug</strong> view, passing a title variable.</p>
 
-<pre class="brush: js notranslate">// Display Genre create form on GET.
+<pre class="brush: js">// Display Genre create form on GET.
 exports.genre_create_get = function(req, res, next) {
   res.render('genre_form', { title: 'Create Genre' });
 };</pre>
@@ -41,10 +41,10 @@ exports.genre_create_get = function(req, res, next) {
 
 <p>Find the exported <code>genre_create_post()</code> controller method and replace it with the following code.</p>
 
-<pre class="brush: js notranslate">// Handle Genre create on POST.
+<pre class="brush: js">// Handle Genre create on POST.
 exports.genre_create_post =  [
 
-  // Validate and santise the name field.
+  // Validate and santize the name field.
   body('name', 'Genre name required').trim().isLength({ min: 1 }).escape(),
 
   // Process request after validation and sanitization.
@@ -95,15 +95,15 @@ exports.genre_create_post =  [
 <p><strong>Note:</strong> This approach is needed, because the validators are middleware functions.</p>
 </div>
 
-<p>The first method in the array defines a body validator (<code>body()</code>) that validates and sanitises the field. This uses <code>trim()</code> to remove any trailing/leading whitespace, checks that the <em>name</em> field is not empty, and then uses <code>escape()</code> to remove any dangerous HTML characters).</p>
+<p>The first method in the array defines a body validator (<code>body()</code>) that validates and sanitizes the field. This uses <code>trim()</code> to remove any trailing/leading whitespace, checks that the <em>name</em> field is not empty, and then uses <code>escape()</code> to remove any dangerous HTML characters).</p>
 
-<pre class="brush: js notranslate">// Validate that the name field is not empty.
+<pre class="brush: js">// Validate that the name field is not empty.
 body('name', 'Genre name required').trim().isLength({ min: 1 }).escape(),
 </pre>
 
-<p>After specifying the validators we create a middleware function to extract any validation errors. We use <code>isEmpty()</code> to check whether there are any errors in the validation result. If there are then we render the form again, passing in our sanitised genre object and the array of error messages (<code>errors.array()</code>).</p>
+<p>After specifying the validators we create a middleware function to extract any validation errors. We use <code>isEmpty()</code> to check whether there are any errors in the validation result. If there are then we render the form again, passing in our sanitized genre object and the array of error messages (<code>errors.array()</code>).</p>
 
-<pre class="brush: js notranslate">// Process request after validation and sanitization.
+<pre class="brush: js">// Process request after validation and sanitization.
 (req, res, next) =&gt; {
 
   // Extract the validation errors from a request.
@@ -127,7 +127,7 @@ body('name', 'Genre name required').trim().isLength({ min: 1 }).escape(),
 
 <p>If the genre name data is valid then we check if a <code>Genre</code> with the same name already exists (as we don't want to create duplicates). If it does, we redirect to the existing genre's detail page. If not, we save the new <code>Genre</code> and redirect to its detail page.</p>
 
-<pre class="brush: js notranslate">// Check if Genre with same name already exists.
+<pre class="brush: js">// Check if Genre with same name already exists.
 Genre.findOne({ 'name': req.body.name })
   .exec( function(err, found_genre) {
   if (err) { return next(err); }
@@ -150,12 +150,12 @@ Genre.findOne({ 'name': req.body.name })
 
 <p>The same view is rendered in both the <code>GET</code> and <code>POST</code> controllers/routes when we create a new <code>Genre</code> (and later on it is also used when we <em>update</em> a <code>Genre</code>). In the <code>GET</code> case the form is empty, and we just pass a title variable. In the <code>POST</code> case the user has previously entered invalid data—in the <code>genre</code> variable we pass back a sanitized version of the entered data and in the <code>errors</code> variable we pass back an array of error messages.</p>
 
-<pre class="brush: js notranslate">res.render('genre_form', { title: 'Create Genre'});
+<pre class="brush: js">res.render('genre_form', { title: 'Create Genre'});
 res.render('genre_form', { title: 'Create Genre', genre: genre, errors: errors.array()});</pre>
 
 <p>Create <strong>/views/genre_form.pug</strong> and copy in the text below.</p>
 
-<pre class="brush: html notranslate">extends layout
+<pre class="brush: html">extends layout
 
 block content
   h1 #{title}
@@ -187,16 +187,16 @@ block content
 
 <p>Run the application, open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>, then select the <em>Create new genre</em> link. If everything is set up correctly, your site should look something like the following screenshot. After you enter a value, it should be saved and you'll be taken to the genre detail page.</p>
 
-<p><img alt="Genre Create Page - Express Local Library site" src="https://mdn.mozillademos.org/files/14476/LocalLibary_Express_Genre_Create_Empty.png" style="border-style: solid; border-width: 1px; display: block; height: 301px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="Genre Create Page - Express Local Library site" src="locallibary_express_genre_create_empty.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>The only error we validate against server-side is that the genre field must not be empty. The screenshot below shows what the error list would look like if you didn't supply a genre (highlighted in red).</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14480/LocalLibary_Express_Genre_Create_Error.png" style="border-style: solid; border-width: 1px; display: block; height: 249px; margin: 0px auto; width: 400px;"></p>
+<p><img alt="" src="locallibary_express_genre_create_error.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <div class="note">
 <p><strong>Note:</strong> Our validation uses <code>trim()</code> to ensure that whitespace is not accepted as a genre name. We can also validate that the field is not empty on the client side by adding the value <code>required='true'</code> to the field definition in the form:</p>
 
-<pre class="brush: js notranslate">input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' value=(undefined===genre ? '' : genre.name), <strong>required='true'</strong> )</pre>
+<pre class="brush: js">input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' value=(undefined===genre ? '' : genre.name), <strong>required='true'</strong> )</pre>
 </div>
 
 <h2 id="Next_steps">Next steps</h2>

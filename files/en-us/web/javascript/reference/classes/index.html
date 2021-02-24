@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{JsSidebar("Classes")}}</div>
 
-<p>Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on prototypes but also have some syntax and semantics that are not shared with ES5 classalike semantics.</p>
+<p>Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on prototypes but also have some syntax and semantics that are not shared with ES5 class-like semantics.</p>
 
 <h2 id="Defining_classes">Defining classes</h2>
 
@@ -22,7 +22,7 @@ tags:
 
 <p>One way to define a class is using a <strong>class declaration</strong>. To declare a class, you use the <code>class</code> keyword with the name of the class ("Rectangle" here).</p>
 
-<pre class="brush: js notranslate">class Rectangle {
+<pre class="brush: js">class Rectangle {
   constructor(height, width) {
     this.height = height;
     this.width = width;
@@ -33,7 +33,7 @@ tags:
 
 <p>An important difference between <strong>function declarations</strong> and <strong>class declarations</strong> is that function declarations are {{Glossary("Hoisting", "hoisted")}} and class declarations are not. You first need to declare your class and then access it, otherwise code like the following will throw a {{jsxref("ReferenceError")}}:</p>
 
-<pre class="brush: js example-bad notranslate">const p = new Rectangle(); // ReferenceError
+<pre class="brush: js example-bad">const p = new Rectangle(); // ReferenceError
 
 class Rectangle {}
 </pre>
@@ -42,7 +42,7 @@ class Rectangle {}
 
 <p>A <strong>class expression</strong> is another way to define a class. Class expressions can be named or unnamed. The name given to a named class expression is local to the class's body. (it can be retrieved through the class's (not an instance's) {{jsxref("Function.name", "name")}} property, though).</p>
 
-<pre class="brush: js notranslate">// unnamed
+<pre class="brush: js">// unnamed
 let Rectangle = class {
   constructor(height, width) {
     this.height = height;
@@ -63,8 +63,9 @@ console.log(Rectangle.name);
 // output: "Rectangle2"
 </pre>
 
-<div class="note">
-<p><strong>Note:</strong> Class <strong>expressions</strong> are subject to the same hoisting restrictions as described in the {{anch("Class declarations")}} section.</p>
+<div class="notecard note">
+  <h4>Note:</h4>
+<p> Class <strong>expressions</strong> are subject to the same hoisting restrictions as described in the {{anch("Class declarations")}} section.</p>
 </div>
 
 <h2 id="Class_body_and_method_definitions">Class body and method definitions</h2>
@@ -85,7 +86,7 @@ console.log(Rectangle.name);
 
 <p>See also {{jsxref("Functions/Method_definitions", "method definitions", "", "true")}}.</p>
 
-<pre class="brush: js notranslate">class Rectangle {
+<pre class="brush: js">class Rectangle {
   constructor(height, width) {
     this.height = height;
     this.width = width;
@@ -108,7 +109,7 @@ console.log(square.area); // 100</pre>
 
 <p>See also <a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">Iterators and generators</a>.</p>
 
-<pre class="brush: js notranslate">class Polygon {
+<pre class="brush: js">class Polygon {
   constructor(...sides) {
     this.sides = sides;
   }
@@ -126,9 +127,9 @@ console.log([...pentagon.getSides()]); // [1,2,3,4,5]</pre>
 
 <h3 id="Static_methods_and_properties">Static methods and properties</h3>
 
-<p>The {{jsxref("Classes/static", "static", "", "true")}} keyword defines a static method or property for a class. Static members (properties and methods) are called without <a href="/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#The_object_(class_instance)" title='An example of class instance is "var john = new Person();"'>instantiating </a>their class and <strong>cannot</strong> be called through a class instance. Static methods are often used to create utility functions for an application, whereas static properties are useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.</p>
+<p>The {{jsxref("Classes/static", "static", "", "true")}} keyword defines a static method or property for a class. Static members (properties and methods) are called without <a href="/en-US/docs/Learn/JavaScript/Objects#the_object_(class_instance)" title='An example of class instance is "var john = new Person();"'>instantiating </a>their class and <strong>cannot</strong> be called through a class instance. Static methods are often used to create utility functions for an application, whereas static properties are useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.</p>
 
-<pre class="brush: js notranslate">class Point {
+<pre class="brush: js">class Point {
   constructor(x, y) {
     this.x = x;
     this.y = y;
@@ -158,7 +159,7 @@ console.log(Point.distance(p1, p2)); // 7.0710678118654755
 
 <p>When a static or prototype method is called without a value for {{jsxref("Operators/this", "this")}}, such as by assigning the method to a variable and then calling it, the <code>this</code> value will be <code>undefined</code> inside the method. This behavior will be the same even if the {{jsxref("Strict_mode", "\"use strict\"")}} directive isn't present, because code within the <code>class</code> body's syntactic boundary is always executed in strict mode.</p>
 
-<pre class="brush: js notranslate">class Animal {
+<pre class="brush: js">class Animal {
   speak() {
     return this;
   }
@@ -178,7 +179,7 @@ eat(); // undefined</pre>
 
 <p>If we rewrite the above using traditional function-based syntax in non–strict mode, then <code>this</code> method calls are automatically bound to the initial <code>this</code> value, which by default is the {{Glossary("Global_object", "global object")}}. In strict mode, autobinding will not happen; the value of <code>this</code> remains as passed.</p>
 
-<pre class="brush: js notranslate">function Animal() { }
+<pre class="brush: js">function Animal() { }
 
 Animal.prototype.speak = function() {
   return this;
@@ -200,7 +201,7 @@ eat(); // global object (in non-strict mode)
 
 <p>Instance properties must be defined inside of class methods:</p>
 
-<pre class="brush: js notranslate">class Rectangle {
+<pre class="brush: js">class Rectangle {
   constructor(height, width) {
     this.height = height;
     this.width = width;
@@ -209,7 +210,7 @@ eat(); // global object (in non-strict mode)
 
 <p>Static (class-side) data properties and prototype data properties must be defined outside of the ClassBody declaration:</p>
 
-<pre class="brush: js notranslate">Rectangle.staticWidth = 20;
+<pre class="brush: js">Rectangle.staticWidth = 20;
 Rectangle.prototype.prototypeWidth = 25;
 </pre>
 
@@ -223,7 +224,7 @@ Rectangle.prototype.prototypeWidth = 25;
 
 <p>With the JavaScript field declaration syntax, the above example can be written as:</p>
 
-<pre class="brush: js notranslate">class Rectangle {
+<pre class="brush: js">class Rectangle {
   height = 0;
   width;
   constructor(height, width) {
@@ -243,7 +244,7 @@ Rectangle.prototype.prototypeWidth = 25;
 
 <p>Using private fields, the definition can be refined as below.</p>
 
-<pre class="brush: js notranslate">class Rectangle {
+<pre class="brush: js">class Rectangle {
   #height = 0;
   #width;
   constructor(height, width) {
@@ -255,7 +256,8 @@ Rectangle.prototype.prototypeWidth = 25;
 
 <p>It's an error to reference private fields from outside of the class; they can only be read or written within the class body. By defining things that are not visible outside of the class, you ensure that your classes' users can't depend on internals, which may change from version to version.</p>
 
-<div class="note">
+<div class="notecard note">
+  <h4>Note:</h4>
 <p>Private fields can only be declared up-front in a field declaration.</p>
 </div>
 
@@ -267,7 +269,7 @@ Rectangle.prototype.prototypeWidth = 25;
 
 <p>The {{jsxref("Classes/extends", "extends")}} keyword is used in <em>class declarations</em> or <em>class expressions</em> to create a class as a child of another class.</p>
 
-<pre class="brush: js notranslate">class Animal {
+<pre class="brush: js">class Animal {
   constructor(name) {
     this.name = name;
   }
@@ -295,7 +297,7 @@ d.speak(); // Mitzie barks.
 
 <p>One may also extend traditional function-based "classes":</p>
 
-<pre class="brush: js notranslate">function Animal (name) {
+<pre class="brush: js">function Animal (name) {
   this.name = name;
 }
 
@@ -316,7 +318,7 @@ d.speak(); // Mitzie barks.
 
 <p>Note that classes cannot extend regular (non-constructible) objects. If you want to inherit from a regular object, you can instead use {{jsxref("Object.setPrototypeOf()")}}:</p>
 
-<pre class="brush: js notranslate">const Animal = {
+<pre class="brush: js">const Animal = {
   speak() {
     console.log(`${this.name} makes a noise.`);
   }
@@ -341,7 +343,7 @@ d.speak(); // Mitzie makes a noise.
 
 <p>For example, when using methods such as {{jsxref("Array.map", "map()")}} that returns the default constructor, you want these methods to return a parent <code>Array</code> object, instead of the <code>MyArray</code> object. The {{jsxref("Symbol.species")}} symbol lets you do this:</p>
 
-<pre class="brush: js notranslate">class MyArray extends Array {
+<pre class="brush: js">class MyArray extends Array {
   // Overwrite species to the parent Array constructor
   static get [Symbol.species]() { return Array; }
 }
@@ -357,7 +359,7 @@ console.log(mapped instanceof Array);   // true
 
 <p>The {{jsxref("Operators/super", "super")}} keyword is used to call corresponding methods of super class. This is one advantage over prototype-based inheritance.</p>
 
-<pre class="brush: js notranslate">class Cat {
+<pre class="brush: js">class Cat {
   constructor(name) {
     this.name = name;
   }
@@ -386,7 +388,7 @@ l.speak();
 
 <p>A function with a superclass as input and a subclass extending that superclass as output can be used to implement mix-ins in ECMAScript:</p>
 
-<pre class="brush: js notranslate">let calculatorMixin = Base =&gt; class extends Base {
+<pre class="brush: js">let calculatorMixin = Base =&gt; class extends Base {
   calc() { }
 };
 
@@ -397,7 +399,7 @@ let randomizerMixin = Base =&gt; class extends Base {
 
 <p>A class that uses these mix-ins can then be written like this:</p>
 
-<pre class="brush: js notranslate">class Foo { }
+<pre class="brush: js">class Foo { }
 class Bar extends calculatorMixin(randomizerMixin(Foo)) { }</pre>
 
 <h2 id="Re-running_a_class_definition">Re-running a class definition</h2>

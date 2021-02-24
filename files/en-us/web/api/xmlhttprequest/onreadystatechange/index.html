@@ -2,30 +2,39 @@
 title: XMLHttpRequest.onreadystatechange
 slug: Web/API/XMLHttpRequest/onreadystatechange
 tags:
-  - API
-  - Event
-  - Handler
-  - Property
-  - Reference
-  - XHR
-  - XMLHttpRequest
+- API
+- Event
+- Handler
+- Property
+- Reference
+- XHR
+- XMLHttpRequest
 ---
 <div>{{APIRef}}</div>
 
-<p>An {{domxref("EventHandler")}} that is called whenever the <code>readyState</code> attribute changes. The callback is called from the user interface thread. The <strong><code>XMLHttpRequest.onreadystatechange</code></strong> property contains the event handler to be called when the {{domxref("Document/readystatechange_event", "readystatechange")}} event is fired, that is every time the {{domxref("XMLHttpRequest.readyState", "readyState")}} property of the {{domxref("XMLHttpRequest")}} changes.</p>
+<p>An {{domxref("EventHandler")}} that is called whenever the <code>readyState</code>
+  attribute changes. The callback is called from the user interface thread. The
+  <strong><code>XMLHttpRequest.onreadystatechange</code></strong> property contains the
+  event handler to be called when the {{domxref("Document/readystatechange_event",
+  "readystatechange")}} event is fired, that is every time the
+  {{domxref("XMLHttpRequest.readyState", "readyState")}} property of the
+  {{domxref("XMLHttpRequest")}} changes.</p>
 
 <div class="warning">
-<p><strong>Warning:</strong> This should not be used with synchronous requests and must not be used from native code.</p>
+  <p><strong>Warning:</strong> This should not be used with synchronous requests and must
+    not be used from native code.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>XMLHttpRequest</em>.onreadystatechange = <em>callback</em>;</pre>
+<pre
+  class="brush: js"><em>XMLHttpRequest</em>.onreadystatechange = <em>callback</em>;</pre>
 
 <h3 id="Values">Values</h3>
 
 <ul>
- <li><code><em>callback</em></code> is the function to be executed when the <code>readyState</code> changes.</li>
+  <li><code><em>callback</em></code> is the function to be executed when the
+    <code>readyState</code> changes.</li>
 </ul>
 
 <h2 id="Example">Examples</h2>
@@ -52,20 +61,20 @@ xhr.send();</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#handler-xhr-onreadystatechange')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>WHATWG living standard</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('XMLHttpRequest', '#handler-xhr-onreadystatechange')}}</td>
+      <td>{{Spec2('XMLHttpRequest')}}</td>
+      <td>WHATWG living standard</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

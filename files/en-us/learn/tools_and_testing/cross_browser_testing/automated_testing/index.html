@@ -61,11 +61,11 @@ tags:
  <li>Download the installer for your system from the above site. (If you already have Node and npm installed, jump to point 4)</li>
  <li>Install it like you would any other program. Note that Node comes with <a href="https://www.npmjs.com/">Node Package Manager</a> (npm), which allows you to easily install packages, share your own packages with others, and run useful scripts on your projects.</li>
  <li>Once the install completes, test that node is installed by typing the following into the terminal, which returns the installed versions of Node and npm:
-  <pre class="brush: bash notranslate">node -v
+  <pre class="brush: bash">node -v
 npm -v</pre>
  </li>
  <li>If you've got Node/npm already installed, you should update them to their latest versions. To update Node, the most reliable way is to download and install an updated installer package from their website (see link above). To update npm, use the following command in your terminal:
-  <pre class="brush: bash notranslate">npm install npm@latest -g</pre>
+  <pre class="brush: bash">npm install npm@latest -g</pre>
  </li>
 </ol>
 
@@ -79,10 +79,10 @@ npm -v</pre>
 
 <ol>
  <li>Create a new directory somewhere sensible using your file manager UI, or, on a command line, by navigating to the location you want and running the following command:
-  <pre class="brush: bash notranslate">mkdir node-test</pre>
+  <pre class="brush: bash">mkdir node-test</pre>
  </li>
  <li>To make this directory an npm project, you just need to go inside your test directory and initialize it, with the following:
-  <pre class="brush: bash notranslate">cd node-test
+  <pre class="brush: bash">cd node-test
 npm init</pre>
  </li>
  <li>This second command will ask you many questions to find out the information required to set up the project; you can just select the defaults for now.</li>
@@ -91,7 +91,7 @@ npm init</pre>
 
 <p>This file is basically a config file for the project. You can customize it later, but for now it'll look something like this:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "name": "node-test",
   "version": "1.0.0",
   "description": "Test for npm projects",
@@ -113,13 +113,13 @@ npm init</pre>
  <li>To begin with, create a test npm project using the procedure detailed at the bottom of the previous section.</li>
  <li>Next, you'll need some sample HTML, CSS and JavaScript content to test your system on — make copies of our sample <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/automation/index.html">index.html</a>, <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/automation/main.js">main.js</a>, and <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/automation/style.css">style.css</a> files in a subfolder with the name <code>src</code> inside your project folder. You can try your own test content if you like, but bear in mind that such tools won't work on internal JS/CSS — you need external files.</li>
  <li>First, install gulp globally (meaning, it will be available across all projects) using the following command:
-  <pre class="brush: bash notranslate">npm install --global gulp-cli</pre>
+  <pre class="brush: bash">npm install --global gulp-cli</pre>
  </li>
  <li>Next, run the following command inside your npm project directory root to set up gulp as a dependency of your project:
-  <pre class="brush: bash notranslate">npm install --save-dev gulp</pre>
+  <pre class="brush: bash">npm install --save-dev gulp</pre>
  </li>
  <li>Now create a new file inside your project directory called <code>gulpfile.js</code>. This is the file that will run all our tasks. Inside this file, put the following:
-  <pre class="brush: js notranslate">const gulp = require('gulp');
+  <pre class="brush: js">const gulp = require('gulp');
 
 exports.default = function(cb) {
   console.log('Gulp running');
@@ -127,7 +127,7 @@ exports.default = function(cb) {
 };</pre>
   This requires the <code>gulp</code> module we installed earlier, and then exports a default task that does nothing except for printing a message to the terminal — this is useful for letting us know that Gulp is working. Each gulp task is exported in the same basic format — <code>exports.taskName = taskFunction</code>. Each function takes one parameter — a callback to run when the task is completed.</li>
  <li>You can run your gulp's default task with the following command — try this now:
-  <pre class="brush: bash notranslate">gulp
+  <pre class="brush: bash">gulp
 </pre>
  </li>
 </ol>
@@ -150,7 +150,7 @@ exports.default = function(cb) {
 
 <ol>
  <li>Install using the following line:
-  <pre class="brush: bash notranslate"><span class="text"><span>npm install --save-dev gulp-htmltidy</span></span>
+  <pre class="brush: bash">npm install --save-dev gulp-htmltidy
 </pre>
 
   <div class="note">
@@ -158,10 +158,10 @@ exports.default = function(cb) {
   </div>
  </li>
  <li>Add the following dependency to <code>gulpfile.js</code>:
-  <pre class="brush: js notranslate">const htmltidy = require('gulp-htmltidy');</pre>
+  <pre class="brush: js">const htmltidy = require('gulp-htmltidy');</pre>
  </li>
  <li>Add the following test to the bottom of <code>gulpfile.js</code>:
-  <pre class="brush: js notranslate">function html(cb) {
+  <pre class="brush: js">function html(cb) {
   return gulp.src('src/index.html')
         .pipe(htmltidy())
         .pipe(gulp.dest('build'));
@@ -170,11 +170,11 @@ exports.default = function(cb) {
 </pre>
  </li>
  <li>Export the html task using:
-  <pre class="brush: js notranslate">exports.html = html;
+  <pre class="brush: js">exports.html = html;
 </pre>
  </li>
  <li>Change the default export to:
-  <pre class="brush: js notranslate">exports.default = html;
+  <pre class="brush: js">exports.default = html;
 </pre>
  </li>
 </ol>
@@ -189,15 +189,15 @@ exports.default = function(cb) {
 
 <ol>
  <li>Install using the following lines:
-  <pre class="brush: bash notranslate">npm install --save-dev gulp-autoprefixer
+  <pre class="brush: bash">npm install --save-dev gulp-autoprefixer
 npm install --save-dev gulp-csslint</pre>
  </li>
  <li>Add the following dependencies to <code>gulpfile.js</code>:
-  <pre class="brush: js notranslate">const autoprefixer = require('gulp-autoprefixer');
+  <pre class="brush: js">const autoprefixer = require('gulp-autoprefixer');
 const csslint = require('gulp-csslint');</pre>
  </li>
  <li>Add the following test to the bottom of <code>gulpfile.js</code>:
-  <pre class="brush: js notranslate">function css(cb) {
+  <pre class="brush: js">function css(cb) {
     return gulp.src('src/style.css')
         .pipe(csslint())
         .pipe(csslint.formatter('compact'))
@@ -210,21 +210,21 @@ const csslint = require('gulp-csslint');</pre>
 </pre>
  </li>
  <li>Add the following property to <code>package.json</code>:
-  <pre class="brush: js notranslate">"browserslist": [
+  <pre class="brush: js">"browserslist": [
   "last 5 versions"
 ]
 </pre>
  </li>
  <li>Add this line after the const definitions:
-  <pre class="brush: js notranslate">const { series } = require('gulp');
+  <pre class="brush: js">const { series } = require('gulp');
 </pre>
  </li>
  <li>Export the css task using:
-  <pre class="brush: js notranslate">exports.css = css;
+  <pre class="brush: js">exports.css = css;
 </pre>
  </li>
  <li>Change the default task to:
-  <pre class="brush: js notranslate">exports.default = series(html, css);
+  <pre class="brush: js">exports.default = series(html, css);
 </pre>
  </li>
 </ol>
@@ -235,18 +235,18 @@ const csslint = require('gulp-csslint');</pre>
 
 <ol>
  <li>Install using the following lines:
-  <pre class="editor editor-colors notranslate">npm install --save-dev gulp-babel @babel/preset-env
+  <pre class="editor editor-colors">npm install --save-dev gulp-babel @babel/preset-env
 npm install --save-dev @babel/core
-<span class="shell source"><span>npm install jshint gulp-jshint --save-dev</span></span>
+npm install jshint gulp-jshint --save-dev
 </pre>
  </li>
  <li>Add the following dependencies to <code>gulpfile.js</code>:
-  <pre class="editor editor-colors notranslate">const babel = require('gulp-babel');
-<span class="js source"><span class="js storage type"><span>const</span></span><span> jshint </span><span class="assignment js keyword operator"><span>=</span></span> <span class="function-call js meta"><span class="function js support"><span>require</span></span><span class="js meta"><span class="begin definition js punctuation round"><span>(</span></span><span class="js quoted single string"><span class="begin definition js punctuation string"><span>'</span></span><span>gulp-jshint</span><span class="definition end js punctuation string"><span>'</span></span></span><span class="definition end js punctuation round"><span>)</span></span></span></span><span class="js punctuation statement terminator"><span>;</span></span></span>
+  <pre class="brush: js editor editor-colors">const babel = require('gulp-babel');
+const jshint = require('gulp-jshint');
 </pre>
  </li>
  <li>Add the following test to the bottom of <code>gulpfile.js</code>:
-  <pre class="brush: js notranslate">function js(cb) {
+  <pre class="brush: js">function js(cb) {
     return gulp.src('src/main.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'))
@@ -259,11 +259,11 @@ npm install --save-dev @babel/core
 </pre>
  </li>
  <li>Export the js task using:
-  <pre class="brush: js notranslate">exports.js = js;
+  <pre class="brush: js">exports.js = js;
 </pre>
  </li>
  <li>Change the default task to:
-  <pre class="brush: js notranslate">exports.default = series(html, css, js);
+  <pre class="brush: js">exports.default = series(html, css, js);
 </pre>
  </li>
 </ol>
@@ -274,7 +274,7 @@ npm install --save-dev @babel/core
 
 <p>Once this is all set up, you can run the <code>gulp</code> command inside your project directory, and you should get an output like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14227/gulp-output.png" style="display: block; height: 478px; margin: 0px auto; width: 697px;"></p>
+<p><img alt="" src="gulp-output.png" style="display: block; margin: 0px auto;"></p>
 
 <p>You can then try out the files output by your automated tasks by looking at them inside the <code>build</code> directory, and loading <code>build/index.html</code> in your web browser.</p>
 
@@ -282,7 +282,7 @@ npm install --save-dev @babel/core
 
 <p>Gulp comes with a <code>watch()</code> function that you can use to watch your files and run tests whenever you save a file. For example, try adding the following to the bottom of your <code>gulpfile.js</code>:</p>
 
-<pre class="brush: js notranslate">gulp.task('watch', function(){
+<pre class="brush: js">gulp.task('watch', function(){
   gulp.watch('src/*.html', ['html']);
   gulp.watch('src/*.css', ['css']);
   gulp.watch('src/*.js', ['js']);
@@ -340,13 +340,13 @@ npm install --save-dev @babel/core
 
 <ol>
  <li>To start off with manual testing you need to select the <strong>"Real Time Testing"</strong> tab from the left navigation menu.<br>
-  <img alt="LambdaTest Dashboard" src="https://www.lambdatest.com/blog/wp-content/uploads/2019/04/lambdatest-dashboard.png" style="border-style: solid; border-width: 2px; height: 638px; width: 1349px;"></li>
+  <img alt="LambdaTest Dashboard" src="lambdatest-dashboard.png" style="border-style: solid; border-width: 2px;"></li>
  <li>As you click on the <strong>Real Time Testing</strong> you will be directed to a screen where you can choose the browser configuration, browser version, OS, and screen resolution with which you want to test your website.<br>
-  <img alt="Real Time Testing" src="https://www.lambdatest.com/support/docs/wp-content/uploads/2019/03/mark-as-bug-1.png" style="border-style: solid; border-width: 2px; height: 647px; width: 1360px;"></li>
+  <img alt="Real Time Testing" src="mark-as-bug-1.png" style="border-style: solid; border-width: 2px;"></li>
  <li>As you click on the Start button, a loading screen will appear, providing you with a VM (Virtual Machine) based on your configurations. Once loaded, you can perform live, interactive cross-browser testing with a website.<br>
-  <a href="https://www.lambdatest.com/support/docs/wp-content/uploads/2019/03/mark-as-bug-2.png"><img alt="Mark as bug" src="https://www.lambdatest.com/support/docs/wp-content/uploads/2019/03/mark-as-bug-2.png" style="border-style: solid; border-width: 2px; height: 652px; width: 1338px;"></a><br>
+  <a href="https://www.lambdatest.com/support/docs/wp-content/uploads/2019/03/mark-as-bug-2.png"><img alt="Mark as bug" src="mark-as-bug-2.png" style="border-style: solid; border-width: 2px;"></a><br>
   If you notice an issue with the UI, then you can share it with your colleagues by capturing a screenshot of your VM with the screenshot button. You can also record a video of your test session by hitting the recorder button in your test session.</li>
- <li>With the in-built image editor, highlight your screenshot before you push it to your colleagues.<img alt="Highlight a bug" src="https://www.lambdatest.com/support/docs/wp-content/uploads/2019/03/mark-as-bug-3.png" style="border-style: solid; border-width: 2px; height: 650px; width: 1335px;"></li>
+ <li>With the in-built image editor, highlight your screenshot before you push it to your colleagues.<img alt="Highlight a bug" src="mark-as-bug-3.png" style="border-style: solid; border-width: 2px;"></li>
  <li>
   <p id="Using_the_mark_as_bug_button_you_can_push_bug_to_numerous_third-party_tools_which_are_integrated_with_LambdaTest_such_as_Jira_asana_trello_and_more._That_way_you_can_log_a_bug_directly_from_the_middle_of_your_test_session_on_LambdaTest_to_your_project_management_instance._Check_out_all_LambdaTest_integrations_with_third-party_tools.">Using the mark as bug button you can push bugs to numerous third-party tools such as Jira, Asana, Trello, and more. That way you can log a bug directly from your test session on LambdaTest to your project management instance. Check out all the <a href="https://www.lambdatest.com/integrations">third-party LambdaTest integrations</a>.</p>
  </li>
@@ -373,9 +373,9 @@ npm install --save-dev @babel/core
 
 <ol>
  <li>Click <em>Start a new manual session</em>.</li>
- <li>In the next screen, type in the URL of a page you want to test (use <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html">https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html</a>, for example), then choose a browser/OS combination you want to test by using the different buttons and lists. There is a lot of choice, as you'll see!<img alt="" src="https://mdn.mozillademos.org/files/14229/sauce-manual-session.png" style="border-style: solid; border-width: 1px; display: block; height: 636px; margin: 0px auto; width: 600px;"></li>
+ <li>In the next screen, type in the URL of a page you want to test (use <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html">https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html</a>, for example), then choose a browser/OS combination you want to test by using the different buttons and lists. There is a lot of choice, as you'll see!<img alt="" src="sauce-manual-session.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
  <li>When you click Start session, a loading screen will then appear, which spins up a virtual machine running the combination you chose.</li>
- <li>When loading has finished, you can then start to remotely test the web site running in the chosen browser.<img alt="" src="https://mdn.mozillademos.org/files/14231/sauce-test-running.png" style="display: block; height: 390px; margin: 0px auto; width: 800px;"></li>
+ <li>When loading has finished, you can then start to remotely test the web site running in the chosen browser.<img alt="" src="sauce-test-running.png" style="display: block; margin: 0px auto;"></li>
  <li>From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The top menu allows you to:
   <ul>
    <li>Stop the session</li>
@@ -404,10 +404,10 @@ npm install --save-dev @babel/core
 <ol>
  <li>First, set up a new npm project to test this out, as detailed in {{anch("Setting up Node and npm")}}. Use a different directory name than before, like <code>sauce-test</code> for example.</li>
  <li>Install the Node Sauce Labs wrapper using the following command:
-  <pre class="notranslate">npm install saucelabs</pre>
+  <pre>npm install saucelabs</pre>
  </li>
  <li>Create a new file inside your project root called <code>call_sauce.js</code>. give it the following contents:
-  <pre class="brush: js notranslate">const SauceLabs = require('saucelabs');
+  <pre class="brush: js">const SauceLabs = require('saucelabs');
 
 let myAccount = new SauceLabs({
   username: "your-sauce-username",
@@ -438,7 +438,7 @@ myAccount.getAccountDetails(function (err, res) {
  </li>
  <li>You'll need to fill in your Sauce Labs username and API key in the indicated places. These can be retrieved from your <a href="https://saucelabs.com/beta/user-settings">User Settings</a> page. Fill these in now.</li>
  <li>Make sure everything is saved, and run your file like so:
-  <pre class="brush: bash notranslate">node call_sauce</pre>
+  <pre class="brush: bash">node call_sauce</pre>
  </li>
 </ol>
 
@@ -463,11 +463,11 @@ myAccount.getAccountDetails(function (err, res) {
 
 <p>The BrowserStack Live dashboard allows you to choose what device and browser you want to test on — Platforms in the left column, devices on the right. When you mouse over or click on each device, you get a choice of browsers available on that device.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15377/browserstack-test-choices-sized.png" style="border-style: solid; border-width: 1px; display: block; height: 339px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="browserstack-test-choices-sized.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>Clicking on one of those browser icons will load up your choice of platform/device/browser — choose one now, and give it a try.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15379/browserstack-test-device-sized.png" style="border-style: solid; border-width: 1px; display: block; height: 841px; margin: 0px auto; width: 450px;"></p>
+<p><img alt="" src="browserstack-test-device-sized.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <div class="note">
 <p><strong>Note</strong>: The blue device icon next to some of the mobile device choices signals that you will be testing on a real device; choices without that icon will be run on an emulator.</p>
@@ -477,7 +477,7 @@ myAccount.getAccountDetails(function (err, res) {
 
 <p>You'll also see a menu that allows you to control the session.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15381/browserstack-test-menu-sized.png" style="border-style: solid; border-width: 1px; display: block; height: 636px; margin: 0px auto; width: 217px;"></p>
+<p><img alt="" src="browserstack-test-menu-sized.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>The features here are as follows:</p>
 
@@ -519,7 +519,7 @@ myAccount.getAccountDetails(function (err, res) {
 <ol>
  <li>First, set up a new npm project to test this out, as detailed in {{anch("Setting up Node and npm")}}. Use a different directory name than before, like <code>bstack-test</code> for example.</li>
  <li>Create a new file inside your project root called <code>call_bstack.js</code>. give it the following contents:
-  <pre class="brush: js notranslate">const request = require("request");
+  <pre class="brush: js">const request = require("request");
 
 let bsUser = "BROWSERSTACK_USERNAME";
 let bsKey = "BROWSERSTACK_ACCESS_KEY";
@@ -546,13 +546,13 @@ getPlanDetails();
  </li>
  <li>You'll need to fill in your BrowserStack username and API key in the indicated places. These can be retrieved from your <a href="https://www.browserstack.com/automate">BrowserStack automation dashboard</a>. Fill these in now.</li>
  <li>Make sure everything is saved, and run your file like so:
-  <pre class="brush: bash notranslate">node call_bstack</pre>
+  <pre class="brush: bash">node call_bstack</pre>
  </li>
 </ol>
 
 <p>Below we've also provided some other ready-made functions you might find useful when working with the BrowserStack restful API.</p>
 
-<pre class="brush: js notranslate">function getBuilds(){
+<pre class="brush: js">function getBuilds(){
 	request({uri: baseUrl + "builds.json"}, function(err, res, body){
 		console.log(JSON.parse(body));
 	});
@@ -688,7 +688,7 @@ function getSessionDetails(session){
 <ol>
  <li>Enter the URL of the page you want to test.</li>
  <li>Choose the browser/OS combination you want to test by selecting the combination in the grid.<br>
-  <img alt="" src="https://mdn.mozillademos.org/files/16581/Screen_Shot_2019-04-19_at_14.55.33.png" style="height: 586px; width: 1159px;"></li>
+  <img alt="" src="screen_shot_2019-04-19_at_14.55.33.png"></li>
  <li>When you click <em>Start Browser</em>, a loading screen will then appear, which spins up a virtual machine running the combination you chose.</li>
  <li>When loading has finished, you can then start to remotely test the web site running in the chosen browser.</li>
  <li>From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The side menu allows you to:
@@ -715,10 +715,10 @@ function getSessionDetails(session){
 <ol>
  <li>First, set up a new npm project to test this out, as detailed in {{anch("Setting up Node and npm")}}. Use a different directory name than before, like <code>tb-test</code> for example.</li>
  <li>Install the Node TestingBot wrapper using the following command:
-  <pre class="notranslate">npm install testingbot-api</pre>
+  <pre>npm install testingbot-api</pre>
  </li>
  <li>Create a new file inside your project root called <code>tb.js</code>. give it the following contents:
-  <pre class="brush: js notranslate">const TestingBot = require('testingbot-api');
+  <pre class="brush: js">const TestingBot = require('testingbot-api');
 
 let tb = new TestingBot({
   api_key: "your-tb-key",
@@ -731,7 +731,7 @@ tb.getTests(function (err, tests) {
  </li>
  <li>You'll need to fill in your TestingBot Key and Secret in the indicated places. You can find these in the <a href="https://testingbot.com/members/user/edit">TestingBot dashboard</a>.</li>
  <li>Make sure everything is saved, and run the file:
-  <pre class="brush: bash notranslate">node tb.js</pre>
+  <pre class="brush: bash">node tb.js</pre>
  </li>
 </ol>
 

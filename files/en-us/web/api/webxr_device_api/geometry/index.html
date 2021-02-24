@@ -45,7 +45,7 @@ tags:
 
 <p>Angles are specified using <strong>{{interwiki("wikipedia", "radians")}}</strong>. To convert degrees to radians, multiply the value in degrees by <code>π/180</code>. The following code snippet shows two simple functions, <code>degreesToRadians()</code> and <code>radiansToDegrees()</code>, which convert back and forth between the two units for measuring angles.</p>
 
-<pre class="brush: js notranslate">const RADIANS_PER_DEGREE = Math.PI / 180.0;
+<pre class="brush: js">const RADIANS_PER_DEGREE = Math.PI / 180.0;
 
 let degreesToRadians = (deg) =&gt; deg * RADIANS_PER_DEGREE;
 let radiansToDegrees = (rad) =&gt; rad / RADIANS_PER_DEGREE;
@@ -53,7 +53,13 @@ let radiansToDegrees = (rad) =&gt; rad / RADIANS_PER_DEGREE;
 
 <h4 id="Times_and_durations">Times and durations</h4>
 
-<div class="callout-box">Note that for security reasons, <code>DOMHighResTimeStamp</code> usually introduces a small amount of imprecision to the clock in order to prevent it from being used in <a href="/en-US/docs/Web/Privacy#Fingerprinting">fingerprinting</a> and timing-based attacks.</div>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Note that for security reasons, <code>DOMHighResTimeStamp</code> usually introduces a
+  small amount of imprecision to the clock in order to prevent it from being used in <a
+    href="/en-US/docs/Web/Privacy#Fingerprinting">fingerprinting</a> and timing-based
+  attacks.</p>
+</div>
 
 <p>All times and durations in WebXR are measured using the {{domxref("DOMHighResTimeStamp")}} type, which is a double-precision floating-point value specifying the time in milliseconds relative to the starting time. Since the value is a floating-point number, it may be accurate to well better than the millisecond level, depending on the platform and hardware.</p>
 
@@ -79,11 +85,14 @@ let radiansToDegrees = (rad) =&gt; rad / RADIANS_PER_DEGREE;
 
 <p>Thus it's all about creating a sense of space. From the perspective of an XR developer, designing the stage is the part that matters most to your users. Like an architect or a set designer, you have the power to create moods and experiences through a physical environment. How you structure that space will both depend on and influence how users can interact and explore it.</p>
 
-<div class="callout-box" style="text-align: justify;">A space will typically have foreground, mid-distance, and background elements. The right balance can create a unique presence and guide your user. The foreground includes objects and interfaces that you can interact with directly. The mid-distance includes objects you can interact with to some extent, or can approach in order to examine and engage with more closely. The background, on the other hand, is usually largely or entirely non-interactive, at least until and unless the user is able to approach it, bringing it into the mid-distance or foreground range.</div>
+<div class="notecard note">
+  <h3>Note</h3>
+  <p>A space will typically have foreground, mid-distance, and background elements. The right balance can create a unique presence and guide your user. The foreground includes objects and interfaces that you can interact with directly. The mid-distance includes objects you can interact with to some extent, or can approach in order to examine and engage with more closely. The background, on the other hand, is usually largely or entirely non-interactive, at least until and unless the user is able to approach it, bringing it into the mid-distance or foreground range.</p>
+</div>
 
 <p>In WebXR, the fundamental concept of a <strong>space</strong>—as in, a coordinate space in which a scene takes place—is represented by an instance of {{domxref("XRSpace")}}. The space is used to make determinations about the relative positions and motion of objects and other entities (such as light sources and cameras) within the user's environment.</p>
 
-<p>A point in 3D space is, as covered previously, made up of three components, each identifying the distance of the point along one the three axes. The position of any given point in the world is described by indicating how far along each of three axes the point is located from the center of the space, which is the position at which those the three axes meet.</p>
+<p>As mentioned earlier, any given 3D point consists of three components, each identifying the distance from the center of the space along one of the three axes.</p>
 
 <p>This is the <strong>native origin</strong> of the space, corresponding to a specific physical location in the user's environment. Each space has its own native origin, which is tracked by the XR device's tracking system. This may be different from the <strong>effective origin</strong>, which is the origin point for the space's local coordinate system.</p>
 
@@ -109,7 +118,7 @@ let radiansToDegrees = (rad) =&gt; rad / RADIANS_PER_DEGREE;
 
 <p>Because of the variety of XR hardware available, coming in a wide variety of form factors from many developers, it's impractical and non-scalable to expect developers to have to directly communicate with the tracking technology being used. Instead, the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a> is designed to have developers plan their users' experiences and request an appropriate reference space that best represents those needs. This is done by asking the {{Glossary("user agent")}} for an <strong>{{domxref("XRReferenceSpace")}}</strong> matching those needs.</p>
 
-<p>An <code>XRReferenceSpace</code> object acts as a means to adapt one coordinate system reference frame to another. After putting on a headset, consider the virtual world around you to have a coordinate system in which your position is (0, 0, 0)—that is, you're at the center of everything. Doesn't that feel empowering? Forward, directly toward your headset, is the -Z axis, with +Z behind you. X is positive to your right and negative to your left. Y is negative as you go downward and positive as you go upward. This indicates the position of the headset in space at the start of your use of the XR system, with the origin (0, 0, 0) being positioned basically at the bridge of your nose. This space is the <strong>world space</strong>.</p>
+<p>An <code>XRReferenceSpace</code> object acts as a means to adapt one coordinate system reference frame to another. After putting on a headset, consider the virtual world around you to have a coordinate system in which your position is (0, 0, 0)—that is, you're at the center of everything. Doesn't that feel empowering? Forward, directly in front of your headset, is the -Z axis, with +Z behind you. X is positive to your right and negative to your left. Y is negative as you go downward and positive as you go upward. This indicates the position of the headset in space at the start of your use of the XR system, with the origin (0, 0, 0) being positioned basically at the bridge of your nose. This space is the <strong>world space</strong>.</p>
 
 <p>Next, consider the XR controller you have in your left hand. It has the ability to report movement and its orientation, but it doesn't know anything about the position of the headset or, more crucially, its coordinate system. But the controller still needs a way to report its position to your app. Thus, it has its own coordinate system. This is a reference space which is provided to your app when input events occur. This reference space internally knows how to map the coordinates of the controller to the headset's coordinates, so WebXR can translate coordinates back and forth for you.</p>
 
@@ -145,15 +154,15 @@ let radiansToDegrees = (rad) =&gt; rad / RADIANS_PER_DEGREE;
 
 <p>To represent a large area—potentially involving multiple rooms or beyond—you can use the <code>unbounded</code> reference space type, which specifies no constraints on the viewer's movement. If you wish to prevent the user from moving into certain areas, you must handle that yourself.</p>
 
-<p><span>The <code>bounded-floor</code> reference space type doesn't have a corresponding one that isn't floor-bound. If the user's XR hardware permits them to move about their real-world space, and you are able to do so, it may be useful to use a </span><code>bounded-floor</code><span> reference space, which lets you specifically define the boundaries of the area in which passage is allowed and safe. See the article </span><a href="/en-US/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces">Using bounded reference spaces</a><span> to learn more about the use of bounded reference spaces.</span></p>
+<p>The <code>bounded-floor</code> reference space type doesn't have a corresponding one that isn't floor-bound. If the user's XR hardware permits them to move about their real-world space, and you are able to do so, it may be useful to use a <code>bounded-floor</code> reference space, which lets you specifically define the boundaries of the area in which passage is allowed and safe. See the article <a href="/en-US/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces">Using bounded reference spaces</a> to learn more about the use of bounded reference spaces.</p>
 
 <p>By using a reference space to describe the position and orientation of objects, WebXR is able to standardize the form of the data you use to describe these things, regardless of the underlying XR hardware. The reference space's configuration is then able to provide you with the view matrices and object poses needed to correctly render the contents of the space.</p>
 
 <h3 id="Establishing_the_reference_space">Establishing the reference space</h3>
 
-<p><span>The topmost space—the one obtained by calling the {{domxref("XRSession")}} method {{domxref("XRSession.requestReferenceSpace", "requestReferenceSpace()")}}—describes the coordinate system used for the overall world space. Everything is fundamentally tied to this coordinate system, which represents the relationship between the user's equipment's position and the virtual world.</span></p>
+<p>The topmost space—the one obtained by calling the {{domxref("XRSession")}} method {{domxref("XRSession.requestReferenceSpace", "requestReferenceSpace()")}}—describes the coordinate system used for the overall world space. Everything is fundamentally tied to this coordinate system, which represents the relationship between the user's equipment's position and the virtual world.</p>
 
-<p>While you can use WebXR for everything from augmenting the world with annotations to 360° video playback to scientific simulations to virtual reality training systems or anything else you can imagine, let's take a 3D video game as an example of a typical WebXR application. <span>Consider the model of a player's avatar standing in the game world's space. You position that avatar relative to the world space, using the coordinate system defined by the world's reference space.</span></p>
+<p>While you can use WebXR for everything from augmenting the world with annotations to 360° video playback to scientific simulations to virtual reality training systems or anything else you can imagine, let's take a 3D video game as an example of a typical WebXR application. Consider the model of a player's avatar standing in the game world's space. You position that avatar relative to the world space, using the coordinate system defined by the world's reference space.</p>
 
 <p>To move the player to a new position, you could rewrite all of its coordinates or manually apply a transform each time they move, but there's an easier way, thanks to reference spaces and their ability to be created relative to one another. Create an {{domxref("XRRigidTransform")}} object representing the new position and orientation of the player's avatar, then create a new reference space to represent the avatar's point of view at the new position using the {{domxref("XRReferenceSpace")}} method {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}}. This comes in especially handy when implementing support for using non-XR devices such as keyboards or mice to move the player's avatar through the world.</p>
 
@@ -174,7 +183,8 @@ let radiansToDegrees = (rad) =&gt; rad / RADIANS_PER_DEGREE;
 <p>XR sessions are created using the {{domxref("XRSystem.requestSession", "navigator.xr.requestSession()")}} method. One of its optional parameters is an object conforming to the {{domxref("XRSessionInit")}} dictionary which you can use to specify required and/or optional features that the session must (or should ideally) support. Currently, the only supported options are strings identifying the standard reference spaces. Using these, you can ensure before your code even runs that you have access to a WebXR session that can support the reference space type you require or prefer.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> At this time, the reference space to use or to prefer is the only option available when creating an {{domxref("XRSession")}}. In the future, it's likely that more options will become available.</p>
+<h4>Note</h4>
+<p>At this time, the reference space to use or to prefer is the only option available when creating an {{domxref("XRSession")}}. In the future, it's likely that more options will become available.</p>
 </div>
 
 <p><strong>&lt;&lt;&lt;--- insert table of reference space requirements here ---&gt;&gt;&gt;</strong></p>

@@ -12,45 +12,60 @@ tags:
 ---
 <p>{{APIRef("CustomElementRegistry")}}</p>
 
-<p><span class="seoSummary">The <code><strong>whenDefined()</strong></code> method of the {{domxref("CustomElementRegistry")}} interface returns a {{jsxref("Promise")}} that resolves when the named element is defined.</span></p>
+<p><span class="seoSummary">The <code><strong>whenDefined()</strong></code> method of the
+    {{domxref("CustomElementRegistry")}} interface returns a {{jsxref("Promise")}} that
+    resolves when the named element is defined.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">customElements.whenDefined(<em>name</em>): Promise&lt;CustomElementConstructor&gt;;</pre>
+<pre
+  class="brush: js">customElements.whenDefined(<em>name</em>): Promise&lt;CustomElementConstructor&gt;;</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>name</dt>
- <dd>Custom element name.</dd>
+  <dt>name</dt>
+  <dd>Custom element name.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{jsxref("Promise")}} that will be fulfilled with the <a href="/docs/Web/API/Window/customElements" id="custom-elements-api:custom-element-4">custom element</a>'s constructor when a <a href="/docs/Web/API/Window/customElements" id="custom-elements-api:custom-element-5">custom element</a> becomes defined with the given name. (If such a <a href="/docs/Web/API/Window/customElements" id="custom-elements-api:custom-element-6">custom element</a> is already defined, the returned promise will be immediately fulfilled.)</p>
+<p>A {{jsxref("Promise")}} that will be fulfilled with the <a
+    href="/en-US/docs/Web/API/Window/customElements"
+    id="custom-elements-api:custom-element-4">custom element</a>'s constructor when a <a
+    href="/en-US/docs/Web/API/Window/customElements"
+    id="custom-elements-api:custom-element-5">custom element</a> becomes defined with the
+  given name. (If such a <a href="/en-US/docs/Web/API/Window/customElements"
+    id="custom-elements-api:custom-element-6">custom element</a> is already defined, the
+  returned promise will be immediately fulfilled.)</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>SyntaxError</code></td>
-   <td>If the provided name is not a <a href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name">valid custom element name</a>, the promise rejects with a <code>SyntaxError</code>.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Exception</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>SyntaxError</code></td>
+      <td>If the provided name is not a <a
+          href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name">valid
+          custom element name</a>, the promise rejects with a <code>SyntaxError</code>.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Examples">Examples</h2>
 
-<p>This example uses <code>whenDefined()</code> to detect when the custom elements that make up a menu are defined. The menu displays placeholder content until the actual menu content is ready to display.</p>
+<p>This example uses <code>whenDefined()</code> to detect when the custom elements that
+  make up a menu are defined. The menu displays placeholder content until the actual menu
+  content is ready to display.</p>
 
-<pre class="brush: html notranslate">&lt;nav id="menu-container"&gt;
+<pre class="brush: html">&lt;nav id="menu-container"&gt;
   &lt;div class="menu-placeholder"&gt;Loading...&lt;/div&gt;
   &lt;nav-menu&gt;
     &lt;menu-item&gt;Item 1&lt;/menu-item&gt;
@@ -61,7 +76,7 @@ tags:
 &lt;/nav&gt;
 </pre>
 
-<pre class="brush: js notranslate">const container = document.getElementById('menu-container');
+<pre class="brush: js">const container = document.getElementById('menu-container');
 const placeholder = container.querySelector('.menu-placeholder');
 // Fetch all the children of menu that are not yet defined.
 const undefinedElements = container.querySelectorAll(':not(:defined)');
@@ -79,25 +94,21 @@ container.removeChild(placeholder);
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "#dom-customelementregistry-whendefined", "customElements.whenDefined()")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("HTML WHATWG", "#dom-customelementregistry-whendefined",
+        "customElements.whenDefined()")}}</td>
+      <td>{{Spec2("HTML WHATWG")}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-<div>
-
 <p>{{Compat("api.CustomElementRegistry.whenDefined")}}</p>
-</div>
-</div>

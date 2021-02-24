@@ -2,28 +2,33 @@
 title: Range.selectNodeContents()
 slug: Web/API/Range/selectNodeContents
 tags:
-  - API
-  - DOM
-  - Method
-  - Range
-  - Reference
+- API
+- DOM
+- Method
+- Range
+- Reference
 ---
 <div>{{ApiRef("DOM")}}</div>
 
-<p>The <strong><code>Range.selectNodeContents()</code></strong> method sets the {{ domxref("Range") }} to contain the contents of a {{ domxref("Node") }}.</p>
+<p>The <strong><code>Range.selectNodeContents()</code></strong> method sets the {{
+  domxref("Range") }} to contain the contents of a {{ domxref("Node") }}.</p>
 
-<p>The parent <code>Node</code> of the start and end of the <code>Range</code> will be the reference node. The <code>startOffset</code> is 0, and the <code>endOffset</code> is the number of child <code>Node</code>s or number of characters contained in the reference node.</p>
+<p>The parent <code>Node</code> of the start and end of the <code>Range</code> will be the
+  reference node. The <code>startOffset</code> is 0, and the <code>endOffset</code> is the
+  number of child <code>Node</code>s or number of characters contained in the reference
+  node.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>range</em>.selectNodeContents(<em>referenceNode</em>);
+<pre class="brush: js"><em>range</em>.selectNodeContents(<em>referenceNode</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>referenceNode</code></dt>
- <dd>The {{ domxref("Node") }} whose contents will be selected within a {{ domxref("Range") }}.</dd>
+  <dt><code>referenceNode</code></dt>
+  <dd>The {{ domxref("Node") }} whose contents will be selected within a {{
+    domxref("Range") }}.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -35,7 +40,11 @@ range.selectNodeContents(referenceNode);
 
 <h3 id="Live_sample">Live sample</h3>
 
-<p>This example lets the user select and deselect a paragraph with buttons. {{domxref("Document.createRange()")}}, <code>Range.selectNodeContents()</code>, and {{domxref("Selection.addRange()")}} are used to select the content. {{domxref("Window.getSelection()")}} and {{domxref("Selection.removeAllRanges()")}} are used to deselect it.</p>
+<p>This example lets the user select and deselect a paragraph with buttons.
+  {{domxref("Document.createRange()")}}, <code>Range.selectNodeContents()</code>, and
+  {{domxref("Selection.addRange()")}} are used to select the content.
+  {{domxref("Window.getSelection()")}} and {{domxref("Selection.removeAllRanges()")}} are
+  used to deselect it.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -73,23 +82,26 @@ deselectButton.addEventListener('click', e =&gt; {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-range-selectnodecontents', 'Range.selectNodeContents()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'ranges.html#Level2-Range-method-selectNodeContents', 'Range.selectNodeContents()')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-range-selectnodecontents',
+        'Range.selectNodeContents()')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>No change.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 Traversal_Range',
+        'ranges.html#Level2-Range-method-selectNodeContents',
+        'Range.selectNodeContents()')}}</td>
+      <td>{{Spec2('DOM2 Traversal_Range')}}</td>
+      <td>Initial specification.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -99,5 +111,5 @@ deselectButton.addEventListener('click', e =&gt; {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
+  <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
 </ul>

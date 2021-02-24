@@ -2,28 +2,32 @@
 title: GlobalEventHandlers.onloadstart
 slug: Web/API/GlobalEventHandlers/onloadstart
 tags:
-  - API
-  - Event Handler
-  - GlobalEventHandlers
-  - HTML DOM
-  - Property
-  - Reference
-  - Web
-  - events
-  - onloadstart
+- API
+- Event Handler
+- GlobalEventHandlers
+- HTML DOM
+- Property
+- Reference
+- Web
+- events
+- onloadstart
 ---
 <div>{{ApiRef}}</div>
 
-<p>The <strong><code>onloadstart</code></strong> property of the {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} representing the code to be called when the {{event("loadstart")}} event is raised (when progress has begun on the loading of a resource.)</p>
+<p>The <strong><code>onloadstart</code></strong> property of the
+  {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} representing
+  the code to be called when the {{event("loadstart")}} event is raised (when progress has
+  begun on the loading of a resource.)</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>img</var>.onloadstart = <var>funcRef</var>;
+<pre class="brush: js"><var>img</var>.onloadstart = <var>funcRef</var>;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p><code>funcRef</code> is the handler function to be called when the resource's <code>loadstart</code> event fires.</p>
+<p><code>funcRef</code> is the handler function to be called when the resource's
+  <code>loadstart</code> event fires.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -50,25 +54,23 @@ image.addEventListener('loadend', function(e) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "webappapis.html#handler-onloadstart", "onloadstart")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("HTML WHATWG", "webappapis.html#handler-onloadstart",
+        "onloadstart")}}</td>
+      <td>{{Spec2("HTML WHATWG")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.GlobalEventHandlers.onloadstart")}}</p>
-</div>

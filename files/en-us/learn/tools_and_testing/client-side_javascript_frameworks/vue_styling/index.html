@@ -56,7 +56,7 @@ tags:
 
 <p>Add the following contents to the <code>reset.css</code> file:</p>
 
-<pre class="brush: css notranslate">/*reset.css*/
+<pre class="brush: css">/*reset.css*/
 /* RESETS */
 *,
 *::before,
@@ -132,7 +132,7 @@ body {
 
 <p>Next, in your <code>src/main.js</code> file, import the <code>reset.css</code> file like so:</p>
 
-<pre class="brush: js notranslate">import './assets/reset.css';</pre>
+<pre class="brush: js">import './assets/reset.css';</pre>
 
 <p>This will cause the file to get picked up during the build step and automatically added to our site.</p>
 
@@ -140,9 +140,9 @@ body {
 
 <p>Before:</p>
 
-<p><img alt="the todo app with partial styling added; the app is now in a card, but some of the internal features still need styling" src="https://mdn.mozillademos.org/files/17247/todo-app-unstyled.png" style="border-style: solid; border-width: 1px; height: 763px; width: 1600px;"></p>
+<p><img alt="the todo app with partial styling added; the app is now in a card, but some of the internal features still need styling" src="todo-app-unstyled.png" style="border-style: solid; border-width: 1px;"></p>
 
-<p>After:<img alt="the todo app with partial styling added; the app is now in a card, but some of the internal features still need styling" src="https://mdn.mozillademos.org/files/17248/todo-app-reset-styles.png" style="border-style: solid; border-width: 1px; height: 929px; width: 1811px;"></p>
+<p>After:<img alt="the todo app with partial styling added; the app is now in a card, but some of the internal features still need styling" src="todo-app-reset-styles.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>Noticeable changes include the removal of the list bullets, background color changes, and changes to the base button and input styles.</p>
 
@@ -154,7 +154,7 @@ body {
 
 <p>Update your <code>App.vue</code> file’s <code>&lt;style&gt;</code> element so it looks like so:</p>
 
-<pre class="brush: css notranslate">&lt;style&gt;
+<pre class="brush: css">&lt;style&gt;
 /* Global styles */
 .btn {
   padding: 0.8rem 1rem 0.7rem;
@@ -267,7 +267,7 @@ body {
 
 <p>If you check the app, you'll see that our todo list is now in a card, and we have some better formatting of our to-do items. Now we can go through and begin editing our components to use some of these styles.</p>
 
-<p><img alt="the todo app with partial styling added; the app is now in a card, but some of the internal features still need styling" src="https://mdn.mozillademos.org/files/17249/todo-app-partial-styles.png" style="border-style: solid; border-width: 1px; height: 685px; width: 1398px;"></p>
+<p><img alt="the todo app with partial styling added; the app is now in a card, but some of the internal features still need styling" src="todo-app-partial-styles.png" style="border-style: solid; border-width: 1px;"></p>
 
 <h3 id="Adding_CSS_classes_in_Vue">Adding CSS classes in Vue</h3>
 
@@ -275,7 +275,7 @@ body {
 
 <p>Add <code>class="btn btn__primary btn__lg"</code> to your form’s <code>&lt;button&gt;</code> element:</p>
 
-<pre class="brush: html notranslate">&lt;button type="submit" class="btn btn__primary btn__lg"&gt;
+<pre class="brush: html">&lt;button type="submit" class="btn btn__primary btn__lg"&gt;
   Add
 &lt;/button&gt;</pre>
 
@@ -283,7 +283,7 @@ body {
 
 <p>Update your <code>ToDoForm</code> template so that it looks like this:</p>
 
-<pre class="brush: html notranslate">&lt;template&gt;
+<pre class="brush: html">&lt;template&gt;
   &lt;form @submit.prevent="onSubmit"&gt;
     &lt;h2 class="label-wrapper"&gt;
       &lt;label for="new-todo-input" class="label__lg"&gt;
@@ -308,7 +308,7 @@ body {
 
 <p>Update it as follows:</p>
 
-<pre class="brush: html notranslate">&lt;ul aria-labelledby="list-summary" class="stack-large"&gt;</pre>
+<pre class="brush: html">&lt;ul aria-labelledby="list-summary" class="stack-large"&gt;</pre>
 
 <h2 id="Adding_scoped_styles">Adding scoped styles</h2>
 
@@ -316,12 +316,12 @@ body {
 
 <p>To use the <code>scoped</code> modifier, create a <code>&lt;style&gt;</code> element inside <code>ToDoItem.vue</code>, at the bottom of the file, and give it a <code>scoped</code> attribute:</p>
 
-<pre class="brush: html notranslate">&lt;style scoped&gt;
+<pre class="brush: html">&lt;style scoped&gt;
 &lt;/style&gt;</pre>
 
 <p>Next, copy the following CSS into the newly created <code>&lt;style&gt;</code> element:</p>
 
-<pre class="brush: css notranslate">.custom-checkbox &gt; .checkbox-label {
+<pre class="brush: css">.custom-checkbox &gt; .checkbox-label {
   font-family: Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -442,7 +442,7 @@ body {
 
 <p>The app should now have custom checkboxes. Your app should look something like the screenshot below.</p>
 
-<p><img alt="the todo app with complete styling. The input form is now styled properly, and the todo items now have spacing and custom checkboxes" src="https://mdn.mozillademos.org/files/17250/todo-app-complete-styles.png" style="border-style: solid; border-width: 1px; height: 805px; width: 1600px;"></p>
+<p><img alt="the todo app with complete styling. The input form is now styled properly, and the todo items now have spacing and custom checkboxes" src="todo-app-complete-styles.png" style="border-style: solid; border-width: 1px;"></p>
 
 <h2 id="Summary">Summary</h2>
 

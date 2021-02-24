@@ -2,29 +2,32 @@
 title: window.cancelIdleCallback()
 slug: Web/API/Window/cancelIdleCallback
 tags:
-  - API
-  - HTML DOM
-  - JavaScript timers
-  - Method
-  - Reference
-  - Window
-  - cancelIdleCallback
+- API
+- HTML DOM
+- JavaScript timers
+- Method
+- Reference
+- Window
+- cancelIdleCallback
 ---
 <div>{{APIRef}}{{SeeCompatTable}}</div>
 
 <h2 id="Summary">Summary</h2>
 
-<p>The <strong><code>window.cancelIdleCallback()</code></strong> method cancels a callback previously scheduled with {{domxref("window.requestIdleCallback()")}}.</p>
+<p>The <strong><code>window.cancelIdleCallback()</code></strong> method cancels a callback
+  previously scheduled with {{domxref("window.requestIdleCallback()")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">window.cancelIdleCallback(<em>handle</em>);</pre>
+<pre
+  class="brush: js">window.cancelIdleCallback(<em>handle</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>handle</code></dt>
- <dd>The ID value returned by {{domxref("window.requestIdleCallback()")}} when the callback was established.</dd>
+  <dt><code>handle</code></dt>
+  <dd>The ID value returned by {{domxref("window.requestIdleCallback()")}} when the
+    callback was established.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -33,23 +36,25 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>See our <a href="/en-US/docs/Web/API/Background_Tasks_API#Example">complete example</a> in the article <a href="/en-US/docs/Web/API/Background_Tasks_API">Cooperative Scheduling of Background Tasks API</a>.</p>
+<p>See our <a href="/en-US/docs/Web/API/Background_Tasks_API#Example">complete example</a>
+  in the article <a href="/en-US/docs/Web/API/Background_Tasks_API">Cooperative Scheduling
+    of Background Tasks API</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Background Tasks')}}</td>
-   <td>{{Spec2('Background Tasks')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Specification</th>
+      <th>Status</th>
+      <th>Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Background Tasks')}}</td>
+      <td>{{Spec2('Background Tasks')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

@@ -6,11 +6,11 @@ tags:
   - Build documentation
   - Developing Mozilla
 ---
-<p><span class="comment">NOTE: Do not make substantive changes to this document without consulting Benjamin Smedberg &lt;<a class="link-mailto" href="mailto:benjamin@smedbergs.us" rel="freelink">benjamin@smedbergs.us</a>&gt; or one of the build-config peers.</span></p>
+<p><span class="comment">NOTE: Do not make substantive changes to this document without consulting Benjamin Smedberg &lt;<a class="link-mailto" href="mailto:benjamin@smedbergs.us">benjamin@smedbergs.us</a>&gt; or one of the build-config peers.</span></p>
 
 <h3 id="Introduction">Introduction</h3>
 
-<p>This document is a guide to the prerequisite software for building Mozilla on Windows platforms on the 1.7 branch (Mozilla 1.7.*), the aviary branch (Firefox 1.0.*), the 1.8.0 branch (Firefox 1.5.0.*), and the 1.8 branch (Firefox 2). The build prerequisites for the Mozilla trunk are <a href="/en/Windows_Build_Prerequisites">here</a>.</p>
+<p>This document is a guide to the prerequisite software for building Mozilla on Windows platforms on the 1.7 branch (Mozilla 1.7.*), the aviary branch (Firefox 1.0.*), the 1.8.0 branch (Firefox 1.5.0.*), and the 1.8 branch (Firefox 2). The build prerequisites for the Mozilla trunk are <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Windows_Prerequisites">here</a>.</p>
 
 <h3 id="Hardware_Requirements">Hardware Requirements</h3>
 
@@ -134,7 +134,7 @@ install.bat
 
 <pre class="eval">rem --- Set HOME so that cvs and ssh work correctly
 rem --- cvs uses HOME to locate your .cvspass file, and ssh to locate your .ssh file
-rem --- if you are using ssh, your HOME should match the home directory specified in /etc/passwd. See <a class="external" href="http://www.cygwin.com/faq/faq0.html" rel="freelink">http://www.cygwin.com/faq/faq0.html</a>.
+rem --- if you are using ssh, your HOME should match the home directory specified in /etc/passwd. See <a class="external" href="http://www.cygwin.com/faq/faq0.html">http://www.cygwin.com/faq/faq0.html</a>.
 set HOME=C:\home
 
 rem --- Set VCVARS to wherever the MSVC vcvars.bat file is found
@@ -197,7 +197,7 @@ Fix above errors and restart with "make -f client.mk build"
 <h3 id="Common_Problems_and_Hints">Common Problems and Hints</h3>
 
 <ul>
- <li>Check the <a href="/en/Mozilla_Build_FAQ">Mozilla Build Frequently Asked Questions</a></li>
+ <li>Check the <a href="/en-US/docs/Mozilla/Developer_guide/Mozilla_build_FAQ">Mozilla Build Frequently Asked Questions</a></li>
  <li>Your source tree must be located at a /cygdrive/&lt;c&gt; mount point. It must not be located within your /home.</li>
  <li>Mozilla may not build if you install the wintools directory inside the cygwin directory.</li>
  <li>If the configure or build fails due to a missing w32api, add the mingw32's /include directory to the end of your INCLUDE environment variable. Mingw32 libraries or binaries should not be needed, only the headers.</li>
@@ -208,5 +208,5 @@ Fix above errors and restart with "make -f client.mk build"
   </ul>
  </li>
  <li>Double-check to make sure that you have the complete cygwin package list. If not, launch the cygwin installer and add the missing packages.</li>
- <li><a href="/en/Debugging_Mozilla_on_Windows_FAQ">Debugging Mozilla on Windows FAQ</a>: Tips on how to debug Mozilla on Windows.</li>
+ <li><a href="/en-US/docs/Debugging_Mozilla_on_Windows_FAQ">Debugging Mozilla on Windows FAQ</a>: Tips on how to debug Mozilla on Windows.</li>
 </ul>

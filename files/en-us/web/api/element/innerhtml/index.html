@@ -2,68 +2,95 @@
 title: Element.innerHTML
 slug: Web/API/Element/innerHTML
 tags:
-  - API
-  - DOM
-  - DOM Parsing
-  - Element
-  - Parsing HTML
-  - Property
-  - Reference
-  - innerHTML
+- API
+- DOM
+- DOM Parsing
+- Element
+- Parsing HTML
+- Property
+- Reference
+- innerHTML
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">The {{domxref("Element")}} property <strong><code>innerHTML</code></strong> gets or sets the HTML or XML markup contained within the element.</span></p>
+<p><span class="seoSummary">The {{domxref("Element")}} property
+    <strong><code>innerHTML</code></strong> gets or sets the HTML or XML markup contained
+    within the element.</span></p>
 
-<div class="note"><strong>Note:</strong> If a {{HTMLElement("div")}}, {{HTMLElement("span")}}, or {{HTMLElement("noembed")}} node has a child text node that includes the characters <code>(&amp;)</code>, <code>(&lt;)</code>, or <code>(&gt;)</code>, <code>innerHTML</code> returns these characters as the HTML entities <code>"&amp;amp;"</code>, <code>"&amp;lt;"</code> and <code>"&amp;gt;"</code> respectively. Use {{domxref("Node.textContent")}} to get a raw copy of these text nodes' contents.</div>
+<div class="note"><strong>Note:</strong> If a {{HTMLElement("div")}},
+  {{HTMLElement("span")}}, or {{HTMLElement("noembed")}} node has a child text node that
+  includes the characters <code>(&amp;)</code>, <code>(&lt;)</code>, or
+  <code>(&gt;)</code>, <code>innerHTML</code> returns these characters as the HTML
+  entities <code>"&amp;amp;"</code>, <code>"&amp;lt;"</code> and <code>"&amp;gt;"</code>
+  respectively. Use {{domxref("Node.textContent")}} to get a raw copy of these text nodes'
+  contents.</div>
 
-<p>To insert the HTML into the document rather than replace the contents of an element, use the method {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.</p>
+<p>To insert the HTML into the document rather than replace the contents of an element,
+  use the method {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">const <var>content</var> = <var>element</var>.innerHTML;
+<pre class="brush: js">const <var>content</var> = <var>element</var>.innerHTML;
 
 <var>element</var>.innerHTML = <var>htmlString</var>;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("DOMString")}} containing the HTML serialization of the element's descendants. Setting the value of <code>innerHTML</code> removes all of the element's descendants and replaces them with nodes constructed by parsing the HTML given in the string <var>htmlString</var>.</p>
+<p>A {{domxref("DOMString")}} containing the HTML serialization of the element's
+  descendants. Setting the value of <code>innerHTML</code> removes all of the element's
+  descendants and replaces them with nodes constructed by parsing the HTML given in the
+  string <var>htmlString</var>.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
 <dl>
- <dt><code>SyntaxError</code></dt>
- <dd>An attempt was made to set the value of <code>innerHTML</code> using a string which is not properly-formed HTML.</dd>
- <dt><code>NoModificationAllowedError</code></dt>
- <dd>An attempt was made to insert the HTML into a node whose parent is a {{domxref("Document")}}.</dd>
+  <dt><code>SyntaxError</code></dt>
+  <dd>An attempt was made to set the value of <code>innerHTML</code> using a string which
+    is not properly-formed HTML.</dd>
+  <dt><code>NoModificationAllowedError</code></dt>
+  <dd>An attempt was made to insert the HTML into a node whose parent is a
+    {{domxref("Document")}}.</dd>
 </dl>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
-<p>The <code>innerHTML</code> property can be used to examine the current HTML source of the page, including any changes that have been made since the page was initially loaded.</p>
+<p>The <code>innerHTML</code> property can be used to examine the current HTML source of
+  the page, including any changes that have been made since the page was initially loaded.
+</p>
 
-<h3 id="Reading_the_HTML_contents_of_an_element">Reading the HTML contents of an element</h3>
+<h3 id="Reading_the_HTML_contents_of_an_element">Reading the HTML contents of an element
+</h3>
 
-<p>Reading <code>innerHTML</code> causes the user agent to serialize the HTML or XML fragment comprised of the element's descendants. The resulting string is returned.</p>
+<p>Reading <code>innerHTML</code> causes the user agent to serialize the HTML or XML
+  fragment comprised of the element's descendants. The resulting string is returned.</p>
 
 <pre class="brush: js">let contents = myElement.innerHTML;</pre>
 
 <p>This lets you look at the HTML markup of the element's content nodes.</p>
 
 <div class="note">
-<p><strong>Note:</strong> The returned HTML or XML fragment is generated based on the current contents of the element, so the markup and formatting of the returned fragment is likely not to match the original page markup.</p>
+  <p><strong>Note:</strong> The returned HTML or XML fragment is generated based on the
+    current contents of the element, so the markup and formatting of the returned fragment
+    is likely not to match the original page markup.</p>
 </div>
 
 <h3 id="Replacing_the_contents_of_an_element">Replacing the contents of an element</h3>
 
-<p>Setting the value of <code>innerHTML</code> lets you easily replace the existing contents of an element with new content.</p>
+<p>Setting the value of <code>innerHTML</code> lets you easily replace the existing
+  contents of an element with new content.</p>
 
-<p>For example, you can erase the entire contents of a document by clearing the contents of the document's {{domxref("Document.body", "body")}} attribute:</p>
+<p>For example, you can erase the entire contents of a document by clearing the contents
+  of the document's {{domxref("Document.body", "body")}} attribute:</p>
 
 <pre class="brush: js">document.body.innerHTML = "";</pre>
 
-<p>This example fetches the document's current HTML markup and replaces the <code>"&lt;"</code> characters with the HTML entity <code>"&amp;lt;"</code>, thereby essentially converting the HTML into raw text. This is then wrapped in a {{HTMLElement("pre")}} element. Then the value of <code>innerHTML</code> is changed to this new string. As a result, the document contents are replaced with a display of the page's entire source code.</p>
+<p>This example fetches the document's current HTML markup and replaces the
+  <code>"&lt;"</code> characters with the HTML entity <code>"&amp;lt;"</code>, thereby
+  essentially converting the HTML into raw text. This is then wrapped in a
+  {{HTMLElement("pre")}} element. Then the value of <code>innerHTML</code> is changed to
+  this new string. As a result, the document contents are replaced with a display of the
+  page's entire source code.</p>
 
 <pre class="brush: js">document.documentElement.innerHTML = "&lt;pre&gt;" +
          document.documentElement.innerHTML.replace(/&lt;/g,"&amp;lt;") +
@@ -71,17 +98,26 @@ tags:
 
 <h4 id="Operational_details">Operational details</h4>
 
-<p>What exactly happens when you set value of <code>innerHTML</code>? Doing so causes the user agent to follow these steps:</p>
+<p>What exactly happens when you set value of <code>innerHTML</code>? Doing so causes the
+  user agent to follow these steps:</p>
 
 <ol>
- <li>The specified value is parsed as HTML or XML (based on the document type), resulting in a {{domxref("DocumentFragment")}} object representing the new set of DOM nodes for the new elements.</li>
- <li>If the element whose contents are being replaced is a {{HTMLElement("template")}} element, then the <code>&lt;template&gt;</code> element's {{domxref("HTMLTemplateElement.content", "content")}} attribute is replaced with the new <code>DocumentFragment</code> created in step 1.</li>
- <li>For all other elements, the element's contents are replaced with the nodes in the new <code>DocumentFragment</code>.</li>
+  <li>The specified value is parsed as HTML or XML (based on the document type), resulting
+    in a {{domxref("DocumentFragment")}} object representing the new set of DOM nodes for
+    the new elements.</li>
+  <li>If the element whose contents are being replaced is a {{HTMLElement("template")}}
+    element, then the <code>&lt;template&gt;</code> element's
+    {{domxref("HTMLTemplateElement.content", "content")}} attribute is replaced with the
+    new <code>DocumentFragment</code> created in step 1.</li>
+  <li>For all other elements, the element's contents are replaced with the nodes in the
+    new <code>DocumentFragment</code>.</li>
 </ol>
 
 <h3 id="Security_considerations">Security considerations</h3>
 
-<p>It is not uncommon to see <code>innerHTML</code> used to insert text into a web page. There is potential for this to become an attack vector on a site, creating a potential security risk.</p>
+<p>It is not uncommon to see <code>innerHTML</code> used to insert text into a web page.
+  There is potential for this to become an attack vector on a site, creating a potential
+  security risk.</p>
 
 <pre class="brush: js">const name = "John";
 // assuming 'el' is an HTML DOM element
@@ -92,22 +128,38 @@ el.innerHTML = name; // harmless in this case
 name = "&lt;script&gt;alert('I am John in an annoying alert!')&lt;/script&gt;";
 el.innerHTML = name; // harmless in this case</pre>
 
-<p>Although this may look like a {{interwiki("wikipedia", "cross-site scripting")}} attack, the result is harmless. HTML5 specifies that a {{HTMLElement("script")}} tag inserted with <code>innerHTML</code> <a href="https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0">should not execute</a>.</p>
+<p>Although this may look like a {{interwiki("wikipedia", "cross-site scripting")}}
+  attack, the result is harmless. HTML5 specifies that a {{HTMLElement("script")}} tag
+  inserted with <code>innerHTML</code> <a
+    href="https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0">should not
+    execute</a>.</p>
 
-<p>However, there are ways to execute JavaScript without using {{HTMLElement("script")}} elements, so there is still a security risk whenever you use <code>innerHTML</code> to set strings over which you have no control. For example:</p>
+<p>However, there are ways to execute JavaScript without using {{HTMLElement("script")}}
+  elements, so there is still a security risk whenever you use <code>innerHTML</code> to
+  set strings over which you have no control. For example:</p>
 
 <pre class="brush: js">const name = "&lt;img src='x' onerror='alert(1)'&gt;";
 el.innerHTML = name; // shows the alert</pre>
 
-<p>For that reason, it is recommended that you do not use <code>innerHTML</code> when inserting plain text; instead, use {{domxref("Node.textContent")}}. This doesn't parse the passed content as HTML, but instead inserts it as raw text.</p>
+<p>For that reason, it is recommended that you do not use <code>innerHTML</code> when
+  inserting plain text; instead, use {{domxref("Node.textContent")}}. This doesn't parse
+  the passed content as HTML, but instead inserts it as raw text.</p>
 
 <div class="warning">
-<p><strong>Warning:</strong> If your project is one that will undergo any form of security review, using <code>innerHTML</code> most likely will result in your code being rejected. For example, <a href="https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation">if you use <code>innerHTML</code></a> in a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">browser extension</a> and submit the extension to <a href="https://addons.mozilla.org/">addons.mozilla.org</a>, it will not pass the automated review process.</p>
+  <p><strong>Warning:</strong> If your project is one that will undergo any form of
+    security review, using <code>innerHTML</code> most likely will result in your code
+    being rejected. For example, <a
+      href="https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation">if
+      you use <code>innerHTML</code></a> in a <a
+      href="/en-US/docs/Mozilla/Add-ons/WebExtensions">browser extension</a> and submit
+    the extension to <a href="https://addons.mozilla.org/">addons.mozilla.org</a>, it will
+    not pass the automated review process.</p>
 </div>
 
 <h2 id="Example">Example</h2>
 
-<p>This example uses <code>innerHTML</code> to create a mechanism for logging messages into a box on a web page.</p>
+<p>This example uses <code>innerHTML</code> to create a mechanism for logging messages
+  into a box on a web page.</p>
 
 <h3 id="JavaScript">JavaScript</h3>
 
@@ -122,9 +174,14 @@ el.innerHTML = name; // shows the alert</pre>
 log("Logging mouse events inside this container...");
 </pre>
 
-<p>The <code>log()</code> function creates the log output by getting the current time from a {{jsxref("Date")}} object using {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}}, and building a string with the timestamp and the message text. Then the message is appended to the box with the class <code>"log"</code>.</p>
+<p>The <code>log()</code> function creates the log output by getting the current time from
+  a {{jsxref("Date")}} object using {{jsxref("Date.toLocaleTimeString",
+  "toLocaleTimeString()")}}, and building a string with the timestamp and the message
+  text. Then the message is appended to the box with the class <code>"log"</code>.</p>
 
-<p>We add a second method that logs information about {{domxref("MouseEvent")}} based events (such as {{event("mousedown")}}, {{event("click")}}, and {{event("mouseenter")}}):</p>
+<p>We add a second method that logs information about {{domxref("MouseEvent")}} based
+  events (such as {{event("mousedown")}}, {{event("click")}}, and
+  {{event("mouseenter")}}):</p>
 
 <pre class="brush: js">function logEvent(event) {
   var msg = "Event &lt;strong&gt;" + event.type + "&lt;/strong&gt; at &lt;em&gt;" +
@@ -132,7 +189,8 @@ log("Logging mouse events inside this container...");
   log(msg);
 }</pre>
 
-<p>Then we use this as the event handler for a number of mouse events on the box that contains our log:</p>
+<p>Then we use this as the event handler for a number of mouse events on the box that
+  contains our log:</p>
 
 <pre class="brush: js">var boxElem = document.querySelector(".box");
 
@@ -151,7 +209,10 @@ boxElem.addEventListener("mouseleave", logEvent);</pre>
   &lt;div class="log"&gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<p>The {{HTMLElement("div")}} with the class <code>"box"</code> is just a container for layout purposes, presenting the contents with a box around it. The <code>&lt;div&gt;</code> whose class is <code>"log"</code> is the container for the log text itself.</p>
+<p>The {{HTMLElement("div")}} with the class <code>"box"</code> is just a container for
+  layout purposes, presenting the contents with a box around it. The
+  <code>&lt;div&gt;</code> whose class is <code>"log"</code> is the container for the log
+  text itself.</p>
 
 <h3 id="CSS">CSS</h3>
 
@@ -173,27 +234,29 @@ boxElem.addEventListener("mouseleave", logEvent);</pre>
 
 <h3 id="Result">Result</h3>
 
-<p>The resulting content looks like this. You can see output into the log by moving the mouse in and out of the box, clicking in it, and so forth.</p>
+<p>The resulting content looks like this. You can see output into the log by moving the
+  mouse in and out of the box, clicking in it, and so forth.</p>
 
 <p>{{EmbedLiveSample("Example", 640, 350)}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM Parsing', '#dom-innerhtml-innerhtml', 'Element.innerHTML')}}</td>
-   <td>{{Spec2('DOM Parsing')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM Parsing', '#dom-innerhtml-innerhtml', 'Element.innerHTML')}}
+      </td>
+      <td>{{Spec2('DOM Parsing')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -203,9 +266,9 @@ boxElem.addEventListener("mouseleave", logEvent);</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("Node.textContent")}} and {{domxref("Node.innerText")}}</li>
- <li>{{domxref("Element.insertAdjacentHTML()")}}</li>
- <li>{{domxref("Element.outerHTML")}}</li>
- <li>Parsing HTML into a DOM tree: {{domxref("DOMParser")}}</li>
- <li>Serializing XML or HTML into a DOM tree: {{domxref("XMLSerializer")}}</li>
+  <li>{{domxref("Node.textContent")}} and {{domxref("Node.innerText")}}</li>
+  <li>{{domxref("Element.insertAdjacentHTML()")}}</li>
+  <li>{{domxref("Element.outerHTML")}}</li>
+  <li>Parsing HTML into a DOM tree: {{domxref("DOMParser")}}</li>
+  <li>Serializing XML or HTML into a DOM tree: {{domxref("XMLSerializer")}}</li>
 </ul>

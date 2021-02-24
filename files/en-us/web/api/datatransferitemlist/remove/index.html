@@ -2,31 +2,36 @@
 title: DataTransferItemList.remove()
 slug: Web/API/DataTransferItemList/remove
 tags:
-  - API
-  - DataTransferItemList
-  - HTML DOM
-  - HTML Drag and Drop API
-  - Method
-  - Reference
-  - drag and drop
-  - remove
+- API
+- DataTransferItemList
+- HTML DOM
+- HTML Drag and Drop API
+- Method
+- Reference
+- drag and drop
+- remove
 ---
 <div>{{APIRef("HTML Drag and Drop API")}}</div>
 
 <div>
-<p>The <strong><code>DataTransferItemList.remove()</code></strong> method removes the {{domxref("DataTransferItem")}} at the specified index from the list. If the index is less than zero or greater than one less than the length of the list, the list will not be changed.</p>
+  <p>The <strong><code>DataTransferItemList.remove()</code></strong> method removes the
+    {{domxref("DataTransferItem")}} at the specified index from the list. If the index is
+    less than zero or greater than one less than the length of the list, the list will not
+    be changed.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>DataTransferItemList</em>.remove(index);
+<pre class="brush: js"><em>DataTransferItemList</em>.remove(index);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>index</code></dt>
- <dd>The zero-based index number of the item in the drag data list to remove. If the <code>index</code> doesn't correspond to an existing item in the list, the list is left unchanged.</dd>
+  <dt><code>index</code></dt>
+  <dd>The zero-based index number of the item in the drag data list to remove. If the
+    <code>index</code> doesn't correspond to an existing item in the list, the list is
+    left unchanged.</dd>
 </dl>
 
 <h3 id="Return_Value">Return value</h3>
@@ -36,8 +41,8 @@ tags:
 <h3 id="Exceptions">Exceptions</h3>
 
 <dl>
- <dt><code>InvalidStateError</code></dt>
- <dd>The drag data store is not in read/write mode, so the item can't be removed.</dd>
+  <dt><code>InvalidStateError</code></dt>
+  <dd>The drag data store is not in read/write mode, so the item can't be removed.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -127,28 +132,31 @@ function dragend_handler(ev) {
 
 </pre>
 
-<p>{{ EmbedLiveSample('Example', '300', '450', '', 'Web/API/DataTransferItemList/remove') }}</p>
+<p>{{ EmbedLiveSample('Example', '300', '450', '', 'Web/API/DataTransferItemList/remove')
+  }}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'interaction.html#dom-datatransferitemlist-remove','remove()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'editing.html#dom-datatransferitemlist-remove','remove()')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Not included in W3C HTML5 {{Spec2('HTML5 W3C')}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG',
+        'interaction.html#dom-datatransferitemlist-remove','remove()')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML5.1',
+        'editing.html#dom-datatransferitemlist-remove','remove()')}}</td>
+      <td>{{Spec2('HTML5.1')}}</td>
+      <td>Not included in W3C HTML5 {{Spec2('HTML5 W3C')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

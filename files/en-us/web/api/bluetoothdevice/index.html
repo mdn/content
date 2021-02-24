@@ -12,13 +12,15 @@ tags:
 ---
 <p>{{APIRef("Bluetooth API")}}{{SeeCompatTable}}</p>
 
-<p>The BluetoothDevice interface of the <a href="/Web/API/Web_Bluetooth_API">Web Bluetooth API</a> represents a Bluetooth device inside a particular script execution environment.</p>
+<p>The BluetoothDevice interface of the <a href="/Web/API/Web_Bluetooth_API">Web Bluetooth
+    API</a> represents a Bluetooth device inside a particular script execution
+  environment.</p>
 
 <p>{{InheritanceDiagram}}</p>
 
 <h2 id="Interface">Interface</h2>
 
-<pre class="syntaxbox">interface BluetoothDevice {
+<pre class="brush: js">interface BluetoothDevice {
   readonly attribute DOMString id;
   readonly attribute DOMString? name;
   readonly attribute BluetoothRemoteGATTServer? gatt;
@@ -37,74 +39,93 @@ BluetoothDevice implements ServiceEventHandlers;
 <h2 id="Properties">Properties</h2>
 
 <dl>
- <dt>{{DOMxRef("BluetoothDevice.id")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
- <dd>A {{DOMxRef("DOMString")}} that uniquely identifies a device.</dd>
- <dt>{{DOMxRef("BluetoothDevice.name")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
- <dd>A {{DOMxRef("DOMString")}} that provices a human-readable name for the device.</dd>
- <dt>{{DOMxRef("BluetoothDevice.gatt")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
- <dd>A reference to the device's {{DOMxRef("BluetoothRemoteGATTServer")}}.</dd>
- <dt>{{DOMxRef("BluetoothDevice.uuids")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
- <dd>Lists the UUID's of GATT services provided by the device, that the current origin is allowed to access.</dd>
- <dt>{{DOMxRef("BluetoothDevice.watchingAdvertisements")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
- <dd>If advertisments were activated using {{DOMxRef("BluetoothDevice.watchAdvertisements()")}}.</dd>
+  <dt>{{DOMxRef("BluetoothDevice.id")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
+  <dd>A {{DOMxRef("DOMString")}} that uniquely identifies a device.</dd>
+  <dt>{{DOMxRef("BluetoothDevice.name")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
+  <dd>A {{DOMxRef("DOMString")}} that provices a human-readable name for the device.</dd>
+  <dt>{{DOMxRef("BluetoothDevice.gatt")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
+  <dd>A reference to the device's {{DOMxRef("BluetoothRemoteGATTServer")}}.</dd>
+  <dt>{{DOMxRef("BluetoothDevice.uuids")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
+  <dd>Lists the UUID's of GATT services provided by the device, that the current origin is
+    allowed to access.</dd>
+  <dt>
+    {{DOMxRef("BluetoothDevice.watchingAdvertisements")}} {{Experimental_Inline}}{{ReadOnlyInline}}
+  </dt>
+  <dd>If advertisments were activated using
+    {{DOMxRef("BluetoothDevice.watchAdvertisements()")}}.</dd>
 </dl>
 
 <h3 id="Non-standard_Chrome_OS_properties">Non-standard Chrome OS properties</h3>
 
 <p>{{Non-standard_Header}}</p>
 
-<p>These properties were only implemented on Google’s Chrome OS 45 and removed from Chrome 52.</p>
+<p>These properties were only implemented on Google’s Chrome OS 45 and removed from Chrome
+  52.</p>
 
 <dl>
- <dt>{{DOMxRef("BluetoothDevice.adData")}} {{Non-standard_Inline}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
- <dd>An instance of {{DOMxRef("BluetoothAdvertisingData")}} containing the most recent advertising data received for the device.</dd>
- <dt>{{DOMxRef("BluetoothDevice.deviceClass")}} {{Non-standard_Inline}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
- <dd>A number representing the Bluetooth devices "Class of Device".</dd>
- <dt>{{DOMxRef("BluetoothDevice.vendorIDSource")}} {{Non-standard_Inline}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
- <dd>The Vendor ID Source field in the <code>pnp_id</code> characteristic in the <code>device_information</code> service.</dd>
- <dt>{{DOMxRef("BluetoothDevice.vendorID")}} {{Non-standard_Inline}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
- <dd>The 16-bit Vendor ID field in the <code>pnp_id</code> characteristic in the <code>device_information</code> service.</dd>
- <dt>{{DOMxRef("BluetoothDevice.productID")}} {{Non-standard_Inline}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
- <dd>The 16-bit Product ID field in the <code>pnp_id</code> characteristic in the <code>device_information</code> service.</dd>
- <dt>{{DOMxRef("BluetoothDevice.productVersion")}} {{Non-standard_Inline}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
- <dd>The 16-bit Product Version field in the <code>pnp_id</code> characteristic in the <code>device_information</code> service.</dd>
- <dt>{{DOMxRef("BluetoothDevice.paired")}} {{Non-standard_Inline}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
- <dd>A {{jsxref("Boolean")}} value indicating whether the device is paired with the system.</dd>
- <dt>{{DOMxRef("BluetoothDevice.gattServer")}} {{Non-standard_Inline}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
- <dd>A reference to the device's GATT server or null if the device is disconnected.</dd>
+  <dt>{{DOMxRef("BluetoothDevice.adData")}} {{Non-standard_Inline}}
+    {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
+  <dd>An instance of {{DOMxRef("BluetoothAdvertisingData")}} containing the most recent
+    advertising data received for the device.</dd>
+  <dt>{{DOMxRef("BluetoothDevice.deviceClass")}} {{Non-standard_Inline}}
+    {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
+  <dd>A number representing the Bluetooth devices "Class of Device".</dd>
+  <dt>{{DOMxRef("BluetoothDevice.vendorIDSource")}} {{Non-standard_Inline}}
+    {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
+  <dd>The Vendor ID Source field in the <code>pnp_id</code> characteristic in
+    the <code>device_information</code> service.</dd>
+  <dt>{{DOMxRef("BluetoothDevice.vendorID")}} {{Non-standard_Inline}}
+    {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
+  <dd>The 16-bit Vendor ID field in the <code>pnp_id</code> characteristic in
+    the <code>device_information</code> service.</dd>
+  <dt>{{DOMxRef("BluetoothDevice.productID")}} {{Non-standard_Inline}}
+    {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
+  <dd>The 16-bit Product ID field in the <code>pnp_id</code> characteristic in
+    the <code>device_information</code> service.</dd>
+  <dt>{{DOMxRef("BluetoothDevice.productVersion")}} {{Non-standard_Inline}}
+    {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
+  <dd>The 16-bit Product Version field in the <code>pnp_id</code> characteristic in the
+    <code>device_information</code> service.</dd>
+  <dt>{{DOMxRef("BluetoothDevice.paired")}} {{Non-standard_Inline}}
+    {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
+  <dd>A {{jsxref("Boolean")}} value indicating whether the device is paired with the
+    system.</dd>
+  <dt>{{DOMxRef("BluetoothDevice.gattServer")}} {{Non-standard_Inline}}
+    {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
+  <dd>A reference to the device's GATT server or null if the device is disconnected.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
 <dl>
- <dt>{{DOMxRef("BluetoothDevice.watchAdvertisments()")}} {{Experimental_Inline}}</dt>
- <dd>A {{jsxref("Promise")}} that resolves to <code>undefined</code> or is rejected with an error if advetisments can’t shown for any reason.</dd>
- <dt>{{DOMxRef("BluetoothDevice.unwatchAdvertisments()")}} {{Experimental_Inline}}</dt>
- <dd>Stops watching for advertisments.</dd>
- <dt>{{DOMxRef("BluetoothDevice.connectGATT()")}} {{Non-standard_Inline}} {{Obsolete_Inline}}</dt>
- <dd>A {{jsxref("Promise")}} that resolves to an instance of {{DOMxRef("BluetoothGATTRemoteServer")}}.</dd>
+  <dt>{{DOMxRef("BluetoothDevice.watchAdvertisments()")}} {{Experimental_Inline}}</dt>
+  <dd>A {{jsxref("Promise")}} that resolves to <code>undefined</code> or is rejected with
+    an error if advetisments can’t shown for any reason.</dd>
+  <dt>{{DOMxRef("BluetoothDevice.unwatchAdvertisments()")}} {{Experimental_Inline}}</dt>
+  <dd>Stops watching for advertisments.</dd>
+  <dt>{{DOMxRef("BluetoothDevice.connectGATT()")}} {{Non-standard_Inline}}
+    {{Obsolete_Inline}}</dt>
+  <dd>A {{jsxref("Promise")}} that resolves to an instance
+    of {{DOMxRef("BluetoothRemoteGATTServer")}}.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Bluetooth', '#bluetoothdevice', 'BluetoothDevice')}}</td>
-   <td>{{Spec2('Web Bluetooth')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web Bluetooth', '#bluetoothdevice', 'BluetoothDevice')}}</td>
+      <td>{{Spec2('Web Bluetooth')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.BluetoothDevice")}}</p>
-</div>

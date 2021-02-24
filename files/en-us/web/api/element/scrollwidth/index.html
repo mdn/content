@@ -2,28 +2,40 @@
 title: Element.scrollWidth
 slug: Web/API/Element/scrollWidth
 tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Property
-  - Reference
+- API
+- CSSOM View
+- NeedsMarkupWork
+- NeedsSpecTable
+- Property
+- Reference
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <strong><code>Element.scrollWidth</code></strong> read-only property is a measurement of the width of an element's content, including content not visible on the screen due to overflow.</p>
+<p>The <strong><code>Element.scrollWidth</code></strong> read-only property is a
+	measurement of the width of an element's content, including content not visible on the
+	screen due to overflow.</p>
 
-<p>The <code>scrollWidth</code> value is equal to the minimum width the element would require in order to fit all the content in the viewport without using a horizontal scrollbar. The width is measured in the same way as {{domxref("Element.clientWidth", "clientWidth")}}: it includes the element's padding, but not its border, margin or vertical scrollbar (if present). It can also include the width of pseudo-elements such as {{cssxref("::before")}} or {{cssxref("::after")}}. If the element's content can fit without a need for horizontal scrollbar, its <code>scrollWidth</code> is equal to {{domxref("Element.clientWidth", "clientWidth")}}</p>
+<p>The <code>scrollWidth</code> value is equal to the minimum width the element would
+	require in order to fit all the content in the viewport without using a horizontal
+	scrollbar. The width is measured in the same way as {{domxref("Element.clientWidth",
+	"clientWidth")}}: it includes the element's padding, but not its border, margin or
+	vertical scrollbar (if present). It can also include the width of pseudo-elements such
+	as {{cssxref("::before")}} or {{cssxref("::after")}}. If the element's content can fit
+	without a need for horizontal scrollbar, its <code>scrollWidth</code> is equal to
+	{{domxref("Element.clientWidth", "clientWidth")}}</p>
 
 <div class="note">
-<p>This property will round the value to an integer. If you need a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.</p>
+	<p>This property will round the value to an integer. If you need a fractional value,
+		use {{ domxref("element.getBoundingClientRect()") }}.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>xScrollWidth</var> = <var>element</var>.scrollWidth;</pre>
+<pre
+	class="brush: js">var <var>xScrollWidth</var> = <var>element</var>.scrollWidth;</pre>
 
-<p><code><var>xScrollWidth</var></code> is the width of the content of <code><var>element</var></code> in pixels.</p>
+<p><code><var>xScrollWidth</var></code> is the width of the content of
+	<code><var>element</var></code> in pixels.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -109,7 +121,8 @@ tags:
 	</thead>
 	<tbody>
 		<tr>
-			<td>{{SpecName("CSSOM View", "#dom-element-scrollwidth", "Element.scrollWidth")}}</td>
+			<td>{{SpecName("CSSOM View", "#dom-element-scrollwidth",
+				"Element.scrollWidth")}}</td>
 			<td>{{Spec2("CSSOM View")}}</td>
 			<td>Initial definition</td>
 		</tr>
@@ -125,5 +138,7 @@ tags:
 <ul>
 	<li>{{domxref("Element.clientWidth")}}</li>
 	<li>{{domxref("HTMLElement.offsetWidth")}}</li>
-	<li><a href="/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements">Determining the dimensions of elements</a></li>
+	<li><a
+			href="/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements">Determining
+			the dimensions of elements</a></li>
 </ul>

@@ -2,20 +2,29 @@
 title: Range.endOffset
 slug: Web/API/Range/endOffset
 tags:
-  - API
-  - DOM
-  - Property
-  - Range
+- API
+- DOM
+- Property
+- Range
 ---
 <div>{{ApiRef("DOM")}}</div>
 
-<p>The <code><strong>Range.endOffset</strong></code> read-only property returns a number representing where in the {{domxref("Range.endContainer")}} the {{domxref("Range")}} ends.</p>
+<p>The <code><strong>Range.endOffset</strong></code> read-only property returns a number
+  representing where in the {{domxref("Range.endContainer")}} the {{domxref("Range")}}
+  ends.</p>
 
-<p>If the <code>endContainer</code> is a {{domxref("Node")}} of type {{domxref("Text")}}, {{domxref("Comment")}}, or {{domxref("CDATASection")}}, then the offset is the number of characters from the start of the <code>endContainer</code> to the boundary point of the {{domxref("Range")}}. For other {{domxref("Node")}} types, the <code>endOffset</code> is the number of child nodes between the start of the <code>endContainer</code> and the boundary point of the {{domxref("Range")}}. This property is read-only. To change the <code>endOffset</code> of a {{domxref("Range")}}, use one of the {{domxref("Range.setEnd")}} methods.</p>
+<p>If the <code>endContainer</code> is a {{domxref("Node")}} of type {{domxref("Text")}},
+  {{domxref("Comment")}}, or {{domxref("CDATASection")}}, then the offset is the number of
+  characters from the start of the <code>endContainer</code> to the boundary point of the
+  {{domxref("Range")}}. For other {{domxref("Node")}} types, the <code>endOffset</code> is
+  the number of child nodes between the start of the <code>endContainer</code> and the
+  boundary point of the {{domxref("Range")}}. This property is read-only. To change the
+  <code>endOffset</code> of a {{domxref("Range")}}, use one of the
+  {{domxref("Range.setEnd")}} methods.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>endRangeOffset</em> = <em>range</em>.endOffset;
+<pre class="brush: js"><em>endRangeOffset</em> = <em>range</em>.endOffset;
 </pre>
 
 <h2 id="Example">Example</h2>
@@ -29,23 +38,24 @@ endRangeOffset = range.endOffset;</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-range-endoffset', 'Range.endOffset')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'ranges.html#Level-2-Range-attr-endOffset', 'Range.endOffset')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-range-endoffset', 'Range.endOffset')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>No change.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 Traversal_Range', 'ranges.html#Level-2-Range-attr-endOffset',
+        'Range.endOffset')}}</td>
+      <td>{{Spec2('DOM2 Traversal_Range')}}</td>
+      <td>Initial specification.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -55,5 +65,5 @@ endRangeOffset = range.endOffset;</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
+  <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
 </ul>

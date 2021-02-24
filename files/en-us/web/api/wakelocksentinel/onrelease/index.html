@@ -2,19 +2,24 @@
 title: WakeLockSentinel.onrelease
 slug: Web/API/WakeLockSentinel/onrelease
 tags:
-  - Event Handler
-  - Property
-  - Screen Wake Lock API
-  - Wake Lock
-  - WakeLockSentinel
-  - screen
-  - screen wake lock
+- Event Handler
+- Property
+- Screen Wake Lock API
+- Wake Lock
+- WakeLockSentinel
+- screen
+- screen wake lock
 ---
 <div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}</div>
 
-<p class="summary">The <strong><code>onrelease</code></strong> property of the {{domxref("WakeLockSentinel")}} is fired when the sentinel object's handle has been released.</p>
+<p class="summary">The <strong><code>onrelease</code></strong> property of the
+	{{domxref("WakeLockSentinel")}} is fired when the sentinel object's handle has been
+	released.</p>
 
-<p>A {{domxref("WakeLockSentinel")}} can be released manually via the release() method, or automatically via the platform wake lock. This can happen if the document becomes inactive or looses visibility, if the device is low on power or the user turns on a power save mode.</p>
+<p>A {{domxref("WakeLockSentinel")}} can be released manually via the release() method, or
+	automatically via the platform wake lock. This can happen if the document becomes
+	inactive or looses visibility, if the device is low on power or the user turns on a
+	power save mode.</p>
 
 <p>This interface inherits from the {{domxref("Event")}} interface.</p>
 
@@ -22,13 +27,14 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">wakeLockSentinel.onrelease = function(event) {...}</pre>
+<pre
+	class="brush: js">wakeLockSentinel.onrelease = function(event) {...}</pre>
 
 <h2 id="Examples">Examples</h2>
 
 <p>This example updates the UI should the wake lock be released.</p>
 
-<pre class="brush: js notranslate">wakeLock.addEventListener('release', () =&gt; {
+<pre class="brush: js">wakeLock.addEventListener('release', () =&gt; {
 
   // if wake lock is released alter the UI accordingly
 
@@ -46,7 +52,8 @@ tags:
 			<th scope="col">Comment</th>
 		</tr>
 		<tr>
-			<td>{{SpecName('Screen Wake Lock','#the-onrelease-attribute','onrelease')}}</td>
+			<td>{{SpecName('Screen Wake Lock','#the-onrelease-attribute','onrelease')}}
+			</td>
 			<td>{{Spec2('Screen Wake Lock')}}</td>
 			<td>Initial definition.</td>
 		</tr>

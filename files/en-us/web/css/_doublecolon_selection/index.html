@@ -12,7 +12,7 @@ tags:
 
 <p><span class="seoSummary">The <strong><code>::selection</code></strong> CSS <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> applies styles to the part of a document that has been highlighted by the user (such as clicking and dragging the mouse across text).</span></p>
 
-<pre class="brush: css no-line-numbers notranslate">::selection {
+<pre class="brush: css no-line-numbers">::selection {
   background-color: cyan;
 }</pre>
 
@@ -37,7 +37,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">/* Legacy Firefox syntax (version 61 and below) */
+<pre class="brush: css">/* Legacy Firefox syntax (version 61 and below) */
 ::-moz-selection
 
 {{CSSSyntax}}
@@ -47,13 +47,13 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">This text has special styles when you highlight it.
+<pre class="brush: html">This text has special styles when you highlight it.
 &lt;p&gt;Also try selecting text in this paragraph.&lt;/p&gt;</pre>
 
 <h3 id="CSS">CSS</h3>
 
 <div class="hidden">
-<pre class="brush: css notranslate">::-moz-selection {
+<pre class="brush: css">::-moz-selection {
   color: gold;
   background-color: red;
 }
@@ -64,7 +64,7 @@ p::-moz-selection {
 }</pre>
 </div>
 
-<pre class="brush: css notranslate">/* Make selected text gold on a red background */
+<pre class="brush: css">/* Make selected text gold on a red background */
 ::selection {
   color: gold;
   background-color: red;
@@ -114,7 +114,7 @@ p::selection {
 </table>
 
 <div class="note">
-<p><strong>Note:</strong> <code>::selection</code> was in drafts of CSS Selectors Level 3, but it was removed in the Candidate Recommendation phase because its was under-specified (especially with nested elements) and interoperability wasn't achieved <a class="external" href="http://lists.w3.org/Archives/Public/www-style/2008Oct/0268.html">(based on discussion in the W3C Style mailing list)</a>. It returned in <a href="http://dev.w3.org/csswg/css-pseudo-4/">Pseudo-Elements Level 4</a>.</p>
+<p><strong>Note:</strong> <code>::selection</code> was in drafts of CSS Selectors Level 3, but it was removed in the Candidate Recommendation phase because its was under-specified (especially with nested elements) and interoperability wasn't achieved <a href="http://lists.w3.org/Archives/Public/www-style/2008Oct/0268.html">(based on discussion in the W3C Style mailing list)</a>. It returned in <a href="http://dev.w3.org/csswg/css-pseudo-4/">Pseudo-Elements Level 4</a>.</p>
 </div>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

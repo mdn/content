@@ -2,22 +2,24 @@
 title: BasicCardResponse.cardholderName
 slug: Web/API/BasicCardResponse/cardholderName
 tags:
-  - API
-  - Basic Card Payment
-  - BasicCardResponse
-  - Payment Request
-  - Payment Request API
-  - Property
-  - Reference
-  - cardholderName
+- API
+- Basic Card Payment
+- BasicCardResponse
+- Payment Request
+- Payment Request API
+- Property
+- Reference
+- cardholderName
 ---
 <p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
 
-<p>The <strong><code>cardNumber</code></strong> property of the {{domxref("BasicCardResponse")}} dictionary contains the cardholder name of the card used to make the payment.</p>
+<p>The <strong><code>cardNumber</code></strong> property of the
+  {{domxref("BasicCardResponse")}} dictionary contains the cardholder name of the card
+  used to make the payment.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>name</em> = <em>basicCardResponse</em>.cardholderName;
+<pre class="brush: js"><em>name</em> = <em>basicCardResponse</em>.cardholderName;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -39,7 +41,12 @@ request.show().then(function(instrumentResponse) {
   // Do something with the error from request.show().
 });</pre>
 
-<p>Once the payment flow has been triggered using {{domxref("PaymentRequest.show()")}} and the promise resolves successfully, the {{domxref("PaymentResponse")}} object available inside the fulfilled promise (<code>instrumentResponse</code> above) will have a {{domxref("details","PaymentResponse.details")}} property that will contain response details. This has to conform to the structure defined by the <code>BasicCardResponse</code> dictionary, and may look something like this:</p>
+<p>Once the payment flow has been triggered using {{domxref("PaymentRequest.show()")}} and
+  the promise resolves successfully, the {{domxref("PaymentResponse")}} object available
+  inside the fulfilled promise (<code>instrumentResponse</code> above) will have a
+  {{domxref("details","PaymentResponse.details")}} property that will contain response
+  details. This has to conform to the structure defined by the
+  <code>BasicCardResponse</code> dictionary, and may look something like this:</p>
 
 <pre class="brush: js">{
   "cardNumber' : '9999999999999999",
@@ -56,23 +63,21 @@ request.show().then(function(instrumentResponse) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Basic Card Payment', '#dom-basiccardresponse-cardholdername', 'cardholderName')}}</td>
-			<td>{{Spec2('Basic Card Payment')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Basic Card Payment', '#dom-basiccardresponse-cardholdername',
+        'cardholderName')}}</td>
+      <td>{{Spec2('Basic Card Payment')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.BasicCardResponse.cardholderName")}}</p>
-</div>

@@ -2,28 +2,31 @@
 title: Document.createAttribute()
 slug: Web/API/Document/createAttribute
 tags:
-  - API
-  - DOM
-  - Method
-  - Reference
+- API
+- DOM
+- Method
+- Reference
 ---
 <div>{{ ApiRef("DOM") }}</div>
 
-<p>The <code><strong>Document.createAttribute()</strong></code> method creates a new attribute node, and returns it. The object created a node implementing the {{domxref("Attr")}} interface. The DOM does not enforce what sort of attributes can be added to a particular element in this manner.</p>
+<p>The <code><strong>Document.createAttribute()</strong></code> method creates a new
+  attribute node, and returns it. The object created a node implementing the
+  {{domxref("Attr")}} interface. The DOM does not enforce what sort of attributes can be
+  added to a particular element in this manner.</p>
 
 <div class="note">
-<p>The string given in parameter is converted to lowercase.</p>
+  <p>The string given in parameter is converted to lowercase.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>attribute</em> = document.createAttribute(name)
+<pre class="brush: js"><em>attribute</em> = document.createAttribute(name)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <ul>
- <li><code>name</code> is a string containing the name of the attribute.</li>
+  <li><code>name</code> is a string containing the name of the attribute.</li>
 </ul>
 
 <h3 id="Return_value">Return value</h3>
@@ -33,7 +36,8 @@ tags:
 <h3 id="Exceptions">Exceptions</h3>
 
 <ul>
- <li><code>INVALID_CHARACTER_ERR</code> if the parameter contains invalid characters for XML attribute.</li>
+  <li><code>INVALID_CHARACTER_ERR</code> if the parameter contains invalid characters for
+    XML attribute.</li>
 </ul>
 
 <h2 id="Example">Example</h2>
@@ -48,33 +52,38 @@ console.log(node.getAttribute("my_attrib")); // "newVal"
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-document-createattribute','Document.createAttribute()')}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>Precised behavior with uppercase characters</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core','core.html#ID-1084891198','Document.createAttribute()')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core','core.html#ID-1084891198','Document.createAttribute()')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1','level-one-core.html#ID-1084891198','Document.createAttribute()')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM
+        WHATWG','#dom-document-createattribute','Document.createAttribute()')}}</td>
+      <td>{{Spec2("DOM WHATWG")}}</td>
+      <td>Precised behavior with uppercase characters</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM3 Core','core.html#ID-1084891198','Document.createAttribute()')}}
+      </td>
+      <td>{{Spec2('DOM3 Core')}}</td>
+      <td>No change.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 Core','core.html#ID-1084891198','Document.createAttribute()')}}
+      </td>
+      <td>{{Spec2('DOM2 Core')}}</td>
+      <td>No change.</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('DOM1','level-one-core.html#ID-1084891198','Document.createAttribute()')}}
+      </td>
+      <td>{{Spec2('DOM1')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -84,5 +93,5 @@ console.log(node.getAttribute("my_attrib")); // "newVal"
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("Document.createElement()")}}</li>
+  <li>{{domxref("Document.createElement()")}}</li>
 </ul>

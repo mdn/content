@@ -55,13 +55,13 @@ tags:
 
 <p>If you want to create a 2D <em>or</em> 3D scene on a web page, you need to start with an HTML {{htmlelement("canvas")}} element. This element is used to define the area on the page into which the image will be drawn. This is as simple as including the element on the page:</p>
 
-<pre class="brush: html notranslate">&lt;canvas width="320" height="240"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html">&lt;canvas width="320" height="240"&gt;&lt;/canvas&gt;</pre>
 
 <p>This will create a canvas on the page with a size of 320 by 240 pixels.</p>
 
 <p>Inside the canvas tags, you can put some fallback content, which is shown if the user's browser doesn't support canvas.</p>
 
-<pre class="brush: html notranslate">&lt;canvas width="320" height="240"&gt;
+<pre class="brush: html">&lt;canvas width="320" height="240"&gt;
   &lt;p&gt;Your browser doesn't support canvas. Boo hoo!&lt;/p&gt;
 &lt;/canvas&gt;</pre>
 
@@ -78,7 +78,7 @@ tags:
  <li>
   <p>Add the following code into it, just below the opening {{htmlelement("body")}} tag:</p>
 
-  <pre class="brush: html notranslate">&lt;canvas class="myCanvas"&gt;
+  <pre class="brush: html">&lt;canvas class="myCanvas"&gt;
   &lt;p&gt;Add suitable fallback here.&lt;/p&gt;
 &lt;/canvas&gt;</pre>
 
@@ -87,7 +87,7 @@ tags:
  <li>
   <p>Now add the following lines of JavaScript inside the {{htmlelement("script")}} element:</p>
 
-  <pre class="brush: js notranslate">const canvas = document.querySelector('.myCanvas');
+  <pre class="brush: js">const canvas = document.querySelector('.myCanvas');
 const width = canvas.width = window.innerWidth;
 const height = canvas.height = window.innerHeight;</pre>
 
@@ -98,7 +98,7 @@ const height = canvas.height = window.innerHeight;</pre>
  <li>
   <p>If you save and load your example in a browser now, you'll see nothing, which is fine, but you'll also see scrollbars — this is a problem for us, which happens because the {{htmlelement("body")}} element has a {{cssxref("margin")}} that, added to our full-window-size canvas, results in a document that's wider than the window. To get rid of the scrollbars, we need to remove the {{cssxref("margin")}} and also set {{cssxref("overflow")}} to <code>hidden</code>. Add the following into the {{htmlelement("head")}} of your document:</p>
 
-  <pre class="brush: html notranslate">&lt;style&gt;
+  <pre class="brush: html">&lt;style&gt;
   body {
     margin: 0;
     overflow: hidden;
@@ -119,7 +119,7 @@ const height = canvas.height = window.innerHeight;</pre>
 
 <p>In this case we want a 2d canvas, so add the following JavaScript line below the others inside the <code>&lt;script&gt;</code> element:</p>
 
-<pre class="brush: js notranslate">const ctx = canvas.getContext('2d');</pre>
+<pre class="brush: js">const ctx = canvas.getContext('2d');</pre>
 
 <div class="note">
 <p><strong>Note</strong>: other context values you could choose include <code>webgl</code> for WebGL, <code>webgl2</code> for WebGL 2, etc., but we won't need those in this article.</p>
@@ -129,10 +129,10 @@ const height = canvas.height = window.innerHeight;</pre>
 
 <p>Let's do one last thing before we move on. We'll color the canvas background black to give you a first taste of the canvas API. Add the following lines at the bottom of your JavaScript:</p>
 
-<pre class="brush: js notranslate">ctx.fillStyle = 'rgb(0, 0, 0)';
+<pre class="brush: js">ctx.fillStyle = 'rgb(0, 0, 0)';
 ctx.fillRect(0, 0, width, height);</pre>
 
-<p>Here we are setting a fill color using the canvas' {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} property (this takes <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors">color values</a> just like CSS properties do), then drawing a rectangle that covers the entire area of the canvas with the{{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} method (the first two parameters are the coordinates of the rectangle's top left hand corner; the last two are the width and height you want the rectangle drawn at — we told you those <code>width</code> and <code>height</code> variables would be useful)!</p>
+<p>Here we are setting a fill color using the canvas' {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} property (this takes <a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#colors">color values</a> just like CSS properties do), then drawing a rectangle that covers the entire area of the canvas with the{{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} method (the first two parameters are the coordinates of the rectangle's top left hand corner; the last two are the width and height you want the rectangle drawn at — we told you those <code>width</code> and <code>height</code> variables would be useful)!</p>
 
 <p>OK, our template is done and it's time to move on.</p>
 
@@ -140,7 +140,7 @@ ctx.fillRect(0, 0, width, height);</pre>
 
 <p>As we said above, all drawing operations are done by manipulating a {{domxref("CanvasRenderingContext2D")}} object (in our case, <code>ctx</code>). Many operations need to be given coordinates to pinpoint exactly where to draw something — the top left of the canvas is point (0, 0), the horizontal (x) axis runs from left to right, and the vertical (y) axis runs from top to bottom.</p>
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/224/Canvas_default_grid.png" style="display: block; height: 220px; margin: 0px auto; width: 220px;"></p>
+<p><img alt="" class="internal" src="canvas_default_grid.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Drawing shapes tends to be done using the rectangle shape primitive, or by tracing a line along a certain path and then filling in the shape. Below we'll show how to do both.</p>
 
@@ -155,7 +155,7 @@ ctx.fillRect(0, 0, width, height);</pre>
  <li>
   <p>Next, add the following lines to the bottom of your JavaScript:</p>
 
-  <pre class="brush: js notranslate">ctx.fillStyle = 'rgb(255, 0, 0)';
+  <pre class="brush: js">ctx.fillStyle = 'rgb(255, 0, 0)';
 ctx.fillRect(50, 50, 100, 150);</pre>
 
   <p>If you save and refresh, you should see a red rectangle has appeared on your canvas. Its top left corner is 50 pixels away from the top and left of the canvas edge (as defined by the first two parameters), and it is 100 pixels wide and 150 pixels tall (as defined by the third and fourth parameters).</p>
@@ -163,7 +163,7 @@ ctx.fillRect(50, 50, 100, 150);</pre>
  <li>
   <p>Let's add another rectangle into the mix — a green one this time. Add the following at the bottom of your JavaScript:</p>
 
-  <pre class="brush: js notranslate">ctx.fillStyle = 'rgb(0, 255, 0)';
+  <pre class="brush: js">ctx.fillStyle = 'rgb(0, 255, 0)';
 ctx.fillRect(75, 75, 100, 100);</pre>
 
   <p>Save and refresh, and you'll see your new rectangle. This raises an important point: graphics operations like drawing rectangles, lines, and so forth are performed in the order in which they occur. Think of it like painting a wall, where each coat of paint overlaps and may even hide what's underneath. You can't do anything to change this, so you have to think carefully about the order in which you draw the graphics.</p>
@@ -171,7 +171,7 @@ ctx.fillRect(75, 75, 100, 100);</pre>
  <li>
   <p>Note that you can draw semi-transparent graphics by specifying a semi-transparent color, for example by using <code>rgba()</code>. The <code>a</code> value defines what's called the "alpha channel, " or the amount of transparency the color has. The higher its value, the more it will obscure whatever's behind it. Add the following to your code:</p>
 
-  <pre class="brush: js notranslate">ctx.fillStyle = 'rgba(255, 0, 255, 0.75)';
+  <pre class="brush: js">ctx.fillStyle = 'rgba(255, 0, 255, 0.75)';
 ctx.fillRect(25, 100, 175, 50);</pre>
  </li>
  <li>
@@ -187,13 +187,13 @@ ctx.fillRect(25, 100, 175, 50);</pre>
  <li>
   <p>Add the following to the previous example, again below the previous JavaScript lines:</p>
 
-  <pre class="brush: js notranslate">ctx.strokeStyle = 'rgb(255, 255, 255)';
+  <pre class="brush: js">ctx.strokeStyle = 'rgb(255, 255, 255)';
 ctx.strokeRect(25, 25, 175, 200);</pre>
  </li>
  <li>
   <p>The default width of strokes is 1 pixel; you can adjust the {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}} property value to change this (it takes a number representing the number of pixels wide the stroke is). Add the following line in between the previous two lines:</p>
 
-  <pre class="brush: js notranslate">ctx.lineWidth = 5;</pre>
+  <pre class="brush: js">ctx.lineWidth = 5;</pre>
  </li>
 </ol>
 
@@ -223,7 +223,7 @@ ctx.strokeRect(25, 25, 175, 200);</pre>
 
 <p>A typical, simple path-drawing operation would look something like so:</p>
 
-<pre class="brush: js notranslate">ctx.fillStyle = 'rgb(255, 0, 0)';
+<pre class="brush: js">ctx.fillStyle = 'rgb(255, 0, 0)';
 ctx.beginPath();
 ctx.moveTo(50, 50);
 // draw your path
@@ -237,21 +237,21 @@ ctx.fill();</pre>
  <li>
   <p>First of all, add the following helper function to the bottom of your code. This converts degree values to radians, which is useful because whenever you need to provide an angle value in JavaScript, it will nearly always be in radians, but humans usually think in degrees.</p>
 
-  <pre class="brush: js notranslate">function degToRad(degrees) {
+  <pre class="brush: js">function degToRad(degrees) {
   return degrees * Math.PI / 180;
 };</pre>
  </li>
  <li>
   <p>Next, start off your path by adding the following below your previous addition; here we set a color for our triangle, start drawing a path, and then move the pen to (50, 50) without drawing anything. That's where we'll start drawing our triangle.</p>
 
-  <pre class="brush: js notranslate">ctx.fillStyle = 'rgb(255, 0, 0)';
+  <pre class="brush: js">ctx.fillStyle = 'rgb(255, 0, 0)';
 ctx.beginPath();
 ctx.moveTo(50, 50);</pre>
  </li>
  <li>
   <p>Now add the following lines at the bottom of your script:</p>
 
-  <pre class="brush: js notranslate">ctx.lineTo(150, 50);
+  <pre class="brush: js">ctx.lineTo(150, 50);
 let triHeight = 50 * Math.tan(degToRad(60));
 ctx.lineTo(100, 50+triHeight);
 ctx.lineTo(50, 50);
@@ -269,7 +269,7 @@ ctx.fill();</pre>
    <li>The side opposite the 60 degree angle is called the <strong>opposite</strong>, which is the height of the triangle we want to calculate.</li>
   </ul>
 
-  <p><img alt="" src="https://mdn.mozillademos.org/files/14829/trigonometry.png" style="display: block; margin: 0 auto;"></p>
+  <p><img alt="" src="trigonometry.png" style="display: block; margin: 0 auto;"></p>
 
   <p>One of the basic trigonometric formulae states that the length of the adjacent multiplied by the tangent of the angle is equal to the opposite, hence we come up with <code>50 * Math.tan(degToRad(60))</code>. We use our <code>degToRad()</code> function to convert 60 degrees to radians, as {{jsxref("Math.tan()")}} expects an input value in radians.</p>
  </li>
@@ -292,7 +292,7 @@ ctx.fill();</pre>
  <li>
   <p>Let's add an arc to our canvas — add the following to the bottom of your code:</p>
 
-  <pre class="brush: js notranslate">ctx.fillStyle = 'rgb(0, 0, 255)';
+  <pre class="brush: js">ctx.fillStyle = 'rgb(0, 0, 255)';
 ctx.beginPath();
 ctx.arc(150, 106, 50, degToRad(0), degToRad(360), false);
 ctx.fill();</pre>
@@ -306,7 +306,7 @@ ctx.fill();</pre>
  <li>
   <p>Let's try adding another arc:</p>
 
-  <pre class="brush: js notranslate">ctx.fillStyle = 'yellow';
+  <pre class="brush: js">ctx.fillStyle = 'yellow';
 ctx.beginPath();
 ctx.arc(200, 106, 50, degToRad(-45), degToRad(45), true);
 ctx.lineTo(200, 106);
@@ -350,7 +350,7 @@ ctx.fill();</pre>
 
 <p>Try adding the following block to the bottom of your JavaScript:</p>
 
-<pre class="brush: js notranslate">ctx.strokeStyle = 'white';
+<pre class="brush: js">ctx.strokeStyle = 'white';
 ctx.lineWidth = 1;
 ctx.font = '36px arial';
 ctx.strokeText('Canvas text', 50, 50);
@@ -382,7 +382,7 @@ ctx.fillText('Canvas text', 50, 150);</pre>
  <li>
   <p>Let's start by getting an image source to embed in our canvas. Add the following lines to the bottom of your JavaScript:</p>
 
-  <pre class="brush: js notranslate">let image = new Image();
+  <pre class="brush: js">let image = new Image();
 image.src = 'firefox.png';</pre>
 
   <p>Here we create a new {{domxref("HTMLImageElement")}} object using the {{domxref("HTMLImageElement.Image()", "Image()")}} constructor. The returned object is the same type as that which is returned when you grab a reference to an existing {{htmlelement("img")}} element). We then set its {{htmlattrxref("src", "img")}} attribute to equal our Firefox logo image. At this point, the browser starts loading the image.</p>
@@ -390,16 +390,16 @@ image.src = 'firefox.png';</pre>
  <li>
   <p>We could now try to embed the image using <code>drawImage()</code>, but we need to make sure the image file has been loaded first, otherwise the code will fail. We can achieve this using the <code>onload</code> event handler, which will only be invoked when the image has finished loading. Add the following block below the previous one:</p>
 
-  <pre class="brush: js notranslate">image.onload = function() {
+  <pre class="brush: js">image.onload = function() {
   ctx.drawImage(image, 50, 50);
 }</pre>
 
-  <p>If you load your example in the browser now, you should see the image embeded in the canvas.</p>
+  <p>If you load your example in the browser now, you should see the image embedded in the canvas.</p>
  </li>
  <li>
   <p>But there's more! What if we want to display only a part of the image, or to resize it? We can do both with the more complex version of <code>drawImage()</code>. Update your <code>ctx.drawImage()</code> line like so:</p>
 
-  <pre class="brush: js notranslate">ctx.drawImage(image, 20, 20, 185, 175, 50, 50, 185, 175);</pre>
+  <pre class="brush: js">ctx.drawImage(image, 20, 20, 185, 175, 50, 50, 185, 175);</pre>
 
   <ul>
    <li>The first parameter is the image reference, as before.</li>
@@ -436,14 +436,14 @@ image.src = 'firefox.png';</pre>
  <li>
   <p>Add the following line to the bottom of your JavaScript. This contains a new method, {{domxref("CanvasRenderingContext2D.translate", "translate()")}}, which moves the origin point of the canvas:</p>
 
-  <pre class="brush: js notranslate">ctx.translate(width/2, height/2);</pre>
+  <pre class="brush: js">ctx.translate(width/2, height/2);</pre>
 
   <p>This causes the coordinate origin (0, 0) to be moved to the center of the canvas, rather than being at the top left corner. This is very useful in many situations, like this one, where we want our design to be drawn relative to the center of the canvas.</p>
  </li>
  <li>
   <p>Now add the following code to the bottom of the JavaScript:</p>
 
-  <pre class="brush: js notranslate">function degToRad(degrees) {
+  <pre class="brush: js">function degToRad(degrees) {
   return degrees * Math.PI / 180;
 };
 
@@ -463,7 +463,7 @@ for(var i = 0; i &lt; length; i++) {
  <li>
   <p>The idea here is that we'll draw something on the canvas inside the <code>for</code> loop, and iterate on it each time so we can create something interesting. Add the following code inside your <code>for</code> loop:</p>
 
-  <pre class="brush: js notranslate">ctx.fillStyle = 'rgba(' + (255-length) + ', 0, ' + (255-length) + ', 0.9)';
+  <pre class="brush: js">ctx.fillStyle = 'rgba(' + (255-length) + ', 0, ' + (255-length) + ', 0.9)';
 ctx.beginPath();
 ctx.moveTo(moveOffset, moveOffset);
 ctx.lineTo(moveOffset+length, moveOffset);
@@ -521,7 +521,7 @@ ctx.rotate(degToRad(5));</pre>
 
 <p>To see how it works, let's quickly look again at our Bouncing Balls example (<a href="https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html">see it live</a>, and also see <a href="https://github.com/mdn/learning-area/tree/master/javascript/oojs/bouncing-balls">the source code</a>). The code for the loop that keeps everything moving looks like this:</p>
 
-<pre class="brush: js notranslate">function loop() {
+<pre class="brush: js">function loop() {
   ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
   ctx.fillRect(0, 0, width, height);
 
@@ -567,43 +567,43 @@ loop();</pre>
  <li>
   <p>At the bottom of the JavaScript, add the following line to once again make the coordinate origin sit in the middle of the canvas:</p>
 
-  <pre class="brush: js notranslate">ctx.translate(width/2, height/2);</pre>
+  <pre class="brush: js">ctx.translate(width/2, height/2);</pre>
  </li>
  <li>
   <p>Now let's create a new {{domxref("HTMLImageElement")}} object, set its {{htmlattrxref("src", "img")}} to the image we want to load, and add an <code>onload</code> event handler that will cause the <code>draw()</code> function to fire when the image is loaded:</p>
 
-  <pre class="brush: js notranslate">let image = new Image();
+  <pre class="brush: js">let image = new Image();
 image.src = 'walk-right.png';
 image.onload = draw;</pre>
  </li>
  <li>
   <p>Now we'll add some variables to keep track of the position the sprite is to be drawn on the screen, and the sprite number we want to display.</p>
 
-  <pre class="brush: js notranslate">let sprite = 0;
+  <pre class="brush: js">let sprite = 0;
 let posX = 0;</pre>
 
   <p>Let's explain the spritesheet image (which we have respectfully borrowed from Mike Thomas' <a href="http://atomicrobotdesign.com/blog/htmlcss/create-a-sprite-sheet-walk-cycle-using-using-css-animation/" rel="bookmark" title="Permanent Link to Create a sprite sheet walk cycle using CSS animation">Create a sprite sheet walk cycle using CSS animation</a>). The image looks like this:</p>
 
-  <p><img alt="" src="https://mdn.mozillademos.org/files/14847/walk-right.png" style="display: block; height: 148px; margin: 0px auto; width: 612px;"></p>
+  <p><img alt="" src="walk-right.png" style="display: block; margin: 0px auto;"></p>
 
   <p>It contains six sprites that make up the whole walking sequence — each one is 102 pixels wide and 148 pixels high. To display each sprite cleanly we will have to use <code>drawImage()</code> to chop out a single sprite image from the spritesheet and display only that part, like we did above with the Firefox logo. The X coordinate of the slice will have to be a multiple of 102, and the Y coordinate will always be 0. The slice size will always be 102 by 148 pixels.</p>
  </li>
  <li>
   <p>Now let's insert an empty <code>draw()</code> function at the bottom of the code, ready for filling up with some code:</p>
 
-  <pre class="brush: js notranslate">function draw() {
+  <pre class="brush: js">function draw() {
 
 };</pre>
  </li>
  <li>
   <p>the rest of the code in this section goes inside <code>draw()</code>. First, add the following line, which clears the canvas to prepare for drawing each frame. Notice that we have to specify the top-left corner of the rectangle as <code>-(width/2), -(height/2)</code> because we specified the origin position as <code>width/2, height/2</code> earlier on.</p>
 
-  <pre class="brush: js notranslate">ctx.fillRect(-(width/2), -(height/2), width, height);</pre>
+  <pre class="brush: js">ctx.fillRect(-(width/2), -(height/2), width, height);</pre>
  </li>
  <li>
   <p>Next, we'll draw our image using drawImage — the 9-parameter version. Add the following:</p>
 
-  <pre class="brush: js notranslate">ctx.drawImage(image, (sprite*102), 0, 102, 148, 0+posX, -74, 102, 148);</pre>
+  <pre class="brush: js">ctx.drawImage(image, (sprite*102), 0, 102, 148, 0+posX, -74, 102, 148);</pre>
 
   <p>As you can see:</p>
 
@@ -618,7 +618,7 @@ let posX = 0;</pre>
  <li>
   <p>Now we'll alter the <code>sprite</code> value after each draw — well, after some of them anyway. Add the following block to the bottom of the <code>draw()</code> function:</p>
 
-  <pre class="brush: js notranslate">  if (posX % 13 === 0) {
+  <pre class="brush: js">  if (posX % 13 === 0) {
     if (sprite === 5) {
       sprite = 0;
     } else {
@@ -626,14 +626,14 @@ let posX = 0;</pre>
     }
   }</pre>
 
-  <p>We are wrapping the whole block in <code> if (posX % 13 === 0) { ... }</code>. We use the modulo (<code>%</code>) operator (also known as the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_()">remainder operator</a>) to check whether the <code>posX</code> value can be exactly divided by 13 with no remainder. If so, we move on  to the next sprite by incrementing <code>sprite</code> (wrapping to 0 after we're done with sprite #5). This effectively means that we are only updating the sprite on every 13th frame, or roughly about 5 frames a second (<code>requestAnimationFrame()</code> calls us at up to 60 frames per second if possible). We are deliberately slowing down the frame rate because we only have six sprites to work with, and if we display one every 60th of a second, our character will move way too fast!</p>
+  <p>We are wrapping the whole block in <code> if (posX % 13 === 0) { ... }</code>. We use the modulo (<code>%</code>) operator (also known as the <a href="/en-US/docs/Web/JavaScript/Reference/Operators#remainder_()">remainder operator</a>) to check whether the <code>posX</code> value can be exactly divided by 13 with no remainder. If so, we move on  to the next sprite by incrementing <code>sprite</code> (wrapping to 0 after we're done with sprite #5). This effectively means that we are only updating the sprite on every 13th frame, or roughly about 5 frames a second (<code>requestAnimationFrame()</code> calls us at up to 60 frames per second if possible). We are deliberately slowing down the frame rate because we only have six sprites to work with, and if we display one every 60th of a second, our character will move way too fast!</p>
 
   <p>Inside the outer block we use an <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if ... else</a></code> statement to check whether the <code>sprite</code> value is at 5 (the last sprite, given that the sprite numbers run from 0 to 5). If we are showing the last sprite already, we reset <code>sprite</code> back to 0; if not we just increment it by 1.</p>
  </li>
  <li>
   <p>Next we need to work out how to change the <code>posX</code> value on each frame — add the following code block just below your last one. </p>
 
-  <pre class="brush: js notranslate">  if(posX &gt; width/2) {
+  <pre class="brush: js">  if(posX &gt; width/2) {
     newStartPos = -((width/2) + 102);
     posX = Math.ceil(newStartPos);
     console.log(posX);
@@ -648,7 +648,7 @@ let posX = 0;</pre>
  <li>
   <p>Finally, we need to make the animation loop by calling {{domxref("window.requestAnimationFrame", "requestAnimationFrame()")}} at the bottom of the <code>draw()</code> function:</p>
 
-  <pre class="brush: js notranslate">window.requestAnimationFrame(draw);</pre>
+  <pre class="brush: js">window.requestAnimationFrame(draw);</pre>
  </li>
 </ol>
 
@@ -670,7 +670,7 @@ let posX = 0;</pre>
 
 <p>Let's look at the most interesting parts. First of all, we keep track of the mouse's X and Y coordinates and whether it is being clicked or not with three variables: <code>curX</code>, <code>curY</code>, and <code>pressed</code>. When the mouse moves, we fire a function set as the <code>onmousemove</code> event handler, which captures the current X and Y values. We also use <code>onmousedown</code> and <code>onmouseup</code> event handlers to change the value of <code>pressed</code> to <code>true</code> when the mouse button is pressed, and back to <code>false</code> again when it is released.</p>
 
-<pre class="brush: js notranslate">let curX;
+<pre class="brush: js">let curX;
 let curY;
 let pressed = false;
 
@@ -689,14 +689,14 @@ canvas.onmouseup = function() {
 
 <p>When the "Clear canvas" button is pressed, we run a simple function that clears the whole canvas back to black, the same way we've seen before:</p>
 
-<pre class="brush: js notranslate">clearBtn.onclick = function() {
+<pre class="brush: js">clearBtn.onclick = function() {
   ctx.fillStyle = 'rgb(0, 0, 0)';
   ctx.fillRect(0, 0, width, height);
 }</pre>
 
 <p>The drawing loop is pretty simple this time around — if pressed is <code>true</code>, we draw a circle with a fill style equal to the value in the color picker, and a radius equal to the value set in the range input. We have to draw the circle 85 pixels above where we measured it from, because the vertical measurement is taken from the top of the viewport, but we are drawing the circle relative to the top of the canvas, which starts below the 85 pixel-high toolbar. If we drew it with just <code>curY</code> as the y coordinate, it would appear 85 pixels lower than the mouse position.</p>
 
-<pre class="brush: js notranslate">function draw() {
+<pre class="brush: js">function draw() {
   if(pressed) {
     ctx.fillStyle = colorPicker.value;
     ctx.beginPath();
@@ -742,14 +742,14 @@ draw();</pre>
  <li>
   <p>Now we've got <code>three.js</code> attached to our page, we can start to write JavaScript that makes use of it into <code>main.js</code>. Let's start by creating a new scene — add the following into your main.js file:</p>
 
-  <pre class="brush: js notranslate">const scene = new THREE.Scene();</pre>
+  <pre class="brush: js">const scene = new THREE.Scene();</pre>
 
   <p>The <code><a href="https://threejs.org/docs/index.html#Reference/Scenes/Scene">Scene()</a></code> constructor creates a new scene, which represents the whole 3D world we are trying to display.</p>
  </li>
  <li>
   <p>Next, we need a <strong>camera</strong> so we can see the scene. In 3D imagery terms, the camera represents a viewer's position in the world. To create a camera, add the following lines next:</p>
 
-  <pre class="brush: js notranslate">const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  <pre class="brush: js">const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 camera.position.z = 5;
 </pre>
 
@@ -767,7 +767,7 @@ camera.position.z = 5;
  <li>
   <p>The third vital ingredient is a renderer. This is an object that renders a given scene, as viewed through a given camera. We'll create one for now using the <code><a href="https://threejs.org/docs/index.html#Reference/Renderers/WebGLRenderer">WebGLRenderer()</a></code> constructor, but we'll not use it till later. Add the following lines next:</p>
 
-  <pre class="brush: js notranslate">const renderer = new THREE.WebGLRenderer();
+  <pre class="brush: js">const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);</pre>
 
@@ -776,7 +776,7 @@ document.body.appendChild(renderer.domElement);</pre>
  <li>
   <p>Next, we want to create the cube we'll display on the canvas. Add the following chunk of code at the bottom of your JavaScript:</p>
 
-  <pre class="brush: js notranslate">let cube;
+  <pre class="brush: js">let cube;
 
 let loader = new THREE.TextureLoader();
 
@@ -805,7 +805,7 @@ loader.load( 'metal003.png', function (texture) {
  <li>
   <p>Before we get to defining <code>draw()</code>, we'll add a couple of lights to the scene, to liven things up a bit; add the following blocks next:</p>
 
-  <pre class="brush: js notranslate">let light = new THREE.AmbientLight('rgb(255, 255, 255)'); // soft white light
+  <pre class="brush: js">let light = new THREE.AmbientLight('rgb(255, 255, 255)'); // soft white light
 scene.add(light);
 
 let spotLight = new THREE.SpotLight('rgb(255, 255, 255)');
@@ -818,7 +818,7 @@ scene.add(spotLight);</pre>
  <li>
   <p>Last of all, let's add our <code>draw()</code> function to the bottom of the code:</p>
 
-  <pre class="brush: js notranslate">function draw() {
+  <pre class="brush: js">function draw() {
   cube.rotation.x += 0.01;
   cube.rotation.y += 0.01;
   renderer.render(scene, camera);

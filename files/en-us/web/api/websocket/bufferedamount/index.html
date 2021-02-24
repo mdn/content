@@ -2,19 +2,24 @@
 title: WebSocket.bufferedAmount
 slug: Web/API/WebSocket/bufferedAmount
 tags:
-  - API
-  - Property
-  - Reference
-  - Web API
-  - WebSocket
+- API
+- Property
+- Reference
+- Web API
+- WebSocket
 ---
 <p>{{APIRef("Web Sockets API")}}</p>
 
-<p>The <strong><code>WebSocket.bufferedAmount</code></strong> read-only property returns the number of bytes of data that have been queued using calls to {{manch("send")}} but not yet transmitted to the network. This value resets to zero once all queued data has been sent. This value does not reset to zero when the connection is closed; if you keep calling {{manch("send")}}, this will continue to climb.</p>
+<p>The <strong><code>WebSocket.bufferedAmount</code></strong> read-only property returns
+  the number of bytes of data that have been queued using calls to {{manch("send")}} but
+  not yet transmitted to the network. This value resets to zero once all queued data has
+  been sent. This value does not reset to zero when the connection is closed; if you keep
+  calling {{manch("send")}}, this will continue to climb.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>var bufferedAmount</em> = aWebSocket.bufferedAmount;</pre>
+<pre
+  class="brush: js"><em>var bufferedAmount</em> = aWebSocket.bufferedAmount;</pre>
 
 <h2 id="Value">Value</h2>
 
@@ -23,20 +28,21 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-websocket-bufferedamount', 'WebSocket: bufferedAmount')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#dom-websocket-bufferedamount', 'WebSocket:
+        bufferedAmount')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

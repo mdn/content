@@ -11,29 +11,38 @@ tags:
 ---
 <div>{{APIRef("Console API")}}</div>
 
-<p>Creates a new inline group in the <a href="/en-US/docs/Tools/Web_Console">Web Console</a> log. This indents following console messages by an additional level, until {{domxref("console.groupEnd()")}} is called.</p>
+<p>Creates a new inline group in the <a href="/en-US/docs/Tools/Web_Console">Web
+		Console</a> log. This indents following console messages by an additional level,
+	until {{domxref("console.groupEnd()")}} is called.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">console.group([label]);
+<pre class="brush: js">console.group([label]);
 </pre>
 
 <h2 id="Parameters">Parameters</h2>
 
 <dl>
 	<dt><code>label</code></dt>
-	<dd>Label for the group. Optional. (Chrome 59 tested) Does not work with <code>console.groupEnd()</code>.</dd>
+	<dd>Label for the group. Optional. (Chrome 59 tested) Does not work with
+		<code>console.groupEnd()</code>.</dd>
 </dl>
 
 <p>{{h3_gecko_minversion("Using groups in the console", "9.0")}}</p>
 
-<p>You can use nested groups to help organize your output by visually associating related messages. To create a new nested block, call <code>console.group()</code>. The <code>console.groupCollapsed()</code> method is similar, but the new block is collapsed and requires clicking a disclosure button to read it.</p>
+<p>You can use nested groups to help organize your output by visually associating related
+	messages. To create a new nested block, call <code>console.group()</code>. The
+	<code>console.groupCollapsed()</code> method is similar, but the new block is
+	collapsed and requires clicking a disclosure button to read it.</p>
 
-<p><strong>Note:</strong> From Gecko 9 until Gecko 51, the <code>groupCollapsed()</code> method was the same as <code>group()</code>. Collapsed groups are fully supported starting in Gecko 52. See {{bug("1088360")}}.</p>
+<p><strong>Note:</strong> From Gecko 9 until Gecko 51, the <code>groupCollapsed()</code>
+	method was the same as <code>group()</code>. Collapsed groups are fully supported
+	starting in Gecko 52. See {{bug("1088360")}}.</p>
 
-<p>To exit the current group, call <code>console.groupEnd()</code>. For example, given this code:</p>
+<p>To exit the current group, call <code>console.groupEnd()</code>. For example, given
+	this code:</p>
 
 <pre class="brush: js">console.log("This is the outer level");
 console.group();
@@ -49,9 +58,12 @@ console.log("Back to the outer level");
 
 <p>The output looks like this:</p>
 
-<p><img alt="A screenshot of messages nested in the console output." src="/@api/deki/files/6082/=nesting.png"></p>
+<p><img alt="A screenshot of messages nested in the console output."
+		src="nesting.png"></p>
 
-<p>See <a href="/en-US/docs/Web/API/console#Using_groups_in_the_console">Using groups in the console</a> in the documentation of {{domxref("console")}} for more details.</p>
+<p>See <a href="/en-US/docs/Web/API/Console#using_groups_in_the_console">Using groups in
+		the console</a> in the documentation of {{domxref("console")}} for more details.
+</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -79,5 +91,7 @@ console.log("Back to the outer level");
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a class="external" href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
+	<li><a class="external"
+			href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly
+			documentation: Console</a></li>
 </ul>

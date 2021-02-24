@@ -8,24 +8,24 @@ tags:
   - part 6
   - server-side
 ---
-<p><a class="button section-edit only-icon" href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms$edit#Create_BookInstance_form" rel="nofollow, noindex">Edi</a>This subarticle shows how to define a page/form to create <code>BookInstance</code> objects. This is very much like the form we used to create <code>Book</code> objects.</p>
+<p class="summary">This subarticle shows how to define a page/form to create <code>BookInstance</code> objects. This is very much like the form we used to create <code>Book</code> objects.</p>
 
 <h2 id="Import_validation_and_sanitisation_methods">Import validation and sanitisation methods</h2>
 
 <p>Open <strong>/controllers/bookinstanceController.js</strong>, and add the following lines at the top of the file:</p>
 
-<pre class="brush: js  notranslate">const { body,validationResult } = require('express-validator');
+<pre class="brush: js">const { body,validationResult } = require('express-validator');
 </pre>
 
 <h2 id="Controller—get_route">Controller—get route</h2>
 
 <p>At the top of the file, require the <em>Book</em> module (needed because each <code>BookInstance</code> is associated with a particular <code>Book</code>).</p>
 
-<pre class="brush: js  notranslate">var Book = require('../models/book');</pre>
+<pre class="brush: js">var Book = require('../models/book');</pre>
 
 <p>Find the exported <code>bookinstance_create_get()</code> controller method and replace it with the following code.</p>
 
-<pre class="brush: js  notranslate">// Display BookInstance create form on GET.
+<pre class="brush: js">// Display BookInstance create form on GET.
 exports.bookinstance_create_get = function(req, res, next) {
 
     Book.find({},'title')
@@ -43,7 +43,7 @@ exports.bookinstance_create_get = function(req, res, next) {
 
 <p>Find the exported <code>bookinstance_create_post()</code> controller method and replace it with the following code.</p>
 
-<pre class="brush: js  notranslate">// Handle BookInstance create on POST.
+<pre class="brush: js">// Handle BookInstance create on POST.
 exports.bookinstance_create_post = [
 
     // Validate and sanitise fields.
@@ -93,7 +93,7 @@ exports.bookinstance_create_post = [
 
 <p>Create <strong>/views/bookinstance_form.pug</strong> and copy in the text below.</p>
 
-<pre class="notranslate">extends layout
+<pre>extends layout
 
 block content
   h1=title
@@ -141,7 +141,7 @@ block content
 
 <p>Run the application and open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>. Then select the <em>Create new book instance (copy)</em> link. If everything is set up correctly, your site should look something like the following screenshot. After you submit a valid <code>BookInstance</code>, it should be saved and you'll be taken to the detail page.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14490/LocalLibary_Express_BookInstance_Create_Empty.png" style="display: block; height: 554px; margin: 0px auto; width: 1000px;"></p>
+<p><img alt="" src="locallibary_express_bookinstance_create_empty.png" style="display: block; margin: 0px auto;"></p>
 
 <h2 id="Next_steps">Next steps</h2>
 

@@ -2,49 +2,58 @@
 title: CSSValue.cssValueType
 slug: Web/API/CSSValue/cssValueType
 tags:
-  - API
-  - CSSValue
-  - Property
-  - Read-only
-  - Reference
-  - cssValueType
+- API
+- CSSValue
+- Property
+- Read-only
+- Reference
+- cssValueType
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <code><strong>cssValueType</strong></code> read-only property of the {{domxref("CSSValue")}} interface represents the type of the current computed CSS property value.</p>
+<p>The <code><strong>cssValueType</strong></code> read-only property of the
+  {{domxref("CSSValue")}} interface represents the type of the current computed CSS
+  property value.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>cssValueType</var> = <var>cssValue</var>.cssValueType;
+<pre class="brush: js"><var>cssValueType</var> = <var>cssValue</var>.cssValueType;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>An <code>unsigned short</code> representing a code defining the type of the value. Possible values are:</p>
+<p>An <code>unsigned short</code> representing a code defining the type of the value.
+  Possible values are:</p>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Constant</td>
-   <td class="header">Description</td>
-  </tr>
-  <tr>
-   <td><code>CSS_CUSTOM</code></td>
-   <td>The value is a custom value.</td>
-  </tr>
-  <tr>
-   <td><code>CSS_INHERIT</code></td>
-   <td>The value is inherited and the <code>cssText</code> contains <code>"inherit"</code>.</td>
-  </tr>
-  <tr>
-   <td><code>CSS_PRIMITIVE_VALUE</code></td>
-   <td>The value is a primitive value and an instance of the {{domxref("CSSPrimitiveValue")}} interface can be obtained by using binding-specific casting methods on this instance of the <code>CSSValue</code> interface.</td>
-  </tr>
-  <tr>
-   <td><code>CSS_VALUE_LIST</code></td>
-   <td>The value is a <code>CSSValue</code> list and an instance of the {{domxref("CSSValueList")}} interface can be obtained by using binding-specific casting methods on this instance of the <code>CSSValue</code> interface.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td class="header">Constant</td>
+      <td class="header">Description</td>
+    </tr>
+    <tr>
+      <td><code>CSS_CUSTOM</code></td>
+      <td>The value is a custom value.</td>
+    </tr>
+    <tr>
+      <td><code>CSS_INHERIT</code></td>
+      <td>The value is inherited and the <code>cssText</code> contains
+        <code>"inherit"</code>.</td>
+    </tr>
+    <tr>
+      <td><code>CSS_PRIMITIVE_VALUE</code></td>
+      <td>The value is a primitive value and an instance of the
+        {{domxref("CSSPrimitiveValue")}} interface can be obtained by using
+        binding-specific casting methods on this instance of the <code>CSSValue</code>
+        interface.</td>
+    </tr>
+    <tr>
+      <td><code>CSS_VALUE_LIST</code></td>
+      <td>The value is a <code>CSSValue</code> list and an instance of the
+        {{domxref("CSSValueList")}} interface can be obtained by using binding-specific
+        casting methods on this instance of the <code>CSSValue</code> interface.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Example">Example</h2>
@@ -57,23 +66,21 @@ console.log(cssValue.cssValueType);
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSValue-cssValueType', 'CSSValue.cssValueType')}}</td>
-   <td>{{Spec2('DOM2 Style')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSValue-cssValueType',
+        'CSSValue.cssValueType')}}</td>
+      <td>{{Spec2('DOM2 Style')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.CSSValue.cssValueType")}}</p>
-</div>

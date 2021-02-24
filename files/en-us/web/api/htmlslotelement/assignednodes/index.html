@@ -2,30 +2,38 @@
 title: HTMLSlotElement.assignedNodes()
 slug: Web/API/HTMLSlotElement/assignedNodes
 tags:
-  - API
-  - HTMLSlotElement
-  - Method
-  - Reference
-  - assignedNodes
-  - shadow dom
+- API
+- HTMLSlotElement
+- Method
+- Reference
+- assignedNodes
+- shadow dom
 ---
 <div>{{APIRef("Shadow DOM API")}}</div>
 
-<p>The <strong><code>assignedNodes()</code></strong> property of the {{domxref("HTMLSlotElement")}} interface returns a sequence of the nodes assigned to this slot, and if the <code>flatten</code> option is set to <code>true</code>, the assigned nodes of any other slots that are descendants of this slot. If no assigned nodes are found, it returns the slot's fallback content.</p>
+<p>The <strong><code>assignedNodes()</code></strong> property of the
+  {{domxref("HTMLSlotElement")}} interface returns a sequence of the nodes assigned to
+  this slot, and if the <code>flatten</code> option is set to <code>true</code>, the
+  assigned nodes of any other slots that are descendants of this slot. If no assigned
+  nodes are found, it returns the slot's fallback content.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var assignedNodes = HTMLSlotElement.assignedNodes(<var>options</var>)</pre>
+<pre
+  class="brush: js">var assignedNodes = HTMLSlotElement.assignedNodes(<var>options</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><var>options</var> {{optional_inline}}</dt>
- <dd>An object that sets options for the nodes to be returned. The available options are:
- <ul>
-  <li><code>flatten</code>: A {{jsxref('Boolean')}} indicating whether to return the assigned nodes of any available child <code>&lt;slot&gt;</code> elements (<code>true</code>) or not (<code>false</code>). Defaults to <code>false</code>.</li>
- </ul>
- </dd>
+  <dt><var>options</var> {{optional_inline}}</dt>
+  <dd>An object that sets options for the nodes to be returned. The available options are:
+    <ul>
+      <li><code>flatten</code>: A {{jsxref('Boolean')}} indicating whether to return the
+        assigned nodes of any available child <code>&lt;slot&gt;</code> elements
+        (<code>true</code>) or not (<code>false</code>). Defaults to <code>false</code>.
+      </li>
+    </ul>
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -34,7 +42,10 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following snippet is taken from our <a href="https://github.com/mdn/web-components-examples/tree/master/slotchange">slotchange example</a> (<a href="https://mdn.github.io/web-components-examples/slotchange/">see it live also</a>).</p>
+<p>The following snippet is taken from our <a
+    href="https://github.com/mdn/web-components-examples/tree/master/slotchange">slotchange
+    example</a> (<a href="https://mdn.github.io/web-components-examples/slotchange/">see
+    it live also</a>).</p>
 
 <pre class="brush: js">let slots = this.shadowRoot.querySelectorAll('slot');
 slots[1].addEventListener('slotchange', function(e) {
@@ -42,27 +53,31 @@ slots[1].addEventListener('slotchange', function(e) {
   console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
 });</pre>
 
-<p>Here we grab references to all the slots, then add a slotchange event listener to the 2nd slot in the template — which is the one that keeps having its contents changed in the example.</p>
+<p>Here we grab references to all the slots, then add a slotchange event listener to the
+  2nd slot in the template — which is the one that keeps having its contents changed in
+  the example.</p>
 
-<p>Every time the element inserted in the slot changes, we log a report to the console saying which slot has changed, and what the new node inside the slot is.</p>
+<p>Every time the element inserted in the slot changes, we log a report to the console
+  saying which slot has changed, and what the new node inside the slot is.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','scripting.html#dom-slot-assignednodes','assignedNodes')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML
+        WHATWG','scripting.html#dom-slot-assignednodes','assignedNodes')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

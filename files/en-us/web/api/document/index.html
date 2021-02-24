@@ -28,8 +28,8 @@ tags:
 <p><em>This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventTarget")}} interfaces.</em></p>
 
 <dl>
- <dt>{{DOMxRef("Document.anchors")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a list of all of the anchors in the document.</dd>
+ <dt>{{DOMxRef("Document.activeElement")}} {{ReadOnlyInline}}</dt>
+ <dd>Returns the {{DOMxRef('Element')}} that currently has focus.</dd>
  <dt>{{DOMxRef("Document.body")}}</dt>
  <dd>Returns the {{HTMLElement("body")}} or {{htmlelement("frameset")}} node of the current document.</dd>
  <dt>{{DOMxRef("Document.characterSet")}}{{ReadOnlyInline}}</dt>
@@ -50,6 +50,8 @@ tags:
  <dd>Returns the {{DOMxRef("FontFaceSet")}} interface of the current document.</dd>
  <dt>{{DOMxRef("Document.forms")}}{{ReadOnlyInline}}</dt>
  <dd>Returns a list of the {{HTMLElement("form")}} elements within the current document.</dd>
+ <dt>{{DOMxRef("Document.fullscreenElement")}} {{ReadOnlyInline}}</dt>
+ <dd>The element that's currently in full screen mode for this document.</dd>
  <dt>{{DOMxRef("Document.head")}}{{ReadOnlyInline}}</dt>
  <dd>Returns the {{HTMLElement("head")}} element of the current document.</dd>
  <dt>{{DOMxRef("Document.hidden")}}{{ReadOnlyInline}}</dt>
@@ -58,8 +60,6 @@ tags:
  <dd>Returns a list of the images in the current document.</dd>
  <dt>{{DOMxRef("Document.implementation")}}{{ReadOnlyInline}}</dt>
  <dd>Returns the DOM implementation associated with the current document.</dd>
- <dt>{{DOMxRef("Document.lastStyleSheetSet")}}{{ReadOnlyInline}}</dt>
- <dd>Returns the name of the style sheet set that was last enabled. Has the value <code>null</code> until the style sheet is changed by setting the value of {{DOMxRef("Document.selectedStyleSheetSet","selectedStyleSheetSet")}}.</dd>
  <dt>{{DOMxRef("Document.links")}}{{ReadOnlyInline}}</dt>
  <dd>Returns a list of all the hyperlinks in the document.</dd>
  <dt>{{DOMxRef("Document.mozSyntheticDocument")}} {{Non-standard_Inline}}</dt>
@@ -70,17 +70,11 @@ tags:
  <dd>Returns a list of the available plugins.</dd>
  <dt>{{DOMxRef("Document.featurePolicy")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns the {{DOMxRef("FeaturePolicy")}} interface which provides a simple API for introspecting the feature policies applied to a specific document.</dd>
- <dt>{{DOMxRef("Document.preferredStyleSheetSet")}}{{ReadOnlyInline}}</dt>
- <dd>Returns the preferred style sheet set as specified by the page author.</dd>
  <dt>{{DOMxRef("Document.scripts")}}{{ReadOnlyInline}}</dt>
  <dd>Returns all the {{HTMLElement("script")}} elements on the document.</dd>
  <dt>{{DOMxRef("Document.scrollingElement")}}{{ReadOnlyInline}}</dt>
  <dd>Returns a reference to the {{DOMxRef("Element")}} that scrolls the document.</dd>
- <dt>{{DOMxRef("Document.selectedStyleSheetSet")}}</dt>
- <dd>Returns which style sheet set is currently in use.</dd>
- <dt>{{DOMxRef("Document.styleSheetSets")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a list of the style sheet sets available on the document.</dd>
- <dt>{{DOMxRef("Document.timeline")}}{{ReadOnlyInline}}</dt>
+ <dt>{{DOMxRef("Document.timeline")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns timeline as a special instance of {{domxref("DocumentTimeline")}} that is automatically created on page load.</dd>
  <dt>{{DOMxRef("Document.undoManager")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
  <dd>…</dd>
@@ -103,9 +97,9 @@ tags:
  <dd>Returns a reference to the window object.</dd>
  <dt>{{DOMxRef("Document.designMode")}}</dt>
  <dd>Gets/sets the ability to edit the whole document.</dd>
- <dt>{{DOMxRef("Document.dir")}}{{ReadOnlyInline}}</dt>
+ <dt>{{DOMxRef("Document.dir")}}</dt>
  <dd>Gets/sets directionality (rtl/ltr) of the document.</dd>
- <dt>{{DOMxRef("Document.domain")}}</dt>
+ <dt>{{DOMxRef("Document.domain")}} {{Deprecated_Inline}}</dt>
  <dd>Gets/sets the domain of the current document.</dd>
  <dt>{{DOMxRef("Document.lastModified")}}{{ReadOnlyInline}}</dt>
  <dd>Returns the date on which the document was last modified.</dd>
@@ -126,10 +120,6 @@ tags:
 <p><em>The <code>Document</code> interface includes the following properties defined on the {{DOMxRef("DocumentOrShadowRoot")}} mixin. Note that this is currently only implemented by Chrome; other browsers still implement them directly on the {{DOMxRef("Document")}} interface.</em></p>
 
 <dl>
- <dt>{{DOMxRef("DocumentOrShadowRoot.activeElement")}}{{ReadOnlyInline}}</dt>
- <dd>Returns the {{DOMxRef('Element')}} within the shadow tree that has focus.</dd>
- <dt>{{DOMxRef("Document.fullscreenElement")}}{{ReadOnlyInline}}</dt>
- <dd>The element that's currently in full screen mode for this document.</dd>
  <dt>{{DOMxRef("DocumentOrShadowRoot.pointerLockElement")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns the element set as the target for mouse events while the pointer is locked. <code>null</code> if lock is pending, pointer is unlocked, or if the target is in another document.</dd>
  <dt>{{DOMxRef("DocumentOrShadowRoot.styleSheets")}}{{ReadOnlyInline}}</dt>
@@ -172,6 +162,8 @@ tags:
  <dd>Returns or sets the color of active links in the document body.</dd>
  <dt>{{DOMxRef("Document.all")}} {{Deprecated_Inline}} {{Non-standard_Inline}}</dt>
  <dd>Provides access to all elements in the document — it returns an {{DOMxRef('HTMLAllCollection')}} rooted at the document node. This is a legacy, non-standard property and should not be used.</dd>
+ <dt>{{DOMxRef("Document.anchors")}} {{Deprecated_Inline}}{{ReadOnlyInline}}</dt>
+ <dd>Returns a list of all of the anchors in the document.</dd>
  <dt>{{DOMxRef("Document.applets")}} {{Deprecated_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns an ordered list of the applets within a document.</dd>
  <dt>{{DOMxRef("Document.bgColor")}} {{Deprecated_Inline}}</dt>
@@ -188,10 +180,18 @@ tags:
  <dd>Gets/sets the height of the current document.</dd>
  <dt>{{DOMxRef("Document.inputEncoding")}} {{Deprecated_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Alias of {{DOMxRef("Document.characterSet")}}. Use this property instead.</dd>
+ <dt>{{DOMxRef("Document.lastStyleSheetSet")}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
+ <dd>Returns the name of the style sheet set that was last enabled. Has the value <code>null</code> until the style sheet is changed by setting the value of {{DOMxRef("Document.selectedStyleSheetSet","selectedStyleSheetSet")}}.</dd>
  <dt>{{DOMxRef("Document.linkColor")}} {{Deprecated_Inline}}</dt>
  <dd>Gets/sets the color of hyperlinks in the document.</dd>
+ <dt>{{DOMxRef("Document.preferredStyleSheetSet")}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
+ <dd>Returns the preferred style sheet set as specified by the page author.</dd>
  <dt>{{DOMxRef("Document.rootElement")}} {{Deprecated_Inline}}</dt>
  <dd>Like {{DOMxRef("Document.documentElement")}}, but only for {{SVGElement("svg")}} root elements. Use this property instead.</dd>
+ <dt>{{DOMxRef("Document.selectedStyleSheetSet")}} {{Obsolete_Inline}}</dt>
+ <dd>Returns which style sheet set is currently in use.</dd>
+ <dt>{{DOMxRef("Document.styleSheetSets")}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
+ <dd>Returns a list of the style sheet sets available on the document.</dd>
  <dt>{{DOMxRef("Document.vlinkColor")}} {{Deprecated_Inline}}</dt>
  <dd>Gets/sets the color of visited hyperlinks.</dd>
  <dt>{{DOMxRef("Document.width")}} {{Non-standard_Inline}} {{Obsolete_Inline}}</dt>
@@ -243,11 +243,11 @@ tags:
  <dd>Creates a text node.</dd>
  <dt>{{DOMxRef("Document.createTouch()")}} {{Deprecated_Inline}}</dt>
  <dd>Creates a {{DOMxRef("Touch")}} object.</dd>
- <dt>{{DOMxRef("Document.createTouchList()")}}</dt>
+ <dt>{{DOMxRef("Document.createTouchList()")}} {{Deprecated_Inline}}</dt>
  <dd>Creates a {{DOMxRef("TouchList")}} object.</dd>
  <dt>{{DOMxRef("Document.createTreeWalker()")}}</dt>
  <dd>Creates a {{DOMxRef("TreeWalker")}} object.</dd>
- <dt>{{DOMxRef("Document.enableStyleSheetsForSet()")}}</dt>
+ <dt>{{DOMxRef("Document.enableStyleSheetsForSet()")}} {{Obsolete_Inline}}</dt>
  <dd>Enables the style sheets for the specified style sheet set.</dd>
  <dt>{{DOMxRef("Document.exitPictureInPicture()")}}</dt>
  <dd>Remove the video from the floating picture-in-picture window back to its original container.</dd>
@@ -259,7 +259,7 @@ tags:
  <dd>Returns a list of elements with the given tag name.</dd>
  <dt>{{DOMxRef("Document.getElementsByTagNameNS()")}}</dt>
  <dd>Returns a list of elements with the given tag name and namespace.</dd>
- <dt>{{DOMxRef("Document.hasStorageAccess()")}}</dt>
+ <dt>{{DOMxRef("Document.hasStorageAccess()")}} {{Experimental_Inline}}</dt>
  <dd>Returns a {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to its first-party storage.</dd>
  <dt>{{DOMxRef("Document.importNode()")}}</dt>
  <dd>Returns a clone of a node from an external document.</dd>
@@ -308,7 +308,7 @@ tags:
  <dd>In majority of modern browsers, including recent versions of Firefox and Internet Explorer, this method does nothing.</dd>
  <dt>{{DOMxRef("Document.close()")}}</dt>
  <dd>Closes a document stream for writing.</dd>
- <dt>{{DOMxRef("Document.execCommand()")}}</dt>
+ <dt>{{DOMxRef("Document.execCommand()")}} {{Obsolete_Inline}}</dt>
  <dd>On an editable document, executes a formatting command.</dd>
  <dt>{{DOMxRef("Document.getElementsByName()")}}</dt>
  <dd>Returns a list of elements with the given name.</dd>
@@ -316,15 +316,15 @@ tags:
  <dd>Returns <code>true</code> if the focus is currently located anywhere inside the specified document.</dd>
  <dt>{{DOMxRef("Document.open()")}}</dt>
  <dd>Opens a document stream for writing.</dd>
- <dt>{{DOMxRef("Document.queryCommandEnabled()")}}</dt>
+ <dt>{{DOMxRef("Document.queryCommandEnabled()")}} {{Obsolete_Inline}}</dt>
  <dd>Returns true if the formatting command can be executed on the current range.</dd>
- <dt>{{DOMxRef("Document.queryCommandIndeterm()")}}</dt>
+ <dt>{{DOMxRef("Document.queryCommandIndeterm()")}} {{Obsolete_Inline}}</dt>
  <dd>Returns true if the formatting command is in an indeterminate state on the current range.</dd>
- <dt>{{DOMxRef("Document.queryCommandState()")}}</dt>
+ <dt>{{DOMxRef("Document.queryCommandState()")}} {{Obsolete_Inline}}</dt>
  <dd>Returns true if the formatting command has been executed on the current range.</dd>
- <dt>{{DOMxRef("Document.queryCommandSupported()")}}</dt>
+ <dt>{{DOMxRef("Document.queryCommandSupported()")}} {{Obsolete_Inline}}</dt>
  <dd>Returns true if the formatting command is supported on the current range.</dd>
- <dt>{{DOMxRef("Document.queryCommandValue()")}}</dt>
+ <dt>{{DOMxRef("Document.queryCommandValue()")}} {{Obsolete_Inline}}</dt>
  <dd>Returns the current value of the current range for a formatting command.</dd>
  <dt>{{DOMxRef("Document.write()")}}</dt>
  <dd>Writes text in a document.</dd>

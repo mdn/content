@@ -19,7 +19,7 @@ tags:
 
 <p>The <strong><code>:checked</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-class</a> selector represents any <strong>radio </strong>(<code><a href="/en-US/docs/Web/HTML/Element/input/radio">&lt;input type="radio"&gt;</a></code>), <strong>checkbox </strong>(<code><a href="/en-US/docs/Web/HTML/Element/input/checkbox">&lt;input type="checkbox"&gt;</a></code>), or <strong>option</strong> ({{HTMLElement("option")}} in a {{HTMLElement("select")}}) element that is checked or toggled to an <code>on</code> state.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Matches any checked/selected radio, checkbox, or option */
+<pre class="brush: css no-line-numbers">/* Matches any checked/selected radio, checkbox, or option */
 :checked {
   margin-left: 25px;
   border: 1px solid blue;
@@ -34,7 +34,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -42,7 +42,7 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div&gt;
+<pre class="brush: html">&lt;div&gt;
   &lt;input type="radio" name="my-input" id="yes"&gt;
   &lt;label for="yes"&gt;Yes&lt;/label&gt;
 
@@ -64,7 +64,7 @@ tags:
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">div,
+<pre class="brush: css">div,
 select {
   margin: 8px;
 }
@@ -101,7 +101,7 @@ option:checked {
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;input type="checkbox" id="expand-toggle" /&gt;
+<pre class="brush: html">&lt;input type="checkbox" id="expand-toggle" /&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -121,7 +121,7 @@ option:checked {
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">/* Hide the toggle checkbox */
+<pre class="brush: css">/* Hide the toggle checkbox */
 #expand-toggle {
   display: none;
 }

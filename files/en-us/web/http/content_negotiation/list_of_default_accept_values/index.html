@@ -25,20 +25,19 @@ tags:
   <tr>
    <td>Firefox</td>
    <td>
+    <p><code>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</code> (since Firefox 72)</p>
     <p><code>text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</code> (since Firefox 66)<br>
-     <br>
-     <code>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</code> (in Firefox 65)<br>
-     <br>
-     <code>text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</code> (before)</p>
+    <p><code>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</code> (since Firefox 65)</p>
+    <p><code>text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</code> (before)</p>
    </td>
-   <td>In Firefox 65 and earlier, this value can be modified using the <a class="external" href="http://kb.mozillazine.org/Network.http.accept.default"><code>network.http.accept.default</code></a> parameter. (<a class="external" href="https://hg.mozilla.org/mozilla-central/file/tip/modules/libpref/init/all.js#l1750">source)</a></td>
+   <td>In Firefox 65 and earlier, this value can be modified using the <a href="http://kb.mozillazine.org/Network.http.accept.default"><code>network.http.accept.default</code></a> parameter. (<a href="https://hg.mozilla.org/mozilla-central/file/tip/modules/libpref/init/all.js#l1750">source)</a></td>
   </tr>
   <tr>
    <td>Safari, Chrome</td>
    <td>
     <p><code>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8</code></p>
    </td>
-   <td><a class="external" href="https://chromium.googlesource.com/chromium/src.git/+/master/services/network/loader_util.cc#24">(source)</a></td>
+   <td><a href="https://chromium.googlesource.com/chromium/src.git/+/master/services/network/loader_util.cc#24">(source)</a></td>
   </tr>
   <tr>
    <td>Safari 5</td>
@@ -50,7 +49,7 @@ tags:
   <tr>
    <td>Internet Explorer 8</td>
    <td><code>image/jpeg, application/x-ms-application, image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap, application/x-shockwave-flash, application/msword, */*</code></td>
-   <td>See <a class="external" href="https://docs.microsoft.com/en-us/archive/blogs/ieinternals/ie-and-the-accept-header">IE and the Accept Header (IEInternals' MSDN blog)</a>.</td>
+   <td>See <a href="https://docs.microsoft.com/en-us/archive/blogs/ieinternals/ie-and-the-accept-header">IE and the Accept Header (IEInternals' MSDN blog)</a>.</td>
   </tr>
   <tr>
    <td>Edge</td>
@@ -79,11 +78,11 @@ tags:
   <tr>
    <td>Firefox</td>
    <td>
-    <p><code>image/webp,*/*</code> (since Firefox 65)<br>
-     <code>*/*</code> (since Firefox 47)<br>
-     <code>image/png,image/*;q=0.8,*/*;q=0.5</code> (before)</p>
+     <p><code>image/webp,*/*</code> (since Firefox 65)</p>
+     <p><code>*/*</code> (since Firefox 47)</p>
+     <p><code>image/png,image/*;q=0.8,*/*;q=0.5</code> (before)</p>
    </td>
-   <td>This value can be modified using the <code>image.http.accept</code> parameter. <a class="external" href="https://hg.mozilla.org/mozilla-central/file/tip/modules/libpref/init/all.js#l3779"><span style="font-size: x-small;">source</span></a></td>
+   <td>This value can be modified using the <code>image.http.accept</code> parameter. <a href="https://hg.mozilla.org/mozilla-central/file/tip/modules/libpref/init/all.js#l3779"><span style="font-size: x-small;">source</span></a></td>
   </tr>
   <tr>
    <td>Safari</td>
@@ -93,17 +92,17 @@ tags:
   <tr>
    <td>Chrome</td>
    <td><code>image/avif,image/webp,image/apng,image/*,*/*;q=0.8</code></td>
-   <td><a class="external" href="https://chromium.googlesource.com/chromium/src.git/+/master/content/renderer/loader/web_url_loader_impl.cc#99"><span style="font-size: x-small;">source</span></a></td>
+   <td><a href="https://chromium.googlesource.com/chromium/src.git/+/master/content/renderer/loader/web_url_loader_impl.cc#99"><span style="font-size: x-small;">source</span></a></td>
   </tr>
   <tr>
    <td>Internet Explorer 8 or earlier</td>
    <td><code>*/*</code></td>
-   <td>See <a class="external" href="https://docs.microsoft.com/en-us/archive/blogs/ieinternals/ie-and-the-accept-header">IE and the Accept Header (IEInternals' MSDN blog)</a></td>
+   <td>See <a href="https://docs.microsoft.com/en-us/archive/blogs/ieinternals/ie-and-the-accept-header">IE and the Accept Header (IEInternals' MSDN blog)</a></td>
   </tr>
   <tr>
    <td>Internet Explorer 9</td>
    <td><code>image/png,image/svg+xml,image/*;q=0.8, */*;q=0.5</code></td>
-   <td>See <a class="external" href="https://docs.microsoft.com/en-us/archive/blogs/fiddler/fiddler-and-the-ie9-release-candidate">Fiddler is better with Internet Explorer 9 (IEInternals' MSDN blog)</a></td>
+   <td>See <a href="https://docs.microsoft.com/en-us/archive/blogs/fiddler/fiddler-and-the-ie9-release-candidate">Fiddler is better with Internet Explorer 9 (IEInternals' MSDN blog)</a></td>
   </tr>
  </tbody>
 </table>
@@ -127,12 +126,12 @@ tags:
   <tr>
    <td>Firefox 3.6 and later</td>
    <td><code>video/webm,video/ogg,video/*;q=0.9,application/ogg;q=0.7,audio/*;q=0.6,*/*;q=0.5</code></td>
-   <td>See <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=489071">bug 489071</a> <a class="external" href="https://hg.mozilla.org/mozilla-central/file/tip/dom/html/HTMLVideoElement.cpp#l136"><span style="font-size: x-small;">source</span></a></td>
+   <td>See <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=489071">bug 489071</a> <a href="https://hg.mozilla.org/mozilla-central/file/tip/dom/html/HTMLVideoElement.cpp#l136"><span style="font-size: x-small;">source</span></a></td>
   </tr>
   <tr>
    <td>Chrome</td>
    <td><code>*/*</code></td>
-   <td><a class="external" href="https://chromium.googlesource.com/chromium/src.git/+/master/services/network/loader_util.cc#27"><span style="font-size: x-small;">source</span></a></td>
+   <td><a href="https://chromium.googlesource.com/chromium/src.git/+/master/services/network/loader_util.cc#27"><span style="font-size: x-small;">source</span></a></td>
   </tr>
   <tr>
    <td>Internet Explorer 8 or earlier</td>
@@ -156,12 +155,12 @@ tags:
   <tr>
    <td>Firefox 3.6 and later</td>
    <td><code>audio/webm,audio/ogg,audio/wav,audio/*;q=0.9,application/ogg;q=0.7,video/*;q=0.6,*/*;q=0.5</code></td>
-   <td>See <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=489071">bug 489071</a> <a class="external" href="https://hg.mozilla.org/mozilla-central/file/tip/dom/html/HTMLAudioElement.cpp#l81"><span style="font-size: x-small;">source</span></a></td>
+   <td>See <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=489071">bug 489071</a> <a href="https://hg.mozilla.org/mozilla-central/file/tip/dom/html/HTMLAudioElement.cpp#l81"><span style="font-size: x-small;">source</span></a></td>
   </tr>
   <tr>
    <td>Safari, Chrome</td>
    <td><code>*/*</code></td>
-   <td><a class="external" href="https://chromium.googlesource.com/chromium/src.git/+/master/services/network/loader_util.cc#27"><span style="font-size: x-small;">source</span></a></td>
+   <td><a href="https://chromium.googlesource.com/chromium/src.git/+/master/services/network/loader_util.cc#27"><span style="font-size: x-small;">source</span></a></td>
   </tr>
   <tr>
    <td>Internet Explorer 8 or earlier</td>
@@ -195,17 +194,17 @@ tags:
   <tr>
    <td>Safari, Chrome</td>
    <td><code>*/*</code></td>
-   <td><a class="external" href="https://chromium.googlesource.com/chromium/src.git/+/master/services/network/loader_util.cc#27"><span style="font-size: x-small;">source</span></a></td>
+   <td><a href="https://chromium.googlesource.com/chromium/src.git/+/master/services/network/loader_util.cc#27"><span style="font-size: x-small;">source</span></a></td>
   </tr>
   <tr>
    <td>Internet Explorer 8 or earlier</td>
    <td><code>*/*</code></td>
-   <td>See <a class="external" href="https://docs.microsoft.com/en-us/archive/blogs/ieinternals/ie-and-the-accept-header">IE and the Accept Header (IEInternals' MSDN blog)</a></td>
+   <td>See <a href="https://docs.microsoft.com/en-us/archive/blogs/ieinternals/ie-and-the-accept-header">IE and the Accept Header (IEInternals' MSDN blog)</a></td>
   </tr>
   <tr>
    <td>Internet Explorer 9</td>
    <td><code>application/javascript, */*;q=0.8</code></td>
-   <td>See <a class="external" href="https://docs.microsoft.com/en-us/archive/blogs/fiddler/fiddler-and-the-ie9-release-candidate">Fiddler is better with Internet Explorer 9 (IEInternals' MSDN blog)</a></td>
+   <td>See <a href="https://docs.microsoft.com/en-us/archive/blogs/fiddler/fiddler-and-the-ie9-release-candidate">Fiddler is better with Internet Explorer 9 (IEInternals' MSDN blog)</a></td>
   </tr>
  </tbody>
 </table>
@@ -224,22 +223,22 @@ tags:
   <tr>
    <td>Firefox 4</td>
    <td><code>text/css,*/*;q=0.1</code></td>
-   <td>See <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=170789">bug 170789</a> <a class="external" href="https://hg.mozilla.org/mozilla-central/file/tip/layout/style/Loader.cpp#l1548"><span style="font-size: x-small;">source</span></a></td>
+   <td>See <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=170789">bug 170789</a> <a href="https://hg.mozilla.org/mozilla-central/file/tip/layout/style/Loader.cpp#l1548"><span style="font-size: x-small;">source</span></a></td>
   </tr>
   <tr>
    <td>Internet Explorer 8 or earlier</td>
    <td><code>*/*</code></td>
-   <td>See <a class="external" href="https://docs.microsoft.com/en-us/archive/blogs/ieinternals/ie-and-the-accept-header">IE and the Accept Header (IEInternals' MSDN blog)</a></td>
+   <td>See <a href="https://docs.microsoft.com/en-us/archive/blogs/ieinternals/ie-and-the-accept-header">IE and the Accept Header (IEInternals' MSDN blog)</a></td>
   </tr>
   <tr>
    <td>Internet Explorer 9</td>
    <td><code>text/css</code></td>
-   <td>See <a class="external" href="https://docs.microsoft.com/en-us/archive/blogs/fiddler/fiddler-and-the-ie9-release-candidate">Fiddler is better with Internet Explorer 9 (IEInternals' MSDN blog)</a></td>
+   <td>See <a href="https://docs.microsoft.com/en-us/archive/blogs/fiddler/fiddler-and-the-ie9-release-candidate">Fiddler is better with Internet Explorer 9 (IEInternals' MSDN blog)</a></td>
   </tr>
   <tr>
    <td>Safari, Chrome</td>
    <td><code>text/css,*/*;q=0.1</code></td>
-   <td><a class="external" href="https://chromium.googlesource.com/chromium/src.git/+/master/content/renderer/loader/web_url_loader_impl.cc#98"><span style="font-size: x-small;">source</span></a></td>
+   <td><a href="https://chromium.googlesource.com/chromium/src.git/+/master/content/renderer/loader/web_url_loader_impl.cc#98"><span style="font-size: x-small;">source</span></a></td>
   </tr>
   <tr>
    <td>Opera 11.10</td>

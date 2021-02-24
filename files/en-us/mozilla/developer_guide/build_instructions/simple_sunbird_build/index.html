@@ -9,13 +9,13 @@ tags:
 <div class="warning"><br>
 <br>
 <br>
-<span style="font-size: medium;">Building Sunbird is no longer supported. You can give it a try, but its likely that the build system will present you an error. Instead it is suggested to build Thunderbird with Lightning. Please refer to the <a href="/en/Simple_Thunderbird_build">Simple Thunderbird build</a> guide.<br>
+<span style="font-size: medium;">Building Sunbird is no longer supported. You can give it a try, but its likely that the build system will present you an error. Instead it is suggested to build Thunderbird with Lightning. Please refer to the <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Thunderbird_build">Simple Thunderbird build</a> guide.<br>
 </span><br>
 <br>
 </div>
-<p>You can build a bleeding-edge, development version of Sunbird using the commands below. For complete information, see the <a class="internal" href="/En/Developer_Guide/Build_Instructions">build documentation</a>.</p>
+<p>You can build a bleeding-edge, development version of Sunbird using the commands below. For complete information, see the <a class="internal" href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions">build documentation</a>.</p>
 <h2 id="Installing_build_tools">Installing build tools</h2>
-<p>If your system is not listed below, see the <a class="internal" href="/En/Developer_Guide/Build_Instructions#Build_prerequisites">build prerequisites page</a>.</p>
+<p>If your system is not listed below, see the <a class="internal" href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions#build_prerequisites">build prerequisites page</a>.</p>
 <table style="margin-left: 2.5em;"> <tbody> <tr> <td style="vertical-align: baseline;">Ubuntu Linux:</td> <td> <pre>
 sudo apt-get build-dep sunbird
 sudo apt-get install mercurial libasound2-dev libcurl4-openssl-dev libnotify-dev libiw-dev autoconf2.13 cvs
@@ -24,7 +24,7 @@ sudo yum groupinstall 'Development Tools' 'Development Libraries' 'GNOME Softwar
 sudo yum install mercurial autoconf213 glibc-static libstdc++-static yasm wireless-tools-devel mesa-libGL-devel</pre> </td> </tr> <tr> <td style="vertical-align: baseline;">Mac:</td> <td> <ul> <li>Install Xcode Tools. Insert "Mac OS X Install Disc 2", then open <code>XcodeTools.mpkg</code>. (For some Mac OS X versions, you will find it in a directory called "Optional Installs".)</li> <li>Install <a class="external" href="http://www.macports.org/install.php">MacPorts</a>.</li> <li>Run these commands to install the other build tools: <pre class="eval">
 sudo port sync
 sudo port install mercurial libidl autoconf213
-</pre> </li> </ul> <p>Problems? See <a class="internal" href="/En/Developer_Guide/Build_Instructions/Mac_OS_X_Prerequisites">Mac OS X build prerequisites</a>.</p> </td> </tr> <tr> <td style="vertical-align: baseline;">Windows:</td> <td> <ul> <li>If you're using Windows XP, you must have <a class="external" href="http://www.microsoft.com/windowsxp/sp2/default.mspx">Windows XP Service Pack 2</a> and <a class="external" href="http://www.microsoft.com/downloads/info.aspx?na=47&amp;p=3&amp;SrcDisplayLang=en&amp;SrcCategoryId=&amp;SrcFamilyId=4377f86d-c913-4b5c-b87e-ef72e5b4e065&amp;u=details.aspx?familyid=0856EACB-4362-4B0D-8EDD-AAB15C5E04F5&amp;displaylang=en">.NET Framework 2.0</a>.</li> <li>Install Visual C++ 2005 or 2008. Both the professional edition and the <a class="external" href="http://www.microsoft.com/Express/vc/">express edition</a> will work.</li> <li>You may need to install one or more Windows SDKs. See <a class="internal" href="/En/Windows_SDK_versions">Windows SDK versions</a> for a quick guide.</li> <li>Install <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/MozillaBuildSetup-Latest.exe">MozillaBuild</a>, a package of additional build tools. (If you get a message saying this application did not install properly then you should see a windows dialog giving you the option to re-install with the 'correct settings'. After that all should be well.)</li> <li>Open a shell window by running: <code>c:\mozilla-build\start-msvcX.bat</code> (where X is 8 for VS 2005, and 9 for VS 2008).</li> </ul> <p>Problems? See <a class="internal" href="/En/Developer_Guide/Build_Instructions/Windows_Prerequisites">Windows build prerequisites</a>.</p> </td> </tr> </tbody>
+</pre> </li> </ul> <p>Problems? See <a class="internal" href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Prerequisites">Mac OS X build prerequisites</a>.</p> </td> </tr> <tr> <td style="vertical-align: baseline;">Windows:</td> <td> <ul> <li>If you're using Windows XP, you must have <a class="external" href="http://www.microsoft.com/windowsxp/sp2/default.mspx">Windows XP Service Pack 2</a> and <a class="external" href="http://www.microsoft.com/downloads/info.aspx?na=47&amp;p=3&amp;SrcDisplayLang=en&amp;SrcCategoryId=&amp;SrcFamilyId=4377f86d-c913-4b5c-b87e-ef72e5b4e065&amp;u=details.aspx?familyid=0856EACB-4362-4B0D-8EDD-AAB15C5E04F5&amp;displaylang=en">.NET Framework 2.0</a>.</li> <li>Install Visual C++ 2005 or 2008. Both the professional edition and the <a class="external" href="http://www.microsoft.com/Express/vc/">express edition</a> will work.</li> <li>You may need to install one or more Windows SDKs. See <a class="internal" href="/en-US/Windows_SDK_versions">Windows SDK versions</a> for a quick guide.</li> <li>Install <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/MozillaBuildSetup-Latest.exe">MozillaBuild</a>, a package of additional build tools. (If you get a message saying this application did not install properly then you should see a windows dialog giving you the option to re-install with the 'correct settings'. After that all should be well.)</li> <li>Open a shell window by running: <code>c:\mozilla-build\start-msvcX.bat</code> (where X is 8 for VS 2005, and 9 for VS 2008).</li> </ul> <p>Problems? See <a class="internal" href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Windows_Prerequisites">Windows build prerequisites</a>.</p> </td> </tr> </tbody>
 </table>
 <h2 id="Building_Sunbird">Building Sunbird</h2>
 <p>Building Sunbird requires at least 2.5 GB of disk space, 500 MB of RAM, and lots of available swap space.</p>
@@ -61,11 +61,11 @@ ac_add_options --disable-optimize
 <p>Then just re-run the "<code>make -f client.mk</code>" command above (you can do the addition before running make for the first time).</p>
 <p>This will build the lightning extension into <code>src/../objdir-sb/mozilla/dist/xpi-stage/</code>. See <a class="internal" href="../../../../en/Setting_up_extension_development_environment#Custom_code_location"> this section</a> for information on how to easily integrate Lightning into a nightly version of Thunderbird.</p>
 <h2 id="How_to_build_again_later">How to build again later</h2>
-<p>In your <span>comm</span><code>-central</code> directory, run these commands:</p>
+<p>In your <code>comm-central</code> directory, run these commands:</p>
 <pre># Get the latest source
 python client.py checkout
 </pre>
-<p>Then just re-run the "<code>make -f client.mk</code>" command above. <code>make</code> will only recompile files that changed, but it's still a long haul. An <a class="internal" href="/en/Incremental_Build">incremental build</a> can be faster.</p>
+<p>Then just re-run the "<code>make -f client.mk</code>" command above. <code>make</code> will only recompile files that changed, but it's still a long haul. An <a class="internal" href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Incremental_Build">incremental build</a> can be faster.</p>
 <h4 id="Building_just_Lightning">Building just Lightning</h4>
 <p>After you have completed a full build, if you would like to rebuild Lightning you don't need to go through the whole build process:</p>
 <pre># Enter the calendar directory in the object-directory
@@ -75,5 +75,5 @@ cd src/../objdir-sb-release/calendar
 make -C lightning
 </pre>
 <h3 id="References">References</h3>
-<ul> <li><a class="internal" href="/En/Developer_Guide/Build_Instructions">General Build Documentation</a></li> <li><a class="internal" href="/en/comm-central">comm-central</a></li>
+<ul> <li><a class="internal" href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions">General Build Documentation</a></li> <li><a class="internal" href="/en-US/docs/comm-central">comm-central</a></li>
 </ul>

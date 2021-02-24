@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">self.importScripts('foo.js');
+<pre class="brush: js">self.importScripts('foo.js');
 self.importScripts('foo.js', 'bar.js', ...);</pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -37,7 +37,7 @@ self.importScripts('foo.js', 'bar.js', ...);</pre>
 
 <p>If you had some functionality written in a separate script called <code>foo.js</code> that you wanted to use inside worker.js, you could import it using the following line:</p>
 
-<pre class="brush: js notranslate">importScripts('foo.js');</pre>
+<pre class="brush: js">importScripts('foo.js');</pre>
 
 <p><code>importScripts()</code> and <code>self.importScripts()</code> are effectively equivalent — both represent <code>importScripts()</code> being called from inside the worker's inner scope.</p>
 

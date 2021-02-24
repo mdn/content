@@ -16,9 +16,9 @@ tags:
 
 <p>This method was deprecated in Firefox 68 and removed in Firefox 71. In Firefox 68–70, calling this method logs an error message to the console:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16799/proxy_register_warning.png" style="border: 1px solid black; display: block; height: 65px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="proxy_register_warning.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
-<p>Registers a <a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_%28PAC%29_file">Proxy Auto-Configuration (PAC) file</a>. The file is executed immediately, and its <code>FindProxyForURL()</code> function will be called for any HTTP, HTTPS, or FTP requests.</p>
+<p>Registers a <a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file">Proxy Auto-Configuration (PAC) file</a>. The file is executed immediately, and its <code>FindProxyForURL()</code> function will be called for any HTTP, HTTPS, or FTP requests.</p>
 
 <p>If PAC files are registered by more than one extension, then requests will be passed initially to the one that was registered first.</p>
 
@@ -64,11 +64,11 @@ browser.runtime.onMessage.addListener((message) =&gt; {
 
 <h2 id="PAC_file_specification">PAC file specification</h2>
 
-<p>The basic PAC file syntax is described in the <a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file">PAC documentation</a>, but the implementation used by the proxy API differs from standard PAC design in several ways, which are described in this section.</p>
+<p>The basic PAC file syntax is described in the <a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file">PAC documentation</a>, but the implementation used by the proxy API differs from standard PAC design in several ways, which are described in this section.</p>
 
 <h3 id="FindProxyForURL_return_value">FindProxyForURL() return value</h3>
 
-<p>The standard <code>FindProxyForURL()</code> <a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_%28PAC%29_file#Return_value_format">returns a string</a>. In Firefox 55 and 56, the PAC file used with the proxy API also returns a string. In Firefox 55 <em>only</em>, you must pass an argument to the "DIRECT" return value, even though it doesn't need an argument.</p>
+<p>The standard <code>FindProxyForURL()</code> <a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#return_value_format">returns a string</a>. In Firefox 55 and 56, the PAC file used with the proxy API also returns a string. In Firefox 55 <em>only</em>, you must pass an argument to the "DIRECT" return value, even though it doesn't need an argument.</p>
 
 <p>From Firefox 57 onwards, <code>FindProxyForURL()</code> may still return a string, but may alternatively (and preferably) return an array of {{WebExtAPIRef("proxy.ProxyInfo")}} objects.</p>
 
@@ -95,7 +95,7 @@ browser.runtime.onMessage.addListener((message) =&gt; {
 
 <h3 id="PAC_file_environment">PAC file environment</h3>
 
-<p>The global helper functions usually available for PAC files (<code><a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file#isPlainHostName()_2">isPlainHostName()</a></code>, <code><a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file#dnsDomainIs()">dnsDomainIs()</a></code>, and so on) are not available.</p>
+<p>The global helper functions usually available for PAC files (<code><a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#isplainhostname()_2">isPlainHostName()</a></code>, <code><a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#dnsdomainis()">dnsDomainIs()</a></code>, and so on) are not available.</p>
 
 <p>Code running in the PAC file does not get access to:</p>
 
@@ -124,7 +124,7 @@ browser.runtime.onMessage.addListener(handleMessage);</pre>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var registering = browser.proxy.register(
+<pre class="brush:js">var registering = browser.proxy.register(
   url   // string
 )
 </pre>

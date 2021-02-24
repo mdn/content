@@ -2,18 +2,22 @@
 title: 'RangeError: invalid array length'
 slug: Web/JavaScript/Reference/Errors/Invalid_array_length
 tags:
-  - Error
-  - Errors
-  - JavaScript
-  - RangeError
+- Error
+- Errors
+- JavaScript
+- RangeError
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<p>The JavaScript exception "Invalid array length" occurs when creating an {{jsxref("Array")}} or an {{jsxref("ArrayBuffer")}} which has a length which is either negative or larger or equal to 2<sup>32</sup>, or when setting the {{jsxref("Array.length")}} property to a value which is either negative or larger or equal to 2<sup>32</sup>.</p>
+<p>The JavaScript exception "Invalid array length" occurs when creating
+  an {{jsxref("Array")}} or an {{jsxref("ArrayBuffer")}} which has a length which is
+  either negative or larger or equal to 2<sup>32</sup>, or when setting the
+  {{jsxref("Array.length")}} property to a value which is either negative or larger or
+  equal to 2<sup>32</sup>.</p>
 
 <h2 id="Message">Message</h2>
 
-<pre class="syntaxbox">RangeError: Array length must be a finite positive integer (Edge)
+<pre class="brush: js">RangeError: Array length must be a finite positive integer (Edge)
 RangeError: invalid array length (Firefox)
 RangeError: Invalid array length (Chrome)
 RangeError: Invalid array buffer length (Chrome)
@@ -28,15 +32,23 @@ RangeError: Invalid array buffer length (Chrome)
 <p>An invalid array length might appear in these situations:</p>
 
 <ul>
- <li>When creating an {{jsxref("Array")}} or an {{jsxref("ArrayBuffer")}} which has a length which is either negative or larger or equal to 2<sup>32</sup>, or</li>
- <li>when setting the {{jsxref("Array.length")}} property to a value which is either negative or larger or equal to 2<sup>32</sup>.</li>
+  <li>When creating an {{jsxref("Array")}} or an {{jsxref("ArrayBuffer")}} which has a
+    length which is either negative or larger or equal to 2<sup>32</sup>, or</li>
+  <li>when setting the {{jsxref("Array.length")}} property to a value which is either
+    negative or larger or equal to 2<sup>32</sup>.</li>
 </ul>
 
-<p>Why are <code>Array</code> and <code>ArrayBuffer</code> length limited? The <code>length</code> property of an <code>Array</code> or an <code>ArrayBuffer</code> is represented with an unsigned 32-bit integer, that can only store values which are in the range from 0 to 2<sup>32</sup>-1.</p>
+<p>Why are <code>Array</code> and <code>ArrayBuffer</code> length limited? The
+  <code>length</code> property of an <code>Array</code> or an <code>ArrayBuffer</code> is
+  represented with an unsigned 32-bit integer, that can only store values which are in the
+  range from 0 to 2<sup>32</sup>-1.</p>
 
-<p>If you are creating an <code>Array</code>, using the constructor, you probably want to use the literal notation instead, as the first argument is interpreted as the length of the <code>Array</code>.</p>
+<p>If you are creating an <code>Array</code>, using the constructor, you probably want to
+  use the literal notation instead, as the first argument is interpreted as the length of
+  the <code>Array</code>.</p>
 
-<p>Otherwise, you might want to clamp the length before setting the length property, or using it as argument of the constructor.</p>
+<p>Otherwise, you might want to clamp the length before setting the length property, or
+  using it as argument of the constructor.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -74,7 +86,7 @@ b.length = Math.min(0xffffffff, b.length + 1);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("Array.length")}}</li>
- <li>{{jsxref("ArrayBuffer")}}</li>
+  <li>{{jsxref("Array")}}</li>
+  <li>{{jsxref("Array.length")}}</li>
+  <li>{{jsxref("ArrayBuffer")}}</li>
 </ul>

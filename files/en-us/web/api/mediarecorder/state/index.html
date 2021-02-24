@@ -2,46 +2,51 @@
 title: MediaRecorder.state
 slug: Web/API/MediaRecorder/state
 tags:
-  - API
-  - Media Recorder API
-  - MediaRecording
-  - Property
-  - Reference
-  - state
+- API
+- Media Recorder API
+- MediaRecording
+- Property
+- Reference
+- state
 ---
 <div>{{APIRef("MediaStream Recording")}}</div>
 
-<p>The <strong><code>MediaRecorder.state</code></strong> read-only property returns the current state of the current <code>MediaRecorder</code> object.</p>
+<p>The <strong><code>MediaRecorder.state</code></strong> read-only property returns the
+  current state of the current <code>MediaRecorder</code> object.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>state</em> = MediaRecorder.state</pre>
+<pre class="brush: js">var <em>state</em> = MediaRecorder.state</pre>
 
 <h3 id="Values">Values</h3>
 
-<p>A <a href="https://w3c.github.io/web-animations/#enumdef-animationplaystate">AnimationPlayState</a> object containing one of the following values:</p>
+<p>A <a
+    href="https://w3c.github.io/web-animations/#enumdef-animationplaystate">AnimationPlayState</a>
+  object containing one of the following values:</p>
 
 <table class="simple">
- <thead>
-  <tr>
-   <th scope="row">Enumeration</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row"><code id="idl-def-RecordingStateEnum.inactive">inactive</code></th>
-   <td>Recording is not occurring — it has either not been started yet, or it has been started and then stopped.</td>
-  </tr>
-  <tr>
-   <th scope="row"><code id="idl-def-RecordingStateEnum.recording">recording</code></th>
-   <td>Recording has been started and the UA is capturing data.</td>
-  </tr>
-  <tr>
-   <th scope="row"><code id="idl-def-RecordingStateEnum.paused">paused</code></th>
-   <td>Recording has been started, then paused, but not yet stopped or resumed.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="row">Enumeration</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><code id="idl-def-RecordingStateEnum.inactive">inactive</code></th>
+      <td>Recording is not occurring — it has either not been started yet, or it has been
+        started and then stopped.</td>
+    </tr>
+    <tr>
+      <th scope="row"><code id="idl-def-RecordingStateEnum.recording">recording</code>
+      </th>
+      <td>Recording has been started and the UA is capturing data.</td>
+    </tr>
+    <tr>
+      <th scope="row"><code id="idl-def-RecordingStateEnum.paused">paused</code></th>
+      <td>Recording has been started, then paused, but not yet stopped or resumed.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Example">Example</h2>
@@ -60,18 +65,19 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("MediaStream Recording", "#dom-mediarecorder-state", "MediaRecorder.state")}}</td>
-   <td>{{Spec2("MediaStream Recording")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("MediaStream Recording", "#dom-mediarecorder-state",
+        "MediaRecorder.state")}}</td>
+      <td>{{Spec2("MediaStream Recording")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -81,8 +87,13 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API">Using the MediaRecorder API</a></li>
- <li><a href="https://mdn.github.io/web-dictaphone/">Web Dictaphone</a>: MediaRecorder + getUserMedia + Web Audio API visualization demo, by <a href="https://twitter.com/chrisdavidmills">Chris Mills</a> (<a href="https://github.com/mdn/web-dictaphone/">source on Github</a>.)</li>
- <li><a href="http://simpl.info/mediarecorder/">simpl.info MediaStream Recording demo</a>, by <a href="https://twitter.com/sw12">Sam Dutton</a>.</li>
- <li>{{domxref("Navigator.getUserMedia")}}</li>
+  <li><a href="/en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API">Using
+      the MediaRecorder API</a></li>
+  <li><a href="https://mdn.github.io/web-dictaphone/">Web Dictaphone</a>: MediaRecorder +
+    getUserMedia + Web Audio API visualization demo, by <a
+      href="https://twitter.com/chrisdavidmills">Chris Mills</a> (<a
+      href="https://github.com/mdn/web-dictaphone/">source on Github</a>.)</li>
+  <li><a href="http://simpl.info/mediarecorder/">simpl.info MediaStream Recording
+      demo</a>, by <a href="https://twitter.com/sw12">Sam Dutton</a>.</li>
+  <li>{{domxref("Navigator.getUserMedia")}}</li>
 </ul>

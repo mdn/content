@@ -2,37 +2,45 @@
 title: BarcodeDetector()
 slug: Web/API/BarcodeDetector/BarcodeDetector
 tags:
-  - Barcode Detection API
-  - BarcodeDetector
-  - Constructor
-  - barcode
-  - barcode detection
-  - shape detection
+- Barcode Detection API
+- BarcodeDetector
+- Constructor
+- barcode
+- barcode detection
+- shape detection
 ---
 <div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}</div>
 
-<p class="summary">The <strong><code>BarcodeDetector()</code></strong> constructor creates a new {{domxref("BarcodeDetector")}} object which detects linear and two-dimensional barcodes in images.</p>
+<p class="summary">The <strong><code>BarcodeDetector()</code></strong> constructor creates
+  a new {{domxref("BarcodeDetector")}} object which detects linear and two-dimensional
+  barcodes in images.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>BarcodeDetector</var> = new BarcodeDetector();</pre>
+<pre
+  class="brush: js">var <var>BarcodeDetector</var> = new BarcodeDetector();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><em>barcodeDetectorOptions</em> {{optional_inline}}</dt>
- <dd>An options object containing a series of <code>BarcodeFormats</code> to search for in the subsequent {{domxref('BarcodeDetector.detect()','detect()')}} calls. The options are:
- <ul>
-  <li><code>formats</code>: An {{jsxref('Array')}} of barcode formats as strings. To see a full list of supported formats see the {{domxref('Barcode Detection API','Barcode Detection API overview page')}}.</li>
- </ul>
- </dd>
+  <dt><em>barcodeDetectorOptions</em> {{optional_inline}}</dt>
+  <dd>An options object containing a series of <code>BarcodeFormats</code> to search for
+    in the subsequent {{domxref('BarcodeDetector.detect()','detect()')}} calls. The
+    options are:
+    <ul>
+      <li><code>formats</code>: An {{jsxref('Array')}} of barcode formats as strings. To
+        see a full list of supported formats see the {{domxref('Barcode Detection
+        API','Barcode Detection API overview page')}}.</li>
+    </ul>
+  </dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>This example creates a new barcode detector object, with specified supported formats and tests for browser compatibility.</p>
+<p>This example creates a new barcode detector object, with specified supported formats
+  and tests for browser compatibility.</p>
 
-<pre class="brush: js notranslate">// create new detector
+<pre class="brush: js">// create new detector
 var barcodeDetector = new BarcodeDetector({formats: ['code_39', 'codabar', 'ean_13']});
 
 // check compatibility
@@ -45,18 +53,20 @@ if (barcodeDetector) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Shape Detection API','#dom-barcodedetector-barcodedetector','BarcodeDetector.BarcodeDetector()')}}</td>
-   <td>{{Spec2('Shape Detection API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Shape Detection
+        API','#dom-barcodedetector-barcodedetector','BarcodeDetector.BarcodeDetector()')}}
+      </td>
+      <td>{{Spec2('Shape Detection API')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

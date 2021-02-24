@@ -2,27 +2,32 @@
 title: RTCConfiguration.iceTransportPolicy
 slug: Web/API/RTCConfiguration/iceTransportPolicy
 tags:
-  - API
-  - ICE
-  - Policy
-  - Property
-  - RTCConfiguration
-  - Reference
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API\
-  - iceTransportPolicy
+- API
+- ICE
+- Policy
+- Property
+- RTCConfiguration
+- Reference
+- Transport
+- WebRTC
+- WebRTC API
+- WebRTC Device API\
+- iceTransportPolicy
 ---
 <p>{{DefaultAPISidebar("WebRTC API")}}</p>
 
-<p>The <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC Device API</a> dictionary {{domxref("RTCConfiguration")}}'s <code><strong>iceTransportPolicy</strong></code> property is a string indicating the transport selection policy the {{Glossary("ICE")}} agent should use during negotiation of connections. Its value must come from the {{domxref("RTCIceTransportPolicy")}} enumerated type.</p>
+<p>The <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC Device API</a> dictionary
+  {{domxref("RTCConfiguration")}}'s <code><strong>iceTransportPolicy</strong></code>
+  property is a string indicating the transport selection policy the {{Glossary("ICE")}}
+  agent should use during negotiation of connections. Its value must come from the
+  {{domxref("RTCIceTransportPolicy")}} enumerated type.</p>
 
-<p>If this property isn't included in the <code>RTCConfiguration</code>, the default value, <code>all</code>, is used.</p>
+<p>If this property isn't included in the <code>RTCConfiguration</code>, the default
+  value, <code>all</code>, is used.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">let <em>rtcConfiguration</em> = {
+<pre class="brush: js">let <em>rtcConfiguration</em> = {
   iceTransportPolicy: <em>policy</em>
 };
 
@@ -32,24 +37,37 @@ let <em>policy</em> = <em>rtcConfiguration</em>.iceTransportPolicy;
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("DOMString")}} which indicates what <a href="https://rtcweb-wg.github.io/jsep/#rfc.section.3.5.3">ICE candidate policy</a> the ICE agent should use during the negotiation process, per the <a href="https://rtcweb-wg.github.io/jsep/">JSEP standard</a>. The permitted values are:</p>
+<p>A {{domxref("DOMString")}} which indicates what <a
+    href="https://rtcweb-wg.github.io/jsep/#rfc.section.3.5.3">ICE candidate policy</a>
+  the ICE agent should use during the negotiation process, per the <a
+    href="https://rtcweb-wg.github.io/jsep/">JSEP standard</a>. The permitted values are:
+</p>
 
 <dl>
- <dt><code>all</code></dt>
- <dd>The ICE agent is permitted to use any kind of candidate, including both local and relay candidates. The agent—or the browser itself—may still perform some form of IP filtering on the incoming candidates for reasons including privacy and security, as well as to limit the number of candidates. <strong>This is the default.</strong></dd>
- <dt><code>relay</code></dt>
- <dd>
- <p>The ICE agent only considers media relay candidates when evaluating candidates. This includes, for example, those candidates relayed by a {{Glossary("STUN")}} or {{Glossary("TURN")}} server.</p>
+  <dt><code>all</code></dt>
+  <dd>The ICE agent is permitted to use any kind of candidate, including both local and
+    relay candidates. The agent—or the browser itself—may still perform some form of IP
+    filtering on the incoming candidates for reasons including privacy and security, as
+    well as to limit the number of candidates. <strong>This is the default.</strong></dd>
+  <dt><code>relay</code></dt>
+  <dd>
+    <p>The ICE agent only considers media relay candidates when evaluating candidates.
+      This includes, for example, those candidates relayed by a {{Glossary("STUN")}} or
+      {{Glossary("TURN")}} server.</p>
 
- <div class="note">This can be used to prevent the remote endpoint from receiving the user's IP addresses, which may be important in some security situations. For example, in a video calling application, the app may want to prevent unknown callers from learning the callee's IP addresses until the callee has agreed to receive the call.</div>
- </dd>
+    <div class="note">This can be used to prevent the remote endpoint from receiving the
+      user's IP addresses, which may be important in some security situations. For
+      example, in a video calling application, the app may want to prevent unknown callers
+      from learning the callee's IP addresses until the callee has agreed to receive the
+      call.</div>
+  </dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
 <p>In this example, a new connection is configured to only accept relay candidates.</p>
 
-<pre class="brush: js notranslate">let config = {
+<pre class="brush: js">let config = {
   iceServers: [
     {
       urls: [ "stun:stun.example.com" ]
@@ -63,23 +81,22 @@ let pc = new RTCPeerConnection(config);</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebRTC 1.0','#dom-rtcconfiguration-icetransportpolicy','RTCCandidate.iceTransportPolicy')}}</td>
-   <td>{{Spec2('WebRTC 1.0')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('WebRTC
+        1.0','#dom-rtcconfiguration-icetransportpolicy','RTCCandidate.iceTransportPolicy')}}
+      </td>
+      <td>{{Spec2('WebRTC 1.0')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.RTCConfiguration.iceTransportPolicy")}}</p>
-</div>

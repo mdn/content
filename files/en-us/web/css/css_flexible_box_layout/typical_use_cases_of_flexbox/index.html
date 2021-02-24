@@ -47,7 +47,7 @@ tags:
 
 <p>Another way to align items on the main axis is to use auto margins. This enables the design pattern of a navigation bar where one group of items are aligned left and another group aligned right.</p>
 
-<p>Here we are using the auto margins technique described in <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container#Using_auto_margins_for_main_axis_alignment">Using auto margins for main axis alignment</a>. The items are aligned on the main axis with <code>flex-start</code> as this is the initial behavior of flexbox, and we are aligning the item on the right by giving it a left margin of auto. You can move the class from one item to another to change where the split happens.</p>
+<p>Here we are using the auto margins technique described in <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container#using_auto_margins_for_main_axis_alignment">Using auto margins for main axis alignment</a>. The items are aligned on the main axis with <code>flex-start</code> as this is the initial behavior of flexbox, and we are aligning the item on the right by giving it a left margin of auto. You can move the class from one item to another to change where the split happens.</p>
 
 <p>Also in this example we are using margins on the flex items to create a gap between items, and a negative margin on the container in order that the items still remain flush with the right and left edges. Until the <code>gap</code> properties from the Box Alignment specification are implemented in flexbox, we have to use margins in this way if we want to create a gutter between items.</p>
 
@@ -67,7 +67,7 @@ tags:
 
 <p>Whether you use flexbox or CSS Grid to lay out a list of card components, these layout methods only work on direct children of the flex or grid component. This means that if you have variable amounts of content, the card will stretch to the height of the grid area or flex container. Any content inside uses regular block layout, meaning that on a card with less content the footer will rise up to the bottom of the content rather than stick to the bottom of the card.</p>
 
-<p><img alt="Two card components showing that the internals of the component do not stretch with the wrapper." src="https://mdn.mozillademos.org/files/15669/flex-cards.png" style="height: 626px; width: 964px;"></p>
+<p><img alt="Two card components showing that the internals of the component do not stretch with the wrapper." src="flex-cards.png"></p>
 
 <p>Flexbox can solve this. We make the card a flex container, with {{cssxref("flex-direction")}}<code>: column</code>. We then set the content area to <code>flex: 1</code>, which is the shorthand for <code>flex: 1 1 0</code> — the item can grow and shrink from a flex basis of <code>0</code>. As this is the only item that can grow, it takes up all available space in the flex container and pushes the footer to the bottom. If you remove the <code>flex</code> property from the live example you will see how the footer then moves up to sit directly under the content.</p>
 

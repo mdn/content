@@ -15,7 +15,7 @@ tags:
 <p>{{Previous("Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}</p>
 
 <div class="summary">
-<p>This is the <strong>16th step</strong> out of 16 of the <a href="/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson16.html">Gamedev-Phaser-Content-Kit/demos/lesson16.html</a>.</p>
+<p>This is the <strong>16th step</strong> out of 16 of the <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser">Gamedev Phaser tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson16.html">Gamedev-Phaser-Content-Kit/demos/lesson16.html</a>.</p>
 </div>
 
 <p><span class="seoSummary">Our game appears to be completed, but if you look close enough you'll notice that the ball is bouncing off the paddle at the same angle throughout the whole game. This means that every game is quite similar. To fix this and improve playability we should make the rebound angles more random, and in this article we'll look at how.</span></p>
@@ -24,7 +24,7 @@ tags:
 
 <p>We can change the ball's velocity depending on the exact spot it hits the paddle, by modifying the <code>x</code> velocity each time the <code>ballHitPaddle()</code> function is run using a line along the lines of the below. Add this new line to your code now, and try it out.</p>
 
-<pre class="brush: js notranslate">function ballHitPaddle(ball, paddle) {
+<pre class="brush: js">function ballHitPaddle(ball, paddle) {
     ball.animations.play('wobble');
     ball.body.velocity.x = -1*5*(paddle.x-ball.x);
 }</pre>
@@ -55,6 +55,6 @@ tags:
 
 <p>Be sure to check the ever growing list of <a href="http://examples.phaser.io/">examples</a> and the <a href="http://docs.phaser.io/">official documentation</a>, and visit the <a href="http://www.html5gamedevs.com/forum/14-phaser/">HTML5 Gamedevs forums</a> if you ever need any help.</p>
 
-<p>You could also go back to <a href="/en-US/docs/Games/Workflows/2D_breakout_game_Phaser">this tutorial series' index page</a>.</p>
+<p>You could also go back to <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser">this tutorial series' index page</a>.</p>
 
 <p>{{Previous("Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}</p>

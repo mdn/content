@@ -11,13 +11,20 @@ tags:
 ---
 <div>{{ APIRef("Web Audio API") }}</div>
 
-<p>The <code>normalize</code> property of the {{ domxref("ConvolverNode") }} interface is<span> a boolean that controls whether the impulse response from the buffer will be scaled by an equal-power normalization when the <code>buffer</code> attribute is set, or not.</span></p>
+<p>The <code>normalize</code> property of the {{ domxref("ConvolverNode") }} interface
+  is a boolean that controls whether the impulse response from the buffer will be
+    scaled by an equal-power normalization when the <code>buffer</code> attribute is set,
+    or not.</p>
 
-<p><span>Its default value is <code>true</code> in order to achieve a more uniform output level from the convolver, when loaded with diverse impulse responses. If normalize is set to <code>false</code>, then the convolution will be rendered with no pre-processing/scaling of the impulse response. Changes to this value do not take effect until the next time the <code>buffer</code> attribute is set.</span></p>
+<p>Its default value is <code>true</code> in order to achieve a more uniform output
+    level from the convolver, when loaded with diverse impulse responses. If normalize is
+    set to <code>false</code>, then the convolution will be rendered with no
+    pre-processing/scaling of the impulse response. Changes to this value do not take
+    effect until the next time the <code>buffer</code> attribute is set.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var audioCtx = new AudioContext();
+<pre class="brush: js">var audioCtx = new AudioContext();
 var convolver = audioCtx.createConvolver();
 convolver.normalize = false;
 </pre>
@@ -60,29 +67,27 @@ convolver.buffer = concertHallBuffer;</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-convolvernode-normalize', 'normalize')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web Audio API', '#dom-convolvernode-normalize', 'normalize')}}</td>
+      <td>{{Spec2('Web Audio API')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.ConvolverNode.normalize")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  </li>
 </ul>

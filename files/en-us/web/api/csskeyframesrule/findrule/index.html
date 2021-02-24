@@ -1,0 +1,79 @@
+---
+title: CSSKeyframesRule.findRule()
+slug: Web/API/CSSKeyframesRule/findRule
+tags:
+  - API
+  - CSSOM
+  - CSSKeyframesRule
+  - CSS Animations
+  - Method
+  - Reference
+---
+<div>{{APIRef("CSSOM") }}</div>
+
+<p class="summary">The <strong><code>findRule()</code></strong> method of the {{domxref("CSSKeyframeRule")}} interface finds the {{domxref("CSSKeyFrameRule")}} that matches the specified keyframe selector.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><var>CSSKeyframesRule</var>.findRule(<var>select</var>);</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt><code>select</code></dt>
+    <dd><p>A {{domxref("CSSOMString")}} which contains the keyframe selector of the rule to be found, which must be:</p>
+      <ul>
+        <li>a comma-separated list of percentage values between 0% and 100%;</li> 
+        <li>or, the keywords <code>from</code> or <code>to</code></li>
+      </ul>
+        
+      <p>Note that the number and order of the values in the specified keyframe selector must match those of the targeted keyframe rule(s). White-space is disregarded.</p>
+    </dd>
+</dl>
+
+<h3 id="value">Return value</h3>
+<p>A {{domxref("CSSKeyframeRule")}} which is the last matching rule. If no rules are found, nothing is returned.</p>
+
+<h2 id="Example">Example</h2>
+
+<p>
+    The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by <code>document.styleSheets[0].cssRules</code>. 
+    <code>myRules[0]</code> returns a {{domxref("CSSKeyframesRule")}} object. Calling findRule("to") returns a {{domxref("CSSKeyframeRule")}} representing the second rule.
+</p>
+
+<pre class="brush: css">@keyframes slidein {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}</pre>
+
+<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
+let keyframes = myRules[0]; // a CSSKeyframesRule 
+console.log(keyframes.findRule('to'));  // a CSSKeyframeRule object</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Animations', '#interface-csskeyframesrule-findrule', 'CSSKeyframesRule.findRule()')}}</td>
+   <td>{{Spec2('CSS3 Animations')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("api.CSSKeyframesRule.findRule")}}</p>

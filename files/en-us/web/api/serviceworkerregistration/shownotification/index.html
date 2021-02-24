@@ -2,58 +2,102 @@
 title: ServiceWorkerRegistration.showNotification()
 slug: Web/API/ServiceWorkerRegistration/showNotification
 tags:
-  - API
-  - Experimental
-  - Method
-  - NeedsExample
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - ServiceWorkerRegistration
-  - showNotification
+- API
+- Experimental
+- Method
+- NeedsExample
+- Reference
+- Service Workers
+- ServiceWorker
+- ServiceWorkerRegistration
+- showNotification
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
-<p>The <code>showNotification()</code> method of the {{domxref("ServiceWorkerRegistration")}} interface creates a notification on an active service worker.</p>
+<p>The <code>showNotification()</code> method of the
+  {{domxref("ServiceWorkerRegistration")}} interface creates a notification on an active
+  service worker.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This feature is available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
+  <p><strong>Note</strong>: This feature is available in <a
+      href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>serviceWorkerRegistration</em>.showNotification(<em>title</em>, [<em>options</em>]);</pre>
+<pre
+  class="brush: js"><em>serviceWorkerRegistration</em>.showNotification(<em>title</em>, [<em>options</em>]);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>title</code></dt>
- <dd>The title that must be shown within the notification</dd>
- <dt><code>options</code> {{optional_inline}}</dt>
- <dd>An object that allows configuring the notification. It can have the following properties:
- <ul>
-  <li><code>actions</code>: An array of actions to display in the notification. The members of the array should be an object literal. It may contain the following values:
-   <ul>
-    <li>action: A {{domxref("DOMString")}} identifying a user action to be displayed on the notification.</li>
-    <li>title: A {{domxref("DOMString")}} containing action text to be shown to the user.</li>
-    <li>icon: A {{domxref("USVString")}} containing the URL of an icon to display with the action.</li>
-   </ul>
-   Appropriate responses are built using <code>event.action</code> within the {{event("notificationclick")}} event.</li>
-  <li><code>badge</code>: a {{domxref("USVString")}} containing the URL of an image to represent the notification when there is not enough space to display the notification itself such as for example, the Android Notification Bar. On Android devices, the badge should accommodate devices up to 4x resolution, about 96 by 96 px, and the image will be automatically masked.</li>
-  <li><code>body</code>: A string representing an extra content to display within the notification.</li>
-  <li><code>data</code>: Arbitrary data that you want to be associated with the notification. This can be of any data type.</li>
-  <li><code>dir</code> : The direction of the notification; it can be <code>auto</code>,  <code>ltr</code> or <code>rtl</code></li>
-  <li><code>icon</code>: a {{domxref("USVString")}} containing the URL of an image to be used as an icon by the notification.</li>
-  <li><code>image</code>: a {{domxref("USVString")}} containing the URL of an image to be displayed in the notification.</li>
-  <li><code>lang</code>: Specify the lang used within the notification. This string must be a valid <a href="https://tools.ietf.org/html/bcp47">BCP 47 language tag</a>.</li>
-  <li><code>renotify</code>: A boolean that indicates whether to suppress vibrations and audible alerts when reusing a <code>tag</code> value. If <var>options</var>’s <code>renotify</code> is true and <var>options</var>’s <code>tag</code> is the empty string a TypeError will be thrown. The default is <code>false</code>.</li>
-  <li><code>requireInteraction</code>: Indicates that on devices with sufficiently large screens, a notification should remain active until the user clicks or dismisses it. If this value is absent or false, the desktop version of Chrome will auto-minimize notifications after approximately twenty seconds. The default value is <code>false</code>.</li>
-  <li><code>silent</code>: When set indicates that no sounds or vibrations should be made. If <var>options</var>’s <code>silent</code> is true and <var>options</var>’s <code>vibrate</code> is present a TypeError exception will be thrown. The default value is <code>false</code>.</li>
-  <li><code>tag</code>: An ID for a given notification that allows you to find, replace, or remove the notification using a script if necessary. </li>
-  <li><code>timestamp</code>: A {{domxref("DOMTimeStamp")}} representing the time when the notification was created. It can be used to indicate the time at which a notification is actual. For example, this could be in the past when a notification is used for a message that couldn’t immediately be delivered because the device was offline, or in the future for a meeting that is about to start.</li>
-  <li><code>vibrate</code>: A vibration pattern to run with the display of the notification. A vibration pattern can be an array with as few as one member. The values are times in milliseconds where the even indices (0, 2, 4, etc.) indicate how long to vibrate and the odd indices indicate how long to pause. For example, <code>[300, 100, 400]</code> would vibrate 300ms, pause 100ms, then vibrate 400ms.</li>
- </ul>
- </dd>
+  <dt><code>title</code></dt>
+  <dd>The title that must be shown within the notification</dd>
+  <dt><code>options</code> {{optional_inline}}</dt>
+  <dd>An object that allows configuring the notification. It can have the following
+    properties:
+    <ul>
+      <li><code>actions</code>: An array of actions to display in the notification. The
+        members of the array should be an object literal. It may contain the following
+        values:
+        <ul>
+          <li>action: A {{domxref("DOMString")}} identifying a user action to be displayed
+            on the notification.</li>
+          <li>title: A {{domxref("DOMString")}} containing action text to be shown to the
+            user.</li>
+          <li>icon: A {{domxref("USVString")}} containing the URL of an icon to display
+            with the action.</li>
+        </ul>
+        Appropriate responses are built using <code>event.action</code> within the
+        {{event("notificationclick")}} event.
+      </li>
+      <li><code>badge</code>: a {{domxref("USVString")}} containing the URL of an image
+        to represent the notification when there is not enough space to display the
+        notification itself such as for example, the Android Notification Bar. On Android
+        devices, the badge should accommodate devices up to 4x resolution, about 96 by 96
+        px, and the image will be automatically masked.</li>
+      <li><code>body</code>: A string representing an extra content to display within the
+        notification.</li>
+      <li><code>data</code>: Arbitrary data that you want to be associated with the
+        notification. This can be of any data type.</li>
+      <li><code>dir</code> : The direction of the notification; it can
+        be <code>auto</code>,  <code>ltr</code> or <code>rtl</code></li>
+      <li><code>icon</code>: a {{domxref("USVString")}} containing the URL of an image to
+        be used as an icon by the notification.</li>
+      <li><code>image</code>: a {{domxref("USVString")}} containing the URL of an image to
+        be displayed in the notification.</li>
+      <li><code>lang</code>: Specify the lang used within the notification. This string
+        must be a valid <a href="https://tools.ietf.org/html/bcp47">BCP 47 language
+          tag</a>.</li>
+      <li><code>renotify</code>: A boolean that indicates whether to suppress vibrations
+        and audible alerts when reusing a <code>tag</code> value.
+        If <var>options</var>’s <code>renotify</code> is true
+        and <var>options</var>’s <code>tag</code> is the empty string a TypeError will be
+        thrown. The default is <code>false</code>.</li>
+      <li><code>requireInteraction</code>: Indicates that on devices with sufficiently
+        large screens, a notification should remain active until the user clicks or
+        dismisses it. If this value is absent or false, the desktop version of Chrome will
+        auto-minimize notifications after approximately twenty seconds. The default value
+        is <code>false</code>.</li>
+      <li><code>silent</code>: When set indicates that no sounds or vibrations should be
+        made. If <var>options</var>’s <code>silent</code> is true
+        and <var>options</var>’s <code>vibrate</code> is present a TypeError exception
+        will be thrown. The default value is <code>false</code>.</li>
+      <li><code>tag</code>: An ID for a given notification that allows you to find,
+        replace, or remove the notification using a script if necessary. </li>
+      <li><code>timestamp</code>: A {{domxref("DOMTimeStamp")}} representing the time when
+        the notification was created. It can be used to indicate the time at which a
+        notification is actual. For example, this could be in the past when a notification
+        is used for a message that couldn’t immediately be delivered because the device
+        was offline, or in the future for a meeting that is about to start.</li>
+      <li><code>vibrate</code>: A vibration pattern to run with the display of the
+        notification. A vibration pattern can be an array with as few as one member. The
+        values are times in milliseconds where the even indices (0, 2, 4, etc.) indicate
+        how long to vibrate and the odd indices indicate how long to pause. For
+        example, <code>[300, 100, 400]</code> would vibrate 300ms, pause 100ms, then
+        vibrate 400ms.</li>
+    </ul>
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -79,25 +123,30 @@ function showNotification() {
   });
 }</pre>
 
-<p>To invoke the above function at an appropriate time, you could use the {{domxref("ServiceWorkerGlobalScope.onnotificationclick")}} event handler.</p>
+<p>To invoke the above function at an appropriate time, you could use the
+  {{domxref("ServiceWorkerGlobalScope.onnotificationclick")}} event handler.</p>
 
-<p>You can also retrieve details of the {{domxref("Notification")}}s that have been fired from the current service worker using {{domxref("ServiceWorkerRegistration.getNotifications()")}}.</p>
+<p>You can also retrieve details of the {{domxref("Notification")}}s that have been fired
+  from the current service worker using
+  {{domxref("ServiceWorkerRegistration.getNotifications()")}}.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications','#dom-serviceworkerregistration-shownotification','showNotification()')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web
+        Notifications','#dom-serviceworkerregistration-shownotification','showNotification()')}}
+      </td>
+      <td>{{Spec2('Web Notifications')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

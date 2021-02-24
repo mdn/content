@@ -2,29 +2,34 @@
 title: MediaQueryList.removeListener()
 slug: Web/API/MediaQueryList/removeListener
 tags:
-  - API
-  - CSSOM View
-  - Media Queries
-  - MediaQueryList
-  - Method
-  - Reference
-  - removeListener
+- API
+- CSSOM View
+- Media Queries
+- MediaQueryList
+- Method
+- Reference
+- removeListener
 ---
 <p>{{APIRef("CSSOM")}}</p>
 
-<p>The <code><strong>removeListener()</strong></code> method of the {{DOMxRef("MediaQueryList")}} interface removes a listener from the <code>MediaQueryListener</code>.</p>
+<p>The <code><strong>removeListener()</strong></code> method of the
+  {{DOMxRef("MediaQueryList")}} interface removes a listener from the
+  <code>MediaQueryListener</code>.</p>
 
-<p>This is basically an alias of {{DOMxRef("EventTarget.removeEventListener()")}}, for backwards compatibility purposes — in older browsers you could use <code>removeEventListener()</code> instead.</p>
+<p>This is basically an alias of {{DOMxRef("EventTarget.removeEventListener()")}}, for
+  backwards compatibility purposes — in older browsers you could use
+  <code>removeEventListener()</code> instead.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><em>MediaQueryList.removeListener(func)</em></pre>
+<pre class="brush: js"><em>MediaQueryList.removeListener(func)</em></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>func</dt>
- <dd>A function or function reference representing the callback function you want to remove.</dd>
+  <dt>func</dt>
+  <dd>A function or function reference representing the callback function you want to
+    remove.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -33,7 +38,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">var paragraph = document.querySelector('p');
+<pre class="brush: js">var paragraph = document.querySelector('p');
 var mediaQueryList = window.matchMedia('(max-width: 600px)');
 
 function screenTest(e) {
@@ -56,18 +61,19 @@ mediaQueryList.removeListener(screenTest);</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSSOM View", "#dom-mediaquerylist-removelistener", "removeListener")}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Specification</th>
+      <th>Status</th>
+      <th>Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("CSSOM View", "#dom-mediaquerylist-removelistener",
+        "removeListener")}}</td>
+      <td>{{Spec2("CSSOM View")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -77,9 +83,10 @@ mediaQueryList.removeListener(screenTest);</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/CSS/Media_queries">Media queries</a></li>
- <li><a href="/en-US/docs/CSS/Using_media_queries_from_code">Using media queries from code</a></li>
- <li>{{DOMxRef("window.matchMedia()")}}</li>
- <li>{{DOMxRef("MediaQueryList")}}</li>
- <li>{{DOMxRef("MediaQueryListEvent")}}</li>
+  <li><a href="/en-US/docs/CSS/Media_queries">Media queries</a></li>
+  <li><a href="/en-US/docs/CSS/Using_media_queries_from_code">Using media queries from
+      code</a></li>
+  <li>{{DOMxRef("window.matchMedia()")}}</li>
+  <li>{{DOMxRef("MediaQueryList")}}</li>
+  <li>{{DOMxRef("MediaQueryListEvent")}}</li>
 </ul>

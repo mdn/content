@@ -2,25 +2,31 @@
 title: PushSubscription.endpoint
 slug: Web/API/PushSubscription/endpoint
 tags:
-  - API
-  - Experimental
-  - Property
-  - Push
-  - Push API
-  - PushSubscription
-  - Reference
-  - Service Workers
-  - endPoint
+- API
+- Experimental
+- Property
+- Push
+- Push API
+- PushSubscription
+- Reference
+- Service Workers
+- endPoint
 ---
 <p>{{SeeCompatTable}}{{APIRef("Push API")}}</p>
 
-<p>The <code><strong>endpoint</strong></code> read-only property of the {{domxref("PushSubscription")}} interface returns a {{domxref("USVString")}} containing the endpoint associated with the push subscription.</p>
+<p>The <code><strong>endpoint</strong></code> read-only property of the
+  {{domxref("PushSubscription")}} interface returns a {{domxref("USVString")}} containing
+  the endpoint associated with the push subscription.</p>
 
-<p>The endpoint takes the form of a custom URL pointing to a push server, which can be used to send a push message to the particular service worker instance that subscribed to the push service. For this reason, it is a good idea to keep your endpoint a secret, so others do not hijack it and abuse the push functionality.</p>
+<p>The endpoint takes the form of a custom URL pointing to a push server, which can be
+  used to send a push message to the particular service worker instance that subscribed to
+  the push service. For this reason, it is a good idea to keep your endpoint a secret, so
+  others do not hijack it and abuse the push functionality.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>myEnd</em> = <em>pushSubscription</em>.endpoint;</pre>
+<pre
+  class="brush: js">var <em>myEnd</em> = <em>pushSubscription</em>.endpoint;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -42,23 +48,20 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Push API','#dom-pushsubscription-endpoint','endPoint')}}</td>
-   <td>{{Spec2('Push API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Push API','#dom-pushsubscription-endpoint','endPoint')}}</td>
+      <td>{{Spec2('Push API')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.PushSubscription.endpoint")}}</p>
-</div>

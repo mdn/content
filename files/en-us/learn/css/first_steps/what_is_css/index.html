@@ -31,7 +31,7 @@ tags:
 
 <p>In the <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a> module we covered what HTML is, and how it is used to mark up documents. These documents will be readable in a web browser. Headings will look larger than regular text, paragraphs break onto a new line and have space between them. Links are colored and underlined to distinguish them from the rest of the text. What you are seeing is the browser's default styles — very basic styles that the browser applies to HTML to make sure it will be basically readable even if no explicit styling is specified by the author of the page.</p>
 
-<p><img alt="The default styles used by a browser" src="https://mdn.mozillademos.org/files/16493/html-example.png"></p>
+<p><img alt="The default styles used by a browser" src="html-example.png"></p>
 
 <p>However, the web would be a boring place if all websites looked like that. Using CSS you can control exactly how HTML elements look in the browser, presenting your markup using whatever design you like.</p>
 
@@ -59,7 +59,7 @@ tags:
 
 <p>The following code shows a very simple CSS rule that would achieve the styling described above:</p>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
     color: red;
     font-size: 5em;
 }</pre>
@@ -68,11 +68,11 @@ tags:
 
 <p>We then have a set of curly braces <code>{ }</code>. Inside those will be one or more <strong>declarations</strong>, which take the form of <strong>property</strong> and <strong>value</strong> pairs. Each pair specifies a property of the element(s) we are selecting, then a value that we'd like to give the property.</p>
 
-<p>Before the colon, we have the property, and after the colon, the value. CSS {{Glossary("property/CSS","properties")}} have different allowable values, depending on which property is being specified. In our example, we have the <code>color</code> property, which can take various <a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#Color">color values</a>. We also have the <code>font-size</code> property. This property can take various <a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#Numbers_lengths_and_percentages">size units</a> as a value.</p>
+<p>Before the colon, we have the property, and after the colon, the value. CSS {{Glossary("property/CSS","properties")}} have different allowable values, depending on which property is being specified. In our example, we have the <code>color</code> property, which can take various <a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#color">color values</a>. We also have the <code>font-size</code> property. This property can take various <a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numbers_lengths_and_percentages">size units</a> as a value.</p>
 
 <p>A CSS stylesheet will contain many such rules, written one after the other.</p>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
     color: red;
     font-size: 5em;
 }
@@ -84,7 +84,7 @@ p {
 <p>You will find that you quickly learn some values, whereas others you will need to look up. The individual property pages on MDN give you a quick way to look up properties and their values when you forget, or want to know what else you can use as a value.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You can find links to all the CSS property pages (along with other CSS features) listed on the MDN <a href="/en-US/docs/Web/CSS/Reference">CSS reference</a>. Alternatively, you should get used to searching for "mdn <em>css-feature-name</em>" in your favourite search engine whenever you need to find out more information about a CSS feature. For example, try searching for "mdn color" and "mdn font-size"!</p>
+<p><strong>Note</strong>: You can find links to all the CSS property pages (along with other CSS features) listed on the MDN <a href="/en-US/docs/Web/CSS/Reference">CSS reference</a>. Alternatively, you should get used to searching for "mdn <em>css-feature-name</em>" in your favorite search engine whenever you need to find out more information about a CSS feature. For example, try searching for "mdn color" and "mdn font-size"!</p>
 </div>
 
 <h2 id="CSS_Modules">CSS Modules</h2>

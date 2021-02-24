@@ -2,36 +2,44 @@
 title: PaymentResponse.onpayerdetailchange
 slug: Web/API/PaymentResponse/onpayerdetailchange
 tags:
-  - API
-  - Event Handler
-  - Payer
-  - Payer Details
-  - Payment Request
-  - Payment Request API
-  - PaymentResponse
-  - Property
-  - Reference
-  - Web
-  - onpayerdetailchange
-  - payment
-  - validate
+- API
+- Event Handler
+- Payer
+- Payer Details
+- Payment Request
+- Payment Request API
+- PaymentResponse
+- Property
+- Reference
+- Web
+- onpayerdetailchange
+- payment
+- validate
 ---
 <div>{{securecontext_header}}{{APIRef("Payment Request API")}}</div>
 
-<p><span class="seoSummary">The {{domxref("PaymentResponse")}} object's <code><strong>onpayerdetailchange</strong></code> property is an event handler which is called to handle the {{event("payerdetailchange")}} event, which is sent to the <code>PaymentResponse</code> when the user makes changes to their personal information while filling out a payment request form.</span></p>
+<p><span class="seoSummary">The {{domxref("PaymentResponse")}} object's
+    <code><strong>onpayerdetailchange</strong></code> property is an event handler which
+    is called to handle the {{event("payerdetailchange")}} event, which is sent to the
+    <code>PaymentResponse</code> when the user makes changes to their personal information
+    while filling out a payment request form.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>paymentResponse</em>.onpayerdetailchange = <em>eventHandlerFunction</em>;
+<pre class="brush: js"><em>paymentResponse</em>.onpayerdetailchange = <em>eventHandlerFunction</em>;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>An event handler function which is called to handle the {{event("payerdetailchange")}} event when the user makes changes to their personal information while editing a payment request form.</p>
+<p>An event handler function which is called to handle the {{event("payerdetailchange")}}
+  event when the user makes changes to their personal information while editing a payment
+  request form.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>In the example below, <code>onpayerdetailchange</code> is used to set up a listener for the {{event("payerdetailchange")}} event in order to validate the information entered by the user, requesting that any mistakes be corrected</p>
+<p>In the example below, <code>onpayerdetailchange</code> is used to set up a listener for
+  the {{event("payerdetailchange")}} event in order to validate the information entered by
+  the user, requesting that any mistakes be corrected</p>
 
 <pre class="brush:JS">// Options for PaymentRequest(), indicating that shipping address,
 // payer email address, name, and phone number all be collected.
@@ -106,23 +114,21 @@ await response.retry({
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Payment', '#dom-paymentresponse-onpayerdetailchange', 'onpayerdetailchange')}}</td>
-   <td>{{Spec2('Payment')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Payment', '#dom-paymentresponse-onpayerdetailchange',
+        'onpayerdetailchange')}}</td>
+      <td>{{Spec2('Payment')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.PaymentResponse.onpayerdetailchange")}}</p>
-</div>

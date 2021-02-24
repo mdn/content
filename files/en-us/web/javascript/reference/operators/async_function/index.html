@@ -2,21 +2,25 @@
 title: async function expression
 slug: Web/JavaScript/Reference/Operators/async_function
 tags:
-  - Function
-  - JavaScript
-  - Language feature
-  - Operator
-  - Primary Expression
+- Function
+- JavaScript
+- Language feature
+- Operator
+- Primary Expression
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p>The <strong><code>async function</code></strong> keyword can be used to define <code>async</code> functions inside expressions.</p>
+<p>The <strong><code>async function</code></strong> keyword can be used to define
+  <code>async</code> functions inside expressions.</p>
 
-<p>You can also define async functions using an <a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function" title="The async function keyword can be used to define async functions inside expressions.">async function statement</a>.</p>
+<p>You can also define async functions using an <a
+    href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function"
+    title="The async function keyword can be used to define async functions inside expressions.">async
+    function statement</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">async function [<var>name</var>]([<var>param1</var>[, <var>param2</var>[, ..., <var>paramN</var>]]]) {
+<pre class="brush: js">async function [<var>name</var>]([<var>param1</var>[, <var>param2</var>[, ..., <var>paramN</var>]]]) {
    <var>statements</var>
 }</pre>
 
@@ -25,12 +29,13 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>name</var></code></dt>
- <dd>The function name. Can be omitted, in which case the function is <em>anonymous</em>. The name is only local to the function body.</dd>
- <dt><code><var>paramN</var></code></dt>
- <dd>The name of an argument to be passed to the function.</dd>
- <dt><code><var>statements</var></code></dt>
- <dd>The statements which comprise the body of the function.</dd>
+  <dt><code><var>name</var></code></dt>
+  <dd>The function name. Can be omitted, in which case the function is <em>anonymous</em>.
+    The name is only local to the function body.</dd>
+  <dt><code><var>paramN</var></code></dt>
+  <dd>The name of an argument to be passed to the function.</dd>
+  <dt><code><var>statements</var></code></dt>
+  <dd>The statements which comprise the body of the function.</dd>
 </dl>
 
 <h2 id="Description">Description</h2>
@@ -71,29 +76,27 @@ add(10).then(v =&gt; {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("javascript.operators.async_function_expression")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Statements/async_function", "async function")}}</li>
- <li>{{jsxref("AsyncFunction")}} object</li>
- <li>{{jsxref("Operators/await", "await")}}</li>
+  <li>{{jsxref("Statements/async_function", "async function")}}</li>
+  <li>{{jsxref("AsyncFunction")}} object</li>
+  <li>{{jsxref("Operators/await", "await")}}</li>
 </ul>

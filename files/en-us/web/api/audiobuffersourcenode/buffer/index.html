@@ -2,35 +2,43 @@
 title: AudioBufferSourceNode.buffer
 slug: Web/API/AudioBufferSourceNode/buffer
 tags:
-  - API
-  - Audio
-  - AudioBufferSourceNode
-  - Buffer
-  - Media
-  - Property
-  - Reference
-  - Web Audio API
-  - sound
+- API
+- Audio
+- AudioBufferSourceNode
+- Buffer
+- Media
+- Property
+- Reference
+- Web Audio API
+- sound
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<p>The <code><strong>buffer</strong></code> property of the {{ domxref("AudioBufferSourceNode") }} interface provides the ability to play back audio using an {{domxref("AudioBuffer")}} as the source of the sound data.</p>
+<p>The <code><strong>buffer</strong></code> property of the {{
+  domxref("AudioBufferSourceNode") }} interface provides the ability to play back audio
+  using an {{domxref("AudioBuffer")}} as the source of the sound data.</p>
 
-<p>If the <code>buffer</code> property is set to the value <code>null</code>, the node generates a single channel containing silence (that is, every sample is 0).</p>
+<p>If the <code>buffer</code> property is set to the value <code>null</code>, the node
+  generates a single channel containing silence (that is, every sample is 0).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>AudioBufferSourceNode</em>.buffer = <em>soundBuffer</em>;
+<pre class="brush: js"><em>AudioBufferSourceNode</em>.buffer = <em>soundBuffer</em>;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>An {{domxref("AudioBuffer")}} which contains the data representing the sound which the node will play.</p>
+<p>An {{domxref("AudioBuffer")}} which contains the data representing the sound which the
+  node will play.</p>
 
 <h2 id="Example">Example</h2>
 
 <div class="note">
-<p>For a full working example, see<a class="external external-icon" href="https://mdn.github.io/webaudio-examples/audio-buffer/"> this code running live</a>, or <a class="external external-icon" href="https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html">view the source</a>.</p>
+  <p>For a full working example, see<a class="external external-icon"
+      href="https://mdn.github.io/webaudio-examples/audio-buffer/"> this code running
+      live</a>, or <a class="external external-icon"
+      href="https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html">view
+      the source</a>.</p>
 </div>
 
 <pre class="brush: js;highlight[19]">var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
@@ -57,28 +65,26 @@ button.onclick = function() {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Web Audio API", "#dom-audiobuffersourcenode-buffer", "buffer")}}</td>
-   <td>{{Spec2("Web Audio API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("Web Audio API", "#dom-audiobuffersourcenode-buffer", "buffer")}}
+      </td>
+      <td>{{Spec2("Web Audio API")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.AudioBufferSourceNode.buffer")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

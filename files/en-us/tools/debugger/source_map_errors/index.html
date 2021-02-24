@@ -21,7 +21,7 @@ tags:
 
 <p>If you do see a problem, a message will appear in the webconsole. This message will show an error message, the resource URL, and the source map URL:</p>
 
-<p><img alt="Error from invalid JSON" src="https://mdn.mozillademos.org/files/15423/invalid-json.png" style="border-style: solid; border-width: 1px; display: block; height: 57px; margin: 0px auto; width: 744px;"></p>
+<p><img alt="Error from invalid JSON" src="invalid-json.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>Here, the resource URL tells us that <code>bundle.js</code> mentions a source map, and the source map URL tells us where to find the source map data (in this case, relative to the resource).  The error tells us that the source map is not JSON data — so we're serving the wrong file.</p>
 
@@ -31,7 +31,7 @@ tags:
 
 <p>The source map resource can be missing or inaccessible.</p>
 
-<p><img alt="Source map file is missing" src="https://mdn.mozillademos.org/files/15429/missing-map.png" style="border-style: solid; border-width: 1px; display: block; height: 42px; margin: 0px auto; width: 733px;"></p>
+<p><img alt="Source map file is missing" src="missing-map.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>The fix here is to make sure the file is being served and is accessible to the browser</p>
 
@@ -44,17 +44,17 @@ tags:
  <li><code>Error: "version" is a required argument</code></li>
 </ul>
 
-<p><img alt='Error: "version" is a required argument' src="https://mdn.mozillademos.org/files/15425/missing-field.png" style="border-style: solid; border-width: 1px; display: block; height: 45px; margin: 0px auto; width: 743px;"></p>
+<p><img alt='Error: "version" is a required argument' src="missing-field.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h2 id="Original_source_missing">Original source missing</h2>
 
 <p>An original source may be missing.  You may encounter this when trying to open one of the original sources in the debugger. The message looks a little different in this case:</p>
 
-<p><img alt="Debugger source tab showing the error" src="https://mdn.mozillademos.org/files/15421/Screenshot%20from%202017-09-15%2014-32-02.png" style="border-style: solid; border-width: 1px; display: block; height: 35px; margin: 0px auto; width: 727px;"></p>
+<p><img alt="Debugger source tab showing the error" src="screenshot_from_2017-09-15_14-32-02.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>In this case, the error will also be displayed in the source tab in the debugger:</p>
 
-<p><img alt="Debugger source tab showing the error" src="https://mdn.mozillademos.org/files/15427/debugger-tab.png" style="border-style: solid; border-width: 1px; display: block; height: 109px; margin: 0px auto; width: 616px;"></p>
+<p><img alt="Debugger source tab showing the error" src="debugger-tab.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h2 id="NetworkError_when_attempting_to_fetch_resource">NetworkError when attempting to fetch resource</h2>
 
@@ -62,7 +62,7 @@ tags:
 
 <p>See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1437937">Bug 1437937: WebExtensions Doesn't Find Source Maps</a> for details.</p>
 
-<pre class="syntaxbox"><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">Source-Map-Fehler: TypeError: NetworkError when attempting to fetch resource.
+<pre class="brush: html"><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">Source-Map-Fehler: TypeError: NetworkError when attempting to fetch resource.
  Ressourcen-Adresse: moz-extension://c7f0f003-4fcf-49fd-8ec0-c49361266581/background.js
  Source-Map-Adresse: background.js.map</span></span></span></pre>
 

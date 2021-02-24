@@ -49,7 +49,7 @@ tags:
 
 <p>On the other hand, it is not OK for a site to work fine for sighted users, but be completely inaccessible for visually impaired users because their screen reader application can't read any of the information stored on it.</p>
 
-<p>Second, when we say "across an acceptable number of web browsers", we don't mean 100% of the browsers in the world — this is just about impossible. You can make some informed calls as to what browsers and devices your users will be using (as we'll discuss in the second article in the series — see <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all">Gotta test 'em all?</a>), but you can't guarantee everything. As a web developer, you need to agree on a range of browsers and devices that the code definitely needs to work on with the site owner, but beyond that, you need to code defensively to give other browsers the best chance possible of being able to use your content. This is one of the great challenges of web development.</p>
+<p>Second, when we say "across an acceptable number of web browsers", we don't mean 100% of the browsers in the world — this is just about impossible. You can make some informed calls as to what browsers and devices your users will be using (as we'll discuss in the second article in the series — see <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#gotta_test_%27em_all">Gotta test 'em all?</a>), but you can't guarantee everything. As a web developer, you need to agree on a range of browsers and devices that the code definitely needs to work on with the site owner, but beyond that, you need to code defensively to give other browsers the best chance possible of being able to use your content. This is one of the great challenges of web development.</p>
 
 <div class="note">
 <p><strong>Note</strong>: We'll cover defensive coding later in the module too.</p>
@@ -57,7 +57,7 @@ tags:
 
 <h2 id="Why_do_cross_browser_issues_occur">Why do cross browser issues occur?</h2>
 
-<p>There are many different reasons why cross browser issues occur, and note that here we are talking about issues where things behave different across different browsers / devices / browsing preferences. Before you even get to cross browser issues, you should have already fixed out bugs in your code (see <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">Debugging HTML</a>, <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS">Debugging CSS</a>, and <a href="/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong">What went wrong? Troubleshooting JavaScript</a> from previous topics to refresh your memory if needed).</p>
+<p>There are many different reasons why cross browser issues occur, and note that here we are talking about issues where things behave different across different browsers / devices / browsing preferences. Before you even get to cross browser issues, you should have already fixed out bugs in your code (see <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">Debugging HTML</a>, <a href="/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS">Debugging CSS</a>, and <a href="/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong">What went wrong? Troubleshooting JavaScript</a> from previous topics to refresh your memory if needed).</p>
 
 <p>Cross browser issues commonly occur because:</p>
 
@@ -96,7 +96,7 @@ tags:
 <p>You should compile a list of the potential problem areas.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can find browser support information for technologies by looking up the different features on MDN — the site you're on! You should also consult <a href="http://caniuse.com/">caniuse.com</a>, for some further useful details.</p>
+<p><strong>Note</strong>: You can find browser support information for technologies by looking up the different features on MDN — the site you're on! You should also consult <a href="https://caniuse.com/">caniuse.com</a>, for some further useful details.</p>
 </div>
 
 <p>Once you've agreed on these details, you can go ahead and start developing the site.</p>
@@ -127,7 +127,7 @@ tags:
 
 <p>At this point, fix any problems you find with your new code.</p>
 
-<p>Next, you should try expanding your list of test browsers to a full list of target audience browsers and start concentrating on weeding out cross browser issues (see the next article for more information on <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all">determining your target browsers</a>). For example:</p>
+<p>Next, you should try expanding your list of test browsers to a full list of target audience browsers and start concentrating on weeding out cross browser issues (see the next article for more information on <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#gotta_test_%27em_all">determining your target browsers</a>). For example:</p>
 
 <ul>
  <li>Try to test the latest change on all the modern desktop browsers you can — including Firefox, Chrome, Opera, IE, Edge, and Safari on desktop (Mac, Windows, and Linux, ideally).</li>
@@ -172,7 +172,7 @@ tags:
 
 <p>It might not be your fault — if a bug exists in a browser, then hopefully the vendor will rapidly fix it. It might have already been fixed — for example if a bug is present in Firefox release 49, but it is no longer there in Firefox Nightly (version 52), then they have fixed it. If it is not fixed, then you may want to file a bug (see {{anch("Reporting bugs")}}, below).</p>
 
-<p>If it is your fault, you need to fix it! Finding out the cause of the bug involves the same strategy as any web development bug (again, see <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">Debugging HTML</a>, <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS">Debugging CSS</a>, and <a href="/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong">What went wrong? Troubleshooting JavaScript</a>). Once you've discovered what is causing your bug, you need to decide how to work around it in the particular browser it is causing problems in — you can't just change the problem code outright, as this may break the code in other browsers. The general approach is usually to fork the code in some way, for example use JavaScript feature detection code to detect situations in which a problem feature doesn't work, and run some different code in those cases that does work.</p>
+<p>If it is your fault, you need to fix it! Finding out the cause of the bug involves the same strategy as any web development bug (again, see <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">Debugging HTML</a>, <a href="/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS">Debugging CSS</a>, and <a href="/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong">What went wrong? Troubleshooting JavaScript</a>). Once you've discovered what is causing your bug, you need to decide how to work around it in the particular browser it is causing problems in — you can't just change the problem code outright, as this may break the code in other browsers. The general approach is usually to fork the code in some way, for example use JavaScript feature detection code to detect situations in which a problem feature doesn't work, and run some different code in those cases that does work.</p>
 
 <p>Once a fix has been made, you'll want to repeat your testing process to make sure your fix is working OK, and hasn't caused the site to break in other places or in other browsers.</p>
 

@@ -2,25 +2,32 @@
 title: MediaQueryList.onchange
 slug: Web/API/MediaQueryList/onchange
 tags:
-  - API
-  - CSSOM View
-  - Event Handler
-  - MediaQueryList
-  - Property
-  - Reference
-  - onchange
+- API
+- CSSOM View
+- Event Handler
+- MediaQueryList
+- Property
+- Reference
+- onchange
 ---
 <p>{{APIRef("CSSOM")}}</p>
 
-<p>The <code><strong>onchange</strong></code> property of the {{DOMxRef("MediaQueryList")}} interface is an event handler property representing a function that is invoked when the {{domxref("MediaQueryList/change_event", "change")}} event fires, i.e when the status of media query support changes. The event object is a {{DOMxRef("MediaQueryListEvent")}} instance, which is recognized as a <code>MediaListQuery</code> instance in older browsers, for backwards compatibility purposes.</p>
+<p>The <code><strong>onchange</strong></code> property of the
+  {{DOMxRef("MediaQueryList")}} interface is an event handler property representing a
+  function that is invoked when the {{domxref("MediaQueryList/change_event", "change")}}
+  event fires, i.e when the status of media query support changes. The event object is a
+  {{DOMxRef("MediaQueryListEvent")}} instance, which is recognized as a
+  <code>MediaListQuery</code> instance in older browsers, for backwards compatibility
+  purposes.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>MediaQueryList</var>.onchange = function() { ... };</pre>
+<pre
+  class="brush: js"><var>MediaQueryList</var>.onchange = function() { ... };</pre>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">var mql = window.matchMedia('(max-width: 600px)');
+<pre class="brush: js">var mql = window.matchMedia('(max-width: 600px)');
 
 mql.addEventListener( "change", (e) =&gt; {
     if (e.matches) {
@@ -37,20 +44,20 @@ mql.addEventListener( "change", (e) =&gt; {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSSOM View", "#dom-mediaquerylist-onchange", "onchange")}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th>Specification</th>
+      <th>Status</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("CSSOM View", "#dom-mediaquerylist-onchange", "onchange")}}</td>
+      <td>{{Spec2("CSSOM View")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -60,9 +67,10 @@ mql.addEventListener( "change", (e) =&gt; {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/CSS/Media_queries">Media queries</a></li>
- <li><a href="/en-US/docs/CSS/Using_media_queries_from_code">Using media queries from code</a></li>
- <li>{{DOMxRef("window.matchMedia()")}}</li>
- <li>{{DOMxRef("MediaQueryList")}}</li>
- <li>{{DOMxRef("MediaQueryListEvent")}}</li>
+  <li><a href="/en-US/docs/CSS/Media_queries">Media queries</a></li>
+  <li><a href="/en-US/docs/CSS/Using_media_queries_from_code">Using media queries from
+      code</a></li>
+  <li>{{DOMxRef("window.matchMedia()")}}</li>
+  <li>{{DOMxRef("MediaQueryList")}}</li>
+  <li>{{DOMxRef("MediaQueryListEvent")}}</li>
 </ul>

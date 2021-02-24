@@ -6,14 +6,15 @@ tags:
   - CSS Grid
   - CSS Property
   - Reference
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 ---
 <p>The <strong><code>grid</code></strong> CSS property is a <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> that sets all of the explicit and implicit grid properties in a single declaration.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/grid.html")}}</div>
 
-<div class="note">
-<p><strong>Note:</strong> You can only specify the explicit <em>or</em> the implicit grid properties in a single <code>grid</code> declaration. The sub-properties you don’t specify are set to their initial value, as normal for shorthands. Also, the gutter properties are NOT reset by this shorthand.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+<p>You can only specify the explicit <em>or</em> the implicit grid properties in a single <code>grid</code> declaration. The sub-properties you don’t specify are set to their initial value, as normal for shorthands. Also, the gutter properties are NOT reset by this shorthand.</p>
 </div>
 
 <h2 id="Constituent_properties">Constituent properties</h2>
@@ -31,7 +32,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css no-line-numbers notranslate">/* &lt;'grid-template'&gt; values */
+<pre class="brush: css no-line-numbers">/* &lt;'grid-template'&gt; values */
 grid: none;
 grid: "a" 100px "b" 1fr;
 grid: [linename1] "a" 100px [linename2];
@@ -81,7 +82,7 @@ grid: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -89,7 +90,7 @@ grid: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div id="container"&gt;
+<pre class="brush: html">&lt;div id="container"&gt;
   &lt;div&gt;&lt;/div&gt;
   &lt;div&gt;&lt;/div&gt;
   &lt;div&gt;&lt;/div&gt;
@@ -102,7 +103,7 @@ grid: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">#container {
+<pre class="brush: css">#container {
   display: grid;
   grid: repeat(2, 60px) / auto-flow 80px;
 }
@@ -145,7 +146,7 @@ grid: unset;
 <ul>
  <li>Related CSS properties: {{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}</li>
  <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement with CSS Grid</a></em></li>
- <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#Grid_definition_shorthands">Grid template areas - Grid definition shorthands</a></em></li>
+ <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#grid_definition_shorthands">Grid template areas - Grid definition shorthands</a></em></li>
 </ul>
 
 <section id="Quick_links">

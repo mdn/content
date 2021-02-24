@@ -7,25 +7,25 @@ slug: Mozilla/Projects/NSS/NSS_3.12.3_release_notes
 <p>Newsgroup: <a href="news://news.mozilla.org/mozilla.dev.tech.crypto">mozilla.dev.tech.crypto</a></p>
 <h3 id="Contents">Contents</h3>
 <ul>
-  <li><a href="#Introduction">Introduction</a></li>
-  <li><a href="#Distribution_Information">Distribution Information</a></li>
-  <li><a href="#New_in_NSS_3.12.3">New in NSS 3.12.3</a></li>
-  <li><a href="#Bugs_Fixed">Bugs Fixed</a></li>
-  <li><a href="#Documentation">Documentation</a></li>
-  <li><a href="#Compatibility">Compatibility</a></li>
-  <li><a href="#Feedback">Feedback</a></li>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#distribution_information">Distribution Information</a></li>
+  <li><a href="#new_in_nss_3.12.3">New in NSS 3.12.3</a></li>
+  <li><a href="#bugs_fixed">Bugs Fixed</a></li>
+  <li><a href="#documentation">Documentation</a></li>
+  <li><a href="#compatibility">Compatibility</a></li>
+  <li><a href="#feedback">Feedback</a></li>
 </ul>
 <hr>
 <h3 id="Introduction">Introduction</h3>
 <p>Network Security Services (NSS) 3.12.3 is a patch release for NSS 3.12. The bug fixes in NSS 3.12.3 are described in
-  the "<a href="#Bugs_Fixed">Bugs Fixed</a>" section below.</p>
+  the "<a href="#bugs_fixed">Bugs Fixed</a>" section below.</p>
 <p>NSS 3.12.3 is tri-licensed under the MPL 1.1/GPL 2.0/LGPL 2.1.</p>
 <hr>
 <h3 id="Distribution_Information">Distribution Information</h3>
 <p>The CVS tag for the NSS 3.12.3 release is NSS_3_12_3_RTM.  NSS 3.12.3 requires <a
     href="https://www.mozilla.org/projects/nspr/release-notes/nspr474.html">NSPR 4.7.4</a>.<br>
   <br>
-  See the <a href="#Documentation">Documentation</a> section for the build instructions.
+  See the <a href="#documentation">Documentation</a> section for the build instructions.
 </p>
 <p>NSS 3.12.3 source and binary distributions are also available on ftp.mozilla.org for secure HTTPS download:</p>
 <ul>
@@ -64,7 +64,7 @@ slug: Mozilla/Projects/NSS/NSS_3.12.3_release_notes
     Here is a table of the new environment variables introduced in NSS 3.12.3 and information about how they affect
     these new behaviors. The information in this table is excerpted from<br>
     <a class="moz-txt-link-freetext"
-      href="/En/NSS_reference/NSS_environment_variables">https://developer.mozilla.org/En/NSS_reference/NSS_environment_variables</a><br>
+      href="/en-US/NSS_reference/NSS_environment_variables">https://developer.mozilla.org/En/NSS_reference/NSS_environment_variables</a><br>
     <br>
     <table>
       <tbody>
@@ -74,28 +74,21 @@ slug: Mozilla/Projects/NSS/NSS_3.12.3_release_notes
           <td><b>Description</b></td>
         </tr>
         <tr>
-          <td><a class="external" href="http://mxr.mozilla.org/security/search?string=NSRANDCOUNT"
-              rel="external nofollow" title="http://mxr.mozilla.org/security/search?string=NSRANDCOUNT">NSRANDCOUNT</a>
-          </td>
+          <td>NSRANDCOUNT</td>
           <td>Integer<br>
             (byte count)</td>
           <td>Sets the maximum number of bytes to read from the file named in the environment variable NSRANDFILE (see
             below). Makes NSRANDFILE usable with /dev/urandom.</td>
         </tr>
         <tr>
-          <td><a class="external" href="http://mxr.mozilla.org/security/search?string=NSS_ALLOW_WEAK_SIGNATURE_ALG"
-              rel="external nofollow"
-              title="http://mxr.mozilla.org/security/search?string=NSS_ALLOW_WEAK_SIGNATURE_ALG">NSS_ALLOW_WEAK_SIGNATURE_ALG</a>
-          </td>
+          <td>NSS_ALLOW_WEAK_SIGNATURE_ALG</td>
           <td>Boolean<br>
             (any non-empty value to enable)</td>
           <td>Enables the use of MD2 and MD4 hash algorithms inside signatures. This was allowed by default before NSS
             3.12.3.</td>
         </tr>
         <tr>
-          <td><a class="external" href="http://mxr.mozilla.org/security/search?string=NSS_HASH_ALG_SUPPORT"
-              rel="external nofollow"
-              title="http://mxr.mozilla.org/security/search?string=NSS_HASH_ALG_SUPPORT">NSS_HASH_ALG_SUPPORT</a></td>
+          <td>NSS_HASH_ALG_SUPPORT</td>
           <td>String</td>
           <td>Specifies algorithms allowed to be used in certain applications, such as in signatures on certificates and
             CRLs. See documentation at <a class="link-https"
@@ -103,9 +96,7 @@ slug: Mozilla/Projects/NSS/NSS_3.12.3_release_notes
               title="https://bugzilla.mozilla.org/show_bug.cgi?id=483113#c0">this link</a>.</td>
         </tr>
         <tr>
-          <td><a class="external" href="http://mxr.mozilla.org/security/search?string=NSS_STRICT_NOFORK"
-              rel="external nofollow"
-              title="http://mxr.mozilla.org/security/search?string=NSS_STRICT_NOFORK">NSS_STRICT_NOFORK</a></td>
+          <td>NSS_STRICT_NOFORK</td>
           <td>String<br>
             ("1",<br>
             "DISABLED",<br>
@@ -123,20 +114,14 @@ slug: Mozilla/Projects/NSS/NSS_3.12.3_release_notes
           </td>
         </tr>
         <tr>
-          <td><a class="external" href="http://mxr.mozilla.org/security/search?string=NSS_USE_DECODED_CKA_EC_POINT"
-              rel="external nofollow"
-              title="http://mxr.mozilla.org/security/search?string=NSS_USE_DECODED_CKA_EC_POINT">NSS_USE_DECODED_CKA_EC_POINT</a>
-          </td>
+          <td>NSS_USE_DECODED_CKA_EC_POINT</td>
           <td>Boolean<br>
             (any non-empty value to enable)</td>
           <td>Tells NSS to send EC key points across the PKCS#11 interface in the non-standard unencoded format that was
             used by default before NSS 3.12.3. The new key point format is a DER encoded ASN.1 OCTET STRING.</td>
         </tr>
         <tr>
-          <td><a class="external" href="http://mxr.mozilla.org/security/search?string=NSS_USE_SHEXP_IN_CERT_NAME"
-              rel="external nofollow"
-              title="http://mxr.mozilla.org/security/search?string=NSS_USE_SHEXP_IN_CERT_NAME">NSS_USE_SHEXP_IN_CERT_NAME</a>
-          </td>
+          <td>NSS_USE_SHEXP_IN_CERT_NAME</td>
           <td>Boolean<br>
             (any non-empty value to enable)</td>
           <td>Tells NSS to allow shell-style wildcard patterns in certificates to match SSL server host names. This

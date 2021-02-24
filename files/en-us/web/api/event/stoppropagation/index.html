@@ -2,23 +2,27 @@
 title: Event.stopPropagation()
 slug: Web/API/Event/stopPropagation
 tags:
-  - API
-  - DOM
-  - Event
-  - Method
-  - Propagation
-  - Reference
-  - actions
-  - default
-  - stopPropagation
+- API
+- DOM
+- Event
+- Method
+- Propagation
+- Reference
+- actions
+- default
+- stopPropagation
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <strong><code>stopPropagation()</code></strong> method of the {{domxref("Event")}} interface prevents further propagation of the current event in the capturing and bubbling phases. It does not, however, prevent any default behaviors from occurring; for instance, clicks on links are still processed. If you want to stop those behaviors, see the {{domxref("Event.preventDefault", "preventDefault()")}} method.</p>
+<p>The <strong><code>stopPropagation()</code></strong> method of the {{domxref("Event")}}
+  interface prevents further propagation of the current event in the capturing and
+  bubbling phases. It does not, however, prevent any default behaviors from occurring; for
+  instance, clicks on links are still processed. If you want to stop those behaviors, see
+  the {{domxref("Event.preventDefault", "preventDefault()")}} method.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>event</em>.stopPropagation();</pre>
+<pre class="brush: js"><em>event</em>.stopPropagation();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -30,33 +34,39 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>See Example 5: <a href="/en-US/docs/DOM/DOM_Reference/Examples#Example_5:_Event_Propagation">Event Propagation</a> in the Examples chapter for a more detailed example of this method and event propagation in the DOM.</p>
+<p>See Example 5: <a
+    href="/en-US/docs/DOM/DOM_Reference/Examples#Example_5:_Event_Propagation">Event
+    Propagation</a> in the Examples chapter for a more detailed example of this method and
+  event propagation in the DOM.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-event-stoppropagation", "Event.stopPropagation()")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-event-stoppropagation", "Event.stopPropagation()")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Events", "#Events-Event-stopPropagation", "Event.stopPropagation()")}}</td>
-   <td>{{Spec2("DOM2 Events")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Specification</th>
+      <th>Status</th>
+      <th>Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("DOM WHATWG", "#dom-event-stoppropagation",
+        "Event.stopPropagation()")}}</td>
+      <td>{{Spec2("DOM WHATWG")}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName("DOM4", "#dom-event-stoppropagation", "Event.stopPropagation()")}}
+      </td>
+      <td>{{Spec2("DOM4")}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName("DOM2 Events", "#Events-Event-stopPropagation",
+        "Event.stopPropagation()")}}</td>
+      <td>{{Spec2("DOM2 Events")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -66,5 +76,9 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>See the <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture">DOM specification</a> for the explanation of event flow. The <a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-flow">DOM Level 3 Events draft</a> has an illustration.</li>
+  <li>See the <a
+      href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture">DOM
+      specification</a> for the explanation of event flow. The <a
+      href="https://www.w3.org/TR/DOM-Level-3-Events/#event-flow">DOM Level 3 Events
+      draft</a> has an illustration.</li>
 </ul>

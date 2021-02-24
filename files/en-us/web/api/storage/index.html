@@ -41,7 +41,7 @@ tags:
 
 <p>Here we access a <code>Storage</code> object by calling <code>localStorage</code>. We first test whether the local storage contains data items using <code>!localStorage.getItem('bgcolor')</code>. If it does, we run a function called <code>setStyles()</code> that grabs the data items using {{domxref("Storage.getItem()")}} and uses those values to update page styles. If it doesn't, we run another function, <code>populateStorage()</code>, which uses {{domxref("Storage.setItem()")}} to set the item values, then runs <code>setStyles()</code>.</p>
 
-<pre class="brush: js notranslate">if(!localStorage.getItem('bgcolor')) {
+<pre class="brush: js">if(!localStorage.getItem('bgcolor')) {
   populateStorage();
 } else {
   setStyles();

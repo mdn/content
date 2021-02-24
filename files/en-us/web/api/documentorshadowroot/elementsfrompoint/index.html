@@ -2,33 +2,37 @@
 title: DocumentOrShadowRoot.elementsFromPoint()
 slug: Web/API/DocumentOrShadowRoot/elementsFromPoint
 tags:
-  - API
-  - Document
-  - DocumentOrShadowRoot
-  - Method
-  - Reference
-  - ShadowRoot
-  - elementsFromPoint
-  - elementsFromPoint()
-  - shadow dom
+- API
+- Document
+- DocumentOrShadowRoot
+- Method
+- Reference
+- ShadowRoot
+- elementsFromPoint
+- elementsFromPoint()
+- shadow dom
 ---
 <div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
 
-<p><span class="seoSummary">The <strong><code>elementsFromPoint()</code></strong> method of the {{domxref("DocumentOrShadowRoot")}} interface returns an array of all elements at the specified coordinates (relative to the viewport).</span></p>
+<p><span class="seoSummary">The <strong><code>elementsFromPoint()</code></strong> method
+    of the {{domxref("DocumentOrShadowRoot")}} interface returns an array of all elements
+    at the specified coordinates (relative to the viewport).</span></p>
 
-<p>It operates in a similar way to the {{domxref("DocumentOrShadowRoot.elementFromPoint", "elementFromPoint()")}} method.</p>
+<p>It operates in a similar way to the {{domxref("DocumentOrShadowRoot.elementFromPoint",
+  "elementFromPoint()")}} method.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">const elements = document.elementsFromPoint(<var>x</var>, <var>y</var>);</pre>
+<pre
+  class="brush: js">const elements = document.elementsFromPoint(<var>x</var>, <var>y</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>x</var></code></dt>
- <dd>The horizontal coordinate of a point.</dd>
- <dt><code><var>y</var></code></dt>
- <dd>The vertical coordinate of a point.</dd>
+  <dt><code><var>x</var></code></dt>
+  <dd>The horizontal coordinate of a point.</dd>
+  <dt><code><var>y</var></code></dt>
+  <dd>The vertical coordinate of a point.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -68,22 +72,24 @@ if (document.elementsFromPoint) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Shadow DOM','#dom-documentorshadowroot-elementsfrompoint','elementsFromPoint()')}}</td>
-   <td>{{Spec2('Shadow DOM')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#dom-document-elementsfrompoint', 'elementsFromPoint()')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Shadow
+        DOM','#dom-documentorshadowroot-elementsfrompoint','elementsFromPoint()')}}</td>
+      <td>{{Spec2('Shadow DOM')}}</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('CSSOM View', '#dom-document-elementsfrompoint',
+        'elementsFromPoint()')}}</td>
+      <td>{{Spec2('CSSOM View')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -93,6 +99,7 @@ if (document.elementsFromPoint) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{DOMxRef("DocumentOrShadowRoot.elementFromPoint()")}}</li>
- <li>{{DOMxRef("DocumentOrShadowRoot.msElementsFromRect()")}} {{Non-standard_Inline}}</li>
+  <li>{{DOMxRef("DocumentOrShadowRoot.elementFromPoint()")}}</li>
+  <li>{{DOMxRef("DocumentOrShadowRoot.msElementsFromRect()")}} {{Non-standard_Inline}}
+  </li>
 </ul>

@@ -16,7 +16,7 @@ tags:
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball", "Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls")}}</p>
 
 <div class="summary">
-<p>This is the <strong>5th step</strong> out of 16 of the <a href="/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson05.html">Gamedev-Phaser-Content-Kit/demos/lesson05.html</a>.</p>
+<p>This is the <strong>5th step</strong> out of 16 of the <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser">Gamedev Phaser tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson05.html">Gamedev-Phaser-Content-Kit/demos/lesson05.html</a>.</p>
 </div>
 
 <p><span class="seoSummary">For proper collision detection between objects in our game we will need to have physics; this article introduces you to what's available in Phaser, as well as demonstrating a typical simple setup.</span></p>
@@ -27,24 +27,24 @@ tags:
 
 <p>First, let's initialize the Arcade Physics engine in our game. Add the <code>physics.startSystem()</code> method at the beginning of the <code>create</code> function (make it the first line inside the function), as shown below:</p>
 
-<pre class="brush: js notranslate">game.physics.startSystem(Phaser.Physics.ARCADE);
+<pre class="brush: js">game.physics.startSystem(Phaser.Physics.ARCADE);
 </pre>
 
 <p>Next, we need to enable our ball for the physics system — Phaser object physics is not enabled by default. Add the following line at the bottom of the <code>create()</code> function:</p>
 
-<pre class="brush: js notranslate">game.physics.enable(ball, Phaser.Physics.ARCADE);
+<pre class="brush: js">game.physics.enable(ball, Phaser.Physics.ARCADE);
 </pre>
 
 <p>Next, if we want to move our ball on the screen, we can set <code>velocity</code> on its <code>body</code>. Add the following line, again at the bottom of <code>create()</code>:</p>
 
-<pre class="brush: js notranslate">ball.body.velocity.set(150, 150);
+<pre class="brush: js">ball.body.velocity.set(150, 150);
 </pre>
 
 <h2 id="Removing_our_previous_update_instructions">Removing our previous update instructions</h2>
 
 <p>Remember to remove our old method of adding values to <code>x</code> and <code>y</code> from the <code>update()</code> function:</p>
 
-<pre class="brush: js notranslate">function update() {
+<pre class="brush: js">function update() {
 <s>    ball.x += 1;</s>
 <s>    ball.y += 1;</s>
 }
@@ -56,7 +56,7 @@ tags:
 
 <p>The latest code should look like this:</p>
 
-<pre class="brush: js notranslate">var ball;
+<pre class="brush: js">var ball;
 
 function preload() {
     game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
@@ -93,6 +93,6 @@ function update() {
 
 <h2 id="Next_steps">Next steps</h2>
 
-<p>Now we can move to the next lesson and see how to make the ball <a href="/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls">bounce off the walls</a>.</p>
+<p>Now we can move to the next lesson and see how to make the ball <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls">bounce off the walls</a>.</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball", "Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls")}}</p>

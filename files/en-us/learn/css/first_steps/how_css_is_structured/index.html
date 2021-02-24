@@ -24,7 +24,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, <a href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works">How CSS works</a>.</td>
+   <td>Basic computer literacy, <a href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of <a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_works">How CSS works</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -43,7 +43,7 @@ tags:
 
 <p>You reference an external CSS stylesheet from an HTML <code>&lt;link&gt;</code> element:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -58,7 +58,7 @@ tags:
 
 <p>The CSS stylesheet file might look like this:</p>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
   color: blue;
   background-color: yellow;
   border: 1px solid black;
@@ -70,7 +70,7 @@ p {
 
 <p>The <code>href</code> attribute of the {{htmlelement("link")}} element needs to reference a file on your file system. In the example above, the CSS file is in the same folder as the HTML document, but you could place it somewhere else and adjust the path. Here are three examples:</p>
 
-<pre class="brush: html notranslate">&lt;!-- Inside a subdirectory called styles inside the current directory --&gt;
+<pre class="brush: html">&lt;!-- Inside a subdirectory called styles inside the current directory --&gt;
 &lt;link rel="stylesheet" href="styles/style.css"&gt;
 
 &lt;!-- Inside a subdirectory called general, which is in a subdirectory called styles, inside the current directory --&gt;
@@ -85,7 +85,7 @@ p {
 
 <p>The HTML for an internal stylesheet might look like this:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -116,7 +116,7 @@ p {
 
 <p>Inline styles are CSS declarations that affect a single HTML element, contained within a <code>style</code> attribute. The implementation of an inline style in an HTML document might look like this:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -138,7 +138,7 @@ p {
 
 <p><strong>index.html:</strong></p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -154,7 +154,7 @@ p {
 
 <p><strong>styles.css:</strong></p>
 
-<pre class="brush: css notranslate">/* Create your test CSS here */
+<pre class="brush: css">/* Create your test CSS here */
 
 p {
   color: red;
@@ -174,7 +174,7 @@ p {
 
 <p>Each CSS rule starts with a selector — or a list of selectors — in order to tell the browser which element or elements the rules should apply to. All the examples below are valid selectors or lists of selectors.</p>
 
-<pre class="brush: css notranslate">h1
+<pre class="brush: css">h1
 a:link
 .manythings
 #onething
@@ -193,7 +193,7 @@ h1, h2, .intro</pre>
 
 <p>You may encounter scenarios where two selectors select the same HTML element. Consider the stylesheet below, with a <code>p</code> selector that sets paragraph text to blue. However, there is also a class that sets the text of selected elements to red.</p>
 
-<pre class="brush: css notranslate">.special {
+<pre class="brush: css">.special {
   color: red;
 }
 
@@ -203,11 +203,11 @@ p {
 
 <p>Suppose that in our HTML document, we have a paragraph with a class of <code>special</code>. Both rules apply. Which selector prevails? Do you expect to see blue or red paragraph text?</p>
 
-<pre class="brush: html notranslate">&lt;p class="special"&gt;What color am I?&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p class="special"&gt;What color am I?&lt;/p&gt;</pre>
 
 <p>The CSS language has rules to control which selector is stronger in the event of a conflict. These rules are called <strong>cascade</strong> and <strong>specificity</strong>. In the code block below, we define two rules for the <code>p</code> selector, but the paragraph text will be blue. This is because the declaration that sets the paragraph text to blue appears later in the stylesheet. Later styles replace conflicting styles that appear earlier in the stylesheet. This is the <strong>cascade</strong> rule.</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   color: red;
 }
 
@@ -234,15 +234,15 @@ p {
 
 <p>The example below highlights a single property and value. The property name is <code>color</code> and the value is <code>blue</code>.</p>
 
-<p><img alt="A declaration highlighted in the CSS" src="https://mdn.mozillademos.org/files/16498/declaration.png" style="border: 1px solid #cccccc; display: block; height: 218px; margin: 0 auto; width: 471px;"></p>
+<p><img alt="A declaration highlighted in the CSS" src="declaration.png" style="border: 1px solid #cccccc; display: block; margin: 0 auto;"></p>
 
 <p>When a property is paired with a value, this pairing is called a <em>CSS declaration</em>. CSS declarations are found within <em>CSS Declaration Blocks</em>. In the example below, highlighting identifies the CSS declaration block.</p>
 
-<p><img alt="A highlighted declaration block" src="https://mdn.mozillademos.org/files/16499/declaration-block.png" style="border: 1px solid #cccccc; display: block; height: 218px; margin: 0 auto; width: 471px;"></p>
+<p><img alt="A highlighted declaration block" src="declaration-block.png" style="border: 1px solid #cccccc; display: block; margin: 0 auto;"></p>
 
 <p>Finally, CSS declaration blocks are paired with <em>selectors</em> to produce <em>CSS rulesets</em> (or <em>CSS rules</em>). The example below contains two rules: one for the <code>h1</code> selector and one for the <code>p</code> selector. The colored highlighting identifies the <code>h1</code> rule.</p>
 
-<p><img alt="The rule for h1 highlighted" src="https://mdn.mozillademos.org/files/16500/rules.png" style="border: 1px solid #cccccc; display: block; height: 218px; margin: 0 auto; width: 471px;"></p>
+<p><img alt="The rule for h1 highlighted" src="rules.png" style="border: 1px solid #cccccc; display: block; margin: 0 auto;"></p>
 
 <p>Setting CSS properties to specific values is the primary way of defining layout and styling for a document. The CSS engine calculates which declarations apply to every single element of a page.</p>
 
@@ -273,9 +273,9 @@ p {
 <p>While most values are relatively simple keywords or numeric values, there are some values that take the form of a function. An example would be the <code>calc()</code> function, which can do simple math within CSS:</p>
 
 <div id="calc_example">
-<pre class="brush: html notranslate">&lt;div class="outer"&gt;&lt;div class="box"&gt;The inner box is 90% - 30px.&lt;/div&gt;&lt;/div&gt;</pre>
+<pre class="brush: html">&lt;div class="outer"&gt;&lt;div class="box"&gt;The inner box is 90% - 30px.&lt;/div&gt;&lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">.outer {
+<pre class="brush: css">.outer {
   border: 5px solid black;
 }
 
@@ -296,9 +296,9 @@ p {
 <p>Another example would be the various values for {{cssxref("transform")}}, such as <code>rotate()</code>.</p>
 
 <div id="transform_example">
-<pre class="brush: html notranslate">&lt;div class="box"&gt;&lt;/div&gt;</pre>
+<pre class="brush: html">&lt;div class="box"&gt;&lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   margin: 30px;
   width: 100px;
   height: 100px;
@@ -323,13 +323,13 @@ p {
 
 <p>CSS <a href="/en-US/docs/Web/CSS/At-rule">@rules</a> (pronounced "at-rules") provide instruction for what CSS should perform or how it should behave. Some @rules are simple with just a keyword and a value. For example, <code>@import</code> imports a stylesheet into another CSS stylesheet:</p>
 
-<pre class="brush: css notranslate">@import 'styles2.css';</pre>
+<pre class="brush: css">@import 'styles2.css';</pre>
 
 <p>One common @rule that you are likely to encounter is <code>@media</code>, which is used to create <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a>. Media queries use conditional logic for applying CSS styling.</p>
 
 <p>In the example below, the stylesheet defines a default pink background for the <code>&lt;body&gt;</code> element. However, a media query follows that defines a blue background if the browser viewport is wider than 30em.</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   background-color: pink;
 }
 
@@ -349,7 +349,7 @@ p {
 
 <p>For example, this one line of code:</p>
 
-<pre class="brush: css notranslate">/* In 4-value shorthands like padding and margin, the values are applied
+<pre class="brush: css">/* In 4-value shorthands like padding and margin, the values are applied
    in the order top, right, bottom, left (clockwise from the top). There are also other
    shorthand types, for example 2-value shorthands, which set padding/margin
    for top/bottom, then left/right */
@@ -357,18 +357,18 @@ padding: 10px 15px 15px 5px;</pre>
 
 <p>is equivalent to these four lines of code:</p>
 
-<pre class="brush: css notranslate">padding-top: 10px;
+<pre class="brush: css">padding-top: 10px;
 padding-right: 15px;
 padding-bottom: 15px;
 padding-left: 5px;</pre>
 
 <p>This one line:</p>
 
-<pre class="brush: css notranslate">background: red url(bg-graphic.png) 10px 10px repeat-x fixed;</pre>
+<pre class="brush: css">background: red url(bg-graphic.png) 10px 10px repeat-x fixed;</pre>
 
 <p>is equivalent to these five lines:</p>
 
-<pre class="brush: css notranslate">background-color: red;
+<pre class="brush: css">background-color: red;
 background-image: url(bg-graphic.png);
 background-position: 10px 10px;
 background-repeat: repeat-x;
@@ -388,7 +388,7 @@ background-attachment: fixed;</pre>
 
 <p>CSS comments begin with <code>/*</code> and end with <code>*/</code>. In the example below, comments mark the start of distinct sections of code. This helps to navigate the codebase as it gets larger. With this kind of commenting in place, searching for comments in your code editor becomes a way to efficiently find a section of code.</p>
 
-<pre class="brush: css notranslate">/* Handle basic element styling */
+<pre class="brush: css">/* Handle basic element styling */
 /* -------------------------------------------------------------------------------------------- */
 body {
   font: 1em/150% Helvetica, Arial, sans-serif;
@@ -425,7 +425,7 @@ div p + p {
 
 <p>"Commenting out" code is also useful for temporarily disabling sections of code for testing. In the example below, the rules for <code>.special</code> are disabled by "commenting out" the code.</p>
 
-<pre class="brush: css notranslate">/*.special {
+<pre class="brush: css">/*.special {
   color: red;
 }*/
 
@@ -441,7 +441,7 @@ p {
 
 <p>In the example below, each declaration (and rule start/end) has its own line. This is arguably a good way to write CSS. It makes it easier to maintain and understand CSS.</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   font: 1em/150% Helvetica, Arial, sans-serif;
   padding: 1em;
   margin: 0 auto;
@@ -476,7 +476,7 @@ div p + p {
 
 <p id="Very_compact">The next example shows the equivalent CSS in a more compressed format. Although the two examples work the same, the one below is more difficult to read.</p>
 
-<pre class="brush: css notranslate">body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
+<pre class="brush: css">body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
 @media (min-width: 70em) { body {font-size: 130%;} }
 
 h1 {font-size: 1.5em;}
@@ -494,12 +494,12 @@ div p + p {padding-top: 0;}
 
 <p>For example, these declarations are valid CSS:</p>
 
-<pre class="brush: css notranslate">margin: 0 auto;
+<pre class="brush: css">margin: 0 auto;
 padding-left: 10px;</pre>
 
 <p>But these declarations are invalid:</p>
 
-<pre class="brush: css notranslate">margin: 0auto;
+<pre class="brush: css">margin: 0auto;
 padding- left: 10px;</pre>
 
 <p>Do you see the spacing errors? First, <code>0auto</code> is not recognized as a valid value for the <code>margin</code> property. The entry <code>0auto</code> is meant to be two separate values: <code>0</code> and <code>auto</code>. Second, the browser does not recognize <code>padding-</code> as a valid property. The correct property name (<code>padding-left</code>) is separated by an errant space.<br>

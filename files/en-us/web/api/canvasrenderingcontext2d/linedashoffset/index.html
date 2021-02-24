@@ -2,35 +2,40 @@
 title: CanvasRenderingContext2D.lineDashOffset
 slug: Web/API/CanvasRenderingContext2D/lineDashOffset
 tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
+- API
+- Canvas
+- CanvasRenderingContext2D
+- Property
+- Reference
 ---
 <div>{{APIRef}}</div>
 
-<p>The <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.lineDashOffset</code></strong> property of the Canvas 2D API sets the line dash offset, or "phase."</p>
+<p>The
+  <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.lineDashOffset</code></strong>
+  property of the Canvas 2D API sets the line dash offset, or "phase."</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Lines are drawn by calling the {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} method.</p>
+  <p><strong>Note:</strong> Lines are drawn by calling the
+    {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} method.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>ctx</em>.lineDashOffset = <em>value</em>;
+<pre class="brush: js"><em>ctx</em>.lineDashOffset = <em>value</em>;
 </pre>
 
 <dl>
- <dt><code>value</code></dt>
- <dd>A float specifying the amount of the line dash offset. The default value is <code>0.0</code>.</dd>
+  <dt><code>value</code></dt>
+  <dd>A float specifying the amount of the line dash offset. The default value is
+    <code>0.0</code>.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Offsetting_a_line_dash">Offsetting a line dash</h3>
 
-<p>This example draws two dashed lines. The first has no dash offset. The second has a dash offset of 4.</p>
+<p>This example draws two dashed lines. The first has no dash offset. The second has a
+  dash offset of 4.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -67,12 +72,15 @@ ctx.stroke();
 
 <h3 id="Marching_ants">Marching ants</h3>
 
-<p>The <a href="https://en.wikipedia.org/wiki/Marching_ants">marching ants</a> effect is an animation technique often found in selection tools of computer graphics programs. It helps the user to distinguish the selection border from the image background by animating the border.</p>
+<p>The <a href="https://en.wikipedia.org/wiki/Marching_ants">marching ants</a> effect is
+  an animation technique often found in selection tools of computer graphics programs. It
+  helps the user to distinguish the selection border from the image background by
+  animating the border.</p>
 
 <div class="hidden">
-<h6 id="HTML_2">HTML</h6>
+  <h6 id="HTML_2">HTML</h6>
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+  <pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
 </div>
 
 <pre class="brush: js">const canvas = document.getElementById('canvas');
@@ -102,18 +110,19 @@ march();</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-linedashoffset", "CanvasRenderingContext2D.lineDashOffset")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-linedashoffset",
+        "CanvasRenderingContext2D.lineDashOffset")}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -123,8 +132,10 @@ march();</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The interface defining this property: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.getLineDash()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.setLineDash()")}}</li>
- <li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</a></li>
+  <li>The interface defining this property: {{domxref("CanvasRenderingContext2D")}}</li>
+  <li>{{domxref("CanvasRenderingContext2D.getLineDash()")}}</li>
+  <li>{{domxref("CanvasRenderingContext2D.setLineDash()")}}</li>
+  <li><a
+      href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying
+      styles and color</a></li>
 </ul>

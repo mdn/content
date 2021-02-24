@@ -2,36 +2,45 @@
 title: Range.surroundContents()
 slug: Web/API/Range/surroundContents
 tags:
-  - API
-  - DOM
-  - Method
-  - Range
+- API
+- DOM
+- Method
+- Range
 ---
 <div>{{ApiRef("DOM")}}</div>
 
-<p>The <strong><code>Range.surroundContents()</code></strong> method moves content of the {{ domxref("Range") }} into a new node, placing the new node at the start of the specified range.</p>
+<p>The <strong><code>Range.surroundContents()</code></strong> method moves content of the
+  {{ domxref("Range") }} into a new node, placing the new node at the start of the
+  specified range.</p>
 
-<p>This method is nearly equivalent to <code>newNode.appendChild(<a href="/en/DOM/range.extractContents">range.extractContents()</a>); <a href="/en-US/docs/DOM/range.insertNode">range.insertNode</a>(newNode)</code>. After surrounding, the boundary points of the <code>range</code> include <code>newNode</code>.</p>
+<p>This method is nearly equivalent to
+  <code>newNode.appendChild(<a href="/en-US/docs/DOM/range.extractContents">range.extractContents()</a>); <a href="/en-US/docs/DOM/range.insertNode">range.insertNode</a>(newNode)</code>.
+  After surrounding, the boundary points of the <code>range</code> include
+  <code>newNode</code>.</p>
 
-<p>An exception will be thrown, however, if the {{ domxref("Range") }} splits a non-{{ domxref("Text") }} node with only one of its boundary points. That is, unlike the alternative above, if there are partially selected nodes, they will not be cloned and instead the operation will fail.</p>
+<p>An exception will be thrown, however, if the {{ domxref("Range") }} splits a non-{{
+  domxref("Text") }} node with only one of its boundary points. That is, unlike the
+  alternative above, if there are partially selected nodes, they will not be cloned and
+  instead the operation will fail.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>range</em>.surroundContents(<em>newParent</em>);
+<pre class="brush: js"><em>range</em>.surroundContents(<em>newParent</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>newParent</code></dt>
- <dd>A {{ domxref("Node") }} with which to surround the contents.</dd>
+  <dt><code>newParent</code></dt>
+  <dd>A {{ domxref("Node") }} with which to surround the contents.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html">&lt;span class="header-text"&gt;Put this in a headline&lt;/span&gt;</pre>
+<pre
+  class="brush: html">&lt;span class="header-text"&gt;Put this in a headline&lt;/span&gt;</pre>
 
 <h3 id="JavaScript">JavaScript</h3>
 
@@ -48,23 +57,26 @@ range.surroundContents(newParent);</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-range-surroundcontents', 'Range.surroundContents()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'ranges.html#Level2-Range-method-surroundContents', 'Range.surroundContents()')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-range-surroundcontents',
+        'Range.surroundContents()')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>No change.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 Traversal_Range',
+        'ranges.html#Level2-Range-method-surroundContents', 'Range.surroundContents()')}}
+      </td>
+      <td>{{Spec2('DOM2 Traversal_Range')}}</td>
+      <td>Initial specification.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -74,5 +86,5 @@ range.surroundContents(newParent);</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
+  <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
 </ul>

@@ -51,7 +51,7 @@ tags:
 
 <p>The enabled accessibility panel looks like so:</p>
 
-<p><img alt='Shows issue checker toolbar with "contrast and "text label" options' src="https://mdn.mozillademos.org/files/17437/Accessibility-Inspector-tabbing_order.png" style="border-style: solid; border-width: 1px; width: 1055px;"></p>
+<p><img alt='Shows issue checker toolbar with "contrast and "text label" options' src="accessibility-inspector-tabbing_order.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>On the left-hand side, there is a tree diagram representing all the items in the accessibility tree for the current page. Items with nested children have arrows that can be clicked to reveal the children, so you can move deeper into the hierarchy. Each item has two properties listed:</p>
 
@@ -68,7 +68,7 @@ tags:
  <li><em>actions</em> — a list of actions that can be performed on the item, for example, a pushbutton would have "Press" listed, while a link would have "Jump" listed.</li>
  <li><em>value</em> — the value of the item. This can mean different things depending on the type of the item; for example, a form input (role: entry) would have a value of whatever is entered in the input, whereas a link's value would be the URL in the corresponding <code>&lt;a&gt;</code> element's <code>href</code>.</li>
  <li><em>DOMNode</em> — the type of DOM node that the item in the accessibility tree represents. You can click on the "target" icon that comes after it to select the node in the <a href="/en-US/docs/Tools/Page_Inspector">Page Inspector</a>. Hovering over the "target" icon highlights the DOM node in the page content.<br>
-  <img alt="DOMNode property in accessibility inspector with target icon highlighted" src="https://mdn.mozillademos.org/files/16025/dom-node-target-icon.png" style="height: 55px; width: 294px;"></li>
+  <img alt="DOMNode property in accessibility inspector with target icon highlighted" src="dom-node-target-icon.png"></li>
  <li><em>description</em> — any further description provided on the element, usually by the content of a title attribute.</li>
  <li><em>keyboardShortcut</em> — any keyboard shortcut that is available to activate the element, as specified in an <code>accessKey</code> attribute. Note that this works correctly as of Firefox 62 ({{bug("1467381")}}).</li>
  <li><em>childCount</em> — the number of child items the current item has in the accessibility tree hierarchy.</li>
@@ -95,11 +95,11 @@ tags:
 
 <p>You can print the contents of the accessibility tree to json by right-clicking on an entry in the Accessibility tab and selecting <strong>Print to JSON:</strong></p>
 
-<p><strong><img alt="Print to JSON right-click menu in left panel" src="https://mdn.mozillademos.org/files/17438/Accessibility-Inspector-print_tree_to_json.png" style="border-style: solid; border-width: 1px; width: 1055px;"></strong></p>
+<p><strong><img alt="Print to JSON right-click menu in left panel" src="accessibility-inspector-print_tree_to_json.png" style="border-style: solid; border-width: 1px;"></strong></p>
 
 <p>When you do, you will get a new tab with the selected accessibility tree loaded into the JSON viewer:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16424/accessibility_json.png" style="display: block; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="accessibility_json.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Once opened, you can save or copy the data as necessary. The JSON viewer can also show you the raw JSON data on a separate tab in the viewer.</p>
 
@@ -109,13 +109,13 @@ tags:
 
 <p>Firefox 84 and later can enable a visual overlay showing the tabbing order. This provides a high-level overview of how the page will be navigated using the <kbd>tab</kbd> key, which may highlight problems more effectively than tabbing through the elements. The overlay is toggled on/off using the <strong>Show Tabbing Order</strong> checkbox.</p>
 
-<p><img alt="Accessibility inspector and page with checkbox Show tab order selected." src="https://mdn.mozillademos.org/files/17440/Accessibility-Inspector-show_tab_order.png" style="border-style: solid; border-width: 1px; width: 993px;"></p>
+<p><img alt="Accessibility inspector and page with checkbox Show tab order selected." src="accessibility-inspector-show_tab_order.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>All focussable items have a numbered marker and the currently focussed item is highlighted in a different color. In some cases the marker may be hidden by other elements, as is true for items 1 and 2 in the in the page below.<br>
- <img alt="A page where some of the markers for selection items are hidden" src="https://mdn.mozillademos.org/files/17442/Accessibility-Inspector-hidden_items.png" style="width: 767px;"><br>
+ <img alt="A page where some of the markers for selection items are hidden" src="accessibility-inspector-hidden_items.png"><br>
  These become visible in the overlay when the item is the current item.</p>
 
-<p><img alt="Sshows a hidden selection item in the tabbing order overlay when it is selected." src="https://mdn.mozillademos.org/files/17443/Accessibility-Inspector-hidden_item_revealed.png"></p>
+<p><img alt="Sshows a hidden selection item in the tabbing order overlay when it is selected." src="accessibility-inspector-hidden_item_revealed.png"></p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: The overlay reflects the tab order at the time that the checkbox is selected (i.e. it is not dynamic). If a user does anything that adds items to the tab order (e.g. opens a visual element that contains more links), these new items will not be reflected in the overlay until the Accessibility Inspector is re-launched.</p>
@@ -136,7 +136,7 @@ tags:
 <p>When you one of the menu items, Firefox scans your document for the type of issues you selected. Depending on the size and complexity of your document, this may take a few seconds. When the scan is complete, the left side of the Accessibility Inspector panel displays only the items that have that type of issue. In the right side of the panel, the <em>Checks</em> subpanel lists the specific issue with the selected node. For each type of issue, there is a <strong>Learn more</strong> link to further information on <em>MDN Web Docs</em> about the issue.</p>
 
 <p><br>
- <img alt="Accessibility Inspector - Showing the options when you select the Check for Issues button" src="https://mdn.mozillademos.org/files/17439/Accessibility-Inspector-check_for_issues.png" style="border-style: solid; border-width: 1px; width: 704px;"></p>
+ <img alt="Accessibility Inspector - Showing the options when you select the Check for Issues button" src="accessibility-inspector-check_for_issues.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>The menu items act as toggles. Select the item to view that type of issue; select the item again to clear the display of issues of that type.</p>
 
@@ -154,9 +154,9 @@ tags:
 
 <p>An extra context menu option is added, both for the general context menu on the web page when right/<kbd>Ctrl</kbd> + clicking a UI feature, and the HTML pane of the page inspector when right/<kbd>Ctrl</kbd> + clicking a DOM element:</p>
 
-<p><img alt="context menu in the browser viewport, with a highlighted option: Inspect Accessibility Properties" src="https://mdn.mozillademos.org/files/16028/web-page-context-menu.png" style="border-style: solid; border-width: 1px; width: 1200px;"></p>
+<p><img alt="context menu in the browser viewport, with a highlighted option: Inspect Accessibility Properties" src="web-page-context-menu.png" style="border-style: solid; border-width: 1px;"></p>
 
-<p><img alt="context menu in the DOM inspector, with a highlighted option: Show Accessibility Properties" src="https://mdn.mozillademos.org/files/16020/dom-inspector-context-menu.png" style="border-style: solid; border-width: 1px; width: 1200px;"></p>
+<p><img alt="context menu in the DOM inspector, with a highlighted option: Show Accessibility Properties" src="dom-inspector-context-menu.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>When you choose the <em>Inspect Accessibility Properties</em>/<em>Show Accessibility Properties</em> context menu options, the <em>Accessibility</em> tab is immediately opened to show the corresponding accessibility tree item and its properties.</p>
 
@@ -170,7 +170,7 @@ tags:
 
 <p>In the following example, you can see that the image has been highlighted and its role, graphic, name, "Road, Asphalt, Sky, Clouds, Fall", and the color contrast ratio, 3.46, appears in the information bar above it.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16302/image_accessibility.png" style="border: 1px solid black; display: block; height: 347px; margin: 0px auto; width: 451px;"></p>
+<p><img alt="" src="image_accessibility.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
 <h4 id="Color_contrast">Color contrast</h4>
 
@@ -178,13 +178,13 @@ tags:
 
 <p>For example:</p>
 
-<p><img alt="A screenshot of color contrast highlighter where text contrast if below the AA WCAG threshold." src="https://mdn.mozillademos.org/files/16459/Screen_Shot_2019-01-29_at_10.11.13.png" style="display: block; height: 237px; margin: 0px auto; width: 357px;"></p>
+<p><img alt="A screenshot of color contrast highlighter where text contrast if below the AA WCAG threshold." src="screen_shot_2019-01-29_at_10.11.13.png" style="display: block; margin: 0px auto;"></p>
 
 <p>The color contrast in the image above is 2.86, so potentially not enough contrast to make it easy to read. Notice the warning symbol that indicates that the contrast fails to meet the acceptable contrast ratio.</p>
 
 <p>As of Firefox 65, viewing this information for some foreground text that has a complex background image (e.g. a gradient) gives you a range of color contrast values. For example:</p>
 
-<p><img alt="A screenshot of color contrast highlighter where for text over gradient background with contrast satisfying the AAA WCAG guidelines." src="https://mdn.mozillademos.org/files/16460/Screen_Shot_2019-01-29_at_10.21.07.png" style="display: block; margin: 0px auto; width: 1484px;"></p>
+<p><img alt="A screenshot of color contrast highlighter where for text over gradient background with contrast satisfying the AAA WCAG guidelines." src="screen_shot_2019-01-29_at_10.21.07.png" style="display: block; margin: 0px auto;"></p>
 
 <p>In this example, the contrast ranges from 4.72 to 5.98. The numbers are followed by AAA and a checkmark in green, indicating that the large text has a contrast ratio of 4.5:1 or more, meeting the criteria for enhanced contrast, or Level AAA.</p>
 
@@ -192,13 +192,13 @@ tags:
 
 <h3 id="Accessibility_picker">Accessibility picker</h3>
 
-<p>Like the element picker button on the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Select_an_element#With_the_node_picker">Page Inspector</a>, the <em>Accessibility</em> tab's element picker button allows you to hover and select UI items on the current page  highlight objects in the accessibility tree.</p>
+<p>Like the element picker button on the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Select_an_element#with_the_node_picker">Page Inspector</a>, the <em>Accessibility</em> tab's element picker button allows you to hover and select UI items on the current page  highlight objects in the accessibility tree.</p>
 
 <p>The accessibility tab element picker looks slightly different from the Page Inspector HTML pane picker, as shown below:</p>
 
-<p><img alt="highlighted dom inspector picker button, with a tooltip saying Pick an element from the page" src="https://mdn.mozillademos.org/files/16024/dom-inspector-picker.png" style="border-style: solid; border-width: 1px; width: 1716px;"></p>
+<p><img alt="highlighted dom inspector picker button, with a tooltip saying Pick an element from the page" src="dom-inspector-picker.png" style="border-style: solid; border-width: 1px;"></p>
 
-<p><img alt="highlighted accessibility inspector button, with a tooltip saying Pick accessible object from the page" src="https://mdn.mozillademos.org/files/16023/accessibility-inspector-picker.png" style="border-style: solid; border-width: 1px; width: 1717px;"></p>
+<p><img alt="highlighted accessibility inspector button, with a tooltip saying Pick accessible object from the page" src="accessibility-inspector-picker.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>When you "perform a pick", you see the accessibility object highlighted in the accessibility tree, and the picker is then deactivated. Note, however, that if you hold the <kbd>Shift</kbd> key down when "performing a pick", you can "preview" the accessibility object in the tree (and its properties in the right-hand pane), but then continue picking as many times as you like (the picker does not get cancelled) until you release the <kbd>Shift</kbd> key.</p>
 
@@ -208,11 +208,11 @@ tags:
 
 <p>The Accessibility Inspector is very useful for spotting accessibility problems at a glance. For a start, you can investigate items that don't have a proper text equivalent — images without <code>alt</code> text and form elements without proper labels have a <code>name</code> property of <code>null</code>, for example.</p>
 
-<p><img alt="A form input highlighted in the UI, with information about it shown in the accessibility inspector to reveal that it has no label — it has a name property of null" src="https://mdn.mozillademos.org/files/16027/use-case-no-label.png" style="border-style: solid; border-width: 1px; width: 1182px;"></p>
+<p><img alt="A form input highlighted in the UI, with information about it shown in the accessibility inspector to reveal that it has no label — it has a name property of null" src="use-case-no-label.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>It is also very handy for verifying semantics — you can use the <em>Inspect Accessibility Properties</em> context menu option to quickly see whether an item has the correct role set on it (e.g., whether a button is really a button, or a link is really a link).</p>
 
-<p><img alt="A UI element that looks like a button, with information about it shown in the accessibility inspector to reveal that it isn't a button, it is a section element. It has a name property of null" src="https://mdn.mozillademos.org/files/16026/use-case-fake-button.png" style="border-style: solid; border-width: 1px; width: 1182px;"></p>
+<p><img alt="A UI element that looks like a button, with information about it shown in the accessibility inspector to reveal that it isn't a button, it is a section element. It has a name property of null" src="use-case-fake-button.png" style="border-style: solid; border-width: 1px;"></p>
 
 <h2 id="See_also">See also</h2>
 

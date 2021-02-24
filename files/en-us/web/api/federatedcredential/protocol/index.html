@@ -2,26 +2,32 @@
 title: FederatedCredential.protocol
 slug: Web/API/FederatedCredential/protocol
 tags:
-  - API
-  - Credential Management API
-  - Experimental
-  - FederatedCredential
-  - NeedsExample
-  - Property
-  - Reference
-  - credential management
+- API
+- Credential Management API
+- Experimental
+- FederatedCredential
+- NeedsExample
+- Property
+- Reference
+- credential management
 ---
 <div>{{SeeCompatTable}}{{APIRef("")}}{{securecontext_header}}</div>
 
-<p>The <strong><code>protocol</code></strong> property of the {{domxref("FederatedCredential")}} interface returns a read-only {{domxref("DOMString")}} containing a credential's federated identity protocol. If this property is {{jsxref("null")}}, the protocol may be inferred from the {{domxref("FederatedCredential.provider")}} property.</p>
+<p>The <strong><code>protocol</code></strong> property of the
+  {{domxref("FederatedCredential")}} interface returns a read-only
+  {{domxref("DOMString")}} containing a credential's federated identity protocol. If this
+  property is {{jsxref("null")}}, the protocol may be inferred from the
+  {{domxref("FederatedCredential.provider")}} property.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var protocol = FederatedCredential.protocol</pre>
+<pre
+  class="brush: js">var protocol = FederatedCredential.protocol</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("DOMString")}} containing a credential's federated identity protocol (e.g. <code>openidconnect</code>).</p>
+<p>A {{domxref("DOMString")}} containing a credential's federated identity protocol (e.g.
+  <code>openidconnect</code>).</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -30,20 +36,21 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comments</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Credential Management','#dom-federatedcredential-protocol','protocol')}}</td>
-   <td>{{Spec2('Credential Management')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Credential
+        Management','#dom-federatedcredential-protocol','protocol')}}</td>
+      <td>{{Spec2('Credential Management')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

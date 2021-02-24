@@ -2,26 +2,34 @@
 title: ShadowRoot.mode
 slug: Web/API/ShadowRoot/mode
 tags:
-  - API
-  - Property
-  - Reference
-  - ShadowRoot
-  - mode
-  - shadow dom
+- API
+- Property
+- Reference
+- ShadowRoot
+- mode
+- shadow dom
 ---
 <div>{{APIRef("Shadow DOM")}}</div>
 
-<p>The <strong><code>mode</code></strong> property of the {{domxref("ShadowRoot")}} specifies its mode — either <code>open</code> or <code>closed</code>. This defines whether or not the shadow root's internal features are accessible from JavaScript.</p>
+<p>The <strong><code>mode</code></strong> property of the {{domxref("ShadowRoot")}}
+	specifies its mode — either <code>open</code> or <code>closed</code>. This defines
+	whether or not the shadow root's internal features are accessible from JavaScript.</p>
 
-<p>When the <code>mode</code> of a shadow root is "<code>closed</code>", the shadow root’s implementation internals are inaccessible and unchangeable from JavaScript—in the same way the implementation internals of, for example, the {{HTMLElement("video")}} element are inaccessible and unchangeable from JavaScript.</p>
+<p>When the <code>mode</code> of a shadow root is "<code>closed</code>", the shadow root’s
+	implementation internals are inaccessible and unchangeable from JavaScript—in the same
+	way the implementation internals of, for example, the {{HTMLElement("video")}} element
+	are inaccessible and unchangeable from JavaScript.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>mode</em> = <em>shadowRoot</em>.mode</pre>
+<pre
+	class="brush: js">var <em>mode</em> = <em>shadowRoot</em>.mode</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A value defined in the <code><a href="https://dom.spec.whatwg.org/#enumdef-shadowrootmode">ShadowRootMode</a></code> enum — either <code>open</code> or <code>closed</code>.</p>
+<p>A value defined in the
+	<code><a href="https://dom.spec.whatwg.org/#enumdef-shadowrootmode">ShadowRootMode</a></code>
+	enum — either <code>open</code> or <code>closed</code>.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -46,7 +54,7 @@ if(shadow) {
 		<tr>
 			<td>{{SpecName('DOM WHATWG','#dom-shadowroot-mode','ShadowRoot.mode')}}</td>
 			<td>{{Spec2('DOM WHATWG')}}</td>
-			<td> </td>
+			<td></td>
 		</tr>
 	</tbody>
 </table>

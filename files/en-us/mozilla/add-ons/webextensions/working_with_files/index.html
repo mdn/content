@@ -23,7 +23,7 @@ tags:
 
 <p>This mechanism enables you to get a file from your website (or any location you can define as a URL) to the user’s computer. The key method is {{WebExtAPIRef("downloads.download()")}}, which in its simplest form accepts a URL and downloads the file from that URL to the user’s default downloads folder:</p>
 
-<pre class="brush: js notranslate">browser.downloads.download({url: "https://example.org/image.png"})</pre>
+<pre class="brush: js">browser.downloads.download({url: "https://example.org/image.png"})</pre>
 
 <p>You can let the user download to a location of their choice by specifying the <code><var>saveAs</var></code> parameter.</p>
 
@@ -33,7 +33,7 @@ tags:
 
 <p>The downloads API also provides features to cancel, pause, resume, erase, and remove downloads; search for downloaded files in the download manager; show downloaded files in the computer’s file manager; and open a file in an associated application.</p>
 
-<p>To use this API, you need to have the <code>"downloads"</code><a href="/en-US/docs/Web/API/Permissions#API_permissions"> API permission</a> specified in your<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json"> <code>manifest.json</code></a> file.</p>
+<p>To use this API, you need to have the <code>"downloads"</code><a href="/en-US/docs/Web/API/Permissions#api_permissions"> API permission</a> specified in your<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json"> <code>manifest.json</code></a> file.</p>
 
 <p>Example: <a href="https://github.com/mdn/webextensions-examples/tree/master/latest-download">Latest download</a><br>
  API reference: <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads">downloads API</a></p>
@@ -43,7 +43,7 @@ tags:
 <p>If you want to work with a file from the user’s computer one option is to let the user select a file using the computer’s file browser. Either create a new page or inject code into an existing page to use the <code>file</code> type of the HTML <code>input</code> element to offer the user a file picker. Once the user has picked a file or files, the script associated with the page can access the content of the file using the <a href="/en-US/docs/Web/API/File">DOM File API</a>, in the same way a web application does.</p>
 
 <p>Example: <a href="https://github.com/mdn/webextensions-examples/tree/master/imagify">Imagify</a><br>
- Guide: <a href="/en-US/docs/Using_files_from_web_applications">Using files from web applications</a><br>
+ Guide: <a href="/en-US/docs/Web/API/File/Using_files_from_web_applications">Using files from web applications</a><br>
  API references: <a href="/en-US/docs/Web/HTML/Element/input/file">HTML input element</a> | <a href="/en-US/docs/Web/API/File">DOM File API</a></p>
 
 <div class="note">
@@ -52,10 +52,10 @@ tags:
 
 <h2 id="Open_files_in_an_extension_using_drag_and_drop">Open files in an extension using drag and drop</h2>
 
-<p>The Web Drag and Drop API offers an alternative to using a file picker. To use this method, establish a ‘drop zone’ that fits with your UI, then add listeners for the<a href="/en-US/docs/Web/Events/dragenter"> <code>dragenter</code></a>,<a href="/en-US/docs/Web/Events/dragover"> <code>dragover</code></a>, and<a href="/en-US/docs/Web/Events/drop"> <code>drop</code></a> events to the element. In the handler for the drop event, your code can access any file dropped by the user from the object offered by the <code>dataTransfer</code> property using <code><a href="/en-US/docs/Web/API/DataTransfer/files">DataTransfer.files</a></code>. Your code can then access and manipulate the files using the <a href="/en-US/docs/Web/API/File">DOM File API</a>.</p>
+<p>The Web Drag and Drop API offers an alternative to using a file picker. To use this method, establish a ‘drop zone’ that fits with your UI, then add listeners for the<a href="/en-US/docs/Web/API/Document/dragenter_event"> <code>dragenter</code></a>,<a href="/en-US/docs/Web/API/Document/dragover_event"> <code>dragover</code></a>, and<a href="/en-US/docs/Web/API/Document/drop_event"> <code>drop</code></a> events to the element. In the handler for the drop event, your code can access any file dropped by the user from the object offered by the <code>dataTransfer</code> property using <code><a href="/en-US/docs/Web/API/DataTransfer/files">DataTransfer.files</a></code>. Your code can then access and manipulate the files using the <a href="/en-US/docs/Web/API/File">DOM File API</a>.</p>
 
 <p>Example: <a href="https://github.com/mdn/webextensions-examples/tree/master/imagify">Imagify</a><br>
- Guides: <a href="/en-US/docs/Using_files_from_web_applications">Using files from web applications</a> | <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop">File drag and drop</a><br>
+ Guides: <a href="/en-US/docs/Web/API/File/Using_files_from_web_applications">Using files from web applications</a> | <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop">File drag and drop</a><br>
  API references: <a href="/en-US/docs/Web/API/File">DOM File API</a></p>
 
 <h2 id="Store_files_data_locally_using_the_IndexedDB_file_storage_library">Store files data locally using the IndexedDB file storage library</h2>
@@ -88,7 +88,7 @@ tags:
 
 <h3 id="Creating_the_store_and_saving_the_images">Creating the store and saving the images</h3>
 
-<pre class="brush: js notranslate">async function saveCollectedBlobs(collectionName, collectedBlobs) {
+<pre class="brush: js">async function saveCollectedBlobs(collectionName, collectedBlobs) {
  const storedImages = await getFileStorage({name: "stored-images"});
 
  for (const item of collectedBlobs) {
@@ -104,7 +104,7 @@ tags:
 
 <h3 id="Retrieving_stored_images_for_display">Retrieving stored images for display</h3>
 
-<pre class="brush: js notranslate">export async function loadStoredImages(filter) {
+<pre class="brush: js">export async function loadStoredImages(filter) {
  const imagesStore = await getFileStorage({name: "stored-images"});
  let listOptions = filter ? {includes: filter} : undefined;
  const imagesList = await imagesStore.list(listOptions);
@@ -123,7 +123,7 @@ tags:
 
 <h3 id="Delete_collected_images">Delete collected images</h3>
 
-<pre class="brush: js notranslate">async function removeStoredImages(storedImages) {
+<pre class="brush: js">async function removeStoredImages(storedImages) {
  const imagesStore = await getFileStorage({name: "stored-images"});
  for (const storedImage of storedImages) {
     URL.revokeObjectURL(storedImage.blobUrl);
@@ -142,7 +142,7 @@ tags:
  API References:  <a href="https://rpl.github.io/idb-file-storage/">idb-file-storage library</a></p>
 
 <div class="note">
-<p><strong>Note:</strong> You can also use the full Web <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> to store data from your extension. This can be useful where you need to store data that isn’t handled well by the simple key/value pairs offered by the DOM <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/Storage">Storage API</a>.</p>
+<p><strong>Note:</strong> You can also use the full Web <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> to store data from your extension. This can be useful where you need to store data that isn’t handled well by the simple key/value pairs offered by the DOM <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage">Storage API</a>.</p>
 </div>
 
 <h2 id="Process_files_in_a_local_app">Process files in a local app</h2>
@@ -163,5 +163,5 @@ tags:
 <p>To use this method the extension must request the <code>"nativeMessaging"</code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions"> permission</a> in its <code>manifest.json</code> file. Reciprocally, the native application must grant permission for the extension by including its ID in the <code>"allowed_extensions"</code> field of the app manifest.</p>
 
 <p>Example: <a href="https://github.com/mdn/webextensions-examples/tree/master/native-messaging">Native Messaging</a> (illustrates simple messaging only)<br>
- Guides: <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Native_messaging">Native messaging</a><br>
- API references: <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/runtime">runtime API</a></p>
+ Guides: <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">Native messaging</a><br>
+ API references: <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime">runtime API</a></p>

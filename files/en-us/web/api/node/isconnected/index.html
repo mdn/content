@@ -2,23 +2,29 @@
 title: Node.isConnected
 slug: Web/API/Node/isConnected
 tags:
-  - API
-  - DOM
-  - Node
-  - Property
-  - Reference
+- API
+- DOM
+- Node
+- Property
+- Reference
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <strong><code>isConnected</code></strong> read-only property of the {{domxref("Node")}} interface returns a boolean indicating whether the node is connected (directly or indirectly) to the context object, for example the {{domxref("Document")}} object in the case of the normal DOM, or the {{domxref("ShadowRoot")}} in the case of a shadow DOM.</p>
+<p>The <strong><code>isConnected</code></strong> read-only property of the
+  {{domxref("Node")}} interface returns a boolean indicating whether the node is connected
+  (directly or indirectly) to the context object, for example the {{domxref("Document")}}
+  object in the case of the normal DOM, or the {{domxref("ShadowRoot")}} in the case of a
+  shadow DOM.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>isItConnected</em> = <em>nodeObjectInstance</em>.isConnected</pre>
+<pre
+  class="brush: js">var <em>isItConnected</em> = <em>nodeObjectInstance</em>.isConnected</pre>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{domxref("Boolean")}} that is <code>true</code> if the node is connected to its relevant context object, and <code>false</code> if not.</p>
+<p>A {{domxref("Boolean")}} that is <code>true</code> if the node is connected to its
+  relevant context object, and <code>false</code> if not.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -100,23 +106,20 @@ if (!('isConnected' in Node.prototype)) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('DOM WHATWG','#dom-node-isconnected','isConnected')}}</td>
-			<td>{{Spec2('DOM WHATWG')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM WHATWG','#dom-node-isconnected','isConnected')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.Node.isConnected")}}</p>
-</div>

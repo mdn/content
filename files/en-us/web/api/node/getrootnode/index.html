@@ -2,39 +2,47 @@
 title: Node.getRootNode()
 slug: Web/API/Node/getRootNode
 tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Reference
-  - getRootNode
+- API
+- DOM
+- Method
+- Node
+- Reference
+- getRootNode
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <strong><code>getRootNode()</code></strong> method of the {{domxref("Node")}} interface returns the context object's root, which optionally includes the shadow root if it is available.</p>
+<p>The <strong><code>getRootNode()</code></strong> method of the {{domxref("Node")}}
+  interface returns the context object's root, which optionally includes the shadow root
+  if it is available.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>root</em> = <em>node</em>.getRootNode(<em>options</em>);</pre>
+<pre
+  class="brush: js">var <em>root</em> = <em>node</em>.getRootNode(<em>options</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>options</code> {{optional_inline}}</dt>
- <dd>An object that sets options for getting the root node. The available options are:
- <ul>
-  <li><code>composed</code>: A {{jsxref('Boolean')}} that indicates whether the shadow root should be returned (<code>false</code>, the default), or a root node beyond shadow root (<code>true</code>).</li>
- </ul>
- </dd>
+  <dt><code>options</code> {{optional_inline}}</dt>
+  <dd>An object that sets options for getting the root node. The available options are:
+    <ul>
+      <li><code>composed</code>: A {{jsxref('Boolean')}} that indicates whether the shadow
+        root should be returned (<code>false</code>, the default), or a root node beyond
+        shadow root (<code>true</code>).</li>
+    </ul>
+  </dd>
 </dl>
 
 <h3 id="Returns">Returns</h3>
 
-<p>An object inheriting from {{domxref('Node')}}. This will differ in exact form depending on where you called <code>getRootNode()</code>; for example:</p>
+<p>An object inheriting from {{domxref('Node')}}. This will differ in exact form depending
+  on where you called <code>getRootNode()</code>; for example:</p>
 
 <ul>
- <li>Calling it on an element inside a standard web page will return an {{domxref("HTMLDocument")}} object representing the entire page.</li>
- <li>Calling it on an element inside a shadow DOM will return the associated {{domxref("ShadowRoot")}}.</li>
+  <li>Calling it on an element inside a standard web page will return an
+    {{domxref("HTMLDocument")}} object representing the entire page.</li>
+  <li>Calling it on an element inside a shadow DOM will return the associated
+    {{domxref("ShadowRoot")}}.</li>
 </ul>
 
 <h2 id="Examples">Examples</h2>
@@ -43,7 +51,10 @@ tags:
 
 <pre class="brush: js">rootNode = node.getRootNode();</pre>
 
-<p>This more complex example shows the difference between returning a normal root, and a root including the shadow root. (See the <a href="https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html">full source code</a>):</p>
+<p>This more complex example shows the difference between returning a normal root, and a
+  root including the shadow root. (See the <a
+    href="https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html">full
+    source code</a>):</p>
 
 <pre class="brush: html">&lt;!-- source: https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html --&gt;
 &lt;div class="js-parent"&gt;
@@ -75,20 +86,20 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-node-getrootnode','getRootNode()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM WHATWG','#dom-node-getrootnode','getRootNode()')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

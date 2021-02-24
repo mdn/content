@@ -46,7 +46,7 @@ tags:
 
 <h3 id="Create_a_canvas">Create a canvas</h3>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="600" height="600" style="border:solid black 1px;"&gt;
+<pre class="brush: html">&lt;canvas id="canvas" width="600" height="600" style="border:solid black 1px;"&gt;
   Your browser does not support canvas element.
 &lt;/canvas&gt;
 &lt;br&gt;
@@ -57,7 +57,7 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;
 
 <p>When the page loads, the <code>startup()</code> function shown below will be called.</p>
 
-<pre class="brush: js notranslate">function startup() {
+<pre class="brush: js">function startup() {
   var el = document.getElementById("canvas");
   el.addEventListener("touchstart", handleStart, false);
   el.addEventListener("touchend", handleEnd, false);
@@ -73,12 +73,12 @@ document.addEventListener("DOMContentLoaded", startup);</pre>
 
 <p>We'll keep track of the touches in-progress.</p>
 
-<pre class="brush: js notranslate">var ongoingTouches = [];
+<pre class="brush: js">var ongoingTouches = [];
 </pre>
 
 <p>When a {{Event("touchstart")}} event occurs, indicating that a new touch on the surface has occurred, the <code>handleStart()</code> function below is called.</p>
 
-<pre class="brush: js notranslate">function handleStart(evt) {
+<pre class="brush: js">function handleStart(evt) {
   evt.preventDefault();
   console.log("touchstart.");
   var el = document.getElementById("canvas");
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", startup);</pre>
 
 <p>Each time one or more fingers move, a {{domxref("Element/touchmove_event", "touchmove")}} event is delivered, resulting in our <code>handleMove()</code> function being called. Its responsibility in this example is to update the cached touch information and to draw a line from the previous position to the current position of each touch.</p>
 
-<pre class="brush: js notranslate">function handleMove(evt) {
+<pre class="brush: js">function handleMove(evt) {
   evt.preventDefault();
   var el = document.getElementById("canvas");
   var ctx = el.getContext("2d");
@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", startup);</pre>
 
 <p>When the user lifts a finger off the surface, a {{domxref("Element/touchend_event", "touchend")}} event is sent. We handle this by calling the <code>handleEnd()</code> function below. Its job is to draw the last line segment for each touch that ended and remove the touchpoint from the ongoing touch list.</p>
 
-<pre class="brush: js notranslate">function handleEnd(evt) {
+<pre class="brush: js">function handleEnd(evt) {
   evt.preventDefault();
   log("touchend");
   var el = document.getElementById("canvas");
@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", startup);</pre>
 
 <p>If the user's finger wanders into browser UI, or the touch otherwise needs to be canceled, the {{domxref("Element/touchcancel_event", "touchcancel")}} event is sent, and we call the <code>handleCancel()</code> function below.</p>
 
-<pre class="brush: js notranslate">function handleCancel(evt) {
+<pre class="brush: js">function handleCancel(evt) {
   evt.preventDefault();
   console.log("touchcancel.");
   var touches = evt.changedTouches;
@@ -200,7 +200,7 @@ document.addEventListener("DOMContentLoaded", startup);</pre>
 
 <p>To make each touch's drawing look different, the <code>colorForTouch()</code> function is used to pick a color based on the touch's unique identifier. This identifier is an opaque number, but we can at least rely on it differing between the currently-active touches.</p>
 
-<pre class="brush: js notranslate">function colorForTouch(touch) {
+<pre class="brush: js">function colorForTouch(touch) {
   var r = touch.identifier % 16;
   var g = Math.floor(touch.identifier / 3) % 16;
   var b = Math.floor(touch.identifier / 7) % 16;
@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", startup);</pre>
 
 <p>Some browsers (mobile Safari, for one) re-use touch objects between events, so it's best to copy the properties you care about, rather than referencing the entire object.</p>
 
-<pre class="brush: js notranslate">function copyTouch({ identifier, pageX, pageY }) {
+<pre class="brush: js">function copyTouch({ identifier, pageX, pageY }) {
   return { identifier, pageX, pageY };
 }</pre>
 
@@ -227,7 +227,7 @@ document.addEventListener("DOMContentLoaded", startup);</pre>
 
 <p>The <code>ongoingTouchIndexById()</code> function below scans through the <code>ongoingTouches</code> array to find the touch matching the given identifier then returns that touch's index into the array.</p>
 
-<pre class="brush: js notranslate">function ongoingTouchIndexById(idToFind) {
+<pre class="brush: js">function ongoingTouchIndexById(idToFind) {
   for (var i = 0; i &lt; ongoingTouches.length; i++) {
     var id = ongoingTouches[i].identifier;
 
@@ -241,7 +241,7 @@ document.addEventListener("DOMContentLoaded", startup);</pre>
 
 <h4 id="Showing_whats_going_on">Showing what's going on</h4>
 
-<pre class="brush: js notranslate">function log(msg) {
+<pre class="brush: js">function log(msg) {
   var p = document.getElementById('log');
   p.innerHTML = msg + "\n" + p.innerHTML;
 }</pre>
@@ -258,7 +258,7 @@ document.addEventListener("DOMContentLoaded", startup);</pre>
 
 <p>Since calling <code>preventDefault()</code> on a {{event("touchstart")}} or the first {{domxref("Element/touchmove_event", "touchmove")}} event of a series prevents the corresponding mouse events from firing, it's common to call <code>preventDefault()</code> on <code>touchmove</code> rather than <code>touchstart</code>. That way, mouse events can still fire and things like links will continue to work. Alternatively, some frameworks have taken to refiring touch events as mouse events for this same purpose. (This example is oversimplified and may result in strange behavior. It is only intended as a guide.)</p>
 
-<pre class="brush: js notranslate">function onTouch(evt) {
+<pre class="brush: js">function onTouch(evt) {
   evt.preventDefault();
   if (evt.touches.length &gt; 1 || (evt.type == "touchend" &amp;&amp; evt.touches.length &gt; 0))
     return;

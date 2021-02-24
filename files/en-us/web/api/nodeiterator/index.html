@@ -2,18 +2,22 @@
 title: NodeIterator
 slug: Web/API/NodeIterator
 tags:
-  - API
-  - DOM
+- API
+- DOM
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">The <strong><code>NodeIterator</code></strong> interface represents an iterator over the members of a list of the nodes in a subtree of the DOM. The nodes will be returned in document order.</span></p>
+<p><span class="seoSummary">The <strong><code>NodeIterator</code></strong> interface
+		represents an iterator over the members of a list of the nodes in a subtree of the
+		DOM. The nodes will be returned in document order.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<p>A <code>NodeIterator</code> can be created using the {{domxref("Document.createNodeIterator()")}} method, as follows:</p>
+<p>A <code>NodeIterator</code> can be created using the
+	{{domxref("Document.createNodeIterator()")}} method, as follows:</p>
 
-<pre class="syntaxbox">const <var>nodeIterator</var> = document.createNodeIterator(<var>root</var>, <var>whatToShow</var>, <var>filter</var>);</pre>
+<pre
+	class="brush: js">const <var>nodeIterator</var> = document.createNodeIterator(<var>root</var>, <var>whatToShow</var>, <var>filter</var>);</pre>
 
 <h2 id="Properties">Properties</h2>
 
@@ -21,98 +25,130 @@ tags:
 
 <dl>
 	<dt>{{domxref("NodeIterator.root")}} {{readonlyInline}}</dt>
-	<dd>Returns a {{domxref("Node")}} representing the root node as specified when the <code>NodeIterator</code> was created.</dd>
+	<dd>Returns a {{domxref("Node")}} representing the root node as specified when the
+		<code>NodeIterator</code> was created.</dd>
 	<dt>{{domxref("NodeIterator.whatToShow")}} {{readonlyInline}}</dt>
 	<dd>
-	<p>Returns an <code>unsigned long</code> being a bitmask made of constants describing the types of {{domxref("Node")}} that must to be presented. Non-matching nodes are skipped, but their children may be included, if relevant.</p>
+		<p>Returns an <code>unsigned long</code> being a bitmask made of constants
+			describing the types of {{domxref("Node")}} that must to be presented.
+			Non-matching nodes are skipped, but their children may be included, if
+			relevant.</p>
 
-	<p>The possible values are:</p>
+		<p>The possible values are:</p>
 
-	<table class="standard-table">
-		<thead>
-			<tr>
-				<th class="header" scope="col">Constant</th>
-				<th class="header" scope="col">Numerical value</th>
-				<th class="header" scope="col">Description</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td><code>NodeFilter.SHOW_ALL</code></td>
-				<td><code>-1</code> (that is the max value of <code>unsigned long</code>)</td>
-				<td>Shows all nodes.</td>
-			</tr>
-			<tr>
-				<td><code>NodeFilter.SHOW_ATTRIBUTE</code> {{obsolete_inline}}</td>
-				<td><code>2</code></td>
-				<td>Shows attribute {{ domxref("Attr") }} nodes. This is meaningful only when creating a {{ domxref("NodeIterator") }} with an {{ domxref("Attr") }} node as its root; in this case, it means that the attribute node will appear in the first position of the iteration or traversal. Since attributes are never children of other nodes, they do not appear when traversing over the document tree.</td>
-			</tr>
-			<tr>
-				<td><code>NodeFilter.SHOW_CDATA_SECTION</code> {{obsolete_inline}}</td>
-				<td><code>8</code></td>
-				<td>Shows {{ domxref("CDATASection") }} nodes.</td>
-			</tr>
-			<tr>
-				<td><code>NodeFilter.SHOW_COMMENT</code></td>
-				<td><code>128</code></td>
-				<td>Shows {{ domxref("Comment") }} nodes.</td>
-			</tr>
-			<tr>
-				<td><code>NodeFilter.SHOW_DOCUMENT</code></td>
-				<td><code>256</code></td>
-				<td>Shows {{ domxref("Document") }} nodes.</td>
-			</tr>
-			<tr>
-				<td><code>NodeFilter.SHOW_DOCUMENT_FRAGMENT</code></td>
-				<td><code>1024</code></td>
-				<td>Shows {{ domxref("DocumentFragment") }} nodes.</td>
-			</tr>
-			<tr>
-				<td><code>NodeFilter.SHOW_DOCUMENT_TYPE</code></td>
-				<td><code>512</code></td>
-				<td>Shows {{ domxref("DocumentType") }} nodes.</td>
-			</tr>
-			<tr>
-				<td><code>NodeFilter.SHOW_ELEMENT</code></td>
-				<td><code>1</code></td>
-				<td>Shows {{ domxref("Element") }} nodes.</td>
-			</tr>
-			<tr>
-				<td><code>NodeFilter.SHOW_ENTITY</code> {{obsolete_inline}}</td>
-				<td><code>32</code></td>
-				<td>Shows {{ domxref("Entity") }} nodes. This is meaningful only when creating a {{ domxref("NodeIterator") }} with an {{ domxref("Entity") }} node as its root; in this case, it means that the {{ domxref("Entity") }} node will appear in the first position of the traversal. Since entities are not part of the document tree, they do not appear when traversing over the document tree.</td>
-			</tr>
-			<tr>
-				<td><code>NodeFilter.SHOW_ENTITY_REFERENCE</code> {{obsolete_inline}}</td>
-				<td><code>16</code></td>
-				<td>Shows {{ domxref("EntityReference") }} nodes.</td>
-			</tr>
-			<tr>
-				<td><code>NodeFilter.SHOW_NOTATION</code> {{obsolete_inline}}</td>
-				<td><code>2048</code></td>
-				<td>Shows {{ domxref("Notation") }} nodes. This is meaningful only when creating a {{ domxref("NodeIterator") }} with a {{ domxref("Notation") }} node as its root; in this case, it means that the {{ domxref("Notation") }} node will appear in the first position of the traversal. Since entities are not part of the document tree, they do not appear when traversing over the document tree.</td>
-			</tr>
-			<tr>
-				<td><code>NodeFilter.SHOW_PROCESSING_INSTRUCTION</code></td>
-				<td><code>64</code></td>
-				<td>Shows {{domxref("ProcessingInstruction")}} nodes.</td>
-			</tr>
-			<tr>
-				<td><code>NodeFilter.SHOW_TEXT</code></td>
-				<td><code>4</code></td>
-				<td>Shows {{domxref("Text") }} nodes.</td>
-			</tr>
-		</tbody>
-	</table>
+		<table class="standard-table">
+			<thead>
+				<tr>
+					<th class="header" scope="col">Constant</th>
+					<th class="header" scope="col">Numerical value</th>
+					<th class="header" scope="col">Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><code>NodeFilter.SHOW_ALL</code></td>
+					<td><code>-1</code> (that is the max value of
+						<code>unsigned long</code>)</td>
+					<td>Shows all nodes.</td>
+				</tr>
+				<tr>
+					<td><code>NodeFilter.SHOW_ATTRIBUTE</code> {{obsolete_inline}}</td>
+					<td><code>2</code></td>
+					<td>Shows attribute {{ domxref("Attr") }} nodes. This is meaningful
+						only when creating a {{ domxref("NodeIterator") }} with an {{
+						domxref("Attr") }} node as its root; in this case, it means that
+						the attribute node will appear in the first position of the
+						iteration or traversal. Since attributes are never children of
+						other nodes, they do not appear when traversing over the document
+						tree.</td>
+				</tr>
+				<tr>
+					<td><code>NodeFilter.SHOW_CDATA_SECTION</code> {{obsolete_inline}}
+					</td>
+					<td><code>8</code></td>
+					<td>Shows {{ domxref("CDATASection") }} nodes.</td>
+				</tr>
+				<tr>
+					<td><code>NodeFilter.SHOW_COMMENT</code></td>
+					<td><code>128</code></td>
+					<td>Shows {{ domxref("Comment") }} nodes.</td>
+				</tr>
+				<tr>
+					<td><code>NodeFilter.SHOW_DOCUMENT</code></td>
+					<td><code>256</code></td>
+					<td>Shows {{ domxref("Document") }} nodes.</td>
+				</tr>
+				<tr>
+					<td><code>NodeFilter.SHOW_DOCUMENT_FRAGMENT</code></td>
+					<td><code>1024</code></td>
+					<td>Shows {{ domxref("DocumentFragment") }} nodes.</td>
+				</tr>
+				<tr>
+					<td><code>NodeFilter.SHOW_DOCUMENT_TYPE</code></td>
+					<td><code>512</code></td>
+					<td>Shows {{ domxref("DocumentType") }} nodes.</td>
+				</tr>
+				<tr>
+					<td><code>NodeFilter.SHOW_ELEMENT</code></td>
+					<td><code>1</code></td>
+					<td>Shows {{ domxref("Element") }} nodes.</td>
+				</tr>
+				<tr>
+					<td><code>NodeFilter.SHOW_ENTITY</code> {{obsolete_inline}}</td>
+					<td><code>32</code></td>
+					<td>Shows {{ domxref("Entity") }} nodes. This is meaningful only when
+						creating a {{ domxref("NodeIterator") }} with an {{
+						domxref("Entity") }} node as its root; in this case, it means that
+						the {{ domxref("Entity") }} node will appear in the first position
+						of the traversal. Since entities are not part of the document
+						tree, they do not appear when traversing over the document tree.
+					</td>
+				</tr>
+				<tr>
+					<td><code>NodeFilter.SHOW_ENTITY_REFERENCE</code> {{obsolete_inline}}
+					</td>
+					<td><code>16</code></td>
+					<td>Shows {{ domxref("EntityReference") }} nodes.</td>
+				</tr>
+				<tr>
+					<td><code>NodeFilter.SHOW_NOTATION</code> {{obsolete_inline}}</td>
+					<td><code>2048</code></td>
+					<td>Shows {{ domxref("Notation") }} nodes. This is meaningful only
+						when creating a {{ domxref("NodeIterator") }} with a {{
+						domxref("Notation") }} node as its root; in this case, it means
+						that the {{ domxref("Notation") }} node will appear in the first
+						position of the traversal. Since entities are not part of the
+						document tree, they do not appear when traversing over the
+						document tree.</td>
+				</tr>
+				<tr>
+					<td><code>NodeFilter.SHOW_PROCESSING_INSTRUCTION</code></td>
+					<td><code>64</code></td>
+					<td>Shows {{domxref("ProcessingInstruction")}} nodes.</td>
+				</tr>
+				<tr>
+					<td><code>NodeFilter.SHOW_TEXT</code></td>
+					<td><code>4</code></td>
+					<td>Shows {{domxref("Text") }} nodes.</td>
+				</tr>
+			</tbody>
+		</table>
 	</dd>
 	<dt>{{domxref("NodeIterator.filter")}} {{readonlyInline}}</dt>
 	<dd>Returns a {{domxref("NodeFilter")}} used to select the relevant nodes.</dd>
-	<dt>{{domxref("NodeIterator.expandEntityReferences")}} {{readonlyInline}} {{deprecated_inline}}</dt>
-	<dd>Is a {{domxref("Boolean")}} indicating if, when discarding an {{domxref("EntityReference")}} its whole sub-tree must be discarded at the same time.</dd>
-	<dt>{{domxref("NodeIterator.referenceNode")}} {{readonlyInline}} {{experimental_inline() }}</dt>
+	<dt>{{domxref("NodeIterator.expandEntityReferences")}} {{readonlyInline}}
+		{{deprecated_inline}}</dt>
+	<dd>Is a {{domxref("Boolean")}} indicating if, when discarding an
+		{{domxref("EntityReference")}} its whole sub-tree must be discarded at the same
+		time.</dd>
+	<dt>{{domxref("NodeIterator.referenceNode")}} {{readonlyInline}}
+		{{experimental_inline() }}</dt>
 	<dd>Returns the {{domxref("Node")}} to which the iterator is anchored.</dd>
-	<dt>{{domxref("NodeIterator.pointerBeforeReferenceNode")}} {{readonlyInline}} {{ experimental_inline() }}</dt>
-	<dd>Returns a {{domxref("Boolean")}} flag that indicates whether the {{domxref("NodeIterator")}} is anchored before, the flag being <code>true</code>, or after, the flag being <code>false</code>, the anchor node.</dd>
+	<dt>{{domxref("NodeIterator.pointerBeforeReferenceNode")}} {{readonlyInline}} {{
+		experimental_inline() }}</dt>
+	<dd>Returns a {{domxref("Boolean")}} flag that indicates whether the
+		{{domxref("NodeIterator")}} is anchored before, the flag being <code>true</code>,
+		or after, the flag being <code>false</code>, the anchor node.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -121,11 +157,15 @@ tags:
 
 <dl>
 	<dt>{{domxref("NodeIterator.detach()")}} {{obsolete_inline()}}</dt>
-	<dd>This operation is a no-op. It doesn't do anything. Previously it was telling the engine that the <code>NodeIterator</code> was no more used, but this is now useless.</dd>
+	<dd>This operation is a no-op. It doesn't do anything. Previously it was telling the
+		engine that the <code>NodeIterator</code> was no more used, but this is now
+		useless.</dd>
 	<dt>{{domxref("NodeIterator.previousNode()")}}</dt>
-	<dd>Returns the previous {{domxref("Node")}} in the document, or <code>null</code> if there are none.</dd>
+	<dd>Returns the previous {{domxref("Node")}} in the document, or <code>null</code> if
+		there are none.</dd>
 	<dt>{{domxref("NodeIterator.nextNode()")}}</dt>
-	<dd>Returns the next {{domxref("Node")}} in the document, or <code>null</code> if there are none.</dd>
+	<dd>Returns the next {{domxref("Node")}} in the document, or <code>null</code> if
+		there are none.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
@@ -142,13 +182,16 @@ tags:
 		<tr>
 			<td>{{SpecName('DOM WHATWG', '#nodeiterator', 'NodeIterator')}}</td>
 			<td>{{Spec2('DOM WHATWG')}}</td>
-			<td>Added the <code>referenceNode</code> and <code>pointerBeforeReferenceNode</code> properties.<br>
-			Removed the <code>expandEntityReferences</code> property.<br>
-			The method <code>detach()</code> has been changed to be a no-op.<br>
-			The methods <code>previousNode()</code> and <code>nextNode()</code> don't raise an exception any more.</td>
+			<td>Added the <code>referenceNode</code> and
+				<code>pointerBeforeReferenceNode</code> properties.<br>
+				Removed the <code>expandEntityReferences</code> property.<br>
+				The method <code>detach()</code> has been changed to be a no-op.<br>
+				The methods <code>previousNode()</code> and <code>nextNode()</code> don't
+				raise an exception any more.</td>
 		</tr>
 		<tr>
-			<td>{{SpecName('DOM2 Traversal_Range', 'traversal.html#Iterator-overview', 'NodeIterator')}}</td>
+			<td>{{SpecName('DOM2 Traversal_Range', 'traversal.html#Iterator-overview',
+				'NodeIterator')}}</td>
 			<td>{{Spec2('DOM2 Traversal_Range')}}</td>
 			<td>Initial definition.</td>
 		</tr>
@@ -164,9 +207,9 @@ tags:
 <ul>
 	<li>The creator method: {{domxref("Document.createNodeIterator()")}}.</li>
 	<li>Related interfaces:
-	<ul>
-		<li>{{domxref("NodeFilter")}}</li>
-		<li>{{domxref("TreeWalker")}}</li>
-	</ul>
+		<ul>
+			<li>{{domxref("NodeFilter")}}</li>
+			<li>{{domxref("TreeWalker")}}</li>
+		</ul>
 	</li>
 </ul>

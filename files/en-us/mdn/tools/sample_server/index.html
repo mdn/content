@@ -11,11 +11,11 @@ tags:
 ---
 <div>{{MDNSidebar}}</div>
 
-<p><span class="seoSummary">While MDN's <a href="/en-US/docs/MDN/Kuma">Kuma</a> platform provides a built-in <a href="/en-US/docs/MDN/Contribute/Editor/Live_samples">live sample system</a> for presenting simple (and even not-so-simple) code samples with the code's output displayed in-context, there are things that doesn't allow, and there are samples that require a server to talk to. For those things, we have the MDN sample server, which solves these and other problems.</span> This article is a guide to the use of the sample server.</p>
+<p><span class="seoSummary">While MDN provides a built-in <a href="/en-US/docs/MDN/Structures/Live_samples">live sample system</a> for presenting simple (and even not-so-simple) code samples with the code's output displayed in-context, there are samples that require a server to talk to. For those things, we have the MDN sample server, which solves these and other problems.</span> This article is a guide to the use of the sample server.</p>
 
 <h2 id="Possible_use_cases">Possible use cases</h2>
 
-<p>Most samples can be presented using our built-in <a href="/en-US/docs/MDN/Contribute/Editor/Live_samples">live sample system</a>, but there are exceptions. Here are some reasons an example might need to make use of the sample server:</p>
+<p>Most samples can be presented using our built-in <a href="/en-US/docs/MDN/Structures/Live_samples">live sample system</a>, but there are exceptions. Here are some reasons an example might need to make use of the sample server:</p>
 
 <ul>
  <li>A sample requiring persistently running code on the server, such as a WebSocket server may have the server component and possibly also the client side component on the sample server.</li>
@@ -25,19 +25,7 @@ tags:
 
 <h2 id="Referencing_samples">Referencing samples</h2>
 
-<p>Each sample's code is <a href="https://github.com/mdn/samples-server">maintained on GitHub</a>, and we have a server instance which provides access to executable/usable installations of all of the samples. Each sample has a unique name, and is always referenced just by its name whenever linking to it. This is done using one of the following macros.</p>
-
-<h3 id="GithubSampleLink">GithubSampleLink</h3>
-
-<p>{{TemplateLink("GithubSampleLink")}} creates a link to the sample code, on Github, for the sample with the given name. You can, optionally, specify a custom string to use as the link text.</p>
-
-<h3 id="GithubSampleFileLink">GithubSampleFileLink</h3>
-
-<p>{{TemplateLink("GithubSampleFileLink")}} creates a link to a specific file on Github within a samples code, given the sample name, the sub-path within the sample for the file you want to link to, and, optionally, custom link text.</p>
-
-<h3 id="SampleServerLink">SampleServerLink</h3>
-
-<p>{{TemplateLink("SampleServerLink")}} inserts a link to a user-interactive sample on the sample server. This is used to let the user go to a sample and play with it in the browser; it's not used in cases where a sample is a server-only construct referenced by client-side code found elsewhere. It accepts as input the name of the sample and, optionally, alternative text to use for the link.</p>
+<p>Each sample's code is <a href="https://github.com/mdn/samples-server">maintained on GitHub</a>, and we have a server instance which provides access to executable/usable installations of all of the samples.</p>
 
 <h2 id="Contributing_advanced_samples">Contributing advanced samples</h2>
 
@@ -53,7 +41,7 @@ tags:
 
 <p>The manifest file is used primarily to build lists of samples, but will eventually be used to help improve the startup and shutdown processes for each sample. It's a JSON object which looks like this:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "name": "WebSocket based chat server with WebRTC video chat support",
   "docsUrl": "https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling",
   "description": "Uses Node.js to set up a WebSocket-based chat server, and provides a web page you can use to join the chat. Adds a feature to start a video call with another chat participant."
@@ -75,10 +63,10 @@ tags:
 
 <p>When the sample server starts up or samples are restarted, each sample's base directory is scanned to see if there's a shell script file named <code>startup.sh</code>. If the file exists, it is executed, so that the sample has the opportunity to install support files, run any scripts, and start up any server processes that are needed to support the sample. For example, the <a href="/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">WebSocket chat sample's</a> startup.sh script looks like this:</p>
 
-<pre class="brush: bash notranslate">npm install websocket
+<pre class="brush: bash">npm install websocket
 node chatserver.js</pre>
 
-<p>The first line uses the Node package manager, <code>npm</code>, to install the module named <code>websocket</code>, which provides support for creating and/or talking to <a href="/en-US/docs/Web/API/WebSocket_API">WebSocket</a> servers.</p>
+<p>The first line uses the Node package manager, <code>npm</code>, to install the module named <code>websocket</code>, which provides support for creating and/or talking to <a href="/en-US/docs/Web/API/WebSockets_API">WebSocket</a> servers.</p>
 
 <p>The second line actually starts up the server process, which is implemented as a JavaScript script which is started up and run in the background.</p>
 

@@ -42,11 +42,11 @@ tags:
 <h3 id="Developer_Tools">Developer Tools</h3>
 
 <ul>
- <li><a href="/en-US/docs/Tools/Web_Console/Console_messages#Source_maps">The Web Console now understands source maps.</a></li>
- <li><a href="/en-US/docs/Tools/Storage_Inspector#IndexedDB">The Storage Inspector now lets you delete individual items from IndexedDB object stores.</a></li>
+ <li><a href="/en-US/docs/Tools/Web_Console/Console_messages#source_maps">The Web Console now understands source maps.</a></li>
+ <li><a href="/en-US/docs/Tools/Storage_Inspector#indexeddb">The Storage Inspector now lets you delete individual items from IndexedDB object stores.</a></li>
  <li><a href="/en-US/docs/Tools/Memory">The Memory tool is enabled by default.</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#Computed_view">The Box model view is moved into the Computed view.</a></li>
- <li><a href="/en-US/docs/Tools/Web_Console/Console_messages#Viewing_network_request_details">The Web Console now displays stack traces for XHR or Fetch() network requests.</a></li>
+ <li><a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#computed_view">The Box model view is moved into the Computed view.</a></li>
+ <li><a href="/en-US/docs/Tools/Web_Console/Console_messages#viewing_network_request_details">The Web Console now displays stack traces for XHR or Fetch() network requests.</a></li>
 </ul>
 
 <p><a class="external external-icon" href="https://bugzilla.mozilla.org/buglist.cgi?list_id=13263766&amp;chfield=resolution&amp;chfieldfrom=2016-06-06&amp;chfieldvalue=FIXED&amp;resolution=FIXED&amp;classification=Client%20Software&amp;chfieldto=2016-08-01&amp;query_format=advanced&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;component=Developer%20Tools&amp;component=Developer%20Tools%3A%20about%3Adebugging&amp;component=Developer%20Tools%3A%20Animation%20Inspector&amp;component=Developer%20Tools%3A%20Canvas%20Debugger&amp;component=Developer%20Tools%3A%20Computed%20Styles%20Inspector&amp;component=Developer%20Tools%3A%20Console&amp;component=Developer%20Tools%3A%20CSS%20Rules%20Inspector&amp;component=Developer%20Tools%3A%20Debugger&amp;component=Developer%20Tools%3A%20DOM&amp;component=Developer%20Tools%3A%20Font%20Inspector&amp;component=Developer%20Tools%3A%20Framework&amp;component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&amp;component=Developer%20Tools%3A%20Inspector&amp;component=Developer%20Tools%3A%20JSON%20Viewer&amp;component=Developer%20Tools%3A%20Memory&amp;component=Developer%20Tools%3A%20Netmonitor&amp;component=Developer%20Tools%3A%20Object%20Inspector&amp;component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&amp;component=Developer%20Tools%3A%20Responsive%20Design%20Mode&amp;component=Developer%20Tools%3A%20Scratchpad&amp;component=Developer%20Tools%3A%20Shared%20Components&amp;component=Developer%20Tools%3A%20Source%20Editor&amp;component=Developer%20Tools%3A%20Storage%20Inspector&amp;component=Developer%20Tools%3A%20Style%20Editor&amp;component=Developer%20Tools%3A%20User%20Stories&amp;component=Developer%20Tools%3A%20Web%20Audio%20Editor&amp;component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&amp;component=Developer%20Tools%3A%20WebIDE&amp;product=Firefox">All devtools bugs fixed between Firefox 49 and Firefox 50</a>.</p>
@@ -63,10 +63,10 @@ tags:
 <h3 id="Security">Security</h3>
 
 <ul>
- <li>The {{htmlattrxref("ping", "a")}} attribute of {{htmlelement("a")}} element now abides by the <code><a href="/en-US/docs/Web/Security/CSP/CSP_policy_directives#connect-src">connect-src</a></code> <a href="/en-US/docs/Web/Security/CSP/CSP_policy_directives">CSP 1.1 policy directive</a> ({{bug(1100181)}}).</li>
- <li>Support for the <code><a href="/en-US/docs/Web/Security/CSP/CSP_policy_directives#sandbox">sandbox</a></code> <a href="/en-US/docs/Web/Security/CSP">CSP</a> directive has been added ({{bug(671389)}}).</li>
- <li>It's now possible to set a <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#Content_security_policy">content security policy for workers</a> ({{bug (959388)}}).</li>
- <li>The {{domxref("Navigator.sendBeacon()")}} method no longer throws an exception if the beacon data couldn't be sent due to a <a href="/en-US/docs/Web/Security/CSP">Content Security Policy</a> restriction; instead, it returns <code>false</code> as expected ({{bug(1234813)}}).</li>
+ <li>The {{htmlattrxref("ping", "a")}} attribute of {{htmlelement("a")}} element now abides by the <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#connect-src">connect-src</a></code> <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">CSP 1.1 policy directive</a> ({{bug(1100181)}}).</li>
+ <li>Support for the <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#sandbox">sandbox</a></code> <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> directive has been added ({{bug(671389)}}).</li>
+ <li>It's now possible to set a <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#content_security_policy">content security policy for workers</a> ({{bug (959388)}}).</li>
+ <li>The {{domxref("Navigator.sendBeacon()")}} method no longer throws an exception if the beacon data couldn't be sent due to a <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a> restriction; instead, it returns <code>false</code> as expected ({{bug(1234813)}}).</li>
  <li>Support for RC4 encryption was deprecated in Firefox 36 and disabled by default in Firefox 44. The one-year grace period has ended, so Firefox 50 removes all support for RC4 (Google Chrome removed support for RC4 in August 2016). From now on, any time Firefox encounters RC4 encryption, it will report an <code>SSL_ERROR_NO_CYPHER_OVERLAP</code> error.</li>
 </ul>
 
@@ -85,7 +85,7 @@ tags:
  <li>The <code>once</code> option for {{domxref("EventTarget.addEventListener()")}} is now supported ({{bug(1287706)}}).</li>
  <li>The interface {{domxref("NodeList")}} are now iterable and the methods {{domxref("NodeList.forEach()", "forEach()")}}, {{domxref("NodeList.values()", "values()")}}, {{domxref("NodeList.entries()")}} and {{domxref("NodeList.keys()")}} are now available ({{bug(1290636)}}).</li>
  <li>The interface {{domxref("DOMTokenList")}} are now iterable and the methods {{domxref("DOMTokenList.forEach()", "forEach()")}}, {{domxref("DOMTokenList.values()", "values()")}}, {{domxref("DOMTokenList.entries()")}} and {{domxref("DOMTokenList.keys()")}} are now available ({{bug(1290636)}}).</li>
- <li>The methods {{domxref("Document.createElement()")}} and {{domxref("Document.createElementNS()")}} now have an optional <code>options</code> parameter for creating <a href="/en-US/docs/Web/Web_Components/Custom_Elements">custom elements</a> ({{bug(1276579)}}).</li>
+ <li>The methods {{domxref("Document.createElement()")}} and {{domxref("Document.createElementNS()")}} now have an optional <code>options</code> parameter for creating <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">custom elements</a> ({{bug(1276579)}}).</li>
 </ul>
 
 <h3 id="SVG">SVG</h3>
@@ -143,7 +143,7 @@ tags:
 <ul>
  <li>The {{domxref("PannerNode")}} interface now supports the 3D Cartesian space properties for the position ({{domxref("PannerNode.positionX")}}, {{domxref("PannerNode.positionY")}}, and {{domxref("PannerNode.positionZ")}}) and directionality ({{domxref("PannerNode.orientationX")}}, {{domxref("PannerNode.orientationY")}}, {{domxref("PannerNode.orientationZ")}}) of an audio source.</li>
  <li>The interface {{domxref("IIRFilterNode")}}, which implements a general {{interwiki("wikipedia", "infinite impulse response")}} (IIR) filter, has been implemented.</li>
- <li>Throttling in background tabs of timers created by {{domxref("WindowTimers.setInterval", "Window.setInterval()")}} and {{domxref("WindowTimers.setTimeout", "Window.setTimeout()")}} no longer occurs if a <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> {{domxref("AudioContext")}} is actively playing sound. This should help prevent issues with timing-sensitive audio playback (such as music players generating individual notes using timers) in the background ({{bug(1181073)}}).</li>
+ <li>Throttling in background tabs of timers created by {{domxref("WindowOrWorkerGlobalScope/setInterval", "Window.setInterval()")}} and {{domxref("WindowOrWorkerGlobalScope/setTimeout", "Window.setTimeout()")}} no longer occurs if a <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> {{domxref("AudioContext")}} is actively playing sound. This should help prevent issues with timing-sensitive audio playback (such as music players generating individual notes using timers) in the background ({{bug(1181073)}}).</li>
 </ul>
 
 <h3 id="AudioVideo">Audio/Video</h3>

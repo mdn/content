@@ -2,36 +2,48 @@
 title: GlobalEventHandlers.onanimationcancel
 slug: Web/API/GlobalEventHandlers/onanimationcancel
 tags:
-  - API
-  - Animation
-  - CSS Animations
-  - Document
-  - Element
-  - Event Handler
-  - GlobalEventHandlers
-  - Property
-  - Reference
-  - Web Animations
-  - Window
-  - onanimationcancel
-  - web animations api
+- API
+- Animation
+- CSS Animations
+- Document
+- Element
+- Event Handler
+- GlobalEventHandlers
+- Property
+- Reference
+- Web Animations
+- Window
+- onanimationcancel
+- web animations api
 ---
 <div>{{APIRef("CSS3 Animations")}}</div>
 
-<p>The <code><strong>onanimationcancel</strong></code> property of the {{domxref("GlobalEventHandlers")}} mixin is the {{domxref("EventHandler")}} for processing {{event("animationcancel")}} events.</p>
+<p>The <code><strong>onanimationcancel</strong></code> property of the
+  {{domxref("GlobalEventHandlers")}} mixin is the {{domxref("EventHandler")}} for
+  processing {{event("animationcancel")}} events.</p>
 
-<p>An <code>animationcancel</code> event is sent when a <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS animation</a> unexpectedly aborts, that is, any time it stops running without sending an {{event("animationend")}} event. This can happen, for example, when the {{cssxref("animation-name")}} is changed such that the animation is removed, or when the animating node is hidden—either directly or because any of its containing nodes are hidden—using CSS.</p>
+<p>An <code>animationcancel</code> event is sent when a <a
+    href="/en-US/docs/Web/CSS/CSS_Animations">CSS animation</a> unexpectedly aborts, that
+  is, any time it stops running without sending an {{event("animationend")}} event. This
+  can happen, for example, when the {{cssxref("animation-name")}} is changed such that the
+  animation is removed, or when the animating node is hidden—either directly or because
+  any of its containing nodes are hidden—using CSS.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>animCancelHandler</em> = <em>target</em>.onanimationcancel;
+<pre class="brush: js">var <em>animCancelHandler</em> = <em>target</em>.onanimationcancel;
 
 <em>target</em>.onanimationcancel = <em>{{jsxref("Function")}}</em>
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{jsxref("Function")}} to be called when an {{event("animationcancel")}} event occurs indicating that a CSS animation has begun on the <em><code>target</code></em>, where the target object is an HTML element ({{domxref("HTMLElement")}}), document ({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as input a single parameter: an {{domxref("AnimationEvent")}} object describing the event which occurred.</p>
+<p>A {{jsxref("Function")}} to be called when an {{event("animationcancel")}} event occurs
+  indicating that a CSS animation has begun on the <em><code>target</code></em>, where the
+  target object is an HTML element ({{domxref("HTMLElement")}}), document
+  ({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as
+  input a single parameter: an {{domxref("AnimationEvent")}} object describing the event
+  which occurred.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -52,7 +64,7 @@ tags:
 <h3 id="CSS">CSS</h3>
 
 <div class="hidden">
-<pre class="brush: css">:root {
+  <pre class="brush: css">:root {
   --boxwidth: 50px;
 }
 
@@ -88,7 +100,11 @@ tags:
 </pre>
 </div>
 
-<p>Leaving out some bits of the CSS that don't matter for the discussion here, let's take a look at the styles for the box that we're animating. First is the box itself, with all its properties, including {{cssxref("animation")}}, defined. We go ahead and describe the animation in-place here because the animation is intended to begin as soon as the page loads, rather than based on an event.</p>
+<p>Leaving out some bits of the CSS that don't matter for the discussion here, let's take
+  a look at the styles for the box that we're animating. First is the box itself, with all
+  its properties, including {{cssxref("animation")}}, defined. We go ahead and describe
+  the animation in-place here because the animation is intended to begin as soon as the
+  page loads, rather than based on an event.</p>
 
 <pre class="brush: css">#box {
   width: var(--boxwidth);
@@ -105,7 +121,8 @@ tags:
 }
 </pre>
 
-<p>The animation's keyframes are described next, plotting a course from the top-left corner of the content box to the bottom-right corner.</p>
+<p>The animation's keyframes are described next, plotting a course from the top-left
+  corner of the content box to the bottom-right corner.</p>
 
 <pre class="brush: css">@keyframes slideBox {
   from {
@@ -119,11 +136,17 @@ tags:
 }
 </pre>
 
-<p>Since the animation is described as taking place an infinite number of times, alternating direction each time, the box will glide back and forth between the two corners until stopped or the page is closed.</p>
+<p>Since the animation is described as taking place an infinite number of times,
+  alternating direction each time, the box will glide back and forth between the two
+  corners until stopped or the page is closed.</p>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<p>Before we get to the animation code, we define a function which logs information to a box on the user's screen. We'll use this to show information about the events we receive. Note the use of {{domxref("AnimationEvent.animationName")}} and {{domxref("AnimationEvent.elapsedTime")}} to get information about the event which occurred.</p>
+<p>Before we get to the animation code, we define a function which logs information to a
+  box on the user's screen. We'll use this to show information about the events we
+  receive. Note the use of {{domxref("AnimationEvent.animationName")}} and
+  {{domxref("AnimationEvent.elapsedTime")}} to get information about the event which
+  occurred.</p>
 
 <pre class="brush: js">function log(msg, event) {
   let logBox = document.getElementById("log");
@@ -140,14 +163,19 @@ tags:
 };
 </pre>
 
-<p>Then we set up the <code>handleCancelEvent()</code> function, which is called in response to the {{event("animationcancel")}} event, as set up in the HTML above. All we do here is log information to the console, but you might find other use cases, such as starting a new animation or effect, or terminating some dependent operation.</p>
+<p>Then we set up the <code>handleCancelEvent()</code> function, which is called in
+  response to the {{event("animationcancel")}} event, as set up in the HTML above. All we
+  do here is log information to the console, but you might find other use cases, such as
+  starting a new animation or effect, or terminating some dependent operation.</p>
 
 <pre class="brush: js">function handleCancelEvent(event) {
   log("Animation canceled", event);
 };
 </pre>
 
-<p>Then we add a method to handle toggle {{cssxref("display")}} between <code>"</code><code>flex"</code> and <code>"</code><code>none"</code> and establish it as the handler for a {{event("click")}} event on the "Hide/Show" the Box button:</p>
+<p>Then we add a method to handle toggle {{cssxref("display")}} between
+  <code>"</code><code>flex"</code> and <code>"</code><code>none"</code> and establish it
+  as the handler for a {{event("click")}} event on the "Hide/Show" the Box button:</p>
 
 <pre class="brush: js">document.getElementById('toggleBox').addEventListener('click', function() {
   if (box.style.display == "none") {
@@ -160,7 +188,9 @@ tags:
 });
 </pre>
 
-<p>Toggling the box to <code>display: none</code> has the effect of aborting its animation. In browsers that support {{event("animationcancel")}}, the event is fired and this handler is called.</p>
+<p>Toggling the box to <code>display: none</code> has the effect of aborting its
+  animation. In browsers that support {{event("animationcancel")}}, the event is fired and
+  this handler is called.</p>
 
 <h3 id="Result">Result</h3>
 
@@ -168,23 +198,25 @@ tags:
 
 <p>{{ EmbedLiveSample('Example', 500, 400) }}</p>
 
-<p>If your browser supports <code>animationcancel</code>, hiding the box using the button will cause a message to be displayed about the event.</p>
+<p>If your browser supports <code>animationcancel</code>, hiding the box using the button
+  will cause a message to be displayed about the event.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Animations','#eventdef-animationevent-animationcancel','onanimationcancel')}}</td>
-   <td>{{Spec2('CSS3 Animations')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('CSS3
+        Animations','#eventdef-animationevent-animationcancel','onanimationcancel')}}</td>
+      <td>{{Spec2('CSS3 Animations')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -194,6 +226,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{event("animationcancel")}} event this event handler is triggered by.</li>
- <li>{{domxref("AnimationEvent")}}</li>
+  <li>The {{event("animationcancel")}} event this event handler is triggered by.</li>
+  <li>{{domxref("AnimationEvent")}}</li>
 </ul>

@@ -2,20 +2,24 @@
 title: AudioNode.numberOfOutputs
 slug: Web/API/AudioNode/numberOfOutputs
 tags:
-  - API
-  - AudioNode
-  - Property
-  - Reference
-  - Web Audio API
-  - numberOfOutputs
+- API
+- AudioNode
+- Property
+- Reference
+- Web Audio API
+- numberOfOutputs
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
-<p class="summary"><span class="seoSummary">The <code>numberOfOutputs</code> property of the {{ domxref("AudioNode") }} interface returns the number of outputs coming out of the node.</span> Destination nodes — like {{domxref("AudioDestinationNode") }} — have a value of 0 for this attribute.</p>
+<p class="summary"><span class="seoSummary">The <code>numberOfOutputs</code> property of
+    the {{ domxref("AudioNode") }} interface returns the number of outputs coming out of
+    the node.</span> Destination nodes — like {{domxref("AudioDestinationNode") }} — have
+  a value of 0 for this attribute.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>numOutputs</em> = <em>audioNode</em>.numberOfOutputs;</pre>
+<pre
+  class="brush: js">var <em>numOutputs</em> = <em>audioNode</em>.numberOfOutputs;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -38,29 +42,28 @@ console.log(audioCtx.destination.numberOfOutputs); // 0
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-audionode-numberofoutputs', 'numberOfOutputs')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web Audio API', '#dom-audionode-numberofoutputs',
+        'numberOfOutputs')}}</td>
+      <td>{{Spec2('Web Audio API')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.AudioNode.numberOfOutputs")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio
+      API</a></li>
 </ul>

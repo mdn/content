@@ -2,31 +2,38 @@
 title: MediaRecorder.onstop
 slug: Web/API/MediaRecorder/onstop
 tags:
-  - API
-  - Audio
-  - Media Capture
-  - Media Recorder API
-  - MediaRecorder
-  - Property
-  - Reference
-  - Référence(2)
-  - Video
-  - onstop
+- API
+- Audio
+- Media Capture
+- Media Recorder API
+- MediaRecorder
+- Property
+- Reference
+- Référence(2)
+- Video
+- onstop
 ---
 <div>{{APIRef("Media Recorder API")}}</div>
 
-<p>The <strong><code>MediaRecorder.onstop </code></strong>event handler (part of the <a href="/en-US/docs/Web/API/MediaRecorder_API">MediaRecorder API</a>) handles the <code>stop</code> event, allowing you to run code in response to media recording via a <code>MediaRecorder</code> being stopped.</p>
+<p>The <strong><code>MediaRecorder.onstop </code></strong>event handler (part of the <a
+    href="/en-US/docs/Web/API/MediaRecorder_API">MediaRecorder API</a>) handles the
+  <code>stop</code> event, allowing you to run code in response to media recording via a
+  <code>MediaRecorder</code> being stopped.</p>
 
-<p>The <code>stop</code> event is thrown either as a result of the {{domxref("MediaRecorder.stop()")}} method being invoked, or when the media stream being captured ends. In each case, the <code>stop</code> event is preceded by a <code>dataavailable</code> event, making the {{domxref("Blob")}} captured up to that point available for you to use in your application.</p>
+<p>The <code>stop</code> event is thrown either as a result of the
+  {{domxref("MediaRecorder.stop()")}} method being invoked, or when the media stream being
+  captured ends. In each case, the <code>stop</code> event is preceded by a
+  <code>dataavailable</code> event, making the {{domxref("Blob")}} captured up to that
+  point available for you to use in your application.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">MediaRecorder.onstop = function(event) { ... }
+<pre class="brush: js">MediaRecorder.onstop = function(event) { ... }
 MediaRecorder.addEventListener('stop', function(event) { ... })</pre>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js"><span>...
+<pre class="brush: js">...
 
   mediaRecorder.onstop = function(e) {
     console.log("data available after MediaRecorder.stop() called.");
@@ -41,25 +48,26 @@ MediaRecorder.addEventListener('stop', function(event) { ... })</pre>
 
   mediaRecorder.ondataavailable = function(e) {
     chunks.push(e.data);
-  }</span>
+  }
 
 ...</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("MediaStream Recording", "#dom-mediarecorder-onstop", "MediaRecorder.onstop")}}</td>
-   <td>{{Spec2("MediaStream Recording")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("MediaStream Recording", "#dom-mediarecorder-onstop",
+        "MediaRecorder.onstop")}}</td>
+      <td>{{Spec2("MediaStream Recording")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -69,8 +77,13 @@ MediaRecorder.addEventListener('stop', function(event) { ... })</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API">Using the MediaRecorder API</a></li>
- <li><a href="https://mdn.github.io/web-dictaphone/">Web Dictaphone</a>: MediaRecorder + getUserMedia + Web Audio API visualization demo, by <a href="https://twitter.com/chrisdavidmills">Chris Mills</a> (<a href="https://github.com/mdn/web-dictaphone/">source on Github</a>.)</li>
- <li><a href="http://simpl.info/mediarecorder/">simpl.info MediaStream Recording demo</a>, by <a href="https://twitter.com/sw12">Sam Dutton</a>.</li>
- <li>{{domxref("Navigator.getUserMedia")}}</li>
+  <li><a href="/en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API">Using
+      the MediaRecorder API</a></li>
+  <li><a href="https://mdn.github.io/web-dictaphone/">Web Dictaphone</a>: MediaRecorder +
+    getUserMedia + Web Audio API visualization demo, by <a
+      href="https://twitter.com/chrisdavidmills">Chris Mills</a> (<a
+      href="https://github.com/mdn/web-dictaphone/">source on Github</a>.)</li>
+  <li><a href="http://simpl.info/mediarecorder/">simpl.info MediaStream Recording
+      demo</a>, by <a href="https://twitter.com/sw12">Sam Dutton</a>.</li>
+  <li>{{domxref("Navigator.getUserMedia")}}</li>
 </ul>

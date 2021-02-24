@@ -8,39 +8,19 @@ tags:
 ---
 <div>{{MDNSidebar}}</div>
 
-<p><span class="seoSummary">Sometimes, an article needs a special notice added to it. This might happen if the page covers obsolete technology or other material that shouldn't be used in production code. This article covers the most common such cases and what to do.</span></p>
+<p><span class="seoSummary">Sometimes, an article needs a special notice added to it. This might happen if the page covers deprecated technology or other material that shouldn't be used in production code. This article covers the most common such cases and what to do.</span></p>
 
 <h2 id="How_to_add_notice_boxes">How to add notice boxes</h2>
 
-<p>In most cases, you apply these notices by adding a macro call to inject an appropriate banner into the page content, and by adding a tag to the page's list of tags. Also, if the page includes a compatibility table (most API reference pages do, for example), you should update that table to reflect any compatibility changes.</p>
+<p>In most cases, you apply these notices by adding a macro call to inject an appropriate banner into the page content, and by adding a tag to the page's list of tags.</p>
 
-<p>To do this, you open the editor, then insert the macro call at the top of the article, and change the browser <a href="/en-US/docs/Project:Compatibility_tables">compatibility table</a> (if any); the table should be near the end of the article. Once that's done, scroll to the bottom of the article to find the tag list, and add the new tag to the list. Once you've done that, click the Save Changes button near the top of the window to commit your updates. From then on, an appropriate banner will appear on the page, and any macros that reference page tags when looking for up-to-date articles will know that the page you've updated is obsolete.</p>
+<p>To do this, you insert the macro call at the top of the article, and add the new tag to the list. Once you've done that, raise a pull request and get your changes reviewed and merged. From then on, an appropriate banner will appear on the page, and any macros that reference page tags when looking for up-to-date articles will know that the page you've updated is deprecated, or whatever.</p>
 
-<ul>
- <li>To learn more about editing, see the <a href="/en-US/docs/Project:MDN/Contributing/Editor_guide">MDN editor guide</a>.</li>
- <li>For more information about tagging, see our <a href="/en-US/docs/Project:MDN/Contributing/Tagging_standards">Tagging standards</a> guide.</li>
- <li>To discover more of our custom macros, see the article <a href="/en-US/docs/Project:MDN/Contributing/Custom_macros">Custom macros for MDN</a>.</li>
-</ul>
-
-<p>Sometimes, you might want to flag just a single item in a list of items, or in a table, as obsolete, deprecated, or the like. There are special versions of each of the following macros for that; change "_header" to "_inline" to the end of the macro's name.</p>
-
-<h2 id="Obsolete_content">Obsolete content</h2>
-
-<p>If you come across an article whose content is obsolete -- meaning that everything on that page is out of date and shouldn't be used -- you can mark the page as such by adding the {{TemplateLink("obsolete_header")}} macro at the top of the article. Just open the page's editor and insert this at the top of the article:</p>
-
-<pre class="notranslate">\{{obsolete_header}}</pre>
-
-<p>You should also add the tag "Obsolete" to the tag list at the bottom of the page.</p>
-
-<div class="note">
-<p><strong>Note:</strong> If the article covers a Mozilla-specific technology, you can add the Gecko version in which the technology was removed from Gecko as a parameter to the {{TemplateLink("obsolete_header")}} macro, like this:</p>
-
-<pre class="notranslate">\{{obsolete_header(21)}}</pre>
-
-<p>This will make the banner specify that the technology became obsolete in Gecko 21, with a link to the article <a href="/en-US/docs/Mozilla/Firefox/Releases/21">Firefox 21 for developers</a>.</p>
+<div class="note notecard">
+  <p><strong>Note</strong>: To learn more about editing, see our <a href="https://github.com/mdn/content">content repo README</a>.</p>
 </div>
 
-<p>Eventually, once something is very, very obsolete (that is, it's so obsolete that reading the material might actually cause serious problems), we can move content into our <a href="/en-US/docs/Archive">Archive</a> section. If you see material that you think should be archived, <a href="mailto:mdn-admins@mozilla.org?subject=Archival%20of%20content&amp;body=%3C%3CPlease%20list%20the%20page%20to%20archive%20and%20why%20you%20think%20it%20should%20be%20archived%20here%3E%3E">contact an MDN administrator</a>.</p>
+<p>Sometimes, you might want to flag just a single item in a list of items, or in a table, as obsolete, deprecated, or the like. There are special versions of each of the following macros for that; change "_header" to "_inline" to the end of the macro's name.</p>
 
 <h2 id="Deprecated_content">Deprecated content</h2>
 

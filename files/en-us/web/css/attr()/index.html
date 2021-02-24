@@ -16,7 +16,7 @@ tags:
 
 <p>The <strong><code>attr()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> is used to retrieve the value of an attribute of the selected element and use it in the stylesheet. It can also be used on <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>, in which case the value of the attribute on the pseudo-element's originating element is returned.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Simple usage */
+<pre class="brush: css no-line-numbers">/* Simple usage */
 attr(data-count);
 attr(title);
 
@@ -160,7 +160,7 @@ attr(data-something, "default");
 
 <h3 id="Formal_syntax">Formal syntax</h3>
 
-<pre class="syntaxbox notranslate">{{CSSSyntax}}</pre>
+<pre class="brush: css">{{CSSSyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -168,11 +168,11 @@ attr(data-something, "default");
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p data-foo="hello"&gt;world&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p data-foo="hello"&gt;world&lt;/p&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css highlight[2] notranslate">[data-foo]::before {
+<pre class="brush: css highlight[2]">[data-foo]::before {
   content: attr(data-foo) " ";
 }</pre>
 
@@ -187,17 +187,17 @@ attr(data-something, "default");
 <div id="color-value">
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div class="background" data-background="lime"&gt;background expected to be red if your browser does not support advanced usage of attr()&lt;/div&gt;</pre>
+<pre class="brush: html">&lt;div class="background" data-background="lime"&gt;background expected to be red if your browser does not support advanced usage of attr()&lt;/div&gt;</pre>
 
 <h4 id="CSS_2">CSS</h4>
 
 <div class="hidden">
-<pre class="brush: css notranslate">.background {
+<pre class="brush: css">.background {
   height: 100vh;
 }</pre>
 </div>
 
-<pre class="brush: css highlight[6] notranslate">.background {
+<pre class="brush: css highlight[6]">.background {
   background-color: red;
 }
 

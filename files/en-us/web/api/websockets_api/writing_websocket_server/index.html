@@ -25,7 +25,7 @@ tags:
 
 <p>Constructor:</p>
 
-<pre class="brush: cpp notranslate">TcpListener(System.Net.IPAddress localaddr, int port)</pre>
+<pre class="brush: cpp">TcpListener(System.Net.IPAddress localaddr, int port)</pre>
 
 <p><code>localaddr</code> specifies the IP of the listener, and <code>port</code> specifies the port.</p>
 
@@ -43,7 +43,7 @@ tags:
 
 <p><span style="line-height: 1.572;">Here's a barebones server implementation:</span></p>
 
-<pre class="brush: cpp notranslate">using System.Net.Sockets;
+<pre class="brush: cpp">using System.Net.Sockets;
 using System.Net;
 using System;
 
@@ -90,7 +90,7 @@ class Server {
 
 <p>Let us extend our example.</p>
 
-<pre class="brush: cpp notranslate">TcpClient client = server.AcceptTcpClient();
+<pre class="brush: cpp">TcpClient client = server.AcceptTcpClient();
 
 Console.WriteLine("A client connected.");
 
@@ -111,7 +111,7 @@ while (true) {
 
 <p>This sample code can detect a GET from the client. Note that this will block until the first 3 bytes of a message are available. Alternative solutions should be investigated for production environments.</p>
 
-<pre class="brush: cpp notranslate">using System.Text;
+<pre class="brush: cpp">using System.Text;
 using System.Text.RegularExpressions;
 
 while(client.Available &lt; 3)
@@ -143,7 +143,7 @@ if (Regex.IsMatch(data, "^GET")) {
  <li>Write the hash back as the value of "Sec-WebSocket-Accept" response header in an HTTP response</li>
 </ol>
 
-<pre class="brush: cpp notranslate"> if (new System.Text.RegularExpressions.Regex("^GET").IsMatch(data))
+<pre class="brush: cpp"> if (new System.Text.RegularExpressions.Regex("^GET").IsMatch(data))
 {
     const string eol = "\r\n"; // HTTP/1.1 defines the sequence CR LF as the end-of-line marker
 
@@ -254,7 +254,7 @@ if (Regex.IsMatch(data, "^GET")) {
 
 <p>Example in C#:</p>
 
-<pre class="brush: cpp notranslate">Byte[] decoded = new Byte[3];
+<pre class="brush: cpp">Byte[] decoded = new Byte[3];
 Byte[] encoded = new Byte[3] {112, 16, 109};
 Byte[] mask = new Byte[4] {61, 84, 35, 6};
 
@@ -266,7 +266,7 @@ for (int i = 0; i &lt; encoded.Length; i++) {
 
 <h3 id="wsserver.cs">wsserver.cs</h3>
 
-<pre class="notranslate">//
+<pre class="brush: cpp">//
 // csc wsserver.cs
 // wsserver.exe
 
@@ -361,7 +361,7 @@ class Server {
 
 <h3 id="client.html">client.html</h3>
 
-<pre class="brush: html notranslate">&lt;!doctype html&gt;
+<pre class="brush: html">&lt;!doctype html&gt;
 &lt;style&gt;
     textarea { vertical-align: bottom; }
     #output { overflow: auto; }

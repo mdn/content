@@ -21,7 +21,7 @@ tags:
 
 <p>We could implement touch events on our own — setting up event listeners and assigning relevant functions to them would be quite straightforward:</p>
 
-<pre class="brush: js notranslate">var el = document.getElementsByTagName("canvas")[0];
+<pre class="brush: js">var el = document.getElementsByTagName("canvas")[0];
 el.addEventListener("touchstart", handleStart);
 el.addEventListener("touchmove", handleMove);
 el.addEventListener("touchend", handleEnd);
@@ -46,12 +46,12 @@ el.addEventListener("touchcancel", handleCancel);</pre>
 
 <p>We will use two events: <code>touchstart </code>and,<code>touchmove</code> both handled by one function. Why? The function <code>touchHandler</code> will assign proper variables to the ship's position so that we can use it for both cases: when the player touches the screen but doesn't move it (<code>touchstart</code>), and when the finger is moved on the screen (<code>touchmove</code>):</p>
 
-<pre class="brush: js notranslate">document.addEventListener("touchstart", touchHandler);
+<pre class="brush: js">document.addEventListener("touchstart", touchHandler);
 document.addEventListener("touchmove", touchHandler);</pre>
 
 <p>The <code>touchHandler</code> function looks like this:</p>
 
-<pre class="brush: js notranslate">function touchHandler(e) {
+<pre class="brush: js">function touchHandler(e) {
     if(e.touches) {
         playerX = e.touches[0].pageX - canvas.offsetLeft - playerWidth / 2;
         playerY = e.touches[0].pageY - canvas.offsetTop - playerHeight / 2;
@@ -62,7 +62,7 @@ document.addEventListener("touchmove", touchHandler);</pre>
 
 <p>If the touch occurs (<code>touches</code> object is not empty), then we will have all the info we need in that object. We can get the first touch (<code>e.touches[0]</code>, our example is not multitouch-enabled), extract the <code>pageX</code> and <code>pageY</code> variables and set the player's ship position on the screen by subtracting the Canvas offset (distance from the Canvas and the edge of the screen) and half the player's width and height.</p>
 
-<p><img alt="Touch controls for the player's ship, with visible output of the x and y position." src="https://mdn.mozillademos.org/files/14201/controls-touch.png" style="border-style: solid; border-width: 1px; display: block; height: 436px; margin: 0px auto; width: 575px;"></p>
+<p><img alt="Touch controls for the player's ship, with visible output of the x and y position." src="controls-touch.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>To see if it's working correctly we can output the <code>x</code> and <code>y</code> positions using the <code>output</code> element. The <code>preventDefault()</code> function is needed to prevent the browser from moving — without it you'd have the default behavior, and the Canvas would be dragged around the page, which would show the browser scroll bars and look messy.</p>
 
@@ -84,7 +84,7 @@ document.addEventListener("touchmove", touchHandler);</pre>
 
 <p>Instead of using the pointers directly it is also possible to listen for <code>this.game.input</code> events, like <code>onDown</code>, <code>onUp</code>, <code>onTap</code> and <code>onHold</code>:</p>
 
-<pre class="brush: js notranslate">this.game.input.onDown.add(itemTouched, this);
+<pre class="brush: js">this.game.input.onDown.add(itemTouched, this);
 
 function itemTouched(pointer) {
     // do something
@@ -94,7 +94,7 @@ function itemTouched(pointer) {
 
 <p>This approach uses the generally available <code>this.game.input</code> object, but you can also detect the actions on any game objects like sprites or buttons by using <code>onInputOver</code>, <code>onInputOut</code>, <code>onInputDown</code>, <code>onInputUp</code>, <code>onDragStart</code>, or <code>onDragStop</code>:</p>
 
-<pre class="brush: js notranslate">this.button.events.onInputOver.add(itemTouched, this);
+<pre class="brush: js">this.button.events.onInputOver.add(itemTouched, this);
 
 function itemTouched(button, pointer) {
     // do something
@@ -108,13 +108,13 @@ function itemTouched(button, pointer) {
 
 <p>The easiest way to add an interactive object that will listen for user input is to create a button:</p>
 
-<pre class="brush: js notranslate">var buttonEnclave = this.add.button(10, 10, 'logo-enclave', this.clickEnclave, this);</pre>
+<pre class="brush: js">var buttonEnclave = this.add.button(10, 10, 'logo-enclave', this.clickEnclave, this);</pre>
 
 <p>This one is formed in the <code>MainMenu</code> state — it will be placed ten pixels from the top left corner of the screen, use the <code>logo-enclave</code> image, and execute the <code>clickEnclave()</code> function when it is touched. This will work on mobile and desktop out of the box. There are a few buttons in the main menu, including the one that will start the game.</p>
 
 <p>For the actual gameplay, instead of creating more buttons and covering the small mobile screen with them, we can use something a little bit different: we'll create invisible areas which respond to the given action. From a design point of view, it is better to make the field of activity bigger without covering half of the screen with button images. For example, tapping on the right side of the screen will fire the weapon:</p>
 
-<pre class="brush: js notranslate">this.buttonShoot = this.add.button(this.world.width*0.5, 0, 'button-alpha', null, this);
+<pre class="brush: js">this.buttonShoot = this.add.button(this.world.width*0.5, 0, 'button-alpha', null, this);
 this.buttonShoot.onInputDown.add(this.goShootPressed, this);
 this.buttonShoot.onInputUp.add(this.goShootReleased, this);</pre>
 
@@ -122,7 +122,7 @@ this.buttonShoot.onInputUp.add(this.goShootReleased, this);</pre>
 
 <p>Moving the player could be managed by creating the four directional buttons, but we can take the advantage of touch screens and drag the player's ship around:</p>
 
-<pre class="brush: js notranslate">var player = this.game.add.sprite(30, 30, 'ship');
+<pre class="brush: js">var player = this.game.add.sprite(30, 30, 'ship');
 player.inputEnabled = true;
 player.input.enableDrag();
 player.events.onDragStart.add(onDragStart, this);
@@ -138,14 +138,14 @@ function onDragStart(sprite, pointer) {
 
 <p>You could go even further and use dedicated plugins like <a href="http://phaser.io/shop/plugins/virtualjoystick">Virtual Joystick</a> — this is a paid, official Phaser plugin, but you can find free and <a href="https://github.com/Gamegur-us/phaser-touch-control-plugin">open source alternatives</a>. The initialization of Virtual Joystick looks like this:</p>
 
-<pre class="brush: js notranslate">this.pad = this.game.plugins.add(Phaser.VirtualJoystick);
+<pre class="brush: js">this.pad = this.game.plugins.add(Phaser.VirtualJoystick);
 this.stick = this.pad.addStick(30, 30, 80, 'generic');</pre>
 
 <p>In the <code>create()</code> function of the <code>Game</code> state we're creating a virtual pad and a generic stick that has four directional virtual buttons by default. This is placed 30 pixels from the top and left edges of the screen and is 80 pixels wide.</p>
 
 <p>The stick being pressed can be handled during the gameplay in the <code>update</code> function like so:</p>
 
-<pre class="brush: js notranslate">if(this.stick.isDown) {
+<pre class="brush: js">if(this.stick.isDown) {
     // move the player
 }</pre>
 

@@ -2,28 +2,31 @@
 title: USBDevice.selectConfiguration()
 slug: Web/API/USBDevice/selectConfiguration
 tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - selectConfiguration
+- API
+- Method
+- Reference
+- USB
+- USBDevice
+- WebUSB
+- WebUSB API
+- selectConfiguration
 ---
 <p>{{APIRef("WebUSB API")}}{{SeeCompatTable}}</p>
 
-<p>The <strong><code>selectConfiguration()</code></strong> method of the {{domxref("USBDevice")}} interface returns a {{jsxref("promise")}} that resolves when the specified configuration is selected.</p>
+<p>The <strong><code>selectConfiguration()</code></strong> method of the
+  {{domxref("USBDevice")}} interface returns a {{jsxref("promise")}} that resolves when
+  the specified configuration is selected.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var promise = USBDevice.selectConfiguration(<em>configurationValue</em>)</pre>
+<pre
+  class="brush: js">var promise = USBDevice.selectConfiguration(<em>configurationValue</em>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>configurationValue</dt>
- <dd>The number of a device-specific configuration.</dd>
+  <dt>configurationValue</dt>
+  <dd>The number of a device-specific configuration.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -33,18 +36,19 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web USB','#dom-usbdevice-selectconfiguration','selectConfiguration')}}</td>
-   <td>{{Spec2('Web USB')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web
+        USB','#dom-usbdevice-selectconfiguration','selectConfiguration')}}</td>
+      <td>{{Spec2('Web USB')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

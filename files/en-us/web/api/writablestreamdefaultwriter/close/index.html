@@ -2,23 +2,28 @@
 title: WritableStreamDefaultWriter.close()
 slug: Web/API/WritableStreamDefaultWriter/close
 tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - Streams
-  - WritableStreamDefaultWriter
-  - close
+- API
+- Experimental
+- Method
+- Reference
+- Streams
+- WritableStreamDefaultWriter
+- close
 ---
 <div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
 
-<p class="summary">The <strong><code>close()</code></strong> method of the {{domxref("WritableStreamDefaultWriter")}} interface closes the associated writable stream. </p>
+<p class="summary">The <strong><code>close()</code></strong> method of the
+  {{domxref("WritableStreamDefaultWriter")}} interface closes the associated writable
+  stream. </p>
 
-<p>The underlying sink will finish processing any previously-written chunks, before invoking the close behavior. During this time any further attempts to write will fail (without erroring the stream).</p>
+<p>The underlying sink will finish processing any previously-written chunks, before
+  invoking the close behavior. During this time any further attempts to write will fail
+  (without erroring the stream).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>promise</em> = <em>writableStreamDefaultWriter</em>.close();</pre>
+<pre
+  class="brush: js">var <em>promise</em> = <em>writableStreamDefaultWriter</em>.close();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -26,18 +31,27 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{jsxref("Promise")}}, which fulfills with the <code>undefined</code> if all remaining chunks were successfully written before the close, or rejects with an error if a problem was encountered during the process.</p>
+<p>A {{jsxref("Promise")}}, which fulfills with the <code>undefined</code> if all
+  remaining chunks were successfully written before the close, or rejects with an error if
+  a problem was encountered during the process.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
 <dl>
- <dt>TypeError</dt>
- <dd>The stream you are trying to close is not a {{domxref("WritableStream")}}.</dd>
+  <dt>TypeError</dt>
+  <dd>The stream you are trying to close is not a {{domxref("WritableStream")}}.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following example shows the creation of a <code>WritableStream</code> with a custom sink and an API-supplied queuing strategy. It then calls a function called <code>sendMessage()</code>, passing the newly created stream and a string. Inside this function it calls the stream's <code>getWriter()</code> method, which returns an instance of {{domxref("WritableStreamDefaultWriter")}}. A <code>forEach()</code> call is used to write each chunk of the string to the stream. Finally, <code>write()</code> and <code>close()</code> return promises that are processed to deal with success or failure of chunks and streams.</p>
+<p>The following example shows the creation of a <code>WritableStream</code> with a custom
+  sink and an API-supplied queuing strategy. It then calls a function called
+  <code>sendMessage()</code>, passing the newly created stream and a string. Inside this
+  function it calls the stream's <code>getWriter()</code> method, which returns an
+  instance of {{domxref("WritableStreamDefaultWriter")}}. A <code>forEach()</code> call is
+  used to write each chunk of the string to the stream. Finally, <code>write()</code> and
+  <code>close()</code> return promises that are processed to deal with success or failure
+  of chunks and streams.</p>
 
 <pre class="brush: js">const list = document.querySelector('ul');
 
@@ -102,23 +116,25 @@ const writableStream = new WritableStream({
 
 sendMessage("Hello, world.", writableStream);</pre>
 
-<p>You can find the full code in our <a href="https://mdn.github.io/dom-examples/streams/simple-writer/">Simple writer example</a>.</p>
+<p>You can find the full code in our <a
+    href="https://mdn.github.io/dom-examples/streams/simple-writer/">Simple writer
+    example</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Streams","#default-writer-close","close()")}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("Streams","#default-writer-close","close()")}}</td>
+      <td>{{Spec2('Streams')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

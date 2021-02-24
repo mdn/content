@@ -2,72 +2,72 @@
 title: Client.type
 slug: Web/API/Client/type
 tags:
-  - API
-  - Client
-  - Property
-  - Reference
-  - Service Workers
-  - Type
+- API
+- Client
+- Property
+- Reference
+- Service Workers
+- Type
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
-<p>The <code><strong>type</strong></code> read-only property of the {{domxref("Client")}} interface indicates the type of client the service worker is controlling.</p>
+<p>The <code><strong>type</strong></code> read-only property of the {{domxref("Client")}}
+  interface indicates the type of client the service worker is controlling.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>myClientType</em> = <em>client</em>.type;</pre>
+<pre
+  class="brush: js">var <em>myClientType</em> = <em>client</em>.type;</pre>
 
 <h3 id="Value">Value</h3>
 
 <p>A string, representing the client type. The value can be one of</p>
 
 <ul>
- <li><code>"window"</code></li>
- <li><code>"worker"</code></li>
- <li><code>"sharedworker"</code></li>
+  <li><code>"window"</code></li>
+  <li><code>"worker"</code></li>
+  <li><code>"sharedworker"</code></li>
 </ul>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// service worker client (e.g. a document)</span>
-<span class="keyword token">function</span> <span class="function token">sendMessage</span><span class="punctuation token">(</span>message<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">return</span> <span class="keyword token">new</span> <span class="class-name token">Promise</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>resolve<span class="punctuation token">,</span> reject<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="comment token">// note that this is the ServiceWorker.postMessage version</span>
-    navigator<span class="punctuation token">.</span>serviceWorker<span class="punctuation token">.</span>controller<span class="punctuation token">.</span><span class="function token">postMessage</span><span class="punctuation token">(</span>message<span class="punctuation token">)</span><span class="punctuation token">;</span>
-    window<span class="punctuation token">.</span>serviceWorker<span class="punctuation token">.</span>onMessage <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="function token">resolve</span><span class="punctuation token">(</span>e<span class="punctuation token">.</span>data<span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+<pre
+  class="brush: js line-numbers language-js">// service worker client (e.g. a document)
+function sendMessage(message) {
+  return new Promise(function(resolve, reject) {
+    // note that this is the ServiceWorker.postMessage version
+    navigator.serviceWorker.controller.postMessage(message);
+    window.serviceWorker.onMessage = function(e) {
+      resolve(e.data);
+    };
+  });
+}
 
-<span class="comment token">// controlling service worker</span>
-self<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"message"</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="comment token">// e.source is a client object</span>
-  e<span class="punctuation token">.</span>source<span class="punctuation token">.</span><span class="function token">postMessage</span><span class="punctuation token">(</span><span class="string token">"Hello! Your message was: "</span> <span class="operator token">+</span> e<span class="punctuation token">.</span>data<span class="punctuation token">);
+// controlling service worker
+self.addEventListener("message", function(e) {
+  // e.source is a client object
+  e.source.postMessage("Hello! Your message was: " + e.data);
   // Let's also post the type value back to the client
-</span>  e<span class="punctuation token">.</span>source<span class="punctuation token">.</span><span class="function token">postMessage</span><span class="punctuation token">(e.source.type);</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+  e.source.postMessage(e.source.type);
+});</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#client-type', 'type')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Service Workers', '#client-type', 'type')}}</td>
+      <td>{{Spec2('Service Workers')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.Client.type")}}</p>
-</div>

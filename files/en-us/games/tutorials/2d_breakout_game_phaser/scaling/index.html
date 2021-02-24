@@ -15,7 +15,7 @@ tags:
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework", "Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}</p>
 
 <div class="summary">
-<p>This is the <strong>2nd step</strong> out of 16 of the <a href="/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson02.html">Gamedev-Phaser-Content-Kit/demos/lesson02.html</a>.</p>
+<p>This is the <strong>2nd step</strong> out of 16 of the <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser">Gamedev Phaser tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson02.html">Gamedev-Phaser-Content-Kit/demos/lesson02.html</a>.</p>
 </div>
 
 <p><span class="seoSummary">Scaling refers to how the game canvas will scale on different screen sizes. We can make the game scale to fit on any screen size automatically during the preload stage, so we don't have to worry about it later.</span></p>
@@ -24,7 +24,7 @@ tags:
 
 <p>There's a special <code>scale</code> object available in Phaser with a few handy methods and properties available. Update your existing <code>preload()</code> function as follows:</p>
 
-<pre class="brush: js notranslate">function preload() {
+<pre class="brush: js">function preload() {
     game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
     game.scale.pageAlignHorizontally = true;
     game.scale.pageAlignVertically = true;
@@ -47,7 +47,7 @@ tags:
 
 <p>We can also add a custom background color to our canvas, so it won't stay black. The <code>stage</code> object has a <code>backgroundColor</code> property for this purpose, which we can set using CSS color definition syntax. Add the following line below the other three you added earlier:</p>
 
-<pre class="brush: js notranslate">game.stage.backgroundColor = '#eee';
+<pre class="brush: js">game.stage.backgroundColor = '#eee';
 </pre>
 
 <h2 id="Compare_your_code">Compare your code</h2>
@@ -58,6 +58,6 @@ tags:
 
 <h2 id="Next_steps">Next steps</h2>
 
-<p>Now we've set up the scaling for our game, let's continue to the third lesson and work out how to <a href="/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen">load the assets and print them on screen</a>.</p>
+<p>Now we've set up the scaling for our game, let's continue to the third lesson and work out how to <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen">load the assets and print them on screen</a>.</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework", "Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}</p>

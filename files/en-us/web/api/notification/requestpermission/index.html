@@ -25,11 +25,11 @@ tags:
 
 <p>The latest spec has updated this method to a promise-based syntax that works like this:</p>
 
-<pre class="notranslate">Notification.requestPermission().then(function(permission) { ... });</pre>
+<pre>Notification.requestPermission().then(function(permission) { ... });</pre>
 
 <p>Previously, the syntax was based on a simple callback; this version is now deprecated:</p>
 
-<pre class="notranslate">Notification.requestPermission(<var>callback</var>);</pre>
+<pre>Notification.requestPermission(<var>callback</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -52,11 +52,11 @@ tags:
 
 <p>Assume this basic HTML:</p>
 
-<pre class="brush: html notranslate">&lt;button onclick="notifyMe()"&gt;Notify me!&lt;/button&gt;</pre>
+<pre class="brush: html">&lt;button onclick="notifyMe()"&gt;Notify me!&lt;/button&gt;</pre>
 
 <p>It's possible to send a notification as follows — here we present a fairly verbose and complete set of code you could use if you wanted to first check whether notifications are supported, then check if permission has been granted for the current origin to send notifications, then request permission if required, before then sending a notification.</p>
 
-<pre class="brush: js notranslate">function notifyMe() {
+<pre class="brush: js">function notifyMe() {
   // Let's check if the browser supports notifications
   if (!("Notification" in window)) {
     alert("This browser does not support desktop notification");

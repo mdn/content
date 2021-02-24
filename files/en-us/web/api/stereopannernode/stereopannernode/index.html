@@ -2,21 +2,26 @@
 title: StereoPannerNode.StereoPannerNode()
 slug: Web/API/StereoPannerNode/StereoPannerNode
 tags:
-  - API
-  - Audio
-  - Constructor
-  - Media
-  - Reference
-  - StereoPannerNode
-  - Web Audio API
+- API
+- Audio
+- Constructor
+- Media
+- Reference
+- StereoPannerNode
+- Web Audio API
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
-<p>The <strong><code>StereoPannerNode()</code></strong> constructor of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> creates a new {{domxref("StereoPannerNode")}} object which is an {{domxref("AudioNode")}} that represents a simple stereo panner node that can be used to pan an audio stream left or right.</p>
+<p>The <strong><code>StereoPannerNode()</code></strong> constructor of the <a
+		href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> creates a new
+	{{domxref("StereoPannerNode")}} object which is an {{domxref("AudioNode")}} that
+	represents a simple stereo panner node that can be used to pan an audio stream left or
+	right.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var stereoPannerNode = StereoPannerNode(context, options)</pre>
+<pre
+	class="brush: js">var stereoPannerNode = StereoPannerNode(context, options)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -27,9 +32,12 @@ tags:
 	<dd>A reference to an {{domxref("AudioContext")}}.</dd>
 	<dt><em>options</em> {{optional_inline}}</dt>
 	<dd>Options are as follows:
-	<ul>
-		<li><code>pan</code>: A floating point number in the range [-1,1] indicating the position of an {{domxref("AudioNode")}} in an output image. The value -1 represents full left and 1 represents full right. The default value is <code>0</code>.</li>
-	</ul>
+		<ul>
+			<li><code>pan</code>: A floating point number in the range [-1,1] indicating
+				the position of an {{domxref("AudioNode")}} in an output image. The value
+				-1 represents full left and 1 represents full right. The default value is
+				<code>0</code>.</li>
+		</ul>
 	</dd>
 </dl>
 
@@ -47,7 +55,8 @@ tags:
 			<th scope="col">Comment</th>
 		</tr>
 		<tr>
-			<td>{{SpecName('Web Audio API','#dom-stereopannernode-stereopannernode','StereoPannerNode()')}}</td>
+			<td>{{SpecName('Web Audio
+				API','#dom-stereopannernode-stereopannernode','StereoPannerNode()')}}</td>
 			<td>{{Spec2('Web Audio API')}}</td>
 			<td>Initial definition.</td>
 		</tr>
@@ -58,5 +67,5 @@ tags:
 
 <div>
 
-<p>{{Compat("api.StereoPannerNode.StereoPannerNode")}}</p>
+	<p>{{Compat("api.StereoPannerNode.StereoPannerNode")}}</p>
 </div>

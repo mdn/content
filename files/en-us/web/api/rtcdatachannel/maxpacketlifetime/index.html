@@ -2,27 +2,35 @@
 title: RTCDataChannel.maxPacketLifeTime
 slug: Web/API/RTCDataChannel/maxPacketLifeTime
 tags:
-  - Experimental
-  - NeedsExample
-  - Property
-  - RTCDataChannel
-  - Read-only
-  - Reference
-  - WebRTC
-  - maxPacketLifeTime
+- Experimental
+- NeedsExample
+- Property
+- RTCDataChannel
+- Read-only
+- Reference
+- WebRTC
+- maxPacketLifeTime
 ---
 <p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
 
-<p><span class="seoSummary">The read-only <code>RTCDataChannel</code> property <code><strong>maxPacketLifeTime</strong></code> returns the amount of time, in milliseconds, the browser is allowed to take to attempt to transmit a message, as set when the data channel was created, or <code>null</code>.</span> This limits how long the browser can continue to attempt to transmit and retransmit the message before giving up.</p>
+<p><span class="seoSummary">The read-only <code>RTCDataChannel</code> property
+    <code><strong>maxPacketLifeTime</strong></code> returns the amount of time, in
+    milliseconds, the browser is allowed to take to attempt to transmit a message, as set
+    when the data channel was created, or <code>null</code>.</span> This limits how long
+  the browser can continue to attempt to transmit and retransmit the message before giving
+  up.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>lifetime</em> = <em>aDataChannel</em>.maxPacketLifeTime;
+<pre class="brush: js">var <em>lifetime</em> = <em>aDataChannel</em>.maxPacketLifeTime;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>The number of milliseconds over which the browser may continue to attempt to transmit the message until it either succeeds or gives up. If not set when {{domxref("RTCPeerConnection.createDataChannel()")}} was called to create the data channel, this value is <code>null</code>.</p>
+<p>The number of milliseconds over which the browser may continue to attempt to transmit
+  the message until it either succeeds or gives up. If not set when
+  {{domxref("RTCPeerConnection.createDataChannel()")}} was called to create the data
+  channel, this value is <code>null</code>.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -32,20 +40,21 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('WebRTC 1.0', '#dom-datachannel-maxpacketlifetime', 'RTCDataChannel.maxPacketLifeTime') }}</td>
-   <td>{{ Spec2('WebRTC 1.0') }}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ SpecName('WebRTC 1.0', '#dom-datachannel-maxpacketlifetime',
+        'RTCDataChannel.maxPacketLifeTime') }}</td>
+      <td>{{ Spec2('WebRTC 1.0') }}</td>
+      <td>Initial specification.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -55,8 +64,8 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
- <li>{{domxref("RTCDataChannel")}}</li>
- <li>{{domxref("RTCDataChannel.maxRetransmits")}}</li>
- <li>{{domxref("RTCPeerConnection.createDataChannel()")}}</li>
+  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+  <li>{{domxref("RTCDataChannel")}}</li>
+  <li>{{domxref("RTCDataChannel.maxRetransmits")}}</li>
+  <li>{{domxref("RTCPeerConnection.createDataChannel()")}}</li>
 </ul>

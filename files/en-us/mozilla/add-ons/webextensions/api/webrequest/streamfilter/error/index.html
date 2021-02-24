@@ -12,9 +12,7 @@ tags:
 ---
 <div>{{AddonSidebar()}}</div>
 
-<div>
 <p>A string that will contain an error message after the {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} event has fired.</p>
-</div>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
@@ -26,20 +24,20 @@ tags:
 
 <p>This example adds an {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} listener which logs the value of <code>error</code>.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">listener</span><span class="punctuation token">(</span>details<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">let</span> filter <span class="operator token">=</span> browser<span class="punctuation token">.</span>webRequest<span class="punctuation token">.</span><span class="function token">filterResponseData</span><span class="punctuation token">(</span><span class="string token">"12345"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers  language-js">function listener(details) {
+  let filter = browser.webRequest.filterResponseData(&quot;12345&quot;);
 
-  filter<span class="punctuation token">.</span>onerror <span class="operator token">=</span> event <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="template-string token"><span class="string token">`Error: </span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span>filter<span class="punctuation token">.</span>error<span class="interpolation-punctuation punctuation token">}</span></span><span class="string token">`</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
+  filter.onerror = event =&gt; {
+    console.log(`Error: ${filter.error}`);
+  }
 
-  <span class="keyword token">//return</span> <span class="punctuation token">{</span><span class="punctuation token">}</span><span class="punctuation token">; // not needed</span>
-<span class="punctuation token">}</span>
+  //return {}; // not needed
+}
 
-browser<span class="punctuation token">.</span>webRequest<span class="punctuation token">.</span>onBeforeRequest<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span>
-  listener<span class="punctuation token">,</span>
-  <span class="punctuation token">{</span>urls<span class="punctuation token">:</span> <span class="punctuation token">[</span><span class="string token">"&lt;all_urls&gt;"</span><span class="punctuation token">]</span><span class="punctuation token">,</span> types<span class="punctuation token">:</span> <span class="punctuation token">[</span><span class="string token">"main_frame"</span><span class="punctuation token">]</span><span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="punctuation token">[</span><span class="string token">"blocking"</span><span class="punctuation token">]</span>
-<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+browser.webRequest.onBeforeRequest.addListener(
+  listener,
+  {urls: [&quot;&lt;all_urls&gt;&quot;], types: [&quot;main_frame&quot;]},
+  [&quot;blocking&quot;]
+);</pre>
 
 <p>{{WebExtExamples}}</p>

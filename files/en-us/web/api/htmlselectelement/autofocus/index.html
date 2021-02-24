@@ -2,25 +2,33 @@
 title: HTMLSelectElement.autofocus
 slug: Web/API/HTMLSelectElement/autofocus
 tags:
-  - API
-  - HTML forms
-  - HTMLSelectElement
-  - Property
-  - Reference
+- API
+- HTML forms
+- HTMLSelectElement
+- Property
+- Reference
 ---
 <p>{{ APIRef("HTML DOM") }}</p>
 
-<p>The <code><strong>HTMLSelectElement.autofocus</strong></code> property is a {{jsxref("Boolean")}} that reflects the {{htmlattrxref("autofocus", "select")}} HTML attribute, which indicates whether the associated {{HTMLElement("select")}} element  will get input focus when the page loads, unless the user overrides it.</p>
+<p>The <code><strong>HTMLSelectElement.autofocus</strong></code> property is
+  a {{jsxref("Boolean")}} that reflects the {{htmlattrxref("autofocus", "select")}} HTML
+  attribute, which indicates whether the associated {{HTMLElement("select")}} element 
+  will get input focus when the page loads, unless the user overrides it.</p>
 
-<p>Only one form-associated element in a document can have this attribute specified. If there are several, the first element with the attribute set inserted, usually the first such element on the page, get the initial focus.</p>
+<p>Only one form-associated element in a document can have this attribute specified. If
+  there are several, the first element with the attribute set inserted, usually the first
+  such element on the page, get the initial focus.</p>
 
 <div class="note">
-<p>Setting this property doesn't set the focus to the associated {{HTMLElement("select")}} element: it merely tells the browser to focus to it when <em>the element is inserted</em> in the document. Setting it after the insertion, that is most of the time after the document load, has no visible effect.</p>
+  <p>Setting this property doesn't set the focus to the associated
+    {{HTMLElement("select")}} element: it merely tells the browser to focus to it when
+    <em>the element is inserted</em> in the document. Setting it after the insertion, that
+    is most of the time after the document load, has no visible effect.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">aBool = aSelectElement.autofocus; // Get the value of autofocus
+<pre class="brush: js">aBool = aSelectElement.autofocus; // Get the value of autofocus
 aSelectElement.autofocus = aBool; // Set the value of autofocus
 </pre>
 
@@ -43,27 +51,32 @@ var hasAutofocus = document.getElementById('mySelect').autofocus;
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-fe-autofocus', 'autofocus')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.2', 'sec-forms.html#autofocusing-a-form-control-the-autofocus-attribute', 'autofocus')}}</td>
-   <td>{{Spec2('HTML5.2')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#dom-fe-autofocus', 'autofocus')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML5.2',
+        'sec-forms.html#autofocusing-a-form-control-the-autofocus-attribute',
+        'autofocus')}}</td>
+      <td>{{Spec2('HTML5.2')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+<p class="hidden">The compatibility table in this page is generated from structured data.
+  If you'd like to contribute to the data, please check out <a
+    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+  and send us a pull request.</p>
 
 <p>{{Compat("api.HTMLSelectElement.autofocus")}}</p>

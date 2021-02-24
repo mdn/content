@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">/* Single values */
+<pre class="brush: css">/* Single values */
 font-weight: normal;
 font-weight: bold;
 font-weight: 400;
@@ -39,7 +39,7 @@ font-weight: 300 500;
  <dt><code>bold</code></dt>
  <dd>Bold font weight. Same as <code>700</code>.</dd>
  <dt><code>&lt;number&gt;</code></dt>
- <dd>A {{cssxref("&lt;number&gt;")}} value between 1 and 1000, inclusive. Higher numbers represent weights that are bolder than (or as bold as) lower numbers. Certain commonly used values correspond to common weight names, as described in the <a href="#Common_weight_name_mapping">Common weight name mapping</a> section below.</dd>
+ <dd>A {{cssxref("&lt;number&gt;")}} value between 1 and 1000, inclusive. Higher numbers represent weights that are bolder than (or as bold as) lower numbers. Certain commonly used values correspond to common weight names, as described in the <a href="#common_weight_name_mapping">Common weight name mapping</a> section below.</dd>
 </dl>
 
 <p>In earlier versions of the <code>font-weight</code> specification, the property accepts only keyword values and the numeric values 100, 200, 300, 400, 500, 600, 700, 800, and 900; non-variable fonts can only really make use of these set values, although fine-grained values (e.g. 451) will be translated to one of these values for non-variable fonts.</p>
@@ -99,7 +99,7 @@ font-weight: 300 500;
 
 <h3 id="Variable_fonts">Variable fonts</h3>
 
-<p>Most fonts have a particular weight which corresponds to one of the numbers in <a href="#Common_weight_name_mapping">Common weight name mapping</a>. However some fonts, called variable fonts, can support a range of weights with more or less fine granularity, and this can give the designer a much closer degree of control over the chosen weight.</p>
+<p>Most fonts have a particular weight which corresponds to one of the numbers in <a href="#common_weight_name_mapping">Common weight name mapping</a>. However some fonts, called variable fonts, can support a range of weights with more or less fine granularity, and this can give the designer a much closer degree of control over the chosen weight.</p>
 
 <p>For TrueType or OpenType variable fonts, the "wght" variation is used to implement varying weights.</p>
 
@@ -118,7 +118,7 @@ font-weight: 300 500;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -126,7 +126,7 @@ font-weight: 300 500;
 
 <p>The following finds a local Open Sans font or imports it, and allows using the font for normal font weights.</p>
 
-<pre class="brush: css notranslate">@font-face {
+<pre class="brush: css">@font-face {
   font-family: "Open Sans";
   src: local("Open Sans") format("woff2"),
        url("/fonts/OpenSans-Regular-webfont.woff") format("woff");

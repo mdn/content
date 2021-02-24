@@ -63,8 +63,8 @@ const someObj = {
   }
 }
 
-[...new Foo] // [ 1, 2, 3 ]
-[...someObj] // [ 'a', 'b' ]
+console.log(...new Foo); // 1, 2, 3 
+console.log(...someObj); // 'a', 'b'
 </pre>
 
 <h3 id="Non-well-formed_iterables">Non-well-formed iterables</h3>

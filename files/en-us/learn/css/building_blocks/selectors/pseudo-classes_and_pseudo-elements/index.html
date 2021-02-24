@@ -33,7 +33,7 @@ tags:
 
 <p>Pseudo-classes are keywords that start with a colon:</p>
 
-<pre class="notranslate">:<em>pseudo-class-name</em></pre>
+<pre>:<em>pseudo-class-name</em></pre>
 
 <h3 id="Simple_pseudo-class_example">Simple pseudo-class example</h3>
 
@@ -72,7 +72,7 @@ tags:
 
 <p>Pseudo-elements behave in a similar way, however they act as if you had added a whole new HTML element into the markup, rather than applying a class to existing elements. Pseudo-elements start with a double colon <code>::</code>.</p>
 
-<pre class="notranslate"><em>::pseudo-element-name</em></pre>
+<pre><em>::pseudo-element-name</em></pre>
 
 <div class="notecard note">
 <p><strong>Note</strong>: Some early pseudo-elements used the single colon syntax, so you may sometimes see this in code or examples. Modern browsers support the early pseudo-elements with single- or double-colon syntax for backwards compatibility.</p>
@@ -92,10 +92,10 @@ tags:
 
 <p>If you wanted to make the first line of the first paragraph bold you could chain the <code>:first-child</code> and <code>::first-line</code> selectors together. Try editing the previous live example so it uses the following CSS. We are saying that we want to select the first line, of the first <code>&lt;p&gt;</code> element, which is inside an <code>&lt;article&gt;</code> element.</p>
 
-<pre class="brush: css notranslate"><code>article p:first-child::first-line {
+<pre class="brush: css">article p:first-child::first-line {
   font-size: 120%;
   font-weight: bold;
-}</code></pre>
+}</pre>
 
 <h2 id="Generating_content_with_before_and_after">Generating content with ::before and ::after</h2>
 

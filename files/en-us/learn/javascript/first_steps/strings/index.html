@@ -10,7 +10,7 @@ tags:
   - Join
   - Quotes
   - concatenation
-  - 'l10n:priority'
+  - l10n:priority
   - strings
 ---
 <div>{{LearnSidebar}}</div>
@@ -50,9 +50,9 @@ tags:
 string;</pre>
   Just like we did with numbers, we are declaring a variable, initializing it with a string value, and then returning the value. The only difference here is that when writing a string, you need to surround the value with quotes.</li>
  <li>If you don't do this, or miss one of the quotes, you'll get an error. Try entering the following lines:
-  <pre class="brush: js example-bad">let badString = This is a test;
-let badString = 'This is a test;
-let badString = This is a test';</pre>
+  <pre class="brush: js example-bad">let badString1 = This is a test;
+let badString2 = 'This is a test;
+let badString3 = This is a test';</pre>
   These lines don't work because any text without quotes around it is assumed to be a variable name, property name, a reserved word, or similar. If the browser can't find it, then an error is raised (e.g. "missing; before statement"). If the browser can see where a string starts, but can't find the end of the string, as indicated by the 2nd quote, it complains with an error (with "unterminated string literal"). If your program is raising such errors, then go back and check all your strings to make sure you have no missing quote marks.</li>
  <li>The following will work if you previously defined the variable <code>string</code> — try it now:
   <pre class="brush: js">let badString = string;
@@ -90,7 +90,7 @@ dblSgl;</pre>
 <pre class="brush: js">let bigmouth = 'I\'ve got no right to take my place...';
 bigmouth;</pre>
 
-<p>This works fine. You can escape other characters in the same way, e.g. <code>\"</code>,  and there are some special codes besides. See <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation">Escape notation</a> for more details.</p>
+<p>This works fine. You can escape other characters in the same way, e.g. <code>\"</code>,  and there are some special codes besides. See <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_notation">Escape notation</a> for more details.</p>
 
 <h2 id="Concatenating_strings">Concatenating strings</h2>
 
@@ -151,8 +151,8 @@ let myNum = Number(myString);
 typeof myNum;</pre>
    </li>
    <li>Conversely, every number has a method called <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString">toString()</a></code> that converts it to the equivalent string. Try this:
-    <pre class="brush: js">let myNum = 123;
-let myString = myNum.toString();
+    <pre class="brush: js">let myNum2 = 123;
+let myString2 = myNum2.toString();
 typeof myString;</pre>
    </li>
   </ul>

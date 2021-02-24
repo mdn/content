@@ -2,28 +2,31 @@
 title: CSSNumericValue.toSum()
 slug: Web/API/CSSNumericValue/toSum
 tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSNumericValue
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - toSum()
+- API
+- CSS Typed Object Model API
+- CSSNumericValue
+- Experimental
+- Houdini
+- Method
+- Reference
+- toSum()
 ---
 <div>{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}</div>
 
-<p class="summary">The <strong><code>toSum()</code></strong> method of the {{domxref("CSSNumericValue")}} interface converts the object's value to a {{domxref("CSSMathSum")}} object to values of the specified unit.</p>
+<p class="summary">The <strong><code>toSum()</code></strong> method of the
+  {{domxref("CSSNumericValue")}} interface converts the object's value to a
+  {{domxref("CSSMathSum")}} object to values of the specified unit.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var cssMathSum = CSSNumericValue.toSum(units);</pre>
+<pre
+  class="brush: js">var cssMathSum = CSSNumericValue.toSum(units);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>units</dt>
- <dd>The units to convert to.</dd>
+  <dt>units</dt>
+  <dd>The units to convert to.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -33,10 +36,10 @@ tags:
 <h3 id="Exceptions">Exceptions</h3>
 
 <dl>
- <dt>SyntaxError</dt>
- <dd>undefined</dd>
- <dt>TypeError</dt>
- <dd>Indicates that an invalid type was passed to the method.</dd>
+  <dt>SyntaxError</dt>
+  <dd>undefined</dd>
+  <dt>TypeError</dt>
+  <dd>Indicates that an invalid type was passed to the method.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -48,18 +51,18 @@ v.toSum("px", "percent").toString() // =&gt; "calc(1000.39px + 4%)"</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS Typed OM','#dom-cssnumericvalue-tosum','toSum')}}</td>
-   <td>{{Spec2('CSS Typed OM')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('CSS Typed OM','#dom-cssnumericvalue-tosum','toSum')}}</td>
+      <td>{{Spec2('CSS Typed OM')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

@@ -2,48 +2,52 @@
 title: MediaStreamTrack.kind
 slug: Web/API/MediaStreamTrack/kind
 tags:
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - NeedsExample
-  - Property
-  - Read-only
-  - Reference
-  - WebRTC
+- Media Capture and Streams
+- MediaStreamTrack
+- NeedsExample
+- Property
+- Read-only
+- Reference
+- WebRTC
 ---
 <div>{{APIRef("Media Capture and Streams")}}</div>
 
-<p><span class="seoSummary">The <code><strong>MediaStreamTrack.kind</strong></code> read-only property returns a {{domxref("DOMString")}} set to <code>"audio"</code> if the track is an audio track and to <code>"video"</code>, if it is a video track.</span> It doesn't change if the track is deassociated from its source.</p>
+<p><span class="seoSummary">The <code><strong>MediaStreamTrack.kind</strong></code>
+    read-only property returns a {{domxref("DOMString")}} set to <code>"audio"</code> if
+    the track is an audio track and to <code>"video"</code>, if it is a video
+    track.</span> It doesn't change if the track is deassociated from its source.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">const <em>type</em> = <em>track</em>.kind</pre>
+<pre class="brush: js">const <em>type</em> = <em>track</em>.kind</pre>
 
 <h3 id="Value">Value</h3>
 
 <p>The possible values are a {{domxref("DOMString")}} with on of the following values:</p>
 
 <ul>
- <li><code>"audio"</code>: the track is an audio track.</li>
- <li><code>"video"</code>: the track is a video track.</li>
+  <li><code>"audio"</code>: the track is an audio track.</li>
+  <li><code>"video"</code>: the track is a video track.</li>
 </ul>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table" style="height: 49px; width: 1000px;">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Media Capture', '#dom-mediastreamtrack-kind', 'MediaStreamTrack.kind') }}</td>
-   <td>{{ Spec2('Media Capture') }}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ SpecName('Media Capture', '#dom-mediastreamtrack-kind',
+        'MediaStreamTrack.kind') }}</td>
+      <td>{{ Spec2('Media Capture') }}</td>
+      <td>Initial specification.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -53,5 +57,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
 </ul>

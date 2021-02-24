@@ -20,7 +20,7 @@ tags:
 
 <p>This article assumes you are already familiar with the concept of the <a href="/en-US/docs/Web/API/Document_Object_Model/Introduction">DOM (Document Object Model)</a> — a tree-like structure of connected nodes that represents the different elements and strings of text appearing in a markup document (usually an HTML document in the case of web documents). As an example, consider the following HTML fragment:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -59,12 +59,12 @@ tags:
 
 <p>You can attach a shadow root to any element using the {{domxref("Element.attachShadow()")}} method. This takes as its parameter an options object that contains one option — <code>mode</code> — with a value of <code>open</code> or <code>closed</code>:</p>
 
-<pre class="brush: js notranslate">let shadow = elementRef.attachShadow({mode: 'open'});
+<pre class="brush: js">let shadow = elementRef.attachShadow({mode: 'open'});
 let shadow = elementRef.attachShadow({mode: 'closed'});</pre>
 
 <p><code>open</code> means that you can access the shadow DOM using JavaScript written in the main page context, for example using the {{domxref("Element.shadowRoot")}} property:</p>
 
-<pre class="brush: js notranslate">let myShadowDom = myCustomElem.shadowRoot;</pre>
+<pre class="brush: js">let myShadowDom = myCustomElem.shadowRoot;</pre>
 
 <p>If you attach a shadow root to a custom element with <code>mode: closed</code> set, you won't be able to access the shadow DOM from the outside — <code>myCustomElem.shadowRoot</code> returns <code>null</code>. This is the case with built in elements that contain shadow DOMs, such as <code>&lt;video&gt;</code>.</p>
 
@@ -74,11 +74,11 @@ let shadow = elementRef.attachShadow({mode: 'closed'});</pre>
 
 <p>If you are attaching a shadow DOM to a custom element as part of its constructor (by far the most useful application of the shadow DOM), you would use something like this:</p>
 
-<pre class="brush: js notranslate">let shadow = this.attachShadow({mode: 'open'});</pre>
+<pre class="brush: js">let shadow = this.attachShadow({mode: 'open'});</pre>
 
 <p>When you've attached a shadow DOM to an element, manipulating it is a matter of just using the same DOM APIs as you use for the regular DOM manipulation:</p>
 
-<pre class="brush: js notranslate">let para = document.createElement('p');
+<pre class="brush: js">let para = document.createElement('p');
 shadow.appendChild(para);
 // etc.</pre>
 
@@ -86,7 +86,7 @@ shadow.appendChild(para);
 
 <p>Now let's walk through a simple example to demonstrate the shadow DOM in action inside a custom element — <code><a href="https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component">&lt;popup-info&gt;</a></code> (see a <a href="https://mdn.github.io/web-components-examples/popup-info-box-web-component/">live example</a> also). This takes an image icon and a text string, and embeds the icon into the page. When the icon is focused, it displays the text in a pop up information box to provide further in-context information. To begin with, in our JavaScript file we define a class called <code>PopUpInfo</code>, which extends <code>HTMLElement</code>:</p>
 
-<pre class="brush: js notranslate">class PopUpInfo extends HTMLElement {
+<pre class="brush: js">class PopUpInfo extends HTMLElement {
   constructor() {
     // Always call super first in constructor
     super();
@@ -103,14 +103,14 @@ shadow.appendChild(para);
 
 <p>We first attach a shadow root to the custom element:</p>
 
-<pre class="brush: js notranslate">// Create a shadow root
+<pre class="brush: js">// Create a shadow root
 let shadow = this.attachShadow({mode: 'open'});</pre>
 
 <h3 class="brush: js" id="Creating_the_shadow_DOM_structure">Creating the shadow DOM structure</h3>
 
 <p class="brush: js">Next, we use some DOM manipulation to create the element's internal shadow DOM structure:</p>
 
-<pre class="brush: js notranslate">// Create spans
+<pre class="brush: js">// Create spans
 let wrapper = document.createElement('span');
 wrapper.setAttribute('class', 'wrapper');
 let icon = document.createElement('span');
@@ -139,7 +139,7 @@ icon.appendChild(img);
 
 <p class="brush: js">After that we create a {{htmlelement("style")}} element and populate it with some CSS to style it:</p>
 
-<pre class="brush: js notranslate">// Create some CSS to apply to the shadow dom
+<pre class="brush: js">// Create some CSS to apply to the shadow dom
 let style = document.createElement('style');
 
 style.textContent = `
@@ -177,7 +177,7 @@ img {
 
 <p>The final step is to attach all the created elements to the shadow root:</p>
 
-<pre class="brush: js notranslate">// attach the created elements to the shadow dom
+<pre class="brush: js">// attach the created elements to the shadow dom
 shadow.appendChild(style);
 shadow.appendChild(wrapper);
 wrapper.appendChild(icon);
@@ -187,21 +187,20 @@ wrapper.appendChild(info);</pre>
 
 <p>Once the class is defined, using the element is as simple as defining it, and putting it on the page, as explained in <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">Using custom elements</a>:</p>
 
-<pre class="brush: js notranslate">// Define the new element
+<pre class="brush: js">// Define the new element
 customElements.define('popup-info', PopUpInfo);</pre>
 
-<pre class="brush: html notranslate">&lt;<span class="pl-ent">popup-info</span> <span class="pl-e">img</span>=<span class="pl-s"><span class="pl-pds">"</span>img/alt.png<span class="pl-pds">"</span></span> data-<span class="pl-e">text</span>=<span class="pl-s"><span class="pl-pds">"</span>Your card validation code (CVC) is an extra
+<pre class="brush: html">&lt;<span class="pl-ent">popup-info</span> <span class="pl-e">img</span>=<span class="pl-s"><span class="pl-pds">"</span>img/alt.png<span class="pl-pds">"</span></span> data-<span class="pl-e">text</span>=<span class="pl-s"><span class="pl-pds">"</span>Your card validation code (CVC) is an extra
                                     security feature — it is the last 3 or 4
                                     numbers on the back of your card.<span class="pl-pds">"</span></span>&gt;</pre>
 
-<div>
 <h3 id="Internal_versus_external_styles">Internal versus external styles</h3>
 
 <p>In the above example we apply style to the Shadow DOM using a {{htmlelement("style")}} element, but it is perfectly possible to do it by referencing an external stylesheet from a {{htmlelement("link")}} element instead.</p>
 
 <p>For example, take a look at this code from our <a href="https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/">popup-info-box-external-stylesheet</a> example (see the <a href="https://github.com/mdn/web-components-examples/blob/master/popup-info-box-external-stylesheet/main.js">source code</a>):</p>
 
-<pre class="brush: js notranslate">// Apply external styles to the shadow dom
+<pre class="brush: js">// Apply external styles to the shadow dom
 const linkElem = document.createElement('link');
 linkElem.setAttribute('rel', 'stylesheet');
 linkElem.setAttribute('href', 'style.css');
@@ -219,4 +218,3 @@ shadow.appendChild(linkElem);</pre>
  <li><a href="/en-US/docs/Web/Web_Components/Using_custom_elements">Using custom elements</a></li>
  <li><a href="/en-US/docs/Web/Web_Components/Using_templates_and_slots">Using templates and slots</a></li>
 </ul>
-</div>

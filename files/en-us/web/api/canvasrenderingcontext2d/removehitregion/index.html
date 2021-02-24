@@ -2,32 +2,36 @@
 title: CanvasRenderingContext2D.removeHitRegion()
 slug: Web/API/CanvasRenderingContext2D/removeHitRegion
 tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Experimental
-  - Method
-  - Reference
+- API
+- Canvas
+- CanvasRenderingContext2D
+- Experimental
+- Method
+- Reference
 ---
-<div>{{APIRef}} {{obsolete_header}}</div>
+<div>{{APIRef}} {{deprecated_header}}</div>
 
-<p>The {{domxref("CanvasRenderingContext2D")}} method <strong><code>removeHitRegion()</code></strong> removes a given hit region from the canvas.</p>
+<p>The {{domxref("CanvasRenderingContext2D")}} method
+  <strong><code>removeHitRegion()</code></strong> removes a given hit region from the
+  canvas.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">void <em>ctx</em>.removeHitRegion(<em>id</em>);
+<pre class="brush: js">void <em>ctx</em>.removeHitRegion(<em>id</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>id</code></dt>
- <dd>A {{domxref("DOMString")}} representing the <code>id</code> of the region that is to be removed.</dd>
+  <dt><code>id</code></dt>
+  <dd>A {{domxref("DOMString")}} representing the <code>id</code> of the region that is to
+    be removed.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_the_removeHitRegion_method">Using the <code>removeHitRegion</code> method</h3>
+<h3 id="Using_the_removeHitRegion_method">Using the <code>removeHitRegion</code> method
+</h3>
 
 <p>This example demonstrates the <code>removeHitRegion()</code> method.</p>
 
@@ -50,7 +54,10 @@ ctx.removeHitRegion('eyes');
 
 <h2 id="Specifications">Specifications</h2>
 
-<p>Canvas hit regions have been removed from the WHATWG Living Standard, although discussions about future standardization are ongoing. See <a href="https://github.com/whatwg/html/issues/3407">https://github.com/whatwg/html/issues/3407</a> for more information.</p>
+<p>Canvas hit regions have been removed from the WHATWG Living Standard, although
+  discussions about future standardization are ongoing. See <a
+    href="https://github.com/whatwg/html/issues/3407">https://github.com/whatwg/html/issues/3407</a>
+  for more information.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
@@ -59,6 +66,7 @@ ctx.removeHitRegion('eyes');
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("CanvasRenderingContext2D.addHitRegion()")}} {{experimental_inline}}</li>
- <li>{{domxref("CanvasRenderingContext2D.clearHitRegions()")}} {{experimental_inline}}</li>
+  <li>{{domxref("CanvasRenderingContext2D.addHitRegion()")}} {{experimental_inline}}</li>
+  <li>{{domxref("CanvasRenderingContext2D.clearHitRegions()")}} {{experimental_inline}}
+  </li>
 </ul>

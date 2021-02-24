@@ -2,45 +2,54 @@
 title: DataTransferItemList.add()
 slug: Web/API/DataTransferItemList/add
 tags:
-  - API
-  - Add
-  - DataTransferItemList
-  - HTML DOM
-  - HTML Drag and Drop API
-  - Method
-  - Reference
-  - drag and drop
+- API
+- Add
+- DataTransferItemList
+- HTML DOM
+- HTML Drag and Drop API
+- Method
+- Reference
+- drag and drop
 ---
 <div>{{APIRef("HTML Drag and Drop API")}}</div>
 
-<p>The <strong><code>DataTransferItemList.add()</code></strong> method creates a new {{domxref("DataTransferItem")}} using the specified data and adds it to the drag data list. The item may be a {{domxref("File")}} or a {{domxref("DOMString","string")}} of a given type. If the item is successfully added to the list, the newly-created {{domxref("DataTransferItem")}} object is returned.</p>
+<p>The <strong><code>DataTransferItemList.add()</code></strong> method creates a new
+  {{domxref("DataTransferItem")}} using the specified data and adds it to the drag data
+  list. The item may be a {{domxref("File")}} or a {{domxref("DOMString","string")}} of a
+  given type. If the item is successfully added to the list, the newly-created
+  {{domxref("DataTransferItem")}} object is returned.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>DataTransferItem</em> = <em>DataTransferItemList</em>.add(data, type);
+<pre class="brush: js"><em>DataTransferItem</em> = <em>DataTransferItemList</em>.add(data, type);
 <em>DataTransferItem</em> = <em>DataTransferItemList</em>.add(file);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>data</code></dt>
- <dd>A {{domxref("DOMstring","string")}} representing the drag item's data.</dd>
- <dt><code>type</code></dt>
- <dd>A {{domxref("DOMstring","string")}} of the drag item's type. Some example types are <code>text/html</code> and <code>text/plain</code>.</dd>
- <dt><code>file</code></dt>
- <dd>A {{domxref("File")}} object. No type needs to be given in this case.</dd>
+  <dt><code>data</code></dt>
+  <dd>A {{domxref("DOMstring","string")}} representing the drag item's data.</dd>
+  <dt><code>type</code></dt>
+  <dd>A {{domxref("DOMstring","string")}} of the drag item's type. Some example types are
+    <code>text/html</code> and <code>text/plain</code>.</dd>
+  <dt><code>file</code></dt>
+  <dd>A {{domxref("File")}} object. No type needs to be given in this case.</dd>
 </dl>
 
 <h3 id="Return_Value">Return value</h3>
 
-<p>A {{domxref("DataTransferItem")}} containing the specified data. If the drag item couldn't be created (for example, if the associated {{domxref("DataTransfer")}} object has no data store), <code>null</code> is returned.</p>
+<p>A {{domxref("DataTransferItem")}} containing the specified data. If the drag item
+  couldn't be created (for example, if the associated {{domxref("DataTransfer")}} object
+  has no data store), <code>null</code> is returned.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
 <dl>
- <dt><code>NotSupportedError</code></dt>
- <dd>A string <code>data</code> parameter was provided, and the list already contains an item whose {{domxref("DataTransferItem.kind","kind")}} is "Plain Unicode string" and whose type is equal to the specified type parameter.</dd>
+  <dt><code>NotSupportedError</code></dt>
+  <dd>A string <code>data</code> parameter was provided, and the list already contains an
+    item whose {{domxref("DataTransferItem.kind","kind")}} is "Plain Unicode string" and
+    whose type is equal to the specified type parameter.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -49,7 +58,8 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html">&lt;div&gt;
+<pre
+  class="brush: html">&lt;div&gt;
  &lt;p id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true"&gt;
  Select this element, drag it to the Drop Zone and then release the selection to move the element.&lt;/p&gt;
 &lt;/div&gt;
@@ -136,23 +146,25 @@ function dragend_handler(ev) {
 
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'interaction.html#dom-datatransferitemlist-add','add()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'editing.html#dom-datatransferitemlist-add','add()')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Not included in W3C HTML5 {{Spec2('HTML5 W3C')}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG',
+        'interaction.html#dom-datatransferitemlist-add','add()')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML5.1', 'editing.html#dom-datatransferitemlist-add','add()')}}
+      </td>
+      <td>{{Spec2('HTML5.1')}}</td>
+      <td>Not included in W3C HTML5 {{Spec2('HTML5 W3C')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

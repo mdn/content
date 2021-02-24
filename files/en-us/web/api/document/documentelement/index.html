@@ -2,20 +2,22 @@
 title: Document.documentElement
 slug: Web/API/Document/documentElement
 tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Reference
-  - root
+- API
+- DOM
+- Document
+- Property
+- Reference
+- root
 ---
 <div>{{ApiRef("DOM")}}</div>
 
-<p><strong><code>Document.documentElement</code></strong> returns the {{domxref("Element")}} that is the root element of the {{domxref("document")}} (for example, the {{HTMLElement("html")}} element for HTML documents).</p>
+<p><strong><code>Document.documentElement</code></strong> returns the
+  {{domxref("Element")}} that is the root element of the {{domxref("document")}} (for
+  example, the {{HTMLElement("html")}} element for HTML documents).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">const <var>element</var> = document.documentElement
+<pre class="brush: js">const <var>element</var> = document.documentElement
 </pre>
 
 <h2 id="Example">Example</h2>
@@ -31,25 +33,29 @@ for (const child of firstTier) {
 
 <h2 id="Notes">Notes</h2>
 
-<p>For any non-empty HTML document, <code>documentElement</code> will always be an {{HTMLElement("html")}} element. For any non-empty XML document, <code>documentElement</code> will always be whatever element is the root element of the document.</p>
+<p>For any non-empty HTML document, <code>documentElement</code> will always be an
+  {{HTMLElement("html")}} element. For any non-empty XML document,
+  <code>documentElement</code> will always be whatever element is the root element of the
+  document.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-document-documentelement','Document.documentElement')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM
+        WHATWG','#dom-document-documentelement','Document.documentElement')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

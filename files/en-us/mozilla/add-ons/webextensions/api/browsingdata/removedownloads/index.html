@@ -26,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var removing = browser.browsingData.removeDownloads(
+<pre class="brush:js">var removing = browser.browsingData.removeDownloads(
   removalOptions            // RemovalOptions object
 )
 </pre>
@@ -52,36 +52,36 @@ tags:
 
 <p>Remove records of objects downloaded in the last week:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">onRemoved</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"removed"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+<pre class="brush: js line-numbers language-js">function onRemoved() {
+  console.log(&quot;removed&quot;);
+}
 
-<span class="keyword token">function</span> <span class="function token">onError</span><span class="punctuation token">(</span>error<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">error</span><span class="punctuation token">(</span>error<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+function onError(error) {
+  console.error(error);
+}
 
-<span class="keyword token">function</span> <span class="function token">weekInMilliseconds</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">return</span> <span class="number token">1000</span> <span class="operator token">*</span> <span class="number token">60</span> <span class="operator token">*</span> <span class="number token">60</span> <span class="operator token">*</span> <span class="number token">24</span> <span class="operator token">*</span> <span class="number token">7</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+function weekInMilliseconds() {
+  return 1000 * 60 * 60 * 24 * 7;
+}
 
-<span class="keyword token">var</span> oneWeekAgo <span class="operator token">=</span> <span class="punctuation token">(</span><span class="keyword token">new</span> <span class="class-name token">Date</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">getTime</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">-</span> <span class="function token">weekInMilliseconds</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+var oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
 
-browser<span class="punctuation token">.</span>browsingData<span class="punctuation token">.</span><span class="function token">removeDownloads</span><span class="punctuation token">(</span>
-  <span class="punctuation token">{</span>since<span class="punctuation token">:</span> oneWeekAgo<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">.</span>
-<span class="function token">then</span><span class="punctuation token">(</span>onRemoved<span class="punctuation token">,</span> onError<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+browser.browsingData.removeDownloads(
+  {since: oneWeekAgo}).
+then(onRemoved, onError);</pre>
 
 <p>Remove all records of downloaded objects:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">onRemoved</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"removed"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+<pre class="brush: js line-numbers  language-js">function onRemoved() {
+  console.log(&quot;removed&quot;);
+}
 
-<span class="keyword token">function</span> <span class="function token">onError</span><span class="punctuation token">(</span>error<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">error</span><span class="punctuation token">(</span>error<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+function onError(error) {
+  console.error(error);
+}
 
-browser<span class="punctuation token">.</span>browsingData<span class="punctuation token">.</span><span class="function token">removeDownloads</span><span class="punctuation token">({</span><span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">.</span>
-<span class="function token">then</span><span class="punctuation token">(</span>onRemoved<span class="punctuation token">,</span> onError<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+browser.browsingData.removeDownloads({}).
+then(onRemoved, onError);</pre>
 
 <p>{{WebExtExamples}}</p>
 

@@ -2,23 +2,25 @@
 title: GamepadButton.pressed
 slug: Web/API/GamepadButton/pressed
 tags:
-  - API
-  - Gamepad API
-  - Games
-  - NeedsBetterSpecLink
-  - NeedsMarkupWork
-  - Property
-  - Reference
-  - Référence(2)
+- API
+- Gamepad API
+- Games
+- NeedsBetterSpecLink
+- NeedsMarkupWork
+- Property
+- Reference
+- Référence(2)
 ---
 <p>{{APIRef("Gamepad API")}}</p>
 
-<p>The <code><strong>GamepadButton.pressed</strong></code> property of the {{domxref("GamepadButton")}} interface returns a <code>boolean</code> indicating whether the button is currently pressed (<code>true</code>) or unpressed (<code>false</code>).</p>
+<p>The <code><strong>GamepadButton.pressed</strong></code> property of the
+  {{domxref("GamepadButton")}} interface returns a <code>boolean</code> indicating whether
+  the button is currently pressed (<code>true</code>) or unpressed (<code>false</code>).
+</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><span class="idlInterface" id="idl-def-GamepadButton"><span class="idlAttribute">var isPressed = navigator.getGamepads()[0].pressed;
-</span></span></pre>
+<pre class="brush: js">var isPressed = navigator.getGamepads()[0].pressed;</pre>
 
 <h2 id="Example">Example</h2>
 
@@ -35,18 +37,19 @@ if(gp.buttons[0].pressed == true) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Gamepad", "#dom-gamepadbutton-pressed", "GamepadButton.pressed")}}</td>
-   <td>{{Spec2("Gamepad")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("Gamepad", "#dom-gamepadbutton-pressed", "GamepadButton.pressed")}}
+      </td>
+      <td>{{Spec2("Gamepad")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -56,5 +59,5 @@ if(gp.buttons[0].pressed == true) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/API/Gamepad">Using the Gamepad API</a></li>
+  <li><a href="/en-US/docs/Web/Guide/API/Gamepad">Using the Gamepad API</a></li>
 </ul>

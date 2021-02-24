@@ -17,11 +17,11 @@ tags:
 
 <p>Firefox uses an optimized byte cache for script requests. This optimized byte cache overrides the normal request caching. Data from this cache is not available in a form useful to extensions. If your extension needs to filter scripts, create your filter in {{WebExtAPIRef("webRequest.onBeforeRequest")}}. Doing this ensures that the filter is created prior to the attempt to load from cache, thereby avoiding the optimized cache.</p>
 
-<p>To use this API you must have the <code>"webRequestBlocking"</code> <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a>, as well as the normal permissions needed for the event listener (the <code>"webRequest"</code> permission and the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission </a>for the host).</p>
+<p>To use this API you must have the <code>"webRequestBlocking"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a>, as well as the normal permissions needed for the event listener (the <code>"webRequest"</code> permission and the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permission </a>for the host).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var filter = browser.webRequest.filterResponseData(
+<pre class="brush:js">var filter = browser.webRequest.filterResponseData(
   requestId       // string
 )
 </pre>

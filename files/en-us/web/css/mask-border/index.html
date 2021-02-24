@@ -8,9 +8,9 @@ tags:
   - Experimental
   - NeedsCompatTable
   - Reference
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 ---
-<div>{{cssref}}{{SeeCompatTable}}</div>
+<div>{{CSSRef}}{{SeeCompatTable}}</div>
 
 <p>The <strong><code>mask-border</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> lets you create a mask along the edge of an element's border.</p>
 
@@ -29,7 +29,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css no-line-numbers notranslate">/* source | slice */
+<pre class="brush: css no-line-numbers">/* source | slice */
 mask-border: url('border-mask.png') 25;
 
 /* source | slice | repeat */
@@ -65,7 +65,7 @@ mask-border: url('border-mask.png') 25 / 35px / 12px space alpha;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -73,17 +73,17 @@ mask-border: url('border-mask.png') 25 / 35px / 12px space alpha;
 
 <p>In this example, we will mask an element's border with a diamond pattern. The source for the mask is a ".png" file of 90 by 90 pixels, with three diamonds going vertically and horizontally:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15836/mask-border-diamonds.png" style="height: 90px; width: 90px;"></p>
+<p><img alt="" src="mask-border-diamonds.png"></p>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div id="bitmap"&gt;This element is surrounded by a bitmap-based mask border! Pretty neat, isn't it?&lt;/div&gt;</pre>
+<pre class="brush: html">&lt;div id="bitmap"&gt;This element is surrounded by a bitmap-based mask border! Pretty neat, isn't it?&lt;/div&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
 <p>To match the size of a single diamond, we will use a value of 90 divided by 3, or <code>30</code>, for slicing the image into corner and edge regions. A repeat value of <code>round</code> will make the mask slices fit evenly, i.e., without clipping or gaps.</p>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   width: 200px;
   background-color: lavender;
   border: 18px solid salmon;

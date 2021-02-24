@@ -25,16 +25,16 @@ tags:
 
 <dl>
  <dt>{{domxref("ReadableStreamBYOBReader.closed")}} {{readonlyInline}}</dt>
- <dd>Allows you to write code that responds to an end to the streaming process. Returns a promise that fulfills if the stream becomes closed or the reader's lock is released, or rejects if the stream errors.</dd>
+ <dd>Returns a {{jsxref("Promise")}} that fulfills when the stream closes or the reader's lock is released, or rejects if the stream throws an error. This property enables you to write code that responds to an end to the streaming process. </dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
 <dl>
  <dt>{{domxref("ReadableStreamBYOBReader.cancel()")}}</dt>
- <dd>Cancels the stream, signaling a loss of interest in the stream by a consumer. The supplied reason argument will be given to the underlying source, which may or may not use it.</dd>
+ <dd>Returns a {{jsref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer. The supplied <code>reason</code> argument will be given to the underlying source, which may or may not use it.</dd>
  <dt>{{domxref("ReadableStreamBYOBReader.read()")}}</dt>
- <dd>Returns a promise providing access to the next chunk in the stream's internal queue.</dd>
+ <dd>Returns a {{jsref("Promise")}} that resolves with an object indicating the state of the stream: either the net chuck in the stream or an indication that the stream is closed.</dd>
  <dt>{{domxref("ReadableStreamBYOBReader.releaseLock()")}}</dt>
  <dd>Releases the reader's lock on the stream.</dd>
 </dl>

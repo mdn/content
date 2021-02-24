@@ -13,9 +13,9 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>:scope</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en/CSS/Pseudo-classes">pseudo-class</a> represents elements that are a reference point for selectors to match against.</p>
+<p>The <strong><code>:scope</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/CSS/Pseudo-classes">pseudo-class</a> represents elements that are a reference point for selectors to match against.</p>
 
-<pre class="brush: css notranslate">/* Selects a scoped element */
+<pre class="brush: css">/* Selects a scoped element */
 :scope {
   background-color: lime;
 }</pre>
@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox language-html notranslate">{{csssyntax}}</pre>
+<pre class="brush: css language-html">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -34,7 +34,7 @@ tags:
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">let paragraph = document.getElementById("para");
+<pre class="brush: js">let paragraph = document.getElementById("para");
 let output = document.getElementById("output");
 
 if (paragraph.matches(":scope")) {
@@ -43,7 +43,7 @@ if (paragraph.matches(":scope")) {
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p id="para"&gt;
+<pre class="brush: html">&lt;p id="para"&gt;
   This is a paragraph. It is not an interesting paragraph. Sorry about that.
 &lt;/p&gt;
 &lt;p id="output"&gt;&lt;/p&gt;</pre>
@@ -58,7 +58,7 @@ if (paragraph.matches(":scope")) {
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<pre class="brush: js notranslate">var context = document.getElementById('context');
+<pre class="brush: js">var context = document.getElementById('context');
 var selected = context.querySelectorAll(':scope &gt; div');
 
 document.getElementById('results').innerHTML = Array.prototype.map.call(selected, function (element) {
@@ -67,7 +67,7 @@ document.getElementById('results').innerHTML = Array.prototype.map.call(selected
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div id="context"&gt;
+<pre class="brush: html">&lt;div id="context"&gt;
     &lt;div id="element-1"&gt;
         &lt;div id="element-1.1"&gt;&lt;/div&gt;
         &lt;div id="element-1.2"&gt;&lt;/div&gt;
@@ -106,7 +106,7 @@ document.getElementById('results').innerHTML = Array.prototype.map.call(selected
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("css.selectors.scope")}}</p>
 

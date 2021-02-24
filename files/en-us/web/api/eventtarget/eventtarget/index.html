@@ -2,19 +2,20 @@
 title: EventTarget()
 slug: Web/API/EventTarget/EventTarget
 tags:
-  - API
-  - Constructor
-  - DOM
-  - DOM Events
-  - EventTarget
+- API
+- Constructor
+- DOM
+- DOM Events
+- EventTarget
 ---
 <div>{{APIRef("DOM Events")}}</div>
 
-<p>The <code><strong>EventTarget()</strong></code> constructor creates a new {{domxref("EventTarget")}} object instance.</p>
+<p>The <code><strong>EventTarget()</strong></code> constructor creates a new
+  {{domxref("EventTarget")}} object instance.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>myEventTarget</var> = new EventTarget();</pre>
+<pre class="brush: js">var <var>myEventTarget</var> = new EventTarget();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -26,7 +27,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate" id="ct-20">class MyEventTarget extends EventTarget {
+<pre class="brush: js" id="ct-20">class MyEventTarget extends EventTarget {
   constructor(mySecret) {
     super();
     this._secret = mySecret;
@@ -48,18 +49,19 @@ let newValue = myEventTarget.secret; // == 7</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-eventtarget-eventtarget', 'EventTarget() constructor')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-eventtarget-eventtarget', 'EventTarget()
+        constructor')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -69,5 +71,5 @@ let newValue = myEventTarget.secret; // == 7</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("EventTarget")}}</li>
+  <li>{{domxref("EventTarget")}}</li>
 </ul>

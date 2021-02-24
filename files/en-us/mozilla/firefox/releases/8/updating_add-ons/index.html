@@ -7,9 +7,9 @@ tags:
   - Firefox 8
   - Guide
 ---
-<div>{{FirefoxSidebar}}</div><p>This article provides information on steps you need to take in order to update your existing add-on for compatibility with Firefox 8. See <a href="/en/Firefox_8_for_developers" title="Firefox 8 for developers">Firefox 8 for developers</a> for a complete list of everything that changed in Firefox 8.</p>
+<div>{{FirefoxSidebar}}</div><p>This article provides information on steps you need to take in order to update your existing add-on for compatibility with Firefox 8. See <a href="/en-US/docs/Mozilla/Firefox/Releases/8" title="Firefox 8 for developers">Firefox 8 for developers</a> for a complete list of everything that changed in Firefox 8.</p>
 <h2 id="Do_you_need_to_do_anything_at_all">Do you need to do anything at all?</h2>
-<p>If your add-on is distributed on <a class="external" href="http://addons.mozilla.org">addons.mozilla.org</a> (AMO), it's been checked by an automated compatibility verification tool. Add-ons that don't use APIs that changed in Firefox 8, and have no binary components (which <a href="/En/Developer_Guide/Interface_Compatibility#Binary_Interfaces">need to be recompiled for every major Firefox release</a>), have automatically been updated on AMO to indicate that they work in Firefox 8.</p>
+<p>If your add-on is distributed on <a class="external" href="http://addons.mozilla.org">addons.mozilla.org</a> (AMO), it's been checked by an automated compatibility verification tool. Add-ons that don't use APIs that changed in Firefox 8, and have no binary components (which <a href="/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces">need to be recompiled for every major Firefox release</a>), have automatically been updated on AMO to indicate that they work in Firefox 8.</p>
 <p>So you should start by visiting AMO and looking to see if your add-on needs any work done at all.</p>
 <div class="note">
  <strong>Note:</strong> You should still test your add-on on Firefox 8, even if it's been automatically upgraded. There are edge cases that may not be automatically detected.</div>
@@ -24,11 +24,11 @@ tags:
  <li>All of the sub-interfaces of {{ interface("nsISelection") }} have been merged into the base <code>nsISelection</code> interface. If by some chance you were previously looking for {{ interface("nsISelection2") }} or {{ interface("nsISelection3") }}, you should update your code.</li>
 </ul>
 <h2 id="Date_handling_improved">Date handling improved</h2>
-<p>Now that the JavaScript <a href="/en/JavaScript/Reference/Global_Objects/Date"><code>Date</code></a> object can parse ISO 8601 dates, the <code><a href="/en/JavaScript_code_modules/ISO8601DateUtils.jsm" title="ISO8601DateUtils.jsm">ISO8601DateUtils.jsm</a></code> code module has been removed. If you were using this code module, you should update your code to use the methods on <code>Date</code> instead.</p>
+<p>Now that the JavaScript <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date"><code>Date</code></a> object can parse ISO 8601 dates, the <code><a href="/en-US/docs/JavaScript_code_modules/ISO8601DateUtils.jsm" title="ISO8601DateUtils.jsm">ISO8601DateUtils.jsm</a></code> code module has been removed. If you were using this code module, you should update your code to use the methods on <code>Date</code> instead.</p>
 <h2 id="DOM_changes">DOM changes</h2>
 <p>There have been a couple of changes in the DOM that impact add-ons:</p>
 <h3 id="Selection_changes">Selection changes</h3>
-<p>In the past, {{ domxref("document.getSelection()") }} was returning a stringified version of the selection instead of the {{ domxref("Selection") }} object itself. This was non-standard behavior, and has been corrected.</p>
+<p>In the past, {{ domxref("DocumentOrShadowRoot/getSelection", "document.getSelection()") }} was returning a stringified version of the selection instead of the {{ domxref("Selection") }} object itself. This was non-standard behavior, and has been corrected.</p>
 <h3 id="Potential_name_conflicts">Potential name conflicts</h3>
 <p>When the DOM File API was added, a new global called {{ domxref("File") }} was added; this can conflict with objects in your scripts. If you have any globals called <code>File</code>, you should rename them.</p>
 <p>Similarly, a new global, {{ domxref("ChromeWorker") }}, was introduced to support allowing Workers to be used from chrome code. If by some chance you have any globals with this name, you should rename them.</p>
@@ -36,5 +36,5 @@ tags:
 <p>Support for SSL 2.0 has been removed. This shouldn't affect any current add-ons. However, for reference, some very old code was removed, as well as support for the preferences <code>security.enable_ssl2</code> (which is false by default), and all preferences starting with "<code>security.ssl2.</code>"</p>
 <h2 id="See_also">See also</h2>
 <ul>
- <li><a href="/en/Firefox_8_for_developers" title="Firefox 8 for developers">Firefox 8 for developers</a></li>
+ <li><a href="/en-US/docs/Mozilla/Firefox/Releases/8" title="Firefox 8 for developers">Firefox 8 for developers</a></li>
 </ul>

@@ -25,7 +25,7 @@ tags:
 
 <p>Because <code>Upgrade</code> is a hop-by-hop header, it also needs to be listed in the {{HTTPHeader("Connection")}} header field. This means that a typical request that includes Upgrade would look something like:</p>
 
-<pre class="syntaxbox notranslate">GET /index.html HTTP/1.1
+<pre class="brush: html">GET /index.html HTTP/1.1
 Host: www.example.com
 Connection: upgrade
 Upgrade: example/1, foo/2</pre>
@@ -44,7 +44,7 @@ Upgrade: example/1, foo/2</pre>
 
 <p>By far, the most common use case for upgrading an HTTP connection is to use WebSockets, which are always implemented by upgrading an HTTP or HTTPS connection. Keep in mind that if you're opening a new connection using the <a href="/en-US/docs/Web/API/WebSocket">WebSocket API</a>, or any library that does WebSockets, most or all of this is done for you. For example, opening a WebSocket connection is as simple as:</p>
 
-<pre class="brush: js notranslate">webSocket = new WebSocket("ws://destination.server.ext", "optionalProtocol");</pre>
+<pre class="brush: js">webSocket = new WebSocket("ws://destination.server.ext", "optionalProtocol");</pre>
 
 <p>The {{domxref("WebSocket.WebSocket", "WebSocket()")}} constructor does all the work of creating an initial HTTP/1.1 connection then handling the handshaking and upgrade process for you.</p>
 
@@ -54,7 +54,7 @@ Upgrade: example/1, foo/2</pre>
 
 <p>If you need to create a WebSocket connection from scratch, you'll have to handle the handshaking process yourself. After creating the initial HTTP/1.1 session, you need to request the upgrade by adding to a standard request the {{HTTPHeader("Upgrade")}} and {{HTTPHeader("Connection")}} headers, as follows:</p>
 
-<pre class="notranslate">Connection: Upgrade
+<pre>Connection: Upgrade
 Upgrade: websocket</pre>
 
 <h3 id="WebSocket-specific_headers">WebSocket-specific headers</h3>
@@ -65,7 +65,7 @@ Upgrade: websocket</pre>
 
 <p>Specifies one or more protocol-level WebSocket extensions to ask the server to use. Using more than one <code>Sec-WebSocket-Extension</code> header in a request is permitted; the result is the same as if you included all of the listed extensions in one such header.</p>
 
-<pre class="syntaxbox notranslate">Sec-WebSocket-Extensions: <var>extensions</var></pre>
+<pre class="brush: html">Sec-WebSocket-Extensions: <var>extensions</var></pre>
 
 <dl>
  <dt><code><var>extensions</var></code></dt>
@@ -74,7 +74,7 @@ Upgrade: websocket</pre>
 
 <p>For example:</p>
 
-<pre class="notranslate">Sec-WebSocket-Extensions: superspeed, colormode; depth=16</pre>
+<pre>Sec-WebSocket-Extensions: superspeed, colormode; depth=16</pre>
 
 <h4 id="HTTPHeaderSec-WebSocket-Key">{{HTTPHeader("Sec-WebSocket-Key")}}</h4>
 
@@ -82,7 +82,7 @@ Upgrade: websocket</pre>
 
 <p>This header is automatically added by clients that choose to use it; it cannot be added using the {{domxref("XMLHttpRequest.setRequestHeader()")}} method.</p>
 
-<pre class="syntaxbox notranslate">Sec-WebSocket-Key: <var>key</var></pre>
+<pre class="brush: html">Sec-WebSocket-Key: <var>key</var></pre>
 
 <dl>
  <dt><code><var>key</var></code></dt>
@@ -95,7 +95,7 @@ Upgrade: websocket</pre>
 
 <p>The <code>Sec-WebSocket-Protocol</code> header specifies one or more WebSocket protocols that you wish to use, in order of preference. The first one that is supported by the server will be selected and returned by the server in a <code>Sec-WebSocket-Protocol</code> header included in the response. You can use this more than once in the header, as well; the result is the same as if you used a comma-delineated list of subprotocol identifiers in a single header.</p>
 
-<pre class="syntaxbox notranslate">Sec-WebSocket-Protocol: <var>subprotocols</var></pre>
+<pre class="brush: html">Sec-WebSocket-Protocol: <var>subprotocols</var></pre>
 
 <dl>
  <dt><code><var>subprotocols</var></code></dt>
@@ -108,7 +108,7 @@ Upgrade: websocket</pre>
 
 <p>Specifies the WebSocket protocol version the client wishes to use, so the server can confirm whether or not that version is supported on its end.</p>
 
-<pre class="syntaxbox notranslate">Sec-WebSocket-Version: <var>version</var></pre>
+<pre class="brush: html">Sec-WebSocket-Version: <var>version</var></pre>
 
 <dl>
  <dt><code><var>version</var></code></dt>
@@ -119,7 +119,7 @@ Upgrade: websocket</pre>
 
 <p>If the server can't communicate using the specified version of the WebSocket protocol, it will respond with an error (such as 426 Upgrade Required) that includes in its headers a <code>Sec-WebSocket-Version</code> header with a comma-separated list of the supported protocol versions. If the server does support the requested protocol version, no <code>Sec-WebSocket-Version</code> header is included in the response.</p>
 
-<pre class="syntaxbox notranslate">Sec-WebSocket-Version: <var>supportedVersions</var></pre>
+<pre class="brush: html">Sec-WebSocket-Version: <var>supportedVersions</var></pre>
 
 <dl>
  <dt><code><var>supportedVersions</var></code></dt>
@@ -134,7 +134,7 @@ Upgrade: websocket</pre>
 
 <p>Included in the response message from the server during the opening handshake process when the server is willing to initiate a WebSocket connection. It will appear no more than once in the response headers.</p>
 
-<pre class="syntaxbox notranslate">Sec-WebSocket-Accept: <var>hash</var></pre>
+<pre class="brush: html">Sec-WebSocket-Accept: <var>hash</var></pre>
 
 <dl>
  <dt><code><var>hash</var></code></dt>

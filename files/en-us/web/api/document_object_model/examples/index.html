@@ -296,11 +296,11 @@ function showEventProperties(e) {
   var table = document.createElement('table');
   var thead = table.createTHead();
   var row = thead.insertRow(-1);
-  var lableList = ['#', 'Property', 'Value'];
-  var len = lableList.length;
+  var labelList = ['#', 'Property', 'Value'];
+  var len = labelList.length;
 
   for (var i=0; i&lt;len; i++) {
-    addCell(row, lableList[i]);
+    addCell(row, labelList[i]);
   }
 
   var tbody = document.createElement('tbody');

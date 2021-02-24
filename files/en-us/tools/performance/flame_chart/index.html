@@ -14,9 +14,9 @@ slug: Tools/Performance/Flame_Chart
 
 <p>Here's a screenshot showing the Flame Chart for a section of a profile:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10989/perf-flame-chart-overview.png" style="display: block; height: 622px; margin-left: auto; margin-right: auto; width: 1676px;"></p>
+<p><img alt="" src="perf-flame-chart-overview.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
-<p>First of all, you'll see that, in the <a href="/en-US/docs/Tools/Performance/UI_Tour#Recording_overview">recording overview pane</a>, we've selected a small slice of the recording to view in the Flame Chart. The Flame Chart displays a lot of data, so to get readable results, it's usually necessary to zoom in.</p>
+<p>First of all, you'll see that, in the <a href="/en-US/docs/Tools/Performance/UI_Tour#recording_overview">recording overview pane</a>, we've selected a small slice of the recording to view in the Flame Chart. The Flame Chart displays a lot of data, so to get readable results, it's usually necessary to zoom in.</p>
 
 <p>In the Flame Chart view itself, along the X-axis is time. The screenshot above covers the period from 1435ms to a little past 1465ms. Along the Y-axis are the functions on the call stack at that point in time, with the top-level at the top, and the leaf function at the bottom. Functions are color-coded to make them easier to distinguish.</p>
 
@@ -39,7 +39,7 @@ slug: Tools/Performance/Flame_Chart
   <tr>
    <td><strong>Pan</strong>: move the selected portion of the complete profile left and right</td>
    <td>
-    <p>1) Click and drag the selected portion in the <a href="/en-US/docs/Tools/Performance/UI_Tour#Recording_overview">recording overview pane</a>.</p>
+    <p>1) Click and drag the selected portion in the <a href="/en-US/docs/Tools/Performance/UI_Tour#recording_overview">recording overview pane</a>.</p>
 
     <p>2) Click and drag anywhere in the Flame Chart.</p>
    </td>
@@ -73,13 +73,13 @@ slug: Tools/Performance/Flame_Chart
 
 <p>First, we'll just select the whole section in which the program was active:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10991/perf-flame-chart-zoomed-out.png" style="display: block; height: 350px; margin-left: auto; margin-right: auto; width: 1212px;"></p>
+<p><img alt="" src="perf-flame-chart-zoomed-out.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>At the top, colored purple, is the <code>sortAll()</code> call, running throughout the program from start to finish. Underneath that, colored olive-green, are the calls it's making to <code>sort()</code>. Underneath that, like the teeth of a comb, are all the calls being made to each sorting algorithm.</p>
 
 <p>Let's zoom in:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10993/perf-flame-chart-zoom-1.png" style="display: block; height: 350px; margin-left: auto; margin-right: auto; width: 1212px;"></p>
+<p><img alt="" src="perf-flame-chart-zoom-1.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>This slice is about 140 ms long, and shows us more details of the functions being called by <code>sort()</code>. The <code>sort()</code> code is just this:</p>
 
@@ -95,7 +95,7 @@ slug: Tools/Performance/Flame_Chart
 
 <p>Let's zoom in one more time:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10995/perf-flame-chart-zoom-2.png" style="display: block; height: 348px; margin-left: auto; margin-right: auto; width: 1212px;"></p>
+<p><img alt="" src="perf-flame-chart-zoom-2.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>This slice is about 20ms long. We can see that the purple markers underneath <code>bubbleSort()</code> are the calls to <code>swap()</code>. If you counted them all, the Call Tree view tells us that you'd see 253 of them. All the ones in this zoom are underneath <code>bubbleSort()</code>, but according to the Call Tree view, the profile does contain one under <code>selectionSort()</code>.</p>
 

@@ -2,26 +2,30 @@
 title: Math.atan2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan2
 tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
+- JavaScript
+- Math
+- Method
+- Reference
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>Math.atan2()</code></strong> function returns the angle in the plane (in radians) between the
-  positive x-axis and the ray from (0,0) to the point (x,y), for <code>Math.atan2(y,x)</code>.</p>
+<p>The <strong><code>Math.atan2()</code></strong> function returns the angle in the plane
+  (in radians) between the
+  positive x-axis and the ray from (0,0) to the point (x,y), for
+  <code>Math.atan2(y,x)</code>.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/math-atan2.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to
+<div class="hidden">The source for this interactive example is stored in a GitHub
+  repository. If you'd like to
   contribute to the interactive examples project, please clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a
+    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
+  and send us a
   pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">Math.atan2(<var>y</var>, <var>x</var>)</pre>
+<pre class="brush: js">Math.atan2(<var>y</var>, <var>x</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -50,27 +54,34 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>The <code>Math.atan2()</code> method returns a numeric value between -π and π representing the angle theta of an
-  <code>(x, y)</code> point. This is the counterclockwise angle, measured in radians, between the positive X axis, and
-  the point <code>(x, y)</code>. Note that the arguments to this function pass the y-coordinate first and the
+<p>The <code>Math.atan2()</code> method returns a numeric value between -π and π
+  representing the angle theta of an
+  <code>(x, y)</code> point. This is the counterclockwise angle, measured in radians,
+  between the positive X axis, and
+  the point <code>(x, y)</code>. Note that the arguments to this function pass the
+  y-coordinate first and the
   x-coordinate second.
 </p>
 
 <p><img alt="A simple diagram showing the angle returned by atan2(y, x)"
-    src="https://mdn.mozillademos.org/files/11557/atan2.png" style="height: 300px; width: 300px;"></p>
+    src="https://mdn.mozillademos.org/files/11557/atan2.png"
+    style="height: 300px; width: 300px;"></p>
 
-<p><code>Math.atan2()</code> is passed separate <code>x</code> and <code>y</code> arguments, and
+<p><code>Math.atan2()</code> is passed separate <code>x</code> and <code>y</code>
+  arguments, and
   <code>Math.atan()</code> is passed the ratio of those two arguments.
 </p>
 
-<p>Because <code>atan2()</code> is a static method of <code>Math</code>, you always use it as <code>Math.atan2()</code>,
-  rather than as a method of a <code>Math</code> object you created (<code>Math</code> is not a constructor).</p>
+<p>Because <code>atan2()</code> is a static method of <code>Math</code>, you always use it
+  as <code>Math.atan2()</code>,
+  rather than as a method of a <code>Math</code> object you created (<code>Math</code> is
+  not a constructor).</p>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_Math.atan2">Using Math.atan2()</h3>
 
-<pre class="brush: js notranslate">Math.atan2(90, 15); // 1.4056476493802699
+<pre class="brush: js">Math.atan2(90, 15); // 1.4056476493802699
 Math.atan2(15, 90); // 0.16514867741462683
 
 Math.atan2(±0, -0);               // ±PI.

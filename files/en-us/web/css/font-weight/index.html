@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush:css no-line-numbers">/* Keyword values */
 font-weight: normal;
 font-weight: bold;
 
@@ -57,7 +57,7 @@ font-weight: unset;
  <dt><code>bolder</code></dt>
  <dd>One relative font weight heavier than the parent element. Note that only four font weights are considered for relative weight calculation; see the {{anch("Meaning of relative weights")}} section below.</dd>
  <dt><code>&lt;number&gt;</code></dt>
- <dd>A {{cssxref("&lt;number&gt;")}} value between 1 and 1000, inclusive. Higher numbers represent weights that are bolder than (or as bold as) lower numbers. Certain commonly used values correspond to common weight names, as described in the <a href="#Common_weight_name_mapping">Common weight name mapping</a> section below.</dd>
+ <dd>A {{cssxref("&lt;number&gt;")}} value between 1 and 1000, inclusive. Higher numbers represent weights that are bolder than (or as bold as) lower numbers. Certain commonly used values correspond to common weight names, as described in the <a href="#common_weight_name_mapping">Common weight name mapping</a> section below.</dd>
 </dl>
 
 <p>In earlier versions of the <code>font-weight</code> specification, the property accepts only keyword values and the numeric values 100, 200, 300, 400, 500, 600, 700, 800, and 900; non-variable fonts can only really make use of these set values, although fine-grained values (e.g. 451) will be translated to one of these values for non-variable fonts using the {{anch("Fallback weights")}} system.</p>
@@ -201,7 +201,7 @@ font-weight: unset;
 
 <h3 id="Variable_fonts">Variable fonts</h3>
 
-<p>Most fonts have a particular weight which corresponds to one of the numbers in <a href="#Common_weight_name_mapping">Common weight name mapping</a>. However some fonts, called variable fonts, can support a range of weights with a more or less fine granularity, and this can give the designer a much closer degree of control over the chosen weight.</p>
+<p>Most fonts have a particular weight which corresponds to one of the numbers in <a href="#common_weight_name_mapping">Common weight name mapping</a>. However some fonts, called variable fonts, can support a range of weights with a more or less fine granularity, and this can give the designer a much closer degree of control over the chosen weight.</p>
 
 <p>For TrueType or OpenType variable fonts, the "wght" variation is used to implement varying widths.</p>
 
@@ -212,7 +212,7 @@ font-weight: unset;
 <h4 id="HTML">HTML</h4>
 
 <div id="variable-font-example">
-<pre class="brush: html notranslate">&lt;header&gt;
+<pre class="brush: html">&lt;header&gt;
     &lt;input type="range" id="weight" name="weight" min="1" max="1000" /&gt;
     &lt;label for="weight"&gt;Weight&lt;/label&gt;
 &lt;/header&gt;
@@ -223,7 +223,7 @@ font-weight: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">/*
+<pre class="brush: css">/*
 Mutator Sans is created by LettError (https://github.com/LettError/mutatorSans)
 and is used here under the terms of its license:
 https://github.com/LettError/mutatorSans/blob/master/LICENSE
@@ -252,7 +252,7 @@ label {
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">html, body {
+<pre class="brush: css">html, body {
   max-height: 100vh;
   max-width: 100vw;
   overflow: hidden;
@@ -280,7 +280,7 @@ header {
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">let weightLabel = document.querySelector('label[for="weight"]');
+<pre class="brush: js">let weightLabel = document.querySelector('label[for="weight"]');
 let weightInput = document.querySelector('#weight');
 let sampleText = document.querySelector('.sample');
 
@@ -310,7 +310,7 @@ update();
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -318,7 +318,7 @@ update();
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
   Alice was beginning to get very tired of sitting by her sister on the
   bank, and of having nothing to do: once or twice she had peeped into the
   book her sister was reading, but it had no pictures or conversations in
@@ -333,7 +333,7 @@ update();
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush:css notranslate">/* Set paragraph text to be bold. */
+<pre class="brush:css">/* Set paragraph text to be bold. */
 p {
   font-weight: bold;
 }
@@ -390,7 +390,7 @@ span {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("css.properties.font-weight")}}</p>
 

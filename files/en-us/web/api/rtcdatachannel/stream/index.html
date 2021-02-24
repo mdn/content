@@ -2,31 +2,40 @@
 title: RTCDataChannel.stream
 slug: Web/API/RTCDataChannel/stream
 tags:
-  - Non-standard
-  - Obsolete
-  - Property
-  - RTCDataChannel
-  - Read-only
-  - Reference
-  - WebRTC
-  - stream
+- Non-standard
+- Obsolete
+- Property
+- RTCDataChannel
+- Read-only
+- Reference
+- WebRTC
+- stream
 ---
-<p>{{APIRef("WebRTC")}}{{obsolete_header}}{{non-standard_header}}</p>
+<p>{{APIRef("WebRTC")}}{{deprecated_header}}{{non-standard_header}}</p>
 
-<p><span class="seoSummary">The deprecated (and never part of the official specification) read-only <code>RTCDataChannel</code> property <code><strong>stream</strong></code> returns an ID number (between 0 and 65,535) which uniquely identifies the {{domxref("RTCDataChannel")}}.</span> This ID is set at the time the data channel is created, either by the user agent (if {{domxref("RTCDataChannel.negotiated")}} is <code>false</code>) or by the site or app script (if <code>negotiated</code> is <code>true</code>).</p>
+<p><span class="seoSummary">The deprecated (and never part of the official specification)
+    read-only <code>RTCDataChannel</code> property <code><strong>stream</strong></code>
+    returns an ID number (between 0 and 65,535) which uniquely identifies the
+    {{domxref("RTCDataChannel")}}.</span> This ID is set at the time the data channel is
+  created, either by the user agent (if {{domxref("RTCDataChannel.negotiated")}} is
+  <code>false</code>) or by the site or app script (if <code>negotiated</code> is
+  <code>true</code>).</p>
 
 <div class="warning">
-<p>This property has been replaced with the {{domxref("RTCDataChannel.id")}} property. If you have code that uses <code>stream</code>, you will need to update, since browsers have begun to remove support for <code>stream</code>.</p>
+  <p>This property has been replaced with the {{domxref("RTCDataChannel.id")}} property.
+    If you have code that uses <code>stream</code>, you will need to update, since
+    browsers have begun to remove support for <code>stream</code>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>stream</em> = <em>aDataChannel</em>.stream;
+<pre class="brush: js">var <em>stream</em> = <em>aDataChannel</em>.stream;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>An <code>unsigned short</code> value (that is, an integer between 0 and 65,535) which uniquely identifies the data channel.</p>
+<p>An <code>unsigned short</code> value (that is, an integer between 0 and 65,535) which
+  uniquely identifies the data channel.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -41,8 +50,9 @@ console.log("Data channel stream ID: " + </code>dataChannel.stream<code>);</code
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Using_data_channels">Using WebRTC data channels</a></li>
- <li>{{domxref("RTCDataChannel")}}</li>
- <li>{{domxref("RTCDataChannel.id")}}</li>
+  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+  <li><a href="/en-US/docs/Web/API/WebRTC_API/Using_data_channels">Using WebRTC data
+      channels</a></li>
+  <li>{{domxref("RTCDataChannel")}}</li>
+  <li>{{domxref("RTCDataChannel.id")}}</li>
 </ul>

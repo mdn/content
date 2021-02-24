@@ -2,26 +2,31 @@
 title: TypedArray.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
 tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
+- ECMAScript 2015
+- Iterator
+- JavaScript
+- Method
+- Prototype
+- Reference
+- TypedArray
+- TypedArrays
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>keys()</code></strong> method returns a new array iterator object that contains the keys for each index in the array.</p>
+<p>The <strong><code>keys()</code></strong> method returns a new array iterator object
+  that contains the keys for each index in the array.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/typedarray-keys.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<div class="hidden">The source for this interactive example is stored in a GitHub
+  repository. If you'd like to contribute to the interactive examples project, please
+  clone <a
+    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
+  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>arr</var>.keys()</pre>
+<pre class="brush: js"><var>arr</var>.keys()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -31,7 +36,7 @@ tags:
 
 <h3 id="Iteration_using_for...of_loop">Iteration using for...of loop</h3>
 
-<pre class="brush: js notranslate">var arr = new Uint8Array([10, 20, 30, 40, 50]);
+<pre class="brush: js">var arr = new Uint8Array([10, 20, 30, 40, 50]);
 var eArray = arr.keys();
 // your browser must support for..of loop
 // and let-scoped variables in for loops
@@ -42,7 +47,7 @@ for (let n of eArray) {
 
 <h3 id="Alternative_iteration">Alternative iteration</h3>
 
-<pre class="brush: js notranslate">var arr = new Uint8Array([10, 20, 30, 40, 50]);
+<pre class="brush: js">var arr = new Uint8Array([10, 20, 30, 40, 50]);
 var eArr = arr.keys();
 console.log(eArr.next().value); // 0
 console.log(eArr.next().value); // 1
@@ -54,33 +59,33 @@ console.log(eArr.next().value); // 4
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.keys', '%TypedArray%.prototype.keys()')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.keys',
+        '%TypedArray%.prototype.keys()')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("javascript.builtins.TypedArray.keys")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
- <li>{{jsxref("TypedArray")}}</li>
- <li>{{jsxref("TypedArray.prototype.entries()")}}</li>
- <li>{{jsxref("TypedArray.prototype.values()")}}</li>
- <li>{{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">Iteration protocols</a></li>
+  <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
+  <li>{{jsxref("TypedArray")}}</li>
+  <li>{{jsxref("TypedArray.prototype.entries()")}}</li>
+  <li>{{jsxref("TypedArray.prototype.values()")}}</li>
+  <li>{{jsxref("TypedArray.prototype.@@iterator()",
+    "TypedArray.prototype[@@iterator]()")}}</li>
+  <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></li>
+  <li><a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">Iteration
+      protocols</a></li>
 </ul>

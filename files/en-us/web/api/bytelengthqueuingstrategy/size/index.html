@@ -12,17 +12,20 @@ tags:
 ---
 <div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
 
-<p class="summary">The <strong><code>size()</code></strong> method of the {{domxref("ByteLengthQueuingStrategy")}} interface returns the given chunk’s <code>byteLength</code> property.</p>
+<p class="summary">The <strong><code>size()</code></strong> method of the
+  {{domxref("ByteLengthQueuingStrategy")}} interface returns the given chunk’s
+  <code>byteLength</code> property.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var><code>var <em>size</em> = </code>byteLengthQueuingStrategy</var>.size(<em>chunk</em>);</pre>
+<pre
+  class="brush: js"><var><code>var <em>size</em> = </code>byteLengthQueuingStrategy</var>.size(<em>chunk</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>chunk</dt>
- <dd>A chunk of data being passed through the stream.</dd>
+  <dt>chunk</dt>
+  <dd>A chunk of data being passed through the stream.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -31,37 +34,38 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">const</span> queuingStrategy <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">ByteLengthQueuingStrategy</span><span class="punctuation token">(</span><span class="punctuation token">{</span> highWaterMark<span class="punctuation token">:</span> <span class="number token">1</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre
+  class="brush: js line-numbers  language-js">const queuingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
 
-<span class="keyword token">const</span> readableStream <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">ReadableStream</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-  <span class="function token">start</span><span class="punctuation token">(</span>controller<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="function token">pull</span><span class="punctuation token">(</span>controller<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="function token">cancel</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"stream error:"</span><span class="punctuation token">,</span> err<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">,</span> queuingStrategy<span class="punctuation token">)</span><span class="punctuation token">;</span>
+const readableStream = new ReadableStream({
+  start(controller) {
+    ...
+  },
+  pull(controller) {
+    ...
+  },
+  cancel(err) {
+    console.log(&quot;stream error:&quot;, err);
+  }
+}, queuingStrategy);
 
-<span class="keyword token">var</span> size <span class="operator token">=</span> queueingStrategy<span class="punctuation token">.</span><span class="function token">size</span><span class="punctuation token">(</span>chunk<span class="punctuation token">)</span></code>;</pre>
+var size = queueingStrategy.size(chunk);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Streams","#blqs-size","size")}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("Streams","#blqs-size","size")}}</td>
+      <td>{{Spec2('Streams')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

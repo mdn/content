@@ -38,7 +38,7 @@ tags:
 
 <p>As a real-world example, think about the electricity supply in your house, apartment, or other dwellings. If you want to use an appliance in your house, you plug it into a plug socket and it works. You don't try to wire it directly into the power supply — to do so would be really inefficient and, if you are not an electrician, difficult and dangerous to attempt.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14317/plug-socket.png" style="display: block; height: 472px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="plug-socket.png" style="display: block; margin: 0px auto;"></p>
 
 <p><em>Image source: <a href="https://www.flickr.com/photos/easy-pics/9518184890/in/photostream/lightbox/">Overloaded plug socket</a> by <a href="https://www.flickr.com/photos/easy-pics/">The Clear Communication People</a>, on Flickr.</em></p>
 
@@ -57,7 +57,7 @@ tags:
  <li><strong>Third-party APIs</strong> are not built into the browser by default, and you generally have to retrieve their code and information from somewhere on the Web. For example, the <a href="https://dev.twitter.com/overview/documentation">Twitter API</a> allows you to do things like displaying your latest tweets on your website. It provides a special set of constructs you can use to query the Twitter service and return specific information.</li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13508/browser.png" style="display: block; height: 511px; margin: 0px auto; width: 815px;"></p>
+<p><img alt="" src="browser.png" style="display: block; margin: 0px auto;"></p>
 
 <h3 id="Relationship_between_JavaScript_APIs_and_other_JavaScript_tools">Relationship between JavaScript, APIs, and other JavaScript tools</h3>
 
@@ -67,7 +67,7 @@ tags:
  <li>JavaScript — A high-level scripting language built into browsers that allows you to implement functionality on web pages/apps. Note that JavaScript is also available in other programming environments, such as <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction">Node</a>.</li>
  <li>Browser APIs — constructs built into the browser that sits on top of the JavaScript language and allows you to implement functionality more easily.</li>
  <li>Third-party APIs — constructs built into third-party platforms (e.g. Twitter, Facebook) that allow you to use some of those platform's functionality in your own web pages (for example, display your latest Tweets on your web page).</li>
- <li>JavaScript libraries — Usually one or more JavaScript files containing <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions#Custom_functions">custom functions</a> that you can attach to your web page to speed up or enable writing common functionality. Examples include jQuery, Mootools and React.</li>
+ <li>JavaScript libraries — Usually one or more JavaScript files containing <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions#custom_functions">custom functions</a> that you can attach to your web page to speed up or enable writing common functionality. Examples include jQuery, Mootools and React.</li>
  <li>JavaScript frameworks — The next step up from libraries, JavaScript frameworks (e.g. Angular and Ember) tend to be packages of HTML, CSS, JavaScript, and other technologies that you install and then use to write an entire web application from scratch. The key difference between a library and a framework is “Inversion of Control”. When calling a method from a library, the developer is in control. With a framework, the control is inverted: the framework calls the developer's code.</li>
 </ul>
 
@@ -83,7 +83,7 @@ tags:
  <li><strong>APIs for manipulating documents</strong> loaded into the browser. The most obvious example is the <a href="/en-US/docs/Web/API/Document_Object_Model">DOM (Document Object Model) API</a>, which allows you to manipulate HTML and CSS — creating, removing and changing HTML, dynamically applying new styles to your page, etc. Every time you see a popup window appear on a page or some new content displayed, for example, that's the DOM in action. Find out more about these types of API in <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">Manipulating documents</a>.</li>
  <li><strong>APIs that fetch data from the server</strong> to update small sections of a webpage on their own are very commonly used. This seemingly small detail has had a huge impact on the performance and behavior of sites — if you just need to update a stock listing or list of available new stories, doing it instantly without having to reload the whole entire page from the server can make the site or app feel much more responsive and "snappy". APIs that make this possible include <a href="/en-US/docs/Web/API/XMLHttpRequest" title="XMLHttpRequest is an API that provides client functionality for transferring data between a client and a server. It provides an easy way to retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just a part of the page without disrupting what the user is doing."><code>XMLHttpRequest</code></a> and the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>. You may also come across the term <strong>Ajax</strong>, which describes this technique. Find out more about such APIs in <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">Fetching data from the server</a>.</li>
  <li><strong>APIs for drawing and manipulating graphics</strong> are now widely supported in browsers — the most popular ones are <a href="/en-US/docs/Web/API/Canvas_API">Canvas</a> and <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a>, which allow you to programmatically update the pixel data contained in an HTML {{htmlelement("canvas")}} element to create 2D and 3D scenes. For example, you might draw shapes such as rectangles or circles, import an image onto the canvas, and apply a filter to it such as sepia or grayscale using the Canvas API, or create a complex 3D scene with lighting and textures using WebGL. Such APIs are often combined with APIs for creating animation loops (such as {{domxref("window.requestAnimationFrame()")}}) and others to make constantly updating scenes like cartoons and games.</li>
- <li><strong><a href="https://developer.mozilla.org/en-US/Apps/Fundamentals/Audio_and_video_delivery">Audio and Video APIs</a></strong> like {{domxref("HTMLMediaElement")}}, the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>, and <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> allow you to do really interesting things with multimedia such as creating custom UI controls for playing audio and video, displaying text tracks like captions and subtitles along with your videos, grabbing video from your web camera to be manipulated via a canvas (see above) or displayed on someone else's computer in a web conference, or adding effects to audio tracks (such as gain, distortion, panning, etc).</li>
+ <li><strong><a href="/en-US/docs/Web/Guide/Audio_and_video_delivery">Audio and Video APIs</a></strong> like {{domxref("HTMLMediaElement")}}, the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>, and <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> allow you to do really interesting things with multimedia such as creating custom UI controls for playing audio and video, displaying text tracks like captions and subtitles along with your videos, grabbing video from your web camera to be manipulated via a canvas (see above) or displayed on someone else's computer in a web conference, or adding effects to audio tracks (such as gain, distortion, panning, etc).</li>
  <li><strong>Device APIs</strong> are basically APIs for manipulating and retrieving data from modern device hardware in a way that is useful for web apps. Examples include telling the user that a useful update is available on a web app via system notifications (see the <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a>) or vibration hardware (see the <a href="/en-US/docs/Web/API/Vibration_API">Vibration API</a>).</li>
  <li><strong>Client-side storage APIs</strong> are becoming a lot more widespread in web browsers — the ability to store data on the client-side is very useful if you want to create an app that will save its state between page loads, and perhaps even work when the device is offline. There are a number of options available, e.g. simple name/value storage with the <a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage API</a>, and more complex tabular data storage with the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a>.</li>
 </ul>
@@ -122,14 +122,14 @@ tags:
 <p>Let's return to the example of the Web Audio API — this is a fairly complex API, which consists of a number of objects. The most obvious ones are:</p>
 
 <ul>
- <li>{{domxref("AudioContext")}}, which represents an <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_graphs">audio graph</a> that can be used to manipulate audio playing inside the browser, and has a number of methods and properties available to manipulate that audio.</li>
+ <li>{{domxref("AudioContext")}}, which represents an <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_graphs">audio graph</a> that can be used to manipulate audio playing inside the browser, and has a number of methods and properties available to manipulate that audio.</li>
  <li>{{domxref("MediaElementAudioSourceNode")}}, which represents an {{htmlelement("audio")}} element containing sound you want to play and manipulate inside the audio context.</li>
  <li>{{domxref("AudioDestinationNode")}}, which represents the destination of the audio, i.e. the device on your computer that will actually output it — usually your speakers or headphones.</li>
 </ul>
 
 <p>So how do these objects interact? If you look at our <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/web-audio/index.html">simple web audio example</a> (<a href="https://mdn.github.io/learning-area/javascript/apis/introduction/web-audio/">see it live also</a>), you'll first see the following HTML:</p>
 
-<pre class="brush: html notranslate">&lt;audio src="outfoxing.mp3"&gt;&lt;/audio&gt;
+<pre class="brush: html">&lt;audio src="outfoxing.mp3"&gt;&lt;/audio&gt;
 
 &lt;button class="paused"&gt;Play&lt;/button&gt;
 &lt;br&gt;
@@ -141,12 +141,12 @@ tags:
 
 <p>We start by creating an <code>AudioContext</code> instance inside which to manipulate our track:</p>
 
-<pre class="brush: js notranslate">const AudioContext = window.AudioContext || window.webkitAudioContext;
+<pre class="brush: js">const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();</pre>
 
 <p>Next, we create constants that store references to our <code>&lt;audio&gt;</code>, <code>&lt;button&gt;</code>, and <code>&lt;input&gt;</code> elements, and use the {{domxref("AudioContext.createMediaElementSource()")}} method to create a <code>MediaElementAudioSourceNode</code> representing the source of our audio — the <code>&lt;audio&gt;</code> element will be played from:</p>
 
-<pre class="brush: js notranslate">const audioElement = document.querySelector('audio');
+<pre class="brush: js">const audioElement = document.querySelector('audio');
 const playBtn = document.querySelector('button');
 const volumeSlider = document.querySelector('.volume');
 
@@ -154,7 +154,7 @@ const audioSource = audioCtx.createMediaElementSource(audioElement);</pre>
 
 <p>Next up we include a couple of event handlers that serve to toggle between play and pause when the button is pressed and reset the display back to the beginning when the song has finished playing:</p>
 
-<pre class="brush: js notranslate">// play/pause audio
+<pre class="brush: js">// play/pause audio
 playBtn.addEventListener('click', function() {
     // check if context is in suspended state (autoplay policy)
     if (audioCtx.state === 'suspended') {
@@ -184,9 +184,9 @@ audioElement.addEventListener('ended', function() {
 <p><strong>Note</strong>: Some of you may notice that the <code>play()</code> and <code>pause()</code> methods being used to play and pause the track are not part of the Web Audio API; they are part of the {{domxref("HTMLMediaElement")}} API, which is different but closely-related.</p>
 </div>
 
-<p>Next, we create a {{domxref("GainNode")}} object using the {{domxref("AudioContext.createGain()")}} method, which can be used to adjust the volume of audio fed through it, and create another event handler that changes the value of the audio graph's gain (volume) whenever the slider value is changed:</p>
+<p>Next, we create a {{domxref("GainNode")}} object using the {{domxref("BaseAudioContext/createGain", "AudioContext.createGain()")}} method, which can be used to adjust the volume of audio fed through it, and create another event handler that changes the value of the audio graph's gain (volume) whenever the slider value is changed:</p>
 
-<pre class="brush: js notranslate">const gainNode = audioCtx.createGain();
+<pre class="brush: js">const gainNode = audioCtx.createGain();
 
 volumeSlider.addEventListener('input', function() {
     gainNode.gain.value = this.value;
@@ -194,9 +194,9 @@ volumeSlider.addEventListener('input', function() {
 
 <p>The final thing to do to get this to work is to connect the different nodes in the audio graph up, which is done using the {{domxref("AudioNode.connect()")}} method available on every node type:</p>
 
-<pre class="brush: js notranslate">audioSource.connect(gainNode).connect(audioCtx.destination);</pre>
+<pre class="brush: js">audioSource.connect(gainNode).connect(audioCtx.destination);</pre>
 
-<p>The audio starts in the source, which is then connected to the gain node so the audio's volume can be adjusted. The gain node is then connected to the destination node so the sound can be played on your computer (the {{domxref("AudioContext.destination")}} property represents whatever is the default {{domxref("AudioDestinationNode")}} available on your computer's hardware, e.g. your speakers).</p>
+<p>The audio starts in the source, which is then connected to the gain node so the audio's volume can be adjusted. The gain node is then connected to the destination node so the sound can be played on your computer (the {{domxref("BaseAudioContext/destination", "AudioContext.destination")}} property represents whatever is the default {{domxref("AudioDestinationNode")}} available on your computer's hardware, e.g. your speakers).</p>
 
 <h3 id="They_have_recognizable_entry_points">They have recognizable entry points</h3>
 
@@ -204,19 +204,19 @@ volumeSlider.addEventListener('input', function() {
 
 <p>The Document Object Model (DOM) API also has a simple entry point — its features tend to be found hanging off the {{domxref("Document")}} object, or an instance of an HTML element that you want to affect in some way, for example:</p>
 
-<pre class="brush: js notranslate">const em = document.createElement('em'); // create a new em element
+<pre class="brush: js">const em = document.createElement('em'); // create a new em element
 const para = document.querySelector('p'); // reference an existing p element
 em.textContent = 'Hello there!'; // give em some text content
 para.appendChild(em); // embed em inside para</pre>
 
 <p>The <a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a> also relies on getting a context object to use to manipulate things, although in this case, it's a graphical context rather than an audio context. Its context object is created by getting a reference to the {{htmlelement("canvas")}} element you want to draw on, and then calling its {{domxref("HTMLCanvasElement.getContext()")}} method:</p>
 
-<pre class="brush: js notranslate">const canvas = document.querySelector('canvas');
+<pre class="brush: js">const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');</pre>
 
 <p>Anything that we want to do to the canvas is then achieved by calling properties and methods of the context object (which is an instance of {{domxref("CanvasRenderingContext2D")}}), for example:</p>
 
-<pre class="brush: js notranslate">Ball.prototype.draw = function() {
+<pre class="brush: js">Ball.prototype.draw = function() {
   ctx.beginPath();
   ctx.fillStyle = this.color;
   ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
@@ -239,7 +239,7 @@ const ctx = canvas.getContext('2d');</pre>
 
 <p>The following code provides a simple example of how this would be used:</p>
 
-<pre class="brush: js notranslate">let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+<pre class="brush: js">let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
 let request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
@@ -265,9 +265,9 @@ request.onload = function() {
 
 <p>In addition, some WebAPIs request permission to be enabled from the user once calls to them are made in your code. As an example, the <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a> asks for permission using a pop-up dialogue box:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14315/notification-permission.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="notification-permission.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
-<p>The Web Audio and {{domxref("HTMLMediaElement")}} APIs are subject to a security mechanism called <a href="/en-US/docs/Web/API/Web_Audio_API/Best_practices#Autoplay_policy">autoplay policy</a> — this basically means that you can't automatically play audio when a page loads — you've got to allow your users to initiate audio play through a control like a button. This is done because autoplaying audio is usually really annoying and we really shouldn't be subjecting our users to it.</p>
+<p>The Web Audio and {{domxref("HTMLMediaElement")}} APIs are subject to a security mechanism called <a href="/en-US/docs/Web/API/Web_Audio_API/Best_practices#autoplay_policy">autoplay policy</a> — this basically means that you can't automatically play audio when a page loads — you've got to allow your users to initiate audio play through a control like a button. This is done because autoplaying audio is usually really annoying and we really shouldn't be subjecting our users to it.</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: Depending on how strict the browser is, such security mechanisms might even stop the example from working locally, i.e. if you load the local example file in your browser instead of running it from a web server. At the time of writing, our Web Audio API example wouldn't work locally on Google Chrome — we had to upload it to GitHub before it would work.</p>

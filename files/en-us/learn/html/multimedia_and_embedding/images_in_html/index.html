@@ -40,16 +40,16 @@ tags:
 <p>In order to put a simple image on a webpage, we use the {{htmlelement("img")}} element. This is an {{glossary("empty element")}} (meaning that it has no text content or closing tag) that requires a minimum of one attribute to be useful — <code>src</code> (sometimes spoken as its full title, <em>source</em>). The <code>src</code> attribute contains a path pointing to the image you want to embed in the page, which can be a relative or absolute URL, in the same way as <code>href</code> attribute values in {{htmlelement("a")}} elements.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You should read <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths">A quick primer on URLs and paths</a> to refresh your memory on relative and absolute URLs before continuing.</p>
+<p><strong>Note</strong>: You should read <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#a_quick_primer_on_urls_and_paths">A quick primer on URLs and paths</a> to refresh your memory on relative and absolute URLs before continuing.</p>
 </div>
 
 <p>So for example, if your image is called <code>dinosaur.jpg</code>, and it sits in the same directory as your HTML page, you could embed the image like so:</p>
 
-<pre class="brush: html notranslate">&lt;img src="dinosaur.jpg"&gt;</pre>
+<pre class="brush: html">&lt;img src="dinosaur.jpg"&gt;</pre>
 
 <p>If the image was in an <code>images</code> subdirectory, which was inside the same directory as the HTML page (which Google <a href="https://support.google.com/webmasters/answer/114016">recommends</a> for {{glossary("SEO")}}/indexing purposes), then you'd embed it like this:</p>
 
-<pre class="brush: html notranslate">&lt;img src="images/dinosaur.jpg"&gt;</pre>
+<pre class="brush: html">&lt;img src="images/dinosaur.jpg"&gt;</pre>
 
 <p>And so on.</p>
 
@@ -59,7 +59,7 @@ tags:
 
 <p>You could embed the image using its absolute URL, for example:</p>
 
-<pre class="brush: html notranslate">&lt;img src="https://www.example.com/images/dinosaur.jpg"&gt;</pre>
+<pre class="brush: html">&lt;img src="https://www.example.com/images/dinosaur.jpg"&gt;</pre>
 
 <p>But this is pointless, as it just makes the browser do more work, looking up the IP address from the DNS server all over again, etc. You'll almost always keep the images for your website on the same server as your HTML.</p>
 
@@ -78,7 +78,7 @@ tags:
 
 <p>Our above code would give us the following result:</p>
 
-<p><img alt='A basic image of a dinosaur, embedded in a browser, with "Images in HTML" written above it' src="https://mdn.mozillademos.org/files/12700/basic-image.png" style="display: block; height: 700px; margin: 0px auto; width: 700px;"></p>
+<p><img alt='A basic image of a dinosaur, embedded in a browser, with "Images in HTML" written above it' src="basic-image.png" style="display: block; margin: 0px auto;"></p>
 
 <div class="note">
 <p><strong>Note</strong>: Elements like {{htmlelement("img")}} and {{htmlelement("video")}} are sometimes referred to as <strong>replaced elements</strong>. This is because the element's content and size are defined by an external resource (like an image or video file), not by the contents of the element itself. You can read more about them at <a href="/en-US/docs/Web/CSS/Replaced_element">Replaced elements</a>.</p>
@@ -92,13 +92,13 @@ tags:
 
 <p>The next attribute we'll look at is <code>alt</code>. Its value is supposed to be a textual description of the image, for use in situations where the image cannot be seen/displayed or takes a long time to render because of a slow internet connection. For example, our above code could be modified like so:</p>
 
-<pre class="brush: html notranslate">&lt;img src="images/dinosaur.jpg"
+<pre class="brush: html">&lt;img src="images/dinosaur.jpg"
      alt="The head and torso of a dinosaur skeleton;
           it has a large head with long sharp teeth"&gt;</pre>
 
 <p>The easiest way to test your <code>alt</code> text is to purposely misspell your filename. If for example our image name was spelled <code>dinosooooor.jpg</code>, the browser wouldn't display the image, and would display the alt text instead:</p>
 
-<p><img alt="The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place." src="https://mdn.mozillademos.org/files/12702/alt-text.png" style="display: block; height: 700px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place." src="alt-text.png" style="display: block; margin: 0px auto;"></p>
 
 <p>So, why would you ever see or need alt text? It can come in handy for a number of reasons:</p>
 
@@ -115,21 +115,21 @@ tags:
 <ul>
  <li><strong>Decoration.</strong> You should use {{anch("CSS background images")}} for decorative images, but if you must use HTML, add a blank <code>alt=""</code>. If the image isn't part of the content, a screen reader shouldn't waste time reading it.</li>
  <li><strong>Content.</strong> If your image provides significant information, provide the same information in a <em>brief </em><code>alt</code> text – or even better, in the main text which everybody can see. Don't write redundant <code>alt</code> text. How annoying would it be for a sighted user if all paragraphs were written twice in the main content? If the image is described adequately by the main text body, you can just use <code>alt=""</code>.</li>
- <li><strong>Link.</strong> If you put an image inside {{htmlelement("a")}} tags, to turn an image into a link, you still must provide <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Use_clear_link_wording">accessible link text</a>. In such cases you may, either, write it inside the same <code>&lt;a&gt;</code> element, or inside the image's <code>alt</code> attribute – whichever works best in your case.</li>
+ <li><strong>Link.</strong> If you put an image inside {{htmlelement("a")}} tags, to turn an image into a link, you still must provide <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#use_clear_link_wording">accessible link text</a>. In such cases you may, either, write it inside the same <code>&lt;a&gt;</code> element, or inside the image's <code>alt</code> attribute – whichever works best in your case.</li>
  <li><strong>Text.</strong> You should not put your text into images. If your main heading needs a drop shadow, for example, <a href="/en-US/docs/Web/CSS/text-shadow">use CSS</a> for that rather than putting the text into an image. However, If you <em>really can't avoid doing this</em>, you should supply the text inside the <code>alt</code> attribute.</li>
 </ul>
 
 <p>Essentially, the key is to deliver a usable experience, even when the images can't be seen. This ensures all users are not missing any of the content. Try turning off images in your browser and see how things look. You'll soon realize how helpful alt text is if the image cannot be seen.</p>
 
 <div class="note">
-<p><strong>Note</strong>: For more information, see our guide to <a href="/en-US/docs/Learn/Accessibility/HTML#Text_alternatives">Text Alternatives</a>.</p>
+<p><strong>Note</strong>: For more information, see our guide to <a href="/en-US/docs/Learn/Accessibility/HTML#text_alternatives">Text Alternatives</a>.</p>
 </div>
 
 <h3 id="Width_and_height">Width and height</h3>
 
 <p>You can use the <code>width</code> and <code>height</code> attributes to specify the width and height of your image. You can find your image's width and height in a number of ways. For example on the Mac you can use <kbd>Cmd</kbd> + <kbd>I</kbd> to get the info display up for the image file. Returning to our example, we could do this:</p>
 
-<pre class="brush: html notranslate">&lt;img src="images/dinosaur.jpg"
+<pre class="brush: html">&lt;img src="images/dinosaur.jpg"
      alt="The head and torso of a dinosaur skeleton;
           it has a large head with long sharp teeth"
      width="400"
@@ -137,7 +137,7 @@ tags:
 
 <p>This doesn't result in much difference to the display, under normal circumstances. But if the image isn't being displayed, for example, the user has just navigated to the page, and the image hasn't yet loaded, you'll notice the browser is leaving a space for the image to appear in:</p>
 
-<p><img alt="The Images in HTML title, with dinosaur alt text, displayed inside a large box that results from width and height settings" src="https://mdn.mozillademos.org/files/12706/alt-text-with-width-height.png" style="display: block; height: 700px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="The Images in HTML title, with dinosaur alt text, displayed inside a large box that results from width and height settings" src="alt-text-with-width-height.png" style="display: block; margin: 0px auto;"></p>
 
 <p>This is a good thing to do, resulting in the page loading quicker and more smoothly.</p>
 
@@ -149,9 +149,9 @@ tags:
 
 <h3 id="Image_titles">Image titles</h3>
 
-<p>As <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Adding_supporting_information_with_%3Ctitle%3E">with links</a>, you can also add <code>title</code> attributes to images, to provide further supporting information if needed. In our example, we could do this:</p>
+<p>As <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#adding_supporting_information_with_%3ctitle%3e">with links</a>, you can also add <code>title</code> attributes to images, to provide further supporting information if needed. In our example, we could do this:</p>
 
-<pre class="brush: html notranslate">&lt;img src="images/dinosaur.jpg"
+<pre class="brush: html">&lt;img src="images/dinosaur.jpg"
      alt="The head and torso of a dinosaur skeleton;
           it has a large head with long sharp teeth"
      width="400"
@@ -160,7 +160,7 @@ tags:
 
 <p>This gives us a tooltip on mouse hover, just like link titles:</p>
 
-<p><img alt="The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum " src="https://mdn.mozillademos.org/files/12708/image-with-title.png" style="display: block; height: 341px; margin: 0px auto; width: 400px;"></p>
+<p><img alt="The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum " src="image-with-title.png" style="display: block; margin: 0px auto;"></p>
 
 <p>However, this is not recommended — <code>title</code> has a number of accessibility problems, mainly based around the fact that screen reader support is very unpredictable and most browsers won't show it unless you are hovering with a mouse (so e.g. no access to keyboard users). If you are interested in more information about this, read <a href="https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/">The Trials and Tribulations of the Title Attribute</a> by Scott O'Hara.</p>
 
@@ -187,7 +187,7 @@ tags:
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -204,7 +204,7 @@ tags:
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -224,7 +224,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -309,7 +309,7 @@ textarea.onkeyup = function(){
 
 <p>Speaking of captions, there are a number of ways that you could add a caption to go with your image. For example, there would be nothing to stop you from doing this:</p>
 
-<pre class="brush: html notranslate">&lt;div class="figure"&gt;
+<pre class="brush: html">&lt;div class="figure"&gt;
   &lt;img src="images/dinosaur.jpg"
        alt="The head and torso of a dinosaur skeleton;
             it has a large head with long sharp teeth"
@@ -323,7 +323,7 @@ textarea.onkeyup = function(){
 
 <p>A better solution, is to use the HTML5 {{htmlelement("figure")}} and {{htmlelement("figcaption")}} elements. These are created for exactly this purpose: to provide a semantic container for figures, and to clearly link the figure to the caption. Our above example could be rewritten like this:</p>
 
-<pre class="notranslate">&lt;figure&gt;
+<pre>&lt;figure&gt;
   &lt;img src="images/dinosaur.jpg"
        alt="The head and torso of a dinosaur skeleton;
             it has a large head with long sharp teeth"
@@ -363,7 +363,7 @@ textarea.onkeyup = function(){
 <div class="hidden">
 <h6 id="Playable_code_2">Playable code 2</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -379,7 +379,7 @@ textarea.onkeyup = function(){
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -399,7 +399,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -484,7 +484,7 @@ textarea.onkeyup = function(){
 
 <p>You can also use CSS to embed images into webpages (and JavaScript, but that's another story entirely). The CSS {{cssxref("background-image")}} property, and the other <code>background-*</code> properties, are used to control background image placement. For example, to place a background image on every paragraph on a page, you could do this:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   background-image: url("images/dinosaur.jpg");
 }</pre>
 
@@ -493,7 +493,7 @@ textarea.onkeyup = function(){
 <p>Summing up: if an image has meaning, in terms of your content, you should use an HTML image. If an image is purely decoration, you should use CSS background images.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You'll learn a lot more about <a href="/en-US/docs/Learn/CSS/Styling_boxes/Backgrounds">CSS background images</a> in our <a href="/en-US/docs/Learn/CSS">CSS</a> topic.</p>
+<p><strong>Note</strong>: You'll learn a lot more about <a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">CSS background images</a> in our <a href="/en-US/docs/Learn/CSS">CSS</a> topic.</p>
 </div>
 
 <h2 id="Test_your_skills!">Test your skills!</h2>

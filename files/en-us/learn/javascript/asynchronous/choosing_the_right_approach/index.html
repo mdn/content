@@ -63,7 +63,7 @@ tags:
 
 <p>An example that loads a resource via the <a href="/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code> API</a> (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/xhr-async-callback.html">run it live</a>, and <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/xhr-async-callback.html">see the source</a>):</p>
 
-<pre class="brush: js  notranslate">function loadAsset(url, type, callback) {
+<pre class="brush: js">function loadAsset(url, type, callback) {
   let xhr = new XMLHttpRequest();
   xhr.open('GET', url);
   xhr.responseType = type;
@@ -102,7 +102,7 @@ loadAsset('coffee.jpg', 'blob', displayImage);</pre>
 <h3 id="Further_information">Further information</h3>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">Introducing asynchronous JavaScript</a>, in particular <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing#Async_callbacks">Async callbacks</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">Introducing asynchronous JavaScript</a>, in particular <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing#async_callbacks">Async callbacks</a></li>
 </ul>
 
 <h2 id="setTimeout">setTimeout()</h2>
@@ -131,7 +131,7 @@ loadAsset('coffee.jpg', 'blob', displayImage);</pre>
 
 <p>Here the browser will wait two seconds before executing the anonymous function, then will display the alert message (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/simple-settimeout.html">see it running live</a>, and <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/simple-settimeout.html">see the source code</a>):</p>
 
-<pre class="brush: js  notranslate">let myGreeting = setTimeout(function() {
+<pre class="brush: js">let myGreeting = setTimeout(function() {
   alert('Hello, Mr. Universe!');
 }, 2000)</pre>
 
@@ -139,7 +139,7 @@ loadAsset('coffee.jpg', 'blob', displayImage);</pre>
 
 <p>You can use recursive <code>setTimeout()</code> calls to run a function repeatedly in a similar fashion to <code>setInterval()</code>, using code like this:</p>
 
-<pre class="brush: js  notranslate">let i = 1;
+<pre class="brush: js">let i = 1;
 setTimeout(function run() {
   console.log(i);
   i++;
@@ -163,7 +163,7 @@ setTimeout(function run() {
 <h3 id="Further_information_2">Further information</h3>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Cooperative asynchronous JavaScript: Timeouts and intervals</a>, in particular <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals#setTimeout()">setTimeout()</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Cooperative asynchronous JavaScript: Timeouts and intervals</a>, in particular <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals#settimeout()">setTimeout()</a></li>
  <li><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout() reference</a></li>
 </ul>
 
@@ -193,7 +193,7 @@ setTimeout(function run() {
 
 <p>The following function creates a new <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date()</a></code> object, extracts a time string out of it using <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString">toLocaleTimeString()</a></code>, and then displays it in the UI. We then run it once per second using <code>setInterval()</code>, creating the effect of a digital clock that updates once per second (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">see this live</a>, and also <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">see the source</a>):</p>
 
-<pre class="brush: js  notranslate">function displayTime() {
+<pre class="brush: js">function displayTime() {
    let date = new Date();
    let time = date.toLocaleTimeString();
    document.getElementById('demo').textContent = time;
@@ -244,7 +244,7 @@ const createClock = setInterval(displayTime, 1000);</pre>
 
 <p>A simple animated spinner; you can find this <a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/simple-raf-spinner.html">example live on GitHub</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/simple-raf-spinner.html">source code</a> also):</p>
 
-<pre class="brush: js  notranslate">const spinner = document.querySelector('div');
+<pre class="brush: js">const spinner = document.querySelector('div');
 let rotateCount = 0;
 let startTime = null;
 let rAF;
@@ -280,7 +280,7 @@ draw();</pre>
 <h3 id="Further_information_4">Further information</h3>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Cooperative asynchronous JavaScript: Timeouts and intervals</a>, in particular <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals#requestAnimationFrame()">requestAnimationFrame()</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Cooperative asynchronous JavaScript: Timeouts and intervals</a>, in particular <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals#requestanimationframe()">requestAnimationFrame()</a></li>
  <li><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame() reference</a></li>
 </ul>
 
@@ -310,7 +310,7 @@ draw();</pre>
 
 <p>The following code fetches an image from the server and displays it inside an {{htmlelement("img")}} element; <a href="https://mdn.github.io/learning-area/javascript/asynchronous/promises/simple-fetch-chained.html">see it live also</a>, and see also <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/simple-fetch-chained.html">the source code</a>:</p>
 
-<pre class="brush: js  notranslate">fetch('coffee.jpg')
+<pre class="brush: js">fetch('coffee.jpg')
 .then(response =&gt; response.blob())
 .then(myBlob =&gt; {
   let objectURL = URL.createObjectURL(myBlob);
@@ -326,7 +326,7 @@ draw();</pre>
 
 <p>Promise chains can be complex and hard to parse. If you nest a number of promises, you can end up with similar troubles to callback hell. For example:</p>
 
-<pre class="brush: js  notranslate">remotedb.allDocs({
+<pre class="brush: js">remotedb.allDocs({
   include_docs: true,
   attachments: true
 }).then(function (result) {
@@ -342,7 +342,7 @@ draw();</pre>
 
 <p>It is better to use the chaining power of promises to go with a flatter, easier to parse structure:</p>
 
-<pre class="brush: js  notranslate">remotedb.allDocs(...).then(function (resultOfAllDocs) {
+<pre class="brush: js">remotedb.allDocs(...).then(function (resultOfAllDocs) {
   return localdb.put(...);
 }).then(function (resultOfPut) {
   return localdb.get(...);
@@ -354,7 +354,7 @@ draw();</pre>
 
 <p>or even:</p>
 
-<pre class="brush: js  notranslate">remotedb.allDocs(...)
+<pre class="brush: js">remotedb.allDocs(...)
 .then(resultOfAllDocs =&gt; {
   return localdb.put(...);
 })
@@ -406,7 +406,7 @@ draw();</pre>
 
 <p>The following example fetches several resources from the server, and uses <code>Promise.all()</code> to wait for all of them to be available before then displaying all of them — <a href="https://mdn.github.io/learning-area/javascript/asynchronous/promises/promise-all.html">see it live</a>, and see the <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/promise-all.html">source code</a>:</p>
 
-<pre class="brush: js  notranslate">function fetchAndDecode(url, type) {
+<pre class="brush: js">function fetchAndDecode(url, type) {
   // Returning the top level promise, so the result of the entire chain is returned out of the function
   return fetch(url).then(response =&gt; {
     // Depending on what type of file is being fetched, use the relevant function to decode its contents
@@ -461,7 +461,7 @@ Promise.all([coffee, tea, description]).then(values =&gt; {
 <h3 id="Further_information_6">Further information</h3>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises#Running_code_in_response_to_multiple_promises_fulfilling">Running code in response to multiple promises fulfilling</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises#running_code_in_response_to_multiple_promises_fulfilling">Running code in response to multiple promises fulfilling</a></li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">Promise.all() reference</a></li>
 </ul>
 
@@ -491,7 +491,7 @@ Promise.all([coffee, tea, description]).then(values =&gt; {
 
 <p>The following example is a refactor of the simple promise example we saw earlier that fetches and displays an image, written using async/await (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/simple-refactored-fetch.html">see it live</a>, and see the <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/simple-refactored-fetch.html">source code</a>):</p>
 
-<pre class="brush: js  notranslate">async function myFetch() {
+<pre class="brush: js">async function myFetch() {
   let response = await fetch('coffee.jpg');
   let myBlob = await response.blob();
 

@@ -2,46 +2,52 @@
 title: ServiceWorkerRegistration.installing
 slug: Web/API/ServiceWorkerRegistration/installing
 tags:
-  - API
-  - Installing
-  - Property
-  - Reference
-  - Référence(2)
-  - Service Workers
-  - ServiceWorkerRegistration
+- API
+- Installing
+- Property
+- Reference
+- Référence(2)
+- Service Workers
+- ServiceWorkerRegistration
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
-<p>The <strong><code>installing</code></strong> property of the {{domxref("ServiceWorkerRegistration")}} interface returns a service worker whose {{domxref("ServiceWorker.state")}} is <code>installing</code>. This property is initially set to <code>null</code>.</p>
+<p>The <strong><code>installing</code></strong> property of the
+  {{domxref("ServiceWorkerRegistration")}} interface returns a service worker whose
+  {{domxref("ServiceWorker.state")}} is <code>installing</code>. This property is
+  initially set to <code>null</code>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This feature is available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
+  <p><strong>Note</strong>: This feature is available in <a
+      href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>serviceWorker</em> = <em>serviceWorkerRegistration</em>.installing;
+<pre class="brush: js">var <em>serviceWorker</em> = <em>serviceWorkerRegistration</em>.installing;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("ServiceWorker")}} object, if it is currently in an <code>installing</code> state.</p>
+<p>A {{domxref("ServiceWorker")}} object, if it is currently in an <code>installing</code>
+  state.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#dom-serviceworkerregistration-installing', 'ServiceWorkerRegistration.installing')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Service Workers', '#dom-serviceworkerregistration-installing',
+        'ServiceWorkerRegistration.installing')}}</td>
+      <td>{{Spec2('Service Workers')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -51,9 +57,12 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a></li>
+  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
+      Workers</a></li>
+  <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
+  <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker
+      ready?</a></li>
+  <li>{{jsxref("Promise")}}</li>
+  <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web
+      workers</a></li>
 </ul>

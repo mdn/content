@@ -24,7 +24,7 @@ tags:
 
 <p>A double within the range <code>0</code> to <code>1</code> (<code>0</code> meaning no time averaging). The default value is <code>0.8</code>.</p>
 
-<p>If 0 is set, there is no averaging done, whereas a value of 1 means "overlap the previous and current buffer quite a lot while computing the value", which essentially smoothes the changes across {{domxref("AnalyserNode.getFloatFrequencyData")}}/{{domxref("AnalyserNode.getByteFrequencyData")}} calls.</p>
+<p>If 0 is set, there is no averaging done, whereas a value of 1 means "overlap the previous and current buffer quite a lot while computing the value", which essentially smooths the changes across {{domxref("AnalyserNode.getFloatFrequencyData")}}/{{domxref("AnalyserNode.getByteFrequencyData")}} calls.</p>
 
 <p>In technical terms, we apply a <a href="https://webaudio.github.io/web-audio-api/#blackman-window">Blackman window</a> and smooth the values over time. The default value is good enough for most cases.</p>
 
@@ -89,20 +89,17 @@ draw();</pre>
   <tr>
    <td>{{SpecName('Web Audio API', '#dom-analysernode-smoothingtimeconstant', 'smoothingTimeConstant')}}</td>
    <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.AnalyserNode.smoothingTimeConstant")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
 </ul>

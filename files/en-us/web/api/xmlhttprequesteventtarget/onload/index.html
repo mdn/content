@@ -2,25 +2,30 @@
 title: XMLHttpRequestEventTarget.onload
 slug: Web/API/XMLHttpRequestEventTarget/onload
 tags:
-  - API
-  - Event Handler
-  - Property
-  - Reference
-  - Web
-  - XMLHttpRequestEventTarget
+- API
+- Event Handler
+- Property
+- Reference
+- Web
+- XMLHttpRequestEventTarget
 ---
 <div>{{APIRef("XMLHttpRequest")}}</div>
 
-<p>The <strong><code>XMLHttpRequestEventTarget.onload</code></strong> is the function called when an {{domxref("XMLHttpRequest")}} transaction completes successfully.</p>
+<p>The <strong><code>XMLHttpRequestEventTarget.onload</code></strong> is the function
+	called when an {{domxref("XMLHttpRequest")}} transaction completes successfully.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>XMLHttpRequest</em>.onload = <em>callback</em>;</pre>
+<pre
+	class="brush: js"><em>XMLHttpRequest</em>.onload = <em>callback</em>;</pre>
 
 <h3 id="Values">Values</h3>
 
 <ul>
-	<li><code><em>callback</em></code> is the function to be executed when the request completes successfully. It receives a {{domxref("ProgressEvent")}} object as its first argument. The value of <em>this</em> (i.e. the context) is the same {{domxref("XMLHttpRequest")}} this callback is related to.</li>
+	<li><code><em>callback</em></code> is the function to be executed when the request
+		completes successfully. It receives a {{domxref("ProgressEvent")}} object as its
+		first argument. The value of <em>this</em> (i.e. the context) is the
+		same {{domxref("XMLHttpRequest")}} this callback is related to.</li>
 </ul>
 
 <h2 id="Example">Example</h2>

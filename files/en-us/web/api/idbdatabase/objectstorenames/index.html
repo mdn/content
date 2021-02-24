@@ -2,30 +2,37 @@
 title: IDBDatabase.objectStoreNames
 slug: Web/API/IDBDatabase/objectStoreNames
 tags:
-  - API
-  - Database
-  - IDBDatabase
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - objectStoreNames
+- API
+- Database
+- IDBDatabase
+- IndexedDB
+- Property
+- Reference
+- Storage
+- objectStoreNames
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
 <div>
-<p>The <strong><code>objectStoreNames</code></strong> read-only property of the {{domxref("IDBDatabase")}} interface is a {{ domxref("DOMStringList") }} containing a list of the names of the <a href="/en-US/docs/IndexedDB#gloss_object_store">object stores</a> currently in the connected database.</p>
+  <p>The <strong><code>objectStoreNames</code></strong> read-only property of the
+    {{domxref("IDBDatabase")}} interface is a {{ domxref("DOMStringList") }} containing a
+    list of the names of the <a href="/en-US/docs/IndexedDB#gloss_object_store">object
+      stores</a> currently in the connected database.</p>
 
-<p>{{AvailableInWorkers}}</p>
+  <p>{{AvailableInWorkers}}</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>list</em>[] = <em>IDBDatabase</em>.objectStoreNames;</pre>
+<pre
+  class="brush: js">var <em>list</em>[] = <em>IDBDatabase</em>.objectStoreNames;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p><span style="line-height: 1.5;">A {{ domxref("DOMStringList") }} containing a list of the names of the </span><a href="/en-US/docs/IndexedDB#gloss_object_store" style="line-height: 1.5;">object stores</a><span style="line-height: 1.5;"> currently in the connected database.</span></p>
+<p><span style="line-height: 1.5;">A {{ domxref("DOMStringList") }} containing a list of
+    the names of the </span><a href="/en-US/docs/IndexedDB#gloss_object_store"
+    style="line-height: 1.5;">object stores</a><span style="line-height: 1.5;"> currently
+    in the connected database.</span></p>
 
 <h2 id="Example"><span style="line-height: 1.5;">Example</span></h2>
 
@@ -51,40 +58,42 @@ DBOpenRequest.onsuccess = function(event) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#dom-idbdatabase-objectstorenames', 'objectStoreNames')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("IndexedDB 2", "#dom-idbdatabase-objectstorenames", "objectStoreNames")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('IndexedDB', '#dom-idbdatabase-objectstorenames',
+        'objectStoreNames')}}</td>
+      <td>{{Spec2('IndexedDB')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName("IndexedDB 2", "#dom-idbdatabase-objectstorenames",
+        "objectStoreNames")}}</td>
+      <td>{{Spec2("IndexedDB 2")}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.IDBDatabase.objectStoreNames")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
+  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
+  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
+  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
+  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
+  <li>Using cursors: {{domxref("IDBCursor")}}</li>
+  <li>Reference example: <a class="external"
+      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
+      Notifications</a> (<a class="external"
+      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>

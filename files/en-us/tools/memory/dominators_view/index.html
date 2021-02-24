@@ -14,16 +14,16 @@ slug: Tools/Memory/Dominators_view
 
 <p>To see the Dominators view for a snapshot, select "Dominators" in the "View" drop-down list. It looks something like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13627/dominators-1.png" style="display: block; height: 230px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="dominators-1.png" style="display: block; margin: 0px auto;"></p>
 
 <p>The Dominators view consists of two panels:</p>
 
 <ul>
- <li>the <a href="/en-US/docs/Tools/Memory/Dominators_view#Dominators_Tree_panel">Dominators Tree panel</a> shows you which nodes in the snapshot are retaining the most memory</li>
- <li>the <a href="/en-US/docs/Tools/Memory/Dominators_view#Retaining_Paths_panel">Retaining Paths panel</a> (new in Firefox 47) shows the 5 shortest retaining paths for a single node.</li>
+ <li>the <a href="/en-US/docs/Tools/Memory/Dominators_view#dominators_tree_panel">Dominators Tree panel</a> shows you which nodes in the snapshot are retaining the most memory</li>
+ <li>the <a href="/en-US/docs/Tools/Memory/Dominators_view#retaining_paths_panel">Retaining Paths panel</a> (new in Firefox 47) shows the 5 shortest retaining paths for a single node.</li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13629/dominators-2.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="dominators-2.png" style="display: block; margin: 0px auto;"></p>
 
 <h3 id="Dominators_Tree_panel">Dominators Tree panel</h3>
 
@@ -46,7 +46,7 @@ slug: Tools/Memory/Dominators_view
 
 <p>Entries are ordered by the amount of memory that they retain. For example:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13631/dominators-3.png" style="display: block; height: 228px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="dominators-3.png" style="display: block; margin: 0px auto;"></p>
 
 <p>In this screenshot we can see five entries under "GC Roots". The first two are Call and Window objects, and retain about 21% and 8% of the total size of the memory snapshot, respectively. You can also see that these objects have a relatively tiny "Shallow Size", so almost all of the retained size is in the objects that they dominate.</p>
 
@@ -54,7 +54,7 @@ slug: Tools/Memory/Dominators_view
 
 <p>For example, if we click on the first Window object:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13633/dominators-4.png" style="display: block; height: 292px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="dominators-4.png" style="display: block; margin: 0px auto;"></p>
 
 <p>We can see that this Window dominates a CSS2Properties object, whose retained size is 2% of the total snapshot size. Again the shallow size is very small: almost all of its retained size is in the nodes that it dominates. By clicking on the disclosure arrow next to the Function, we can see those nodes.</p>
 
@@ -66,7 +66,7 @@ slug: Tools/Memory/Dominators_view
 
 <p>In the toolbar at the top of the tool is a dropdown called "Label by":</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13635/dominators-5.png" style="display: block; height: 224px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="dominators-5.png" style="display: block; margin: 0px auto;"></p>
 
 <p>By default, this is set to "Type". However, you can set it instead to "Call Stack" to see exactly where in your code the objects are being allocated.</p>
 
@@ -92,7 +92,7 @@ slug: Tools/Memory/Dominators_view
 
 <p>To see the retaining paths for a node, you have to select the node in the Dominators Tree panel:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13637/dominators-6.png" style="display: block; height: 415px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="dominators-6.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Here, we've selected an object, and can see a single path back to a GC root.</p>
 
@@ -102,7 +102,7 @@ slug: Tools/Memory/Dominators_view
 
 <p>Sometimes there's more than one retaining path back from a node:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13639/dominators-7.png" style="display: block; height: 455px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="dominators-7.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Here there are three paths back from the <code>DocumentPrototype</code> node to a GC root. If one were removed, then the <code>DocumentPrototype</code> would still not be garbage-collected, because it's still retained by the other two path.</p>
 
@@ -118,7 +118,7 @@ slug: Tools/Memory/Dominators_view
 
 <ul>
  <li>load the page</li>
- <li>enable the Memory tool in the <a href="/en-US/docs/Tools/Tools_Toolbox#Settings">Settings</a>, if you haven't already</li>
+ <li>enable the Memory tool in the <a href="/en-US/docs/Tools/Tools_Toolbox#settings">Settings</a>, if you haven't already</li>
  <li>open the Memory tool</li>
  <li>check "Record call stacks"</li>
  <li>press the button labeled "Make monsters!"</li>
@@ -132,15 +132,15 @@ slug: Tools/Memory/Dominators_view
 
 <p>You'll see the three arrays as the top three GC roots, each retaining about 23% of the total memory usage:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13641/dominators-8.png" style="display: block; height: 165px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="dominators-8.png" style="display: block; margin: 0px auto;"></p>
 
 <p>If you expand an array, you'll see the objects (monsters) it contains. Each monster has a relatively small shallow size of 160 bytes. This includes the integer eye- and tentacle-counts. Each monster has a bigger retained size, which is accounted for by the string used for the monster's name:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13643/dominators-9.png" style="display: block; height: 327px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="dominators-9.png" style="display: block; margin: 0px auto;"></p>
 
 <p>All this maps closely to the <a href="/en-US/docs/Tools/Memory/Monster_example#allocation-graph">memory graph we were expecting to see</a>. One thing you might be wondering, though, is: where's the top-level object that retains all three arrays? If we look at the Retaining Paths panel for one of the arrays, we'll see it:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13645/dominators-10.png" style="display: block; height: 467px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="dominators-10.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Here we can see the retaining object, and even that this particular array is the array of <code>fierce</code> monsters. But the array is also rooted directly, so if the object were to stop referencing the array, it would still not be eligible for garbage collection.</p>
 

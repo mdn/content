@@ -42,15 +42,15 @@ tags:
 
 <p>Clone the github repo (if you haven't already done it) with:</p>
 
-<pre class="brush: bash notranslate">git clone https://github.com/opensas/mdn-svelte-tutorial.git</pre>
+<pre class="brush: bash">git clone https://github.com/opensas/mdn-svelte-tutorial.git</pre>
 
 <p>Then to get to the current app state, run</p>
 
-<pre class="brush: bash notranslate">cd mdn-svelte-tutorial/02-starting-our-todo-app</pre>
+<pre class="brush: bash">cd mdn-svelte-tutorial/02-starting-our-todo-app</pre>
 
 <p>Or directly download the folder's content:</p>
 
-<pre class="brush: bash notranslate">npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app</pre>
+<pre class="brush: bash">npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app</pre>
 
 <p>Remember to run <code>npm install &amp;&amp; npm run dev</code> to start your app in development mode.</p>
 
@@ -64,7 +64,7 @@ tags:
 
 <p>This is how our Todo list app wil look like once it's ready:</p>
 
-<p><img alt="typical todo list app, with a title of 'what needs to be done', an input to enter more todos, and a list of todos with checkboxes" src="https://mdn.mozillademos.org/files/17341/01-todo-list-app.png" style="height: 894px; width: 709px;"></p>
+<p><img alt="typical todo list app, with a title of 'what needs to be done', an input to enter more todos, and a list of todos with checkboxes" src="01-todo-list-app.png"></p>
 
 <p>Using this UI our user will be able to:</p>
 
@@ -94,17 +94,17 @@ tags:
  <li>
   <p>Create a file named <code>src/components/Todos.svelte</code> with the following content:</p>
 
-  <pre class="brush: html notranslate">&lt;h1&gt;Svelte To-Do list&lt;/h1&gt;</pre>
+  <pre class="brush: html">&lt;h1&gt;Svelte To-Do list&lt;/h1&gt;</pre>
  </li>
  <li>
   <p>Change the <code>title</code> element in <code>public/index.html</code> to contain the text <em>Svelte To-do list</em>:</p>
 
-  <pre class="brush: html notranslate">&lt;title&gt;Svelte To-Do list&lt;/title&gt;</pre>
+  <pre class="brush: html">&lt;title&gt;Svelte To-Do list&lt;/title&gt;</pre>
  </li>
  <li>
   <p>Open <code>src/App.svelte</code> and replace its contents with the following:</p>
 
-  <pre class="brush: html notranslate">&lt;script&gt;
+  <pre class="brush: html">&lt;script&gt;
   import Todos from './components/Todos.svelte'
 &lt;/script&gt;
 
@@ -113,7 +113,7 @@ tags:
  <li>
   <p>In development mode, Svelte will issue a warning in the browser console when specifying a prop that doesn't exist in the component; in this case we have a <code>name</code> prop being specified when we instantiate the <code>App</code> component inside <code>src/main.js</code>, which isn't used inside <code>App</code>. The console should currently give you a message along the lines of "&lt;App&gt; was created with unknown prop 'name'". To get rid of this, remove the <code>name</code> prop from <code>src/main.js</code>; it should now look like so:</p>
 
-  <pre class="brush: js notranslate">import App from './App.svelte'
+  <pre class="brush: js">import App from './App.svelte'
 
 const app = new App({
   target: document.body
@@ -125,13 +125,13 @@ export default app</pre>
 
 <p>Now if you check your testing server URL you'll see our <code>Todos.svelte</code> component being rendered:</p>
 
-<p><img alt="basic component rendering which a title that says 'Svelte to-do list'" src="https://mdn.mozillademos.org/files/17342/02-todos-component-rendered.png" style="border-style: solid; border-width: 1px; display: block; height: 195px; margin: 0 auto; width: 459px;"></p>
+<p><img alt="basic component rendering which a title that says 'Svelte to-do list'" src="02-todos-component-rendered.png" style="border-style: solid; border-width: 1px; display: block; margin: 0 auto;"></p>
 
 <h2 id="Adding_static_markup">Adding static markup</h2>
 
 <p>For the moment we will start with a static markup representation of our app, so you can see what it will look like. Copy and paste the following into our <code>Todos.svelte</code> component file, replacing the existing content:</p>
 
-<pre class="brush: html notranslate">&lt;!-- Todos.svelte --&gt;
+<pre class="brush: html">&lt;!-- Todos.svelte --&gt;
 &lt;div class="todoapp stack-large"&gt;
 
   &lt;!-- NewTodo --&gt;
@@ -254,7 +254,7 @@ export default app</pre>
 
 <p>Check the rendered out again, and you'll see something like this:</p>
 
-<p><img alt="A todo list app, but unstyled, with a title of `what needs to be done`, inputs, checkboxes, etc." src="https://mdn.mozillademos.org/files/17343/03-unstyled-todo-app.png" style="border-style: solid; border-width: 1px; height: 584px; width: 795px;"></p>
+<p><img alt="A todo list app, but unstyled, with a title of `what needs to be done`, inputs, checkboxes, etc." src="03-unstyled-todo-app.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>The HTML markup above is not very nicely styled and it's also functionally useless. Nevertheless, let's have a look at the markup and see how it relates to our desired features:</p>
 
@@ -274,7 +274,7 @@ export default app</pre>
 
 <p>You may notice some unusual attributes here. For example:</p>
 
-<pre class="brush: html notranslate">&lt;button class="btn toggle-btn" aria-pressed="true"&gt;
+<pre class="brush: html">&lt;button class="btn toggle-btn" aria-pressed="true"&gt;
   &lt;span class="visually-hidden"&gt;Show&lt;/span&gt;
   &lt;span&gt;All&lt;/span&gt;
   &lt;span class="visually-hidden"&gt;tasks&lt;/span&gt;
@@ -286,7 +286,7 @@ export default app</pre>
 
 <p>Further down, you can find the following <code>&lt;ul&gt;</code> element:</p>
 
-<pre class="brush: html notranslate">&lt;ul role="list" className="todo-list stack-large" aria-labelledby="list-heading"&gt;</pre>
+<pre class="brush: html">&lt;ul role="list" className="todo-list stack-large" aria-labelledby="list-heading"&gt;</pre>
 
 <p>The <code>role</code> attribute helps assistive technology explain what kind of semantic value an element has — or what its purpose is. A <code>&lt;ul&gt;</code> is treated like a list by default, but the styles we're about to add will break that functionality. This role will restore the "list" meaning to the <code>&lt;ul&gt;</code>  element. If you want to learn more about why this is necessary, you can check out Scott O'Hara’s article, “Fixing Lists”.</p>
 
@@ -302,14 +302,14 @@ export default app</pre>
 
 <p>For example, if we add an <code>&lt;img&gt;</code> element to our <code>todos.svelte</code> component without its corresponding <code>alt</code> prop:</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Svelte To-Do list&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Svelte To-Do list&lt;/h1&gt;
 
 &lt;img height="32" width="88" src="https://www.w3.org/WAI/wcag2A"&gt;
 </pre>
 
 <p>The compiler will issue the following warning:</p>
 
-<pre class="brush: bash notranslate">(!) Plugin svelte: A11y: &lt;img&gt; element should have an alt attribute
+<pre class="brush: bash">(!) Plugin svelte: A11y: &lt;img&gt; element should have an alt attribute
 src/components/Todos.svelte
 1: &lt;h1&gt;Svelte To-Do list&lt;/h1&gt;
 2:
@@ -321,11 +321,11 @@ created public/build/bundle.js in 220ms
 
 <p>Moreover, our editor can display this warning even before calling the compiler:</p>
 
-<p><img alt="A code editor window showing an image tag, with a popup error message saying that the element should have an alt attribute" src="https://mdn.mozillademos.org/files/17344/04-svelte-accessibility-support.png" style="height: 235px; width: 741px;"></p>
+<p><img alt="A code editor window showing an image tag, with a popup error message saying that the element should have an alt attribute" src="04-svelte-accessibility-support.png"></p>
 
 <p>You can tell Svelte to ignore this warning for the next block of markup with a <a href="https://svelte.dev/docs#Comments">comment</a> beginning with <code>svelte-ignore</code>, like this:</p>
 
-<pre class="brush: html notranslate">&lt;!-- svelte-ignore a11y-missing-attribute --&gt;
+<pre class="brush: html">&lt;!-- svelte-ignore a11y-missing-attribute --&gt;
 &lt;img height="32" width="88" src="https://www.w3.org/WAI/wcag2A"&gt;
 </pre>
 
@@ -335,7 +335,7 @@ created public/build/bundle.js in 220ms
 
 <p>If you want to globally disable this warning you can add this <code>onwarn</code> handler to your <code>rollup.config.js</code> file inside the configuration for the <code>Svelte</code> plugin, like this:</p>
 
-<pre class="brush: js notranslate">plugins: [
+<pre class="brush: js">plugins: [
   svelte({
     dev: !production,
     css: css =&gt; {
@@ -369,7 +369,7 @@ created public/build/bundle.js in 220ms
 
 <p>Let's make the todo list look a little better. Replace the contents of the file <code>public/global.css</code> with the following:</p>
 
-<pre class="brush: css notranslate">/* RESETS */
+<pre class="brush: css">/* RESETS */
 *,
 *::before,
 *::after {
@@ -670,7 +670,7 @@ body {
 
 <p>With our markup styled, everything now looks better:</p>
 
-<p><img alt="Our todo list app, styled, with a title of 'what needs to be done', an input to enter more todos, and a list of todos with checkboxes" src="https://mdn.mozillademos.org/files/17345/05-styled-todo-app.png" style="height: 926px; width: 729px;"></p>
+<p><img alt="Our todo list app, styled, with a title of 'what needs to be done', an input to enter more todos, and a list of todos with checkboxes" src="05-styled-todo-app.png"></p>
 
 <h2 id="The_code_so_far">The code so far</h2>
 
@@ -678,11 +678,11 @@ body {
 
 <p>To see the state of the code as it should be at the end of this article, access your copy of our repo like this:</p>
 
-<pre class="brush: bash notranslate">cd mdn-svelte-tutorial/03-adding-dynamic-behavior</pre>
+<pre class="brush: bash">cd mdn-svelte-tutorial/03-adding-dynamic-behavior</pre>
 
 <p>Or directly download the folder's content:</p>
 
-<pre class="brush: bash notranslate">npx degit opensas/mdn-svelte-tutorial/03-adding-dynamic-behavior</pre>
+<pre class="brush: bash">npx degit opensas/mdn-svelte-tutorial/03-adding-dynamic-behavior</pre>
 
 <p>Remember to run <code>npm install &amp;&amp; npm run dev</code> to start your app in development mode.</p>
 

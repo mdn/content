@@ -13,7 +13,7 @@ tags:
 
 <p class="summary"><span class="seoSummary">MDN has many built-in global styles available for use when styling and laying out articles, and this article is a guide to the available classes and when to use them.</span></p>
 
-<p>Please keep in that these styles have been developed to cover the most common situations that arise while styling article content, and that whenever possible, you should try to use the available classes; diverging too much from the standard content look-and-feel isn't good for consistency and readability. If you feel that your page absolutely requires some kind of special custom styling, you should <a href="/en-US/docs/MDN/Contribute/Getting_started#Step_4_Ask_for_help">talk to us</a> about it.</p>
+<p>Please keep in that these styles have been developed to cover the most common situations that arise while styling article content, and that whenever possible, you should try to use the available classes; diverging too much from the standard content look-and-feel isn't good for consistency and readability. If you feel that your page absolutely requires some kind of special custom styling, you should <a href="/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help">talk to us</a> about it.</p>
 
 <h2 id="Inline_styles">Inline styles</h2>
 
@@ -27,7 +27,7 @@ tags:
 
 <h4 id="Example_syntax">Example syntax</h4>
 
-<pre class="brush: html notranslate">&lt;a href="https://github.com/mdn/simple-web-worker/archive/gh-pages.zip" class="button"&gt;Download source code&lt;/a&gt;</pre>
+<pre class="brush: html">&lt;a href="https://github.com/mdn/simple-web-worker/archive/gh-pages.zip" class="button"&gt;Download source code&lt;/a&gt;</pre>
 
 <h3 id=".hidden"><code>.hidden</code></h3>
 
@@ -35,7 +35,7 @@ tags:
 
 <h4 id="Example_syntax_3">Example syntax</h4>
 
-<pre class="brush: html notranslate">&lt;h4 id="Hidden_Code_Sample"&gt;Hidden code Sample&lt;/h4&gt;
+<pre class="brush: html">&lt;h4 id="Hidden_Code_Sample"&gt;Hidden code Sample&lt;/h4&gt;
 
 &lt;div class="hidden"&gt;
 &lt;h5 id="HTML"&gt;HTML&lt;/h5&gt;
@@ -71,12 +71,12 @@ function works() {
 <div class="hidden">
 <h5 id="HTML">HTML</h5>
 
-<pre class="brush: html notranslate">&lt;button id="test"&gt;Click Me&lt;/button&gt;
+<pre class="brush: html">&lt;button id="test"&gt;Click Me&lt;/button&gt;
 </pre>
 
 <h5 id="CSS">CSS</h5>
 
-<pre class="brush: css notranslate">button{
+<pre class="brush: css">button{
     background-color: #a00;
     color:#fff;
     font-size: 20px;
@@ -86,7 +86,7 @@ function works() {
 
 <h5 id="JavaScript">JavaScript</h5>
 
-<pre class="brush: js notranslate">document.getElementById("test").addEventListener("click", works);
+<pre class="brush: js">document.getElementById("test").addEventListener("click", works);
 function works(){
     window.alert("you clicked it!");
 }
@@ -99,20 +99,21 @@ function works(){
 <p>This is a class that has no visible effect on content on the page, however, if the class is applied to an element (usually a {{HTMLElement("span")}}) KumaScript will use the element's content to create <code>description</code> {{HTMLElement("meta")}} tags. These provide a short description to be used in search engines and sharing sites like Facebook and Twitter.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: If <code>.seoSummary</code> is not explicitly specified on a page, the first paragraph is automatically set as the SEO summary.</p>
+  <h4>Note</h4>
+  <p>If <code>.seoSummary</code> is not explicitly specified on a page, the first paragraph is automatically set as the SEO summary.</p>
 </div>
 
 <p>The below example is taken from the <a href="/en-US/docs/Mozilla/Add-ons">Mozilla Add-ons</a> page.</p>
 
 <h4 id="Example_syntax_4">Example syntax</h4>
 
-<pre class="brush: html notranslate">&lt;span class="seoSummary"&gt;
+<pre class="brush: html">&lt;span class="seoSummary"&gt;
   Add-ons allow developers to extend and modify the functionality of Firefox.
 &lt;/span&gt;</pre>
 
 <h4 id="Example_of_the_generated_HTMLElementmeta_elements">Example of the generated {{HTMLElement("meta")}} element</h4>
 
-<pre class="brush: html; notranslate">&lt;meta name="description"
+<pre class="brush: html;">&lt;meta name="description"
       content="Add-ons allow developers to extend and modify the functionality of Firefox."&gt;</pre>
 
 <h2 id="Block_level_styles">Block level styles</h2>
@@ -176,20 +177,23 @@ Which gives you the following output:
 
 <p>A <code>&lt;details&gt;</code> element can be wrapped around a block of content to hide that content and instead display a "▶︎ Details" link that can be clicked to expand/collapse the content contained within.</p>
 
-<details>
+<details open>
+  <summary>
 <h4 id="Example_syntax_9">Example syntax</h4>
-
+  </summary>
 <p>This is an example syntax section for {{HTMLElement("details")}} that was hidden with {{HTMLElement("details")}}. Ooooooh, how meta.</p>
 
-
-<pre class="brush: html; notranslate">&lt;details&gt;
+<pre class="brush: html;">&lt;details&gt;
+    &lt;summary&gt;
 &lt;h4&gt;Example syntax&lt;/h4&gt;
+    &lt;/summary&gt;
 &lt;p&gt;This is an example syntax section for &lt;code&gt;.detail&lt;/code&gt; that was hidden with &lt;code&gt;.detail&lt;/code&gt;. Ooooooh, how meta.&lt;/p&gt;
 &lt;/details&gt;</pre>
 </details>
 
 <div class="notecard note">
-<p><strong>Note:</strong> You can include an <code>open</code> attribute on the <code>&lt;details&gt;</code> element to make it opened by default.</p>
+  <h4>Note</h4>
+  <p>You can include an <code>open</code> attribute on the <code>&lt;details&gt;</code> element to make it opened by default.</p>
 </div>
 
 <h3 id=".example-bad_and_.example-good"><code style="white-space: nowrap;">.example-bad</code> and <code style="white-space: nowrap;">.example-good</code></h3>
@@ -198,20 +202,20 @@ Which gives you the following output:
 
 <h5 id="Good_code_example">Good code example</h5>
 
-<pre class="brush: html example-good notranslate">&lt;label for="test"&gt;Form label:&lt;/label&gt;
+<pre class="brush: html example-good">&lt;label for="test"&gt;Form label:&lt;/label&gt;
 &lt;input type="text" id="test"&gt;
 </pre>
 
 <h5 id="Bad_code_example">Bad code example</h5>
 
-<pre class="brush: html example-bad notranslate">&lt;input type="text"&gt;
+<pre class="brush: html example-bad">&lt;input type="text"&gt;
 </pre>
 
 <p><strong>You should use headings with these classes, as shown below</strong> — CSS is unable to add localized language to the page identifying whether they're good or bad so this is important for people who rely on screen readers, and people with different cultural backgrounds (green and red are not universally good and bad.)</p>
 
 <h4 id="Example_syntax_10">Example syntax</h4>
 
-<pre class="brush: html notranslate">&lt;h5 id="Good_code_example"&gt;Good code example&lt;/h5&gt;
+<pre class="brush: html">&lt;h5 id="Good_code_example"&gt;Good code example&lt;/h5&gt;
 
 &lt;pre class="brush: html example-good"&gt;
   &amp;lt;label for="test"&amp;gt;Form label:&amp;lt;/label&amp;gt;
@@ -229,13 +233,17 @@ Which gives you the following output:
 <p>Turns a section of content into a note box, which is normally a useful note that tangentially relates to the current subject but doesn't directly fit into the flow of information.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: This is how we usually present a note in an MDN article.</p>
+<h4>Note</h4>
+<p>This is how we usually present a note in an MDN article.</p>
 </div>
+
+<p>We've used an <code>&lt;h4&gt;</code> for the heading in this example, but you should choose the level of heading that makes sense for your note's position in the document hierarchy — <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, or <code>&lt;h4&gt;</code>.</p>
 
 <h4 id="Example_syntax_12">Example syntax</h4>
 
-<pre class="brush: html; notranslate">&lt;div class="notecard note" role="complementary"&gt;
-  &lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: This is how we usually present a note in an MDN article.&lt;/p&gt;
+<pre class="brush: html">&lt;div class="notecard note"&gt;
+  &lt;h4&gt;Note&lt;/h4&gt;
+  &lt;p&gt;This is how we usually present a note in an MDN article.&lt;/p&gt;
 &lt;/div&gt;</pre>
 
 <h3 id=".notecard.warning"><code>.notecard.warning</code></h3>
@@ -243,13 +251,17 @@ Which gives you the following output:
 <p>Turns a section of content into a warning box, which normally communicates a vital fact that the reader needs to be really careful about (e.g., they need to do something, or avoid something to avoid serious issues.)</p>
 
 <div class="notecard warning">
-<p><strong>Warning</strong>: Here be dragons!</p>
+  <h4>Warning</h4>
+  <p>Here be dragons!</p>
 </div>
+
+<p>We've used an <code>&lt;h4&gt;</code> for the heading in this example, but you should choose the level of heading that makes sense for your note's position in the document hierarchy — <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, or <code>&lt;h4&gt;</code>.</p>
 
 <h4 id="Example_syntax_17">Example syntax</h4>
 
-<pre class="brush: html notranslate">&lt;div class="notecard warning"&gt;
-  &lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt;:Here be dragons!&lt;/p&gt;
+<pre class="brush: html">&lt;div class="notecard warning"&gt;
+  &lt;h4&gt;Warning&lt;/h4&gt;
+  &lt;p&gt;Here be dragons!&lt;/p&gt;
 &lt;/div&gt;</pre>
 
 <h2 id="Table_styles">Table styles</h2>
@@ -338,7 +350,7 @@ Which gives you the following output:
 
 <h4 id="Example_syntax_18">Example syntax</h4>
 
-<pre class="brush: html notranslate">&lt;table class="standard-table" summary="This table details what tea we liked to drink back in the heady month of December 2015"&gt;
+<pre class="brush: html">&lt;table class="standard-table" summary="This table details what tea we liked to drink back in the heady month of December 2015"&gt;
  &lt;caption&gt;Favorite teas, December 2015&lt;/caption&gt;
  &lt;thead&gt;
   &lt;tr&gt;

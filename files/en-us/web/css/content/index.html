@@ -13,7 +13,7 @@ tags:
 
 <p class="summary">The <strong><code>content</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property replaces an element with a generated value. Objects inserted using the <code>content</code> property are <strong>anonymous <a href="/en-US/docs/Web/CSS/Replaced_element">replaced elements</a></strong><em>.</em></p>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keywords that cannot be combined with other values */
+<pre class="brush:css no-line-numbers">/* Keywords that cannot be combined with other values */
 content: normal;
 content: none;
 
@@ -23,8 +23,6 @@ content: linear-gradient(#e66465, #9198e5);
 
 /* alt text for generated content, added in the Level 3 specification */
 content: url("http://www.example.com/test.png") / "This is the alt text";
-
-/* values below can only be applied to generated content using ::before and ::after */
 
 /* &lt;string&gt; value */
 content: "prefix";
@@ -97,7 +95,7 @@ content: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -107,7 +105,7 @@ content: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;h1&gt;5&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;5&lt;/h1&gt;
 &lt;p&gt;According to Sir Tim Berners-Lee,
   &lt;q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet"&gt;I was
     lucky enough to invent the Web at the time when the Internet
@@ -127,7 +125,7 @@ content: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">q {
+<pre class="brush: css">q {
   color: blue;
 }
 
@@ -155,11 +153,11 @@ h1::before  {
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;a href="https://www.mozilla.org/en-US/"&gt;Mozilla Home Page&lt;/a&gt;</pre>
+<pre class="brush: html">&lt;a href="https://www.mozilla.org/en-US/"&gt;Mozilla Home Page&lt;/a&gt;</pre>
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">a::before {
+<pre class="brush: css">a::before {
   content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") / " MOZILLA: ";
   font: x-small Arial, sans-serif;
   color: gray;
@@ -175,7 +173,7 @@ h1::before  {
 
 <h4 id="HTML_3">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Paperback Best Sellers&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Paperback Best Sellers&lt;/h2&gt;
 &lt;ol&gt;
   &lt;li&gt;Political Thriller&lt;/li&gt;
   &lt;li class="new-entry"&gt;Halloween Stories&lt;/li&gt;
@@ -185,7 +183,7 @@ h1::before  {
 
 <h4 id="CSS_3">CSS</h4>
 
-<pre class="brush: css notranslate">.new-entry::after {
+<pre class="brush: css">.new-entry::after {
   content: " New!";  /* The leading space creates separation
                         between the added content and the
                         rest of the content */
@@ -202,7 +200,7 @@ h1::before  {
 
 <h4 id="HTML_4">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;ul&gt;
+<pre class="brush: html">&lt;ul&gt;
   &lt;li&gt;&lt;a id="moz" href="https://www.mozilla.org/"&gt;
     Mozilla Home Page&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a id="mdn" href="https://developer.mozilla.org/"&gt;
@@ -211,7 +209,7 @@ h1::before  {
 
 <h4 id="CSS_4">CSS</h4>
 
-<pre class="brush: css notranslate">a {
+<pre class="brush: css">a {
   text-decoration: none;
   border-bottom: 3px dotted navy;
 }
@@ -243,12 +241,12 @@ li {
 
 <h4 id="HTML_5">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div id="replaced"&gt;Mozilla&lt;/div&gt;
+<pre class="brush: html">&lt;div id="replaced"&gt;Mozilla&lt;/div&gt;
 </pre>
 
 <h4 id="CSS_5">CSS</h4>
 
-<pre class="brush: css notranslate">#replaced {
+<pre class="brush: css">#replaced {
   content: url("https://mdn.mozillademos.org/files/12668/MDN.svg");
 }
 

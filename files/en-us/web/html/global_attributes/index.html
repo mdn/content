@@ -47,7 +47,7 @@ tags:
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/contextmenu">{{HTMLAttrDef("contextmenu")}}</a> {{Obsolete_Inline}}</dt>
  <dd>The <code><a href="#attr-id"><strong>id</strong></a></code> of a {{HTMLElement("menu")}} to use as the contextual menu for this element.</dd>
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/data-*">{{HTMLAttrDef("data-*")}}</a></dt>
- <dd>Forms a class of attributes, called custom data attributes, that allow proprietary information to be exchanged between the <a href="/en-US/docs/Web/HTML">HTML</a> and its {{glossary("DOM")}} representation that may be used by scripts. All such custom data are available via the {{DOMxRef("HTMLElement")}} interface of the element the attribute is set on. The {{DOMxRef("HTMLElement.dataset")}} property gives access to them.</dd>
+ <dd>Forms a class of attributes, called custom data attributes, that allow proprietary information to be exchanged between the <a href="/en-US/docs/Web/HTML">HTML</a> and its {{glossary("DOM")}} representation that may be used by scripts. All such custom data are available via the {{DOMxRef("HTMLElement")}} interface of the element the attribute is set on. The {{DOMxRef("HTMLOrForeignElement/dataset")}} property gives access to them.</dd>
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/dir">{{HTMLAttrDef("dir")}}</a></dt>
  <dd>An enumerated attribute indicating the directionality of the element's text. It can have the following values:
  <ul>
@@ -57,12 +57,14 @@ tags:
  </ul>
  </dd>
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/draggable">{{HTMLAttrDef("draggable")}}</a></dt>
- <dd>An enumerated attribute indicating whether the element can be dragged, using the <a href="/en-us/docs/DragDrop/Drag_and_Drop">Drag and Drop API</a>. It can have the following values:
+ <dd>An enumerated attribute indicating whether the element can be dragged, using the <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and Drop API</a>. It can have the following values:
  <ul>
   <li><code>true</code>, which indicates that the element may be dragged</li>
   <li><code>false</code>, which indicates that the element may not be dragged.</li>
  </ul>
  </dd>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/enterkeyhint">{{HTMLAttrDef("enterkeyhint")}}</a></dt>
+ <dd>Hints what action label (or icon) to present for the enter key on virtual keyboards.</dd>
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/exportparts">{{HTMLAttrDef("exportparts")}}</a> {{Experimental_Inline}}</dt>
  <dd>Used to transitively export shadow parts from a nested shadow tree into a containing light tree.</dd>
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/hidden">{{HTMLAttrDef("hidden")}}</a></dt>
@@ -76,7 +78,7 @@ tags:
 </dl>
 
 <div class="note">
-<p><strong>Note:</strong> The <code>item*</code> attributes are part of the <a class="external" href="https://html.spec.whatwg.org/multipage/microdata.html#microdata">WHATWG HTML Microdata feature</a>.</p>
+<p><strong>Note:</strong> The <code>item*</code> attributes are part of the <a href="https://html.spec.whatwg.org/multipage/microdata.html#microdata">WHATWG HTML Microdata feature</a>.</p>
 </div>
 
 <dl>
@@ -91,11 +93,13 @@ tags:
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/itemtype">{{HTMLAttrDef("itemtype")}}</a></dt>
  <dd>Specifies the URL of the vocabulary that will be used to define <code>itemprop</code>s (item properties) in the data structure. {{HTMLAttrxRef("itemscope")}} is used to set the scope of where in the data structure the vocabulary set by <code>itemtype</code> will be active.</dd>
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/lang">{{HTMLAttrDef("lang")}}</a></dt>
- <dd>Helps define the language of an element: the language that non-editable elements are in, or the language that editable elements should be written in by the user. The attribute contains one “language tag” (made of hyphen-separated “language subtags”) in the format defined in <a class="external" href="https://www.ietf.org/rfc/bcp/bcp47.txt"><em>Tags for Identifying Languages (BCP47)</em></a>. <a href="#attr-xml:lang"><strong>xml:lang</strong></a> has priority over it.</dd>
+ <dd>Helps define the language of an element: the language that non-editable elements are in, or the language that editable elements should be written in by the user. The attribute contains one “language tag” (made of hyphen-separated “language subtags”) in the format defined in <a href="https://www.ietf.org/rfc/bcp/bcp47.txt"><em>Tags for Identifying Languages (BCP47)</em></a>. <a href="#attr-xml:lang"><strong>xml:lang</strong></a> has priority over it.</dd>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/nonce">{{HTMLAttrDef("nonce")}}</a></dt>
+ <dd>A cryptographic nonce ("number used once") which can be used by <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a> to determine whether or not a given fetch will be allowed to proceed.</dd>
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/part">{{HTMLAttrDef("part")}}</a></dt>
  <dd>A space-separated list of the part names of the element. Part names allows CSS to select and style specific elements in a shadow tree via the {{CSSxRef("::part")}} pseudo-element.</dd>
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/slot">{{HTMLAttrDef("slot")}}</a></dt>
- <dd>Assigns a slot in a <a href="/en-US/docs/Web/Web_Components/Shadow_DOM">shadow DOM</a> shadow tree to an element: An element with a <code>slot</code> attribute is assigned to the slot created by the {{HTMLElement("slot")}} element whose {{HTMLAttrxRef("name", "slot")}} attribute's value matches that <code>slot</code> attribute's value.</dd>
+ <dd>Assigns a slot in a <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a> shadow tree to an element: An element with a <code>slot</code> attribute is assigned to the slot created by the {{HTMLElement("slot")}} element whose {{HTMLAttrxRef("name", "slot")}} attribute's value matches that <code>slot</code> attribute's value.</dd>
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/spellcheck">{{HTMLAttrDef("spellcheck")}}</a></dt>
  <dd>An enumerated attribute defines whether the element may be checked for spelling errors. It may have the following values:
  <ul>
@@ -130,49 +134,11 @@ tags:
  <thead>
   <tr>
    <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
   </tr>
  </thead>
  <tbody>
   <tr>
    <td>{{SpecName("HTML WHATWG", "dom.html#global-attributes", "Global attributes")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS Shadow Parts", "#exposing")}}</td>
-   <td>{{Spec2("CSS Shadow Parts")}}</td>
-   <td>Added the <code>part</code> and <code>exportparts</code> global attributes.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.2", "dom.html#global-attributes", "Global attributes")}}</td>
-   <td>{{Spec2("HTML5.2")}}</td>
-   <td>Snapshot of {{SpecName("HTML WHATWG")}}. From {{SpecName("HTML5.1")}}, <code>itemid</code>, <code>itemprop</code>, <code>itemref</code>, <code>itemscope</code>, and <code>itemtype</code> have been added.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.1", "dom.html#global-attributes", "Global attributes")}}</td>
-   <td>{{Spec2("HTML5.1")}}</td>
-   <td>Snapshot of {{SpecName("HTML WHATWG")}}. From {{SpecName("HTML5 W3C")}}, <code>contextmenu</code>, <code>draggable</code>, <code>dropzone</code>, and <code>spellcheck</code> have been added.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "dom.html#global-attributes", "Global attributes")}}</td>
-   <td>{{Spec2("HTML5 W3C")}}</td>
-   <td>Snapshot of {{SpecName("HTML WHATWG")}}. From {{SpecName("HTML4.01")}}, the concept of global attributes is introduced and the <code>dir</code>, <code>lang</code>, <code>style</code>, <code>id</code>, <code>class</code>, <code>tabindex</code>, <code>accesskey</code>, and <code>title</code> are now true global attributes.<br>
-    <code>xml:lang</code> which was initially part of XHTML, is now also part of HTML.<br>
-    <code>hidden</code>, <code>data-*</code>, <code>contenteditable</code>, and <code>translate</code> have been added.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML4.01")}}</td>
-   <td>{{Spec2("HTML4.01")}}</td>
-   <td>There are no global attributes defined. Several attributes that will become global attributes in subsequent specifications are defined on a subset of elements.<br>
-    <code>class</code> and <code>style</code> are supported on all elements but {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("param")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, and {{HTMLElement("title")}}.<br>
-    <code>dir</code> is supported on all elements but {{HTMLElement("applet")}}, {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("bdo")}}, {{HTMLElement("br")}}, {{HTMLElement("frame")}}, {{HTMLElement("frameset")}}, {{HTMLElement("iframe")}}, {{HTMLElement("param")}}, and {{HTMLElement("script")}}.<br>
-    <code>id</code> is supported on all elements but {{HTMLElement("base")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, and {{HTMLElement("title")}}.<br>
-    <code>lang</code> is supported on all elements but {{HTMLElement("applet")}}, {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("br")}}, {{HTMLElement("frame")}}, {{HTMLElement("frameset")}}, {{HTMLElement("iframe")}}, {{HTMLElement("param")}}, and {{HTMLElement("script")}}.<br>
-    <code>tabindex</code> is only supported on {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("button")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.<br>
-    <code>accesskey</code> is only supported on {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}} and {{HTMLElement("textarea")}}.<br>
-    <code>title</code> is supported on all elements but {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("param")}}, {{HTMLElement("script")}}, and {{HTMLElement("title")}}.</td>
   </tr>
  </tbody>
 </table>

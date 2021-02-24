@@ -2,30 +2,36 @@
 title: RTCPeerConnection.getReceivers()
 slug: Web/API/RTCPeerConnection/getReceivers
 tags:
-  - Experimental
-  - Media
-  - Method
-  - RTCPeerConnection
-  - RTP
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - getReceivers
+- Experimental
+- Media
+- Method
+- RTCPeerConnection
+- RTP
+- Reference
+- WebRTC
+- WebRTC API
+- getReceivers
 ---
 <div>{{APIRef("WebRTC")}}{{SeeCompatTable}}</div>
 
-<p>The <code><strong>RTCPeerConnection.getReceivers()</strong></code> method returns an array of {{domxref("RTCRtpReceiver")}} objects, each of which represents one RTP receiver. Each RTP receiver manages the reception and decoding of data for a {{domxref("MediaStreamTrack")}} on an {{domxref("RTCPeerConnection")}}</p>
+<p>The <code><strong>RTCPeerConnection.getReceivers()</strong></code> method returns an
+	array of {{domxref("RTCRtpReceiver")}} objects, each of which represents one RTP
+	receiver. Each RTP receiver manages the reception and decoding of data for
+	a {{domxref("MediaStreamTrack")}} on an {{domxref("RTCPeerConnection")}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <em>receivers</em> = <em>rtcPeerConnection</em>.getReceivers();
+<pre class="brush: js">var <em>receivers</em> = <em>rtcPeerConnection</em>.getReceivers();
 </pre>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>An array of {{domxref("RTCRtpReceiver")}} objects, one for each track on the connection. The array is empty if there are no RTP receivers on the connection.</p>
+<p>An array of {{domxref("RTCRtpReceiver")}} objects, one for each track on the
+	connection. The array is empty if there are no RTP receivers on the connection.</p>
 
-<p>The order of the returned <code>RTCRtpReceiver</code> instances is not defined by the specification, and may change from one call to <code>getReceivers()</code> to the next.</p>
+<p>The order of the returned <code>RTCRtpReceiver</code> instances is not defined by the
+	specification, and may change from one call to <code>getReceivers()</code> to the
+	next.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -43,7 +49,8 @@ tags:
 	</thead>
 	<tbody>
 		<tr>
-			<td>{{ SpecName('WebRTC 1.0', '#dom-peerconnection-getreceivers', 'RTCPeerConnection.getReceivers()') }}</td>
+			<td>{{ SpecName('WebRTC 1.0', '#dom-peerconnection-getreceivers',
+				'RTCPeerConnection.getReceivers()') }}</td>
 			<td>{{ Spec2('WebRTC 1.0') }}</td>
 			<td>Initial specification.</td>
 		</tr>

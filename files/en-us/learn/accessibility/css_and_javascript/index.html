@@ -53,7 +53,7 @@ tags:
 
 <p>Headings, paragraphs, lists — the core text content of your page:</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Heading&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Heading&lt;/h1&gt;
 
 &lt;p&gt;Paragraph&lt;/p&gt;
 
@@ -64,7 +64,7 @@ tags:
 
 <p>Some typical CSS might look like this:</p>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
   font-size: 5rem;
 }
 
@@ -87,41 +87,41 @@ p, li {
 
 <p>Inline markup that confers specific emphasis to the text that it wraps:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;The water is &lt;em&gt;very hot&lt;/em&gt;.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;The water is &lt;em&gt;very hot&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;Water droplets collecting on surfaces is called &lt;strong&gt;condensation&lt;/strong&gt;.&lt;/p&gt;</pre>
 
 <p>You might want to add some simple coloring to your emphasised text:</p>
 
-<pre class="brush: css notranslate">strong, em {
+<pre class="brush: css">strong, em {
   color: #a60000;
 }</pre>
 
-<p>You will however rarely need to style emphasis elements in any significant way. The standard conventions of bold and italic text are very recognisable, and changing the style can cause confusion. For more on emphasis, see <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Emphasis_and_importance">Emphasis and importance</a>.</p>
+<p>You will however rarely need to style emphasis elements in any significant way. The standard conventions of bold and italic text are very recognisable, and changing the style can cause confusion. For more on emphasis, see <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#emphasis_and_importance">Emphasis and importance</a>.</p>
 
 <h4 id="Abbreviations">Abbreviations</h4>
 
 <p>An element that allows an abbreviation, acronym, or initialization to be associated with its expansion:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Web content is marked up using &lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt;.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Web content is marked up using &lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt;.&lt;/p&gt;</pre>
 
 <p>Again, you might want to style it in some simple way:</p>
 
-<pre class="brush: css notranslate">abbr {
+<pre class="brush: css">abbr {
   color: #a60000;
 }</pre>
 
-<p>The recognized styling convention for abbreviations is a dotted underline, and it is unwise to significantly deviate from this. For more on abbreviations, see <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#Abbreviations">Abbreviations</a>.</p>
+<p>The recognized styling convention for abbreviations is a dotted underline, and it is unwise to significantly deviate from this. For more on abbreviations, see <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abbreviations">Abbreviations</a>.</p>
 
 <h4 id="Links">Links</h4>
 
 <p>Hyperlinks — the way you get to new places on the web:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Visit the &lt;a href="https://www.mozilla.org"&gt;Mozilla homepage&lt;/a&gt;.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Visit the &lt;a href="https://www.mozilla.org"&gt;Mozilla homepage&lt;/a&gt;.&lt;/p&gt;</pre>
 
 <p>Some very simple link styling is shown below:</p>
 
-<pre class="brush: css notranslate">a {
+<pre class="brush: css">a {
   color: #ff0000;
 }
 
@@ -137,9 +137,9 @@ a:active {
 
 <p>The standard link conventions are underlined and a different color (default: blue) in their standard state, another color variation when the link has previously been visited (default: purple), and yet another color when the link is activated (default: red). In addition, the mouse pointer changes to a pointer icon when links are moused over, and the link receives a highlight when focused (e.g. via tabbing) or activated. The following image shows the highlight in both Firefox (a dotted outline) and Chrome (a blue outline):</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14371/focus-highlight-firefox.png" style="display: block; height: 173px; margin: 0px auto; width: 319px;"></p>
+<p><img alt="" src="focus-highlight-firefox.png" style="display: block; margin: 0px auto;"></p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14369/focus-highlight-chrome.png" style="display: block; height: 169px; margin: 0px auto; width: 309px;"></p>
+<p><img alt="" src="focus-highlight-chrome.png" style="display: block; margin: 0px auto;"></p>
 
 <p>You can be creative with link styles, as long as you keep giving users feedback when they interact with the links. Something should definitely happen when states change, and you shouldn't get rid of the pointer cursor or the outline — both are very important accessibility aids for those using keyboard controls.</p>
 
@@ -147,7 +147,7 @@ a:active {
 
 <p>Elements to allow users to input data into websites:</p>
 
-<pre class="brush: html notranslate">&lt;div&gt;
+<pre class="brush: html">&lt;div&gt;
   &lt;label for="name"&gt;Enter your name&lt;/label&gt;
   &lt;input type="text" id="name" name="name"&gt;
 &lt;/div&gt;</pre>
@@ -182,14 +182,14 @@ a:active {
 
 <p>There are many instances where a visual design will require that not all content is shown at once. For example, in our <a href="https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html">Tabbed info box example</a> (see <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html">source code</a>) we have three panels of information, but we are <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">positioning</a> them on top of one another and providing tabs that can be clicked to show each one (it is also keyboard accessible — you can alternatively use Tab and Enter/Return to select them).</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13368/tabbed-info-box.png" style="display: block; height: 400px; margin: 0px auto; width: 450px;"></p>
+<p><img alt="" src="tabbed-info-box.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Screen reader users don't care about any of this — they are happy with the content as long as the source order makes sense, and they can get to it all. Absolute positioning (as used in this example) is generally seen as one of the best mechanisms of hiding content for visual effect, because it doesn't stop screen readers from getting to it.</p>
 
 <p>On the other hand, you shouldn't use {{cssxref("visibility")}}<code>:hidden</code> or {{cssxref("display")}}<code>:none</code>, because they do hide content from screen readers. Unless of course, there is a good reason why you want this content to be hidden from screen readers.</p>
 
 <div class="note">
-<p><strong>Note</strong>: <span class="subtitle"><a href="http://webaim.org/techniques/css/invisiblecontent/">Invisible Content Just for Screen Reader Users</a> has a lot more useful detail surrounding this topic.</span></p>
+<p><strong>Note</strong>: <a href="http://webaim.org/techniques/css/invisiblecontent/">Invisible Content Just for Screen Reader Users</a> has a lot more useful detail surrounding this topic.</p>
 </div>
 
 <h3 id="Accept_that_users_can_override_styles">Accept that users can override styles</h3>
@@ -215,10 +215,10 @@ a:active {
 
 <ul>
  <li>Good semantics: Using the right element for the right job. For example, making sure you use headings and paragraphs, and {{htmlelement("button")}} and {{htmlelement("a")}} elements</li>
- <li>Making sure content is available as text, either directly as text content, good text labels for form elements, or <a href="/en-US/docs/Learn/Accessibility/HTML#Text_alternatives">text alternatives</a>, e.g. alt text for images.</li>
+ <li>Making sure content is available as text, either directly as text content, good text labels for form elements, or <a href="/en-US/docs/Learn/Accessibility/HTML#text_alternatives">text alternatives</a>, e.g. alt text for images.</li>
 </ul>
 
-<p>We also looked at an example of how to use JavaScript to build in functionality where it is missing — see <a href="/en-US/docs/Learn/Accessibility/HTML#Building_keyboard_accessibility_back_in">Building keyboard accessibility back in</a>. This is not ideal — really you should just use the right element for the right job — but it shows that it is possible in situations where for some reason you can't control the markup that is used. Another way to improve accessibility for non-semantic JavaScript-powered widgets is to use WAI-ARIA to provide extra semantics for screen reader users. The next article will also cover this in detail.</p>
+<p>We also looked at an example of how to use JavaScript to build in functionality where it is missing — see <a href="/en-US/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in">Building keyboard accessibility back in</a>. This is not ideal — really you should just use the right element for the right job — but it shows that it is possible in situations where for some reason you can't control the markup that is used. Another way to improve accessibility for non-semantic JavaScript-powered widgets is to use WAI-ARIA to provide extra semantics for screen reader users. The next article will also cover this in detail.</p>
 
 <p>Complex functionality like 3D games are not so easy to make accessible — a complex 3D game created using <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> will be rendered on a {{htmlelement("canvas")}} element, which has no facility at this time to provide text alternatives or other information for severely visually impaired users to make use of. It is arguable that such a game doesn't really have this group of people as a part of its main target audience, and it would be unreasonable to expect you to make it 100% accessible to blind people, however you could implement <a href="/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard">keyboard controls</a> so it is usable by non-mouse users, and make the color scheme contrasting enough to be usable by those with color deficiencies.</p>
 
@@ -249,12 +249,12 @@ a:active {
 
 <p>We've made this form validation pretty accessible too. We've used {{htmlelement("label")}} elements to make sure the form labels are unambiguously linked to their inputs, so screen readers can read them out alongside:</p>
 
-<pre class="brush: html notranslate">&lt;label for="name"&gt;Enter your name:&lt;/label&gt;
+<pre class="brush: html">&lt;label for="name"&gt;Enter your name:&lt;/label&gt;
 &lt;input type="text" name="name" id="name"&gt;</pre>
 
 <p>We only do the validation when the form is submitted — this is so that we don't update the UI too often and potentially confuse screen reader (and possibly other) users:</p>
 
-<pre class="brush: js notranslate">form.onsubmit = validate;
+<pre class="brush: js">form.onsubmit = validate;
 
 function validate(e) {
   errorList.innerHTML = '';
@@ -281,7 +281,7 @@ function validate(e) {
 
 <p>For each input that doesn't have a value filled in when the form is submitted, we create a list item with a link and insert it in the <code>errorList</code>.</p>
 
-<pre class="brush: js notranslate">function createLink(testItem) {
+<pre class="brush: js">function createLink(testItem) {
   const listItem = document.createElement('li');
   const anchor = document.createElement('a');
 
@@ -304,7 +304,7 @@ function validate(e) {
 
 <p>As a final note, we have used some WAI-ARIA attributes in our demo to help solve accessibility problems caused by areas of content constantly updating without a page reload (screen readers won't pick this up or alert users to it by default):</p>
 
-<pre class="notranslate">&lt;div class="errors" role="alert" aria-relevant="all"&gt;
+<pre>&lt;div class="errors" role="alert" aria-relevant="all"&gt;
   &lt;ul&gt;
   &lt;/ul&gt;
 &lt;/div&gt;</pre>
@@ -325,15 +325,15 @@ function validate(e) {
 
 <h4 id="mouse-specific_events">mouse-specific events</h4>
 
-<p>As you will be aware, most user interactions are implemented in client-side JavaScript using event handlers, which allow us to run functions in response to certain events happening. Some events can have accessibility issues. The main example you'll come across is mouse-specific events like <a href="/en-US/docs/Web/Events/mouseover">mouseover</a>, <a href="/en-US/docs/Web/Events/mouseout">mouseout</a>, <a href="/en-US/docs/Web/Events/dblclick">dblclick</a>, etc. Functionality that runs in response to these events will not be accessible using other mechanisms, like keyboard controls.</p>
+<p>As you will be aware, most user interactions are implemented in client-side JavaScript using event handlers, which allow us to run functions in response to certain events happening. Some events can have accessibility issues. The main example you'll come across is mouse-specific events like <a href="/en-US/docs/Web/API/Element/mouseover_event">mouseover</a>, <a href="/en-US/docs/Web/API/Element/mouseout_event">mouseout</a>, <a href="/en-US/docs/Web/API/Element/dblclick_event">dblclick</a>, etc. Functionality that runs in response to these events will not be accessible using other mechanisms, like keyboard controls.</p>
 
-<p>To mitigate such problems, you should double up these events with similar events that can be activated by other means (so-called device-independent event handlers) — <a href="/en-US/docs/Web/Events/focus">focus</a> and <a href="/en-US/docs/Web/Events/blur">blur</a> would provide accessibility for keyboard users.</p>
+<p>To mitigate such problems, you should double up these events with similar events that can be activated by other means (so-called device-independent event handlers) — <a href="/en-US/docs/Web/API/Element/focus_event">focus</a> and <a href="/en-US/docs/Web/API/Element/blur_event">blur</a> would provide accessibility for keyboard users.</p>
 
 <p>Let's look at an example that highlights when this could be useful. Maybe we want to provide a thumbnail image that shows a larger version of the image when it is moused over or focused (like you'd see on an e-commerce product catalog.)</p>
 
 <p>We've made a very simple example, which you can find at <a href="https://mdn.github.io/learning-area/accessibility/css/mouse-and-keyboard-events.html">mouse-and-keyboard-events.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/accessibility/css/mouse-and-keyboard-events.html">source code</a>). The code features two functions that show and hide the zoomed-in image; these are run by the following lines that set them as event handlers:</p>
 
-<pre class="brush: js notranslate">imgThumb.onmouseover = showImg;
+<pre class="brush: js">imgThumb.onmouseover = showImg;
 imgThumb.onmouseout = hideImg;
 
 imgThumb.onfocus = showImg;
@@ -341,7 +341,7 @@ imgThumb.onblur = hideImg;</pre>
 
 <p>The first two lines run the functions when the mouse pointer hovers over and stops hovering over the thumbnail, respectively. This won't allow us to access the zoomed view by keyboard though — to allow that, we've included the last two lines, which run the functions when the image is focused and blurred (when focus stops). This can be done by tabbing over the image, because we've included <code>tabindex="0"</code> on it.</p>
 
-<p>The <a href="/en-US/docs/Web/Events/click">click</a> event is interesting — it sounds mouse-dependent, but most browsers will activate <a href="/en-US/docs/Web/API/GlobalEventHandlers/onclick">onclick</a> event handlers after Enter/Return is pressed on a link or form element that has focus, or when such an element is tapped on a touchscreen device. This doesn't work by default however when you allow a non-default-focusable event to have focus using tabindex — in such cases you need to detect specifically when that exact key is pressed (see <a href="/en-US/docs/Learn/Accessibility/HTML#Building_keyboard_accessibility_back_in">Building keyboard accessibility back in</a>).</p>
+<p>The <a href="/en-US/docs/Web/API/Element/click_event">click</a> event is interesting — it sounds mouse-dependent, but most browsers will activate <a href="/en-US/docs/Web/API/GlobalEventHandlers/onclick">onclick</a> event handlers after Enter/Return is pressed on a link or form element that has focus, or when such an element is tapped on a touchscreen device. This doesn't work by default however when you allow a non-default-focusable event to have focus using tabindex — in such cases you need to detect specifically when that exact key is pressed (see <a href="/en-US/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in">Building keyboard accessibility back in</a>).</p>
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
@@ -355,7 +355,6 @@ imgThumb.onblur = hideImg;</pre>
 
 <div>{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}</div>
 
-<div>
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
@@ -367,4 +366,3 @@ imgThumb.onblur = hideImg;</pre>
  <li><a href="/en-US/docs/Learn/Accessibility/Mobile">Mobile accessibility</a></li>
  <li><a href="/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting">Accessibility troubleshooting</a></li>
 </ul>
-</div>

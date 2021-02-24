@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">let <var>element</var> = <var>document</var>.createElement(<var>tagName</var>[, <var>options</var>]);
+<pre class="brush: js">let <var>element</var> = <var>document</var>.createElement(<var>tagName</var>[, <var>options</var>]);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -39,7 +39,7 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush:html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;title&gt;||Working with elements||&lt;/title&gt;
@@ -52,7 +52,7 @@ tags:
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush:js notranslate">document.body.onload = addElement;
+<pre class="brush:js">document.body.onload = addElement;
 
 function addElement () {
   // create a new div element
@@ -75,7 +75,7 @@ function addElement () {
 
 <p>The following example snippet is taken from our expanding-list-web-component example (see it live also). In this case, our custom element extends the {{domxref("HTMLUListElement")}}, which represents the {{htmlelement("ul")}} element.</p>
 
-<pre class="brush: js notranslate">// Create a class for the element
+<pre class="brush: js">// Create a class for the element
 class ExpandingList extends HTMLUListElement {
   constructor() {
     // Always call super first in constructor
@@ -91,7 +91,7 @@ customElements.define('expanding-list', ExpandingList, { extends: "ul" });</pre>
 
 <p>If we wanted to create an instance of this element programmatically, we'd use a call along the following lines:</p>
 
-<pre class="brush: js notranslate">let expandingList = document.createElement('ul', { is : 'expanding-list' })</pre>
+<pre class="brush: js">let expandingList = document.createElement('ul', { is : 'expanding-list' })</pre>
 
 <p>The new element will be given an <code><a href="/en-US/docs/Web/HTML/Global_attributes/is">is</a></code> attribute whose value is the custom element's tag name.</p>
 

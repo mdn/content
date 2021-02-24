@@ -2,64 +2,95 @@
 title: Array.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 tags:
-  - Array
-  - Array method
-  - JavaScript
-  - Method
-  - Prototype
-  - Sorting
+- Array
+- Array method
+- JavaScript
+- Method
+- Prototype
+- Sorting
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>sort()</strong></code> method sorts the elements of an array <em><a href="https://en.wikipedia.org/wiki/In-place_algorithm">in place</a></em> and returns the sorted array. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.</p>
+<p>The <code><strong>sort()</strong></code> method sorts the elements of an array <em><a
+      href="https://en.wikipedia.org/wiki/In-place_algorithm">in place</a></em> and
+  returns the sorted array. The default sort order is ascending, built upon converting the
+  elements into strings, then comparing their sequences of UTF-16 code units values.</p>
 
-<p>The time and space complexity of the sort cannot be guaranteed as it depends on the implementation.</p>
+<p>The time and space complexity of the sort cannot be guaranteed as it depends on the
+  implementation.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/array-sort.html")}}</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>arr</var>.sort(<var>[compareFunction]</var>)
+<pre class="brush: js"><var>arr</var>.sort(<var>[compareFunction]</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>compareFunction</code> {{optional_inline}}</dt>
- <dd>Specifies a function that defines the sort order. If omitted, the array elements are converted to strings, then sorted according to each character's <a href="/en-US/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode">Unicode</a> code point value.
- <dl>
-  <dt><code>firstEl</code></dt>
-  <dd>The first element for comparison.</dd>
-  <dt><code>secondEl</code></dt>
-  <dd>The second element for comparison.</dd>
- </dl>
- </dd>
+  <dt><code>compareFunction</code> {{optional_inline}}</dt>
+  <dd>Specifies a function that defines the sort order. If omitted, the array elements are
+    converted to strings, then sorted according to each character's <a
+      href="/en-US/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode">Unicode</a>
+    code point value.
+    <dl>
+      <dt><code>firstEl</code></dt>
+      <dd>The first element for comparison.</dd>
+      <dt><code>secondEl</code></dt>
+      <dd>The second element for comparison.</dd>
+    </dl>
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>The sorted array. Note that the array is sorted <em><a href="https://en.wikipedia.org/wiki/In-place_algorithm">in place</a></em>, and no copy is made.</p>
+<p>The sorted array. Note that the array is sorted <em><a
+      href="https://en.wikipedia.org/wiki/In-place_algorithm">in place</a></em>, and no
+  copy is made.</p>
 
 <h2 id="Description">Description</h2>
 
-<p>If <code>compareFunction</code> is not supplied, all non-<code>undefined</code> array elements are sorted by converting them to strings and comparing strings in UTF-16 code units order. For example, "banana" comes before "cherry". In a numeric sort, 9 comes before 80, but because numbers are converted to strings, "80" comes before "9" in the Unicode order. All <code>undefined</code> elements are sorted to the end of the array.</p>
+<p>If <code>compareFunction</code> is not supplied, all non-<code>undefined</code> array
+  elements are sorted by converting them to strings and comparing strings in UTF-16 code
+  units order. For example, "banana" comes before "cherry". In a numeric sort, 9 comes
+  before 80, but because numbers are converted to strings, "80" comes before "9" in the
+  Unicode order. All <code>undefined</code> elements are sorted to the end of the array.
+</p>
 
 <div class="notecard note">
-<p><strong>Note :</strong> In UTF-16, Unicode characters above <code>\uFFFF</code> are encoded as two surrogate code units, of the range <code>\uD800</code>-<code>\uDFFF</code>. The value of each code unit is taken separately into account for the comparison. Thus the character formed by the surrogate pair <code>\uD655\uDE55</code> will be sorted before the character <code>\uFF3A</code>.</p>
+  <p><strong>Note :</strong> In UTF-16, Unicode characters above <code>\uFFFF</code> are
+    encoded as two surrogate code units, of the range
+    <code>\uD800</code>-<code>\uDFFF</code>. The value of each code unit is taken
+    separately into account for the comparison. Thus the character formed by the surrogate
+    pair <code>\uD655\uDE55</code> will be sorted before the character
+    <code>\uFF3A</code>.</p>
 </div>
 
-<p>If <code>compareFunction</code> is supplied, all non-<code>undefined</code> array elements are sorted according to the return value of the compare function (all <code>undefined</code> elements are sorted to the end of the array, with no call to <code>compareFunction</code>). If <code>a</code> and <code>b</code> are two elements being compared, then:</p>
+<p>If <code>compareFunction</code> is supplied, all non-<code>undefined</code> array
+  elements are sorted according to the return value of the compare function (all
+  <code>undefined</code> elements are sorted to the end of the array, with no call to
+  <code>compareFunction</code>). If <code>a</code> and <code>b</code> are two elements
+  being compared, then:</p>
 
 <ul>
- <li>If <code>compareFunction(a, b)</code> returns less than 0, sort <code>a</code> to an index lower than <code>b</code> (i.e. <code>a</code> comes first).</li>
- <li>If <code>compareFunction(a, b)</code> returns 0, leave <code>a</code> and <code>b</code> unchanged with respect to each other, but sorted with respect to all different elements. Note: the ECMAScript standard only started guaranteeing this behavior <a href="https://www.ecma-international.org/ecma-262/10.0/index.html#sec-intro">in 2019</a>, thus, older browsers may not respect this.</li>
- <li>If <code>compareFunction(a, b)</code> returns greater than 0, sort <code>b</code> to an index lower than <code>a</code> (i.e. <code>b</code> comes first).</li>
- <li><code>compareFunction(a, b)</code> must always return the same value when given a specific pair of elements <code>a</code> and <code>b</code> as its two arguments. If inconsistent results are returned, then the sort order is undefined.</li>
+  <li>If <code>compareFunction(a, b)</code> returns less than 0, leave <code>a</code> and <code>b</code> unchanged.</li>
+  <li>If <code>compareFunction(a, b)</code> returns 0, leave <code>a</code> and
+    <code>b</code> unchanged with respect to each other, but sorted with respect to all
+    different elements. Note: the ECMAScript standard only started guaranteeing this
+    behavior <a
+      href="https://www.ecma-international.org/ecma-262/10.0/index.html#sec-intro">in
+      2019</a>, thus, older browsers may not respect this.</li>
+  <li>If <code>compareFunction(a, b)</code> returns greater than 0, sort <code>b</code> before
+    <code>a</code>.</li>
+  <li><code>compareFunction(a, b)</code> must always return the same value when given a
+    specific pair of elements <code>a</code> and <code>b</code> as its two arguments. If
+    inconsistent results are returned, then the sort order is undefined.</li>
 </ul>
 
 <p>So, the compare function has the following form:</p>
 
-<pre class="brush: js notranslate">function compare(a, b) {
+<pre class="brush: js">function compare(a, b) {
   if (a is less than b by some ordering criterion) {
     return -1;
   }
@@ -71,16 +102,19 @@ tags:
 }
 </pre>
 
-<p>To compare numbers instead of strings, the compare function can subtract <code>b</code> from <code>a</code>. The following function will sort the array in ascending order (if it doesn't contain <code>Infinity</code> and <code>NaN</code>):</p>
+<p>To compare numbers instead of strings, the compare function can subtract <code>b</code>
+  from <code>a</code>. The following function will sort the array in ascending order (if
+  it doesn't contain <code>Infinity</code> and <code>NaN</code>):</p>
 
-<pre class="brush: js notranslate">function compareNumbers(a, b) {
+<pre class="brush: js">function compareNumbers(a, b) {
   return a - b;
 }
 </pre>
 
-<p>The <code>sort</code> method can be conveniently used with {{jsxref("Operators/function", "function expressions", "", 1)}}:</p>
+<p>The <code>sort</code> method can be conveniently used with
+  {{jsxref("Operators/function", "function expressions", "", 1)}}:</p>
 
-<pre class="brush: js notranslate">var numbers = [4, 2, 5, 1, 3];
+<pre class="brush: js">var numbers = [4, 2, 5, 1, 3];
 numbers.sort(function(a, b) {
   return a - b;
 });
@@ -89,9 +123,10 @@ console.log(numbers);
 // [1, 2, 3, 4, 5]
 </pre>
 
-<p>ES2015 provides {{jsxref("Functions/Arrow_functions", "arrow function expressions", "", 1)}} with even shorter syntax.</p>
+<p>ES2015 provides {{jsxref("Functions/Arrow_functions", "arrow function expressions", "",
+  1)}} with even shorter syntax.</p>
 
-<pre class="brush: js notranslate">let numbers = [4, 2, 5, 1, 3];
+<pre class="brush: js">let numbers = [4, 2, 5, 1, 3];
 numbers.sort((a, b) =&gt; a - b);
 console.log(numbers);
 
@@ -99,7 +134,7 @@ console.log(numbers);
 
 <p>Arrays of objects can be sorted by comparing the value of one of their properties.</p>
 
-<pre class="brush: js notranslate">var items = [
+<pre class="brush: js">var items = [
   { name: 'Edward', value: 21 },
   { name: 'Sharpe', value: 37 },
   { name: 'And', value: 45 },
@@ -130,11 +165,14 @@ items.sort(function(a, b) {
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Creating_displaying_and_sorting_an_array">Creating, displaying, and sorting an array</h3>
+<h3 id="Creating_displaying_and_sorting_an_array">Creating, displaying, and sorting an
+  array</h3>
 
-<p>The following example creates four arrays and displays the original array, then the sorted arrays. The numeric arrays are sorted without a compare function, then sorted using one.</p>
+<p>The following example creates four arrays and displays the original array, then the
+  sorted arrays. The numeric arrays are sorted without a compare function, then sorted
+  using one.</p>
 
-<pre class="brush: js notranslate">var stringArray = ['Blue', 'Humpback', 'Beluga'];
+<pre class="brush: js">var stringArray = ['Blue', 'Humpback', 'Beluga'];
 var numericStringArray = ['80', '9', '700'];
 var numberArray = [40, 1, 5, 200];
 var mixedNumericArray = ['80', '9', '700', 40, 1, 5, 200];
@@ -159,9 +197,11 @@ console.log('Sorted without a compare function:', mixedNumericArray.sort());
 console.log('Sorted with compareNumbers:', mixedNumericArray.sort(compareNumbers));
 </pre>
 
-<p>This example produces the following output. As the output shows, when a compare function is used, numbers sort correctly whether they are numbers or numeric strings.</p>
+<p>This example produces the following output. As the output shows, when a compare
+  function is used, numbers sort correctly whether they are numbers or numeric strings.
+</p>
 
-<pre class="notranslate">stringArray: Blue,Humpback,Beluga
+<pre class="brush: js">stringArray: Blue,Humpback,Beluga
 Sorted: Beluga,Blue,Humpback
 
 numberArray: 40,1,5,200
@@ -179,9 +219,12 @@ Sorted with compareNumbers: 1,5,9,40,80,200,700
 
 <h3 id="Sorting_non-ASCII_characters">Sorting non-ASCII characters</h3>
 
-<p>For sorting strings with non-ASCII characters, i.e. strings with accented characters (e, é, è, a, ä, etc.), strings from languages other than English, use {{jsxref("String.localeCompare")}}. This function can compare those characters so they appear in the right order.</p>
+<p>For sorting strings with non-ASCII characters, i.e. strings with accented characters
+  (e, é, è, a, ä, etc.), strings from languages other than English, use
+  {{jsxref("String.localeCompare")}}. This function can compare those characters so they
+  appear in the right order.</p>
 
-<pre class="brush: js notranslate">var items = ['réservé', 'premier', 'communiqué', 'café', 'adieu', 'éclair'];
+<pre class="brush: js">var items = ['réservé', 'premier', 'communiqué', 'café', 'adieu', 'éclair'];
 items.sort(function (a, b) {
   return a.localeCompare(b);
 });
@@ -191,9 +234,16 @@ items.sort(function (a, b) {
 
 <h3 id="Sorting_with_map">Sorting with map</h3>
 
-<p>The <code>compareFunction</code> can be invoked multiple times per element within the array. Depending on the <code>compareFunction</code>'s nature, this may yield a high overhead. The more work a <code>compareFunction</code> does and the more elements there are to sort, it may be more efficient to use <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a> for sorting. The idea is to traverse the array once to extract the actual values used for sorting into a temporary array, sort the temporary array, and then traverse the temporary array to achieve the right order.</p>
+<p>The <code>compareFunction</code> can be invoked multiple times per element within the
+  array. Depending on the <code>compareFunction</code>'s nature, this may yield a high
+  overhead. The more work a <code>compareFunction</code> does and the more elements there
+  are to sort, it may be more efficient to use <a
+    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a> for
+  sorting. The idea is to traverse the array once to extract the actual values used for
+  sorting into a temporary array, sort the temporary array, and then traverse the
+  temporary array to achieve the right order.</p>
 
-<pre class="brush: js notranslate">// the array to be sorted
+<pre class="brush: js">// the array to be sorted
 var list = ['Delta', 'alpha', 'CHARLIE', 'bravo'];
 
 // temporary array holds objects with position and sort-value
@@ -218,34 +268,35 @@ var result = mapped.map(function(el){
 });
 </pre>
 
-<p>There is an open source library available called <a href="https://null.house/open-source/mapsort">mapsort</a> which applies this approach.</p>
+<p>There is an open source library available called <a
+    href="https://null.house/open-source/mapsort">mapsort</a> which applies this approach.
+</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.sort', 'Array.prototype.sort')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-array.prototype.sort', 'Array.prototype.sort')}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("javascript.builtins.Array.sort")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Array.prototype.reverse()")}}</li>
- <li>{{jsxref("String.prototype.localeCompare()")}}</li>
- <li><a href="https://v8.dev/blog/array-sort">About the stability of the algorithm used by V8 engine</a></li>
+  <li>{{jsxref("Array.prototype.reverse()")}}</li>
+  <li>{{jsxref("String.prototype.localeCompare()")}}</li>
+  <li><a href="https://v8.dev/blog/array-sort">About the stability of the algorithm used
+      by V8 engine</a></li>
 </ul>

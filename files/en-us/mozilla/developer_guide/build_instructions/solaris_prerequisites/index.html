@@ -21,10 +21,8 @@ tags:
 </ul>
 
 <pre>$ pfexec pkg install x11/header mercurial header-audio x11/header header-xorg gnu-m4 gnome/gettext cvs gnu-make sunstudio rust
-
 </pre>
 
-<div>
 <ul style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.7em; margin-left: 25px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">
  <li><code>gcc</code> or <code>gcc-43</code> is required to build <code>js-ctypes</code></li>
  <li><a class="external" href="http://ftp.gnu.org/gnu/autoconf/autoconf-2.13.tar.gz">autoconf 2.13</a> is necessary if you get source code from hg repo. Download the source tarball, untar it, <code>./configure --program-suffix=-2.13; gmake; pfexec gmake install</code>. Autoconf 2.5x will <strong>not</strong> work. See {{ Bug(104642) }} for details. </li>
@@ -33,7 +31,6 @@ tags:
 </ul>
 
 <h3 id="Build_Environment">Build Environment</h3>
-</div>
 
 <p>Get source code from hg repo or source tarball.</p>
 
@@ -56,7 +53,7 @@ export CXX=[CC | g++]</pre>
 
 <p>You can use a typical <code>.mozconfig</code> file. For current HEAD these mozconfigs are recommended:</p>
 
-<div>For Firefox debug build:</div>
+<p>For Firefox debug build:</p>
 
 <pre>mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-debug
 ac_add_options --enable-application=browser
@@ -71,7 +68,7 @@ ac_add_options --disable-crashreporter
 ac_add_options --disable-verify-mar
 </pre>
 
-<div>For Firefox release build:</div>
+<p>For Firefox release build:</p>
 
 <pre>mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-release
 ac_add_options --enable-application=browser
@@ -85,10 +82,9 @@ ac_add_options --disable-crashreporter
 ac_add_options --disable-verify-mar
 </pre>
 
-<div>For Thunderbird debug build:</div>
+<p>For Thunderbird debug build:</p>
 
-<div>
-<pre style='margin: 0px 0px 1.7em; padding: 10px; border-width: 1px; border-style: solid; border-color: rgb(223, 236, 241); overflow: auto; font: 12px "Courier New", "Andale Mono", monospace; color: rgb(37, 34, 29);'>mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-debug
+<pre>mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-debug
 ac_add_options --enable-application=mail
 ac_add_options --enable-calendar
 ac_add_options --enable-tests
@@ -103,12 +99,10 @@ ac_add_options --disable-static
 ac_add_options --disable-crashreporter
 ac_add_options --disable-verify-mar
 </pre>
-</div>
 
-<div>For Thunderbird release build:</div>
+<p>For Thunderbird release build:</p>
 
-<div>
-<pre style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.7em; margin-left: 0px; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; font: normal normal normal 12px/normal 'Courier New', 'Andale Mono', monospace; color: rgb(37, 34, 29);">mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-release
+<pre>mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-release
 ac_add_options --enable-application=mail
 ac_add_options --enable-calendar
 ac_add_options --enable-tests
@@ -122,9 +116,8 @@ ac_add_options --enable-static
 ac_add_options --disable-crashreporter
 ac_add_options --disable-verify-mar
 </pre>
-</div>
 
-<p> Then run <code>gmake -f client.mk</code> to start to build.</p>
+<p>Then run <code>gmake -f client.mk</code> to start to build.</p>
 
 <p>Note that the standard Solaris <code>make</code> tool doesn't work. Use <code>gmake</code> instead. (For OpenSolaris, /usr/gnu/bin/make is gmake.)</p>
 

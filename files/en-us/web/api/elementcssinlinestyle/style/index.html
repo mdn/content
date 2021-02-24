@@ -12,26 +12,37 @@ tags:
 ---
 <div>{{APIRef("CSSOM")}}</div>
 
-<p>The <code><strong>style</strong></code> property is used to get as well as set the <em>inline</em> style of an element. When getting, it returns a {{domxref("CSSStyleDeclaration")}} object that contains a list of all styles properties for that element with values assigned for the attributes that are defined in the element's inline <a href="/en-US/docs/Web/HTML/Global_attributes/style"><code>style</code> attribute</a>.</p>
+<p>The <code><strong>style</strong></code> read-only property returns the <em>inline</em> style of an element in the form of a {{domxref("CSSStyleDeclaration")}} object that contains a list of all styles properties for that element with values assigned for the attributes that are defined in the element's inline <a href="/en-US/docs/Web/HTML/Global_attributes/style"><code>style</code> attribute</a>.</p>
 
+<div class="notecard note">
 <p>See the <a href="/en-US/docs/Web/CSS/CSS_Properties_Reference">CSS Properties Reference</a> for a list of the CSS properties accessible via <code>style</code>. The <code>style</code> property has the same (and highest) priority in the CSS cascade as an inline style declaration set via the <code>style</code> attribute.</p>
+</div>
 
-<h3 id="Setting_styles">Setting styles</h3>
+<h2 id="Syntax">Syntax</h2>
 
-<p>Styles should not be set by assigning a string directly to the <code>style</code> property (as in <code>elt.style = "color: blue;"</code>), since it is considered read-only, as the style attribute returns a <code>CSSStyleDeclaration</code> object which is also read-only. Instead, styles can be set by assigning values to the properties of <code>style</code>. For adding specific styles to an element without altering other style values, it is preferred to use the individual properties of <code>style</code> (as in <code>elt.style.color = '...'</code>) as using <code>elt.style.cssText = '...'</code> or <code>elt.setAttribute('style', '...')</code> sets the complete inline style for the element by overriding the existing inline styles. Note that the property names are in camel-case and not kebab-case while setting the style using <code>elt.style.&lt;property&gt;</code> (i.e., <code>elt.style.fontSize</code>, not <code>elt.style.font-size</code>).</p>
+<pre class="eval"><var>style</var> = <var>CSSStyleDeclaration</var>.style
+</pre>
+
+<h2 id="value">Value</h2>
+
+<p>A {{domxref("CSSStyleDeclaration")}} object, with the following properties:</p>
+
+<dl>
+  <dt>computed flag</dt>
+  <dd>Unset.</dd>
+  <dt>parent CSS rule</dt>
+  <dd>Null.</dd>
+  <dt>owner node</dt>
+  <dd><code>this</code></dd>
+</dl>
+
+<h2 id="Setting_styles">Setting styles</h2>
+
+<p>While this property is considered read-only, it is possible to set an inline style by assigning a string directly to the <code>style</code> property. In this case the string is forwarded to {{domxref("CSSStyleDeclaration.cssText")}}. Using <code>style</code> in this manner will completely overwrite all inline styles on the element.</p>
+
+<p>Therefore, to add specific styles to an element without altering other style values, it is generally preferable to set individual properties on the {{domxref("CSSStyleDeclaration")}} object. For example, <code>element.style.backgroundColor = "red"</code>.</p>
 
 <p>A style declaration is reset by setting it to <code>null</code> or an empty string, e.g., <code>elt.style.color = null</code>. Internet Explorer requires setting it to an empty string, and does not do anything when setting it to <code>null</code>.</p>
-
-<h2 id="Examples">Examples</h2>
-
-<pre class="brush:js notranslate">// Set multiple styles in a single statement
-elt.style.cssText = "color: blue; border: 1px solid black";
-// Or
-elt.setAttribute("style", "color:red; border: 1px solid blue;");
-
-// Set specific style while leaving other inline style values untouched
-elt.style.color = "blue";
-</pre>
 
 <h3 id="Getting_style_information">Getting style information</h3>
 
@@ -39,7 +50,7 @@ elt.style.color = "blue";
 
 <p>The following code snippet demonstrates the difference between the values obtained using the element's <code>style</code> property and that obtained using the <code>getComputedStyle()</code> method:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE HTML&gt;
+<pre class="brush: html">&lt;!DOCTYPE HTML&gt;
 &lt;html&gt;
   &lt;body style="font-weight:bold;"&gt;
     &lt;div style="color:red" id="myElement"&gt;..&lt;/div&gt;
@@ -47,7 +58,7 @@ elt.style.color = "blue";
 &lt;/html&gt;
 </pre>
 
-<pre class="brush:js notranslate">var element = document.getElementById("myElement");
+<pre class="brush:js">var element = document.getElementById("myElement");
 var out = "";
 var elementStyle = element.style;
 var computedStyle = window.getComputedStyle(element, null);
@@ -62,7 +73,7 @@ console.log(out)
 
 <p>The output would be something like:</p>
 
-<pre class="notranslate">...
+<pre>...
 fontWeight = '' &gt; 'bold'
 color = 'red' &gt; 'rgb(255, 0, 0)'
 ...</pre>

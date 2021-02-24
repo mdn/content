@@ -9,18 +9,17 @@ tags:
 ---
 <div>{{AddonSidebar}}</div>
 
-<div>
-<p>A popup is a dialog that's associated with a <a href="/en-US/Add-ons/WebExtensions/Browser_action">toolbar button</a> or <a href="/en-US/Add-ons/WebExtensions/Page_actions">address bar button</a>. This page describes popups in general, specifying them, debugging, resizing, and designing them, as well as examples of use.</p>
+<p>A popup is a dialog that's associated with a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">toolbar button</a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions">address bar button</a>. This page describes popups in general, specifying them, debugging, resizing, and designing them, as well as examples of use.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15747/page_action_popup.png" style="display: block; height: 282px; margin-left: auto; margin-right: auto; width: 350px;"></p>
+<p><img alt="" src="page_action_popup.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>When the user clicks the button, the popup is shown. When the user clicks anywhere outside the popup, the popup is closed. The popup can be closed programmatically by calling <code><a href="/en-US/docs/Web/API/Window/close">window.close()</a></code> from a script running in the popup. However, you can't open the popup programmatically from an extension's JavaScript; it can be opened only in response to a user action.</p>
 
-<p>You can define a keyboard shortcut that opens the popup using the <code>"_execute_browser_action"</code> and <code>"_execute_page_action"</code> shortcuts. See the documentation for the manifest.json key <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands">commands</a></code><span style="display: none;"> </span>.</p>
+<p>You can define a keyboard shortcut that opens the popup using the <code>"_execute_browser_action"</code> and <code>"_execute_page_action"</code> shortcuts. See the documentation for the manifest.json key <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands">commands</a></code>.</p>
 
 <h2 id="Specifying_a_popup">Specifying a popup</h2>
 
-<p>The popup is specified as an HTML file, which can include CSS and JavaScript files, as a normal web page does. Unlike a normal page, though, the JavaScript can use all the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API">WebExtension APIs</a> that the extension has <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a> for.</p>
+<p>The popup is specified as an HTML file, which can include CSS and JavaScript files, as a normal web page does. Unlike a normal page, though, the JavaScript can use all the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API">WebExtension APIs</a> that the extension has <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a> for.</p>
 
 <p>The popup's document is loaded every time the popup is shown, and unloaded every time the popup is closed.</p>
 
@@ -38,7 +37,7 @@ tags:
 
 <h2 id="Debugging_popups">Debugging popups</h2>
 
-<p>You can debug a popup's markup and JavaScript using the Add-on Debugger, but you'll need to turn on the Disable popup auto-hide feature to prevent popups from hiding when you click outside them.<a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Debugging#Debugging_popups"> Read about debugging popups</a>.</p>
+<p>You can debug a popup's markup and JavaScript using the Add-on Debugger, but you'll need to turn on the Disable popup auto-hide feature to prevent popups from hiding when you click outside them.<a href="https://extensionworkshop.com/documentation/develop/debugging/#debugging_popups"> Read about debugging popups</a>.</p>
 
 <h2 id="Popup_resizing">Popup resizing</h2>
 
@@ -55,4 +54,3 @@ tags:
 <h2 id="Examples">Examples</h2>
 
 <p>The <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> repository on GitHub includes the <a href="https://github.com/mdn/webextensions-examples/tree/master/beastify">beastify</a> example, which implements a browser action with a popup.</p>
-</div>

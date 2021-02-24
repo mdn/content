@@ -6,13 +6,11 @@ tags:
   - Accessibility
   - NeedsContent
 ---
-<div>
-<div>
 <h3 id="Description">Description</h3>
 
-<p><span class="seoSummary">The <a class="external" href="https://www.w3.org/TR/wai-aria/#aria-required"><code>aria-required</code></a> attribute is used to indicate that user input is required on an element before a form can be submitted. This attribute can be used with any typical HTML form element; it is not limited to elements that have an ARIA <code>role</code> assigned.</span></p>
+<p><span class="seoSummary">The <a href="https://www.w3.org/TR/wai-aria/#aria-required"><code>aria-required</code></a> attribute is used to indicate that user input is required on an element before a form can be submitted. This attribute can be used with any typical HTML form element; it is not limited to elements that have an ARIA <code>role</code> assigned.</span></p>
 
-<p>{{ HTMLVersionInline("5") }} now has the <code>required</code> attribute, but aria-required is still useful for user agents that do not yet support HTML5.</p>
+<div class="note">Note: HTML also specifies the <a href="/en-US/docs/Web/HTML/Attributes/required"><code>required</code></a> attribute which is supported well in user agents. Use <code>aria-required</code> for backwards compatibility only.</div>
 
 <h3 id="Value">Value</h3>
 
@@ -30,7 +28,7 @@ tags:
 
 <h4 id="Example_1_A_simple_form">Example 1: A simple form</h4>
 
-<pre class="brush: html notranslate"> &lt;form action="post"&gt;
+<pre class="brush: html"> &lt;form action="post"&gt;
      &lt;label for="firstName"&gt;First name:&lt;/label&gt;
      &lt;input id="firstName" type="text" aria-required="true" /&gt;
      &lt;br/&gt;
@@ -44,7 +42,7 @@ tags:
 
 <h4 id="Working_Examples">Working Examples:</h4>
 
-<p><a class="external" href="http://www.oaa-accessibility.org/examplep/tooltip1/">Tooltip example</a> (includes the use of the <code>aria-required</code> attribute)</p>
+<p><a href="https://w3c.github.io/aria-practices/examples/accordion/accordion.html">WAI-ARIA Authoring Practices: Accordion Example</a> (includes the use of the <code>aria-required</code> attribute)</p>
 
 <h3 id="Notes">Notes </h3>
 
@@ -56,7 +54,7 @@ tags:
  <li>Listbox</li>
  <li>Radiogroup</li>
  <li>Spinbutton</li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_textbox_role">Textbox</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">Textbox</a></li>
  <li>Tree</li>
 </ul>
 
@@ -73,9 +71,7 @@ tags:
 <h3 id="Additional_resources">Additional resources</h3>
 
 <ul>
- <li><a class="external" href="https://www.w3.org/TR/wai-aria/#aria-required">WAI-ARIA specification for <code>aria-required</code></a></li>
- <li><a class="external" href="https://www.w3.org/TR/wai-aria-practices/#ariaform">WAI-ARIA Authoring Practices for forms</a></li>
- <li><a href="/en/HTML/HTML5/Constraint_validation">Constraint validation</a> in {{ HTMLVersionInline("5") }}</li>
+ <li><a href="https://www.w3.org/TR/wai-aria/#aria-required">WAI-ARIA specification for <code>aria-required</code></a></li>
+ <li><a href="https://www.w3.org/TR/wai-aria-practices/#ariaform">WAI-ARIA Authoring Practices for forms</a></li>
+ <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Constraint validation</a> in HTML forms</li>
 </ul>
-</div>
-</div>

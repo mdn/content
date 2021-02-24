@@ -2,28 +2,35 @@
 title: FileReader.readAsBinaryString()
 slug: Web/API/FileReader/readAsBinaryString
 tags:
-  - API
-  - File API
-  - Files
-  - Method
-  - Reference
+- API
+- File API
+- Files
+- Method
+- Reference
 ---
 <div>{{APIRef("File API")}}</div>
 
-<p>The <code>readAsBinaryString</code> method is used to start reading the contents of the specified {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is finished, the {{domxref("FileReader.readyState","readyState")}} becomes <code>DONE</code>, and the {{event("loadend")}} is triggered. At that time, the {{domxref("FileReader.result","result")}} attribute contains the raw binary data from the file.</p>
+<p>The <code>readAsBinaryString</code> method is used to start reading the contents of the
+  specified {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is
+  finished, the {{domxref("FileReader.readyState","readyState")}} becomes
+  <code>DONE</code>, and the {{event("loadend")}} is triggered. At that time, the
+  {{domxref("FileReader.result","result")}} attribute contains the raw binary data from
+  the file.</p>
 
-<p>Note that this method was once removed from the File API specification, but re-introduced for backward compatibility.<br>
- Using {{domxref("FileReader.readAsArrayBuffer()")}} is recommended.</p>
+<p>Note that this method was once removed from the File API specification, but
+  re-introduced for backward compatibility.<br>
+  Using {{domxref("FileReader.readAsArrayBuffer()")}} is recommended.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>instanceOfFileReader</em>.readAsBinaryString(blob);</pre>
+<pre
+  class="brush: js"><em>instanceOfFileReader</em>.readAsBinaryString(blob);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>blob</code></dt>
- <dd>The {{domxref("Blob")}} or {{domxref("File")}} from which to read.</dd>
+  <dt><code>blob</code></dt>
+  <dd>The {{domxref("Blob")}} or {{domxref("File")}} from which to read.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -55,20 +62,20 @@ canvas.toBlob(function (blob) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('File API','#readAsBinaryString','readAsBinaryString')}}</td>
-   <td>{{Spec2('File API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('File API','#readAsBinaryString','readAsBinaryString')}}</td>
+      <td>{{Spec2('File API')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -78,5 +85,5 @@ canvas.toBlob(function (blob) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("FileReader")}}</li>
+  <li>{{domxref("FileReader")}}</li>
 </ul>

@@ -17,7 +17,7 @@ tags:
 
 <p>When both, the method of the request and the status of the response, are cacheable, the response to the request can be cached:</p>
 
-<pre class="notranslate">GET /pageX.html HTTP/1.1
+<pre class="brush: plain">GET /pageX.html HTTP/1.1
 (…)
 
 200 OK
@@ -26,7 +26,7 @@ tags:
 
 <p>A {{HTTPMethod("PUT")}} request cannot be cached. Moreover, it invalidates cached data for request to the same URI done via {{HTTPMethod("HEAD")}} or {{HTTPMethod("GET")}}:</p>
 
-<pre class="notranslate">PUT /pageX.html HTTP/1.1
+<pre class="brush: plain">PUT /pageX.html HTTP/1.1
 (…)
 
 200 OK
@@ -35,7 +35,7 @@ tags:
 
 <p>A specific {{HTTPHeader("Cache-Control")}} header in the response can prevent caching:</p>
 
-<pre class="notranslate">GET /pageX.html HTTP/1.1
+<pre class="brush: plain">GET /pageX.html HTTP/1.1
 (…)
 
 200 OK

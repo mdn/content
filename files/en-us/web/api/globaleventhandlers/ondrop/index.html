@@ -2,30 +2,33 @@
 title: GlobalEventHandlers.ondrop
 slug: Web/API/GlobalEventHandlers/ondrop
 tags:
-  - API
-  - HTML DOM
-  - Reference
-  - drag and drop
+- API
+- HTML DOM
+- Reference
+- drag and drop
 ---
 <div>{{ApiRef("HTML DOM")}}</div>
 
-<p>A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("drop")}} event.</p>
+<p>A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("drop")}}
+  event.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>dropHandler</var> = <var>targetElement</var>.ondrop;
+<pre class="brush: js">var <var>dropHandler</var> = <var>targetElement</var>.ondrop;
 </pre>
 
 <h3 id="Return_value">Return value</h3>
 
 <dl>
- <dt><code>dropHandler</code></dt>
- <dd>The <em>drop</em> event handler for element <code>targetElement</code>.</dd>
+  <dt><code>dropHandler</code></dt>
+  <dd>The <em>drop</em> event handler for element <code>targetElement</code>.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
 
-<p>This example demonstrates the use of the {{domxref("GlobalEventHandlers.ondrop","ondrop")}} attribute to define an element's {{event("drop")}} event handler.</p>
+<p>This example demonstrates the use of the
+  {{domxref("GlobalEventHandlers.ondrop","ondrop")}} attribute to define an element's
+  {{event("drop")}} event handler.</p>
 
 <pre class="brush: js">&lt;!DOCTYPE html&gt;
 &lt;html lang=en&gt;
@@ -83,23 +86,23 @@ function dragover_handler(ev) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "indices.html#ix-handler-ondrop", "ondrop")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.1", "index.html#ix-handler-ondrop", "ondrop")}}</td>
-   <td>{{Spec2("HTML5.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("HTML WHATWG", "indices.html#ix-handler-ondrop", "ondrop")}}</td>
+      <td>{{Spec2("HTML WHATWG")}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName("HTML5.1", "index.html#ix-handler-ondrop", "ondrop")}}</td>
+      <td>{{Spec2("HTML5.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -109,5 +112,5 @@ function dragover_handler(ev) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{event("drop")}}</li>
+  <li>{{event("drop")}}</li>
 </ul>

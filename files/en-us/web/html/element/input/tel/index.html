@@ -102,7 +102,7 @@ tags:
  </tbody>
 </table>
 
-<p id="htmlattrdeflist">{{page("/en-US/docs/Web/HTML/Element/input/text", "list", 0, 1, 2)}}</p>
+<p id="htmlattrdeflist">{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdeflist", 0, 1, 2)}}</p>
 
 <h3 id="htmlattrdefmaxlength">{{htmlattrdef("maxlength")}}</h3>
 
@@ -122,11 +122,11 @@ tags:
 
 <p>See {{anch("Pattern validation")}} below for details and an example.</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "placeholder", 0, 1, 2)}}</p>
+<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdefplaceholder", 0, 1, 2)}}</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "readonly", 0, 1, 2)}}</p>
+<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdefreadonly", 0, 1, 2)}}</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "size", 0, 1, 2)}}</p>
+<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdefsize", 0, 1, 2)}}</p>
 
 <h2 id="Non-standard_attributes">Non-standard attributes</h2>
 
@@ -189,7 +189,7 @@ tags:
 
 <p>In its most basic form, a tel input can be implemented like this:</p>
 
-<pre class="brush: html notranslate">&lt;label for="telNo"&gt;Phone number:&lt;/label&gt;
+<pre class="brush: html">&lt;label for="telNo"&gt;Phone number:&lt;/label&gt;
 &lt;input id="telNo" name="telNo" type="tel"&gt;</pre>
 
 <p>{{ EmbedLiveSample('A_simple_tel_input', 600, 40) }}</p>
@@ -202,7 +202,7 @@ tags:
 
 <p>Here, we have an <code>tel</code> input with the placeholder <code>123-4567-8901</code>. Note how the placeholder disappears and reappears as you manipulate the contents of the edit field.</p>
 
-<pre class="brush: html notranslate">&lt;input id="telNo" name="telNo" type="tel"
+<pre class="brush: html">&lt;input id="telNo" name="telNo" type="tel"
        placeholder="123-4567-8901"&gt;</pre>
 
 <p>{{ EmbedLiveSample('Placeholders', 600, 40) }}</p>
@@ -215,7 +215,7 @@ tags:
 
 <p>The physical size of the input box can be controlled using the {{htmlattrxref("size", "input")}} attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the <code>tel</code> edit box is 20 characters wide:</p>
 
-<pre class="brush: html notranslate">&lt;input id="telNo" name="telNo" type="tel"
+<pre class="brush: html">&lt;input id="telNo" name="telNo" type="tel"
        size="20"&gt;</pre>
 
 <p>{{ EmbedLiveSample('Physical_input_element_size', 600, 40) }}</p>
@@ -226,7 +226,7 @@ tags:
 
 <p>The example below creates a 20-character wide telephone number entry box, requiring that the contents be no shorter than 9 characters and no longer than 14 characters.</p>
 
-<pre class="brush: html notranslate">&lt;input id="telNo" name="telNo" type="tel"
+<pre class="brush: html">&lt;input id="telNo" name="telNo" type="tel"
        size="20" minlength="9" maxlength="14"&gt;</pre>
 
 <p>{{EmbedLiveSample("Element_value_length", 600, 40) }}</p>
@@ -240,7 +240,7 @@ tags:
 <p>As always, you can provide a default value for an <code>tel</code> input box by setting its {{htmlattrxref("value", "input")}} attribute:</p>
 
 <div id="Default_value">
-<pre class="brush: html notranslate">&lt;input id="telNo" name="telNo" type="tel"
+<pre class="brush: html">&lt;input id="telNo" name="telNo" type="tel"
        value="333-4444-4444"&gt;</pre>
 </div>
 
@@ -250,7 +250,7 @@ tags:
 
 <p>Taking it a step farther, you can provide a list of default phone number values from which the user can select. To do this, use the {{htmlattrxref("list", "input")}} attribute. This doesn't limit the user to those options, but does allow them to select commonly-used telephone numbers more quickly. This also offers hints to {{htmlattrxref("autocomplete", "input")}}. The <code>list</code> attribute specifies the ID of a {{HTMLElement("datalist")}} element, which in turn contains one {{HTMLElement("option")}} element per suggested value; each <code>option</code>'s <code>value</code> is the corresponding suggested value for the telephone number entry box.</p>
 
-<pre class="brush: html notranslate">&lt;label for="telNo"&gt;Phone number: &lt;/label&gt;
+<pre class="brush: html">&lt;label for="telNo"&gt;Phone number: &lt;/label&gt;
 &lt;input id="telNo" name="telNo" type="tel" list="defaultTels"&gt;
 
 &lt;datalist id="defaultTels"&gt;
@@ -280,7 +280,7 @@ tags:
 
 <p>You can make it so that an empty input is invalid and won't be submitted to the server using the {{htmlattrxref("required", "input")}} attribute. For example, let's use this HTML:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="telNo"&gt;Enter a telephone number (required): &lt;/label&gt;
     &lt;input id="telNo" name="telNo" type="tel" required&gt;
@@ -293,7 +293,7 @@ tags:
 
 <p>And let's include the following CSS to highlight valid entries with a checkmark and invalid entries with a cross:</p>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -329,7 +329,7 @@ input:valid+span:after {
 
 <p>In this example we'll use the same CSS as before, but our HTML is changed to look like this:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="telNo"&gt;Enter a telephone number (in the form xxx-xxx-xxxx): &lt;/label&gt;
     &lt;input id="telNo" name="telNo" type="tel" required
@@ -342,7 +342,7 @@ input:valid+span:after {
 &lt;/form&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -379,7 +379,7 @@ input:valid+span:after {
 
 <p>Each input has a {{htmlattrxref("placeholder","input")}} attribute to show a hint to sighted users about what to enter into it, a {{htmlattrxref("pattern","input")}} to enforce a specific number of characters for the desired section, and an <code>aria-label</code> attribute to contain a hint to be read out to screenreader users about what to enter into it.</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="country"&gt;Choose your country:&lt;/label&gt;
     &lt;select id="country" name="country"&gt;
@@ -416,7 +416,7 @@ input:valid+span:after {
 
 <p>The JavaScript is relatively simple — it contains an {{domxref("GlobalEventHandlers.onchange", "onchange")}} event handler that, when the <code>&lt;select&gt;</code> value is changed, updates the <code>&lt;input&gt;</code> element's <code>pattern</code>, <code>placeholder</code>, and <code>aria-label</code> to suit the format of telephone numbers in that country/territory.</p>
 
-<pre class="brush: js notranslate">var selectElem = document.querySelector("select");
+<pre class="brush: js">var selectElem = document.querySelector("select");
 var inputElems = document.querySelectorAll("input");
 
 selectElem.onchange = function() {
@@ -471,7 +471,7 @@ selectElem.onchange = function() {
 <p>It makes you wonder if it is worth going to all this trouble on the client-side, when you could just let the user enter their number in whatever format they wanted on the client-side and then validate and sanitize it on the server. But this choice is yours to make.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
 margin-bottom: 10px;
 position: relative;
 }
@@ -524,7 +524,7 @@ input:valid+span:after {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("html.elements.input.input-tel")}}</p>
 

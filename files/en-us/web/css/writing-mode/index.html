@@ -6,7 +6,7 @@ tags:
   - CSS Property
   - Layout
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 ---
 <div>{{CSSRef}}</div>
 
@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush:css no-line-numbers">/* Keyword values */
 writing-mode: horizontal-tb;
 writing-mode: vertical-rl;
 writing-mode: vertical-lr;
@@ -63,7 +63,7 @@ writing-mode: unset;</pre>
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{CSSSyntax}}</pre>
+<pre class="brush: css">{{CSSSyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -75,7 +75,7 @@ writing-mode: unset;</pre>
 
 <p>The HTML is a {{HTMLElement("table")}} with each writing mode in a row with a column showing text in various scripts using that writing mode.</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;tr&gt;
     &lt;th&gt;Value&lt;/th&gt;
     &lt;th&gt;Vertical script&lt;/th&gt;
@@ -126,7 +126,7 @@ writing-mode: unset;</pre>
 <div class="hidden">
 <p>Some preparatory CSS just to make things look a little better:</p>
 
-<pre class="brush: css notranslate">table {
+<pre class="brush: css">table {
   border-collapse:collapse;
 }
 td, th {
@@ -143,7 +143,7 @@ th {
 
 <p>The CSS that adjusts the directionality of the content looks like this:</p>
 
-<pre class="brush:css; notranslate">.example.Text1 span, .example.Text1 {
+<pre class="brush:css;">.example.Text1 span, .example.Text1 {
   writing-mode: horizontal-tb;
   -webkit-writing-mode: horizontal-tb;
   -ms-writing-mode: horizontal-tb;
@@ -178,7 +178,7 @@ th {
 
 <p>This image shows what the output should look like, in case your browser's support for <code>writing-mode</code> is incomplete:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/17087/Screenshot_2020-02-05_21-04-30.png" style="height: 508px; width: 493px;"></p>
+<p><img alt="" src="screenshot_2020-02-05_21-04-30.png"></p>
 
 <p>{{EmbedLiveSample("Using_multiple_writing_modes", 400, 500)}}</p>
 
@@ -218,7 +218,7 @@ th {
 	<li>{{Cssxref("unicode-bidi")}}</li>
 	<li>{{Cssxref("text-orientation")}}</li>
 	<li>{{Cssxref("text-combine-upright")}}</li>
-	<li><a href="/docs/Web/CSS/CSS_Logical_Properties">CSS Logical properties</a></li>
-	<li><a href="https://www.w3.org/International/articles/vertical-text/">Styling vertical text (Chinse, Japanese, Korean and Mongolian)</a></li>
+	<li><a href="/en-US/docs/Web/CSS/CSS_Logical_Properties">CSS Logical properties</a></li>
+	<li><a href="https://www.w3.org/International/articles/vertical-text/">Styling vertical text (Chinese, Japanese, Korean and Mongolian)</a></li>
 	<li>Extensive browsers support test results: <a href="https://w3c.github.io/i18n-tests/results/writing-mode-vertical">https://w3c.github.io/i18n-tests/results/writing-mode-vertical</a></li>
 </ul>

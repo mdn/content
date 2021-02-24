@@ -10,7 +10,10 @@ tags:
 
 <p>For many developers, typing <code>mach build</code> to build the tree is sufficient to work with the source tree. This document explains how the build system works.</p>
 
-<p>Note: This document is not intended for developers who just want to build Mozilla. For that, see the <a href="/en-US/docs/Developer_Guide/Build_Instructions">Build Documentation</a>.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>This document is not intended for developers who just want to build Mozilla. For that, see the <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions">Build Documentation</a>.</p>
+</div>
 
 <h2 id="Concepts">Phases</h2>
 
@@ -185,15 +188,15 @@ include $(topsrcdir)/config/rules.mk
 </pre>
 
 <ul>
- <li>The <code><a href="/en-US/docs/DEPTH">DEPTH</a></code> variable should be set to the relative path from your Makefile.in to the top-level Mozilla directory.</li>
+ <li>The <code><a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options">DEPTH</a></code> variable should be set to the relative path from your Makefile.in to the top-level Mozilla directory.</li>
  <li><code>topsrcdir</code> is substituted in by configure and points to the top-level Mozilla directory.</li>
  <li><code>srcdir</code> is also substituted in by configure and points to the source directory for the current directory. In source tree builds, this will point to "." (the current directory).</li>
- <li><code><a href="/en-US/docs/VPATH">VPATH</a></code> is a list of directories where <em>make</em> will look for prerequisites (i.e., source files).</li>
+ <li><code><a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options">VPATH</a></code> is a list of directories where <em>make</em> will look for prerequisites (i.e., source files).</li>
 </ul>
 
-<p>One other frequently used variable not specific to a particular build target is <code><a href="/en-US/docs/DIRS">DIRS</a></code>. <code>DIRS</code> is a list of subdirectories of the current directory to recursively build in. Subdirectories are traversed <em>after</em> their parent directories. For example, you could have:</p>
+<p>One other frequently used variable not specific to a particular build target is <code><a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options">DIRS</a></code>. <code>DIRS</code> is a list of subdirectories of the current directory to recursively build in. Subdirectories are traversed <em>after</em> their parent directories. For example, you could have:</p>
 
-<pre class="eval"><a href="/en-US/docs/DIRS">DIRS</a> = \
+<pre class="eval"><a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options">DIRS</a> = \
   public \
   resources \
   src \
@@ -206,15 +209,15 @@ include $(topsrcdir)/config/rules.mk
 
 <ul>
  <li><a href="/en-US/docs/Standard_Makefile_Header">Standard Makefile Header</a></li>
- <li><a href="/en-US/docs/Installing_headers_using_EXPORTS">Installing headers using EXPORTS</a></li>
+ <li><a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Installing_headers_using_EXPORTs">Installing headers using EXPORTS</a></li>
  <li><a href="/en-US/docs/Compiling_interfaces_using_XPIDLSRCS">Compiling interfaces using XPIDLSRCS</a></li>
  <li><a href="/en-US/docs/Installing_a_JavaScript_component">Installing a JavaScript component</a></li>
  <li><a href="/en-US/docs/Building_a_component_DLL">Building a component DLL</a></li>
  <li><a href="/en-US/docs/Building_a_static_library">Building a static library</a></li>
  <li><a href="/en-US/docs/Building_a_dynamic_library">Building a dynamic library</a></li>
- <li><a href="/en-US/docs/How_Mozilla's_build_system_works/Makefiles_-_Best_practices_and_suggestions" title="How Mozilla's build system works/Makefiles - Best practices and suggestions">Makefiles - Best practices and suggestions</a></li>
- <li><a href="/en-US/docs/How_Mozilla's_build_system_works/Makefile_-_targets" title="How Mozilla's build system works/Makefile - targets">Makefile - targets</a></li>
- <li><a href="/en-US/docs/How_Mozilla's_build_system_works/Makefile_-_variables" title="How Mozilla's build system works/Makefile - variables">Makefile - variables</a>, <a href="/en-US/docs/How_Mozilla%27s_build_system_works/Makefile_-_macro_values" title="How Mozilla's build system works/Makefile - macro values">values</a></li>
+ <li><a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works/Makefiles_-_Best_practices_and_suggestions" title="How Mozilla's build system works/Makefiles - Best practices and suggestions">Makefiles - Best practices and suggestions</a></li>
+ <li><a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works/Makefile_-_targets" title="How Mozilla's build system works/Makefile - targets">Makefile - targets</a></li>
+ <li><a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works/Makefile_-_variables" title="How Mozilla's build system works/Makefile - variables">Makefile - variables</a>, <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works/Makefile_-_macro_values" title="How Mozilla's build system works/Makefile - macro values">values</a></li>
  <li><a href="/en-US/docs/Makefile_-_.mk_files" title="Makefile - .mk files">Makefile - *.mk files &amp; user config</a></li>
 </ul>
 
@@ -239,10 +242,10 @@ include $(topsrcdir)/config/rules.mk
 
  include $(DEPTH)/config/autoconf.mk
 
- <a href="/en-US/docs/MODULE">MODULE</a>          = msgbaseutil
- <a href="/en-US/docs/LIBRARY_NAME">LIBRARY_NAME</a>    = msgbaseutil
- <a href="/en-US/docs/EXPORT_LIBRARY">EXPORT_LIBRARY</a> = 1
- <a href="/en-US/docs/SHORT_LIBNAME">SHORT_LIBNAME</a>   = msgbsutl
+ <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options">MODULE</a>          = msgbaseutil
+ <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options">LIBRARY_NAME</a>    = msgbaseutil
+ <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options">EXPORT_LIBRARY</a> = 1
+ <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options">SHORT_LIBNAME</a>   = msgbsutl
 </pre>
 
 <p>Notice that the only change from the component example above is that <strong>IS_COMPONENT</strong> is not set. When this is not set, a shared library will be created and installed to dist/bin.</p>
@@ -264,7 +267,7 @@ include $(topsrcdir)/config/rules.mk
  # REQUIRES and CPPSRCS omitted here for brevity #
 
  # we don't want the shared lib, but we want to force the creation of a static lib.
- <a href="/en-US/docs/FORCE_STATIC_LIB">FORCE_STATIC_LIB</a> = 1
+ <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options">FORCE_STATIC_LIB</a> = 1
 
  include $(topsrcdir)/config/rules.mk
 </pre>
@@ -284,7 +287,7 @@ include $(topsrcdir)/config/rules.mk
  <a href="/en-US/docs/IS_COMPONENT">IS_COMPONENT</a>    = 1
  <a href="/en-US/docs/MODULE_NAME">MODULE_NAME</a>     = nsLayoutModule
 
- <a href="/en-US/docs/CPPSRCS">CPPSRCS</a>         = \
+ <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options">CPPSRCS</a>         = \
                  nsLayoutModule.cpp \
                  $(NULL)
 
@@ -319,11 +322,11 @@ include $(topsrcdir)/config/rules.mk
  include $(topsrcdir)/config/rules.mk
 </pre>
 
-<p>As you can see, there are no extra variables to define. If a <strong><a href="/en-US/docs/JAR_Manifests">jar.mn</a></strong> file exists in the same directory as this Makefile.in, it will automatically be processed. Although the common practice is to have a <strong>resources</strong> directory that contains the jar.mn and chrome files, you may also put a jar.mn file in a directory that creates a library, in which case it will be processed.</p>
+<p>As you can see, there are no extra variables to define. If a <strong><a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/JAR_Manifests">jar.mn</a></strong> file exists in the same directory as this Makefile.in, it will automatically be processed. Although the common practice is to have a <strong>resources</strong> directory that contains the jar.mn and chrome files, you may also put a jar.mn file in a directory that creates a library, in which case it will be processed.</p>
 
-<h2 id="Related_Links">Related Links</h2>
+<h2 id="Related_links">Related links</h2>
 
-<p>See the <a href="/en-US/docs/tag/Build%20Glossary">glossary of makefile variables</a> for information about specific variables and how to use them.</p>
+<p>See <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works/Makefile_-_variables">Makefile - variables</a> for information about specific variables and how to use them.</p>
 
 <div class="originaldocinfo">
 <h2 id="Original_Document_Information">Original Document Information</h2>
@@ -333,4 +336,3 @@ include $(topsrcdir)/config/rules.mk
  <li>Copyright Information: Portions of this content are © 1998–2006 by individual mozilla.org contributors; content available under a Creative Commons license</li>
 </ul>
 </div>
-

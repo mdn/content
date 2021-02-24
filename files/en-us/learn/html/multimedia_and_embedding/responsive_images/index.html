@@ -26,9 +26,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}</div>
 
-<div>
 <p class="summary">In this article, we'll learn about the concept of responsive images — images that work well on devices with widely differing screen sizes, resolutions, and other such features — and look at what tools HTML provides to help implement them. This helps to improve performance across different devices. Responsive images are just one part of <a href="/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">responsive design</a>, a future CSS topic for you to learn.</p>
-</div>
 
 <table class="learn-box nostripe standard-table">
  <tbody>
@@ -47,7 +45,7 @@ tags:
 
 <p>Let's examine a typical scenario. A typical website may contain a header image and some content images below the header. The header image will likely span the whole of the width of the header, and the content image will fit somewhere inside the content column. Here's a simple example:</p>
 
-<p><img alt="Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center." src="https://mdn.mozillademos.org/files/12940/picture-element-wide.png" style="display: block; height: 554px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center." src="picture-element-wide.png" style="display: block; margin: 0px auto;"></p>
 
 <p>This works well on a wide screen device, such as a laptop or desktop (you can <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html">see the example live</a> and find the <a href="https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html">source code</a> on Github.) We won't discuss the CSS much in this lesson, except to say that:</p>
 
@@ -59,7 +57,7 @@ tags:
 
 <p>However, issues arise when you start to view the site on a narrow screen device. The header below looks ok, but it's starting to take up a lot of the screen height for a mobile device. And at this size, it is difficult to see the people within the first content image.</p>
 
-<p><img alt="Our example site as viewed on a narrow screen; the first image has shrunk to the point where it is hard to make out the detail on it." src="https://mdn.mozillademos.org/files/12936/non-responsive-narrow.png" style="display: block; height: 793px; margin: 0px auto; width: 320px;"></p>
+<p><img alt="Our example site as viewed on a narrow screen; the first image has shrunk to the point where it is hard to make out the detail on it." src="non-responsive-narrow.png" style="display: block; margin: 0px auto;"></p>
 
 <p>An improvement would be to display a cropped version of the image which displays the important details of the image when the site is viewed on a narrow screen. A second cropped image could be displayed for a medium width screen device, like a tablet. This is commonly known as the <strong>art direction problem</strong>.</p>
 
@@ -85,11 +83,11 @@ tags:
 
 <p>So, what is the problem that we want to solve with resolution switching? We want to display identical image content, just larger or smaller depending on the device — this is the situation we have with the second content image in our example. The standard {{htmlelement("img")}} element traditionally only lets you point the browser to a single source file:</p>
 
-<pre class="brush: html notranslate">&lt;img src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy"&gt;</pre>
+<pre class="brush: html">&lt;img src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy"&gt;</pre>
 
 <p>We can however use two new attributes — {{htmlattrxref("srcset", "img")}} and {{htmlattrxref("sizes", "img")}} — to provide several additional source images along with hints to help the browser pick the right one. You can see an example of this in our <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html">responsive.html</a> example on Github (see also <a href="https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html">the source code</a>):</p>
 
-<pre class="brush: html notranslate">&lt;img srcset="elva-fairy-480w.jpg 480w,
+<pre class="brush: html">&lt;img srcset="elva-fairy-480w.jpg 480w,
              elva-fairy-800w.jpg 800w"
      sizes="(max-width: 600px) 480px,
             800px"
@@ -145,16 +143,16 @@ tags:
 
 <p>If you're supporting multiple display resolutions, but everyone sees your image at the same real-world size on the screen, you can allow the browser to choose an appropriate resolution image by using <code>srcset</code> with x-descriptors and without <code>sizes</code> — a somewhat easier syntax! You can find an example of what this looks like in <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html">srcset-resolutions.html</a> (see also <a href="https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html">the source code</a>):</p>
 
-<pre class="brush: html notranslate">&lt;img srcset="elva-fairy-320w.jpg,
+<pre class="brush: html">&lt;img srcset="elva-fairy-320w.jpg,
              elva-fairy-480w.jpg 1.5x,
              elva-fairy-640w.jpg 2x"
      src="elva-fairy-640w.jpg"
      alt="Elva dressed as a fairy"&gt;
 </pre>
 
-<p><img alt="A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image" src="https://mdn.mozillademos.org/files/12942/resolution-example.png" style="display: block; height: 425px; margin: 0px auto; width: 480px;">In this example, the following CSS is applied to the image so that it will have a width of 320 pixels on the screen (also called CSS pixels):</p>
+<p><img alt="A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image" src="resolution-example.png" style="display: block; margin: 0px auto;">In this example, the following CSS is applied to the image so that it will have a width of 320 pixels on the screen (also called CSS pixels):</p>
 
-<pre class="brush: css notranslate">img {
+<pre class="brush: css">img {
   width: 320px;
 }</pre>
 
@@ -166,11 +164,11 @@ tags:
 
 <p>Returning to our original <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html">not-responsive.html</a> example, we have an image that badly needs art direction:</p>
 
-<pre class="brush: html notranslate">&lt;img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva"&gt;</pre>
+<pre class="brush: html">&lt;img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva"&gt;</pre>
 
 <p>Let's fix this, with {{htmlelement("picture")}}! Like <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content"><code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code></a>, the <code>&lt;picture&gt;</code> element is a wrapper containing several {{htmlelement("source")}} elements that provide different sources for the browser to choose from, followed by the all-important {{htmlelement("img")}} element. The code in <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html">responsive.html</a> looks like so:</p>
 
-<pre class="brush: html notranslate">&lt;picture&gt;
+<pre class="brush: html">&lt;picture&gt;
   &lt;source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg"&gt;
   &lt;source media="(min-width: 800px)" srcset="elva-800w.jpg"&gt;
   &lt;img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva"&gt;
@@ -185,7 +183,7 @@ tags:
 
 <p>This code allows us to display a suitable image on both wide screen and narrow screen displays, as shown below:</p>
 
-<p><img alt="Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center." src="https://mdn.mozillademos.org/files/12940/picture-element-wide.png" style="display: block; height: 554px; margin: 0px auto; width: 700px;"><img alt="Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen" src="https://mdn.mozillademos.org/files/12938/picture-element-narrow.png" style="display: block; height: 710px; margin: 0px auto; width: 320px;"></p>
+<p><img alt="Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center." src="picture-element-wide.png" style="display: block; margin: 0px auto;"><img alt="Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen" src="picture-element-narrow.png" style="display: block; margin: 0px auto;"></p>
 
 <div class="note">
 <p><strong>Note</strong>: You should use the <code>media</code> attribute only in art direction scenarios; when you do use <code>media</code>, don't also offer media conditions within the <code>sizes</code> attribute.</p>
@@ -197,11 +195,11 @@ tags:
 
 <h3 id="Use_modern_image_formats_boldly">Use modern image formats boldly</h3>
 
-<p>There are several exciting new image formats (such as <a href="/en-US/docs/Glossary/webp">WebP</a>, <a href="/en-US/docs/Web/Media/Formats/Image_types#AVIF">AVIF</a>, and JPEG-2000) that can maintain a low file size and high quality at the same time. However, browser support is spotty.</p>
+<p>New image formats like <a href="/en-US/docs/Web/Media/Formats/Image_types#webp">WebP</a> and <a href="/en-US/docs/Web/Media/Formats/Image_types#avif">AVIF</a> can maintain a low file size and high quality at the same time. These formats now have relatively broad browser support but little "historical depth".</p>
 
 <p><code>&lt;picture&gt;</code> lets us continue catering to older browsers. You can supply MIME types inside <code>type</code> attributes so the browser can immediately reject unsupported file types:</p>
 
-<pre class="brush: html notranslate">&lt;picture&gt;
+<pre class="brush: html">&lt;picture&gt;
   &lt;source type="image/svg+xml" srcset="pyramid.svg"&gt;
   &lt;source type="image/webp" srcset="pyramid.webp"&gt;
   &lt;img src="pyramid.png" alt="regular pyramid built from four equilateral triangles"&gt;
@@ -253,7 +251,6 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}</div>
 
-<div>
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
@@ -264,4 +261,3 @@ tags:
  <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive images</a></li>
  <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page">Mozilla splash page</a></li>
 </ul>
-</div>

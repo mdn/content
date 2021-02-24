@@ -68,10 +68,10 @@ ac_add_options --disable-optimize
  <li>Run <code>./mach bootstrap</code> to install some dependencies. Note that this will install some amd64 packages that are not needed to build 32-bit Firefox.</li>
  <li>Run <code>rustup target install i686-unknown-linux-gnu</code> to install the 32-bit Rust target.</li>
  <li>Install 32-bit dependencies with the following command (this may uninstall some unneeded/conflicting packages that were installed by mach bootstrap):
-<pre class="syntaxbox">sudo apt install gcc-multilib g++-multilib libdbus-glib-1-dev:i386 \
+<pre class="brush: js">sudo apt install gcc-multilib g++-multilib libdbus-glib-1-dev:i386 \
   libgtk2.0-dev:i386 libgtk-3-dev:i386 libpango1.0-dev:i386 libxt-dev:i386</pre></li>
  <li>Create a <code>.mozconfig</code> file containing at least the following:
-<pre class="syntaxbox">ac_add_options --target=i686-pc-linux
+<pre class="brush: js">ac_add_options --target=i686-pc-linux
 
 CFLAGS="$CFLAGS -march=pentium-m -msse -msse2 -mfpmath=sse"
 CXXFLAGS="$CXXFLAGS -march=pentium-m -msse -msse2 -mfpmath=sse"
@@ -193,11 +193,11 @@ checking build system type... i686-pc-linux-gnu
 
 <pre>sudo apt-get install gcc-multilib g++-multilib libxrender1:i386 libasound-dev:i386 libdbus-glib-1-2:i386 libgtk2.0-0:i386 libxt-dev:i386</pre>
 
-<p>Now, follow the <a href="/En/Developer_Guide/Build_Instructions" title="Build Instructions">build instructions</a> like normal and you should have 32-bit builds!</p>
+<p>Now, follow the <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions" title="Build Instructions">build instructions</a> like normal and you should have 32-bit builds!</p>
 
 <h3 id="See_also">See also</h3>
 
 <ul>
- <li><a href="/en/Cross-Compiling_Mozilla">Cross-Compiling Mozilla</a></li>
+ <li><a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Cross-compiling_Mozilla">Cross-Compiling Mozilla</a></li>
  <li><a href="https://github.com/padenot/fx-32-on-64.sh">Set of scripts to automate the chroot and build process on Ubuntu</a></li>
 </ul>

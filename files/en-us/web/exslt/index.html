@@ -16,8 +16,8 @@ tags:
 <p>To use an EXSLT function, you need to declare the namespace the function is in, and then use the appropriate prefix when calling the function. For example, to use the regular expressions package:</p>
 
 <pre class="brush: xml;">&lt;xsl:stylesheet version="1.0"
-                xmlns:xsl="<span class="nowiki">http://www.w3.org/1999/XSL/Transform</span>"
-                xmlns:regexp="<span class="nowiki">http://exslt.org/regular-expressions</span>"&gt;
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:regexp="http://exslt.org/regular-expressions"&gt;
   &lt;xsl:template match="/"&gt;
     ...
     &lt;xsl:value-of select="regexp:replace(/root/@value, 'before', 'gi', 'AFTER')"/&gt;
@@ -31,7 +31,7 @@ tags:
 <div class="section">
 <h3 id="Common">Common</h3>
 
-<p>The EXSLT Common package provides basic functions that expand upon the capabilities of XSLT. The namespace for the Common package is <code><span class="nowiki">http://exslt.org/common</span></code>.</p>
+<p>The EXSLT Common package provides basic functions that expand upon the capabilities of XSLT. The namespace for the Common package is <code>http://exslt.org/common</code>.</p>
 
 <h4 id="Functions">Functions</h4>
 
@@ -42,7 +42,7 @@ tags:
 
 <h3 id="Math">Math</h3>
 
-<p>The EXSLT Math package provides functions for working with numeric values and comparing nodes. The namespace for the Math package is <code><span class="nowiki">http://exslt.org/math</span></code>.</p>
+<p>The EXSLT Math package provides functions for working with numeric values and comparing nodes. The namespace for the Math package is <code>http://exslt.org/math</code>.</p>
 
 <h4 id="Functions_2">Functions</h4>
 
@@ -57,7 +57,7 @@ tags:
 
 <p>The EXSLT Regular Expressions package provides functions that allow testing, matching, and replacing text using JavaScript style regular expressions.</p>
 
-<p>The EXSLT Regular Expressions namespace is <code><span class="nowiki">http://exslt.org/regular-expressions</span></code>.</p>
+<p>The EXSLT Regular Expressions namespace is <code>http://exslt.org/regular-expressions</code>.</p>
 
 <h4 id="Functions_3">Functions</h4>
 
@@ -71,7 +71,7 @@ tags:
 <div class="section">
 <h3 id="Sets">Sets</h3>
 
-<p>The EXSLT Sets package offers functions that let you perform set manipulation. The namespace for these functions is <code><span class="nowiki">http://exslt.org/sets</span></code>.</p>
+<p>The EXSLT Sets package offers functions that let you perform set manipulation. The namespace for these functions is <code>http://exslt.org/sets</code>.</p>
 
 <h4 id="Functions_4">Functions</h4>
 
@@ -86,7 +86,7 @@ tags:
 
 <h3 id="Strings">Strings</h3>
 
-<p>The EXSLT Strings package provides functions that allow the manipulation of strings. The namespace for the Strings package is <code><span class="nowiki">http://exslt.org/strings</span></code>.</p>
+<p>The EXSLT Strings package provides functions that allow the manipulation of strings. The namespace for the Strings package is <code>http://exslt.org/strings</code>.</p>
 
 <h4 id="Functions_5">Functions</h4>
 
@@ -101,7 +101,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a class="external" href="http://www.exslt.org/">EXSLT web site</a></li>
+ <li><a href="http://www.exslt.org/">EXSLT web site</a></li>
 </ul>
 
 <h2 id="Subnav">Subnav</h2>

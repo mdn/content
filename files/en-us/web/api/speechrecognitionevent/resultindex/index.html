@@ -2,25 +2,28 @@
 title: SpeechRecognitionEvent.resultIndex
 slug: Web/API/SpeechRecognitionEvent/resultIndex
 tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechRecognitionEvent
-  - Web Speech API
-  - recognition
-  - resultIndex
-  - speech
+- API
+- Experimental
+- Property
+- Reference
+- SpeechRecognitionEvent
+- Web Speech API
+- recognition
+- resultIndex
+- speech
 ---
 <div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
 
-<p>The <code><strong>resultIndex</strong></code> read-only property of the {{domxref("SpeechRecognitionEvent")}} interface returns the lowest index value result in the {{domxref("SpeechRecognitionResultList")}} "array" that has actually changed.</p>
+<p>The <code><strong>resultIndex</strong></code> read-only property of the
+  {{domxref("SpeechRecognitionEvent")}} interface returns the lowest index value result in
+  the {{domxref("SpeechRecognitionResultList")}} "array" that has actually changed.</p>
 
-<p>The {{domxref("SpeechRecognitionResultList")}} object is not an array, but it has a getter that allows it to be accessed by array syntax.</p>
+<p>The {{domxref("SpeechRecognitionResultList")}} object is not an array, but it has a
+  getter that allows it to be accessed by array syntax.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var myResultIndex = event.resultIndex;
+<pre class="brush: js">var myResultIndex = event.resultIndex;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -39,18 +42,19 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Web Speech API', '#dom-speechrecognitionevent-resultindex', 'resultIndex')}}</td>
-			<td>{{Spec2('Web Speech API')}}</td>
-			<td> </td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web Speech API', '#dom-speechrecognitionevent-resultindex',
+        'resultIndex')}}</td>
+      <td>{{Spec2('Web Speech API')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -59,7 +63,8 @@ tags:
 
 <h3 id="Firefox_OS_permissions">Firefox OS permissions</h3>
 
-<p>To use speech recognition in an app, you need to specify the following permissions in your <a href="/en-US/docs/Web/Apps/Build/Manifest">manifest</a>:</p>
+<p>To use speech recognition in an app, you need to specify the following permissions in
+  your <a href="/en-US/docs/Web/Apps/Build/Manifest">manifest</a>:</p>
 
 <pre class="brush: json">"permissions": {
   "audio-capture" : {
@@ -77,5 +82,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
+  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
 </ul>

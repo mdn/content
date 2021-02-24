@@ -2,32 +2,35 @@
 title: PaintWorkletGlobalScope.registerPaint
 slug: Web/API/PaintWorklet/registerPaint
 tags:
-  - API
-  - CSS
-  - CSS Paint API
-  - Houdini
-  - Painting
-  - Property
-  - Reference
-  - Worklet
-  - paintWorklet
-  - registerPaint
+- API
+- CSS
+- CSS Paint API
+- Houdini
+- Painting
+- Property
+- Reference
+- Worklet
+- paintWorklet
+- registerPaint
 ---
 <div>{{draft}}{{APIRef("CSS Painting API")}}</div>
 
-<p class="summary">The <strong><code>PaintWorkletGlobalScope.registerPaint()</code></strong> method of the {{domxref("PaintWorklet")}} interface registers a class programmatically generate an image where a CSS property expects a file.</p>
+<p class="summary">The
+  <strong><code>PaintWorkletGlobalScope.registerPaint()</code></strong> method of the
+  {{domxref("PaintWorklet")}} interface registers a class programmatically generate an
+  image where a CSS property expects a file.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">registerPaint(name, class);</pre>
+<pre class="brush: js">registerPaint(name, class);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>name</dt>
- <dd>The name of the worklet class to register.</dd>
- <dt>class</dt>
- <dd>A reference to the class that implements the worklet.</dd>
+  <dt>name</dt>
+  <dd>The name of the worklet class to register.</dd>
+  <dt>class</dt>
+  <dd>A reference to the class that implements the worklet.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -37,17 +40,21 @@ tags:
 <h3 id="Exceptions">Exceptions</h3>
 
 <dl>
- <dt>TypeError</dt>
- <dd>Thrown when one of the arguments is invalid or missing.</dd>
- <dt>InvalidModificationError</dt>
- <dd>Thrown when the a worklet already exists with the specified name.</dd>
+  <dt>TypeError</dt>
+  <dd>Thrown when one of the arguments is invalid or missing.</dd>
+  <dt>InvalidModificationError</dt>
+  <dd>Thrown when the a worklet already exists with the specified name.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following shows registering an example worklet module. This should be in a separate js file. Note that <code>registerPaint()</code> is called without a reference to <code>PaintWorkletGlobalScope</code>. The file itself is loaded through <code>CSS.paintWorklet.addModule()</code> (documented here on the parent class of PaintWorklet, at {{domxref('Worklet.addModule()')}}.</p>
+<p>The following shows registering an example worklet module. This should be in a separate
+  js file. Note that <code>registerPaint()</code> is called without a reference to
+  <code>PaintWorkletGlobalScope</code>. The file itself is loaded
+  through <code>CSS.paintWorklet.addModule()</code> (documented here on the parent class
+  of PaintWorklet, at {{domxref('Worklet.addModule()')}}.</p>
 
-<pre class="brush: js notranslate">/* checkboardWorklet.js */
+<pre class="brush: js">/* checkboardWorklet.js */
 
 class CheckerboardPainter {
   paint(ctx, geom, properties) {
@@ -69,33 +76,38 @@ class CheckerboardPainter {
 // Register our class under a specific name
 registerPaint('checkerboard', CheckerboardPainter);</pre>
 
-<p>The first step in using a paintworket is defining the paint worklet using the <code>registerPaint()</code> function, as done above. To use it, you register it with the <code>CSS.paintWorklet.addModule()</code> method:</p>
+<p>The first step in using a paintworket is defining the paint worklet using the
+  <code>registerPaint()</code> function, as done above. To use it, you register it with
+  the <code>CSS.paintWorklet.addModule()</code> method:</p>
 
-<pre class="brush: html notranslate">&lt;script&gt;
+<pre class="brush: html">&lt;script&gt;
    CSS.paintWorklet.addModule('checkboardWorklet.js');
 &lt;/script&gt;</pre>
 
-<p>You can then use the <code>{{cssxref('paint', 'paint()')}}</code> CSS function in your CSS anywhere an <code>{{cssxref('&lt;image&gt;')}}</code> value is valid.</p>
+<p>You can then use the <code>{{cssxref('paint', 'paint()')}}</code> CSS function in your
+  CSS anywhere an <code>{{cssxref('&lt;image&gt;')}}</code> value is valid.</p>
 
-<pre class="brush: css notranslate">li {
+<pre class="brush: css">li {
    background-image: paint(checkerboard);
 }</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS Painting API','#dom-paintworkletglobalscope-registerpaint','PaintWorkletGlobalScope.registerPaint')}}</td>
-   <td>{{Spec2('CSS Painting API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('CSS Painting
+        API','#dom-paintworkletglobalscope-registerpaint','PaintWorkletGlobalScope.registerPaint')}}
+      </td>
+      <td>{{Spec2('CSS Painting API')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -105,7 +117,7 @@ registerPaint('checkerboard', CheckerboardPainter);</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/CSS_Painting_API">CSS Painting API</a></li>
- <li><a href="/en-US/docs/Web/Houdini">Houdini APIs</a></li>
- <li><a href="/en-US/docs/Web/Houdini/learn">Houdini overview</a></li>
+  <li><a href="/en-US/docs/Web/API/CSS_Painting_API">CSS Painting API</a></li>
+  <li><a href="/en-US/docs/Web/Houdini">Houdini APIs</a></li>
+  <li><a href="/en-US/docs/Web/Houdini/learn">Houdini overview</a></li>
 </ul>

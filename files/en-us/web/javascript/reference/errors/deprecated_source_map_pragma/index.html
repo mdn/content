@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Message">Message</h2>
 
-<pre class="syntaxbox notranslate">Warning: SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+<pre class="brush: js">Warning: SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
 
 Warning: SyntaxError: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
 </pre>
@@ -38,18 +38,18 @@ Warning: SyntaxError: Using //@ to indicate sourceMappingURL pragmas is deprecat
 
 <p>Syntax with the "@" sign is deprecated.</p>
 
-<pre class="brush: js example-bad notranslate">//@ sourceMappingURL=http://example.com/path/to/your/sourcemap.map
+<pre class="brush: js example-bad">//@ sourceMappingURL=http://example.com/path/to/your/sourcemap.map
 </pre>
 
 <h3 id="Standard_syntax">Standard syntax</h3>
 
 <p>Use the "#" sign instead.</p>
 
-<pre class="brush: js example-good notranslate">//# sourceMappingURL=http://example.com/path/to/your/sourcemap.map</pre>
+<pre class="brush: js example-good">//# sourceMappingURL=http://example.com/path/to/your/sourcemap.map</pre>
 
 <p>Or, alternatively, you can set a {{HTTPHeader("SourceMap")}} header to your JavaScript file to avoid having a comment at all:</p>
 
-<pre class="brush: js example-good notranslate">SourceMap: /path/to/file.js.map</pre>
+<pre class="brush: js example-good">SourceMap: /path/to/file.js.map</pre>
 
 <h2 id="See_also">See also</h2>
 

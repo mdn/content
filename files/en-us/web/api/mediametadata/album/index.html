@@ -2,18 +2,20 @@
 title: MediaMetadata.album
 slug: Web/API/MediaMetadata/album
 tags:
-  - API
-  - MediaMetadata
-  - Property
-  - Reference
+- API
+- MediaMetadata
+- Property
+- Reference
 ---
 <p>{{SeeCompatTable}}{{APIRef("Media Session API")}}</p>
 
-<p><span class="seoSummary">The <strong><code>album</code></strong> property of the {{domxref("MediaMetaData")}} interface returns or sets the name of the album or collection containing the media to be played.</span></p>
+<p><span class="seoSummary">The <strong><code>album</code></strong> property of the
+    {{domxref("MediaMetaData")}} interface returns or sets the name of the album or
+    collection containing the media to be played.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var album = mediaMetaData.album
+<pre class="brush: js">var album = mediaMetaData.album
 mediaMetaData.album = album</pre>
 
 <h3 id="Value">Value</h3>
@@ -22,9 +24,11 @@ mediaMetaData.album = album</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following example checks for browser compatibility and sets the current metadata for the media session.</p>
+<p>The following example checks for browser compatibility and sets the current metadata
+  for the media session.</p>
 
-<pre class="brush: js notranslate line-numbers language-js"><code class="language-js"><span class="keyword token">if</span> <span class="punctuation token">(</span><span class="string token">'mediaSession'</span> <span class="keyword token">in</span> navigator<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+<pre
+  class="brush: jsline-numbers language-js"><code class="language-js"><span class="keyword token">if</span> <span class="punctuation token">(</span><span class="string token">'mediaSession'</span> <span class="keyword token">in</span> navigator<span class="punctuation token">)</span> <span class="punctuation token">{</span>
   navigator<span class="punctuation token">.</span>mediaSession<span class="punctuation token">.</span>metadata <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">MediaMetadata</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
     title<span class="punctuation token">:</span> <span class="string token">'Unforgettable'</span><span class="punctuation token">,</span>
     artist<span class="punctuation token">:</span> <span class="string token">'Nat King Cole'</span><span class="punctuation token">,</span>
@@ -42,23 +46,20 @@ mediaMetaData.album = album</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Session','#dom-mediametadata-album','album')}}</td>
-   <td>{{Spec2('Media Session')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Media Session','#dom-mediametadata-album','album')}}</td>
+      <td>{{Spec2('Media Session')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.MediaMetadata.album")}}</p>
-</div>

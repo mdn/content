@@ -8,14 +8,12 @@ tags:
   - TCP/IP
   - Web
   - Web Development
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{HTTPSidebar}}</div>
 
 <p class="summary"><strong><dfn>Hypertext Transfer Protocol (HTTP)</dfn></strong> is an <a href="https://en.wikipedia.org/wiki/Application_Layer">application-layer</a> protocol for transmitting hypermedia documents, such as HTML. It was designed for communication between web browsers and web servers, but it can also be used for other purposes. HTTP follows a classical <a href="https://en.wikipedia.org/wiki/Client%E2%80%93server_model">client-server model</a>, with a client opening a connection to make a request, then waiting until it receives a response. HTTP is a <a href="https://en.wikipedia.org/wiki/Stateless_protocol">stateless protocol</a>, meaning that the server does not keep any data (state) between two requests. Though often based on a TCP/IP layer, it can be used on any reliable <a href="https://en.wikipedia.org/wiki/Transport_Layer">transport layer</a>, that is, a protocol that doesn't lose messages silently like UDP does. <a href="https://en.wikipedia.org/wiki/Reliable_User_Datagram_Protocol">RUDP</a> — the reliable update of UDP — is a suitable alternative.</p>
 
-<div class="column-container">
-<div class="column-half">
 <h2 id="Tutorials">Tutorials</h2>
 
 <p>Learn how to use HTTP with guides and tutorials.</p>
@@ -40,9 +38,7 @@ tags:
  <dt><a href="/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x">Connection management in HTTP/1.x</a></dt>
  <dd>Describes the three connection management models available in HTTP/1.x, their strengths, and their weaknesses.</dd>
 </dl>
-</div>
 
-<div class="column-half">
 <h2 id="Reference">Reference</h2>
 
 <p>Browse through detailed HTTP reference documentation.</p>
@@ -52,7 +48,7 @@ tags:
  <dd>HTTP message headers are used to describe a resource, or the behavior of the server or the client. Custom proprietary headers can be added using the <code>X-</code> prefix; others in an <a href="https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers">IANA registry</a>, whose original content was defined in <a href="https://tools.ietf.org/html/rfc4229">RFC 4229</a>. IANA also maintains a <a href="https://www.iana.org/assignments/message-headers/message-headers.xhtml#prov-headers">registry of proposed new HTTP message headers</a>.</dd>
  <dt><a href="/en-US/docs/Web/HTTP/Methods">HTTP Request Methods</a></dt>
  <dd>The different operations that can be done with HTTP: {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, and also less common requests like {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("DELETE")}}, or {{HTTPMethod("TRACE")}}.</dd>
- <dt><a href="/en-US/docs/Web/HTTP/Response_codes">HTTP Status Response Codes</a></dt>
+ <dt><a href="/en-US/docs/Web/HTTP/Status">HTTP Status Response Codes</a></dt>
  <dd>HTTP response codes indicate whether a specific HTTP request has been successfully completed. Responses are grouped in five classes: informational responses, successful responses, redirections, client errors, and servers errors.</dd>
  <dt><a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">CSP directives</a></dt>
  <dd>The {{HTTPHeader("Content-Security-Policy")}} response header fields allows web site administrators to control resources the user agent is allowed to load for a given page. With a few exceptions, policies mostly involve specifying server origins and script endpoints.</dd>
@@ -69,10 +65,8 @@ tags:
  <dd>
  <p>A project designed to help developers, system administrators, and security professionals configure their sites safely and securely.</p>
  </dd>
- <dt><a class="external" href="https://redbot.org/">RedBot</a></dt>
+ <dt><a href="https://redbot.org/">RedBot</a></dt>
  <dd>Tools to check your cache-related headers</dd>
  <dt><a href="https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/">How Browsers Work</a></dt>
  <dd>A very comprehensive article on browser internals and request flow through HTTP protocol. A MUST-READ for any web developer.</dd>
 </dl>
-</div>
-</div>

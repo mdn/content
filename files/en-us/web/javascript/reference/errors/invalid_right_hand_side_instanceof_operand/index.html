@@ -2,19 +2,23 @@
 title: 'TypeError: invalid ''instanceof'' operand ''x'''
 slug: Web/JavaScript/Reference/Errors/invalid_right_hand_side_instanceof_operand
 tags:
-  - Error
-  - Errors
-  - JavaScript
-  - Reference
-  - TypeError
+- Error
+- Errors
+- JavaScript
+- Reference
+- TypeError
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<p>The JavaScript exception "invalid 'instanceof' operand" occurs when the right hand side operands of the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/instanceof"><code>instanceof</code> operator</a> isn't used with a constructor object, i.e. an object which has a <code>prototype</code> property and is callable.</p>
+<p>The JavaScript exception "invalid 'instanceof' operand" occurs when the right hand side
+  operands of the <a
+    href="/en-US/docs/Web/JavaScript/Reference/Operators/instanceof"><code>instanceof</code>
+    operator</a> isn't used with a constructor object, i.e. an object which has a
+  <code>prototype</code> property and is callable.</p>
 
 <h2 id="Message">Message</h2>
 
-<pre class="syntaxbox">TypeError: invalid 'instanceof' operand "x" (Firefox)
+<pre class="brush: js">TypeError: invalid 'instanceof' operand "x" (Firefox)
 TypeError: "x" is not a function (Firefox)
 TypeError: Right-hand side of 'instanceof' is not an object (Chrome)
 TypeError: Right-hand side of 'instanceof' is not callable (Chrome)</pre>
@@ -25,7 +29,10 @@ TypeError: Right-hand side of 'instanceof' is not callable (Chrome)</pre>
 
 <h2 id="What_went_wrong">What went wrong?</h2>
 
-<p>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/instanceof"><code>instanceof</code> operator</a> expects the right hand side operands to be a constructor object, i.e. an object which has a <code>prototype</code> property and is callable.</p>
+<p>The <a
+    href="/en-US/docs/Web/JavaScript/Reference/Operators/instanceof"><code>instanceof</code>
+    operator</a> expects the right hand side operands to be a constructor object, i.e. an
+  object which has a <code>prototype</code> property and is callable.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -42,7 +49,12 @@ x instanceof f;       // TypeError: invalid 'instanceof' operand f
 x instanceof x;       // TypeError: x is not a function
 </pre>
 
-<p>To fix these errors, you will either need to replace the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/instanceof"><code>instanceof</code> operator</a> with the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof"><code>typeof</code> operator</a>, or to make sure you use the function name, instead of the result of its evaluation.</p>
+<p>To fix these errors, you will either need to replace the <a
+    href="/en-US/docs/Web/JavaScript/Reference/Operators/instanceof"><code>instanceof</code>
+    operator</a> with the <a
+    href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof"><code>typeof</code>
+    operator</a>, or to make sure you use the function name, instead of the result of its
+  evaluation.</p>
 
 <pre class="brush: js example-good">typeof "test" == "string"; // true
 typeof 42 == "number"      // true
@@ -58,6 +70,9 @@ x instanceof Foo;          // true
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/instanceof"><code>instanceof</code> operator</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof"><code>typeof</code> operator</a></li>
+  <li><a
+      href="/en-US/docs/Web/JavaScript/Reference/Operators/instanceof"><code>instanceof</code>
+      operator</a></li>
+  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof"><code>typeof</code>
+      operator</a></li>
 </ul>

@@ -13,14 +13,21 @@ tags:
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p>The <code>createDynamicsCompressor()</code> method of the {{ domxref("BaseAudioContext") }} Interface is used to create a {{domxref("DynamicsCompressorNode")}}, which can be used to apply compression to an audio signal.</p>
+  <p>The <code>createDynamicsCompressor()</code> method of the {{
+    domxref("BaseAudioContext") }} Interface is used to create a
+    {{domxref("DynamicsCompressorNode")}}, which can be used to apply compression to an
+    audio signal.</p>
 </div>
 
-<p>Compression lowers the volume of the loudest parts of the signal and raises the volume of the softest parts. Overall, a louder, richer, and fuller sound can be achieved. It is especially important in games and musical applications where large numbers of individual sounds are played simultaneously, where you want to control the overall signal level and help avoid clipping (distorting) of the audio output.</p>
+<p>Compression lowers the volume of the loudest parts of the signal and raises the volume
+  of the softest parts. Overall, a louder, richer, and fuller sound can be achieved. It is
+  especially important in games and musical applications where large numbers of individual
+  sounds are played simultaneously, where you want to control the overall signal level and
+  help avoid clipping (distorting) of the audio output.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">baseAudioCtx.createDynamicsCompressor();</pre>
+<pre class="brush: js">baseAudioCtx.createDynamicsCompressor();</pre>
 
 <h3 id="Returns">Returns</h3>
 
@@ -28,9 +35,14 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>The below code demonstrates a simple usage of <code>createDynamicsCompressor()</code> to add compression to an audio track. For a more complete example, have a look at our <a href="https://mdn.github.io/webaudio-examples/compressor-example/">basic Compressor example</a> (<a href="https://github.com/mdn/webaudio-examples/tree/master/compressor-example">view the source code</a>).</p>
+<p>The below code demonstrates a simple usage of <code>createDynamicsCompressor()</code>
+  to add compression to an audio track. For a more complete example, have a look at our <a
+    href="https://mdn.github.io/webaudio-examples/compressor-example/">basic Compressor
+    example</a> (<a
+    href="https://github.com/mdn/webaudio-examples/tree/master/compressor-example">view
+    the source code</a>).</p>
 
-<pre class="brush: js;highlight[6,18,19] notranslate">// Create a MediaElementAudioSourceNode
+<pre class="brush: js highlight[6,18,19]">// Create a MediaElementAudioSourceNode
 // Feed the HTMLMediaElement into it
 var source = audioCtx.createMediaElementSource(myAudio);
 
@@ -67,31 +79,28 @@ button.onclick = function() {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createdynamicscompressor', 'createDynamicsCompressor()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createdynamicscompressor',
+        'createDynamicsCompressor()')}}</td>
+      <td>{{Spec2('Web Audio API')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-<div>
-
 <p>{{Compat("api.BaseAudioContext.createDynamicsCompressor")}}</p>
-</div>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  </li>
 </ul>

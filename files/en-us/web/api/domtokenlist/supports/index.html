@@ -2,24 +2,28 @@
 title: DOMTokenList.supports()
 slug: Web/API/DOMTokenList/supports
 tags:
-  - API
-  - DOM
-  - Method
-  - Reference
+- API
+- DOM
+- Method
+- Reference
 ---
 <p>{{APIRef("DOM")}}{{SeeCompatTable}}</p>
 
-<p><span class="seoSummary">The <strong><code>supports()</code></strong> method of the {{domxref("DOMTokenList")}} interface returns <code>true</code> if a given <code><var>token</var></code> is in the associated attribute's supported tokens. This method is intended to support feature detection.</span></p>
+<p><span class="seoSummary">The <strong><code>supports()</code></strong> method of the
+    {{domxref("DOMTokenList")}} interface returns <code>true</code> if a
+    given <code><var>token</var></code> is in the associated attribute's supported tokens.
+    This method is intended to support feature detection.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">let <var>trueOrFalse</var> = <var>element</var>.supports(<var>token</var>)</pre>
+<pre
+  class="brush: js">let <var>trueOrFalse</var> = <var>element</var>.supports(<var>token</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>token</var></code></dt>
- <dd>A {{domxref("DOMString")}} containing the token to query for.</dd>
+  <dt><code><var>token</var></code></dt>
+  <dd>A {{domxref("DOMString")}} containing the token to query for.</dd>
 </dl>
 
 <h3 id="Returns">Returns</h3>
@@ -46,25 +50,22 @@ if (iframe.sandbox.supports('allow-scripts')) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Credential Management')}}</td>
-   <td>{{Spec2('Credential Management')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Credential Management')}}</td>
+      <td>{{Spec2('Credential Management')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.DOMTokenList.supports")}}</p>
-</div>

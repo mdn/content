@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">{{CSSSyntax}}</pre>
+<pre class="brush: css">{{CSSSyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -27,14 +27,14 @@ tags:
 
 <p>In this example, the <code>:focus-visible</code> selector uses the UA's behavior to determine when to match. Compare what happens when you click on the different controls with a mouse, versus when you tab through them using a keyboard. Note the difference in behavior from elements styled with <code>:focus</code>.</p>
 
-<pre class="brush: html notranslate">&lt;input value="Default styles"&gt;&lt;br&gt;
+<pre class="brush: html">&lt;input value="Default styles"&gt;&lt;br&gt;
 &lt;button&gt;Default styles&lt;/button&gt;&lt;br&gt;
 &lt;input class="focus-only" value=":focus only"&gt;&lt;br&gt;
 &lt;button class="focus-only"&gt;:focus only&lt;/button&gt;&lt;br&gt;
 &lt;input class="focus-visible-only" value=":focus-visible only"&gt;&lt;br&gt;
 &lt;button class="focus-visible-only"&gt;:focus-visible only&lt;/button&gt;</pre>
 
-<pre class="brush: css highlight[9] notranslate">input, button {
+<pre class="brush: css highlight[9]">input, button {
   margin: 10px;
 }
 
@@ -53,9 +53,9 @@ tags:
 
 <p>A custom control, such as a custom element button, can use <code>:focus-visible</code> to selectively apply a focus indicator only on keyboard-focus. This matches the native focus behavior for controls like {{htmlelement("button")}}.</p>
 
-<pre class="brush: html notranslate">&lt;custom-button tabindex="0" role="button"&gt;Click Me&lt;/custom-button&gt;</pre>
+<pre class="brush: html">&lt;custom-button tabindex="0" role="button"&gt;Click Me&lt;/custom-button&gt;</pre>
 
-<pre class="brush: css highlight[13, 19] notranslate">custom-button {
+<pre class="brush: css highlight[13, 19]">custom-button {
   display: inline-block;
   margin: 10px;
 }

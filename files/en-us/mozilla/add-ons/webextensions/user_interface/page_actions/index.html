@@ -11,7 +11,7 @@ tags:
 
 <p>Commonly referred to as a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction">page action</a> button, this user interface option is a button added to the browser address bar. Users click the button to interact with extensions.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15745/address_bar_button.png" style="display: block; height: 174px; margin-left: auto; margin-right: auto; width: 350px;"></p>
+<p><img alt="" src="address_bar_button.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h2 id="Page_actions_and_browser_actions">Page actions and browser actions</h2>
 
@@ -29,7 +29,7 @@ tags:
  </li>
  <li><strong>The button’s visibility:</strong>
   <ul>
-   <li>The page action is hidden by default (although this default can be changed via the <code>show_matches</code> and <code>hide_matches</code> <a href="/en-US/Add-ons/WebExtensions/manifest.json/page_action">manifest key</a> properties), and you call <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/PageAction/show" title="Shows the page action for a given tab. The page action is shown whenever the given tab is the active tab."><code>pageAction.show()</code></a> and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/PageAction/hide" title="Hides the page action for a given tab."><code>pageAction.hide()</code></a> to show or hide it in specific tabs.</li>
+   <li>The page action is hidden by default (although this default can be changed via the <code>show_matches</code> and <code>hide_matches</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">manifest key</a> properties), and you call <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/show" title="Shows the page action for a given tab. The page action is shown whenever the given tab is the active tab."><code>pageAction.show()</code></a> and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide" title="Hides the page action for a given tab."><code>pageAction.hide()</code></a> to show or hide it in specific tabs.</li>
    <li>The browser action is always displayed.</li>
   </ul>
  </li>
@@ -66,25 +66,25 @@ tags:
 
 <p>You define the page action's properties using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code> key in manifest.json:</p>
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"page_action":</span> <span class="punctuation token">{</span>
-  <span class="key token">"browser_style":</span> <span class="keyword token">true</span><span class="punctuation token">,</span>
-  <span class="key token">"default_icon":</span> <span class="punctuation token">{</span>
-    <span class="key token">"19":</span> <span class="string token">"button/geo-19.png"</span><span class="punctuation token">,</span>
-    <span class="key token">"38":</span> <span class="string token">"button/geo-38.png"</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="key token">"default_title":</span> <span class="string token">"Whereami?"</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: json line-numbers  language-json">&quot;page_action&quot;: {
+  &quot;browser_style&quot;: true,
+  &quot;default_icon&quot;: {
+    &quot;19&quot;: &quot;button/geo-19.png&quot;,
+    &quot;38&quot;: &quot;button/geo-38.png&quot;
+  },
+  &quot;default_title&quot;: &quot;Whereami?&quot;
+}</pre>
 
 <p>The only mandatory key is <code>default_icon</code>.</p>
 
-<p>There are two ways to specify a page action: with or without a <a href="/en-US/Add-ons/WebExtensions/Popups">popup</a>.</p>
+<p>There are two ways to specify a page action: with or without a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">popup</a>.</p>
 
 <ul>
  <li><strong>Without a popup:</strong> When the user clicks the button, an event is dispatched to the extension, which the extension listens for using <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked" title="Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."><code>pageAction.onClicked</code></a>:</li>
  <li>
-  <pre class="brush: js line-numbers  language-js"><code class="language-js">browser<span class="punctuation token">.</span>pageAction<span class="punctuation token">.</span>onClicked<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span>handleClick<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+  <pre class="brush: js line-numbers  language-js">browser.pageAction.onClicked.addListener(handleClick);</pre>
  </li>
- <li><strong>With a popup:</strong> the <code>click</code> event is not dispatched. Instead, the popup appears when the user clicks the button. The user then interacts with the popup. When the user clicks outside of the popup, it closes automatically. See the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Popups">Popup </a>article for more details on creating and managing popups.</li>
+ <li><strong>With a popup:</strong> the <code>click</code> event is not dispatched. Instead, the popup appears when the user clicks the button. The user then interacts with the popup. When the user clicks outside of the popup, it closes automatically. See the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">Popup </a>article for more details on creating and managing popups.</li>
 </ul>
 
 <p>Note that your extension can have just one page action.</p>

@@ -2,29 +2,35 @@
 title: String.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
 tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
+- JavaScript
+- Method
+- Prototype
+- Reference
+- String
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>concat()</code></strong> method concatenates the string arguments to the calling string and returns a new string.</span></p>
+<p><span class="seoSummary">The <strong><code>concat()</code></strong> method concatenates
+    the string arguments to the calling string and returns a new string.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/js/string-concat.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<div class="hidden">The source for this interactive example is stored in a GitHub
+  repository. If you'd like to contribute to the interactive examples project, please
+  clone <a
+    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
+  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>str</var>.concat(<var>str2</var> [, ...<var>strN</var>])</pre>
+<pre
+  class="brush: js"><var>str</var>.concat(<var>str2</var> [, ...<var>strN</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>str2</var> [, ...<var>strN</var>]</code></dt>
- <dd>Strings to concatenate to <code><var>str</var></code>.</dd>
+  <dt><code><var>str2</var> [, ...<var>strN</var>]</code></dt>
+  <dd>Strings to concatenate to <code><var>str</var></code>.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -33,13 +39,18 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>The <code>concat()</code> function concatenates the string arguments to the calling string and returns a new string. Changes to the original string or the returned string don't affect the other.</p>
+<p>The <code>concat()</code> function concatenates the string arguments to the calling
+  string and returns a new string. Changes to the original string or the returned string
+  don't affect the other.</p>
 
-<p>If the arguments are not of the type string, they are converted to string values before concatenating.</p>
+<p>If the arguments are not of the type string, they are converted to string values before
+  concatenating.</p>
 
 <h2 id="Performance">Performance</h2>
 
-<p>It is strongly recommended that the {{jsxref("Operators/Assignment_Operators", "assignment operators", "", 1)}} (<code>+</code>, <code>+=</code>) are used instead of the <code>concat()</code> method.</p>
+<p>It is strongly recommended that the {{jsxref("Operators/Assignment_Operators",
+  "assignment operators", "", 1)}} (<code>+</code>, <code>+=</code>) are used instead of
+  the <code>concat()</code> method.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -47,7 +58,7 @@ tags:
 
 <p>The following example combines strings into a new string.</p>
 
-<pre class="brush: js notranslate">let hello = 'Hello, '
+<pre class="brush: js">let hello = 'Hello, '
 console.log(hello.concat('Kevin', '. Have a nice day.'))
 // Hello, Kevin. Have a nice day.
 
@@ -65,16 +76,17 @@ let greetList = ['Hello', ' ', 'Venkat', '!']
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.concat', 'String.prototype.concat')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-string.prototype.concat',
+        'String.prototype.concat')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -84,6 +96,6 @@ let greetList = ['Hello', ' ', 'Venkat', '!']
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Array.prototype.concat()")}}</li>
- <li>{{jsxref("Operators/Assignment_Operators", "Assignment operators", "", 1)}}</li>
+  <li>{{jsxref("Array.prototype.concat()")}}</li>
+  <li>{{jsxref("Operators/Assignment_Operators", "Assignment operators", "", 1)}}</li>
 </ul>

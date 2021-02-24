@@ -11,7 +11,7 @@ tags:
 
 <p><span class="seoSummary">A <code>feed</code> is a dynamic scrollable <code>list</code> of <code>articles</code> in which articles are added to or removed from either end of the list as the user scrolls. A <code>feed</code> enables screen readers to use the browse mode reading cursor to both read and scroll through a stream of rich content that may continue scrolling infinitely by loading more content as the user reads.</span></p>
 
-<pre class="brush: html notranslate">&lt;section role="feed" <a class="state-reference" href="https://w3c.github.io/aria/#aria-busy">aria-busy</a>="false"&gt;
+<pre class="brush: html">&lt;section role="feed" <a class="state-reference" href="https://w3c.github.io/aria/#aria-busy">aria-busy</a>="false"&gt;
   ...
   &lt;article aria-posinset="427" aria-setsize="-1"&gt;...&lt;/article&gt;
   &lt;article aria-posinset="428" aria-setsize="-1"&gt;...&lt;/article&gt;
@@ -22,11 +22,11 @@ tags:
 <h2 id="Description">Description</h2>
 
 <div class="role-description" id="desc-feed">
-<p>A feed is a page structure for a scrollable <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/list_Role">list</a> of <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role">articles</a></code> where scrolling may cause <span>articles</span> to be added to the top or end of the list. The list establishes an interoperability contract between the web page and assistive technologies that governs scroll interactions so that assistive technology users can read articles, jump forward and backward by article, and reliably trigger new articles to load while in reading mode. Examples include an RSS feed, news feeds, social media feeds like Facebook, Instagram or Twitter, or even a list of related products on an eCommerce page. These streams can be limited or infinite, loading more content as the user scrolls. Implementing the feed pattern allows a screen reader to reliably read and trigger the loading of feed content while in reading mode.</p>
+<p>A feed is a page structure for a scrollable <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/List_role">list</a> of <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role">articles</a></code> where scrolling may cause articles to be added to the top or end of the list. The list establishes an interoperability contract between the web page and assistive technologies that governs scroll interactions so that assistive technology users can read articles, jump forward and backward by article, and reliably trigger new articles to load while in reading mode. Examples include an RSS feed, news feeds, social media feeds like Facebook, Instagram or Twitter, or even a list of related products on an eCommerce page. These streams can be limited or infinite, loading more content as the user scrolls. Implementing the feed pattern allows a screen reader to reliably read and trigger the loading of feed content while in reading mode.</p>
 
 <p>A <code>feed</code> is a container element whose children are &lt;article&gt;s or have role <code>article</code>. Each article within a feed should be focusable, with tabindex of 0 or -1. An article should be scrolled into view when it, or a descendant element, receives focus. If the addition of articles occupies the main browser thread, make sure to set <code>aria-busy="true"</code> on the feed itself, and make sure to set it back to <code>false</code> when processing ends, or the user may not see the updates.</p>
 
-<p>To ensure good user experience, avoid inserting or removing <span>articles</span> in the middle of a <code>feed</code>, load new articles before the user has reached the end of the feed, and provide keyboard commands for moving focus among <span>articles so that</span> keyboard users can navigate through your feed. See keyboard interactions below.</p>
+<p>To ensure good user experience, avoid inserting or removing articles in the middle of a <code>feed</code>, load new articles before the user has reached the end of the feed, and provide keyboard commands for moving focus among articles so that keyboard users can navigate through your feed. See keyboard interactions below.</p>
 
 <p>If the number of articles is known, set <code>aria-setsize</code> on the articles themselves. However, if the total number is extremely large, indefinite, or changes often, set <code>aria-setsize="-1"</code> to indicate that the size of the feed is not known.</p>
 
@@ -110,6 +110,6 @@ tags:
  <li><a href="/en-US/docs/Web/HTML/Element/article">HTML &lt;article&gt; element</a></li>
  <li><a href="/en-US/docs/Web/HTML/Element/ul">Lists in HTML</a></li>
  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role">ARIA: article role</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/List_Role">ARIA: list role</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/List_role">ARIA: list role</a></li>
  <li><cite><a href="https://www.w3.org/TR/wai-aria-practices-1.1/"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Authoring Practices</a></cite> - additional details on implementing a feed design pattern.</li>
 </ul>

@@ -2,30 +2,33 @@
 title: GlobalEventHandlers.ondragleave
 slug: Web/API/GlobalEventHandlers/ondragleave
 tags:
-  - API
-  - HTML DOM
-  - Reference
-  - drag and drop
+- API
+- HTML DOM
+- Reference
+- drag and drop
 ---
 <div>{{ApiRef("HTML DOM")}}</div>
 
-<p>A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("dragleave")}} event.</p>
+<p>A {{domxref("GlobalEventHandlers","global event handler")}} for the
+  {{event("dragleave")}} event.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>dragleaveHandler</var> = <var>targetElement</var>.ondragleave;
+<pre class="brush: js">var <var>dragleaveHandler</var> = <var>targetElement</var>.ondragleave;
 </pre>
 
 <h3 id="Return_value">Return value</h3>
 
 <dl>
- <dt><code>dragleaveHandler</code></dt>
- <dd>The <em>dragleave</em> event handler for element <code>targetElement</code>.</dd>
+  <dt><code>dragleaveHandler</code></dt>
+  <dd>The <em>dragleave</em> event handler for element <code>targetElement</code>.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
 
-<p>This example demonstrates using the {{domxref("GlobalEventHandlers.ondragleave","ondragleave")}} attribute handler to set an element's {{event("dragleave")}} event handler.</p>
+<p>This example demonstrates using the
+  {{domxref("GlobalEventHandlers.ondragleave","ondragleave")}} attribute handler to set an
+  element's {{event("dragleave")}} event handler.</p>
 
 <pre class="brush: js">&lt;!DOCTYPE html&gt;
 &lt;html lang=en&gt;
@@ -118,23 +121,24 @@ function init() {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "indices.html#ix-handler-ondragleave", "ondragleave")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.1", "index.html#ix-handler-ondragleave", "ondragleave")}}</td>
-   <td>{{Spec2("HTML5.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("HTML WHATWG", "indices.html#ix-handler-ondragleave",
+        "ondragleave")}}</td>
+      <td>{{Spec2("HTML WHATWG")}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName("HTML5.1", "index.html#ix-handler-ondragleave", "ondragleave")}}</td>
+      <td>{{Spec2("HTML5.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -144,5 +148,5 @@ function init() {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{event("dragleave")}}</li>
+  <li>{{event("dragleave")}}</li>
 </ul>

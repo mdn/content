@@ -14,35 +14,35 @@ tags:
 <p><strong>Important</strong>: The synchronous version of the IndexedDB API was originally intended for use only with <a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Web Workers</a>, and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.</p>
 </div>
 
-<p>The <code>IDBObjectStoreSync</code> interface of the <a href="/en/IndexedDB">IndexedDB API</a> provides synchronous access to an <a href="/en/IndexedDB#gloss_object_store">object store</a> of a database.</p>
+<p>The <code>IDBObjectStoreSync</code> interface of the <a href="/en-US/docs/IndexedDB">IndexedDB API</a> provides synchronous access to an <a href="/en-US/docs/IndexedDB#gloss_object_store">object store</a> of a database.</p>
 
 <h2 id="Method_overview">Method overview</h2>
 
 <table class="standard-table">
  <tbody>
   <tr>
-   <td><code>any <a href="#add">add</a> (in any value, in optional any key) raises (<a href="/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
+   <td><code>any <a href="#add">add</a> (in any value, in optional any key) raises (<a href="/en-US/docs/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
   </tr>
   <tr>
-   <td><a href="/en/IndexedDB/IDBIndexSync"><span style="font-family: monospace;">IDBIndexSync</span></a><code> <a href="#createIndex">createIndex</a> (in DOMString name, in DOMString storeName, in DOMString keypath, in optional boolean unique);</code></td>
+   <td><a href="/en-US/docs/IndexedDB/IDBIndexSync"><span style="font-family: monospace;">IDBIndexSync</span></a><code> <a href="#createindex">createIndex</a> (in DOMString name, in DOMString storeName, in DOMString keypath, in optional boolean unique);</code></td>
   </tr>
   <tr>
-   <td><code>any <a href="#get">get</a> (in any key) raises (<a href="/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>); </code></td>
+   <td><code>any <a href="#get">get</a> (in any key) raises (<a href="/en-US/docs/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>); </code></td>
   </tr>
   <tr>
-   <td><code><a href="/en/IndexedDB/IDBCursorSync">IDBCursorSync</a> <a href="#openCursor">openCursor</a> (in optional <a href="/en/IndexedDB/IDBKeyRange">IDBKeyRange</a> range, in optional unsigned short direction) raises (<a href="/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
+   <td><code><a href="/en-US/docs/IndexedDB/IDBCursorSync">IDBCursorSync</a> <a href="#opencursor">openCursor</a> (in optional <a href="/en-US/docs/IndexedDB/IDBKeyRange">IDBKeyRange</a> range, in optional unsigned short direction) raises (<a href="/en-US/docs/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
   </tr>
   <tr>
-   <td><code><a href="/en/IndexedDB/IDBIndexSync">IDBIndexSync</a> <a href="#openIndex">openIndex</a> (in DOMString name) raises (<a href="/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>); </code></td>
+   <td><code><a href="/en-US/docs/IndexedDB/IDBIndexSync">IDBIndexSync</a> <a href="#openindex">openIndex</a> (in DOMString name) raises (<a href="/en-US/docs/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>); </code></td>
   </tr>
   <tr>
-   <td><code>any <a href="#put">put</a> (in any value, in optional any key) raises (<a href="/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>); </code></td>
+   <td><code>any <a href="#put">put</a> (in any value, in optional any key) raises (<a href="/en-US/docs/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>); </code></td>
   </tr>
   <tr>
-   <td><code>void <a href="#remove">remove</a> (in any key) raises (<a href="/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
+   <td><code>void <a href="#remove">remove</a> (in any key) raises (<a href="/en-US/docs/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>void <a href="#removeIndex">removeIndex</a> (in DOMString indexName) raises (<a href="/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
+   <td><code>void <a href="#removeindex">removeIndex</a> (in DOMString indexName) raises (<a href="/en-US/docs/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
   </tr>
  </tbody>
 </table>
@@ -61,17 +61,17 @@ tags:
   <tr>
    <td><code><a name="attr_indexNames">indexNames</a></code></td>
    <td><code>readonly DOMStringList</code></td>
-   <td>A list of the names of the <a href="/en/IndexedDB#gloss_index">indexes</a> on this object store.</td>
+   <td>A list of the names of the <a href="/en-US/docs/IndexedDB#gloss_index">indexes</a> on this object store.</td>
   </tr>
   <tr>
    <td><code><a name="attr_keyPath">keyPath</a></code></td>
    <td><code>readonly DOMString</code></td>
-   <td>The <a href="/en/IndexedDB#gloss_key_path">key path</a> of this object store. If this attribute is set to null, then the application must provide a key for each modification operation.</td>
+   <td>The <a href="/en-US/docs/IndexedDB#gloss_key_path">key path</a> of this object store. If this attribute is set to null, then the application must provide a key for each modification operation.</td>
   </tr>
   <tr>
    <td><code><a name="attr_mode">mode</a></code></td>
    <td><code>readonly unsigned short</code></td>
-   <td>The mode for isolating access to the data in this object store. For possible values, see <a href="/en/indexeddb/idbobjectstoresync#Constants">Constants</a>.</td>
+   <td>The mode for isolating access to the data in this object store. For possible values, see <a href="/en-US/docs/indexeddb/idbobjectstoresync#Constants">Constants</a>.</td>
   </tr>
   <tr>
    <td><code><a name="attr_name">name</a></code></td>
@@ -139,11 +139,11 @@ tags:
  <dd>A key to use for identifying the record.</dd>
  <dt><code>any</code></dt>
  <dd>The key for the stored record.</dd>
- <dt><code><a href="/en/IndexedDB/IDBDatabaseException#CONSTRAINT_ERR">CONSTRAINT_ERR</a></code></dt>
+ <dt><code><a href="/en-US/docs/IndexedDB/IDBDatabaseException#CONSTRAINT_ERR">CONSTRAINT_ERR</a></code></dt>
  <dd>If a record exists in this index with a key corresponding to the <em>key</em> parameter or the index is auto-populated, or if no record exists with a key corresponding to the <em>value</em> parameter in the index's referenced object store.</dd>
- <dt><code><a href="/en/IndexedDB/IDBDatabaseException#DATA_ERR">DATA_ERR</a></code></dt>
- <dd>If this object store uses <a href="/en/IndexedDB#gloss_out-of-line_key">out-of-line keys</a>, and the <em>key</em> parameter was not passed.</dd>
- <dt><code><a href="/en/IndexedDB/IDBDatabaseException#SERIAL_ERR">SERIAL_ERR</a></code></dt>
+ <dt><code><a href="/en-US/docs/IndexedDB/IDBDatabaseException#DATA_ERR">DATA_ERR</a></code></dt>
+ <dd>If this object store uses <a href="/en-US/docs/IndexedDB#gloss_out-of-line_key">out-of-line keys</a>, and the <em>key</em> parameter was not passed.</dd>
+ <dt><code><a href="/en-US/docs/IndexedDB/IDBDatabaseException#SERIAL_ERR">SERIAL_ERR</a></code></dt>
  <dd>If the data being stored could not be serialized by the internal structured cloning algorithm.</dd>
 </dl>
 
@@ -172,7 +172,7 @@ tags:
 <h5 id="Returns_2">Returns</h5>
 
 <dl>
- <dt><a href="/en/IndexedDB/IDBIndexSync"><code>IDBIndexSync</code></a></dt>
+ <dt><a href="/en-US/docs/IndexedDB/IDBIndexSync"><code>IDBIndexSync</code></a></dt>
  <dd>An object to access the newly created index.</dd>
 </dl>
 
@@ -204,15 +204,15 @@ tags:
 <p>This method can raise a IDBDatabaseException with the following codes:</p>
 
 <dl>
- <dt><code><a href="/en/IndexedDB/IDBDatabaseException#SERIAL_ERR">SERIAL_ERR</a></code></dt>
+ <dt><code><a href="/en-US/docs/IndexedDB/IDBDatabaseException#SERIAL_ERR">SERIAL_ERR</a></code></dt>
  <dd>If the data being stored could not be deserialized by the internal structured cloning algorithm.</dd>
- <dt><code><a href="/en/IndexedDB/IDBDatabaseException#NOT_FOUND_ERR">NOT_FOUND_ERR</a></code></dt>
+ <dt><code><a href="/en-US/docs/IndexedDB/IDBDatabaseException#NOT_FOUND_ERR">NOT_FOUND_ERR</a></code></dt>
  <dd>If no record exists in this index for the given key.</dd>
 </dl>
 
 <h3 id="openCursor()">openCursor()</h3>
 
-<p>Creates a <a href="/en/IndexedDB#gloss_cursor">cursor</a> over the records of this object store. The range of the new cursor matches the specified <a href="/en/IndexedDB#gloss_key_range">key range</a>; if the key range is not specified or is null, then the range includes all the records.</p>
+<p>Creates a <a href="/en-US/docs/IndexedDB#gloss_cursor">cursor</a> over the records of this object store. The range of the new cursor matches the specified <a href="/en-US/docs/IndexedDB#gloss_key_range">key range</a>; if the key range is not specified or is null, then the range includes all the records.</p>
 
 <pre>CursorSync openCursor (
   in optional KeyRange range,
@@ -241,7 +241,7 @@ tags:
 <p>This method can raise a DatabaseException with the following code:</p>
 
 <dl>
- <dt><code><a href="/en/IndexedDB/IDBDatabaseException#NOT_FOUND_ERR">NOT_FOUND_ERR</a></code></dt>
+ <dt><code><a href="/en-US/docs/IndexedDB/IDBDatabaseException#NOT_FOUND_ERR">NOT_FOUND_ERR</a></code></dt>
  <dd>If no records exist in this index for the requested key range.</dd>
 </dl>
 
@@ -264,7 +264,7 @@ tags:
 <h5 id="Returns_5">Returns</h5>
 
 <dl>
- <dt><a href="/en/IndexedDB/IDBIndexSync"><code>IDBIndexSync</code></a></dt>
+ <dt><a href="/en-US/docs/IndexedDB/IDBIndexSync"><code>IDBIndexSync</code></a></dt>
  <dd>An object to access the index.</dd>
 </dl>
 
@@ -273,7 +273,7 @@ tags:
 <p>This method can raise an IDBDatabaseException with the following code:</p>
 
 <dl>
- <dt><code><a href="/en/IndexedDB/IDBDatabaseException#NOT_FOUND_ERR">NOT_FOUND_ERR</a></code></dt>
+ <dt><code><a href="/en-US/docs/IndexedDB/IDBDatabaseException#NOT_FOUND_ERR">NOT_FOUND_ERR</a></code></dt>
  <dd>If the index with the given name does not exist in the connected database.</dd>
 </dl>
 
@@ -308,11 +308,11 @@ tags:
 <p>This method can raise an IDBDatabaseException with the following codes:</p>
 
 <dl>
- <dt><code><a href="/en/IndexedDB/IDBDatabaseException#CONSTRAINT_ERR">CONSTRAINT_ERR</a></code></dt>
+ <dt><code><a href="/en-US/docs/IndexedDB/IDBDatabaseException#CONSTRAINT_ERR">CONSTRAINT_ERR</a></code></dt>
  <dd>If noOverwrite was true, and a record exists in this index for the given key or this index is auto-populated; or if no record exists with the given key in the index's referenced object store.</dd>
- <dt><code><a href="/en/IndexedDB/IDBDatabaseException#DATA_ERR">DATA_ERR</a></code></dt>
- <dd>If this object store uses <a href="/en/IndexedDB#gloss_out-of-line_key">out-of-line</a> keys and no <a href="/en/IndexedDB#gloss_key_generator">key generator</a>, but no key was given.</dd>
- <dt><code><a href="/en/IndexedDB/IDBDatabaseException#SERIAL_ERR">SERIAL_ERR</a></code></dt>
+ <dt><code><a href="/en-US/docs/IndexedDB/IDBDatabaseException#DATA_ERR">DATA_ERR</a></code></dt>
+ <dd>If this object store uses <a href="/en-US/docs/IndexedDB#gloss_out-of-line_key">out-of-line</a> keys and no <a href="/en-US/docs/IndexedDB#gloss_key_generator">key generator</a>, but no key was given.</dd>
+ <dt><code><a href="/en-US/docs/IndexedDB/IDBDatabaseException#SERIAL_ERR">SERIAL_ERR</a></code></dt>
  <dd>If the data being stored could not be serialized by the internal structured cloning algorithm.</dd>
 </dl>
 
@@ -341,7 +341,7 @@ tags:
 <p>This method can raise a IDBDatabaseException with the following code:</p>
 
 <dl>
- <dt><code><a href="/en/IndexedDB/IDBDatabaseException#NOT_FOUND_ERR">NOT_FOUND_ERR</a></code></dt>
+ <dt><code><a href="/en-US/docs/IndexedDB/IDBDatabaseException#NOT_FOUND_ERR">NOT_FOUND_ERR</a></code></dt>
  <dd>If a record does not exist in this index with the given key.</dd>
 </dl>
 
@@ -366,6 +366,6 @@ tags:
 <p>This method can raise an IDBDatabaseException with the following code:</p>
 
 <dl>
- <dt><code><a href="/en/IndexedDB/IDBDatabaseException#NOT_FOUND_ERR">NOT_FOUND_ERR</a></code></dt>
+ <dt><code><a href="/en-US/docs/IndexedDB/IDBDatabaseException#NOT_FOUND_ERR">NOT_FOUND_ERR</a></code></dt>
  <dd>If an index with the given name does not exist in the connected database.</dd>
 </dl>

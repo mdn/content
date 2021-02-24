@@ -2,20 +2,22 @@
 title: XPathResult.iterateNext()
 slug: Web/API/XPathResult/iterateNext
 tags:
-  - API
-  - DOM XPath API
-  - Method
-  - Reference
-  - XPath
-  - XPathResult
+- API
+- DOM XPath API
+- Method
+- Reference
+- XPath
+- XPathResult
 ---
 <div>{{APIRef("DOM XPath")}}</div>
 
-<p>The <strong><code>iterateNext()</code></strong> method of the {{domxref("XPathResult")}} interface iterates over a node set result and returns the next node from it or <code>null</code> if there are no more nodes.</p>
+<p>The <strong><code>iterateNext()</code></strong> method of the
+  {{domxref("XPathResult")}} interface iterates over a node set result and returns the
+  next node from it or <code>null</code> if there are no more nodes.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>node</var> = <var>result</var>.iterateNext();
+<pre class="brush: js">var <var>node</var> = <var>result</var>.iterateNext();
 </pre>
 
 <h3 id="Return_Value">Return value</h3>
@@ -26,11 +28,14 @@ tags:
 
 <h4 id="TYPE_ERR">TYPE_ERR</h4>
 
-<p>In case {{domxref("XPathResult.resultType")}} is not <code>UNORDERED_NODE_ITERATOR_TYPE</code> or <code>ORDERED_NODE_ITERATOR_TYPE</code>, an {{domxref("XPathException")}} of type <code>TYPE_ERR</code> is thrown.</p>
+<p>In case {{domxref("XPathResult.resultType")}} is not
+  <code>UNORDERED_NODE_ITERATOR_TYPE</code> or <code>ORDERED_NODE_ITERATOR_TYPE</code>, an
+  {{domxref("XPathException")}} of type <code>TYPE_ERR</code> is thrown.</p>
 
 <h4 id="INVALID_STATE_ERR">INVALID_STATE_ERR</h4>
 
-<p>If the document is mutated since the result was returned, an {{domxref("XPathException")}} of type <code>INVALID_STATE_ERR</code> is thrown.</p>
+<p>If the document is mutated since the result was returned, an
+  {{domxref("XPathException")}} of type <code>INVALID_STATE_ERR</code> is thrown.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -61,23 +66,21 @@ document.querySelector("output").textContent = tagNames.join(", ");
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM3 XPath", "xpath.html#XPathResult-iterateNext", "XPathResult.iterateNext()")}}</td>
-   <td>{{Spec2("DOM3 XPath")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("DOM3 XPath", "xpath.html#XPathResult-iterateNext",
+        "XPathResult.iterateNext()")}}</td>
+      <td>{{Spec2("DOM3 XPath")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.XPathResult.iterateNext()")}}</p>
-</div>

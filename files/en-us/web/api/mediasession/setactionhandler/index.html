@@ -2,32 +2,42 @@
 title: MediaSession.setActionHandler()
 slug: Web/API/MediaSession/setActionHandler
 tags:
-  - API
-  - Audio
-  - Media
-  - Media Session API
-  - MediaSession
-  - Method
-  - Reference
-  - UX
-  - Video
-  - setActionHandler
+- API
+- Audio
+- Media
+- Media Session API
+- MediaSession
+- Method
+- Reference
+- UX
+- Video
+- setActionHandler
 ---
 <p>{{APIRef("Media Session API")}}</p>
 
-<p>The <strong><code>setActionHandler()</code></strong> method of the {{domxref("MediaSession")}} interface sets a handler for a media session action. These actions let a web app receive notifications when the user engages a device's built-in physical or onscreen media controls, such as play, stop, or seek buttons.</p>
+<p>The <strong><code>setActionHandler()</code></strong> method of the
+  {{domxref("MediaSession")}} interface sets a handler for a media session action. These
+  actions let a web app receive notifications when the user engages a device's built-in
+  physical or onscreen media controls, such as play, stop, or seek buttons.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">navigator.mediaSession.setActionHandler(<em>type</em>, <em>callback</em>)</pre>
+<pre
+  class="brush: js">navigator.mediaSession.setActionHandler(<em>type</em>, <em>callback</em>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>type</code></dt>
- <dd>A {{domxref("DOMString")}} representing an action type to listen for. It will be one of <code>{{anch("play")}}</code>, <code>{{anch("pause")}}</code>, <code>{{anch("stop")}}</code>, <code>{{anch("seekbackward")}}</code>,<code> {{anch("seekforward")}}</code>, <code>{{anch("seekto")}}</code>, <code>{{anch("skipad")}}</code>,<code>{{anch("previoustrack")}}</code>, or <code>{{anch("nexttrack")}}</code>. Further details on the action types can be found below under {{anch("Media session actions")}}.</dd>
- <dt><code>callback</code></dt>
- <dd>A function to call when the specified action type is invoked. The callback receives no input parameters, and should not return a value.</dd>
+  <dt><code>type</code></dt>
+  <dd>A {{domxref("DOMString")}} representing an action type to listen for. It will be one
+    of <code>{{anch("play")}}</code>,
+    <code>{{anch("pause")}}</code>, <code>{{anch("stop")}}</code>,
+    <code>{{anch("seekbackward")}}</code>,<code> {{anch("seekforward")}}</code>, <code>{{anch("seekto")}}</code>, <code>{{anch("skipad")}}</code>,<code>{{anch("previoustrack")}}</code>,
+    or <code>{{anch("nexttrack")}}</code>. Further details on the action types can be
+    found below under {{anch("Media session actions")}}.</dd>
+  <dt><code>callback</code></dt>
+  <dd>A function to call when the specified action type is invoked. The callback receives
+    no input parameters, and should not return a value.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -36,15 +46,20 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>To remove a previously-established action handler, call <code>setActionHandler()</code> again, specifying <code>null</code> as the <code>callback</code>.</p>
+<p>To remove a previously-established action handler, call <code>setActionHandler()</code>
+  again, specifying <code>null</code> as the <code>callback</code>.</p>
 
-<p>The action handler receives as input a single parameter: an object conforming to the {{domxref("MediaSessionActionDetails")}} dictionary, which provides both the action type (so the same function can handle multiple action types), as well as data needed in order to perform the action.</p>
+<p>The action handler receives as input a single parameter: an object conforming to
+  the {{domxref("MediaSessionActionDetails")}} dictionary, which provides both the action
+  type (so the same function can handle multiple action types), as well as data needed in
+  order to perform the action.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>This example creates a new media session and assigns action handlers (which don't do anything) to it.</p>
+<p>This example creates a new media session and assigns action handlers (which don't do
+  anything) to it.</p>
 
-<pre class="brush: js notranslate line-numbers language-js"><code class="language-js"><span class="keyword token">if</span> <span class="punctuation token">(</span><span class="string token">'mediaSession'</span> <span class="keyword token">in</span> navigator<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+<pre class="brush: jsline-numbers language-js"><code class="language-js"><span class="keyword token">if</span> <span class="punctuation token">(</span><span class="string token">'mediaSession'</span> <span class="keyword token">in</span> navigator<span class="punctuation token">)</span> <span class="punctuation token">{</span>
   navigator<span class="punctuation token">.</span>mediaSession<span class="punctuation token">.</span>metadata <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">MediaMetadata</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
     title<span class="punctuation token">:</span> <span class="string token">'Unforgettable'</span><span class="punctuation token">,</span>
     artist<span class="punctuation token">:</span> <span class="string token">'Nat King Cole'</span><span class="punctuation token">,</span>
@@ -70,9 +85,10 @@ tags:
   navigator<span class="punctuation token">.</span>mediaSession<span class="punctuation token">.</span><span class="function token">setActionHandler</span><span class="punctuation token">(</span><span class="string token">'skipad'</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="comment token">/* Code excerpted. */</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 <span class="punctuation token">}</span></code></pre>
 
-<p>The following example sets up two functions for playing and pausing, then uses them as callbacks with the relevant action handlers.</p>
+<p>The following example sets up two functions for playing and pausing, then uses them as
+  callbacks with the relevant action handlers.</p>
 
-<pre class="brush: js notranslate line-numbers language-js"><code class="language-js"><span class="keyword token">const</span> actionHandlers <span class="operator token">=</span> <span class="punctuation token">[</span>
+<pre class="brush: jsline-numbers language-js"><code class="language-js"><span class="keyword token">const</span> actionHandlers <span class="operator token">=</span> <span class="punctuation token">[</span>
   <span class="comment token">// play</span>
   <span class="punctuation token">[</span>
     <span class="string token">'play'</span><span class="punctuation token">,</span>
@@ -106,9 +122,10 @@ tags:
   <span class="punctuation token">}</span>
 <span class="punctuation token">}</span></code></pre>
 
-<p>This example uses appropriate action handlers to allow seeking in either direction through the playing media.</p>
+<p>This example uses appropriate action handlers to allow seeking in either direction
+  through the playing media.</p>
 
-<pre class="brush: js notranslate">let skipTime = 10; // Time to skip in seconds
+<pre class="brush: js">let skipTime = 10; // Time to skip in seconds
 
 navigator.mediaSession.setActionHandler('seekbackward', evt =&gt; {
  // User clicked "Seek Backward" media notification icon.
@@ -123,13 +140,17 @@ navigator.mediaSession.setActionHandler('seekforward', evt =&gt; {
 
 <p>To remove a media action handler, assign it to null.</p>
 
-<pre class="brush: js notranslate">navigator.mediaSession.setActionHandler('nexttrack', null);</pre>
+<pre
+  class="brush: js">navigator.mediaSession.setActionHandler('nexttrack', null);</pre>
 
-<h3 id="Supporting_multiple_actions_in_one_handler_function">Supporting multiple actions in one handler function</h3>
+<h3 id="Supporting_multiple_actions_in_one_handler_function">Supporting multiple actions
+  in one handler function</h3>
 
-<p>You can also, if you prefer, use a single function to handle multiple action types, by checking the value of the <code>MediaSessionActionDetails</code> object's {{domxref("MediaSessionActionDetails.action", "action")}} property:</p>
+<p>You can also, if you prefer, use a single function to handle multiple action types, by
+  checking the value of the <code>MediaSessionActionDetails</code> object's
+  {{domxref("MediaSessionActionDetails.action", "action")}} property:</p>
 
-<pre class="brush: js notranslate">let skipTime = 7;
+<pre class="brush: js">let skipTime = 7;
 
 navigator.mediaSession.setActionHandler("seekforward", handleSeek);
 navigator.mediaSession.setActionHandler("seekbackward", handleSeek);
@@ -147,28 +168,27 @@ function handleSeek(details) {
 }
 </pre>
 
-<p>Here, the <code>handleSeek()</code> function handles both <code>seekbackward</code> and <code>seekforward</code> actions.</p>
+<p>Here, the <code>handleSeek()</code> function handles
+  both <code>seekbackward</code> and <code>seekforward</code> actions.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Session','#dom-mediasession-setactionhandler','MediaSession.setActionHandler()')}}</td>
-   <td>{{Spec2('Media Session')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Media Session','#dom-mediasession-setactionhandler','MediaSession.setActionHandler()')}}
+      </td>
+      <td>{{Spec2('Media Session')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.MediaSession.setActionHandler")}}</p>
-</div>

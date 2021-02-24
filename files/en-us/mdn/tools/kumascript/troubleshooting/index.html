@@ -11,12 +11,12 @@ tags:
 <div>{{MDNSidebar}}</div>
 
 <div class="summary">
-<p><a href="/en-US/docs/MDN/Kuma/Introduction_to_KumaScript">KumaScript</a> errors appearing on a page can be very off-putting to readers, in their big scary red boxes, but fortunately anyone with an MDN account can edit a document to fix such an error. When a page has an error it gets added to the list of <a href="/docs/with-errors">documents with errors</a>.  Site editors go through this list regularly to find and fix errors. This article details the four types of KumaScript error, and some steps you can take to fix them.</p>
+<p>This article details the four types of KumaScript error, and some steps you can take to fix them.</p>
 </div>
 
 <h2 id="DocumentParsingError">DocumentParsingError</h2>
 
-<p><code>DocumentParsingError</code> errors appear when KumaScript has trouble understanding something in the document itself. The most common cause is a syntax error in a <a href="/en-US/docs/MDN/Contribute/Content/Macros">macro</a>.</p>
+<p><code>DocumentParsingError</code> errors appear when KumaScript has trouble understanding something in the document itself. The most common cause is a syntax error in a <a href="/en-US/docs/MDN/Structures/Macros">macro</a>.</p>
 
 <p>Check for:</p>
 
@@ -33,29 +33,19 @@ tags:
 
 <h2 id="TemplateLoadingError">TemplateLoadingError</h2>
 
-<p><code>TemplateLoadingError</code> errors appear when KumaScript has trouble finding which <a href="/en-US/docs/MDN/Contribute/Content/Macros">macro</a> to include on a page.</p>
+<p><code>TemplateLoadingError</code> errors appear when KumaScript has trouble finding which <a href="/en-US/docs/MDN/Structures/Macros">macro</a> to include on a page.</p>
 
 <p>Check for:</p>
 
 <dl>
  <dt>Misspelling of macro names or renamed macros.</dt>
- <dd>You can look at the list of known macros in the <a href="https://github.com/mdn/kumascript/tree/master/macros">Github repo</a>.</dd>
+ <dd>You can look at the list of active macros in the <a href="https://github.com/mdn/yari/tree/master/kumascript/macros">Yari repo</a>.</dd>
 </dl>
-
-<div class="note">
-<p><strong>Tip:</strong> You can make it quick and easy to jump to a specific macro by adding a <a href="http://kb.mozillazine.org/Using_keyword_searches">search keyword</a> to Firefox. See {{SectionOnPage("/en-US/docs/MDN/Contribute/Tools/KumaScript", "Using search keywords to open template pages")}} for a step-by-step guide to creating the search keyword for this.</p>
-</div>
 
 <h2 id="TemplateExecutionError">TemplateExecutionError</h2>
 
-<p><code>TemplateExecutionError</code> errors appear when KumaScript encounters an error in the macro. These errors can only be fixed by admin users and need to be reported as bugs.</p>
-
-<p>Before reporting an error check to see that it hasn't already been fixed. You can do this by forcing KumaScript to give you a fresh copy of the page by holding down <kbd>Shift</kbd> while you refresh the page (<kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>R</kbd> on Windows/Linux, <kbd>Shift</kbd> + <kbd>Cmd</kbd> + <kbd>R</kbd> on Mac).</p>
-
-<p>If the error persists, <a href="https://bugzilla.mozilla.org/form.doc">report a bug</a>, including the URL of the page and the text of the error.</p>
+<p><code>TemplateExecutionError</code> errors appear when KumaScript encounters an error in the macro. If the error persists, <a href="https://github.com/mdn/yari/issues">report an issue</a>, including the URL of the page and the text of the error.</p>
 
 <h2 id="Error_Unknown">Error &amp; Unknown</h2>
 
 <p>This is the category errors end up in if they are not one of the other kinds of error.</p>
-
-<p>Check for fixes and report persistent bugs like described under <a href="#TemplateExecutionError">TemplateExecutionError</a>.</p>

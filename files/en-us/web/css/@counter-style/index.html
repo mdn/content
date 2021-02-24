@@ -12,7 +12,7 @@ tags:
 
 <p>The <strong><code>@counter-style</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a> lets you define counter styles that are not part of the predefined set of styles. A <code>@counter-style</code> rule defines how to convert a counter value into a string representation.</p>
 
-<pre class="brush: css no-line-numbers notranslate">@counter-style thumbs {
+<pre class="brush: css no-line-numbers">@counter-style thumbs {
   system: cyclic;
   symbols: "\1F44D";
   suffix: " ";
@@ -70,7 +70,7 @@ ul {
  <dd>Specifies the symbols that are to be used for the marker representations. Symbols can contain string, images or custom identifiers. How the symbols are used to construct the marker representation is up to the algorithm specified in the system descriptor. For example, if the system specified is fixed, then each of the N symbols specified in the descriptor will be used to represent the first N counter symbols. Once the specified set of symbols have exhausted, the fallback style will be used for the rest of the list.<br>
  <br>
  The below <code>@counter-style</code> rule uses images instead of character symbols. Image values for symbols is currently an 'at risk' feature, and is not implemented in any browser.
- <pre class="brush: css notranslate">@counter-style winners-list {
+ <pre class="brush: css">@counter-style winners-list {
   system: fixed;
   symbols: url(gold-medal.svg) url(silver-medal.svg) url(bronze-medal.svg);
   suffix: " ";
@@ -90,14 +90,14 @@ ul {
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}
+<pre class="brush: css">{{csssyntax}}
 </pre>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Specifying_symbols_with_counter-style">Specifying symbols with counter-style</h3>
 
-<pre class="brush: css notranslate">@counter-style circled-alpha {
+<pre class="brush: css">@counter-style circled-alpha {
   system: fixed;
   symbols: Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ Ⓕ Ⓖ Ⓗ Ⓘ Ⓙ Ⓚ Ⓛ Ⓜ Ⓝ Ⓞ Ⓟ Ⓠ Ⓡ Ⓢ Ⓣ Ⓤ Ⓥ Ⓦ Ⓧ Ⓨ Ⓩ;
   suffix: " ";
@@ -105,7 +105,7 @@ ul {
 
 <p>The above counter style rule can be applied to lists like this:</p>
 
-<pre class="brush: css notranslate">.items {
+<pre class="brush: css">.items {
   list-style: circled-alpha;
 }
 </pre>

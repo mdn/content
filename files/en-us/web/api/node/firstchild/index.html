@@ -2,24 +2,28 @@
 title: Node.firstChild
 slug: Web/API/Node/firstChild
 tags:
-  - API
-  - DOM
-  - Node
-  - Property
-  - Reference
+- API
+- DOM
+- Node
+- Property
+- Reference
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">The <code><strong>Node.firstChild</strong></code> read-only property returns the node's first child in the tree, or <code>null</code> if the node has no children.</span> If the node is a <code>Document</code>, it returns the first node in the list of its direct children.</p>
+<p><span class="seoSummary">The <code><strong>Node.firstChild</strong></code> read-only
+    property returns the node's first child in the tree, or <code>null</code> if the node
+    has no children.</span> If the node is a <code>Document</code>, it returns the first
+  node in the list of its direct children.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>childNode</var> = <var>node</var>.firstChild;
+<pre class="brush: js">var <var>childNode</var> = <var>node</var>.firstChild;
 </pre>
 
 <h2 id="Example">Example</h2>
 
-<p>This example demonstrates the use of <code>firstChild</code> and how whitespace nodes might interfere with using this property.</p>
+<p>This example demonstrates the use of <code>firstChild</code> and how whitespace nodes
+  might interfere with using this property.</p>
 
 <pre class="brush:html">&lt;p id="para-01"&gt;
   &lt;span&gt;First span&lt;/span&gt;
@@ -30,11 +34,18 @@ tags:
   console.log(p01.firstChild.nodeName);
 &lt;/script&gt;</pre>
 
-<p>In the above, the <a href="/en-US/docs/Web/API/Console">console</a> will show '#text' because a text node is inserted to maintain the whitespace between the end of the opening <code>&lt;p&gt;</code> and <code>&lt;span&gt;</code> tags. <strong>Any</strong> <a href="/en-US/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM">whitespace</a> will create a <code>#text</code> node, from a single space to multiple spaces, returns, tabs, and so on.</p>
+<p>In the above, the <a href="/en-US/docs/Web/API/Console">console</a> will show '#text'
+  because a text node is inserted to maintain the whitespace between the end of the
+  opening <code>&lt;p&gt;</code> and <code>&lt;span&gt;</code> tags. <strong>Any</strong>
+  <a href="/en-US/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM">whitespace</a>
+  will create a <code>#text</code> node, from a single space to multiple spaces, returns,
+  tabs, and so on.</p>
 
-<p>Another <code>#text</code> node is inserted between the closing <code>&lt;/span&gt;</code> and <code>&lt;/p&gt;</code>tags.</p>
+<p>Another <code>#text</code> node is inserted between the closing
+  <code>&lt;/span&gt;</code> and <code>&lt;/p&gt;</code>tags.</p>
 
-<p>If this whitespace is removed from the source, the #text nodes are not inserted and the span element becomes the paragraph's first child.</p>
+<p>If this whitespace is removed from the source, the #text nodes are not inserted and the
+  span element becomes the paragraph's first child.</p>
 
 <pre class="brush:html">&lt;p id="para-01"&gt;&lt;span&gt;First span&lt;/span&gt;&lt;/p&gt;
 
@@ -46,40 +57,43 @@ tags:
 
 <p>Now the console will show 'SPAN'.</p>
 
-<p>To avoid the issue with <code>node.firstChild</code> returning <code>#text</code> or <code>#comment</code> nodes, {{domxref("ParentNode.firstElementChild")}} can be used to return only the first element node. However, <code>node.firstElementChild</code> requires a shim for Internet Explorer 9 and earlier.</p>
+<p>To avoid the issue with <code>node.firstChild</code> returning <code>#text</code> or
+  <code>#comment</code> nodes, {{domxref("ParentNode.firstElementChild")}} can be used to
+  return only the first element node. However, <code>node.firstElementChild</code>
+  requires a shim for Internet Explorer 9 and earlier.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-node-firstchild', 'Node.firstChild')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-169727388', 'Node.firstChild')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-169727388', 'Node.firstChild')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-169727388', 'Node.firstChild')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-node-firstchild', 'Node.firstChild')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM3 Core', 'core.html#ID-169727388', 'Node.firstChild')}}</td>
+      <td>{{Spec2('DOM3 Core')}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 Core', 'core.html#ID-169727388', 'Node.firstChild')}}</td>
+      <td>{{Spec2('DOM2 Core')}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM1', 'level-one-core.html#ID-169727388', 'Node.firstChild')}}</td>
+      <td>{{Spec2('DOM1')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

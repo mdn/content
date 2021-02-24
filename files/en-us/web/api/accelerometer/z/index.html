@@ -13,7 +13,7 @@ tags:
   - Sensors
   - z
 ---
-<div>{{APIRef("Generic Sensor API")}}{{seecompattable}}</div>
+<div>{{APIRef("Generic Sensor API")}}{{SeeCompatTable}}</div>
 
 <p><span class="seoSummary">The <strong><code>z</code></strong> read-only property of the {{domxref("Accelerometer")}} interface returns a double precision integer containing the acceleration of the device along the its z axis. </span></p>
 
@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>zAcceleration</var> = <var>accelerometer</var>.z</pre>
+<pre class="brush: js">var <var>zAcceleration</var> = <var>accelerometer</var>.z</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -31,7 +31,7 @@ tags:
 
 <p>Acceleration is typically read in the {{domxref('Sensor.onreading')}} event callback. In the example below this occurs sixty times a second.</p>
 
-<pre class="brush: js notranslate">let accelerometer = new Accelerometer({frequency: 60});
+<pre class="brush: js">let accelerometer = new Accelerometer({frequency: 60});
 
 accelerometer.addEventListener('reading', e =&gt; {
   console.log("Acceleration along the X-axis " + accelerometer.x);

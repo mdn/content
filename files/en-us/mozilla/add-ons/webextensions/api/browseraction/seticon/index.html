@@ -26,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var settingIcon = browser.browserAction.setIcon(
+<pre class="brush:js">var settingIcon = browser.browserAction.setIcon(
   details         // object
 )
 </pre>
@@ -44,12 +44,12 @@ tags:
 
   <p>Use a dictionary object to specify multiple <code>ImageData</code> objects in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If <code>imageData</code> is a dictionary, the value of each property is an <code>ImageData</code> object, and its name is its size, like this:</p>
 
-  <pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="punctuation token">{</span>
-  <span class="key token">16:</span> <span class="string token">image16</span><span class="punctuation token">,</span>
-  <span class="key token">32:</span> image32
-<span class="punctuation token">}</span></code></pre>
+  <pre class="brush: json line-numbers  language-json">{
+  16: image16,
+  32: image32
+}</pre>
 
-  <p>The browser will choose the image to use depending on the screen's pixel density. See <a href="/en-US/Add-ons/WebExtensions/manifest.json/browser_action#Choosing_icon_sizes">Choosing icon sizes</a> for more information on this.</p>
+  <p>The browser will choose the image to use depending on the screen's pixel density. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes">Choosing icon sizes</a> for more information on this.</p>
   </dd>
   <dt><code>path</code>{{optional_inline}}</dt>
   <dd>
@@ -57,12 +57,12 @@ tags:
 
   <p>Use a dictionary object to specify multiple icon files in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If <code>path</code> is a dictionary, the value of each property is a relative path, and its name is its size, like this:</p>
 
-  <pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="punctuation token">{</span>
-  <span class="key token">16:</span> "path/to/image16.jpg<span class="punctuation token">",</span>
-  <span class="key token">32:</span> "path/to/image32.jpg<span class="punctuation token">"</span>
-<span class="punctuation token">}</span></code></pre>
+  <pre class="brush: json line-numbers  language-json">{
+  16: &quot;path/to/image16.jpg&quot;,
+  32: &quot;path/to/image32.jpg&quot;
+}</pre>
 
-  <p>The browser will choose the image to use depending on the screen's pixel density. See <a href="/en-US/Add-ons/WebExtensions/manifest.json/browser_action#Choosing_icon_sizes">Choosing icon sizes</a> for more information on this.</p>
+  <p>The browser will choose the image to use depending on the screen's pixel density. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes">Choosing icon sizes</a> for more information on this.</p>
   </dd>
   <dt><code>tabId</code>{{optional_inline}}</dt>
   <dd><code>integer</code>. Sets the icon only for the given tab. The icon is reset when the user navigates this tab to a new page.</dd>

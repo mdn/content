@@ -18,8 +18,7 @@ tags:
 
 <p>The <code>matrix3d()</code> function is specified with 16 values. They are described in the column-major order.</p>
 
-<pre
-	class="syntaxbox notranslate">matrix3d(<var>a1</var>, <var>b1</var>, <var>c1</var>, <var>d1</var>, <var>a2</var>, <var>b2</var>, <var>c2</var>, <var>d2</var>, <var>a3</var>, <var>b3</var>, <var>c3</var>, <var>d3</var>, <var>a4</var>, <var>b4</var>, <var>c4</var>, <var>d4</var>)</pre>
+<pre class="brush: css">matrix3d(<var>a1</var>, <var>b1</var>, <var>c1</var>, <var>d1</var>, <var>a2</var>, <var>b2</var>, <var>c2</var>, <var>d2</var>, <var>a3</var>, <var>b3</var>, <var>c3</var>, <var>d3</var>, <var>a4</var>, <var>b4</var>, <var>c4</var>, <var>d4</var>)</pre>
 
 <h3 id="Values">Values</h3>
 
@@ -47,12 +46,12 @@ tags:
 	</thead>
 	<tbody>
 		<tr>
-			<td colspan="2" rowspan="2">This transformation applies to the 3D space and can't be represented on the
+			<td colspan="2">This transformation applies to the 3D space and can't be represented on the
 				plane.</td>
-			<td rowspan="2">A generic 3D <a href="https://en.wikipedia.org/wiki/Affine_transformation">affine
+			<td>A generic 3D <a href="https://en.wikipedia.org/wiki/Affine_transformation">affine
 					transformation</a> can't be represented using a Cartesian-coordinate matrix, as translations are not
 				linear transformations.</td>
-			<td rowspan="2"><math>
+			<td><math>
 					<mfenced>
 						<mtable>
 							<mtr>
@@ -127,7 +126,7 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;section id="example-element" tabindex="0"&gt;
+<pre class="brush: html">&lt;section id="example-element" tabindex="0"&gt;
   &lt;div class="face front"&gt;1&lt;/div&gt;
   &lt;div class="face back"&gt;2&lt;/div&gt;
   &lt;div class="face right"&gt;3&lt;/div&gt;
@@ -139,7 +138,7 @@ tags:
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">#example-element {
+<pre class="brush: css">#example-element {
   width: 100px;
   height: 100px;
   transform-style: preserve-3d;
@@ -204,7 +203,7 @@ tags:
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div class="foo"&gt;
+<pre class="brush: html">&lt;div class="foo"&gt;
 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 Quos quaerat sit soluta, quisquam exercitationem delectus qui unde in facere
 necessitatibus aut quia porro dolorem nesciunt enim, at consequuntur aliquam esse?
@@ -213,7 +212,7 @@ necessitatibus aut quia porro dolorem nesciunt enim, at consequuntur aliquam ess
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   width: 100%;
 }
 body {

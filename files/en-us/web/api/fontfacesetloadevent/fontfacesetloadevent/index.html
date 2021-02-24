@@ -2,56 +2,58 @@
 title: FontFaceSetLoadEvent.FontFaceSetLoadEvent()
 slug: Web/API/FontFaceSetLoadEvent/FontFaceSetLoadEvent
 tags:
-  - API
-  - CSSFontLoading
-  - CSSOM
-  - Constructor
-  - Experimental
-  - FontFaceLoadEvent
-  - Fonts
-  - Reference
+- API
+- CSSFontLoading
+- CSSOM
+- Constructor
+- Experimental
+- FontFaceLoadEvent
+- Fonts
+- Reference
 ---
 <p>{{APIRef("CSS Font Loading API")}}{{SeeCompatTable}}</p>
 
-<p>The <strong><code>FontFaceSetLoadEvent</code></strong> constructor creates a new {{domxref("FontFaceLoadEvent")}} object which is fired whenever a {{domxref("FontFaceSet")}} loads.</p>
+<p>The <strong><code>FontFaceSetLoadEvent</code></strong> constructor creates a new
+  {{domxref("FontFaceLoadEvent")}} object which is fired whenever a
+  {{domxref("FontFaceSet")}} loads.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var fontFaceSetLoadEvent = new FontFaceSetLoadEvent(type[, options])</pre>
+<pre
+  class="brush: js">var fontFaceSetLoadEvent = new FontFaceSetLoadEvent(type[, options])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><em>type</em></dt>
- <dd>The literal value <code>'Type'</code> (quotation marks included).</dd>
- <dt><em>options</em> {{optional_inline}}</dt>
- <dd>Options are as follows:
- <ul>
-  <li><code>fontfaces</code>: An array of {{domxref("FontFace")}} instances.</li>
- </ul>
- </dd>
+  <dt><em>type</em></dt>
+  <dd>The literal value <code>'Type'</code> (quotation marks included).</dd>
+  <dt><em>options</em> {{optional_inline}}</dt>
+  <dd>Options are as follows:
+    <ul>
+      <li><code>fontfaces</code>: An array of {{domxref("FontFace")}} instances.</li>
+    </ul>
+  </dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Font Loading','#dom-fontfacesetloadevent-fontfacesetloadevent','FontFaceSetLoadEvent()')}}</td>
-   <td>{{Spec2('CSS3 Font Loading')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('CSS3 Font
+        Loading','#dom-fontfacesetloadevent-fontfacesetloadevent','FontFaceSetLoadEvent()')}}
+      </td>
+      <td>{{Spec2('CSS3 Font Loading')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.FontFaceSetLoadEvent.FontFaceSetLoadEvent")}}</p>
-</div>

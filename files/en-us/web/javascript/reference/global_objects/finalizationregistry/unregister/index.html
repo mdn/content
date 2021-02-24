@@ -2,26 +2,28 @@
 title: FinalizationRegistry.prototype.unregister()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/unregister
 tags:
-  - FinalizationRegistry
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+- FinalizationRegistry
+- JavaScript
+- Method
+- Prototype
+- Reference
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code>unregister</code> unregisters a target object from a {{jsxref("FinalizationRegistry")}} instance.</p>
+<p>The <code>unregister</code> unregisters a target object from a
+    {{jsxref("FinalizationRegistry")}} instance.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><code><var>registry</var>.unregister(<var>unregisterToken</var>);</code>
+<pre class="brush: js"><code><var>registry</var>.unregister(<var>unregisterToken</var>);</code>
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>unregisterToken</var></code></dt>
- <dd>The token used with the {{jsxref("FinalizationRegistry.prototype.register", "register")}} method when registering the target object.</dd>
+    <dt><code><var>unregisterToken</var></code></dt>
+    <dd>The token used with the {{jsxref("FinalizationRegistry.prototype.register",
+        "register")}} method when registering the target object.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -30,15 +32,19 @@ tags:
 
 <h2 id="Notes">Notes</h2>
 
-<p>When a target object has been reclaimed, it is no longer registered in the registry. There is no need to all <code>unregister</code> in your cleanup callback. Only call <code>unregister</code> if you haven't received a cleanup callback and no longer need to receive one.</p>
+<p>When a target object has been reclaimed, it is no longer registered in the registry.
+    There is no need to all <code>unregister</code> in your cleanup callback. Only call
+    <code>unregister</code> if you haven't received a cleanup callback and no longer need
+    to receive one.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_unregister">Using unregister</h3>
 
-<p>This example shows registering a target object using that same object as the unregister token, then later unregistering it via <code>unregister</code>:</p>
+<p>This example shows registering a target object using that same object as the unregister
+    token, then later unregistering it via <code>unregister</code>:</p>
 
-<pre class="brush: js notranslate">class Thingy {
+<pre class="brush: js">class Thingy {
     #cleanup = label =&gt; {
     //         ^^^^^−−−−− held value
         console.error(
@@ -68,9 +74,10 @@ tags:
 }
 </pre>
 
-<p>This example shows registering a target object using a different object as its unregister token:</p>
+<p>This example shows registering a target object using a different object as its
+    unregister token:</p>
 
-<pre class="brush: js notranslate"> {
+<pre class="brush: js"> {
     //         ^^^^−−−−− held value
         console.error(
             `The \`release\` method was never called for the \`Thingy\` for the file "${file.name}"`
@@ -107,16 +114,17 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WeakRefs', '#sec-finalization-registry.prototype.unregister', 'FinalizationRegistry.prototype.unregister')}}</td>
-  </tr>
- </tbody>
+    <thead>
+        <tr>
+            <th scope="col">Specification</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{SpecName('WeakRefs', '#sec-finalization-registry.prototype.unregister',
+                'FinalizationRegistry.prototype.unregister')}}</td>
+        </tr>
+    </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -126,5 +134,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("FinalizationRegistry")}}</li>
+    <li>{{jsxref("FinalizationRegistry")}}</li>
 </ul>

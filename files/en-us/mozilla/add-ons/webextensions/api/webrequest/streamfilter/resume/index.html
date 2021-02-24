@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js notranslate"><em>StreamFilter</em>.resume()
+<pre class="brush:js"><em>StreamFilter</em>.resume()
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -39,7 +39,7 @@ tags:
 
 <p>This example uses suspend/resume to delay a web request.</p>
 
-<pre class="brush: js notranslate">function listener(details) {
+<pre class="brush: js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
   filter.onstart = event =&gt; {

@@ -40,7 +40,7 @@ tags:
 
 <h3 id="Catching_a_SyntaxError">Catching a SyntaxError</h3>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   eval('hoo bar');
 } catch (e) {
   console.error(e instanceof SyntaxError);
@@ -55,7 +55,7 @@ tags:
 
 <h3 id="Creating_a_SyntaxError">Creating a SyntaxError</h3>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   throw new SyntaxError('Hello', 'someFile.js', 10);
 } catch (e) {
   console.error(e instanceof SyntaxError); // true
@@ -85,10 +85,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("javascript.builtins.SyntaxError")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

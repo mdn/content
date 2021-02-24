@@ -2,19 +2,23 @@
 title: KeyboardEvent.initKeyboardEvent()
 slug: Web/API/KeyboardEvent/initKeyboardEvent
 tags:
-  - API
-  - Deprecated
-  - KeyboardEvent
-  - Method
-  - Reference
+- API
+- Deprecated
+- KeyboardEvent
+- Method
+- Reference
 ---
 <p>{{APIRef("DOM Events")}}{{deprecated_header()}}</p>
 
-<p>The <code><strong>KeyboardEvent.initKeyboardEvent()</strong></code> method initializes the attributes of a keyboard event object. This method was introduced in draft of DOM Level 3 Events, but deprecated in newer draft. Gecko won't support this feature since implementing this method as experimental broke existing web apps (see {{bug(999645)}}). Web applications should use constructor instead of this if it's available.</p>
+<p>The <code><strong>KeyboardEvent.initKeyboardEvent()</strong></code> method initializes
+  the attributes of a keyboard event object. This method was introduced in draft of DOM
+  Level 3 Events, but deprecated in newer draft. Gecko won't support this feature since
+  implementing this method as experimental broke existing web apps (see {{bug(999645)}}).
+  Web applications should use constructor instead of this if it's available.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>kbdEvent</em>.initKeyboardEvent(<em>typeArg</em>, <em>canBubbleArg</em>, <em>cancelableArg</em>,
+<pre class="brush: js"><em>kbdEvent</em>.initKeyboardEvent(<em>typeArg</em>, <em>canBubbleArg</em>, <em>cancelableArg</em>,
                            <em>viewArg</em>, <em>charArg</em>, <em>keyArg</em>,
                            <em>locationArg</em>, <em>modifiersListArg</em>, <em>repeat</em>)
 </pre>
@@ -22,22 +26,26 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><em><code>typeArg</code></em></dt>
- <dd>The type of keyboard event; this will be one of <code>keydown</code>, <code>keypress</code>, or <code>keyup</code>.</dd>
- <dt><em><code>canBubbleArg</code></em></dt>
- <dd>Whether or not the event can bubble.</dd>
- <dt><em><code>cancelableArg</code></em></dt>
- <dd>Whether or not the event can be canceled.</dd>
- <dt><em><code>viewArg</code></em></dt>
- <dd>The {{domxref("WindowProxy")}} it is associated to.</dd>
- <dt><em><code>charArg</code></em></dt>
- <dd>The value of the char attribute.</dd>
- <dt><em><code>keyArg</code></em></dt>
- <dd>The value of the key attribute.</dd>
- <dt><em><code>locationArg</code></em></dt>
- <dd>The value of the location attribute.</dd>
- <dt><em><code>modifiersListArg</code></em></dt>
- <dd>A whitespace-delineated list of modifier keys that should be considered to be active on the event's key. For example, specifying "Control Shift" indicates that the user was holding down the Control and Shift keys when pressing the key described by the event.</dd>
- <dt><em><code>repeatArg</code></em></dt>
- <dd>The value of the repeat attribute.</dd>
+  <dt><em><code>typeArg</code></em></dt>
+  <dd>The type of keyboard event; this will be one of <code>keydown</code>,
+    <code>keypress</code>, or <code>keyup</code>.</dd>
+  <dt><em><code>canBubbleArg</code></em></dt>
+  <dd>Whether or not the event can bubble.</dd>
+  <dt><em><code>cancelableArg</code></em></dt>
+  <dd>Whether or not the event can be canceled.</dd>
+  <dt><em><code>viewArg</code></em></dt>
+  <dd>The {{domxref("WindowProxy")}} it is associated to.</dd>
+  <dt><em><code>charArg</code></em></dt>
+  <dd>The value of the char attribute.</dd>
+  <dt><em><code>keyArg</code></em></dt>
+  <dd>The value of the key attribute.</dd>
+  <dt><em><code>locationArg</code></em></dt>
+  <dd>The value of the location attribute.</dd>
+  <dt><em><code>modifiersListArg</code></em></dt>
+  <dd>A whitespace-delineated list of modifier keys that should be considered to be active
+    on the event's key. For example, specifying "Control Shift" indicates that the user
+    was holding down the Control and Shift keys when pressing the key described by the
+    event.</dd>
+  <dt><em><code>repeatArg</code></em></dt>
+  <dd>The value of the repeat attribute.</dd>
 </dl>

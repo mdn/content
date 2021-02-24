@@ -2,47 +2,57 @@
 title: CanvasRenderingContext2D.arcTo()
 slug: Web/API/CanvasRenderingContext2D/arcTo
 tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
+- API
+- Canvas
+- CanvasRenderingContext2D
+- Method
+- Reference
 ---
 <div>{{APIRef}}</div>
 
-<p>The <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.arcTo()</code></strong> method of the Canvas 2D API adds a circular arc to the current sub-path, using the given control points and radius. The arc is automatically connected to the path's latest point with a straight line, if necessary for the specified parameters.</p>
+<p>The
+  <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.arcTo()</code></strong>
+  method of the Canvas 2D API adds a circular arc to the current sub-path, using the given
+  control points and radius. The arc is automatically connected to the path's latest point
+  with a straight line, if necessary for the specified parameters.</p>
 
 <p>This method is commonly used for making rounded corners.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Be aware that you may get unexpected results when using a relatively large radius: the arc's connecting line will go in whatever direction it must to meet the specified radius.</p>
+  <p><strong>Note:</strong> Be aware that you may get unexpected results when using a
+    relatively large radius: the arc's connecting line will go in whatever direction it
+    must to meet the specified radius.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">void <em>ctx</em>.arcTo(<em>x1</em>, <em>y1</em>, <em>x2</em>, <em>y2</em>, <em>radius</em>);
+<pre class="brush: js">void <em>ctx</em>.arcTo(<em>x1</em>, <em>y1</em>, <em>x2</em>, <em>y2</em>, <em>radius</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>x1</code></dt>
- <dd>The x-axis coordinate of the first control point.</dd>
- <dt><code>y1</code></dt>
- <dd>The y-axis coordinate of the first control point.</dd>
- <dt><code>x2</code></dt>
- <dd>The x-axis coordinate of the second control point.</dd>
- <dt><code>y2</code></dt>
- <dd>The y-axis coordinate of the second control point.</dd>
- <dt><code>radius</code></dt>
- <dd>The arc's radius. Must be non-negative.</dd>
+  <dt><code>x1</code></dt>
+  <dd>The x-axis coordinate of the first control point.</dd>
+  <dt><code>y1</code></dt>
+  <dd>The y-axis coordinate of the first control point.</dd>
+  <dt><code>x2</code></dt>
+  <dd>The x-axis coordinate of the second control point.</dd>
+  <dt><code>y2</code></dt>
+  <dd>The y-axis coordinate of the second control point.</dd>
+  <dt><code>radius</code></dt>
+  <dd>The arc's radius. Must be non-negative.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="How_arcTo_works">How arcTo works</h3>
 
-<p>One way to think about <code>arcTo()</code> is to imagine two straight segments: one from the starting point to a first control point, and another from there to a second control point. Without <code>arcTo()</code>, these two segments would form a sharp corner: <code>arcTo()</code> creates a circular arc that fits this corner and smooths is out. In other words, the arc is tangential to both segments.</p>
+<p>One way to think about <code>arcTo()</code> is to imagine two straight segments: one
+  from the starting point to a first control point, and another from there to a second
+  control point. Without <code>arcTo()</code>, these two segments would form a sharp
+  corner: <code>arcTo()</code> creates a circular arc that fits this corner and smooths is
+  out. In other words, the arc is tangential to both segments.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -85,13 +95,17 @@ ctx.fill();
 
 <h4 id="Result">Result</h4>
 
-<p>In this example, the path created by <code>arcTo()</code> is <strong>thick and black</strong>. <span style="color: gray;">Tangent lines are gray</span>, <span style="color: red;">control points are red</span>, and the <span style="color: blue;">start point is blue</span>.</p>
+<p>In this example, the path created by <code>arcTo()</code> is <strong>thick and
+    black</strong>. <span style="color: gray;">Tangent lines are gray</span>, <span
+    style="color: red;">control points are red</span>, and the <span
+    style="color: blue;">start point is blue</span>.</p>
 
 <p>{{ EmbedLiveSample('How_arcTo_works', 315, 165) }}</p>
 
 <h3 id="Creating_a_rounded_corner">Creating a rounded corner</h3>
 
-<p>This example creates a rounded corner using <code>arcTo()</code>. This is one of the method's most common uses.</p>
+<p>This example creates a rounded corner using <code>arcTo()</code>. This is one of the
+  method's most common uses.</p>
 
 <h4 id="HTML_2">HTML</h4>
 
@@ -100,7 +114,11 @@ ctx.fill();
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<p>The arc begins at the point specified by <code>moveTo()</code>: (230, 20). It is shaped to fit control points at (90, 130) and (20, 20), and has a radius of 50. The <code>lineTo()</code> method connects the arc to (20, 20) with a straight line. Note that the arc's second control point and the point specified by <code>lineTo()</code> are the same, which produces a totally smooth corner.</p>
+<p>The arc begins at the point specified by <code>moveTo()</code>: (230, 20). It is shaped
+  to fit control points at (90, 130) and (20, 20), and has a radius of 50. The
+  <code>lineTo()</code> method connects the arc to (20, 20) with a straight line. Note
+  that the arc's second control point and the point specified by <code>lineTo()</code> are
+  the same, which produces a totally smooth corner.</p>
 
 <pre class="brush: js; highlight:[14]">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
@@ -131,7 +149,10 @@ ctx.stroke();
 
 <h3 id="Result_of_a_large_radius">Result of a large radius</h3>
 
-<p>If you use a relatively large radius, the arc may appear in a place you didn't expect. In this example, the arc's connecting line goes above, instead of below, the coordinate specified by <code>moveTo()</code>. This happens because the radius is too large for the arc to fit entirely below the starting point.</p>
+<p>If you use a relatively large radius, the arc may appear in a place you didn't expect.
+  In this example, the arc's connecting line goes above, instead of below, the coordinate
+  specified by <code>moveTo()</code>. This happens because the radius is too large for the
+  arc to fit entirely below the starting point.</p>
 
 <h4 id="HTML_3">HTML</h4>
 
@@ -156,7 +177,8 @@ ctx.stroke();
 
 <h3 id="Live_demo">Live demo</h3>
 
-<p>More sophisticated demo of the method. You can play around with range input to see how arc changes.</p>
+<p>More sophisticated demo of the method. You can play around with range input to see how
+  arc changes.</p>
 
 <h4 id="HTML_4">HTML</h4>
 
@@ -237,18 +259,19 @@ loop(0);</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-arcto", "CanvasRenderingContext2D.arcTo")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-arcto",
+        "CanvasRenderingContext2D.arcTo")}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -258,5 +281,5 @@ loop(0);</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
+  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
 </ul>

@@ -2,18 +2,23 @@
 title: CSSPrimitiveValue.getRGBColorValue()
 slug: Web/API/CSSPrimitiveValue/getRGBColorValue
 tags:
-  - API
-  - CSSPrimitiveValue
-  - Method
-  - getRGBColorValue
+- API
+- CSSPrimitiveValue
+- Method
+- getRGBColorValue
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <code><strong>getRGBColorValue()</strong></code> method of the {{domxref("CSSPrimitiveValue")}} interface is used to get an RGB color value. If this CSS value doesn't contain a RGB color value, a {{domxref("DOMException")}} is raised. Modification to the corresponding style property can be achieved using the {{domxref("RGBColor")}} interface.</p>
+<p>The <code><strong>getRGBColorValue()</strong></code> method of the
+  {{domxref("CSSPrimitiveValue")}} interface is used to get an RGB color value. If this
+  CSS value doesn't contain a RGB color value, a {{domxref("DOMException")}} is raised.
+  Modification to the corresponding style property can be achieved using the
+  {{domxref("RGBColor")}} interface.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>rgbColorValue</var> = <var>cssPrimitiveValue</var>.getRGBColorValue();</pre>
+<pre
+  class="brush: js">var <var>rgbColorValue</var> = <var>cssPrimitiveValue</var>.getRGBColorValue();</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -22,18 +27,19 @@ tags:
 <h3 id="Exceptions">Exceptions</h3>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col"><strong>Type</strong></th>
-   <th scope="col"><strong>Description</strong></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>DOMException</code></td>
-   <td>An <code>INVALID_ACCESS_ERR</code> is raised if the attached property can't return an RGB color value (i.e. this is not <code>CSS_RGBCOLOR</code>).</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col"><strong>Type</strong></th>
+      <th scope="col"><strong>Description</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>DOMException</code></td>
+      <td>An <code>INVALID_ACCESS_ERR</code> is raised if the attached property can't
+        return an RGB color value (i.e. this is not <code>CSS_RGBCOLOR</code>).</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Example">Example</h2>
@@ -45,23 +51,21 @@ console.log(cssValue.getRGBColorValue());</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSPrimitiveValue-getRGBColorValue', 'CSSPrimitiveValue.getRGBColorValue')}}</td>
-   <td>{{Spec2('DOM2 Style')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSPrimitiveValue-getRGBColorValue',
+        'CSSPrimitiveValue.getRGBColorValue')}}</td>
+      <td>{{Spec2('DOM2 Style')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.CSSPrimitiveValue.getRGBColorValue")}}</p>
-</div>

@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <em>currentTime</em> = <em>AnimationTimeline</em>.currentTime;</pre>
+<pre class="brush: js">var <em>currentTime</em> = <em>AnimationTimeline</em>.currentTime;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -30,7 +30,7 @@ tags:
 <p>To offer protection against timing attacks and fingerprinting, the precision of <code>animationTimeline.currentTime</code> might get rounded depending on browser settings.<br>
  In Firefox, the <code>privacy.reduceTimerPrecision</code> preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.</p>
 
-<pre class="brush: js notranslate">// reduced time precision (2ms) in Firefox 60
+<pre class="brush: js">// reduced time precision (2ms) in Firefox 60
 animationTimeline.currentTime;
 // 23.404
 // 24.192

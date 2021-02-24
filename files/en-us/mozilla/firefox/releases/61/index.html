@@ -17,19 +17,19 @@ tags:
 <ul>
  <li>The new-look Console UI has been enabled by default for the <a href="/en-US/docs/Tools/Browser_Console">Browser Console</a> &amp; <a href="/en-US/docs/Tools/Browser_Toolbox">Browser Toolbox</a> ({{bug(1362023)}}/{{bug(1347127)}}). The old UI has been removed.</li>
  <li>In the <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a>, clicking <em>Open in New Tab</em> in a <code>POST</code> request's context menu correctly resends the request with the expected <code>POST</code> parameters ({{bug(1407515)}}).</li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#CSS_variable_autocompletion">CSS variables now autocomplete</a> with color swatches, allowing you to see exactly what color value is stored in each variable ({{bug(1451211)}}).
+ <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#css_variable_autocompletion">CSS variables now autocomplete</a> with color swatches, allowing you to see exactly what color value is stored in each variable ({{bug(1451211)}}).
   <ul>
    <li>In addition, hovering over a CSS variable name brings up a tooltip showing what color value is stored in that variable ({{bug(1431949)}}).</li>
   </ul>
  </li>
  <li>The main toolbox's toolbar has been redesigned. Highlights are better responsiveness for narrow and wide viewports with a new overflow dropdown, cleaned up meatball menu, and sortable tabs to let you move up your most used panels ({{bug(1226272)}}).</li>
  <li>The <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a>'s toolbar now includes a dropdown menu providing easier access to the 'Copy All As HAR' and 'Save All As HAR' commands, as well as an 'Import...' option ({{bug(1403530)}}).</li>
- <li>The Network Monitor's details pane now includes a <a href="/en-US/docs/Tools/Network_Monitor#Cache">Cache tab</a>, which displays information about previously cached resources ({{bug(859051)}}).</li>
+ <li>The Network Monitor's details pane now includes a <a href="/en-US/docs/Tools/Network_Monitor#cache">Cache tab</a>, which displays information about previously cached resources ({{bug(859051)}}).</li>
  <li>The Network Monitor's main toolbar got redesigned to be more responsive on smaller viewports and visually aligned with the Console.</li>
- <li>The Network Monitor's main toolbar now includes a <a href="/en-US/docs/Tools/Network_Monitor#Throttling">Throttling</a> dropdown which was only available in the <a href="/en-US/docs/Tools/Responsive_Design_Mode#Network_throttling">Responsive Design Mode</a> before. It allows you to throttle your network speed to emulate various different network speed conditions ({{bug(1349559)}}).</li>
+ <li>The Network Monitor's main toolbar now includes a <a href="/en-US/docs/Tools/Network_Monitor#throttling">Throttling</a> dropdown which was only available in the <a href="/en-US/docs/Tools/Responsive_Design_Mode#network_throttling">Responsive Design Mode</a> before. It allows you to throttle your network speed to emulate various different network speed conditions ({{bug(1349559)}}).</li>
  <li>The Browser Console now hides CSS errors by default for readability and performance reasons ({{bug(1452143)}}).</li>
  <li>The Browser Console now includes a command to restart the browser. Use <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>R</kbd> (Windows, Linux) or <kbd>Cmd</kbd> + <kbd>Alt</kbd> + <kbd>R</kbd> (Mac) to restart the browser with the same tabs open as before the restart.</li>
- <li>DevTools' web extension APIs <code><a href="/en-US/docs/">devtools.network.onRequestFinished</a></code> ({{bug(1311171)}}) and <code><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/devtools.network/getHAR">devtools.network.getHAR</a></code> ({{bug(1311177)}}) got implemented (enabling extensions like <a href="/en-US/docs/">har-export-trigger</a>).</li>
+ <li>DevTools' web extension APIs <code><a href="/en-US/docs/">devtools.network.onRequestFinished</a></code> ({{bug(1311171)}}) and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/getHAR">devtools.network.getHAR</a></code> ({{bug(1311177)}}) got implemented (enabling extensions like <a href="/en-US/docs/">har-export-trigger</a>).</li>
  <li>The Firebug theme got removed since the transition of Firebug users into DevTools is complete ({{bug(1378108)}}).</li>
 </ul>
 
@@ -42,12 +42,12 @@ tags:
 <ul>
  <li>CSS parsing has been parallelized ({{bug(1346988)}}).</li>
  <li>Support for {{cssxref("font-variation-settings")}} and {{cssxref("font-optical-sizing")}} has been enabled by default ({{bug(1447163)}}).</li>
- <li>The <code>grid-gap</code>, <code>grid-row-gap</code>, and <code>grid-column-gap</code> properties have been renamed to {{cssxref("gap")}}, {{cssxref("row-gap")}}, and {{cssxref("column-gap")}}, as they are no longer grid-specific ({{bug(1398482)}}). See <a href="/en-US/docs/Web/CSS/CSS_Box_Alignment#Gaps_between_boxes">Box alignment; Gaps between boxes</a> for additional details. The old names have been kept as aliases for web compatibility purposes.</li>
+ <li>The <code>grid-gap</code>, <code>grid-row-gap</code>, and <code>grid-column-gap</code> properties have been renamed to {{cssxref("gap")}}, {{cssxref("row-gap")}}, and {{cssxref("column-gap")}}, as they are no longer grid-specific ({{bug(1398482)}}). See <a href="/en-US/docs/Web/CSS/CSS_Box_Alignment#gaps_between_boxes">Box alignment; Gaps between boxes</a> for additional details. The old names have been kept as aliases for web compatibility purposes.</li>
  <li>The {{cssxref("flex-basis")}} <code>content</code> value is now supported ({{bug(1105111)}}).</li>
  <li>Percentage values of {{cssxref("column-gap")}} are now supported in <a href="/en-US/docs/Web/CSS/CSS_Columns">CSS multi-column layout</a> ({{bug(1398537)}}).</li>
  <li>The CSS {{cssxref(":host")}} pseudo-class is now supported; this selects a custom element from inside its shadow DOM ({{bug(992245)}}).</li>
  <li>{{cssxref("overflow")}} now accepts two-value syntax ({{bug(1453148)}}).</li>
- <li>Flex items that are sized according to their content are now sized using <code>max-content</code>, not <code>fit-content</code> ({{bug(1282821)}}). See the <a href="/en-US/docs/Web/CSS/width#Values"><code>width</code> value definitions</a> for more details of these values.</li>
+ <li>Flex items that are sized according to their content are now sized using <code>max-content</code>, not <code>fit-content</code> ({{bug(1282821)}}). See the <a href="/en-US/docs/Web/CSS/width#values"><code>width</code> value definitions</a> for more details of these values.</li>
  <li>{{cssxref("font-weight")}}, {{cssxref("font-stretch")}} and {{cssxref("font-style")}} now support additional values as defined by <a href="https://drafts.csswg.org/css-fonts-4/">CSS Fonts level 4</a> ({{bug(1436048)}}):
   <ul>
    <li>{{cssxref("font-weight")}} now accepts a floating-point value between 1 and 1000 inclusive.</li>
@@ -220,4 +220,3 @@ tags:
 <h2 id="Older_versions">Older versions</h2>
 
 <p>{{Firefox_for_developers(60)}}</p>
-

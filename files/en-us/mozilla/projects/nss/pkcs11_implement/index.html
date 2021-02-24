@@ -146,14 +146,13 @@ The NSS expects different kinds of PKCS #11 support from four different kinds of
 <th> External key distribution tokens </th><th> Signing tokens </th><th> Signing and decryption tokens </th><th> Multipurpose tokens
 </th></tr>
 <tr>
-<td> </td><td> </td><td> </td><td> C_Encrypt
+<td></td><td></td><td></td><td> C_Encrypt
 </td></tr>
 <tr>
 <td> C_Decrypt
 <ul><li>CKM_RSA_PKCS </li><li>CKM_RSA_X_509 (SSL 2.0 server only)
 </li></ul>
-</td><td>
-</td><td> C_Decrypt
+</td><td></td><td> C_Decrypt
 <ul><li>CKM_RSA_PKCS </li><li>CKM_RSA_X_509 (SSL 2.0 server only)
 </li></ul>
 </td><td> C_Decrypt
@@ -172,25 +171,25 @@ The NSS expects different kinds of PKCS #11 support from four different kinds of
 </li></ul>
 </td></tr>
 <tr>
-<td> </td><td> </td><td> </td><td> C_Verify
+<td></td><td></td><td></td><td> C_Verify
 <ul><li>CKM_RSA_PKCS
 </li><li>CKM_DSA
 </li></ul>
 </td></tr>
 <tr>
-<td> </td><td> </td><td> </td><td> C_VerifyRecover
+<td></td><td></td><td></td><td> C_VerifyRecover
 <ul><li>CKM_RSA_PKCS
 </li></ul>
 </td></tr>
 <tr>
-<td> </td><td> </td><td> </td><td> C_GenerateKey
+<td></td><td></td><td></td><td> C_GenerateKey
 </td></tr>
 <tr>
 <td>C_GenerateKeyPair (if token is read/write)</td><td>C_GenerateKeyPair (if token is read/write)
 </td><td>C_GenerateKeyPair (if token is read/write)</td><td>C_GenerateKeyPair (if token is read/write)
 </td></tr>
 <tr>
-<td> </td><td> </td><td> </td><td> C_WrapKey
+<td></td><td></td><td></td><td> C_WrapKey
 </td></tr>
 <tr>
 <td>C_UnwrapKey
@@ -207,13 +206,13 @@ The NSS expects different kinds of PKCS #11 support from four different kinds of
 </li></ul>
 </td></tr>
 <tr>
-<td> </td><td> </td><td> </td><td> C_GenerateRandom
+<td></td><td></td><td></td><td> C_GenerateRandom
 </td></tr>
 <tr>
-<td> </td><td> </td><td> </td><td> C_Save (when token runs out of sessions)
+<td></td><td></td><td></td><td> C_Save (when token runs out of sessions)
 </td></tr>
 <tr>
-<td> </td><td> </td><td> </td><td> C_Restore (when token runs out of sessions)
+<td></td><td></td><td></td><td> C_Restore (when token runs out of sessions)
 </td></tr></tbody></table>
 <p>External key tokens need to support C_Decrypt and C_Sign. If they have a read/write value and can't generate a key pair, NSS uses its own C_GenerateKeyPair and loads the key with C_CreateObject.
 </p><p>Signing tokens just need to support C_Sign and possibly C_GenerateKeyPair.

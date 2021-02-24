@@ -2,47 +2,59 @@
 title: GlobalEventHandlers.onanimationiteration
 slug: Web/API/GlobalEventHandlers/onanimationiteration
 tags:
-  - API
-  - Animation
-  - CSS
-  - CSS Animations
-  - CSS Transitions
-  - Event Handler
-  - Experimental
-  - GlobalEventHandlers
-  - Property
-  - Reference
-  - Transitions
-  - Web Animations
-  - animationiteration
-  - onanimationiteration
-  - web animations api
+- API
+- Animation
+- CSS
+- CSS Animations
+- CSS Transitions
+- Event Handler
+- Experimental
+- GlobalEventHandlers
+- Property
+- Reference
+- Transitions
+- Web Animations
+- animationiteration
+- onanimationiteration
+- web animations api
 ---
 <div>{{APIRef("CSS3 Animations")}} {{Draft}}</div>
 
-<p>The <code><strong>onanimationiteration</strong></code> property of the {{domxref("GlobalEventHandlers")}} mixin is the {{domxref("EventHandler")}} for processing {{event("animationiteration")}} events.</p>
+<p>The <code><strong>onanimationiteration</strong></code> property of the
+  {{domxref("GlobalEventHandlers")}} mixin is the {{domxref("EventHandler")}} for
+  processing {{event("animationiteration")}} events.</p>
 
-<p>The <code>animationiteration</code> event is sent when a <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS animation</a> reaches the end of an iteration. An iteration ends when a single pass through the sequence of animation instructions is completed by executing the last animation step.</p>
+<p>The <code>animationiteration</code> event is sent when a <a
+    href="/en-US/docs/Web/CSS/CSS_Animations">CSS animation</a> reaches the end of an
+  iteration. An iteration ends when a single pass through the sequence of animation
+  instructions is completed by executing the last animation step.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>animIterationHandler</em> = <em>target</em>.onanimationiteration;
+<pre class="brush: js">var <em>animIterationHandler</em> = <em>target</em>.onanimationiteration;
 
 <em>target</em>.onanimationiteration = <em>{{jsxref("Function")}}</em>
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{jsxref("Function")}} to be called when an {{event("animationiteration")}} event occurs indicating that a CSS animation has reached the end of an iteration while running on the <em><code>target</code></em>, where the target object is an HTML element ({{domxref("HTMLElement")}}), document ({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as input a single parameter: an {{domxref("AnimationEvent")}} object describing the event which occurred.</p>
+<p>A {{jsxref("Function")}} to be called when an {{event("animationiteration")}} event
+  occurs indicating that a CSS animation has reached the end of an iteration while running
+  on the <em><code>target</code></em>, where the target object is an HTML element
+  ({{domxref("HTMLElement")}}), document ({{domxref("Document")}}), or window
+  ({{domxref("Window")}}). The function receives as input a single parameter: an
+  {{domxref("AnimationEvent")}} object describing the event which occurred.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>Let's create an animation which automatically pauses at the end of each iteration, allowing the user to choose whether or not to start the next iteration. Much of this code is the same as in other examples of animation events, so it may look familiar.</p>
+<p>Let's create an animation which automatically pauses at the end of each iteration,
+  allowing the user to choose whether or not to start the next iteration. Much of this
+  code is the same as in other examples of animation events, so it may look familiar.</p>
 
 <div class="hidden">
-<h3 id="HTML">HTML</h3>
+  <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html">&lt;div class="main"&gt;
+  <pre class="brush: html">&lt;div class="main"&gt;
   &lt;div id="box"&gt;
     &lt;div id="text"&gt;Box&lt;/div&gt;
   &lt;/div&gt;
@@ -56,7 +68,7 @@ tags:
 <h3 id="CSS">CSS</h3>
 
 <div class="hidden">
-<pre class="brush: css">:root {
+  <pre class="brush: css">:root {
   --boxwidth:50px;
 }
 
@@ -92,7 +104,11 @@ tags:
 </pre>
 </div>
 
-<p>Leaving out some bits of the CSS that don't matter for the discussion here, let's take a look at the styles for the box that we're animating. First is the box itself. We set its size, position, color, and layout. Note that there's nothing there about animation. That's because we don't want the box to start animating right away. We'll add the {{cssxref("animation")}} style later to start animating the box.</p>
+<p>Leaving out some bits of the CSS that don't matter for the discussion here, let's take
+  a look at the styles for the box that we're animating. First is the box itself. We set
+  its size, position, color, and layout. Note that there's nothing there about animation.
+  That's because we don't want the box to start animating right away. We'll add the
+  {{cssxref("animation")}} style later to start animating the box.</p>
 
 <pre class="brush: css">#box {
   width: var(--boxwidth);
@@ -109,7 +125,8 @@ tags:
 }
 </pre>
 
-<p>The animation's keyframes are defined next; they describe an animation which causes the box to migrate from the top-left corner of the container to the bottom-right corner.</p>
+<p>The animation's keyframes are defined next; they describe an animation which causes the
+  box to migrate from the top-left corner of the container to the bottom-right corner.</p>
 
 <pre class="brush: css">@keyframes slideBox {
   from {
@@ -125,7 +142,8 @@ tags:
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<p>Some JavaScript code will need to be written to handle the click on the button to start the next iteration. Let's have a look.</p>
+<p>Some JavaScript code will need to be written to handle the click on the button to start
+  the next iteration. Let's have a look.</p>
 
 <pre class="brush: js">var box = document.getElementById("box");
 var iterationCounter = 0;
@@ -136,9 +154,15 @@ box.onanimationiteration = function(event) {
 };
 </pre>
 
-<p>This sets up two global variables: <code>box</code>, which references the <code>"box"</code> element that we're animating, and <code>iterationCounter</code>, which is initially zero, which indicates how many iterations of the animation have occurred.</p>
+<p>This sets up two global variables: <code>box</code>, which references the
+  <code>"box"</code> element that we're animating, and <code>iterationCounter</code>,
+  which is initially zero, which indicates how many iterations of the animation have
+  occurred.</p>
 
-<p>The onanimationiteration event handler is then set up. It sets the box's {{cssxref("animation-play-state")}} to "paused", then updates the text displayed in the button to indicate that clicking the button will start playing the next iteration of theanimation.</p>
+<p>The onanimationiteration event handler is then set up. It sets the box's
+  {{cssxref("animation-play-state")}} to "paused", then updates the text displayed in the
+  button to indicate that clicking the button will start playing the next iteration of
+  the animation.</p>
 
 <p>Finally, we set up a handler for a click on the button that runs the animation:</p>
 
@@ -147,7 +171,8 @@ box.onanimationiteration = function(event) {
   iterationCounter++;
 }, false);</pre>
 
-<p>This sets the box element's {{cssxref("animation-play-state")}} to "running" and increments the iteration counter. That's all there is to it!</p>
+<p>This sets the box element's {{cssxref("animation-play-state")}} to "running" and
+  increments the iteration counter. That's all there is to it!</p>
 
 <h3 id="Result">Result</h3>
 
@@ -155,23 +180,27 @@ box.onanimationiteration = function(event) {
 
 <p>{{ EmbedLiveSample('Example', 500, 400) }}</p>
 
-<p>Each time the box reaches the opposing corner, it stops, with the button reflecting which iteration number is up next, until you click the button to run the next iteration.</p>
+<p>Each time the box reaches the opposing corner, it stops, with the button reflecting
+  which iteration number is up next, until you click the button to run the next iteration.
+</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Animations','#eventdef-animationevent-animationiteration','onanimationiteration')}}</td>
-   <td>{{Spec2('CSS3 Animations')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('CSS3
+        Animations','#eventdef-animationevent-animationiteration','onanimationiteration')}}
+      </td>
+      <td>{{Spec2('CSS3 Animations')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -181,6 +210,6 @@ box.onanimationiteration = function(event) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{event("animationiteration")}} event, which triggers this event handler</li>
- <li>{{domxref("AnimationEvent")}}</li>
+  <li>The {{event("animationiteration")}} event, which triggers this event handler</li>
+  <li>{{domxref("AnimationEvent")}}</li>
 </ul>

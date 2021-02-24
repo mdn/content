@@ -2,30 +2,39 @@
 title: PublicKeyCredential.rawId
 slug: Web/API/PublicKeyCredential/rawId
 tags:
-  - API
-  - Property
-  - PublicKeyCredential
-  - Reference
-  - Web Authentication API
-  - WebAuthn
+- API
+- Property
+- PublicKeyCredential
+- Reference
+- Web Authentication API
+- WebAuthn
 ---
 <div>{{APIRef("Web Authentication API")}}{{securecontext_header}}</div>
 
-<p>The <strong><code>rawId</code></strong> read-only property of the {{domxref("PublicKeyCredential")}} interface is an {{jsxref("ArrayBuffer")}} object containing the identifier of the credentials.</p>
+<p>The <strong><code>rawId</code></strong> read-only property of the
+  {{domxref("PublicKeyCredential")}} interface is an {{jsxref("ArrayBuffer")}} object
+  containing the identifier of the credentials.</p>
 
-<p>The {{domxref("PublicKeyCredential.id")}} property is a <a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64url encoded</a> version of this identifier.</p>
+<p>The {{domxref("PublicKeyCredential.id")}} property is a <a
+    href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64url
+    encoded</a> version of this identifier.</p>
 
 <div class="note">
-<p><strong>Note:</strong> This property may only be used in top-level contexts and will not be available in an {{HTMLElement("iframe")}} for example.</p>
+  <p><strong>Note:</strong> This property may only be used in top-level contexts and will
+    not be available in an {{HTMLElement("iframe")}} for example.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>rawId</var> = <var>publicKeyCredential</var>.rawId</pre>
+<pre
+  class="brush: js"><var>rawId</var> = <var>publicKeyCredential</var>.rawId</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{jsxref("ArrayBuffer")}} containing the identifier of the credentials. This identifier is expected to be globally unique and is appointed for the current <code>PublicKeyCredential</code> and its associated {{domxref("AuthenticatorAssertionResponse")}}.</p>
+<p>A {{jsxref("ArrayBuffer")}} containing the identifier of the credentials. This
+  identifier is expected to be globally unique and is appointed for the current
+  <code>PublicKeyCredential</code> and its associated
+  {{domxref("AuthenticatorAssertionResponse")}}.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -60,20 +69,20 @@ navigator.credentials.create({  publickey: options })
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebAuthn','#dom-publickeycredential-rawid','rawId')}}</td>
-   <td>{{Spec2('WebAuthn')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('WebAuthn','#dom-publickeycredential-rawid','rawId')}}</td>
+      <td>{{Spec2('WebAuthn')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

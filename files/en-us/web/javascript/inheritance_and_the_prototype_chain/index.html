@@ -32,7 +32,7 @@ tags:
 
 <p>Here is what happens when trying to access a property:</p>
 
-<pre class="brush: js notranslate">// Let's create an object o from function f with its own properties a and b:
+<pre class="brush: js">// Let's create an object o from function f with its own properties a and b:
 let f = function () {
    this.a = 1;
    this.b = 2;
@@ -82,7 +82,7 @@ console.log(o.d); // undefined
 
 <p>When an inherited function is executed, the value of <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> points to the inheriting object, not to the prototype object where the function is an own property.</p>
 
-<pre class="brush: js notranslate">var o = {
+<pre class="brush: js">var o = {
   a: 2,
   m: function() {
     return this.a + 1;
@@ -109,7 +109,7 @@ console.log(p.m()); // 5
 
 <p>In JavaScript, as mentioned above, functions are able to have properties. All functions have a special property named <code>prototype</code>. Please note that the code below is free-standing (it is safe to assume there is no other JavaScript on the webpage other than the below code). For the best learning experience, it is highly recommended that you open a console, navigate to the "console" tab, copy-and-paste in the below JavaScript code, and run it by pressing the Enter/Return key. (The console is included in most web browser's Developer Tools. More information is available for <a href="/en-US/docs/Tools">Firefox Developer Tools</a>, <a href="https://developers.google.com/web/tools/chrome-devtools/">Chrome DevTools</a>, and <a href="https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide">Edge DevTools</a>.)</p>
 
-<pre class="brush: js notranslate">function doSomething(){}
+<pre class="brush: js">function doSomething(){}
 console.log( doSomething.prototype );
 //  It does not matter how you declare the function, a
 //  function in JavaScript will always have a default
@@ -121,7 +121,7 @@ console.log( doSomething.prototype );
 
 <p>As seen above, <code>doSomething()</code> has a default <code>prototype</code> property, as demonstrated by the console. After running this code, the console should have displayed an object that looks similar to this.</p>
 
-<pre class="brush: js notranslate">{
+<pre class="brush: js">{
     constructor: ƒ doSomething(),
     __proto__: {
         constructor: ƒ Object(),
@@ -136,13 +136,13 @@ console.log( doSomething.prototype );
 
 <p>We can add properties to the prototype of <code>doSomething()</code>, as shown below.</p>
 
-<pre class="brush: js notranslate">function doSomething(){}
+<pre class="brush: js">function doSomething(){}
 doSomething.prototype.foo = "bar";
 console.log( doSomething.prototype );</pre>
 
 <p>This results in:</p>
 
-<pre class="brush: js notranslate">{
+<pre class="brush: js">{
     foo: "bar",
     constructor: ƒ doSomething(),
     __proto__: {
@@ -161,7 +161,7 @@ console.log( doSomething.prototype );</pre>
 
 <p>Try the following code:</p>
 
-<pre class="brush: js notranslate">function doSomething(){}
+<pre class="brush: js">function doSomething(){}
 doSomething.prototype.foo = "bar"; // add a property onto the prototype
 var doSomeInstancing = new doSomething();
 doSomeInstancing.prop = "some value"; // add a property onto the object
@@ -169,7 +169,7 @@ console.log( doSomeInstancing );</pre>
 
 <p>This results in an output similar to the following:</p>
 
-<pre class="brush: js notranslate">{
+<pre class="brush: js">{
     prop: "some value",
     __proto__: {
         foo: "bar",
@@ -196,7 +196,7 @@ console.log( doSomeInstancing );</pre>
 
 <p>Let's try entering some more code into the console:</p>
 
-<pre class="brush: js notranslate">function doSomething(){}
+<pre class="brush: js">function doSomething(){}
 doSomething.prototype.foo = "bar";
 var doSomeInstancing = new doSomething();
 doSomeInstancing.prop = "some value";
@@ -209,7 +209,7 @@ console.log("doSomething.prototype.foo:  " + doSomething.prototype.foo);</pre>
 
 <p>This results in the following:</p>
 
-<pre class="brush: js notranslate">doSomeInstancing.prop:      some value
+<pre class="brush: js">doSomeInstancing.prop:      some value
 doSomeInstancing.foo:       bar
 doSomething.prop:           undefined
 doSomething.foo:            undefined
@@ -220,7 +220,7 @@ doSomething.prototype.foo:  bar</pre>
 
 <h3 id="Objects_created_with_syntax_constructs">Objects created with syntax constructs</h3>
 
-<pre class="brush: js notranslate">var o = {a: 1};
+<pre class="brush: js">var o = {a: 1};
 
 // The newly created object o has Object.prototype as its [[Prototype]]
 // o has no own property named 'hasOwnProperty'
@@ -249,7 +249,7 @@ function f() {
 
 <p>A "constructor" in JavaScript is "just" a function that happens to be called with the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new operator</a>.</p>
 
-<pre class="brush: js notranslate">function Graph() {
+<pre class="brush: js">function Graph() {
   this.vertices = [];
   this.edges = [];
 }
@@ -269,7 +269,7 @@ var g = new Graph();
 
 <p>ECMAScript 5 introduced a new method: {{jsxref("Object.create()")}}. Calling this method creates a new object. The prototype of this object is the first argument of the function:</p>
 
-<pre class="brush: js notranslate">var a = {a: 1};
+<pre class="brush: js">var a = {a: 1};
 // a ---&gt; Object.prototype ---&gt; null
 
 var b = Object.create(a);
@@ -289,7 +289,7 @@ console.log(d.hasOwnProperty);
 
 <p>Using <code>Object.create</code> of another object demonstrates prototypical inheritance with the <code>delete</code> operation:</p>
 
-<pre class="brush: js notranslate">var a = {a: 1};
+<pre class="brush: js">var a = {a: 1};
 
 var b = Object.create(a);
 
@@ -300,14 +300,14 @@ console.log(a.a); // print 1
 console.log(b.a); // print 5
 delete b.a;
 console.log(a.a); // print 1
-console.log(b.a); // print 1(b.a value 5 is deleted but it showing value from its prototype chain)
-delete a.a;       // This can also be done via 'delete b.__proto__.a'
+console.log(b.a); // print 1 (b.a value 5 is deleted but it showing value from its prototype chain)
+delete a.a;       // This can also be done via 'delete Object.getPrototypeOf(b).a'
 console.log(a.a); // print undefined
 console.log(b.a); // print undefined</pre>
 
 <p>The <code>new</code> operator has a shorter chain in this example:</p>
 
-<pre class="brush: js notranslate">function Graph() {
+<pre class="brush: js">function Graph() {
   this.vertices = [4,4];
 }
 
@@ -323,7 +323,7 @@ console.log(g.vertices); // print undefined
 
 <p>ECMAScript 2015 introduced a new set of keywords implementing <a href="/en-US/docs/Web/JavaScript/Reference/Classes">classes</a>. The new keywords include {{jsxref("Statements/class", "class")}}, {{jsxref("Classes/constructor", "constructor")}}, {{jsxref("Classes/static", "static")}}, {{jsxref("Classes/extends", "extends")}}, and {{jsxref("Operators/super", "super")}}.</p>
 
-<pre class="brush: js notranslate">'use strict';
+<pre class="brush: js">'use strict';
 
 class Polygon {
   constructor(height, width) {
@@ -354,7 +354,7 @@ var square = new Square(2);
 
 <p>Also, when iterating over the properties of an object, <strong>every</strong> enumerable property that is on the prototype chain will be enumerated. To check whether an object has a property defined on <em>itself</em> and not somewhere on its prototype chain, it is necessary to use the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"><code>hasOwnProperty</code></a> method which all objects inherit from <code>Object.prototype</code>. To give you a concrete example, let's take the above graph example code to illustrate it:</p>
 
-<pre class="brush: js notranslate">console.log(g.hasOwnProperty('vertices'));
+<pre class="brush: js">console.log(g.hasOwnProperty('vertices'));
 // true
 
 console.log(g.hasOwnProperty('nope'));
@@ -363,7 +363,7 @@ console.log(g.hasOwnProperty('nope'));
 console.log(g.hasOwnProperty('addVertex'));
 // false
 
-console.log(g.__proto__.hasOwnProperty('addVertex'));
+console.log(Object.getPrototypeOf(g).hasOwnProperty('addVertex'));
 // true
 </pre>
 
@@ -394,7 +394,7 @@ console.log(g.__proto__.hasOwnProperty('addVertex'));
 		<tr>
 			<td>New-initialization</td>
 			<td style="vertical-align: top;">
-			<pre class="brush: js notranslate">
+			<pre class="brush: js">
 function foo(){}
 foo.prototype = {
   foo_prop: "foo val"
@@ -414,7 +414,7 @@ console.log(inst.bar_prop);
 		<tr>
 			<td>Object.create</td>
 			<td style="vertical-align: top;">
-			<pre class="brush: js notranslate">
+			<pre class="brush: js">
 function foo(){}
 foo.prototype = {
   foo_prop: "foo val"
@@ -430,7 +430,7 @@ console.log(inst.foo_prop);
 console.log(inst.bar_prop);
 </pre>
 
-			<pre class="brush: js notranslate">
+			<pre class="brush: js">
 function foo(){}
 foo.prototype = {
   foo_prop: "foo val"
@@ -457,7 +457,7 @@ console.log(inst.bar_prop)</pre>
 			<p>Object.setPrototypeOf</p>
 			</td>
 			<td style="vertical-align: top;">
-			<pre class="brush: js notranslate">
+			<pre class="brush: js">
 function foo(){}
 foo.prototype = {
   foo_prop: "foo val"
@@ -475,7 +475,7 @@ console.log(inst.foo_prop);
 console.log(inst.bar_prop);
 </pre>
 
-			<pre class="brush: js notranslate">
+			<pre class="brush: js">
 function foo(){}
 foo.prototype = {
   foo_prop: "foo val"
@@ -497,7 +497,7 @@ console.log(inst.bar_prop)</pre>
 		<tr>
 			<td>__proto__</td>
 			<td style="vertical-align: top;">
-			<pre class="brush: js notranslate">
+			<pre class="brush: js">
 function foo(){}
 foo.prototype = {
   foo_prop: "foo val"
@@ -513,7 +513,7 @@ console.log(inst.foo_prop);
 console.log(inst.bar_prop);
 </pre>
 
-			<pre class="brush: js notranslate">
+			<pre class="brush: js">
 var inst = {
   __proto__: {
     bar_prop: "bar val",
@@ -546,17 +546,17 @@ console.log(inst.bar_prop)</pre>
 
 <p>So, when you call</p>
 
-<pre class="brush: js notranslate">var o = new Foo();</pre>
+<pre class="brush: js">var o = new Foo();</pre>
 
 <p>JavaScript actually just does</p>
 
-<pre class="brush: js notranslate">var o = new Object();
+<pre class="brush: js">var o = new Object();
 o.[[Prototype]] = Foo.prototype;
 Foo.call(o);</pre>
 
 <p>(or something like that) and when you later do</p>
 
-<pre class="brush: js notranslate">o.someProp;</pre>
+<pre class="brush: js">o.someProp;</pre>
 
 <p>it checks whether <code>o</code> has a property <code>someProp</code>. If not, it checks <code>Object.getPrototypeOf(o).someProp</code>, and if that doesn't exist it checks <code>Object.getPrototypeOf(Object.getPrototypeOf(o)).someProp</code>, and so on.</p>
 

@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var gettingTitle = browser.browserAction.getTitle(
+<pre class="brush:js">var gettingTitle = browser.browserAction.getTitle(
   details               // object
 )
 </pre>
@@ -61,18 +61,18 @@ tags:
 
 <p>This code switches the title between "this" and "that" each time the user clicks the browser action:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">toggleTitle</span><span class="punctuation token">(</span>title<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">if</span> <span class="punctuation token">(</span>title <span class="operator token">==</span> <span class="string token">"this"</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    browser<span class="punctuation token">.</span>browserAction<span class="punctuation token">.</span><span class="function token">setTitle</span><span class="punctuation token">(</span><span class="punctuation token">{</span>title<span class="punctuation token">:</span> <span class="string token">"that"</span><span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
-    browser<span class="punctuation token">.</span>browserAction<span class="punctuation token">.</span><span class="function token">setTitle</span><span class="punctuation token">(</span><span class="punctuation token">{</span>title<span class="punctuation token">:</span> <span class="string token">"this"</span><span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span>
+<pre class="brush: js line-numbers language-js">function toggleTitle(title) {
+  if (title == &quot;this&quot;) {
+    browser.browserAction.setTitle({title: &quot;that&quot;});
+  } else {
+    browser.browserAction.setTitle({title: &quot;this&quot;});
+  }
+}
 
-browser<span class="punctuation token">.</span>browserAction<span class="punctuation token">.</span>onClicked<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> gettingTitle <span class="operator token">=</span> browser<span class="punctuation token">.</span>browserAction<span class="punctuation token">.</span><span class="function token">getTitle</span><span class="punctuation token">(</span><span class="punctuation token">{</span><span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  gettingTitle<span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span>toggleTitle<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+browser.browserAction.onClicked.addListener(() =&gt; {
+  var gettingTitle = browser.browserAction.getTitle({});
+  gettingTitle.then(toggleTitle);
+});</pre>
 
 <p>{{WebExtExamples}}</p>
 

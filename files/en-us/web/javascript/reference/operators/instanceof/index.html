@@ -2,38 +2,43 @@
 title: instanceof
 slug: Web/JavaScript/Reference/Operators/instanceof
 tags:
-  - JavaScript
-  - Language feature
-  - Object
-  - Operator
-  - Prototype
-  - Relational Operators
-  - instanceof
+- JavaScript
+- Language feature
+- Object
+- Operator
+- Prototype
+- Relational Operators
+- instanceof
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p>The <strong><code>instanceof</code> operator</strong> tests to see if the <code>prototype</code> property of a constructor appears anywhere in the prototype chain of an object. The return value is a boolean value. </p>
+<p>The <strong><code>instanceof</code> operator</strong> tests to see if the
+  <code>prototype</code> property of a constructor appears anywhere in the prototype chain
+  of an object. The return value is a boolean value. </p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-instanceof.html")}}</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>object</var> instanceof <var>constructor</var></pre>
+<pre
+  class="brush: js"><var>object</var> instanceof <var>constructor</var></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>object</var></code></dt>
- <dd>The object to test.</dd>
- <dt><code><var>constructor</var></code></dt>
- <dd>Function to test against</dd>
+  <dt><code><var>object</var></code></dt>
+  <dd>The object to test.</dd>
+  <dt><code><var>constructor</var></code></dt>
+  <dd>Function to test against</dd>
 </dl>
 
 <h2 id="Description">Description</h2>
 
-<p>The <code>instanceof</code> operator tests the presence of <code>constructor.prototype</code> in <code><var>object</var></code>'s prototype chain.</p>
+<p>The <code>instanceof</code> operator tests the presence of
+  <code>constructor.prototype</code> in <code><var>object</var></code>'s prototype chain.
+</p>
 
-<pre class="brush: js notranslate">// defining constructors
+<pre class="brush: js">// defining constructors
 function C() {}
 function D() {}
 
@@ -63,33 +68,61 @@ o3 instanceof D        // true
 o3 instanceof C        // true since C.prototype is now in o3's prototype chain
 </pre>
 
-<p>Note that the value of an <code>instanceof</code> test can change based on changes to the <code>prototype</code> property of constructors. It can also be changed by changing an object's prototype using <code>Object.setPrototypeOf</code>. It is also possible using the non-standard <code>__proto__</code> property.</p>
+<p>Note that the value of an <code>instanceof</code> test can change based on changes to
+  the <code>prototype</code> property of constructors. It can also be changed by changing
+  an object's prototype using <code>Object.setPrototypeOf</code>. It is also possible
+  using the non-standard <code>__proto__</code> property.</p>
 
-<h3 id="instanceof_and_multiple_context_e.g._frames_or_windows"><code>instanceof</code> and multiple context (e.g. frames or windows)</h3>
+<h3 id="instanceof_and_multiple_context_e.g._frames_or_windows"><code>instanceof</code>
+  and multiple context (e.g. frames or windows)</h3>
 
-<p>Different scopes have different execution environments. This means that they have different built-ins (different global object, different constructors, etc.). This may result in unexpected results. For instance, <code>[] instanceof window.frames[0].Array</code> will return <code>false</code>, because <code>Array.prototype !== </code><code>window.frames[0].Array</code> and arrays inherit from the former.</p>
+<p>Different scopes have different execution environments. This means that they have
+  different built-ins (different global object, different constructors, etc.). This may
+  result in unexpected results. For instance,
+  <code>[] instanceof window.frames[0].Array</code> will return <code>false</code>,
+  because <code>Array.prototype !== </code><code>window.frames[0].Array</code> and arrays
+  inherit from the former.</p>
 
-<p>This may not make sense at first, but for scripts dealing with multiple frames or windows, and passing objects from one context to another via functions, this will be a valid and strong issue. For instance, you can securely check if a given object is, in fact, an Array using <code>Array.isArray(<var>myObj</var>)</code></p>
+<p>This may not make sense at first, but for scripts dealing with multiple frames or
+  windows, and passing objects from one context to another via functions, this will be a
+  valid and strong issue. For instance, you can securely check if a given object is, in
+  fact, an Array using <code>Array.isArray(<var>myObj</var>)</code></p>
 
-<p>For example, checking if a <a href="/en-US/docs/Web/API/Node">Nodes</a> is a <a href="/en-US/docs/Web/API/SVGElement">SVGElement</a> in a different context, you can use <code>myNode instanceof myNode.ownerDocument.defaultView.SVGElement</code>.</p>
+<p>For example, checking if a <a href="/en-US/docs/Web/API/Node">Nodes</a> is a <a
+    href="/en-US/docs/Web/API/SVGElement">SVGElement</a> in a different context, you can
+  use <code>myNode instanceof myNode.ownerDocument.defaultView.SVGElement</code>.</p>
 
 <div class="note">
-<p><strong>Note for Mozilla developers:</strong></p>
+  <p><strong>Note for Mozilla developers:</strong></p>
 
-<p>In code using XPCOM, <code>instanceof</code> has special effect: <code><var>obj</var> instanceof <var>xpcomInterface</var></code> (e.g. <code>Components.interfaces.nsIFile</code>) calls <code><var>obj</var>.QueryInterface(<var>xpcomInterface</var>)</code> and returns <code>true</code> if <code>QueryInterface</code> succeeded.</p>
+  <p>In code using XPCOM, <code>instanceof</code> has special effect:
+    <code><var>obj</var> instanceof <var>xpcomInterface</var></code> (e.g.
+    <code>Components.interfaces.nsIFile</code>) calls
+    <code><var>obj</var>.QueryInterface(<var>xpcomInterface</var>)</code> and returns
+    <code>true</code> if <code>QueryInterface</code> succeeded.</p>
 
-<p>A side effect of such call is that you can use <code>xpcomInterface</code>'s properties on <code><var>obj</var></code> after a successful <code>instanceof</code> test. Unlike standard JavaScript globals, the test <code><var>obj</var> instanceof <var>xpcomInterface</var></code> works as expected, even if <code><var>obj</var></code> is from a different scope.</p>
+  <p>A side effect of such call is that you can use <code>xpcomInterface</code>'s
+    properties on <code><var>obj</var></code> after a successful <code>instanceof</code>
+    test. Unlike standard JavaScript globals, the test
+    <code><var>obj</var> instanceof <var>xpcomInterface</var></code> works as expected,
+    even if <code><var>obj</var></code> is from a different scope.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Demonstrating_that_String_and_Date_are_of_type_Object_and_exceptional_cases">Demonstrating that <code>String</code> and <code>Date</code> are of type <code>Object</code> and exceptional cases</h3>
+<h3 id="Demonstrating_that_String_and_Date_are_of_type_Object_and_exceptional_cases">
+  Demonstrating that <code>String</code> and <code>Date</code> are of type
+  <code>Object</code> and exceptional cases</h3>
 
-<p>The following code uses <code>instanceof</code> to demonstrate that <code>String</code> and <code>Date</code> objects are also of type <code>Object</code> (they are derived from <code>Object</code>).</p>
+<p>The following code uses <code>instanceof</code> to demonstrate that <code>String</code>
+  and <code>Date</code> objects are also of type <code>Object</code> (they are derived
+  from <code>Object</code>).</p>
 
-<p>However, objects created with the object literal notation are an exception here: Although the prototype is <code>undefined</code>, <code>instanceof Object</code> returns <code>true</code>.</p>
+<p>However, objects created with the object literal notation are an exception here:
+  Although the prototype is <code>undefined</code>, <code>instanceof Object</code> returns
+  <code>true</code>.</p>
 
-<pre class="brush: js notranslate">let simpleStr = 'This is a simple string'
+<pre class="brush: js">let simpleStr = 'This is a simple string'
 let myString  = new String()
 let newStr    = new String('String created with constructor')
 let myDate    = new Date()
@@ -112,11 +145,15 @@ myDate instanceof Object    // returns true
 myDate instanceof String    // returns false
 </pre>
 
-<h3 id="Demonstrating_that_mycar_is_of_type_Car_and_type_Object">Demonstrating that <code>mycar</code> is of type <code>Car</code> and type <code>Object</code></h3>
+<h3 id="Demonstrating_that_mycar_is_of_type_Car_and_type_Object">Demonstrating that
+  <code>mycar</code> is of type <code>Car</code> and type <code>Object</code></h3>
 
-<p>The following code creates an object type <code>Car</code> and an instance of that object type, <code>mycar</code>. The <code>instanceof</code> operator demonstrates that the <code>mycar</code> object is of type <code>Car</code> and of type <code>Object</code>.</p>
+<p>The following code creates an object type <code>Car</code> and an instance of that
+  object type, <code>mycar</code>. The <code>instanceof</code> operator demonstrates that
+  the <code>mycar</code> object is of type <code>Car</code> and of type
+  <code>Object</code>.</p>
 
-<pre class="brush: js notranslate">function Car(make, model, year) {
+<pre class="brush: js">function Car(make, model, year) {
   this.make = make;
   this.model = model;
   this.year = year;
@@ -128,9 +165,10 @@ let b = mycar instanceof Object  // returns true
 
 <h3 id="Not_an_instanceof">Not an instanceof</h3>
 
-<p>To test if an object is not an <code>instanceof</code> a specific constructor, you can do</p>
+<p>To test if an object is not an <code>instanceof</code> a specific constructor, you can
+  do</p>
 
-<pre class="brush: js notranslate">if (!(mycar instanceof Car)) {
+<pre class="brush: js">if (!(mycar instanceof Car)) {
   // Do something, like:
   // mycar = new Car(mycar)
 }
@@ -138,21 +176,24 @@ let b = mycar instanceof Object  // returns true
 
 <p>This is really different from:</p>
 
-<pre class="brush: js notranslate">if (!mycar instanceof Car)</pre>
+<pre class="brush: js">if (!mycar instanceof Car)</pre>
 
-<p>This will always be <code>false</code>. (<code>!mycar</code> will be evaluated before <code>instanceof</code>, so you always try to know if a boolean is an instance of <code>Car</code>).</p>
+<p>This will always be <code>false</code>. (<code>!mycar</code> will be evaluated before
+  <code>instanceof</code>, so you always try to know if a boolean is an instance of
+  <code>Car</code>).</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-relational-operators', 'Relational Operators')}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-relational-operators', 'Relational Operators')}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -162,7 +203,9 @@ let b = mycar instanceof Object  // returns true
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a></code></li>
- <li>{{jsxref("Symbol.hasInstance")}}</li>
- <li>{{jsxref("Object.prototype.isPrototypeOf")}}</li>
+  <li>
+    <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a></code>
+  </li>
+  <li>{{jsxref("Symbol.hasInstance")}}</li>
+  <li>{{jsxref("Object.prototype.isPrototypeOf")}}</li>
 </ul>

@@ -2,26 +2,28 @@
 title: Window.alert()
 slug: Web/API/Window/alert
 tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
-  - alert
+- API
+- HTML DOM
+- Method
+- Reference
+- Window
+- alert
 ---
 <p>{{ APIRef }}</p>
 
-<p>The <strong><code>Window.alert()</code></strong> method displays an alert dialog with the optional specified content and an OK button.</p>
+<p>The <strong><code>Window.alert()</code></strong> method displays an alert dialog with
+  the optional specified content and an OK button.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">window.alert(<em>message</em>);</pre>
+<pre class="brush: js">window.alert(<em>message</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>message</code> {{optional_inline}}</dt>
- <dd>A string you want to display in the alert dialog, or, alternatively, an object that is converted into a string and displayed.</dd>
+  <dt><code>message</code> {{optional_inline}}</dt>
+  <dd>A string you want to display in the alert dialog, or, alternatively, an object that
+    is converted into a string and displayed.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -35,25 +37,31 @@ alert("Hello world!");</pre>
 
 <h2 id="Notes">Notes</h2>
 
-<p>The alert dialog should be used for messages which do not require any response on the part of the user, other than the acknowledgement of the message.</p>
+<p>The alert dialog should be used for messages which do not require any response on the
+  part of the user, other than the acknowledgement of the message.</p>
 
-<p><span class="comment">The following text is shared between this article, DOM:window.prompt and DOM:window.confirm</span> Dialog boxes are modal windows - they prevent the user from accessing the rest of the program's interface until the dialog box is closed. For this reason, you should not overuse any function that creates a dialog box (or modal window).</p>
+<p><span class="comment">The following text is shared between this article,
+    DOM:window.prompt and DOM:window.confirm</span> Dialog boxes are modal windows - they
+  prevent the user from accessing the rest of the program's interface until the dialog box
+  is closed. For this reason, you should not overuse any function that creates a dialog
+  box (or modal window).</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'timers-and-user-prompts.html#dom-alert', 'alert()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', 'timers-and-user-prompts.html#dom-alert', 'alert()')}}
+      </td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -63,7 +71,9 @@ alert("Hello world!");</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("window.confirm","confirm")}}</li>
- <li>{{domxref("window.prompt","prompt")}}</li>
- <li>For <a href="/en-US/docs/Glossary/Chrome">Mozilla Chrome</a> see {{ifmethod("nsIPromptService","alert")}} and {{ifmethod("nsIPromptService","alertCheck")}}</li>
+  <li>{{domxref("window.confirm","confirm")}}</li>
+  <li>{{domxref("window.prompt","prompt")}}</li>
+  <li>For <a href="/en-US/docs/Glossary/Chrome">Mozilla Chrome</a> see
+    {{ifmethod("nsIPromptService","alert")}} and
+    {{ifmethod("nsIPromptService","alertCheck")}}</li>
 </ul>

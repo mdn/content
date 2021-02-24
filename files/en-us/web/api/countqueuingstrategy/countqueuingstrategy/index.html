@@ -11,17 +11,21 @@ tags:
 ---
 <div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
 
-<p class="summary">The <strong><code>CountQueuingStrategy()</code></strong> constructor creates and returns a <code>CountQueuingStrategy</code> object instance.</p>
+<p class="summary">The <strong><code>CountQueuingStrategy()</code></strong> constructor
+  creates and returns a <code>CountQueuingStrategy</code> object instance.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>countQueuingStrategy</em> = new CountQueuingStrategy({<em>highWaterMark</em>});</pre>
+<pre
+  class="brush: js">var <em>countQueuingStrategy</em> = new CountQueuingStrategy({<em>highWaterMark</em>});</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>{highWaterMark}</dt>
- <dd>An object containing a <code>highWaterMark</code> property. This is a non-negative integer defining the total number of chunks that can be contained in the internal queue before backpressure is applied.</dd>
+  <dt>{highWaterMark}</dt>
+  <dd>An object containing a <code>highWaterMark</code> property. This is a non-negative
+    integer defining the total number of chunks that can be contained in the internal
+    queue before backpressure is applied.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -34,38 +38,39 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">const</span> queuingStrategy <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">CountQueuingStrategy</span><span class="punctuation token">(</span><span class="punctuation token">{</span> highWaterMark<span class="punctuation token">:</span> <span class="number token">1</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre
+  class="brush: js line-numbers  language-js">const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 
-<span class="keyword token">const</span> writableStream <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">WritableStream</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-  <span class="comment token">// Implement the sink</span>
-  <span class="function token">write</span><span class="punctuation token">(</span>chunk<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="function token">close</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="function token">abort</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"Sink error:"</span><span class="punctuation token">,</span> err<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">,</span> queuingStrategy<span class="punctuation token">)</span><span class="punctuation token">;</span>
+const writableStream = new WritableStream({
+  // Implement the sink
+  write(chunk) {
+    ...
+  },
+  close() {
+    ...
+  },
+  abort(err) {
+    console.log(&quot;Sink error:&quot;, err);
+  }
+}, queuingStrategy);
 
-<span class="keyword token">var</span> size <span class="operator token">=</span> queuingStrategy<span class="punctuation token">.</span><span class="function token">size</span><span class="punctuation token">(</span><span class="punctuation token">)</span></code>;</pre>
+var size = queuingStrategy.size();</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Streams","#cqs-constructor","CountQueuingStrategy()")}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("Streams","#cqs-constructor","CountQueuingStrategy()")}}</td>
+      <td>{{Spec2('Streams')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

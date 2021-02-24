@@ -2,24 +2,27 @@
 title: URL.password
 slug: Web/API/URL/password
 tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-  - password
+- API
+- Property
+- Reference
+- URL
+- URL API
+- password
 ---
 <div>{{ApiRef("URL API")}}</div>
 
-<p>The <strong><code>password</code></strong> property of the {{domxref("URL")}} interface is a {{domxref("USVString")}} containing the password specified before the domain name.</p>
+<p>The <strong><code>password</code></strong> property of the {{domxref("URL")}} interface
+  is a {{domxref("USVString")}} containing the password specified before the domain name.
+</p>
 
-<p>If it is set without first setting the {{domxref("URL.username", "username")}} property, it silently fails.</p>
+<p>If it is set without first setting the {{domxref("URL.username", "username")}}
+  property, it silently fails.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">const <em>passwordString</em> = <em>url</em>.password
+<pre class="brush: js">const <em>passwordString</em> = <em>url</em>.password
 <em>url</em>.password = <em>newPassword</em>
 </pre>
 
@@ -36,18 +39,18 @@ console.log(url.password) // Logs "flabada"
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('URL', '#dom-url-password', 'URL.password')}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('URL', '#dom-url-password', 'URL.password')}}</td>
+      <td>{{Spec2('URL')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -57,5 +60,5 @@ console.log(url.password) // Logs "flabada"
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{domxref("URL")}} interface it belongs to.</li>
+  <li>The {{domxref("URL")}} interface it belongs to.</li>
 </ul>

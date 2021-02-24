@@ -2,23 +2,26 @@
 title: ServiceWorkerRegistration.index
 slug: Web/API/ServiceWorkerRegistration/index
 tags:
-  - Content
-  - Content Index API
-  - Index
-  - PWA
-  - Property
-  - ServiceWorker
-  - ServiceWorkerRegistration
-  - content index
-  - content indexing
+- Content
+- Content Index API
+- Index
+- PWA
+- Property
+- ServiceWorker
+- ServiceWorkerRegistration
+- content index
+- content indexing
 ---
 <div>{{draft}}{{DefaultAPISidebar("Service Worker API")}}</div>
 
-<p class="summary">The <strong><code>index</code></strong> read-only property of the {{domxref("ServiceWorkerRegistration")}} interface returns a reference to the {{domxref('ContentIndex')}} interface, which allows for indexing of offline content.</p>
+<p class="summary">The <strong><code>index</code></strong> read-only property of the
+  {{domxref("ServiceWorkerRegistration")}} interface returns a reference to the
+  {{domxref('ContentIndex')}} interface, which allows for indexing of offline content.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>contentIndexObject</var> = ServiceWorkerRegistration.index;</pre>
+<pre
+  class="brush: js">var <var>contentIndexObject</var> = ServiceWorkerRegistration.index;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -26,11 +29,12 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>You can access the property from either your main script or the registered service worker.</p>
+<p>You can access the property from either your main script or the registered service
+  worker.</p>
 
 <p>Here is an example from the main script:</p>
 
-<pre class="brush: js notranslate">// reference registration
+<pre class="brush: js">// reference registration
 const registration = await navigator.serviceWorker.ready;
 
 // feature detection
@@ -44,7 +48,7 @@ if ('index' in registration) {
 
 <p>From the {{domxref('ServiceWorker','service worker')}}:</p>
 
-<pre class="brush: js notranslate">// service worker script
+<pre class="brush: js">// service worker script
 
 const contentIndex = self.registration.index;
 </pre>
@@ -52,18 +56,19 @@ const contentIndex = self.registration.index;
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Content Index API','#extensions-to-service-worker-registration','index')}}</td>
-   <td>{{Spec2('Content Index API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Content Index
+        API','#extensions-to-service-worker-registration','index')}}</td>
+      <td>{{Spec2('Content Index API')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -73,7 +78,9 @@ const contentIndex = self.registration.index;
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("Content Index API")}}</li>
- <li><a href="https://web.dev/content-indexing-api/">An introductory article on the Content Index API</a></li>
- <li><a href="https://contentindex.dev/">An app which uses the Content Index API to list and remove 'save for later' content</a></li>
+  <li>{{domxref("Content Index API")}}</li>
+  <li><a href="https://web.dev/content-indexing-api/">An introductory article on the
+      Content Index API</a></li>
+  <li><a href="https://contentindex.dev/">An app which uses the Content Index API to list
+      and remove 'save for later' content</a></li>
 </ul>

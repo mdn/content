@@ -2,20 +2,24 @@
 title: ContactsManager.getProperties()
 slug: Web/API/ContactsManager/getProperties
 tags:
-  - Contact Picker API
-  - Contacts
-  - ContactsManager
-  - Method
-  - PWA
-  - contact picker
+- Contact Picker API
+- Contacts
+- ContactsManager
+- Method
+- PWA
+- contact picker
 ---
 <div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}</div>
 
-<p class="summary">The <strong><code>getProperties()</code></strong> method of the {{domxref("ContactsManager")}} interface returns a {{jsxref('Promise')}} which resolves with an {{jsxref('Array')}} of {{jsxref('String','strings')}} indicating which contact properties are available.</p>
+<p class="summary">The <strong><code>getProperties()</code></strong> method of the
+  {{domxref("ContactsManager")}} interface returns a {{jsxref('Promise')}} which resolves
+  with an {{jsxref('Array')}} of {{jsxref('String','strings')}} indicating which contact
+  properties are available.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>ContactProperties</var> = ContactsManager.getProperties();</pre>
+<pre
+  class="brush: js">var <var>ContactProperties</var> = ContactsManager.getProperties();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -23,16 +27,17 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>Returns a {{jsxref('Promise')}} which when resolved returns an {{jsxref('Array')}} of available contact properties as {{jsxref('String','strings')}}.</p>
+<p>Returns a {{jsxref('Promise')}} which when resolved returns an {{jsxref('Array')}} of
+  available contact properties as {{jsxref('String','strings')}}.</p>
 
 <p>Properties can be any of the following:</p>
 
 <ul>
- <li><code>'name'</code>: The contact's name.</li>
- <li><code>'tel'</code>: The telephone number(s) of the contact.</li>
- <li><code>'email'</code>: The email address of the contact.</li>
- <li><code>'address'</code>: The contact's postal address.</li>
- <li><code>'icon'</code>: The avatar of the contact.</li>
+  <li><code>'name'</code>: The contact's name.</li>
+  <li><code>'tel'</code>: The telephone number(s) of the contact.</li>
+  <li><code>'email'</code>: The email address of the contact.</li>
+  <li><code>'address'</code>: The contact's postal address.</li>
+  <li><code>'icon'</code>: The avatar of the contact.</li>
 </ul>
 
 <h3 id="Exceptions">Exceptions</h3>
@@ -41,9 +46,10 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following asynchronous function uses the <code>getProperties</code> method to check for supported properties.</p>
+<p>The following asynchronous function uses the <code>getProperties</code> method to check
+  for supported properties.</p>
 
-<pre class="brush: js notranslate">async function checkProperties() {
+<pre class="brush: js">async function checkProperties() {
   const supportedProperties = await navigator.contacts.getProperties();
   if (supportedProperties.includes('name')) {
     // run code for name support
@@ -66,18 +72,19 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Contact Picker API','#dom-contactsmanager-getproperties','getProperties')}}</td>
-   <td>{{Spec2('Contact Picker API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Contact Picker
+        API','#dom-contactsmanager-getproperties','getProperties')}}</td>
+      <td>{{Spec2('Contact Picker API')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

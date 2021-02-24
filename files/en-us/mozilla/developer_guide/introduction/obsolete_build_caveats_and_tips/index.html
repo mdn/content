@@ -11,15 +11,15 @@ tags:
 
 <h2 id="Obsolete_caveats_and_tips">Obsolete caveats and tips</h2>
 
-<p>From <a href="/en-US/docs/Simple_Firefox_build#Windows">Simple_Firefox_build</a></p>
+<p>From <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Firefox_build#windows">Simple_Firefox_build</a></p>
 
 <p>Install a version of Visual Studio that supports C++ development: <a href="https://www.microsoft.com/visualstudio/eng/downloads">VS 2012 for Windows Desktop</a> Pro or Express (free), or VC++ 2010 Pro or <a class="external" href="http://go.microsoft.com/?linkid=9709949">Express (free)</a>,<strong> or VC++ 2008 Pro or <a class="external" href="http://www.microsoft.com/downloads/details.aspx?FamilyId=F3FBB04E-92C2-4701-B4BA-92E26E408569&amp;displaylang=en">Express with SP1 (free)</a> (Warning ! From Firefox 10, the compilator is Visual Studio 2010; if you want to use it, you must use a previous version of it !), or 2005 Professional</strong></p>
 
 
-<p>From <a href="/en-US/docs/Developer_Guide/Build_Instructions">Build_Instructions</a></p>
+<p>From <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions">Build_Instructions</a></p>
 
 <dl>
- <dt><a href="/En/Developer_Guide/Source_Code/CVS">Older Mozilla Source Code via CVS</a></dt>
+ <dt><a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/CVS">Older Mozilla Source Code via CVS</a></dt>
  <dd>Those who need to work with the code for Firefox 3/Mozilla 1.9 and earlier can check out the latest source using CVS. In reality, you should probably not need to do this, since that code is very obsolete.</dd>
 </dl>
 
@@ -30,7 +30,7 @@ tags:
 </div>
 
 
-<p>From <a href="/en-US/docs/Developer_Guide/Source_Code/Mercurial">Source_Code/Mercurial</a></p>
+<p>From <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial">Source_Code/Mercurial</a></p>
 
 <h4 id="mozilla-2.0_(Firefox_4.0)">mozilla-2.0 (Firefox 4.0)</h4>
 
@@ -67,17 +67,17 @@ cd 191src
 <p><strong>Note:</strong> Starting with Gecko 5.0, you can actually build Firefox without a <code>.mozconfig</code> file. By default, a similar-to-release build is done.</p>
 </div>
 
-<p>From <a href="/en-US/docs/Windows_SDK_versions">Windows_SDK_versions</a></p>
+<p>From <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Windows_SDK_versions">Windows_SDK_versions</a></p>
 
 
 <h3 id="Visual_C_9_(VS2008)_ProfessionalExpress">Visual C++ 9 (VS2008) Professional/Express</h3>
 
-<p>Download and install the <a href="#Windows_7_SDK">Windows 7 SDK</a>. Note that you need Service Pack 1--for the Express edition it is a <a class="external" href="http://www.microsoft.com/downloads/details.aspx?FamilyId=F3FBB04E-92C2-4701-B4BA-92E26E408569&amp;displaylang=en">separate download</a>.</p>
+<p>Download and install the <a href="#windows_7_sdk">Windows 7 SDK</a>. Note that you need Service Pack 1--for the Express edition it is a <a class="external" href="http://www.microsoft.com/downloads/details.aspx?FamilyId=F3FBB04E-92C2-4701-B4BA-92E26E408569&amp;displaylang=en">separate download</a>.</p>
 
 <h3 id="Visual_C_8_(VS2005)_Professional">Visual C++ 8 (VS2005) Professional</h3>
 
 <ol>
- <li>Download and install the <a href="#Windows_7_SDK">Windows 7 SDK</a>.</li>
+ <li>Download and install the <a href="#windows_7_sdk">Windows 7 SDK</a>.</li>
  <li>Install this <a class="external" href="https://support.microsoft.com/kb/949009/">Microsoft hotfix</a> to allow linking to work correctly.</li>
 </ol>
 
@@ -86,7 +86,7 @@ cd 191src
 <p>These versions are <strong>not supported</strong> and the Windows 7 SDK will not work with them. You need to upgrade to one of the newer Visual C++ versions above.</p>
 
 
-<p><strong>For Gecko 11 or below</strong>: you could also download the <a href="#Windows_Vista_SDK">Windows Vista SDK</a> and follow the instructions there to allow you to build against it.</p>
+<p><strong>For Gecko 11 or below</strong>: you could also download the <a href="#windows_vista_sdk">Windows Vista SDK</a> and follow the instructions there to allow you to build against it.</p>
 
 
 <div class="note">
@@ -103,7 +103,9 @@ cd 191src
 
 <h2 id="Windows_Vista_SDK">Windows Vista SDK</h2>
 
-<p>{{ obsolete_header("12.0") }}</p>
+<div class="note">
+<p><strong>Note:</strong> This SDK is not used since {{Gecko("12.0")}}.
+</div>
 
 <p>This is the SDK that mozilla-1.9.1 (Firefox 3.5) builds used to be built against. Features that depend on this SDK include:</p>
 
@@ -132,9 +134,11 @@ cd 191src
 
 <h2 id="Windows_Server_2003_R2_Platform_SDK">Windows Server 2003 R2 Platform SDK</h2>
 
-<p>{{ obsolete_header("12.0") }}</p>
+<div class="note">
+<p><strong>Note:</strong> This SDK is not used since {{Gecko("12.0")}}.
+</div>
 
-<p>This is your only option if you're on Windows 2000. This also used to be necessary for building a default <strong>Gecko 1.9.2 through 8</strong> with Visual C++ Express editions (see <a href="/en/atlbase.h" title="atlbase.h">atlbase.h</a> for more).</p>
+<p>This is your only option if you're on Windows 2000. This also used to be necessary for building a default <strong>Gecko 1.9.2 through 8</strong> with Visual C++ Express editions (see <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/atlbase.h" title="atlbase.h">atlbase.h</a> for more).</p>
 
 <p>You can <a class="external" href="http://www.microsoft.com/downloads/details.aspx?familyid=0baf2b35-c656-4969-ace8-e4c0c0716adb&amp;displaylang=en">download the SDK</a> from the Microsoft Download Center.</p>
 
@@ -164,13 +168,13 @@ cd 191src
 <ul>
  <li>Use another SDK (the one shipped with Visual Studio 9).</li>
  <li>Delete the vcvars32.bat file and repair your Visual Studio installation with the setup program.</li>
- <li>Edit vcvars32.bat to correct the problem (see <a class="external" href="http://blogs.msdn.com/windowssdk/archive/2008/04/18/installing-win-sdk-for-svr-2008-after-vs-2008-breaks-vs-command-line-build-environment.aspx" rel="freelink">http://blogs.msdn.com/windowssdk/arc...vironment.aspx</a> "Workaround: Repair the VS2008 command line build environment by editing c:\Program Files\Microsoft Visual Studio 9.0\VC\bin\vcvars32.bat manually").</li>
+ <li>Edit vcvars32.bat to correct the problem (see <a class="external" href="http://blogs.msdn.com/windowssdk/archive/2008/04/18/installing-win-sdk-for-svr-2008-after-vs-2008-breaks-vs-command-line-build-environment.aspx">http://blogs.msdn.com/windowssdk/arc...vironment.aspx</a> "Workaround: Repair the VS2008 command line build environment by editing c:\Program Files\Microsoft Visual Studio 9.0\VC\bin\vcvars32.bat manually").</li>
 </ul>
 
 <p>SDKs older than the Server 2003 R2 Platform SDK aren't supported either.</p>
 
 
-<p>From <a href="/en-US/docs/Developer_Guide/Build_Instructions/Windows_Prerequisites">Windows build prerequisites [en-US]</a></p>
+<p>From <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Windows_Prerequisites">Windows build prerequisites [en-US]</a></p>
 
 
 <h3 id="Microsoft_Visual_C_(MSVC)">Microsoft Visual C++ (MSVC)</h3>
@@ -187,7 +191,7 @@ cd 191src
 </ul>
 
 
-<p>From <a href="/en-US/docs/Configuring_Build_Options">Configuring Build Options [en-US]</a></p>
+<p>From <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options">Configuring Build Options [en-US]</a></p>
 
 <div class="note">
 <p><strong>Note:</strong> Starting with {{Gecko ("5.0")}}, building Firefox has become extremely simple. The default application is now Firefox, so you can build Firefox by doing <code>configure &amp;&amp; make</code> (for standalone source tarballs) or <code>make -f client.mk</code> (for code from the Mercurial repository); this will build something roughly the same as the shipped version of Firefox corresponding to the code you have. You only need to follow the steps below if you want to customize the build (e.g., to create a debug build or a release build with debug symbols), you want to build something other than Firefox, or you want to build pre-gecko 5.0 source.</p>
@@ -208,4 +212,3 @@ cd 191src
 <div class="note">
 <p><strong>Note:</strong> Starting in {{Gecko ("5.0")}}, if you don't specify an application, <code>--enable-application=browser</code> is assumed, thereby building Firefox.</p>
 </div>
-

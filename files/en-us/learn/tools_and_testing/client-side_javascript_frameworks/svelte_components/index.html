@@ -40,15 +40,15 @@ tags:
 
 <p>Clone the github repo (if you haven't already done it) with:</p>
 
-<pre class="brush: bash notranslate">git clone https://github.com/opensas/mdn-svelte-tutorial.git</pre>
+<pre class="brush: bash">git clone https://github.com/opensas/mdn-svelte-tutorial.git</pre>
 
 <p>Then to get to the current app state, run</p>
 
-<pre class="brush: bash notranslate">cd mdn-svelte-tutorial/04-componentizing-our-app</pre>
+<pre class="brush: bash">cd mdn-svelte-tutorial/04-componentizing-our-app</pre>
 
 <p>Or directly download the folder's content:</p>
 
-<pre class="brush: bash notranslate">npx degit opensas/mdn-svelte-tutorial/04-componentizing-our-app</pre>
+<pre class="brush: bash">npx degit opensas/mdn-svelte-tutorial/04-componentizing-our-app</pre>
 
 <p>Remember to run <code>npm install &amp;&amp; npm run dev</code> to start your app in development mode.</p>
 
@@ -83,7 +83,7 @@ tags:
  <li><code>MoreActions.svelte</code>: The <em>Check All</em> and <em>Remove Completed</em> buttons at the bottom of the UI that allow you to perform mass actions on the todo items.</li>
 </ul>
 
-<p><img alt="graphical representation of the list of components in our app" src="https://mdn.mozillademos.org/files/17349/01-todo-components.png" style="height: 900px; width: 968px;"></p>
+<p><img alt="graphical representation of the list of components in our app" src="01-todo-components.png"></p>
 
 <p>In this article we will concentrate on creating the <code>FilterButton</code> and <code>Todo</code> components; we'll get to the others in future articles.</p>
 
@@ -104,7 +104,7 @@ tags:
  <li>
   <p>Inside this file we will declare a <code>filter</code> prop, and then copy the relevant markup over to it from <code>Todos.svelte</code>. Add the following content into the file:</p>
 
-  <pre class="brush: html notranslate">&lt;script&gt;
+  <pre class="brush: html">&lt;script&gt;
   export let filter = 'all'
 &lt;/script&gt;
 
@@ -129,12 +129,12 @@ tags:
  <li>
   <p>Back in our <code>Todos.svelte</code> component, we want to make use of our <code>FilterButton</code> component. First of all, we need to import it — add the following line at the top of the <code>Todos.svelte &lt;script&gt;</code> section:</p>
 
-  <pre class="brush: js notranslate">import FilterButton from './FilterButton.svelte'</pre>
+  <pre class="brush: js">import FilterButton from './FilterButton.svelte'</pre>
  </li>
  <li>
   <p>Now, replace the <code>filters</code> <code>&lt;div&gt;</code> with a call to the <code>FilterButton</code> component, which takes the current filter as a prop — the below line is all you need:</p>
 
-  <pre class="brush: html notranslate">&lt;FilterButton {filter} /&gt;</pre>
+  <pre class="brush: html">&lt;FilterButton {filter} /&gt;</pre>
  </li>
 </ol>
 
@@ -152,7 +152,7 @@ tags:
 
 <p>We will just declare the <code>onclick</code> prop assigning a dummy handler to prevent errors, like this:</p>
 
-<pre class="brush: js notranslate">export let onclick = (clicked) =&gt; {}</pre>
+<pre class="brush: js">export let onclick = (clicked) =&gt; {}</pre>
 
 <p>And we'll declare the following reactive statement — <code>$: onclick(filter)</code> — to call the <code>onclick</code> handler whenever the <code>filter</code> variable is updated.</p>
 
@@ -160,7 +160,7 @@ tags:
  <li>
   <p>The <code>&lt;script&gt;</code> section of our <code>FilterButton</code> component should end up looking like this — update it now:</p>
 
-  <pre class="brush: js notranslate">&lt;script&gt;
+  <pre class="brush: js">&lt;script&gt;
   export let filter = 'all'
   export let onclick = (clicked) =&gt; {}
   $: onclick(filter)
@@ -169,7 +169,7 @@ tags:
  <li>
   <p>Now when we call <code>FilterButton</code> inside <code>Todos.svelte</code> we'll need to specify the handler. Update it like this:</p>
 
-  <pre class="brush: html notranslate">&lt;FilterButton {filter} onclick={ (clicked) =&gt; filter = clicked }/&gt;</pre>
+  <pre class="brush: html">&lt;FilterButton {filter} onclick={ (clicked) =&gt; filter = clicked }/&gt;</pre>
  </li>
 </ol>
 
@@ -187,14 +187,14 @@ tags:
  <li>
   <p>In <code>Todos.svelte</code>, update the call to the <code>FilterButton</code> component as follows:</p>
 
-  <pre class="brush: html notranslate">&lt;FilterButton bind:filter={filter} /&gt;</pre>
+  <pre class="brush: html">&lt;FilterButton bind:filter={filter} /&gt;</pre>
 
   <p>As usual, Svelte provides us with a nice shorthand — <code>bind:value={value}</code> is equivalent to <code>bind:value</code>. So in the above example you could just write <code>&lt;FilterButton bind:filter /&gt;</code>.</p>
  </li>
  <li>
   <p>The child component can now modify the value of the parent's filter variable, so we no longer need the <code>onclick</code> prop. Modify your <code>FilterButton</code> <code>&lt;script&gt;</code> like this:</p>
 
-  <pre class="brush: html notranslate">&lt;script&gt;
+  <pre class="brush: html">&lt;script&gt;
   export let filter = 'all'
 &lt;/script&gt;</pre>
  </li>
@@ -216,7 +216,7 @@ tags:
  <li>
   <p>Put the following contents inside this file:</p>
 
-  <pre class="brush: html notranslate">&lt;script&gt;
+  <pre class="brush: html">&lt;script&gt;
   export let todo
 &lt;/script&gt;
 
@@ -241,14 +241,14 @@ tags:
  <li>
   <p>Now we need to import our <code>Todo</code> component into <code>Todos.svelte</code>. Go to this file now, and add the following <code>import</code> statement below your previous one:</p>
 
-  <pre class="brush: js notranslate">import Todo from './Todo.svelte'</pre>
+  <pre class="brush: js">import Todo from './Todo.svelte'</pre>
  </li>
  <li>
   <p>Next, we need to update our <code>{#each}</code> block to include a <code>&lt;Todo&gt;</code> component for each todo, rather than the code that has been moved out to <code>Todo.svelte</code>. We are also passing the current <code>todo</code> object into the component as a prop.</p>
 
   <p>Update the <code>{#each}</code> block inside <code>Todos.svelte</code> like so:</p>
 
-  <pre class="brush: html notranslate">&lt;ul role="list" class="todo-list stack-large" aria-labelledby="list-heading"&gt;
+  <pre class="brush: html">&lt;ul role="list" class="todo-list stack-large" aria-labelledby="list-heading"&gt;
   {#each filterTodos(filter, todos) as todo (todo.id)}
     &lt;li class="todo"&gt;
       &lt;Todo {todo} /&gt;
@@ -282,13 +282,13 @@ tags:
  <li>
   <p>First of all, add the following lines to the top of the <code>Todo</code> component's <code>&lt;script&gt;</code> section:</p>
 
-  <pre class="brush: js notranslate">import { createEventDispatcher } from 'svelte'
+  <pre class="brush: js">import { createEventDispatcher } from 'svelte'
 const dispatch = createEventDispatcher()</pre>
  </li>
  <li>
   <p>Now update the <em>Delete</em> button in the markup section of the same file to look like so:</p>
 
-  <pre class="brush: html notranslate">&lt;button type="button" class="btn btn__danger" on:click={() =&gt; dispatch('remove', todo)}&gt;
+  <pre class="brush: html">&lt;button type="button" class="btn btn__danger" on:click={() =&gt; dispatch('remove', todo)}&gt;
   Delete &lt;span class="visually-hidden"&gt;{todo.name}&lt;/span&gt;
 &lt;/button&gt;</pre>
 
@@ -297,7 +297,7 @@ const dispatch = createEventDispatcher()</pre>
  <li>
   <p>Now we have to listen to that event from inside <code>Todos.svelte</code> and act accordingly. Go back to this file and update your <code>&lt;Todo&gt;</code> component call like so:</p>
 
-  <pre class="brush: html notranslate">&lt;Todo {todo} on:remove={e =&gt; removeTodo(e.detail)} /&gt;</pre>
+  <pre class="brush: html">&lt;Todo {todo} on:remove={e =&gt; removeTodo(e.detail)} /&gt;</pre>
 
   <p>Our handler receives the <code>e</code> parameter (the event object), which as described before holds the todo being deleted in the <code>detail</code> property.</p>
  </li>
@@ -318,7 +318,7 @@ const dispatch = createEventDispatcher()</pre>
  <li>
   <p>We'll need one variable to track whether we are in editing mode and another to store the name of the task being updated. Add the following variable definitions at the bottom of the <code>&lt;script&gt;</code> section of the <code>Todo</code> component:</p>
 
-  <pre class="brush: js notranslate">let editing = false                     // track editing mode
+  <pre class="brush: js">let editing = false                     // track editing mode
 let name = todo.name                    // hold the name of the todo being edited</pre>
  </li>
  <li>
@@ -333,7 +333,7 @@ let name = todo.name                    // hold the name of the todo being edite
 
   <p>Let's create an <code>update()</code> function that will receive the changes and will emit an update event with the modified todo. Add the following, again to the bottom of the <code>&lt;script&gt;</code> section:</p>
 
-  <pre class="brush: js notranslate">function update(updatedTodo) {
+  <pre class="brush: js">function update(updatedTodo) {
   todo = { ...todo, ...updatedTodo }    // applies modifications to todo
   dispatch('update', todo)              // emit update event
 }</pre>
@@ -345,7 +345,7 @@ let name = todo.name                    // hold the name of the todo being edite
 
   <p>Add the following set of functions below your previous function to handle these actions:</p>
 
-  <pre class="brush: js notranslate">function onCancel() {
+  <pre class="brush: js">function onCancel() {
   name = todo.name                      // restores name to its initial value and
   editing = false                       // and exit editing mode
 }
@@ -381,7 +381,7 @@ function onToggle() {
 
 <p>The following gives you an idea of what the basic <code>if</code> block structure looks like:</p>
 
-<pre class="brush: html notranslate">&lt;div class="stack-small"&gt;
+<pre class="brush: html">&lt;div class="stack-small"&gt;
 {#if editing}
   &lt;!-- markup for editing todo: label, input text, Cancel and Save Button --&gt;
 {:else}
@@ -391,7 +391,7 @@ function onToggle() {
 
 <p>The non-editing section — that is, the <code>{:else}</code> part (lower half) of the <code>if</code> block — will be very similar to the one we had in our Todos component. The only difference is that we are calling <code>onToggle()</code>, <code>onEdit()</code>, and <code>onRemove()</code>, depending on the user action.</p>
 
-<pre class="brush: html notranslate">{:else}
+<pre class="brush: html">{:else}
   &lt;div class="c-cb"&gt;
     &lt;input type="checkbox" id="todo-{todo.id}"
       on:click={onToggle} checked={todo.completed}
@@ -420,7 +420,7 @@ function onToggle() {
 
 <p>The editing UI (the upper half) will contain an <code>&lt;input&gt;</code> field and two buttons to cancel or save the changes:</p>
 
-<pre class="brush: html notranslate">&lt;div class="stack-small"&gt;
+<pre class="brush: html">&lt;div class="stack-small"&gt;
 {#if editing}
   &lt;form on:submit|preventDefault={onSave} class="stack-small" on:keydown={e =&gt; e.key === 'Escape' &amp;&amp; onCancel()}&gt;
     &lt;div class="form-group"&gt;
@@ -450,7 +450,7 @@ function onToggle() {
 
 <p>We also disable the <em>Save</em> button when the <code>&lt;input&gt;</code> is empty, using the <code>disabled={!name}</code> attribute, and allow the user to cancel the edit using the <kbd>Escape</kbd> key, like this:</p>
 
-<pre class="brush: js notranslate">on:keydown={e =&gt; e.key === 'Escape' &amp;&amp; onCancel()}.</pre>
+<pre class="brush: js">on:keydown={e =&gt; e.key === 'Escape' &amp;&amp; onCancel()}.</pre>
 
 <p>We also use <code>todo.id</code> to create unique ids for the new input controls and labels.</p>
 
@@ -458,7 +458,7 @@ function onToggle() {
  <li>
   <p>The complete updated markup of our <code>Todo</code> component looks like the following. Update yours now:</p>
 
-  <pre class="brush: html notranslate">&lt;div class="stack-small"&gt;
+  <pre class="brush: html">&lt;div class="stack-small"&gt;
 {#if editing}
   &lt;!-- markup for editing todo: label, input text, Cancel and Save Button --&gt;
   &lt;form on:submit|preventDefault={onSave} class="stack-small" on:keydown={e =&gt; e.key === 'Escape' &amp;&amp; onCancel()}&gt;
@@ -501,7 +501,7 @@ function onToggle() {
  <li>
   <p>To get the update functionality working, we have to handle the <code>update</code> event from the <code>Todos</code> component. In its <code>&lt;script&gt;</code> section, add this handler:</p>
 
-  <pre class="brush: js notranslate">function updateTodo(todo) {
+  <pre class="brush: js">function updateTodo(todo) {
   const i = todos.findIndex(t =&gt; t.id === todo.id)
   todos[i] = { ...todos[i], ...todo }
 }</pre>
@@ -511,7 +511,7 @@ function onToggle() {
  <li>
   <p>Next we have to listen for the <code>update</code> event on our <code>&lt;Todo&gt;</code> component call, and run our <code>updateTodo()</code> function when this occurs to change the <code>name</code> and <code>completed</code> status. Update your &lt;Todo&gt; call like this:</p>
 
-  <pre class="brush: js notranslate">{#each filterTodos(filter, todos) as todo (todo.id)}
+  <pre class="brush: js">{#each filterTodos(filter, todos) as todo (todo.id)}
   &lt;li class="todo"&gt;
     &lt;Todo {todo}
       on:update={e =&gt; updateTodo(e.detail)}
@@ -536,11 +536,11 @@ function onToggle() {
 
 <p>To see the state of the code as it should be at the end of this article, access your copy of our repo like this:</p>
 
-<pre class="brush: bash notranslate">cd mdn-svelte-tutorial/05-advanced-concepts</pre>
+<pre class="brush: bash">cd mdn-svelte-tutorial/05-advanced-concepts</pre>
 
 <p>Or directly download the folder's content:</p>
 
-<pre class="brush: bash notranslate">npx degit opensas/mdn-svelte-tutorial/05-advanced-concepts</pre>
+<pre class="brush: bash">npx degit opensas/mdn-svelte-tutorial/05-advanced-concepts</pre>
 
 <p>Remember to run <code>npm install &amp;&amp; npm run dev</code> to start your app in development mode.</p>
 

@@ -2,45 +2,70 @@
 title: MouseEvent.pageX
 slug: Web/API/MouseEvent/pageX
 tags:
-  - API
-  - CSSOM View
-  - DOM
-  - Mouse Events
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
-  - UI Events
-  - events
-  - pageX
+- API
+- CSSOM View
+- DOM
+- Mouse Events
+- MouseEvent
+- Property
+- Read-only
+- Reference
+- UI Events
+- events
+- pageX
 ---
 <div>{{APIRef("CSSOM View")}}</div>
 
-<p><span class="seoSummary">The <code><strong>pageX</strong></code> read-only property of the {{domxref("MouseEvent")}} interface returns the X (horizontal) coordinate (in pixels) at which the mouse was clicked, relative to the left edge of the entire document.</span> This includes any portion of the document not currently visible.</p>
+<p><span class="seoSummary">The <code><strong>pageX</strong></code> read-only property of
+    the {{domxref("MouseEvent")}} interface returns the X (horizontal) coordinate (in
+    pixels) at which the mouse was clicked, relative to the left edge of the entire
+    document.</span> This includes any portion of the document not currently visible.</p>
 
-<p>Being based on the edge of the document as it is, this property takes into account any horizontal scrolling of the page. For example, if the page is scrolled such that 200 pixels of the left side of the document are scrolled out of view, and the mouse is clicked 100 pixels inward from the left edge of the view, the value returned by <code>pageX</code> will be 300.</p>
+<p>Being based on the edge of the document as it is, this property takes into account any
+  horizontal scrolling of the page. For example, if the page is scrolled such that 200
+  pixels of the left side of the document are scrolled out of view, and the mouse is
+  clicked 100 pixels inward from the left edge of the view, the value returned by
+  <code>pageX</code> will be 300.</p>
 
-<p>Originally, this property was defined as a <code>long</code> integer. The <a href="/en-US/docs/Web/CSS/CSSOM_View">CSSOM View Module</a> redefined it as a <code>double</code> float. See the {{anch("Browser compatibility")}} section for details.</p>
+<p>Originally, this property was defined as a <code>long</code> integer. The <a
+    href="/en-US/docs/Web/CSS/CSSOM_View">CSSOM View Module</a> redefined it as a
+  <code>double</code> float. See the {{anch("Browser compatibility")}} section for
+  details.</p>
 
-<p>See {{SectionOnPage("/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems", "Page")}} for some additional information about coordinates specified in this fashion.</p>
+<p>See {{SectionOnPage("/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems", "Page")}} for
+  some additional information about coordinates specified in this fashion.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>pageX</em> = <em>MouseEvent</em>.pageX;</pre>
+<pre
+  class="brush: js">var <em>pageX</em> = <em>MouseEvent</em>.pageX;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A floating-point number of pixels from the left edge of the <em>document</em> at which the mouse was clicked, regardless of any scrolling or viewport positioning that may be in effect.</p>
+<p>A floating-point number of pixels from the left edge of the <em>document</em> at which
+  the mouse was clicked, regardless of any scrolling or viewport positioning that may be
+  in effect.</p>
 
-<p>This property was originally specified in the Touch Events specification as a long integer, but was redefined in the CSSOM View Module to be a double-precision floating-point number to allow for subpixel precision. Even though numeric types both are represented by <code>Number</code> in JavaScript, they may be handled differently internally in the browser's code, resulting in potential behavior differences. See {{anch("Browser compatibility")}} to learn which browsers have been updated to use the revised data type.</p>
+<p>This property was originally specified in the Touch Events specification as a long
+  integer, but was redefined in the CSSOM View Module to be a double-precision
+  floating-point number to allow for subpixel precision. Even though numeric types both
+  are represented by <code>Number</code> in JavaScript, they may be handled differently
+  internally in the browser's code, resulting in potential behavior differences. See
+  {{anch("Browser compatibility")}} to learn which browsers have been updated to use the
+  revised data type.</p>
 
 <h2 id="Example">Example</h2>
 
 <div class="moreinfo pull-aside">
-<h4 id="More_examples">More examples</h4>
-You can also see an example that demonstrates <a href="/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems#Example">how to access the mouse position</a> information in every available coordinate system.</div>
+  <h4 id="More_examples">More examples</h4>
+  You can also see an example that demonstrates <a
+    href="/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems#Example">how to access the
+    mouse position</a> information in every available coordinate system.
+</div>
 
-<p>Let's take a look at a simple example that shows you the mouse's position relative to the page's origin. Since this example is presented in an {{HTMLElement("iframe")}}, that top-left corner is the top-left corner of the frame, not the browser window.</p>
+<p>Let's take a look at a simple example that shows you the mouse's position relative to
+  the page's origin. Since this example is presented in an {{HTMLElement("iframe")}}, that
+  top-left corner is the top-left corner of the frame, not the browser window.</p>
 
 <h3 id="JavaScript">JavaScript</h3>
 
@@ -57,9 +82,14 @@ box.addEventListener("mousemove", updateDisplay, false);
 box.addEventListener("mouseenter", updateDisplay, false);
 box.addEventListener("mouseleave", updateDisplay, false);</pre>
 
-<p>The JavaScript code uses {{domxref("EventTarget.addEventListener", "addEventListener()")}} to register the function <code>updateDisplay()</code> as the event handler for the {{event("mousemove")}}, {{event("mouseenter")}}, and {{event("mouseleave")}} events.</p>
+<p>The JavaScript code uses {{domxref("EventTarget.addEventListener",
+  "addEventListener()")}} to register the function <code>updateDisplay()</code> as the
+  event handler for the {{event("mousemove")}}, {{event("mouseenter")}}, and
+  {{event("mouseleave")}} events.</p>
 
-<p><code>updateDisplay()</code> replaces the contents of the {{HTMLElement("span")}} elements meant to contain the X and Y coordinates with the values of <code>pageX</code> and {{domxref("MouseEvent.pageY", "pageY")}}.</p>
+<p><code>updateDisplay()</code> replaces the contents of the {{HTMLElement("span")}}
+  elements meant to contain the X and Y coordinates with the values of <code>pageX</code>
+  and {{domxref("MouseEvent.pageY", "pageY")}}.</p>
 
 <h3 id="HTML">HTML</h3>
 
@@ -75,15 +105,19 @@ box.addEventListener("mouseleave", updateDisplay, false);</pre>
   &lt;/p&gt;
 &lt;/div&gt;</pre>
 
-<p>The HTML is simple; the box we'll be watching for mouse events on is given the class <code>"box"</code>. It has two <code>&lt;span&gt;</code> elements, one with the ID <code>"x"</code> and one with the ID <code>"y"</code>. Those will be updated each time an event occurs to contain the latest mouse coordinates relative to the page.</p>
+<p>The HTML is simple; the box we'll be watching for mouse events on is given the class
+  <code>"box"</code>. It has two <code>&lt;span&gt;</code> elements, one with the ID
+  <code>"x"</code> and one with the ID <code>"y"</code>. Those will be updated each time
+  an event occurs to contain the latest mouse coordinates relative to the page.</p>
 
-<details open><summary>
-<h3 id="CSS">CSS</h3>
-</summary>
+<details open>
+  <summary>
+    <h3 id="CSS">CSS</h3>
+  </summary>
 
-<p>The CSS used for this example is shown below.</p>
+  <p>The CSS used for this example is shown below.</p>
 
-<pre class="brush: css">.box {
+  <pre class="brush: css">.box {
   width: 400px;
   height: 250px;
   border: 2px solid darkblue;
@@ -102,26 +136,28 @@ box.addEventListener("mouseleave", updateDisplay, false);</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#dom-mouseevent-pagex', 'pageX')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>Redefined from <code>long</code> to <code>double</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Touch Events', '#widl-Touch-pageX', 'pageX')}}</td>
-   <td>{{Spec2('TouchEvents')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Specification</th>
+      <th>Status</th>
+      <th>Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('CSSOM View', '#dom-mouseevent-pagex', 'pageX')}}</td>
+      <td>{{Spec2('CSSOM View')}}</td>
+      <td>Redefined from <code>long</code> to <code>double</code>.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('Touch Events', '#widl-Touch-pageX', 'pageX')}}</td>
+      <td>{{Spec2('TouchEvents')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Prior to being added to the CSSOM View specification, <code>pageX</code> and <code>pageY</code> were available on the {{domxref("UIEvent")}} interface in a limited subset of browsers for a short time.</p>
+<p>Prior to being added to the CSSOM View specification, <code>pageX</code> and
+  <code>pageY</code> were available on the {{domxref("UIEvent")}} interface in a limited
+  subset of browsers for a short time.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
@@ -130,5 +166,5 @@ box.addEventListener("mouseleave", updateDisplay, false);</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("MouseEvent.pageY")}}</li>
+  <li>{{domxref("MouseEvent.pageY")}}</li>
 </ul>

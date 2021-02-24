@@ -2,26 +2,30 @@
 title: Document.mozSyntheticDocument
 slug: Web/API/Document/mozSyntheticDocument
 tags:
-  - API
-  - DOM
-  - Non-standard
-  - Property
-  - Reference
+- API
+- DOM
+- Non-standard
+- Property
+- Reference
 ---
 <p>{{ ApiRef("DOM") }}{{ non-standard_header() }}</p>
 
-<p>The <code><strong>Document.mozSyntheticDocument</strong></code> property indicates whether or not the document is a synthetic one; that is, a document representing a standalone image, video, audio, or the like.</p>
+<p>The <code><strong>Document.mozSyntheticDocument</strong></code> property indicates
+  whether or not the document is a synthetic one; that is, a document representing a
+  standalone image, video, audio, or the like.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>isSynthetic</em> = <em>document</em>.mozSyntheticDocument;
+<pre class="brush: js">var <em>isSynthetic</em> = <em>document</em>.mozSyntheticDocument;
 </pre>
 
-<p>On return, <code>isSynthetic</code> is <code>true</code> if the document is a synthetic one; otherwise it's <code>false</code>.</p>
+<p>On return, <code>isSynthetic</code> is <code>true</code> if the document is a synthetic
+  one; otherwise it's <code>false</code>.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>This can be useful if you have a contextual menu item you only want to display for synthetic documents (or, conversely, for documents that aren't synthetic).</p>
+<p>This can be useful if you have a contextual menu item you only want to display for
+  synthetic documents (or, conversely, for documents that aren't synthetic).</p>
 
 <pre class="brush: js">var isSynthetic = document.mozSyntheticDocument;
 

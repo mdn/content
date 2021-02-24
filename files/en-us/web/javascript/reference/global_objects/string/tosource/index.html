@@ -2,21 +2,22 @@
 title: String.prototype.toSource()
 slug: Web/JavaScript/Reference/Global_Objects/String/toSource
 tags:
-  - JavaScript
-  - Method
-  - Non-standard
-  - Obsolete
-  - Prototype
-  - Reference
-  - String
+- JavaScript
+- Method
+- Non-standard
+- Obsolete
+- Prototype
+- Reference
+- String
 ---
-<div>{{JSRef}} {{obsolete_header}}</div>
+<div>{{JSRef}} {{deprecated_header}}</div>
 
-<p>The <strong><code>toSource()</code></strong> method returns a string representing the source code of the object.</p>
+<p>The <strong><code>toSource()</code></strong> method returns a string representing the
+  source code of the object.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code>String.toSource()
+<pre class="brush: js"><code>String.toSource()
 <var>str</var>.toSource()
 </code></pre>
 
@@ -28,16 +29,19 @@ tags:
 
 <h3 id="Native_function">Native function</h3>
 
-<p>For the built-in {{jsxref("String")}} object, <code>toSource()</code> returns the following string indicating that the source code is not available:</p>
+<p>For the built-in {{jsxref("String")}} object, <code>toSource()</code> returns the
+  following string indicating that the source code is not available:</p>
 
 <pre class="brush: js">function String() {
     [native code]
 }
 </pre>
 
-<p>For instances of {{jsxref("String")}} or string literals, <code>toSource()</code> returns a string representing the source code.</p>
+<p>For instances of {{jsxref("String")}} or string literals, <code>toSource()</code>
+  returns a string representing the source code.</p>
 
-<p>This method is usually called internally by JavaScript and not explicitly in web code.</p>
+<p>This method is usually called internally by JavaScript and not explicitly in web code.
+</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -45,12 +49,15 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+<p class="hidden">The compatibility table in this page is generated from structured data.
+  If you'd like to contribute to the data, please check out <a
+    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+  and send us a pull request.</p>
 
 <p>{{Compat("javascript.builtins.String.toSource")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Object.prototype.toSource()")}}</li>
+  <li>{{jsxref("Object.prototype.toSource()")}}</li>
 </ul>

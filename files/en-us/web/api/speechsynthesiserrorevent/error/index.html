@@ -2,23 +2,25 @@
 title: SpeechSynthesisErrorEvent.error
 slug: Web/API/SpeechSynthesisErrorEvent/error
 tags:
-  - API
-  - Error
-  - Experimental
-  - Property
-  - Reference
-  - SpeechSynthesisErrorEvent
-  - Web Speech API
-  - speech
-  - synthesis
+- API
+- Error
+- Experimental
+- Property
+- Reference
+- SpeechSynthesisErrorEvent
+- Web Speech API
+- speech
+- synthesis
 ---
 <div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
 
-<p>The <strong><code>error</code></strong> property of the {{domxref("SpeechSynthesisErrorEvent")}} interface returns an error code indicating what has gone wrong with a speech synthesis attempt.</p>
+<p>The <strong><code>error</code></strong> property of the
+  {{domxref("SpeechSynthesisErrorEvent")}} interface returns an error code indicating what
+  has gone wrong with a speech synthesis attempt.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">myError = event.error;
+<pre class="brush: js">myError = event.error;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -26,28 +28,44 @@ tags:
 <p>A {{domxref("DOMString")}} containing an error code. Possible codes are:</p>
 
 <dl>
- <dt>canceled</dt>
- <dd>A {{domxref("SpeechSynthesis.cancel")}} method call caused the {{domxref("SpeechSynthesisUtterance")}} to be removed from the queue before it had begun being spoken.</dd>
- <dt>interrupted</dt>
- <dd>A {{domxref("SpeechSynthesis.cancel")}} method call caused the {{domxref("SpeechSynthesisUtterance")}} to be interrupted after it had begun being spoken and before it completed.</dd>
- <dt>audio-busy</dt>
- <dd>The operation couldn't be completed at this time because the user-agent couldn't access the audio output device (for example, the user may need to correct this by closing another application.)</dd>
- <dt>audio-hardware</dt>
- <dd>The operation couldn't be completed at this time because the user-agent couldn't identify an audio output device (for example, the user may need to connect a speaker or configure system settings.)</dd>
- <dt>network</dt>
- <dd>The operation couldn't be completed at this time because some required network communication failed.</dd>
- <dt>synthesis-unavailable</dt>
- <dd>The operation couldn't be completed at this time because no synthesis engine was available (For example, the user may need to install or configure a synthesis engine.)</dd>
- <dt>synthesis-failed</dt>
- <dd>The operation failed because the synthesis engine raised an error.</dd>
- <dt>language-unavailable</dt>
- <dd>No appropriate voice was available for the language set in {{domxref("SpeechSynthesisUtterance.lang")}}.</dd>
- <dt>voice-unavailable</dt>
- <dd>The voice set in {{domxref("SpeechSynthesisUtterance.voice")}} was not available.</dd>
- <dt>text-too-long</dt>
- <dd>The contents of the {{domxref("SpeechSynthesisUtterance.text")}} attribute was too long to synthesize.</dd>
- <dt>invalid-argument</dt>
- <dd>The content of the {{domxref("SpeechSynthesisUtterance.rate")}}, {{domxref("SpeechSynthesisUtterance.pitch")}} or {{domxref("SpeechSynthesisUtterance.volume")}} property was not valid.</dd>
+  <dt>canceled</dt>
+  <dd>A {{domxref("SpeechSynthesis.cancel")}} method call caused the
+    {{domxref("SpeechSynthesisUtterance")}} to be removed from the queue before it had
+    begun being spoken.</dd>
+  <dt>interrupted</dt>
+  <dd>A {{domxref("SpeechSynthesis.cancel")}} method call caused the
+    {{domxref("SpeechSynthesisUtterance")}} to be interrupted after it had begun being
+    spoken and before it completed.</dd>
+  <dt>audio-busy</dt>
+  <dd>The operation couldn't be completed at this time because the user-agent couldn't
+    access the audio output device (for example, the user may need to correct this by
+    closing another application.)</dd>
+  <dt>audio-hardware</dt>
+  <dd>The operation couldn't be completed at this time because the user-agent couldn't
+    identify an audio output device (for example, the user may need to connect a speaker
+    or configure system settings.)</dd>
+  <dt>network</dt>
+  <dd>The operation couldn't be completed at this time because some required network
+    communication failed.</dd>
+  <dt>synthesis-unavailable</dt>
+  <dd>The operation couldn't be completed at this time because no synthesis engine was
+    available (For example, the user may need to install or configure a synthesis engine.)
+  </dd>
+  <dt>synthesis-failed</dt>
+  <dd>The operation failed because the synthesis engine raised an error.</dd>
+  <dt>language-unavailable</dt>
+  <dd>No appropriate voice was available for the language set in
+    {{domxref("SpeechSynthesisUtterance.lang")}}.</dd>
+  <dt>voice-unavailable</dt>
+  <dd>The voice set in {{domxref("SpeechSynthesisUtterance.voice")}} was not available.
+  </dd>
+  <dt>text-too-long</dt>
+  <dd>The contents of the {{domxref("SpeechSynthesisUtterance.text")}} attribute was too
+    long to synthesize.</dd>
+  <dt>invalid-argument</dt>
+  <dd>The content of the {{domxref("SpeechSynthesisUtterance.rate")}},
+    {{domxref("SpeechSynthesisUtterance.pitch")}} or
+    {{domxref("SpeechSynthesisUtterance.volume")}} property was not valid.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -85,29 +103,27 @@ inputForm.onsubmit = function(event) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Speech API', '#dom-speechsynthesiserrorevent-error', 'error')}}</td>
-   <td>{{Spec2('Web Speech API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web Speech API', '#dom-speechsynthesiserrorevent-error', 'error')}}
+      </td>
+      <td>{{Spec2('Web Speech API')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.SpeechSynthesisErrorEvent.error")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
+  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
 </ul>

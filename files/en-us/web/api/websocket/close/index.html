@@ -2,58 +2,72 @@
 title: WebSocket.close()
 slug: Web/API/WebSocket/close
 tags:
-  - API
-  - Method
-  - Reference
-  - Web API
-  - WebSocket
+- API
+- Method
+- Reference
+- Web API
+- WebSocket
 ---
 <p>{{APIRef("Web Sockets API")}}
 
-</p><p>The <strong><code>WebSocket.close()</code></strong> method closes the {{domxref("WebSocket")}} connection or connection attempt, if any. If the connection is already <code>CLOSED</code>, this method does nothing.</p>
+</p>
+<p>The <strong><code>WebSocket.close()</code></strong> method closes the
+  {{domxref("WebSocket")}} connection or connection attempt, if any. If the connection is
+  already <code>CLOSED</code>, this method does nothing.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">WebSocket.close();</pre>
+<pre class="brush: js">WebSocket.close();</pre>
+<pre class="brush: js">WebSocket.close(code);</pre>
+<pre class="brush: js">WebSocket.close(reason);</pre>
+<pre class="brush: js">WebSocket.close(code, reason);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>code</code> {{optional_inline}}</dt>
- <dd>A numeric value indicating the status code explaining why the connection is being closed. If this parameter is not specified, a default value of 1005 is assumed. See the <a href="/en-US/docs/Web/API/CloseEvent#Status_codes">list of status codes</a> of {{domxref("CloseEvent")}} for permitted values.</dd>
- <dt><code>reason</code> {{optional_inline}}</dt>
- <dd>A human-readable string explaining why the connection is closing. This string must be no longer than 123 bytes of UTF-8 text (<strong>not</strong> characters).</dd>
+  <dt><code>code</code> {{optional_inline}}</dt>
+  <dd>A numeric value indicating the status code explaining why the connection is being
+    closed. If this parameter is not specified, a default value of 1005 is assumed. See
+    the <a href="/en-US/docs/Web/API/CloseEvent#Status_codes">list of status codes</a> of
+    {{domxref("CloseEvent")}} for permitted values.</dd>
+  <dt><code>reason</code> {{optional_inline}}</dt>
+  <dd>A human-readable string explaining why the connection is closing. This string must
+    be no longer than 123 bytes of UTF-8 text (<strong>not</strong> characters).</dd>
 </dl>
 
 <h3 id="Exceptions_thrown">Exceptions thrown</h3>
 
 <dl>
- <dt><code>INVALID_ACCESS_ERR</code></dt>
- <dd>An invalid <code>code</code> was specified.</dd>
- <dt><code>SYNTAX_ERR</code></dt>
- <dd>The <code>reason</code> string is too long or contains unpaired surrogates.</dd>
+  <dt><code>INVALID_ACCESS_ERR</code></dt>
+  <dd>An invalid <code>code</code> was specified.</dd>
+  <dt><code>SYNTAX_ERR</code></dt>
+  <dd>The <code>reason</code> string is too long or contains unpaired surrogates.</dd>
 </dl>
 
 <div class="note">
-<p><strong>Note:</strong> In Gecko, this method didn't support any parameters prior to Gecko 8.0 {{geckoRelease("8.0")}}.</p>
+  <p><strong>Note:</strong> In Gecko, this method didn't support any parameters prior to
+    Gecko 8.0 {{geckoRelease("8.0")}}.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
-  <tr>
-   <td><a class="external external-icon" href="https://html.spec.whatwg.org/multipage/web-sockets.html#dom-websocket-close" hreflang="en" lang="en">HTML Living Standard<br>
-    <small lang="en-US">The definition of 'WebSocket.close()' in that specification.</small></a></td>
-   <td><span class="spec-Living">Living Standard</span></td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Specification</th>
+      <th>Status</th>
+      <th>Comment</th>
+    </tr>
+    <tr>
+      <td><a class="external external-icon"
+          href="https://html.spec.whatwg.org/multipage/web-sockets.html#dom-websocket-close"
+          hreflang="en" lang="en">HTML Living Standard<br>
+          <small lang="en-US">The definition of 'WebSocket.close()' in that
+            specification.</small></a></td>
+      <td><span class="spec-Living">Living Standard</span></td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

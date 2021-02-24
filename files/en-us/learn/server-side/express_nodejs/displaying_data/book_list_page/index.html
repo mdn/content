@@ -16,18 +16,18 @@ tags:
 
 <p>Open <strong>/controllers/bookController.js</strong>. Find the exported <code>book_list()</code> controller method and replace it with the following code.</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="comment token">// Display list of all Books.</span>
-exports<span class="punctuation token">.</span>book_list <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>req<span class="punctuation token">,</span> res<span class="punctuation token">,</span> next<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+<pre class="brush: js line-numbers  language-js">// Display list of all Books.
+exports.book_list = function(req, res, next) {
 
-  Book<span class="punctuation token">.</span><span class="function token">find</span><span class="punctuation token">(</span><span class="punctuation token">{</span><span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="string token">'title author'</span><span class="punctuation token">)</span>
-    <span class="punctuation token">.</span><span class="function token">populate</span><span class="punctuation token">(</span><span class="string token">'author'</span><span class="punctuation token">)</span>
-    <span class="punctuation token">.</span><span class="function token">exec</span><span class="punctuation token">(</span><span class="keyword token">function</span> <span class="punctuation token">(</span>err<span class="punctuation token">,</span> list_books<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="keyword token">if</span> <span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="keyword token">return</span> <span class="function token">next</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="punctuation token">}</span>
-      <span class="comment token">//Successful, so render</span>
-      res<span class="punctuation token">.</span><span class="function token">render</span><span class="punctuation token">(</span><span class="string token">'book_list'</span><span class="punctuation token">,</span> <span class="punctuation token">{</span> title<span class="punctuation token">:</span> <span class="string token">'Book List'</span><span class="punctuation token">,</span> book_list<span class="punctuation token">:</span> list_books <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  Book.find({}, 'title author')
+    .populate('author')
+    .exec(function (err, list_books) {
+      if (err) { return next(err); }
+      //Successful, so render
+      res.render('book_list', { title: 'Book List', book_list: list_books });
+    });
 
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+};</pre>
 
 <p>The method uses the model's <code>find()</code> function to return all <code>Book</code> objects, selecting to return only the <code>title</code> and <code>author</code> as we don't need the other fields (it will also return the <code>_id</code> and virtual fields). Here we also call <code>populate()</code> on <code>Book</code>, specifying the <code>author</code> field—this will replace the stored book author id with the full author details.</p>
 
@@ -37,20 +37,20 @@ exports<span class="punctuation token">.</span>book_list <span class="operator t
 
 <p>Create <strong>/views/book_list.pug</strong> and copy in the text below.</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">extends</span> <span class="class-name token">layout</span>
+<pre class="brush: js line-numbers  language-js">extends layout
 
 block content
-  h1<span class="operator token">=</span> title
+  h1= title
 
   ul
     - book_list.sort(function(a, b) {let textA = a.title.toUpperCase(); let textB = b.title.toUpperCase(); return (textA &lt; textB) ? -1 : (textA &gt; textB) ? 1 : 0;});
-    each book <span class="keyword token">in</span> book_list
+    each book in book_list
       li
-        <span class="function token">a</span><span class="punctuation token">(</span>href<span class="operator token">=</span>book<span class="punctuation token">.</span>url<span class="punctuation token">)</span> #<span class="punctuation token">{</span>book<span class="punctuation token">.</span>title<span class="punctuation token">}</span>
-        <span class="operator token">|</span>  <span class="punctuation token">(</span>#<span class="punctuation token">{</span>book<span class="punctuation token">.</span>author<span class="punctuation token">.</span>name<span class="punctuation token">}</span><span class="punctuation token">)</span>
+        a(href=book.url) #{book.title}
+        |  (#{book.author.name})
 
-    <span class="keyword token">else</span>
-      li There are no books<span class="punctuation token">.</span></code></pre>
+    else
+      li There are no books.</pre>
 
 <p>The view extends the <strong>layout.pug</strong> base template and overrides the <code>block</code> named '<strong>content</strong>'. The <code>book_list</code> is first sorted alphabetically with the inline JavaScript <code>array.sort()</code> function. It then displays the <code>title</code> we passed in from the controller (via the <code>render()</code> method) and iterates through the <code>book_list</code> variable using the <code>each</code>-<code>in</code>-<code>else</code> syntax. A list item is created for each book displaying the book title as a link to the book's detail page followed by the author name. If there are no books in the <code>book_list</code> then the <code>else</code> clause is executed, and displays the text 'There are no books.'</p>
 
@@ -62,9 +62,9 @@ block content
 
 <h2 class="highlight-spanned" id="What_does_it_look_like"><span class="highlight-span">What does it look like?</span></h2>
 
-<p>Run the application (see <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes#Testing_the_routes">Testing the routes</a> for the relevant commands) and open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>. Then select the <em>All books</em> link. If everything is set up correctly, your site should look something like the following screenshot.</p>
+<p>Run the application (see <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes#testing_the_routes">Testing the routes</a> for the relevant commands) and open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>. Then select the <em>All books</em> link. If everything is set up correctly, your site should look something like the following screenshot.</p>
 
-<p><img alt="Book List Page - Express Local Library site" src="https://mdn.mozillademos.org/files/16950/new_book_list.png" style="border-style: solid; border-width: 1px; display: block; height: 257px; margin: 0px auto; width: 752px;"></p>
+<p><img alt="Book List Page - Express Local Library site" src="new_book_list.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h2 id="Next_steps">Next steps</h2>
 

@@ -2,31 +2,38 @@
 title: SpeechSynthesisUtterance.pitch
 slug: Web/API/SpeechSynthesisUtterance/pitch
 tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechSynthesisUtterance
-  - Web Speech API
-  - pitch
-  - speech
-  - synthesis
+- API
+- Experimental
+- Property
+- Reference
+- SpeechSynthesisUtterance
+- Web Speech API
+- pitch
+- speech
+- synthesis
 ---
 <div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
 
-<p>The <strong><code>pitch</code></strong> property of the {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the pitch at which the utterance will be spoken at.</p>
+<p>The <strong><code>pitch</code></strong> property of the
+  {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the pitch at which the
+  utterance will be spoken at.</p>
 
 <p>If unset, a default value of 1 will be used.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">// default 1
+<pre class="brush: js">// default 1
 speechSynthesisUtteranceInstance.pitch = 1.5;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A float representing the pitch value. It can range between 0 (lowest) and 2 (highest), with 1 being the default pitch for the current platform or voice. Some speech synthesis engines or voices may constrain the minimum and maximum rates further. If <a href="https://www.w3.org/TR/speech-synthesis/">SSML</a> is used, this value will be overridden by <a href="https://www.w3.org/TR/speech-synthesis/#S3.2.4">prosody tags</a> in the markup.</p>
+<p>A float representing the pitch value. It can range between 0 (lowest) and 2 (highest),
+  with 1 being the default pitch for the current platform or voice. Some speech synthesis
+  engines or voices may constrain the minimum and maximum rates further. If <a
+    href="https://www.w3.org/TR/speech-synthesis/">SSML</a> is used, this value will be
+  overridden by <a href="https://www.w3.org/TR/speech-synthesis/#S3.2.4">prosody tags</a>
+  in the markup.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -58,29 +65,27 @@ inputForm.onsubmit = function(event) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Web Speech API', '#dom-speechsynthesisutterance-pitch', 'pitch')}}</td>
-			<td>{{Spec2('Web Speech API')}}</td>
-			<td> </td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web Speech API', '#dom-speechsynthesisutterance-pitch', 'pitch')}}
+      </td>
+      <td>{{Spec2('Web Speech API')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.SpeechSynthesisUtterance.pitch")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
+  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
 </ul>

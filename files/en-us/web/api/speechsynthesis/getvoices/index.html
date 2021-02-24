@@ -2,23 +2,26 @@
 title: SpeechSynthesis.getVoices()
 slug: Web/API/SpeechSynthesis/getVoices
 tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - SpeechSynthesis
-  - Web Speech API
-  - getVoices
-  - speech
-  - synthesis
+- API
+- Experimental
+- Method
+- Reference
+- SpeechSynthesis
+- Web Speech API
+- getVoices
+- speech
+- synthesis
 ---
 <div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
 
-<p>The <code><strong>getVoices()</strong></code> method of the {{domxref("SpeechSynthesis")}} interface returns a list of {{domxref("SpeechSynthesisVoice")}} objects representing all the available voices on the current device.</p>
+<p>The <code><strong>getVoices()</strong></code> method of the
+  {{domxref("SpeechSynthesis")}} interface returns a list of
+  {{domxref("SpeechSynthesisVoice")}} objects representing all the available voices on the
+  current device.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">speechSynthesisInstance.getVoices();
+<pre class="brush: js">speechSynthesisInstance.getVoices();
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -30,7 +33,9 @@ tags:
 <p>A list (array) of {{domxref("SpeechSynthesisVoice")}} objects.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The spec wrongly lists this method as returning as a <code>SpeechSynthesisVoiceList</code> object, but this was in fact removed from the spec.</p>
+  <p><strong>Note</strong>: The spec wrongly lists this method as returning as a
+    <code>SpeechSynthesisVoiceList</code> object, but this was in fact removed from the
+    spec.</p>
 </div>
 
 <h2 id="Example">Example</h2>
@@ -73,29 +78,27 @@ if (typeof speechSynthesis !== 'undefined' &amp;&amp; speechSynthesis.onvoicesch
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Speech API', '#dom-speechsynthesis-getvoices', 'getVoices()')}}</td>
-   <td>{{Spec2('Web Speech API')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web Speech API', '#dom-speechsynthesis-getvoices', 'getVoices()')}}
+      </td>
+      <td>{{Spec2('Web Speech API')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.SpeechSynthesis.getVoices")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
+  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
 </ul>

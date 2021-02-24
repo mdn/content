@@ -2,19 +2,20 @@
 title: Storage.clear()
 slug: Web/API/Storage/clear
 tags:
-  - API
-  - Method
-  - Reference
-  - Storage
-  - Web Storage
+- API
+- Method
+- Reference
+- Storage
+- Web Storage
 ---
 <p>{{APIRef("Web Storage API")}}</p>
 
-<p>The <strong><code>clear()</code></strong> method of the {{domxref("Storage")}} interface clears all keys stored in a given <code>Storage</code> object.</p>
+<p>The <strong><code>clear()</code></strong> method of the {{domxref("Storage")}}
+  interface clears all keys stored in a given <code>Storage</code> object.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>storage</var>.clear();</pre>
+<pre class="brush: js"><var>storage</var>.clear();</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -22,9 +23,10 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following function creates three data entries in local storage, and then deletes them by using <code>clear()</code>.</p>
+<p>The following function creates three data entries in local storage, and then deletes
+  them by using <code>clear()</code>.</p>
 
-<pre class="brush: js notranslate">function populateStorage() {
+<pre class="brush: js">function populateStorage() {
   localStorage.setItem('bgcolor', 'red');
   localStorage.setItem('font', 'Helvetica');
   localStorage.setItem('image', 'miGato.png');
@@ -33,26 +35,28 @@ tags:
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: For a real world example, see our <a href="https://mdn.github.io/dom-examples/web-storage/">Web Storage Demo</a>.</p>
+  <p><strong>Note</strong>: For a real world example, see our <a
+      href="https://mdn.github.io/dom-examples/web-storage/">Web Storage Demo</a>.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-clear', 'Storage.clear')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-clear',
+        'Storage.clear')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -61,4 +65,5 @@ tags:
 
 <h2 id="See_also">See also</h2>
 
-<p><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a></p>
+<p><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web
+    Storage API</a></p>

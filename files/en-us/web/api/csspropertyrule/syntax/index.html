@@ -2,50 +2,63 @@
 title: CSSPropertyRule.syntax
 slug: Web/API/CSSPropertyRule/syntax
 tags:
-  - API
-  - CSS
-  - CSS Properties and Values API
-  - CSSPropertyRule
-  - Experimental
-  - Houdini
-  - Property
-  - Reference
-  - Read-only
+- API
+- CSS
+- CSS Properties and Values API
+- CSSPropertyRule
+- Experimental
+- Houdini
+- Property
+- Reference
+- Read-only
 ---
-<div>{{APIRef("CSS Properties and Values API")}}{{SeeCompatTable}}{{draft}}</div>
+<div>{{APIRef("CSS Properties and Values API")}}</div>
 
-<p class="summary">The read-only <strong><code>syntax</code></strong> property of the {{domxref("CSSPropertyRule")}} interface returns the literal syntax of the custom property registration represented by the {{domxref("@property")}} rule, controlling how the property’s value is parsed at computed-value time.</p>
+<p class="summary">The read-only <strong><code>syntax</code></strong> property of the {{domxref("CSSPropertyRule")}} interface returns the literal syntax of the custom property registration represented by the {{cssxref("@property")}} rule, controlling how the property’s value is parsed at computed-value time.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">const <var>syntax</var> = CSSPropertyRule.syntax;</pre>
+<pre class="syntaxbox">const <var>syntax</var> = <var>CSSPropertyRule</var>.syntax;</pre>
 
 <h3>Value</h3>
 <p>A {{domxref("USVString")}}.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>To do</p>
+<p>This stylesheet contains a single {{cssxref("@property")}} rule. The first {{domxref("CSSRule")}} returned will be a <code>CSSPropertyRule</code> representing this rule. The <code>syntax</code> property returns the literal string <code>"&lt;color&gt;"</code>.</p>
+
+<pre class="brush:css">@property --property-name {
+  syntax: '&lt;color&gt;';
+  inherits: false;
+  initial-value: #c0ffee;
+}</pre>
+
+<pre class="brush:javascript">let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].syntax); //the string "&lt;color&gt;"</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-    <tbody>
-     <tr>
+  <tbody>
+    <tr>
       <th scope="col">Specification</th>
       <th scope="col">Status</th>
       <th scope="col">Comment</th>
-     </tr>
-     <tr>
-      <td>{{SpecName('CSS Properties and Values API','#dom-csspropertyrule-syntax','Syntax')}}</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('CSS Properties and Values
+        API','#dom-csspropertyrule-syntax','Syntax')}}</td>
       <td>{{Spec2('CSS Properties and Values API')}}</td>
       <td>Initial definition.</td>
-     </tr>
-    </tbody>
-   </table>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+<div class="hidden">The compatibility table in this page is generated from structured
+  data. If you'd like to contribute to the data, please check out <a
+    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+  and send us a pull request.</div>
 
 <p>{{Compat("api.CSSPropertyRule.syntax")}}</p>

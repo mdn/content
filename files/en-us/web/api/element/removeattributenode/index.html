@@ -2,25 +2,28 @@
 title: Element.removeAttributeNode()
 slug: Web/API/Element/removeAttributeNode
 tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - NeedsSpecTable
-  - Reference
+- API
+- DOM
+- Element
+- Method
+- NeedsSpecTable
+- Reference
 ---
 <div>{{ APIRef("DOM") }}</div>
 
-<p>The <strong><code>removeAttributeNode()</code></strong> method of the {{domxref("Element")}} object removes the specified attribute from the current element.</p>
+<p>The <strong><code>removeAttributeNode()</code></strong> method of the
+  {{domxref("Element")}} object removes the specified attribute from the current element.
+</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>removedAttr</em> = <em>element</em>.removeAttributeNode(<em>attributeNode</em>)
+<pre class="brush: js"><em>removedAttr</em> = <em>element</em>.removeAttributeNode(<em>attributeNode</em>)
 </pre>
 
 <ul>
- <li><var>attributeNode</var> is the <code>Attr</code> node that needs to be removed.</li>
- <li><var>removedAttr</var> is the removed <code>Attr</code> node.</li>
+  <li><var>attributeNode</var> is the <code>Attr</code> node that needs to be removed.
+  </li>
+  <li><var>removedAttr</var> is the removed <code>Attr</code> node.</li>
 </ul>
 
 <h2 id="Example">Example</h2>
@@ -34,29 +37,34 @@ d.removeAttributeNode(d_align);
 
 <h2 id="Notes">Notes</h2>
 
-<p>If the removed attribute has a default value, it is immediately replaced. The replacing attribute has the same namespace URI and local name, as well as the original prefix, when applicable.</p>
+<p>If the removed attribute has a default value, it is immediately replaced. The replacing
+  attribute has the same namespace URI and local name, as well as the original prefix,
+  when applicable.</p>
 
-<p>There is no <code>removeAttributeNodeNS</code> method; the <code>removeAttributeNode</code> method can remove both namespaced attributes and non-namespaced attributes.</p>
+<p>There is no <code>removeAttributeNodeNS</code> method; the
+  <code>removeAttributeNode</code> method can remove both namespaced attributes and
+  non-namespaced attributes.</p>
 
 <p>{{ DOMAttributeMethods() }}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-removeattributenode', 'Element: removeAttributeNode')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-element-removeattributenode', 'Element:
+        removeAttributeNode')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

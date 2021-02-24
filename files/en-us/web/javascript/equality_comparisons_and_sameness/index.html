@@ -46,7 +46,7 @@ tags:
 
 <p>Strict equality compares two values for equality. Neither value is implicitly converted to some other value before being compared. If the values have different types, the values are considered unequal. If the values have the same type, are not numbers, and have the same value, they're considered equal. Finally, if both values are numbers, they're considered equal if they're both not <code>NaN</code> and are the same value, or if one is <code>+0</code> and one is <code>-0</code>.</p>
 
-<pre class="brush: js notranslate">var num = 0;
+<pre class="brush: js">var num = 0;
 var obj = new String('0');
 var str = '0';
 
@@ -150,7 +150,7 @@ console.log(obj === undefined); // false
 
 <p>Traditionally, and according to ECMAScript, all objects are loosely unequal to <code>undefined</code> and <code>null</code>. But most browsers permit a very narrow class of objects (specifically, the <code>document.all</code> object for any page), in some contexts, to act as if they <em>emulate</em> the value <code>undefined</code>. Loose equality is one such context: <code>null == A</code> and <code>undefined == A</code> evaluate to true if, and only if, A is an object that <em>emulates</em> <code>undefined</code>. In all other cases an object is never loosely equal to <code>undefined</code> or <code>null</code>.</p>
 
-<pre class="brush: js notranslate">var num = 0;
+<pre class="brush: js">var num = 0;
 var obj = new String('0');
 var str = '0';
 
@@ -174,7 +174,7 @@ console.log(obj == undefined);
 
 <p>Same-value equality addresses a final use case: determining whether two values are <em>functionally identical</em> in all contexts. (This use case demonstrates an instance of the <a href="https://en.wikipedia.org/wiki/Liskov_substitution_principle">Liskov substitution principle</a>.) One instance occurs when an attempt is made to mutate an immutable property:</p>
 
-<pre class="brush: js notranslate">// Add an immutable NEGATIVE_ZERO property to the Number constructor.
+<pre class="brush: js">// Add an immutable NEGATIVE_ZERO property to the Number constructor.
 Object.defineProperty(Number, 'NEGATIVE_ZERO',
                       { value: -0, writable: false, configurable: false, enumerable: false });
 
@@ -286,6 +286,14 @@ function attemptMutation(v) {
    <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
    <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
    <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
+  </tr>
+  <tr>
+   <td><code>0n</code></td>
+   <td><code>-0n</code></td>
+   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
+   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
+   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
    <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
   </tr>
   <tr>
@@ -428,9 +436,9 @@ function attemptMutation(v) {
 <dl>
  <dt><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#-_.28Unary_Negation.29"><code>- (unary negation)</code></a></dt>
  <dd>
- <pre class="brush:js notranslate">let stoppingForce = obj.mass * -obj.velocity;</pre>
+ <pre class="brush: js">let stoppingForce = obj.mass * -obj.velocity;</pre>
 
- <p>If <code>obj.velocity</code> is <code>0</code> (or computes to <code>0</code>), a <code>-0</code> is introduced at that place and propogates out into <code>stoppingForce</code>.</p>
+ <p>If <code>obj.velocity</code> is <code>0</code> (or computes to <code>0</code>), a <code>-0</code> is introduced at that place and propagates out into <code>stoppingForce</code>.</p>
  </dd>
 </dl>
 
@@ -459,7 +467,7 @@ function attemptMutation(v) {
 
 <p>The {{jsxref("Object.is")}} specification treats all instances of {{jsxref("NaN")}} as the same object. However, since <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed arrays</a> are available, we can have distinct instances, which don't behave identically in all contexts. For example:</p>
 
-<pre class="brush: js notranslate">var f2b = x =&gt; new Uint8Array(new Float64Array([x]).buffer);
+<pre class="brush: js">var f2b = x =&gt; new Uint8Array(new Float64Array([x]).buffer);
 var b2f = x =&gt; new Float64Array(x.buffer)[0];
 var n = f2b(NaN);
 n[0] = 1;

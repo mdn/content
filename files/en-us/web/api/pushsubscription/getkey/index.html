@@ -2,34 +2,44 @@
 title: PushSubscription.getKey()
 slug: Web/API/PushSubscription/getKey
 tags:
-  - API
-  - Experimental
-  - Method
-  - Push
-  - Push API
-  - PushSubscription
-  - Reference
-  - Service Workers
-  - getKey
+- API
+- Experimental
+- Method
+- Push
+- Push API
+- PushSubscription
+- Reference
+- Service Workers
+- getKey
 ---
 <p>{{SeeCompatTable}}{{APIRef("Push API")}}</p>
 
-<p>The <code>getKey()</code> method of the {{domxref("PushSubscription")}} interface returns an {{domxref("ArrayBuffer")}} representing a client public key, which can then be sent to a server and used in encrypting push message data.</p>
+<p>The <code>getKey()</code> method of the {{domxref("PushSubscription")}} interface
+  returns an {{domxref("ArrayBuffer")}} representing a client public key, which can then
+  be sent to a server and used in encrypting push message data.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><span class="pl-k">var</span> key <span class="pl-k">=</span> subscription.getKey(<span class="pl-s"><span class="pl-pds">name</span></span>);</pre>
+<pre
+  class="brush: js"><span class="pl-k">var</span> key <span class="pl-k">=</span> subscription.getKey(<span class="pl-s"><span class="pl-pds">name</span></span>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>name</dt>
- <dd>A {{domxref("DOMString")}} representing the encryption method used to generate a client key.  The value can be:
- <ul>
-  <li><code>p256dh</code>: An <a href="https://en.wikipedia.org/wiki/Elliptic_curve_Diffie%E2%80%93Hellman">Elliptic curve Diffie–Hellman</a> public key on the P-256 curve (that is, the NIST secp256r1 elliptic curve).  The resulting key is an uncompressed point in ANSI X9.62 format.</li>
-  <li><code>auth</code>: An authentication secret, as described in<span class="h1"> <a href="https://tools.ietf.org/html/draft-ietf-webpush-encryption-08">Message Encryption for Web Push</a>.</span></li>
- </ul>
- </dd>
+  <dt>name</dt>
+  <dd>A {{domxref("DOMString")}} representing the encryption method used to generate a
+    client key.  The value can be:
+    <ul>
+      <li><code>p256dh</code>: An <a
+          href="https://en.wikipedia.org/wiki/Elliptic_curve_Diffie%E2%80%93Hellman">Elliptic
+          curve Diffie–Hellman</a> public key on the P-256 curve (that is, the NIST
+        secp256r1 elliptic curve).  The resulting key is an uncompressed point in ANSI
+        X9.62 format.</li>
+      <li><code>auth</code>: An authentication secret, as described in<span class="h1"> <a
+            href="https://tools.ietf.org/html/draft-ietf-webpush-encryption-08">Message
+            Encryption for Web Push</a>.</span></li>
+    </ul>
+  </dd>
 </dl>
 
 <h3 id="Returns">Returns</h3>
@@ -68,23 +78,21 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Push API')}}</td>
-   <td>{{Spec2('Push API')}}</td>
-   <td>This is the Push API spec, but note that <code>getKey()</code> is not currently specified in here. It is currently Firefox-only experimental.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Push API')}}</td>
+      <td>{{Spec2('Push API')}}</td>
+      <td>This is the Push API spec, but note that <code>getKey()</code> is not currently
+        specified in here. It is currently Firefox-only experimental.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.PushSubscription.getKey")}}</p>
-</div>

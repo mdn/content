@@ -1,0 +1,110 @@
+---
+title: devtools.panels.create()
+slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/create
+tags:
+  - API
+  - Add-ons
+  - Create
+  - Extensions
+  - Method
+  - Reference
+  - WebExtensions
+  - devtools.panels
+---
+<div>{{AddonSidebar()}}</div>
+
+<p>Adds a new panel to the devtools.</p>
+
+<p>This function takes: a title, a URL to an icon file, and a URL to an HTML file. It creates a new panel in the devtools, whose content is specified by the HTML file. It returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that resolves to an <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel">ExtensionPanel</a></code> object representing the new panel.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush:js">var creating = browser.devtools.panels.create(
+  title,       // string
+  iconPath,    // string
+  pagePath     // string
+)
+</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+ <dt><code>title</code></dt>
+ <dd><code>string</code>. The panel's title. This will appear in the row of tabs along the top of the devtools window, and is the main way the user will be able to identify your panel.</dd>
+ <dt><code>iconPath</code></dt>
+ <dd><code>string</code>. Specifies an icon which will be shown next to the title. It's provided as a URL to an image file that's been bundled with your extension. The URL is resolved as relative to the current extension page (unless expressed as an absolute url, e.g. "/icons/panel.png").</dd>
+ <dt><code>pagePath</code></dt>
+ <dd>string. Specifies an HTML file that defines the actual content of the panel. It's provided as a URL to an HTML file that's been bundled with your extension. The URL is resolved as relative to the current extension page (unless expressed as an absolute url, e.g. "/devtools/panel.html"). The HTML file may include CSS and JavaScript files, just like a normal web page. The JavaScript running in the panel will be able to use the devtools APIs. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools">Extending the developer tools</a>.</dd>
+</dl>
+
+<h3 id="Return_value">Return value</h3>
+
+<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel">ExtensionPanel</a></code> object representing the new panel.</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("webextensions.api.devtools.panels.create")}}</p>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>Create a new panel, and add listeners to its onShown and onHidden events:</p>
+
+<pre class="brush: js">function handleShown() {
+  console.log("panel is being shown");
+}
+
+function handleHidden() {
+  console.log("panel is being hidden");
+}
+
+browser.devtools.panels.create(
+  "My Panel",                 // title
+  "/icons/star.png",           // icon
+  "/devtools/panel/panel.html" // content
+).then((newPanel) =&gt; {
+  newPanel.onShown.addListener(handleShown);
+  newPanel.onHidden.addListener(handleHidden);
+});
+</pre>
+
+<p>{{WebExtExamples}}</p>
+
+<div class="note"><strong>Acknowledgements</strong>
+
+<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/devtools_panels"><code>chrome.devtools.panels</code></a> API.</p>
+
+<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
+</div>
+
+<div class="hidden">
+<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are
+// met:
+//
+//    * Redistributions of source code must retain the above copyright
+// notice, this list of conditions and the following disclaimer.
+//    * Redistributions in binary form must reproduce the above
+// copyright notice, this list of conditions and the following disclaimer
+// in the documentation and/or other materials provided with the
+// distribution.
+//    * Neither the name of Google Inc. nor the names of its
+// contributors may be used to endorse or promote products derived from
+// this software without specific prior written permission.
+//
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</pre>
+</div>

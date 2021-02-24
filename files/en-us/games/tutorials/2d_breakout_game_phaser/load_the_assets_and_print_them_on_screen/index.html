@@ -17,7 +17,7 @@ tags:
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Scaling", "Games/Workflows/2D_Breakout_game_Phaser/Move the ball")}}</p>
 
 <div class="summary">
-<p>This is the <strong>3rd step</strong> out of 16 in the <a href="/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson03.html">Gamedev-Phaser-Content-Kit/demos/lesson03.html</a>.</p>
+<p>This is the <strong>3rd step</strong> out of 16 in the <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser">Gamedev Phaser tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson03.html">Gamedev-Phaser-Content-Kit/demos/lesson03.html</a>.</p>
 </div>
 
 <p><span class="seoSummary">Our game will feature a ball rolling around the screen, bouncing off a paddle, and destroying bricks to earn points — familiar, huh? In this article we'll look at how to add sprites into our gameworld.</span></p>
@@ -26,7 +26,7 @@ tags:
 
 <p>Let's start by creating a JavaScript variable to represent our ball. Add the following line between the game initialization code (our <code>var game...</code> block) and the <code>preload()</code> function:</p>
 
-<pre class="brush: js notranslate">var ball;
+<pre class="brush: js">var ball;
 </pre>
 
 <div class="note">
@@ -37,7 +37,7 @@ tags:
 
 <p>Loading images and printing them on our canvas is a lot easier using Phaser than using pure JavaScript. To load the asset, we will use the <code>game</code> object created by Phaser, executing its <code>load.image()</code> method. Add the following new line just inside the <code>preload()</code> function, at the bottom:</p>
 
-<pre class="brush: js notranslate">function preload() {
+<pre class="brush: js">function preload() {
     // ...
     game.load.image('ball', 'img/ball.png');
 }
@@ -49,7 +49,7 @@ tags:
 
 <p>Now, to show it on the screen we will use another Phaser method called <code>add.sprite()</code>;  add the following new code line inside the <code>create()</code> function as shown:</p>
 
-<pre class="brush: js notranslate">function create() {
+<pre class="brush: js">function create() {
     ball = game.add.sprite(50, 50, 'ball');
 }
 </pre>
@@ -64,6 +64,6 @@ tags:
 
 <h2 id="Next_steps">Next steps</h2>
 
-<p>Printing out the ball was easy; next, we'll try <a href="/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball">moving the ball</a> on screen.</p>
+<p>Printing out the ball was easy; next, we'll try <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball">moving the ball</a> on screen.</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Scaling", "Games/Workflows/2D_Breakout_game_Phaser/Move the ball")}}</p>

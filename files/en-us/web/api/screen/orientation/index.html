@@ -2,27 +2,31 @@
 title: Screen.orientation
 slug: Web/API/Screen/orientation
 tags:
-  - API
-  - CSSOM View
-  - Experimental
-  - Property
-  - Read-only
-  - Screen Orientation
-  - screen
+- API
+- CSSOM View
+- Experimental
+- Property
+- Read-only
+- Screen Orientation
+- screen
 ---
 <p>{{APIRef("Screen Orientation API")}}{{SeeCompatTable}}</p>
 
-<p>The <strong><code>orientation</code></strong> read-only property of the {{DOMxRef("Screen")}} interface returns the current orientation of the screen.</p>
+<p>The <strong><code>orientation</code></strong> read-only property of the
+	{{DOMxRef("Screen")}} interface returns the current orientation of the screen.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>orientation</var> = window.screen.orientation;</pre>
+<pre
+	class="brush: js">var <var>orientation</var> = window.screen.orientation;</pre>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>An instance of {{DOMxRef("ScreenOrientation")}} representing the orientation of the screen.</p>
+<p>An instance of {{DOMxRef("ScreenOrientation")}} representing the orientation of the
+	screen.</p>
 
-<p>Note that older, prefixed versions returned a {{DOMxRef("DOMString")}} equivalent to {{DOMxRef("ScreenOrientation.type")}}.</p>
+<p>Note that older, prefixed versions returned a {{DOMxRef("DOMString")}} equivalent to
+	{{DOMxRef("ScreenOrientation.type")}}.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -51,7 +55,8 @@ if (orientation === "landscape-primary") {
 	</thead>
 	<tbody>
 		<tr>
-			<td>{{SpecName('Screen Orientation', '#dom-screen-orientation', 'orientation')}}</td>
+			<td>{{SpecName('Screen Orientation', '#dom-screen-orientation',
+				'orientation')}}</td>
 			<td>{{Spec2('Screen Orientation')}}</td>
 			<td>Initial definition</td>
 		</tr>
@@ -67,5 +72,6 @@ if (orientation === "landscape-primary") {
 <ul>
 	<li>{{DOMxRef("ScreenOrientation")}}</li>
 	<li>{{DOMxRef("Screen.onorientationchange")}}</li>
-	<li><a href="/en-US/docs/Managing_screen_orientation">Managing screen orientation</a></li>
+	<li><a href="/en-US/docs/Managing_screen_orientation">Managing screen orientation</a>
+	</li>
 </ul>

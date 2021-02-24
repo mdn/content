@@ -13,18 +13,22 @@ tags:
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p>The <code>createChannelSplitter()</code> method of the {{ domxref("BaseAudioContext") }} Interface is used to create a {{domxref("ChannelSplitterNode")}}, which is used to access the individual channels of an audio stream and process them separately.</p>
+  <p>The <code>createChannelSplitter()</code> method of the {{ domxref("BaseAudioContext")
+    }} Interface is used to create a {{domxref("ChannelSplitterNode")}}, which is used to
+    access the individual channels of an audio stream and process them separately.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">baseAudioContext.createChannelSplitter(<em>numberOfOutputs</em>);</pre>
+<pre
+  class="brush: js">baseAudioContext.createChannelSplitter(<em>numberOfOutputs</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>numberOfOutputs</dt>
- <dd>The number of channels in the input audio stream that you want to output separately; the default is 6 if this parameter is not specified.</dd>
+  <dt>numberOfOutputs</dt>
+  <dd>The number of channels in the input audio stream that you want to output separately;
+    the default is 6 if this parameter is not specified.</dd>
 </dl>
 
 <h3 id="Returns">Returns</h3>
@@ -33,7 +37,11 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>The following simple example shows how you could separate a stereo track (say, a piece of music), and process the left and right channel differently. To use them, you need to use the second and third parameters of the {{domxref("AudioNode.connect(AudioNode)") }} method, which allow you to specify the index of the channel to connect from and the index of the channel to connect to.</p>
+<p>The following simple example shows how you could separate a stereo track (say, a piece
+  of music), and process the left and right channel differently. To use them, you need to
+  use the second and third parameters of the {{domxref("AudioNode/connect", "AudioNode.connect(AudioNode")}}
+  method, which allow you to specify the index of the channel to connect from and the
+  index of the channel to connect to.</p>
 
 <pre class="brush: js;highlight[5,12,17]">var ac = new AudioContext();
 ac.decodeAudioData(someStereoBuffer, function(data) {
@@ -64,29 +72,28 @@ ac.decodeAudioData(someStereoBuffer, function(data) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createchannelsplitter', 'createChannelSplitter()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createchannelsplitter',
+        'createChannelSplitter()')}}</td>
+      <td>{{Spec2('Web Audio API')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.BaseAudioContext.createChannelSplitter")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  </li>
 </ul>

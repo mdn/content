@@ -2,49 +2,56 @@
 title: KeyboardEvent.isComposing
 slug: Web/API/KeyboardEvent/isComposing
 tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
+- API
+- DOM
+- KeyboardEvent
+- Property
+- Read-only
+- Reference
 ---
 <p>{{APIRef("DOM Events")}}</p>
 
-<p>The <code><strong>KeyboardEvent.isComposing</strong></code> read-only property returns a {{jsxref("Boolean")}} value indicating if the event is fired within a composition session, i.e. after {{domxref("Element/compositionstart_event", "compositionstart")}} and before {{domxref("Element/compositionend_event", "compositionend")}}.</p>
+<p>The <code><strong>KeyboardEvent.isComposing</strong></code> read-only property returns
+  a {{jsxref("Boolean")}} value indicating if the event is fired within a composition
+  session, i.e. after {{domxref("Element/compositionstart_event", "compositionstart")}}
+  and before {{domxref("Element/compositionend_event", "compositionend")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>bool</var> = <var>event</var>.isComposing;</pre>
+<pre
+  class="brush: js">var <var>bool</var> = <var>event</var>.isComposing;</pre>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">var kbdEvent = new KeyboardEvent("syntheticKey", false);
+<pre class="brush: js">var kbdEvent = new KeyboardEvent("syntheticKey", false);
 console.log(kbdEvent.isComposing); // return false
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('UI Events', '#dom-keyboardevent-iscomposing', 'KeyboardEvent.prototype.isComposing')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events','#widl-KeyboardEvent-isComposing','KeyboardEvent.prototype.isComposing')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('UI Events', '#dom-keyboardevent-iscomposing',
+        'KeyboardEvent.prototype.isComposing')}}</td>
+      <td>{{Spec2('UI Events')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM3
+        Events','#widl-KeyboardEvent-isComposing','KeyboardEvent.prototype.isComposing')}}
+      </td>
+      <td>{{Spec2('DOM3 Events')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -54,6 +61,6 @@ console.log(kbdEvent.isComposing); // return false
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{ event("compositionstart") }} and {{ event("compositionend")}}</li>
- <li>{{domxref("KeyboardEvent")}}</li>
+  <li>{{ event("compositionstart") }} and {{ event("compositionend")}}</li>
+  <li>{{domxref("KeyboardEvent")}}</li>
 </ul>

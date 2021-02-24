@@ -2,27 +2,30 @@
 title: HTMLTableElement.deleteRow()
 slug: Web/API/HTMLTableElement/deleteRow
 tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - Method
-  - NeedsSpecTable
-  - Reference
+- API
+- HTML DOM
+- HTMLTableElement
+- Method
+- NeedsSpecTable
+- Reference
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p>The <code><strong>HTMLTableElement.deleteRow()</strong></code> method removes a specific row ({{HtmlElement("tr")}}) from a given {{HtmlElement("table")}}.</p>
+<p>The <code><strong>HTMLTableElement.deleteRow()</strong></code> method removes a
+  specific row ({{HtmlElement("tr")}}) from a given {{HtmlElement("table")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>HTMLTableElement</em>.deleteRow(<em>index</em>)</pre>
+<pre
+  class="brush: js"><em>HTMLTableElement</em>.deleteRow(<em>index</em>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>index</code></dt>
- <dd><code>index</code> is an integer representing the row that should be deleted.<br>
- However, the special index <code>-1</code> can be used to remove the very last row of a table.</dd>
+  <dt><code>index</code></dt>
+  <dd><code>index</code> is an integer representing the row that should be deleted.<br>
+    However, the special index <code>-1</code> can be used to remove the very last row of
+    a table.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -31,7 +34,10 @@ tags:
 
 <h3 id="Errors_thrown">Errors thrown</h3>
 
-<p>If the number of the row to delete, specified by the parameter, is greater or equal to the number of available rows, or if it is negative and not equal to the special index <code>-1</code>, representing the last row of the table, the exception <code>INDEX_SIZE_ERR</code> is thrown.</p>
+<p>If the number of the row to delete, specified by the parameter, is greater or equal to
+  the number of available rows, or if it is negative and not equal to the special index
+  <code>-1</code>, representing the last row of the table, the exception
+  <code>INDEX_SIZE_ERR</code> is thrown.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -59,25 +65,23 @@ table.deleteRow(1);</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-table-deleterow', 'HTMLTableElement: deleteRow')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#dom-table-deleterow', 'HTMLTableElement:
+        deleteRow')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.HTMLTableElement.deleteRow")}}</p>
-</div>

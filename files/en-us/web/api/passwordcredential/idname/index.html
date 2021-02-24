@@ -2,26 +2,32 @@
 title: PasswordCredential.idName
 slug: Web/API/PasswordCredential/idName
 tags:
-  - API
-  - Credential Management API
-  - NeedsExample
-  - PasswordCredential
-  - Property
-  - Reference
-  - credential management
+- API
+- Credential Management API
+- NeedsExample
+- PasswordCredential
+- Property
+- Reference
+- credential management
 ---
 <p>{{SeeCompatTable}}{{APIRef("")}}{{Deprecated_header}}</p>
 
-<p><span class="seoSummary">The <strong><code>idName</code></strong> property of the {{domxref("PasswordCredential")}} interface returns a {{domxref("USVString")}}, representing the name that will be used for the ID field</span>, when submitting the current object to a remote endpoint via {{domxref("fetch")}}. This property defaults to <code>'username'</code>, but may be set to match whatever your backend service expects.</p>
+<p><span class="seoSummary">The <strong><code>idName</code></strong> property of the
+    {{domxref("PasswordCredential")}} interface returns a {{domxref("USVString")}},
+    representing the name that will be used for the ID field</span>, when submitting the
+  current object to a remote endpoint via {{domxref("fetch")}}. This property defaults to
+  <code>'username'</code>, but may be set to match whatever your backend service expects.
+</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var idName = PasswordCredential.idName
+<pre class="brush: js">var idName = PasswordCredential.idName
 PasswordCredential.idName = "userID"</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("USVString")}} represents the name used for the ID field, when submitting the current object to a remote endpoint via {{domxref("fetch")}}.</p>
+<p>A {{domxref("USVString")}} represents the name used for the ID field, when submitting
+  the current object to a remote endpoint via {{domxref("fetch")}}.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -30,18 +36,18 @@ PasswordCredential.idName = "userID"</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Credential Management')}}</td>
-   <td>{{Spec2('Credential Management')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Credential Management')}}</td>
+      <td>{{Spec2('Credential Management')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

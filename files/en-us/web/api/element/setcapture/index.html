@@ -2,34 +2,41 @@
 title: Element.setCapture()
 slug: Web/API/Element/setCapture
 tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Non-standard
-  - Reference
+- API
+- DOM
+- Element
+- Method
+- Non-standard
+- Reference
 ---
-<div>{{non-standard_header}} {{ APIRef("DOM") }} {{ gecko_minversion_header("2.0") }}</div>
+<div>{{non-standard_header}} {{ APIRef("DOM") }} {{ gecko_minversion_header("2.0") }}
+</div>
 
-<p>Call this method during the handling of a mousedown event to retarget all mouse events to this element until the mouse button is released or {{ domxref("document.releaseCapture()") }} is called.</p>
+<p>Call this method during the handling of a mousedown event to retarget all mouse events
+  to this element until the mouse button is released or {{
+  domxref("document.releaseCapture()") }} is called.</p>
 
-<div class="warning"><strong>Warning:</strong> This interface never had much cross-browser support and you probably looking for {{domxref("element.setPointerCapture")}} instead, from the Pointer Events API.</div>
+<div class="warning"><strong>Warning:</strong> This interface never had much cross-browser
+  support and you probably looking for {{domxref("element.setPointerCapture")}} instead,
+  from the Pointer Events API.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><em>element</em>.setCapture(<em>retargetToElement</em>);
+<pre class="brush: js"><em>element</em>.setCapture(<em>retargetToElement</em>);
 </pre>
 
 <dl>
- <dt><code>retargetToElement</code></dt>
- <dd>If <code>true</code>, all events are targeted directly to this element; if <code>false</code>, events can also fire at descendants of this element.</dd>
+  <dt><code>retargetToElement</code></dt>
+  <dd>If <code>true</code>, all events are targeted directly to this element; if
+    <code>false</code>, events can also fire at descendants of this element.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
 
-<p>In this example, the current mouse coordinates are drawn while you mouse around after clicking and holding down on an element.</p>
+<p>In this example, the current mouse coordinates are drawn while you mouse around after
+  clicking and holding down on an element.</p>
 
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
 &lt;head&gt;
   &lt;title&gt;Mouse Capture Example&lt;/title&gt;
   &lt;style type="text/css"&gt;
@@ -80,7 +87,8 @@ tags:
 
 <h2 id="Notes">Notes</h2>
 
-<p>The element may not be scrolled completely to the top or bottom, depending on the layout of other elements.</p>
+<p>The element may not be scrolled completely to the top or bottom, depending on the
+  layout of other elements.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -93,6 +101,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{ domxref("document.releaseCapture()") }}</li>
- <li>{{domxref("element.setPointerCapture")}}</li>
+  <li>{{ domxref("document.releaseCapture()") }}</li>
+  <li>{{domxref("element.setPointerCapture")}}</li>
 </ul>

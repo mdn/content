@@ -14,7 +14,7 @@ tags:
   - Object
   - Object-Oriented
   - instance
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{LearnSidebar}}</div>
 
@@ -26,7 +26,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, a basic understanding of HTML and CSS, familiarity with JavaScript basics (see <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and <a href="/en-US/docs/Learn/JavaScript/Building_blocks">Building blocks</a>) and OOJS basics (see <a href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction">Introduction to objects</a>).</td>
+   <td>Basic computer literacy, a basic understanding of HTML and CSS, familiarity with JavaScript basics (see <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and <a href="/en-US/docs/Learn/JavaScript/Building_blocks">Building blocks</a>) and OOJS basics (see <a href="/en-US/docs/Learn/JavaScript/Objects/Basics">Introduction to objects</a>).</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -47,13 +47,13 @@ tags:
 
 <p>To start this off, we could return to our Person object type from our <a href="/en-US/docs/Learn/JavaScript/Objects/Basics">first objects article</a>, which defines the generic data and functionality of a person. There are lots of things you <em>could</em> know about a person (their address, height, shoe size, DNA profile, passport number, significant personality traits ...) , but in this case we are only interested in showing their name, age, gender, and interests, and we also want to be able to write a short introduction about them based on this data, and get them to say hello. This is known as <strong>abstraction</strong> — creating a simple model of a more complex thing, which represents its most important aspects in a way that is easy to work with for our program's purposes.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13889/person-diagram.png" style="display: block; height: 219px; margin: 0px auto; width: 610px;"></p>
+<p><img alt="" src="person-diagram.png" style="display: block; margin: 0px auto;"></p>
 
 <h3 id="Creating_actual_objects">Creating actual objects</h3>
 
 <p>From our class, we can create <strong>object instances</strong> — objects that contain the data and functionality defined in the class. From our Person class, we can now create some actual people:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15163/MDN-Graphics-instantiation-2-fixed.png" style="display: block; height: 702px; margin: 0px auto; width: 695px;"></p>
+<p><img alt="" src="mdn-graphics-instantiation-2-fixed.png" style="display: block; margin: 0px auto;"></p>
 
 <p>When an object instance is created from a class, the class's <strong>constructor function</strong> is run to create it. This process of creating an object instance from a class is called <strong>instantiation</strong> — the object instance is <strong>instantiated</strong> from the class.</p>
 
@@ -61,7 +61,7 @@ tags:
 
 <p>In this case we don't want generic people — we want teachers and students, which are both more specific types of people. In OOP, we can create new classes based on other classes — these new <strong>child classes </strong>(also known as <strong>subclasses</strong>) can be made to <strong>inherit</strong> the data and code features of their <strong>parent class</strong>, so you can reuse functionality common to all the object types rather than having to duplicate it.  Where functionality differs between classes, you can define specialized features directly on them as needed.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13881/MDN-Graphics-inherited-3.png" style="display: block; height: 743px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="mdn-graphics-inherited-3.png" style="display: block; margin: 0px auto;"></p>
 
 <p>This is really useful — teachers and students share many common features such as name, gender, and age, so it is convenient to only have to define those features once. You can also define the same feature separately in different classes, as each definition of that feature will be in a different namespace. For example, a student's greeting might be of the form "Yo, I'm [firstName]" (e.g <em>Yo, I'm Sam</em>), whereas a teacher might use something more formal, such as "Hello, my name is [Prefix] [lastName], and I teach [Subject]." (e.g <em>Hello, My name is Mr Griffiths, and I teach Chemistry</em>).</p>
 
@@ -71,7 +71,7 @@ tags:
 
 <p>You can now create object instances from your child classes. For example:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13885/MDN-Graphics-instantiation-teacher-3.png" style="display: block; height: 743px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="mdn-graphics-instantiation-teacher-3.png" style="display: block; margin: 0px auto;"></p>
 
 <p>In the rest of the article, we'll start to look at how OOP theory can be put into practice in JavaScript.</p>
 
@@ -86,7 +86,7 @@ tags:
 <ol>
  <li>Let's start by looking at how you could define a person with a normal function. Add this function within the <code>script</code> element:
 
-  <pre class="brush: js notranslate">function createNewPerson(name) {
+  <pre class="brush: js">function createNewPerson(name) {
   const obj = {};
   obj.name = name;
   obj.greeting = function() {
@@ -96,12 +96,12 @@ tags:
 }</pre>
  </li>
  <li>You can now create a new person by calling this function — try the following lines in your browser's JavaScript console:
-  <pre class="brush: js notranslate">const salva = createNewPerson('Salva');
+  <pre class="brush: js">const salva = createNewPerson('Salva');
 salva.name;
 salva.greeting();</pre>
   This works well enough, but it is a bit long-winded; if we know we want to create an object, why do we need to explicitly create a new empty object and return it? Fortunately, JavaScript provides us with a handy shortcut, in the form of constructor functions — let's make one now!</li>
  <li>Replace your previous function with the following:
-  <pre class="brush: js notranslate">function Person(name) {
+  <pre class="brush: js">function Person(name) {
   this.name = name;
   this.greeting = function() {
     alert('Hi! I\'m ' + this.name + '.');
@@ -120,11 +120,11 @@ salva.greeting();</pre>
 
 <ol>
  <li>Add the following lines below your previous code addition:
-  <pre class="brush: js notranslate">let person1 = new Person('Bob');
+  <pre class="brush: js">let person1 = new Person('Bob');
 let person2 = new Person('Sarah');</pre>
  </li>
  <li>Save your code and reload it in the browser, and try entering the following lines into your JS console:
-  <pre class="brush: js notranslate">person1.name
+  <pre class="brush: js">person1.name
 person1.greeting()
 person2.name
 person2.greeting()</pre>
@@ -135,12 +135,12 @@ person2.greeting()</pre>
 
 <p>Let's look at the constructor calls again:</p>
 
-<pre class="brush: js notranslate">let person1 = new Person('Bob');
+<pre class="brush: js">let person1 = new Person('Bob');
 let person2 = new Person('Sarah');</pre>
 
 <p>In each case, the <code>new</code> keyword is used to tell the browser we want to create a new object instance, followed by the function name with its required parameters contained in parentheses, and the result is stored in a variable — very similar to how a standard function is called. Each instance is created according to this definition:</p>
 
-<pre class="brush: js notranslate">function Person(name) {
+<pre class="brush: js">function Person(name) {
   this.name = name;
   this.greeting = function() {
     alert('Hi! I\'m ' + this.name + '.');
@@ -149,7 +149,7 @@ let person2 = new Person('Sarah');</pre>
 
 <p>After the new objects have been created, the <code>person1</code> and <code>person2</code> variables contain the following objects:</p>
 
-<pre class="brush: js notranslate">{
+<pre class="brush: js">{
   name: 'Bob',
   greeting: function() {
     alert('Hi! I\'m ' + this.name + '.');
@@ -171,7 +171,7 @@ let person2 = new Person('Sarah');</pre>
 
 <ol>
  <li>Remove the code you inserted so far, and add in this replacement constructor — this is exactly the same as the simple example in principle, with just a bit more complexity:
-  <pre class="brush: js notranslate">function Person(first, last, age, gender, interests) {
+  <pre class="brush: js">function Person(first, last, age, gender, interests) {
   this.name = {
      first : first,
      last : last
@@ -188,13 +188,13 @@ let person2 = new Person('Sarah');</pre>
 }</pre>
  </li>
  <li>Now add in the following line below it, to create an object instance from it:
-  <pre class="brush: js notranslate">let person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);</pre>
+  <pre class="brush: js">let person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);</pre>
  </li>
 </ol>
 
 <p>You can now see that you can access the properties and methods just like we did previously — try these in your JS console:</p>
 
-<pre class="brush: js notranslate">person1['age']
+<pre class="brush: js">person1['age']
 person1.interests[1]
 person1.bio()
 // etc.</pre>
@@ -215,7 +215,7 @@ person1.bio()
 
 <h2 id="Other_ways_to_create_object_instances">Other ways to create object instances</h2>
 
-<p>So far we've seen two different ways to create an object instance — <a href="/en-US/docs/Learn/JavaScript/Objects/Basics#Object_basics">declaring an object literal</a>, and using a constructor function (see above).</p>
+<p>So far we've seen two different ways to create an object instance — <a href="/en-US/docs/Learn/JavaScript/Objects/Basics#object_basics">declaring an object literal</a>, and using a constructor function (see above).</p>
 
 <p>These make sense, but there are other ways — we want to make you familiar with these in case you come across them in your travels around the Web.</p>
 
@@ -225,17 +225,17 @@ person1.bio()
 
 <ol>
  <li>Try entering this into your browser's JavaScript console:
-  <pre class="brush: js notranslate">let person1 = new Object();</pre>
+  <pre class="brush: js">let person1 = new Object();</pre>
  </li>
  <li>This stores an empty object in the <code>person1</code> variable. You can then add properties and methods to this object using dot or bracket notation as desired; try these examples in your console:
-  <pre class="brush: js notranslate">person1.name = 'Chris';
+  <pre class="brush: js">person1.name = 'Chris';
 person1['age'] = 38;
 person1.greeting = function() {
   alert('Hi! I\'m ' + this.name + '.');
 };</pre>
  </li>
  <li>You can also pass an object literal to the <code>Object()</code> constructor as a parameter, to prefill it with properties/methods. Try this in your JS console:
-  <pre class="brush: js notranslate">let person1 = new Object({
+  <pre class="brush: js">let person1 = new Object({
   name: 'Chris',
   age: 38,
   greeting: function() {
@@ -253,10 +253,10 @@ person1.greeting = function() {
 
 <ol>
  <li>With your finished exercise from the previous sections loaded in the browser, try this in your JavaScript console:
-  <pre class="brush: js notranslate">let person2 = Object.create(person1);</pre>
+  <pre class="brush: js">let person2 = Object.create(person1);</pre>
  </li>
  <li>Now try these:
-  <pre class="brush: js notranslate">person2.name;
+  <pre class="brush: js">person2.name;
 person2.greeting();</pre>
  </li>
 </ol>

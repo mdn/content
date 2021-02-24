@@ -2,22 +2,29 @@
 title: Range.extractContents()
 slug: Web/API/Range/extractContents
 tags:
-  - API
-  - DOM
-  - Method
-  - Range
+- API
+- DOM
+- Method
+- Range
 ---
 <div>{{ApiRef("DOM")}}</div>
 
-<p>The <strong><code>Range.extractContents()</code></strong> method moves contents of the {{ domxref("Range") }} from the document tree into a {{ domxref("DocumentFragment") }}.</p>
+<p>The <strong><code>Range.extractContents()</code></strong> method moves contents of the
+  {{ domxref("Range") }} from the document tree into a {{ domxref("DocumentFragment") }}.
+</p>
 
-<p>Event listeners added using DOM Events are not retained during extraction. HTML attribute events are retained or duplicated as they are for the {{domxref("Node.cloneNode()")}} method. HTML <code>id</code> attributes are also cloned, which can lead to an invalid document if a partially-selected node is extracted and appended to the document.</p>
+<p>Event listeners added using DOM Events are not retained during extraction. HTML
+  attribute events are retained or duplicated as they are for the
+  {{domxref("Node.cloneNode()")}} method. HTML <code>id</code> attributes are also cloned,
+  which can lead to an invalid document if a partially-selected node is extracted and
+  appended to the document.</p>
 
-<p>Partially selected nodes are cloned to include the parent tags necessary to make the document fragment valid.</p>
+<p>Partially selected nodes are cloned to include the parent tags necessary to make the
+  document fragment valid.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>documentFragment</em> = <em>range</em>.extractContents();
+<pre class="brush: js"><em>documentFragment</em> = <em>range</em>.extractContents();
 </pre>
 
 <h2 id="Example">Example</h2>
@@ -32,7 +39,8 @@ document.body.appendChild(documentFragment);
 
 <h3 id="Moving_items_between_containers">Moving items between containers</h3>
 
-<p>This example lets you move items between two containers. Select one or more item, and then click "swap" to move them to the opposite container.</p>
+<p>This example lets you move items between two containers. Select one or more item, and
+  then click "swap" to move them to the opposite container.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -89,23 +97,26 @@ button.addEventListener('click', e =&gt; {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-range-extractcontents', 'Range.extractContents()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'ranges.html#Level2-Range-method-extractContents', 'Range.extractContents()')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-range-extractcontents',
+        'Range.extractContents()')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>No change.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 Traversal_Range',
+        'ranges.html#Level2-Range-method-extractContents', 'Range.extractContents()')}}
+      </td>
+      <td>{{Spec2('DOM2 Traversal_Range')}}</td>
+      <td>Initial specification.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -115,5 +126,5 @@ button.addEventListener('click', e =&gt; {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
+  <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
 </ul>

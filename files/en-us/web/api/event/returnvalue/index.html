@@ -2,59 +2,74 @@
 title: Event.returnValue
 slug: Web/API/Event/returnValue
 tags:
-  - API
-  - DOM
-  - Event
-  - Property
-  - Reference
-  - action
-  - default
-  - returnValue
+- API
+- DOM
+- Event
+- Property
+- Reference
+- action
+- default
+- returnValue
 ---
 <div>{{APIRef("DOM Events")}}</div>
 
-<p><span class="seoSummary">The {{domxref("Event")}} property <code><strong>returnValue</strong></code> indicates whether the default action for this event has been prevented or not.</span> It is set to <code>true</code> by default, allowing the default action to occur. Setting this property to <code>false</code> prevents the default action.</p>
+<p><span class="seoSummary">The {{domxref("Event")}} property
+    <code><strong>returnValue</strong></code> indicates whether the default action for
+    this event has been prevented or not.</span> It is set to <code>true</code> by
+  default, allowing the default action to occur. Setting this property to
+  <code>false</code> prevents the default action.</p>
 
 <div class="note">
-<p><strong>Note:</strong> While <code>returnValue</code> has been adopted into the DOM standard, it is present primarily to support existing code. You should use {{DOMxRef("Event.preventDefault", "preventDefault()")}}, and {{domxref("Event.defaultPrevented", "defaultPrevented")}} instead of this historical property.</p>
+  <p><strong>Note:</strong> While <code>returnValue</code> has been adopted into the DOM
+    standard, it is present primarily to support existing code. You should use
+    {{DOMxRef("Event.preventDefault", "preventDefault()")}}, and
+    {{domxref("Event.defaultPrevented", "defaultPrevented")}} instead of this historical
+    property.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>event</em>.returnValue = <em>bool;</em>
+<pre class="brush: js"><em>event</em>.returnValue = <em>bool;</em>
 
 var <em>bool</em> = <em>event</em>.returnValue;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("Boolean")}} value which is <code>true</code> if the event has not been canceled; otherwise, if the event has been canceled or the default has been prevented, the value is <code>false</code>.</p>
+<p>A {{domxref("Boolean")}} value which is <code>true</code> if the event has not been
+  canceled; otherwise, if the event has been canceled or the default has been prevented,
+  the value is <code>false</code>.</p>
 
-<p>The value returned by <code>returnValue</code> is the opposite of the value returned by {{domxref("Event.defaultPrevented", "defaultPrevented")}}.</p>
+<p>The value returned by <code>returnValue</code> is the opposite of the value returned by
+  {{domxref("Event.defaultPrevented", "defaultPrevented")}}.</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
-<p><code>returnValue</code> was introduced into the DOM by Internet Explorer 6, and due to that browser's ubiquity became so commonly used that other browsers eventually implemented it as well. It has been adopted into the DOM specification, primarily to ensure that existing web content continues to function going forward.</p>
+<p><code>returnValue</code> was introduced into the DOM by Internet Explorer 6, and due to
+  that browser's ubiquity became so commonly used that other browsers eventually
+  implemented it as well. It has been adopted into the DOM specification, primarily to
+  ensure that existing web content continues to function going forward.</p>
 
-<p>New projects should generally avoid using <code>returnValue</code>, although they may if they choose to do so.</p>
+<p>New projects should generally avoid using <code>returnValue</code>, although they may
+  if they choose to do so.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-event-returnvalue", "returnValue")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>Added for legacy compatibility.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("DOM WHATWG", "#dom-event-returnvalue", "returnValue")}}</td>
+      <td>{{Spec2("DOM WHATWG")}}</td>
+      <td>Added for legacy compatibility.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

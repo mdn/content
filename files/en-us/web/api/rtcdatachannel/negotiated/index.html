@@ -2,35 +2,46 @@
 title: RTCDataChannel.negotiated
 slug: Web/API/RTCDataChannel/negotiated
 tags:
-  - Networking
-  - Property
-  - RTCDataChannel
-  - Read-only
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - data
-  - datachannel
-  - negotiated
+- Networking
+- Property
+- RTCDataChannel
+- Read-only
+- Reference
+- WebRTC
+- WebRTC API
+- data
+- datachannel
+- negotiated
 ---
 <p>{{APIRef("WebRTC")}}</p>
 
-<p><span class="seoSummary">The read-only <code>RTCDataChannel</code> property <code><strong>negotiated</strong></code> indicates whether the {{domxref("RTCDataChannel")}}'s connection was negotiated by the Web app (<code>true</code>) or by the WebRTC layer (<code>false</code>).</span> <strong>The default is <code>false</code>.</strong></p>
+<p><span class="seoSummary">The read-only <code>RTCDataChannel</code> property
+    <code><strong>negotiated</strong></code> indicates whether the
+    {{domxref("RTCDataChannel")}}'s connection was negotiated by the Web app
+    (<code>true</code>) or by the WebRTC layer (<code>false</code>).</span> <strong>The
+    default is <code>false</code>.</strong></p>
 
-<p>See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels", "Creating a data channel")}} for further information about this property.</p>
+<p>See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels", "Creating a
+  data channel")}} for further information about this property.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>negotiated</em> = <em>aDataChannel</em>.negotiated;
+<pre class="brush: js">var <em>negotiated</em> = <em>aDataChannel</em>.negotiated;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p><code>true</code> if the {{domxref("RTCDataChannel")}}'s connection was negotiated by the Web app itself; <code>false</code> if the negotiation was handled by the WebRTC layer. The default is <code>false</code>.</p>
+<p><code>true</code> if the {{domxref("RTCDataChannel")}}'s connection was negotiated by
+  the Web app itself; <code>false</code> if the negotiation was handled by the WebRTC
+  layer. The default is <code>false</code>.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>The code snippet below checks the value of <code>negotiated</code>; if it's <code>true</code>, a  function called <code>shutdownRemoteChannel()</code> is called with the channel's {{domxref("RTCDataChannel.id", "id")}}; presumably this would be implemented to transmit a shutdown signal to the remote peer prior to terminating the connection.</p>
+<p>The code snippet below checks the value of <code>negotiated</code>; if it's
+  <code>true</code>, a  function called <code>shutdownRemoteChannel()</code> is called
+  with the channel's {{domxref("RTCDataChannel.id", "id")}}; presumably this would be
+  implemented to transmit a shutdown signal to the remote peer prior to terminating the
+  connection.</p>
 
 <pre class="brush: js">if (dataChannel.negotiated) {
   shutdownRemoteChannel(dataChannel.id);
@@ -40,20 +51,21 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('WebRTC 1.0', '#dom-datachannel-negotiated', 'RTCDataChannel.negotiated') }}</td>
-   <td>{{ Spec2('WebRTC 1.0') }}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ SpecName('WebRTC 1.0', '#dom-datachannel-negotiated',
+        'RTCDataChannel.negotiated') }}</td>
+      <td>{{ Spec2('WebRTC 1.0') }}</td>
+      <td>Initial specification.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -63,8 +75,9 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Using_data_channels">Using WebRTC data channels</a></li>
- <li>{{domxref("RTCDataChannel")}}</li>
- <li>{{domxref("RTCPeerConnection.createDataChannel()")}}</li>
+  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+  <li><a href="/en-US/docs/Web/API/WebRTC_API/Using_data_channels">Using WebRTC data
+      channels</a></li>
+  <li>{{domxref("RTCDataChannel")}}</li>
+  <li>{{domxref("RTCPeerConnection.createDataChannel()")}}</li>
 </ul>

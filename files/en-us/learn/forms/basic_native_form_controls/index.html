@@ -39,7 +39,7 @@ tags:
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: The features discussed in this article are supported in all browsers, which is not the case for all form controls. We cover newer form controls added in HTML5 in the next two articles. If you want a more advanced reference, you should consult our <a href="/en-US/docs/Web/HTML/Element#Forms">HTML forms element reference</a>, and in particular our extensive <a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt; types</a> reference.</p>
+<p><strong>Note</strong>: The features discussed in this article are supported in all browsers, which is not the case for all form controls. We cover newer form controls added in HTML5 in the next two articles. If you want a more advanced reference, you should consult our <a href="/en-US/docs/Web/HTML/Element#forms">HTML forms element reference</a>, and in particular our extensive <a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt; types</a> reference.</p>
 </div>
 
 <h2 id="Text_input_fields">Text input fields</h2>
@@ -47,7 +47,7 @@ tags:
 <p>Text {{htmlelement("input")}} fields are the most basic form widgets. They are a very convenient way to let the user enter any kind of data, and we've already seen a few simple examples.</p>
 
 <div class="note">
-<p><strong>Note</strong>: HTML form text fields are simple plain text input controls. This means that you cannot use them to perform <a href="/en-US/docs/Rich-Text_Editing_in_Mozilla">rich editing</a> (bold, italic, etc.). All rich text editors you'll encounter are custom widgets created with HTML, CSS, and JavaScript.</p>
+<p><strong>Note</strong>: HTML form text fields are simple plain text input controls. This means that you cannot use them to perform <a href="/en-US/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla">rich editing</a> (bold, italic, etc.). All rich text editors you'll encounter are custom widgets created with HTML, CSS, and JavaScript.</p>
 </div>
 
 <p>All basic text controls share some common behaviors:</p>
@@ -56,7 +56,7 @@ tags:
  <li>They can be marked as {{htmlattrxref("readonly","input")}} (the user cannot modify the input value but it is still sent with the rest of the form data) or {{htmlattrxref("disabled","input")}} (the input value can't be modified and is never sent with the rest of the form data).</li>
  <li>They can have a {{htmlattrxref("placeholder","input")}}; this is text that appears inside the text input box that should be used to briefly describe the purpose of the box.</li>
  <li>They can be constrained in <a href="/en-US/docs/Web/HTML/Attributes/size"><code>size</code></a> (the physical size of the box) and <a href="/en-US/docs/Web/HTML/Attributes/maxlength"><code>maxlength</code></a> (the maximum number of characters that can be entered into the box).</li>
- <li>They can benefit from <a href="/en-US/docs/HTML/Element/input#attr-spellcheck">spell checking</a> (using the <a href="/en-US/docs/Web/HTML/Global_attributes/spellcheck"><code>spellcheck</code> </a>attribute), if the browser supports it.</li>
+ <li>They can benefit from <a href="/en-US/docs/Web/HTML/Element/input#attr-spellcheck">spell checking</a> (using the <a href="/en-US/docs/Web/HTML/Global_attributes/spellcheck"><code>spellcheck</code> </a>attribute), if the browser supports it.</li>
 </ul>
 
 <div class="note">
@@ -73,13 +73,13 @@ tags:
 
 <p>Here is a basic single line text field example:</p>
 
-<pre class="brush: html notranslate">&lt;input type="text" id="comment" name="comment" value="I'm a text field"&gt;</pre>
+<pre class="brush: html">&lt;input type="text" id="comment" name="comment" value="I'm a text field"&gt;</pre>
 
 <p>Single line text fields have only one true constraint: if you type text with line breaks, the browser removes those line breaks before sending the data to the server.</p>
 
 <p><em>The following screenshot shows default, focused and disabled text input types in Firefox 71 and Safari on macOS and in Chrome 79 and Edge 18 on Windows 10.</em></p>
 
-<p><img alt="Screenshot of the disabled attribute and default :focus styles on a text input in Firefox, Safari, Chrome and Edge." src="https://mdn.mozillademos.org/files/17021/disabled.png" style="height: 113px; width: 442px;"></p>
+<p><img alt="Screenshot of the disabled attribute and default :focus styles on a text input in Firefox, Safari, Chrome and Edge." src="disabled.png"></p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: HTML5 enhanced the basic original single line text field by adding special values for the {{htmlattrxref("type","input")}} attribute that enforce specific validation constraints and other features, for example specific to entering URLs or numbers. We'll cover those in the next article, <a href="/en-US/docs/Learn/Forms/HTML5_input_types">The HTML5 input types</a>.</p>
@@ -89,7 +89,7 @@ tags:
 
 <p>One of the original input types was the <code>password</code> text field type:</p>
 
-<pre class="brush: html notranslate">&lt;input type="password" id="pwd" name="pwd"&gt;</pre>
+<pre class="brush: html">&lt;input type="password" id="pwd" name="pwd"&gt;</pre>
 
 <p>The <code>password</code> value doesn't add any special constraints to the entered text, but it does obscure the value entered into the field (e.g. with dots or asterisks) so it can't be easily read by others.</p>
 
@@ -101,7 +101,7 @@ tags:
 
 <p>Another original text control is the <code>hidden</code> input type. This is used to create a form control that is invisible to the user, but is still sent to the server along with the rest of the form data once submitted — for example you might want to submit a timestamp to the server stating when an order was placed. Because it is hidden, the user can not see nor intentionally edit the value, it will never receive focus, and a screen reader will not notice it either.</p>
 
-<pre class="brush: html notranslate">&lt;input type="hidden" id="timestamp" name="timestamp" value="1286705410"&gt;
+<pre class="brush: html">&lt;input type="hidden" id="timestamp" name="timestamp" value="1286705410"&gt;
 </pre>
 
 <p>If you create such an element, it's required to set its <code>name</code> and <code>value</code> attributes. The value can be dynamically set via JavaScript. The <code>hidden</code> input type should not have an associated label.</p>
@@ -124,14 +124,14 @@ tags:
 
 <p>A check box is created using the {{HTMLElement("input")}} element with a <a href="/en-US/docs/Web/HTML/Attributes/type"><code>type</code></a> attribute set to the value {{HTMLElement("input/checkbox", "checkbox")}}.</p>
 
-<pre class="brush: html notranslate">&lt;input type="checkbox" id="carrots" name="carrots" value="carrots" checked&gt;
+<pre class="brush: html">&lt;input type="checkbox" id="carrots" name="carrots" value="carrots" checked&gt;
 </pre>
 
 <p>Including the <code><a href="/en-US/docs/Web/HTML/Attributes/checked">checked</a></code> attribute makes the checkbox checked automatically when the page loads. Clicking the checkbox or its associated label toggles the checkbox on and off.</p>
 
 <p>The following screenshots show default, focused and disabled checkboxes in Firefox 71 and Safari 13 on macOS and Chrome 79 and Edge 18 on Windows 10:</p>
 
-<p><img alt="Default, focused and disabled Checkboxes in Firefox 71 and Safari 13 on Mac and Chrome 79 and Edge 18 on Windows 10" src="https://mdn.mozillademos.org/files/17024/checkboxes.png" style="height: 203px; width: 293px;"></p>
+<p><img alt="Default, focused and disabled Checkboxes in Firefox 71 and Safari 13 on Mac and Chrome 79 and Edge 18 on Windows 10" src="checkboxes.png"></p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: Any checkboxes and radio buttons with the <code><a href="/en-US/docs/Web/HTML/Attributes/checked">checked</a></code> attribute on load match the {{cssxref('<code>:default')}}</code> pseudo class, even if they are no longer checked. Any that are currently checked match the <code>{{cssxref(':checked')}}</code> pseudoclass.</p>
@@ -143,11 +143,11 @@ tags:
 
 <p>A radio button is created using the {{HTMLElement("input")}} element with its {{htmlattrxref("type","input")}} attribute set to the value <code>radio</code>:</p>
 
-<pre class="brush: html notranslate">&lt;input type="radio" id="soup" name="meal" checked&gt;</pre>
+<pre class="brush: html">&lt;input type="radio" id="soup" name="meal" checked&gt;</pre>
 
 <p>Several radio buttons can be tied together. If they share the same value for their {{htmlattrxref("name","input")}} attribute, they will be considered to be in the same group of buttons. Only one button in a given group may be checked at a time; this means that when one of them is checked all the others automatically get unchecked. When the form is sent, only the value of the checked radio button is sent. If none of them are checked, the whole pool of radio buttons is considered to be in an unknown state and no value is sent with the form. Once one of the radio buttons in a same-named group of buttons is checked, it is not possible for the user to uncheck all of the buttons without resetting the form.</p>
 
-<pre class="brush: html notranslate">&lt;fieldset&gt;
+<pre class="brush: html">&lt;fieldset&gt;
   &lt;legend&gt;What is your favorite meal?&lt;/legend&gt;
   &lt;ul&gt;
     &lt;li&gt;
@@ -167,7 +167,7 @@ tags:
 
 <p>The following screenshots show unchecked and checked radio buttons, radio buttons that have focus, and disabled unchecked and checked radio buttons — on Firefox 71 and Safari 13 on macos and Chrome 79 and Edge 18 on Windows 10.</p>
 
-<p><img alt="Radio buttons on Firefox 71 and Safari 13 on Mac and Chrome 79 and Edge 18 on Windows 10" src="https://mdn.mozillademos.org/files/17022/radios.png" style="height: 142px; width: 196px;"></p>
+<p><img alt="Radio buttons on Firefox 71 and Safari 13 on Mac and Chrome 79 and Edge 18 on Windows 10" src="radios.png"></p>
 
 <h2 id="Actual_buttons">Actual buttons</h2>
 
@@ -196,7 +196,7 @@ tags:
 
 <h3 id="submit">submit</h3>
 
-<pre class="brush: html notranslate">&lt;button type="submit"&gt;
+<pre class="brush: html">&lt;button type="submit"&gt;
     This is a &lt;strong&gt;submit button&lt;/strong&gt;
 &lt;/button&gt;
 
@@ -204,7 +204,7 @@ tags:
 
 <h3 id="reset">reset</h3>
 
-<pre class="brush: html notranslate">&lt;button type="reset"&gt;
+<pre class="brush: html">&lt;button type="reset"&gt;
     This is a &lt;strong&gt;reset button&lt;/strong&gt;
 &lt;/button&gt;
 
@@ -212,7 +212,7 @@ tags:
 
 <h3 id="anonymous">anonymous</h3>
 
-<pre class="brush: html notranslate">&lt;button type="button"&gt;
+<pre class="brush: html">&lt;button type="button"&gt;
     This is an &lt;strong&gt;anonymous button&lt;/strong&gt;
 &lt;/button&gt;
 
@@ -222,7 +222,7 @@ tags:
 
 <p>The following examples show default, focused, and disabled button input types — in Firefox 71 and Safari 13 on macOS and Chrome 79 and Edge 18 on Windows 10.</p>
 
-<p><img alt="Default, focused and disabled button input types in Firefox 71 and Safari 13 on Mac and Chrome 79 and Edge 18 on Windows 10" src="https://mdn.mozillademos.org/files/17023/buttons.png" style="height: 182px; width: 286px;"></p>
+<p><img alt="Default, focused and disabled button input types in Firefox 71 and Safari 13 on Mac and Chrome 79 and Edge 18 on Windows 10" src="buttons.png"></p>
 
 <h3 id="Image_button">Image button</h3>
 
@@ -230,7 +230,7 @@ tags:
 
 <p>An image button is created using an {{HTMLElement("input")}} element with its {{htmlattrxref("type","input")}} attribute set to the value <code>image</code>. This element supports exactly the same set of attributes as the {{HTMLElement("img")}} element, plus all the attributes supported by other form buttons.</p>
 
-<pre class="brush: html notranslate">&lt;input type="image" alt="Click me!" src="my-img.png" width="80" height="30"&gt;</pre>
+<pre class="brush: html">&lt;input type="image" alt="Click me!" src="my-img.png" width="80" height="30"&gt;</pre>
 
 <p>If the image button is used to submit the form, this control doesn't submit its value — instead, the X and Y coordinates of the click on the image are submitted (the coordinates are relative to the image, meaning that the upper-left corner of the image represents the coordinate (0, 0)). The coordinates are sent as two key/value pairs:</p>
 
@@ -241,7 +241,7 @@ tags:
 
 <p>So for example when you click on the image at coordinate (123, 456) and it submits via the <code>get</code> method, you'll see the values appended to the URL as follows:</p>
 
-<pre class="notranslate">http://foo.com?pos.x=123&amp;pos.y=456</pre>
+<pre>http://foo.com?pos.x=123&amp;pos.y=456</pre>
 
 <p>This is a very convenient way to build a "hot map". How these values are sent and retrieved is detailed in the <a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data">Sending form data</a> article.</p>
 
@@ -255,11 +255,11 @@ tags:
 
 <p>In this example, a file picker is created that requests graphic image files. The user is allowed to select multiple files in this case.</p>
 
-<pre class="brush: html notranslate">&lt;input type="file" name="file" id="file" accept="image/*" multiple&gt;</pre>
+<pre class="brush: html">&lt;input type="file" name="file" id="file" accept="image/*" multiple&gt;</pre>
 
 <p>On some mobile devices, the file picker can access photos, videos, and audio captured directly by the device's camera and microphone by adding capture information to the <code>accept</code> attribute like so:</p>
 
-<pre class="notranslate">&lt;input type="file" accept="image/*;capture=camera"&gt;
+<pre>&lt;input type="file" accept="image/*;capture=camera"&gt;
 &lt;input type="file" accept="video/*;capture=camcorder"&gt;
 &lt;input type="file" accept="audio/*;capture=microphone"&gt;</pre>
 
@@ -334,5 +334,5 @@ tags:
 <ul>
  <li><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form controls</a></li>
  <li><a href="/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript">Sending forms through JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_widgets">Property compatibility table for form widgets</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Property compatibility table for form widgets</a></li>
 </ul>

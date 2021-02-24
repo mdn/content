@@ -2,65 +2,90 @@
 title: Window.matchMedia()
 slug: Web/API/Window/matchMedia
 tags:
-  - API
-  - CSSOM View
-  - HTML DOM
-  - JavaScript
-  - Media Queries
-  - Method
-  - Reference
-  - Window
+- API
+- CSSOM View
+- HTML DOM
+- JavaScript
+- Media Queries
+- Method
+- Reference
+- Window
 ---
 <div>{{APIRef}}</div>
 
-<p>The {{domxref("Window")}} interface's <code><strong>matchMedia()</strong></code> method returns a new {{domxref("MediaQueryList")}} object that can then be used to determine if the {{domxref("document")}} matches the <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media query</a> string, as well as to monitor the document to detect when it matches (or stops matching) that media query.</p>
+<p>The {{domxref("Window")}} interface's <code><strong>matchMedia()</strong></code> method
+  returns a new {{domxref("MediaQueryList")}} object that can then be used to determine if
+  the {{domxref("document")}} matches the <a
+    href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media query</a> string,
+  as well as to monitor the document to detect when it matches (or stops matching) that
+  media query.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><em>mqList</em> = window.matchMedia(<em>mediaQueryString</em>)</pre>
+<pre
+  class="brush: js"><em>mqList</em> = window.matchMedia(<em>mediaQueryString</em>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>mediaQueryString</code></dt>
- <dd>A string specifying the media query to parse into a {{domxref("MediaQueryList")}}.</dd>
+  <dt><code>mediaQueryString</code></dt>
+  <dd>A string specifying the media query to parse into a {{domxref("MediaQueryList")}}.
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A new {{domxref("MediaQueryList")}} object for the media query. Use this object's properties and events to detect matches and to monitor for changes to those matches over time.</p>
+<p>A new {{domxref("MediaQueryList")}} object for the media query. Use this object's
+  properties and events to detect matches and to monitor for changes to those matches over
+  time.</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
-<p>You can use the returned media query to perform both instantanteous and event-driven checks to see if the document matches the media query.</p>
+<p>You can use the returned media query to perform both instantanteous and event-driven
+  checks to see if the document matches the media query.</p>
 
-<p>To perform a one-time, instantaneous check to see if the document matches the media query, look at the value of the {{domxref("MediaQueryList.matches", "matches")}} property, which will be <code>true</code> if the document meets the media query's requirements.</p>
+<p>To perform a one-time, instantaneous check to see if the document matches the media
+  query, look at the value of the {{domxref("MediaQueryList.matches", "matches")}}
+  property, which will be <code>true</code> if the document meets the media query's
+  requirements.</p>
 
-<p>If you need to be kept aware of whether or not the document matches the media query at all times, you can instead watch for the {{domxref("MediaQueryList.change_event", "change")}} event to be delivered to the object. There's <a href="/en-US/docs/Web/API/Window/devicePixelRatio#Example">a good example of this</a> in the article on {{domxref("Window.devicePixelRatio")}}.</p>
+<p>If you need to be kept aware of whether or not the document matches the media query at
+  all times, you can instead watch for the {{domxref("MediaQueryList.change_event",
+  "change")}} event to be delivered to the object. There's <a
+    href="/en-US/docs/Web/API/Window/devicePixelRatio#Example">a good example of this</a>
+  in the article on {{domxref("Window.devicePixelRatio")}}.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>This example runs the media query <code>(max-width: 600px)</code> and  displays the value of the resulting <code>MediaQueryList</code>'s <code>matches</code> property in a {{HTMLElement("span")}}; as a result, the output will say "true" if the viewport is less than or equal to 600 pixels wide, and will say "false" if the window is wider than that.</p>
+<p>This example runs the media query <code>(max-width: 600px)</code> and  displays the
+  value of the resulting <code>MediaQueryList</code>'s <code>matches</code> property in a
+  {{HTMLElement("span")}}; as a result, the output will say "true" if the viewport is less
+  than or equal to 600 pixels wide, and will say "false" if the window is wider than that.
+</p>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">let mql = window.matchMedia('(max-width: 600px)');
+<pre class="brush: js">let mql = window.matchMedia('(max-width: 600px)');
 
 document.querySelector(".mq-value").innerText = mql.matches;
 </pre>
 
-<p>The JavaScript code passes the media query to match into {{domxref("Window.matchMedia", "matchMedia()")}} to compile it, then sets the <code>&lt;span&gt;</code>'s {{domxref("HTMLElement.innerText", "innerText")}} to the value of the results' {{domxref("MediaQueryList.media", "matches")}} property, so that it indicates whether or not the document matches the media query at the moment the page was loaded.</p>
+<p>The JavaScript code passes the media query to match into {{domxref("Window.matchMedia",
+  "matchMedia()")}} to compile it, then sets the <code>&lt;span&gt;</code>'s
+  {{domxref("HTMLElement.innerText", "innerText")}} to the value of the results'
+  {{domxref("MediaQueryList.media", "matches")}} property, so that it indicates whether or
+  not the document matches the media query at the moment the page was loaded.</p>
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;span class="mq-value"&gt;&lt;/span&gt;</pre>
+<pre class="brush: html">&lt;span class="mq-value"&gt;&lt;/span&gt;</pre>
 
 <p>A simple <code>&lt;span&gt;</code> to receive the output.</p>
 
 <div class="hidden">
-<h3 id="CSS">CSS</h3>
+  <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css notranslate">.mq-value {
+  <pre class="brush: css">.mq-value {
   font: 18px arial, sans-serif;
   font-weight: bold;
   color: #88f;
@@ -74,25 +99,26 @@ document.querySelector(".mq-value").innerText = mql.matches;
 
 <p>{{EmbedLiveSample("Examples", "100%", "60")}}</p>
 
-<p>See <a href="/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">Testing media queries programmatically</a> for additional code examples.</p>
+<p>See <a href="/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">Testing media
+    queries programmatically</a> for additional code examples.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSSOM View", "#dom-window-matchmedia", "Window.matchMedia()")}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("CSSOM View", "#dom-window-matchmedia", "Window.matchMedia()")}}</td>
+      <td>{{Spec2("CSSOM View")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -102,8 +128,10 @@ document.querySelector(".mq-value").innerText = mql.matches;
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/CSS/Media_queries" title="CSS/Media queries">Media queries</a></li>
- <li><a href="/en-US/docs/DOM/Using_media_queries_from_code" title="CSS/Using media queries from code">Using media queries from code</a></li>
- <li>{{domxref("MediaQueryList")}}</li>
- <li>{{domxref("MediaQueryListListener")}}</li>
+  <li><a href="/en-US/docs/CSS/Media_queries" title="CSS/Media queries">Media queries</a>
+  </li>
+  <li><a href="/en-US/docs/DOM/Using_media_queries_from_code"
+      title="CSS/Using media queries from code">Using media queries from code</a></li>
+  <li>{{domxref("MediaQueryList")}}</li>
+  <li>{{domxref("MediaQueryListListener")}}</li>
 </ul>

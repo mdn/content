@@ -21,6 +21,10 @@ tags:
 
 <p><span class="seoSummary">The {{domxref("XMLHttpRequest")}} <code>upload</code> property returns an {{domxref("XMLHttpRequestUpload")}} object that can be observed to monitor an upload's progress.</span> It is an opaque object, but because it's also an {{domxref("XMLHttpRequestEventTarget")}}, event listeners can be attached to track its process.</p>
 
+<div class="note notecard"><strong>Note:</strong> Attaching event listeners to this object prevents the request from being a "simple request" and will cause a preflight request to be issued if cross-origin; see <a href="/en-US/docs/Web/HTTP/CORS">CORS</a>. Because of this, event listeners need to be registered before calling {{domxref("XMLHttpRequest.send", "send()")}} or upload events won't be dispatched.</div>
+
+<div class="note notecard"><strong>Note:</strong> The spec also seems to indicate that event listeners should be attached after {{domxref("XMLHttpRequest.open", "open()")}}. However, browsers are buggy on this matter, and often need the listeners to be registered <em>before</em> {{domxref("XMLHttpRequest.open", "open()")}} to work.</div>
+
 <p>The following events can be triggered on an upload object and used to monitor the upload:</p>
 
 <table class="standard-table">

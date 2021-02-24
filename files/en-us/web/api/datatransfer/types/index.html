@@ -2,30 +2,39 @@
 title: DataTransfer.types
 slug: Web/API/DataTransfer/types
 tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - drag and drop
+- API
+- HTML DOM
+- Property
+- Reference
+- drag and drop
 ---
 <div>{{APIRef("HTML Drag and Drop API")}}</div>
 
-<p>The <strong><code>DataTransfer.types</code></strong> read-only property returns an array of the drag data formats (as {{domxref("DOMString","strings")}}) that were set in the {{event("dragstart")}} event. The order of the formats is the same order as the data included in the drag operation.</p>
+<p>The <strong><code>DataTransfer.types</code></strong> read-only property returns an
+  array of the drag data formats (as {{domxref("DOMString","strings")}}) that were set in
+  the {{event("dragstart")}} event. The order of the formats is the same order as the data
+  included in the drag operation.</p>
 
-<p>The formats are Unicode strings giving the type or format of the data, generally given by a MIME type. Some values that are not MIME types are special-cased for legacy reasons (for example "<code>text</code>"). </p>
+<p>The formats are Unicode strings giving the type or format of the data, generally given
+  by a MIME type. Some values that are not MIME types are special-cased for legacy reasons
+  (for example "<code>text</code>"). </p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>dataTransfer</var>.types;
+<pre class="brush: js"><var>dataTransfer</var>.types;
 </pre>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>An array of the data formats used in the drag operation. Each format is {{domxref("DOMString","string")}}. If the drag operation included no data, this list will be empty. If any files are included in the drag operation, then one of the types will be the string <code>Files</code>. </p>
+<p>An array of the data formats used in the drag operation. Each format is
+  {{domxref("DOMString","string")}}. If the drag operation included no data, this list
+  will be empty. If any files are included in the drag operation, then one of the types
+  will be the string <code>Files</code>. </p>
 
 <h2 id="Example">Example</h2>
 
-<p>This example shows the use of the <code>types</code> and {{domxref("DataTransfer.items","items")}} properties.</p>
+<p>This example shows the use of the <code>types</code> and
+  {{domxref("DataTransfer.items","items")}} properties.</p>
 
 <pre class="brush: js">&lt;!DOCTYPE html&gt;
 &lt;html lang=en&gt;
@@ -90,23 +99,24 @@ function dragover_handler(ev) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "interaction.html#dom-datatransfer-types", "types")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.1", "editing.html#dom-datatransfer-types", "types")}}</td>
-   <td>{{Spec2("HTML5.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("HTML WHATWG", "interaction.html#dom-datatransfer-types", "types")}}
+      </td>
+      <td>{{Spec2("HTML WHATWG")}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName("HTML5.1", "editing.html#dom-datatransfer-types", "types")}}</td>
+      <td>{{Spec2("HTML5.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

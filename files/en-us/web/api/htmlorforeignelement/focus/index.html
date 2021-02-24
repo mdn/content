@@ -2,34 +2,43 @@
 title: HTMLElement.focus()
 slug: Web/API/HTMLOrForeignElement/focus
 tags:
-  - API
-  - Focus
-  - HTML DOM
-  - HTMLElement
-  - Method
-  - Reference
-  - Scroll
-  - View
-  - activate
+- API
+- Focus
+- HTML DOM
+- HTMLElement
+- Method
+- Reference
+- Scroll
+- View
+- activate
 ---
 <div>{{ APIRef("HTML DOM") }}</div>
 
-<p><span class="seoSummary">The <strong><code>HTMLElement.focus()</code></strong> method sets focus on the specified element, if it can be focused. The focused element is the element which will receive keyboard and similar events by default.</span></p>
+<p><span class="seoSummary">The <strong><code>HTMLElement.focus()</code></strong> method
+		sets focus on the specified element, if it can be focused. The focused element is
+		the element which will receive keyboard and similar events by default.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>element</em>.focus(<em>options</em>); // Object parameter</pre>
+<pre
+	class="brush: js"><em>element</em>.focus(<em>options</em>); // Object parameter</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
 	<dt><code>options</code> {{optional_inline}}</dt>
-	<dd>An optional object providing options to control aspects of the focusing process. This object may contain the following property:</dd>
+	<dd>An optional object providing options to control aspects of the focusing process.
+		This object may contain the following property:</dd>
 	<dd>
-	<dl>
-		<dt><code>preventScroll</code> {{optional_inline}}</dt>
-		<dd>A Boolean value indicating whether or not the browser should scroll the document to bring the newly-focused element into view. A value of <code>false</code> for <code>preventScroll</code> (the default) means that the browser will scroll the element into view after focusing it. If <code>preventScroll</code> is set to <code>true</code>, no scrolling will occur.</dd>
-	</dl>
+		<dl>
+			<dt><code>preventScroll</code> {{optional_inline}}</dt>
+			<dd>A Boolean value indicating whether or not the browser should scroll the
+				document to bring the newly-focused element into view. A value of
+				<code>false</code> for <code>preventScroll</code> (the default) means that
+				the browser will scroll the element into view after focusing it. If
+				<code>preventScroll</code> is set to <code>true</code>, no scrolling will
+				occur.</dd>
+		</dl>
 	</dd>
 </dl>
 
@@ -144,9 +153,15 @@ focusNoScrollMethod = function getFocusWithoutScrolling() {
 <h2 id="Notes">Notes</h2>
 
 <ul>
-	<li>If you call <code>HTMLElement.focus()</code> from a mousedown event handler, you must call <code>event.preventDefault()</code> to keep the focus from leaving the <code>HTMLElement</code></li>
+	<li>If you call <code>HTMLElement.focus()</code> from a mousedown event handler, you
+		must call <code>event.preventDefault()</code> to keep the focus from leaving the
+		<code>HTMLElement</code></li>
 	<li>
-	<p>Behavior of the focus in relation to different HTML features like {{HTMLAttrxRef("tabindex")}} or {{Glossary("shadow tree","shadow dom", 1)}}, which previously remained under-specified, were recently updated (as October of 2019). Checkout <a href="https://blog.whatwg.org/focusing-on-focus">WHATWG blog</a> for more info.</p>
+		<p>Behavior of the focus in relation to different HTML features like
+			{{HTMLAttrxRef("tabindex")}} or {{Glossary("shadow tree","shadow dom", 1)}},
+			which previously remained under-specified, were recently updated (as October
+			of 2019). Checkout <a href="https://blog.whatwg.org/focusing-on-focus">WHATWG
+				blog</a> for more info.</p>
 	</li>
 </ul>
 
@@ -157,6 +172,8 @@ focusNoScrollMethod = function getFocusWithoutScrolling() {
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li>DOM method {{domxref("HTMLElement.blur()")}} to remove the focus from an element.</li>
-	<li>{{ domxref("document.activeElement") }} to know which is the currently focused element.</li>
+	<li>DOM method {{domxref("HTMLElement.blur()")}} to remove the focus from an element.
+	</li>
+	<li>{{ domxref("document.activeElement") }} to know which is the currently focused
+		element.</li>
 </ul>

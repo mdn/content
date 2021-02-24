@@ -2,21 +2,26 @@
 title: NodeIterator.detach()
 slug: Web/API/NodeIterator/detach
 tags:
-  - API
-  - DOM
-  - Method
-  - NodeIterator
-  - Obsolete
+- API
+- DOM
+- Method
+- NodeIterator
+- Obsolete
 ---
-<p>{{APIRef("DOM")}}{{obsolete_header}}</p>
+<p>{{APIRef("DOM")}}{{deprecated_header}}</p>
 
-<p>The <strong><code>NodeIterator.detach()</code></strong> method is a no-op, kept for backward compatibility only.</p>
+<p>The <strong><code>NodeIterator.detach()</code></strong> method is a no-op, kept for
+	backward compatibility only.</p>
 
-<p>Originally, it detached the {{domxref("NodeIterator")}} from the set over which it iterates, releasing any resources used by the set and setting the iterator's state to <code>INVALID</code>. Once this method had been called, calls to other methods on <code>NodeIterator</code> would raise the <code>INVALID_STATE_ERR</code> exception. </p>
+<p>Originally, it detached the {{domxref("NodeIterator")}} from the set over which it
+	iterates, releasing any resources used by the set and setting the iterator's state to
+	<code>INVALID</code>. Once this method had been called, calls to other methods on
+	<code>NodeIterator</code> would raise the <code>INVALID_STATE_ERR</code> exception. 
+</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>nodeIterator</em>.detach();
+<pre class="brush: js"><em>nodeIterator</em>.detach();
 </pre>
 
 <h2 id="Example">Example</h2>
@@ -42,12 +47,15 @@ nodeIterator.nextNode(); // throws an INVALID_STATE_ERR exception
 			<th scope="col">Comment</th>
 		</tr>
 		<tr>
-			<td>{{SpecName('DOM WHATWG', '#dom-nodeiterator-detach', 'NodeIterator.detach')}}</td>
+			<td>{{SpecName('DOM WHATWG', '#dom-nodeiterator-detach',
+				'NodeIterator.detach')}}</td>
 			<td>{{Spec2('DOM WHATWG')}}</td>
 			<td>Transformed in a no-op</td>
 		</tr>
 		<tr>
-			<td>{{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-NodeIterator-detach', 'NodeIterator.detach')}}</td>
+			<td>{{SpecName('DOM2 Traversal_Range',
+				'traversal.html#Traversal-NodeIterator-detach', 'NodeIterator.detach')}}
+			</td>
 			<td>{{Spec2('DOM2 Traversal_Range')}}</td>
 			<td>Initial definition.</td>
 		</tr>

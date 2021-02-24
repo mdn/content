@@ -2,23 +2,27 @@
 title: URL.search
 slug: Web/API/URL/search
 tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
+- API
+- Property
+- Reference
+- URL
+- URL API
 ---
 <div>{{ApiRef("URL API")}}</div>
 
-<p>The <strong><code>search</code></strong> property of the {{domxref("URL")}} interface is a search string, also called a <em>query string</em>, that is a {{domxref("USVString")}} containing a <code>'?'</code> followed by the parameters of the URL.</p>
+<p>The <strong><code>search</code></strong> property of the {{domxref("URL")}} interface
+  is a search string, also called a <em>query string</em>, that is a
+  {{domxref("USVString")}} containing a <code>'?'</code> followed by the parameters of the
+  URL.</p>
 
-<p>Modern browsers provide the {{domxref("URL.searchParams")}} property to make it easy to parse out the parameters from the query string.</p>
+<p>Modern browsers provide the {{domxref("URL.searchParams")}} property to make it easy to
+  parse out the parameters from the query string.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">const <em>searchParams</em> = <em>object</em>.search
+<pre class="brush: js">const <em>searchParams</em> = <em>object</em>.search
 <em>url</em>.search = <em>newSearchParams</em>
 </pre>
 
@@ -35,18 +39,18 @@ console.log(url.search); // Logs "?q=123"
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('URL', '#dom-url-search', 'URL.search')}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('URL', '#dom-url-search', 'URL.search')}}</td>
+      <td>{{Spec2('URL')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -56,5 +60,5 @@ console.log(url.search); // Logs "?q=123"
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{domxref("URL")}} interface it belongs to.</li>
+  <li>The {{domxref("URL")}} interface it belongs to.</li>
 </ul>

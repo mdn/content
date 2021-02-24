@@ -2,24 +2,30 @@
 title: Window.location
 slug: Web/API/Window/location
 tags:
-  - API
-  - HTML
-  - NeedsExample
-  - Property
-  - Reference
-  - Window
+- API
+- HTML
+- NeedsExample
+- Property
+- Reference
+- Window
 ---
 <p>{{APIRef}}</p>
 
-<p>The <strong><code>Window.location</code></strong> read-only property returns a {{domxref("Location")}} object with information about the current location of the document.</p>
+<p>The <strong><code>Window.location</code></strong> read-only property returns a
+  {{domxref("Location")}} object with information about the current location of the
+  document.</p>
 
-<p>Though <code>Window.location</code> is a <em>read-only</em> <code>Location</code> object, you can also assign a {{domxref("DOMString")}} to it. This means that you can work with <code>location</code> as if it were a string in most cases: <code>location = 'http://www.example.com'</code> is a synonym of <code>location.href = 'http://www.example.com'</code>.</p>
+<p>Though <code>Window.location</code> is a <em>read-only</em> <code>Location</code>
+  object, you can also assign a {{domxref("DOMString")}} to it. This means that you can
+  work with <code>location</code> as if it were a string in most cases:
+  <code>location = 'http://www.example.com'</code> is a synonym of
+  <code>location.href = 'http://www.example.com'</code>.</p>
 
 <p>See {{domxref("Location")}} for all available properties.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>oldLocation</var> = location;
+<pre class="brush: js">var <var>oldLocation</var> = location;
 location = <var>newLocation</var>;
 </pre>
 
@@ -27,35 +33,45 @@ location = <var>newLocation</var>;
 
 <h3 id="Basic_Example">Basic Example</h3>
 
-<pre class="brush: js notranslate">alert(location); // alerts "https://developer.mozilla.org/en-US/docs/Web/API/Window/location"</pre>
+<pre
+  class="brush: js">alert(location); // alerts "https://developer.mozilla.org/en-US/docs/Web/API/Window/location"</pre>
 
 <h3 id="Example_1_Navigate_to_a_new_page">Example #1: Navigate to a new page</h3>
 
-<p>Whenever a new value is assigned to the location object, a document will be loaded using the URL as if <code>location.assign()</code> had been called with the modified URL.</p>
+<p>Whenever a new value is assigned to the location object, a document will be loaded
+  using the URL as if <code>location.assign()</code> had been called with the modified
+  URL.</p>
 
-<p>Note that <a href="https://html.spec.whatwg.org/multipage/browsers.html#allowed-to-navigate">navigation-related sandbox flags</a> may result in an exception being thrown and the navigation failing.</p>
+<p>Note that <a
+    href="https://html.spec.whatwg.org/multipage/browsers.html#allowed-to-navigate">navigation-related
+    sandbox flags</a> may result in an exception being thrown and the navigation failing.
+</p>
 
-<pre class="brush: js notranslate">location.assign("http://www.mozilla.org"); // or
+<pre class="brush: js">location.assign("http://www.mozilla.org"); // or
 location = "http://www.mozilla.org";
 </pre>
 
-<h3 id="Example_2_Force_reloading_the_current_page_from_the_server">Example #2: Force reloading the current page from the server</h3>
+<h3 id="Example_2_Force_reloading_the_current_page_from_the_server">Example #2: Force
+  reloading the current page from the server</h3>
 
-<pre class="brush: js notranslate">location.reload(true);</pre>
+<pre class="brush: js">location.reload(true);</pre>
 
 <h3 id="Example_3">Example #3</h3>
 
-<p>Consider the following example, which will reload the page by using the <a href="/en-US/docs/Web/API/Location.replace"><code>replace()</code></a> method to insert the value of <code>location.pathname</code> into the hash:</p>
+<p>Consider the following example, which will reload the page by using the <a
+    href="/en-US/docs/Web/API/Location.replace"><code>replace()</code></a> method to
+  insert the value of <code>location.pathname</code> into the hash:</p>
 
-<pre class="brush: js notranslate">function reloadPageWithHash() {
+<pre class="brush: js">function reloadPageWithHash() {
   var initialPage = location.pathname;
   location.replace('http://example.com/#' + initialPage);
 }
 </pre>
 
-<h3 id="Example_4_Display_the_properties_of_the_current_URL_in_an_alert_dialog">Example #4: Display the properties of the current URL in an alert dialog:</h3>
+<h3 id="Example_4_Display_the_properties_of_the_current_URL_in_an_alert_dialog">Example
+  #4: Display the properties of the current URL in an alert dialog:</h3>
 
-<pre class="brush: js notranslate">function showLoc() {
+<pre class="brush: js">function showLoc() {
   var oLocation = location, aLog = ["Property (Typeof): Value", "location (" + (typeof oLocation) + "): " + oLocation ];
   for (var sProp in oLocation){
   aLog.push(sProp + " (" + (typeof oLocation[sProp]) + "): " + (oLocation[sProp] || "n/a"));
@@ -66,20 +82,25 @@ location = "http://www.mozilla.org";
 // in html: &lt;button onclick="showLoc();"&gt;Show location properties&lt;/button&gt;
 </pre>
 
-<h3 id="Example_5_Send_a_string_of_data_to_the_server_by_modifying_the_search_property">Example #5: Send a string of data to the server by modifying the <code>search</code> property:</h3>
+<h3 id="Example_5_Send_a_string_of_data_to_the_server_by_modifying_the_search_property">
+  Example #5: Send a string of data to the server by modifying the <code>search</code>
+  property:</h3>
 
-<pre class="brush: js notranslate">function sendData (sData) {
+<pre class="brush: js">function sendData (sData) {
   location.search = sData;
 }
 
 // in html: &lt;button onclick="sendData('Some data');"&gt;Send data&lt;/button&gt;
 </pre>
 
-<p>The current URL with "?Some%20data" appended is sent to the server (if no action is taken by the server, the current document is reloaded with the modified search string).</p>
+<p>The current URL with "?Some%20data" appended is sent to the server (if no action is
+  taken by the server, the current document is reloaded with the modified search string).
+</p>
 
-<h3 id="Example_6_Using_bookmarks_without_changing_the_hash_property">Example #6: Using bookmarks without changing the <code>hash</code> property:</h3>
+<h3 id="Example_6_Using_bookmarks_without_changing_the_hash_property">Example #6: Using
+  bookmarks without changing the <code>hash</code> property:</h3>
 
-<pre class="brush: html notranslate">&lt;!doctype html&gt;
+<pre class="brush: html">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta charset="UTF-8"/&gt;
@@ -135,7 +156,7 @@ span.intLink {
 
 <p>…the same thing but with an animated page scroll:</p>
 
-<pre class="brush: js notranslate">var showBookmark = (function () {
+<pre class="brush: js">var showBookmark = (function () {
   var  _useHash, _scrollX, _scrollY, _nodeX, _nodeY, _itFrame, _scrollId = -1, _bookMark,
    /*
    * nDuration: the duration in milliseconds of each frame
@@ -177,25 +198,27 @@ span.intLink {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "history.html#the-location-interface", "Window.location")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from {{SpecName("HTML5 W3C")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "browsers.html#the-location-interface", "Window.location")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', "history.html#the-location-interface",
+        "Window.location")}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td>No change from {{SpecName("HTML5 W3C")}}.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML5 W3C', "browsers.html#the-location-interface",
+        "Window.location")}}</td>
+      <td>{{Spec2('HTML5 W3C')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -205,8 +228,9 @@ span.intLink {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The interface of the returned value, {{domxref("Location")}}.</li>
- <li>A similar information, but attached to the document, {{domxref("Document.location")}}.</li>
- <li><a href="/en-US/docs/Web/API/History_API">Manipulating the browser history</a></li>
- <li>{{event("hashchange")}}</li>
+  <li>The interface of the returned value, {{domxref("Location")}}.</li>
+  <li>A similar information, but attached to the document,
+    {{domxref("Document.location")}}.</li>
+  <li><a href="/en-US/docs/Web/API/History_API">Manipulating the browser history</a></li>
+  <li>{{event("hashchange")}}</li>
 </ul>

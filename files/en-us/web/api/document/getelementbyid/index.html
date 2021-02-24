@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="eval notranslate">var <var>element</var> = <var>document</var>.getElementById(<var>id</var>);
+<pre class="brush: js">var <var>element</var> = <var>document</var>.getElementById(<var>id</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -38,7 +38,7 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
 &lt;head&gt;
   &lt;title&gt;getElementById example&lt;/title&gt;
 &lt;/head&gt;
@@ -51,7 +51,7 @@ tags:
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">function changeColor(newColor) {
+<pre class="brush: js">function changeColor(newColor) {
   var elem = document.getElementById('para');
   elem.style.color = newColor;
 }</pre>
@@ -68,7 +68,7 @@ tags:
 
 <h2 id="Example_2">Example</h2>
 
-<pre class="notranslate">&lt;!doctype html&gt;
+<pre class="brush: html">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
@@ -94,7 +94,7 @@ tags:
 
 <p><strong>Elements not in the document</strong> are not searched by <code>getElementById()</code>. When creating an element and assigning it an ID, you have to insert the element into the document tree with {{domxref("Node.insertBefore()")}} or a similar method before you can access it with <code>getElementById()</code>:</p>
 
-<pre class="brush: js notranslate">var element = document.createElement('div');
+<pre class="brush: js">var element = document.createElement('div');
 element.id = 'testqq';
 var el = document.getElementById('testqq'); // el will be null!
 </pre>

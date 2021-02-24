@@ -2,20 +2,22 @@
 title: ShadowRoot.innerHTML
 slug: Web/API/ShadowRoot/innerHTML
 tags:
-  - API
-  - Property
-  - Reference
-  - ShadowRoot
-  - innerHTML
-  - shadow dom
+- API
+- Property
+- Reference
+- ShadowRoot
+- innerHTML
+- shadow dom
 ---
 <div>{{APIRef("Shadow DOM")}}</div>
 
-<p>The <strong><code>innerHTML</code></strong> property of the {{domxref("ShadowRoot")}} interface sets or returns a reference to the DOM tree inside the <code>ShadowRoot</code>.</p>
+<p>The <strong><code>innerHTML</code></strong> property of the {{domxref("ShadowRoot")}}
+  interface sets or returns a reference to the DOM tree inside the
+  <code>ShadowRoot</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <em>domString</em> = <em>shadowRoot</em>.innerHTML
+<pre class="brush: js">var <em>domString</em> = <em>shadowRoot</em>.innerHTML
 <em>shadowRoot</em>.innerHTML = <em>domString</em>
 </pre>
 
@@ -25,7 +27,8 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">let customElem = document.querySelector('my-shadow-dom-element');
+<pre
+  class="brush: js">let customElem = document.querySelector('my-shadow-dom-element');
 let shadow = customElem.shadowRoot;
 
 shadow.innerHTML = '&lt;strong&gt;This element should be more important!&lt;/strong&gt;';</pre>
@@ -33,20 +36,21 @@ shadow.innerHTML = '&lt;strong&gt;This element should be more important!&lt;/str
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM Parsing', '#dom-innerhtml-innerhtml', 'ShadowRoot.innerHTML')}}</td>
-   <td>{{Spec2('DOM Parsing')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM Parsing', '#dom-innerhtml-innerhtml', 'ShadowRoot.innerHTML')}}
+      </td>
+      <td>{{Spec2('DOM Parsing')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

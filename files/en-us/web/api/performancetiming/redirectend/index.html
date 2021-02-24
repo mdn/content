@@ -2,54 +2,61 @@
 title: PerformanceTiming.redirectEnd
 slug: Web/API/PerformanceTiming/redirectEnd
 tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Read-only
-  - Reference
-  - legacy
+- API
+- Backwards compatibility
+- Deprecated
+- Navigation Timing
+- PerformanceTiming
+- Property
+- Read-only
+- Reference
+- legacy
 ---
 <p>{{APIRef("Navigation Timing")}}</p>
 
 <div class="warning">
-<p>This interface of this property is deprecated in the <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</a>. Please use the {{domxref("PerformanceNavigationTiming")}} interface instead.</p>
+  <p>This interface of this property is deprecated in the <a
+      href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2
+      specification</a>. Please use the {{domxref("PerformanceNavigationTiming")}}
+    interface instead.</p>
 </div>
 
-<p>The legacy <code><strong>PerformanceTiming</strong></code><strong><code>.redirectEnd</code></strong> read-only property returns an <code>unsigned long long</code> representing the moment, in milliseconds since the UNIX epoch, the last HTTP redirect is completed, that is when the last byte of the HTTP response has been received. If there is no redirect, or if one of the redirect is not of the same origin, the value returned is <code>0</code>.</p>
+<p>The legacy
+  <code><strong>PerformanceTiming</strong></code><strong><code>.redirectEnd</code></strong>
+  read-only property returns an <code>unsigned long long</code> representing the moment,
+  in milliseconds since the UNIX epoch, the last HTTP redirect is completed, that is when
+  the last byte of the HTTP response has been received. If there is no redirect, or if one
+  of the redirect is not of the same origin, the value returned is <code>0</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>time</em> = <em>performanceTiming</em>.redirectEnd;</pre>
+<pre
+  class="brush: js"><em>time</em> = <em>performanceTiming</em>.redirectEnd;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Navigation Timing', '#dom-performancetiming-redirectend', 'PerformanceTiming.redirectEnd')}}</td>
-   <td>{{Spec2('Navigation Timing')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Navigation Timing', '#dom-performancetiming-redirectend',
+        'PerformanceTiming.redirectEnd')}}</td>
+      <td>{{Spec2('Navigation Timing')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.PerformanceTiming.redirectEnd")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{domxref("Performance")}} interface it belongs to.</li>
+  <li>The {{domxref("Performance")}} interface it belongs to.</li>
 </ul>

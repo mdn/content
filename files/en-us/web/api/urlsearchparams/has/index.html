@@ -2,27 +2,30 @@
 title: URLSearchParams.has()
 slug: Web/API/URLSearchParams/has
 tags:
-  - API
-  - Method
-  - URL API
-  - URLSearchParams
-  - has
+- API
+- Method
+- URL API
+- URLSearchParams
+- has
 ---
 <p>{{ApiRef("URL API")}}</p>
 
-<p>The <strong><code>has()</code></strong> method of the {{domxref("URLSearchParams")}} interface returns a {{jsxref("Boolean")}} that indicates whether a parameter with the specified name exists.</p>
+<p>The <strong><code>has()</code></strong> method of the {{domxref("URLSearchParams")}}
+  interface returns a {{jsxref("Boolean")}} that indicates whether a parameter with the
+  specified name exists.</p>
 
 <p>{{availableinworkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>hasName</em> = URLSearchParams.has(<em>name</em>)</pre>
+<pre
+  class="brush: js">var <em>hasName</em> = URLSearchParams.has(<em>name</em>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>name</dt>
- <dd>The name of the parameter to find.</dd>
+  <dt>name</dt>
+  <dd>The name of the parameter to find.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -40,25 +43,22 @@ params.has('bar') === true; //true
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('URL', '#dom-urlsearchparams-has', "has()")}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('URL', '#dom-urlsearchparams-has', "has()")}}</td>
+      <td>{{Spec2('URL')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.URLSearchParams.has")}}</p>
-</div>

@@ -38,7 +38,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">Feature-Policy: &lt;directive&gt; &lt;allowlist&gt;</pre>
+<pre class="brush: html">Feature-Policy: &lt;directive&gt; &lt;allowlist&gt;</pre>
 
 <dl>
  <dt><code>&lt;directive&gt;</code></dt>
@@ -95,7 +95,7 @@ tags:
  <dt>{{httpheader('Feature-Policy/picture-in-picture', 'picture-in-picture')}}</dt>
  <dd>Controls whether the current document is allowed to play a video in a Picture-in-Picture mode via the corresponding API.</dd>
  <dt>{{httpheader("Feature-Policy/publickey-credentials-get", "publickey-credentials-get")}}</dt>
- <dd>Controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API</a> to retreive already stored public-key credentials, i.e. via {{domxref("CredentialsContainer.get","navigator.credentials.get({publicKey: ..., ...})")}}.</dd>
+ <dd>Controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API</a> to retrieve already stored public-key credentials, i.e. via {{domxref("CredentialsContainer.get","navigator.credentials.get({publicKey: ..., ...})")}}.</dd>
  <dt>{{httpheader('Feature-Policy/sync-xhr', 'sync-xhr')}}</dt>
  <dd>Controls whether the current document is allowed to make synchronous {{DOMxRef("XMLHttpRequest")}} requests.</dd>
  <dt>{{httpheader('Feature-Policy/usb', 'usb')}}</dt>
@@ -116,7 +116,7 @@ tags:
 
 <p>SecureCorp Inc. wants to disable Microphone and Geolocation APIs in its application. It can do so by delivering the following HTTP response header to define a feature policy:</p>
 
-<pre class="notranslate">Feature-Policy: microphone 'none'; geolocation 'none'</pre>
+<pre>Feature-Policy: microphone 'none'; geolocation 'none'</pre>
 
 <p>By specifying the <code>'none'</code> keyword for the origin list, the specified features will be disabled for all browsing contexts (this includes all iframes), regardless of their origin.</p>
 

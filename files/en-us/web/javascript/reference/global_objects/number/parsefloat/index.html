@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate">Number.parseFloat(<var>string</var>)</pre>
+<pre class="brush: js">Number.parseFloat(<var>string</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -34,7 +34,7 @@ tags:
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="brush: js notranslate">if (Number.parseFloat === undefined) {
+<pre class="brush: js">if (Number.parseFloat === undefined) {
   Number.parseFloat = parseFloat;
 }
 </pre>
@@ -45,7 +45,7 @@ tags:
 
 <p>This method has the same functionality as the global {{jsxref("parseFloat", "parseFloat()")}} function:</p>
 
-<pre class="brush: js notranslate">Number.parseFloat === parseFloat; // true
+<pre class="brush: js">Number.parseFloat === parseFloat; // true
 </pre>
 
 <p>This method is also part of ECMAScript 2015. (Its purpose is modularization of globals.)</p>

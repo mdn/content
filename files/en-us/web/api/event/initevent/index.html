@@ -2,36 +2,48 @@
 title: Event.initEvent()
 slug: Web/API/Event/initEvent
 tags:
-  - API
-  - DOM
-  - Deprecated
-  - Event
-  - Method
-  - Reference
+- API
+- DOM
+- Deprecated
+- Event
+- Method
+- Reference
 ---
 <div>{{ ApiRef("DOM") }}{{deprecated_header}}</div>
 
-<p>The <strong><code>Event.initEvent()</code></strong> method is used to initialize the value of an {{ domxref("event") }} created using {{ domxref("Document.createEvent()") }}.</p>
+<p>The <strong><code>Event.initEvent()</code></strong> method is used to initialize the
+  value of an {{ domxref("event") }} created using {{ domxref("Document.createEvent()")
+  }}.</p>
 
-<p>Events initialized in this way must have been created with the {{ domxref("Document.createEvent()") }} method. This method must be called to set the event before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}. Once dispatched, it doesn't do anything anymore.</p>
+<p>Events initialized in this way must have been created with the {{
+  domxref("Document.createEvent()") }} method. This method must be called to set the event
+  before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}. Once
+  dispatched, it doesn't do anything anymore.</p>
 
 <div class="note">
-<p><strong>Do not use this method anymore as it is deprecated.</strong></p>
+  <p><strong>Do not use this method anymore as it is deprecated.</strong></p>
 
-<p>Instead use specific event constructors, like {{domxref("Event.Event", "Event()")}}. The page on <a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and triggering events</a> gives more information about the way to use these.</p>
+  <p>Instead use specific event constructors, like {{domxref("Event.Event", "Event()")}}.
+    The page on <a
+      href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and
+      triggering events</a> gives more information about the way to use these.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>event</em>.initEvent(<em>type</em>, <em>bubbles</em>, <em>cancelable</em>);</pre>
+<pre
+  class="brush: js"><em>event</em>.initEvent(<em>type</em>, <em>bubbles</em>, <em>cancelable</em>);</pre>
 
 <dl>
- <dt><em><code>type</code></em></dt>
- <dd>Is a {{domxref("DOMString")}} defining the type of event.</dd>
- <dt><em><code>bubbles</code></em></dt>
- <dd>Is a {{jsxref("Boolean")}} deciding whether the event should bubble up through the event chain or not. Once set, the read-only property {{ domxref("Event.bubbles") }} will give its value.</dd>
- <dt><em><code>cancelable</code></em></dt>
- <dd>Is a {{jsxref("Boolean")}} defining whether the event can be canceled. Once set, the read-only property {{ domxref("Event.cancelable") }} will give its value.</dd>
+  <dt><em><code>type</code></em></dt>
+  <dd>Is a {{domxref("DOMString")}} defining the type of event.</dd>
+  <dt><em><code>bubbles</code></em></dt>
+  <dd>Is a {{jsxref("Boolean")}} deciding whether the event should bubble up through the
+    event chain or not. Once set, the read-only property {{ domxref("Event.bubbles") }}
+    will give its value.</dd>
+  <dt><em><code>cancelable</code></em></dt>
+  <dd>Is a {{jsxref("Boolean")}} defining whether the event can be canceled. Once set, the
+    read-only property {{ domxref("Event.cancelable") }} will give its value.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -54,23 +66,24 @@ elem.dispatchEvent(event);</code>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-event-initevent','Event.initEvent()')}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>From {{SpecName('DOM2 Events')}}, deprecated it, superseded by event constructors.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events','#Events-Event-initEvent','Event.initEvent()')}}</td>
-   <td>{{Spec2('DOM2 Events')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-event-initevent','Event.initEvent()')}}</td>
+      <td>{{Spec2("DOM WHATWG")}}</td>
+      <td>From {{SpecName('DOM2 Events')}}, deprecated it, superseded by event
+        constructors.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 Events','#Events-Event-initEvent','Event.initEvent()')}}</td>
+      <td>{{Spec2('DOM2 Events')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -80,5 +93,6 @@ elem.dispatchEvent(event);</code>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The constructor to use instead of this deprecated method: {{domxref("Event.Event", "Event()")}}. More specific constructors can be used too.</li>
+  <li>The constructor to use instead of this deprecated method: {{domxref("Event.Event",
+    "Event()")}}. More specific constructors can be used too.</li>
 </ul>

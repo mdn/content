@@ -16,13 +16,13 @@ tags:
 <div>Installs and enables a theme extension from the given URL.</div>
 
 
-<p>This API requires the "management" <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions">API permission</a> and will only work with signed themes.</p>
+<p>This API requires the "management" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">API permission</a> and will only work with signed themes.</p>
 
 <p>This is an asynchronous function that returns a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">let {id} = await browser.management.install({url});
+<pre class="brush:js">let {id} = await browser.management.install({url});
 </pre>
 
 <h3 id="Parameters">Parameters</h3>

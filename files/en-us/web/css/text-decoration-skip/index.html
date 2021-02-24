@@ -9,7 +9,7 @@ tags:
   - Layout
   - Reference
   - Web
-  - 'recipe:css-property'
+  - recipe:css-property
 ---
 <div>{{CSSRef}}</div>
 
@@ -19,7 +19,7 @@ tags:
 <p><strong>Note:</strong> Most other browsers are converging on supporting the simpler {{cssxref("text-decoration-skip-ink")}} property.</p>
 </div>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush:css no-line-numbers">/* Keyword values */
 text-decoration-skip: none;
 text-decoration-skip: objects;
 text-decoration-skip: spaces;
@@ -54,7 +54,7 @@ text-decoration-skip: unset;
  <dd>The same as <code>spaces</code>, except that only trailing spaces are skipped.</dd>
  <dt><code>edges</code></dt>
  <dd>The start and end of the text decoration is inset slightly (e.g., by half of the line thickness) from the content edge of the decorating box. Thus, adjacent elements receive separate underlines. (This is important in Chinese, where underlining is a form of punctuation.)</dd>
- <dd><img alt='An example of "text-decoration-skip: edges;".' src="https://mdn.mozillademos.org/files/13466/decoration-skip-edges.png"></dd>
+ <dd><img alt='An example of "text-decoration-skip: edges;".' src="decoration-skip-edges.png"></dd>
  <dt><code>box-decoration</code></dt>
  <dd>The text decoration is skipped over the box's margin, border, and padding areas. This only has an effect on decorations imposed by an ancestor; a <em>decorating box</em> never draws over its own box decoration.</dd>
 </dl>
@@ -65,7 +65,7 @@ text-decoration-skip: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -73,11 +73,11 @@ text-decoration-skip: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p&gt;Hey, grab a cup of &lt;em&gt;coffee!&lt;/em&gt;&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Hey, grab a cup of &lt;em&gt;coffee!&lt;/em&gt;&lt;/p&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css; highlight[4] notranslate">p {
+<pre class="brush: css; highlight[4]">p {
   margin: 0;
   font-size: 3em;
   text-decoration: underline;

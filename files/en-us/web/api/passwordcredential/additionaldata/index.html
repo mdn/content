@@ -2,20 +2,24 @@
 title: PasswordCredential.additionalData
 slug: Web/API/PasswordCredential/additionalData
 tags:
-  - API
-  - Credential Management API
-  - PasswordCredential
-  - Property
-  - Reference
-  - credential management
+- API
+- Credential Management API
+- PasswordCredential
+- Property
+- Reference
+- credential management
 ---
 <p>{{SeeCompatTable}}{{APIRef("")}}{{Deprecated_header}}</p>
 
-<p><span class="seoSummary">The <strong><code>additionalData</code></strong> property of the {{domxref("PasswordCredential")}} interface takes one of a {{domxref("FormData")}} instance, a {{domxref("URLSearchParams")}} instance, or null.</span> The data in the objects will be added to the request body and sent to the remote endpoint with the credentials.</p>
+<p><span class="seoSummary">The <strong><code>additionalData</code></strong> property of
+    the {{domxref("PasswordCredential")}} interface takes one of a {{domxref("FormData")}}
+    instance, a {{domxref("URLSearchParams")}} instance, or null.</span> The data in the
+  objects will be added to the request body and sent to the remote endpoint with the
+  credentials.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>passwordCredential</em>.additionalData = formData
+<pre class="brush: js"><em>passwordCredential</em>.additionalData = formData
 <em>formData</em> = <em>passwordCredential</em>.additionalData
 passwordCredential.additionalData = urlSearchParams
 <em>ulrSearchParams</em> = <em>passwordCredential</em>.additionalData
@@ -23,11 +27,15 @@ passwordCredential.additionalData = urlSearchParams
 
 <h3 id="Value">Value</h3>
 
-<p>One of a {{domxref("FormData")}} instance, a {{domxref("URLSearchParams")}} instance, or null.</p>
+<p>One of a {{domxref("FormData")}} instance, a {{domxref("URLSearchParams")}} instance,
+  or null.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>The following example creates a {{domxref("FormData")}} object with an appended <a href="/docs/Web/Security/Same-origin_policy#How_to_block_cross-origin_access">CSRF token</a>. It then stores the form object in the additionalData parameter, before sending it to server in a call to {{domxref("fetch")}}.</p>
+<p>The following example creates a {{domxref("FormData")}} object with an appended <a
+    href="/docs/Web/Security/Same-origin_policy#How_to_block_cross-origin_access">CSRF
+    token</a>. It then stores the form object in the additionalData parameter, before
+  sending it to server in a call to {{domxref("fetch")}}.</p>
 
 <pre class="brush: js">//The options object was previously created.
 navigator.credentials.get(options).then(function(creds) {
@@ -48,18 +56,18 @@ navigator.credentials.get(options).then(function(creds) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Credential Management')}}</td>
-   <td>{{Spec2('Credential Management')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Credential Management')}}</td>
+      <td>{{Spec2('Credential Management')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

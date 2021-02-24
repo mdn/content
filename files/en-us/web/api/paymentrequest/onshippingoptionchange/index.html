@@ -2,28 +2,36 @@
 title: PaymentRequest.onshippingoptionchange
 slug: Web/API/PaymentRequest/onshippingoptionchange
 tags:
-  - API
-  - Event Handler
-  - Experimental
-  - Payment Request
-  - Payment Request API
-  - Reference
-  - Secure context
-  - onshippingoptionchange
+- API
+- Event Handler
+- Experimental
+- Payment Request
+- Payment Request API
+- Reference
+- Secure context
+- onshippingoptionchange
 ---
 <p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Payment Request API")}}</p>
 
-<p>The <strong><code>onshippingoptionchange</code></strong> event of the {{domxref("PaymentRequest")}} interface is fired whenever the user changes a shipping option. </p>
+<p>The <strong><code>onshippingoptionchange</code></strong> event of the
+  {{domxref("PaymentRequest")}} interface is fired whenever the user changes a shipping
+  option. </p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code>PaymentRequest.addEventListener('shippingoptionchange', shippingOptionChangeEvent =&gt; { ... });
+<pre
+  class="brush: js"><code>PaymentRequest.addEventListener('shippingoptionchange', shippingOptionChangeEvent =&gt; { ... });
 
 PaymentRequest.onshippingoptionchange = function(shippingOptionChangeEvent) { ... };</code></pre>
 
 <h2 id="Examples">Examples</h2>
 
-<p>The <code>shippingoptionchange</code> event is triggered by a user-agent controlled interaction. If the option stored by the user agent changes at any time during a payment process, the event is triggered. To make sure an updated option is included when sending payment information to the server, you should add event listeners for a {{domxref('PaymentRequest')}} object after instantiation, but before the call to <code>show()</code>.</p>
+<p>The <code>shippingoptionchange</code> event is triggered by a user-agent controlled
+  interaction. If the option stored by the user agent changes at any time during a payment
+  process, the event is triggered. To make sure an updated option is included when sending
+  payment information to the server, you should add event listeners for a
+  {{domxref('PaymentRequest')}} object after instantiation, but before the call
+  to <code>show()</code>.</p>
 
 <pre class="brush: js">// Initialization of PaymentRequest arguments are excerpted for clarity.
 var request = new PaymentRequest(supportedInstruments, details, options);
@@ -72,23 +80,21 @@ request.addEventListener('shippingaddresschange', e =&gt; {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Payment', '#onshippingoptionchange-attribute', 'onshippingoptionchange')}}</td>
-   <td>{{Spec2('Payment')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Payment', '#onshippingoptionchange-attribute',
+        'onshippingoptionchange')}}</td>
+      <td>{{Spec2('Payment')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.PaymentRequest.onshippingoptionchange")}}</p>
-</div>

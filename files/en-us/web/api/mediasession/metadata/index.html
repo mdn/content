@@ -2,33 +2,39 @@
 title: MediaSession.metadata
 slug: Web/API/MediaSession/metadata
 tags:
-  - Audio
-  - Media
-  - Media Session API
-  - MediaSession
-  - Property
-  - Reference
-  - Video
-  - metadata
+- Audio
+- Media
+- Media Session API
+- MediaSession
+- Property
+- Reference
+- Video
+- metadata
 ---
 <p>{{SeeCompatTable}}{{APIRef("Media Session API")}}</p>
 
-<p>The <strong><code>metadata</code></strong> property of the {{domxref("MediaSession")}} interface contains a {{domxref("MediaMetadata")}} object  providing descriptive information about the currently playing media, or <code>null</code> if the metadata has not been set. This metadata is provided by the browser to the device for presentation in any standard media control user interface the device might offer.</p>
+<p>The <strong><code>metadata</code></strong> property of the {{domxref("MediaSession")}}
+  interface contains a {{domxref("MediaMetadata")}} object  providing descriptive
+  information about the currently playing media, or <code>null</code> if the metadata has
+  not been set. This metadata is provided by the browser to the device for presentation in
+  any standard media control user interface the device might offer.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <em>mediaMetadata</em> = navigator.mediaSession.metadata;
+<pre class="brush: js">var <em>mediaMetadata</em> = navigator.mediaSession.metadata;
 navigator.mediaSession.metadata = <em>mediaMetadata</em>;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>An instance of {{domxref("MediaMetadata")}} containing information about the media currently being played.</p>
+<p>An instance of {{domxref("MediaMetadata")}} containing information about the media
+  currently being played.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>The following example checks for compatibility and creates a new media session with the relevant metadata:</p>
+<p>The following example checks for compatibility and creates a new media session with the
+  relevant metadata:</p>
 
-<pre class="brush: js notranslate">if ('mediaSession' in navigator) {
+<pre class="brush: js">if ('mediaSession' in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
     title: 'Unforgettable',
     artist: 'Nat King Cole',
@@ -48,23 +54,21 @@ navigator.mediaSession.metadata = <em>mediaMetadata</em>;</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Session','#dom-mediasession-metadata','MediaSession.metadata')}}</td>
-   <td>{{Spec2('Media Session')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Media
+        Session','#dom-mediasession-metadata','MediaSession.metadata')}}</td>
+      <td>{{Spec2('Media Session')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.MediaSession.metadata")}}</p>
-</div>

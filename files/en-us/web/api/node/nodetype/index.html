@@ -2,119 +2,131 @@
 title: Node.nodeType
 slug: Web/API/Node/nodeType
 tags:
-  - API
-  - DOM
-  - Property
-  - Reference
+- API
+- DOM
+- Property
+- Reference
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">The read-only <code><strong>Node.nodeType</strong></code> property is an integer that identifies what the node is. It distinguishes different kind of nodes from each other, such as {{domxref("Element", "elements")}}, {{domxref("Text", "text")}} and {{domxref("Comment", "comments")}}.</span></p>
+<p><span class="seoSummary">The read-only <code><strong>Node.nodeType</strong></code>
+    property is an integer that identifies what the node is. It distinguishes different
+    kind of nodes from each other, such as {{domxref("Element", "elements")}},
+    {{domxref("Text", "text")}} and {{domxref("Comment", "comments")}}.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <em><var>type</var></em> = <em>node</em>.nodeType;
+<pre class="brush: js">var <em><var>type</var></em> = <em>node</em>.nodeType;
 </pre>
 
-<p>Returns an integer which specifies the type of the node. Possible values are listed in {{anch("Node type constants")}}.</p>
+<p>Returns an integer which specifies the type of the node. Possible values are listed in
+  {{anch("Node type constants")}}.</p>
 
 <h2 id="Constants">Constants</h2>
 
 <h3 id="Node_type_constants">Node type constants</h3>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constant</th>
-   <th scope="col">Value</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>Node.ELEMENT_NODE</code></td>
-   <td><code>1</code></td>
-   <td>An {{domxref("Element")}} node like {{HTMLElement("p")}} or {{HTMLElement("div")}}.</td>
-  </tr>
-  <tr>
-   <td><code>Node.ATTRIBUTE_NODE</code></td>
-   <td><code>2</code></td>
-   <td>An {{domxref("Attr", "Attribute")}} of an {{domxref("Element")}}.</td>
-  </tr>
-  <tr>
-   <td><code>Node.TEXT_NODE</code></td>
-   <td><code>3</code></td>
-   <td>The actual {{domxref("Text")}} inside an {{domxref("Element")}} or {{domxref("Attr")}}.</td>
-  </tr>
-  <tr>
-   <td><code>Node.CDATA_SECTION_NODE</code></td>
-   <td><code>4</code></td>
-   <td>A {{domxref("CDATASection")}}, such as <code>&lt;!CDATA[[ … ]]&gt;</code>.</td>
-  </tr>
-  <tr>
-   <td><code>Node.PROCESSING_INSTRUCTION_NODE</code></td>
-   <td><code>7</code></td>
-   <td>A {{domxref("ProcessingInstruction")}} of an XML document, such as <code>&lt;?xml-stylesheet … ?&gt;</code>.</td>
-  </tr>
-  <tr>
-   <td><code>Node.COMMENT_NODE</code></td>
-   <td><code>8</code></td>
-   <td>A {{domxref("Comment")}} node, such as <code>&lt;!-- … --&gt;</code>.</td>
-  </tr>
-  <tr>
-   <td><code>Node.DOCUMENT_NODE</code></td>
-   <td><code>9</code></td>
-   <td>A {{domxref("Document")}} node.</td>
-  </tr>
-  <tr>
-   <td><code>Node.DOCUMENT_TYPE_NODE</code></td>
-   <td><code>10</code></td>
-   <td>A {{domxref("DocumentType")}} node, such as <code>&lt;!DOCTYPE html&gt;</code>.</td>
-  </tr>
-  <tr>
-   <td><code>Node.DOCUMENT_FRAGMENT_NODE</code></td>
-   <td><code>11</code></td>
-   <td>A {{domxref("DocumentFragment")}} node.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Constant</th>
+      <th scope="col">Value</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Node.ELEMENT_NODE</code></td>
+      <td><code>1</code></td>
+      <td>An {{domxref("Element")}} node like {{HTMLElement("p")}} or
+        {{HTMLElement("div")}}.</td>
+    </tr>
+    <tr>
+      <td><code>Node.ATTRIBUTE_NODE</code></td>
+      <td><code>2</code></td>
+      <td>An {{domxref("Attr", "Attribute")}} of an {{domxref("Element")}}.</td>
+    </tr>
+    <tr>
+      <td><code>Node.TEXT_NODE</code></td>
+      <td><code>3</code></td>
+      <td>The actual {{domxref("Text")}} inside an {{domxref("Element")}} or
+        {{domxref("Attr")}}.</td>
+    </tr>
+    <tr>
+      <td><code>Node.CDATA_SECTION_NODE</code></td>
+      <td><code>4</code></td>
+      <td>A {{domxref("CDATASection")}}, such as <code>&lt;!CDATA[[ … ]]&gt;</code>.</td>
+    </tr>
+    <tr>
+      <td><code>Node.PROCESSING_INSTRUCTION_NODE</code></td>
+      <td><code>7</code></td>
+      <td>A {{domxref("ProcessingInstruction")}} of an XML document, such as
+        <code>&lt;?xml-stylesheet … ?&gt;</code>.</td>
+    </tr>
+    <tr>
+      <td><code>Node.COMMENT_NODE</code></td>
+      <td><code>8</code></td>
+      <td>A {{domxref("Comment")}} node, such as <code>&lt;!-- … --&gt;</code>.</td>
+    </tr>
+    <tr>
+      <td><code>Node.DOCUMENT_NODE</code></td>
+      <td><code>9</code></td>
+      <td>A {{domxref("Document")}} node.</td>
+    </tr>
+    <tr>
+      <td><code>Node.DOCUMENT_TYPE_NODE</code></td>
+      <td><code>10</code></td>
+      <td>A {{domxref("DocumentType")}} node, such as <code>&lt;!DOCTYPE html&gt;</code>.
+      </td>
+    </tr>
+    <tr>
+      <td><code>Node.DOCUMENT_FRAGMENT_NODE</code></td>
+      <td><code>11</code></td>
+      <td>A {{domxref("DocumentFragment")}} node.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="Deprecated_node_type_constants_deprecated_inline">Deprecated node type constants {{deprecated_inline()}}</h3>
+<h3 id="Deprecated_node_type_constants_deprecated_inline">Deprecated node type constants
+  {{deprecated_inline()}}</h3>
 
 <div class="notecard note">
-<p>The following constants have been deprecated and should not be used anymore.</p>
+  <p>The following constants have been deprecated and should not be used anymore.</p>
 </div>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td>Constant</td>
-   <td>Value</td>
-   <td>Description</td>
-  </tr>
-  <tr>
-   <td><code>Node.ENTITY_REFERENCE_NODE</code></td>
-   <td>5</td>
-   <td>An XML Entity Reference node, such as <code>&amp;foo;</code>. Removed in {{SpecName("DOM4")}}.</td>
-  </tr>
-  <tr>
-   <td><code>Node.ENTITY_NODE</code></td>
-   <td>6</td>
-   <td>An XML <code>&lt;!ENTITY …&gt;</code> node. Removed in {{SpecName("DOM4")}}.</td>
-  </tr>
-  <tr>
-   <td><code>Node.NOTATION_NODE</code></td>
-   <td>12</td>
-   <td>An XML <code>&lt;!NOTATION …&gt;</code> node. Removed in {{SpecName("DOM4")}}.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td>Constant</td>
+      <td>Value</td>
+      <td>Description</td>
+    </tr>
+    <tr>
+      <td><code>Node.ENTITY_REFERENCE_NODE</code></td>
+      <td>5</td>
+      <td>An XML Entity Reference node, such as <code>&amp;foo;</code>. Removed in
+        {{SpecName("DOM4")}}.</td>
+    </tr>
+    <tr>
+      <td><code>Node.ENTITY_NODE</code></td>
+      <td>6</td>
+      <td>An XML <code>&lt;!ENTITY …&gt;</code> node. Removed in {{SpecName("DOM4")}}.
+      </td>
+    </tr>
+    <tr>
+      <td><code>Node.NOTATION_NODE</code></td>
+      <td>12</td>
+      <td>An XML <code>&lt;!NOTATION …&gt;</code> node. Removed in {{SpecName("DOM4")}}.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Different_types_of_nodes">Different types of nodes</h3>
 
-<pre class="brush: js notranslate">document.nodeType === Node.DOCUMENT_NODE; // true
+<pre class="brush: js">document.nodeType === Node.DOCUMENT_NODE; // true
 document.doctype.nodeType === Node.DOCUMENT_TYPE_NODE; // true
 
 document.createDocumentFragment().nodeType === Node.DOCUMENT_FRAGMENT_NODE; // true
@@ -128,9 +140,10 @@ p.firstChild.nodeType === Node.TEXT_NODE; // true
 
 <h3 id="Comments">Comments</h3>
 
-<p>This example checks if the first node inside the document element is a comment, and displays a message if not.</p>
+<p>This example checks if the first node inside the document element is a comment, and
+  displays a message if not.</p>
 
-<pre class="brush: js notranslate">var node = document.documentElement.firstChild;
+<pre class="brush: js">var node = document.documentElement.firstChild;
 if (node.nodeType !== Node.COMMENT_NODE) {
   console.warn("You should comment your code!");
 }
@@ -139,35 +152,36 @@ if (node.nodeType !== Node.COMMENT_NODE) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-node-nodetype', 'Node.nodeType')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Deprecated <code>ATTRIBUTE_NODE</code>, <code>ENTITY_REFERENCE_NODE</code> and <code>NOTATION_NODE</code> types.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-1950641247', 'Node.nodeType')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>No changes.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-111237558', 'Node.nodeType')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>No changes.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-111237558', 'Node.nodeType')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-node-nodetype', 'Node.nodeType')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>Deprecated <code>ATTRIBUTE_NODE</code>, <code>ENTITY_REFERENCE_NODE</code> and
+        <code>NOTATION_NODE</code> types.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM3 Core', 'core.html#ID-1950641247', 'Node.nodeType')}}</td>
+      <td>{{Spec2('DOM3 Core')}}</td>
+      <td>No changes.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 Core', 'core.html#ID-111237558', 'Node.nodeType')}}</td>
+      <td>{{Spec2('DOM2 Core')}}</td>
+      <td>No changes.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM1', 'level-one-core.html#ID-111237558', 'Node.nodeType')}}</td>
+      <td>{{Spec2('DOM1')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

@@ -12,7 +12,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">regexp:match(<var>targetString</var>, <var>regExpString</var>[, <var>flagsString</var>])</pre>
+<pre class="brush: js">regexp:match(<var>targetString</var>, <var>regExpString</var>[, <var>flagsString</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -42,7 +42,7 @@ tags:
 
 <p>For example:</p>
 
-<pre class="xml">&lt;xsl:for-each select="regExp:match('<span class="nowiki">https://developer.mozilla.org/en/docs/Firefox_3_for_developers</span>',
+<pre class="xml">&lt;xsl:for-each select="regExp:match('https://developer.mozilla.org/en/docs/Firefox_3_for_developers',
                                    '(\w+):\/\/([^/:]+)(:\d*)?([^# ]*)')"&gt;
    Part &lt;xsl:value-of select="position()" /&gt; = &lt;xsl:value-of select="." /&gt;
 &lt;/xsl:for-each&gt;
@@ -50,7 +50,7 @@ tags:
 
 <p>This code generates the following output:</p>
 
-<pre class="eval">Part 1 = <span class="nowiki">https://developer.mozilla.org/en/docs/Firefox_3_for_developers</span>
+<pre class="eval">Part 1 = https://developer.mozilla.org/en/docs/Firefox_3_for_developers
 Part 2 = https
 Part 3 = developer.mozilla.org
 Part 4 =
@@ -59,7 +59,7 @@ Part 5 = /en/docs/Firefox_3_for_developers
 
 <h2 id="Specifications">Specifications</h2>
 
-<p><a class="external" href="http://www.exslt.org/regexp/functions/match/index.html">EXSLT - REGEXP:MATCH</a></p>
+<p><a href="http://www.exslt.org/regexp/functions/match/index.html">EXSLT - REGEXP:MATCH</a></p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
