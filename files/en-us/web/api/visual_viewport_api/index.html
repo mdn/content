@@ -42,7 +42,7 @@ tags:
 
 <p>The code below is based on the sample the specification, though it adds a few things that make it function better. It shows a function called <code>viewportHandler()</code>. When called it queries the <code>offsetLeft</code> and <code>height</code> properties for values it uses in a CSS <code>translate()</code> method. You invoke this function by passing it to <em>both</em> event calls.</p>
 
-<p>One thing that may not be clear in this example is the use of the <code>pendingUpdate</code> flag and the call to <code>requestAnimationFrame()</code>. The <code>pendingUpdate</code> flag serves to prevent multiple invocations of the transfrom that can occur when <code>onresize</code> and <code>onscroll</code> fire at the same time. Using <code>requestAnimationFrame()</code> ensures that the transform occurrs before the next render.</p>
+<p>One thing that may not be clear in this example is the use of the <code>pendingUpdate</code> flag and the call to <code>requestAnimationFrame()</code>. The <code>pendingUpdate</code> flag serves to prevent multiple invocations of the transfrom that can occur when <code>onresize</code> and <code>onscroll</code> fire at the same time. Using <code>requestAnimationFrame()</code> ensures that the transform occurs before the next render.</p>
 
 <pre class="brush: js">let pendingUpdate = false;
 
