@@ -157485,14 +157485,6 @@
       "jswisher"
     ]
   },
-  "Web/MathML/Element/mglyph": {
-    "modified": "2020-10-15T21:07:19.831Z",
-    "contributors": [
-      "lucian95",
-      "fscholz",
-      "Sheppy"
-    ]
-  },
   "Web/MathML/Element/mi": {
     "modified": "2020-12-08T06:58:12.774Z",
     "contributors": [
