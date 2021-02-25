@@ -278,7 +278,7 @@ console.log(1); // 1, 2
 
 <pre class="brush: js">const wait = ms =&gt; new Promise(resolve =&gt; setTimeout(resolve, ms));
 
-wait().then(() =&gt; console.log(4));
+wait(0).then(() =&gt; console.log(4));
 Promise.resolve().then(() =&gt; console.log(2)).then(() =&gt; console.log(3));
 console.log(1); // 1, 2, 3, 4
 </pre>

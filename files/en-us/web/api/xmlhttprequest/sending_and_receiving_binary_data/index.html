@@ -112,45 +112,4 @@ xhr.send(myArray);
 
 <p>Please, read <a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files">this paragraph</a>.</p>
 
-<h2 id="Firefox-specific_examples">Firefox-specific examples</h2>
-
-<p>This example transmits binary content asynchronously, using the <code>POST</code> method, and Firefox's non-standard <code>sendAsBinary()</code>.</p>
-
-<pre class="brush: js">var req = new XMLHttpRequest();
-req.open("POST", url, true);
-// set headers and mime-type appropriately
-req.setRequestHeader("Content-Length", 741);
-req.sendAsBinary(aBody);
-</pre>
-
-<p>Line 4 sets the Content-Length header to 741, indicating that the data is 741 bytes long.  Obviously you need to change this value based on the actual size of the data being sent.</p>
-
-<p>Line 5 uses the <code>sendAsBinary()</code> method to initiate the request.</p>
-
-<div class="note"><strong>Note:</strong> This non-standard <code>sendAsBinary</code> method is considered deprecated as of Gecko 31 {{ geckoRelease(31) }} and will be removed soon. The standard <code>send(Blob data)</code> method can be used instead as explained above.</div>
-
-<p>You can also send binary content by passing an instance of the {{interface("nsIFileInputStream")}} to <a href="/en-US/docs/DOM/XMLHttpRequest#send()" title="XMLHttpRequest#send()"><code>send()</code></a>. In that case, you don't have to set the <code>Content-Length</code> header yourself, as the information is fetched from the stream automatically:</p>
-
-<pre class="brush: js">// Make a stream from a file.
-var stream = Components.classes["@mozilla.org/network/file-input-stream;1"]
-                       .createInstance(Components.interfaces.nsIFileInputStream);
-stream.init(file, 0x04 | 0x08, 0644, 0x04); // file is an nsIFile instance
-
-// Try to determine the MIME type of the file
-var mimeType = "text\/plain";
-try {
-  var mimeService = Components.classes["@mozilla.org/mime;1"]
-          .getService(Components.interfaces.nsIMIMEService);
-  mimeType = mimeService.getTypeFromFile(file); // file is an nsIFile instance
-}
-catch (oEvent) { /* eat it; just use text/plain */ }
-
-// Send
-var req = Components.classes["@mozilla.org/xmlextras/xmlhttprequest;1"]
-                    .createInstance(Components.interfaces.nsIXMLHttpRequest);
-req.open('PUT', url, false); /* synchronous! */
-req.setRequestHeader('Content-Type', mimeType);
-req.send(stream);
-</pre>
-
 <div>{{APIRef("XMLHttpRequest")}}</div>

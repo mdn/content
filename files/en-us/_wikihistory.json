@@ -14785,23 +14785,6 @@
       "jswisher"
     ]
   },
-  "MDN/Tools/Search": {
-    "modified": "2020-09-30T16:47:39.473Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "Xingyzt",
-      "wbamberg",
-      "ExE-Boss",
-      "Sheppy",
-      "Uemmra3",
-      "Wliu",
-      "renoirb",
-      "jswisher",
-      "groovecoder",
-      "Mingun"
-    ]
-  },
   "Mozilla": {
     "modified": "2020-12-05T08:30:39.624Z",
     "contributors": [
@@ -44369,29 +44352,6 @@
       "mbhall88",
       "david_ross",
       "jpmedley"
-    ]
-  },
-  "Web/API/DocumentOrShadowRoot/fullscreenElement": {
-    "modified": "2020-10-15T21:03:34.946Z",
-    "contributors": [
-      "mfuji09",
-      "Sheppy",
-      "sideshowbarker",
-      "jpmedley",
-      "fscholz",
-      "chrisdavidmills",
-      "jabcreations",
-      "atpc",
-      "shivarajnaidu",
-      "Sebastianz",
-      "teoli",
-      "khanalom",
-      "MHasan",
-      "cvrebert",
-      "kscarfone",
-      "Reachmeatshivam",
-      "ziyunfei",
-      "ernestd"
     ]
   },
   "Web/API/DocumentOrShadowRoot/getAnimations": {
@@ -98885,15 +98845,6 @@
       "jsx"
     ]
   },
-  "Web/API/XMLHttpRequest/openRequest": {
-    "modified": "2019-03-23T22:33:20.958Z",
-    "contributors": [
-      "Sheppy",
-      "david_ross",
-      "chrisdavidmills",
-      "MashKao"
-    ]
-  },
   "Web/API/XMLHttpRequest/overrideMimeType": {
     "modified": "2020-10-15T21:39:59.857Z",
     "contributors": [
@@ -99026,14 +98977,6 @@
       "freaktechnik",
       "MashKao",
       "Sebastianz",
-      "jsx"
-    ]
-  },
-  "Web/API/XMLHttpRequest/sendAsBinary": {
-    "modified": "2020-10-15T21:39:58.281Z",
-    "contributors": [
-      "Sheppy",
-      "ExE-Boss",
       "jsx"
     ]
   },
@@ -165875,6 +165818,29 @@
       "fscholz",
       "bede",
       "david_ross"
+    ]
+  },
+  "Web/API/Document/fullscreenElement": {
+    "modified": "2020-10-15T21:03:34.946Z",
+    "contributors": [
+      "mfuji09",
+      "Sheppy",
+      "sideshowbarker",
+      "jpmedley",
+      "fscholz",
+      "chrisdavidmills",
+      "jabcreations",
+      "atpc",
+      "shivarajnaidu",
+      "Sebastianz",
+      "teoli",
+      "khanalom",
+      "MHasan",
+      "cvrebert",
+      "kscarfone",
+      "Reachmeatshivam",
+      "ziyunfei",
+      "ernestd"
     ]
   }
 }

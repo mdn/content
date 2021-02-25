@@ -2,22 +2,19 @@
 title: IDBFactory.open()
 slug: Web/API/IDBFactory/open
 tags:
-- API
-- Database
-- IDBFactory
-- IndexedDB
-- Method
-- Reference
-- Storage
-- open
+  - API
+  - Database
+  - IDBFactory
+  - IndexedDB
+  - Method
+  - Reference
+  - Storage
+  - open
 ---
-<div>
   <p>{{APIRef("IndexedDB")}}</p>
-
-<div>
   <p>The <strong><code>open()</code></strong> method of the {{domxref("IDBFactory")}}
     interface requests opening a <a
-      href="/en-US/docs/IndexedDB#gloss_database_connection">connection to a database</a>.
+      href="/en-US/docs/Web/API/IndexedDB_API#gloss_database_connection">connection to a database</a>.
   </p>
 
   <p>The method returns an {{domxref("IDBOpenDBRequest")}} object immediately, and
@@ -25,11 +22,6 @@ tags:
     <code>success</code> event is fired on the request object that is returned from this
     method, with its <code>result</code> attribute set to the new
     {{domxref("IDBDatabase")}} object for the connection.</p>
-</div>
-
-<p>If an error occurs while the database connection is being opened, then an <a
-    href="/en-US/docs/IndexedDB/IDBErrorEvent">error event</a> is fired on the request
-  object returned from this method.</p>
 
 <p>May trigger <code>upgradeneeded</code>, <code>blocked</code> or
   <code>versionchange</code> events.</p>
@@ -60,7 +52,7 @@ var <em>IDBOpenDBRequest</em> = <em>indexedDB</em>.open(<em>name</em>, <em>versi
 
 <dl>
   <dt>options (version and storage) {{optional_inline}} {{deprecated_inline}}</dt>
-  <dd>In Gecko, since <a href="/en-US/Firefox/Releases/26">version 26</a>, you can include
+  <dd>In Gecko, since <a href="/en-US/docs/Mozilla/Firefox/Releases/26">version 26</a>, you can include
     a non-standard <code>options</code> object as a parameter of {{
     domxref("IDBFactory.open") }} that contains the <code>version</code> number of the
     database, plus a storage value that specifies whether you want to
@@ -172,7 +164,6 @@ DBOpenRequest.onsuccess = function(event) {
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat("api.IDBFactory.open")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

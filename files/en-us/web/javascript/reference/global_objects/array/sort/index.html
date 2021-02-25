@@ -29,18 +29,15 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><code>compareFunction</code> {{optional_inline}}</dt>
-  <dd>Specifies a function that defines the sort order. If omitted, the array elements are
-    converted to strings, then sorted according to each character's <a
-      href="/en-US/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode">Unicode</a>
-    code point value.
-    <dl>
-      <dt><code>firstEl</code></dt>
-      <dd>The first element for comparison.</dd>
-      <dt><code>secondEl</code></dt>
-      <dd>The second element for comparison.</dd>
-    </dl>
-  </dd>
+ <dt><code>compareFunction</code> {{optional_inline}}</dt>
+ <dd>Specifies a function that defines the sort order. If omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value.
+ <dl>
+  <dt><code>firstEl</code></dt>
+  <dd>The first element for comparison.</dd>
+  <dt><code>secondEl</code></dt>
+  <dd>The second element for comparison.</dd>
+ </dl>
+ </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -172,49 +169,29 @@ items.sort(function(a, b) {
   sorted arrays. The numeric arrays are sorted without a compare function, then sorted
   using one.</p>
 
-<pre class="brush: js">var stringArray = ['Blue', 'Humpback', 'Beluga'];
-var numericStringArray = ['80', '9', '700'];
-var numberArray = [40, 1, 5, 200];
-var mixedNumericArray = ['80', '9', '700', 40, 1, 5, 200];
+<pre class="brush: js">let stringArray = ['Blue', 'Humpback', 'Beluga'];
+let numericStringArray = ['80', '9', '700'];
+let numberArray = [40, 1, 5, 200];
+let mixedNumericArray = ['80', '9', '700', 40, 1, 5, 200];
 
 function compareNumbers(a, b) {
   return a - b;
 }
 
-console.log('stringArray:', stringArray.join());
-console.log('Sorted:', stringArray.sort());
+stringArray.join(); // 'Blue,Humpback,Beluga'
+stringArray.sort(); // ['Beluga', 'Blue', 'Humpback']
 
-console.log('numberArray:', numberArray.join());
-console.log('Sorted without a compare function:', numberArray.sort());
-console.log('Sorted with compareNumbers:', numberArray.sort(compareNumbers));
+numberArray.join(); // '40,1,5,200'
+numberArray.sort(); // [1, 200, 40, 5]
+numberArray.sort(compareNumbers); // [1, 5, 40, 200]
 
-console.log('numericStringArray:', numericStringArray.join());
-console.log('Sorted without a compare function:', numericStringArray.sort());
-console.log('Sorted with compareNumbers:', numericStringArray.sort(compareNumbers));
+numericStringArray.join(); // '80,9,700'
+numericStringArray.sort(); // [700, 80, 9]
+numericStringArray.sort(compareNumbers); // [9, 80, 700]
 
-console.log('mixedNumericArray:', mixedNumericArray.join());
-console.log('Sorted without a compare function:', mixedNumericArray.sort());
-console.log('Sorted with compareNumbers:', mixedNumericArray.sort(compareNumbers));
-</pre>
-
-<p>This example produces the following output. As the output shows, when a compare
-  function is used, numbers sort correctly whether they are numbers or numeric strings.
-</p>
-
-<pre class="brush: js">stringArray: Blue,Humpback,Beluga
-Sorted: Beluga,Blue,Humpback
-
-numberArray: 40,1,5,200
-Sorted without a compare function: 1,200,40,5
-Sorted with compareNumbers: 1,5,40,200
-
-numericStringArray: 80,9,700
-Sorted without a compare function: 700,80,9
-Sorted with compareNumbers: 9,80,700
-
-mixedNumericArray: 80,9,700,40,1,5,200
-Sorted without a compare function: 1,200,40,5,700,80,9
-Sorted with compareNumbers: 1,5,9,40,80,200,700
+mixedNumericArray.join(); // '80,9,700,40,1,5,200'
+mixedNumericArray.sort(); // [1, 200, 40, 5, 700, 80, 9]
+mixedNumericArray.sort(compareNumbers); // [1, 5, 9, 40, 80, 200, 700]
 </pre>
 
 <h3 id="Sorting_non-ASCII_characters">Sorting non-ASCII characters</h3>
