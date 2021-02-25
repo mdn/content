@@ -11,40 +11,31 @@ tags:
 
 <h2>Description</h2>
 
-<p>The <code>SerialPort</code> interface of the {{domxref("Web_Serial_API", "Web
-Serial API")}} provides access to a serial port on the host device. Instances of
-this interface may be obtained by calling {{domxref("Serial.requestPort()")}} to
-request permission to access a port from the user. Ports that an origin has
-already been granted permission to access are available from
-{{domxref("Serial.getPorts()")}} or by listening for {{domxref("Event")}}
-objects using {{domref("Serial.onconnect")}}.</p>
+<p>The <code>SerialPort</code> interface of the {{domxref("Web_Serial_API", "Web Serial API")}} provides access to a serial port on the host device.</p>
 
 <h2>Constructor</h2>
 
-<p>None.</p>
+<p>Instances of this interface may be obtained by calling methods of the {{domxref("Serial")}} interface, therefore it has no constructor of its own.
 
-<h2>Properties</h2>
-
-<p><strong><code>SerialPort.readable</code></strong></p>
+<h2 id="Properties">Properties</h2>
 
 <dl>
   <dt>{{domxref("SerialPort.readable")}}{{readonlyInline}}</dt>
-  <dd>Returns a {{domxref("ReadableStream")}} for receiving data from the device connected to the port. Chunks read from this stream are instances of {{jsxref("Uint8Array")}}. This property is non-null as long as the port is open and has not encountered a fatal error.</dd>
+  <dd>Returns a {{domxref("ReadableStream")}} for receiving data from the device connected to the port.</dd>
   <dt>{{domxref("SerialPort.writable")}}{{readonlyInline}}</dt>
-  <dd>Returns a {{domxref("WritableStream")}} for sending data to the device connected to the port. Chunks written to this stream must be instances of {{domxref("BufferSource")}} (for example, an {{jsxref("ArrayBuffer")}} or {{jsxref("ArrayBufferView")}} such as {{jsxref("Uint8Array")}}). This property is non-null as long as the port is open and has not encountered a fatal error.</dd>
+  <dd>Returns a {{domxref("WritableStream")}} for sending data to the device connected to the port.</dd>
 </dl>
 
-<p>
-<h2>Events</h2>
+<h3 id="Event_handlers">Event handlers</h3>
 
 <dl>
-  <dt>{{domxref("SerialPoert.onconnect")}}</dt>
-  <dd>Called when the port has connected to the device. This method receives an {{domxref("Event")}} object. This event is only fired for ports associated with removable devices such as those connected via USB. This event bubbles to the instance of {{domxref("Serial")}} that returned this interface.</dd>
+  <dt>{{domxref("SerialPort.onconnect")}}</dt>
+  <dd>An event handler called when the port has connected to the device.</dd>
   <dt>{{domxref("SerialPort.ondisconnect")}}</dt>
-  <dd>Called when the port has disconnected from the device. This method receives an {{domxref("Event")}} object. This event is only fired for ports associated with removable devices such as those connected via USB. This event bubbles to the instance of {{domxref("Serial")}} that returned this interface.</dd>
+  <dd>An event handler called when the port has disconnected from the device.</dd>
 </dl>
 
-<h2>Methods</h2>
+<h2 id="Methods">Methods</h2>
 
 <dl>
   <dt>{{domxref("SerialPort.getInfo()")}}</dt>
@@ -67,7 +58,7 @@ objects using {{domref("Serial.onconnect")}}.</p>
 
 <pre class="brush: js notranslate">await port.open({ baudRate: /* pick your baud rate */ });</pre>
 
-<p>Once the <code>Promise</code> returned by <code>open()</code> resolves the <code>readable</code> and <code>writable</code> attributes can be accessed to get the <code>ReadableStream</code> and <code>WritableStream</code> instances for receiving data from and sending data to the connected device.</p>
+<p>Once the <code>Promise</code> returned by <code>open()</code> resolves the <code>readable</code> and <code>writable</code> attributes can be accessed to get the {{domxref("ReadableStream")}} and {{domxref("WritableStream")}} instances for receiving data from and sending data to the connected device.</p>
 
 <h3>Reading data from a port</h3>
 
@@ -110,7 +101,7 @@ writer.releaseLock();</pre>
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td>{{SpecName('Web Serial API','#dom-serialport','SerialPort.writable')}}</td>
+   <td>{{SpecName('Web Serial API','#dom-serialport','SerialPort')}}</td>
    <td>{{Spec2('Web Serial API')}}</td>
    <td>Initial definition.</td>
   </tr>
@@ -121,4 +112,4 @@ writer.releaseLock();</pre>
 
 <div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
-<p>{{Compat("api.SerialPort.writable")}}</p>
+<p>{{Compat("api.SerialPort")}}</p>

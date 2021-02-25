@@ -1,11 +1,11 @@
 ---
 title: SerialPort.setSignals()
-slug: Web/API/SerialPort/SerialPort/setSignals()
+slug: Web/API/SerialPort/setSignals
 tags:
   - API
   - Method
   - Reference
-  - setSignals()
+  - setSignals
   - SerialPort
 ---
 <div>{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}</div>
@@ -14,19 +14,23 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>promise</var> = SerialPort.setSignals(<var>options</var>);</pre>
+<pre class="syntaxbox notranslate">var <var>promise</var> = <var>SerialPort</var>.setSignals(<var>options</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><em><code>options</code></em></dt>
+  <dt><code>options</code>{{optional_inline}}</dt>
   <dd>An object with any of the following values:
-    <ul>
-      <li><code>clearToSend</code>: (Boolean) Indicates to the other end of a serial connection that is is clear to send data.</li>
-      <li><code>dataCarrierDetect</code>: (Boolean) Toggles the control signal needed to communicate over a serial connection.</li>
-      <li><code>dataSetReady</code>: (Boolean) Indicates that the device is ready to send and receive data.</li>
-      <li><code>ringIndicator</code>: (Boolean) Indicates that a ring signal should be sent down the serial connection.</li>
-    </ul>
+    <dl>
+      <dt><code>clearToSend</code></dt>
+      <dd>A boolean indicating to the other end of a serial connection that is is clear to send data.</dd>
+      <dt><code>dataCarrierDetect</code></dt>
+      <dd>A boolean that toggles the control signal needed to communicate over a serial connection.</dd>
+      <dt><code>dataSetReady</code></dt>
+      <dd>A boolean indicating whether the device is ready to send and receive data.</dd>
+      <dt><code>ringIndicator</code></dt>
+      <dd>A boolean indicating whether a ring signal should be sent down the serial connection.</dd>
+    </dl>
   </dd>
 </dl>
 

@@ -1,6 +1,6 @@
 ---
 title: SerialPort.readable
-slug: Web/API/SerialPort/SerialPort/readable
+slug: Web/API/SerialPort/readable
 tags:
   - API
   - Property
@@ -14,7 +14,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>readableStream</var> = SerialPort.readable;</pre>
+<pre class="syntaxbox notranslate">var <var>readableStream</var> = <var>SerialPort</var>.readable;</pre>
 
 <h3>Value</h3>
 <p>A {{domxref("ReadableStream")}}.</p>
@@ -22,7 +22,7 @@ tags:
 <h2 id="Examples">Examples</h2>
 
 <p>The following example shows how to read data from a port. The outer loop handles non-fatal errors, creating a new reader until a fatal error is encountered and <code>readable</code> becomes <code>null</code>.</p>
-  
+
 <pre class="brush: js notranslate">while (port.readable) {
   const reader = port.readable.getReader();
   try {

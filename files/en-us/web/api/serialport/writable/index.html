@@ -1,6 +1,6 @@
 ---
 title: SerialPort.writable
-slug: Web/API/SerialPort/SerialPort/writable
+slug: Web/API/SerialPort/writable
 tags:
   - API
   - Property
@@ -10,11 +10,11 @@ tags:
 ---
 <div>{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}</div>
 
-<p class="summary">The <strong><code>writable</code></strong> read-only property of the {{domxref("SerialPort")}} interface returns a {{domxref("WritableStream")}} for sending data to the device connected to the port. Chunks written to this stream must be instances of {{domxref("BufferSource")}} (for example, an {{jsxref("ArrayBuffer")}} or {{jsxref("ArrayBufferView")}} such as {{jsxref("Uint8Array")}}). This property is non-null as long as the port is open and has not encountered a fatal error.</p>
+<p class="summary">The <strong><code>writable</code></strong> read-only property of the {{domxref("SerialPort")}} interface returns a {{domxref("WritableStream")}} for sending data to the device connected to the port. Chunks written to this stream must be instances of {{domxref("BufferSource")}} (for example, an {{jsxref("ArrayBuffer")}} or {{domxref("ArrayBufferView")}} such as {{jsxref("Uint8Array")}}). This property is non-null as long as the port is open and has not encountered a fatal error.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>writableStream</var> = SerialPort.writable;</pre>
+<pre class="syntaxbox notranslate">var <var>writableStream</var> = <var>SerialPort</var>.writable;</pre>
 
 <h3>Value</h3>
 <p>A {{domxref("WritableStream")}}</p>

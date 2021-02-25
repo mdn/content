@@ -1,6 +1,6 @@
 ---
 title: Serial.onconnect
-slug: Web/API/Serial/Serial.onconnect
+slug: Web/API/Serial/onconnect
 tags:
   - API
   - Property
@@ -10,7 +10,9 @@ tags:
 ---
 <div>{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}</div>
 
-<p class="summary">The <strong><code>onconnect</code></strong> {{domxref("EventHandler")}} of the {{domxref("Serial")}} interface is called when a port has been disconnected from the device. This method receives an {{domxref("Event")}} object. This event is only fired for ports associated with removable devices such as those connected via USB. Thetarget of this event is the {{domxref("SerialPort")}} interface that has been disconnected. The user must grant the origin permission to access this device during a call to {{domxref("requestPort()")}} before this event will be fired.</p>
+<p class="summary">The <strong><code>onconnect</code></strong> {{domxref("EventHandler")}} of the {{domxref("Serial")}} interface is called when a port has been disconnected from the device. This method receives an {{domxref("Event")}} object. The target of this event is the {{domxref("SerialPort")}} interface that has been disconnected.
+
+<p>This event is only fired for ports associated with removable devices such as those connected via USB. The user must grant the origin permission to access this device during a call to {{domxref("Serial.requestPort()","requestPort()")}} before this event will be fired.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -19,32 +21,10 @@ Serial.addEventListener('connect', <var>function(event)</var>);</pre>
 
 <h2>Example</h2>
 
-<p>The following example shows how a site can check for available ports and allow
-  the user to grant it permission to access more.</p>
-  
-<p>On load event listeners are added for the <code>connect</code> and <code>disconnect</code> events so that the site can react when a device is connected or disconnected from the system. The <code>getPorts()</code> method is then called to see which ports are connected that the site already has access to.</p>
+<p>The following example shows an event listener for the <code>connect</code> event,. This allows the site to react when a port is connected.</p>
 
-<p>If the site doesn't have access to any connected ports it has to wait until it has user activation to proceed. In this example that is done using a {{domxref("Element.click_event")}} event handler on a button. A filter is passed to <code>requestPort()</code> with a USB vendor ID in order to limit the set of devices shown to the user to only USB devices built by a particular manufacturer. The filter can be omitted to allow the user to select any available port.</p>
-
-<pre class="brush: js notranslate">navigator.serial.addEventListener('connect', (e) => {
+<pre class="brush: js">navigator.serial.addEventListener('connect', (e) => {
   // Connect to `e.target` or add it to a list of available ports.
-});
-
-navigator.serial.addEventListener('disconnect', (e) => {
-  // Remove `e.target` from the list of available ports.
-});
-
-navigator.serial.getPorts().then((ports) => {
-  // Initialize the list of available ports with `ports` on page load.
-});
-
-button.addEventListener('click', () => {
-  const usbVendorId = ...;
-  navigator.serial.requestPort({ filters: [{ usbVendorId }]}).then((port) => {
-    // Connect to `port` or add it to the list of available ports.
-  }).catch((e) => {
-    // The user didn't select a port.
-  });
 });</pre>
 
 <h2 id="Specifications">Specifications</h2>
@@ -57,7 +37,7 @@ button.addEventListener('click', () => {
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td>{{SpecName('Web Serial API','#dom-serialport-onconnect','Serial.onconnect')}}</td>
+   <td>{{SpecName('Web Serial API','#dom-serial-onconnect','Serial.onconnect')}}</td>
    <td>{{Spec2('Web Serial API')}}</td>
    <td>Initial definition.</td>
   </tr>

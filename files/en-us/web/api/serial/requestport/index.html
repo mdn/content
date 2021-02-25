@@ -1,16 +1,16 @@
 ---
 title: Serial.requestPort()
-slug: Web/API/Serial/Serial.requestPort()
+slug: Web/API/Serial/requestPort
 tags:
   - API
   - Method
   - Reference
-  - requestPort()
+  - requestPort
   - Serial
 ---
 <div>{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}</div>
 
-<p class="summary">The <strong><code>Serial.requestPort()</code></strong> method of the {{domxref("Serial")}} interface returns a {{jsxref("Promise")}} that resolves with an instance of {{{domxref("SerialPort")}}} representing the device chosen by the user or rejects if no device was selected.</p>
+<p class="summary">The <strong><code>Serial.requestPort()</code></strong> method of the {{domxref("Serial")}} interface returns a {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort")}} representing the device chosen by the user or rejects if no device was selected.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -21,20 +21,21 @@ tags:
 <dl>
   <dt>options</dt>
   <dd>
-    <ul>
-      <li><code>filters</code>: A {{jsxref("Sequence")}} of objects containing vendor and product IDs used to search for attached devices. The <a href="https://www.usb.org/">USB Implementors Forum</a> assigns IDs to specific companies. Each company assigns IDS to it's products. Filters contain the following values:
+    <dl>
+      <dt><code>filters</code></dt>
+      <dd>A list of objects containing vendor and product IDs used to search for attached devices. The <a href="https://www.usb.org/">USB Implementors Forum</a> assigns IDs to specific companies. Each company assigns IDS to it's products. Filters contain the following values:
         <ul>
           <li><code>usbVendorId</code>: An unsigned short integer that identifies a USB device vendor. </li>
           <li><code>usbProductId</code>: An unsigned short integer that identiffies a USB device.</li>
         </ul>
-      </li>
-    </ul>
+      </dd>
+    </dl>
   </dd>
 </dl>
 
 <h3 id="Returns">Return value</h3>
 
-<p>A {{jsxref("Promise")}} that resolves with an instance of {{{domxref("SerialPort")}}}.</p>
+<p>A {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort")}}.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
@@ -47,26 +48,9 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following example shows how a site can check for available ports and allow
-the user to grant it permission to access more.</p>
+<p>The following example shows a filter being passed to <code>requestPort()</code> with a USB vendor ID in order to limit the set of devices shown to the user to only USB devices built by a particular manufacturer. If this filter was omitted the user would be able to select any available port.</p>
 
-<p>On load event listeners are added for the <code>connect</code> and <code>disconnect</code> events so that the site can react when a device is connected or disconnected from the system. The <code>getPorts()</code> method is then called to see which ports are connected that the site already has access to.</p>
-
-<p>If the site doesn't have access to any connected ports it has to wait until it has user activation to proceed. In this example that is done using a {{domxref("Element.click_event")}} event handler on a button. A filter is passed to <code>requestPort()</code> with a USB vendor ID in order to limit the set of devices shown to the user to only USB devices built by a particular manufacturer. The filter can be omitted to allow the user to select any available port.</p>
-
-<pre class="brush: js notranslate">navigator.serial.addEventListener('connect', (e) => {
-  // Connect to `e.target` or add it to a list of available ports.
-});
-
-navigator.serial.addEventListener('disconnect', (e) => {
-  // Remove `e.target` from the list of available ports.
-});
-
-navigator.serial.getPorts().then((ports) => {
-  // Initialize the list of available ports with `ports` on page load.
-});
-
-button.addEventListener('click', () => {
+<pre class="brush: js">button.addEventListener('click', () => {
   const usbVendorId = ...;
   navigator.serial.requestPort({ filters: [{ usbVendorId }]}).then((port) => {
     // Connect to `port` or add it to the list of available ports.
