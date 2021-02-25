@@ -44,7 +44,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>In the below example we use {{domxref("CookieStoreManager.getSubscriptions()")}} to get a list of existing subscriptions. We unsubscribe from existing subscriptions using {{domxref("CookieStoreManager.unsubscribe()")}}, then subscribe to the cookie with a name of 'COOKIE_NAME' using {{domxref("CookieStoreManager.subscribe()")}}. If that cookie is changed, the event listener logs the event to the console. This will be an <code>ExtendableCookieChangeEvent</code> object, with the {{domxref("ExtendableCookieChangeEvent.changed","changed")}} or {{domxref("ExtendableCookieChangeEvent.deleted","deleted")}} property containing the modified cookie.</p>
+<p>In the below example we use {{domxref("CookieStoreManager.getSubscriptions()")}} to get a list of existing subscriptions. (In service workers, a subscription is required in order to listen for events.) We unsubscribe from existing subscriptions using {{domxref("CookieStoreManager.unsubscribe()")}}, then subscribe to the cookie with a name of 'COOKIE_NAME' using {{domxref("CookieStoreManager.subscribe()")}}. If that cookie is changed, the event listener logs the event to the console. This will be an <code>ExtendableCookieChangeEvent</code> object, with the {{domxref("ExtendableCookieChangeEvent.changed","changed")}} or {{domxref("ExtendableCookieChangeEvent.deleted","deleted")}} property containing the modified cookie.</p>
 
 <pre class="brush:js">self.addEventListener('activate', (event) => {
   event.waitUntil(async () => {
