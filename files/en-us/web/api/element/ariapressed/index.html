@@ -1,0 +1,79 @@
+---
+title: Element.ariaPressed
+slug: Web/API/Element/ariaPressed
+tags:
+  - API
+  - Property
+  - Reference
+  - ariaPressed
+  - AriaAttributes
+  - AriaMixin
+  - Element
+---
+<div>{{DefaultAPISidebar("DOM")}}</div>
+
+<p class="summary">The <strong><code>ariaPressed</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-pressed</code> attribute, which indicates the current "pressed" state of toggle buttons.</p>
+
+<div class="notecard note">
+  <h3>Note</h3>
+  <p>Where possible use an HTML {{htmlelement("input")}} element with <code>type="button"</code> or the {{htmlelement("button")}} element as these have built in semantics and do not require ARIA attributes.</p>
+</div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox notranslate">var <var>ariaPressed</var> = element.ariaPressed;
+<var>element</var>.ariaPressed = <var>ariaPressed</var></pre>
+
+<h3>Value</h3>
+<p>A {{domxref("DOMString")}} with one of the following values:</p>
+
+<dl>
+  <dt><code>"true"</code></dt>
+  <dd>The element is pressed.</dd>
+  <dt><code>"false"</code></dt>
+  <dd>The element supports being pressed but is not currently pressed.</dd>
+  <dt><code>"mixed"</code></dt>
+  <dd>Indicates a mixed mode value for a tri-state toggle button.</dd>
+  <dt><code>"undefined"</code></dt>
+  <dd>The element does not support being pressed.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example the <code>aria-pressed</code> attribute on the element with an ID of <code>saveChanges</code> is set to "false" indicating that this input is currently not pressed. Using <code>ariaPressed</code> we update the value to "true".</p>
+
+<pre class="brush: html">&lt;div id="saveChanges" tabindex="0" role="button" aria-pressed="false"&gt;Save&lt;/div&gt;</pre>
+
+<pre class="brush: js">let el = document.getElementById('saveChanges');
+console.log(el.ariaPressed); // "false"
+el.ariaPressed = "true"
+console.log(el.ariaPressed); // "true"</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ARIA 1.2','#dom-ariamixin-ariapressed','ariaPressed')}}</td>
+   <td>{{Spec2('ARIA 1.2')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.Element.ariaPressed")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">ARIA: button role</a></li>
+</ul>
