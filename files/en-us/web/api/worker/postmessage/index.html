@@ -14,7 +14,7 @@ tags:
 <p>{{APIRef("Web Workers API")}}</p>
 
 <p>The <code><strong>postMessage()</strong></code> method of the {{domxref("Worker")}} interface sends a message to the worker's inner scope. This accepts a single parameter, which is the data to send to the worker. The data may be any value or JavaScript object handled by the <a href="/en-US/docs/Web/Guide/DOM/The_structured_clone_algorithm">structured clone</a> algorithm, which includes cyclical references.</p>
-<p>Note this method blocks the communicating thread.</p>
+<p>Note this method blocks the thread which receives the message.</p>
 
 <p>The <code>Worker</code> can send back information to the thread that spawned it using the {{domxref("DedicatedWorkerGlobalScope.postMessage")}} method.</p>
 
