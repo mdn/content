@@ -22,7 +22,7 @@ tags:
  <li><a href="#viewing_common_pseudo-classes">toggle pseudo-classes</a>;</li>
  <li><a href="#viewing_and_changing_classes_on_an_element">toggle classes</a>;</li>
  <li>add a new rule;</li>
- <li>change the display based on the operating <a href="#view_media_rules_for_color-scheme-preference">color scheme preference</a> (light/dark mode);</li>
+ <li>change the display based on <a href="#view_media_rules_for_prefers-color-scheme"><code>prefers-color-scheme</code> media rules</a>.</li>
  <li>change the display based on <a href="#view_media_rules_for_print">print media rules</a>.</li>
 </ul>
 
@@ -198,11 +198,9 @@ tags:
 
 <p>When on, any rules defined for printing the page will be displayed similar to the "Print Preview" mode that many word processing applications provide.</p>
 
-<h3 id="View_media_rules_for_color-scheme-preference">View @media rules for color-scheme-preference</h3>
+<h3 id="View_media_rules_for_prefers-color-scheme">View @media rules for prefers-color-scheme</h3>
 
-
-
-<p>You can use the color scheme simulator to see how the styles display based on the <code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></code> media query, if it is defined for the page. The color scheme simulator has four states, which you can cycle through by clicking the button repeatedly:</p>
+<p>The color scheme simulator buttons can be used to test the rendering of styles based on the <code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></code> media query (if any are defined for the page). There are two buttons, which enable the light and dark preference respectively. Selecting either button deselects the other, and if neither button is selected then the simulator does not set a preference.</p>
 
 <table class="standard-table">
  <thead>
@@ -221,23 +219,26 @@ tags:
   <tr>
    <td><img alt="" src="color_scheme_light.png" style="border-style: solid; border-width: 1px;"></td>
    <td><code>light</code></td>
-   <td>The user prefers a light interface.</td>
+   <td>The <code>prefers-color-scheme</code> media feature is set to <code>light</code>.</td>
   </tr>
   <tr>
-   <td><img alt="" src="color_scheme_dark.png" style="border-style: solid; border-width: 0px;"></td>
+   <td><img alt="" src="color_scheme_dark.png" style="border-style: solid; border-width: 1px;"></td>
    <td><code>dark</code></td>
-   <td>The user prefers a dark interface.</td>
+   <td>The <code>prefers-color-scheme</code> media feature is set to <code>dark</code>.</td>
   </tr>
  </tbody>
 </table>
 
-<p>Note that the first three states of the button may be difficult to distinguish visually. They typically produce a similar effect.</p>
+<p>Note that if the operating system mode is set to a particular mode, then simulating that mode will not change page rendering (i.e. simulating dark mode when in dark mode will not change the display).</p>
+
+<div class="notecard note">
+  <h4>Note</h4> 
+  <p>If <code>privacy.resistFingerprinting</code> has been set <strong>true</strong>, the <code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></code> preference is forced to <code>light</code>. You must set <code>privacy.resistFingerprinting</code> to <strong>false</strong> in order to use this feature.</p>
+</div>
 
 <div class="notecard note">
   <h4>Note</h4>
-  <p>As of Firefox 72, you must set <code>devtools.inspector.color-scheme-simulation.enabled</code> to <strong>true</strong> in the <a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">Configuration Editor</a> to enable this feature.</p>
-  
-  <p>If you have set <code>privacy.resistFingerprinting</code> to <strong>true</strong>, <code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme"> </a>preference is overridden to <code>light</code>. In order to use this simulator, you must set <code>privacy.resistFingerprinting</code> to <strong>false</strong>.</p>
+  <p>Before Firefox 87 this feature is behind the preference <code>devtools.inspector.color-scheme-simulation.enabled</code>.</p>
 </div>
 
 <h2 id="Examine_computed_CSS">Examine computed CSS</h2>
