@@ -1565,6 +1565,53 @@ tags:
  </tbody>
 </table>
 
+
+<h4 id="Feature_policy">Feature policy</h4>
+
+<p><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a> allows web developers to selectively enable, disable, and modify the behavior of certain features and APIs in the browser. It is similar to CSP but controls features instead of security behavior.</p>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>The <code>Feature-Policy</code> header has now been renamed to <code>Permissions-Policy</code> in the spec, and this article will eventually be updated to reflect that change.</p>
+</div>
+
+<table class="standard-table" style="max-width: 42rem;">
+  <thead>
+   <tr>
+    <th scope="col" style="vertical-align: bottom;">Release channel</th>
+    <th scope="col" style="vertical-align: bottom;">Version added</th>
+    <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr>
+    <th scope="row">Nightly</th>
+    <td>65</td>
+    <td>No</td>
+   </tr>
+   <tr>
+    <th scope="row">Developer Edition</th>
+    <td>65</td>
+    <td>No</td>
+   </tr>
+   <tr>
+    <th scope="row">Beta</th>
+    <td>65</td>
+    <td>No</td>
+   </tr>
+   <tr>
+    <th scope="row">Release</th>
+    <td>65</td>
+    <td>No</td>
+   </tr>
+   <tr>
+    <th scope="row">Preference name</th>
+    <th colspan="2"><code>dom.security.featurePolicy.header.enabled</code></th>
+   </tr>
+  </tbody>
+ </table>
+
+
 <h4 id="FTP_support_disabled">FTP support disabled</h4>
 
 <p>For security reasons, Mozilla intends to remove support for {{Glossary("FTP")}} from Firefox in 2020, effective in Firefox 82. See {{bug(1622409)}} for implementation progress. The <code>network.ftp.enabled</code> preference must be enabled (set to <code>true</code>) to allow FTP to be used.</p>
