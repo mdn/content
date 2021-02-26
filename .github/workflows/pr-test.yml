@@ -4,7 +4,7 @@
 # This way, if the tests passed, you'll be able to review the built
 # pages on a public URL.
 
-name: PR Test
+name: PR Test + Upload for preview
 
 on:
   pull_request_target:
