@@ -7,7 +7,7 @@
 name: PR Test
 
 on:
-  pull_request:
+  pull_request_target:
     # branches:
     #   - main
 
@@ -177,7 +177,7 @@ jobs:
           # echo ${{ github.event.issue.number }}
           echo ${{ github.event.pull_request.number }}
           # echo $BUILD_OUT_ROOT
-          # ls $BUILD_OUT_ROOT
+          ls $BUILD_OUT_ROOT/en-us/docs/mdn
           poetry run deployer upload --prefix="pr$PR_NUMBER" $BUILD_OUT_ROOT
 
       - name: Comment on PR
