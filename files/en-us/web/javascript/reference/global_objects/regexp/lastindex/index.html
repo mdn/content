@@ -1,5 +1,5 @@
 ---
-title: RegExpInstance.lastIndex
+title: 'RegExp: lastIndex'
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
 tags:
   - JavaScript
@@ -10,7 +10,9 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>lastIndex</code></strong> is a read/write integer property of regular expression instances that specifies the index at which to start the next match.</p>
+<p><strong><code>lastIndex</code></strong> is a read/write integer property of {{jsXref("RegExp")}} instances that specifies the index at which to start the next match.</p>
+
+<p>Note that <code>lastIndex</code> is not a property of the  {{jsXref("RegExp")}} prototype but is instead only exposed from  {{jsXref("RegExp")}} instances.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/regexp-lastindex.html")}}</div>
 
@@ -60,7 +62,7 @@ console.log(re.lastIndex);
  </thead>
  <tbody>
   <tr>
-   <td>{{SpecName('ESDraft', '#sec-properties-of-regexp-instances', 'RegExp.lastIndex')}}</td>
+   <td>{{SpecName('ESDraft', '#sec-properties-of-regexp-instances', 'lastIndex')}}</td>
   </tr>
  </tbody>
 </table>
