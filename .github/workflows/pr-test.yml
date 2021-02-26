@@ -175,6 +175,7 @@ jobs:
           PR_NUMBER=$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
           echo $PR_NUMBER
           echo ${{ github.event.issue.number }}
+          echo ${{ github.event.pull_request.number }}
           echo $BUILD_OUT_ROOT
           ls $BUILD_OUT_ROOT
           poetry run deployer --dry-run upload --prefix="pr$PR_NUMBER" $BUILD_OUT_ROOT
@@ -188,5 +189,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: 'Please find a preview at https://.content.dev.mdn.mozit.cloud/ (${{ github.event.issue.number }})'
+              body: 'Please find a preview at https://.content.dev.mdn.mozit.cloud/ (${{ github.event.pull_request.number }})'
             });
