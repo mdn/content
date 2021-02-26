@@ -126,7 +126,9 @@ jobs:
       - uses: actions/checkout@v2
         if: ${{ env.GIT_DIFF_CONTENT }}
         with:
-          repository: mdn/yari
+          # repository: mdn/yari
+          repository: peterbe/yari
+          ref: loud-deployer-debugging
           path: yari
 
       - name: Install Python
