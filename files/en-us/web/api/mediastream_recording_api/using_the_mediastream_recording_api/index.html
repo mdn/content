@@ -18,7 +18,7 @@ tags:
 
 <h2 id="A_sample_application_Web_Dictaphone">A sample application: Web Dictaphone</h2>
 
-<p><img alt="An image of the Web dictaphone sample app - a sine wave sound visualization, then record and stop buttons, then an audio jukebox of recorded tracks that can be played back." src="https://mdn.mozillademos.org/files/7885/web-dictaphone.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="An image of the Web dictaphone sample app - a sine wave sound visualization, then record and stop buttons, then an audio jukebox of recorded tracks that can be played back." src="web-dictaphone.png" style="display: block; margin: 0px auto;"></p>
 
 <p>To demonstrate basic usage of the MediaRecorder API, we have built a web-based dictaphone. It allows you to record snippets of audio and then play them back. It even gives you a visualization of your device's sound input, using the Web Audio API. We'll concentrate on the recording and playback functionality for this article.</p>
 
@@ -30,7 +30,7 @@ tags:
 
 <h3 id="Keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc">Keeping the interface constrained to the viewport, regardless of device height, with calc()</h3>
 
-<p>The {{cssxref("calc")}} function is one of those useful little utility features that's cropped up in CSS that doesn't look like much initially, but soon starts to make you think "Wow, why didn't we have this before? Why was CSS2 layout so awkward?" It allows you do a calculation to determine the computed value of a CSS unit, mixing different units in the process.</p>
+<p>The {{cssxref("calc()")}} function is one of those useful little utility features that's cropped up in CSS that doesn't look like much initially, but soon starts to make you think "Wow, why didn't we have this before? Why was CSS2 layout so awkward?" It allows you do a calculation to determine the computed value of a CSS unit, mixing different units in the process.</p>
 
 <p>For example, in Web Dictaphone we have three main UI areas, stacked vertically. We wanted to give the first two (the header and the controls) fixed heights:</p>
 
@@ -125,7 +125,7 @@ const soundClips = document.querySelector('.sound-clips');</pre>
 
       // Error callback
       .catch(function(err) {
-         console.log('The following <code>getUserMedia</code> error occurred: ' + err);
+         console.log('The following getUserMedia error occurred: ' + err);
       }
    );
 } else {
@@ -265,7 +265,7 @@ mediaRecorder.ondataavailable = function(e) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/MediaRecorder_API">MediaRecorder API</a> landing page</li>
+ <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaRecorder API</a> landing page</li>
  <li><code>{{domxref("Navigator.getUserMedia()")}}</code></li>
  <li><a href="https://addpipe.com/blog/media-recorder-api-is-now-supported-by-65-of-all-desktop-internet-users/">MediaRecorder API now supported by 65% of your website users</a></li>
 </ul>

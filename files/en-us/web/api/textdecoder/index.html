@@ -20,7 +20,7 @@ tags:
 
 <h3 id="Representing_text_with_typed_arrays">Representing text with typed arrays</h3>
 
-<p>This example shows how to decode a Chinese/Japanese character <img alt="" src="https://mdn.mozillademos.org/files/16663/2019-05-21_191907.png" style="height: 32px; width: 41px;">, as represented by five different typed arrays: {{jsxref("Uint8Array")}}, {{jsxref("Int8Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int16Array")}}, and {{jsxref("Int32Array")}}.</p>
+<p>This example shows how to decode a Chinese/Japanese character <img alt="" src="2019-05-21_191907.png">, as represented by five different typed arrays: {{jsxref("Uint8Array")}}, {{jsxref("Int8Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int16Array")}}, and {{jsxref("Int32Array")}}.</p>
 
 <pre class="brush: js">let utf8decoder = new TextDecoder(); // default 'utf-8' or 'utf8'
 
@@ -102,7 +102,7 @@ console.log(win1251decoder.decode(bytes)); // Привет, мир!
 
 <ul>
  <li>The {{DOMxRef("TextEncoder")}} interface describing the inverse operation.</li>
- <li><a href="/en-US/Add-ons/Code_snippets/StringView"><code>StringView</code></a> – a C-like representation of strings based on typed arrays</li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/Code_snippets/StringView"><code>StringView</code></a> – a C-like representation of strings based on typed arrays</li>
  <li>A <a href="http://code.google.com/p/stringencoding/">shim</a> allowing to use this interface in browsers that don't support it.</li>
  <li><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.importGlobalProperties">Components.utils.importGlobalProperties</a></code></li>
  <li><a href="https://nodejs.org/api/util.html#util_class_util_textdecoder">Node.js supports global export from v11.0.0</a></li>
