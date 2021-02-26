@@ -36,10 +36,10 @@ tags:
 
 <ul>
  <li>The Promise returned from <code>fetch()</code> <strong>won’t reject on HTTP error status</strong> even if the response is an HTTP <code>404</code> or <code>500</code>. Instead, it will resolve normally (with <code>ok</code> status set to <code>false</code>), and it will only reject on network failure or if anything prevented the request from completing.</li>
- <li><code>fetch()</code> <strong><s>won't</s> can receive cross-site cookies; </strong>you <s>can’t</s> can establish a cross site session using fetch. <s><code><a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie">Set-Cookie</a></code> headers from other sites are silently ignored.</s></li>
+ <li><code>fetch()</code> can receive cross-site cookies; you can establish a cross-site session using fetch.</li>
  <li><code>fetch()</code> <strong>won’t send cookies</strong>, unless you set <code>credentials: 'same-origin'</code>.
   <ul>
-   <li>In <a href="https://github.com/whatwg/fetch/pull/585" rel="nofollow noopener">August 2017</a>, the spec changed the default credentials policy to <code>'same-origin'</code>. The following browsers shipped and outdated native fetch, and were updated in these versions:
+   <li>In <a href="https://github.com/whatwg/fetch/pull/585" rel="nofollow noopener">August 2017</a>, the spec changed the default credentials policy to <code>'same-origin'</code>. The following browsers shipped an outdated native fetch, and were updated in these versions:
     <ul>
      <li>Firefox version 61.0b13.</li>
      <li>Safari version 12.</li>

@@ -14,11 +14,9 @@ tags:
 ---
 <div>{{AddonSidebar()}}</div>
 
-<div>
 <p>An event handler that will be called repeatedly when response data is available. The handler is passed an <code>event</code> object which contains a <code>data</code> property, which contains a chunk of the response data as an {{domxref("ArrayBuffer")}}.</p>
 
 <p>To decode the data use either {{domxref("TextDecoder")}} or {{domxref("Blob")}}.</p>
-</div>
 
 <h2 id="WebExtension_Examples">WebExtension Examples</h2>
 
@@ -28,7 +26,7 @@ tags:
 <p>Note that this example only works for occurrences of "WebExtension Example" that are entirely contained within a data chunk, and not ones that straddle two chunks (which might happen ~0.1% of the time for large documents). Additionally it only deals with UTF-8-coded documents. A real implementation of this would have to be more complex.</p>
 </div>
 
-<pre class="notranslate brush: js">function listener(details) {
+<pre class="brush: js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let decoder = new TextDecoder("utf-8");
   let encoder = new TextEncoder();
@@ -60,7 +58,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>Another example for handling large documents:</p>
 
-<pre class="notranslate brush: js">function listener(details) {
+<pre class="brush: js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let decoder = new TextDecoder("utf-8");
   let encoder = new TextEncoder();
@@ -97,7 +95,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>Here's another version:</p>
 
-<pre class="notranslate brush: js">function listener(details) {
+<pre class="brush: js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let decoder = new TextDecoder("utf-8");
   let encoder = new TextEncoder();
@@ -130,7 +128,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>The above example can also be written like so:</p>
 
-<pre class="notranslate brush: js">function listener(details) {
+<pre class="brush: js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let decoder = new TextDecoder("utf-8");
   let encoder = new TextEncoder();
@@ -160,7 +158,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>This example uses a {{domxref("Blob")}}:</p>
 
-<pre class="notranslate brush: js">function listener(details) {
+<pre class="brush: js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let encoder = new TextEncoder();
 
@@ -189,7 +187,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>This example makes use of the {{domxref("DOMParser")}} interface:</p>
 
-<pre class="notranslate brush: js">function listener(details) {
+<pre class="brush: js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let encoder = new TextEncoder();
   let parser = new DOMParser();
@@ -220,7 +218,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>This example combines all buffers into a single buffer:</p>
 
-<pre class="notranslate brush: js">function listener(details) {
+<pre class="brush: js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let decoder = new TextDecoder("utf-8");
   let encoder = new TextEncoder();
@@ -258,7 +256,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>The above example can also be written like so:</p>
 
-<pre class="notranslate brush: js">function listener(details) {
+<pre class="brush: js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let decoder = new TextDecoder('utf-8');
   let encoder = new TextEncoder();
@@ -286,7 +284,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>This example demonstrates, how one can detect, if it's the final chunk in the response:</p>
 
-<pre class="notranslate brush: js">function listener(details) {
+<pre class="brush: js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let encoder = new TextEncoder();
   let decoder = new TextDecoder("utf-8");

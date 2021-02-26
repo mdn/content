@@ -38,7 +38,7 @@ tags:
 
 <p>Log the URLs of requests contained in the HAR log:</p>
 
-<pre class="notranslate brush: js">async function logRequests() {
+<pre class="brush: js">async function logRequests() {
   let harLog = await browser.devtools.network.getHAR();
   console.log(`HAR version: ${harLog.version}`);
   for (let entry of harLog.entries) {

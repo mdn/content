@@ -57,7 +57,7 @@ tags:
 
 <p>The {{DOMxRef("Blob.Blob", "Blob()")}} constructor can create blobs from other objects. For example, to construct a blob from a JSON string:</p>
 
-<pre class="brush: js notranslate">const obj = {hello: 'world'};
+<pre class="brush: js">const obj = {hello: 'world'};
 const blob = new Blob([JSON.stringify(obj, null, 2)], {type : 'application/json'});</pre>
 
 <h3 id="Creating_a_URL_representing_the_contents_of_a_typed_array">Creating a URL representing the contents of a typed array</h3>
@@ -66,7 +66,7 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {type : 'application/json'
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p&gt;This example creates a typed array containing the ASCII codes
+<pre class="brush: html">&lt;p&gt;This example creates a typed array containing the ASCII codes
    for the space character through the letter Z, then converts it
    to an object URL. A link to open that object URL is created.
    Click the link to see the decoded object URL.&lt;/p&gt;</pre>
@@ -75,7 +75,7 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {type : 'application/json'
 
 <p>The main piece of this code for example purposes is the <code>typedArrayToURL()</code> function, which creates a <code>Blob</code> from the given typed array and returns an object URL for it. Having converted the data into an object URL, it can be used in a number of ways, including as the value of the {{HTMLElement("img")}} element's {{htmlattrxref("src", "img")}} attribute (assuming the data contains an image, of course).</p>
 
-<pre class="brush: js notranslate">function typedArrayToURL(typedArray, mimeType) {
+<pre class="brush: js">function typedArrayToURL(typedArray, mimeType) {
   return URL.createObjectURL(new Blob([typedArray.buffer], {type: mimeType}))
 }
 
@@ -103,7 +103,7 @@ document.body.appendChild(link);</pre>
 
 <p>One way to read content from a <code>Blob</code> is to use a {{DOMxRef("FileReader")}}. The following code reads the content of a <code>Blob</code> as a typed array:</p>
 
-<pre class="brush: js notranslate">const reader = new FileReader();
+<pre class="brush: js">const reader = new FileReader();
 reader.addEventListener('loadend', () =&gt; {
    // reader.result contains the contents of blob as a typed array
 });
@@ -111,12 +111,12 @@ reader.readAsArrayBuffer(blob);</pre>
 
 <p>Another way to read content from a <code>Blob</code> is to use a {{domxref("Response")}}. The following code reads the content of a <code>Blob</code> as text:</p>
 
-<pre class="brush: js notranslate">const text = await (new Response(blob)).text();
+<pre class="brush: js">const text = await (new Response(blob)).text();
 </pre>
 
 <p>Or by using {{DOMxRef("Blob.prototype.text()")}}:</p>
 
-<pre class="brush: js notranslate">const text = await blob.text();</pre>
+<pre class="brush: js">const text = await blob.text();</pre>
 
 <p>By using other methods of <code>FileReader</code>, it is possible to read the contents of a Blob as a string or a data URL.</p>
 

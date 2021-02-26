@@ -99,7 +99,7 @@ tags:
 
 <p>The code below uses a browser action to toggle a listener for {{WebExtAPIRef("webRequest.onHeadersReceived")}}, and uses <code>setIcon()</code> to indicate whether listening is on or off:</p>
 
-<pre class="notranslate brush: js">function logResponseHeaders(requestDetails) {
+<pre class="brush: js">function logResponseHeaders(requestDetails) {
   console.log(requestDetails);
 }
 
@@ -129,7 +129,7 @@ browser.browserAction.onClicked.addListener(toggleListener);</pre>
 
 <p>The code below sets the icon using an <code><a href="/en-US/docs/Web/API/ImageData">ImageData</a></code> object:</p>
 
-<pre class="notranslate brush: js">function getImageData() {
+<pre class="brush: js">function getImageData() {
   var canvas = document.createElement("canvas");
   var ctx = canvas.getContext("2d");
 
@@ -146,7 +146,7 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <p>The following snippet updates the icon when the user clicks it, but only for the active tab:</p>
 
-<pre class="notranslate brush: js">browser.browserAction.onClicked.addListener((tab) =&gt; {
+<pre class="brush: js">browser.browserAction.onClicked.addListener((tab) =&gt; {
   browser.browserAction.setIcon({
     tabId: tab.id, path: "icons/updated-48.png"
   });

@@ -59,14 +59,14 @@ tags:
 
 <p>First, a simple example:</p>
 
-<pre class="brush: js notranslate">let utterance = new SpeechSynthesisUtterance("Hello world!");
+<pre class="brush: js">let utterance = new SpeechSynthesisUtterance("Hello world!");
 speechSynthesis.speak(utterance);</pre>
 
 <p>Now we'll look at a more fully-fledged example. In our <a href="https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis">Speech synthesiser demo</a>, we first grab a reference to the SpeechSynthesis controller using <code>window.speechSynthesis</code>. After defining some necessary variables, we retrieve a list of the voices available using {{domxref("SpeechSynthesis.getVoices()")}} and populate a select menu with them so the user can choose what voice they want.</p>
 
 <p>Inside the <code>inputForm.onsubmit</code> handler, we stop the form submitting with <a href="/en-US/docs/Web/API/Event/preventDefault">preventDefault()</a>,  create a new {{domxref("SpeechSynthesisUtterance")}} instance containing the text from the text {{htmlelement("input")}}, set the utterance's voice to the voice selected in the {{htmlelement("select")}} element, and start the utterance speaking via the {{domxref("SpeechSynthesis.speak()")}} method.</p>
 
-<pre class="brush: js notranslate">var synth = window.speechSynthesis;
+<pre class="brush: js">var synth = window.speechSynthesis;
 
 var inputForm = document.querySelector('form');
 var inputTxt = document.querySelector('.txt');
@@ -137,10 +137,7 @@ inputForm.onsubmit = function(event) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.SpeechSynthesis")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

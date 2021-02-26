@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>mySet</var>.delete(<var>value</var>);</pre>
+<pre class="brush: js"><var>mySet</var>.delete(<var>value</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -42,7 +42,7 @@ tags:
 
 <h3 id="Using_the_delete_method">Using the delete() method</h3>
 
-<pre class="brush: js notranslate">const mySet = new Set();
+<pre class="brush: js">const mySet = new Set();
 mySet.add('foo');
 
 mySet.delete('bar'); // Returns false. No "bar" element found to be deleted.
@@ -53,7 +53,7 @@ mySet.has('foo');    // Returns false. The "foo" element is no longer present.
 
 <p>Let's checkout below how to delete an Object from a Set.</p>
 
-<pre class="brush: js notranslate">const setObj = new Set();   // Create a new set.
+<pre class="brush: js">const setObj = new Set();   // Create a new set.
 
 setObj.add({x: 10, y: 20}); // Add object in the set.
 

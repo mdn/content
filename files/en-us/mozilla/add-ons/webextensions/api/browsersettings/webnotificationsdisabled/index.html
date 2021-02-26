@@ -35,7 +35,7 @@ tags:
 
 <p>Toggle the setting:</p>
 
-<pre class="notranslate brush: js">async function toggleWebNotifications() {
+<pre class="brush: js">async function toggleWebNotifications() {
   let current = await browser.browserSettings.webNotificationsDisabled.get({});
   console.log(`Current value: ${current.value}`);
   browser.browserSettings.webNotificationsDisabled.set({value: !current.value});

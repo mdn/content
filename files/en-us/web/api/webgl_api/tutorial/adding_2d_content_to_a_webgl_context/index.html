@@ -45,7 +45,7 @@ tags:
 
 <p>Our vertex shader below receives vertex position values from an attribute we define called <code>aVertexPosition</code>. That position is then multiplied by two 4x4 matrices we provide called <code>uProjectionMatrix</code> and <code>uModelViewMatrix</code>; <code>gl_Position</code> is set to the result. For more info on projection and other matrixes <a href="https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html">you might find this article useful</a>.</p>
 
-<pre class="brush: js notranslate">  // Vertex shader program
+<pre class="brush: js">  // Vertex shader program
 
   const vsSource = `
     attribute vec4 aVertexPosition;
@@ -69,7 +69,7 @@ tags:
 
 <p>In this case, we're returning white every time, since we're just drawing a white square, with no lighting in use.</p>
 
-<pre class="brush: js notranslate">  const fsSource = `
+<pre class="brush: js">  const fsSource = `
     void main() {
       gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
     }
@@ -80,7 +80,7 @@ tags:
 
 <p>Now that we've defined the two shaders we need to pass them to WebGL, compile them, and link them together. The code below creates the two shaders by calling <code>loadShader()</code>, passing the type and source for the shader. It then creates a program, attaches the shaders and links them together. If compiling or linking fails the code displays an alert.</p>
 
-<pre class="brush: js notranslate">//
+<pre class="brush: js">//
 // Initialize a shader program, so WebGL knows how to draw our data
 //
 function initShaderProgram(gl, vsSource, fsSource) {
@@ -143,12 +143,12 @@ function loadShader(gl, type, source) {
 
 <p>To use this code we call it like this</p>
 
-<pre class="brush: js notranslate">  const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
+<pre class="brush: js">  const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
 </pre>
 
 <p>After we've created a shader program we need to look up the locations that WebGL assigned to our inputs. In this case we have one attribute and two uniforms. Attributes receive values from buffers. Each iteration of the vertex shader receives the next value from the buffer assigned to that attribute. <a href="/en-US/docs/Web/API/WebGL_API/Data#Uniforms">Uniforms</a> are similar to JavaScript global variables. They stay the same value for all iterations of a shader. Since the attribute and uniform locations are specific to a single shader program we'll store them together to make them easy to pass around</p>
 
-<pre class="brush: js notranslate">  const programInfo = {
+<pre class="brush: js">  const programInfo = {
     program: shaderProgram,
     attribLocations: {
       vertexPosition: gl.getAttribLocation(shaderProgram, 'aVertexPosition'),
@@ -164,7 +164,7 @@ function loadShader(gl, type, source) {
 
 <p>Before we can render our square plane, we need to create the buffer that contains its vertex positions and put the vertex positions in it. We'll do that using a function we call <code>initBuffers()</code>; as we explore more advanced WebGL concepts, this routine will be augmented to create more -- and more complex -- 3D objects.</p>
 
-<pre class="brush: js notranslate">function initBuffers(gl) {
+<pre class="brush: js">function initBuffers(gl) {
 
   // Create a buffer for the square's positions.
 
@@ -206,7 +206,7 @@ function loadShader(gl, type, source) {
 
 <p>Once the shaders are established, the locations are looked up, and the square plane's vertex positions put in a buffer, we can actually render the scene. Since we're not animating anything in this example, our <code>drawScene()</code> function is very simple. It uses a few utility routines we'll cover shortly.</p>
 
-<pre class="brush: js notranslate">function drawScene(gl, programInfo, buffers) {
+<pre class="brush: js">function drawScene(gl, programInfo, buffers) {
   gl.clearColor(0.0, 0.0, 0.0, 1.0);  // Clear to black, fully opaque
   gl.clearDepth(1.0);                 // Clear everything
   gl.enable(gl.DEPTH_TEST);           // Enable depth testing
@@ -309,8 +309,8 @@ function loadShader(gl, type, source) {
 
 <ul>
  <li><a href="https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html">Matrices</a> on WebGLFundamentals</li>
- <li><a class="external" href="http://mathworld.wolfram.com/Matrix.html">Matrices</a> on Wolfram MathWorld</li>
- <li><a class="external" href="https://en.wikipedia.org/wiki/Matrix_(mathematics)">Matrix</a> on Wikipedia</li>
+ <li><a href="http://mathworld.wolfram.com/Matrix.html">Matrices</a> on Wolfram MathWorld</li>
+ <li><a href="https://en.wikipedia.org/wiki/Matrix_(mathematics)">Matrix</a> on Wikipedia</li>
 </ul>
 
 <p>{{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}</p>

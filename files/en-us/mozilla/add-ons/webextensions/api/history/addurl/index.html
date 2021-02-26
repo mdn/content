@@ -58,7 +58,7 @@ tags:
 
 <p>Add a record of a visit to "https://example.org/", then check that the new visit was recorded by searching history for the most recent item and logging it:</p>
 
-<pre class="notranslate brush: js">function onGot(results) {
+<pre class="brush: js">function onGot(results) {
   if (results.length) {
     console.log(results[0].url);
     console.log(new Date(results[0].lastVisitTime));
@@ -79,7 +79,7 @@ addingUrl.then(onAdded);</pre>
 
 <p>Add a record of a visit to "https://example.org", but give it a <code>visitTime</code> 24 hours in the past, and a <code>transition</code> of "typed":</p>
 
-<pre class="notranslate brush: js">const DAY = 24 * 60* 60 * 1000;
+<pre class="brush: js">const DAY = 24 * 60* 60 * 1000;
 
 function oneDayAgo() {
   return Date.now() - DAY;

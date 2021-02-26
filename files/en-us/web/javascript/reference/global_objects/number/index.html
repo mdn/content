@@ -25,13 +25,13 @@ tags:
 
 <h3 id="Literal_syntax">Literal syntax</h3>
 
-<pre class="brush: js notranslate">123    // one-hundred twenty-three
+<pre class="brush: js">123    // one-hundred twenty-three
 123.0  // same
 123 === 123.0  // true</pre>
 
 <h3 id="Function_syntax">Function syntax</h3>
 
-<pre class="brush: js notranslate">Number('123')  // returns the number 123
+<pre class="brush: js">Number('123')  // returns the number 123
 Number('123') === 123  // true
 
 Number("unicorn")  // NaN
@@ -108,7 +108,7 @@ Number(undefined)  // NaN
 
 <p>The following example uses the <code>Number</code> object's properties to assign values to several numeric variables:</p>
 
-<pre class="brush: js notranslate">const biggestNum     = Number.MAX_VALUE
+<pre class="brush: js">const biggestNum     = Number.MAX_VALUE
 const smallestNum    = Number.MIN_VALUE
 const infiniteNum    = Number.POSITIVE_INFINITY
 const negInfiniteNum = Number.NEGATIVE_INFINITY
@@ -119,7 +119,7 @@ const notANum        = Number.NaN
 
 <p>The following example shows the minimum and maximum integer values that can be represented as <code>Number</code> object. (More details on this are described in the ECMAScript standard, chapter <em><a href="https://tc39.github.io/ecma262/#sec-ecmascript-language-types-number-type">6.1.6 The Number Type</a>.</em>)</p>
 
-<pre class="brush: js notranslate">const biggestInt  = Number.MAX_SAFE_INTEGER  //  (<code>2<sup>53</sup> - 1</code>) =&gt;  9007199254740991
+<pre class="brush: js">const biggestInt  = Number.MAX_SAFE_INTEGER  //  (<code>2<sup>53</sup> - 1</code>) =&gt;  9007199254740991
 const smallestInt = Number.MIN_SAFE_INTEGER  // -(<code>2<sup>53</sup> - 1</code>) =&gt; -9007199254740991</pre>
 
 <p>When parsing data that has been serialized to JSON, integer values falling outside of this range can be expected to become corrupted when JSON parser coerces them to <code>Number</code> type.</p>
@@ -132,7 +132,7 @@ const smallestInt = Number.MIN_SAFE_INTEGER  // -(<code>2<sup>53</sup> - 1</code
 
 <p>The following example converts the {{jsxref("Date")}} object to a numerical value using <code>Number</code> as a function:</p>
 
-<pre class="brush: js notranslate">let d = new Date('December 17, 1995 03:24:00')
+<pre class="brush: js">let d = new Date('December 17, 1995 03:24:00')
 console.log(Number(d))
 </pre>
 
@@ -140,7 +140,7 @@ console.log(Number(d))
 
 <h3 id="Convert_numeric_strings_and_null_to_numbers">Convert numeric strings and null to numbers</h3>
 
-<pre class="brush: js notranslate">Number('123')     // 123
+<pre class="brush: js">Number('123')     // 123
 Number('123') === 123 /// true
 Number('12.3')    // 12.3
 Number('12.00')   // 12

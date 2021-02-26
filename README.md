@@ -7,6 +7,11 @@ The following is a set of guidelines for contributing to the
 [content of MDN Web Docs](https://github.com/mdn/content), which is
 hosted within the [MDN Organization](https://github.com/mdn) on GitHub.
 
+> **Note:** Just want to find a task and jump in?
+  See [Getting started on MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started)
+  for an overview of how to join, and [Contributing to MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute)
+  for a filtered list of tasks.
+
 <!-- You can quickly regenerate this TOC by running:
   npx markdown-toc@1.2.0 --bullets='-' --no-firsth1 README.md -->
 
@@ -32,8 +37,8 @@ hosted within the [MDN Organization](https://github.com/mdn) on GitHub.
 
 ## Code of Conduct
 
-Everyone participating in this project is expected to follow
-[our Code of Conduct](CODE_OF_CONDUCT.md).
+Everyone participating in this project is expected to follow our
+[Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## License
 
@@ -92,6 +97,9 @@ are specified within [`files/en-us/_redirects.txt`](files/en-us/_redirects.txt),
 one redirect per line. Each line specifies a `from` and `to` URI
 separated by whitespace. When you move a document, you'll need to add a
 redirect to this file specifying that its old URI now redirects to its new URI.
+Both of these tasks are done using the `yarn content move` tool — see
+[Moving one or more documents](#moving-one-or-more-documents).
+**Don't edit the `_redirects.txt` file manually!**
 If both an `index.html` file and a redirect exist for a document, the
 document takes precedence and the redirect is ignored.
 - **A document's `index.html` starts with "front-matter"** -- Each
@@ -118,10 +126,15 @@ document: `title`, `slug`, and [`tags`](https://developer.mozilla.org/en-US/docs
 
 If you just want to make a simple change to a single file, like fixing a typo,
 the GitHub UI is the simplest way to do that. For example, if you've found
-a typo within the [JavaScript landing page](files/en-us/web/javascript/index.html),
-you can sign into GitHub, go to <https://github.com/mdn/content>, navigate to
-`files/en-us/web/javascript/index.html`, and then click on the edit
-(pencil) button. From there the GitHub UI will take your hand and
+a typo within the [JavaScript landing page](https://developer.mozilla.org/en-US/docs/Web/JavaScript),
+you can sign into GitHub, go to <https://github.com/mdn/content>,
+navigate to the source file `files/en-us/web/javascript/index.html`,
+and then click on the edit (pencil) button.
+
+> **Tip:** Click the **Source on GitHub** link in the footer of any MDN page
+  to jump to its source file on GitHub.
+
+From there the GitHub UI will take your hand and
 [walk you through the rest](https://docs.github.com/en/free-pro-team@latest/github/managing-files-in-a-repository/editing-files-in-your-repository),
 like automatically creating a
 [fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
@@ -129,8 +142,9 @@ and branch to commit your changes to, as well as helping you reach the
 ultimate goal, a [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests).
 Your pull request represents the work you want to be reviewed,
 hopefully approved, and then merged into the `main` branch of this repository.
-**See the [pull request etiquette section](#pull-request-etiquette) for more details**
-**on creating and handling pull requests successfully.**
+
+> **Note:** See the [pull request etiquette section](#pull-request-etiquette)
+  for more details on creating and handling pull requests successfully.
 
 If you're not certain of the changes that you want to make, get in touch
 with us first!
@@ -234,12 +248,14 @@ within your browser.
     ```
 
     Instead of having to type `export EDITOR=code` every time prior to
-    `yarn start`, you can instead store this in your personal `.env` file.
-    It might not exist so you might need to create one. For example:
+    `yarn start`, you can instead store this setting in your personal `.env` file
+    (this goes inside the root of your local `content` directory). If the `.env`
+    file doesn't already exist, you can create one and include the above setting
+    in it. Alternatively, running the following line will add the setting to the
+    `.env` file automatically, creating the file if it doesn't already exist:
 
     ```sh
     echo 'EDITOR=code' >> .env
-    yarn start
     ```
 
     Now, it should be set like that even after you've closed and started a new
@@ -310,8 +326,8 @@ underlying issue(s), you can ask for help. Your pull request will not be
 approved and merged if these tests are failing.
 
 1. If your pull request has merge conflicts with the `main` branch (GitHub
-checks for this automatically and notifies you), you are responsible to
-resolve them. You can do this by merging the `main` branch into your
+checks for this automatically and notifies you), you are responsible for
+resolving them. You can do this by merging the `main` branch into your
 branch (`git pull mdn main`), and then pushing the updated branch to
 your fork (`git push`).
 
@@ -436,6 +452,12 @@ push your branch to your fork:
     ```
 
 1. Now you're ready to create your [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+
+**Important: `yarn content move` automatically adds the necessary redirect
+information to the `_redirects.txt` file so that the old location will redirect
+to the new one. Don't edit the `_redirects.txt` file manually!
+mistakes can easily creep in if you do. If you need to add a redirect without
+moving a file, talk to us about it.**
 
 ### Deleting a document
 
@@ -566,7 +588,7 @@ MDN document pages, for example on
 [the JavaScript Array page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Browser_compatibility),
 is generated from the `npm` package created from the <https://github.com/mdn/browser-compat-data>
 repository. If you'd like to make or suggest a change to the content of
-the browser-compatibilitytable on any given MDN document page, you can either
+the browser compatibility table on any given MDN document page, you can either
 use the `Report problems with this data on GitHub` link in the upper-right
 corner of the table on the page itself to create an issue, or go to
 <https://github.com/mdn/browser-compat-data> and
@@ -623,10 +645,10 @@ you can follow the below steps to unarchive it:
 directory into the appropriate place inside this repo, and update the
 page's meta data (like `slug`) if needed.
 
-Note: To archive a currently-non-archived page, you need to follow the
+> **Note:** To archive a currently-non-archived page, you need to follow the
 above procedure, but move the page in question the opposite way between repos.
 
-Note: You can have an archived page with non-archived pages below it in the
+**Note:** You can have an archived page with non-archived pages below it in the
 hierarchy, and vice-versa. To achive this you need to have the same directory
 structure in both the `content` and `archive-content` repos. Whether a page
 is non-archived or archived depends on which repo its `index.html` file is

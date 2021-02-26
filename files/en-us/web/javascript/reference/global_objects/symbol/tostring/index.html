@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Symbol().toString()</pre>
+<pre class="brush: js">Symbol().toString()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -32,13 +32,13 @@ tags:
 
 <p>While you can call <code>toString()</code> on Symbols, you cannot use string concatenation with them:</p>
 
-<pre class="brush: js notranslate">Symbol('foo') + 'bar'        // TypeError: Can't convert symbol to string</pre>
+<pre class="brush: js">Symbol('foo') + 'bar'        // TypeError: Can't convert symbol to string</pre>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_toString">Using toString()</h3>
 
-<pre class="brush: js notranslate">Symbol('desc').toString()    // "Symbol(desc)"
+<pre class="brush: js">Symbol('desc').toString()    // "Symbol(desc)"
 
 // well-known symbols
 Symbol.iterator.toString()   // "Symbol(Symbol.iterator)

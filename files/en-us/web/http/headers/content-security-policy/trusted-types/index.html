@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate">Content-Security-Policy: trusted-types;
+<pre>Content-Security-Policy: trusted-types;
 Content-Security-Policy: trusted-types 'none';
 Content-Security-Policy: trusted-types &lt;policyName&gt;;
 Content-Security-Policy: trusted-types &lt;policyName&gt; &lt;policyName&gt; 'allow-duplicates';
@@ -32,7 +32,7 @@ Content-Security-Policy: trusted-types &lt;policyName&gt; &lt;policyName&gt; 'al
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">// Content-Security-Policy: trusted-types foo bar 'allow-duplicates';
+<pre class="brush: js">// Content-Security-Policy: trusted-types foo bar 'allow-duplicates';
 
 if (typeof trustedTypes !== 'undefined') {
   const policyFoo = trustedTypes.createPolicy('foo', {});

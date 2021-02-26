@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">new Path2D();
+<pre class="brush: js">new Path2D();
 new Path2D(<em>path</em>);
 new Path2D(<em>d</em>);
 </pre>
@@ -44,10 +44,10 @@ new Path2D(<em>d</em>);
 <p>This example creates and copies a <code>Path2D</code> path.</p>
 
 <div class="hidden">
-  <pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+  <pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
 </div>
 
-<pre class="brush: js highlight:[4,7] notranslate">const canvas = document.getElementById('canvas');
+<pre class="brush: js highlight:[4,7]">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 let path1 = new Path2D();
@@ -71,10 +71,10 @@ ctx.stroke(path2);
   (<code>h -80</code>), and then back to the start (<code>Z</code>).</p>
 
 <div class="hidden">
-  <pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+  <pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
 </div>
 
-<pre class="brush: js highlight:[4] notranslate">const canvas = document.getElementById('canvas');
+<pre class="brush: js highlight:[4]">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 let p = new Path2D('M10 10 h 80 v 80 h -80 Z');
@@ -102,10 +102,7 @@ ctx.fill(p);
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.Path2D.Path2D")}}</p>
-</div>
+<p>{{Compat("api.Path2D.Path2D")}}</p>
 
 <h2 id="See_also">See also</h2>
 

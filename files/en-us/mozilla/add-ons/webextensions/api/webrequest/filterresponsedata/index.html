@@ -41,7 +41,7 @@ tags:
 
 <p>This example, taken from the <a href="https://github.com/mdn/webextensions-examples/tree/master/http-response">http-response</a> example extension, creates a filter in {{WebExtAPIRef("webRequest.onBeforeRequest")}} and uses it, to modify the first chunk of the response:</p>
 
-<pre class="notranslate brush: js">function listener(details) {
+<pre class="brush: js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let decoder = new TextDecoder("utf-8");
   let encoder = new TextEncoder();

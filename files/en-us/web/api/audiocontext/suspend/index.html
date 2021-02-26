@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var audioCtx = new AudioContext();
+<pre class="brush: js">var audioCtx = new AudioContext();
 audioCtx.suspend().then(function() { ... });
 </pre>
 
@@ -30,7 +30,7 @@ audioCtx.suspend().then(function() { ... });
 
 <p>The following snippet is taken from our <a href="https://github.com/mdn/webaudio-examples/blob/master/audiocontext-states/index.html">AudioContext states demo</a> (<a href="https://mdn.github.io/webaudio-examples/audiocontext-states/">see it running live</a>.) When the suspend/resume button is clicked, the {{domxref("BaseAudioContext/state", "AudioContext.state")}} is queried — if it is <code>running</code>, <code>suspend()</code> is called; if it is <code>suspended</code>, {{domxref("AudioContext/resume", "resume()")}} is called. In each case, the text label of the button is updated as appropriate once the promise resolves.</p>
 
-<pre class="brush: js notranslate">susresBtn.onclick = function() {
+<pre class="brush: js">susresBtn.onclick = function() {
   if(audioCtx.state === 'running') {
     audioCtx.suspend().then(function() {
       susresBtn.textContent = 'Resume context';
@@ -62,10 +62,7 @@ audioCtx.suspend().then(function() { ... });
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.AudioContext.suspend")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

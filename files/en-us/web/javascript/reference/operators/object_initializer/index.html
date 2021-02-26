@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">let o = {}
+<pre class="brush: js">let o = {}
 let o = {a: 'foo', b: 42, c: {}}
 
 let a = 'foo', b = 42, c = {}
@@ -39,7 +39,7 @@ let o = {
 
 <p>Please see the compatibility table for support for these notations. In non-supporting environments, these notations will lead to syntax errors.</p>
 
-<pre class="brush: js notranslate">// Shorthand property names (ES2015)
+<pre class="brush: js">// Shorthand property names (ES2015)
 let a = 'foo', b = 42, c = {};
 let o = {a, b, c}
 
@@ -77,13 +77,13 @@ let o = {
 
 <p>An empty object with no properties can be created like this:</p>
 
-<pre class="brush: js notranslate">let object = {}</pre>
+<pre class="brush: js">let object = {}</pre>
 
 <p>However, the advantage of the <em>literal</em> or <em>initializer</em> notation is, that you are able to quickly create objects with properties inside the curly braces. You notate a list of <code>key: value</code> pairs delimited by commas.</p>
 
 <p>The following code creates an object with three properties and the keys are <code>"foo"</code>, <code>"age"</code> and <code>"baz"</code>. The values of these keys are a string <code>"bar"</code>, the number <code>42</code>, and another object.</p>
 
-<pre class="brush: js notranslate">let object = {
+<pre class="brush: js">let object = {
   foo: 'bar',
   age: 42,
   baz: {myProp: 12}
@@ -93,7 +93,7 @@ let o = {
 
 <p>Once you have created an object, you might want to read or change them. Object properties can be accessed by using the dot notation or the bracket notation. (See <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">property accessors</a> for detailed information.)</p>
 
-<pre class="brush: js notranslate">object.foo // "bar"
+<pre class="brush: js">object.foo // "bar"
 object['age'] // 42
 
 object.foo = 'baz'
@@ -103,7 +103,7 @@ object.foo = 'baz'
 
 <p>We have already learned how to notate properties using the initializer syntax. Oftentimes, there are variables in your code that you would like to put into an object. You will see code like this:</p>
 
-<pre class="brush: js notranslate">let a = 'foo',
+<pre class="brush: js">let a = 'foo',
     b = 42,
     c = {};
 
@@ -115,7 +115,7 @@ let o = {
 
 <p>With ECMAScript 2015, there is a shorter notation available to achieve the same:</p>
 
-<pre class="brush: js notranslate">let a = 'foo',
+<pre class="brush: js">let a = 'foo',
     b = 42,
     c = {};
 
@@ -130,13 +130,13 @@ console.log((o.a === {a}.a)) // true
 
 <p>When using the same name for your properties, the second property will overwrite the first.</p>
 
-<pre class="brush: js notranslate">let a = {x: 1, x: 2}
+<pre class="brush: js">let a = {x: 1, x: 2}
 console.log(a) // {x: 2}
 </pre>
 
 <p>In ECMAScript 5 strict mode code, duplicate property names were considered a {{jsxref("SyntaxError")}}.  With the introduction of computed property names making duplication possible at runtime, ECMAScript 2015 has removed this restriction.</p>
 
-<pre class="brush: js notranslate">function haveES2015DuplicatePropertySemantics() {
+<pre class="brush: js">function haveES2015DuplicatePropertySemantics() {
   'use strict';
   try {
     ({prop: 1, prop: 2});
@@ -153,7 +153,7 @@ console.log(a) // {x: 2}
 
 <p>A property of an object can also refer to a <a href="/en-US/docs/Web/JavaScript/Reference/Functions">function</a> or a <a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">getter</a> or <a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a> method.</p>
 
-<pre class="brush: js notranslate">let o = {
+<pre class="brush: js">let o = {
   <var>property: function </var>(<var>parameters</var>) {},
   get <var>property</var>() {},
   set <var>property</var>(<var>value</var>) {}
@@ -161,14 +161,14 @@ console.log(a) // {x: 2}
 
 <p>In ECMAScript 2015, a shorthand notation is available, so that the keyword "<code>function</code>" is no longer necessary.</p>
 
-<pre class="brush: js notranslate">// Shorthand method names (ES2015)
+<pre class="brush: js">// Shorthand method names (ES2015)
 let o = {
   <var>property</var>(<var>parameters</var>) {},
 }</pre>
 
 <p>In ECMAScript 2015, there is a way to concisely define properties whose values are generator functions:</p>
 
-<pre class="brush: js notranslate">let o = {
+<pre class="brush: js">let o = {
   *<var>generator</var>() {
     ...........
   }
@@ -176,7 +176,7 @@ let o = {
 
 <p>Which is equivalent to this ES5-like notation (but note that ECMAScript 5 has no generators):</p>
 
-<pre class="brush: js notranslate">let o = {
+<pre class="brush: js">let o = {
   generator<var>: function* </var>() {
     ...........
   }
@@ -190,7 +190,7 @@ let o = {
 
 <p>Now you can use a similar syntax in object literals, too:</p>
 
-<pre class="brush: js notranslate">// Computed property names (ES2015)
+<pre class="brush: js">// Computed property names (ES2015)
 let i = 0
 let a = {
   ['foo' + ++i]: i,
@@ -223,7 +223,7 @@ console.log(config) // {size: 12, mobileSize: 4}</pre>
 
 <p>Shallow-cloning (excluding <code>prototype</code>) or merging objects is now possible using a shorter syntax than {{jsxref("Object.assign()")}}.</p>
 
-<pre class="brush: js notranslate">let obj1 = { foo: 'bar', x: 42 }
+<pre class="brush: js">let obj1 = { foo: 'bar', x: 42 }
 let obj2 = { foo: 'baz', y: 13 }
 
 let clonedObj = { ...obj1 }
@@ -240,7 +240,7 @@ let mergedObj = { ...obj1, ...obj2 }
 
 <p>A property definition of the form <code>__proto__: value</code> or <code>"__proto__": value</code> does not create a property with the name <code>__proto__</code>.  Instead, if the provided value is an object or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>, it changes the <code>[[Prototype]]</code> of the created object to that value.  (If the value is not an object or <code>null</code>, the object is not changed.)</p>
 
-<pre class="brush: js notranslate">let obj1 = {}
+<pre class="brush: js">let obj1 = {}
 assert(Object.getPrototypeOf(obj1) === Object.prototype)
 
 let obj2 = {__proto__: null}
@@ -259,7 +259,7 @@ assert(!obj4.hasOwnProperty('__proto__'))
 
 <p>Property definitions that do not use "colon" notation are not prototype mutations. They are property definitions that behave identically to similar definitions using any other name.</p>
 
-<pre class="brush: js notranslate">let __proto__ = 'variable'
+<pre class="brush: js">let __proto__ = 'variable'
 
 let obj1 = {__proto__}
 assert(Object.getPrototypeOf(obj1) === Object.prototype)
@@ -288,10 +288,7 @@ assert(obj3.__proto__ === 17)
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("javascript.operators.object_initializer")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

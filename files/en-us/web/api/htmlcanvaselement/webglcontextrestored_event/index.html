@@ -6,11 +6,9 @@ tags:
 ---
 <div>{{APIRef}}</div>
 
-<div>
 <p>The <code><strong>webglcontextrestored</strong></code> event of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> is fired if the user agent restores the drawing buffer for a {{domxref("WebGLRenderingContext")}} object.</p>
 
 <p>Once the context is restored, WebGL resources such as textures and buffers that were created before the context was lost are no longer valid. You need to reinitialize the state of your WebGL application and recreate resources.</p>
-</div>
 
 <table class="properties">
  <tbody>
@@ -67,10 +65,7 @@ gl.getExtension('WEBGL_lose_context').restoreContext();
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.HTMLCanvasElement.webglcontextrestored_event")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

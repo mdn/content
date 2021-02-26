@@ -30,7 +30,7 @@ tags:
 
 <p>You can listen to each event by assigning a listener function to its attribute:</p>
 
-<pre class="notranslate brush: js">filter.onstart = event =&gt; {
+<pre class="brush: js">filter.onstart = event =&gt; {
   console.log("started");
 }</pre>
 
@@ -91,7 +91,7 @@ tags:
 
 <p>This code listens for <code>onstart</code>, <code>ondata</code>, and <code>onstop</code>. It logs those events, and the response data as an {{domxref("ArrayBuffer")}} itself:</p>
 
-<pre class="notranslate brush: js">function listener(details) {
+<pre class="brush: js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
   filter.onstart = event =&gt; {

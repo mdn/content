@@ -6,7 +6,6 @@ tags:
 ---
 <div>{{AddonSidebar}}</div>
 
-<div>
 <p><span class="seoSummary">This user interface option adds one or more items to a browser context menu.</span> This is the context menu available when a user right-clicks on a web page. Tabs can have context menus also, available through the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus">browser.menus API</a>.</p>
 
 <p><img alt="Example of content menu items added by a WebExtension, from the context-menu-demo example" src="context_menu_example.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
@@ -25,7 +24,7 @@ tags:
 
 <p>You can then add (and update or delete) the context menu items in your extension's background script. To create a menu item you specify an id, its title, and the context menus it should appear on:</p>
 
-<pre class="notranslate brush: js">browser.contextMenus.create({
+<pre class="brush: js">browser.contextMenus.create({
   id: "log-selection",
   title: browser.i18n.getMessage("contextMenuItemSelectionLogger"),
   contexts: ["selection"]
@@ -33,7 +32,7 @@ tags:
 
 <p>Your extension then listens for clicks on the menu items. The passed information about the item clicked, the context where the click happened, and details of the tab where the click took place can then be used to invoke the appropriate extension functionality.</p>
 
-<pre class="notranslate brush: js">browser.contextMenus.onClicked.addListener(function(info, tab) {
+<pre class="brush: js">browser.contextMenus.onClicked.addListener(function(info, tab) {
   switch (info.menuItemId) {
     case "log-selection":
       console.log(info.selectionText);
@@ -54,4 +53,3 @@ tags:
  <li><a href="https://github.com/mdn/webextensions-examples/tree/master/menu-demo">menu-demo</a> adds several items to the browser's context menu.</li>
  <li><a href="https://github.com/mdn/webextensions-examples/tree/master/context-menu-copy-link-with-types">context-menu-copy-link-with-types</a> adds a context menu item to links that copies the link URL to the clipboard, as plain text and rich HTML.</li>
 </ul>
-</div>

@@ -1,0 +1,59 @@
+---
+title: Element.ariaValueText
+slug: Web/API/Element/ariaValueText
+tags:
+  - API
+  - Property
+  - Reference
+  - ariaValueText
+  - AriaAttributes
+  - AriaMixin
+  - Element
+---
+<div>{{DefaultAPISidebar("DOM")}}</div>
+
+<p class="summary">The <strong><code>ariaValueText</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute"><code>aria-valuetext</code></a> attribute, which defines the human readable text alternative of aria-valuenow for a range widget.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox notranslate">var <var>ariaValueText</var> = element.ariaValueText;
+<var>element</var>.ariaValueText = <var>ariaValueText</var></pre>
+
+<h3>Value</h3>
+<p>A {{domxref("DOMString")}}.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example the <code>aria-valuetext</code> attribute on the element with an ID of <code>slider</code> is set to "Sunday" to give a human-readable value for the range. Using <code>ariaValueText</code> we update the value to "Monday".</p>
+
+<pre class="brush: html">&lt;div role="slider" aria-valuenow="1"
+  aria-valuemin="1" aria-valuemax="7"
+	aria-valuetext="Sunday"&gt;</pre>
+
+<pre class="brush: js">let el = document.getElementById('slider');
+console.log(el.ariaValueText); // Sunday
+el.ariaValueText = "Monday";
+console.log(el.ariaValueText); // Monday</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ARIA 1.2','#dom-ariamixin-ariavaluetext','ariaValueText')}}</td>
+   <td>{{Spec2('ARIA 1.2')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.Element.ariaValueText")}}</p>

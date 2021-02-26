@@ -48,7 +48,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><code>Number.isSafeInteger(<var>testValue</var>)</code>
+<pre class="brush: js"><code>Number.isSafeInteger(<var>testValue</var>)</code>
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -65,7 +65,7 @@ tags:
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="brush: js notranslate">Number.isSafeInteger = Number.isSafeInteger || function (value) {
+<pre class="brush: js">Number.isSafeInteger = Number.isSafeInteger || function (value) {
    return Number.isInteger(value) &amp;&amp; Math.abs(value) &lt;= Number.MAX_SAFE_INTEGER;
 };
 </pre>
@@ -74,7 +74,7 @@ tags:
 
 <h3 id="Using_isSafeInteger">Using isSafeInteger</h3>
 
-<pre class="brush: js notranslate">Number.isSafeInteger(3);                    // true
+<pre class="brush: js">Number.isSafeInteger(3);                    // true
 Number.isSafeInteger(Math.pow(2, 53));      // false
 Number.isSafeInteger(Math.pow(2, 53) - 1);  // true
 Number.isSafeInteger(NaN);                  // false

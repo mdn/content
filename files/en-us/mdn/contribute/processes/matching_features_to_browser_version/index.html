@@ -97,7 +97,7 @@ tags:
 
 <p>One useful resource is <a href="https://cs.chromium.org/chromium/src/android_webview/tools/system_webview_shell/test/data/webexposed/not-webview-exposed.txt">this file which lists the interfaces and/or interface members</a> which are not available in a WebView.</p>
 
-<pre class="brush: js notranslate">interface HTMLIFrameElement : HTMLElement
+<pre class="brush: js">interface HTMLIFrameElement : HTMLElement
     getter allowPaymentRequest
     setter allowPaymentRequest</pre>
 
@@ -278,7 +278,7 @@ tags:
 
 <p>To determine when support for a given <strong>value</strong> for a property was added, try opening the file <code><a href="https://dxr.mozilla.org/mozilla-central/source/layout/style/nsCSSProps.cpp">nsCSSProps.cpp</a></code> and looking through the tables of property values found there. These tables are all of type <code>KTableEntry</code>; each entry in the tables maps a CSS keyword to a value used to represent it internally. For instance, to determine when Firefox added support for the CSS Scroll Snap type value <code>proximity</code>, look through <code>nsCSSProps.cpp</code> until you find in the table <code>nsCSSProps::kScrollSnapTypeKTable</code>:</p>
 
-<pre class="brush: cpp notranslate">const KTableEntry nsCSSProps::kScrollSnapTypeKTable[] = {
+<pre class="brush: cpp">const KTableEntry nsCSSProps::kScrollSnapTypeKTable[] = {
   { eCSSKeyword_none,      NS_STYLE_SCROLL_SNAP_TYPE_NONE },
   { eCSSKeyword_mandatory, NS_STYLE_SCROLL_SNAP_TYPE_MANDATORY },
   { eCSSKeyword_proximity, NS_STYLE_SCROLL_SNAP_TYPE_PROXIMITY },
@@ -326,7 +326,7 @@ tags:
  <li>
   <p>Find the bug that introduces the change you're looking for, then look at the tests for that bug. See if the test for the feature is disabled by a line that looks something like one of the following:</p>
 
-  <pre class="brush: cpp notranslate">skip-if = toolkit == 'android'
+  <pre class="brush: cpp">skip-if = toolkit == 'android'
 skip-if = os == 'android'</pre>
 
   <p>If either of those are present, for example, the test is disabled on Android, which means the feature is almost certainly not included on Android. Similar things can happen to disable tests on Mac or Windows.</p>

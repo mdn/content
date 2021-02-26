@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Reflect.getPrototypeOf(<var>target</var>)
+<pre class="brush: js">Reflect.getPrototypeOf(<var>target</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -53,14 +53,14 @@ tags:
 
 <h3 id="Using_Reflect.getPrototypeOf">Using Reflect.getPrototypeOf()</h3>
 
-<pre class="brush: js notranslate">Reflect.getPrototypeOf({})                  // Object.prototype
+<pre class="brush: js">Reflect.getPrototypeOf({})                  // Object.prototype
 Reflect.getPrototypeOf(Object.prototype)    // null
 Reflect.getPrototypeOf(Object.create(null)) // null
 </pre>
 
 <h3 id="Compared_to_Object.getPrototypeOf">Compared to Object.getPrototypeOf()</h3>
 
-<pre class="brush: js notranslate">// Same result for Objects
+<pre class="brush: js">// Same result for Objects
 Object.getPrototypeOf({})   // Object.prototype
 Reflect.getPrototypeOf({})  // Object.prototype
 

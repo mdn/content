@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Promise.race(<var>iterable</var>);</pre>
+<pre class="brush: js">Promise.race(<var>iterable</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -58,7 +58,7 @@ tags:
 <p>This following example demonstrates the asynchronicity of <code>Promise.race</code>:
 </p>
 
-<pre class="brush: js notranslate">// we are passing as argument an array of promises that are already resolved,
+<pre class="brush: js">// we are passing as argument an array of promises that are already resolved,
 // to trigger Promise.race as soon as possible
 var resolvedPromisesArray = [Promise.resolve(33), Promise.resolve(44)];
 
@@ -79,7 +79,7 @@ setTimeout(function(){
 
 <p>An empty iterable causes the returned promise to be forever pending:</p>
 
-<pre class="brush: js notranslate">var foreverPendingPromise = Promise.race([]);
+<pre class="brush: js">var foreverPendingPromise = Promise.race([]);
 console.log(foreverPendingPromise);
 setTimeout(function(){
     console.log('the stack is now empty');
@@ -96,7 +96,7 @@ setTimeout(function(){
   promise, then <code>Promise.race</code> will resolve to the first of these values found
   in the array:</p>
 
-<pre class="brush: js notranslate">var foreverPendingPromise = Promise.race([]);
+<pre class="brush: js">var foreverPendingPromise = Promise.race([]);
 var alreadyFulfilledProm = Promise.resolve(100);
 
 var arr = [foreverPendingPromise, alreadyFulfilledProm, "non-Promise value"];
@@ -123,7 +123,7 @@ setTimeout(function(){
 <h3 id="Using_Promise.race_–_examples_with_setTimeout">Using Promise.race – examples with
   setTimeout</h3>
 
-<pre class="brush: js notranslate">var p1 = new Promise(function(resolve, reject) {
+<pre class="brush: js">var p1 = new Promise(function(resolve, reject) {
     setTimeout(() =&gt; resolve('one'), 500);
 });
 var p2 = new Promise(function(resolve, reject) {

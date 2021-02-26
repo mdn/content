@@ -25,7 +25,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>arr</var>.keys()</pre>
+<pre class="brush: js"><var>arr</var>.keys()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -35,7 +35,7 @@ tags:
 
 <h3 id="Key_iterator_doesnt_ignore_holes">Key iterator doesn't ignore holes</h3>
 
-<pre class="brush: js notranslate">var arr = ['a', , 'c'];
+<pre class="brush: js">var arr = ['a', , 'c'];
 var sparseKeys = Object.keys(arr);
 var denseKeys = [...arr.keys()];
 console.log(sparseKeys); // ['0', '2']
@@ -60,10 +60,7 @@ console.log(denseKeys);  // [0, 1, 2]
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Array.keys")}}</p>
-</div>
+<p>{{Compat("javascript.builtins.Array.keys")}}</p>
 
 <h2 id="See_also">See also</h2>
 

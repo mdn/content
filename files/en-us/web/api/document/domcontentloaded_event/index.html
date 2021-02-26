@@ -41,7 +41,7 @@ tags:
 
 <p>The following code ports the functionality of the <code>DOMContentLoaded</code> event all the way back to IE6+, with a fallback to <code>window.onload</code> that works everywhere.</p>
 
-<pre class="brush: js notranslate">// Usage: DOMContentLoaded(function(e) { console.log(e); /* your code here */});
+<pre class="brush: js">// Usage: DOMContentLoaded(function(e) { console.log(e); /* your code here */});
 
 function DOMContentLoaded() { "use strict";
 
@@ -216,14 +216,14 @@ function DOMContentLoaded() { "use strict";
 
 <h3 id="Basic_usage">Basic usage</h3>
 
-<pre class="brush: js notranslate">document.addEventListener('DOMContentLoaded', (event) =&gt; {
+<pre class="brush: js">document.addEventListener('DOMContentLoaded', (event) =&gt; {
     console.log('DOM fully loaded and parsed');
 });
 </pre>
 
 <h3 id="Delaying_DOMContentLoaded">Delaying DOMContentLoaded</h3>
 
-<pre class="brush: html notranslate">&lt;script&gt;
+<pre class="brush: html">&lt;script&gt;
   document.addEventListener('DOMContentLoaded', (event) =&gt; {
     console.log('DOM fully loaded and parsed');
   });
@@ -238,7 +238,7 @@ for( let i = 0; i &lt; 1000000000; i++)
 
 <p><code>DOMContentLoaded</code> may fire before your script has a chance to run, so it is wise to check before adding a listener.</p>
 
-<pre class="brush: js notranslate">function doSomething() {
+<pre class="brush: js">function doSomething() {
   console.info('DOM loaded');
 }
 
@@ -253,7 +253,7 @@ if (document.readyState === 'loading') {  // Loading hasn't finished yet
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div class="controls"&gt;
+<pre class="brush: html">&lt;div class="controls"&gt;
   &lt;button id="reload" type="button"&gt;Reload&lt;/button&gt;
 &lt;/div&gt;
 
@@ -265,7 +265,7 @@ if (document.readyState === 'loading') {  // Loading hasn't finished yet
 <div class="hidden">
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   display: grid;
   grid-template-areas: "control  log";
 }
@@ -298,7 +298,7 @@ label, button {
 
 <h4 id="JS">JS</h4>
 
-<pre class="brush: js notranslate">const log = document.querySelector('.event-log-contents');
+<pre class="brush: js">const log = document.querySelector('.event-log-contents');
 const reload = document.querySelector('#reload');
 
 reload.addEventListener('click', () =&gt; {

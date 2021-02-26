@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var xpathResult = document.evaluate(
+<pre class="brush: js">var xpathResult = document.evaluate(
   xpathExpression,
   contextNode,
   namespaceResolver,
@@ -27,7 +27,7 @@ tags:
 	<li><code>xpathExpression</code> is a string representing the XPath to be evaluated.
 	</li>
 	<li><code>contextNode</code> specifies the <em>context node</em> for the query (see
-		the <a class="external" href="https://www.w3.org/TR/xpath">XPath
+		the <a href="https://www.w3.org/TR/xpath">XPath
 			specification</a>). It's common to pass <code>document</code> as the context
 		node.</li>
 	<li><code>namespaceResolver</code> is a function that will be passed any namespace

@@ -20,7 +20,7 @@ tags:
 
 <p>The following will register a {{cssxref('--*', 'CSS custom properties')}}, <code>--my-prop</code>, using {{domxref('CSS.registerProperty')}}, as a color, give it a default value, and have it not inherit its value:</p>
 
-<pre class="brush: js notranslate">window.CSS.registerProperty({
+<pre class="brush: js">window.CSS.registerProperty({
   name: '--my-prop',
   syntax: '&lt;color&gt;',
   inherits: false,
@@ -32,7 +32,7 @@ tags:
 
 <p>The same registration can take place in CSS. The following will register a {{cssxref('--*', 'CSS custom properties')}}, <code>--my-prop</code>, using {{cssxref('@property')}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>, as a color, give it a default value, and have it not inherit its value:</p>
 
-<pre class="brush: css notranslate">@property --my-prop {
+<pre class="brush: css">@property --my-prop {
   syntax: '&lt;color&gt;';
   inherits: false;
   initial-value: #c0ffee;
@@ -44,7 +44,7 @@ tags:
 
 <p>In this example, the custom property <code>--registered</code> has been registered using the syntax <code>&lt;color&gt;</code> and then used in a linear gradient. That property is then transitioned on hover or focus to a different color. Notice that with the registered property the transition works, but that it doesn't with the unregistered property!</p>
 
-<pre class="brush: css notranslate">.registered {
+<pre class="brush: css">.registered {
   --registered: #c0ffee;
   background-image: linear-gradient(to right, #fff, var(--registered));
   transition: --registered 1s ease-in-out;
@@ -67,11 +67,11 @@ tags:
 }</pre>
 
 <div class="hidden" id="registered">
-<pre class="brush: html notranslate">&lt;button class="registered"&gt;Background Registered&lt;/button&gt;
+<pre class="brush: html">&lt;button class="registered"&gt;Background Registered&lt;/button&gt;
 &lt;button class="unregistered"&gt;Background Not Registered&lt;/button&gt;
 </pre>
 
-<pre class="brush: css notranslate">.registered {
+<pre class="brush: css">.registered {
   --registered: #c0ffee;
   background-image: linear-gradient(to right, #fff, var(--registered));
   transition: --registered 1s ease-in-out;
@@ -102,7 +102,7 @@ button {
 
 </pre>
 
-<pre class="brush: js notranslate">window.CSS.registerProperty({
+<pre class="brush: js">window.CSS.registerProperty({
   name: '--registered',
   syntax: '&lt;color&gt;',
   inherits: false,

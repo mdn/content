@@ -28,7 +28,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>paymentRequest</em>.onmerchantvalidation = <em>eventHandlerFunction</em>;</pre>
+  class="brush: js"><em>paymentRequest</em>.onmerchantvalidation = <em>eventHandlerFunction</em>;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -42,7 +42,7 @@ tags:
 <p>An example merchant validation handler for the {{domxref("PaymentRequest")}} object
   <code>request</code> looks like this:</p>
 
-<pre class="brush: js notranslate">request.onmerchantvalidation = ev =&gt; {
+<pre class="brush: js">request.onmerchantvalidation = ev =&gt; {
   ev.complete(async () =&gt; {
     const merchantServerUrl = window.location.origin +
         '/validation?url=' + encodeURIComponent(ev.validationURL);
@@ -59,7 +59,4 @@ const response = await request.show();</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.PaymentRequest.onmerchantvalidation")}}</p>
-</div>
+<p>{{Compat("api.PaymentRequest.onmerchantvalidation")}}</p>

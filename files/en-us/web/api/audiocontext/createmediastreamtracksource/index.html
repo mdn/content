@@ -18,23 +18,21 @@ tags:
 ---
 <p>{{draft}}{{ APIRef("Web Audio API") }}</p>
 
-<div>
-  <p>The <strong><code>createMediaStreamTrackSource()</code></strong> method of the {{
-    domxref("AudioContext") }} interface creates and returns a
-    {{domxref("MediaStreamTrackAudioSourceNode")}} which represents an audio source whose
-    data comes from the specified {{domxref("MediaStreamTrack")}}.</p>
+<p>The <strong><code>createMediaStreamTrackSource()</code></strong> method of the {{
+  domxref("AudioContext") }} interface creates and returns a
+  {{domxref("MediaStreamTrackAudioSourceNode")}} which represents an audio source whose
+  data comes from the specified {{domxref("MediaStreamTrack")}}.</p>
 
-  <p>This differs from {{domxref("AudioContext.createMediaStreamSource",
-    "createMediaStreamSource()")}}, which creates a
-    {{domxref("MediaStreamAudioSourceNode")}} whose audio comes from the audio track in a
-    specified {{domxref("MediaStream")}} whose {{domxref("MediaStreamTrack.id", "id")}} is
-    first, lexicographically (alphabetically).</p>
-</div>
+<p>This differs from {{domxref("AudioContext.createMediaStreamSource",
+  "createMediaStreamSource()")}}, which creates a
+  {{domxref("MediaStreamAudioSourceNode")}} whose audio comes from the audio track in a
+  specified {{domxref("MediaStream")}} whose {{domxref("MediaStreamTrack.id", "id")}} is
+  first, lexicographically (alphabetically).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>audioCtx</em> = new AudioContext();
+  class="brush: js">var <em>audioCtx</em> = new AudioContext();
 var <em>track</em> = <em>audioCtx</em>.createMediaStreamTrackSource(<em>track</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -108,10 +106,7 @@ var <em>track</em> = <em>audioCtx</em>.createMediaStreamTrackSource(<em>track</e
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.AudioContext.createMediaStreamTrackSource")}}</p>
-</div>
+<p>{{Compat("api.AudioContext.createMediaStreamTrackSource")}}</p>
 
 <h2 id="See_also">See also</h2>
 

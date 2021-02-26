@@ -25,7 +25,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">rtcRtpSender.setStreams(<em>mediaStream</em>);
+<pre class="brush: js">rtcRtpSender.setStreams(<em>mediaStream</em>);
 rtcRtpSender.setStreams([<em>mediaStream...</em>]);
 </pre>
 
@@ -66,7 +66,7 @@ rtcRtpSender.setStreams([<em>mediaStream...</em>]);
 <p>This example adds all of an {{domxref("RTCPeerConnection")}}'s tracks to the specified
   stream.</p>
 
-<pre class="brush: js notranslate">function addTracksToStream(stream) {
+<pre class="brush: js">function addTracksToStream(stream) {
   let senders = pc.getSenders();
 
   senders.forEach((sender) =&gt; {
@@ -104,7 +104,4 @@ rtcRtpSender.setStreams([<em>mediaStream...</em>]);
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.RTCRtpSender.setStreams")}}</p>
-</div>
+<p>{{Compat("api.RTCRtpSender.setStreams")}}</p>

@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><code><var>registry</var>.unregister(<var>unregisterToken</var>);</code>
+<pre class="brush: js"><code><var>registry</var>.unregister(<var>unregisterToken</var>);</code>
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -44,7 +44,7 @@ tags:
 <p>This example shows registering a target object using that same object as the unregister
     token, then later unregistering it via <code>unregister</code>:</p>
 
-<pre class="brush: js notranslate">class Thingy {
+<pre class="brush: js">class Thingy {
     #cleanup = label =&gt; {
     //         ^^^^^−−−−− held value
         console.error(
@@ -77,7 +77,7 @@ tags:
 <p>This example shows registering a target object using a different object as its
     unregister token:</p>
 
-<pre class="brush: js notranslate"> {
+<pre class="brush: js"> {
     //         ^^^^−−−−− held value
         console.error(
             `The \`release\` method was never called for the \`Thingy\` for the file "${file.name}"`

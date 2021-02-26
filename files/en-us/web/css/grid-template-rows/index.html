@@ -6,7 +6,7 @@ tags:
   - CSS Grid
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 ---
 <p>The <strong><code>grid-template-rows</code></strong> CSS property defines the line names and track sizing functions of the {{glossary("grid rows", "grid rows")}}.</p>
 
@@ -14,7 +14,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css no-line-numbers notranslate">/* Keyword value */
+<pre class="brush: css no-line-numbers">/* Keyword value */
 grid-template-rows: none;
 
 /* &lt;track-list&gt; values */
@@ -69,16 +69,21 @@ grid-template-rows: unset;
  <dd>Is a keyword representing the largest maximal content contribution of the grid items occupying the grid track.</dd>
  <dt>{{cssxref("min-content")}}</dt>
  <dd>Is a keyword representing the largest minimal content contribution of the grid items occupying the grid track.</dd>
- <dt>{{cssxref("minmax", "minmax(min, max)")}}</dt>
+ <dt>{{cssxref("minmax()", "minmax(min, max)")}}</dt>
  <dd>Is a functional notation that defines a size range, greater than or equal to <em>min</em>, and less than or equal to <em>max</em>. If <em>max</em> is smaller than <em>min</em>, then <em>max</em> is ignored and the function is treated as <em>min</em>. As a maximum, a <code>&lt;flex&gt;</code> value sets the track’s flex factor. It is invalid as a minimum.</dd>
  <dt><code>auto</code></dt>
- <dd>Is a keyword that is identical to maximal content if it's a maximum. As a minimum it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.</dd>
- <dd>
- <p class="note">Note: <code>auto</code> track sizes (and only <code>auto</code> track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties.</p>
+ <dd><p>As a maximum represents the largest {{cssxref("max-content")}} size of the items in that track.</p>
+  <p>As a minimum represents the largest minimum size of items in that track (specified by the {{cssxref("min-width")}}/{{cssxref("min-height")}} of the items). This is often, though not always, the {{cssxref("min-content")}} size.</p>
+  <p>If used outside of {{cssxref("minmax()", "minmax()")}} notation, <code>auto</code> represents the range between the minimum and maxium described above. This behaves similarly to <code>min-content(min-content,max-content)</code> in most cases.</p>
+
+ <div class="notecard note">
+   <h4>Note:</h4>
+   <p><code>auto</code> track sizes (and only <code>auto</code> track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties. Therefore by default, an <code>auto</code> sized track will take up any remaining space in the grid container.</p>
+</div>
  </dd>
  <dt>{{cssxref("fit-content()", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}</dt>
  <dd>Represents the formula <code>min(max-content, max(auto, <var>argument</var>))</code>, which is calculated similar to <code>auto</code> (i.e. <code>minmax(auto, max-content)</code>), except that the track size is clamped at <var>argument</var> if it is greater than the <code>auto</code> minimum.</dd>
- <dt>{{cssxref("repeat", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}</dt>
+ <dt>{{cssxref("repeat()", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}</dt>
  <dd>Represents a repeated fragment of the track list, allowing a large number of rows that exhibit a recurring pattern to be written in a more compact form.</dd>
  <dt><code><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout">masonry</a></code>{{Experimental_Inline}}</dt>
  <dd>The masonry value indicates that this axis should be laid out according to the masonry algorithm.</dd>
@@ -87,7 +92,7 @@ grid-template-rows: unset;
 </dl>
 
 <div class="notecard warning">
-
+<h4>Note</h4>
 <p>The <code>masonry</code> value is from Level 3 of the Grid specification and currently only has an experimental implementation behind a flag in Firefox.</p>
 
 <p>The <code>subgrid</code> value is from Level 2 of the Grid specification and currently only has implementation in Firefox 71 and onwards.</p>
@@ -99,7 +104,7 @@ grid-template-rows: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -107,14 +112,14 @@ grid-template-rows: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div id="grid"&gt;
+<pre class="brush: html">&lt;div id="grid"&gt;
   &lt;div id="areaA"&gt;A&lt;/div&gt;
   &lt;div id="areaB"&gt;B&lt;/div&gt;
 &lt;/div&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush:css notranslate">#grid {
+<pre class="brush:css">#grid {
   display: grid;
   height: 100px;
   grid-template-rows: 30px 1fr;
@@ -169,7 +174,7 @@ grid-template-rows: unset;
 
 <ul>
  <li>Related CSS properties: {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}</li>
- <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Grid_Tracks">Basic concepts of grid layout - Grid Tracks</a></em></li>
+ <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#grid_tracks">Basic concepts of grid layout - Grid Tracks</a></em></li>
  <li>Video tutorial: <em><a href="http://gridbyexample.com/video/series-define-a-grid/">Defining a Grid</a></em></li>
  <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid">Subgrid</a></li>
 </ul>

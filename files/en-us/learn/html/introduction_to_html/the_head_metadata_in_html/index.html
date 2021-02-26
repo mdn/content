@@ -35,7 +35,7 @@ tags:
 
 <p>Let's revisit the simple <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomy_of_an_html_document">HTML document we covered in the previous article</a>:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -48,7 +48,7 @@ tags:
 
 <p>The HTML head is the contents of the {{htmlelement("head")}} element — unlike the contents of the {{htmlelement("body")}} element (which are displayed on the page when loaded in a browser), the head's content is not displayed on the page. Instead, the head's job is to contain {{glossary("Metadata", "metadata")}} about the document. In the above example, the head is quite small:</p>
 
-<pre class="brush: html notranslate">&lt;head&gt;
+<pre class="brush: html">&lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;My test page&lt;/title&gt;
 &lt;/head&gt;</pre>
@@ -94,7 +94,7 @@ tags:
 
 <p>In the example we saw above, this line was included:</p>
 
-<pre class="brush: html notranslate">&lt;meta charset="utf-8"&gt;</pre>
+<pre class="brush: html">&lt;meta charset="utf-8"&gt;</pre>
 
 <p>This element specifies the document's character encoding — the character set that the document is permitted to use. <code>utf-8</code> is a universal character set that includes pretty much any character from any human language. This means that your web page will be able to handle displaying any language; it's therefore a good idea to set this on every web page you create! For example, your page could handle English and Japanese just fine:</p>
 
@@ -110,7 +110,7 @@ tags:
 
 <p>To try this out, revisit the simple HTML template you obtained in the previous section on <code>&lt;title&gt;</code> (the <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html">title-example.html page</a>), try changing the meta charset value to <code>ISO-8859-1</code>, and add the Japanese to your page. This is the code we used:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Japanese example: ご飯が熱い。&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Japanese example: ご飯が熱い。&lt;/p&gt;</pre>
 
 <h3 id="Adding_an_author_and_description">Adding an author and description</h3>
 
@@ -123,7 +123,7 @@ tags:
 
 <p>Two such meta elements that are useful to include on your page define the author of the page, and provide a concise description of the page. Let's look at an example:</p>
 
-<pre class="brush: html notranslate">&lt;meta name="author" content="Chris Mills"&gt;
+<pre class="brush: html">&lt;meta name="author" content="Chris Mills"&gt;
 &lt;meta name="description" content="The MDN Web Docs Learning Area aims to provide
 complete beginners to the Web with all they need to know to get
 started with developing web sites and applications."&gt;</pre>
@@ -140,7 +140,7 @@ started with developing web sites and applications."&gt;</pre>
  <li>Go to the <a href="/en-US/">front page of The Mozilla Developer Network</a>.</li>
  <li>View the page's source (Right/<kbd>Ctrl</kbd> + click on the page, choose <em>View Page Source</em> from the context menu.)</li>
  <li>Find the description meta tag. It will look something like this (although it may change over time):
-  <pre class="brush: html notranslate">&lt;meta name="description" content="The MDN Web Docs site
+  <pre class="brush: html">&lt;meta name="description" content="The MDN Web Docs site
   provides information about Open Web technologies
   including HTML, CSS, and APIs for both Web sites and
   progressive web apps."&gt;</pre>
@@ -164,7 +164,7 @@ started with developing web sites and applications."&gt;</pre>
 
 <p>For example, <a href="http://ogp.me/">Open Graph Data</a> is a metadata protocol that Facebook invented to provide richer metadata for websites. In the MDN Web Docs sourcecode, you'll find this:</p>
 
-<pre class="brush: html notranslate">&lt;meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png"&gt;
+<pre class="brush: html">&lt;meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png"&gt;
 &lt;meta property="og:description" content="The Mozilla Developer Network (MDN) provides
 information about Open Web technologies including HTML, CSS, and APIs for both Web sites
 and HTML5 Apps. It also documents Mozilla products, like Firefox OS."&gt;
@@ -176,7 +176,7 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS."&gt;
 
 <p>Twitter also has its own similar proprietary metadata called <a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards">Twitter Cards</a>, which has a similar effect when the site's URL is displayed on twitter.com. For example:</p>
 
-<pre class="brush: html notranslate">&lt;meta name="twitter:title" content="Mozilla Developer Network"&gt;</pre>
+<pre class="brush: html">&lt;meta name="twitter:title" content="Mozilla Developer Network"&gt;</pre>
 
 <h2 id="Adding_custom_icons_to_your_site">Adding custom icons to your site</h2>
 
@@ -189,7 +189,7 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS."&gt;
 <ol>
  <li>Saving it in the same directory as the site's index page, saved in <code>.ico</code> format (most browsers will support favicons in more common formats like <code>.gif</code> or <code>.png</code>, but using the ICO format will ensure it works as far back as Internet Explorer 6.)</li>
  <li>Adding the following line into your HTML's {{HTMLElement("head")}} block to reference it:
-  <pre class="brush: html notranslate">&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt;</pre>
+  <pre class="brush: html">&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt;</pre>
  </li>
 </ol>
 
@@ -199,7 +199,7 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS."&gt;
 
 <p>There are lots of other icon types to consider these days as well. For example, you'll find this in the source code of the MDN Web Docs homepage:</p>
 
-<pre class="brush: html notranslate">&lt;!-- third-generation iPad with high-resolution Retina display: --&gt;
+<pre class="brush: html">&lt;!-- third-generation iPad with high-resolution Retina display: --&gt;
 &lt;link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png"&gt;
 &lt;!-- iPhone with high-resolution Retina display: --&gt;
 &lt;link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://developer.cdn.mozilla.net/static/img/favicon114.0e9fabd44f85.png"&gt;
@@ -226,12 +226,12 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS."&gt;
  <li>
   <p>The {{htmlelement("link")}} element should always go inside the head of your document. This takes two attributes, <code>rel="stylesheet"</code>, which indicates that it is the document's stylesheet, and <code>href</code>, which contains the path to the stylesheet file:</p>
 
-  <pre class="brush: html notranslate">&lt;link rel="stylesheet" href="my-css-file.css"&gt;</pre>
+  <pre class="brush: html">&lt;link rel="stylesheet" href="my-css-file.css"&gt;</pre>
  </li>
  <li>
   <p>The {{htmlelement("script")}} element should also go into the head, and should include a <code>src</code> attribute containing the path to the JavaScript you want to load, and <code>defer</code>, which basically instructs the browser to load the JavaScript at the same time as the page's HTML. This is useful as it makes sure that the HTML is all loaded before the JavaScript runs, so that you don't get errors resulting from JavaScript trying to access an HTML element that doesn't exist on the page yet. There are actually a number of ways to handle loading JavaScript on your page, but this is the most foolproof one to use for modern browsers (for others, read <a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#script_loading_strategies">Script loading strategies</a>). </p>
 
-  <pre class="brush: html notranslate">&lt;script src="my-js-file.js" defer&gt;&lt;/script&gt;</pre>
+  <pre class="brush: html">&lt;script src="my-js-file.js" defer&gt;&lt;/script&gt;</pre>
 
   <div class="notecard note">
   <p><strong>Note</strong>: The <code>&lt;script&gt;</code> element may look like an empty element, but it's not, and so needs a closing tag. Instead of pointing to an external script file, you can also choose to put your script inside the <code>&lt;script&gt;</code> element.</p>
@@ -264,13 +264,13 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS."&gt;
 
 <p>Finally, it's worth mentioning that you can (and really should) set the language of your page. This can be done by adding the <a href="/en-US/docs/Web/HTML/Global_attributes/lang">lang attribute</a> to the opening HTML tag (as seen in the <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html">meta-example.html</a> and shown below.)</p>
 
-<pre class="brush: html notranslate">&lt;html lang="en-US"&gt;</pre>
+<pre class="brush: html">&lt;html lang="en-US"&gt;</pre>
 
 <p>This is useful in many ways. Your HTML document will be indexed more effectively by search engines if its language is set (allowing it to appear correctly in language-specific results, for example), and it is useful to people with visual impairments using screen readers (for example, the word "six" exists in both French and English, but is pronounced differently.)</p>
 
 <p>You can also set subsections of your document to be recognized as different languages. For example, we could set our Japanese language section to be recognized as Japanese, like so:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Japanese example: &lt;span lang="ja"&gt;ご飯が熱い。&lt;/span&gt;.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Japanese example: &lt;span lang="ja"&gt;ご飯が熱い。&lt;/span&gt;.&lt;/p&gt;</pre>
 
 <p>These codes are defined by the <a href="https://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a> standard. You can find more about them in <a href="https://www.w3.org/International/articles/language-tags/">Language tags in HTML and XML</a>.</p>
 

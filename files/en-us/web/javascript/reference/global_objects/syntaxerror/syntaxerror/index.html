@@ -15,7 +15,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">new SyntaxError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
+  class="brush: js">new SyntaxError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -32,7 +32,7 @@ tags:
 
 <h3 id="Catching_a_SyntaxError">Catching a SyntaxError</h3>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   eval('hoo bar');
 } catch (e) {
   console.error(e instanceof SyntaxError);
@@ -47,7 +47,7 @@ tags:
 
 <h3 id="Creating_a_SyntaxError">Creating a SyntaxError</h3>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   throw new SyntaxError('Hello', 'someFile.js', 10);
 } catch (e) {
   console.error(e instanceof SyntaxError); // true
@@ -78,10 +78,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.SyntaxError.SyntaxError")}}</p>
-</div>
+<p>{{Compat("javascript.builtins.SyntaxError.SyntaxError")}}</p>
 
 <h2 id="See_also">See also</h2>
 

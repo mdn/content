@@ -86,7 +86,7 @@ tags:
 
 <p>Usually you create an <code>Error</code> object with the intention of raising it using the {{JSxRef("Statements/throw", "throw")}} keyword. You can handle the error using the {{JSxRef("Statements/try...catch", "try...catch")}} construct:</p>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   throw new Error('Whoops!')
 } catch (e) {
   console.error(e.name + ': ' + e.message)
@@ -97,7 +97,7 @@ tags:
 
 <p>You can choose to handle only specific error types by testing the error type with the error's {{JSxRef("Object.prototype.constructor", "constructor")}} property or, if you're writing for modern JavaScript engines, {{JSxRef("Operators/instanceof", "instanceof")}} keyword:</p>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   foo.bar()
 } catch (e) {
   if (e instanceof EvalError) {
@@ -125,7 +125,7 @@ tags:
 <p>Some browsers include the <code>CustomError</code> constructor in the stack trace when using ES2015 classes.</p>
 </div>
 
-<pre class="brush: js notranslate">class CustomError extends Error {
+<pre class="brush: js">class CustomError extends Error {
   constructor(foo = 'bar', ...params) {
     // Pass remaining arguments (including vendor specific ones) to parent constructor
     super(...params)
@@ -157,7 +157,7 @@ try {
 <p><strong>All</strong> browsers include the <code>CustomError</code> constructor in the stack trace when using a prototypal declaration.</p>
 </div>
 
-<pre class="brush: js notranslate">function CustomError(foo, message, fileName, lineNumber) {
+<pre class="brush: js">function CustomError(foo, message, fileName, lineNumber) {
   var instance = new Error(message, fileName, lineNumber);
   instance.name = 'CustomError';
   instance.foo = foo;
@@ -208,10 +208,7 @@ try {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("javascript.builtins.Error")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

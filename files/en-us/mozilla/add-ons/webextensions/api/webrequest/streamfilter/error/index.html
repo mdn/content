@@ -12,9 +12,7 @@ tags:
 ---
 <div>{{AddonSidebar()}}</div>
 
-<div>
 <p>A string that will contain an error message after the {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} event has fired.</p>
-</div>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
@@ -26,7 +24,7 @@ tags:
 
 <p>This example adds an {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} listener which logs the value of <code>error</code>.</p>
 
-<pre class="notranslate brush: js line-numbers  language-js">function listener(details) {
+<pre class="brush: js line-numbers  language-js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(&quot;12345&quot;);
 
   filter.onerror = event =&gt; {

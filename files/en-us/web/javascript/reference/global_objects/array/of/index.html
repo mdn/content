@@ -22,7 +22,7 @@ tags:
   implies an array of <code>7</code> empty slots, not slots with actual
   {{jsxref("undefined")}} values).</p>
 
-<pre class="brush: js notranslate">Array.of(7); // [7]
+<pre class="brush: js">Array.of(7); // [7]
 Array(7); // array of 7 empty slots
 
 Array.of(1, 2, 3); // [1, 2, 3]
@@ -32,7 +32,7 @@ Array(1, 2, 3);    // [1, 2, 3]
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">Array.of(<var>element0</var>[, <var>element1</var>[, ...[, <var>element<em>N</em></var>]]])</pre>
+  class="brush: js">Array.of(<var>element0</var>[, <var>element1</var>[, ...[, <var>element<em>N</em></var>]]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -64,7 +64,7 @@ Array(1, 2, 3);    // [1, 2, 3]
 <p>Running the following code before any other code will create <code>Array.of()</code> if
   it's not natively available.</p>
 
-<pre class="brush: js notranslate">if (!Array.of) {
+<pre class="brush: js">if (!Array.of) {
   Array.of = function() {
     return Array.prototype.slice.call(arguments);
     // Or
@@ -81,7 +81,7 @@ Array(1, 2, 3);    // [1, 2, 3]
 
 <h3 id="Using_Array.of">Using Array.of</h3>
 
-<pre class="brush: js notranslate">Array.of(1);         // [1]
+<pre class="brush: js">Array.of(1);         // [1]
 Array.of(1, 2, 3);   // [1, 2, 3]
 Array.of(undefined); // [undefined]
 </pre>
@@ -103,10 +103,7 @@ Array.of(undefined); // [undefined]
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Array.of")}}</p>
-</div>
+<p>{{Compat("javascript.builtins.Array.of")}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -42,7 +42,7 @@ tags:
 
 <p>Pages can use feature detection to check whether they are in a secure context or not by using the {{domxref("WindowOrWorkerGlobalScope.isSecureContext", "isSecureContext")}} boolean, which is exposed on the global scope.</p>
 
-<pre class="brush: js notranslate">if (window.isSecureContext) {
+<pre class="brush: js">if (window.isSecureContext) {
   // Page is a secure context so service workers are now available
   navigator.serviceWorker.register("/offline-worker.js").then(function () {
     ...

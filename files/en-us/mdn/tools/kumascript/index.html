@@ -38,17 +38,17 @@ tags:
 
 <p>A script in KumaScript is a <em>template</em>, and each template is a file in <a href="https://github.com/mdn/yari/tree/master/kumascript/macros">the macros directory</a> of the yari/kumascript repository on GitHub. A sample template might look like this:</p>
 
-<pre class="brush: js no-line-numbers notranslate">&lt;% for (let i = 0; i &lt; $0; i++) { %&gt;
+<pre class="brush: js no-line-numbers">&lt;% for (let i = 0; i &lt; $0; i++) { %&gt;
   Hello #&lt;%= i %&gt;
 &lt;% } %&gt;</pre>
 
 <p>Invoking a template is done with a <em>macro</em>, which can be used anywhere in any wiki content. Invoking the above template would look like this (provided it was saved in the macros directory with a filename of <code>hello.ejs</code>):</p>
 
-<pre class="brush: none no-line-numbers notranslate">\{{hello(3)}}</pre>
+<pre class="brush: none no-line-numbers">\{{hello(3)}}</pre>
 
 <p>The output of the macro would look like this:</p>
 
-<pre class="brush: html no-line-numbers notranslate">Hello #0
+<pre class="brush: html no-line-numbers">Hello #0
 Hello #1
 Hello #2</pre>
 
@@ -56,7 +56,7 @@ Hello #2</pre>
 
 <p>Macro syntax takes the following general form:</p>
 
-<pre class="brush: none no-line-numbers notranslate">\{{templateName("arg0", "arg1", ..., "argN")}}</pre>
+<pre class="brush: none no-line-numbers">\{{templateName("arg0", "arg1", ..., "argN")}}</pre>
 
 <p>Macro syntax follows these rules:</p>
 
@@ -71,7 +71,7 @@ Hello #2</pre>
 
 <p>As a semi-experimental feature (not guaranteed to work), you can supply a JSON object for the first and only parameter, like so:</p>
 
-<pre class="brush: none no-line-numbers notranslate">\{{templateName({ &quot;Alpha&quot;: &quot;one&quot;, &quot;Beta&quot;: [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;], &quot;Foo&quot;: &quot;https:\/\/mozilla.org\/&quot; })}}</pre>
+<pre class="brush: none no-line-numbers">\{{templateName({ &quot;Alpha&quot;: &quot;one&quot;, &quot;Beta&quot;: [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;], &quot;Foo&quot;: &quot;https:\/\/mozilla.org\/&quot; })}}</pre>
 
 <p>The data from this macro is available in template code as an object in the <code class="language-javascript">$0</code> argument (e.g., <code>$0.Alpha</code>, <code>$0.Beta</code>, <code>$0.Foo</code>). This also allows you to express complex data structures in macro parameters that are hard or impossible to do with a simple list of parameters.</p>
 
@@ -101,7 +101,7 @@ Hello #2</pre>
  </li>
  <li>Anything inside a <code class="language-ejs">&lt;% %&gt;</code> block is interpreted as JavaScript. This can include loops, conditionals, etc.</li>
  <li>Nothing inside a <code class="language-ejs">&lt;% %&gt;</code> block can ever contribute to the output stream. But, you can transition from JS mode to output mode using <code>&lt;% %&gt;</code>—for example:
-  <pre class="brush: js notranslate">&lt;% for (var i = 0; i &lt; $0; i++) { %&gt;
+  <pre class="brush: js">&lt;% for (var i = 0; i &lt; $0; i++) { %&gt;
   Hello #&lt;%= i %&gt;
 &lt;% } %&gt;</pre>
 
@@ -172,7 +172,7 @@ Hello #2</pre>
 
 <p>You can look to see if a specific tag exists on a page like this:</p>
 
-<pre class="brush: js notranslate">if (env.tags.indexOf("tag") !== −1) {
+<pre class="brush: js">if (env.tags.indexOf("tag") !== −1) {
   // The page has the tag "tag"
 }
 </pre>
@@ -181,7 +181,7 @@ Hello #2</pre>
 
 <p>You can also iterate over all the tags on a page, like this:</p>
 
-<pre class="brush: js notranslate">env.tag.forEach(function(tag) {
+<pre class="brush: js">env.tag.forEach(function(tag) {
   // do whatever you need to do, such as:
   if (tag.indexOf("a") === 0) {
     // this tag starts with "a" - woohoo!
@@ -253,7 +253,7 @@ Hello #2</pre>
 
 <p>Using the built-in <code>require()</code> method, you can load a template as a module to share common variables and methods between templates. A module can be defined in a template like this:</p>
 
-<pre class="brush: js notranslate">&lt;%
+<pre class="brush: js">&lt;%
 module.exports = {
     add: function (a, b) {
         return a + b;
@@ -263,14 +263,14 @@ module.exports = {
 
 <p>Assuming this template were saved in the macros directory as <code>MathLib.ejs</code>, you could use it in another template like so:</p>
 
-<pre class="brush: js notranslate">&lt;%
+<pre class="brush: js">&lt;%
 var math_lib = require("MathLib");
 %&gt;
 The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;</pre>
 
 <p>And, the output of this template would be:</p>
 
-<pre class="brush: html no-line-numbers notranslate">The result of 2 + 2 = 4</pre>
+<pre class="brush: html no-line-numbers">The result of 2 + 2 = 4</pre>
 
 <h2 id="Tips_and_caveats">Tips and caveats</h2>
 
@@ -278,7 +278,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;</pre>
 
 <p>A useful tip when debugging. You can use the <code>log.debug()</code> method to output text to the scripting messages area at the top of the page that's running your template. Note that you need to be really sure to remove these when you're done debugging, as they're visible to all users! To use it, just do something like this:</p>
 
-<pre class="brush: js no-line-numbers notranslate">&lt;%- log.debug("Some text goes here"); %&gt;</pre>
+<pre class="brush: js no-line-numbers">&lt;%- log.debug("Some text goes here"); %&gt;</pre>
 
 <p>You can, of course, create more complex output using script code if it's helpful.</p>
 
@@ -305,7 +305,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;</pre>
 
 <p>Sometimes, you'll see a scripting message like this when you load a page:</p>
 
-<pre class="brush: none no-line-numbers notranslate">Kumascript service failed unexpectedly: &lt;class 'httplib.BadStatusLine'&gt;</pre>
+<pre class="brush: none no-line-numbers">Kumascript service failed unexpectedly: &lt;class 'httplib.BadStatusLine'&gt;</pre>
 
 <p>This is probably a temporary failure of the KumaScript service. If you Refresh the page, the error may disappear. If that doesn't work, try a Shift-Refresh. If, after a few tries, the error persists - <a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=mozilla.org&amp;format=itrequest">file an IT bug</a> for Mozilla Developer Network to ask for an investigation.</p>
 
@@ -313,15 +313,15 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;</pre>
 
 <p>On some pages, you'll see a scripting error like this:</p>
 
-<pre class="brush: none no-line-numbers notranslate">Syntax error at line 436, column 461: Expected valid JSON object as the parameter of the preceding macro but...</pre>
+<pre class="brush: none no-line-numbers">Syntax error at line 436, column 461: Expected valid JSON object as the parameter of the preceding macro but...</pre>
 
 <p>If you edit the page, you’ll probably see a macro like this at the bottom of the page:</p>
 
-<pre class="brush: none no-line-numbers notranslate">\{{ wiki.languages({ &quot;zh-tw&quot;: &quot;zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要&quot;, ... }) }}</pre>
+<pre class="brush: none no-line-numbers">\{{ wiki.languages({ &quot;zh-tw&quot;: &quot;zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要&quot;, ... }) }}</pre>
 
 <p>To fix the problem, just delete the macro. Or, replace the curly braces on either side with HTML comments <code>&lt;!-- --&gt;</code> to preserve the information, like so:</p>
 
-<pre class="brush: html no-line-numbers notranslate">&lt;!-- wiki.languages({ "zh-tw": "zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要", ... }) --&gt;</pre>
+<pre class="brush: html no-line-numbers">&lt;!-- wiki.languages({ "zh-tw": "zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要", ... }) --&gt;</pre>
 
 <p>Because Kuma supports localization differently, these macros aren't actually needed any more. But, they've been left intact in case we need to revisit the relationships between localized pages. Unfortunately, it seems like migration has failed to convert some of them properly.</p>
 
@@ -329,7 +329,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;</pre>
 
 <p>In KumaScript, the locale of the current document is exposed as an environment variable:</p>
 
-<pre class="brush: js no-line-numbers notranslate">const lang = env.locale;</pre>
+<pre class="brush: js no-line-numbers">const lang = env.locale;</pre>
 
 <p>The <code>env.locale</code> variable should be reliable and defined for every document.</p>
 
@@ -337,7 +337,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;</pre>
 
 <p>You can read the contents of an attached file by using the <code>mdn.getFileContent()</code> function, like this:</p>
 
-<pre class="brush: js notranslate">&lt;%
+<pre class="brush: js">&lt;%
   let contents = mdn.getFileContent(fileUrl);
   // ... do stuff with the contents ...
 %&gt;
@@ -345,12 +345,12 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;</pre>
 
 <p>or</p>
 
-<pre class="brush: js no-line-numbers notranslate">&lt;%- mdn.getFileContent(fileObject); %&gt;
+<pre class="brush: js no-line-numbers">&lt;%- mdn.getFileContent(fileObject); %&gt;
 </pre>
 
 <p>In other words, you may specify either the URL of the file to read or as a file object. The file objects for a page can be accessed through the array <code>env.files</code>. So, for example, to embed the contents of the first file attached to the article, you can do this:</p>
 
-<pre class="brush: js no-line-numbers notranslate">&lt;%- mdn.getFileContent(env.files[0]); %&gt;
+<pre class="brush: js no-line-numbers">&lt;%- mdn.getFileContent(env.files[0]); %&gt;
 </pre>
 
 <div class="notecard note">
@@ -369,7 +369,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;</pre>
 
 <p>The KumaScript equivalent of this can be achieved with simple if/else blocks, like so:</p>
 
-<pre class="brush: js notranslate">&lt;% if ("fr" == env.locale) { %&gt;
+<pre class="brush: js">&lt;% if ("fr" == env.locale) { %&gt;
 &lt;%- template("CSSRef") %&gt; « &lt;a href="/fr/docs/Référence_CSS/Extensions_Mozilla"&gt;Référence CSS: Extensions Mozilla&lt;/a&gt;
 &lt;% } else if ("ja" == env.locale) { %&gt;
 &lt;%- template("CSSRef") %&gt; « &lt;a href="/ja/docs/CSS_Reference/Mozilla_Extensions"&gt;CSS リファレンス: Mozilla 拡張仕様&lt;/a&gt;
@@ -385,7 +385,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;</pre>
 
 <p>My favorite editor is MacVim, and a series of regexes like this does the bulk of the work with just a little manual clean up following:</p>
 
-<pre class="brush: none notranslate">%s#&lt;span#^M&lt;span#g
+<pre class="brush: none">%s#&lt;span#^M&lt;span#g
 %s#&lt;span lang="\(.*\)" .*&gt;#&lt;% } else if ("\1" == env.locale) { %&gt;#g
 %s#&lt;span class="script"&gt;template.CSSxRef(#&lt;%- template("CSSxRef", [#
 %s#)&lt;/span&gt; &lt;/span&gt;#]) %&gt;
@@ -397,7 +397,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;</pre>
 
 <p>Different strings are defined and chosen depending on locale using <code class="language-javascript">mdn.localString()</code>, like this:</p>
 
-<pre class="brush: js notranslate">&lt;%
+<pre class="brush: js">&lt;%
 var s_title = mdn.localString({
   "en-US": "Firefox for Developers",
   "de": "Firefox für Entwickler",

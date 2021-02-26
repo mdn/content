@@ -52,7 +52,7 @@ tags:
 
 <p>In basic use without specifying a locale, <code>DateTimeFormat</code> uses the default locale and default options.</p>
 
-<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // toLocaleString without arguments depends on the implementation,
 // the default locale, and the default time zone
@@ -64,7 +64,7 @@ console.log(new Intl.DateTimeFormat().format(date));
 
 <p>This example shows some of the variations in localized date and time formats. In order to get the format of the language used in the user interface of your application, make sure to specify that language (and possibly some fallback languages) using the <code>locales</code> argument:</p>
 
-<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // Results below use the time zone of America/Los_Angeles (UTC-0800, Pacific Standard Time)
 
@@ -99,7 +99,7 @@ console.log(new Intl.DateTimeFormat(['ban', 'id']).format(date));
 
 <p>The date and time formats can be customized using the <code>options</code> argument:</p>
 
-<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0, 200));
+<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0, 200));
 
 // request a weekday along with a long date
 var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -148,7 +148,7 @@ console.log(new Intl.DateTimeFormat('en-US', options).format(date));
 
 <p>The used calendar and numbering formats can also be set independently via <code>options</code> arguments:</p>
 
-<pre class="brush: js notranslate">var options = {calendar: 'chinese', numberingSystem: 'arab'};
+<pre class="brush: js">var options = {calendar: 'chinese', numberingSystem: 'arab'};
 var dateFormat = new Intl.DateTimeFormat('default', options);
 var usedOptions = dateFormat.resolvedOptions();
 

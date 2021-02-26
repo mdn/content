@@ -77,7 +77,7 @@ tags:
 
 <p>The following example shows how to use the API for all events:</p>
 
-<pre class="brush: js notranslate">const observer = new PerformanceObserver(function(list) {
+<pre class="brush: js">const observer = new PerformanceObserver(function(list) {
     const perfEntries = list.getEntries().forEach(entry =&gt; {
         // Full duration
         const inputDuration = entry.duration;
@@ -93,7 +93,7 @@ observer.observe({entryTypes: ["event"]});
 
 <p>We can also directly query the <a href="https://web.dev/fid">first input delay</a>. The first input delay or FID, measures the time from when a user first interacts with a page (i.e. when they click a link or tap on a button) to the time when the browser is actually able to begin processing event handlers in response to that interaction.</p>
 
-<pre class="brush: js notranslate">// Keep track of whether (and when) the page was first hidden, see:
+<pre class="brush: js">// Keep track of whether (and when) the page was first hidden, see:
 // https://github.com/w3c/page-visibility/issues/29
 // NOTE: ideally this check would be performed in the document &lt;head&gt;
 // to avoid cases where the visibility state changes before this code runs.

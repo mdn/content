@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>tokenList</var>.entries();</pre>
+<pre class="brush: js"><var>tokenList</var>.entries();</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -35,11 +35,11 @@ tags:
 
 <p>First, the HTML:</p>
 
-<pre class="brush: html notranslate">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
 
 <p>Now the JavaScript:</p>
 
-<pre class="brush: js notranslate">let span = document.querySelector("span");
+<pre class="brush: js">let span = document.querySelector("span");
 let classes = span.classList;
 let iterator = classes.entries();
 
@@ -73,10 +73,7 @@ for (let value of iterator) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.DOMTokenList.entries")}}</p>
-</div>
+<p>{{Compat("api.DOMTokenList.entries")}}</p>
 
 <h2 id="See_also">See also</h2>
 

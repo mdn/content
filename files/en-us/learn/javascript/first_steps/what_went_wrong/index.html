@@ -75,7 +75,7 @@ tags:
   </ul>
  </li>
  <li>If we look at line 86 in our code editor, we'll find this line:
-  <pre class="brush: js notranslate">guessSubmit.addeventListener('click', checkGuess);</pre>
+  <pre class="brush: js">guessSubmit.addeventListener('click', checkGuess);</pre>
  </li>
  <li>The error message says "guessSubmit.addeventListener is not a function", which means that the function we're calling is not recognized by the JavaScript interpreter. Often, this error message actually means that we've spelled something wrong. If you are not sure of the correct spelling of a piece of syntax, it is often good to look up the feature on MDN. The best way to do this currently is to search for "mdn <em>name-of-feature</em>" with your favorite search engine. Here's a shortcut to save you some time in this instance: <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>.</li>
  <li>So, looking at this page, the error appears to be that we've spelled the function name wrong! Remember that JavaScript is case sensitive, so any slight difference in spelling or casing will cause an error. Changing <code>addeventListener</code> to <code>addEventListener</code> should fix this. Do this now.</li>
@@ -96,13 +96,13 @@ tags:
   <div class="note"><strong>Note</strong>: This error didn't come up as soon as the page was loaded because this error occurred inside a function (inside the <code>checkGuess() { ... }</code> block). As you'll learn in more detail in our later <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">functions article</a>, code inside functions runs in a separate scope than code outside functions. In this case, the code was not run and the error was not thrown until the <code>checkGuess()</code> function was run by line 86.</div>
  </li>
  <li>Have a look at line 78, and you'll see the following code:
-  <pre class="brush: js notranslate">lowOrHi.textContent = 'Last guess was too high!';</pre>
+  <pre class="brush: js">lowOrHi.textContent = 'Last guess was too high!';</pre>
  </li>
  <li>This line is trying to set the <code>textContent</code> property of the <code>lowOrHi</code> constant to a text string, but it's not working because <code>lowOrHi</code> does not contain what it's supposed to. Let's see why this is — try searching for other instances of <code>lowOrHi</code> in the code. The earliest instance you'll find in the JavaScript is on line 48:
-  <pre class="brush: js notranslate">const lowOrHi = document.querySelector('lowOrHi');</pre>
+  <pre class="brush: js">const lowOrHi = document.querySelector('lowOrHi');</pre>
  </li>
  <li>At this point we are trying to make the variable contain a reference to an element in the document's HTML. Let's check whether the value is <code>null</code> after this line has been run. Add the following code on line 49:
-  <pre class="brush: js notranslate">console.log(lowOrHi);</pre>
+  <pre class="brush: js">console.log(lowOrHi);</pre>
 
   <div class="note">
   <p><strong>Note</strong>: <code><a href="/en-US/docs/Web/API/Console/log">console.log()</a></code> is a really useful debugging function that prints a value to the console. So it will print the value of <code>lowOrHi</code> to the console as soon as we have tried to set it in line 48.</p>
@@ -110,7 +110,7 @@ tags:
  </li>
  <li>Save and refresh, and you should now see the <code>console.log()</code> result in your console. <img alt="" src="console-log-output.png" style="display: block; margin: 0 auto;"> Sure enough, <code>lowOrHi</code>'s value is <code>null</code> at this point, so there is definitely a problem with line 48.</li>
  <li>Let's think about what the problem could be. Line 48 is using a <code><a href="/en-US/docs/Web/API/Document/querySelector">document.querySelector()</a></code> method to get a reference to an element by selecting it with a CSS selector. Looking further up our file, we can find the paragraph in question:
-  <pre class="brush: js notranslate">&lt;p class="lowOrHi"&gt;&lt;/p&gt;</pre>
+  <pre class="brush: js">&lt;p class="lowOrHi"&gt;&lt;/p&gt;</pre>
  </li>
  <li>So we need a class selector here, which begins with a dot (<code>.</code>), but the selector being passed into the <code>querySelector()</code> method in line 48 has no dot. This could be the problem! Try changing <code>lowOrHi</code> to <code>.lowOrHi</code> in line 48.</li>
  <li>Try saving and refreshing again, and your <code>console.log()</code> statement should return the <code>&lt;p&gt;</code> element we want. Phew! Another error fixed! You can delete your <code>console.log()</code> line now, or keep it to reference later on — your choice.</li>
@@ -137,13 +137,13 @@ tags:
 <ol>
  <li>Search for the <code>randomNumber</code> variable, and the lines where the random number is first set. The instance that stores the random number that we want to guess at the start of the game should be around line number 44:
 
-  <pre class="brush: js notranslate">let randomNumber = Math.floor(Math.random()) + 1;</pre>
+  <pre class="brush: js">let randomNumber = Math.floor(Math.random()) + 1;</pre>
   And the one that generates the random number before each subsequent game is around line 113:</li>
  <li>
-  <pre class="brush: js notranslate">randomNumber = Math.floor(Math.random()) + 1;</pre>
+  <pre class="brush: js">randomNumber = Math.floor(Math.random()) + 1;</pre>
  </li>
  <li>To check whether these lines are indeed the problem, let's turn to our friend <code>console.log()</code> again — insert the following line directly below each of the above two lines:
-  <pre class="brush: js notranslate">console.log(randomNumber);</pre>
+  <pre class="brush: js">console.log(randomNumber);</pre>
  </li>
  <li>Save and refresh, then play a few games — you'll see that <code>randomNumber</code> is equal to 1 at each point where it is logged to the console.</li>
 </ol>
@@ -152,19 +152,19 @@ tags:
 
 <p>To fix this, let's consider how this line is working. First, we invoke <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random()</a></code>, which generates a random decimal number between 0 and 1, e.g. 0.5675493843.</p>
 
-<pre class="brush: js notranslate">Math.random()</pre>
+<pre class="brush: js">Math.random()</pre>
 
 <p>Next, we pass the result of invoking <code>Math.random()</code> through <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor">Math.floor()</a></code>, which rounds the number passed to it down to the nearest whole number. We then add 1 to that result:</p>
 
-<pre class="notranslate">Math.floor(Math.random()) + 1</pre>
+<pre>Math.floor(Math.random()) + 1</pre>
 
 <p>Rounding a random decimal number between 0 and 1 down will always return 0, so adding 1 to it will always return 1.  We need to multiply the random number by 100 before we round it down. The following would give us a random number between 0 and 99:</p>
 
-<pre class="brush: js notranslate">Math.floor(Math.random()*100);</pre>
+<pre class="brush: js">Math.floor(Math.random()*100);</pre>
 
 <p>Hence us wanting to add 1, to give us a random number between 1 and 100:</p>
 
-<pre class="brush: js notranslate">Math.floor(Math.random()*100) + 1;</pre>
+<pre class="brush: js">Math.floor(Math.random()*100) + 1;</pre>
 
 <p>Try updating both lines like this, then save and refresh — the game should now play like we are intending it to!</p>
 
@@ -176,11 +176,11 @@ tags:
 
 <p>This error generally means that you have missed a semicolon at the end of one of your lines of code, but it can sometimes be more cryptic. For example, if we change this line inside the <code>checkGuess()</code> function:</p>
 
-<pre class="brush: js notranslate">var userGuess = Number(guessField.value);</pre>
+<pre class="brush: js">var userGuess = Number(guessField.value);</pre>
 
 <p>to</p>
 
-<pre class="brush: js notranslate">var userGuess === Number(guessField.value);</pre>
+<pre class="brush: js">var userGuess === Number(guessField.value);</pre>
 
 <p>It throws this error because it thinks you are trying to do something different. You should make sure that you don't mix up the assignment operator (<code>=</code>) — which sets a variable to be equal to a value — with the strict equality operator (<code>===</code>), which tests whether one value is equal to another, and returns a <code>true</code>/<code>false</code> result.</p>
 
@@ -192,11 +192,11 @@ tags:
 
 <p>This could be another symptom of mixing up the assignment and strict equality operators. For example, if we were to change this line inside <code>checkGuess()</code>:</p>
 
-<pre class="brush: js notranslate">if (userGuess === randomNumber) {</pre>
+<pre class="brush: js">if (userGuess === randomNumber) {</pre>
 
 <p>to</p>
 
-<pre class="brush: js notranslate">if (userGuess = randomNumber) {</pre>
+<pre class="brush: js">if (userGuess = randomNumber) {</pre>
 
 <p>the test would always return <code>true</code>, causing the program to report that the game has been won. Be careful!</p>
 
@@ -212,11 +212,11 @@ tags:
 
 <p>This error usually relates to an incorrectly formed JavaScript object, but in this case we managed to get it by changing</p>
 
-<pre class="brush: js notranslate">function checkGuess() {</pre>
+<pre class="brush: js">function checkGuess() {</pre>
 
 <p>to</p>
 
-<pre class="brush: js notranslate">function checkGuess( {</pre>
+<pre class="brush: js">function checkGuess( {</pre>
 
 <p>This has caused the browser to think that we are trying to pass the contents of the function into the function as an argument. Be careful with those parentheses!</p>
 
@@ -240,12 +240,10 @@ tags:
 
 <h2 id="See_also">See also</h2>
 
-<div>
 <ul>
  <li>There are many other types of errors that aren't listed here; we are compiling a reference that explains what they mean in detail — see the <a href="/en-US/docs/Web/JavaScript/Reference/Errors">JavaScript error reference</a>.</li>
  <li>If you come across any errors in your code that you aren't sure how to fix after reading this article, you can get help! Ask for help on the <a href="https://discourse.mozilla.org/c/mdn/learn">MDN Discourse forum Learning category</a>, or in the <a href="https://chat.mozilla.org/#/room/#mdn:mozilla.org">MDN Web Docs room</a> on <a class="external external-icon" href="https://wiki.mozilla.org/Matrix">Matrix</a>. Tell us what your error is, and we'll try to help you. A listing of your code would be useful as well.</li>
 </ul>
-</div>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}</p>
 

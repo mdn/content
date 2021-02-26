@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">void <em>ctx</em>.drawImage(<em>image</em>, <em>dx</em>, <em>dy</em>);
+<pre class="brush: js">void <em>ctx</em>.drawImage(<em>image</em>, <em>dx</em>, <em>dy</em>);
 void <em>ctx</em>.drawImage(<em>image</em>, <em>dx</em>, <em>dy</em>, <em>dWidth</em>, <em>dHeight</em>);
 void <em>ctx</em>.drawImage(<em>image</em>, <em>sx</em>, <em>sy</em>, <em>sWidth</em>, <em>sHeight</em>, <em>dx</em>, <em>dy</em>, <em>dWidth</em>, <em>dHeight</em>);
 </pre>
@@ -90,7 +90,7 @@ void <em>ctx</em>.drawImage(<em>image</em>, <em>sx</em>, <em>sy</em>, <em>sWidth
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
 &lt;div style="display:none;"&gt;
   &lt;img id="source"
        src="https://mdn.mozillademos.org/files/5397/rhino.jpg"
@@ -104,7 +104,7 @@ void <em>ctx</em>.drawImage(<em>image</em>, <em>sx</em>, <em>sy</em>, <em>sWidth
   height of 124. It is drawn to the canvas at (21, 20), where it is given a width of 87
   and a height of 104.</p>
 
-<pre class="brush: js notranslate">const canvas = document.getElementById('canvas');
+<pre class="brush: js">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const image = document.getElementById('source');
 
@@ -132,11 +132,11 @@ image.addEventListener('load', e =&gt; {
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<pre class="brush: js notranslate">const canvas = document.getElementById('canvas');
+<pre class="brush: js">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 const image = new Image(60, 45); // Using optional size for image

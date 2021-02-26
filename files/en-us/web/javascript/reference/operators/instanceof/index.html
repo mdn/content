@@ -21,7 +21,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>object</var> instanceof <var>constructor</var></pre>
+  class="brush: js"><var>object</var> instanceof <var>constructor</var></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -38,7 +38,7 @@ tags:
   <code>constructor.prototype</code> in <code><var>object</var></code>'s prototype chain.
 </p>
 
-<pre class="brush: js notranslate">// defining constructors
+<pre class="brush: js">// defining constructors
 function C() {}
 function D() {}
 
@@ -122,7 +122,7 @@ o3 instanceof C        // true since C.prototype is now in o3's prototype chain
   Although the prototype is <code>undefined</code>, <code>instanceof Object</code> returns
   <code>true</code>.</p>
 
-<pre class="brush: js notranslate">let simpleStr = 'This is a simple string'
+<pre class="brush: js">let simpleStr = 'This is a simple string'
 let myString  = new String()
 let newStr    = new String('String created with constructor')
 let myDate    = new Date()
@@ -153,7 +153,7 @@ myDate instanceof String    // returns false
   the <code>mycar</code> object is of type <code>Car</code> and of type
   <code>Object</code>.</p>
 
-<pre class="brush: js notranslate">function Car(make, model, year) {
+<pre class="brush: js">function Car(make, model, year) {
   this.make = make;
   this.model = model;
   this.year = year;
@@ -168,7 +168,7 @@ let b = mycar instanceof Object  // returns true
 <p>To test if an object is not an <code>instanceof</code> a specific constructor, you can
   do</p>
 
-<pre class="brush: js notranslate">if (!(mycar instanceof Car)) {
+<pre class="brush: js">if (!(mycar instanceof Car)) {
   // Do something, like:
   // mycar = new Car(mycar)
 }
@@ -176,7 +176,7 @@ let b = mycar instanceof Object  // returns true
 
 <p>This is really different from:</p>
 
-<pre class="brush: js notranslate">if (!mycar instanceof Car)</pre>
+<pre class="brush: js">if (!mycar instanceof Car)</pre>
 
 <p>This will always be <code>false</code>. (<code>!mycar</code> will be evaluated before
   <code>instanceof</code>, so you always try to know if a boolean is an instance of

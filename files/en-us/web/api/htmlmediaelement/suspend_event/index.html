@@ -41,7 +41,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Specification</th>
-   <td><a class="external" href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing">HTML5 media</a></td>
+   <td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing">HTML5 media</a></td>
   </tr>
  </tbody>
 </table>
@@ -52,7 +52,7 @@ tags:
 
 <p>Using <code>addEventListener()</code>:</p>
 
-<pre class="brush: js notranslate">const video = document.querySelector('video');
+<pre class="brush: js">const video = document.querySelector('video');
 
 video.addEventListener('suspend', (event) =&gt; {
   console.log('Data loading has been suspended.');
@@ -60,7 +60,7 @@ video.addEventListener('suspend', (event) =&gt; {
 
 <p>Using the <code>onsuspend</code> event handler property:</p>
 
-<pre class="brush: js notranslate">const video = document.querySelector('video');
+<pre class="brush: js">const video = document.querySelector('video');
 
 video.onsuspend = (event) =&gt; {
   console.log('Data loading has been suspended.');

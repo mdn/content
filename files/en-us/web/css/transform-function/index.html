@@ -120,7 +120,7 @@ tags:
 <p>However, one major transformation is not linear, and therefore must be special-cased when using this notation: translation. The translation vector <code>(tx, ty)</code> must be expressed separately, as two additional parameters.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Though trickier than Cartesian coordinates, <a class="external" href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">homogeneous coordinates</a> in <a class="external" href="https://en.wikipedia.org/wiki/Projective_geometry">projective geometry</a> lead to 3×3 transformation matrices, and can express translations as linear functions.</p>
+<p><strong>Note:</strong> Though trickier than Cartesian coordinates, <a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">homogeneous coordinates</a> in <a href="https://en.wikipedia.org/wiki/Projective_geometry">projective geometry</a> lead to 3×3 transformation matrices, and can express translations as linear functions.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>
@@ -133,7 +133,7 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;main&gt;
+<pre class="brush: html">&lt;main&gt;
   &lt;section id="example-element"&gt;
       &lt;div class="face front"&gt;1&lt;/div&gt;
       &lt;div class="face back"&gt;2&lt;/div&gt;
@@ -174,7 +174,7 @@ tags:
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">main {
+<pre class="brush: css">main {
   width: 400px;
   height: 200px;
   padding: 50px;
@@ -237,7 +237,7 @@ tags:
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">const selectElem = document.querySelector('select');
+<pre class="brush: js">const selectElem = document.querySelector('select');
 const example = document.querySelector('#example-element');
 
 selectElem.addEventListener('change', () =&gt; {

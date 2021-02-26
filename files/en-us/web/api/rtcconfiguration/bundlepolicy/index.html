@@ -31,7 +31,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">let rtcConfiguration = {
+<pre class="brush: js">let rtcConfiguration = {
   bundlePolicy: <em>policy</em>
 };
 
@@ -103,7 +103,7 @@ rtcConfiguration.bundlePolicy = <em>policy</em>;
   use. It also specifies <code>stun:stun.example.com</code> as the {{Glossary("STUN")}}
   server for {{Glossary("ICE")}} to use during negotiation.</p>
 
-<pre class="brush: js notranslate">let config = {
+<pre class="brush: js">let config = {
   iceServers: [
     {
       urls: [ "stun:stun.example.com" ]
@@ -134,10 +134,7 @@ let pc = new RTCPeerConnection(config);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.RTCConfiguration.bundlePolicy")}}</p>
-</div>
+<p>{{Compat("api.RTCConfiguration.bundlePolicy")}}</p>
 
 <h2 id="See_also">See also</h2>
 

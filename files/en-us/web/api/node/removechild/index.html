@@ -16,12 +16,12 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>oldChild</em> = <em>node</em>.removeChild(<em>child</em>);
+<pre class="brush: js">var <em>oldChild</em> = <em>node</em>.removeChild(<em>child</em>);
 </pre>
 
 <p>Or just:</p>
 
-<pre class="brush: js notranslate"><em>node</em>.removeChild(<em>child</em>);
+<pre class="brush: js"><em>node</em>.removeChild(<em>child</em>);
 </pre>
 
 <ul>
@@ -75,21 +75,21 @@ tags:
 
 <p>Given this HTML:</p>
 
-<pre class="brush: html notranslate">&lt;div id="top"&gt;
+<pre class="brush: html">&lt;div id="top"&gt;
   &lt;div id="nested"&gt;&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
 <p>To remove a specified element when knowing its parent node:</p>
 
-<pre class="brush:js notranslate">let d = document.getElementById("top");
+<pre class="brush:js">let d = document.getElementById("top");
 let d_nested = document.getElementById("nested");
 let throwawayNode = d.removeChild(d_nested);
 </pre>
 
 <p>To remove a specified element without having to specify its parent node:</p>
 
-<pre class="brush:js notranslate">let node = document.getElementById("nested");
+<pre class="brush:js">let node = document.getElementById("nested");
 if (node.parentNode) {
   node.parentNode.removeChild(node);
 }
@@ -97,7 +97,7 @@ if (node.parentNode) {
 
 <p>To remove all children from an element:</p>
 
-<pre class="brush:js notranslate">let element = document.getElementById("top");
+<pre class="brush:js">let element = document.getElementById("top");
 while (element.firstChild) {
   element.removeChild(element.firstChild);
 }
@@ -105,7 +105,7 @@ while (element.firstChild) {
 
 <h3 id="Causing_a_TypeError">Causing a TypeError</h3>
 
-<pre class="brush: html notranslate">&lt;!--Sample HTML code--&gt;
+<pre class="brush: html">&lt;!--Sample HTML code--&gt;
 &lt;div id="top"&gt; &lt;/div&gt;
 
 &lt;script type="text/javascript"&gt;
@@ -119,7 +119,7 @@ while (element.firstChild) {
 
 <h3 id="Causing_a_NotFoundError">Causing a NotFoundError</h3>
 
-<pre class="brush: html notranslate">&lt;!--Sample HTML code--&gt;
+<pre class="brush: html">&lt;!--Sample HTML code--&gt;
 &lt;div id="top"&gt;
   &lt;div id="nested"&gt;&lt;/div&gt;
 &lt;/div&gt;

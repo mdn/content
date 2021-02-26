@@ -34,7 +34,7 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p&gt;Press keys on the keyboard to see what the KeyboardEvent's key and code
+<pre class="brush: html">&lt;p&gt;Press keys on the keyboard to see what the KeyboardEvent's key and code
    values are for each one.&lt;/p&gt;
 &lt;div id="output"&gt;
 &lt;/div&gt;
@@ -42,14 +42,14 @@ tags:
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">#output {
+<pre class="brush: css">#output {
   font-family: Arial, Helvetica, sans-serif;
   border: 1px solid black;
 }</pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">window.addEventListener("keydown", function(event) {
+<pre class="brush: js">window.addEventListener("keydown", function(event) {
   const p = document.createElement("p");
   p.textContent = `KeyboardEvent: key='${event.key}' | code='${event.code}'`;
   document.getElementById("output").appendChild(p);
@@ -67,7 +67,7 @@ tags:
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p&gt;Use the WASD (ZQSD on AZERTY) keys to move and steer.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Use the WASD (ZQSD on AZERTY) keys to move and steer.&lt;/p&gt;
 &lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="world"&gt;
   &lt;polygon id="spaceship" points="15,0 0,30 30,30"/&gt;
 &lt;/svg&gt;
@@ -76,7 +76,7 @@ tags:
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">.world {
+<pre class="brush: css">.world {
   margin: 0px;
   padding: 0px;
   background-color: black;
@@ -94,7 +94,7 @@ tags:
 
 <p>The first section of the JavaScript code establishes some variables we'll be using. <code>shipSize</code> contains the size of the ship the player is moving around, for convenience. <code>position</code> is used to track the position of the ship within the play field. <code>moveRate</code> and <code>turnRate</code> are the number of pixels forward and backward each keystroke moves the ship and how many degrees of rotation the left and right steering controls apply per keystroke. angle is the current amount of rotation applied to the ship, in degrees; it starts at 0° (pointing straight up). Finally, <code>spaceship</code> is set to refer to the element with the ID <code>"spaceship"</code>, which is the SVG polygon representing the ship the player controls.</p>
 
-<pre class="brush: js notranslate">let shipSize = {
+<pre class="brush: js">let shipSize = {
   width: 30,
   height: 30
 };
@@ -114,7 +114,7 @@ let spaceship = document.getElementById("spaceship");
 
 <p>Next comes the function <code>updatePosition()</code>. This function takes as input the distance the ship is to be moved, where positive is a forward movement and negative is a backward movement. This function computes the new position of the ship given the distance moved and the current direction the ship is facing. It also handles ensuring that the ship wraps across the boundaries of the play field instead of vanishing.</p>
 
-<pre class="brush: js notranslate">function updatePosition(offset) {
+<pre class="brush: js">function updatePosition(offset) {
   let rad = angle * (Math.PI/180);
   position.x += (Math.sin(rad) * offset);
   position.y -= (Math.cos(rad) * offset);
@@ -135,7 +135,7 @@ let spaceship = document.getElementById("spaceship");
 
 <p>The <code>refresh()</code> function handles applying the rotation and position by using an <a href="/en-US/docs/Web/SVG/Attribute/transform">SVG transform</a>.</p>
 
-<pre class="brush: js notranslate">function refresh() {
+<pre class="brush: js">function refresh() {
   let x = position.x - (shipSize.width/2);
   let y = position.y - (shipSize.height/2);
   let transform = "translate(" + x + " " + y + ") rotate(" + angle + " 15 15) ";
@@ -146,7 +146,7 @@ let spaceship = document.getElementById("spaceship");
 
 <p>Finally, the <code>addEventListener()</code> method is used to start listening for {{event("keydown")}} events, acting on each key by updating the ship position and rotation angle, then calling <code>refresh()</code> to draw the ship at its new position and angle.</p>
 
-<pre class="brush: js notranslate">window.addEventListener("keydown", function(event) {
+<pre class="brush: js">window.addEventListener("keydown", function(event) {
   if (event.defaultPrevented) {
     return; // Do nothing if event already handled
   }

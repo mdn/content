@@ -32,7 +32,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>promise</em> = <em>rtcRtpSender</em>.setParameters(<em>parameters</em>)</pre>
+  class="brush: js">var <em>promise</em> = <em>rtcRtpSender</em>.setParameters(<em>parameters</em>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -123,7 +123,7 @@ tags:
   this is a clearer demonstration of the basic concept of first fetching the parameters,
   then altering them, then setting them.</p>
 
-<pre class="brush: js notranslate">async function setVideoParams(sender, height, bitrate) {
+<pre class="brush: js">async function setVideoParams(sender, height, bitrate) {
   const scaleRatio = sender.track.getSettings().height/height;
   const params = sender.getParameters();
 
@@ -155,7 +155,7 @@ tags:
   now. For that reason, if you want to be compatible with iPhone and other devices running
   Safari, and with Firefox, use code more like this:</p>
 
-<pre class="brush: js notranslate">async function setVideoParams(sender, height, bitrate) {
+<pre class="brush: js">async function setVideoParams(sender, height, bitrate) {
   const scaleRatio = sender.track.getSettings().height/height;
   const params = sender.getParameters();
 

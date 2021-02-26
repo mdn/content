@@ -16,7 +16,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>myHeaders</em> = new Headers(<em>init</em>);</pre>
+  class="brush: js">var <em>myHeaders</em> = new Headers(<em>init</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -26,18 +26,18 @@ tags:
     that you want to pre-populate your <code>Headers</code> object with. This can be a
     simple object literal with {{domxref("ByteString")}} values; or an existing
     <code>Headers</code> object. In the last case, the new <code>Headers</code> object
-    inherits its data from the existing <code>Headers</code> object.</dd>
+    copies its data from the existing <code>Headers</code> object.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
 
 <p>Creating an empty <code>Headers</code> object is simple:</p>
 
-<pre class="brush: js notranslate">var myHeaders = new Headers(); // Currently empty</pre>
+<pre class="brush: js">var myHeaders = new Headers(); // Currently empty</pre>
 
 <p>You could add a header to this using {{domxref("Headers.append")}}:</p>
 
-<pre class="brush: js notranslate">myHeaders.append('Content-Type', 'image/jpeg');
+<pre class="brush: js">myHeaders.append('Content-Type', 'image/jpeg');
 myHeaders.get('Content-Type'); // Returns 'image/jpeg'
 </pre>
 
@@ -45,14 +45,14 @@ myHeaders.get('Content-Type'); // Returns 'image/jpeg'
   the following snippet we create a new {{domxref("Headers")}} object, adding some headers
   by passing the constructor an init object as an argument:</p>
 
-<pre class="brush: js notranslate">var httpHeaders = { 'Content-Type' : 'image/jpeg', 'Accept-Charset' : 'utf-8', 'X-My-Custom-Header' : 'Zeke are cool' };
+<pre class="brush: js">var httpHeaders = { 'Content-Type' : 'image/jpeg', 'Accept-Charset' : 'utf-8', 'X-My-Custom-Header' : 'Zeke are cool' };
 var myHeaders = new Headers(httpHeaders);</pre>
 
 <p>You can now create another <code>Headers</code> object, passing it the first
   <code>Headers</code> object as its init object:</p>
 
 <pre
-  class="brush: js notranslate">var secondHeadersObj = new Headers(myHeaders);
+  class="brush: js">var secondHeadersObj = new Headers(myHeaders);
 secondHeadersObj.get('Content-Type'); // Would return 'image/jpeg' — it inherits it from the first headers object</pre>
 
 <h2 id="Specifications">Specifications</h2>

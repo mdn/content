@@ -66,7 +66,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Math.log2(<var>x</var>)</pre>
+<pre class="brush: js">Math.log2(<var>x</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -98,7 +98,7 @@ tags:
   imprecise values on some inputs (like 1 &lt;&lt; 29), wrap into
   {{jsxref("Math.round()")}} if working with bit masks.</p>
 
-<pre class="brush: js notranslate">if (!Math.log2) Math.log2 = function(x) {
+<pre class="brush: js">if (!Math.log2) Math.log2 = function(x) {
   return Math.log(x) * Math.LOG2E;
 };
 </pre>
@@ -107,7 +107,7 @@ tags:
 
 <h3 id="Using_Math.log2">Using Math.log2()</h3>
 
-<pre class="brush: js notranslate">Math.log2(3);    // 1.584962500721156
+<pre class="brush: js">Math.log2(3);    // 1.584962500721156
 Math.log2(2);    // 1
 Math.log2(1);    // 0
 Math.log2(0);    // -Infinity

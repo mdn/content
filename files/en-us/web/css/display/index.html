@@ -17,12 +17,46 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<p>The CSS <code>display</code> property is specified using keyword values. Keyword values are grouped into six value categories:</p>
+<p>The CSS <code>display</code> property is specified using keyword values.</p>
 
-<pre class="brush: css notranslate">.container {
-  display:  [ &lt;display-outside&gt; | &lt;display-inside&gt; ] | &lt;display-listitem&gt; | &lt;display-internal&gt; | &lt;display-box&gt; | &lt;display-legacy&gt; ;
-}
+<pre class="brush: css">/* legacy values */
+display: block;
+display: inline;
+display: inline-block;
+display: flex;
+display: inline-flex;
+display: grid;
+display: inline-grid;
+display: flow-root;
+
+/* box generation */
+display: none;
+display: contents;
+
+/* two-value syntax */
+display: block flow;
+display: inline flow;
+display: inline flow-root;
+display: block flex;
+display: inline-flex;
+display: block grid;
+display: inline grid;
+display: block flow-root;
+
+/* other values */
+display: table;
+display: table-row; /* all table elements have an equivalent CSS display value */
+display: list-item;
+
+/* Global values */
+display: inherit;
+display: initial;
+display: unset;
 </pre>
+
+<h2 id="Grouped_values">Grouped values</h2>
+
+<p>The keyword values can be grouped into six value categories.</p>
 
 <h3 id="Outside">Outside</h3>
 
@@ -84,13 +118,13 @@ tags:
 
 <p>The <code>&lt;display-legacy&gt;</code> methods allow the same results with single keyword values, and should be favoured by developers until the two keyword values are better supported. For example, using two values you might specify an inline flex container as follows:</p>
 
-<pre class="brush: css notranslate">.container {
+<pre class="brush: css">.container {
   display: inline flex;
 }</pre>
 
 <p>This can currently be specified using a single value.</p>
 
-<pre class="brush: css notranslate">.container {
+<pre class="brush: css">.container {
   display: inline-flex;
 }</pre>
 
@@ -98,7 +132,7 @@ tags:
 
 <h3 id="Global">Global</h3>
 
-<pre class="brush:css notranslate">/* Global values */
+<pre class="brush:css">/* Global values */
 display: inherit;
 display: initial;
 display: unset;
@@ -158,15 +192,15 @@ display: unset;
 
 <p>Using a <code>display</code> value of <code>none</code> on an element will remove it from the <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis">accessibility tree</a>. This will cause the element and all its descendant elements to no longer be announced by screen reading technology.</p>
 
-<p>If you want to visually hide the element, a more accessible alternative is to use <a class="external" href="https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link">a combination of properties</a> to remove it visually from the screen but keep it parsable by assistive technology such as screen readers.</p>
+<p>If you want to visually hide the element, a more accessible alternative is to use <a href="https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link">a combination of properties</a> to remove it visually from the screen but keep it parsable by assistive technology such as screen readers.</p>
 
 <h3 id="display_contents">display: contents</h3>
 
 <p>Current implementations in most browsers will remove from the <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis">accessibility tree</a> any element with a <code>display</code> value of <code>contents</code> (but descendants will remain). This will cause the element itself to no longer be announced by screen reading technology. This is incorrect behavior according to the <a href="https://drafts.csswg.org/css-display/#valdef-display-contents">CSS specification</a>.</p>
 
 <ul>
- <li><a class="external" href="https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents">More accessible markup with display: contents | Hidde de Vries</a></li>
- <li><a class="external" href="http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html">Display: Contents Is Not a CSS Reset | Adrian Roselli</a></li>
+ <li><a href="https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents">More accessible markup with display: contents | Hidde de Vries</a></li>
+ <li><a href="http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html">Display: Contents Is Not a CSS Reset | Adrian Roselli</a></li>
 </ul>
 
 <h3 id="Tables">Tables</h3>
@@ -174,10 +208,10 @@ display: unset;
 <p>Changing the <code>display</code> value of a {{HTMLElement("table")}} element to <code>block</code>, <code>grid</code>, or <code>flex</code> will alter its representation in the <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis">accessibility tree</a>. This will cause the table to no longer be announced properly by screen reading technology.</p>
 
 <ul>
- <li><a class="external" href="https://developer.paciellogroup.com/blog/2018/03/short-note-on-what-css-display-properties-do-to-table-semantics/">Short note on what CSS display properties do to table semantics — The Paciello Group</a></li>
- <li><a class="external" href="https://gomakethings.com/hidden-content-for-better-a11y/">Hidden content for better a11y | Go Make Things</a></li>
+ <li><a href="https://developer.paciellogroup.com/blog/2018/03/short-note-on-what-css-display-properties-do-to-table-semantics/">Short note on what CSS display properties do to table semantics — The Paciello Group</a></li>
+ <li><a href="https://gomakethings.com/hidden-content-for-better-a11y/">Hidden content for better a11y | Go Make Things</a></li>
  <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_%e2%80%94_create_content_that_can_be_presented_in_different_ways">MDN Understanding WCAG, Guideline 1.3 explanations</a></li>
- <li><a class="external" href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0</a></li>
+ <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -186,7 +220,7 @@ display: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -202,7 +236,7 @@ display: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;article class="container"&gt;
+<pre class="brush: html">&lt;article class="container"&gt;
   &lt;span&gt;First&lt;/span&gt;
   &lt;span&gt;Second&lt;/span&gt;
   &lt;span&gt;Third&lt;/span&gt;
@@ -232,7 +266,7 @@ display: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: helvetica, arial, sans-serif;
   letter-spacing: 1px;
   padding-top: 10px;
@@ -259,7 +293,7 @@ article, div {
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">const articles = document.querySelectorAll('.container');
+<pre class="brush: js">const articles = document.querySelectorAll('.container');
 const select = document.querySelector('select');
 
 function updateDisplay() {
@@ -326,7 +360,7 @@ updateDisplay();</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("css.properties.display", 10)}}</p>
 

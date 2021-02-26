@@ -15,7 +15,7 @@ tags:
 
 <p>Using {{DOMxRef("History.pushState","pushState()")}} changes the referrer that gets used in the HTTP header for {{domxref("XMLHttpRequest")}} objects created after you change the state. The referrer will be the URL of the document whose window is <code>this</code> at the time of creation of the {{domxref("XMLHttpRequest")}} object.</p>
 
-<h3 id="Example_of_pushState_method_2"><a id="Example_of_pushState_method">Example of pushState() method</a></h3>
+<h3 id="Example_of_pushState_method">Example of pushState() method</h3>
 
 <p>Suppose <code>https://mozilla.org/foo.html</code> executes the following JavaScript:</p>
 
@@ -31,12 +31,6 @@ history.pushState(stateObj, "page 2", "bar.html")
 <p>Suppose now that the user navigates to <code>https://google.com</code>, then clicks the <strong>Back</strong> button. At this point, the URL bar will display <code>https://mozilla.org/bar.html</code> and <code>history.state</code> will contain the <code>stateObj</code>. The <code>popstate</code> event won't be fired because the page has been reloaded. The page itself will look like <code>bar.html</code>.</p>
 
 <p>If the user clicks <strong>Back</strong> once again, the URL will change to <code>https://mozilla.org/foo.html</code>, and the document will get a <code>popstate</code> event, this time with a <code>null</code> state object. Here too, going back doesn't change the document's contents from what they were in the previous step, although the document might update its contents manually upon receiving the <code>popstate</code> event.</p>
-
-<div class="notecard note">
-<p><strong>Note:</strong> Calling <code>history.back()</code> normally behaves the same way as clicking the <strong>Back</strong> button. But there is one important exception:</p>
-
-<p><em>After</em> using <code>history.pushState()</code>, calling <code>history.back()</code> <em>does not</em> raise a <code>popstate</code> event. Clicking the browser's <strong>Back</strong> button (still) does.</p>
-</div>
 
 <h3 id="The_pushState_method">The pushState() method</h3>
 

@@ -42,7 +42,7 @@ tags:
 
 <p>The following shows a simple JSX example:</p>
 
-<pre class="brush: js notranslate">const subject = "World";
+<pre class="brush: js">const subject = "World";
 const header = (
   &lt;header&gt;
     &lt;h1&gt;Hello, {subject}!&lt;/h1&gt;
@@ -53,14 +53,14 @@ const header = (
 
 <p>When used with React, the JSX from the previous snippet would be compiled into this:</p>
 
-<pre class="brush: js notranslate">var subject = "World";
+<pre class="brush: js">var subject = "World";
 var header = React.createElement("header", null,
   React.createElement("h1", null, "Hello, ", subject, "!")
 );</pre>
 
 <p>When ultimately rendered by the browser, the above snippet will produce HTML that looks like this:</p>
 
-<pre class="brush: html notranslate">&lt;header&gt;
+<pre class="brush: html">&lt;header&gt;
   &lt;h1&gt;Hello, World!&lt;/h1&gt;
 &lt;/header&gt;</pre>
 
@@ -72,19 +72,19 @@ var header = React.createElement("header", null,
 
 <p>Given this Handlebars template:</p>
 
-<pre class="brush: html notranslate">&lt;header&gt;
+<pre class="brush: html">&lt;header&gt;
   &lt;h1&gt;Hello, \{{subject}}!&lt;/h1&gt;
 &lt;/header&gt;</pre>
 
 <p>And this data:</p>
 
-<pre class="brush: js notranslate">{
+<pre class="brush: js">{
   subject: "World"
 }</pre>
 
 <p>Handlebars will build HTML like this:</p>
 
-<pre class="brush: html notranslate">&lt;header&gt;
+<pre class="brush: html">&lt;header&gt;
   &lt;h1&gt;Hello, World!&lt;/h1&gt;
 &lt;/header&gt;</pre>
 
@@ -94,13 +94,13 @@ var header = React.createElement("header", null,
 
 <p>In JavaScript, that function could be written like this:</p>
 
-<pre class="brush: js notranslate">function add(a, b) {
+<pre class="brush: js">function add(a, b) {
   return a + b;
 }</pre>
 
 <p>This code might be trivial for someone accustomed to JavaScript, but it could still be clearer. JavaScript lets us use the <code>+</code> operator to concatenate strings together, so this function would technically still work if <code>a</code> and <code>b</code> were strings — it just might not give you the result you'd expect. What if we wanted to only allow numbers to be passed into this function? TypeScript makes that possible:</p>
 
-<pre class="brush: js notranslate">function add(a: number, b: number) {
+<pre class="brush: js">function add(a: number, b: number) {
   return a + b;
 }</pre>
 
@@ -120,7 +120,7 @@ var header = React.createElement("header", null,
 
 <p>A React representation of this <code>AuthorCredit</code> component might look something like this:</p>
 
-<pre class="brush: js notranslate">function AuthorCredit(props) {
+<pre class="brush: js">function AuthorCredit(props) {
   return (
     &lt;figure&gt;
       &lt;img src={props.src} alt={props.alt} /&gt;
@@ -131,7 +131,7 @@ var header = React.createElement("header", null,
 
 <p><code>{props.src}</code>, <code>{props.alt}</code>, and <code>{props.byline}</code> represent where our props will be inserted into the component. To render this component, we would write code like this in the place where we want it rendered (which will probably be inside another component):</p>
 
-<pre class="brush: js notranslate">&lt;AuthorCredit
+<pre class="brush: js">&lt;AuthorCredit
   src="./assets/zelda.png"
   alt="Portrait of Zelda Schiff"
   byline="Zelda Schiff is editor-in-chief of the Library Times."
@@ -139,7 +139,7 @@ var header = React.createElement("header", null,
 
 <p>This will ultimately render the following <code><a href="/en-US/docs/Web/HTML/Element/figure">&lt;figure&gt;</a></code> element in the browser, with its structure as defined in the <code>AuthorCredit</code> component, and its content as defined in the props included on the <code>AuthorCredit</code> component call:</p>
 
-<pre class="brush: html notranslate">&lt;figure&gt;
+<pre class="brush: html">&lt;figure&gt;
   &lt;img
     src="assets/zelda.png"
     alt="Portrait of Zelda Schiff"
@@ -155,7 +155,7 @@ var header = React.createElement("header", null,
 
 <p>As an example, consider a button that counts how many times it has been clicked. This component should be responsible for tracking its own <em>count</em> state, and could be written like this:</p>
 
-<pre class="brush: js notranslate">function CounterButton() {
+<pre class="brush: js">function CounterButton() {
   const [count] = useState(0);
   return (
     &lt;button&gt;Clicked {count} times&lt;/button&gt;
@@ -164,7 +164,7 @@ var header = React.createElement("header", null,
 
 <p><code><a href="https://reactjs.org/docs/hooks-reference.html#usestate">useState()</a></code> is a <strong><a href="https://reactjs.org/docs/hooks-intro.html">React hook</a></strong> which, given an initial data value, will keep track of that value as it is updated. The code will be initially rendered like so in the browser:</p>
 
-<pre class="brush: html notranslate">&lt;button&gt;Clicked 0 times&lt;/button&gt;</pre>
+<pre class="brush: html">&lt;button&gt;Clicked 0 times&lt;/button&gt;</pre>
 
 <p>The <code>useState()</code> call keeps track of the <code>count</code> value in a robust way across the app, without you needing to write code to do that yourself.</p>
 
@@ -174,7 +174,7 @@ var header = React.createElement("header", null,
 
 <p>In React, listening for the <code><a href="/en-US/docs/Web/API/Element/click_event">click</a></code> event requires a special property, <code>onClick</code>. Let’s update our <code>CounterButton</code> code from above to allow it to count clicks:</p>
 
-<pre class="brush: js notranslate">function CounterButton() {
+<pre class="brush: js">function CounterButton() {
   const [count, setCount] = useState(0);
   return (
     &lt;button onClick={() =&gt; setCount(count + 1)}&gt;Clicked {count} times&lt;/button&gt;
@@ -197,11 +197,11 @@ var header = React.createElement("header", null,
 
 <p>For example, our <code>AuthorCredit</code> React component might be utilized inside an <code>Article</code> component. That means that <code>Article</code> would need to import <code>AuthorCredit</code>.</p>
 
-<pre class="brush: js notranslate">import AuthorCredit from "./components/AuthorCredit";</pre>
+<pre class="brush: js">import AuthorCredit from "./components/AuthorCredit";</pre>
 
 <p>Once that’s done, <code>AuthorCredit</code> could be used inside the <code>Article</code> component like this:</p>
 
-<pre class="brush: js notranslate">  ...
+<pre class="brush: js">  ...
 
 &lt;AuthorCredit /&gt;
 
@@ -213,7 +213,7 @@ var header = React.createElement("header", null,
 
 <p>Let's say that the magazine site we're building is structured like this:</p>
 
-<pre class="brush: js notranslate">&lt;App&gt;
+<pre class="brush: js">&lt;App&gt;
   &lt;Home&gt;
     &lt;Article&gt;
       &lt;AuthorCredit {/* props */} /&gt;
@@ -265,7 +265,7 @@ var header = React.createElement("header", null,
 
 <p>Here’s a quick test for our <code>CounterButton</code> written with the help of React Testing Library — it tests a number of things, such as the button's existence, and whether the button is displaying the correct text after being clicked 0, 1, and 2 times:</p>
 
-<pre class="brush: js notranslate">import React from "react";
+<pre class="brush: js">import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 

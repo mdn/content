@@ -24,7 +24,7 @@ tags:
 
 <p>We can change the ball's velocity depending on the exact spot it hits the paddle, by modifying the <code>x</code> velocity each time the <code>ballHitPaddle()</code> function is run using a line along the lines of the below. Add this new line to your code now, and try it out.</p>
 
-<pre class="brush: js notranslate">function ballHitPaddle(ball, paddle) {
+<pre class="brush: js">function ballHitPaddle(ball, paddle) {
     ball.animations.play('wobble');
     ball.body.velocity.x = -1*5*(paddle.x-ball.x);
 }</pre>

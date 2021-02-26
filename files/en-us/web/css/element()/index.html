@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">element(<var>id</var>)</pre>
+<pre class="brush: css">element(<var>id</var>)</pre>
 
 <p>where:</p>
 
@@ -31,13 +31,13 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>These examples can be <a href="/samples/cssref/moz-element.html">viewed live</a> in builds of Firefox that support <code>-moz-element()</code>.</p>
+<p>These examples can be <a href="https://media.prod.mdn.mozit.cloud/samples/cssref/moz-element.html">viewed live</a> in builds of Firefox that support <code>-moz-element()</code>.</p>
 
 <h3 id="A_somewhat_realistic_example">A somewhat realistic example</h3>
 
 <p>This example uses a hidden {{HTMLElement("div")}} as a background. The background element uses a gradient, but also includes text that is rendered as part of the background.</p>
 
-<pre class="brush: html notranslate">&lt;div style="width:400px; height:400px; background:-moz-element(#myBackground1) no-repeat;"&gt;
+<pre class="brush: html">&lt;div style="width:400px; height:400px; background:-moz-element(#myBackground1) no-repeat;"&gt;
   &lt;p&gt;This box uses the element with the #myBackground1 ID as its background!&lt;/p&gt;
 &lt;/div&gt;
 
@@ -49,13 +49,13 @@ tags:
 
 <p>The {{HTMLElement("div")}} element with the ID "myBackground1" is used as the background for the content including the paragraph "This box uses the element with the #myBackground1 ID as its background!".</p>
 
-<p><img class="default internal" src="/@api/deki/files/4624/=example1.png"></p>
+<p><img class="default internal" src="example1.png"></p>
 
 <h3 id="A_somewhat_more_bizarre_example">A somewhat more bizarre example</h3>
 
 <p>This example uses a hidden {{HTMLElement("button")}} element in a repeating pattern as its background. This demonstrates that you can use arbitrary elements as background, but doesn't necessarily demonstrate good design practices.</p>
 
-<pre class="brush: html notranslate">&lt;div style="width:400px; height:100px; background:-moz-element(#myBackground2);"&gt;
+<pre class="brush: html">&lt;div style="width:400px; height:100px; background:-moz-element(#myBackground2);"&gt;
 &lt;/div&gt;
 
 &lt;div style="overflow:hidden; height:0;"&gt;
@@ -63,7 +63,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p><img class="default internal" src="/@api/deki/files/4625/=example2.png"></p>
+<p><img class="default internal" src="example2.png"></p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -91,11 +91,11 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{cssxref("_image", "image()")}}</li>
- <li>{{cssxref("image-set", "image-set()")}}</li>
+ <li>{{cssxref("image()", "image()")}}</li>
+ <li>{{cssxref("image-set()", "image-set()")}}</li>
  <li>{{cssxref("&lt;image&gt;")}}</li>
  <li>{{cssxref("&lt;gradient&gt;")}}</li>
  <li>{{cssxref("element()")}}</li>
- <li>{{cssxref("cross-fade")}}</li>
+ <li>{{cssxref("cross-fade()")}}</li>
  <li>{{domxref("document.mozSetImageElement()")}}</li>
 </ul>

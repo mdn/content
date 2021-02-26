@@ -13,7 +13,7 @@ tags:
 
 <p><span class="seoSummary">In CSS, <strong><code>::after</code></strong> creates a <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> that is the last child of the selected element. It is often used to add cosmetic content to an element with the {{CSSxRef("content")}} property.</span> It is inline by default.</p>
 
-<pre class="brush: css no-line-numbers language-css notranslate">/* Add an arrow after links */
+<pre class="brush: css no-line-numbers language-css">/* Add an arrow after links */
 a::after {
   content: "→";
 }</pre>
@@ -24,7 +24,7 @@ a::after {
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">{{CSSSyntax}}</pre>
+<pre class="brush: css">{{CSSSyntax}}</pre>
 
 <div class="note">
 <p><strong>Note:</strong> CSS3 introduced the <code>::after</code> notation (with two colons) to distinguish <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classes</a> from <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>. Browsers also accept <code>:after</code>, introduced in CSS2.</p>
@@ -38,13 +38,13 @@ a::after {
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p class="boring-text"&gt;Here is some plain old boring text.&lt;/p&gt;
+<pre class="brush: html">&lt;p class="boring-text"&gt;Here is some plain old boring text.&lt;/p&gt;
 &lt;p&gt;Here is some normal text that is neither boring nor exciting.&lt;/p&gt;
 &lt;p class="exciting-text"&gt;Contributing to MDN is easy and fun.&lt;/p&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">.exciting-text::after {
+<pre class="brush: css">.exciting-text::after {
   content: " &lt;- EXCITING!";
   color: green;
 }
@@ -64,11 +64,11 @@ a::after {
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;span class="ribbon"&gt;Look at the orange box after this text. &lt;/span&gt;</pre>
+<pre class="brush: html">&lt;span class="ribbon"&gt;Look at the orange box after this text. &lt;/span&gt;</pre>
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">.ribbon {
+<pre class="brush: css">.ribbon {
   background-color: #5BC8F7;
 }
 
@@ -91,7 +91,7 @@ a::after {
 
 <h4 id="HTML_3">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p&gt;Here we have some
+<pre class="brush: html">&lt;p&gt;Here we have some
   &lt;span tabindex="0" data-descr="collection of words and punctuation"&gt;text&lt;/span&gt; with a few
   &lt;span tabindex="0" data-descr="small popups that appear when hovering"&gt;tooltips&lt;/span&gt;.
 &lt;/p&gt;
@@ -99,7 +99,7 @@ a::after {
 
 <h4 id="CSS_3">CSS</h4>
 
-<pre class="brush: css notranslate">span[data-descr] {
+<pre class="brush: css">span[data-descr] {
   position: relative;
   text-decoration: underline;
   color: #00F;
@@ -162,10 +162,7 @@ span[data-descr]:focus::after {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("css.selectors.after")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

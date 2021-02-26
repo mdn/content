@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">let <var>availHeight</var> = <var>window</var>.screen.availHeight;
+<pre class="brush: js">let <var>availHeight</var> = <var>window</var>.screen.availHeight;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -53,14 +53,14 @@ tags:
 </p>
 
 <pre
-  class="brush: html; notranslate">let paletteWindow = window.open("panels.html", "Panels", "left=0, top=0, width=200");</pre>
+  class="brush: html;">let paletteWindow = window.open("panels.html", "Panels", "left=0, top=0, width=200");</pre>
 
 <p>The Panels window's HTML, in <code>panels.html</code>, has JavaScript code of its own,
   which is executed as soon as the window is created. It doesn't even need to wait for any
   particular event (or any event at all). That code handles resizing the window based on
   the available space:</p>
 
-<pre class="brush: js; notranslate">window.outerHeight = window.screen.availHeight;</pre>
+<pre class="brush: js;">window.outerHeight = window.screen.availHeight;</pre>
 
 <p>The result is something similar to the below. Note the Panels window filling all
   available vertical space at the left of the screen.</p>

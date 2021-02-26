@@ -27,14 +27,14 @@ tags:
 
 <p>Delete all the JavaScript you currently have inside your HTML file except for the first two lines, and add the following below them. The <code>draw()</code> function will be executed within <code>setInterval</code> every 10 milliseconds:</p>
 
-<pre class="brush: js notranslate">function draw() {
+<pre class="brush: js">function draw() {
     // drawing code
 }
 setInterval(draw, 10);</pre>
 
 <p>Thanks to the infinite nature of <code>setInterval</code> the <code>draw()</code> function will be called every 10 milliseconds forever, or until we stop it. Now, let's draw the ball — add the following inside your <code>draw()</code> function:</p>
 
-<pre class="brush: js notranslate">ctx.beginPath();
+<pre class="brush: js">ctx.beginPath();
 ctx.arc(50, 50, 10, 0, Math.PI*2);
 ctx.fillStyle = "#0095DD";
 ctx.fill();
@@ -49,13 +49,13 @@ ctx.closePath();
 
 <p>First, add the following two lines above your <code>draw()</code> function, to define <code>x</code> and <code>y</code>:</p>
 
-<pre class="brush: js notranslate">var x = canvas.width/2;
+<pre class="brush: js">var x = canvas.width/2;
 var y = canvas.height-30;
 </pre>
 
 <p>Next update the <code>draw()</code> function to use the x and y variables in the {{domxref("CanvasRenderingContext2D.arc()","arc()")}} method, as shown in the following highlighted line:</p>
 
-<pre class="brush: js highlight:[3] notranslate">function draw() {
+<pre class="brush: js highlight:[3]">function draw() {
     ctx.beginPath();
     ctx.arc(x, y, 10, 0, Math.PI*2);
     ctx.fillStyle = "#0095DD";
@@ -66,13 +66,13 @@ var y = canvas.height-30;
 
 <p>Now comes the important part: we want to add a small value to <code>x</code> and <code>y</code> after every frame has been drawn to make it appear that the ball is moving. Let's define these small values as <code>dx</code> and <code>dy</code> and set their values to 2 and -2 respectively. Add the following below your x and y variable definitions:</p>
 
-<pre class="brush: js notranslate">var dx = 2;
+<pre class="brush: js">var dx = 2;
 var dy = -2;
 </pre>
 
 <p>The last thing to do is to update <code>x</code> and <code>y</code> with our <code>dx</code> and <code>dy</code> variable on every frame, so the ball will be painted in the new position on every update. Add the following two new lines indicated below to your <code>draw()</code> function:</p>
 
-<pre class="brush: js highlight:[7,8] notranslate">function draw() {
+<pre class="brush: js highlight:[7,8]">function draw() {
     ctx.beginPath();
     ctx.arc(x, y, 10, 0, Math.PI*2);
     ctx.fillStyle = "#0095DD";
@@ -92,7 +92,7 @@ var dy = -2;
 
 <p>Add the following highlighted new line to the <code>draw()</code> function:</p>
 
-<pre class="brush: js highlight:[2] notranslate">function draw() {
+<pre class="brush: js highlight:[2]">function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.beginPath();
     ctx.arc(x, y, 10, 0, Math.PI*2);
@@ -112,7 +112,7 @@ var dy = -2;
 
 <p>Replace the existing draw() function with the following two functions:</p>
 
-<pre class="brush: js notranslate">function drawBall() {
+<pre class="brush: js">function drawBall() {
     ctx.beginPath();
     ctx.arc(x, y, 10, 0, Math.PI*2);
     ctx.fillStyle = "#0095DD";

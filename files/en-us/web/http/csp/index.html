@@ -81,7 +81,7 @@ tags:
 <p>You can use the {{HTTPHeader("Content-Security-Policy")}} HTTP header to specify your
   policy, like this:</p>
 
-<pre class="brush: html notranslate">Content-Security-Policy: <em>policy</em></pre>
+<pre class="brush: html">Content-Security-Policy: <em>policy</em></pre>
 
 <p>The policy is a string containing the policy directives describing your Content
   Security Policy.</p>
@@ -110,7 +110,7 @@ tags:
 <p>A web site administrator wants all content to come from the site's own origin (this
   excludes subdomains.)</p>
 
-<pre class="brush: html notranslate">Content-Security-Policy: default-src 'self'</pre>
+<pre class="brush: html">Content-Security-Policy: default-src 'self'</pre>
 
 <h3 id="Example_2">Example 2</h3>
 
@@ -118,7 +118,7 @@ tags:
   subdomains (it doesn't have to be the same domain that the CSP is set on.)</p>
 
 <pre
-  class="brush: html notranslate">Content-Security-Policy: default-src 'self' trusted.com *.trusted.com</pre>
+  class="brush: html">Content-Security-Policy: default-src 'self' trusted.com *.trusted.com</pre>
 
 <h3 id="Example_3">Example 3</h3>
 
@@ -127,7 +127,7 @@ tags:
   providers, and all scripts only to a specific server that hosts trusted code.</p>
 
 <pre
-  class="brush: html notranslate">Content-Security-Policy: default-src 'self'; img-src *; media-src media1.com media2.com; script-src userscripts.example.com</pre>
+  class="brush: html">Content-Security-Policy: default-src 'self'; img-src *; media-src media1.com media2.com; script-src userscripts.example.com</pre>
 
 <p>Here, by default, content is only permitted from the document's origin, with the
   following exceptions:</p>
@@ -146,7 +146,7 @@ tags:
   requests.</p>
 
 <pre
-  class="brush: html notranslate">Content-Security-Policy: default-src https://onlinebanking.jumbobank.com</pre>
+  class="brush: html">Content-Security-Policy: default-src https://onlinebanking.jumbobank.com</pre>
 
 <p>The server permits access only to documents being loaded specifically over HTTPS
   through the single origin onlinebanking.jumbobank.com.</p>
@@ -158,7 +158,7 @@ tags:
 </p>
 
 <pre
-  class="brush: html notranslate">Content-Security-Policy: default-src 'self' *.mailsite.com; img-src *</pre>
+  class="brush: html">Content-Security-Policy: default-src 'self' *.mailsite.com; img-src *</pre>
 
 <p>Note that this example doesn't specify a {{CSP("script-src")}}; with the example CSP,
   this site uses the setting specified by the {{CSP("default-src")}} directive, which
@@ -175,7 +175,7 @@ tags:
   specify your policy, like this:</p>
 
 <pre
-  class="brush: html notranslate">Content-Security-Policy-Report-Only: <em>policy</em> </pre>
+  class="brush: html">Content-Security-Policy-Report-Only: <em>policy</em> </pre>
 
 <p>If both a {{HTTPHeader("Content-Security-Policy-Report-Only")}} header and a
   {{HTTPHeader("Content-Security-Policy")}} header are present in the same response, both
@@ -190,7 +190,7 @@ tags:
   to deliver the reports:</p>
 
 <pre
-  class="brush: html notranslate">Content-Security-Policy: default-src 'self'; report-uri http://reportcollector.example.com/collector.cgi</pre>
+  class="brush: html">Content-Security-Policy: default-src 'self'; report-uri http://reportcollector.example.com/collector.cgi</pre>
 
 <p>Then you need to set up your server to receive the reports; it can store or process
   them in whatever manner you determine is appropriate.</p>
@@ -234,10 +234,7 @@ tags:
   the following policy, disallowing everything but stylesheets from
   <code>cdn.example.com</code>.</p>
 
-<div>
-  <pre
-    class="brush: html notranslate">Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports</pre>
-</div>
+<pre class="brush: html">Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports</pre>
 
 <p>The HTML of <code>signup.html</code> looks like this:</p>
 
@@ -303,8 +300,8 @@ tags:
       Web Workers</a></li>
   <li><a href="/en-US/docs/Web/Privacy">Privacy, permissions, and information security</a>
   </li>
-  <li><a href="https://github.com/google/csp-evaluator" class="external">CSP Evaluator</a> - Evaluate your
+  <li><a href="https://github.com/google/csp-evaluator" >CSP Evaluator</a> - Evaluate your
     Content Security Policy</li>
-  <li><a href="https://cspscanner.com/" class="external">CSP Scanner</a> - Improve your
+  <li><a href="https://cspscanner.com/" >CSP Scanner</a> - Improve your
     Content Security Policy</li>
 </ul>

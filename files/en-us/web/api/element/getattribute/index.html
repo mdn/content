@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">let <var>attribute</var> = <var>element</var>.getAttribute(<var>attributeName</var>);
+<pre class="brush: js">let <var>attribute</var> = <var>element</var>.getAttribute(<var>attributeName</var>);
 </pre>
 
 <p>where</p>
@@ -32,7 +32,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush:js notranslate">&lt;!-- example div in an html DOC --&gt;
+<pre class="brush:js">&lt;!-- example div in an html DOC --&gt;
 &lt;div id="div1"&gt;Hi Champ!&lt;/div&gt;
 
 // in a console
@@ -75,14 +75,14 @@ const align = div1.getAttribute('align')
 	sources, such as CSS selectors, and  <code>.getAttribute("nonce")</code> calls are
 	hidden.</p>
 
-<pre class="brush: js example-bad notranslate">let nonce =  script.getAttribute('nonce');
+<pre class="brush: js example-bad">let nonce =  script.getAttribute('nonce');
 // returns empty string
 </pre>
 
 <p>Instead of retrieving the nonce from the content attribute, use the
 	{{domxref("HTMLOrForeignElement/nonce", "nonce")}} property:</p>
 
-<pre class="brush: js notranslate">let nonce =  script.nonce;</pre>
+<pre class="brush: js">let nonce =  script.nonce;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

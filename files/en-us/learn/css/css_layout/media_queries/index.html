@@ -29,7 +29,7 @@ tags:
 
 <p>The simplest media query syntax looks like this:</p>
 
-<pre class="brush: css notranslate">@media <em>media-type</em> and (<em>media-feature-rule</em>) {
+<pre class="brush: css">@media <em>media-type</em> and (<em>media-feature-rule</em>) {
   /* CSS rules go here */
 }</pre>
 
@@ -54,7 +54,7 @@ tags:
 
 <p>The following media query will only set the body to 12pt if the page is printed. It will not apply when the page is loaded in a browser.</p>
 
-<pre class="brush: css notranslate">@media print {
+<pre class="brush: css">@media print {
     body {
         font-size: 12pt;
     }
@@ -82,7 +82,7 @@ tags:
 
 <p>These features are used to create layouts that respond to different screen sizes. For example, to change the body text color to red if the viewport is exactly 600 pixels, you would use the following media query.</p>
 
-<pre class="brush: css notranslate">@media screen and (width: 600px) {
+<pre class="brush: css">@media screen and (width: 600px) {
     body {
         color: red;
     }
@@ -92,7 +92,7 @@ tags:
 
 <p>The <code>width</code> (and <code>height</code>) media features can be used as ranges, and therefore be prefixed with <code>min-</code> or <code>max-</code> to indicate that the given value is a minimum, or a maximum. For example, to make the color blue if the viewport is narrower than 600 pixels, use <code>max-width</code>:</p>
 
-<pre class="brush: css notranslate">@media screen and (max-width: 600px) {
+<pre class="brush: css">@media screen and (max-width: 600px) {
     body {
         color: blue;
     }
@@ -108,7 +108,7 @@ tags:
 
 <p>One well-supported media feature is <code>orientation</code>, which allows us to test for portrait or landscape mode. To change the body text color if the device is in landscape orientation, use the following media query.</p>
 
-<pre class="brush: css notranslate">@media (orientation: landscape) {
+<pre class="brush: css">@media (orientation: landscape) {
     body {
         color: rebeccapurple;
     }
@@ -122,7 +122,7 @@ tags:
 
 <p>As part of the Level 4 specification, the <code>hover</code> media feature was introduced. This feature means you can test if the user has the ability to hover over an element, which essentially means they are using some kind of pointing device; touchscreen and keyboard navigation does not hover.</p>
 
-<pre class="brush: css notranslate">@media (hover: hover) {
+<pre class="brush: css">@media (hover: hover) {
     body {
         color: rebeccapurple;
     }
@@ -144,7 +144,7 @@ tags:
 
 <p>To combine media features you can use <code>and</code> in much the same way as we have used <code>and</code> above to combine a media type and feature. For example, we might want to test for a <code>min-width</code> and <code>orientation</code>. The body text will only be blue if the viewport is at least 600 pixels wide and the device is in landscape mode.</p>
 
-<pre class="brush: css notranslate">@media screen and (min-width: 600px) and (orientation: landscape) {
+<pre class="brush: css">@media screen and (min-width: 600px) and (orientation: landscape) {
     body {
         color: blue;
     }
@@ -156,7 +156,7 @@ tags:
 
 <p>If you have a set of queries, any of which could match, then you can comma separate these queries. In the below example the text will be blue if the viewport is at least 600 pixels wide OR the device is in landscape orientation. If either of these things are true the query matches.</p>
 
-<pre class="brush: css notranslate">@media screen and (min-width: 600px), screen and (orientation: landscape) {
+<pre class="brush: css">@media screen and (min-width: 600px), screen and (orientation: landscape) {
     body {
         color: blue;
     }
@@ -168,7 +168,7 @@ tags:
 
 <p>You can negate an entire media query by using the <code>not</code> operator. This reverses the meaning of the entire media query. Therefore in this next example the text will only be blue if the orientation is portrait.</p>
 
-<pre class="brush: css notranslate">@media not all and (orientation: landscape) {
+<pre class="brush: css">@media not all and (orientation: landscape) {
     body {
         color: blue;
     }
@@ -198,7 +198,7 @@ tags:
 
 <p>Our starting point is an HTML document with some CSS applied to add background colors to the various parts of the layout.</p>
 
-<pre class="brush: css notranslate">* {
+<pre class="brush: css">* {
     box-sizing: border-box;
 }
 
@@ -252,7 +252,7 @@ article {
 
 <p>We've made no layout changes, however the source of the document is ordered in a way that makes the content readable. This is an important first step and one which ensures that if the content were to be read out by a screen reader, it would be understandable.</p>
 
-<pre class="brush: html notranslate">&lt;body&gt;
+<pre class="brush: html">&lt;body&gt;
     &lt;div class=&quot;wrapper&quot;&gt;
       &lt;header&gt;
         &lt;nav&gt;
@@ -304,7 +304,7 @@ article {
 
 <p><strong>Add the below code into the bottom of your step1.html CSS.</strong></p>
 
-<pre class="brush: css notranslate">@media screen and (min-width: 40em) {
+<pre class="brush: css">@media screen and (min-width: 40em) {
     article {
         display: grid;
         grid-template-columns: 3fr 1fr;
@@ -329,7 +329,7 @@ article {
 
 <p><strong>Again, add the below code into the bottom of your step1.html CSS.</strong></p>
 
-<pre class="brush: css notranslate">@media screen and (min-width: 70em) {
+<pre class="brush: css">@media screen and (min-width: 70em) {
     main {
         display: grid;
         grid-template-columns: 3fr 1fr;
@@ -355,7 +355,7 @@ article {
 
 <p>If you look at the HTML source in the above example, you'll see the following element included in the head of the document:</p>
 
-<pre class="brush: html notranslate">&lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;</pre>
+<pre class="brush: html">&lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;</pre>
 
 <p>This is the <a href="/en-US/docs/Web/HTML/Viewport_meta_tag">viewport meta tag</a> — it exists as a way control how mobile browsers render content. This is needed because by default, most mobile browsers lie about their viewport width. Non-responsive sites commonly look really bad when rendered in a narrow viewport, so mobile browsers usually render the site with a viewport width wider than the real device width by default (usually 960 pixels), and then shrink the rendered result so that it fits in the display.</p>
 
@@ -371,7 +371,7 @@ article {
 
 <p>This could be achieved using the following:</p>
 
-<pre class="brush: html notranslate">&lt;ul class=&quot;grid&quot;&gt;
+<pre class="brush: html">&lt;ul class=&quot;grid&quot;&gt;
     &lt;li&gt;
         &lt;h2&gt;Card 1&lt;/h2&gt;
         &lt;p&gt;...&lt;/p&gt;
@@ -394,7 +394,7 @@ article {
     &lt;/li&gt;
 &lt;/ul&gt;</pre>
 
-<pre class="brush: css notranslate">.grid {
+<pre class="brush: css">.grid {
     list-style: none;
     margin: 0;
     padding: 0;

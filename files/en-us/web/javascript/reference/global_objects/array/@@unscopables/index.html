@@ -38,7 +38,7 @@ tags:
 
 <p>The following code works fine in ES5 and below. However, in ECMAScript 2015 and later, the {{jsxref("Array.prototype.keys()")}} method was introduced. That means that inside <code>with</code> environments, "keys" would now be the method and not the variable. This is where now the built-in <code>@@unscopables</code> <code>Array.prototype[@@unscopables]</code> symbol property comes into play and prevents that some of the Array methods are being scoped into the <code>with</code> statement.</p>
 
-<pre class="brush: js notranslate">var keys = [];
+<pre class="brush: js">var keys = [];
 
 with (Array.prototype) {
   keys.push('something');
@@ -65,10 +65,7 @@ Object.keys(Array.prototype[Symbol.unscopables]);
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("javascript.builtins.Array.@@unscopables")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

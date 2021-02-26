@@ -39,7 +39,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>obj.val</var>?.<var>prop</var>
+<pre class="brush: js"><var>obj.val</var>?.<var>prop</var>
 <var>obj.val</var>?.[<var>expr</var>]
 <em>obj.arr</em>?.[<var>index</var>]
 <var>obj.func</var>?.(<var>args</var>)
@@ -56,7 +56,7 @@ tags:
   references in between, such as:</p>
 
 <pre
-  class="brush: js notranslate">let nestedProp = obj.first &amp;&amp; obj.first.second;</pre>
+  class="brush: js">let nestedProp = obj.first &amp;&amp; obj.first.second;</pre>
 
 <p>The value of <code>obj.first</code> is confirmed to be non-<code>null</code> (and
   non-<code>undefined</code>) before then accessing the value of
@@ -67,7 +67,7 @@ tags:
   explicitly test and short-circuit based on the state of <code>obj.first</code> before
   trying to access <code>obj.first.second</code>:</p>
 
-<pre class="brush: js notranslate">let nestedProp = obj.first?.second;</pre>
+<pre class="brush: js">let nestedProp = obj.first?.second;</pre>
 
 <p>By using the <code>?.</code> operator instead of just <code>.</code>, JavaScript knows
   to implicitly check to be sure <code>obj.first</code> is not <code>null</code> or
@@ -78,7 +78,7 @@ tags:
 <p>This is equivalent to the following, except that the temporary variable is in fact not
   created:</p>
 
-<pre class="brush: js notranslate">let temp = obj.first;
+<pre class="brush: js">let temp = obj.first;
 let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.second);
 </pre>
 
@@ -93,7 +93,7 @@ let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.secon
   return <code>undefined</code> instead of throwing an exception if the method isn't
   found:</p>
 
-<pre class="brush: js notranslate">let result = someInterface.customMethod?.();</pre>
+<pre class="brush: js">let result = someInterface.customMethod?.();</pre>
 
 <div class="notecard note">
   <p><strong>Note:</strong> If there is a property with such a name and which is not a
@@ -119,7 +119,7 @@ let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.secon
   functions unless you have tested their existence. Using <code>?.</code>, you can avoid
   this extra test:</p>
 
-<pre class="brush: js notranslate">// Written as of ES2019
+<pre class="brush: js">// Written as of ES2019
 function doSomething(onContent, onError) {
   try {
     // ... do something with the data
@@ -132,7 +132,7 @@ function doSomething(onContent, onError) {
 }
 </pre>
 
-<pre class="brush: js notranslate">// Using optional chaining with function calls
+<pre class="brush: js">// Using optional chaining with function calls
 function doSomething(onContent, onError) {
   try {
    // ... do something with the data
@@ -150,20 +150,20 @@ function doSomething(onContent, onError) {
     href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Bracket_notation">the
     bracket notation of the property accessor</a>:</p>
 
-<pre class="brush: js notranslate">let nestedProp = obj?.['prop' + 'Name'];
+<pre class="brush: js">let nestedProp = obj?.['prop' + 'Name'];
 </pre>
 
 <h3 id="Optional_chaining_not_valid_on_the_left-hand_side_of_an_assignment">Optional
   chaining not valid on the left-hand side of an assignment</h3>
 
 <pre
-  class="brush: js notranslate">let object = {};
+  class="brush: js">let object = {};
 object?.property = 1; // Uncaught SyntaxError: Invalid left-hand side in assignment</pre>
 
 <h3 id="Array_item_access_with_optional_chaining">Array item access with optional chaining
 </h3>
 
-<pre class="brush: js notranslate">let arrayItem = arr?.[42];</pre>
+<pre class="brush: js">let arrayItem = arr?.[42];</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -173,7 +173,7 @@ object?.property = 1; // Uncaught SyntaxError: Invalid left-hand side in assignm
   <code>bar</code> in a map when there is no such member. The result is therefore
   <code>undefined</code>.</p>
 
-<pre class="brush: js notranslate">let myMap = new Map();
+<pre class="brush: js">let myMap = new Map();
 myMap.set("foo", {name: "baz", desc: "inga"});
 
 let nameBar = myMap.get("bar")?.name;</pre>
@@ -183,7 +183,7 @@ let nameBar = myMap.get("bar")?.name;</pre>
 <p>When using optional chaining with expressions, if the left operand is <code>null</code>
   or <code>undefined</code>, the expression will not be evaluated. For instance:</p>
 
-<pre class="brush: js notranslate">let potentiallyNullObj = null;
+<pre class="brush: js">let potentiallyNullObj = null;
 let x = 0;
 let prop = potentiallyNullObj?.[x++];
 
@@ -195,7 +195,7 @@ console.log(x); // 0 as x was not incremented
 
 <p>With nested structures, it is possible to use optional chaining multiple times:</p>
 
-<pre class="brush: js notranslate">let customer = {
+<pre class="brush: js">let customer = {
   name: "Carl",
   details: {
     age: 82,
@@ -215,7 +215,7 @@ let customerName = customer.name?.getName?.(); // method does not exist, custome
   '', 1)}} may be used after optional chaining in order to build a default value when none
   was found:</p>
 
-<pre class="brush: js notranslate">let customer = {
+<pre class="brush: js">let customer = {
   name: "Carl",
   details: { age: 82 }
 };
@@ -239,10 +239,7 @@ console.log(customerCity); // Unknown city</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.operators.optional_chaining")}}</p>
-</div>
+<p>{{Compat("javascript.operators.optional_chaining")}}</p>
 
 <h3 id="Implementation_Progress">Implementation Progress</h3>
 

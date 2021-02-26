@@ -31,7 +31,7 @@ slug: Web/API/RTCPeerConnection/connectionstatechange_event
 
 <p>For an {{domxref("RTCPeerConnection")}}, <code>pc</code>, this example sets up a handler for <code>connectionstatechange</code> messages to handle changes to the connectivity of the WebRTC session. It calls an app-defined function called <code>setOnlineStatus()</code> to update a status display.</p>
 
-<pre class="brush: js notranslate">pc.onconnectionstatechange = ev =&gt; {
+<pre class="brush: js">pc.onconnectionstatechange = ev =&gt; {
   switch(pc.connectionState) {
     case "new":
     case "checking":
@@ -58,7 +58,7 @@ slug: Web/API/RTCPeerConnection/connectionstatechange_event
 
 <p>You can also create a handler for <code>connectionstatechange</code> by using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:</p>
 
-<pre class="brush: js notranslate">pc.addEventListener("connectionstatechange", ev =&gt; {
+<pre class="brush: js">pc.addEventListener("connectionstatechange", ev =&gt; {
   switch(pc.connectionState) {
     /* ... */
   }

@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>File</em> = <em>DataTransferItem</em>.getAsFile();
+<pre class="brush: js"><em>File</em> = <em>DataTransferItem</em>.getAsFile();
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -38,7 +38,7 @@ tags:
 <p>This example shows the use of the <code>getAsFile()</code> method in a
   {{event("drop")}} event handler.</p>
 
-<pre class="brush: js notranslate">function drop_handler(ev) {
+<pre class="brush: js">function drop_handler(ev) {
  console.log("Drop");
  ev.preventDefault();
  var data = event.dataTransfer.items;

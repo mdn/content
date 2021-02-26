@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>audioWorkletNodeInstance</em>.parameters</pre>
+<pre class="brush: js"><em>audioWorkletNodeInstance</em>.parameters</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -48,7 +48,7 @@ tags:
   populate its <code>parameters</code> with instantiated <code>AudioParam</code> objects.
 </p>
 
-<pre class="brush: js notranslate">// white-noise-processor.js
+<pre class="brush: js">// white-noise-processor.js
 class WhiteNoiseProcessor extends AudioWorkletProcessor {
   static get parameterDescriptors () {
     return [{
@@ -82,7 +82,7 @@ registerProcessor('white-noise-processor', WhiteNoiseProcessor)
   <code>AudioWorkletNode</code> passing it the name of the processor, and connect the node
   to an audio graph.</p>
 
-<pre class="brush: js notranslate">const audioContext = new AudioContext()
+<pre class="brush: js">const audioContext = new AudioContext()
 await audioContext.audioWorklet.addModule('white-noise-processor.js')
 const whiteNoiseNode = new AudioWorkletNode(audioContext, 'white-noise-processor')
 whiteNoiseNode.connect(audioContext.destination)
@@ -90,7 +90,7 @@ whiteNoiseNode.connect(audioContext.destination)
 
 <p>Now we can change the gain on the node like this:</p>
 
-<pre class="brush: js notranslate">const gainParam = whiteNoiseNode.parameters.get('customGain')
+<pre class="brush: js">const gainParam = whiteNoiseNode.parameters.get('customGain')
 gainParam.setValueAtTime(0, audioContext.currentTime)
 gainParam.linearRampToValueAtTime(0.5, audioContext.currentTime + 0.5)
 </pre>
@@ -115,10 +115,7 @@ gainParam.linearRampToValueAtTime(0.5, audioContext.currentTime + 0.5)
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.AudioWorkletNode.parameters")}}</p>
-</div>
+<p>{{Compat("api.AudioWorkletNode.parameters")}}</p>
 
 <h2 id="See_also">See also</h2>
 

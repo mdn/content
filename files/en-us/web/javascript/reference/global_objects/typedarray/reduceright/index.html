@@ -21,7 +21,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>typedarray</var>.reduceRight(<var>callback</var>[, <var>initialValue</var>])</pre>
+  class="brush: js"><var>typedarray</var>.reduceRight(<var>callback</var>[, <var>initialValue</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -59,7 +59,7 @@ tags:
 
 <p>The call to the <code>reduceRight</code> callback would look something like this:</p>
 
-<pre class="brush: js notranslate">typedarray.reduceRight(function(previousValue, currentValue, index, typedarray) {
+<pre class="brush: js">typedarray.reduceRight(function(previousValue, currentValue, index, typedarray) {
   // ...
 });
 </pre>
@@ -84,7 +84,7 @@ tags:
 
 <h3 id="Sum_up_all_values_within_an_array">Sum up all values within an array</h3>
 
-<pre class="brush: js notranslate">var total = new Uint8Array([0, 1, 2, 3]).reduceRight(function(a, b) {
+<pre class="brush: js">var total = new Uint8Array([0, 1, 2, 3]).reduceRight(function(a, b) {
   return a + b;
 });
 // total == 6
@@ -108,10 +108,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.TypedArray.reduceRight")}}</p>
-</div>
+<p>{{Compat("javascript.builtins.TypedArray.reduceRight")}}</p>
 
 <h2 id="See_also">See also</h2>
 

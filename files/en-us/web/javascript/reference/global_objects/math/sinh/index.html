@@ -53,7 +53,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Math.sinh(<var>x</var>)</pre>
+<pre class="brush: js">Math.sinh(<var>x</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -76,14 +76,14 @@ tags:
 
 <p>This can be emulated with the help of the {{jsxref("Math.exp()")}} function:</p>
 
-<pre class="brush: js notranslate">Math.sinh = Math.sinh || function(x) {
+<pre class="brush: js">Math.sinh = Math.sinh || function(x) {
   return (Math.exp(x) - Math.exp(-x)) / 2;
 }
 </pre>
 
 <p>or using only one call to the {{jsxref("Math.exp()")}} function:</p>
 
-<pre class="brush: js notranslate">Math.sinh = Math.sinh || function(x) {
+<pre class="brush: js">Math.sinh = Math.sinh || function(x) {
   var y = Math.exp(x);
   return (y - 1 / y) / 2;
 }
@@ -93,7 +93,7 @@ tags:
 
 <h3 id="Using_Math.sinh">Using Math.sinh()</h3>
 
-<pre class="brush: js notranslate">Math.sinh(0); // 0
+<pre class="brush: js">Math.sinh(0); // 0
 Math.sinh(1); // 1.1752011936438014
 </pre>
 

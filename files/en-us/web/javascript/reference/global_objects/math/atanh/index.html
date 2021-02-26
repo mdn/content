@@ -72,7 +72,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><code>Math.atanh(<var>x</var>)</code></pre>
+<pre class="brush: js"><code>Math.atanh(<var>x</var>)</code></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -95,7 +95,7 @@ tags:
 
 <h3 id="Using_Math.atanh">Using Math.atanh()</h3>
 
-<pre class="brush: js notranslate">Math.atanh(-2);  // NaN
+<pre class="brush: js">Math.atanh(-2);  // NaN
 Math.atanh(-1);  // -Infinity
 Math.atanh(0);   // 0
 Math.atanh(0.5); // 0.5493061443340548
@@ -155,7 +155,7 @@ Math.atanh(2);   // NaN
     </semantics>
   </math> so this can be emulated by the following function:</p>
 
-<pre class="brush: js notranslate">Math.atanh = Math.atanh || function(x) {
+<pre class="brush: js">Math.atanh = Math.atanh || function(x) {
   return Math.log((1+x)/(1-x)) / 2;
 };
 </pre>

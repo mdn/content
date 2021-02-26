@@ -15,11 +15,13 @@ tags:
 
 <p>The <code><strong>postMessage()</strong></code> method of the {{domxref("Worker")}} interface sends a message to the worker's inner scope. This accepts a single parameter, which is the data to send to the worker. The data may be any value or JavaScript object handled by the <a href="/en-US/docs/Web/Guide/DOM/The_structured_clone_algorithm">structured clone</a> algorithm, which includes cyclical references.</p>
 
+<p>Note this method blocks the thread which receives the message.</p>
+
 <p>The <code>Worker</code> can send back information to the thread that spawned it using the {{domxref("DedicatedWorkerGlobalScope.postMessage")}} method.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">worker.postMessage(message, [transfer]);</pre>
+<pre class="brush: js">worker.postMessage(message, [transfer]);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -40,7 +42,7 @@ tags:
 
 <p>The following code snippet shows the creation of a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor. When either of two form inputs (<code>first</code> and <code>second</code>) have their values changed, {{event("change")}} events invoke <code>postMessage()</code> to send the value of both inputs to the current worker.</p>
 
-<pre class="brush: js notranslate">var myWorker = new Worker('worker.js');
+<pre class="brush: js">var myWorker = new Worker('worker.js');
 
 first.onchange = function() {
   myWorker.postMessage([first.value,second.value]);
@@ -65,7 +67,7 @@ second.onchange = function() {
 
 <h4 id="Main_thread_code">Main thread code:</h4>
 
-<pre class="brush: js notranslate">var myWorker = new ChromeWorker(self.path + 'myWorker.js');
+<pre class="brush: js">var myWorker = new ChromeWorker(self.path + 'myWorker.js');
 
 function handleMessageFromWorker(msg) {
     console.log('incoming message from worker, msg:', msg);
@@ -99,7 +101,7 @@ console.info('arrBuf.byteLength post transfer:', arrBuf.byteLength);
 
 <h4 id="Worker_code">Worker code</h4>
 
-<pre class="brush: js notranslate">self.onmessage = function (msg) {
+<pre class="brush: js">self.onmessage = function (msg) {
     switch (msg.data.aTopic) {
         case 'do_sendWorkerArrBuff':
                 sendWorkerArrBuff(msg.data.aBuf)
@@ -120,7 +122,7 @@ function sendWorkerArrBuff(aBuf) {
 
 <h4 id="Output_logged">Output logged</h4>
 
-<pre class="brush: bash notranslate">arrBuf.byteLength pre transfer: 8                              bootstrap.js:40
+<pre class="brush: bash">arrBuf.byteLength pre transfer: 8                              bootstrap.js:40
 arrBuf.byteLength post transfer: 0                             bootstrap.js:42
 
 from worker, PRE send back aBuf.byteLength: 8                  myWorker.js:5:2

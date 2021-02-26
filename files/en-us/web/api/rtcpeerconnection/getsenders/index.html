@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>senders</em> = <em>rtcPeerConnection</em>.getSenders();
+<pre class="brush: js">var <em>senders</em> = <em>rtcPeerConnection</em>.getSenders();
 </pre>
 
 <h3 id="Return_value">Return value</h3>
@@ -45,7 +45,7 @@ tags:
   {{domxref("MediaStreamTrack.enabled", "enabled")}} to the inverse of the specified
   <code>muting</code>.</p>
 
-<pre class="brush: js notranslate">function setMuting(pc, muting) {
+<pre class="brush: js">function setMuting(pc, muting) {
   let senderList = pc.getSenders();
 
   senderList.forEach(sender) {

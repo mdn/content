@@ -28,11 +28,11 @@ tags:
 <p>Strings can be created as primitives, from string literals, or as objects, using the
   {{jsxref("String/String", "String()")}} constructor:</p>
 
-<pre class="brush: js notranslate">const string1 = "A string primitive";
+<pre class="brush: js">const string1 = "A string primitive";
 const string2 = 'Also a string primitive';
 const string3 = `Yet another string primitive`;</pre>
 
-<pre class="brush: js notranslate">const string4 = new String("A String object");
+<pre class="brush: js">const string4 = new String("A String object");
 </pre>
 
 <p>String primitives and string objects can be used interchangeably in most situations.
@@ -49,13 +49,13 @@ const string3 = `Yet another string primitive`;</pre>
 <p>There are two ways to access an individual character in a string. The first is the
   {{jsxref("String.prototype.charAt()", "charAt()")}} method:</p>
 
-<pre class="brush: js notranslate">return 'cat'.charAt(1) // returns "a"
+<pre class="brush: js">return 'cat'.charAt(1) // returns "a"
 </pre>
 
 <p>The other way (introduced in ECMAScript 5) is to treat the string as an array-like
   object, where individual characters correspond to a numerical index:</p>
 
-<pre class="brush: js notranslate">return 'cat'[1] // returns "a"
+<pre class="brush: js">return 'cat'[1] // returns "a"
 </pre>
 
 <p>When using bracket notation for character access, attempting to delete or assign a
@@ -69,7 +69,7 @@ const string3 = `Yet another string primitive`;</pre>
     href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">less-than
     and greater-than operators</a>:</p>
 
-<pre class="brush: js notranslate">let a = 'a'
+<pre class="brush: js">let a = 'a'
 let b = 'b'
 if (a &lt; b) { // true
   console.log(a + ' is less than ' + b)
@@ -88,7 +88,7 @@ if (a &lt; b) { // true
   to compare without regard to upper or lower case characters, use a function similar to
   this:</p>
 
-<pre class="brush: js notranslate">function isEqual(str1, str2)
+<pre class="brush: js">function isEqual(str1, str2)
 {
     return str1.toUpperCase() === str2.toUpperCase()
 } // isEqual
@@ -112,7 +112,7 @@ if (a &lt; b) { // true
   will automatically wrap the string primitive and call the method or perform the property
   lookup.</p>
 
-<pre class="brush: js notranslate">let s_prim = 'foo'
+<pre class="brush: js">let s_prim = 'foo'
 let s_obj = new String(s_prim)
 
 console.log(typeof s_prim) // Logs "string"
@@ -124,7 +124,7 @@ console.log(typeof s_obj)  // Logs "object"
   <code>eval</code> are treated as source code; <code>String</code> objects are treated as
   all other objects are, by returning the object. For example:</p>
 
-<pre class="brush: js notranslate">let s1 = '2 + 2'              // creates a string primitive
+<pre class="brush: js">let s1 = '2 + 2'              // creates a string primitive
 let s2 = new String('2 + 2')  // creates a String object
 console.log(eval(s1))         // returns the number 4
 console.log(eval(s2))         // returns the string "2 + 2"
@@ -137,7 +137,7 @@ console.log(eval(s2))         // returns the string "2 + 2"
 <p>A <code>String</code> object can always be converted to its primitive counterpart with
   the {{jsxref("String.prototype.valueOf()", "valueOf()")}} method.</p>
 
-<pre class="brush: js notranslate">console.log(eval(s2.valueOf()))  // returns the number 4
+<pre class="brush: js">console.log(eval(s2.valueOf()))  // returns the number 4
 </pre>
 
 <h3 id="Escape_notation">Escape notation</h3>
@@ -230,7 +230,7 @@ console.log(eval(s2))         // returns the string "2 + 2"
 <p>You can use the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Addition">+</a>
   operator to append multiple strings together, like this:</p>
 
-<pre class="brush: js notranslate">let longString = "This is a very long string which needs " +
+<pre class="brush: js">let longString = "This is a very long string which needs " +
                  "to wrap across multiple lines because " +
                  "otherwise my code is unreadable."
 </pre>
@@ -244,7 +244,7 @@ console.log(eval(s2))         // returns the string "2 + 2"
 
 <p>That form looks like this:</p>
 
-<pre class="brush: js notranslate">let longString = "This is a very long string which needs \
+<pre class="brush: js">let longString = "This is a very long string which needs \
 to wrap across multiple lines because \
 otherwise my code is unreadable."
 </pre>
@@ -424,43 +424,41 @@ otherwise my code is unreadable."
 
 <h2 id="HTML_wrapper_methods">HTML wrapper methods</h2>
 
-<div>
-  <div class="notecard note">
-    <p><strong>Deprecated. Avoid these methods.</strong></p>
+<div class="notecard note">
+  <p><strong>Deprecated. Avoid these methods.</strong></p>
 
-    <p>They are of limited use, as they provide only a subset of the available HTML tags
-      and attributes.</p>
-  </div>
-
-  <dl>
-    <dt>{{jsxref("String.prototype.anchor()")}}</dt>
-    <dd>{{htmlattrxref("name", "a", "&lt;a name=\"name\"&gt;")}} (hypertext target)</dd>
-    <dt>{{jsxref("String.prototype.big()")}}</dt>
-    <dd>{{HTMLElement("big")}}</dd>
-    <dt>{{jsxref("String.prototype.blink()")}}</dt>
-    <dd>{{HTMLElement("blink")}}</dd>
-    <dt>{{jsxref("String.prototype.bold()")}}</dt>
-    <dd>{{HTMLElement("b")}}</dd>
-    <dt>{{jsxref("String.prototype.fixed()")}}</dt>
-    <dd>{{HTMLElement("tt")}}</dd>
-    <dt>{{jsxref("String.prototype.fontcolor()")}}</dt>
-    <dd>{{htmlattrxref("color", "font", "&lt;font color=\"color\"&gt;")}}</dd>
-    <dt>{{jsxref("String.prototype.fontsize()")}}</dt>
-    <dd>{{htmlattrxref("size", "font", "&lt;font size=\"size\"&gt;")}}</dd>
-    <dt>{{jsxref("String.prototype.italics()")}}</dt>
-    <dd>{{HTMLElement("i")}}</dd>
-    <dt>{{jsxref("String.prototype.link()")}}</dt>
-    <dd>{{htmlattrxref("href", "a", "&lt;a href=\"url\"&gt;")}} (link to URL)</dd>
-    <dt>{{jsxref("String.prototype.small()")}}</dt>
-    <dd>{{HTMLElement("small")}}</dd>
-    <dt>{{jsxref("String.prototype.strike()")}}</dt>
-    <dd>{{HTMLElement("strike")}}</dd>
-    <dt>{{jsxref("String.prototype.sub()")}}</dt>
-    <dd>{{HTMLElement("sub")}}</dd>
-    <dt>{{jsxref("String.prototype.sup()")}}</dt>
-    <dd>{{HTMLElement("sup")}}</dd>
-  </dl>
+  <p>They are of limited use, as they provide only a subset of the available HTML tags
+    and attributes.</p>
 </div>
+
+<dl>
+  <dt>{{jsxref("String.prototype.anchor()")}}</dt>
+  <dd>{{htmlattrxref("name", "a", "&lt;a name=\"name\"&gt;")}} (hypertext target)</dd>
+  <dt>{{jsxref("String.prototype.big()")}}</dt>
+  <dd>{{HTMLElement("big")}}</dd>
+  <dt>{{jsxref("String.prototype.blink()")}}</dt>
+  <dd>{{HTMLElement("blink")}}</dd>
+  <dt>{{jsxref("String.prototype.bold()")}}</dt>
+  <dd>{{HTMLElement("b")}}</dd>
+  <dt>{{jsxref("String.prototype.fixed()")}}</dt>
+  <dd>{{HTMLElement("tt")}}</dd>
+  <dt>{{jsxref("String.prototype.fontcolor()")}}</dt>
+  <dd>{{htmlattrxref("color", "font", "&lt;font color=\"color\"&gt;")}}</dd>
+  <dt>{{jsxref("String.prototype.fontsize()")}}</dt>
+  <dd>{{htmlattrxref("size", "font", "&lt;font size=\"size\"&gt;")}}</dd>
+  <dt>{{jsxref("String.prototype.italics()")}}</dt>
+  <dd>{{HTMLElement("i")}}</dd>
+  <dt>{{jsxref("String.prototype.link()")}}</dt>
+  <dd>{{htmlattrxref("href", "a", "&lt;a href=\"url\"&gt;")}} (link to URL)</dd>
+  <dt>{{jsxref("String.prototype.small()")}}</dt>
+  <dd>{{HTMLElement("small")}}</dd>
+  <dt>{{jsxref("String.prototype.strike()")}}</dt>
+  <dd>{{HTMLElement("strike")}}</dd>
+  <dt>{{jsxref("String.prototype.sub()")}}</dt>
+  <dd>{{HTMLElement("sub")}}</dd>
+  <dt>{{jsxref("String.prototype.sup()")}}</dt>
+  <dd>{{HTMLElement("sup")}}</dd>
+</dl>
 
 <h2 id="Examples">Examples</h2>
 
@@ -471,7 +469,7 @@ otherwise my code is unreadable."
   used on {{jsxref("null")}}, {{jsxref("undefined")}}, and on {{jsxref("Symbol",
   "symbols")}}. For example:</p>
 
-<pre class="brush: js notranslate">let outputStrings = []
+<pre class="brush: js">let outputStrings = []
 for (let i = 0, n = inputValues.length; i &lt; n; ++i) {
   outputStrings.push(String(inputValues[i]));
 }

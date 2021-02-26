@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <var>string</var> = <var>document</var>.readyState;
+<pre class="brush: js">let <var>string</var> = <var>document</var>.readyState;
 </pre>
 
 <h3 id="Values">Values</h3>
@@ -29,7 +29,7 @@ tags:
   <dd>The {{domxref("document")}} is still loading.</dd>
   <dt><code>interactive</code></dt>
   <dd>The document has finished loading and the document has been parsed but sub-resources
-    such as images, stylesheets and frames are still loading.</dd>
+    such as scripts, images, stylesheets and frames are still loading.</dd>
   <dt><code>complete</code></dt>
   <dd>The document and all sub-resources have finished loading. The state indicates that
     the {{event("load")}} event is about to fire.</dd>
@@ -45,8 +45,8 @@ tags:
     break;
   case "interactive":
     // The document has finished loading. We can now access the DOM elements.
-    // But sub-resources such as images, stylesheets and frames are still loading.
-    var span = document.createElement("span");
+    // But sub-resources such as scripts, images, stylesheets and frames are still loading.
+    const span = document.createElement("span");
     span.textContent = "A &lt;span&gt; element.";
     document.body.appendChild(span);
     break;

@@ -51,7 +51,7 @@ tags:
   step-by-step:<br>
   NOTE: Each step along the way is a valid "arrow function"</p>
 
-<pre class="brush: js notranslate">// Traditional Function
+<pre class="brush: js">// Traditional Function
 function (a){
   return a + 100;
 }
@@ -77,7 +77,7 @@ a =&gt; a + 100;</pre>
 <p>For example, if you have <strong>multiple arguments</strong> or <strong>no
     arguments</strong>, you'll need to re-introduce parentheses around the arguments:</p>
 
-<pre class="brush: js notranslate">// Traditional Function
+<pre class="brush: js">// Traditional Function
 function (a, b){
   return a + b + 100;
 }
@@ -101,7 +101,7 @@ let b = 2;
   need to re-introduce brackets <strong>PLUS the "return"</strong> (arrow functions do not
   magically guess what or when you want to "return"):</p>
 
-<pre class="brush: js notranslate">// Traditional Function
+<pre class="brush: js">// Traditional Function
 function (a, b){
   let chuck = 42;
   return a + b + chuck;
@@ -113,74 +113,72 @@ function (a, b){
   return a + b + chuck;
 }</pre>
 
-<div>And finally, for <strong>named functions</strong> we treat arrow expressions like
-  variables</div>
+<p>And finally, for <strong>named functions</strong> we treat arrow expressions like
+  variables</p>
 
-<div>
-  <pre class="brush: js notranslate">// Traditional Function
+<pre class="brush: js">// Traditional Function
 function bob (a){
   return a + 100;
 }
 
 // Arrow Function
 let bob = a =&gt; a + 100;</pre>
-</div>
 
 <h2 id="Syntax">Syntax</h2>
 
 <h3 id="Basic_syntax">Basic syntax</h3>
 
-<p class="brush: js notranslate">One param. With simple expression return is not needed:
+<p class="brush: js">One param. With simple expression return is not needed:
 </p>
 
-<pre class="brush: js notranslate">param =&gt; expression</pre>
+<pre class="brush: js">param =&gt; expression</pre>
 
-<p class="brush: js notranslate">Multiple params require parentheses. With simple
+<p class="brush: js">Multiple params require parentheses. With simple
   expression return is not needed:</p>
 
-<pre class="brush: js notranslate">(param1, paramN) =&gt; expression</pre>
+<pre class="brush: js">(param1, paramN) =&gt; expression</pre>
 
-<p class="brush: js notranslate">Multiline statements require body brackets and return:
+<p class="brush: js">Multiline statements require body brackets and return:
 </p>
 
-<pre class="brush: js notranslate">param =&gt; {
+<pre class="brush: js">param =&gt; {
   let a = 1;
   return a + param;
 }</pre>
 
-<p class="brush: js notranslate">Multiple params require parentheses. Multiline statements
+<p class="brush: js">Multiple params require parentheses. Multiline statements
   require body brackets and return:</p>
 
-<pre class="brush: js notranslate">(param1, paramN) =&gt; {
+<pre class="brush: js">(param1, paramN) =&gt; {
    let a = 1;
    return a + param1 + paramN;
 }</pre>
 
 <h3 id="Advanced_syntax">Advanced syntax</h3>
 
-<p class="brush: js notranslate">To return an object literal expression requires
+<p class="brush: js">To return an object literal expression requires
   parentheses around expression:</p>
 
 <pre
-  class="brush: js notranslate">params =&gt; ({foo: "a"}) // returning the object {foo: "a"}</pre>
+  class="brush: js">params =&gt; ({foo: "a"}) // returning the object {foo: "a"}</pre>
 
-<p class="brush: js notranslate"><a
+<p class="brush: js"><a
     href="/en-US/docs/Web/JavaScript/Reference/Functions/Rest_parameters">Rest
     parameters</a> are supported:</p>
 
-<pre class="brush: js notranslate">(a, b, ...r) =&gt; expression</pre>
+<pre class="brush: js">(a, b, ...r) =&gt; expression</pre>
 
-<p class="brush: js notranslate"><a
+<p class="brush: js"><a
     href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">Default
     parameters</a> are supported:</p>
 
-<pre class="brush: js notranslate">(a=400, b=20, c) =&gt; expression</pre>
+<pre class="brush: js">(a=400, b=20, c) =&gt; expression</pre>
 
 <p class="brush: js"><a
     href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring</a>
   within params supported:</p>
 
-<pre class="brush: js notranslate">([a, b] = [10, 20]) =&gt; a + b;  // result is 30
+<pre class="brush: js">([a, b] = [10, 20]) =&gt; a + b;  // result is 30
 ({ a, b } = { a: 10, b: 20 }) =&gt; a + b; // result is 30
 </pre>
 
@@ -191,7 +189,7 @@ let bob = a =&gt; a + 100;</pre>
 <p>As stated previously, arrow function expressions are best suited for non-method
   functions. Let's see what happens when we try to use them as methods:</p>
 
-<pre class="brush: js notranslate">'use strict';
+<pre class="brush: js">'use strict';
 
 var obj = { // does not create a new scope
   i: 10,
@@ -207,7 +205,7 @@ obj.c(); // prints 10, Object {...}</pre>
 <p>Arrow functions do not have their own <code>this</code>. Another example involving
   {{jsxref("Object.defineProperty()")}}:</p>
 
-<pre class="brush: js notranslate">'use strict';
+<pre class="brush: js">'use strict';
 
 var obj = {
   a: 10
@@ -241,10 +239,10 @@ Object.defineProperty(obj, 'b', {
   </a>work as expected with Traditional functions, because we establish the scope for each
   of the methods:</p>
 
-<pre class="brush: js notranslate">// ----------------------
+<pre class="brush: js">// ----------------------
 // Traditional Example
 // ----------------------
-// A simplistic object with it's very own "this".
+// A simplistic object with its very own "this".
 var obj = {
     num: 100
 }
@@ -273,11 +271,11 @@ console.log(result(1, 2, 3)) // result 106</pre>
 <p>With Arrow functions, since our <code>add</code> function is essentially created on the
   <code>window</code> (global) scope, it will assume <code>this</code> is the window.</p>
 
-<pre class="brush: js notranslate">// ----------------------
+<pre class="brush: js">// ----------------------
 // Arrow Example
 // ----------------------
 
-// A simplistic object with it's very own "this".
+// A simplistic object with its very own "this".
 var obj = {
     num: 100
 }
@@ -307,7 +305,7 @@ console.log(bound(1, 2, 3)) // result 2026
 <p><strong>Traditional Example:</strong></p>
 
 <pre
-  class="brush: js notranslate">var obj = {
+  class="brush: js">var obj = {
     count : 10,
     doSomethingLater : function (){
         setTimeout(function(){ // the function executes on the window scope
@@ -321,7 +319,7 @@ obj.doSomethingLater(); // console prints "NaN", because the property "count" is
 
 <p><strong>Arrow Example:</strong></p>
 
-<pre class="brush: js notranslate">var obj = {
+<pre class="brush: js">var obj = {
     count : 10,
     doSomethingLater : function(){ // of course, arrow functions are not suited for methods
         setTimeout( () =&gt; { // since the arrow function was created within the "obj", it assumes the object's "this"
@@ -340,7 +338,7 @@ obj.doSomethingLater();</pre>
     object</a>. Thus, in this example, <code>arguments</code> is a reference to the
   arguments of the enclosing scope:</p>
 
-<pre class="brush: js notranslate">var arguments = [1, 2, 3];
+<pre class="brush: js">var arguments = [1, 2, 3];
 var arr = () =&gt; arguments[0];
 
 arr(); // 1
@@ -356,7 +354,7 @@ foo(3); // 3 + 3 = 6</pre>
     href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest
     parameters</a> is a good alternative to using an <code>arguments</code> object.</p>
 
-<pre class="brush: js notranslate">function foo(n) {
+<pre class="brush: js">function foo(n) {
   var f = (...args) =&gt; args[0] + n;
   return f(10);
 }
@@ -368,14 +366,14 @@ foo(1); // 11</pre>
 <p>Arrow functions cannot be used as constructors and will throw an error when used with
   <code>new</code>.</p>
 
-<pre class="brush: js notranslate">var Foo = () =&gt; {};
+<pre class="brush: js">var Foo = () =&gt; {};
 var foo = new Foo(); // TypeError: Foo is not a constructor</pre>
 
 <h3 id="Use_of_prototype_property">Use of <code>prototype</code> property</h3>
 
 <p>Arrow functions do not have a <code>prototype</code> property.</p>
 
-<pre class="brush: js notranslate">var Foo = () =&gt; {};
+<pre class="brush: js">var Foo = () =&gt; {};
 console.log(Foo.prototype); // undefined
 </pre>
 
@@ -394,7 +392,7 @@ console.log(Foo.prototype); // undefined
 <p>In a concise body, only an expression is specified, which becomes the implicit return
   value. In a block body, you must use an explicit <code>return</code> statement.</p>
 
-<pre class="brush: js notranslate">var func = x =&gt; x * x;
+<pre class="brush: js">var func = x =&gt; x * x;
 // concise body syntax, implied "return"
 
 var func = (x, y) =&gt; { return x + y; };
@@ -406,7 +404,7 @@ var func = (x, y) =&gt; { return x + y; };
 <p>Keep in mind that returning object literals using the concise body syntax
   <code>params =&gt; {object:literal}</code> will not work as expected.</p>
 
-<pre class="brush: js notranslate">var func = () =&gt; { foo: 1 };
+<pre class="brush: js">var func = () =&gt; { foo: 1 };
 // Calling func() returns undefined!
 
 var func = () =&gt; { foo: function() {} };
@@ -417,13 +415,13 @@ var func = () =&gt; { foo: function() {} };
 
 <p>You must wrap the object literal in parentheses:</p>
 
-<pre class="brush: js notranslate">var func = () =&gt; ({ foo: 1 });</pre>
+<pre class="brush: js">var func = () =&gt; ({ foo: 1 });</pre>
 
 <h3 id="Line_breaks">Line breaks</h3>
 
 <p>An arrow function cannot contain a line break between its parameters and its arrow.</p>
 
-<pre class="brush: js notranslate">var func = (a, b, c)
+<pre class="brush: js">var func = (a, b, c)
   =&gt; 1;
 // SyntaxError: expected expression, got '=&gt;'</pre>
 
@@ -431,7 +429,7 @@ var func = () =&gt; { foo: function() {} };
   parentheses/braces as seen below to ensure that the code stays pretty and fluffy. You
   can also put line breaks between arguments.</p>
 
-<pre class="brush: js notranslate">var func = (a, b, c) =&gt;
+<pre class="brush: js">var func = (a, b, c) =&gt;
   1;
 
 var func = (a, b, c) =&gt; (
@@ -457,7 +455,7 @@ var func = (
     href="/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">operator
     precedence</a> compared to regular functions.</p>
 
-<pre class="brush: js notranslate">let callback;
+<pre class="brush: js">let callback;
 
 callback = callback || function() {}; // ok
 
@@ -471,7 +469,7 @@ callback = callback || (() =&gt; {});    // ok
 
 <h3 id="Basic_usage">Basic usage</h3>
 
-<pre class="brush: js notranslate">// An empty arrow function returns undefined
+<pre class="brush: js">// An empty arrow function returns undefined
 let empty = () =&gt; {};
 
 (() =&gt; 'foobar')();
@@ -530,10 +528,7 @@ setTimeout( () =&gt; {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.functions.arrow_functions")}}</p>
-</div>
+<p>{{Compat("javascript.functions.arrow_functions")}}</p>
 
 <h2 id="See_also">See also</h2>
 

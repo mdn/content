@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>obj</var>.__lookupGetter__(<var>sprop</var>)</pre>
+<pre class="brush: js"><var>obj</var>.__lookupGetter__(<var>sprop</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -44,7 +44,7 @@ tags:
 <h3 id="Standard-compliant_and_non-standard_ways_to_get_a_property_getter">
   Standard-compliant and non-standard ways to get a property getter</h3>
 
-<pre class="brush: js notranslate">var obj = {
+<pre class="brush: js">var obj = {
   get foo() {
     return Math.random() &gt; 0.5 ? 'foo' : 'bar';
   }
@@ -77,10 +77,7 @@ Object.getOwnPropertyDescriptor(obj, "foo").get;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Object.lookupGetter")}}</p>
-</div>
+<p>{{Compat("javascript.builtins.Object.lookupGetter")}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -13,7 +13,7 @@ tags:
 
 <p>For certain XUL elements and pseudo-elements that use an image from the {{CSSxRef("list-style-image")}} property, this property specifies a region of the image that is used in place of the whole image. This allows elements to use different pieces of the same image to improve performance.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Keyword value */
+<pre class="brush: css no-line-numbers">/* Keyword value */
 -moz-image-region: auto;
 
 /* &lt;shape&gt; value */
@@ -47,13 +47,13 @@ tags:
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{CSSSyntax}}</pre>
+<pre class="brush: css">{{CSSSyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Clipping_an_image">Clipping an image</h3>
 
-<pre class="brush:css notranslate">#example-button {
+<pre class="brush:css">#example-button {
   /* display only the 4x4 area from the top left of this image */
   list-style-image: url("chrome://example/skin/example.png");
   -moz-image-region: rect(0px, 4px, 4px, 0px);

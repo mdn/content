@@ -67,7 +67,7 @@ tags:
 
 <p>In the following example, the form provides a slider whose value can range between <code>0</code> and <code>100</code>, and an {{HTMLElement("input")}} element into which you can enter a second number. The two numbers are added together, and the result is displayed in the <code>&lt;output&gt;</code> element each time the value of any of the controls changes.</p>
 
-<pre class="brush: html notranslate">&lt;form oninput="result.value=parseInt(a.value)+parseInt(b.value)"&gt;
+<pre class="brush: html">&lt;form oninput="result.value=parseInt(a.value)+parseInt(b.value)"&gt;
   &lt;input type="range" id="b" name="b" value="50" /&gt; +
   &lt;input type="number" id="a" name="a" value="10" /&gt; =
   &lt;output name="result" for="a b"&gt;60&lt;/output&gt;

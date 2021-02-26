@@ -167,16 +167,19 @@ team, which currently consists of [@chrisdavidmills](https://github.com/chrisdav
   team, which consists of:
   * [@hamishwillee](https://github.com/hamishwillee)
   * [@Elchi3](https://github.com/Elchi3)
+  * [@mirunacurtean](https://github.com/mirunacurtean)
 * [CSS reference content](https://github.com/mdn/content/tree/main/files/en-us/web/css)
   — the [@yari-content-css](https://github.com/orgs/mdn/teams/yari-content-css)
   team, which conists of:
   * [@rachelandrew](https://github.com/rachelandrew)
   * [@ericwbailey](https://github.com/ericwbailey)
+  * [@mirunacurtean](https://github.com/mirunacurtean)
 * [HTML reference content](https://github.com/mdn/content/tree/main/files/en-us/web/html)
   — the [@yari-content-html](https://github.com/orgs/mdn/teams/yari-content-html)
   team, which consists of:
   * [@rachelandrew](https://github.com/rachelandrew)
   * [@ericwbailey](https://github.com/ericwbailey)
+  * [@mirunacurtean](https://github.com/mirunacurtean)
 * [JavaScript reference content](https://github.com/mdn/content/tree/main/files/en-us/web/javascript)
   — the [@yari-content-javascript](https://github.com/orgs/mdn/teams/yari-content-javascript)
   team, which consists of:

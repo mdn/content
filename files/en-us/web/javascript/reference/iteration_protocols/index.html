@@ -16,7 +16,7 @@ tags:
 
 <p>There are two protocols: The <a href="#the_iterable_protocol">iterable protocol</a> and the <a href="#the_iterator_protocol">iterator protocol</a>.</p>
 
-<h2 id="The_iterable_protocol">The iterable protocol</h2>
+<h2 id="the_iterable_protocol">The iterable protocol</h2>
 
 <p><strong>The iterable protocol</strong> allows JavaScript objects to define or customize their iteration behavior, such as what values are looped over in a {{jsxref("Statements/for...of", "for...of")}} construct. Some built-in types are <a href="#built-in_iterables">built-in iterables</a> with a default iteration behavior, such as {{jsxref("Array")}} or {{jsxref("Map")}}, while other types (such as {{jsxref("Object")}}) are not.</p>
 
@@ -43,7 +43,7 @@ tags:
 
 <p>This function can be an ordinary function, or it can be a generator function, so that when invoked, an iterator object is returned. Inside of this generator function, each entry can be provided by using <code>yield</code>.</p>
 
-<h2 id="The_iterator_protocol">The iterator protocol</h2>
+<h2 id="the_iterator_protocol">The iterator protocol</h2>
 
 <p><strong>The iterator protocol</strong> defines a standard way to produce a sequence of values (either finite or infinite), and potentially a return value when all values have been generated.</p>
 
@@ -84,7 +84,7 @@ tags:
 
 <p>Doing so allows an iterator to be consumed by the various syntaxes expecting iterables. Thus, it is seldom useful to implement the Iterator Protocol without also implementing Iterable.</p>
 
-<pre class="brush: js notranslate">// Satisfies both the Iterator Protocol and Iterable
+<pre class="brush: js">// Satisfies both the Iterator Protocol and Iterable
 const myIterator = {
     next: function() {
         // ...
@@ -100,14 +100,14 @@ const myIterator = {
 
 <p>A {{jsxref("String")}} is an example of a built-in iterable object:</p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 const someString = 'hi';
 console.log(typeof someString[Symbol.iterator]); // "function"
 </pre>
 
 <p><code>String</code>'s {{jsxref("String/@@iterator", "default iterator", "", 1)}} returns the string's code points one by one:</p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 const iterator = someString[Symbol.iterator]();
 console.log(iterator + ''); // "[object String Iterator]"
 
@@ -117,11 +117,11 @@ console.log(iterator.next()); // { value: undefined, done: true }</pre>
 
 <p>Some built-in constructs—such as the {{jsxref("Operators/Spread_operator", "spread syntax", "", 1)}}—use the same iteration protocol under the hood:</p>
 
-<pre class="brush: js notranslate">console.log([...someString]); // ["h", "i"]</pre>
+<pre class="brush: js">console.log([...someString]); // ["h", "i"]</pre>
 
 <p>You can redefine the iteration behavior by supplying our own <code>@@iterator</code>:</p>
 
-<pre class="brush: js notranslate">// need to construct a String object explicitly to avoid auto-boxing
+<pre class="brush: js">// need to construct a String object explicitly to avoid auto-boxing
 const someString = new String('hi');
 
 someString[Symbol.iterator] = function () {
@@ -142,7 +142,7 @@ someString[Symbol.iterator] = function () {
 
 <p>Notice how redefining <code>@@iterator</code> affects the behavior of built-in constructs that use the iteration protocol:</p>
 
-<pre class="brush: js notranslate">console.log([...someString]); // ["bye"]
+<pre class="brush: js">console.log([...someString]); // ["bye"]
 console.log(someString + ''); // "hi"
 </pre>
 
@@ -156,7 +156,7 @@ console.log(someString + ''); // "hi"
 
 <p>You can make your own iterables like this:</p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 const myIterable = {};
 myIterable[Symbol.iterator] = function* () {
     yield 1;
@@ -177,7 +177,7 @@ console.log([...myIterable]); // [1, 2, 3]
  <li>{{jsxref("WeakSet", "new WeakSet([<var>iterable</var>])")}}</li>
 </ul>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 new Map([[1, 'a'], [2, 'b'], [3, 'c']]).get(2); // "b"
 
 const myObj = {};
@@ -210,7 +210,7 @@ new WeakSet(function* () {
 
 <p>Some statements and expressions expect iterables, for example the {{jsxref("Statements/for...of", "for...of")}} loops, the {{jsxref("Operators/Spread_syntax", "spread operator", "", 1)}}), {{jsxref("Operators/yield*", "yield*")}}, and {{jsxref("Operators/Destructuring_assignment", "destructuring assignment")}}:</p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 for (const value of ['a', 'b', 'c']) {
     console.log(value);
 }
@@ -237,7 +237,7 @@ console.log(a);            // "a"
 
 <p>Using one is likely to result in runtime errors or buggy behavior:</p>
 
-<pre class="brush: js example-bad notranslate">
+<pre class="brush: js example-bad">
 const nonWellFormedIterable = {};
 nonWellFormedIterable[Symbol.iterator] = () =&gt; 1;
 [...nonWellFormedIterable]; // TypeError: [] is not a function
@@ -247,7 +247,7 @@ nonWellFormedIterable[Symbol.iterator] = () =&gt; 1;
 
 <h3 id="Simple_iterator">Simple iterator</h3>
 
-<pre class="brush: js notranslate">function makeIterator(array) {
+<pre class="brush: js">function makeIterator(array) {
   let nextIndex = 0
   return {
     next: function() {
@@ -270,7 +270,7 @@ console.log(it.next().done);  // true
 
 <h3 id="Infinite_iterator">Infinite iterator</h3>
 
-<pre class="brush: js notranslate">function idMaker() {
+<pre class="brush: js">function idMaker() {
   let index = 0;
   return {
     next: function() {
@@ -292,7 +292,7 @@ console.log(it.next().value); // '2'
 
 <h3 id="With_a_generator">With a generator</h3>
 
-<pre class="brush: js notranslate">function* makeSimpleGenerator(array) {
+<pre class="brush: js">function* makeSimpleGenerator(array) {
   let nextIndex = 0;
   while (nextIndex &lt; array.length) {
     yield array[nextIndex++];
@@ -322,7 +322,7 @@ console.log(it.next().value); // '2'
 
 <h3 id="With_ES2015_class">With ES2015 class</h3>
 
-<pre class="brush: js notranslate">class SimpleClass {
+<pre class="brush: js">class SimpleClass {
   constructor(data) {
     this.data = data;
   }
@@ -356,7 +356,7 @@ for (const val of simple) {
 
 <p>A {{jsxref("Generator", "generator object", "", 1)}} is <em>both</em> iterator and iterable:</p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 const aGeneratorObject = function* () {
   yield 1;
   yield 2;

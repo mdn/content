@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">null</pre>
+<pre class="brush: js">null</pre>
 
 <h2 id="Description">Description</h2>
 
@@ -28,10 +28,10 @@ tags:
   to no object. In APIs, <code>null</code> is often retrieved in a place where an object
   can be expected but no object is relevant. </p>
 
-<pre class="brush: js notranslate">// foo does not exist. It is not defined and has never been initialized:
+<pre class="brush: js">// foo does not exist. It is not defined and has never been initialized:
 foo; //ReferenceError: foo is not defined</pre>
 
-<pre class="brush: js notranslate">// foo is known to exist now but it has no type or value:
+<pre class="brush: js">// foo is known to exist now but it has no type or value:
 var foo = null;
 foo; //null
 </pre>
@@ -46,7 +46,7 @@ foo; //null
     between equality (==) and identity (===) operators</a>, as the former performs
   type-conversion.</p>
 
-<pre class="brush: js notranslate">typeof null          // "object" (not "null" for legacy reasons)
+<pre class="brush: js">typeof null          // "object" (not "null" for legacy reasons)
 typeof undefined     // "undefined"
 null === undefined   // false
 null  == undefined   // true

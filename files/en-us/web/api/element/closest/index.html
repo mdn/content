@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <var>closestElement</var> = <var>targetElement</var>.closest(<var>selectors</var>);
+<pre class="brush: js">var <var>closestElement</var> = <var>targetElement</var>.closest(<var>selectors</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -48,7 +48,7 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;article&gt;
+<pre class="brush: html">&lt;article&gt;
   &lt;div id="div-01"&gt;Here is div-01
     &lt;div id="div-02"&gt;Here is div-02
       &lt;div id="div-03"&gt;Here is div-03&lt;/div&gt;
@@ -58,7 +58,7 @@ tags:
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">var el = document.getElementById('div-03');
+<pre class="brush: js">var el = document.getElementById('div-03');
 
 var r1 = el.closest("#div-02");
 // returns the element with the id=div-02
@@ -78,7 +78,7 @@ var r4 = el.closest(":not(div)");
   <code>element.matches()</code> (or a prefixed equivalent, meaning IE9+), a polyfill
   exists:</p>
 
-<pre class="brush: js notranslate">if (!Element.prototype.matches) {
+<pre class="brush: js">if (!Element.prototype.matches) {
   Element.prototype.matches =
     Element.prototype.msMatchesSelector ||
     Element.prototype.webkitMatchesSelector;
@@ -100,7 +100,7 @@ if (!Element.prototype.closest) {
   job very slowly, but eventually. However, it will only support CSS 2.1 selectors in IE
   8, and it can cause severe lag spikes in production websites.</p>
 
-<pre class="brush: js notranslate">if (window.Element &amp;&amp; !Element.prototype.closest) {
+<pre class="brush: js">if (window.Element &amp;&amp; !Element.prototype.closest) {
   Element.prototype.closest = function(s) {
     var matches = (this.document || this.ownerDocument).querySelectorAll(s),
         i,

@@ -26,7 +26,7 @@ tags:
 
 <p>When both quoted and unquoted user defined text values are permitted, the specification will list <code>&lt;custom-ident&gt; | &lt;string&gt;</code>, meaning quotes are optional, such as is the case with animation names:</p>
 
-<pre class="brush: css notranslate">@keyframe validIdent {
+<pre class="brush: css">@keyframe validIdent {
   /* keyframes go here */
 }
 @keyframe 'validString' {
@@ -35,14 +35,14 @@ tags:
 
 <p>Some text values are not valid if encompassed in quotes. For example, the value of {{cssxref("grid-area")}} can be a <code>&lt;custom-ident&gt;</code>, so if we had a grid area named <code>content</code> we would use it without quotes:</p>
 
-<pre class="brush: css notranslate">.item {
+<pre class="brush: css">.item {
   grid-area: content;
 }
 </pre>
 
 <p>In comparison, a data type that is a {{cssxref("&lt;string&gt;")}}, such as a string value of the {{cssxref("content")}} property, must be quoted:</p>
 
-<pre class="brush: css notranslate">.item::after {
+<pre class="brush: css">.item::after {
     content: "This is my content.";
 }
 </pre>
@@ -55,11 +55,11 @@ tags:
 
 <p>When viewing CSS property value syntax in a CSS specification or the MDN property page, allowable keywords will be listed in the following form. The following values are the pre-defined keyword values allowed for {{cssxref("float")}}.</p>
 
-<pre class="brush: css notranslate">left <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> right <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> none <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> inline-start <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> inline-end</pre>
+<pre class="brush: css">left <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> right <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> none <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> inline-start <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> inline-end</pre>
 
 <p>Such values are used without quotes:</p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
     float: left;
 }
 </code></pre>
@@ -78,7 +78,7 @@ tags:
 
 <p>A {{cssxref("&lt;url&gt;")}} type uses functional notation, which accepts a <code>&lt;string&gt;</code> that is a URL. This may be an absolute URL or a relative URL. For example, if you wanted to include a background image, you might use either of the following.</p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   background-image: url("images/my-background.png");
 }</code>
 
@@ -377,7 +377,7 @@ tags:
 
 <p>As an example, if you specify the {{cssxref("width")}} of a box as a percentage, it refers to the percentage of the box's parent's computed width:</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   width: 50%;
 }</pre>
 

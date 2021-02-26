@@ -43,7 +43,7 @@ tags:
  <li>
   <p>"spanning" (the default): the extension will see events from private and non-private windows and tabs. Windows and tabs will get an <code>incognito</code> property in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/Window">Window</a></code> or <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab">Tab</a></code> that represents them. This property indicates whether or not the object is private:</p>
 
-  <pre class="notranslate brush: js">browser.windows.getLastFocused().then((windowInfo) =&gt; {
+  <pre class="brush: js">browser.windows.getLastFocused().then((windowInfo) =&gt; {
   console.log(`Window is private: ${windowInfo.incognito}`);
 });</pre>
  </li>

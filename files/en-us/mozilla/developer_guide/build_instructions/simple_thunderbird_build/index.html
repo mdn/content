@@ -33,7 +33,7 @@ tags:
 
 <p>As of April 2019, 10.0.17134.0 is needed to compile Thunderbird. Assuming standard installation locations, copy these 17 files to <code>C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\shared</code>.</p>
 
-<pre class="notranslate"><code>18/10/2010  16:11             7,334 MAPIAux.h
+<pre><code>18/10/2010  16:11             7,334 MAPIAux.h
 02/06/2009  17:02             7,938 MAPICode.h
 02/06/2009  17:02            22,960 MAPIDbg.h
 02/06/2009  17:02            84,644 MAPIDefS.h
@@ -59,7 +59,7 @@ tags:
 
 <p>Get the latest Mozilla source code from Mozilla's <code>mozilla-central</code> Mercurial code repository, and check it out into a local directory <code>source/</code> (or however you want to call it). Then, get the latest Thunderbird source code from Mozilla's <code>comm-central</code> Mercurial code repository. It now needs to be placed <strong>inside</strong> the Mozilla source code, in a directory named <code>comm/</code> (this is inverse from Thunderbird 59 and earlier):</p>
 
-<pre class="notranslate">hg clone https://hg.mozilla.org/mozilla-central source/
+<pre>hg clone https://hg.mozilla.org/mozilla-central source/
 cd source/
 hg clone https://hg.mozilla.org/comm-central comm/
 </pre>
@@ -72,16 +72,16 @@ hg clone https://hg.mozilla.org/comm-central comm/
 
 <p>To build Thunderbird, you need to add a file named <code>mozconfig</code> to the root directory of the mozilla-central checkout that contains the following line:</p>
 
-<pre class="notranslate">ac_add_options --enable-application=comm/mail</pre>
+<pre>ac_add_options --enable-application=comm/mail</pre>
 
 <p>You can create a file with this line by doing this in the <code>source/</code> directory:</p>
 
-<pre class="notranslate">echo 'ac_add_options --enable-application=comm/mail' &gt; mozconfig
+<pre>echo 'ac_add_options --enable-application=comm/mail' &gt; mozconfig
 </pre>
 
 <p>If you omit this line, the build system will build Firefox instead. Other build configuration options can be added to this file, although it's <strong>strongly</strong> recommended that you only use options that you fully understand. For example, to create a debug build instead of a release build, that file would also contain the line:</p>
 
-<pre class="notranslate">ac_add_options --enable-debug</pre>
+<pre>ac_add_options --enable-debug</pre>
 
 <p>Each of these <code>ac_add_options</code> entries needs to be on its own line.</p>
 
@@ -93,12 +93,12 @@ hg clone https://hg.mozilla.org/comm-central comm/
 
 <p>Add the following line to your <code>mozconfig</code> file:</p>
 
-<pre class="notranslate">ac_add_options --enable-calendar
+<pre>ac_add_options --enable-calendar
 </pre>
 
 <p>To add that line you can do this in the <code>source/</code> directory:</p>
 
-<pre class="notranslate">echo 'ac_add_options --enable-calendar' &gt;&gt; mozconfig
+<pre>echo 'ac_add_options --enable-calendar' &gt;&gt; mozconfig
 </pre>
 
 <h2 id="Building">Building</h2>
@@ -107,7 +107,7 @@ hg clone https://hg.mozilla.org/comm-central comm/
 
 <p>To start the build, cd into the source directory, and run:</p>
 
-<pre class="notranslate">./mach build
+<pre>./mach build
 </pre>
 
 <p>mach is our command-line tool to streamline common developer tasks. See the <a href="/en-US/docs/Mozilla/Developer_guide/mach">mach</a> article for more.</p>
@@ -120,7 +120,7 @@ hg clone https://hg.mozilla.org/comm-central comm/
 
 <p>To run your build, you can use</p>
 
-<pre class="line-numbers  language-html notranslate"><code class="language-html">./mach run</code></pre>
+<pre class="line-numbers  language-html"><code class="language-html">./mach run</code></pre>
 
 <p>There are various command line parameters you can add, e.g. to specify a profile.</p>
 
@@ -138,7 +138,7 @@ hg clone https://hg.mozilla.org/comm-central comm/
 
 <p>In your source directory:</p>
 
-<pre class="notranslate">hg pull -u
+<pre>hg pull -u
 cd comm
 hg pull -u
 cd ..
@@ -146,7 +146,7 @@ cd ..
 
 <p>or same commands shorter:</p>
 
-<pre class="notranslate">hg pull -u; (cd comm; hg pull -u)
+<pre>hg pull -u; (cd comm; hg pull -u)
 </pre>
 
 <p>Then just re-run the <em>mach</em> command above. This will only recompile files that changed, but it's still a long haul.</p>
@@ -155,29 +155,29 @@ cd ..
 
 <p>To build after making changes, run</p>
 
-<pre class="notranslate">./mach build
+<pre>./mach build
 </pre>
 
 <p>again. This will only rebuild what is necessary for these changes. It is also possible to rebuild specifically.</p>
 
 <p>If you changed C or C++ files, run:</p>
 
-<pre class="notranslate">./mach build binaries
+<pre>./mach build binaries
 </pre>
 
 <p>If you changed JavaScript or XUL files, on macOS or Linux you don't have to rebuild since the files in the object directory are linked to the ones in the source directory. On Windows run:</p>
 
-<pre class="notranslate">./mach build path/to/dir
+<pre>./mach build path/to/dir
 </pre>
 
 <p>This is the tricky bit since you need to specify the directory that installs the files, which may be a parent directory of the changed file's directory. For example, to just rebuild the Lightning calendar extension:</p>
 
-<pre class="notranslate">./mach build comm/calendar/lightning
+<pre>./mach build comm/calendar/lightning
 </pre>
 
 <p>For all other changes run the full rebuild:</p>
 
-<pre class="notranslate">./mach build
+<pre>./mach build
 </pre>
 
 <h2 id="Problems_Building">Problems Building?</h2>
@@ -198,7 +198,7 @@ cd ..
  <li>Check for <code>@TOPSRCDIR@</code> or relative paths in your mozconfig. Those have caused several problems historically and tend to be poorly tested when the build system changes.</li>
  <li>If on Windows you get link errors like "LNK1102: out of memory" or "LNK1318: Unexpected PDB error; OK (0)", try deleting the largest .PDB files before rushing out the door to buy more RAM. Clobbering (see below) will also remove those files.</li>
  <li>Try with a clean obj-dir. You can clean out previous build artefacts using
-  <pre class="language-html notranslate"><code class="language-html">./mach clobber</code></pre>
+  <pre class="language-html"><code class="language-html">./mach clobber</code></pre>
  </li>
 </ul>
 

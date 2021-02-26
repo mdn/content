@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <var>openerWindow</var> = window.opener
+<pre class="brush: js">const <var>openerWindow</var> = window.opener
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -47,7 +47,7 @@ tags:
     <code>{{htmlattrxref("rel", "a")}}=noopener</code> on a link, or passing
     <code>noopener</code> in the {{domxref("Window.open", "windowFeatures")}} parameter.
   </li>
-  <li>From Firefox 79, windows opened because of links with a {{htmlattrxref("target",
+  <li>Windows opened because of links with a {{htmlattrxref("target",
     "a")}} of <code>_blank</code> don't get an <code>opener</code>, unless explicitly
     requested with <code>{{htmlattrxref("rel", "a")}}=opener</code>.</li>
   <li>Having a {{HTTPHeader("Cross-Origin-Opener-Policy")}} header with a value of

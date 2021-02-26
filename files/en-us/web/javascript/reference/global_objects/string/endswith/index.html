@@ -25,7 +25,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>str</var>.endsWith(<var>searchString</var>[, <var>length</var>])</pre>
+  class="brush: js"><var>str</var>.endsWith(<var>searchString</var>[, <var>length</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -51,7 +51,7 @@ tags:
 
 <h3 id="Using_endsWith">Using endsWith()</h3>
 
-<pre class="brush: js notranslate">let str = 'To be, or not to be, that is the question.'
+<pre class="brush: js">let str = 'To be, or not to be, that is the question.'
 
 console.log(str.endsWith('question.'))  // true
 console.log(str.endsWith('to be'))      // false
@@ -64,7 +64,7 @@ console.log(str.endsWith('to be', 19))  // true
   in all JavaScript implementations yet. However, you can polyfill
   <code>String.prototype.endsWith()</code> with the following snippet:</p>
 
-<pre class="brush: js notranslate">if (!String.prototype.endsWith) {
+<pre class="brush: js">if (!String.prototype.endsWith) {
   String.prototype.endsWith = function(search, this_len) {
     if (this_len === undefined || this_len &gt; this.length) {
       this_len = this.length;

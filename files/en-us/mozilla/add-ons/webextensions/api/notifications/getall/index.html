@@ -43,7 +43,7 @@ tags:
 
 <p>This example shows a notification when the user clicks a browser action, unless the notification was already being shown, in which case it clears the notification. It uses getAll() to figure out whether the notification is being shown:</p>
 
-<pre class="notranslate brush: js">var myNotification = "my-notification";
+<pre class="brush: js">var myNotification = "my-notification";
 
 function toggleAlarm(all) {
   let ids = Object.keys(all);
@@ -69,7 +69,7 @@ browser.browserAction.onClicked.addListener(handleClick);</pre>
 
 <p>This example logs the title of all active notifications:</p>
 
-<pre class="notranslate brush: js">function logNotifications(all) {
+<pre class="brush: js">function logNotifications(all) {
   for (let id in all) {
     console.log(`Title: ${all[id].title}`);
   }
