@@ -8,8 +8,6 @@ name: PR Test
 
 on:
   pull_request_target:
-    branches:
-      - 2453-deploy-build-files-in-pr
 
 jobs:
   tests:
