@@ -13,15 +13,18 @@ tags:
   - Web
   - header
 ---
-<div>{{HTTPSidebar}}</div>
+<div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
+
+<div class="notecard warning">
+  <h4>Warning</h4>
+  <p>The header has now been renamed to <code>Permissions-Policy</code> in the spec, and this article will eventually be updated to reflect that change.</p>
+  </div>
 
 <p><span class="seoSummary">The HTTP <strong><code>Feature-Policy</code></strong> header provides a mechanism to allow and deny the use of browser features in its own frame, and in content within any {{HTMLElement("iframe")}} elements in the document.</span></p>
 
-<div class="note">
-<p>This header is still in an experimental state, and is subject to change at any time. Be wary of this when implementing it on your website. The header has now been renamed to <code>Permissions-Policy</code> in the spec, and this article will eventually be updated to reflect that change.</p>
-</div>
 
-<p>For more information, see the main <a href="/docs/Web/HTTP/Feature_Policy">Feature Policy</a> article.</p>
+
+<p>For more information, see the main <a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a> article.</p>
 
 <table class="properties">
  <tbody>
@@ -57,7 +60,7 @@ tags:
  <dt>{{httpheader('Feature-Policy/autoplay','autoplay')}}</dt>
  <dd>Controls whether the current document is allowed to autoplay media requested through the {{domxref("HTMLMediaElement")}} interface. When this policy is disabled and there were no user gestures, the {{jsxref("Promise")}} returned by {{domxref("HTMLMediaElement.play()")}} will reject with a {{domxref("DOMException")}}. The autoplay attribute on {{HTMLELement("audio")}} and {{HTMLElement("video")}} elements will be ignored.</dd>
  <dt>{{httpheader('Feature-Policy/battery','battery')}}</dt>
- <dd>Controls whether the use of the <a href="/docs/Web/API/Battery_Status_API">Battery Status API</a> is allowed. When this policy is disabled, the {{JSxRef("Promise")}} returned by {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} will reject with a {{Exception("NotAllowedError")}} {{DOMxRef("DOMException")}}.</dd>
+ <dd>Controls whether the use of the <a href="/en-US/docs/Web/API/Battery_Status_API">Battery Status API</a> is allowed. When this policy is disabled, the {{JSxRef("Promise")}} returned by {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} will reject with a {{Exception("NotAllowedError")}} {{DOMxRef("DOMException")}}.</dd>
  <dt>{{httpheader('Feature-Policy/camera', 'camera')}}</dt>
  <dd>Controls whether the current document is allowed to use video input devices. When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} will reject with a {{Exception("NotAllowedError")}} {{DOMxRef("DOMException")}}.</dd>
  <dt>{{HTTPHeader('Feature-Policy/display-capture', 'display-capture')}}</dt>
@@ -73,7 +76,7 @@ tags:
  <dt>{{httpheader('Feature-Policy/fullscreen','fullscreen')}}</dt>
  <dd>Controls whether the current document is allowed to use {{DOMxRef("Element.requestFullScreen()")}}. When this policy is disabled, the returned {{JSxRef("Promise")}} rejects with a {{JSxRef("TypeError")}}.</dd>
  <dt>{{httpheader('Feature-Policy/geolocation','geolocation')}}</dt>
- <dd>Controls whether the current document is allowed to use the {{domxref('Geolocation')}} Interface. When this policy is disabled, calls to {{domxref('Geolocation.getCurrentPosition','getCurrentPosition()')}} and {{domxref('Geolocation.watchPosition','watchPosition()')}} will cause those functions' callbacks to be invoked with a {{domxref('PositionError')}} code of <code>PERMISSION_DENIED</code>.</dd>
+ <dd>Controls whether the current document is allowed to use the {{domxref('Geolocation')}} Interface. When this policy is disabled, calls to {{domxref('Geolocation.getCurrentPosition','getCurrentPosition()')}} and {{domxref('Geolocation.watchPosition','watchPosition()')}} will cause those functions' callbacks to be invoked with a {{domxref('GeolocationPositionError')}} code of <code>PERMISSION_DENIED</code>.</dd>
  <dt>{{httpheader('Feature-Policy/gyroscope','gyroscope')}}</dt>
  <dd>Controls whether the current document is allowed to gather information about the orientation of the device through the {{DOMxRef("Gyroscope")}} interface.</dd>
  <dt>{{httpheader('Feature-Policy/layout-animations','layout-animations')}}</dt>
