@@ -2,13 +2,13 @@
 title: BaseAudioContext.createChannelSplitter()
 slug: Web/API/BaseAudioContext/createChannelSplitter
 tags:
-- API
-- AudioContext
-- BaseAudioContext
-- Method
-- Reference
-- Web Audio API
-- createChannelSplitter
+  - API
+  - AudioContext
+  - BaseAudioContext
+  - Method
+  - Reference
+  - Web Audio API
+  - createChannelSplitter
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
@@ -21,7 +21,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">baseAudioContext.createChannelSplitter(<em>numberOfOutputs</em>);</pre>
+  class="brush: js">baseAudioContext.createChannelSplitter(<em>numberOfOutputs</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -39,7 +39,7 @@ tags:
 
 <p>The following simple example shows how you could separate a stereo track (say, a piece
   of music), and process the left and right channel differently. To use them, you need to
-  use the second and third parameters of the {{domxref("AudioNode.connect(AudioNode)") }}
+  use the second and third parameters of the {{domxref("AudioNode/connect", "AudioNode.connect(AudioNode")}}
   method, which allow you to specify the index of the channel to connect from and the
   index of the channel to connect to.</p>
 
@@ -89,14 +89,11 @@ ac.decodeAudioData(someStereoBuffer, function(data) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.BaseAudioContext.createChannelSplitter")}}</p>
-</div>
+<p>{{Compat("api.BaseAudioContext.createChannelSplitter")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
   </li>
 </ul>

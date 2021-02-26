@@ -10,20 +10,20 @@ tags:
 ---
 <p class="summary">This subarticle shows how to define a page for creating <code>Author</code> objects.</p>
 
-<h2 class="highlight-spanned" id="Import_validation_and_sanitisation_methods"><span class="highlight-span">Import validation and sanitisation methods</span></h2>
+<h2 class="highlight-spanned" id="Import_validation_and_sanitization_methods"><span class="highlight-span">Import validation and sanitization methods</span></h2>
 
 <p>As with the genre form, to use <em>express-validator</em> we have to <em>require</em> the functions we want to use.</p>
 
 <p>Open <strong>/controllers/authorController.js</strong>, and add the following lines at the top of the file:</p>
 
-<pre class="brush: js line-numbers language-js notranslate">const { body,validationResult } = require('express-validator');
+<pre class="brush: js line-numbers language-js">const { body,validationResult } = require('express-validator');
 </pre>
 
 <h2 class="highlight-spanned" id="Controller—get_route"><span class="highlight-span">Controller—get route</span></h2>
 
 <p>Find the exported <code>author_create_get()</code> controller method and replace it with the following code. This renders the <strong>author_form.pug</strong> view, passing a <code>title</code> variable.</p>
 
-<pre class="brush: js line-numbers language-js notranslate">// Display Author create form on GET.
+<pre class="brush: js line-numbers language-js">// Display Author create form on GET.
 exports.author_create_get = function(req, res, next) {
     res.render('author_form', { title: 'Create Author'});
 };</pre>
@@ -32,10 +32,10 @@ exports.author_create_get = function(req, res, next) {
 
 <p>Find the exported <code>author_create_post()</code> controller method, and replace it with the following code.</p>
 
-<pre class="brush: js line-numbers language-js notranslate">// Handle Author create on POST.
+<pre class="brush: js line-numbers language-js">// Handle Author create on POST.
 exports.author_create_post = [
 
-    // Validate and sanitise fields.
+    // Validate and sanitize fields.
     body('first_name').trim().isLength({ min: 1 }).escape().withMessage('First name must be specified.')
         .isAlphanumeric().withMessage('First name has non-alphanumeric characters.'),
     body('family_name').trim().isLength({ min: 1 }).escape().withMessage('Family name must be specified.')
@@ -85,12 +85,12 @@ exports.author_create_post = [
 <ul>
  <li>We can daisy chain validators, using <code>withMessage()</code> to specify the error message to display if the previous validation method fails. This makes it very easy to provide specific error messages without lots of code duplication.
 
-  <pre class="brush: js notranslate">// Validate fields.
+  <pre class="brush: js">// Validate fields.
 body('first_name').trim().isLength({ min: 1 }).escape().withMessage('First name must be specified.')
     .isAlphanumeric().withMessage('First name has non-alphanumeric characters.'),</pre>
  </li>
  <li>We can use the <code>optional()</code> function to run a subsequent validation only if a field has been entered (this allows us to validate optional fields). For example, below we check that the optional date of birth is an ISO8601-compliant date (the <code>checkFalsy</code> flag means that we'll accept either an empty string or <code>null</code> as an empty value).
-  <pre class="brush: js line-numbers language-html notranslate">body('date_of_birth', 'Invalid date of birth').optional({ checkFalsy: true }).isISO8601().toDate(),</pre>
+  <pre class="brush: js line-numbers language-html">body('date_of_birth', 'Invalid date of birth').optional({ checkFalsy: true }).isISO8601().toDate(),</pre>
  </li>
 </ul>
 
@@ -102,7 +102,7 @@ body('first_name').trim().isLength({ min: 1 }).escape().withMessage('First name 
 
 <p>Create <strong>/views/author_form.pug</strong> and copy in the text below.</p>
 
-<pre class="line-numbers  language-html notranslate">extends layout
+<pre class="line-numbers  language-html">extends layout
 
 block content
   h1=title
@@ -136,7 +136,7 @@ block content
 
 <p>Run the application, open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>, then select the <em>Create new author</em> link. If everything is set up correctly, your site should look something like the following screenshot. After you enter a value, it should be saved and you'll be taken to the author detail page.</p>
 
-<p><img alt="Author Create Page - Express Local Library site" src="https://mdn.mozillademos.org/files/14482/LocalLibary_Express_Author_Create_Empty.png" style="display: block; height: 426px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="Author Create Page - Express Local Library site" src="locallibary_express_author_create_empty.png" style="display: block; margin: 0px auto;"></p>
 
 <div class="note">
 <p><strong>Note:</strong> If you experiment with various input formats for the dates, you may find that the format <code>yyyy-mm-dd</code> misbehaves. This is because JavaScript treats date strings as including the time of 0 hours, but additionally treats date strings in that format (the ISO 8601 standard) as including the time 0 hours UTC, rather than the local time. If your time zone is west of UTC, the date display, being local, will be one day before the date you entered. This is one of several complexities (such as multi-word family names and multi-author books) that we are not addressing here.</p>

@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <var>p</var> = new Proxy(<var>target</var>, {
+<pre class="brush: js">const <var>p</var> = new Proxy(<var>target</var>, {
   ownKeys: function(<var>target</var>) {
   }
 });
@@ -73,7 +73,7 @@ tags:
 
 <p>The following code traps {{jsxref("Object.getOwnPropertyNames()")}}.</p>
 
-<pre class="brush: js notranslate">const p = new Proxy({}, {
+<pre class="brush: js">const p = new Proxy({}, {
   ownKeys: function(target) {
     console.log('called');
     return ['a', 'b', 'c'];
@@ -85,7 +85,7 @@ console.log(Object.getOwnPropertyNames(p)); // "called"
 
 <p>The following code violates an invariant.</p>
 
-<pre class="brush: js example-bad notranslate">const obj = {};
+<pre class="brush: js example-bad">const obj = {};
 Object.defineProperty(obj, 'a', {
   configurable: false,
   enumerable: true,
@@ -123,10 +123,7 @@ console.log(Object.getOwnPropertyNames(p));
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Proxy.handler.ownKeys")}}</p>
-</div>
+<p>{{Compat("javascript.builtins.Proxy.handler.ownKeys")}}</p>
 
 <h2 id="See_also">See also</h2>
 

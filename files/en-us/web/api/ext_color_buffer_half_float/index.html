@@ -14,7 +14,7 @@ tags:
 <p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
 
 <div class="note">
-<p><strong>Availability:</strong> This extension is available to {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}} contexts only. For {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}}, use the {{domxref("EXT_color_buffer_float")}} extension.</p>
+<p><strong>Availability:</strong> This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts. On WebGL 2, it's an alternative to using the {{domxref("EXT_color_buffer_float")}} extension on platforms that support 16-bit floating point render targets but not 32-bit floating point render targets.</p>
 
 <p>The {{domxref("OES_texture_half_float")}} extension implicitly enables this extension.</p>
 </div>

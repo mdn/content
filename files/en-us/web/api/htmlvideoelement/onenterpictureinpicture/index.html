@@ -20,12 +20,12 @@ tags:
   processes {{domxref("HTMLVideoElement.enterpictureinpicture_event",
   "HTMLVideoElement.enterpictureinpicture")}} events.</p>
 
-<p>The <code>enterpictureinpicture</code> event fires after the video has succesfully
+<p>The <code>enterpictureinpicture</code> event fires after the video has successfully
   entered picture-in-picture mode.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>video</em>.onenterpictureinpicture = <em>functionRef</em>;
+<pre class="brush: js"><em>video</em>.onenterpictureinpicture = <em>functionRef</em>;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -39,11 +39,11 @@ tags:
 
 <h3 id="Window_size_logger">Window size logger</h3>
 
-<pre class="brush: html notranslate">&lt;button id="button&gt;Enter Picture-in-Picture&lt;/button&gt;
+<pre class="brush: html">&lt;button id="button&gt;Enter Picture-in-Picture&lt;/button&gt;
 &lt;video id="video" muted autoplay src=""&gt;&lt;/video&gt;
 </pre>
 
-<pre class="brush: js notranslate">const video = document.querySelector('#video');
+<pre class="brush: js">const video = document.querySelector('#video');
 const button = document.querySelector('#button');
 
 function onEnterPip() {

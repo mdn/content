@@ -59,9 +59,12 @@ tags:
 <p>This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
 
 <dl>
- <dt>{{htmlattrdef("accept")}} {{obsolete_inline}}</dt>
+ <dt>{{htmlattrdef("accept")}} {{obsolete_inline("html5")}}</dt>
  <dd>Comma-separated <a href="/en-US/docs/Web/SVG/Content_type">content types</a> the server accepts.
- <div class="note"><strong>This attribute was removed in HTML5 and should not be used.</strong> Instead, use the {{htmlattrxref("accept", "input")}} attribute on <code>&lt;input type=file&gt;</code> elements.</div>
+ <div class="notecard note">
+ <h4>Note</h4>
+ <p><strong>This attribute was removed in HTML5 and should not be used.</strong> Instead, use the {{htmlattrxref("accept", "input")}} attribute on <code>&lt;input type=file&gt;</code> elements.</p>
+ </div>
  </dd>
  <dt>{{htmlattrdef("accept-charset")}}</dt>
  <dd>Space-separated <a href="/en-US/docs/Web/Guide/Localizations_and_character_encodings">character encodings</a> the server accepts. The browser uses them in the order in which they are listed. The default value means <a href="/en-US/docs/Web/HTTP/Headers/Content-Encoding">the same encoding as the page</a>.<br>
@@ -79,7 +82,7 @@ tags:
  <dd>Indicates whether input elements can by default have their values automatically completed by the browser. <code>autocomplete</code> attributes on form elements override it on <code>&lt;form&gt;</code>. Possible values:
  <ul>
   <li><code>off</code>: The browser may not automatically complete entries. (Browsers tend to ignore this for suspected login forms; see <a href="/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#The_autocomplete_attribute_and_login_fields">The autocomplete attribute and login fields</a>.)</li>
-  <li><code>on</code>: The browser may automatically complete entries.<span style="display: none;"> </span></li>
+  <li><code>on</code>: The browser may automatically complete entries.</li>
  </ul>
  </dd>
  <dt>{{htmlattrdef("name")}}</dt>
@@ -127,6 +130,10 @@ tags:
  </ul>
 
  <p>This value can be overridden by a {{htmlattrxref("formtarget", "button")}} attribute on a {{HTMLElement("button")}}, <code><a href="/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code>, or <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> element.</p>
+ <div class="notecard note">
+ <h4>Note</h4> 
+ <p>Setting <code>target="_blank"</code> on <code>&lt;form&gt;</code> elements implicitly provides the same <code>rel</code> behavior as setting <code><a href="/en-US/docs/Web/HTML/Link_types/noopener">rel="noopener"</a></code> which does not set <code>window.opener</code>.</p>
+ </div>
  </dd>
 </dl>
 
@@ -134,7 +141,7 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;!-- Form which will send a GET request to the current URL --&gt;
+<pre class="brush: html">&lt;!-- Form which will send a GET request to the current URL --&gt;
 &lt;form&gt;
   &lt;label&gt;Name:
     &lt;input name="submitted-name" autocomplete="name"&gt;
@@ -191,7 +198,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("html.elements.form")}}</p>
 

@@ -9,19 +9,57 @@ tags:
 ---
 <div>{{SVGRef}}</div>
 
-<p>The <strong><code>&lt;feComposite&gt;</code></strong> <a href="/en-US/docs/Web/SVG">SVG</a> filter primitive performs the combination of two input images pixel-wise in image space using one of the Porter-Duff compositing operations: <code>over</code><em>, </em><code>in</code><em>, </em><code>atop</code><em>, </em><code>out</code><em>, </em><code>xor</code>, and <code>lighter</code>. Additionally, a component-wise <code>arithmetic</code> operation (with the result clamped between [0..1]) can be applied.</p>
+<p>The <strong><code>&lt;feComposite&gt;</code></strong> <a href="/en-US/docs/Web/SVG">SVG</a> filter primitive performs the combination of two input images pixel-wise in image space using one of the Porter-Duff compositing operations: <code>over</code>, <code>in</code>, <code>atop</code>, <code>out</code>, <code>xor</code>, <code>lighter</code>, or <code>arithmetic</code>.</p>
 
-<p>The <code>arithmetic</code> operation is useful for combining the output from the {{SVGElement("feDiffuseLighting")}} and {{SVGElement("feSpecularLighting")}} filters with texture data. If the <code>arithmetic</code> operation is chosen, each result pixel is computed using the following formula:</p>
+<p>The table below shows each of these operations using an image of the MDN logo composited with a red circle:</p>
 
-<pre class="brush: plain">result = k1*i1*i2 + k2*i1 + k3*i2 + k4
-</pre>
+<table>
+  <tr>
+    <th>Operation</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><p>over <img src="operation_over.png" title="over operator" width="300"></p></td>
+    <td>The source graphic defined by the {{SVGAttr("in")}} attribute (the MDN logo) is placed over the destination graphic defined by the {{SVGAttr("in2")}} attribute (the circle).
+      <p>This is the <em>default operation</em>, which will be used if no operation or an unsupported operation is specified.</p>
+    </td>
+  </tr>
+  <tr>
+    <td><p>in <img src="operation_in.png" title="in operator"></p></td>
+    <td>The parts of the source graphic defined by the <code>in</code> attribute that overlap the destination graphic defined in the <code>in2</code> attribute, replace the destination graphic.</td>
+  </tr>
+  <tr>
+    <td><p>over <img src="operation_out.png" title="out operator"> </p></td>
+    <td>The parts of the source graphic defined by the <code>in</code> attribute that fall outside the destination graphic defined in the <code>in2</code> attribute, are displayed.</td>
+  </tr>
+  <tr>
+    <td><p>atop <img src="operation_atop.png" title="atop operator"></p></td>
+    <td>The parts of the source graphic defined in the <code>in</code> attribute, which overlap the destination graphic defined in the <code>in2</code> attribute, replace the destination graphic. The parts of the destination graphic that do not overlap with the source graphic stay untouched.</td>
+  </tr>
+  <tr>
+    <td><p>xor <img src="operation_xor.png" title="xor operator"></p></td>
+    <td>The non-overlapping regions of the source graphic defined in the <code>in</code> attribute and the destination graphic defined in the <code>in2</code> attribute are combined.</td>
+  </tr>
+  <tr>
+    <td><p>lighter <img src="operation_lighter.png" title="lighter operator"> </p></td>
+    <td>The sum of the source graphic defined in the <code>in</code> attribute and the destination graphic defined in the <code>in2</code> attribute is displayed.</td>
+  </tr>
+  <tr>
+      <td><p>arithmetic <img src="operation_arithmetic.png" title="arithmetic operator"></p></td>
+      <td>
+        <p>The <code>arithmetic</code> operation is useful for combining the output from the {{SVGElement("feDiffuseLighting")}} and {{SVGElement("feSpecularLighting")}} filters with texture data. If the <code>arithmetic</code> operation is chosen, each result pixel is computed using the following formula:</p>
 
-<p>where:</p>
+        <pre class="brush: plain">result = k1*i1*i2 + k2*i1 + k3*i2 + k4</pre>
 
-<ul>
- <li><code>i1</code> and <code>i2</code> indicate the corresponding pixel channel values of the input image, which map to {{SVGAttr("in")}} and {{SVGAttr("in2")}} respectively</li>
- <li><code>k1, k2, k3</code> and <code>k4</code> indicate the values of the attributes with the same name</li>
-</ul>
+        <p>where:</p>
+        <ul>
+          <li><code>i1</code> and <code>i2</code> indicate the corresponding pixel channel values of the input image, which map to {{SVGAttr("in")}} and {{SVGAttr("in2")}} respectively</li>
+          <li>{{SVGAttr("k1")}},{{SVGAttr("k2")}},{{SVGAttr("k3")}},and {{SVGAttr("k4")}} indicate the values of the attributes with the same name.</li>
+        </ul>
+        </td>
+  </tr>
+
+</table>
 
 <h2 id="Usage_context">Usage context</h2>
 
@@ -32,9 +70,9 @@ tags:
 <h3 id="Global_attributes">Global attributes</h3>
 
 <ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Core_attributes">Core attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Presentation_attributes">Presentation attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Filter_primitive_attributes">Filter primitive attributes</a> »</li>
+ <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a> »</li>
+ <li><a href="/en-US/docs/Web/SVG/Attribute#presentation_attributes">Presentation attributes</a> »</li>
+ <li><a href="/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes">Filter primitive attributes</a> »</li>
  <li>{{SVGAttr("class")}}</li>
  <li>{{SVGAttr("style")}}</li>
 </ul>
@@ -42,196 +80,168 @@ tags:
 <h3 id="Specific_attributes">Specific attributes</h3>
 
 <ul>
- <li>{{SVGAttr("in")}}</li>
- <li>{{SVGAttr("in2")}}</li>
- <li>{{SVGAttr("operator")}}</li>
- <li>{{SVGAttr("k1")}}</li>
- <li>{{SVGAttr("k2")}}</li>
- <li>{{SVGAttr("k3")}}</li>
- <li>{{SVGAttr("k4")}}</li>
+ <li>{{SVGAttr("in")}}: First input for the given filter primitive.</li>
+ <li>{{SVGAttr("in2")}}: Second input for the given filter primitive (works the same as the <code>in</code> attribute).</li>
+ <li>{{SVGAttr("operator")}}: <code>over</code> | <code>in</code> | <code>out</code> | <code>atop</code> | <code>xor</code> | <code>lighter</code> | <code>arithmetic</code></li>
+ <li>{{SVGAttr("k1")}}, {{SVGAttr("k2")}}, {{SVGAttr("k3")}}, {{SVGAttr("k4")}}: Values used for calculating the result pixel in <code>arithmetic</code> {{SVGAttr("operator")}} filter primitives.</li>
 </ul>
+
 
 <h2 id="DOM_Interface">DOM Interface</h2>
 
 <p>This element implements the {{domxref("SVGFECompositeElement")}} interface.</p>
 
+
 <h2 id="Example">Example</h2>
+
+<p>This example defines filters for each of the supported operations (<code>over</code>, <code>atop</code>, <code>lighter</code>, etc.), which composite an input <code>SourceGraphic</code> with an image of the MDN logo. The filters are each applied to a circle element, which is then used as the <code>SourceGraphic</code>. The relevant code for just one filter (<code>lighter</code>) is shown below:</p>
+
+  <pre class="brush: xml">
+    &lt;defs&gt;
+      &lt;filter id="imageLighter"&gt;
+        &lt;feImage xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png" x="10px" y="10px" width="160px" /&gt;
+        &lt;feComposite in2="SourceGraphic" operator="lighter"/&gt;
+      &lt;/filter&gt;
+    &lt;/defs&gt;
+    &lt;circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageLighter)"/&gt;
+  </pre>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p><code>BackgroundImage</code> cannot be used as a compositing source on modern browsers, so we can't define a filter that composites using whatever pixels happen to be under the filter as one of the sources. The approach above is a <a href="/en-US/docs/Web/SVG/Attribute/in#workaround_for_backgroundimage">Workaround because we can't use <code>BackgroundImage</code></a>.</p>
+</div>
 
 <h3 id="SVG">SVG</h3>
 
-<pre>&lt;svg width="330" height="195" viewBox="0 0 1100 650" version="1.1"
-     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
-  &lt;title&gt;Example feComposite - Examples of feComposite operations&lt;/title&gt;
-  &lt;desc&gt;Four rows of six pairs of overlapping triangles depicting
-        the six different feComposite operators under different
-        opacity values and different clearing of the background.&lt;/desc&gt;
-	&lt;defs&gt;
-    &lt;desc&gt;Define two sets of six filters for each of the six compositing operators.
-          The first set wipes out the background image by flooding with opaque white.
-          The second set does not wipe out the background, with the result
-          that the background sometimes shines through and is other cases
-          is blended into itself (i.e., "double-counting").&lt;/desc&gt;
-    &lt;filter id="overFlood" filterUnits="objectBoundingBox" x="-5%" y="-5%" width="110%" height="110%"&gt;
-      &lt;feFlood flood-color="#ffffff" flood-opacity="1" result="flood"/&gt;
-      &lt;feComposite in="SourceGraphic" in2="BackgroundImage" operator="over" result="comp"/&gt;
-      &lt;feMerge&gt; &lt;feMergeNode in="flood"/&gt; &lt;feMergeNode in="comp"/&gt; &lt;/feMerge&gt;
+<pre class="brush: xml">&lt;svg style="width:800px; height:400px; display: inline;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+  &lt;defs&gt;
+    &lt;filter id="imageOver"&gt;
+      &lt;feImage xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png" x="10px" y="10px" width="160px" /&gt;
+      &lt;feComposite in2="SourceGraphic" operator="over"/&gt;
     &lt;/filter&gt;
-    &lt;filter id="inFlood" filterUnits="objectBoundingBox" x="-5%" y="-5%" width="110%" height="110%"&gt;
-      &lt;feFlood flood-color="#ffffff" flood-opacity="1" result="flood"/&gt;
-      &lt;feComposite in="SourceGraphic" in2="BackgroundImage" operator="in" result="comp"/&gt;
-      &lt;feMerge&gt; &lt;feMergeNode in="flood"/&gt; &lt;feMergeNode in="comp"/&gt; &lt;/feMerge&gt;
+    &lt;filter id="imageIn"&gt;
+      &lt;feImage xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png" x="10px" y="10px" width="160px" /&gt;
+      &lt;feComposite in2="SourceGraphic" operator="in"/&gt;
     &lt;/filter&gt;
-    &lt;filter id="outFlood" filterUnits="objectBoundingBox" x="-5%" y="-5%" width="110%" height="110%"&gt;
-      &lt;feFlood flood-color="#ffffff" flood-opacity="1" result="flood"/&gt;
-      &lt;feComposite in="SourceGraphic" in2="BackgroundImage" operator="out" result="comp"/&gt;
-      &lt;feMerge&gt; &lt;feMergeNode in="flood"/&gt; &lt;feMergeNode in="comp"/&gt; &lt;/feMerge&gt;
+    &lt;filter id="imageOut"&gt;
+      &lt;feImage xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png" x="10px" y="10px" width="160px" /&gt;
+      &lt;feComposite in2="SourceGraphic" operator="out"/&gt;
     &lt;/filter&gt;
-    &lt;filter id="atopFlood" filterUnits="objectBoundingBox" x="-5%" y="-5%" width="110%" height="110%"&gt;
-      &lt;feFlood flood-color="#ffffff" flood-opacity="1" result="flood"/&gt;
-      &lt;feComposite in="SourceGraphic" in2="BackgroundImage" operator="atop" result="comp"/&gt;
-      &lt;feMerge&gt; &lt;feMergeNode in="flood"/&gt; &lt;feMergeNode in="comp"/&gt; &lt;/feMerge&gt;
+    &lt;filter id="imageAtop"&gt;
+      &lt;feImage xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png" x="10px" y="10px" width="160px" /&gt;
+      &lt;feComposite in2="SourceGraphic" operator="atop"/&gt;
     &lt;/filter&gt;
-    &lt;filter id="xorFlood" filterUnits="objectBoundingBox" x="-5%" y="-5%" width="110%" height="110%"&gt;
-      &lt;feFlood flood-color="#ffffff" flood-opacity="1" result="flood"/&gt;
-      &lt;feComposite in="SourceGraphic" in2="BackgroundImage" operator="xor" result="comp"/&gt;
-      &lt;feMerge&gt; &lt;feMergeNode in="flood"/&gt; &lt;feMergeNode in="comp"/&gt; &lt;/feMerge&gt;
+    &lt;filter id="imageXor"&gt;
+      &lt;feImage xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png" x="10px" y="10px" width="160px" /&gt;
+      &lt;feComposite in2="SourceGraphic" operator="xor"/&gt;
     &lt;/filter&gt;
-    &lt;filter id="arithmeticFlood" filterUnits="objectBoundingBox"
-            x="-5%" y="-5%" width="110%" height="110%"&gt;
-      &lt;feFlood flood-color="#ffffff" flood-opacity="1" result="flood"/&gt;
-      &lt;feComposite in="SourceGraphic" in2="BackgroundImage" result="comp"
-                   operator="arithmetic" k1=".5" k2=".5" k3=".5" k4=".5"/&gt;
-      &lt;feMerge&gt; &lt;feMergeNode in="flood"/&gt; &lt;feMergeNode in="comp"/&gt; &lt;/feMerge&gt;
+    &lt;filter id="imageArithmetic"&gt;
+      &lt;feImage xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png" x="10px" y="10px" width="160px" /&gt;
+      &lt;feComposite in2="SourceGraphic" operator="arithmetic" k1="0.1" k2="0.2" k3="0.3" k4="0.4" /&gt;
     &lt;/filter&gt;
-    &lt;filter id="overNoFlood" filterUnits="objectBoundingBox" x="-5%" y="-5%" width="110%" height="110%"&gt;
-      &lt;feComposite in="SourceGraphic" in2="BackgroundImage" operator="over" result="comp"/&gt;
+    &lt;filter id="imageLighter"&gt;
+      &lt;feImage xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png" x="10px" y="10px" width="160px" /&gt;
+      &lt;feComposite in2="SourceGraphic" operator="lighter"/&gt;
     &lt;/filter&gt;
-    &lt;filter id="inNoFlood" filterUnits="objectBoundingBox" x="-5%" y="-5%" width="110%" height="110%"&gt;
-      &lt;feComposite in="SourceGraphic" in2="BackgroundImage" operator="in" result="comp"/&gt;
-    &lt;/filter&gt;
-    &lt;filter id="outNoFlood" filterUnits="objectBoundingBox" x="-5%" y="-5%" width="110%" height="110%"&gt;
-      &lt;feComposite in="SourceGraphic" in2="BackgroundImage" operator="out" result="comp"/&gt;
-    &lt;/filter&gt;
-    &lt;filter id="atopNoFlood" filterUnits="objectBoundingBox" x="-5%" y="-5%" width="110%" height="110%"&gt;
-      &lt;feComposite in="SourceGraphic" in2="BackgroundImage" operator="atop" result="comp"/&gt;
-    &lt;/filter&gt;
-    &lt;filter id="xorNoFlood" filterUnits="objectBoundingBox" x="-5%" y="-5%" width="110%" height="110%"&gt;
-      &lt;feComposite in="SourceGraphic" in2="BackgroundImage" operator="xor" result="comp"/&gt;
-    &lt;/filter&gt;
-    &lt;filter id="arithmeticNoFlood" filterUnits="objectBoundingBox"
-            x="-5%" y="-5%" width="110%" height="110%"&gt;
-      &lt;feComposite in="SourceGraphic" in2="BackgroundImage" result="comp"
-                   operator="arithmetic" k1=".5" k2=".5" k3=".5" k4=".5"/&gt;
-    &lt;/filter&gt;
-    &lt;path id="Blue100" d="M 0 0 L 100 0 L 100 100 z" fill="#00ffff" /&gt;
-    &lt;path id="Red100" d="M 0 0 L 0 100 L 100 0 z" fill="#ff00ff" /&gt;
-    &lt;path id="Blue50" d="M 0 125 L 100 125 L 100 225 z" fill="#00ffff" fill-opacity=".5" /&gt;
-    &lt;path id="Red50" d="M 0 125 L 0 225 L 100 125 z" fill="#ff00ff" fill-opacity=".5" /&gt;
-    &lt;g id="TwoBlueTriangles"&gt;
-      &lt;use xlink:href="#Blue100"/&gt;
-      &lt;use xlink:href="#Blue50"/&gt;
-    &lt;/g&gt;
-    &lt;g id="BlueTriangles"&gt;
-      &lt;use transform="translate(275,25)" xlink:href="#TwoBlueTriangles"/&gt;
-      &lt;use transform="translate(400,25)" xlink:href="#TwoBlueTriangles"/&gt;
-      &lt;use transform="translate(525,25)" xlink:href="#TwoBlueTriangles"/&gt;
-      &lt;use transform="translate(650,25)" xlink:href="#TwoBlueTriangles"/&gt;
-      &lt;use transform="translate(775,25)" xlink:href="#TwoBlueTriangles"/&gt;
-      &lt;use transform="translate(900,25)" xlink:href="#TwoBlueTriangles"/&gt;
-    &lt;/g&gt;
   &lt;/defs&gt;
-
-  &lt;rect fill="none" stroke="blue" x="1" y="1" width="1098" height="648"/&gt;
-  &lt;g font-family="Verdana" font-size="40" shape-rendering="crispEdges"&gt;
-    &lt;desc&gt;Render the examples using the filters that draw on top of
-          an opaque white surface, thus obliterating the background.&lt;/desc&gt;
-    &lt;g enable-background="new"&gt;
-      &lt;text x="15" y="75"&gt;opacity 1.0&lt;/text&gt;
-      &lt;text x="15" y="115" font-size="27"&gt;(with feFlood)&lt;/text&gt;
-      &lt;text x="15" y="200"&gt;opacity 0.5&lt;/text&gt;
-      &lt;text x="15" y="240" font-size="27"&gt;(with feFlood)&lt;/text&gt;
-      &lt;use xlink:href="#BlueTriangles"/&gt;
-      &lt;g transform="translate(275,25)"&gt;
-        &lt;use xlink:href="#Red100" filter="url(#overFlood)" /&gt;
-        &lt;use xlink:href="#Red50" filter="url(#overFlood)" /&gt;
-        &lt;text x="5" y="275"&gt;over&lt;/text&gt;
-      &lt;/g&gt;
-      &lt;g transform="translate(400,25)"&gt;
-        &lt;use xlink:href="#Red100" filter="url(#inFlood)" /&gt;
-        &lt;use xlink:href="#Red50" filter="url(#inFlood)" /&gt;
-        &lt;text x="35" y="275"&gt;in&lt;/text&gt;
-      &lt;/g&gt;
-      &lt;g transform="translate(525,25)"&gt;
-        &lt;use xlink:href="#Red100" filter="url(#outFlood)" /&gt;
-        &lt;use xlink:href="#Red50" filter="url(#outFlood)" /&gt;
-        &lt;text x="15" y="275"&gt;out&lt;/text&gt;
-      &lt;/g&gt;
-      &lt;g transform="translate(650,25)"&gt;
-        &lt;use xlink:href="#Red100" filter="url(#atopFlood)" /&gt;
-        &lt;use xlink:href="#Red50" filter="url(#atopFlood)" /&gt;
-        &lt;text x="10" y="275"&gt;atop&lt;/text&gt;
-      &lt;/g&gt;
-      &lt;g transform="translate(775,25)"&gt;
-        &lt;use xlink:href="#Red100" filter="url(#xorFlood)" /&gt;
-        &lt;use xlink:href="#Red50" filter="url(#xorFlood)" /&gt;
-        &lt;text x="15" y="275"&gt;xor&lt;/text&gt;
-      &lt;/g&gt;
-      &lt;g transform="translate(900,25)"&gt;
-        &lt;use xlink:href="#Red100" filter="url(#arithmeticFlood)" /&gt;
-        &lt;use xlink:href="#Red50" filter="url(#arithmeticFlood)" /&gt;
-        &lt;text x="-25" y="275"&gt;arithmetic&lt;/text&gt;
-      &lt;/g&gt;
-    &lt;/g&gt;
-    &lt;g transform="translate(0,325)" enable-background="new"&gt;
-    &lt;desc&gt;Render the examples using the filters that do not obliterate
-          the background, thus sometimes causing the background to continue
-          to appear in some cases, and in other cases the background
-          image blends into itself ("double-counting").&lt;/desc&gt;
-      &lt;text x="15" y="75"&gt;opacity 1.0&lt;/text&gt;
-      &lt;text x="15" y="115" font-size="27"&gt;(without feFlood)&lt;/text&gt;
-      &lt;text x="15" y="200"&gt;opacity 0.5&lt;/text&gt;
-      &lt;text x="15" y="240" font-size="27"&gt;(without feFlood)&lt;/text&gt;
-      &lt;use xlink:href="#BlueTriangles"/&gt;
-      &lt;g transform="translate(275,25)"&gt;
-        &lt;use xlink:href="#Red100" filter="url(#overNoFlood)" /&gt;
-        &lt;use xlink:href="#Red50" filter="url(#overNoFlood)" /&gt;
-        &lt;text x="5" y="275"&gt;over&lt;/text&gt;
-      &lt;/g&gt;
-      &lt;g transform="translate(400,25)"&gt;
-        &lt;use xlink:href="#Red100" filter="url(#inNoFlood)" /&gt;
-        &lt;use xlink:href="#Red50" filter="url(#inNoFlood)" /&gt;
-        &lt;text x="35" y="275"&gt;in&lt;/text&gt;
-      &lt;/g&gt;
-      &lt;g transform="translate(525,25)"&gt;
-        &lt;use xlink:href="#Red100" filter="url(#outNoFlood)" /&gt;
-        &lt;use xlink:href="#Red50" filter="url(#outNoFlood)" /&gt;
-        &lt;text x="15" y="275"&gt;out&lt;/text&gt;
-      &lt;/g&gt;
-      &lt;g transform="translate(650,25)"&gt;
-        &lt;use xlink:href="#Red100" filter="url(#atopNoFlood)" /&gt;
-        &lt;use xlink:href="#Red50" filter="url(#atopNoFlood)" /&gt;
-        &lt;text x="10" y="275"&gt;atop&lt;/text&gt;
-      &lt;/g&gt;
-      &lt;g transform="translate(775,25)"&gt;
-        &lt;use xlink:href="#Red100" filter="url(#xorNoFlood)" /&gt;
-        &lt;use xlink:href="#Red50" filter="url(#xorNoFlood)" /&gt;
-        &lt;text x="15" y="275"&gt;xor&lt;/text&gt;
-      &lt;/g&gt;
-      &lt;g transform="translate(900,25)"&gt;
-        &lt;use xlink:href="#Red100" filter="url(#arithmeticNoFlood)" /&gt;
-        &lt;use xlink:href="#Red50" filter="url(#arithmeticNoFlood)" /&gt;
-        &lt;text x="-25" y="275"&gt;arithmetic&lt;/text&gt;
-      &lt;/g&gt;
-    &lt;/g&gt;
+  &lt;g transform="translate(0,25)"&gt;
+    &lt;circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageOver)"/&gt;
+    &lt;text x="80" y="-5"&gt;over&lt;/text&gt;
+  &lt;/g&gt;
+  &lt;g transform="translate(200,25)"&gt;
+    &lt;circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageIn)"/&gt;
+    &lt;text x="80" y="-5"&gt;in&lt;/text&gt;
+  &lt;/g&gt;
+  &lt;g transform="translate(400,25)"&gt;
+    &lt;circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageOut)"/&gt;
+    &lt;text x="80" y="-5"&gt;out&lt;/text&gt;
+  &lt;/g&gt;
+  &lt;g transform="translate(600,25)"&gt;
+    &lt;circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageAtop)"/&gt;
+    &lt;text x="80" y="-5"&gt;atop&lt;/text&gt;
+  &lt;/g&gt;
+  &lt;g transform="translate(0,240)"&gt;
+    &lt;circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageXor)"/&gt;
+    &lt;text x="80" y="-5"&gt;xor&lt;/text&gt;
+  &lt;/g&gt;
+  &lt;g transform="translate(200,240)"&gt;
+    &lt;circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageArithmetic)"/&gt;
+    &lt;text x="70" y="-5"&gt;arithmetic&lt;/text&gt;
+  &lt;/g&gt;
+  &lt;g transform="translate(400,240)"&gt;
+    &lt;circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageLighter)"/&gt;
+    &lt;text x="80" y="-5"&gt;lighter&lt;/text&gt;
   &lt;/g&gt;
 &lt;/svg&gt;
 </pre>
 
 <h3 id="Result">Result</h3>
 
-<p>This image shows just the desired effect.</p>
 
-<p><img alt="Example feComposite — Examples of feComposite operations" src="https://www.w3.org/TR/SVG11/images/filters/feComposite.png"></p>
+<p>The image below shows the rendered file.</p>
+
+<div>
+  <svg style="width:800px; height:400px; display: inline;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <filter id="imageOver">
+        <feImage xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
+        <feComposite in2="SourceGraphic" operator="over"/>
+      </filter>
+      <filter id="imageIn">
+        <feImage xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
+        <feComposite in2="SourceGraphic" operator="in"/>
+      </filter>
+      <filter id="imageOut">
+        <feImage xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
+        <feComposite in2="SourceGraphic" operator="out"/>
+      </filter>
+      <filter id="imageAtop">
+        <feImage xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
+        <feComposite in2="SourceGraphic" operator="atop"/>
+      </filter>
+      <filter id="imageXor">
+        <feImage xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
+        <feComposite in2="SourceGraphic" operator="xor"/>
+      </filter>
+      <filter id="imageArithmetic">
+        <feImage xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
+        <feComposite in2="SourceGraphic" operator="arithmetic" k1="0.1" k2="0.2" k3="0.3" k4="0.4" />
+      </filter>
+      <filter id="imageLighter">
+        <feImage xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
+        <feComposite in2="SourceGraphic" operator="lighter"/>
+      </filter>
+    </defs>
+    <g transform="translate(0,25)">
+      <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageOver)"/>
+      <text x="80" y="-5">over</text>
+    </g>
+    <g transform="translate(200,25)">
+      <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageIn)"/>
+      <text x="80" y="-5">in</text>
+    </g>
+    <g transform="translate(400,25)">
+      <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageOut)"/>
+      <text x="80" y="-5">out</text>
+    </g>
+    <g transform="translate(600,25)">
+      <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageAtop)"/>
+      <text x="80" y="-5">atop</text>
+    </g>
+    <g transform="translate(0,240)">
+      <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageXor)"/>
+      <text x="80" y="-5">xor</text>
+    </g>
+    <g transform="translate(200,240)">
+      <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageArithmetic)"/>
+      <text x="70" y="-5">arithmetic</text>
+    </g>
+    <g transform="translate(400,240)">
+      <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageLighter)"/>
+      <text x="80" y="-5">lighter</text>
+    </g>
+  </svg>
+</div>
 
 <h2 id="Specifications">Specifications</h2>
 

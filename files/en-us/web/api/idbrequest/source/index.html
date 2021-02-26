@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>IDBIndex</em> = <em>request</em>.source;
+<pre class="brush: js">var <em>IDBIndex</em> = <em>request</em>.source;
 var <em>IDBCursor</em> = <em>request</em>.source;
 var <em>IDBObjectStore</em> = <em>request</em>.source;
 </pre>
@@ -38,16 +38,16 @@ var <em>IDBObjectStore</em> = <em>request</em>.source;
 
 <p>The following example requests a given record title, <code>onsuccess</code> gets the
   associated record from the {{domxref("IDBObjectStore")}} (made available
-  as <code>objectStoreTitleRequest.result</code><span style="line-height: 1.5;">), updates
+  as <code>objectStoreTitleRequest.result</code>), updates
     one property of the record, and then puts the updated record back into the object
     store in another request. The source of the 2nd request is logged to the developer
-    console. For a full working example, see our </span><a
-    href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do
-    Notifications</a><span style="line-height: 1.5;"> app (</span><a
-    href="https://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">view
-    example live</a><span style="line-height: 1.5;">.)</span></p>
+    console. For a full working example, see our <a
+    href="https://github.com/mdn/to-do-notifications/">To-do
+    Notifications</a> app (<a
+    href="https://mdn.github.io/to-do-notifications/">view
+    example live</a>.)</p>
 
-<pre class="brush: js;highlight:[11]" style="font-size: 14px;">var title = "Walk dog";
+<pre class="brush: js;highlight:[11]">var title = "Walk dog";
 
 // Open up a transaction as usual
 var objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
@@ -66,11 +66,11 @@ objectStoreTitleRequest.onsuccess = function() {
   // back into the database
   var updateTitleRequest = objectStore.put(data);
 
-  <span style="font-size: 1rem;">// Log the source of this request</span>
-  console.log("The source of this request is " + updateTitlerequest.source);
+  // Log the source of this request
+  console.log("The source of this request is " + updateTitleRequest.source);
   // When this new request succeeds, run the displayData()
   // function again to update the display
-<span style="font-size: 1rem;">  updateTitleRequest</span><span style="font-size: 1rem;">.onsuccess = function() {</span> displayData(); };
+  updateTitleRequest.onsuccess = function() { displayData(); };
 };
 
 </pre>
@@ -99,10 +99,7 @@ objectStoreTitleRequest.onsuccess = function() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.IDBRequest.source")}}</p>
-</div>
+<p>{{Compat("api.IDBRequest.source")}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -61,12 +61,12 @@ tags:
 
 <p>So let's get started. You have two options, you can go through the tutorial from the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">beginning</a> or you can just download the completed project and modify it from there for use on PWS. To do the latter, you can do the following from a terminal:</p>
 
-<pre class="brush: bash"><code>git clone https://github.com/mdn/express-locallibrary-tutorial</code></pre>
+<pre class="brush: bash">git clone https://github.com/mdn/express-locallibrary-tutorial</pre>
 
-<p>You'll then need to follow the preparation steps listed in the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment#Getting_your_website_ready_to_publish">Getting your website ready to publish</a> section of <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment">Express Tutorial Part 7: Deploying to production</a>, before then following the steps listed below.</p>
+<p>You'll then need to follow the preparation steps listed in the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment#getting_your_website_ready_to_publish">Getting your website ready to publish</a> section of <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment">Express Tutorial Part 7: Deploying to production</a>, before then following the steps listed below.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This work flow is based on the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment#Example_Installing_LocalLibrary_on_Heroku">Mozilla Heroku work flow in the main Express/Node tutorial series</a> for consistency, to help readers compare and contrast. </p>
+<p><strong>Note</strong>: This work flow is based on the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment#example_installing_locallibrary_on_heroku">Mozilla Heroku work flow in the main Express/Node tutorial series</a> for consistency, to help readers compare and contrast. </p>
 </div>
 
 <h2 id="Modifying_the_LocalLibrary_for_PWS">Modifying the LocalLibrary for PWS</h2>
@@ -161,13 +161,13 @@ var appEnv = cfenv.getAppEnv();
 </pre>
  </li>
  <li>
-  <p>Now run the site locally (see <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes#Testing_the_routes">Testing the routes</a> for the relevant commands) and check that the site still behaves as you expect. At this point your app is ready to use with Cloud Foundry and Pivotal Web Services.</p>
+  <p>Now run the site locally (see <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes#testing_the_routes">Testing the routes</a> for the relevant commands) and check that the site still behaves as you expect. At this point your app is ready to use with Cloud Foundry and Pivotal Web Services.</p>
  </li>
 </ol>
 
 <h2 id="Get_a_Pivotal_Web_Services_account">Get a Pivotal Web Services account</h2>
 
-<p>To start using Pivotal Web Services you will first need to create an account (skip ahead to <a href="#Create_and_upload_the_website">Create and upload the website</a> if you've already got an account and have already installed the PWS cf CLI client).</p>
+<p>To start using Pivotal Web Services you will first need to create an account (skip ahead to <a href="#create_and_upload_the_website">Create and upload the website</a> if you've already got an account and have already installed the PWS cf CLI client).</p>
 
 <ul>
  <li>Go to <a href="https://run.pivotal.io">https://run.pivotal.io</a> and click the <strong>SIGN UP FOR FREE</strong> button.</li>
@@ -208,7 +208,7 @@ Password: enter your password</pre>
 
 <h2 id="Setting_configuration_variables">Setting configuration variables</h2>
 
-<p>You will recall from a preceding section that we need to <a href="#NODE_ENV">set NODE_ENV to 'production'</a> in order to improve our performance and generate less-verbose error messages.</p>
+<p>You will recall from a preceding section that we need to <a href="#node_env">set NODE_ENV to 'production'</a> in order to improve our performance and generate less-verbose error messages.</p>
 
 <ol>
  <li>

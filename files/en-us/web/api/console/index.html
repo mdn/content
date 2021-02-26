@@ -15,7 +15,7 @@ tags:
 
 <p>The <code>console</code> object can be accessed from any global object. {{domxref("Window")}} on browsing scopes and {{domxref("WorkerGlobalScope")}} as specific variants in workers via the property console. It's exposed as {{domxref("Window.console")}}, and can be referenced as <code>console</code>. For example:</p>
 
-<pre class="brush: js notranslate">console.log("Failed to open the specified link")</pre>
+<pre class="brush: js">console.log("Failed to open the specified link")</pre>
 
 <p>This page documents the {{anch("Methods")}} available on the <code>console</code> object and gives a few {{anch("Usage")}} examples.</p>
 
@@ -43,19 +43,19 @@ tags:
  <dt>{{domxref("console.dirxml()")}}</dt>
  <dd>Displays an XML/HTML Element representation of the specified object if possible or the JavaScript Object view if it is not possible.</dd>
  <dt>{{domxref("console.error()")}}</dt>
- <dd>Outputs an error message. You may use <a href="/en-US/docs/Web/API/console#Using_string_substitutions">string substitution</a> and additional arguments with this method.</dd>
+ <dd>Outputs an error message. You may use <a href="/en-US/docs/Web/API/Console#using_string_substitutions">string substitution</a> and additional arguments with this method.</dd>
  <dt>{{domxref("console.exception()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>An alias for <code>error()</code>.</dd>
  <dt>{{domxref("console.group()")}}</dt>
- <dd>Creates a new inline <a href="/en-US/docs/Web/API/console#Using_groups_in_the_console">group</a>, indenting all following output by another level. To move back out a level, call <code>groupEnd()</code>.</dd>
+ <dd>Creates a new inline <a href="/en-US/docs/Web/API/Console#using_groups_in_the_console">group</a>, indenting all following output by another level. To move back out a level, call <code>groupEnd()</code>.</dd>
  <dt>{{domxref("console.groupCollapsed()")}}</dt>
- <dd>Creates a new inline <a href="/en-US/docs/Web/API/console#Using_groups_in_the_console">group</a>, indenting all following output by another level. However, unlike <code>group()</code> this starts with the inline group collapsed requiring the use of a disclosure button to expand it. To move back out a level, call <code>groupEnd()</code>.</dd>
+ <dd>Creates a new inline <a href="/en-US/docs/Web/API/Console#using_groups_in_the_console">group</a>, indenting all following output by another level. However, unlike <code>group()</code> this starts with the inline group collapsed requiring the use of a disclosure button to expand it. To move back out a level, call <code>groupEnd()</code>.</dd>
  <dt>{{domxref("console.groupEnd()")}}</dt>
- <dd>Exits the current inline <a href="/en-US/docs/Web/API/console#Using_groups_in_the_console">group</a>.</dd>
+ <dd>Exits the current inline <a href="/en-US/docs/Web/API/Console#using_groups_in_the_console">group</a>.</dd>
  <dt>{{domxref("console.info()")}}</dt>
- <dd>Informative logging of information. You may use <a href="/en-US/docs/Web/API/console#Using_string_substitutions">string substitution</a> and additional arguments with this method.</dd>
+ <dd>Informative logging of information. You may use <a href="/en-US/docs/Web/API/Console#using_string_substitutions">string substitution</a> and additional arguments with this method.</dd>
  <dt>{{domxref("console.log()")}}</dt>
- <dd>For general output of logging information. You may use <a href="/en-US/docs/Web/API/console#Using_string_substitutions">string substitution</a> and additional arguments with this method.</dd>
+ <dd>For general output of logging information. You may use <a href="/en-US/docs/Web/API/Console#using_string_substitutions">string substitution</a> and additional arguments with this method.</dd>
  <dt>{{domxref("console.profile()")}} {{Non-standard_inline}}</dt>
  <dd>Starts the browser's built-in profiler (for example, the <a href="/en-US/docs/Tools/Performance">Firefox performance tool</a>). You can specify an optional name for the profile.</dd>
  <dt>{{domxref("console.profileEnd()")}} {{Non-standard_inline}}</dt>
@@ -63,17 +63,17 @@ tags:
  <dt>{{domxref("console.table()")}}</dt>
  <dd>Displays tabular data as a table.</dd>
  <dt>{{domxref("console.time()")}}</dt>
- <dd>Starts a <a href="/en-US/docs/Web/API/console#Timers">timer</a> with a name specified as an input parameter. Up to 10,000 simultaneous timers can run on a given page.</dd>
+ <dd>Starts a <a href="/en-US/docs/Web/API/Console#timers">timer</a> with a name specified as an input parameter. Up to 10,000 simultaneous timers can run on a given page.</dd>
  <dt>{{domxref("console.timeEnd()")}}</dt>
- <dd>Stops the specified <a href="/en-US/docs/Web/API/console#Timers">timer</a> and logs the elapsed time in seconds since it started.</dd>
+ <dd>Stops the specified <a href="/en-US/docs/Web/API/Console#timers">timer</a> and logs the elapsed time in seconds since it started.</dd>
  <dt>{{domxref("console.timeLog()")}}</dt>
- <dd>Logs the value of the specified <a href="/en-US/docs/Web/API/console#Timers">timer</a> to the console.</dd>
+ <dd>Logs the value of the specified <a href="/en-US/docs/Web/API/Console#timers">timer</a> to the console.</dd>
  <dt>{{domxref("console.timeStamp()")}} {{Non-standard_inline}}</dt>
  <dd>Adds a marker to the browser's <a href="https://developer.chrome.com/devtools/docs/timeline">Timeline</a> or <a href="/en-US/docs/Tools/Performance/Waterfall">Waterfall</a> tool.</dd>
  <dt>{{domxref("console.trace()")}}</dt>
- <dd>Outputs a <a href="/en-US/docs/Web/API/console#Stack_traces">stack trace</a>.</dd>
+ <dd>Outputs a <a href="/en-US/docs/Web/API/Console#stack_traces">stack trace</a>.</dd>
  <dt>{{domxref("console.warn()")}}</dt>
- <dd>Outputs a warning message. You may use <a href="/en-US/docs/Web/API/console#Using_string_substitutions">string substitution</a> and additional arguments with this method.</dd>
+ <dd>Outputs a warning message. You may use <a href="/en-US/docs/Web/API/Console#using_string_substitutions">string substitution</a> and additional arguments with this method.</dd>
 </dl>
 
 <h2 id="Usage">Examples</h2>
@@ -88,25 +88,25 @@ tags:
 
 <p>The simplest way to use the logging methods is to output a single object:</p>
 
-<pre class="brush: js notranslate">var someObject = { str: "Some text", id: 5 };
+<pre class="brush: js">var someObject = { str: "Some text", id: 5 };
 console.log(someObject);
 </pre>
 
 <p>The output looks something like this:</p>
 
-<pre class="brush: bash notranslate">[09:27:13.475] ({str:"Some text", id:5})</pre>
+<pre class="brush: bash">[09:27:13.475] ({str:"Some text", id:5})</pre>
 
 <h4 id="Outputting_multiple_objects">Outputting multiple objects</h4>
 
 <p>You can also output multiple objects by listing them when calling the logging method, like this:</p>
 
-<pre class="brush: js notranslate">var car = "Dodge Charger";
+<pre class="brush: js">var car = "Dodge Charger";
 var someObject = { str: "Some text", id: 5 };
 console.info("My first car was a", car, ". The object is:", someObject);</pre>
 
 <p>This output will look like this:</p>
 
-<pre class="brush: bash notranslate">[09:28:22.711] My first car was a Dodge Charger . The object is: ({str:"Some text", id:5})
+<pre class="brush: bash">[09:28:22.711] My first car was a Dodge Charger . The object is: ({str:"Some text", id:5})
 </pre>
 
 <h4 id="Using_string_substitutions">Using string substitutions</h4>
@@ -130,14 +130,14 @@ console.info("My first car was a", car, ". The object is:", someObject);</pre>
 
 <p>Each of these pulls the next argument after the format string off the parameter list. For example:</p>
 
-<pre class="brush: js notranslate">for (var i=0; i&lt;5; i++) {
+<pre class="brush: js">for (var i=0; i&lt;5; i++) {
   console.log("Hello, %s. You've called me %d times.", "Bob", i+1);
 }
 </pre>
 
 <p>The output looks like this:</p>
 
-<pre class="brush: bash notranslate">[13:14:13.481] Hello, Bob. You've called me 1 times.
+<pre class="brush: bash">[13:14:13.481] Hello, Bob. You've called me 1 times.
 [13:14:13.483] Hello, Bob. You've called me 2 times.
 [13:14:13.485] Hello, Bob. You've called me 3 times.
 [13:14:13.487] Hello, Bob. You've called me 4 times.
@@ -148,11 +148,15 @@ console.info("My first car was a", car, ". The object is:", someObject);</pre>
 
 <p>You can use the <code>%c</code> directive to apply a CSS style to console output:</p>
 
-<pre class="brush: js notranslate">console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue;padding: 2px");</pre>
+<pre class="brush: js">console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue;padding: 2px");</pre>
 
 <p>The text before the directive will not be affected, but the text after the directive will be styled using the CSS declarations in the parameter.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12527/CSS-styling.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="css-styling.png" style="display: block; margin: 0 auto;"></p>
+
+<p>You may use <code>%c</code> multiple times:</p>
+
+<pre class="brush: js notranslate">console.log("Multiple styles: %cred %corange", "color: red", "color: orange", "Additional unformatted message");</pre>
 
 <p>The properties usable along with the <code>%c</code> syntax are as follows (at least, in Firefox — they may differ in other browsers):</p>
 
@@ -187,7 +191,7 @@ console.info("My first car was a", car, ". The object is:", someObject);</pre>
 
 <p>To exit the current group, call <code>console.groupEnd()</code>. For example, given this code:</p>
 
-<pre class="brush: js notranslate">console.log("This is the outer level");
+<pre class="brush: js">console.log("This is the outer level");
 console.group("First group");
 console.log("In the first group");
 console.group("Second group");
@@ -201,7 +205,7 @@ console.debug("Back to the outer level");
 
 <p>The output looks like this:</p>
 
-<p><img alt="Demo of nested groups in Firefox console" src="https://mdn.mozillademos.org/files/16911/console_groups_demo.png" style="height: 169px; width: 236px;"></p>
+<p><img alt="Demo of nested groups in Firefox console" src="console_groups_demo.png"></p>
 
 <h3 id="Timers">Timers</h3>
 
@@ -209,7 +213,7 @@ console.debug("Back to the outer level");
 
 <p>For example, given this code:</p>
 
-<pre class="brush: js notranslate">console.time("answer time");
+<pre class="brush: js">console.time("answer time");
 alert("Click to continue");
 console.timeLog("answer time");
 alert("Do a bunch of other stuff...");
@@ -218,7 +222,7 @@ console.timeEnd("answer time");
 
 <p>Will log the time needed by the user to dismiss the alert box, log the time to the console, wait for the user to dismiss the second alert, and then log the ending time to the console:</p>
 
-<p><img alt="timerresult.png" class="default internal" src="https://mdn.mozillademos.org/files/16113/console-timeLog.png" style="border: 1px solid black; height: 102px; margin: 0 auto; width: 318px;"></p>
+<p><img class="default internal" src="console-timelog.png" style="border: 1px solid black; margin: 0 auto;"></p>
 
 <p>Notice that the timer's name is displayed both when the timer is started and when it's stopped.</p>
 
@@ -228,7 +232,7 @@ console.timeEnd("answer time");
 
 <p>The console object also supports outputting a stack trace; this will show you the call path taken to reach the point at which you call {{domxref("console.trace()")}}. Given code like this:</p>
 
-<pre class="brush: js notranslate">function foo() {
+<pre class="brush: js">function foo() {
   function bar() {
     console.trace();
   }
@@ -240,7 +244,7 @@ foo();
 
 <p>The output in the console looks something like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/7167/api-trace2.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="api-trace2.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h2 id="Specifications">Specifications</h2>
 

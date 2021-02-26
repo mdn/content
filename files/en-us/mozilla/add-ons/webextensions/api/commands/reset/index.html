@@ -13,7 +13,7 @@ tags:
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p>Resets the given command's description and keyboard shortcut to the values given in the extension's <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/commands"><code>commands</code> manifest.json key</a>.</p>
+<p>Resets the given command's description and keyboard shortcut to the values given in the extension's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands"><code>commands</code> manifest.json key</a>.</p>
 
 <p>This effectively undoes any changes made to the command using the {{WEbExtAPIRef("commands.update()")}} function.</p>
 
@@ -47,7 +47,7 @@ tags:
 
 <p>Resets the command named "my-command" when the user clicks the "reset" button:</p>
 
-<pre class="notranslate brush: js">const commandName = 'my-command';
+<pre class="brush: js">const commandName = 'my-command';
 
 function resetShortcut() {
   browser.commands.reset(commandName);

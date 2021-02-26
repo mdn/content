@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Object.preventExtensions(<var>obj</var>)</pre>
+<pre class="brush: js">Object.preventExtensions(<var>obj</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -63,7 +63,7 @@ tags:
 
 <h3 id="Using_Object.preventExtensions">Using Object.preventExtensions</h3>
 
-<pre class="brush: js notranslate">// Object.preventExtensions returns the object
+<pre class="brush: js">// Object.preventExtensions returns the object
 // being made non-extensible.
 var obj = {};
 var obj2 = Object.preventExtensions(obj);
@@ -97,7 +97,7 @@ fail();
 
 <p>A non-extensible object's prototype is immutable:</p>
 
-<pre class="brush: js notranslate">var fixed = Object.preventExtensions({});
+<pre class="brush: js">var fixed = Object.preventExtensions({});
 // throws a 'TypeError'.
 fixed.__proto__ = { oh: 'hai' };</pre>
 
@@ -107,7 +107,7 @@ fixed.__proto__ = { oh: 'hai' };</pre>
   cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if
   it was a non-extensible ordinary object, return it.</p>
 
-<pre class="brush: js notranslate">Object.preventExtensions(1);
+<pre class="brush: js">Object.preventExtensions(1);
 // TypeError: 1 is not an object (ES5 code)
 
 Object.preventExtensions(1);
@@ -132,10 +132,7 @@ Object.preventExtensions(1);
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Object.preventExtensions")}}</p>
-</div>
+<p>{{Compat("javascript.builtins.Object.preventExtensions")}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -47,7 +47,7 @@ browser.tabs.onHighlighted.hasListener(listener)
 
  <dl class="reference-values">
   <dt><code>highlightInfo</code></dt>
-  <dd><a href="#highlightInfo"><code>object</code></a>. ID(s) of the highlighted tabs, and ID of their window.</dd>
+  <dd><a href="#highlightinfo"><code>object</code></a>. ID(s) of the highlighted tabs, and ID of their window.</dd>
  </dl>
  </dd>
 </dl>
@@ -67,7 +67,7 @@ browser.tabs.onHighlighted.hasListener(listener)
 
 <p>Listen for highlighting events, and log the IDs of highlighted tabs:</p>
 
-<pre class="notranslate brush: js">function handleHighlighted(highlightInfo) {
+<pre class="brush: js">function handleHighlighted(highlightInfo) {
   console.log("Highlighted tabs: " + highlightInfo.tabIds);
 }
 

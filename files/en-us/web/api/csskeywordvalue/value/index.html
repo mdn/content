@@ -19,12 +19,19 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <var>val</var> = <var>cssKeywordValue</var>.value
+<pre class="brush: js">var <var>val</var> = <var>cssKeywordValue</var>.value
 <var>cssKeywordValue</var>.value = <var>val</var></pre>
 
 <h3 id="Value">Value</h3>
 
 <p>A {{domxref('USVString')}}.</p>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<dl>
+  <dt><code>TypeError</code></dt>
+  <dd>If the <code>value</code> property is an empty {{jsxref('String')}} when being set.</dd>
+</dl>
 
 <h2 id="Examples">Examples</h2>
 

@@ -33,14 +33,14 @@ tags:
   </p>
 </div>
 
-<p>For a much more in-depth look at autoplay, autoplay blocking, and how to respond whena
+<p>For a much more in-depth look at autoplay, autoplay blocking, and how to respond when
   autoplay is blocked by the user's browser, see our article <a
     href="/en-US/docs/Web/Media/Autoplay_guide">Autoplay guide for media and Web Audio
     APIs</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>HTMLMediaElement</em>.autoplay = true | false;
+<pre class="brush: js"><em>HTMLMediaElement</em>.autoplay = true | false;
 
 var <em>autoplay</em> = <em>HTMLMediaElement</em>.autoplay;</pre>
 
@@ -62,11 +62,11 @@ var <em>autoplay</em> = <em>HTMLMediaElement</em>.autoplay;</pre>
 
 <p>...</p>
 
-<pre class="brush: html notranslate">&lt;video id="video" controls&gt;
+<pre class="brush: html">&lt;video id="video" controls&gt;
   &lt;source src="https://player.vimeo.com/external/250688977.sd.mp4?s=d14b1f1a971dde13c79d6e436b88a6a928dfe26b&amp;profile_id=165"&gt;
 &lt;/video&gt;</pre>
 
-<pre class="brush: js notranslate">*** Disable autoplay (recommended) ***
+<pre class="brush: js">*** Disable autoplay (recommended) ***
       false is the default value
         document.querySelector('#video').autoplay = false;
 

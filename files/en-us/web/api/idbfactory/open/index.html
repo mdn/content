@@ -2,23 +2,19 @@
 title: IDBFactory.open()
 slug: Web/API/IDBFactory/open
 tags:
-- API
-- Database
-- IDBFactory
-- IndexedDB
-- Method
-- Reference
-- Storage
-- open
+  - API
+  - Database
+  - IDBFactory
+  - IndexedDB
+  - Method
+  - Reference
+  - Storage
+  - open
 ---
-<div>
   <p>{{APIRef("IndexedDB")}}</p>
-</div>
-
-<div>
   <p>The <strong><code>open()</code></strong> method of the {{domxref("IDBFactory")}}
     interface requests opening a <a
-      href="/en-US/docs/IndexedDB#gloss_database_connection">connection to a database</a>.
+      href="/en-US/docs/Web/API/IndexedDB_API#gloss_database_connection">connection to a database</a>.
   </p>
 
   <p>The method returns an {{domxref("IDBOpenDBRequest")}} object immediately, and
@@ -26,11 +22,6 @@ tags:
     <code>success</code> event is fired on the request object that is returned from this
     method, with its <code>result</code> attribute set to the new
     {{domxref("IDBDatabase")}} object for the connection.</p>
-</div>
-
-<p>If an error occurs while the database connection is being opened, then an <a
-    href="/en-US/docs/IndexedDB/IDBErrorEvent">error event</a> is fired on the request
-  object returned from this method.</p>
 
 <p>May trigger <code>upgradeneeded</code>, <code>blocked</code> or
   <code>versionchange</code> events.</p>
@@ -41,7 +32,7 @@ tags:
 
 <p>For the current standard:</p>
 
-<pre class="brush: js notranslate">var <em>IDBOpenDBRequest</em> = <em>indexedDB</em>.open(<em>name</em>);
+<pre class="brush: js">var <em>IDBOpenDBRequest</em> = <em>indexedDB</em>.open(<em>name</em>);
 var <em>IDBOpenDBRequest</em> = <em>indexedDB</em>.open(<em>name</em>, <em>version</em>);
 </pre>
 
@@ -61,7 +52,7 @@ var <em>IDBOpenDBRequest</em> = <em>indexedDB</em>.open(<em>name</em>, <em>versi
 
 <dl>
   <dt>options (version and storage) {{optional_inline}} {{deprecated_inline}}</dt>
-  <dd>In Gecko, since <a href="/en-US/Firefox/Releases/26">version 26</a>, you can include
+  <dd>In Gecko, since <a href="/en-US/docs/Mozilla/Firefox/Releases/26">version 26</a>, you can include
     a non-standard <code>options</code> object as a parameter of {{
     domxref("IDBFactory.open") }} that contains the <code>version</code> number of the
     database, plus a storage value that specifies whether you want to
@@ -113,7 +104,7 @@ var <em>IDBOpenDBRequest</em> = <em>indexedDB</em>.open(<em>name</em>, <em>versi
 
 <p>In the following code snippet, we make a request to open a database, and include
   handlers for the success and error cases. For a full working example, see our <a
-    class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
+    href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
     Notifications</a> app (<a class="external"
     href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
 
@@ -172,10 +163,7 @@ DBOpenRequest.onsuccess = function(event) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.IDBFactory.open")}}</p>
-</div>
+<p>{{Compat("api.IDBFactory.open")}}</p>
 
 <h2 id="See_also">See also</h2>
 

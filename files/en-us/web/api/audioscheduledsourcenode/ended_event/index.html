@@ -46,13 +46,13 @@ tags:
 
 <p>In this simple example, an event listener for the <code>ended</code> event is set up to enable a "Start" button in the user interface when the node stops playing:</p>
 
-<pre class="brush: js notranslate">node.addEventListener('ended', () =&gt; {
+<pre class="brush: js">node.addEventListener('ended', () =&gt; {
   document.getElementById("startButton").disabled = false;
 })</pre>
 
 <p>You can also set up the event handler using the {{domxref("AudioScheduledSourceNode.onended")}} property:</p>
 
-<pre class="brush: js notranslate">node.onended = function() {
+<pre class="brush: js">node.onended = function() {
   document.getElementById("startButton").disabled = false;
 }</pre>
 
@@ -84,8 +84,8 @@ tags:
 <h2 id="Related_events">Related events</h2>
 
 <ul>
- <li class="zhc-markdown-block--checklist-item"><span class="zhc-markdown-block--checklist-item--remaining-text"><span class="zhc-markdown-block zhc-markdown-block--html"><a href="/en-US/docs/Web/Events/audioprocess">audioprocess</a></span></span></li>
- <li class="zhc-markdown-block--checklist-item"><span class="zhc-markdown-block--checklist-item--remaining-text"><span class="zhc-markdown-block zhc-markdown-block--html"><a href="/en-US/docs/Web/Events/complete">complete</a></span></span></li>
+ <li class="zhc-markdown-block--checklist-item"><span class="zhc-markdown-block--checklist-item--remaining-text"><span class="zhc-markdown-block zhc-markdown-block--html"><a href="/en-US/docs/Web/API/ScriptProcessorNode/audioprocess_event">audioprocess</a></span></span></li>
+ <li class="zhc-markdown-block--checklist-item"><span class="zhc-markdown-block--checklist-item--remaining-text"><span class="zhc-markdown-block zhc-markdown-block--html"><a href="/en-US/docs/Web/API/OfflineAudioContext/complete_event">complete</a></span></span></li>
 </ul>
 
 <h2 id="See_also">See also</h2>

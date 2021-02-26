@@ -2,12 +2,12 @@
 title: Date.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 tags:
-- Date
-- Internationalization
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - Date
+  - Internationalization
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 ---
 <div>{{JSRef}}</div>
 
@@ -27,7 +27,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>dateObj</var>.toLocaleString([<var>locales</var>[, <var>options</var>]])</pre>
+  class="brush: js"><var>dateObj</var>.toLocaleString([<var>locales</var>[, <var>options</var>]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -38,7 +38,7 @@ tags:
   locale used and the form of the string returned are entirely implementation dependent.
 </p>
 
-<p>See the {{jsxref("DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}
+<p>See the {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}
   constructor for details on these parameters and how to use them.</p>
 
 <p>The default value for each date-time component property is {{jsxref("undefined")}}.
@@ -50,13 +50,6 @@ tags:
 
 <p>A string representing the given date according to language-specific conventions.</p>
 
-<h2 id="Performance">Performance</h2>
-
-<p>When formatting large numbers of dates, it is better to create an
-  {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} object and use the
-  function provided by its {{jsxref("DateTimeFormat.prototype.format", "format")}}
-  property.</p>
-
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_toLocaleString">Using toLocaleString()</h3>
@@ -64,7 +57,7 @@ tags:
 <p>In basic use without specifying a locale, a formatted string in the default locale and
   with default options is returned.</p>
 
-<pre class="brush: js notranslate">let date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
+<pre class="brush: js">let date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
 
 // toLocaleString() without arguments depends on the
 // implementation, the default locale, and the default time zone
@@ -80,11 +73,11 @@ console.log(date.toLocaleString());
   already, you can use the requirement that illegal language tags are rejected with a
   {{jsxref("RangeError")}} exception:</p>
 
-<pre class="brush: js notranslate">function toLocaleStringSupportsLocales() {
+<pre class="brush: js">function toLocaleStringSupportsLocales() {
   try {
     new Date().toLocaleString('i');
   } catch (e) {
-    return e instanceof RangeError;
+    return e.name === 'RangeError';
   }
   return false;
 }
@@ -97,7 +90,7 @@ console.log(date.toLocaleString());
   sure to specify that language (and possibly some fallback languages) using the
   <code><var>locales</var></code> argument:</p>
 
-<pre class="brush: js notranslate">let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+<pre class="brush: js">let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // formats below assume the local time zone of the locale;
 // America/Los_Angeles for the US
@@ -134,7 +127,7 @@ console.log(date.toLocaleString(['ban', 'id']));
 <p>The results provided by <code>toLocaleString()</code> can be customized using the
   <code><var>options</var></code> argument:</p>
 
-<pre class="brush: js notranslate">let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+<pre class="brush: js">let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // request a weekday along with a long date
 let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -167,7 +160,7 @@ console.log(date.toLocaleString('en-US', { hour12: false }));
 <p>For this reason, you cannot expect to be able to compare the results of
   <code>toLocaleString()</code> to a static value:</p>
 
-<pre class="brush: js example-bad notranslate">"1/1/2019, 01:00:00" === new Date("2019-01-01T01:00:00Z").toLocaleString("en-US");
+<pre class="brush: js example-bad">"1/1/2019, 01:00:00" === new Date("2019-01-01T01:00:00Z").toLocaleString("en-US");
 // true in Firefox and others
 // false in IE and Edge</pre>
 
@@ -209,7 +202,7 @@ console.log(date.toLocaleString('en-US', { hour12: false }));
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li>{{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}</li>
+  <li>{{jsxref("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}}</li>
   <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
   <li>{{jsxref("Date.prototype.toLocaleTimeString()")}}</li>
   <li>{{jsxref("Date.prototype.toString()")}}</li>

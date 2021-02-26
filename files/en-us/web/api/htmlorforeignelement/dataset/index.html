@@ -18,7 +18,7 @@ tags:
 <div>{{APIRef("HTML DOM")}}</div>
 
 <p><span class="seoSummary">The <strong><code>dataset</code></strong> read-only property
-    of the {{DOMxRef("HTMLOrForeignElement")}} interface provides read/write access to <a
+    of the {{DOMxRef("HTMLOrForeignElement")}} mixin provides read/write access to <a
       href="/en-US/docs/Web/HTML/Global_attributes/data-*">custom data attributes</a>
     (<code>data-<var>*</var></code>) on elements.</span> It exposes a map of strings
   ({{domxref("DOMStringMap")}}) with an entry for each <code>data-*</code> attribute.</p>
@@ -113,7 +113,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <var>dataAttrMap</var> = <var>element</var>.dataset
+<pre class="brush: js">const <var>dataAttrMap</var> = <var>element</var>.dataset
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -123,9 +123,9 @@ tags:
 <h2 id="Examples">Examples</h2>
 
 <pre
-  class="brush: html notranslate">&lt;div id="user" data-id="1234567890" data-user="johndoe" data-date-of-birth&gt;John Doe&lt;/div&gt;</pre>
+  class="brush: html">&lt;div id="user" data-id="1234567890" data-user="johndoe" data-date-of-birth&gt;John Doe&lt;/div&gt;</pre>
 
-<pre class="brush: js notranslate">const el = document.querySelector('#user');
+<pre class="brush: js">const el = document.querySelector('#user');
 
 // el.id === 'user'
 // el.dataset.id === '1234567890'
@@ -179,7 +179,7 @@ if ('someDataAttr' in el.dataset === false) {
 
 <p>{{Compat("api.HTMLElement.dataset")}}</p>
 
-<div class="hidden">Please change the compat macro's paramter to
+<div class="hidden">Please change the compat macro's parameter to
   <code>api.HTMLOrForeignElement.dataset</code> after BCD is updated.</div>
 
 <h2 id="See_also">See also</h2>

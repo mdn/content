@@ -19,9 +19,9 @@ tags:
  <li>Debugger updates:
   <ul>
    <li><a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">Column breakpoints</a> allow you to select the specific point (or column) in a line of code where you want the debugger to break ({{bug(1528417)}}).</li>
-   <li><a href="/en-US/docs/Tools/Debugger/Set_a_log_point">Log points</a> allow you to log specific information to the console during code execution without pausing execution and without the need to change the code.</li>
+   <li><a href="/en-US/docs/Tools/Debugger/Set_a_logpoint">Log points</a> allow you to log specific information to the console during code execution without pausing execution and without the need to change the code.</li>
    <li>The <a href="/en-US/docs/Tools/Debugger/Using_the_Debugger_map_scopes_feature">map scopes feature</a> allows you to view the variables from the original source.</li>
-   <li>You can <a href="/en-US/docs/Tools/Debugger/Debug_worker_threads">debug worker</a> threads directly in the debugger.</li>
+   <li>You can <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#debugging_worker_threads">debug worker</a> threads directly in the debugger.</li>
   </ul>
  </li>
  <li><a href="/en-US/docs/Tools/Web_Console">Web Console</a> updates:
@@ -38,9 +38,9 @@ tags:
  </li>
  <li><a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> enhancements:
   <ul>
-   <li>The <a href="/en-US/docs/Tools/Network_Monitor/request_details#Headers">Header</a> panel of the Network monitor will now display a notification for resources belonging to a known tracker ({{bug(1485416)}}).</li>
-   <li>In the Network monitor <a href="/en-US/docs/Tools/Network_Monitor/request_list#Network_request_columns">request columns</a>, you can control the visible columns and column sorting. The context menu now includes a command to restore the list sort parameters to the default ({{bug(1454962)}}).</li>
-   <li>You can change the <a href="/en-US/docs/Tools/Network_Monitor/request_list#Network_request_columns">width of the columns</a> in the Network Monitor to suit your workflow ({{bug(1358414)}}).</li>
+   <li>The <a href="/en-US/docs/Tools/Network_Monitor/request_details#headers">Header</a> panel of the Network monitor will now display a notification for resources belonging to a known tracker ({{bug(1485416)}}).</li>
+   <li>In the Network monitor <a href="/en-US/docs/Tools/Network_Monitor/request_list#network_request_columns">request columns</a>, you can control the visible columns and column sorting. The context menu now includes a command to restore the list sort parameters to the default ({{bug(1454962)}}).</li>
+   <li>You can change the <a href="/en-US/docs/Tools/Network_Monitor/request_list#network_request_columns">width of the columns</a> in the Network Monitor to suit your workflow ({{bug(1358414)}}).</li>
   </ul>
  </li>
 </ul>
@@ -94,7 +94,7 @@ tags:
 <ul>
  <li>{{jsxref("String.prototype.matchAll")}} has been implemented and enabled by default ({{bug(1435829)}}, {{bug(1531830)}}).</li>
  <li>Support for the dynamic module {{jsxref("Statements/import", "import()", "#Dynamic_Imports")}} proposal is now available by default ({{bug(1517546)}}).</li>
- <li>The <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Hashbang_comments">hashbang grammar</a> proposal is now implemented ({{bug(1519097)}}).</li>
+ <li>The <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#hashbang_comments">hashbang grammar</a> proposal is now implemented ({{bug(1519097)}}).</li>
 </ul>
 
 <h3 id="APIs">APIs</h3>
@@ -123,7 +123,7 @@ tags:
 <h4 id="Media_Web_Audio_and_WebRTC">Media, Web Audio, and WebRTC</h4>
 
 <ul>
- <li>The <a href="/en-US/docs/Web/Media/Formats/Video_codecs#AV1">AV1 video codec</a> is now supported on Linux.</li>
+ <li>The <a href="/en-US/docs/Web/Media/Formats/Video_codecs#av1">AV1 video codec</a> is now supported on Linux.</li>
  <li><a href="https://code.videolan.org/videolan/dav1d">dav1d</a> is now the default media decoder for <a href="https://aomediacodec.github.io/av1-spec/av1-spec.pdf">AV1</a> (see for example {{bug(1533742)}} and {{bug(1535038)}}).</li>
  <li>Calling {{domxref("RTCPeerConnection.addTrack()")}} without specifying any streams to which to add the new track now works as expected: it adds a streamless track to the connection. Each peer is responsible for managing the association between the track and any stream on its end ({{bug(1231414)}}).</li>
  <li>The {{domxref("MediaDeviceInfo.groupId")}} property is now implemented ({{bug(1213453)}}). While it has existed in Firefox since Firefox 39, it did not actually gather related devices together into the same group IDs.</li>

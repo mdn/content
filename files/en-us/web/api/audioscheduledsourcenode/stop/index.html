@@ -2,15 +2,15 @@
 title: AudioScheduledSourceNode.stop()
 slug: Web/API/AudioScheduledSourceNode/stop
 tags:
-- API
-- Audio
-- AudioScheduledSourceNode
-- Media
-- Method
-- Reference
-- Web Audio API
-- sound
-- stop
+  - API
+  - Audio
+  - AudioScheduledSourceNode
+  - Media
+  - Method
+  - Reference
+  - Web Audio API
+  - sound
+  - stop
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
@@ -29,7 +29,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>AudioScheduledSourceNode</em>.stop([<em>when</em>]);
+<pre class="brush: js"><em>AudioScheduledSourceNode</em>.stop([<em>when</em>]);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -38,7 +38,7 @@ tags:
   <dt><code>when</code> {{optional_inline}}</dt>
   <dd>The time, in seconds, at which the sound should stop playing. This value is
     specified in the same time coordinate system as the {{domxref("AudioContext")}} is
-    using for its {{domxref("AudioContext.currentTime", "currentTime")}} attribute.
+    using for its {{domxref("BaseAudioContext/currentTime", "currentTime")}} attribute.
     Omitting this parameter, specifying a value of 0, or passing a negative value causes
     the sound to stop playback immediately.</dd>
 </dl>
@@ -61,7 +61,7 @@ tags:
 
 <p>This example demonstrates starting an oscillator node, scheduled to begin playing at
   once and to stop playing in one second. The stop time is determined by taking the audio
-  context's current time from {{domxref("AudioContext.currentTime")}} and adding 1 second.
+  context's current time from {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}} and adding 1 second.
 </p>
 
 <pre class="brush: js">context = new AudioContext();
@@ -93,15 +93,12 @@ osc.stop(context.currentTime + 1);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.AudioScheduledSourceNode.stop")}}</p>
-</div>
+<p>{{Compat("api.AudioScheduledSourceNode.stop")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
   </li>
   <li>{{domxref("AudioScheduledSourceNode.start", "start()")}}</li>
   <li>{{domxref("AudioScheduledSourceNode")}}</li>

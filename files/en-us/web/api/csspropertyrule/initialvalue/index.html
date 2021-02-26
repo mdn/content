@@ -12,17 +12,13 @@ tags:
 - Reference
 - Read-only
 ---
-<div>{{APIRef("CSS Properties and Values API")}}{{SeeCompatTable}}{{draft}}</div>
+<div>{{APIRef("CSS Properties and Values API")}}{{SeeCompatTable}}</div>
 
-<p class="summary">The read-only <strong><code>initialValue</code></strong> nullable
-  property of the {{domxref("CSSPropertyRule")}} interface returns the initial value of
-  the custom property registration represented by the {{domxref("@property")}} rule,
-  controlling the property’s initial value. </p>
+<p class="summary">The read-only <strong><code>initialValue</code></strong> nullable property of the {{domxref("CSSPropertyRule")}} interface returns the initial value of the custom property registration represented by the {{cssxref("@property")}} rule, controlling the property’s initial value. </p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js notranslate">const <var>initialValue</var> = CSSPropertyRule.initialValue;</pre>
+<pre class="syntaxbox">const <var>initialValue</var> = <var>CSSPropertyRule</var>.initialValue;</pre>
 
 <h3>Value</h3>
 <p>A {{domxref("USVString")}} which is a {{CSSXref("&lt;declaration-value&gt;")}} as
@@ -31,7 +27,16 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>To do</p>
+<p>This stylesheet contains a single {{cssxref("@property")}} rule. The first {{domxref("CSSRule")}} returned will be a <code>CSSPropertyRule</code> representing this rule. The <code>initialValue</code> property returns the string <code>"#c0ffee"</code> this being the value of the <code>initial-value</code> property in the CSS.</p>
+
+<pre class="brush:css">@property --property-name {
+  syntax: '&lt;color&gt;';
+  inherits: false;
+  initial-value: #c0ffee;
+}</pre>
+
+<pre class="brush:javascript">let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].initialValue); //the string "#c0ffee"</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

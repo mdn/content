@@ -2,13 +2,13 @@
 title: IDBObjectStore.add()
 slug: Web/API/IDBObjectStore/add
 tags:
-- API
-- Database
-- IDBObjectStore
-- IndexedDB
-- Method
-- Reference
-- Storage
+  - API
+  - Database
+  - IDBObjectStore
+  - IndexedDB
+  - Method
+  - Reference
+  - Storage
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -32,7 +32,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>request</em> = objectStore.add(<em>value</em>);
+<pre class="brush: js">var <em>request</em> = objectStore.add(<em>value</em>);
 var <em>request</em> = objectStore.add(<em>value</em>, <em>key</em>);
 </pre>
 
@@ -68,7 +68,7 @@ var <em>request</em> = objectStore.add(<em>value</em>, <em>key</em>);
     <tr>
       <td><code>ReadOnlyError</code></td>
       <td>The transaction associated with this operation is in read-only <a
-          href="/en-US/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.</td>
+          href="/en-US/docs/Web/API/IDBTransaction#mode_constants">mode</a>.</td>
     </tr>
     <tr>
       <td><code>TransactionInactiveError</code></td>
@@ -161,8 +161,7 @@ function addData() {
   };
 };</pre>
 
-<h2 id="Specification"><span style="font-size: 2.14285714285714rem;">Specification</span>
-</h2>
+<h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
   <tbody>
@@ -186,10 +185,7 @@ function addData() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.IDBObjectStore.add")}}</p>
-</div>
+<p>{{Compat("api.IDBObjectStore.add")}}</p>
 
 <h2 id="See_also">See also</h2>
 

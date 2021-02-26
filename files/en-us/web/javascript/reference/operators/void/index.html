@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">void <em>expression</em></pre>
+<pre class="brush: js">void <em>expression</em></pre>
 
 <h2 id="Description">Description</h2>
 
@@ -35,7 +35,7 @@ tags:
   parentheses can help clarify the resolution of the expression following the
   <code>void</code> operator:</p>
 
-<pre class="brush: js notranslate">void 2 == '2';   // (void 2) == '2', returns false
+<pre class="brush: js">void 2 == '2';   // (void 2) == '2', returns false
 void (2 == '2'); // void (2 == '2'), returns undefined
 </pre>
 
@@ -48,7 +48,7 @@ void (2 == '2'); // void (2 == '2'), returns undefined
     expression</a>, <code>void</code> can be used to force the <code>function</code>
   keyword to be treated as an expression instead of a declaration.</p>
 
-<pre class="brush: js notranslate">void function iife() {
+<pre class="brush: js">void function iife() {
 
   console.log("Executed!");
 
@@ -67,7 +67,7 @@ void (2 == '2'); // void (2 == '2'), returns undefined
   value is {{jsxref("undefined")}}. The <code>void</code> operator can be used to return
   <code>undefined</code>. For example:</p>
 
-<pre class="brush: html notranslate">&lt;a href="javascript:void(0);"&gt;
+<pre class="brush: html">&lt;a href="javascript:void(0);"&gt;
   Click here to do nothing
 &lt;/a&gt;
 
@@ -89,7 +89,7 @@ void (2 == '2'); // void (2 == '2'), returns undefined
   intended to be used, it can be passed to the void operator to ensure that (for example)
   changing APIs do not cause arrow functions' behaviors to change.</p>
 
-<pre class="brush: js notranslate">button.onclick = () =&gt; void doSomething();</pre>
+<pre class="brush: js">button.onclick = () =&gt; void doSomething();</pre>
 
 <p>This ensures the return value of <code>doSomething</code> changing from
   <code>undefined</code> to <code>true</code> will not change the behavior of this code.

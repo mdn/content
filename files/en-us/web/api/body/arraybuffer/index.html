@@ -2,13 +2,13 @@
 title: Body.arrayBuffer()
 slug: Web/API/Body/arrayBuffer
 tags:
-- API
-- ArrayBuffer
-- BODY
-- Experimental
-- Fetch
-- Method
-- Reference
+  - API
+  - ArrayBuffer
+  - BODY
+  - Experimental
+  - Fetch
+  - Method
+  - Reference
 ---
 <div>{{APIRef("Fetch")}}</div>
 
@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>response</em>.arrayBuffer().then(function(<em>buffer</em>) {
+<pre class="brush: js"><em>response</em>.arrayBuffer().then(function(<em>buffer</em>) {
   // do something with buffer
 });</pre>
 
@@ -45,12 +45,12 @@ tags:
 
 <p>In <code>getData()</code> we create a new request using the
   {{domxref("Request.Request","Request()")}} constructor, then use it to fetch an OGG
-  music track. We also use {{domxref("AudioContext.createBufferSource")}} to create an
+  music track. We also use {{domxref("BaseAudioContext/createBufferSource", "AudioContext.createBufferSource")}} to create an
   audio buffer source. When the fetch is successful, we read an {{jsxref("ArrayBuffer")}}
   out of the response using <code>arrayBuffer()</code>, decode the audio data using
-  {{domxref("AudioContext.decodeAudioData")}}, set the decoded data as the audio buffer
+  {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}}, set the decoded data as the audio buffer
   source's buffer (<code>source.buffer</code>), then connect the source up to the
-  {{domxref("AudioContext.destination")}}.</p>
+  {{domxref("BaseAudioContext/destination", "AudioContext.destination")}}.</p>
 
 <p>Once <code>getData()</code> has finished running, we start the audio source playing
   with <code>start(0)</code>, then disable the play button so it can't be clicked again
@@ -117,7 +117,7 @@ play.onclick = function() {
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
+  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
   <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a></li>
   <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
 </ul>

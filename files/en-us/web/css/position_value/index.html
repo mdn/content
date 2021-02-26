@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12215/position_type.png" style="float: left; height: 230px; width: 362px;">The <code>&lt;position&gt;</code> data type is specified with one or two keywords, with optional offsets.</p>
+<p><img alt="" src="position_type.png" style="float: left;">The <code>&lt;position&gt;</code> data type is specified with one or two keywords, with optional offsets.</p>
 
 <p>The keyword values are <code>center</code>, <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>. Each keyword represents either an edge of the element's box or the center line between two edges. Depending on the context, <code>center</code> represents either the center between the left and right edges, or the center between the top and bottom edges.</p>
 
@@ -27,7 +27,7 @@ tags:
 
 <p>If only a single offset value is specified, it defines the x-coordinate, with the value for the other axis defaulting to <code>center</code>.</p>
 
-<pre class="brush:css notranslate">/* 1-value syntax */
+<pre class="brush:css">/* 1-value syntax */
 <var>keyword</var>                  /* Either the horizontal or vertical position; the other axis defaults to center */
 <var>value</var>                    /* The position on the x-axis; the y-axis defaults to 50% */
 
@@ -38,12 +38,12 @@ tags:
 <var>value</var> <var>value</var>              /* A value for each direction (horizontal then vertical) */
 
 /* 4-value syntax */
-<var>keyword</var> <var>value</var> <var>keyword</var> <var>value</var> /* Each value is an offset from the keyword that preceeds it */
+<var>keyword</var> <var>value</var> <var>keyword</var> <var>value</var> /* Each value is an offset from the keyword that precedes it */
 </pre>
 
 <h3 id="Formal_syntax">Formal syntax</h3>
 
-<pre class="brush: css notranslate">[
+<pre class="brush: css">[
  [ left | center | right ] || [ top | center | bottom ]
 |
  [ left | center | right | &lt;length&gt; | &lt;percentage&gt; ]
@@ -60,13 +60,13 @@ tags:
 
 <h2 id="Interpolation">Interpolation</h2>
 
-<p>When animated, a point's abscissa and ordinate values are interpolated independently. However, because the speed of the interpolation is determined by a single <a href="/en-US/docs/Web/CSS/single-transition-timing-function">timing function</a> for both coordinates, the point will move in a straight line.</p>
+<p>When animated, a point's abscissa and ordinate values are interpolated independently. However, because the speed of the interpolation is determined by a single <a href="/en-US/docs/Web/CSS/easing-function">timing function</a> for both coordinates, the point will move in a straight line.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Valid_positions">Valid positions</h3>
 
-<pre class="notranslate">center
+<pre>center
 left
 center top
 
@@ -79,7 +79,7 @@ bottom 12vmin right -6px
 
 <h3 id="Invalid_positions">Invalid positions</h3>
 
-<pre class="example-bad notranslate">left right
+<pre class="example-bad">left right
 bottom top
 10px 15px 20px 15px
 </pre>
@@ -126,8 +126,8 @@ bottom top
 
 <ul>
  <li><a href="/en-US/docs/Web/CSS/CSS_Values_and_Units">CSS Values and Units</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">CSS Values and Units introduction</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">CSS Values and Units introduction</a></li>
  <li>{{cssxref("background-position")}}</li>
- <li>{{cssxref("radial-gradient")}}</li>
- <li>{{cssxref("conic-gradient", "conic-gradient()")}}</li>
+ <li>{{cssxref("radial-gradient()")}}</li>
+ <li>{{cssxref("conic-gradient()", "conic-gradient()")}}</li>
 </ul>

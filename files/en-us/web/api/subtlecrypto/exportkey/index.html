@@ -32,7 +32,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <em>result</em> = <em>crypto</em><code>.subtle.exportKey(<em>format</em>, <em>key</em>)</code>;
+<pre class="brush: js">const <em>result</em> = <em>crypto</em><code>.subtle.exportKey(<em>format</em>, <em>key</em>)</code>;
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -52,7 +52,7 @@ tags:
         format.</li>
       <li><code>jwk</code>: <a
           href="/en-US/docs/Web/API/SubtleCrypto/importKey#JSON_Web_Key">JSON Web Key</a>
-        format.<span style="display: none;"> </span></li>
+        format.</li>
     </ul>
   </li>
   <li><code><em>key</em></code> is the {{domxref("CryptoKey")}} to export.</li>
@@ -104,7 +104,7 @@ tags:
     href="https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/raw.js"
     rel="noopener">See the complete code on GitHub.</a></p>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
 Export the given key and write it into the "exported-key" space.
 */
 async function exportCryptoKey(key) {
@@ -145,7 +145,7 @@ window.crypto.subtle.generateKey(
     href="https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/pkcs8.js"
     rel="noopener">See the complete code on GitHub.</a></p>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
 Convert  an ArrayBuffer into a string
 from https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
 */
@@ -199,7 +199,7 @@ window.crypto.subtle.generateKey(
     href="https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/spki.js"
     rel="noopener">See the complete code on GitHub.</a></p>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
 Convert  an ArrayBuffer into a string
 from https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
 */
@@ -253,7 +253,7 @@ window.crypto.subtle.generateKey(
     href="https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/jwk.js"
     rel="noopener">See the complete code on GitHub.</a></p>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
 Export the given key and write it into the "exported-key" space.
 */
 async function exportCryptoKey(key) {

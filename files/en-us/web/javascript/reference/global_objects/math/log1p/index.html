@@ -47,7 +47,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><code>Math.log1p(<var>x</var>)</code></pre>
+<pre class="brush: js"><code>Math.log1p(<var>x</var>)</code></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -88,28 +88,11 @@ tags:
 	as <code>Math.log1p()</code>, rather than as a method of a <code>Math</code> object
 	you created (<code>Math</code> is not a constructor).</p>
 
-<h2 id="Polyfill">Polyfill</h2>
-
-<p>This can be emulated with the following function:</p>
-
-<pre class="brush: js notranslate">Math.log1p = Math.log1p || function(x) {
-  x = Number(x);
-  if (x &lt; -1 || x !== x)
-    return NaN;
-  if (x === 0 || x === Infinity)
-    return x;
-
-  var nearX = (x + 1) - 1;
-
-  return nearX === 0 ? x : x * (Math.log(x + 1) / nearX);
-};
-</pre>
-
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_Math.log1p">Using <code>Math.log1p()</code></h3>
 
-<pre class="brush: js notranslate">Math.log1p(1);  // 0.6931471805599453
+<pre class="brush: js">Math.log1p(1);  // 0.6931471805599453
 Math.log1p(0);  // 0
 Math.log1p(-1); // -Infinity
 Math.log1p(-2); // NaN

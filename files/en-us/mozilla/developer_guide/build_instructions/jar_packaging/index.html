@@ -9,7 +9,7 @@ tags:
 ---
 <p>{{ Outdated("It was last updated in 2005.") }}</p>
 
-<p>During the build process, various <em>chrome</em> files are collected into dist/bin/chrome. These files define the user interface of the application, and include <a href="/en/XUL">XUL</a>, <a href="/en/JavaScript">JavaScript</a>, DTDs (for <a href="/en/Localization">localization</a>), CSS, XBL, and images. The build system automates the process of building the chrome files through manifest files named <code>jar.mn</code>.</p>
+<p>During the build process, various <em>chrome</em> files are collected into dist/bin/chrome. These files define the user interface of the application, and include <a href="/en-US/docs/XUL">XUL</a>, <a href="/en-US/docs/Web/JavaScript">JavaScript</a>, DTDs (for <a href="/en-US/docs/Glossary/Localization">localization</a>), CSS, XBL, and images. The build system automates the process of building the chrome files through manifest files named <code>jar.mn</code>.</p>
 
 <h3 id="Chrome_packaging_formats">Chrome packaging formats</h3>
 
@@ -68,7 +68,7 @@ tags:
 
 <h3 id="contents.rdf_and_the_Chrome_Registry">contents.rdf and the Chrome Registry</h3>
 
-<p>Merely putting XUL files into JARs does not mean that these files can be accessed from a <code>chrome://</code> URI. You also need to let the chrome registry know about your files. This is done using <a href="/en/RDF">RDF</a> and a special file named <code>contents.rdf</code>. Unfortunately, the RDF schema for <code>contents.rdf</code> is not really documented. The best way to learn it is to copy an existing example:</p>
+<p>Merely putting XUL files into JARs does not mean that these files can be accessed from a <code>chrome://</code> URI. You also need to let the chrome registry know about your files. This is done using <a href="/en-US/docs/RDF">RDF</a> and a special file named <code>contents.rdf</code>. Unfortunately, the RDF schema for <code>contents.rdf</code> is not really documented. The best way to learn it is to copy an existing example:</p>
 
 <pre class="eval"> <strong>Example: mozilla/extensions/venkman/resources/content/contents.rdf</strong>
 

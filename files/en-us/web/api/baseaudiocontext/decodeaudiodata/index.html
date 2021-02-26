@@ -2,14 +2,14 @@
 title: BaseAudioContext.decodeAudioData()
 slug: Web/API/BaseAudioContext/decodeAudioData
 tags:
-- API
-- Audio
-- AudioContext
-- BaseAudioContext
-- Method
-- Reference
-- Web Audio API
-- decodeAudioData
+  - API
+  - Audio
+  - AudioContext
+  - BaseAudioContext
+  - Method
+  - Reference
+  - Web Audio API
+  - decodeAudioData
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
@@ -29,12 +29,12 @@ tags:
 <p>Older callback syntax:</p>
 
 <pre
-  class="brush: js notranslate">baseAudioContext.decodeAudioData(<var>ArrayBuffer</var>, <var>successCallback</var>, <var>errorCallback</var>);</pre>
+  class="brush: js">baseAudioContext.decodeAudioData(<var>ArrayBuffer</var>, <var>successCallback</var>, <var>errorCallback</var>);</pre>
 
 <p>Newer promise-based syntax:</p>
 
 <pre
-  class="brush: js notranslate">Promise&lt;decodedData&gt; baseAudioContext.decodeAudioData(<var>ArrayBuffer</var>);</pre>
+  class="brush: js">Promise&lt;decodedData&gt; baseAudioContext.decodeAudioData(<var>ArrayBuffer</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -72,8 +72,8 @@ tags:
   <code>audioData</code> variable . We then pass this buffer into a
   <code>decodeAudioData()</code> function; the success callback takes the successfully
   decoded PCM data, puts it into an {{ domxref("AudioBufferSourceNode") }} created using
-  {{ domxref("AudioContext.createBufferSource()") }}, connects the source to the
-  {{domxref("AudioContext.destination") }} and sets it to loop.</p>
+  {{domxref("BaseAudioContext/createBufferSource", "AudioContext.createBufferSource()")}}, connects the source to the
+  {{domxref("BaseAudioContext/destination", "AudioContext.destination")}} and sets it to loop.</p>
 
 <p>The buttons in the example run <code>getData()</code> to load the track and start it
   playing, and stop it playing, respectively. When the <code>stop()</code> method is
@@ -87,7 +87,7 @@ tags:
       the source</a>.)</p>
 </div>
 
-<pre class="brush: js notranslate">// define variables
+<pre class="brush: js">// define variables
 
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var source;
@@ -145,7 +145,7 @@ pre.innerHTML = myScript.innerHTML;</pre>
 
 <h3 id="New_promise-based_syntax">New promise-based syntax</h3>
 
-<pre class="brush: js notranslate">ctx.decodeAudioData(audioData).then(function(decodedData) {
+<pre class="brush: js">ctx.decodeAudioData(audioData).then(function(decodedData) {
  // use the decoded data here
 });</pre>
 
@@ -171,14 +171,11 @@ pre.innerHTML = myScript.innerHTML;</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.BaseAudioContext.decodeAudioData")}}</p>
-</div>
+<p>{{Compat("api.BaseAudioContext.decodeAudioData")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
   </li>
 </ul>

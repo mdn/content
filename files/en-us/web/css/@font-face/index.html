@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css no-line-numbers notranslate">@font-face {
+<pre class="brush: css no-line-numbers">@font-face {
   font-family: "Open Sans";
   src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
        url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
@@ -48,7 +48,7 @@ tags:
 
  <p>To provide the browser with a hint as to what format a font resource is — so it can select a suitable one — it is possible to include a format type inside a <code>format()</code> function:</p>
 
- <pre class="brush: css notranslate">src: url(ideal-sans-serif.woff) <strong>format("woff")</strong>,
+ <pre class="brush: css">src: url(ideal-sans-serif.woff) <strong>format("woff")</strong>,
      url(basic-sans-serif.ttf) <strong>format("truetype")</strong>;</pre>
 
  <p>The available types are: <code>"woff"</code>, <code>"woff2"</code>, <code>"truetype"</code>, <code>"opentype"</code>, <code>"embedded-opentype"</code>, and <code>"svg"</code>.</p>
@@ -101,7 +101,7 @@ tags:
 <ul>
  <li>Web fonts are subject to the same domain restriction (font files must be on the same domain as the page using them), unless <a href="/en-US/docs/HTTP_access_control">HTTP access controls</a> are used to relax this restriction.</li>
  <li><code>@font-face</code> cannot be declared within a CSS selector. For example, the following will not work:
-  <pre class="brush: css; example-bad notranslate">.className {
+  <pre class="brush: css; example-bad">.className {
   @font-face {
     font-family: MyHelvetica;
     src: local("Helvetica Neue Bold"),
@@ -115,7 +115,7 @@ tags:
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -123,7 +123,7 @@ tags:
 
 <p>This example specifies a downloadable font to use, applying it to the entire body of the document:</p>
 
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
 &lt;head&gt;
   &lt;title&gt;Web Font Sample&lt;/title&gt;
   &lt;style type="text/css" media="screen, print"&gt;
@@ -149,7 +149,7 @@ tags:
 
 <p>In this example, the user's local copy of "Helvetica Neue Bold" is used; if the user does not have that font installed (two different names are tried), then the downloadable font named "MgOpenModernaBold.ttf" is used instead:</p>
 
-<pre class="brush: css notranslate">@font-face {
+<pre class="brush: css">@font-face {
   font-family: MyHelvetica;
   src: local("Helvetica Neue Bold"),
        local("HelveticaNeue-Bold"),
@@ -196,11 +196,11 @@ tags:
 <ul>
  <li><a href="/en-US/docs/WOFF">About WOFF</a></li>
  <li><a href="https://everythingfonts.com/font-face">Everythingfonts font-face generator</a></li>
- <li><a class="external" href="http://www.fontsquirrel.com/fontface/generator">FontSquirrel @font-face generator</a></li>
- <li><a class="external" href="http://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/">Beautiful fonts with @font-face</a></li>
- <li><a class="external" href="http://openfontlibrary.org/">Open Font Library</a></li>
- <li><a class="external" href="https://caniuse.com/woff">When can I use WOFF?</a></li>
- <li><a class="external" href="https://caniuse.com/svg-fonts">When can I use SVG Fonts?</a></li>
+ <li><a href="http://www.fontsquirrel.com/fontface/generator">FontSquirrel @font-face generator</a></li>
+ <li><a href="http://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/">Beautiful fonts with @font-face</a></li>
+ <li><a href="http://openfontlibrary.org/">Open Font Library</a></li>
+ <li><a href="https://caniuse.com/woff">When can I use WOFF?</a></li>
+ <li><a href="https://caniuse.com/svg-fonts">When can I use SVG Fonts?</a></li>
  <li><a href="https://coolfont.org">Free Fancy Cool Fonts</a></li>
  <li><a href="https://nicknames.name/">Best Nicknames</a></li>
 </ul>

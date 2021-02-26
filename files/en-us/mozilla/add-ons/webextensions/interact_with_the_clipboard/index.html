@@ -27,9 +27,9 @@ tags:
 
 <p>The Clipboard API provides asynchronous access to read and write the clipboard contents directly. For example, to read text from the clipboard:</p>
 
-<pre class="notranslate brush: js">navigator.clipboard.readText().then(text =&gt; outputElem.innerText = text);</pre>
+<pre class="brush: js">navigator.clipboard.readText().then(text =&gt; outputElem.innerText = text);</pre>
 
-<p>This requests the contents of the clipboard and, when the response is received stores the clipboard text into an element's {{domxref("Node.innerText", "innerText")}}.</p>
+<p>This requests the contents of the clipboard and, when the response is received stores the clipboard text into an element's {{domxref("HTMLElement/innerText", "innerText")}}.</p>
 
 <div class="note">
 <p><strong>Note:</strong> The asynchronous Clipboard API methods are a recent addition to the specification, and may not be fully implemented to the specification in all browsers. Be sure to review the compatibility tables for each method before using them, to ensure that support is broad enough for your needs.</p>
@@ -51,7 +51,7 @@ tags:
 
 <p>To make the <code>"copy"</code> button copy the contents of the {{HTMLElement("input")}} element, you can use code like this:</p>
 
-<pre class="notranslate brush: js">function copy() {
+<pre class="brush: js">function copy() {
   var copyText = document.querySelector("#input");
   copyText.select();
   document.execCommand("copy");
@@ -63,7 +63,7 @@ document.querySelector("#copy").addEventListener("click", copy);</pre>
 
 <p>However, let's say that instead you trigger the copy from an alarm:</p>
 
-<pre class="notranslate brush: js">function copy() {
+<pre class="brush: js">function copy() {
   var copyText = document.querySelector("#input");
   copyText.select();
   document.execCommand("copy");
@@ -89,7 +89,7 @@ browser.alarms.onAlarm.addListener(copy);</pre>
 
 <p>For page scripts, the Permissions API's <code>"clipboard-write"</code> permission is needed. You can check for that permission using {{domxref("Permissions.query", "navigator.permissions.query()")}}:</p>
 
-<pre class="notranslate brush: js">navigator.permissions.query({name: "clipboard-write"}).then(result =&gt; {
+<pre class="brush: js">navigator.permissions.query({name: "clipboard-write"}).then(result =&gt; {
   if (result.state == "granted" || result.state == "prompt") {
     /* write to the clipboard now */
   }
@@ -98,7 +98,7 @@ browser.alarms.onAlarm.addListener(copy);</pre>
 
 <p>This function takes a string as input and updates the clipboard to contain that string:</p>
 
-<pre class="notranslate brush: js">function updateClipboard(newClip) {
+<pre class="brush: js">function updateClipboard(newClip) {
   navigator.clipboard.writeText(newClip).then(function() {
     /* clipboard successfully set */
   }, function() {
@@ -151,7 +151,7 @@ browser.alarms.onAlarm.addListener(copy);</pre>
 
 <p>To set the content of the {{HTMLElement("textarea")}} element with the ID <code>"output"</code> from the clipboard when the user clicks the <code>"paste"</code> {{HTMLElement("button")}}, you can use code like this:</p>
 
-<pre class="notranslate brush: js">function paste() {
+<pre class="brush: js">function paste() {
   var pasteText = document.querySelector("#output");
   pasteText.focus();
   document.execCommand("paste");
@@ -166,7 +166,7 @@ document.querySelector("#paste").addEventListener("click", paste);</pre>
 
 <p>Once you have the <code>"clipboard-read"</code> permission from the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>, you can read from the clipboard easily:</p>
 
-<pre class="notranslate brush: js">navigator.clipboard.readText().then(clipText =&gt;
+<pre class="brush: js">navigator.clipboard.readText().then(clipText =&gt;
   document.getElementById("outbox").innerText = clipText);</pre>
 
 <p>This snippet of code fetches the text from the clipboard and replaces the current contents of the element with the ID <code>"outbox"</code> with that text.</p>

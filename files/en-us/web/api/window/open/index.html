@@ -2,14 +2,14 @@
 title: Window.open()
 slug: Web/API/Window/open
 tags:
-- API
-- DOM
-- Method
-- NeedsMarkupWork
-- NeedsUpdate
-- Reference
-- Window
-- open
+  - API
+  - DOM
+  - Method
+  - NeedsMarkupWork
+  - NeedsUpdate
+  - Reference
+  - Window
+  - open
 ---
 <div>{{APIRef}}</div>
 
@@ -22,7 +22,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><code>var <var>window</var> = window.open(<var>url</var>, <var>windowName</var>, [<var>windowFeatures</var>]);</code></pre>
+  class="brush: js">var window = window.open(url, windowName, [windowFeatures]);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -47,8 +47,9 @@ tags:
   <dd>A {{domxref("DOMString")}} containing a comma-separated list of window features
     given with their corresponding values in the form "name=value". These features include
     options such as the window's default size and position, whether or not to include
-    toolbar, and so forth. There must be no whitespace in the string. See {{anch("Window
-    features")}} below for documentation of each of the features that can be specified.
+    toolbar, and so forth. There must be no whitespace in the string. See
+    {{anch("Window features")}} below for documentation of each of the features that can
+    be specified.
   </dd>
 </dl>
 
@@ -77,14 +78,14 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush:js notranslate">var windowObjectReference;
+<pre class="brush:js">var windowObjectReference;
 var windowFeatures = "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
 
 function openRequestedPopup() {
   windowObjectReference = window.open("http://www.cnn.com/", "CNN_WindowName", windowFeatures);
 }</pre>
 
-<pre class="brush:js notranslate">var windowObjectReference;
+<pre class="brush:js">var windowObjectReference;
 
 function openRequestedPopup() {
   windowObjectReference = window.open(
@@ -144,7 +145,7 @@ function openRequestedPopup() {
 <p><code><var>windowFeatures</var></code> parameter can specify the position and size of
   the new window.</p>
 
-<p><a href="#Note_on_position_and_dimension_error_correction">Note on position and
+<p><a href="#note_on_position_and_dimension_error_correction">Note on position and
     dimension error correction</a></p>
 
 <h4 id="Position">Position</h4>
@@ -222,7 +223,7 @@ function openRequestedPopup() {
 <div class="notecard warning">
   <p>In modern browsers (Firefox 76 or newer, Google Chrome, Safari, Chromium Edge), the
     following features are just a condition for whether to open popup or not. See <a
-      href="#Popup_condition">popup condition</a> section.</p>
+      href="#popup_condition">popup condition</a> section.</p>
 </div>
 
 <p>The following features control the visibility of each UI parts, All features can be set
@@ -280,7 +281,7 @@ function openRequestedPopup() {
     If <code><var>windowFeatures</var></code> is non-empty, <code>scrollbars</code>
     defaults to off.<br>
     <br>
-    See <a href="#Note_on_scrollbars">note on scrollbars</a>.
+    See <a href="#note_on_scrollbars">note on scrollbars</a>.
     <div class="note">
       <p><strong>Tip</strong>: For accessibility reasons, it is strongly encouraged to set
         this feature always on</p>
@@ -322,7 +323,7 @@ function openRequestedPopup() {
 
 <h2 id="Best_practices">Best practices</h2>
 
-<pre class="brush:js notranslate">&lt;script type="text/javascript"&gt;
+<pre class="brush:js">&lt;script type="text/javascript"&gt;
 var windowObjectReference = null; // global variable
 
 function openFFPromotionPopup() {
@@ -378,7 +379,7 @@ function openFFPromotionPopup() {
 <p>You can also parameterize the function to make it versatile, functional in more
   situations, therefore re-usable in scripts and webpages:</p>
 
-<pre class="brush:js notranslate">&lt;script type="text/javascript"&gt;
+<pre class="brush:js">&lt;script type="text/javascript"&gt;
 var windowObjectReference = null; // global variable
 
 function openRequestedPopup(url, windowName) {
@@ -404,7 +405,7 @@ function openRequestedPopup(url, windowName) {
 <p>You can also make such function able to open only 1 secondary window and to reuse such
   single secondary window for other links in this manner:</p>
 
-<pre class="brush:js notranslate">&lt;script type="text/javascript"&gt;
+<pre class="brush:js">&lt;script type="text/javascript"&gt;
 var windowObjectReference = null; // global variable
 var PreviousUrl; /* global variable that will store the
                     url currently in the secondary window */
@@ -461,8 +462,8 @@ function openRequestedSinglePopup(url) {
   <dt>How can I bring back the window if it is minimized or behind another window?</dt>
   <dd>First check for the existence of the window object reference of such window and if
     it exists and if it has not been closed, then use the <a
-      href="/en-US/docs/DOM/window.focus">focus()</a> method. There is no other reliable
-    way. You can examine an <a href="#Best_practices">example explaining how to use the
+      href="/en-US/docs/Web/API/Window/focus">focus()</a> method. There is no other reliable
+    way. You can examine an <a href="#best_practices">example explaining how to use the
       focus() method</a>.</dd>
   <dt>How do I force a maximized window?</dt>
   <dd>You cannot. All browser manufacturers try to make the opening of new secondary
@@ -488,7 +489,7 @@ function openRequestedSinglePopup(url) {
     the window. 99% of all those scripts disable window resizability and disable
     scrollbars when in fact they should enable both of these features to allow a cautious
     and sane fallback mechanism if their calculations are wrong.</dd>
-  <dd>The window method <a href="/en-US/docs/DOM/window.sizeToContent">sizeToContent()</a>
+  <dd>The window method <a href="/en-US/docs/Web/API/Window/sizeToContent">sizeToContent()</a>
     can also be disabled. Moving and resizing a window remotely on the user's screen via
     script will very often annoy the users, will disorient the user, and will be wrong at
     best. The web author expects to have full control of (and can decide about) every
@@ -499,7 +500,7 @@ function openRequestedSinglePopup(url) {
       browser</a>. Some <a
       href="/en-US/Add-ons/Code_snippets/Tabbed_browser?redirectlocale=en-US&amp;redirectslug=Code_snippets%2FTabbed_browser">Code
       snippets</a> are available. If you are using the SDK, tabs are <a
-      href="/en-US/Add-ons/SDK/High-Level_APIs/tabs">handled a bit differently</a></dd>
+      href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/tabs">handled a bit differently</a></dd>
   <dd><a href="http://kmeleon.sourceforge.net/">K-meleon 1.1</a>, a Mozilla-based browser,
     gives complete control and power to the user regarding how links are opened. Only the
     user can set his advanced preferences to do that. Some advanced extensions also give
@@ -522,7 +523,7 @@ function openRequestedSinglePopup(url) {
   <dt>What is the JavaScript relationship between the main window and the secondary
     window?</dt>
   <dd>The <code>window.open()</code> method gives a main window a reference to a secondary
-    window; the <a href="/en-US/docs/DOM/window.opener">opener</a> property gives a
+    window; the <a href="/en-US/docs/Web/API/Window/opener">opener</a> property gives a
     secondary window a reference to its main window.</dd>
   <dt>I cannot access the properties of the new secondary window. I always get an error in
     the javascript console saying "Error: uncaught
@@ -537,7 +538,7 @@ function openRequestedSinglePopup(url) {
     same domain name.</dd>
   <dd>More reading on the cross-domain script security restriction: <a
       href="https://www.mozilla.org/projects/security/components/same-origin.html"
-      rel="freelink">http://www.mozilla.org/projects/secu...me-origin.html</a></dd>
+     >http://www.mozilla.org/projects/secu...me-origin.html</a></dd>
 </dl>
 
 <h2 id="Usability_issues">Usability issues</h2>
@@ -675,39 +676,39 @@ function openRequestedSinglePopup(url) {
     </tr>
     <tr>
       <td><img alt="New window icon from yahoo.com"
-          src="/@api/deki/files/782/=NewwindowYahoo.png"></td>
+          src="newwindowyahoo.png"></td>
       <td><img alt="New window icon from microsoft.com"
-          src="/@api/deki/files/780/=NewwinMSIE.gif"></td>
+          src="newwinmsie.gif"></td>
       <td><img alt="New window icon from webaim.org"
-          src="/@api/deki/files/296/=Popup_requested_new_window.gif"></td>
+          src="popup_requested_new_window.gif"></td>
       <td><img alt="New window icon from sun.com"
-          src="/@api/deki/files/811/=PopupImageSun.gif"></td>
+          src="popupimagesun.gif"></td>
     </tr>
     <tr>
       <td><img alt="New window icon from bbc.co.uk"
-          src="/@api/deki/files/795/=Opennews_rb.gif"></td>
+          src="opennews_rb.gif"></td>
       <td><img alt="New window icon from Accessible Internet Solutions"
-          src="/@api/deki/files/15/=AIS_NewWindowIcon.png"></td>
+          src="ais_newwindowicon.png"></td>
       <td><img alt="New window icon from accessify.com"
-          src="/@api/deki/files/809/=Pop-up-launcher.gif"></td>
+          src="pop-up-launcher.gif"></td>
       <td><img alt="New window icon from webstyleguide.com"
-          src="/@api/deki/files/417/=Webstyleguide_com_newwind.gif"></td>
+          src="webstyleguide_com_newwind.gif"></td>
     </tr>
     <tr>
       <td><img alt="New window icon from an unknown source"
-          src="/@api/deki/files/810/=Popicon_1.gif"></td>
+          src="popicon_1.gif"></td>
       <td><img alt="New window icon from an unknown source"
-          src="/@api/deki/files/779/=New.gif"></td>
+          src="new.gif"></td>
       <td><img alt="New window icon from an unknown source"
-          src="/@api/deki/files/419/=WillCreateOrRecycleNewWindow.gif"></td>
+          src="willcreateorrecyclenewwindow.gif"></td>
       <td><img alt="New window icon from gtalbot.org"
-          src="/@api/deki/files/287/=OpenRequestedPopup.png"></td>
+          src="openrequestedpopup.png"></td>
     </tr>
     <tr>
       <td colspan="2"><img alt="New window cursor from draig.de"
-          src="/@api/deki/files/169/=Cursor_LinkNewWindowTargetBlank.png"></td>
+          src="cursor_linknewwindowtargetblank.png"></td>
       <td colspan="2"><img alt="New window cursor from mithgol.ru"
-          src="/@api/deki/files/170/=Cursor_newwindowSergeySokoloff.png"></td>
+          src="cursor_newwindowsergeysokoloff.png"></td>
     </tr>
   </tbody>
 </table>

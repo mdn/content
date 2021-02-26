@@ -2,14 +2,14 @@
 title: IIRFilterNode.getFrequencyResponse()
 slug: Web/API/IIRFilterNode/getFrequencyResponse
 tags:
-- API
-- Audio
-- IIRFilterNode
-- Method
-- Reference
-- Web Audio API
-- filter
-- getFrequencyResponse
+  - API
+  - Audio
+  - IIRFilterNode
+  - Method
+  - Reference
+  - Web Audio API
+  - filter
+  - getFrequencyResponse
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
@@ -26,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>IIRFilterNode</em>.getFrequencyResponse(<em>frequencyArray</em>, <em>magResponseOutput</em>, <em>phaseResponseOutput</em>);
+<pre class="brush: js"><em>IIRFilterNode</em>.getFrequencyResponse(<em>frequencyArray</em>, <em>magResponseOutput</em>, <em>phaseResponseOutput</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -36,7 +36,7 @@ tags:
   <dd>A {{jsxref("Float32Array")}} containing an array of frequencies, specified in Hertz,
     which you want to filter.</dd>
   <dt><code>magResponseOutput</code></dt>
-  <dd>A {{jsxref("Float32Array")}} to receive the computed magnitudes of the freqency
+  <dd>A {{jsxref("Float32Array")}} to receive the computed magnitudes of the frequency
     response for each frequency value in the <code>frequencyArray</code>.</dd>
   <dt><code>phaseResponseOutput</code></dt>
   <dd>A {{jsxref("Float32Array")}} to receive the computed phase response values in
@@ -118,9 +118,7 @@ calcFrequencyResponse();</pre>
       <th scope="col">Comment</th>
     </tr>
     <tr>
-      <td>{{SpecName('Web Audio API',
-        '#widl-IIRFilterNode-getFrequencyResponse-void-Float32Array-frequencyHz-Float32Array-magResponse-Float32Array-phaseResponse',
-        'getFrequencyResponse()')}}</td>
+      <td>{{SpecName('Web Audio API', '#dom-iirfilternode-getfrequencyresponse', 'getFrequencyResponse()')}}</td>
       <td>{{Spec2('Web Audio API')}}</td>
       <td></td>
     </tr>
@@ -129,15 +127,12 @@ calcFrequencyResponse();</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.IIRFilterNode.getFrequencyResponse")}}</p>
-</div>
+<p>{{Compat("api.IIRFilterNode.getFrequencyResponse")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
   </li>
   <li>{{domxref("IIRFilterNode")}}</li>
   <li>{{domxref("AudioNode")}}</li>

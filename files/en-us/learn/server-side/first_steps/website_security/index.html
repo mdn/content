@@ -72,25 +72,21 @@ tags:
 
 <p>The best defense against XSS vulnerabilities is to remove or disable any markup that can potentially contain instructions to run the code. For HTML this includes elements, such as <code>&lt;script&gt;</code>, <code>&lt;object&gt;</code>, <code>&lt;embed&gt;</code>, and <code>&lt;link&gt;</code>.</p>
 
-<div>
 <p>The process of modifying user data so that it can't be used to run scripts or otherwise affect the execution of server code is known as input sanitization. Many web frameworks automatically sanitize user input from HTML forms by default.</p>
-</div>
 
 <h3 id="SQL_injection">SQL injection</h3>
 
 <p>SQL injection vulnerabilities enable malicious users to execute arbitrary SQL code on a database, allowing data to be accessed, modified, or deleted irrespective of the user's permissions. A successful injection attack might spoof identities, create new identities with administration rights, access all data on the server, or destroy/modify the data to make it unusable.</p>
 
-<div>
 <p>SQL injection types include Error-based SQL injection, SQL injection based on boolean errors, and Time-based SQL injection.</p>
-</div>
 
 <p>This vulnerability is present if user input that is passed to an underlying SQL statement can change the meaning of the statement. For example, the following code is intended to list all users with a particular name (<code>userName</code>) that has been supplied from an HTML form:</p>
 
-<pre class="brush: sql notranslate">statement = "SELECT * FROM users WHERE name = '" + <strong>userName</strong> + "';"</pre>
+<pre class="brush: sql">statement = "SELECT * FROM users WHERE name = '" + <strong>userName</strong> + "';"</pre>
 
 <p>If the user specifies a real name, the statement will work as intended. However, a malicious user could completely change the behavior of this SQL statement to the new statement in the following example, by specifying the text in bold for the <code>userName</code>.</p>
 
-<pre class="brush: sql notranslate">SELECT * FROM users WHERE name = '<strong>a';DROP TABLE users; SELECT * FROM userinfo WHERE 't' = 't</strong>';
+<pre class="brush: sql">SELECT * FROM users WHERE name = '<strong>a';DROP TABLE users; SELECT * FROM userinfo WHERE 't' = 't</strong>';
 </pre>
 
 <p>The modified statement creates a valid SQL statement that deletes the <code>users</code> table and selects all data from the <code>userinfo</code> table (which reveals the information of every user). This works because the first part of the injected text (<code>a';</code>) completes the original statement.</p>
@@ -103,7 +99,7 @@ tags:
 
 <p>In the following statement, we escape the <strong>'</strong> character. The SQL will now interpret the name as the whole string in bold (which is a very odd name indeed, but not harmful).</p>
 
-<pre class="brush: sql notranslate">SELECT * FROM users WHERE name = '<strong>a\';DROP TABLE users; SELECT * FROM userinfo WHERE \'t\' = \'t'</strong>;
+<pre class="brush: sql">SELECT * FROM users WHERE name = '<strong>a\';DROP TABLE users; SELECT * FROM userinfo WHERE \'t\' = \'t'</strong>;
 
 </pre>
 
@@ -157,7 +153,7 @@ tags:
 
 <ul>
  <li>Use more effective password management. Encourage strong passwords that are changed regularly. Consider two-factor authentication for your site, so that in addition to a password the user must enter another authentication code (usually one that is delivered via some physical hardware that only the user will have, such as a code in an SMS sent to their phone).</li>
- <li>Configure your web server to use <a href="/en-US/docs/Glossary/https">HTTPS</a> and <a href="/en-US/docs/Web/Security/HTTP_strict_transport_security">HTTP Strict Transport Security</a> (HSTS). HTTPS encrypts data sent between your client and server. This ensures that login credentials, cookies, <code>POST</code> requests data and header information are not easily available to attackers.</li>
+ <li>Configure your web server to use <a href="/en-US/docs/Glossary/https">HTTPS</a> and <a href="/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">HTTP Strict Transport Security</a> (HSTS). HTTPS encrypts data sent between your client and server. This ensures that login credentials, cookies, <code>POST</code> requests data and header information are not easily available to attackers.</li>
  <li>Keep track of the most popular threats (the <a href="https://owasp.org/www-project-top-ten/">current OWASP list is here</a>) and address the most common vulnerabilities first.</li>
  <li>Use <a href="https://owasp.org/www-community/Vulnerability_Scanning_Tools">vulnerability scanning tools</a> to perform automated security testing on your site. Later on, your very successful website may also find bugs by offering a bug bounty <a href="https://www.mozilla.org/en-US/security/bug-bounty/faq-webapp/">like Mozilla does here</a>.</li>
  <li>Only store and display data that you need. For example, if your users must store sensitive information like credit card details, only display enough of the card number that it can be identified by the user, and not enough that it can be copied by an attacker and used on another site. The most common pattern at this time is to only display the last 4 digits of a credit card number.</li>

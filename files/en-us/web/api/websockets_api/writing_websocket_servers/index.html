@@ -16,7 +16,7 @@ tags:
 
 <p><span class="seoSummary">A WebSocket server is nothing more than an application listening on any port of a TCP server that follows a specific protocol. The task of creating a custom server tends to scare people; however, it can be straightforward to implement a simple WebSocket server on your platform of choice.</span></p>
 
-<p>A WebSocket server can be written in any server-side programming language that is capable of <a href="https://en.wikipedia.org/wiki/Berkeley_sockets">Berkeley sockets</a>, such as C(++), Python, <a href="/en-US/docs/PHP">PHP</a>, or <a href="/en-US/docs/Web/JavaScript/Server-Side_JavaScript">server-side JavaScript</a>. This is not a tutorial in any specific language, but serves as a guide to facilitate writing your own server.</p>
+<p>A WebSocket server can be written in any server-side programming language that is capable of <a href="https://en.wikipedia.org/wiki/Berkeley_sockets">Berkeley sockets</a>, such as C(++), Python, {{Glossary("PHP")}}, or <a href="/en-US/docs/Web/JavaScript/Server-Side_JavaScript">server-side JavaScript</a>. This is not a tutorial in any specific language, but serves as a guide to facilitate writing your own server.</p>
 
 <p>This article assumes you're already familiar with how {{Glossary("HTTP")}} works, and that you have a moderate level of programming experience. Depending on language support, knowledge of TCP sockets may be required. The scope of this guide is to present the minimum knowledge you need to write a WebSocket server.</p>
 
@@ -44,7 +44,7 @@ tags:
 
 <p>Even though you're building a server, a client still has to start the WebSocket handshake process by contacting the server and requesting a WebSocket connection. So, you must know how to interpret the client's request. The <strong>client</strong> will send a pretty standard HTTP request with headers that looks like this (the HTTP version <strong>must</strong> be 1.1 or greater, and the method <strong>must</strong> be <code>GET</code>):</p>
 
-<pre class="brush: bash notranslate">GET /chat HTTP/1.1
+<pre class="brush: bash">GET /chat HTTP/1.1
 Host: example.com:8000
 <strong>Upgrade: websocket</strong>
 <strong>Connection: Upgrade</strong>
@@ -53,10 +53,10 @@ Sec-WebSocket-Version: 13
 
 </pre>
 
-<p>The client can solicit extensions and/or subprotocols here; see <a href="#Miscellaneous">Miscellaneous</a> for details. Also, common headers like {{HTTPHeader("User-Agent")}}, {{HTTPHeader("Referer")}}, {{HTTPHeader("Cookie")}}, or authentication headers might be there as well. Do whatever you want with those; they don't directly pertain to the WebSocket. It's also safe to ignore them. In many common setups, a reverse proxy has already dealt with them.</p>
+<p>The client can solicit extensions and/or subprotocols here; see <a href="#miscellaneous">Miscellaneous</a> for details. Also, common headers like {{HTTPHeader("User-Agent")}}, {{HTTPHeader("Referer")}}, {{HTTPHeader("Cookie")}}, or authentication headers might be there as well. Do whatever you want with those; they don't directly pertain to the WebSocket. It's also safe to ignore them. In many common setups, a reverse proxy has already dealt with them.</p>
 
 <div class="notecard note">
-<p><strong>Tip:</strong> All <strong>browsers</strong> send an <a href="/en-US/docs/HTTP/Access_control_CORS#Origin"><code>Origin</code> header</a>. You can use this header for security (checking for same origin, automatically allowing or denying, etc.) and send a <a href="/en-US/docs/HTTP/Response_codes#403">403 Forbidden</a> if you don't like what you see. However, be warned that non-browser agents can send a faked <code>Origin</code>. Most applications reject requests without this header.</p>
+<p><strong>Tip:</strong> All <strong>browsers</strong> send an <a href="/en-US/docs/Web/HTTP/CORS#origin"><code>Origin</code> header</a>. You can use this header for security (checking for same origin, automatically allowing or denying, etc.) and send a <a href="/en-US/docs/Web/HTTP/Status#403">403 Forbidden</a> if you don't like what you see. However, be warned that non-browser agents can send a faked <code>Origin</code>. Most applications reject requests without this header.</p>
 </div>
 
 <p>If any header is not understood or has an incorrect value, the server should send a {{HTTPStatus("400")}} ("Bad Request")} response and immediately close the socket. As usual, it may also give the reason why the handshake failed in the HTTP response body, but the message may never be displayed (browsers do not display it). If the server doesn't understand that version of WebSockets, it should send a {{HTTPHeader("Sec-WebSocket-Version")}} header back that contains the version(s) it does understand.  In the example above, it indicates version 13 of the WebSocket protocol.</p>
@@ -64,21 +64,21 @@ Sec-WebSocket-Version: 13
 <p>The most interesting header here is {{HTTPHeader("Sec-WebSocket-Key")}}. Let's look at that next.</p>
 
 <div class="note">
-<p><strong>Note:</strong> <a href="/en-US/docs/HTTP/Response_codes">Regular HTTP status codes</a> can be used only before the handshake. After the handshake succeeds, you have to use a different set of codes (defined in section 7.4 of the spec).</p>
+<p><strong>Note:</strong> <a href="/en-US/docs/Web/HTTP/Status">Regular HTTP status codes</a> can be used only before the handshake. After the handshake succeeds, you have to use a different set of codes (defined in section 7.4 of the spec).</p>
 </div>
 
 <h3 id="Server_handshake_response">Server handshake response</h3>
 
 <p>When the <strong>server</strong> receives the handshake request, it should send back a special response that indicates that the protocol will be changing from HTTP to WebSocket. That header looks something like the following (remember each header line ends with <code>\r\n</code> and put an extra <code>\r\n</code> after the last one to indicate the end of the header):</p>
 
-<pre class="brush: bash notranslate"><strong>HTTP/1.1 101 Switching Protocols</strong>
+<pre class="brush: bash"><strong>HTTP/1.1 101 Switching Protocols</strong>
 Upgrade: websocket
 Connection: Upgrade
 <strong>Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 
 </strong></pre>
 
-<p>Additionally, the server can decide on extension/subprotocol requests here; see <a href="#Miscellaneous">Miscellaneous</a> for details. The <code>Sec-WebSocket-Accept</code> header is important in that the server must derive it from the {{HTTPHeader("Sec-WebSocket-Key")}} that the client sent to it. To get it, c<span style="line-height: 1.5em;">oncatenate the client's </span><code style="font-size: 14px;">Sec-WebSocket-Key</code><span style="line-height: 1.5em;"> and the string "</span><code style="font-size: 14px;">258EAFA5-E914-47DA-95CA-C5AB0DC85B11</code><span style="line-height: 1.5em;">" together (it's a "</span><a href="https://en.wikipedia.org/wiki/Magic_string" style="line-height: 1.5em;">magic string</a><span style="line-height: 1.5em;">"), </span><span style="line-height: 1.5em;">take the </span><a href="https://en.wikipedia.org/wiki/SHA-1" style="line-height: 1.5em;">SHA-1 hash</a><span style="line-height: 1.5em;"> of the result, and </span><span style="line-height: 1.5em;">return the </span><a href="https://en.wikipedia.org/wiki/Base64" style="line-height: 1.5em;">base64</a><span style="line-height: 1.5em;"> encoding of that hash.</span></p>
+<p>Additionally, the server can decide on extension/subprotocol requests here; see <a href="#miscellaneous">Miscellaneous</a> for details. The <code>Sec-WebSocket-Accept</code> header is important in that the server must derive it from the {{HTTPHeader("Sec-WebSocket-Key")}} that the client sent to it. To get it, c<span style="line-height: 1.5em;">oncatenate the client's </span><code style="font-size: 14px;">Sec-WebSocket-Key</code><span style="line-height: 1.5em;"> and the string "</span><code style="font-size: 14px;">258EAFA5-E914-47DA-95CA-C5AB0DC85B11</code><span style="line-height: 1.5em;">" together (it's a "</span><a href="https://en.wikipedia.org/wiki/Magic_string" style="line-height: 1.5em;">magic string</a><span style="line-height: 1.5em;">"), </span><span style="line-height: 1.5em;">take the </span><a href="https://en.wikipedia.org/wiki/SHA-1" style="line-height: 1.5em;">SHA-1 hash</a><span style="line-height: 1.5em;"> of the result, and </span><span style="line-height: 1.5em;">return the </span><a href="https://en.wikipedia.org/wiki/Base64" style="line-height: 1.5em;">base64</a><span style="line-height: 1.5em;"> encoding of that hash.</span></p>
 
 <div class="note">
 <p><strong>Note:</strong> This seemingly overcomplicated process exists so that it's obvious to the client whether the server supports WebSockets. This is important because security issues might arise if the server accepts a WebSockets connection but interprets the data as a HTTP request.</p>
@@ -104,7 +104,7 @@ Connection: Upgrade
 
 <p>Each data frame (from the client to the server or vice-versa) follows this same format:</p>
 
-<pre class="brush: bash notranslate">Frame format:
+<pre class="brush: bash">Frame format:
 
       0                   1                   2                   3
       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
@@ -145,7 +145,7 @@ Connection: Upgrade
 
 <p>If the MASK bit was set (and it should be, for client-to-server messages), read the next 4 octets (32 bits); this is the masking key. <span style="line-height: 1.5;">Once the payload length and masking key is decoded, you can read that number of bytes from the socket. Let's call the data <strong>ENCODED</strong>, and the key <strong>MASK</strong>. To get <strong>DECODED</strong>, loop through the octets (bytes a.k.a. characters for text data) of <strong>ENCODED</strong> and XOR the octet with the (i modulo 4)th octet of MASK. In pseudo-code (that happens to be valid JavaScript):</span></p>
 
-<pre class="brush: js notranslate">var DECODED = "";
+<pre class="brush: js">var DECODED = "";
 for (var i = 0; i &lt; ENCODED.length; i++) {
     DECODED[i] = ENCODED[i] ^ MASK[i % 4];
 <span style="line-height: 1.5;">}</span></pre>
@@ -183,13 +183,13 @@ for (var i = 0; i &lt; ENCODED.length; i++) {
 
 <p>To close a connection either the client or server can send a control frame with data containing a specified control sequence to begin the closing handshake (detailed in <a href="https://tools.ietf.org/html/rfc6455#section-5.5.1">Section 5.5.1</a>). Upon receiving such a frame, the other peer sends a Close frame in response. The first peer then closes the connection. Any further data received after closing of connection is then discarded. </p>
 
-<h2 id="Miscellaneous_2"><a name="Miscellaneous">Miscellaneous</a></h2>
+<h2 id="Miscellaneous">Miscellaneous</h2>
 
 <div class="note">
 <p>WebSocket codes, extensions, subprotocols, etc. are registered at the <a href="http://www.iana.org/assignments/websocket/websocket.xml">IANA WebSocket Protocol Registry</a>.</p>
 </div>
 
-<p>WebSocket extensions and subprotocols are negotiated via headers during <a href="#Handshake">the handshake</a>. Sometimes extensions and subprotocols very similar, but there is a clear distinction. Extensions control the WebSocket <em>frame</em> and <em>modify</em> the payload, while subprotocols structure the WebSocket <em>payload</em> and <em>never modify</em> anything. Extensions are optional and generalized (like compression); subprotocols are mandatory and localized (like ones for chat and for MMORPG games).</p>
+<p>WebSocket extensions and subprotocols are negotiated via headers during <a href="#handshake">the handshake</a>. Sometimes extensions and subprotocols very similar, but there is a clear distinction. Extensions control the WebSocket <em>frame</em> and <em>modify</em> the payload, while subprotocols structure the WebSocket <em>payload</em> and <em>never modify</em> anything. Extensions are optional and generalized (like compression); subprotocols are mandatory and localized (like ones for chat and for MMORPG games).</p>
 
 <h3 id="Extensions">Extensions</h3>
 
@@ -215,7 +215,7 @@ for (var i = 0; i &lt; ENCODED.length; i++) {
 
 <p>A client has to ask for a specific subprotocol. To do so, it will send something like this <em>as part of the original handshake</em>:</p>
 
-<pre class="brush: bash notranslate">GET /chat HTTP/1.1
+<pre class="brush: bash">GET /chat HTTP/1.1
 ...
 Sec-WebSocket-Protocol: soap, wamp
 
@@ -223,7 +223,7 @@ Sec-WebSocket-Protocol: soap, wamp
 
 <p>or, equivalently:</p>
 
-<pre class="brush: bash notranslate">...
+<pre class="brush: bash">...
 Sec-WebSocket-Protocol: soap
 Sec-WebSocket-Protocol: wamp
 
@@ -231,7 +231,7 @@ Sec-WebSocket-Protocol: wamp
 
 <p>Now the server must pick one of the protocols that the client suggested and it supports. If there is more than one, send the first one the client sent. Imagine our server can use both <code>soap</code> and <code>wamp</code>. Then, in the response handshake, it sends:</p>
 
-<pre class="brush: bash notranslate">Sec-WebSocket-Protocol: soap
+<pre class="brush: bash">Sec-WebSocket-Protocol: soap
 
 </pre>
 
@@ -249,9 +249,7 @@ Sec-WebSocket-Protocol: wamp
 <h2 id="Related">Related</h2>
 
 <ul>
- <li><a href="https://github.com/alexhultman/libwshandshake">WebSocket handshake library in C++</a></li>
- <li><a href="/en-US/docs/WebSockets/Writing_WebSocket_client_applications">Writing WebSocket client applications</a></li>
- <li><a href="/en-US/docs/WebSockets/Writing_WebSocket_server">Tutorial: Websocket server in C#</a></li>
- <li><a href="/en-US/docs/WebSockets/WebSocket_Server_Vb.NET">Tutorial: Websocket server in VB.NET</a></li>
+ <li><a href="/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications">Writing WebSocket client applications</a></li>
+ <li><a href="/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_server">Tutorial: Websocket server in C#</a></li>
  <li><a href="/en-US/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java">Tutorial: Websocket server in Java</a></li>
 </ul>

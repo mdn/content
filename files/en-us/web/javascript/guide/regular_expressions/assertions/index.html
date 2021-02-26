@@ -150,14 +150,14 @@ console.log(4, fixedMultiline); // fix  'greon' but does not touch 'on'.
 let fruitsStartsWithA = fruits.filter(fruit =&gt; /^A/.test(fruit));
 console.log(fruitsStartsWithA); // [ 'Apple', 'Avocado' ]</pre>
 
-<p>In the second example <code>^</code> is used both for matching at the beginning of input and for creating negated or complemented character sets when used within <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">groups</a>.</p>
+<p>In the second example <code>^</code> is used both for matching at the beginning of input and for creating negated or complemented character class when used within <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">groups</a>.</p>
 
 <pre class="brush: js">let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 
 // Selecting fruits that dose not start by 'A' by a /^[^A]/ regex.
 // In this example, two meanings of '^' control symbol are represented:
 // 1) Matching begining of the input
-// 2) A negated or complemented character set: [^A]
+// 2) A negated or complemented character class: [^A]
 // That is, it matches anything that is not enclosed in the brackets.
 
 let fruitsStartsWithNotA = fruits.filter(fruit =&gt; /^[^A]/.test(fruit));

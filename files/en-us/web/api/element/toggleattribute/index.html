@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>Element</em>.toggleAttribute(<em>name</em> [, <em>force</em>]);
+<pre class="brush: js"><em>Element</em>.toggleAttribute(<em>name</em> [, <em>force</em>]);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -47,12 +47,12 @@ tags:
 <h2 id="Example">Example</h2>
 
 <p>In the following example, <code>toggleAttribute()</code> is used to toggle the
-	<code>readonly</code> attribute of a {{HTMLElement("input")}}.</p>
+	<code>disabled</code> attribute of an {{HTMLElement("input")}}.</p>
 
 <h3 id="HTML">HTML</h3>
 
 <pre class="brush: html">&lt;input value="text"&gt;
-&lt;button&gt;toggleAttribute("readonly")&lt;/button&gt;</pre>
+&lt;button&gt;toggleAttribute("disabled")&lt;/button&gt;</pre>
 
 <h3 id="JavaScript">JavaScript</h3>
 
@@ -60,7 +60,7 @@ tags:
 var input = document.querySelector("input");
 
 button.addEventListener("click", function(){
-  input.toggleAttribute("readonly");
+  input.toggleAttribute("disabled");
 });
 </pre>
 

@@ -19,7 +19,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>You must know <a href="/en-US/docs/Learn/What_is_a_web_server">what a web server is</a> and <a href="/en-US/docs/Learn/Understanding_domain_names">how domain names work</a>. You must also know how to <a href="/en-US/docs/Learn/Set_up_a_basic_working_environment">set up a basic environment</a> and how to <a href="/en-US/docs/Learn/HTML/Write_a_simple_page_in_HTML">write a simple webpage</a>.</td>
+   <td>You must know <a href="/en-US/docs/Learn/Common_questions/What_is_a_web_server">what a web server is</a> and <a href="/en-US/docs/Learn/Common_questions/What_is_a_domain_name">how domain names work</a>. You must also know how to <a href="/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">set up a basic environment</a> and how to <a href="/en-US/docs/Learn/Getting_started_with_the_web">write a simple webpage</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -37,12 +37,12 @@ tags:
 <p>There are several SFTP clients out there. Our demo covers <a href="https://filezilla-project.org/">FileZilla</a>, since it's free and available for Windows, macOS and Linux. To install FileZilla go to the <a href="https://filezilla-project.org/download.php?type=client">FileZilla downloads page</a>, click the big Download button, then install from the installer file in the usual way.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Of course there are lots of other options. See <a href="/en-US/docs/Learn/How_much_does_it_cost#Publishing_tools.3A_FTP_client">Publishing tools</a> for more information.</p>
+<p><strong>Note</strong>: Of course there are lots of other options. See <a href="/en-US/docs/Learn/Common_questions/How_much_does_it_cost#publishing_tools.3a_ftp_client">Publishing tools</a> for more information.</p>
 </div>
 
 <p>Open the FileZilla application; you should see something like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15767/filezilla-ui.png" style="display: block; height: 451px; margin: 0px auto; width: 690px;"></p>
+<p><img alt="" src="filezilla-ui.png" style="display: block; margin: 0px auto;"></p>
 
 <h3 id="Logging_in">Logging in</h3>
 
@@ -70,7 +70,7 @@ tags:
 
 <p>Let's first look at <code>http://demozilla.examplehostingprovider.net/</code> — as you can see, so far there is nothing there:</p>
 
-<p><img alt="Our demozilla personal website, seen in a browser: it's empty" src="https://mdn.mozillademos.org/files/9615/demozilla-empty.png" style="border-style: solid; border-width: 1px; display: block; height: 233px; margin: 0 auto; width: 409px;"></p>
+<p><img alt="Our demozilla personal website, seen in a browser: it's empty" src="demozilla-empty.png" style="border-style: solid; border-width: 1px; display: block; margin: 0 auto;"></p>
 
 <div class="note">
 <p><strong>Note</strong>: Depending on your hosting provider, most of the time you'll see a page saying something like “This website is hosted by [Hosting Service].” when you first go to your web address.</p>
@@ -88,7 +88,7 @@ tags:
 
 <p>Your window should look something like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15769/site-manager.png" style="display: block; height: 561px; margin: 0px auto; width: 684px;"></p>
+<p><img alt="" src="site-manager.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Now press <em>Connect</em> to connect to the SFTP server.</p>
 
@@ -98,7 +98,7 @@ tags:
 
 <p>Once connected, your screen should look something like this (we've connected to an example of our own to give you an idea):</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15768/connected.png" style="border-style: solid; border-width: 1px; display: block; height: 199px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="connected.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>Let's examine what you're seeing:</p>
 
@@ -118,7 +118,7 @@ tags:
 
 <p>So far, so good, but are the files really online? You can double-check by going back to your website (e.g. <code>http://demozilla.examplehostingprovider.net/</code>) in your browser:</p>
 
-<p><img alt="Here we go: our website is live!" src="https://mdn.mozillademos.org/files/9627/here-we-go.png" style="border-style: solid; border-width: 1px; display: block; height: 442px; margin: 0 auto; width: 400px;"></p>
+<p><img alt="Here we go: our website is live!" src="here-we-go.png" style="border-style: solid; border-width: 1px; display: block; margin: 0 auto;"></p>
 
 <p>And <em lang="fr">voilà</em>! Our website is live!</p>
 
@@ -128,7 +128,7 @@ tags:
 
 <p>It is seen as a more advanced tool than SFTP, because by default it is used on the command line. A basic command looks like this:</p>
 
-<pre class="brush: bash notranslate">rsync [-options] SOURCE user@x.x.x.x:DESTINATION</pre>
+<pre class="brush: bash">rsync [-options] SOURCE user@x.x.x.x:DESTINATION</pre>
 
 <ul>
  <li><code>-options</code> is a dash followed by a one or more letters, for example <code>-v</code> for verbose error messages, and <code>-b</code> to make backups. You can see the full list at the <a href="https://linux.die.net/man/1/rsync">rsync man page</a> (search for "Options summary").</li>
@@ -144,7 +144,7 @@ tags:
 
 <p>Of course, it is a good idea to use a secure connection, as with FTP. In the case of Rsync, you specify SSH details to make the connection over SSH, using the <code>-e</code> option. For example:</p>
 
-<pre class="brush: bash notranslate">rsync [-options] -e "ssh [SSH DETAILS GO HERE]" SOURCE user@x.x.x.x:DESTINATION</pre>
+<pre class="brush: bash">rsync [-options] -e "ssh [SSH DETAILS GO HERE]" SOURCE user@x.x.x.x:DESTINATION</pre>
 
 <p>You can find more details of what is needed at <a href="https://www.digitalocean.com/community/tutorials/how-to-copy-files-with-rsync-over-ssh">How To Copy Files With Rsync Over SSH</a>.</p>
 

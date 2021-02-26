@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <var>p</var> = new Proxy(<var>target</var>, {
+<pre class="brush: js">const <var>p</var> = new Proxy(<var>target</var>, {
   set: function(<var>target</var>, <var>property</var>, <var>value</var>, <var>receiver</var>) {
   }
 });
@@ -105,7 +105,7 @@ tags:
 
 <p>The following code traps setting a property value.</p>
 
-<pre class="brush: js notranslate">const p = new Proxy({}, {
+<pre class="brush: js">const p = new Proxy({}, {
   set: function(target, prop, value, receiver) {
     target[prop] = value;
     console.log('property set: ' + prop + ' = ' + value);
@@ -139,10 +139,7 @@ console.log(p.a);       // 10
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Proxy.handler.set")}}</p>
-</div>
+<p>{{Compat("javascript.builtins.Proxy.handler.set")}}</p>
 
 <h2 id="See_also">See also</h2>
 

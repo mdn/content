@@ -50,7 +50,7 @@ tags:
 
 <p>For example:</p>
 
-<pre class="brush: html notranslate">&lt;img src="dinosaur.png"
+<pre class="brush: html">&lt;img src="dinosaur.png"
      alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth."&gt;
 </pre>
 
@@ -62,7 +62,7 @@ tags:
 
 <p>HTML5 video and audio instances even come with a set of inbuilt controls that allow you to control the media straight out of the box. For example (see <code>native-controls.html</code> <a href="https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/native-controls.html">source code</a> and <a href="https://mdn.github.io/learning-area/accessibility/multimedia/native-controls.html">live</a>):</p>
 
-<pre class="brush: html notranslate">&lt;audio controls&gt;
+<pre class="brush: html">&lt;audio controls&gt;
   &lt;source src="viper.mp3" type="audio/mp3"&gt;
   &lt;source src="viper.ogg" type="audio/ogg"&gt;
   &lt;p&gt;Your browser doesn't support HTML5 audio. Here is a &lt;a href="viper.mp3"&gt;link to the audio&lt;/a&gt; instead.&lt;/p&gt;
@@ -78,9 +78,9 @@ tags:
 
 <p>The controls attribute provides play/pause buttons, seek bar, etc. — the basic controls you'd expect from a media player. It looks like so in Firefox and Chrome:</p>
 
-<p><img alt="Screenshot of Video Controls in Firefox" src="https://mdn.mozillademos.org/files/14440/native-controls-firefox.png" style="display: block; height: 361px; margin: 0px auto; width: 400px;"></p>
+<p><img alt="Screenshot of Video Controls in Firefox" src="native-controls-firefox.png" style="display: block; margin: 0px auto;"></p>
 
-<p><img alt="Screenshot of Video Controls in Chrome" src="https://mdn.mozillademos.org/files/14438/native-controls-chrome.png" style="display: block; height: 344px; margin: 0px auto; width: 400px;"></p>
+<p><img alt="Screenshot of Video Controls in Chrome" src="native-controls-chrome.png" style="display: block; margin: 0px auto;"></p>
 
 <p>However, there are problems with these controls:</p>
 
@@ -105,7 +105,7 @@ tags:
 
 <p>First of all, let's look at the HTML for the video player, in the HTML:</p>
 
-<pre class="brush: html notranslate">&lt;section class="player"&gt;
+<pre class="brush: html">&lt;section class="player"&gt;
   &lt;video controls&gt;
     &lt;source src="rabbit320.mp4" type="video/mp4"&gt;
     &lt;source src="rabbit320.webm" type="video/webm"&gt;
@@ -127,7 +127,7 @@ tags:
 
 <p>We will first need to store references to each of the controls — add the following to the top of your JavaScript file:</p>
 
-<pre class="brush: js notranslate">const playPauseBtn = document.querySelector('.playpause');
+<pre class="brush: js">const playPauseBtn = document.querySelector('.playpause');
 const stopBtn = document.querySelector('.stop');
 const rwdBtn = document.querySelector('.rwd');
 const fwdBtn = document.querySelector('.fwd');
@@ -135,13 +135,13 @@ const timeLabel = document.querySelector('.time');</pre>
 
 <p>Next, we need to grab a reference to the video/audio player itself — add this line below the previous lines:</p>
 
-<pre class="brush: js notranslate">const player = document.querySelector('video');</pre>
+<pre class="brush: js">const player = document.querySelector('video');</pre>
 
 <p>This holds a reference to a {{domxref("HTMLMediaElement")}} object, which has several useful properties and methods available on it that can be used to wire up functionality to our buttons.</p>
 
 <p>Before moving onto creating our button functionality, let's remove the native controls so they don't get in the way of our custom controls. Add the following, again at the bottom of your JavaScript:</p>
 
-<pre class="brush: js notranslate">player.removeAttribute('controls');</pre>
+<pre class="brush: js">player.removeAttribute('controls');</pre>
 
 <p>Doing it this way round rather than just not including the controls attribute in the first place has the advantage that if our JavaScript fails for any reason, the user still has some controls available.</p>
 
@@ -149,7 +149,7 @@ const timeLabel = document.querySelector('.time');</pre>
 
 <p>First, let's set up the play/pause button. We can get this to toggle between play and pause with a simple conditional function, like the following. Add it to your code, at the bottom:</p>
 
-<pre class="brush: js notranslate">playPauseBtn.onclick = function() {
+<pre class="brush: js">playPauseBtn.onclick = function() {
   if(player.paused) {
     player.play();
     playPauseBtn.textContent = 'Pause';
@@ -161,7 +161,7 @@ const timeLabel = document.querySelector('.time');</pre>
 
 <p>Next, add this code to the bottom, which controls the stop button:</p>
 
-<pre class="brush: js notranslate">stopBtn.onclick = function() {
+<pre class="brush: js">stopBtn.onclick = function() {
   player.pause();
   player.currentTime = 0;
   playPauseBtn.textContent = 'Play';
@@ -171,7 +171,7 @@ const timeLabel = document.querySelector('.time');</pre>
 
 <p>Next, our rewind and fast forward buttons — add the following blocks to the bottom of your code:</p>
 
-<pre class="brush: js notranslate">rwdBtn.onclick = function() {
+<pre class="brush: js">rwdBtn.onclick = function() {
   player.currentTime -= 3;
 };
 
@@ -190,7 +190,7 @@ fwdBtn.onclick = function() {
 
 <p>Last of all, add the following to the end of the code, to control the time elapsed display:</p>
 
-<pre class="brush: js notranslate">player.ontimeupdate = function() {
+<pre class="brush: js">player.ontimeupdate = function() {
   let minutes = Math.floor(player.currentTime / 60);
   let seconds = Math.floor(player.currentTime - minutes * 60);
   let minuteValue;
@@ -219,9 +219,9 @@ fwdBtn.onclick = function() {
 <p>This gives you a basic idea of how to add custom player functionality to video/audio player instances. For more information on how to add more complex features to video/audio players, see:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery">Audio and video delivery</a></li>
- <li><a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Video_player_styling_basics">Video player styling basics</a></li>
- <li><a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a></li>
+ <li><a href="/en-US/docs/Web/Guide/Audio_and_video_delivery">Audio and video delivery</a></li>
+ <li><a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics">Video player styling basics</a></li>
+ <li><a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a></li>
 </ul>
 
 <p>We've also created an advanced example to show how you could create an object-oriented system that finds every video and audio player on the page (no matter how many there are) and adds our custom controls to it. See <a href="https://mdn.github.io/learning-area/accessibility/multimedia/custom-controls-OOJS/">custom-controls-oojs</a> (also <a href="https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/custom-controls-OOJS">see the source code</a>).</p>
@@ -270,11 +270,11 @@ fwdBtn.onclick = function() {
 
 <p>This is not a new concept — television services have had closed captioning available for quite a long time:</p>
 
-<p><img alt='Frame from an old-timey cartoon with closed captioning "Good work, Goldie. Keep it up!"' src="https://mdn.mozillademos.org/files/14436/closed-captions.png" style="display: block; height: 240px; margin: 0px auto; width: 320px;"></p>
+<p><img alt='Frame from an old-timey cartoon with closed captioning "Good work, Goldie. Keep it up!"' src="closed-captions.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Whereas many countries offer English films with subtitles written in their own native languages, and different language subtitles are often available on DVDs, for example</p>
 
-<p><img alt='An English film with German subtitles "Emo, warum erkennst du nicht die Schonheit dieses Ortes?"' src="https://mdn.mozillademos.org/files/14442/Subtitles_German.jpg" style="display: block; margin: 0 auto;"></p>
+<p><img alt='An English film with German subtitles "Emo, warum erkennst du nicht die Schonheit dieses Ortes?"' src="subtitles_german.png" style="display: block; margin: 0 auto;"></p>
 
 <p>There are different types of text tracks for different purposes. The main ones you'll come across are:</p>
 
@@ -291,7 +291,7 @@ fwdBtn.onclick = function() {
 
 <p>A typical WebVTT file will look something like this:</p>
 
-<pre class="notranslate">WEBVTT
+<pre>WEBVTT
 
 1
 00:00:22.230 --&gt; 00:00:24.606
@@ -312,7 +312,7 @@ This is the second.
 
 <p>Here's an example:</p>
 
-<pre class="brush: html notranslate">&lt;video controls&gt;
+<pre class="brush: html">&lt;video controls&gt;
   &lt;source src="example.mp4" type="video/mp4"&gt;
   &lt;source src="example.webm" type="video/webm"&gt;
   &lt;track kind="subtitles" src="subtitles_en.vtt" srclang="en"&gt;
@@ -320,9 +320,9 @@ This is the second.
 
 <p>This will result in a video that has subtitles displayed, kind of like this:</p>
 
-<p><img alt='Video player with standard controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."' src="https://mdn.mozillademos.org/files/7887/video-player-with-captions.png" style="display: block; height: 365px; margin: 0px auto; width: 593px;"></p>
+<p><img alt='Video player with standard controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."' src="video-player-with-captions.png" style="display: block; margin: 0px auto;"></p>
 
-<p>For more details, please read <a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a>. You can find <a href="https://iandevlin.github.io/mdn/video-player-with-captions/">the example</a> that goes along with this article on Github, written by Ian Devlin (see the <a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions">source code</a> too.) This example uses JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.</p>
+<p>For more details, please read <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a>. You can find <a href="https://iandevlin.github.io/mdn/video-player-with-captions/">the example</a> that goes along with this article on Github, written by Ian Devlin (see the <a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions">source code</a> too.) This example uses JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Text tracks and transcriptions also help you with {{glossary("SEO")}}, since search engines especially thrive on text. Text tracks even allow search engines to link directly to a spot partway through the video.</p>

@@ -2,19 +2,19 @@
 title: AudioBufferSourceNode.playbackRate
 slug: Web/API/AudioBufferSourceNode/playbackRate
 tags:
-- API
-- AudioBufferSourceNode
-- Property
-- Reference
-- Web Audio API
-- playbackRate
+  - API
+  - AudioBufferSourceNode
+  - Property
+  - Reference
+  - Web Audio API
+  - playbackRate
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
   <p><span class="seoSummary">The <strong><code>playbackRate</code></strong> property of
       the {{ domxref("AudioBufferSourceNode") }} interface Is a <a
-        href="/en-US/docs/DOM/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}} that
+        href="/en-US/docs/Web/API/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}} that
       defines the speed at which the audio asset will be played.</span></p>
 
   <p>A value of 1.0 indicates it should play at the same speed as its sampling rate,
@@ -26,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>AudioBufferSourceNode</em>.playbackRate.value = <em>playbackRateProportion</em>;
+<pre class="brush: js"><em>AudioBufferSourceNode</em>.playbackRate.value = <em>playbackRateProportion</em>;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -47,7 +47,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>In this example, the {{domxref("AudioContext.decodeAudioData()")}} function is used to
+<p>In this example, the {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} function is used to
   decode an audio track, and put it into an {{domxref("AudioBufferSourceNode")}}. Buttons
   are provided to play and stop the audio playback, and a slider control is used to change
   the <code>playbackRate</code> property value on the fly.</p>
@@ -130,10 +130,7 @@ playbackControl.oninput = function() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.AudioBufferSourceNode.playbackRate")}}</p>
-</div>
+<p>{{Compat("api.AudioBufferSourceNode.playbackRate")}}</p>
 
 <h2 id="See_also">See also</h2>
 

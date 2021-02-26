@@ -86,7 +86,7 @@ dt.mozClearDataAt("text/plain", 1);
 
 <h2 id="Dragging_Non-String_Data">Dragging Non-String Data</h2>
 
-<p>The additional methods described above are also not restricted to string data; you can specify any type of data. For example, files are dragged using the <a href="/En/DragDrop/Recommended_Drag_Types#file">application/x-moz-file</a> type stored as <a href="/en/XPCOM_Interface_Reference/nsIFile">nsIFile</a> objects. As the {{domxref("DataTransfer.setData","setData()")}} method only supports strings, it cannot be used to specify files for dragging in this manner. Instead the {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} method must be used.</p>
+<p>The additional methods described above are also not restricted to string data; you can specify any type of data. For example, files are dragged using the <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#file">application/x-moz-file</a> type stored as <a href="/en-US/docs/XPCOM_Interface_Reference/nsIFile">nsIFile</a> objects. As the {{domxref("DataTransfer.setData","setData()")}} method only supports strings, it cannot be used to specify files for dragging in this manner. Instead the {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} method must be used.</p>
 
 <pre>dt.mozSetDataAt("application/x-moz-file", file, 0);
 </pre>
@@ -150,7 +150,7 @@ function output(text)
 
 <p>This example cancels both the <code>{{event("dragenter")}}</code> and <code>{{event("dragover")}}</code> events by calling the {{domxref("Event.preventDefault","preventDefault()")}}. method. This allows a drop to occur on that element.</p>
 
-<p>The <code>dodrop</code> event hander is called when dropping an item. It checks the {{domxref("DataTransfer.mozItemCount","mozItemCount")}} property to check how many items have been dropped and iterates over them. For each item, the {{domxref("DataTransfer.mozTypesAt","mozTypesAt()")}} method is called to get the list of types. This list is iterated over to get all of the data associated with the drag.</p>
+<p>The <code>dodrop</code> event handler is called when dropping an item. It checks the {{domxref("DataTransfer.mozItemCount","mozItemCount")}} property to check how many items have been dropped and iterates over them. For each item, the {{domxref("DataTransfer.mozTypesAt","mozTypesAt()")}} method is called to get the list of types. This list is iterated over to get all of the data associated with the drag.</p>
 
 <p>This processing is useful if you wish to examine the data that a drag is holding. Drop an item on the drop target in the example to see what items, formats and data was being dragged.</p>
 

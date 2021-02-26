@@ -12,7 +12,7 @@ tags:
 
 <p>The <strong><code>counter()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> returns a string representing the current value of the named counter, if there is one. It is generally used with <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>, but can be used, theoretically, anywhere a <code><a href="/en-US/docs/Web/CSS/string">&lt;string&gt;</a></code> value is supported.</p>
 
-<pre class="brush: css notranslate">/* Simple usage */
+<pre class="brush: css">/* Simple usage */
 counter(countername);
 
 /* changing the counter display */
@@ -23,7 +23,7 @@ counter(countername, upper-roman)</pre>
 <div class="notecard note">
 <p><strong>Note:</strong> The <code>counter()</code> function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental, and support for the type-or-unit parameter is sparse.</p>
 
-<p>Check the <a href="#Browser_compatibility">Browser compatibility table</a> carefully before using this in production.</p>
+<p>Check the <a href="#browser_compatibility">Browser compatibility table</a> carefully before using this in production.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -39,7 +39,7 @@ counter(countername, upper-roman)</pre>
 
 <h3 id="Formal_syntax">Formal syntax</h3>
 
-<pre class="brush: css notranslate">{{CSSSyntax}}</pre>
+<pre class="brush: css">{{CSSSyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -47,7 +47,7 @@ counter(countername, upper-roman)</pre>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html; notranslate">&lt;ol&gt;
+<pre class="brush: html;">&lt;ol&gt;
   &lt;li&gt;&lt;/li&gt;
   &lt;li&gt;&lt;/li&gt;
   &lt;li&gt;&lt;/li&gt;
@@ -55,7 +55,7 @@ counter(countername, upper-roman)</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css; highlight[2] notranslate">ol {
+<pre class="brush: css; highlight[2]">ol {
   counter-reset: listCounter;
 }
 li {
@@ -74,7 +74,7 @@ li::after {
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html; notranslate">&lt;ol&gt;
+<pre class="brush: html;">&lt;ol&gt;
   &lt;li&gt;&lt;/li&gt;
   &lt;li&gt;&lt;/li&gt;
   &lt;li&gt;&lt;/li&gt;
@@ -82,7 +82,7 @@ li::after {
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css; highlight[2] notranslate">ol {
+<pre class="brush: css; highlight[2]">ol {
   counter-reset: count;
 }
 li {

@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <em>result</em> = <em>crypto</em><code>.subtle.verify(<em>algorithm</em>, <em>key</em>, <em>signature</em>, <em>data</em>)</code>;
+<pre class="brush: js">const <em>result</em> = <em>crypto</em><code>.subtle.verify(<em>algorithm</em>, <em>key</em>, <em>signature</em>, <em>data</em>)</code>;
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -44,7 +44,7 @@ tags:
         {{domxref("EcdsaParams")}} object.</li>
       <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/sign#HMAC">HMAC</a>, pass the
         string <code>"HMAC"</code> or an object of the form
-        <code>{ "name": "HMAC" }</code>.<span style="display: none;"> </span></li>
+        <code>{ "name": "HMAC" }</code>.</li>
     </ul>
   </li>
   <li><code><em>key</em></code> is a {{domxref("CryptoKey")}} containing the key that will

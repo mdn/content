@@ -13,7 +13,7 @@ tags:
   - containing block
   - size
 ---
-<div>{{cssref}}</div>
+<div>{{CSSRef}}</div>
 
 <p>The size and position of an element are often impacted by its <strong>containing block</strong>. Most often, the containing block is the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area">content area</a> of an element's nearest <a href="/en-US/docs/Web/HTML/Block-level_elements">block-level</a> ancestor, but this is not always the case. <span class="seoSummary">In this article, we examine the factors that determine an element's containing block.</span></p>
 
@@ -26,7 +26,7 @@ tags:
  <li>Margin area</li>
 </ol>
 
-<p><img alt="Diagram of the box model" src="https://mdn.mozillademos.org/files/16558/box-model.png" style="height: 300px; width: 544px;"></p>
+<p><img alt="Diagram of the box model" src="box-model.png"></p>
 
 <p>Many developers believe that the containing block of an element is always the content area of its parent, but that isn't necessarily true. Let's investigate the factors that determine what an element's containing block is.</p>
 
@@ -71,7 +71,7 @@ tags:
 
 <p>The HTML code for all our examples is:</p>
 
-<pre class="brush: html notranslate">&lt;body&gt;
+<pre class="brush: html">&lt;body&gt;
   &lt;section&gt;
     &lt;p&gt;This is a paragraph!&lt;/p&gt;
   &lt;/section&gt;
@@ -85,7 +85,7 @@ tags:
 <p>In this example, the paragraph is statically positioned, so its containing block is {{HTMLElement("section")}} because it's the nearest ancestor that is a block container.</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;body&gt;
+<pre class="brush: html">&lt;body&gt;
   &lt;section&gt;
     &lt;p&gt;This is a paragraph!&lt;/p&gt;
   &lt;/section&gt;
@@ -93,7 +93,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   background: beige;
 }
 
@@ -120,7 +120,7 @@ p {
 <p>In this example, the paragraph's containing block is the {{HTMLElement("body")}} element, because <code>&lt;section&gt;</code> is not a block container (because of <code>display: inline</code>) and doesn’t establish a formatting context.</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;body&gt;
+<pre class="brush: html">&lt;body&gt;
   &lt;section&gt;
     &lt;p&gt;This is a paragraph!&lt;/p&gt;
   &lt;/section&gt;
@@ -128,7 +128,7 @@ p {
 </pre>
 </div>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   background: beige;
 }
 
@@ -151,7 +151,7 @@ p {
 <p>In this example, the paragraph's containing block is <code>&lt;section&gt;</code> because the latter's <code>position</code> is <code>absolute</code>. The paragraph's percentage values are affected by the <code>padding</code> of its containing block, though if the containing block's {{cssxref("box-sizing")}} value were <code>border-box</code> this would not be the case.</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;body&gt;
+<pre class="brush: html">&lt;body&gt;
   &lt;section&gt;
     &lt;p&gt;This is a paragraph!&lt;/p&gt;
   &lt;/section&gt;
@@ -159,7 +159,7 @@ p {
 </pre>
 </div>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   background: beige;
 }
 
@@ -190,7 +190,7 @@ p {
 <p>In this example, the paragraph's <code>position</code> is <code>fixed</code>, so its containing block is the initial containing block (on screens, the viewport). Thus, the paragraph's dimensions change based on the size of the browser window.</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;body&gt;
+<pre class="brush: html">&lt;body&gt;
   &lt;section&gt;
     &lt;p&gt;This is a paragraph!&lt;/p&gt;
   &lt;/section&gt;
@@ -198,7 +198,7 @@ p {
 </pre>
 </div>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   background: beige;
 }
 
@@ -227,7 +227,7 @@ p {
 <p>In this example, the paragraph's <code>position</code> is <code>absolute</code>, so its containing block is <code>&lt;section&gt;</code>, which is the nearest ancestor with a {{cssxref("transform")}} property that isn't <code>none</code>.</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;body&gt;
+<pre class="brush: html">&lt;body&gt;
   &lt;section&gt;
     &lt;p&gt;This is a paragraph!&lt;/p&gt;
   &lt;/section&gt;
@@ -235,7 +235,7 @@ p {
 </pre>
 </div>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   background: beige;
 }
 

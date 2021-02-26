@@ -52,7 +52,7 @@ browser.tabs.onMoved.hasListener(listener)
 
  <dl class="reference-values">
   <dt><code>moveInfo</code></dt>
-  <dd><a href="#moveInfo"><code>object</code></a>. Information about the move.</dd>
+  <dd><a href="#moveinfo"><code>object</code></a>. Information about the move.</dd>
  </dl>
  </dd>
 </dl>
@@ -74,7 +74,7 @@ browser.tabs.onMoved.hasListener(listener)
 
 <p>Listen for and log move events:</p>
 
-<pre class="notranslate brush: js">function handleMoved(tabId, moveInfo) {
+<pre class="brush: js">function handleMoved(tabId, moveInfo) {
   console.log("Tab " + tabId +
               " moved from " + moveInfo.fromIndex +
               " to " + moveInfo.toIndex);

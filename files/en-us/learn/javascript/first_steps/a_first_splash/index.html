@@ -13,13 +13,13 @@ tags:
   - Operators
   - Variables
   - events
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{LearnSidebar}}</div>
 
 <div>{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}</div>
 
-<p class="summary">Now you've learned something about the theory of JavaScript, and what you can do with it, we are going to give you a crash course in the basic features of JavaScript via a completely practical tutorial. Here you'll build up a simple "Guess the number" game, step by step.</p>
+<p class="summary">Now you've learned something about the theory of JavaScript and what you can do with it, we are going to give you an idea of what the process of creating a simple JavaScript program is like, by guiding you through a practical tutorial. Here you'll build up a simple "Guess the number" game, step by step.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -34,10 +34,10 @@ tags:
  </tbody>
 </table>
 
-<p>You won't be expected to understand all of the code in detail immediately — we just want to introduce you to the high-level concepts for now, and give you an idea of how JavaScript (and other programming languages) work. In subsequent articles, you'll revisit all these features in a lot more detail!</p>
+<p>We want to set really clear expectations here: You won't be expected to learn JavaScript by the end of this article, or even understand all the code we are asking you to write. Instead, we want to give you an idea of how JavaScript's features work together, and what writing JavaScript feels like. In subsequent articles you'll revisit all the features shown here in a lot more detail, so don't worry if you don't understand it all immediately!</p>
 
 <div class="note">
-<p>Note: Many of the code features you'll see in JavaScript are the same as in other programming languages — functions, loops, etc. The code syntax looks different, but the concepts are still largely the same.</p>
+  <p><strong>Note</strong>: Many of the code features you'll see in JavaScript are the same as in other programming languages — functions, loops, etc. The code syntax looks different, but the concepts are still largely the same.</p>
 </div>
 
 <h2 id="Thinking_like_a_programmer">Thinking like a programmer</h2>
@@ -55,7 +55,7 @@ tags:
 <div class="hidden">
 <h6 id="Top_hidden_code">Top hidden code</h6>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 
 &lt;head&gt;
@@ -120,7 +120,7 @@ tags:
       } else {
         lastResult.textContent = 'Wrong!';
         lastResult.style.backgroundColor = 'red';
-        if(userGuess &lt; randomNumber) {
+        if (userGuess &lt; randomNumber) {
           lowOrHi.textContent = 'Last guess was too low!' ;
         } else if(userGuess &gt; randomNumber) {
           lowOrHi.textContent = 'Last guess was too high!';
@@ -190,7 +190,7 @@ tags:
  </li>
  <li>If it is wrong and the player has turns left:
   <ol>
-   <li>Tell the player they are wrong.</li>
+   <li>Tell the player they are wrong and whether their guess was too high or too low.</li>
    <li>Allow them to enter another guess.</li>
    <li>Increment the turn number by 1.</li>
   </ol>
@@ -213,7 +213,7 @@ tags:
 
 <p>The place where we'll be adding all our code is inside the {{htmlelement("script")}} element at the bottom of the HTML:</p>
 
-<pre class="brush: html notranslate">&lt;script&gt;
+<pre class="brush: html">&lt;script&gt;
 
   // Your JavaScript goes here
 
@@ -224,7 +224,7 @@ tags:
 
 <p>Let's get started. First of all, add the following lines inside your {{htmlelement("script")}} element:</p>
 
-<pre class="brush: js notranslate">let randomNumber = Math.floor(Math.random() * 100) + 1;
+<pre class="brush: js">let randomNumber = Math.floor(Math.random() * 100) + 1;
 
 const guesses = document.querySelector('.guesses');
 const lastResult = document.querySelector('.lastResult');
@@ -236,7 +236,7 @@ const guessField = document.querySelector('.guessField');
 let guessCount = 1;
 let resetButton;</pre>
 
-<p>This section of the code sets up the variables and constants we need to store the data our program will use. Variables are basically containers for values (such as numbers, or strings of text). You create a variable with the keyword <code>let</code> (or <code>var</code>) followed by a name for your variable (you'll read more about the difference between the keywords in a <a href="/en-US/docs/Learn/JavaScript/First_steps/Variables#The_difference_between_var_and_let">future article</a>). Constants are used to store values that are immutable or can't be changed and are created with the keyword <code>const</code>. In this case, we are using constants to store references to parts of our user interface; the text inside some of them might change, but the HTML elements referenced stay the same.</p>
+<p>This section of the code sets up the variables and constants we need to store the data our program will use. Variables are basically containers for values (such as numbers, or strings of text). You create a variable with the keyword <code>let</code> (or <code>var</code>) followed by a name for your variable (you'll read more about the difference between the keywords in a <a href="/en-US/docs/Learn/JavaScript/First_steps/Variables#the_difference_between_var_and_let">future article</a>). Constants are used to store values that are immutable or can't be changed and are created with the keyword <code>const</code>. In this case, we are using constants to store references to parts of our user interface; the text inside some of them might change, but the HTML elements referenced stay the same.</p>
 
 <p>You can assign a value to your variable or constant with an equals sign (<code>=</code>) followed by the value you want to give it.</p>
 
@@ -245,7 +245,7 @@ let resetButton;</pre>
 <ul>
  <li>The first variable — <code>randomNumber</code> — is assigned a random number between 1 and 100, calculated using a mathematical algorithm.</li>
  <li>The first three constants are each made to store a reference to the results paragraphs in our HTML, and are used to insert values into the paragraphs later on in the code (note how they are inside a <code>&lt;div&gt;</code> element, which is itself used to select all three later on for resetting, when we restart the game):
-  <pre class="brush: html notranslate">&lt;div class="resultParas"&gt;
+  <pre class="brush: html">&lt;div class="resultParas"&gt;
   &lt;p class="guesses"&gt;&lt;/p&gt;
   &lt;p class="lastResult"&gt;&lt;/p&gt;
   &lt;p class="lowOrHi"&gt;&lt;/p&gt;
@@ -253,7 +253,7 @@ let resetButton;</pre>
 </pre>
  </li>
  <li>The next two constants store references to the form text input and submit button and are used to control submitting the guess later on.
-  <pre class="brush: html notranslate">&lt;label for="guessField"&gt;Enter a guess: &lt;/label&gt;&lt;input type="text" id="guessField" class="guessField"&gt;
+  <pre class="brush: html">&lt;label for="guessField"&gt;Enter a guess: &lt;/label&gt;&lt;input type="text" id="guessField" class="guessField"&gt;
 &lt;input type="submit" value="Submit guess" class="guessSubmit"&gt;</pre>
  </li>
  <li>Our final two variables store a guess count of 1 (used to keep track of how many guesses the player has had), and a reference to a reset button that doesn't exist yet (but will later).</li>
@@ -267,7 +267,7 @@ let resetButton;</pre>
 
 <p>Next, add the following below your previous JavaScript:</p>
 
-<pre class="brush: js notranslate">function checkGuess() {
+<pre class="brush: js">function checkGuess() {
   alert('I am a placeholder');
 }</pre>
 
@@ -277,7 +277,7 @@ let resetButton;</pre>
 
 <p>Let's try that now. Save your code and refresh the page in your browser. Then go into the <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">developer tools JavaScript console</a>, and enter the following line:</p>
 
-<pre class="brush: js notranslate">checkGuess();</pre>
+<pre class="brush: js">checkGuess();</pre>
 
 <p>After pressing <kbd>Return</kbd>/<kbd>Enter</kbd>, you should see an alert come up that says <code>I am a placeholder</code>; we have defined a function in our code that creates an alert whenever we call it.</p>
 
@@ -327,22 +327,22 @@ let resetButton;</pre>
 
 <p>You can also use the <code>+</code> operator to join text strings together (in programming, this is called <em>concatenation</em>). Try entering the following lines, one at a time:</p>
 
-<pre class="brush: js notranslate">let name = 'Bingo';
+<pre class="brush: js">let name = 'Bingo';
 name;
 let hello = ' says hello!';
 hello;
 let greeting = name + hello;
 greeting;</pre>
 
-<p>There are also some shortcut operators available, called augmented <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">assignment operators</a>. For example, if you want to add a new text string to an existing one and return the result, you could do this:</p>
+<p>There are also some shortcut operators available, called augmented <a href="/en-US/docs/Web/JavaScript/Reference/Operators#assignment_operators">assignment operators</a>. For example, if you want to add a new text string to an existing one and return the result, you could do this:</p>
 
-<pre class="brush: js notranslate">name += ' says hello!';</pre>
+<pre class="brush: js">name += ' says hello!';</pre>
 
 <p>This is equivalent to</p>
 
-<pre class="brush: js notranslate">name = name + ' says hello!';</pre>
+<pre class="brush: js">name = name + ' says hello!';</pre>
 
-<p>When we are running true/false tests (for example inside conditionals — see {{anch("Conditionals", "below")}}) we use <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">comparison operators</a>. For example:</p>
+<p>When we are running true/false tests (for example inside conditionals — see {{anch("Conditionals", "below")}}) we use <a href="/en-US/docs/Web/JavaScript/Reference/Operators">comparison operators</a>. For example:</p>
 
 <table class="standard-table">
  <thead>
@@ -355,7 +355,7 @@ greeting;</pre>
    <td><code>===</code></td>
    <td>Strict equality (is it exactly the same?)</td>
    <td>
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 5 === 2 + 4 // false
 'Chris' === 'Bob' // false
 5 === 2 + 3 // true
@@ -367,7 +367,7 @@ greeting;</pre>
    <td><code>!==</code></td>
    <td>Non-equality (is it not the same?)</td>
    <td>
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 5 !== 2 + 4 // true
 'Chris' !== 'Bob' // true
 5 !== 2 + 3 // false
@@ -379,7 +379,7 @@ greeting;</pre>
    <td><code>&lt;</code></td>
    <td>Less than</td>
    <td>
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 6 &lt; 10 // true
 20 &lt; 10 // false</pre>
    </td>
@@ -388,7 +388,7 @@ greeting;</pre>
    <td><code>&gt;</code></td>
    <td>Greater than</td>
    <td>
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 6 &gt; 10 // false
 20 &gt; 10  // true</pre>
    </td>
@@ -402,7 +402,7 @@ greeting;</pre>
 
 <p>At this point, replace your current <code>checkGuess()</code> function with this version instead:</p>
 
-<pre class="brush: js notranslate">function checkGuess() {
+<pre class="brush: js">function checkGuess() {
   let userGuess = Number(guessField.value);
   if (guessCount === 1) {
     guesses.textContent = 'Previous guesses: ';
@@ -437,7 +437,7 @@ greeting;</pre>
 <ul>
  <li>The first line (line 2 above) declares a variable called <code>userGuess</code> and sets its value to the current value entered inside the text field. We also run this value through the built-in <code>Number()</code> constructor, just to make sure the value is definitely a number.</li>
  <li>Next, we encounter our first conditional code block (lines 3–5 above). A conditional code block allows you to run code selectively, depending on whether a certain condition is true or not. It looks a bit like a function, but it isn't. The simplest form of conditional block starts with the keyword <code>if</code>, then some parentheses, then some curly braces. Inside the parentheses we include a test. If the test returns <code>true</code>, we run the code inside the curly braces. If not, we don't, and move on to the next bit of code. In this case the test is testing whether the <code>guessCount</code> variable is equal to <code>1</code> (i.e. whether this is the player's first go or not):
-  <pre class="brush: js notranslate">guessCount === 1</pre>
+  <pre class="brush: js">guessCount === 1</pre>
   If it is, we make the guesses paragraph's text content equal to <code>Previous guesses: </code>. If not, we don't.</li>
  <li>Line 6 appends the current <code>userGuess</code> value onto the end of the <code>guesses</code> paragraph, plus a blank space so there will be a space between each guess shown.</li>
  <li>The next block (lines 8–24 above) does a few checks:
@@ -456,7 +456,7 @@ greeting;</pre>
 
 <p>Add the following line below your <code>checkGuess()</code> function:</p>
 
-<pre class="brush: js notranslate">guessSubmit.addEventListener('click', checkGuess);</pre>
+<pre class="brush: js">guessSubmit.addEventListener('click', checkGuess);</pre>
 
 <p>Here we are adding an event listener to the <code>guessSubmit</code> button. This is a method that takes two input values (called <em>arguments</em>) — the type of event we are listening out for (in this case <code>click</code>) as a string, and the code we want to run when the event occurs (in this case the <code>checkGuess()</code> function). Note that we don't need to specify the parentheses when writing it inside {{domxref("EventTarget.addEventListener", "addEventListener()")}}.</p>
 
@@ -466,7 +466,7 @@ greeting;</pre>
 
 <p>Let's add that <code>setGameOver()</code> function to the bottom of our code and then walk through it. Add this now, below the rest of your JavaScript:</p>
 
-<pre class="brush: js notranslate">function setGameOver() {
+<pre class="brush: js">function setGameOver() {
   guessField.disabled = true;
   guessSubmit.disabled = true;
   resetButton = document.createElement('button');
@@ -483,7 +483,7 @@ greeting;</pre>
 
 <p>Now we need to define this function too! Add the following code, again to the bottom of your JavaScript:</p>
 
-<pre class="brush: js notranslate">function resetGame() {
+<pre class="brush: js">function resetGame() {
   guessCount = 1;
 
   const resetParas = document.querySelectorAll('.resultParas p');
@@ -524,7 +524,7 @@ greeting;</pre>
 
 <p>To start with, go to your <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">browser developer tools JavaScript console</a> again, and enter the following:</p>
 
-<pre class="brush: js notranslate">for (let i = 1 ; i &lt; 21 ; i++) { console.log(i) }</pre>
+<pre class="brush: js">for (let i = 1 ; i &lt; 21 ; i++) { console.log(i) }</pre>
 
 <p>What happened? The numbers <code>1</code> to <code>20</code> were printed out in your console. This is because of the loop. A <code>for</code> loop takes three input values (arguments):</p>
 
@@ -536,7 +536,7 @@ greeting;</pre>
 
 <p>Now let's look at the loop in our number guessing game — the following can be found inside the <code>resetGame()</code> function:</p>
 
-<pre class="brush: js notranslate">const resetParas = document.querySelectorAll('.resultParas p');
+<pre class="brush: js">const resetParas = document.querySelectorAll('.resultParas p');
 for (let i = 0 ; i &lt; resetParas.length ; i++) {
   resetParas[i].textContent = '';
 }</pre>
@@ -547,21 +547,21 @@ for (let i = 0 ; i &lt; resetParas.length ; i++) {
 
 <p>Let's add one more final improvement before we get to this discussion. Add the following line just below the <code>let resetButton;</code> line near the top of your JavaScript, then save your file:</p>
 
-<pre class="brush: js notranslate">guessField.focus();</pre>
+<pre class="brush: js">guessField.focus();</pre>
 
-<p>This line uses the {{domxref("HTMLElement.focus", "focus()")}} method to automatically put the text cursor into the {{htmlelement("input")}} text field as soon as the page loads, meaning that the user can start typing their first guess right away, without having to click the form field first. It's only a small addition, but it improves usability — giving the user a good visual clue as to what they've got to do to play the game.</p>
+<p>This line uses the {{domxref("HTMLOrForeignElement/focus", "focus()")}} method to automatically put the text cursor into the {{htmlelement("input")}} text field as soon as the page loads, meaning that the user can start typing their first guess right away, without having to click the form field first. It's only a small addition, but it improves usability — giving the user a good visual clue as to what they've got to do to play the game.</p>
 
 <p>Let's analyze what's going on here in a bit more detail. In JavaScript, most of the items you will manipulate in your code are objects. An object is a collection of related functionality stored in a single grouping. You can create your own objects, but that is quite advanced and we won't be covering it until much later in the course. For now, we'll just briefly discuss the built-in objects that your browser contains, which allow you to do lots of useful things.</p>
 
 <p>In this particular case, we first created a <code>guessField</code> constant that stores a reference to the text input form field in our HTML — the following line can be found amongst our declarations near the top of the code:</p>
 
-<pre class="brush: js notranslate">const guessField = document.querySelector('.guessField');</pre>
+<pre class="brush: js">const guessField = document.querySelector('.guessField');</pre>
 
-<p>To get this reference, we used the {{domxref("document.querySelector", "querySelector()")}} method of the {{domxref("document")}} object. <code>querySelector()</code> takes one piece of information — a <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors">CSS selector</a> that selects the element you want a reference to.</p>
+<p>To get this reference, we used the {{domxref("document.querySelector", "querySelector()")}} method of the {{domxref("document")}} object. <code>querySelector()</code> takes one piece of information — a <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">CSS selector</a> that selects the element you want a reference to.</p>
 
 <p>Because <code>guessField</code> now contains a reference to an {{htmlelement("input")}} element, it now has access to a number of properties (basically variables stored inside objects, some of which can't have their values changed) and methods (basically functions stored inside objects). One method available to input elements is <code>focus()</code>, so we can now use this line to focus the text input:</p>
 
-<pre class="brush: js notranslate">guessField.focus();</pre>
+<pre class="brush: js">guessField.focus();</pre>
 
 <p>Variables that don't contain references to form elements won't have <code>focus()</code> available to them. For example, the <code>guesses</code> constant contains a reference to a {{htmlelement("p")}} element, and the <code>guessCount</code> variable contains a number.</p>
 
@@ -574,17 +574,17 @@ for (let i = 0 ; i &lt; resetParas.length ; i++) {
  <li>Next, open your <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">browser developer tools</a>, and make sure the JavaScript console tab is open.</li>
  <li>Type <code>guessField</code> into the console and the console shows you that the variable contains an {{htmlelement("input")}} element. You'll also notice that the console autocompletes the names of objects that exist inside the execution environment, including your variables!</li>
  <li>Now type in the following:
-  <pre class="brush: js notranslate">guessField.value = 'Hello';</pre>
+  <pre class="brush: js">guessField.value = 'Hello';</pre>
   The <code>value</code> property represents the current value entered into the text field. You'll see that by entering this command, we've changed the text in the text field!</li>
  <li>Now try typing <code>guesses</code> into the console and pressing return. The console shows you that the variable contains a {{htmlelement("p")}} element.</li>
  <li>Now try entering the following line:
-  <pre class="brush: js notranslate">guesses.value</pre>
+  <pre class="brush: js">guesses.value</pre>
   The browser returns <code>undefined</code>, because paragraphs don't have the <code>value</code> property.</li>
  <li>To change the text inside a paragraph, you need the {{domxref("Node.textContent", "textContent")}} property instead. Try this:
-  <pre class="brush: js notranslate">guesses.textContent = 'Where is my paragraph?';</pre>
+  <pre class="brush: js">guesses.textContent = 'Where is my paragraph?';</pre>
  </li>
  <li>Now for some fun stuff. Try entering the below lines, one by one:
-  <pre class="brush: js notranslate">guesses.style.backgroundColor = 'yellow';
+  <pre class="brush: js">guesses.style.backgroundColor = 'yellow';
 guesses.style.fontSize = '200%';
 guesses.style.padding = '10px';
 guesses.style.boxShadow = '3px 3px 6px black';</pre>

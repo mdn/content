@@ -16,7 +16,7 @@ tags:
 
 <p>Note that Google Chrome retrieves apps as well as add-ons. In Chrome you can distinguish apps from add-ons using the <code>type</code> property of {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}}.</p>
 
-<p>This API requires the "management" <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions">API permission</a>.</p>
+<p>This API requires the "management" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">API permission</a>.</p>
 
 <p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
@@ -43,7 +43,7 @@ tags:
 
 <p>Log the name of all installed add-ons:</p>
 
-<pre class="notranslate brush: js">function gotAll(infoArray) {
+<pre class="brush: js">function gotAll(infoArray) {
   for (info of infoArray) {
     if (info.type == "extension") {
       console.log(info.name);

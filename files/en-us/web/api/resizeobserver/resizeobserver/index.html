@@ -19,7 +19,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>ResizeObserver</var> = new ResizeObserver(<var>callback</var>)</pre>
+  class="brush: js">var <var>ResizeObserver</var> = new ResizeObserver(<var>callback</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -40,7 +40,7 @@ tags:
 
     <p>The callback will generally follow a pattern along the lines of:</p>
 
-    <pre class="brush: js notranslate">function(entries, observer) {
+    <pre class="brush: js">function(entries, observer) {
   for (let entry of entries) {
     // Do something to each entry
     // and possibly something to the observer itself
@@ -57,7 +57,7 @@ tags:
     href="https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html">see
     source</a>) example:</p>
 
-<pre class="brush: js notranslate">const resizeObserver = new ResizeObserver(entries =&gt; {
+<pre class="brush: js">const resizeObserver = new ResizeObserver(entries =&gt; {
   for (let entry of entries) {
     if(entry.contentBoxSize) {
       if (entry.contentBoxSize[0]) {

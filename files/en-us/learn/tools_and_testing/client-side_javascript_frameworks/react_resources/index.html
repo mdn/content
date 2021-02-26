@@ -37,7 +37,7 @@ tags:
 
 <p><code>create-react-app</code> makes it possible to import CSS files into JavaScript modules, so that CSS is only sent to your user when the corresponding component is rendered. For this app, we could have for example written a dedicated <code>Form.css</code> file to house the styles of those respective components, then imported the styles into their respective modules like this:</p>
 
-<pre class="notranslate">import Form from './Form';
+<pre>import Form from './Form';
 import './Form.css'</pre>
 
 <p>This approach makes it easy to identify and manage the CSS that belongs to a specific component. However, it also fragments your stylesheet across your codebase, and this fragmentation might not be worthwhile. For larger applications with hundreds of unique views and lots of moving parts, it makes sense to limit the amount of irrelevant code that's sent to your user. You'll likely have app-wide styles and specific component styles that built on top of those.</p>
@@ -52,7 +52,7 @@ import './Form.css'</pre>
 
 <p>This screenshot shows our finished application as it appears in React DevTools:</p>
 
-<p><img alt="Our project being shown in React devtools" src="https://mdn.mozillademos.org/files/17212/react-devtools.png" style="border-style: solid; border-width: 1px; height: 632px; width: 1506px;"></p>
+<p><img alt="Our project being shown in React devtools" src="react-devtools.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>On the left, we see all of the components that make up our application, including some unique keys for the things that are rendered from arrays. On the right, we see the props and hooks that our App component utilizes. Notice, too, that the <code>Form</code>, <code>FilterButton</code>, and <code>Todo</code> components are indented to the right – this indicates that <code>App</code> is their parent. In more complex apps, this view is great for understanding parent/child relationships at a glance.</p>
 

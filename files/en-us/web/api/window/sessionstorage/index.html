@@ -36,10 +36,10 @@ tags:
 
 <p>Data stored in <code>sessionStorage</code> <strong>is specific to the protocol of the
     page</strong>. In particular, data stored by a script on a site accessed with HTTP
-  (e.g., <a href="http://example.com" rel="freelink noopener">http://example.com</a>) is
+  (e.g., <a href="http://example.com" rel="noopener">http://example.com</a>) is
   put in a different <code>sessionStorage</code> object from the same site accessed with
   HTTPS (e.g., <a href="https://example.com"
-    rel="freelink noopener">https://example.com</a>).</p>
+    rel="noopener">https://example.com</a>).</p>
 
 <p>The keys and the values are <em>always</em> in the UTF-16 {{domxref("DOMString")}}
   format, which uses two bytes per character. As with objects, integer keys are
@@ -47,7 +47,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>myStorage</em> = <em>window</em>.sessionStorage;
+<pre class="brush: js"><em>myStorage</em> = <em>window</em>.sessionStorage;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -71,7 +71,7 @@ tags:
 
 <h3 id="Basic_usage">Basic usage</h3>
 
-<pre class="brush: js notranslate">// Save data to sessionStorage
+<pre class="brush: js">// Save data to sessionStorage
 sessionStorage.setItem('key', 'value');
 
 // Get saved data from sessionStorage
@@ -88,7 +88,7 @@ sessionStorage.clear();</pre>
 <p>The following example autosaves the contents of a text field, and if the browser is
   refreshed, restores the text field content so that no writing is lost.</p>
 
-<pre class="brush: js notranslate">// Get the text field that we're going to track
+<pre class="brush: js">// Get the text field that we're going to track
 let field = document.getElementById("field");
 
 // See if we have an autosave value

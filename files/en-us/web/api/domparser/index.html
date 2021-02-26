@@ -38,7 +38,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <var>domparser</var> = new DOMParser()</pre>
+<pre class="brush: js">const <var>domparser</var> = new DOMParser()</pre>
 
 <h2 id="Methods">Methods</h2>
 
@@ -48,12 +48,12 @@ tags:
 <h4 id="Syntax_2">Syntax</h4>
 
 <pre
-  class="brush: js notranslate">const <var>doc</var> = domparser.parseFromString(<var>string, <var>mimeType</var>)</var></pre>
+  class="brush: js">const <var>doc</var> = domparser.parseFromString(<var>string, <var>mimeType</var>)</var></pre>
 
 <h4 id="Return">Return</h4>
 
 <p>Either {{domxref("Document")}} or {{domxref("XMLDocument")}} depending on the
-  <strong><code><a href="#Argument02">mimeType</a></code></strong> argument.</p>
+  <strong><code><a href="#argument02">mimeType</a></code></strong> argument.</p>
 
 <h4 id="Parameters">Parameters</h4>
 
@@ -109,7 +109,7 @@ tags:
 <p>Once you have created a parser object, you can parse XML from a string using the
   <code>parseFromString()</code> method:</p>
 
-<pre class="brush: js notranslate">let <var>parser</var> = new DOMParser()
+<pre class="brush: js">let <var>parser</var> = new DOMParser()
 let <var>doc</var> = parser.parseFromString(<var>stringContainingXMLSource</var>, "application/xml")
 </pre>
 
@@ -118,7 +118,7 @@ let <var>doc</var> = parser.parseFromString(<var>stringContainingXMLSource</var>
 <p>Note that if the parsing process fails, the <code>DOMParser</code> does not throw an
   exception, but instead returns an error document:</p>
 
-<pre class="brush:xml notranslate">&lt;parsererror xmlns="http://www.mozilla.org/newlayout/xml/parsererror.xml"&gt;
+<pre class="brush:xml">&lt;parsererror xmlns="http://www.mozilla.org/newlayout/xml/parsererror.xml"&gt;
   <var>(error description)</var>
   &lt;sourcetext&gt;<var>(a snippet of the source XML)</var>&lt;/sourcetext&gt;
 &lt;/parsererror&gt;
@@ -143,7 +143,7 @@ let <var>doc</var> = parser.parseFromString(<var>stringContainingXMLSource</var>
     <code>HTMLDocument</code></li>
 </ol>
 
-<pre class="brush: js notranslate">let parser = new DOMParser()
+<pre class="brush: js">let parser = new DOMParser()
 let doc = parser.parseFromString(stringContainingXMLSource, "application/xml")
 // returns a Document, but not an SVGDocument nor an HTMLDocument
 
@@ -158,7 +158,7 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html")
 
 <h2 id="DOMParser_HTML_extension">DOMParser HTML extension</h2>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
  * DOMParser HTML extension
  * 2012-09-04
  *

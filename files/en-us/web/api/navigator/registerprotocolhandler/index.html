@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">navigator.registerProtocolHandler(<var>scheme</var>, <var>url</var>);
+<pre class="brush: js">navigator.registerProtocolHandler(<var>scheme</var>, <var>url</var>);
 </pre>
 
 <div class="note"><strong>Note:</strong> The original implementation required three
@@ -54,7 +54,7 @@ tags:
     listing registered handlers in the browser’s settings.
     <div class="note"><strong>Note:</strong> The title has been removed from the spec due
       to spoofing concerns, but some browsers <strong>still require it</strong> (check the
-      <a href="#Browser_compatibility">compatibility table below</a>). It is recommended
+      <a href="#browser_compatibility">compatibility table below</a>). It is recommended
       to <strong>always set the title</strong>, since browsers that support the updated
       spec most likely will be backwards-compatible and still accept the title (but not
       use it).</div>
@@ -130,7 +130,7 @@ tags:
 <p>If your site is <code>burgers.example.com</code>, you can register a protocol handler
   for it to handle <code>web+burger:</code> links, like so:</p>
 
-<pre class="brush: js notranslate">navigator.registerProtocolHandler("web+burger",
+<pre class="brush: js">navigator.registerProtocolHandler("web+burger",
                                   "https://burgers.example.com/?burger=%s",
                                   "Burger handler"); // last title arg included for compatibility
 </pre>

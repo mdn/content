@@ -31,7 +31,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>elemScrollHeight</var> = <var>element</var>.scrollHeight;</pre>
+  class="brush: js"><var>elemScrollHeight</var> = <var>element</var>.scrollHeight;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -40,9 +40,9 @@ tags:
 <h2 id="Example">Example</h2>
 
 <div id="offsetContainer"
-  style="margin: 40px 50px 50px; background-color: rgb(255, 255, 204); border: 4px dashed black; color: black; position: relative; display: inline-block;">
+  style="margin: 0px 40px 50px;background-color: rgb(255, 255, 204);border: 4px dashed black;color: black;position: relative;display: inline-block;min-width: 300px;">
   <div id="idDiv"
-    style="margin: 24px 29px; border: 24px black solid; padding: 0px 28px; width: 199px; height: 102px; overflow: auto; background-color: white; font-size: 13px!important; font-family: Arial, sans-serif;">
+    style="margin: 24px auto;border: 24px black solid;padding: 0px 15px;width: 220px;height: 120px;overflow: auto;background-color: white;font-size: 13px!important;font-family: Arial, sans-serif;">
     <p id="PaddingTopLabel"
       style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">
       padding-top</p>
@@ -59,11 +59,9 @@ tags:
       style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">
       padding-bottom</p>
   </div>
-  <strong>Left</strong> <strong>Top</strong> <strong
-    style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 370px; position: absolute; top: 85px;">Right</strong>
-  <strong
-    style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 164px; position: absolute; top: 225px;">Bottom</strong>
-  <em>margin-top</em> <em>margin-bottom</em> <em>border-top</em> <em>border-bottom</em>
+  <strong style="position: absolute; left: -12%; top: 50%; transform: translateY(-50%); color: blue; font-weight: bold; font-size: 14px;">Left</strong> <strong style="position: absolute; left: 50%; top: -15%; transform: translateX(-50%); color: blue; font-weight: bold; font-size: 14px;">Top</strong> <strong style="position: absolute;right: -15%;top: 50%;transform: translateY(-50%);color: blue;font-weight: bold;font-size: 14px;">Right</strong>
+  <strong style="position: absolute;left: 50%;bottom: -15%;transform: translateX(-50%);color: blue;font-weight: bold;font-size: 14px;">Bottom</strong>
+  <em style="position: absolute;left: 50%;top: 0;transform: translateX(-50%);font-size: 14px;">margin-top</em> <em style="position: absolute;left: 50%;bottom: 0;transform: translateX(-50%);font-size: 14px;">margin-bottom</em> <em style="position: absolute;left: 50%;top: 14%;transform: translateX(-50%);font-size: 14px;color: white;">border-top</em> <em style="position: absolute;left: 50%;bottom: 14%;transform: translateX(-50%);font-size: 14px;color: white;">border-bottom</em>
 </div>
 
 <p><img src="scrollheight.png"></p>
@@ -76,13 +74,13 @@ tags:
 <p>The following equivalence returns <code>true</code> if an element is at the end of its
   scroll, <code>false</code> if it isn't.</p>
 
-<pre class="brush: js notranslate">element.scrollHeight - element.scrollTop === element.clientHeight
+<pre class="brush: js">element.scrollHeight - Math.abs(element.scrollTop) === element.clientHeight
 </pre>
 
 <p>When the container does not scroll, but has overflowing children, these checks
   determine if the container can scroll:</p>
 
-<pre class="brush: js notranslate">window.getComputedStyle(element).overflowY === 'visible'
+<pre class="brush: js">window.getComputedStyle(element).overflowY === 'visible'
 window.getComputedStyle(element).overflowY !== 'hidden'
 </pre>
 
@@ -95,7 +93,7 @@ window.getComputedStyle(element).overflowY !== 'hidden'
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;form name="registration"&gt;
+<pre class="brush: html">&lt;form name="registration"&gt;
   &lt;p&gt;
     &lt;textarea id="rules"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
 Aliquam erat volutpat. Praesent molestie, dolor ut eleifend aliquam, mi ligula ultrices sapien, quis cursus
@@ -130,7 +128,7 @@ nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css notranslate">#notice {
+<pre class="brush: css">#notice {
   display: inline-block;
   margin-bottom: 12px;
   border-radius: 5px;
@@ -149,11 +147,11 @@ nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">function checkReading () {
+<pre class="brush: js">function checkReading () {
   if (checkReading.read) {
     return;
   }
-  checkReading.read = this.scrollHeight - this.scrollTop === this.clientHeight;
+  checkReading.read = this.scrollHeight - Math.abs(this.scrollTop) === element.clientHeight;
   document.registration.accept.disabled = document.getElementById("nextstep").disabled = !checkReading.read;
   checkReading.noticeBox.textContent = checkReading.read ? "Thank you." : "Please, scroll and read the following text.";
 }

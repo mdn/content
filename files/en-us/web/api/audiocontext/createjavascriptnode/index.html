@@ -2,15 +2,15 @@
 title: AudioContext.createJavaScriptNode()
 slug: Web/API/AudioContext/createJavaScriptNode
 tags:
-- API
-- Audio
-- Method
-- Obsolete
-- Reference
-- Web
-- createJavaScriptNode
+  - API
+  - Audio
+  - Method
+  - Obsolete
+  - Reference
+  - Web
+  - createJavaScriptNode
 ---
-<p>{{APIRef("Web Audio API")}}{{obsolete_header}}</p>
+<p>{{APIRef("Web Audio API")}}{{deprecated_header}}</p>
 
 <div class="summary">
   <p>The <code>AudioContext.createJavaScriptNode()</code> method creates a
@@ -20,13 +20,13 @@ tags:
 
 <div class="note">
   <p><strong>Important</strong>: This method is obsolete, and has been renamed to
-    {{domxref("AudioContext.createScriptProcessor()")}}. See also
+    {{domxref("BaseAudioContext/createScriptProcessor", "AudioContext.createScriptProcessor()")}}. See also
     {{domxref("ScriptProcessorNode")}}.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var jsNode = <code><em>audioCtx</em>.createJavaScriptNode(<em>bufferSize</em>, <em>numInputChannels</em>, <em>numOutputChannels</em>);</code>
+<pre class="brush: js">var jsNode = audioCtx.createJavaScriptNode(bufferSize, numInputChannels, numOutputChannels);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>

@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css no-line-numbers notranslate">/* Keyword value */
+<pre class="brush: css no-line-numbers">/* Keyword value */
 cursor: pointer;
 cursor: auto;
 
@@ -40,13 +40,13 @@ cursor: initial;
 cursor: unset;
 </pre>
 
-<p>The <code>cursor</code> property is specified as zero or more <code><a href="#url">&lt;url&gt;</a></code> values, separated by commas, followed by a single mandatory <a href="#Keyword_values">keyword value</a>. Each <code>&lt;url&gt;</code> should point to an image file. The browser will try to load the first image specified, falling back to the next if it can't, and falling back to the keyword value if no images could be loaded (or if none were specified).</p>
+<p>The <code>cursor</code> property is specified as zero or more <code><a href="#url">&lt;url&gt;</a></code> values, separated by commas, followed by a single mandatory <a href="#keyword_values">keyword value</a>. Each <code>&lt;url&gt;</code> should point to an image file. The browser will try to load the first image specified, falling back to the next if it can't, and falling back to the keyword value if no images could be loaded (or if none were specified).</p>
 
 <p>Each <code>&lt;url&gt;</code> may be optionally followed by a pair of space-separated numbers, which represent <code><a href="#x_y">&lt;x&gt;&lt;y&gt;</a></code> coordinates. These will set the cursor's hotspot, relative to the top-left corner of the image.</p>
 
 <p>For example, this specifies two images using <code>&lt;url&gt;</code> values, providing <code>&lt;x&gt;&lt;y&gt;</code> coordinates for the second one, and falling back to the <code>progress</code> keyword value if neither image can be loaded:</p>
 
-<pre class="brush: css notranslate">cursor: url(one.svg), url(two.svg) 5 5, progress;</pre>
+<pre class="brush: css">cursor: url(one.svg), url(two.svg) 5 5, progress;</pre>
 
 <h3 id="Values">Values</h3>
 
@@ -77,7 +77,7 @@ cursor: unset;
    </tr>
    <tr style="cursor: default;">
     <td><code>default</code></td>
-    <td><img alt="default.gif" src="/@api/deki/files/3438/=default.gif" style="height: 26px; width: 26px;"></td>
+    <td><img src="/@api/deki/files/3438/=default.gif" style="height: 26px; width: 26px;"></td>
     <td>The platform-dependent default cursor. Typically an arrow.</td>
    </tr>
    <tr style="cursor: none;">
@@ -93,38 +93,38 @@ cursor: unset;
    </tr>
    <tr style="cursor: help;">
     <td><code>help</code></td>
-    <td><img alt="help.gif" src="/@api/deki/files/3442/=help.gif" style="height: 26px; width: 26px;"></td>
+    <td><img src="/@api/deki/files/3442/=help.gif" style="height: 26px; width: 26px;"></td>
     <td>Help information is available.</td>
    </tr>
    <tr style="cursor: pointer;">
     <td><code>pointer</code></td>
-    <td><img alt="pointer.gif" src="/@api/deki/files/3449/=pointer.gif" style="height: 26px; width: 26px;"></td>
+    <td><img src="/@api/deki/files/3449/=pointer.gif" style="height: 26px; width: 26px;"></td>
     <td>The cursor is a pointer that indicates a link. Typically an image of a pointing hand.</td>
    </tr>
    <tr style="cursor: progress;">
     <td><code>progress</code></td>
-    <td><img alt="progress.gif" src="/@api/deki/files/3450/=progress.gif" style="height: 26px; width: 26px;"></td>
+    <td><img src="/@api/deki/files/3450/=progress.gif" style="height: 26px; width: 26px;"></td>
     <td>The program is busy in the background, but the user can still interact with the interface (in contrast to <code>wait</code>).</td>
    </tr>
    <tr style="cursor: wait;">
     <td><code>wait</code></td>
-    <td><img alt="wait.gif" src="/@api/deki/files/3457/=wait.gif" style="height: 26px; width: 26px;"></td>
+    <td><img src="/@api/deki/files/3457/=wait.gif" style="height: 26px; width: 26px;"></td>
     <td>The program is busy, and the user can't interact with the interface (in contrast to <code>progress</code>). Sometimes an image of an hourglass or a watch.</td>
    </tr>
    <tr style="cursor: cell;">
     <th rowspan="4" scope="row" style="cursor: auto;">Selection</th>
     <td><code>cell</code></td>
-    <td><img alt="cell.gif" src="/@api/deki/files/3434/=cell.gif" style="height: 26px; width: 26px;"></td>
+    <td><img src="/@api/deki/files/3434/=cell.gif" style="height: 26px; width: 26px;"></td>
     <td>The table cell or set of cells can be selected.</td>
    </tr>
    <tr style="cursor: crosshair;">
     <td><code>crosshair</code></td>
-    <td><img alt="crosshair.gif" src="/@api/deki/files/3437/=crosshair.gif" style="height: 26px; width: 26px;"></td>
+    <td><img src="/@api/deki/files/3437/=crosshair.gif" style="height: 26px; width: 26px;"></td>
     <td>Cross cursor, often used to indicate selection in a bitmap.</td>
    </tr>
    <tr style="cursor: text;">
     <td><code>text</code></td>
-    <td><img alt="text.gif" class="default" src="/files/3809/text.gif" style="height: 26px; width: 26px;"></td>
+    <td><img class="default" src="/files/3809/text.gif" style="height: 26px; width: 26px;"></td>
     <td>The text can be selected. Typically the shape of an I-beam.</td>
    </tr>
    <tr style="cursor: vertical-text;">
@@ -135,17 +135,17 @@ cursor: unset;
    <tr style="cursor: alias;">
     <th rowspan="7" scope="row" style="cursor: auto;">Drag &amp; drop</th>
     <td><code>alias</code></td>
-    <td><img alt="alias.gif" src="/@api/deki/files/3432/=alias.gif" style="height: 26px; width: 26px;"></td>
+    <td><img src="/@api/deki/files/3432/=alias.gif" style="height: 26px; width: 26px;"></td>
     <td>An alias or shortcut is to be created.</td>
    </tr>
    <tr style="cursor: copy;">
     <td><code>copy</code></td>
-    <td><img alt="copy.gif" class="default" src="/@api/deki/files/3436/=copy.gif" style="height: 26px; width: 26px;"></td>
+    <td><img class="default" src="/@api/deki/files/3436/=copy.gif" style="height: 26px; width: 26px;"></td>
     <td>Something is to be copied.</td>
    </tr>
    <tr style="cursor: move;">
     <td><code>move</code></td>
-    <td><img alt="move.gif" src="/@api/deki/files/3443/=move.gif" style="height: 26px; width: 26px;"></td>
+    <td><img src="/@api/deki/files/3443/=move.gif" style="height: 26px; width: 26px;"></td>
     <td>Something is to be moved.</td>
    </tr>
    <tr style="cursor: no-drop;">
@@ -161,12 +161,12 @@ cursor: unset;
    </tr>
    <tr id="grab" style="cursor: grab;">
     <td><code>grab</code></td>
-    <td><img alt="grab.gif" class="default" src="/@api/deki/files/3440/=grab.gif"></td>
+    <td><img class="default" src="/@api/deki/files/3440/=grab.gif"></td>
     <td>Something can be grabbed (dragged to be moved).</td>
    </tr>
    <tr style="cursor: grabbing;">
     <td><code>grabbing</code></td>
-    <td><img alt="grabbing.gif" class="default" src="/@api/deki/files/3441/=grabbing.gif"></td>
+    <td><img class="default" src="/@api/deki/files/3441/=grabbing.gif"></td>
     <td>Something is being grabbed (dragged to be moved).</td>
    </tr>
    <tr style="cursor: all-scroll;">
@@ -266,13 +266,13 @@ cursor: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Setting_cursor_types">Setting cursor types</h3>
 
-<pre class="brush:css notranslate">.foo {
+<pre class="brush:css">.foo {
   cursor: crosshair;
 }
 

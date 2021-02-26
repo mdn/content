@@ -17,12 +17,12 @@ tags:
 <p>The <strong><code>dataTransfer</code></strong> read-only property of the
   {{domxref("InputEvent")}} interface returns a {{domxref("DataTransfer")}} object
   containing information about richtext or plaintext data being added to or removed from
-  editible content.</p>
+  editable content.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>dataTransfer</em> = <em>inputEvent</em>.dataTransfer</pre>
+  class="brush: js">var <em>dataTransfer</em> = <em>inputEvent</em>.dataTransfer</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -39,7 +39,7 @@ tags:
 
 <p>Try copying and pasting some of the content provided to see the effects.</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;&lt;span style="font-weight: bold; color: blue"&gt;Whoa, bold blue text!&lt;/span&gt;&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;&lt;span style="font-weight: bold; color: blue"&gt;Whoa, bold blue text!&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span style="font-style: italic; color: red"&gt;Exciting: italic red text!&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Boring normal text ;-(&lt;/p&gt;
 
@@ -49,7 +49,7 @@ tags:
 
 &lt;p class="result"&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: js notranslate">var editable = document.querySelector('p[contenteditable]');
+<pre class="brush: js">var editable = document.querySelector('p[contenteditable]');
 var result = document.querySelector('.result')
 var dataTransferObj;
 
@@ -78,7 +78,4 @@ editable.addEventListener('input', (e) =&gt; {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.InputEvent.dataTransfer")}}</p>
-</div>
+<p>{{Compat("api.InputEvent.dataTransfer")}}</p>

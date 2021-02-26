@@ -8,7 +8,7 @@ tags:
 ---
 <p>{{HTTPSidebar}}{{Draft}}</p>
 
-<p>The <strong><code>Sec-Fetch-User</code></strong> fetch metadata header indicates whether or not a navigation request was triggered by a user activation.</p>
+<p>The <strong><code>Sec-Fetch-User</code></strong> fetch metadata header is only sent for requests initiated by user activation, and its value will always be <code>?1</code>.</p>
 
 <table class="properties">
  <tbody>
@@ -29,20 +29,13 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html notranslate">Sec-Fetch-User: ?0
+<pre class="brush: html">
 Sec-Fetch-User: ?1
 </pre>
 
-<h2 id="Values">Values</h2>
+<h2 id="Value">Value</h2>
 
-<p>The value is a Boolean Structured Header.</p>
-
-<dl>
- <dt><code>?0</code></dt>
- <dd>The navigation request was triggered by a user activation.</dd>
- <dt><code>?1</code></dt>
- <dd>The navigation request was triggered by something other than a user activation.</dd>
-</dl>
+<p>The value will always be <code>?1</code>. When a request is triggered by something other than a user activation, the spec requires browsers to omit the header completely.</p>
 
 <h2 id="Examples">Examples</h2>
 

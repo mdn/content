@@ -15,12 +15,12 @@ tags:
 - float
 - img
 ---
-<p>{{APIRef("HTML DOM")}}{{obsolete_header}}</p>
+<p>{{APIRef("HTML DOM")}}{{deprecated_header}}</p>
 
 <p><span class="seoSummary">The <em>obsolete</em> <code><strong>align</strong></code>
     property of the {{domxref("HTMLImageElement")}} interface is a string which indicates
     how to position the image relative to its container.</span> You should instead use the
-  CSS propertiy {{cssxref("vertical-align")}}, which does in fact also work on images
+  CSS property {{cssxref("vertical-align")}}, which does in fact also work on images
   despite its name. You can also use the {{cssxref("float")}} property to float the image
   to the left or right margin.</p>
 
@@ -29,7 +29,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>htmlImageElement</em>.align = <em>alignMode</em>;
+<pre class="brush: js"><em>htmlImageElement</em>.align = <em>alignMode</em>;
 <em>alignMode</em> = <em>htmlImageElement</em>.align;
 </pre>
 
@@ -69,7 +69,7 @@ tags:
 
 <dl>
   <dt><code>left</code></dt>
-  <dd>Floats the image over to place the left edge flush against the curent margin. Any
+  <dd>Floats the image over to place the left edge flush against the current margin. Any
     text that follows will flow against the image's right edge.</dd>
   <dt><code>right</code></dt>
   <dd>Floats the image to place its right edge flush against the right margin. Subsequent

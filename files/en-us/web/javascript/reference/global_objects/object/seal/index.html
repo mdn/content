@@ -26,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Object.seal(<var>obj</var>)</pre>
+<pre class="brush: js">Object.seal(<var>obj</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -65,7 +65,7 @@ tags:
 
 <h3 id="Using_Object.seal">Using Object.seal</h3>
 
-<pre class="brush: js notranslate">var obj = {
+<pre class="brush: js">var obj = {
   prop: function() {},
   foo: 'bar'
 };
@@ -123,7 +123,7 @@ Object.defineProperty(obj, 'foo', {
   cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if
   it was a sealed ordinary object by returning it.</p>
 
-<pre class="brush: js notranslate">Object.seal(1);
+<pre class="brush: js">Object.seal(1);
 // TypeError: 1 is not an object (ES5 code)
 
 Object.seal(1);

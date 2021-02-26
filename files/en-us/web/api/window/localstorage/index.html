@@ -28,10 +28,10 @@ tags:
 <p>Data stored in either <code>localStorage</code> <strong>is specific to the protocol of
 		the page</strong>. In particular, data stored by a script on a site accessed with
 	HTTP (e.g., <a class="external external-icon" href="http://example.com"
-		rel="freelink noopener">http://example.com</a>) is put in a different
+		rel="noopener">http://example.com</a>) is put in a different
 	<code>localStorage</code> object from the same site accessed with HTTPS (e.g., <a
 		class="external link-https external-icon" href="https://example.com"
-		rel="freelink noopener">https://example.com</a>).</p>
+		rel="noopener">https://example.com</a>).</p>
 
 <p>The keys and the values are <em>always</em> in the UTF-16 {{domxref("DOMString")}}
 	format, which uses two bytes per character. As with objects, integer keys are
@@ -40,7 +40,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-	class="brush: js notranslate"><em>myStorage</em> = <em>window</em>.localStorage;</pre>
+	class="brush: js"><em>myStorage</em> = <em>window</em>.localStorage;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -64,19 +64,19 @@ tags:
 <p>The following snippet accesses the current domain's local {{DOMxRef("Storage")}} object
 	and adds a data item to it using {{DOMxRef("Storage.setItem()")}}.</p>
 
-<pre class="brush: js notranslate">localStorage.setItem('myCat', 'Tom');</pre>
+<pre class="brush: js">localStorage.setItem('myCat', 'Tom');</pre>
 
 <p>The syntax for reading the <code>localStorage</code> item is as follows:</p>
 
-<pre class="brush: js notranslate">const cat = localStorage.getItem('myCat');</pre>
+<pre class="brush: js">const cat = localStorage.getItem('myCat');</pre>
 
 <p>The syntax for removing the <code>localStorage</code> item is as follows:</p>
 
-<pre class="brush: js notranslate">localStorage.removeItem('myCat');</pre>
+<pre class="brush: js">localStorage.removeItem('myCat');</pre>
 
 <p>The syntax for removing all the <code>localStorage</code> items is as follows:</p>
 
-<pre class="brush: js notranslate">localStorage.clear();
+<pre class="brush: js">localStorage.clear();
 </pre>
 
 <div class="note">

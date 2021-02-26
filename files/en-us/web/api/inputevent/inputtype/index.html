@@ -15,13 +15,13 @@ tags:
 <div>{{APIRef("DOM Events")}}</div>
 
 <p>The <strong><code>inputType</code></strong> read-only property of the
-  {{domxref("InputEvent")}} interface returns the type of change made to editible content.
+  {{domxref("InputEvent")}} interface returns the type of change made to editable content.
   Possible changes include for example inserting, deleting, and formatting text.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>aString</em> = <em>inputEvent</em>.inputType;</pre>
+  class="brush: js">var <em>aString</em> = <em>inputEvent</em>.inputType;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -40,7 +40,7 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;p id="log"&gt;Input type: &lt;/p&gt;
+<pre class="brush: html">&lt;p id="log"&gt;Input type: &lt;/p&gt;
 &lt;div contenteditable="true" style="margin: 20px;padding: 20px;border:2px dashed red;"&gt;
   &lt;p&gt;Some sample text. Try inserting line breaks, or deleting text in different ways, or pasting different content in.&lt;/p&gt;
   &lt;hr&gt;
@@ -54,7 +54,7 @@ tags:
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">const log = document.getElementById('log');
+<pre class="brush: js">const log = document.getElementById('log');
 const editable = document.querySelector('div[contenteditable]');
 editable.addEventListener('input', logInputType);
 
@@ -94,7 +94,4 @@ function logInputType(event) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.InputEvent.inputType")}}</p>
-</div>
+<p>{{Compat("api.InputEvent.inputType")}}</p>

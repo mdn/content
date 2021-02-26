@@ -38,7 +38,7 @@ tags:
 
 <p>The following snippet shows how an <code>install</code> event handler can be used to populate a cache with a number of responses, which the service worker can then use to serve assets offline:</p>
 
-<pre class="brush: js notranslate">this.addEventListener('install', function(event) {
+<pre class="brush: js">this.addEventListener('install', function(event) {
   event.waitUntil(
    caches.open('v1').then(function(cache) {
       return cache.addAll([
@@ -59,7 +59,7 @@ tags:
 
 <p>You can also set up the event handler using the {{domxref("ServiceWorkerGlobalScope.oninstall")}} property:</p>
 
-<pre class="brush: js notranslate">globalScope.oninstall = function(event) {
+<pre class="brush: js">globalScope.oninstall = function(event) {
   ...
 };</pre>
 

@@ -14,7 +14,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>overflow</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> sets the desired behavior for an element's overflow — i.e. when an element's content is too big to fit in its <a href="/en-US/docs/CSS/block_formatting_context">block formatting context</a> — in both directions.</span></p>
+<p><span class="seoSummary">The <strong><code>overflow</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> sets the desired behavior for an element's overflow — i.e. when an element's content is too big to fit in its <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a> — in both directions.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/css/overflow.html")}}</div>
 
@@ -29,7 +29,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush:css no-line-numbers">/* Keyword values */
 overflow: visible;
 overflow: hidden;
 overflow: clip;
@@ -52,7 +52,7 @@ overflow: unset;
  <dd>Content is not clipped and may be rendered outside the padding box.</dd>
  <dt><code>hidden</code></dt>
  <dd>Content is clipped if necessary to fit the padding box. No scrollbars are provided, and no support for allowing the user to scroll (such as by dragging or using a scroll wheel) is allowed. The content <em>can</em> be scrolled programmatically (for example, by setting the value of a property such as {{domxref("HTMLElement.offsetLeft", "offsetLeft")}}), so the element is still a scroll container.</dd>
- <dt><code>clip</code> {{experimental_inline}}</dt>
+ <dt><code>clip</code></dt>
  <dd>Like for <code>hidden</code>, the content is clipped to the element's padding box. The difference between <code>clip</code> and <code>hidden</code> is that the <code>clip</code> keyword also forbids all scrolling, including programmatic scrolling. The box is not a scroll container, and does not start a new formatting context. If you wish to start a new formatting context, you can use {{cssxref("display", "display: flow-root", "#flow-root")}} to do so.</dd>
  <dt><code>scroll</code></dt>
  <dd>Content is clipped if necessary to fit the padding box. Browsers always display scrollbars whether or not any content is actually clipped, preventing scrollbars from appearing or disappearing as content changes. Printers may still print overflowing content.</dd>
@@ -65,11 +65,11 @@ overflow: unset;
 <h4 id="Mozilla_extensions">Mozilla extensions</h4>
 
 <dl>
- <dt><code>-moz-scrollbars-none</code> {{obsolete_inline}}<a href="#Deprecated">[1]</a></dt>
+ <dt><code>-moz-scrollbars-none</code> {{obsolete_inline}}<a href="#deprecated">[1]</a></dt>
  <dd>Use <code>overflow: hidden</code> instead.</dd>
- <dt><code>-moz-scrollbars-horizontal</code> {{deprecated_inline}}<a href="#Deprecated">[1]</a></dt>
+ <dt><code>-moz-scrollbars-horizontal</code> {{deprecated_inline}}<a href="#deprecated">[1]</a></dt>
  <dd>Use <code>{{Cssxref("overflow-x")}}: scroll</code> and <code>{{Cssxref("overflow-y")}}: hidden</code>, or <code>overflow: hidden scroll</code> instead.</dd>
- <dt><code>-moz-scrollbars-vertical</code> {{deprecated_inline}}<a href="#Deprecated">[1]</a></dt>
+ <dt><code>-moz-scrollbars-vertical</code> {{deprecated_inline}}<a href="#deprecated">[1]</a></dt>
  <dd>Use <code>{{Cssxref("overflow-x")}}: hidden</code> and <code>{{Cssxref("overflow-y")}}: scroll</code>, or <code>overflow: scroll hidden</code> instead.</dd>
  <dt><code>-moz-hidden-unscrollable</code> {{obsolete_inline}}</dt>
  <dd>Use <code>overflow: clip</code> instead.</dd>
@@ -81,7 +81,7 @@ overflow: unset;
 
 <p>Overflow options include clipping, showing scrollbars, or displaying the content flowing out of its container into the surrounding area.</p>
 
-<p>Specifying a value other than <code>visible</code> (the default) creates a new <a href="/en-US/docs/CSS/block_formatting_context">block formatting context</a>. This is necessary for technical reasons — if a float intersected with the scrolling element it would forcibly rewrap the content after each scroll step, leading to a slow scrolling experience.</p>
+<p>Specifying a value other than <code>visible</code> (the default) creates a new <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a>. This is necessary for technical reasons — if a float intersected with the scrolling element it would forcibly rewrap the content after each scroll step, leading to a slow scrolling experience.</p>
 
 <p>In order for <code>overflow</code> to have an effect, the block-level container must have either a set height (<code>height</code> or <code>max-height</code>) or <code>white-space</code> set to <code>nowrap</code>.</p>
 
@@ -95,13 +95,13 @@ overflow: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Setting_different_overflow_values_for_text">Setting different overflow values for text</h3>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   width: 12em;
   height: 6em;
   border: dotted;
@@ -112,19 +112,19 @@ overflow: unset;
 <p style="overflow: visible; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>visible</code> (default)<br>
  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
 
-<pre class="brush: css notranslate">p { overflow: hidden; /* no scrollbars are provided */ }
+<pre class="brush: css">p { overflow: hidden; /* no scrollbars are provided */ }
 </pre>
 
 <p style="overflow: hidden; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: hidden</code><br>
  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
 
-<pre class="brush: css notranslate">p { overflow: scroll; /* always show scrollbars */ }
+<pre class="brush: css">p { overflow: scroll; /* always show scrollbars */ }
 </pre>
 
 <p style="overflow: scroll; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: scroll</code><br>
  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
 
-<pre class="brush: css notranslate">p { overflow: auto; /* append scrollbars if necessary */ }
+<pre class="brush: css">p { overflow: auto; /* append scrollbars if necessary */ }
 </pre>
 
 <p style="overflow: auto; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: auto</code><br>

@@ -2,11 +2,11 @@
 title: BarcodeDetector.getSupportedFormats()
 slug: Web/API/BarcodeDetector/getSupportedFormats
 tags:
-- Barcode Detection API
-- BarcodeDetector
-- Method
-- barcode
-- shape detection
+  - Barcode Detection API
+  - BarcodeDetector
+  - Method
+  - barcode
+  - shape detection
 ---
 <div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}</div>
 
@@ -17,7 +17,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>supportedFormats</var> = BarcodeDetector.getSupportedFormats();</pre>
+  class="brush: js">var <var>supportedFormats</var> = BarcodeDetector.getSupportedFormats();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -26,7 +26,7 @@ tags:
 <h3 id="Return_value">Return value</h3>
 
 <p>An {{jsxref('Array')}} of <a
-    href="/en-US/docs/Web/API/Barcode_Detection_API#Supported_barcode_formats">supported
+    href="/en-US/docs/Web/API/Barcode_Detection_API#supported_barcode_formats">supported
     barcode format types</a>.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
@@ -38,7 +38,7 @@ tags:
 <p>The following example calls the <code>getSupportFormat()</code> static method and logs
   the results to the console.</p>
 
-<pre class="brush: js notranslate">// check supported types
+<pre class="brush: js">// check supported types
 BarcodeDetector.getSupportedFormats()
   .then(supportedFormats =&gt; {
     supportedFormats.forEach(format =&gt; console.log(format));

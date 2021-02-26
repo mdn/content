@@ -41,7 +41,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Specification</th>
-   <td><a class="external" href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing">HTML5 media</a></td>
+   <td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing">HTML5 media</a></td>
   </tr>
  </tbody>
 </table>
@@ -52,7 +52,7 @@ tags:
 
 <p>Using <code>addEventListener()</code>:</p>
 
-<pre class="brush: js notranslate">const video = document.querySelector('video');
+<pre class="brush: js">const video = document.querySelector('video');
 
 video.addEventListener('seeking', (event) =&gt; {
   console.log('Video is seeking a new position.');
@@ -60,7 +60,7 @@ video.addEventListener('seeking', (event) =&gt; {
 
 <p>Using the <code>onseeking</code> event handler property:</p>
 
-<pre class="brush: js notranslate">const video = document.querySelector('video');
+<pre class="brush: js">const video = document.querySelector('video');
 
 video.onseeking = (event) =&gt; {
   console.log('Video is seeking a new position.');

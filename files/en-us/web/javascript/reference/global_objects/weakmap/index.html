@@ -57,7 +57,7 @@ tags:
 
 <h3 id="Using_WeakMap">Using WeakMap</h3>
 
-<pre class="brush: js notranslate">const wm1 = new WeakMap(),
+<pre class="brush: js">const wm1 = new WeakMap(),
       wm2 = new WeakMap(),
       wm3 = new WeakMap();
 const o1 = {},
@@ -88,7 +88,7 @@ wm1.has(o1); // false
 
 <h3 id="Implementing_a_WeakMap-like_class_with_a_.clear_method">Implementing a WeakMap-like class with a .clear() method</h3>
 
-<pre class="brush: js notranslate">class ClearableWeakMap {
+<pre class="brush: js">class ClearableWeakMap {
   constructor(init) {
     this._wm = new WeakMap(init);
   }

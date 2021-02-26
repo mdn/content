@@ -41,7 +41,7 @@ tags:
   are each strings which, when concatenated with a slash (<code>/</code>) between them,
   comprise a MIME type. No whitespace is allowed in a MIME type:</p>
 
-<pre class="brush: html notranslate"><var>type</var>/<var>subtype</var></pre>
+<pre class="brush: html"><var>type</var>/<var>subtype</var></pre>
 
 <p>The <strong><var>type</var></strong> represents the general category into which the
   data type falls, such as <code>video</code> or <code>text</code>. The
@@ -57,7 +57,7 @@ tags:
 <p>An optional <strong>parameter</strong> can be added to provide additional details:</p>
 
 <pre
-  class="brush: html notranslate"><var>type</var>/<var>subtype</var>;<var>parameter</var>=<var>value</var></pre>
+  class="brush: html"><var>type</var>/<var>subtype</var>;<var>parameter</var>=<var>value</var></pre>
 
 <p>For example, for any MIME type whose main type is <code>text</code>, the optional
   <code>charset</code> parameter can be used to specify the character set used for the
@@ -359,7 +359,7 @@ tags:
   its own HTTP headers, {{HTTPHeader("Content-Disposition")}}, and
   {{HTTPHeader("Content-Type")}} for file uploading fields.</p>
 
-<pre class="brush: html notranslate">Content-Type: multipart/form-data; boundary=aBoundaryString
+<pre class="brush: html">Content-Type: multipart/form-data; boundary=aBoundaryString
 (other headers associated with the multipart document as a whole)
 
 --aBoundaryString

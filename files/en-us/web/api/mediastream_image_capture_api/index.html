@@ -20,7 +20,7 @@ tags:
 
 <p>First, get a reference to a device by calling {{domxref("MediaDevices.getUserMedia()")}}. The example below says give me whatever video device is available, though the <code>getUserMedia()</code> method allows more specific capabilities to be requested. This method returns a {{jsxref("Promise")}} that resolves with a {{domxref("MediaStream")}} object.</p>
 
-<pre class="brush: js notranslate">navigator.mediaDevices.getUserMedia({ video: true })
+<pre class="brush: js">navigator.mediaDevices.getUserMedia({ video: true })
   .then(mediaStream =&gt; {
     // Do something with the stream.
   })
@@ -28,11 +28,11 @@ tags:
 
 <p id="sect1">Next, isolate the visual part of the media stream. Do this by calling {{domxref("MediaStream.getVideoTracks()")}}. This returns an array of {{domxref("MediaStreamTrack")}} objects. The code below assumes that the first item in the <code>MediaStreamTrack</code> array is the one to use. You can use the properties of the <code>MediaStreamTrack</code> objects to select the one you need.</p>
 
-<pre class="brush: js notranslate">const track = mediaStream.getVideoTracks()[0];</pre>
+<pre class="brush: js">const track = mediaStream.getVideoTracks()[0];</pre>
 
 <p>At this point, you might want to configure the device capabilities before capturing an image. You can do this by calling {{domxref("MediaStreamTrack.applyConstraints","applyConstraints()")}} on the track object before doing anything else.</p>
 
-<pre class="brush: js notranslate">let zoom = document.querySelector('#zoom');
+<pre class="brush: js">let zoom = document.querySelector('#zoom');
 const capabilities = track.getCapabilities();
 // Check whether zoom is supported or not.
 if(!capabilities.zoom) {
@@ -43,7 +43,7 @@ track.applyConstraints({ advanced : [{ zoom: zoom.value }] });
 
 <p>Finally, pass the <code>MediaStreamTrack</code> object to the {{domxref("ImageCapture.ImageCapture()", "ImageCapture()")}} constructor. Though a <code>MediaStream</code> holds several types of tracks and provides multiple methods for retrieving them, the ImageCapture constructor will throw a {{domxref("DOMException")}} of type <code>NotSupportedError</code> if {{domxref("MediaStreamTrack.kind")}} is not <code>"video"</code>.</p>
 
-<pre class="brush: js notranslate">let imageCapture = new ImageCapture(track);
+<pre class="brush: js">let imageCapture = new ImageCapture(track);
 </pre>
 
 <h2 id="Interfaces">Interfaces</h2>

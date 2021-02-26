@@ -42,7 +42,7 @@ tags:
 
 <p>In the following image, the extension will "eat" the content of pages whose domain name ends in .org. This is the default behavior for this extension.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16901/userScriptExample.png" style="border: 1px solid black; display: block; height: 812px; margin: 0px auto; width: 304px;"></p>
+<p><img alt="" src="userscriptexample.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
 <p>Nothing will happen until you click the <strong>Register script</strong> button. The button implements the user script according to the settings on this dialog. That means that you can experiment with the behavior of the script without having to implement an extensions yourself.</p>
 
@@ -50,7 +50,7 @@ tags:
 
 <p>Before a userScript can be executed, it must be registered using the <code>userScripts.register()</code> method. Here is the code to register the example extension:</p>
 
-<pre class="notranslate brush: js">async function registerScript() {
+<pre class="brush: js">async function registerScript() {
   const params = {
     hosts: stringToArray(hostsInput.value),
     code: codeInput.value,
@@ -101,7 +101,7 @@ tags:
 
 <p>Once the script has been registered, navigate to a page whose domain name ends in .org, and you will see something like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16902/user_script_in_action.png" style="border: 1px solid black; display: block; height: 823px; margin: 0px auto; width: 1026px;"></p>
+<p><img alt="" src="user_script_in_action.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
 <h2 id="See_also">See also</h2>
 

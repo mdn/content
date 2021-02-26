@@ -18,7 +18,7 @@ tags:
 
 <p>The details of exactly what is discarded are browser-specific, but in general, discarding a tab enables the browser to free some of the memory occupied by that tab.</p>
 
-<p>The {{WebExtAPIRef("tabs.discard()")}} API enables an extension to discard one or more tabs. It's not possible to discard the currently active tab, or a tab whose document contains a <code><a href="/en-US/docs/Web/Events/beforeunload">beforeunload</a></code> listener that would display a prompt.</p>
+<p>The {{WebExtAPIRef("tabs.discard()")}} API enables an extension to discard one or more tabs. It's not possible to discard the currently active tab, or a tab whose document contains a <code><a href="/en-US/docs/Web/API/Window/beforeunload_event">beforeunload</a></code> listener that would display a prompt.</p>
 
 <p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
@@ -46,7 +46,7 @@ tags:
 
 <p>Discard a single tab:</p>
 
-<pre class="notranslate brush: js">function onDiscarded() {
+<pre class="brush: js">function onDiscarded() {
   console.log(`Discarded`);
 }
 
@@ -59,7 +59,7 @@ discarding.then(onDiscarded, onError);</pre>
 
 <p>Discard multiple tabs:</p>
 
-<pre class="notranslate brush: js">function onDiscarded() {
+<pre class="brush: js">function onDiscarded() {
   console.log(`Discarded`);
 }
 

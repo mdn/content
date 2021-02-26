@@ -33,7 +33,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em><var>value</var></em> = window.devicePixelRatio;
+<pre class="brush: js"><em><var>value</var></em> = window.devicePixelRatio;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -90,10 +90,7 @@ var y = size / 2;
 var textString = "I love MDN";
 ctx.fillText(textString, x, y);</pre>
 
-<p><a href="https://mdn.mozillademos.org/files/15023/devicePixelRation%20Diff..png"><img
-      alt="This image describe the impact of different value on retina display. "
-      src="https://mdn.mozillademos.org/files/15023/devicePixelRation%20Diff..png"
-      style="height: 57px; width: 600px;"></a></p>
+<p><a href="devicepixelration_diff.jpg"><img alt="Side-by-side comparison of the effect of different devicePixelRatio values on an image shown in a retina display." src="devicepixelration_diff.jpg" style="height: auto; width: 600px;"></a></p>
 
 <h3 id="Monitoring_screen_resolution_or_zoom_level_changes">Monitoring screen resolution
   or zoom level changes</h3>
@@ -220,9 +217,8 @@ matchMedia(mqString).addListener(updatePixelRatio);</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/CSS/Media_Queries">Media queries</a></li>
-  <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Using media
-      queries</a></li>
-  <li><a href="/en-US/docs/Web/CSS/@media/resolution">CSS <code>resolution</code> media
-      query</a></li>
+ <li><a href="/en-US/docs/Web/CSS/Media_Queries">Media queries</a></li>
+ <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Using media queries</a></li>
+ <li><a href="/en-US/docs/Web/CSS/@media/resolution">CSS <code>resolution</code> media query</a></li>
+ <li>The {{cssxref("image-resolution")}} property</li>
 </ul>

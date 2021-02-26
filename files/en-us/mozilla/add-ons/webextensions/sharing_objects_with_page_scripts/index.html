@@ -27,7 +27,7 @@ tags:
 </div>
 </div>
 
-<p>As the <a href="/en-US/Add-ons/WebExtensions/Content_scripts#DOM_access">content scripts guide notes</a>, content scripts don't see changes made to the DOM by scripts loaded by web pages. This means that, for example, if a web page loads a library like jQuery, content scripts won't be able to use it, and have to load their own copy. Conversely, scripts loaded by web pages can't see changes made by content scripts.</p>
+<p>As the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#dom_access">content scripts guide notes</a>, content scripts don't see changes made to the DOM by scripts loaded by web pages. This means that, for example, if a web page loads a library like jQuery, content scripts won't be able to use it, and have to load their own copy. Conversely, scripts loaded by web pages can't see changes made by content scripts.</p>
 
 <p>However, Firefox provides some APIs that enable content scripts to:</p>
 
@@ -64,19 +64,19 @@ tags:
 
 <p>The script adds an expando property to the global <code>window</code>:</p>
 
-<pre class="notranslate brush: js">// main.js
+<pre class="brush: js">// main.js
 
 var foo = "I'm defined in a page script!";</pre>
 
 <p>Xray vision means that if a content script tries to access <code>foo</code>, it will be undefined:</p>
 
-<pre class="notranslate brush: js">// content-script.js
+<pre class="brush: js">// content-script.js
 
 console.log(window.foo); // undefined</pre>
 
 <p>In Firefox, content scripts can use <code>window.wrappedJSObject</code> to see the expando property:</p>
 
-<pre class="notranslate brush: js">// content-script.js
+<pre class="brush: js">// content-script.js
 
 console.log(window.wrappedJSObject.foo); // "I'm defined in a page script!"</pre>
 
@@ -84,7 +84,7 @@ console.log(window.wrappedJSObject.foo); // "I'm defined in a page script!"</pre
 
 <p>Also note that unwrapping is transitive: when you use <code>wrappedJSObject</code>, any properties of the unwrapped object are themselves unwrapped (and therefore unreliable). So it's good practice, once you've got the object you need, to rewrap it, which you can do like this:</p>
 
-<pre class="notranslate brush: js">XPCNativeWrapper(window.wrappedJSObject.foo);</pre>
+<pre class="brush: js">XPCNativeWrapper(window.wrappedJSObject.foo);</pre>
 
 <p>See the document on <a href="/en-US/docs/Mozilla/Tech/Xray_vision">Xray vision</a> for much more detail on this.</p>
 
@@ -93,8 +93,8 @@ console.log(window.wrappedJSObject.foo); // "I'm defined in a page script!"</pre
 <p>Firefox also provides APIs enabling content scripts to make objects available to page scripts. There are several approaches here:</p>
 
 <ul>
- <li><code><a href="#exportFunction">exportFunction()</a></code>: export a function to page scripts.</li>
- <li><code><a href="#cloneInto">cloneInto()</a></code>: export an object to page scripts.</li>
+ <li><code><a href="#exportfunction">exportFunction()</a></code>: export a function to page scripts.</li>
+ <li><code><a href="#cloneinto">cloneInto()</a></code>: export an object to page scripts.</li>
  <li>constructors from the page context</li>
 </ul>
 
@@ -104,7 +104,7 @@ console.log(window.wrappedJSObject.foo); // "I'm defined in a page script!"</pre
 
 <p>For example, let's consider an extension which has a background script like this:</p>
 
-<pre class="notranslate brush: js">/*
+<pre class="brush: js">/*
 Execute content script in the active tab.
 */
 function loadContentScript() {
@@ -135,12 +135,12 @@ browser.runtime.onMessage.addListener((message) =&gt; {
 
 <ul>
  <li>execute a content script in the current tab, when the user clicks a browser action</li>
- <li>listen for messages from the content script, and display a <a href="/en-US/Add-ons/WebExtensions/API/notifications">notification</a> when the message arrives.</li>
+ <li>listen for messages from the content script, and display a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications">notification</a> when the message arrives.</li>
 </ul>
 
 <p>The content script looks like this:</p>
 
-<pre class="notranslate brush: js">/*
+<pre class="brush: js">/*
 Define a function in the content script's scope, then export it
 into the page script's scope.
 */
@@ -152,7 +152,7 @@ exportFunction(notify, window, {defineAs:'notify'});</pre>
 
 <p>This defines a function <code>notify()</code>, which just sends its argument to the background script. It then exports the function to the page script's scope. Now the page script can call this function:</p>
 
-<pre class="notranslate brush: js">window.notify("Message from the page script!");</pre>
+<pre class="brush: js">window.notify("Message from the page script!");</pre>
 
 <p>For the full story, see <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.exportFunction">Components.utils.exportFunction</a></code>.</p>
 
@@ -162,7 +162,7 @@ exportFunction(notify, window, {defineAs:'notify'});</pre>
 
 <p>For example, here's a content script that defines an object that contains a function, then clones it into the page script's scope:</p>
 
-<pre class="notranslate brush: js">/*
+<pre class="brush: js">/*
 Create an object that contains functions in
 the content script's scope, then clone it
 into the page script's scope.
@@ -186,17 +186,17 @@ window.wrappedJSObject.messenger = cloneInto(
 
 <p>Now page scripts will see a new property on the window, <code>messenger</code>, which has a function <code>notify()</code>:</p>
 
-<pre class="notranslate brush: js">window.messenger.notify("Message from the page script!");</pre>
+<pre class="brush: js">window.messenger.notify("Message from the page script!");</pre>
 
 <p>For the full story, see <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.cloneInto">Components.utils.cloneInto</a></code>.</p>
 
 <h3 id="Constructors_from_the_page_context">Constructors from the page context</h3>
 
-<p>On the xrayed window object pristine constructors for some built-in javascript objects such as <code>Object</code>, <code>Function</code> or <code>Proxy</code> and various DOM classes are available. <code>XMLHttpRequest</code> does not behave in this way, see the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#XHR_and_Fetch">XHR and fetch</a> section for details. They will create instances belonging to the page global's object hierarchy and then return an xray wrapper.</p>
+<p>On the xrayed window object pristine constructors for some built-in javascript objects such as <code>Object</code>, <code>Function</code> or <code>Proxy</code> and various DOM classes are available. <code>XMLHttpRequest</code> does not behave in this way, see the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#xhr_and_fetch">XHR and fetch</a> section for details. They will create instances belonging to the page global's object hierarchy and then return an xray wrapper.</p>
 
 <p>Since objects created this way already belong to the page and not the content script passing them back to the page will not require additional cloning or exporting.</p>
 
-<pre class="notranslate brush: js">/* javascript built-ins */
+<pre class="brush: js">/* javascript built-ins */
 
 const objA = new Object();
 const objB = new window.Object();
@@ -244,7 +244,7 @@ Reflect.defineProperty(ev.wrappedJSObject,        // privileged reflection can o
   'propC', {
      get: exportFunction(function() {             // getters must be exported like regular functions
        return 'propC';
-     }
+     })
   }
 );
 

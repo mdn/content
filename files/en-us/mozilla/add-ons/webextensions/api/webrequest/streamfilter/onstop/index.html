@@ -12,9 +12,7 @@ tags:
 ---
 <div>{{AddonSidebar()}}</div>
 
-<div>
-<p>An event handler that will be called when the stream has no more data to deliver. In the event handler you can still call filter functions such as {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}}, {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}, or {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}}.</p>
-</div>
+<p><span class="summary">An event handler that will be called when the stream has no more data to deliver.</span> In the event handler you can still call filter functions such as {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}}, {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}, or {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}}.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
@@ -26,7 +24,7 @@ tags:
 
 <p>This example will append "extra stuff" to the response:</p>
 
-<pre class="notranslate brush: js">function listener(details) {
+<pre class="brush: js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let encoder = new TextEncoder();
 
@@ -49,7 +47,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>Here's another version of the example above:</p>
 
-<pre class="notranslate brush: js">function listener(details) {
+<pre class="brush: js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let encoder = new TextEncoder();
 

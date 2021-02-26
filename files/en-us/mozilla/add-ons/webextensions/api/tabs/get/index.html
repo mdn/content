@@ -40,7 +40,7 @@ tags:
 
 <p>Get information about a tab when it is activated:</p>
 
-<pre class="notranslate brush: js">async function logListener(info) {
+<pre class="brush: js">async function logListener(info) {
   try {
     let tabInfo = await browser.tabs.get(info.tabId);
     console.log(tabInfo);

@@ -31,7 +31,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">navigator.mediaSession.setPositionState(<em>stateDict</em>);
+<pre class="brush: js">navigator.mediaSession.setPositionState(<em>stateDict</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -71,7 +71,7 @@ tags:
 <p>Below is a function which updates the position state of the current
   {{domxref('MediaSession')}} track.</p>
 
-<pre class="brush: js notranslate">function updatePositionState() {
+<pre class="brush: js">function updatePositionState() {
   navigator.mediaSession.setPositionState({
     duration: audioEl.duration,
     playbackRate: audioEl.playbackRate,
@@ -83,7 +83,7 @@ tags:
 <p>We can use this function when updating {{domxref('MediaMetadata', 'media session
   metadata')}} and within callbacks for actions, such as below.</p>
 
-<pre class="brush: js notranslate">navigator.mediaSession.setActionHandler('seekbackward', details =&gt; {
+<pre class="brush: js">navigator.mediaSession.setActionHandler('seekbackward', details =&gt; {
 
   // our time to skip
   const skipTime = details.seekOffset || 10;

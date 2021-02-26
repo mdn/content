@@ -49,7 +49,7 @@ tags:
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: Since May 2019, themes need to be signed to be installed ({{bug(1545109)}}).  See <a href="/en-US/docs/Mozilla/Add-ons/Distribution">Signing and distributing your add-on</a> for more details.</p>
+<p><strong>Note</strong>: Since May 2019, themes need to be signed to be installed ({{bug(1545109)}}).  See <a href="https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#distributing-your-addon">Signing and distributing your add-on</a> for more details.</p>
 </div>
 
 <div class="note">
@@ -87,7 +87,7 @@ tags:
    <td>
     <p>Optional as of Firefox 60. Mandatory before Firefox 60.</p>
 
-    <p>A JSON object whose properties represent the images to display in various parts of the browser. See <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/theme#images">images</a></code> for details on the properties that this object can contain.</p>
+    <p>A JSON object whose properties represent the images to display in various parts of the browser. See <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#images">images</a></code> for details on the properties that this object can contain.</p>
    </td>
   </tr>
   <tr>
@@ -96,7 +96,7 @@ tags:
    <td>
     <p>Mandatory.</p>
 
-    <p>A JSON object whose properties represent the colors of various parts of the browser. See <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/theme#colors">colors</a></code> for details on the properties that this object can contain.</p>
+    <p>A JSON object whose properties represent the colors of various parts of the browser. See <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#colors">colors</a></code> for details on the properties that this object can contain.</p>
    </td>
   </tr>
   <tr>
@@ -105,7 +105,7 @@ tags:
    <td>
     <p>Optional</p>
 
-    <p>This object has two properties that affect how the <code>"additional_backgrounds"</code> images are displayed. See <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/theme#properties">properties</a></code> for details on the properties that this object can contain.</p>
+    <p>This object has two properties that affect how the <code>"additional_backgrounds"</code> images are displayed. See <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#properties">properties</a></code> for details on the properties that this object can contain.</p>
 
     <ul>
      <li><code>"additional_backgrounds_alignment":</code> an array of enumeration values defining the alignment of the corresponding <code>"additional_backgrounds":</code> array item.<br>
@@ -190,7 +190,7 @@ tags:
  <tbody>
   <tr>
    <td style="background-color: white;">
-    <p><img alt="Overview of the color properties and how they apply to Firefox UI components" src="https://mdn.mozillademos.org/files/16855/Themes_components_annotations.png" style="height: 1065px; width: 1521px;"></p>
+    <p><img alt="Overview of the color properties and how they apply to Firefox UI components" src="themes_components_annotations.png"></p>
    </td>
   </tr>
  </tbody>
@@ -203,13 +203,13 @@ tags:
 <p>All these properties can be specified as either a string containing any valid <a href="/en-US/docs/Web/CSS/color_value">CSS color string</a> (including hexadecimal), or an RGB array, such as <code>"tab_background_text": [ 107 , 99 , 23 ]</code>.</p>
 
 <div class="notecard note">
-<p><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/theme#Chrome_compatibility">In Chrome, colors may only be specified as RGB arrays</a>.</p>
+<p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#chrome_compatibility">In Chrome, colors may only be specified as RGB arrays</a>.</p>
 
 <p>In Firefox for Android colors can be specified using:</p>
 
 <ul>
  <li>full hexadecimal notation, that is #RRGGBB only. <em>alpha</em> and shortened syntax, as in #RGB[A], are not supported.</li>
- <li><a href="/en-US/docs/Web/CSS/color_value#Syntax_2">Functional notation</a> (RGB arrays) for themes targeting Firefox 68.2 or later.</li>
+ <li><a href="/en-US/docs/Web/CSS/color_value#syntax_2">Functional notation</a> (RGB arrays) for themes targeting Firefox 68.2 or later.</li>
 </ul>
 
 <p>Colors for Firefox for Android themes cannot be specified using color names.</p>
@@ -245,7 +245,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15871/theme-accentcolor.png" style="height: 302px; width: 738px;"></p>
+    <p><img alt="" src="theme-accentcolor.png"></p>
    </td>
   </tr>
   <tr>
@@ -273,7 +273,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="Example use of the bookmark_text color property" src="https://mdn.mozillademos.org/files/16668/theme-bookmark_text.png"></p>
+    <p><img alt="Example use of the bookmark_text color property" src="theme-bookmark_text.png"></p>
    </td>
   </tr>
   <tr>
@@ -293,7 +293,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15872/theme-button_background_active.png" style="height: 302px; width: 738px;"></p>
+    <p><img alt="" src="theme-button_background_active.png"></p>
    </td>
   </tr>
   <tr>
@@ -313,7 +313,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15873/theme-button_background_hover.png" style="height: 302px; width: 738px;"></p>
+    <p><img alt="" src="theme-button_background_hover.png"></p>
    </td>
   </tr>
   <tr>
@@ -337,7 +337,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15874/theme-icons.png" style="height: 302px; width: 738px;"></p>
+    <p><img alt="" src="theme-icons.png"></p>
    </td>
   </tr>
   <tr>
@@ -361,7 +361,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15875/theme-icons_attention.png" style="height: 324px; width: 738px;"></p>
+    <p><img alt="" src="theme-icons_attention.png"></p>
    </td>
   </tr>
   <tr>
@@ -380,7 +380,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15871/theme-accentcolor.png" style="height: 302px; width: 738px;"></p>
+    <p><img alt="" src="theme-accentcolor.png"></p>
    </td>
   </tr>
   <tr>
@@ -400,7 +400,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="Example use of the frame_inactive color property" src="https://mdn.mozillademos.org/files/16669/theme-frame_inactive.png" style="height: 193px; width: 752px;"></p>
+    <p><img alt="Example use of the frame_inactive color property" src="theme-frame_inactive.png"></p>
    </td>
   </tr>
   <tr>
@@ -419,7 +419,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/16175/ntp_colors.png" style="display: block; height: 190px; margin: 0 auto;"></p>
+    <p><img alt="" src="ntp_colors.png" style="display: block; margin: 0 auto;"></p>
    </td>
   </tr>
   <tr>
@@ -442,7 +442,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/16175/ntp_colors.png" style="display: block; height: 190px; margin: 0 auto;"></p>
+    <p><img alt="" src="ntp_colors.png" style="display: block; margin: 0 auto;"></p>
    </td>
   </tr>
   <tr>
@@ -462,7 +462,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15876/theme-popup.png" style="height: 324px; width: 738px;"></p>
+    <p><img alt="" src="theme-popup.png"></p>
    </td>
   </tr>
   <tr>
@@ -484,7 +484,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15877/theme-popup_border.png" style="height: 324px; width: 738px;"></p>
+    <p><img alt="" src="theme-popup_border.png"></p>
    </td>
   </tr>
   <tr>
@@ -509,7 +509,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15878/theme-popup_highlight.png" style="height: 490px; width: 738px;"></p>
+    <p><img alt="" src="theme-popup_highlight.png"></p>
    </td>
   </tr>
   <tr>
@@ -534,7 +534,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15879/theme-popup_highlight_text.png" style="height: 490px; width: 738px;"></p>
+    <p><img alt="" src="theme-popup_highlight_text.png"></p>
    </td>
   </tr>
   <tr>
@@ -559,7 +559,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15880/popup_text.png" style="height: 490px; width: 738px;"></p>
+    <p><img alt="" src="popup_text.png"></p>
    </td>
   </tr>
   <tr>
@@ -580,7 +580,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/16176/sidebar_colors.png" style="display: block; margin: 0 auto; width: 250px;"></p>
+    <p><img alt="" src="sidebar_colors.png" style="display: block; margin: 0 auto;"></p>
    </td>
   </tr>
   <tr>
@@ -598,7 +598,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/16177/Screen_Shot_2018-09-16_at_6.13.31_PM.png" style="display: block; height: 286px; margin: 0px auto; width: 300px;"></p>
+    <p><img alt="" src="screen_shot_2018-09-16_at_6.13.31_pm.png" style="display: block; margin: 0px auto;"></p>
    </td>
   </tr>
   <tr>
@@ -617,7 +617,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/16223/Screen_Shot_2018-10-04_at_11.15.46_AM.png" style="display: block; height: 357px; margin: 0px auto; width: 269px;"></p>
+    <p><img alt="" src="screen_shot_2018-10-04_at_11.15.46_am.png" style="display: block; margin: 0px auto;"></p>
    </td>
   </tr>
   <tr>
@@ -640,7 +640,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/16224/Screen_Shot_2018-10-04_at_11.22.41_AM.png" style="display: block; height: 363px; margin: auto; width: 262px;"></p>
+    <p><img alt="" src="screen_shot_2018-10-04_at_11.22.41_am.png" style="display: block; margin: auto;"></p>
    </td>
   </tr>
   <tr>
@@ -665,7 +665,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/16176/sidebar_colors.png" style="display: block; margin: 0 auto; width: 250px;"></p>
+    <p><img alt="" src="sidebar_colors.png" style="display: block; margin: 0 auto;"></p>
    </td>
   </tr>
   <tr>
@@ -685,7 +685,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="A closeup of browser tabs to highlight the separator." src="https://mdn.mozillademos.org/files/16048/theme-tab-background-separator.png" style="height: 356px; width: 738px;"></p>
+    <p><img alt="A closeup of browser tabs to highlight the separator." src="theme-tab-background-separator.png"></p>
    </td>
   </tr>
   <tr>
@@ -709,7 +709,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15885/theme-textcolor.png" style="height: 302px; width: 738px;"></p>
+    <p><img alt="" src="theme-textcolor.png"></p>
    </td>
   </tr>
   <tr>
@@ -729,7 +729,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15881/theme-tab_line.png" style="height: 302px; width: 738px;"></p>
+    <p><img alt="" src="theme-tab_line.png"></p>
    </td>
   </tr>
   <tr>
@@ -749,7 +749,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15882/theme-tab_loading.gif" style="height: 186px; width: 618px;"></p>
+    <p><img alt="" src="theme-tab_loading.gif"></p>
    </td>
   </tr>
   <tr>
@@ -772,7 +772,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15883/theme-tab_selected.png" style="height: 302px; width: 738px;"></p>
+    <p><img alt="" src="theme-tab_selected.png"></p>
    </td>
   </tr>
   <tr>
@@ -802,7 +802,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15884/theme-tab_text.png" style="height: 302px; width: 738px;"></p>
+    <p><img alt="" src="theme-tab_text.png"></p>
    </td>
   </tr>
   <tr>
@@ -826,7 +826,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15885/theme-textcolor.png" style="height: 302px; width: 738px;"></p>
+    <p><img alt="" src="theme-textcolor.png"></p>
    </td>
   </tr>
   <tr>
@@ -848,7 +848,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15966/toolbar.png" style="height: 335px; width: 738px;"></p>
+    <p><img alt="" src="toolbar.png"></p>
    </td>
   </tr>
   <tr>
@@ -868,7 +868,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15887/theme-toolbar_bottom_separator.png" style="height: 302px; width: 738px;"></p>
+    <p><img alt="" src="theme-toolbar_bottom_separator.png"></p>
    </td>
   </tr>
   <tr>
@@ -890,7 +890,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15967/toolbar-field.png" style="height: 335px; width: 738px;"></p>
+    <p><img alt="" src="toolbar-field.png"></p>
    </td>
   </tr>
   <tr>
@@ -915,7 +915,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15968/toolbar-field-border.png" style="height: 335px; width: 738px;"></p>
+    <p><img alt="" src="toolbar-field-border.png"></p>
    </td>
   </tr>
   <tr>
@@ -938,7 +938,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15890/theme-toolbar_field_border_focus.png" style="height: 302px; width: 738px;"></p>
+    <p><img alt="" src="theme-toolbar_field_border_focus.png"></p>
    </td>
   </tr>
   <tr>
@@ -961,7 +961,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15891/theme-toolbar_field_focus.png" style="height: 302px; width: 738px;"></p>
+    <p><img alt="" src="theme-toolbar_field_focus.png"></p>
    </td>
   </tr>
   <tr>
@@ -979,7 +979,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="Example showing customized text and highlight colors in the URL bar" src="https://mdn.mozillademos.org/files/16632/toolbar_field_highlight.png" style="height: 289px; width: 738px;"></p>
+    <p><img alt="Example showing customized text and highlight colors in the URL bar" src="toolbar_field_highlight.png"></p>
 
     <p>Here, the <code>toolbar_field_highlight</code> field specifies that the highlight color is a light green, while the text is set to a dark-to-medium green using <code>toolbar_field_highlight_text</code>.</p>
    </td>
@@ -1006,7 +1006,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="Example showing customized text and highlight colors in the URL bar" src="https://mdn.mozillademos.org/files/16632/toolbar_field_highlight.png" style="height: 289px; width: 738px;"></p>
+    <p><img alt="Example showing customized text and highlight colors in the URL bar" src="toolbar_field_highlight.png"></p>
 
     <p>Here, the <code>toolbar_field_highlight_text</code> field is used to set the text color to a dark medium-dark green, while the highlight color is  a light green.</p>
    </td>
@@ -1029,7 +1029,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15895/theme-toolbar_field_separator.png" style="height: 302px; width: 738px;"></p>
+    <p><img alt="" src="theme-toolbar_field_separator.png"></p>
 
     <p>In this screenshot, <code>"toolbar_vertical_separator"</code> is the white vertical line in the URL bar dividing the Reader Mode icon from the other icons.</p>
    </td>
@@ -1057,7 +1057,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15969/toolbar-field-text.png" style="height: 335px; width: 738px;"></p>
+    <p><img alt="" src="toolbar-field-text.png"></p>
    </td>
   </tr>
   <tr>
@@ -1084,7 +1084,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15893/theme-toolbar_field_text_focus.png" style="height: 302px; width: 738px;"></p>
+    <p><img alt="" src="theme-toolbar_field_text_focus.png"></p>
    </td>
   </tr>
   <tr>
@@ -1109,7 +1109,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15970/toolbar-text.png" style="height: 335px; width: 738px;"></p>
+    <p><img alt="" src="toolbar-text.png"></p>
    </td>
   </tr>
   <tr>
@@ -1130,7 +1130,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15897/theme-toolbar_top_separator.png" style="height: 302px; width: 738px;"></p>
+    <p><img alt="" src="theme-toolbar_top_separator.png"></p>
    </td>
   </tr>
   <tr>
@@ -1151,7 +1151,7 @@ tags:
 }</pre>
     </details>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/15898/theme-toolbar_vertical_separator.png" style="height: 302px; width: 738px;"></p>
+    <p><img alt="" src="theme-toolbar_vertical_separator.png"></p>
    </td>
   </tr>
  </tbody>
@@ -1325,7 +1325,7 @@ tags:
 
 <p>It will give you a browser that looks like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15789/theme.png" style="display: block; height: 652px; margin-left: auto; margin-right: auto; width: 1446px;"></p>
+<p><img alt="" src="theme.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>In this screenshot, <code>"toolbar_vertical_separator"</code> is the white vertical line in the URL bar dividing the Reader Mode icon from the other icons.</p>
 

@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">let <var>newArray</var> = <var>arr</var>.filter(<var>callback</var>(<var>currentValue</var>[, <var>index</var>[<var>, array</var>]]) {
+<pre class="brush: js">let <var>newArray</var> = <var>arr</var>.filter(<var>callback</var>(<var>currentValue</var>[, <var>index</var>[<var>, array</var>]]) {
   // return element for <var>newArray,</var> if true
 }[, <var>thisArg</var>]);
 </pre>
@@ -75,7 +75,7 @@ tags:
 
 <p>You can work around this by inserting the following code at the beginning of your scripts, allowing use of <code>filter()</code> in ECMA-262 implementations which do not natively support it. This algorithm is exactly equivalent to the one specified in ECMA-262, 5th edition, assuming that <code>fn.call</code> evaluates to the original value of {{jsxref("Function.prototype.bind()")}}, and that {{jsxref("Array.prototype.push()")}} has its original value.</p>
 
-<pre class="brush: js notranslate">if (!Array.prototype.filter){
+<pre class="brush: js">if (!Array.prototype.filter){
   Array.prototype.filter = function(func, thisArg) {
     'use strict';
     if ( ! ((typeof func === 'Function' || typeof func === 'function') &amp;&amp; this) )
@@ -120,7 +120,7 @@ tags:
 
 <p>The following example uses <code>filter()</code> to create a filtered array that has all elements with values less than <code>10</code> removed.</p>
 
-<pre class="brush: js notranslate">function isBigEnough(value) {
+<pre class="brush: js">function isBigEnough(value) {
   return value &gt;= 10
 }
 
@@ -132,7 +132,7 @@ let filtered = [12, 5, 8, 130, 44].filter(isBigEnough)
 
 <p>The following example returns all prime numbers in the array:</p>
 
-<pre class="brush: js notranslate">const array = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+<pre class="brush: js">const array = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
 function isPrime(num) {
   for (let i = 2; num &gt; i; i++) {
@@ -149,7 +149,7 @@ console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13]</pre>
 
 <p>The following example uses <code>filter()</code> to create a filtered json of all elements with non-zero, numeric <code>id</code>.</p>
 
-<pre class="brush: js notranslate">let arr = [
+<pre class="brush: js">let arr = [
   { id: 15 },
   { id: -1 },
   { id: 0 },
@@ -185,7 +185,7 @@ console.log('Number of Invalid Entries = ', invalidEntries)
 
 <p>Following example uses <code>filter()</code> to filter array content based on search criteria.</p>
 
-<pre class="brush: js notranslate">let fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
+<pre class="brush: js">let fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
 
 /**
  * Filter array items based on search criteria (query)
@@ -201,7 +201,7 @@ console.log(filterItems(fruits, 'an'))  // ['banana', 'mango', 'orange']</pre>
 
 <h4 id="ES2015_Implementation">ES2015 Implementation</h4>
 
-<pre class="brush: js notranslate">const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
+<pre class="brush: js">const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
 
 /**
  * Filter array items based on search criteria (query)
@@ -219,7 +219,7 @@ console.log(filterItems(fruits, 'an'))  // ['banana', 'mango', 'orange']
 
 <p>The following examples tests the behavior of the <code>filter</code> method when the array is modified.</p>
 
-<pre class="brush: js notranslate">// Modifying each words
+<pre class="brush: js">// Modifying each words
 let words = ['spray', 'limit', 'exuberant', 'destruction','elite', 'present']
 
 const modifiedWords = words.filter( (word, index, arr) =&gt; {
@@ -270,10 +270,7 @@ console.log(deleteWords)
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("javascript.builtins.Array.filter")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

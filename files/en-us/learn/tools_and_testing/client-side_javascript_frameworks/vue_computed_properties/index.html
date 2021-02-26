@@ -38,7 +38,7 @@ tags:
 
 <p>The aim here is to add a summary count of our to-do list. This can be useful for users, while also serving to label the list for assistive technology. If we have 2 of 5 items completed in our to-do list, our summary could read "2 items completed out of 5".  While it might be tempting to do something like this:</p>
 
-<pre class="brush: js notranslate">&lt;h2&gt;\{{ToDoItems.filter(item =&gt; item.done).length}} out of \{{ToDoItems.length}} items completed&lt;/h2&gt;</pre>
+<pre class="brush: js">&lt;h2&gt;\{{ToDoItems.filter(item =&gt; item.done).length}} out of \{{ToDoItems.length}} items completed&lt;/h2&gt;</pre>
 
 <p>It would be recalculated on every render. For a small app like this, that probably doesn't matter too much. For bigger apps, or when the expression is more complicated, that could cause a serious performance problem.</p>
 
@@ -50,7 +50,7 @@ tags:
 
 <p>Add the following code to your <code>App</code> component object, below the <code>methods</code> property. The list summary method will get the number of finished <code>ToDoItems</code>, and return a string reporting this.</p>
 
-<pre class="brush: js notranslate">computed: {
+<pre class="brush: js">computed: {
   listSummary() {
     const numberFinishedItems = this.ToDoItems.filter(item =&gt;item.done).length
     return `${numberFinishedItems} out of ${this.ToDoItems.length} items completed`
@@ -61,7 +61,7 @@ tags:
 
 <p>Add the described <code>&lt;h2&gt;</code> and update the <code>&lt;ul&gt;</code> inside your App's template as follows:</p>
 
-<pre class="brush: html notranslate">&lt;h2 id="list-summary"&gt;\{{listSummary}}&lt;/h2&gt;
+<pre class="brush: html">&lt;h2 id="list-summary"&gt;\{{listSummary}}&lt;/h2&gt;
 &lt;ul aria-labelledby="list-summary" class="stack-large"&gt;
   &lt;li v-for="item in ToDoItems" :key="item.id"&gt;
     &lt;to-do-item :label="item.label" :done="item.done" :id="item.id"&gt;&lt;/to-do-item&gt;
@@ -78,27 +78,27 @@ tags:
 
 <p>Update the <code>&lt;input&gt;</code> element in <code>ToDoItem.vue</code> to look like this.</p>
 
-<pre class="brush: html notranslate">&lt;input type="checkbox" class="checkbox" :id="id" :checked="isDone"
+<pre class="brush: html">&lt;input type="checkbox" class="checkbox" :id="id" :checked="isDone"
        @change="$emit('checkbox-changed')" /&gt;</pre>
 
 <p>Since all we need to do is emit that the checkbox was checked, we can include the <code>$emit()</code> inline.</p>
 
 <p>In <code>App.vue</code>, add a new method called <code>updateDoneStatus()</code>, below your <code>addToDo()</code> method. This method should take one parameter: the todo item <em>id</em>. We want to find the item with the matching <code>id</code> and update its <code>done</code> status to be the opposite of its current status:</p>
 
-<pre class="brush: js notranslate">updateDoneStatus(toDoId) {
+<pre class="brush: js">updateDoneStatus(toDoId) {
   const toDoToUpdate = this.ToDoItems.find(item =&gt; item.id === toDoId)
   toDoToUpdate.done = !toDoToUpdate.done
 }</pre>
 
 <p>We want to run this method whenever a <code>ToDoItem</code> emits a <code>checkbox-changed</code> event, and pass in its <code>item.id</code> as the parameter. Update your <code>&lt;to-do-item&gt;&lt;/to-do-item&gt;</code> call as follows:</p>
 
-<pre class="brush: html notranslate">&lt;to-do-item :label="item.label" :done="item.done" :id="item.id"
+<pre class="brush: html">&lt;to-do-item :label="item.label" :done="item.done" :id="item.id"
             @checkbox-changed="updateDoneStatus(item.id)"&gt;
 &lt;/to-do-item&gt;</pre>
 
 <p>Now if you check a <code>ToDoItem</code>, you should see the summary update appropriately!</p>
 
-<p><img alt="Our app, with a completed todo counter added. It currently reads 3 out of 5 items completed" src="https://mdn.mozillademos.org/files/17251/todo-counter.png" style="border-style: solid; border-width: 1px; height: 757px; width: 801px;"></p>
+<p><img alt="Our app, with a completed todo counter added. It currently reads 3 out of 5 items completed" src="todo-counter.png" style="border-style: solid; border-width: 1px;"></p>
 
 <h2 id="Summary">Summary</h2>
 

@@ -11,7 +11,7 @@ tags:
   - Security
   - block-all-mixed-content
 ---
-<div>{{HTTPSidebar}}{{obsolete_header}}</div>
+<div>{{HTTPSidebar}}{{deprecated_header}}</div>
 
 <p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>block-all-mixed-content</strong></code> directive prevents loading any assets over HTTP when the page uses HTTPS.</p>
 
@@ -21,18 +21,18 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html notranslate">Content-Security-Policy: block-all-mixed-content;</pre>
+<pre class="brush: html">Content-Security-Policy: block-all-mixed-content;</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="notranslate">Content-Security-Policy: block-all-mixed-content;
+<pre>Content-Security-Policy: block-all-mixed-content;
 
 &lt;meta http-equiv="Content-Security-Policy" content="block-all-mixed-content"&gt;
 </pre>
 
 <p>To disallow http assets on a more granular level, you can also set individual directives to <code>https:</code>. For example, to disallow nonsecure HTTP images:</p>
 
-<pre class="notranslate">Content-Security-Policy: img-src https:</pre>
+<pre>Content-Security-Policy: img-src https:</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

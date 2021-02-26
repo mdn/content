@@ -145,7 +145,7 @@ tags:
 
 <p>H2 is the highest level allowed because H1 is reserved for the page title. If you need more than three or four levels of headers, consider breaking up the article into several smaller articles with a landing page.</p>
 
-<h4 id="Heading_dos_and_donts">Heading dos and donts</h4>
+<h4 id="Heading_dos_and_donts">Heading dos and don'ts</h4>
 
 <ul>
  <li><strong>Don't create single subsections.</strong> Don't subdivide a topic into a single subtopic. It's either two subheadings or more, or none at all.</li>
@@ -216,7 +216,7 @@ tags:
 
 <p>Use two spaces per tab in all code examples. Indent the code cleanly, with open-brace ("<code>{</code>") characters on the same line as the statement that opens the block. For example:</p>
 
-<pre class="brush: js notranslate">if (condition) {
+<pre class="brush: js">if (condition) {
   /* handle the condition */
 } else {
   /* handle the "else" case */
@@ -225,7 +225,7 @@ tags:
 
 <p>Long lines shouldn't be allowed to stretch off horizontally to the extent that they require horizontal scrolling to read. Instead, break long lines at natural breaking points. Some examples follow:</p>
 
-<pre class="brush: js notranslate">if (class.CONDITION || class.OTHER_CONDITION || class.SOME_OTHER_CONDITION
+<pre class="brush: js">if (class.CONDITION || class.OTHER_CONDITION || class.SOME_OTHER_CONDITION
        || class.YET_ANOTHER_CONDITION ) {
   /* something */
 }
@@ -236,13 +236,13 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <h4 id="Inline_code_formatting">Inline code formatting</h4>
 
-<p>Use the "Code" button (labeled with two angle brackets "<strong>&lt;&gt;</strong>") to apply inline code-style formatting to function names, variable names, and method names. (This uses the {{HTMLElement("code")}} element). For example: "the <code class="js plain">frenchText()</code> function".</p>
+<p>Use the {{HTMLElement("code")}} tags to mark up function names, variable names, and method names. For example: "the <code>frenchText()</code> function".</p>
 
 <p><strong>Method names should be followed by a pair of parentheses.</strong> For example, <code>doSomethingUseful()</code>. The parentheses help differentiate methods from other code terms.</p>
 
 <h4 id="Syntax_highlighting">Syntax highlighting</h4>
 
-<p>A line or multiple lines of code should be formatted using <a href="/en-US/docs/MDN/Guidelines/CSS_style_guide#Code_syntax_highlighting">syntax highlighting</a> rather than the {{HTMLElement("code")}} element.</p>
+<p>A line or multiple lines of code should be formatted using <a href="/en-US/docs/MDN/Guidelines/CSS_style_guide#code_syntax_highlighting">syntax highlighting</a> rather than the {{HTMLElement("code")}} element.</p>
 
 <h4 id="Styling_mentions_of_HTML_elements">Styling mentions of HTML elements</h4>
 
@@ -538,7 +538,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <ul>
  <li><span class="correct"><strong>Correct</strong></span>: localize, behavior</li>
- <li><span class="incorrect"><strong>Incorrect</strong></span>: localise, behavior</li>
+ <li><span class="incorrect"><strong>Incorrect</strong></span>: localise, behaviour</li>
 </ul>
 
 <h3 id="Terminology">Terminology</h3>

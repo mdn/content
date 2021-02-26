@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css no-line-numbers notranslate">/* A gradient at the center of its container,
+<pre class="brush: css no-line-numbers">/* A gradient at the center of its container,
    starting red, changing to blue, and finishing green */
 radial-gradient(circle at center, red 0, blue, green 100%)</pre>
 
@@ -68,7 +68,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)</pre>
 
  <p>If <code>&lt;ending-shape&gt;</code> is specified as <code>circle</code> or is omitted, the size may be given explicitly as a <code><a href="/en-US/docs/Web/CSS/length">&lt;length&gt;</a></code>, which provides an explicit circle radius. Negative values are invalid.<br>
   <br>
-  If <code>&lt;ending-shape&gt;</code> is specificed as <code>ellipse</code> or is omitted, the size may be given as a <code><a href="/en-US/docs/Web/CSS/length-percentage">&lt;length-percentage&gt;</a></code> with two values to provide an explicit ellipse size. The first value represents the horizontal radius, the second the vertical radius. Percentages values are relative to the corresponding dimension of the gradient box. Negative values are invalid.</p>
+  If <code>&lt;ending-shape&gt;</code> is specified as <code>ellipse</code> or is omitted, the size may be given as a <code><a href="/en-US/docs/Web/CSS/length-percentage">&lt;length-percentage&gt;</a></code> with two values to provide an explicit ellipse size. The first value represents the horizontal radius, the second the vertical radius. Percentages values are relative to the corresponding dimension of the gradient box. Negative values are invalid.</p>
  </dd>
  <dt><code>&lt;linear-color-stop&gt;</code></dt>
  <dd>A color-stop's {{cssxref("&lt;color&gt;")}} value, followed by an one or two optional stop positions (either a {{cssxref("&lt;percentage&gt;")}} or a {{cssxref("&lt;length&gt;")}} along the gradient's axis). A percentage of <code>0%</code>, or a length of <code>0</code>, represents the center of the gradient; the value <code>100%</code> represents the intersection of the ending shape with the virtual gradient ray. Percentage values in between are linearly positioned on the gradient ray. Including two stop positions is equivalent to declaring two color stops with the same color at the two positions.</dd>
@@ -97,16 +97,16 @@ radial-gradient(circle at center, red 0, blue, green 100%)</pre>
 <h3 id="Simple_gradient">Simple gradient</h3>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;div class="radial-gradient"&gt;&lt;/div&gt;
+<pre class="brush: html">&lt;div class="radial-gradient"&gt;&lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.radial-gradient {
+<pre class="brush: css">.radial-gradient {
   width: 240px;
   height: 120px;
 }</pre>
 </div>
 
-<pre class="brush: css notranslate">.radial-gradient {
+<pre class="brush: css">.radial-gradient {
   background-image: radial-gradient(cyan 0%, transparent 20%, salmon 40%);
 } </pre>
 
@@ -115,16 +115,16 @@ radial-gradient(circle at center, red 0, blue, green 100%)</pre>
 <h3 id="Non-centered_gradient">Non-centered gradient</h3>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;div class="radial-gradient"&gt;&lt;/div&gt;
+<pre class="brush: html">&lt;div class="radial-gradient"&gt;&lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.radial-gradient {
+<pre class="brush: css">.radial-gradient {
   width: 240px;
   height: 120px;
 }</pre>
 </div>
 
-<pre class="brush: css notranslate">.radial-gradient {
+<pre class="brush: css">.radial-gradient {
   background-image: radial-gradient(farthest-corner at 40px 40px,
       #f35 0%, #43e 100%);
 }</pre>

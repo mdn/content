@@ -1,0 +1,71 @@
+---
+title: CSSKeyframesRule.appendRule()
+slug: Web/API/CSSKeyframesRule/appendRule
+tags:
+  - API
+  - CSSOM
+  - CSSKeyframesRule
+  - CSS Animations
+  - Method
+  - Reference
+---
+<div>{{APIRef("CSSOM") }}</div>
+
+<p class="summary">The <strong><code>appendRule()</code></strong> method of the {{domxref("CSSKeyframeRule")}} interface appends a {{domxref("CSSKeyFrameRule")}} to the end of the rules.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><var>CSSKeyframesRule</var>.appendRule(<var>rule</var>);</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+    <dt><code>rule</code></dt>
+    <dd>A {{domxref("CSSOMString")}} containing a keyframe rule.</dd>
+</dl>
+
+<h3 id="value">Return value</h3>
+<p>None.</p>
+
+<h2 id="Example">Example</h2>
+
+<p>
+    The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by <code>document.styleSheets[0].cssRules</code>. 
+    <code>myRules[0]</code> returns a {{domxref("CSSKeyframesRule")}} object. Returning the <code>cssRules</code> property would return a {{domxref("CSSRuleList")}} containing one rule.
+</p>
+
+<p>After appending another rule with <code>appendRule</code> the <code>cssRules</code> property returns a {{domxref("CSSRuleList")}} containing two rules.</p>
+  
+<pre class="brush: css">@keyframes slidein {
+  from {
+    transform: translateX(0%);
+  }
+}</pre>
+
+<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
+let keyframes = myRules[0]; // a CSSKeyframesRule 
+keyframes.appendRule('to {transform: translateX(100%);}');
+console.log(keyframes.cssRules); // a CSSRuleList object with two rules</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Animations', '#interface-csskeyframesrule-appendrule', 'CSSKeyframesRule.appendRule')}}</td>
+   <td>{{Spec2('CSS3 Animations')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("api.CSSKeyframesRule.appendRule")}}</p>

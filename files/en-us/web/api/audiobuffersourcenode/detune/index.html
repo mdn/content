@@ -2,19 +2,19 @@
 title: AudioBufferSourceNode.detune
 slug: Web/API/AudioBufferSourceNode/detune
 tags:
-- API
-- Audio
-- AudioBufferSourceNode
-- Property
-- Reference
-- Web Audio API
-- detune
+  - API
+  - Audio
+  - AudioBufferSourceNode
+  - Property
+  - Reference
+  - Web Audio API
+  - detune
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
 <p class="summary">The <strong><code>detune</code></strong> property of the
   {{domxref("AudioBufferSourceNode")}} interface is a <a
-    href="/en-US/docs/DOM/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}}
+    href="/en-US/docs/Web/API/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}}
   representing detuning of oscillation in <a
     href="https://en.wikipedia.org/wiki/Cent_%28music%29">cents</a>.</p>
 
@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>source</em> = <em>audioCtx</em>.createBufferSource();
+<pre class="brush: js">var <em>source</em> = <em>audioCtx</em>.createBufferSource();
 <em>source</em>.detune.value = 100; // value in cents</pre>
 
 <div class="note">
@@ -33,7 +33,7 @@ tags:
 
 <h3 id="Value">Value</h3>
 
-<p>A <a href="/en-US/docs/DOM/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}}
+<p>A <a href="/en-US/docs/Web/API/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}}
   whose value indicates the detuning of oscillation in <a
     href="https://en.wikipedia.org/wiki/Cent_%28music%29">cents</a>.</p>
 
@@ -80,14 +80,11 @@ source.start();
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.AudioBufferSourceNode.detune")}}</p>
-</div>
+<p>{{Compat("api.AudioBufferSourceNode.detune")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
   </li>
 </ul>

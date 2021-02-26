@@ -2,14 +2,14 @@
 title: IDBIndex.openKeyCursor()
 slug: Web/API/IDBIndex/openKeyCursor
 tags:
-- API
-- Database
-- IDBIndex
-- IndexedDB
-- Method
-- Reference
-- Storage
-- openKeyCursor
+  - API
+  - Database
+  - IDBIndex
+  - IndexedDB
+  - Method
+  - Reference
+  - Storage
+  - openKeyCursor
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -23,22 +23,7 @@ tags:
 <p>The method sets the position of the cursor to the appropriate key, based on the
   specified direction.</p>
 
-<ul>
-  <li>If the key range is not specified or is null, then the range includes all the keys.
-  </li>
-  <li>A <a href="/en/IndexedDB/IDBSuccessEvent">success event</a> is always fired on the
-    result object.
-    <ul>
-      <li>If at least one key matches the key range, then the <code>result</code> property
-        of the event is set to the new {{domxref("IDBCursor")}} object; the
-        <code>key</code> property of the cursor object is set to the found key and the
-        <code>primaryKey</code> property is set to the corresponding primary key of the
-        found record.</li>
-      <li>If no keys match the key range, then the <code>result</code> property of the
-        event is set to <code>null</code>. </li>
-    </ul>
-  </li>
-</ul>
+<p>If the key range is not specified or is null, then the range includes all the keys.</p>
 
 <div class="note">
   <p><strong>Note:</strong> Cursors returned by <code>openKeyCursor()</code> do not
@@ -52,7 +37,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>request</em> = <em>myIndex</em>.openKeyCursor();
+  class="brush: js">var <em>request</em> = <em>myIndex</em>.openKeyCursor();
 var <em>request</em> = <em>myIndex</em>.openKeyCursor(<em>range);</em>
 var <em>request</em> = <em>myIndex</em>.openKeyCursor(<em>range</em>, <em>direction</em>);</pre>
 
@@ -64,8 +49,8 @@ var <em>request</em> = <em>myIndex</em>.openKeyCursor(<em>range</em>, <em>direct
     passed, this will default to a key range that selects all the records in this object
     store.</dd>
   <dt>direction {{optional_inline}}</dt>
-  <dd>The cursor's <a href="/en/IndexedDB/IDBCursor#Constants">direction</a>. See <a
-      href="/en/IndexedDB/IDBCursor#Constants">IDBCursor Constants</a> for possible
+  <dd>The cursor's <a href="/en-US/docs/Web/API/IDBCursor#constants">direction</a>. See <a
+      href="/en-US/docs/Web/API/IDBCursor#constants">IDBCursor Constants</a> for possible
     values.</dd>
 </dl>
 
@@ -143,8 +128,7 @@ var <em>request</em> = <em>myIndex</em>.openKeyCursor(<em>range</em>, <em>direct
   };
 };</pre>
 
-<h2 id="Specification"><span style="font-size: 2.14285714285714rem;">Specification</span>
-</h2>
+<h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
   <tbody>
@@ -169,10 +153,7 @@ var <em>request</em> = <em>myIndex</em>.openKeyCursor(<em>range</em>, <em>direct
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.IDBIndex.openKeyCursor")}}</p>
-</div>
+<p>{{Compat("api.IDBIndex.openKeyCursor")}}</p>
 
 <h2 id="See_also">See also</h2>
 

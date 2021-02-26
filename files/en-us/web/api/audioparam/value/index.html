@@ -2,14 +2,14 @@
 title: AudioParam.value
 slug: Web/API/AudioParam/value
 tags:
-- API
-- AudioParam
-- Parameter
-- Property
-- Reference
-- Web Audio API
-- sound
-- value
+  - API
+  - AudioParam
+  - Parameter
+  - Property
+  - Reference
+  - Web Audio API
+  - sound
+  - value
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
@@ -21,12 +21,12 @@ tags:
 
 <p>Setting <code>value</code> has the same effect as
   calling {{domxref("AudioParam.setValueAtTime")}} with the time returned by the
-  <code>AudioContext</code>'s {{domxref("AudioContext.currentTime", "currentTime")}}
+  <code>AudioContext</code>'s {{domxref("BaseAudioContext/currentTime", "currentTime")}}
   property..</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>curValue</em> = <em>audioParam</em>.value;
+<pre class="brush: js">var <em>curValue</em> = <em>audioParam</em>.value;
 <em>audioParam</em>.value = <em>newValue</em>;</pre>
 
 <h3 id="Value">Value</h3>
@@ -144,6 +144,6 @@ gainNode.gain.setValueAtTime(0.4, audioCtx.currentTime);</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
   </li>
 </ul>

@@ -10,7 +10,7 @@ tags:
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
-<p>The <code><strong>Worker()</strong></code> constructor creates a {{domxref("Worker")}} object that executes the script at the specified URL. This script must obey the <a href="/en/Same_origin_policy_for_JavaScript" title="Same origin policy for JavaScript">same-origin policy</a>.</p>
+<p>The <code><strong>Worker()</strong></code> constructor creates a {{domxref("Worker")}} object that executes the script at the specified URL. This script must obey the <a href="/en-US/docs/Same_origin_policy_for_JavaScript" title="Same origin policy for JavaScript">same-origin policy</a>.</p>
 
 <div class="note">
 <p><strong>Note</strong>: that there is a disagreement among browser manufacturers about whether a data URI is of the same origin or not. Though Gecko 10.0 {{ geckoRelease("10.0") }} and later accept data URIs, that's not the case in all other browsers.</p>
@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var myWorker = new Worker(<em>aURL</em>, <em>options</em>);</pre>
+<pre class="brush: js">var myWorker = new Worker(<em>aURL</em>, <em>options</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -47,7 +47,7 @@ tags:
 
 <p>The following code snippet shows creation of a {{domxref("Worker")}} object using the <code>Worker()</code> constructor and subsequent usage of the object:</p>
 
-<pre class="brush: js notranslate">var myWorker = new Worker('worker.js');
+<pre class="brush: js">var myWorker = new Worker('worker.js');
 
 first.onchange = function() {
   myWorker.postMessage([first.value,second.value]);

@@ -18,7 +18,7 @@ tags:
 
 <p>After installing, the extension can exchange JSON messages with the native application. Use a set of functions in the {{WebExtAPIRef("runtime")}} API. On the native app side, messages are received using standard input (<code>stdin</code>) and sent using standard output (<code>stdout</code>).</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13833/native-messaging.png" style="display: block; height: 548px; margin-left: auto; margin-right: auto; width: 672px;"></p>
+<p><img alt="" src="native-messaging.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Support for native messaging in extensions is mostly compatible with Chrome, with two main differences:</p>
 
@@ -42,7 +42,7 @@ tags:
 
 <p>Example <code>manifest.json</code> file:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
 
   "description": "Native messaging example add-on",
   "manifest_version": 2,
@@ -72,7 +72,7 @@ tags:
 }</pre>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Chrome does not support the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a> key. You will need to use another manifest without this key to install an equivalent WebExtension on Chrome. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging#Chrome_incompatibilities">Chrome incompatibilities below</a>.</p>
+<p><strong>Note:</strong> Chrome does not support the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a> key. You will need to use another manifest without this key to install an equivalent WebExtension on Chrome. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging#chrome_incompatibilities">Chrome incompatibilities below</a>.</p>
 </div>
 
 <h3 id="App_manifest">App manifest</h3>
@@ -85,7 +85,7 @@ tags:
 
 <p>For example, here's a manifest for the <code>"ping_pong"</code> native application:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "name": "ping_pong",
   "description": "Example host for native messaging",
   "path": "/path/to/native-messaging/app/ping_pong.py",
@@ -96,7 +96,7 @@ tags:
 <p>This allows the extension whose ID is <code>"ping_pong@example.org"</code> to connect, by passing the name <code>"ping_pong"</code> into the relevant {{WebExtAPIRef("runtime")}} API function. The application itself is at <code>"/path/to/native-messaging/app/ping_pong.py"</code>.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Chrome identifies allowed extensions with another key: <code>allowed_origins</code>, using the ID of the WebExtension. Refer to <a href="https://developer.chrome.com/apps/nativeMessaging#native-messaging-host">Chrome documentation for more details </a>and see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging#Chrome_incompatibilities">Chrome incompatibilities below</a>.</p>
+<p><strong>Note:</strong> Chrome identifies allowed extensions with another key: <code>allowed_origins</code>, using the ID of the WebExtension. Refer to <a href="https://developer.chrome.com/apps/nativeMessaging#native-messaging-host">Chrome documentation for more details </a>and see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging#chrome_incompatibilities">Chrome incompatibilities below</a>.</p>
 </div>
 
 <h3 id="Windows_setup">Windows setup</h3>
@@ -107,7 +107,7 @@ tags:
 
 <p>In the example above, the native application is a Python script. It can be difficult to get Windows to run Python scripts reliably in this way, so an alternative is to provide a <code>.bat</code> file, and link to that from the application's manifest:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "name": "ping_pong",
   "description": "Example host for native messaging",
   "path": "c:\\path\\to\\native-messaging\\app\\ping_pong_win.bat",
@@ -115,17 +115,17 @@ tags:
   "allowed_extensions": [ "ping_pong@example.org" ]
 }</pre>
 
-<p>(See note above about <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging#Chrome_incompatibilities">Chrome compatibility</a> regarding the <code>allowed_extensions</code> key and its counterpart in Chrome).</p>
+<p>(See note above about <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging#chrome_incompatibilities">Chrome compatibility</a> regarding the <code>allowed_extensions</code> key and its counterpart in Chrome).</p>
 
 <p>The batch file then invokes the Python script:</p>
 
-<pre class="brush: bash notranslate">@echo off
+<pre class="brush: bash">@echo off
 
 python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"</pre>
 
 <h4 id="Registry">Registry</h4>
 
-<p>The browser finds the extension based on registry keys which are located in a specific location. You need to add them either programmatically with your final application or manually if you are using the example from GitHub. For more details, refer to <a href="/en-US/Add-ons/WebExtensions/Native_manifests#Manifest_location">Manifest location</a>.</p>
+<p>The browser finds the extension based on registry keys which are located in a specific location. You need to add them either programmatically with your final application or manually if you are using the example from GitHub. For more details, refer to <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#manifest_location">Manifest location</a>.</p>
 
 <p>Following with the <code>ping_pong</code> example, if using Firefox (see <a href="https://developer.chrome.com/apps/nativeMessaging#native-messaging-host-location">this page for Chrome</a>), two registry entries should be created for the messaging to work:</p>
 
@@ -153,7 +153,7 @@ python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"</pre>
 
 <h3 id="Extension_side">Extension side</h3>
 
-<p>Native messaging cannot directly be used in content scripts. You must <a href="/en-US/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts">do it indirectly via background scripts</a>.</p>
+<p>Native messaging cannot directly be used in content scripts. You must <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts">do it indirectly via background scripts</a>.</p>
 
 <p>There are two patterns to use here: <strong>connection-based messaging</strong> and <strong>connectionless messaging</strong>.</p>
 
@@ -183,7 +183,7 @@ python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"</pre>
 
 <p>Here's an example background script that establishes a connection with the <code>"ping_pong"</code> app, listens for messages from it, then sends it a <code>"ping"</code> message whenever the user clicks the browser action:</p>
 
-<pre class="notranslate brush: js">/*
+<pre class="brush: js">/*
 On startup, connect to the "ping_pong" app.
 */
 var port = browser.runtime.connectNative("ping_pong");
@@ -224,7 +224,7 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <p>Here's the example above, rewritten to use <code>runtime.sendNativeMessage()</code>:</p>
 
-<pre class="notranslate brush: js">function onResponse(response) {
+<pre class="brush: js">function onResponse(response) {
   console.log("Received " + response);
 }
 
@@ -254,7 +254,7 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <p>You can quickly get started sending and receiving messages with this NodeJS code:</p>
 
-<pre class="notranslate brush: js">#!/usr/local/bin/node
+<pre class="brush: js">#!/usr/local/bin/node
 
 (() =&gt; {
 
@@ -320,7 +320,7 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <p>This is the Python 2 version:</p>
 
-<pre class="brush: python notranslate">#!/usr/bin/python -u
+<pre class="brush: python">#!/usr/bin/python -u
 
 # Note that running python with the `-u` flag is required on Windows,
 # in order to ensure that stdin and stdout are opened in binary, rather
@@ -358,7 +358,7 @@ while True:
 
 <p>In Python 3, the received binary data must be decoded into a string. The content to be sent back to the addon must be encoded into binary data using a struct:</p>
 
-<pre class="brush: python notranslate">#!/usr/bin/python -u
+<pre class="brush: python">#!/usr/bin/python -u
 
 # Note that running python with the `-u` flag is required on Windows,
 # in order to ensure that stdin and stdout are opened in binary, rather
@@ -409,33 +409,33 @@ while True:
 
 <h2 id="Troubleshooting">Troubleshooting</h2>
 
-<p>If something goes wrong, check the <a href="/en-US/Add-ons/WebExtensions/Debugging#Viewing_log_output">browser console</a>. If the native application sends any output to stderr, the browser will redirect it to the browser console. So if you've got as far as launching the native application, you will see any error messages it emits.</p>
+<p>If something goes wrong, check the <a href="https://extensionworkshop.com/documentation/develop/debugging/#viewing_log_output">browser console</a>. If the native application sends any output to stderr, the browser will redirect it to the browser console. So if you've got as far as launching the native application, you will see any error messages it emits.</p>
 
 <p>If you haven't managed to run the application, you should see an error message giving you a clue about the problem.</p>
 
-<pre class="notranslate">"No such native application &lt;name&gt;"</pre>
+<pre>"No such native application &lt;name&gt;"</pre>
 
 <ul>
  <li>Check that the name passed to <code>runtime.connectNative()</code> matches the name in the app manifest</li>
  <li>macOS/Linux: check that name of the app manifest is <code>&lt;name&gt;.json</code>.</li>
- <li>macOS/Linux: check the native application's manifest file location as mentioned <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#Mac_OS_X">here</a>. </li>
+ <li>macOS/Linux: check the native application's manifest file location as mentioned <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#mac_os_x">here</a>. </li>
  <li>Windows: check that the registry key is in the correct place, and that its name matches the name in the app manifest.</li>
  <li>Windows: check that the path given in the registry key points to the app manifest.</li>
 </ul>
 
-<pre class="notranslate">"Error: Invalid application &lt;name&gt;"</pre>
+<pre>"Error: Invalid application &lt;name&gt;"</pre>
 
 <ul>
  <li>Check that the application's name contains no invalid characters.</li>
 </ul>
 
-<pre class="notranslate">"'python' is not recognized as an internal or external command, ..."</pre>
+<pre>"'python' is not recognized as an internal or external command, ..."</pre>
 
 <ul>
  <li>Windows: if your application is a Python script, check that you have Python installed and have your path set up for it.</li>
 </ul>
 
-<pre class="notranslate">"File at path &lt;path&gt; does not exist, or is not executable"</pre>
+<pre>"File at path &lt;path&gt; does not exist, or is not executable"</pre>
 
 <ul>
  <li>If you see this, then the app manifest has been found successfully.</li>
@@ -445,19 +445,19 @@ while True:
  <li>Check that the app is executable.</li>
 </ul>
 
-<pre class="notranslate">"This extension does not have permission to use native application &lt;name&gt;"</pre>
+<pre>"This extension does not have permission to use native application &lt;name&gt;"</pre>
 
 <ul>
  <li>Check that the <code>"allowed_extensions"</code> key in the app manifest contains the add-on's ID.</li>
 </ul>
 
-<pre class="notranslate">"TypeError: browser.runtime.connectNative is not a function"</pre>
+<pre>"TypeError: browser.runtime.connectNative is not a function"</pre>
 
 <ul>
  <li>Check that the extension has the <code>"nativeMessaging"</code> permission</li>
 </ul>
 
-<pre class="notranslate">"[object Object]       NativeMessaging.jsm:218"</pre>
+<pre>"[object Object]       NativeMessaging.jsm:218"</pre>
 
 <ul>
  <li>There was a problem starting the application.</li>

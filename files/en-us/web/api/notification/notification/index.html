@@ -16,8 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js notranslate">var <var>myNotification</var> = new Notification(<var>title</var>, <var>options</var>);</pre>
+<pre class="brush: js syntaxbox">var <var>notification</var> = new Notification(<var>title</var>, <var>options</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -85,12 +84,12 @@ tags:
   creates the necessary <code>options</code> object and triggers the notification by using
   the <code>Notification()</code> constructor.</p>
 
-<pre class="brush: js notranslate">function spawnNotification(theBody,theIcon,theTitle) {
+<pre class="brush: js">function spawnNotification(body, icon, title) {
   var options = {
-      body: theBody,
-      icon: theIcon
+      body: body,
+      icon: icon
   }
-  var n = new Notification(theTitle,options);
+  var notification = new Notification(title, options);
 }</pre>
 
 <h2 id="Specifications">Specifications</h2>

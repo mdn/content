@@ -9,7 +9,7 @@ tags:
   - CSS Descriptor
   - Reference
 ---
-<div>{{cssref}}</div>
+<div>{{CSSRef}}</div>
 
 <p>The <strong><code>symbols</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> descriptor is used to specify the symbols that the specified counter system will use to construct counter representations.</p>
 
@@ -34,7 +34,7 @@ tags:
 
 <p>A symbol can be a string, image, or identifier. It is used within the {{cssxref("@counter-style")}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>.</p>
 
-<pre class="brush: css no-line-numbers notranslate">symbols: A B C D E;
+<pre class="brush: css no-line-numbers">symbols: A B C D E;
 symbols: "\24B6" "\24B7" "\24B8" D E;
 symbols: "0" "1" "2" "4" "5" "6" "7" "8" "9";
 symbols: url('first.svg') url('second.svg') url('third.svg');
@@ -49,7 +49,7 @@ symbols: indic-numbers;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -57,7 +57,7 @@ symbols: indic-numbers;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;ul class="list"&gt;
+<pre class="brush: html">&lt;ul class="list"&gt;
   &lt;li&gt;One&lt;/li&gt;
   &lt;li&gt;Two&lt;/li&gt;
   &lt;li&gt;Three&lt;/li&gt;
@@ -67,7 +67,7 @@ symbols: indic-numbers;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">@counter-style symbols-example {
+<pre class="brush: css">@counter-style symbols-example {
   system: fixed;
   symbols: A "1" "\24B7" D E;
 }

@@ -6,7 +6,7 @@ tags:
   - CSS Borders
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 ---
 <div>{{CSSRef}}</div>
 
@@ -16,7 +16,7 @@ tags:
 
 <p>The rounding can be a circle or an ellipse, or if one of the value is <code>0</code> no rounding is done and the corner is square.</p>
 
-<div style="text-align: center;"><img alt="border-bottom-left-radius.png" class="default internal" src="/@api/deki/files/6136/=border-bottom-left-radius.png"></div>
+<div style="text-align: center;"><img alt="border-bottom-left-radius.png" class="default internal" src="border-bottom-left-radius.png"></div>
 
 <p>A background, being an image or a color, is clipped at the border, even a rounded one; the exact location of the clipping is defined by the value of the {{cssxref("background-clip")}} property.</p>
 
@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* the corner is a circle */
+<pre class="brush:css no-line-numbers">/* the corner is a circle */
 /* border-bottom-left-radius: <em>radius</em> */
 border-bottom-left-radius: 3px;
 
@@ -71,7 +71,7 @@ border-bottom-left-radius: inherit;</pre>
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -92,7 +92,7 @@ border-bottom-left-radius: inherit;</pre>
 			</div>
 			</td>
 			<td>An arc of circle is used as the border
-			<pre class="brush: css notranslate">
+			<pre class="brush: css">
 div {
   border-bottom-left-radius: 40px 40px;
 }
@@ -106,7 +106,7 @@ div {
 			</div>
 			</td>
 			<td>An arc of ellipse is used as the border
-			<pre class="brush: css notranslate">
+			<pre class="brush: css">
 div {
   border-bottom-left-radius: 40px 20px;
 }
@@ -120,7 +120,7 @@ div {
 			</div>
 			</td>
 			<td>The box is a square: an arc of circle is used as the border
-			<pre class="brush: css notranslate">
+			<pre class="brush: css">
 div {
   border-bottom-left-radius: 40%;
 }
@@ -134,7 +134,7 @@ div {
 			</div>
 			</td>
 			<td>The box is not a square: an arc of ellipse is used as the border
-			<pre class="brush: css notranslate">
+			<pre class="brush: css">
 div {
   border-bottom-left-radius: 40%;
 }
@@ -148,7 +148,7 @@ div {
 			</div>
 			</td>
 			<td>The background color is clipped at the border
-			<pre class="brush: css notranslate">
+			<pre class="brush: css">
 div {
   border-bottom-left-radius:40%;
   border-style: black 3px double;

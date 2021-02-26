@@ -44,7 +44,7 @@ tags:
 
 <p>To enable the application cache for an application, include the {{HTMLAttrxRef("manifest", "html")}} attribute in the {{HTMLElement("html")}} element:</p>
 
-<pre class="brush: html notranslate">&lt;html manifest="/example.appcache"&gt;
+<pre class="brush: html">&lt;html manifest="/example.appcache"&gt;
   …
 &lt;/html&gt;
 </pre>
@@ -116,7 +116,7 @@ tags:
 
 <p>The following is a simple cache manifest file, <code>example.appcache</code>, for an imaginary web site at <code>www.example.com</code>.</p>
 
-<pre class="eval notranslate">CACHE MANIFEST
+<pre class="eval">CACHE MANIFEST
 # v1 - 2011-08-13
 # This is a comment.
 http://www.example.com/index.html
@@ -149,7 +149,7 @@ http://www.example.com/blah/blah
 
 <p>The following is a more complete cache manifest file for the imaginary web site at <code>www.example.com</code>:</p>
 
-<pre class="eval notranslate">CACHE MANIFEST
+<pre class="eval">CACHE MANIFEST
 # v1 2011-08-14
 # This is another comment
 index.html
@@ -244,7 +244,7 @@ FALLBACK:
 
 <p>Master entries are any HTML files that include a {{HTMLAttrxRef("manifest","html")}} attribute in their {{HTMLElement("html")}} element. For example, let's say we have the HTML file <a href="http://www.example.com/entry.html">http://www.example.com/entry.html</a>, which looks like this:</p>
 
-<pre class="brush: html notranslate">&lt;html manifest="example.appcache"&gt;
+<pre class="brush: html">&lt;html manifest="example.appcache"&gt;
   &lt;h1&gt;Application Cache Example&lt;/h1&gt;
 &lt;/html&gt;
 </pre>
@@ -261,25 +261,25 @@ FALLBACK:
 
 <p>As an example, you can use network entries to load and execute scripts and other code from the server instead of the cache:</p>
 
-<pre class="eval notranslate">CACHE MANIFEST
+<pre class="eval">CACHE MANIFEST
 NETWORK:
 /api
 </pre>
 
-<p>The cache manifest section listed above ensures that requests to load resources contained in the <code><a href="http://www.example.com/api/" rel="freelink">http://www.example.com/api/</a></code> subtree always go to the network without attempting to access the cache.</p>
+<p>The cache manifest section listed above ensures that requests to load resources contained in the <code><a href="http://www.example.com/api/">http://www.example.com/api/</a></code> subtree always go to the network without attempting to access the cache.</p>
 
 <div class="note"><strong>Note</strong>: Omitting master entries (files that have the <code>manifest</code> attribute set in the <code>html</code> element) from the manifest file would not have the same result, because master entries will be added—and subsequently served from—the application cache.</div>
 
 <h3 id="Fallback_entries">Fallback entries</h3>
 
-<p>Fallback entries are used when an attempt to load a resource fails. For example, let's say the cache manifest file <code><a href="http://www.example.com/example.appcache" rel="freelink">http://www.example.com/example.appcache</a></code> includes the following content:</p>
+<p>Fallback entries are used when an attempt to load a resource fails. For example, let's say the cache manifest file <code><a href="http://www.example.com/example.appcache">http://www.example.com/example.appcache</a></code> includes the following content:</p>
 
-<pre class="eval notranslate">CACHE MANIFEST
+<pre class="eval">CACHE MANIFEST
 FALLBACK:
 example/bar/ example.html
 </pre>
 
-<p>Any request to <code><a href="http://www.example.com/example/bar/" rel="freelink">http://www.example.com/example/bar/</a></code> or any of its subdirectories and their content cause the browser to issue a network request to attempt to load the requested resource. If the attempt fails, due to either a network failure or a server error of some kind, the browser loads the file <code>example.html</code> instead.</p>
+<p>Any request to <code><a href="http://www.example.com/example/bar/">http://www.example.com/example/bar/</a></code> or any of its subdirectories and their content cause the browser to issue a network request to attempt to load the requested resource. If the attempt fails, due to either a network failure or a server error of some kind, the browser loads the file <code>example.html</code> instead.</p>
 
 <h2 id="Cache_states">Cache states</h2>
 
@@ -304,7 +304,7 @@ example/bar/ example.html
 
 <p>You can programmatically test to see if an application has an updated cache manifest file, using JavaScript. Since a cache manifest file may have been updated before a script attaches event listeners to test for updates, scripts should always test <code>window.applicationCache.status</code>.</p>
 
-<pre class="brush: js notranslate">function onUpdateReady() {
+<pre class="brush: js">function onUpdateReady() {
   console.log('found new version!');
 }
 window.applicationCache.addEventListener('updateready', onUpdateReady);

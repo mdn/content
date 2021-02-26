@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">window.dump(<em>message</em>);
+<pre class="brush: js">window.dump(<em>message</em>);
 
 dump(<em>message</em>);
 </pre>
@@ -44,7 +44,7 @@ dump(<em>message</em>);
 <p><code>dump()</code> is also available to XPCOM components implemented in JavaScript,
   even though {{domxref("window")}} is not the global object in components. It is also
   explicitly made available in <a
-    href="/en/docs/Components.utils.Sandbox#Methods_available_on_the_Sandbox_object"
+    href="/en-US/docs/Components.utils.Sandbox#Methods_available_on_the_Sandbox_object"
     title="Methods available on the Sandbox object">sandboxes</a>. However, this use of
   <code>dump</code> is not affected by the preference mentioned below -- it will always be
   shown. It is therefore advisable to either check this preference yourself or use a

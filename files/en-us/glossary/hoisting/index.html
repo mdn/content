@@ -16,7 +16,7 @@ tags:
 
 <p>One of the advantages of JavaScript putting function declarations into memory before it executes any code segment is that it allows you to use a function before you declare it in your code. For example:</p>
 
-<pre class="brush: js notranslate">function catName(name) {
+<pre class="brush: js">function catName(name) {
   console.log("My cat's name is " + name);
 }
 
@@ -29,7 +29,7 @@ The result of the code above is: "My cat's name is Tiger"
 
 <p>The above code snippet is how you would expect to write the code for it to work. Now, let's see what happens when we call the function before we write it:</p>
 
-<pre class="brush: js notranslate">catName("Chloe");
+<pre class="brush: js">catName("Chloe");
 
 function catName(name) {
   console.log("My cat's name is " + name);
@@ -47,18 +47,18 @@ The result of the code above is: "My cat's name is Chloe"
 
 <p>JavaScript only hoists declarations, not initializations. If a variable is declared and initialized after using it, the value will be undefined. For example:</p>
 
-<pre class="brush: js notranslate">console.log(num); // Returns undefined, as only declaration was hoisted, no initialization has happened at this stage
+<pre class="brush: js">console.log(num); // Returns undefined, as only declaration was hoisted, no initialization has happened at this stage
 var num; // Declaration
 num = 6; // Initialization</pre>
 
 <p>The example below only has initialization. No hoisting happens so trying to read the variable results in ReferenceError exception.</p>
 
-<pre class="brush: js notranslate">console.log(num); // Throws ReferenceError exception
+<pre class="brush: js">console.log(num); // Throws ReferenceError exception
 num = 6; // Initialization</pre>
 
 <p>Initializations using <code>let</code> and <code>const</code> are also not hoisted. </p>
 
-<pre class="brush: js notranslate">// Example with let:
+<pre class="brush: js">// Example with let:
 a = 1; // initialization.
 let a; // Throws ReferenceError: Cannot access 'a' before initialization
 
@@ -69,7 +69,7 @@ const a; // Throws SyntaxError: Missing initializer in const declaration
 
 <p>Below are more examples demonstrating hoisting.</p>
 
-<pre class="brush: js notranslate">// Example 1
+<pre class="brush: js">// Example 1
 // Only y is hoisted
 
 x = 1; // Initialize x, and if not already declared, declare it - but no hoisting as there is no var in the statement.

@@ -28,7 +28,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* Positional alignment */
+<pre class="brush:css no-line-numbers">/* Positional alignment */
 /* align-content does not take left and right values */
 place-content: center start;
 place-content: start center;
@@ -99,7 +99,7 @@ place-content: unset;</pre>
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -107,18 +107,18 @@ place-content: unset;</pre>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div id="container"&gt;
+<pre class="brush: html">&lt;div id="container"&gt;
   &lt;div class="small"&gt;Lorem&lt;/div&gt;
   &lt;div class="small"&gt;Lorem&lt;br/&gt;ipsum&lt;/div&gt;
   &lt;div class="large"&gt;Lorem&lt;/div&gt;
-  &lt;div class="large"&gt;Lorem&lt;br/&gt;impsum&lt;/div&gt;
+  &lt;div class="large"&gt;Lorem&lt;br/&gt;ipsum&lt;/div&gt;
   &lt;div class="large"&gt;&lt;/div&gt;
   &lt;div class="large"&gt;&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
 <div class="hidden">
-<pre class="brush:html notranslate">&lt;code&gt;writing-mode:&lt;/code&gt;&lt;select id="writingMode"&gt;
+<pre class="brush:html">&lt;code&gt;writing-mode:&lt;/code&gt;&lt;select id="writingMode"&gt;
   &lt;option value="horizontal-tb" selected&gt;horizontal-tb&lt;/option&gt;
   &lt;option value="vertical-rl"&gt;vertical-rl&lt;/option&gt;
   &lt;option value="vertical-lr"&gt;vertical-lr&lt;/option&gt;
@@ -164,7 +164,7 @@ place-content: unset;</pre>
 &lt;/select&gt;&lt;code&gt;;&lt;/code&gt;
 </pre>
 
-<pre class="brush: js notranslate">var update = function () {
+<pre class="brush: js">var update = function () {
    document.getElementById("container").style.placeContent = document.getElementById("alignContentAlignment").value + " " + document.getElementById("justifyContentAlignment").value;
 }
 
@@ -187,7 +187,7 @@ direction.addEventListener("change", function (evt) {
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css; highlight[7] notranslate">#container {
+<pre class="brush: css; highlight[7]">#container {
   display: flex;
   height:240px;
   width: 240px;

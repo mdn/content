@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{jsSidebar("JavaScript Guide")}}</div>
 
-<p><span class="seoSummary">This page provides an overall cheat sheet of all the capabilities of <code>RegExp</code> syntax by aggregating the content of the articles in the <code>RegExp</code> guide. If you need more information on a specific topic, please follow the link on the corresponding heading to access the full article or head to <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/">the guide</a>.</span></p>
+<p><span class="seoSummary">This page provides an overall cheat sheet of all the capabilities of <code>RegExp</code> syntax by aggregating the content of the articles in the <code>RegExp</code> guide. If you need more information on a specific topic, please follow the link on the corresponding heading to access the full article or head to <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">the guide</a>.</span></p>
 
 <h2 id="Character_classes"><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">Character classes</a></h2>
 
@@ -32,10 +32,10 @@ tags:
 
     <ul>
      <li>Matches any single character <em>except</em> line terminators: <code>\n</code>, <code>\r</code>, <code>\u2028</code> or <code>\u2029</code>. For example, <code>/.y/</code> matches "my" and "ay", but not "yes", in "yes make my day".</li>
-     <li>Inside a character set, the dot loses its special meaning and matches a literal dot.</li>
+     <li>Inside a character class, the dot loses its special meaning and matches a literal dot.</li>
     </ul>
 
-    <p>Note that the <code>m</code> multiline flag doesn't change the dot behavior. So to match a pattern across multiple lines, the character set <code>[^]</code> can be used — it will match any character including newlines.</p>
+    <p>Note that the <code>m</code> multiline flag doesn't change the dot behavior. So to match a pattern across multiple lines, the character class <code>[^]</code> can be used — it will match any character including newlines.</p>
 
     <p>ES2018 added the <code>s</code> "dotAll" flag, which allows the dot to also match line terminators.</p>
    </td>
@@ -98,7 +98,7 @@ tags:
   </tr>
   <tr>
    <td><code>[\b]</code></td>
-   <td>Matches a backspace. If you're looking for the word-boundary character (<code>\b</code>), see <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries">Boundaries</a>.</td>
+   <td>Matches a backspace. If you're looking for the word-boundary character (<code>\b</code>), see <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">Boundaries</a>.</td>
   </tr>
   <tr>
    <td><code>\0</code></td>
@@ -262,7 +262,7 @@ tags:
    <td><code>[xyz]<br>
     [a-c]</code></td>
    <td>
-    <p>A character set. Matches any one of the enclosed characters. You can specify a range of characters by using a hyphen, but if the hyphen appears as the first or last character enclosed in the square brackets it is taken as a literal hyphen to be included in the character set as a normal character. It is also possible to include a character class in a character set.</p>
+    <p>A character class. Matches any one of the enclosed characters. You can specify a range of characters by using a hyphen, but if the hyphen appears as the first or last character enclosed in the square brackets it is taken as a literal hyphen to be included in the character class as a normal character. </p>
 
     <p>For example, <code>[abcd]</code> is the same as <code>[a-d]</code>. They match the "b" in "brisket", and the "c" in "chop".</p>
 
@@ -277,10 +277,10 @@ tags:
      [^a-c]</code></p>
    </td>
    <td>
-    <p>A negated or complemented character set. That is, it matches anything that is not enclosed in the brackets. You can specify a range of characters by using a hyphen, but if the hyphen appears as the first or last character enclosed in the square brackets it is taken as a literal hyphen to be included in the character set as a normal character. For example, <code>[^abc]</code> is the same as <code>[^a-c]</code>. They initially match "o" in "bacon" and "h" in "chop".</p>
+    <p>A negated or complemented character class. That is, it matches anything that is not enclosed in the brackets. You can specify a range of characters by using a hyphen, but if the hyphen appears as the first or last character enclosed in the square brackets it is taken as a literal hyphen to be included in the character class as a normal character. For example, <code>[^abc]</code> is the same as <code>[^a-c]</code>. They initially match "o" in "bacon" and "h" in "chop".</p>
 
     <div class="notecard note">
-    <p>The ^ character may also indicate the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries">beginning of input</a>.</p>
+    <p>The ^ character may also indicate the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">beginning of input</a>.</p>
     </div>
    </td>
   </tr>
@@ -408,7 +408,7 @@ tags:
 
 <div class="hidden">If you are looking to contribute to this document, please also edit <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">the original article</a></div>
 
-<pre class="brush: js notranslate">// Non-binary values
+<pre class="brush: js">// Non-binary values
 \p{<em>UnicodePropertyValue</em>}
 \p{<em>UnicodePropertyName</em>=<em>UnicodePropertyValue</em>}
 

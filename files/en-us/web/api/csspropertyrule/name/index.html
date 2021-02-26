@@ -12,23 +12,30 @@ tags:
 - Reference
 - Read-only
 ---
-<div>{{APIRef("CSS Properties and Values API")}}{{SeeCompatTable}}{{draft}}</div>
+<div>{{APIRef("CSS Properties and Values API")}}</div>
 
-<p class="summary">The read-only <strong><code>name</code></strong> property of the
-  {{domxref("CSSPropertyRule")}} interface represents the property name, this being the
-  serialization of the name given to the custom property in the {{domxref("@property")}}
-  rule’s prelude.</p>
+<p class="summary">The read-only <strong><code>name</code></strong> property of the {{domxref("CSSPropertyRule")}} interface represents the property name, this being the serialization of the name given to the custom property in the {{cssxref("@property")}} rule’s prelude.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <var>name</var> = CSSPropertyRule.name;</pre>
+<pre class="syntaxbox">const <var>name</var> = <var>CSSPropertyRule</var>.name;</pre>
 
 <h3>Value</h3>
 <p>A {{domxref("USVString")}}.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>To do</p>
+
+<p>This stylesheet contains a single {{cssxref("@property")}} rule. The first {{domxref("CSSRule")}} returned will be a <code>CSSPropertyRule</code> representing this rule. The <code>name</code> property returns the string <code>"--property-name"</code>, which is the name given to the custom property in CSS.</p>
+
+<pre class="brush:css">@property --property-name {
+  syntax: '&lt;color&gt;';
+  inherits: false;
+  initial-value: #c0ffee;
+}</pre>
+
+<pre class="brush:javascript">let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].name); //the string "--property-name"</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

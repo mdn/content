@@ -18,7 +18,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>extendableMessageEvent</em> = new ExtendableMessageEvent(<em>type</em>, <em>init</em>);</pre>
+  class="brush: js">var <em>extendableMessageEvent</em> = new ExtendableMessageEvent(<em>type</em>, <em>init</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -27,7 +27,7 @@ tags:
   <dd>A {{domxref("DOMString")}} that defines the type of the message event being created.
   </dd>
   <dt>init {{optional_inline}}</dt>
-  <dd>An initialisation object, which should contain the following parameters:
+  <dd>An initialization object, which should contain the following parameters:
     <ul>
       <li><code>data</code>: The event's data — this can be any data type.</li>
       <li><code>origin</code>: A {{domxref("DOMString")}} that defines the origin of the
@@ -44,7 +44,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">var init = {
+<pre class="brush: js">var init = {
              data : 'hello message',
              source : MessagePortReference,
              ports : MessagePortListReference
@@ -73,10 +73,7 @@ var myEME = new ExtendableMessageEvent('message', init);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.ExtendableMessageEvent.ExtendableMessageEvent")}}</p>
-</div>
+<p>{{Compat("api.ExtendableMessageEvent.ExtendableMessageEvent")}}</p>
 
 <h2 id="See_also">See also</h2>
 

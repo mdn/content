@@ -40,7 +40,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html notranslate">Access-Control-Expose-Headers: &lt;header-name&gt;, &lt;header-name&gt;, ...
+<pre class="brush: html">Access-Control-Expose-Headers: &lt;header-name&gt;, &lt;header-name&gt;, ...
 Access-Control-Expose-Headers: *
 </pre>
 
@@ -58,19 +58,19 @@ Access-Control-Expose-Headers: *
 
 <p>To expose a non-CORS-safelisted request header, you can specify:</p>
 
-<pre class="notranslate">Access-Control-Expose-Headers: Content-Length</pre>
+<pre>Access-Control-Expose-Headers: Content-Length</pre>
 
 <p>To additionally expose a custom header, like <code>X-Kuma-Revision</code>, you can specify multiple headers separated by a comma:</p>
 
-<pre class="notranslate">Access-Control-Expose-Headers: Content-Length, X-Kuma-Revision</pre>
+<pre>Access-Control-Expose-Headers: Content-Length, X-Kuma-Revision</pre>
 
 <p>In requests without credentials, you can also use a wildcard value:</p>
 
-<pre class="notranslate">Access-Control-Expose-Headers: *</pre>
+<pre>Access-Control-Expose-Headers: *</pre>
 
 <p>However, this won't wildcard the {{HTTPHeader("Authorization")}} header, so if you need to expose that, you will need to list it explicitly:</p>
 
-<pre class="notranslate">Access-Control-Expose-Headers: *, Authorization</pre>
+<pre>Access-Control-Expose-Headers: *, Authorization</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

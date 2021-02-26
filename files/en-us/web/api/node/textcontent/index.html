@@ -16,12 +16,12 @@ tags:
 <div class="notecard note">
 	<p><strong>Note:</strong> <code>textContent</code> and
 		{{domxref("HTMLElement.innerText")}} are easily confused, but the two properties
-		are <a href="#Differences_from_innerText">different in important ways</a>.</p>
+		are <a href="#differences_from_innertext">different in important ways</a>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">let <var>text</var> = <var>someNode</var>.textContent
+<pre class="brush: js">let <var>text</var> = <var>someNode</var>.textContent
 <var>someOtherNode</var>.textContent = <var>string</var>
 </pre>
 
@@ -99,16 +99,16 @@ tags:
 <p>Given this HTML fragment:</p>
 
 <pre
-	class="brush: html notranslate">&lt;div id="divA"&gt;This is &lt;span&gt;some&lt;/span&gt; text!&lt;/div&gt;</pre>
+	class="brush: html">&lt;div id="divA"&gt;This is &lt;span&gt;some&lt;/span&gt; text!&lt;/div&gt;</pre>
 
 <p>... you can use <code>textContent</code> to get the element's text content:</p>
 
-<pre class="brush: js notranslate">let text = document.getElementById('divA').textContent;
+<pre class="brush: js">let text = document.getElementById('divA').textContent;
 // The text variable is now: 'This is some text!'</pre>
 
 <p>... or set the element's text content:</p>
 
-<pre class="brush: js notranslate">document.getElementById('divA').textContent = 'This text is different!';
+<pre class="brush: js">document.getElementById('divA').textContent = 'This text is different!';
 // The HTML for divA is now:
 // &lt;div id="divA"&gt;This text is different!&lt;/div&gt;
 </pre>

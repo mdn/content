@@ -18,7 +18,7 @@ tags:
 
 <p>When this is called, the {{WebExtAPIRef('runtime.onConnect')}} event will be fired in any content script belonging to this extension that are running in the specified tab. The event listener will be passed another {{WebExtAPIRef("runtime.Port")}} object. The two sides can then use the <code>Port</code> objects to exchange messages.</p>
 
-<p>For more details, see <a href="/en-US/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging">connection-based messaging</a>. You can message without creating a connection, for advice on choosing between the options, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Choosing_between_one-off_messages_and_connection-based_messaging">Choosing between one-off messages and connection-based messaging</a>.</p>
+<p>For more details, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging">connection-based messaging</a>. You can message without creating a connection, for advice on choosing between the options, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#choosing_between_one-off_messages_and_connection-based_messaging">Choosing between one-off messages and connection-based messaging</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -50,9 +50,9 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>In this example a background script listens for a click on a <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">browser action</a>, then connects to the currently active tab, then sends a message using the <code>Port</code> that's returned from <code>connect()</code>:</p>
+<p>In this example a background script listens for a click on a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2">browser action</a>, then connects to the currently active tab, then sends a message using the <code>Port</code> that's returned from <code>connect()</code>:</p>
 
-<pre class="notranslate brush: js">function connectToTab(tabs) {
+<pre class="brush: js">function connectToTab(tabs) {
   if (tabs.length &gt; 0) {
     var examplePort = browser.tabs.connect(
       tabs[0].id,

@@ -2,14 +2,14 @@
 title: CacheStorage.has()
 slug: Web/API/CacheStorage/has
 tags:
-- API
-- CacheStorage
-- Experimental
-- Method
-- Reference
-- Service Workers
-- ServiceWorker
-- has
+  - API
+  - CacheStorage
+  - Experimental
+  - Method
+  - Reference
+  - Service Workers
+  - ServiceWorker
+  - has
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">caches.has(<em>cacheName</em>).then(function(<em>boolean</em>) {
+<pre class="brush: js">caches.has(<em>cacheName</em>).then(function(<em>boolean</em>) {
   // true: your cache exists!
 });
 </pre>
@@ -47,7 +47,7 @@ tags:
 
 <pre class="brush: js">caches.has('v1').then(function(hasCache) {
   if (!hasCache) {
-    someCacheSetupfunction();
+    someCacheSetupFunction();
   } else {
     caches.open('v1').then(function(cache) {
       return cache.addAll(myAssets);
@@ -81,7 +81,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service
+  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
       Workers</a></li>
   <li>{{domxref("Cache")}}</li>
   <li>{{domxref("WindowOrWorkerGlobalScope.caches")}}</li>

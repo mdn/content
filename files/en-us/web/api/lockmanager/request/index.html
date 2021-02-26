@@ -41,7 +41,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">LockManager.request(var promise = <var>name</var>[, <var>{options}</var>], <var>callback</var>)</pre>
+  class="brush: js">LockManager.request(var promise = <var>name</var>[, <var>{options}</var>], <var>callback</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -82,7 +82,7 @@ tags:
 
 <p>The following example shows the basic use of the <code>request()</code> method with an
   asynchronous function as the callback. Once the callback is invoked, no other running
-  code on this orign can hold `<code>my_resource</code>` until the callback returns.</p>
+  code on this origin can hold `<code>my_resource</code>` until the callback returns.</p>
 
 <pre class="brush: js">await navigator.locks.request('my_resource', async lock =&gt; {
   // The lock was granted.
@@ -121,7 +121,7 @@ tags:
 <p>To grab a lock only if it isn't already being held, use the <code>ifAvailable</code>
   option. In this function <code>await</code> means the method will not return until the
   callback is complete. Since the lock is only granted if it was available, this call
-  avoids needing to wait on the lock being released elsehwere.</p>
+  avoids needing to wait on the lock being released elsewhere.</p>
 
 <pre class="brush: js">await navigator.locks.request('my_resource', {ifAvailable: true}, async lock =&gt; {
   if (!lock) {

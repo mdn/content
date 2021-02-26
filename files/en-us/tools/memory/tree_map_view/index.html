@@ -31,14 +31,14 @@ slug: Tools/Memory/Tree_map_view
 
 <p>Here are some example snapshots, as they appear in the Tree map view:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13048/treemap-domnodes.png" style="display: block; margin-left: auto; margin-right: auto; width: 844px;"></p>
+<p><img alt="" src="treemap-domnodes.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>This treemap is from the <a href="/en-US/docs/Tools/Memory/DOM_allocation_example">DOM allocation example</a>, which runs a script that creates a large number of DOM nodes (200 <code><a href="/en-US/docs/Web/API/HTMLDivElement">HTMLDivElement</a></code> objects and 4000 <code><a href="/en-US/docs/Web/API/HTMLSpanElement">HTMLSpanElement</a></code> objects). You can see how almost all the heap usage is from the <code>HTMLSpanElement</code> objects that it creates.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13046/treemap-monsters.png" style="display: block; margin-left: auto; margin-right: auto; width: 844px;"></p>
+<p><img alt="" src="treemap-monsters.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>This treemap is from the <a href="/en-US/docs/Tools/Memory/Monster_example">monster allocation example</a>, which creates three arrays, each containing 5000 monsters, each monster having a randomly-generated name. You can see that most of the heap is occupied by the strings used for the monsters' names, and the objects used to contain the monsters' other attributes.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13050/treemap-bbc.png" style="display: block; margin-left: auto; margin-right: auto; width: 844px;"></p>
+<p><img alt="" src="treemap-bbc.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>This treemap is from <a href="http://www.bbc.com/">http://www.bbc.com/</a>, and is probably more representative of real life than the examples. You can see the much larger proportion of the heap occupied by scripts, that are loaded from a large number of origins.</p>

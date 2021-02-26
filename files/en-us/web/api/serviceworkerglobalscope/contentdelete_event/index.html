@@ -38,7 +38,7 @@ tags:
 
 <p>The following example uses a <code>contentdelete</code> event handler to remove cached content related to the deleted index item.</p>
 
-<pre class="brush: js notranslate">self.addEventListener('contentdelete', event =&gt; {
+<pre class="brush: js">self.addEventListener('contentdelete', event =&gt; {
   event.waitUntil(
     caches.open('cache-name').then(cache =&gt; {
       return Promise.all([
@@ -52,7 +52,7 @@ tags:
 
 <p>You can also set up the event handler using the ServiceWorkerGlobalScope.ondelete property:</p>
 
-<pre class="brush: js notranslate">self.oncontentdelete = (event) =&gt; {
+<pre class="brush: js">self.oncontentdelete = (event) =&gt; {
   ...
 };
 </pre>

@@ -25,7 +25,7 @@ tags:
 <p>Consider an expression describable by the representation below. Note that both
     OP<sub>1</sub> and OP<sub>2</sub> are fill-in-the-blanks for OPerators.</p>
 
-<pre class="brush: js notranslate">a OP<sub>1</sub> b OP<sub>2</sub> c</pre>
+<pre class="brush: js">a OP<sub>1</sub> b OP<sub>2</sub> c</pre>
 
 <p>If <code>OP<sub>1</sub></code> and <code>OP<sub>2</sub></code> have different
     precedence levels (see the table below), the operator with the highest precedence goes
@@ -33,7 +33,7 @@ tags:
     precedence than addition and executed first, even though addition is written first in
     the code.</p>
 
-<pre class="brush: js notranslate">console.log(3 + 10 * 2);   // logs 23
+<pre class="brush: js">console.log(3 + 10 * 2);   // logs 23
 console.log(3 + (10 * 2)); // logs 23 because parentheses here are superfluous
 console.log((3 + 10) * 2); // logs 26 because the parentheses change the order
 </pre>
@@ -44,7 +44,7 @@ console.log((3 + 10) * 2); // logs 26 because the parentheses change the order
     <code>a OP<sub>1</sub> (b OP<sub>2</sub> c)</code>. Assignment operators are
     right-associative, so you can write:</p>
 
-<pre class="brush: js notranslate">a = b = 5; // same as writing a = (b = 5);
+<pre class="brush: js">a = b = 5; // same as writing a = (b = 5);
 </pre>
 
 <p>with the expected result that <code>a</code> and <code>b</code> get the value 5. This
@@ -65,7 +65,7 @@ console.log((3 + 10) * 2); // logs 26 because the parentheses change the order
         </tr>
         <tr>
             <td>
-                <pre class="brush: js notranslate">
+                <pre class="brush: js">
 function echo(name, num) {
     console.log("Evaluating the " + name + " side");
     return num;
@@ -75,7 +75,7 @@ console.log(echo("left", 6) / echo("right", 2));
 </pre>
             </td>
             <td>
-                <pre class="brush: plain notranslate">
+                <pre class="brush: plain">
 Evaluating the left side
 Evaluating the right side
 3
@@ -84,7 +84,7 @@ Evaluating the right side
         </tr>
         <tr>
             <td>
-                <pre class="brush: js notranslate">
+                <pre class="brush: js">
 function echo(name, num) {
     console.log("Evaluating the " + name + " side");
     return num;
@@ -93,7 +93,7 @@ function echo(name, num) {
 console.log(echo("left", 2) ** echo("right", 3));</pre>
             </td>
             <td>
-                <pre class="brush: plain notranslate">
+                <pre class="brush: plain">
 Evaluating the left side
 Evaluating the right side
 8</pre>
@@ -116,7 +116,7 @@ Evaluating the right side
         </tr>
         <tr>
             <td>
-                <pre class="brush: js notranslate">
+                <pre class="brush: js">
 function echo(name, num) {
     console.log("Evaluating the " + name + " side");
     return num;
@@ -126,7 +126,7 @@ console.log(echo("left", 6) / echo("middle", 2) / echo("right", 3));
 </pre>
             </td>
             <td>
-                <pre class="brush: plain notranslate">
+                <pre class="brush: plain">
 Evaluating the left side
 Evaluating the middle side
 Evaluating the right side
@@ -136,7 +136,7 @@ Evaluating the right side
         </tr>
         <tr>
             <td>
-                <pre class="brush: js notranslate">
+                <pre class="brush: js">
 function echo(name, num) {
     console.log("Evaluating the " + name + " side");
     return num;
@@ -146,7 +146,7 @@ console.log(echo("left", 2) ** echo("middle", 3) ** echo("right", 2));
 </pre>
             </td>
             <td>
-                <pre class="brush: plain notranslate">
+                <pre class="brush: plain">
 Evaluating the left side
 Evaluating the middle side
 Evaluating the right side
@@ -156,7 +156,7 @@ Evaluating the right side
         </tr>
         <tr>
             <td>
-                <pre class="brush: js notranslate">
+                <pre class="brush: js">
 function echo(name, num) {
     console.log("Evaluating the " + name + " side");
     return num;
@@ -165,7 +165,7 @@ function echo(name, num) {
 console.log((echo("left", 2) ** echo("middle", 3)) ** echo("right", 2));</pre>
             </td>
             <td>
-                <pre class="brush: plain notranslate">
+                <pre class="brush: plain">
 Evaluating the left side
 Evaluating the middle side
 Evaluating the right side
@@ -201,7 +201,7 @@ Evaluating the right side
     include logical conjunction ("AND"), nullish-coalescing, optional chaining, and the
     conditional operator. Some more examples follow.</p>
 
-<pre class="brush: js notranslate">a || (b * c);  // evaluate `a` first, then produce `a` if `a` is "truthy"
+<pre class="brush: js">a || (b * c);  // evaluate `a` first, then produce `a` if `a` is "truthy"
 a &amp;&amp; (b &lt; c);  // evaluate `a` first, then produce `a` if `a` is "falsy"
 a ?? (b || c); // evaluate `a` first, then produce `a` if `a` is not `null` and not `undefined`
 a?.b.c;        // evaluate `a` first, then produce `undefined` if `a` is `null` or `undefined`
@@ -209,7 +209,7 @@ a?.b.c;        // evaluate `a` first, then produce `undefined` if `a` is `null` 
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">3 &gt; 2 &amp;&amp; 2 &gt; 1
+<pre class="brush: js">3 &gt; 2 &amp;&amp; 2 &gt; 1
 // returns true
 
 3 &gt; 2 &gt; 1

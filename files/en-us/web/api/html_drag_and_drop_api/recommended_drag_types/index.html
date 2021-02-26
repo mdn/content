@@ -85,7 +85,7 @@ dt.setData("text/plain", "Hello there, stranger");
 
 <h2 id="file">Dragging Files</h2>
 
-<p>A local file is dragged using the <code>application/x-moz-file</code> type with a data value that is an <a href="/en/XPCOM_Interface_Reference/nsIFile">nsIFile</a> object. Non-privileged web pages canot retrieve or modify data of this type.</p>
+<p>A local file is dragged using the <code>application/x-moz-file</code> type with a data value that is an <a href="/en-US/docs/XPCOM_Interface_Reference/nsIFile">nsIFile</a> object. Non-privileged web pages cannot retrieve or modify data of this type.</p>
 
 <p>Because a file is not a string, you must use the {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} method to assign the data. Similarly, when retrieving the data, you must use the {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} method.</p>
 
@@ -94,7 +94,7 @@ dt.setData("text/plain", "Hello there, stranger");
 
 <p>If possible, include the file URL of the file using both the <code>text/uri-list</code> and <code>text/plain</code> types. These types should be added afterward so that the more specific <code>application/x-moz-file</code> type has higher priority.</p>
 
-<p>Multiple files will be received during a drop as multiple items in the data transfer. See <a href="/En/DragDrop/Dragging_and_Dropping_Multiple_Items" title="Dragging and Dropping Multiple Items">Dragging and Dropping Multiple Items</a> for more details about this.</p>
+<p>Multiple files will be received during a drop as multiple items in the data transfer. See <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items" title="Dragging and Dropping Multiple Items">Dragging and Dropping Multiple Items</a> for more details about this.</p>
 
 <p>The following example shows how to create an area for receiving dropped files:</p>
 
@@ -136,7 +136,7 @@ function doDrop(event) {
 
 <p>As with links, the data for the <code>text/plain</code> type should also contain the URL. However, a <code>data:</code> URL is not usually useful in a text context, so you may wish to exclude the <code>text/plain</code> data in this situation.</p>
 
-<p>In chrome or other privileged code, you may also use the <code>image/jpeg</code>, <code>image/png</code> or <code>image/gif</code> types, depending on the type of image. The data should be an object which implements the <a href="/en/XPCOM_Interface_Reference/nsIInputStream">nsIInputStream</a> interface. When this stream is read, it should provide the data bits for the image, as if the image was a file of that type.</p>
+<p>In chrome or other privileged code, you may also use the <code>image/jpeg</code>, <code>image/png</code> or <code>image/gif</code> types, depending on the type of image. The data should be an object which implements the <a href="/en-US/docs/XPCOM_Interface_Reference/nsIInputStream">nsIInputStream</a> interface. When this stream is read, it should provide the data bits for the image, as if the image was a file of that type.</p>
 
 <p>You should also include the <code>application/x-moz-file</code> type if the image is located on disk. In fact, this a common way in which image files are dragged.</p>
 
@@ -191,7 +191,7 @@ dataProvider.prototype = {
 
        aTransferable.getTransferData('application/x-moz-file-promise-url', urlPrimitive, dataSize);
        var url = urlPrimitive.value.QueryInterface(Components.interfaces.nsISupportsString).data;
-       console.log("URL file orignal is = " + url);
+       console.log("URL file original is = " + url);
 
        var namePrimitive = {};
        aTransferable.getTransferData('<span class="p">application/x-moz-file-promise-dest-filename</span>', namePrimitive, dataSize);
@@ -220,8 +220,8 @@ dataProvider.prototype = {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a class="internal" href="/Web/API/HTML_Drag_and_Drop_API" title="HTML Drag and Drop API">HTML Drag and Drop API (Overview)</a></li>
- <li><a class="internal" href="Web/Guide/HTML/Drag_operations" title="Drag Operations">Drag Operations</a></li>
- <li><a class="internal" href="/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items" title="Dragging and Dropping Multiple Items">Dragging and Dropping Multiple Items</a></li>
+ <li><a class="internal" href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API" title="HTML Drag and Drop API">HTML Drag and Drop API (Overview)</a></li>
+ <li><a class="internal" href="/en-US/docs/Web/Guide/HTML/Drag_operations" title="Drag Operations">Drag Operations</a></li>
+ <li><a class="internal" href="/en-US/docs/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items" title="Dragging and Dropping Multiple Items">Dragging and Dropping Multiple Items</a></li>
  <li><a href="https://html.spec.whatwg.org/multipage/interaction.html#dnd" title="Drag and Drop Standard">HTML5 Living Standard: Drag and Drop</a></li>
 </ul>

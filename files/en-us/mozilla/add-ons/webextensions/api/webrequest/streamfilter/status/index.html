@@ -12,8 +12,7 @@ tags:
 ---
 <div>{{AddonSidebar()}}</div>
 
-<div>
-<p>A string that describes the current status of the request. It will be one of the following values:</p>
+<p><span class="summary">A string that describes the current status of the request.</span> It will be one of the following values:</p>
 
 <dl>
  <dt><code>"uninitialized"</code></dt>
@@ -31,7 +30,6 @@ tags:
  <dt><code>"failed"</code></dt>
  <dd> An error has occurred and the filter has been disconnected from the request. The extension can find an error message in {{WebExtAPIRef("webRequest.StreamFilter.error", "error")}}, and may not call any filter functions.</dd>
 </dl>
-</div>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
@@ -41,7 +39,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="notranslate brush: js">function listener(details) {
+<pre class="brush: js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   console.log(filter.status);          // uninitialized
 

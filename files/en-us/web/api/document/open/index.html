@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">document.open();
+<pre class="brush: js">document.open();
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -40,7 +40,7 @@ tags:
 <p>The following simple code opens the document and replaces its content with a number of
   different HTML fragments, before closing it again.</p>
 
-<pre class="brush: js notranslate">document.open();
+<pre class="brush: js">document.open();
 document.write("&lt;p&gt;Hello world!&lt;/p&gt;");
 document.write("&lt;p&gt;I am a fish&lt;/p&gt;");
 document.write("&lt;p&gt;The number is 42&lt;/p&gt;");
@@ -65,8 +65,8 @@ document.close();
     href="/docs/Security_check_basics">principal</a> of the document whose URI it uses,
   instead of fetching the principal off the stack. As a result, you can no longer call
   {{domxref("document.write()")}} into an untrusted document from chrome, even using <a
-    class="internal" href="/en/wrappedJSObject"><code>wrappedJSObject</code></a>. See <a
-    href="/en/Security_check_basics">Security check basics</a> for more about principals.
+    class="internal" href="/en-US/docs/wrappedJSObject"><code>wrappedJSObject</code></a>. See <a
+    href="/en-US/docs/Security_check_basics">Security check basics</a> for more about principals.
 </p>
 
 <h2 id="Three-argument_document.open">Three-argument document.open()</h2>
@@ -79,14 +79,14 @@ document.close();
   <code>null</code>:</p>
 
 <pre
-  class="brush: js notranslate">document.open('https://www.github.com','', 'noopener=true')</pre>
+  class="brush: js">document.open('https://www.github.com','', 'noopener=true')</pre>
 
 <h2 id="Two-argument_document.open">Two-argument document.open()</h2>
 
 <p>Browsers used to support a two-argument <code>document.open()</code>, with the
   following signature:</p>
 
-<pre class="brush: js notranslate">document.open(<em>type</em>, <em>replace</em>)</pre>
+<pre class="brush: js">document.open(<em>type</em>, <em>replace</em>)</pre>
 
 <p>Where <code>type</code> specified the MIME type of the data you are writing (e.g.
   <code>text/html</code>) and replace if set (i.e. a string of <code>"replace"</code>)

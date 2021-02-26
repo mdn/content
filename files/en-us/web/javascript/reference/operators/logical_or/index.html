@@ -27,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>expr1</em> || <em>expr2</em>
+<pre class="brush: js"><em>expr1</em> || <em>expr2</em>
 </pre>
 
 <h2 id="Description">Description</h2>
@@ -74,7 +74,7 @@ tags:
   happens because the value of the operator is already determined after the evaluation of
   the first operand. See example:</p>
 
-<pre class="brush: js notranslate">function A(){ console.log('called A'); return false; }
+<pre class="brush: js">function A(){ console.log('called A'); return false; }
 function B(){ console.log('called B'); return true; }
 
 console.log( B() || A() );
@@ -90,7 +90,7 @@ console.log( B() || A() );
     precedence</a>).</p>
 
 <pre
-  class="brush: js notranslate">true || false &amp;&amp; false      // returns true, because &amp;&amp; is executed first
+  class="brush: js">true || false &amp;&amp; false      // returns true, because &amp;&amp; is executed first
 (true || false) &amp;&amp; false    // returns false, because operator precedence cannot apply</pre>
 
 <h2 id="Examples">Examples</h2>
@@ -99,7 +99,7 @@ console.log( B() || A() );
 
 <p>The following code shows examples of the <code>||</code> (logical OR) operator.</p>
 
-<pre class="brush: js notranslate">o1 = true  || true       // t || t returns true
+<pre class="brush: js">o1 = true  || true       // t || t returns true
 o2 = false || true       // f || t returns true
 o3 = true  || false      // t || f returns true
 o4 = false || (3 == 4)   // f || f returns false
@@ -125,21 +125,21 @@ o10 = false || varObject // f || object returns varObject
 
 <p>The following operation involving <strong>booleans</strong>:</p>
 
-<pre class="brush: js notranslate">bCondition1 &amp;&amp; bCondition2</pre>
+<pre class="brush: js">bCondition1 &amp;&amp; bCondition2</pre>
 
 <p>is always equal to:</p>
 
-<pre class="brush: js notranslate">!(!bCondition1 || !bCondition2)</pre>
+<pre class="brush: js">!(!bCondition1 || !bCondition2)</pre>
 
 <h4 id="Converting_OR_to_AND">Converting OR to AND</h4>
 
 <p>The following operation involving <strong>booleans</strong>:</p>
 
-<pre class="brush: js notranslate">bCondition1 || bCondition2</pre>
+<pre class="brush: js">bCondition1 || bCondition2</pre>
 
 <p>is always equal to:</p>
 
-<pre class="brush: js notranslate">!(!bCondition1 &amp;&amp; !bCondition2)</pre>
+<pre class="brush: js">!(!bCondition1 &amp;&amp; !bCondition2)</pre>
 
 <h3 id="Removing_nested_parentheses">Removing nested parentheses</h3>
 
@@ -149,12 +149,12 @@ o10 = false || varObject // f || object returns varObject
 <p>The following composite operation involving <strong>booleans</strong>:</p>
 
 <pre
-  class="brush: js notranslate">bCondition1 &amp;&amp; (bCondition2 || bCondition3)</pre>
+  class="brush: js">bCondition1 &amp;&amp; (bCondition2 || bCondition3)</pre>
 
 <p>is always equal to:</p>
 
 <pre
-  class="brush: js notranslate">!(!bCondition1 || !bCondition2 &amp;&amp; !bCondition3)</pre>
+  class="brush: js">!(!bCondition1 || !bCondition2 &amp;&amp; !bCondition3)</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

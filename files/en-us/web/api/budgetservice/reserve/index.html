@@ -9,7 +9,7 @@ tags:
 - Web Budget API
 - reserve
 ---
-<p>{{APIRef("Web Budget API")}}{{SeeCompatTable}}{{obsolete_header}}</p>
+<p>{{APIRef("Web Budget API")}}{{SeeCompatTable}}{{deprecated_header}}</p>
 
 <p><span class="seoSummary">The <strong><code>reserve()</code></strong> property of the
     {{domxref("BudgetService")}} interface returns a {{domxref("Promise")}} that resolves
@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var aPromise = BudgetService.reserve(operation);
+<pre class="brush: js">var aPromise = BudgetService.reserve(operation);
 aPromise.then(function(boolean){ ... });</pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -34,7 +34,4 @@ aPromise.then(function(boolean){ ... });</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.BudgetService.reserve")}}</p>
-</div>
+<p>{{Compat("api.BudgetService.reserve")}}</p>

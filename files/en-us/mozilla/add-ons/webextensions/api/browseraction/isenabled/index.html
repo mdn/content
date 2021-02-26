@@ -58,13 +58,13 @@ tags:
 
 <p>Check the global state:</p>
 
-<pre class="notranslate brush: js">browser.browserAction.isEnabled({}).then(result =&gt; {
+<pre class="brush: js">browser.browserAction.isEnabled({}).then(result =&gt; {
   console.log(result);
 });</pre>
 
 <p>  Check the state of the currently active tab:</p>
 
-<pre class="notranslate brush: js">async function enabledInActiveTab() {
+<pre class="brush: js">async function enabledInActiveTab() {
   let tabs = await browser.tabs.query({
     currentWindow:true,
     active: true

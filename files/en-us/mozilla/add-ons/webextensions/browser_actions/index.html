@@ -8,13 +8,13 @@ tags:
 
 <p>A browser action is a button you can add to the browser toolbar. Users can click the button to interact with your extension.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12966/browser-action.png" style="display: block; height: 387px; margin-left: auto; margin-right: auto; width: 782px;"></p>
+<p><img alt="" src="browser-action.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
-<p>There are two ways to specify a browser action: with a <a href="/en-US/Add-ons/WebExtensions/Popups">popup</a>, or without a popup.</p>
+<p>There are two ways to specify a browser action: with a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">popup</a>, or without a popup.</p>
 
-<p>If you don't specify a popup, then when the user clicks the button an event is dispatched to the extension, which you can listen for using <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/BrowserAction/onClicked" title="Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."><code>browserAction.onClicked</code></a>:</p>
+<p>If you don't specify a popup, then when the user clicks the button an event is dispatched to the extension, which you can listen for using <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked" title="Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."><code>browserAction.onClicked</code></a>:</p>
 
-<pre class="notranslate brush: js line-numbers  language-js"><code class="language-js">browser<span class="punctuation token">.</span>browserAction<span class="punctuation token">.</span>onClicked<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span>handleClick<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js">browser.browserAction.onClicked.addListener(handleClick);</pre>
 
 <p>If you do specify a popup, the click event is not dispatched: instead, the popup will be shown when the user clicks the button. The user will be able to interact with the popup and it will close automatically when the user clicks outside it.</p>
 
@@ -24,14 +24,14 @@ tags:
 
 <p>You define the browser action's properties - icon, title, popup - using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> key in manifest.json:</p>
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"browser_action":</span> <span class="punctuation token">{</span>
-  <span class="key token">"default_icon":</span> <span class="punctuation token">{</span>
-    <span class="key token">"19":</span> <span class="string token">"button/geo-19.png"</span><span class="punctuation token">,</span>
-    <span class="key token">"38":</span> <span class="string token">"button/geo-38.png"</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="key token">"default_title":</span> <span class="string token">"Whereami?"</span><span class="punctuation token">,</span>
-  <span class="key token">"default_popup":</span> <span class="string token">"popup/geo.html"</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: json line-numbers  language-json">&quot;browser_action&quot;: {
+  &quot;default_icon&quot;: {
+    &quot;19&quot;: &quot;button/geo-19.png&quot;,
+    &quot;38&quot;: &quot;button/geo-38.png&quot;
+  },
+  &quot;default_title&quot;: &quot;Whereami?&quot;,
+  &quot;default_popup&quot;: &quot;popup/geo.html&quot;
+}</pre>
 
 <p>The only mandatory key is <code>default_icon</code>. You can change any of these properties programmatically using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browserAction</a></code> API.</p>
 

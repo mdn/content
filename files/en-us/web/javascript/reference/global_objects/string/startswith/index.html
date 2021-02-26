@@ -20,7 +20,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>str</var>.startsWith(<var>searchString</var>[, <var>position</var>])</pre>
+  class="brush: js"><var>str</var>.startsWith(<var>searchString</var>[, <var>position</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -46,7 +46,7 @@ tags:
 
 <h3 id="Using_startsWith">Using startsWith()</h3>
 
-<pre class="brush: js notranslate">//startswith
+<pre class="brush: js">//startswith
 let str = 'To be, or not to be, that is the question.'
 
 console.log(str.startsWith('To be'))          // true
@@ -60,7 +60,7 @@ console.log(str.startsWith('not to be', 10))  // true
   available in all JavaScript implementations yet. However, you can polyfill
   <code>String.prototype.startsWith()</code> with the following snippet:</p>
 
-<pre class="brush: js notranslate">if (!String.prototype.startsWith) {
+<pre class="brush: js">if (!String.prototype.startsWith) {
     Object.defineProperty(String.prototype, 'startsWith', {
         value: function(search, rawPos) {
             var pos = rawPos &gt; 0 ? rawPos|0 : 0;

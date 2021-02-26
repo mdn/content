@@ -14,14 +14,14 @@ tags:
 
 <p>Open <strong>/controllers/bookController.js</strong>, and add the following line at the top of the file:</p>
 
-<pre class="brush: js line-numbers  language-js notranslate">const { body,validationResult } = require('express-validator');
+<pre class="brush: js line-numbers  language-js">const { body,validationResult } = require('express-validator');
 </pre>
 
 <h2 id="Controller—get_route">Controller—get route</h2>
 
 <p>Find the exported <code>book_create_get()</code> controller method and replace it with the following code.</p>
 
-<pre class="brush: js line-numbers language-js notranslate">// Display book create form on GET.
+<pre class="brush: js line-numbers language-js">// Display book create form on GET.
 exports.book_create_get = function(req, res, next) {
 
     // Get all authors and genres, which we can use for adding to our book.
@@ -45,7 +45,7 @@ exports.book_create_get = function(req, res, next) {
 
 <p>Find the exported <code>book_create_post()</code> controller method and replace it with the following code.</p>
 
-<pre class="brush: js line-numbers language-js notranslate">// Handle book create on POST.
+<pre class="brush: js line-numbers language-js">// Handle book create on POST.
 exports.book_create_post = [
     // Convert the genre to an array.
     (req, res, next) =&gt; {
@@ -119,7 +119,7 @@ exports.book_create_post = [
 
 <p>The main difference with respect to the other form handling code is how we sanitize the genre information. The form returns an array of <code>Genre</code> items (while for other fields it returns a string). In order to validate the information we first convert the request to an array (required for the next step).</p>
 
-<pre class="brush: js line-numbers language-js notranslate">// Convert the genre to an array.
+<pre class="brush: js line-numbers language-js">// Convert the genre to an array.
 (req, res, next) =&gt; {
     if(!(req.body.genre instanceof Array)){
         if(typeof req.body.genre === 'undefined')
@@ -132,11 +132,11 @@ exports.book_create_post = [
 
 <p>We then use a wildcard (<code>*</code>) in the sanitiser to individually validate each of the genre array entries. The code below shows how - this translates to "sanitise every item below key <code>genre</code>".</p>
 
-<pre class="brush: js line-numbers language-js notranslate">body('genre.*').escape(),</pre>
+<pre class="brush: js line-numbers language-js">body('genre.*').escape(),</pre>
 
 <p>The final difference with respect to the other form handling code is that we need to pass in all existing genres and authors to the form. In order to mark the genres that were checked by the user we iterate through all the genres and add the <code>checked='true'</code> parameter to those that were in our post data (as reproduced in the code fragment below).</p>
 
-<pre class="brush: js line-numbers language-js notranslate">// Mark our selected genres as checked.
+<pre class="brush: js line-numbers language-js">// Mark our selected genres as checked.
 for (let i = 0; i &lt; results.genres.length; i++) {
     if (book.genre.indexOf(results.genres[i]._id) &gt; -1) {
         // Current genre is selected. Set "checked" flag.
@@ -148,7 +148,7 @@ for (let i = 0; i &lt; results.genres.length; i++) {
 
 <p>Create <strong>/views/book_form.pug</strong> and copy in the text below.</p>
 
-<pre class="line-numbers language-html notranslate">extends layout
+<pre class="line-numbers language-html">extends layout
 
 block content
   h1= title
@@ -203,7 +203,7 @@ block content
 
 <p>Run the application, open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>, then select the <em>Create new book</em> link. If everything is set up correctly, your site should look something like the following screenshot. After you submit a valid book, it should be saved and you'll be taken to the book detail page.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14484/LocalLibary_Express_Book_Create_Empty.png" style="display: block; height: 498px; margin: 0px auto; width: 1000px;"></p>
+<p><img alt="" src="locallibary_express_book_create_empty.png" style="display: block; margin: 0px auto;"></p>
 
 <h2 id="Next_steps">Next steps</h2>
 

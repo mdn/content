@@ -38,7 +38,7 @@ button.addEventListener('click', function(e) {
 
 <p>This shows a popup using the operating system’s own notifications service:</p>
 
-<p><img alt="Notification of js13kPWA." src="https://mdn.mozillademos.org/files/15930/js13kpwa-notification.png" style="display: block; height: 640px; margin: 0px auto; width: 360px;"></p>
+<p><img alt="Notification of js13kPWA." src="js13kpwa-notification.png" style="display: block; margin: 0px auto;"></p>
 
 <p>When the user confirms to receive notifications, the app can then show them. The result of the user action can be default, granted or denied. The default option is chosen when the user won't make a choice, and the other two are set when the user clicks yes or no respectively.</p>
 
@@ -69,7 +69,7 @@ button.addEventListener('click', function(e) {
 
 <p>The technology is still at a very early stage — some working examples use the Google Cloud Messaging platform, but are being rewritten to support <a href="https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/">VAPID</a> (Voluntary Application Identification), which offers an extra layer of security for your app. You can examine the <a href="https://serviceworke.rs/push-payload.html">Service Workers Cookbook examples</a>, try to set up a push messaging server using <a href="https://firebase.google.com/">Firebase</a>, or build your own server (using Node.js for example).</p>
 
-<p>As mentioned before, to be able to receive push messages, you have to have a service worker, the basics of which are already explained in the <a href="/en-US/docs/Web/Apps/Progressive/Offline_Service_workers">Making PWAs work offline with Service workers</a> article. Inside the service worker, a push service subscription mechanism is created.</p>
+<p>As mentioned before, to be able to receive push messages, you have to have a service worker, the basics of which are already explained in the <a href="/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers">Making PWAs work offline with Service workers</a> article. Inside the service worker, a push service subscription mechanism is created.</p>
 
 <pre class="brush: js">registration.pushManager.getSubscription() .then( /* ... */ );</pre>
 

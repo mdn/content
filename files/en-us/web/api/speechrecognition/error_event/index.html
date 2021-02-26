@@ -8,9 +8,7 @@ tags:
 ---
 <div>{{SeeCompatTable}} {{APIRef("Web Speech API")}}</div>
 
-<div>
 <p>The <code><strong>error</strong></code> event of the <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a> {{domxref("SpeechRecognition")}} object is fired when a speech recognition error occurs.</p>
-</div>
 
 <table class="properties">
  <tbody>
@@ -37,7 +35,7 @@ tags:
 
 <p>You can use the <code>error</code> event in an <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> method:</p>
 
-<pre class="brush: js notranslate">var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+<pre class="brush: js">var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
 recognition.addEventListener('error', function(event) {
   console.log('Speech recognition error detected: ' + event.error);
@@ -45,7 +43,7 @@ recognition.addEventListener('error', function(event) {
 
 <p>Or use the <code><a href="/en-US/docs/Web/API/SpeechRecognition/onerror">onerror</a></code> event handler property:</p>
 
-<pre class="brush: js notranslate">recognition.onerror = function(event) {
+<pre class="brush: js">recognition.onerror = function(event) {
   console.log('Speech recognition error detected: ' + event.error);
 }</pre>
 
@@ -68,10 +66,7 @@ recognition.addEventListener('error', function(event) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.SpeechRecognition.error_event")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

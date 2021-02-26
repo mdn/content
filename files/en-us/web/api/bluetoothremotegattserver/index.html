@@ -2,13 +2,13 @@
 title: BluetoothRemoteGATTServer
 slug: Web/API/BluetoothRemoteGATTServer
 tags:
-- API
-- Bluetooth
-- BluetoothRemoteGATTServer
-- Experimental
-- Interface
-- Reference
-- Web Bluetooth API
+  - API
+  - Bluetooth
+  - BluetoothRemoteGATTServer
+  - Experimental
+  - Interface
+  - Reference
+  - Web Bluetooth API
 ---
 <div>{{APIRef("Bluetooth API")}}{{SeeCompatTable}}</div>
 
@@ -25,7 +25,7 @@ tags:
 
 <h2 id="Interface">Interface</h2>
 
-<pre class="brush: js notranslate">interface BluetoothRemoteGATTServer {
+<pre class="brush: js">interface BluetoothRemoteGATTServer {
   readonly attribute BluetoothDevice device;
   readonly attribute boolean connected;
 
@@ -55,10 +55,10 @@ tags:
   <dd>Causes the script execution environment to disconnect from <code>this.device</code>.
   </dd>
   <dt>{{DOMxRef("BluetoothRemoteGATTServer.getPrimaryService()")}}</dt>
-  <dd>Returns a promise to the primary {{DOMxRef("BluetoothGATTService")}} offered by the
+  <dd>Returns a promise to the primary {{DOMxRef("BluetoothRemoteGATTService")}} offered by the
     bluetooth device for a specified <code>BluetoothServiceUUID</code>.</dd>
   <dt>{{DOMxRef("BluetoothRemoteGATTServer.getPrimaryServices()")}}</dt>
-  <dd>Returns a promise to a list of primary {{DOMxRef("BluetoothGATTService")}} objects
+  <dd>Returns a promise to a list of primary {{DOMxRef("BluetoothRemoteGATTService")}} objects
     offered by the bluetooth device for a specified <code>BluetoothServiceUUID</code>.
   </dd>
 </dl>

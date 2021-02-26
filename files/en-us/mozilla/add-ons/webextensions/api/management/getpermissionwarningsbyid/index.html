@@ -17,7 +17,7 @@ tags:
 
 <p>Given the ID of an add-on, this function returns the permission warnings for it as an array of strings.</p>
 
-<p>This API requires the "management" <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions">API permission</a>.</p>
+<p>This API requires the "management" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">API permission</a>.</p>
 
 <p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
@@ -49,7 +49,7 @@ tags:
 
 <p>Log the permission warnings for the add-on whose ID is "my-add-on":</p>
 
-<pre class="notranslate brush: js">var id = "my-add-on";
+<pre class="brush: js">var id = "my-add-on";
 
 function gotWarnings(warnings) {
   for (warning of warnings) {

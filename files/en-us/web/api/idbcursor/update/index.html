@@ -28,7 +28,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>anIDBRequest</em> = <em>myIDBCursor</em>.update(<em>value</em>);</pre>
+  class="brush: js">var <em>anIDBRequest</em> = <em>myIDBCursor</em>.update(<em>value</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -110,7 +110,7 @@ tags:
     style="white-space: pre-line; line-height: 1.5;">view example live</a><span
     style="line-height: 1.5;">.)</span></p>
 
-<pre class="brush: js notranslate">function updateResult() {
+<pre class="brush: js">function updateResult() {
   list.textContent = '';
   const transaction = db.transaction(['rushAlbumList'], 'readwrite');
   const objectStore = transaction.objectStore('rushAlbumList');
@@ -162,12 +162,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-  <div>
-
-    <p>{{Compat("api.IDBCursor.update")}}</p>
-  </div>
-</div>
+<p>{{Compat("api.IDBCursor.update")}}</p>
 
 <h2 id="See_also">See also</h2>
 

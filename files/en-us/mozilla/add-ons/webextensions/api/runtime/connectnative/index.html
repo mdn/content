@@ -39,7 +39,7 @@ tags:
 
 <dl>
  <dt><code>application</code></dt>
- <dd><code>string</code>. The name of the native application to connect to. This must match the "name" property in the <a href="/en-US/Add-ons/WebExtensions/Native_messaging#App_manifest">native application's manifest file</a>.</dd>
+ <dd><code>string</code>. The name of the native application to connect to. This must match the "name" property in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging#app_manifest">native application's manifest file</a>.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -56,24 +56,24 @@ tags:
 
 <p>This example connects to the native application "ping_pong" and starts listening for messages from it. It also sends the native application a message when the user clicks a browser action icon:</p>
 
-<pre class="notranslate brush: js">/*
-On startup, connect to the "ping_pong" app.
+<pre class="brush: js">/*
+On startup, connect to the &quot;ping_pong&quot; app.
 */
-var port = <code class="language-js">browser</code>.runtime.connectNative("ping_pong");
+var port = browser.runtime.connectNative(&quot;ping_pong&quot;);
 
 /*
 Listen for messages from the app.
 */
 port.onMessage.addListener((response) =&gt; {
-  console.log("Received: " + response);
+  console.log(&quot;Received: &quot; + response);
 });
 
 /*
 On a click on the browser action, send the app a message.
 */
-<code class="language-js">browser</code>.browserAction.onClicked.addListener(() =&gt; {
-  console.log("Sending:  ping");
-  port.postMessage("ping");
+browser.browserAction.onClicked.addListener(() =&gt; {
+  console.log(&quot;Sending:  ping&quot;);
+  port.postMessage(&quot;ping&quot;);
 });</pre>
 
 <p>{{WebExtExamples}}</p>

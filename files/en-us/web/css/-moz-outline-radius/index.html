@@ -9,11 +9,16 @@ tags:
   - Reference
   - 'recipe:css-shorthand-property'
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+<div>{{CSSRef}}</div>
+
+<div class="notecard warning">
+  <h4>Scheduled for removal</h4>
+  <p>From Firefox 88 onwards, the standard {{cssxref("outline")}} property will follow the shape of {{cssxref("border-radius")}}, making <code>-moz-outline-radius</code> properties redundant. As such, this property will be removed.</p>
+</div>
 
 <p>In Mozilla applications like Firefox, the <strong><code>-moz-outline-radius</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> can be used to give an element's {{cssxref("outline")}} rounded corners.</p>
 
-<pre class="brush:css notranslate">/* One value */
+<pre class="brush:css">/* One value */
 -moz-outline-radius: 25px;
 
 /* Two values */
@@ -70,7 +75,7 @@ tags:
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -80,11 +85,11 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p&gt;This element has a rounded outline!&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;This element has a rounded outline!&lt;/p&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   margin: 5px;
   border: 1px solid black;
   outline: dotted red;

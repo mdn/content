@@ -27,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>request</em> = <em>ObjectStore</em>.openCursor();
+<pre class="brush: js">var <em>request</em> = <em>ObjectStore</em>.openCursor();
 var <em>request</em> = <em>ObjectStore</em>.openCursor(<em>query</em>);
 var <em>request</em> = <em>ObjectStore</em>.openCursor(<em>query</em>, <em>direction</em>);
 </pre>
@@ -40,7 +40,7 @@ var <em>request</em> = <em>ObjectStore</em>.openCursor(<em>query</em>, <em>direc
     this will default to a range containing only that key. If nothing is passed, this will
     default to a key range that selects all the records in this object store.</dd>
   <dt>direction {{optional_inline}}</dt>
-  <dd>An {{domxref("IDBCursorDirection")}} telling the cursor what direction to travel.
+  <dd>An <a href="https://w3c.github.io/IndexedDB/#enumdef-idbcursordirection"><code>IDBCursorDirection</code></a> telling the cursor what direction to travel.
     Valid values are <code>"next"</code>, <code>"nextunique"</code>, <code>"prev"</code>,
     and <code>"prevunique"</code>. The default is <code>"next"</code>.</dd>
 </dl>
@@ -99,8 +99,7 @@ request.onsuccess = function(event) {
 };
 </pre>
 
-<h2 id="Specification"><span style="font-size: 2.14285714285714rem;">Specification</span>
-</h2>
+<h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
   <tbody>
@@ -125,10 +124,7 @@ request.onsuccess = function(event) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.IDBObjectStore.openCursor")}}</p>
-</div>
+<p>{{Compat("api.IDBObjectStore.openCursor")}}</p>
 
 <h2 id="See_also">See also</h2>
 

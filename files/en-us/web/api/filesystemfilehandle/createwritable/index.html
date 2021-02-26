@@ -2,13 +2,13 @@
 title: FileSystemFileHandle.createWritable()
 slug: Web/API/FileSystemFileHandle/createWritable
 tags:
-- Directory
-- File
-- File System Access API
-- FileSystemFileHandle
-- Method
-- stream
-- working with files
+  - Directory
+  - File
+  - File System Access API
+  - FileSystemFileHandle
+  - Method
+  - stream
+  - working with files
 ---
 <div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 </div>
@@ -25,7 +25,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>FileSystemWritableFileStream</var> = FileSystemFileHandle.createWritable();</pre>
+  class="brush: js">var <var>FileSystemWritableFileStream</var> = FileSystemFileHandle.createWritable();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -57,7 +57,7 @@ tags:
 <p>The following asynchronous function writes the given contents to the file handle, and
   thus to disk.</p>
 
-<pre class="brush: js notranslate">async function writeFile(fileHandle, contents) {
+<pre class="brush: js">async function writeFile(fileHandle, contents) {
   // Create a FileSystemWritableFileStream to write to.
   const writable = await fileHandle.createWritable();
 
@@ -79,9 +79,8 @@ tags:
       <th scope="col">Comment</th>
     </tr>
     <tr>
-      <td>{{SpecName('File System
-        Access','#dom-filesystemfilehandle-createwritable','createWritable')}}</td>
-      <td>{{Spec2('File System Access')}}</td>
+      <td>{{SpecName('File System Access API','#dom-filesystemfilehandle-createwritable','createWritable')}}</td>
+      <td>{{Spec2('File System Access API')}}</td>
       <td>Initial definition.</td>
     </tr>
   </tbody>
@@ -94,7 +93,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/docs/Web/API/File_System_Access_API">File System Access API</a></li>
+  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
   <li><a href="https://web.dev/file-system-access/">The File System Access API:
       simplifying access to local files</a></li>
 </ul>

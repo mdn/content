@@ -8,7 +8,7 @@ tags:
 - Property
 - Reference
 ---
-<div>{{obsolete_header}} {{APIRef("Battery API")}}</div>
+<div>{{deprecated_header}} {{APIRef("Battery API")}}</div>
 
 <p>The <code><strong>BatteryManager.onlevelchange</strong></code> property specifies an
   event listener to receive {{event("levelchange")}} events. These events occur when the
@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">navigator.battery.onlevelchange = funcRef</pre>
+<pre class="brush: js">navigator.battery.onlevelchange = funcRef</pre>
 
 <p>Where <code>battery</code> is a {{domxref("BatteryManager")}} object, and
   <code>funcRef</code> is a function to be called when the {{event("levelchange")}} event
@@ -27,7 +27,7 @@ tags:
 <h3 id="HTML">HTML</h3>
 
 <pre class="brush: html">&lt;div id="level"&gt;(battery level unknown)&lt;/div&gt;
-&lt;div id="stateBaterry"&gt;(charging state unknown)&lt;/div&gt;
+&lt;div id="stateBattery"&gt;(charging state unknown)&lt;/div&gt;
 </pre>
 
 <h3 id="JavaScript">JavaScript</h3>
@@ -37,11 +37,11 @@ tags:
     document.querySelector('#level').textContent = battery.level;
 
     if(battery.charging) {
-      document.querySelector('#stateBaterry').textContent =
+      document.querySelector('#stateBattery').textContent =
           "Charging time: " + (battery.chargingTime / 60);
     }
     else {
-      document.querySelector('#stateBaterry').textContent =
+      document.querySelector('#stateBattery').textContent =
           "Discharging time: " + (battery.dischargingTime / 60);
     }
   };

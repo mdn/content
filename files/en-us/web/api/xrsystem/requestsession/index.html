@@ -28,14 +28,13 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>sessionPromise = xr</em>.requestSession(<em>sessionMode</em>, <em>sessionInit</em>)
+<pre class="brush: js">var <em>sessionPromise = xr</em>.requestSession(<em>sessionMode</em>, <em>sessionInit</em>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><span style="display: none;"> </span><code>sessionMode</code><span
-      style="display: none;"> </span></dt>
+  <dt><code>sessionMode</code></dt>
   <dd>
     <p>A {{domxref("DOMString")}} whose value is one of those included in the
       {{domxref("XRSessionMode")}} <code>enum</code>. The supported modes are:</p>
@@ -84,7 +83,7 @@ tags:
   <code>"immersive-vr"</code> session. If the {{jsxref("Promise")}} resolves, it sets up a
   session and initiates the animation loop.</p>
 
-<pre class="brush: js notranslate">navigator.xr.requestSession("immersive-vr")
+<pre class="brush: js">navigator.xr.requestSession("immersive-vr")
 .then((xrSession) =&gt; {
   xrSession.addEventListener('end', onXRSessionEnded);
   // Do necessary session setup here.
@@ -107,7 +106,7 @@ tags:
   <code>requestSession()</code> using the same session option passed to
   <code>isSessionSupported()</code>.</p>
 
-<pre class="brush: js notranslate">if (navigator.xr) {
+<pre class="brush: js">if (navigator.xr) {
   navigator.xr.isSessionSupported('immersive-vr')
   .then((isSupported) =&gt; {
     if (isSupported) {

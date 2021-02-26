@@ -46,7 +46,7 @@ tags:
 
 <p>The following example shows how to create a List formatter using the English language.</p>
 
-<pre class="brush: js notranslate">const list = ['Motorcycle', 'Bus', 'Car'];
+<pre class="brush: js">const list = ['Motorcycle', 'Bus', 'Car'];
 
  console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).format(list));
 // &gt; Motorcycle, Bus and Car
@@ -62,7 +62,7 @@ tags:
 
 <p>The following example shows how to create a List formatter returning formatted parts</p>
 
-<pre class="brush: js notranslate">const list = ['Motorcycle', 'Bus', 'Car'];
+<pre class="brush: js">const list = ['Motorcycle', 'Bus', 'Car'];
 console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).formatToParts(list));
 
 // [ { "type": "element", "value": "Motorcycle" },

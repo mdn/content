@@ -57,13 +57,13 @@ tags:
 
 <p>React utilizes features of modern JavaScript for many of its patterns. Its biggest departure from JavaScript comes with the use of <a href="https://reactjs.org/docs/introducing-jsx.html">JSX</a> syntax. JSX extends JavaScript's syntax so that HTML-like code can live alongside it. For example:</p>
 
-<pre class="brush: js notranslate">const heading = &lt;h1&gt;Mozilla Developer Network&lt;/h1&gt;;</pre>
+<pre class="brush: js">const heading = &lt;h1&gt;Mozilla Developer Network&lt;/h1&gt;;</pre>
 
 <p>This heading constant is known as a <strong>JSX expression</strong>. React can use it to render that <code><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;</a></code> tag in our app.</p>
 
 <p>Suppose we wanted to wrap our heading in a <code><a href="/en-US/docs/Web/HTML/Element/header">&lt;header&gt;</a></code> tag, for semantic reasons? The JSX approach allows us to nest our elements within each other, just like we do with HTML:</p>
 
-<pre class="brush: js notranslate">const header = (
+<pre class="brush: js">const header = (
   &lt;header&gt;
     &lt;h1&gt;Mozilla Developer Network&lt;/h1&gt;
   &lt;/header&gt;
@@ -72,7 +72,7 @@ tags:
 <div class="notecard note">
 <p><strong>Note</strong>: The parentheses in the previous snippet aren't unique to JSX, and don’t have any effect on your application. They're a signal to you (and your computer) that the multiple lines of code inside are part of the same expression. You could just as well write the header expression like this:</p>
 
-<pre class="brush: js notranslate">const header = &lt;header&gt;
+<pre class="brush: js">const header = &lt;header&gt;
     &lt;h1&gt;Mozilla Developer Network&lt;/h1&gt;
 &lt;/header&gt;</pre>
 
@@ -81,7 +81,7 @@ tags:
 
 <p>Of course, your browser can't read JSX without help. When compiled (using a tool like <a href="https://babeljs.io/">Babel</a> or <a href="https://parceljs.org/">Parcel</a>), our header expression would look like this:</p>
 
-<pre class="brush: js notranslate">const header = React.createElement("header", null,
+<pre class="brush: js">const header = React.createElement("header", null,
   React.createElement("h1", null, "Mozilla Developer Network")
 );</pre>
 
@@ -105,7 +105,7 @@ tags:
 
 <p>If you're using Windows, you will need to install some software to give you parity with Unix/macOS terminal in order to use the terminal commands mentioned in this tutorial. <strong>Gitbash</strong> (which comes as part of the <a href="https://gitforwindows.org/">git for Windows toolset</a>) or <strong><a href="https://docs.microsoft.com/en-us/windows/wsl/about">Windows Subsystem for Linux</a></strong> (<strong>WSL</strong>) are both suitable. See <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">Command line crash course</a> for more information on these, and on terminal commands in general.</p>
 
-<p>Also bear in mind that React and ReactDOM produce apps that only work on a fairly modern set of browsers — IE9+ by way of some polyfills. It is recommended that you use a modern browser like Firefox, Safari, or Chrome when working through these tutorials.</p>
+<p>Also bear in mind that React and ReactDOM produce apps that only work on a fairly modern set of browsers — IE9+ by way of some polyfills. It is recommended that you use a modern browser like Firefox, Microsoft Edge, Safari, or Chrome when working through these tutorials.</p>
 
 <p>Also, see the following for more information:</p>
 
@@ -119,7 +119,7 @@ tags:
 
 <p>create-react-app takes one argument: the name you'd like to give your app. create-react-app uses this name to make a new directory, then creates the necessary files inside it. Make sure you <code>cd</code> to the place you'd like your app to live on your hard drive, then run the following in your terminal:</p>
 
-<pre class="brush: bash notranslate">npx create-react-app moz-todo-react</pre>
+<pre class="brush: bash">npx create-react-app moz-todo-react</pre>
 
 <p>This creates a <code>moz-todo-react</code> directory, and does several things inside it:</p>
 
@@ -133,7 +133,7 @@ tags:
 <div class="notecard note">
 <p><strong>Note</strong>: if you have the yarn package manager installed, create-react-app will default to using it instead of npm. If you have both package managers installed and explicitly want to use NPM, you can add the flag <code>--use-npm</code> when you run create-react-app:</p>
 
-<pre class="brush: bash notranslate">npx create-react-app moz-todo-react --use-npm</pre>
+<pre class="brush: bash">npx create-react-app moz-todo-react --use-npm</pre>
 </div>
 
 <p>create-react-app will display a number of messages in your terminal while it works; this is normal! This might take a few minutes, so now might be a good time to go make a cup of tea.</p>
@@ -146,7 +146,7 @@ tags:
 
 <p>create-react-app gives us everything we need to develop a React application. Its initial file structure looks like this:</p>
 
-<pre class="notranslate">moz-todo-react
+<pre>moz-todo-react
 ├── README.md
 ├── node_modules
 ├── package.json
@@ -179,7 +179,7 @@ tags:
 
 <p>Let's open <code>src/App.js</code>, since our browser is prompting us to edit it. This file contains our first component, <code>App</code>, and a few other lines of code:</p>
 
-<pre class="brush: js notranslate">import React from 'react';
+<pre class="brush: js">import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -211,7 +211,7 @@ export default App;</pre>
 
 <p>The <code>import</code> statements at the top of the file allow <code>App.js</code> to use code that has been defined elsewhere. Let's look at these statements more closely.</p>
 
-<pre class="brush: js notranslate">import React from 'react';
+<pre class="brush: js">import React from 'react';
 import logo from './logo.svg';
 import './App.css';</pre>
 
@@ -229,7 +229,7 @@ import './App.css';</pre>
 
 <p>Let's look at <code>App</code> more closely.</p>
 
-<pre class="brush: js notranslate">function App() {
+<pre class="brush: js">function App() {
   return (
     &lt;div className="App"&gt;
       &lt;header className="App-header"&gt;
@@ -258,7 +258,7 @@ import './App.css';</pre>
 
 <p>Your <code>App</code> component should now look like this:</p>
 
-<pre class="brush: js notranslate">function App() {
+<pre class="brush: js">function App() {
   return (
     &lt;div className="App"&gt;
       &lt;header className="App-header"&gt;
@@ -279,7 +279,7 @@ import './App.css';</pre>
 
 <p>Let’s open <code>src/index.js</code>, because that's where the <code>App</code> component is being used. This file is the entry point for our app, and it initially looks like this:</p>
 
-<pre class="brush: js notranslate">import React from 'react';
+<pre class="brush: js">import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -316,7 +316,7 @@ serviceWorker.unregister();</pre>
 
 <p>Your final <code>index.js</code> file should look like this:</p>
 
-<pre class="brush: js notranslate">import React from 'react';
+<pre class="brush: js">import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -331,13 +331,13 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</pre>
 
 <p>Back in <code>App.js</code>, let’s focus on line 9:</p>
 
-<pre class="brush: js notranslate">&lt;img src={logo} className="App-logo" alt="logo" /&gt;</pre>
+<pre class="brush: js">&lt;img src={logo} className="App-logo" alt="logo" /&gt;</pre>
 
 <p>Here, the <code>&lt;img /&gt;</code> tag's <code>src</code> attribute value is in curly braces. This is how JSX recognizes variables. React will see <code>{logo}</code>, know you are referring to the logo import on line 2 of our app, then retrieve the logo file and render it.</p>
 
 <p>Let's try making a variable of our own. Before the return statement of <code>App</code>, add <code>const subject = 'React';</code>. Your <code>App</code> component should now look like this:</p>
 
-<pre class="brush: js notranslate">function App() {
+<pre class="brush: js">function App() {
   const subject = "React";
   return (
     &lt;div className="App"&gt;
@@ -353,7 +353,7 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</pre>
 
 <p>Change line 8 to use our <code>subject</code> variable instead of the word "world", like this:</p>
 
-<pre class="brush: js notranslate">function App() {
+<pre class="brush: js">function App() {
   const subject = "React";
   return (
     &lt;div className="App"&gt;
@@ -379,11 +379,11 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</pre>
 
 <p>Add a prop of <code>subject</code> to the <code>&lt;App/&gt;</code> component call, with a value of <code>Clarice</code>. When you are done, your code should look something like this:</p>
 
-<pre class="brush: js notranslate">ReactDOM.render(&lt;App subject="Clarice" /&gt;, document.getElementById('root'));</pre>
+<pre class="brush: js">ReactDOM.render(&lt;App subject="Clarice" /&gt;, document.getElementById('root'));</pre>
 
 <p>Back in <code>App.js</code>, let's revisit the App function itself, which reads like this (with the <code>return</code> statement shortened for brevity):</p>
 
-<pre class="brush: js notranslate">function App() {
+<pre class="brush: js">function App() {
   const subject = "React";
   return (
     // return statement
@@ -392,7 +392,7 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</pre>
 
 <p>Change the signature of the <code>App</code> function so that it accepts <code>props</code> as a parameter, and delete the <code>subject</code> const. Just like any other function parameter, you can put <code>props</code> in a <code>console.log()</code> to print it to your browser's console. Go ahead and do that before the <code>return</code> statement, like so:</p>
 
-<pre class="brush: js notranslate">function App(props) {
+<pre class="brush: js">function App(props) {
   console.log(props);
   return (
     // return statement
@@ -401,13 +401,13 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</pre>
 
 <p>Save your file and check your browser's JavaScript console. You should see something like this logged:</p>
 
-<pre class="brush: js notranslate">Object { subject: "Clarice" }</pre>
+<pre class="brush: js">Object { subject: "Clarice" }</pre>
 
 <p>The object property <code>subject</code> corresponds to the <code>subject</code> prop we added to our <code>&lt;App /&gt;</code> component call, and the string <code>Clarice</code> corresponds to its value. Component props in React are always collected into objects in this fashion.</p>
 
 <p>Now that <code>subject</code> is one of our props, let's utilize it in <code>App.js</code>. Change the <code>subject</code> constant so that, instead of defining it as the string <code>React</code>, you are reading the value of <code>props.subject</code>. You can also delete your <code>console.log()</code> if you want.</p>
 
-<pre class="brush: js notranslate">function App(props) {
+<pre class="brush: js">function App(props) {
   const subject = props.subject;
   return (
     // return statement

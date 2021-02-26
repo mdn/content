@@ -34,7 +34,7 @@ tags:
 
 <p>The popular tool <em><a href="https://github.com/postcss/autoprefixer">Autoprefixer</a></em> has been updated to support the <code>-ms-</code> grid version. By default, grid prefixes are disabled, but you can enable it with <code>grid: true</code> option.</p>
 
-<pre class="notranslate">autoprefixer({ grid: 'autoplace' })</pre>
+<pre>autoprefixer({ grid: 'autoplace' })</pre>
 
 <p>Grid prefixes are disabled by default because some properties can’t be prefixed.</p>
 
@@ -53,7 +53,7 @@ tags:
 <p>The {{cssxref("float")}} no longer applies, and I can use the CSS Box Alignment property {{cssxref("align-self")}} to align my content to the end of the container:</p>
 
 <div id="enhancement_1">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 img {
     max-width: 100%;
     display: block;
@@ -84,7 +84,7 @@ img {
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="media"&gt;
+<pre class="brush: html">&lt;div class="media"&gt;
     &lt;div class="image"&gt;&lt;img src="http://placehold.it/150x150" alt="placeholder"&gt;&lt;/div&gt;
     &lt;div class="text"&gt;This is a media object example. I am using floats for older browsers and grid for new ones.&lt;/div&gt;
 &lt;/div&gt;
@@ -95,7 +95,7 @@ img {
 
 <p>The image below shows the media object in a non-supporting browser on the left, and a supporting one on the right:</p>
 
-<p><img alt="A simple example of overriding a floated layout using grid." src="https://mdn.mozillademos.org/files/14743/10-float-simple-override.png" style="height: 308px; width: 1620px;"></p>
+<p><img alt="A simple example of overriding a floated layout using grid." src="10-float-simple-override.png"></p>
 
 <h3 id="Using_feature_queries">Using feature queries</h3>
 
@@ -105,7 +105,7 @@ img {
 
 <div id="enhancement_2">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -124,7 +124,7 @@ img {
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper ul {
+<pre class="brush: css">.wrapper ul {
     overflow: hidden;
     margin: 0 -10px;
     padding: 0;
@@ -137,7 +137,7 @@ img {
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
     &lt;ul&gt;
         &lt;li class="card"&gt;&lt;h2&gt;One&lt;/h2&gt;
             &lt;p&gt;We can use CSS Grid to overwrite older methods.&lt;/p&gt;
@@ -166,19 +166,19 @@ img {
 
 <p>The example demonstrates the typical problem that we have with floated layouts: if additional content is added to any one card, the layout breaks.</p>
 
-<p><img alt="A floated cards layout demonstrating the problem caused by uneven content height." src="https://mdn.mozillademos.org/files/14745/10-floated-cards.png" style="height: 536px; width: 550px;"></p>
+<p><img alt="A floated cards layout demonstrating the problem caused by uneven content height." src="10-floated-cards.png"></p>
 
 <p>As a concession for older browsers, I have set a {{cssxref("min-height")}} on the items, and hope that my content editors won’t add too much content and make a mess of the layout!</p>
 
 <p>I then enhance the layout using grid. I can turn my {{HTMLElement("ul")}} into a grid container with three column tracks. However, the width I have assigned to the list items themselves still applies, and it now makes those items a third of the width of the track:</p>
 
-<p><img alt="After applying grid to our container, the width of the items is now incorrect as they display at one third of the item width." src="https://mdn.mozillademos.org/files/14747/10-float-width-problem.png" style="height: 721px; width: 550px;"></p>
+<p><img alt="After applying grid to our container, the width of the items is now incorrect as they display at one third of the item width." src="10-float-width-problem.png"></p>
 
 <p>If I reset the width to <code>auto</code>, then this will stop the float behavior happening for older browsers. I need to be able to define the width for older browsers, and remove the width for grid supporting browsers. Thanks to <a href="/en-US/docs/Web/CSS/@supports">CSS Feature Queries</a> I can do this, right in my CSS.</p>
 
 <p><em>Feature queries</em> will look very familiar if you have ever used a <a href="/en-US/docs/Web/CSS/Media_Queries">media query</a> to create a responsive layout. Rather than checking a {{glossary("viewport")}} width, or some feature of the browser or device, we check for support of a CSS property and value pair using an {{cssxref("@supports")}} rule. Inside the feature query, we can then write any CSS we need to apply our modern layout, and remove anything required for the older layout.</p>
 
-<pre class="brush: css notranslate">@supports (display: grid) {
+<pre class="brush: css">@supports (display: grid) {
     .wrapper {
         /* do anything for grid supporting browsers here. */
     }
@@ -187,11 +187,11 @@ img {
 
 <p>Feature queries have excellent browser support, and all of the browsers that support the updated grid specification support feature queries too. You can use them to deal with the issue we have with our enhanced: floated layout.</p>
 
-<p>I use an <code>@supports</code> rule to check for support of <code>display: grid</code>. I then do my grid code on the {{HTMLElement("ul")}}, set my width and {{cssxref("min-height")}} on the {{HTMLElement("li")}} to <code>auto</code>. I also remove the margins and negative margins, and replace the spacing with the {{cssxref("grid-gap")}} property. This means I don’t get a final margin on the last row of boxes. The layout now works, even if there is more content in one of the cards, than the others:</p>
+<p>I use an <code>@supports</code> rule to check for support of <code>display: grid</code>. I then do my grid code on the {{HTMLElement("ul")}}, set my width and {{cssxref("min-height")}} on the {{HTMLElement("li")}} to <code>auto</code>. I also remove the margins and negative margins, and replace the spacing with the {{cssxref("gap")}} property. This means I don’t get a final margin on the last row of boxes. The layout now works, even if there is more content in one of the cards, than the others:</p>
 
 <div id="enhancement_3">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -210,7 +210,7 @@ img {
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper ul {
+<pre class="brush: css">.wrapper ul {
     overflow: hidden;
     margin: 0 -10px;
     padding: 0;
@@ -236,7 +236,7 @@ img {
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
     &lt;ul&gt;
         &lt;li class="card"&gt;&lt;h2&gt;One&lt;/h2&gt;
             &lt;p&gt;We can use CSS Grid to overwrite older methods.&lt;/p&gt;
@@ -272,7 +272,7 @@ img {
 
 <div id="enhancement_4">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -292,7 +292,7 @@ img {
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper ul {
+<pre class="brush: css">.wrapper ul {
     margin: 0 -10px;
     padding: 0;
     list-style: none;
@@ -318,7 +318,7 @@ img {
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
     &lt;ul&gt;
         &lt;li class="card"&gt;
             &lt;h2&gt;One&lt;/h2&gt;

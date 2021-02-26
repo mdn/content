@@ -15,7 +15,7 @@ tags:
 
 <p>JavaScript is a <em>loosely typed</em> and <em>dynamic</em> language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:</p>
 
-<pre class="brush: js notranslate">let foo = 42;    // foo is now a number
+<pre class="brush: js">let foo = 42;    // foo is now a number
 foo     = 'bar'; // foo is now a string
 foo     = true;  // foo is now a boolean
 </pre>
@@ -49,7 +49,7 @@ foo     = true;  // foo is now a boolean
  </li>
 </ul>
 
-<p>Keep in mind the only valuable purpose of <code>typeof</code> operator usage is checking the Data Type. If we wish to check any Structural Type derived from Object it is pointless to use <code>typeof</code> for that, as we will always receive <code>"object"</code>. The indeed proper way to check what sort of Object we are using is {{jsxref("Operators/instanceof", "instanceof")}} keyword. But even in that case there might be misconceptions.</p>
+<p>Keep in mind the only valuable purpose of <code>typeof</code> operator usage is checking the Data Type. If we wish to check any Structural Type derived from Object it is pointless to use <code>typeof</code> for that, as we will always receive <code>"object"</code>. The proper way to check what sort of Object we are using is the {{jsxref("Operators/instanceof", "instanceof")}} keyword. But even in that case there might be misconceptions.</p>
 
 <p>As we can see the meaning of every primitive type is obvious except of undefined and null which are almost the same. This happens as the concept of Time is strictly connected with the purpose of algorithms. We can purport something that does not yet exist or does not exist anymore: <strong>undefined</strong>. But when we wish to be able to represent something that exists being empty, we have to invent another keyword. And that is what <strong>null</strong> stands for: the beginning of structural meaning.</p>
 
@@ -87,7 +87,7 @@ foo     = true;  // foo is now a boolean
 
 <p>In the praxis, this has almost no impact. For example, <code>+0 === -0</code> is <code>true</code>. However, you are able to notice this when you divide by zero:</p>
 
-<pre class="brush: js notranslate">&gt; 42 / +0
+<pre class="brush: js">&gt; 42 / +0
 Infinity
 &gt; 42 / -0
 -Infinity
@@ -96,7 +96,7 @@ Infinity
 <p>Although a number often represents only its value, JavaScript provides {{jsxref("Operators/Bitwise_Operators", "binary (bitwise) operators")}}.</p>
 
 <div class="notecard note">
-<p><strong>Caution:</strong> Although bitwise operators <em>can</em> be used to represent several Boolean values within a single number using <a class="external" href="https://en.wikipedia.org/wiki/Mask_%28computing%29">bit masking</a>, this is usually considered a bad practice. JavaScript offers other means to represent a set of Booleans (like an array of Booleans, or an object with Boolean values assigned to named properties). Bit masking also tends to make the code more difficult to read, understand, and maintain.</p>
+<p><strong>Caution:</strong> Although bitwise operators <em>can</em> be used to represent several Boolean values within a single number using <a href="https://en.wikipedia.org/wiki/Mask_%28computing%29">bit masking</a>, this is usually considered a bad practice. JavaScript offers other means to represent a set of Booleans (like an array of Booleans, or an object with Boolean values assigned to named properties). Bit masking also tends to make the code more difficult to read, understand, and maintain.</p>
 </div>
 
 <p>It may be necessary to use such techniques in very constrained environments, like when trying to cope with the limitations of local storage, or in extreme cases (such as when each bit over the network counts). This technique should only be considered when it is the last measure that can be taken to optimize size.</p>
@@ -111,7 +111,7 @@ Infinity
 
 <p>This example demonstrates, where incrementing the {{jsxref("Number.MAX_SAFE_INTEGER")}} returns the expected result:</p>
 
-<pre class="brush: js notranslate">&gt; const x = 2n ** 53n;
+<pre class="brush: js">&gt; const x = 2n ** 53n;
 9007199254740992n
 &gt; const y = x + 1n;
 9007199254740993n
@@ -291,7 +291,7 @@ Infinity
 
 <h3 id="Normal_objects_and_functions">"Normal" objects, and functions</h3>
 
-<p>A JavaScript object is a mapping between <em>keys</em> and <em>values</em>. Keys are strings (or {{jsxref("Symbol")}}s), and <em>values</em> can be anything. This makes objects a natural fit for <a class="external" href="https://en.wikipedia.org/wiki/Hash_table">hashmaps</a>.</p>
+<p>A JavaScript object is a mapping between <em>keys</em> and <em>values</em>. Keys are strings (or {{jsxref("Symbol")}}s), and <em>values</em> can be anything. This makes objects a natural fit for <a href="https://en.wikipedia.org/wiki/Hash_table">hashmaps</a>.</p>
 
 <p>Functions are regular objects with the additional capability of being <em>callable</em>.</p>
 

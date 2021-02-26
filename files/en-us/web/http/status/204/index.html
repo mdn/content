@@ -10,19 +10,19 @@ tags:
 <div>{{HTTPSidebar}}</div>
 
 <p>The HTTP <strong><code>204 No Content</code></strong> success status response code
-  indicates that the request has succeeded, but that the client doesn't need to go away
-  from its current page. A 204 response is cacheable by default. An {{HTTPHeader("ETag")}}
-  header is included in such a response.</p>
+  indicates that a request has succeeded, but that the client doesn't need to navigate away
+  from its current page.</p>
 
-<p>The common use case is to return <code>204</code> as a result of a
-  {{HTTPMethod("PUT")}} request, updating a resource, without changing the current content
-  of the page displayed to the user. If the resource is created, {{HTTPStatus("201")}}
-  <code>Created</code> is returned instead. If the page should be changed to the newly
-  updated page, the {{HTTPStatus("200")}} should be used instead.</p>
+<p>This might be used, for example, when implementing "save and continue editing" functionality for a wiki site.
+  In this case a {{HTTPMethod("PUT")}} request would be used to save the page, and the <code>204 No Content</code> response 
+  would be sent to indicate that the editor should not be replaced by some other page.</p>
+
+<p>A 204 response is cacheable by default (an {{HTTPHeader("ETag")}} header is included in such a response).</p> 
+
 
 <h2 id="Status">Status</h2>
 
-<pre class="brush: html notranslate">204 No Content</pre>
+<pre class="brush: html">204 No Content</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

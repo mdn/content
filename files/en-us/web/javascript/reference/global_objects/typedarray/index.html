@@ -168,7 +168,7 @@ tags:
   {{jsxref("BigInt64Array")}}. These objects all have a common syntax for their
   constructors:</p>
 
-<pre class="brush: js notranslate">new <var>TypedArray</var>();
+<pre class="brush: js">new <var>TypedArray</var>();
 new <var>TypedArray</var>(<var>length</var>);
 new <var>TypedArray</var>(<var>typedArray</var>);
 new <var>TypedArray</var>(<var>object</var>);
@@ -253,6 +253,8 @@ new <var>TypedArray</var>(<var>buffer</var> [, <var>byteOffset</var> [, <var>len
 <h2 id="Instance_methods">Instance methods</h2>
 
 <dl>
+  <dt>{{jsxref("TypedArray.prototype.at()")}}</dt>
+  <dd>Takes an integer value and returns the item at that index. This method allows for negative integers, which count back from the last item.</dd>
   <dt>{{jsxref("TypedArray.prototype.copyWithin()")}}</dt>
   <dd>Copies a sequence of array elements within the array. See also
     {{jsxref("Array.prototype.copyWithin()")}}.</dd>
@@ -351,11 +353,11 @@ new <var>TypedArray</var>(<var>buffer</var> [, <var>byteOffset</var> [, <var>len
   constructor as a function without <code>new</code> will throw a {{jsxref("TypeError")}}.
 </p>
 
-<pre class="brush: js example-bad notranslate">var dv = Int8Array([1, 2, 3]);
+<pre class="brush: js example-bad">var dv = Int8Array([1, 2, 3]);
 // TypeError: calling a builtin Int8Array constructor
 // without new is forbidden</pre>
 
-<pre class="brush: js example-good notranslate">var dv = new Int8Array([1, 2, 3]);</pre>
+<pre class="brush: js example-good">var dv = new Int8Array([1, 2, 3]);</pre>
 
 <h3 id="Property_access">Property access</h3>
 
@@ -366,7 +368,7 @@ new <var>TypedArray</var>(<var>buffer</var> [, <var>byteOffset</var> [, <var>len
   look at object properties. You can still use named properties, just like with all
   objects.</p>
 
-<pre class="brush: js notranslate">// Setting and getting using standard array syntax
+<pre class="brush: js">// Setting and getting using standard array syntax
 var int16 = new Int16Array(2);
 int16[0] = 42;
 console.log(int16[0]); // 42

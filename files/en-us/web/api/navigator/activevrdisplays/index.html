@@ -13,7 +13,7 @@ tags:
 - WebVR
 - activeVRDisplays
 ---
-<div>{{DefaultAPISidebar("WebVR API")}}{{Obsolete_header}}</div>
+<div>{{DefaultAPISidebar("WebVR API")}}{{deprecated_header}}</div>
 
 <p>The <strong><code>activeVRDisplays</code></strong> read-only property of the
   {{domxref("Navigator")}} interface returns an array containing every
@@ -23,7 +23,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var myActiveDisplays = navigator.activeVRDisplays;</pre>
+  class="brush: js">var myActiveDisplays = navigator.activeVRDisplays;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -31,7 +31,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">function showActive() {
+<pre class="brush: js">function showActive() {
   var displays = navigator.activeVRDisplays;
   for(var i = 0; i &lt; displays.length; i++) {
     console.log('Display ' + displays[i].displayId + ' is active.');

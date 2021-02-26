@@ -2,29 +2,29 @@
 title: IDBDatabase.transaction()
 slug: Web/API/IDBDatabase/transaction
 tags:
-- API
-- Database
-- IDBDatabase
-- IndexedDB
-- Method
-- Reference
-- Storage
+  - API
+  - Database
+  - IDBDatabase
+  - IndexedDB
+  - Method
+  - Reference
+  - Storage
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
 <div>
   <p>The <strong><code>transaction</code></strong> method of the
-    {{domxref("IDBDatabase")}} interface imm<span style="line-height: 1.5;">ediately
+    {{domxref("IDBDatabase")}} interface immediately
       returns a transaction object ({{domxref("IDBTransaction")}}) containing the
       {{domxref("IDBTransaction.objectStore")}} method, which you can use to access your
-      object store.</span></p>
+      object store.</p>
 
   <p>{{AvailableInWorkers}}</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>IDBDatabase</em>.transaction(<em>storeNames</em>);
+<pre class="brush: js"><em>IDBDatabase</em>.transaction(<em>storeNames</em>);
 <em>IDBDatabase</em>.transaction(<em>storeNames</em>, <em>mode</em>);
 <em>IDBDatabase</em>.transaction(<em>storeNames</em>, <em>mode, options</em>);
 </pre>
@@ -38,13 +38,13 @@ tags:
     If you need to access only one object store, you can specify its name as a string.
     Therefore the following lines are equivalent:</dd>
   <dd>
-    <pre class="brush: js notranslate">var transaction = db.transaction(['my-store-name']);
+    <pre class="brush: js">var transaction = db.transaction(['my-store-name']);
 var transaction = db.transaction('my-store-name');</pre>
   </dd>
   <dd>If you need to access all object stores in the database, you can use the property
     {{domxref("IDBDatabase.objectStoreNames")}}:
     <pre
-      class="brush: js notranslate">var transaction = db.transaction(db.objectStoreNames);</pre>
+      class="brush: js">var transaction = db.transaction(db.objectStoreNames);</pre>
   </dd>
   <dd>Passing an empty array will throw an exception.</dd>
   <dt><code>mode</code> {{optional_inline}}</dt>
@@ -58,7 +58,7 @@ var transaction = db.transaction('my-store-name');</pre>
   <dd>If you need to open the object store in <code>readwrite</code> mode to change data,
     you would use the following:
     <pre
-      class="brush:js; notranslate">var transaction = db.transaction('my-store-name', "readwrite");</pre>
+      class="brush:js;">var transaction = db.transaction('my-store-name', "readwrite");</pre>
 
     <p>As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to
       increase performance (see {{Bug("1112702")}}), which is the same behavior as other
@@ -114,7 +114,7 @@ var transaction = db.transaction('my-store-name');</pre>
   <tbody>
     <tr>
       <td>
-        <code><a href="/en-US/docs/IndexedDB/IDBDatabaseException#NOT_ALLOWED_ERR">I</a>nvalidStateError</code>
+        <code><a href="/en-US/docs/Web/API/IDBDatabaseException#not_allowed_err">InvalidStateError</a></code>
       </td>
       <td>
         <p>The <code>close()</code> method has previously been called on this
@@ -143,11 +143,11 @@ var transaction = db.transaction('my-store-name');</pre>
 <p>In this example we open a database connection, then use transaction() to open a
   transaction on the database. For a complete example, see our <a
     href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do
-    Notifications</a><span style="line-height: 1.5;"> app (</span><a
+    Notifications</a> app (<a
     href="https://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">view
-    example live</a><span style="line-height: 1.5;">.)</span></p>
+    example live</a>.)</p>
 
-<pre class="brush: js notranslate">var db;
+<pre class="brush: js">var db;
 
 // Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
@@ -182,8 +182,7 @@ transaction.onerror = function(event) {
 var objectStore = transaction.objectStore("toDoList");
 // etc.</pre>
 
-<h2 id="Specification"><span style="font-size: 2.14285714285714rem;">Specification</span>
-</h2>
+<h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
   <tbody>
@@ -208,10 +207,7 @@ var objectStore = transaction.objectStore("toDoList");
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.IDBDatabase.transaction")}}</p>
-</div>
+<p>{{Compat("api.IDBDatabase.transaction")}}</p>
 
 <h2 id="See_also">See also</h2>
 

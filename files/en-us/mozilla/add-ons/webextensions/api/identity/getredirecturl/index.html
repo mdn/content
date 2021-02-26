@@ -15,9 +15,9 @@ tags:
 
 <p>Generates a URL that you can use as a redirect URL.</p>
 
-<p>The URL is derived from your extension's ID, so if you use this function you should probably set your extension's ID explicitly using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a></code> key (otherwise, each time you <a href="/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">temporarily install the extension</a>, you'll get a different redirect URL).</p>
+<p>The URL is derived from your extension's ID, so if you use this function you should probably set your extension's ID explicitly using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a></code> key (otherwise, each time you <a href="https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/">temporarily install the extension</a>, you'll get a different redirect URL).</p>
 
-<p>See <a href="/en-US/Add-ons/WebExtensions/API/identity#Getting_the_redirect_URL">Getting a redirect URL</a> for more information on redirect URLs.</p>
+<p>See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/identity#getting_the_redirect_url">Getting a redirect URL</a> for more information on redirect URLs.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -42,7 +42,7 @@ tags:
 
 <p>Get the redirect URL:</p>
 
-<pre class="notranslate brush: js">var redirectURL = browser.identity.getRedirectURL();</pre>
+<pre class="brush: js">var redirectURL = browser.identity.getRedirectURL();</pre>
 
 <p>{{WebExtExamples}}</p>
 

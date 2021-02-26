@@ -17,14 +17,14 @@ tags:
 
 <ol>
  <li>Plan your plug-in: decide on the services you want the plug-in software to provide and how it will interact with the browser and the special media for which the plug-in is created.</li>
- <li>Decide the MIME type for the plug-in (see <a href="#Registering_Plug-ins">Registering Plug-ins</a>).</li>
+ <li>Decide the MIME type for the plug-in (see <a href="#registering_plug-ins">Registering Plug-ins</a>).</li>
  <li>Set up your development environment properly. You can use a variety of environments to create a plug-in, but make sure that you have the necessary files from the plugin SDK.</li>
  <li>Create a plug-in project.</li>
- <li>Write your plug-in code and implement the appropriate Plug-in API methods for basic plug-in operation. You'll find an overview of the Plug-in API methods in this chapter, as well as separate chapters for all of the major functional areas of the Plug-in API. Also see <a href="#Making_Plug-ins_Scriptable">Making Plug-ins Scriptable</a> for more information about making plug-ins accessible from the browser.</li>
- <li>Build the plug-in for your operating system. See "<a href="#Building_Plug-ins">Building Plug-ins</a>".</li>
- <li>Install the plug-in in the plug-in directory for your operating system. See <a href="#Installing_Plug-ins">Installing Plug-ins</a>.</li>
+ <li>Write your plug-in code and implement the appropriate Plug-in API methods for basic plug-in operation. You'll find an overview of the Plug-in API methods in this chapter, as well as separate chapters for all of the major functional areas of the Plug-in API. Also see <a href="#making_plug-ins_scriptable">Making Plug-ins Scriptable</a> for more information about making plug-ins accessible from the browser.</li>
+ <li>Build the plug-in for your operating system. See "<a href="#building_plug-ins">Building Plug-ins</a>".</li>
+ <li>Install the plug-in in the plug-in directory for your operating system. See <a href="#installing_plug-ins">Installing Plug-ins</a>.</li>
  <li>Test your plug-in and debug as necessary.</li>
- <li>Create an HTML page and embed the plug-in object. For information about the HTML elements to use, see <a href="/en/Gecko_Plugin_API_Reference/Plug-in_Basics#Using_HTML_to_Display_Plug-ins">Using HTML to Display Plug-ins</a>. To see your plug-in in action, display the HTML page that calls it in the browser.</li>
+ <li>Create an HTML page and embed the plug-in object. For information about the HTML elements to use, see <a href="/en-US/Gecko_Plugin_API_Reference/Plug-in_Basics#using_html_to_display_plug-ins">Using HTML to Display Plug-ins</a>. To see your plug-in in action, display the HTML page that calls it in the browser.</li>
 </ol>
 
 <h3 id="Registering_Plug-ins">Registering Plug-ins</h3>
@@ -46,16 +46,16 @@ tags:
 <p>There are some variations to how plug-ins are handled on different platforms. The following sections describe platform-specific discovery and registration:</p>
 
 <ul>
- <li><a href="#MS_Windows">MS Windows</a></li>
- <li><a href="#Unix">Unix</a></li>
- <li><a href="#Mac_OS_X">Mac OS X</a></li>
+ <li><a href="#ms_windows">MS Windows</a></li>
+ <li><a href="#unix">Unix</a></li>
+ <li><a href="#mac_os_x">Mac OS X</a></li>
 </ul>
 
 <h5 id="MS_Windows">MS Windows</h5>
 
-<p>On Windows, plug-ins are found according to the section <a href="/en/Gecko_Plugin_API_Reference/Plug-in_Basics#How_Gecko_Finds_Plug-ins">How Gecko Finds Plug-ins</a>.</p>
+<p>On Windows, plug-ins are found according to the section <a href="/en-US/Gecko_Plugin_API_Reference/Plug-in_Basics#how_gecko_finds_plug-ins">How Gecko Finds Plug-ins</a>.</p>
 
-<p>To determine the MIME types and file extensions that the plug-in handles, the browser normally uses the content of the registry entries for the plug-in described below in <a href="/en/Gecko_Plugin_API_Reference/Plug-in_Development_Overview#Windows_Installation_Using_the_Registry">installation using the registry</a>.</p>
+<p>To determine the MIME types and file extensions that the plug-in handles, the browser normally uses the content of the registry entries for the plug-in described below in <a href="/en-US/Gecko_Plugin_API_Reference/Plug-in_Development_Overview#windows_installation_using_the_registry">installation using the registry</a>.</p>
 
 <p>But when the plug-in is loaded from a well-known directory, a different method must be used. In this case to ensure the plug-in file will be loaded, it should have a name in the form of "np*.dll". Also, the Windows version information for the plug-in DLL will be used to determines the MIME types, file extensions, file open template, plug-in name, and description.</p>
 
@@ -80,11 +80,11 @@ tags:
 
 <h5 id="Unix">Unix</h5>
 
-<p>On Unix, plug-ins are found according to the section <a href="/en/Gecko_Plugin_API_Reference/Plug-in_Basics#How_Gecko_Finds_Plug-ins">How Gecko Finds Plug-ins</a>.</p>
+<p>On Unix, plug-ins are found according to the section <a href="/en-US/Gecko_Plugin_API_Reference/Plug-in_Basics#how_gecko_finds_plug-ins">How Gecko Finds Plug-ins</a>.</p>
 
-<p>To determine the MIME types and file extensions that the plug-in handles, the browser loads each library and calls into the <code><a href="/en-US/Add-ons/Plugins/Reference/NP_GetMIMEDescription">NP_GetMIMEDescription</a></code> entry point. This exported C function should return a string containing the type, extension list, and type description separated by colons. Each MIME types should be separated by semicolons. For example: <code>image/xbm:xbm:X Bitmap</code> or for 2 MIME types: image/xbm:xbm:X Bitmap;image/png:png:Portable Network Graphics. This information will then appear in the <code><a href="/en/DOM/window.navigator.mimeTypes">navigator.mimeTypes</a></code> DOM object.</p>
+<p>To determine the MIME types and file extensions that the plug-in handles, the browser loads each library and calls into the <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NP_GetMIMEDescription">NP_GetMIMEDescription</a></code> entry point. This exported C function should return a string containing the type, extension list, and type description separated by colons. Each MIME types should be separated by semicolons. For example: <code>image/xbm:xbm:X Bitmap</code> or for 2 MIME types: image/xbm:xbm:X Bitmap;image/png:png:Portable Network Graphics. This information will then appear in the <code><a href="/en-US/docs/Web/API/NavigatorPlugins/mimeTypes">navigator.mimeTypes</a></code> DOM object.</p>
 
-<p><code><a href="/en-US/Add-ons/Plugins/Reference/NPP_GetValue">NPP_GetValue</a></code> is called after the plug-in is initialized to get the scripting interface while <code><a href="/en-US/Add-ons/Plugins/Reference/NP_GetValue">NP_GetValue</a></code> is called during initialization to retrieve the plug-in's name and description, which will appear in the <code><a href="/en/DOM/window.navigator.plugins">navigator.plugins</a></code> DOM object which is used to populate <em>about:plugins</em>.</p>
+<p><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPP_GetValue">NPP_GetValue</a></code> is called after the plug-in is initialized to get the scripting interface while <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NP_GetValue">NP_GetValue</a></code> is called during initialization to retrieve the plug-in's name and description, which will appear in the <code><a href="/en-US/docs/Web/API/NavigatorPlugins/plugins">navigator.plugins</a></code> DOM object which is used to populate <em>about:plugins</em>.</p>
 
 <div class="warning">
 <p><strong>Caution:</strong> Gecko caches the values returned by these functions and will only call it if the plug-in's timestamp has changed. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=125469" title="[pluggerrc changes not read] Plugin caching preventing dynamic mime types through NP_GetMIMEDescritpion">bug 125469</a>.</p>
@@ -92,9 +92,9 @@ tags:
 
 <h4 id="Mac_OS_X">Mac OS X</h4>
 
-<p>Mac OS X plug-ins are found according to the section <a href="/en/Gecko_Plugin_API_Reference/Plug-in_Basics#How_Gecko_Finds_Plug-ins" style="text-decoration: none; color: rgb(4, 137, 183) !important; cursor: default;">How Gecko Finds Plug-ins</a>. Plug-ins are identified by file type NSPL.</p>
+<p>Mac OS X plug-ins are found according to the section <a href="/en-US/Gecko_Plugin_API_Reference/Plug-in_Basics#how_gecko_finds_plug-ins" style="text-decoration: none; color: rgb(4, 137, 183) !important; cursor: default;">How Gecko Finds Plug-ins</a>. Plug-ins are identified by file type NSPL.</p>
 
-<p>To determine the supported MIME types, Gecko first checks for <a class="external" href="http://developer.apple.com/mac/library/documentation/InternetWeb/Conceptual/WebKit_PluginProgTopic/Concepts/AboutPlugins.html#//apple_ref/doc/uid/30001248-198944">registry information in the plugins Info.plist</a>. If nothing is found there, Gecko checks for an <code><a href="/en-US/Add-ons/Plugins/Reference/NP_GetMIMEDescription">NP_GetMIMEDescription</a></code> entry point, and will use the information returned by this function.</p>
+<p>To determine the supported MIME types, Gecko first checks for <a class="external" href="http://developer.apple.com/mac/library/documentation/InternetWeb/Conceptual/WebKit_PluginProgTopic/Concepts/AboutPlugins.html#//apple_ref/doc/uid/30001248-198944">registry information in the plugins Info.plist</a>. If nothing is found there, Gecko checks for an <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NP_GetMIMEDescription">NP_GetMIMEDescription</a></code> entry point, and will use the information returned by this function.</p>
 
 <div class="warning">
 <p><strong>Note:</strong> The resource method described below is deprecated. Plugins should use the Info.plist approach, and only use the following method as a supplement to support older browsers.</p>
@@ -152,38 +152,38 @@ tags:
 <p>A windowless plug-in can call the following Netscape methods to draw itself:</p>
 
 <ul>
- <li><a href="/en/NPN_ForceRedraw">NPN_ForceRedraw</a>: Force a paint message for windowless plug-ins.</li>
- <li><a href="/en/NPN_InvalidateRect">NPN_InvalidateRect</a>: Invalidate an area in a windowless plug-in before repainting or refreshing.</li>
- <li><a href="/en/NPN_InvalidateRegion">NPN_InvalidateRegion</a>: Invalidate an area in a windowless plug-in before repainting or refreshing.</li>
+ <li><a href="/en-US/NPN_ForceRedraw">NPN_ForceRedraw</a>: Force a paint message for windowless plug-ins.</li>
+ <li><a href="/en-US/NPN_InvalidateRect">NPN_InvalidateRect</a>: Invalidate an area in a windowless plug-in before repainting or refreshing.</li>
+ <li><a href="/en-US/NPN_InvalidateRegion">NPN_InvalidateRegion</a>: Invalidate an area in a windowless plug-in before repainting or refreshing.</li>
 </ul>
 
 <p>The browser calls these Plug-in methods:</p>
 
 <ul>
- <li><a href="/en/NPP_GetValue">NPP_GetValue</a>: Query the plug-in for information.</li>
- <li><a href="/en/NPP_Print">NPP_Print</a>: Request a platform-specific print operation for the instance.</li>
- <li><a href="/en/NPP_SetValue">NPP_SetValue</a>: Set the browser information.</li>
- <li><a href="/en/NPP_SetWindow">NPP_SetWindow</a>: Set the window in which a plug-in draws.</li>
- <li><a href="/en/NPP_HandleEvent">NPP_HandleEvent</a>: Deliver a platform-specific event to the instance.</li>
+ <li><a href="/en-US/NPP_GetValue">NPP_GetValue</a>: Query the plug-in for information.</li>
+ <li><a href="/en-US/NPP_Print">NPP_Print</a>: Request a platform-specific print operation for the instance.</li>
+ <li><a href="/en-US/NPP_SetValue">NPP_SetValue</a>: Set the browser information.</li>
+ <li><a href="/en-US/NPP_SetWindow">NPP_SetWindow</a>: Set the window in which a plug-in draws.</li>
+ <li><a href="/en-US/NPP_HandleEvent">NPP_HandleEvent</a>: Deliver a platform-specific event to the instance.</li>
 </ul>
 
 <p>The plug-in can call these Netscape methods to query and set information:</p>
 
 <ul>
- <li><a href="/en/NPN_GetValue">NPN_GetValue</a>: Get the browser information.</li>
- <li><a href="/en/NPN_SetValue">NPN_SetValue</a>: Set plug-in the browser information.</li>
+ <li><a href="/en-US/NPN_GetValue">NPN_GetValue</a>: Get the browser information.</li>
+ <li><a href="/en-US/NPN_SetValue">NPN_SetValue</a>: Set plug-in the browser information.</li>
 </ul>
 
-<p>For information about these processes, see <a href="/en/Gecko_Plugin_API_Reference/Drawing_and_Event_Handling">Drawing and Event Handling.</a></p>
+<p>For information about these processes, see <a href="/en-US/Gecko_Plugin_API_Reference/Drawing_and_Event_Handling">Drawing and Event Handling.</a></p>
 
 <h3 id="Handling_Memory">Handling Memory</h3>
 
 <p>Plug-in developers can take advantage of the memory features provided in the Plug-in API to allocate and free memory.</p>
 
 <ul>
- <li>Use the <a href="/en/NPN_MemAlloc">NPN_MemAlloc</a> method to allocate memory from the browser.</li>
- <li>Use the <a href="/en/NPN_MemFree">NPN_MemFree</a> method to free memory allocated with NPN_MemAlloc.</li>
- <li>Use the <a href="/en/NPN_MemFlush">NPN_MemFlush</a> method to free memory (Mac OS only) before calling memory-intensive Mac Toolbox calls.</li>
+ <li>Use the <a href="/en-US/NPN_MemAlloc">NPN_MemAlloc</a> method to allocate memory from the browser.</li>
+ <li>Use the <a href="/en-US/NPN_MemFree">NPN_MemFree</a> method to free memory allocated with NPN_MemAlloc.</li>
+ <li>Use the <a href="/en-US/NPN_MemFlush">NPN_MemFlush</a> method to free memory (Mac OS only) before calling memory-intensive Mac Toolbox calls.</li>
 </ul>
 
 <h3 id="Sending_and_Receiving_Streams">Sending and Receiving Streams</h3>
@@ -205,32 +205,32 @@ tags:
 <p>The Plug-in API provides methods that plug-ins can use to retrieve data from or post data to a URL anywhere on the network, provide hyperlinks to other documents, post form data to CGI scripts using HTTP, or upload files to a remote server using FTP.</p>
 
 <ul>
- <li>Use <a href="/en/NPN_GetURL">NPN_GetURL</a> to request the browser to load a URL into a particular browser window or frame for display, or to deliver the data of that URL to the plug-in instance in a new stream.</li>
- <li>The <a href="/en/NPN_GetURLNotify">NPN_GetURLNotify</a> function operates like <code>NPN_GetURL</code>, except that it notifies the plug-in of the result when the operation completes.</li>
- <li>Use <a href="/en/NPN_PostURL">NPN_PostURL</a> to send data to a URL from a memory buffer or file. The result from the server can also be sent to a particular browser window or frame for display, or delivered to the plug-in instance in a new stream.</li>
- <li>The <a href="/en/NPN_PostURLNotify">NPN_PostURLNotify</a> function operates like <code>NPN_PostURL</code>, except that it notifies the plug-in of the result when the operation completes.</li>
+ <li>Use <a href="/en-US/NPN_GetURL">NPN_GetURL</a> to request the browser to load a URL into a particular browser window or frame for display, or to deliver the data of that URL to the plug-in instance in a new stream.</li>
+ <li>The <a href="/en-US/NPN_GetURLNotify">NPN_GetURLNotify</a> function operates like <code>NPN_GetURL</code>, except that it notifies the plug-in of the result when the operation completes.</li>
+ <li>Use <a href="/en-US/NPN_PostURL">NPN_PostURL</a> to send data to a URL from a memory buffer or file. The result from the server can also be sent to a particular browser window or frame for display, or delivered to the plug-in instance in a new stream.</li>
+ <li>The <a href="/en-US/NPN_PostURLNotify">NPN_PostURLNotify</a> function operates like <code>NPN_PostURL</code>, except that it notifies the plug-in of the result when the operation completes.</li>
 </ul>
 
-<p>For information about using these methods, see <a href="/en/Gecko_Plugin_API_Reference/URLs">URLs</a>.</p>
+<p>For information about using these methods, see <a href="/en-US/Gecko_Plugin_API_Reference/URLs">URLs</a>.</p>
 
-<p>Starting in Gecko 10.0 (Firefox 10.0 / Thunderbird 10.0 / SeaMonkey 2.7), you can get the origin of the document in a secure, convenient way by calling <a href="/en/NPN_GetValue"><code>NPN_GetValue()</code></a> to retrieve the value of the variable <code>NPNVdocumentOrigin</code>. The returned value is the <a class="external" href="https://www.whatwg.org/specs/web-apps/current-work/multipage/origin-0.html#unicode-serialization-of-an-origin">Unicode serialization</a> of the document's origin converted to NFKC-encoded (that is, normalized) UTF-8. Your plug-in must free the returned string's memory by calling <a href="/en/NPN_MemFree"><code>NPN_MemFree()</code></a> when you're done with it.</p>
+<p>Starting in Gecko 10.0 (Firefox 10.0 / Thunderbird 10.0 / SeaMonkey 2.7), you can get the origin of the document in a secure, convenient way by calling <a href="/en-US/NPN_GetValue"><code>NPN_GetValue()</code></a> to retrieve the value of the variable <code>NPNVdocumentOrigin</code>. The returned value is the <a class="external" href="https://www.whatwg.org/specs/web-apps/current-work/multipage/origin-0.html#unicode-serialization-of-an-origin">Unicode serialization</a> of the document's origin converted to NFKC-encoded (that is, normalized) UTF-8. Your plug-in must free the returned string's memory by calling <a href="/en-US/NPN_MemFree"><code>NPN_MemFree()</code></a> when you're done with it.</p>
 
 <h3 id="Getting_Version_and_UI_Information">Getting Version and UI Information</h3>
 
 <p>The Netscape group of Plug-in API methods provides some basic services to the plug-in. You can use these Netscape methods:</p>
 
 <ul>
- <li>To identify the browser in which your plug-in is displayed: Use the <a href="/en/NPN_UserAgent">NPN_UserAgent</a> method to read this information.</li>
- <li>To determine whether plug-in and the browser versions are compatible and possibly provide alternative processing for different versions: Use the <a href="/en/NPN_Version">NPN_Version</a> method to check for changes in major and minor version numbers.</li>
+ <li>To identify the browser in which your plug-in is displayed: Use the <a href="/en-US/NPN_UserAgent">NPN_UserAgent</a> method to read this information.</li>
+ <li>To determine whether plug-in and the browser versions are compatible and possibly provide alternative processing for different versions: Use the <a href="/en-US/NPN_Version">NPN_Version</a> method to check for changes in major and minor version numbers.</li>
 </ul>
 
-<p>For information about using these methods, see <a href="/en/Gecko_Plugin_API_Reference/Version,_UI,_and_Status_Information">Version, UI, and Status Information.</a></p>
+<p>For information about using these methods, see <a href="/en-US/Gecko_Plugin_API_Reference/Version_UI_and_Status_Information">Version, UI, and Status Information.</a></p>
 
 <h3 id="Displaying_Messages_on_the_Status_Line">Displaying Messages on the Status Line</h3>
 
-<p>Functionally, your plug-in is seamlessly integrated into the browser and operates as an addition to current browser capabilities. To make the user feel that the plug-in is part of the browser user interface, your plug-in can emulate the browser behavior by providing status line messages. Use the <a href="/en/NPN_Status">NPN_Status</a> method to display a message on the status line.</p>
+<p>Functionally, your plug-in is seamlessly integrated into the browser and operates as an addition to current browser capabilities. To make the user feel that the plug-in is part of the browser user interface, your plug-in can emulate the browser behavior by providing status line messages. Use the <a href="/en-US/NPN_Status">NPN_Status</a> method to display a message on the status line.</p>
 
-<p>For information about using this method, see <a href="/en/Gecko_Plugin_API_Reference/Version,_UI,_and_Status_Information">Version, UI, and Status Information.</a></p>
+<p>For information about using this method, see <a href="/en-US/Gecko_Plugin_API_Reference/Version_UI_and_Status_Information">Version, UI, and Status Information.</a></p>
 
 <h3 id="Making_Plug-ins_Scriptable">Making Plug-ins Scriptable</h3>
 
@@ -255,7 +255,7 @@ tags:
 
 <p>In the past, LiveConnect and later XPConnect were used to make plug-ins scriptable. See <a class="external" href="https://en.wikipedia.org/wiki/NPAPI#Scripting_support">the Wikipedia article</a> for historical information. Both technologies are now obsolete for the purposes of plug-in scriptability, and the cross-browser npruntime API should be used instead.</p>
 
-<p>See the <a href="/en/Gecko_Plugin_API_Reference/Scripting_plugins">Scripting plugins</a> section of this reference for the details.</p>
+<p>See the <a href="/en-US/Gecko_Plugin_API_Reference/Scripting_plugins">Scripting plugins</a> section of this reference for the details.</p>
 
 <h3 id="Building_Plug-ins">Building Plug-ins</h3>
 

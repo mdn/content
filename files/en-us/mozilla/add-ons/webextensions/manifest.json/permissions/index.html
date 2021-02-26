@@ -24,7 +24,7 @@ tags:
   <tr>
    <th scope="row">Example</th>
    <td>
-    <pre class="brush: json; no-line-numbers notranslate">
+    <pre class="brush: json; no-line-numbers">
 "permissions": [
   "*://developer.mozilla.org/*",
   "webRequest"
@@ -36,7 +36,7 @@ tags:
 
 <p>Use the <code>permissions</code> key to request special powers for your extension. This key is an array of strings, and each string is a request for a permission.</p>
 
-<p>If you request permissions using this key, then the browser may inform the user at install time that the extension is requesting certain privileges, and ask them to confirm that they are happy to grant these privileges. The browser may also allow the user to inspect an extension's privileges after installation. As the request to grant privileges may impact on users' willingness to install your extension, requesting privileges is worth careful consideration. For example, you want to avoid requesting unnecessary permissions and may want to provide information about why you are requesting permissions in your extension's store description. More information on the issues you should consider is provided in the article <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Request_the_right_permissions">Request the right permissions</a>.</p>
+<p>If you request permissions using this key, then the browser may inform the user at install time that the extension is requesting certain privileges, and ask them to confirm that they are happy to grant these privileges. The browser may also allow the user to inspect an extension's privileges after installation. As the request to grant privileges may impact on users' willingness to install your extension, requesting privileges is worth careful consideration. For example, you want to avoid requesting unnecessary permissions and may want to provide information about why you are requesting permissions in your extension's store description. More information on the issues you should consider is provided in the article <a href="https://extensionworkshop.com/documentation/develop/request-the-right-permissions/">Request the right permissions</a>.</p>
 
 <p>For information on how to test and preview permission requests, see <a href="https://extensionworkshop.com/documentation/develop/test-permission-requests/">Test permission requests</a>  on the Extension Workshop site.</p>
 
@@ -56,6 +56,7 @@ tags:
 
 <ul>
  <li><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> and <a href="/en-US/docs/Web/API/Fetch_API">fetch</a> access to those origins without cross-origin restrictions (even for requests made from content scripts)</li>
+ <li>the ability to read tab-specific metadata without the "tabs" permission, such as the <code>url</code>, <code>title</code>, and <code>favIconUrl</code> properties of {{WebExtAPIRef("tabs.Tab")}} objects</li>
  <li>the ability to inject scripts programmatically (using {{webextAPIref("tabs/executeScript", "tabs.executeScript()")}} ) into pages served from those origins</li>
  <li>the ability to receive events from the {{webextAPIref("webrequest")}}  API for these hosts</li>
  <li>the ability to access cookies for that host using the {{webextAPIref("cookies")}} API, as long as the <code>"cookies"</code> API permission is also included.</li>
@@ -64,11 +65,11 @@ tags:
 
 <p>In Firefox, from version 56 onwards, extensions automatically get host permissions for their own origin, which is of the form:</p>
 
-<pre class="notranslate"><code>moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/</code></pre>
+<pre><code>moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/</code></pre>
 
 <p>where <code>60a20a9b-1ad4-af49-9b6c-c64c98c37920</code> is the extension's internal ID. The extension can get this URL programmatically by calling {{webextAPIref("extension/getURL", "extension.getURL()")}}:</p>
 
-<pre class="notranslate brush: js">browser.extension.getURL("");
+<pre class="brush: js">browser.extension.getURL("");
 // moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
 </pre>
 
@@ -128,10 +129,11 @@ tags:
 <p>In most cases the permission just grants access to the API, with the following exceptions:</p>
 
 <ul>
- <li><code>tabs</code> gives you access to {{webextAPIref("tabs", "privileged parts of the <code>tabs</code> API")}}: <code>Tab.url</code>, <code>Tab.title</code>, and <code>Tab.faviconUrl</code>.
+ <li><code>tabs</code> gives you access to {{webextAPIref("tabs", "privileged parts of the <code>tabs</code> API")}} without the need for <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a>: <code>Tab.url</code>, <code>Tab.title</code>, and <code>Tab.faviconUrl</code>.
 
   <ul>
-   <li>In Firefox, you also need <code>tabs</code> if you want to include <code>url</code> in the <code>queryInfo</code> parameter to {{webextAPIref("tabs/query", "tabs.query()")}}. The rest of the <code>tabs</code> API can be used without requesting any permission.</li>
+   <li>In Firefox 85 and earlier, you also need <code>tabs</code> if you want to include <code>url</code> in the <code>queryInfo</code> parameter to {{webextAPIref("tabs/query", "tabs.query()")}}. The rest of the <code>tabs</code> API can be used without requesting any permission.</li>
+   <li>As of Firefox 86 and Chrome 50, matching <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> can also be used instead of the "tabs" permission.</li>
   </ul>
  </li>
  <li><code>webRequestBlocking</code> enables you to use the <code>"blocking"</code> argument, so you can {{webextAPIref("WebRequest", "modify and cancel requests")}}.</li>
@@ -194,15 +196,15 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: json no-line-numbers notranslate"> "permissions": ["*://developer.mozilla.org/*"]</pre>
+<pre class="brush: json no-line-numbers"> "permissions": ["*://developer.mozilla.org/*"]</pre>
 
 <p>Request privileged access to pages under <code>developer.mozilla.org</code>.</p>
 
-<pre class="brush: json no-line-numbers notranslate">  "permissions": ["tabs"]</pre>
+<pre class="brush: json no-line-numbers">  "permissions": ["tabs"]</pre>
 
 <p>Request access to the privileged pieces of the <code>tabs</code> API.</p>
 
-<pre class="brush: json no-line-numbers notranslate">  "permissions": ["*://developer.mozilla.org/*", "tabs"]</pre>
+<pre class="brush: json no-line-numbers">  "permissions": ["*://developer.mozilla.org/*", "tabs"]</pre>
 
 <p>Request both of the above permissions.</p>
 

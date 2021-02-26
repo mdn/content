@@ -8,7 +8,7 @@ tags:
   - Learn
   - Styling
   - Web
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{LearnSidebar}}</div>
 
@@ -22,7 +22,7 @@ tags:
 
 <p>Like HTML, CSS is not a programming language. It's not a markup language either. <strong>CSS is a style sheet language.</strong> CSS is what you use to selectively style HTML elements. For example, this CSS selects paragraph text, setting the color to red:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   color: red;
 }</pre>
 
@@ -33,7 +33,7 @@ tags:
 <ol>
  <li>Open your <code>index.html</code> file. Paste the following line in the head (between the {{HTMLElement("head")}} and <code>&lt;/head&gt;</code> tags):
 
-  <pre class="brush: html notranslate">&lt;link href="styles/style.css" rel="stylesheet"&gt;</pre>
+  <pre class="brush: html">&lt;link href="styles/style.css" rel="stylesheet"&gt;</pre>
  </li>
  <li>Save <code>index.html</code> and load it in your browser. You should see something like this:</li>
 </ol>
@@ -69,7 +69,7 @@ tags:
 
 <p>To modify multiple property values in one ruleset, write them separated by semicolons, like this:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   color: red;
   width: 500px;
   border: 1px solid black;
@@ -79,7 +79,7 @@ tags:
 
 <p>You can also select multiple elements and apply a single ruleset to all of them. Separate multiple selectors by commas. For example:</p>
 
-<pre class="brush: css notranslate">p, li, h1 {
+<pre class="brush: css">p, li, h1 {
   color: red;
 }</pre>
 
@@ -136,13 +136,13 @@ tags:
 <p>Now that we've explored some CSS fundamentals, let's improve the appearance of the example by adding more rules and information to the <code>style.css</code> file.</p>
 
 <ol>
- <li>First, find the <a href="/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#Font">output from Google Fonts</a> that you previously saved from <a href="/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">What will your website look like?</a>. Add the {{htmlelement("link")}} element somewhere inside your <code>index.html</code>'s head (anywhere between the {{HTMLElement("head")}} and <code>&lt;/head&gt;</code> tags). It looks something like this:
+ <li>First, find the <a href="/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#font">output from Google Fonts</a> that you previously saved from <a href="/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">What will your website look like?</a>. Add the {{htmlelement("link")}} element somewhere inside your <code>index.html</code>'s head (anywhere between the {{HTMLElement("head")}} and <code>&lt;/head&gt;</code> tags). It looks something like this:
 
-  <pre class="brush: html notranslate">&lt;link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"&gt;</pre>
+  <pre class="brush: html">&lt;link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"&gt;</pre>
   This code links your page to a style sheet that loads the Open Sans font family with your webpage.</li>
  <li>Next, delete the existing rule you have in your <code>style.css</code> file. It was a good test, but let's not continue with lots of red text.</li>
- <li>Add the following lines (shown below), replacing the <code>font-family</code> assignment with your <code>font-family</code> selection from <a href="/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#Font">What will your website look like?</a>. The property <code>font-family</code> refers to the font(s) you want to use for text. This rule defines a global base font and font size for the whole page. Since {{HTMLElement("html")}} is the parent element of the whole page, all elements inside it inherit the same <code>font-size</code> and <code>font-family</code>.
-  <pre class="brush: css notranslate">html {
+ <li>Add the following lines (shown below), replacing the <code>font-family</code> assignment with your <code>font-family</code> selection from <a href="/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#font">What will your website look like?</a>. The property <code>font-family</code> refers to the font(s) you want to use for text. This rule defines a global base font and font size for the whole page. Since {{HTMLElement("html")}} is the parent element of the whole page, all elements inside it inherit the same <code>font-size</code> and <code>font-family</code>.
+  <pre class="brush: css">html {
   font-size: 10px; /* px means "pixels": the base font size is now 10 pixels high  */
   font-family: "Open Sans", sans-serif; /* this should be the rest of the output you got from Google fonts */
 }</pre>
@@ -152,7 +152,7 @@ tags:
   </div>
  </li>
  <li>Now let's set font sizes for elements that will have text inside the HTML body ({{htmlelement("h1")}}, {{htmlelement("li")}}, and {{htmlelement("p")}}). We'll also center the heading. Finally, let's expand the second ruleset (below) with settings for line height and letter spacing to make body content more readable.
-  <pre class="brush: css notranslate">h1 {
+  <pre class="brush: css">h1 {
   font-size: 60px;
   text-align: center;
 }
@@ -199,15 +199,15 @@ p, li {
 
 <h3 id="Changing_the_page_color">Changing the page color</h3>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   background-color: #00539F;
 }</pre>
 
-<p>This rule sets a background color for the entire page. Change the color code to <a href="/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#Theme_color">the color you chose in What will my website look like?</a>.</p>
+<p>This rule sets a background color for the entire page. Change the color code to <a href="/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#theme_color">the color you chose in What will my website look like?</a>.</p>
 
 <h3 id="Styling_the_body">Styling the body</h3>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 600px;
   margin: 0 auto;
   background-color: #FF9500;
@@ -219,15 +219,15 @@ p, li {
 
 <ul>
  <li><code>width: 600px;</code> This forces the body to always be 600 pixels wide.</li>
- <li><code>margin: 0 auto;</code> When you set two values on a property like <code>margin</code> or <code>padding</code>, the first value affects the element's top <em>and</em> bottom side (setting it to <code>0</code> in this case); the second value affects the left <em>and</em> right side. (Here, <code>auto</code> is a special value that divides the available horizontal space evenly between left and right). You can also use one, three, or four values, as documented in <a href="/en-US/docs/Web/CSS/margin#Syntax">Margin Syntax</a>.</li>
+ <li><code>margin: 0 auto;</code> When you set two values on a property like <code>margin</code> or <code>padding</code>, the first value affects the element's top <em>and</em> bottom side (setting it to <code>0</code> in this case); the second value affects the left <em>and</em> right side. (Here, <code>auto</code> is a special value that divides the available horizontal space evenly between left and right). You can also use one, three, or four values, as documented in <a href="/en-US/docs/Web/CSS/margin#syntax">Margin Syntax</a>.</li>
  <li><code>background-color: #FF9500;</code> This sets the element's background color. This project uses a reddish orange for the body background color, as opposed to dark blue for the {{htmlelement("html")}} element. (Feel free to experiment.)</li>
- <li><code>padding: 0 20px 20px 20px;</code> This sets four values for padding. The goal is to put  some space around the content. In this example, there is no padding on the top of the body, and 20 pixels on the right, bottom and left. The values set top, right, bottom, left, in that order. As with <code>margin</code>, you can use one, two, three, or four values, as documented in <a href="/en-US/docs/Web/CSS/padding#Syntax">Padding Syntax</a>.</li>
+ <li><code>padding: 0 20px 20px 20px;</code> This sets four values for padding. The goal is to put  some space around the content. In this example, there is no padding on the top of the body, and 20 pixels on the right, bottom and left. The values set top, right, bottom, left, in that order. As with <code>margin</code>, you can use one, two, three, or four values, as documented in <a href="/en-US/docs/Web/CSS/padding#syntax">Padding Syntax</a>.</li>
  <li><code>border: 5px solid black;</code> This sets values for the width, style and color of the border. In this case, it's a five-pixel–wide, solid black border, on all sides of the body.</li>
 </ul>
 
 <h3 id="Positioning_and_styling_the_main_page_title">Positioning and styling the main page title</h3>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
   margin: 0;
   padding: 20px 0;
   color: #00539F;
@@ -253,7 +253,7 @@ p, li {
 
 <h3 id="Centering_the_image">Centering the image</h3>
 
-<pre class="brush: css notranslate">img {
+<pre class="brush: css">img {
   display: block;
   margin: 0 auto;
 }</pre>

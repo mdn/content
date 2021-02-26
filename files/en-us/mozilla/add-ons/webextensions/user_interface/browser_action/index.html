@@ -7,29 +7,29 @@ tags:
 <div>{{AddonSidebar}}</div>
 
 <p>Commonly referred to as a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browser action</a>, this user interface option is a button added to the browser toolbar. Users click the button to interact with your extension.<br>
- <img alt="" src="https://mdn.mozillademos.org/files/15751/browser-action.png" style="display: block; height: 182px; margin-left: auto; margin-right: auto; width: 350px;"></p>
+ <img alt="" src="browser-action.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
-<p>The toolbar button (browser action) is very like the address bar button (page action). For the differences, and guidance on when to use what, see <a href="/en-US/Add-ons/WebExtensions/user_interface/Page_actions#Page_actions_and_browser_actions">Page actions and browser actions</a>.</p>
+<p>The toolbar button (browser action) is very like the address bar button (page action). For the differences, and guidance on when to use what, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions#page_actions_and_browser_actions">Page actions and browser actions</a>.</p>
 
 <h2 id="Specifying_the_browser_action">Specifying the browser action</h2>
 
 <p>You define the browser action's properties using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> key in manifest.json:</p>
 
-<pre class="brush: json notranslate"><code class="language-json">"browser_action": {
-  "default_icon": {
-    "19": "button/geo-19.png",
-    "38": "button/geo-38.png"
+<pre class="brush: json">&quot;browser_action&quot;: {
+  &quot;default_icon&quot;: {
+    &quot;19&quot;: &quot;button/geo-19.png&quot;,
+    &quot;38&quot;: &quot;button/geo-38.png&quot;
   },
-  "default_title": "Whereami?"
-}</code></pre>
+  &quot;default_title&quot;: &quot;Whereami?&quot;
+}</pre>
 
 <p>The only mandatory key is <code>default_icon</code>.</p>
 
-<p>There are two ways to specify a browser action: with or without a <a href="/en-US/Add-ons/WebExtensions/Popups">popup</a>. If you don't specify a popup, when the user clicks the button an event is dispatched to the extension, which the extension listens for using <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/BrowserAction/onClicked" title="Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."><code>browserAction.onClicked</code></a>:</p>
+<p>There are two ways to specify a browser action: with or without a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">popup</a>. If you don't specify a popup, when the user clicks the button an event is dispatched to the extension, which the extension listens for using <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked" title="Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."><code>browserAction.onClicked</code></a>:</p>
 
-<pre class="notranslate brush: js line-numbers language-js"><code class="language-js">browser.browserAction.onClicked.addListener(<var>handleClick</var>);</code></pre>
+<pre class="brush: js line-numbers language-js">browser.browserAction.onClicked.addListener(handleClick);</pre>
 
-<p>If you specify a popup, the click event is not dispatched: instead, the popup is shown when the user clicks the button. The user is able to interact with the popup and it closes automatically when the user clicks outside it. See the <a href="/en-US/Add-ons/WebExtensions/Popups">Popup</a> article for more details on creating and managing popups.</p>
+<p>If you specify a popup, the click event is not dispatched: instead, the popup is shown when the user clicks the button. The user is able to interact with the popup and it closes automatically when the user clicks outside it. See the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">Popup</a> article for more details on creating and managing popups.</p>
 
 <p>Note that your extension can have only one browser action.</p>
 

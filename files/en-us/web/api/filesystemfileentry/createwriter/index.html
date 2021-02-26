@@ -14,7 +14,7 @@ tags:
 - createWriter
 ---
 <p>{{APIRef("File System
-  API")}}{{SeeCompatTable}}{{obsolete_header}}{{Non-standard_header}}</p>
+  API")}}{{SeeCompatTable}}{{deprecated_header}}{{Non-standard_header}}</p>
 
 <p>The {{domxref("FileSystemFileEntry")}} interface's method
   <strong><code>createWriter()</code></strong> returns a {{domxref("FileWriter")}} object
@@ -23,7 +23,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>FileSystemFileEntry</em>.createWriter(<em>successCallback</em>[, <em>errorCallback</em>]);</pre>
+  class="brush: js"><em>FileSystemFileEntry</em>.createWriter(<em>successCallback</em>[, <em>errorCallback</em>]);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -33,7 +33,7 @@ tags:
     created successfully; the <code>FileWriter</code> is passed into the callback as the
     only parameter.</dd>
   <dt><code>errorCallback</code> {{optional_inline}}</dt>
-  <dd>If provided, this must be a method which is caled when an error occurs while trying
+  <dd>If provided, this must be a method which is called when an error occurs while trying
     to create the {{domxref("FileWriter")}}. This callback receives as input a
     {{domxref("FileError")}} object describing the error.</dd>
 </dl>

@@ -15,15 +15,15 @@ tags:
 
 <p>When an extension provides tools that are of use to developers, it's possible to add a UI for them to the browser's developer tools as a new panel.</p>
 
-<p><img alt='Simple example showing the addition of "My panel" to the Developer Tools tabs.' src="https://mdn.mozillademos.org/files/15746/developer_panel_tab.png" style="display: block; height: 112px; margin-left: auto; margin-right: auto; width: 350px;"></p>
+<p><img alt='Simple example showing the addition of "My panel" to the Developer Tools tabs.' src="developer_panel_tab.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h2 id="Specifying_a_developer_tools_panel">Specifying a developer tools panel</h2>
 
-<p>A developer tools panel is added using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels">devtools.panels</a></code> API, which in turn needs to be run from a special devtools page.</p>
+<p>A developer tools panel is added using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels">devtools.panels</a></code> API, which in turn needs to be run from a special devtools page.</p>
 
 <p>Add the devtools page by including the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page">devtools_page</a></code> key in extension's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> and provide the location of the page's HTML file in the extension:</p>
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"devtools_page":</span> <span class="string token">"devtools-page.html"</span></code></pre>
+<pre class="brush: json line-numbers  language-json">&quot;devtools_page&quot;: &quot;devtools-page.html&quot;</pre>
 
 <p>From the devtools page, call a script that will add the devtools panel:</p>
 
@@ -33,7 +33,7 @@ tags:
 
 <p>In the script, create the devtools panel by specifying the panel's title, icon, and HTML file that provides the panel's content:</p>
 
-<pre class="notranslate brush: js">function handleShown() {
+<pre class="brush: js">function handleShown() {
   console.log("panel is being shown");
 }
 
@@ -50,7 +50,7 @@ browser.devtools.panels.create(
   newPanel.onHidden.addListener(handleHidden);
 });</pre>
 
-<p>The extension can now run code in the inspected window using <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval">devtools.inspectedWindow.eval()</a></code> or by injecting a content script via the background script by passing a message. You can find more details on how to do this in <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools">Extending the developer tools.</a></p>
+<p>The extension can now run code in the inspected window using <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval">devtools.inspectedWindow.eval()</a></code> or by injecting a content script via the background script by passing a message. You can find more details on how to do this in <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools">Extending the developer tools.</a></p>
 
 <h2 id="Developer_panel_design">Developer panel design</h2>
 

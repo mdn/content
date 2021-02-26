@@ -294,13 +294,13 @@ tags:
 
 <p>There are a couple of ways you can do this. The most efficient way is to use the static method {{domxref("RTCRtpSender.getCapabilities()")}} (or the equivalent {{domxref("RTCRtpReceiver.getCapabilities()")}} for a receiver), specifying the type of media as the input parameter. For example, to determine the supported codecs for video, you can do this:</p>
 
-<pre class="brush: js notranslate">codecList = RTCRtpSender.getCapabilities("video").codecs;</pre>
+<pre class="brush: js">codecList = RTCRtpSender.getCapabilities("video").codecs;</pre>
 
 <p>Now <code>codecList</code> is an array of {{domxref("RTCRtpCodecCapability")}} objects, each describing one codec configuration. Also present in the list will be entries for retransmission (RTX), redundant coding (RED), and forward error correction (FEC).</p>
 
 <p>If the connection is in the process of starting up, you can use the {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} event to watch for the completion of {{Glossary("ICE")}} candidate gathering, then fetch the list.</p>
 
-<pre class="brush: js notranslate">let codecList = null;
+<pre class="brush: js">let codecList = null;
 
 peerConnection.addEventListener("icegatheringstatechange", (event) =&gt; {
   if (peerConnection.iceGatheringState === "complete") {
@@ -333,7 +333,7 @@ peerConnection.addEventListener("icegatheringstatechange", (event) =&gt; {
 
 <p>Once you have a list of the available codecs, you can alter it and then send the revised list to {{domxref("RTCRtpTransceiver.setCodecPreferences()")}} to rearrange the codec list. This changes the order of preference of the codecs, letting you tell WebRTC to prefer a different codec over all others.</p>
 
-<pre class="brush: js notranslate">function changeVideoCodec(mimeType) {
+<pre class="brush: js">function changeVideoCodec(mimeType) {
   const transceivers = peerConnection.getTransceivers();
 
   transceivers.forEach(transceiver =&gt; {
@@ -364,7 +364,7 @@ peerConnection.addEventListener("icegatheringstatechange", (event) =&gt; {
 
 <p>The <code>preferCodec()</code> function called by the code above looks like this to move a specified codec to the top of the list (to be prioritized during negotiation):</p>
 
-<pre class="brush: js notranslate">function preferCodec(codecs, mimeType) {
+<pre class="brush: js">function preferCodec(codecs, mimeType) {
   let otherCodecs = [];
   let sortedCodecs = [];
   let count = codecs.length;

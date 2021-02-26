@@ -72,7 +72,7 @@ tags:
 
 <p>This code adds a pair of context menu items that you can use to switch between two popups. Note that you'll need the "contextMenus" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> set in the extension's manifest to create context menu items.</p>
 
-<pre class="notranslate brush: js">function onCreated() {
+<pre class="brush: js">function onCreated() {
   if (browser.runtime.lastError) {
     console.log("error creating item:" + browser.runtime.lastError);
   } else {

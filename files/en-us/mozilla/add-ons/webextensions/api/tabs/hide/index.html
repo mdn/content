@@ -15,7 +15,7 @@ tags:
 
 <p>Hides one or more tabs.</p>
 
-<p>Hidden tabs are no longer visible in the browser's tabstrip. Hidden tabs are not automatically <a href="/en-US/Add-ons/WebExtensions/API/tabs/discard">discarded</a>: the code running in them continues to run. You can explicitly discard tabs whenever you hide them: although this is not appropriate in all situations, it will help to reduce the resources used by the browser.</p>
+<p>Hidden tabs are no longer visible in the browser's tabstrip. Hidden tabs are not automatically <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/discard">discarded</a>: the code running in them continues to run. You can explicitly discard tabs whenever you hide them: although this is not appropriate in all situations, it will help to reduce the resources used by the browser.</p>
 
 <p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
@@ -30,7 +30,7 @@ tags:
 
 <p>The first time an extension hides a tab, the browser will tell the user that the tab is being hidden, show them how they can access the hidden tab, and give them the option of disabling the extension instead.</p>
 
-<p>To use this API you must have the "tabHide" <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</p>
+<p>To use this API you must have the "tabHide" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -56,7 +56,7 @@ tags:
 
 <p>Hide a single tab:</p>
 
-<pre class="notranslate brush: js">function onHidden() {
+<pre class="brush: js">function onHidden() {
   console.log(`Hidden`);
 }
 
@@ -68,7 +68,7 @@ browser.tabs.hide(2).then(onHidden, onError);</pre>
 
 <p>Hide multiple tabs:</p>
 
-<pre class="notranslate brush: js">function onHidden() {
+<pre class="brush: js">function onHidden() {
   console.log(`Hidden`);
 }
 

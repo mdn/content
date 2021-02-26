@@ -19,7 +19,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><code><var>obj</var>.propertyIsEnumerable(<var>prop</var>)</code></pre>
+  class="brush: js"><code><var>obj</var>.propertyIsEnumerable(<var>prop</var>)</code></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -55,7 +55,7 @@ tags:
 <p>The following example shows the use of <code>propertyIsEnumerable</code> on objects and
   arrays:</p>
 
-<pre class="brush: js notranslate">var o = {};
+<pre class="brush: js">var o = {};
 var a = [];
 o.prop = 'is enumerable';
 a[0] = 'is enumerable';
@@ -69,7 +69,7 @@ a.propertyIsEnumerable(0);        // returns true
 <p>The following example demonstrates the enumerability of user-defined vs. built-in
   properties:</p>
 
-<pre class="brush: js notranslate">var a = ['is enumerable'];
+<pre class="brush: js">var a = ['is enumerable'];
 
 a.propertyIsEnumerable(0);          // returns true
 a.propertyIsEnumerable('length');   // returns false
@@ -80,7 +80,7 @@ this.propertyIsEnumerable('Math');     // returns false
 
 <h3 id="Direct_vs._inherited_properties">Direct vs. inherited properties</h3>
 
-<pre class="brush: js notranslate">var a = [];
+<pre class="brush: js">var a = [];
 a.propertyIsEnumerable('constructor');         // returns false
 
 function firstConstructor() {
@@ -133,10 +133,7 @@ o.propertyIsEnumerable('firstMethod'); // returns false
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Object.propertyIsEnumerable")}}</p>
-</div>
+<p>{{Compat("javascript.builtins.Object.propertyIsEnumerable")}}</p>
 
 <h2 id="See_also">See also</h2>
 

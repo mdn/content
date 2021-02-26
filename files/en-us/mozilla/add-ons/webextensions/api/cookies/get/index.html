@@ -35,13 +35,13 @@ tags:
  <dd>
  <dl class="reference-values">
   <dt><code>firstPartyDomain</code>{{optional_inline}}</dt>
-  <dd>A <code>string</code> representing the first-party domain with which the cookie to retrieve is associated. This property must be supplied if the browser has first-party isolation enabled. See <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/cookies#First-party_isolation">First-party isolation</a>.</dd>
+  <dd>A <code>string</code> representing the first-party domain with which the cookie to retrieve is associated. This property must be supplied if the browser has first-party isolation enabled. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation">First-party isolation</a>.</dd>
   <dt><code>name</code></dt>
   <dd>A <code>string</code> representing the name of the cookie to retrieve.</dd>
   <dt><code>storeId</code>{{optional_inline}}</dt>
   <dd>A <code>string</code> representing the ID of the {{WebExtAPIRef("cookies.CookieStore", "cookie store")}} in which to look for the cookie (as returned by {{WebExtAPIRef("cookies.getAllCookieStores()")}}). By default, the current execution context's cookie store will be used.</dd>
   <dt><code>url</code></dt>
-  <dd>A <code>string</code> representing the URL with which the cookie to retrieve is associated. This argument may be a full URL, in which case any data following the URL path (e.g. the query string) is ignored. If <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions">host permissions</a> for this URL are not specified in the extension's <a href="/en-US/Add-ons/WebExtensions/manifest.json">manifest file</a>, the API call will fail.</dd>
+  <dd>A <code>string</code> representing the URL with which the cookie to retrieve is associated. This argument may be a full URL, in which case any data following the URL path (e.g. the query string) is ignored. If <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">host permissions</a> for this URL are not specified in the extension's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest file</a>, the API call will fail.</dd>
  </dl>
  </dd>
 </dl>
@@ -60,7 +60,7 @@ tags:
 
 <p>This example tries to get the cookie named "favourite-color", associated with the URL for the currently active tab:</p>
 
-<pre class="notranslate brush: js">function logCookie(cookie) {
+<pre class="brush: js">function logCookie(cookie) {
   if (cookie) {
     console.log(cookie.value);
   }

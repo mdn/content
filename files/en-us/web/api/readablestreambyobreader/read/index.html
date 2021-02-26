@@ -2,24 +2,23 @@
 title: ReadableStreamBYOBReader.read()
 slug: Web/API/ReadableStreamBYOBReader/read
 tags:
-- API
-- Experimental
-- Method
-- ReadableStreamBYOBReader
-- Reference
-- Streams
-- read
+  - API
+  - Experimental
+  - Method
+  - ReadableStreamBYOBReader
+  - Reference
+  - Streams
+  - read
 ---
 <div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
 
 <p class="summary">The <strong><code>read()</code></strong> method of the
-  {{domxref("ReadableStreamBYOBReader")}} interface returns a promise providing access to
-  the next chunk in the byte stream's internal queue.</p>
+  {{domxref("ReadableStreamBYOBReader")}} interface returns a {{jsref("Promise")}} that resolves with an obect representing the next chunk in the stream's queue.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>promise</em> = <em>readableStreamBYOBReader</em>.read(<em>view</em>);</pre>
+  class="brush: js">var <em>promise</em> = <em>readableStreamBYOBReader</em>.read(<em>view</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -31,14 +30,14 @@ tags:
 <h3 id="Return_value">Return value</h3>
 
 <p>A {{jsxref("Promise")}}, which fulfills/rejects with a result depending on the state of
-  the stream. The different possibilities are as follows:</p>
+  the stream. The following are possible:</p>
 
 <ul>
-  <li>If a chunk is available, the promise will be fulfilled with an object of the form
+  <li>If a chunk is available, the promise fulfills with an object of the form
     <code>{ value: theChunk, done: false }</code>.</li>
-  <li>If the stream becomes closed, the promise will be fulfilled with an object of the
+  <li>If the stream is closed, the promise fulfills with an object of the
     form <code>{ value: undefined, done: true }</code>.</li>
-  <li>If the stream becomes errored, the promise will be rejected with the relevant error.
+  <li>If the stream throws an error, the promise rejects with the relevant error.
   </li>
 </ul>
 

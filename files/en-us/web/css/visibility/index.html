@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush: css no-line-numbers">/* Keyword values */
 visibility: visible;
 visibility: hidden;
 visibility: collapse;
@@ -57,7 +57,7 @@ visibility: unset;
 
 <h2 id="Interpolation">Interpolation</h2>
 
-<p>Visibility values are interpolable between <em>visible</em> and <em>not-visible</em>. One of the start or ending values must therefore be <code>visible</code> or no interpolation can happen. The value is interpolated as a discrete step, where values of the timing function between <code>0</code> and <code>1</code> map to <code class="css">visible</code> and other values of the timing function (which occur only at the start/end of the transition or as a result of <code class="css">cubic-bezier()</code> functions with y values outside of [0, 1]) map to the closer endpoint.</p>
+<p>Visibility values are interpolated between <em>visible</em> and <em>not-visible</em>. One of the start or ending values must therefore be <code>visible</code> or no interpolation can happen. The value is interpolated as a discrete step, where values of the timing function between <code>0</code> and <code>1</code> map to <code class="css">visible</code> and other values of the timing function (which occur only at the start/end of the transition or as a result of <code class="css">cubic-bezier()</code> functions with y values outside of [0, 1]) map to the closer endpoint.</p>
 
 <h2 id="Notes">Notes</h2>
 
@@ -72,7 +72,7 @@ visibility: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{CSSSyntax}}</pre>
+<pre class="brush: css">{{CSSSyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -80,14 +80,14 @@ visibility: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p class="visible"&gt;The first paragraph is visible.&lt;/p&gt;
+<pre class="brush: html">&lt;p class="visible"&gt;The first paragraph is visible.&lt;/p&gt;
 &lt;p class="not-visible"&gt;The second paragraph is NOT visible.&lt;/p&gt;
 &lt;p class="visible"&gt;The third paragraph is visible. Notice the second paragraph is still occupying space.&lt;/p&gt;
 </pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">.visible {
+<pre class="brush: css">.visible {
   visibility: visible;
 }
 
@@ -102,7 +102,7 @@ visibility: unset;
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;tr&gt;
     &lt;td&gt;1.1&lt;/td&gt;
     &lt;td class="collapse"&gt;1.2&lt;/td&gt;
@@ -122,7 +122,7 @@ visibility: unset;
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">.collapse {
+<pre class="brush: css">.collapse {
   visibility: collapse;
 }
 

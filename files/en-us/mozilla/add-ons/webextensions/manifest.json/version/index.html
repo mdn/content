@@ -28,7 +28,7 @@ tags:
  </tbody>
 </table>
 
-<p>Version of the extension, formatted as numbers and ASCII characters separated by dots. For the details of the version format, see the <a href="/en-US/docs/Toolkit_version_format">Version format</a> page. </p>
+<p>Version of the extension, formatted as numbers and ASCII characters separated by dots. For the details of the version format, see the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version/format">Version format</a> page. </p>
 
 <p>You can inspect the <a href="https://github.com/mozilla/addons-linter/blob/master/src/schema/formats.js#L10">add-ons linter code</a> to see how extension versions for Firefox are validated.</p>
 
@@ -41,17 +41,17 @@ tags:
 
 <p>To obtain your extension version in your JavaScript code, use:</p>
 
-<pre class="notranslate brush: js">console.log(browser.runtime.getManifest().version);</pre>
+<pre class="brush: js">console.log(browser.runtime.getManifest().version);</pre>
 
 <h2 id="Example">Example</h2>
 
 <p>If the manifest contains:</p>
 
-<pre class="notranslate brush: js">"version": "0.1"</pre>
+<pre class="brush: js">"version": "0.1"</pre>
 
 <p>To obtain your extension version in your JavaScript code, use:</p>
 
-<pre class="notranslate brush: js">console.log(browser.runtime.getManifest().version);
+<pre class="brush: js">console.log(browser.runtime.getManifest().version);
 // expected output: "0.1"
 </pre>
 

@@ -22,7 +22,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>directoryReader</em> = <em>FileSystemDirectoryEntry</em>.createReader();</pre>
+  class="brush: js"><em>directoryReader</em> = <em>FileSystemDirectoryEntry</em>.createReader();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -62,7 +62,7 @@ tags:
   itself recursively to get all the entries in the directory, concatenating each batch to
   the array. Each iteration, {{domxref("FileSystemDirectoryReader.readEntries",
   "readEntries()")}} is called to get more entries. When it returns an empty array, the
-  end of the directory has beenr reached, and the recursion ends. Once control is returned
+  end of the directory has been reached, and the recursion ends. Once control is returned
   to <code>readDirectory()</code>, the array is returned to the caller.</p>
 
 <h2 id="Specifications">Specifications</h2>

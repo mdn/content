@@ -2,11 +2,11 @@
 title: CanvasRenderingContext2D.restore()
 slug: Web/API/CanvasRenderingContext2D/restore
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Method
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Method
+  - Reference
 ---
 <div>{{APIRef}}</div>
 
@@ -17,12 +17,12 @@ tags:
   nothing.</p>
 
 <p>For more information about the <a
-    href="/en-US/docs/Web/API/CanvasRenderingContext2D.save#Drawing_state">drawing
+    href="/en-US/docs/Web/API/CanvasRenderingContext2D/save#drawing_state">drawing
     state</a>, see {{domxref("CanvasRenderingContext2D.save()")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">void <em>ctx</em>.restore();</pre>
+<pre class="brush: js">void <em>ctx</em>.restore();</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -34,12 +34,12 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
 </pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js highlight:[11] notranslate">const canvas = document.getElementById('canvas');
+<pre class="brush: js highlight:[11]">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Save the default state

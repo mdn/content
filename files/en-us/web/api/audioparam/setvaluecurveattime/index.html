@@ -2,15 +2,15 @@
 title: AudioParam.setValueCurveAtTime()
 slug: Web/API/AudioParam/setValueCurveAtTime
 tags:
-- API
-- Audio
-- AudioParam
-- Method
-- Reference
-- Web
-- Web Audio
-- Web Audio API
-- setValueCurveAtTime
+  - API
+  - Audio
+  - AudioParam
+  - Method
+  - Reference
+  - Web
+  - Web Audio
+  - Web Audio API
+  - setValueCurveAtTime
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
@@ -25,7 +25,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>paramRef</em> = <em>param</em>.setValueCurveAtTime(<em>values</em>, <em>startTime</em>, <em>duration</em>);</pre>
+  class="brush: js">var <em>paramRef</em> = <em>param</em>.setValueCurveAtTime(<em>values</em>, <em>startTime</em>, <em>duration</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -39,7 +39,7 @@ tags:
   <dt><code>startTime</code></dt>
   <dd>A double representing the time (in seconds) after the {{ domxref("AudioContext") }}
     was first created that the change in value will happen. If this value is lower than
-    {{domxref("AudioContext.currentTime")}}, it is clamped to <code>currentTime</code>.
+    {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}, it is clamped to <code>currentTime</code>.
   </dd>
   <dt><code>duration</code></dt>
   <dd>A double representing the total time (in seconds) over which the parameter's
@@ -157,6 +157,6 @@ valueCurve.onclick = function() {
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
   </li>
 </ul>

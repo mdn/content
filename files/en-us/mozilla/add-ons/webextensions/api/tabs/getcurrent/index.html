@@ -17,7 +17,7 @@ tags:
 <p>Get a {{WebExtAPIRef("tabs.Tab")}} containing information about the tab that this script is running in.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> This function is only useful in contexts where there is a browser tab, such as an <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages">options page</a>.</p>
+<p><strong>Note:</strong> This function is only useful in contexts where there is a browser tab, such as an <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages">options page</a>.</p>
 
 <p>If you call it from a background script or a popup, it will return <code>undefined</code>.</p>
 </div>
@@ -26,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate brush: js">const gettingCurrent = browser.tabs.getCurrent()
+<pre class="brush: js">const gettingCurrent = browser.tabs.getCurrent()
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -41,7 +41,7 @@ tags:
 
 <p>Get information about the current tab:</p>
 
-<pre class="notranslate brush: js">function onGot(tabInfo) {
+<pre class="brush: js">function onGot(tabInfo) {
   console.log(tabInfo);
 }
 

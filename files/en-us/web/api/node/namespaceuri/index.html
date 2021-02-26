@@ -8,7 +8,7 @@ tags:
 - Property
 - Reference
 ---
-<div>{{APIRef("DOM")}}{{obsolete_header}}</div>
+<div>{{APIRef("DOM")}}{{deprecated_header}}</div>
 
 <p>The <code><strong>Node.namespaceURI</strong></code> read-only property returns the
   namespace URI of the node, or <code>null</code> if the node is not in a namespace. When
@@ -22,7 +22,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>namespace</var> = <var>node</var>.namespaceURI</pre>
+  class="brush: js"><var>namespace</var> = <var>node</var>.namespaceURI</pre>
 
 <h2 id="Example">Example</h2>
 
@@ -44,7 +44,7 @@ tags:
 
 <p>In Firefox 3.5 and earlier, the namespace URI for HTML elements in HTML documents is
   <code>null</code>. In later versions, in compliance with HTML5, it is
-  <code><a class="external" href="https://www.w3.org/1999/xhtml" rel="freelink">https://www.w3.org/1999/xhtml</a></code>
+  <code><a href="https://www.w3.org/1999/xhtml">https://www.w3.org/1999/xhtml</a></code>
   as in XHTML. {{gecko_minversion_inline("1.9.2")}}</p>
 
 <p>For nodes of any {{domxref("Node.nodeType")}} other than <code>ELEMENT_NODE</code> and
@@ -55,7 +55,7 @@ tags:
   Level 2 method {{domxref("Document.createElementNS")}} and attributes with the method
   {{domxref("Element.setAttributeNS")}}.</p>
 
-<p>Per the <a class="external" href="https://www.w3.org/TR/xml-names11/">Namespaces in
+<p>Per the <a href="https://www.w3.org/TR/xml-names11/">Namespaces in
     XML</a> specification, an attribute does not inherit its namespace from the element it
   is attached to. If an attribute is not explicitly given a namespace, it has no
   namespace.</p>
@@ -96,10 +96,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.Node.namespaceURI")}}</p>
-</div>
+<p>{{Compat("api.Node.namespaceURI")}}</p>
 
 <h2 id="See_also">See also</h2>
 

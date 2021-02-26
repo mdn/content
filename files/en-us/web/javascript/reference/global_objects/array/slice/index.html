@@ -2,11 +2,11 @@
 title: Array.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/slice
 tags:
-- Array
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - Array
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 ---
 <div>{{JSRef}}</div>
 
@@ -24,7 +24,9 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>arr</var>.slice([<var>start</var>[, <var>end</var>]])
+<pre class="brush: js">slice()
+slice(start)
+slice(start, end)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -65,7 +67,7 @@ tags:
 
 <ul>
   <li>For object <code>slice</code> copies object references into the new array. Both the
-    original and new array refer to the same object. If a object changes, the changes are
+    original and new array refer to the same object. If an object changes, the changes are
     visible to both the new and original arrays.</li>
   <li>For strings, numbers and booleans (not {{jsxref("String")}}, {{jsxref("Number")}}
     and {{jsxref("Boolean")}} objects), <code>slice</code> copies the values into the new
@@ -79,7 +81,7 @@ tags:
 
 <h3 id="Return_a_portion_of_an_existing_array">Return a portion of an existing array</h3>
 
-<pre class="brush: js notranslate">let fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
+<pre class="brush: js">let fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
 let citrus = fruits.slice(1, 3)
 
 // fruits contains ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
@@ -93,7 +95,7 @@ let citrus = fruits.slice(1, 3)
   When the color of <code>myHonda</code> is changed to purple, both arrays reflect the
   change.</p>
 
-<pre class="brush: js notranslate">// Using slice, create newCar from myCar.
+<pre class="brush: js">// Using slice, create newCar from myCar.
 let myHonda = { color: 'red', wheels: 4, engine: { cylinders: 4, size: 2.2 } }
 let myCar = [myHonda, 2, 'cherry condition', 'purchased 1997']
 let newCar = myCar.slice(0, 2)
@@ -116,7 +118,7 @@ console.log('newCar[0].color = ' + newCar[0].color)
 
 <p>This script writes:</p>
 
-<pre class="brush: js notranslate">myCar = [{color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}}, 2,
+<pre class="brush: js">myCar = [{color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}}, 2,
          'cherry condition', 'purchased 1997']
 newCar = [{color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}}, 2]
 myCar[0].color = red
@@ -133,7 +135,7 @@ newCar[0].color = purple
   object. The {{jsxref("Functions/arguments", "arguments")}} inside a function is an
   example of an 'array-like object'.</p>
 
-<pre class="brush: js notranslate">function list() {
+<pre class="brush: js">function list() {
   return Array.prototype.slice.call(arguments)
 }
 
@@ -141,13 +143,13 @@ let list1 = list(1, 2, 3) // [1, 2, 3]
 </pre>
 
 <p>Binding can be done with the {{jsxref("Function.prototype.call", "call()")}} method of
-  {{jsxref("Function.prototype")}} and it can also be reduced using
+  {{jsxref("Function")}} and it can also be reduced using
   <code>[].slice.call(arguments)</code> instead of
   <code>Array.prototype.slice.call</code>.</p>
 
 <p>Anyway, it can be simplified using {{jsxref("Function.prototype.bind", "bind")}}.</p>
 
-<pre class="brush: js notranslate">let unboundSlice = Array.prototype.slice
+<pre class="brush: js">let unboundSlice = Array.prototype.slice
 let slice = Function.prototype.call.bind(unboundSlice)
 
 function list() {

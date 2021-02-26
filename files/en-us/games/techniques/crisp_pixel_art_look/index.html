@@ -21,9 +21,9 @@ tags:
 <table class="standard-table" style="margin: 0 auto 1.5em auto;">
  <tbody>
   <tr>
-   <td style="text-align: center; vertical-align: middle;"><img alt="" src="https://mdn.mozillademos.org/files/13394/technique_original.png" style="height: 34px; width: 12px;"></td>
-   <td style="text-align: center; vertical-align: middle;"><img alt="" src="https://mdn.mozillademos.org/files/13394/technique_original.png" style="height: 136px; width: 48px;"></td>
-   <td style="text-align: center; vertical-align: middle;"><img alt="" src="https://mdn.mozillademos.org/files/13396/technique_4x.png" style="height: 136px; width: 48px;"></td>
+   <td style="text-align: center; vertical-align: middle;"><img alt="" src="technique_original.png"></td>
+   <td style="text-align: center; vertical-align: middle;"><img alt="" src="technique_original.png"></td>
+   <td style="text-align: center; vertical-align: middle;"><img alt="" src="technique_4x.png"></td>
   </tr>
   <tr>
    <td style="text-align: center;">original size</td>
@@ -54,7 +54,7 @@ tags:
 
 <p>Let's have a look at an example. The original image we want to upscale looks like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12640/cat.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="cat.png" style="display: block; margin: 0 auto;"></p>
 
 <p>Here's some HTML to create a simple canvas:</p>
 
@@ -62,15 +62,15 @@ tags:
 
 <p>CSS to size the canvas and render a crisp image:</p>
 
-<pre class="brush: css"><code class="language-css"><span class="selector token">canvas </span><span class="punctuation token">{</span>
-  </code>width: 512px;
-  height: 512px;<code class="language-css">
-  <span class="property token">image-rendering</span><span class="punctuation token">:</span> -moz-crisp-edges<span class="punctuation token">;</span>
-  <span class="property token">image-rendering</span><span class="punctuation token">:</span> -webkit-crisp-edges<span class="punctuation token">;</span>
-  <span class="property token">image-rendering</span><span class="punctuation token">:</span> pixelated<span class="punctuation token">;
-  image-rendering: crisp-edges;</span>
-<span class="punctuation token">}</span>
-</code></pre>
+<pre class="brush: css">canvas {
+  width: 512px;
+  height: 512px;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+</pre>
 
 <p>And some JavaScript to set up the canvas and load the image:</p>
 

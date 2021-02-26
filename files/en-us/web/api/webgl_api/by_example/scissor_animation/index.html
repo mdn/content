@@ -20,17 +20,15 @@ tags:
 
 <p>{{EmbedLiveSample("scissor-animation-source",660,425)}}</p>
 
-<div>
 <h3 id="Animation_with_scissoring">Animation with scissoring</h3>
 
 <p>In this example, we are animating squares using {{domxref("WebGLRenderingContext.scissor()","scissor()")}} and {{domxref("WebGLRenderingContext.clear()","clear()")}}. We again establish an animation loop using timers. Note that this time it is the position of the square (the scissoring area) that is updated every frame (we set frame rate to roughly one every 17ms, or roughly 60fps – frames per second).</p>
 
 <p>In contrast, the color of the square (set with {{domxref("WebGLRenderingContext.clearColor()","clearColor")}}) is only updated when a new square is created. This is a nice demonstration of {{Glossary("WebGL")}} as a state machine. For each square, we set its color once, and then update only its position every frame. The clear color state of WebGL remains at the set value, until we change it again when a new square is created.</p>
-</div>
 
 <div id="scissor-animation-source">
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;p&gt;WebGL animation by clearing the drawing buffer with solid
+<pre class="brush: html">&lt;p&gt;WebGL animation by clearing the drawing buffer with solid
 color and applying scissor test.&lt;/p&gt;
 &lt;button id="animation-onoff"&gt;
   Press here to
@@ -38,11 +36,11 @@ color and applying scissor test.&lt;/p&gt;
   the animation&lt;/button&gt;
 </pre>
 
-<pre class="brush: html notranslate">&lt;canvas&gt;Your browser does not seem to support
+<pre class="brush: html">&lt;canvas&gt;Your browser does not seem to support
     HTML5 canvas.&lt;/canvas&gt;
 </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   text-align : center;
 }
 canvas {
@@ -64,11 +62,11 @@ button {
 </div>
 
 <div class="hidden">
-<pre class="brush: js notranslate">;(function(){
+<pre class="brush: js">;(function(){
 </pre>
 </div>
 
-<pre class="brush: js notranslate" id="livesample-js">"use strict"
+<pre class="brush: js" id="livesample-js">"use strict"
 window.addEventListener("load", setupAnimation, false);
 // Variables to hold the WebGL context, and the color and
 // position of animated squares.
@@ -139,7 +137,7 @@ function getRandomColor() {
 </pre>
 
 <div class="hidden">
-<pre class="brush: js notranslate">function getRenderingContext() {
+<pre class="brush: js">function getRenderingContext() {
   var canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
@@ -161,7 +159,7 @@ function getRandomColor() {
 </div>
 
 <div class="hidden">
-<pre class="brush: js notranslate">})();
+<pre class="brush: js">})();
 </pre>
 </div>
 

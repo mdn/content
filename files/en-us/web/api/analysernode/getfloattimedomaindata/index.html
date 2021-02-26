@@ -13,8 +13,6 @@ tags:
 
 <p>The <strong><code>getFloatTimeDomainData()</code></strong> method of the {{ domxref("AnalyserNode") }} Interface copies the current waveform, or time-domain, data into a {{domxref("Float32Array")}} array passed into it.</p>
 
-<p>If the array has fewer elements than the {{domxref("AnalyserNode.fftSize")}}, excess elements are dropped. If it has more elements than needed, excess elements are ignored.</p>
-
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">var audioCtx = new AudioContext();
@@ -110,13 +108,10 @@ draw();</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.AnalyserNode.getFloatTimeDomainData")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
 </ul>

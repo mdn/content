@@ -16,7 +16,7 @@ tags:
 
 <p>Typically, system notifications refer to the operating system's standard notification mechanism: think for example of how a typical desktop system or mobile device broadcasts notifications.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10959/android-notification.png" style="display: block; height: 184px; margin: 0px auto; width: 300px;"></p>
+<p><img alt="" src="android-notification.png" style="display: block; margin: 0px auto;"></p>
 
 <p>The system notification system will vary of course by platform and browser, but this is ok, and the Notifications API is written to be general enough for compatibility with most system notification systems.</p>
 
@@ -51,13 +51,13 @@ tags:
 
 <p>If permission to display notifications hasn't been granted yet, the application needs to use the {{domxref("Notification.requestPermission()")}} method to request this from the user. In its simplest form, we just include the following:</p>
 
-<pre class="brush: js notranslate">Notification.requestPermission().then(function(result) {
+<pre class="brush: js">Notification.requestPermission().then(function(result) {
   console.log(result);
 });</pre>
 
 <p>This uses the promise-based version of the method. If you want to support older versions, you might have to use the older callback version, which looks like this:</p>
 
-<pre class="brush: js notranslate">Notification.requestPermission();</pre>
+<pre class="brush: js">Notification.requestPermission();</pre>
 
 <p>The callback version optionally accepts a callback function that is called once the user has responded to the request to display permissions.</p>
 
@@ -65,11 +65,11 @@ tags:
 
 <p>In our todo list demo, we include an "Enable notifications" button that, when pressed, requests notification permissions for the app.</p>
 
-<pre class="brush: html notranslate">&lt;button id="enable"&gt;Enable notifications&lt;/button&gt;</pre>
+<pre class="brush: html">&lt;button id="enable"&gt;Enable notifications&lt;/button&gt;</pre>
 
 <p>Clicking this calls the <code>askNotificationPermission()</code> function:</p>
 
-<pre class="brush: js notranslate">function askNotificationPermission() {
+<pre class="brush: js">function askNotificationPermission() {
   // function to actually ask the permissions
   function handlePermission(permission) {
     // set the button to shown or hidden, depending on what the user answers
@@ -109,7 +109,7 @@ tags:
 
 <p>Above we said that we had to check whether the browser supports the promise version of <code>Notification.requestPermission()</code>. We did this using the following:</p>
 
-<pre class="brush: js notranslate">function checkNotificationPromise() {
+<pre class="brush: js">function checkNotificationPromise() {
     try {
       Notification.requestPermission().then();
     } catch(e) {
@@ -127,15 +127,15 @@ tags:
 
 <p>For example, in the to-do-list example we use the following snippet to create a notification when required (found inside the <code>createNotification()</code> function):</p>
 
-<pre class="brush: js notranslate">var img = '/to-do-notifications/img/icon-128.png';
+<pre class="brush: js">var img = '/to-do-notifications/img/icon-128.png';
 var text = 'HEY! Your task "' + title + '" is now overdue.';
 var notification = new Notification('To do list', { body: text, icon: img });</pre>
 
 <h2 id="Closing_notifications">Closing notifications</h2>
 
-<p>Used {{domxref("Notification.close","close()")}} to remove a notification that is no longer relevant to the user (e.g. the user already read the notification on the webpage, in the case of a messaging app, or the following song is already playing in a music app to notifies upon song changes). Most modern browsers dismiss notifications automatically after a few moments (around four seconds) but this isn't something you should generally be concerned about as it's up to the user and user agent. The dismissal may also happen at the operating system level and users should remain in control of this. Old versions of Chrome didn't remove notifications automatically so you can do so after a {{domxref("WindowTimers.setTimeout","setTimeout()")}} only for those legacy versions in order to not remove notifications from notification trays on other browsers.</p>
+<p>Used {{domxref("Notification.close","close()")}} to remove a notification that is no longer relevant to the user (e.g. the user already read the notification on the webpage, in the case of a messaging app, or the following song is already playing in a music app to notifies upon song changes). Most modern browsers dismiss notifications automatically after a few moments (around four seconds) but this isn't something you should generally be concerned about as it's up to the user and user agent. The dismissal may also happen at the operating system level and users should remain in control of this. Old versions of Chrome didn't remove notifications automatically so you can do so after a {{domxref("WindowOrWorkerGlobalScope/setTimeout","setTimeout()")}} only for those legacy versions in order to not remove notifications from notification trays on other browsers.</p>
 
-<pre class="brush: js notranslate">var n = new Notification('My Great Song');
+<pre class="brush: js">var n = new Notification('My Great Song');
 document.addEventListener('visibilitychange', function() {
   if (document.visibilityState === 'visible') {
     // The tab has become visible so clear the now-stale Notification.
@@ -179,11 +179,11 @@ document.addEventListener('visibilitychange', function() {
 
 <p>Assume the following basic HTML:</p>
 
-<pre class="brush: html notranslate">&lt;button&gt;Notify me!&lt;/button&gt;</pre>
+<pre class="brush: html">&lt;button&gt;Notify me!&lt;/button&gt;</pre>
 
 <p>It's possible to handle multiple notifications this way:</p>
 
-<pre class="brush: js notranslate">window.addEventListener('load', function () {
+<pre class="brush: js">window.addEventListener('load', function () {
   var button = document.getElementsByTagName('button')[0];
 
   button.addEventListener('click', function () {
@@ -262,6 +262,6 @@ document.addEventListener('visibilitychange', function() {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/Apps/Build/User_notifications">User notifications reference</a></li>
+ <li><a href="/en-US/docs/Web/Apps/Build/User_notifications">User notifications reference</a></li>
  <li>{{ domxref("Notification") }}</li>
 </ul>

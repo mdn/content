@@ -170,7 +170,7 @@ tags:
 
 <div id="hsl-swatches">
 <div class="hidden">
-<pre class="brush: css notranslate">table {
+<pre class="brush: css">table {
   border: 1px solid black;
   font: 16px "Open Sans", Helvetica, Arial, sans-serif;
   border-spacing: 0;
@@ -187,7 +187,7 @@ th {
   background-color: hsl(0, 0%, 75%);
 }</pre>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
  &lt;thead&gt;
   &lt;tr&gt;
    &lt;th scope="col"&gt;Color in HSL notation&lt;/th&gt;
@@ -246,7 +246,7 @@ th {
 
 <p>The HTML responsible for creating the above example is shown here:</p>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box boxLeft"&gt;
     &lt;p&gt;
       This is the first box.
@@ -267,7 +267,7 @@ th {
 
 <p>We'll look at the CSS to create the above results a piece at a time, so we can review the interesting parts one by one.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   width: 620px;
   height: 110px;
   margin: 0;
@@ -281,7 +281,7 @@ th {
 
 <p>Our two colored boxes share a number of properties in common, so next we establish a class, <code>.box</code>, that defines those shared properties:</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   width: 290px;
   height: 100px;
   margin: 0;
@@ -294,7 +294,7 @@ th {
 
 <p>In brief, <code>.box</code> establishes the size of each box, as well as the configuration of the font used within. We also take advantage of <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">CSS Flexbox</a> to easily center the contents of each box. We enable <code>flex</code> mode using {{cssxref("display", "display: flex")}}, and set both {{cssxref("justify-content")}} and {{cssxref("align-items")}} to <code>center</code>. Then we can create a class for each of the two boxes that defines the properties that differ between the two.</p>
 
-<pre class="brush: css notranslate">.boxLeft {
+<pre class="brush: css">.boxLeft {
   float: left;
   background-color: rgb(245, 130, 130);
   outline: 2px solid darkred;
@@ -308,7 +308,7 @@ th {
  <li>Notice that we're not explicitly setting the text color. That means the value of {{cssxref("color")}} will be inherited from the nearest containing element that defines it. By default, that's black.</li>
 </ul>
 
-<pre class="brush: css notranslate">.boxRight {
+<pre class="brush: css">.boxRight {
   float: right;
   background-color: hsl(270deg, 50%, 75%);
   outline: 4px dashed rgb(110, 20, 120);
@@ -351,7 +351,7 @@ th {
 
 <p>The HTML here creates a box that contains a color picker control (with a label created using the {{HTMLElement("label")}} element) and an empty paragraph element ({{HTMLElement("p")}}) into which we'll output some text from our JavaScript code.</p>
 
-<pre class="brush: html notranslate">&lt;div id="box"&gt;
+<pre class="brush: html">&lt;div id="box"&gt;
   &lt;label for="colorPicker"&gt;Border color:&lt;/label&gt;
   &lt;input type="color" value="#8888ff" id="colorPicker"&gt;
   &lt;p id="output"&gt;&lt;/p&gt;
@@ -361,7 +361,7 @@ th {
 
 <p>The CSS establishes a size for the box and some basic styling for appearances. The border is also established with a 2-pixel width and a border color that won't last, courtesy of the JavaScript below...</p>
 
-<pre class="brush: css notranslate">#box {
+<pre class="brush: css">#box {
   width: 500px;
   height: 200px;
   border: 2px solid rgb(245, 220, 225);
@@ -373,7 +373,7 @@ th {
 
 <p>The script here handles the task of updating the starting color of the border to match the color picker's value. Then two event handlers are added to deal with input from the <code><a href="/en-US/docs/Web/HTML/Element/input/color">&lt;input type="color"&gt;</a></code> element.</p>
 
-<pre class="brush: js notranslate">let colorPicker = document.getElementById("colorPicker");
+<pre class="brush: js">let colorPicker = document.getElementById("colorPicker");
 let box = document.getElementById("box");
 let output = document.getElementById("output");
 
@@ -393,7 +393,7 @@ colorPicker.addEventListener("change", function(event) {
 
 <h2 id="Using_color_wisely">Using color wisely</h2>
 
-<p>Making the right choices when selecting colors when designing a website can be a tricky process, especially if you aren't well-grounded in art, design, or at least basic color theory. The wrong color choice can render your site unattractive, or even worse, leave the content unreadable due to problems with contrast or conflicting colors. Worse still, if using the wrong colors can result in your content being outright unusable by people withcertain vision problems, particularly color blindness.</p>
+<p>Making the right choices when selecting colors when designing a website can be a tricky process, especially if you aren't well-grounded in art, design, or at least basic color theory. The wrong color choice can render your site unattractive, or even worse, leave the content unreadable due to problems with contrast or conflicting colors. Worse still, if using the wrong colors can result in your content being outright unusable by people with certain vision problems, particularly color blindness.</p>
 
 <h3 id="Finding_the_right_colors">Finding the right colors</h3>
 
@@ -439,9 +439,9 @@ colorPicker.addEventListener("change", function(event) {
 
 <dl>
  <dt><a href="https://www.khanacademy.org/partner-content/pixar/color">Color Science</a> (<a href="https://www.khanacademy.org/">Khan Academy</a> in association with <a href="https://www.pixar.com/">Pixar</a>)</dt>
- <dd>An online course which introduces concepts such as what color is, how it's percieved, and how to use colors to express ideas. Presented by Pixar artists and designers.</dd>
+ <dd>An online course which introduces concepts such as what color is, how it's perceived, and how to use colors to express ideas. Presented by Pixar artists and designers.</dd>
  <dt>{{interwiki("wikipedia", "Color theory")}} on Wikipedia</dt>
- <dd>Wikipedia's entry on color theory, which has a lot of great information from a technical perspective. It's not really a resource for helping you with the color sleection process, but is still full of useful information.</dd>
+ <dd>Wikipedia's entry on color theory, which has a lot of great information from a technical perspective. It's not really a resource for helping you with the color selection process, but is still full of useful information.</dd>
 </dl>
 
 <h3 id="Color_and_accessibility">Color and accessibility</h3>
@@ -458,7 +458,7 @@ colorPicker.addEventListener("change", function(event) {
 
 <ul>
  <li><a href="https://medlineplus.gov/colorblindness.html">Medline Plus: Color Blindness</a> (United States National Institute of Health)</li>
- <li><a href="https://www.aao.org/eye-health/diseases/what-is-color-blindness">American Academy of Ophthamology: What Is Color Blindness?</a></li>
+ <li><a href="https://www.aao.org/eye-health/diseases/what-is-color-blindness">American Academy of Ophthalmology: What Is Color Blindness?</a></li>
  <li><a href="https://www.usability.gov/get-involved/blog/2010/02/color-blindness.html">Color Blindness &amp; Web Design</a> (Usability.gov: United States Department of Health and Human Services)</li>
 </ul>
 

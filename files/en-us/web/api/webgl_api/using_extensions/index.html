@@ -7,7 +7,7 @@ tags:
 ---
 <div>{{WebGLSidebar}}</div>
 
-<p>WebGL, like its sister APIs (OpenGL and OpenGL ES), supports extensions. A complete list of extensions is available in the <a class="external" href="http://www.khronos.org/registry/webgl/extensions/">khronos webgl extension registry</a>.</p>
+<p>WebGL, like its sister APIs (OpenGL and OpenGL ES), supports extensions. A complete list of extensions is available in the <a href="http://www.khronos.org/registry/webgl/extensions/">khronos webgl extension registry</a>.</p>
 
 <div class="note"><strong>Note:</strong> In WebGL, unlike in other GL APIs, extensions are only available if explicitly requested.</div>
 
@@ -17,7 +17,7 @@ tags:
 
 <p>If you wish to work with the bleeding edge of extensions, and want to keep working on upon ratification (assuming, of course, that the extension doesn't change in incompatible ways), that you query the canonical extension name as well as the vendor extension name. For instance:</p>
 
-<pre class="brush:js notranslate">var ext = (
+<pre class="brush:js">var ext = (
   gl.getExtension('OES_vertex_array_object') ||
   gl.getExtension('MOZ_OES_vertex_array_object') ||
   gl.getExtension('WEBKIT_OES_vertex_array_object')
@@ -49,7 +49,7 @@ tags:
 
 <p>The WebGL context supports querying what extensions are available.</p>
 
-<pre class="brush:js notranslate">var available_extensions = gl.getSupportedExtensions();</pre>
+<pre class="brush:js">var available_extensions = gl.getSupportedExtensions();</pre>
 
 <p>The {{domxref("WebGLRenderingContext.getSupportedExtensions()")}} method returns an array of strings, one for each supported extension.</p>
 
@@ -63,7 +63,7 @@ tags:
 
 <p>Before an extension can be used it has to be enabled using {{domxref("WebGLRenderingContext.getExtension()")}}. For example:</p>
 
-<pre class="brush:js notranslate">var float_texture_ext = gl.getExtension('OES_texture_float');</pre>
+<pre class="brush:js">var float_texture_ext = gl.getExtension('OES_texture_float');</pre>
 
 <p>The return value is <code>null</code> if the extension is not supported, or an extension object otherwise.</p>
 

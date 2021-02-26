@@ -2,13 +2,13 @@
 title: FileSystemFileHandle.getFile()
 slug: Web/API/FileSystemFileHandle/getFile
 tags:
-- Directory
-- File
-- File System Access API
-- FileSystemFileHandle
-- Method
-- getFile
-- working with files
+  - Directory
+  - File
+  - File System Access API
+  - FileSystemFileHandle
+  - Method
+  - getFile
+  - working with files
 ---
 <div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 </div>
@@ -23,7 +23,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>File</var> = FileSystemFileHandle.getFile();</pre>
+  class="brush: js">var <var>File</var> = FileSystemFileHandle.getFile();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -46,7 +46,7 @@ tags:
 <p>The following asynchronous function presents a file picker and once a file is chosen,
   uses the <code>getFile()</code> method to retrieve the contents.</p>
 
-<pre class="brush: js notranslate">async function getTheFile() {
+<pre class="brush: js">async function getTheFile() {
   // open file picker
   [fileHandle] = await window.showOpenFilePicker(pickerOpts);
 
@@ -64,9 +64,9 @@ tags:
       <th scope="col">Comment</th>
     </tr>
     <tr>
-      <td>{{SpecName('File System Access','#api-filesystemfilehandle-getfile','getFile')}}
+      <td>{{SpecName('File System Access API','#api-filesystemfilehandle-getfile','getFile')}}
       </td>
-      <td>{{Spec2('File System Access')}}</td>
+      <td>{{Spec2('File System Access API')}}</td>
       <td>Initial definition.</td>
     </tr>
   </tbody>
@@ -79,7 +79,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/docs/Web/API/File_System_Access_API">File System Access API</a></li>
+  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
   <li><a href="https://web.dev/file-system-access/">The File System Access API:
       simplifying access to local files</a></li>
 </ul>

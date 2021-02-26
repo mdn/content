@@ -13,7 +13,7 @@ tags:
 
 <p><span class="seoSummary">The <strong><code>:active</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-class</a> represents an element (such as a button) that is being activated by the user.</span> When using a mouse, "activation" typically starts when the user presses down the primary mouse button.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Selects any &lt;a&gt; that is being activated */
+<pre class="brush: css no-line-numbers">/* Selects any &lt;a&gt; that is being activated */
 a:active {
   color: red;
 }</pre>
@@ -26,7 +26,7 @@ a:active {
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -34,14 +34,14 @@ a:active {
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p&gt;This paragraph contains a link:
+<pre class="brush: html">&lt;p&gt;This paragraph contains a link:
   &lt;a href="#"&gt;This link will turn red while you click on it.&lt;/a&gt;
   The paragraph will get a gray background while you click on it or the link.
 &lt;/p&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">a:link { color: blue; }          /* Unvisited links */
+<pre class="brush: css">a:link { color: blue; }          /* Unvisited links */
 a:visited { color: purple; }     /* Visited links */
 a:hover { background: yellow; }  /* Hovered links */
 a:active { color: red; }         /* Active links */
@@ -56,14 +56,14 @@ p:active { background: #eee; }   /* Active paragraphs */</pre>
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;label for="my-button"&gt;My button: &lt;/label&gt;
   &lt;button id="my-button" type="button"&gt;Try Clicking Me or My Label!&lt;/button&gt;
 &lt;/form&gt;</pre>
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">form :active {
+<pre class="brush: css">form :active {
   color: red;
 }
 
@@ -116,10 +116,7 @@ form button {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("css.selectors.active")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

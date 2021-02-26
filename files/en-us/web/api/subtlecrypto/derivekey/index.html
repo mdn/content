@@ -29,7 +29,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <em>result</em> = crypto<code>.subtle.deriveKey(
+<pre class="brush: js">const <em>result</em> = crypto<code>.subtle.deriveKey(
     <em>algorithm</em>,
     <em>baseKey</em>,
     <em>derivedKeyAlgorithm</em>,
@@ -45,13 +45,13 @@ tags:
       href="#Supported_algorithms">derivation algorithm</a> to use.
 
     <ul>
-      <li>To use <a href="#ECDH">ECDH</a>, pass an
+      <li>To use <a href="#ecdh">ECDH</a>, pass an
         <code><a href="/en-US/docs/Web/API/EcdhKeyDeriveParams">EcdhKeyDeriveParams</a></code>
         object.</li>
-      <li>To use <a href="#HKDF">HKDF</a>, pass
+      <li>To use <a href="#hkdf">HKDF</a>, pass
         an <code><a href="/en-US/docs/Web/API/HkdfParams">HkdfParams</a></code> object.
       </li>
-      <li>To use <a href="#PBKDF2">PBKDF2</a>, pass
+      <li>To use <a href="#pbkdf2">PBKDF2</a>, pass
         a <code><a href="/en-US/docs/Web/API/Pbkdf2Params">Pbkdf2Params</a></code> object.
       </li>
     </ul>

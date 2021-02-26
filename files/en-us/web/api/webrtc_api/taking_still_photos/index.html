@@ -18,13 +18,13 @@ tags:
 
 <p><span class="seoSummary">This article shows how to use WebRTC to access the camera on a computer or mobile phone with WebRTC support and take a photo with it.</span> <a href="https://mdn-samples.mozilla.org/s/webrtc-capturestill">Try this sample</a> then read on to learn how it works.</p>
 
-<p><img alt="WebRTC-based image capture app — on the left we have a video stream taken from a webcam and a take photo button, on the right we have the still image output from taking the photo" src="https://mdn.mozillademos.org/files/10281/web-rtc-demo.png" style="display: block; height: 252px; margin: 0px auto; width: 677px;"></p>
+<p><img alt="WebRTC-based image capture app — on the left we have a video stream taken from a webcam and a take photo button, on the right we have the still image output from taking the photo" src="web-rtc-demo.png" style="display: block; margin: 0px auto;"></p>
 
-<p>You can also jump straight to the <a class="external" href="https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill" rel="noopener">code on Github</a> if you like.</p>
+<p>You can also jump straight to the <a href="https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill" rel="noopener">code on Github</a> if you like.</p>
 
 <h2 id="The_HTML_markup">The HTML markup</h2>
 
-<p><a class="external" href="https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill/index.html" rel="noopener">Our HTML interface</a> has two main operational sections: the stream and capture panel and the presentation panel. Each of these is presented side-by-side in its own {{HTMLElement("div")}} to facilitate styling and control.</p>
+<p><a href="https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill/index.html" rel="noopener">Our HTML interface</a> has two main operational sections: the stream and capture panel and the presentation panel. Each of these is presented side-by-side in its own {{HTMLElement("div")}} to facilitate styling and control.</p>
 
 <p>The first panel on the left contains two components: a {{HTMLElement("video")}} element, which will receive the stream from WebRTC, and a {{HTMLElement("button")}} the user clicks to capture a video frame.</p>
 
@@ -49,7 +49,7 @@ tags:
 
 <h2 id="The_JavaScript_code"><span style="font-size: 30px;">The JavaScript code</span></h2>
 
-<p>Now let's take a look at the <a class="external" href="https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill/capture.js" rel="noopener">JavaScript code</a>. We'll break it up into a few bite-sized pieces to make it easier to explain.</p>
+<p>Now let's take a look at the <a href="https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill/capture.js" rel="noopener">JavaScript code</a>. We'll break it up into a few bite-sized pieces to make it easier to explain.</p>
 
 <h3 id="Initialization">Initialization</h3>
 
@@ -87,7 +87,7 @@ tags:
 
 <h3 id="The_startup_function">The startup() function</h3>
 
-<p>The <code>startup()</code> function is run when the page has finished loading, courtesy of {{domxref("window.addEventListener()")}}. This function's job is to request access to the user's webcam, initialize the output {{HTMLElement("img")}} to a default state, and to establish the event listeners needed to receive each frame of video from the camera and react when the button is clicked to capture an image.</p>
+<p>The <code>startup()</code> function is run when the page has finished loading, courtesy of {{domxref("EventTarget.addEventListener")}}. This function's job is to request access to the user's webcam, initialize the output {{HTMLElement("img")}} to a default state, and to establish the event listeners needed to receive each frame of video from the camera and react when the button is clicked to capture an image.</p>
 
 <h4 id="Getting_element_references">Getting element references</h4>
 
@@ -218,14 +218,14 @@ tags:
 
 <h2 id="Using_specific_devices">Using specific devices</h2>
 
-<p>You can, if needed, restrict the set of permitted video sources to a specific device or set of devices. To do so, call {{domxref("navigator.mediaDevices.enumerateDevices()")}}. When the promise is fulfilled with an array of {{domxref("MediaDeviceInfo")}}  objects describing the available devices, find the ones that you want to allow and specify the corresponding {{domxref("MediaTrackConstraints.deviceId", "deviceId")}} or <code>deviceId</code>s in the {{domxref("MediaTrackConstraints")}} object passed into {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}.</p>
+<p>You can, if needed, restrict the set of permitted video sources to a specific device or set of devices. To do so, call {{domxref("MediaDevices.enumerateDevices")}}. When the promise is fulfilled with an array of {{domxref("MediaDeviceInfo")}}  objects describing the available devices, find the ones that you want to allow and specify the corresponding {{domxref("MediaTrackConstraints.deviceId", "deviceId")}} or <code>deviceId</code>s in the {{domxref("MediaTrackConstraints")}} object passed into {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}.</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="https://mdn-samples.mozilla.org/s/webrtc-capturestill">Try this sample</a></li>
  <li><a href="https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill">Sample code on Github</a></li>
- <li>{{domxref("Navigator.mediaDevices.getUserMedia()")}}</li>
+ <li>{{domxref("MediaDevices.getUserMedia")}}</li>
  <li>{{SectionOnPage("/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images", "Using frames from a video")}}</li>
  <li>{{domxref("CanvasRenderingContext2D.drawImage()")}}</li>
 </ul>

@@ -12,7 +12,7 @@ tags:
   - Same-origin policy
   - Security
   - XMLHttpRequest
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{HTTPSidebar}}</div>
 
@@ -30,15 +30,15 @@ tags:
 
 <p>Everyone, really.</p>
 
-<p>More specifically, this article is for <strong>web administrators</strong>, <strong>server developers</strong>, and <strong>front-end developers</strong>. Modern browsers handle the client side of cross-origin sharing, including headers and policy enforcement. But the CORS standard means servers have to handle new request and response headers. Another article for server developers discussing <a href="/en-US/docs/Web/HTTP/CORS">cross-origin sharing from a server perspective (with PHP code snippets)</a> is supplementary reading.</p>
+<p>More specifically, this article is for <strong>web administrators</strong>, <strong>server developers</strong>, and <strong>front-end developers</strong>. Modern browsers handle the client side of cross-origin sharing, including headers and policy enforcement. But the CORS standard means servers have to handle new request and response headers.</p>
 
 <h2 id="What_requests_use_CORS">What requests use CORS?</h2>
 
-<p>This <a class="external" href="https://fetch.spec.whatwg.org/#http-cors-protocol">cross-origin sharing standard</a> can enable cross-site HTTP requests for:</p>
+<p>This <a href="https://fetch.spec.whatwg.org/#http-cors-protocol">cross-origin sharing standard</a> can enable cross-site HTTP requests for:</p>
 
 <ul>
  <li>Invocations of the {{domxref("XMLHttpRequest")}} or <a href="/en-US/docs/Web/API/Fetch_API">Fetch APIs</a>, as discussed above.</li>
- <li>Web Fonts (for cross-domain font usage in <code>@font-face</code> within CSS), <a class="external" href="https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements">so that servers can deploy TrueType fonts that can only be cross-site loaded and used by web sites that are permitted to do so.</a></li>
+ <li>Web Fonts (for cross-domain font usage in <code>@font-face</code> within CSS), <a href="https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements">so that servers can deploy TrueType fonts that can only be cross-site loaded and used by web sites that are permitted to do so.</a></li>
  <li><a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">WebGL textures</a>.</li>
  <li>Images/video frames drawn to a canvas using {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}}.</li>
  <li><a href="/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Images">CSS Shapes from images.</a></li>
@@ -62,7 +62,7 @@ tags:
 
 <h3 id="Simple_requests">Simple requests</h3>
 
-<p>Some requests don’t trigger a <a href="#Preflighted_requests">CORS preflight</a>. Those are called <em>“simple requests”</em> in this article, though the {{SpecName('Fetch')}} spec (which defines CORS) doesn’t use that term. A “simple request” is one that <strong>meets all the following conditions</strong>:</p>
+<p>Some requests don’t trigger a <a href="#preflighted_requests">CORS preflight</a>. Those are called <em>“simple requests”</em> in this article, though the {{SpecName('Fetch')}} spec (which defines CORS) doesn’t use that term. A “simple request” is one that <strong>meets all the following conditions</strong>:</p>
 
 <ul>
  <li>One of the allowed methods:
@@ -107,7 +107,7 @@ tags:
 
 <p>For example, suppose web content at <code class="plain">https://foo.example</code> wishes to invoke content on domain <code class="plain">https://bar.other</code>. Code of this sort might be used in JavaScript deployed on <code>foo.example</code>:</p>
 
-<pre class="brush: js notranslate">const xhr = new XMLHttpRequest();
+<pre class="brush: js">const xhr = new XMLHttpRequest();
 const url = 'https://bar.other/resources/public-data/';
 
 xhr.open('GET', url);
@@ -121,7 +121,7 @@ xhr.send();
 
 <p>Let's look at what the browser will send to the server in this case, and let's see how the server responds:</p>
 
-<pre class="brush: shell notranslate">GET /resources/public-data/ HTTP/1.1
+<pre class="brush: shell">GET /resources/public-data/ HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -133,7 +133,7 @@ Connection: keep-alive
 
 <p>The request header of note is {{HTTPHeader("Origin")}}, which shows that the invocation is coming from <code class="plain">https://foo.example</code>.</p>
 
-<pre class="notranslate">HTTP/1.1 200 OK
+<pre>HTTP/1.1 200 OK
 Date: Mon, 01 Dec 2008 00:23:53 GMT
 Server: Apache/2
 <strong>Access-Control-Allow-Origin: *</strong>
@@ -146,22 +146,22 @@ Content-Type: application/xml
 
 <p>In response, the server sends back an {{HTTPHeader("Access-Control-Allow-Origin")}} header with <code>Access-Control-Allow-Origin: *</code>, which means that the resource can be accessed by <strong>any</strong> origin.</p>
 
-<pre class="brush: html notranslate">Access-Control-Allow-Origin: *</pre>
+<pre class="brush: html">Access-Control-Allow-Origin: *</pre>
 
 <p>This pattern of the {{HTTPHeader("Origin")}} and {{HTTPHeader("Access-Control-Allow-Origin")}} headers is the simplest use of the access control protocol. If the resource owners at <code class="plain">https://bar.other</code> wished to restrict access to the resource to requests <em>only</em> from <code class="plain">https://foo.example</code>, (i.e no domain other than <code class="plain">https://foo.example</code> can access the resource in a cross-site manner) they would send:</p>
 
-<pre class="notranslate"><code class="plain">Access-Control-Allow-Origin: https://foo.example</code>
+<pre><code class="plain">Access-Control-Allow-Origin: https://foo.example</code>
 </pre>
 
-<div class="note"><strong>Note:</strong> When responding to a <a href="#Credentialed_requests_and_wildcards">credentialed requests</a> request, the server <strong>must</strong> specify an origin in the value of the <code>Access-Control-Allow-Origin</code> header, instead of specifying the "<code>*</code>" wildcard.</div>
+<div class="note"><strong>Note:</strong> When responding to a <a href="#requests_with_credentials">credentialed requests</a> request, the server <strong>must</strong> specify an origin in the value of the <code>Access-Control-Allow-Origin</code> header, instead of specifying the "<code>*</code>" wildcard.</div>
 
 <h3 id="Preflighted_requests">Preflighted requests</h3>
 
-<p>Unlike <a href="#Simple_requests">“simple requests” (discussed above)</a>, for "preflighted" requests the browser first sends an HTTP request using the {{HTTPMethod("OPTIONS")}} method to the resource on the other origin, in order to determine if the actual request is safe to send. Cross-site requests are preflighted like this since they may have implications to user data.</p>
+<p>Unlike <a href="#simple_requests">“simple requests” (discussed above)</a>, for "preflighted" requests the browser first sends an HTTP request using the {{HTTPMethod("OPTIONS")}} method to the resource on the other origin, in order to determine if the actual request is safe to send. Cross-site requests are preflighted like this since they may have implications to user data.</p>
 
 <p>The following is an example of a request that will be preflighted:</p>
 
-<pre class="brush: js notranslate">const xhr = new XMLHttpRequest();
+<pre class="brush: js">const xhr = new XMLHttpRequest();
 xhr.open('POST', 'https://bar.other/resources/post-here/');
 xhr.setRequestHeader('X-PINGOTHER', 'pingpong');
 xhr.setRequestHeader('Content-Type', 'application/xml');
@@ -179,7 +179,7 @@ xhr.send('&lt;person&gt;&lt;name&gt;Arun&lt;/name&gt;&lt;/person&gt;');
 
 <p>Let's look at the full exchange between client and server. The first exchange is the <em>preflight request/response</em>:</p>
 
-<pre class="brush: shell notranslate">OPTIONS /doc HTTP/1.1
+<pre class="brush: shell">OPTIONS /doc HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -204,7 +204,7 @@ Connection: Keep-Alive
 
 <p>Lines 1 - 10 above represent the preflight request with the {{HTTPMethod("OPTIONS")}} method. The browser determines that it needs to send this based on the request parameters that the JavaScript code snippet above was using, so that the server can respond whether it is acceptable to send the request with the actual request parameters. OPTIONS is an HTTP/1.1 method that is used to determine further information from servers, and is a {{Glossary("safe")}} method, meaning that it can't be used to change the resource. Note that along with the OPTIONS request, two other request headers are sent (lines 9 and 10 respectively):</p>
 
-<pre class="brush: none notranslate">Access-Control-Request-Method: POST
+<pre class="brush: none">Access-Control-Request-Method: POST
 Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 </pre>
 
@@ -212,7 +212,7 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
 <p>Lines 13 - 22 above are the response that the server sends back, which indicate that the request method (<code>POST</code>) and request headers (<code>X-PINGOTHER</code>) are acceptable. In particular, let's look at lines 16-19:</p>
 
-<pre class="brush: none notranslate">Access-Control-Allow-Origin: http://foo.example
+<pre class="brush: none">Access-Control-Allow-Origin: http://foo.example
 Access-Control-Allow-Methods: POST, GET, OPTIONS
 Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
 Access-Control-Max-Age: 86400</pre>
@@ -225,7 +225,7 @@ Access-Control-Max-Age: 86400</pre>
 
 <p>Once the preflight request is complete, the real request is sent:</p>
 
-<pre class="brush: shell notranslate">POST /doc HTTP/1.1
+<pre class="brush: shell">POST /doc HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -274,13 +274,13 @@ Content-Type: text/plain
 
 <ul>
  <li>Change the server-side behavior to avoid the preflight and/or to avoid the redirect</li>
- <li>Change the request such that it is a <a href="#Simple_requests">simple request</a> that doesn’t cause a preflight</li>
+ <li>Change the request such that it is a <a href="#simple_requests">simple request</a> that doesn’t cause a preflight</li>
 </ul>
 
 <p>If that's not possible, then another way is to:</p>
 
 <ol>
- <li>Make a <a href="#Simple_requests">simple request</a> (using {{domxref("Response.url")}} for the Fetch API, or {{domxref("XMLHttpRequest.responseURL")}}) to determine what URL the real preflighted request would end up at.</li>
+ <li>Make a <a href="#simple_requests">simple request</a> (using {{domxref("Response.url")}} for the Fetch API, or {{domxref("XMLHttpRequest.responseURL")}}) to determine what URL the real preflighted request would end up at.</li>
  <li>Make another request (the “real” request) using the URL you obtained from <code>Response.url</code> or <code>XMLHttpRequest.responseURL</code> in the first step.</li>
 </ol>
 
@@ -296,7 +296,7 @@ Content-Type: text/plain
 
 <p>In this example, content originally loaded from <code class="plain">http://foo.example</code> makes a simple GET request to a resource on <code class="plain">http://bar.other</code> which sets Cookies. Content on foo.example might contain JavaScript like this:</p>
 
-<pre class="brush: js notranslate">const invocation = new XMLHttpRequest();
+<pre class="brush: js">const invocation = new XMLHttpRequest();
 const url = 'http://bar.other/resources/credentialed-content/';
 
 function callOtherDomain() {
@@ -314,7 +314,7 @@ function callOtherDomain() {
 
 <p>Here is a sample exchange between client and server:</p>
 
-<pre class="brush: shell notranslate">GET /resources/credentialed-content/ HTTP/1.1
+<pre class="brush: shell">GET /resources/credentialed-content/ HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -369,14 +369,14 @@ Content-Type: text/plain
 
 <p>A returned resource may have one {{HTTPHeader("Access-Control-Allow-Origin")}} header, with the following syntax:</p>
 
-<pre class="brush: none notranslate">Access-Control-Allow-Origin: &lt;origin&gt; | *
+<pre class="brush: none">Access-Control-Allow-Origin: &lt;origin&gt; | *
 </pre>
 
 <p><code>Access-Control-Allow-Origin</code> specifies either a single origin, which tells browsers to allow that origin to access the resource; or else — for requests <strong>without</strong> credentials — the "<code>*</code>" wildcard, to tell browsers to allow any origin to access the resource.</p>
 
 <p>For example, to allow code from the origin <code>https://mozilla.org</code> to access the resource, you can specify:</p>
 
-<pre class="brush: none notranslate">Access-Control-Allow-Origin: https://mozilla.org
+<pre class="brush: none">Access-Control-Allow-Origin: https://mozilla.org
 Vary: Origin</pre>
 
 <p>If the server specifies a single origin (that may dynamically change based on the requesting origin as part of a white-list) rather than the "<code>*</code>" wildcard, then the server should also include <code>Origin</code> in the {{HTTPHeader("Vary")}} response header — to indicate to clients that server responses will differ based on the value of the {{HTTPHeader("Origin")}} request header.</p>
@@ -385,12 +385,12 @@ Vary: Origin</pre>
 
 <p>The {{HTTPHeader("Access-Control-Expose-Headers")}} header lets a server whitelist headers that Javascript (such as {{domxref("XMLHttpRequest.getResponseHeader()","getResponseHeader()")}}) in browsers are allowed to access.</p>
 
-<pre class="brush: none notranslate">Access-Control-Expose-Headers: &lt;header-name&gt;[, &lt;header-name&gt;]*
+<pre class="brush: none">Access-Control-Expose-Headers: &lt;header-name&gt;[, &lt;header-name&gt;]*
 </pre>
 
 <p>For example, the following:</p>
 
-<pre class="brush: none notranslate">Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header
+<pre class="brush: none">Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header
 </pre>
 
 <p>…would allow the <code>X-My-Custom-Header</code> and <code>X-Another-Custom-Header</code> headers to be exposed to the browser.</p>
@@ -399,7 +399,7 @@ Vary: Origin</pre>
 
 <p>The {{HTTPHeader("Access-Control-Max-Age")}} header indicates how long the results of a preflight request can be cached. For an example of a preflight request, see the above examples.</p>
 
-<pre class="brush: none notranslate">Access-Control-Max-Age: &lt;delta-seconds&gt;
+<pre class="brush: none">Access-Control-Max-Age: &lt;delta-seconds&gt;
 </pre>
 
 <p>The <code>delta-seconds</code> parameter indicates the number of seconds the results can be cached.</p>
@@ -408,25 +408,25 @@ Vary: Origin</pre>
 
 <p>The {{HTTPHeader("Access-Control-Allow-Credentials")}} header Indicates whether or not the response to the request can be exposed when the <code>credentials</code> flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials. Note that simple <code>GET</code> requests are not preflighted, and so if a request is made for a resource with credentials, if this header is not returned with the resource, the response is ignored by the browser and not returned to web content.</p>
 
-<pre class="brush: none notranslate">Access-Control-Allow-Credentials: true
+<pre class="brush: none">Access-Control-Allow-Credentials: true
 </pre>
 
-<p><a class="internal" href="#Requests_with_credentials">Credentialed requests</a> are discussed above.</p>
+<p><a class="internal" href="#requests_with_credentials">Credentialed requests</a> are discussed above.</p>
 
 <h3 id="Access-Control-Allow-Methods">Access-Control-Allow-Methods</h3>
 
 <p>The {{HTTPHeader("Access-Control-Allow-Methods")}} header specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request. The conditions under which a request is preflighted are discussed above.</p>
 
-<pre class="brush: none notranslate">Access-Control-Allow-Methods: &lt;method&gt;[, &lt;method&gt;]*
+<pre class="brush: none">Access-Control-Allow-Methods: &lt;method&gt;[, &lt;method&gt;]*
 </pre>
 
-<p>An example of a <a class="internal" href="#Preflighted_requests">preflight request is given above</a>, including an example which sends this header to the browser.</p>
+<p>An example of a <a class="internal" href="#preflighted_requests">preflight request is given above</a>, including an example which sends this header to the browser.</p>
 
 <h3 id="Access-Control-Allow-Headers">Access-Control-Allow-Headers</h3>
 
-<p>The {{HTTPHeader("Access-Control-Allow-Headers")}} header is used in response to a <a class="internal" href="#Preflighted_requests">preflight request</a> to indicate which HTTP headers can be used when making the actual request. This header is the server side response to the browser's {{HTTPHeader("Access-Control-Request-Headers")}} header.</p>
+<p>The {{HTTPHeader("Access-Control-Allow-Headers")}} header is used in response to a <a class="internal" href="#preflighted_requests">preflight request</a> to indicate which HTTP headers can be used when making the actual request. This header is the server side response to the browser's {{HTTPHeader("Access-Control-Request-Headers")}} header.</p>
 
-<pre class="brush: none notranslate">Access-Control-Allow-Headers: &lt;header-name&gt;[, &lt;header-name&gt;]*
+<pre class="brush: none">Access-Control-Allow-Headers: &lt;header-name&gt;[, &lt;header-name&gt;]*
 </pre>
 
 <h2 id="The_HTTP_request_headers">The HTTP request headers</h2>
@@ -437,7 +437,7 @@ Vary: Origin</pre>
 
 <p>The {{HTTPHeader("Origin")}} header indicates the origin of the cross-site access request or preflight request.</p>
 
-<pre class="brush: none notranslate">Origin: &lt;origin&gt;
+<pre class="brush: none">Origin: &lt;origin&gt;
 </pre>
 
 <p>The origin is a URI indicating the server from which the request initiated. It does not include any path information, but only the server name.</p>
@@ -450,19 +450,19 @@ Vary: Origin</pre>
 
 <p>The {{HTTPHeader("Access-Control-Request-Method")}} is used when issuing a preflight request to let the server know what HTTP method will be used when the actual request is made.</p>
 
-<pre class="brush: none notranslate">Access-Control-Request-Method: &lt;method&gt;
+<pre class="brush: none">Access-Control-Request-Method: &lt;method&gt;
 </pre>
 
-<p>Examples of this usage can be <a class="internal" href="#Preflighted_requests">found above.</a></p>
+<p>Examples of this usage can be <a class="internal" href="#preflighted_requests">found above.</a></p>
 
 <h3 id="Access-Control-Request-Headers">Access-Control-Request-Headers</h3>
 
 <p>The {{HTTPHeader("Access-Control-Request-Headers")}} header is used when issuing a preflight request to let the server know what HTTP headers will be used when the actual request is made (such as with {{domxref("XMLHttpRequest.setRequestHeader()","setRequestHeader()")}}). This browser side header will be answered by the complementary server side header of {{HTTPHeader("Access-Control-Allow-Headers")}}.</p>
 
-<pre class="brush: none notranslate">Access-Control-Request-Headers: &lt;field-name&gt;[, &lt;field-name&gt;]*
+<pre class="brush: none">Access-Control-Request-Headers: &lt;field-name&gt;[, &lt;field-name&gt;]*
 </pre>
 
-<p>Examples of this usage can be <a class="internal" href="#Preflighted_requests">found above</a>.</p>
+<p>Examples of this usage can be <a class="internal" href="#preflighted_requests">found above</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

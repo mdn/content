@@ -18,7 +18,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <code><em>active</em> = <em>event</em>.getModifierState(<em>keyArg</em>);</code></pre>
+  class="brush: js">var <code><em>active</em> = <em>event</em>.getModifierState(<em>keyArg</em>);</code></pre>
 
 <h3 id="Returns">Returns </h3>
 
@@ -229,7 +229,7 @@ if (event.getModifierState("Accel")) {
   return;
 }
 
-// Do somethig different for arrow keys if ScrollLock is locked.
+// Do something different for arrow keys if ScrollLock is locked.
 if ((event.getModifierState("ScrollLock") ||
        event.getModifierState("Scroll") /* hack for IE */) &amp;&amp;
     !event.getModifierState("Control") &amp;&amp;

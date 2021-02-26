@@ -20,7 +20,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"> <em>event</em> = new InputEvent(<em>typeArg</em>, <em>inputEventInit</em>);</pre>
+  class="brush: js"> <em>event</em> = new InputEvent(<em>typeArg</em>, <em>inputEventInit</em>);</pre>
 
 <h3 id="Values">Values</h3>
 
@@ -32,14 +32,14 @@ tags:
     <p>Is a <code>InputEventInit</code> dictionary, having the following fields:</p>
     <ul>
       <li><code>inputType</code>: (Optional) A string specifying the type of change for
-        editible content such as, for example, inserting, deleting, or formatting text.
+        editable content such as, for example, inserting, deleting, or formatting text.
       </li>
       <li><code>data</code>: (Optional) A string containing characters to insert. This may
         be an empty string if the change doesn't insert text (such as when deleting
         characters, for example).</li>
       <li><code>dataTransfer</code>: (Optional) A {{domxref("DataTransfer")}} object
         containing information about richtext or plaintext data being added to or removed
-        from editible content.</li>
+        from editable content.</li>
       <li><code>isComposing</code>: (Optional) A boolean indicating that the event is part
         of a composition session, meaning it is after a {{event("compositionstart")}}
         event but before a {{event("compositionend")}} event.  The default is

@@ -2,44 +2,44 @@
 title: CSSPageRule
 slug: Web/API/CSSPageRule
 tags:
-- API
-- CSSOM
-- Interface
-- Reference
+  - API
+  - CSSOM
+  - Interface
+  - Reference
 ---
 <div>{{APIRef("CSSOM")}}</div>
 
-<p><strong><code>CSSPageRule</code></strong> is an interface representing a single CSS
-	{{cssxref("@page")}} rule. It implements the {{domxref("CSSRule")}} interface with a
-	type value of <code>6</code> (<code>CSSRule.PAGE_RULE</code>).</p>
 
-<h2 id="Syntax">Syntax</h2>
+<p><strong><code>CSSPageRule</code></strong> represents a single CSS {{cssxref("@page")}} rule. </p>
 
-<p>The syntax is described using the <a
-		href="https://dev.w3.org/2006/webapi/WebIDL/">WebIDL</a> format.</p>
-
-<pre class="brush: js notranslate">interface CSSPageRule : CSSRule {
-  attribute DOMString selectorText;
-  readonly attribute CSSStyleDeclaration style;
-};
-</pre>
+<p>{{InheritanceDiagram}}</p>
 
 <h2 id="Properties">Properties</h2>
 
-<p>As a {{domxref("CSSRule")}}, <code>CSSPageRule</code> also implements the properties of
-	this interface. It has the following specific properties:</p>
+<p><em>Inherits properties from its ancestor {{domxref("CSSRule")}}.</em></p>
 
 <dl>
 	<dt>{{domxref("CSSPageRule.selectorText")}}</dt>
 	<dd>Represents the text of the page selector associated with the at-rule.</dd>
 	<dt>{{domxref("CSSPageRule.style")}} {{readonlyinline}}</dt>
-	<dd>Returns the declaration block associated with the at-rule.</dd>
+	<dd>Returns the <a href="/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block">declaration block</a> associated with the at-rule.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
-<p>As a {{domxref("CSSRule")}}, <code>CSSPageRule</code> also implements the methods of
-	that interface. It has no specific methods.</p>
+<p><em>Inherits methods from its ancestor {{domxref("CSSRule")}}.</em></p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The stylesheet includes a single {{cssxref("@page")}} rule, therefore the first (and only) rule returned will be a <code>CSSPageRule</code>.</p>
+
+<pre class="brush: css">@page {
+  margin: 1cm;
+}</pre>
+
+<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0]); // a CSSPageRule
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

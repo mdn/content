@@ -12,7 +12,7 @@ tags:
 - Reference
 - copyTo
 ---
-<p>{{APIRef("File System API")}}{{Obsolete_Header}}</p>
+<p>{{APIRef("File System API")}}{{deprecated_header}}</p>
 
 <p><span class="seoSummary">The {{domxref("FileSystemEntry")}} interface's method
     <code><strong>copyTo</strong></code><strong><code>()</code></strong> copies the file
@@ -30,7 +30,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>FileSystemEntry</em>.copyTo(<em>newParent</em>[, <em>newName</em>][, <em>successCallback</em>][, <em>errorCallback</em>]);</pre>
+  class="brush: js"><em>FileSystemEntry</em>.copyTo(<em>newParent</em>[, <em>newName</em>][, <em>successCallback</em>][, <em>errorCallback</em>]);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -42,7 +42,7 @@ tags:
   <dd>If this parameter is provided, the copy is given this string as its new file or
     directory name.</dd>
   <dt><code>successCallback</code> {{optional_inline}}</dt>
-  <dd>A function which is called when the copy operation is succesfully completed.
+  <dd>A function which is called when the copy operation is successfully completed.
     Receives a single input parameter: a {{domxref("FileSystemEntry")}} based object
     providing the copied item's new details.</dd>
   <dt><code>errorCallback</code> {{optional_inline}}</dt>

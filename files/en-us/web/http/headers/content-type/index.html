@@ -40,7 +40,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html notranslate">Content-Type: text/html; charset=UTF-8
+<pre class="brush: html">Content-Type: text/html; charset=UTF-8
 Content-Type: multipart/form-data; boundary=something
 </pre>
 
@@ -61,7 +61,7 @@ Content-Type: multipart/form-data; boundary=something
 
 <p>In a {{HTTPMethod("POST")}} request, resulting from an HTML form submission, the <code>Content-Type</code> of the request is specified by the <code>enctype</code> attribute on the {{HTMLElement("form")}} element.</p>
 
-<pre class="brush: html notranslate">&lt;form action="/" method="post" enctype="multipart/form-data"&gt;
+<pre class="brush: html">&lt;form action="/" method="post" enctype="multipart/form-data"&gt;
   &lt;input type="text" name="description" value="some text"&gt;
   &lt;input type="file" name="myFile"&gt;
   &lt;button type="submit"&gt;Submit&lt;/button&gt;
@@ -70,7 +70,7 @@ Content-Type: multipart/form-data; boundary=something
 
 <p>The request looks something like this (less interesting headers are omitted here):</p>
 
-<pre class="notranslate">POST /foo HTTP/1.1
+<pre>POST /foo HTTP/1.1
 Content-Length: 68137
 Content-Type: multipart/form-data; boundary=---------------------------974767299852498929531610575
 

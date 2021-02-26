@@ -50,7 +50,7 @@ console.log(bar(7)) //returns 42
 
 <p>A JavaScript runtime uses a message queue, which is a list of messages to be processed. Each message has an associated function which gets called in order to handle the message.</p>
 
-<p>At some point during the <a href="#Event_loop">event loop</a>, the runtime starts handling the messages on the queue, starting with the oldest one. To do so, the message is removed from the queue and its corresponding function is called with the message as an input parameter. As always, calling a function creates a new stack frame for that function's use.</p>
+<p>At some point during the <a href="#event_loop">event loop</a>, the runtime starts handling the messages on the queue, starting with the oldest one. To do so, the message is removed from the queue and its corresponding function is called with the message as an input parameter. As always, calling a function creates a new stack frame for that function's use.</p>
 
 <p>The processing of functions continues until the stack is once again empty. Then, the event loop will process the next message in the queue (if there is one).</p>
 

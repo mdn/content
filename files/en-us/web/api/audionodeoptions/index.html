@@ -2,14 +2,14 @@
 title: AudioNodeOptions
 slug: Web/API/AudioNodeOptions
 tags:
-- API
-- Audio
-- AudioNodeOptions
-- Dictionary
-- Interface
-- Options
-- Reference
-- Web Audio API
+  - API
+  - Audio
+  - AudioNodeOptions
+  - Dictionary
+  - Interface
+  - Options
+  - Reference
+  - Web Audio API
 ---
 <p>{{APIRef("'Web Audio API'")}}</p>
 
@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var audioNodeOptions = {
+<pre class="brush: js">var audioNodeOptions = {
   "channelCount" : 2,
   "channelCountMode" : "max",
   "channelInterpretation" : "discrete"
@@ -34,7 +34,7 @@ tags:
 <dl>
   <dt><code>channelCount</code> {{optional_inline}}</dt>
   <dd>Represents an integer used to determine how many channels are used when <a
-      href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing">up-mixing
+      href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing">up-mixing
       and down-mixing</a> connections to any inputs to the node. (See
     {{domxref("AudioNode.channelCount")}} for more information.) Its usage and precise
     definition depend on the value of {{domxref("AudioNodeOptions.channelCountMode")}}.
@@ -46,7 +46,7 @@ tags:
   <dt><code>channelInterpretation</code> {{optional_inline}}</dt>
   <dd>Represents an enumerated value describing the meaning of the channels. This
     interpretation will define how audio <a
-      href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing">up-mixing
+      href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing">up-mixing
       and down-mixing</a> will happen.<br>
     The possible values are <code>"speakers"</code> or <code>"discrete"</code>. (See
     {{domxref("AudioNode.channelCountMode")}} for more information including default

@@ -15,7 +15,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">new ReferenceError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
+  class="brush: js">new ReferenceError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -32,7 +32,7 @@ tags:
 
 <h3 id="Catching_a_ReferenceError">Catching a ReferenceError</h3>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   let a = undefinedVariable
 } catch (e) {
   console.log(e instanceof ReferenceError)  // true
@@ -47,7 +47,7 @@ tags:
 
 <h3 id="Creating_a_ReferenceError">Creating a ReferenceError</h3>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   throw new ReferenceError('Hello', 'someFile.js', 10)
 } catch (e) {
   console.log(e instanceof ReferenceError)  // true
@@ -78,10 +78,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.ReferenceError.ReferenceError")}}</p>
-</div>
+<p>{{Compat("javascript.builtins.ReferenceError.ReferenceError")}}</p>
 
 <h2 id="See_also">See also</h2>
 

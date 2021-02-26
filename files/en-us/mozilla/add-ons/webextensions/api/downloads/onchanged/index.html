@@ -47,7 +47,7 @@ browser.downloads.onChanged.hasListener(listener)
 
  <dl class="reference-values">
   <dt><code>downloadDelta</code></dt>
-  <dd>An <a href="#downloadDelta"><code>object</code></a> representing the {{WebExtAPIRef('downloads.DownloadItem')}} object that changed, and the status of all the properties that changed in it.</dd>
+  <dd>An <a href="#downloaddelta"><code>object</code></a> representing the {{WebExtAPIRef('downloads.DownloadItem')}} object that changed, and the status of all the properties that changed in it.</dd>
  </dl>
  </dd>
 </dl>
@@ -99,7 +99,7 @@ browser.downloads.onChanged.hasListener(listener)
 
 <p>Log a message when downloads complete:</p>
 
-<pre class="notranslate brush: js">function handleChanged(delta) {
+<pre class="brush: js">function handleChanged(delta) {
   if (delta.state &amp;&amp; delta.state.current === "complete") {
     console.log(`Download ${delta.id} has completed.`);
   }

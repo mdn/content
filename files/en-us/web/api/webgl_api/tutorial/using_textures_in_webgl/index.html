@@ -21,7 +21,7 @@ tags:
 
 <p>The code that loads the texture looks like this:</p>
 
-<pre class="brush: js notranslate">//
+<pre class="brush: js">//
 // Initialize a texture and load an image.
 // When the image finished loading copy it into the texture.
 //
@@ -86,7 +86,7 @@ function isPowerOf2(value) {
 
 <p>Mipmapping and UV repeating can be disabled with {{domxref("WebGLRenderingContext.texParameter()", "texParameteri()")}}. This will allow non-power-of-two (NPOT) textures at the expense of mipmapping, UV wrapping, UV tiling, and your control over how the device will handle your texture.</p>
 
-<pre class="brush: js notranslate">// gl.NEAREST is also allowed, instead of gl.LINEAR, as neither mipmap.
+<pre class="brush: js">// gl.NEAREST is also allowed, instead of gl.LINEAR, as neither mipmap.
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
 // Prevents s-coordinate wrapping (repeating).
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
@@ -97,14 +97,14 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);</pre>
 
 <p>To load the image, add a call to our <code>loadTexture()</code> function within our <code>main()</code> function. This can be added after the <code>initBuffers(gl)</code> call.</p>
 
-<pre class="brush: js notranslate">// Load texture
+<pre class="brush: js">// Load texture
 const texture = loadTexture(gl, 'cubetexture.png');</pre>
 
 <h2 id="Mapping_the_texture_onto_the_faces">Mapping the texture onto the faces</h2>
 
 <p>At this point, the texture is loaded and ready to use. But before we can use it, we need to establish the mapping of the texture coordinates to the vertices of the faces of our cube. This replaces all the previously existing code for configuring colors for each of the cube's faces in <code>initBuffers()</code>.</p>
 
-<pre class="brush: js notranslate">  const textureCoordBuffer = gl.createBuffer();
+<pre class="brush: js">  const textureCoordBuffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, textureCoordBuffer);
 
   const textureCoordinates = [
@@ -165,7 +165,7 @@ const texture = loadTexture(gl, 'cubetexture.png');</pre>
 
 <p>We need to replace the vertex shader so that instead of fetching color data, it instead fetches the texture coordinate data.</p>
 
-<pre class="brush: js notranslate">  const vsSource = `
+<pre class="brush: js">  const vsSource = `
     attribute vec4 aVertexPosition;
     attribute vec2 aTextureCoord;
 
@@ -187,7 +187,7 @@ const texture = loadTexture(gl, 'cubetexture.png');</pre>
 
 <p>The fragment shader likewise needs to be updated:</p>
 
-<pre class="brush: js notranslate">  const fsSource = `
+<pre class="brush: js">  const fsSource = `
     varying highp vec2 vTextureCoord;
 
     uniform sampler2D uSampler;
@@ -204,7 +204,7 @@ const texture = loadTexture(gl, 'cubetexture.png');</pre>
 
 <p>Because we changed an attribute and added a uniform we need to look up their locations</p>
 
-<pre class="brush: js notranslate">  const programInfo = {
+<pre class="brush: js">  const programInfo = {
     program: shaderProgram,
     attribLocations: {
       vertexPosition: gl.getAttribLocation(shaderProgram, 'aVertexPosition'),
@@ -223,7 +223,7 @@ const texture = loadTexture(gl, 'cubetexture.png');</pre>
 
 <p>First, the code to specify the colors buffer is gone, replaced with this:</p>
 
-<pre class="brush: js notranslate">// tell webgl how to pull out the texture coordinates from buffer
+<pre class="brush: js">// tell webgl how to pull out the texture coordinates from buffer
 {
     const num = 2; // every coordinate composed of 2 values
     const type = gl.FLOAT; // the data in the buffer is 32 bit float
@@ -238,7 +238,7 @@ const texture = loadTexture(gl, 'cubetexture.png');</pre>
 
 <p>Then add code to specify the texture to map onto the faces, just before draw:</p>
 
-<pre class="brush: js notranslate">  // Tell WebGL we want to affect texture unit 0
+<pre class="brush: js">  // Tell WebGL we want to affect texture unit 0
   gl.activeTexture(gl.TEXTURE0);
 
   // Bind the texture to texture unit 0
@@ -252,7 +252,7 @@ const texture = loadTexture(gl, 'cubetexture.png');</pre>
 
 <p>Lastly, add <code>texture</code> as a parameter to the <code>drawScene()</code> function, both where it is defined and where it is called.</p>
 
-<pre class="brush: js notranslate">drawScene(gl, programInfo, buffers, texture, deltaTime);
+<pre class="brush: js">drawScene(gl, programInfo, buffers, texture, deltaTime);
 ...
 function drawScene(gl, programInfo, buffers, texture, deltaTime) {
 </pre>
@@ -269,7 +269,7 @@ function drawScene(gl, programInfo, buffers, texture, deltaTime) {
 
 <p>Because WebGL now requires textures to be loaded from secure contexts, you can't use textures loaded from <code>file:///</code> URLs in WebGL. That means that you'll need a secure web server to test and deploy your code. For local testing, see our guide <a href="/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">How do you set up a local testing server?</a> for help.</p>
 
-<p>See this <a class="external" href="http://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/">hacks.mozilla.org article</a> for an explanation of how to use CORS-approved images as WebGL textures, with <a class="external" href="http://people.mozilla.org/~bjacob/webgltexture-cors-js.html">a self-contained example</a>.</p>
+<p>See this <a href="http://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/">hacks.mozilla.org article</a> for an explanation of how to use CORS-approved images as WebGL textures, with <a href="http://people.mozilla.org/~bjacob/webgltexture-cors-js.html">a self-contained example</a>.</p>
 
 <div class="note">
 <p><strong>Note:</strong> CORS support for WebGL textures and the <code>crossOrigin</code> attribute for image elements is implemented in {{Gecko("8.0")}}.</p>

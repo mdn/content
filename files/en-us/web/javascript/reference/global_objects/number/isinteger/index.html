@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Number.isInteger(<var>value</var>)</pre>
+<pre class="brush: js">Number.isInteger(<var>value</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -46,7 +46,7 @@ tags:
 
 <h3 id="Using_isInteger">Using isInteger</h3>
 
-<pre class="brush: js notranslate">Number.isInteger(0);         // true
+<pre class="brush: js">Number.isInteger(0);         // true
 Number.isInteger(1);         // true
 Number.isInteger(-100000);   // true
 Number.isInteger(99999999999999999999999); // true
@@ -69,7 +69,7 @@ Number.isInteger(5.0000000000000001); // true
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="brush: js notranslate">Number.isInteger = Number.isInteger || function(value) {
+<pre class="brush: js">Number.isInteger = Number.isInteger || function(value) {
   return typeof value === 'number' &amp;&amp;
     isFinite(value) &amp;&amp;
     Math.floor(value) === value;

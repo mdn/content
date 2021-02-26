@@ -6,7 +6,7 @@ tags:
   - CSS Grid
   - CSS Property
   - Reference
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 ---
 <p>The <strong><code>grid-template</code></strong> CSS property is a <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> for defining {{glossary("grid column", "grid columns")}}, {{glossary("grid rows", "rows")}}, and {{glossary("grid areas", "areas")}}.</p>
 
@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css no-line-numbers notranslate">/* Keyword value */
+<pre class="brush: css no-line-numbers">/* Keyword value */
 grid-template: none;
 
 /* grid-template-rows / grid-template-columns values */
@@ -58,7 +58,7 @@ grid-template: unset;
  <dt><code>[ &lt;line-names&gt;? &lt;string&gt; &lt;track-size&gt;? &lt;line-names&gt;? ]+ [ / &lt;explicit-track-list&gt; ]?</code></dt>
  <dd>Sets {{cssxref("grid-template-areas")}} to the strings listed, {{cssxref("grid-template-rows")}} to the track sizes following each string (filling in <code>auto</code> for any missing sizes), and splicing in the named lines defined before/after each size, and {{cssxref("grid-template-columns")}} to the track listing specified after the slash (or <code>none</code>, if not specified).<br>
 
- <p class="note">Note: The {{cssxref("repeat")}} function isn’t allowed in these track listings, as the tracks are intended to visually line up one-to-one with the rows/columns in the “ASCII art”.</p>
+ <p class="note">Note: The {{cssxref("repeat()")}} function isn’t allowed in these track listings, as the tracks are intended to visually line up one-to-one with the rows/columns in the “ASCII art”.</p>
  </dd>
 </dl>
 
@@ -70,7 +70,7 @@ grid-template: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -78,7 +78,7 @@ grid-template: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush:css; highlight[5-8] notranslate">#page {
+<pre class="brush:css; highlight[5-8]">#page {
   display: grid;
   width: 100%;
   height: 200px;
@@ -110,7 +110,7 @@ footer {
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush:html notranslate">&lt;section id="page"&gt;
+<pre class="brush:html">&lt;section id="page"&gt;
   &lt;header&gt;Header&lt;/header&gt;
   &lt;nav&gt;Navigation&lt;/nav&gt;
   &lt;main&gt;Main area&lt;/main&gt;
@@ -149,7 +149,7 @@ footer {
 <ul>
  <li>Related CSS properties: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}</li>
  <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement with CSS Grid</a></em></li>
- <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#Grid_definition_shorthands">Grid template areas - Grid definition shorthands</a></em></li>
+ <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#grid_definition_shorthands">Grid template areas - Grid definition shorthands</a></em></li>
  <li>Video tutorial:<em> <a href="http://gridbyexample.com/video/grid-template-shorthand/">Grid Template shorthand</a></em></li>
 </ul>
 

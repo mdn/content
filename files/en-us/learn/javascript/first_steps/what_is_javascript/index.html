@@ -15,7 +15,7 @@ tags:
   - comments
   - external
   - inline
-  - 'l10n:priority'
+  - l10n:priority
   - what
 ---
 <div>{{LearnSidebar}}</div>
@@ -51,13 +51,13 @@ tags:
 
 <p>The three layers build on top of one another nicely. Let's take a simple text label as an example. We can mark it up using HTML to give it structure and purpose:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Player 1: Chris&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Player 1: Chris&lt;/p&gt;</pre>
 
 <p><img alt="" src="just-html.png"></p>
 
 <p>Then we can add some CSS into the mix to get it looking nice:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   font-family: 'helvetica neue', helvetica, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -76,7 +76,7 @@ tags:
 
 <p>And finally, we can add some JavaScript to implement dynamic behavior:</p>
 
-<pre class="brush: js notranslate">const para = document.querySelector('p');
+<pre class="brush: js">const para = document.querySelector('p');
 
 para.addEventListener('click', updateName);
 
@@ -141,11 +141,11 @@ function updateName() {
 
 <p>Here we'll actually start looking at some code, and while doing so, explore what actually happens when you run some JavaScript in your page.</p>
 
-<p>Let's briefly recap the story of what happens when you load a web page in a browser (first talked about in our <a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_works#How_does_CSS_actually_work">How CSS works</a> article). When you load a web page in your browser, you are running your code (the HTML, CSS, and JavaScript) inside an execution environment (the browser tab). This is like a factory that takes in raw materials (the code) and outputs a product (the web page).</p>
+<p>Let's briefly recap the story of what happens when you load a web page in a browser (first talked about in our <a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_works#how_does_css_actually_work">How CSS works</a> article). When you load a web page in your browser, you are running your code (the HTML, CSS, and JavaScript) inside an execution environment (the browser tab). This is like a factory that takes in raw materials (the code) and outputs a product (the web page).</p>
 
 <p><img alt="" src="execution.png" style="display: block; margin: 0 auto;"></p>
 
-<p>A very common use of JavaScript is to dynamically modify HTML and CSS to update a user interface, via the Document Object Model API (as mentioned above). Note that the code in your web documents is generally loaded and executed in the order it appears on the page. If the JavaScript loads and tries to run before the HTML and CSS it is affecting has been loaded, errors can occur. You will learn ways around this later in the article, in the <a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Script_loading_strategies">Script loading strategies</a> section.</p>
+<p>A very common use of JavaScript is to dynamically modify HTML and CSS to update a user interface, via the Document Object Model API (as mentioned above). Note that the code in your web documents is generally loaded and executed in the order it appears on the page. If the JavaScript loads and tries to run before the HTML and CSS it is affecting has been loaded, errors can occur. You will learn ways around this later in the article, in the <a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#script_loading_strategies">Script loading strategies</a> section.</p>
 
 <h3 id="Browser_security">Browser security</h3>
 
@@ -159,7 +159,7 @@ function updateName() {
 
 <p>When the browser encounters a block of JavaScript, it generally runs it in order, from top to bottom. This means that you need to be careful what order you put things in. For example, let's return to the block of JavaScript we saw in our first example:</p>
 
-<pre class="brush: js notranslate">const para = document.querySelector('p');
+<pre class="brush: js">const para = document.querySelector('p');
 
 para.addEventListener('click', updateName);
 
@@ -208,14 +208,14 @@ function updateName() {
  <li>First of all, make a local copy of our example file <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript.html">apply-javascript.html</a>. Save it in a directory somewhere sensible.</li>
  <li>Open the file in your web browser and in your text editor. You'll see that the HTML creates a simple web page containing a clickable button.</li>
  <li>Next, go to your text editor and add the following in your head — just before your closing <code>&lt;/head&gt;</code> tag:
-  <pre class="brush: html notranslate">&lt;script&gt;
+  <pre class="brush: html">&lt;script&gt;
 
   // JavaScript goes here
 
 &lt;/script&gt;</pre>
  </li>
  <li>Now we'll add some JavaScript inside our {{htmlelement("script")}} element to make the page do something more interesting — add the following code just below the "// JavaScript goes here" line:
-  <pre class="brush: js notranslate">document.addEventListener("DOMContentLoaded", function() {
+  <pre class="brush: js">document.addEventListener("DOMContentLoaded", function() {
   function createParagraph() {
     let para = document.createElement('p');
     para.textContent = 'You clicked the button!';
@@ -247,10 +247,10 @@ function updateName() {
 <ol>
  <li>First, create a new file in the same directory as your sample HTML file. Call it <code>script.js</code> — make sure it has that .js filename extension, as that's how it is recognized as JavaScript.</li>
  <li>Replace your current {{htmlelement("script")}} element with the following:
-  <pre class="brush: html notranslate">&lt;script src="script.js" defer&gt;&lt;/script&gt;</pre>
+  <pre class="brush: html">&lt;script src="script.js" defer&gt;&lt;/script&gt;</pre>
  </li>
  <li>Inside <code>script.js</code>, add the following script:
-  <pre class="brush: js notranslate">function createParagraph() {
+  <pre class="brush: js">function createParagraph() {
   let para = document.createElement('p');
   para.textContent = 'You clicked the button!';
   document.body.appendChild(para);
@@ -274,13 +274,13 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 <p>Note that sometimes you'll come across bits of actual JavaScript code living inside HTML. It might look something like this:</p>
 
 <div id="inline_js_example">
-<pre class="brush: js example-bad notranslate">function createParagraph() {
+<pre class="brush: js example-bad">function createParagraph() {
   let para = document.createElement('p');
   para.textContent = 'You clicked the button!';
   document.body.appendChild(para);
 }</pre>
 
-<pre class="brush: html example-bad notranslate">&lt;button onclick="createParagraph()"&gt;Click me!&lt;/button&gt;</pre>
+<pre class="brush: html example-bad">&lt;button onclick="createParagraph()"&gt;Click me!&lt;/button&gt;</pre>
 </div>
 
 <p>You can try this version of our demo below.</p>
@@ -293,7 +293,7 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 
 <p>Using a pure JavaScript construct allows you to select all the buttons using one instruction. The code we used above to serve this purpose looks like this:</p>
 
-<pre class="brush: js notranslate">const buttons = document.querySelectorAll('button');
+<pre class="brush: js">const buttons = document.querySelectorAll('button');
 
 for(let i = 0; i &lt; buttons.length ; i++) {
   buttons[i].addEventListener('click', createParagraph);
@@ -307,13 +307,13 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 
 <h3 id="Script_loading_strategies">Script loading strategies</h3>
 
-<p>There are a number of issues involved with getting scripts to load at the right time. Nothing is as simple as it seems! A common problem is that all the HTML on a page is loaded in the order in which it appears. If you are using JavaScript to manipulate elements on the page (or more accurately, the <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#The_document_object_model">Document Object Model</a>), your code won't work if the JavaScript is loaded and parsed before the HTML you are trying to do something to.</p>
+<p>There are a number of issues involved with getting scripts to load at the right time. Nothing is as simple as it seems! A common problem is that all the HTML on a page is loaded in the order in which it appears. If you are using JavaScript to manipulate elements on the page (or more accurately, the <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#the_document_object_model">Document Object Model</a>), your code won't work if the JavaScript is loaded and parsed before the HTML you are trying to do something to.</p>
 
 <p>In the above code examples, in the internal and external examples the JavaScript is loaded and run in the head of the document, before the HTML body is parsed. This could cause an error, so we've used some constructs to get around it.</p>
 
 <p>In the internal example, you can see this structure around the code:</p>
 
-<pre class="brush: js notranslate">document.addEventListener("DOMContentLoaded", function() {
+<pre class="brush: js">document.addEventListener("DOMContentLoaded", function() {
   ...
 });</pre>
 
@@ -321,7 +321,7 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 
 <p>In the external example, we use a more modern JavaScript feature to solve the problem, the <code>defer</code> attribute, which tells the browser to continue downloading the HTML content once the <code>&lt;script&gt;</code> tag element has been reached.</p>
 
-<pre class="brush: js notranslate">&lt;script src="script.js" defer&gt;&lt;/script&gt;</pre>
+<pre class="brush: js">&lt;script src="script.js" defer&gt;&lt;/script&gt;</pre>
 
 <p>In this case both the script and the HTML will load simultaneously and the code will work.</p>
 
@@ -339,7 +339,7 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 
 <p>For example, if you have the following script elements:</p>
 
-<pre class="brush: html notranslate">&lt;script async src="js/vendor/jquery.js"&gt;&lt;/script&gt;
+<pre class="brush: html">&lt;script async src="js/vendor/jquery.js"&gt;&lt;/script&gt;
 
 &lt;script async src="js/script2.js"&gt;&lt;/script&gt;
 
@@ -351,7 +351,7 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 
 <p>Scripts loaded using the <code>defer</code> attribute (see below) will run in the order they appear in the page and execute them as soon as the script and content are downloaded:</p>
 
-<pre class="brush: html notranslate">&lt;script defer src="js/vendor/jquery.js"&gt;&lt;/script&gt;
+<pre class="brush: html">&lt;script defer src="js/vendor/jquery.js"&gt;&lt;/script&gt;
 
 &lt;script defer src="js/script2.js"&gt;&lt;/script&gt;
 
@@ -373,10 +373,10 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 
 <ul>
  <li>A single line comment is written after a double forward slash (//), e.g.
-  <pre class="brush: js notranslate">// I am a comment</pre>
+  <pre class="brush: js">// I am a comment</pre>
  </li>
  <li>A multi-line comment is written between the strings /* and */, e.g.
-  <pre class="brush: js notranslate">/*
+  <pre class="brush: js">/*
   I am also
   a comment
 */</pre>
@@ -385,7 +385,7 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 
 <p>So for example, we could annotate our last demo's JavaScript with comments like so:</p>
 
-<pre class="brush: js notranslate">// Function: creates a new paragraph and appends it to the bottom of the HTML body.
+<pre class="brush: js">// Function: creates a new paragraph and appends it to the bottom of the HTML body.
 
 function createParagraph() {
   let para = document.createElement('p');

@@ -50,11 +50,11 @@ tags:
 <p><a href="/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla">EcmaScript 2015</a> implementation continues!</p>
 
 <ul>
- <li>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread operator</a> is now supported in Function calls ({{bug("762363")}}).</li>
+ <li>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread operator</a> is now supported in Function calls ({{bug("762363")}}).</li>
  <li>The mathematical function {{jsxref("Global_Objects/Math/hypot", "Math.hypot()")}} has been implemented ({{bug("896264")}}).</li>
  <li>The {{jsxref("Operators/yield*", "yield*")}} expression is now implemented ({{bug(666396)}}).</li>
  <li>The <code>MapIterator</code>, <code>SetIterator</code> and <code>ArrayIterator</code> objects now match the specification ({{bug("881226")}}).</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for..of</a> loops now expect the ES2015 standard <a href="/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol">iterator protocol</a> moving away from SpiderMonkey old iterator protocol using <code>StopIteration</code>.</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for..of</a> loops now expect the ES2015 standard <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">iterator protocol</a> moving away from SpiderMonkey old iterator protocol using <code>StopIteration</code>.</li>
  <li>{{jsxref("String.match")}} and {{jsxref("String.replace")}} now reset {{jsxref("RegExp.lastIndex")}} ({{bug(501739)}}).</li>
 </ul>
 
@@ -73,7 +73,7 @@ tags:
  <li>The {{domxref("Navigator.vibrate()")}} method has been adapted to match the final specification: It now returns <code>false</code> when the list is too long or has too large entries, instead of throwing ({{bug(884935)}}).</li>
  <li>As part of the ongoing effort to standardize global objects, the non-standard stylesheet change event interfaces, including <code>StyleRuleChangeEvent</code>, <code>StyleSheetApplicableStateChangeEvent</code> and <code>StyleSheetChangeEvent</code>, are no longer available from Web content. The <code>CSSGroupRuleRuleList</code> interface, the implementation detail of {{domxref("CSSRuleList")}}, has also been removed ({{Bug("872934")}} and {{bug(916871)}}).</li>
  <li><code>atob</code> now ignores whitespaces ({{bug(711180)}}).</li>
- <li><a href="/en-US/docs/Web/WebGL">WebGL</a>: <code>MOZ_</code> prefixed extension strings are deprecated. Support for them will be removed in the future. Use unprefixed extension string only. To get draft extensions, set the <code>webgl.enable-draft-extensions</code> preferences ({{bug(924176)}}).</li>
+ <li><a href="/en-US/docs/Web/API/WebGL_API">WebGL</a>: <code>MOZ_</code> prefixed extension strings are deprecated. Support for them will be removed in the future. Use unprefixed extension string only. To get draft extensions, set the <code>webgl.enable-draft-extensions</code> preferences ({{bug(924176)}}).</li>
 </ul>
 
 <h3 id="MathML">MathML</h3>
@@ -103,7 +103,7 @@ tags:
 
 <ul>
  <li><a href="https://www.fxsitecompat.com/en-US/versions/27/">Site Compatibility for Firefox 27</a></li>
- <li><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;component=Marionette&amp;product=Testing&amp;target_milestone=mozilla27">List of changes</a> in <a href="/en-US/docs/Mozilla/QA/Marionette">Marionette</a> for Firefox 27.</li>
+ <li><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;component=Marionette&amp;product=Testing&amp;target_milestone=mozilla27">List of changes</a> in <a href="https://firefox-source-docs.mozilla.org/testing/marionette/marionette/index.html">Marionette</a> for Firefox 27.</li>
 </ul>
 
 <h3 id="Older_versions">Older versions</h3>

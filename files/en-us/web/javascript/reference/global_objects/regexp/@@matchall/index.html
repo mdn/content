@@ -25,7 +25,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>regexp</var>[Symbol.matchAll](<var>str</var>)</pre>
+<pre class="brush: js"><var>regexp</var>[Symbol.matchAll](<var>str</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -44,7 +44,7 @@ tags:
 <p>This method is called internally in {{jsxref("String.prototype.matchAll()")}}. For
   example, the following two examples return same result.</p>
 
-<pre class="brush: js notranslate">'abc'.matchAll(/a/);
+<pre class="brush: js">'abc'.matchAll(/a/);
 
 /a/[Symbol.matchAll]('abc');</pre>
 
@@ -59,7 +59,7 @@ tags:
   {{jsxref("String.prototype.matchAll()")}}, except for the different value of
   <code>this</code> and the different order of arguments.</p>
 
-<pre class="brush: js notranslate">let re = /[0-9]+/g;
+<pre class="brush: js">let re = /[0-9]+/g;
 let str = '2016-01-02';
 let result = re[Symbol.matchAll](str);
 
@@ -75,7 +75,7 @@ console.log(Array.from(result, x =&gt; x[0]));
 <p>For example, to return an {{jsxref("Array")}} instead of an <a
     href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">iterator</a>:</p>
 
-<pre class="brush: js notranslate">class MyRegExp extends RegExp {
+<pre class="brush: js">class MyRegExp extends RegExp {
   [Symbol.matchAll](str) {
     const result = RegExp.prototype[Symbol.matchAll].call(this, str);
     if (!result) {

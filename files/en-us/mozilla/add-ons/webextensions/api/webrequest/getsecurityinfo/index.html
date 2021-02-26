@@ -19,7 +19,7 @@ tags:
 
 <p>You can only call this function from inside the {{WebExtAPIRef("webRequest.onHeadersReceived")}} listener. The <code>requestId</code> can be found in the <code>details</code> object which is passed into the listener.</p>
 
-<p>You must also pass the "blocking" option to <code>webRequest.onHeadersReceived.addListener()</code>. So to use this API you must have the "webRequestBlocking" <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a>, as well as the normal permissions needed for using <code>webRequest</code> listeners (the "webRequest" permission and the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission </a>for the host).</p>
+<p>You must also pass the "blocking" option to <code>webRequest.onHeadersReceived.addListener()</code>. So to use this API you must have the "webRequestBlocking" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a>, as well as the normal permissions needed for using <code>webRequest</code> listeners (the "webRequest" permission and the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permission </a>for the host).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -60,7 +60,7 @@ tags:
 
 <p>This example listens for all HTTPS requests to "mozilla.org" or its subdomains, and logs the subject name in the server certificate:</p>
 
-<pre class="notranslate brush: js">async function logSubject(details) {
+<pre class="brush: js">async function logSubject(details) {
   try {
     let securityInfo = await browser.webRequest.getSecurityInfo(details.requestId, {});
     console.log(details.url);
@@ -80,7 +80,7 @@ browser.webRequest.onHeadersReceived.addListener(logSubject,
 
 <p>This example listens for all HTTPS requests to "mozilla.org" or its subdomains, and logs the name in the trusted root certificate:</p>
 
-<pre class="notranslate brush: js">async function logRoot(details) {
+<pre class="brush: js">async function logRoot(details) {
   try {
     let securityInfo = await browser.webRequest.getSecurityInfo(
       details.requestId,

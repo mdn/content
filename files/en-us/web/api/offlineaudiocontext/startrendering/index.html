@@ -30,14 +30,14 @@ tags:
 
 <p>Event-based version:</p>
 
-<pre class="brush: js notranslate">offlineAudioCtx.startRendering();
+<pre class="brush: js">offlineAudioCtx.startRendering();
 offlineAudioCtx.oncomplete = function(e) {
   // e.renderedBuffer contains the output buffer
 }</pre>
 
 <p>Promise-based version:</p>
 
-<pre class="brush: js notranslate">offlineAudioCtx.startRendering().then(function(buffer) {
+<pre class="brush: js">offlineAudioCtx.startRendering().then(function(buffer) {
   // buffer contains the output buffer
 });
 </pre>
@@ -146,10 +146,7 @@ getData();</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.OfflineAudioContext.startRendering")}}</p>
-</div>
+<p>{{Compat("api.OfflineAudioContext.startRendering")}}</p>
 
 <h2 id="See_also">See also</h2>
 

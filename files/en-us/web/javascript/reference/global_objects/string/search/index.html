@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>str</var>.search(<var>regexp</var>)</pre>
+<pre class="brush: js"><var>str</var>.search(<var>regexp</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -60,7 +60,7 @@ tags:
 <p>The following example searches a string with two different regex objects to show a
   successful search (positive value) vs. an unsuccessful search (<code>-1</code>)</p>
 
-<pre class="brush: js notranslate">let str = "hey JudE"
+<pre class="brush: js">let str = "hey JudE"
 let re = /[A-Z]/g
 let reDot = /[.]/g
 console.log(str.search(re))    // returns 4, which is the index of the first capital letter "J"

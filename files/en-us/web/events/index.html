@@ -6,2957 +6,1015 @@ tags:
   - Overview
   - Reference
 ---
-<p><span class="seoSummary">DOM Events are sent to notify code of interesting things that have taken place. Each event is represented by an object which is based on the {{domxref("Event")}} interface, and may have additional custom fields and/or functions used to get additional information about what happened. Events can represent everything from basic user interactions to automated notifications of things happening in the rendering model.</span></p>
+<p><a href="/en-US/docs/Web/API/Document_Object_Model/Events">DOM Events</a> are fired to notify code of "interesting changes" that may affect code execution. These can arise from user interactions such as using a mouse or resizing a window, changes in the state of the underlying environment (e.g. low battery or media events from the operating system), and other causes.</p>
 
-<p>This article offers a list of events that can be sent; some are standard events defined in official specifications, while others are events used internally by specific browsers; for example, Mozilla-specific events are listed so that <a href="/en-US/docs/Mozilla/Add-ons">add-ons</a> can use them to interact with the browser.</p>
+<p>Each event is represented by an object that is based on the {{domxref("Event")}} interface, and may have additional custom fields and/or functions to provide information about what happened. The documentation for every event has a table (near the top) that includes a link to the associated event interface, and other relevant information. A full list of the different event types is given in <a href="/en-US/docs/Web/API/Event#introduction">Event > Interfaces based on Event</a>.</p>
 
-<h2 id="Most_common_categories">Most common categories</h2>
-
-<table class="standard-table">
-	<caption>
-	<h3 id="Resource_events">Resource events</h3>
-	</caption>
-	<thead>
-		<tr>
-			<th scope="col">Event Name</th>
-			<th scope="col">Fired When</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{Event("error")}}</td>
-			<td>A resource failed to load.</td>
-		</tr>
-		<tr>
-			<td>{{Event("abort")}}</td>
-			<td>The loading of a resource has been aborted.</td>
-		</tr>
-		<tr>
-			<td>{{Event("load")}}</td>
-			<td>A resource and its dependent resources have finished loading.</td>
-		</tr>
-		<tr>
-			<td>{{Event("beforeunload")}}</td>
-			<td>The window, the document and its resources are about to be unloaded.</td>
-		</tr>
-		<tr>
-			<td>{{Event("unload")}}</td>
-			<td>The document or a dependent resource is being unloaded.</td>
-		</tr>
-	</tbody>
-</table>
-
-<table class="standard-table">
-	<caption>
-	<h3 id="Network_events">Network events</h3>
-	</caption>
-	<thead>
-		<tr>
-			<th scope="col">Event Name</th>
-			<th scope="col">Fired When</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{Event("online")}}</td>
-			<td>The browser has gained access to the network.</td>
-		</tr>
-		<tr>
-			<td>{{Event("offline")}}</td>
-			<td>The browser has lost access to the network.</td>
-		</tr>
-	</tbody>
-</table>
-
-<table class="standard-table">
-	<caption>
-	<h3 id="Focus_events">Focus events</h3>
-	</caption>
-	<thead>
-		<tr>
-			<th scope="col">Event Name</th>
-			<th scope="col">Fired When</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{Event("focus")}}</td>
-			<td>An element has received focus (does not bubble).</td>
-		</tr>
-		<tr>
-			<td>{{Event("blur")}}</td>
-			<td>An element has lost focus (does not bubble).</td>
-		</tr>
-		<tr>
-			<td>{{Event("focusin")}}</td>
-			<td>An element is about to receive focus (does bubble).</td>
-		</tr>
-		<tr>
-			<td>{{Event("focusout")}}</td>
-			<td>An element is about to lose focus (does bubble).</td>
-		</tr>
-	</tbody>
-</table>
-
-<table class="standard-table">
-	<caption>
-	<h3 id="WebSocket_events">WebSocket events</h3>
-	</caption>
-	<thead>
-		<tr>
-			<th scope="col">Event Name</th>
-			<th scope="col">Fired When</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code><a href="/en-US/docs/Web/Reference/Events/open_websocket">open</a></code></td>
-			<td>A WebSocket connection has been established.</td>
-		</tr>
-		<tr>
-			<td><code><a href="/en-US/docs/Web/Reference/Events/message_websocket">message</a></code></td>
-			<td>A message is received through a WebSocket.</td>
-		</tr>
-		<tr>
-			<td>{{Event("error")}}</td>
-			<td>A WebSocket connection has been closed with prejudice (some data couldn't be sent for example).</td>
-		</tr>
-		<tr>
-			<td><code><a href="/en-US/docs/Web/Reference/Events/close_websocket">close</a></code></td>
-			<td>A WebSocket connection has been closed.</td>
-		</tr>
-	</tbody>
-</table>
-
-<table class="standard-table">
-	<caption>
-	<h3 id="Session_History_events">Session History events</h3>
-	</caption>
-	<thead>
-		<tr>
-			<th scope="col">Event Name</th>
-			<th scope="col">Fired When</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{Event("pagehide")}}</td>
-			<td>A session history entry is being traversed from.</td>
-		</tr>
-		<tr>
-			<td>{{Event("pageshow")}}</td>
-			<td>A session history entry is being traversed to.</td>
-		</tr>
-		<tr>
-			<td>{{Event("popstate")}}</td>
-			<td>A session history entry is being navigated to (in certain cases).</td>
-		</tr>
-	</tbody>
-</table>
-
-<table class="standard-table">
-	<caption>
-	<h3 id="CSS_Animation_events">CSS Animation events</h3>
-	</caption>
-	<thead>
-		<tr>
-			<th scope="col">Event Name</th>
-			<th scope="col">Fired When</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{Event("animationstart")}}</td>
-			<td>A <a href="/en-US/docs/CSS/CSS_animations">CSS animation</a> has started.</td>
-		</tr>
-		<tr>
-			<td>{{Event("animationcancel")}}</td>
-			<td>A <a href="/en-US/docs/CSS/CSS_animations">CSS animation</a> has aborted.</td>
-		</tr>
-		<tr>
-			<td>{{Event("animationend")}}</td>
-			<td>A <a href="/en-US/docs/CSS/CSS_animations">CSS animation</a> has completed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("animationiteration")}}</td>
-			<td>A <a href="/en-US/docs/CSS/CSS_animations">CSS animation</a> is repeated.</td>
-		</tr>
-	</tbody>
-</table>
-
-<table class="standard-table">
-	<caption>
-	<h3 id="CSS_Transition_events">CSS Transition events</h3>
-	</caption>
-	<thead>
-		<tr>
-			<th scope="col">Event Name</th>
-			<th scope="col">Fired When</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{Event("transitionstart")}}</td>
-			<td>A <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS transition</a> has actually started (fired after any delay).</td>
-		</tr>
-		<tr>
-			<td>{{Event("transitioncancel")}}</td>
-			<td>A <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS transition</a> has been cancelled.</td>
-		</tr>
-		<tr>
-			<td>{{Event("transitionend")}}</td>
-			<td>A <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS transition</a> has completed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("transitionrun")}}</td>
-			<td>A <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS transition</a> has begun running (fired before any delay starts).</td>
-		</tr>
-	</tbody>
-</table>
-
-<table class="standard-table">
-	<caption>
-	<h3 id="Form_events">Form events</h3>
-	</caption>
-	<thead>
-		<tr>
-			<th scope="col">Event Name</th>
-			<th scope="col">Fired When</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{Event("reset")}}</td>
-			<td>The reset button is pressed</td>
-		</tr>
-		<tr>
-			<td>{{Event("submit")}}</td>
-			<td>The submit button is pressed</td>
-		</tr>
-	</tbody>
-</table>
-
-<table class="standard-table">
-	<caption>
-	<h3 id="Printing_events">Printing events</h3>
-	</caption>
-	<thead>
-		<tr>
-			<th scope="col">Event Name</th>
-			<th scope="col">Fired When</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{Event("beforeprint")}}</td>
-			<td>The print dialog is opened</td>
-		</tr>
-		<tr>
-			<td>{{Event("afterprint")}}</td>
-			<td>The print dialog is closed</td>
-		</tr>
-	</tbody>
-</table>
-
-<table class="standard-table">
-	<caption>
-	<h3 id="Text_Composition_events">Text Composition events</h3>
-	</caption>
-	<thead>
-		<tr>
-			<th scope="col">Event Name</th>
-			<th scope="col">Fired When</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{Event("compositionstart")}}</td>
-			<td>The composition of a passage of text is prepared (similar to <code>keydown</code> for a keyboard input, but works with other inputs such as speech recognition).</td>
-		</tr>
-		<tr>
-			<td>{{Event("compositionupdate")}}</td>
-			<td>A character is added to a passage of text being composed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("compositionend")}}</td>
-			<td>The composition of a passage of text has been completed or canceled.</td>
-		</tr>
-	</tbody>
-</table>
-
-<table class="standard-table">
-	<caption>
-	<h3 id="View_events">View events</h3>
-	</caption>
-	<thead>
-		<tr>
-			<th scope="col">Event Name</th>
-			<th scope="col">Fired When</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{Event("fullscreenchange")}}</td>
-			<td>An element was toggled to or from fullscreen mode.</td>
-		</tr>
-		<tr>
-			<td>{{Event("fullscreenerror")}}</td>
-			<td>It was impossible to switch to fullscreen mode for technical reasons or because the permission was denied.</td>
-		</tr>
-		<tr>
-			<td>{{Event("resize")}}</td>
-			<td>The document view has been resized.</td>
-		</tr>
-		<tr>
-			<td>{{Event("scroll")}}</td>
-			<td>The document view or an element has been scrolled.</td>
-		</tr>
-	</tbody>
-</table>
-
-<table class="standard-table">
-	<caption>
-	<h3 id="Clipboard_events">Clipboard events</h3>
-	</caption>
-	<thead>
-		<tr>
-			<th scope="col">Event Name</th>
-			<th scope="col">Fired When</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{Event("cut")}}</td>
-			<td>The selection has been cut and copied to the clipboard</td>
-		</tr>
-		<tr>
-			<td>{{Event("copy")}}</td>
-			<td>The selection has been copied to the clipboard</td>
-		</tr>
-		<tr>
-			<td>{{Event("paste")}}</td>
-			<td>The item from the clipboard has been pasted</td>
-		</tr>
-	</tbody>
-</table>
-
-<table class="standard-table">
-	<caption>
-	<h3 id="Keyboard_events">Keyboard events</h3>
-	</caption>
-	<tbody>
-		<tr>
-			<th scope="col">Event Name</th>
-			<th scope="col">Fired When</th>
-		</tr>
-		<tr>
-			<td>{{Event("keydown")}}</td>
-			<td>ANY key is pressed</td>
-		</tr>
-		<tr>
-			<td>{{Event("keypress")}}</td>
-			<td>ANY key (except <kbd>Shift</kbd>, <kbd>Fn</kbd>, or <kbd>CapsLock</kbd>) is in a pressed position (fired continuously).</td>
-		</tr>
-		<tr>
-			<td>{{Event("keyup")}}</td>
-			<td>ANY key is released</td>
-		</tr>
-	</tbody>
-</table>
-
-<table class="standard-table">
-	<caption>
-	<h3 id="Mouse_events">Mouse events</h3>
-	</caption>
-	<thead>
-		<tr>
-			<th scope="col">Event Name</th>
-			<th scope="col">Fired When</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{Event("auxclick")}}</td>
-			<td>A pointing device button (ANY non-primary button) has been pressed and released on an element.</td>
-		</tr>
-		<tr>
-			<td>{{Event("click")}}</td>
-			<td>A pointing device button (ANY button; soon to be primary button only) has been pressed and released on an element.</td>
-		</tr>
-		<tr>
-			<td>{{Event("contextmenu")}}</td>
-			<td>The right button of the mouse is clicked (before the context menu is displayed).</td>
-		</tr>
-		<tr>
-			<td>{{Event("dblclick")}}</td>
-			<td>A pointing device button is clicked twice on an element.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mousedown")}}</td>
-			<td>A pointing device button is pressed on an element.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mouseenter")}}</td>
-			<td>A pointing device is moved onto the element that has the listener attached.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mouseleave")}}</td>
-			<td>A pointing device is moved off the element that has the listener attached.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mousemove")}}</td>
-			<td>A pointing device is moved over an element (fired continuously as the mouse moves).</td>
-		</tr>
-		<tr>
-			<td>{{Event("mouseover")}}</td>
-			<td>A pointing device is moved onto the element that has the listener attached or onto one of its children.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mouseout")}}</td>
-			<td>A pointing device is moved off the element that has the listener attached or off one of its children.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mouseup")}}</td>
-			<td>A pointing device button is released over an element.</td>
-		</tr>
-		<tr>
-			<td>{{Event("pointerlockchange")}}</td>
-			<td>The pointer was locked or released.</td>
-		</tr>
-		<tr>
-			<td>{{Event("pointerlockerror")}}</td>
-			<td>It was impossible to lock the pointer for technical reasons or because the permission was denied.</td>
-		</tr>
-		<tr>
-			<td>{{Event("select")}}</td>
-			<td>Some text is being selected.</td>
-		</tr>
-		<tr>
-			<td>{{Event("wheel")}}</td>
-			<td>A wheel button of a pointing device is rotated in any direction.</td>
-		</tr>
-	</tbody>
-</table>
-
-<table class="standard-table">
-	<caption>
-	<h3 id="Drag_Drop_events">Drag &amp; Drop events</h3>
-	</caption>
-	<thead>
-		<tr>
-			<th scope="col">Event Name</th>
-			<th scope="col">Fired When</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{Event("drag")}}</td>
-			<td>An element or text selection is being dragged (fired continuously every 350ms).</td>
-		</tr>
-		<tr>
-			<td>{{Event("dragend")}}</td>
-			<td>A drag operation is being ended (by releasing a mouse button or hitting the escape key).</td>
-		</tr>
-		<tr>
-			<td>{{Event("dragenter")}}</td>
-			<td>A dragged element or text selection enters a valid drop target.</td>
-		</tr>
-		<tr>
-			<td>{{Event("dragstart")}}</td>
-			<td>The user starts dragging an element or text selection.</td>
-		</tr>
-		<tr>
-			<td>{{Event("dragleave")}}</td>
-			<td>A dragged element or text selection leaves a valid drop target.</td>
-		</tr>
-		<tr>
-			<td>{{Event("dragover")}}</td>
-			<td>An element or text selection is being dragged over a valid drop target (fired continuously every 350ms).</td>
-		</tr>
-		<tr>
-			<td>{{Event("drop")}}</td>
-			<td>An element is dropped on a valid drop target.</td>
-		</tr>
-	</tbody>
-</table>
-
-<div style="overflow: auto;">
-<table class="standard-table">
-	<caption>
-	<h3 id="Media_events">Media events</h3>
-	</caption>
-	<thead>
-		<tr>
-			<th scope="col">Event Name</th>
-			<th scope="col">Fired When</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{Event("audioprocess")}}</td>
-			<td>The input buffer of a {{DOMxRef("ScriptProcessorNode")}} is ready to be processed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("canplay")}}</td>
-			<td>The browser can play the media, but estimates that not enough data has been loaded to play the media up to its end without having to stop for further buffering of content.</td>
-		</tr>
-		<tr>
-			<td>{{Event("canplaythrough")}}</td>
-			<td>The browser estimates it can play the media up to its end without stopping for content buffering.</td>
-		</tr>
-		<tr>
-			<td>{{Event("complete")}}</td>
-			<td>The rendering of an {{DOMxRef("OfflineAudioContext")}} is terminated.</td>
-		</tr>
-		<tr>
-			<td>{{Event("durationchange")}}</td>
-			<td>The <code>duration</code> attribute has been updated.</td>
-		</tr>
-		<tr>
-			<td>{{Event("emptied")}}</td>
-			<td>The media has become empty; for example, this event is sent if the media has already been loaded (or partially loaded), and the <a href="/en-US/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement" rel="internal"><code>load()</code></a> method is called to reload it.</td>
-		</tr>
-		<tr>
-			<td>{{Event("ended")}}</td>
-			<td>Playback has stopped because the end of the media was reached.</td>
-		</tr>
-		<tr>
-			<td>{{Event("loadeddata")}}</td>
-			<td>The first frame of the media has finished loading.</td>
-		</tr>
-		<tr>
-			<td>{{Event("loadedmetadata")}}</td>
-			<td>The metadata has been loaded.</td>
-		</tr>
-		<tr>
-			<td>{{Event("pause")}}</td>
-			<td>Playback has been paused.</td>
-		</tr>
-		<tr>
-			<td>{{Event("play")}}</td>
-			<td>Playback has begun.</td>
-		</tr>
-		<tr>
-			<td>{{Event("playing")}}</td>
-			<td>Playback is ready to start after having been paused or delayed due to lack of data.</td>
-		</tr>
-		<tr>
-			<td>{{Event("ratechange")}}</td>
-			<td>The playback rate has changed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("seeked")}}</td>
-			<td>A <em>seek</em> operation completed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("seeking")}}</td>
-			<td>A <em>seek</em> operation began.</td>
-		</tr>
-		<tr>
-			<td>{{Event("stalled")}}</td>
-			<td>The user agent is trying to fetch media data, but data is unexpectedly not forthcoming.</td>
-		</tr>
-		<tr>
-			<td>{{Event("suspend")}}</td>
-			<td>Media data loading has been suspended.</td>
-		</tr>
-		<tr>
-			<td>{{Event("timeupdate")}}</td>
-			<td>The time indicated by the <code>currentTime</code> attribute has been updated.</td>
-		</tr>
-		<tr>
-			<td>{{Event("volumechange")}}</td>
-			<td>The volume has changed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("waiting")}}</td>
-			<td>Playback has stopped because of a temporary lack of data.</td>
-		</tr>
-	</tbody>
-</table>
-</div>
-
-<table class="standard-table">
-	<caption>
-	<h3 id="Progress_events">Progress events</h3>
-	</caption>
-	<thead>
-		<tr>
-			<th scope="col">Event Name</th>
-			<th scope="col">Fired When</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code><a href="/en-US/docs/Web/API/XMLHttpRequest/abort_event">abort</a></code></td>
-			<td>Progression has been terminated (not due to an error).</td>
-		</tr>
-		<tr>
-			<td>{{Event("error")}}</td>
-			<td>Progression has failed.</td>
-		</tr>
-		<tr>
-			<td><code><a href="/en-US/docs/Web/API/XMLHttpRequest/load_event">load</a></code></td>
-			<td>Progression has been successful.</td>
-		</tr>
-		<tr>
-			<td>{{Event("loadend")}}</td>
-			<td>Progress has stopped (after <code>"error"</code>, <code>"abort"</code>, or <code>"load"</code> have been dispatched).</td>
-		</tr>
-		<tr>
-			<td>{{Event("loadstart")}}</td>
-			<td>Progress has begun.</td>
-		</tr>
-		<tr>
-			<td>{{Event("progress")}}</td>
-			<td>In progress.</td>
-		</tr>
-		<tr>
-			<td>{{Event("timeout")}}</td>
-			<td>Progression is terminated due to preset time expiring.</td>
-		</tr>
-	</tbody>
-</table>
-
-<h3 id="Storage_events">Storage events</h3>
-
-<p>{{Event("change")}} (see {{anch("Non-standard events")}})<br>
-{{Event("storage")}}</p>
-
-<h3 id="Update_events">Update events</h3>
-
-<p>{{Event("checking")}}<br>
-{{Event("downloading")}}<br>
-{{Event("error")}}<br>
-{{Event("noupdate")}}<br>
-{{Event("obsolete")}}<br>
-{{Event("updateready")}}</p>
-
-<h3 id="Value_change_events">Value change events</h3>
-
-<p>{{Event("broadcast")}}<br>
-{{Event("CheckboxStateChange")}}<br>
-{{Event("hashchange")}}<br>
-{{Event("input")}}<br>
-{{Event("RadioStateChange")}}<br>
-{{Event("readystatechange")}}<br>
-{{Event("ValueChange")}}</p>
-
-<h3 id="Uncategorized_events">Uncategorized events</h3>
-
-<p>{{Event("invalid")}}<br>
-<code><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/message_event">message</a></code><br>
-<code><a href="/en-US/docs/Web/API/EventSource/message_event">message</a></code><br>
-<code><a href="/en-US/docs/Web/API/EventSource/open_event">open</a></code><br>
-<code><a href="/en-US/docs/Web/API/Element/show_event">show</a></code></p>
-
-<h2 id="Less_common_and_non-standard_events">Less common and non-standard events</h2>
-
-<h3 id="Abortable_Fetch_events">Abortable Fetch events</h3>
-
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Event name</th>
-			<th scope="col">Fired when</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code><a href="/en-US/docs/Web/API/AbortSignal/abort_event">abort</a></code></td>
-			<td>A DOM request is aborted, i.e. using {{DOMxRef("AbortController.abort()")}}.</td>
-		</tr>
-	</tbody>
-</table>
-
-<h3 id="WebVR_events">WebVR events</h3>
-
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Event name</th>
-			<th scope="col">Fired when</th>
-		</tr>
-		<tr>
-			<td>{{Event("vrdisplayactivate")}}</td>
-			<td>When a VR display is able to be presented to, for example if an HMD has been moved to bring it out of standby, or woken up by being put on.</td>
-		</tr>
-		<tr>
-			<td>{{Event("vrdisplayblur")}}</td>
-			<td>when presentation to a {{DOMxRef("VRDisplay")}} has been paused for some reason by the browser, OS, or VR hardware — for example, while the user is interacting with a system menu or browser, to prevent tracking or loss of experience.</td>
-		</tr>
-		<tr>
-			<td>{{Event("vrdisplayconnect")}}</td>
-			<td>when a compatible {{DOMxRef("VRDisplay")}} is connected to the computer.</td>
-		</tr>
-		<tr>
-			<td>{{Event("vrdisplaydeactivate")}}</td>
-			<td>When a {{DOMxRef("VRDisplay")}} can no longer be presented to, for example if an HMD has gone into standby or sleep mode due to a period of inactivity.</td>
-		</tr>
-		<tr>
-			<td>{{Event("vrdisplaydisconnect")}}</td>
-			<td>When a compatible {{DOMxRef("VRDisplay")}} is disconnected from the computer.</td>
-		</tr>
-		<tr>
-			<td>{{Event("vrdisplayfocus")}}</td>
-			<td>When presentation to a {{DOMxRef("VRDisplay")}} has resumed after being blurred.</td>
-		</tr>
-		<tr>
-			<td>{{Event("vrdisplaypresentchange")}}</td>
-			<td>The presenting state of a {{DOMxRef("VRDisplay")}} changes — i.e. goes from presenting to not presenting, or vice versa.</td>
-		</tr>
-	</thead>
-</table>
-
-<h3 id="SVG_events">SVG events</h3>
-
-<p>{{Event("SVGAbort")}}<br>
-{{Event("SVGError")}}<br>
-{{Event("SVGLoad")}}<br>
-{{Event("SVGResize")}}<br>
-{{Event("SVGScroll")}}<br>
-{{Event("SVGUnload")}}<br>
-{{Event("SVGZoom")}}</p>
-
-<h3 id="Database_events">Database events</h3>
-
-<p><code><a href="/en-US/docs/Web/Reference/Events/abort_indexedDB">abort</a></code><br>
-<code><a href="/en-US/docs/Web/Reference/Events/blocked_indexedDB">blocked</a></code><br>
-<code><a href="/en-US/docs/Web/Reference/Events/complete_indexedDB">complete</a></code><br>
-{{Event("error")}}<br>
-<code><a href="/en-US/docs/Web/Reference/Events/success_indexedDB">success</a></code><br>
-<code><a href="/en-US/docs/Web/Reference/Events/upgradeneeded_indexedDB">upgradeneeded</a></code><br>
-<code><a href="/en-US/docs/Web/Reference/Events/versionchange_indexedDB">versionchange</a></code></p>
-
-<h3 id="Script_events">Script events</h3>
-
-<p>{{Event("afterscriptexecute")}}<br>
-{{Event("beforescriptexecute")}}</p>
-
-<h3 id="Menu_events">Menu events</h3>
-
-<p>{{Event("DOMMenuItemActive")}}<br>
-{{Event("DOMMenuItemInactive")}}</p>
-
-<h3 id="Window_events">Window events</h3>
-
-<p><code><a href="/en-US/docs/Mozilla/Tech/XUL/Events/close_event">close</a></code></p>
-
-<h3 id="Popup_events">Popup events</h3>
-
-<p>{{Event("popuphidden")}}<br>
-{{Event("popuphiding")}}<br>
-{{Event("popupshowing")}}<br>
-{{Event("popupshown")}}</p>
-
-<h3 id="Tab_events">Tab events</h3>
-
-<p>{{Event("visibilitychange")}}</p>
-
-<h3 id="Battery_events">Battery events</h3>
-
-<p>{{Event("chargingchange")}}<br>
-{{Event("chargingtimechange")}}<br>
-{{Event("dischargingtimechange")}}<br>
-{{Event("levelchange")}}</p>
-
-<h3 id="Call_events">Call events</h3>
-
-<p>{{Event("alerting")}}<br>
-{{Event("busy")}}<br>
-{{Event("callschanged")}}<br>
-{{Event("cfstatechange")}}<br>
-{{Event("connected")}}<br>
-{{Event("connecting")}}<br>
-{{Event("dialing")}}<br>
-{{Event("disconnected")}}<br>
-{{Event("disconnecting")}}<br>
-{{Event("error_(Telephony)","error")}}<br>
-{{Event("held")}}, {{Event("holding")}}<br>
-{{Event("incoming")}}<br>
-{{Event("resuming")}}<br>
-{{Event("statechange")}}<br>
-{{Event("voicechange")}}</p>
-
-<h3 id="Sensor_events">Sensor events</h3>
-
-<p>{{Event("compassneedscalibration")}}<br>
-{{Event("devicemotion")}}<br>
-{{Event("deviceorientation")}}<br>
-{{Event("orientationchange")}}</p>
-
-<h3 id="Smartcard_events">Smartcard events</h3>
-
-<p>{{Event("icccardlockerror")}}<br>
-{{Event("iccinfochange")}}<br>
-{{Event("smartcard-insert")}}<br>
-{{Event("smartcard-remove")}}<br>
-{{Event("stkcommand")}}<br>
-{{Event("stksessionend")}}<br>
-{{Event("cardstatechange")}}</p>
-
-<h3 id="SMS_and_USSD_events">SMS and USSD events</h3>
-
-<p>{{Event("delivered")}}<br>
-{{Event("received")}}<br>
-{{Event("sent")}}<br>
-{{Event("ussdreceived")}}</p>
-
-<h3 id="Frame_events">Frame events</h3>
-
-<p>{{Event("mozbrowserclose")}}<br>
-{{Event("mozbrowsercontextmenu")}}<br>
-{{Event("mozbrowsererror")}}<br>
-{{Event("mozbrowsericonchange")}}<br>
-{{Event("mozbrowserlocationchange")}}<br>
-{{Event("mozbrowserloadend")}}<br>
-{{Event("mozbrowserloadstart")}}<br>
-{{Event("mozbrowseropenwindow")}}<br>
-{{Event("mozbrowsersecuritychange")}}<br>
-{{Event("mozbrowsershowmodalprompt")}}<br>
-{{Event("mozbrowsertitlechange")}}</p>
-
-<h3 id="DOM_mutation_events">DOM mutation events</h3>
-
-<p><code><a href="/en-US/docs/DOM/Mutation_events">DOMAttributeNameChanged</a></code><br>
-<code><a href="/en-US/docs/DOM/Mutation_events">DOMAttrModified</a></code><br>
-<code><a href="/en-US/docs/DOM/Mutation_events">DOMCharacterDataModified</a></code><br>
-{{Event("DOMContentLoaded")}}<br>
-<code><a href="/en-US/docs/DOM/Mutation_events">DOMElementNameChanged</a></code><br>
-<code><a href="/en-US/docs/DOM/Mutation_events">DOMNodeInserted</a></code><br>
-<code><a href="/en-US/docs/DOM/Mutation_events">DOMNodeInsertedIntoDocument</a></code><br>
-<code><a href="/en-US/docs/DOM/Mutation_events">DOMNodeRemoved</a></code><br>
-<code><a href="/en-US/docs/DOM/Mutation_events">DOMNodeRemovedFromDocument</a></code><br>
-<code><a href="/en-US/docs/DOM/Mutation_events">DOMSubtreeModified</a></code></p>
-
-<h3 id="Touch_events">Touch events</h3>
-
-<p>{{Event("touchcancel")}}<br>
-{{Event("touchend")}}<br>
-{{Event("touchmove")}}<br>
-{{Event("touchstart")}}</p>
-
-<h3 id="Pointer_events">Pointer events</h3>
-
-<p>{{Event("pointerover")}}<br>
-{{Event("pointerenter")}}<br>
-{{Event("pointerdown")}}<br>
-{{Event("pointermove")}}<br>
-{{Event("pointerup")}}<br>
-{{Event("pointercancel")}}<br>
-{{Event("pointerout")}}<br>
-{{Event("pointerleave")}}<br>
-{{Event("gotpointercapture")}}<br>
-{{Event("lostpointercapture")}}</p>
-
-<h2 id="Standard_events">Standard events</h2>
-
-<p>These events are defined in official Web specifications, and should be common across browsers. Each event is listed along with the interface representing the object sent to recipients of the event (so you can find information about what data is provided with each event) as well as a link to the specification or specifications that define the event.</p>
-
-<div style="overflow: auto;">
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Event Name</th>
-			<th scope="col">Event Type</th>
-			<th scope="col">Specification</th>
-			<th scope="col">Fired when...</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{Event("abort")}}</td>
-			<td>{{DOMxRef("UIEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-abort" style="white-space: nowrap;">DOM L3</a></td>
-			<td>The loading of a resource has been aborted.</td>
-		</tr>
-		<tr>
-			<td><code><a href="/en-US/docs/Web/Reference/Events/abort_(ProgressEvent)">abort</a></code></td>
-			<td>{{DOMxRef("ProgressEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/progress-events/">Progress</a> and <a href="https://www.w3.org/TR/XMLHttpRequest/#event-xhr-abort">XMLHttpRequest</a></td>
-			<td>Progression has been terminated (not due to an error).</td>
-		</tr>
-		<tr>
-			<td><code><a href="/en-US/docs/Web/Reference/Events/abort_indexedDB">abort</a></code></td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.w3.org/TR/IndexedDB/#database-interface">IndexedDB</a></td>
-			<td>A transaction has been aborted.</td>
-		</tr>
-		<tr>
-			<td>{{Event("afterprint")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.w3.org/TR/html5/webappapis.html#printing">HTML5</a></td>
-			<td>The associated document has started printing or the print preview has been closed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("animationcancel")}}</td>
-			<td>{{DOMxRef("AnimationEvent")}} {{Experimental_Inline}}</td>
-			<td><a href="https://www.w3.org/TR/css3-animations/#animation-events" style="white-space: nowrap;">CSS Animations</a></td>
-			<td>A <a href="/en-US/docs/CSS/CSS_animations">CSS animation</a> has aborted.</td>
-		</tr>
-		<tr>
-			<td>{{Event("animationend")}}</td>
-			<td>{{DOMxRef("AnimationEvent")}} {{Experimental_Inline}}</td>
-			<td><a href="https://www.w3.org/TR/css3-animations/#animation-events" style="white-space: nowrap;">CSS Animations</a></td>
-			<td>A <a href="/en-US/docs/CSS/CSS_animations">CSS animation</a> has completed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("animationiteration")}}</td>
-			<td>{{DOMxRef("AnimationEvent")}} {{Experimental_Inline}}</td>
-			<td><a href="https://www.w3.org/TR/css3-animations/#animation-events" style="white-space: nowrap;">CSS Animations</a></td>
-			<td>A <a href="/en-US/docs/CSS/CSS_animations">CSS animation</a> is repeated.</td>
-		</tr>
-		<tr>
-			<td>{{Event("animationstart")}}</td>
-			<td>{{DOMxRef("AnimationEvent")}} {{Experimental_Inline}}</td>
-			<td><a href="https://www.w3.org/TR/css3-animations/#animation-events" style="white-space: nowrap;">CSS Animations</a></td>
-			<td>A <a href="/en-US/docs/CSS/CSS_animations">CSS animation</a> has started.</td>
-		</tr>
-		<tr>
-			<td>{{Event("appinstalled")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="/en-US/docs/Web/Manifest" style="white-space: nowrap;">Web App Manifest</a></td>
-			<td>A web application is successfully installed as a <a href="/en-US/Apps/Progressive">progressive web app</a>.</td>
-		</tr>
-		<tr>
-			<td>{{Event("audioprocess")}}</td>
-			<td>{{DOMxRef("AudioProcessingEvent")}} {{Deprecated_Inline}}</td>
-			<td>{{SpecName('Web Audio API', '#AudioProcessingEvent', 'audioprocess')}}</td>
-			<td>The input buffer of a {{DOMxRef("ScriptProcessorNode")}} is ready to be processed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("audioend")}} {{Experimental_Inline}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td>{{SpecName('Web Speech API')}}</td>
-			<td>The user agent has finished capturing audio for speech recognition.</td>
-		</tr>
-		<tr>
-			<td>{{Event("audiostart")}} {{Experimental_Inline}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td>{{SpecName('Web Speech API')}}</td>
-			<td>The user agent has started to capture audio for speech recognition.</td>
-		</tr>
-		<tr>
-			<td>{{Event("beforeprint")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.w3.org/TR/html5/webappapis.html#printing">HTML5</a></td>
-			<td>The associated document is about to be printed or previewed for printing.</td>
-		</tr>
-		<tr>
-			<td>{{Event("beforeunload")}}</td>
-			<td>{{DOMxRef("BeforeUnloadEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/html5/browsers.html#unloading-documents">HTML5</a></td>
-			<td>The window, the document and its resources are about to be unloaded.</td>
-		</tr>
-		<tr>
-			<td>{{Event("beginEvent")}}</td>
-			<td>{{DOMxRef("TimeEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/SVG/interact.html#SVGEvents">SVG</a></td>
-			<td>A <a href="/en-US/docs/SVG/SVG_animation_with_SMIL">SMIL</a> animation element begins.</td>
-		</tr>
-		<tr>
-			<td><code><a href="/en-US/docs/Web/Reference/Events/blocked_indexedDB">blocked</a></code></td>
-			<td></td>
-			<td><a href="https://www.w3.org/TR/IndexedDB/#request-api">IndexedDB</a></td>
-			<td>An open connection to a database is blocking a <code>versionchange</code> transaction on the same database.</td>
-		</tr>
-		<tr>
-			<td>{{Event("blur")}}</td>
-			<td>{{DOMxRef("FocusEvent")}} {{Experimental_Inline}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-blur" style="white-space: nowrap;">DOM L3</a></td>
-			<td>An element has lost focus (does not bubble).</td>
-		</tr>
-		<tr>
-			<td>{{Event("boundary")}} {{Experimental_Inline}}</td>
-			<td>{{DOMxRef("SpeechSynthesisEvent")}}</td>
-			<td>{{SpecName('Web Speech API')}}</td>
-			<td>The spoken utterance reaches a word or sentence boundary</td>
-		</tr>
-		<tr>
-			<td>{{Event("canplay")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-canplay" style="white-space: nowrap;">HTML5 media</a></td>
-			<td>The user agent can play the media, but estimates that not enough data has been loaded to play the media up to its end without having to stop for further buffering of content.</td>
-		</tr>
-		<tr>
-			<td>{{Event("canplaythrough")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-canplaythrough" style="white-space: nowrap;">HTML5 media</a></td>
-			<td>The user agent can play the media up to its end without having to stop for further buffering of content.</td>
-		</tr>
-		<tr>
-			<td>{{Event("change")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html">DOM L2</a>, <a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/common-input-element-attributes.html#event-input-change">HTML5</a></td>
-			<td>The <code>change</code> event is fired for {{HTMLElement("input")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}} elements when a change to the element's value is committed by the user.</td>
-		</tr>
-		<tr>
-			<td>{{Event("chargingchange")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://dvcs.w3.org/hg/dap/raw-file/tip/battery/Overview.html" style="white-space: nowrap;">Battery status</a></td>
-			<td>The battery begins or stops charging.</td>
-		</tr>
-		<tr>
-			<td>{{Event("chargingtimechange")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://dvcs.w3.org/hg/dap/raw-file/tip/battery/Overview.html" style="white-space: nowrap;">Battery status</a></td>
-			<td>The <code>chargingTime</code> attribute has been updated.</td>
-		</tr>
-		<tr>
-			<td>{{Event("click")}}</td>
-			<td>{{DOMxRef("MouseEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-click" style="white-space: nowrap;">DOM L3</a></td>
-			<td>A pointing device button has been pressed and released on an element.</td>
-		</tr>
-		<tr>
-			<td><code><a href="/en-US/docs/Web/Reference/Events/close_websocket">close</a></code></td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.w3.org/TR/websockets/">WebSocket</a></td>
-			<td>A WebSocket connection has been closed.</td>
-		</tr>
-		<tr>
-			<td><code><a href="/en-US/docs/Web/Reference/Events/complete_indexedDB">complete</a></code></td>
-			<td></td>
-			<td><a href="https://www.w3.org/TR/IndexedDB/#transaction">IndexedDB</a></td>
-			<td>A transaction successfully completed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("complete")}}</td>
-			<td>{{DOMxRef("OfflineAudioCompletionEvent")}} {{Deprecated_Inline}}</td>
-			<td>{{SpecName('Web Audio API', '#OfflineAudioCompletionEvent-section', 'OfflineAudioCompletionEvent')}}</td>
-			<td>The rendering of an {{DOMxRef("OfflineAudioContext")}} is terminated.</td>
-		</tr>
-		<tr>
-			<td>{{Event("compositionend")}}</td>
-			<td>{{DOMxRef("CompositionEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-compositionend" style="white-space: nowrap;">DOM L3</a></td>
-			<td>The composition of a passage of text has been completed or canceled.</td>
-		</tr>
-		<tr>
-			<td>{{Event("compositionstart")}}</td>
-			<td>{{DOMxRef("CompositionEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-compositionstart" style="white-space: nowrap;">DOM L3</a></td>
-			<td>The composition of a passage of text is prepared (similar to keydown for a keyboard input, but works with other inputs such as speech recognition).</td>
-		</tr>
-		<tr>
-			<td>{{Event("compositionupdate")}}</td>
-			<td>{{DOMxRef("CompositionEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-compositionupdate" style="white-space: nowrap;">DOM L3</a></td>
-			<td>A character is added to a passage of text being composed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("contextmenu")}}</td>
-			<td>{{DOMxRef("MouseEvent")}}</td>
-			<td><a href="https://html.spec.whatwg.org/multipage/forms.html#context-menus">HTML5</a></td>
-			<td>The right button of the mouse is clicked (before the context menu is displayed).</td>
-		</tr>
-		<tr>
-			<td>{{Event("copy")}}</td>
-			<td>{{DOMxRef("ClipboardEvent")}} {{Experimental_Inline}}</td>
-			<td><a href="https://www.w3.org/TR/clipboard-apis/#copy-event">Clipboard</a></td>
-			<td>The text selection has been added to the clipboard.</td>
-		</tr>
-		<tr>
-			<td>{{Event("cut")}}</td>
-			<td>{{DOMxRef("ClipboardEvent")}} {{Experimental_Inline}}</td>
-			<td><a href="https://www.w3.org/TR/clipboard-apis/#cut-event">Clipboard</a></td>
-			<td>The text selection has been removed from the document and added to the clipboard.</td>
-		</tr>
-		<tr>
-			<td>{{Event("dblclick")}}</td>
-			<td>{{DOMxRef("MouseEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-dblclick" style="white-space: nowrap;">DOM L3</a></td>
-			<td>A pointing device button is clicked twice on an element.</td>
-		</tr>
-		<tr>
-			<td>{{Event("devicechange")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td>{{SpecName("Media Capture")}}</td>
-			<td>A media device such as a camera, microphone, or speaker is connected or removed from the system.</td>
-		</tr>
-		<tr>
-			<td>{{Event("devicemotion")}}</td>
-			<td>{{DOMxRef("DeviceMotionEvent")}} {{Experimental_Inline}}</td>
-			<td><a class="external" href="http://dev.w3.org/geo/api/spec-source-orientation.html" lang="en" title="The 'Device Orientation Events' specification">Device Orientation Events</a></td>
-			<td>Fresh data is available from a motion sensor.</td>
-		</tr>
-		<tr>
-			<td>{{Event("deviceorientation")}}</td>
-			<td>{{DOMxRef("DeviceOrientationEvent")}} {{Experimental_Inline}}</td>
-			<td><a class="external" href="http://dev.w3.org/geo/api/spec-source-orientation.html" lang="en" title="The 'Device Orientation Events' specification">Device Orientation Events</a></td>
-			<td>Fresh data is available from an orientation sensor.</td>
-		</tr>
-		<tr>
-			<td>{{Event("dischargingtimechange")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://dvcs.w3.org/hg/dap/raw-file/tip/battery/Overview.html">Battery status</a></td>
-			<td>The <code>dischargingTime</code> attribute has been updated.</td>
-		</tr>
-		<tr>
-			<td><code>DOMActivate</code> {{Deprecated_Inline}}</td>
-			<td>{{DOMxRef("UIEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-DOMActivate" style="white-space: nowrap;">DOM L3</a></td>
-			<td>A button, link, or state changing element is activated (use {{Event("click")}} instead).</td>
-		</tr>
-		<tr>
-			<td><code><a href="/en-US/docs/DOM/Mutation_events">DOMAttributeNameChanged</a></code> {{Deprecated_Inline}}</td>
-			<td>{{DOMxRef("MutationNameEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/2011/WD-DOM-Level-3-Events-20110531/#event-type-DOMAttributeNameChanged" style="white-space: nowrap;">DOM L3</a> Removed</td>
-			<td>The name of an attribute changed (use <a href="/en-US/docs/DOM/MutationObserver">mutation observers</a> instead).</td>
-		</tr>
-		<tr>
-			<td><code><a href="/en-US/docs/DOM/Mutation_events">DOMAttrModified</a></code> {{Deprecated_Inline}}</td>
-			<td>{{DOMxRef("MutationEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-DOMAttrModified" style="white-space: nowrap;">DOM L3</a></td>
-			<td>The value of an attribute has been modified (use <a href="/en-US/docs/DOM/MutationObserver">mutation observers</a> instead).</td>
-		</tr>
-		<tr>
-			<td><code><a href="/en-US/docs/DOM/Mutation_events">DOMCharacterDataModified</a></code> {{Deprecated_Inline}}</td>
-			<td>{{DOMxRef("MutationEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-DOMCharacterDataModified" style="white-space: nowrap;">DOM L3</a></td>
-			<td>A text or another <a href="/en-US/docs/DOM/CharacterData">CharacterData</a> has changed (use <a href="/en-US/docs/DOM/MutationObserver">mutation observers</a> instead).</td>
-		</tr>
-		<tr>
-			<td>{{Event("DOMContentLoaded")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-end.html#the-end">HTML5</a></td>
-			<td>The document has finished loading (but not its dependent resources).</td>
-		</tr>
-		<tr>
-			<td><code><a href="/en-US/docs/DOM/Mutation_events">DOMElementNameChanged</a></code> {{Deprecated_Inline}}</td>
-			<td>{{DOMxRef("MutationNameEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/2011/WD-DOM-Level-3-Events-20110531/#event-type-DOMElementNameChanged" style="white-space: nowrap;">DOM L3</a> Removed</td>
-			<td>The name of an element changed (use <a href="/en-US/docs/DOM/MutationObserver">mutation observers</a> instead).</td>
-		</tr>
-		<tr>
-			<td><code>DOMFocusIn</code> {{Deprecated_Inline}}</td>
-			<td>{{DOMxRef("FocusEvent")}} {{Experimental_Inline}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-DOMFocusIn" style="white-space: nowrap;">DOM L3</a></td>
-			<td>An element has received focus (use {{Event("focus")}} or {{Event("focusin")}} instead).</td>
-		</tr>
-		<tr>
-			<td><code>DOMFocusOut</code> {{Deprecated_Inline}}</td>
-			<td>{{DOMxRef("FocusEvent")}} {{Experimental_Inline}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-DOMFocusOut" style="white-space: nowrap;">DOM L3</a></td>
-			<td>An element has lost focus (use {{Event("blur")}} or {{Event("focusout")}} instead).</td>
-		</tr>
-		<tr>
-			<td><code><a href="/en-US/docs/DOM/Mutation_events">DOMNodeInserted</a></code> {{Deprecated_Inline}}</td>
-			<td>{{DOMxRef("MutationEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-DOMNodeInserted" style="white-space: nowrap;">DOM L3</a></td>
-			<td>A node has been added as a child of another node (use <a href="/en-US/docs/DOM/MutationObserver">mutation observers</a> instead).</td>
-		</tr>
-		<tr>
-			<td><code><a href="/en-US/docs/DOM/Mutation_events">DOMNodeInsertedIntoDocument</a></code> {{Deprecated_Inline}}</td>
-			<td>{{DOMxRef("MutationEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-DOMNodeInsertedIntoDocument" style="white-space: nowrap;">DOM L3</a></td>
-			<td>A node has been inserted into the document (use <a href="/en-US/docs/DOM/MutationObserver">mutation observers</a> instead).</td>
-		</tr>
-		<tr>
-			<td><code><a href="/en-US/docs/DOM/Mutation_events">DOMNodeRemoved</a></code> {{Deprecated_Inline}}</td>
-			<td>{{DOMxRef("MutationEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-DOMNodeRemoved" style="white-space: nowrap;">DOM L3</a></td>
-			<td>A node has been removed from its parent node (use <a href="/en-US/docs/DOM/MutationObserver">mutation observers</a> instead).</td>
-		</tr>
-		<tr>
-			<td><code><a href="/en-US/docs/DOM/Mutation_events">DOMNodeRemovedFromDocument</a></code> {{Deprecated_Inline}}</td>
-			<td>{{DOMxRef("MutationEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-DOMNodeRemovedFromDocument" style="white-space: nowrap;">DOM L3</a></td>
-			<td>A node has been removed from the document (use <a href="/en-US/docs/DOM/MutationObserver">mutation observers</a> instead).</td>
-		</tr>
-		<tr>
-			<td><code><a href="/en-US/docs/DOM/Mutation_events">DOMSubtreeModified</a></code> {{Deprecated_Inline}}</td>
-			<td>{{DOMxRef("MutationEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-DOMSubtreeModified" style="white-space: nowrap;">DOM L3</a></td>
-			<td>A change happened in the document (use <a href="/en-US/docs/DOM/MutationObserver">mutation observers</a> instead).</td>
-		</tr>
-		<tr>
-			<td>{{Event("drag")}}</td>
-			<td>{{DOMxRef("DragEvent")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/dnd.html#event-drag">HTML5</a></td>
-			<td>An element or text selection is being dragged (every 350ms).</td>
-		</tr>
-		<tr>
-			<td>{{Event("dragend")}}</td>
-			<td>{{DOMxRef("DragEvent")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/dnd.html#event-dragend">HTML5</a></td>
-			<td>A drag operation is being ended (by releasing a mouse button or hitting the escape key).</td>
-		</tr>
-		<tr>
-			<td>{{Event("dragenter")}}</td>
-			<td>{{DOMxRef("DragEvent")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/dnd.html#event-dragenter">HTML5</a></td>
-			<td>A dragged element or text selection enters a valid drop target.</td>
-		</tr>
-		<tr>
-			<td>{{Event("dragleave")}}</td>
-			<td>{{DOMxRef("DragEvent")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/dnd.html#event-dragleave">HTML5</a></td>
-			<td>A dragged element or text selection leaves a valid drop target.</td>
-		</tr>
-		<tr>
-			<td>{{Event("dragover")}}</td>
-			<td>{{DOMxRef("DragEvent")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/dnd.html#event-dragover">HTML5</a></td>
-			<td>An element or text selection is being dragged over a valid drop target (fires every 350ms).</td>
-		</tr>
-		<tr>
-			<td>{{Event("dragstart")}}</td>
-			<td>{{DOMxRef("DragEvent")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/dnd.html#event-dragstart">HTML5</a></td>
-			<td>The user starts dragging an element or text selection.</td>
-		</tr>
-		<tr>
-			<td>{{Event("drop")}}</td>
-			<td>{{DOMxRef("DragEvent")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/dnd.html#event-drop">HTML5</a></td>
-			<td>An element is dropped on a valid drop target.</td>
-		</tr>
-		<tr>
-			<td>{{Event("durationchange")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-durationchange">HTML5 media</a></td>
-			<td>The <code>duration</code> attribute has been updated.</td>
-		</tr>
-		<tr>
-			<td>{{Event("emptied")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-emptied">HTML5 media</a></td>
-			<td>The media has become empty. For example, this event is triggered if the media has already been loaded (or partially loaded), and the <a href="/en-US/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement" rel="internal"><code>load()</code></a> method is called to reload it.</td>
-		</tr>
-		<tr>
-			<td>{{Event("end_(SpeechRecognition)","end")}} {{Experimental_Inline}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td>{{SpecName('Web Speech API')}}</td>
-			<td>The speech recognition service has disconnected.</td>
-		</tr>
-		<tr>
-			<td>{{Event("end_(SpeechSynthesis)","end")}} {{Experimental_Inline}}</td>
-			<td>{{DOMxRef("SpeechSynthesisEvent")}}</td>
-			<td>{{SpecName("Web Speech API")}}</td>
-			<td>The utterance has finished being spoken.</td>
-		</tr>
-		<tr>
-			<td>{{Event("ended")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-ended">HTML5 media</a></td>
-			<td>Playback has stopped because the end of the media was reached.</td>
-		</tr>
-		<tr>
-			<td>{{Event("ended_(Web_Audio)", "ended")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td>{{SpecName("Web Audio API")}}</td>
-			<td>Playback has stopped because the end of the media was reached.</td>
-		</tr>
-		<tr>
-			<td>{{Event("endEvent")}}</td>
-			<td>{{DOMxRef("TimeEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/SVG/interact.html#SVGEvents">SVG</a></td>
-			<td>A <a href="/en-US/docs/SVG/SVG_animation_with_SMIL">SMIL</a> animation element ends.</td>
-		</tr>
-		<tr>
-			<td>{{Event("error")}}</td>
-			<td>{{DOMxRef("UIEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-error" style="white-space: nowrap;">DOM L3</a></td>
-			<td>A resource failed to load.</td>
-		</tr>
-		<tr>
-			<td>{{Event("error")}}</td>
-			<td>{{DOMxRef("ProgressEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/progress-events/">Progress</a> and <a href="https://www.w3.org/TR/XMLHttpRequest/#event-xhr-error">XMLHttpRequest</a></td>
-			<td>Progression has failed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("error")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.w3.org/TR/websockets/">WebSocket</a></td>
-			<td>A WebSocket connection has been closed with prejudice (some data couldn't be sent for example).</td>
-		</tr>
-		<tr>
-			<td>{{Event("error")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="http://dev.w3.org/html5/eventsource/">Server Sent Events</a></td>
-			<td>An event source connection has been failed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("error")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.w3.org/TR/IndexedDB/#request-api">IndexedDB</a></td>
-			<td>A request caused an error and failed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("error_(SpeechRecognitionError)","error")}} {{Experimental_Inline}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td>{{SpecName('Web Speech API')}}</td>
-			<td>A speech recognition error occurs.</td>
-		</tr>
-		<tr>
-			<td>{{Event("error_(SpeechSynthesisError)","error")}}</td>
-			<td>{{DOMxRef("SpeechSynthesisErrorEvent")}}</td>
-			<td>{{SpecName('Web Speech API')}}</td>
-			<td>An error occurs that prevents the utterance from being successfully spoken.</td>
-		</tr>
-		<tr>
-			<td>{{Event("focus")}}</td>
-			<td>{{DOMxRef("FocusEvent")}} {{Experimental_Inline}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-focus" style="white-space: nowrap;">DOM L3</a></td>
-			<td>An element has received focus (does not bubble).</td>
-		</tr>
-		<tr>
-			<td>{{Event("focusin")}}</td>
-			<td>{{DOMxRef("FocusEvent")}} {{Experimental_Inline}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusIn" style="white-space: nowrap;">DOM L3</a></td>
-			<td>An element is about to receive focus (bubbles).</td>
-		</tr>
-		<tr>
-			<td>{{Event("focusout")}}</td>
-			<td>{{DOMxRef("FocusEvent")}} {{Experimental_Inline}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusout" style="white-space: nowrap;">DOM L3</a></td>
-			<td>An element is about to lose focus (bubbles).</td>
-		</tr>
-		<tr>
-			<td>{{Event("fullscreenchange")}}{{gecko_minversion_inline("9")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://dvcs.w3.org/hg/fullscreen/raw-file/tip/Overview.html#api">Full Screen</a></td>
-			<td>An element was toggled to or from fullscreen mode.</td>
-		</tr>
-		<tr>
-			<td>{{Event("fullscreenerror")}}{{gecko_minversion_inline("9")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://dvcs.w3.org/hg/fullscreen/raw-file/tip/Overview.html#api">Full Screen</a></td>
-			<td>It was impossible to switch to fullscreen mode for technical reasons or because the permission was denied.</td>
-		</tr>
-		<tr>
-			<td>{{Event("gamepadconnected")}}</td>
-			<td>{{DOMxRef("GamepadEvent")}} {{Experimental_Inline}}</td>
-			<td><a href="https://www.w3.org/TR/gamepad/#the-gamepadconnected-event">Gamepad</a></td>
-			<td>A gamepad has been connected.</td>
-		</tr>
-		<tr>
-			<td>{{Event("gamepaddisconnected")}}</td>
-			<td>{{DOMxRef("GamepadEvent")}} {{Experimental_Inline}}</td>
-			<td><a href="https://www.w3.org/TR/gamepad/#the-gamepaddisconnected-event">Gamepad</a></td>
-			<td>A gamepad has been disconnected.</td>
-		</tr>
-		<tr>
-			<td>{{Event("gotpointercapture")}}</td>
-			<td>{{DOMxRef("PointerEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/pointerevents/#the-gotpointercapture-event">Pointer Events</a></td>
-			<td>Element receives pointer capture.</td>
-		</tr>
-		<tr>
-			<td>{{Event("hashchange")}}</td>
-			<td>{{DOMxRef("HashChangeEvent")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-hashchange">HTML5</a></td>
-			<td>The fragment identifier of the URL has changed (the part of the URL after the <code>#</code>).</td>
-		</tr>
-		<tr>
-			<td>{{Event("lostpointercapture")}}</td>
-			<td>{{DOMxRef("PointerEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/pointerevents/#the-lostpointercapture-event">Pointer Events</a></td>
-			<td>Element lost pointer capture.</td>
-		</tr>
-		<tr>
-			<td>{{Event("input")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.w3.org/TR/html5/forms.html#common-event-behaviors">HTML5</a></td>
-			<td>The value of an element changes or the content of an element with the attribute <code><a href="/en-US/docs/DOM/Element.contentEditable">contenteditable</a></code> is modified.</td>
-		</tr>
-		<tr>
-			<td>{{Event("invalid")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#constraint-validation">HTML5</a></td>
-			<td>A submittable element has been checked and doesn't satisfy its constraints.</td>
-		</tr>
-		<tr>
-			<td>{{Event("keydown")}}</td>
-			<td>{{DOMxRef("KeyboardEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-keydown" style="white-space: nowrap;">DOM L3</a></td>
-			<td>A key is pressed down.</td>
-		</tr>
-		<tr>
-			<td>{{Event("keypress")}} {{Deprecated_Inline}}</td>
-			<td>{{DOMxRef("KeyboardEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-keypress" style="white-space: nowrap;">DOM L3</a></td>
-			<td>A key is pressed down, and that key normally produces a character value (use <code>input</code> event instead).</td>
-		</tr>
-		<tr>
-			<td>{{Event("keyup")}}</td>
-			<td>{{DOMxRef("KeyboardEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-keyup" style="white-space: nowrap;">DOM L3</a></td>
-			<td>A key is released.</td>
-		</tr>
-		<tr>
-			<td>{{Event("languagechange")}} {{Experimental_Inline}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td>{{ SpecName('HTML5.1', '#dom-navigator-languages', 'NavigatorLanguage.languages') }}</td>
-			<td>The user's preferred languages have changed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("levelchange")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://dvcs.w3.org/hg/dap/raw-file/tip/battery/Overview.html">Battery status</a></td>
-			<td>The <code>level</code> attribute has been updated.</td>
-		</tr>
-		<tr>
-			<td>{{Event("load")}}</td>
-			<td>{{DOMxRef("UIEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-load" style="white-space: nowrap;">DOM L3</a></td>
-			<td>A resource and its dependent resources have finished loading.</td>
-		</tr>
-		<tr>
-			<td><code><a href="/en-US/docs/Web/Reference/Events/load_(ProgressEvent)">load</a></code></td>
-			<td>{{DOMxRef("ProgressEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/progress-events/">Progress</a> and <a href="https://www.w3.org/TR/XMLHttpRequest/#event-xhr-load">XMLHttpRequest</a></td>
-			<td>Progression has been successful.</td>
-		</tr>
-		<tr>
-			<td>{{Event("loadeddata")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-loadeddata">HTML5 media</a></td>
-			<td>The first frame of the media has finished loading.</td>
-		</tr>
-		<tr>
-			<td>{{Event("loadedmetadata")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-loadedmetadata">HTML5 media</a></td>
-			<td>The metadata has been loaded.</td>
-		</tr>
-		<tr>
-			<td>{{Event("loadend")}}</td>
-			<td>{{DOMxRef("ProgressEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/progress-events/">Progress</a> and <a href="https://www.w3.org/TR/XMLHttpRequest/#event-xhr-loadend">XMLHttpRequest</a></td>
-			<td>Progress has stopped (after <code>"error"</code>, <code>"abort"</code>, or <code>"load"</code> have been dispatched).</td>
-		</tr>
-		<tr>
-			<td>{{Event("loadstart")}}</td>
-			<td>{{DOMxRef("ProgressEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/progress-events/">Progress</a> and <a href="https://www.w3.org/TR/XMLHttpRequest/#event-xhr-loadstart">XMLHttpRequest</a></td>
-			<td>Progress has begun.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mark")}} {{Experimental_Inline}}</td>
-			<td>{{DOMxRef("SpeechSynthesisEvent")}}</td>
-			<td>{{SpecName('Web Speech API')}}</td>
-			<td>The spoken utterance reaches a named SSML "<code>mark</code>" tag.</td>
-		</tr>
-		<tr>
-			<td><code><a href="/en-US/docs/Web/Reference/Events/message_websocket">message</a></code></td>
-			<td>{{DOMxRef("MessageEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/websockets/">WebSocket</a></td>
-			<td>A message is received through a WebSocket.</td>
-		</tr>
-		<tr>
-			<td><code><a href="/en-US/docs/Web/Reference/Events/message_webworker">message</a></code></td>
-			<td>{{DOMxRef("MessageEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/workers/#communicating-with-a-dedicated-worker">Web Workers</a></td>
-			<td>A message is received from a Web Worker.</td>
-		</tr>
-		<tr>
-			<td><code><a href="/en-US/docs/Web/Reference/Events/message_webmessaging">message</a></code></td>
-			<td>{{DOMxRef("MessageEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/webmessaging/">Web Messaging</a></td>
-			<td>A message is received from a child (i)frame or a parent window.</td>
-		</tr>
-		<tr>
-			<td><code><a href="/en-US/docs/Web/Reference/Events/message_serversentevents">message</a></code></td>
-			<td>{{DOMxRef("MessageEvent")}}</td>
-			<td><a href="http://dev.w3.org/html5/eventsource/">Server Sent Events</a></td>
-			<td>A message is received through an event source.</td>
-		</tr>
-		<tr>
-			<td>{{Event("messageerror")}}</td>
-			<td>{{DOMxRef("MessageEvent")}}</td>
-			<td>{{DOMxRef("MessagePort")}}, <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>, <a href="/en-US/docs/Web/API/Broadcast_Channel_API">Broadcast Channel</a>, {{DOMxRef("Window")}}</td>
-			<td>A message error is raised when a message is received by an object.</td>
-		</tr>
-		<tr>
-			<td>{{Event("message_(ServiceWorker)","message")}} {{Experimental_Inline}}</td>
-			<td>{{DOMxRef("ServiceWorkerMessageEvent")}} or {{DOMxRef("ExtendableMessageEvent")}}, depending on context.</td>
-			<td><a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a></td>
-			<td>A message is received from a service worker, or a message is received in a service worker from another context.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mousedown")}}</td>
-			<td>{{DOMxRef("MouseEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-mousedown" style="white-space: nowrap;">DOM L3</a></td>
-			<td>A pointing device button (usually a mouse) is pressed on an element.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mouseenter")}}</td>
-			<td>{{DOMxRef("MouseEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-mouseenter" style="white-space: nowrap;">DOM L3</a></td>
-			<td>A pointing device is moved onto the element that has the listener attached.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mouseleave")}}</td>
-			<td>{{DOMxRef("MouseEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-mouseleave" style="white-space: nowrap;">DOM L3</a></td>
-			<td>A pointing device is moved off the element that has the listener attached.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mousemove")}}</td>
-			<td>{{DOMxRef("MouseEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-mousemove" style="white-space: nowrap;">DOM L3</a></td>
-			<td>A pointing device is moved over an element.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mouseout")}}</td>
-			<td>{{DOMxRef("MouseEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-mouseout" style="white-space: nowrap;">DOM L3</a></td>
-			<td>A pointing device is moved off the element that has the listener attached or off one of its children.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mouseover")}}</td>
-			<td>{{DOMxRef("MouseEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-mouseover" style="white-space: nowrap;">DOM L3</a></td>
-			<td>A pointing device is moved onto the element that has the listener attached or onto one of its children.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mouseup")}}</td>
-			<td>{{DOMxRef("MouseEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-mouseup" style="white-space: nowrap;">DOM L3</a></td>
-			<td>A pointing device button is released over an element.</td>
-		</tr>
-		<tr>
-			<td>{{Event("nomatch")}} {{Experimental_Inline}}</td>
-			<td>{{DOMxRef("SpeechRecognitionEvent")}}</td>
-			<td>{{SpecName('Web Speech API')}}</td>
-			<td>The speech recognition service returns a final result with no significant recognition.</td>
-		</tr>
-		<tr>
-			<td>{{Event("notificationclick")}}</td>
-			<td>{{DOMxRef("NotificationEvent")}} {{Experimental_Inline}}</td>
-			<td>{{SpecName('Web Notifications','#dom-serviceworkerglobalscope-onnotificationclick','onnotificationclick')}}</td>
-			<td>A system notification spawned by {{DOMxRef("ServiceWorkerRegistration.showNotification()")}} has been clicked.</td>
-		</tr>
-		<tr>
-			<td>{{Event("offline")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/offline.html#event-offline">HTML5 offline</a></td>
-			<td>The browser has lost access to the network.</td>
-		</tr>
-		<tr>
-			<td>{{Event("online")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/offline.html#event-online">HTML5 offline</a></td>
-			<td>The browser has gained access to the network (but particular websites might be unreachable).</td>
-		</tr>
-		<tr>
-			<td><code><a href="/en-US/docs/Web/Reference/Events/open_websocket">open</a></code></td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.w3.org/TR/websockets/">WebSocket</a></td>
-			<td>A WebSocket connection has been established.</td>
-		</tr>
-		<tr>
-			<td><code><a href="/en-US/docs/Web/Reference/Events/open_serversentevents">open</a></code></td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="http://dev.w3.org/html5/eventsource/">Server Sent Events</a></td>
-			<td>An event source connection has been established.</td>
-		</tr>
-		<tr>
-			<td>{{Event("orientationchange")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.w3.org/TR/screen-orientation/">Screen Orientation</a></td>
-			<td>The orientation of the device (portrait/landscape) has changed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("pagehide")}}</td>
-			<td>{{DOMxRef("PageTransitionEvent")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-pagehide">HTML5</a></td>
-			<td>A session history entry is being traversed from.</td>
-		</tr>
-		<tr>
-			<td>{{Event("pageshow")}}</td>
-			<td>{{DOMxRef("PageTransitionEvent")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-pageshow">HTML5</a></td>
-			<td>A session history entry is being traversed to.</td>
-		</tr>
-		<tr>
-			<td>{{Event("paste")}}</td>
-			<td>{{DOMxRef("ClipboardEvent")}} {{Experimental_Inline}}</td>
-			<td><a href="https://www.w3.org/TR/clipboard-apis/#paste-event">Clipboard</a></td>
-			<td>Data has been transferred from the system clipboard to the document.</td>
-		</tr>
-		<tr>
-			<td>{{Event("pause")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-pause">HTML5 media</a></td>
-			<td>Playback has been paused.</td>
-		</tr>
-		<tr>
-			<td>{{Event("pause_(SpeechSynthesis)", "pause")}} {{Experimental_Inline}}</td>
-			<td>{{DOMxRef("SpeechSynthesisEvent")}}</td>
-			<td>{{SpecName('Web Speech API')}}</td>
-			<td>The utterance is paused part way through.</td>
-		</tr>
-		<tr>
-			<td>{{Event("pointercancel")}}</td>
-			<td>{{DOMxRef("PointerEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/pointerevents/#the-pointercancel-event">Pointer Events</a></td>
-			<td>The pointer is unlikely to produce any more events.</td>
-		</tr>
-		<tr>
-			<td>{{Event("pointerdown")}}</td>
-			<td>{{DOMxRef("PointerEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/pointerevents/#the-pointerdown-event">Pointer Events</a></td>
-			<td>The pointer enters the active buttons state.</td>
-		</tr>
-		<tr>
-			<td>{{Event("pointerenter")}}</td>
-			<td>{{DOMxRef("PointerEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/pointerevents/#the-pointerenter-event">Pointer Events</a></td>
-			<td>Pointing device is moved inside the hit-testing boundary.</td>
-		</tr>
-		<tr>
-			<td>{{Event("pointerleave")}}</td>
-			<td>{{DOMxRef("PointerEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/pointerevents/#the-pointerleave-event">Pointer Events</a></td>
-			<td>Pointing device is moved out of the hit-testing boundary.</td>
-		</tr>
-		<tr>
-			<td>{{Event("pointerlockchange")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.w3.org/TR/pointerlock/#pointerlockchange-and-pointerlockerror-events">Pointer Lock</a></td>
-			<td>The pointer was locked or released.</td>
-		</tr>
-		<tr>
-			<td>{{Event("pointerlockerror")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.w3.org/TR/pointerlock/#pointerlockchange-and-pointerlockerror-events">Pointer Lock</a></td>
-			<td>It was impossible to lock the pointer for technical reasons or because the permission was denied.</td>
-		</tr>
-		<tr>
-			<td>{{Event("pointermove")}}</td>
-			<td>{{DOMxRef("PointerEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/pointerevents/#the-pointermove-event">Pointer Events</a></td>
-			<td>The pointer changed coordinates.</td>
-		</tr>
-		<tr>
-			<td>{{Event("pointerout")}}</td>
-			<td>{{DOMxRef("PointerEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/pointerevents/#the-pointerout-event">Pointer Events</a></td>
-			<td>The pointing device moves out of the hit-testing boundary or leaves detectable hover range.</td>
-		</tr>
-		<tr>
-			<td>{{Event("pointerover")}}</td>
-			<td>{{DOMxRef("PointerEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/pointerevents/#the-pointerover-event">Pointer Events</a></td>
-			<td>The pointing device is moved into the hit-testing boundary.</td>
-		</tr>
-		<tr>
-			<td>{{Event("pointerup")}}</td>
-			<td>{{DOMxRef("PointerEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/pointerevents/#the-pointerup-event">Pointer Events</a></td>
-			<td>The pointer leaves the active button state.</td>
-		</tr>
-		<tr>
-			<td>{{Event("play")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-play">HTML5 media</a></td>
-			<td>Playback has begun.</td>
-		</tr>
-		<tr>
-			<td>{{Event("playing")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing">HTML5 media</a></td>
-			<td>Playback is ready to start after having been paused or delayed due to lack of data.</td>
-		</tr>
-		<tr>
-			<td>{{Event("popstate")}}</td>
-			<td>{{DOMxRef("PopStateEvent")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-popstate">HTML5</a></td>
-			<td>A session history entry is being navigated to (in certain cases).</td>
-		</tr>
-		<tr>
-			<td>{{Event("progress")}}</td>
-			<td>{{DOMxRef("ProgressEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/progress-events/">Progress</a> and <a href="https://www.w3.org/TR/XMLHttpRequest/#event-xhr-progress">XMLHttpRequest</a></td>
-			<td>In progress.</td>
-		</tr>
-		<tr>
-			<td>{{Event("push")}}</td>
-			<td>{{DOMxRef("PushEvent")}} {{Experimental_Inline}}</td>
-			<td>{{SpecName("Push API")}}</td>
-			<td>A <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker</a> has received a push message.</td>
-		</tr>
-		<tr>
-			<td>{{Event("pushsubscriptionchange")}}</td>
-			<td>{{DOMxRef("PushEvent")}} {{Experimental_Inline}}</td>
-			<td>{{SpecName("Push API")}}</td>
-			<td>A <a href="/en-US/docs/Web/API/PushSubscription">PushSubscription</a> has expired.</td>
-		</tr>
-		<tr>
-			<td>{{Event("ratechange")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-ratechange">HTML5 media</a></td>
-			<td>The playback rate has changed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("readystatechange")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td>HTML5 and <a href="https://www.w3.org/TR/XMLHttpRequest/#event-xhr-readystatechange">XMLHttpRequest</a></td>
-			<td>The readyState attribute of a document has changed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("repeatEvent")}}</td>
-			<td>{{DOMxRef("TimeEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/SVG/interact.html#SVGEvents">SVG</a></td>
-			<td>A <a href="/en-US/docs/SVG/SVG_animation_with_SMIL">SMIL</a> animation element is repeated.</td>
-		</tr>
-		<tr>
-			<td>{{Event("reset")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html">DOM L2</a>, <a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#resetting-a-form">HTML5</a></td>
-			<td>A form is reset.</td>
-		</tr>
-		<tr>
-			<td>{{Event("resize")}}</td>
-			<td>{{DOMxRef("UIEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-resize" style="white-space: nowrap;">DOM L3</a></td>
-			<td>The document view has been resized.</td>
-		</tr>
-		<tr>
-			<td>{{Event("resourcetimingbufferfull")}}</td>
-			<td>{{DOMxRef("Performance")}}</td>
-			<td><a href="https://w3c.github.io/resource-timing/#dom-performance-onresourcetimingbufferfull">Resource Timing</a></td>
-			<td>The browser's resource timing buffer is full.</td>
-		</tr>
-		<tr>
-			<td>{{Event("result")}} {{Experimental_Inline}}</td>
-			<td>{{DOMxRef("SpeechRecognitionEvent")}} {{Experimental_Inline}}</td>
-			<td>{{SpecName('Web Speech API')}}</td>
-			<td>The speech recognition service returns a result — a word or phrase has been positively recognized and this has been communicated back to the app.</td>
-		</tr>
-		<tr>
-			<td>{{Event("resume")}} {{Experimental_Inline}}</td>
-			<td>{{DOMxRef("SpeechSynthesisEvent")}} {{Experimental_Inline}}</td>
-			<td>{{SpecName('Web Speech API')}}</td>
-			<td>A paused utterance is resumed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("scroll")}}</td>
-			<td>{{DOMxRef("UIEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-scroll" style="white-space: nowrap;">DOM L3</a></td>
-			<td>The document view or an element has been scrolled.</td>
-		</tr>
-		<tr>
-			<td>{{Event("seeked")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-seeked">HTML5 media</a></td>
-			<td>A <em>seek</em> operation completed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("seeking")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-seeking">HTML5 media</a></td>
-			<td>A <em>seek</em> operation began.</td>
-		</tr>
-		<tr>
-			<td>{{Event("select")}}</td>
-			<td>{{DOMxRef("UIEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-select" style="white-space: nowrap;">DOM L3</a></td>
-			<td>Some text is being selected.</td>
-		</tr>
-		<tr>
-			<td>{{Event("selectstart")}} {{Experimental_Inline}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td>{{ SpecName('Selection API')}}</td>
-			<td>A selection just started.</td>
-		</tr>
-		<tr>
-			<td>{{Event("selectionchange")}} {{Experimental_Inline}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td>{{ SpecName('Selection API')}}</td>
-			<td>The selection in the document has been changed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("show")}}</td>
-			<td>{{DOMxRef("MouseEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/html5/interactive-elements.html#context-menus">HTML5</a></td>
-			<td>A <code>contextmenu</code> event was fired on (or bubbled to) an element that has a <a href="/en-US/docs/DOM/element.contextmenu">contextmenu</a> attribute</td>
-		</tr>
-		<tr>
-			<td>{{Event("slotchange")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td>{{ SpecName('DOM WHATWG')}}</td>
-			<td>The node contents of a {{DOMxRef("HTMLSlotElement")}} ({{htmlelement("slot")}}) have changed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("soundend")}} {{Experimental_Inline}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td>{{SpecName('Web Speech API')}}</td>
-			<td>Any sound — recognisable speech or not — has stopped being detected.</td>
-		</tr>
-		<tr>
-			<td>{{Event("soundstart")}} {{Experimental_Inline}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td>{{SpecName('Web Speech API')}}</td>
-			<td>Any sound — recognisable speech or not — has been detected.</td>
-		</tr>
-		<tr>
-			<td>{{Event("speechend")}} {{Experimental_Inline}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td>{{SpecName('Web Speech API')}}</td>
-			<td>Speech recognized by the speech recognition service has stopped being detected.</td>
-		</tr>
-		<tr>
-			<td>{{Event("speechstart")}} {{Experimental_Inline}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td>{{SpecName('Web Speech API')}}</td>
-			<td>Sound that is recognized by the speech recognition service as speech has been detected.</td>
-		</tr>
-		<tr>
-			<td>{{Event("stalled")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-stalled">HTML5 media</a></td>
-			<td>The user agent is trying to fetch media data, but data is unexpectedly not forthcoming.</td>
-		</tr>
-		<tr>
-			<td>{{Event("start_(SpeechRecognition)","start")}} {{Experimental_Inline}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td>{{SpecName('Web Speech API')}}</td>
-			<td>The speech recognition service has begun listening to incoming audio with intent to recognize grammars associated with the current <code>SpeechRecognition</code>.</td>
-		</tr>
-		<tr>
-			<td>{{Event("start_(SpeechSynthesis)","start")}}</td>
-			<td>{{DOMxRef("SpeechSynthesisEvent")}}</td>
-			<td>{{SpecName('Web Speech API')}}</td>
-			<td>The utterance has begun to be spoken.</td>
-		</tr>
-		<tr>
-			<td>{{Event("storage")}}</td>
-			<td>{{DOMxRef("StorageEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/webstorage/#the-storage-event">Web Storage</a></td>
-			<td>A storage area (<a href="/en-US/docs/DOM/Storage#localStorage">localStorage</a> or <a href="/en-US/docs/DOM/Storage#sessionStorage">sessionStorage</a>) has changed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("submit")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html">DOM L2</a>, <a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#form-submission-algorithm">HTML5</a></td>
-			<td>A form is submitted.</td>
-		</tr>
-		<tr>
-			<td><code><a href="/en-US/docs/Web/Reference/Events/success_indexedDB">success</a></code></td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.w3.org/TR/IndexedDB/#request-api">IndexedDB</a></td>
-			<td>A request successfully completed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("suspend")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-suspend">HTML5 media</a></td>
-			<td>Media data loading has been suspended.</td>
-		</tr>
-		<tr>
-			<td>{{Event("SVGAbort")}}</td>
-			<td>{{DOMxRef("SVGEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/SVG/interact.html#SVGEvents">SVG</a></td>
-			<td>Page loading has been stopped before the <a href="/en-US/docs/SVG">SVG</a> was loaded.</td>
-		</tr>
-		<tr>
-			<td>{{Event("SVGError")}}</td>
-			<td>{{DOMxRef("SVGEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/SVG/interact.html#SVGEvents">SVG</a></td>
-			<td>An error has occurred before the <a href="/en-US/docs/SVG">SVG</a> was loaded.</td>
-		</tr>
-		<tr>
-			<td>{{Event("SVGLoad")}}</td>
-			<td>{{DOMxRef("SVGEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/SVG/interact.html#SVGEvents">SVG</a></td>
-			<td>An <a href="/en-US/docs/SVG">SVG</a> document has been loaded and parsed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("SVGResize")}}</td>
-			<td>{{DOMxRef("SVGEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/SVG/interact.html#SVGEvents">SVG</a></td>
-			<td>An <a href="/en-US/docs/SVG">SVG</a> document is being resized.</td>
-		</tr>
-		<tr>
-			<td>{{Event("SVGScroll")}}</td>
-			<td>{{DOMxRef("SVGEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/SVG/interact.html#SVGEvents">SVG</a></td>
-			<td>An <a href="/en-US/docs/SVG">SVG</a> document is being scrolled.</td>
-		</tr>
-		<tr>
-			<td>{{Event("SVGUnload")}}</td>
-			<td>{{DOMxRef("SVGEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/SVG/interact.html#SVGEvents">SVG</a></td>
-			<td>An <a href="/en-US/docs/SVG">SVG</a> document has been removed from a window or frame.</td>
-		</tr>
-		<tr>
-			<td>{{Event("SVGZoom")}}</td>
-			<td>{{DOMxRef("SVGZoomEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/SVG/interact.html#SVGEvents">SVG</a></td>
-			<td>An <a href="/en-US/docs/SVG">SVG</a> document is being zoomed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("timeout")}}</td>
-			<td>{{DOMxRef("ProgressEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/XMLHttpRequest/#event-xhr-timeout">XMLHttpRequest</a></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>{{Event("timeupdate")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-timeupdate">HTML5 media</a></td>
-			<td>The time indicated by the <code>currentTime</code> attribute has been updated.</td>
-		</tr>
-		<tr>
-			<td>{{Event("touchcancel")}}</td>
-			<td>{{DOMxRef("TouchEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/touch-events/">Touch Events</a></td>
-			<td>A touch point has been disrupted in an implementation-specific manner (too many touch points, for example).</td>
-		</tr>
-		<tr>
-			<td>{{Event("touchend")}}</td>
-			<td>{{DOMxRef("TouchEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/touch-events/#the-touchend-event">Touch Events</a></td>
-			<td>A touch point is removed from the touch surface.</td>
-		</tr>
-		<tr>
-			<td>{{Event("touchmove")}}</td>
-			<td>{{DOMxRef("TouchEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/touch-events/#the-touchmove-event">Touch Events</a></td>
-			<td>A touch point is moved along the touch surface.</td>
-		</tr>
-		<tr>
-			<td>{{Event("touchstart")}}</td>
-			<td>{{DOMxRef("TouchEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/touch-events/#the-touchstart---------event">Touch Events</a></td>
-			<td>A touch point is placed on the touch surface.</td>
-		</tr>
-		<tr>
-			<td>{{Event("transitionend")}}</td>
-			<td>{{DOMxRef("TransitionEvent")}} {{Experimental_Inline}}</td>
-			<td><a href="https://www.w3.org/TR/css3-transitions/#transition-events">CSS Transitions</a></td>
-			<td>A <a href="/en-US/docs/CSS/CSS_transitions">CSS transition</a> has completed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("unload")}}</td>
-			<td>{{DOMxRef("UIEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-unload" style="white-space: nowrap;">DOM L3</a></td>
-			<td>The document or a dependent resource is being unloaded.</td>
-		</tr>
-		<tr>
-			<td><code><a href="/en-US/docs/Web/Reference/Events/upgradeneeded_indexedDB">upgradeneeded</a></code></td>
-			<td></td>
-			<td><a href="https://www.w3.org/TR/IndexedDB/#request-api">IndexedDB</a></td>
-			<td>An attempt was made to open a database with a version number higher than its current version. A <code>versionchange</code> transaction has been created.</td>
-		</tr>
-		<tr>
-			<td>{{Event("userproximity")}}</td>
-			<td>{{DOMxRef("UserProximityEvent")}} {{Experimental_Inline}}</td>
-			<td>{{SpecName("Proximity Events")}}</td>
-			<td>Fresh data is available from a proximity sensor (indicates whether the nearby object is <code>near</code> the device or not).</td>
-		</tr>
-		<tr>
-			<td>{{Event("voiceschanged")}} {{Experimental_Inline}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td>{{SpecName('Web Speech API')}}</td>
-			<td>The list of {{DOMxRef("SpeechSynthesisVoice")}} objects that would be returned by the {{DOMxRef("SpeechSynthesis.getVoices()")}} method has changed (when the {{Event("voiceschanged")}} event fires.)</td>
-		</tr>
-		<tr>
-			<td><code><a href="/en-US/docs/Web/Reference/Events/versionchange_indexedDB">versionchange</a></code></td>
-			<td></td>
-			<td><a href="https://www.w3.org/TR/IndexedDB/#database-interface">IndexedDB</a></td>
-			<td>A <code>versionchange</code> transaction completed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("visibilitychange")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.w3.org/TR/page-visibility/#sec-visibilitychange-event">Page visibility</a></td>
-			<td>The content of a tab has become visible or has been hidden.</td>
-		</tr>
-		<tr>
-			<td>{{Event("volumechange")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-volumechange">HTML5 media</a></td>
-			<td>The volume has changed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("waiting")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-waiting">HTML5 media</a></td>
-			<td>Playback has stopped because of a temporary lack of data.</td>
-		</tr>
-		<tr>
-			<td>{{Event("wheel")}}</td>
-			<td>{{DOMxRef("WheelEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-type-wheel" style="white-space: nowrap;">DOM L3</a></td>
-			<td>A wheel button of a pointing device is rotated in any direction.</td>
-		</tr>
-	</tbody>
-</table>
-</div>
-
-<h2 id="Non-standard_events">Non-standard events</h2>
-
-<div style="overflow: auto;">
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Event Name</th>
-			<th scope="col">Event Type</th>
-			<th scope="col">Specification</th>
-			<th scope="col">Fired when...</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{Event("afterscriptexecute")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><em>Mozilla Specific</em></td>
-			<td>A script has been executed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("beforescriptexecute")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><em>Mozilla Specific</em></td>
-			<td>A script is about to be executed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("beforeinstallprompt")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><em>Chrome specific</em></td>
-			<td>A user is prompted to save a website to a home screen on mobile.</td>
-		</tr>
-		<tr>
-			<td>{{Event("cardstatechange")}}</td>
-			<td></td>
-			<td><em>Firefox OS specific</em></td>
-			<td>The {{DOMxRef("MozMobileConnection.cardState")}} property changes value.</td>
-		</tr>
-		<tr>
-			<td>{{Event("change")}}</td>
-			<td>{{DOMxRef("DeviceStorageChangeEvent")}}</td>
-			<td><em>Firefox OS specific</em></td>
-			<td>This event is triggered each time a file is created, modified, or deleted on a given storage area.</td>
-		</tr>
-		<tr>
-			<td>{{Event("connectionInfoUpdate")}}</td>
-			<td></td>
-			<td><em>Firefox OS specific</em></td>
-			<td>The information about the signal strength and the link speed have been updated.</td>
-		</tr>
-		<tr>
-			<td>{{Event("cfstatechange")}}</td>
-			<td></td>
-			<td><em>Firefox OS specific</em></td>
-			<td>The call forwarding state changes.</td>
-		</tr>
-		<tr>
-			<td>{{Event("datachange")}}</td>
-			<td></td>
-			<td><em>Firefox OS specific</em></td>
-			<td>The {{DOMxRef("MozMobileConnection.data")}} object changes values.</td>
-		</tr>
-		<tr>
-			<td>{{Event("dataerror")}}</td>
-			<td></td>
-			<td><em>Firefox OS specific</em></td>
-			<td>The {{DOMxRef("MozMobileConnection.data")}} object receives an error from the <abbr title="Radio Interface Layer">RIL</abbr>.</td>
-		</tr>
-		<tr>
-			<td>{{Event("DOMMouseScroll")}} {{Deprecated_Inline}}</td>
-			<td></td>
-			<td><em>Mozilla specific</em></td>
-			<td>The wheel button of a pointing device is rotated (<code>detail</code> attribute is a number of lines). (use {{Event("wheel")}} instead)</td>
-		</tr>
-		<tr>
-			<td><code>dragdrop</code> {{Deprecated_Inline}}</td>
-			<td><code>DragEvent</code></td>
-			<td><em>Mozilla specific</em></td>
-			<td>An element is dropped (use {{Event("drop")}} instead).</td>
-		</tr>
-		<tr>
-			<td><code>dragexit</code> {{Deprecated_Inline}}</td>
-			<td><code>DragEvent</code></td>
-			<td><em>Mozilla specific</em></td>
-			<td>A drag operation is being ended (use {{Event("dragend")}} instead).</td>
-		</tr>
-		<tr>
-			<td><code>draggesture</code> {{Deprecated_Inline}}</td>
-			<td><code>DragEvent</code></td>
-			<td><em>Mozilla specific</em></td>
-			<td>The user starts dragging an element or text selection (use {{Event("dragstart")}} instead).</td>
-		</tr>
-		<tr>
-			<td>{{Event("icccardlockerror")}}</td>
-			<td></td>
-			<td><em>Firefox OS specific</em></td>
-			<td>The {{DOMxRef("MozMobileConnection.unlockCardLock()")}} or {{DOMxRef("MozMobileConnection.setCardLock()")}} methods fail.</td>
-		</tr>
-		<tr>
-			<td>{{Event("iccinfochange")}}</td>
-			<td></td>
-			<td><em>Firefox OS specific</em></td>
-			<td>The {{DOMxRef("MozMobileConnection.iccInfo")}} object changes.</td>
-		</tr>
-		<tr>
-			<td>{{Event("localized")}}</td>
-			<td></td>
-			<td><em><a href="https://github.com/fabi1cazenave/webL10n">Mozilla Specific</a></em></td>
-			<td>The page has been localized using <code>data-l10n-*</code> attributes.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mousewheel")}} {{Deprecated_Inline}}</td>
-			<td></td>
-			<td><a href="https://msdn.microsoft.com/en-us/library/ie/ms536951%28v=vs.85%29.aspx"><em>IE invented</em></a></td>
-			<td>The wheel button of a pointing device is rotated.</td>
-		</tr>
-		<tr>
-			<td>{{Event("MozAudioAvailable")}}</td>
-			<td>{{DOMxRef("Event")}}</td>
-			<td><em>Mozilla specific</em></td>
-			<td>The audio buffer is full and the corresponding raw samples are available.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/MozBeforeResize"><code>MozBeforeResize</code></a> {{Obsolete_Inline}}</td>
-			<td></td>
-			<td><em>Mozilla specific</em></td>
-			<td>A window is about to be resized.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowseractivitydone")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when some activity has been completed (complete description TBD.)</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowserasyncscroll")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when the scroll position within a browser {{HTMLElement("iframe")}} changes.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowseraudioplaybackchange")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when audio starts or stops playing within the browser {{HTMLElement("iframe")}} content.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowsercaretstatechanged")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when the text selected inside the browser {{HTMLElement("iframe")}} content changes.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowserclose")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when window.close() is called within a browser {{HTMLElement("iframe")}}.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowsercontextmenu")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when a browser {{HTMLElement("iframe")}} tries to open a context menu.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowserdocumentfirstpaint")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when a new paint occurs on any document in the browser {{HTMLElement("iframe")}}.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowsererror")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when an error occurred while trying to load a content within a browser {{HTMLElement("iframe")}}.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowserfindchange")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when a search operation is performed on the browser {{HTMLElement("iframe")}} content (see <a href="/en-US/docs/Web/API/HTMLIFrameElement#Search_methods">HTMLIFrameElement search methods</a>.)</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowserfirstpaint")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when the {{HTMLElement("iframe")}} paints content for the first time (this doesn't include the initial paint from <code><em>about:blank</em></code>.)</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowsericonchange")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when the favicon of a browser {{HTMLElement("iframe")}} changes.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowserlocationchange")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when a browser {{HTMLElement("iframe")}}'s location changes.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowserloadend")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when the browser {{HTMLElement("iframe")}} has finished loading all its assets.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowserloadstart")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when the browser {{HTMLElement("iframe")}} starts to load a new page.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowsermanifestchange")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when the path to the app manifest changes, in the case of a browser {{HTMLElement("iframe")}} with an open web app embedded in it.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowsermetachange")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when a {{htmlelement("meta")}} element is added to, removed from, or changed in the browser {{HTMLElement("iframe")}}'s content.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowseropensearch")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when a link to a search engine is found.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowseropentab")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when a new tab is opened within a browser {{HTMLElement("iframe")}} as a result of the user issuing a command to open a link target in a new tab (for example <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + click.)</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowseropenwindow")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when {{DOMxRef("window.open()")}} is called within a browser iframe.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowserresize")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when the browser {{HTMLElement("iframe")}}'s window size has changed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowserscroll")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when the browser {{HTMLElement("iframe")}} content scrolls.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowserscrollareachanged")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when the available scrolling area in the browser {{HTMLElement("iframe")}} changes. This can occur on resize and when the page size changes (while loading for example.)</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowserscrollviewchange")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when asynchronous scrolling (i.e. APCZ) starts or stops.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowsersecuritychange")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when the SSL state changes within a browser {{HTMLElement("iframe")}}.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowserselectionstatechanged")}} {{deprecated_inline}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when the text selected inside the browser {{HTMLElement("iframe")}} content changes. Note that this is deprecated, and newer implementations use {{Event("mozbrowsercaretstatechanged")}} instead.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowsershowmodalprompt")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when {{DOMxRef("window.alert","alert()")}}, {{DOMxRef("window.confirm","confirm()")}} or {{DOMxRef("window.prompt","prompt()")}} are called within a browser {{HTMLElement("iframe")}}</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowsertitlechange")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when the <code>document.title</code> changes within a browser iframe.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowserusernameandpasswordrequired")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when an HTTP authentication is requested.</td>
-		</tr>
-		<tr>
-			<td>{{Event("mozbrowservisibilitychange")}}</td>
-			<td></td>
-			<td><em>Firefox OS <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>-specific</em></td>
-			<td>Sent when the visibility state of the current browser iframe {{HTMLElement("iframe")}} changes, for example due to a call to {{DOMxRef("HTMLIFrameElement.setVisible","setVisible()")}}.</td>
-		</tr>
-		<tr>
-			<td>{{Event("MozGamepadButtonDown")}}</td>
-			<td></td>
-			<td><em>To be specified</em></td>
-			<td>A gamepad button is pressed down.</td>
-		</tr>
-		<tr>
-			<td>{{Event("MozGamepadButtonUp")}}</td>
-			<td></td>
-			<td><em>To be specified</em></td>
-			<td>A gamepad button is released.</td>
-		</tr>
-		<tr>
-			<td>{{Event("MozMousePixelScroll")}} {{Deprecated_Inline}}</td>
-			<td></td>
-			<td><em>Mozilla specific</em></td>
-			<td>The wheel button of a pointing device is rotated (detail attribute is a number of pixels). (use wheel instead)</td>
-		</tr>
-		<tr>
-			<td>{{Event("MozOrientation")}} {{Deprecated_Inline}}</td>
-			<td></td>
-			<td><em>Mozilla specific</em></td>
-			<td>Fresh data is available from an orientation sensor (see deviceorientation).</td>
-		</tr>
-		<tr>
-			<td>{{Event("MozScrolledAreaChanged")}}</td>
-			<td>{{DOMxRef("UIEvent")}}</td>
-			<td><em>Mozilla specific</em></td>
-			<td>The document view has been scrolled or resized.</td>
-		</tr>
-		<tr>
-			<td>{{Event("moztimechange")}}</td>
-			<td></td>
-			<td><em>Mozilla specific</em></td>
-			<td>The time of the device has been changed.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/DOM/Touch_events_(Mozilla_experimental)">MozTouchDown</a> {{Deprecated_Inline}}</td>
-			<td></td>
-			<td><em>Mozilla specific</em></td>
-			<td>A touch point is placed on the touch surface (use <code>touchstart</code> instead).</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/DOM/Touch_events_(Mozilla_experimental)">MozTouchMove</a> {{Deprecated_Inline}}</td>
-			<td></td>
-			<td><em>Mozilla specific</em></td>
-			<td>A touch point is moved along the touch surface (use <code>touchmove</code> instead).</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/DOM/Touch_events_(Mozilla_experimental)">MozTouchUp</a> {{Deprecated_Inline}}</td>
-			<td></td>
-			<td><em>Mozilla specific</em></td>
-			<td>A touch point is removed from the touch surface (use <code>touchend</code> instead).</td>
-		</tr>
-		<tr>
-			<td>{{Event("alerting")}}</td>
-			<td>{{DOMxRef("CallEvent")}}</td>
-			<td><em>To be specified</em></td>
-			<td>The correspondent is being alerted (his/her phone is ringing).</td>
-		</tr>
-		<tr>
-			<td>{{Event("busy")}}</td>
-			<td>{{DOMxRef("CallEvent")}}</td>
-			<td><em>To be specified</em></td>
-			<td>The line of the correspondent is busy.</td>
-		</tr>
-		<tr>
-			<td>{{Event("callschanged")}}</td>
-			<td>{{DOMxRef("CallEvent")}}</td>
-			<td><em>To be specified</em></td>
-			<td>A call has been added or removed from the list of current calls.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/DOM/onconnected">onconnected</a> {{Event("connected")}}</td>
-			<td>{{DOMxRef("CallEvent")}}</td>
-			<td><em>To be specified</em></td>
-			<td>A call has been connected.</td>
-		</tr>
-		<tr>
-			<td>{{Event("connecting")}}</td>
-			<td>{{DOMxRef("CallEvent")}}</td>
-			<td><em>To be specified</em></td>
-			<td>A call is about to connect.</td>
-		</tr>
-		<tr>
-			<td>{{Event("delivered")}}</td>
-			<td>{{DOMxRef("SMSEvent")}}</td>
-			<td><em>To be specified</em></td>
-			<td>An SMS has been successfully delivered.</td>
-		</tr>
-		<tr>
-			<td>{{Event("dialing")}}</td>
-			<td>{{DOMxRef("CallEvent")}}</td>
-			<td><em>To be specified</em></td>
-			<td>The number of a correspondent has been dialed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("disabled")}}</td>
-			<td></td>
-			<td><em>Firefox OS specific</em></td>
-			<td>WiFi has been disabled on the device.</td>
-		</tr>
-		<tr>
-			<td>{{Event("disconnected")}}</td>
-			<td>{{DOMxRef("CallEvent")}}</td>
-			<td><em>To be specified</em></td>
-			<td>A call has been disconnected.</td>
-		</tr>
-		<tr>
-			<td>{{Event("disconnecting")}}</td>
-			<td>{{DOMxRef("CallEvent")}}</td>
-			<td><em>To be specified</em></td>
-			<td>A call is about to disconnect.</td>
-		</tr>
-		<tr>
-			<td>{{Event("enabled")}}</td>
-			<td></td>
-			<td><em>Firefox OS specific</em></td>
-			<td>WiFi has been enabled on the device.</td>
-		</tr>
-		<tr>
-			<td>{{Event("error_(Telephony)","error")}}</td>
-			<td>{{DOMxRef("CallEvent")}}</td>
-			<td><em>To be specified</em></td>
-			<td>An error occurred.</td>
-		</tr>
-		<tr>
-			<td>{{Event("held")}}</td>
-			<td>{{DOMxRef("CallEvent")}}</td>
-			<td><em>To be specified</em></td>
-			<td>A call has been held.</td>
-		</tr>
-		<tr>
-			<td>{{Event("holding")}}</td>
-			<td>{{DOMxRef("CallEvent")}}</td>
-			<td><em>To be specified</em></td>
-			<td>A call is about to be held.</td>
-		</tr>
-		<tr>
-			<td>{{Event("incoming")}}</td>
-			<td>{{DOMxRef("CallEvent")}}</td>
-			<td><em>To be specified</em></td>
-			<td>A call is being received.</td>
-		</tr>
-		<tr>
-			<td>{{Event("received")}}</td>
-			<td>{{DOMxRef("SMSEvent")}}</td>
-			<td><em>To be specified</em></td>
-			<td>An SMS has been received.</td>
-		</tr>
-		<tr>
-			<td>{{Event("resuming")}}</td>
-			<td>{{DOMxRef("CallEvent")}}</td>
-			<td><em>To be specified</em></td>
-			<td>A call is about to resume.</td>
-		</tr>
-		<tr>
-			<td>{{Event("sent")}}</td>
-			<td>{{DOMxRef("SMSEvent")}}</td>
-			<td><em>To be specified</em></td>
-			<td>An SMS has been sent.</td>
-		</tr>
-		<tr>
-			<td>{{Event("statechange")}}</td>
-			<td>{{DOMxRef("CallEvent")}}</td>
-			<td><em>To be specified</em></td>
-			<td>The state of a call has changed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("statuschange")}}</td>
-			<td></td>
-			<td><em>Firefox OS specific</em></td>
-			<td>The status of the Wifi connection changed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("overflow")}}</td>
-			<td>{{DOMxRef("UIEvent")}}</td>
-			<td><em>Mozilla specific</em></td>
-			<td>An element has been overflowed by its content or has been rendered for the first time in this state (only works for elements styled with <code>overflow</code> != <code>visible</code>).</td>
-		</tr>
-		<tr>
-			<td>{{Event("smartcard-insert")}}</td>
-			<td></td>
-			<td><em>Mozilla specific</em></td>
-			<td>A <a href="/en-US/docs/JavaScript_crypto">smartcard</a> has been inserted.</td>
-		</tr>
-		<tr>
-			<td>{{Event("smartcard-remove")}}</td>
-			<td></td>
-			<td><em>Mozilla specific</em></td>
-			<td>A <a href="/en-US/docs/JavaScript_crypto">smartcard</a> has been removed.</td>
-		</tr>
-		<tr>
-			<td>{{Event("stkcommand")}}</td>
-			<td></td>
-			<td><em>Firefox OS specific</em></td>
-			<td>The <abbr title="SIM Application Toolkit">STK</abbr> Proactive Command is issued from <abbr title="Integrated Circuit Card">ICC</abbr>.</td>
-		</tr>
-		<tr>
-			<td>{{Event("stksessionend")}}</td>
-			<td></td>
-			<td><em>Firefox OS specific</em></td>
-			<td>The <abbr title="SIM Application Toolkit">STK</abbr> Session is terminated by <abbr title="Integrated Circuit Card">ICC</abbr>.</td>
-		</tr>
-		<tr>
-			<td>{{Event("touchenter")}}</td>
-			<td>{{DOMxRef("TouchEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/touch-events/#the-touchstart---------event">Touch Events</a> Removed</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>{{Event("touchleave")}}</td>
-			<td>{{DOMxRef("TouchEvent")}}</td>
-			<td><a href="https://www.w3.org/TR/touch-events/#the-touchstart---------event">Touch Events</a> Removed</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>{{Event("underflow")}}</td>
-			<td>{{DOMxRef("UIEvent")}}</td>
-			<td><em>Mozilla specific</em></td>
-			<td>An element is no longer overflowed by its content (only works for elements styled with <code>overflow</code> != <code>visible</code>).</td>
-		</tr>
-		<tr>
-			<td><code>uploadprogress</code> {{Deprecated_Inline}}</td>
-			<td>{{DOMxRef("ProgressEvent")}}</td>
-			<td><em>Mozilla Specific</em></td>
-			<td>Upload is in progress (see {{Event("progress")}}).</td>
-		</tr>
-		<tr>
-			<td>
-			<p>{{Event("ussdreceived")}}</p>
-			</td>
-			<td></td>
-			<td><em>Firefox OS specific</em></td>
-			<td>A new <abbr title="Unstructured Supplementary Service Data">USSD</abbr> message is received</td>
-		</tr>
-		<tr>
-			<td>{{Event("voicechange")}}</td>
-			<td></td>
-			<td><em>Firefox OS specific</em></td>
-			<td>The {{DOMxRef("MozMobileConnection.voice")}} object changes values.</td>
-		</tr>
-		<tr>
-			<td>{{Event("msContentZoom")}}</td>
-			<td></td>
-			<td><em>Microsoft specific</em></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>{{Event("MSManipulationStateChanged")}}</td>
-			<td></td>
-			<td><em>Microsoft specific</em></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>{{Event("MSPointerHover")}} {{Deprecated_Inline}}</td>
-			<td></td>
-			<td><em>Microsoft specific</em></td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
-</div>
-
-<h2 id="Mozilla-specific_events">Mozilla-specific events</h2>
+<p><span class="seoSummary">This topic provides an index to the main <em>sorts</em> of events you might be interested in (animation, clipboard, workers etc.) along with the main classes that implement those sorts of events. At the end is a flat list of all documented events.</span></p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> These events are never exposed to web content and can only be used in a XUL chrome content context.</p>
+	<h4>Note</h4>
+	<p>This page lists many of the most common events you'll come across on the web. If you are searching for an event that isn't listed here, try searching for its name, topic area, or associated specification on the rest of MDN.</p>
 </div>
 
-<h3 id="XUL_events">XUL events</h3>
+<h2 id="Event_index">Event index</h2>
 
-<div style="overflow: auto;">
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th>Event Name</th>
-			<th>Event Type</th>
-			<th>Specification</th>
-			<th>Fired when...</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{Event("broadcast")}}</td>
-			<td></td>
-			<td><a href="/en-US/docs/XUL/Tutorial/Broadcasters_and_Observers#Broadcast_event">XUL</a></td>
-			<td>An <code>observer</code> noticed a change to the attributes of a watched broadcaster.</td>
-		</tr>
-		<tr>
-			<td>{{Event("CheckboxStateChange")}}</td>
-			<td></td>
-			<td>XUL</td>
-			<td>The state of a <code>checkbox</code> has been changed either by a user action or by a script (useful for accessibility).</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/close_event">close</a></td>
-			<td></td>
-			<td>XUL</td>
-			<td>The close button of the window has been clicked.</td>
-		</tr>
-		<tr>
-			<td>{{Event("command")}}</td>
-			<td></td>
-			<td>XUL</td>
-			<td>An element has been activated.</td>
-		</tr>
-		<tr>
-			<td>{{Event("commandupdate")}}</td>
-			<td></td>
-			<td>XUL</td>
-			<td>A command update occurred on a <code>commandset</code> element.</td>
-		</tr>
-		<tr>
-			<td>{{Event("DOMMenuItemActive")}}</td>
-			<td></td>
-			<td>XUL</td>
-			<td>A menu or menuitem has been hovered or highlighted.</td>
-		</tr>
-		<tr>
-			<td>{{Event("DOMMenuItemInactive")}}</td>
-			<td></td>
-			<td><em>XUL</em></td>
-			<td>A menu or menuitem is no longer hovered or highlighted.</td>
-		</tr>
-		<tr>
-			<td>{{Event("popuphidden")}}</td>
-			<td><code>PopupEvent</code></td>
-			<td><a href="/en-US/docs/XUL/PopupGuide/PopupEvents"><em>XUL</em></a></td>
-			<td>A menupopup, panel, or tooltip has been hidden.</td>
-		</tr>
-		<tr>
-			<td>{{Event("popuphiding")}}</td>
-			<td><code>PopupEvent</code></td>
-			<td><a href="/en-US/docs/XUL/PopupGuide/PopupEvents"><em>XUL</em></a></td>
-			<td>A menupopup, panel, or tooltip is about to be hidden.</td>
-		</tr>
-		<tr>
-			<td>{{Event("popupshowing")}}</td>
-			<td><code>PopupEvent</code></td>
-			<td><a href="/en-US/docs/XUL/PopupGuide/PopupEvents"><em>XUL</em></a></td>
-			<td>A menupopup, panel, or tooltip is about to become visible.</td>
-		</tr>
-		<tr>
-			<td>{{Event("popupshown")}}</td>
-			<td><code>PopupEvent</code></td>
-			<td><a href="/en-US/docs/XUL/PopupGuide/PopupEvents"><em>XUL</em></a></td>
-			<td>A menupopup, panel, or tooltip has become visible.</td>
-		</tr>
-		<tr>
-			<td>{{Event("RadioStateChange")}}</td>
-			<td></td>
-			<td>XUL</td>
-			<td>The state of a <code>radio</code> has been changed either by a user action or by a script (useful for accessibility).</td>
-		</tr>
-		<tr>
-			<td>{{Event("ValueChange")}}</td>
-			<td></td>
-			<td>XUL</td>
-			<td>The value of an element has changed (a progress bar, for example; useful for accessibility).</td>
-		</tr>
-	</tbody>
+<table class="standard-table" style="vertical-align: top">
+	<tr>
+		<th>Event type</th>
+		<th style="width: 50%">Description</th>
+		<th>Documentation</th>
+	</tr>
+
+  <tr>
+		<td>Animation</td>
+		<td>
+			<p>Events related to the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animation API</a>.</p>
+			<p>Used to respond to changes in animation status (e.g. when an animation starts or ends).</p>
+		</td>
+		<td>Animation events fired on <a href="/en-US/docs/Web/API/Document#animation_events"><code>Document</code></a>, <a href="/en-US/docs/Web/API/Window#animation_events"><code>Window</code></a>, <a href="/en-US/docs/Web/API/HTMLElement#animation_events"><code>HTMLElement</code></a>.</td>
+	</tr>
+
+  <tr>
+		<td>Asynchronous data fetching</td>
+		<td>
+			<p>Events related to the fetching data.</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/AbortSignal#events"><code>AbortSignal</code></a>, <a href="/en-US/docs/Web/API/XMLHttpRequest#events"><code>XMLHttpRequest</code></a>, <a href="/en-US/docs/Web/API/FileReader#events"><code>FileReader</code></a>.</td>
+	</tr>
+
+
+	<tr>
+		<td>Clipboard</td>
+		<td>
+			<p>Events related to the <a href="/en-US/docs/Web/API/Clipboard_API">Clipboard API</a>.</p>
+			<p>Used to notify when content is cut, copied, or pasted.</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/Document#clipboard_events"><code>Document</code></a>, <a href="/en-US/docs/Web/API/Element#clipboard_events"><code>Element</code></a>, <a href="/en-US/docs/Web/API/Window#clipboard_events"><code>Window</code></a>.
+		</td>
+	</tr>
+
+	<tr>
+		<td>Composition</td>
+		<td>
+			<p>Events related to composition; entering text "indirectly" (rather than using normal keyboard presses).</p>
+			<p>For example, text entered via a speech to text engine, or using special key combinations that modify keyboard presses to represent new characters in another language.</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/Element#composition_events"><code>Element</code></a>.
+		</td>
+	</tr>
+
+	<tr>
+		<td>CSS transition</td>
+		<td>
+			<p>Events related to <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS Transitions</a>.</p>
+			<p>Provides notification events when CSS transitions start, stop, are cancelled, etc.</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/Document#transition_events"><code>Document</code></a>, <a href="/en-US/docs/Web/API/HTMLElement#transition_events"><code>HTMLElement</code></a>, <a href="/en-US/docs/Web/API/Window#transition_events"><code>Window</code></a>.</td>
+	</tr>
+
+	<tr>
+		<td>Database</td>
+		<td>
+			<p>Events related to database operations: opening, closing, transactions, errors, etc.</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/IDBDatabase#events"><code>IDBDatabase</code></a>, <a href="/en-US/docs/Web/API/IDBOpenDBRequest#events"><code>IDBOpenDBRequest</code></a>, <a href="/en-US/docs/Web/API/IDBRequest#events"><code>IDBRequest</code></a>, <a href="/en-US/docs/Web/API/IDBTransaction#events"><code>IDBTransaction</code></a>.</td>
+	</tr>
+
+	<tr>
+		<td>Drag'n'drop, Wheel</td>
+		<td>
+			<p>Events related to using the <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop API</a> and <a href="/en-US/docs/Web/API/WheelEvent">wheel events</a>.</p>
+			<p>Drag and Wheel events are derived from mouse events. While they are fired when using mouse wheel or drag/drop, they may also be used with other appropriate hardware.</p>
+		</td>
+		<td>
+			<p>Drag events fired on <a href="/en-US/docs/Web/API/Document#drag_drop_events"><code>Document</code></a></p>
+			<p>Wheel events fired on <a href="/en-US/docs/Web/API/Document/wheel_event"><code>Document</code></a> and <a href="/en-US/docs/Web/API/Element/wheel_event"><code>Element</code></a></p>
+		</td>
+	</tr>
+
+	<tr>
+		<td>Focus</td>
+		<td>
+			<p>Events related to elements gaining and losing focus.</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/Element#focus_events"><code>Element</code></a>, <a href="/en-US/docs/Web/API/Window#focus_events"><code>Window</code></a>.
+		</td>
+	</tr>
+
+	<tr>
+		<td>Form</td>
+		<td>
+			<p>Events related to forms being constructed, reset and submitted.</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/HTMLFormElement#events"><code>HTMLFormElement</code></a>.
+		</td>
+	</tr>
+
+
+	<tr>
+		<td>Fullscreen</td>
+		<td>
+			<p>Events related to the <a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a>.</p>
+			<p>Used to notify when the transitioning between full screen and windowed modes, and also of errors occuring during this transition.</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/Document#fullscreen_events"><code>Document</code></a>, <a href="/en-US/docs/Web/API/Element#fullscreen_events"><code>Element</code></a>.</td>
+	</tr>
+
+
+	<tr>
+		<td>Gamepad</td>
+		<td>
+			<p>Events related to the <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a>.</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/Window#gamepad_events"><code>Window</code></a>.
+		</td>
+	</tr>
+
+	<tr>
+		<td>History</td>
+		<td>
+			<p>Events related to the <a href="/en-US/docs/Web/API/History_API">History API</a>.</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/Window#history_events"><code>Window</code></a>.
+		</td>
+	</tr>
+
+  <tr>
+		<td>HTML element content display management</td>
+		<td>
+			<p>Events related to changing the state of a display or textual element.</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/HTMLDetailsElement#events"><code>HTMLDetailsElement</code></a>, <a href="/en-US/docs/Web/API/HTMLDialogElement#events"><code>HTMLDialogElement</code></a>, <a href="/en-US/docs/Web/API/HTMLSlotElement#events"><code>HTMLSlotElement</code></a>.
+		</td>
+	</tr>
+
+	<tr>
+		<td>Inputs</td>
+		<td>
+			<p>Events related to HTML input elements e.g. {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}}.</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/HTMLElement#input_events"><code>HTMLElement</code></a>, <a href="/en-US/docs/Web/API/HTMLInputElement#events"><code>HTMLInputElement</code></a>.</td>
+	</tr>
+
+	<tr>
+		<td>Keyboard</td>
+		<td>
+			<p>Events related to using a <a href="/en-US/docs/Web/API/KeyboardEvent">keyboard</a>.</p>
+			<p>Used to notify when keys are moved up, down, or just pressed.</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/Document#keyboard_events"><code>Document</code></a>, <a href="/en-US/docs/Web/API/Element#keyboard_events"><code>Element</code></a>.
+		</td>
+	</tr>
+
+	<tr>
+		<td>Loading/unloading documents</td>
+		<td>
+			<p>Events related to loading and unloading documents.</p>
+		</td>
+		<td>
+			<p>Events fired on <a href="/en-US/docs/Web/API/Document#load_unload_events"><code>Document</code></a> and <a href="/en-US/docs/Web/API/Window#load_unload_events"><code>Window</code></a>.</p>
+		</td>
+	</tr>
+
+	<tr>
+		<td>Manifests</td>
+		<td>
+			<p>Events related to installation of <a href="/en-US/docs/Web/Manifest">progressive web app manifests</a>.</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/Window#manifest_events"><code>Window</code></a>.</td>
+	</tr>
+
+	<tr>
+		<td>Media</td>
+		<td>
+			<p>Events related to media usage (including the <a href="/en-US/docs/Web/API/Media_Streams_API#events">Media Capture and Streams API</a>, <a href="/en-US/docs/Web/API/Web_Audio_API#events">Web Audio API</a>, <a href="/en-US/docs/Web/API/Picture-in-Picture_API#events">Picture-in-Picture API</a>, etc.).</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/ScriptProcessorNode#events"><code>ScriptProcessorNode</code></a>, <a href="/en-US/docs/Web/API/HTMLMediaElement#events"><code>HTMLMediaElement</code></a>, <a href="/en-US/docs/Web/API/AudioTrackList#events"><code>AudioTrackList</code></a>, <a href="/en-US/docs/Web/API/AudioScheduledSourceNode#events"><code>AudioScheduledSourceNode</code></a>, <a href="/en-US/docs/Web/API/MediaRecorder#events"><code>MediaRecorder</code></a>, <a href="/en-US/docs/Web/API/MediaStream#events"><code>MediaStream</code></a>, <a href="/en-US/docs/Web/API/MediaStreamTrack"><code>MediaStreamTrack</code></a>, <a href="/en-US/docs/Web/API/VideoTrackList#events"><code>VideoTrackList</code></a>, <a href="/en-US/docs/Web/API/HTMLTrackElement#events"><code>HTMLTrackElement</code></a>, <a href="/en-US/docs/Web/API/OfflineAudioContext#events"><code>OfflineAudioContext</code></a>, <a href="/en-US/docs/Web/API/TextTrack#events"><code>TextTrack</code></a>, <a href="/en-US/docs/Web/API/TextTrackList#events"><code>TextTrackList</code></a>, <a href="/en-US/docs/Web/HTML/Element/audio#events">Element/audio</a>, <a href="/en-US/docs/Web/HTML/Element/video#events">Element/video</a>.
+		</td>
+	</tr>
+
+	<tr>
+		<td>Messaging</td>
+		<td>
+			<p>Events related to a window receiving a message from another browsing context.</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/Window#messaging_events"><code>Window</code></a>.</td>
+	</tr>
+
+	<tr>
+		<td>Mouse</td>
+		<td>
+			<p>Events related to using a <a href="/en-US/docs/Web/API/MouseEvent">computer mouse</a>.</p>
+			<p>Used to notify when the mouse is clicked, doubleclicked, up and down events, right-click, movement in and out of an element, text selection, etc.</p>
+			<p>Pointer events provide a hardware-agnostic alternative to mouse events. Drag and Wheel events are derived from mouse events.</p>
+		</td>
+		<td>Mouse events fired on <a href="/en-US/docs/Web/API/Element#mouse_events"><code>Element</code></a></td>
+	</tr>
+
+	<tr>
+		<td>Network/Connection</td>
+		<td>
+			<p>Events related to gaining and losing network connection.</p>
+		</td>
+		<td>
+			<p>Events fired on <a href="/en-US/docs/Web/API/Window#connection_events"><code>Window</code></a>.</p>
+			<p>Events fired on <a href="/en-US/docs/Web/API/NetworkInformation#event_handler"><code>NetworkInformation</code></a> (<a href="/en-US/docs/Web/API/Network_Information_API">Network Information API</a>).</p>
+		</td>
+	</tr>
+
+	<tr>
+		<td>Payments</td>
+		<td>
+			<p>Events related to the <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a>.</p>
+		</td>
+		<td>
+			<p>Events fired on <a href="/en-US/docs/Web/API/PaymentRequest#events"><code>PaymentRequest</code></a>, <a href="/en-US/docs/Web/API/PaymentResponse#events"><code>PaymentResponse</code></a>.</p>
+		</td>
+	</tr>
+
+	<tr>
+		<td>Performance</td>
+		<td>
+			<p>Events related to <a href="/en-US/docs/Web/API/Performance_API">High Resolution Time API</a>, <a href="/en-US/docs/Web/API/Performance_Timeline">Performance Timeline API</a>, <a href="/en-US/docs/Web/API/Navigation_timing_API">Navigation Timing API</a>, <a href="/en-US/docs/Web/API/User_Timing_API">User Timing API</a>, and <a href="/en-US/docs/Web/API/Resource_Timing_API">Resource Timing API</a>.</p>
+		</td>
+		<td>
+			<p>Events fired on <a href="/en-US/docs/Web/API/Performance#events"><code>Performance</code></a>.</p>
+		</td>
+	</tr>
+
+	<tr>
+		<td>Pointer</td>
+		<td>
+			<p>Events related to the <a href="/en-US/docs/Web/API/Pointer_events">Pointer Events API</a>.</p>
+			<p>Provides hardware-agnostic notification from pointing devices including Mouse, Touch, pen/stylus.</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/Document#pointer_events"><code>Document</code></a>, <a href="/en-US/docs/Web/API/HTMLElement#pointer_events"><code>HTMLElement</code></a>.</td>
+	</tr>
+
+	<tr>
+		<td>Print</td>
+		<td>
+			<p>Events related to printing.</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/Window#print_events"><code>Window</code></a>.</td>
+	</tr>
+
+	<tr>
+		<td>Promise rejection</td>
+		<td>
+			<p>Events sent to the global script context when any JavaScript promise is rejected.</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/Window#promise_rejection_events"><code>Window</code></a>.</td>
+	</tr>
+
+	<tr>
+		<td>Sockets</td>
+		<td>
+			<p>Events related to the <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets API</a>.</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/WebSocket#events"><code>Websocket</code></a>.</td>
+	</tr>
+
+
+
+	<tr>
+		<td>SVG</td>
+		<td>
+			<p>Events related to SVG images.</p>
+		</td>
+		<td>
+			<p>Events fired on <a href="/en-US/docs/Web/API/SVGElement#events"><code>SVGElement</code></a>, <a href="/en-US/docs/Web/API/SVGAnimationElement#events"><code>SVGAnimationElement</code></a>, <a href="/en-US/docs/Web/API/SVGGraphicsElement#events"><code>SVGGraphicsElement</code></a>.</p>
+		</td>
+	</tr>
+
+	<tr>
+		<td>Text selection</td>
+		<td>
+			<p>Events related to <a href="/en-US/docs/Web/API/Selection">selecting text</a>.</p>
+		</td>
+		<td>
+			<p>Events fired on <a href="/en-US/docs/Web/API/Document#selection_events"><code>Document</code></a>.</p>
+		</td>
+	</tr>
+
+	<tr>
+		<td>Touch</td>
+		<td>
+			<p>Events related to the <a href="/en-US/docs/Web/API/Touch_events">Touch Events API</a>.</p>
+			<p>Provides notification events from interacting with a touch sensitive screen (i.e. using a finger or stylus). Not related to the <a href="/en-US/docs/Web/API/Force_Touch_events#events">Force Touch API</a>.</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/Document#touch_events"><code>Document</code></a>, <a href="/en-US/docs/Web/API/Element#touch_events"><code>Element</code></a>.</td>
+	</tr>
+
+	<tr>
+		<td>Virtual reality</td>
+		<td>
+			<p>Events related to the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a>.</p>
+			<div class="notecard note">
+				<p>The <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> (and associated <a href="/en-US/docs/Web/API/Window#webvr_events"><code>Window</code> events</a>) are deprecated.</p>
+			</div>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/XRSystem#events"><code>XRSystem</code></a>, <a href="/en-US/docs/Web/API/XRSession#events"><code>XRSession</code></a>, <a href="/en-US/docs/Web/API/XRReferenceSpace#events"><code>XRReferenceSpace</code></a>.</td>
+	</tr>
+
+	<tr>
+		<td>RTC (real time communication)</td>
+		<td>
+			<p>Events related to the <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a>.</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/RTCDataChannel#events"><code>RTCDataChannel</code></a>, <a href="/en-US/docs/Web/API/RTCDTMFSender#events"><code>RTCDTMFSender</code></a>, <a href="/en-US/docs/Web/API/RTCIceTransport#events"><code>RTCIceTransport</code></a>, <a href="/en-US/docs/Web/API/RTCPeerConnection#events"><code>RTCPeerConnection</code></a>.</td>
+	</tr>
+
+  <tr>
+		<td>Server-sent events</td>
+		<td>
+			<p>Events related to the <a href="/en-US/docs/Web/API/Server-sent_events">server sent events API</a>.</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/EventSource#events"><code>EventSource</code></a>.
+		</td>
+	</tr>
+
+	<tr>
+		<td>Speech</td>
+		<td>
+			<p>Events related to the <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a>.</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/SpeechSynthesisUtterance#events"><code>SpeechSynthesisUtterance</code></a>.</td>
+	</tr>
+
+	<tr>
+		<td>Workers</td>
+		<td>
+			<p>Events related to the <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a>, <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a>, <a href="/en-US/docs/Web/API/Broadcast_Channel_API">Broadcast Channel API</a>, and <a href="/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging API</a>.</p>
+			<p>Used to respond to new messages and message sending errors. Service workers can also be notified of other events, including push notifications, users clicking on displayed notifications, that push subscription has been invalidated, deletion of items from the content index, etc.</p>
+		</td>
+		<td>Events fired on <a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope#events"><code>ServiceWorkerGlobalScope</code></a>, <a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope#events"><code>DedicatedWorkerGlobalScope</code></a>, <a href="/en-US/docs/Web/API/SharedWorkerGlobalScope#events"><code>SharedWorkerGlobalScope</code></a>, <a href="/en-US/docs/Web/API/WorkerGlobalScope#events"><code>WorkerGlobalScope</code></a>, <a href="/en-US/docs/Web/API/Worker#events"><code>Worker</code></a>, <a href="/en-US/docs/Web/API/WorkerGlobalScope#events"><code>WorkerGlobalScope</code></a>, <a href="/en-US/docs/Web/API/BroadcastChannel#events"><code>BroadcastChannel</code></a>, <a href="/en-US/docs/Web/API/MessagePort#events"><code>MessagePort</code></a>.
+		</td>
+	</tr>
+
 </table>
-</div>
 
-<h3 id="Add-on-specific_events">Add-on-specific events</h3>
 
-<div style="overflow: auto;">
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Event Name</th>
-			<th scope="col">Event Type</th>
-			<th scope="col">Specification</th>
-			<th scope="col">Fired when...</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/MozSwipeGesture">MozSwipeGesture</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>A touch point is swiped across the touch surface.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/MozMagnifyGestureStart">MozMagnifyGestureStart</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>Two touch points start to move away from each other.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/MozMagnifyGestureUpdate">MozMagnifyGestureUpdate</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>Two touch points move away from each other (after a <code>MozMagnifyGestureStart</code>).</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/MozMagnifyGesture">MozMagnifyGesture</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>Two touch points moved away from each other (after a sequence of <code>MozMagnifyGestureUpdate</code>).</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/MozRotateGestureStart">MozRotateGestureStart</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>Two touch points start to rotate around a point.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/MozRotateGestureUpdate">MozRotateGestureUpdate</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>Two touch points rotate around a point (after a <code>MozRotateGestureStart</code>).</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/MozRotateGesture">MozRotateGesture</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>Two touch points rotate around a point (after a sequence of <code>MozRotateGestureUpdate</code>).</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/MozTapGesture">MozTapGesture</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>Two touch points are tapped on the touch surface.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/MozPressTapGesture">MozPressTapGesture</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>A "press-tap" gesture happened on the touch surface (first finger down, second finger down, second finger up, first finger up).</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/MozEdgeUIGesture">MozEdgeUIGesture</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>A touch point is swiped across the touch surface to invoke the Edge UI (Win8 only).</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/MozAfterPaint">MozAfterPaint</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>Content has been repainted.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/DOMPopupBlocked">DOMPopupBlocked</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>A popup has been blocked.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/DOMWindowCreated">DOMWindowCreated</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>A window has been created.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/DOMWindowClose">DOMWindowClose</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>A window is about to be closed.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/DOMTitleChanged">DOMTitleChanged</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>The title of a window has changed.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/DOMLinkAdded">DOMLinkAdded</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>A link has been added a document.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/DOMLinkRemoved">DOMLinkRemoved</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>A link has been removed inside from a document.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/DOMMetaAdded">DOMMetaAdded</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>A <code>meta</code> element has been added to a document.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/DOMMetaRemoved">DOMMetaRemoved</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>A <code>meta</code> element has been removed from a document.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/DOMWillOpenModalDialog">DOMWillOpenModalDialog</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>A modal dialog is about to open.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/DOMModalDialogClosed">DOMModalDialogClosed</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>A modal dialog has been closed.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/DOMAutoComplete">DOMAutoComplete</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>The content of an element has been auto-completed.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/DOMFrameContentLoaded">DOMFrameContentLoaded</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>The frame has finished loading (but not its dependent resources).</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/AlertActive">AlertActive</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>A <code><a href="/en-US/docs/XUL/notification">notification</a></code> element is shown.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/AlertClose">AlertClose</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>A <code><a href="/en-US/docs/XUL/notification">notification</a></code> element is closed.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/fullscreen">fullscreen</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>Browser fullscreen mode has been toggled.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/sizemodechange">sizemodechange</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>Window has entered/left fullscreen mode, or has been minimized/unminimized.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/MozEnteredDomFullscreen">MozEnteredDomFullscreen</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td><a href="/en-US/docs/DOM/Using_full-screen_mode">DOM fullscreen</a> mode has been entered.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/SSWindowClosing">SSWindowClosing</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>The session store will stop tracking this window.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/SSTabClosing">SSTabClosing</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>The session store will stop tracking this tab.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/SSTabRestoring">SSTabRestoring</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>A tab is about to be restored.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/SSTabRestored">SSTabRestored</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>A tab has been restored.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/SSWindowStateReady">SSWindowStateReady</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>A window state has switched to <code>"ready"</code>.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/SSWindowStateBusy">SSWindowStateBusy</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>A window state has switched to <code>"busy"</code>.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/TabOpen">TabOpen</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>A tab has been opened.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/TabClose">TabClose</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>A tab has been closed.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/TabSelect">TabSelect</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>A tab has been selected.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/TabShow">TabShow</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>A tab has been shown.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/TabHide">TabHide</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>A tab has been hidden.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/TabPinned">TabPinned</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>A tab has been pinned.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/TabUnpinned">TabUnpinned</a></td>
-			<td></td>
-			<td><em>Addons specific</em></td>
-			<td>A tab has been unpinned.</td>
-		</tr>
-	</tbody>
-</table>
-</div>
+<h2>Event listing</h2>
 
-<h3 id="Developer_tool-specific_events">Developer tool-specific events</h3>
+<p>This section lists events that have <em>their own</em> reference pages on MDN. If you are interested in an event that isn't listed here, try searching for its name, topic area, or associated specification on the rest of MDN.</p>
 
-<div style="overflow: auto;">
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Event Name</th>
-			<th scope="col">Event Type</th>
-			<th scope="col">Specification</th>
-			<th scope="col">Fired when...</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/CssRuleViewRefreshed">CssRuleViewRefreshed</a></td>
-			<td></td>
-			<td><em>devtools specific</em></td>
-			<td>The "Rules" view of the style inspector has been updated.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/CssRuleViewChanged">CssRuleViewChanged</a></td>
-			<td></td>
-			<td><em>devtools specific</em></td>
-			<td>The "Rules" view of the style inspector has been changed.</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Web/Reference/Events/CssRuleViewCSSLinkClicked">CssRuleViewCSSLinkClicked</a></td>
-			<td></td>
-			<td><em>devtools specific</em></td>
-			<td>A link to a CSS file has been clicked in the "Rules" view of the style inspector.</td>
-		</tr>
-	</tbody>
-</table>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
-	<li>{{DOMxRef("Event")}}</li>
-	<li><a href="/en-US/docs/Web/Guide/DOM/Events">Event developer guide</a></li>
-</ul>
+<dl>
+  <dt>{{DOMxRef("AbortSignal")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/AbortSignal/abort_event">abort event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("AudioScheduledSourceNode")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/AudioScheduledSourceNode/ended_event">ended event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("AudioTrackList")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/AudioTrackList/addtrack_event">addtrack event</a></li>
+      <li><a href="/en-US/docs/Web/API/AudioTrackList/change_event">change event</a></li>
+      <li><a href="/en-US/docs/Web/API/AudioTrackList/removetrack_event">removetrack event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("BroadcastChannel")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/BroadcastChannel/messageerror_event">messageerror event</a></li>
+      <li><a href="/en-US/docs/Web/API/BroadcastChannel/message_event">message event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("DedicatedWorkerGlobalScope")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event">messageerror event</a></li>
+      <li><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/message_event">message event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("Document")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/Document/animationcancel_event">animationcancel event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/animationend_event">animationend event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/animationiteration_event">animationiteration event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/animationstart_event">animationstart event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/copy_event">copy event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/cut_event">cut event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/DOMContentLoaded_event">DOMContentLoaded event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/dragend_event">dragend event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/dragenter_event">dragenter event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/dragleave_event">dragleave event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/dragover_event">dragover event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/dragstart_event">dragstart event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/drag_event">drag event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/drop_event">drop event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/fullscreenchange_event">fullscreenchange event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/fullscreenerror_event">fullscreenerror event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/gotpointercapture_event">gotpointercapture event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/keydown_event">keydown event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/keypress_event">keypress event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/keyup_event">keyup event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/lostpointercapture_event">lostpointercapture event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/paste_event">paste event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/pointercancel_event">pointercancel event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/pointerdown_event">pointerdown event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/pointerenter_event">pointerenter event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/pointerleave_event">pointerleave event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/pointerlockchange_event">pointerlockchange event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/pointerlockerror_event">pointerlockerror event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/pointermove_event">pointermove event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/pointerout_event">pointerout event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/pointerover_event">pointerover event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/pointerup_event">pointerup event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/readystatechange_event">readystatechange event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/scroll_event">scroll event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/selectionchange_event">selectionchange event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/selectstart_event">selectstart event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/touchcancel_event">touchcancel event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/touchend_event">touchend event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/touchmove_event">touchmove event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/touchstart_event">touchstart event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/transitioncancel_event">transitioncancel event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/transitionend_event">transitionend event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/transitionrun_event">transitionrun event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/transitionstart_event">transitionstart event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/visibilitychange_event">visibilitychange event</a></li>
+      <li><a href="/en-US/docs/Web/API/Document/wheel_event">wheel event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("Element")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/Element/afterscriptexecute_event">afterscriptexecute event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/auxclick_event">auxclick event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/beforescriptexecute_event">beforescriptexecute event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/blur_event">blur event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/click_event">click event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/compositionend_event">compositionend event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/compositionstart_event">compositionstart event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/compositionupdate_event">compositionupdate event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/contextmenu_event">contextmenu event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/copy_event">copy event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/cut_event">cut event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/dblclick_event">dblclick event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/DOMActivate_event">DOMActivate event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/DOMMouseScroll_event">DOMMouseScroll event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/error_event">error event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/focusin_event">focusin event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/focusout_event">focusout event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/focus_event">focus event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/fullscreenchange_event">fullscreenchange event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/fullscreenerror_event">fullscreenerror event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/gesturechange_event">gesturechange event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/gestureend_event">gestureend event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/gesturestart_event">gesturestart event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/keydown_event">keydown event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/keypress_event">keypress event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/keyup_event">keyup event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/mousedown_event">mousedown event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/mouseenter_event">mouseenter event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/mouseleave_event">mouseleave event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/mousemove_event">mousemove event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/mouseout_event">mouseout event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/mouseover_event">mouseover event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/mouseup_event">mouseup event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/mousewheel_event">mousewheel event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/msContentZoom_event">msContentZoom event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/MSGestureChange_event">MSGestureChange event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/MSGestureEnd_event">MSGestureEnd event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/MSGestureHold_event">MSGestureHold event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/MSGestureStart_event">MSGestureStart event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/MSGestureTap_event">MSGestureTap event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/MSInertiaStart_event">MSInertiaStart event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/MSManipulationStateChanged_event">MSManipulationStateChanged event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/overflow_event">overflow event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/paste_event">paste event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/scroll_event">scroll event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/select_event">select event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/show_event">show event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/touchcancel_event">touchcancel event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/touchend_event">touchend event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/touchmove_event">touchmove event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/touchstart_event">touchstart event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/underflow_event">underflow event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/webkitmouseforcechanged_event">webkitmouseforcechanged event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/webkitmouseforcedown_event">webkitmouseforcedown event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/webkitmouseforceup_event">webkitmouseforceup event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/webkitmouseforcewillbegin_event">webkitmouseforcewillbegin event</a></li>
+      <li><a href="/en-US/docs/Web/API/Element/wheel_event">wheel event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("EventSource")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/EventSource/error_event">error event</a></li>
+      <li><a href="/en-US/docs/Web/API/EventSource/message_event">message event</a></li>
+      <li><a href="/en-US/docs/Web/API/EventSource/open_event">open event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("FileReader")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/FileReader/abort_event">abort event</a></li>
+      <li><a href="/en-US/docs/Web/API/FileReader/error_event">error event</a></li>
+      <li><a href="/en-US/docs/Web/API/FileReader/loadend_event">loadend event</a></li>
+      <li><a href="/en-US/docs/Web/API/FileReader/loadstart_event">loadstart event</a></li>
+      <li><a href="/en-US/docs/Web/API/FileReader/load_event">load event</a></li>
+      <li><a href="/en-US/docs/Web/API/FileReader/progress_event">progress event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("HTMLCanvasElement")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event">webglcontextcreationerror event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event">webglcontextlost event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event">webglcontextrestored event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("HTMLDetailsElement")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/HTMLDetailsElement/toggle_event">toggle event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("HTMLDialogElement")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/HTMLDialogElement/cancel_event">cancel event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLDialogElement/close_event">close event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("HTMLElement")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/HTMLElement/animationcancel_event">animationcancel event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLElement/animationend_event">animationend event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLElement/animationiteration_event">animationiteration event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLElement/animationstart_event">animationstart event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLElement/beforeinput_event">beforeinput event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLElement/change_event">change event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLElement/gotpointercapture_event">gotpointercapture event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLElement/input_event">input event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLElement/lostpointercapture_event">lostpointercapture event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLElement/pointercancel_event">pointercancel event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLElement/pointerdown_event">pointerdown event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLElement/pointerenter_event">pointerenter event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLElement/pointerleave_event">pointerleave event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLElement/pointermove_event">pointermove event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLElement/pointerout_event">pointerout event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLElement/pointerover_event">pointerover event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLElement/pointerup_event">pointerup event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLElement/transitioncancel_event">transitioncancel event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLElement/transitionend_event">transitionend event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLElement/transitionrun_event">transitionrun event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLElement/transitionstart_event">transitionstart event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("HTMLFormElement")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/HTMLFormElement/formdata_event">formdata event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLFormElement/reset_event">reset event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLFormElement/submit_event">submit event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("HTMLInputElement")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/HTMLInputElement/invalid_event">invalid event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLInputElement/search_event">search event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("HTMLMediaElement")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/HTMLMediaElement/abort_event">abort event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLMediaElement/canplaythrough_event">canplaythrough event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLMediaElement/canplay_event">canplay event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLMediaElement/durationchange_event">durationchange event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLMediaElement/emptied_event">emptied event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLMediaElement/ended_event">ended event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLMediaElement/error_event">error event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLMediaElement/loadeddata_event">loadeddata event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLMediaElement/loadedmetadata_event">loadedmetadata event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLMediaElement/loadstart_event">loadstart event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLMediaElement/pause_event">pause event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLMediaElement/playing_event">playing event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLMediaElement/play_event">play event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLMediaElement/progress_event">progress event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLMediaElement/ratechange_event">ratechange event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLMediaElement/seeked_event">seeked event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLMediaElement/seeking_event">seeking event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLMediaElement/stalled_event">stalled event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLMediaElement/suspend_event">suspend event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLMediaElement/timeupdate_event">timeupdate event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLMediaElement/volumechange_event">volumechange event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLMediaElement/waiting_event">waiting event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("HTMLSlotElement")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/HTMLSlotElement/slotchange_event">slotchange event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("HTMLTrackElement")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/HTMLTrackElement/cuechange_event">cuechange event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("HTMLVideoElement")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/HTMLVideoElement/enterpictureinpicture_event">enterpictureinpicture event</a></li>
+      <li><a href="/en-US/docs/Web/API/HTMLVideoElement/leavepictureinpicture_event">leavepictureinpicture event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("IDBDatabase")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/IDBDatabase/abort_event">abort event</a></li>
+      <li><a href="/en-US/docs/Web/API/IDBDatabase/close_event">close event</a></li>
+      <li><a href="/en-US/docs/Web/API/IDBDatabase/error_event">error event</a></li>
+      <li><a href="/en-US/docs/Web/API/IDBDatabase/versionchange_event">versionchange event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("IDBOpenDBRequest")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event">blocked event</a></li>
+      <li><a href="/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event">upgradeneeded event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("IDBRequest")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/IDBRequest/error_event">error event</a></li>
+      <li><a href="/en-US/docs/Web/API/IDBRequest/success_event">success event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("IDBTransaction")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/IDBTransaction/abort_event">abort event</a></li>
+      <li><a href="/en-US/docs/Web/API/IDBTransaction/complete_event">complete event</a></li>
+      <li><a href="/en-US/docs/Web/API/IDBTransaction/error_event">error event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("MediaDevices")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/MediaDevices/devicechange_event">devicechange event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("MediaRecorder")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/MediaRecorder/error_event">error event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("MediaStream")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/MediaStream/addtrack_event">addtrack event</a></li>
+      <li><a href="/en-US/docs/Web/API/MediaStream/removetrack_event">removetrack event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("MediaStreamTrack")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/MediaStreamTrack/ended_event">ended event</a></li>
+      <li><a href="/en-US/docs/Web/API/MediaStreamTrack/mute_event">mute event</a></li>
+      <li><a href="/en-US/docs/Web/API/MediaStreamTrack/unmute_event">unmute event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("MessagePort")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/MessagePort/messageerror_event">messageerror event</a></li>
+      <li><a href="/en-US/docs/Web/API/MessagePort/message_event">message event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("OfflineAudioContext")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/OfflineAudioContext/complete_event">complete event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("PaymentRequest")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/PaymentRequest/merchantvalidation_event">merchantvalidation event</a></li>
+      <li><a href="/en-US/docs/Web/API/PaymentRequest/paymentmethodchange_event">paymentmethodchange event</a></li>
+      <li><a href="/en-US/docs/Web/API/PaymentRequest/shippingaddresschange_event">shippingaddresschange event</a></li>
+      <li><a href="/en-US/docs/Web/API/PaymentRequest/shippingoptionchange_event">shippingoptionchange event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("PaymentResponse")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/PaymentResponse/payerdetailchange_event">payerdetailchange event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("Performance")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event">resourcetimingbufferfull event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("PictureInPictureWindow")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/PictureInPictureWindow/resize_event">resize event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("RTCDataChannel")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/RTCDataChannel/bufferedamountlow_event">bufferedamountlow event</a></li>
+      <li><a href="/en-US/docs/Web/API/RTCDataChannel/close_event">close event</a></li>
+      <li><a href="/en-US/docs/Web/API/RTCDataChannel/closing_event">closing event</a></li>
+      <li><a href="/en-US/docs/Web/API/RTCDataChannel/error_event">error event</a></li>
+      <li><a href="/en-US/docs/Web/API/RTCDataChannel/message_event">message event</a></li>
+      <li><a href="/en-US/docs/Web/API/RTCDataChannel/open_event">open event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("RTCDtlsTransport")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/RTCDtlsTransport/error_event">error event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("RTCDTMFSender")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/RTCDTMFSender/tonechange_event">tonechange event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("RTCIceTransport")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/RTCIceTransport/gatheringstatechange_event">gatheringstatechange event</a></li>
+      <li><a href="/en-US/docs/Web/API/RTCIceTransport/selectedcandidatepairchange_event">selectedcandidatepairchange event</a></li>
+      <li><a href="/en-US/docs/Web/API/RTCIceTransport/statechange_event">statechange event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("RTCPeerConnection")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/RTCPeerConnection/addstream_event">addstream event</a></li>
+      <li><a href="/en-US/docs/Web/API/RTCPeerConnection/connectionstatechange_event">connectionstatechange event</a></li>
+      <li><a href="/en-US/docs/Web/API/RTCPeerConnection/datachannel_event">datachannel event</a></li>
+      <li><a href="/en-US/docs/Web/API/RTCPeerConnection/icecandidateerror_event">icecandidateerror event</a></li>
+      <li><a href="/en-US/docs/Web/API/RTCPeerConnection/icecandidate_event">icecandidate event</a></li>
+      <li><a href="/en-US/docs/Web/API/RTCPeerConnection/iceconnectionstatechange_event">iceconnectionstatechange event</a></li>
+      <li><a href="/en-US/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event">icegatheringstatechange event</a></li>
+      <li><a href="/en-US/docs/Web/API/RTCPeerConnection/identityresult_event">identityresult event</a></li>
+      <li><a href="/en-US/docs/Web/API/RTCPeerConnection/idpassertionerror_event">idpassertionerror event</a></li>
+      <li><a href="/en-US/docs/Web/API/RTCPeerConnection/idpvalidationerror_event">idpvalidationerror event</a></li>
+      <li><a href="/en-US/docs/Web/API/RTCPeerConnection/negotiationneeded_event">negotiationneeded event</a></li>
+      <li><a href="/en-US/docs/Web/API/RTCPeerConnection/peeridentity_event">peeridentity event</a></li>
+      <li><a href="/en-US/docs/Web/API/RTCPeerConnection/removestream_event">removestream event</a></li>
+      <li><a href="/en-US/docs/Web/API/RTCPeerConnection/signalingstatechange_event">signalingstatechange event</a></li>
+      <li><a href="/en-US/docs/Web/API/RTCPeerConnection/track_event">track event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("ScriptProcessorNode")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/ScriptProcessorNode/audioprocess_event">audioprocess event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("ServiceWorkerContainer")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/ServiceWorkerContainer/message_event">message event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("ServiceWorkerGlobalScope")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event">activate event</a></li>
+      <li><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/contentdelete_event">contentdelete event</a></li>
+      <li><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event">install event</a></li>
+      <li><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/message_event">message event</a></li>
+      <li><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/notificationclick_event">notificationclick event</a></li>
+      <li><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event">pushsubscriptionchange event</a></li>
+      <li><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/push_event">push event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("SharedWorkerGlobalScope")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/SharedWorkerGlobalScope/connect_event">connect event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("SpeechRecognition")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/SpeechRecognition/audioend_event">audioend event</a></li>
+      <li><a href="/en-US/docs/Web/API/SpeechRecognition/audiostart_event">audiostart event</a></li>
+      <li><a href="/en-US/docs/Web/API/SpeechRecognition/end_event">end event</a></li>
+      <li><a href="/en-US/docs/Web/API/SpeechRecognition/error_event">error event</a></li>
+      <li><a href="/en-US/docs/Web/API/SpeechRecognition/nomatch_event">nomatch event</a></li>
+      <li><a href="/en-US/docs/Web/API/SpeechRecognition/result_event">result event</a></li>
+      <li><a href="/en-US/docs/Web/API/SpeechRecognition/soundend_event">soundend event</a></li>
+      <li><a href="/en-US/docs/Web/API/SpeechRecognition/soundstart_event">soundstart event</a></li>
+      <li><a href="/en-US/docs/Web/API/SpeechRecognition/speechend_event">speechend event</a></li>
+      <li><a href="/en-US/docs/Web/API/SpeechRecognition/speechstart_event">speechstart event</a></li>
+      <li><a href="/en-US/docs/Web/API/SpeechRecognition/start_event">start event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("SpeechSynthesis")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/SpeechSynthesis/voiceschanged_event">voiceschanged event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("SpeechSynthesisUtterance")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/boundary_event">boundary event</a></li>
+      <li><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/end_event">end event</a></li>
+      <li><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/error_event">error event</a></li>
+      <li><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/mark_event">mark event</a></li>
+      <li><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/pause_event">pause event</a></li>
+      <li><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/resume_event">resume event</a></li>
+      <li><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/start_event">start event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("SVGAnimationElement")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/SVGAnimationElement/beginEvent_event">beginEvent event</a></li>
+      <li><a href="/en-US/docs/Web/API/SVGAnimationElement/endEvent_event">endEvent event</a></li>
+      <li><a href="/en-US/docs/Web/API/SVGAnimationElement/repeatEvent_event">repeatEvent event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("SVGElement")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/SVGElement/abort_event">abort event</a></li>
+      <li><a href="/en-US/docs/Web/API/SVGElement/error_event">error event</a></li>
+      <li><a href="/en-US/docs/Web/API/SVGElement/load_event">load event</a></li>
+      <li><a href="/en-US/docs/Web/API/SVGElement/resize_event">resize event</a></li>
+      <li><a href="/en-US/docs/Web/API/SVGElement/scroll_event">scroll event</a></li>
+      <li><a href="/en-US/docs/Web/API/SVGElement/unload_event">unload event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("SVGGraphicsElement")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/SVGGraphicsElement/copy_event">copy event</a></li>
+      <li><a href="/en-US/docs/Web/API/SVGGraphicsElement/cut_event">cut event</a></li>
+      <li><a href="/en-US/docs/Web/API/SVGGraphicsElement/paste_event">paste event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("TextTrack")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/TextTrack/cuechange_event">cuechange event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("TextTrackList")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/TextTrackList/addtrack_event">addtrack event</a></li>
+      <li><a href="/en-US/docs/Web/API/TextTrackList/change_event">change event</a></li>
+      <li><a href="/en-US/docs/Web/API/TextTrackList/removeTrack_event">removeTrack event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("VideoTrackList")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/VideoTrackList/addtrack_event">addtrack event</a></li>
+      <li><a href="/en-US/docs/Web/API/VideoTrackList/change_event">change event</a></li>
+      <li><a href="/en-US/docs/Web/API/VideoTrackList/removetrack_event">removetrack event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("VisualViewport")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/VisualViewport/resize_event">resize event</a></li>
+      <li><a href="/en-US/docs/Web/API/VisualViewport/scroll_event">scroll event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("WebSocket")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/WebSocket/close_event">close event</a></li>
+      <li><a href="/en-US/docs/Web/API/WebSocket/error_event">error event</a></li>
+      <li><a href="/en-US/docs/Web/API/WebSocket/message_event">message event</a></li>
+      <li><a href="/en-US/docs/Web/API/WebSocket/open_event">open event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("Window")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/Window/afterprint_event">afterprint event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/animationcancel_event">animationcancel event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/animationend_event">animationend event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/animationiteration_event">animationiteration event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/animationstart_event">animationstart event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/appinstalled_event">appinstalled event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/beforeprint_event">beforeprint event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/beforeunload_event">beforeunload event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/blur_event">blur event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/copy_event">copy event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/cut_event">cut event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/devicemotion_event">devicemotion event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/deviceorientation_event">deviceorientation event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/DOMContentLoaded_event">DOMContentLoaded event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/error_event">error event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/focus_event">focus event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/gamepadconnected_event">gamepadconnected event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/gamepaddisconnected_event">gamepaddisconnected event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/hashchange_event">hashchange event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/languagechange_event">languagechange event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/load_event">load event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/messageerror_event">messageerror event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/message_event">message event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/offline_event">offline event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/online_event">online event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/orientationchange_event">orientationchange event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/pagehide_event">pagehide event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/pageshow_event">pageshow event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/paste_event">paste event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/popstate_event">popstate event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/rejectionhandled_event">rejectionhandled event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/resize_event">resize event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/storage_event">storage event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/transitioncancel_event">transitioncancel event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/transitionend_event">transitionend event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/transitionrun_event">transitionrun event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/transitionstart_event">transitionstart event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/unhandledrejection_event">unhandledrejection event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/unload_event">unload event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/vrdisplayactivate_event">vrdisplayactivate event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/vrdisplayblur_event">vrdisplayblur event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/vrdisplayconnect_event">vrdisplayconnect event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/vrdisplaydeactivate_event">vrdisplaydeactivate event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/vrdisplaydisconnect_event">vrdisplaydisconnect event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/vrdisplayfocus_event">vrdisplayfocus event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/vrdisplaypointerrestricted_event">vrdisplaypointerrestricted event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/vrdisplaypointerunrestricted_event">vrdisplaypointerunrestricted event</a></li>
+      <li><a href="/en-US/docs/Web/API/Window/vrdisplaypresentchange_event">vrdisplaypresentchange event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("Worker")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/Worker/messageerror_event">messageerror event</a></li>
+      <li><a href="/en-US/docs/Web/API/Worker/message_event">message event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("WorkerGlobalScope")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/WorkerGlobalScope/languagechange_event">languagechange event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("XMLHttpRequest")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/XMLHttpRequest/abort_event">abort event</a></li>
+      <li><a href="/en-US/docs/Web/API/XMLHttpRequest/error_event">error event</a></li>
+      <li><a href="/en-US/docs/Web/API/XMLHttpRequest/loadend_event">loadend event</a></li>
+      <li><a href="/en-US/docs/Web/API/XMLHttpRequest/loadstart_event">loadstart event</a></li>
+      <li><a href="/en-US/docs/Web/API/XMLHttpRequest/load_event">load event</a></li>
+      <li><a href="/en-US/docs/Web/API/XMLHttpRequest/progress_event">progress event</a></li>
+      <li><a href="/en-US/docs/Web/API/XMLHttpRequest/timeout_event">timeout event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("XRReferenceSpace")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/XRReferenceSpace/reset_event">reset event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("XRSession")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/XRSession/end_event">end event</a></li>
+      <li><a href="/en-US/docs/Web/API/XRSession/inputsourceschange_event">inputsourceschange event</a></li>
+      <li><a href="/en-US/docs/Web/API/XRSession/selectend_event">selectend event</a></li>
+      <li><a href="/en-US/docs/Web/API/XRSession/selectstart_event">selectstart event</a></li>
+      <li><a href="/en-US/docs/Web/API/XRSession/select_event">select event</a></li>
+      <li><a href="/en-US/docs/Web/API/XRSession/squeezeend_event">squeezeend event</a></li>
+      <li><a href="/en-US/docs/Web/API/XRSession/squeezestart_event">squeezestart event</a></li>
+      <li><a href="/en-US/docs/Web/API/XRSession/squeeze_event">squeeze event</a></li>
+      <li><a href="/en-US/docs/Web/API/XRSession/visibilitychange_event">visibilitychange event</a></li>
+    </ul>
+  </dd>
+  <dt>{{DOMxRef("XRSystem")}}</dt>
+  <dd>
+    <ul>
+      <li><a href="/en-US/docs/Web/API/XRSystem/devicechange_event">devicechange event</a></li>
+    </ul>
+  </dd>
+</dl>

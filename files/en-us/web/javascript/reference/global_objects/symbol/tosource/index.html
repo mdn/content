@@ -8,7 +8,7 @@ tags:
 - Prototype
 - Symbol
 ---
-<div>{{JSRef}} {{obsolete_header}}</div>
+<div>{{JSRef}} {{deprecated_header}}</div>
 
 <p>The <strong><code>toSource()</code></strong> method returns a string representing the
   source code of the object.</p>
@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>Symbol</var>.toSource()
+<pre class="brush: js"><var>Symbol</var>.toSource()
 
 var sym = Symbol()
 sym.toSource()</pre>
@@ -33,14 +33,14 @@ sym.toSource()</pre>
 <p>For the built-in <code>Symbol</code> object, <code>toSource</code> returns the
   following string indicating that the source code is not available:</p>
 
-<pre class="brush: js notranslate">"function Symbol() {
+<pre class="brush: js">"function Symbol() {
    [native code]
 }"</pre>
 
 <p>For instances of <code>Symbol</code>, <code>toSource</code> returns a string
   representing the source code.</p>
 
-<pre class="brush: js notranslate">"Symbol()"</pre>
+<pre class="brush: js">"Symbol()"</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

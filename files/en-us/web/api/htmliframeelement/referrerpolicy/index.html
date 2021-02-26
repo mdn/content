@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>refStr</var> = <var>iframeElt</var>.referrerPolicy;
+<pre class="brush: js"><var>refStr</var> = <var>iframeElt</var>.referrerPolicy;
 <var>iframeElt</var>.referrerPolicy = <var>refStr</var>;</pre>
 
 <h3 id="Values">Values</h3>
@@ -27,8 +27,8 @@ tags:
   <dt>no-referrer</dt>
   <dd>The {{HTTPHeader("Referer")}} header will be omitted entirely. No referrer
     information is sent along with requests.</dd>
-  <dt>no-referrer-when-downgrade (default)</dt>
-  <dd>This is the user agent's default behavior if no policy is specified. The URL is sent
+  <dt>no-referrer-when-downgrade</dt>
+  <dd>The URL is sent
     as a referrer when the protocol security level stays the same (HTTP→HTTP,
     HTTPS→HTTPS), but isn't sent to a less secure destination (HTTPS→HTTP).</dd>
   <dt>origin</dt>
@@ -46,8 +46,8 @@ tags:
   <dd>Only send the origin of the document as the referrer when the protocol security
     level stays the same (HTTPS→HTTPS), but don't send it to a less secure destination
     (HTTPS→HTTP).</dd>
-  <dt>strict-origin-when-cross-origin</dt>
-  <dd>Send a full URL when performing a same-origin request, only send the origin when the
+  <dt>strict-origin-when-cross-origin (default)</dt>
+  <dd>This is the user agent's default behavior if no policy is specified. Send a full URL when performing a same-origin request, only send the origin when the
     protocol security level stays the same (HTTPS→HTTPS), and send no header to a less
     secure destination (HTTPS→HTTP).</dd>
   <dt>unsafe-url</dt>

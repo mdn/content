@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:js">browser.notifications.onClicked.addListener(<code>callback</code>)
+<pre class="brush:js">browser.notifications.onClicked.addListener(callback)
 browser.notifications.onClicked.removeListener(listener)
 browser.notifications.onClicked.hasListener(listener)
 </pre>
@@ -60,7 +60,7 @@ browser.notifications.onClicked.hasListener(listener)
 
 <p>In this simple example we add a listener to the {{WebExtAPIRef("notifications.onClicked")}} event to listen for system notifications being clicked. When this occurs, we log an appropriate message to the console.</p>
 
-<pre class="notranslate brush: js">browser.notifications.onClicked.addListener(function(notificationId) {
+<pre class="brush: js">browser.notifications.onClicked.addListener(function(notificationId) {
   console.log('Notification ' + notificationId + ' was clicked by the user');
 });</pre>
 

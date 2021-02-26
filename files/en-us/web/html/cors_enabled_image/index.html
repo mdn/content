@@ -46,7 +46,7 @@ tags:
 
 <p>Let's assume we're serving our site using <a href="https://httpd.apache.org/">Apache</a>. Consider the HTML5 Boilerplate <a href="https://github.com/h5bp/server-configs-apache/blob/master/h5bp/cross-origin/images.conf">Apache server configuration file for CORS images</a>, shown below:</p>
 
-<pre class="brush: xml notranslate">&lt;IfModule mod_setenvif.c&gt;
+<pre class="brush: xml">&lt;IfModule mod_setenvif.c&gt;
   &lt;IfModule mod_headers.c&gt;
     &lt;FilesMatch "\.(bmp|cur|gif|ico|jpe?g|png|svgz?|webp|avifs?)$"&gt;
       SetEnvIf Origin ":" IS_CORS
@@ -67,7 +67,7 @@ tags:
 
 <p>The code that starts the download (say, when the user clicks a "Download" button), looks like this:</p>
 
-<pre class="brush: js notranslate">function startDownload() {
+<pre class="brush: js">function startDownload() {
   let imageURL = "https://cdn.glitch.com/4c9ebeb9-8b9a-4adc-ad0a-238d9ae00bb5%2Fmdn_logo-only_color.svg?1535749917189";
 
   downloadedImg = new Image;
@@ -84,7 +84,7 @@ tags:
 
 <p>The code that handles the newly-downloaded image is found in the <code>imageReceived()</code> method:</p>
 
-<pre class="brush: js notranslate">function imageReceived() {
+<pre class="brush: js">function imageReceived() {
   let canvas = document.createElement("canvas");
   let context = canvas.getContext("2d");
 
@@ -113,8 +113,8 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a class="external" href="http://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html">Using Cross-domain images in WebGL and Chrome 13</a></li>
- <li><a class="external" href="https://www.whatwg.org/html#attr-img-crossorigin">HTML Specification - the <code>crossorigin</code> attribute</a></li>
+ <li><a href="http://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html">Using Cross-domain images in WebGL and Chrome 13</a></li>
+ <li><a href="https://www.whatwg.org/html#attr-img-crossorigin">HTML Specification - the <code>crossorigin</code> attribute</a></li>
  <li><a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage API</a></li>
 </ul>
 

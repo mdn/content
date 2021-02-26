@@ -100,9 +100,9 @@ tags:
 
   <p>For example, consider part of a web page that looks like this:</p>
 
-  <p><img alt="" src="https://mdn.mozillademos.org/files/15582/rects-1.png" style="display: block; height: 227px; margin-left: auto; margin-right: auto; width: 488px;">If you search for "You may", the match needs to be described by two rectangles:</p>
+  <p><img alt="" src="rects-1.png" style="display: block; margin-left: auto; margin-right: auto;">If you search for "You may", the match needs to be described by two rectangles:</p>
 
-  <p><img alt="" src="https://mdn.mozillademos.org/files/15583/rects-2.png" style="display: block; height: 227px; margin-left: auto; margin-right: auto; width: 488px;">In this case, in the <code>RectData</code> that describes this match, <code>rectsAndTexts.rectList</code> and <code>rectsAndTexts.textList</code> will each have 2 items.</p>
+  <p><img alt="" src="rects-2.png" style="display: block; margin-left: auto; margin-right: auto;">In this case, in the <code>RectData</code> that describes this match, <code>rectsAndTexts.rectList</code> and <code>rectsAndTexts.textList</code> will each have 2 items.</p>
 
   <ul>
    <li><code>textList[0]</code> will contain "You ", and <code>rectList[0]</code> will contain its bounding rectangle.</li>
@@ -127,7 +127,7 @@ tags:
 
 <p>Search the active tab for "banana", log the number of matches, and highlight them:</p>
 
-<pre class="notranslate brush: js">function found(results) {
+<pre class="brush: js">function found(results) {
   console.log(`There were: ${results.count} matches.`);
   if (results.count &gt; 0) {
     browser.find.highlightResults();
@@ -136,9 +136,9 @@ tags:
 
 browser.find.find("banana").then(found);</pre>
 
-<p>Search for "banana" across all tabs (note that this requires the "tabs" <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions">permission</a>, because it accesses <code>tab.url</code>):</p>
+<p>Search for "banana" across all tabs (note that this requires the "tabs" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> or matching <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a>, because it accesses <code>tab.url</code>):</p>
 
-<pre class="notranslate brush: js">async function findInAllTabs(allTabs) {
+<pre class="brush: js">async function findInAllTabs(allTabs) {
   for (let tab of allTabs) {
     let results = await browser.find.find("banana", {tabId: tab.id});
     console.log(`In page "${tab.url}": ${results.count} matches.`)
@@ -155,7 +155,7 @@ browser.tabs.query({}).then(findInAllTabs);</pre>
 
 <p>The background script:</p>
 
-<pre class="notranslate brush: js">// background.js
+<pre class="brush: js">// background.js
 
 async function getContexts(matches) {
 
@@ -184,7 +184,7 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
 
 <p>The content script:</p>
 
-<pre class="notranslate brush: js">/**
+<pre class="brush: js">/**
  * Get all the text nodes into a single array
  */
 function getNodes() {
@@ -229,11 +229,11 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) =&gt; {
 
 <p>In this example the extension uses <code>rectData</code> to "redact" the matches, by adding black DIVs over the top of their bounding rectangles:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15584/redacted.png" style="display: block; height: 416px; margin-left: auto; margin-right: auto; width: 625px;">Note that in many ways this is a poor way to redact pages.</p>
+<p><img alt="" src="redacted.png" style="display: block; margin-left: auto; margin-right: auto;">Note that in many ways this is a poor way to redact pages.</p>
 
 <p>The background script:</p>
 
-<pre class="notranslate brush: js">// background.js
+<pre class="brush: js">// background.js
 
 async function redact(matches) {
 
@@ -256,7 +256,7 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
 
 <p>The content script:</p>
 
-<pre class="notranslate brush: js">// redact.js
+<pre class="brush: js">// redact.js
 
 /**
  * Add a black DIV where the rect is.

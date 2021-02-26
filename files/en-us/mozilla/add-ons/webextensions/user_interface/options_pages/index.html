@@ -12,13 +12,13 @@ tags:
 
 <p>The way users access the page, and the way it's integrated into the browser's user interface, will vary from one browser to another.</p>
 
-<p>You can open the page programmatically by calling <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/Runtime/openOptionsPage" title="If your add-on does not have an options page, or the browser failed to create one for some other reason, runtime.lastError will be set."><code>runtime.openOptionsPage()</code></a>.</p>
+<p>You can open the page programmatically by calling <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage" title="If your add-on does not have an options page, or the browser failed to create one for some other reason, runtime.lastError will be set."><code>runtime.openOptionsPage()</code></a>.</p>
 
 <p>Options pages have a Content Security Policy that restricts the sources from which they can load resources, and disallows some unsafe practices such as the use of <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Content Security Policy</a> for more details.</p>
 
 <h2 id="Specifying_the_options_page">Specifying the options page</h2>
 
-<p>To create an options page, write an HTML file defining the page. This page can include CSS and JavaScript files, like a normal web page. This page, from the <a href="https://github.com/mdn/webextensions-examples/tree/master/favourite-colour">favourite-colour</a> example, includes a JavaScript file:</p>
+<p>To create an options page, write an HTML file defining the page. This page can include CSS and JavaScript files, like a normal web page. This page, from the <a href="https://github.com/mdn/webextensions-examples/tree/master/favourite-colour">favorite-colour</a> example, includes a JavaScript file:</p>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 
@@ -29,7 +29,7 @@ tags:
 
   &lt;body&gt;
     &lt;form&gt;
-      &lt;label&gt;Favourite color&lt;/label&gt;
+      &lt;label&gt;Favorite color&lt;/label&gt;
       &lt;input type="text" id="color"/&gt;
       &lt;button type="submit"&gt;Save&lt;/button&gt;
     &lt;/form&gt;
@@ -37,7 +37,7 @@ tags:
   &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p>JavaScript running in the page can use all the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API">WebExtension APIs</a> that the add-on has <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a> for. In particular, you can use the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/Storage" title="Enables WebExtensions to store and retrieve data, and listen for changes to stored items."><code>storage</code></a> API to persist preferences.</p>
+<p>JavaScript running in the page can use all the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API">WebExtension APIs</a> that the add-on has <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a> for. In particular, you can use the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage" title="Enables WebExtensions to store and retrieve data, and listen for changes to stored items."><code>storage</code></a> API to persist preferences.</p>
 
 <p>Package the page's files in your extension.</p>
 
@@ -60,4 +60,4 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>The <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> repository on GitHub includes the <a href="https://github.com/mdn/webextensions-examples/tree/master/favourite-colour">favourite-colour</a> example which implements options page features.</p>
+<p>The <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> repository on GitHub includes the <a href="https://github.com/mdn/webextensions-examples/tree/master/favourite-colour">favorite-colour</a> example which implements options page features.</p>

@@ -2,14 +2,14 @@
 title: AudioNode.connect()
 slug: Web/API/AudioNode/connect
 tags:
-- API
-- Audio
-- AudioNode
-- Media
-- Method
-- Reference
-- Web Audio API
-- connect
+  - API
+  - Audio
+  - AudioNode
+  - Media
+  - Method
+  - Reference
+  - Web Audio API
+  - connect
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>destinationNode</em> = <em>AudioNode</em>.connect(<em>destination</em>, <em>outputIndex</em>, <em>inputIndex</em>);
+<pre class="brush: js">var <em>destinationNode</em> = <em>AudioNode</em>.connect(<em>destination</em>, <em>outputIndex</em>, <em>inputIndex</em>);
 
 <em>AudioNode</em>.connect(<em>destination</em>, <em>outputIndex</em>);
 </pre>
@@ -37,17 +37,17 @@ tags:
   <dd>An index specifying which output of the current <code>AudioNode</code> to connect to
     the destination. The index numbers are defined according to the number of output
     channels (see <a
-      href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_channels">Audio
+      href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_channels">Audio
       channels</a>). While you can only connect a given output to a given input once
     (repeated attempts are ignored), you can connect an output to multiple inputs by
     calling <code>connect()</code> repeatedly. This makes <a
-      href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Fan-in_and_Fan-out">fan-out</a>
+      href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#fan-in_and_fan-out">fan-out</a>
     possible. The default value is 0.</dd>
   <dt><code>inputIndex</code> {{optional_inline}}</dt>
   <dd>An index describing which input of the destination you want to connect the current
     <code>AudioNode</code> to; the default is 0. The index numbers are defined according
     to the number of input channels (see <a
-      href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_channels">Audio
+      href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_channels">Audio
       channels</a>). It is possible to connect an <code>AudioNode</code> to another
     <code>AudioNode</code>, which in turn connects back to the first
     <code>AudioNode</code>, creating a cycle. This is allowed only if there is at least
@@ -150,12 +150,12 @@ lfo.start();</pre>
 <p>It is possible to connect an <code>AudioNode</code> output to more than one {{
   domxref("AudioParam") }}, and more than one AudioNode output to a single {{
   domxref("AudioParam") }}, with multiple calls to <code>connect()</code>. <a
-    href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Fan-in_and_Fan-out">Fan-in
+    href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#fan-in_and_fan-out">Fan-in
     and fan-out</a> are therefore supported.</p>
 
 <p>An {{ domxref("AudioParam") }} will take the rendered audio data from any
   <code>AudioNode</code> output connected to it and convert it to mono by <a
-    href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing">down-mixing</a>
+    href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing">down-mixing</a>
   (if it is not already mono). Next, it will mix it together with any other such outputs,
   and the intrinsic parameter value (the value the {{ domxref("AudioParam") }} would
   normally have without any audio connections), including any timeline changes scheduled
@@ -193,10 +193,7 @@ lfo.start();</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.AudioNode.connect")}}</p>
-</div>
+<p>{{Compat("api.AudioNode.connect")}}</p>
 
 <h2 id="See_also">See also</h2>
 

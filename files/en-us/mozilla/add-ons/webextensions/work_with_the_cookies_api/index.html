@@ -19,9 +19,8 @@ tags:
 
 <h2 id="Permissions">Permissions</h2>
 
-<p>To use the Cookies API you need to request both the <code>"cookies"</code> permission and <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permissions</a> for the protocols, domains, or websites you want to access or use <code>"&lt;all_urls&gt;"</code> to access any protocol and domain. The way in which you define your host permission string affects your extension’s ability to read, write, and delete cookies.</p>
+<p>To use the Cookies API you need to request both the <code>"cookies"</code> permission and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> for the protocols, domains, or websites you want to access or use <code>"&lt;all_urls&gt;"</code> to access any protocol and domain. The way in which you define your host permission string affects your extension’s ability to read, write, and delete cookies.</p>
 
-<div>
 <table>
  <colgroup>
   <col>
@@ -126,7 +125,6 @@ tags:
   </tr>
  </tbody>
 </table>
-</div>
 
 <h2 id="Cookie_stores">Cookie stores</h2>
 
@@ -170,11 +168,11 @@ tags:
 
 <p>To handle the icon buttons the script first gathers all the class names used for the buttons in the HTML file:</p>
 
-<pre class="notranslate brush: js">var bgBtns = document.querySelectorAll('.bg-container button');</pre>
+<pre class="brush: js">var bgBtns = document.querySelectorAll('.bg-container button');</pre>
 
 <p>It then loops through all the buttons assigning them their image and creating an onclick listener for each button:</p>
 
-<pre class="notranslate brush: js">for(var i = 0; i &lt; bgBtns.length; i++) {
+<pre class="brush: js">for(var i = 0; i &lt; bgBtns.length; i++) {
   var imgName = bgBtns[i].getAttribute('class');
   var bgImg = 'url(\'images/' + imgName + '.png\')';
   bgBtns[i].style.backgroundImage = bgImg;
@@ -183,7 +181,7 @@ tags:
 
 <p>When a button is clicked, its corresponding listener function gets the button class name and then the icon path which it passes to the page’s content script (<a href="https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/content_scripts/updatebg.js">updatebg.js</a>) using a message. The content script then applies the icon to the web page’s background. Meanwhile, <a href="https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/popup/bgpicker.js">bgpicker.js</a> stores the details of the icon applied to the background in a cookie:</p>
 
-<pre class="notranslate brush: js">    cookieVal.image = fullURL;
+<pre class="brush: js">    cookieVal.image = fullURL;
     browser.cookies.set({
     url: tabs[0].url,
     name: "bgpicker",
@@ -192,7 +190,7 @@ tags:
 
 <p>The color setting is handled in a similar way, triggered by a listener on the color input field. When a color is entered the active tab is discovered and the color selection details sent, using a message, to the page’s content script to be applied to the web page background. Then the color selection is added to the cookie:</p>
 
-<pre class="notranslate brush: js">    cookieVal.color = currColor;
+<pre class="brush: js">    cookieVal.color = currColor;
     browser.cookies.set({
     url: tabs[0].url,
     name: "bgpicker",
@@ -200,11 +198,11 @@ tags:
 
 <p>When the user clicks the reset button, which has been assigned to the variable reset:</p>
 
-<pre class="notranslate brush: js">var reset = document.querySelector('.color-reset button');</pre>
+<pre class="brush: js">var reset = document.querySelector('.color-reset button');</pre>
 
 <p><code>reset.onclick</code> first finds the active tab. Then, using the tab’s ID it passes a message to the page’s content script (<a href="https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/content_scripts/updatebg.js">updatebg.js</a>) to get it to remove the icon and color from the page. The function then clears the cookie values (so the old values aren’t carried forward and written onto a cookie created for a new icon or color selection on the same page) before removing the cookie:</p>
 
-<pre class="notranslate brush: js">    cookieVal = { image : '',
+<pre class="brush: js">    cookieVal = { image : '',
                   color : '' };
     browser.cookies.remove({
     url: tabs[0].url,
@@ -212,7 +210,7 @@ tags:
 
 <p>Also, so you can see what is going on with the cookies, the script reports on all changes to cookies in the console:</p>
 
-<pre class="notranslate brush: js">browser.cookies.onChanged.addListener((changeInfo) =&gt; {
+<pre class="brush: js">browser.cookies.onChanged.addListener((changeInfo) =&gt; {
   console.log(`Cookie changed:\n
     * Cookie: ${JSON.stringify(changeInfo.cookie)}\n
     * Cause: ${changeInfo.cause}\n
@@ -223,14 +221,14 @@ tags:
 
 <p>A background script (<a href="https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/background_scripts/background.js">background.js</a>) provides for the possibility that the user has chosen a background icon and color for the website in an earlier session. The script listens for changes in the active tab, either the user switching between tabs or changing the URL of the page displayed in the tab. When either of these events happen, <code>cookieUpdate()</code> is called.  <code>cookieUpdate()</code> in turn uses <code>getActiveTab()</code> to get the active tab ID. The function can then check whether a cookie for the extension exists, using the tab’s URL:</p>
 
-<pre class="notranslate brush: js">    var gettingCookies = browser.cookies.get({
+<pre class="brush: js">    var gettingCookies = browser.cookies.get({
       url: tabs[0].url,
       name: "bgpicker"
     });</pre>
 
 <p>If the <code>"bgpicker"</code> cookie exists for the website, the details of the icon and color selected earlier are retrieved and passed to the  content script <a href="https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/content_scripts/updatebg.js">updatebg.js</a> using messages:</p>
 
-<pre class="notranslate brush: js">    gettingCookies.then((cookie) =&gt; {
+<pre class="brush: js">    gettingCookies.then((cookie) =&gt; {
       if (cookie) {
         var cookieVal = JSON.parse(cookie.value);
         browser.tabs.sendMessage(tabs[0].id, {image: cookieVal.image});
@@ -247,6 +245,6 @@ tags:
 <p>If you want to learn more about the Cookies API, check out:</p>
 
 <ul>
- <li><a href="/en-US/Add-ons/WebExtensions/API/cookies">Cookies API reference</a>.</li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies">Cookies API reference</a>.</li>
  <li><a href="https://github.com/mdn/webextensions-examples/tree/master/list-cookies">List-cookies</a> example.</li>
 </ul>

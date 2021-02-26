@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Object.isSealed(<var>obj</var>)</pre>
+<pre class="brush: js">Object.isSealed(<var>obj</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -47,7 +47,7 @@ tags:
 
 <h3 id="Using_Object.isSealed">Using Object.isSealed</h3>
 
-<pre class="brush: js notranslate">// Objects aren't sealed by default.
+<pre class="brush: js">// Objects aren't sealed by default.
 var empty = {};
 Object.isSealed(empty); // === false
 
@@ -98,7 +98,7 @@ Object.isFrozen(s3); // === true
   cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if
   it was a sealed ordinary object, return <code>true</code>.</p>
 
-<pre class="brush: js notranslate">Object.isSealed(1);
+<pre class="brush: js">Object.isSealed(1);
 // TypeError: 1 is not an object (ES5 code)
 
 Object.isSealed(1);
@@ -122,10 +122,7 @@ Object.isSealed(1);
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Object.isSealed")}}</p>
-</div>
+<p>{{Compat("javascript.builtins.Object.isSealed")}}</p>
 
 <h2 id="See_also">See also</h2>
 

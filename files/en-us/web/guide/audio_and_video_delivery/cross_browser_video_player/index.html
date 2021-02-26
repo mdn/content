@@ -15,7 +15,7 @@ tags:
 
 <p>Our example video player displays a clip from an open source movie called <a href="http://mango.blender.org/about/">Tears of Steel</a>, and includes typical video controls.</p>
 
-<p><img alt="a shot of a video player, with several control buttons such as play, pause and stop. The video is showing a group of men fighting a group of robots." src="https://mdn.mozillademos.org/files/7319/video-player-example.png" style="display: block; height: 328px; margin: 0px auto; width: 650px;"></p>
+<p><img alt="a shot of a video player, with several control buttons such as play, pause and stop. The video is showing a group of men fighting a group of robots." src="video-player-example.png" style="display: block; margin: 0px auto;"></p>
 
 <div class="note">
 <p><strong>Note</strong>: You can see the <a href="https://iandevlin.github.io/mdn/video-player/">example running live</a>, or check out the <a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player">source code on Github</a>.</p>
@@ -56,7 +56,7 @@ tags:
 <p><strong>Note</strong>: IE9 behaves differently than most other browsers when a <code>poster</code> attribute is set. Most browsers interpret the presence of a <code>poster</code> attribute to mean that the specified image is to be displayed until the user chooses to play the video. IE9 will only use the specified poster image in this way if <code>preload="none"</code> is set; otherwise, it will take the first still of the video and display that instead.</p>
 </div>
 
-<p>Three different video sources are provided for the player: MP4, WebM, and Ogg. Using these different source formats gives the best chance of being supported across all browsers that support HTML5 video. For further information on video formats and browser compatibility, see <a href="/en-US/docs/Web/HTML/Supported_media_formats#Browser_compatibility">supported media formats</a>.</p>
+<p>Three different video sources are provided for the player: MP4, WebM, and Ogg. Using these different source formats gives the best chance of being supported across all browsers that support HTML5 video. For further information on video formats and browser compatibility, see <a href="/en-US/docs/Web/Media/Formats#browser_compatibility">supported media formats</a>.</p>
 
 <p>For browsers that do not support HTML5 video, a Flash player is provided that will allow playback of the MP4 video source, provided the end user has Flash installed. In addition a download link is displayed to allow users to download the MP4 video file, should they wish to (providing those without Flash installed with a method of viewing the video, a fallback for a fallback if you like).</p>
 
@@ -102,11 +102,11 @@ tags:
 
 <h2 id="Using_the_Media_API">Using the Media API</h2>
 
-<p>HTML5 comes with a JavaScript <a href="https://developer.mozilla.org/en/docs/Web/API/HTMLMediaElement">Media API</a> that allows developers access to and control of HTML5 media. This API will be used to make the custom control set defined above actually do something. In addition, the fullscreen button will use the <a href="/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode">Fullscreen API</a>, another W3C API that controls the ability of web browsers to show apps using your computer's full screen.</p>
+<p>HTML5 comes with a JavaScript <a href="/en-US/docs/Web/API/HTMLMediaElement">Media API</a> that allows developers access to and control of HTML5 media. This API will be used to make the custom control set defined above actually do something. In addition, the fullscreen button will use the <a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a>, another W3C API that controls the ability of web browsers to show apps using your computer's full screen.</p>
 
 <h3 id="Setup">Setup</h3>
 
-<p>Before dealing with the individual buttons, a number of initialisation calls are required.</p>
+<p>Before dealing with the individual buttons, a number of initialization calls are required.</p>
 
 <p>To begin with, it's a good idea to first check if the browser actually supports the {{ htmlelement("video") }} element and to only setup the custom controls if it does. This is done by checking if a created {{ htmlelement("video") }} element supports <a href="https://www.w3.org/html/wg/drafts/html/master/embedded-content.html#dom-navigator-canplaytype">the <code>canPlayType()</code> method</a>, which any supported HTML5 {{ htmlelement("video") }} element should.</p>
 
@@ -235,7 +235,7 @@ voldec.addEventListener('click', function(e) {
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: for more information and ideas on progress bars and buffering feedback, read <a href="/en-US/Apps/Build/Manipulating_media/buffering_seeking_time_ranges">Media buffering, seeking, and time ranges</a>.</p>
+<p><strong>Note</strong>: for more information and ideas on progress bars and buffering feedback, read <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges">Media buffering, seeking, and time ranges</a>.</p>
 </div>
 
 <h3 id="Skip_Ahead">Skip Ahead</h3>
@@ -344,7 +344,7 @@ document.addEventListener('msfullscreenchange', function() {
 
 <ul>
  <li>{{ htmlelement("video") }} for reference material</li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video">Using HTML5 audio and video</a> for more techniques</li>
- <li><a href="/en-US/docs/Web/HTML/Supported_media_formats">Media formats supported by the HTML audio and video elements</a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Using HTML5 audio and video</a> for more techniques</li>
+ <li><a href="/en-US/docs/Web/Media/Formats">Media formats supported by the HTML audio and video elements</a></li>
  <li><a href="http://camendesign.com/code/video_for_everybody">Video for Everybody</a>: written by Kroc Camen, this is quite old, but still has some good relevant content and is a great starter article for cross-browser HTML5 video.</li>
 </ul>

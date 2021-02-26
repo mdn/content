@@ -54,7 +54,7 @@ tags:
 
 <p>Functions created with the <code>Function</code> constructor do not create closures to their creation contexts; they always are created in the global scope. When running them, they will only be able to access their own local variables and global ones, not the ones from the scope in which the <code>Function</code> constructor was created. This is different from using {{jsxref("eval")}} with code for a function expression.</p>
 
-<pre class="brush: js notranslate">var x = 10;
+<pre class="brush: js">var x = 10;
 
 function createFunction1() {
     var x = 20;
@@ -94,10 +94,7 @@ console.log(f2());          // 20
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("javascript.builtins.Function")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

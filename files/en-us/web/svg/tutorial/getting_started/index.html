@@ -27,9 +27,9 @@ tags:
 &lt;/svg&gt;
 </pre>
 
-<p>Copy the code and paste it in a file demo1.svg. Then open the file in Firefox. It will render as shown in the following screenshot. (Firefox users: click <a class="external" href="https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3075/89b1e0a26e8421e19f907e0522b188bd/svgdemo1.xml">here</a>)</p>
+<p>Copy the code and paste it in a file demo1.svg. Then open the file in Firefox. It will render as shown in the following screenshot. (Firefox users: click <a href="https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3075/89b1e0a26e8421e19f907e0522b188bd/svgdemo1.xml">here</a>)</p>
 
-<p><img alt="svgdemo1.png" class="default internal" src="/@api/deki/files/4928/=svgdemo1.png"></p>
+<p><img class="default internal" src="/@api/deki/files/4928/=svgdemo1.png"></p>
 
 <p>The rendering process involves the following:</p>
 
@@ -87,7 +87,7 @@ Vary: Accept-Encoding</pre>
 Content-Encoding: gzip
 Vary: Accept-Encoding</pre>
 
-<p>You can check that your server is sending the correct HTTP headers with your SVG files by using the <a href="/en-US/docs/Tools/Network_Monitor#Headers">Network Monitor panel</a> or a site such as <a class="external" href="https://websniffer.cc/">websniffer.cc</a>. Submit the URL of one of your SVG files and look at the HTTP response headers. If you find that your server is not sending the headers with the values given above, then you should contact your Web host. If you have problems convincing them to correctly configure their servers for SVG, there may be ways to do it yourself. See the <a class="external" href="https://www.w3.org/services/svg-server/">server configuration page</a> on the w3.org for a range of simple solutions.</p>
+<p>You can check that your server is sending the correct HTTP headers with your SVG files by using the <a href="/en-US/docs/Tools/Network_Monitor#Headers">Network Monitor panel</a> or a site such as <a href="https://websniffer.cc/">websniffer.cc</a>. Submit the URL of one of your SVG files and look at the HTTP response headers. If you find that your server is not sending the headers with the values given above, then you should contact your Web host. If you have problems convincing them to correctly configure their servers for SVG, there may be ways to do it yourself. See the <a href="https://www.w3.org/services/svg-server/">server configuration page</a> on the w3.org for a range of simple solutions.</p>
 
 <p>Server misconfiguration is a very common reason for SVG failing to load, so make sure you check yours. If your server is not configured to send the correct headers with the SVG files it serves, then Firefox will most likely show the markup of the files as text or encoded garbage, or even ask the viewer to choose an application to open them.</p>
 

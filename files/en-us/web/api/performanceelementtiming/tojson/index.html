@@ -1,0 +1,64 @@
+---
+title: PerformanceElementTiming.toJSON()
+slug: Web/API/PerformanceElementTiming/toJSON
+tags:
+  - API
+  - Method
+  - Reference
+  - toJSON()
+  - PerformanceElementTiming
+---
+<div>{{DefaultAPISidebar("Element Timing")}}</div>
+
+<p class="summary">The <strong><code>toJSON()</code></strong> method of the {{domxref("PerformanceElementTiming")}} interface is a standard serializer. It returns a JSON representation of the object's properties.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <var>json</var> = <var>PerformanceElementTiming</var>.toJSON();</pre>
+
+<h3 id="Returns">Return value</h3>
+
+<dl>
+  <dt>json</dt>
+  <dd>A JSON object that is the serialization of the <code>PerformanceElementTiming</code> object.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example calling <code>entry.toJSON()</code> returns a JSON representation of the <code>PerformanceElementTiming</code> object, with the information about the image element.</p>
+
+<pre class="brush:html">&lt;img src="image.jpg" alt="a nice image" elementtiming="big-image" id="myImage"&gt;</pre>
+
+<pre class="brush:js">const observer = new PerformanceObserver((list) => {
+  let entries = list.getEntries().forEach(function (entry) {
+    if (entry.identifier === "big-image") {
+      console.log(entry.toJSON());
+    }
+  });
+});
+observer.observe({ entryTypes: ["element"] });</pre>
+
+<p class="notecard note">This example uses the {{domxref("PerformanceObserver")}} interface to create a list of performance measurement events. In our case we observe the {{domxref("PerformanceEntry.entrytype")}} <code>element</code> in order to use the <code>PerformanceElementTiming</code> interface.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+    <td>{{SpecName('Element Timing','#dom-performanceelementtiming-tojson','PerformanceElementTiming.toJson()')}}</td>
+    <td>{{Spec2('Element Timing')}}</td>
+    <td>Initial definition.</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.PerformanceElementTiming.toJSON")}}</p>

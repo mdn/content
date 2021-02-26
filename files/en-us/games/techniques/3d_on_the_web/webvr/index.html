@@ -19,7 +19,7 @@ tags:
 
 <p>With the popularity of Oculus Rift and a lot of other devices in production coming soon to the market, the future looks bright — we already have sufficient technology to make the VR experience "good enough" for playing games. There are many devices to chose from: desktop ones like Oculus Rift or HTC Vive, through consoles with Playstation VR (which admittedly doesn't support WebVR at this time), to mobile experiences like Gear VR or Google Cardboard.</p>
 
-<p><img alt="" src="https://end3r.com/tmp/vr/hmds.jpg" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="hmds.jpg" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <div class="note">
 <p><strong>Note</strong>: For more information, read our <a href="/en-US/docs/Web/API/WebVR_API/Concepts">WebVR Concepts</a> article.</p>
@@ -41,13 +41,13 @@ tags:
 
 <h3 id="Using_the_WebVR_API">Using the WebVR API</h3>
 
-<p>The WebVR API is based on two concepts — sending <a href="/en-US/docs/Web/API/WebVR_API/Concepts#Stereoscopic_vision">stereoscopic images</a> to both lenses in your headset and receiving positional data for your head from the sensor, and those two are handled by {{domxref("HMDVRDevice")}} (head-mounted display virtual reality device) and {{domxref("PositionSensorVRDevice")}}.</p>
+<p>The WebVR API is based on two concepts — sending <a href="/en-US/docs/Web/API/WebVR_API/Concepts#stereoscopic_vision">stereoscopic images</a> to both lenses in your headset and receiving positional data for your head from the sensor, and those two are handled by {{domxref("HMDVRDevice")}} (head-mounted display virtual reality device) and {{domxref("PositionSensorVRDevice")}}.</p>
 
 <h3 id="Get_the_devices">Get the devices</h3>
 
 <p>To get information about devices connected to your computer, you can use the {{domxref("Navigator/getVRDisplays")}} method:</p>
 
-<pre class="brush: js notranslate">navigator.getVRDevices().then(function(devices) {
+<pre class="brush: js">navigator.getVRDevices().then(function(devices) {
   for (var i = 0; i &lt; devices.length; ++i) {
     if (devices[i] instanceof HMDVRDevice) {
       gHMD = devices[i];
@@ -67,7 +67,7 @@ tags:
 
 <p>This code will loop through the available devices and assign proper sensors to the headsets — the first <code>devices</code> array contains the connected devices, and a check is done to find the {{domxref("HMDVRDevice")}}, and assign it to the <code>gHMD</code> variable — using this you can set up the scene, getting the eye parameters, setting the field of view, etc. For example:</p>
 
-<pre class="brush: js notranslate">function setCustomFOV(up,right,down,left) {
+<pre class="brush: js">function setCustomFOV(up,right,down,left) {
   var testFOV = new VRFieldOfView(up,right,down,left);
 
   gHMD.setFieldOfView(testFOV,testFOV,0.01,10000.0);
@@ -75,7 +75,7 @@ tags:
 
 <p>The <code>gPositionSensor</code> variable holds the {{domxref("PositionSensorVRDevice")}} — using this you can get the current position or orientation state (for example to update the scene view on every frame), or reset the sensor. For example, the below code outputs position information on the screen:</p>
 
-<pre class="brush: js notranslate">function setView() {
+<pre class="brush: js">function setView() {
   var posState = gPositionSensor.getState();
 
   if(posState.hasPosition) {
@@ -101,7 +101,7 @@ tags:
 
 <p>The first WebVR experiments and demos used Three.js as it's probably the most popular 3D engine for the web. See the <a href="https://github.com/mrdoob/three.js/blob/master/examples/js/effects/VREffect.js">VREffect</a> and <a href="https://github.com/mrdoob/three.js/blob/master/examples/js/controls/VRControls.js">VRControls</a> functions available on the Three.js github to help you implement and handle WebVR with Three.js.</p>
 
-<p><img alt="" src="https://end3r.com/tmp/vr/sechelt.jpg" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="sechelt.jpg" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>Boris Smus has written about the concept of <a href="http://smus.com/responsive-vr/">Responsive WebVR</a>, where a single web game can be played on various devices like laptops without VR hardware, PCs with Oculus Rift, or smartphones inside Google Cardboard and still deliver a unique and valuable experience across all of them. It's like responsive design, but applied to the VR world — write once and run in any VR headset ... or without it. You can check the <a href="http://github.com/borismus/webvr-boilerplate">WebVR Boilerplate</a> sources — it's a good example to start learning WebVR from, and a starting point for any web-based VR experience.</p>
 

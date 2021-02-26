@@ -23,7 +23,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of how CSS works (study <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a> and <a href="/en-US/docs/Learn/CSS/Styling_boxes">Styling boxes</a>.)</td>
+   <td>HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of how CSS works (study <a href="/en-US/docs/Learn/CSS/First_steps">Introduction to CSS</a> and <a href="/en-US/docs/Learn/CSS/Building_blocks">Styling boxes</a>.)</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -42,7 +42,7 @@ tags:
 
 <p>Once you know the browsers that come to your site, you can assess any technology that you want to use against how well it is supported and how easily you can provide an alternative for visitors who do not have that technology available. We are trying to make this easy for you at MDN, by providing browser compatibility information on each page detailing a CSS property. For example, take a look at the page for {{cssxref("grid-template-columns")}}. At the bottom of this page is a table, which lists major browsers along with the version they began supporting this property.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16047/browser-table.png" style="height: 1178px; width: 2102px;"></p>
+<p><img alt="" src="browser-table.png"></p>
 
 <p>Another popular way to find out about how well a feature is supported is the <a href="https://caniuse.com/">Can I Use</a> website. This site lists the majority of Web Platform features with information about their browser support status. You can view usage statistics by location — useful if you work on a site that has users mostly for a specific area of the world. You can even link your Google Analytics account to get analysis based on your user data.</p>
 
@@ -63,7 +63,7 @@ tags:
 <p>In the below example, we have floated three <code>&lt;div&gt;</code>s so they display in a row. Any browser that does not support <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">CSS Grid Layout</a> will see the row of boxes as a floated layout. A floated item that becomes a grid item loses the float behavior, which means that by turning the wrapper into a Grid Container, the floated items become Grid Items. If the browser supports Grid Layout it will display the grid view, if not it ignores the <code>display: grid</code> and related properties and the floated layout is used.</p>
 
 <div id="Example1">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   background-color: rgb(79,185,227);
@@ -81,7 +81,7 @@ tags:
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="item"&gt;Item One&lt;/div&gt;
   &lt;div class="item"&gt;Item Two&lt;/div&gt;
   &lt;div class="item"&gt;Item Three&lt;/div&gt;
@@ -117,7 +117,7 @@ tags:
 <p>In the floated layout, the percentage is calculated from the container — 33.333% is a third of the container width. In Grid however that 33.333% is calculated from the grid area the item is placed in, so it actually becomes a third of the size we want once the Grid Layout is introduced.</p>
 
 <div id="Example2">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   background-color: rgb(79,185,227);
@@ -136,7 +136,7 @@ tags:
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="item"&gt;Item One&lt;/div&gt;
   &lt;div class="item"&gt;Item Two&lt;/div&gt;
   &lt;div class="item"&gt;Item Three&lt;/div&gt;
@@ -155,7 +155,7 @@ tags:
 <p>If we add a feature query to the above example, we can use it to set the widths of our items back to <code>auto</code>  if we know that we have grid support.</p>
 
 <div id="Example3">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   background-color: rgb(79,185,227);
@@ -180,7 +180,7 @@ tags:
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="item"&gt;Item One&lt;/div&gt;
   &lt;div class="item"&gt;Item Two&lt;/div&gt;
   &lt;div class="item"&gt;Item Three&lt;/div&gt;

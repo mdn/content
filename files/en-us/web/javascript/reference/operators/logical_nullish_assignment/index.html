@@ -26,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>expr1</em> ??= <em>expr2</em>
+<pre class="brush: js"><em>expr1</em> ??= <em>expr2</em>
 </pre>
 
 <h2 id="Description">Description</h2>
@@ -49,18 +49,18 @@ tags:
 <p>Logical nullish assignment short-circuits as well meaning that <code>x ??= y</code> is
   equivalent to:</p>
 
-<pre class="brush: js notranslate">x ?? (x = y);</pre>
+<pre class="brush: js">x ?? (x = y);</pre>
 
 <p>And not equivalent to the following which would always perform an assignment:</p>
 
-<pre class="brush: js notranslate example-bad">x = x ?? y;
+<pre class="brush: jsexample-bad">x = x ?? y;
 </pre>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_logical_nullish_assignment">Using logical nullish assignment</h3>
 
-<pre class="brush: js notranslate">function config(options) {
+<pre class="brush: js">function config(options) {
   options.duration ??= 100;
   options.speed ??= 25;
   return options;

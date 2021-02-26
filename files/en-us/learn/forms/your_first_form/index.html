@@ -50,7 +50,7 @@ tags:
 
 <p>In this article, we'll build a simple contact form. Let's make a rough sketch.</p>
 
-<p><img alt="The form to build, roughly sketch" src="/files/4579/form-sketch-low.jpg" style="border-style: solid; border-width: 1px; display: block; height: 352px; margin: 0px auto; width: 400px;"></p>
+<p><img alt="The form to build, roughly sketch" src="form-sketch-low.jpg" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>Our form will contain three text fields and one button. We are asking the user for their name, their e-mail and the message they want to send. Hitting the button will send their data to a web server.</p>
 
@@ -64,7 +64,7 @@ tags:
 
 <p>All forms start with a {{HTMLelement("form")}} element, like this:</p>
 
-<pre class="brush:html; notranslate">&lt;form action="/my-handling-form-page" method="post"&gt;
+<pre class="brush:html;">&lt;form action="/my-handling-form-page" method="post"&gt;
 
 &lt;/form&gt;</pre>
 
@@ -76,7 +76,7 @@ tags:
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: We'll look at how those attributes work in our <a href="/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">Sending form data</a> article later on.</p>
+<p><strong>Note</strong>: We'll look at how those attributes work in our <a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data">Sending form data</a> article later on.</p>
 </div>
 
 <p>For now, add the above {{htmlelement("form")}} element into your HTML {{htmlelement("body")}}.</p>
@@ -93,7 +93,7 @@ tags:
 
 <p>In terms of HTML code we need something like the following to implement these form widgets:</p>
 
-<pre class="brush:html; notranslate">&lt;form action="/my-handling-form-page" method="post"&gt;
+<pre class="brush:html;">&lt;form action="/my-handling-form-page" method="post"&gt;
  &lt;ul&gt;
   &lt;li&gt;
     &lt;label for="name"&gt;Name:&lt;/label&gt;
@@ -125,11 +125,11 @@ tags:
 
 <p>Last but not least, note the syntax of <code>&lt;input&gt;</code> vs. <code>&lt;textarea&gt;&lt;/textarea&gt;</code>. This is one of the oddities of HTML. The <code>&lt;input&gt;</code> tag is an empty element, meaning that it doesn't need a closing tag. {{HTMLElement("textarea")}} is not an empty element, meaning it should be closed with the proper ending tag. This has an impact on a specific feature of forms: the way you define the default value. To define the default value of an {{HTMLElement("input")}} element you have to use the <a href="/en-US/docs/Web/HTML/Attributes/value"><code>value</code></a> attribute like this:</p>
 
-<pre class="brush:html; notranslate">&lt;input type="text" value="by default this element is filled with this text"&gt;</pre>
+<pre class="brush:html;">&lt;input type="text" value="by default this element is filled with this text"&gt;</pre>
 
 <p>On the other hand,  if you want to define a default value for a {{HTMLElement("textarea")}}, you put it between the opening and closing tags of the {{HTMLElement("textarea")}} element, like this:</p>
 
-<pre class="brush:html; notranslate">&lt;textarea&gt;
+<pre class="brush:html;">&lt;textarea&gt;
 by default this element is filled with this text
 &lt;/textarea&gt;</pre>
 
@@ -137,7 +137,7 @@ by default this element is filled with this text
 
 <p>The markup for our form is almost complete; we just need to add a button to allow the user to send, or "submit", their data once they have filled out the form. This is done by using the {{HTMLelement("button")}} element; add the following just above the closing <code>&lt;/ul&gt;</code> tag:</p>
 
-<pre class="brush:html; notranslate">&lt;li class="button"&gt;
+<pre class="brush:html;">&lt;li class="button"&gt;
   &lt;button type="submit"&gt;Send your message&lt;/button&gt;
 &lt;/li&gt;</pre>
 
@@ -165,13 +165,13 @@ by default this element is filled with this text
 
 <p>First of all, add a {{htmlelement("style")}} element to your page, inside your HTML head. It should look like so:</p>
 
-<pre class="brush: html notranslate">&lt;style&gt;
+<pre class="brush: html">&lt;style&gt;
 
 &lt;/style&gt;</pre>
 
 <p>Inside the <code>style</code> tags, add the following CSS:</p>
 
-<pre class="brush:css; notranslate">form {
+<pre class="brush:css;">form {
   /* Center the form on the page */
   margin: 0 auto;
   width: 500px;
@@ -251,7 +251,7 @@ button {
 
 <p>To name the data in a form you need to use the <code>name</code> attribute on each form widget that will collect a specific piece of data. Let's look at some of our form code again:</p>
 
-<pre class="brush:html; notranslate">&lt;form action="/my-handling-form-page" method="post"&gt;
+<pre class="brush:html;">&lt;form action="/my-handling-form-page" method="post"&gt;
  &lt;ul&gt;
   &lt;li&gt;
     &lt;label for="name"&gt;Name:&lt;/label&gt;
@@ -271,7 +271,7 @@ button {
 
 <p>In our example, the form will send 3 pieces of data named "<code>user_name</code>", "<code>user_email</code>", and "<code>user_message</code>". That data will be sent to the URL "<code>/my-handling-form-page</code>" using the <a href="/en-US/docs/Web/HTTP/Methods/POST">HTTP <code>POST</code></a> method.</p>
 
-<p>On the server side, the script at the URL "<code>/my-handling-form-page</code>" will receive the data as a list of 3 key/value items contained in the HTTP request. The way this script will handle that data is up to you. Each server-side language (PHP, Python, Ruby, Java, C#, etc.) has its own mechanism of handling form data. It's beyond the scope of this guide to go deeply into that subject, but if you want to know more, we have provided some examples in our <a href="/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">Sending form data</a> article later on.</p>
+<p>On the server side, the script at the URL "<code>/my-handling-form-page</code>" will receive the data as a list of 3 key/value items contained in the HTTP request. The way this script will handle that data is up to you. Each server-side language (PHP, Python, Ruby, Java, C#, etc.) has its own mechanism of handling form data. It's beyond the scope of this guide to go deeply into that subject, but if you want to know more, we have provided some examples in our <a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data">Sending form data</a> article later on.</p>
 
 <h2 id="Summary">Summary</h2>
 
@@ -303,5 +303,5 @@ button {
 <ul>
  <li><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form controls</a></li>
  <li><a href="/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript">Sending forms through JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_widgets">Property compatibility table for form widgets</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Property compatibility table for form widgets</a></li>
 </ul>

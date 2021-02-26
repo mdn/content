@@ -31,7 +31,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>dateObj</var>.toLocaleDateString([<var>locales</var>[, <var>options</var>]])</pre>
+  class="brush: js"><var>dateObj</var>.toLocaleDateString([<var>locales</var>[, <var>options</var>]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -68,7 +68,7 @@ tags:
 <p>In basic use without specifying a locale, a formatted string in the default locale and
   with default options is returned.</p>
 
-<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
+<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
 
 // toLocaleDateString() without arguments depends on the implementation,
 // the default locale, and the default time zone
@@ -84,13 +84,13 @@ console.log(date.toLocaleDateString());
   requirement that illegal language tags are rejected with a {{jsxref("RangeError")}}
   exception:</p>
 
-<pre class="brush: js notranslate">function toLocaleDateStringSupportsLocales() {
+<pre class="brush: js">function toLocaleDateStringSupportsLocales() {
   try {
     new Date().toLocaleDateString('i');
   } catch (e) {
-    return e.name !== 'RangeError';
+    return e.name === 'RangeError';
   }
-  return true;
+  return false;
 }
 </pre>
 
@@ -101,7 +101,7 @@ console.log(date.toLocaleDateString());
   specify that language (and possibly some fallback languages) using the
   <code>locales</code> argument:</p>
 
-<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // formats below assume the local time zone of the locale;
 // America/Los_Angeles for the US
@@ -142,7 +142,7 @@ console.log(date.toLocaleDateString(['ban', 'id']));
 <p>The results provided by <code>toLocaleDateString()</code> can be customized using the
   <code>options</code> argument:</p>
 
-<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // request a weekday along with a long date
 var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };

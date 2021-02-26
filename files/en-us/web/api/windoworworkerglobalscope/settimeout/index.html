@@ -2,18 +2,18 @@
 title: WindowOrWorkerGlobalScope.setTimeout()
 slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 tags:
-- API
-- HTML DOM
-- Intervals
-- JavaScript timers
-- MakeBrowserAgnostic
-- Method
-- NeedsMarkupWork
-- NeedsUpdate
-- Reference
-- Timers
-- WindowOrWorkerGlobalScope
-- setTimeout
+  - API
+  - HTML DOM
+  - Intervals
+  - JavaScript timers
+  - MakeBrowserAgnostic
+  - Method
+  - NeedsMarkupWork
+  - NeedsUpdate
+  - Reference
+  - Timers
+  - WindowOrWorkerGlobalScope
+  - setTimeout
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <var>timeoutID</var> = <var>scope</var>.setTimeout(<var>function</var>[, <var>delay</var>, <var>arg1</var>, <var>arg2</var>, ...]);
+<pre class="brush: js">var <var>timeoutID</var> = <var>scope</var>.setTimeout(<var>function</var>[, <var>delay</var>, <var>arg1</var>, <var>arg2</var>, ...]);
 var <var>timeoutID</var> = <var>scope</var>.setTimeout(<var>function</var>[, <var>delay</var>]);
 var <var>timeoutID</var> = <var>scope</var>.setTimeout(<var>code</var>[, <var>delay</var>]);
 </pre>
@@ -43,8 +43,8 @@ var <var>timeoutID</var> = <var>scope</var>.setTimeout(<var>code</var>[, <var>de
   <dd>The time, in milliseconds (thousandths of a second), the timer should wait before
     the specified function or code is executed. If this parameter is omitted, a value of 0
     is used, meaning execute "immediately", or more accurately, the next event cycle. Note
-    that in either case, the actual delay may be longer than intended; see {{anch("Reasons
-    for delays longer than specified")}} below.</dd>
+    that in either case, the actual delay may be longer than intended; see
+    {{anch("Reasons for delays longer than specified")}} below.</dd>
   <dt><code><var>arg1</var>, ..., <var>argN</var></code> {{optional_inline}}</dt>
   <dd>Additional arguments which are passed through to the function specified by
     <code><var>function</var></code>.</dd>
@@ -75,7 +75,9 @@ var <var>timeoutID</var> = <var>scope</var>.setTimeout(<var>code</var>[, <var>de
   <code>setTimeout()</code> or <code>setInterval()</code> on the same object (a window or
   a worker). However, different objects use separate pools of IDs.</p>
 
-<h2 id="Example">Example</h2>
+<h2 id="Example">Examples</h2>
+
+<h2 id="Timeouts">1: setTimeout() / clearTimeout()</h2>
 
 <p>The following example sets up two simple buttons in a web page and hooks them to the
   <code>setTimeout()</code> and <code>clearTimeout()</code> routines. Pressing the first
@@ -85,7 +87,7 @@ var <var>timeoutID</var> = <var>scope</var>.setTimeout(<var>code</var>[, <var>de
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;Live Example&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Live Example&lt;/p&gt;
 &lt;button onclick="delayedAlert();"&gt;Show an alert box after two seconds&lt;/button&gt;
 &lt;p&gt;&lt;/p&gt;
 &lt;button onclick="clearAlert();"&gt;Cancel alert before it happens&lt;/button&gt;
@@ -93,7 +95,7 @@ var <var>timeoutID</var> = <var>scope</var>.setTimeout(<var>code</var>[, <var>de
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">var timeoutID;
+<pre class="brush: js">var timeoutID;
 
 function delayedAlert() {
   timeoutID = window.setTimeout(window.alert, 2*1000, 'That was really slow!');
@@ -106,11 +108,89 @@ function clearAlert() {
 
 <h3 id="Result">Result</h3>
 
-<p>{{EmbedLiveSample('Example')}}</p>
+<p>{{EmbedLiveSample('Timeouts')}}</p>
 
 <p>See also <a
-    href="/en-US/docs/Web/API/WindowTimers/clearTimeout#Example"><code>clearTimeout()</code>
+    href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout#Example"><code>clearTimeout()</code>
     example</a>.</p>
+
+<h2 id="Timeouts_throttled">2: Timeouts throttled</h2>
+
+<p>This example defines functions which demonstrate this throttling effect:</p>
+<ul>
+
+<li><em><code>interval()</code></em>, called after <code>{{domxref("WindowOrworkerGlobalScope.setInterval()","setInterval()")}}</code> interval expiration.</li>
+<li><em><code>timeout()</code></em> called after <code>{{domxref("WindowOrworkerGlobalScope.setTimeout()","setTimeout()")}}</code> timer expiration.</li>
+<li><em><code>run()</code></em>, called at program start.</li>
+<li><em><code>logline()</code></em>, called at interval and timer expiration, displays the last and current intervals along with an indicator when throttling occurs.</li></ul>
+<p>The durations defined for <code>interval()</code> and <code>timeout()</code> cause both timers to immediately expire which triggers their completion functions. The browser applies call throttling when it senses that it's calling these completion functions in rapid succession.</p>
+
+<h3 id="HTML2">HTML</h3>
+
+<pre class="brush: html">&lt;p&gt;Live Example&lt;/p&gt;
+&lt;button onclick="run();"&gt;Run&lt;/button&gt;
+&lt;div id="log"&gt;&lt;/div&gt;
+</pre>
+
+<h3 id="JavaScript2">JavaScript</h3>
+
+<pre class="brush: js">
+var to_timer = 0; // duration is zero milliseconds
+var interval_timer = 0; // expires immediately
+var cleanup_timer = 0; // fires at end of run
+var last = 0; // last millisecond recorded
+var duration = 15; // run duration in milliseconds
+var lineno = 0; // current output line number
+
+function interval() {
+  var d = new Date();
+  logline(d.getMilliseconds());
+}
+
+function timeout() {
+  var d = new Date();
+  logline(d.getMilliseconds());
+  interval();
+  to_timer = setTimeout(timeout, 0);
+}
+
+function run() {
+  interval_timer = setInterval(interval, 0);
+  to_timer = setTimeout(timeout, 0);
+  cleanup_timer = setInterval(cleanup, duration);
+  last = 0;
+  lineno = 0;
+  document.getElementById("log").innerHTML = "";
+  document.getElementById("log").innerHTML = "line&ensp;last&emsp;current";
+ }
+
+function logline(msec) { // msec can't wrap: run duration &gt; 1 second
+  var c = "";
+  if ((last != 0) && (last &gt; msec - 1 /* variation */)) { c = "Throttled"; }
+  document.getElementById("log").innerHTML +=  "&lt;pre&gt;" + pad(lineno++, 2) + "&emsp;&emsp;" + pad(last, 3) + "&emsp;&emsp;" + msec + "&ensp;" + c;
+  last = msec;
+}
+</pre>
+
+<div class="hidden">
+<pre class="brush: js">
+function cleanup() {
+  clearTimeout(to_timer);
+  clearInterval(interval_timer);
+  clearInterval(cleanup_timer);
+  document.getElementById("log").innerHTML += "--- Done ---";
+}
+
+function pad(d, len) {
+  return d.toString().padStart(len, "0");
+}
+
+</pre>
+</div>
+
+<h3 id="Result2">Result</h3>
+
+<p>{{EmbedLiveSample("Timeouts_throttled", 100, 175)}}</p>
 
 <h2 id="Polyfill">Polyfill</h2>
 
@@ -120,7 +200,7 @@ function clearAlert() {
   below), you can include this polyfill to enable the HTML5 standard arguments-passing
   functionality. Just add this code to the top of your script:</p>
 
-<pre class="brush: js notranslate">/*\
+<pre class="brush: js">/*\
 |*|
 |*|  Polyfill which enables the passage of arbitrary arguments to the
 |*|  callback functions of JavaScript timers (HTML5 standard syntax).
@@ -172,7 +252,7 @@ function clearAlert() {
 <p>If you want a completely unobtrusive fix for every other mobile or desktop browser,
   including IE 9 and below, you can either use JavaScript conditional comments:</p>
 
-<pre class="brush: js notranslate">/*@cc_on
+<pre class="brush: js">/*@cc_on
   // conditional IE &lt; 9 only fix
   @if (@_jscript_version &lt;= 9)
   (function(f){
@@ -185,7 +265,7 @@ function clearAlert() {
 
 <p>... or go for a very clean approach based on the IE HTML conditional feature:</p>
 
-<pre class="brush: html notranslate">&lt;!--[if lte IE 9]&gt;&lt;script&gt;
+<pre class="brush: html">&lt;!--[if lte IE 9]&gt;&lt;script&gt;
 (function(f){
 window.setTimeout=f(window.setTimeout);
 window.setInterval=f(window.setInterval);
@@ -200,21 +280,21 @@ var a=[].slice.call(arguments,2);return f(function(){c instanceof Function?c.app
 <p>Another possibility is to use an anonymous function to call your callback, but this
   solution is a bit more expensive. Example:</p>
 
-<pre class="brush: js notranslate">var intervalID = setTimeout(function() { myFunc('one', 'two', 'three'); }, 1000);
+<pre class="brush: js">var intervalID = setTimeout(function() { myFunc('one', 'two', 'three'); }, 1000);
 </pre>
 
 <p>The above example can also be written with the help of an <a
     href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions"> arrow
     function</a>:</p>
 
-<pre class="brush: js notranslate">var intervalID = setTimeout(() =&gt; { myFunc('one', 'two', 'three'); }, 1000);
+<pre class="brush: js">var intervalID = setTimeout(() =&gt; { myFunc('one', 'two', 'three'); }, 1000);
 </pre>
 
 <p>Yet another possibility is to use <a
     href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">function's
     <code>bind</code></a>. Example:</p>
 
-<pre class="brush: js notranslate">setTimeout(function(arg1){}.bind(undefined, 10), 1000);
+<pre class="brush: js">setTimeout(function(arg1){}.bind(undefined, 10), 1000);
 </pre>
 
 <h2 id="The_this_problem">The "this" problem</h2>
@@ -236,7 +316,7 @@ var a=[].slice.call(arguments,2);return f(function(){c instanceof Function?c.app
 
 <p>See the following example:</p>
 
-<pre class="brush: js notranslate">myArray = ['zero', 'one', 'two'];
+<pre class="brush: js">myArray = ['zero', 'one', 'two'];
 myArray.myMethod = function (sProperty) {
   alert(arguments.length &gt; 0 ? this[sProperty] : this);
 };
@@ -250,7 +330,7 @@ myArray.myMethod(1); // prints "one"</pre>
   in the following:</p>
 
 <pre
-  class="brush: js notranslate">setTimeout(myArray.myMethod, 1.0*1000); // prints "[object Window]" after 1 second
+  class="brush: js">setTimeout(myArray.myMethod, 1.0*1000); // prints "[object Window]" after 1 second
 setTimeout(myArray.myMethod, 1.5*1000, '1'); // prints "undefined" after 1.5 seconds</pre>
 
 <p>The <code>myArray.myMethod</code> function is passed to <code>setTimeout</code>, then
@@ -259,7 +339,7 @@ setTimeout(myArray.myMethod, 1.5*1000, '1'); // prints "undefined" after 1.5 sec
   setTimeout as there is in Array methods like forEach, reduce, etc. and as shown below,
   using <code>call</code> to set <code>this</code> doesn't work either.</p>
 
-<pre class="brush: js notranslate">setTimeout.call(myArray, myArray.myMethod, 2.0*1000); // error: "NS_ERROR_XPC_BAD_OP_ON_WN_PROTO: Illegal operation on WrappedNative prototype object"
+<pre class="brush: js">setTimeout.call(myArray, myArray.myMethod, 2.0*1000); // error: "NS_ERROR_XPC_BAD_OP_ON_WN_PROTO: Illegal operation on WrappedNative prototype object"
 setTimeout.call(myArray, myArray.myMethod, 2.5*1000, 2); // same error
 </pre>
 
@@ -269,13 +349,13 @@ setTimeout.call(myArray, myArray.myMethod, 2.5*1000, 2); // same error
   <code>this</code> to the required value:</p>
 
 <pre
-  class="brush: js notranslate">setTimeout(function(){myArray.myMethod()}, 2.0*1000); // prints "zero,one,two" after 2 seconds
+  class="brush: js">setTimeout(function(){myArray.myMethod()}, 2.0*1000); // prints "zero,one,two" after 2 seconds
 setTimeout(function(){myArray.myMethod('1')}, 2.5*1000); // prints "one" after 2.5 seconds</pre>
 
 <p>Arrow functions are a possible alternative, too:</p>
 
 <pre
-  class="brush: js notranslate">setTimeout(() =&gt; {myArray.myMethod()}, 2.0*1000); // prints "zero,one,two" after 2 seconds
+  class="brush: js">setTimeout(() =&gt; {myArray.myMethod()}, 2.0*1000); // prints "zero,one,two" after 2 seconds
 setTimeout(() =&gt; {myArray.myMethod('1')}, 2.5*1000); // prints "one" after 2.5 seconds</pre>
 
 <p>Another possible way to solve the "<code>this</code>" problem is to replace the host
@@ -284,7 +364,7 @@ setTimeout(() =&gt; {myArray.myMethod('1')}, 2.5*1000); // prints "one" after 2.
     href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call"><code>Function.prototype.call</code></a>,
   e.g.:</p>
 
-<pre class="brush: js notranslate">// Enable setting 'this' in JavaScript timers
+<pre class="brush: js">// Enable setting 'this' in JavaScript timers
 
 var __nativeST__ = window.setTimeout,
     __nativeSI__ = window.setInterval;
@@ -307,12 +387,12 @@ window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentTo
 
 <div class="note"><strong>Note</strong>: These two replacements will also enable the HTML5
   standard passage of arbitrary arguments to the callback functions of timers in IE. So
-  they can be used as polyfills also. See the <a href="#Callback_arguments">Callback
+  they can be used as polyfills also. See the <a href="#callback_arguments">Callback
     arguments</a> paragraph.</div>
 
 <p>New feature test:</p>
 
-<pre class="brush: js notranslate">myArray = ['zero', 'one', 'two'];
+<pre class="brush: js">myArray = ['zero', 'one', 'two'];
 myArray.myMethod = function (sProperty) {
     alert(arguments.length &gt; 0 ? this[sProperty] : this);
 };
@@ -330,7 +410,7 @@ setTimeout.call(myArray, myArray.myMethod, 2.5*1000, 2); // prints "two" after 2
 
 <p>Example using <code>bind()</code>:</p>
 
-<pre class="brush: js notranslate">myArray = ['zero', 'one', 'two'];
+<pre class="brush: js">myArray = ['zero', 'one', 'two'];
 myBoundMethod = (function (sProperty) {
     console.log(arguments.length &gt; 0 ? this[sProperty] : this);
 }).bind(myArray);
@@ -353,10 +433,10 @@ setTimeout(myBoundMethod, 1.5*1000, "1"); // prints "one" after 1.5 seconds
 
 <p>Passing a string instead of a function to <code>setTimeout()</code> has the same
   associated problems as using
-  <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/eval#Don.27t_use_eval.21">eval</a>. </code>
+  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#Don.27t_use_eval.21">eval</a>. </code>
 </p>
 
-<pre class="brush: js notranslate">// Recommended
+<pre class="brush: js">// Recommended
 window.setTimeout(function() {
   alert('Hello World!');
 }, 500);
@@ -365,53 +445,34 @@ window.setTimeout(function() {
 window.setTimeout("alert('Hello World!');", 500);
 </pre>
 
-<p>A string passed to <code>setTimeout</code> is evaluated in the global context, so local
-  symbols in the context where <code>setTimeout()</code> was called will not be available
-  when the string is evaluated as code.</p>
+<p>A string passed to <code>{{domxref("WindowOrworkerGlobalScope.setTimeout","setTimeout()")}}</code> is evaluated in the global context, so local symbols in the context where <code>{{domxref("WindowOrworkerGlobalScope.setTimeout","setTimeout()")}}</code> was called will not be available when the string is evaluated as code.</p>
 
-<h3 id="Reasons_for_delays_longer_than_specified">Reasons for delays longer than specified
-</h3>
+<h3 id="Reasons_for_delays">Reasons for delays longer than specified</h3>
 
 <p>There are a number of reasons why a timeout may take longer to fire than anticipated.
   This section describes the most common reasons.</p>
 
-<h4 id="Timeouts_throttled_to_≥_4ms">Timeouts throttled to ≥ 4ms</h4>
+<h4 id="E_clampus_vitus">Clamping</h4>
 
-<p>In modern browsers,
-  <code>setTimeout()</code>/{{domxref("WindowOrworkerGlobalScope.setInterval","setInterval()")}}
-  calls are throttled to a minimum of once every 4 ms when successive calls are triggered
-  due to callback nesting (where the nesting level is at least a certain depth), or after
-  certain number of successive intervals. Take this example:</p>
+<p>In modern browsers, <code>{{domxref("WindowOrworkerGlobalScope.setTimeout()","setTimeout()")}}</code>/{{domxref("WindowOrworkerGlobalScope.setInterval","setInterval()")}} calls are throttled to a minimum of once every 4 ms when successive calls are triggered due to callback nesting (where the nesting level is at least a certain depth), or after certain number of successive intervals.</p>
 
-<pre class="brush: js notranslate">function cb() { setTimeout(cb, 0); }
-function f() { setInterval(f, 0); }
-setTimeout(cb, 0);
-setInterval(f, 0);</pre>
-
-<p>In Chrome and Firefox, the 5th successive callback call is clamped; Safari clamps on
-  the 6th call; in Edge its the 3rd one. Gecko started to treat <code>setInterval()</code>
-  like this in <a href="/en-US/docs/Mozilla/Firefox/Releases/56">version 56</a> (it
-  already did this with <code>setTimeout()</code>; see below).</p>
-
-<p><a class="external"
-    href="http://code.google.com/p/chromium/issues/detail?id=792#c10">Historically</a>
-  some browsers implemented this throttling behavior a bit differently (e.g. Firefox) — on
-  <code>setInterval()</code> calls made from anywhere, or when a nested
-  <code>setTimeout()</code> is called where the nesting level is at least a certain depth.
-</p>
-
-<p>To implement a 0 ms timeout in a modern browser, you can use
-  {{domxref("window.postMessage()")}} as <a class="external"
-    href="http://dbaron.org/log/20100309-faster-timeouts">described here</a>.</p>
+<p>See {{anch("2 Timeouts throttled")}} example, above.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: The minimum delay, <code>DOM_MIN_TIMEOUT_VALUE</code>, is 4 ms
-    (stored in a preference in Firefox: <code>dom.min_timeout_value</code>), with a
-    <code>DOM_CLAMP_TIMEOUT_NESTING_LEVEL</code> of 5.</p>
+<p>In Chrome and Firefox, the 5th successive callback call is clamped; Safari clamps on the 6th call; in Edge it's the 3rd one. Gecko started to clamp after 4ms <code>{{domxref("WindowOrworkerGlobalScope.setInterval","setInterval()")}}</code> in <a class="external" href="/en-US/docs/Mozilla/Firefox/Releases/56">version 56</a>. It already did this with <code>setTimeout()</code>, as described in the following notes.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: 4 ms is <a class="external" href="https://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers">specified by the HTML5 spec</a> and is consistent across browsers released in 2010 and onward. Prior to {{geckoRelease("5.0")}}, the minimum timeout value for nested timeouts was 10 ms.</p>
+<p><a class="external" href="//code.google.com/p/chromium/issues/detail?id=792#c10">Historically</a> some browsers implemented this throttling behavior a bit differently (e.g. Firefox) — on <code>{{domxref("WindowOrworkerGlobalScope.setInterval()","setInterval()")}}</code> calls made from anywhere, or when a nested <code>{{domxref("WindowOrworkerGlobalScope.setTimeout()","setTimeout()")}}</code> is called where the nesting level is at least a certain depth.</p>
+</div>
+
+<div class="note">
+<p>To implement a 0 ms timeout in a modern browser, you can use {{domxref("window.postMessage()")}} as <a class="external" href="//dbaron.org/log/20100309-faster-timeouts">described here</a>.</p>
+</div>
+
+<div class="note">
+<p>The minimum delay, <code>DOM_MIN_TIMEOUT_VALUE</code>, is 4 ms (stored in a preference in Firefox: <code>dom.min_timeout_value</code>), with a <code>DOM_CLAMP_TIMEOUT_NESTING_LEVEL</code> of 5.</p>
+<p>4 ms is <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers">specified by the HTML5 spec</a> and is consistent across browsers released in 2010 and onward. Prior to {{geckoRelease("5.0")}}, the minimum timeout value for nested timeouts was 10 ms.</p>
 </div>
 
 <h4 id="Timeouts_in_inactive_tabs_throttled_to_≥_1000ms">Timeouts in inactive tabs
@@ -459,12 +520,9 @@ setInterval(f, 0);</pre>
 
 <h4 id="Late_timeouts">Late timeouts</h4>
 
-<p>In addition to "clamping", the timeout can also fire later when the page (or the
-  OS/browser itself) is busy with other tasks. One important case to note is that the
-  function or code snippet cannot be executed until the thread that called
-  <code>setTimeout()</code> has terminated. For example:</p>
+<p>In addition to {{anch("Clamping")}}, the timeout can also fire later when the page (or the OS/browser itself) is busy with other tasks. One important case to note is that the function or code snippet cannot be executed until the thread that called <code>{{domxref("WindowOrworkerGlobalScope.setTimeout()","setTimeout()")}}</code> has terminated. For example:</p>
 
-<pre class="brush: js notranslate">function foo() {
+<pre class="brush: js">function foo() {
   console.log('foo has been called');
 }
 setTimeout(foo, 0);
@@ -472,7 +530,7 @@ console.log('After setTimeout');</pre>
 
 <p>Will write to the console:</p>
 
-<pre class="notranslate">After setTimeout
+<pre>After setTimeout
 foo has been called</pre>
 
 <p>This is because even though <code>setTimeout</code> was called with a delay of zero,
@@ -550,11 +608,7 @@ foo has been called</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/Add-ons/Code_snippets/Timers">JavaScript timers</a></li>
-  <li><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Timer.jsm">Timer.jsm</a></li>
   <li>{{domxref("WindowOrWorkerGlobalScope.clearTimeout")}}</li>
   <li>{{domxref("WindowOrWorkerGlobalScope.setInterval")}}</li>
   <li>{{domxref("window.requestAnimationFrame")}}</li>
-  <li><a href="/en-US/Add-ons/Code_snippets/Timers/Daemons"><em>Daemons</em>
-      management</a></li>
 </ul>

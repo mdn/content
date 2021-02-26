@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <var>elementClasses</var> = <var>elementNodeReference</var>.classList;
+<pre class="brush: js">const <var>elementClasses</var> = <var>elementNodeReference</var>.classList;
 </pre>
 
 <h3 id="Returns">Returns</h3>
@@ -138,7 +138,7 @@ if (typeof DOMTokenList !== "function") (function(window){
                 for(var innerI=0; innerI!==cI; ++innerI) if(tokens[innerI]===tokens[cI]) {sub++; continue a;}
                 resTokenList[cI-sub] = tokens[cI];
             }
-            for (var i=cLen-sub; i &lt; oldLen; ++i) delete resTokenList[i]; //remove trailing indexs
+            for (var i=cLen-sub; i &lt; oldLen; ++i) delete resTokenList[i]; //remove trailing indexes
             if(prop !== "classList") return;
             skipPropChange = 1, target.classList = resTokenList, target.className = strval;
             skipPropChange = 0, resTokenList.length = tokens.length - sub;
@@ -165,7 +165,7 @@ if (typeof DOMTokenList !== "function") (function(window){
                     for(var innerI=0; innerI!==cI; ++innerI) if(toks[innerI]===toks[cI]) {sub++; continue a;}
                     resTokenList[cI-sub] = toks[cI];
                 }
-                for (var i=cLen-sub; i &lt; oldLen; ++i) delete resTokenList[i]; //remove trailing indexs
+                for (var i=cLen-sub; i &lt; oldLen; ++i) delete resTokenList[i]; //remove trailing indexes
             }
         }); defineProperty(ele, " uCLp", { // for accessing the hidden prototype
             enumerable: 0, configurable: 0, writeable: 0, value: protoObj.prototype
@@ -248,7 +248,7 @@ if (typeof DOMTokenList !== "function") (function(window){
     version of <code>classList</code> and the W3 specs is that for IE6-8, there is no way
     to create an immutable object (an object whose properties cannot be directly
     modified). In IE9, however, it is possible through extending the prototype, freezing
-    the visible object, and overwritting native property methods. However, such actions
+    the visible object, and overwriting native property methods. However, such actions
     would not work in IE6-IE8 and, in IE9, slow the performance of the entire webpage to a
     snail's crawl, making these modifications completely impractical for this polyfill.
 </p>

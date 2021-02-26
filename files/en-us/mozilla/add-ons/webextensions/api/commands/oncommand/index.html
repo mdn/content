@@ -16,8 +16,7 @@ tags:
 
 <div>Fired when a command is executed using its associated keyboard shortcut.</div>
 
-
-<div>The listener is passed the command's name. This matches the name given to the command in its <a href="/en-US/Add-ons/WebExtensions/manifest.json/commands">manifest.json entry</a>.</div>
+<p>The listener is passed the command's name. This matches the name given to the command in its <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands">manifest.json entry</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -48,7 +47,7 @@ browser.commands.onCommand.hasListener(listener)
 
  <dl class="reference-values">
   <dt><code>name</code></dt>
-  <dd><code>string</code>. Name of the command. This matches the name given to the command in its <a href="/en-US/Add-ons/WebExtensions/manifest.json/commands">manifest.json entry</a>.</dd>
+  <dd><code>string</code>. Name of the command. This matches the name given to the command in its <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands">manifest.json entry</a>.</dd>
  </dl>
  </dd>
 </dl>
@@ -64,26 +63,24 @@ browser.commands.onCommand.hasListener(listener)
 <div>Given a manifest.json entry like this:</div>
 
 
-<div>
-<pre class="brush: json line-numbers language-json"><code class="language-json"><span class="key token">"commands":</span> <span class="punctuation token">{</span>
-  <span class="key token">"toggle-feature":</span> <span class="punctuation token">{</span>
-    <span class="key token">"suggested_key":</span> <span class="punctuation token">{</span>
-      <span class="key token">"default":</span> <span class="string token">"Ctrl+Shift+Y"</span>
-    <span class="punctuation token">}</span><span class="punctuation token">,</span>
-    <span class="key token">"description":</span> <span class="string token">"Send a 'toggle-feature' event"</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
-</div>
+<pre class="brush: json line-numbers language-json">&quot;commands&quot;: {
+  &quot;toggle-feature&quot;: {
+    &quot;suggested_key&quot;: {
+      &quot;default&quot;: &quot;Ctrl+Shift+Y&quot;
+    },
+    &quot;description&quot;: &quot;Send a 'toggle-feature' event&quot;
+  }
+}</pre>
 
-<div>You could listen for this particular command like this:</div>
+<p>You could listen for this particular command like this:</p>
 
 
 <div>
-<pre class="notranslate brush: js line-numbers language-js"><code class="language-js">browser<span class="punctuation token">.</span>commands<span class="punctuation token">.</span>onCommand<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>command<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">if</span> <span class="punctuation token">(</span>command <span class="operator token">==</span> <span class="string token">"toggle-feature"</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"toggling the feature!"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers language-js">browser.commands.onCommand.addListener(function(command) {
+  if (command == &quot;toggle-feature&quot;) {
+    console.log(&quot;toggling the feature!&quot;);
+  }
+});</pre>
 </div>
 
 <p>{{WebExtExamples}}</p>

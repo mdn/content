@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Message">Message</h2>
 
-<pre class="brush: js notranslate">TypeError: Invalid operand to 'in' (Edge)
+<pre class="brush: js">TypeError: Invalid operand to 'in' (Edge)
 TypeError: right-hand side of 'in' should be an object, got 'x' (Firefox)
 TypeError: cannot use 'in' operator to search for 'x' in 'y' (Firefox, Chrome)
 </pre>
@@ -39,12 +39,12 @@ TypeError: cannot use 'in' operator to search for 'x' in 'y' (Firefox, Chrome)
   the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in</code>
     operator</a>.</p>
 
-<pre class="brush: js example-bad notranslate">"Hello" in "Hello World";
+<pre class="brush: js example-bad">"Hello" in "Hello World";
 // TypeError: cannot use 'in' operator to search for 'Hello' in 'Hello World'</pre>
 
 <p>Instead you will need to use {{jsxref("String.prototype.indexOf()")}}, for example.</p>
 
-<pre class="brush: js example-good notranslate">"Hello World".indexOf("Hello") !== -1;
+<pre class="brush: js example-good">"Hello World".indexOf("Hello") !== -1;
 // true</pre>
 
 <h3 id="The_operand_cant_be_null_or_undefined">The operand can't be null or undefined</h3>
@@ -52,7 +52,7 @@ TypeError: cannot use 'in' operator to search for 'x' in 'y' (Firefox, Chrome)
 <p>Make sure the object you are inspecting isn't actually {{jsxref("null")}} or
   {{jsxref("undefined")}}.</p>
 
-<pre class="brush: js example-bad notranslate">var foo = null;
+<pre class="brush: js example-bad">var foo = null;
 "bar" in foo;
 // TypeError: cannot use 'in' operator to search for 'bar' in 'foo' (Chrome)
 // TypeError: right-hand side of 'in' should be an object, got null (Firefox)
@@ -60,7 +60,7 @@ TypeError: cannot use 'in' operator to search for 'x' in 'y' (Firefox, Chrome)
 
 <p>The <code>in</code> operator always expects an object.</p>
 
-<pre class="brush: js example-good notranslate">var foo = { baz: "bar" };
+<pre class="brush: js example-good">var foo = { baz: "bar" };
 "bar" in foo; // false
 
 "PI" in Math; // true
@@ -73,7 +73,7 @@ TypeError: cannot use 'in' operator to search for 'x' in 'y' (Firefox, Chrome)
   objects. The <code>in</code> operator checks the index number, not the value at that
   index.</p>
 
-<pre class="brush: js notranslate">var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+<pre class="brush: js">var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 3 in trees; // true
 "oak" in trees; // false</pre>
 

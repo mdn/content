@@ -33,7 +33,7 @@ tags:
 
 <p>The following example, extracted from <a href="https://googlechrome.github.io/samples/image-capture/photo-resolution.html">Chrome's Image Capture / Photo Resolution Sample</a>, uses the results from {{domxref("ImageCapture.getPhotoCapabilities()", "getPhotoCapabilities()")}} to modify the size of an input range. This example also shows how the {{domxref("ImageCapture")}} object is created using a {{domxref("MediaStreamTrack")}} retrieved from a device's {{domxref("MediaStream")}}. </p>
 
-<pre class="brush: js notranslate">const input = document.querySelector('input[type="range"]');
+<pre class="brush: js">const input = document.querySelector('input[type="range"]');
 
 var imageCapture;
 
@@ -79,7 +79,4 @@ navigator.mediaDevices.getUserMedia({video: true})
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.PhotoCapabilities")}}</p>
-</div>

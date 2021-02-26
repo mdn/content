@@ -17,7 +17,7 @@ tags:
   <p>Support for JavaScript APIs differs across browsers. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">Browser support for JavaScript APIs</a> for more details.</p>
  </li>
  <li>
-  <p>Support for <code>manifest.json</code> keys differs across browsers. See the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json#Browser_compatibility">"Browser compatibility" section</a> in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json"><code>manifest.json</code></a> page for more details.</p>
+  <p>Support for <code>manifest.json</code> keys differs across browsers. See the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json#browser_compatibility">"Browser compatibility" section</a> in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json"><code>manifest.json</code></a> page for more details.</p>
  </li>
  <li>
   <p>Javascript APIs:</p>
@@ -50,11 +50,11 @@ tags:
 <dl>
  <dt>In Chrome</dt>
  <dd>Extensions access privileged JavaScript APIs using the <code>chrome</code> namespace.
- <pre class="notranslate brush: js">chrome.browserAction.setIcon({path: "path/to/icon.png"});</pre>
+ <pre class="brush: js">chrome.browserAction.setIcon({path: "path/to/icon.png"});</pre>
  </dd>
  <dt>In Firefox (via the WebExtension API)</dt>
  <dd>The equivalent APIs are accessed using the <code>browser</code> namespace.
- <pre class="notranslate brush: js">browser.browserAction.setIcon({path: "path/to/icon.png"});</pre>
+ <pre class="brush: js">browser.browserAction.setIcon({path: "path/to/icon.png"});</pre>
  </dd>
 </dl>
 
@@ -63,7 +63,7 @@ tags:
 <dl>
  <dt>In Chrome</dt>
  <dd>Asynchronous APIs use callbacks to return values, and {{WebExtAPIRef("runtime.lastError")}} to communicate errors.
- <pre class="notranslate brush: js">function logCookie(c) {
+ <pre class="brush: js">function logCookie(c) {
   if (chrome.runtime.lastError) {
     console.error(chrome.runtime.lastError);
   } else {
@@ -78,7 +78,7 @@ chrome.cookies.set(
  </dd>
  <dt>In Firefox (via the WebExtension API)</dt>
  <dd>Asynchronous APIs use <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a> to return values instead.
- <pre class="notranslate brush: js">function logCookie(c) {
+ <pre class="brush: js">function logCookie(c) {
   console.log(c);
 }
 
@@ -115,7 +115,7 @@ setCookie.then(logCookie, logError);</pre>
 
 <ul>
  <li>
-  <p>For <code>notifications.create()</code>, with <code><a href="/en-US/Add-ons/WebExtensions/API/notifications/TemplateType">type</a> "basic"</code>:</p>
+  <p>For <code>notifications.create()</code>, with <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/TemplateType">type</a> "basic"</code>:</p>
 
   <dl>
    <dt>In Firefox</dt>
@@ -196,7 +196,7 @@ setCookie.then(logCookie, logError);</pre>
  </li>
 </ul>
 
-<h4 id="webRequest"><a href="/en-US/Add-ons/WebExtensions/API/webRequest" id="webRequest_incompatibilities">webRequest</a></h4>
+<h4 id="webRequest"><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest" id="webRequest_incompatibilities">webRequest</a></h4>
 
 <dl>
  <dt>In Firefox</dt>
@@ -369,3 +369,18 @@ setCookie.then(logCookie, logError);</pre>
  <dt>In Chrome</dt>
  <dd>The app manifest is expected in a different place. See <a href="https://developer.chrome.com/extensions/nativeMessaging#native-messaging-host-location">Native messaging host location</a> in the Chrome docs.</dd>
 </dl>
+
+<h2 id="Data_cloning_algorithm">Data cloning algorithm</h2>
+
+<p>Some extension APIs allow an extension to send data from one part of the extension to another, such as {{WebExtAPIRef("runtime.sendMessage()")}}, {{WebExtAPIRef("tabs.sendMessage()")}}, {{WebExtAPIRef("runtime.onMessage")}}, the <code>postMessage()</code> method of {{WebExtAPIRef("runtime.port")}}, and {{WebExtAPIRef("tabs.executeScript()")}}.</p>
+
+<dl>
+ <dt>In Firefox</dt>
+ <dd>The <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">Structured clone algorithm</a> is used.</dd>
+ <dt>In Chrome</dt>
+ <dd>The <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#description">JSON serialization algorithm</a> is used. It may switch to structured cloning in the future (<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=248548">issue 248548</a>).</dd>
+</dl>
+
+<p>The Structured clone algorithm supports more types than the JSON serialization algorithm. A notable exception are (DOM) objects with a <code>toJSON</code> method. DOM objects are not cloneable nor JSON-serializable by default, but with a <code>toJSON()</code> method, these can be JSON-serialized (but still not cloned with the structured cloning algorithm). Examples of JSON-serializable objects that are not structured cloneable include instances of {{domxref("URL")}} and {{domxref("PerformanceEntry")}}.</p>
+
+<p>Extension that rely on the <code>toJSON()</code> method of the JSON serialization algorithm can use {{jsxref("JSON.stringify()")}} followed by {{jsxref("JSON.parse()")}} to ensure that a message can be exchanged, because a parsed JSON value is always structurally cloneable.</p>

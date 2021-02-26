@@ -10,12 +10,11 @@ tags:
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p>The <code>await</code> operator is used to wait for a {{jsxref("Promise")}}. It can
-  only be used inside an {{jsxref("Statements/async_function", "async function")}}.</p>
+<p>The <code>await</code> operator is used to wait for a {{jsxref("Promise")}}. It can only be used inside an {{jsxref("Statements/async_function", "async function")}} within regular JavaScript code; however it can be used on its own with <a href="/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript modules.</a></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">[<em>rv</em>] = await <em>expression</em>;</pre>
+<pre class="brush: js">[<em>rv</em>] = await <em>expression</em>;</pre>
 
 <dl>
   <dt><code>expression</code></dt>
@@ -45,7 +44,7 @@ tags:
 <p>An <code>await</code> splits execution flow, allowing the caller of the async function
   to resume execution. After the <code>await</code> defers the continuation of the async
   function, execution of subsequent statements ensues. If this <code>await</code> is the
-  last expression executed by its function execution continues by returning to the
+  last expression executed by its function, execution continues by returning to the
   function's caller a pending <code>Promise</code> for completion of the
   <code>await</code>'s function and resuming execution of that caller.</p>
 
@@ -56,7 +55,7 @@ tags:
 <p>If a <code>Promise</code> is passed to an <code>await</code> expression, it waits for
   the <code>Promise</code> to be fulfilled and returns the fulfilled value.</p>
 
-<pre class="brush: js notranslate">function resolveAfter2Seconds(x) {
+<pre class="brush: js">function resolveAfter2Seconds(x) {
   return new Promise(resolve =&gt; {
     setTimeout(() =&gt; {
       resolve(x);
@@ -77,7 +76,7 @@ f1();
 <p>{{jsxref("Global_Objects/Promise/then", "Thenable objects")}} will be fulfilled just
   the same.</p>
 
-<pre class="brush: js notranslate">async function f2() {
+<pre class="brush: js">async function f2() {
   const thenable = {
     then: function(resolve, _reject) {
       resolve('resolved!')
@@ -94,7 +93,7 @@ f2();
 <p>If the value is not a <code>Promise</code>, it converts the value to a resolved
   <code>Promise</code>, and waits for it.</p>
 
-<pre class="brush: js notranslate">async function f3() {
+<pre class="brush: js">async function f3() {
   var y = await 20;
   console.log(y); // 20
 }
@@ -105,7 +104,7 @@ f3();</pre>
 
 <p>If the <code>Promise</code> is rejected, the rejected value is thrown.</p>
 
-<pre class="brush: js notranslate">async function f4() {
+<pre class="brush: js">async function f4() {
   try {
     var z = await Promise.reject(30);
   } catch(e) {
@@ -119,8 +118,22 @@ f4();</pre>
 
 <p>Handle rejected <code>Promise</code> without try block.</p>
 
-<pre class="brush: js notranslate">var response = await promisedFunction().catch((err) =&gt; { console.error(err); });
+<pre class="brush: js">var response = await promisedFunction().catch((err) =&gt; { console.error(err); });
 // response will be undefined if the promise is rejected
+</pre>
+
+<h3 id="Top-level-await">Top level await</h3>
+
+<p>You can use the <code>await</code> keyword on its own (outside of an async function) within a <a href="/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript module</a>. This means modules, with child modules that use <code>await</code>, wait for the child module to execute before they themselves run. All while not blocking other child modules from loading.</p>
+
+<p>Here is an example of a simple module using the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> and specifying await within the <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/export">export statement</a></code>. Any modules that include this will wait for the fetch to resolve before running any code.</p>
+
+<pre class="brush: js">
+// fetch request
+const colors = fetch('../data/colors.json')
+  .then(response => response.json());
+
+export default await colors;
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
@@ -136,15 +149,16 @@ f4();</pre>
       <td>{{SpecName("ESDraft", "#sec-async-function-definitions", "async functions")}}
       </td>
     </tr>
+    <tr>
+      <td>{{SpecName("Top Level Await", "#introduction", "Top level await")}}
+      </td>
+    </tr>
   </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.operators.await")}}</p>
-</div>
+<p>{{Compat("javascript.operators.await")}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -152,4 +166,5 @@ f4();</pre>
   <li>{{jsxref("Statements/async_function", "async function")}}</li>
   <li>{{jsxref("Operators/async_function", "async function expression")}}</li>
   <li>{{jsxref("AsyncFunction")}} object</li>
+  <li><a href="https://v8.dev/features/top-level-await">Top level await</a> on v8.dev</li>
 </ul>

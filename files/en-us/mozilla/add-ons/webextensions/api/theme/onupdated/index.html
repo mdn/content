@@ -13,8 +13,8 @@ tags:
 <p>Fires when a theme supplied as a browser extension is applied or removed. Specifically:</p>
 
 <ul>
- <li>when a <a href="/en-US/Add-ons/Themes/Theme_concepts#Static_themes">static theme</a> is installed</li>
- <li>when a <a href="/en-US/Add-ons/WebExtensions/API/theme">dynamic theme</a> calls <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/update">theme.update()</a></code> or <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/update">theme.reset()</a></code></li>
+ <li>when a <a href="/en-US/docs/Mozilla/Add-ons/Themes/Theme_concepts#static_themes">static theme</a> is installed</li>
+ <li>when a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme">dynamic theme</a> calls <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/update">theme.update()</a></code> or <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/update">theme.reset()</a></code></li>
  <li>when a theme gets uninstalled.</li>
 </ul>
 
@@ -71,7 +71,7 @@ browser.theme.onUpdated.hasListener(listener)
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="notranslate brush: js">function handleUpdated(updateInfo) {
+<pre class="brush: js">function handleUpdated(updateInfo) {
   if (updateInfo.theme.colors) {
     console.log(`Theme was applied: ${updateInfo.theme}`);
   } else {

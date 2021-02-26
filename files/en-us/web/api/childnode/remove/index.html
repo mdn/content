@@ -5,7 +5,6 @@ tags:
 - API
 - ChildNode
 - DOM
-- Experimental
 - Method
 ---
 <div>{{APIRef("DOM")}}</div>
@@ -15,19 +14,19 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>node</var>.remove();
+<pre class="brush: js"><var>node</var>.remove();
 </pre>
 
 <h2 id="Example">Example</h2>
 
 <h3 id="Using_remove">Using <code>remove()</code></h3>
 
-<pre class="brush: html notranslate">&lt;div id="div-01"&gt;Here is div-01&lt;/div&gt;
+<pre class="brush: html">&lt;div id="div-01"&gt;Here is div-01&lt;/div&gt;
 &lt;div id="div-02"&gt;Here is div-02&lt;/div&gt;
 &lt;div id="div-03"&gt;Here is div-03&lt;/div&gt;
 </pre>
 
-<pre class="brush: js notranslate">var el = document.getElementById('div-02');
+<pre class="brush: js">var el = document.getElementById('div-02');
 el.remove(); // Removes the div with the 'div-02' id
 </pre>
 
@@ -36,7 +35,7 @@ el.remove(); // Removes the div with the 'div-02' id
 <p>The <code>remove()</code> method is not scoped into the <code>with</code> statement.
   See {{jsxref("Symbol.unscopables")}} for more information.</p>
 
-<pre class="brush: js notranslate">with(node) {
+<pre class="brush: js">with(node) {
   remove();
 }
 // ReferenceError: remove is not defined </pre>
@@ -46,7 +45,7 @@ el.remove(); // Removes the div with the 'div-02' id
 <p>You can polyfill the <code>remove()</code> method in Internet Explorer 9 and higher
   with the following code:</p>
 
-<pre class="brush: js notranslate">// from:https://github.com/jserz/js_piece/blob/master/DOM/ChildNode/remove()/remove().md
+<pre class="brush: js">// from:https://github.com/jserz/js_piece/blob/master/DOM/ChildNode/remove()/remove().md
 (function (arr) {
   arr.forEach(function (item) {
     if (item.hasOwnProperty('remove')) {

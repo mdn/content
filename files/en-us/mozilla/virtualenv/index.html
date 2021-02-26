@@ -2,9 +2,9 @@
 title: Virtualenv
 slug: Mozilla/Virtualenv
 ---
-<p><a class="external" href="http://pypi.python.org/pypi/virtualenv">virtualenv</a> is software for isolating <a href="/en/Python">python</a> package environments (e.g. <code>import</code> paths). It is written by Mozilla's own <a class="external" href="https://www.ianbicking.org/">Ian Bicking</a>. Creating a virtualenv installs <a class="external" href="http://pypi.python.org/pypi/setuptools">setuptools</a> (or optionally <a class="external" href="http://packages.python.org/distribute/">distribute</a>) into the virtual environment. It is recommended that you use virtualenv for installing anything other than system software that you are working on.  You will obviate the need to have access to your system packages and you won't mess up your system packages with whatever code you install into the site-packages directory of the virtualenv.  <a class="external" href="http://blog.ianbicking.org/site-packages-considered-harmful.html">site-packages should mostly be for system-installed python and not python that you are installing as a user</a>.</p>
+<p><a class="external" href="http://pypi.python.org/pypi/virtualenv">virtualenv</a> is software for isolating <a href="/en-US/Glosdsty/Python">python</a> package environments (e.g. <code>import</code> paths). It is written by Mozilla's own <a class="external" href="https://www.ianbicking.org/">Ian Bicking</a>. Creating a virtualenv installs <a class="external" href="http://pypi.python.org/pypi/setuptools">setuptools</a> (or optionally <a class="external" href="http://packages.python.org/distribute/">distribute</a>) into the virtual environment. It is recommended that you use virtualenv for installing anything other than system software that you are working on.  You will obviate the need to have access to your system packages and you won't mess up your system packages with whatever code you install into the site-packages directory of the virtualenv.  <a class="external" href="http://blog.ianbicking.org/site-packages-considered-harmful.html">site-packages should mostly be for system-installed python and not python that you are installing as a user</a>.</p>
 
-<p>This page is mostly a stub for how virtualenv is used at Mozilla. For more information on virtualenv in general, see the <a class="external" href="http://virtualenv.org">virtualenv web site</a>. Python packaging at Mozilla is covered in <a href="/en/Python">Python</a>.</p>
+<p>This page is mostly a stub for how virtualenv is used at Mozilla. For more information on virtualenv in general, see the <a class="external" href="http://virtualenv.org">virtualenv web site</a>. Python packaging at Mozilla is covered in <a href="/en-US/Glossary/Python">Python</a>.</p>
 
 <h2 id="Getting_Virtualenv">Getting Virtualenv</h2>
 
@@ -12,14 +12,14 @@ slug: Mozilla/Virtualenv
 
 <p>If you have <a class="external" href="http://pypi.python.org/pypi/pip">pip</a> or <a class="external" href="http://packages.python.org/distribute/easy_install.html">easy_install</a>, you can install virtualenv directly from the web:</p>
 
-<pre class="notranslate">pip install virtualenv
+<pre>pip install virtualenv
 # -or-
 easy_install virtualenv
 </pre>
 
 <p>This will fetch virtualenv from <a class="external" href="http://pypi.python.org/pypi/virtualenv">PyPI</a> and install it in your <a class="external" href="http://docs.python.org/install/index.html">site-packages</a>. You may need to use <code>sudo</code> to obtain appropriate permissions for the system. If you do not have <code>pip</code> or <code>easy_install</code>, you will need to download <a class="external" href="http://pypi.python.org/pypi/virtualenv">from PyPI</a> or clone <a class="link-https" href="https://github.com/pypa/virtualenv">from the github virtualenv repository</a>, extract from the tarball (in the PyPI case), and run <code>python setup.py install</code>.  Again, you may need to use <code>sudo</code> to install globally.  If you're running Ubuntu, there is also an Ubuntu package available:</p>
 
-<pre class="notranslate">sudo apt-get install python-virtualenv
+<pre>sudo apt-get install python-virtualenv
 </pre>
 
 <p><a class="link-https" href="https://raw.github.com/pypa/virtualenv/develop/virtualenv.py">virtualenv.py</a> may also be run as standalone software with the same functionality.  It will require it to be part of a clone of <a class="link-https" href="https://github.com/pypa/virtualenv">the github repository</a> or have internet access to fetch setuptools.</p>
@@ -30,7 +30,7 @@ easy_install virtualenv
 
 <p>Once you have virtualenv installed, you can make virtual environments:</p>
 
-<pre class="notranslate">&gt; virtualenv tmp
+<pre>&gt; virtualenv tmp
 New python executable in tmp/bin/python
 Installing setuptools............done.
 Installing pip...............done.
@@ -38,7 +38,7 @@ Installing pip...............done.
 
 <p>A python binary, as well as <code>easy_install</code> and <code>pip</code> are available in the <code>bin/</code> subdirectory (or <code>Scripts</code> on windows).</p>
 
-<pre class="notranslate">&gt; ls tmp/bin/
+<pre>&gt; ls tmp/bin/
 activate      activate.fish     easy_install      pip      python
 activate.csh  activate_this.py  easy_install-2.7  pip-2.7
 </pre>
@@ -47,7 +47,7 @@ activate.csh  activate_this.py  easy_install-2.7  pip-2.7
 
 <h3 id="Unix_example">Unix example</h3>
 
-<pre class="notranslate">. bin/activate
+<pre>. bin/activate
 </pre>
 
 <p>Once the virtualenv is activated, the virtualenv's python (and other executables) will be on your <code>PATH</code> and you will have a new environment variable, <code>VIRTUAL_ENV</code>, that points to the path of the virtualenv, as well as a <code>deactivate</code> function for deactivating the virtualenv.</p>
@@ -57,10 +57,10 @@ activate.csh  activate_this.py  easy_install-2.7  pip-2.7
 <p>virtualenv does one thing well: creates isolated virtual environments of python packages. Due to its utility, tools have been built around this functionality. Here are a few such tools:</p>
 
 <ul>
- <li>carton: make a self-extracting virtualenv from directories or URLs of packages; <a class="external" href="http://pypi.python.org/pypi/carton" rel="freelink">http://pypi.python.org/pypi/carton</a></li>
- <li>velcro: a script that sets up a Python project for local installation; <a class="link-https" href="https://bitbucket.org/kumar303/velcro/" rel="freelink">https://bitbucket.org/kumar303/velcro/</a></li>
+ <li>carton: make a self-extracting virtualenv from directories or URLs of packages; <a class="external" href="http://pypi.python.org/pypi/carton">http://pypi.python.org/pypi/carton</a></li>
+ <li>velcro: a script that sets up a Python project for local installation; <a class="link-https" href="https://bitbucket.org/kumar303/velcro/">https://bitbucket.org/kumar303/velcro/</a></li>
  <li>
-  <p>virtualenvwrapper: a set of extensions to Ian Bicking’s <a class="reference external" href="http://pypi.python.org/pypi/virtualenv">virtualenv</a> tool for creating isolated Python development environments; <a class="external" href="http://www.doughellmann.com/projects/virtualenvwrapper" rel="freelink">http://www.doughellmann.com/projects...tualenvwrapper</a></p>
+  <p>virtualenvwrapper: a set of extensions to Ian Bicking’s <a class="reference external" href="http://pypi.python.org/pypi/virtualenv">virtualenv</a> tool for creating isolated Python development environments; <a class="external" href="http://www.doughellmann.com/projects/virtualenvwrapper">http://www.doughellmann.com/projects...tualenvwrapper</a></p>
  </li>
 </ul>
 
@@ -68,7 +68,7 @@ activate.csh  activate_this.py  easy_install-2.7  pip-2.7
 
 <p>In order to make use of various python modules located throughout mozilla-central, a virtualenv is created as part of the build process: http://mxr.mozilla.org/mozilla-central/source/js/src/build/autoconf/python-virtualenv.m4 . The virtualenv is created in <code>${OBJDIR}/_virtualenv</code> and should be recreated as part of the <a href="http://hg.mozilla.org/mozilla-central/file/0c45e6378f1f/client.mk#l260">configure step</a>.</p>
 
-<p>The <a href="http://mxr.mozilla.org/mozilla-central/source/build/virtualenv/populate_virtualenv.py">populate_virtualenv.py</a> script, when invoked, installs a list of packages, http://mxr.mozilla.org/mozilla-central/source/build/virtualenv/packages.txt , into the virtualenv via one of various methods.  The <a href="/en-US/docs/Developer_Guide/Build_Instructions">Mozilla build system</a> mostly uses <a href="http://docs.python.org/2/install/index.html#inst-search-path">.pth files</a> instead of the more typically used <code>python setup.py develop</code> or <code>python setup.py install</code> to install python modules in to the virtualenv's <a href="http://docs.python.org/2/library/sys.html#sys.path">python path</a> due to performance concerns (although such functionality is available via the <code>setup.py</code> keyword in a <code>packages.txt </code>file). When using this method, be aware that the parts of package installation invoked via <a href="http://packages.python.org/distribute/setuptools.html">setup.py</a>, such as console-script creation and dependency resolution, will not be invoked.</p>
+<p>The <a href="http://mxr.mozilla.org/mozilla-central/source/build/virtualenv/populate_virtualenv.py">populate_virtualenv.py</a> script, when invoked, installs a list of packages, http://mxr.mozilla.org/mozilla-central/source/build/virtualenv/packages.txt , into the virtualenv via one of various methods.  The <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions">Mozilla build system</a> mostly uses <a href="http://docs.python.org/2/install/index.html#inst-search-path">.pth files</a> instead of the more typically used <code>python setup.py develop</code> or <code>python setup.py install</code> to install python modules in to the virtualenv's <a href="http://docs.python.org/2/library/sys.html#sys.path">python path</a> due to performance concerns (although such functionality is available via the <code>setup.py</code> keyword in a <code>packages.txt </code>file). When using this method, be aware that the parts of package installation invoked via <a href="http://packages.python.org/distribute/setuptools.html">setup.py</a>, such as console-script creation and dependency resolution, will not be invoked.</p>
 
 <p>The virtualenv software, mirrored from a canonical version, lives in <a href="http://packages.python.org/distribute/setuptools.html">python/virtualenv</a>.</p>
 

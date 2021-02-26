@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>expr1</em> ||= <em>expr2</em>
+<pre class="brush: js"><em>expr1</em> ||= <em>expr2</em>
 </pre>
 
 <h2 id="Description">Description</h2>
@@ -33,7 +33,7 @@ tags:
 <p>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR">logical OR</a>
   operator works like this:</p>
 
-<pre class="brush: js notranslate">x || y;
+<pre class="brush: js">x || y;
 // returns x when x is truthy
 // returns y when x is not truthy</pre>
 
@@ -44,12 +44,12 @@ tags:
   the logical operation would evaluate the right-hand side. In other words,
   <code>x ||= y</code> is equivalent to:</p>
 
-<pre class="brush: js notranslate">x || (x = y);
+<pre class="brush: js">x || (x = y);
 </pre>
 
 <p>And not equivalent to the following which would always perform an assignment:</p>
 
-<pre class="brush: js notranslate example-bad">x = x || y;
+<pre class="brush: jsexample-bad">x = x || y;
 </pre>
 
 <p>Note that this behavior is different to mathematical and bitwise assignment operators.
@@ -62,7 +62,7 @@ tags:
 <p>If the "lyrics" element is empty, display a default value:</p>
 
 <pre
-  class="brush: js notranslate">document.getElementById('lyrics').textContent ||= 'No lyrics.'</pre>
+  class="brush: js">document.getElementById('lyrics').textContent ||= 'No lyrics.'</pre>
 
 <p>Here the short-circuit is especially beneficial, since the element will not be updated
   unnecessarily and won't cause unwanted side-effects such as additional parsing or

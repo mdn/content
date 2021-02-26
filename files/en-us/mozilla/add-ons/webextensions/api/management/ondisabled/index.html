@@ -14,7 +14,7 @@ tags:
 
 <p>Fired when an add-on is disabled.</p>
 
-<p>This API requires the "management" <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions">API permission</a>.</p>
+<p>This API requires the "management" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">API permission</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -60,7 +60,7 @@ browser.management.onDisabled.hasListener(listener)
 
 <p>Log the names of add-ons when they are disabled:</p>
 
-<pre class="notranslate brush: js">browser.management.onDisabled.addListener((info) =&gt; {
+<pre class="brush: js">browser.management.onDisabled.addListener((info) =&gt; {
   console.log(info.name + " was disabled");
 });</pre>
 

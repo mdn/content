@@ -7,7 +7,7 @@ tags:
   - Guide
 ---
 <ul>
- <li>Pull and build <a href="/en/Treehydra">Treehydra</a> if you haven't already.</li>
+ <li>Pull and build <a href="/en-US/docs/Treehydra">Treehydra</a> if you haven't already.</li>
  <li>The <code>sqlite3</code> tool. (On Linux, this should be provided by your distro.)</li>
 </ul>
 <h4 id="Pulling_the_source">Pulling the source</h4>
@@ -28,4 +28,4 @@ hg clone http://hg.mozilla.org/rewriting-and-analysis/callgraph
  <li>Construct the database, by aggregating the <code>.sql</code> files and running them through sqlite. This data goes into <code>$HOME/callgraph/db/graph.sqlite</code>, which can be inspected using <code>sqlite3</code>. (Documentation for the sqlite syntax can be found <a class="external" href="http://www.sqlite.org/lang.html">here</a>.)</li>
 </ul>
 <p>A different mozilla-central location can be used by editing the <code>$HOME/callgraph/callgraph.sh</code> script. The default mozconfig options are <code>--disable-optimize --disable-debug --disable-tests</code>.</p>
-<p>For information on what is stored in the database, see the <a href="/en/Callgraph/Schema_Reference">Schema Reference</a>.</p>
+<p>For information on what is stored in the database, see the <a href="/en-US/docs/Mozilla/Developer_guide/Callgraph/Schema_Reference">Schema Reference</a>.</p>

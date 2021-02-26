@@ -10,7 +10,7 @@ tags:
 <div>{{AddonSidebar}}</div>
 
 <div class="notecard note">
-<p>If you are already familiar with the basic concepts of browser extensions, skip this section to <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">see how extension files are put together</a>. Then, use the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions#Reference">reference documentation</a> to start building your extension. Visit <a href="https://extensionworkshop.com/?utm_source=developer.mozilla.org&amp;utm_medium=documentation&amp;utm_campaign=your-first-extension">Firefox Extension Workshop</a> to learn more about the workflow for testing, publishing, and extensions for Firefox.</p>
+<p>If you are already familiar with the basic concepts of browser extensions, skip this section to <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">see how extension files are put together</a>. Then, use the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions#reference">reference documentation</a> to start building your extension. Visit <a href="https://extensionworkshop.com/?utm_source=developer.mozilla.org&amp;utm_medium=documentation&amp;utm_campaign=your-first-extension">Firefox Extension Workshop</a> to learn more about the workflow for testing, publishing, and extensions for Firefox.</p>
 </div>
 
 <p>This article walks through creating an extension for Firefox, from start to finish. The extension adds a red border to any pages loaded from "mozilla.org" or any of its subdomains.</p>
@@ -52,20 +52,20 @@ cd borderify</pre>
 }</pre>
 
 <ul>
- <li>The first three keys: <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></code>, <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/name">name</a></code>, and <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/version">version</a></code>, are mandatory and contain basic metadata for the extension.</li>
- <li><code><a href="/en-US/Add-ons/WebExtensions/manifest.json/description">description</a></code> is optional, but recommended: it's displayed in the Add-ons Manager.</li>
- <li><code><a href="/en-US/Add-ons/WebExtensions/manifest.json/icons">icons</a></code> is optional, but recommended: it allows you to specify an icon for the extension, that will be shown in the Add-ons Manager.</li>
+ <li>The first three keys: <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name">name</a></code>, and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version">version</a></code>, are mandatory and contain basic metadata for the extension.</li>
+ <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description">description</a></code> is optional, but recommended: it's displayed in the Add-ons Manager.</li>
+ <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a></code> is optional, but recommended: it allows you to specify an icon for the extension, that will be shown in the Add-ons Manager.</li>
 </ul>
 
-<p>The most interesting key here is <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>, which tells Firefox to load a script into Web pages whose URL matches a specific pattern. In this case, we're asking Firefox to load a script called "borderify.js" into all HTTP or HTTPS pages served from "mozilla.org" or any of its subdomains.</p>
+<p>The most interesting key here is <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>, which tells Firefox to load a script into Web pages whose URL matches a specific pattern. In this case, we're asking Firefox to load a script called "borderify.js" into all HTTP or HTTPS pages served from "mozilla.org" or any of its subdomains.</p>
 
 <ul>
- <li><a href="/en-US/Add-ons/WebExtensions/Content_scripts">Learn more about content scripts.</a></li>
- <li><a href="/en-US/Add-ons/WebExtensions/Match_patterns">Learn more about match patterns</a>.</li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">Learn more about content scripts.</a></li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">Learn more about match patterns</a>.</li>
 </ul>
 
 <div class="warning">
-<p><a href="/en-US/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_add-on_ID">In some situations you need to specify an ID for your extension</a>. If you do need to specify an add-on ID, include the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a></code> key in <code>manifest.json</code> and set its <code>gecko.id</code> property:</p>
+<p><a href="https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when_do_you_need_an_add-on_id">In some situations you need to specify an ID for your extension</a>. If you do need to specify an add-on ID, include the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a></code> key in <code>manifest.json</code> and set its <code>gecko.id</code> property:</p>
 
 <pre class="brush: json">"browser_specific_settings": {
   "gecko": {
@@ -90,19 +90,19 @@ cd borderify</pre>
 <p>Alternatively, you could supply an SVG file here, and it will be scaled correctly. (Though: if you're using SVG and your icon includes text, you may want to use your SVG editor's "convert to path" tool to flatten the text, so that it scales with a consistent size/position.)</p>
 
 <ul>
- <li><a href="/en-US/Add-ons/WebExtensions/manifest.json/icons">Learn more about specifying icons.</a></li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">Learn more about specifying icons.</a></li>
 </ul>
 
 <h3 id="borderify.js">borderify.js</h3>
 
 <p>Finally, create a file called "borderify.js" directly under the "borderify" directory. Give it this content:</p>
 
-<pre class="notranslate brush: js">document.body.style.border = "5px solid red";</pre>
+<pre class="brush: js">document.body.style.border = "5px solid red";</pre>
 
 <p>This script will be loaded into the pages that match the pattern given in the <code>content_scripts</code> manifest.json key. The script has direct access to the document, just like scripts loaded by the page itself.</p>
 
 <ul>
- <li><a href="/en-US/Add-ons/WebExtensions/Content_scripts">Learn more about content scripts.</a></li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">Learn more about content scripts.</a></li>
 </ul>
 
 <h2 id="Trying_it_out">Trying it out</h2>
@@ -123,7 +123,7 @@ cd borderify</pre>
 
 <p>The extension will now be installed, and will stay until you restart Firefox.</p>
 
-<p>Alternatively, you can run the extension from the command line using the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">web-ext</a> tool.</p>
+<p>Alternatively, you can run the extension from the command line using the <a href="https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/">web-ext</a> tool.</p>
 
 <h3 id="Testing">Testing</h3>
 
@@ -140,21 +140,21 @@ cd borderify</pre>
 <p>{{EmbedYouTube("NuajE60jfGY")}}</p>
 
 <ul>
- <li><a href="/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">Learn more about loading extensions</a></li>
+ <li><a href="https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/">Learn more about loading extensions</a></li>
 </ul>
 
 <h2 id="Packaging_and_publishing">Packaging and publishing</h2>
 
-<p>For other people to use your extension, you need to package it and submit it to Mozilla for signing. To learn more about that, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension">"Publishing your extension"</a>.</p>
+<p>For other people to use your extension, you need to package it and submit it to Mozilla for signing. To learn more about that, see <a href="https://extensionworkshop.com/documentation/publish/package-your-extension/">"Publishing your extension"</a>.</p>
 
 <h2 id="Whats_next">What's next?</h2>
 
 <p>Now you've had an introduction to the process of developing a WebExtension for Firefox:</p>
 
 <ul>
- <li><a href="/en-US/Add-ons/WebExtensions/Your_second_WebExtension">write a more complex extension</a></li>
- <li><a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">read more about the anatomy of an extension</a></li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension">write a more complex extension</a></li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">read more about the anatomy of an extension</a></li>
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples">explore the extension examples</a></li>
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next_">find out what you need to develop, test, and publish your extension</a></li>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next_#Continue_your_learning_experience">take your learning further</a>.</li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next_#continue_your_learning_experience">take your learning further</a>.</li>
 </ul>

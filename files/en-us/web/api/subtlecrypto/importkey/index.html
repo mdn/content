@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <em>result</em> = <em>crypto</em><code>.subtle.importKey(
+<pre class="brush: js">const <em>result</em> = <em>crypto</em><code>.subtle.importKey(
 <em>    format</em>,
     <em>keyData</em>,
     <em>algorithm</em>,
@@ -38,11 +38,11 @@ tags:
     import. It can be one of the following:
 
     <ul>
-      <li><code>raw</code>: <a href="#Raw">Raw</a> format.</li>
-      <li><code>pkcs8</code>: <a href="#PKCS_8">PKCS #8</a> format.</li>
-      <li><code>spki</code>: <a href="#SubjectPublicKeyInfo">SubjectPublicKeyInfo</a>
+      <li><code>raw</code>: <a href="#raw">Raw</a> format.</li>
+      <li><code>pkcs8</code>: <a href="#pkcs_8">PKCS #8</a> format.</li>
+      <li><code>spki</code>: <a href="#subjectpublickeyinfo">SubjectPublicKeyInfo</a>
         format.</li>
-      <li><code>jwk</code>: <a href="#JSON_Web_Key">JSON Web Key</a> format.</li>
+      <li><code>jwk</code>: <a href="#json_web_key">JSON Web Key</a> format.</li>
     </ul>
   </li>
   <li><code><em>keyData</em></code> is an {{domxref("ArrayBuffer")}}, a <a
@@ -149,7 +149,7 @@ tags:
     href="https://en.wikipedia.org/wiki/Abstract_Syntax_Notation_One">ASN.1 notation</a>:
 </p>
 
-<pre class="brush: plain notranslate">PrivateKeyInfo ::= SEQUENCE {
+<pre class="brush: plain">PrivateKeyInfo ::= SEQUENCE {
     version                   Version,
     privateKeyAlgorithm       PrivateKeyAlgorithmIdentifier,
     privateKey                PrivateKey,
@@ -168,7 +168,7 @@ tags:
     href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64-encoded</a>
   binary data. A PEM-encoded <code>PrivateKeyInfo</code> looks like this:</p>
 
-<pre class="brush: plain notranslate">-----BEGIN PRIVATE KEY-----
+<pre class="brush: plain">-----BEGIN PRIVATE KEY-----
 MIG2AgEAMBAGByqGSM49AgEGBSuBBAAiBIGeMIGbAgEBBDAU9BD0jxDfF5OV380z
 9VIEUN2W5kJDZ3hbuaDenCxLiAMsoquKTfFaou71eLdN0TShZANiAARMUhCee/cp
 xmjGc1roj0D0k6VlUqtA+JVCWigXcIAukOeTHCngZDKCrD4PkXDBvbciJdZKvO+l
@@ -187,7 +187,7 @@ ml2FIkoovZh/8yeTKmjUMb804g6OmjUc9vVojCRV0YdaSmYkkJMJbLg=
   </li>
 </ul>
 
-<p>See the <a href="#Examples">Examples</a> section for more concrete guidance.</p>
+<p>See the <a href="#examples">Examples</a> section for more concrete guidance.</p>
 
 <h3 id="SubjectPublicKeyInfo">SubjectPublicKeyInfo</h3>
 
@@ -198,11 +198,11 @@ ml2FIkoovZh/8yeTKmjUMb804g6OmjUc9vVojCRV0YdaSmYkkJMJbLg=
   the <a href="https://en.wikipedia.org/wiki/Abstract_Syntax_Notation_One">ASN.1
     notation:</a></p>
 
-<pre class="brush: plain notranslate">SubjectPublicKeyInfo  ::=  SEQUENCE  {
+<pre class="brush: plain">SubjectPublicKeyInfo  ::=  SEQUENCE  {
     algorithm            AlgorithmIdentifier,
     subjectPublicKey     BIT STRING  }</pre>
 
-<p>Just like <a href="#PKCS_8">PKCS #8</a>, the <code>importKey()</code> method expects to
+<p>Just like <a href="#pkcs_8">PKCS #8</a>, the <code>importKey()</code> method expects to
   receive this object as an
   <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code>
   containing the <a href="http://luca.ntop.org/Teaching/Appunti/asn1.html">DER-encoded</a>
@@ -212,7 +212,7 @@ ml2FIkoovZh/8yeTKmjUMb804g6OmjUc9vVojCRV0YdaSmYkkJMJbLg=
     href="https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail">PEM format</a>. A
   PEM-encoded <code>SubjectPublicKeyInfo</code> looks like this:</p>
 
-<pre class="brush: plain notranslate">-----BEGIN PUBLIC KEY-----
+<pre class="brush: plain">-----BEGIN PUBLIC KEY-----
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3j+HgSHUnc7F6XzvEbD0
 r3M5JNy+/kabiJVu8IU1ERAl3Osi38VgiMzjDBDOrFxVzNNzl+SXAHwXIV5BHiXL
 CQ6qhwYsDgH6OqgKIwiALra/wNH4UHxj1Or/iyAkjHRR/kGhUtjyVCjzvaQaDpJW
@@ -222,7 +222,7 @@ CDPUBUA3HLsZUhKm3BbSkd7Q9Ngkjv3+yByo4/fL+fkYRa8j9Ypa2N0Iw53LFb3B
 gQIDAQAB
 -----END PUBLIC KEY-----</pre>
 
-<p>Just as with <a href="#PKCS_8">PKCS #8</a>, to get this into a format you can give to
+<p>Just as with <a href="#pkcs_8">PKCS #8</a>, to get this into a format you can give to
   <code>importKey()</code> you need to do two things:</p>
 
 <ul>
@@ -234,7 +234,7 @@ gQIDAQAB
   </li>
 </ul>
 
-<p>See the <a href="#Examples">Examples</a> section for more concrete guidance.</p>
+<p>See the <a href="#examples">Examples</a> section for more concrete guidance.</p>
 
 <h3 id="JSON_Web_Key">JSON Web Key</h3>
 
@@ -247,7 +247,7 @@ gQIDAQAB
 
 <p>A JSON Web Key looks something like this (this is an EC private key):</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "crv": "P-384",
   "d": "wouCtU7Nw4E8_7n5C1-xBjB4xqSb_liZhYMsy8MGgxUny6Q8NCoH9xSiviwLFfK_",
   "ext": true,
@@ -272,7 +272,7 @@ gQIDAQAB
     href="https://github.com/mdn/dom-examples/blob/master/web-crypto/import-key/raw.js"
     rel="noopener">See the complete code on GitHub.</a></p>
 
-<pre class="brush: js notranslate">const rawKey = window.crypto.getRandomValues(new Uint8Array(16));
+<pre class="brush: js">const rawKey = window.crypto.getRandomValues(new Uint8Array(16));
 
 /*
 Import an AES secret key from an ArrayBuffer containing the raw bytes.
@@ -296,7 +296,7 @@ function importSecretKey(rawKey) {
     href="https://github.com/mdn/dom-examples/blob/master/web-crypto/import-key/pkcs8.js"
     rel="noopener">See the complete code on GitHub.</a></p>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
 Convert a string into an ArrayBuffer
 from https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
 */
@@ -352,7 +352,7 @@ function importPrivateKey(pem) {
     href="https://github.com/mdn/dom-examples/blob/master/web-crypto/import-key/spki.js"
     rel="noopener">See the complete code on GitHub.</a></p>
 
-<pre class="brush: js notranslate">  // from https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
+<pre class="brush: js">  // from https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
   function str2ab(str) {
     const buf = new ArrayBuffer(str.length);
     const bufView = new Uint8Array(buf);
@@ -395,7 +395,7 @@ MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy3Xo3U13dc+xojwQYWoJLCbOQ5fOVY8Llnqc
     href="https://github.com/mdn/dom-examples/blob/master/web-crypto/import-key/jwk.js"
     rel="noopener">See the complete code on GitHub.</a></p>
 
-<pre class="brush: js notranslate">const jwkEcKey = {
+<pre class="brush: js">const jwkEcKey = {
   "crv": "P-384",
   "d": "wouCtU7Nw4E8_7n5C1-xBjB4xqSb_liZhYMsy8MGgxUny6Q8NCoH9xSiviwLFfK_",
   "ext": true,

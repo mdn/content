@@ -32,7 +32,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">let <em>matrix</em> = <em>xrRigidTransform</em>.matrix;</pre>
+  class="brush: js">let <em>matrix</em> = <em>xrRigidTransform</em>.matrix;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -174,9 +174,7 @@ tags:
     </semantics>
   </math></p>
 
-<p>The first time <code>matrix</code> is requested, it gets computed; after that, it's
-  should be cached to avoid slowing
-  down to compute it every time you need it.</p>
+<p>On the first request, the <code>matrix</code> gets computed. After that, it should be cached for performance reasons.</p>
 
 <h3 id="Creating_the_matrix">Creating the matrix</h3>
 
@@ -847,7 +845,7 @@ tags:
   the transform matrix specified
   to position and orient it.</p>
 
-<pre class="brush: js notranslate">let transform = new XRRigidTransform(
+<pre class="brush: js">let transform = new XRRigidTransform(
                       {x: 0, y: 0.5, z: 0.5},
                       {x: 0, y: -0.5, z: -0.5, w: 1});
 drawGLObject("magic-lamp", transform.matrix);

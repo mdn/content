@@ -50,7 +50,7 @@ browser.tabs.onAttached.hasListener(listener)
 
  <dl class="reference-values">
   <dt><code>attachInfo</code></dt>
-  <dd><a href="#attachInfo"><code>object</code></a>. ID of the new window, and index of the tab within it.</dd>
+  <dd><a href="#attachinfo"><code>object</code></a>. ID of the new window, and index of the tab within it.</dd>
  </dl>
  </dd>
 </dl>
@@ -70,7 +70,7 @@ browser.tabs.onAttached.hasListener(listener)
 
 <p>Listen for attach events, and log the info:</p>
 
-<pre class="notranslate brush: js">function handleAttached(tabId, attachInfo) {
+<pre class="brush: js">function handleAttached(tabId, attachInfo) {
   console.log("Tab: " + tabId + " attached");
   console.log("New window: " + attachInfo.newWindowId);
   console.log("New index: " + attachInfo.newPosition);

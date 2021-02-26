@@ -2,14 +2,14 @@
 title: BaseAudioContext.state
 slug: Web/API/BaseAudioContext/state
 tags:
-- API
-- Audio
-- AudioContext
-- BaseAudioContext
-- Property
-- Reference
-- Web Audio API
-- state
+  - API
+  - Audio
+  - AudioContext
+  - BaseAudioContext
+  - Property
+  - Reference
+  - Web Audio API
+  - state
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">baseAudioContext.state;</pre>
+<pre class="brush: js">baseAudioContext.state;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -41,7 +41,7 @@ tags:
 <p>The following snippet is taken from our <a
     href="https://github.com/mdn/webaudio-examples">AudioContext states demo</a> (<a
     href="https://mdn.github.io/webaudio-examples/audiocontext-states/">see it running
-    live</a>.) The {{domxref("AudioContext.onstatechange")}} handler is used to log the
+    live</a>.) The {{domxref("BaseAudioContext/onstatechange", "AudioContext.onstatechange")}} handler is used to log the
   current state to the console every time it changes.</p>
 
 <pre class="brush: js">audioCtx.onstatechange = function() {
@@ -85,16 +85,11 @@ function play() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-  <div>
-
-    <p>{{Compat("api.BaseAudioContext.state")}}</p>
-  </div>
-</div>
+<p>{{Compat("api.BaseAudioContext.state")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
   </li>
 </ul>

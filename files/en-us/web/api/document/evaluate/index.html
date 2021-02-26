@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var xpathResult = document.evaluate(
+<pre class="brush: js">var xpathResult = document.evaluate(
   xpathExpression,
   contextNode,
   namespaceResolver,
@@ -27,7 +27,7 @@ tags:
 	<li><code>xpathExpression</code> is a string representing the XPath to be evaluated.
 	</li>
 	<li><code>contextNode</code> specifies the <em>context node</em> for the query (see
-		the <a class="external" href="https://www.w3.org/TR/xpath" rel="freelink">XPath
+		the <a href="https://www.w3.org/TR/xpath">XPath
 			specification</a>). It's common to pass <code>document</code> as the context
 		node.</li>
 	<li><code>namespaceResolver</code> is a function that will be passed any namespace
@@ -36,7 +36,7 @@ tags:
 		they can be matched with the document. <code>null</code> is common for HTML
 		documents or when no namespace prefixes are used.</li>
 	<li><code>resultType</code> is an integer that corresponds to the type of result
-		<code>XPathResult</code> to return. Use <a href="#Result_types">named constant
+		<code>XPathResult</code> to return. Use <a href="#result_types">named constant
 			properties</a>, such as <code>XPathResult.ANY_TYPE</code>, of the XPathResult
 		constructor, which correspond to integers from 0 to 9.</li>
 	<li><code>result</code> is an existing <code>XPathResult</code> to use for the

@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword value */
+<pre class="brush:css no-line-numbers">/* Keyword value */
 letter-spacing: normal;
 
 /* &lt;length&gt; values */
@@ -53,13 +53,19 @@ letter-spacing: unset;
  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html" rel="noopener">Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
+<h2 id="Internationalization_concerns">Internationalization concerns</h2>
+
+<p>Some written languages should not have any letter spacing applied. For instance, languages that use the Arabic script expect connected letters to remain visually connected, as in the following example. Appyling letter spacing will lead the text to look broken.</p>
+
+<blockquote><p lang="ar" dir="rtl">شسيبتنمك</p></blockquote>
+
 <h2 id="Formal_definition">Formal definition</h2>
 
 <p>{{cssinfo}}</p>
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -67,7 +73,7 @@ letter-spacing: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p class="normal"&gt;letter spacing&lt;/p&gt;
+<pre class="brush: html">&lt;p class="normal"&gt;letter spacing&lt;/p&gt;
 &lt;p class="em-wide"&gt;letter spacing&lt;/p&gt;
 &lt;p class="em-wider"&gt;letter spacing&lt;/p&gt;
 &lt;p class="em-tight"&gt;letter spacing&lt;/p&gt;
@@ -76,7 +82,7 @@ letter-spacing: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">.normal   { letter-spacing: normal; }
+<pre class="brush: css">.normal   { letter-spacing: normal; }
 .em-wide  { letter-spacing: 0.4em; }
 .em-wider { letter-spacing: 1em; }
 .em-tight { letter-spacing: -0.05em; }

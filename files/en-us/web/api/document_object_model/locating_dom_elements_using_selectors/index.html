@@ -21,17 +21,17 @@ tags:
 
 <div class="note"><strong>Note:</strong> The {{domxref("NodeList")}} returned by {{domxref("Element.querySelectorAll()", "querySelectorAll()")}} is not live, which means that changes in the DOM are not reflected in the collection. This is different from other DOM querying methods that return live node lists.</div>
 
-<p>You may find examples and details by reading the documentation for the {{domxref("Element.querySelector()")}} and {{domxref("Element.querySelectorAll()")}} methods, as well as in the article <a class="internal" href="/en-US/docs/Code_snippets/QuerySelector" title="en-US/docs/Code snippets/QuerySelector">Code snippets for querySelector</a>.</p>
+<p>You may find examples and details by reading the documentation for the {{domxref("Element.querySelector()")}} and {{domxref("Element.querySelectorAll()")}} methods.</p>
 
 <h2 id="Selectors">Selectors</h2>
 
 <p>The selector methods accept one or more comma-separated selectors to determine what element or elements should be returned. For example, to select all paragraph (<code>p</code>) elements in a document whose CSS class is either <code>warning</code> or <code>note</code>, you can do the following:</p>
 
-<pre class="brush: js notranslate">var special = document.querySelectorAll("p.warning, p.note");</pre>
+<pre class="brush: js">var special = document.querySelectorAll("p.warning, p.note");</pre>
 
 <p>You can also query by ID. For example:</p>
 
-<pre class="brush: js notranslate">var el = document.querySelector("#main, #basic, #exclamation");</pre>
+<pre class="brush: js">var el = document.querySelector("#main, #basic, #exclamation");</pre>
 
 <p>After executing the above code, <code>el</code> contains the first element in the document whose ID is one of <code>main</code>, <code>basic</code>, or <code>exclamation</code>.</p>
 
@@ -40,10 +40,9 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a class="external" href="https://www.w3.org/TR/selectors-api/">Selectors API</a></li>
+ <li><a href="https://www.w3.org/TR/selectors-api/">Selectors API</a></li>
  <li>{{domxref("Element.querySelector()")}}</li>
  <li>{{domxref("Element.querySelectorAll()")}}</li>
  <li>{{domxref("Document.querySelector()")}}</li>
  <li>{{domxref("Document.querySelectorAll()")}}</li>
- <li><a href="/en-US/docs/Code_snippets/QuerySelector">Code snippets for querySelector</a></li>
 </ul>

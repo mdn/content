@@ -85,7 +85,7 @@ tags:
 
 <h3 id="Removing_performance_marks">Removing performance <code>marks</code></h3>
 
-<p>The {{domxref("Performance.clearMarks","performance.clearMarks()")}} method is used to remove one or more marks from the browser's performance timeline. If a specific mark <em>name</em> is given to this method, only the mark(s) with that name will be removed. However, if no argument is given, then all {{domxref("PerformanceEntry","performance entries")}} of type "<code>mark</code>" will be removed from the performance timeline. The following example demostrates both uses of this method.</p>
+<p>The {{domxref("Performance.clearMarks","performance.clearMarks()")}} method is used to remove one or more marks from the browser's performance timeline. If a specific mark <em>name</em> is given to this method, only the mark(s) with that name will be removed. However, if no argument is given, then all {{domxref("PerformanceEntry","performance entries")}} of type "<code>mark</code>" will be removed from the performance timeline. The following example demonstrates both uses of this method.</p>
 
 <pre class="brush: js highlight:[10,14]">function clear_marks(obj) {
   if (performance.clearMarks === undefined) {

@@ -2,18 +2,18 @@
 title: CSSStyleSheet.insertRule()
 slug: Web/API/CSSStyleSheet/insertRule
 tags:
-- API
-- CSSOM
-- CSSStyleSheet
-- Method
-- Reference
+  - API
+  - CSSOM
+  - CSSStyleSheet
+  - Method
+  - Reference
 ---
 <div>{{APIRef("CSSOM")}}</div>
 
 <p><span class="seoSummary">The <strong><code>CSSStyleSheet.insertRule()</code></strong>
     method inserts a new <a href="/en-US/docs/Web/API/CSSRule">CSS rule</a> into the <a
       href="/en-US/docs/Web/API/CSSStyleSheet">current style sheet</a>, with some <a
-      href="#Restrictions">restrictions</a>.</span></p>
+      href="#restrictions">restrictions</a>.</span></p>
 
 <div class="note">
   <p><strong>Note:</strong> Although <code>insertRule()</code> is exclusively a method of
@@ -25,7 +25,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>stylesheet</var>.insertRule(<var>rule</var> [, <var>index</var>])</pre>
+  class="brush: js"><var>stylesheet</var>.insertRule(<var>rule</var> [, <var>index</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -37,8 +37,8 @@ tags:
 
     <ul>
       <li><strong>For <a
-            href="/en-US/docs/Web/CSS/Syntax#CSS_statements">rule-sets</a></strong>, both
-        a <a href="/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors">selector</a> and a
+            href="/en-US/docs/Web/CSS/Syntax#css_statements">rule-sets</a></strong>, both
+        a <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">selector</a> and a
         style declaration.</li>
       <li><strong>For <a href="/en-US/docs/Web/CSS/At-rule">at-rules</a></strong>, both an
         at-identifier and the rule content.</li>
@@ -49,7 +49,7 @@ tags:
     representing the newly inserted rule's position in
     <code>{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules</code>. The default is
     <code>0</code>. (In older implementations, this was required. See <a
-      href="#Browser_compatibility">Browser compatibility</a> for details.)</dd>
+      href="#browser_compatibility">Browser compatibility</a> for details.)</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -219,9 +219,9 @@ function addStylesheetRules (rules) {
   <code>addRule('pre', 'font: 14px verdana'); // add rule at end</code></p>
 
 <p>Also note the non-standard
-  <code><a class="external" href="http://www.quirksmode.org/dom/w3c_css.html#change">removeRule()</a></code>
+  <code><a href="http://www.quirksmode.org/dom/w3c_css.html#change">removeRule()</a></code>
   and
-  <code><a class="external" href="http://www.quirksmode.org/dom/w3c_css.html#access">.rules</a></code>
+  <code><a href="http://www.quirksmode.org/dom/w3c_css.html#access">.rules</a></code>
   instead of {{domxref("CSSStyleSheet.deleteRule","deleteRule()")}} and
   {{domxref("CSSStyleSheet",".cssRules")}}, respectively.</p>
 
@@ -232,6 +232,6 @@ function addStylesheetRules (rules) {
   <li><a class="external"
       href="http://www-archive.mozilla.org/docs/web-developer/css1technote/css1tojs.html#priority">Cross-Browser
       CSS-rules ordering (CSS1)</a></li>
-  <li><a class="external" href="http://www.quirksmode.org/dom/w3c_css.html">Quirksmode -
+  <li><a href="http://www.quirksmode.org/dom/w3c_css.html">Quirksmode -
       CSS</a></li>
 </ul>

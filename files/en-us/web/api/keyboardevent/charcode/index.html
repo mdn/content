@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>code</em> = <em>event</em>.charCode;
+<pre class="brush: js">var <em>code</em> = <em>event</em>.charCode;
 </pre>
 
 <h3 id="Return_value">Return value</h3>
@@ -34,13 +34,13 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;Type anything into the input box below to log a &lt;code&gt;charCode&lt;/code&gt;.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Type anything into the input box below to log a &lt;code&gt;charCode&lt;/code&gt;.&lt;/p&gt;
 &lt;input type="text" /&gt;
 &lt;p id="log"&gt;&lt;/p&gt;</pre>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">let input = document.querySelector('input');
+<pre class="brush: js">let input = document.querySelector('input');
 let log = document.querySelector('#log');
 
 input.addEventListener('keypress', function(e) {
@@ -62,7 +62,7 @@ input.addEventListener('keypress', function(e) {
     whether the <kbd>shift</kbd> key is held down). Otherwise, the code of the pressed key
     is stored in <code>keyCode</code>.</li>
   <li>When one or more modifier keys are pressed, there are some complex rules for
-    <code>charCode</code>. See <a href="/en/Gecko_Keypress_Event">Gecko Keypress Event</a>
+    <code>charCode</code>. See <a href="/en-US/docs/Gecko_Keypress_Event">Gecko Keypress Event</a>
     for details.</li>
   <li><code>charCode</code> is never set in the {{Event("keydown")}} and
     {{Event("keyup")}} events. In these cases, <code>keyCode</code> is set instead.</li>

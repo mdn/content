@@ -28,7 +28,8 @@ tags:
 </table>
 
 <div class="notecard note">
-<p>This is a high-level introduction to optimizing multimedia delivery on the web, covering general principles and techniques.  For a more in-depth guide, see  <a href="https://images.guide">https://images.guide</a>.</p>
+  <h4>Note</h4>
+  <p>This is a high-level introduction to optimizing multimedia delivery on the web, covering general principles and techniques. For a more in-depth guide, see  <a href="https://images.guide">https://images.guide</a>.</p>
 </div>
 
 <h2 id="Why_optimize_your_multimedia">Why optimize your multimedia?</h2>
@@ -41,11 +42,11 @@ tags:
 
 <h2 id="Optimizing_image_delivery">Optimizing image delivery</h2>
 
-<p>Despite being the largest consumer of bandwidth, images load asynchronously so the visitor can see the page as they download and therefore, their impact on <a href="/en-US/docs/Learn/Performance/perceived_performance">perceived performance</a> is far lower than many expect. However, images are mostly used for content, so it's important that a visitor can see them as soon as possible for a good experience.</p>
+<p>Despite being the largest consumer of bandwidth, the impact of image downloading on <a href="/en-US/docs/Learn/Performance/Perceived_performance">perceived performance</a> is far lower than many expect (primarily because the page text content is downloaded immediately and users can see the images being rendered as they arrive). However for a good user experience it's still important that a visitor can see them as soon as possible.</p>
 
 <h3 id="Loading_strategy">Loading strategy</h3>
 
-<p>One of the biggest improvements to most websites is <a href="/en-US/docs/Learn/Performance/Lazy_loading">lazy-loading</a> images beneath-the-fold, rather than downloading them all on initial page load regardless of whether a visitor scrolls to see them or not. Many JavaScript libraries can implement this for you, such as <a href="https://github.com/aFarkas/lazysizes" rel="noopener">lazysizes</a>, and browser vendors are working on a native <code>lazyload</code> attribute that is currently in the experimental phase.</p>
+<p>One of the biggest improvements to most websites is <a href="/en-US/docs/Web/Performance/Lazy_loading">lazy-loading</a> images beneath-the-fold, rather than downloading them all on initial page load regardless of whether a visitor scrolls to see them or not. Many JavaScript libraries can implement this for you, such as <a href="https://github.com/aFarkas/lazysizes" rel="noopener">lazysizes</a>, and browser vendors are working on a native <code>lazyload</code> attribute that is currently in the experimental phase.</p>
 
 <p>Beyond loading a subset of images, next you should look into the format of the images themselves:</p>
 
@@ -59,7 +60,12 @@ tags:
 
 <p>The optimal file format typically depends on the character of the image.</p>
 
-<p>The less colors an image has and the less photographic it is, the better it is to use the <strong>SVG </strong>format. This requires the source to be available as in a vector graphic format. Should such an image only exist as a bitmap, then <strong>PNG</strong> would be the fallback format to chose. Examples for these types of motifs are logos, illustrations, charts or icons (note: SVGs are far better than icon fonts!). Both formats support transparency.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>For general information on image types see the <a href="/en-US/docs/Web/Media/Formats/Image_types">Image file type and format guide</a></p>
+</div>    
+
+<p>The <a href="/en-US/docs/Web/Media/Formats/Image_types#svg">SVG</a> format is more appropriate for images that have few colors and that are not photo-realistic. This requires the source to be available as in a vector graphic format. Should such an image only exist as a bitmap, then <a href="/en-US/docs/Web/Media/Formats/Image_types#png">PNG</a> would be the fallback format to chose. Examples for these types of motifs are logos, illustrations, charts or icons (note: SVGs are far better than icon fonts!). Both formats support transparency.</p>
 
 <p>PNGs can be saved with three different output combinations:</p>
 
@@ -76,19 +82,19 @@ tags:
 <p>Other formats improve on JPEG's capabilities in regards to compression, but are not available on every browser: </p>
 
 <ul>
- <li><strong>WebP </strong>— created by Google and nowadays supported by all major browsers except Safari. Supports transparency and also animation, but not progressive display. </li>
- <li><strong>JPEG-XR </strong>— created by Microsoft and only available in Internet Explorer and EdgeHTML based Edge. Doesn't support progressive display and the image decoding is not hardware accelerated and therefore resource-intensive on the browser's main thread. Progressive JPEG above-the-fold is that they render progressively (hence the name), meaning the user sees a low-resolution version that gains clarity as the image downloads, rather than the image loading at full resolution top-to-bottom or even only rendering once completely downloaded.</li>
- <li><strong>JPEG2000 </strong>— once to be successor to JPEG but only supported in Safari. Doesn't support progressive display either.</li>
- <li><strong>AVIF </strong>— created by  <a href="https://aomedia.org/">Alliance for Open Media (AOMedia)</a> is an image format created from the AV1 video frames in the <a href="https://en.wikipedia.org/wiki/High_Efficiency_Image_File_Format">HEIF</a> format. AVIF is designed for efficient compression that is known to be better than the late <strong>WebP</strong>. It is now supported from <a href="https://www.google.com/chrome/">Chrome 85</a>, while other browsers tend to add full support for it soon. See also <a href="https://avif-converter.online">an online tool to convert previous image formats to AVIF</a>.</li>
+ <li><a href="/en-US/docs/Web/Media/Formats/Image_types#webp">WebP</a> — Excellent choice for both images and animated images. WebP offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency etc. (but not progressive display.). Supported by all major browsers except Safari.</li>
+ <li><a href="/en-US/docs/Web/Media/Formats/Image_types#avif">AVIF</a> — Good choice for both images and animated images due to high performance and royalty free image format (even more efficient that WebP, but not as widely supported). It is now supported on Chrome, Opera and Firefox (behind a <a href="/en-US/docs/Mozilla/Firefox/Experimental_features#avif_av1_image_file_format_support">preference</a>). See also <a href="https://avif-converter.online">an online tool to convert previous image formats to AVIF</a>.</li>
+ <li><strong>JPEG-XR</strong> — created by Microsoft and only available in Internet Explorer and EdgeHTML based Edge. Doesn't support progressive display and the image decoding is not hardware accelerated and therefore resource-intensive on the browser's main thread. Progressive JPEG above-the-fold is that they render progressively (hence the name), meaning the user sees a low-resolution version that gains clarity as the image downloads, rather than the image loading at full resolution top-to-bottom or even only rendering once completely downloaded.</li>
+ <li><strong>JPEG2000</strong> — once to be successor to JPEG but only supported in Safari. Doesn't support progressive display either.</li>
 </ul>
 
-<p>Given the narrow support for JPEG-XR and JPEG2000, and also taking decode costs into the equation, the only serious contender for JPEG today is WebP. Which is why you could consider offering your images in that flavor, too, for the browsers that support it. This can be done via the <code>&lt;picture&gt;</code> element with the help of a <code>&lt;source&gt;</code> element equipped with a <a href="/en-US/docs/Web/HTML/Element/picture#The_type_attribute">type attribute</a>.</p>
+<p>Given the narrow support for JPEG-XR and JPEG2000, and also taking decode costs into the equation, the only serious contender for JPEG today is WebP. Which is why you could consider offering your images in that flavor, too, for the browsers that support it. This can be done via the <code>&lt;picture&gt;</code> element with the help of a <code>&lt;source&gt;</code> element equipped with a <a href="/en-US/docs/Web/HTML/Element/picture#the_type_attribute">type attribute</a>.</p>
 
 <p>If all of this sounds a bit complicated or feels like too much work for your team then there is also online services that you can use as image CDNs that will automate the serving of the correct image format on-the-fly, according to the type of device or browser requesting the image. The biggest ones are <a href="https://cloudinary.com/features/responsive_images">Cloudinary</a> and <a href="https://imageengine.io/">Image Engine</a>.</p>
 
 <p>And finally, should you want to include animated images into your page, then know that Safari allows using video files within <code>&lt;img&gt;</code> and <code>&lt;picture&gt;</code> elements. These also allow you to add in an <strong>Animated WebP</strong> for all other modern browsers.</p>
 
-<pre class="notranslate">&lt;picture&gt;
+<pre class="html">&lt;picture&gt;
    &lt;source type="video/mp4" src="giphy.mp4"&gt;
    &lt;source type="image/webp" src="giphy.webp"&gt;
    &lt;img src="giphy.gif"&gt;
@@ -98,7 +104,7 @@ tags:
 
 <p>In image delivery the "one size fits all" approach will not yield the best results, meaning that for smaller screens you would want to serve images with smaller resolution and vis-versa for larger screens. On top of that you'd also want to serve higher resolution images to those devices that boast a high DPI screen (e.g. "Retina"). So apart from creating plenty of intermediate image variants you also need a way to serve the right file to the right browser. That's where you would need to upgrade your <code>&lt;picture&gt;</code> and <code>&lt;source&gt;</code> elements with <a href="/en-US/docs/Web/HTML/Element/source#attr-media">media</a> and/or <a href="/en-US/docs/Web/HTML/Element/source#attr-sizes">sizes</a> attributes. A detailed article on how to combine all of these attributes can be found <a href="https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/">here</a>.</p>
 
-<p>Two interesting effects to keep in mind regarding high dpi screens is that: </p>
+<p>Two interesting effects to keep in mind regarding high dpi screens is that:</p>
 
 <ul>
  <li>with high DPI screen, <a href="https://www.netvlies.nl/tips-updates/algemeen/design-interactie/retina-revolution/">humans will spot compression artifacts a lot later</a>, meaning that for images meant for these screens you can crank up compression beyond usual.</li>
@@ -132,9 +138,8 @@ tags:
  <li><a href="/en-US/docs/Learn/Performance/What_is_web_performance">What is web performance?</a></li>
  <li><a href="/en-US/docs/Learn/Performance/Perceived_performance">How do users perceive performance?</a></li>
  <li><a href="/en-US/docs/Learn/Performance/Measuring_performance">Measuring performance</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Multimedia">Multimedia: images</a></li>
  <li><a href="/en-US/docs/Learn/Performance/video">Multimedia: video</a></li>
- <li><a href="/en-US/docs/Learn/Performance/JavaScript">JavaScript performance best practices</a>.</li>
+ <li><a href="/en-US/docs/Learn/Performance/javascript_performance">JavaScript performance best practices</a>.</li>
  <li><a href="/en-US/docs/Learn/Performance/HTML">HTML performance features</a></li>
  <li><a href="/en-US/docs/Learn/Performance/CSS">CSS performance features</a></li>
  <li><a href="/en-US/docs/Learn/Performance/Fonts">Fonts and performance</a></li>

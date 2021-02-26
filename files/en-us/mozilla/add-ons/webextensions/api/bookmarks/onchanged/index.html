@@ -55,7 +55,7 @@ browser.bookmarks.onChanged.hasListener(listener)
 
 	<dl class="reference-values">
 		<dt><code>changeInfo</code></dt>
-		<dd><a href="#changeInfo"><code>object</code></a>. Object containing two properties: <code>title</code>, a string containing the item's title, and <code>url</code>, a string containing the item's URL. If the item is a folder, <code>url</code> is omitted.</dd>
+		<dd><a href="#changeinfo"><code>object</code></a>. Object containing two properties: <code>title</code>, a string containing the item's title, and <code>url</code>, a string containing the item's URL. If the item is a folder, <code>url</code> is omitted.</dd>
 	</dl>
 	</dd>
 </dl>
@@ -66,7 +66,7 @@ browser.bookmarks.onChanged.hasListener(listener)
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="notranslate brush: js">function handleChanged(id, changeInfo) {
+<pre class="brush: js">function handleChanged(id, changeInfo) {
   console.log("Item: " + id + " changed");
   console.log("Title: " + changeInfo.title);
   console.log("Url: " + changeInfo.url);

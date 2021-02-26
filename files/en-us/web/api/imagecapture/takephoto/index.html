@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 const <em>blobPromise</em> = <em>imageCaptureObj</em>.takePhoto()
 const <em>blobPromise</em> = <em>imageCaptureObj</em>.takePhoto(<em>photoSettings</em>)
 </pre>
@@ -55,7 +55,7 @@ const <em>blobPromise</em> = <em>imageCaptureObj</em>.takePhoto(<em>photoSetting
 <p>This example is extracted from this <a href="https://simpl.info/imagecapture/">Simple
     Image Capture demo</a>. It shows how to use the {{jsxref("Promise")}} returned by
   <code>takePhoto()</code> to copy the returned {{domxref("Blob")}} to an
-  {{htmlelement("img")}} element. For simplicy it does not show how to instantiate the
+  {{htmlelement("img")}} element. For simplicity it does not show how to instantiate the
   {{domxref("ImageCapture")}} object.</p>
 
 <pre class="brush: js">var takePhotoButton = document.querySelector('button#takePhoto');
@@ -94,7 +94,4 @@ function takePhoto() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.ImageCapture.takePhoto")}}</p>
-</div>
+<p>{{Compat("api.ImageCapture.takePhoto")}}</p>

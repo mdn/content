@@ -47,7 +47,7 @@ tags:
 
 <p>Next, create a file called "background.js" with the following contents:</p>
 
-<pre class="notranslate brush: js">function logURL(requestDetails) {
+<pre class="brush: js">function logURL(requestDetails) {
   console.log("Loading: " + requestDetails.url);
 }
 
@@ -58,9 +58,9 @@ browser.webRequest.onBeforeRequest.addListener(
 
 </pre>
 
-<p>Here we use {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} to call the <code>logURL()</code> function just before starting the request. The <code>logURL()</code> function grabs the URL of the request from the event object and logs it to the browser console. The <code>{urls: ["&lt;all_urls&gt;"]}</code> <a href="/en-US/Add-ons/WebExtensions/Match_patterns">pattern</a> means we will intercept HTTP requests to all URLs.</p>
+<p>Here we use {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} to call the <code>logURL()</code> function just before starting the request. The <code>logURL()</code> function grabs the URL of the request from the event object and logs it to the browser console. The <code>{urls: ["&lt;all_urls&gt;"]}</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">pattern</a> means we will intercept HTTP requests to all URLs.</p>
 
-<p>To test it out, <a href="/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">install the extension</a>, <a href="/en-US/docs/Tools/Browser_Console">open the Browser Console</a>, and open some Web pages. In the Browser Console, you should see the URLs for any resources that the browser requests:</p>
+<p>To test it out, <a href="https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/">install the extension</a>, <a href="/en-US/docs/Tools/Browser_Console">open the Browser Console</a>, and open some Web pages. In the Browser Console, you should see the URLs for any resources that the browser requests:</p>
 
 <p>{{EmbedYouTube("X3rMgkRkB1Q")}}</p>
 
@@ -92,7 +92,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>Next, replace "background.js" with this:</p>
 
-<pre class="notranslate brush: js">var pattern = "https://mdn.mozillademos.org/*";
+<pre class="brush: js">var pattern = "https://mdn.mozillademos.org/*";
 
 function redirect(requestDetails) {
   console.log("Redirecting: " + requestDetails.url);
@@ -113,7 +113,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>Also note that we're passing an option called <code>"blocking"</code>: we need to pass this whenever we want to modify the request. It makes the listener function block the network request, so the browser waits for the listener to return before continuing. See the {{WebExtAPIRef("webRequest.onBeforeRequest")}} documentation for more on <code>"blocking"</code>.</p>
 
-<p>To test it out, open a page on MDN that contains a lot of images (for example <a href="/en-US/docs/Tools/Network_Monitor">https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor</a>), <a href="/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on">reload the extension</a>, and then reload the MDN page:</p>
+<p>To test it out, open a page on MDN that contains a lot of images (for example <a href="/en-US/docs/Tools/Network_Monitor">https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor</a>), <a href="https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on">reload the extension</a>, and then reload the MDN page:</p>
 
 <p>{{EmbedYouTube("ix5RrXGr0wA")}}</p>
 
@@ -125,7 +125,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>Replace "background.js" with code like this:</p>
 
-<pre class="notranslate brush: js">var targetPage = "http://useragentstring.com/*";
+<pre class="brush: js">var targetPage = "http://useragentstring.com/*";
 
 var ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
@@ -146,7 +146,7 @@ browser.webRequest.onBeforeSendHeaders.addListener(
 
 <p>Here we use the {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} event listener to run a function just before the request headers are sent.</p>
 
-<p>The listener function will be called only for requests to URLs matching the <code>targetPage</code> <a href="/en-US/Add-ons/WebExtensions/Match_patterns">pattern</a>. Also note that we've again passed <code>"blocking"</code> as an option. We've also passed <code>"requestHeaders"</code>, which means that the listener will be passed an array containing the request headers that we expect to send. See {{WebExtAPIRef("webRequest.onBeforeSendHeaders")}} for more information on these options.</p>
+<p>The listener function will be called only for requests to URLs matching the <code>targetPage</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">pattern</a>. Also note that we've again passed <code>"blocking"</code> as an option. We've also passed <code>"requestHeaders"</code>, which means that the listener will be passed an array containing the request headers that we expect to send. See {{WebExtAPIRef("webRequest.onBeforeSendHeaders")}} for more information on these options.</p>
 
 <p>The listener function looks for the "User-Agent" header in the array of request headers, replaces its value with the value of the <code>ua</code> variable, and returns the modified array. This modified array will now be sent to the server.</p>
 
@@ -156,4 +156,4 @@ browser.webRequest.onBeforeSendHeaders.addListener(
 
 <h2 id="Learn_more">Learn more</h2>
 
-<p>To learn about all the things you can do with the <code>webRequest</code> API, see its <a href="/en-US/Add-ons/WebExtensions/API/WebRequest">reference documentation</a>.</p>
+<p>To learn about all the things you can do with the <code>webRequest</code> API, see its <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest">reference documentation</a>.</p>

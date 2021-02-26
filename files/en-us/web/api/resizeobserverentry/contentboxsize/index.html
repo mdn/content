@@ -10,7 +10,7 @@ tags:
 - ResizeObserverEntry
 - contentBoxSize
 ---
-<div>{{APIRef("Resize Observer API")}}{{seecompattable}}</div>
+<div>{{APIRef("Resize Observer API")}}{{SeeCompatTable}}</div>
 
 <p class="summary">The <strong><code>contentBoxSize</code></strong> read-only property of
   the {{domxref("ResizeObserverEntry")}} interface returns an array containing the new
@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var myContentBoxSize = ResizeObserverEntry.contentBoxSize;
+<pre class="brush: js">var myContentBoxSize = ResizeObserverEntry.contentBoxSize;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -59,7 +59,7 @@ tags:
   elliptical corners; this solution gives you nice square corners that scale with the box
   size.</p>
 
-<pre class="brush: js notranslate">const resizeObserver = new ResizeObserver(entries =&gt; {
+<pre class="brush: js">const resizeObserver = new ResizeObserver(entries =&gt; {
   for (let entry of entries) {
     if(entry.contentBoxSize) {
       entry.target.style.borderRadius = Math.min(100, (entry.contentBoxSize.inlineSize/10) +
@@ -83,8 +83,7 @@ resizeObserver.observe(document.querySelector('div'));</pre>
       <th scope="col">Comment</th>
     </tr>
     <tr>
-      <td>{{SpecName('Resize
-        Observer','#dom-resizeobserverentry-contentboxsize','target')}}</td>
+      <td>{{SpecName('Resize Observer','#dom-resizeobserverentry-contentboxsize','contentBoxSize')}}</td>
       <td>{{Spec2('Resize Observer')}}</td>
       <td>Initial definition.</td>
     </tr>

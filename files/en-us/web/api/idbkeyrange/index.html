@@ -13,7 +13,7 @@ tags:
 <p>{{APIRef("IndexedDB")}}</p>
 
 <div>
-<p>The <strong><code>IDBKeyRange</code></strong> interface of the <a href="/en/IndexedDB">IndexedDB API</a> represents a continuous interval over some data type that is used for keys. Records can be retrieved from {{domxref("IDBObjectStore")}} and {{domxref("IDBIndex")}} objects using keys or a range of keys. You can limit the range using lower and upper bounds. For example, you can iterate over all values of a key in the value range A–Z.</p>
+<p>The <strong><code>IDBKeyRange</code></strong> interface of the <a href="/en-US/docs/IndexedDB">IndexedDB API</a> represents a continuous interval over some data type that is used for keys. Records can be retrieved from {{domxref("IDBObjectStore")}} and {{domxref("IDBIndex")}} objects using keys or a range of keys. You can limit the range using lower and upper bounds. For example, you can iterate over all values of a key in the value range A–Z.</p>
 </div>
 
 <p>A key range can be a single value or a range with upper and lower bounds or endpoints. If the key range has both upper and lower bounds, then it is <em>bounded</em>; if it has no bounds, it is <em>unbounded</em>. A bounded key range can either be open (the endpoints are excluded) or closed (the endpoints are included). To retrieve all keys within a certain range, you can use the following code constructs:</p>
@@ -171,10 +171,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.IDBKeyRange")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
@@ -185,5 +182,5 @@ tags:
  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
  <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+ <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>

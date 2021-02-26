@@ -50,7 +50,7 @@ browser.tabs.onRemoved.hasListener(listener)
 
  <dl class="reference-values">
   <dt><code>removeInfo</code></dt>
-  <dd><a href="#removeInfo"><code>object</code></a>. The tab's window ID, and a boolean indicating whether the window is also being closed.</dd>
+  <dd><a href="#removeinfo"><code>object</code></a>. The tab's window ID, and a boolean indicating whether the window is also being closed.</dd>
  </dl>
  </dd>
 </dl>
@@ -70,7 +70,7 @@ browser.tabs.onRemoved.hasListener(listener)
 
 <p>Listen for close events, and log the info:</p>
 
-<pre class="notranslate brush: js">function handleRemoved(tabId, removeInfo) {
+<pre class="brush: js">function handleRemoved(tabId, removeInfo) {
   console.log("Tab: " + tabId + " is closing");
   console.log("Window ID: " + removeInfo.windowId);
   console.log("Window is closing: " + removeInfo.isWindowClosing);

@@ -21,17 +21,17 @@ tags:
 
 <h2 id="Why.3F">Why?</h2>
 
-<p>After realizing, to my delight, that the nifty <code>&lt;canvas&gt;</code> element I'd been <a class="external" href="https://www.whatwg.org/specs/web-apps/current-work/#dynamic">reading about</a> was not only soon to be supported in Firefox, but was <strong>already</strong> supported in the current version of Safari, I had to try a little experiment.</p>
+<p>After realizing, to my delight, that the nifty <code>&lt;canvas&gt;</code> element I'd been <a href="https://www.whatwg.org/specs/web-apps/current-work/#dynamic">reading about</a> was not only soon to be supported in Firefox, but was <strong>already</strong> supported in the current version of Safari, I had to try a little experiment.</p>
 
-<p>The canvas <a href="/en-US/docs/Web/API/Canvas_API">overview</a> and <a href="/en-US/docs/Canvas_tutorial">tutorial</a> I found here at MDN are great, but nobody had written about animation yet, so I thought I'd try a port of a basic raycaster I'd worked on a while ago, and see what sort of performance we can expect from a JavaScript-controlled pixel buffer.</p>
+<p>The canvas <a href="/en-US/docs/Web/API/Canvas_API">overview</a> and <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">tutorial</a> I found here at MDN are great, but nobody had written about animation yet, so I thought I'd try a port of a basic raycaster I'd worked on a while ago, and see what sort of performance we can expect from a JavaScript-controlled pixel buffer.</p>
 
 <h2 id="How.3F">How?</h2>
 
-<p>The basic idea is to use {{domxref("window.setInterval","setInterval()")}} at some arbitrary delay that corresponds to a desired frame rate. After every interval an update function will repaint the canvas showing the current view. I know I could have started with a simpler example, but I'm sure the canvas tutorial will <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">get to that</a>, and I wanted to see if I could do this.</p>
+<p>The basic idea is to use {{domxref("WindowOrWorkerGlobalScope/setInterval","setInterval()")}} at some arbitrary delay that corresponds to a desired frame rate. After every interval an update function will repaint the canvas showing the current view. I know I could have started with a simpler example, but I'm sure the canvas tutorial will <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">get to that</a>, and I wanted to see if I could do this.</p>
 
 <p>So every update, the raycaster looks to see if you've pressed any keys lately, to conserve calculations by not casting if you're idle. If you have, then the canvas is cleared, the ground and sky are drawn, the camera position and/or orientation are updated, and the rays are cast out. As the rays intersect walls, then they render a vertical sliver of canvas in the color of the wall they've hit, blended with a darker version of the color according to the distance to the wall. The height of the sliver is also modulated by the distance from the camera to the wall, and is drawn centered over the horizon line.</p>
 
-<p>The code I ended up with is a regurgitated amalgam of the raycaster chapters from an old André LaMothe<em>Tricks of the Game Programming Gurus</em> book (<small>ISBN: 0672305070</small>), and a <a class="external" href="http://www.shinelife.co.uk/java-maze/">java raycaster</a> I found online, filtered through my compulsion to rename everything so it makes sense to me, and all the tinkering that had to be done to make things work well.</p>
+<p>The code I ended up with is a regurgitated amalgam of the raycaster chapters from an old André LaMothe<em>Tricks of the Game Programming Gurus</em> book (<small>ISBN: 0672305070</small>), and a <a href="http://www.shinelife.co.uk/java-maze/">java raycaster</a> I found online, filtered through my compulsion to rename everything so it makes sense to me, and all the tinkering that had to be done to make things work well.</p>
 
 <h2 id="Results">Results</h2>
 

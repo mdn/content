@@ -13,7 +13,7 @@ tags:
 
 <p><span class="seoSummary">The <strong><code>overscroll-behavior</code></strong> CSS property sets what a browser does when reaching the boundary of a scrolling area. It's a shorthand for {{cssxref("overscroll-behavior-x")}} and {{cssxref("overscroll-behavior-y")}}.</span></p>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush:css no-line-numbers">/* Keyword values */
 overscroll-behavior: auto; /* default */
 overscroll-behavior: contain;
 overscroll-behavior: none;
@@ -43,9 +43,9 @@ overscroll-behavior: unset;
  <dt><code>auto</code></dt>
  <dd>The default scroll overflow behavior occurs as normal.</dd>
  <dt><code>contain</code></dt>
- <dd>Default scroll overflow behavior is observed inside the element this value is set on (e.g. "bounce" effects or refreshes), but no scroll chaining occurs to neighbouring scrolling areas, e.g. underlying elements will not scroll.</dd>
+ <dd>Default scroll overflow behavior is observed inside the element this value is set on (e.g. "bounce" effects or refreshes), but no scroll chaining occurs to neighboring scrolling areas, e.g. underlying elements will not scroll.</dd>
  <dt><code>none</code></dt>
- <dd>No scroll chaining occurs to neighbouring scrolling areas, and default scroll overflow behavior is prevented.</dd>
+ <dd>No scroll chaining occurs to neighboring scrolling areas, and default scroll overflow behavior is prevented.</dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -54,7 +54,7 @@ overscroll-behavior: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Preventing_an_underlying_element_from_scrolling">Preventing an underlying element from scrolling</h3>
@@ -65,7 +65,7 @@ overscroll-behavior: unset;
 
 <p>Both of these areas scroll; normally if you scrolled the chat window until you hit a scroll boundary, the underlying contacts window would start to scroll too, which is not desirable. This can be stopped using <code>overscroll-behavior-y</code> (<code>overscroll-behavior</code> would also work) on the chat window, like this:</p>
 
-<pre class="brush: css notranslate">.messages {
+<pre class="brush: css">.messages {
   height: 220px;
   overflow: auto;
   overscroll-behavior-y: contain;
@@ -73,7 +73,7 @@ overscroll-behavior: unset;
 
 <p>We also wanted to get rid of the standard overscroll effects when the contacts are scrolled to the top or bottom (e.g. Chrome on Android refreshes the page when you scroll past the top boundary). This can be prevented by setting <code>overscroll-behavior: none</code> on the {{htmlelement("html")}} element:</p>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   margin: 0;
   overscroll-behavior: none;
 }</pre>

@@ -38,7 +38,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>orientationX</em> = <em>PannerNode</em>.orientationX;
+<pre class="brush: js">var <em>orientationX</em> = <em>PannerNode</em>.orientationX;
 
 <em>PannerNode</em>.orientationX.value = <em>newOrientationX</em>;
 </pre>
@@ -76,7 +76,7 @@ tags:
 const yRotationToVector = degrees =&gt; {
   // convert degrees to radians and offset the angle so 0 points towards the listener
   const radians = (degrees - 90) * (Math.PI / 180);
-  // using cosine and sine here ensures the output values are always normalised
+  // using cosine and sine here ensures the output values are always normalized
   // i.e. they range between -1 and 1
   const x = Math.cos(radians);
   const z = Math.sin(radians);
@@ -164,10 +164,7 @@ osc.start(0);
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.PannerNode.orientationX")}}</p>
-</div>
+<p>{{Compat("api.PannerNode.orientationX")}}</p>
 
 <h2 id="See_also">See also</h2>
 

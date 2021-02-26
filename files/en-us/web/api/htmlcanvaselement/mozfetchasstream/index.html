@@ -9,7 +9,7 @@ tags:
 - Obsolete
 - Reference
 ---
-<div>{{APIRef("Canvas API")}} {{obsolete_header}}</div>
+<div>{{APIRef("Canvas API")}} {{deprecated_header}}</div>
 
 <p>The <strong><code>HTMLCanvasElement.mozFetchAsStream()</code></strong> internal method
     used to create a new input stream that, when ready, would provide the contents of the
@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>void <em>canvas</em>.mozFetchAsStream(<em>callback</em>, <em>type</em>);</var>
+<pre class="brush: js"><var>void <em>canvas</em>.mozFetchAsStream(<em>callback</em>, <em>type</em>);</var>
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -61,7 +61,7 @@ var netutilCallback = function() {
        if (!Components.isSuccessCode(result)) {
           alert('FAILED to create icon');
        } else {
-           alert('succesfully made');
+           alert('successfully made');
        }
     };
 }

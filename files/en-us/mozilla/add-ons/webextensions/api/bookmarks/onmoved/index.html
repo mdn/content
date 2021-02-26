@@ -50,7 +50,7 @@ browser.bookmarks.onMoved.hasListener(listener)
 
  <dl class="reference-values">
   <dt><code>moveInfo</code></dt>
-  <dd><a href="#moveInfo"><code>object</code></a>. Object containing more details about the move.</dd>
+  <dd><a href="#moveinfo"><code>object</code></a>. Object containing more details about the move.</dd>
  </dl>
  </dd>
 </dl>
@@ -78,7 +78,7 @@ browser.bookmarks.onMoved.hasListener(listener)
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="notranslate brush: js">function handleMoved(id, moveInfo) {
+<pre class="brush: js">function handleMoved(id, moveInfo) {
   console.log("Item: " + id + " moved");
   console.log("Old index: " + moveInfo.oldIndex);
   console.log("New index: " + moveInfo.index);

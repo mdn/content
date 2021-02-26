@@ -16,8 +16,6 @@ tags:
 
 <p>Note <code>color</code> and <code>range</code> don't support <code>required</code>, but type <code>color</code> defaults to <code>#000000</code>, and <code>range</code> defaults to the midpoint between <code>min</code> and <code>max</code> -- with <code>min</code> and <code>max</code> defaulting to 0 and 100 respectively in most browsers if not declared -- so always has a value.</p>
 
-<p>When an input has the <code>required</code> attribute, the {{cssxref(":required")}} pseudo-class also applies to it. Conversely, inputs that support the <code>required</code> attribute but don't have the attribute set match the {{cssxref(":optional")}} pseudo-class.</p>
-
 <p>In the case of a same named group of {{HTMLElement("input/radio","radio")}} buttons, if a single radio button in the group has the <code>required</code> attribute, a radio button in that group must be checked, although it doesn't have to be the one with the attribute is applied. So to improve code maintenance, it is recommended to either include the <code>required</code> attribute in every same-named radio button in the group, or else in none.</p>
 
 <p>In the case of a same named group of {{HTMLElement("input/checkbox","checkbox")}} input types, only the checkboxes with the <code>required</code> attribute are required.</p>
@@ -46,7 +44,7 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div class="group"&gt;
     &lt;input type="text"&gt;
     &lt;label&gt;Normal&lt;/label&gt;

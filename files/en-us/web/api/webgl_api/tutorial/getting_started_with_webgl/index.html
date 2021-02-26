@@ -7,7 +7,7 @@ tags:
 ---
 <div>{{WebGLSidebar("Tutorial")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}</div>
 
-<p><span class="seoSummary"><a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> enables web content to use an API based on <a class="external" href="http://www.khronos.org/opengles/">OpenGL ES</a> 2.0 to perform 2D and 3D rendering in an HTML <a class="internal" href="/en-US/docs/Web/API/Canvas_API"><code>canvas</code></a> in browsers that support it without the use of plug-ins.</span> WebGL programs consist of control code written in JavaScript and shader code (GLSL) that is executed on a computer's Graphics Processing Unit (GPU). WebGL elements can be mixed with other HTML elements and composited with other parts of the page or page background.</p>
+<p><span class="seoSummary"><a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> enables web content to use an API based on <a href="http://www.khronos.org/opengles/">OpenGL ES</a> 2.0 to perform 2D and 3D rendering in an HTML <a class="internal" href="/en-US/docs/Web/API/Canvas_API"><code>canvas</code></a> in browsers that support it without the use of plug-ins.</span> WebGL programs consist of control code written in JavaScript and shader code (GLSL) that is executed on a computer's Graphics Processing Unit (GPU). WebGL elements can be mixed with other HTML elements and composited with other parts of the page or page background.</p>
 
 <p>This article will introduce you to the basics of using WebGL. It's assumed that you already have an understanding of the mathematics involved in 3D graphics, and this article doesn't pretend to try to teach you 3D graphics concepts itself.</p>
 
@@ -19,7 +19,7 @@ tags:
 
 <p>The first thing you need in order to use WebGL for rendering is a canvas. The HTML fragment below declares a canvas that our sample will draw into.</p>
 
-<pre class="brush: html notranslate">&lt;body&gt;
+<pre class="brush: html">&lt;body&gt;
   &lt;canvas id="glCanvas" width="640" height="480"&gt;&lt;/canvas&gt;
 &lt;/body&gt;
 </pre>
@@ -28,7 +28,7 @@ tags:
 
 <p>The <code>main()</code> function in our JavaScript code, is called when our script is loaded. Its purpose is to set up the WebGL context and start rendering content.</p>
 
-<pre class="brush: js notranslate">//
+<pre class="brush: js">//
 // start here
 //
 function main() {

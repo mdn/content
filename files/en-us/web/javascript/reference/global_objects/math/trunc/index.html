@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Math.trunc(<var>x</var>)
+<pre class="brush: js">Math.trunc(<var>x</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -53,7 +53,7 @@ tags:
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="brush: js notranslate">if (!Math.trunc) {
+<pre class="brush: js">if (!Math.trunc) {
   Math.trunc = function(v) {
     v = +v;
     if (!isFinite(v)) return v;
@@ -77,7 +77,7 @@ tags:
 
 <p>or:</p>
 
-<pre class="brush: js notranslate">if (!Math.trunc) {
+<pre class="brush: js">if (!Math.trunc) {
   Math.trunc = function (v) {
     return v &lt; 0 ? Math.ceil(v) : Math.floor(v);
   };
@@ -88,7 +88,7 @@ tags:
 
 <h3 id="Using_Math.trunc">Using Math.trunc()</h3>
 
-<pre class="brush: js notranslate">Math.trunc(13.37);    // 13
+<pre class="brush: js">Math.trunc(13.37);    // 13
 Math.trunc(42.84);    // 42
 Math.trunc(0.123);    //  0
 Math.trunc(-0.123);   // -0

@@ -1,0 +1,78 @@
+---
+title: CSSKeyframeRule.style
+slug: Web/API/CSSkeyframeRule/style
+tags:
+  - API
+  - CSSOM
+  - CSSKeyframeRule
+  - CSS Animations
+  - Property
+  - Reference
+---
+<p>{{ APIRef("CSSOM") }}</p>
+
+<p>The read-only <strong><code>CSSKeyframeRule.style</code></strong> property is the {{ domxref("CSSStyleDeclaration") }} interface for the <a href="https://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block">declaration block</a> of the {{ domxref("CSSKeyframeRule") }}.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="eval"><var>styleObj</var> = <var>cssKeyframeRule</var>.style
+</pre>
+
+<h3>Value</h3>
+
+<p>A {{domxref("CSSStyleDeclaration")}} object, with the following properties:</p>
+
+<dl>
+  <dt>computed flag</dt>
+  <dd>Unset.</dd>
+  <dt>declarations</dt>
+  <dd>The declared declarations in the rule, in the order they were specified, shorthand properties expanded to longhands.</dd>
+  <dt>parent CSS rule</dt>
+  <dd>The context object, which is an alias for <a href="https://heycam.github.io/webidl/#this">this</a>.</dd>
+  <dt>owner node</dt>
+  <dd>Null.</dd>
+</dl>
+
+<h2 id="Example">Example</h2>
+
+<p>
+    The CSS includes a {{cssxref("@keyframes")}} at-rule. This will be the first {{domxref("CSSRule")}} returned by <code>document.styleSheets[0].cssRules</code>. 
+    <code>myRules[0]</code> returns a {{domxref("CSSKeyframesRule")}} object, which will contain individual <code>CSSKeyFrame</code> objects for each keyframe.
+</p>
+  
+<pre class="brush: css">@keyframes slidein {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}</pre>
+
+<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
+let keyframes = myRules[0]; // a CSSKeyframesRule
+console.log(keyframes[0].style); // a CSSStyleDeclaration</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Animations', '#dom-csskeyframerule-style', 'CSSKeyframeRule.style')}}</td>
+   <td>{{Spec2('CSS3 Animations')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("api.CSSKeyframeRule.style")}}</p>

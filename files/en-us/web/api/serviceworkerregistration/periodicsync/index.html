@@ -21,7 +21,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>PeriodicSyncManagerObject</var> = ServiceWorkerRegistration.periodicSync;</pre>
+  class="brush: js">var <var>PeriodicSyncManagerObject</var> = ServiceWorkerRegistration.periodicSync;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -34,7 +34,7 @@ tags:
 
 <p>Here is an example from the main script:</p>
 
-<pre class="brush: js notranslate">// reference registration
+<pre class="brush: js">// reference registration
 const registration = await navigator.serviceWorker.ready;
 
 // feature detection
@@ -48,7 +48,7 @@ if ('periodicSync' in registration) {
 
 <p>From the {{domxref('Service Worker API','service worker')}}:</p>
 
-<pre class="brush: js notranslate">// service worker script
+<pre class="brush: js">// service worker script
 
 const periodicSync = self.registration.periodicSync;
 </pre>

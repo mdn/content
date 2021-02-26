@@ -38,7 +38,7 @@ tags:
 
 <dl>
  <dt><code>extensionId</code>{{optional_inline}}</dt>
- <dd><code>string</code>. The ID of the extension to connect to. If the target has set an ID explicitly using the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a> key in manifest.json, then <code>extensionId</code> should have that value. Otherwise it should have the ID that was generated for the target.</dd>
+ <dd><code>string</code>. The ID of the extension to connect to. If the target has set an ID explicitly using the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">applications</a> key in manifest.json, then <code>extensionId</code> should have that value. Otherwise it should have the ID that was generated for the target.</dd>
  <dt><code>connectInfo</code>{{optional_inline}}</dt>
  <dd><code>object</code>. Details of the connection:</dd>
  <dd>
@@ -71,7 +71,7 @@ tags:
  <li>sends messages to the background script, using <code>myPort</code>, when the user clicks the document.</li>
 </ul>
 
-<pre class="notranslate brush: js line-numbers language-js">// content-script.js
+<pre class="brush: js line-numbers language-js">// content-script.js
 
 var myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
@@ -99,7 +99,7 @@ document.body.addEventListener("click", function() {
  <li>sends messages to the content script, using <code>portFromCS</code>, when the user clicks the extension's browser action.</li>
 </ul>
 
-<pre class="notranslate brush: js line-numbers language-js">// background-script.js
+<pre class="brush: js line-numbers language-js">// background-script.js
 
 var portFromCS;
 

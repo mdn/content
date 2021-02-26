@@ -25,11 +25,11 @@ tags:
 
 <p><code><a id="rect()">rect()</a></code></p>
 
-<pre class="brush: css notranslate">rect(<em>top</em>, <em>right</em>, <em>bottom</em>, <em>left</em>)</pre>
+<pre class="brush: css">rect(<em>top</em>, <em>right</em>, <em>bottom</em>, <em>left</em>)</pre>
 
 <h4 id="Values">Values</h4>
 
-<p><img alt="rect.png" class="internal rwrap" src="/@api/deki/files/5730/=rect.png" style="float: right;"></p>
+<p><img class="internal rwrap" src="rect.png" style="float: right;"></p>
 
 <dl>
 	<dt><em>top</em></dt>
@@ -44,13 +44,13 @@ tags:
 
 <h2 id="Interpolation">Interpolation</h2>
 
-<p>When animated, values of the <code>&lt;shape&gt;</code> data type are interpolated over their <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> components, each treated as a real, floating-point number. The speed of the interpolation is determined by the <a href="/en-US/docs/Web/CSS/single-transition-timing-function" title="timing-function">timing function</a> associated with the animation.</p>
+<p>When animated, values of the <code>&lt;shape&gt;</code> data type are interpolated over their <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> components, each treated as a real, floating-point number. The speed of the interpolation is determined by the <a href="/en-US/docs/Web/CSS/easing-function" title="timing-function">timing function</a> associated with the animation.</p>
 
 <h2 id="Examples">Example</h2>
 
 <h3 id="Example_demonstrating_correct_use_of_the_rect_function">Example demonstrating correct use of the rect() function</h3>
 
-<pre class="brush: css notranslate">img.clip04 {
+<pre class="brush: css">img.clip04 {
   clip: rect(10px, 20px, 20px, 10px);
 }
 </pre>
@@ -82,5 +82,5 @@ tags:
 
 <ul>
 	<li>Related CSS property: {{ cssxref("clip") }}</li>
-	<li>The <code><a href="/en/CSS/-moz-image-rect">-moz-image-rect()</a></code> function has similar coordinate values to <code>rect()</code>.</li>
+	<li>The <code><a href="/en-US/docs/Web/CSS/-moz-image-rect">-moz-image-rect()</a></code> function has similar coordinate values to <code>rect()</code>.</li>
 </ul>

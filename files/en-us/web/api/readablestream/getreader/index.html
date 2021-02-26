@@ -19,7 +19,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>reader</em> = <em>readableStream</em>.getReader(<em>{mode}</em>);</pre>
+  class="brush: js">var <em>reader</em> = <em>readableStream</em>.getReader(<em>{mode}</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -63,7 +63,7 @@ tags:
   the UI, until the stream has finished being read, at which point we return out of the
   recursive function and print the entire stream to another part of the UI.</p>
 
-<pre class="brush: js notranslate">function fetchStream() {
+<pre class="brush: js">function fetchStream() {
   const reader = stream.getReader();
   let charsReceived = 0;
 

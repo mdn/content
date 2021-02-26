@@ -2,15 +2,15 @@
 title: Body.formData()
 slug: Web/API/Body/formData
 tags:
-- API
-- BODY
-- Experimental
-- Fetch
-- Fetch API
-- FormData
-- Method
-- NeedsExample
-- Reference
+  - API
+  - BODY
+  - Experimental
+  - Fetch
+  - Fetch API
+  - FormData
+  - Method
+  - NeedsExample
+  - Reference
 ---
 <div>{{APIRef("Fetch")}}</div>
 
@@ -20,7 +20,7 @@ tags:
 
 <div class="note">
   <p><strong>Note</strong>: This is mainly relevant to <a
-      href="/en-US/docs/Web/API/ServiceWorker_API">service workers</a>. If a user submits
+      href="/en-US/docs/Web/API/Service_Worker_API">service workers</a>. If a user submits
     a form and a service worker intercepts the request, you could for example call
     <code>formData()</code> on it to obtain a key-value map, modify some fields, then send
     the form onwards to the server (or use it locally).</p>
@@ -28,7 +28,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>response</em>.formData()
+<pre class="brush: js"><em>response</em>.formData()
 .then(function(<em>formdata</em>) {
   // do something with your formdata
 });</pre>
@@ -69,7 +69,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
+  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
   <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a></li>
   <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
 </ul>

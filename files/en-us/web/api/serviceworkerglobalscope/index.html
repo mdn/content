@@ -89,7 +89,7 @@ tags:
 
 <p>The code also handles exceptions thrown from the {{domxref("GlobalFetch.fetch", "fetch()")}} operation. Note that an HTTP error response (e.g., 404) will not trigger an exception. It will return a normal response object that has the appropriate error code set.</p>
 
-<pre class="brush: js notranslate">self.addEventListener('fetch', function(event) {
+<pre class="brush: js">self.addEventListener('fetch', function(event) {
   console.log('Handling fetch event for', event.request.url);
 
   event.respondWith(

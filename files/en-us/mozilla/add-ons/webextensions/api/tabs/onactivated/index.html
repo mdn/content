@@ -45,7 +45,7 @@ browser.tabs.onActivated.hasListener(listener)
 
  <dl class="reference-values">
   <dt><code>activeInfo</code></dt>
-  <dd><a href="#activeInfo"><code>object</code></a>. ID of the tab that was made active, and ID of its window.</dd>
+  <dd><a href="#activeinfo"><code>object</code></a>. ID of the tab that was made active, and ID of its window.</dd>
  </dl>
  </dd>
 </dl>
@@ -67,7 +67,7 @@ browser.tabs.onActivated.hasListener(listener)
 
 <p>Listen for and log tab activation events:</p>
 
-<pre class="notranslate brush: js">function handleActivated(activeInfo) {
+<pre class="brush: js">function handleActivated(activeInfo) {
   console.log("Tab " + activeInfo.tabId +
               " was activated");
 }

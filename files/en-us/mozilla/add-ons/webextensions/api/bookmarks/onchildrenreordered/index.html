@@ -50,7 +50,7 @@ browser.bookmarks.onChildrenReordered.hasListener(listener)
 
  <dl class="reference-values">
   <dt><code>reorderInfo</code></dt>
-  <dd><a href="#reorderInfo"><code>object</code></a>. Object containing Additional objects.</dd>
+  <dd><a href="#reorderinfo"><code>object</code></a>. Object containing Additional objects.</dd>
  </dl>
  </dd>
 </dl>
@@ -72,7 +72,7 @@ browser.bookmarks.onChildrenReordered.hasListener(listener)
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="notranslate brush: js">function handleChildrenReordered(id, reorderInfo) {
+<pre class="brush: js">function handleChildrenReordered(id, reorderInfo) {
   console.log("Item: " + id + " children reordered");
   console.log("Children: " + reorderInfo.childIds);
 }

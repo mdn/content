@@ -27,7 +27,7 @@ tags:
 <p>This element's attributes include the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
 
 <dl>
- <dt id="download">{{HTMLAttrDef("download")}}{{HTMLVersionInline(5)}}</dt>
+ <dt id="download">{{HTMLAttrDef("download")}}</dt>
  <dd>Prompts the user to save the linked URL instead of navigating to it. Can be used with or without a value:</dd>
  <dd>
  <ul>
@@ -35,18 +35,19 @@ tags:
    <ul>
     <li>The {{HTTPHeader("Content-Disposition")}} HTTP header</li>
     <li>The final segment in the URL <a href="/en-US/docs/Web/API/URL/pathname">path</a></li>
-    <li>The {{Glossary("MIME_type", "media type")}} (from the ({{HTTPHeader("Content-Type")}} header, the start of a <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data:</code> URL</a>, or {{domxref("Blob.type")}} for a <a href="/en-US/docs/Web/API/URL/createObjectURL"><code>blob:</code> URL</a>)</li>
+    <li>The {{Glossary("MIME_type", "media type")}} (from the {{HTTPHeader("Content-Type")}} header, the start of a <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data:</code> URL</a>, or {{domxref("Blob.type")}} for a <a href="/en-US/docs/Web/API/URL/createObjectURL"><code>blob:</code> URL</a>)</li>
    </ul>
   </li>
   <li>Defining a value suggests it as the filename. <code>/</code> and <code>\</code> characters are converted to underscores (<code>_</code>). Filesystems may forbid other characters in filenames, so browsers will adjust the suggested name if necessary.</li>
  </ul>
 
- <div class="note"><strong>Notes:</strong>
+ <div class="notecard note">
+ <h4>Notes</h4>
 
  <ul>
   <li><code>download</code> only works for <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin URLs</a>, or the <code>blob:</code> and <code>data:</code> schemes.</li>
   <li>
-   <p>Note: if the <code>Content-Disposition</code> header has different information from the <code>download</code> attribute, resulting behavior may differ:</p>
+   <p>If the <code>Content-Disposition</code> header has different information from the <code>download</code> attribute, resulting behavior may differ:</p>
 
    <ul>
     <li>
@@ -89,40 +90,42 @@ tags:
   <li><code>_top</code>: the topmost browsing context (the "highest" context that’s an ancestor of the current one). If no ancestors, behaves as <code>_self</code>.</li>
  </ul>
 
- <div class="note">
- <p><strong>Note:</strong> When using <code>target</code>, add <code>rel="noreferrer noopener"</code> to avoid exploitation of the <code>window.opener</code> API.</p>
- </div>
-
- <div class="note">
- <p><strong>Note:</strong> In newer browser versions (e.g. Firefox 79+) setting <code>target="_blank"</code> on <code>&lt;a&gt;</code> elements implicitly provides the same <code>rel</code> behavior as setting <code>rel="noopener"</code>.</p>
+ <div class="notecard note">
+ <h4>Note</h4>
+ <p>Setting <code>target="_blank"</code> on <code>&lt;a&gt;</code> elements implicitly provides the same <code>rel</code> behavior as setting <code><a href="/en-US/docs/Web/HTML/Link_types/noopener">rel="noopener"</a></code> which does not set <code>window.opener</code>. See <a href="#browser_compatibility">browser compatibility</a> for support status.</p>
  </div>
  </dd>
  <dt id="type">{{HTMLAttrDef("type")}}</dt>
  <dd>Hints at the linked URL’s format with a {{Glossary("MIME type")}}. No built-in functionality.</dd>
 </dl>
 
-<h3 id="Obsolete_attributes">Obsolete attributes</h3>
+<h3 id="Deprecated_attributes">Deprecated attributes</h3>
 
 <dl>
- <dt id="charset">{{HTMLAttrDef("charset")}}{{Obsolete_Inline("HTML5")}}</dt>
+ <dt id="charset">{{HTMLAttrDef("charset")}}{{Deprecated_Inline}}</dt>
  <dd>Hinted at the {{Glossary("character encoding")}} of the linked URL.
- <div class="note">
- <p><strong>Note:</strong> This attribute is obsolete and <strong>should not be used by authors</strong>. Use the HTTP {{HTTPHeader("Content-Type")}} header on the linked URL.</p>
+ <div class="notecard note">
+ <h4>Note</h4>
+ <p>This attribute is deprecated and <strong>should not be used by authors</strong>. Use the HTTP {{HTTPHeader("Content-Type")}} header on the linked URL.</p>
  </div>
  </dd>
- <dt id="coords">{{HTMLAttrDef("coords")}}{{Obsolete_Inline("HTML5")}}</dt>
+ <dt id="coords">{{HTMLAttrDef("coords")}}{{Deprecated_Inline}}</dt>
  <dd>Used with <a href="#shape">the <code>shape</code> attribute</a>. A comma-separated list of coordinates.</dd>
- <dt id="name">{{HTMLAttrDef("name")}}{{Obsolete_Inline("HTML5")}}</dt>
+ <dt id="name">{{HTMLAttrDef("name")}}{{Deprecated_Inline}}</dt>
  <dd>Was required to define a possible target location in a page. In HTML 4.01, <code>id</code> and <code>name</code> could both be used on <code>&lt;a&gt;</code>, as long as they had identical values.
- <div class="note">
- <p><strong>Note:</strong> Use the global attribute {{HTMLAttrxRef("id")}} instead.</p>
+ <div class="notecard note">
+ <h4>Note</h4>
+ <p>Use the global attribute {{HTMLAttrxRef("id")}} instead.</p>
  </div>
  </dd>
- <dt id="rev">{{HTMLAttrDef("rev")}}{{Obsolete_Inline("HTML5")}}</dt>
+ <dt id="rev">{{HTMLAttrDef("rev")}}{{Deprecated_Inline}}</dt>
  <dd>Specified a reverse link; the opposite of <a href="#rel">the <code>rel</code> attribute</a>. Deprecated for being very confusing.</dd>
- <dt id="shape">{{HTMLAttrDef("shape")}}{{Obsolete_Inline("HTML5")}}</dt>
+ <dt id="shape">{{HTMLAttrDef("shape")}}{{Deprecated_Inline}}</dt>
  <dd>The shape of the hyperlink’s region in an image map.
- <div class="note"><strong>Note:</strong> Use the {{HTMLElement("area")}} element for image maps instead.</div>
+ <div class="notecard note">
+ <h4>Note</h4>
+ <p>Use the {{HTMLElement("area")}} element for image maps instead.</p>
+ </div>
  </dd>
 </dl>
 
@@ -188,7 +191,7 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;a href="https://www.mozilla.com"&gt;
+<pre class="brush: html">&lt;a href="https://www.mozilla.com"&gt;
   Mozilla
 &lt;/a&gt;</pre>
 
@@ -200,7 +203,7 @@ tags:
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;a href="//example.com"&gt;Scheme-relative URL&lt;/a&gt;
+<pre class="brush: html">&lt;a href="//example.com"&gt;Scheme-relative URL&lt;/a&gt;
 &lt;a href="/en-US/docs/Web/HTML"&gt;Origin-relative URL&lt;/a&gt;
 &lt;a href="./p"&gt;Directory-relative URL&lt;/a&gt;
 </pre>
@@ -208,7 +211,7 @@ tags:
 <div class="hidden">
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">a { display: block; margin-bottom: 0.5em }</pre>
+<pre class="brush: css">a { display: block; margin-bottom: 0.5em }</pre>
 </div>
 
 <h4 id="Result_2">Result</h4>
@@ -217,7 +220,7 @@ tags:
 
 <h3 id="Linking_to_an_element_on_the_same_page">Linking to an element on the same page</h3>
 
-<pre class="brush: html notranslate">&lt;!-- &lt;a&gt; element links to the section below --&gt;
+<pre class="brush: html">&lt;!-- &lt;a&gt; element links to the section below --&gt;
 &lt;p&gt;&lt;a href="#Section_further_down"&gt;
   Jump to the heading below
 &lt;/a&gt;&lt;/p&gt;
@@ -227,20 +230,21 @@ tags:
 </pre>
 
 <div class="notecard note">
-<p><strong>Note:</strong> You can use <code>href="#top"</code> or the empty fragment (<code>href="#"</code>) to link to the top of the current page, <a href="https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier">as defined in the HTML specification</a>.</p>
+<h4>Note</h4>
+<p>You can use <code>href="#top"</code> or the empty fragment (<code>href="#"</code>) to link to the top of the current page, <a href="https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier">as defined in the HTML specification</a>.</p>
 </div>
 
 <h3 id="Linking_to_an_email_address">Linking to an email address</h3>
 
 <p>To create links that open in the user's email program to let them send a new message, use the <code>mailto:</code> scheme:</p>
 
-<pre class="brush: html notranslate">&lt;a href="mailto:nowhere@mozilla.org"&gt;Send email to nowhere&lt;/a&gt;</pre>
+<pre class="brush: html">&lt;a href="mailto:nowhere@mozilla.org"&gt;Send email to nowhere&lt;/a&gt;</pre>
 
 <p>For details about <code>mailto:</code> URLs, such as including a subject or body, see <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#E-mail_links">Email links</a> or {{RFC(6068)}}.</p>
 
 <h3 id="Linking_to_telephone_numbers">Linking to telephone numbers</h3>
 
-<pre class="brush: html notranslate">&lt;a href="tel:+49.157.0156"&gt;+49 157 0156&lt;/a&gt;
+<pre class="brush: html">&lt;a href="tel:+49.157.0156"&gt;+49 157 0156&lt;/a&gt;
 &lt;a href="tel:+1(555)5309"&gt;(555) 5309&lt;/a&gt;</pre>
 
 <p><code>tel:</code> link behavior varies with device capabilities:</p>
@@ -262,7 +266,7 @@ tags:
 
 <h5 id="HTML_3">HTML</h5>
 
-<pre class="brush: html notranslate">&lt;p&gt;Paint by holding down the mouse button and moving it.
+<pre class="brush: html">&lt;p&gt;Paint by holding down the mouse button and moving it.
   &lt;a href="" download="my_painting.png"&gt;Download my painting&lt;/a&gt;
 &lt;/p&gt;
 
@@ -271,7 +275,7 @@ tags:
 
 <h5 id="CSS_2">CSS</h5>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 canvas {
@@ -287,7 +291,7 @@ a {
 
 <h5 id="JavaScript">JavaScript</h5>
 
-<pre class="brush: js notranslate">var canvas = document.querySelector('canvas'),
+<pre class="brush: js">var canvas = document.querySelector('canvas'),
     c = canvas.getContext('2d');
 c.fillStyle = 'hotpink';
 
@@ -319,7 +323,7 @@ document.querySelector('a').addEventListener('click', event =&gt;
 
 <p><code>&lt;a&gt;</code> elements can have consequences for users’ security and privacy. See <a href="/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns"><code>Referer</code> header: privacy and security concerns</a> for information.</p>
 
-<p>Using <code>target="_blank"</code> without <code>rel="noreferrer"</code> and <code>rel="noopener"</code> makes the website vulnerable to {{domxref("window.opener")}} API exploitation attacks (<a href="https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/">vulnerability description</a>), although note that, in newer browser versions (e.g. Firefox 79+) setting <code>target="_blank"</code> implicitly provides the same protection as setting <code>rel="noopener"</code>.</p>
+<p>Using <code>target="_blank"</code> without <code><a href="/en-US/docs/Web/HTML/Link_types/noreferrer">rel="noreferrer"</a></code> and <code><a href="/en-US/docs/Web/HTML/Link_types/noopener">rel="noopener"</a></code> makes the website vulnerable to {{domxref("window.opener")}} API exploitation attacks (<a href="https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/">vulnerability description</a>), although note that, in newer browser versions setting <code>target="_blank"</code> implicitly provides the same protection as setting <code>rel="noopener"</code>. See <a href="#browser_compatibility">browser compatibility</a> for details.</p>
 
 <h2 id="Accessibility">Accessibility</h2>
 
@@ -331,7 +335,7 @@ document.querySelector('a').addEventListener('click', event =&gt;
 
 <p>A sadly common mistake is to only link the words “click here” or “here”:</p>
 
-<pre class="brush: html example-bad notranslate">&lt;p&gt;
+<pre class="brush: html example-bad">&lt;p&gt;
   Learn more about our products &lt;a href="/products"&gt;here&lt;/a&gt;.
 &lt;/p&gt;
 </pre>
@@ -340,7 +344,7 @@ document.querySelector('a').addEventListener('click', event =&gt;
 
 <p>Luckily, this is an easy fix, and it’s actually shorter than the inaccessible version!</p>
 
-<pre class="brush: html example-good notranslate">&lt;p&gt;
+<pre class="brush: html example-good">&lt;p&gt;
   Learn more &lt;a href="/products"&gt;about our products&lt;/a&gt;.
 &lt;/p&gt;</pre>
 
@@ -362,21 +366,21 @@ document.querySelector('a').addEventListener('click', event =&gt;
 
 <h4 id="Link_that_opens_a_new_tabwindow">Link that opens a new tab/window</h4>
 
-<pre class="brush: html notranslate">&lt;a target="_blank" href="https://www.wikipedia.org"&gt;
+<pre class="brush: html">&lt;a target="_blank" href="https://www.wikipedia.org"&gt;
   Wikipedia (opens in new tab)
 &lt;/a&gt;
 </pre>
 
 <h4 id="Link_to_a_non-HTML_resource">Link to a non-HTML resource</h4>
 
-<pre class="brush: html notranslate">&lt;a href="2017-annual-report.ppt"&gt;
+<pre class="brush: html">&lt;a href="2017-annual-report.ppt"&gt;
   2017 Annual Report (PowerPoint)
 &lt;/a&gt;
 </pre>
 
 <p>If an icon is used to signify link behavior, make sure it has {{HTMLAttrxRef("alt", "img", "alt text", "true")}}:</p>
 
-<pre class="brush: html notranslate">&lt;a  target="_blank" href="https://www.wikipedia.org"&gt;
+<pre class="brush: html">&lt;a  target="_blank" href="https://www.wikipedia.org"&gt;
   Wikipedia
   &lt;img alt="(opens in new tab)" src="newtab.svg"&gt;
 &lt;/a&gt;
@@ -397,7 +401,7 @@ document.querySelector('a').addEventListener('click', event =&gt;
 
 <p>A <strong>skip link</strong> is a link placed as early as possible in {{HTMLElement("body")}} content that points to the beginning of the page's main content. Usually, CSS hides a skip link offscreen until focused.</p>
 
-<pre class="notranslate">&lt;body&gt;
+<pre>&lt;body&gt;
   &lt;a href="#content"&gt;Skip to main content&lt;/a&gt;
 
   &lt;header&gt;
@@ -407,7 +411,7 @@ document.querySelector('a').addEventListener('click', event =&gt;
   &lt;main id="content"&gt; &lt;!-- The skip link jumps to here --&gt;
 </pre>
 
-<pre class="brush: css notranslate">.skip-link {
+<pre class="brush: css">.skip-link {
   position: absolute;
   top: -3em;
   background: #fff;

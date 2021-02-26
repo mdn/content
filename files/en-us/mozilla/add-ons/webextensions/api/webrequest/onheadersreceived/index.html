@@ -18,7 +18,7 @@ tags:
 
 <p>To have the response headers passed into the listener, along with the rest of the request data, pass <code>"responseHeaders"</code> in the <code>extraInfoSpec</code> array.</p>
 
-<p>If you use <code>"blocking"</code>, you must have the <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">"webRequestBlocking" API permission</a> in your manifest.json.</p>
+<p>If you use <code>"blocking"</code>, you must have the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">"webRequestBlocking" API permission</a> in your manifest.json.</p>
 
 <p>It is possible for extensions to make conflicting requests. If two extensions listen to <code>onHeadersReceived</code> for the same request and return <code>responseHeaders</code> to set the same header (for example, <code>Set-Cookie</code>) not present in the original response, only one of the changes will succeed.</p>
 
@@ -193,7 +193,7 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
 
 <p>This code sets an extra cookie when requesting a resource from the target URL:</p>
 
-<pre class="notranslate brush: js">var targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+<pre class="brush: js">var targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
 
 // Add the new header to the original array,
 // and return it.
@@ -216,7 +216,7 @@ browser.webRequest.onHeadersReceived.addListener(
 
 <p>This code does the same thing the previous example, except that the listener is asynchronous, returning a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> which is resolved with the new headers:</p>
 
-<pre class="notranslate brush: js">var targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+<pre class="brush: js">var targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
 
 // Return a Promise that sets a timer.
 // When the timer fires, resolve the promise with

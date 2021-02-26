@@ -11,16 +11,20 @@ tags:
 - Reference
 - toMatrix
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}</div>
+<div>{{APIRef("CSS Typed OM")}}</div>
 
 <p class="summary">The <strong><code>toMatrix()</code></strong> method of the
   {{domxref("CSSTransformComponent")}} interface returns a {{domxref('DOMMatrix')}}
   object.</p>
 
+<p>All transform functions can be represented mathematically as a 4x4 transformation matrix. This is explained in detail in <a href="https://dev.opera.com/articles/understanding-the-css-transforms-matrix/">Understanding the CSS Transforms matrix</a>.</p>
+
+<div class="note notecard"><p>The <code>is2D</code> property affects what transform, and therefore type of matrix that will be returned. CSS 2D and 3D transforms are different for legacy reasons. A brief explanation of 2D vs. 3D transforms can be found in <a href="/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">Using CSS transforms</a>.</p></div>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>matrix</var> = CSSTransformComponent.toMatrix();</pre>
+  class="brush: js">var <var>matrix</var> = CSSTransformComponent.toMatrix();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 

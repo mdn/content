@@ -15,7 +15,7 @@ tags:
 <p>A <code>CSSStyleDeclaration</code> object can be exposed using three different APIs:</p>
 
 <ul>
- <li>Via {{DOMxRef("HTMLElement.style")}}, which deals with the inline styles of a single element (e.g., <code>&lt;div style="..."&gt;</code>).</li>
+ <li>Via {{DOMxRef("ElementCSSInlineStyle.style")}}, which deals with the inline styles of a single element (e.g., <code>&lt;div style="..."&gt;</code>).</li>
  <li>Via the {{DOMxRef("CSSStyleSheet")}} API. For example, <code>document.styleSheets[0].cssRules[0].style</code> returns a <code>CSSStyleDeclaration</code> object on the first CSS rule in the document's first stylesheet.</li>
  <li>Via {{DOMxRef("Window.getComputedStyle()")}}, which exposes the <code>CSSStyleDeclaration</code> object as a <strong>read-only</strong> interface.</li>
 </ul>
@@ -34,7 +34,7 @@ tags:
 <h3 id="CSS_Properties">CSS Properties</h3>
 
 <dl>
- <dt>{{DOMxRef("CSSStyleDeclaration.named_properties", "CSSStyleDeclaration.cssFloat")}}</dt>
+ <dt>{{DOMxRef("CSSStyleDeclaration.cssFloat", "CSSStyleDeclaration.cssFloat")}}</dt>
  <dd>Special alias for the {{CSSxRef("float")}} CSS property.</dd>
  <dt>{{DOMxRef("CSSStyleDeclaration.named_properties", '<code>CSSStyleDeclaration</code> named properties', "", 1)}}</dt>
  <dd>Dashed and camel-cased attributes for all supported CSS properties.</dd>

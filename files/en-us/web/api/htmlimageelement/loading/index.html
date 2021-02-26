@@ -31,7 +31,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">let <em>imageLoadScheduling</em> = <em>htmlImageElement</em>.loading;
+<pre class="brush: js">let <em>imageLoadScheduling</em> = <em>htmlImageElement</em>.loading;
 <em>htmlImageElement</em>.loading = <em>eagerOrLazy</em>;
 </pre>
 
@@ -69,7 +69,7 @@ tags:
   layout is known, but their loads do not delay the firing of the <code>load</code> event.
   In other words, these images aren't loaded immediately when processing
   the <code>&lt;img&gt;</code> element, but are still loaded as part of the initial page
-  load. They justt don't affect the timing of the <code>load</code> event.</p>
+  load. They just don't affect the timing of the <code>load</code> event.</p>
 
 <p>That means that when <code>load</code> fires, it's possible that any lazy-loaded images
   located in the visual viewport may not yet be visible.</p>
@@ -96,7 +96,7 @@ tags:
   of items, using lazy-loading to avoid loading the image from the network until it's
   actually needed.</p>
 
-<pre class="brush: js notranslate">function addImageToList(url) {
+<pre class="brush: js">function addImageToList(url) {
   const list = document.querySelector("div.photo-list");
 
   let newItem = document.createElement("div");

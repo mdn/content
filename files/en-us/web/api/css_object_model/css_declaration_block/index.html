@@ -1,0 +1,66 @@
+---
+title: CSS Declaration Block
+slug: Web/API/CSS_Object_Model/CSS_Declaration_Block
+tags:
+  - CSS
+  - CSS Object Model
+  - CSS Declaration Block
+  - CSS Declarations
+  - Reference
+---
+<div>{{ APIRef("CSSOM") }}</div>
+
+<p class="summary">A <strong>CSS declaration block</strong> is an ordered collection of CSS properties and values. It is represented in the DOM as a {{domxref("CSSStyleDeclaration")}}.</p>
+
+<p>Each property and value pairing is known as a <a href="/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration">CSS declaration</a>. The CSS declaration block has the following associated properties:</p>
+
+<dl>
+  <dt>computed flag</dt>
+  <dd>Set if the {{domxref("CSSStyleDeclaration")}} object is a computed rather than specified style. Unset by default.</dd>
+  <dt>declarations</dt>
+  <dd>The <a href="/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration">CSS declarations</a> associated with this object.</dd>
+  <dt>parent CSS rule</dt>
+  <dd>The {{domxref("CSSRule")}} that the CSS declaration block is associated with, otherwise null. </dd>
+  <dt>owner node</dt>
+  <dd>The {{domxref("element")}} that the CSS declaration block is associated with, otherwise null.</dd>
+  <dt>updating flag</dt>
+  <dd>Set when the CSS declaration block is updating the owner node's {{htmlattrxref("style")}} attribute.</dd>
+</dl>
+
+<p>When a {{domxref("CSSStyleDeclaration")}} is returned by a <a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model (CSSOM)</a> interface these properties are set to appropriate values as defined by the specification.</p>
+
+<h2 id="Basic_example">Basic example</h2>
+
+<p>The following example shows a CSS rule with a declaration block for the {{htmlelement("Heading_elements","&lt;h1&gt;")}} element. The CSS declaration block is the lines between the curly braces.</p>
+
+<pre class="brush: css; highlight[2,5]">h1 {
+  margin: 0 auto;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  font-style: italic;
+  color: rebeccapurple;
+}</pre>
+
+<p>We can return a {{domxref("CSSStyleDeclaration")}} representing this CSS declaration block using {{domxref("CSSStyleRule.style")}}.</p>
+
+<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
+let rule = myRules[0]; // a CSSStyleRule 
+console.log(rule.style); // a CSSStyleDeclaration object </pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+    <td>{{SpecName('CSSOM', '#css-declaration-blocks', 'CSS Declaration Blocks')}}</td>
+    <td>{{Spec2('CSSOM')}}</td>
+    <td></td>
+  </tr>
+ </tbody>
+</table>

@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Anatomy_of_an_internationalized_extension">Anatomy of an internationalized extension</h2>
 
-<p>An internationalized extension can contain the same features as any other extension — <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">background scripts</a>, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a>, etc. — but it also has some extra parts to allow it to switch between different locales. These are summarized in the following directory tree:</p>
+<p>An internationalized extension can contain the same features as any other extension — <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts">background scripts</a>, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a>, etc. — but it also has some extra parts to allow it to switch between different locales. These are summarized in the following directory tree:</p>
 
 <ul class="directory-tree">
  <li>extension-root-directory/
@@ -176,7 +176,7 @@ tags:
 
 <p>In our <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a> example, the<a href="https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/background-script.js"> background script</a> contains the following lines:</p>
 
-<pre class="notranslate brush: js">var title = browser.i18n.getMessage("notificationTitle");
+<pre class="brush: js">var title = browser.i18n.getMessage("notificationTitle");
 var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
 
 <p>The first one just retrieves the <code>notificationTitle message</code> field from the available <code>messages.json</code> file most appropriate for the browser's current locale. The second one is similar, but it is being passed a URL as a second parameter. What gives? This is how you specify the content to replace the <code>$URL$</code> placeholder we see in the <code>notificationContent message</code> field:</p>
@@ -317,7 +317,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
 
     <p>You can't use this message in a manifest file.</p>
 
-    <p>Also note that this ID is <em>not</em> the add-on ID returned by {{WebExtAPIRef("runtime.id")}}, and that can be set using the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a> key in manifest.json. It's the generated UUID that appears in the add-on's URL. This means that you can't use this value as the <code>extensionId</code> parameter to {{WebExtAPIRef("runtime.sendMessage()")}}, and can't use it to check against the <code>id</code> property of a {{WebExtAPIRef("runtime.MessageSender")}} object.</p>
+    <p>Also note that this ID is <em>not</em> the add-on ID returned by {{WebExtAPIRef("runtime.id")}}, and that can be set using the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">applications</a> key in manifest.json. It's the generated UUID that appears in the add-on's URL. This means that you can't use this value as the <code>extensionId</code> parameter to {{WebExtAPIRef("runtime.sendMessage()")}}, and can't use it to check against the <code>id</code> property of a {{WebExtAPIRef("runtime.MessageSender")}} object.</p>
    </td>
   </tr>
   <tr>
@@ -381,7 +381,7 @@ padding-left: 1.5em;</pre>
 
 <h2 id="Testing_out_your_extension">Testing out your extension</h2>
 
-<p>Starting in Firefox 45, you can install extensions temporarily from disk — see <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Packaging_and_installation#Loading_from_disk">Loading from disk</a>. Do this, and then try testing out our <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a> extension. Go to one of your favourite websites and click a link to see if a notification appears reporting the URL of the clicked link.</p>
+<p>Starting in Firefox 45, you can install extensions temporarily from disk — see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Packaging_and_installation#loading_from_disk">Loading from disk</a>. Do this, and then try testing out our <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a> extension. Go to one of your favorite websites and click a link to see if a notification appears reporting the URL of the clicked link.</p>
 
 <p>Next, change Firefox's locale to one supported in the extension that you want to test.</p>
 

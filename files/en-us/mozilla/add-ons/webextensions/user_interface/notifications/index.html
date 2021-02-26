@@ -6,10 +6,9 @@ tags:
 ---
 <div>{{AddonSidebar}}</div>
 
-<div>
 <p><span class="seoSummary">Notifications allow you to communicate information about your extension or its content using the underlying operating system's notification service.</span></p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15754/notify-shadowed.png" style="display: block; height: 147px; margin-left: auto; margin-right: auto; width: 390px;"></p>
+<p><img alt="" src="notify-shadowed.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Notifications can include a call to action for the user, and your add-on can listen for the user clicking the notification or the notification closing.</p>
 
@@ -21,7 +20,7 @@ tags:
 
 <p>You then use {{WebExtAPIRef("notifications.create")}} to create your notifications, as in this example from <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n:</a></p>
 
-<pre class="notranslate brush: js">var title = browser.i18n.getMessage("notificationTitle");
+<pre class="brush: js">var title = browser.i18n.getMessage("notificationTitle");
 var content = browser.i18n.getMessage("notificationContent", message.url);
 browser.notifications.create({
   "type": "basic",
@@ -34,8 +33,8 @@ browser.notifications.create({
 
 <p>If the notification includes a call to action, you can listen for the user clicking the notification to call the function to handle the action:</p>
 
-<pre class="notranslate brush: js line-numbers  language-js"><code class="language-js">browser<span class="punctuation token">.</span>notifications<span class="punctuation token">.</span>onClicked<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span>handleClick<span class="punctuation token">)</span><span class="punctuation token">;</span>
-</code></pre>
+<pre class="brush: js line-numbers  language-js">browser.notifications.onClicked.addListener(handleClick);
+</pre>
 
 <p>If you are issuing calls to action through notifications, you will also want to define the optional notification <code>id</code>, so you can figure out which call to action the user has selected.</p>
 
@@ -46,4 +45,3 @@ browser.notifications.create({
 <h2 id="Examples">Examples</h2>
 
 <p>The <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> repository on GitHub includes the <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a> example which implements notifications.</p>
-</div>

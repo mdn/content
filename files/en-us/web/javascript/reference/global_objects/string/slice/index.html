@@ -18,7 +18,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>str</var>.slice(<var>beginIndex</var>[, <var>endIndex</var>])</pre>
+  class="brush: js"><var>str</var>.slice(<var>beginIndex</var>[, <var>endIndex</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -45,20 +45,15 @@ tags:
       string. If negative, it is treated as
       <code><var>str</var>.length + <var>endIndex</var></code>. (For example, if
       <code><var>endIndex</var></code> is <code>-3</code>, it is treated as
-      <code><var>str</var>.length - 3</code>.) If it is not undefined and not a number
-      after <code>Number(<var>endIndex</var>)</code>, an empty string is returned.</p>
+      <code><var>str</var>.length - 3</code>.) If it is not undefined, and
+      <code>Number(<var>endIndex</var>)</code> is not positive,
+      an empty string is returned.</p>
 
-    <p>If <code><var>endIndex</var></code> is specified and
-      <code><var>beginIndex</var></code> is negative, <code><var>endIndex</var></code>
-      should be negative, otherwise an empty string is returned. (For example,
-      <code>slice(-3, 0)</code> returns <code>""</code>.)</p>
-
-    <p>If <code><var>endIndex</var></code> is specified, and
-      <code><var>beginIndex</var></code> and <code><var>endIndex</var></code> are both
-      positive or negative, <code><var>endIndex</var></code> should be greater than
-      <code><var>beginIndex</var></code>, otherwise an empty string is returned. (For
-      example, <code>slice(-1, -3)</code> or <code>slice(3, 1)</code> returns
-      <code>""</code>.)</p>
+    <p>If <code><var>endIndex</var></code> is specified,
+      <code><var>endIndex</var></code> should be greater than
+      <code><var>beginIndex</var></code>, otherwise an empty string is returned. (For
+      example, <code>slice(-3, 0)</code>, <code>slice(-1, -3)</code>, or <code>slice(3, 1)</code>
+      returns <code>""</code>.)</p>
   </dd>
 </dl>
 
@@ -85,7 +80,7 @@ tags:
 
 <p>The following example uses <code>slice()</code> to create a new string.</p>
 
-<pre class="brush: js notranslate">let str1 = 'The morning is upon us.', // the length of str1 is 23.
+<pre class="brush: js">let str1 = 'The morning is upon us.', // the length of str1 is 23.
     str2 = str1.slice(1, 8),
     str3 = str1.slice(4, -2),
     str4 = str1.slice(12),
@@ -101,7 +96,7 @@ console.log(str5)  // OUTPUT: ""
 
 <p>The following example uses <code>slice()</code> with negative indexes.</p>
 
-<pre class="brush: js notranslate">let str = 'The morning is upon us.'
+<pre class="brush: js">let str = 'The morning is upon us.'
 str.slice(-3)      // returns 'us.'
 str.slice(-3, -1)  // returns 'us'
 str.slice(0, -1)   // returns 'The morning is upon us'
@@ -111,17 +106,17 @@ str.slice(0, -1)   // returns 'The morning is upon us'
   start index and forwards from the start of the string by <code>16</code> to find the end
   index.</p>
 
-<pre class="brush: js notranslate">console.log(str.slice(-11, 16)) // =&gt; "is u"</pre>
+<pre class="brush: js">console.log(str.slice(-11, 16)) // =&gt; "is u"</pre>
 
 <p>Here it counts forwards from the start by <code>11</code> to find the start index and
   backwards from the end by <code>7</code> to find the end index.</p>
 
-<pre class="brush: js notranslate">console.log(str.slice(11, -7)) // =&gt; " is u"</pre>
+<pre class="brush: js">console.log(str.slice(11, -7)) // =&gt; " is u"</pre>
 
 <p>These arguments count backwards from the end by <code>5</code> to find the start index
   and backwards from the end by <code>1</code> to find the end index.</p>
 
-<pre class="brush: js notranslate">console.log(str.slice(-5, -1)) // =&gt; "n us"</pre>
+<pre class="brush: js">console.log(str.slice(-5, -1)) // =&gt; "n us"</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

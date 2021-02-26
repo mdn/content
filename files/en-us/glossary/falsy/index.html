@@ -10,54 +10,53 @@ tags:
 
 <p>{{Glossary("JavaScript")}} uses {{Glossary("Type_Conversion", "type conversion")}} to coerce any value to a Boolean in contexts that require it, such as {{Glossary("Conditional", "conditionals")}} and {{Glossary("Loop", "loops")}}.</p>
 
-<p>There are 8 falsy values:</p>
-
 <table class="standard-table">
+<caption><p><strong>Complete list of JavaScript falsy values</strong></p></caption>
  <tbody>
   <tr>
    <td><code>false</code></td>
-   <td>The keyword <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Future_reserved_keywords_in_older_standards">false</a></td>
+   <td>The keyword <code><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#future_reserved_keywords_in_older_standards">false</a></code>.</td>
   </tr>
   <tr>
    <td><code>0</code></td>
-   <td>The number <a href="/en-US/docs/Web/JavaScript/Data_structures#Number_type">zero</a></td>
+   <td>The {{jsxref("Number")}} zero (so, also <code>0.0</code>, etc., and <code>0x0</code>).</td>
   </tr>
   <tr>
    <td><code>-0</code></td>
-   <td>The number negative <a href="/en-US/docs/Web/JavaScript/Data_structures#Number_type">zero</a></td>
+   <td>The {{jsxref("Number")}} negative zero (so, also <code>-0.0</code>, etc., and <code>-0x0</code>).</td>
   </tr>
   <tr>
-   <td><code>0n</code></td>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt">BigInt</a>, when used as a boolean, follows the same rule as a Number. <code>0n</code> is <em>falsy</em>.</td>
+   <td><code>0n</code>, <code>-0n</code></td>
+   <td>The {{jsxref("BigInt")}} zero and negative zero (so, also <code>0x0n</code>/<code>-0x0n</code>).</td>
   </tr>
   <tr>
-   <td><code>""</code></td>
-   <td>Empty <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> value</td>
+   <td><code>""</code>, <code>''</code>, <code>``</code></td>
+   <td>Empty <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> value.</td>
   </tr>
   <tr>
    <td>{{Glossary("null")}}</td>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> - the absence of any value</td>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> — the absence of any value.</td>
   </tr>
   <tr>
    <td>{{Glossary("undefined")}}</td>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a> - the primitive value</td>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a> — the primitive value.</td>
   </tr>
   <tr>
    <td>{{Glossary("NaN")}}</td>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN">NaN </a>- not a number</td>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN">NaN </a> — not a number.</td>
+  </tr>
+  <tr>
+   <td>{{domxref("document.all")}}</td>
+   <td>Objects are falsy if and only if they have the <a href="https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot">[[IsHTMLDDA]]</a> internal slot. <div>That slot only exists in {{domxref("document.all")}} and cannot be set using JavaScript.</div></td>
   </tr>
  </tbody>
 </table>
-
-<div class="note">
-<p>Objects are falsy if and only if they have the <a href="https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot">[[IsHTMLDDA]] internal slot</a>. This slot only exists in {{domxref("document.all")}} and cannot be set using JavaScript.</p>
-</div>
 
 <h2 id="Examples">Examples</h2>
 
 <p>Examples of <em>falsy</em> values in JavaScript (which are coerced to false in Boolean contexts, and thus <em>bypass</em> the <code>if</code> block):</p>
 
-<pre class="brush: js notranslate">if (false)
+<pre class="brush: js">if (false)
 if (null)
 if (undefined)
 if (0)
@@ -71,7 +70,7 @@ if ("")
 
 <p>If the first object is falsy, it returns that object</p>
 
-<pre class="brush: js notranslate">false &amp;&amp; "dog"
+<pre class="brush: js">false &amp;&amp; "dog"
 // ↪ false
 
 0 &amp;&amp; "dog"

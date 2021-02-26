@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>object</var>.valueOf()</pre>
+<pre class="brush: js"><var>object</var>.valueOf()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -26,7 +26,7 @@ tags:
   <p>A <a
       href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_plus">(unary)
       plus sign</a> can sometimes be used as a shorthand for <code>valueOf</code>, e.g. in
-    <code>+new Number()</code>. Also see <a href="#Using_unary_plus">Using unary plus</a>.
+    <code>+new Number()</code>. Also see <a href="#using_unary_plus">Using unary plus</a>.
   </p>
 </div>
 
@@ -57,7 +57,7 @@ tags:
   to the object's <code>valueOf</code> method:</p>
 
 <pre
-  class="brush: js notranslate">MyNumberType.prototype.valueOf = function() { return customPrimitiveValue; };</pre>
+  class="brush: js">MyNumberType.prototype.valueOf = function() { return customPrimitiveValue; };</pre>
 
 <p>With the preceding code in place, any time an object of type <code>MyNumberType</code>
   is used in a context where it is to be represented as a primitive value, JavaScript
@@ -66,7 +66,7 @@ tags:
 <p>An object's <code>valueOf</code> method is usually invoked by JavaScript, but you can
   invoke it yourself as follows:</p>
 
-<pre class="brush: js notranslate"><var>myNumberType</var>.valueOf()</pre>
+<pre class="brush: js"><var>myNumberType</var>.valueOf()</pre>
 
 <div class="note">
   <p><strong>Note:</strong> Objects in string contexts convert via the
@@ -81,7 +81,7 @@ tags:
 
 <h3 id="Using_valueOf_on_custom_types">Using valueOf on custom types</h3>
 
-<pre class="brush: js notranslate">function MyNumberType(n) {
+<pre class="brush: js">function MyNumberType(n) {
     this.number = n;
 }
 
@@ -95,7 +95,7 @@ myObj + 3; // 7
 
 <h3 id="Using_unary_plus">Using unary plus</h3>
 
-<pre class="brush: js notranslate">+"5" // 5 (string to number)
+<pre class="brush: js">+"5" // 5 (string to number)
 +"" // 0 (string to number)
 +"1 + 2" // NaN (doesn't evaluate)
 +new Date() // same as (new Date()).getTime()

@@ -29,7 +29,7 @@ tags:
 
 <h3 id="The_audio_routing_graph">The audio routing graph</h3>
 
-<p><img alt="AudioNodes participating in an AudioContext create a audio routing graph." src="https://mdn.mozillademos.org/files/9713/WebAudioBasics.png" style="display: block; height: 230px; margin: 0px auto; width: 677px;"></p>
+<p><img alt="AudioNodes participating in an AudioContext create a audio routing graph." src="webaudiobasics.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Each <code>AudioNode</code> has inputs and outputs, and multiple audio nodes are connected to build a <em>processing graph</em>. This graph is contained in an {{domxref("AudioContext")}}, and each audio node can only belong to one audio context.</p>
 
@@ -45,7 +45,7 @@ tags:
 
 <p>There are two ways to create an <code>AudioNode</code>: via the <em>constructor</em> and via the <em>factory method</em>.</p>
 
-<pre class="brush: js; notranslate">// constructor
+<pre class="brush: js;">// constructor
 const analyserNode = new AnalyserNode(audioCtx, {
   fftSize: 2048,
   maxDecibels: -25,
@@ -82,11 +82,11 @@ analyserNode.smoothingTimeConstant = 0.5;</pre>
  <dt>{{domxref("AudioNode.numberOfOutputs")}} {{readonlyInline}}</dt>
  <dd>Returns the number of outputs coming out of the node. Destination nodes — like {{ domxref("AudioDestinationNode") }} — have a value of <code>0</code> for this attribute.</dd>
  <dt>{{domxref("AudioNode.channelCount")}}</dt>
- <dd>Represents an integer used to determine how many channels are used when <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing">up-mixing and down-mixing</a> connections to any inputs to the node. Its usage and precise definition depend on the value of {{domxref("AudioNode.channelCountMode")}}.</dd>
+ <dd>Represents an integer used to determine how many channels are used when <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing">up-mixing and down-mixing</a> connections to any inputs to the node. Its usage and precise definition depend on the value of {{domxref("AudioNode.channelCountMode")}}.</dd>
  <dt>{{domxref("AudioNode.channelCountMode")}}</dt>
  <dd>Represents an enumerated value describing the way channels must be matched between the node's inputs and outputs.</dd>
  <dt>{{domxref("AudioNode.channelInterpretation")}}</dt>
- <dd>Represents an enumerated value describing the meaning of the channels. This interpretation will define how audio <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing">up-mixing and down-mixing</a> will happen.<br>
+ <dd>Represents an enumerated value describing the meaning of the channels. This interpretation will define how audio <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing">up-mixing and down-mixing</a> will happen.<br>
  The possible values are <code>"speakers"</code> or <code>"discrete"</code>.</dd>
 </dl>
 
@@ -105,7 +105,7 @@ analyserNode.smoothingTimeConstant = 0.5;</pre>
 
 <p>This simple snippet of code shows the creation of some audio nodes, and how the <code>AudioNode</code> properties and methods can be used. You can find examples of such usage on any of the examples linked to on the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> landing page (for example <a href="https://github.com/mdn/violent-theremin">Violent Theremin</a>.)<span class="p"> </span></p>
 
-<pre class="brush: js; notranslate">const audioCtx = new AudioContext();
+<pre class="brush: js;">const audioCtx = new AudioContext();
 
 const oscillator = new OscillatorNode(audioCtx);
 const gainNode = new GainNode(audioCtx);
@@ -136,10 +136,7 @@ oscillator.channelCount;</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.AudioNode")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

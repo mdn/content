@@ -14,7 +14,7 @@ tags:
 
 <p>Ask for the set of permissions listed in the given {{WebExtAPIRef("permissions.Permissions")}} object.</p>
 
-<p>The <code>Permissions</code> argument may contain either an <code>origins</code> property, which is an array of <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permissions</a>, or a <code>permissions</code> property, which is an array of <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permissions</a>, or both. Permissions must come from the set of permissions defined in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions">optional_permissions</a></code> manifest.json key. The <code>origins</code> property may include permissions that match a subset of the hosts matched by an optional permission: for example, if optional_permissions include "*://mozilla.org/", then <code>permissions.origins</code> may include "https://developer.mozilla.org/".</p>
+<p>The <code>Permissions</code> argument may contain either an <code>origins</code> property, which is an array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a>, or a <code>permissions</code> property, which is an array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permissions</a>, or both. Permissions must come from the set of permissions defined in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions">optional_permissions</a></code> manifest.json key. The <code>origins</code> property may include permissions that match a subset of the hosts matched by an optional permission: for example, if optional_permissions include "*://mozilla.org/", then <code>permissions.origins</code> may include "https://developer.mozilla.org/".</p>
 
 <p>The request can only be made inside the handler for a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions">user action</a>.</p>
 
@@ -52,7 +52,7 @@ tags:
 
 <p>This code adds a click handler that asks for various permissions, then logs the result of the request and the extension's permissions after the request completed.</p>
 
-<pre class="notranslate brush: js">const permissionsToRequest = {
+<pre class="brush: js">const permissionsToRequest = {
   permissions: ["bookmarks", "history"],
   origins: ["https://developer.mozilla.org/"]
 }

@@ -36,13 +36,13 @@ tags:
 
 <p>The event is sent to the <code>Element</code> that is transitioning into or out of full-screen mode, and this event then bubbles up to the <code>Document</code>.</p>
 
-<p>To find out whether the <code>Element</code> is entering or exiting full-screen mode, check the value of {{domxref("DocumentOrShadowRoot/fullscreenElement", "DocumentOrShadowRoot.fullscreenElement")}}: if this value is <code>null</code> then the element is exiting full-screen mode, otherwise it is entering full-screen mode.</p>
+<p>To find out whether the <code>Element</code> is entering or exiting full-screen mode, check the value of {{domxref("Document.fullscreenElement")}}: if this value is <code>null</code> then the element is exiting full-screen mode, otherwise it is entering full-screen mode.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>In this example, a handler for the <code>fullscreenchange</code> event is added to the {{domxref("Document")}}.</p>
 
-<pre class="brush: js notranslate">document.addEventListener('fullscreenchange', (event) =&gt; {
+<pre class="brush: js">document.addEventListener('fullscreenchange', (event) =&gt; {
   // document.fullscreenElement will point to the element that
   // is in fullscreen mode if there is one. If there isn't one,
   // the value of the property is null.

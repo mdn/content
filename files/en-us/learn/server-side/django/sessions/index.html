@@ -55,7 +55,7 @@ tags:
 
 <p>The configuration is set up in the <code>INSTALLED_APPS</code> and <code>MIDDLEWARE</code> sections of the project file (<strong>locallibrary/locallibrary/settings.py</strong>), as shown below:</p>
 
-<pre class="brush: python notranslate">INSTALLED_APPS = [
+<pre class="brush: python">INSTALLED_APPS = [
     ...
 <strong>    'django.contrib.sessions',</strong>
     ....
@@ -73,11 +73,12 @@ MIDDLEWARE = [
 
 <p>The code fragments below show how you can get, set, and delete some data with the key "<code>my_car</code>", associated with the current session (browser). </p>
 
-<div class="note">
-<p><strong>Note</strong>: One of the great things about Django is that you don't need to think about the mechanisms that tie the session to your current request in your view. If we were to use the fragments below in our view, we'd know that the information about <code>my_car</code> is associated only with the browser that sent the current request.</p>
+<div class="notecard note">
+    <h4>Note</h4>
+    <p>One of the great things about Django is that you don't need to think about the mechanisms that tie the session to your current request in your view. If we were to use the fragments below in our view, we'd know that the information about <code>my_car</code> is associated only with the browser that sent the current request.</p>
 </div>
 
-<pre class="brush: python notranslate"># Get a session value by its key (e.g. 'my_car'), raising a KeyError if the key is not present
+<pre class="brush: python"># Get a session value by its key (e.g. 'my_car'), raising a KeyError if the key is not present
 my_car = request.session['my_car']
 
 # Get a session value, setting a default if it is not present ('mini')
@@ -96,20 +97,21 @@ del request.session['my_car']
 
 <p>By default, Django only saves to the session database and sends the session cookie to the client when the session has been <em>modified</em> (assigned) or <em>deleted</em>. If you're updating some data using its session key as shown in the previous section, then you don't need to worry about this! For example:</p>
 
-<pre class="brush: python notranslate"># This is detected as an update to the session, so session data is saved.
+<pre class="brush: python"># This is detected as an update to the session, so session data is saved.
 request.session['my_car'] = 'mini'</pre>
 
-<p>If you're updating some information <em>within</em> session data, then Django will not recognise that you've made a change to the session and save the data (for example, if you were to change "<code>wheels</code>" data inside your "<code>my_car</code>" data, as shown below). In this case you will need to explicitly mark the session as having been modified.</p>
+<p>If you're updating some information <em>within</em> session data, then Django will not recognize that you've made a change to the session and save the data (for example, if you were to change "<code>wheels</code>" data inside your "<code>my_car</code>" data, as shown below). In this case you will need to explicitly mark the session as having been modified.</p>
 
-<pre class="brush: python notranslate"># Session object not directly modified, only data within the session. Session changes not saved!
+<pre class="brush: python"># Session object not directly modified, only data within the session. Session changes not saved!
 request.session['my_car']['wheels'] = 'alloy'
 
 # Set session as modified to force data updates/cookie to be saved.
-<code>request.session.modified = True</code>
+request.session.modified = True
 </pre>
 
-<div class="note">
-<p><strong>Note</strong>: You can change the behavior so the site will update the database/send cookie on every request by adding <code>SESSION_SAVE_EVERY_REQUEST = True</code> into your project settings (<strong>locallibrary/locallibrary/settings.py</strong>).</p>
+<div class="notecard note">
+    <h4>Note</h4>
+    <p>You can change the behavior so the site will update the database/send cookie on every request by adding <code>SESSION_SAVE_EVERY_REQUEST = True</code> into your project settings (<strong>locallibrary/locallibrary/settings.py</strong>).</p>
 </div>
 
 <h2 id="Simple_example_—_getting_visit_counts">Simple example — getting visit counts</h2>
@@ -118,7 +120,7 @@ request.session['my_car']['wheels'] = 'alloy'
 
 <p>Open <strong>/locallibrary/catalog/views.py</strong>, and make the changes shown in bold below. </p>
 
-<pre class="brush: python notranslate">def index(request):
+<pre class="brush: python">def index(request):
     ...
 
     num_authors = Author.objects.count()  # The 'all()' is implied by default.
@@ -140,13 +142,14 @@ request.session['my_car']['wheels'] = 'alloy'
 
 <p>Here we first get the value of the <code>'num_visits'</code> session key, setting the value to 1 if it has not previously been set. Each time a request is received, we then increment the value and store it back in the session (for the next time the user visits the page). The <code>num_visits</code> variable is then passed to the template in our context variable.</p>
 
-<div class="note">
-<p><strong>Note</strong>: We might also test whether cookies are even supported in the browser here (see <a href="https://docs.djangoproject.com/en/3.1/topics/http/sessions/">How to use sessions</a> for examples) or design our UI so that it doesn't matter whether or not cookies are supported.</p>
+<div class="notecard note">
+    <h4>Note</h4>
+    <p>We might also test whether cookies are even supported in the browser here (see <a href="https://docs.djangoproject.com/en/3.1/topics/http/sessions/">How to use sessions</a> for examples) or design our UI so that it doesn't matter whether or not cookies are supported.</p>
 </div>
 
 <p>Add the line seen at the bottom of the following block to your main HTML template (<strong>/locallibrary/catalog/templates/index.html</strong>) at the bottom of the "Dynamic content" section to display the context variable:</p>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Dynamic content&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Dynamic content&lt;/h2&gt;
 
 &lt;p&gt;The library has the following record counts:&lt;/p&gt;
 &lt;ul&gt;

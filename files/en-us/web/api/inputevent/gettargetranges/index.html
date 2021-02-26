@@ -20,7 +20,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>staticRanges</em>[] = <em>inputEvent</em>.getTargetRanges()</pre>
+  class="brush: js">var <em>staticRanges</em>[] = <em>inputEvent</em>.getTargetRanges()</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -37,18 +37,18 @@ tags:
 <p>The following function returns true if <code>beforeinput</code>, and thus
   <code>getTargetRanges</code>, is supported.</p>
 
-<pre class="brush: js notranslate">function isBeforeInputEventAvailable() {
+<pre class="brush: js">function isBeforeInputEventAvailable() {
   return window.InputEvent && typeof InputEvent.prototype.getTargetRanges === "function";
 }
 </pre>
 
 <h3 id="Basic_usage">Basic usage</h3>
 
-<p>The following example selects a <code>contenteditable</code> element and utilises the
+<p>The following example selects a <code>contenteditable</code> element and utilizes the
   <code><a href="/en-US/docs/Web/API/HTMLElement/beforeinput_event">beforeinput</a></code>
   event to log the result of <code>getTargetRanges()</code>.</p>
 
-<pre class="brush: js notranslate">const editableElem = document.querySelector('[contenteditable="true"]');
+<pre class="brush: js">const editableElem = document.querySelector('[contenteditable="true"]');
 
 editableElem.addEventListener('beforeinput', (e) =&gt; {
     const targetRanges = e.getTargetRanges();
@@ -77,7 +77,4 @@ editableElem.addEventListener('beforeinput', (e) =&gt; {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.InputEvent.getTargetRanges")}}</p>
-</div>
+<p>{{Compat("api.InputEvent.getTargetRanges")}}</p>

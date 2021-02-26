@@ -20,7 +20,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>arr</var>.every(<var>callback</var>(<var>element</var>[, <var>index</var>[, <var>array</var>]])[, <var>thisArg</var>])</pre>
+  class="brush: js"><var>arr</var>.every(<var>callback</var>(<var>element</var>[, <var>index</var>[, <var>array</var>]])[, <var>thisArg</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -103,7 +103,7 @@ tags:
   that <code><var>callbackfn</var>.call</code> evaluates to the original value of
   {{jsxref("Function.prototype.call")}}.</p>
 
-<pre class="brush: js notranslate">if (!Array.prototype.every) {
+<pre class="brush: js">if (!Array.prototype.every) {
   Array.prototype.every = function(callbackfn, thisArg) {
     'use strict';
     var T, k;
@@ -176,7 +176,7 @@ tags:
 
 <p>The following example tests whether all elements in the array are bigger than 10.</p>
 
-<pre class="brush: js notranslate">function isBigEnough(element, index, array) {
+<pre class="brush: js">function isBigEnough(element, index, array) {
   return element &gt;= 10;
 }
 [12, 5, 8, 130, 44].every(isBigEnough);   // false
@@ -188,7 +188,7 @@ tags:
 <p><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow
     functions</a> provide a shorter syntax for the same test.</p>
 
-<pre class="brush: js notranslate">[12, 5, 8, 130, 44].every(x =&gt; x &gt;= 10);   // false
+<pre class="brush: js">[12, 5, 8, 130, 44].every(x =&gt; x &gt;= 10);   // false
 [12, 54, 18, 130, 44].every(x =&gt; x &gt;= 10); // true</pre>
 
 <h3 id="Affecting_Initial_Array_modifying_appending_and_deleting">Affecting Initial Array
@@ -197,7 +197,7 @@ tags:
 <p>The following examples tests the behavior of the <code>every</code> method when the
   array is modified.</p>
 
-<pre class="brush: js notranslate">// ---------------
+<pre class="brush: js">// ---------------
 // Modifying items
 // ---------------
 let arr = [1, 2, 3, 4];
@@ -264,10 +264,7 @@ arr.every( (elem, index, arr) =&gt; {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Array.every")}}</p>
-</div>
+<p>{{Compat("javascript.builtins.Array.every")}}</p>
 
 <h2 id="See_also">See also</h2>
 

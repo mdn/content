@@ -25,7 +25,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>dataChannel</em> = <em>RTCPeerConnection</em>.createDataChannel(<em>label</em>[, <em>options</em>]);</pre>
+  class="brush: js"><em>dataChannel</em> = <em>RTCPeerConnection</em>.createDataChannel(<em>label</em>[, <em>options</em>]);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -34,7 +34,7 @@ tags:
   <dd>A human-readable name for the channel. This string may not be longer than 65,535
     <em>bytes</em>.</dd>
   <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>An <a href="#RTCDataChannelInit_dictionary"><code>RTCDataChannelInit</code>
+  <dd>An <a href="#rtcdatachannelinit_dictionary"><code>RTCDataChannelInit</code>
       dictionary</a> providing configuration options for the data channel</dd>
 </dl>
 
@@ -184,10 +184,7 @@ channel.onmessage = function(event) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.RTCPeerConnection.createDataChannel")}}</p>
-</div>
+<p>{{Compat("api.RTCPeerConnection.createDataChannel")}}</p>
 
 <h2 id="See_also">See also</h2>
 

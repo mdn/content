@@ -18,7 +18,7 @@ tags:
 <h4 id="Browserweb_console">Browser/web console</h4>
 
 <ul>
- <li>The Web console now shows <a href="/en-US/docs/Tools/Web_Console/Console_messages#CSS">more information about CSS warnings</a>, including a node list of the DOM elements that used the rule ({{bug(1093953)}}).</li>
+ <li>The Web console now shows <a href="/en-US/docs/Tools/Web_Console/Console_messages#css">more information about CSS warnings</a>, including a node list of the DOM elements that used the rule ({{bug(1093953)}}).</li>
  <li>You can now filter content in the Web console using regular expressions ({{bug(1441079)}}).</li>
  <li>The Browser console now allows you to show or hide messages from the content process by setting or clearing the checkbox labeled <em>Show Content Messages</em> ({{bug(1260877)}}).</li>
 </ul>
@@ -26,21 +26,21 @@ tags:
 <h4 id="JavaScript_debugger">JavaScript debugger</h4>
 
 <ul>
- <li>You can now <a href="/en-US/docs/Tools/Debugger/How_to/Search#Searching_in_all_files">Search</a> in all files in the current project from the debugger by pressing <kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>F</kbd> (Windows or Linux) or <kbd>Shift</kbd> + <kbd>Cmd</kbd> + <kbd>F</kbd> (macOS) ({{bug(1320325)}}).</li>
+ <li>You can now <a href="/en-US/docs/Tools/Debugger/How_to/Search#searching_in_all_files">Search</a> in all files in the current project from the debugger by pressing <kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>F</kbd> (Windows or Linux) or <kbd>Shift</kbd> + <kbd>Cmd</kbd> + <kbd>F</kbd> (macOS) ({{bug(1320325)}}).</li>
 </ul>
 
 <h4 id="Network_monitor">Network monitor</h4>
 
 <ul>
- <li>The Network monitor <a href="/en-US/docs/Tools/Network_Monitor/request_list#Filtering_requests">request list</a> now allows you to block a specific URL ({{bug(1151368)}}).</li>
- <li>You can now resend a network request without editing the method, URL, parameters, and headers, using the <a href="/en-US/docs/Tools/Network_Monitor/request_list#Context_menu">Resend</a> command on the context menu ({{bug(1422014)}}).</li>
- <li>The context menu of the Network monitor <a href="/en-US/docs/Tools/Network_Monitor/request_details#Headers">Headers</a> tab now allows you to copy all or some of the header information to the clipboard in JSON format ({{bug(1442249)}}).</li>
+ <li>The Network monitor <a href="/en-US/docs/Tools/Network_Monitor/request_list#filtering_requests">request list</a> now allows you to block a specific URL ({{bug(1151368)}}).</li>
+ <li>You can now resend a network request without editing the method, URL, parameters, and headers, using the <a href="/en-US/docs/Tools/Network_Monitor/request_list#context_menu">Resend</a> command on the context menu ({{bug(1422014)}}).</li>
+ <li>The context menu of the Network monitor <a href="/en-US/docs/Tools/Network_Monitor/request_details#headers">Headers</a> tab now allows you to copy all or some of the header information to the clipboard in JSON format ({{bug(1442249)}}).</li>
 </ul>
 
 <h4 id="Page_inspector">Page inspector</h4>
 
 <ul>
- <li>A button has been added to the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Examine_CSS_rules">rules panel</a> of the Page inspector that allows you to toggle the display of any print media queries ({{bug(1534984)}}).</li>
+ <li>A button has been added to the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#examine_css_rules">rules panel</a> of the Page inspector that allows you to toggle the display of any print media queries ({{bug(1534984)}}).</li>
  <li>The <a href="/en-US/docs/Tools/Page_Inspector/How_to/Edit_fonts">fonts panel</a> now includes a slider to modify <code>letter-spacing</code> ({{bug(1536237)}}).</li>
  <li>A warning icon appears next to unsupported CSS properties or rules that have invalid values, to help you understand why certain styles are not being applied ({{bug(1306054)}}).</li>
 </ul>
@@ -48,7 +48,7 @@ tags:
 <h4 id="Storage_inspector">Storage inspector</h4>
 
 <ul>
- <li>You can now <a href="/en-US/docs/Tools/Storage_Inspector#Local_storage_Session_storage">delete local and session storage</a> entries by selecting the item in the storage inspector and pressing the backspace key ({{bug(1522893)}}).</li>
+ <li>You can now <a href="/en-US/docs/Tools/Storage_Inspector#local_storage_session_storage">delete local and session storage</a> entries by selecting the item in the storage inspector and pressing the backspace key ({{bug(1522893)}}).</li>
 </ul>
 
 <h4 id="Other">Other</h4>
@@ -91,14 +91,14 @@ tags:
  </li>
  <li>The {{CSSxRef("-webkit-line-clamp")}} property has been implemented for compatibility with other browsers ({{bug(866102)}}).</li>
  <li>Support has been added for the {{CSSxRef("::marker")}} pseudo-element ({{bug(205202)}}) and animation for <code>::marker</code> pseudos ({{bug(1538618)}})</li>
- <li>We changed {{CSSxRef("currentColor")}} to be a computed value (except for the {{cssxref("color")}} property)  ({{bug(760345)}}).</li>
+ <li>We changed {{CSSxRef("color_value#currentcolor_keyword", "currentColor")}} to be a computed value (except for the {{cssxref("color")}} property)  ({{bug(760345)}}).</li>
  <li>Support has been fixed for the <code>ch</code> length unit so it now matches the spec (fallback for no '0' glyph, vertical metrics) ({{bug(282126)}})</li>
  <li>The  {{CSSxRef("counter-set")}} property has been implemented. ({{bug(1518201)}}).</li>
  <li>We now implement list numbering using a built-in "list-item" counter; this fixes list numbering bugs ({{bug(288704)}}).</li>
  <li>Selector matching and parsing support has been implemented for <code><a href="/en-US/docs/Web/CSS/::part">::part()</a></code> ({{bug(1545430)}}) and ({{bug(1545425)}}).</li>
  <li><a href="/en-US/docs/Web/CSS/CSS_Transforms">CSS Transforms</a> are now supported in indirectly rendered things e.g.)  {{SVGElement("mask")}},  {{SVGElement("marker")}},  {{SVGElement("pattern")}},  {{SVGElement("clipPath")}} ({{bug(1323962)}}).</li>
  <li>
-  <p>While we're keeping the prefixed versions of the various gradient properties ({{cssxref("linear-gradient")}}, {{cssxref("radial-gradient")}}, and {{cssxref("repeating-radial-gradient")}} available for compatibility reasons, we have revised how they're parsed so that they're handled much more like the non-prefixed versions. This means that certain existing styles won't work correctly.</p>
+  <p>While we're keeping the prefixed versions of the various gradient properties ({{cssxref("linear-gradient()")}}, {{cssxref("radial-gradient()")}}, and {{cssxref("repeating-radial-gradient()")}} available for compatibility reasons, we have revised how they're parsed so that they're handled much more like the non-prefixed versions. This means that certain existing styles won't work correctly.</p>
 
   <p>In particular, the complicated syntax taking both an angle and a position will no longer work, and the <code>to</code> keyword in the <code>&lt;side-or-corner&gt;</code> parameter is not required for the prefixed gradient properties. You are encouraged to use the standard, non-prefixed gradient properties instead, as they're now widely supported ({{bug(1547939)}}).</p>
  </li>
@@ -136,10 +136,10 @@ tags:
  <li>The <a href="/en-US/docs/Web/API/Visual_Viewport_API">Visual Viewport API</a> has now been enabled by default on Android ({{bug(1512813)}}). Adding this API to desktop versions of Firefox is being tracked in {{bug(1551302)}}.</li>
  <li>The {{domxref("Window")}} feature <code><a href="/en-US/docs/Web/API/Window/open#noreferrer">noreferrer</a></code> is now supported; if specified, the new window's content is loaded without sharing the hostname, IP address, URL, or other identifying information about the host device ({{bug(1527287)}}).</li>
  <li>The {{domxref("HTMLImageElement.decode", "decode()")}} method on <code>HTMLImageElement</code> is now implemented. This can be used to trigger loading and decoding of an image prior to adding it to the DOM ({{bug(1501794)}}).</li>
- <li>{{domxref("XMLHttpRequest")}} has been updated to no longer accept the non-standard <code>moz-chunked-arraybuffer</code> value for {{domxref("XMLHttpRequest.responseType", "responseType")}}. Code still using it should be updated to <a href="/en-US/docs/Web/API/Streams_API/Using_readable_streams#Consuming_a_fetch_as_a_stream">use the Fetch API as a stream</a> ({{bug(1120171)}}).</li>
+ <li>{{domxref("XMLHttpRequest")}} has been updated to no longer accept the non-standard <code>moz-chunked-arraybuffer</code> value for {{domxref("XMLHttpRequest.responseType", "responseType")}}. Code still using it should be updated to <a href="/en-US/docs/Web/API/Streams_API/Using_readable_streams#consuming_a_fetch_as_a_stream">use the Fetch API as a stream</a> ({{bug(1120171)}}).</li>
  <li><code>XMLHttpRequest</code> now outputs a warning to console if you perform a synchronous request while handling an {{domxref("Window.unload_event", "unload")}}, {{domxref("Window.beforeunload_event", "beforeunload")}}, or {{domxref("Window.pagehide_event", "pagehide")}} event ({{bug(980902)}}).</li>
  <li>The {{domxref("Document.cookie", "cookie")}} property has moved from the {{domxref("HTMLDocument")}} interface to the {{domxref("Document")}} interface, allowing documents other than {{Glossary("HTML")}} to use cookies ({{bug(144795)}}).</li>
- <li>The {{domxref("HTMLElement.focus()")}} and {{domxref("SVGElement.focus()")}} methods now accept an optional object that may contain a boolean <code>preventScroll</code> option specifying whether or not to block the browser from scrolling the newly-focused element into view ({{bug(1374045)}}).</li>
+ <li>The {{domxref("HTMLOrForeignElement/focus")}} and {{domxref("SVGElement.focus()")}} methods now accept an optional object that may contain a boolean <code>preventScroll</code> option specifying whether or not to block the browser from scrolling the newly-focused element into view ({{bug(1374045)}}).</li>
 </ul>
 
 <h4 id="DOM_events">DOM events</h4>
@@ -154,7 +154,7 @@ tags:
 
 <ul>
  <li>Due to changes in the Google Play store's policies, starting with Firefox 68 for Android, the OpenH264 codec used to handle AVC/H.264 video in WebRTC connections can no longer be downloaded and installed. Therefore, fresh installs of Firefox on Android devices no longer support AVC in WebRTC calls. If you upgrade from earlier versions of Firefox and already have the codec downloaded, it will continue to work. This does <em>not</em> affect other platforms. For more details, see <a href="https://support.mozilla.org/en-US/kb/firefox-android-openh264">this article on SUMO</a> or {{bug(1548679)}}.</li>
- <li>WebRTC has been updated to recognize that a <code>null</code> candidate passed into the {{domxref("RTCPeerConnection.icecandidate", "icecandidate")}} event handler, indicating the receipt of a candidate, instead indicates that there are no further candidates coming; when this happens the ICE gathering ({{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}}) state reaches <code>complete</code> ({{bug(1318167)}}).</li>
+ <li>WebRTC has been updated to recognize that a <code>null</code> candidate passed into the {{domxref("RTCPeerConnection/icecandidate_event", "icecandidate")}} event handler, indicating the receipt of a candidate, instead indicates that there are no further candidates coming; when this happens the ICE gathering ({{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}}) state reaches <code>complete</code> ({{bug(1318167)}}).</li>
  <li>The {{domxref("RTCRtpReceiver")}} methods {{domxref("RTCRtpReceiver.getContributingSources", "getContributingSources()")}} and {{domxref("RTCRtpReceiver.getSynchronizationSources", "getSynchronizationSources()")}} now support video tracks; previously they only worked on audio ({{bug(1534466)}}).</li>
  <li>The Web Audio API {{domxref("MediaStreamTrackAudioSourceNode")}} interface is now supported, as is the method {{domxref("AudioContext.createMediaStreamTrackSource()")}} ({{bug(1324548)}}).</li>
  <li>{{domxref("RTCDataChannel.negotiated")}} is now implemented ({{bug(1529695)}}).</li>

@@ -27,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>myIDBCursor</em>.delete();</pre>
+<pre class="brush: js"><em>myIDBCursor</em>.delete();</pre>
 
 <h3 id="Returns">Returns</h3>
 
@@ -76,7 +76,7 @@ tags:
     example</a> (<a href="https://mdn.github.io/IDBcursor-example/">view example
     live</a>.)</p>
 
-<pre class="brush: js notranslate">function deleteResult() {
+<pre class="brush: js">function deleteResult() {
   list.textContent = '';
   const transaction = db.transaction(['rushAlbumList'], 'readwrite');
   const objectStore = transaction.objectStore('rushAlbumList');

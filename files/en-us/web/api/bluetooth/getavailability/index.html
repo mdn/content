@@ -13,7 +13,7 @@ tags:
     {{DOMxRef("Bluetooth")}} interface of <a
       href="/en-US/docs/Web/API/Web_Bluetooth_API">Web Bluetooth API</a> interface exposes
     the Bluetooth capabilities of the current device. For a returns a
-    {{JSxRef("Boolean")}} which is <code>true</code> if the deveice has a Bluetooth
+    {{JSxRef("Boolean")}} which is <code>true</code> if the device has a Bluetooth
     adapter and false otherwise (unless user configured {{Glossary("User Agent")}} not to
     expose a real value).</span></p>
 
@@ -27,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>readerPromise = Bluetooth</em>.getAvailability();
+<pre class="brush: js">var <em>readerPromise = Bluetooth</em>.getAvailability();
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -44,10 +44,10 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following snippet prints out a message in the console specifying wheter or not
+<p>The following snippet prints out a message in the console specifying whether or not
   Bluetooth is supported:</p>
 
-<pre class="brush: js notranslate">navigator.bluetooth.getAvailability().then(available =&gt; {
+<pre class="brush: js">navigator.bluetooth.getAvailability().then(available =&gt; {
   if (available)
       console.log("This device supports Bluetooth!");
   else
@@ -74,7 +74,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.Bluetooth.getAvailability")}}</p>
-</div>
+<p>{{Compat("api.Bluetooth.getAvailability")}}</p>

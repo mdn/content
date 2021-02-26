@@ -22,12 +22,20 @@ tags:
 
 <p>Service workers only run over HTTPS, for security reasons. Having modified network requests, wide open to <em>man in the middle</em> attacks would be really bad. In Firefox, Service Worker APIs are also hidden and cannot be used when the user is in <a href="https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history">private browsing mode</a>.</p>
 
-<div class="note">
-<p><strong>Note</strong>: Unlike previous attempts in this area such as <a href="http://alistapart.com/article/application-cache-is-a-douchebag">AppCache</a>, service workers don't make assumptions about what you are trying to do, but then break when those assumptions are not exactly right. Instead, service workers give you much more granular control.</p>
+
+<div class="notecard note">
+  <h4>Tip</h4>
+  <p>On Firefox, for testing you can run service workers over HTTP (insecurely); simply check the <strong>Enable Service Workers over HTTP (when toolbox is open)</strong> option in the Firefox Devtools options/gear menu.</p>
 </div>
 
-<div class="note">
-<p><strong>Note</strong>: Service workers make heavy use of <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a>, as generally they will wait for responses to come through, after which they will respond with a success or failure action. The promises architecture is ideal for this.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Unlike previous attempts in this area such as <a href="http://alistapart.com/article/application-cache-is-a-douchebag">AppCache</a>, service workers don't make assumptions about what you are trying to do, but then break when those assumptions are not exactly right. Instead, service workers give you much more granular control.</p>
+</div>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Service workers make heavy use of <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a>, as generally they will wait for responses to come through, after which they will respond with a success or failure action. The promises architecture is ideal for this.</p>
 </div>
 
 <h3 id="Registration">Registration</h3>
@@ -65,11 +73,12 @@ tags:
 
 <p>Your service worker can respond to requests using the {{DOMxRef("FetchEvent")}} event. You can modify the response to these requests in any way you want, using the {{DOMxRef("FetchEvent.respondWith()")}} method.</p>
 
-<div class="note">
-<p><strong>Note</strong>: Because <code>install</code>/<code>activate</code> events could take a while to complete, the service worker spec provides a {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} method. Once it is called on <code>install</code> or <code>activate</code> events with a promise, functional events such as <code>fetch</code> and <code>push</code> will wait until the promise is successfully resolved.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Because <code>install</code>/<code>activate</code> events could take a while to complete, the service worker spec provides a {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} method. Once it is called on <code>install</code> or <code>activate</code> events with a promise, functional events such as <code>fetch</code> and <code>push</code> will wait until the promise is successfully resolved.</p>
 </div>
 
-<p>For a complete tutorial to show how to build up your first basic example, read <a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a>.</p>
+<p>For a complete tutorial to show how to build up your first basic example, read <a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a>.</p>
 
 <h2 id="Other_use_case_ideas">Other use case ideas</h2>
 
@@ -164,7 +173,7 @@ tags:
 
 <ul>
  <li><a href="https://serviceworke.rs">ServiceWorker Cookbook</a></li>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
+ <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a></li>
  <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
  <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
  <li>{{jsxref("Promise")}}</li>

@@ -45,13 +45,13 @@ tags:
 
 <p>The initial solution was to add one or more hidden links at the top of the page to link to the navigation (or whatever else), for example:</p>
 
-<pre class="brush: html notranslate">&lt;a href="#hidden" class="hidden"&gt;Skip to navigation&lt;/a&gt;</pre>
+<pre class="brush: html">&lt;a href="#hidden" class="hidden"&gt;Skip to navigation&lt;/a&gt;</pre>
 
 <p>But this is still not very precise, and can only be used when the screenreader is reading from the top of the page.</p>
 
 <p>As another example, apps started to feature complex controls like date pickers for choosing dates, sliders for choosing values, etc. HTML5 provides special input types to render such controls:</p>
 
-<pre class="brush: html notranslate">&lt;input type="date"&gt;
+<pre class="brush: html">&lt;input type="date"&gt;
 &lt;input type="range"&gt;</pre>
 
 <p>These are not well-supported across browsers, and it is also difficult to style them, making them not very useful for integrating with website designs. As a result, developers quite often rely on JavaScript libraries that generate such controls as a series of nested {{htmlelement("div")}}s or table elements with classnames, which are then styled using CSS and controlled using JavaScript.</p>
@@ -87,7 +87,7 @@ tags:
 
 <p>This last point is key — To use a screenreader in the first place, your operating system needs to run browsers that have the necessary accessibility APIs in place to expose the information screenreaders need to do their job. Most popular OSes have one or two browsers in place that screenreaders can work with. The Paciello Group has a fairly up-to-date post that provides data for this — see <a href="https://www.paciellogroup.com/blog/2014/10/rough-guide-browsers-operating-systems-and-screen-reader-support-updated/">Rough Guide: browsers, operating systems and screen reader support updated</a>.</p>
 
-<p>Next, you need to worry about whether the browsers in question support ARIA features and expose them via their APIs, but also whether screenreaders recognise that information and present it to their users in a useful way.</p>
+<p>Next, you need to worry about whether the browsers in question support ARIA features and expose them via their APIs, but also whether screenreaders recognize that information and present it to their users in a useful way.</p>
 
 <ol>
  <li>Browser support is generally quite good — at the time of writing, <a href="https://caniuse.com/#feat=wai-aria">caniuse.com</a> stated that global browser support for WAI-ARIA was around 88%.</li>
@@ -123,13 +123,13 @@ tags:
 
 <p>In the next section we'll look at the four areas in more detail, along with practical examples. Before you continue, you should get a screenreader testing setup put in place, so you can test some of the examples as you go through.</p>
 
-<p>See our section on <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders">testing screenreaders</a> for more information.</p>
+<p>See our section on <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders">testing screenreaders</a> for more information.</p>
 
 <h3 id="SignpostsLandmarks">Signposts/Landmarks</h3>
 
 <p>WAI-ARIA adds the <a href="https://www.w3.org/TR/wai-aria-1.1/#role_definitions"><code>role</code> attribute</a> to browsers, which allows you to add extra semantic value to elements on your site wherever they are needed. The first major area in which this is useful is providing information for screenreaders so that their users can find common page elements. Let's look at an example — our <a href="https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-no-roles">website-no-roles</a> example (<a href="https://mdn.github.io/learning-area/accessibility/aria/website-no-roles/">see it live</a>) has the following structure:</p>
 
-<pre class="brush: html notranslate">&lt;header&gt;
+<pre class="brush: html">&lt;header&gt;
   &lt;h1&gt;...&lt;/h1&gt;
   &lt;nav&gt;
     &lt;ul&gt;...&lt;/ul&gt;
@@ -159,13 +159,13 @@ tags:
 
 <p>If you go to VoiceOver's landmarks menu (accessed using VoiceOver key + U and then using the cursor keys to cycle through the menu choices), you'll see that most of the elements are nicely listed so they can be accessed quickly.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14420/landmarks-list.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="landmarks-list.png" style="display: block; margin: 0 auto;"></p>
 
-<p>However, we could do better here. the search form is a really important landmark that people will want to find, but it is not listed in the landmarks menu or treated like a notable landmark, beyond the actual input being called out as a search input (<code>&lt;input type="search"&gt;</code>). In addition, some older browsers (most notably IE8) don't recognise the semantics of the HTML5 elements.</p>
+<p>However, we could do better here. the search form is a really important landmark that people will want to find, but it is not listed in the landmarks menu or treated like a notable landmark, beyond the actual input being called out as a search input (<code>&lt;input type="search"&gt;</code>). In addition, some older browsers (most notably IE8) don't recognize the semantics of the HTML5 elements.</p>
 
 <p>Let's improve it by the use of some ARIA features. First, we'll add some role attributes to our HTML structure. You can try taking a copy of our original files (see <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/website-no-roles/index.html">index.html</a> and <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/website-no-roles/style.css">style.css</a>), or navigating to our <a href="https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles">website-aria-roles</a> example (<a href="https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/">see it live</a>), which has a structure like this:</p>
 
-<pre class="brush: html notranslate">&lt;header&gt;
+<pre class="brush: html">&lt;header&gt;
   &lt;h1&gt;...&lt;/h1&gt;
   &lt;nav role="navigation"&gt;
     &lt;ul&gt;...&lt;/ul&gt;
@@ -184,7 +184,7 @@ tags:
 
 <p>We've also given you a bonus feature in this example — the {{htmlelement("input")}} element has been given the attribute <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-label">aria-label</a></code>, which gives it a descriptive label to be read out by a screenreader, even though we haven't included a {{htmlelement("label")}} element. In cases like these, this is very useful — a search form like this one is a very common, easily recognized feature, and adding a visual label would spoil the page design.</p>
 
-<pre class="brush: html notranslate">&lt;input type="search" name="q" placeholder="Search query" aria-label="Search through site content"&gt;</pre>
+<pre class="brush: html">&lt;input type="search" name="q" placeholder="Search query" aria-label="Search through site content"&gt;</pre>
 
 <p>Now if we use VoiceOver to look at this example, we get some improvements:</p>
 
@@ -205,16 +205,16 @@ tags:
 
 <p>Let's look at a quick example — see <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-no-live.html">aria-no-live.html</a> (also <a href="https://mdn.github.io/learning-area/accessibility/aria/aria-no-live.html">see it running live</a>). In this example we have a simple random quote box:</p>
 
-<pre class="brush: html notranslate">&lt;section&gt;
+<pre class="brush: html">&lt;section&gt;
   &lt;h1&gt;Random quote&lt;/h1&gt;
   &lt;blockquote&gt;
     &lt;p&gt;&lt;/p&gt;
   &lt;/blockquote&gt;
 &lt;/section&gt;</pre>
 
-<p>Our JavaScript loads a JSON file via <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> containing a series of random quotes and their authors. Once that is done, we start up a <code><a href="/en-US/docs/Web/API/WindowTimers/setInterval">setInterval()</a></code> loop that loads a new random quote into the quote box every 10 seconds:</p>
+<p>Our JavaScript loads a JSON file via <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> containing a series of random quotes and their authors. Once that is done, we start up a <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></code> loop that loads a new random quote into the quote box every 10 seconds:</p>
 
-<pre class="brush: js notranslate">let intervalID = window.setInterval(showQuote, 10000);</pre>
+<pre class="brush: js">let intervalID = window.setInterval(showQuote, 10000);</pre>
 
 <p>This works OK, but it is not good for accessibility — the content update is not detected by screenreaders, so their users would not know what is going on. This is a fairly trivial example, but just imagine if you were creating a complex UI with lots of constantly updating content, like a chat room, or a strategy game UI, or a live updating shopping cart display — it would be impossible to use the app in any effective way without some kind of way of alerting the user to the updates.</p>
 
@@ -228,7 +228,7 @@ tags:
 
 <p>We'd like you to take a copy of <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-no-live.html">aria-no-live.html</a> and <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/quotes.json">quotes.json</a>, and update your <code>&lt;section&gt;</code> tag as follows:</p>
 
-<pre class="brush: html notranslate">&lt;section aria-live="assertive"&gt;</pre>
+<pre class="brush: html">&lt;section aria-live="assertive"&gt;</pre>
 
 <p>This will cause a screenreader to read out the content as it is updated.</p>
 
@@ -238,7 +238,7 @@ tags:
 
 <p>There is an additional consideration here — only the bit of text that updates is read out. It might be nice if we always read out the heading too, so the user can remember what is being read out. To do this, we can add the <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-atomic">aria-atomic</a></code> property to the section. Update your <code>&lt;section&gt;</code> tag again, like so:</p>
 
-<pre class="brush: html notranslate">&lt;section aria-live="assertive" aria-atomic="true"&gt;</pre>
+<pre class="brush: html">&lt;section aria-live="assertive" aria-atomic="true"&gt;</pre>
 
 <p>The <code>aria-atomic="true"</code> attribute tells screenreaders to read out the entire element contents as one atomic unit, not just the bits that were updated.</p>
 
@@ -263,7 +263,7 @@ tags:
  <li><code>tabindex="-1"</code> — this allows not normally tabbable elements to receive focus programmatically, e.g. via JavaScript, or as the target of links. </li>
 </ul>
 
-<p>We discussed this in more detail and showed a typical implementation back in our HTML accessibility article — see <a href="/en-US/docs/Learn/Accessibility/HTML#Building_keyboard_accessibility_back_in">Building keyboard accessibility back in</a>.</p>
+<p>We discussed this in more detail and showed a typical implementation back in our HTML accessibility article — see <a href="/en-US/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in">Building keyboard accessibility back in</a>.</p>
 
 <h3 id="Accessibility_of_non-semantic_controls">Accessibility of non-semantic controls</h3>
 
@@ -271,9 +271,9 @@ tags:
 
 <h4 id="Form_validation_and_error_alerts">Form validation and error alerts</h4>
 
-<p>First of all, let's revisit the form example we first looked at in our CSS and JavaScript accessibility article (read <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Keeping_it_unobtrusive">Keeping it unobtrusive</a> for a full recap). At the end of this section we showed that we have included some ARIA attributes on the error message box that displays any validation errors when you try to submit the form:</p>
+<p>First of all, let's revisit the form example we first looked at in our CSS and JavaScript accessibility article (read <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#keeping_it_unobtrusive">Keeping it unobtrusive</a> for a full recap). At the end of this section we showed that we have included some ARIA attributes on the error message box that displays any validation errors when you try to submit the form:</p>
 
-<pre class="brush: html notranslate">&lt;div class="errors" role="alert" aria-relevant="all"&gt;
+<pre class="brush: html">&lt;div class="errors" role="alert" aria-relevant="all"&gt;
   &lt;ul&gt;
   &lt;/ul&gt;
 &lt;/div&gt;</pre>
@@ -289,16 +289,16 @@ tags:
  <li>At this point, take a copy of our <a href="https://github.com/mdn/learning-area/blob/master/accessibility/css/form-validation.html">form-validation.html</a> and <a href="https://github.com/mdn/learning-area/blob/master/accessibility/css/validation.js">validation.js</a> files, and save them in a local directory.</li>
  <li>Open them both in a text editor and have a look at how the code works.</li>
  <li>First of all, add a paragraph just above the opening <code>&lt;form&gt;</code> tag, like the one below, and mark both the form <code>&lt;label&gt;</code>s with an asterisk. This is normally how we mark required fields for sighted users.
-  <pre class="brush: html notranslate">&lt;p&gt;Fields marked with an asterisk (*) are required.&lt;/p&gt;</pre>
+  <pre class="brush: html">&lt;p&gt;Fields marked with an asterisk (*) are required.&lt;/p&gt;</pre>
  </li>
  <li>This makes visual sense, but it isn't as easy to understand for screenreader users. Fortunately, WAI-ARIA provides the <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-required">aria-required</a></code> attribute to give screenreaders hints that they should tell users that form inputs need to be filled in. Update the <code>&lt;input&gt;</code> elements like so:
-  <pre class="brush: html notranslate">&lt;input type="text" name="name" id="name" aria-required="true"&gt;
+  <pre class="brush: html">&lt;input type="text" name="name" id="name" aria-required="true"&gt;
 
 &lt;input type="number" name="age" id="age" aria-required="true"&gt;</pre>
  </li>
  <li>If you save the example now and test it with a screenreader, you should hear something like "Enter your name star, required, edit text".</li>
  <li>It might also be useful if we give screenreader users and sighted users an idea of what the age value should be. This is often presented as a tooltip, or placeholder inside the form field perhaps. WAI-ARIA does include <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-valuemin">aria-valuemin</a></code> and <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-valuemax">aria-valuemax</a></code> properties to specify min and max values, but these currently don't seem very well supported; a better supported feature is the HTML5 <code>placeholder</code> attribute, which can contain a message that is shown in the input when no value is entered, and is read out by a number of screenreaders. Update your number input like this:
-  <pre class="brush: html notranslate">&lt;input type="number" name="age" id="age" placeholder="Enter 1 to 150" aria-required="true"&gt;</pre>
+  <pre class="brush: html">&lt;input type="number" name="age" id="age" placeholder="Enter 1 to 150" aria-required="true"&gt;</pre>
  </li>
 </ol>
 
@@ -312,11 +312,11 @@ tags:
 
 <p>If the disabled state of an input is likely to change, then it is also a good idea to indicate when it happens, and what the result is. For example, in our <a href="https://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html">form-validation-checkbox-disabled.html</a> demo there is a checkbox that when checked, enables another form input to allow further information be entered. We've set up a hidden live region:</p>
 
-<pre class="brush: html notranslate">&lt;p class="hidden-alert" aria-live="assertive"&gt;&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p class="hidden-alert" aria-live="assertive"&gt;&lt;/p&gt;</pre>
 
 <p>which is hidden from view using absolute positioning. When this is checked/unchecked, we update the text inside the hidden live region to tell screenreader users what the result of checking this checkbox is, as well as updating the <code>aria-disabled</code> state, and some visual indicators too:</p>
 
-<pre class="brush: js notranslate">function toggleMusician(bool) {
+<pre class="brush: js">function toggleMusician(bool) {
   let instruItem = formItems[formItems.length-1];
   if(bool) {
     instruItem.input.disabled = false;
@@ -334,13 +334,13 @@ tags:
 
 <h4 id="Describing_non-semantic_buttons_as_buttons">Describing non-semantic buttons as buttons</h4>
 
-<p>A few times in this course already, we've mentioned the native accessibility of (and the accessibility issues behind using other elements to fake) buttons, links, or form elements (see <a href="/en-US/docs/Learn/Accessibility/HTML#UI_controls">UI controls</a> in the HTML accessibility article, and {{anch("Enhancing keyboard accessibility")}}, above). Basically, you can add keyboard accessibility back in without too much trouble in many cases, using <code>tabindex</code> and a bit of JavaScript.</p>
+<p>A few times in this course already, we've mentioned the native accessibility of (and the accessibility issues behind using other elements to fake) buttons, links, or form elements (see <a href="/en-US/docs/Learn/Accessibility/HTML#ui_controls">UI controls</a> in the HTML accessibility article, and {{anch("Enhancing keyboard accessibility")}}, above). Basically, you can add keyboard accessibility back in without too much trouble in many cases, using <code>tabindex</code> and a bit of JavaScript.</p>
 
 <p>But what about screenreaders? They still won't see the elements as buttons. If we test our <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a> example in a screenreader, our fake buttons will be reported using phrases like "Click me!, group", which is obviously confusing.</p>
 
 <p>We can fix this using a WAI-ARIA role. Make a local copy of <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a>, and add <code><a href="https://www.w3.org/TR/wai-aria-1.1/#button">role="button"</a></code> to each button <code>&lt;div&gt;</code>, for example:</p>
 
-<pre class="notranslate">&lt;div data-message="This is from the first button" tabindex="0" role="button"&gt;Click me!&lt;/div&gt;</pre>
+<pre>&lt;div data-message="This is from the first button" tabindex="0" role="button"&gt;Click me!&lt;/div&gt;</pre>
 
 <p>Now when you try this using a screenreader, you'll have buttons be reported using phrases like "Click me!, button" — much better.</p>
 
@@ -352,13 +352,13 @@ tags:
 
 <p>There are a whole host of other <a href="https://www.w3.org/TR/wai-aria-1.1/#role_definitions">roles</a> that can identify non-semantic element structures as common UI features that go beyond what's available in standard HTML, for example <code><a href="https://www.w3.org/TR/wai-aria-1.1/#combobox">combobox</a></code>, <code><a href="https://www.w3.org/TR/wai-aria-1.1/#slider">slider</a></code>, <code><a href="https://www.w3.org/TR/wai-aria-1.1/#tabpanel">tabpanel</a></code>, <code><a href="https://www.w3.org/TR/wai-aria-1.1/#tree">tree</a></code>. You can see a number of useful examples in the <a href="https://dequeuniversity.com/library/">Deque university code library</a>, to give you an idea of how such controls can be made accessible.</p>
 
-<p>Let's go through an example of our own. We'll return to our simple absolutely-positioned tabbed interface (see <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Hiding_things">Hiding things</a> in our CSS and JavaScript accessibility article), which you can find at <a class="external external-icon" href="https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html">Tabbed info box example</a> (see <a class="external external-icon" href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html">source code</a>).</p>
+<p>Let's go through an example of our own. We'll return to our simple absolutely-positioned tabbed interface (see <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#hiding_things">Hiding things</a> in our CSS and JavaScript accessibility article), which you can find at <a class="external external-icon" href="https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html">Tabbed info box example</a> (see <a class="external external-icon" href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html">source code</a>).</p>
 
 <p>This example as-is works fine in terms of keyboard accessibility — you can happily tab between the different tabs and select them to show the tab contents. It is also fairly accessible too — you can scroll through the content and use the headings to navigate, even if you can't see what is happening on screen. It is however not that obvious what the content is — a screenreader currently reports the content as a list of links, and some content with three headings. It doesn't give you any idea of what the relationship is between the content. Giving the user more clues as to the structure of the content is always good.</p>
 
 <p>To improve things, we've created a new version of the example called <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-tabbed-info-box.html">aria-tabbed-info-box.html</a> (<a href="https://mdn.github.io/learning-area/accessibility/aria/aria-tabbed-info-box.html">see it running live</a>). We've updated the structure of the tabbed interface like so:</p>
 
-<pre class="brush: html notranslate">&lt;ul role="tablist"&gt;
+<pre class="brush: html">&lt;ul role="tablist"&gt;
   &lt;li class="active" role="tab" aria-selected="true" aria-setsize="3" aria-posinset="1" tabindex="0"&gt;Tab 1&lt;/li&gt;
   &lt;li role="tab" aria-selected="false" aria-setsize="3" aria-posinset="2" tabindex="0"&gt;Tab 2&lt;/li&gt;
   &lt;li role="tab" aria-selected="false" aria-setsize="3" aria-posinset="3" tabindex="0"&gt;Tab 3&lt;/li&gt;

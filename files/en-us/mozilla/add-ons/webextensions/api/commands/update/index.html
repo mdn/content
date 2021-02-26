@@ -39,7 +39,7 @@ tags:
   <dd><code>string</code>. A new shortcut to set for the command. This can be:
   <ul>
    <li>an empty string to clear the shortcut.</li>
-   <li>a string matching the format of the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/commands"><code>commands</code> manifest.json key</a> to set a new shortcut key. If the string does not match this format, the function throws an error.</li>
+   <li>a string matching the format of the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands"><code>commands</code> manifest.json key</a> to set a new shortcut key. If the string does not match this format, the function throws an error.</li>
   </ul>
   </dd>
  </dl>
@@ -60,7 +60,7 @@ tags:
 
 <p>Updates the command named "my-command" with the given shortcut value, when the user clicks "update":</p>
 
-<pre class="notranslate brush: js">const commandName = 'my-command';
+<pre class="brush: js">const commandName = 'my-command';
 
 function updateShortcut() {
   browser.commands.update({

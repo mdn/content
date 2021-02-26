@@ -22,7 +22,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-	class="brush: js notranslate"><var>collator</var>.compare(<var>string1</var>, <var>string2</var>)</pre>
+	class="brush: js"><var>collator</var>.compare(<var>string1</var>, <var>string2</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -49,7 +49,7 @@ tags:
 	is bound to the collator from which it was obtained, so it can be passed directly to
 	{{jsxref("Array.prototype.sort()")}}.</p>
 
-<pre class="brush: js notranslate">var a = ['Offenbach', 'Österreich', 'Odenwald'];
+<pre class="brush: js">var a = ['Offenbach', 'Österreich', 'Odenwald'];
 var collator = new Intl.Collator('de-u-co-phonebk');
 a.sort(collator.compare);
 console.log(a.join(', '));
@@ -61,7 +61,7 @@ console.log(a.join(', '));
 <p>Use the <code>compare</code> getter function for finding matching strings in arrays:
 </p>
 
-<pre class="brush: js notranslate">var a = ['Congrès', 'congres', 'Assemblée', 'poisson'];
+<pre class="brush: js">var a = ['Congrès', 'congres', 'Assemblée', 'poisson'];
 var collator = new Intl.Collator('fr', { usage: 'search', sensitivity: 'base' });
 var s = 'congres';
 var matches = a.filter(v =&gt; collator.compare(v, s) === 0);

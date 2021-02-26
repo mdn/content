@@ -1,0 +1,60 @@
+---
+title: PerformanceElementTiming.element
+slug: Web/API/PerformanceElementTiming/element
+tags:
+  - API
+  - Property
+  - Reference
+  - element
+  - PerformanceElementTiming
+---
+<div>{{DefaultAPISidebar("Element Timing")}}</div>
+
+<p class="summary">The <strong><code>element</code></strong> read-only property of the {{domxref("PerformanceElementTiming")}} interface returns an {{domxref("Element")}} which is a literal representation of the associated element.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <var>element</var> = <var>PerformanceElementTiming</var>.element;</pre>
+
+<h3>Value</h3>
+<p>An {{domxref("Element")}}.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example calling <code>entry.element</code> will log to the console <br><code>&lt;img src="image.jpg" alt="a nice image" elementtiming="big-image"&gt;</code>.</p>
+
+<pre class="brush:html">&lt;img src="image.jpg" alt="a nice image" elementtiming="big-image"&gt;</pre>
+
+<pre class="brush:js">const observer = new PerformanceObserver((list) => {
+  let entries = list.getEntries().forEach(function (entry) {
+    if (entry.identifier === "big-image") {
+      console.log(entry.element);
+    }
+  });
+});
+observer.observe({ entryTypes: ["element"] });</pre>
+
+<p class="notecard note">This example uses the {{domxref("PerformanceObserver")}} interface to create a list of performance measurement events. In our case we observe the {{domxref("PerformanceEntry.entrytype")}} <code>element</code> in order to use the <code>PerformanceElementTiming</code> interface.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+    <td>{{SpecName('Element Timing','#dom-performanceelementtiming-element','PerformanceElementTiming.element')}}</td>
+    <td>{{Spec2('Element Timing')}}</td>
+    <td>Initial definition.</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.PerformanceElementTiming.element")}}</p>

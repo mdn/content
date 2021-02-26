@@ -16,7 +16,7 @@ tags:
 
 <p>Retrieves the {{DOMxRef("Window")}} object for the background page running inside the current extension.</p>
 
-<p>This provides a convenient way for other privileged extension scripts to get direct access to the background script's scope. This enables them to access variables or call functions defined in that scope. "Privileged script" here includes scripts running in <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages">options pages</a>, or scripts running in <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">browser action</a> or <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Page_actions">page action</a> popups, but does <em>not</em> include <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts">content scripts</a>.</p>
+<p>This provides a convenient way for other privileged extension scripts to get direct access to the background script's scope. This enables them to access variables or call functions defined in that scope. "Privileged script" here includes scripts running in <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages">options pages</a>, or scripts running in <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2">browser action</a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#page_actions">page action</a> popups, but does <em>not</em> include <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts">content scripts</a>.</p>
 
 <p>Note that variables that were declared using <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code> or <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> do not appear in the <code>Window</code> object returned by this function.</p>
 
@@ -36,7 +36,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:js notranslate">var gettingPage = browser.runtime.getBackgroundPage()
+<pre class="brush:js">var gettingPage = browser.runtime.getBackgroundPage()
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -55,17 +55,17 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>Suppose a <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">background script</a> defines a function <code>foo()</code>:</p>
+<p>Suppose a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts">background script</a> defines a function <code>foo()</code>:</p>
 
-<pre class="notranslate brush: js">// background.js
+<pre class="brush: js">// background.js
 
 function foo() {
   console.log("I'm defined in background.js");
 }</pre>
 
-<p>A script running in a <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">popup</a> can call this function directly like this:</p>
+<p>A script running in a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2">popup</a> can call this function directly like this:</p>
 
-<pre class="notranslate brush: js">// popup.js
+<pre class="brush: js">// popup.js
 
 function onGot(page) {
   page.foo();
@@ -88,7 +88,7 @@ getting.then(onGot, onError);</pre>
 </div>
 
 <div class="hidden">
-<pre class="notranslate">// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are

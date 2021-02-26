@@ -19,7 +19,7 @@ var gl = canvas.getContext('webgl');
 gl.getParameter(gl.LINE_WIDTH);
 </pre>
 
-<p>Some constants are also provided by <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">WebGL extensions</a>. A <a href="#Constants_defined_in_WebGL_extensions">list</a> is provided below.</p>
+<p>Some constants are also provided by <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">WebGL extensions</a>. A <a href="#constants_defined_in_webgl_extensions">list</a> is provided below.</p>
 
 <pre class="brush: js">var debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
 var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
@@ -29,9 +29,9 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
 <h2 id="Table_of_contents">Table of contents</h2>
 
 <ul>
- <li><a href="#Standard_WebGL_1_constants">Standard WebGL 1 constants</a></li>
- <li><a href="#Additional_constants_defined_WebGL_2">Standard WebGL 2 constants</a></li>
- <li><a href="#Constants_defined_in_WebGL_extensions">WebGL extension constants</a></li>
+ <li><a href="#standard_webgl_1_constants">Standard WebGL 1 constants</a></li>
+ <li><a href="#additional_constants_defined_webgl_2">Standard WebGL 2 constants</a></li>
+ <li><a href="#constants_defined_in_webgl_extensions">WebGL extension constants</a></li>
 </ul>
 
 <h2 id="Standard_WebGL_1_constants">Standard WebGL 1 constants</h2>
@@ -1033,12 +1033,12 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
   <tr>
    <td><code>COMPILE_STATUS</code></td>
    <td>0x8B81</td>
-   <td>Passed to <code>getShaderParamter</code> to get the status of the compilation. Returns false if the shader was not compiled. You can then query <code>getShaderInfoLog</code> to find the exact error</td>
+   <td>Passed to <code>getShaderParameter</code> to get the status of the compilation. Returns false if the shader was not compiled. You can then query <code>getShaderInfoLog</code> to find the exact error</td>
   </tr>
   <tr>
    <td><code>DELETE_STATUS</code></td>
    <td>0x8B80</td>
-   <td>Passed to <code>getShaderParamter</code> to determine if a shader was deleted via <code>deleteShader</code>. Returns true if it was, false otherwise.</td>
+   <td>Passed to <code>getShaderParameter</code> to determine if a shader was deleted via <code>deleteShader</code>. Returns true if it was, false otherwise.</td>
   </tr>
   <tr>
    <td><code>LINK_STATUS</code></td>
@@ -1063,7 +1063,7 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
   <tr>
    <td><code>ACTIVE_UNIFORMS</code></td>
    <td>0x8B86</td>
-   <td>Passed to <code>getProgramParamter</code> to get the number of uniforms active in a program.</td>
+   <td>Passed to <code>getProgramParameter</code> to get the number of uniforms active in a program.</td>
   </tr>
   <tr>
    <td><code>MAX_VERTEX_ATTRIBS</code></td>

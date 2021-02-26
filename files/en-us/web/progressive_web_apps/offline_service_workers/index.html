@@ -43,7 +43,7 @@ tags:
 
 <p><strong>NOTE</strong> : We're using the <a href="http://es6-features.org/">es6</a> <strong>arrow functions</strong> syntax in the Service Worker Implementation</p>
 
-<pre class="brush: js notranslate">if('serviceWorker' in navigator) {
+<pre class="brush: js">if('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./pwa-examples/js13kpwa/sw.js');
 };</pre>
 
@@ -57,7 +57,7 @@ tags:
 
 <p>The API allows us to add event listeners for key events we are interested in — the first one is the <code>install</code> event:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('install', (e) =&gt; {
+<pre class="brush: js">self.addEventListener('install', (e) =&gt; {
     console.log('[Service Worker] Install');
 });</pre>
 
@@ -65,7 +65,7 @@ tags:
 
 <p>First, a variable for storing the cache name is created, and the app shell files are listed in one array.</p>
 
-<pre class="brush: js notranslate">var cacheName = 'js13kPWA-v1';
+<pre class="brush: js">var cacheName = 'js13kPWA-v1';
 var appShellFiles = [
   '/pwa-examples/js13kpwa/',
   '/pwa-examples/js13kpwa/index.html',
@@ -89,7 +89,7 @@ var appShellFiles = [
 
 <p>Next, the links to images to be loaded along with the content from the data/games.js file are generated in the second array. After that, both arrays are merged using the {{jsxref("Array.prototype.concat()")}} function.</p>
 
-<pre class="brush: js notranslate">var gamesImages = [];
+<pre class="brush: js">var gamesImages = [];
 for(var i=0; i&lt;games.length; i++) {
   gamesImages.push('data/img/'+games[i].slug+'.jpg');
 }
@@ -97,7 +97,7 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
 <p>Then we can manage the <code>install</code> event itself:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('install', (e) =&gt; {
+<pre class="brush: js">self.addEventListener('install', (e) =&gt; {
   console.log('[Service Worker] Install');
   e.waitUntil(
     caches.open(cacheName).then((cache) =&gt; {
@@ -125,7 +125,7 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
 <p>We also have a <code>fetch</code> event at our disposal, which fires every time an HTTP request is fired off from our app. This is very useful, as it allows us to intercept requests and respond to them with custom responses. Here is a simple usage example:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('fetch', (e) =&gt; {
+<pre class="brush: js">self.addEventListener('fetch', (e) =&gt; {
     console.log('[Service Worker] Fetched resource '+e.request.url);
 });</pre>
 
@@ -133,7 +133,7 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
 <p>In our example app, we serve content from the cache instead of the network as long as the resource is actually in the cache. We do this whether the app is online or offline. If the file is not in the cache, the app adds it there first before then serving it:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('fetch', (e) =&gt; {
+<pre class="brush: js">self.addEventListener('fetch', (e) =&gt; {
   e.respondWith(
     caches.match(e.request).then((r) =&gt; {
           console.log('[Service Worker] Fetching resource: '+e.request.url);
@@ -158,11 +158,11 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
 <p>There is still one point to cover: how do you upgrade a Service Worker when a new version of the app containing new assets is available? The version number in the cache name is key to this:</p>
 
-<pre class="brush: js notranslate">var cacheName = 'js13kPWA-v1';</pre>
+<pre class="brush: js">var cacheName = 'js13kPWA-v1';</pre>
 
 <p>When this updates to v2, we can then add all of our files (including our new files) to a new cache:</p>
 
-<pre class="brush: js notranslate">contentToCache.push('/pwa-examples/js13kpwa/icons/icon-32.png');
+<pre class="brush: js">contentToCache.push('/pwa-examples/js13kpwa/icons/icon-32.png');
 
 // ...
 
@@ -180,7 +180,7 @@ self.addEventListener('install', (e) =&gt; {
 
 <p>Remember the <code>activate</code> event we skipped? It can be used to clear out the old cache we don't need anymore:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('activate', (e) =&gt; {
+<pre class="brush: js">self.addEventListener('activate', (e) =&gt; {
   e.waitUntil(
     caches.keys().then((keyList) =&gt; {
           return Promise.all(keyList.map((key) =&gt; {

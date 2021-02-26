@@ -16,7 +16,7 @@ tags:
 
 <p>The <strong><code>set()</code></strong> method of the {{WebExtAPIRef("cookies")}} API sets a cookie containing the specified cookie data. This method is equivalent to issuing an HTTP <code>Set-Cookie</code> header during a request to a given URL.</p>
 
-<p>The call succeeds only if you include the "cookies" <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a> in your <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> file, as well as <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permissions</a> for the given URL specified in its manifest. The given URL also needs the necessary permissions to create a cookie with the given parameters.</p>
+<p>The call succeeds only if you include the "cookies" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a> in your <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> file, as well as <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> for the given URL specified in its manifest. The given URL also needs the necessary permissions to create a cookie with the given parameters.</p>
 
 <p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
@@ -39,7 +39,7 @@ tags:
   <dt><code>expirationDate</code>{{optional_inline}}</dt>
   <dd>A <code>number</code> that represents the expiration date of the cookie as the number of seconds since the UNIX epoch. If omitted, the cookie becomes a session cookie.</dd>
   <dt><code>firstPartyDomain</code>{{optional_inline}}</dt>
-  <dd>A <code>string</code> representing the first-party domain with which the cookie to will be associated. This property must be supplied if the browser has first-party isolation enabled. See <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/cookies#First-party_isolation">First-party isolation</a>.</dd>
+  <dd>A <code>string</code> representing the first-party domain with which the cookie to will be associated. This property must be supplied if the browser has first-party isolation enabled. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation">First-party isolation</a>.</dd>
   <dt><code>httpOnly</code>{{optional_inline}}</dt>
   <dd>A <code>boolean</code> that specifies whether the cookie should be marked as HttpOnly (<code>true</code>), or not (false). If omitted, it defaults to false.</dd>
   <dt><code>name</code>{{optional_inline}}</dt>
@@ -74,7 +74,7 @@ tags:
 
 <p>This example sets a cookie for the document hosted by the currently active tab:</p>
 
-<pre class="notranslate brush: js">var getActive = browser.tabs.query({active: true, currentWindow: true});
+<pre class="brush: js">var getActive = browser.tabs.query({active: true, currentWindow: true});
 getActive.then(setCookie);
 
 function setCookie(tabs) {

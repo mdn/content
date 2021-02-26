@@ -27,20 +27,20 @@ tags:
  <dt id="@stylistic"><code>@stylistic</code></dt>
  <dd>Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "stylistic()", "#stylistic()")}} functional notation of {{cssxref("font-variant-alternates")}}. A stylistic feature value definition allows only one value: <code>ident1: 2</code> is valid, but <code>ident2: 2 4</code> isn't.</dd>
  <dt id="@styleset"><code>@styleset</code></dt>
- <dd>Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "styleset()", "#styleset()")}} functional notation of {{cssxref("font-variant-alternates")}}. A stylset feature value definition allows an unlimited number of values: <code>ident1: 2 4 12 1</code> maps to the OpenType values <code>ss02</code>, <code>ss04</code>, <code>ss12</code>, and <code>ss01</code>. Note that values higher than <code>99</code> are valid, but don't map to any OpenType values and are ignored.</dd>
+ <dd>Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "styleset()", "#styleset()")}} functional notation of {{cssxref("font-variant-alternates")}}. A styleset feature value definition allows an unlimited number of values: <code>ident1: 2 4 12 1</code> maps to the OpenType values <code>ss02</code>, <code>ss04</code>, <code>ss12</code>, and <code>ss01</code>. Note that values higher than <code>99</code> are valid, but don't map to any OpenType values and are ignored.</dd>
  <dt id="@character-variant"><code>@character-variant</code></dt>
  <dd>Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "character-variant()", "#character-variant()")}} functional notation of {{cssxref("font-variant-alternates")}}. A character-variant feature value definition allows either one or two values: <code>ident1: 3</code> maps to <code>cv03=1</code>, and <code>ident2: 2 4</code> maps to <code>cv02=4</code>, but <code>ident2: 2 4 5</code> is invalid.</dd>
 </dl>
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_styleset_in_a_font-feature-values_rule">Using @styleset in a @font-feature-values rule</h3>
 
-<pre class="brush: css notranslate">/* At-rule for "nice-style" in Font One */
+<pre class="brush: css">/* At-rule for "nice-style" in Font One */
 @font-feature-values Font One {
   @styleset {
     nice-style: 12;
@@ -83,10 +83,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("css.at-rules.font-feature-values")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

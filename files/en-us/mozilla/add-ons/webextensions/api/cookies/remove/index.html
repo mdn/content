@@ -16,7 +16,7 @@ tags:
 
 <p>The <strong><code>remove()</code></strong> method of the {{WebExtAPIRef("cookies")}} API deletes a cookie, given its name and URL.</p>
 
-<p>The call succeeds only if you include the "cookies" <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a> in your <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> file, as well as <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permissions</a> for the given URL specified in its manifest.</p>
+<p>The call succeeds only if you include the "cookies" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a> in your <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> file, as well as <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> for the given URL specified in its manifest.</p>
 
 <p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
@@ -35,13 +35,13 @@ tags:
  <dd>
  <dl class="reference-values">
   <dt><code>firstPartyDomain</code>{{optional_inline}}</dt>
-  <dd>A <code>string</code> representing the first-party domain with which the cookie to remove is associated. This property must be supplied if the browser has first-party isolation enabled. See <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/cookies#First-party_isolation">First-party isolation</a>.</dd>
+  <dd>A <code>string</code> representing the first-party domain with which the cookie to remove is associated. This property must be supplied if the browser has first-party isolation enabled. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation">First-party isolation</a>.</dd>
   <dt><code>name</code></dt>
   <dd>A <code>string</code> representing the name of the cookie to remove.</dd>
   <dt><code>storeId</code>{{optional_inline}}</dt>
   <dd>A <code>string</code> representing the ID of the cookie store to find the cookie in. If unspecified, the cookie is looked for by default in the current execution context's cookie store.</dd>
   <dt><code>url</code></dt>
-  <dd>A <code>string</code> representing the URL associated with the cookie. If the extension does not have <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permissions</a> for this URL, the API call will fail.</dd>
+  <dd>A <code>string</code> representing the URL associated with the cookie. If the extension does not have <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> for this URL, the API call will fail.</dd>
  </dl>
  </dd>
 </dl>
@@ -60,7 +60,7 @@ tags:
 
 <p>This example tries to remove the cookie named "favourite-colour", whose URL matches the URL of the document hosted by the currently active tab:</p>
 
-<pre class="notranslate brush: js">function onRemoved(cookie) {
+<pre class="brush: js">function onRemoved(cookie) {
   console.log(`Removed: ${cookie}`);
 }
 

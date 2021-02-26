@@ -20,9 +20,9 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate brush: js"><code>browser.userScripts.onBeforeScript.addListener(listener)
+<pre class="brush: js">browser.userScripts.onBeforeScript.addListener(listener)
 browser.userScripts.onBeforeScript.removeListener(listener)
-browser.userScripts.onBeforeScript.hasListener(listener)</code>
+browser.userScripts.onBeforeScript.hasListener(listener)
 </pre>
 
 <p>Events have three functions:</p>
@@ -68,7 +68,7 @@ browser.userScripts.onBeforeScript.hasListener(listener)</code>
 
 <p>An example of how the listener might be used:</p>
 
-<pre class="notranslate brush: js">browser.userScripts.onBeforeScript.addListener(function (script) {
+<pre class="brush: js">browser.userScripts.onBeforeScript.addListener(function (script) {
 
   script // This is an API object that represents the user script
          // that is going to be executed.

@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Whats_AJAX">What's AJAX?</h2>
 
-<p>AJAX stands for <strong>A</strong>synchronous <strong>J</strong>avaScript <strong>A</strong>nd <strong>X</strong>ML. In a nutshell, it is the use of the <code><a href="/en/DOM/XMLHttpRequest">XMLHttpRequest</a></code> object to communicate with servers. It can send and receive information in various formats, including JSON, XML, HTML, and text files. AJAX’s most appealing characteristic is its "asynchronous" nature, which means it can communicate with the server, exchange data, and update the page without having to refresh the page.</p>
+<p>AJAX stands for <strong>A</strong>synchronous <strong>J</strong>avaScript <strong>A</strong>nd <strong>X</strong>ML. In a nutshell, it is the use of the <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> object to communicate with servers. It can send and receive information in various formats, including JSON, XML, HTML, and text files. AJAX’s most appealing characteristic is its "asynchronous" nature, which means it can communicate with the server, exchange data, and update the page without having to refresh the page.</p>
 
 <p>The two major features of AJAX allow you to do the following:</p>
 
@@ -56,7 +56,7 @@ httpRequest.send();
 </pre>
 
 <ul>
- <li>The first parameter of the call to <code>open()</code> is the HTTP request method – GET, POST, HEAD, or another method supported by your server. Keep the method all-capitals as per the HTTP standard, otherwise some browsers (like Firefox) might not process the request. For more information on the possible HTTP request methods, check the <a class="external" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html">W3C specs</a>.</li>
+ <li>The first parameter of the call to <code>open()</code> is the HTTP request method – GET, POST, HEAD, or another method supported by your server. Keep the method all-capitals as per the HTTP standard, otherwise some browsers (like Firefox) might not process the request. For more information on the possible HTTP request methods, check the <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html">W3C specs</a>.</li>
  <li>The second parameter is the URL you're sending the request to. As a security feature, you cannot call URLs on 3rd-party domains by default. Be sure to use the exact domain name on all of your pages or you will get a "permission denied" error when you call <code>open()</code>. A common pitfall is accessing your site by <code>domain.tld</code>, but attempting to call pages with <code>www.domain.tld</code>. If you really need to send a request to another domain, see <a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>.</li>
  <li>The optional third parameter sets whether the request is asynchronous. If <code>true</code> (the default), JavaScript execution will continue and the user can interact with the page while the server response has yet to arrive. This is the first A in AJAX.</li>
 </ul>
@@ -98,7 +98,7 @@ httpRequest.send();
  <li>4 (complete) or (<strong>request finished and response is ready</strong>)</li>
 </ul>
 
-<p>Next, check the <a href="/en-US/docs/Web/HTTP/Status">HTTP response status codes</a> of the HTTP response. The possible codes are listed at the <a class="external" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">W3C</a>. In the following example, we differentiate between a successful and unsuccessful AJAX call by checking for a <a href="/en/HTTP/HTTP_response_codes#Successful_responses"><code>200 OK</code></a> response code.</p>
+<p>Next, check the <a href="/en-US/docs/Web/HTTP/Status">HTTP response status codes</a> of the HTTP response. The possible codes are listed at the <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">W3C</a>. In the following example, we differentiate between a successful and unsuccessful AJAX call by checking for a <a href="/en/HTTP/HTTP_response_codes#Successful_responses"><code>200 OK</code></a> response code.</p>
 
 <pre class="brush: js">if (httpRequest.status === 200) {
     // Perfect!
@@ -165,7 +165,7 @@ httpRequest.send();
 
 <div class="note"><strong>Note</strong>: If you're sending a request to a piece of code that will return XML, rather than a static HTML file, you must set response headers to work in Internet Explorer. If you do not set header <code>Content-Type: application/xml</code>, IE will throw a JavaScript "Object Expected" error after the line where you tried to access an XML element.</div>
 
-<div class="note"><strong>Note 2</strong>: If you do not set header <code>Cache-Control: no-cache</code> the browser will cache the response and never re-submit the request, making debugging challenging. You can also add an always-different GET parameter, like a timestamp or random number (see <a href="/en/DOM/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache">bypassing the cache</a>)</div>
+<div class="note"><strong>Note 2</strong>: If you do not set header <code>Cache-Control: no-cache</code> the browser will cache the response and never re-submit the request, making debugging challenging. You can also add an always-different GET parameter, like a timestamp or random number (see <a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache">bypassing the cache</a>)</div>
 
 <div class="note"><strong>Note 3</strong>: If the <code>httpRequest</code> variable is used globally, competing functions calling <code>makeRequest()</code> can overwrite each other, causing a race condition. Declaring the <code>httpRequest </code>variable local to a <a href="/en/JavaScript/Guide/Closures">closure</a> containing the AJAX functions avoids this.</div>
 
@@ -213,7 +213,7 @@ var root_node = xmldoc.getElementsByTagName('root').item(0);
 alert(root_node.firstChild.data);
 </pre>
 
-<p>This code takes the <code>XMLDocument</code> object given by <code>responseXML</code> and uses DOM methods to access some of the data contained in the XML document. You can see the <code>test.xml</code> <a class="external" href="http://www.w3clubs.com/mozdev/test.xml">here</a> and the updated test script <a class="external" href="http://www.w3clubs.com/mozdev/httprequest_test_xml.html">here</a>.</p>
+<p>This code takes the <code>XMLDocument</code> object given by <code>responseXML</code> and uses DOM methods to access some of the data contained in the XML document. You can see the <code>test.xml</code> <a href="http://www.w3clubs.com/mozdev/test.xml">here</a> and the updated test script <a href="http://www.w3clubs.com/mozdev/httprequest_test_xml.html">here</a>.</p>
 
 <h2 id="Step_5_–_Working_with_data">Step 5 – Working with data</h2>
 

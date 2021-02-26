@@ -14,11 +14,11 @@ tags:
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p>Fired when the <a href="/en-US/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a> event is fired in the page. At this point the document is loaded and parsed, and the DOM is fully constructed, but linked resources such as images, stylesheets and subframes may not yet be loaded.</p>
+<p>Fired when the <a href="/en-US/docs/Web/API/Window/DOMContentLoaded_event">DOMContentLoaded</a> event is fired in the page. At this point the document is loaded and parsed, and the DOM is fully constructed, but linked resources such as images, stylesheets and subframes may not yet be loaded.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate brush: js">browser.webNavigation.onDOMContentLoaded.addListener(
+<pre class="brush: js">browser.webNavigation.onDOMContentLoaded.addListener(
   <var>listener</var>,                   // function
   <var>filter</var>                      // optional object
 )
@@ -82,11 +82,11 @@ browser.webNavigation.onDOMContentLoaded.hasListener(<var>listener</var>)
 
 <p>Logs the target URLs for <code>onDOMContentLoaded</code>, if the target URL's hostname contains "example.com" or starts with "developer".</p>
 
-<pre class="notranslate brush: js">const filter = {
+<pre class="brush: js">const filter = {
   url:
   [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
+    {hostContains: &quot;example.com&quot;},
+    {hostPrefix: &quot;developer&quot;}
   ]
 }
 
@@ -94,7 +94,7 @@ function logOnDOMContentLoaded(details) {
   console.log(`onDOMContentLoaded: ${details.url}`);
 }
 
-browser.webNavigation.<code>onDOMContentLoaded</code>.addListener(logOnDOMContentLoaded, filter);
+browser.webNavigation.onDOMContentLoaded.addListener(logOnDOMContentLoaded, filter);
 
 </pre>
 

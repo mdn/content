@@ -18,13 +18,13 @@ tags:
 
 <p>One side initiates the connection, using a <code>connect()</code> API. This returns a <code>Port</code> object. The other side listens for connection attempts using an <code>onConnect</code> listener. This is passed a corresponding <code>Port</code> object.</p>
 
-<p>Once both sides have <code>Port</code> objects, they can exchange JSON messages using <code>Port.postMessage()</code> and <code>Port.onMessage</code>. When they are finished, either end can disconnect using <code>Port.disconnect()</code>, which will generate a <code>Port.onDisconnect</code> event at the other end, enabling the other end to do any cleanup required.</p>
+<p>Once both sides have <code>Port</code> objects, they can exchange messages using <code>Port.postMessage()</code> and <code>Port.onMessage</code>. When they are finished, either end can disconnect using <code>Port.disconnect()</code>, which will generate a <code>Port.onDisconnect</code> event at the other end, enabling the other end to do any cleanup required.</p>
 
 <p>You can use this pattern to communicate between:</p>
 
 <ul>
- <li>different parts of your extension (for example, between <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> and <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">background scripts</a>)</li>
- <li>between your extension and a <a href="/en-US/Add-ons/WebExtensions/Native_messaging">native application running on the user's computer</a>.</li>
+ <li>different parts of your extension (for example, between <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts">background scripts</a>)</li>
+ <li>between your extension and a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">native application running on the user's computer</a>.</li>
  <li>between your extension and a different extension</li>
 </ul>
 
@@ -77,7 +77,7 @@ tags:
  <dd>
  <p><code>object</code>. This contains the <code>addListener()</code> and <code>removeListener()</code> functions common to all events for extensions built using WebExtension APIs. Listener functions will be called when the other end has called <code>Port.disconnect()</code>. This event will only be fired once for each port. The listener function will be passed the <code>Port</code> object. If the port was disconnected due to an error, then the <code>Port</code> argument will contain an <code>error</code> property giving more information about the error:</p>
 
- <pre class="notranslate brush: js">port.onDisconnect.addListener((p) =&gt; {
+ <pre class="brush: js">port.onDisconnect.addListener((p) =&gt; {
   if (p.error) {
     console.log(`Disconnected due to an error: ${p.error.message}`);
   }
@@ -86,9 +86,9 @@ tags:
  <p>Note that in Google Chrome <code>port.error</code> is not supported: instead, use {{WebExtAPIRef("runtime.lastError")}} to get the error message.</p>
  </dd>
  <dt><code>onMessage</code></dt>
- <dd><code>object</code>. This contains the <code>addListener()</code> and <code>removeListener()</code> functions common to all events for extensions built using WebExtension APIs. Listener functions will be called when the other end has sent this port a message. The listener will be passed the JSON object that the other end sent.</dd>
+ <dd><code>object</code>. This contains the <code>addListener()</code> and <code>removeListener()</code> functions common to all events for extensions built using WebExtension APIs. Listener functions will be called when the other end has sent this port a message. The listener will be passed the value that the other end sent.</dd>
  <dt><code>postMessage</code></dt>
- <dd><code>function</code>. Send a message to the other end. This takes one argument, which is a JSON object representing the message to send. It will be delivered to any script listening to the port's <code>onMessage</code> event, or to the native application if this port is connected to a native application.</dd>
+ <dd><code>function</code>. Send a message to the other end. This takes one argument, which is a serializable value (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm">Data cloning algorithm</a>) representing the message to send. It will be delivered to any script listening to the port's <code>onMessage</code> event, or to the native application if this port is connected to a native application.</dd>
  <dt><code>sender</code>{{optional_inline}}</dt>
  <dd>{{WebExtAPIRef('runtime.MessageSender')}}. Contains information about the sender of the message. This property will only be present on ports passed to <code>onConnect</code>/<code>onConnectExternal</code> listeners.</dd>
 </dl>
@@ -111,7 +111,7 @@ tags:
  <li>sends messages to the background script, using <code>myPort</code>, when the user clicks the document.</li>
 </ul>
 
-<pre class="notranslate brush: js line-numbers language-js">// content-script.js
+<pre class="brush: js line-numbers language-js">// content-script.js
 
 var myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
@@ -139,7 +139,7 @@ document.body.addEventListener("click", function() {
  <li>sends messages to the content script, using <code>portFromCS</code>, when the user clicks the extension's browser action.</li>
 </ul>
 
-<pre class="notranslate brush: js line-numbers language-js">// background-script.js
+<pre class="brush: js line-numbers language-js">// background-script.js
 
 var portFromCS;
 
@@ -162,7 +162,7 @@ browser.browserAction.onClicked.addListener(function() {
 
 <p>If you have multiple content scripts communicating at the same time, you might want to store each connection in an array.</p>
 
-<pre class="notranslate brush: js">// background-script.js
+<pre class="brush: js">// background-script.js
 
 var ports = []
 
@@ -183,7 +183,7 @@ browser.browserAction.onClicked.addListener(function() {
 
 <p>This example connects to the native application "ping_pong" and starts listening for messages from it. It also sends the native application a message when the user clicks a browser action icon:</p>
 
-<pre class="notranslate brush: js">/*
+<pre class="brush: js">/*
 On startup, connect to the "ping_pong" app.
 */
 var port = browser.runtime.connectNative("ping_pong");

@@ -9,14 +9,14 @@ tags:
 
 <p>For example, in this response the message body contains only the payload body: "Mozilla Developer Network":</p>
 
-<pre class="brush: plain notranslate"><code>HTTP/1.1 200 OK
+<pre class="brush: plain">HTTP/1.1 200 OK
 Content-Type: text/plain
 
-Mozilla Developer Network</code></pre>
+Mozilla Developer Network</pre>
 
 <p>By contrast, the below response uses <em>transfer encoding</em> to encode the payload body into chunks. The payload body (information) sent is still "Mozilla Developer Network", but the message body includes additional data to separate the chunks:</p>
 
-<pre class="brush: plain notranslate"><code>HTTP/1.1 200 OK
+<pre class="brush: plain">HTTP/1.1 200 OK
 Content-Type: text/plain
 Transfer-Encoding: chunked
 
@@ -27,7 +27,7 @@ Developer\r\n
 7\r\n
 Network\r\n
 0\r\n
-\r\n</code>
+\r\n
 </pre>
 
 <p>For more information see <a href="https://tools.ietf.org/html/rfc7230#section-3.3" rel="noopener">RFC 7230, section 3.3: Message Body</a> and <a href="https://tools.ietf.org/html/rfc7230#section-3.3.1" rel="noopener">RFC 7230, section 3.3.1: Transfer-Encoding</a>.</p>

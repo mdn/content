@@ -16,7 +16,7 @@ tags:
 
 <p>Shows the {{WebExtAPIRef("pageAction")}} for a given {{WebExtAPIRef("tabs/Tab", "tab")}}. The page action is shown whenever the given tab is the active tab.</p>
 
-<p><code>show()</code> overrides pattern matching, so the page action will be shown in the specified tab even if <a href="https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/page_action"><code>show_matches</code></a> does not match the URL or <a href="https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/page_action"><code>hide_matches</code></a> does.</p>
+<p><code>show()</code> overrides pattern matching, so the page action will be shown in the specified tab even if <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action"><code>show_matches</code></a> does not match the URL or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action"><code>hide_matches</code></a> does.</p>
 
 <p>Note that calling <code>show()</code> has no effect on a tab with no content loaded.</p>
 
@@ -52,7 +52,7 @@ tags:
 <p><strong>Note:</strong> You'll need the <code>contextMenus</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> in your <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest</a> to create context menu items.</p>
 </div>
 
-<pre class="notranslate brush: js">browser.contextMenus.create({
+<pre class="brush: js">browser.contextMenus.create({
   id: "show",
   title: "Show page action"
 })

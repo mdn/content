@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>arr</var>.forEach(<var>callback(currentValue[, index[, array]]) {
+<pre class="brush: js"><var>arr</var>.forEach(<var>callback(currentValue[, index[, array]]) {
 </var>  // execute something
 <var>}</var>[, <var>thisArg</var>]);</pre>
 
@@ -124,7 +124,7 @@ tags:
 
   <h5 id="Example_Code">Example Code</h5>
 
-  <pre class="brush: js notranslate">let ratings = [5, 4, 5];
+  <pre class="brush: js">let ratings = [5, 4, 5];
 let sum = 0;
 
 let sumFunction = async function (a, b)
@@ -154,7 +154,7 @@ console.log(sum)
   that <code><var>fun</var>.call</code> evaluates to the original value of
   {{jsxref("Function.prototype.call()")}}.</p>
 
-<pre class="brush: js notranslate">// Production steps of ECMA-262, Edition 5, 15.4.4.18
+<pre class="brush: js">// Production steps of ECMA-262, Edition 5, 15.4.4.18
 // Reference: https://es5.github.io/#x15.4.4.18
 
 if (!Array.prototype['forEach']) {
@@ -217,7 +217,7 @@ if (!Array.prototype['forEach']) {
 <h3 id="sparseArray">No operation for uninitialized values (sparse arrays)</h3>
 
 <pre
-  class="brush: js notranslate">const arraySparse = [1,3,,7]
+  class="brush: js">const arraySparse = [1,3,,7]
 let numCallbackRuns = 0
 
 arraySparse.forEach(function(element) {
@@ -235,7 +235,7 @@ console.log("numCallbackRuns: ", numCallbackRuns)
 
 <h3 id="Converting_a_for_loop_to_forEach">Converting a for loop to forEach</h3>
 
-<pre class="brush:js notranslate">const items = ['item1', 'item2', 'item3']
+<pre class="brush:js">const items = ['item1', 'item2', 'item3']
 const copyItems = []
 
 // before
@@ -262,7 +262,7 @@ items.forEach(function(item){
 
 <p>The following code logs a line for each element in an array:</p>
 
-<pre class="brush:js notranslate">function logArrayElements(element, index, array) {
+<pre class="brush:js">function logArrayElements(element, index, array) {
   console.log('a[' + index + '] = ' + element)
 }
 
@@ -280,7 +280,7 @@ items.forEach(function(item){
 <p>The following (contrived) example updates an object's properties from each entry in the
   array:</p>
 
-<pre class="brush:js notranslate">function Counter() {
+<pre class="brush:js">function Counter() {
   this.sum = 0
   this.count = 0
 }
@@ -319,7 +319,7 @@ obj.sum
   and is presented to explain how <code>Array.prototype.forEach()</code> works by using
   ECMAScript 5 <code>Object.*</code> meta property functions.</p>
 
-<pre class="brush: js notranslate">function copy(obj) {
+<pre class="brush: js">function copy(obj) {
   const copy = Object.create(Object.getPrototypeOf(obj))
   const propNames = Object.getOwnPropertyNames(obj)
 
@@ -346,7 +346,7 @@ const obj2 = copy(obj1) // obj2 looks like obj1 now
 
 <p><code>forEach()</code> does not make a copy of the array before iterating.</p>
 
-<pre class="brush:js notranslate">let words = ['one', 'two', 'three', 'four']
+<pre class="brush:js">let words = ['one', 'two', 'three', 'four']
 words.forEach(function(word) {
   console.log(word)
   if (word === 'two') {
@@ -363,7 +363,7 @@ console.log(words);  //['two', 'three', 'four']
 <p>The following example is only here for learning purpose. If you want to flatten an
   array using built-in methods you can use {{jsxref("Array.prototype.flat()")}}.</p>
 
-<pre class="brush: js notranslate">function flatten(arr) {
+<pre class="brush: js">function flatten(arr) {
   const result = []
 
   arr.forEach(function(i) {
@@ -401,10 +401,7 @@ flatten(nested) // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Array.forEach")}}</p>
-</div>
+<p>{{Compat("javascript.builtins.Array.forEach")}}</p>
 
 <h2 id="See_also">See also</h2>
 

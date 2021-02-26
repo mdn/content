@@ -1,0 +1,72 @@
+---
+title: TextDecoderStream
+slug: Web/API/TextDecoderStream
+tags:
+  - API
+  - Interface
+  - Reference
+  - TextDecoderStream
+---
+<p>{{APIRef("Encoding API")}}</p>
+
+<p class="summary">The <strong><code>TextDecoderStream</code></strong> interface of the {{domxref('Encoding API','','',' ')}} converts a stream of strings into bytes in the UTF-8 encoding. It is the streaming equivalent of {{domxref("TextDecoder")}}.</p>
+
+<h2 id="Constructor">Constructor</h2>
+
+<dl>
+  <dt>{{domxref("TextDecoderStream.TextDecoderStream()")}}</dt>
+  <dd>Creates a new <code>TextDecoderStream</code> object.</dd>
+</dl>
+
+<h2 id="Properties">Properties</h2>
+
+<dl>
+  <dt>{{DOMxRef("TextDecoderStream.encoding")}}{{ReadOnlyInline}}</dt>
+  <dd>An encoding.</dd>
+  <dt>{{DOMxRef("TextDecoderStream.fatal")}}{{ReadOnlyInline}}</dt>
+  <dd>A {{jsxref("boolean")}} indicating if the error mode is fatal.</dd>
+  <dt>{{DOMxRef("TextDecoderStream.ignoreBOM")}}{{ReadOnlyInline}}</dt>
+  <dd>A {{jsxref("boolean")}} indicating whether the byte order mark is ignored.</dd>
+  <dt>{{DOMxRef("TextDecoderStream.readable")}}{{ReadOnlyInline}}</dt>
+  <dd>Returns the {{domxref("ReadableStream")}} instance controlled by this object.</dd>
+  <dt>{{DOMxRef("TextDecoderStream.writable")}}{{ReadOnlyInline}}</dt>
+  <dd>Returns the {{domxref("WritableStream")}} instance controlled by this object.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<ul>
+  <li><a href="https://streams.spec.whatwg.org/demos/">Examples of streaming structured data and HTML</a></li>
+  <li><a href="https://glitch.com/~fetch-request-stream">An example of fetch request streams which uses <code>TextDecoderStream</code></a>.</li>
+</ul>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+    <td>{{SpecName("Encoding", "#interface-TextDecoderStream", "TextDecoderStream")}}</td>
+    <td>{{Spec2("Encoding")}}</td>
+    <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.TextDecoderStream")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li>{{domxref("TextEncoderStream")}}</li>
+  <li><a href="/en-US/docs/Web/API/Streams_API/Concepts">Streams API Concepts</a></li>
+  <li><a href="https://deanhume.com/experimenting-with-the-streams-api/">Experimenting with the Streams API</a></li>
+</ul>

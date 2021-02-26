@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <var>y</var> = <var>gyroscope</var>.y</pre>
+<pre class="brush: js">var <var>y</var> = <var>gyroscope</var>.y</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -38,9 +38,9 @@ tags:
 <pre class="brush: js">let gyroscope = new Gyroscope({frequency: 60});
 
 gyroscope.addEventListener('reading', e =&gt; {
-  console.log("Angular velocety along the X-axis " + gyroscope.x);
-  console.log("Angular velocety along the Y-axis " + gyroscope.y);
-  console.log("Angular velocety along the Z-axis " + gyroscope.z);
+  console.log("Angular velocity along the X-axis " + gyroscope.x);
+  console.log("Angular velocity along the Y-axis " + gyroscope.y);
+  console.log("Angular velocity along the Z-axis " + gyroscope.z);
 });
 gyroscope.start();</pre>
 

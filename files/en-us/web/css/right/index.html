@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* &lt;length&gt; values */
+<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
 right: 3px;
 right: 2.4em;
 
@@ -76,7 +76,7 @@ right: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+<pre class="brush: css">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -84,13 +84,13 @@ right: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div id="relative"&gt;Relatively positioned&lt;/div&gt;
+<pre class="brush: html">&lt;div id="relative"&gt;Relatively positioned&lt;/div&gt;
 &lt;div id="absolute"&gt;Absolutely positioned&lt;/div&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
 <div id="example1">
-<pre class="brush: css notranslate">#relative {
+<pre class="brush: css">#relative {
   width: 100px;
   height: 100px;
   background-color: #FFC7E4;
@@ -117,11 +117,11 @@ right: unset;
 
 <h3 id="Declaring_both_left_and_right">Declaring both left and right</h3>
 
-<p>When both <code>left</code> and <code>right</code> are declared, the element will stretch to meet both, unless other constraints prevent it from doing so. If the element will not stretch or shrink to meet both. When the position of the element is <em>overspecified</em>, the precende is based on the container's direction: The <code>left</code> will take precedence if the container's direction is left-to-right. The <code>right</code> will take precedence if the container's direction is right-to-left.</p>
+<p>When both <code>left</code> and <code>right</code> are declared, the element will stretch to meet both, unless other constraints prevent it from doing so. If the element will not stretch or shrink to meet both. When the position of the element is <em>overspecified</em>, the precedence is based on the container's direction: The <code>left</code> will take precedence if the container's direction is left-to-right. The <code>right</code> will take precedence if the container's direction is right-to-left.</p>
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div id="parent"&gt;Parent
+<pre class="brush: html">&lt;div id="parent"&gt;Parent
     &lt;div id="noWidth"&gt;No width&lt;/div&gt;
     &lt;div id="width"&gt;width: 100px&lt;/div&gt;
 &lt;/div&gt;</pre>
@@ -129,7 +129,7 @@ right: unset;
 <h4 id="CSS_2">CSS</h4>
 
 <div id="example2">
-<pre class="brush: css; notranslate">div {
+<pre class="brush: css;">div {
   outline: 1px solid #CCCCCC;
 }
 #parent {

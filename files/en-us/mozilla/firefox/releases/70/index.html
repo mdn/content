@@ -32,9 +32,9 @@ tags:
 <h4 id="Other_updates">Other updates</h4>
 
 <ul>
- <li>An icon will be displayed next to inactive CSS properties in the <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#Rules_view">Rules view</a> of the <a href="/en-US/docs/Tools/Page_Inspector">Page Inspector</a>, which you can hover over to get information on why it is inactive ({{bug(1306054)}}).</li>
- <li>In the <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#Rules_view">CSS Rules view</a>, the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Inspect_and_select_colors">color picker</a> on foreground colors now tells you whether its contrast with the background color meets accessibility conformance criteria ({{bug(1478156)}}).</li>
- <li>The <a href="/en-US/docs/Tools/Accessibility_inspector">Accessibility inspector</a>'s <a href="/en-US/docs/Tools/Accessibility_inspector#Check_for_accessibility_issues">Check for issues</a> dropdown now includes keyboard accessibility checks ({{bug(1564968)}}).</li>
+ <li>An icon will be displayed next to inactive CSS properties in the <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#rules_view">Rules view</a> of the <a href="/en-US/docs/Tools/Page_Inspector">Page Inspector</a>, which you can hover over to get information on why it is inactive ({{bug(1306054)}}).</li>
+ <li>In the <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#rules_view">CSS Rules view</a>, the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Inspect_and_select_colors">color picker</a> on foreground colors now tells you whether its contrast with the background color meets accessibility conformance criteria ({{bug(1478156)}}).</li>
+ <li>The <a href="/en-US/docs/Tools/Accessibility_inspector">Accessibility inspector</a>'s <a href="/en-US/docs/Tools/Accessibility_inspector#check_for_accessibility_issues">Check for issues</a> dropdown now includes keyboard accessibility checks ({{bug(1564968)}}).</li>
 </ul>
 
 <h3 id="HTML">HTML</h3>
@@ -72,7 +72,7 @@ tags:
 
 <ul>
  <li>We have retired support for 3-valued &lt;position&gt; (excluding background)({{Bug(1559276)}}). <a href="https://www.fxsitecompat.dev/en-CA/docs/2019/3-valued-css-position-is-no-longer-supported-except-for-background-position/">See site compat note</a>.</li>
- <li>The <code>none</code> value is now invalid in {{cssxref("counter")}} / {{cssxref("counters")}} — a change which makes the Level 3 spec match CSS 2.1 {{Bug(1576821)}}).</li>
+ <li>The <code>none</code> value is now invalid in {{cssxref("counter()")}} / {{cssxref("counters()")}} — a change which makes the Level 3 spec match CSS 2.1 {{Bug(1576821)}}).</li>
 </ul>
 
 <h3 id="SVG">SVG</h3>
@@ -92,11 +92,11 @@ tags:
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Numeric_separators">Numeric separators</a> are now supported ({{Bug(1435818)}}).</li>
- <li>The {{jsxref("RelativeTimeFormat.formatToParts", "Intl.RelativeTimeFormat.formatToParts()")}} method has been implemented ({{bug(1473229)}}).</li>
- <li>The {{jsxref("BigInt.prototype.toLocaleString()")}} method has been updated to work with the <code>locales</code> and <code>options</code> parameters per the ECMAScript 402 Intl API. Also, {{jsxref("NumberFormat.format", "Intl.NumberFormat.format()")}} and {{jsxref("NumberFormat.formatToParts", "Intl.NumberFormat.formatToParts()")}} now accept {{jsxref("BigInt")}} values ({{bug(1543677)}}).</li>
- <li>Per the latest ECMAScript specification, a leading zero is now never allowed for <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#BigInt_literal">BigInt literals</a>, making <code>08n</code> and <code>09n</code> invalid similar to the existing error when legacy octal numbers like <code>07n</code> are used. Always use a leading zero with the letter "o" (lowercase or uppercase) for octal <code>BigInt</code> numbers (i.e. <code>0o755n</code> instead of <code>0755n</code>). See {{bug(1568619)}}.</li>
- <li>The Unicode extension key "nu" is now supported for the {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}} constructor and the {{jsxref("RelativeTimeFormat.resolvedOptions", "Intl.RelativeTimeFormat.resolvedOptions()")}} method now also returns <code>numberingSystem</code> ({{bug(1521819)}}).</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_separators">Numeric separators</a> are now supported ({{Bug(1435818)}}).</li>
+ <li>The {{jsxref("Intl/RelativeTimeFormat/formatToParts", "Intl.RelativeTimeFormat.formatToParts()")}} method has been implemented ({{bug(1473229)}}).</li>
+ <li>The {{jsxref("BigInt.prototype.toLocaleString()")}} method has been updated to work with the <code>locales</code> and <code>options</code> parameters per the ECMAScript 402 Intl API. Also, {{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.format()")}} and {{jsxref("Intl/NumberFormat/formatToParts", "Intl.NumberFormat.formatToParts()")}} now accept {{jsxref("BigInt")}} values ({{bug(1543677)}}).</li>
+ <li>Per the latest ECMAScript specification, a leading zero is now never allowed for <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#bigint_literal">BigInt literals</a>, making <code>08n</code> and <code>09n</code> invalid similar to the existing error when legacy octal numbers like <code>07n</code> are used. Always use a leading zero with the letter "o" (lowercase or uppercase) for octal <code>BigInt</code> numbers (i.e. <code>0o755n</code> instead of <code>0755n</code>). See {{bug(1568619)}}.</li>
+ <li>The Unicode extension key "nu" is now supported for the {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}} constructor and the {{jsxref("Intl/RelativeTimeFormat/resolvedOptions", "Intl.RelativeTimeFormat.resolvedOptions()")}} method now also returns <code>numberingSystem</code> ({{bug(1521819)}}).</li>
 </ul>
 
 <h3 id="APIs">APIs</h3>
@@ -104,7 +104,7 @@ tags:
 <h4 id="DOM">DOM</h4>
 
 <ul>
- <li>The {{domxref("History.back","back()")}}, {{domxref("History.forward","forward()")}}, and {{domxref("History.go","go()")}} methods are now asynchronous. Add a listener to the <code>{{domxref("Document/defaultView/popstate_event", "popstate")}}</code> event to get notification that navigation has completed {{Bug(1563587)}}.</li>
+ <li>The {{domxref("History.back","back()")}}, {{domxref("History.forward","forward()")}}, and {{domxref("History.go","go()")}} methods are now asynchronous. Add a listener to the <code>{{domxref("Window/popstate_event", "popstate")}}</code> event to get notification that navigation has completed {{Bug(1563587)}}.</li>
  <li>We've added support {{DOMxRef("DOMMatrix")}}, {{DOMxRef("DOMPoint")}}, etc. in web workers ({{bug(1420580)}}).</li>
  <li>A few more members have been moved from {{domxref("HTMLDocument")}} to {{domxref("Document")}}, including  {{domxref("Document.all")}}, {{domxref("Document.clear")}}, {{domxref("Document.captureEvents")}}, and {{domxref("Document.clearEvents")}} ({{bug(1558570)}}, {{bug(1558571)}}).</li>
  <li><a href="/en-US/docs/Web/API/Notifications_API">Notification</a> permission can no longer be requested from inside a cross-origin {{htmlelement("iframe")}} ({{bug(1560741)}}).</li>

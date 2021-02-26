@@ -14,7 +14,7 @@ tags:
 
 <p>Check whether the extension has the permissions listed in the given {{WebExtAPIRef("permissions.Permissions")}} object.</p>
 
-<p>The <code>Permissions</code> argument may contain either an origins property, which is an array of <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permissions</a>, or a <code>permissions</code> property, which is an array of <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permissions</a>, or both.</p>
+<p>The <code>Permissions</code> argument may contain either an origins property, which is an array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a>, or a <code>permissions</code> property, which is an array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permissions</a>, or both.</p>
 
 <p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. The promise is fulfilled with true only if all the extension currently has all the given permissions. For host permissions, if the extension's permissions <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">pattern-match</a> the permissions listed in <code>origins</code>, then they are considered to match.</p>
 
@@ -44,7 +44,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="notranslate brush: js">// Extension permissions are:
+<pre class="brush: js">// Extension permissions are:
 // "webRequest", "tabs", "*://*.mozilla.org/*"
 
 var testPermissions1 = {

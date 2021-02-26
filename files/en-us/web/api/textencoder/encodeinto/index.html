@@ -9,7 +9,7 @@ tags:
 - TextEncoder
 - encodeInto
 ---
-<p>{{APIRef("Encoding API")}}{{seecompattable}}</p>
+<p>{{APIRef("Encoding API")}}{{SeeCompatTable}}</p>
 
 <p>The <strong><code>TextEncoder.prototype.encodeInto()</code></strong> method takes a
     {{domxref("USVString")}} to encode and a destination {{jsxref("Uint8Array")}} to put
@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>b1</var> = <var>encoder</var>.encodeInto(<var>string</var>, <var>uint8Array</var>);
+<pre class="brush: js"><var>b1</var> = <var>encoder</var>.encodeInto(<var>string</var>, <var>uint8Array</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -55,7 +55,7 @@ tags:
         href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/subarray">TypedArray.prototype.subarray()</a>.
     Observe.</p>
 
-<pre class="brush: js notranslate">var encoder = new TextEncoder;
+<pre class="brush: js">var encoder = new TextEncoder;
 function encodeIntoAtPosition(string, u8array, position) {
     return encoder.encodeInto(string, position ? u8array.subarray(position|0) : u8array);
 }
@@ -121,7 +121,7 @@ console.log( "" + u8array.join() ); // 0,0,104,101,108,108,111,0
     sentinel and you can't prevent your Wasm program from seeing a logically truncated
     string if the JavaScript string contained U+0000. Observe:</p>
 
-<pre class="brush: js notranslate">var encoder = new TextEncoder;
+<pre class="brush: js">var encoder = new TextEncoder;
 function encodeIntoWithSentinel(string, u8array, position) {
     var stats = encoder.encodeInto(string, position ? u8array.subarray(position|0) : u8array);
     if (stats.<code>written &lt; </code>u8array.length) u8array[stats.<code>written] = 0; // append null if room</code>
@@ -130,10 +130,10 @@ function encodeIntoWithSentinel(string, u8array, position) {
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: html notranslate">&lt;p class="source"&gt;This is a sample paragraph.&lt;/p&gt;
+<pre class="brush: html">&lt;p class="source"&gt;This is a sample paragraph.&lt;/p&gt;
 &lt;p class="result"&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: js notranslate">const sourcePara = document.querySelector('.source');
+<pre class="brush: js">const sourcePara = document.querySelector('.source');
 const resultPara = document.querySelector('.result');
 const string = sourcePara.textContent;
 
@@ -153,7 +153,7 @@ resultPara.textContent += 'Bytes read: ' + encodedResults.read +
     native TextEncoder.prototype.encode in Safari when available, but it is well worth the
     length because of the gains in performance.</p>
 
-<pre class="brush: js notranslate">(function(window){
+<pre class="brush: js">(function(window){
     "use strict";
     var log = Math.log;
     var LN2 = Math.LN2;

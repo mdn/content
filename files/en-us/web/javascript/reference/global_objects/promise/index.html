@@ -45,53 +45,66 @@ tags:
 
 <h3 id="Chained_Promises">Chained Promises</h3>
 
-<p>The methods <code>promise.then()</code>, <code>promise.catch()</code>, and <code>promise.finally()</code> are used to associate further action with a promise that becomes settled. These methods also return a newly generated promise object, which can optionally be used for chaining; for example, like this:</p>
+<p>The methods <code>promise.then()</code>, <code>promise.catch()</code>, and <code>promise.finally()</code> are used to associate further action with a promise that becomes settled.
+<p>The <code>.then()</code> method takes up to two arguments; the first argument is a callback function for the resolved case of the promise, and the second argument is a callback function for the rejected case. Each <code>.then()</code> returns a newly generated promise object, which can optionally be used for chaining; for example:</p>
 
-<pre class="brush: js notranslate">const myPromise =
-  (new Promise(myExecutorFunc))
-  .then(handleFulfilledA,handleRejectedA)
-  .then(handleFulfilledB,handleRejectedB)
-  .then(handleFulfilledC,handleRejectedC);
+<pre class="brush: js">
+const myPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('foo');
+  }, 300);
+});
 
-// or, perhaps better ...
+myPromise
+  .then(handleResolvedA, handleRejectedA)
+  .then(handleResolvedB, handleRejectedB)
+  .then(handleResolvedC, handleRejectedC);
+</pre>
 
-const myPromise =
-  (new Promise(myExecutorFunc))
-  .then(handleFulfilledA)
-  .then(handleFulfilledB)
-  .then(handleFulfilledC)
-  .catch(handleRejectedAny);</pre>
+<p>Processing continues to the next link of the chain even when a <code>.then()</code> lacks a callback function that returns a Promise object. Therefore, a chain can safely omit every <i>rejection</i> callback function until the final <code>.catch()</code>.</p>
 
-<p>Handling a rejected promise too early has consequences further down the promise chain. Sometimes there is no choice because an error must be handled immediately; in such cases we must <code>throw</code> something, even if it is a dummy error message like <code>throw -999</code>, to maintain error state down the chain. On the other hand, in the absence of an immediate need it is simpler to leave out error handling until a final <code>.catch()</code> statement.</p>
+<p>Handling a rejected promise in each <code>.then()</code> has consequences further down the promise chain. Sometimes there is no choice, because an error must be handled immediately. In such cases we must throw an error of some type to maintain error state down the chain. On the other hand, in the absence of an immediate need, it is simpler to leave out error handling until a final <code>.catch()</code> statement. A <code>.catch()</code> is really just a <code>.then()</code> without a slot for a callback function for the case when the promise is resolved.</p>
 
-<p>The termination condition of a promise determines the "settled" state of the next promise in the chain. Any termination other than a <code>throw</code> creates a "resolved" state while terminating with a <code>throw</code> creates a "rejected" state.</p>
+<pre class="brush: js">
+myPromise
+.then(handleResolvedA)
+.then(handleResolvedB)
+.then(handleResolvedC)
+.catch(handleRejectedAny);
+</pre>
 
-<pre class="brush: js notranslate">handleFulfilled(value)       { /*...*/; return nextValue;  }
-handleRejection(reason)  { /*...*/; throw  nextReason; }
-handleRejection(reason)  { /*...*/; return nextValue;  }</pre>
+<p>Using <code>{{JSxRef("Functions.arrow_functions", "Arrow Function Expressions")}}</code> for the callback functions, an implementation of a promise chain might look something like this:</p>
 
-<p>The returned <code>nextValue</code> can be another promise object, in which case the promise gets dynamically inserted into the chain.</p>
+<pre class="brush: js">
+promise1
+.then(value => { return value + ' and bar'; })
+.then(value => { return value + ' and bar again'; })
+.then(value => { return value + ' and again'; })
+.then(value => { return value + ' and again'; })
+.then(value => { console.log(value) })
+.catch(err => { console.log(err) });
+</pre>
 
-<p>When a <code>.then()</code> lacks the appropriate function that returns a Promise object, processing continues to the next link of the chain. Therefore, a chain can safely omit every <code>handleRejection</code> until the final <code>.catch()</code>. Similarly, <code>.catch()</code> is really just a <code>.then()</code> without a slot for <code>handleFulfilled</code>.</p>
+<p>The termination condition of a promise determines the "settled" state of the next promise in the chain. A "resolved" state indicates a successful completion of the promise, while a "rejected" state indicates a lack of success. The return value of each resolved promise in the chain is passed along to the next <code>.then()</code>, while the reason for rejection is passed along to the next rejection-handler function in the chain.</p>
 
 <p>The promises of a chain are nested like Russian dolls, but get popped like the top of a stack. The first promise in the chain is most deeply nested and is the first to pop.</p>
 
-<pre class="brush: plain notranslate">(promise D, (promise C, (promise B, (promise A) ) ) )</pre>
+<pre class="brush: plain">(promise D, (promise C, (promise B, (promise A) ) ) )</pre>
 
 <p>When a <code>nextValue</code> is a promise, the effect is a dynamic replacement. The <code>return</code> causes a promise to be popped, but the <code>nextValue</code> promise is pushed into its place. For the nesting shown above, suppose the <code>.then()</code> associated with "promise B" returns a <code>nextValue</code> of "promise X". The resulting nesting would look like this:</p>
 
-<pre class="brush: plain notranslate">(promise D, (promise C, (promise X) ) )</pre>
+<pre class="brush: plain">(promise D, (promise C, (promise X) ) )</pre>
 
 <p>A promise can participate in more than one nesting. For the following code, the transition of <code>promiseA</code> into a "settled" state will cause both instances of <code>.then()</code> to be invoked.</p>
 
-<pre class="brush: js notranslate">const promiseA = new Promise(myExecutorFunc);
+<pre class="brush: js">const promiseA = new Promise(myExecutorFunc);
 const promiseB = promiseA.then(handleFulfilled1, handleRejected1);
 const promiseC = promiseA.then(handleFulfilled2, handleRejected2);
 </pre>
 
 <p>An action can be assigned to an already "settled" promise. In that case, the action (if appropriate) will be performed at the first asynchronous opportunity. Note that promises are guaranteed to be asynchronous. Therefore, an action for an already "settled" promise will occur only after the stack has cleared and a clock-tick has passed. The effect is much like that of <code>setTimeout(action,10)</code>.</p>
 
-<pre class="brush: js notranslate">const promiseA = new Promise( (resolutionFunc,rejectionFunc) =&gt; {
+<pre class="brush: js">const promiseA = new Promise( (resolutionFunc,rejectionFunc) =&gt; {
     resolutionFunc(777);
 });
 // At this point, "promiseA" is already settled.
@@ -111,7 +124,7 @@ console.log("immediate logging");
 
 <p>To illustrate this a bit further we can take a look at how an <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code> embedded in a document communicates with its host. Since all web APIs are aware of the incumbent settings object, the following will work in all browsers:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;iframe&gt;&lt;/iframe&gt; &lt;!-- we have a realm here --&gt;
 &lt;script&gt; // we have a realm here as well
   const bound = frames[0].postMessage.bind(
@@ -126,7 +139,7 @@ console.log("immediate logging");
 
 <p>The same concept applies to promises. If we modify the above example a little bit, we get this:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;iframe&gt;&lt;/iframe&gt; &lt;!-- we have a realm here --&gt;
 &lt;script&gt; // we have a realm here as well
   const bound = frames[0].postMessage.bind(
@@ -141,7 +154,7 @@ console.log("immediate logging");
 
 <p>If we change this so that the <code>&lt;iframe&gt;</code> in the document is listening to post messages, we can observe the effect of the incumbent settings object:</p>
 
-<pre class="brush: html notranslate">&lt;!-- y.html --&gt;
+<pre class="brush: html">&lt;!-- y.html --&gt;
 &lt;!DOCTYPE html&gt;
 &lt;iframe src="x.html"&gt;&lt;/iframe&gt;
 &lt;script&gt;
@@ -150,7 +163,7 @@ console.log("immediate logging");
 &lt;/script&gt;
 </pre>
 
-<pre class="brush: html notranslate">&lt;!-- x.html --&gt;
+<pre class="brush: html">&lt;!-- x.html --&gt;
 &lt;!DOCTYPE html&gt;
 &lt;script&gt;
 window.addEventListener("message", (event) =&gt; {
@@ -212,7 +225,7 @@ window.addEventListener("message", (event) =&gt; {
 
 <h3 id="Basic_Example">Basic Example</h3>
 
-<pre class="brush: js notranslate">let myFirstPromise = new Promise((resolve, reject) =&gt; {
+<pre class="brush: js">let myFirstPromise = new Promise((resolve, reject) =&gt; {
   // We call resolve(...) when what we were doing asynchronously was successful, and reject(...) when it failed.
   // In this example, we use setTimeout(...) to simulate async code.
   // In reality, you will probably be using something like XHR or an HTML5 API.
@@ -239,7 +252,7 @@ myFirstPromise.then((successMessage) =&gt; {
 
 <p>This code can be run under NodeJS. Comprehension is enhanced by seeing the errors actually occur. To force more errors, change the <code>threshold</code> values.</p>
 
-<pre class="brush: js notranslate">"use strict";
+<pre class="brush: js">"use strict";
 
 // To experiment with error handling, "threshold" values cause errors randomly
 const THRESHOLD_A = 8; // can use zero 0 to guarantee error
@@ -317,7 +330,7 @@ function promiseGetWord(parityInfo) {
 <h3 id="Advanced_Example">Advanced Example</h3>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;button id="btn"&gt;Make a promise!&lt;/button&gt;
+<pre class="brush: html">&lt;button id="btn"&gt;Make a promise!&lt;/button&gt;
 &lt;div id="log"&gt;&lt;/div&gt;
 </pre>
 </div>
@@ -326,18 +339,18 @@ function promiseGetWord(parityInfo) {
 
 <p>The fulfillment of the promise is logged, via a fulfill callback set using {{JSxRef("Promise.prototype.then()","p1.then()")}}. A few logs show how the synchronous part of the method is decoupled from the asynchronous completion of the promise.</p>
 
-<pre class="brush: js notranslate">"use strict";
+<pre class="brush: js">"use strict";
 var promiseCount = 0;
 
 function testPromise() {
   let thisPromiseCount = ++promiseCount;
   let log = document.getElementById('log');
   // begin
-  log.insertAdjacentHTML('beforeend', thisPromiseCount + ') Started (<small>Sync code started</small>)');
+  log.insertAdjacentHTML('beforeend', thisPromiseCount + ') Started&lt;br&gt;');
   // We make a new promise: we promise a numeric count of this promise, starting from 1 (after waiting 3s)
   let p1 = new Promise((resolve, reject) =&gt; {
     // The executor function is called with the ability to resolve or reject the promise
-    log.insertAdjacentHTML('beforeend', thisPromiseCount + ') Promise started (<small>Async code started</small>)');
+    log.insertAdjacentHTML('beforeend', thisPromiseCount + ') Promise constructor&lt;br&gt;');
     // This is only an example to create asynchronism
     window.setTimeout(function() {
         // We fulfill the promise !
@@ -349,19 +362,19 @@ function testPromise() {
   // and what to do when the promise is rejected with the catch() call
   p1.then(function(val) {
     // Log the fulfillment value
-    log.insertAdjacentHTML('beforeend', val + ') Promise fulfilled (<small>Async code terminated</small>)');
+    log.insertAdjacentHTML('beforeend', val + ') Promise fulfilled&lt;br&gt;');
   }).catch((reason) =&gt; {
     // Log the rejection reason
     console.log(`Handle rejected promise (${reason}) here.`);
   });
   // end
-  log.insertAdjacentHTML('beforeend', thisPromiseCount + ') Promise made (<small>Sync code terminated</small>)');
+  log.insertAdjacentHTML('beforeend', thisPromiseCount + ') Promise made&lt;br&gt;');
 }
 
 </pre>
 
 <div class="hidden">
-<pre class="brush: js notranslate">if ("Promise" in window) {
+<pre class="brush: js">if ("Promise" in window) {
   let btn = document.getElementById("btn");
   btn.addEventListener("click",testPromise);
 } else {

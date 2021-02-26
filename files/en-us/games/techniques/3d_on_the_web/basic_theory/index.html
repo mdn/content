@@ -20,7 +20,7 @@ tags:
 
 <p>3D essentially is all about representations of shapes in a 3D space, with a coordinate system used to calculate their position.</p>
 
-<p><img alt="Coordinate system" src="https://mdn.mozillademos.org/files/13326/mdn-games-3d-coordinate-system.png" style="height: 338px; width: 600px;"></p>
+<p><img alt="Coordinate system" src="mdn-games-3d-coordinate-system.png"></p>
 
 <p>WebGL uses the right-hand coordinate system — the <code>x</code> axis points to the right, the <code>y</code> axis points up, and the <code>z</code> axis points out of the screen, as seen in the above diagram.</p>
 
@@ -37,7 +37,7 @@ tags:
 
 <p>You can build geometry using this information — here is an example of a cube:</p>
 
-<p><img alt="Cube" src="https://mdn.mozillademos.org/files/13324/mdn-games-3d-cube.png" style="height: 265px; width: 600px;"></p>
+<p><img alt="Cube" src="mdn-games-3d-cube.png"></p>
 
 <p>A face of the given shape is a plane between vertices. For example, a cube has 8 different vertices (points in space) and 6 different faces, each constructed out of 4 vertices. A normal defines which way the face is directed in. Also, by connecting the points we're creating the edges of the cube. The geometry is built from a vertex and the face, while material is a texture, which uses a color or an image. If we connect the geometry with the material we will get a mesh.</p>
 
@@ -45,7 +45,7 @@ tags:
 
 <p>The rendering pipeline is the process by which images are prepared and output onto the screen. The graphics rendering pipeline takes the 3D objects built from <strong>primitives</strong> described using <strong>vertices</strong>, applies processing, calculates the <strong>fragments</strong> and renders them on the 2D screen as <strong>pixels</strong>.</p>
 
-<p><img alt="Rendering pipeline" src="https://mdn.mozillademos.org/files/13334/mdn-games-3d-rendering-pipeline.png" style="height: 225px; width: 600px;"></p>
+<p><img alt="Rendering pipeline" src="mdn-games-3d-rendering-pipeline.png"></p>
 
 <p>Terminology used in the diagram above is as follows:</p>
 
@@ -61,15 +61,15 @@ tags:
 
 <p>Vertex processing is about combining the information about individual vertices into primitives and setting their coordinates in the 3D space for the viewer to see. It's like taking a photo of the given scenery you have prepared — you have to place the objects first, configure the camera, and then take the shot.</p>
 
-<p><img alt="Vertex processing" src="https://mdn.mozillademos.org/files/13336/mdn-games-3d-vertex-processing.png" style="height: 338px; width: 600px;"></p>
+<p><img alt="Vertex processing" src="mdn-games-3d-vertex-processing.png"></p>
 
 <p>There are four stages to this processing: the first one involves arranging the objects in the world, and is called <strong>model transformation</strong>. Then there's <strong>view transformation</strong> which takes care of positioning and setting the orientation of the camera in the 3D space. The camera has three parameters — location, direction, and orientation — which have to be defined for the newly created scene.</p>
 
-<p><img alt="Camera" src="https://mdn.mozillademos.org/files/13322/mdn-games-3d-camera.png" style="height: 225px; width: 600px;"></p>
+<p><img alt="Camera" src="mdn-games-3d-camera.png"></p>
 
-<p><strong>Projection transformation</strong> (also called perspective transformation) then defines the camera settings. It sets up what can be seen by the camera — the configuration includes <em>field of view</em>, <em>aspect ratio</em> and optional <em>near</em> and <em>far planes</em>. read the <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js#Camera">Camera paragraph</a> in the Three.js article to learn about those.</p>
+<p><strong>Projection transformation</strong> (also called perspective transformation) then defines the camera settings. It sets up what can be seen by the camera — the configuration includes <em>field of view</em>, <em>aspect ratio</em> and optional <em>near</em> and <em>far planes</em>. read the <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js#camera">Camera paragraph</a> in the Three.js article to learn about those.</p>
 
-<p><img alt="Camera settings" src="https://mdn.mozillademos.org/files/13320/mdn-games-3d-camera-settings.png" style="height: 338px; width: 600px;"></p>
+<p><img alt="Camera settings" src="mdn-games-3d-camera-settings.png"></p>
 
 <p>The last step is <strong>viewport transformation</strong>, which involves outputting everything for the next step in the rendering pipeline.</p>
 
@@ -77,7 +77,7 @@ tags:
 
 <p>Rasterization converts primitives (which are connected vertices) to a set of fragments.</p>
 
-<p><img alt="Rasterization" src="https://mdn.mozillademos.org/files/13332/mdn-games-3d-rasterization.png" style="height: 338px; width: 600px;"></p>
+<p><img alt="Rasterization" src="mdn-games-3d-rasterization.png"></p>
 
 <p>Those fragments — which are 3D projections of the 2D pixels — are aligned to the pixel grid, so eventually they can be printed out as pixels on a 2D screen display during the output merging stage.</p>
 
@@ -85,7 +85,7 @@ tags:
 
 <p>Fragment processing focuses on textures and lighting — it calculates final colors based on the given parameters.</p>
 
-<p><img alt="Fragment processing" src="https://mdn.mozillademos.org/files/13328/mdn-games-3d-fragment-processing.png" style="height: 338px; width: 600px;"></p>
+<p><img alt="Fragment processing" src="mdn-games-3d-fragment-processing.png"></p>
 
 <h3 id="Textures">Textures</h3>
 
@@ -108,7 +108,7 @@ tags:
 
 <p>During the output manipulation stage all the fragments of the primitives from the 3D space are transformed into a 2D grid of pixels that are then printed out on the screen display.</p>
 
-<p><img alt="Output merging" src="https://mdn.mozillademos.org/files/13330/mdn-games-3d-output-merging.png" style="height: 338px; width: 600px;"></p>
+<p><img alt="Output merging" src="mdn-games-3d-output-merging.png"></p>
 
 <p>During output merging some processing is also applied to ignore information that is not needed — for example the parameters of objects that are outside of the screen or behind other objects, and thus not visible, are not calculated.</p>
 

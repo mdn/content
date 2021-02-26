@@ -14,7 +14,9 @@ tags:
 <p>The <strong><code>entries()</code></strong> method returns a new <strong><a
       href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">Iterator</a></strong>
   object that contains the <code>[key, value]</code> pairs for each element in the
-  <code>Map</code> object in insertion order.</p>
+  <code>Map</code> object in insertion order. In this particular case, this iterator object is also an iterable, so the for-of loop can be used.
+  When the protocol <code>[Symbol.iterator]</code> is used, it returns a function that, when invoked, returns this iterator itself.
+</p>
 
 <div>{{EmbedInteractiveExample("pages/js/map-prototype-entries.html")}}</div>
 
@@ -26,7 +28,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><code><var>myMap</var>.entries()</code></pre>
+<pre class="brush: js"><code><var>myMap</var>.entries()</code></pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -36,7 +38,7 @@ tags:
 
 <h3 id="Using_entries">Using entries()</h3>
 
-<pre class="brush: js notranslate">let myMap = new Map()
+<pre class="brush: js">let myMap = new Map()
 myMap.set('0', 'foo')
 myMap.set(1, 'bar')
 myMap.set({}, 'baz')

@@ -12,7 +12,7 @@ tags:
 
 <p>The <strong><code>counters()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> enables nested counters, returning a concatenated string representing the current values of the named counters, if there are any. The <code>counters()</code> function has two forms: <code>counters(<var>name</var>, <var>string</var>)</code> or <code>counters(<var>name</var>, <var>string</var>, <var>style</var>)</code>. It is generally used with <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>, but can be used, theoretically, anywhere a <code><a href="/en-US/docs/Web/CSS/string">&lt;string&gt;</a></code> value is supported. The generated text is the value of all counters with the given name, from outermost to innermost, separated by the specified string. The counters are rendered in the style indicated, defaulting to <code>decimal</code> if no style is specified.</p>
 
-<pre class="brush: css notranslate">/* Simple usage  - style defaults to decimal */
+<pre class="brush: css">/* Simple usage  - style defaults to decimal */
 counters(countername, '-');
 
 /* changing the counter display */
@@ -23,7 +23,7 @@ counters(countername, '.', upper-roman)</pre>
 <div class="notecard note">
 <p><strong>Note:</strong> The <code>counters()</code> function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental, and support for the type-or-unit parameter is sparse.</p>
 
-<p>Check the <a href="#Browser_compatibility">Browser compatibility table</a> carefully before using this in production.</p>
+<p>Check the <a href="#browser_compatibility">Browser compatibility table</a> carefully before using this in production.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -41,7 +41,7 @@ counters(countername, '.', upper-roman)</pre>
 
 <h3 id="Formal_syntax">Formal syntax</h3>
 
-<pre class="brush: css notranslate">{{CSSSyntax}}</pre>
+<pre class="brush: css">{{CSSSyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -49,7 +49,7 @@ counters(countername, '.', upper-roman)</pre>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html; notranslate">&lt;ol&gt;
+<pre class="brush: html;">&lt;ol&gt;
   &lt;li&gt;
      &lt;ol&gt;
         &lt;li&gt;&lt;/li&gt;
@@ -75,7 +75,7 @@ counters(countername, '.', upper-roman)</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css; highlight[2] notranslate">ol {
+<pre class="brush: css; highlight[2]">ol {
   counter-reset: listCounter;
 }
 li {
@@ -96,7 +96,7 @@ li::before {
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html; notranslate">&lt;ol&gt;
+<pre class="brush: html;">&lt;ol&gt;
   &lt;li&gt;
      &lt;ol&gt;
         &lt;li&gt;&lt;/li&gt;
@@ -122,7 +122,7 @@ li::before {
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css; highlight[2] notranslate">ol {
+<pre class="brush: css; highlight[2]">ol {
   counter-reset: count;
 }
 li {

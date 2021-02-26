@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:js notranslate">browser.menus.create(
+<pre class="brush:js">browser.menus.create(
   createProperties, // object
   function() {...}  // optional function
 )
@@ -66,16 +66,16 @@ tags:
   <dd>
   <p><code>object</code>. One or more custom icons to display next to the item. Custom icons can only be set for items appearing in submenus. This property is an object with one property for each supplied icon: the property's name should include the icon's size in pixels, and path is relative to the icon from the extension's root directory. The browser tries to choose a 16x16 pixel icon for a normal display or a 32x32 pixel icon for a high-density display. To avoid any scaling, you can specify icons like this:</p>
 
-  <pre class="brush: json no-line-numbers  language-json notranslate"><code class="language-json"><span class="key token">"icons":</span> <span class="punctuation token">{</span>
-      <span class="key token">"16":</span> <span class="string token">"path/to/geo-16.png"</span><span class="punctuation token">,</span>
-      <span class="key token">"32":</span> <span class="string token">"path/to/geo-32.png"</span>
-    <span class="punctuation token">}</span></code></pre>
+  <pre class="brush: json no-line-numbers  language-json">&quot;icons&quot;: {
+      &quot;16&quot;: &quot;path/to/geo-16.png&quot;,
+      &quot;32&quot;: &quot;path/to/geo-32.png&quot;
+    }</pre>
 
   <p>Alternatively, you can specify a single SVG icon, and it will be scaled appropriately:</p>
 
-  <pre class="brush: json no-line-numbers  language-json notranslate"><code class="language-json"><span class="key token">"icons":</span> <span class="punctuation token">{</span>
-      <span class="key token">"16":</span> <span class="string token">"path/to/geo.svg"</span>
-    <span class="punctuation token">}</span></code></pre>
+  <pre class="brush: json no-line-numbers  language-json">&quot;icons&quot;: {
+      &quot;16&quot;: &quot;path/to/geo.svg&quot;
+    }</pre>
 
   <div class="notecard note">
   <p><strong>Note</strong>: The top-level menu item uses the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a> specified in the manifest rather than what is specified with this key.</p>
@@ -127,7 +127,7 @@ tags:
 
 <p>This example creates a context menu item that's shown when the user has selected some text in the page. It just logs the selected text to the console:</p>
 
-<pre class="notranslate brush: js">browser.menus.create({
+<pre class="brush: js">browser.menus.create({
   id: "log-selection",
   title: "Log '%s' to the console",
   contexts: ["selection"]
@@ -139,9 +139,9 @@ browser.menus.onClicked.addListener(function(info, tab) {
   }
 });</pre>
 
-<p>This example adds two radio items, which you can use to choose whether to apply a green or a blue border to the page. Note that this example will need the <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission">activeTab permission</a>.</p>
+<p>This example adds two radio items, which you can use to choose whether to apply a green or a blue border to the page. Note that this example will need the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission">activeTab permission</a>.</p>
 
-<pre class="notranslate brush: js">function onCreated() {
+<pre class="brush: js">function onCreated() {
   if (browser.runtime.lastError) {
     console.log("error creating item:" + browser.runtime.lastError);
   } else {
@@ -194,7 +194,7 @@ browser.menus.onClicked.addListener(function(info, tab) {
 </div>
 
 <div class="hidden">
-<pre class="notranslate">// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are

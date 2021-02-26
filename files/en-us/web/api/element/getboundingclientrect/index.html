@@ -2,26 +2,26 @@
 title: Element.getBoundingClientRect()
 slug: Web/API/Element/getBoundingClientRect
 tags:
-- API
-- Boundary
-- Bounding
-- Bounds
-- CSSOM View
-- Client
-- Containing
-- DOM
-- Element
-- Enclosing
-- Method
-- Minimum
-- Rectangle
-- Reference
-- Smallest
-- clientHeight
-- getBoundingClientRect
-- getClientRects
-- offsetHeight
-- scrollHeight
+  - API
+  - Boundary
+  - Bounding
+  - Bounds
+  - CSSOM View
+  - Client
+  - Containing
+  - DOM
+  - Element
+  - Enclosing
+  - Method
+  - Minimum
+  - Rectangle
+  - Reference
+  - Smallest
+  - clientHeight
+  - getBoundingClientRect
+  - getClientRects
+  - offsetHeight
+  - scrollHeight
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -32,7 +32,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>domRect</em> = <em>element</em>.getBoundingClientRect();</pre>
+  class="brush: js"><em>domRect</em> = <em>element</em>.getBoundingClientRect();</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -45,7 +45,7 @@ tags:
 </p>
 
 <p style="display: block;"><img alt=""
-    src="https://mdn.mozillademos.org/files/17155/element-box-diagram.png"></p>
+    src="element-box-diagram.png"></p>
 
 <p>The <code>width</code> and <code>height</code> properties of the {{domxref("DOMRect")}}
   object returned by the method include the <code>padding</code> and
@@ -85,7 +85,7 @@ tags:
   <code>window.scrollX</code> and <code>window.scrollY.</code> Scripts without access to
   these properties can use code like this:</p>
 
-<pre class="brush: js notranslate">// For scrollX
+<pre class="brush: js">// For scrollX
 (((t = document.documentElement) || (t = document.body.parentNode))
   &amp;&amp; typeof t.scrollLeft == 'number' ? t : document.body).scrollLeft
 // For scrollY
@@ -99,9 +99,9 @@ tags:
   client rect of a simple <code>&lt;div&gt;</code> element, and prints out its properties
   below it.</p>
 
-<pre class="brush: html notranslate">&lt;div&gt;&lt;/div&gt;</pre>
+<pre class="brush: html">&lt;div&gt;&lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   width: 400px;
   height: 200px;
   padding: 20px;
@@ -109,7 +109,7 @@ tags:
   background: purple;
 }</pre>
 
-<pre class="brush: js notranslate">let elem = document.querySelector('div');
+<pre class="brush: js">let elem = document.querySelector('div');
 let rect = elem.getBoundingClientRect();
 for (var key in rect) {
   if(typeof rect[key] !== 'function') {
@@ -166,7 +166,7 @@ for (var key in rect) {
   ES2015 and newer features such as <code>Object.assign()</code> and object rest/spread
   will fail to copy returned properties.</p>
 
-<pre class="brush: js notranslate">rect = elt.getBoundingClientRect()
+<pre class="brush: js">rect = elt.getBoundingClientRect()
 // The result in emptyObj is {}
 emptyObj = Object.assign({}, rect)
 emptyObj = { ...rect }

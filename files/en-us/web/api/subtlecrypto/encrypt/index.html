@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <em>result</em> = crypto.subtle.encrypt(<em>algorithm</em>, <em>key</em>, <em>data</em>);
+<pre class="brush: js">const <em>result</em> = crypto.subtle.encrypt(<em>algorithm</em>, <em>key</em>, <em>data</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -33,14 +33,14 @@ tags:
     required:
 
     <ul>
-      <li>To use <a href="#RSA-OAEP">RSA-OAEP</a>, pass an {{domxref("RsaOaepParams")}}
+      <li>To use <a href="#rsa-oaep">RSA-OAEP</a>, pass an {{domxref("RsaOaepParams")}}
         object.</li>
-      <li>To use <a href="#AES-CTR">AES-CTR</a>, pass an {{domxref("AesCtrParams")}}
+      <li>To use <a href="#aes-ctr">AES-CTR</a>, pass an {{domxref("AesCtrParams")}}
         object.</li>
-      <li>To use <a href="#AES-CBC">AES-CBC</a>, pass an {{domxref("AesCbcParams")}}
+      <li>To use <a href="#aes-cbc">AES-CBC</a>, pass an {{domxref("AesCbcParams")}}
         object.</li>
-      <li>To use <a href="#AES-GCM">AES-GCM</a>, pass an {{domxref("AesGcmParams")}}
-        object.<span style="display: none;"> </span></li>
+      <li>To use <a href="#aes-gcm">AES-GCM</a>, pass an {{domxref("AesGcmParams")}}
+        object.</li>
     </ul>
   </li>
   <li><code><em>key</em></code> is a {{domxref("CryptoKey")}} containing the key to be
@@ -141,7 +141,7 @@ tags:
     href="https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/rsa-oaep.js"
     rel="noopener">See the complete code on GitHub.</a></p>
 
-<pre class="brush: js notranslate">function getMessageEncoding() {
+<pre class="brush: js">function getMessageEncoding() {
   const messageBox = document.querySelector(".rsa-oaep #message");
   let message = messageBox.value;
   let enc = new TextEncoder();
@@ -166,7 +166,7 @@ function encryptMessage(publicKey) {
     href="https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-ctr.js"
     rel="noopener">See the complete code on GitHub.</a></p>
 
-<pre class="brush: js notranslate">function getMessageEncoding() {
+<pre class="brush: js">function getMessageEncoding() {
   const messageBox = document.querySelector(".aes-ctr #message");
   let message = messageBox.value;
   let enc = new TextEncoder();
@@ -189,7 +189,7 @@ function encryptMessage(key) {
 }
 </pre>
 
-<pre class="brush: js notranslate">let iv = new Uint8Array(16);
+<pre class="brush: js">let iv = new Uint8Array(16);
 let key = new Uint8Array(16);
 let data = new Uint8Array(12345);
 //crypto functions are wrapped in promises so we have to use await and make sure the function that
@@ -216,7 +216,7 @@ console.log(encrypted_content);</pre>
     href="https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-cbc.js"
     rel="noopener">See the complete code on GitHub.</a></p>
 
-<pre class="brush: js notranslate">function getMessageEncoding() {
+<pre class="brush: js">function getMessageEncoding() {
   const messageBox = document.querySelector(".aes-cbc #message");
   let message = messageBox.value;
   let enc = new TextEncoder();
@@ -244,7 +244,7 @@ function encryptMessage(key) {
     href="https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-gcm.js"
     rel="noopener">See the complete code on GitHub.</a></p>
 
-<pre class="brush: js notranslate">function getMessageEncoding() {
+<pre class="brush: js">function getMessageEncoding() {
   const messageBox = document.querySelector(".aes-gcm #message");
   let message = messageBox.value;
   let enc = new TextEncoder();

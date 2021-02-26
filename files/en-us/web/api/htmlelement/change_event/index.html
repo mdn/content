@@ -40,7 +40,7 @@ tags:
 <ul>
  <li>When the element is <code>:checked</code> (by clicking or using the keyboard) for <code>{{HTMLElement('input/radio', '&lt;input type="radio"&gt;')}}</code> and <code>{{HTMLElement('input/checkbox', '&lt;input type="checkbox"&gt;')}}</code>;</li>
  <li>When the user commits the change explicitly (e.g., by selecting a value from a {{HTMLElement("select")}}'s dropdown with a mouse click, by selecting a date from a date picker for <code>{{HTMLElement('input/date', '&lt;input type="date"&gt;')}}</code>, by selecting a file in the file picker for <code>{{HTMLElement('input/file', '&lt;input type="file"&gt;')}}</code>, etc.);</li>
- <li>When the element loses focus after its value was changed, but not commited (e.g., after editing the value of {{HTMLElement("textarea")}} or <code>{{HTMLElement('input/text', '&lt;input type="text"&gt;')}}</code>).</li>
+ <li>When the element loses focus after its value was changed, but not committed (e.g., after editing the value of {{HTMLElement("textarea")}} or <code>{{HTMLElement('input/text', '&lt;input type="text"&gt;')}}</code>).</li>
 </ul>
 
 <p>The HTML specification lists <a href="https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply">the <code>&lt;input&gt;</code> types that should fire the <code>change</code> event</a>.</p>
@@ -52,7 +52,7 @@ tags:
 <div id="select-example">
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;label&gt;Choose an ice cream flavor:
+<pre class="brush: html">&lt;label&gt;Choose an ice cream flavor:
   &lt;select class="ice-cream" name="ice-cream"&gt;
     &lt;option value=""&gt;Select One …&lt;/option&gt;
     &lt;option value="chocolate"&gt;Chocolate&lt;/option&gt;
@@ -64,7 +64,7 @@ tags:
 &lt;div class="result"&gt;&lt;/div&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   display: grid;
   grid-template-areas: "select result";
 }
@@ -81,7 +81,7 @@ select {
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">const selectElement = document.querySelector('.ice-cream');
+<pre class="brush: js">const selectElement = document.querySelector('.ice-cream');
 
 selectElement.addEventListener('change', (event) =&gt; {
   const result = document.querySelector('.result');
@@ -100,12 +100,12 @@ selectElement.addEventListener('change', (event) =&gt; {
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;input placeholder="Enter some text" name="name"/&gt;
+<pre class="brush: html">&lt;input placeholder="Enter some text" name="name"/&gt;
 &lt;p id="log"&gt;&lt;/p&gt;</pre>
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<pre class="brush: js notranslate">const input = document.querySelector('input');
+<pre class="brush: js">const input = document.querySelector('input');
 const log = document.getElementById('log');
 
 input.addEventListener('change', updateValue);

@@ -29,7 +29,7 @@ tags:
 
 <p>Since `length` counts code units instead of characters, if you want to get the number of characters you need something like this:</p>
 
-<pre class="brush: js notranslate">function getCharacterLength (str) {
+<pre class="brush: js">function getCharacterLength (str) {
   // The string iterator that is used here iterates over characters,
   //  not mere code units
   return [...str].length;
@@ -52,7 +52,7 @@ console.log('A\uD87E\uDC04Z'.charLength); // 3
 
 <h3 id="Basic_usage">Basic usage</h3>
 
-<pre class="brush: js notranslate">let x = 'Mozilla';
+<pre class="brush: js">let x = 'Mozilla';
 let empty = '';
 
 console.log(x + ' is ' + x.length + ' code units long');
@@ -63,7 +63,7 @@ console.log('The empty string has a length of ' + empty.length);
 
 <h3 id="Assigning_to_length">Assigning to length</h3>
 
-<pre class="brush: js notranslate">let myString = "bluebells";
+<pre class="brush: js">let myString = "bluebells";
 
 // Attempting to assign a value to a string's .length property has no observable effect.
 myString.length = 4;

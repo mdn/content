@@ -11,17 +11,14 @@ tags:
 - Method
 - Reference
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}</div>
+<div>{{APIRef("CSS Typed OM")}}</div>
 
-<p class="summary">The <strong><code>toString()</code></strong> method of the
-  {{domxref("CSSTransformComponent")}} interface returns a string in the form of a CSS
-  Transforms <a href="/en-US/docs/Web/CSS/transform-function/matrix()">matrix()</a>
-  function.</p>
+<p class="summary">The <strong><code>toString()</code></strong> method of the {{domxref("CSSTransformComponent")}} interface is a stringifier returning a <a href="/en-US/docs/Web/CSS/CSS_Transforms">CSS Transforms</a> function.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>transformString</var> = CSSTransformComponent.toString();</pre>
+  class="brush: js">var <var>transformString</var> = CSSTransformComponent.toString();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -29,13 +26,10 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A string in the form of a CSS Transforms <a
-    href="/en-US/docs/Web/CSS/transform-function/matrix()">matrix()</a> function.</p>
 
-<h3 id="Exceptions">Exceptions</h3>
-
-<p>If any of the serialized elements in the matrix are a non-finite value throws a
-  {{domxref("DOMException")}} <code>InvalidStateError</code></p>
+<p>A {{domxref("DOMString")}} in the form of a CSS {{cssxref("transform-function","Transforms function")}}. </p>
+  
+<p>This will use the value of <code>is2D</code> to return either a 2D or 3D transform. For example if the component represents {{domxref("CSSRotate")}} and <code>is2D</code> is false then the string returned will be in the form of the CSS transformation <code><a href="/en-US/docs/Web/CSS/transform-function/rotate3d()">rotate3D()</a></code> function. If true the string returned will be in the form of the 2-dimensional <code><a href="/en-US/docs/Web/CSS/transform-function/rotate()">rotate3D()</a></code> function.</p>
 
 <h2 id="Examples">Examples</h2>
 

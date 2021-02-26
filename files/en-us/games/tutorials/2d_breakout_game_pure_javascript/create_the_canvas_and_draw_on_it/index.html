@@ -23,9 +23,9 @@ tags:
 
 <h2 id="The_games_HTML">The game's HTML</h2>
 
-<p>The HTML document structure is quite simple, as the game will be rendered entirely on the {{htmlelement("canvas")}} element. Using your favourite text editor, create a new HTML document, save it as <code>index.html</code>, in a sensible location, and add the following code to it:</p>
+<p>The HTML document structure is quite simple, as the game will be rendered entirely on the {{htmlelement("canvas")}} element. Using your favorite text editor, create a new HTML document, save it as <code>index.html</code>, in a sensible location, and add the following code to it:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
     &lt;meta charset="utf-8" /&gt;
@@ -53,14 +53,14 @@ tags:
 
 <p>To actually be able to render graphics on the {{htmlelement("canvas")}} element, first we have to grab a reference to it in JavaScript. Add the following below your opening <code>&lt;script&gt;</code> tag.</p>
 
-<pre class="brush: js notranslate">var canvas = document.getElementById("myCanvas");
+<pre class="brush: js">var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");</pre>
 
 <p>Here we're storing a reference to the {{htmlelement("canvas")}} element to the <code>canvas</code> variable. Then we're creating the <code>ctx</code> variable to store the 2D rendering context — the actual tool we can use to paint on the Canvas.</p>
 
 <p>Let's see an example piece of code that prints a red square on the canvas. Add this below your previous lines of JavaScript, then load your <code>index.html</code> in a browser to try it out.</p>
 
-<pre class="brush: js notranslate">ctx.beginPath();
+<pre class="brush: js">ctx.beginPath();
 ctx.rect(20, 40, 50, 50);
 ctx.fillStyle = "#FF0000";
 ctx.fill();
@@ -70,7 +70,7 @@ ctx.closePath();</pre>
 
 <p>We're not limited to rectangles — here's a piece of code for printing out a green circle. Try adding this to the bottom of your JavaScript, saving and refreshing:</p>
 
-<pre class="brush: js notranslate">ctx.beginPath();
+<pre class="brush: js">ctx.beginPath();
 ctx.arc(240, 160, 20, 0, Math.PI*2, false);
 ctx.fillStyle = "green";
 ctx.fill();
@@ -89,7 +89,7 @@ ctx.closePath();</pre>
 
 <p>Instead of using {{domxref("CanvasRenderingContext2D.fill()","fill()")}} and filling the shapes with colors, we can use {{domxref("CanvasRenderingContext2D.stroke()","stroke()")}} to only color the outer stroke. Try adding this code to your JavaScript too:</p>
 
-<pre class="brush: js notranslate">ctx.beginPath();
+<pre class="brush: js">ctx.beginPath();
 ctx.rect(160, 10, 100, 40);
 ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
 ctx.stroke();
