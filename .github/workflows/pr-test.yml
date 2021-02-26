@@ -173,6 +173,8 @@ jobs:
           PR_NUMBER=$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
           echo $PR_NUMBER
           echo ${{ github.event.issue.number }}
+          echo $BUILD_OUT_ROOT
+          ls $BUILD_OUT_ROOT
           poetry run deployer --dry-run upload --prefix="pr$PR_NUMBER" $BUILD_OUT_ROOT
 
       - name: Comment on PR
