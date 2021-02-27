@@ -70,31 +70,21 @@ jobs:
           # TODO: This should be implicit when `CI=true`
           BUILD_NO_PROGRESSBAR: true
 
-          BUILD_OUT_ROOT: ${{ github.workspace }}/node_modules/@mdn/yari/client/build
+          # BUILD_OUT_ROOT: ${{ github.workspace }}/node_modules/@mdn/yari/client/build
 
         run: |
-          # Note, it might be interesting to explore building *some*
-          # pages in a PR build if the diff doesn't have any index.html
-          # files changed.
-          # Instead of building the git diff, you build some known typical
-          # folders that you know don't take too long and do cover a lot
-          # of interesting macros etc.
-          # This way, when an edit to the source code comes in, perhaps the
-          # functional tests have a gap in them but actually building
-          # real content exposes it.
-
           # The reason this script isn't in `package.json` is because
           # you don't need that script as a writer. It's only used in CI
           # and it can't use the default CONTENT_ROOT that gets set in
           # package.json.
           yarn build ${{ env.GIT_DIFF_CONTENT }}
 
-          echo "Disk usage size of $BUILD_OUT_ROOT:"
-          du -sh $BUILD_OUT_ROOT
-
+          echo "Disk usage size of build/"
+          du -sh build
 
       # XXX Perhaps we make this depend on the 'deploy-preview' label
       - uses: actions/upload-artifact@v2
+        if: ${{ env.GIT_DIFF_CONTENT }}
         with:
           name: build
           path: build/
