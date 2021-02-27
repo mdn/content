@@ -95,11 +95,6 @@ jobs:
         run: |
           # mkdir -p ./pr
           echo ${{ github.event.number }} > ./build/NR
-      # - uses: actions/upload-artifact@v2
-      #   if: ${{ env.GIT_DIFF_CONTENT }}
-      #   with:
-      #     name: pr
-      #     path: pr/
       - uses: actions/upload-artifact@v2
         if: ${{ env.GIT_DIFF_CONTENT }}
         with:

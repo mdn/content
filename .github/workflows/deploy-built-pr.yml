@@ -18,6 +18,8 @@ jobs:
       github.event.workflow_run.conclusion == 'success' }}
 
     steps:
+      - uses: actions/checkout@v2
+
       - name: 'Download artifact'
         uses: actions/github-script@v3
         with:
@@ -38,13 +40,14 @@ jobs:
             });
             var fs = require('fs');
             fs.writeFileSync('${{github.workspace}}/build.zip', Buffer.from(download.data));
-      - name: Unzip what was downloaded
-        run: |
-          echo "Ls before unzip"
-          ls -l
-          unzip build.zip -d built_files
-          echo "Ls after unzip"
-          ls -l
+
+      # - name: Unzip what was downloaded
+      #   run: |
+      #     echo "Ls before unzip"
+      #     ls -l
+      #     unzip build.zip -d built_files
+      #     echo "Ls after unzip"
+      #     ls -l
 
       # - name: Deploy preview build
       #   run: |
@@ -59,37 +62,65 @@ jobs:
       # Proceed to deploy the built files (if there were any)
 
       # - uses: actions/checkout@v2
-      #   if: ${{ env.GIT_DIFF_CONTENT }}
-      #   with:
-      #     repository: mdn/yari
-      #     path: yari
+        # if: ${{ env.GIT_DIFF_CONTENT }}
+        # with:
+        #   repository: mdn/content
+          # path: yari
 
-      # - name: Install Python
-      #   if: ${{ env.GIT_DIFF_CONTENT }}
-      #   uses: actions/setup-python@v2
-      #   with:
-      #     python-version: "3.8"
+      - name: Combine static with built files
+        run: |
+          ls -l node_modules/@mdn/yari/client/build
+          unzip build.zip -d node_modules/@mdn/yari/client/build
+          ls -l node_modules/@mdn/yari/client/build
+          tree node_modules/@mdn/yari/client/build
 
-      # - name: Install Python poetry
-      #   if: ${{ env.GIT_DIFF_CONTENT }}
-      #   uses: snok/install-poetry@v1.1.1
-      #   with:
-      #     virtualenvs-create: true
-      #     virtualenvs-in-project: true
 
-      # - name: Load cached venv
-      #   if: ${{ env.GIT_DIFF_CONTENT }}
-      #   id: cached-poetry-dependencies
-      #   uses: actions/cache@v2
+      # - name: Setup Node.js environment
+      #   uses: actions/setup-node@v2.1.5
       #   with:
-      #     path: yari/deployer/.venv
-      #     key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+      #     node-version: "12"
 
-      # - name: Install deployer
-      #   if: ${{ env.GIT_DIFF_CONTENT }} && steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
-      #   run: |
-      #     cd yari/deployer
-      #     poetry install
+      # - name: Cache node_modules
+      #   uses: actions/cache@v2.1.4
+      #   id: cached-node_modules
+      #   with:
+      #     path: |
+      #       node_modules
+      #     key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
+
+      # - name: Install all yarn packages
+      #   if: steps.cached-node_modules.outputs.cache-hit != 'true'
+      #   env:
+      #     PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 1
+      #   run: yarn --frozen-lockfile
+
+      - name: Install Python
+        # if: ${{ env.GIT_DIFF_CONTENT }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
+
+      - name: Install Python poetry
+        # if: ${{ env.GIT_DIFF_CONTENT }}
+        uses: snok/install-poetry@v1.1.1
+        with:
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+
+      - name: Load cached venv
+        # if: ${{ env.GIT_DIFF_CONTENT }}
+        id: cached-poetry-dependencies
+        uses: actions/cache@v2
+        with:
+          path: yari/deployer/.venv
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+
+      - name: Install deployer
+        # if: ${{ env.GIT_DIFF_CONTENT }} && steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        run: |
+          cd yari/deployer
+          poetry install
 
       # - name: Deploy built content
       #   if: ${{ env.GIT_DIFF_CONTENT }}
