@@ -147,28 +147,35 @@ jobs:
           cd yari/deployer
           poetry install
 
-      # - name: Deploy built content
+
+
+      - name: Deploy built content
       #   if: ${{ env.GIT_DIFF_CONTENT }}
-      #   env:
-      #     CONTENT_ROOT: ${{ github.workspace }}/files
+        env:
+          # CONTENT_ROOT: node_modules/@mdn/yari/client/build
 
-      #     DEPLOYER_BUCKET_NAME: mdn-content-dev
+          DEPLOYER_BUCKET_NAME: mdn-content-dev
 
-      #     AWS_ACCESS_KEY_ID: ${{ secrets.DEPLOYER_STAGE_AND_DEV_AWS_ACCESS_KEY_ID }}
-      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.DEPLOYER_STAGE_AND_DEV_AWS_SECRET_ACCESS_KEY }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.DEPLOYER_STAGE_AND_DEV_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.DEPLOYER_STAGE_AND_DEV_AWS_SECRET_ACCESS_KEY }}
 
       #     BUILD_OUT_ROOT: ${{ github.workspace }}/node_modules/@mdn/yari/client/build
 
       #     PR_NUMBER: ${{ github.event.pull_request.number }}
-      #   working-directory: yari/deployer
-      #   run: |
-      #     # PR_NUMBER=$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
-      #     # echo $PR_NUMBER
-      #     # echo ${{ github.event.issue.number }}
-      #     # echo ${{ github.event.pull_request.number }}
-      #     # echo $BUILD_OUT_ROOT
-      #     # ls $BUILD_OUT_ROOT/en-us/docs/mdn
-      #     poetry run deployer upload --prefix="pr$PR_NUMBER" $BUILD_OUT_ROOT
+        # working-directory: yari/deployer
+        run: |
+
+          # PR_NUMBER=$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
+          # echo $PR_NUMBER
+          # echo ${{ github.event.issue.number }}
+          # echo ${{ github.event.pull_request.number }}
+          # echo $BUILD_OUT_ROOT
+          # ls $BUILD_OUT_ROOT/en-us/docs/mdn
+          cd yari/deployer
+          PR_NUMBER=`cat node_modules/@mdn/yari/client/build/NR`
+          echo "PRNUMBER"
+          echo $PR_NUMBER
+          poetry run deployer upload --prefix="pr$PR_NUMBER" node_modules/@mdn/yari/client/build
 
       # - name: Comment on PR
       #   uses: actions/github-script@v3
