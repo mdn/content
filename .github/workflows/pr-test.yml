@@ -88,10 +88,11 @@ jobs:
           # echo ${{ github.event.pull_request.number }}
 
           # Save the PR number into the build
-          echo ${{ github.event.number }} > $BUILD_OUT_ROOT/NR
+          # echo ${{ github.event.number }} > $BUILD_OUT_ROOT/NR
+          echo ${{ github.event.number }} > build/NR
 
           # TEMPORAR
-          tree $BUILD_OUT_ROOT
+          tree build
 
       - name: Merge static assets with built documents
         if: ${{ env.GIT_DIFF_CONTENT }}
