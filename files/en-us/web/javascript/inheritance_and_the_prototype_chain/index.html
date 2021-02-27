@@ -511,7 +511,7 @@ console.log(inst.bar_prop)</pre>
     </tr>
     <tbody>
     </table>
-<h4 class="example">#4: Setting the {{jsxref("Object/proto")}} property</h4>
+<h4 class="example">#4: Setting the {{jsxref("Object/proto","__proto__")}} property</h4>
 <pre id="example-4" class="brush: js">
 // Technique 1
 function A(){}
@@ -541,12 +541,13 @@ var inst = {
 };
 console.log(inst.foo_prop);
 console.log(inst.bar_prop)</pre>
-			<table class="standard-table" summary="Pros and cons of setting the Object/proto property">
-  <caption>Pros and cons of setting the {{jsxref("Object/proto")}} property</caption>
+			<table class="standard-table" summary="Pros and cons of setting the __proto__ property">
+  <caption>Pros and cons of setting the {{jsxref("Object/proto","__proto__")}} property</caption>
 	<tbody>
     <tr>
       <th scope="row">Pro(s)</th>
-      <td>Supported in all in-use-today browsers which are all non-Microsoft browsers plus IE11 and up. Setting <code>__proto__</code> to something that is not an object only fails silently. It does not throw an exception.</td>
+      <td>Supported in all in-use-today browsers which are all non-Microsoft browsers plus IE11 and up. Setting {{jsxref("Object/proto","__proto__")}}
+      to something that is not an object only fails silently. It does not throw an exception.</td>
       </tr>
       <tr>
       <th scope="row">Con(s)</th>
