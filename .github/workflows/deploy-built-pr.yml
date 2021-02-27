@@ -89,7 +89,7 @@ jobs:
       - name: Combine static with built files
         run: |
           ls -l node_modules/@mdn/yari/client/build
-          unzip build.zip -f -d node_modules/@mdn/yari/client/build
+          unzip -o build.zip -d node_modules/@mdn/yari/client/build
           ls -l node_modules/@mdn/yari/client/build
           tree node_modules/@mdn/yari/client/build
 
