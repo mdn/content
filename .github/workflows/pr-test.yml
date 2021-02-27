@@ -70,7 +70,7 @@ jobs:
           # TODO: This should be implicit when `CI=true`
           BUILD_NO_PROGRESSBAR: true
 
-          # BUILD_OUT_ROOT: ${{ github.workspace }}/node_modules/@mdn/yari/client/build
+          BUILD_OUT_ROOT: ${{ github.workspace }}/node_modules/@mdn/yari/client/build
 
         run: |
           # The reason this script isn't in `package.json` is because
@@ -80,7 +80,7 @@ jobs:
           yarn build ${{ env.GIT_DIFF_CONTENT }}
 
           echo "Disk usage size of build/"
-          du -sh build
+          du -sh $BUILD_OUT_ROOT
 
           # echo "number..."
           # echo ${{ github.event.number }}
@@ -89,17 +89,23 @@ jobs:
           # echo "PR number..."
           # echo ${{ github.event.pull_request.number }}
 
+          # Save the PR number into the build
+          echo ${{ github.event.number }} > $BUILD_OUT_ROOT/NR
+
       # XXX Perhaps we make this depend on the 'deploy-preview' label
-      - name: Save PR number
-        if: ${{ env.GIT_DIFF_CONTENT }}
-        run: |
-          # mkdir -p ./pr
-          echo ${{ github.event.number }} > ./build/NR
+      # - name: Save PR number
+      #   if: ${{ env.GIT_DIFF_CONTENT }}
+      #   env:
+      #     BUILD_OUT_ROOT: ${{ github.workspace }}/node_modules/@mdn/yari/client/build
+      #   run: |
+      #     echo ${{ github.event.number }} > $BUILD_OUT_ROOT/NR
       - uses: actions/upload-artifact@v2
         if: ${{ env.GIT_DIFF_CONTENT }}
+        env:
+          BUILD_OUT_ROOT: ${{ github.workspace }}/node_modules/@mdn/yari/client/build
         with:
           name: build
-          path: build/
+          path: $BUILD_OUT_ROOT
 
       - uses: technote-space/get-diff-action@v4.0.5
         with:

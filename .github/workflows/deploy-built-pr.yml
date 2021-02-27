@@ -60,13 +60,13 @@ jobs:
             var fs = require('fs');
             fs.writeFileSync('${{github.workspace}}/build.zip', Buffer.from(download.data));
 
-      # - name: Unzip what was downloaded
-      #   run: |
-      #     echo "Ls before unzip"
-      #     ls -l
-      #     unzip build.zip -d built_files
-      #     echo "Ls after unzip"
-      #     ls -l
+      - name: Unzip what was downloaded
+        run: |
+          echo "Ls before unzip"
+          ls -l
+          unzip build.zip -d build
+          echo "Ls after unzip"
+          ls -l
 
       # - name: Deploy preview build
       #   run: |
@@ -86,12 +86,12 @@ jobs:
         #   repository: mdn/content
           # path: yari
 
-      - name: Combine static with built files
-        run: |
-          ls -l node_modules/@mdn/yari/client/build
-          unzip -o build.zip -d node_modules/@mdn/yari/client/build
-          ls -l node_modules/@mdn/yari/client/build
-          tree node_modules/@mdn/yari/client/build
+      # - name: Combine static with built files
+      #   run: |
+      #     ls -l node_modules/@mdn/yari/client/build
+      #     unzip -o build.zip -d node_modules/@mdn/yari/client/build
+      #     ls -l node_modules/@mdn/yari/client/build
+      #     tree node_modules/@mdn/yari/client/build
 
 
       # - name: Setup Node.js environment
@@ -154,7 +154,7 @@ jobs:
       - name: Deploy built content
       #   if: ${{ env.GIT_DIFF_CONTENT }}
         env:
-          # CONTENT_ROOT: node_modules/@mdn/yari/client/build
+          CONTENT_ROOT: files
 
           DEPLOYER_BUCKET_NAME: mdn-content-dev
 
@@ -162,9 +162,11 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.DEPLOYER_STAGE_AND_DEV_AWS_SECRET_ACCESS_KEY }}
 
       #     BUILD_OUT_ROOT: ${{ github.workspace }}/node_modules/@mdn/yari/client/build
+          BUILD_OUT_ROOT: ${{ github.workspace }}/build
 
       #     PR_NUMBER: ${{ github.event.pull_request.number }}
         # working-directory: yari/deployer
+
         run: |
 
           # PR_NUMBER=$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
@@ -173,11 +175,14 @@ jobs:
           # echo ${{ github.event.pull_request.number }}
           # echo $BUILD_OUT_ROOT
           # ls $BUILD_OUT_ROOT/en-us/docs/mdn
-          PR_NUMBER=`cat node_modules/@mdn/yari/client/build/NR`
+          # PR_NUMBER=`cat node_modules/@mdn/yari/client/build/NR`
+          PR_NUMBER=`cat build/NR`
           echo "PRNUMBER"
           echo $PR_NUMBER
           cd yari/deployer
-          poetry run deployer upload --prefix="pr$PR_NUMBER" ../../node_modules/@mdn/yari/client/build
+          # poetry run deployer upload --prefix="pr$PR_NUMBER" ../../node_modules/@mdn/yari/client/build
+          # poetry run deployer upload --prefix="pr$PR_NUMBER" --content-root=../../files ../../build
+          poetry run deployer upload --prefix="pr$PR_NUMBER" --content-root=$CONTENT_ROOT $BUILD_OUT_ROOT
 
       # - name: Comment on PR
       #   uses: actions/github-script@v3
