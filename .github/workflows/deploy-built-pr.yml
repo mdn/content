@@ -137,6 +137,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
            repository: mdn/yari
+           path: yari
 
       - name: Install deployer
         # if: ${{ env.GIT_DIFF_CONTENT }} && steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
