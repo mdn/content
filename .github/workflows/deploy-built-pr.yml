@@ -177,7 +177,7 @@ jobs:
           echo "PRNUMBER"
           echo $PR_NUMBER
           cd yari/deployer
-          poetry run deployer upload --prefix="pr$PR_NUMBER" node_modules/@mdn/yari/client/build
+          poetry run deployer upload --prefix="pr$PR_NUMBER" ../../node_modules/@mdn/yari/client/build
 
       # - name: Comment on PR
       #   uses: actions/github-script@v3
