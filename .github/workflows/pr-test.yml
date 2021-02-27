@@ -49,7 +49,7 @@ jobs:
           # this to "*:error" which means the slightest flaw in the build
           # will break the build.
           # See https://github.com/mdn/yari/issues/715
-          BUILD_FLAW_LEVELS: "*:ignore"
+          # BUILD_FLAW_LEVELS: "*:ignore"
 
           # Setting this to an empty string effectively means that the
           # <iframe> src will end up being the relative URL of the current
@@ -91,6 +91,13 @@ jobs:
 
           echo "Disk usage size of $BUILD_OUT_ROOT:"
           du -sh $BUILD_OUT_ROOT
+
+
+      # XXX Perhaps we make this depend on the 'deploy-preview' label
+      - uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: build/
 
       - uses: technote-space/get-diff-action@v4.0.5
         with:
