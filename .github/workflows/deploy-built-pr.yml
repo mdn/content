@@ -134,10 +134,15 @@ jobs:
           path: yari/deployer/.venv
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
 
+      - uses: actions/checkout@v2
+        with:
+           repository: mdn/yari
+
       - name: Install deployer
         # if: ${{ env.GIT_DIFF_CONTENT }} && steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: |
+          ls -l
           cd yari/deployer
           poetry install
 
