@@ -161,32 +161,23 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.DEPLOYER_STAGE_AND_DEV_AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.DEPLOYER_STAGE_AND_DEV_AWS_SECRET_ACCESS_KEY }}
 
-      #     BUILD_OUT_ROOT: ${{ github.workspace }}/node_modules/@mdn/yari/client/build
           BUILD_OUT_ROOT: ${{ github.workspace }}/build
 
-      #     PR_NUMBER: ${{ github.event.pull_request.number }}
-        # working-directory: yari/deployer
+          DEPLOYER_LOG_EACH_SUCCESSFUL_UPLOAD: true
 
         run: |
-
-          # PR_NUMBER=$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
-          # echo $PR_NUMBER
-          # echo ${{ github.event.issue.number }}
-          # echo ${{ github.event.pull_request.number }}
-          # echo $BUILD_OUT_ROOT
-          # ls $BUILD_OUT_ROOT/en-us/docs/mdn
-          # PR_NUMBER=`cat node_modules/@mdn/yari/client/build/NR`
           PR_NUMBER=`cat build/NR`
           echo "PRNUMBER"
           echo $PR_NUMBER
           cd yari/deployer
 
-          echo "LS CONTENT_ROOT"
-          ls $CONTENT_ROOT
-          echo "LS BUILD_OUT_ROOT"
-          ls $BUILD_OUT_ROOT
+          # echo "LS CONTENT_ROOT"
+          # ls $CONTENT_ROOT
+          echo "tree BUILD_OUT_ROOT"
+          tree $BUILD_OUT_ROOT
           # poetry run deployer upload --prefix="pr$PR_NUMBER" ../../node_modules/@mdn/yari/client/build
           # poetry run deployer upload --prefix="pr$PR_NUMBER" --content-root=../../files ../../build
+
           poetry run deployer upload --prefix="pr$PR_NUMBER" --content-root=$CONTENT_ROOT $BUILD_OUT_ROOT
 
       # - name: Comment on PR
