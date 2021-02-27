@@ -113,6 +113,11 @@ jobs:
       #     PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 1
       #   run: yarn --frozen-lockfile
 
+      - uses: actions/checkout@v2
+        with:
+           repository: mdn/yari
+           path: yari
+
       - name: Install Python
         # if: ${{ env.GIT_DIFF_CONTENT }}
         uses: actions/setup-python@v2
@@ -134,10 +139,7 @@ jobs:
           path: yari/deployer/.venv
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
 
-      - uses: actions/checkout@v2
-        with:
-           repository: mdn/yari
-           path: yari
+
 
       - name: Install deployer
         # if: ${{ env.GIT_DIFF_CONTENT }} && steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
