@@ -101,11 +101,9 @@ jobs:
       #     echo ${{ github.event.number }} > $BUILD_OUT_ROOT/NR
       - uses: actions/upload-artifact@v2
         if: ${{ env.GIT_DIFF_CONTENT }}
-        env:
-          BUILD_OUT_ROOT: ${{ github.workspace }}/node_modules/@mdn/yari/client/build
         with:
           name: build
-          path: $BUILD_OUT_ROOT
+          path: node_modules/@mdn/yari/client/build/
 
       - uses: technote-space/get-diff-action@v4.0.5
         with:
