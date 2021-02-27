@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - name: 'Download artifact'
-        uses: actions/github-script@v3.1.0
+        uses: actions/github-script@v3
         with:
           script: |
             var artifacts = await github.actions.listWorkflowRunArtifacts({
@@ -28,7 +28,7 @@ jobs:
                run_id: ${{github.event.workflow_run.id }},
             });
             var matchArtifact = artifacts.data.artifacts.filter((artifact) => {
-              return artifact.name == "pr"
+              return artifact.name == "build"
             })[0];
             var download = await github.actions.downloadArtifact({
                owner: context.repo.owner,
@@ -38,11 +38,12 @@ jobs:
             });
             var fs = require('fs');
             fs.writeFileSync('${{github.workspace}}/pr.zip', Buffer.from(download.data));
-      - run: unzip pr.zip
+      - run: unzip build.zip
 
       - name: Deploy preview build
         run: |
           ls -l
+          ls -l build
 
 
       # Proceed to deploy the built files (if there were any)

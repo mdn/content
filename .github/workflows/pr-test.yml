@@ -82,7 +82,24 @@ jobs:
           echo "Disk usage size of build/"
           du -sh build
 
+          echo "number..."
+          echo ${{ github.event.number }}
+          echo "isue number..."
+          echo ${{ github.event.issue.number }}
+          echo "PR number..."
+          echo ${{ github.event.pull_request.number }}
+
       # XXX Perhaps we make this depend on the 'deploy-preview' label
+      - name: Save PR number
+        if: ${{ env.GIT_DIFF_CONTENT }}
+        run: |
+          mkdir -p ./pr
+          echo ${{ github.event.number }} > ./build/NR
+      # - uses: actions/upload-artifact@v2
+      #   if: ${{ env.GIT_DIFF_CONTENT }}
+      #   with:
+      #     name: pr
+      #     path: pr/
       - uses: actions/upload-artifact@v2
         if: ${{ env.GIT_DIFF_CONTENT }}
         with:
