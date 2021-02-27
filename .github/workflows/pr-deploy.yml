@@ -1,0 +1,152 @@
+# XXX
+
+name: PR Deploy
+
+on:
+  pull_request_target:
+    types: [labeled]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    if: contains(github.event.pull_request.labels.*.name, 'deploy-preview')
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.4
+        with:
+          node-version: "12"
+
+      - name: Cache node_modules
+        uses: actions/cache@v2.1.4
+        id: cached-node_modules
+        with:
+          path: |
+            node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install all yarn packages
+        if: steps.cached-node_modules.outputs.cache-hit != 'true'
+        run: |
+          yarn --frozen-lockfile
+
+      - uses: technote-space/get-diff-action@v4.0.5
+        id: git_diff_content
+        with:
+          PATTERNS: files/**/*.html
+          SET_ENV_NAME: GIT_DIFF_CONTENT
+
+      - name: Build changed content
+        if: ${{ env.GIT_DIFF_CONTENT }}
+        env:
+          CONTENT_ROOT: ${{ github.workspace }}/files
+
+          # Some day, when our number of flaws have reached 0 we'll change
+          # this to "*:error" which means the slightest flaw in the build
+          # will break the build.
+          # See https://github.com/mdn/yari/issues/715
+          # BUILD_FLAW_LEVELS: "*:ignore"
+
+          # Setting this to an empty string effectively means that the
+          # <iframe> src will end up being the relative URL of the current
+          # document as a base.
+          # I.e. like this, if the current document is '/en-US/docs/Foo':
+          #  <iframe src="/en-US/docs/Foo/_samples_/index.html">
+          # ...for example.
+          # Yes, it's potentially "insecure" because the iframe will execute
+          # whatever code is inserted into the code example. But since the
+          # whole (possible) domain for PR builds will never be somewhere
+          # where there are interesting cookies, it's a safe choice.
+          BUILD_LIVE_SAMPLES_BASE_URL: ""
+
+          # In these builds we never care for or need the ability to sign in.
+          # This environment variable will disable that functionality entirely.
+          REACT_APP_DISABLE_AUTH: true
+
+          # TODO: This should be implicit when `CI=true`
+          BUILD_NO_PROGRESSBAR: true
+
+          BUILD_OUT_ROOT: ${{ github.workspace }}/node_modules/@mdn/yari/client/build
+
+        run: |
+          yarn build ${{ env.GIT_DIFF_CONTENT }}
+
+          echo "Disk usage size of $BUILD_OUT_ROOT:"
+          du -sh $BUILD_OUT_ROOT
+
+      # Proceed to deploy the built files (if there were any)
+
+      - uses: actions/checkout@v2
+        if: ${{ env.GIT_DIFF_CONTENT }}
+        with:
+          repository: mdn/yari
+          path: yari
+
+      - name: Install Python
+        if: ${{ env.GIT_DIFF_CONTENT }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
+
+      - name: Install Python poetry
+        if: ${{ env.GIT_DIFF_CONTENT }}
+        uses: snok/install-poetry@v1.1.1
+        with:
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+
+      - name: Load cached venv
+        if: ${{ env.GIT_DIFF_CONTENT }}
+        id: cached-poetry-dependencies
+        uses: actions/cache@v2
+        with:
+          path: yari/deployer/.venv
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+
+      - name: Install deployer
+        if: ${{ env.GIT_DIFF_CONTENT }} && steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        run: |
+          cd yari/deployer
+          poetry install
+
+      - name: Deploy built content
+        if: ${{ env.GIT_DIFF_CONTENT }}
+        env:
+          CONTENT_ROOT: ${{ github.workspace }}/files
+
+          DEPLOYER_BUCKET_NAME: mdn-content-dev
+
+          AWS_ACCESS_KEY_ID: ${{ secrets.DEPLOYER_STAGE_AND_DEV_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.DEPLOYER_STAGE_AND_DEV_AWS_SECRET_ACCESS_KEY }}
+
+          BUILD_OUT_ROOT: ${{ github.workspace }}/node_modules/@mdn/yari/client/build
+
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        working-directory: yari/deployer
+        run: |
+          # PR_NUMBER=$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
+          # echo $PR_NUMBER
+          # echo ${{ github.event.issue.number }}
+          # echo ${{ github.event.pull_request.number }}
+          # echo $BUILD_OUT_ROOT
+          # ls $BUILD_OUT_ROOT/en-us/docs/mdn
+          poetry run deployer upload --prefix="pr$PR_NUMBER" $BUILD_OUT_ROOT
+
+      - name: Comment on PR
+        uses: actions/github-script@v3
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'Please find a preview at https://pr${PR_NUMBER}.content.dev.mdn.mozit.cloud/...'
+            });
