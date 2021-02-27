@@ -62,11 +62,7 @@ jobs:
 
       - name: Unzip what was downloaded
         run: |
-          echo "Ls before unzip"
-          ls -l
           unzip build.zip -d build
-          echo "Ls after unzip"
-          ls -l
 
       # - name: Deploy preview build
       #   run: |
