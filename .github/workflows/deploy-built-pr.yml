@@ -40,13 +40,20 @@ jobs:
             fs.writeFileSync('${{github.workspace}}/build.zip', Buffer.from(download.data));
       - name: Unzip what was downloaded
         run: |
+          echo "Ls before unzip"
           ls -l
-          unzip build.zip
+          unzip build.zip -d built_files
+          echo "Ls after unzip"
+          ls -l
 
-      - name: Deploy preview build
-        run: |
-          ls -l
-          ls -l build
+      # - name: Deploy preview build
+      #   run: |
+      #     ls -l
+      #     echo "PR number:"
+      #     cat NR
+      #     echo ""
+      #     ls -l
+      #     ls -l build
 
 
       # Proceed to deploy the built files (if there were any)
