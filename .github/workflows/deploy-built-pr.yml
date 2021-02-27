@@ -171,10 +171,10 @@ jobs:
           # echo ${{ github.event.pull_request.number }}
           # echo $BUILD_OUT_ROOT
           # ls $BUILD_OUT_ROOT/en-us/docs/mdn
-          cd yari/deployer
           PR_NUMBER=`cat node_modules/@mdn/yari/client/build/NR`
           echo "PRNUMBER"
           echo $PR_NUMBER
+          cd yari/deployer
           poetry run deployer upload --prefix="pr$PR_NUMBER" node_modules/@mdn/yari/client/build
 
       # - name: Comment on PR
