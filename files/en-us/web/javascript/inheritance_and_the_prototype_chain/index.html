@@ -507,7 +507,7 @@ console.log(inst.bar_prop)</pre>
       </tr>
       <tr>
       <th scope="row">Con(s)</th>
-      <td>Should be deprecated and ill-performing. Making your Javascript run fast is completely out of the question if you dare use this in production code. Many browsers optimize the prototype and try to guess the location of the method in memory when calling an instance in advance, but setting the prototype dynamically disrupts all these optimizations. It might cause some browsers to recompile your code for deoptimization to make it work according to the specs. Not supported in IE8 and below.</td>
+      <td>Ill-performing. Should be deprecated. Many browsers optimize the prototype and try to guess the location of the method in memory when calling an instance in advance; but setting the prototype dynamically disrupts all those optimizations. It might cause some browsers to recompile your code for de-optimization, to make it work according to the specs. Not supported in IE8 and below.</td>
     </tr>
     <tbody>
     </table>
