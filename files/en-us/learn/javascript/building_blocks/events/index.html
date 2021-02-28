@@ -209,9 +209,17 @@ btn.addEventListener('click', bgChange);</pre>
 
 <pre class="brush: js">btn.removeEventListener('click', bgChange);</pre>
 
-<p>This isn't significant for simple, small programs, but for larger, more complex programs it can improve efficiency to clean up old unused event handlers. Plus, this allows you to have the same button performing different actions in different circumstances — all you have to do is add or remove event handlers as appropriate.</p>
+<p>Event handlers can also be removed by passing an {{domxref("AbortSignal")}} to {{domxref("EventTarget/addEventListener()", "addEventListener()")}} and then, later, calling {{domxref("AbortController/abort()", "abort()")}} on the controller owning the <code>AbortSignal</code>. For example, to add an event handler that we can remove with an <code>AbortSignal</code>:</p>
 
-<p>Second, you can register multiple handlers for the same listener. The following two handlers wouldn't both be applied:</p>
+<pre class="brush: js">const controller = new AbortController();
+btn.addEventListener('click', function() {
+  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  document.body.style.backgroundColor = rndCol;
+}, { signal: controller.signal }); // pass an AbortSignal to this handler</pre>
+
+<p>Then the event handler created by the code above can be removed like this:</p>
+
+<pre class="brush: js">controller.abort(); // removes any/all event handlers associated with this controller</pre>
 
 <p>For simple, small programs, cleaning up old, unused event handlers isn’t necessary — but for larger, more complex programs, it can improve efficiency. Plus, the ability to remove event handlers allows you to have the same button performing different actions in different circumstances — all you have to do is add or remove handlers.</p>
 

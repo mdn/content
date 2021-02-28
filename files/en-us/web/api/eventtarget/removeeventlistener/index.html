@@ -22,6 +22,8 @@ tags:
     and various optional options that may affect the matching process; see
     {{anch("Matching event listeners for removal")}}</span></p>
 
+<p>Note that event listeners can also be removed by passing an {{domxref("AbortSignal")}} to an {{domxref("EventTarget/addEventListener()", "addEventListener()")}} and then later calling {{domxref("AbortController/abort()", "abort()")}} on the controller owning the signal.</p>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre
