@@ -2,15 +2,15 @@
 title: EventTarget.removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
 tags:
-- API
-- DOM
-- DOM Element Methods
-- EventTarget
-- Gecko
-- Method
-- Reference
-- browser compatibility
-- removeEventListener
+  - API
+  - DOM
+  - DOM Element Methods
+  - EventTarget
+  - Gecko
+  - Method
+  - Reference
+  - browser compatibility
+  - removeEventListener
 ---
 <div>{{APIRef("DOM Events")}}</div>
 
@@ -211,7 +211,7 @@ mouseOverTarget.addEventListener('mouseover', function () {
   beginning of your scripts, allowing the use of <code>addEventListener()</code> and
   <code>removeEventListener()</code> in implementations that do not natively support it.
   However, this method will not work on Internet Explorer 7 or earlier, since extending
-  the {{domxref("Element.prototype")}} was not supported until Internet Explorer 8.</p>
+  the <code>Element.prototype</code> was not supported until Internet Explorer 8.</p>
 
 <pre class="brush: js">if (!Element.prototype.addEventListener) {
   var oListeners = {};
