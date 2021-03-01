@@ -80,26 +80,13 @@ jobs:
           echo "Disk usage size of build/"
           du -sh $BUILD_OUT_ROOT
 
-          # echo "number..."
-          # echo ${{ github.event.number }}
-          # echo "isue number..."
-          # echo ${{ github.event.issue.number }}  # DONT USE THIS
-          # echo "PR number..."
-          # echo ${{ github.event.pull_request.number }}
-
           # Save the PR number into the build
-          # echo ${{ github.event.number }} > $BUILD_OUT_ROOT/NR
           echo ${{ github.event.number }} > build/NR
-
-          # TEMPORAR
-          tree build
 
       - name: Merge static assets with built documents
         if: ${{ env.GIT_DIFF_CONTENT }}
         run: |
           rsync -a node_modules/@mdn/yari/client/build/ build/
-          # TEMP
-          tree build
 
       - uses: actions/upload-artifact@v2
         if: ${{ env.GIT_DIFF_CONTENT }}
