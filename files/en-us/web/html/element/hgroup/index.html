@@ -2,6 +2,7 @@
 title: <hgroup>
 slug: Web/HTML/Element/hgroup
 tags:
+  - Deprecated
   - Element
   - Experimental
   - HTML
@@ -10,6 +11,8 @@ tags:
   - Reference
   - Web
 ---
+<div>{{HTMLRef}}{{deprecated_header}}</div>
+
 <div>{{HTMLRef}}</div>
 
 <p>The <strong>HTML <code>&lt;hgroup&gt;</code> element</strong> represents a multi-level heading for a section of a document. It groups a set of <code><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;–&lt;h6&gt;</a></code> elements.</p>
@@ -113,21 +116,25 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
+  <thead>
   <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
   </tr>
- </thead>
- <tbody>
+  </thead>
+  <tbody>
   <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-hgroup-element', '&lt;hgroup&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
+    <td>{{SpecName('HTML WHATWG', 'semantics.html#the-hgroup-element', '&lt;hgroup&gt;')}}</td>
+    <td>{{Spec2('HTML WHATWG')}}</td>
+    <td></td>
   </tr>
- </tbody>
+  </tbody>
 </table>
+
+<h2 id="Accessibility concerns">Accessibility concerns</h2>
+
+<p>The presence of <code>hgroup</code> may remove information reported to assistive technology about the subheading portion of the heading group.
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
