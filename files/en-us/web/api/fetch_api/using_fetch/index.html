@@ -325,7 +325,7 @@ console.log(myHeaders.get('X-Custom-Header')); // [ ]
 
 <p>Some of these operations are only useful in {{domxref("Service_Worker_API","ServiceWorkers")}}, but they provide a much nicer API for manipulating headers.</p>
 
-<p>All of the Headers methods throw a <code>TypeError</code> if a header name is used that is not a valid HTTP Header name. The mutation operations will throw a <code>TypeError</code> if there is an immutable guard (see below). Otherwise, they fail silently. For example:</p>
+<p>All of the Headers methods throw a <code>TypeError</code> if a header name is used that is not a valid HTTP Header name. The mutation operations will throw a <code>TypeError</code> if there is an immutable guard (<a href="#guard">see below</a>). Otherwise, they fail silently. For example:</p>
 
 <pre class="brush: js">const myResponse = Response.error();
 try {
@@ -353,7 +353,7 @@ try {
 
 <h3 id="Guard">Guard</h3>
 
-<p>Since headers can be sent in requests and received in responses, and have various limitations about what information can and should be mutable, headers objects have a guard property. This is not exposed to the Web, but it affects which mutation operations are allowed on the headers object.</p>
+<p>Since headers can be sent in requests and received in responses, and have various limitations about what information can and should be mutable, headers' objects have a <em>guard</em> property. This is not exposed to the Web, but it affects which mutation operations are allowed on the headers object.</p>
 
 <p>Possible guard values are:</p>
 
@@ -361,13 +361,13 @@ try {
  <li><code>none</code>: default.</li>
  <li><code>request</code>: guard for a headers object obtained from a request ({{domxref("Request.headers")}}).</li>
  <li><code>request-no-cors</code>: guard for a headers object obtained from a request created with {{domxref("Request.mode")}} <code>no-cors</code>.</li>
- <li><code>response</code>: guard for a Headers obtained from a response ({{domxref("Response.headers")}}).</li>
- <li><code>immutable</code>: Mostly used for ServiceWorkers; renders a headers object read-only.</li>
+ <li><code>response</code>: guard for a headers object obtained from a response ({{domxref("Response.headers")}}).</li>
+ <li><code>immutable</code>: guard that renders a headers object read-only; mostly used for ServiceWorkers.</li>
 </ul>
 
 <div class="notecard note">
   <h4>Note</h4>
-  <p>You may not append or set a <code>request</code> guarded Headers’ <code>Content-Length</code> header. Similarly, inserting <code>Set-Cookie</code> into a response header is not allowed: ServiceWorkers are not allowed to set cookies via synthesized responses.</p>
+  <p>You may not append or set the <code>Content-Length</code> header on a guarded headers object for a <code>response</code>. Similarly, inserting <code>Set-Cookie</code> into a response header is not allowed: ServiceWorkers are not allowed to set cookies via synthesized responses.</p>
 </div>
 
 <h2 id="Response_objects">Response objects</h2>
@@ -379,7 +379,7 @@ try {
 <ul>
  <li>{{domxref("Response.status")}} — An integer (default value 200) containing the response status code.</li>
  <li>{{domxref("Response.statusText")}} — A string (default value ""), which corresponds to the HTTP status code message. Note that HTTP/2 <a href="https://fetch.spec.whatwg.org/#concept-response-status-message">does not support</a> status messages.</li>
- <li>{{domxref("Response.ok")}} — seen in use above, this is a shorthand for checking that status is in the range 200-299 inclusive. This returns a {{domxref("Boolean")}}.</li>
+ <li>{{domxref("Response.ok")}} — seen in use above, this is a shorthand for checking that status is in the range 200-299 inclusive. This returns a {{jsxref("Boolean")}}.</li>
 </ul>
 
 <p>They can also be created programmatically via JavaScript, but this is only really useful in {{domxref("Service_Worker_API", "ServiceWorkers")}}, when you are providing a custom response to a received request using a {{domxref("FetchEvent.respondWith","respondWith()")}} method:</p>
@@ -408,7 +408,7 @@ addEventListener('fetch', function(event) {
 <p>Both requests and responses may contain body data. A body is an instance of any of the following types:</p>
 
 <ul>
- <li>{{domxref("ArrayBuffer")}}</li>
+ <li>{{jsxref("ArrayBuffer")}}</li>
  <li>{{domxref("ArrayBufferView")}} (Uint8Array and friends)</li>
  <li>{{domxref("Blob")}}/File</li>
  <li>string</li>
