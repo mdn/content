@@ -20,7 +20,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, heading content, palpable content.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, heading content, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -32,7 +32,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>.</td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -57,7 +57,7 @@ tags:
 
 <div class="note">
 <p>The <code>&lt;hgroup&gt;</code> element has been removed from the HTML5 (W3C) specification, but it still is in the WHATWG version of HTML. It is partially implemented in most browsers, though, so is unlikely to go away.<br>
- However, given that a key purpose of the <code>&lt;hgroup&gt;</code> element is to affect how headings are displayed by <a href="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#The_HTML5_outline_algorithm">the outline algorithm defined in the HTML specification</a>—but <strong>the HTML outline algorithm is not implemented in any browsers</strong>—then the <code>&lt;hgroup&gt;</code> semantics are in practice only theoretical.<br>
+ However, given that a key purpose of the <code>&lt;hgroup&gt;</code> element is to affect how headings are displayed by <a href="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#the_html5_outline_algorithm">the outline algorithm defined in the HTML specification</a>—but <strong>the HTML outline algorithm is not implemented in any browsers</strong>—then the <code>&lt;hgroup&gt;</code> semantics are in practice only theoretical.<br>
  So the HTML5 (W3C) specification provides advice on how to mark up <a href="https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#common-idioms-without-dedicated-elements">Subheadings, subtitles, alternative titles and taglines</a> without using <code>&lt;hgroup&gt;</code>.</p>
 </div>
 
@@ -65,7 +65,7 @@ tags:
 
 <p>In other words, the <code>&lt;hgroup&gt;</code> element prevents any of its secondary <code><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;–&lt;h6&gt;</a></code> children from creating separate sections of their own in the outline—as those <code><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;–&lt;h6&gt;</a></code> elements otherwise normally would if they were not children of any <code>&lt;hgroup&gt;</code>.</p>
 
-<p>So in the abstract outline produced by the <a href="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#The_HTML5_outline_algorithm">HTML outline algorithm defined in the HTML specification</a>, the <code>&lt;hgroup&gt;</code> as a whole forms a single logical heading, with the entire set of <code><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;–&lt;h6&gt;</a></code> children of the <code>&lt;hgroup&gt;</code> going into the outline as one <em>multi-level</em> unit, to comprise that single logical heading in the abstract outline.</p>
+<p>So in the abstract outline produced by the <a href="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#the_html5_outline_algorithm">HTML outline algorithm defined in the HTML specification</a>, the <code>&lt;hgroup&gt;</code> as a whole forms a single logical heading, with the entire set of <code><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;–&lt;h6&gt;</a></code> children of the <code>&lt;hgroup&gt;</code> going into the outline as one <em>multi-level</em> unit, to comprise that single logical heading in the abstract outline.</p>
 
 <p>To produce any (non-abstract) <em>rendered</em> view of such an outline, some choice must be made in the design of the rendering tool about how to render <code>&lt;hgroup&gt;</code> headings in such a way as to convey their multi-level nature. There are a variety of ways an <code>&lt;hgroup&gt;</code> might be shown in a rendered outline; for example:</p>
 
@@ -92,13 +92,13 @@ tags:
 
 <p>A rendered outline for that document might look like the following:</p>
 
-<p><img alt="" src="outline-colon.png" style="height: 99px; width: 450px;"></p>
+<p><img alt="" src="outline-colon.png"></p>
 
 <p>That is, the rendered outline might show the primary title, <em>HTML</em>, followed by a colon and space, followed by the secondary title, <em>Living Standard — Last Updated 12 August 2016</em>.</p>
 
 <p>Or, the rendered outline for that document might instead look like the following:</p>
 
-<p><img alt="Rendered outline that includes an &lt;hgroup&gt; element, with parens around the secondary heading" src="outline-paren.png" style="height: 106px; width: 450px;"></p>
+<p><img alt="Rendered outline that includes an &lt;hgroup&gt; element, with parens around the secondary heading" src="outline-paren.png"></p>
 
 <p>That is, the rendered outline might show the primary title, <em>HTML</em>, followed by the secondary title shown in parentheses:<em> (Living Standard — Last Updated 12 August 2016)</em>.</p>
 
