@@ -51,7 +51,7 @@ Referrer-Policy: unsafe-url
  <dt><code>no-referrer</code></dt>
  <dd>The {{HTTPHeader("Referer")}} header will be omitted entirely. No referrer information is sent along with requests.</dd>
  <dt><code>no-referrer-when-downgrade</code></dt>
- <dd>The {{glossary("origin")}}, path, and querystring of the URL are sent as a referrer when the protocol security level stays the same (HTTP→HTTP, HTTPS→HTTPS) or improves (HTTP→HTTPS), but isn't sent to less secure destinations (HTTPS→HTTP).
+ <dd>The {{glossary("origin")}}, path, and querystring of the URL are sent as a referrer when the protocol security level stays the same (HTTP→HTTP, HTTPS→HTTPS) or improves (HTTP→HTTPS), but isn't sent to less secure destinations (HTTPS→HTTP, HTTPS→file).
  </dd>
  <dt><code>origin</code></dt>
  <dd>Only send the {{glossary("origin")}} of the document as the referrer.<br>
