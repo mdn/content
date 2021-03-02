@@ -545,7 +545,7 @@ request is created, but why wait to fix any possible issues later?
     ```
 
 1. Use your image within the document. For example, add the following `<img>` element
-somehwere inside `files/en-us/web/css/index.html`:
+somewhere inside `files/en-us/web/css/index.html`:
 
     ```html
     <img src="my-cool-image.png" alt="My cool image">

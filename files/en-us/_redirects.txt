@@ -5758,7 +5758,6 @@
 /en-US/docs/MDN/Contribute/Tools/KumaScript	/en-US/docs/MDN/Tools/KumaScript
 /en-US/docs/MDN/Contribute/Tools/KumaScript/Troubleshooting	/en-US/docs/MDN/Tools/KumaScript/Troubleshooting
 /en-US/docs/MDN/Contribute/Tools/Sample_server	/en-US/docs/MDN/Tools/Sample_server
-/en-US/docs/MDN/Contribute/Tools/Search	/en-US/docs/MDN/Tools/Search
 /en-US/docs/MDN/Feedback	/en-US/docs/MDN/Contribute/Feedback
 /en-US/docs/MDN/Getting_started	/en-US/docs/MDN/Contribute/Getting_started
 /en-US/docs/MDN/Guidelines/Content	/en-US/docs/MDN/Guidelines/Does_this_belong_on_MDN
@@ -5781,7 +5780,6 @@
 /en-US/docs/MDN/Structures/Content_blocks	/en-US/docs/MDN/Guidelines/CSS_style_guide
 /en-US/docs/MDN/Tools/Document_parameters	/en-US/docs/MDN/Tools/Unsupported_GET_API
 /en-US/docs/MDN/User_guide	/en-US/docs/MDN/Tools
-/en-US/docs/MDN/User_guide/Advanced_search	/en-US/docs/MDN/Tools/Search
 /en-US/docs/MDN/User_guide/Troubleshooting_KumaScript_errors	/en-US/docs/MDN/Tools/KumaScript/Troubleshooting
 /en-US/docs/MDN_at_ten	/en-US/docs/MDN/At_ten
 /en-US/docs/MDN_at_ten/Contributing_to_MDN	/en-US/docs/MDN/Contribute
@@ -9228,10 +9226,7 @@
 /en-US/docs/Web/API/XMLDocument.load	/en-US/docs/Web/API/XMLDocument/load
 /en-US/docs/Web/API/XMLHttpRequest/FormData	/en-US/docs/Web/API/FormData
 /en-US/docs/Web/API/XMLHttpRequest/FormData/Using_FormData_Objects	/en-US/docs/Web/API/FormData/Using_FormData_Objects
-/en-US/docs/Web/API/XMLHttpRequest/XMLHttpRequest.init()	/en-US/docs/Web/API/XMLHttpRequest/init
 /en-US/docs/Web/API/XMLHttpRequest/XMLHttpRequest.response	/en-US/docs/Web/API/XMLHttpRequest/response
-/en-US/docs/Web/API/XMLHttpRequest/init()	/en-US/docs/Web/API/XMLHttpRequest/init
-/en-US/docs/Web/API/XMLHttpRequest/openRequest()	/en-US/docs/Web/API/XMLHttpRequest/openRequest
 /en-US/docs/Web/API/XMLHttpRequest/responseresponseText	/en-US/docs/Web/API/XMLHttpRequest/responseText
 /en-US/docs/Web/API/XPathEvaluator/XPathEvaluator.createExpression()	/en-US/docs/Web/API/XPathEvaluator/createExpression
 /en-US/docs/Web/API/XPathResult/XPathResult.booleanValue	/en-US/docs/Web/API/XPathResult/booleanValue

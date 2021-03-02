@@ -148,7 +148,7 @@ BarcodeDetector.getSupportedFormats()
 <pre class="brush: js">  barcodeDetector.detect(imageEl)
     .then(barcodes =&gt; {
       barcodes.forEach(barcode =&gt; console.log(barcode.rawData));
-    }
+    })
     .catch(err =&gt; {
       console.log(err);
     })

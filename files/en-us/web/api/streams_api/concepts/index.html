@@ -23,7 +23,7 @@ tags:
 
 <p>The data is read sequentially in small pieces called <strong>chunks</strong>. A chunk can be a single byte, or it can be something larger such as a <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a> of a certain size. A single stream can contain chunks of different sizes and types.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15819/Readable%20streams.png" style="height: 452px; width: 1000px;"></p>
+<p><img alt="" src="readable_streams.png"></p>
 
 <p>The chunks placed in a stream are said to be <strong>enqueued</strong> — this means they are waiting in a queue ready to be read. An <strong>internal queue</strong> keeps track of the chunks that have not yet been read (see the Internal queues and queuing strategies section below).</p>
 
@@ -49,7 +49,7 @@ tags:
 
 <p>You might do this for example in a <a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker</a> if you want to fetch a response from the server and stream it to the browser, but also stream it to the ServiceWorker cache. Since a response body cannot be consumed more than once, and a stream can't be read by more than one reader at once, you’d need two copies to do this.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15820/tee.png" style="height: 527px; width: 1000px;"></p>
+<p><img alt="" src="tee.png"></p>
 
 <h2 id="Writable_streams">Writable streams</h2>
 
@@ -63,7 +63,7 @@ tags:
 
 <p>There is also a construct you’ll use called a controller — each writer has an associated controller that allows you to control the stream (for example, to abort it if wished).</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15821/writable%20streams.png" style="height: 452px; width: 1000px;"></p>
+<p><img alt="" src="writable_streams.png"></p>
 
 <p>You can make use of writable streams using the {{domxref("WritableStream.WritableStream","WritableStream()")}} constructor. These currently have very limited availability in browsers.</p>
 
@@ -78,7 +78,7 @@ tags:
 
 <p>The start of the pipe chain is called the <strong>original source</strong>, and the end is called the <strong>ultimate sink</strong>.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15818/PipeChain.png" style="height: 382px; width: 1000px;"></p>
+<p><img alt="" src="pipechain.png"></p>
 
 <div class="note">
 <p><strong>Note</strong>: This functionality isn't fully thought through yet, or available in many browsers. At some point the spec writers hope to add something like a <code>TransformStream</code> class to make creating transform streams easier.</p>
