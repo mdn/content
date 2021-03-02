@@ -109,11 +109,16 @@ Object.is(NaN, Number.NaN)        // true
   Object.defineProperty(Object, "is", {
     value: function (x, y) {
       // SameValue algorithm
-      if (x === y) { // Steps 1-5, 7-10
-        // Steps 6.b-6.e: +0 != -0
+      if (x === y) {
+        // return true if x and y are not 0, OR
+        // if x and y are both 0 of the same sign.
+        // This checks for cases 1 and 2.
         return x !== 0 || 1 / x === 1 / y;
       } else {
-        // Step 6.a: NaN == NaN
+        // return true if both x AND y evaluates to NaN.
+        // The only possibility for a variable to not be strictly equal to itself
+        // is when that variable evaluates to NaN (Ex: Number.NaN, 0/0, NaN)
+        // This checks for case 3
         return x !== x &amp;&amp; y !== y;
       }
     }
