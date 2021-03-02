@@ -51,19 +51,19 @@ Referrer-Policy: unsafe-url
  <dt><code>no-referrer</code></dt>
  <dd>The {{HTTPHeader("Referer")}} header will be omitted entirely. No referrer information is sent along with requests.</dd>
  <dt><code>no-referrer-when-downgrade</code></dt>
- <dd>The {{glossary("origin")}}, path, and querystring of the URL are sent as a referrer when the protocol security level stays the same (HTTP→HTTP, HTTPS→HTTPS) or improves (HTTP→HTTPS), but isn't sent to less secure destinations (HTTPS→HTTP, HTTPS→file).
+ <dd>Send the {{glossary("origin")}}, path, and querystring in {{HTTPHeader("Referer")}} when the protocol security level stays the same or improves (HTTP→HTTP, HTTP→HTTPS, HTTPS→HTTPS. Don't send the {{HTTPHeader("Referer")}} header for requests to less secure destinations (HTTPS→HTTP, HTTPS→file).
  </dd>
  <dt><code>origin</code></dt>
- <dd>Only send the {{glossary("origin")}} of the document as the referrer.<br>
+ <dd>Send the {{glossary("origin")}} (only) in the {{HTTPHeader("Referer")}} header.<br>
  For example, a document at <code>https://example.com/page.html</code> will send the referrer <code>https://example.com/</code>.</dd>
  <dt><code>origin-when-cross-origin</code></dt>
- <dd>Send the {{glossary("origin")}}, path, and query string when performing a {{glossary("Same-origin_policy", "same-origin")}} request, but only send the origin of the document for other cases.</dd>
+ <dd>Send the {{glossary("origin")}}, path, and query string when performing a {{glossary("Same-origin_policy", "same-origin")}} request to the same protocol level. Send origin (only) for cross origin requests and requests to less secure destinations.</dd>
  <dt><code>same-origin</code></dt>
- <dd>A referrer will be sent for <a href="/en-US/docs/Web/Security/Same-origin_policy">same-site origins</a>, but cross-origin requests will send no referrer information.</dd>
+ <dd>Send the {{glossary("origin")}}, path, and query string for {{glossary("Same-origin_policy", "same-origin")}} requests. Don't send the {{HTTPHeader("Referer")}} header for cross-origin requests.</dd>
  <dt><code>strict-origin</code></dt>
- <dd>Only send the origin of the document as the referrer when the protocol security level stays the same (HTTPS→HTTPS), but don't send it to a less secure destination (HTTPS→HTTP).</dd>
- <dt><code>strict-origin-when-cross-origin</code> (default)</dt>
- <dd>Send the origin, path, and querystring when performing a same-origin request, only send the origin when the protocol security level stays the same while performing a cross-origin request (HTTPS→HTTPS), and send no header to any less-secure destinations (HTTPS→HTTP).
+ <dd>Send the origin (only) when the protocol security level stays the same (HTTPS→HTTPS). Don't send the {{HTTPHeader("Referer")}} header to less secure destinations (HTTPS→HTTP).</dd>
+ <dt><a id="strict-origin-when-cross-origin"></a><code>strict-origin-when-cross-origin</code> (default)</dt>
+ <dd>Send the origin, path, and querystring when performing a same-origin request. For cross-origin requests send the origin (only) when the protocol security level stays same (HTTPS→HTTPS). Don't send the {{HTTPHeader("Referer")}} header to less secure destinations (HTTPS→HTTP).
 
   <div class="notecard note">
     <h4>Note</h4>
