@@ -474,7 +474,13 @@ to delete (e.g., `Learn/Accessibility`), optionally followed by the locale
 of the existing document (defaults to `en-US`). If the existing document
 that you'd like to delete has child documents (i.e. it represents a
 document tree), you must also specify the `-r, --recursive` option, or
-the command will fail. For example, let's say you want to delete the
+the command will fail.
+
+**Important: you need to use the `delete` command to delete MDN documents. Don't
+just delete their directories from the repo, as `delete` also handles other
+necessary changes such as updating the `_wikihistory.json` file.**
+
+For example, let's say you want to delete the
 entire `/en-US/Learn/Accessibility` tree:
 
 1. First, as we've outlined above, you'll start a fresh branch to work within:
