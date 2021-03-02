@@ -41,10 +41,10 @@
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.4.198":
-  version "0.4.198"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.198.tgz#ce97005378d6bc2ed676f7539bd45625d5f6a8eb"
-  integrity sha512-kDmhPuJ9HIlOuwR3ZnwkuDtZBZfQDd1WNuMYwDsTLcecYdB5Stu5YE2DF641l4r7Q2qGN3e1PdGpPhnPB5/dHQ==
+"@mdn/yari@0.4.204":
+  version "0.4.204"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.204.tgz#408bf97187e8e0a772cd95f619a727b119a3fdc8"
+  integrity sha512-RC5dzKWRix6iiDjpfMBsgywZN7wVe1XTnpwSF09AauCgbtDtE+pB1TYsD7g7JJ1H9CgtqhsDn0Sjo/RyjmazvA==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
