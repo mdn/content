@@ -25,7 +25,7 @@ tags:
 
 <ul>
  <li>The Promise returned from <code>fetch()</code> <strong>won’t reject on HTTP error status</strong> even if the response is an HTTP 404 or 500. Instead, it will resolve normally (with <code>ok</code> status set to false), and it will only reject on network failure or if anything prevented the request from completing.</li>
- <li><code>fetch()</code> won’t send cross-origin cookies</strong> unless you set the <em>credentials</em> <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#parameters">init option</a>. (Since <a href="https://github.com/whatwg/fetch/pull/585" rel="nofollow noopener">April 2018</a>. The spec changed the default credentials policy to <code>same-origin</code>. Firefox changed since 61.0b13.)</li>
+ <li><code>fetch()</code> <strong>won’t send cross-origin cookies</strong> unless you set the <em>credentials</em> <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#parameters">init option</a>. (Since <a href="https://github.com/whatwg/fetch/pull/585" rel="nofollow noopener">April 2018</a>. The spec changed the default credentials policy to <code>same-origin</code>. Firefox changed since 61.0b13.)</li>
 </ul>
 
 <p>A basic fetch request is really simple to set up. Have a look at the following code:</p>
