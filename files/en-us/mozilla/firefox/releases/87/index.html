@@ -58,6 +58,7 @@ tags:
 <h3 id="HTTP">HTTP</h3>
 
 <ul>
+  <li>Some enterprise authentication services require that TLS client certificates be <a href="/en-US/docs/Web/HTTP/CORS#Preflight_requests_and_credentials">sent in CORS preflight requests</a>. Users of these services can enable this (non-specification compliant) behavior using the <code>network.cors_preflight.allow_client_cert</code> preference ({{bug(1511151)}}).</li>
   <li>The default <a href="/en-US/docs/Web/HTTP/Headers/Referrer-Policy">Referrer-Policy</a></code> has been changed to <code><a href="/en-US/docs/Web/HTTP/Headers/Referrer-Policy#strict-origin-when-cross-origin">strict-origin-when-cross-origin</a></code> (from <code>no-referrer-when-downgrade</code>), reducing the risk of leaking referrer information in cross-origin requests ({{bug(1589074)}}).</li>
   <li><code><a href="/en-US/docs/Web/HTTP/Headers/Content-Length">Content-Length</a></code> has been added to the list of <a href="/en-US/docs/Glossary/CORS-safelisted_response_header">CORS-safelisted response headers</a> ({{bug(1460299)}}).</li>
 </ul>
