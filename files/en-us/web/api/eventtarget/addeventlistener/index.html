@@ -255,7 +255,7 @@ el.addEventListener("click", modifyText, false);
 
 <p>This example demonstrates how to add an <code>addEventListener()</code> that can be aborted with an {{domxref("AbortSignal")}}.</p>
 
-<h4 id="HTML">HTML</h4>
+<h4 id="HTML_5">HTML</h4>
 
 <pre class="brush: html">&lt;table id="outside"&gt;
   &lt;tr&gt;&lt;td id="t1"&gt;one&lt;/td&gt;&lt;/tr&gt;
@@ -263,7 +263,7 @@ el.addEventListener("click", modifyText, false);
 &lt;/table&gt;
 </pre>
 
-<h4 id="JavaScript">JavaScript</h4>
+<h4 id="JavaScript_5">JavaScript</h4>
 
 <pre class="brush: js">// Add an abortable event listener to table
 const controller = new AbortController();
@@ -285,7 +285,7 @@ function modifyText() {
 
 <p>In the above example just above, we modify the code in the previous example such that after the second row’s content changes to "three", we call <code>abort()</code> from the {{domxref("AbortController")}} we passed to the <code>addEventListener()</code> call. That results in the value remaining as "three" forever — because we no longer have any code listening for a click event.</p>
 
-<h4 id="Result">Result</h4>
+<h4 id="Result_5">Result</h4>
 
 <p>{{EmbedLiveSample('add_a_abortable_listener')}}</p>
 
