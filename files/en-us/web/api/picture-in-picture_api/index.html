@@ -63,11 +63,11 @@ tags:
  <dd>The <code>pictureInPictureEnabled</code> property tells you whether or not it is possible to engage picture-in-picture mode. This is <code>false</code> if picture-in-picture mode is not available for any reason (e.g. the <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy/picture-in-picture"><code>"picture-in-picture"</code> feature</a> has been disallowed, or picture-in-picture mode is not supported).</dd>
 </dl>
 
-<h3 id="Properties_on_the_DocumentOrShadowRoot_interface">Properties on the DocumentOrShadowRoot interface</h3>
+<h3 id="Properties_on_the_Document_or_ShadowRoot_interfaces">Properties on the Document or ShadowRoot interfaces</h3>
 
 <dl>
- <dt>{{DOMxRef("DocumentOrShadowRoot.pictureInPictureElement")}}</dt>
- <dd>The <code>pictureInPictureElement</code> property tells you which {{DOMxRef("Element")}} is currently being displayed in the floating window. If this is <code>null</code>, the document has no node currently in picture-in-picture mode.</dd>
+ <dt>{{DOMxRef("Document.pictureInPictureElement")}} / {{DOMxRef("ShadowRoot.pictureInPictureElement")}}</dt>
+ <dd>The <code>pictureInPictureElement</code> property tells you which {{DOMxRef("Element")}} is currently being displayed in the floating window (or in the shadow DOM). If this is <code>null</code>, the document (or shadow DOM) has no node currently in picture-in-picture mode.</dd>
 </dl>
 
 <h2 id="Events">Events</h2>
@@ -164,11 +164,11 @@ tags:
 
 <p>{{Compat("api.Document.exitPictureInPicture")}}</p>
 
-<h3 id="DocumentOrShadowRoot.pictureInPictureElement"><code>DocumentOrShadowRoot.pictureInPictureElement</code></h3>
+<h3 id="Document.pictureInPictureElement"><code>Document.pictureInPictureElement</code></h3>
 
 <div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
-<p>{{Compat("api.DocumentOrShadowRoot.pictureInPictureElement")}}</p>
+<p>{{Compat("api.Document.pictureInPictureElement")}}</p>
 
 <h3 id="PictureInPictureWindow"><code>PictureInPictureWindow</code></h3>
 
@@ -184,6 +184,6 @@ tags:
  <li>{{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}</li>
  <li>{{DOMxRef("Document.pictureInPictureEnabled")}}</li>
  <li>{{DOMxRef("Document.exitPictureInPicture()")}}</li>
- <li>{{DOMxRef("DocumentOrShadowRoot.pictureInPictureElement")}}</li>
+ <li>{{DOMxRef("Document.pictureInPictureElement")}}</li>
  <li>{{CSSxRef(":picture-in-picture")}}</li>
 </ul>

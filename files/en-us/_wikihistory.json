@@ -44381,13 +44381,6 @@
       "mattwojo"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/pictureInPictureElement": {
-    "modified": "2020-10-25T11:04:35.581Z",
-    "contributors": [
-      "chrisdavidmills",
-      "germain"
-    ]
-  },
   "Web/API/DocumentOrShadowRoot/pointerLockElement": {
     "modified": "2020-10-15T21:25:15.470Z",
     "contributors": [
@@ -165818,6 +165811,13 @@
       "Reachmeatshivam",
       "ziyunfei",
       "ernestd"
+    ]
+  },
+  "Web/API/Document/pictureInPictureElement": {
+    "modified": "2020-10-25T11:04:35.581Z",
+    "contributors": [
+      "chrisdavidmills",
+      "germain"
     ]
   }
 }
