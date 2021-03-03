@@ -167,7 +167,7 @@ a:focus, input:focus, button:focus, select:focus {
     document.activeElement.onclick(e);
   }
 };</pre>
-  Here we add a listener to the <code>document</code> object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a> property; if it is the keycode that matches Return/Enter, we run the function stored in the button's <code>onclick</code> handler using <code>document.activeElement.onclick()</code>. <code><a href="/en-US/docs/Web/API/DocumentOrShadowRoot/activeElement">activeElement</a></code> gives us the element that is currently focused on the page.</li>
+  Here we add a listener to the <code>document</code> object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a> property; if it is the keycode that matches Return/Enter, we run the function stored in the button's <code>onclick</code> handler using <code>document.activeElement.onclick()</code>. <code><a href="/en-US/docs/Web/API/Document/activeElement">activeElement</a></code> gives us the element that is currently focused on the page.</li>
 </ol>
 
 <div class="note">

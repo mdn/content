@@ -28,7 +28,7 @@ tags:
 
 <ol>
  <li>It has stored cookies or accessed other site storage (e.g. <a href="/en-US/docs/Web/API/Web_Storage_API">localStorage</a>, <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>, or the <a href="/en-US/docs/Web/API/CacheStorage">Cache API</a>) within the last 72 hours. Since cookies are per-host, we will clear both the <code>http</code> and <code>https</code> origin variants of a cookie host.</li>
- <li>The origin is <a href="/en-US/docs/Mozilla/Firefox/Privacy/Storage_access_policy#Tracking_protection_explained">classified as a tracker</a> in our Tracking Protection list.</li>
+ <li>The origin is <a href="/en-US/docs/Mozilla/Firefox/Privacy/Storage_access_policy#tracking_protection_explained">classified as a tracker</a> in our Tracking Protection list.</li>
  <li>No origin with the same base domain (eTLD+1) has a user-interaction permission.
   <ul>
    <li>This permission is granted to an origin for 45 days once a user interacts with a top-level document from that origin. "Interacting" includes scrolling.</li>
@@ -61,7 +61,7 @@ tags:
 <p><strong>Note</strong>: Even though we're clearing all of this data, we currently only flag origins for clearing when they use cookies or other site storage.</p>
 </div>
 
-<p>Storage clearing ignores origin attributes. This means that storage will be cleared across <a href="https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers">containers</a> and isolated storage (i.e. from <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#First-party_isolation">First-Party Isolation</a>).</p>
+<p>Storage clearing ignores origin attributes. This means that storage will be cleared across <a href="https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers">containers</a> and isolated storage (i.e. from <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation">First-Party Isolation</a>).</p>
 
 <h3 id="How_frequently_is_data_cleared">How frequently is data cleared?</h3>
 
@@ -80,7 +80,7 @@ tags:
 
 <p>Different log levels can be set via the <code>privacy.purge_trackers.logging.level</code> pref.</p>
 
-<p>For debugging purposes, it's easiest to trigger storage clearing by triggering the service directly via the <a href="/en-US/docs/Tools/Browser_Console#Browser_Console_command_line">Browser Console command line</a>. Note that this is different from the normal <a href="/en-US/docs/Tools/Web_Console">Web Console</a> you might use to debug a website, and requires the <code>devtools.chrome.enabled</code> pref to be set to <code>true</code> to use it interactively. Once you've enabled the Browser Console you can trigger storage clearing by running the following command:</p>
+<p>For debugging purposes, it's easiest to trigger storage clearing by triggering the service directly via the <a href="/en-US/docs/Tools/Browser_Console#browser_console_command_line">Browser Console command line</a>. Note that this is different from the normal <a href="/en-US/docs/Tools/Web_Console">Web Console</a> you might use to debug a website, and requires the <code>devtools.chrome.enabled</code> pref to be set to <code>true</code> to use it interactively. Once you've enabled the Browser Console you can trigger storage clearing by running the following command:</p>
 
 <pre class="brush: js">await Components.classes["@mozilla.org/purge-tracker-service;1"].getService(Components.interfaces.nsIPurgeTrackerService).purgeTrackingCookieJars()</pre>
 
@@ -91,7 +91,7 @@ tags:
 <p>WebKit first shipped redirect tracking protection in <a href="https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/">ITP 2.0</a> (they refer to the same attack as bounce tracking). As of July 2020, there are several significant differences between WebKit’s implementation and Firefox’s implementation:</p>
 
 <ul>
- <li>The list of origins to be cleared in Firefox is based on our <a href="/en-US/docs/Mozilla/Firefox/Privacy/Storage_access_policy#Tracking_protection_explained">tracking protection list</a>; WebKit relies on ITP's classification.</li>
+ <li>The list of origins to be cleared in Firefox is based on our <a href="/en-US/docs/Mozilla/Firefox/Privacy/Storage_access_policy#tracking_protection_explained">tracking protection list</a>; WebKit relies on ITP's classification.</li>
  <li>Firefox's definition of "interaction" includes user scrolling when visiting the origin as a first party; WebKit’s does not.</li>
  <li>Firefox will not clear data for an origin if it has received interaction as a first party in the last 45 days of calendar time; WebKit’s interaction window is 30 days of browser use (e.g. days in which the user has had at least one interaction with Safari).</li>
 </ul>
