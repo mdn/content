@@ -1,0 +1,65 @@
+---
+title: SerialPort.readable
+slug: Web/API/SerialPort/readable
+tags:
+  - API
+  - Property
+  - Reference
+  - readable
+  - SerialPort
+---
+<div>{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}</div>
+
+<p class="summary">The <strong><code>readable</code></strong> read-only property of the {{domxref("SerialPort")}} interface returns a {{domxref("ReadableStream")}} for receiving data from the device connected to the port. Chunks read from this stream are instances of {{jsxref("Uint8Array")}}. This property is non-null as long as the port is open and has not encountered a fatal error.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox notranslate">var <var>readableStream</var> = <var>SerialPort</var>.readable;</pre>
+
+<h3>Value</h3>
+<p>A {{domxref("ReadableStream")}}.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following example shows how to read data from a port. The outer loop handles non-fatal errors, creating a new reader until a fatal error is encountered and <code>readable</code> becomes <code>null</code>.</p>
+
+<pre class="brush: js notranslate">while (port.readable) {
+  const reader = port.readable.getReader();
+  try {
+    while (true) {
+      const { value, done } = await reader.read();
+      if (done) {
+        // |reader| has been canceled.
+        break;
+      }
+      // Do something with |value|...
+    }
+  } catch (error) {
+    // Handle |error|...
+  } finally {
+    reader.releaseLock();
+  }
+}</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Serial API','#dom-serialport-readable','SerialPort.readable')}}</td>
+   <td>{{Spec2('Web Serial API')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.SerialPort.readable")}}</p>
