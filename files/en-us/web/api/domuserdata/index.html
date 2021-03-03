@@ -11,9 +11,9 @@ tags:
 ---
 <p>{{ ApiRef("DOM") }}{{deprecated_header}}</p>
 
-<p><code>DOMUserData</code> refers to application data. In JavaScript, it maps directly to <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object">Object</a></code>. It is returned or used as an argument by <code><a class="internal" href="/en-US/docs/DOM/Node.setUserData">Node.setUserData</a>()</code>, <code><a class="internal" href="/en-US/docs/DOM/Node.getUserData">Node.getUserData</a>()</code>, used as the third argument to <code>handle()</code> on <a class="internal" href="/en-US/docs/DOM/UserDataHandler"><code>UserDataHandler</code></a>, and is used or returned by various <a class="internal" href="/en-US/docs/DOM/DOMConfiguration"><code>DOMConfiguration</code></a> methods.</p>
+<p><code>DOMUserData</code> refers to application data. In JavaScript, it maps directly to <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>. It is returned or used as an argument by <code><a class="internal" href="/en-US/docs/Web/API/Node/setUserData">Node.setUserData</a>()</code>, <code><a class="internal" href="/en-US/docs/Web/API/Node/getUserData">Node.getUserData</a>()</code>, used as the third argument to <code>handle()</code> on <a class="internal" href="/en-US/docs/Web/API/UserDataHandler"><code>UserDataHandler</code></a>, and is used or returned by various <a class="internal" href="/en-US/docs/DOM/DOMConfiguration"><code>DOMConfiguration</code></a> methods.</p>
 
-<p>Note that although it can be an object, in Mozilla, it may be returned as a string or other type, if it was set as such a type (e.g., <code><a href="/en-US/docs/DOM/Node.setUserData">Node.setUserData</a>()</code> and <code><a href="/en-US/docs/DOM/Node.getUserData">Node.getUserData</a>()</code>).</p>
+<p>Note that although it can be an object, in Mozilla, it may be returned as a string or other type, if it was set as such a type (e.g., <code><a href="/en-US/docs/Web/API/Node/setUserData">Node.setUserData</a>()</code> and <code><a href="/en-US/docs/Web/API/Node/getUserData">Node.getUserData</a>()</code>).</p>
 
 <p><code>DOMUserData</code> is not persisted nor serialized and will not be present after the application has restarted or after a crash. If you are interested in persisting data you might rather need to use {{ interface("nsISessionStore") }}.</p>
 
@@ -39,7 +39,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>Other obsolete APIs for userData: <a href="/en-US/docs/DOM/UserDataHandler"><code>UserDataHandler</code></a>, <a href="/en-US/docs/DOM/Node.getUserData"><code>node.getUserData</code></a>, <a href="/en-US/docs/DOM/Node.setUserData"><code>node.setUserData</code></a></li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Using_data_attributes">Using data attributes</a> is the modern alternative (see {{htmlattrxref("data-*")}} attributes, {{domxref("HTMLElement.dataset")}})</li>
+ <li>Other obsolete APIs for userData: <a href="/en-US/docs/Web/API/UserDataHandler"><code>UserDataHandler</code></a>, <a href="/en-US/docs/Web/API/Node/getUserData"><code>node.getUserData</code></a>, <a href="/en-US/docs/Web/API/Node/setUserData"><code>node.setUserData</code></a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Howto/Use_data_attributes">Using data attributes</a> is the modern alternative (see {{htmlattrxref("data-*")}} attributes, {{domxref("HTMLOrForeignElement.dataset")}})</li>
  <li>{{ interface("nsISessionStore") }}</li>
 </ul>

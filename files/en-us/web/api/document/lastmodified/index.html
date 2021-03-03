@@ -2,12 +2,12 @@
 title: Document.lastModified
 slug: Web/API/Document/lastModified
 tags:
-- API
-- Document
-- HTML DOM
-- NeedsSpecTable
-- Property
-- Reference
+  - API
+  - Document
+  - HTML DOM
+  - NeedsSpecTable
+  - Property
+  - Reference
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -52,7 +52,7 @@ tags:
 <p>Note that as a string, <code>lastModified</code> cannot <em>easily</em> be used for
   comparing the modification dates of documents. Here is a possible example of how to show
   an alert message when the page changes (see also: <a
-    href="/en-US/docs/DOM/document.cookie">JavaScript cookies API</a>):</p>
+    href="/en-US/docs/Web/API/Document/cookie">JavaScript cookies API</a>):</p>
 
 <pre class="brush: js">if (Date.parse(document.lastModified) &gt; parseFloat(document.cookie.replace(/(?:(?:^|.*;)\s*last_modif\s*\=\s*([^;]*).*$)|^.*$/, "$1") || "0")) {
   document.cookie = "last_modif=" + Date.now() + "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=" + location.pathname;
@@ -80,7 +80,7 @@ if (isNaN(nLastVisit) || nLastModif &gt; nLastVisit) {
 
 <p>If you want to know <strong>whether <em>an external page</em> has changed</strong>,
   please read <a
-    href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Get_last_modified_date">this
+    href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#get_last_modified_date">this
     paragraph about the <code>XMLHttpRequest()</code> API</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
