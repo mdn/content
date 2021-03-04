@@ -992,6 +992,46 @@ tags:
 
 <h3 id="DOM">DOM</h3>
 
+<h4 id="clipboarditem">ClipboardItem</h4>
+
+<p>The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} is now supported and {{domxref('Clipboard.write()')}} accepts a sequence of {{domxref('ClipboardItem','clipboard items')}} instead of previously implemented {{domxref('DataTransfer','dataTransfer object')}}. It is available behind the pref <code>dom.events.asyncClipboard.clipboardItem</code> which was previously <code>dom.events.asyncClipboard.dataTransfer</code>.  See {{bug('1619947')}} for more details.</p>
+
+<table class="standard-table" style="max-width: 42rem;">
+ <thead>
+  <tr>
+   <th scope="col" style="vertical-align: bottom;">Release channel</th>
+   <th scope="col" style="vertical-align: bottom;">Version added</th>
+   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Nightly</th>
+   <td>87</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Developer Edition</th>
+   <td>87</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Beta</th>
+   <td>87</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Release</th>
+   <td>87</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Preference name</th>
+   <th colspan="2"><code><strong>dom.events.asyncClipboard.clipboardItem</strong></code></th>
+  </tr>
+ </tbody>
+</table>
+
 <h4 id="HTML_Sanitizer_API">HTML Sanitizer API</h4>
 
 <p>The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document’s DOM. Default elements within each configuration property (those to be sanitized) are still under consideration. Due to this the config parameter has not been implemented (see {{domxref('Sanitizer.sanitizer()', 'the constructor')}}) for more information. See {{bug('1673309')}} for more details.</p>
