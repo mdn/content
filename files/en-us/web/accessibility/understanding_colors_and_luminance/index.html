@@ -67,7 +67,7 @@ tags:
 <p>CMYK is another form of color model, known as a subtractive model. Here, the cyan, magenta, yellow, black inks <em>remove</em> certain wavelengths of light, reflecting back only the narrow range each is associated with. In this article we will be focusing on displayed web content, and so we discuss mainly the RGB color model.</p>
 
 <p>See this overview for <a href="https://www.olympus-lifescience.com/en/microscope-resource/primer/lightandcolor/humanvisionintro/
-">a deeper dive into how the eye and vision system functions</a>.
+">a deeper dive into how the eye and vision system functions</a>.</p>
 
 <h2 id="Perception_of_Color_and_Contrast">Perception of Color and Contrast</h2>
 
@@ -94,7 +94,7 @@ tags:
 
 <h3 id="Readability_Contrast">Readability Contrast</h3>
 
-<p>For web content, readability is one very important goal. Readability is not the same as legibility. Readability is the point where a particular user can read at their best speed and best comprehension. Legibility refers to the "just noticeable difference" (<abbr>JND</abbr>) where a figure such as a letter just becomes discernible.</p> 
+<p>For web content, readability is one very important goal. Readability is not the same as legibility. Readability is the point where a particular user can read at their best speed and best comprehension. Legibility refers to the "just noticeable difference" (<abbr>JND</abbr>) where a figure such as a letter just becomes discernible.</p>
 
 <p>For normal vision, the contrast sensitivity (<abbr>CS</abbr>) JND legibility level is about 1%, while someone with a mild impairment might have a CS of 3%. 10% would be represent profound impairment in the area of low vision. These levels are for large, bold fonts on a special chart used for testing contrast sensitivity.</p>
 
@@ -126,7 +126,7 @@ tags:
 
 <h2 id="CSS_and_the_sRGB_colorspace">CSS and the sRGB Colorspace </h2>
 
-<p>The W3.org defines the sRGB colorspace as the <a href="https://www.w3.org/TR/css-color-3/#SRGB">default for web content</a>. The MDN page on <strong><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></strong> says "<em>The  <strong><a href="/en-US/docs/Web/CSS">CSS</a></strong> <strong><a href="/en-US/docs/Web/CSS/CSS_Types"> color data type</a></strong> represents a color in the </em><strong><em><a href="https://en.wikipedia.org/wiki/SRGB">sRGB colorspace</a>.</em>"</strong>
+<p>The W3.org defines the sRGB colorspace as the <a href="https://www.w3.org/TR/css-color-3/#SRGB">default for web content</a>. The MDN page on <strong><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></strong> says "<em>The  <strong><a href="/en-US/docs/Web/CSS">CSS</a></strong> <strong><a href="/en-US/docs/Web/CSS/CSS_Types"> color data type</a></strong> represents a color in the </em><strong><em><a href="https://en.wikipedia.org/wiki/SRGB">sRGB colorspace</a>.</em>"</strong></p>
 
 <h3 id="CSS_Color_Level_3_notations">CSS Color Level 3 notations:</h3>
 
@@ -163,7 +163,7 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <p>We can also set the sRGB values directly by an 8bit integer number, which means a whole number from 0 to 255. This is the number of values available in an 8bit byte, which is how numbers are often stored in a computer.</p>
 
-<p>Shown after that, we can use a hex value. Hex value means "hexadecimal," where the 0-255 integer is represented by two digits that each range from 0-15. As there are no Arabic numerals above 9, we use the letters a-f to represent 10-15. We add the '#' symbol to indicate the value is hex. Thus, #ff = 255.
+<p>Shown after that, we can use a hex value. Hex value means "hexadecimal," where the 0-255 integer is represented by two digits that each range from 0-15. As there are no Arabic numerals above 9, we use the letters a-f to represent 10-15. We add the '#' symbol to indicate the value is hex. Thus, #ff = 255.</p>
 
 <p>In some of the previous examples, you'll notice that some have a fourth value which is called “alpha”, the A in RGBA. The alpha channel is not a color channel, but defines transparency in terms of the opacity value of the color. A higher value means the color is more opaque therefore less transparent. In the examples above, the alpha value is set to half or 50% opaque.</p>
 
@@ -195,7 +195,7 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <p>At 611nm, the red primary in an sRGB monitor is spectrally distant from the L cone's peak sensitivity at 565nm. But the sRGB green primary is 549nm, in between the L cone peak and the M cone's peak at 540nm. This explains why the green primary makes up such a large portion of total luminance on a monitor.</p>
 
-<p>Handprint.com has <a href="https://www.handprint.com/HP/WCL/color1.html"> an excellent deep dive into the nuances of spectral response, luminance, and color perception</a></a>.</p>
+<p>Handprint.com has <a href="https://www.handprint.com/HP/WCL/color1.html">an excellent deep dive into the nuances of spectral response, luminance, and color perception</a>.</p>
 
 
 <h3 id="The_value_of_luminance_values">The value of luminance values</h3>
@@ -228,7 +228,7 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <h4 id="Light_adaptation">Light adaptation</h4>
 
-<p>This is also known as photopic or "daylight vision." Here the eye is adapted to much higher levels of light, typically a luminance greater than 8 cd/m<sup>2</sup>. The equates to a CSS value of between <code>#444</code> and <code>#555</code> for a typical desktop monitor.</p> 
+<p>This is also known as photopic or "daylight vision." Here the eye is adapted to much higher levels of light, typically a luminance greater than 8 cd/m<sup>2</sup>. The equates to a CSS value of between <code>#444</code> and <code>#555</code> for a typical desktop monitor.</p>
 
 <p>While dark adaption may take 30 minutes, light adaptation is much faster, taking only a few minutes. An example is leaving a dark theater on a Saturday afternoon, and being dazed by the bright sunlight for a minute or two. This adaptation period can even be painful for some people.</p>
 
@@ -236,7 +236,7 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <p>There is a transitional area between dark and light adaptation known as mesopic vision, where both rods and cones operate at the same time. On a monitor, we'd consider this black (about <code>#000005</code>) up to as high as <code>#555</code> for a bright desktop monitor.</p>
 
-<h4 ="Other_adaptations">Other adaptations</h4>
+<h4 id="Other_adaptations">Other adaptations</h4>
 
 <p>We also adapt to contrast levels, and chroma and hue. Our perception is relative to context. If a page is very high contrast, we adapt to that high contrast. This will cause a low contrast item to seem even lower in contrast. We will also adapt to the overall hue cast of a page, as a result other colors on that page will be affected and perceived relative to the overall page color.</p>
 
@@ -282,7 +282,7 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <h3 id="Color_Combinations">Color Combinations</h3>
 
-<p>Certain color combinations can be very problematic on a computer monitor or mobile device, and some color combinations can interfere with some impairments. The combination of red/blue is one such example.</p> 
+<p>Certain color combinations can be very problematic on a computer monitor or mobile device, and some color combinations can interfere with some impairments. The combination of red/blue is one such example.</p>
 
 <p>Some impairments cannot differentiate all colors. And some colors, such as pure blue, are so low in luminance they need to be the darkest of two colors. Blue is also very low in resolution. There are far fewer blue cones, and they are scattered in our peripheral vision and not present in our central vision. This leads to some color use guidelines:</p>
 
@@ -348,11 +348,11 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <li><strong>Some colors can affect our perception of time:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/29374198/">Color and time perception: Evidence for temporal overestimation of blue stimuli</a></li>
 
-<li><strong>Blue also has a significant effect on brightness and glare:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/31288107/">Blue and glare & brightness</a></li>
+<li><strong>Blue also has a significant effect on brightness and glare:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/31288107/">Blue and glare &amp; brightness</a></li>
 
 <li><strong>Red tinted glasses can provide increased happiness or joy:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/31244627/">Looking Through "Rose-Tinted" Glasses: The Influence of Tint on Visual Affective Processing</a></li>
 
-<li><strong>Red is well known to have significant effects on our behavior:<strong> <a href="https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/">How the Color Red Influences Our Behavior</a>, Scientific American, S. Martinez-Conde, S,Macknik</li>
+<li><strong>Red is well known to have significant effects on our behavior:</strong> <a href="https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/">How the Color Red Influences Our Behavior</a>, Scientific American, S. Martinez-Conde, S,Macknik</li>
 <li><strong>Red Environment:</strong> <a href="https://www.ncbi.nlm.nih.gov/pubmed/20649469">Studies have shown that a red environment stimulates cognition</a>, but for those who suffer Traumatic Brain Injury cognitive function may be reduced in a red environment, while a green environment had no measurable effect according.</li>
 </ul>
 
@@ -366,7 +366,7 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <ol>
   <li>More than three flashes within any one second period.</li>
-  <li>From the minimal expected viewing distance, the total area of concurrent flashes subtends at the eye a solid angle of >0.006 steradians (approximately 300px square).</li>
+  <li>From the minimal expected viewing distance, the total area of concurrent flashes subtends at the eye a solid angle of &lt;0.006 steradians (approximately 300px square).</li>
 </ol>
 
 <p><strong>When the light–dark stripes of any pattern are larger than 300px square (approximately) and the luminance of the lightest stripe is more than 50 cd/m², the pattern should display no more than:</strong></p>
@@ -404,7 +404,7 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <p>Using the function shown below:</p>
 
-<pre class="brush: javascript" style="">function sRGBtoLin(colorChannel) {
+<pre class="brush: javascript">function sRGBtoLin(colorChannel) {
   // Send this function a decimal sRGB gamma encoded color channel
   // between 0.0 and 1.0, and it returns a linearized value.
   if ( colorChannel &lt;= 0.04045 ) {
@@ -462,7 +462,7 @@ div { color: #ff00ff80; }       /* #rrggbbaa */
 
 <ul>
  <li><a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup">The Visual Contrast Research Group</a> for WCAG 3.</li>
- <li><a href="https://github.com/w3c/silver/issues/261">Light and dark text</a> & WCAG 2.x vs WCAG 3.0 contrast (Silver thread #261) </li>
+ <li><a href="https://github.com/w3c/silver/issues/261">Light and dark text</a> &amp; WCAG 2.x vs WCAG 3.0 contrast (Silver thread #261) </li>
  <li><a href="https://github.com/w3c/wcag/issues/695">Contrast Ratio Math</a> and Related Visual Issue thread #695</li>
  <li><a href="https://github.com/w3c/wcag/issues/236">Luminance / Luma confusion</a> thread #236</li>
  <li><a href="https://github.com/w3c/wcag/issues/360">Non-sRGB color spaces</a>, outdated sRGB threshold thread #360</li>
