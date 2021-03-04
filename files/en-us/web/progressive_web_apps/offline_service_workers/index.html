@@ -164,7 +164,6 @@ const contentToCache = appShellFiles.concat(gamesImages);</pre>
 // ...
 
 self.addEventListener('install', (e) =&gt; {
-  console.log('[Service Worker] Install');
   e.waitUntil((async () =&gt; {
     const cache = await caches.open(cacheName);
     await cache.addAll(contentToCache);
