@@ -167,7 +167,7 @@ a:focus, input:focus, button:focus, select:focus {
     document.activeElement.onclick(e);
   }
 };</pre>
-  Here we add a listener to the <code>document</code> object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a> property; if it is the keycode that matches Return/Enter, we run the function stored in the button's <code>onclick</code> handler using <code>document.activeElement.onclick()</code>. <code><a href="/en-US/docs/Web/API/DocumentOrShadowRoot/activeElement">activeElement</a></code> gives us the element that is currently focused on the page.</li>
+  Here we add a listener to the <code>document</code> object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a> property; if it is the keycode that matches Return/Enter, we run the function stored in the button's <code>onclick</code> handler using <code>document.activeElement.onclick()</code>. <code><a href="/en-US/docs/Web/API/Document/activeElement">activeElement</a></code> gives us the element that is currently focused on the page.</li>
 </ol>
 
 <div class="note">
@@ -310,8 +310,8 @@ a:focus, input:focus, button:focus, select:focus {
 
 <ol>
  <li>Go to the <a href="http://wave.webaim.org/">Wave homepage</a>.</li>
- <li>Enter the URL of our <a href="https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html">bad-semantics.html</a> example into the text input at the top of the page (or the URL of another webpage you'd like to analyze) and press <em>Analyse Your Webpage</em>.</li>
- <li>Check out the description of the accessibility problems on the results page (the icons you can click to see what problems are occurring where are rather useful).</li>
+ <li>Enter the URL of our <a href="https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html">bad-semantics.html</a> example into the text input box near the top of the page. Then press enter or click/tap the arrow at the far right edge of the input box.</li>
+ <li>The site should respond with a description of the accessibility problems. Click the icons displayed to see more information about each of the issues identified by Wave's evaluation.</li>
 </ol>
 
 <div class="note">

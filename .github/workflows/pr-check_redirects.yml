@@ -35,4 +35,4 @@ jobs:
         run: yarn --frozen-lockfile
 
       - name: Check redirects file(s)
-        run: yarn content validate-redirects
+        run: yarn content validate-redirects en-us --strict

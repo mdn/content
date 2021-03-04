@@ -17,7 +17,7 @@ tags:
  <li>{{cssxref("&lt;custom-ident&gt;")}}</li>
  <li>Pre-defined keywords as an <code>&lt;ident&gt;</code></li>
  <li>{{cssxref("&lt;string&gt;")}}</li>
- <li>{{cssxref("&lt;url&gt;")}}</li>
+ <li>{{cssxref("url()","url()")}}</li>
 </ul>
 
 <p>Text data types are either <code>&lt;string&gt;</code>, a quoted series of characters, or an <code>&lt;ident&gt;</code>, a "CSS Identifier" which is an unquoted string. A <code>&lt;string&gt;</code> must be quoted with either single or double quotes. CSS Identifiers, listed in the specifications as <code>&lt;ident&gt;</code> or <code>&lt;custom-ident&gt;</code>, must be unquoted.</p>
@@ -55,14 +55,14 @@ tags:
 
 <p>When viewing CSS property value syntax in a CSS specification or the MDN property page, allowable keywords will be listed in the following form. The following values are the pre-defined keyword values allowed for {{cssxref("float")}}.</p>
 
-<pre class="brush: css">left <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> right <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> none <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> inline-start <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> inline-end</pre>
+<pre class="brush: css">left <a href="/en-US/docs/Web/CSS/Value_definition_syntax#single_bar" title="Single bar: exactly one of the entities must be present">|</a> right <a href="/en-US/docs/Web/CSS/Value_definition_syntax#single_bar" title="Single bar: exactly one of the entities must be present">|</a> none <a href="/en-US/docs/Web/CSS/Value_definition_syntax#single_bar" title="Single bar: exactly one of the entities must be present">|</a> inline-start <a href="/en-US/docs/Web/CSS/Value_definition_syntax#single_bar" title="Single bar: exactly one of the entities must be present">|</a> inline-end</pre>
 
 <p>Such values are used without quotes:</p>
 
-<pre class="brush: css"><code>.box {
+<pre class="brush: css">.box {
     float: left;
 }
-</code></pre>
+</pre>
 
 <h3 id="CSS-wide_values">CSS-wide values</h3>
 
@@ -76,18 +76,18 @@ tags:
 
 <h3 id="URLs">URLs</h3>
 
-<p>A {{cssxref("&lt;url&gt;")}} type uses functional notation, which accepts a <code>&lt;string&gt;</code> that is a URL. This may be an absolute URL or a relative URL. For example, if you wanted to include a background image, you might use either of the following.</p>
+<p>A {{cssxref("url()","url()")}} type uses functional notation, which accepts a <code>&lt;string&gt;</code> that is a URL. This may be an absolute URL or a relative URL. For example, if you wanted to include a background image, you might use either of the following.</p>
 
-<pre class="brush: css"><code>.box {
+<pre class="brush: css">.box {
   background-image: url("images/my-background.png");
-}</code>
+}
 
-<code>.box {
+.box {
   background-image: url("https://www.exammple.com/images/my-background.png");
-}</code>
+}
 </pre>
 
-<p>The parameter for <code>url()</code> can be either quoted or unquoted. If unquoted, it is parsed as a <code>&lt;url-token&gt;</code>, which has extra requirements including the escaping of certain characters. See {{cssxref("&lt;url&gt;")}}  for more information.</p>
+<p>The parameter for <code>url()</code> can be either quoted or unquoted. If unquoted, it is parsed as a <code>&lt;url-token&gt;</code>, which has extra requirements including the escaping of certain characters. See {{cssxref("url()","url()")}}  for more information.</p>
 
 <h2 id="Numeric_data_types">Numeric data types</h2>
 
@@ -414,12 +414,12 @@ tags:
 <h3 id="Functional_notation">Functional notation</h3>
 
 <ul>
- <li>{{cssxref("calc()")}}</li>
- <li>{{cssxref("min", "min()")}}</li>
- <li>{{cssxref("max", "max()")}}</li>
- <li>{{cssxref("clamp", "clamp()")}}</li>
+ <li>{{cssxref("calc()", "calc()")}}</li>
+ <li>{{cssxref("min()", "min()")}}</li>
+ <li>{{cssxref("max()", "max()")}}</li>
+ <li>{{cssxref("clamp()", "clamp()")}}</li>
  <li>{{cssxref("toggle", "toggle()")}}</li>
- <li>{{cssxref("attr", "attr()")}}</li>
+ <li>{{cssxref("attr()", "attr()")}}</li>
 </ul>
 
 <p><a href="/en-US/docs/Web/CSS/CSS_Functions">Functional notation</a> is a type of value that can represent more complex types or invoke special processing by CSS. The syntax starts with the name of the function immediately followed by a left parenthesis <code>(</code> followed by the argument(s) to the notation followed by a right parenthesis <code>)</code>. Functions can take multiple arguments, which are formatted similarly to a CSS property value.</p>
@@ -493,5 +493,5 @@ tags:
 
 <ul>
  <li><a href="/en-US/docs/Web/CSS/CSS_Types">CSS Basic Data Types</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">Introduction to CSS: Values and Units </a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">Introduction to CSS: Values and Units </a></li>
 </ul>

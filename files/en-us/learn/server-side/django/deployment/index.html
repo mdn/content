@@ -398,8 +398,8 @@ pip3 install psycopg2-binary
 
 <ul>
  <li><code>STATIC_URL</code>: This is the base URL location from which static files will be served, for example on a CDN. This is used for the static template variable that is accessed in our base template (see <a href="/en-US/docs/Learn/Server-side/Django/Home_page">Django Tutorial Part 5: Creating our home page</a>).</li>
- <li><code>STATIC_ROOT</code>: This is the absolute path to a directory where Django's "collectstatic" tool will gather any static files referenced in our templates. Once collected, these can then be uploaded as a group to wherever the files are to be hosted.</li>
- <li><code>STATICFILES_DIRS</code>: This lists additional directories that Django's collectstatic tool should search for static files.</li>
+ <li><code>STATIC_ROOT</code>: This is the absolute path to a directory where Django's <em>collectstatic</em> tool will gather any static files referenced in our templates. Once collected, these can then be uploaded as a group to wherever the files are to be hosted.</li>
+ <li><code>STATICFILES_DIRS</code>: This lists additional directories that Django's <em>collectstatic</em> tool should search for static files.</li>
 </ul>
 
 <h5 id="settings.py_2">settings.py</h5>
@@ -435,7 +435,7 @@ STATIC_URL = '/static/'
 
 <p>Install whitenoise locally using the following command:</p>
 
-<pre>$ pip3 install whitenoise
+<pre class="brush: bash">$ pip3 install whitenoise
 </pre>
 
 <h5 id="settings.py_3">settings.py</h5>
@@ -539,9 +539,9 @@ git push origin main
   <p>You can name the remote if you like by specifying a value after "create". If you don't then you'll get a random name. The name is used in the default URL.</p>
 </div>
 
-<p>We can then push our app to the Heroku repository as shown below. This will upload the app, package it in a dyno, run collectstatic, and start the site.</p>
+<p>We can then push our app to the Heroku repository as shown below. This will upload the app, package it in a dyno, run <em>collectstatic</em>, and start the site.</p>
 
-<pre class="brush: bash">git push heroku master</pre>
+<pre class="brush: bash">git push heroku main</pre>
 
 <p>If we're lucky, the app is now "running" on the site, but it won't be working properly because we haven't set up the database tables for use by our application. To do this we need to use the <code>heroku run</code> command and start a "<a href="https://devcenter.heroku.com/articles/deploying-python#one-off-dynos">one off dyno</a>" to perform a migrate operation. Enter the following command in your terminal:</p>
 
@@ -617,7 +617,7 @@ Setting DJANGO_DEBUG and restarting locallibrary... done, v8</pre>
 <pre class="brush: bash">git add -A
 git commit -m 'Update ALLOWED_HOSTS with site and development server URL'
 git push origin main
-git push heroku master</pre>
+git push heroku main</pre>
 
 <div class="notecard note">
   <h4>Note</h4>

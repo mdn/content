@@ -18,9 +18,9 @@ tags:
  The <code>*</code> may be replaced by any name following <a href="https://www.w3.org/TR/REC-xml/#NT-Name">the production rule of XML names</a> with the following restrictions:</p>
 
 <ul>
- <li>the name must not start with <code>xml</code>, whatever case is used for these letters;</li>
- <li>the name must not contain any semicolon (<code>U+003A</code>);</li>
- <li>the name must not contain capital letters.</li>
+ <li>The name must not start with <code>xml</code> (case-insensitive).</li>
+ <li>The name must not contain any colon characters (<code>:</code>).</li>
+ <li>The name must not contain any capital letters.</li>
 </ul>
 
 <p>Note that the {{domxref("HTMLElement.dataset")}} property is a {{domxref("DOMStringMap")}}, and the name of the custom data attribute <em>data-test-value</em> will be accessible via <code>HTMLElement.dataset.testValue</code> (or by <code>HTMLElement.dataset["<em>testValue</em>"]</code>) as any dash (<code>U+002D</code>) is replaced by the capitalization of the next letter, converting the name to camelcase.</p>

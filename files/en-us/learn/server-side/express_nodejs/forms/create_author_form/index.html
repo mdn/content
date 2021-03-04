@@ -10,7 +10,7 @@ tags:
 ---
 <p class="summary">This subarticle shows how to define a page for creating <code>Author</code> objects.</p>
 
-<h2 class="highlight-spanned" id="Import_validation_and_sanitisation_methods"><span class="highlight-span">Import validation and sanitisation methods</span></h2>
+<h2 class="highlight-spanned" id="Import_validation_and_sanitization_methods"><span class="highlight-span">Import validation and sanitization methods</span></h2>
 
 <p>As with the genre form, to use <em>express-validator</em> we have to <em>require</em> the functions we want to use.</p>
 
@@ -35,7 +35,7 @@ exports.author_create_get = function(req, res, next) {
 <pre class="brush: js line-numbers language-js">// Handle Author create on POST.
 exports.author_create_post = [
 
-    // Validate and sanitise fields.
+    // Validate and sanitize fields.
     body('first_name').trim().isLength({ min: 1 }).escape().withMessage('First name must be specified.')
         .isAlphanumeric().withMessage('First name has non-alphanumeric characters.'),
     body('family_name').trim().isLength({ min: 1 }).escape().withMessage('Family name must be specified.')

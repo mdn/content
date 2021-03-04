@@ -87,7 +87,7 @@ tags:
 
 <p>This last point is key — To use a screenreader in the first place, your operating system needs to run browsers that have the necessary accessibility APIs in place to expose the information screenreaders need to do their job. Most popular OSes have one or two browsers in place that screenreaders can work with. The Paciello Group has a fairly up-to-date post that provides data for this — see <a href="https://www.paciellogroup.com/blog/2014/10/rough-guide-browsers-operating-systems-and-screen-reader-support-updated/">Rough Guide: browsers, operating systems and screen reader support updated</a>.</p>
 
-<p>Next, you need to worry about whether the browsers in question support ARIA features and expose them via their APIs, but also whether screenreaders recognise that information and present it to their users in a useful way.</p>
+<p>Next, you need to worry about whether the browsers in question support ARIA features and expose them via their APIs, but also whether screenreaders recognize that information and present it to their users in a useful way.</p>
 
 <ol>
  <li>Browser support is generally quite good — at the time of writing, <a href="https://caniuse.com/#feat=wai-aria">caniuse.com</a> stated that global browser support for WAI-ARIA was around 88%.</li>
@@ -161,7 +161,7 @@ tags:
 
 <p><img alt="" src="landmarks-list.png" style="display: block; margin: 0 auto;"></p>
 
-<p>However, we could do better here. the search form is a really important landmark that people will want to find, but it is not listed in the landmarks menu or treated like a notable landmark, beyond the actual input being called out as a search input (<code>&lt;input type="search"&gt;</code>). In addition, some older browsers (most notably IE8) don't recognise the semantics of the HTML5 elements.</p>
+<p>However, we could do better here. the search form is a really important landmark that people will want to find, but it is not listed in the landmarks menu or treated like a notable landmark, beyond the actual input being called out as a search input (<code>&lt;input type="search"&gt;</code>). In addition, some older browsers (most notably IE8) don't recognize the semantics of the HTML5 elements.</p>
 
 <p>Let's improve it by the use of some ARIA features. First, we'll add some role attributes to our HTML structure. You can try taking a copy of our original files (see <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/website-no-roles/index.html">index.html</a> and <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/website-no-roles/style.css">style.css</a>), or navigating to our <a href="https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles">website-aria-roles</a> example (<a href="https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/">see it live</a>), which has a structure like this:</p>
 

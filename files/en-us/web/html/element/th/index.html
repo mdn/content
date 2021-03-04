@@ -78,10 +78,8 @@ tags:
   <li><code>col</code>: The header relates to all cells of the column it belongs to.</li>
   <li><code>rowgroup</code>: The header belongs to a rowgroup and relates to all of its cells. These cells can be placed to the right or the left of the header, depending on the value of the <code><a href="/en-US/docs/Web/HTML/Global_attributes/dir">dir</a></code> attribute in the {{HTMLElement("table")}} element.</li>
   <li><code>colgroup</code>: The header belongs to a colgroup and relates to all of its cells.</li>
-  <li><code>auto</code></li>
  </ul>
-
- <p>The default value when this attribute is not specified is <code>auto</code>.</p>
+ If the <code>scope</code> attribute is not specified, or its value is not <code>row</code>, <code>col</code>, or <code>rowgroup</code>, or <code>colgroup</code>, then browsers automatically select the set of cells to which the header cell applies.
  </dd>
 </dl>
 

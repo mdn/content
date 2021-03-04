@@ -36,11 +36,11 @@ tags:
 <p>The number of audio channels available on a signal is frequently presented in a numeric format, such as 2.0 or 5.1. This is called {{interwiki("wikipedia", "Surround_sound#Channel_notation", "channel notation")}}. The first number is the number of full frequency range audio channels that the signal includes. The number after the period indicates the number of those channels which are reserved for low-frequency effect (LFE) outputs; these are often referred to as <strong>subwoofers</strong>.</p>
 </div>
 
-<p><img alt="A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information." src="https://mdn.mozillademos.org/files/12237/webaudioAPI_en.svg" style="display: block; height: 143px; margin: 0px auto; width: 643px;"></p>
+<p><img alt="A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information." src="webaudioapi_en.svg" style="display: block; margin: 0px auto;"></p>
 
 <p>Each input or output is composed of one or more audio <strong>channels,</strong> which together represent a specific audio layout. Any discrete channel structure is supported, including <em>mono</em>, <em>stereo</em>, <em>quad</em>, <em>5.1</em>, and so on.</p>
 
-<p><img alt="Show the ability of AudioNodes to connect via their inputs and outputs and the channels inside these inputs/outputs." src="https://mdn.mozillademos.org/files/14179/mdn.png" style="display: block; height: 360px; margin: 0px auto; width: 630px;"></p>
+<p><img alt="Show the ability of AudioNodes to connect via their inputs and outputs and the channels inside these inputs/outputs." src="mdn.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Audio sources can be obtained in a number of ways:</p>
 
@@ -48,7 +48,7 @@ tags:
  <li>Sound can be generated directly in JavaScript by an audio node (such as an oscillator).</li>
  <li>Created from raw PCM data (the audio context has methods to decode supported audio formats).</li>
  <li>Taken from HTML media elements (such as {{HTMLElement("video")}} or {{HTMLElement("audio")}}).</li>
- <li>Taken directly from a <a href="/en-US/docs/WebRTC">WebRTC</a> {{domxref("MediaStream")}} (such as a webcam or microphone).</li>
+ <li>Taken directly from a <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> {{domxref("MediaStream")}} (such as a webcam or microphone).</li>
 </ul>
 
 <h2 id="Audio_data_whats_in_a_sample">Audio data: what's in a sample</h2>
@@ -72,7 +72,7 @@ tags:
  <li>The Stereo buffer will have 88200 samples, but still 44100 frames. The <code>length</code> property will still be 44100 since it's equal to the number of frames.</li>
 </ul>
 
-<p><img alt="A diagram showing several frames in an audio buffer in a long line, each one containing two samples, as the buffer has two channels, it is stereo." src="https://mdn.mozillademos.org/files/14801/sampleframe-english.png" style="height: 150px; width: 853px;"></p>
+<p><img alt="A diagram showing several frames in an audio buffer in a long line, each one containing two samples, as the buffer has two channels, it is stereo." src="sampleframe-english.png"></p>
 
 <p>When a buffer plays, you will hear the left most sample frame, and then the one right next to it, etc. In the case of stereo, you will hear both channels at the same time. Sample frames are very useful, because they are independent of the number of channels, and represent time, in a useful way for doing precise audio manipulation.</p>
 
@@ -305,7 +305,7 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
 
 <p>In general, audio visualizations are achieved by accessing an output of audio data over time, usually gain or frequency data, and then using a graphical technology to turn that into a visual output, such as a graph. The Web Audio API has an {{domxref("AnalyserNode")}} available that doesn't alter the audio signal passing through it. Instead it outputs audio data that can be passed to a visualization technology such as {{htmlelement("canvas")}}.</p>
 
-<p><img alt="Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT." src="https://mdn.mozillademos.org/files/12521/fttaudiodata_en.svg" style="height: 206px; width: 693px;"></p>
+<p><img alt="Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT." src="fttaudiodata_en.svg"></p>
 
 <p>You can grab data using the following methods:</p>
 
@@ -332,13 +332,13 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
 <p>The panner's position is described with right-hand Cartesian coordinates; its movement using a velocity vector, necessary for creating Doppler effects, and its directionality using a directionality cone.The cone can be very large, e.g. for omnidirectional sources.</p>
 </div>
 
-<p><img alt="The PannerNode brings a spatial position and velocity and a directionality for a given signal." src="https://mdn.mozillademos.org/files/12511/pannernode_en.svg" style="height: 340px; width: 799px;"></p>
+<p><img alt="The PannerNode brings a spatial position and velocity and a directionality for a given signal." src="pannernode_en.svg"></p>
 
 <div>
 <p>The listener's position is described using right-hand Cartesian coordinates; its movement using a velocity vector and the direction the listener's head is pointing using two direction vectors: up and front. These respectively define the direction of the top of the listener's head, and the direction the listener's nose is pointing, and are at right angles to one another.</p>
 </div>
 
-<p><img alt="We see the position, up and front vectors of an AudioListener, with the up and front vectors at 90° from the other." src="https://mdn.mozillademos.org/files/14311/WebAudioListenerReduced.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="We see the position, up and front vectors of an AudioListener, with the up and front vectors at 90° from the other." src="webaudiolistenerreduced.png" style="display: block; margin: 0 auto;"></p>
 
 <div class="note">
 <p><strong>Note</strong>: For more information, see our <a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">Web audio spatialization basics</a> article.</p>
@@ -348,8 +348,8 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
 
 <p>In audio terms, <strong>fan-in</strong> describes the process by which a {{domxref("ChannelMergerNode")}} takes a series of mono input sources and outputs a single multi-channel signal:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12517/fanin.svg" style="height: 258px; width: 325px;"></p>
+<p><img alt="" src="fanin.svg"></p>
 
 <p><strong>Fan-out</strong> describes the opposite process, whereby a {{domxref("ChannelSplitterNode")}} takes a multi-channel input source and outputs multiple mono output signals:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12515/fanout.svg" style="height: 258px; width: 325px;"></p>
+<p><img alt="" src="fanout.svg"></p>
