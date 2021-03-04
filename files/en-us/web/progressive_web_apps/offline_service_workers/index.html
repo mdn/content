@@ -90,7 +90,7 @@ const appShellFiles = [
 <p>Next, the links to images to be loaded along with the content from the data/games.js file are generated in the second array. After that, both arrays are merged using the {{jsxref("Array.prototype.concat()")}} function.</p>
 
 <pre class="brush: js">const gamesImages = [];
-for (let i = 0; i < games.length; i++) {
+for (let i = 0; i &lt; games.length; i++) {
   gamesImages.push(`data/img/${games[i].slug}.jpg`);
 }
 const contentToCache = appShellFiles.concat(gamesImages);</pre>
