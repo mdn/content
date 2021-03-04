@@ -61,11 +61,11 @@ tags:
 <p>The first of these three (<code>supportedInstruments</code> in the example below) contains a <code>data</code> property that has to conform to the structure defined by the <code>BasicCardRequest</code> dictionary. </p>
 
 <pre class="brush: js">var supportedInstruments = [{
-  <code>supportedMethods: 'basic-card',
+  supportedMethods: 'basic-card',
   data: {
     supportedNetworks: ['visa', 'mastercard', 'amex', 'jcb',
                         'diners', 'discover', 'mir', 'unionpay']
-  }</code>
+  }
 }];
 
 var details = {

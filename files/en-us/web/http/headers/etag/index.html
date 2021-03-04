@@ -13,7 +13,7 @@ tags:
   specific version of a resource. It lets caches be more efficient and save bandwidth, as
   a web server does not need to resend a full response if the content has not changed.
   Additionally, etags help prevent simultaneous updates of a resource from overwriting
-  each other (<a href="#caching_of_unchanged_resources">"mid-air collisions"</a>).</p>
+  each other (<a href="#avoiding_mid-air_collisions">"mid-air collisions"</a>).</p>
 
 <p>If the resource at a given URL changes, a new <code>Etag</code> value <em>must</em> be
   generated. A comparison of them can determine whether two representations of a resource
