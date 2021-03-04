@@ -33,11 +33,11 @@ console.log((await asyncGen.next()).value); // 3</pre>
 <h2 id="Instance_methods">Instance methods</h2>
 Async generators always yield a {{jsxref("Promise")}} object.
 <dl>
- <dt>{{JSxRef("AsyncGenerator.prototype.next()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} which will be resolved with the given value yielded by the {{JSxRef("Operators/yield", "yield")}} expression.</dd>
- <dt>{{JSxRef("AsyncGenerator.prototype.return()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} which will be resolved with the given value yielded by the {{JSxRef("Operators/yield", "yield")}} expression and finishes the generator.</dd>
- <dt>{{JSxRef("AsyncGenerator.prototype.throw()")}}</dt>
+ <dt>{{jsxref("AsyncGenerator.prototype.next()")}}</dt>
+ <dd>Returns a {{jsxref("Promise")}} which will be resolved with the given value yielded by the {{jsxref("Operators/yield", "yield")}} expression.</dd>
+ <dt>{{jsxref("AsyncGenerator.prototype.return()")}}</dt>
+ <dd>Returns a {{jsxref("Promise")}} which will be resolved with the given value yielded by the {{jsxref("Operators/yield", "yield")}} expression and finishes the generator.</dd>
+ <dt>{{jsxref("AsyncGenerator.prototype.throw()")}}</dt>
  <dd>Returns a {{jsxref("Promise")}} which will be rejected with an exception thrown from or uncaught from within the async generator function (also finishes the generator unless caught from within that generator).</dd>
 </dl>
 
@@ -80,11 +80,11 @@ console.log((await asyncGenerator.next()).value); // 2
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{JSxRef("Statements/function*", "function*")}}</li>
- <li>{{JSxRef("Statements/async_function*", "async function*")}}</li>
- <li>{{JSxRef("Operators/function*", '<code>function*</code> expression', "", 1)}}</li>
- <li>{{JSxRef("Operators/async_function*", '<code>async function*</code> expression', "", 1)}}</li>
- <li>{{JSxRef("GeneratorFunction")}}</li>
- <li>{{JSxRef("AsyncGeneratorFunction")}}</li>
+ <li>{{jsxref("Statements/function*", "function*")}}</li>
+ <li>{{jsxref("Statements/async_function*", "async function*")}}</li>
+ <li>{{jsxref("Operators/function*", '<code>function*</code> expression', "", 1)}}</li>
+ <li>{{jsxref("Operators/async_function*", '<code>async function*</code> expression', "", 1)}}</li>
+ <li>{{jsxref("GeneratorFunction")}}</li>
+ <li>{{jsxref("AsyncGeneratorFunction")}}</li>
  <li><a href="/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol">The Iterator protocol</a></li>
 </ul>
