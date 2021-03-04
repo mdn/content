@@ -1,0 +1,90 @@
+---
+title: AsyncGenerator
+slug: Web/JavaScript/Reference/Global_Objects/AsyncGenerator
+tags:
+  - Class
+  - ECMAScript 2018
+  - Generator
+  - JavaScript
+  - Legacy Generator
+  - Legacy Iterator
+  - Reference
+---
+<div>{{JSRef}}</div>
+
+<p>The <code><strong>AsyncGenerator</strong></code> object is returned by an {{jsxref("Statements/async_function*", "async generator function", "", 1)}} and it conforms to both the <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">iterable protocol</a> and the <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol">iterator protocol</a>.</p>
+
+<h2 id="Constructor">Constructor</h2>
+
+<p>This object cannot be instantiated directly. Instead, an <code>AsyncGenerator</code> instance can be returned from an {{jsxref("Statements/async_function*", "async generator function", "", 1)}}:</p>
+
+<pre class="brush: js">async function* createAsyncGenerator() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+const asyncGen = createAsyncGenerator(); // "AsyncGenerator { }"
+
+console.log((await asyncGen.next()).value); // 1
+console.log((await asyncGen.next()).value); // 2
+console.log((await asyncGen.next()).value); // 3</pre>
+
+<h2 id="Instance_methods">Instance methods</h2>
+Async generators always yield a {{jsxref("Promise")}} object.
+<dl>
+ <dt>{{JSxRef("AsyncGenerator.prototype.next()")}}</dt>
+ <dd>Returns a {{jsxref("Promise")}} which will be resolved with the given value yielded by the {{JSxRef("Operators/yield", "yield")}} expression.</dd>
+ <dt>{{JSxRef("AsyncGenerator.prototype.return()")}}</dt>
+ <dd>Returns a {{jsxref("Promise")}} which will be resolved with the given value yielded by the {{JSxRef("Operators/yield", "yield")}} expression and finishes the generator.</dd>
+ <dt>{{JSxRef("AsyncGenerator.prototype.throw()")}}</dt>
+ <dd>Returns a {{jsxref("Promise")}} which will be rejected with an exception thrown from or uncaught from within the async generator function (also finishes the generator unless caught from within that generator).</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="An_infinite_iterator">An infinite async iterator</h3>
+
+<pre class="brush: js;">async function* infinite() {
+    let index = 0;
+
+    while (true) {
+        yield index++;
+    }
+}
+
+const asyncGenerator = infinite(); // "AsyncGenerator { }"
+
+console.log((await asyncGenerator.next()).value); // 0
+console.log((await asyncGenerator.next()).value); // 1
+console.log((await asyncGenerator.next()).value); // 2
+// ...</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-asyncgenerator-objects', 'AsyncGenerator objects')}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("javascript.builtins.AsyncGenerator")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{JSxRef("Statements/function*", "function*")}}</li>
+ <li>{{JSxRef("Statements/async_function*", "async function*")}}</li>
+ <li>{{JSxRef("Operators/function*", '<code>function*</code> expression', "", 1)}}</li>
+ <li>{{JSxRef("Operators/async_function*", '<code>async function*</code> expression', "", 1)}}</li>
+ <li>{{JSxRef("GeneratorFunction")}}</li>
+ <li>{{JSxRef("AsyncGeneratorFunction")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol">The Iterator protocol</a></li>
+</ul>
