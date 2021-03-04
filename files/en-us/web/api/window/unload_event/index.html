@@ -9,6 +9,12 @@ tags:
 ---
 <div>{{APIRef}}</div>
 
+<div class= "notebox warning">
+
+<p>Developers should avoid using this event. See "Usage notes" below.</p>
+
+</div>
+
 <p><span class="seoSummary">The <strong><code>unload</code></strong> event is fired when the document or a child resource is being unloaded.</span></p>
 
 <table class="properties">
@@ -50,9 +56,24 @@ tags:
 
 <p>Please note that the unload event also follows the document tree: parent frame unload will happen <strong>before</strong> child frame <code>unload</code> (see example below).</p>
 
-<div class="notecard warning">
-<p>The <code>unload</code> event (and <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onunload">onunload</a></code> event handler) are not the right features to use with <code><a href="/en-US/docs/Web/API/Navigator/sendBeacon">sendBeacon</a></code>. Instead for <code><a href="/en-US/docs/Web/API/Navigator/sendBeacon">sendBeacon</a>,</code> use the <code><a href="/en-US/docs/Web/API/Document/visibilitychange_event">visibilitychange</a></code> and <code><a href="/en-US/docs/Web/API/Window/pagehide_event">pagehide</a></code> events. See discussion in the comments for the blog post <a href="https://volument.com/blog/sendbeacon-is-broken#comments">Beacon API is broken</a>.</p>
-</div>
+<h2>Usage notes</h2>
+
+<p>Developers should avoid using this event.</p>
+
+<p>Especially on mobile, the <code>unload</code> event is not reliably fired. For example, the <code>unload</code> event is not fired at all in the following scenario:</p>
+<ul>
+  <li>A mobile user visits your page.</li>
+  <li>The user then switches to a different app.</li>
+  <li>Later, the user closes the browser from the app manager.</li>
+</ul>
+
+<p> Also, the <code>unload</code> event is not compatible with the <a href="https://web.dev/bfcache/">back/forward cache</a> (bfcache), because many pages using this event assume that the page will not continue to exist after the event is fired. To combat this, some browsers (such as Firefox) will not place pages in the bfcache if they have unload listeners, and this is bad for performance. Others, such as Chrome, will not fire the <code>unload</code> when a user navigates away.</p>
+
+<p>The best event to use to signal the end of a user's session is the <a href="/en-US/docs/Web/API/Document/visibilitychange_event"><code>visibilitychange</code></a> event. In browsers that don't support <code>visibilitychange</code> the next best alternative is the <a href="/en-US/docs/Web/API/Window/pagehide_event"><code>pagehide</code></a> event, which is also not fired reliably, but which is bfcache-compatible.</p>
+
+<p>If you're specifically trying to detect page unload events, it's best to listen for the <code>pagehide</code> event.</p>
+
+<p>See the <a href="https://developers.google.com/web/updates/2018/07/page-lifecycle-api#the-unload-event">Page Lifecycle API</a> guide for more information about the problems associated with the <code>unload</code> event.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -124,4 +145,17 @@ tags:
 <ul>
  <li>Related events: {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/load_event", "load")}}</li>
  <li><a href="https://html.spec.whatwg.org/multipage/browsers.html#unloading-documents">Unloading Documents — unload a document</a></li>
+  <li>The <a href="/en-US/docs/Web/API/Document/visibilitychange_event"><code>visibilitychange</code></a> event.</li>
+  <li><a
+      href="https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/">Don't
+      lose user and app state, use Page Visibility</a> explains in
+    detail why you should use <code>visibilitychange</code>, not
+    <code>beforeunload</code>/<code>unload</code>.
+  </li>
+  <li><a
+      href="https://developers.google.com/web/updates/2018/07/page-lifecycle-api#developer-recommendations-for-each-state">Page
+      Lifecycle API</a> gives best-practices guidance on handling
+    page lifecyle behavior in your web applications.</li>
+    <li><a href="https://github.com/GoogleChromeLabs/page-lifecycle">PageLifecycle.js</a>: a JavaScript library that deals with cross-browser inconsistencies in page lifecyle behavior.</li>
+  <li><a href="https://web.dev/bfcache/">Back/forward cache</a> explains what the back/forward cache is, and its implications for various page lifecycle events.</li>
 </ul>
