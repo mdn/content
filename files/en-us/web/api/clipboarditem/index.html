@@ -12,7 +12,7 @@ tags:
   - copy
   - paste
 ---
-<div>{{draft}}{{DefaultAPISidebar("Clipboard API")}}</div>
+<div>{{DefaultAPISidebar("Clipboard API")}}</div>
 
 <p class="summary"><span class="seoSummary">The <strong><code>ClipboardItem</code></strong> interface of the {{domxref('Clipboard API')}} represents a single item format, used when reading or writing data via the {{domxref('Clipboard API')}}. That is {{domxref("clipboard.read()")}} and {{domxref("clipboard.write()")}} respectively.</span></p>
 
@@ -42,7 +42,20 @@ tags:
 <dl>
  <dt>{{domxref("ClipboardItem.types", "types")}} {{ReadOnlyInline}}</dt>
  <dd>Returns an {{jsxref("Array")}} of MIME types available within the <strong><code>ClipboardItem</code></strong>.</dd>
+
+ <dt>{{domxref("ClipboardItem.presentationStyle", "presentationStyle")}} {{ReadOnlyInline}}</dt>
+ <dd>Returns one of the following: <code>"unspecified"</code>, <code>"inline"</code> or <code>"attachment"</code>.</dd>
+
+ <dt>{{domxref("ClipboardItem.delayed", "delayed")}} {{ReadOnlyInline}}</dt>
+ <dd>Returns a boolean which if true indicates the <strong><code>ClipboardItem</code></strong> was created using the static <code>createDelayed()</code> method.</dd>
+
+ <dt>{{domxref("ClipboardItem.lastModified", "lastModified")}} {{ReadOnlyInline}}</dt>
+ <dd>Returns an {{domxref("DOMTimeStamp")}} representing the time at which the <strong><code>ClipboardItem</code></strong> was last modified.</dd>
 </dl>
+
+<div class="note">
+  <p><strong>Note:</strong> Neither <code>ClipboardItem.delayed</code> nor <code>ClipboardItem.lastModified</code> have been implemented by any browsers at this time. Check the <a href="#browser_compatibility">compatibility table</a> for details.</p>
+</div>
 
 <h2 id="Methods">Methods</h2>
 
@@ -52,6 +65,17 @@ tags:
  <dt>{{domxref("ClipboardItem.getType", "getType()")}}</dt>
  <dd>Returns a {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}} of the requested {{Glossary("MIME type")}}, or an error if the MIME type is not found.</dd>
 </dl>
+
+<h2 id="Static_Methods">Static Methods</h2>
+
+<dl>
+ <dt>{{domxref("ClipboardItem.createDelayed()")}}</dt>
+ <dd>Creates a new <strong><code>ClipboardItem</code></strong> object, with the {{Glossary("MIME type")}} as the key and {{domxref("Blob")}} as the value.</dd>
+</dl>
+
+<div class="note">
+  <p><strong>Note:</strong> <code>ClipboardItem.createDelayed()</code> has not been implemented by any browsers at this time. Check the <a href="#browser_compatibility">compatibility table</a> for details.</p>
+</div>
 
 <h2 id="Examples">Examples</h2>
 
@@ -117,13 +141,9 @@ tags:
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<h2 id="browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat("api.ClipboardItem")}}</p>
-
-<div class="note">
-<p><strong>Note</strong>: Image format support varies by browser. See the browser compatibility table for the {{domxref("Clipboard")}} interface.</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
