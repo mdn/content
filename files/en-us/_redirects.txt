@@ -7202,6 +7202,7 @@
 /en-US/docs/Web/API/BatteryManager.onchargingtimechange	/en-US/docs/Web/API/BatteryManager/onchargingtimechange
 /en-US/docs/Web/API/BatteryManager.ondischargingtimechange	/en-US/docs/Web/API/BatteryManager/ondischargingtimechange
 /en-US/docs/Web/API/BatteryManager.onlevelchange	/en-US/docs/Web/API/BatteryManager/onlevelchange
+/en-US/docs/Web/API/Beacon_API/Using_the_Beacon_API	/en-US/docs/Web/API/Beacon_API
 /en-US/docs/Web/API/BeforeInstallPromptEvent/BeforeInstallPromptEvent.prompt()	/en-US/docs/Web/API/BeforeInstallPromptEvent/prompt
 /en-US/docs/Web/API/BiquadFilterNode.Q	/en-US/docs/Web/API/BiquadFilterNode/Q
 /en-US/docs/Web/API/BiquadFilterNode.detune	/en-US/docs/Web/API/BiquadFilterNode/detune

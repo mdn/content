@@ -32847,19 +32847,6 @@
       "AFBarstow"
     ]
   },
-  "Web/API/Beacon_API/Using_the_Beacon_API": {
-    "modified": "2020-04-22T12:33:34.173Z",
-    "contributors": [
-      "benbot",
-      "Tigt",
-      "kulturbande",
-      "JorritSchippers",
-      "jhard",
-      "Rowno",
-      "rolfedh",
-      "AFBarstow"
-    ]
-  },
   "Web/API/BeforeInstallPromptEvent": {
     "modified": "2020-10-15T21:36:26.724Z",
     "contributors": [
