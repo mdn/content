@@ -51,7 +51,7 @@ tags:
   parameters in the function to be created, in the order in which they are passed.</p>
 
 <div class="notecard note">
-  <h3>Note:</h3> 
+  <h3>Note:</h3>
   <p>{{jsxref("Statements/async_generator_function*", "async generator function")}}
     created with the <code>AsyncGeneratorFunction</code> constructor do not create closures to
     their creation contexts; they are always created in the global scope.</p>
@@ -72,9 +72,9 @@ tags:
 <h3 id="Creating_an_async_generator_function_from_an_AsyncGeneratorFunction_constructor">Creating an
   async generator function from an AsyncGeneratorFunction() constructor</h3>
 
-<pre class="brush: js">var AsyncGeneratorFunction = Object.getPrototypeOf(async function*(){}).constructor;
-var g = new AsyncGeneratorFunction('a', 'yield a * 2');
-var asyncIterator = g(10);
+<pre class="brush: js">const AsyncGeneratorFunction = Object.getPrototypeOf(async function*(){}).constructor;
+const asyncGen = new AsyncGeneratorFunction('a', 'yield a * 2');
+const asyncIterator = asyncGen(10);
 console.log((await asyncIterator.next()).value); // 20
 </pre>
 
