@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - files/**/_redirects.txt
+      - files/**
       - .github/workflows/pr-check_redirects.yml
 
 jobs:

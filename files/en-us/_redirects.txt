@@ -5804,9 +5804,7 @@
 /en-US/docs/MathML/Element/merror	/en-US/docs/Web/MathML/Element/merror
 /en-US/docs/MathML/Element/mfenced	/en-US/docs/Web/MathML/Element/mfenced
 /en-US/docs/MathML/Element/mfrac	/en-US/docs/Web/MathML/Element/mfrac
-/en-US/docs/MathML/Element/mglyph	/en-US/docs/Web/MathML/Element/mglyph
 /en-US/docs/MathML/Element/mi	/en-US/docs/Web/MathML/Element/mi
-/en-US/docs/MathML/Element/mlabeledtr	/en-US/docs/Web/MathML/Element/mlabeledtr
 /en-US/docs/MathML/Element/mmultiscripts	/en-US/docs/Web/MathML/Element/mmultiscripts
 /en-US/docs/MathML/Element/mn	/en-US/docs/Web/MathML/Element/mn
 /en-US/docs/MathML/Element/mo	/en-US/docs/Web/MathML/Element/mo
@@ -7564,7 +7562,8 @@
 /en-US/docs/Web/API/DocumentOrShadowRoot/fullscreenElement	/en-US/docs/Web/API/Document/fullscreenElement
 /en-US/docs/Web/API/DocumentOrShadowRoot/nodeFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot
 /en-US/docs/Web/API/DocumentOrShadowRoot/nodesFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot
-/en-US/docs/Web/API/DocumentOrShadowRoot/pictureInPictureEnabled	/en-US/docs/Web/API/DocumentOrShadowRoot/pictureInPictureElement
+/en-US/docs/Web/API/DocumentOrShadowRoot/pictureInPictureElement	/en-US/docs/Web/API/Document/pictureInPictureElement
+/en-US/docs/Web/API/DocumentOrShadowRoot/pictureInPictureEnabled	/en-US/docs/Web/API/Document/pictureInPictureEnabled
 /en-US/docs/Web/API/DocumentTouch.createTouch	/en-US/docs/Web/API/Document/createTouch
 /en-US/docs/Web/API/DocumentTouch.createTouchList	/en-US/docs/Web/API/Document/createTouchList
 /en-US/docs/Web/API/DocumentTouch/createTouch	/en-US/docs/Web/API/Document/createTouch
