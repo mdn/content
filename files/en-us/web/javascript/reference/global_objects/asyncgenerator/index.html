@@ -38,7 +38,7 @@ Async generators always yield a {{jsxref("Promise")}} object.
  <dt>{{jsxref("AsyncGenerator.prototype.return()")}}</dt>
  <dd>Returns a {{jsxref("Promise")}} which will be resolved with the given value yielded by the {{jsxref("Operators/yield", "yield")}} expression and finishes the generator.</dd>
  <dt>{{jsxref("AsyncGenerator.prototype.throw()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} which will be rejected with an exception thrown from or uncaught from within the async generator function (also finishes the generator unless caught from within that generator).</dd>
+ <dd>Returns a {{jsxref("Promise")}} that is rejected with an exception thrown from (or uncaught from) within the async generator function and finishes the generator unless the exception is caught within that generator.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
