@@ -5804,9 +5804,7 @@
 /en-US/docs/MathML/Element/merror	/en-US/docs/Web/MathML/Element/merror
 /en-US/docs/MathML/Element/mfenced	/en-US/docs/Web/MathML/Element/mfenced
 /en-US/docs/MathML/Element/mfrac	/en-US/docs/Web/MathML/Element/mfrac
-/en-US/docs/MathML/Element/mglyph	/en-US/docs/Web/MathML/Element/mglyph
 /en-US/docs/MathML/Element/mi	/en-US/docs/Web/MathML/Element/mi
-/en-US/docs/MathML/Element/mlabeledtr	/en-US/docs/Web/MathML/Element/mlabeledtr
 /en-US/docs/MathML/Element/mmultiscripts	/en-US/docs/Web/MathML/Element/mmultiscripts
 /en-US/docs/MathML/Element/mn	/en-US/docs/Web/MathML/Element/mn
 /en-US/docs/MathML/Element/mo	/en-US/docs/Web/MathML/Element/mo
