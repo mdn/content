@@ -29,30 +29,35 @@ tags:
 
 <h3 id="Properties_affected_by_forced-color_mode">Properties affected by forced-color mode</h3>
 
-<p>In forced colors mode, the values of the following properties are treated as if they have no author-level values specified. That is, user-specified values (if any) or browser-specified values are used instead. These browser-specified values are selected from the set of system colors &emdash; this ensures a consistent contrast for common UI elements for users that have forced colors enabled.</p>
+<p>In forced colors mode, the values of the following properties are treated as if they have no author-level values specified. That is, browser-specified values are used instead. This does not affect the style cascade, but is accomplished by the browser using the browser-specified values instead of the cascaded values when painting colors. These browser-specified values are selected from the set of system colors &emdash; this ensures a consistent contrast for common UI elements for users that have forced colors enabled.</p>
 
 <ul>
  <li>{{cssxref("color")}}</li>
  <li>{{cssxref("background-color")}}</li>
- <li>{{cssxref("background-image")}} (for values that are not url-based)</li>
  <li>{{cssxref("text-decoration-color")}}</li>
  <li>{{cssxref("text-emphasis-color")}}</li>
  <li>{{cssxref("border-color")}}</li>
  <li>{{cssxref("outline-color")}}</li>
  <li>{{cssxref("column-rule-color")}}</li>
- <li>{{cssxref("scrollbar-color")}}</li>
  <li>{{cssxref("-webkit-tap-highlight-color")}}</li>
- <li>{{cssxref("box-shadow")}}</li>
- <li>{{cssxref("text-shadow")}}</li>
  <li><a href="/en-US/docs/Web/SVG/Attribute/fill">SVG fill attribute</a></li>
  <li><a href="/en-US/docs/Web/SVG/Attribute/stroke">SVG stroke attribute</a></li>
+</ul>
+
+<p>Additionally the following properties have special behavior in forced colors mode:</p>
+<ul>
+ <li>{{cssxref("box-shadow")}} is forced to 'none'</li>
+ <li>{{cssxref("text-shadow")}} is forced to 'none'</li>
+ <li>{{cssxref("background-image")}} is forced to 'none' for values that are not url-based</li>
+ <li>{{cssxref("color-scheme")}} is forced to 'light dark'</li>
+ <li>{{cssxref("scrollbar-color")}} is forced to 'auto'</li>
 </ul>
 
 <p>The system colors that are forced for the above properties depend on the context of the element. For example the {{cssxref("color")}} property on button element will be forced to ButtonText, whereas on normal text it will be forced to CanvasText. See the list of system colors for additional details of when each might be appropriate in various UI contexts.</p>
 <p><strong>Note:</strong> user agents choose system colors based on elements, <em>not</em> their roles. As an example, adding role="button" to a div will not cause an element's color to be forced to ButtonText</p>
 
-<p>There are two cases where the user agent does not force the values for the above properties &emdash; when {{cssxref("forced-color-adjust")}} is applied to an element, or when a system color is specified by the author.</p>
-<p>When forced-color-adjust is specified on an element, none of the forced color values will apply, and author style will be applied as normal.</p>
+<p>There are two cases where the user agent does not force the values for the above properties &emdash; when a {{cssxref("forced-color-adjust")}} value of 'none' is applied to an element, or when a system color is specified by the author.</p>
+<p>When forced-color-adjust is set to 'none' on an element, none of the forced color values will apply, and author style will be applied as normal.</p>
 <p>When a system color is specified, it will be used instead of the value that would otherwise have been forced.</p>
 
 <p>You can also use system colors with any property <em>other</em> than those listed above, to ensure that the rest of the page integrates with the restricted color palette available in forced colors mode.</p>
