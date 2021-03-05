@@ -97,11 +97,11 @@ navigator.sendBeacon(<var>url</var>, <var>data</var>);
   However, this is extremely unreliable. In many situations, especially on mobile, the browser will not fire the
   <code>unload</code>, <code>beforeunload</code>, or <code>pagehide</code> events. For example, these events will not fire in the following situation:</p>
 
-  <ul>
+  <ol>
     <li>The user loads the page and interacts with it.</li>
     <li>When they are finished, they switch to a different app, instead of closing the tab.</li>
     <li>Later, they close the browser app using the phone's app manager.</li>
-  </ul>
+  </ol>
 
 <p>Additionally, the <code>unload</code> event is incompatible with the back/forward cache (<a href="https://web.dev/bfcache/">bfcache</a>)
   implemented in modern browsers. Some browsers, such as Firefox, handle this incompatibility by excluding pages from the bfcache if they contain unload handlers,
