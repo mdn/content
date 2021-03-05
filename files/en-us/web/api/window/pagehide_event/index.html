@@ -40,11 +40,11 @@ tags:
 <p>Like the <a href="/en-US/docs/Web/API/Window/unload_event"><code>unload</code></a>
   and <a href="/en-US/docs/Web/API/Window/beforeunload_event"><code>beforeunload</code></a> events, this event is not reliably fired by browsers, especially on mobile. For example, the <code>pagehide</code> event is not fired at all in the following scenario:</p>
 
-<ul>
+<ol>
   <li>A mobile user visits your page.</li>
   <li>The user then switches to a different app.</li>
   <li>Later, the user closes the browser from the app manager.</li>
-</ul>
+</ol>
 
 <p>However, unlike the <code>unload</code> and <code>beforeunload</code> events, this event is compatible with the <a href="https://web.dev/bfcache/">back/forward cache</a> (bfcache), so adding a listener to this event will not prevent the page
 from being included in the bfcache.</p>
