@@ -49,7 +49,7 @@ tags:
 <p>However, unlike the <code>unload</code> and <code>beforeunload</code> events, this event is compatible with the <a href="https://web.dev/bfcache/">back/forward cache</a> (bfcache), so adding a listener to this event will not prevent the page
 from being included in the bfcache.</p>
 
-<p>The best event to use to signal the end of a user's session is the <a href="/en-US/docs/Web/API/Document/visibilitychange_event"><code>visibilitychange</code></a> event. In browsers that don't support <code>visibilitychange</code> the <code>pagehide</code> event is the next best alternative.</p>
+<p>The best event to use to signal the end of a user's session is the <a href="/en-US/docs/Web/API/Document/visibilitychange_event"><code>visibilitychange</code></a> event. In browsers that don't support <code>visibilitychange</code> the <code>pagehide</code> event is the next-best alternative.</p>
 
 <p>If you're specifically trying to detect page unload events, the <code>pagehide</code> event is the best option.</p>
 
