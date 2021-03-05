@@ -61,11 +61,11 @@ tags:
 <p>Developers should avoid using this event.</p>
 
 <p>Especially on mobile, the <code>unload</code> event is not reliably fired. For example, the <code>unload</code> event is not fired at all in the following scenario:</p>
-<ul>
+<ol>
   <li>A mobile user visits your page.</li>
   <li>The user then switches to a different app.</li>
   <li>Later, the user closes the browser from the app manager.</li>
-</ul>
+</ol>
 
 <p> Also, the <code>unload</code> event is not compatible with the <a href="https://web.dev/bfcache/">back/forward cache</a> (bfcache), because many pages using this event assume that the page will not continue to exist after the event is fired. To combat this, some browsers (such as Firefox) will not place pages in the bfcache if they have unload listeners, and this is bad for performance. Others, such as Chrome, will not fire the <code>unload</code> when a user navigates away.</p>
 
