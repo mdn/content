@@ -53,11 +53,11 @@ tags:
 <p>The <code>beforeunload</code> event suffers from the same problems as the <a href="/en-US/docs/Web/API/Window/unload_event"><code>unload</code></a> event.</p>
 
 <p>Especially on mobile, the <code>beforeunload</code> event is not reliably fired. For example, the <code>beforeunload</code> event is not fired at all in the following scenario:
-<ul>
+<ol>
   <li>A mobile user visits your page.</li>
   <li>The user then switches to a different app.</li>
   <li>Later, the user closes the browser from the app manager.</li>
-</ul>
+</ol>
 
 <p>The <code>beforeunload</code> event is not compatible with the <a href="https://web.dev/bfcache/">back/forward cache</a> (bfcache), because many pages using this event assume that the page will not continue to exist after the event is fired. To combat this, browsers will not place pages in the bfcache if they have <code>beforeunload</code> listeners, and this is bad for performance.</p>
 
