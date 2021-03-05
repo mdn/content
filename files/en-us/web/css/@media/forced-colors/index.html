@@ -29,7 +29,7 @@ tags:
 
 <h3 id="Properties_affected_by_forced-color_mode">Properties affected by forced-color mode</h3>
 
-<p>In forced colors mode, the values of the following properties are treated as if they have no author-level values specified. That is, browser-specified values are used instead. This does not affect the style cascade, but is accomplished by the browser using the browser-specified values instead of the cascaded values when painting colors. These browser-specified values are selected from the set of system colors &emdash; this ensures a consistent contrast for common UI elements for users that have forced colors enabled.</p>
+<p>In forced colors mode, the values of the following properties are treated as if they have no author-level values specified. That is, browser-specified values are used instead. The browser-specified values do not affect the style cascade; the values are instead forced by the browser at paint time. These browser-specified values are selected from the set of system colors &emdash; this ensures a consistent contrast for common UI elements for users that have forced colors enabled.</p>
 
 <ul>
  <li>{{cssxref("color")}}</li>
@@ -57,7 +57,7 @@ tags:
 <p><strong>Note:</strong> user agents choose system colors based on elements, <em>not</em> their roles. As an example, adding role="button" to a div will not cause an element's color to be forced to ButtonText</p>
 
 <p>There are two cases where the user agent does not force the values for the above properties &emdash; when a {{cssxref("forced-color-adjust")}} value of 'none' is applied to an element, or when a system color is specified by the author.</p>
-<p>When forced-color-adjust is set to 'none' on an element, none of the forced color values will apply, and author style will be applied as normal.</p>
+<p>When forced-color-adjust is set to 'none' on an element, none of the forced color values will apply, and author styles will be applied as normal.</p>
 <p>When a system color is specified, it will be used instead of the value that would otherwise have been forced.</p>
 
 <p>You can also use system colors with any property <em>other</em> than those listed above, to ensure that the rest of the page integrates with the restricted color palette available in forced colors mode.</p>
