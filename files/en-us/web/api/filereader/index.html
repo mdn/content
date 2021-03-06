@@ -15,7 +15,7 @@ tags:
 <p>File objects may be obtained from a {{domxref("FileList")}} object returned as a result of a user selecting files using the {{HTMLElement("input")}} element, from a drag and drop operation's {{domxref("DataTransfer")}} object, or from the <code>mozGetAsFile()</code> API on an {{domxref("HTMLCanvasElement")}}.</p>
 
 <div class="notecard warning">
-<p>Important note: <code>FileReader</code> is used to read file content from the user's (remote) system in secure ways only. It cannot be used to read a file by pathname from a file system. To read files by pathname in JavaScript, use the {{domxref("File System Access API")}} or standard Ajax solutions to do server-side file reading, with CORS permission if reading cross-domain.</p>
+<p>Important note: <code>FileReader</code> is used to read file content from the user's (remote) system in secure ways only. It cannot be used to read a file by pathname from a file system. To read files on the client's file system by pathname in JavaScript, use the <a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a>. To read server-side files, use standard Ajax solutions, with CORS permission if reading cross-domain.</p>
 </div>
 
 <p>{{AvailableInWorkers}}</p>
