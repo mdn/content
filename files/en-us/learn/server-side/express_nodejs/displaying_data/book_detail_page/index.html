@@ -38,7 +38,7 @@ exports.book_detail = function(req, res, <strong>next</strong>) {
             return next(err);
         }
         // Successful, so render.
-        res.render('book_detail', { title: results.book.title, book: results.book, book_instances: results.book_instance } );
+        res.render('book_detail', { book: results.book, book_instances: results.book_instance } );
     });</strong>
 
 };
@@ -58,7 +58,7 @@ exports.book_detail = function(req, res, <strong>next</strong>) {
 <pre>extends layout
 
 block content
-  h1 #{title}: #{book.title}
+  h1 Title: #{book.title}
 
   p #[strong Author:]
     a(href=book.author.url) #{book.author.name}
