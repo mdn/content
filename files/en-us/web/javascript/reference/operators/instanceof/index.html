@@ -98,14 +98,10 @@ o3 instanceof C        // true since C.prototype is now in o3's prototype chain
   Demonstrating that <code>String</code> and <code>Date</code> are of type
   <code>Object</code></h3>
 
-<p>The following code uses <code>instanceof</code> to demonstrate that <code>String</code>
-  and <code>Date</code> objects are also of type <code>Object</code> (they are derived
-  from <code>Object</code>).</p>
-<p>However, objects created with the object literal notation are an exception here:
-  Although the prototype is <code>undefined</code>, <code>instanceof Object</code> returns
-  <code>true</code>.</p>
+<h3>Using instanceof with String</h3>
 
-<strong>String objects</strong>
+<p>The following example shows the behavior of <strong>instanceof</strong> by <code>String</code>. String is also of type <code>Object</code>(it is derived from Object)</p>
+
 <pre class="brush: js">let literalString = 'This is a literal string';
 let stringObject  = new String('String created with constructor');
 
@@ -118,7 +114,10 @@ stringObject  instanceof Object;  // true
 stringObject  instanceof Date;    // false
 </pre>
 
-<strong>Date objects</strong>
+<h3>Using instanceof with Date</h3>
+
+<p>The following example shows the behavior of <strong>instanceof</strong> by <code>Date</code> Date is also of type <code>Object</code>(it is derived from Object)</p>
+
 <pre class="brush: js">let myDate = new Date();
 
 myDate instanceof Date;      // true
@@ -126,7 +125,9 @@ myDate instanceof Object;    // true
 myDate instanceof String;    // false
 </pre>
 
-<strong>Objects created using Object.create</strong>
+<h3>Objects created using Object.create</h3>
+
+<p>The following example shows the behavior of <strong>instanceof</strong> when the Object was created by the create function of Object <code>Object.create</code></p>
 <pre class="brush: js">function Shape() {
 }
 
