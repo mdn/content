@@ -5804,9 +5804,7 @@
 /en-US/docs/MathML/Element/merror	/en-US/docs/Web/MathML/Element/merror
 /en-US/docs/MathML/Element/mfenced	/en-US/docs/Web/MathML/Element/mfenced
 /en-US/docs/MathML/Element/mfrac	/en-US/docs/Web/MathML/Element/mfrac
-/en-US/docs/MathML/Element/mglyph	/en-US/docs/Web/MathML/Element/mglyph
 /en-US/docs/MathML/Element/mi	/en-US/docs/Web/MathML/Element/mi
-/en-US/docs/MathML/Element/mlabeledtr	/en-US/docs/Web/MathML/Element/mlabeledtr
 /en-US/docs/MathML/Element/mmultiscripts	/en-US/docs/Web/MathML/Element/mmultiscripts
 /en-US/docs/MathML/Element/mn	/en-US/docs/Web/MathML/Element/mn
 /en-US/docs/MathML/Element/mo	/en-US/docs/Web/MathML/Element/mo
@@ -7204,6 +7202,7 @@
 /en-US/docs/Web/API/BatteryManager.onchargingtimechange	/en-US/docs/Web/API/BatteryManager/onchargingtimechange
 /en-US/docs/Web/API/BatteryManager.ondischargingtimechange	/en-US/docs/Web/API/BatteryManager/ondischargingtimechange
 /en-US/docs/Web/API/BatteryManager.onlevelchange	/en-US/docs/Web/API/BatteryManager/onlevelchange
+/en-US/docs/Web/API/Beacon_API/Using_the_Beacon_API	/en-US/docs/Web/API/Beacon_API
 /en-US/docs/Web/API/BeforeInstallPromptEvent/BeforeInstallPromptEvent.prompt()	/en-US/docs/Web/API/BeforeInstallPromptEvent/prompt
 /en-US/docs/Web/API/BiquadFilterNode.Q	/en-US/docs/Web/API/BiquadFilterNode/Q
 /en-US/docs/Web/API/BiquadFilterNode.detune	/en-US/docs/Web/API/BiquadFilterNode/detune
