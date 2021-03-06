@@ -9,9 +9,11 @@ tags:
   - Interface
   - working with files
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}</div>
+<div>{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}</div>
 
 <p class="summary">The <strong><code>FileSystemFileHandle</code></strong> interface of the {{domxref('File System Access API')}} represents a handle to a file system entry. The interface is accessed thought the {{domxref('window.showOpenFilePicker()')}} method.</p>
+
+<p>Note that read and write operations depend on file-access permissions that do not persist after a page refresh if no other tabs for that origin remain open. The {{domxref("FileSystemHandle.queryPermission()", "queryPermission")}} method of the {{domxref("FileSystemHandle")}} interface can be used to verify permission state before accessing a file.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -57,9 +59,6 @@ tags:
   await writable.close();
 }
 </pre>
-
-<p>Note that read and write operations depend on file-access permissions that do not persist after a page refresh if no other tabs for that origin remain open. The {{domxref("FileSystemHandle.queryPermission()", "queryPermission")}} method of the {{domxref("FileSystemHandle")}} interface can be used to verify permission state before accessing a file.</p>
-
 
 <h2 id="Specifications">Specifications</h2>
 
