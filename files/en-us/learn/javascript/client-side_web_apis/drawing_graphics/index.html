@@ -744,7 +744,7 @@ draw();</pre>
 
   <pre class="brush: js">const scene = new THREE.Scene();</pre>
 
-  <p>The <code><a href="https://threejs.org/docs/index.html#Reference/Scenes/Scene">Scene()</a></code> constructor creates a new scene, which represents the whole 3D world we are trying to display.</p>
+  <p>The <code><a href="https://threejs.org/docs/index.html#api/en/scenes/Scene">Scene()</a></code> constructor creates a new scene, which represents the whole 3D world we are trying to display.</p>
  </li>
  <li>
   <p>Next, we need a <strong>camera</strong> so we can see the scene. In 3D imagery terms, the camera represents a viewer's position in the world. To create a camera, add the following lines next:</p>
@@ -753,7 +753,7 @@ draw();</pre>
 camera.position.z = 5;
 </pre>
 
-  <p>The <code><a href="https://threejs.org/docs/index.html#Reference/Cameras/PerspectiveCamera">PerspectiveCamera()</a></code> constructor takes four arguments:</p>
+  <p>The <code><a href="https://threejs.org/docs/index.html#api/en/cameras/PerspectiveCamera">PerspectiveCamera()</a></code> constructor takes four arguments:</p>
 
   <ul>
    <li>The field of view: How wide the area in front of the camera is that should be visible onscreen, in degrees.</li>
@@ -765,7 +765,7 @@ camera.position.z = 5;
   <p>We also set the camera's position to be 5 distance units out of the Z axis, which, like in CSS, is out of the screen towards you, the viewer.</p>
  </li>
  <li>
-  <p>The third vital ingredient is a renderer. This is an object that renders a given scene, as viewed through a given camera. We'll create one for now using the <code><a href="https://threejs.org/docs/index.html#Reference/Renderers/WebGLRenderer">WebGLRenderer()</a></code> constructor, but we'll not use it till later. Add the following lines next:</p>
+  <p>The third vital ingredient is a renderer. This is an object that renders a given scene, as viewed through a given camera. We'll create one for now using the <code><a href="https://threejs.org/docs/index.html#api/en/renderers/WebGLRenderer">WebGLRenderer()</a></code> constructor, but we'll not use it till later. Add the following lines next:</p>
 
   <pre class="brush: js">const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -797,8 +797,8 @@ loader.load( 'metal003.png', function (texture) {
 
   <ul>
    <li>We first create a <code>cube</code> global variable so we can access our cube from anywhere in the code.</li>
-   <li>Next, we create a new <code><a href="https://threejs.org/docs/index.html#Reference/Loaders/TextureLoader">TextureLoader</a></code> object, then call <code>load()</code> on it. <code>load()</code> takes two parameters in this case (although it can take more): the texture we want to load (our PNG), and a function that will run when the texture has loaded.</li>
-   <li>Inside this function we use properties of the <code><a href="https://threejs.org/docs/index.html#Reference/Textures/Texture">texture</a></code> object to specify that we want a 2 x 2 repeat of the image wrapped around all sides of the cube. Next, we create a new <code><a href="https://threejs.org/docs/index.html#Reference/Geometries/BoxGeometry">BoxGeometry</a></code> object and a new <code><a href="https://threejs.org/docs/index.html#Reference/Materials/MeshLambertMaterial">MeshLambertMaterial</a></code> object, and bring them together in a <code><a href="https://threejs.org/docs/index.html#Reference/Objects/Mesh">Mesh</a></code> to create our cube. An object typically requires a geometry (what shape it is) and a material (what its surface looks like).</li>
+   <li>Next, we create a new <code><a href="https://threejs.org/docs/index.html#api/en/loaders/TextureLoader">TextureLoader</a></code> object, then call <code>load()</code> on it. <code>load()</code> takes two parameters in this case (although it can take more): the texture we want to load (our PNG), and a function that will run when the texture has loaded.</li>
+   <li>Inside this function we use properties of the <code><a href="https://threejs.org/docs/index.html#api/en/textures/Texture">texture</a></code> object to specify that we want a 2 x 2 repeat of the image wrapped around all sides of the cube. Next, we create a new <code><a href="https://threejs.org/docs/index.html#api/en/geometries/BoxGeometry">BoxGeometry</a></code> object and a new <code><a href="https://threejs.org/docs/index.html#api/en/materials/MeshLambertMaterial">MeshLambertMaterial</a></code> object, and bring them together in a <code><a href="https://threejs.org/docs/index.html#api/en/objects/Mesh">Mesh</a></code> to create our cube. An object typically requires a geometry (what shape it is) and a material (what its surface looks like).</li>
    <li>Last of all, we add our cube to the scene, then call our <code>draw()</code> function to start off the animation.</li>
   </ul>
  </li>
@@ -813,7 +813,7 @@ spotLight.position.set( 100, 1000, 1000 );
 spotLight.castShadow = true;
 scene.add(spotLight);</pre>
 
-  <p>An <code><a href="https://threejs.org/docs/index.html#Reference/Lights/AmbientLight">AmbientLight</a></code> object is a kind of soft light that lightens the whole scene a bit, like the sun when you are outside. The <code><a href="https://threejs.org/docs/index.html#Reference/Lights/SpotLight">SpotLight</a></code> object, on the other hand, is a directional beam of light, more like a flashlight/torch (or a spotlight, in fact).</p>
+  <p>An <code><a href="https://threejs.org/docs/index.html#api/en/lights/AmbientLight">AmbientLight</a></code> object is a kind of soft light that lightens the whole scene a bit, like the sun when you are outside. The <code><a href="https://threejs.org/docs/index.html#api/en/lights/SpotLight">SpotLight</a></code> object, on the other hand, is a directional beam of light, more like a flashlight/torch (or a spotlight, in fact).</p>
  </li>
  <li>
   <p>Last of all, let's add our <code>draw()</code> function to the bottom of the code:</p>
