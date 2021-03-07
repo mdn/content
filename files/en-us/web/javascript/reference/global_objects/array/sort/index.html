@@ -275,15 +275,45 @@ var result = mapped.map(function(el){
 <h3 id="sort_stability">Sort stability</h3>
 
 Since version 10 (or EcmaScript 2019), the <a href="https://tc39.es/ecma262/#sec-array.prototype.sort">specification</a> dictates that <code>Array.prototype.sort</code> is stable.<br />
-This means that objects that compare equal, will appear in the same order before and after sorting. For example, say you had the following array of objects:  
+This means that objects that compare equal, will appear in the same order before and after sorting. For example, say you had a list of students alongside their grades. Note that the list of students is already pre-sorted by name in alphabetical order:  
 <pre class="brush: js notranslate">
-var data = [
-	{ name: "Devlin",  rating: 13 },
-	{ name: "Eagle",   rating: 13 },
+var students = [
+	{ name: "Alex",   grade: 15 },
+	{ name: "Devlin", grade: 15 },
+  { name: "Eagle",  grade: 13 },
+  { name: "Sam",    grade: 14 },
 ];
 </pre>
 
-After sorting this array based on <code>rating</code, both objects compare equally because they have the same rating. Stable sort guarantees that they will appear in the same order as before sorting.
+After sorting this array by <code>grade</code> in ascending order:  
+
+<pre class="brush: js notranslate">
+students.sort((firstItem, secondItem) => firstItem.grade - secondItem.grade);  
+</pre>
+
+<code>students</code> will have the following value:  
+
+<pre class="brush: js notranslate">
+[
+  { name: "Eagle",  grade: 13 },
+  { name: "Sam",    grade: 14 },
+	{ name: "Alex",   grade: 15 }, // original maintained for similar grade (stable sorting)
+	{ name: "Devlin", grade: 15 }, // original maintained for similar grade (stable sorting)
+];
+</pre>
+
+It's important to note that students that have the same grade (for example, Alex and Devlin), will remain in the same order as before calling the sort. This is what a stable sorting algorithm guarantees.  
+
+Before version 10 (or EcmaScript 2019), sort stabiliy was not guaranteed, meaning that you could end up with the following:  
+
+<pre class="brush: js notranslate">
+[
+  { name: "Eagle",  grade: 13 },
+  { name: "Sam",    grade: 14 },
+	{ name: "Devlin", grade: 15 }, // original order not maintained
+	{ name: "Alex",   grade: 15 }, // original order not maintained
+];
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
