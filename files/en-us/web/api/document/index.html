@@ -70,6 +70,8 @@ tags:
  <dd>Returns true if the picture-in-picture feature is enabled.</dd>
  <dt>{{DOMxRef("Document.plugins")}}{{ReadOnlyInline}}</dt>
  <dd>Returns a list of the available plugins.</dd>
+ <dt>{{DOMxRef("Document.pointerLockElement")}} {{ReadOnlyInline}}</dt>
+ <dd>Returns the element set as the target for mouse events while the pointer is locked. <code>null</code> if lock is pending, pointer is unlocked, or if the target is in another document.</dd>
  <dt>{{DOMxRef("Document.featurePolicy")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns the {{DOMxRef("FeaturePolicy")}} interface which provides a simple API for introspecting the feature policies applied to a specific document.</dd>
  <dt>{{DOMxRef("Document.scripts")}}{{ReadOnlyInline}}</dt>
@@ -122,8 +124,6 @@ tags:
 <p><em>The <code>Document</code> interface includes the following properties defined on the {{DOMxRef("DocumentOrShadowRoot")}} mixin. Note that this is currently only implemented by Chrome; other browsers still implement them directly on the {{DOMxRef("Document")}} interface.</em></p>
 
 <dl>
- <dt>{{DOMxRef("DocumentOrShadowRoot.pointerLockElement")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
- <dd>Returns the element set as the target for mouse events while the pointer is locked. <code>null</code> if lock is pending, pointer is unlocked, or if the target is in another document.</dd>
  <dt>{{DOMxRef("DocumentOrShadowRoot.styleSheets")}}{{ReadOnlyInline}}</dt>
  <dd>Returns a {{DOMxRef('StyleSheetList')}} of {{DOMxRef('CSSStyleSheet')}} objects for stylesheets explicitly linked into, or embedded in a document.</dd>
 </dl>
