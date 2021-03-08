@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - files/**/_redirects.txt
+      - files/**
       - .github/workflows/pr-check_redirects.yml
 
 jobs:
@@ -35,4 +35,4 @@ jobs:
         run: yarn --frozen-lockfile
 
       - name: Check redirects file(s)
-        run: yarn content validate-redirects
+        run: yarn content validate-redirects en-us --strict

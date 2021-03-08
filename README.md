@@ -474,7 +474,13 @@ to delete (e.g., `Learn/Accessibility`), optionally followed by the locale
 of the existing document (defaults to `en-US`). If the existing document
 that you'd like to delete has child documents (i.e. it represents a
 document tree), you must also specify the `-r, --recursive` option, or
-the command will fail. For example, let's say you want to delete the
+the command will fail.
+
+**Important: you need to use the `delete` command to delete MDN documents. Don't
+just delete their directories from the repo, as `delete` also handles other
+necessary changes such as updating the `_wikihistory.json` file.**
+
+For example, let's say you want to delete the
 entire `/en-US/Learn/Accessibility` tree:
 
 1. First, as we've outlined above, you'll start a fresh branch to work within:
@@ -545,7 +551,7 @@ request is created, but why wait to fix any possible issues later?
     ```
 
 1. Use your image within the document. For example, add the following `<img>` element
-somehwere inside `files/en-us/web/css/index.html`:
+somewhere inside `files/en-us/web/css/index.html`:
 
     ```html
     <img src="my-cool-image.png" alt="My cool image">
@@ -663,20 +669,19 @@ KumaScript macros are still used on MDN pages, even in the new platform.
 These are the function names surrounded by handlebars-style double curly
 braces that you'll see in the source code on occasion, for example
 `{{domxref}}` Eventually we have to replace them with something else,
-but they are here for now. They live in
-[https://github.com/mdn/yari/tree/master/kumascript/macros](https://github.com/mdn/yari/tree/master/kumascript/macros).
+but they are here for now. They live in <https://github.com/mdn/yari/tree/main/kumascript/macros>.
 
 Sometimes you'll want to make a change to the content that relies on a
 macro change. Take [https://github.com/mdn/content/pull/187](https://github.com/mdn/content/pull/187).
 Florian wanted to add documentation for a new WebGL extension to MDN, but
 this change relied on the new feature's spec being added to
-[https://github.com/mdn/yari/blob/master/kumascript/macros/SpecData.json](https://github.com/mdn/yari/blob/master/kumascript/macros/SpecData.json).
+<https://github.com/mdn/yari/blob/main/kumascript/macros/SpecData.json>.
 If not, the specification table on the new page would not render properly
 because the data it relies on would not be there.
 
 In such situations:
 
-1. Make the required PR to <https://github.com/mdn/yari/blob/master/kumascript/macros/>
+1. Make the required PR to <https://github.com/mdn/yari/tree/main/kumascript/macros>
    first, and get that merged.
 2. Add the content to this repo.
 

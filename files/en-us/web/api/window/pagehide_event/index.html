@@ -35,6 +35,27 @@ tags:
  </tbody>
 </table>
 
+<h2>Usage notes</h2>
+
+<p>Like the <a href="/en-US/docs/Web/API/Window/unload_event"><code>unload</code></a>
+  and <a href="/en-US/docs/Web/API/Window/beforeunload_event"><code>beforeunload</code></a> events, this event is not reliably fired by browsers, especially on mobile. For example, the <code>pagehide</code> event is not fired at all in the following scenario:</p>
+
+<ol>
+  <li>A mobile user visits your page.</li>
+  <li>The user then switches to a different app.</li>
+  <li>Later, the user closes the browser from the app manager.</li>
+</ol>
+
+<p>However, unlike the <code>unload</code> and <code>beforeunload</code> events, this event is compatible with the <a href="https://web.dev/bfcache/">back/forward cache</a> (bfcache), so adding a listener to this event will not prevent the page
+from being included in the bfcache.</p>
+
+<p>The best event to use to signal the end of a user's session is the <a href="/en-US/docs/Web/API/Document/visibilitychange_event"><code>visibilitychange</code></a> event. In browsers that don't support <code>visibilitychange</code> the <code>pagehide</code> event is the next-best alternative.</p>
+
+<p>If you're specifically trying to detect page unload events, the <code>pagehide</code> event is the best option.</p>
+
+<p>See the <a href="https://developers.google.com/web/updates/2018/07/page-lifecycle-api">Page Lifecycle API</a> guide for more information about how this event relates to other events in the page lifecycle.</p>
+
+
 <h2 id="Examples">Examples</h2>
 
 <p>In this example, an event handler is established to watch for <code>pagehide</code> events and to perform special handling if the page is being persisted for possible reuse.</p>
@@ -86,5 +107,9 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{domxref("Window.pageshow_event", "pageshow")}} event</li>
+ <li>The {{domxref("Window.pageshow_event", "pageshow")}} event.</li>
+ <li><a
+     href="https://developers.google.com/web/updates/2018/07/page-lifecycle-api#developer-recommendations-for-each-state">Page Lifecycle API</a> gives best-practices guidance on handling page lifecyle behavior in your web applications.</li>
+ <li><a href="https://github.com/GoogleChromeLabs/page-lifecycle">PageLifecycle.js</a>: a JavaScript library that deals with cross-browser inconsistencies in page lifecyle behavior.</li>
+ <li><a href="https://web.dev/bfcache/">Back/forward cache</a> explains what the back/forward cache is, and its implications for various page lifecycle events.</li>
 </ul>

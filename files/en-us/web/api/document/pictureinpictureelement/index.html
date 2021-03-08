@@ -1,0 +1,80 @@
+---
+title: Document.pictureInPictureElement
+slug: Web/API/Document/pictureInPictureElement
+tags:
+  - API
+  - Document
+  - Graphics
+  - Picture-in-Picture
+  - Picture-in-Picture API
+  - Property
+  - Read-only
+  - Reference
+  - pictureInPictureElement
+  - pip
+---
+<div>{{ApiRef("Fullscreen API")}}</div>
+
+<p><span class="seoSummary">The
+    <code><strong>Document.pictureInPictureElement</strong></code> read-only
+    property returns the {{ domxref("Element") }} that is currently being
+    presented in picture-in-picture mode in this document, or <code>null</code> if
+    picture-in-picture mode is not currently in use.</span></p>
+
+<p>Although this property is read-only, it will not throw if it is modified (even in
+  strict mode); the setter is a no-operation and will be ignored.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre
+  class="brush: js"><var>document</var>.pictureInPictureElement;</pre>
+
+<h3 id="Return_value">Return value</h3>
+
+<p>A reference to the {{domxref("Element")}} object that's currently in
+  picture-in-picture mode; if picture-in-picture mode isn't currently in use by the
+  <code><var>document</var></code>, the returned value is <code>null</code>.</p>
+
+<h2 id="Example">Examples</h2>
+
+<p>This example presents a function, <code>exitPictureInPicture()</code>,
+  which tests the value returned by <code>pictureInPictureElement</code>. If the document
+  is in picture-in-picture mode (<code>pictureInPictureElement</code> isn't
+  <code>null</code>), <code><a href="/en-US/docs/Web/API/Document/exitPictureInPicture">Document.exitPictureInPicture()</a></code> is run to exit
+  picture-in-picture mode.</p>
+
+<pre class="brush: js">function exitPictureInPicture() {
+  if (document.pictureInPictureElement) {
+    document.exitPictureInPicture();
+  }
+}</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("Picture-in-Picture", "#dom-documentorshadowroot-pictureinpictureelement", "Document.pictureInPictureElement")}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("api.Document.pictureInPictureElement")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li>{{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}</li>
+  <li>{{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}</li>
+  <li>{{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}</li>
+  <li>{{DOMxRef("Document.pictureInPictureEnabled")}}</li>
+  <li>{{DOMxRef("Document.exitPictureInPicture()")}}</li>
+  <li>{{CSSxRef(":picture-in-picture")}}</li>
+</ul>
