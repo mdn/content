@@ -276,8 +276,7 @@ var result = mapped.map(function(el){
 
 <p>Since version 10 (or EcmaScript 2019), the <a href="https://tc39.es/ecma262/#sec-array.prototype.sort">specification</a> dictates that <code>Array.prototype.sort</code> is stable.</p>
 <p>This means that objects that compare equal, will appear in the same order before and after sorting. For example, say you had a list of students alongside their grades. Note that the list of students is already pre-sorted by name in alphabetical order:</p>
-<pre class="brush: js">
-const students = [
+<pre class="brush: js">const students = [
   { name: "Alex",   grade: 15 },
   { name: "Devlin", grade: 15 },
   { name: "Eagle",  grade: 13 },
@@ -287,14 +286,12 @@ const students = [
 
 <p>After sorting this array by <code>grade</code> in ascending order:</p>
 
-<pre class="brush: js">
-students.sort((firstItem, secondItem) => firstItem.grade - secondItem.grade);  
+<pre class="brush: js">students.sort((firstItem, secondItem) => firstItem.grade - secondItem.grade);  
 </pre>
 
 …<code>students</code> will then have the following value:  
 
-<pre class="brush: js">
-[
+<pre class="brush: js">[
   { name: "Eagle",  grade: 13 },
   { name: "Sam",    grade: 14 },
   { name: "Alex",   grade: 15 }, // original maintained for similar grade (stable sorting)
@@ -306,8 +303,7 @@ students.sort((firstItem, secondItem) => firstItem.grade - secondItem.grade);
 
 <p>Before version 10 (or EcmaScript 2019), sort stabiliy was not guaranteed, meaning that you could end up with the following:</p>
 
-<pre class="brush: js">
-[
+<pre class="brush: js">[
   { name: "Eagle",  grade: 13 },
   { name: "Sam",    grade: 14 },
   { name: "Devlin", grade: 15 }, // original order not maintained
