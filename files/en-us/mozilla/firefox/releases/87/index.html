@@ -68,6 +68,10 @@ tags:
 
 <h4 id="DOM">DOM</h4>
 
+<ul>
+  <li>The global {{domxref("HTMLElement.beforeinput_event", "beforeinput")}} event and {{domxref('InputEvent.getTargetRanges()', 'getTargetRanges()')}} method are now enabled by default. This allows web apps to override text edit behaviour before the browser modifies the DOM tree, and in turn gives them more control over input events to improve performance. The global {{domxref("HTMLElement.beforeinput_event", "beforeinput")}} event is sent to an {{HTMLElement("input")}} element—or any element whose {{htmlattrxref("contenteditable")}} attribute is enabled—immediately before the element's value changes. The {{domxref('InputEvent.getTargetRanges()', 'getTargetRanges()')}} method of the {{domxref("InputEvent")}} interface returns an array of static ranges that will be affected by a change to the DOM if the input event is not canceled.</li>
+</ul>
+
 <h4 id="Media_WebRTC_and_Web_Audio">Media, WebRTC, and Web Audio</h4>
 
 <h4 id="Removals_7">Removals</h4>

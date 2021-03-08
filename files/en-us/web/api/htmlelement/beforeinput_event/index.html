@@ -14,6 +14,8 @@ tags:
 
 <p>The DOM <strong><code>beforeinput</code></strong> event fires when the value of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element is about to be modified. The event also applies to elements with {{domxref("HTMLElement.contentEditable", "contenteditable")}} enabled, and to any element when {{domxref("Document.designMode", "designMode")}} is turned on.</p>
 
+<p>This allows web apps to override text edit behaviour before the browser modifies the DOM tree, and in turn gives them more control over input events to improve performance.</p>
+
 <p>In the case of <code>contenteditable</code> and <code>designMode</code>, the event target is the <strong>editing host</strong>. If these properties apply to multiple elements, the editing host is the nearest ancestor element whose parent isn't editable.</p>
 
 <table class="properties">
