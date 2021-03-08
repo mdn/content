@@ -32,6 +32,8 @@ tags:
  <dd>The mode of the <code>ShadowRoot</code> — either <code>open</code> or <code>closed</code>. This defines whether or not the shadow root's internal features are accessible from JavaScript.</dd>
  <dt>{{DOMxRef("ShadowRoot.pictureInPictureElement")}} {{ReadOnlyInline}}</dt>
  <dd>Returns the {{DOMxRef('Element')}} within the shadow tree that is currently being presented in picture-in-picture mode.</dd>
+ <dt>{{DOMxRef("ShadowRoot.pointerLockElement")}} {{ReadOnlyInline}}</dt>
+ <dd>Returns the {{DOMxRef('Element')}} set as the target for mouse events while the pointer is locked. <code>null</code> if lock is pending, pointer is unlocked, or if the target is in another tree.</dd>
 </dl>
 
 <h3 id="Properties_included_from_DocumentOrShadowRoot">Properties included from DocumentOrShadowRoot</h3>
