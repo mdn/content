@@ -1,7 +1,7 @@
 ---
 name: New content suggestion
 about: "Use this template to suggest new larger areas of work that you think the MDN writers should work on"
-labels: "Opportunity assessment",
+labels: "Opportunity assessment"
 assignees: chrisdavidmills
 title: "Content suggestion: <TITLE OF SUGGESTION>"
 ---
