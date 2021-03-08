@@ -14,7 +14,7 @@ title: "Content suggestion: <TITLE OF SUGGESTION>"
 can think of that would be useful, for example:
 
 How many pages are likely to be needed?
-What kind of timing would be good for this work?
+How much time do you think this work should take? A few hours? A week? A month?
 Will the work enable learners or professionals to achieve their goals better?
 Does it address critical needs in the web industry?
 Is the work an operational necessity, i.e. is not having it a security risk?
