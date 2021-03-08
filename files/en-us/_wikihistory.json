@@ -44368,21 +44368,6 @@
       "mattwojo"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/pointerLockElement": {
-    "modified": "2020-10-15T21:25:15.470Z",
-    "contributors": [
-      "mfuji09",
-      "mfluehr",
-      "jpmedley",
-      "fscholz",
-      "chrisdavidmills",
-      "erikadoyle",
-      "wbamberg",
-      "teoli",
-      "kscarfone",
-      "Jeremie"
-    ]
-  },
   "Web/API/DocumentOrShadowRoot/styleSheets": {
     "modified": "2020-10-19T21:57:52.891Z",
     "contributors": [
@@ -165805,6 +165790,21 @@
     "contributors": [
       "chrisdavidmills",
       "germain"
+    ]
+  },
+  "Web/API/Document/pointerLockElement": {
+    "modified": "2020-10-15T21:25:15.470Z",
+    "contributors": [
+      "mfuji09",
+      "mfluehr",
+      "jpmedley",
+      "fscholz",
+      "chrisdavidmills",
+      "erikadoyle",
+      "wbamberg",
+      "teoli",
+      "kscarfone",
+      "Jeremie"
     ]
   }
 }
