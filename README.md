@@ -655,7 +655,7 @@ page's meta data (like `slug`) if needed.
 above procedure, but move the page in question the opposite way between repos.
 
 **Note:** You can have an archived page with non-archived pages below it in the
-hierarchy, and vice-versa. To archive this you need to have the same directory
+hierarchy, and vice-versa. To achieve this you need to have the same directory
 structure in both the `content` and `archive-content` repos. Whether a page
 is non-archived or archived depends on which repo its `index.html` file is
 in. As an example, compare the [archived-content mozilla directory](https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla)
