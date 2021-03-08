@@ -34,21 +34,21 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@3.1.2":
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.1.2.tgz#6b68a073e10cd7aebb40a40693dfc4c9326b9933"
-  integrity sha512-lHiIij1SWanbzEPCuMj85O/af85zWdlqZ1Ik+qtTIhZSPLvJPvVoGyCrwEc9q3RELccty+FgYgkh4D56ujRysg==
+"@mdn/browser-compat-data@3.1.3":
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.1.3.tgz#aed918e7d5916b2a5e2ec9678b3c74cafb20c7d6"
+  integrity sha512-Qdqeox4APsYwAQQSO68D1p75DL9an1wS8b/51m+nH98unN4jbS5bvg22WQrg+TMq2/3Mg/E5zprqfUzJD84qgw==
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.4.231":
-  version "0.4.231"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.231.tgz#2322e506b32461ed050c458c639d76d93231a2a2"
-  integrity sha512-LoxqQBXIhyQOi5aSh9AeJPv8AcmTSPHvMcbx8ewUfLarURB+n8zDtpwXcy/UKtH5coVPnNrFcNniPxX2mttJsA==
+"@mdn/yari@0.4.238":
+  version "0.4.238"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.238.tgz#9d24a557263c12e5fec2af9230f1aba644092c49"
+  integrity sha512-ZfrCQtALFSR8Fz7e38N8HoOGvLMwFEp3xhJclP0PgC27eJNWcUVmQGkqomK1Gc4e6rYKgktgawf4fBVhWEe9dQ==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
-    "@mdn/browser-compat-data" "3.1.2"
+    "@mdn/browser-compat-data" "3.1.3"
     accept-language-parser "1.5.0"
     chalk "4.1.0"
     cheerio "1.0.0-rc.5"
@@ -61,7 +61,7 @@
     ejs "3.1.6"
     express "4.17.1"
     fast-xml-parser "3.18.0"
-    file-type "16.2.0"
+    file-type "16.3.0"
     front-matter "4.0.2"
     fs-extra "9.1.0"
     glob "^7.1.6"
@@ -71,7 +71,7 @@
     imagemin "7.0.1"
     imagemin-gifsicle "7.0.0"
     imagemin-mozjpeg "9.0.0"
-    imagemin-pngquant "9.0.1"
+    imagemin-pngquant "9.0.2"
     imagemin-svgo "9.0.0"
     inquirer "^8.0.0"
     is-svg "4.2.1"
@@ -1478,10 +1478,10 @@ figures@^3.0.0:
   dependencies:
     escape-string-regexp "^1.0.5"
 
-file-type@16.2.0:
-  version "16.2.0"
-  resolved "https://registry.yarnpkg.com/file-type/-/file-type-16.2.0.tgz#d4f1da71ddda758db7f15f93adfaed09ce9e2715"
-  integrity sha512-1Wwww3mmZCMmLjBfslCluwt2mxH80GsAXYrvPnfQ42G1EGWag336kB1iyCgyn7UXiKY3cJrNykXPrCwA7xb5Ag==
+file-type@16.3.0:
+  version "16.3.0"
+  resolved "https://registry.yarnpkg.com/file-type/-/file-type-16.3.0.tgz#f03af91db30f92cc9a0b335c0644c46101522f6d"
+  integrity sha512-ZA0hV64611vJT42ltw0T9IDwHApQuxRdrmQZWTeDmeAUtZBBVSQW3nSQqhhW1cAgpXgqcJvm410BYHXJQ9AymA==
   dependencies:
     readable-web-to-node-stream "^3.0.0"
     strtok3 "^6.0.3"
@@ -1961,10 +1961,10 @@ imagemin-mozjpeg@9.0.0:
     is-jpg "^2.0.0"
     mozjpeg "^7.0.0"
 
-imagemin-pngquant@9.0.1:
-  version "9.0.1"
-  resolved "https://registry.yarnpkg.com/imagemin-pngquant/-/imagemin-pngquant-9.0.1.tgz#ecf22f522bdb734a503ecc21bdd7bc3d0230edcc"
-  integrity sha512-PYyo9G/xwddf+Qqlqe3onz5ZH7p6vHYVVkiuuczUjxZmfekyY77RXaOA/AR6FnVoeQxGa/pDtEK5xUKOcVo+sA==
+imagemin-pngquant@9.0.2:
+  version "9.0.2"
+  resolved "https://registry.yarnpkg.com/imagemin-pngquant/-/imagemin-pngquant-9.0.2.tgz#38155702b0cc4f60f671ba7c2b086ea3805d9567"
+  integrity sha512-cj//bKo8+Frd/DM8l6Pg9pws1pnDUjgb7ae++sUX1kUVdv2nrngPykhiUOgFeE0LGY/LmUbCf4egCHC4YUcZSg==
   dependencies:
     execa "^4.0.0"
     is-png "^2.0.0"
