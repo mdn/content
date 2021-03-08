@@ -274,10 +274,10 @@ var result = mapped.map(function(el){
 
 <h3 id="sort_stability">Sort stability</h3>
 
-Since version 10 (or EcmaScript 2019), the <a href="https://tc39.es/ecma262/#sec-array.prototype.sort">specification</a> dictates that <code>Array.prototype.sort</code> is stable.<br />
-This means that objects that compare equal, will appear in the same order before and after sorting. For example, say you had a list of students alongside their grades. Note that the list of students is already pre-sorted by name in alphabetical order:  
+<p>Since version 10 (or EcmaScript 2019), the <a href="https://tc39.es/ecma262/#sec-array.prototype.sort">specification</a> dictates that <code>Array.prototype.sort</code> is stable.</p>
+<p>This means that objects that compare equal, will appear in the same order before and after sorting. For example, say you had a list of students alongside their grades. Note that the list of students is already pre-sorted by name in alphabetical order:</p>
 <pre class="brush: js">
-var students = [
+const students = [
   { name: "Alex",   grade: 15 },
   { name: "Devlin", grade: 15 },
   { name: "Eagle",  grade: 13 },
