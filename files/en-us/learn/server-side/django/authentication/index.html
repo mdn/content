@@ -194,15 +194,24 @@ Exception Value:    <strong>registration/login.html</strong></pre>
                  |_registration</p>
 </div>
 
-<p>To make these directories visible to the template loader (i.e. to put this directory in the template search path) open the project settings (<strong>/locallibrary/locallibrary/settings.py</strong>), and update the <code>TEMPLATES</code> section's <code>'DIRS'</code> line as shown.</p>
+<p>To make the <strong>templates</strong> directory visible to the template loader we need to add it in the template search path. Open the project settings (<strong>/locallibrary/locallibrary/settings.py</strong>).</p>
 
-<pre class="brush: python">TEMPLATES = [
-    {
-        ...
-<strong>        'DIRS': [os.path.join(BASE_DIR, 'templates')],</strong>
-        'APP_DIRS': True,
-        ...
-</pre>
+
+<p>Then import the <code>os</code> module (add the following line near the top of the file).</p>
+    <pre class="brush: python">import os # needed by code below</pre>
+ 
+<p>Update the <code>TEMPLATES</code> section's <code>'DIRS'</code> line as shown:</p>
+
+<pre class="brush: python">    ...
+    TEMPLATES = [
+      {
+       ...
+    <strong>   'DIRS': [os.path.join(BASE_DIR, 'templates')],</strong>
+       'APP_DIRS': True,
+       ...
+    </pre>
+
+
 
 <h3 id="Login_template">Login template</h3>
 
