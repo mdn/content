@@ -9,9 +9,9 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Performance/what_is_web_performance", "Learn/Performance/Measuring_performance", "Learn/Performance")}}</div>
 
-<p><span class="seoSummary"><strong><a href="/en-US/docs/Glossary/Perceived_performance">Perceived performance</a></strong> is how fast a website seems to the user.</span> How a user perceives your performance is as important, or perhaps more important, than any objective statistic, but it's subjective, and not as readily measurable. Perceived performance is user perspective, not a metric.</p>
+<p><span class="seoSummary"><strong><a href="/en-US/docs/Glossary/Perceived_performance">Perceived performance</a></strong> is a subjective measure of website performance, responsiveness, and reliability. In other words, how fast a website seems to the user.</span> It is harder to quantify and measure than the actual speed of operation, but perhaps even more important.</p>
 
-<p>This article provides a brief introduction to perceived performance, looking at user perceptions, and what objective tools can be used to measure that which is subjective.</p>
+<p>This article provides a brief introduction to the factors that affect perceived performance, along with a number of tools for assessing and improving the perception.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -26,71 +26,79 @@ tags:
  </tbody>
 </table>
 
-<p>Performance is about user perception. How fast a website feels like it's loading and rendering has a greater impact on user experience than how fast the website actually loads and renders. Even if an operation is going to take a long time (because of latency or unavailability of the <a href="/en-US/docs/Glossary/Main_thread">main thread</a>), it is possible to keep the user engaged while they wait by showing a loading spinner, or a series of useful hints and tips (or jokes, or whatever else you think might be appropriate). Such an approach is much better than just showing nothing, which will make it feel like it is taking a lot longer and possibly lead to your users thinking it is broken and giving up.</p>
+<h2 id="Overview">Overview</h2>
 
-<h2 id="Perceived_performance">Perceived performance</h2>
+<p>The perception of how quickly (and smoothly) pages load and respond to user interaction is even more important that the actual time required to fetch the resources. While you may not be able to physically make your site run faster, you may well be able to improve how fast it <em>feels</em> for your users.</p>
 
-<p>The perception of how fast your site loads and how responsive feels to user interaction is vitally important; even more important that actual download time but difficult to quantify. There are areas of your site that you may not be able to make faster, but you can make it <em>feel</em> faster even if the metrics discussed in the other sections can't be improved.</p>
+<p>A good general rule for improving perceived performance is that it is usually better to provide a quick response and regular status updates than make the user wait until an operation fully completes (before providing any information). For example, when loading a page it is better to display the text when it arrives rather than wait for all the images and other resources. Even though the content has not fully downloaded the user can see something is happening and they can start interacting with the content.</p>
 
-<p>There is no unicorn metric that can measure what the user feels, but metrics are useful in gauging improvements (and regressions). Relevant measurements include first meaningful paint (FMP), largest contentful paint (LCP), time to interactive (TTI), render start, DOM interactive, and speed index.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Time appears to pass more quickly for users who are actively engaged, distracted, or entertained, than for those who are waiting passively for something to happen. Where possible, actively engage and inform users who are waiting for a task to complete.</p>
+</div>
 
-<p><strong><a href="/en-US/docs/Glossary/First_paint">First paint </a></strong>is reported by the browser and provides the time, in ms, of when the page starts changing; but this change can be a simple background color update or something even less noticeable. It doesn’t indicate completeness and may report a time when nothing visible is painted. <strong><a href="/en-US/docs/Glossary/First_contentful_paint">First Contentful Paint</a> (FCP)</strong> reports the time when the browser first rendered anything of significance, be that text, foreground or background image, or a canvas or SVG; capturing the very beginning of the loading experience. But, just because there's content, doesn't mean it's useful content or that the user has content to consume. The <strong><a href="/en-US/docs/Glossary/first_meaningful_paint">First Meaningful Paint</a></strong>, or FMP, is the when content appears on the screen that is actually meaningful; which is a better metric for user-perceived loading experience, but still not ideal. <strong>Largest contentful paint (LCP)</strong> metric, defined in the <a href="https://wicg.github.io/largest-contentful-paint/">Largest Contentful Paint API</a>, reports the render time of the largest content element visible in the viewport.</p>
+<p>Similarly, it is better to display a "loading animation" as soon as a user clicks a link to perform a long running operation. While this doesn't change the time taken to complete the operation, the site feels more responsive, and the user knows that it is working on something useful.</p>
 
-<p><strong><a href="/en-US/docs/Glossary/Speed_index">Speed index</a></strong> is also used to approximate perceived performance: it measures the average time for pixels on the visible screen to be painted. It doesn't account for jitter, nor does it weight which content important to a user more highly, so it's not a perfect metric.</p>
 
-<p>These metrics have to do with initial load and render. It is also important to ensure the site feels fast once the user begins interacting with it. For this, <strong><a href="/en-US/docs/Glossary/Time_to_interactive">time to interactive</a></strong>, is a good metric; it is the moment when the last <a href="/en-US/docs/Glossary/Long_task">long task </a>of the load process finishes and the UI is available for user interaction with delay.</p>
+<h2 id="performance_metrics">Performance metrics</h2>
 
-<p>UI lack or responsiveness and jank both harm perceived performance. Even though a task may take a long time, though, there are ways to make it seem faster. There are several tips to improving perceived performance.</p>
+<p>There is no single metric or test that can be run on a site to evaluate how a user "feels". However there are a number of metrics that can be "helpful indicators":</p>
 
-<h3 id="Improving_perceived_performance">Improving perceived performance</h3>
+<dl>
+  <dt><a href="/en-US/docs/Glossary/First_paint">First paint</a></dt>
+  <dd>The time to start of first paint operation. Note that this change may not be visible; it can be a simple background color update or something even less noticeable.</dd>
+  <dt><a href="/en-US/docs/Glossary/First_contentful_paint">First Contentful Paint</a> (FCP)</dt>
+  <dd>The time until first significant rendering (e.g. of text, foreground or background image, canvas or SVG, etc.). Note that this content is not necessarily useful or meaningful.</dd>
+  <dt><a href="/en-US/docs/Glossary/first_meaningful_paint">First Meaningful Paint</a> (FMP)</dt>
+  <dd>The time at which useful content is rendered to the screen.</dd>
+  <dt><a href="https://wicg.github.io/largest-contentful-paint/">Largest Contentful Paint</a> (LCP)</dt>
+  <dd>The render time of the largest content element visible in the viewport.</dd>
+  <dt><a href="/en-US/docs/Glossary/Speed_index">Speed index</a></dt>
+  <dd>Measures the average time for pixels on the visible screen to be painted.</dd>
+  <dt><a href="/en-US/docs/Glossary/Time_to_interactive">Time to interactive</a></dt>
+  <dd>Time until the UI is available for user interaction (i.e. the last <a href="/en-US/docs/Glossary/Long_task">long task</a> of the load process finishes).</dd>
+</dl>
 
-<p>Understanding networking, how the browser works, user perception of time, etc., can help you better understand how to improve the user interaction. However, you don't have to know the ins and outs of how everything, including how the human mind works, to improve the perception of speed.</p>
 
-<p>How fast or slow something feels like it's taking depends a lot on whether the user is actively or passively waiting for this thing to happen. Waits can have an active and passive phase. When the user is active - moving the mouse, thinking, being entertained, they are in an active phase. The passive phase occurs when the user is passively waiting, like staring at a monochrome screen. If both the passive and active waits time were objectively equal, users would estimate that the passive waiting period was longer than the active. If a load, render, or response time can not be objectively minimized any further, turning the wait into an active wait instead of a passive wait can make it feel faster.</p>
+<h2 id="improving_performance">Improving performance</h2>
 
-<p>There are tips and tricks to follow. Some of these quick tips have full articles if you want to dive deeper.</p>
+<p>Here are a few tips and tricks to help improve perceived performance:</p>
 
-<p>Displaying content, or at least some part of the page with an indication that content is loading, as quickly as possible, is essential to improving perceived performance. For example, because page render is blocked by loading and parsing CSS and JavaScript, minimizing the amount of CSS and JS that needs to be loaded on initially will have a major impact on improving perceived performance. Even though the bytes might be the same, not blocking the page from rendering makes the load <em>feel</em> faster.</p>
+<h3 id="minimize_initial_load">Minimize initial load</h3>
 
-<p>Here are a few tips and tricks to help improve performance:</p>
+<p>To improve perceived performance, minimize the original page load. In other words, download the content the user is going to interact with immediately first, and download the rest after "in the background". The total amount of content downloaded may actually increase, but the user only <em>waits</em> on a very small amount, so the download feels faster.</p>
 
-<h3 id="Minimize_initial_load">Minimize initial load</h3>
+<p>Separate interactive functionality from content, and load text, styles, and images visible at initial load. Delay, or lazy load, images or scripts that aren’t used or visible on the initial page load. Additionally, you should optimize the assets you do load. Images and video should be served in the most optimal format, compressed, and in the correct size.</p>
 
-<p>To improve perceived performance, minimize the original page load. In other words, first download everything you're going to actually show, but only the stuff you are actually using, then download the rest. If you're downloading all the assets in the end, the weight of all your assets hasn't improved -- in fact, you may need to add some code -- but because the download of non-immediately necessary assets are delayed in a manner that is not perceptible the user, the user will feel like the download was faster. </p>
+For more information see: <a href="https://onilab.com/blog/perceived-performance-vs-actual-load-time-5-secrets-of-lightning-fast-magento-store/">Magento Optimization for Google PageSpeed Insights – the Complete Guide on Getting to the 100 Score</a>.
 
-<p>To <a href="https://onilab.com/blog/perceived-performance-vs-actual-load-time-5-secrets-of-lightning-fast-magento-store/">minimize the assets</a> required for initial load, separate interactive functionality from content so that required content  -- the text, styles, and images visible at initial load -- can be loaded first. Delay, or lazy load, the rest of the assets.</p>
-
-<p>Don't load images or scripts that aren’t used or visible on the initial page load. Either delay their load, loading them when the page becomes usable, or, loading them when they become necessary. Loading additional assets and resources after initial page load improves perceived performance. Loading essential data in initial requests and progressively loading features and data only as needed helps mitigate low bandwidth and lower spec hardware.</p>
-
-<p>Additionally, you should optimize the assets you do load. Images and video should be served in the most optimal format, compressed, and in the correct size.</p>
-
-<h3 id="Prevent_jumping_content_and_other_reflows">Prevent jumping content and other reflows</h3>
+<h3 id="prevent_jumping_content_and_other_reflows">Prevent jumping content and other reflows</h3>
 
 <p>Images or other assets causing content to be pushed down or jump to a different location, like the loading of third party advertisements, can make the page feel like it is still loading and is bad for perceived performance. Content reflowing is especially bad for user experience when not initiated by user interaction. If some assets are going to be slower to load than others, with elements loading after other content has already been painted to the screen, plan ahead and leave space in the layout for them so that content doesn't jump or resize, especially after the site has become interactive.</p>
 
-<h3 id="Avoid_font_file_delays">Avoid font file delays</h3>
+<h3 id="avoid_font_file_delays">Avoid font file delays</h3>
 
-<p>Font use can both help and harm user experience. Selecting the right fonts is an art form, and can greatly improve the user experience. Fonts can also harm user experience, especially if the fonts used need to be imported, and if the importing is not optimal, or if Comic Sans is used (kidding).  Flicker of unstyled text and missing text both harm performance.</p>
+<p>Font choice is important. Selecting an appropriate font can greatly improve the user experience. From a perceived performance point of view, "suboptimal fonts importing" can result in flicker as text is styled or when falling back to other fonts.</p>
 
 <p>Make fallback fonts the same size and weight so that when fonts load the page change is less noticeable.</p>
 
-<h3 id="Interactive_elements_are_interactive">Interactive elements are interactive</h3>
+<h3 id="interactive_elements_are_interactive">Interactive elements are interactive</h3>
 
-<p>Make sure visible interactive elements are always interactive and responsive. If input elements are visible, the user should be able to interact with them without a lag. Users feel that something is laggy when they take more than 50ms to react. They feel that a page is janky when content repaints slower than 16.67ms (or 60 frames per second) or repaints at uneven intervals.</p>
+<p>Make sure visible interactive elements are always interactive and responsive. If input elements are visible, the user should be able to interact with them without a lag. Users feel that something is laggy when they take more than 50ms to react. They feel that a page is behaving poorly when content repaints slower than 16.67ms (or 60 frames per second) or repaints at uneven intervals.</p>
 
-<p>Make things like type-ahead a progressive enhancement: use css to display input modal, JS to add typeahead/autocomplete as it is available</p>
+<p>Make things like type-ahead a progressive enhancement: use CSS to display input modal, JS to add autocomplete as it is available</p>
 
-<h3 id="Make_task_initiators_appear_more_interactive">Make task initiators appear more interactive</h3>
+<h3 id="make_task_initiators_appear_more_interactive">Make task initiators appear more interactive</h3>
 
 <p>Making a content request on keydown rather than waiting for keyup can shave 200ms off the perceived load of the content. Adding an interesting but unobtrusive 200ms animation to that keyup even can reduce another 200ms of the perceived load. You're not saving 400ms of time, but the user doesn't feel like they're waiting for content until, well, until they're waiting for content.</p>
 
-<h2 id="Conclusion">Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 
-<p>By turning as much of the download, render and wait time into active phases and reducing any passive waiting, even if the objective measurements stay the same, the user will feel like the content downloaded, rendered, and responded more quickly. Now that we know what we should be speeding up, let's take a look at some metrics and learn how we can measure these events.</p>
+<p>By reducing the time that a user has to wait for <em>useful</em> content, and keeping the site responsive and engaging, the users will feel like the site performs better — even the actual time to load resources stays the same.</p>
 
 <p>{{PreviousMenuNext("Learn/Performance/what_is_web_performance", "Learn/Performance/Measuring_performance", "Learn/Performance")}}</p>
 
-<h2 id="In_this_module">In this module</h2>
+<h2 id="in_this_module">In this module</h2>
 
 <ul>
  <li><a href="/en-US/docs/Learn/Performance/why_web_performance">The "why" of web performance</a></li>
@@ -99,10 +107,9 @@ tags:
  <li><a href="/en-US/docs/Learn/Performance/Measuring_performance">Measuring performance</a></li>
  <li><a href="/en-US/docs/Learn/Performance/Multimedia">Multimedia: images</a></li>
  <li><a href="/en-US/docs/Learn/Performance/video">Multimedia: video</a></li>
- <li><a href="/en-US/docs/Learn/Performance/JavaScript">JavaScript performance best practices</a>.</li>
+ <li><a href="/en-US/docs/Learn/Performance/JavaScript">JavaScript performance best practices</a></li>
  <li><a href="/en-US/docs/Learn/Performance/HTML">HTML performance features</a></li>
  <li><a href="/en-US/docs/Learn/Performance/CSS">CSS performance features</a></li>
  <li><a href="/en-US/docs/Learn/Performance/Fonts">Fonts and performance</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Mobile">Mobile performance</a></li>
- <li><a href="/en-US/docs/Learn/Performance/business_case_for_performance">Focusing on performance</a></li>
+ <li><a href="/en-US/docs/Learn/Performance/business_case_for_performance">Business case for performance</a></li>
 </ul>
