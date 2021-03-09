@@ -44360,14 +44360,6 @@
       "david_ross"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/msElementsFromRect": {
-    "modified": "2020-08-15T02:17:06.104Z",
-    "contributors": [
-      "eltociear",
-      "ExE-Boss",
-      "mattwojo"
-    ]
-  },
   "Web/API/DocumentTimeline": {
     "modified": "2020-10-15T21:45:09.763Z",
     "contributors": [
