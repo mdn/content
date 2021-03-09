@@ -27,8 +27,8 @@ tags:
 <p>JavaScript provides three different value-comparison operations:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity">===</a> - Strict Equality Comparison ("strict equality", "identity", "triple equals")</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality_operators">==</a> - Abstract Equality Comparison ("loose equality", "double equals")</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators#identity">===</a> - Strict Equality Comparison ("strict equality", "identity", "triple equals")</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators">==</a> - Abstract Equality Comparison ("loose equality", "double equals")</li>
  <li>{{jsxref("Object.is")}} provides SameValue (new in ES2015).</li>
 </ul>
 
@@ -210,7 +210,7 @@ function attemptMutation(v) {
 
 <h2 id="Abstract_equality_strict_equality_and_same_value_in_the_specification">Abstract equality, strict equality, and same value in the specification</h2>
 
-<p>In ES5, the comparison performed by <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators"><code>==</code></a> is described in <a href="http://ecma-international.org/ecma-262/5.1/#sec-11.9.3">Section 11.9.3, The Abstract Equality Algorithm</a>. The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators"><code>===</code></a> comparison is <a href="http://ecma-international.org/ecma-262/5.1/#sec-11.9.6">11.9.6, The Strict Equality Algorithm</a>. (Go look at these. They're brief and readable. Hint: read the strict equality algorithm first.) ES5 also describes, in <a href="http://ecma-international.org/ecma-262/5.1/#sec-9.12">Section 9.12, The SameValue Algorithm</a> for use internally by the JS engine. It's largely the same as the Strict Equality Algorithm, except that 11.9.6.4 and 9.12.4 differ in handling {{jsxref("Number")}}s. ES2015 proposes to expose this algorithm through {{jsxref("Object.is")}}.</p>
+<p>In ES5, the comparison performed by <a href="/en-US/docs/Web/JavaScript/Reference/Operators"><code>==</code></a> is described in <a href="http://ecma-international.org/ecma-262/5.1/#sec-11.9.3">Section 11.9.3, The Abstract Equality Algorithm</a>. The <a href="/en-US/docs/Web/JavaScript/Reference/Operators"><code>===</code></a> comparison is <a href="http://ecma-international.org/ecma-262/5.1/#sec-11.9.6">11.9.6, The Strict Equality Algorithm</a>. (Go look at these. They're brief and readable. Hint: read the strict equality algorithm first.) ES5 also describes, in <a href="http://ecma-international.org/ecma-262/5.1/#sec-9.12">Section 9.12, The SameValue Algorithm</a> for use internally by the JS engine. It's largely the same as the Strict Equality Algorithm, except that 11.9.6.4 and 9.12.4 differ in handling {{jsxref("Number")}}s. ES2015 proposes to expose this algorithm through {{jsxref("Object.is")}}.</p>
 
 <p>We can see that with double and triple equals, with the exception of doing a type check upfront in 11.9.6.1, the Strict Equality Algorithm is a subset of the Abstract Equality Algorithm, because 11.9.6.2–7 correspond to 11.9.3.1.a–f.</p>
 
@@ -444,14 +444,14 @@ function attemptMutation(v) {
  </tbody>
 </table>
 
-<h2 id="When_to_use_jsxrefObject.is_versus_triple_equals">When to use {{jsxref("Object.is")}} versus triple equals</h2>
+<h2 id="When_to_use_jsxrefObject.is_versus_triple_equals">When to use Object.is versus triple equals</h2>
 
-<p>In general, the only time {{jsxref("Object.is")}}'s special behavior towards zeros is likely to be of interest is in the pursuit of certain meta-programming schemes, especially regarding property descriptors, when it is desirable for your work to mirror some of the characteristics of {{jsxref("Object.defineProperty")}}. If your use case does not require this, it is suggested to avoid {{jsxref("Object.is")}} and use <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators"><code>===</code></a> instead. Even if your requirements involve having comparisons between two {{jsxref("NaN")}} values evaluate to <code>true</code>, generally it is easier to special-case the {{jsxref("NaN")}} checks (using the {{jsxref("isNaN")}} method available from previous versions of ECMAScript) than it is to work out how surrounding computations might affect the sign of any zeros you encounter in your comparison.</p>
+<p>In general, the only time {{jsxref("Object.is")}}'s special behavior towards zeros is likely to be of interest is in the pursuit of certain meta-programming schemes, especially regarding property descriptors, when it is desirable for your work to mirror some of the characteristics of {{jsxref("Object.defineProperty")}}. If your use case does not require this, it is suggested to avoid {{jsxref("Object.is")}} and use <a href="/en-US/docs/Web/JavaScript/Reference/Operators"><code>===</code></a> instead. Even if your requirements involve having comparisons between two {{jsxref("NaN")}} values evaluate to <code>true</code>, generally it is easier to special-case the {{jsxref("NaN")}} checks (using the {{jsxref("isNaN")}} method available from previous versions of ECMAScript) than it is to work out how surrounding computations might affect the sign of any zeros you encounter in your comparison.</p>
 
 <p>Here's a non-exhaustive list of built-in methods and operators that might cause a distinction between <code>-0</code> and <code>+0</code> to manifest itself in your code:</p>
 
 <dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#-_.28Unary_Negation.29"><code>- (unary negation)</code></a></dt>
+ <dt><a href="/en-US/docs/Web/JavaScript/Reference/Operators#-_.28unary_negation.29"><code>- (unary negation)</code></a></dt>
  <dd>
  <pre class="brush: js">let stoppingForce = obj.mass * -obj.velocity;</pre>
 
@@ -472,15 +472,15 @@ function attemptMutation(v) {
  <dt>{{jsxref("Math.sqrt")}}</dt>
  <dt>{{jsxref("Math.tan")}}</dt>
  <dd>It's possible to get a <code>-0</code> return value out of these methods in some cases where a <code>-0</code> exists as one of the parameters. E.g., <code>Math.min(-0, +0)</code> evaluates to <code>-0</code>. Refer to the documentation for the individual methods.</dd>
- <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">~</a></code></dt>
- <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">&lt;&lt;</a></code></dt>
- <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">&gt;&gt;</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators">~</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators">&lt;&lt;</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators">&gt;&gt;</a></code></dt>
  <dd>Each of these operators uses the ToInt32 algorithm internally. Since there is only one representation for 0 in the internal 32-bit integer type, <code>-0</code> will not survive a round trip after an inverse operation. E.g., both <code>Object.is(~~(-0), -0)</code> and <code>Object.is(-0 &lt;&lt; 2 &gt;&gt; 2, -0)</code> evaluate to <code>false</code>.</dd>
 </dl>
 
 <p>Relying on {{jsxref("Object.is")}} when the signedness of zeros is not taken into account can be hazardous. Of course, when the intent is to distinguish between <code>-0</code> and <code>+0</code>, it does exactly what's desired.</p>
 
-<h2 id="Caveat_jsxrefObject.is_and_NaN">Caveat: {{jsxref("Object.is")}} and NaN</h2>
+<h2 id="Caveat_jsxrefObject.is_and_NaN">Caveat: Object.is and NaN</h2>
 
 <p>The {{jsxref("Object.is")}} specification treats all instances of {{jsxref("NaN")}} as the same object. However, since <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed arrays</a> are available, we can have distinct instances, which don't behave identically in all contexts. For example:</p>
 
