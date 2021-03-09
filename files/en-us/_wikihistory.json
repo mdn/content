@@ -44368,35 +44368,6 @@
       "mattwojo"
     ]
   },
-<<<<<<< HEAD
-  "Web/API/DocumentOrShadowRoot/styleSheets": {
-    "modified": "2020-10-19T21:57:52.891Z",
-    "contributors": [
-      "alattalatta",
-      "mfluehr",
-      "mfuji09",
-      "wbamberg",
-      "fscholz",
-      "chrisdavidmills",
-      "david_ross",
-      "jpmedley"
-=======
-  "Web/API/DocumentOrShadowRoot/pointerLockElement": {
-    "modified": "2020-10-15T21:25:15.470Z",
-    "contributors": [
-      "mfuji09",
-      "mfluehr",
-      "jpmedley",
-      "fscholz",
-      "chrisdavidmills",
-      "erikadoyle",
-      "wbamberg",
-      "teoli",
-      "kscarfone",
-      "Jeremie"
->>>>>>> yarn content move Web/API/DocumentOrShadowRoot/styleSheets Web/API/Document/styleSheets
-    ]
-  },
   "Web/API/DocumentTimeline": {
     "modified": "2020-10-15T21:45:09.763Z",
     "contributors": [
