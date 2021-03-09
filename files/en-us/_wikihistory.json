@@ -44368,19 +44368,6 @@
       "mattwojo"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/styleSheets": {
-    "modified": "2020-10-19T21:57:52.891Z",
-    "contributors": [
-      "alattalatta",
-      "mfluehr",
-      "mfuji09",
-      "wbamberg",
-      "fscholz",
-      "chrisdavidmills",
-      "david_ross",
-      "jpmedley"
-    ]
-  },
   "Web/API/DocumentTimeline": {
     "modified": "2020-10-15T21:45:09.763Z",
     "contributors": [
@@ -165805,6 +165792,19 @@
       "teoli",
       "kscarfone",
       "Jeremie"
+    ]
+  },
+  "Web/API/Document/styleSheets": {
+    "modified": "2020-10-19T21:57:52.891Z",
+    "contributors": [
+      "alattalatta",
+      "mfluehr",
+      "mfuji09",
+      "wbamberg",
+      "fscholz",
+      "chrisdavidmills",
+      "david_ross",
+      "jpmedley"
     ]
   }
 }
