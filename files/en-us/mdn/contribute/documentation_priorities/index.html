@@ -19,6 +19,10 @@ tags:
   <li>To help contributors that want to work on a specific topic area rather than a specific bug decide which one would be most useful to give their time to (for example, folks that like to run automated cleanup scripts on MDN).</li>
 </ul>
 
+<p>The relative importance of these docs has been decided purely by looking at page view figures. There are lots of measures we could have used, but page views is objective and still a good indicator — more important web technologies are looked up more often, and therefore fixing problems with those docs seems most critical.</p>
+
+<p>Also bear in mind that these Tiers are made up of isolated document trees (i.e. the linked page, plus all of the documents in the hierarchy below it). Sometimes a Tier 1 document will link to a Tier 2 document, or vice versa, and that is OK.</p>
+
 <h2 id="tier_1">Tier 1</h2>
 
 <p>Tier 1 content is the most important content on MDN — it has the most users, and is deemed to cover the most important technologies for the web platform.</p>
@@ -67,15 +71,9 @@ tags:
   <li><a href="/en-US/docs/Glossary">The MDN Web Docs glossary</a></li>
   <li><a href="/en-US/docs/MDN">MDN meta-documentation</a></li> (this is important, but fixes would be mainly dealt with by the MDN core team)
   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li> (not really web platform, but still important)
-  <li><a href="/en-US/docs/Related">Related</a></li>
-  <li><a href="/en-US/docs/Web/EXSLT">EXSLT</a></li>
   <li><a href="/en-US/docs/Web/MathML">MathML</a></li>
   <li><a href="/en-US/docs/Web/SVG">SVG</a></li>
   <li><a href="/en-US/docs/Web/API">WebAPIs</a> that aren't in the "Tier 1 WebAPIs" list</li>
-  <li><a href="/en-US/docs/Web/WebDriver">WebDriver</a></li>
-  <li><a href="/en-US/docs/Web/XML">XML</a></li>
-  <li><a href="/en-US/docs/Web/XPath">XPath</a></li>
-  <li><a href="/en-US/docs/Web/XSLT">XSLT</a></li>
 </ul>
 
 <h2 id="other_content">Other content</h2>
@@ -112,6 +110,11 @@ tags:
 
 <h3 id="dom">DOM</h3>
 
+<div class="note notecard">
+  <h4>Note</h4>
+  <p>"DOM" is only a partial group — we only included the interface docs with the highest page views, to keep the size of Tier 1 down to a manageable number. Other DOM interfaces not in this list are in Tier 2.</p>
+</div>
+
 <ul>
   <li><code><a href="/en-US/docs/Web/API/EventTarget">EventTarget</a></code></li>
   <li><code><a href="/en-US/docs/Web/API/MutationObserver">MutationObserver</a></code></li>
@@ -127,60 +130,18 @@ tags:
   <li><code><a href="/en-US/docs/Web/API/USVString">USVString</a></code></li>
   <li><code><a href="/en-US/docs/Web/API/HTMLCollection">HTMLCollection</a></code></li>
   <li><code><a href="/en-US/docs/Web/API/AbortController">AbortController</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/DocumentFragment">DocumentFragment</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/Element">NonDocumentTypeChildNode</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/DOMRect">DOMRect</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/DOMTokenList">DOMTokenList</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/Range">Range</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/Attr">Attr</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/DOMException">DOMException</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/XMLDocument">XMLDocument</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/Text">Text</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/DOMImplementation">DOMImplementation</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/Comment">Comment</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/TimeRanges">TimeRanges</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/CDATASection">CDATASection</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/ByteString">ByteString</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/DOMError">DOMError</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/CharacterData">CharacterData</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/DocumentType">DocumentType</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/AbortSignal">AbortSignal</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/NodeFilter">NodeFilter</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/DOMObject">DOMObject</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/ElementTraversal">ElementTraversal</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/ProcessingInstruction">ProcessingInstruction</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/DOMTimeStamp">DOMTimeStamp</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/CSSValue">CSSValue</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/DOMLocator">DOMLocator</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/TreeWalker">TreeWalker</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/NodeIterator">NodeIterator</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/DOMUserData">DOMUserData</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/UserDataHandler">UserDataHandler</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/DOMPoint">DOMPoint</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/CSSValueList">CSSValueList</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/TypeInfo">TypeInfo</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/StaticRange">StaticRange</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/AbstractRange">AbstractRange</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/DOMPointReadOnly">DOMPointReadOnly</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/CSSPrimitiveValue">CSSPrimitiveValue</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/DOMPointInit">DOMPointInit</a></code></li>
 </ul>
 
 <h3 id="dom_events">DOM Events</h3>
 
+<div class="note notecard">
+  <h4>Note</h4>
+  <p>"DOM Events" is only a partial group — we only included the interface docs with the highest page views, to keep the size of Tier 1 down to a manageable number. Other DOM Events interfaces not in this list are in Tier 2.</p>
+</div>
+
 <ul>
   <li><code><a href="/en-US/docs/Web/API/EventListener">EventListener</a></code></li>
   <li><code><a href="/en-US/docs/Web/API/KeyboardEvent">KeyboardEvent</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/MouseEvent">MouseEvent</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/FocusEvent">FocusEvent</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/InputEvent">InputEvent</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/WheelEvent">WheelEvent</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/UIEvent">UIEvent</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/ProgressEvent">ProgressEvent</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/MouseWheelEvent">MouseWheelEvent</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/MouseScrollEvent">MouseScrollEvent</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/MutationEvent">MutationEvent</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/CompositionEvent">CompositionEvent</a></code></li>
 </ul>
 
 <h3 id="fetch_api">Fetch API</h3>
@@ -199,9 +160,15 @@ tags:
   <li><code><a href="/en-US/docs/Web/API/File">File</a></code></li>
   <li><code><a href="/en-US/docs/Web/API/FileList">FileList</a></code></li>
   <li><code><a href="/en-US/docs/Web/API/FileReader">FileReader</a></code></li>
+  <li><code><a href="/en-US/docs/Web/API/FileReaderSync">FileReaderSync</a></code></li>
 </ul>
 
 <h3 id="html_dom">HTML DOM</h3>
+
+<div class="note notecard">
+  <h4>Note</h4>
+  <p>"HTML DOM" is only a partial group — we only included the interface docs with the highest page views, to keep the size of Tier 1 down to a manageable number. Other HTML DOM interfaces not in this list are in Tier 2.</p>
+</div>
 
 <ul>
   <li><code><a href="/en-US/docs/Web/API/History">History</a></code></li>
@@ -217,86 +184,6 @@ tags:
   <li><code><a href="/en-US/docs/Web/API/HTMLTextAreaElement">HTMLTextAreaElement</a></code></li>
   <li><code><a href="/en-US/docs/Web/API/NavigatorLanguage">NavigatorLanguage</a></code></li>
   <li><code><a href="/en-US/docs/Web/API/Navigator">Navigator</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLOptionElement">HTMLOptionElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLDivElement">HTMLDivElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLSelectElement">HTMLSelectElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLIFrameElement">HTMLIFrameElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLTableCellElement">HTMLTableCellElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLMediaElement">HTMLMediaElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/GlobalEventHandlers">GlobalEventHandlers</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLScriptElement">HTMLScriptElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLImageElement">HTMLImageElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLTableRowElement">HTMLTableRowElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/Transferable">Transferable</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/BeforeUnloadEvent">BeforeUnloadEvent</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/ErrorEvent">ErrorEvent</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/NavigatorID">NavigatorID</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/DOMStringMap">DOMStringMap</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLDocument">HTMLDocument</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLButtonElement">HTMLButtonElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLDialogElement">HTMLDialogElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/ValidityState">ValidityState</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/PopStateEvent">PopStateEvent</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLOptionsCollection">HTMLOptionsCollection</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLTableElement">HTMLTableElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLAnchorElement">HTMLAnchorElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLTemplateElement">HTMLTemplateElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLBodyElement">HTMLBodyElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLSpanElement">HTMLSpanElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLUListElement">HTMLUListElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLVideoElement">HTMLVideoElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLFormControlsCollection">HTMLFormControlsCollection</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/PageTransitionEvent">PageTransitionEvent</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLLabelElement">HTMLLabelElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLParagraphElement">HTMLParagraphElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/RadioNodeList">RadioNodeList</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLUnknownElement">HTMLUnknownElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLObjectElement">HTMLObjectElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLHeadingElement">HTMLHeadingElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLLIElement">HTMLLIElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/NavigatorPlugins">NavigatorPlugins</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLTableSectionElement">HTMLTableSectionElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLDataListElement">HTMLDataListElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/PromiseRejectionEvent">PromiseRejectionEvent</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLLinkElement">HTMLLinkElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HashChangeEvent">HashChangeEvent</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLMetaElement">HTMLMetaElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLEmbedElement">HTMLEmbedElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLHtmlElement">HTMLHtmlElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/Plugin">Plugin</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLStyleElement">HTMLStyleElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLHeadElement">HTMLHeadElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLFieldSetElement">HTMLFieldSetElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/PluginArray">PluginArray</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLPictureElement">HTMLPictureElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLSourceElement">HTMLSourceElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLDataElement">HTMLDataElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLTimeElement">HTMLTimeElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLBaseElement">HTMLBaseElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLOptGroupElement">HTMLOptGroupElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLDListElement">HTMLDListElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLTableColElement">HTMLTableColElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLTitleElement">HTMLTitleElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLOutputElement">HTMLOutputElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLBRElement">HTMLBRElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLMapElement">HTMLMapElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLPreElement">HTMLPreElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLContentElement">HTMLContentElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLHRElement">HTMLHRElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLAreaElement">HTMLAreaElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLProgressElement">HTMLProgressElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLTrackElement">HTMLTrackElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLFrameSetElement">HTMLFrameSetElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLOListElement">HTMLOListElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLQuoteElement">HTMLQuoteElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLKeygenElement">HTMLKeygenElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLLegendElement">HTMLLegendElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLModElement">HTMLModElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLTableCaptionElement">HTMLTableCaptionElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLMeterElement">HTMLMeterElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLParamElement">HTMLParamElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLShadowElement">HTMLShadowElement</a></code></li>
-  <li><code><a href="/en-US/docs/Web/API/HTMLBaseFontElement">HTMLBaseFontElement</a></code></li>
 </ul>
 
 <h3 id="url_api">URL API</h3>
