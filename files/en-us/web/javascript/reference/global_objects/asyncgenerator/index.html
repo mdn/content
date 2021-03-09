@@ -6,59 +6,77 @@ tags:
   - ECMAScript 2018
   - Generator
   - JavaScript
-  - Legacy Generator
-  - Legacy Iterator
+  - Async Generator
+  - Async Iterator
   - Reference
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>AsyncGenerator</strong></code> object is returned by an {{jsxref("Statements/async_function*", "async generator function", "", 1)}} and it conforms to both the <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">iterable protocol</a> and the <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol">iterator protocol</a>.</p>
+<p>The <code><strong>AsyncGenerator</strong></code> object is returned by an {{jsxref("Statements/async_function*", "async generator function")}} and it conforms to both the <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">iterable protocol</a> and the <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol">iterator protocol</a>.</p>
 
 <h2 id="Constructor">Constructor</h2>
 
-<p>This object cannot be instantiated directly. Instead, an <code>AsyncGenerator</code> instance can be returned from an {{jsxref("Statements/async_function*", "async generator function", "", 1)}}:</p>
+<p>This object cannot be instantiated directly. Instead, an <code>AsyncGenerator</code> instance can be returned from an {{jsxref("Statements/async_function*", "async generator function")}}:</p>
+
+<p>Async generators always yield a {{jsxref("Promise")}} object.</p>
 
 <pre class="brush: js">async function* createAsyncGenerator() {
-  yield 1;
-  yield 2;
-  yield 3;
+  yield await Promise.resolve(1);
+  yield await Promise.resolve(2);
+  yield await Promise.resolve(3);
 }
 
 const asyncGen = createAsyncGenerator(); // "AsyncGenerator { }"
 
-console.log((await asyncGen.next()).value); // 1
-console.log((await asyncGen.next()).value); // 2
-console.log((await asyncGen.next()).value); // 3</pre>
+asyncGen.next()
+  .then(res => console.log(res.value)); // 1
+asyncGen.next()
+  .then(res => console.log(res.value)); // 2
+asyncGen.next()
+  .then(res => console.log(res.value)); // 3</pre>
 
 <h2 id="Instance_methods">Instance methods</h2>
-Async generators always yield a {{jsxref("Promise")}} object.
+
 <dl>
- <dt>{{jsxref("AsyncGenerator.prototype.next()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} which will be resolved with the given value yielded by the {{jsxref("Operators/yield", "yield")}} expression.</dd>
- <dt>{{jsxref("AsyncGenerator.prototype.return()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} which will be resolved with the given value yielded by the {{jsxref("Operators/yield", "yield")}} expression and finishes the generator.</dd>
- <dt>{{jsxref("AsyncGenerator.prototype.throw()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} that is rejected with an exception thrown from (or uncaught from) within the async generator function and finishes the generator unless the exception is caught within that generator.</dd>
+  <dt>{{jsxref("AsyncGenerator.prototype.next()")}}</dt>
+  <dd>Returns a {{jsxref("Promise")}} which will be resolved with the given value yielded by the {{jsxref("Operators/yield", "yield")}} expression.</dd>
+  <dt>{{jsxref("AsyncGenerator.prototype.return()")}}</dt>
+  <dd>Returns a {{jsxref("Promise")}} which will be resolved with the given value yielded by the {{jsxref("Operators/yield", "yield")}} expression and finishes the generator.</dd>
+  <dt>{{jsxref("AsyncGenerator.prototype.throw()")}}</dt>
+  <dd>Returns a {{jsxref("Promise")}} that is rejected with an exception thrown from (or uncaught from) within the async generator function and finishes the generator unless the exception is caught within that generator.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="An_infinite_iterator">An infinite async iterator</h3>
+<h3 id="async_generator_iteration">Async generator iteration</h3>
 
-<pre class="brush: js;">async function* infinite() {
-    let index = 0;
+<p>The following example iterates over an async generator logging values 1 - 6 to the console, at decreasing time intervals.</p>
 
-    while (true) {
-        yield index++;
-    }
+<pre class="brush: js;">
+function waitFor(time, value) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => resolve(value), time);
+  });
 }
 
-const asyncGenerator = infinite(); // "AsyncGenerator { }"
+async function* generate() {
+  yield await waitFor(1000, 1);
+  yield await waitFor(2000, 2);
+  yield await waitFor(400, 3);
+  yield await waitFor(800, 4);
+  yield await waitFor(150, 5);
+  yield await waitFor(50, 6);
+  console.log('All done!');
+}
 
-console.log((await asyncGenerator.next()).value); // 0
-console.log((await asyncGenerator.next()).value); // 1
-console.log((await asyncGenerator.next()).value); // 2
-// ...</pre>
+async function main() {
+  for await (const value of generate()) {
+    console.log('value', value);
+  }
+}
+
+main()
+  .catch((e) => console.error('error', e));</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
