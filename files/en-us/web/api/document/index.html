@@ -78,6 +78,8 @@ tags:
  <dd>Returns all the {{HTMLElement("script")}} elements on the document.</dd>
  <dt>{{DOMxRef("Document.scrollingElement")}}{{ReadOnlyInline}}</dt>
  <dd>Returns a reference to the {{DOMxRef("Element")}} that scrolls the document.</dd>
+ <dt>{{DOMxRef("Document.styleSheets")}} {{ReadOnlyInline}}</dt>
+ <dd>Returns a {{DOMxRef('StyleSheetList')}} of {{DOMxRef('CSSStyleSheet')}} objects for stylesheets explicitly linked into, or embedded in a document.</dd>
  <dt>{{DOMxRef("Document.timeline")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns timeline as a special instance of {{domxref("DocumentTimeline")}} that is automatically created on page load.</dd>
  <dt>{{DOMxRef("Document.undoManager")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
@@ -117,15 +119,6 @@ tags:
  <dd>Sets or gets the title of the current document.</dd>
  <dt>{{DOMxRef("Document.URL")}}{{ReadOnlyInline}}</dt>
  <dd>Returns the document location as a string.</dd>
-</dl>
-
-<h3 id="Properties_included_from_DocumentOrShadowRoot">Properties included from DocumentOrShadowRoot</h3>
-
-<p><em>The <code>Document</code> interface includes the following properties defined on the {{DOMxRef("DocumentOrShadowRoot")}} mixin. Note that this is currently only implemented by Chrome; other browsers still implement them directly on the {{DOMxRef("Document")}} interface.</em></p>
-
-<dl>
- <dt>{{DOMxRef("DocumentOrShadowRoot.styleSheets")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a {{DOMxRef('StyleSheetList')}} of {{DOMxRef('CSSStyleSheet')}} objects for stylesheets explicitly linked into, or embedded in a document.</dd>
 </dl>
 
 <h3 id="Event_handlers">Event handlers</h3>

@@ -1962,7 +1962,7 @@
 /en-US/docs/DOM/document.releaseCapture	/en-US/docs/Web/API/Document/releaseCapture
 /en-US/docs/DOM/document.selectedStyleSheetSet	/en-US/docs/Web/API/Document/selectedStyleSheetSet
 /en-US/docs/DOM/document.styleSheetSets	/en-US/docs/Web/API/Document/styleSheetSets
-/en-US/docs/DOM/document.styleSheets	/en-US/docs/Web/API/DocumentOrShadowRoot/styleSheets
+/en-US/docs/DOM/document.styleSheets	/en-US/docs/Web/API/Document/styleSheets
 /en-US/docs/DOM/document.textContent	/en-US/docs/Web/API/Node/textContent
 /en-US/docs/DOM/document.title	/en-US/docs/Web/API/Document/title
 /en-US/docs/DOM/document.tooltipNode	/en-US/docs/Web/API/Document/tooltipNode
@@ -2479,7 +2479,7 @@
 /en-US/docs/DOM:document.plugins	/en-US/docs/Web/API/Document/plugins
 /en-US/docs/DOM:document.popupNode	/en-US/docs/Web/API/Document/popupNode
 /en-US/docs/DOM:document.referrer	/en-US/docs/Web/API/Document/referrer
-/en-US/docs/DOM:document.styleSheets	/en-US/docs/Web/API/DocumentOrShadowRoot/styleSheets
+/en-US/docs/DOM:document.styleSheets	/en-US/docs/Web/API/Document/styleSheets
 /en-US/docs/DOM:document.textContent	/en-US/docs/Web/API/Node/textContent
 /en-US/docs/DOM:document.title	/en-US/docs/Web/API/Document/title
 /en-US/docs/DOM:document.tooltipNode	/en-US/docs/Web/API/Document/tooltipNode
@@ -3329,7 +3329,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/document.releaseCapture	/en-US/docs/Web/API/Document/releaseCapture
 /en-US/docs/Document_Object_Model_(DOM)/document.selectedStyleSheetSet	/en-US/docs/Web/API/Document/selectedStyleSheetSet
 /en-US/docs/Document_Object_Model_(DOM)/document.styleSheetSets	/en-US/docs/Web/API/Document/styleSheetSets
-/en-US/docs/Document_Object_Model_(DOM)/document.styleSheets	/en-US/docs/Web/API/DocumentOrShadowRoot/styleSheets
+/en-US/docs/Document_Object_Model_(DOM)/document.styleSheets	/en-US/docs/Web/API/Document/styleSheets
 /en-US/docs/Document_Object_Model_(DOM)/document.textContent	/en-US/docs/Web/API/Node/textContent
 /en-US/docs/Document_Object_Model_(DOM)/document.title	/en-US/docs/Web/API/Document/title
 /en-US/docs/Document_Object_Model_(DOM)/document.tooltipNode	/en-US/docs/Web/API/Document/tooltipNode
@@ -7548,7 +7548,6 @@
 /en-US/docs/Web/API/Document/onselectionchange	/en-US/docs/Web/API/GlobalEventHandlers/onselectionchange
 /en-US/docs/Web/API/Document/onsubmit	/en-US/docs/Web/API/GlobalEventHandlers/onsubmit
 /en-US/docs/Web/API/Document/resourcetimingbufferfull_event	/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event
-/en-US/docs/Web/API/Document/styleSheets	/en-US/docs/Web/API/DocumentOrShadowRoot/styleSheets
 /en-US/docs/Web/API/Document/timeline/currentTime	/en-US/docs/Web/API/AnimationTimeline/currentTime
 /en-US/docs/Web/API/DocumentFragment.DocumentFragment	/en-US/docs/Web/API/DocumentFragment/DocumentFragment
 /en-US/docs/Web/API/DocumentFragment.querySelector	/en-US/docs/Web/API/DocumentFragment/querySelector
@@ -7564,6 +7563,7 @@
 /en-US/docs/Web/API/DocumentOrShadowRoot/pictureInPictureElement	/en-US/docs/Web/API/Document/pictureInPictureElement
 /en-US/docs/Web/API/DocumentOrShadowRoot/pictureInPictureEnabled	/en-US/docs/Web/API/Document/pictureInPictureEnabled
 /en-US/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/en-US/docs/Web/API/Document/pointerLockElement
+/en-US/docs/Web/API/DocumentOrShadowRoot/styleSheets	/en-US/docs/Web/API/Document/styleSheets
 /en-US/docs/Web/API/DocumentTouch.createTouch	/en-US/docs/Web/API/Document/createTouch
 /en-US/docs/Web/API/DocumentTouch.createTouchList	/en-US/docs/Web/API/Document/createTouchList
 /en-US/docs/Web/API/DocumentTouch/createTouch	/en-US/docs/Web/API/Document/createTouch
@@ -9344,7 +9344,7 @@
 /en-US/docs/Web/API/document.releaseCapture	/en-US/docs/Web/API/Document/releaseCapture
 /en-US/docs/Web/API/document.selectedStyleSheetSet	/en-US/docs/Web/API/Document/selectedStyleSheetSet
 /en-US/docs/Web/API/document.styleSheetSets	/en-US/docs/Web/API/Document/styleSheetSets
-/en-US/docs/Web/API/document.styleSheets	/en-US/docs/Web/API/DocumentOrShadowRoot/styleSheets
+/en-US/docs/Web/API/document.styleSheets	/en-US/docs/Web/API/Document/styleSheets
 /en-US/docs/Web/API/document.textContent	/en-US/docs/Web/API/Node/textContent
 /en-US/docs/Web/API/document.title	/en-US/docs/Web/API/Document/title
 /en-US/docs/Web/API/document.tooltipNode	/en-US/docs/Web/API/Document/tooltipNode
@@ -11980,7 +11980,7 @@
 /en-US/docs/document.open	/en-US/docs/Web/API/Document/open
 /en-US/docs/document.plugins	/en-US/docs/Web/API/Document/plugins
 /en-US/docs/document.referrer	/en-US/docs/Web/API/Document/referrer
-/en-US/docs/document.styleSheets	/en-US/docs/Web/API/DocumentOrShadowRoot/styleSheets
+/en-US/docs/document.styleSheets	/en-US/docs/Web/API/Document/styleSheets
 /en-US/docs/document.title	/en-US/docs/Web/API/Document/title
 /en-US/docs/document.vlinkColor	/en-US/docs/Web/API/Document/vlinkColor
 /en-US/docs/document.width	/en-US/docs/Web/API/Document/width
