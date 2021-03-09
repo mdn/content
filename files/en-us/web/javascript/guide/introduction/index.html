@@ -6,7 +6,7 @@ tags:
   - Guide
   - Introduction
   - JavaScript
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}</div>
 
@@ -17,7 +17,7 @@ tags:
 <p>This guide assumes you have the following basic background:</p>
 
 <ul>
- <li>A general understanding of the Internet and the World Wide Web (<a href="/en-US/docs/Glossary/WWW">WWW</a>).</li>
+ <li>A general understanding of the Internet and the World Wide Web (<a href="/en-US/docs/Glossary/World_Wide_Web">WWW</a>).</li>
  <li>Good working knowledge of HyperText Markup Language (<a href="/en-US/docs/Glossary/HTML">HTML</a>).</li>
  <li>Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about <a href="/en-US/docs/Web/JavaScript">JavaScript</a>.</li>
 </ul>
@@ -115,19 +115,19 @@ tags:
 
 <p>The Web Console appears at the bottom of the browser window. Along the bottom of the console is an input line that you can use to enter JavaScript, and the output appears in the panel above:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16569/2019-04-04_00-15-29.png"></p>
+<p><img alt="" src="2019-04-04_00-15-29.png"></p>
 
 <p>The console works the exact same way as <code>eval</code>: the last expression entered is returned. For the sake of simplicity, it can be imagined that every time something is entered into the console, it is actually surrounded by <code>console.log</code> around <code>eval</code>, like so:</p>
 
 <pre class="brush: js">function greetMe(yourName) {
-  alert("Hello " + yourName)
+  alert(&quot;Hello &quot; + yourName)
 }
-<code>console.log(eval('3 + 5'))</code>
+console.log(eval('3 + 5'))
 </pre>
 
 <h3 id="Multi-line_input_in_the_Web_Console">Multi-line input in the Web Console</h3>
 
-<p>The single-line input mode of the Web Console is great for quick testing of JavaScript expressions, but although you can execute multiple lines, it's not very convenient for that. For more complex JavaScript, you can use the <a href="/en-US/docs/Tools/Web_Console/The_command_line_interpreter#Multi-line_mode">multi-line line input mode</a>.</p>
+<p>The single-line input mode of the Web Console is great for quick testing of JavaScript expressions, but although you can execute multiple lines, it's not very convenient for that. For more complex JavaScript, you can use the <a href="/en-US/docs/Tools/Web_Console/The_command_line_interpreter#multi-line_mode">multi-line line input mode</a>.</p>
 
 <h3 id="Hello_world">Hello world</h3>
 

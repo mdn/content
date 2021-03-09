@@ -118,20 +118,6 @@ tags:
  <dd>Sets the value of an HTTP request header. You must call <code>setRequestHeader()</code>after <a href="#open"><code>open()</code></a>, but before <code>send()</code>.</dd>
 </dl>
 
-<h3 id="Non-standard_methods">Non-standard methods</h3>
-
-<dl>
- <dt>{{domxref("XMLHttpRequest.init()")}}</dt>
- <dd>Initializes the object for use from C++ code.
- <div class="warning"><strong>Warning:</strong> This method must <em>not</em> be called from JavaScript.</div>
- </dd>
- <dt>{{domxref("XMLHttpRequest.openRequest()")}}</dt>
- <dd>Initializes a request. This method is to be used from native code; to initialize a request from JavaScript code, 
-   use {{domxref("XMLHttpRequest.open()")}} instead.</dd>
- <dt>{{domxref("XMLHttpRequest.sendAsBinary()")}}{{deprecated_inline()}}</dt>
- <dd>A variant of the <code>send()</code> method that sends binary data.</dd>
-</dl>
-
 <h2 id="Events">Events</h2>
 
 <dl>

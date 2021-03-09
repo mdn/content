@@ -574,7 +574,7 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
   if (
     (isPlainHostName(host) || dnsDomainIs(host, ".mozilla.org")) &amp;&amp;
     !localHostOrDomainIs(host, "www.mozilla.org") &amp;&amp;
-    !localHostOrDoaminIs(host, "merchant.mozilla.org")
+    !localHostOrDomainIs(host, "merchant.mozilla.org")
   ) {
     return "DIRECT";
   } else {

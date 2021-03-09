@@ -348,7 +348,7 @@ This is the second subsection of my content. I think is more interesting than th
   }
 };</pre>
 
-<p>Here we add a listener to the <code>document</code> object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's <code><a href="/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a></code> property; if it is the keycode that matches Return/Enter, we run the function stored in the button's <code>onclick</code> handler using <code>document.activeElement.click()</code>. <code><a href="/en-US/docs/Web/API/DocumentOrShadowRoot/activeElement">activeElement</a></code> which gives us the element that is currently focused on the page.</p>
+<p>Here we add a listener to the <code>document</code> object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's <code><a href="/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a></code> property; if it is the keycode that matches Return/Enter, we run the function stored in the button's <code>onclick</code> handler using <code>document.activeElement.click()</code>. <code><a href="/en-US/docs/Web/API/Document/activeElement">activeElement</a></code> which gives us the element that is currently focused on the page.</p>
 
 <p>This is a lot of extra hassle to build the functionality back in. And there's bound to be other problems with it. <strong>Better to just use the right element for the right job in the first place.</strong></p>
 

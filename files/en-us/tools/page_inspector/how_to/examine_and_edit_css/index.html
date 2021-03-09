@@ -14,15 +14,15 @@ tags:
 
 <p>The <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#rules_view">Rules view</a> lists all the rules that apply to the selected element, ordered from most-specific to least-specific:</p>
 
-<p><img alt="Rules view panel as of Firefox 72" src="rules_view_fx_72.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="Rules view panel as of Firefox 87" src="rules_view_ff_87.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
-<p>The four buttons on the right top of the rules view allow you to change the display of certain CSS and rules view features. You can:</p>
+<p>The six buttons on the right top of the rules view allow you to change the display of certain CSS and rules view features. You can:</p>
 
 <ul>
  <li><a href="#viewing_common_pseudo-classes">toggle pseudo-classes</a>;</li>
  <li><a href="#viewing_and_changing_classes_on_an_element">toggle classes</a>;</li>
  <li>add a new rule;</li>
- <li>change the display based on the color scheme preference (as of Firefox 72, you must set <code>devtools.inspector.color-scheme-simulation.enabled</code> to <strong>true</strong> in the <a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">Configuration Editor</a> to enable this feature);</li>
+ <li>change the display based on <a href="#view_media_rules_for_prefers-color-scheme"><code>prefers-color-scheme</code> media rules</a>.</li>
  <li>change the display based on <a href="#view_media_rules_for_print">print media rules</a>.</li>
 </ul>
 
@@ -38,8 +38,9 @@ tags:
 
 <p>CSS properties have varied level of support across different browsers. From Firefox 81, compatibility tooltips may be displayed next to any CSS properties that have known compatibility issues, as shown below.</p>
 
-<div class="note">
-<p>This feature is enabled from Firefox 81 by setting the preference <code>devtools.inspector.ruleview.inline-compatibility-warning.enabled</code> to <code>true</code> (open <code>about.config</code> in the URL bar to view/set Firefox preferences).</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>This feature is enabled from Firefox 81 by setting the preference <code>devtools.inspector.ruleview.inline-compatibility-warning.enabled</code> to <code>true</code> (open <code>about.config</code> in the URL bar to view/set Firefox preferences).</p>
 </div>
 
 <p><img alt="Tooltip displayed next to CSS element. Hover to find out browsers with compatibility issues." src="firefox_compatibility_tootips.jpg"></p>
@@ -96,8 +97,9 @@ tags:
 
 <p><img alt="" src="filtered_rules.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;">Click the "X" at the end of the search box to remove the filter.</p>
 
-<div class="note">
-<p>While in the Rules view, you can press <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>F</kbd> to focus the search field. Once you've typed in a filter, you can press <kbd>Esc</kbd> to remove it again.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>While in the Rules view, you can press <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>F</kbd> to focus the search field. Once you've typed in a filter, you can press <kbd>Esc</kbd> to remove it again.</p>
 </div>
 
 <p>{{EmbedYouTube("9w8vDIWqnAE")}}</p>
@@ -153,7 +155,7 @@ tags:
 
 <p><img alt="" src="show_pseudo_classes.png" style="border: 1px solid black; display: block; margin: 0 auto;"></p>
 
-<p>Click the button to see checkboxes that you can use to enable the {{cssxref(":hover")}}, {{cssxref(":active")}} and {{cssxref(":focus")}}, {{cssxref(":focus-within")}}, {{cssxref(":focus-visible")}} and {{cssxref(":visited")}} pseudo-classes for the selected element:</p>
+<p>Click the button to see checkboxes that you can use to enable the {{cssxref(":hover")}}, {{cssxref(":active")}} and {{cssxref(":focus")}}, {{cssxref(":focus-within")}}, {{cssxref(":focus-visible")}}, {{cssxref(":visited")}}, and {{cssxref(":target")}} pseudo-classes for the selected element:</p>
 
 <p><img alt="" src="show_pseudo_classes_hover.png" style="border: 1px solid black; display: block; margin: 0px auto;">This feature can also be accessed from the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#element_popup_menu">popup menu in the HTML view</a>.</p>
 
@@ -196,15 +198,9 @@ tags:
 
 <p>When on, any rules defined for printing the page will be displayed similar to the "Print Preview" mode that many word processing applications provide.</p>
 
-<h3 id="View_media_rules_for_color-scheme-preference">View @media rules for color-scheme-preference</h3>
+<h3 id="View_media_rules_for_prefers-color-scheme">View @media rules for prefers-color-scheme</h3>
 
-<div class="notecard note">
-<p>As of Firefox 72, you must set <code>devtools.inspector.color-scheme-simulation.enabled</code> to <strong>true</strong> in the <a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">Configuration Editor</a> to enable this feature.</p>
-
-<p>If you have set <code>privacy.resistFingerprinting</code> to <strong>true</strong>, <code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme"> </a>preference is overridden to <code>light</code>. In order to use this simulator, you must set <code>privacy.resistFingerprinting</code> to <strong>false</strong>.</p>
-</div>
-
-<p>You can use the color scheme simulator to see how the styles display based on the <code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></code> media query, if it is defined for the page. The color scheme simulator has four states, which you can cycle through by clicking the button repeatedly:</p>
+<p>The color scheme simulator buttons can be used to test the rendering of styles based on the <code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></code> media query (if any are defined for the page). There are two buttons, which enable the light and dark preference, respectively. Selecting either button deselects the other. If neither button is selected then the simulator does not set a preference, and the browser renders using the default feature value set by the operating system.</p>
 
 <table class="standard-table">
  <thead>
@@ -218,22 +214,33 @@ tags:
   <tr>
    <td><img alt="" src="color_scheme_null.png" style="border-style: solid; border-width: 1px;"></td>
    <td>null</td>
-   <td>The <code>prefers-color-scheme</code> media feature is not defined.</td>
+   <td>The <code>prefers-color-scheme</code> media feature is not set by the simulator.
+  </td>
   </tr>
   <tr>
    <td><img alt="" src="color_scheme_light.png" style="border-style: solid; border-width: 1px;"></td>
    <td><code>light</code></td>
-   <td>The user prefers a light interface.</td>
+   <td>The <code>prefers-color-scheme</code> media feature is set to <code>light</code>.</td>
   </tr>
   <tr>
-   <td><img alt="" src="color_scheme_dark.png" style="border-style: solid; border-width: 0px;"></td>
+   <td><img alt="" src="color_scheme_dark.png" style="border-style: solid; border-width: 1px;"></td>
    <td><code>dark</code></td>
-   <td>The user prefers a dark interface.</td>
+   <td>The <code>prefers-color-scheme</code> media feature is set to <code>dark</code>.</td>
   </tr>
  </tbody>
 </table>
 
-<p>Note that the first three states of the button may be difficult to distinguish visually. They typically produce a similar effect.</p>
+<p>Note that if the operating system mode is set to a particular mode, then simulating that mode will not change page rendering (i.e. simulating dark mode when the operating system is using dark mode will not change the display).</p>
+
+<div class="notecard note">
+  <h4>Note</h4> 
+  <p>If <code>privacy.resistFingerprinting</code> has been set <strong>true</strong>, the <code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></code> preference is forced to <code>light</code>. You must set <code>privacy.resistFingerprinting</code> to <strong>false</strong> in order to use this feature.</p>
+</div>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Before Firefox 87 this feature is behind the preference <code>devtools.inspector.color-scheme-simulation.enabled</code>.</p>
+</div>
 
 <h2 id="Examine_computed_CSS">Examine computed CSS</h2>
 
@@ -251,8 +258,9 @@ tags:
 
 <p>Typing in the search box performs a live filtering of the list, so, for example, if you just want to see font-related settings, you can type "font" in the search box, and only properties with "font" in the name will be listed. You can also search for the values of properties: to find the rule responsible for setting the font to "Lucida Grande", type that in the search box.</p>
 
-<div class="note">
-<p>While in the Computed view, you can press <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>F</kbd> to focus the search field. Once you've typed in a filter, you can press <kbd>Esc</kbd> to remove it again.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>While in the Computed view, you can press <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>F</kbd> to focus the search field. Once you've typed in a filter, you can press <kbd>Esc</kbd> to remove it again.</p>
 </div>
 
 <h2 id="Edit_rules">Edit rules</h2>
@@ -299,9 +307,10 @@ tags:
 <p><img alt="" src="track_changes.png" style="border: 1px solid black; display: block; margin: 0 auto;"></p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> You can view changes made to the rules view only. If you edit the CSS using the Style Editor, the changes will not be shown in the changes pane.</p>
-
-<p>Also remember, as noted above, that changes you make to the CSS rules are temporary and will be reset if you reload the page.</p>
+  <h4>Note</h4>
+  <p>You can view changes made to the rules view only. If you edit the CSS using the Style Editor, the changes will not be shown in the changes pane.</p>
+  
+  <p>Also remember, as noted above, that changes you make to the CSS rules are temporary and will be reset if you reload the page.</p>
 </div>
 
 <p>If you are satisfied with the changes you have made, you can copy the new settings to page the edited rule into your stylesheet. Right-click on the changes panel and select <strong>Copy Rule</strong> from the context menu.</p>

@@ -41,7 +41,7 @@ jobs:
         run: |
           yarn --frozen-lockfile
 
-      - uses: technote-space/get-diff-action@v4.0.5
+      - uses: technote-space/get-diff-action@v4.0.6
         id: git_diff_content
         with:
           PATTERNS: files/**/*.html
@@ -97,7 +97,7 @@ jobs:
           # package.json.
           yarn build ${{ env.GIT_DIFF_CONTENT }}
 
-      - uses: technote-space/get-diff-action@v4.0.5
+      - uses: technote-space/get-diff-action@v4.0.6
         with:
           PATTERNS: files/**/*.+(png|jpeg|jpg|gif|svg|webp)
           ABSOLUTE: true
@@ -111,7 +111,7 @@ jobs:
           export CONTENT_ROOT=$(pwd)/files
           yarn filecheck ${{ env.GIT_DIFF_FILES }}
 
-      - uses: technote-space/get-diff-action@v4.0.5
+      - uses: technote-space/get-diff-action@v4.0.6
         id: git_diff_redirects
         with:
           PATTERNS: files/**/_redirects.txt

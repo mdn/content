@@ -97,6 +97,9 @@ are specified within [`files/en-us/_redirects.txt`](files/en-us/_redirects.txt),
 one redirect per line. Each line specifies a `from` and `to` URI
 separated by whitespace. When you move a document, you'll need to add a
 redirect to this file specifying that its old URI now redirects to its new URI.
+Both of these tasks are done using the `yarn content move` tool — see
+[Moving one or more documents](#moving-one-or-more-documents).
+**Don't edit the `_redirects.txt` file manually!**
 If both an `index.html` file and a redirect exist for a document, the
 document takes precedence and the redirect is ignored.
 - **A document's `index.html` starts with "front-matter"** -- Each
@@ -323,8 +326,8 @@ underlying issue(s), you can ask for help. Your pull request will not be
 approved and merged if these tests are failing.
 
 1. If your pull request has merge conflicts with the `main` branch (GitHub
-checks for this automatically and notifies you), you are responsible to
-resolve them. You can do this by merging the `main` branch into your
+checks for this automatically and notifies you), you are responsible for
+resolving them. You can do this by merging the `main` branch into your
 branch (`git pull mdn main`), and then pushing the updated branch to
 your fork (`git push`).
 
@@ -450,6 +453,12 @@ push your branch to your fork:
 
 1. Now you're ready to create your [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
+**Important: `yarn content move` automatically adds the necessary redirect
+information to the `_redirects.txt` file so that the old location will redirect
+to the new one. Don't edit the `_redirects.txt` file manually!
+mistakes can easily creep in if you do. If you need to add a redirect without
+moving a file, talk to us about it.**
+
 ### Deleting a document
 
 Deleting one or more documents, or an entire tree of documents is also easy,
@@ -465,7 +474,13 @@ to delete (e.g., `Learn/Accessibility`), optionally followed by the locale
 of the existing document (defaults to `en-US`). If the existing document
 that you'd like to delete has child documents (i.e. it represents a
 document tree), you must also specify the `-r, --recursive` option, or
-the command will fail. For example, let's say you want to delete the
+the command will fail.
+
+**Important: you need to use the `delete` command to delete MDN documents. Don't
+just delete their directories from the repo, as `delete` also handles other
+necessary changes such as updating the `_wikihistory.json` file.**
+
+For example, let's say you want to delete the
 entire `/en-US/Learn/Accessibility` tree:
 
 1. First, as we've outlined above, you'll start a fresh branch to work within:
@@ -536,7 +551,7 @@ request is created, but why wait to fix any possible issues later?
     ```
 
 1. Use your image within the document. For example, add the following `<img>` element
-somehwere inside `files/en-us/web/css/index.html`:
+somewhere inside `files/en-us/web/css/index.html`:
 
     ```html
     <img src="my-cool-image.png" alt="My cool image">
@@ -579,7 +594,7 @@ MDN document pages, for example on
 [the JavaScript Array page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Browser_compatibility),
 is generated from the `npm` package created from the <https://github.com/mdn/browser-compat-data>
 repository. If you'd like to make or suggest a change to the content of
-the browser-compatibilitytable on any given MDN document page, you can either
+the browser compatibility table on any given MDN document page, you can either
 use the `Report problems with this data on GitHub` link in the upper-right
 corner of the table on the page itself to create an issue, or go to
 <https://github.com/mdn/browser-compat-data> and
@@ -640,7 +655,7 @@ page's meta data (like `slug`) if needed.
 above procedure, but move the page in question the opposite way between repos.
 
 **Note:** You can have an archived page with non-archived pages below it in the
-hierarchy, and vice-versa. To achive this you need to have the same directory
+hierarchy, and vice-versa. To achieve this you need to have the same directory
 structure in both the `content` and `archive-content` repos. Whether a page
 is non-archived or archived depends on which repo its `index.html` file is
 in. As an example, compare the [archived-content mozilla directory](https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla)
@@ -654,20 +669,19 @@ KumaScript macros are still used on MDN pages, even in the new platform.
 These are the function names surrounded by handlebars-style double curly
 braces that you'll see in the source code on occasion, for example
 `{{domxref}}` Eventually we have to replace them with something else,
-but they are here for now. They live in
-[https://github.com/mdn/yari/tree/master/kumascript/macros](https://github.com/mdn/yari/tree/master/kumascript/macros).
+but they are here for now. They live in <https://github.com/mdn/yari/tree/main/kumascript/macros>.
 
 Sometimes you'll want to make a change to the content that relies on a
 macro change. Take [https://github.com/mdn/content/pull/187](https://github.com/mdn/content/pull/187).
 Florian wanted to add documentation for a new WebGL extension to MDN, but
 this change relied on the new feature's spec being added to
-[https://github.com/mdn/yari/blob/master/kumascript/macros/SpecData.json](https://github.com/mdn/yari/blob/master/kumascript/macros/SpecData.json).
+<https://github.com/mdn/yari/blob/main/kumascript/macros/SpecData.json>.
 If not, the specification table on the new page would not render properly
 because the data it relies on would not be there.
 
 In such situations:
 
-1. Make the required PR to <https://github.com/mdn/yari/blob/master/kumascript/macros/>
+1. Make the required PR to <https://github.com/mdn/yari/tree/main/kumascript/macros>
    first, and get that merged.
 2. Add the content to this repo.
 

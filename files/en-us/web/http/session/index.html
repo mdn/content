@@ -22,7 +22,10 @@ tags:
 
 <p>With TCP the default port, for an HTTP server on a computer, is port 80. Other ports can also be used, like 8000 or 8080. The URL of a page to fetch contains both the domain name, and the port number, though the latter can be omitted if it is 80. See <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web">Identifying resources on the Web</a> for more details.</p>
 
-<div class="note"><strong>Note:</strong> The client-server model does not allow the server to send data to the client without an explicit request for it. To work around this problem, web developers use several techniques: ping the server periodically via the {{domxref("XMLHTTPRequest")}}, {{domxref("Fetch")}} APIs, using the <a href="/en-US/docs/WebSockets">WebSockets API</a>, or similar protocols.</div>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>The client-server model does not allow the server to send data to the client without an explicit request for it. To work around this problem, web developers use several techniques: ping the server periodically via the {{domxref("XMLHTTPRequest")}}, {{domxref("WindowOrWorkerGlobalScope.fetch")}} APIs, using the <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets API</a>, or similar protocols.</p>
+</div>
 
 <h2 id="Sending_a_client_request">Sending a client request</h2>
 
@@ -66,7 +69,7 @@ name=Joe%20User&amp;request=Send%20me%20one%20of%20your%20catalogue
 
 <ul>
  <li>The {{HTTPMethod("GET")}} method requests a data representation of the specified resource. Requests using <code>GET</code> should only retrieve data.</li>
- <li>The {{HTTPMethod("POST")}} method sends data to a server so it may change its state. This is the method often used for <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML Forms</a>.</li>
+ <li>The {{HTTPMethod("POST")}} method sends data to a server so it may change its state. This is the method often used for <a href="/en-US/docs/Learn/Forms">HTML Forms</a>.</li>
 </ul>
 
 <h2 id="Structure_of_a_server_response">Structure of a server response</h2>

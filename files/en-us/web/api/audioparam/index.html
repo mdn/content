@@ -68,7 +68,7 @@ var audioCtx = new AudioContext();
 var gainNode = audioCtx.createGain();
 gainNode.gain.value = 0;</pre>
 
-<p>Next, an example showing a {{ domxref("DynamicsCompressorNode") }} having some param values maniuplated. These are examples of k-rate AudioParam's, as the values are set for the entire audio block at once.</p>
+<p>Next, an example showing a {{ domxref("DynamicsCompressorNode") }} having some param values manipulated. These are examples of k-rate AudioParam's, as the values are set for the entire audio block at once.</p>
 
 <pre class="brush: js">var compressor = audioCtx.createDynamicsCompressor();
 compressor.threshold.setValueAtTime(-50, audioCtx.currentTime);

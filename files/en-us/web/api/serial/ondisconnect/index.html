@@ -1,0 +1,51 @@
+---
+title: Serial.ondisconnect
+slug: Web/API/Serial/ondisconnect
+tags:
+  - API
+  - Property
+  - Reference
+  - Serial.ondisconnect
+  - Serial
+---
+<div>{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}</div>
+
+<p class="summary">The <strong><code>ondisconnect</code></strong> EventHandler of the {{domxref("Serial")}} interface is called when the port has been disconnected from the device. This method receives an {{domxref("Event")}} object. The target of this event is the {{domxref("SerialPort")}} interface that has been disconnected.</p>
+
+<p>This event is only fired for ports associated with removable devices such as those connected via USB. The user must grant the origin permission to access this device during a call to {{domxref("Serial.requestPort()", "requestPort()")}} before this event will be fired.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">Serial.ondisconnect = <var>function(event)</var>;
+Serial.addEventListener('disconnect', <var>function(event)</var>);</pre>
+
+<h2>Example</h2>
+
+<p>The following example shows an event listener for the <code>disconnect</code> event,. This allows the site to react when a port is disconnected.</p>
+
+<pre class="brush: js">navigator.serial.addEventListener('disconnect', (e) => {
+  // Remove `e.target` from the list of available ports.
+});</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Serial API','#dom-serial-ondisconnect','Serial.ondisconnect')}}</td>
+   <td>{{Spec2('Web Serial API')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.Serial.ondisconnect")}}</p>

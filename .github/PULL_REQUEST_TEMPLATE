@@ -1,0 +1,6 @@
+Checklist — To help your pull request get merged faster, please do following:
+
+1. - [ ] Provide a summary of your changes — say what problem you are fixing, what files are changed, what you've done. This doesn't need to be hugely detailed, as we can see exact changes in the "Files changed" tab.
+1. - [ ] Provide a link to the issue(s) you are fixing, if appropriate, in the form "Fixes _url-of-issue_". GitHub will render this in the form "Fixes #1234", with the issue number linked to the issue. Doing this allows us to figure out what issues you are fixing, as well as helping to automate things (for example the issue will be closed once the PR that fixed it has been merged).
+1. - [ ] Review the results of the automated checking we run on every PR and fix any problems reported (see the list of checks near the bottom of the PR page). If you need help, please ask in a comment!
+1. - [ ] Link to any other resources that you think might be useful in reviewing your PR.

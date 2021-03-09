@@ -1944,7 +1944,7 @@
 /en-US/docs/DOM/document.location	/en-US/docs/Web/API/Document/location
 /en-US/docs/DOM/document.mozCancelFullScreen	/en-US/docs/Web/API/Document/exitFullscreen
 /en-US/docs/DOM/document.mozFullScreen	/en-US/docs/Web/API/Document/fullscreen
-/en-US/docs/DOM/document.mozFullScreenElement	/en-US/docs/Web/API/DocumentOrShadowRoot/fullscreenElement
+/en-US/docs/DOM/document.mozFullScreenElement	/en-US/docs/Web/API/Document/fullscreenElement
 /en-US/docs/DOM/document.mozFullScreenEnabled	/en-US/docs/Web/API/Document/fullscreenEnabled
 /en-US/docs/DOM/document.mozSetImageElement	/en-US/docs/Web/API/Document/mozSetImageElement
 /en-US/docs/DOM/document.mozSyntheticDocument	/en-US/docs/Web/API/Document/mozSyntheticDocument
@@ -1962,7 +1962,7 @@
 /en-US/docs/DOM/document.releaseCapture	/en-US/docs/Web/API/Document/releaseCapture
 /en-US/docs/DOM/document.selectedStyleSheetSet	/en-US/docs/Web/API/Document/selectedStyleSheetSet
 /en-US/docs/DOM/document.styleSheetSets	/en-US/docs/Web/API/Document/styleSheetSets
-/en-US/docs/DOM/document.styleSheets	/en-US/docs/Web/API/DocumentOrShadowRoot/styleSheets
+/en-US/docs/DOM/document.styleSheets	/en-US/docs/Web/API/Document/styleSheets
 /en-US/docs/DOM/document.textContent	/en-US/docs/Web/API/Node/textContent
 /en-US/docs/DOM/document.title	/en-US/docs/Web/API/Document/title
 /en-US/docs/DOM/document.tooltipNode	/en-US/docs/Web/API/Document/tooltipNode
@@ -2479,7 +2479,7 @@
 /en-US/docs/DOM:document.plugins	/en-US/docs/Web/API/Document/plugins
 /en-US/docs/DOM:document.popupNode	/en-US/docs/Web/API/Document/popupNode
 /en-US/docs/DOM:document.referrer	/en-US/docs/Web/API/Document/referrer
-/en-US/docs/DOM:document.styleSheets	/en-US/docs/Web/API/DocumentOrShadowRoot/styleSheets
+/en-US/docs/DOM:document.styleSheets	/en-US/docs/Web/API/Document/styleSheets
 /en-US/docs/DOM:document.textContent	/en-US/docs/Web/API/Node/textContent
 /en-US/docs/DOM:document.title	/en-US/docs/Web/API/Document/title
 /en-US/docs/DOM:document.tooltipNode	/en-US/docs/Web/API/Document/tooltipNode
@@ -3312,7 +3312,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/document.location	/en-US/docs/Web/API/Document/location
 /en-US/docs/Document_Object_Model_(DOM)/document.mozCancelFullScreen	/en-US/docs/Web/API/Document/exitFullscreen
 /en-US/docs/Document_Object_Model_(DOM)/document.mozFullScreen	/en-US/docs/Web/API/Document/fullscreen
-/en-US/docs/Document_Object_Model_(DOM)/document.mozFullScreenElement	/en-US/docs/Web/API/DocumentOrShadowRoot/fullscreenElement
+/en-US/docs/Document_Object_Model_(DOM)/document.mozFullScreenElement	/en-US/docs/Web/API/Document/fullscreenElement
 /en-US/docs/Document_Object_Model_(DOM)/document.mozFullScreenEnabled	/en-US/docs/Web/API/Document/fullscreenEnabled
 /en-US/docs/Document_Object_Model_(DOM)/document.mozSetImageElement	/en-US/docs/Web/API/Document/mozSetImageElement
 /en-US/docs/Document_Object_Model_(DOM)/document.mozSyntheticDocument	/en-US/docs/Web/API/Document/mozSyntheticDocument
@@ -3329,7 +3329,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/document.releaseCapture	/en-US/docs/Web/API/Document/releaseCapture
 /en-US/docs/Document_Object_Model_(DOM)/document.selectedStyleSheetSet	/en-US/docs/Web/API/Document/selectedStyleSheetSet
 /en-US/docs/Document_Object_Model_(DOM)/document.styleSheetSets	/en-US/docs/Web/API/Document/styleSheetSets
-/en-US/docs/Document_Object_Model_(DOM)/document.styleSheets	/en-US/docs/Web/API/DocumentOrShadowRoot/styleSheets
+/en-US/docs/Document_Object_Model_(DOM)/document.styleSheets	/en-US/docs/Web/API/Document/styleSheets
 /en-US/docs/Document_Object_Model_(DOM)/document.textContent	/en-US/docs/Web/API/Node/textContent
 /en-US/docs/Document_Object_Model_(DOM)/document.title	/en-US/docs/Web/API/Document/title
 /en-US/docs/Document_Object_Model_(DOM)/document.tooltipNode	/en-US/docs/Web/API/Document/tooltipNode
@@ -5758,7 +5758,6 @@
 /en-US/docs/MDN/Contribute/Tools/KumaScript	/en-US/docs/MDN/Tools/KumaScript
 /en-US/docs/MDN/Contribute/Tools/KumaScript/Troubleshooting	/en-US/docs/MDN/Tools/KumaScript/Troubleshooting
 /en-US/docs/MDN/Contribute/Tools/Sample_server	/en-US/docs/MDN/Tools/Sample_server
-/en-US/docs/MDN/Contribute/Tools/Search	/en-US/docs/MDN/Tools/Search
 /en-US/docs/MDN/Feedback	/en-US/docs/MDN/Contribute/Feedback
 /en-US/docs/MDN/Getting_started	/en-US/docs/MDN/Contribute/Getting_started
 /en-US/docs/MDN/Guidelines/Content	/en-US/docs/MDN/Guidelines/Does_this_belong_on_MDN
@@ -5781,7 +5780,6 @@
 /en-US/docs/MDN/Structures/Content_blocks	/en-US/docs/MDN/Guidelines/CSS_style_guide
 /en-US/docs/MDN/Tools/Document_parameters	/en-US/docs/MDN/Tools/Unsupported_GET_API
 /en-US/docs/MDN/User_guide	/en-US/docs/MDN/Tools
-/en-US/docs/MDN/User_guide/Advanced_search	/en-US/docs/MDN/Tools/Search
 /en-US/docs/MDN/User_guide/Troubleshooting_KumaScript_errors	/en-US/docs/MDN/Tools/KumaScript/Troubleshooting
 /en-US/docs/MDN_at_ten	/en-US/docs/MDN/At_ten
 /en-US/docs/MDN_at_ten/Contributing_to_MDN	/en-US/docs/MDN/Contribute
@@ -5806,9 +5804,7 @@
 /en-US/docs/MathML/Element/merror	/en-US/docs/Web/MathML/Element/merror
 /en-US/docs/MathML/Element/mfenced	/en-US/docs/Web/MathML/Element/mfenced
 /en-US/docs/MathML/Element/mfrac	/en-US/docs/Web/MathML/Element/mfrac
-/en-US/docs/MathML/Element/mglyph	/en-US/docs/Web/MathML/Element/mglyph
 /en-US/docs/MathML/Element/mi	/en-US/docs/Web/MathML/Element/mi
-/en-US/docs/MathML/Element/mlabeledtr	/en-US/docs/Web/MathML/Element/mlabeledtr
 /en-US/docs/MathML/Element/mmultiscripts	/en-US/docs/Web/MathML/Element/mmultiscripts
 /en-US/docs/MathML/Element/mn	/en-US/docs/Web/MathML/Element/mn
 /en-US/docs/MathML/Element/mo	/en-US/docs/Web/MathML/Element/mo
@@ -6473,13 +6469,11 @@
 /en-US/docs/SVG/Namespaces_Crash_Course	/en-US/docs/Web/SVG/Namespaces_Crash_Course
 /en-US/docs/SVG/Namespaces_Crash_Course/Example	/en-US/docs/Web/SVG/Namespaces_Crash_Course/Example
 /en-US/docs/SVG/Other_Resources	/en-US/docs/Web/SVG/Other_Resources
-/en-US/docs/SVG/Project	/en-US/docs/Web/SVG/Project
 /en-US/docs/SVG/Replaced_Element	/en-US/docs/Web/SVG/Replaced_Element
 /en-US/docs/SVG/SVG_animation_with_SMIL	/en-US/docs/Web/SVG/SVG_animation_with_SMIL
 /en-US/docs/SVG/SVG_as_an_Image	/en-US/docs/Web/SVG/SVG_as_an_Image
 /en-US/docs/SVG/Scripting	/en-US/docs/Web/SVG/Scripting
 /en-US/docs/SVG/Server-configuration	/en-US/docs/Web/SVG/Server-configuration
-/en-US/docs/SVG/Sizing	/en-US/docs/Web/SVG/Sizing
 /en-US/docs/SVG/Specification_Deviations	/en-US/docs/Web/SVG/Specification_Deviations
 /en-US/docs/SVG/Tutorial	/en-US/docs/Web/SVG/Tutorial
 /en-US/docs/SVG/Tutorial/Basic_Shapes	/en-US/docs/Web/SVG/Tutorial/Basic_Shapes
@@ -6620,7 +6614,6 @@
 /en-US/docs/The_Do_Not_Track_Field_Guide/Case_studies/3_Media_company	/en-US/docs/Web/HTTP/Headers/DNT
 /en-US/docs/The_Do_Not_Track_Field_Guide/Case_studies/4_Software_company	/en-US/docs/Web/HTTP/Headers/DNT
 /en-US/docs/The_Do_Not_Track_Field_Guide/Case_studies/Additional_issues_to_consider	/en-US/docs/Web/HTTP/Headers/DNT
-/en-US/docs/The_Do_Not_Track_Field_Guide/Case_studies/Case_studies	/en-US/docs/Web/Security/Do_not_track_field_guide/Case_studies/Case_studies
 /en-US/docs/The_Do_Not_Track_Field_Guide/Case_studies/Case_studies/Additional_issues_to_consider	/en-US/docs/Web/HTTP/Headers/DNT
 /en-US/docs/The_Do_Not_Track_Field_Guide/Case_studies/Case_studies/Case_studies_flow_chart	/en-US/docs/Web/HTTP/Headers/DNT
 /en-US/docs/The_Do_Not_Track_Field_Guide/Case_studies/Case_studies_flow_chart	/en-US/docs/Web/HTTP/Headers/DNT
@@ -7209,6 +7202,7 @@
 /en-US/docs/Web/API/BatteryManager.onchargingtimechange	/en-US/docs/Web/API/BatteryManager/onchargingtimechange
 /en-US/docs/Web/API/BatteryManager.ondischargingtimechange	/en-US/docs/Web/API/BatteryManager/ondischargingtimechange
 /en-US/docs/Web/API/BatteryManager.onlevelchange	/en-US/docs/Web/API/BatteryManager/onlevelchange
+/en-US/docs/Web/API/Beacon_API/Using_the_Beacon_API	/en-US/docs/Web/API/Beacon_API
 /en-US/docs/Web/API/BeforeInstallPromptEvent/BeforeInstallPromptEvent.prompt()	/en-US/docs/Web/API/BeforeInstallPromptEvent/prompt
 /en-US/docs/Web/API/BiquadFilterNode.Q	/en-US/docs/Web/API/BiquadFilterNode/Q
 /en-US/docs/Web/API/BiquadFilterNode.detune	/en-US/docs/Web/API/BiquadFilterNode/detune
@@ -7522,15 +7516,13 @@
 /en-US/docs/Web/API/Document/elementFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot/elementFromPoint
 /en-US/docs/Web/API/Document/elementsFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot/elementsFromPoint
 /en-US/docs/Web/API/Document/firstElementChild	/en-US/docs/Web/API/ParentNode/firstElementChild
-/en-US/docs/Web/API/Document/fullscreenElement	/en-US/docs/Web/API/DocumentOrShadowRoot/fullscreenElement
 /en-US/docs/Web/API/Document/getAnimations	/en-US/docs/Web/API/DocumentOrShadowRoot/getAnimations
 /en-US/docs/Web/API/Document/getSelection	/en-US/docs/Web/API/DocumentOrShadowRoot/getSelection
 /en-US/docs/Web/API/Document/inputEncoding	/en-US/docs/Web/API/document/characterSet
 /en-US/docs/Web/API/Document/lastElementChild	/en-US/docs/Web/API/ParentNode/lastElementChild
 /en-US/docs/Web/API/Document/mozCancelFullScreen	/en-US/docs/Web/API/Document/exitFullscreen
-/en-US/docs/Web/API/Document/mozFullScreenElement	/en-US/docs/Web/API/DocumentOrShadowRoot/fullscreenElement
+/en-US/docs/Web/API/Document/mozFullScreenElement	/en-US/docs/Web/API/Document/fullscreenElement
 /en-US/docs/Web/API/Document/mozFullScreenEnabled	/en-US/docs/Web/API/Document/fullscreenEnabled
-/en-US/docs/Web/API/Document/msElementsFromRect	/en-US/docs/Web/API/DocumentOrShadowRoot/msElementsFromRect
 /en-US/docs/Web/API/Document/namespaceURI	/en-US/docs/Web/API/Node/namespaceURI
 /en-US/docs/Web/API/Document/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
 /en-US/docs/Web/API/Document/onblur	/en-US/docs/Web/API/GlobalEventHandlers/onblur
@@ -7555,9 +7547,7 @@
 /en-US/docs/Web/API/Document/onselect	/en-US/docs/Web/API/GlobalEventHandlers/onselect
 /en-US/docs/Web/API/Document/onselectionchange	/en-US/docs/Web/API/GlobalEventHandlers/onselectionchange
 /en-US/docs/Web/API/Document/onsubmit	/en-US/docs/Web/API/GlobalEventHandlers/onsubmit
-/en-US/docs/Web/API/Document/pointerLockElement	/en-US/docs/Web/API/DocumentOrShadowRoot/pointerLockElement
 /en-US/docs/Web/API/Document/resourcetimingbufferfull_event	/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event
-/en-US/docs/Web/API/Document/styleSheets	/en-US/docs/Web/API/DocumentOrShadowRoot/styleSheets
 /en-US/docs/Web/API/Document/timeline/currentTime	/en-US/docs/Web/API/AnimationTimeline/currentTime
 /en-US/docs/Web/API/DocumentFragment.DocumentFragment	/en-US/docs/Web/API/DocumentFragment/DocumentFragment
 /en-US/docs/Web/API/DocumentFragment.querySelector	/en-US/docs/Web/API/DocumentFragment/querySelector
@@ -7567,9 +7557,13 @@
 /en-US/docs/Web/API/DocumentFragment/firstElementChild	/en-US/docs/Web/API/ParentNode/firstElementChild
 /en-US/docs/Web/API/DocumentFragment/lastElementChild	/en-US/docs/Web/API/ParentNode/lastElementChild
 /en-US/docs/Web/API/DocumentOrShadowRoot/activeElement	/en-US/docs/Web/API/Document/activeElement
+/en-US/docs/Web/API/DocumentOrShadowRoot/fullscreenElement	/en-US/docs/Web/API/Document/fullscreenElement
 /en-US/docs/Web/API/DocumentOrShadowRoot/nodeFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot
 /en-US/docs/Web/API/DocumentOrShadowRoot/nodesFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot
-/en-US/docs/Web/API/DocumentOrShadowRoot/pictureInPictureEnabled	/en-US/docs/Web/API/DocumentOrShadowRoot/pictureInPictureElement
+/en-US/docs/Web/API/DocumentOrShadowRoot/pictureInPictureElement	/en-US/docs/Web/API/Document/pictureInPictureElement
+/en-US/docs/Web/API/DocumentOrShadowRoot/pictureInPictureEnabled	/en-US/docs/Web/API/Document/pictureInPictureEnabled
+/en-US/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/en-US/docs/Web/API/Document/pointerLockElement
+/en-US/docs/Web/API/DocumentOrShadowRoot/styleSheets	/en-US/docs/Web/API/Document/styleSheets
 /en-US/docs/Web/API/DocumentTouch.createTouch	/en-US/docs/Web/API/Document/createTouch
 /en-US/docs/Web/API/DocumentTouch.createTouchList	/en-US/docs/Web/API/Document/createTouchList
 /en-US/docs/Web/API/DocumentTouch/createTouch	/en-US/docs/Web/API/Document/createTouch
@@ -7920,6 +7914,18 @@
 /en-US/docs/Web/API/HTMLFrameSetElement/onpopstate	/en-US/docs/Web/API/WindowEventHandlers/onpopstate
 /en-US/docs/Web/API/HTMLFrameSetElement/onunload	/en-US/docs/Web/API/WindowEventHandlers/onunload
 /en-US/docs/Web/API/HTMLHTMLElement.version	/en-US/docs/Web/API/HTMLHtmlElement/version
+/en-US/docs/Web/API/HTMLHyperlinkElementUtils/hash	/en-US/docs/Web/API/HTMLAnchorElement/hash
+/en-US/docs/Web/API/HTMLHyperlinkElementUtils/host	/en-US/docs/Web/API/HTMLAnchorElement/host
+/en-US/docs/Web/API/HTMLHyperlinkElementUtils/hostname	/en-US/docs/Web/API/HTMLAnchorElement/hostname
+/en-US/docs/Web/API/HTMLHyperlinkElementUtils/href	/en-US/docs/Web/API/HTMLAnchorElement/href
+/en-US/docs/Web/API/HTMLHyperlinkElementUtils/origin	/en-US/docs/Web/API/HTMLAnchorElement/origin
+/en-US/docs/Web/API/HTMLHyperlinkElementUtils/password	/en-US/docs/Web/API/HTMLAnchorElement/password
+/en-US/docs/Web/API/HTMLHyperlinkElementUtils/pathname	/en-US/docs/Web/API/HTMLAnchorElement/pathname
+/en-US/docs/Web/API/HTMLHyperlinkElementUtils/port	/en-US/docs/Web/API/HTMLAnchorElement/port
+/en-US/docs/Web/API/HTMLHyperlinkElementUtils/protocol	/en-US/docs/Web/API/HTMLAnchorElement/protocol
+/en-US/docs/Web/API/HTMLHyperlinkElementUtils/search	/en-US/docs/Web/API/HTMLAnchorElement/search
+/en-US/docs/Web/API/HTMLHyperlinkElementUtils/toString	/en-US/docs/Web/API/HTMLAnchorElement/toString
+/en-US/docs/Web/API/HTMLHyperlinkElementUtils/username	/en-US/docs/Web/API/HTMLAnchorElement/username
 /en-US/docs/Web/API/HTMLIFrameElement.contentWindow	/en-US/docs/Web/API/HTMLIFrameElement/contentWindow
 /en-US/docs/Web/API/HTMLIFrameElement/referrer	/en-US/docs/Web/API/HTMLIFrameElement/referrerPolicy
 /en-US/docs/Web/API/HTMLIFrameElement/setNfcFocus	/en-US/docs/Web/API/HTMLIFrameElement
@@ -8464,6 +8470,9 @@
 /en-US/docs/Web/API/ParentNode.children	/en-US/docs/Web/API/ParentNode/children
 /en-US/docs/Web/API/ParentNode.firstElementChild	/en-US/docs/Web/API/ParentNode/firstElementChild
 /en-US/docs/Web/API/ParentNode.lastElementChild	/en-US/docs/Web/API/ParentNode/lastElementChild
+/en-US/docs/Web/API/PasswordCredential/additionalData	/en-US/docs/Web/API/PasswordCredential
+/en-US/docs/Web/API/PasswordCredential/idName	/en-US/docs/Web/API/PasswordCredential
+/en-US/docs/Web/API/PasswordCredential/passwordName	/en-US/docs/Web/API/PasswordCredential
 /en-US/docs/Web/API/Path2D.Path2D	/en-US/docs/Web/API/Path2D/Path2D
 /en-US/docs/Web/API/Path2D.addPath	/en-US/docs/Web/API/Path2D/addPath
 /en-US/docs/Web/API/PaymentAddress/PaymentAddress.country	/en-US/docs/Web/API/PaymentAddress/country
@@ -8884,7 +8893,6 @@
 /en-US/docs/Web/API/URL.createObjectURL	/en-US/docs/Web/API/URL/createObjectURL
 /en-US/docs/Web/API/URL.revokeObjectURL	/en-US/docs/Web/API/URL/revokeObjectURL
 /en-US/docs/Web/API/URLReadOnlyUtils.origin	/en-US/docs/Web/API/URLUtilsReadOnly/origin
-/en-US/docs/Web/API/URLUtils	/en-US/docs/Web/API/HTMLHyperlinkElementUtils
 /en-US/docs/Web/API/URLUtils/createObjectURL	/en-US/docs/Web/API/URL/createObjectURL
 /en-US/docs/Web/API/URLUtilsReadOnly.hash	/en-US/docs/Web/API/URLUtilsReadOnly/hash
 /en-US/docs/Web/API/URLUtilsReadOnly.host	/en-US/docs/Web/API/URLUtilsReadOnly/host
@@ -9220,10 +9228,7 @@
 /en-US/docs/Web/API/XMLDocument.load	/en-US/docs/Web/API/XMLDocument/load
 /en-US/docs/Web/API/XMLHttpRequest/FormData	/en-US/docs/Web/API/FormData
 /en-US/docs/Web/API/XMLHttpRequest/FormData/Using_FormData_Objects	/en-US/docs/Web/API/FormData/Using_FormData_Objects
-/en-US/docs/Web/API/XMLHttpRequest/XMLHttpRequest.init()	/en-US/docs/Web/API/XMLHttpRequest/init
 /en-US/docs/Web/API/XMLHttpRequest/XMLHttpRequest.response	/en-US/docs/Web/API/XMLHttpRequest/response
-/en-US/docs/Web/API/XMLHttpRequest/init()	/en-US/docs/Web/API/XMLHttpRequest/init
-/en-US/docs/Web/API/XMLHttpRequest/openRequest()	/en-US/docs/Web/API/XMLHttpRequest/openRequest
 /en-US/docs/Web/API/XMLHttpRequest/responseresponseText	/en-US/docs/Web/API/XMLHttpRequest/responseText
 /en-US/docs/Web/API/XPathEvaluator/XPathEvaluator.createExpression()	/en-US/docs/Web/API/XPathEvaluator/createExpression
 /en-US/docs/Web/API/XPathResult/XPathResult.booleanValue	/en-US/docs/Web/API/XPathResult/booleanValue
@@ -9318,7 +9323,7 @@
 /en-US/docs/Web/API/document.location	/en-US/docs/Web/API/Document/location
 /en-US/docs/Web/API/document.mozCancelFullScreen	/en-US/docs/Web/API/Document/exitFullscreen
 /en-US/docs/Web/API/document.mozFullScreen	/en-US/docs/Web/API/Document/fullscreen
-/en-US/docs/Web/API/document.mozFullScreenElement	/en-US/docs/Web/API/DocumentOrShadowRoot/fullscreenElement
+/en-US/docs/Web/API/document.mozFullScreenElement	/en-US/docs/Web/API/Document/fullscreenElement
 /en-US/docs/Web/API/document.mozFullScreenEnabled	/en-US/docs/Web/API/Document/fullscreenEnabled
 /en-US/docs/Web/API/document.mozSetImageElement	/en-US/docs/Web/API/Document/mozSetImageElement
 /en-US/docs/Web/API/document.mozSyntheticDocument	/en-US/docs/Web/API/Document/mozSyntheticDocument
@@ -9329,7 +9334,7 @@
 /en-US/docs/Web/API/document.open	/en-US/docs/Web/API/Document/open
 /en-US/docs/Web/API/document.origin	/en-US/docs/Web/API/Document/origin
 /en-US/docs/Web/API/document.plugins	/en-US/docs/Web/API/Document/plugins
-/en-US/docs/Web/API/document.pointerLockElement	/en-US/docs/Web/API/DocumentOrShadowRoot/pointerLockElement
+/en-US/docs/Web/API/document.pointerLockElement	/en-US/docs/Web/API/Document/pointerLockElement
 /en-US/docs/Web/API/document.popupNode	/en-US/docs/Web/API/Document/popupNode
 /en-US/docs/Web/API/document.preferredStyleSheetSet	/en-US/docs/Web/API/Document/preferredStyleSheetSet
 /en-US/docs/Web/API/document.queryCommandState	/en-US/docs/Web/API/Document/queryCommandState
@@ -9339,7 +9344,7 @@
 /en-US/docs/Web/API/document.releaseCapture	/en-US/docs/Web/API/Document/releaseCapture
 /en-US/docs/Web/API/document.selectedStyleSheetSet	/en-US/docs/Web/API/Document/selectedStyleSheetSet
 /en-US/docs/Web/API/document.styleSheetSets	/en-US/docs/Web/API/Document/styleSheetSets
-/en-US/docs/Web/API/document.styleSheets	/en-US/docs/Web/API/DocumentOrShadowRoot/styleSheets
+/en-US/docs/Web/API/document.styleSheets	/en-US/docs/Web/API/Document/styleSheets
 /en-US/docs/Web/API/document.textContent	/en-US/docs/Web/API/Node/textContent
 /en-US/docs/Web/API/document.title	/en-US/docs/Web/API/Document/title
 /en-US/docs/Web/API/document.tooltipNode	/en-US/docs/Web/API/Document/tooltipNode
@@ -9481,7 +9486,6 @@
 /en-US/docs/Web/API/mozRTCSessionDescription/mozRTCSessionDescription	/en-US/docs/Web/API/RTCSessionDescription/RTCSessionDescription
 /en-US/docs/Web/API/mozRTCSessionDescription/toJSON	/en-US/docs/Web/API/RTCSessionDescription/toJSON
 /en-US/docs/Web/API/msConvertURL	/en-US/docs/Web/API/Event/msConvertURL
-/en-US/docs/Web/API/msElementsFromRect	/en-US/docs/Web/API/DocumentOrShadowRoot/msElementsFromRect
 /en-US/docs/Web/API/msFrameStep	/en-US/docs/Web/API/HTMLVideoElement/msFrameStep
 /en-US/docs/Web/API/msMatchesSelector	/en-US/docs/Web/API/Element/matches
 /en-US/docs/Web/API/mute	/en-US/docs/Web/API/MediaStreamTrack/mute_event
@@ -11976,7 +11980,7 @@
 /en-US/docs/document.open	/en-US/docs/Web/API/Document/open
 /en-US/docs/document.plugins	/en-US/docs/Web/API/Document/plugins
 /en-US/docs/document.referrer	/en-US/docs/Web/API/Document/referrer
-/en-US/docs/document.styleSheets	/en-US/docs/Web/API/DocumentOrShadowRoot/styleSheets
+/en-US/docs/document.styleSheets	/en-US/docs/Web/API/Document/styleSheets
 /en-US/docs/document.title	/en-US/docs/Web/API/Document/title
 /en-US/docs/document.vlinkColor	/en-US/docs/Web/API/Document/vlinkColor
 /en-US/docs/document.width	/en-US/docs/Web/API/Document/width

@@ -38,7 +38,7 @@ tags:
  <dt>{{domxref("NavigatorConcurrentHardware.hardwareConcurrency")}} {{readonlyInline}}</dt>
  <dd>Returns the number of logical processor cores available.</dd>
  <dt>{{domxref("NavigatorPlugins.javaEnabled")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("Boolean")}} flag indicating whether the host browser is Java-enabled or not.</dd>
+ <dd>Returns false.</dd>
  <dt>{{domxref('Navigator.keyboard')}} {{readonlyinline}} {{experimental_inline}}</dt>
  <dd>Returns a {{domxref('Keyboard')}} object which provides access to functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.</dd>
  <dt>{{domxref("NavigatorLanguage.language")}} {{readonlyInline}}</dt>
@@ -55,16 +55,18 @@ tags:
  <dd>Returns a reference to a {{domxref("MediaDevices")}} object which can then be used to get information about available media devices ({{domxref("MediaDevices.enumerateDevices()")}}), find out what constrainable properties are supported for media on the user's computer and user agent ({{domxref("MediaDevices.getSupportedConstraints()")}}), and to request access to media using {{domxref("MediaDevices.getUserMedia()")}}.</dd>
  <dt>{{domxref("Navigator.mediaSession")}} {{readonlyinline}} {{experimental_inline}}</dt>
  <dd>Returns {{domxref("MediaSession")}} object which can be used to provide metadata that can be used by the browser to present information about the currently-playing media to the user, such as in a global media controls UI.</dd>
- <dt>{{domxref("NavigatorPlugins.mimeTypes")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("NavigatorPlugins.mimeTypes")}} {{readonlyInline}}{{deprecated_inline}}</dt>
  <dd>Returns an {{domxref("MimeTypeArray")}} listing the MIME types supported by the browser.</dd>
- <dt>{{domxref("Navigator.onLine")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("NavigatorOnLine.onLine")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("Boolean")}} indicating whether the browser is working online.</dd>
  <dt>{{domxref("Navigator.permissions")}} {{readonlyinline}} {{experimental_inline}}</dt>
  <dd>Returns a {{domxref("Permissions")}} object that can be used to query and update permission status of APIs covered by the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>.</dd>
- <dt>{{domxref("NavigatorPlugins.plugins")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("NavigatorPlugins.plugins")}} {{readonlyInline}}{{deprecated_inline}}</dt>
  <dd>Returns a {{domxref("PluginArray")}} listing the plugins installed in the browser.</dd>
  <dt>{{domxref("Navigator.presentation")}} {{readonlyInline}} {{experimental_inline}}</dt>
  <dd>Returns a reference to the {{domxref("Presentation")}} API.</dd>
+ <dt>{{domxref("Navigator.serial")}} {{readonlyInline}}</dt>
+ <dd>Returns a {{domxref("Serial")}} object,  which represents the entry point into the {{domxref("Web Serial API")}} to enable the control of serial ports.</dd>
  <dt>{{domxref("Navigator.serviceWorker")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{domxref("ServiceWorker")}} objects for the <a href="https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window">associated document</a>.</dd>
  <dt>{{domxref("NavigatorStorage.storage")}} {{readonlyinline}}</dt>
@@ -76,7 +78,7 @@ tags:
  <dt>{{domxref("Navigator.webdriver")}} {{readonlyInline}} {{experimental_inline}}</dt>
  <dd>Indicates whether the user agent is controlled by automation.</dd>
  <dt>{{domxref("Navigator.xr")}} {{readonlyInline}} {{experimental_inline}}</dt>
- <dd>Returns {{domxref("XR")}} object, which represents the entry point into the <a href="/en-US/docs/Web/API/WebXR_API">WebXR API</a>.</dd>
+ <dd>Returns {{domxref("XRSystem")}} object, which represents the entry point into the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR API</a>.</dd>
 </dl>
 
 <h3 id="Non-standard_properties">Non-standard properties</h3>

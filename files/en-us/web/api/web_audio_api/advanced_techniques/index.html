@@ -18,7 +18,7 @@ tags:
 
 <p>We're going to be looking at a very simple step sequencer:</p>
 
-<p><img alt="A sound sequencer application featuring play and BPM master controls, and 4 different voices with controls for each." src="https://mdn.mozillademos.org/files/16225/sequencer.png" style="height: 655px; width: 841px;"><br>
+<p><img alt="A sound sequencer application featuring play and BPM master controls, and 4 different voices with controls for each." src="sequencer.png"><br>
   </p>
 
 <p>In practice this is easier to do with a library — the Web Audio API was built to be built upon. If you are about to embark on building something more complex, <a href="https://tonejs.github.io/">tone.js</a> would be a good place to start. However, we want to demonstrate how to build such a demo from first principles, as a learning exercise.</p>
@@ -60,7 +60,7 @@ tags:
   <tr>
    <td>"Dial up"</td>
    <td>Loading a sound sample to play</td>
-   <td>{{domxref("AudioContext.decodeAudioData()")}}, {{domxref("AudioBufferSourceNode")}}</td>
+   <td>{{domxref("BaseAudioContext/decodeAudioData")}}, {{domxref("AudioBufferSourceNode")}}</td>
   </tr>
  </tbody>
 </table>
@@ -87,7 +87,7 @@ const audioCtx = new AudioContext();</pre>
 
 <p>First of all, we'll create our periodic wave. To do so, We need to pass real and imaginary values into the {{domxref("BaseAudioContext.createPeriodicWave()")}} method.:</p>
 
-<pre class="brush: js">let wave = audioCtx.createPeriodicWave(wavetable.real, wavetable.imag);
+<pre class="brush: js">const wave = audioCtx.createPeriodicWave(wavetable.real, wavetable.imag);
 </pre>
 
 <div class="note">
@@ -98,14 +98,16 @@ const audioCtx = new AudioContext();</pre>
 
 <p>Now we can create an {{domxref("OscillatorNode")}} and set its wave to the one we've created:</p>
 
-<pre class="brush: js">function playSweep() {
-     let osc = audioCtx.createOscillator();
+<pre class="brush: js">function playSweep(time) {
+     const osc = audioCtx.createOscillator();
      osc.setPeriodicWave(wave);
      osc.frequency.value = 440;
      osc.connect(audioCtx.destination);
-     osc.start();
-     osc.stop(audioCtx.currentTime + 1);
+     osc.start(time);
+     osc.stop(time + 1);
 }</pre>
+
+<p>We pass in a time parameter to the function here, which we'll use later to schedule the sweep.</p>
 
 <h3 id="Controlling_amplitude">Controlling amplitude</h3>
 
@@ -142,27 +144,23 @@ releaseControl.addEventListener('input', function() {
 <p>For our attack and release, we'll use the <code>linearRampToValueAtTime</code> method as mentioned above. It takes two parameters — the value you want to set the parameter you are changing to (in this case the gain) and when you want to do this. In our case <em>when</em> is controlled by our inputs. So in the example below the gain is being increased to 1, at a linear rate, over the time the attack range input has been set to. Similarly, for our release, the gain is being set to 0, at a linear rate, over the time the release input has been set to.</p>
 
 <pre class="brush: js">let sweepLength = 2;
-function playSweep() {
+function playSweep(time) {
     let osc = audioCtx.createOscillator();
     osc.setPeriodicWave(wave);
     osc.frequency.value = 440;
 
     let sweepEnv = audioCtx.createGain();
-    sweepEnv.gain.cancelScheduledValues(audioCtx.currentTime);
-    sweepEnv.gain.setValueAtTime(0, audioCtx.currentTime);
+    sweepEnv.gain.cancelScheduledValues(time);
+    sweepEnv.gain.setValueAtTime(0, time);
     // set our attack
-    sweepEnv.gain.linearRampToValueAtTime(1, audioCtx.currentTime + attackTime);
+    sweepEnv.gain.linearRampToValueAtTime(1, time + attackTime);
     // set our release
-    sweepEnv.gain.linearRampToValueAtTime(0, audioCtx.currentTime + sweepLength - releaseTime);
+    sweepEnv.gain.linearRampToValueAtTime(0, time + sweepLength - releaseTime);
 
     osc.connect(sweepEnv).connect(audioCtx.destination);
-    osc.start();
-    osc.stop(audioCtx.currentTime + sweepLength);
+    osc.start(time);
+    osc.stop(time + sweepLength);
 }</pre>
-
-<div class="note">
-<p><strong>Note</strong>: We'll talk about the property {{domxref("BaseAudioContext.currentTime")}} later, so don't worry if you're unsure of it for now. All you really need to know is that it returns the time we are at right now.</p>
-</div>
 
 <h2 id="The_pulse_—_low_frequency_oscillator_modulation">The "pulse" — low frequency oscillator modulation</h2>
 
@@ -172,20 +170,20 @@ function playSweep() {
 
 <p>We'll set up our first {{domxref("OscillatorNode")}} the same way as our sweep sound, except we won't use a wavetable to set a bespoke wave — we'll just use the default <code>sine</code> wave:</p>
 
-<pre class="brush: js">let osc = audioCtx.createOscillator();
+<pre class="brush: js">const osc = audioCtx.createOscillator();
 osc.type = 'sine';
 osc.frequency.value = 880;</pre>
 
 <p>Now we're going to create a {{domxref("GainNode")}}, as it's the <code>gain</code> value that we will oscillate with our second, low frequency oscillator:</p>
 
-<pre class="brush: js">let amp = audioCtx.createGain();
+<pre class="brush: js">const amp = audioCtx.createGain();
 amp.gain.setValueAtTime(1, audioCtx.currentTime);</pre>
 
 <h3 id="Creating_the_second_low_frequency_oscillator">Creating the second, low frequency, oscillator</h3>
 
 <p>We'll now create a second — <code>square</code> — wave (or pulse) oscillator, to alter the amplification of our first sine wave:</p>
 
-<pre class="brush: js">let lfo = audioCtx.createOscillator();
+<pre class="brush: js">const lfo = audioCtx.createOscillator();
 lfo.type = 'square';
 lfo.frequency.value = 30;</pre>
 
@@ -196,8 +194,8 @@ lfo.frequency.value = 30;</pre>
 <pre class="brush: js">lfo.connect(amp.gain);
 osc.connect(amp).connect(audioCtx.destination);
 lfo.start();
-osc.start();
-osc.stop(audioCtx.currentTime + pulseTime);</pre>
+osc.start(time);
+osc.stop(time + pulseTime);</pre>
 
 <div class="note">
 <p><strong>Note</strong>: We also don't have to use the default wave types for either of these oscillators we're creating — we could use a wavetable and the periodic wave method as we did before. There is a multitude of possibilities with just a minimum of nodes.</p>
@@ -231,23 +229,23 @@ lfoControl.addEventListener('input', function() {
 <p>Here's the entire <code>playPulse()</code> function:</p>
 
 <pre class="brush: js">let pulseTime = 1;
-function playPulse() {
+function playPulse(time) {
     let osc = audioCtx.createOscillator();
     osc.type = 'sine';
-    osc.frequency.setValueAtTime(pulseHz, audioCtx.currentTime);
+    osc.frequency.value = pulseHz;
 
     let amp = audioCtx.createGain();
-    amp.gain.setValueAtTime(1, audioCtx.currentTime);
+    amp.gain.value = 1;
 
     let lfo = audioCtx.createOscillator();
     lfo.type = 'square';
-    lfo.frequency.setValueAtTime(lfoHz, audioCtx.currentTime);
+    lfo.frequency.value = lfoHz;
 
     lfo.connect(amp.gain);
     osc.connect(amp).connect(audioCtx.destination);
     lfo.start();
-    osc.start();
-    osc.stop(audioCtx.currentTime + pulseTime);
+    osc.start(time);
+    osc.stop(time + pulseTime);
 }</pre>
 
 <h2 id="The_noise_—_random_noise_buffer_with_biquad_filter">The "noise" — random noise buffer with biquad filter</h2>
@@ -334,7 +332,7 @@ bandControl.addEventListener('input', function() {
 
 <p>Here's the entire <code>playNoise()</code> function:</p>
 
-<pre class="brush: js">function playNoise() {
+<pre class="brush: js">function playNoise(time) {
     const bufferSize = audioCtx.sampleRate * noiseDuration; // set the time of the note
     const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate); // create an empty buffer
     let data = buffer.getChannelData(0); // get data
@@ -354,7 +352,7 @@ bandControl.addEventListener('input', function() {
 
     // connect our graph
     noise.connect(bandpass).connect(audioCtx.destination);
-    noise.start();
+    noise.start(time);
 }</pre>
 
 <h2 id="Dial_up_—_loading_a_sound_sample">"Dial up" — loading a sound sample</h2>
@@ -400,11 +398,11 @@ bandControl.addEventListener('input', function() {
 
 <p>Let's create a <code>playSample()</code> function in a similar manner to how we did with the other sounds. This time it will create an {{domxref("AudioBufferSourceNode")}}, and put the buffer data we've fetched and decoded into it, and play it:</p>
 
-<pre class="brush: js">function playSample(audioContext, audioBuffer) {
+<pre class="brush: js">function playSample(audioContext, audioBuffer, time) {
     const sampleSource = audioContext.createBufferSource();
     sampleSource.buffer = audioBuffer;
     sampleSource.connect(audioContext.destination)
-    sampleSource.start();
+    sampleSource.start(time);
     return sampleSource;
 }</pre>
 
@@ -429,12 +427,12 @@ rateControl.addEventListener('input', function() {
 
 <p>We'll then add a line to update the <code>playbackRate</code> property to our <code>playSample()</code> function. The final version looks like this:</p>
 
-<pre class="brush: js">function playSample(audioContext, audioBuffer) {
+<pre class="brush: js">function playSample(audioContext, audioBuffer, time) {
     const sampleSource = audioContext.createBufferSource();
     sampleSource.buffer = audioBuffer;
-    sampleSource.playbackRate.setValueAtTime(playbackRate, audioCtx.currentTime);
+    sampleSource.playbackRate.value = playbackRate;
     sampleSource.connect(audioContext.destination)
-    sampleSource.start();
+    sampleSource.start(time);
     return sampleSource;
 }</pre>
 
@@ -446,12 +444,10 @@ rateControl.addEventListener('input', function() {
 
 <p>A common problem with digital audio applications is getting the sounds to play in time so that the beat remains consistent, and things do not slip out of time.</p>
 
-<p>{{domxref("AudioContext")}} object instances have a <code><a href="/en-US/docs/Web/API/BaseAudioContext/currentTime">currentTime</a></code> property, which allows us to retrieve the number of seconds after we first created the context. This is what we shall use for timing within our step sequencer — It's extremely accurate, returning a float value accurate to about 15 decimal places.</p>
-
 <p>We could schedule our voices to play within a <code>for</code> loop, however the biggest problem with this is updating whilst it is playing, and we've already implemented UI controls to do so. Also, it would be really nice to consider an instrument-wide BPM control. The best way to get our voices to play on the beat is to create a scheduling system, whereby we look ahead at when the notes are going to play and push them into a queue. We can start them at a precise time with the currentTime property and also take into account any changes.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This is a much stripped down version of <a href="https://www.html5rocks.com/en/tutorials/audio/scheduling/">Chris Wilson's A Tale Of Two Clocks</a> article, which goes into this method in much more detail. There's no point repeating it all here, but it's highly recommended to read this article and use this method. Much of the code here is taken from his <a href="https://github.com/cwilso/metronome/blob/master/js/metronome.js">metronome example</a>, which he references in said article.</p>
+<p><strong>Note</strong>: This is a much stripped down version of <a href="https://www.html5rocks.com/en/tutorials/audio/scheduling/">Chris Wilson's A Tale Of Two Clocks</a> article, which goes into this method in much more detail. There's no point repeating it all here, but it's highly recommended to read this article and use this method. Much of the code here is taken from his <a href="https://github.com/cwilso/metronome/blob/master/js/metronome.js">metronome example</a>, which he references in the article.</p>
 </div>
 
 <p>Let's start by setting up our default BPM (beats per minute), which will also be user-controllable via — you guessed it — another range input.</p>
@@ -464,8 +460,8 @@ bpmControl.addEventListener('input', function() {
 
 <p>Then we'll create variables to define how far ahead we want to look, and how far ahead we want to schedule:</p>
 
-<pre class="brush: js">let lookahead = 25.0; // How frequently to call scheduling function (in milliseconds)
-let scheduleAheadTime = 0.1; // How far ahead to schedule audio (sec)</pre>
+<pre class="brush: js">const lookahead = 25.0; // How frequently to call scheduling function (in milliseconds)
+const scheduleAheadTime = 0.1; // How far ahead to schedule audio (sec)</pre>
 
 <p>Let's create a function that moves the note forwards by one beat, and loops back to the first when it reaches the 4th (last) one:</p>
 
@@ -493,21 +489,23 @@ function scheduleNote(beatNumber, time) {
     // push the note on the queue, even if we're not playing.
     notesInQueue.push({ note: beatNumber, time: time });
 
-    if (pads[0].querySelectorAll('button')[currentNote].getAttribute('aria-checked') === 'true') {
-        playSweep()
+    if (pads[0].querySelectorAll('button')[beatNumber].getAttribute('aria-checked') === 'true') {
+        playSweep(time)
     }
-    if (pads[1].querySelectorAll('button')[currentNote].getAttribute('aria-checked') === 'true') {
-        playPulse()
+    if (pads[1].querySelectorAll('button')[beatNumber].getAttribute('aria-checked') === 'true') {
+        playPulse(time)
     }
-    if (pads[2].querySelectorAll('button')[currentNote].getAttribute('aria-checked') === 'true') {
-        playNoise()
+    if (pads[2].querySelectorAll('button')[beatNumber].getAttribute('aria-checked') === 'true') {
+        playNoise(time)
     }
-    if (pads[3].querySelectorAll('button')[currentNote].getAttribute('aria-checked') === 'true') {
-        playSourceNode(audioCtx, sample);
+    if (pads[3].querySelectorAll('button')[beatNumber].getAttribute('aria-checked') === 'true') {
+        playSample(audioCtx, dtmf, time);
     }
 }</pre>
 
 <p>Here we look at the current time and compare it to the time for the next note; when the two match it will call the previous two functions.</p>
+
+<p>{{domxref("AudioContext")}} object instances have a <code><a href="/en-US/docs/Web/API/BaseAudioContext/currentTime">currentTime</a></code> property, which allows us to retrieve the number of seconds after we first created the context. This is what we shall use for timing within our step sequencer — It's extremely accurate, returning a float value accurate to about 15 decimal places.</p>
 
 <pre class="brush: js">function scheduler() {
     // while there are notes that will need to play before the next interval, schedule them and advance the pointer.
