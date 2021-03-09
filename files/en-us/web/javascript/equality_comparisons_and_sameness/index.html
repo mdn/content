@@ -163,7 +163,13 @@ console.log(obj === undefined); // false
  </tbody>
 </table>
 
-<p>In the above table, <code>ToNumber(A)</code> attempts to convert its argument to a number before comparison. Its behavior is equivalent to <code>+A</code> (the unary + operator). <code>ToPrimitive(A)</code> attempts to convert its object argument to a primitive value, by attempting to invoke varying sequences of <code>A.toString</code> and <code>A.valueOf</code> methods on <code>A</code>.</p>
+<p>In the above table:</p>
+<ul>
+  <li><code>ToNumber(A)</code> attempts to convert its argument to a number before comparison. Its behavior is equivalent to <code>+A</code> (the unary + operator).</li>
+  <li><code>ToPrimitive(A)</code> attempts to convert its object argument to a primitive value, by invoking varying sequences of <code>A.toString</code> and <code>A.valueOf</code> methods on <code>A</code>.</li>
+  <li><code>ℝ(A)</code> attempts to convert its argument to an ECMAScript <a href="https://tc39.es/ecma262/#mathematical-value">mathematical value</a>.</li>
+  <li><code>StringToBigInt(A)</code> attempts to convert its argument to a <code>BigInt</code> by applying the ECMAScript <a href="https://tc39.es/ecma262/#sec-stringtobigint"><code>StringToBigInt</code></a> algorithm.</li>
+</ul>
 
 <p>Traditionally, and according to ECMAScript, all objects are loosely unequal to <code>undefined</code> and <code>null</code>. But most browsers permit a very narrow class of objects (specifically, the <code>document.all</code> object for any page), in some contexts, to act as if they <em>emulate</em> the value <code>undefined</code>. Loose equality is one such context: <code>null == A</code> and <code>undefined == A</code> evaluate to true if, and only if, A is an object that <em>emulates</em> <code>undefined</code>. In all other cases an object is never loosely equal to <code>undefined</code> or <code>null</code>.</p>
 
