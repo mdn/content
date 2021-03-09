@@ -7548,7 +7548,6 @@
 /en-US/docs/Web/API/Document/onselect	/en-US/docs/Web/API/GlobalEventHandlers/onselect
 /en-US/docs/Web/API/Document/onselectionchange	/en-US/docs/Web/API/GlobalEventHandlers/onselectionchange
 /en-US/docs/Web/API/Document/onsubmit	/en-US/docs/Web/API/GlobalEventHandlers/onsubmit
-/en-US/docs/Web/API/Document/pointerLockElement	/en-US/docs/Web/API/DocumentOrShadowRoot/pointerLockElement
 /en-US/docs/Web/API/Document/resourcetimingbufferfull_event	/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event
 /en-US/docs/Web/API/Document/styleSheets	/en-US/docs/Web/API/DocumentOrShadowRoot/styleSheets
 /en-US/docs/Web/API/Document/timeline/currentTime	/en-US/docs/Web/API/AnimationTimeline/currentTime
@@ -7565,6 +7564,7 @@
 /en-US/docs/Web/API/DocumentOrShadowRoot/nodesFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot
 /en-US/docs/Web/API/DocumentOrShadowRoot/pictureInPictureElement	/en-US/docs/Web/API/Document/pictureInPictureElement
 /en-US/docs/Web/API/DocumentOrShadowRoot/pictureInPictureEnabled	/en-US/docs/Web/API/Document/pictureInPictureEnabled
+/en-US/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/en-US/docs/Web/API/Document/pointerLockElement
 /en-US/docs/Web/API/DocumentTouch.createTouch	/en-US/docs/Web/API/Document/createTouch
 /en-US/docs/Web/API/DocumentTouch.createTouchList	/en-US/docs/Web/API/Document/createTouchList
 /en-US/docs/Web/API/DocumentTouch/createTouch	/en-US/docs/Web/API/Document/createTouch
@@ -9332,7 +9332,7 @@
 /en-US/docs/Web/API/document.open	/en-US/docs/Web/API/Document/open
 /en-US/docs/Web/API/document.origin	/en-US/docs/Web/API/Document/origin
 /en-US/docs/Web/API/document.plugins	/en-US/docs/Web/API/Document/plugins
-/en-US/docs/Web/API/document.pointerLockElement	/en-US/docs/Web/API/DocumentOrShadowRoot/pointerLockElement
+/en-US/docs/Web/API/document.pointerLockElement	/en-US/docs/Web/API/Document/pointerLockElement
 /en-US/docs/Web/API/document.popupNode	/en-US/docs/Web/API/Document/popupNode
 /en-US/docs/Web/API/document.preferredStyleSheetSet	/en-US/docs/Web/API/Document/preferredStyleSheetSet
 /en-US/docs/Web/API/document.queryCommandState	/en-US/docs/Web/API/Document/queryCommandState
