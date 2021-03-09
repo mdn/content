@@ -7523,7 +7523,6 @@
 /en-US/docs/Web/API/Document/mozCancelFullScreen	/en-US/docs/Web/API/Document/exitFullscreen
 /en-US/docs/Web/API/Document/mozFullScreenElement	/en-US/docs/Web/API/Document/fullscreenElement
 /en-US/docs/Web/API/Document/mozFullScreenEnabled	/en-US/docs/Web/API/Document/fullscreenEnabled
-/en-US/docs/Web/API/Document/msElementsFromRect	/en-US/docs/Web/API/DocumentOrShadowRoot/msElementsFromRect
 /en-US/docs/Web/API/Document/namespaceURI	/en-US/docs/Web/API/Node/namespaceURI
 /en-US/docs/Web/API/Document/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
 /en-US/docs/Web/API/Document/onblur	/en-US/docs/Web/API/GlobalEventHandlers/onblur
@@ -9487,7 +9486,6 @@
 /en-US/docs/Web/API/mozRTCSessionDescription/mozRTCSessionDescription	/en-US/docs/Web/API/RTCSessionDescription/RTCSessionDescription
 /en-US/docs/Web/API/mozRTCSessionDescription/toJSON	/en-US/docs/Web/API/RTCSessionDescription/toJSON
 /en-US/docs/Web/API/msConvertURL	/en-US/docs/Web/API/Event/msConvertURL
-/en-US/docs/Web/API/msElementsFromRect	/en-US/docs/Web/API/DocumentOrShadowRoot/msElementsFromRect
 /en-US/docs/Web/API/msFrameStep	/en-US/docs/Web/API/HTMLVideoElement/msFrameStep
 /en-US/docs/Web/API/msMatchesSelector	/en-US/docs/Web/API/Element/matches
 /en-US/docs/Web/API/mute	/en-US/docs/Web/API/MediaStreamTrack/mute_event
