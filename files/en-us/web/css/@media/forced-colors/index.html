@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>forced-colors</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">media feature</a> is used to detect if the {{Glossary("user agent")}} has enabled a forced colors mode where it enforces a user-chosen limited color palette on the page.</span></p>
+<p><span class="seoSummary">The <strong><code>forced-colors</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">media feature</a> is used to detect if the {{Glossary("user agent")}} has enabled a forced colors mode, such as Windows High Contrast, where it enforces a user-chosen limited color palette on the page.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -22,7 +22,7 @@ tags:
  <dt><code><dfn>none</dfn></code></dt>
  <dd>Forced colors mode is not active; the page’s colors are not being forced into a limited palette.</dd>
  <dt><code>active</code></dt>
- <dd>Indicates that forced colors mode is active. The browser provides the color palette to authors through the <a href="/en-US/docs/Web/CSS/color_value#System_Colors">CSS system color</a> keywords and, if appropriate, triggers the appropriate value of <code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></code> so that authors can adapt the page.</dd>
+ <dd>Indicates that forced colors mode is active. The browser provides the color palette to authors through the <a href="/en-US/docs/Web/CSS/color_value#System_Colors">CSS system color</a> keywords and, if appropriate, triggers the appropriate value of <code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></code> so that authors can adapt the page. The browser selects the value for <code>prefers-color-scheme</code> based on the lightness of the <code>Canvas</code> system color (see the <a href="https://www.w3.org/TR/css-color-adjust-1/#forced">color adjust spec</a> for more details).</dd>
 </dl>
 
 <h2 id="Usage_notes">Usage notes</h2>
@@ -54,10 +54,16 @@ tags:
 </ul>
 
 <p>The system colors that are forced for the above properties depend on the context of the element. For example the {{cssxref("color")}} property on button element will be forced to ButtonText, whereas on normal text it will be forced to CanvasText. See the list of system colors for additional details of when each might be appropriate in various UI contexts.</p>
-<p><strong>Note:</strong> user agents choose system colors based on elements, <em>not</em> their roles. As an example, adding role="button" to a div will not cause an element's color to be forced to ButtonText</p>
+
+<p><strong>Note:</strong> user agents choose system colors based on native element semantics, <em>not</em> on added ARIA roles. As an example, adding <code>role="button"</code> to a div will not cause an element's color to be forced to <code>ButtonText</code></p>
+
+<p>In addition to these adjustments, browsers will help ensure text legibility by drawing “backplates” behind text. This is particularly important for preserving contrast when text is placed on top of images.
+</p>
 
 <p>There are two cases where the user agent does not force the values for the above properties &emdash; when a {{cssxref("forced-color-adjust")}} value of 'none' is applied to an element, or when a system color is specified by the author.</p>
-<p>When forced-color-adjust is set to 'none' on an element, none of the forced color values will apply, and author styles will be applied as normal.</p>
+
+<p>When forced-color-adjust is set to 'none' on an element, none of the forced color values will apply, and author styles will be applied as normal. Additionally, the backplate for text will be disabled.</p>
+
 <p>When a system color is specified, it will be used instead of the value that would otherwise have been forced.</p>
 
 <p>You can also use system colors with any property <em>other</em> than those listed above, to ensure that the rest of the page integrates with the restricted color palette available in forced colors mode.</p>
