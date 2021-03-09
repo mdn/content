@@ -184,6 +184,9 @@ Found ab. Next match starts at 9
 
   <p>Also, be sure that the global flag ("<code>g</code>") is set, or it will also cause
     an infinite loop.</p>
+
+  <p>In addition, when matching zero-length characters (e.g. <code>/^/gm</code>),
+    <code>++regexp.lastIndex</code> can be used to avoid infinite loops.</p>
 </div>
 
 <h3 id="Using_exec_with_RegExp_literals">Using exec() with RegExp literals</h3>
