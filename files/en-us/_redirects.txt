@@ -8471,6 +8471,9 @@
 /en-US/docs/Web/API/ParentNode.children	/en-US/docs/Web/API/ParentNode/children
 /en-US/docs/Web/API/ParentNode.firstElementChild	/en-US/docs/Web/API/ParentNode/firstElementChild
 /en-US/docs/Web/API/ParentNode.lastElementChild	/en-US/docs/Web/API/ParentNode/lastElementChild
+/en-US/docs/Web/API/PasswordCredential/additionalData	/en-US/docs/Web/API/PasswordCredential
+/en-US/docs/Web/API/PasswordCredential/idName	/en-US/docs/Web/API/PasswordCredential
+/en-US/docs/Web/API/PasswordCredential/passwordName	/en-US/docs/Web/API/PasswordCredential
 /en-US/docs/Web/API/Path2D.Path2D	/en-US/docs/Web/API/Path2D/Path2D
 /en-US/docs/Web/API/Path2D.addPath	/en-US/docs/Web/API/Path2D/addPath
 /en-US/docs/Web/API/PaymentAddress/PaymentAddress.country	/en-US/docs/Web/API/PaymentAddress/country
