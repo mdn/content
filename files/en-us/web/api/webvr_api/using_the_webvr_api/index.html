@@ -13,7 +13,7 @@ tags:
 ---
 <div>{{APIRef("WebVR API")}}{{deprecated_header}}</div>
 
-<div class="notecard note"><strong>Note:</strong> WebVR API is replaced by <a href="/en-US/docs/Web/API/WebXR_API">WebXR API</a>. WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.</div>
+<div class="notecard note"><strong>Note:</strong> WebVR API is replaced by <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR API</a>. WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.</div>
 
 <p class="summary">The WebVR API is a fantastic addition to the web developer's toolkit, allowing WebGL scenes to be presented in virtual reality displays such as the Oculus Rift and HTC Vive. But how do you get started with developing VR apps for the Web? This article will guide you through the basics.</p>
 
@@ -44,7 +44,7 @@ tags:
 
 <p>To illustrate how the WebVR API works, we'll study our raw-webgl-example, which looks a bit like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15121/Capture1.png" style="display: block; height: 761px; margin: 0px auto; width: 1341px;"></p>
+<p><img alt="" src="capture1.png" style="display: block; margin: 0px auto;"></p>
 
 <div class="note">
 <p><strong>Note</strong>: You can find the <a href="https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example">source code of our demo</a> on GitHub, and <a href="https://mdn.github.io/webvr-tests/raw-webgl-example/">view it live</a> also.</p>
@@ -232,7 +232,7 @@ document.body.onload = start;</pre>
 
 <p>Once the presentation starts, you'll be able to see the stereoscopic view displayed in the browser:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15123/Capture2.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="capture2.png" style="display: block; margin: 0 auto;"></p>
 
 <p>You'll learn below how the stereoscopic view is actually produced.</p>
 
@@ -425,7 +425,7 @@ document.body.onload = start;</pre>
 
 <h2 id="WebVR_events">WebVR events</h2>
 
-<p>The WebVR spec features a number of events that are fired, allowing our app code to react to changes in the state of the VR display (see <a href="/en-US/docs/Web/API/WebVR_API#Window_events">Window events</a>). For example:</p>
+<p>The WebVR spec features a number of events that are fired, allowing our app code to react to changes in the state of the VR display (see <a href="/en-US/docs/Web/API/WebVR_API#window_events">Window events</a>). For example:</p>
 
 <ul>
  <li>{{event("vrdisplaypresentchange")}} — Fires when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa.</li>
