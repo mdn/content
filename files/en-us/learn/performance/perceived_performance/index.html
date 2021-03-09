@@ -34,15 +34,15 @@ tags:
 
 <div class="notecard note">
   <h4>Note</h4>
-  <p>Time appears to pass more quickly for users who are actively engaged, distracted, or entertained, than those who are waiting passively for something to happen. Where possible, actively engage and inform users who are waiting for a task to complete.</p>
+  <p>Time appears to pass more quickly for users who are actively engaged, distracted, or entertained, than for those who are waiting passively for something to happen. Where possible, actively engage and inform users who are waiting for a task to complete.</p>
 </div>
 
-<p>Similarly, it is better to display a "loading animation" as soon as a user clicks a link to perform a long running operation. This makes the site feel more responsive, and the user is informed that the site is working/not frozen.</p>
+<p>Similarly, it is better to display a "loading animation" as soon as a user clicks a link to perform a long running operation. While this doesn't change the time taken to complete the operation, the site feels more responsive, and the user knows that it is working on something useful.</p>
 
 
 <h2 id="performance_metrics">Performance metrics</h2>
 
-<p>There is no single metric or test that can be run on a site to evaluate how a user "feels". However there are a number of metrics that can be "useful indicators":</p>
+<p>There is no single metric or test that can be run on a site to evaluate how a user "feels". However there are a number of metrics that can be "helpful indicators":</p>
 
 <dl>
   <dt><a href="/en-US/docs/Glossary/First_paint">First paint</a></dt>
@@ -66,13 +66,11 @@ tags:
 
 <h3 id="minimize_initial_load">Minimize initial load</h3>
 
-<p>To improve perceived performance, minimize the original page load. In other words, first download everything you're going to actually show, but only the stuff you are actually using, then download the rest. If you're downloading all the assets in the end, the weight of all your assets hasn't improved -- in fact, you may need to add some code -- but because the download of non-immediately necessary assets are delayed in a manner that is not perceptible the user, the user will feel like the download was faster. </p>
+<p>To improve perceived performance, minimize the original page load. In other words, download the content the user is going to interact with immediately first, and download the rest after "in the background". The total amount of content downloaded may actually increase, but the user only <em>waits</em> on a very small amount, so the download feels faster.</p>
 
-<p>To <a href="https://onilab.com/blog/perceived-performance-vs-actual-load-time-5-secrets-of-lightning-fast-magento-store/">minimize the assets</a> required for initial load, separate interactive functionality from content so that required content  -- the text, styles, and images visible at initial load -- can be loaded first. Delay, or lazy load, the rest of the assets.</p>
+<p>Separate interactive functionality from content, and load text, styles, and images visible at initial load. Delay, or lazy load, images or scripts that aren’t used or visible on the initial page load. Additionally, you should optimize the assets you do load. Images and video should be served in the most optimal format, compressed, and in the correct size.</p>
 
-<p>Don't load images or scripts that aren’t used or visible on the initial page load. Either delay their load, loading them when the page becomes usable, or, loading them when they become necessary. Loading additional assets and resources after initial page load improves perceived performance. Loading essential data in initial requests and progressively loading features and data only as needed helps mitigate low bandwidth and lower spec hardware.</p>
-
-<p>Additionally, you should optimize the assets you do load. Images and video should be served in the most optimal format, compressed, and in the correct size.</p>
+For more information see: <a href="https://onilab.com/blog/perceived-performance-vs-actual-load-time-5-secrets-of-lightning-fast-magento-store/">Magento Optimization for Google PageSpeed Insights – the Complete Guide on Getting to the 100 Score</a>.
 
 <h3 id="prevent_jumping_content_and_other_reflows">Prevent jumping content and other reflows</h3>
 
@@ -96,7 +94,7 @@ tags:
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>By turning as much of the download, render and wait time into active phases and reducing any passive waiting, even if the objective measurements stay the same, the user will feel like the content downloaded, rendered, and responded more quickly. Now that we know what we should be speeding up, let's take a look at some metrics and learn how we can measure these events.</p>
+<p>By reducing the time that a user has to wait for <em>useful</em> content, and keeping the site responsive and engaging, the users will feel like the site performs better — even the actual time to load resources stays the same.</p>
 
 <p>{{PreviousMenuNext("Learn/Performance/what_is_web_performance", "Learn/Performance/Measuring_performance", "Learn/Performance")}}</p>
 
