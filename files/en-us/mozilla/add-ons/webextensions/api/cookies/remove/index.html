@@ -58,7 +58,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>This example tries to remove the cookie named "favourite-colour", whose URL matches the URL of the document hosted by the currently active tab:</p>
+<p>This example tries to remove the cookie named "favourite-color", whose URL matches the URL of the document hosted by the currently active tab:</p>
 
 <pre class="brush: js">function onRemoved(cookie) {
   console.log(`Removed: ${cookie}`);
@@ -71,7 +71,7 @@ function onError(error) {
 function removeCookie(tabs) {
   var removing = browser.cookies.remove({
     url: tabs[0].url,
-    name: "favourite-colour"
+    name: "favourite-color"
   });
   removing.then(onRemoved, onError);
 }

@@ -264,7 +264,7 @@ li:nth-of-type(3n+1) {
 <p>Let's take a look at a more complex paint example.</p>
 
 <pre class="brush: js">registerPaint('headerHighlight', class {
-  static get inputProperties() { return ['--highColour']; }
+  static get inputProperties() { return ['--highcolor']; }
   static get contextOptions() { return {alpha: true}; }
 
   paint(ctx, size, props) {
@@ -274,7 +274,7 @@ li:nth-of-type(3n+1) {
 		const y = size.height * 0.3;
 		const blockWidth = size.width * 0.33;
 		const highlightHeight = size.height * 0.85;
-        const color = props.get('--highColour');
+        const color = props.get('--highcolor');
 
 		ctx.fillStyle = color;
 
@@ -309,14 +309,14 @@ li:nth-of-type(3n+1) {
 &lt;h3 class="fancy"&gt;Medium size header&lt;/h3&gt;
 &lt;h6 class="fancy"&gt;Smallest Header&lt;/h6&gt;</pre>
 
-<p>We give each header a different value for the <code>--highColour</code> <a href="/en-US/docs/Web/CSS/CSS_Variables">custom property</a></p>
+<p>We give each header a different value for the <code>--highcolor</code> <a href="/en-US/docs/Web/CSS/CSS_Variables">custom property</a></p>
 
 <pre class="brush: css">.fancy {
   background-image: paint(headerHighlight);
 }
-h1 { --highColour: hsla(155, 90%, 60%, 0.7); }
-h3 { --highColour: hsla(255, 90%, 60%, 0.5); }
-h6 { --highColour: hsla(355, 90%, 60%, 0.3); }</pre>
+h1 { --highcolor: hsla(155, 90%, 60%, 0.7); }
+h3 { --highcolor: hsla(255, 90%, 60%, 0.5); }
+h6 { --highcolor: hsla(355, 90%, 60%, 0.3); }</pre>
 
 <p>And we register our worklet</p>
 

@@ -254,7 +254,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
       <ul>
        <li>messages.json
         <ul>
-         <li><code>{ "colorLocalised": { "message": "colour", "description": "Color." }, ... }</code></li>
+         <li><code>{ "colorLocalised": { "message": "color", "description": "Color." }, ... }</code></li>
         </ul>
        </li>
       </ul>
@@ -286,7 +286,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
 <p>Suppose the <code>default_locale</code> is set to <code>fr</code>, and the browser's current locale is <code>en_GB</code>:</p>
 
 <ul>
- <li>If the extension calls <code>getMessage("colorLocalised")</code>, it will return "colour".</li>
+ <li>If the extension calls <code>getMessage("colorLocalised")</code>, it will return "color".</li>
  <li>If "colorLocalised" were not present in <code>en_GB</code>, then <code>getMessage("colorLocalised")</code>, would return "color", not "couleur".</li>
 </ul>
 
