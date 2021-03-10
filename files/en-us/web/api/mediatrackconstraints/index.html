@@ -44,7 +44,7 @@ tags:
  <dt>{{domxref("MediaTrackConstraints.autoGainControl", "autoGainControl")}}</dt>
  <dd>A {{domxref("ConstrainBoolean")}} object which specifies whether automatic gain control is preferred and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.channelCount", "channelCount")}}</dt>
- <dd>A {{domxref("ConstrainLong")}} specifying the channel count or range of channel counts which are acceptable and/or required.</dd>
+ <dd>A {{domxref("ConstrainULong")}} specifying the channel count or range of channel counts which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.echoCancellation", "echoCancellation")}}</dt>
  <dd>A {{domxref("ConstrainBoolean")}} object specifying whether or not echo cancellation is preferred and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.latency", "latency")}}</dt>
@@ -52,9 +52,9 @@ tags:
  <dt>{{domxref("MediaTrackConstraints.noiseSuppression", "noiseSuppression")}}</dt>
  <dd>A {{domxref("ConstrainBoolean")}} which specifies whether noise suppression is preferred and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.sampleRate", "sampleRate")}}</dt>
- <dd>A {{domxref("ConstrainLong")}} specifying the sample rate or range of sample rates which are acceptable and/or required.</dd>
+ <dd>A {{domxref("ConstrainULong")}} specifying the sample rate or range of sample rates which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.sampleSize", "sampleSize")}}</dt>
- <dd>A {{domxref("ConstrainLong")}} specifying the sample size or range of sample sizes which are acceptable and/or required.</dd>
+ <dd>A {{domxref("ConstrainULong")}} specifying the sample size or range of sample sizes which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.volume", "volume")}}</dt>
  <dd>A {{domxref("ConstrainDouble")}} specifying the volume or range of volumes which are acceptable and/or required.</dd>
 </dl>
@@ -102,9 +102,9 @@ tags:
  <dt>{{domxref("MediaTrackConstraints.frameRate", "frameRate")}}</dt>
  <dd>A {{domxref("ConstrainDouble")}} specifying the frame rate or range of frame rates which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.height", "height")}}</dt>
- <dd>A {{domxref("ConstrainLong")}} specifying the video height or range of heights which are acceptable and/or required.</dd>
+ <dd>A {{domxref("ConstrainULong")}} specifying the video height or range of heights which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.width", "width")}}</dt>
- <dd>A {{domxref("ConstrainLong")}} specifying the video width or range of widths which are acceptable and/or required.</dd>
+ <dd>A {{domxref("ConstrainULong")}} specifying the video width or range of widths which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.resizeMode", "resizeMode")}}</dt>
  <dd>A {{domxref("ConstrainDOMString")}} object specifying a mode or an array of modes the UA can use to derive the resolution of a video track. Allowed values are <code>none</code> and <code>crop-and-scale</code>. <code>none</code> means that the user agent uses the resolution provided by the camera, its driver or the OS. <code>crop-and-scale</code> means that the user agent can use cropping and downscaling on the camera output  in order to satisfy other constraints that affect the resolution.</dd>
 </dl>
