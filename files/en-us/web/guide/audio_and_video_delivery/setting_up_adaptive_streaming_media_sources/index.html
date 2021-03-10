@@ -110,20 +110,6 @@ tags:
 
 <h3 id="LIVE_Profile">LIVE Profile</h3>
 
-<p>A useful piece of software when dealing with MPEG-DASH is <a href="https://github.com/slederer/DASHEncoder">Dash Encoder</a>. This uses <a href="http://gpac.wp.mines-telecom.fr/mp4box/dash/">MP4Box</a> to encode media into MPEG-DASH format.</p>
-
-<div class="note">
-<p><strong>Note</strong>: You will need to be comfortable with make files and installing dependencies to get this software up and running.</p>
-</div>
-
-<div class="note">
-<p><strong>Note</strong>: Since MPEG-DASH decoding is done partially using JavaScript and MSE files are often grabbed using XHR, keep same origin rules in mind.</p>
-</div>
-
-<div class="note">
-<p><strong>Note</strong>: If you use WebM you can use the methods shown in this tutorial <a href="/en-US/docs/DASH_Adaptive_Streaming_for_HTML_5_Video">DASH Adaptive Streaming for HTML 5 Video</a>.</p>
-</div>
-
 <p>Once encoded your file structure may look something like this:</p>
 
 <pre>play list -&gt;                /segments/news.mp4.mpd
@@ -205,6 +191,20 @@ main segment folder -&gt;      /segments/main/
   &lt;source src="my.mp4" type="video/mp4"&gt;
   &lt;source src="my.webm" type="video/webm"&gt;
 &lt;/video&gt;</pre>
+
+<p>A useful piece of software when dealing with MPEG-DASH is <a href="https://github.com/slederer/DASHEncoder">Dash Encoder</a>. This uses <a href="http://gpac.wp.mines-telecom.fr/mp4box/dash/">MP4Box</a> to encode media into MPEG-DASH format.</p>
+
+<div class="note">
+<p><strong>Note</strong>: You will need to be comfortable with make files and installing dependencies to get this software up and running.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: Since MPEG-DASH decoding is done partially using JavaScript and MSE files are often grabbed using XHR, keep same origin rules in mind.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: If you use WebM you can use the methods shown in this tutorial <a href="/en-US/docs/DASH_Adaptive_Streaming_for_HTML_5_Video">DASH Adaptive Streaming for HTML 5 Video</a>.</p>
+</div>
 
 <div class="note">
 <p><strong>Note</strong>: MPEG-DASH playback relies on <a href="https://github.com/Dash-Industry-Forum/dash.js/">dash.js</a> and browser support for <a href="https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html">Media Source Extensions</a>, see the latest <a href="http://dashif.org/reference/players/javascript/index.html">dash.js reference player</a>.</p>
