@@ -9,9 +9,9 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Trusted Types API")}}</div>
 
-<p class="summary">The <strong><code>TrustedScriptURL</code></strong> interface of the {{domxref('Trusted Types API')}} represents a string that a developer can insert into an <a href="/en-US/docs/Web/API/Trusted_Types_API#injection_sinks">injection sink</a> that will parse it as a URL of an external script. These objects are created via {{domxref("TrustedTypePolicy.createScriptURL")}} and therefore have no constructor.</p>
+<p class="summary">The <strong><code>TrustedScriptURL</code></strong> interface of the {{domxref('Trusted Types API')}} represents a string that a developer can insert into an <a href="/en-US/docs/Web/API/Trusted_Types_API#injection_sinks">injection sink</a> that will parse it as a URL of an external script. These objects are created via {{domxref("TrustedTypePolicy.createScriptURL","TrustedTypePolicy.createScriptURL()")}} and therefore have no constructor.</p>
 
-<p>A <strong>TrustedScriptURL</strong> object has a <code>[[Data]]</code> internal slot which stores a {{domxref("USVString")}}. The value is set when the object is created and cannot be changed by JavaScript as there is no setter exposed.</p>
+<p>The value of a <strong>TrustedScriptURL</strong> object is set when the object is created and cannot be changed by JavaScript as there is no setter exposed.</p>
 
 <h2 id="Methods">Methods</h2>
 
