@@ -40,16 +40,16 @@ tags:
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>The <code>ShadowRoot</code> interface includes the following methods defined on the {{domxref("DocumentOrShadowRoot")}} mixin. Note that this is currently only implemented by Chrome; other browsers still implement them on the {{domxref("Document")}} interface.</em></p>
-
 <dl>
- <dt>{{domxref("DocumentOrShadowRoot.getSelection()")}}</dt>
+ <dt>{{DOMxRef("ShadowRoot.getAnimations()")}}</dt>
+ <dd>Returns an array of all {{DOMxRef("Animation")}} objects currently in effect, whose target elements are descendants of the shadow tree.</dd>
+ <dt>{{domxref("ShadowRoot.getSelection()")}}</dt>
  <dd>Returns a {{domxref('Selection')}} object representing the range of text selected by the user, or the current position of the caret.</dd>
- <dt>{{domxref("DocumentOrShadowRoot.elementFromPoint()")}}</dt>
+ <dt>{{domxref("ShadowRoot.elementFromPoint()")}}</dt>
  <dd>Returns the topmost element at the specified coordinates.</dd>
- <dt>{{domxref("DocumentOrShadowRoot.elementsFromPoint()")}}</dt>
+ <dt>{{domxref("ShadowRoot.elementsFromPoint()")}}</dt>
  <dd>Returns an array of all elements at the specified coordinates.</dd>
- <dt>{{domxref("DocumentOrShadowRoot.caretPositionFromPoint()")}}</dt>
+ <dt>{{domxref("ShadowRoot.caretPositionFromPoint()")}}</dt>
  <dd>Returns a {{domxref('CaretPosition')}} object containing the DOM node containing the caret, and caret's character offset within that node.</dd>
 </dl>
 

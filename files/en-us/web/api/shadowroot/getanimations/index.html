@@ -1,35 +1,33 @@
 ---
-title: DocumentOrShadowRoot.getAnimations()
-slug: Web/API/DocumentOrShadowRoot/getAnimations
+title: ShadowRoot.getAnimations()
+slug: Web/API/ShadowRoot/getAnimations
 tags:
-- API
-- Animation
-- CSS
-- CSS Animations
-- CSS Transitions
-- Document
-- Experimental
-- Method
-- Reference
-- Transitions
-- Web Animations
-- getAnimations
-- waapi
-- web animations api
+  - API
+  - Animation
+  - CSS
+  - CSS Animations
+  - CSS Transitions
+  - ShadowRoot
+  - Method
+  - Reference
+  - Transitions
+  - Web Animations
+  - getAnimations
+  - waapi
+  - web animations api
 ---
-<p>{{ SeeCompatTable() }}{{APIRef("Web Animations")}}</p>
+<p>{{APIRef("Web Animations")}}</p>
 
-<p>The <code>getAnimations()</code> method of the {{domxref("Document")}} interface
+<p>The <code>getAnimations()</code> method of the {{domxref("ShadowRoot")}} interface
   returns an array of all {{domxref("Animation")}} objects currently in effect whose
-  target elements are descendants of the document. This array includes <a
+  target elements are descendants of the shadow tree. This array includes <a
     href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a>, <a
     href="/en-US/docs/Web/CSS/CSS_Transitions">CSS Transitions</a>, and <a
     href="/en-US/docs/Web/API/Web_Animations_API">Web Animations</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">var <var>allAnimations</var> = <var>Document</var>.getAnimations();
-</pre>
+<pre class="brush: js">getAnimations();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -39,14 +37,17 @@ tags:
 
 <p>An {{jsxref("Array")}} of {{domxref("Animation")}} objects, each representing one
   animation currently associated with elements which are descendants of the
-  {{domxref("Document")}} on which it's called.</p>
+  {{domxref("ShadowRoot")}} on which it's called.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following code snippet will slow down all animations on a page by halving their
+<p>The following code snippet will slow down all animations in a shadow tree by halving their
   {{domxref("Animation.playbackRate")}}.</p>
 
-<pre class="brush: js">document.getAnimations().forEach(
+<pre class="brush: js">
+let customElem = document.querySelector('my-shadow-dom-element');
+let shadow = customElem.shadowRoot;
+shadow.getAnimations().forEach(
   function (animation) {
     animation.playbackRate *= .5;
   }
@@ -58,23 +59,18 @@ tags:
   <thead>
     <tr>
       <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>{{SpecName('Web Animations', '#dom-animatable-getanimations',
-        'document.getAnimations()' )}}</td>
-      <td>{{Spec2('Web Animations')}}</td>
-      <td></td>
+      <td>{{SpecName('Web Animations', '#dom-documentorshadowroot-getanimations', 'DocumentOrShadowRoot.getAnimations()' )}}</td>
     </tr>
   </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.getAnimations")}}</p>
+<p>{{Compat("api.ShadowRoot.getAnimations")}}</p>
 
 <h2 id="See_also">See also</h2>
 
