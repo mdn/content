@@ -94,7 +94,7 @@ Content-Security-Policy: default-src &lt;source&gt; &lt;source&gt;;
  <dt>'nonce-&lt;base64-value&gt;'</dt>
  <dd>An allow-list for specific inline scripts using a cryptographic nonce (number used once). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide an unguessable nonce, as bypassing a resource’s policy is otherwise trivial. See <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#Unsafe_inline_script">unsafe inline script</a> for an example. Specifying nonce makes a modern browser ignore <code>'unsafe-inline'</code> which could still be set for older browsers without nonce support.
  <div class="note">
- <p><strong>Note:</strong> The CSP <code>nonce</code> source can only be apply <em>nonceable</em> elements (e.g. as the {{HTMLElement("img")}} element has no <code>nonce</code> attribute, there is no way to associate it with this CSP source).</p>
+ <p><strong>Note:</strong> The CSP <code>nonce</code> source can only be applied to <em>nonceable</em> elements (e.g. as the {{HTMLElement("img")}} element has no <code>nonce</code> attribute, there is no way to associate it with this CSP source).</p>
  </div>
  </dd>
  <dt>'&lt;hash-algorithm&gt;-&lt;base64-value&gt;'</dt>
