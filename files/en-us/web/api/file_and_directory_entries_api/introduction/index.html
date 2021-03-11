@@ -21,13 +21,13 @@ tags:
 
 <p>This introduction discusses essential concepts and terminology in the File and Directory Entries API. It gives you the big picture and orients you to <a href="#concepts">key concepts</a>. It also describes <a href="#restrictions">restrictions</a> that raise security errors if you ignore them. To learn more about terminology used in this API, see the <a href="#definitions">Definitions</a> section. </p>
 
-<p>For the reference documentation on the File and Directory Entries API, see the <a href="/en-US/docs/DOM/File_API/File_System_API/FileSystem">reference</a> landing page and its subpages.</p>
+<p>For the reference documentation on the File and Directory Entries API, see the <a href="/en-US/docs/Web/API/FileSystem">reference</a> landing page and its subpages.</p>
 
 <p>The specification is still being defined and is subject to change.</p>
 
 <h2 id="Overview">Overview</h2>
 
-<p>The File and Directory Entries API includes both <a href="/en-US/docs/DOM/File_API/File_System_API#Asynchronous_APIs">asynchronous</a> and <a href="/en-US/docs/DOM/File_API/File_System_API#Synchronous_APIs">synchronous</a> versions of the interfaces. The asynchronous API can be used in cases where you don't want an outstanding operation to block the UI. The synchronous API, on the other hand, allows for simpler programming model, but it must be used with <a href="/En/Using_web_workers">WebWorkers</a>. </p>
+<p>The File and Directory Entries API includes both <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction#asynchronous_apis">asynchronous</a> and <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction#synchronous_apis">synchronous</a> versions of the interfaces. The asynchronous API can be used in cases where you don't want an outstanding operation to block the UI. The synchronous API, on the other hand, allows for simpler programming model, but it must be used with <a href="/en-US/Using_web_workers">WebWorkers</a>. </p>
 
 <h3 id="Usefulness_of_the_API">Usefulness of the API</h3>
 
@@ -44,7 +44,7 @@ tags:
 
 <h3 id="The_File_and_Directory_Entries_API_and_other_storage_APIs">The File and Directory Entries API and other storage APIs</h3>
 
-<p>The File and Directory Entries API is an alternative to other storage APIs like <a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB">IndexedDB</a>, WebSQL (which has been deprecated since November18, 2010), and AppCache. The API is a better choice for apps that deal with blobs for the following reasons:</p>
+<p>The File and Directory Entries API is an alternative to other storage APIs like <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB">IndexedDB</a>, WebSQL (which has been deprecated since November18, 2010), and AppCache. The API is a better choice for apps that deal with blobs for the following reasons:</p>
 
 <ul>
  <li>The File and Directory Entries API offers client-side storage for use cases that are not addressed by databases. If you want to have large mutable chunks of data, the File and Directory Entries API is a much more efficient storage solution than a database.</li>
@@ -125,7 +125,7 @@ tags:
 <p>The File and Directory Entries API comes with asynchronous and synchronous versions. Both versions of the API offer the same capabilities and features. In fact, they are almost alike, except for a few differences.</p>
 
 <ul>
- <li><strong>WebWorkers.</strong> The asynchronous API can be used in either the document or <a href="/En/Using_web_workers" rel="internal">WebWorkers</a> context, while the synchronous API is for use with WebWorkers only. </li>
+ <li><strong>WebWorkers.</strong> The asynchronous API can be used in either the document or <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers" rel="internal">WebWorkers</a> context, while the synchronous API is for use with WebWorkers only. </li>
  <li><strong>Callbacks</strong>. The asynchronous API doesn't give you data by returning values; instead, you have to pass a callback function. You send requests for operations to happen, and get notified by callbacks. In contrast, the synchronous API does not use callbacks because the API methods return values.</li>
  <li><strong>Global methods of the asynchronous and synchronous APIs</strong>. The asynchronous API has the following global methods: <code>requestFileSystem()</code> and <code>resolveLocalFileSystemURL()</code>. These methods are members of both the window object and the worker global scope. The synchronous API, on the other hand, uses the following methods:  <code>requestFileSystemSync()</code> and  <code>resolveLocalFileSystemSyncURL()</code>. These synchronous methods are members of the worker's global scope only, not the window object.</li>
 </ul>
