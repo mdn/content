@@ -44334,19 +44334,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/getAnimations": {
-    "modified": "2020-12-13T19:52:52.030Z",
-    "contributors": [
-      "sideshowbarker",
-      "Rumyra",
-      "mfuji09",
-      "birtles",
-      "fscholz",
-      "Sheppy",
-      "chrisdavidmills",
-      "rachelnabors"
-    ]
-  },
   "Web/API/DocumentOrShadowRoot/getSelection": {
     "modified": "2020-10-15T21:49:28.182Z",
     "contributors": [
@@ -165797,6 +165784,19 @@
       "chrisdavidmills",
       "david_ross",
       "jpmedley"
+    ]
+  },
+  "Web/API/Document/getAnimations": {
+    "modified": "2020-12-13T19:52:52.030Z",
+    "contributors": [
+      "sideshowbarker",
+      "Rumyra",
+      "mfuji09",
+      "birtles",
+      "fscholz",
+      "Sheppy",
+      "chrisdavidmills",
+      "rachelnabors"
     ]
   }
 }
