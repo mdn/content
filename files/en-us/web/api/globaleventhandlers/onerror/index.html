@@ -16,15 +16,15 @@ tags:
 <p>Error events are fired at various targets for different kinds of errors:</p>
 
 <ul>
- <li>When a <strong>JavaScript runtime error</strong> (including syntax errors and exceptions thrown within handlers) occurs, an <code><a href="/en-US/docs/Web/Events/error">error</a></code> event using interface {{domxref("ErrorEvent")}} is fired at {{domxref("window")}} and <code>window.onerror()</code> is invoked (as well as handlers attached by {{domxref("window.addEventListener")}} (not only capturing)).</li>
- <li>When a resource (such as an {{HTMLElement("img")}} or {{HTMLElement("script")}}) <strong>fails to load</strong>, an <code><a href="/en-US/docs/Web/Events/error">error</a></code> event using interface {{domxref("Event")}} is fired at the element that initiated the load, and the <code>onerror()</code> handler on the element is invoked. These error events do not bubble up to window, but can be handled with a {{domxref("window.addEventListener")}} configured with <code>useCapture</code> set to <code>true</code>.</li>
+ <li>When a <strong>JavaScript runtime error</strong> (including syntax errors and exceptions thrown within handlers) occurs, an <code><a href="/en-US/docs/Web/API/Element/error_event">error</a></code> event using interface {{domxref("ErrorEvent")}} is fired at {{domxref("window")}} and <code>window.onerror()</code> is invoked (as well as handlers attached by {{domxref("EventTarget.addEventListener")}} (not only capturing)).</li>
+ <li>When a resource (such as an {{HTMLElement("img")}} or {{HTMLElement("script")}}) <strong>fails to load</strong>, an <code><a href="/en-US/docs/Web/API/Element/error_event">error</a></code> event using interface {{domxref("Event")}} is fired at the element that initiated the load, and the <code>onerror()</code> handler on the element is invoked. These error events do not bubble up to window, but can be handled with a {{domxref("EventTarget.addEventListener")}} configured with <code>useCapture</code> set to <code>true</code>.</li>
 </ul>
 
 <p>Installing a global <code>error</code> event handler is useful for automated collection of error reports.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<p>For historical reasons, different arguments are passed to <code>window.onerror</code> and <code>element.onerror</code> handlers (as well as on error-type {{domxref("window.addEventListener")}} handlers).</p>
+<p>For historical reasons, different arguments are passed to <code>window.onerror</code> and <code>element.onerror</code> handlers (as well as on error-type {{domxref("EventTarget.addEventListener")}} handlers).</p>
 
 <h3 id="window.onerror">window.onerror</h3>
 
@@ -37,8 +37,8 @@ tags:
  <li><code>message</code>: error message (string). Available as <code>event</code> (sic!) in HTML <code>onerror=""</code> handler.</li>
  <li><code>source</code>: URL of the script where the error was raised (string)</li>
  <li><code>lineno</code>: Line number where error was raised (number)</li>
- <li><code>colno</code>: Column number for the line where the error occurred (number) {{gecko_minversion_inline("31.0")}}</li>
- <li><code>error</code>: <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error Object</a> (object) {{gecko_minversion_inline("31.0")}}</li>
+ <li><code>colno</code>: Column number for the line where the error occurred (number)</li>
+ <li><code>error</code>: <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error Object</a> (object)</li>
 </ul>
 
 <p>When the function returns <code>true</code>, this prevents the firing of the default event handler.</p>
@@ -59,14 +59,14 @@ tags:
 
 <p>A good example for this is when you are using an image tag, and need to specify a backup image in case the one you need is not available on the server for any reason.</p>
 
-<pre class="brush: html"><code>&lt;img src="imagenotfound.gif" onerror="this.onerror=null;this.src='imagefound.gif';" /&gt;</code>
+<pre class="brush: html">&lt;img src=&quot;imagenotfound.gif&quot; onerror=&quot;this.onerror=null;this.src='imagefound.gif';&quot; /&gt;
 </pre>
 
 <p>The reason we have the <code>this.onerror=null</code> in the function is that the browser will be stuck in an endless loop if the onerror image itself generates an error.</p>
 
 <h2 id="Notes">Notes</h2>
 
-<p>When an error occurs in a script, loaded from a <a href="/en-US/docs/Web/Security/Same-origin_policy">different origin</a>, the details of the error are not reported to prevent leaking information (see {{bug("363897")}}). Instead the error reported is <code><strong>"Script error."</strong></code> This behavior can be overridden in some browsers using the <code>{{htmlattrxref("crossorigin","script")}}</code> attribute on {{HTMLElement("script")}} and having the server send the appropriate <a href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a> HTTP response headers.  A workaround is to isolate "Script error." and handle it knowing that the error detail is only viewable in the browser console and not accessible via JavaScript.</p>
+<p>When an error occurs in a script, loaded from a <a href="/en-US/docs/Web/Security/Same-origin_policy">different origin</a>, the details of the error are not reported to prevent leaking information (see {{bug("363897")}}). Instead the error reported is <code><strong>"Script error."</strong></code> This behavior can be overridden in some browsers using the <code>{{htmlattrxref("crossorigin","script")}}</code> attribute on {{HTMLElement("script")}} and having the server send the appropriate <a href="/en-US/docs/Web/HTTP/CORS">CORS</a> HTTP response headers.  A workaround is to isolate "Script error." and handle it knowing that the error detail is only viewable in the browser console and not accessible via JavaScript.</p>
 
 <pre class="brush: js">window.onerror = function (msg, url, lineNo, columnNo, error) {
   var string = msg.toLowerCase();
