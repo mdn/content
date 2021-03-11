@@ -34,9 +34,9 @@ alert(idAttr.value == "top")
 
 <p>When called on an HTML element in a DOM flagged as an HTML document, <code>getAttributeNode</code> lower-cases its argument before proceeding.</p>
 
-<p>The <code>Attr</code> node inherits from <code>Node</code>, but is not considered a part of the document tree. Common <code>Node</code> attributes like <a href="/en-US/docs/DOM/Node.parentNode">parentNode</a>, <a href="/en-US/docs/DOM/Node.previousSibling">previousSibling</a>, and <a href="/en-US/docs/DOM/Node.nextSibling">nextSibling</a> are <code>null</code> for an <code>Attr</code> node. You can, however, get the element to which the attribute belongs with the <code>ownerElement</code> property.</p>
+<p>The <code>Attr</code> node inherits from <code>Node</code>, but is not considered a part of the document tree. Common <code>Node</code> attributes like <a href="/en-US/docs/Web/API/Node/parentNode">parentNode</a>, <a href="/en-US/docs/Web/API/Node/previousSibling">previousSibling</a>, and <a href="/en-US/docs/Web/API/Node/nextSibling">nextSibling</a> are <code>null</code> for an <code>Attr</code> node. You can, however, get the element to which the attribute belongs with the <code>ownerElement</code> property.</p>
 
-<p><a href="/en-US/docs/DOM/element.getAttribute">getAttribute</a> is usually used instead of <code>getAttributeNode</code> to get the value of an element's attribute.</p>
+<p><a href="/en-US/docs/Web/API/Element/getAttribute">getAttribute</a> is usually used instead of <code>getAttributeNode</code> to get the value of an element's attribute.</p>
 
 <p>{{ DOMAttributeMethods() }}</p>
 
