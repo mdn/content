@@ -118,7 +118,7 @@ Content-Security-Policy: script-src &lt;source&gt; &lt;source&gt;;
  <li>{{domxref("window.execScript")}} {{non-standard_inline}} (IE &lt; 11 only)</li>
 </ul>
 
-<h3 id="strict-dynamic">strict-dynamic</h3>
+<h3 id="examples-strict-dynamic">strict-dynamic</h3>
 
 <p>The <code>'strict-dynamic'</code> source expression specifies that the trust explicitly given to a script present in the markup, by accompanying it with a nonce or a hash, shall be propagated to all the scripts loaded by that root script. At the same time, any whitelist or source expressions such as <code>'self'</code> or <code>'unsafe-inline'</code> will be ignored. For example, a policy such as <code>script-src 'strict-dynamic' 'nonce-R4nd0m' https://whitelisted.com/</code> would allow loading of a root script with <code>&lt;script nonce="R4nd0m" src="https://example.com/loader.js"&gt;</code> and propagate that trust to any script loaded by <code>loader.js</code>, but disallow loading scripts from <code>https://whitelisted.com/</code> unless accompanied by a nonce or loaded from a trusted script.</p>
 
