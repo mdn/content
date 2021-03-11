@@ -296,7 +296,7 @@ tags:
 
 <p>Our 100-pixel tall tracks won’t be very useful if we add content into those tracks that is taller than 100 pixels, in which case it would cause an overflow. It might be better to have tracks that are <em>at least</em> 100 pixels tall and can still expand if more content gets into them. A fairly basic fact about the web is that you never really know how tall something is going to be; additional content or larger font sizes can cause problems with designs that attempt to be pixel perfect in every dimension.</p>
 
-<p>The {{cssxref("minmax")}} function lets us set a minimum and maximum size for a track, for example <code>minmax(100px, auto)</code>. The minimum size is 100 pixels, but the maximum is <code>auto</code>, which will expand to fit the content. Try changing <code>grid-auto-rows</code> to use a minmax value:</p>
+<p>The {{cssxref("minmax()")}} function lets us set a minimum and maximum size for a track, for example <code>minmax(100px, auto)</code>. The minimum size is 100 pixels, but the maximum is <code>auto</code>, which will expand to fit the content. Try changing <code>grid-auto-rows</code> to use a minmax value:</p>
 
 <pre class="brush: css">.container {
     display: grid;
@@ -309,7 +309,7 @@ tags:
 
 <h3 id="As_many_columns_as_will_fit">As many columns as will fit</h3>
 
-<p>We can combine some of the things we have learned about track listing, repeat notation and {{cssxref("minmax")}} to create a useful pattern. Sometimes it is helpful to be able to ask grid to create as many columns as will fit into the container. We do this by setting the value of <code>grid-template-columns</code> using {{cssxref("repeat")}} notation, but instead of passing in a number, pass in the keyword <code>auto-fill</code>. For the second parameter of the function we use <code>minmax()</code>, with a minimum value equal to the minimum track size that we would like to have, and a maximum of <code>1fr</code>.</p>
+<p>We can combine some of the things we have learned about track listing, repeat notation and {{cssxref("minmax()")}} to create a useful pattern. Sometimes it is helpful to be able to ask grid to create as many columns as will fit into the container. We do this by setting the value of <code>grid-template-columns</code> using {{cssxref("repeat()")}} notation, but instead of passing in a number, pass in the keyword <code>auto-fill</code>. For the second parameter of the function we use <code>minmax()</code>, with a minimum value equal to the minimum track size that we would like to have, and a maximum of <code>1fr</code>.</p>
 
 <p>Try this in your file now, using the below CSS:</p>
 

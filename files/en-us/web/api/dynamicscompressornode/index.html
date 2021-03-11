@@ -13,7 +13,7 @@ tags:
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p>The <code>DynamicsCompressorNode</code> interface provides a compression effect, which lowers the volume of the loudest parts of the signal in order to help prevent clipping and distortion that can occur when multiple sounds are played and multiplexed together at once. This is often used in musical production and game audio. <code>DynamicsCompressorNode</code> is an {{domxref("AudioNode")}} that has exactly one input and one output; it is created using the {{domxref("AudioContext.createDynamicsCompressor()")}} method.</p>
+<p>The <code>DynamicsCompressorNode</code> interface provides a compression effect, which lowers the volume of the loudest parts of the signal in order to help prevent clipping and distortion that can occur when multiple sounds are played and multiplexed together at once. This is often used in musical production and game audio. <code>DynamicsCompressorNode</code> is an {{domxref("AudioNode")}} that has exactly one input and one output; it is created using the {{domxref("BaseAudioContext.createDynamicsCompressor")}} method.</p>
 </div>
 
 <table class="properties">
@@ -54,17 +54,17 @@ tags:
 
 <dl>
  <dt>{{domxref("DynamicsCompressorNode.threshold")}} {{readonlyInline}}</dt>
- <dd>Is a <a href="/en-US/docs/DOM/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}} representing the decibel value above which the compression will start taking effect.</dd>
+ <dd>Is a <a href="/en-US/docs/Web/API/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}} representing the decibel value above which the compression will start taking effect.</dd>
  <dt>{{domxref("DynamicsCompressorNode.knee")}} {{readonlyInline}}</dt>
- <dd>Is a <a href="/en-US/docs/DOM/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}} containing a decibel value representing the range above the threshold where the curve smoothly transitions to the compressed portion.</dd>
+ <dd>Is a <a href="/en-US/docs/Web/API/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}} containing a decibel value representing the range above the threshold where the curve smoothly transitions to the compressed portion.</dd>
  <dt>{{domxref("DynamicsCompressorNode.ratio")}} {{readonlyInline}}</dt>
- <dd>Is a <a href="/en-US/docs/DOM/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}} representing the amount of change, in dB, needed in the input for a 1 dB change in the output.</dd>
+ <dd>Is a <a href="/en-US/docs/Web/API/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}} representing the amount of change, in dB, needed in the input for a 1 dB change in the output.</dd>
  <dt>{{domxref("DynamicsCompressorNode.reduction")}} {{readonlyInline}}</dt>
  <dd>Is a <code>float</code> representing the amount of gain reduction currently applied by the compressor to the signal.</dd>
  <dt>{{domxref("DynamicsCompressorNode.attack")}} {{readonlyInline}}</dt>
- <dd>Is a <a href="/en-US/docs/DOM/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}} representing the amount of time, in seconds, required to reduce the gain by 10 dB.</dd>
+ <dd>Is a <a href="/en-US/docs/Web/API/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}} representing the amount of time, in seconds, required to reduce the gain by 10 dB.</dd>
  <dt>{{domxref("DynamicsCompressorNode.release")}} {{readonlyInline}}</dt>
- <dd>Is a <a href="/en-US/docs/DOM/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}} representing the amount of time, in seconds, required to increase the gain by 10 dB.</dd>
+ <dd>Is a <a href="/en-US/docs/Web/API/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}} representing the amount of time, in seconds, required to increase the gain by 10 dB.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -99,5 +99,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
 </ul>

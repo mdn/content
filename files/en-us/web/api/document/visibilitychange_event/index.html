@@ -39,7 +39,7 @@ tags:
 
 <p>The event doesn't include the document's updated visibility status, but you can get that information from the document's {{domxref("Document.visibilityState", "visibilityState")}} property.</p>
 
-<p>This event fires with a <code>visibilityState</code> of <code>hidden</code> when a user navigates to a new page, switches tabs, closes the tab, minimizes or closes the browser, or, on mobile, switches from the browser to a different app. Transitioning to <code>hidden</code> is the last event that's reliably observable by the page, so developers should treat it as the likely end of the user's session (for example, for  <a href="/en-US/docs/Web/API/Navigator.sendBeacon">sending analytics data</a>).</p>
+<p>This event fires with a <code>visibilityState</code> of <code>hidden</code> when a user navigates to a new page, switches tabs, closes the tab, minimizes or closes the browser, or, on mobile, switches from the browser to a different app. Transitioning to <code>hidden</code> is the last event that's reliably observable by the page, so developers should treat it as the likely end of the user's session (for example, for  <a href="/en-US/docs/Web/API/Navigator/sendBeacon">sending analytics data</a>).</p>
 
 <p>The transition to <code>hidden</code> is also a good point at which pages can stop making UI updates and stop any tasks that the user doesn't want to have running in the background.</p>
 

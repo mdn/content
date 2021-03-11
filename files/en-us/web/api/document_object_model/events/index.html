@@ -13,7 +13,7 @@ tags:
 
 <p>There is an excellent diagram that clearly explains the three phases of event flow through the DOM in the <a href="https://www.w3.org/TR/DOM-Level-3-Events/#dom-event-architecture">DOM Level 3 Events draft</a>.</p>
 
-<p>Also see <a href="/en-US/docs/DOM/DOM_Reference/Examples#Example_5:_Event_Propagation">Example 5: Event Propagation</a> in the Examples chapter for a more detailed example of how events move through the DOM.</p>
+<p>Also see <a href="/en-US/docs/Web/API/Document_Object_Model/Examples#example_5:_event_propagation">Example 5: Event Propagation</a> in the Examples chapter for a more detailed example of how events move through the DOM.</p>
 
 <h2 id="DOM_event_handler_List">Registering event listeners</h2>
 
@@ -34,12 +34,12 @@ function greet(event){
 <p>This is the method you should use in modern web pages.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Internet Explorer 6–8 didn't support this method, offering a similar {{domxref("EventTarget.attachEvent")}} API instead. For cross-browser compatibility, use one of the many JavaScript libraries available.</p>
+<p><strong>Note:</strong> Internet Explorer 6–8 didn't support this method, offering a similar {{domxref("EventTarget.addEventListener")}} API instead. For cross-browser compatibility, use one of the many JavaScript libraries available.</p>
 </div>
 
 <p>More details can be found on the {{domxref("EventTarget.addEventListener")}} reference page.</p>
 
-<h3 id="HTML_attribute"><a href="/en-US/docs/Web/Guide/HTML/Event_attributes">HTML attribute</a></h3>
+<h3 id="HTML_attribute"><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#inline_event_handlers_—_don't_use_these">HTML attribute</a></h3>
 
 <pre class="brush: html">&lt;button onclick="alert('Hello world!')"&gt;
 </pre>

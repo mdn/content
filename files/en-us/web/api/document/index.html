@@ -10,11 +10,11 @@ tags:
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">The <strong><code>Document</code></strong> interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the <a href="/en-US/docs/Using_the_W3C_DOM_Level_1_Core">DOM tree</a>.</span> The DOM tree includes elements such as {{HTMLElement("body")}} and {{HTMLElement("table")}}, among <a href="/en-US/docs/Web/HTML/Element">many others</a>. It provides functionality globally to the document, like how to obtain the page's URL and create new elements in the document.</p>
+<p><span class="seoSummary">The <strong><code>Document</code></strong> interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the <a href="/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core">DOM tree</a>.</span> The DOM tree includes elements such as {{HTMLElement("body")}} and {{HTMLElement("table")}}, among <a href="/en-US/docs/Web/HTML/Element">many others</a>. It provides functionality globally to the document, like how to obtain the page's URL and create new elements in the document.</p>
 
 <p>{{InheritanceDiagram}}</p>
 
-<p>The <code>Document</code> interface describes the common properties and methods for any kind of document. Depending on the document's type (e.g. <a href="/en-US/docs/HTML">HTML</a>, <a href="/en-US/docs/XML">XML</a>, SVG, …), a larger API is available: HTML documents, served with the <code>"text/html"</code> content type, also implement the {{DOMxRef("HTMLDocument")}} interface, whereas XML and SVG documents implement the {{DOMxRef("XMLDocument")}} interface.</p>
+<p>The <code>Document</code> interface describes the common properties and methods for any kind of document. Depending on the document's type (e.g. <a href="/en-US/docs/Web/HTML">HTML</a>, <a href="/en-US/docs/Web/XML">XML</a>, SVG, …), a larger API is available: HTML documents, served with the <code>"text/html"</code> content type, also implement the {{DOMxRef("HTMLDocument")}} interface, whereas XML and SVG documents implement the {{DOMxRef("XMLDocument")}} interface.</p>
 
 <h2 id="Constructor">Constructor</h2>
 
@@ -140,7 +140,7 @@ tags:
  <dd>Represents the event handling code for the {{event("paste")}} event.</dd>
  <dt>{{DOMxRef("Document.onreadystatechange")}}</dt>
  <dd>Represents the event handling code for the {{event("readystatechange")}} event.</dd>
- <dt>{{DOMxRef("Document.onselectionchange")}} {{Experimental_Inline}}</dt>
+ <dt>{{DOMxRef("GlobalEventHandlers.onselectionchange")}} {{Experimental_Inline}}</dt>
  <dd>Is an {{DOMxRef("EventHandler")}} representing the code to be called when the {{event("selectionchange")}} event is raised.</dd>
  <dt>{{DOMxRef("Document.onvisibilitychange")}}</dt>
  <dd>Is an {{DOMxRef("EventHandler")}} representing the code to be called when the {{event("visibilitychange")}} event is raised.</dd>
@@ -260,7 +260,7 @@ tags:
  <dd>Returns a clone of a node from an external document.</dd>
  <dt>{{DOMxRef("Document.normalizeDocument()")}} {{Obsolete_Inline}}</dt>
  <dd>Replaces entities, normalizes text nodes, etc.</dd>
- <dt>{{DOMxRef("Document.releaseCapture()")}} {{Non-standard_Inline}} {{gecko_minversion_inline("2.0")}}</dt>
+ <dt>{{DOMxRef("Document.releaseCapture()")}} {{Non-standard_Inline}}</dt>
  <dd>Releases the current mouse capture if it's on an element in this document.</dd>
  <dt>{{DOMxRef("Document.releaseEvents()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}</dt>
  <dd>See {{DOMxRef("Window.releaseEvents()")}}.</dd>
@@ -287,7 +287,7 @@ tags:
 
 <dl>
  <dt>{{DOMxRef("Document.createExpression()")}}</dt>
- <dd>Compiles an <code><a href="/en-US/docs/XPathExpression">XPathExpression</a></code> which can then be used for (repeated) evaluations.</dd>
+ <dd>Compiles an <code><a href="/en-US/docs/Web/API/XPathExpression">XPathExpression</a></code> which can then be used for (repeated) evaluations.</dd>
  <dt>{{DOMxRef("Document.createNSResolver()")}}</dt>
  <dd>Creates an {{DOMxRef("XPathNSResolver")}} object.</dd>
  <dt>{{DOMxRef("Document.evaluate()")}}</dt>
@@ -423,7 +423,7 @@ tags:
  <dt>{{DOMxRef("Document/fullscreenchange_event", "fullscreenchange")}}</dt>
  <dd>Fired when the <code>Document</code> transitions into or out of <a href="/en-US/docs/Web/API/Fullscreen_API/Guide">full-screen</a> mode.<br>
  Also available via the {{DOMxRef("Document.onfullscreenchange", "onfullscreenchange")}} property.</dd>
- <dt><code><a href="/en-US/docs/Web/Events/fullscreenerror">fullscreenerror</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/API/Document/fullscreenerror_event">fullscreenerror</a></code></dt>
  <dd>Fired if an error occurs while attempting to switch into or out of <a href="/en-US/docs/Web/API/Fullscreen_API/Guide">full-screen</a> mode.<br>
  Also available via the  {{DOMxRef("Document.onfullscreenerror", "onfullscreenerror")}} property.</dd>
 </dl>
@@ -459,7 +459,7 @@ tags:
  <dd>Fired when an element captures a pointer using <code><a href="/en-US/docs/Web/API/Element/setPointerCapture">setPointerCapture()</a></code>.<br>
  Also available via the {{DOMxRef("GlobalEventHandlers/ongotpointercapture", "ongotpointercapture")}} property.</dd>
  <dt>{{DOMxRef("Document/lostpointercapture_event", "lostpointercapture")}}</dt>
- <dd>Fired when a <a href="/en-US/docs/Web/API/Pointer_events#Pointer_capture">captured pointer</a> is released.<br>
+ <dd>Fired when a <a href="/en-US/docs/Web/API/Pointer_events#pointer_capture">captured pointer</a> is released.<br>
  Also available via the {{DOMxRef("GlobalEventHandlers/onlostpointercapture", "onlostpointercapture")}} property.</dd>
  <dt>{{DOMxRef("Document/pointercancel_event", "pointercancel")}}</dt>
  <dd>Fired when a pointer event is canceled.<br>
@@ -525,16 +525,16 @@ tags:
 
 <dl>
  <dt>{{DOMxRef("Document/transitioncancel_event", "transitioncancel")}}</dt>
- <dd>Fired when a <a href="/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> is canceled.<br>
+ <dd>Fired when a <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS transition</a> is canceled.<br>
  Also available via the {{DOMxRef("GlobalEventHandlers/ontransitioncancel", "ontransitioncancel")}} property.</dd>
  <dt>{{DOMxRef("Document/transitionend_event", "transitionend")}}</dt>
- <dd>Fired when a <a href="/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> has completed.<br>
+ <dd>Fired when a <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS transition</a> has completed.<br>
  Also available via the {{DOMxRef("GlobalEventHandlers/ontransitionend", "ontransitionend")}} property.</dd>
  <dt>{{DOMxRef("Document/transitionrun_event", "transitionrun")}}</dt>
- <dd>Fired when a <a href="/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> is first created.<br>
+ <dd>Fired when a <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS transition</a> is first created.<br>
  Also available via the {{DOMxRef("GlobalEventHandlers/ontransitionrun", "ontransitionrun")}} property.</dd>
  <dt>{{DOMxRef("Document/transitionstart_event", "transitionstart")}}</dt>
- <dd>Fired when a <a href="/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> has actually started.<br>
+ <dd>Fired when a <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS transition</a> has actually started.<br>
  Also available via the {{DOMxRef("GlobalEventHandlers/ontransitionstart", "ontransitionstart")}} property.</dd>
 </dl>
 
