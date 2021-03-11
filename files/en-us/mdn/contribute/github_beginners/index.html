@@ -78,7 +78,7 @@ tags:
   <li>Cloning means making a local copy of a repo for you to work on (i.e. on your local hard drive).</li>
 </ul>
 
-<p>You should first make a fork of each repo you want to work on. This is required for you to submit change requests to the main version of the repo (we'll learn how to create a pull request later on). Due to security reasons, you can't submit changes directly to the main version of the repo.</p>
+<p>It is possible to do the two things separately, but in practice you will nearly always do them together when contributing to other people's projects. You should first make a fork of each repo you want to work on. This is required for you to submit change requests to the main version of the repo (we'll learn how to create a pull request later on). Due to security reasons, you can't submit changes directly to the main version of the repo.</p>
 
 <p>Let's fork <a href="https://github.com/mdn/content">https://github.com/mdn/content</a> right now; you'll definitely be contributing to this repo at some point. Follow these steps:</p>
 
@@ -241,7 +241,7 @@ Make sure you run the following to switch to the main branch before doing anythi
     <p><img src="branch-menu.png" alt="menu showing list of branch names with a text box labeled find or create a branch"></p>
   </li>
   <li>
-    <p>If you enter part of an existing branch name in the text field, it will filter the list of branches against that string, allowing you to search for existing branches easily. However, we want to create a new branch. Enter a branch name that doesn't already exist (try something like test-branch) and the display will change to give you a button labelled "Create branch: test-branch from ‘main'":</p>
+    <p>If you enter part of an existing branch name in the text field, it will filter the list of branches against that string, allowing you to search for existing branches easily. However, we want to create a new branch. Enter a branch name that doesn't already exist (try something like test-branch) and the display will change to give you a button labelled "Create branch: test-branch from 'main'":</p>
 
     <p><img src="new-branch.png" alt="menu showing a new branch name test-branch entered into a text box, with a create branch button below it"></p>
   </li>
@@ -333,7 +333,7 @@ nothing to commit, working tree clean</pre>
   <li>
     <p>Git is telling us that <code>README.md</code> is now in our commit list. To include all the files in the commit list in a commit (a single set of changes that we will later try to send to the main branch), enter the following (the <code>-m</code> option is short for message"):
 
-    <pre class="brush: bash">git commit -m ‘my first commit'</pre>
+    <pre class="brush: bash">git commit -m 'my first commit'</pre>
 
     <p>Git will tell you this:</p>
 
@@ -388,7 +388,7 @@ To github.com:chrisdavidmills/content.git
     </div>
   </li>
   <li>
-    <p>At this point, enter a useful title and description for your PR, saying exactly what it changed, why this is a good thing, and what related issue it fixed (include the issue URL).</p>
+    <p>At this point, enter a useful title and description for your PR, saying exactly what it changed, why this is a good thing, and what related issue it fixed, if appropriate. Specifically, include a line saying <code>Fixes <em>issue-url</em></code>. GitHub automatically renders this as a link to the issue number, e.g. <code>Fixes #1234</code> and, in addition, automatically closes the related issue once the pull request is merged.</p>
   </li>
   <li>
     <p>Once you are ready to send your pull request, click the "Create pull request" button. This will cause your pull request (PR) to appear in the repo's <a href="https://github.com/mdn/content/pulls">Pull requests list</a>, where it'll be reviewed by our review teams, and hopefully merged into the main codebase.</p>
@@ -422,7 +422,7 @@ To github.com:chrisdavidmills/content.git
 
 <h3 id="reversing_a_commit">Reversing a commit</h3>
 
-<p>If you've committed the commit list using <code>git commit -m ‘my commit message'</code>, and not yet pushed it, but now realized that you put something in there that you want to remove, you can reverse your local commit using</p>
+<p>If you've committed the commit list using <code>git commit -m 'my commit message'</code>, and not yet pushed it, but now realized that you put something in there that you want to remove, you can reverse your local commit using</p>
 
 <pre class="brush: bash">git reset HEAD~1</pre>
 
