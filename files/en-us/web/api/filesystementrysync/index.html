@@ -16,7 +16,7 @@ tags:
 ---
 <div>{{APIRef("File System API")}}{{Non-standard_header()}}</div>
 
-<p><span class="seoSummary">The <code>FileSystemEntrySync</code> interface of the File and Directory Entries API represents an entry in a file system; it can be either a {{domxref("FileEntrySync")}} or {{domxref("DirectoryEntry")}}.</span> It includes methods for working with files—including copying, moving, removing, and reading files—as well as information about the file it points to—including the file name and its path from the root to the entry.</p>
+<p><span class="seoSummary">The <code>FileSystemEntrySync</code> interface of the File and Directory Entries API represents an entry in a file system; it can be either a {{domxref("FileEntrySync")}} or {{domxref("FileSystemDirectoryEntry")}}.</span> It includes methods for working with files—including copying, moving, removing, and reading files—as well as information about the file it points to—including the file name and its path from the root to the entry.</p>
 
 <div class="warning">
 <p><strong>Warning:</strong> This API was never accepted and never became standardized. Various browsers implement pieces of the <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a> (otherwise known as the File System API) but you should try to avoid using it.</p>
@@ -33,19 +33,19 @@ tags:
 <table class="standard-table">
  <tbody>
   <tr>
-   <td><code>Metadata <a href="#getmetada">getMetadata</a> () raises (<a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+   <td><code>Metadata <a href="#getmetada">getMetadata</a> () raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>FileSystemEntrySync <a href="#moveto">moveTo</a> (in <a href="/en-US/docs/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a> <em>parent</em>, optional DOMString <em>newName</em>) raises (<a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+   <td><code>FileSystemEntrySync <a href="#moveto">moveTo</a> (in <a href="/en-US/docs/Web/API/DirectoryEntrySync">DirectoryEntrySync</a> <em>parent</em>, optional DOMString <em>newName</em>) raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>FileSystemEntrySync <a href="#copyto">copyTo</a>(in <a href="/en-US/docs/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a> <em>parent</em>, optional DOMString <em>newName</em>) raises (<a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+   <td><code>FileSystemEntrySync <a href="#copyto">copyTo</a>(in <a href="/en-US/docs/Web/API/DirectoryEntrySync">DirectoryEntrySync</a> <em>parent</em>, optional DOMString <em>newName</em>) raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</code></td>
   </tr>
   <tr>
    <td><code>DOMString <a href="#tourl">toURL</a>();</code></td>
   </tr>
   <tr>
-   <td><code>void <a href="#remove">remove</a>() raises (<a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+   <td><code>void <a href="#remove">remove</a>() raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</code></td>
   </tr>
   <tr>
    <td><code>DirectoryEntrySync <a href="#getparent">getParent</a>();</code></td>
@@ -103,7 +103,7 @@ tags:
 <p>Look up metadata about this entry. [ todo: specify what kind of metadata ]</p>
 
 <pre>Metadata getMetada ()
-  raises <code>(<a href="https://developer.mozilla.org/en/DOM/File_API/File_System_API/FileException">FileException</a>)</code>;</pre>
+  raises <code>(<a href="/en-US/docs/Web/API/FileException">FileException</a>)</code>;</pre>
 
 <h5 id="Parameter">Parameter</h5>
 
@@ -118,7 +118,7 @@ tags:
 
 <h5 id="Exceptions">Exceptions</h5>
 
-<p>This method can raise a <a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
+<p>This method can raise a <a href="/en-US/docs/Web/API/FileException">FileException</a> with the following codes:</p>
 
 <table class="standard-table">
  <thead>
@@ -156,7 +156,7 @@ tags:
 
 <pre>FileSystemEntrySync moveTo (
   in DirectoryEntrySync <em>parent</em>, optional DOMString <em>newName</em>
-) raises (<a href="https://developer.mozilla.org/en/DOM/File_API/File_System_API/FileException">FileException</a>);</pre>
+) raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</pre>
 
 <h5 id="Parameters">Parameters</h5>
 
@@ -176,7 +176,7 @@ tags:
 
 <h5 id="Exceptions_2">Exceptions</h5>
 
-<p>This method can raise a <a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
+<p>This method can raise a <a href="/en-US/docs/Web/API/FileException">FileException</a> with the following codes:</p>
 
 <table class="standard-table">
  <thead>
@@ -218,7 +218,7 @@ tags:
 
 <pre>void copyTo (
   in DirectoryEntrySync <em>parent</em>, optional DOMString <em>newName</em>
-) raises (<a href="https://developer.mozilla.org/en/DOM/File_API/File_System_API/FileException">FileException</a>);</pre>
+) raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</pre>
 
 <h5 id="Parameters_2">Parameters</h5>
 
@@ -238,7 +238,7 @@ tags:
 
 <h5 id="Exceptions_3">Exceptions</h5>
 
-<p>This method can raise a <a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
+<p>This method can raise a <a href="/en-US/docs/Web/API/FileException">FileException</a> with the following codes:</p>
 
 <table class="standard-table">
  <thead>
@@ -273,14 +273,14 @@ tags:
   </tr>
   <tr>
    <td><code>QUOTA_EXCEEDED_ERR</code></td>
-   <td>The operation would cause the application to exceed its storage quota. You can ask for a larger persistent storage, which your user must explicitly grant. For more information, see the article on <a href="/en-US/docs/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API" title="Basic Concepts About the Filesystem API">basic concepts</a>. </td>
+   <td>The operation would cause the application to exceed its storage quota. You can ask for a larger persistent storage, which your user must explicitly grant. For more information, see the article on <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">basic concepts</a>. </td>
   </tr>
  </tbody>
 </table>
 
 <h3 id="toURL">toURL()</h3>
 
-<p>Returns a URL that can be used to identify this entry. It exposes a new URL scheme—<code>filesystem:</code>—that you can use to fill <code>src</code> or <code>href </code>attributes. For example, if you wanted to display an image and have its <a href="/en-US/docs/DOM/File_API/File_System_API/FileEntry">fileEntry</a>, calling <code>toURL()</code> gives you the image file's file system URL. You get something like: <code>filesystem:<a href="http://example.com/temporary/lolcat.png">http://example.com/temporary/lolcat.png</a>.</code></p>
+<p>Returns a URL that can be used to identify this entry. It exposes a new URL scheme—<code>filesystem:</code>—that you can use to fill <code>src</code> or <code>href </code>attributes. For example, if you wanted to display an image and have its <a href="/en-US/docs/Web/API/FileSystemFileEntry">fileEntry</a>, calling <code>toURL()</code> gives you the image file's file system URL. You get something like: <code>filesystem:<a href="http://example.com/temporary/lolcat.png">http://example.com/temporary/lolcat.png</a>.</code></p>
 
 <p>The file system URL does not expire. Because the method describes a location on disk, the URL is valid for as long as that location exists. You can delete the file and recreate it, and it's all good. </p>
 
@@ -305,10 +305,10 @@ tags:
 
 <h3 id="remove">remove()</h3>
 
-<p>Deletes a file or directory. You cannot delete an empty directory or the root directory of a file system. If you want to remove an empty directory, use <a href="/en-US/docs/DOM/File_API/File_System_API/DirectoryEntrySync#removeRecursively()" rel="internal"><code>removeRecursively()</code></a> instead.</p>
+<p>Deletes a file or directory. You cannot delete an empty directory or the root directory of a file system. If you want to remove an empty directory, use <a href="/en-US/docs/Web/API/DirectoryEntrySync#removerecursively()" rel="internal"><code>removeRecursively()</code></a> instead.</p>
 
 <pre>void remove (
-) raises (<a href="https://developer.mozilla.org/en/DOM/File_API/File_System_API/FileException">FileException</a>);</pre>
+) raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</pre>
 
 <h5 id="Parameter_3">Parameter</h5>
 
@@ -323,7 +323,7 @@ tags:
 
 <h5 id="Exceptions_5">Exceptions</h5>
 
-<p>This method can raise a <a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
+<p>This method can raise a <a href="/en-US/docs/Web/API/FileException">FileException</a> with the following codes:</p>
 
 <table class="standard-table">
  <thead>
@@ -340,7 +340,7 @@ tags:
   <tr>
    <td><code>INVALID_MODIFICATION_ERR</code></td>
    <td>
-    <p>You tried to remove a directory that is not empty. If you want to remove an empty directory, use <a href="/en-US/docs/DOM/File_API/File_System_API/DirectoryEntrySync#removeRecursively()"><code>removeRecursively()</code></a> instead.</p>
+    <p>You tried to remove a directory that is not empty. If you want to remove an empty directory, use <a href="/en-US/docs/Web/API/DirectoryEntrySync#removerecursively()"><code>removeRecursively()</code></a> instead.</p>
    </td>
   </tr>
   <tr>
@@ -352,7 +352,7 @@ tags:
 
 <h3 id="getParent">getParent()</h3>
 
-<p>Look up the parent <a href="/en-US/docs/DOM/File_API/File_System_API/DirectoryEntrySync"><code>DirectoryEntrySync</code></a> containing the entry. If this entry is the root of its file system, then the parent is itself.</p>
+<p>Look up the parent <a href="/en-US/docs/Web/API/DirectoryEntrySync"><code>DirectoryEntrySync</code></a> containing the entry. If this entry is the root of its file system, then the parent is itself.</p>
 
 <pre>void getParent ();</pre>
 
@@ -363,7 +363,7 @@ tags:
 <h5 id="Returns_6">Returns</h5>
 
 <dl>
- <dt><code><a href="/en-US/docs/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/API/DirectoryEntrySync">DirectoryEntrySync</a></code></dt>
  <dd>An object that represents a directory in the file system.</dd>
 </dl>
 
@@ -379,6 +379,6 @@ tags:
 
 <p>Specification:{{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}</p>
 
-<p>Reference: <a href="/en-US/docs/DOM/File_API/File_System_API">File System API</a></p>
+<p>Reference: <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">File System API</a></p>
 
-<p>Introduction: <a href="/en-US/docs/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">Basic Concepts About the File System API</a></p>
+<p>Introduction: <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Basic Concepts About the File System API</a></p>
