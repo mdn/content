@@ -16,7 +16,7 @@ tags:
 ---
 <div>{{APIRef("WebVR API")}}{{deprecated_header}}</div>
 
-<div class="notecard note"><strong>Note:</strong> WebVR API is replaced by <a href="/en-US/docs/Web/API/WebXR_API">WebXR API</a>. WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.</div>
+<div class="notecard note"><strong>Note:</strong> WebVR API is replaced by <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR API</a>. WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.</div>
 
 <p class="summary">This article discusses some of the concepts and theory behind virtual reality (VR). If you are a newcomer to the area, it is worthwhile getting an understanding of these topics before you start diving into code.</p>
 
@@ -26,11 +26,11 @@ tags:
 
 <p>In 1939 the <a href="https://en.wikipedia.org/wiki/View-Master">View-Master device</a> was created, allowing people to see 3D pictures. The device displayed images stored on cardboard disks containing stereoscopic 3D pairs of small color photographs. After years of development the military got interested in using such technology, and Project Headsight was born in 1961 — this involved a helmet incorporating a video screen with a head-tracking system.</p>
 
-<p><img alt="" src="http://end3r.com/tmp/vr/view-master.jpg" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="https://end3r.com/tmp/vr/view-master.jpg" style="display: block; margin: 0px auto;"></p>
 
 <p>There were various experiments conducted over the next few decades, but it wasn't resricted to science labs and battlefields anymore. Eventually pop culture took over with movie directors showing their visions of virtual reality. Movies like Tron (1982) and The Matrix (1999) were created, where people could transfer themselves into a whole new cyber world or were trapped in one without even knowing, accepting it as the real world.</p>
 
-<p><img alt="" src="http://end3r.com/tmp/vr/matrix.jpg" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="https://end3r.com/tmp/vr/matrix.jpg" style="display: block; margin: 0px auto;"></p>
 
 <p>The first VR gaming attempts were big and expensive — in 1991 Virtuality Group created a VR-ready arcade machine with goggles and ported popular titles like Pac-Man to virtual reality. Sega introduced their VR glasses at the Consumer Electronics Show in 1993. Companies were experimenting, but the market and consumers weren't convinced — we had to wait until 2012 to see a real example of a successful VR project.</p>
 
@@ -46,15 +46,15 @@ tags:
 
 <p>Handling input for virtual reality applications is an interesting topic — it's a totally new experience for which dedicated user interfaces have to be designed. There are various approaches right now from classic keyboard and mouse, to new ones like Leap Motion and the VIVE controllers. It's a matter of trial and error to see what works in given situations and what inputs fit best for your type of game.</p>
 
-<p><img alt="" src="http://end3r.com/tmp/vr/oculus-touch.jpg" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="https://end3r.com/tmp/vr/oculus-touch.jpg" style="display: block; margin: 0px auto;"></p>
 
 <h2 id="VR_Hardware_setup">VR Hardware setup</h2>
 
 <p>There are two main types of setup, mobile or computer-connected. Their minimum hardware set ups are as follows:</p>
 
 <ul>
- <li>Mobile: A Head-mounted display (HMD) is created using a smartphone — which acts as the VR display — mounted in a VR mount such as Google Cardboard, which contains the required lenses to provide stereoscopic vision of what is projected on the mobile screen.<img alt="Mobile based VR setup" src="https://mdn.mozillademos.org/files/11085/mobileBasedVRSetup.png" style="width: 100%;"></li>
- <li>Computer-connected: A VR setup is connected to your computer — this consists of a Head Mounted Display (HMD) containing a high resolution landscape-oriented screen onto which the visuals for both the left and right eye are displayed, which also includes a lens for each eye to promote separation of the left and right eye scene (stereoscopic vision.) The setup also includes a separate position sensor that works out the position/orientation/velocity/acceleration of your head and constantly passes that information the computer. <img alt="Computer based VR Setup" src="https://mdn.mozillademos.org/files/11089/computerBasedVRSetup.png" style="width: 100%;"></li>
+ <li>Mobile: A Head-mounted display (HMD) is created using a smartphone — which acts as the VR display — mounted in a VR mount such as Google Cardboard, which contains the required lenses to provide stereoscopic vision of what is projected on the mobile screen.<img alt="Mobile based VR setup" src="mobilebasedvrsetup.png"></li>
+ <li>Computer-connected: A VR setup is connected to your computer — this consists of a Head Mounted Display (HMD) containing a high resolution landscape-oriented screen onto which the visuals for both the left and right eye are displayed, which also includes a lens for each eye to promote separation of the left and right eye scene (stereoscopic vision.) The setup also includes a separate position sensor that works out the position/orientation/velocity/acceleration of your head and constantly passes that information the computer. <img alt="Computer based VR Setup" src="computerbasedvrsetup.png"></li>
 </ul>
 
 <div class="note">
@@ -75,7 +75,7 @@ tags:
 
 <p>As mentioned above, the position sensor detects information concerning the HMD and constantly outputs it, allowing you to continually update a scene according to head movement, rotation, etc. But what exactly is the information?</p>
 
-<p><img alt="Position and Orientation VR setup" src="https://mdn.mozillademos.org/files/11083/positionOrientationVR.png" style="width: 100%;"></p>
+<p><img alt="Position and Orientation VR setup" src="positionorientationvr.png"></p>
 
 <p>The output information falls into four categories:</p>
 
@@ -100,7 +100,7 @@ tags:
 
 <p>The field of view (FOV) is the area that each of the user's eyes can reasonably be expected to see. It roughly takes the form of a pyramid shape, laid down on one side, with the apex inside the user's head, and the rest of the pyramid eminating from the user's eye. Each eye has it's own FOV, one slightly overlapping the other.</p>
 
-<p><img alt="FOV related properties" src="https://mdn.mozillademos.org/files/11091/FOVrelatedProperties.png" style="width: 100%;"></p>
+<p><img alt="FOV related properties" src="fovrelatedproperties.png"></p>
 
 <p>The FOV is defined by the following values:</p>
 
@@ -127,7 +127,7 @@ tags:
 
 <p>Stereoscopic vision is the normal vision humans and (most) animals have — <span class="hvr">the</span> <span class="hvr">perception</span> of two <span class="hvr">slightly</span> <span class="hvr">differing</span> <span class="hvr">images</span> (one <span class="hvr">from</span> <span class="hvr">each</span> <span class="hvr">eye) as a single image. This</span> <span class="hvr">results</span> in <span class="hvr">depth</span> <span class="hvr">perception, helping us to see the world in glorious 3D. To recreate this in VR apps, you need to render two very slightly different views side by side, which will be taken in by the left and right eyes when the user is using the HMD.</span></p>
 
-<p><img alt="How to create stereoscopic 3D images" src="https://mdn.mozillademos.org/files/11095/createStereoscopicImages.png" style="width: 100%;"></p>
+<p><img alt="How to create stereoscopic 3D images" src="createstereoscopicimages.png"></p>
 
 <h3 id="Head_tracking">Head tracking</h3>
 
