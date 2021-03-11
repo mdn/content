@@ -19,17 +19,22 @@ this in one place.
 
 This table checks this project against the [OWD prioritization criteria](https://github.com/openwebdocs/project/blob/main/steering-committee/prioritization-criteria.md).
 
-| Criteria                                     | Assessment  |
-| -------------------------------------------- | ----------- |
-| Effort                                       | Medium/High: Each page (60) is fairly large and may require some research.       |
-| Dependencies                                 | Need to find accessibility experts to help.       |
-| Community enablement                         | Yes. Each page is a self-contained task.        |
-| Momentum                                     | Low/Medium. The tech itself is fairly stable, but a11y is something we want to push.        |
-| Enabling learners                            | Not really. The MDN Learn section contains ARIA basics already.        |
-| Enabling professionals                       | Yes.        |
-| Underrepresented topics / Ethical web        | Yes. We want to push forward the importance of a11y and make it easier to action.       |
-| Operational necessities                      | In a way, yes. Without a11y, certain groups cannot use the web.        |
-| Addressing the needs of the web industry     | Accessibility not seen as a major pain point in Web DNA, but is that just because people don't understand it?        |
+* **Effort**: Medium/High: Each page (60) is fairly large and may require some
+  research.
+* **Dependencies**: Need to find accessibility experts to help.
+* **Community enablement**: Yes. Each page is a self-contained task.
+* **Momentum**: Low/Medium. The tech itself is fairly stable, but a11y is
+  something we want to push.
+* **Enabling learners**: Not really. The MDN Learn section contains ARIA basics
+  already.
+* **Enabling professionals**: Yes.
+* **Underrepresented topics / Ethical web**: Yes. We want to push forward the
+  importance of a11y and make it easier to action.
+* **Operational necessities**: In a way, yes. Without a11y, certain groups
+  cannot use the web.
+* **Addressing the needs of the web industry**: Accessibility not seen as a
+  major pain point in Web DNA, but is that just because people don't understand
+  it?
 
 ## Proposed solutions
 
