@@ -79319,17 +79319,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/Response/useFinalURL": {
-    "modified": "2020-10-15T21:33:29.753Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "chrisdavidmills",
-      "Sheppy",
-      "Sebastianz",
-      "kscarfone"
-    ]
-  },
   "Web/API/RsaHashedImportParams": {
     "modified": "2019-03-18T20:56:26.160Z",
     "contributors": [
