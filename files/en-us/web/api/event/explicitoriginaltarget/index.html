@@ -13,9 +13,9 @@ tags:
 
 <p>The explicit original target of the event. (Mozilla-specific)</p>
 
-<p>If the event was <a href="/en-US/docs/DOM/event_retargeting">retargeted</a> for some reason other than an <a href="/en-US/docs/DOM/anonymous_boundary_crossing">anonymous boundary crossing</a>, this will be set to the target before the retargeting occurs. For example, mouse events are retargeted to their parent node when they happen over text nodes (see {{Bug(185889)}}), and in that case <code><a href="/en-US/docs/DOM/event.currentTarget">currentTarget</a></code> will show the parent and <code>explicitOriginalTarget</code> will show the text node.</p>
+<p>If the event was <a href="/en-US/docs/DOM/event_retargeting">retargeted</a> for some reason other than an <a href="/en-US/docs/DOM/anonymous_boundary_crossing">anonymous boundary crossing</a>, this will be set to the target before the retargeting occurs. For example, mouse events are retargeted to their parent node when they happen over text nodes (see {{Bug(185889)}}), and in that case <code><a href="/en-US/docs/Web/API/Event/currentTarget">currentTarget</a></code> will show the parent and <code>explicitOriginalTarget</code> will show the text node.</p>
 
-<p><code>explicitOriginalTarget</code> differs from <code><a href="/en-US/docs/DOM/event.originalTarget">originalTarget</a></code> in that it will never contain <a href="/en-US/docs/DOM/anonymous_content">anonymous content</a>.</p>
+<p><code>explicitOriginalTarget</code> differs from <code><a href="/en-US/docs/Web/API/Event/originalTarget">originalTarget</a></code> in that it will never contain <a href="/en-US/docs/DOM/anonymous_content">anonymous content</a>.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -46,5 +46,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/DOM/event/Comparison_of_Event_Targets">Comparison of Event Targets</a></li>
+ <li><a href="/en-US/docs/Web/API/Event/Comparison_of_Event_Targets">Comparison of Event Targets</a></li>
 </ul>
