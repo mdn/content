@@ -14,7 +14,7 @@ tags:
 
 <p>Animations that involve transitioning between two states are often called <em>implicit transitions</em> as the states in between the start and final states are implicitly defined by the browser.</p>
 
-<p><img alt="A CSS transition tells the browser to draw the intermediate states between the initial and final states, showing the user a smooth transitions." src="/files/4529/TransitionsPrinciple.png" style="display: block; height: 196px; margin: auto; width: 680px;"></p>
+<p><img alt="A CSS transition tells the browser to draw the intermediate states between the initial and final states, showing the user a smooth transitions." src="transitionsprinciple.png" style="display: block; margin: auto;"></p>
 
 <p>CSS transitions let you decide which properties to animate (by <em>listing them explicitly</em>), when the animation will start (by setting a <em>delay)</em>, how long the transition will last (by setting a <em>duration</em>), and how the transition will run (by defining a <em>timing function</em>, e.g. linearly or quick at the beginning, slow at the end).</p>
 
@@ -302,7 +302,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
  </div>
  </dd>
  <dt>{{cssxref("transition-timing-function")}}</dt>
- <dd><img alt="" src="/files/3434/TF_with_output_gt_than_1.png" style="float: left; height: 173px; margin-right: 5px; width: 130px;">Specifies a function to define how intermediate values for properties are computed. <em>Timing functions</em> determine how intermediate values of the transition are calculated. Most <a href="/en-US/docs/Web/CSS/timing-function">timing functions</a> can be specified by providing the graph of the corresponding function, as defined by four points defining a cubic bezier. You can also choose easing from <a href="http://easings.net/">Easing Functions Cheat Sheet</a>.
+ <dd><img alt="A graph with the Y axis labeled 'Output ratio' and the X axis labeled 'Time ratio'. The ranges of the X and Y axis go from 0 at the origin to 1.0, with a middle value of 0.5. A curving arc starts at the origin an ends at X 1.0 Y 1.0, and rapidly climbs, extending past the tip of the Y axis and then curving back down to the end point." src="tf_with_output_gt_than_1.png" style="float: left; margin-right: 5px;">Specifies a function to define how intermediate values for properties are computed. <em>Timing functions</em> determine how intermediate values of the transition are calculated. Most <a href="/en-US/docs/Web/CSS/easing-function">timing functions</a> can be specified by providing the graph of the corresponding function, as defined by four points defining a cubic bezier. You can also choose easing from <a href="http://easings.net/">Easing Functions Cheat Sheet</a>.
  <div class="cleared">
  <div id="ttf_ease" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
  <p><code>transition-timing-function: ease</code></p>
@@ -989,7 +989,7 @@ a:focus {
 <p>Transitions are a great tool to make things look much smoother without having to do anything to your JavaScript functionality. Take the following example.</p>
 
 <pre class="brush: html">&lt;p&gt;Click anywhere to move the ball&lt;/p&gt;
-&lt;div id="foo"&gt;&lt;/div&gt;
+&lt;div id="foo" class="ball"&gt;&lt;/div&gt;
 </pre>
 
 <p>Using JavaScript you can make the effect of moving the ball to a certain position happen:</p>
@@ -1003,12 +1003,8 @@ document.addEventListener('click', function(ev){
 
 <p>With CSS you can make it smooth without any extra effort. Add a transition to the element and any change will happen smoothly:</p>
 
-<pre class="brush: css">p {
-  padding-left: 60px;
-}
-
-#foo {
-  border-radius: 50px;
+<pre class="brush: css">.ball {
+  border-radius: 25px;
   width: 50px;
   height: 50px;
   background: #c00;
@@ -1019,7 +1015,7 @@ document.addEventListener('click', function(ev){
 }
 </pre>
 
-<p>You can play with this here: <a href="https://jsfiddle.net/9h261pzo/291/">https://jsfiddle.net/9h261pzo/291/</a></p>
+<p>{{EmbedGHLiveSample("css-examples/transitions/js-transitions.html", '100%', 500)}}</p>
 
 <h3 id="Detecting_the_start_and_completion_of_a_transition">Detecting the start and completion of a transition</h3>
 
