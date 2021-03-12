@@ -1,30 +1,26 @@
 ---
-title: DocumentOrShadowRoot.elementsFromPoint()
-slug: Web/API/DocumentOrShadowRoot/elementsFromPoint
+title: Document.elementsFromPoint()
+slug: Web/API/Document/elementsFromPoint
 tags:
-- API
-- Document
-- DocumentOrShadowRoot
-- Method
-- Reference
-- ShadowRoot
-- elementsFromPoint
-- elementsFromPoint()
-- shadow dom
+  - API
+  - Document
+  - Method
+  - Reference
+  - elementsFromPoint
 ---
-<div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
+<div>{{APIRef("DOM")}}</div>
 
 <p><span class="seoSummary">The <strong><code>elementsFromPoint()</code></strong> method
-    of the {{domxref("DocumentOrShadowRoot")}} interface returns an array of all elements
+    of the {{domxref("Document")}} interface returns an array of all elements
     at the specified coordinates (relative to the viewport).</span></p>
 
-<p>It operates in a similar way to the {{domxref("DocumentOrShadowRoot.elementFromPoint",
+<p>It operates in a similar way to the {{domxref("Document.elementFromPoint",
   "elementFromPoint()")}} method.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js">const elements = document.elementsFromPoint(<var>x</var>, <var>y</var>);</pre>
+  class="brush: js">elementsFromPoint(x, y);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -75,29 +71,21 @@ if (document.elementsFromPoint) {
   <thead>
     <tr>
       <th scope="col">Specification</th>
-      <th scope="col">Status</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>{{SpecName('Shadow
-        DOM','#dom-documentorshadowroot-elementsfrompoint','elementsFromPoint()')}}</td>
-      <td>{{Spec2('Shadow DOM')}}</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('CSSOM View', '#dom-document-elementsfrompoint',
-        'elementsFromPoint()')}}</td>
-      <td>{{Spec2('CSSOM View')}}</td>
+      <td>{{SpecName('CSSOM View', '#dom-document-elementsfrompoint', 'elementsFromPoint()')}}</td>
     </tr>
   </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.DocumentOrShadowRoot.elementsFromPoint")}}</p>
+<p>{{Compat("api.Document.elementsFromPoint")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li>{{DOMxRef("DocumentOrShadowRoot.elementFromPoint()")}}</li>
+  <li>{{DOMxRef("Document.elementFromPoint()")}}</li>
 </ul>
