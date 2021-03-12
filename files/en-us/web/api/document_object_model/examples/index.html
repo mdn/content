@@ -261,7 +261,7 @@ function cStyles() {
 
 <h2 id="Example_7_Displaying_Event_Object_Properties">Example 7: Displaying Event Object Properties</h2>
 
-<p>This example uses DOM methods to display all the properties of the {{domxref("window.onload")}} {{domxref("event")}} object and their values in a table. It also shows a useful technique of using a for..in loop to iterate over the properties of an object to get their values.</p>
+<p>This example uses DOM methods to display all the properties of the {{domxref("GlobalEventHandlers.onload")}} {{domxref("event")}} object and their values in a table. It also shows a useful technique of using a for..in loop to iterate over the properties of an object to get their values.</p>
 
 <p>The properties of event objects differs greatly between browsers, the <a href="https://dom.spec.whatwg.org">WHATWG DOM Standard</a> lists the standard properties, however many browsers have extended these greatly.</p>
 
@@ -362,7 +362,7 @@ for (var i = 0; i &lt; 2; i++) {
 <ul>
  <li>A table's {{domxref("element.innerHTML","innerHTML")}} property should never be used to modify a table, although you can use it to write an entire table or the content of a cell.</li>
  <li>If DOM Core methods {{domxref("document.createElement")}} and {{domxref("Node.appendChild")}} are used to create rows and cells, IE requires that they are appended to a tbody element, whereas other browsers will allow appending to a table element (the rows will be added to the last tbody element).</li>
- <li>There are a number of other convenience methods belonging to the <a href="/en-US/docs/Web/API/HTMLTableElement#Methods">table interface</a> that can be used for creating and modifying tables.</li>
+ <li>There are a number of other convenience methods belonging to the <a href="/en-US/docs/Web/API/HTMLTableElement#methods">table interface</a> that can be used for creating and modifying tables.</li>
 </ul>
 
 <h2 id="Subnav">Subnav</h2>

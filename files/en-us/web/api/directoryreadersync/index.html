@@ -8,7 +8,7 @@ tags:
 ---
 <p>{{APIRef("File System API")}}{{Non-standard_header}}</p>
 
-<p>The <code>DirectoryReaderSync</code> interface of the <a href="/en-US/docs/DOM/File_API/File_System_API">File System API</a> lets you read the entries in a directory.</p>
+<p>The <code>DirectoryReaderSync</code> interface of the <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">File System API</a> lets you read the entries in a directory.</p>
 
 <div class="note">
 <p>This interface has been abandoned: it was on a standard track and it proves not a good idea. Do not use it anymore.</p>
@@ -22,7 +22,7 @@ tags:
 
 <h2 id="basic_concepts">Basic concepts</h2>
 
-<p>Before you call the only method in this interface, <a href="/#readEntries()" title="#readEntries()"><code>readEntries()</code></a>, create the <a href="/en-US/docs/DOM/File_API/File_System_API/DirectoryEntrySync"><code>DirectoryEntrySync</code></a> object. But DirectoryEntrySync (as well as <a href="/en-US/docs/DOM/File_API/File_System_API/FileEntrySync">FileEntrySync</a>) is not a data type that you can pass between a calling app and Web Worker thread. It's not a big deal, because you don't really need to have the main app and the worker thread see the same JavaScript object; you just need them to access the same files. You can do that by passing a list of  <code>filesystem:</code> URLs—which are just strings—instead of a list of entries. You can also use the <code>filesystem:</code> URL to look up the entry with <a href="/en-US/docs/DOM/File_API/File_System_API/LocalFileSystem#resolveLocalFileSystemURL()"><code>resolveLocalFileSystemURL()</code></a>. That gets you back to a DirectoryEntrySync (as well as FileEntrySync) object.</p>
+<p>Before you call the only method in this interface, <a href="/#readEntries()" title="#readEntries()"><code>readEntries()</code></a>, create the <a href="/en-US/docs/Web/API/DirectoryEntrySync"><code>DirectoryEntrySync</code></a> object. But DirectoryEntrySync (as well as <a href="/en-US/docs/Web/API/FileEntrySync">FileEntrySync</a>) is not a data type that you can pass between a calling app and Web Worker thread. It's not a big deal, because you don't really need to have the main app and the worker thread see the same JavaScript object; you just need them to access the same files. You can do that by passing a list of  <code>filesystem:</code> URLs—which are just strings—instead of a list of entries. You can also use the <code>filesystem:</code> URL to look up the entry with <a href="/en-US/docs/Web/API/LocalFileSystem#resolvelocalfilesystemurl()"><code>resolveLocalFileSystemURL()</code></a>. That gets you back to a DirectoryEntrySync (as well as FileEntrySync) object.</p>
 
 <h4 id="example">Example</h4>
 
@@ -100,7 +100,7 @@ self.onmessage = function(e) {
 <table class="standard-table">
  <tbody>
   <tr>
-   <td><code>EntrySync <a href="#createreader" title="#readEntries">readEntries</a> () raises (<a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+   <td><code>EntrySync <a href="#createreader" title="#readEntries">readEntries</a> () raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</code></td>
   </tr>
  </tbody>
 </table>
@@ -112,7 +112,7 @@ self.onmessage = function(e) {
 <p>Returns a lost of entries from a specific directory. Call this method until an empty array is returned.</p>
 
 <pre>EntrySync readEntries (
-) raises (<a href="https://developer.mozilla.org/en/DOM/File_API/File_System_API/FileException">FileException</a>);</pre>
+) raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</pre>
 
 <h5 id="Returns">Returns</h5>
 
@@ -122,7 +122,7 @@ self.onmessage = function(e) {
 
 <h5 id="Exceptions">Exceptions</h5>
 
-<p>This method can raise a <a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
+<p>This method can raise a <a href="/en-US/docs/Web/API/FileException">FileException</a> with the following codes:</p>
 
 <table class="standard-table">
  <thead>
@@ -155,6 +155,6 @@ self.onmessage = function(e) {
 
 <p>Specification: {{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}</p>
 
-<p>Reference: <a href="/en-US/docs/DOM/File_API/File_System_API">File System API</a></p>
+<p>Reference: <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">File System API</a></p>
 
-<p>Introduction: <a href="/en-US/docs/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">Basic Concepts About the File System API</a></p>
+<p>Introduction: <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Basic Concepts About the File System API</a></p>

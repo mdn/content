@@ -6,7 +6,7 @@ tags:
   - HTML5
   - Web-Based Protocol Handlers
 ---
-<div>{{Fx_minversion_header(3)}}</div>
+<div></div>
 
 <h2 id="Background">Background</h2>
 
@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Registering">Registering</h2>
 
-<p>Setting up a web application as a protocol handler is not a difficult process. Basically, the web application uses <code><a href="/en-US/docs/Web/API/navigator.registerProtocolHandler">registerProtocolHandler()</a></code> to register itself with the browser as a potential handler for a given protocol. For example:</p>
+<p>Setting up a web application as a protocol handler is not a difficult process. Basically, the web application uses <code><a href="/en-US/docs/Web/API/Navigator/registerProtocolHandler">registerProtocolHandler()</a></code> to register itself with the browser as a potential handler for a given protocol. For example:</p>
 
 <pre class="brush: js">navigator.registerProtocolHandler("web+burger",
                                   "http://www.google.co.uk/?uri=%s",
@@ -38,7 +38,7 @@ tags:
 
 <p>When a browser executes this code, it should display a prompt to the user, asking permission to allow the web application to register as a handler for the protocol. Firefox displays a prompt in the notification bar area:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9683/protocolregister.png" style="display: block; height: 401px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="protocolregister.png" style="display: block; margin: 0px auto;"></p>
 
 <div class="note"><strong>Note:</strong>The URL template supplied when registering <strong>must</strong> be of the same domain as the webpage attempting to perform the registration or the registration will fail. For example, <code class="plain">http://example.com/homepage.html</code> can register a protocol handler for <code class="plain">http://example.com/handle_mailto/%s</code>, but not for <code class="plain">http://example.<em><strong>org</strong></em>/handle_mailto/%s</code>.</div>
 
@@ -124,7 +124,7 @@ if ( isset ( $_GET["value"] ) ) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/DOM/window.navigator.registerContentHandler">window.navigator.registerContentHandler</a></li>
+ <li><a href="/en-US/docs/Web/API/Navigator/registerContentHandler">window.navigator.registerContentHandler</a></li>
  <li><a href="/en-US/docs/XPCOM_Interface_Reference/nsIProtocolHandler">nsIProtocolHandler</a> (XUL only)</li>
  <li><a href="http://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/">RegisterProtocolHandler Enhancing the Federated Web</a> at Mozilla Webdev</li>
  <li><a href="https://developers.google.com/web/updates/2011/06/Registering-a-custom-protocol-handler">Register a custom protocolHandler</a> at Google Developers.</li>

@@ -1,6 +1,9 @@
-# XXX
+# Things to do and run after a "PR Test" workflow has finished successfully.
+# Note, as of right now, this workflow does a bunch of things. It might be
+# worth considering to break it up so there's a dedicated post-PR
+# workflow just to posting PR comments about flaws, for example.
 
-name: Deploy built PR
+name: Post-PR
 
 on:
   workflow_run:
@@ -12,7 +15,6 @@ jobs:
   tests:
     runs-on: ubuntu-latest
 
-    # if: contains(github.event.pull_request.labels.*.name, 'deploy-preview')
     if: >
       ${{ github.event.workflow_run.event == 'pull_request' &&
       github.event.workflow_run.conclusion == 'success' }}
@@ -114,6 +116,7 @@ jobs:
           cd yari/deployer
 
           poetry run deployer upload --prefix="pr$PR_NUMBER" --content-root=$CONTENT_ROOT $BUILD_OUT_ROOT
+
 
       # - name: Comment on PR
       #   uses: actions/github-script@v3

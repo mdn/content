@@ -39,10 +39,10 @@ p:nth-of-type(4n) {
 <pre class="brush: html">&lt;div&gt;
   &lt;div&gt;This element isn't counted.&lt;/div&gt;
   &lt;p&gt;1st paragraph.&lt;/p&gt;
-  &lt;p&gt;2nd paragraph.&lt;/p&gt;
+  &lt;p class="fancy"&gt;2nd paragraph.&lt;/p&gt;
   &lt;div&gt;This element isn't counted.&lt;/div&gt;
-  &lt;p&gt;3rd paragraph.&lt;/p&gt;
-  &lt;p class="fancy"&gt;4th paragraph.&lt;/p&gt;
+  &lt;p class="fancy"&gt;3rd paragraph.&lt;/p&gt;
+  &lt;p&gt;4th paragraph.&lt;/p&gt;
 &lt;/div&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
@@ -62,15 +62,21 @@ p:nth-of-type(1) {
   font-weight: bold;
 }
 
-/* This has no effect, as the .fancy class is only on the 4th p element, not the 1st */
-p.fancy:nth-of-type(1) {
+/* This will match the 3rd paragraph as it will match elements which are 2n+1 AND have a class of fancy.
+The second paragraph has a class of fancy but is not matched as it is not :nth-of-type(2n+1) */
+p.fancy:nth-of-type(2n+1) {
   text-decoration: underline;
 }
 </pre>
 
 <h4 id="Result">Result</h4>
 
-<p>{{EmbedLiveSample('Basic_example', 250, 200)}}</p>
+<p>{{EmbedLiveSample('Basic_example', 250, 250)}}</p>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>There is no way to select the nth-of-class using this selector. The selector looks at the type only when creating the list of matches. You can however apply CSS to an element based on <code>:nth-of-type</code> location <strong>and</strong> a class, as shown in the example above.</p>
+</div>
 
 <h2 id="Specifications">Specifications</h2>
 

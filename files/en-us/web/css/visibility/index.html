@@ -44,7 +44,7 @@ visibility: unset;
  <dd>
  <ul>
   <li>For {{HTMLElement("table")}} rows, columns, column groups, and row groups, the row(s) or column(s) are hidden and the space they would have occupied is removed (as if <code>{{Cssxref("display")}}: none</code> were applied to the column/row of the table). However, the size of other rows and columns is still calculated as though the cells in the collapsed row(s) or column(s) are present. This value allows for the fast removal of a row or column from a table without forcing the recalculation of widths and heights for the entire table.</li>
-  <li>Collapsed flex items are hidden, and the space they would have occupied is removed.</li>
+  <li>Collapsed flex items and ruby annotations are hidden, and the space they would have occupied is removed.</li>
   <li>For <a href="/en-US/docs/Mozilla/Tech/XUL">XUL</a> elements, the computed size of the element is always zero, regardless of other styles that would normally affect the size, although margins still take effect.</li>
   <li>For other elements, <code>collapse</code> is treated the same as <code>hidden</code>.</li>
  </ul>
@@ -148,6 +148,11 @@ td {
   </tr>
  </thead>
  <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Ruby', '#hiding', 'visibility')}}</td>
+   <td>{{Spec2('CSS3 Ruby')}}</td>
+   <td>Defines the <code>collapse</code> value as it applies to ruby annotations.</td>
+  </tr>
   <tr>
    <td>{{SpecName('CSS3 Flexbox', '#visibility-collapse', 'visibility')}}</td>
    <td>{{Spec2('CSS3 Flexbox')}}</td>

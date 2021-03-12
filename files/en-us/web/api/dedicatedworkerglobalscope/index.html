@@ -11,7 +11,7 @@ tags:
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
-<p>The <strong><code>DedicatedWorkerGlobalScope</code></strong> object (the {{domxref("Worker")}} global scope) is accessible through the {{domxref("window.self","self")}} keyword. Some additional global functions, namespaces objects, and constructors, not typically associated with the worker global scope, but available on it, are listed in the <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript Reference</a>. See also: <a href="/en-US/docs/Web/Guide/Needs_categorization/Functions_available_to_workers">Functions available to workers</a>.</p>
+<p>The <strong><code>DedicatedWorkerGlobalScope</code></strong> object (the {{domxref("Worker")}} global scope) is accessible through the {{domxref("window.self","self")}} keyword. Some additional global functions, namespaces objects, and constructors, not typically associated with the worker global scope, but available on it, are listed in the <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript Reference</a>. See also: <a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions available to workers</a>.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -71,17 +71,17 @@ tags:
 <h3 id="Implemented_from_other_places">Implemented from other places</h3>
 
 <dl>
- <dt>{{domxref("WindowBase64.atob()")}}</dt>
+ <dt>{{domxref("WindowOrWorkerGlobalScope.atob")}}</dt>
  <dd>Decodes a string of data which has been encoded using base-64 encoding.</dd>
- <dt>{{domxref("WindowBase64.btoa()")}}</dt>
+ <dt>{{domxref("WindowOrWorkerGlobalScope.btoa")}}</dt>
  <dd>Creates a base-64 encoded ASCII string from a string of binary data.</dd>
- <dt>{{domxref("WindowTimers.clearInterval()")}}</dt>
- <dd>Cancels the repeated execution set using {{domxref("WindowTimers.setInterval()")}}.</dd>
- <dt>{{domxref("WindowTimers.clearTimeout()")}}</dt>
- <dd>Cancels the repeated execution set using {{domxref("WindowTimers.setTimeout()")}}.</dd>
- <dt>{{domxref("WindowTimers.setInterval()")}}</dt>
+ <dt>{{domxref("WindowOrWorkerGlobalScope.clearInterval")}}</dt>
+ <dd>Cancels the repeated execution set using {{domxref("WindowOrWorkerGlobalScope.setInterval")}}.</dd>
+ <dt>{{domxref("WindowOrWorkerGlobalScope.clearTimeout")}}</dt>
+ <dd>Cancels the repeated execution set using {{domxref("WindowOrWorkerGlobalScope.setTimeout")}}.</dd>
+ <dt>{{domxref("WindowOrWorkerGlobalScope.setInterval")}}</dt>
  <dd>Schedules the execution of a function every X milliseconds.</dd>
- <dt>{{domxref("WindowTimers.setTimeout()")}}</dt>
+ <dt>{{domxref("WindowOrWorkerGlobalScope.setTimeout")}}</dt>
  <dd>Sets a delay for executing a function.</dd>
 </dl>
 
@@ -122,6 +122,6 @@ tags:
 <ul>
  <li>{{domxref("Worker")}}</li>
  <li>{{domxref("WorkerGlobalScope")}}</li>
- <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
- <li><a href="/en-US/docs/Web/Guide/Needs_categorization/Functions_available_to_workers">Functions available to workers</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions available to workers</a></li>
 </ul>

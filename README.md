@@ -53,6 +53,25 @@ A good place to learn about general guidelines for contributing to
 For example, you can find out more about MDN's writing-style guidelines via the
 [Writing style guide](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide).
 
+### Prerequisite knowledge
+
+We expect contributors to MDN to have a certain amount of prerequisite knowledge
+before they start working on the content. If you are new to the following
+topics, we'd advise you to look at the provided links to help you get up to
+speed:
+
+- Web technologies: If you are new to HTML, CSS, JavaScript, etc., check out our
+  [Learn web development](https://developer.mozilla.org/en-US/docs/Learn) tutorials.
+- Open source: If you've never contributed to an open source project before,
+  have a read of [Basic etiquette for open source projects](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Open_source_etiquette).
+- Git and GitHub: If you are unfamiliar with these tools, [GitHub for complete
+  beginners](https://developer.mozilla.org/en-US/docs/MDN/Contribute/GitHub_beginners)
+  will get you started.
+- MDN's repo structures: If you are not sure what repos to edit to make changes
+  to the different parts of MDN's content,
+  [Where is everything on MDN?](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Where_is_everything)
+  will point you towards the correct places.
+
 ### Setup
 
 No matter how you wish to contribute, you'll need
@@ -474,7 +493,13 @@ to delete (e.g., `Learn/Accessibility`), optionally followed by the locale
 of the existing document (defaults to `en-US`). If the existing document
 that you'd like to delete has child documents (i.e. it represents a
 document tree), you must also specify the `-r, --recursive` option, or
-the command will fail. For example, let's say you want to delete the
+the command will fail.
+
+**Important: you need to use the `delete` command to delete MDN documents. Don't
+just delete their directories from the repo, as `delete` also handles other
+necessary changes such as updating the `_wikihistory.json` file.**
+
+For example, let's say you want to delete the
 entire `/en-US/Learn/Accessibility` tree:
 
 1. First, as we've outlined above, you'll start a fresh branch to work within:
@@ -545,7 +570,7 @@ request is created, but why wait to fix any possible issues later?
     ```
 
 1. Use your image within the document. For example, add the following `<img>` element
-somehwere inside `files/en-us/web/css/index.html`:
+somewhere inside `files/en-us/web/css/index.html`:
 
     ```html
     <img src="my-cool-image.png" alt="My cool image">
@@ -649,7 +674,7 @@ page's meta data (like `slug`) if needed.
 above procedure, but move the page in question the opposite way between repos.
 
 **Note:** You can have an archived page with non-archived pages below it in the
-hierarchy, and vice-versa. To achive this you need to have the same directory
+hierarchy, and vice-versa. To achieve this you need to have the same directory
 structure in both the `content` and `archive-content` repos. Whether a page
 is non-archived or archived depends on which repo its `index.html` file is
 in. As an example, compare the [archived-content mozilla directory](https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla)
@@ -663,20 +688,19 @@ KumaScript macros are still used on MDN pages, even in the new platform.
 These are the function names surrounded by handlebars-style double curly
 braces that you'll see in the source code on occasion, for example
 `{{domxref}}` Eventually we have to replace them with something else,
-but they are here for now. They live in
-[https://github.com/mdn/yari/tree/master/kumascript/macros](https://github.com/mdn/yari/tree/master/kumascript/macros).
+but they are here for now. They live in <https://github.com/mdn/yari/tree/main/kumascript/macros>.
 
 Sometimes you'll want to make a change to the content that relies on a
 macro change. Take [https://github.com/mdn/content/pull/187](https://github.com/mdn/content/pull/187).
 Florian wanted to add documentation for a new WebGL extension to MDN, but
 this change relied on the new feature's spec being added to
-[https://github.com/mdn/yari/blob/master/kumascript/macros/SpecData.json](https://github.com/mdn/yari/blob/master/kumascript/macros/SpecData.json).
+<https://github.com/mdn/yari/blob/main/kumascript/macros/SpecData.json>.
 If not, the specification table on the new page would not render properly
 because the data it relies on would not be there.
 
 In such situations:
 
-1. Make the required PR to <https://github.com/mdn/yari/blob/master/kumascript/macros/>
+1. Make the required PR to <https://github.com/mdn/yari/tree/main/kumascript/macros>
    first, and get that merged.
 2. Add the content to this repo.
 

@@ -6,9 +6,9 @@ tags:
   - File API
   - Files
 ---
-<div>{{APIRef("File API")}}{{gecko_minversion_header("1.9")}}</div>
+<div>{{APIRef("File API")}}</div>
 
-<p>An object of this type is returned by the <code>files</code> property of the HTML {{HTMLElement("input")}} element; this lets you access the list of files selected with the <code>&lt;input type="file"&gt;</code> element. It's also used for a list of files dropped into web content when using the drag and drop API; see the <a href="/en-US/docs/DragDrop/DataTransfer"><code>DataTransfer</code></a> object for details on this usage.</p>
+<p>An object of this type is returned by the <code>files</code> property of the HTML {{HTMLElement("input")}} element; this lets you access the list of files selected with the <code>&lt;input type="file"&gt;</code> element. It's also used for a list of files dropped into web content when using the drag and drop API; see the <a href="/en-US/docs/Web/API/DataTransfer"><code>DataTransfer</code></a> object for details on this usage.</p>
 
 <div class="note">
 <p><strong>Note:</strong> Prior to {{Gecko("1.9.2")}}, the input element only supported a single file being selected at a time, meaning that the FileList would contain only one file. Starting with {{Gecko("1.9.2")}}, if the input element's multiple attribute is true, the FileList may contain multiple files.</p>
@@ -21,7 +21,7 @@ tags:
 <pre>&lt;input id="fileItem" type="file"&gt;
 </pre>
 
-<p>The following line of code fetches the first file in the node's file list as a <a href="/en-US/docs/DOM/File"><code>File</code></a> object:</p>
+<p>The following line of code fetches the first file in the node's file list as a <a href="/en-US/docs/Web/API/File"><code>File</code></a> object:</p>
 
 <pre class="brush: js">var file = document.getElementById('fileItem').files[0];
 </pre>
@@ -57,7 +57,7 @@ tags:
 
 <h3 id="item()">item()</h3>
 
-<p>Returns a <a href="/en-US/docs/DOM/File"><code>File</code></a> object representing the file at the specified index in the file list.</p>
+<p>Returns a <a href="/en-US/docs/Web/API/File"><code>File</code></a> object representing the file at the specified index in the file list.</p>
 
 <pre> File item(
    index
@@ -73,7 +73,7 @@ tags:
 
 <h6 id="Return_value">Return value</h6>
 
-<p>The <a href="/en-US/docs/DOM/File"><code>File</code></a> representing the requested file.</p>
+<p>The <a href="/en-US/docs/Web/API/File"><code>File</code></a> representing the requested file.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -169,7 +169,7 @@ document.querySelector("#myfiles").onchange=pullfiles;
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Using_files_from_web_applications" title="Using files from web applications">Using files from web applications</a></li>
-	<li><code><a href="/en-US/docs/DOM/File">File</a></code></li>
-	<li><code><a href="/en-US/docs/DOM/FileReader">FileReader</a></code></li>
+	<li><a href="/en-US/docs/Web/API/File/Using_files_from_web_applications" title="Using files from web applications">Using files from web applications</a></li>
+	<li><code><a href="/en-US/docs/Web/API/File">File</a></code></li>
+	<li><code><a href="/en-US/docs/Web/API/FileReader">FileReader</a></code></li>
 </ul>

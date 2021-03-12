@@ -34,7 +34,7 @@ tags:
 
 <h3 id="requestPointerLock">requestPointerLock()</h3>
 
-<p>The Pointer lock API, similar to the <a href="/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode">Fullscreen API</a>, extends DOM elements by adding a new method, {{domxref("Element.requestPointerLock","requestPointerLock()")}}. As it has recently unprefixed, you would currently declare it something like this, for example if you wanted to request pointer lock on a <code>canvas</code> element:</p>
+<p>The Pointer lock API, similar to the <a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a>, extends DOM elements by adding a new method, {{domxref("Element.requestPointerLock","requestPointerLock()")}}. As it has recently unprefixed, you would currently declare it something like this, for example if you wanted to request pointer lock on a <code>canvas</code> element:</p>
 
 <pre class="brush: js">canvas.requestPointerLock = canvas.requestPointerLock ||
                             canvas.mozRequestPointerLock;
@@ -48,9 +48,9 @@ canvas.requestPointerLock()
 
 <h3 id="pointerLockElement_and_exitPointerLock">pointerLockElement and exitPointerLock()</h3>
 
-<p>The Pointer lock API also extends the {{domxref("Document")}} interface, adding both a new property and a new method. The new property is used for accessing the currently locked element (if any), and is named {{domxref("Document.pointerLockElement","pointerLockElement")}} and the new method on {{domxref("Document")}} is {{domxref("Document.exitPointerLock","exitPointerLock()")}} and, as the name implies, it is used to exit the pointer lock.</p>
+<p>The Pointer lock API also extends the {{domxref("Document")}} interface, adding both a new property and a new method. The new property is used for accessing the currently locked element (if any), and is named {{domxref("DocumentOrShadowRoot/pointerLockElement","pointerLockElement")}} and the new method on {{domxref("Document")}} is {{domxref("Document.exitPointerLock","exitPointerLock()")}} and, as the name implies, it is used to exit the pointer lock.</p>
 
-<p>The {{domxref("Document.pointerLockElement","pointerLockElement")}} property is useful for determining if any element is currently pointer locked (e.g., for doing a Boolean check) and also for obtaining a reference to the locked element, if any.</p>
+<p>The {{domxref("DocumentOrShadowRoot/pointerLockElement","pointerLockElement")}} property is useful for determining if any element is currently pointer locked (e.g., for doing a Boolean check) and also for obtaining a reference to the locked element, if any.</p>
 
 <p>Here is an example of using <code>pointerLockElement</code>:</p>
 
@@ -122,7 +122,7 @@ function lockError(e) {
 
 <p>We've written a <a href="https://mdn.github.io/dom-examples/pointer-lock/">simple pointer lock demo</a> to show you how to use it to set up a simple control system (<a href="https://github.com/mdn/dom-examples/tree/master/pointer-lock">see source code</a>). The demo looks like this:</p>
 
-<p><img alt="A red circle on top of a black background." src="https://mdn.mozillademos.org/files/7953/pointer-lock.png" style="display: block; height: 362px; margin: 0px auto; width: 640px;"></p>
+<p><img alt="A red circle on top of a black background." src="pointer-lock.png" style="display: block; margin: 0px auto;"></p>
 
 <p>This demo uses JavaScript to draw a ball on top of an {{ htmlelement("canvas") }} element. When you click the canvas, pointer lock is then used to remove the mouse pointer and allow you to move the ball directly using the mouse. Let's see how this works.</p>
 

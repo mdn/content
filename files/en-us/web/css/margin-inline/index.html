@@ -29,7 +29,7 @@ margin-inline: initial;
 margin-inline: unset;
 </pre>
 
-<p>This property corresponds to the {{CSSxRef("margin-top")}} and {{CSSxRef("margin-bottom")}}, or {{CSSxRef("margin-right")}}, and {{CSSxRef("margin-left")}} properties, depending on the values defined for {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, and {{CSSxRef("text-orientation")}}.</p>
+<p>This property corresponds to the {{CSSxRef("margin-top")}} and {{CSSxRef("margin-bottom")}}, or the {{CSSxRef("margin-right")}} and {{CSSxRef("margin-left")}} properties, depending on the values defined for {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, and {{CSSxRef("text-orientation")}}.</p>
 
 <h2 id="Constituent_properties">Constituent properties</h2>
 
@@ -60,30 +60,38 @@ margin-inline: unset;
 
 <h3 id="Setting_inline_start_and_end_margins">Setting inline start and end margins</h3>
 
-<h4 id="HTML">HTML</h4>
-
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
-
 <h4 id="CSS">CSS</h4>
 
 <pre class="brush: css">div {
   background-color: yellow;
   width: 120px;
-  height: 120px;
+  height: auto;
+  border: 1px solid green;
 }
 
-.exampleText {
-  writing-mode: vertical-rl;
+p {
+  margin: 0;
   margin-inline: 20px 40px;
-  background-color: #c8c800;
+  background-color: tan;
+}
+
+.verticalExample {
+  writing-mode: vertical-rl;
 }</pre>
+
+<h4 id="HTML">HTML</h4>
+
+<pre class="brush: html">&lt;div&gt;
+  &lt;p&gt;Example text&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="verticalExample"&gt;
+  &lt;p&gt;Example text&lt;/p&gt;
+&lt;/div&gt;
+</pre>
 
 <h4 id="Result">Result</h4>
 
-<p>{{EmbedLiveSample("Setting_inline_start_and_end_margins", 140, 140)}}</p>
+<p>{{EmbedLiveSample("Setting_inline_start_and_end_margins", 140, 240)}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 

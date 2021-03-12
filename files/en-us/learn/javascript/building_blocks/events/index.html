@@ -181,9 +181,9 @@ for (let i = 0; i &lt; buttons.length; i++) {
 <p><strong>Note</strong>: Separating your programming logic from your content also makes your site more friendly to search engines.</p>
 </div>
 
-<h3 id="addEventListener_and_removeEventListener">addEventListener() and removeEventListener()</h3>
+<h3 id="adding_and_removing_event_handlers">Adding and removing event handlers</h3>
 
-<p>The newest type of event mechanism is defined in the <a href="https://www.w3.org/TR/DOM-Level-2-Events/">Document Object Model (DOM) Level 2 Events</a> Specification, which provides browsers with a new function — <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>. This functions in a similar way to the event handler properties, but the syntax is obviously different. We could rewrite our random color example to look like this:</p>
+<p>The modern mechanism for adding event handlers is the <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> method. Using it, we could rewrite our random color example to look like this:</p>
 
 <pre class="brush: js">const btn = document.querySelector('button');
 
@@ -198,25 +198,37 @@ btn.addEventListener('click', bgChange);</pre>
 <p><strong>Note</strong>: You can find the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html">full source code</a> for this example on GitHub (also <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html">see it running live</a>).</p>
 </div>
 
-<p>Inside the <code>addEventListener()</code> function, we specify two parameters — the name of the event we want to register this handler for, and the code that comprises the handler function we want to run in response to it. Note: It is perfectly appropriate to put all the code inside the <code>addEventListener()</code> function, in an anonymous function, like this:</p>
+<p>Inside the <code>addEventListener()</code> function, we specify two parameters: the name of the event we want to register this handler for, and the code that comprises the handler function we want to run in response to it. Note: It is perfectly appropriate to put all the code inside the <code>addEventListener()</code> function, in an anonymous function, like this:</p>
 
 <pre class="brush: js">btn.addEventListener('click', function() {
   var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
   document.body.style.backgroundColor = rndCol;
 });</pre>
 
-<p>This mechanism has some advantages over the older mechanisms discussed earlier. First, there is a counterpart function, <code><a href="/en-US/docs/Web/API/EventTarget/removeEventListener">removeEventListener()</a></code>, which removes a previously added listener. For example, this would remove the listener set in the first code block in this section:</p>
+<p>This mechanism has some advantages over the older mechanisms discussed here earlier. First, there is a counterpart function, <code><a href="/en-US/docs/Web/API/EventTarget/removeEventListener">removeEventListener()</a></code>, which removes a previously added event handler. For example, this would remove the event handler set in the first code block in this section:</p>
 
 <pre class="brush: js">btn.removeEventListener('click', bgChange);</pre>
 
-<p>This isn't significant for simple, small programs, but for larger, more complex programs it can improve efficiency to clean up old unused event handlers. Plus, this allows you to have the same button performing different actions in different circumstances — all you have to do is add or remove event handlers as appropriate.</p>
+<p>Event handlers can also be removed by passing an {{domxref("AbortSignal")}} to {{domxref("EventTarget/addEventListener()", "addEventListener()")}} and then, later, calling {{domxref("AbortController/abort()", "abort()")}} on the controller owning the <code>AbortSignal</code>. For example, to add an event handler that we can remove with an <code>AbortSignal</code>:</p>
 
-<p>Second, you can register multiple handlers for the same listener. The following two handlers wouldn't both be applied:</p>
+<pre class="brush: js">const controller = new AbortController();
+btn.addEventListener('click', function() {
+  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  document.body.style.backgroundColor = rndCol;
+}, { signal: controller.signal }); // pass an AbortSignal to this handler</pre>
+
+<p>Then the event handler created by the code above can be removed like this:</p>
+
+<pre class="brush: js">controller.abort(); // removes any/all event handlers associated with this controller</pre>
+
+<p>For simple, small programs, cleaning up old, unused event handlers isn’t necessary — but for larger, more complex programs, it can improve efficiency. Plus, the ability to remove event handlers allows you to have the same button performing different actions in different circumstances — all you have to do is add or remove handlers.</p>
+
+<p>The second advantage that {{domxref("EventTarget/addEventListener()", "addEventListener()")}} has over the older mechanisms discussed here earlier is that it allows you to register multiple handlers for the same listener. The following two handlers wouldn't both be applied:</p>
 
 <pre class="brush: js">myElement.onclick = functionA;
 myElement.onclick = functionB;</pre>
 
-<p>The second line overwrites the value of <code>onclick</code> set by the first line. This would work, however:</p>
+<p>The second line overwrites the value of <code>onclick</code> set by the first line. What would work, however, is the following:</p>
 
 <pre class="brush: js">myElement.addEventListener('click', functionA);
 myElement.addEventListener('click', functionB);</pre>
