@@ -1914,7 +1914,7 @@
 /en-US/docs/DOM/document.documentURI	/en-US/docs/Web/API/Document/documentURI
 /en-US/docs/DOM/document.documentURIObject	/en-US/docs/Web/API/Document/documentURIObject
 /en-US/docs/DOM/document.domain	/en-US/docs/Web/API/Document/domain
-/en-US/docs/DOM/document.elementFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot/elementFromPoint
+/en-US/docs/DOM/document.elementFromPoint	/en-US/docs/Web/API/Document/elementFromPoint
 /en-US/docs/DOM/document.embeds	/en-US/docs/Web/API/Document/embeds
 /en-US/docs/DOM/document.enableStyleSheetsForSet	/en-US/docs/Web/API/Document/enableStyleSheetsForSet
 /en-US/docs/DOM/document.execCommand	/en-US/docs/Web/API/Document/execCommand
@@ -2452,7 +2452,7 @@
 /en-US/docs/DOM:document.documentElement	/en-US/docs/Web/API/document/documentElement
 /en-US/docs/DOM:document.documentURIObject	/en-US/docs/Web/API/Document/documentURIObject
 /en-US/docs/DOM:document.domain	/en-US/docs/Web/API/Document/domain
-/en-US/docs/DOM:document.elementFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot/elementFromPoint
+/en-US/docs/DOM:document.elementFromPoint	/en-US/docs/Web/API/Document/elementFromPoint
 /en-US/docs/DOM:document.embeds	/en-US/docs/Web/API/Document/embeds
 /en-US/docs/DOM:document.fgColor	/en-US/docs/Web/API/Document/fgColor
 /en-US/docs/DOM:document.firstChild	/en-US/docs/Web/API/Node/firstChild
@@ -3285,7 +3285,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/document.documentURI	/en-US/docs/Web/API/Document/documentURI
 /en-US/docs/Document_Object_Model_(DOM)/document.documentURIObject	/en-US/docs/Web/API/Document/documentURIObject
 /en-US/docs/Document_Object_Model_(DOM)/document.domain	/en-US/docs/Web/API/Document/domain
-/en-US/docs/Document_Object_Model_(DOM)/document.elementFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot/elementFromPoint
+/en-US/docs/Document_Object_Model_(DOM)/document.elementFromPoint	/en-US/docs/Web/API/Document/elementFromPoint
 /en-US/docs/Document_Object_Model_(DOM)/document.embeds	/en-US/docs/Web/API/Document/embeds
 /en-US/docs/Document_Object_Model_(DOM)/document.execCommand	/en-US/docs/Web/API/Document/execCommand
 /en-US/docs/Document_Object_Model_(DOM)/document.fgColor	/en-US/docs/Web/API/Document/fgColor
@@ -7513,7 +7513,6 @@
 /en-US/docs/Web/API/Document/defaultView/resize_event	/en-US/docs/Web/API/Window/resize_event
 /en-US/docs/Web/API/Document/defaultView/storage_event	/en-US/docs/Web/API/Window/storage_event
 /en-US/docs/Web/API/Document/domConfig	/en-US/docs/Web/API/Document
-/en-US/docs/Web/API/Document/elementFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot/elementFromPoint
 /en-US/docs/Web/API/Document/elementsFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot/elementsFromPoint
 /en-US/docs/Web/API/Document/firstElementChild	/en-US/docs/Web/API/ParentNode/firstElementChild
 /en-US/docs/Web/API/Document/inputEncoding	/en-US/docs/Web/API/document/characterSet
@@ -7555,6 +7554,7 @@
 /en-US/docs/Web/API/DocumentFragment/firstElementChild	/en-US/docs/Web/API/ParentNode/firstElementChild
 /en-US/docs/Web/API/DocumentFragment/lastElementChild	/en-US/docs/Web/API/ParentNode/lastElementChild
 /en-US/docs/Web/API/DocumentOrShadowRoot/activeElement	/en-US/docs/Web/API/Document/activeElement
+/en-US/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/en-US/docs/Web/API/Document/elementFromPoint
 /en-US/docs/Web/API/DocumentOrShadowRoot/fullscreenElement	/en-US/docs/Web/API/Document/fullscreenElement
 /en-US/docs/Web/API/DocumentOrShadowRoot/getAnimations	/en-US/docs/Web/API/Document/getAnimations
 /en-US/docs/Web/API/DocumentOrShadowRoot/getSelection	/en-US/docs/Web/API/Document/getSelection
@@ -9292,7 +9292,7 @@
 /en-US/docs/Web/API/document.documentURI	/en-US/docs/Web/API/Document/documentURI
 /en-US/docs/Web/API/document.documentURIObject	/en-US/docs/Web/API/Document/documentURIObject
 /en-US/docs/Web/API/document.domain	/en-US/docs/Web/API/Document/domain
-/en-US/docs/Web/API/document.elementFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot/elementFromPoint
+/en-US/docs/Web/API/document.elementFromPoint	/en-US/docs/Web/API/Document/elementFromPoint
 /en-US/docs/Web/API/document.embeds	/en-US/docs/Web/API/Document/embeds
 /en-US/docs/Web/API/document.enableStyleSheetsForSet	/en-US/docs/Web/API/Document/enableStyleSheetsForSet
 /en-US/docs/Web/API/document.evaluate	/en-US/docs/Web/API/Document/evaluate
