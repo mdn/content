@@ -1928,7 +1928,7 @@
 /en-US/docs/DOM/document.getElementsByName	/en-US/docs/Web/API/Document/getElementsByName
 /en-US/docs/DOM/document.getElementsByTagName	/en-US/docs/Web/API/Document/getElementsByTagName
 /en-US/docs/DOM/document.getElementsByTagNameNS	/en-US/docs/Web/API/Document/getElementsByTagNameNS
-/en-US/docs/DOM/document.getSelection	/en-US/docs/Web/API/DocumentOrShadowRoot/getSelection
+/en-US/docs/DOM/document.getSelection	/en-US/docs/Web/API/Document/getSelection
 /en-US/docs/DOM/document.hasFocus	/en-US/docs/Web/API/Document/hasFocus
 /en-US/docs/DOM/document.head	/en-US/docs/Web/API/Document/head
 /en-US/docs/DOM/document.height	/en-US/docs/Web/API/Document/height
@@ -3297,7 +3297,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/document.getElementsByName	/en-US/docs/Web/API/Document/getElementsByName
 /en-US/docs/Document_Object_Model_(DOM)/document.getElementsByTagName	/en-US/docs/Web/API/Document/getElementsByTagName
 /en-US/docs/Document_Object_Model_(DOM)/document.getElementsByTagNameNS	/en-US/docs/Web/API/Document/getElementsByTagNameNS
-/en-US/docs/Document_Object_Model_(DOM)/document.getSelection	/en-US/docs/Web/API/DocumentOrShadowRoot/getSelection
+/en-US/docs/Document_Object_Model_(DOM)/document.getSelection	/en-US/docs/Web/API/Document/getSelection
 /en-US/docs/Document_Object_Model_(DOM)/document.hasFocus	/en-US/docs/Web/API/Document/hasFocus
 /en-US/docs/Document_Object_Model_(DOM)/document.head	/en-US/docs/Web/API/Document/head
 /en-US/docs/Document_Object_Model_(DOM)/document.height	/en-US/docs/Web/API/Document/height
@@ -7516,7 +7516,6 @@
 /en-US/docs/Web/API/Document/elementFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot/elementFromPoint
 /en-US/docs/Web/API/Document/elementsFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot/elementsFromPoint
 /en-US/docs/Web/API/Document/firstElementChild	/en-US/docs/Web/API/ParentNode/firstElementChild
-/en-US/docs/Web/API/Document/getSelection	/en-US/docs/Web/API/DocumentOrShadowRoot/getSelection
 /en-US/docs/Web/API/Document/inputEncoding	/en-US/docs/Web/API/document/characterSet
 /en-US/docs/Web/API/Document/lastElementChild	/en-US/docs/Web/API/ParentNode/lastElementChild
 /en-US/docs/Web/API/Document/mozCancelFullScreen	/en-US/docs/Web/API/Document/exitFullscreen
@@ -7558,6 +7557,7 @@
 /en-US/docs/Web/API/DocumentOrShadowRoot/activeElement	/en-US/docs/Web/API/Document/activeElement
 /en-US/docs/Web/API/DocumentOrShadowRoot/fullscreenElement	/en-US/docs/Web/API/Document/fullscreenElement
 /en-US/docs/Web/API/DocumentOrShadowRoot/getAnimations	/en-US/docs/Web/API/Document/getAnimations
+/en-US/docs/Web/API/DocumentOrShadowRoot/getSelection	/en-US/docs/Web/API/Document/getSelection
 /en-US/docs/Web/API/DocumentOrShadowRoot/nodeFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot
 /en-US/docs/Web/API/DocumentOrShadowRoot/nodesFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot
 /en-US/docs/Web/API/DocumentOrShadowRoot/pictureInPictureElement	/en-US/docs/Web/API/Document/pictureInPictureElement
@@ -9307,7 +9307,7 @@
 /en-US/docs/Web/API/document.getElementsByName	/en-US/docs/Web/API/Document/getElementsByName
 /en-US/docs/Web/API/document.getElementsByTagName	/en-US/docs/Web/API/Document/getElementsByTagName
 /en-US/docs/Web/API/document.getElementsByTagNameNS	/en-US/docs/Web/API/Document/getElementsByTagNameNS
-/en-US/docs/Web/API/document.getSelection	/en-US/docs/Web/API/DocumentOrShadowRoot/getSelection
+/en-US/docs/Web/API/document.getSelection	/en-US/docs/Web/API/Document/getSelection
 /en-US/docs/Web/API/document.hasFocus	/en-US/docs/Web/API/Document/hasFocus
 /en-US/docs/Web/API/document.head	/en-US/docs/Web/API/Document/head
 /en-US/docs/Web/API/document.height	/en-US/docs/Web/API/Document/height

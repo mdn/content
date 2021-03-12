@@ -44334,19 +44334,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/getSelection": {
-    "modified": "2020-10-15T21:49:28.182Z",
-    "contributors": [
-      "mfuji09",
-      "chrisdavidmills",
-      "ExE-Boss",
-      "nmaxcom",
-      "jpmedley",
-      "fscholz",
-      "bede",
-      "david_ross"
-    ]
-  },
   "Web/API/DocumentTimeline": {
     "modified": "2020-10-15T21:45:09.763Z",
     "contributors": [
@@ -165786,6 +165773,19 @@
       "Sheppy",
       "chrisdavidmills",
       "rachelnabors"
+    ]
+  },
+  "Web/API/Document/getSelection": {
+    "modified": "2020-10-15T21:49:28.182Z",
+    "contributors": [
+      "mfuji09",
+      "chrisdavidmills",
+      "ExE-Boss",
+      "nmaxcom",
+      "jpmedley",
+      "fscholz",
+      "bede",
+      "david_ross"
     ]
   }
 }
