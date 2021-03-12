@@ -44289,17 +44289,6 @@
       "david_ross"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/caretPositionFromPoint": {
-    "modified": "2020-10-15T21:49:27.908Z",
-    "contributors": [
-      "mfluehr",
-      "myakura",
-      "fscholz",
-      "chrisdavidmills",
-      "david_ross",
-      "jpmedley"
-    ]
-  },
   "Web/API/DocumentOrShadowRoot/elementFromPoint": {
     "modified": "2020-10-15T21:49:27.541Z",
     "contributors": [
@@ -165786,6 +165775,17 @@
       "fscholz",
       "bede",
       "david_ross"
+    ]
+  },
+  "Web/API/Document/caretPositionFromPoint": {
+    "modified": "2020-10-15T21:49:27.908Z",
+    "contributors": [
+      "mfluehr",
+      "myakura",
+      "fscholz",
+      "chrisdavidmills",
+      "david_ross",
+      "jpmedley"
     ]
   }
 }
