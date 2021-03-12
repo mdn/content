@@ -41,10 +41,10 @@
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.4.274":
-  version "0.4.274"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.274.tgz#b55a51050263367f0ca0430cb7e684bcdcfa84b8"
-  integrity sha512-oxFrkWnvVoXqLA8RdcN28uSBpmdaAQsk3IWMtE9TaIUBmx8YXVu0Ue0myl48vNE4VTBjeEo9oZ37toIVwwbDbw==
+"@mdn/yari@0.4.279":
+  version "0.4.279"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.279.tgz#f023c102094b63096136089262c38cd01c8f5df4"
+  integrity sha512-WIJwVvK2tz5pvGiw74QHnRprIeKzsZ+eTfjD9O43x+595Psm8TAEBTrwWrmv4Y77KwBEmbAJxhoe8FxwRnKrvw==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
@@ -67,7 +67,7 @@
     glob "^7.1.6"
     got "11.8.2"
     http-proxy-middleware "1.0.6"
-    image-size "0.9.4"
+    image-size "0.9.5"
     image-type "4.1.0"
     imagemin "7.0.1"
     imagemin-gifsicle "7.0.0"
@@ -1938,10 +1938,10 @@ ignore@^5.1.1, ignore@^5.1.4:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.1.8.tgz#f150a8b50a34289b33e22f5889abd4d8016f0e57"
   integrity sha512-BMpfD7PpiETpBl/A6S498BaIJ6Y/ABT93ETbby2fP00v4EbvPBXWEoaR1UBPKs3iR53pJY7EtZk5KACI57i1Uw==
 
-image-size@0.9.4:
-  version "0.9.4"
-  resolved "https://registry.yarnpkg.com/image-size/-/image-size-0.9.4.tgz#45f6f764214b94152fd794c339cf37e10ca2e750"
-  integrity sha512-4xNfbjG++A42OJdTPYlj2PquCxyWmanpBQflalWGlXEOfc3LOZA3aEZ+2iIZU5KorDUCcZ7iv2dhvHBbMN0G0w==
+image-size@0.9.5:
+  version "0.9.5"
+  resolved "https://registry.yarnpkg.com/image-size/-/image-size-0.9.5.tgz#03a4224c5b643d2a0a7d21ee561cf7edf8985421"
+  integrity sha512-HvnQBt6+u5PjmZvaFpJOB1VfrDdwxu8p456HAfYXPzEKl6GJKrNJZKDaN0A/0b1kJ7JpDUU6eBT7hmiREwzqWA==
   dependencies:
     queue "6.0.1"
 
