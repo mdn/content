@@ -115,8 +115,8 @@ jobs:
           PR_NUMBER=`cat build/NR`
           echo "PRNUMBER"
           echo $PR_NUMBER
-          cd yari/deployer
 
+          cd yari/deployer
           poetry run deployer upload --prefix="pr$PR_NUMBER" --content-root=$CONTENT_ROOT $BUILD_OUT_ROOT
           poetry run deployer analyze-pr-build \
             --analyze-flaws --analyze-dangerous-content \
