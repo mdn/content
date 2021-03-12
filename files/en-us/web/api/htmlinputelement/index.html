@@ -292,7 +292,7 @@ tags:
 <table class="standard-table">
  <tbody>
   <tr>
-   <td>{{domxref("HTMLElement.blur()", "blur()")}}</td>
+   <td>{{domxref("HTMLOrForeignElement/blur", "blur()")}}</td>
    <td>Removes focus from the input element; keystrokes will subsequently go nowhere.</td>
   </tr>
   <tr>
@@ -300,7 +300,7 @@ tags:
    <td>Simulates a click on the input element.</td>
   </tr>
   <tr>
-   <td>{{domxref("HTMLElement.focus()", "focus()")}}</td>
+   <td>{{domxref("HTMLOrForeignElement/focus", "focus()")}}</td>
    <td>Focuses on the input element; keystrokes will subsequently go to this element.</td>
   </tr>
   <tr>
@@ -350,11 +350,11 @@ tags:
  </ul>
  </dd>
  <dt>{{domxref("HTMLInputElement.mozSetFileArray()")}} {{non-standard_inline}}</dt>
- <dd>Sets the files selected on the input to the given array of {{domxref("File")}} objects. This is an alternative to <code>mozSetFileNameArray()</code> which can be used in frame scripts: a chrome script can <a href="/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code">open files as File objects</a> and send them via <a href="/en-US/Firefox/Multiprocess_Firefox/The_message_manager">message manager</a>.</dd>
+ <dd>Sets the files selected on the input to the given array of {{domxref("File")}} objects. This is an alternative to <code>mozSetFileNameArray()</code> which can be used in frame scripts: a chrome script can <a href="/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code">open files as File objects</a> and send them via <a href="/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox/The_message_manager">message manager</a>.</dd>
  <dt>{{domxref("HTMLInputElement.mozGetFileNameArray()")}} {{non-standard_inline}}</dt>
  <dd>Returns an array of all the file names from the input.</dd>
  <dt>{{domxref("HTMLInputElement.mozSetFileNameArray()")}} {{non-standard_inline}}</dt>
- <dd>Sets the filenames for the files selected on the input. Not for use in <a href="/en-US/Firefox/Multiprocess_Firefox/Limitations_of_frame_scripts">frame scripts</a>, because it accesses the file system.</dd>
+ <dd>Sets the filenames for the files selected on the input. Not for use in <a href="/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox/Limitations_of_frame_scripts">frame scripts</a>, because it accesses the file system.</dd>
 </dl>
 
 <h2 id="Events">Events</h2>
@@ -365,7 +365,7 @@ tags:
  <dt><a href="/en-US/docs/Web/API/HTMLElement/input_event"><code>input</code></a></dt>
  <dd>Fires when the <code>value</code> of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed. Note that this is actually fired on the {{domxref("HTMLElement")}} interface and also applies to <code><a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable">contenteditable</a></code> elements, but we've listed it here because it is most commonly used with form input elements.<br>
  Also available via the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/oninput">oninput</a></code> event handler property.</dd>
- <dt><code><a href="/en-US/docs/Web/API/HTMLElement/invalid_event">invalid</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/API/HTMLInputElement/invalid_event">invalid</a></code></dt>
  <dd>Fired when an element does not satisfy its constraints during constraint validation.<br>
  Also available via the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/oninvalid">oninvalid</a></code> event handler property.</dd>
  <dt><code><a href="/en-US/docs/Web/API/HTMLInputElement/search_event">search</a></code></dt>
