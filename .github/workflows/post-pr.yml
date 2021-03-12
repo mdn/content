@@ -98,7 +98,7 @@ jobs:
           cd yari/deployer
           poetry install
 
-      - name: Deploy built content
+      - name: Deploy and analyze built content
         env:
           CONTENT_ROOT: ${{ github.workspace }}/files
 
@@ -109,7 +109,7 @@ jobs:
 
           BUILD_OUT_ROOT: ${{ github.workspace }}/build
 
-          DEPLOYER_LOG_EACH_SUCCESSFUL_UPLOAD: true
+          DEPLOYER_LOG_EACH_SUCCESSFUL_UPLOAD: false
 
         run: |
           PR_NUMBER=`cat build/NR`
