@@ -62,7 +62,7 @@ new GeneratorFunction(arg1, arg2, functionBody)
 <pre class="brush: js">const AsyncGeneratorFunction = Object.getPrototypeOf(async function*(){}).constructor;
 const asyncGen = new AsyncGeneratorFunction('a', 'yield a * 2');
 const asyncIterator = asyncGen(10);
-console.log((await asyncIterator.next()).value); // 20
+asyncIterator.next().then(res => console.log(res.value)); // 20
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
