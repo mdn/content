@@ -68,7 +68,9 @@ jobs:
 
       - uses: actions/checkout@v2
         with:
-           repository: mdn/yari
+          #  repository: mdn/yari
+           repository: peterbe/yari
+           ref: analyze-pr-build
            path: yari
 
       - name: Install Python
@@ -116,6 +118,10 @@ jobs:
           cd yari/deployer
 
           poetry run deployer upload --prefix="pr$PR_NUMBER" --content-root=$CONTENT_ROOT $BUILD_OUT_ROOT
+          poetry run deployer analyze-pr-build \
+            --analyze-flaws --analyze-dangerous-content \
+            --github-token="${{secrets.GITHUB_TOKEN}}" \
+            --prefix="pr$PR_NUMBER" --repo=$GITHUB_REPOSITORY $BUILD_OUT_ROOT
 
 
       # - name: Comment on PR
