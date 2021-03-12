@@ -2,15 +2,15 @@
 title: FetchEvent.request
 slug: Web/API/FetchEvent/request
 tags:
-- API
-- Experimental
-- FetchEvent
-- Offline
-- Property
-- Reference
-- Service Workers
-- Workers
-- request
+  - API
+  - Experimental
+  - FetchEvent
+  - Offline
+  - Property
+  - Reference
+  - Service Workers
+  - Workers
+  - request
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
@@ -44,7 +44,7 @@ tags:
   object. If no match is found, the code fetches a response from the network.</p>
 
 <p>The code also handles exceptions thrown from the
-  {{domxref("ServiceWorkerGlobalScope.fetch")}} operation. Note that an HTTP error
+  {{domxref("WindowOrWorkerGlobalScope.fetch")}} operation. Note that an HTTP error
   response (e.g., 404) will not trigger an exception. It will return a normal response
   object that has the appropriate error code set.</p>
 

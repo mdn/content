@@ -11,9 +11,9 @@ tags:
 ---
 <p>{{APIRef("File System API")}} {{Non-standard_header}}</p>
 
-<p>The <code>FileEntrySync</code> interface of the <a href="/en-US/docs/DOM/File_API/File_System_API">File System API</a> represents a file in a file system. It lets you write content to a file.</p>
+<p>The <code>FileEntrySync</code> interface of the <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">File System API</a> represents a file in a file system. It lets you write content to a file.</p>
 
-<p>Inherits from: <a href="/en-US/docs/DOM/File_API/File_System_API/EntrySync">EntrySync</a></p>
+<p>Inherits from: <a href="/en-US/docs/Web/API/FileSystemEntrySync">EntrySync</a></p>
 
 <h2 id="About_this_document">About this document</h2>
 
@@ -30,10 +30,10 @@ tags:
 <table class="standard-table">
  <tbody>
   <tr>
-   <td><code>FileWriterSync <a href="#createreader" title="#createWriter">createWriter</a> () raises (<a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+   <td><code>FileWriterSync <a href="#createreader" title="#createWriter">createWriter</a> () raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>File <a href="#file">file</a> () raises (<a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+   <td><code>File <a href="#file">file</a> () raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</code></td>
   </tr>
  </tbody>
 </table>
@@ -45,7 +45,7 @@ tags:
 <p>Creates a new <code>FileWriter</code> associated with the file that the <code>FileEntry</code> represents.</p>
 
 <pre>void createWriter (
-) raises (<a href="https://developer.mozilla.org/en/DOM/File_API/File_System_API/FileException">FileException</a>);</pre>
+) raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</pre>
 
 <h5 id="Parameter">Parameter</h5>
 
@@ -60,7 +60,7 @@ tags:
 
 <h5 id="Exceptions">Exceptions</h5>
 
-<p>This method can raise a <a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
+<p>This method can raise a <a href="/en-US/docs/Web/API/FileException">FileException</a> with the following codes:</p>
 
 <table class="standard-table">
  <thead>
@@ -86,7 +86,7 @@ tags:
 <p>Returns a File that represents the current state of the file that this <code>FileEntry</code> represents.</p>
 
 <pre>void file (
-) raises (<a href="https://developer.mozilla.org/en/DOM/File_API/File_System_API/FileException">FileException</a>);</pre>
+) raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</pre>
 
 <h5 id="Parameter_2">Parameter</h5>
 
@@ -101,7 +101,7 @@ tags:
 
 <h5 id="Exceptions_2">Exceptions</h5>
 
-<p>This method can raise a <a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
+<p>This method can raise a <a href="/en-US/docs/Web/API/FileException">FileException</a> with the following codes:</p>
 
 <table class="standard-table">
  <thead>
@@ -130,6 +130,6 @@ tags:
 
 <p>Specification:{{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}</p>
 
-<p>Reference: <a href="/en-US/docs/DOM/File_API/File_System_API">File System API</a></p>
+<p>Reference: <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">File System API</a></p>
 
-<p>Introduction: <a href="/en-US/docs/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">Basic Concepts About the File System API</a></p>
+<p>Introduction: <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Basic Concepts About the File System API</a></p>
