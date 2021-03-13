@@ -115,15 +115,12 @@ jobs:
           poetry run deployer analyze-pr-build \
             --analyze-flaws --analyze-dangerous-content \
             --github-token="${{secrets.GITHUB_TOKEN}}" \
-            --prefix="pr$PR_NUMBER" \
             --repo=$GITHUB_REPOSITORY \
             --pr-number=$PR_NUMBER \
             $BUILD_OUT_ROOT
 
       - name: Deploy built content
         env:
-          # CONTENT_ROOT: ${{ github.workspace }}/files
-
           DEPLOYER_BUCKET_NAME: mdn-content-dev
 
           AWS_ACCESS_KEY_ID: ${{ secrets.DEPLOYER_STAGE_AND_DEV_AWS_ACCESS_KEY_ID }}
