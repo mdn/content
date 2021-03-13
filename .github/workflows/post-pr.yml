@@ -72,6 +72,7 @@ jobs:
           cd build
           echo "PWD inside build"
           pwd
+          tree
 
       - uses: actions/checkout@v2
         with:
@@ -136,10 +137,12 @@ jobs:
           PR_NUMBER=`cat build/NR`
           echo "BUILD_OUT_ROOT:"
           echo $BUILD_OUT_ROOT
+          tree $BUILD_OUT_ROOT
 
           cd yari/deployer
           echo "BUILD_OUT_ROOT:"
           echo $BUILD_OUT_ROOT
+          tree $BUILD_OUT_ROOT
 
           poetry run deployer upload --prefix="pr$PR_NUMBER" --no-redirects "$BUILD_OUT_ROOT"
 
