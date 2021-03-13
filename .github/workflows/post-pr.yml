@@ -94,7 +94,6 @@ jobs:
       - name: Install deployer
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: |
-          ls -l
           cd yari/deployer
           poetry install
 
@@ -126,7 +125,6 @@ jobs:
             --repo=$GITHUB_REPOSITORY \
             --pr-number=$PR_NUMBER \
             $BUILD_OUT_ROOT
-
 
       # - name: Comment on PR
       #   uses: actions/github-script@v3
