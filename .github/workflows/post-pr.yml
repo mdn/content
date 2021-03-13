@@ -67,6 +67,11 @@ jobs:
       - name: Unzip what was downloaded
         run: |
           unzip build.zip -d build
+          echo "PWD"
+          pwd
+          cd build
+          echo "PWD inside build"
+          pwd
 
       - uses: actions/checkout@v2
         with:
