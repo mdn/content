@@ -121,6 +121,8 @@ jobs:
           echo $BUILD_OUT_ROOT
           tree $BUILD_OUT_ROOT
 
+          ls -lR $BUILD_OUT_ROOT
+
           poetry run deployer analyze-pr-build \
             --analyze-flaws --analyze-dangerous-content \
             --github-token="${{secrets.GITHUB_TOKEN}}" \
