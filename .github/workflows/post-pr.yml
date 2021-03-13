@@ -116,6 +116,11 @@ jobs:
           tree $BUILD_OUT_ROOT
 
           cd yari/deployer
+
+          echo "BUILD_OUT_ROOT:"
+          echo $BUILD_OUT_ROOT
+          tree $BUILD_OUT_ROOT
+
           poetry run deployer analyze-pr-build \
             --analyze-flaws --analyze-dangerous-content \
             --github-token="${{secrets.GITHUB_TOKEN}}" \
@@ -139,9 +144,6 @@ jobs:
 
         run: |
           PR_NUMBER=`cat build/NR`
-          echo "BUILD_OUT_ROOT:"
-          echo $BUILD_OUT_ROOT
-          tree $BUILD_OUT_ROOT
 
           cd yari/deployer
 
