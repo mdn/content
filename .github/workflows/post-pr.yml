@@ -7,6 +7,9 @@ name: Post-PR
 
 on:
   workflow_run:
+    # Once we have it, this should always depend on that workflow check
+    # that assures there wasn't any editing of the non-content files.
+    # I.e. https://github.com/mdn/content/issues/2985
     workflows: ["PR Test"]
     types:
       - completed
@@ -20,26 +23,25 @@ jobs:
       github.event.workflow_run.conclusion == 'success' }}
 
     steps:
-      - uses: actions/checkout@v2
+      # - uses: actions/checkout@v2
 
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v2.1.4
-        with:
-          node-version: "12"
+      # - name: Setup Node.js environment
+      #   uses: actions/setup-node@v2.1.4
+      #   with:
+      #     node-version: "12"
 
-      - name: Cache node_modules
-        uses: actions/cache@v2.1.4
-        id: cached-node_modules
-        with:
-          path: |
-            node_modules
-          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+      # - name: Cache node_modules
+      #   uses: actions/cache@v2.1.4
+      #   id: cached-node_modules
+      #   with:
+      #     path: |
+      #       node_modules
+      #     key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
 
-      - name: Install all yarn packages
-        if: steps.cached-node_modules.outputs.cache-hit != 'true'
-        run: |
-          yarn --frozen-lockfile
-
+      # - name: Install all yarn packages
+      #   if: steps.cached-node_modules.outputs.cache-hit != 'true'
+      #   run: |
+      #     yarn --frozen-lockfile
 
       - name: 'Download artifact'
         uses: actions/github-script@v3
@@ -97,9 +99,24 @@ jobs:
           cd yari/deployer
           poetry install
 
-      - name: Deploy and analyze built content
+      - name: Analyze built content
         env:
-          CONTENT_ROOT: ${{ github.workspace }}/files
+          BUILD_OUT_ROOT: ${{ github.workspace }}/build
+        run: |
+          PR_NUMBER=`cat build/NR`
+
+          cd yari/deployer
+          poetry run deployer analyze-pr-build \
+            --analyze-flaws --analyze-dangerous-content \
+            --github-token="${{secrets.GITHUB_TOKEN}}" \
+            --prefix="pr$PR_NUMBER" \
+            --repo=$GITHUB_REPOSITORY \
+            --pr-number=$PR_NUMBER \
+            $BUILD_OUT_ROOT
+
+      - name: Deploy built content
+        env:
+          # CONTENT_ROOT: ${{ github.workspace }}/files
 
           DEPLOYER_BUCKET_NAME: mdn-content-dev
 
@@ -112,30 +129,13 @@ jobs:
 
         run: |
           PR_NUMBER=`cat build/NR`
-          echo "PRNUMBER"
-          echo $PR_NUMBER
 
           cd yari/deployer
-          poetry run deployer upload --prefix="pr$PR_NUMBER" --content-root=$CONTENT_ROOT $BUILD_OUT_ROOT
+          poetry run deployer upload --prefix="pr$PR_NUMBER" --no-redirects $BUILD_OUT_ROOT
 
           poetry run deployer analyze-pr-build \
-            --analyze-flaws --analyze-dangerous-content \
             --github-token="${{secrets.GITHUB_TOKEN}}" \
             --prefix="pr$PR_NUMBER" \
             --repo=$GITHUB_REPOSITORY \
             --pr-number=$PR_NUMBER \
             $BUILD_OUT_ROOT
-
-      # - name: Comment on PR
-      #   uses: actions/github-script@v3
-      #   env:
-      #     PR_NUMBER: ${{ github.event.pull_request.number }}
-      #   with:
-      #     github-token: ${{secrets.GITHUB_TOKEN}}
-      #     script: |
-      #       github.issues.createComment({
-      #         issue_number: context.issue.number,
-      #         owner: context.repo.owner,
-      #         repo: context.repo.repo,
-      #         body: 'Please find a preview at https://pr${PR_NUMBER}.content.dev.mdn.mozit.cloud/...'
-      #       });
