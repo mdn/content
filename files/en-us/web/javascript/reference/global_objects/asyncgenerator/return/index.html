@@ -1,0 +1,94 @@
+---
+title: AsyncGenerator.prototype.return()
+slug: Web/JavaScript/Reference/Global_Objects/AsyncGenerator/return
+tags:
+- ECMAScript 2018
+- AsyncGenerator
+- JavaScript
+- Method
+- Prototype
+- Reference
+---
+<div>{{JSRef}}</div>
+
+<p>The <strong><code>return()</code></strong> method returns the given value and finishes the generator.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js"><var>asyncGen</var>.return(<var>value</var>)</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt><code><var>value</var></code></dt>
+  <dd>The value to return.</dd>
+</dl>
+
+<h3 id="Return_value">Return value</h3>
+
+<p>The value that is given as an argument.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Using_return">Using return()</h3>
+
+<p>The following example shows a simple async generator and the <code>return</code> method.</p>
+
+<pre class="brush: js">async function* createAsyncGenerator() {
+  yield await Promise.resolve(1);
+  yield await Promise.resolve(2);
+  yield await Promise.resolve(3);
+}
+
+const asyncGen = createAsyncGenerator();
+
+asyncGen.next().then(res => console.log(res));        // { value: 1, done: false }
+asyncGen.return('foo').then(res => console.log(res)); // { value: "foo", done: true }
+asyncGen.next().then(res => console.log(res));        // { value: undefined, done: true }
+</pre>
+
+<p>If <code>return(<var>value</var>)</code> is called on a generator that is already in "completed" state, the generator will remain in "completed" state.</p>
+
+<p>If no argument is provided, the <code>value</code> property of returned object is the same as if <code>.next()</code>. If an argument is provided, it will be set to the value of the <code>value</code> property of the returned object.</p>
+
+<pre class="brush: js">async function* createAsyncGenerator() {
+  yield await Promise.resolve(1);
+  yield await Promise.resolve(2);
+  yield await Promise.resolve(3);
+}
+
+const asyncGen = createAsyncGenerator();
+
+asyncGen.next().then(res => console.log(res));    // { value: 1, done: false }
+asyncGen.next().then(res => console.log(res));    // { value: 2, done: false }
+asyncGen.next().then(res => console.log(res));    // { value: 3, done: false }
+asyncGen.next().then(res => console.log(res));    // { value: undefined, done: true }
+asyncGen.return().then(res => console.log(res));  // { value: undefined, done: true }
+asyncGen.return(1).then(res => console.log(res)); // { value: 1, done: true }
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-asyncgenerator-prototype-return', 'AsyncGenerator.prototype.return')}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("javascript.builtins.AsyncGenerator.return")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li>{{jsxref("Statements/async_function*", "async function*")}}</li>
+  <li><a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">Iterators and generators</a></li>
+</ul>

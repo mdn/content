@@ -60,9 +60,9 @@ new GeneratorFunction(arg1, arg2, functionBody)
 <p>The following example uses the <code>AsyncGeneratorFunction</code> constructor to create an async generator function.</p>
 
 <pre class="brush: js">const AsyncGeneratorFunction = Object.getPrototypeOf(async function*(){}).constructor;
-const asyncGen = new AsyncGeneratorFunction('a', 'yield a * 2');
-const asyncIterator = asyncGen(10);
-asyncIterator.next().then(res => console.log(res.value)); // 20
+const createAsyncGenerator = new AsyncGeneratorFunction('a', 'yield a * 2');
+const asyncGen = createAsyncGenerator(10);
+asyncGen.next().then(res => console.log(res.value)); // 20
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
