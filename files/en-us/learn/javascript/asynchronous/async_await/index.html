@@ -102,9 +102,8 @@ hello().then(alert);</pre>
 .then(response =&gt; {
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
-  } else {
-    return response.blob();
-  }
+  } 
+  return response.blob();
 })
 .then(myBlob =&gt; {
   let objectURL = URL.createObjectURL(myBlob);
@@ -123,13 +122,14 @@ hello().then(alert);</pre>
 
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
-  } else {
-    let myBlob = await response.blob();
+  } 
+  
+  let myBlob = await response.blob();
 
-    let objectURL = URL.createObjectURL(myBlob);
-    let image = document.createElement('img');
-    image.src = objectURL;
-    document.body.appendChild(image);
+  let objectURL = URL.createObjectURL(myBlob);
+  let image = document.createElement('img');
+  image.src = objectURL;
+  document.body.appendChild(image);
   }
 }
 
@@ -146,9 +146,9 @@ myFetch()
   let response = await fetch('coffee.jpg');
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
-  } else {
-    return await response.blob();
-  }
+  } 
+  return await response.blob();
+
 }
 
 myFetch().then((blob) =&gt; {
@@ -188,13 +188,13 @@ myFetch().then((blob) =&gt; {
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
-    } else {
-      let myBlob = await response.blob();
-      let objectURL = URL.createObjectURL(myBlob);
-      let image = document.createElement('img');
-      image.src = objectURL;
-      document.body.appendChild(image);
-    }
+    } 
+    let myBlob = await response.blob();
+    let objectURL = URL.createObjectURL(myBlob);
+    let image = document.createElement('img');
+    image.src = objectURL;
+    document.body.appendChild(image);
+    
   } catch(e) {
     console.log(e);
   }
@@ -210,9 +210,9 @@ myFetch();</pre>
   let response = await fetch('coffee.jpg');
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
-  } else {
-    return await response.blob();
   }
+  return await response.blob();
+  
 }
 
 myFetch().then((blob) =&gt; {
@@ -247,15 +247,15 @@ myFetch().then((blob) =&gt; {
 
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
-  } else {
-    if(type === 'blob') {
-      content = await response.blob();
-    } else if(type === 'text') {
-      content = await response.text();
-    }
-
-    return content;
   }
+  if(type === 'blob') {
+    content = await response.blob();
+  } else if(type === 'text') {
+    content = await response.text();
+  }
+
+  return content;
+  
 
 }
 
