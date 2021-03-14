@@ -1,26 +1,23 @@
 ---
-title: DocumentOrShadowRoot.caretPositionFromPoint()
-slug: Web/API/DocumentOrShadowRoot/caretPositionFromPoint
+title: Document.caretPositionFromPoint()
+slug: Web/API/Document/caretPositionFromPoint
 tags:
-- API
-- Document
-- DocumentOrShadowRoot
-- Method
-- Reference
-- ShadowRoot
-- caretPositionFromPoint()
+  - API
+  - Document
+  - Method
+  - Reference
 ---
-<p>{{APIRef("CSSOM View")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("CSSOM View")}} {{SeeCompatTable}}</p>
 
 <p><span class="seoSummary">The <strong><code>caretPositionFromPoint()</code></strong>
-    property of the {{domxref("DocumentOrShadowRoot")}} interface returns a
+    property of the {{domxref("Document")}} interface returns a
     {{domxref('CaretPosition')}} object, containing the DOM node, along with the caret and
     caret's character offset within that node.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js">var caretPosition = document.caretPositionFromPoint(float x, float y);</pre>
+  class="brush: js">caretPositionFromPoint(x, y);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -90,17 +87,20 @@ window.onload = function (){
   <tbody>
     <tr>
       <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
     </tr>
     <tr>
       <td>{{SpecName('CSSOM View','#dom-document-caretpositionfrompoint','caretPositionFromPoint()')}}</td>
-      <td>{{Spec2('CSSOM View')}}</td>
-      <td>Initial definition.</td>
     </tr>
   </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.DocumentOrShadowRoot.caretPositionFromPoint")}}</p>
+<p>{{Compat("api.Document.caretPositionFromPoint")}}</p>
+
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li>{{domxref('CaretPosition')}}</li>
+</ul>
