@@ -14,7 +14,7 @@ tags:
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
-<p>The <strong><code>ExtendableEvent</code></strong> interface extends the lifetime of the <code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/install">install</a></code> and <code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate">activate</a></code> events dispatched on the global scope as part of the service worker lifecycle. This ensures that any functional events (like {{domxref("FetchEvent")}}) are not dispatched until it upgrades database schemas and deletes the outdated cache entries.</p>
+<p>The <strong><code>ExtendableEvent</code></strong> interface extends the lifetime of the <code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event">install</a></code> and <code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event">activate</a></code> events dispatched on the global scope as part of the service worker lifecycle. This ensures that any functional events (like {{domxref("FetchEvent")}}) are not dispatched until it upgrades database schemas and deletes the outdated cache entries.</p>
 
 <p>If {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} is called outside of the <code>ExtendableEvent</code> handler, the browser should throw an <code>InvalidStateError</code>; note also that multiple calls will stack up, and the resulting promises will be added to the list of <a href="https://w3c.github.io/ServiceWorker/#extendableevent-extend-lifetime-promises">extend lifetime promises</a>.</p>
 
@@ -48,7 +48,7 @@ tags:
 <dl>
  <dt>{{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}</dt>
  <dd>
- <p>Extends the lifetime of the event.  It is intended to be called in the <code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/install">install</a></code> {{domxref("EventHandler")}} for the {{domxref("ServiceWorkerRegistration.installing", "installing")}} worker and on the <code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate">activate</a></code> {{domxref("EventHandler")}} for the {{domxref("ServiceWorkerRegistration.active", "active")}} worker.</p>
+ <p>Extends the lifetime of the event.  It is intended to be called in the <code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event">install</a></code> {{domxref("EventHandler")}} for the {{domxref("ServiceWorkerRegistration.installing", "installing")}} worker and on the <code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event">activate</a></code> {{domxref("EventHandler")}} for the {{domxref("ServiceWorkerRegistration.active", "active")}} worker.</p>
  </dd>
 </dl>
 
