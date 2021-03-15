@@ -329,7 +329,7 @@ git push github master</pre>
 
 <p>That's it for our sample case study, and for the module! We hope you found it useful. While there is a long way to go before you can consider yourself a client-side tooling wizard, we are hoping that this module has given you that first important step towards understanding client-side tooling, and the confidence to learn more and try out new things.</p>
 
-<p>Let's summarise all the parts of the toolchain:</p>
+<p>Let's summarize all the parts of the toolchain:</p>
 
 <ul>
  <li>Code quality and maintenance are performed by eslint and prettier. These tools are added as <code>devDependencies</code> to the project via <code>npm install --dev eslint prettier eslint-plugin-react</code> (the eslint plugin is needed because this particular project uses React).</li>
@@ -339,7 +339,7 @@ git push github master</pre>
  <li>We also have a simple test that blocks the building and deployment of the site if the NASA API feed isn't giving us the correct data format.</li>
 </ul>
 
-<p>For those of you wanting a challenge, consider whether you can optimise some part of this toolchain. Some questions to ask yourself:</p>
+<p>For those of you wanting a challenge, consider whether you can optimize some part of this toolchain. Some questions to ask yourself:</p>
 
 <ul>
  <li>Can <a href="https://github.com/ralscha/parcel-plugin-compress">images be compressed</a> during the build step?</li>
