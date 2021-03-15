@@ -16,71 +16,71 @@ tags:
 <h2 id="Usage_notes">Usage notes</h2>
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>auto</code> | <code>baseline</code> | <code>before-edge</code> | <code>text-before-edge</code> | <code>middle</code> | <code>central</code> | <code>after-edge</code> | <code>text-after-edge</code> | <code>ideographic</code> | <code>alphabetic</code> | <code>hanging</code> | <code>mathematical</code> | <code>top</code> | <code>center</code> | <code>bottom</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>auto</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>auto</code> | <code>baseline</code> | <code>before-edge</code> | <code>text-before-edge</code> | <code>middle</code> | <code>central</code> | <code>after-edge</code> | <code>text-after-edge</code> | <code>ideographic</code> | <code>alphabetic</code> | <code>hanging</code> | <code>mathematical</code> | <code>top</code> | <code>center</code> | <code>bottom</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>auto</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
 <dl>
- <dt><code>auto</code> {{deprecated_inline}}</dt>
- <dd>The value is the dominant-baseline of the script to which the character belongs - i.e., use the dominant-baseline of the parent.</dd>
- <dt><code>baseline</code></dt>
- <dd>Uses the {{Glossary("dominant baseline")}} choice of the parent. Matches the box’s corresponding {{Glossary("baseline")}} to that of its parent.</dd>
- <dt><code>before-edge</code> {{deprecated_inline}}</dt>
- <dd>The alignment-point of the object being aligned is aligned with the "before-edge" baseline of the parent text content element.</dd>
- <dt><code>text-bottom</code></dt>
- <dd>Matches the bottom of the box to the top of the parent’s content area.</dd>
- <dt><code>text-before-edge</code></dt>
- <dd>
- <p>The alignment-point of the object being aligned is aligned with the "text-before-edge" baseline of the parent text content element.</p>
+  <dt><code>auto</code> {{deprecated_inline}}</dt>
+  <dd>The value is the dominant-baseline of the script to which the character belongs - i.e., use the dominant-baseline of the parent.</dd>
+  <dt><code>baseline</code></dt>
+  <dd>Uses the {{Glossary("dominant baseline")}} choice of the parent. Matches the box’s corresponding {{Glossary("baseline")}} to that of its parent.</dd>
+  <dt><code>before-edge</code> {{deprecated_inline}}</dt>
+  <dd>The alignment-point of the object being aligned is aligned with the "before-edge" baseline of the parent text content element.</dd>
+  <dt><code>text-bottom</code></dt>
+  <dd>Matches the bottom of the box to the top of the parent’s content area.</dd>
+  <dt><code>text-before-edge</code></dt>
+  <dd>
+    <p>The alignment-point of the object being aligned is aligned with the "text-before-edge" baseline of the parent text content element.</p>
 
- <p class="note"><strong>Note:</strong> This keyword may be mapped to <code>text-top</code>.</p>
- </dd>
- <dt><code>middle</code></dt>
- <dd>Aligns the vertical midpoint of the box with the baseline of the parent box plus half the x-height of the parent.</dd>
- <dt><code>central</code></dt>
- <dd>Matches the box’s central baseline to the central baseline of its parent.</dd>
- <dt><code>after-edge</code> {{deprecated_inline}}</dt>
- <dd>
- <p>The alignment-point of the object being aligned is aligned with the "after-edge" baseline of the parent text content element.</p>
- </dd>
- <dt><code>text-top</code></dt>
- <dd>Matches the top of the box to the top of the parent’s content area.</dd>
- <dt><code>text-after-edge</code></dt>
- <dd>
- <p>The alignment-point of the object being aligned is aligned with the "text-after-edge" baseline of the parent text content element.</p>
+    <p class="note"><strong>Note:</strong> This keyword may be mapped to <code>text-top</code>.</p>
+  </dd>
+  <dt><code>middle</code></dt>
+  <dd>Aligns the vertical midpoint of the box with the baseline of the parent box plus half the x-height of the parent.</dd>
+  <dt><code>central</code></dt>
+  <dd>Matches the box’s central baseline to the central baseline of its parent.</dd>
+  <dt><code>after-edge</code> {{deprecated_inline}}</dt>
+  <dd>
+    <p>The alignment-point of the object being aligned is aligned with the "after-edge" baseline of the parent text content element.</p>
+  </dd>
+  <dt><code>text-top</code></dt>
+  <dd>Matches the top of the box to the top of the parent’s content area.</dd>
+  <dt><code>text-after-edge</code></dt>
+  <dd>
+    <p>The alignment-point of the object being aligned is aligned with the "text-after-edge" baseline of the parent text content element.</p>
 
- <p class="note"><strong>Note:</strong> This keyword may be mapped to <code>text-bottom</code>.</p>
- </dd>
- <dt><code>ideographic</code></dt>
- <dd>Matches the box’s ideographic character face under-side baseline to that of its parent.</dd>
- <dt><code>alphabetic</code></dt>
- <dd>Matches the box’s alphabetic baseline to that of its parent.</dd>
- <dt><code>hanging</code></dt>
- <dd>
- <p>The alignment-point of the object being aligned is aligned with the "hanging" baseline of the parent text content element.</p>
- </dd>
- <dt><code>mathematical</code></dt>
- <dd>Matches the box’s mathematical baseline to that of its parent.</dd>
- <dt><code>top</code></dt>
- <dd>
- <p>Aligns the top of the aligned subtree with the top of the line box.</p>
- </dd>
- <dt><code>center</code></dt>
- <dd>Aligns the center of the aligned subtree with the center of the line box.</dd>
- <dt><code>bottom</code></dt>
- <dd>Aligns the bottom of the aligned subtree with the bottom of the line box.</dd>
+    <p class="note"><strong>Note:</strong> This keyword may be mapped to <code>text-bottom</code>.</p>
+  </dd>
+  <dt><code>ideographic</code></dt>
+  <dd>Matches the box’s ideographic character face under-side baseline to that of its parent.</dd>
+  <dt><code>alphabetic</code></dt>
+  <dd>Matches the box’s alphabetic baseline to that of its parent.</dd>
+  <dt><code>hanging</code></dt>
+  <dd>
+    <p>The alignment-point of the object being aligned is aligned with the "hanging" baseline of the parent text content element.</p>
+  </dd>
+  <dt><code>mathematical</code></dt>
+  <dd>Matches the box’s mathematical baseline to that of its parent.</dd>
+  <dt><code>top</code></dt>
+  <dd>
+    <p>Aligns the top of the aligned subtree with the top of the line box.</p>
+  </dd>
+  <dt><code>center</code></dt>
+  <dd>Aligns the center of the aligned subtree with the center of the line box.</dd>
+  <dt><code>bottom</code></dt>
+  <dd>Aligns the bottom of the aligned subtree with the bottom of the line box.</dd>
 </dl>
 
 <p>SVG 2 introduces some changes to the definition of this property. In particular: the values <code>auto</code>, <code>before-edge</code>, and <code>after-edge</code> have been removed. For backwards compatibility, <code>text-before-edge</code> may be mapped to <code>text-top</code> and <code>text-after-edge</code> to <code>text-bottom</code>. Neither <code>text-before-edge</code> nor <code>text-after-edge</code> should be used with the {{cssxref("vertical-align")}} property.</p>
@@ -127,30 +127,30 @@ text{
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Inline", "#propdef-alignment-baseline", "alignment-baseline")}}</td>
-   <td>{{Spec2("CSS3 Inline")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "text.html#AlignmentBaselineProperty", "alignment-baseline")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Refers to the definition in CSS Inline Layout and notes the changes to <code>auto</code>, <code>before-edge</code>, <code>after-edge</code>, <code>text-before-edge</code>, and <code>text-after-edge</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#AlignmentBaselineProperty", "alignment-baseline")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("CSS3 Inline", "#propdef-alignment-baseline", "alignment-baseline")}}</td>
+      <td>{{Spec2("CSS3 Inline")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>{{SpecName("SVG2", "text.html#AlignmentBaselineProperty", "alignment-baseline")}}</td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>Refers to the definition in CSS Inline Layout and notes the changes to <code>auto</code>, <code>before-edge</code>, <code>after-edge</code>, <code>text-before-edge</code>, and <code>text-after-edge</code></td>
+    </tr>
+    <tr>
+      <td>{{SpecName("SVG1.1", "text.html#AlignmentBaselineProperty", "alignment-baseline")}}</td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -160,5 +160,5 @@ text{
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{cssxref("alignment-baseline", "CSS alignment-baseline")}}</li>
+  <li>{{cssxref("CSS_Box_Alignment#baseline_alignment", "CSS alignment-baseline")}}</li>
 </ul>
