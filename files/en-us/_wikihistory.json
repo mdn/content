@@ -44274,21 +44274,6 @@
       "teoli"
     ]
   },
-  "Web/API/DocumentOrShadowRoot": {
-    "modified": "2020-11-04T11:07:53.581Z",
-    "contributors": [
-      "Rumyra",
-      "germain",
-      "mfuji09",
-      "chrisdavidmills",
-      "foolip",
-      "Sheppy",
-      "ExE-Boss",
-      "jpmedley",
-      "iainreid629",
-      "david_ross"
-    ]
-  },
   "Web/API/DocumentTimeline": {
     "modified": "2020-10-15T21:45:09.763Z",
     "contributors": [

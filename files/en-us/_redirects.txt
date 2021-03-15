@@ -7559,8 +7559,6 @@
 /en-US/docs/Web/API/DocumentOrShadowRoot/fullscreenElement	/en-US/docs/Web/API/Document/fullscreenElement
 /en-US/docs/Web/API/DocumentOrShadowRoot/getAnimations	/en-US/docs/Web/API/Document/getAnimations
 /en-US/docs/Web/API/DocumentOrShadowRoot/getSelection	/en-US/docs/Web/API/Document/getSelection
-/en-US/docs/Web/API/DocumentOrShadowRoot/nodeFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot
-/en-US/docs/Web/API/DocumentOrShadowRoot/nodesFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot
 /en-US/docs/Web/API/DocumentOrShadowRoot/pictureInPictureElement	/en-US/docs/Web/API/Document/pictureInPictureElement
 /en-US/docs/Web/API/DocumentOrShadowRoot/pictureInPictureEnabled	/en-US/docs/Web/API/Document/pictureInPictureEnabled
 /en-US/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/en-US/docs/Web/API/Document/pointerLockElement

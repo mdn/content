@@ -48,9 +48,9 @@ canvas.requestPointerLock()
 
 <h3 id="pointerLockElement_and_exitPointerLock">pointerLockElement and exitPointerLock()</h3>
 
-<p>The Pointer lock API also extends the {{domxref("Document")}} interface, adding both a new property and a new method. The new property is used for accessing the currently locked element (if any), and is named {{domxref("DocumentOrShadowRoot/pointerLockElement","pointerLockElement")}} and the new method on {{domxref("Document")}} is {{domxref("Document.exitPointerLock","exitPointerLock()")}} and, as the name implies, it is used to exit the pointer lock.</p>
+<p>The Pointer lock API also extends the {{domxref("Document")}} interface, adding both a new property and a new method. The new property is used for accessing the currently locked element (if any), and is named {{domxref("Document.pointerLockElement","pointerLockElement")}} and the new method on {{domxref("Document")}} is {{domxref("Document.exitPointerLock","exitPointerLock()")}} and, as the name implies, it is used to exit the pointer lock.</p>
 
-<p>The {{domxref("DocumentOrShadowRoot/pointerLockElement","pointerLockElement")}} property is useful for determining if any element is currently pointer locked (e.g., for doing a Boolean check) and also for obtaining a reference to the locked element, if any.</p>
+<p>The {{domxref("Document.pointerLockElement","pointerLockElement")}} property is useful for determining if any element is currently pointer locked (e.g., for doing a Boolean check) and also for obtaining a reference to the locked element, if any.</p>
 
 <p>Here is an example of using <code>pointerLockElement</code>:</p>
 
