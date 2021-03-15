@@ -119,9 +119,25 @@ parseInt('0x10'); // 16
 <pre class="brush: js">NaN + 5; // NaN
 </pre>
 
-<p>You can test for <code>NaN</code> using the built-in {{jsxref("Global_Objects/isNaN", "isNaN()")}} function:</p>
+<p>You can reliably test for <code>NaN</code> using the built-in {{jsxref("Number.isNaN", "Number.isNaN()")}} function:</p>
 
-<pre class="brush: js">isNaN(NaN); // true
+<pre class="brush: js">Number.isNaN(NaN); // true
+Number.isNaN('hello'); // false
+Number.isNaN('1'); // false
+Number.isNaN(undefined); // false
+Number.isNaN({}); // false
+Number.isNaN([1]) // false
+Number.isNaN([1,2]) // false
+</pre>
+
+<p>But don’t test for <code>NaN</code> using the global {{jsxref("Global_Objects/isNaN", "isNaN()")}} function, which has unintuitive behavior:</p>
+
+<pre class="brush: js">isNaN('hello'); // true
+isNaN('1'); // false
+isNaN(undefined); // true
+isNaN({}); // true
+isNaN([1]) // false
+isNaN([1,2]) // true
 </pre>
 
 <p>JavaScript also has the special values {{jsxref("Infinity")}} and <code>-Infinity</code>:</p>
