@@ -81,7 +81,7 @@ overflow: unset;
 
 <p>Overflow options include clipping, showing scrollbars, or displaying the content flowing out of its container into the surrounding area.</p>
 
-<p>Specifying a value other than <code>visible</code> (the default) creates a new <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a>. This is necessary for technical reasons — if a float intersected with the scrolling element it would forcibly rewrap the content after each scroll step, leading to a slow scrolling experience.</p>
+<p>Specifying a value other than <code>visible</code> (the default) or <code>clip</code> creates a new <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a>. This is necessary for technical reasons — if a float intersected with the scrolling element it would forcibly rewrap the content after each scroll step, leading to a slow scrolling experience.</p>
 
 <p>In order for <code>overflow</code> to have an effect, the block-level container must have either a set height (<code>height</code> or <code>max-height</code>) or <code>white-space</code> set to <code>nowrap</code>.</p>
 
@@ -95,7 +95,7 @@ overflow: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 

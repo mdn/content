@@ -1,0 +1,47 @@
+---
+title: ShadowRoot.styleSheets
+slug: Web/API/ShadowRoot/styleSheets
+tags:
+  - API
+  - ShadowRoot
+  - Property
+  - Reference
+  - Stylesheets
+---
+<div>{{APIRef("CSSOM")}}</div>
+
+<p>The <strong><code>styleSheets</code></strong> read-only property of the {{domxref("ShadowRoot")}} interface
+returns a {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects, for stylesheets explicitly linked into or embedded in a shadow tree.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">shadowRoot.styleSheets</pre>
+
+<h3 id="Value">Value</h3>
+
+<p>A {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: js">
+let customElem = document.querySelector('my-shadow-dom-element');
+let shadow = customElem.shadowRoot;
+let styleSheets = shadow.styleSheets;
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSSOM','#extensions-to-the-document-or-shadow-root-interface','DocumentOrShadowRoot.styleSheets')}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("api.ShadowRoot.styleSheets")}}</p>

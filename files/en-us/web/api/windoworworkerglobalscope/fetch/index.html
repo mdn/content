@@ -91,7 +91,12 @@ tags:
           <dt><code>same-origin</code></dt>
           <dd>Tells browsers to include credentials with requests to same-origin URLs, and use any credentials sent back in responses from same-origin URLs.</dd>
           <dt><code>include</code></dt>
-          <dd>Tells browsers to always include credentials in requests, and always use any credentials sent back in responses.</dd>
+          <dd>Tells browsers to include credentials in both same- and cross-origin requests, and always use any credentials sent back in responses.
+            <div class="notecard note">
+              <h4>Note</h4>
+              <p>Credentials may be included in simple and "final" cross-origin requests, but should not be included in <a href="/en-US/docs/Web/HTTP/CORS#preflight_requests_and_credentials">CORS preflight requests</a>.</p>
+            </div>
+          </dd>
         </dl>
       </dd>
 <dt><code>redirect</code></dt>

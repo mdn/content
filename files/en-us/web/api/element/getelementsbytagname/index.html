@@ -2,18 +2,18 @@
 title: Element.getElementsByTagName()
 slug: Web/API/Element/getElementsByTagName
 tags:
-- API
-- DOM
-- Element
-- Method
-- Reference
+  - API
+  - DOM
+  - Element
+  - Method
+  - Reference
 ---
 <div>{{ APIRef("DOM") }}</div>
 
 <p><span class="seoSummary">The
 		<code><strong>Element.getElementsByTagName()</strong></code> method returns a live
 		{{domxref("HTMLCollection")}} of elements with the given <a
-			href="/en-US/docs/DOM/element.tagName">tag name</a>.</span> All descendants of the
+			href="/en-US/docs/Web/API/Element/tagName">tag name</a>.</span> All descendants of the
 	specified element are searched, but not the element itself. The returned list is
 	<em>live</em>, which means it updates itself with the DOM tree automatically.
 	Therefore, there is no need to call <code>Element.getElementsByTagName()</code> with
@@ -33,7 +33,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-	class="brush: js"><code><em>elements</em> = <em>element</em>.getElementsByTagName(<em>tagName</em>)</code></pre>
+	class="brush: js">elements = element.getElementsByTagName(tagName)</pre>
 
 <ul>
 	<li><code>elements</code> is a <em>live</em> {{domxref("HTMLCollection")}} of elements

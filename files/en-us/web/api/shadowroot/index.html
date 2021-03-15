@@ -22,36 +22,33 @@ tags:
  <dd>Returns the {{domxref('Element')}} within the shadow tree that has focus.</dd>
  <dt>{{domxref("ShadowRoot.delegatesFocus")}} {{readonlyinline}} {{non-standard_inline}}</dt>
  <dd>Returns a boolean that indicates whether delegatesFocus was set when the shadow was attached (see {{domxref("Element.attachShadow()")}}).</dd>
+ <dt>{{DOMxRef("ShadowRoot.fullscreenElement")}} {{ReadOnlyInline}}</dt>
+ <dd>The element that's currently in full screen mode for this shadow tree.</dd>
  <dt>{{domxref("ShadowRoot.host")}} {{readonlyinline}}</dt>
  <dd>Returns a reference to the DOM element the <code>ShadowRoot</code> is attached to.</dd>
  <dt>{{domxref("ShadowRoot.innerHTML")}} {{non-standard_inline}}</dt>
  <dd>Sets or returns a reference to the DOM tree inside the <code>ShadowRoot</code>.</dd>
  <dt>{{domxref("ShadowRoot.mode")}} {{readonlyinline}}</dt>
  <dd>The mode of the <code>ShadowRoot</code> — either <code>open</code> or <code>closed</code>. This defines whether or not the shadow root's internal features are accessible from JavaScript.</dd>
-</dl>
-
-<h3 id="Properties_included_from_DocumentOrShadowRoot">Properties included from DocumentOrShadowRoot</h3>
-
-<p><em>The <code>ShadowRoot</code> interface includes the following properties defined on the {{domxref("DocumentOrShadowRoot")}} mixin. Note that this is currently only implemented by Chrome; other browsers still implement them on the {{domxref("Document")}} interface.</em></p>
-
-<dl>
- <dt>{{domxref("DocumentOrShadowRoot.styleSheets")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects for stylesheets explicitly linked into, or embedded in a document.</dd>
+ <dt>{{DOMxRef("ShadowRoot.pictureInPictureElement")}} {{ReadOnlyInline}}</dt>
+ <dd>Returns the {{DOMxRef('Element')}} within the shadow tree that is currently being presented in picture-in-picture mode.</dd>
+ <dt>{{DOMxRef("ShadowRoot.pointerLockElement")}} {{ReadOnlyInline}}</dt>
+ <dd>Returns the {{DOMxRef('Element')}} set as the target for mouse events while the pointer is locked. <code>null</code> if lock is pending, pointer is unlocked, or if the target is in another tree.</dd>
+ <dt>{{domxref("ShadowRoot.styleSheets")}} {{readonlyInline}}</dt>
+ <dd>Returns a {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects for stylesheets explicitly linked into, or embedded in a shadow tree.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>The <code>ShadowRoot</code> interface includes the following methods defined on the {{domxref("DocumentOrShadowRoot")}} mixin. Note that this is currently only implemented by Chrome; other browsers still implement them on the {{domxref("Document")}} interface.</em></p>
-
 <dl>
- <dt>{{domxref("DocumentOrShadowRoot.getSelection()")}}</dt>
+ <dt>{{DOMxRef("ShadowRoot.getAnimations()")}}</dt>
+ <dd>Returns an array of all {{DOMxRef("Animation")}} objects currently in effect, whose target elements are descendants of the shadow tree.</dd>
+ <dt>{{domxref("ShadowRoot.getSelection()")}}</dt>
  <dd>Returns a {{domxref('Selection')}} object representing the range of text selected by the user, or the current position of the caret.</dd>
- <dt>{{domxref("DocumentOrShadowRoot.elementFromPoint()")}}</dt>
+ <dt>{{domxref("ShadowRoot.elementFromPoint()")}}</dt>
  <dd>Returns the topmost element at the specified coordinates.</dd>
- <dt>{{domxref("DocumentOrShadowRoot.elementsFromPoint()")}}</dt>
+ <dt>{{domxref("ShadowRoot.elementsFromPoint()")}}</dt>
  <dd>Returns an array of all elements at the specified coordinates.</dd>
- <dt>{{domxref("DocumentOrShadowRoot.caretPositionFromPoint()")}}</dt>
- <dd>Returns a {{domxref('CaretPosition')}} object containing the DOM node containing the caret, and caret's character offset within that node.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>

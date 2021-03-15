@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">The <strong>HTML <code>&lt;footer&gt;</code> element</strong> represents a footer for its nearest <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Sectioning_content">sectioning content</a> or <a href="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Sectioning_root">sectioning root</a> element. A footer typically contains information about the author of the section, copyright data or links to related documents.</span></p>
+<p><span class="seoSummary">The <strong>HTML <code>&lt;footer&gt;</code> element</strong> represents a footer for its nearest <a href="/en-US/docs/Web/Guide/HTML/Content_categories#sectioning_content">sectioning content</a> or <a href="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#sectioning_root">sectioning root</a> element. A <code>&lt;footer&gt;</code> typically contains information about the author of the section, copyright data or links to related documents.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/footer.html", "tabbed-standard")}}</div>
 
@@ -19,11 +19,11 @@ tags:
  <tbody>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, palpable content.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, but with no <code>&lt;footer&gt;</code> or {{HTMLElement("header")}} descendants.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, but with no <code>&lt;footer&gt;</code> or {{HTMLElement("header")}} descendants.</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -31,7 +31,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>. Note that a <code>&lt;footer&gt;</code> element must not be a descendant of an {{HTMLElement("address")}}, {{HTMLElement("header")}} or another <code>&lt;footer&gt;</code> element.</td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a>. Note that a <code>&lt;footer&gt;</code> element must not be a descendant of an {{HTMLElement("address")}}, {{HTMLElement("header")}} or another <code>&lt;footer&gt;</code> element.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -69,7 +69,7 @@ tags:
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
-<p>Prior to the release of Safari 13, the <code>contentinfo</code> <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics#SignpostsLandmarks">landmark role</a> was not properly exposed by <a href="https://help.apple.com/voiceover/info/guide/">VoiceOver</a>. If needing to support legacy Safari browsers, add <code>role="contentinfo"</code> to the <code>footer</code> element to ensure the landmark will be properly exposed.</p>
+<p>Prior to the release of Safari 13, the <code>contentinfo</code> <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics#signpostslandmarks">landmark role</a> was not properly exposed by <a href="https://help.apple.com/voiceover/info/guide/">VoiceOver</a>. If needing to support legacy Safari browsers, add <code>role="contentinfo"</code> to the <code>footer</code> element to ensure the landmark will be properly exposed.</p>
 
 <ul>
  <li>Related: <a href="https://bugs.webkit.org/show_bug.cgi?id=146930">WebKit Bugzilla: 146930 – AX: HTML native elements (header, footer, main, aside, nav) should work the same as ARIA landmarks, sometimes they don't</a></li>

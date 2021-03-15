@@ -1,0 +1,52 @@
+---
+title: hsl()
+slug: Web/CSS/color_value/hsl()
+tags:
+  - CSS
+  - CSS Data Type
+  - Data Type
+  - Reference
+  - Web
+  - color
+  - hsl
+---
+<div>{{CSSRef}}</div>
+
+<p>The <strong><code>hsl()</code></strong> functional notation expresses a given color according to its hue, saturation, and lightness components. An optional alpha component represents the color's transparency.</p>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>CSS Colors Level 4 made some changes to <code>hsl()</code>. In browsers that support the standard {{cssxref("color_value/hsla()","hsla()")}} is an alias for <code>hsl()</code>, they accept the same parameters and behave the same way.</p>
+
+  <p>The Level 4 specification also allows for space-separated in addition to comma-separated values.</p>
+</div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: css">hsl(100, 100%, 50%) /* #5f0 */
+hsl(235, 100%, 50%, .5) /* #0015ff with 50% opacity */
+hsl(235 100% 50%); /* CSS Colors 4 space-separated values */
+</pre>
+
+<h3 id="Values">Values</h3>
+
+<dl>
+  <dt>Functional notation: <code>hsl[a](H, S, L[, A])</code></dt>
+  <dd><code>H</code> (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in <code>deg</code>s, <code>rad</code>s, <code>grad</code>s, or <code>turn</code>s in {{SpecName("CSS4 Colors","#the-hsl-notation")}}. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in {{SpecName("CSS3 Colors", "#hsl-color")}}. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an <code>&lt;angle&gt;</code>, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.</dd>
+  <dd><code>S</code> (saturation) and <code>L</code> (lightness) are percentages. <code>100%</code> <strong>saturation</strong> is completely saturated, while <code>0%</code> is completely unsaturated (gray). <code>100%</code> <strong>lightness</strong> is white, <code>0%</code> lightness is black, and <code>50%</code> lightness is “normal.”</dd>
+  <dd><code>A</code> (alpha) can be a {{cssxref("&lt;number&gt;")}} between <code>0</code> and <code>1</code>, or a {{cssxref("&lt;percentage&gt;")}}, where the number <code>1</code> corresponds to <code>100%</code> (full opacity).</dd>
+  <dt>Functional notation: <code>hsl[a](H S L[ / A])</code></dt>
+  <dd>CSS Colors Level 4 adds support for space-separated values in the functional notation.</dd>
+ </dl>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("css.types.color.hsl")}}</p>
+
+<h3>Space-separated values</h3>
+
+<p>{{Compat("css.types.color.space_separated_functional_notation")}}</p>
+
+<h3>Accepts alpha value</h3>
+
+<p>{{Compat("css.types.color.hsl_function_accepts_alpha")}}</p>

@@ -40,9 +40,7 @@ tags:
 
 <p>These two approaches tended to result in a website that looked its best on the screen of the person designing the site! The liquid site resulted in a squashed design on smaller screens (as seen below) and unreadably long line lengths on larger ones.</p>
 
-<figure><img alt="A layout with two columns squashed into a mobile size viewport." src="mdn-rwd-liquid.png" style="display: block;">
-<figcaption></figcaption>
-</figure>
+<img alt="A layout with two columns squashed into a mobile size viewport." src="mdn-rwd-liquid.png" style="display: block;">
 
 <div class="notecard note">
 <p><strong>Note</strong>: See this simple liquid layout: <a href="https://mdn.github.io/css-examples/learn/rwd/liquid-width.html">example</a>, <a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html">source code</a>. When viewing the example, drag your browser window in and out to see how this looks at different sizes.</p>
@@ -50,9 +48,7 @@ tags:
 
 <p>The fixed-width site risked a horizontal scrollbar on screens smaller than the site width (as seen below), and lots of white space at the edges of the design on larger screens.</p>
 
-<figure><img alt="A layout with a horizontal scrollbar in a mobile viewport." src="mdn-rwd-fixed.png" style="display: block;">
-<figcaption></figcaption>
-</figure>
+<img alt="A layout with a horizontal scrollbar in a mobile viewport." src="mdn-rwd-fixed.png" style="display: block;">
 
 <div class="notecard note">
 <p><strong>Note</strong>: See this simple fixed-width layout: <a href="https://mdn.github.io/css-examples/learn/rwd/fixed-width.html">example</a>, <a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html">source code</a>. Again, observe the result as you change the browser window size.</p>
@@ -96,7 +92,7 @@ tags:
   .container {
     margin: 1em 2em;
   }
-} 
+}
 </pre>
 
 <p>You can add multiple media queries within a stylesheet, tweaking your whole layout or parts of it to best suit the various screen sizes. The points at which a media query is introduced, and the layout changed, are known as <em>breakpoints</em>.</p>
@@ -120,22 +116,18 @@ tags:
 
 <pre class="brush: css">.col {
   width: 6.25%; /* 60 / 960 = 0.0625 */
-} 
+}
 </pre>
 
 <p>This approach will be found in many places across the web today, and it is documented here in the layout section of our <a href="/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">Legacy layout methods</a> article. It is likely that you will come across websites using this approach in your work, so it is worth understanding it, even though you would not build a modern site using a float-based flexible grid.</p>
 
 <p>The following example demonstrates a simple responsive design using Media Queries and a flexible grid. On narrow screens the layout displays the boxes stacked on top of one another:</p>
 
-<figure><img alt="A mobile view of the layout with boxes stacked on top of each other vertically." src="mdn-rwd-mobile.png" style="display: block;">
-<figcaption></figcaption>
-</figure>
+<img alt="A mobile view of the layout with boxes stacked on top of each other vertically." src="mdn-rwd-mobile.png" style="display: block;">
 
 <p>On wider screens they move to two columns:</p>
 
-<figure><img alt="A desktop view of a layout with two columns." src="mdn-rwd-desktop.png" style="display: block;">
-<figcaption></figcaption>
-</figure>
+<img alt="A desktop view of a layout with two columns." src="mdn-rwd-desktop.png" style="display: block;">
 
 <div class="notecard note">
 <p><strong>Note</strong>: You can find the <a href="https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html">live example</a> and <a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html">source code</a> for this example on GitHub.</p>
@@ -151,14 +143,14 @@ tags:
 
 <pre class="brush: css">.container {
   column-count: 3;
-} 
+}
 </pre>
 
 <p>If you instead specify a <code>column-width</code>, you are specifying a <em>minimum</em> width. The browser will create as many columns of that width as will comfortably fit into the container, then share out the remaining space between all the columns. Therefore the number of columns will change according to how much space there is.</p>
 
 <pre class="brush: css">.container {
   column-width: 10em;
-} 
+}
 </pre>
 
 <h3 id="Flexbox">Flexbox</h3>
@@ -173,7 +165,7 @@ tags:
 
 .item {
   flex: 1;
-} 
+}
 </pre>
 
 <div class="notecard note">
@@ -187,7 +179,7 @@ tags:
 <pre class="brush: css">.container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-} 
+}
 </pre>
 
 <div class="notecard note">
@@ -200,7 +192,7 @@ tags:
 
 <pre class="brush: css">img {
   max-width: 100%;
-} 
+}
 </pre>
 
 <p>There are obvious downsides to this approach. The image might be displayed a lot smaller than its intrinsic size, which is a waste of bandwidth — a mobile user may be downloading an image several times the size of what they actually see in the browser window. In addition, you may not want the same image aspect ratio on mobile as on desktop. For example, it might be nice to have a square image for mobile, but show the same scene as a landscape image on desktop. Or, acknowledging the smaller size of an image on mobile you might want to show a different image altogether, one which is more easily understood at a small screen size. These things can't be achieved by scaling down an image.</p>
@@ -229,22 +221,18 @@ h1 {
   h1 {
     font-size: 4rem;
   }
-} 
+}
 </pre>
 
 <p>We have edited our responsive grid example above to also include responsive type using the method outlined. You can see how the heading switches sizes as the layout goes to the two column version.</p>
 
 <p>On mobile the heading is smaller:</p>
 
-<figure><img alt="A stacked layout with a small heading size." src="mdn-rwd-font-mobile.png" style="display: block;">
-<figcaption></figcaption>
-</figure>
+<img alt="A stacked layout with a small heading size." src="mdn-rwd-font-mobile.png" style="display: block;">
 
 <p>On desktop, however, we see the larger heading size:</p>
 
-<figure><img alt="A two column layout with a large heading." src="mdn-rwd-font-desktop.png" style="display: block;">
-<figcaption></figcaption>
-</figure>
+<img alt="A two column layout with a large heading." src="mdn-rwd-font-desktop.png" style="display: block;">
 
 <div class="notecard note">
 <p><strong>Note</strong>: See this example in action: <a href="https://mdn.github.io/css-examples/learn/rwd/type-rwd.html">example</a>, <a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html">source code</a>.</p>

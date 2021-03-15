@@ -108,14 +108,14 @@ tags:
 <p>Browser caches:</p>
 
 <ul>
- <li>The <a href="/en-US/docs/Web/HTTP/Caching">HTTP cache</a>, the Image cache, and the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Alt-Svc">Alternative Services (Alt-Svc) cache</a> are all partitioned for tracking resources, such that each top-level origin will have a separate partition and tracking resources on different top-level origins will be cached separate from each other.</li>
+ <li>The <a href="/en-US/docs/Web/HTTP/Caching">HTTP cache</a>, the Image cache, and the <a href="/en-US/docs/Web/HTTP/Headers/Alt-Svc">Alternative Services (Alt-Svc) cache</a> are all partitioned for tracking resources, such that each top-level origin will have a separate partition and tracking resources on different top-level origins will be cached separate from each other.</li>
 </ul>
 
 <p>Network connections:</p>
 
 <ul>
  <li><a href="https://wiki.mozilla.org/Security/Server_Side_TLS#Session_Resumption">TLS sessions</a> will not be resumed using a session ticket when an HTTPS connection is made to an embedded third-party resource that is classified as a tracker.</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x#Persistent_connections">HTTP connection reuse</a> by domains classified as trackers is limited to requests that occur under the same top-level origin. For example, a request for content from tracker.example on news.example will not reuse an HTTP connection with a request for content from tracker.example on shopping.example or with requests that occur when tracker.example is visited directly (i.e., as a first party).</li>
+ <li><a href="/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x#persistent_connections">HTTP connection reuse</a> by domains classified as trackers is limited to requests that occur under the same top-level origin. For example, a request for content from tracker.example on news.example will not reuse an HTTP connection with a request for content from tracker.example on shopping.example or with requests that occur when tracker.example is visited directly (i.e., as a first party).</li>
 </ul>
 
 <p>HTTP Referrers</p>
@@ -136,7 +136,7 @@ tags:
 
 <h2 id="Storage_access_grants">Storage access grants</h2>
 
-<p>In order to improve web compatibility and permit third-party integrations that require storage access, Firefox will grant storage access scoped to the first party for a particular third-party origin as described in this section. Currently, Firefox includes some web compatibility heuristics that grant storage access to third-party resources classified as trackers when a user interacts with those third parties. We do this when we expect that not granting access would cause the web page to break. We also support an initial implementation of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API">Storage Access API</a>, through which embedded {{htmlelement("iframe")}}s can request storage access by calling {{domxref("Document.requestStorageAccess()")}}. Although both of these approaches provide the same level of storage access, we recommend third parties switch to using the Storage Access API in order to guarantee their access to storage.</p>
+<p>In order to improve web compatibility and permit third-party integrations that require storage access, Firefox will grant storage access scoped to the first party for a particular third-party origin as described in this section. Currently, Firefox includes some web compatibility heuristics that grant storage access to third-party resources classified as trackers when a user interacts with those third parties. We do this when we expect that not granting access would cause the web page to break. We also support an initial implementation of the <a href="/en-US/docs/Web/API/Storage_Access_API">Storage Access API</a>, through which embedded {{htmlelement("iframe")}}s can request storage access by calling {{domxref("Document.requestStorageAccess()")}}. Although both of these approaches provide the same level of storage access, we recommend third parties switch to using the Storage Access API in order to guarantee their access to storage.</p>
 
 <h3 id="Automatic_storage_access_upon_interaction">Automatic storage access upon interaction</h3>
 
@@ -210,7 +210,7 @@ tags:
 
 <p>The <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> in Firefox Developer Tools now includes an indicator for all resource requests that have been classified as tracking resources. This indicator is shown as a shield icon in the domain column. In the sample image below, <code>trackertest.org</code> is classified as a tracking resource, while the request to example.com is not.</p>
 
-<p><img alt="network requests in Firefox devtools indicating which ones are tracking resources with a small shield icon" src="https://mdn.mozillademos.org/files/16181/Screen_Shot_2018-09-21_at_10.34.22_AM.png" style="border-style: solid; border-width: 1px; display: block; height: 57px; margin: 0px auto; width: 600px;"></p>
+<p><img alt="network requests in Firefox devtools indicating which ones are tracking resources with a small shield icon" src="screen_shot_2018-09-21_at_10.34.22_am.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h3 id="Adding_custom_domains_to_the_Tracking_Protection_list">Adding custom domains to the Tracking Protection list</h3>
 

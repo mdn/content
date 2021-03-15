@@ -42,8 +42,6 @@ tags:
  <dd>The type of the response (e.g., <code>basic</code>, <code>cors</code>).</dd>
  <dt>{{domxref("Response.url")}} {{readonlyinline}}</dt>
  <dd>The URL of the response.</dd>
- <dt>{{domxref("Response.useFinalURL")}}</dt>
- <dd>A boolean indicating whether this is the final URL of the response.</dd>
 </dl>
 
 <h3 id="Body_Interface_Properties">Body Interface Properties</h3>
@@ -94,9 +92,9 @@ tags:
 <p>You'll notice that since we are requesting an image, we need to run {{domxref("Body.blob")}} ({{domxref("Response")}} implements Body) to give the response its correct MIME type.</p>
 
 <pre class="brush: js">const image = document.querySelector('.my-image');
-fetch('flowers.jpg').then(function(response) {
-  return response.blob();
-}).then(function(blob) {
+fetch('flowers.jpg')
+.then(response =&gt; response.blob())
+.then(blob =&gt; {
   const objectURL = URL.createObjectURL(blob);
   image.src = objectURL;
 });</pre>
@@ -111,14 +109,13 @@ fetch('flowers.jpg').then(function(response) {
 
 <pre class="brush: js">// Function to do an Ajax call
 const doAjax = async () =&gt; {
-    const response = await fetch('Ajax.php'); // Generate the Response object
-    if (response.ok) {
-        const jVal = await response.json(); // Get JSON value from the response body
-        return Promise.resolve(jVal);
-        }
-    else {
-        return Promise.reject('*** PHP file not found');
-    }
+  const response = await fetch('Ajax.php'); // Generate the Response object
+  if (response.ok) {
+    const jsonValue = await response.json(); // Get JSON value from the response body
+    return Promise.resolve(jsonValue);
+  } else {
+    return Promise.reject('*** PHP file not found');
+  }
 }
 
 // Call the function and output value or error message to console

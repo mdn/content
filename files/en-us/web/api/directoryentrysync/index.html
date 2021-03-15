@@ -12,7 +12,7 @@ tags:
 ---
 <p>{{APIRef("File System API")}}{{Non-standard_header}}</p>
 
-<p>The <code>DirectoryEntrySync</code> interface of the <a href="/en-US/docs/DOM/File_API/File_System_API">File System API</a> represents a directory in a file system. It includes methods for creating, reading, looking up, and recursively removing files in a directory.</p>
+<p>The <code>DirectoryEntrySync</code> interface of the <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">File System API</a> represents a directory in a file system. It includes methods for creating, reading, looking up, and recursively removing files in a directory.</p>
 
 <div class="note">
 <p>This interface has been abandoned: it was on a standard track and it proves not a good idea. Do not use it anymore.</p>
@@ -44,16 +44,16 @@ tags:
 <table class="standard-table">
 	<tbody>
 		<tr>
-			<td><code>DirectoryReaderSync <a href="#createreader">createReader</a> () raises (<a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+			<td><code>DirectoryReaderSync <a href="#createreader">createReader</a> () raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</code></td>
 		</tr>
 		<tr>
-			<td><code><a href="/en-US/docs/DOM/File_API/File_System_API/FileEntrySync">FileEntrySync</a> <a href="#getfile">getFile</a> (in DOMString <em>path</em>, in optional Flags <em>options</em>) raises (<a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+			<td><code><a href="/en-US/docs/Web/API/FileEntrySync">FileEntrySync</a> <a href="#getfile">getFile</a> (in DOMString <em>path</em>, in optional Flags <em>options</em>) raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</code></td>
 		</tr>
 		<tr>
-			<td><code>DirectoryEntrySync <a href="#getdirectory">getDirectory</a> (in DOMString path, in optional Flags <em>options</em>) raises (<a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+			<td><code>DirectoryEntrySync <a href="#getdirectory">getDirectory</a> (in DOMString path, in optional Flags <em>options</em>) raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</code></td>
 		</tr>
 		<tr>
-			<td><code>void <a href="#removerecursively">removeRecursively</a> () raises (<a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a>); </code></td>
+			<td><code>void <a href="#removerecursively">removeRecursively</a> () raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>); </code></td>
 		</tr>
 	</tbody>
 </table>
@@ -65,12 +65,12 @@ tags:
 <p>Creates a new <code>DirectoryReaderSync</code> to read entries from this directory.</p>
 
 <pre>DirectoryReaderSync createReader (
-) raises (<a href="https://developer.mozilla.org/en/DOM/File_API/File_System_API/FileException">FileException</a>);</pre>
+) raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</pre>
 
 <h5 id="Returns">Returns</h5>
 
 <dl>
-	<dt><code><a href="/en-US/docs/DOM/File_API/File_System_API/DirectoryReaderSync">DirectoryReaderSync</a></code></dt>
+	<dt><code><a href="/en-US/docs/Web/API/DirectoryReaderSync">DirectoryReaderSync</a></code></dt>
 	<dd>Represents a directory in a file system.</dd>
 </dl>
 
@@ -80,7 +80,7 @@ tags:
 
 <h5 id="Exceptions">Exceptions</h5>
 
-<p>This method can raise a <a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
+<p>This method can raise a <a href="/en-US/docs/Web/API/FileException">FileException</a> with the following codes:</p>
 
 <table class="standard-table">
 	<thead>
@@ -107,7 +107,7 @@ tags:
 
 <pre>void getFile (
   in DOMString <em>path</em>, in optional Flags <em>options</em>
-) raises (<a href="https://developer.mozilla.org/en/DOM/File_API/File_System_API/FileException">FileException</a>);</pre>
+) raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</pre>
 
 <h5 id="Parameter_2">Parameter</h5>
 
@@ -163,13 +163,13 @@ tags:
 <h5 id="Returns_2">Returns</h5>
 
 <dl>
-	<dt><a href="/en-US/docs/DOM/File_API/File_System_API/FileEntrySync"><code>FileEntrySync</code></a></dt>
+	<dt><a href="/en-US/docs/Web/API/FileEntrySync"><code>FileEntrySync</code></a></dt>
 	<dd>Represents a file in a file system.</dd>
 </dl>
 
 <h5 id="Exceptions_2">Exceptions</h5>
 
-<p>This method can raise a <a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
+<p>This method can raise a <a href="/en-US/docs/Web/API/FileException">FileException</a> with the following codes:</p>
 
 <table class="standard-table">
 	<thead>
@@ -216,7 +216,7 @@ tags:
 
 <pre>void getDirectory (
   in DOMString <em>path</em>, in optional Flags <em>options</em>
-) raises (<a href="https://developer.mozilla.org/en/DOM/File_API/File_System_API/FileException">FileException</a>);</pre>
+) raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</pre>
 
 <h5 id="Parameter_3">Parameter</h5>
 
@@ -272,13 +272,13 @@ tags:
 <h5 id="Returns_3">Returns</h5>
 
 <dl>
-	<dt><a href="/en-US/docs/DOM/File_API/File_System_API/DirectoryReaderSync"><code>DirectoryEntrySync</code></a></dt>
+	<dt><a href="/en-US/docs/Web/API/DirectoryReaderSync"><code>DirectoryEntrySync</code></a></dt>
 	<dd>Represents a directory in a file system.</dd>
 </dl>
 
 <h5 id="Exceptions_3">Exceptions</h5>
 
-<p>This method can raise a <a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
+<p>This method can raise a <a href="/en-US/docs/Web/API/FileException">FileException</a> with the following codes:</p>
 
 <table class="standard-table">
 	<thead>
@@ -326,7 +326,7 @@ tags:
 <p>If you delete a directory that contains a file that cannot be removed or if an error occurs while the deletion is in progress, some of the contents might not be deleted. Catch these cases with error callbacks and retry the deletion.</p>
 
 <pre>void removeRecursively (
-)  raises (<a href="https://developer.mozilla.org/en/DOM/File_API/File_System_API/FileException">FileException</a>);</pre>
+)  raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</pre>
 
 <h5 id="Parameter_4">Parameter</h5>
 
@@ -338,7 +338,7 @@ tags:
 
 <h5 id="Exceptions_4">Exceptions</h5>
 
-<p>This method can raise a <a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
+<p>This method can raise a <a href="/en-US/docs/Web/API/FileException">FileException</a> with the following codes:</p>
 
 <table class="standard-table">
 	<thead>
@@ -377,6 +377,6 @@ tags:
 
 <p>Specification: {{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}</p>
 
-<p>Reference: <a href="/en-US/docs/DOM/File_API/File_System_API">File System API</a></p>
+<p>Reference: <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">File System API</a></p>
 
-<p>Introduction: <a href="/en-US/docs/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">Basic Concepts About the File System API</a></p>
+<p>Introduction: <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Basic Concepts About the File System API</a></p>

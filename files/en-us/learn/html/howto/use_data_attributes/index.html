@@ -41,7 +41,7 @@ article.dataset.parent // "cars"</pre>
 
 <h2 id="CSS_access">CSS access</h2>
 
-<p>Note that, as data attributes are plain HTML attributes, you can even access them from <a href="/en-US/docs/Web/CSS">CSS</a>. For example to show the parent data on the article you can use <a href="/en-US/docs/Web/CSS/content">generated content</a> in CSS with the {{cssxref("attr()")}} function:</p>
+<p>Note that, as data attributes are plain HTML attributes, you can even access them from <a href="/en-US/docs/Web/CSS">CSS</a>. For example to show the parent data on the article you can use <a href="/en-US/docs/Web/CSS/content">generated content</a> in CSS with the <a href="/en-US/docs/Web/CSS/attr()"><code>attr()</code></a> function:</p>
 
 <pre class="brush: css">article::before {
   content: attr(data-parent);

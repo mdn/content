@@ -18,8 +18,9 @@ tags:
 
 <p class="summary"><span class="seoSummary">Feature Policy allows web developers to selectively enable, disable, and modify the behavior of certain features and APIs in the browser. It is similar to {{Glossary("CSP", "Content Security Policy")}} but controls features instead of security behavior.</span></p>
 
-<div class="note">
-<p>The <code>Feature-Policy</code> header has now been renamed to <code>Permissions-Policy</code> in the spec, and this article will eventually be updated to reflect that change.</p>
+<div class="notecard warning">
+  <h4>Warning</h4>
+  <p>The {{httpheader("Feature-Policy")}} header has now been renamed to <code>Permissions-Policy</code> in the spec, and this article will eventually be updated to reflect that change.</p>
 </div>
 
 <h2 id="In_a_nutshell">In a nutshell</h2>
@@ -106,7 +107,7 @@ tags:
 
 <p>The web provides functionality and APIs that may have privacy or security risks if abused. In some cases, you may wish to strictly limit how such functionality is used on a website. There are policy-controlled features to allow functionality to be enabled/disabled for specific origins or frames within a website. Where available, the feature integrates with the Permissions API, or feature-specific mechanisms to check if the feature is available.</p>
 
-<p>The features include (see <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy#Directives">Features list</a>):</p>
+<p>The features include (see <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy#directives">Features list</a>):</p>
 
 <ul>
  <li>Accelerometer</li>

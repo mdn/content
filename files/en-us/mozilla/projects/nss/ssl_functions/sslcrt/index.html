@@ -4,7 +4,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslcrt
 ---
 <div class="note">
   <ul>
-    <li>This page is part of the <a href="/en-US/docs/NSS/SSL_functions/OLD_SSL_Reference">SSL Reference</a> that we are migrating into the format described in the <a href="/en-US/docs/Project:MDC_style_guide">MDN Style Guide</a>. If you are inclined to help with this migration, your help would be very much appreciated.</li>
+    <li>This page is part of the <a href="/en-US/docs/en-US/docs/Mozilla/Projects/NSS/SSL_functions/OLD_SSL_Reference">SSL Reference</a> that we are migrating into the format described in the <a href="/en-US/docs/Project:MDC_style_guide">MDN Style Guide</a>. If you are inclined to help with this migration, your help would be very much appreciated.</li>
   </ul>
   <ul>
     <li>Upgraded documentation may be found in the <a href="/NSS_reference">Current NSS Reference</a>
@@ -106,7 +106,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslcrt
   <li><a id="1051410"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="../../../../../nspr/reference/html/prerr.html#26127"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 <h5 id="Description"> <a id="1050903"> Description </a></h5>
-<p><a id="1050915"> The <code>CERT_VerifyCertNow</code> function must call one or more PK11 functions to obtain the services of a PKCS #11 module. Some of the PK11 functions require a PIN argument (see </a><a href="sslfnc.html#1088040"><code>SSL_SetPKCS11PinArg</code></a> for details), which must be specified in the <code>wincx</code> parameter. To obtain the value to pass in the <code>wincx</code> parameter, call <a href="sslfnc.html#1123385"><code>SSL_RevealPinArg</code></a>.</p>
+<p><a id="1050915"> The <code>CERT_VerifyCertNow</code> function must call one or more PK11 functions to obtain the services of a PKCS #11 module. Some of the PK11 functions require a PIN argument (see </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1088040"><code>SSL_SetPKCS11PinArg</code></a> for details), which must be specified in the <code>wincx</code> parameter. To obtain the value to pass in the <code>wincx</code> parameter, call <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1123385"><code>SSL_RevealPinArg</code></a>.</p>
 <h4 id="CERT_VerifyCertName"> <a id="1050342"> CERT_VerifyCertName </a></h4>
 <p><a id="1058867"> Compares the common name specified in the subject DN for a certificate with a specified hostname. </a></p>
 <h5 id="Syntax_2"> <a id="1050521"> Syntax </a></h5>
@@ -374,7 +374,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslcrt
 <h5 id="Returns_7"> <a id="1051896"> Returns </a></h5>
 <p><a id="1051935"> The function returns a <code>CERTCertNicknames</code> object containing the requested nicknames.</a></p>
 <h5 id="Description_5"> <a id="1054904"> Description </a></h5>
-<p><a id="1054920"> <code>CERT_GetCertNicknames</code> must call one or more PK11 functions to obtain the services of a PKCS #11 module. Some of the PK11 functions require a PIN argument (see </a><a href="sslfnc.html#1088040"><code>SSL_SetPKCS11PinArg</code></a> for details), which must be specified in the <code>wincx</code> parameter. To obtain the value to pass in the <code>wincx</code> parameter, call <a href="sslfnc.html#1123385"><code>SSL_RevealPinArg</code></a>.</p>
+<p><a id="1054920"> <code>CERT_GetCertNicknames</code> must call one or more PK11 functions to obtain the services of a PKCS #11 module. Some of the PK11 functions require a PIN argument (see </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1088040"><code>SSL_SetPKCS11PinArg</code></a> for details), which must be specified in the <code>wincx</code> parameter. To obtain the value to pass in the <code>wincx</code> parameter, call <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1123385"><code>SSL_RevealPinArg</code></a>.</p>
 <h4 id="CERT_FreeNicknames"> <a id="1050349"> CERT_FreeNicknames </a></h4>
 <p><a id="1052160"> Frees a <code>CERTCertNicknames</code> structure. This structure is returned by </a><a href="#1050346"><code>CERT_GetCertNicknames</code></a>.</p>
 <h5 id="Syntax_9"> <a id="1052164"> Syntax </a></h5>

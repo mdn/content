@@ -40,7 +40,7 @@ tags:
  <dt>{{domxref("HTMLMediaElement.controlsList")}} {{readonlyinline}}</dt>
  <dd>Returns a {{domxref("DOMTokenList")}} that helps the user agent select what controls to show on the media element whenever the user agent shows its own set of controls. The <code>DOMTokenList</code> takes one or more of three possible values: <code>nodownload</code>, <code>nofullscreen</code>, and <code>noremoteplayback</code>.</dd>
  <dt>{{domxref("HTMLMediaElement.crossOrigin")}}</dt>
- <dd>A {{domxref("DOMString")}} indicating the <a href="/en-US/docs/Web/HTML/CORS_settings_attributes">CORS setting</a> for this media element.</dd>
+ <dd>A {{domxref("DOMString")}} indicating the <a href="/en-US/docs/Web/HTML/Attributes/crossorigin">CORS setting</a> for this media element.</dd>
  <dt>{{domxref("HTMLMediaElement.currentSrc")}} {{readonlyinline}}</dt>
  <dd>Returns a {{domxref("DOMString")}} with the absolute URL of the chosen media resource.</dd>
  <dt>{{domxref("HTMLMediaElement.currentTime")}}</dt>
@@ -123,7 +123,7 @@ tags:
  <dd>
  <p>Is a <code>unsigned long</code> that indicates the number of samples that will be returned in the framebuffer of each <code>MozAudioAvailable</code> event. This number is a total for all channels, and by default is set to be the number of channels * 1024 (e.g., 2 channels * 1024 samples = 2048 total).</p>
 
- <p>The <code>mozFrameBufferLength</code> property can be set to a new value for lower latency, larger amounts of data, etc. The size given <em>must</em> be a number between 512 and 16384. Using any other size results in an exception being thrown. The best time to set a new length is after the <a href="/en-US/docs/Web/Events/loadedmetadata">loadedmetadata</a> event fires, when the audio info is known, but before the audio has started or <code>MozAudioAvailable</code> events have begun firing.</p>
+ <p>The <code>mozFrameBufferLength</code> property can be set to a new value for lower latency, larger amounts of data, etc. The size given <em>must</em> be a number between 512 and 16384. Using any other size results in an exception being thrown. The best time to set a new length is after the <a href="/en-US/docs/Web/API/HTMLMediaElement/loadedmetadata_event">loadedmetadata</a> event fires, when the audio info is known, but before the audio has started or <code>MozAudioAvailable</code> events have begun firing.</p>
  </dd>
  <dt>{{domxref("HTMLMediaElement.mozSampleRate")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>Returns a <code>double</code> representing the number of samples per second that will be played. For example, 44100 samples per second is the sample rate used by CD audio.</dd>
@@ -175,7 +175,7 @@ tags:
  <dt>{{domxref("HTMLMediaElement.mozCaptureStreamUntilEnded()")}} {{non-standard_inline}}</dt>
  <dd>[enter description]</dd>
  <dt>{{domxref("HTMLMediaElement.mozGetMetadata()")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>Returns {{jsxref('Object')}}, which contains properties that represent metadata from the playing media resource as <code>{key: value}</code> pairs. A separate copy of the data is returned each time the method is called. This method must be called after the <a href="/en-US/docs/Web/Events/loadedmetadata">loadedmetadata</a> event fires.</dd>
+ <dd>Returns {{jsxref('Object')}}, which contains properties that represent metadata from the playing media resource as <code>{key: value}</code> pairs. A separate copy of the data is returned each time the method is called. This method must be called after the <a href="/en-US/docs/Web/API/HTMLMediaElement/loadedmetadata_event">loadedmetadata</a> event fires.</dd>
  <dt>{{domxref("HTMLMediaElement.mozLoadFrom()")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>This method, available only in Mozilla's implementation, loads data from another media element. This works similarly to <code>load()</code> except that instead of running the normal resource selection algorithm, the source is set to the <code>other</code> element's <code>currentSrc</code>. This is optimized so this element gets access to all of the <code>other</code> element's cached and buffered data; in fact, the two elements share downloaded data, so data downloaded by either element is available to both.</dd>
 </dl>
