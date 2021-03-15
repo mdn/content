@@ -41,10 +41,10 @@
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.4.279":
-  version "0.4.279"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.279.tgz#f023c102094b63096136089262c38cd01c8f5df4"
-  integrity sha512-WIJwVvK2tz5pvGiw74QHnRprIeKzsZ+eTfjD9O43x+595Psm8TAEBTrwWrmv4Y77KwBEmbAJxhoe8FxwRnKrvw==
+"@mdn/yari@0.4.280":
+  version "0.4.280"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.280.tgz#7a2a502a9a15a3780c8f5bb887ad16937e254006"
+  integrity sha512-2N7f5ZtcAGXWz1nKDaHsTVt9W6mo7zxNDMM0sW+n+9r4NyImFMo7153XYZdiQ/v6HDhP14U6yYU14CtTqf8/5w==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
@@ -60,7 +60,7 @@
     dotenv "8.2.0"
     ejs "3.1.6"
     express "4.17.1"
-    fast-xml-parser "3.18.0"
+    fast-xml-parser "3.19.0"
     file-type "16.3.0"
     front-matter "4.0.2"
     fs-extra "9.1.0"
@@ -1434,10 +1434,10 @@ fast-safe-stringify@^2.0.4:
   resolved "https://registry.yarnpkg.com/fast-safe-stringify/-/fast-safe-stringify-2.0.7.tgz#124aa885899261f68aedb42a7c080de9da608743"
   integrity sha512-Utm6CdzT+6xsDk2m8S6uL8VHxNwI6Jub+e9NYTcAms28T84pTa25GJQV9j0CY0N1rM8hK4x6grpF2BQf+2qwVA==
 
-fast-xml-parser@3.18.0:
-  version "3.18.0"
-  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-3.18.0.tgz#b77f4a494cd64e6f44aadfa68fbde30cd922b2df"
-  integrity sha512-tRrwShhppv0K5GKEtuVs92W0VGDaVltZAwtHbpjNF+JOT7cjIFySBGTEOmdBslXYyWYaZwEX/g4Su8ZeKg0LKQ==
+fast-xml-parser@3.19.0:
+  version "3.19.0"
+  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-3.19.0.tgz#cb637ec3f3999f51406dd8ff0e6fc4d83e520d01"
+  integrity sha512-4pXwmBplsCPv8FOY1WRakF970TjNGnGnfbOnLqjlYvMiF1SR3yOHyxMR/YCXpPTOspNF5gwudqktIP4VsWkvBg==
 
 fastq@^1.6.0:
   version "1.8.0"
