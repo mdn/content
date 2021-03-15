@@ -8797,6 +8797,10 @@
 /en-US/docs/Web/API/Storage.removeItem	/en-US/docs/Web/API/Storage/removeItem
 /en-US/docs/Web/API/Storage.setItem	/en-US/docs/Web/API/Storage/setItem
 /en-US/docs/Web/API/Storage/LocalStorage	/en-US/docs/Web/API/Window/localStorage
+/en-US/docs/Web/API/StorageQuota	/en-US/docs/Web/API/StorageManager
+/en-US/docs/Web/API/StorageQuota/queryInfo	/en-US/docs/Web/API/StorageManager
+/en-US/docs/Web/API/StorageQuota/requestPersistentQuota	/en-US/docs/Web/API/StorageManager
+/en-US/docs/Web/API/StorageQuota/supportedTypes	/en-US/docs/Web/API/StorageManager
 /en-US/docs/Web/API/StyleSheet.disabled	/en-US/docs/Web/API/StyleSheet/disabled
 /en-US/docs/Web/API/StyleSheet.href	/en-US/docs/Web/API/StyleSheet/href
 /en-US/docs/Web/API/StyleSheet.media	/en-US/docs/Web/API/StyleSheet/media
