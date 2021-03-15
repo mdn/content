@@ -26,7 +26,7 @@ tags:
 
 <p>Sensor interfaces are only proxies for the underlying device sensors. Consequently, feature detection is more complicated for sensors than it is for other APIs. The presence of a sensor API does not tell you whether that API is connected to a real hardware sensor, whether that sensor works, if it's still connected, or even whether the user has granted access to it. Making all this information consistently available is costly to performance and battery life.</p>
 
-<p>Therefore, feature detection for sensor APIs must include both detection of the APIs themselves and <a href="#Defensive_Programming">defensive programming strategies (see below)</a>.</p>
+<p>Therefore, feature detection for sensor APIs must include both detection of the APIs themselves and <a href="#defensive_programming">defensive programming strategies (see below)</a>.</p>
 
 <p>The examples below show three methods for detecting sensor APIs. Additionally you can put object instantiation inside a {{jsxref('statements/try...catch', 'try...catch')}} block. Notice that detection through the {{domxref('Navigator')}} interface is not one of the available options.</p>
 
