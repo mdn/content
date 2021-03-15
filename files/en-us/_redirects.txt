@@ -1887,7 +1887,7 @@
 /en-US/docs/DOM/document.baseURIObject	/en-US/docs/Web/API/Node
 /en-US/docs/DOM/document.bgColor	/en-US/docs/Web/API/Document/bgColor
 /en-US/docs/DOM/document.body	/en-US/docs/Web/API/Document/body
-/en-US/docs/DOM/document.caretPositionFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot/caretPositionFromPoint
+/en-US/docs/DOM/document.caretPositionFromPoint	/en-US/docs/Web/API/Document/caretPositionFromPoint
 /en-US/docs/DOM/document.characterSet	/en-US/docs/Web/API/document/characterSet
 /en-US/docs/DOM/document.clear	/en-US/docs/Web/API/Document/clear
 /en-US/docs/DOM/document.close	/en-US/docs/Web/API/Document/close
@@ -7555,6 +7555,7 @@
 /en-US/docs/Web/API/DocumentOrShadowRoot/activeElement	/en-US/docs/Web/API/Document/activeElement
 /en-US/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/en-US/docs/Web/API/Document/elementFromPoint
 /en-US/docs/Web/API/DocumentOrShadowRoot/elementsFromPoint	/en-US/docs/Web/API/Document/elementsFromPoint
+/en-US/docs/Web/API/DocumentOrShadowRoot/caretPositionFromPoint	/en-US/docs/Web/API/Document/caretPositionFromPoint
 /en-US/docs/Web/API/DocumentOrShadowRoot/fullscreenElement	/en-US/docs/Web/API/Document/fullscreenElement
 /en-US/docs/Web/API/DocumentOrShadowRoot/getAnimations	/en-US/docs/Web/API/Document/getAnimations
 /en-US/docs/Web/API/DocumentOrShadowRoot/getSelection	/en-US/docs/Web/API/Document/getSelection
@@ -8796,6 +8797,10 @@
 /en-US/docs/Web/API/Storage.removeItem	/en-US/docs/Web/API/Storage/removeItem
 /en-US/docs/Web/API/Storage.setItem	/en-US/docs/Web/API/Storage/setItem
 /en-US/docs/Web/API/Storage/LocalStorage	/en-US/docs/Web/API/Window/localStorage
+/en-US/docs/Web/API/StorageQuota	/en-US/docs/Web/API/StorageManager
+/en-US/docs/Web/API/StorageQuota/queryInfo	/en-US/docs/Web/API/StorageManager
+/en-US/docs/Web/API/StorageQuota/requestPersistentQuota	/en-US/docs/Web/API/StorageManager
+/en-US/docs/Web/API/StorageQuota/supportedTypes	/en-US/docs/Web/API/StorageManager
 /en-US/docs/Web/API/StyleSheet.disabled	/en-US/docs/Web/API/StyleSheet/disabled
 /en-US/docs/Web/API/StyleSheet.href	/en-US/docs/Web/API/StyleSheet/href
 /en-US/docs/Web/API/StyleSheet.media	/en-US/docs/Web/API/StyleSheet/media
@@ -9263,7 +9268,7 @@
 /en-US/docs/Web/API/document.async	/en-US/docs/Web/API/XMLDocument/async
 /en-US/docs/Web/API/document.bgColor	/en-US/docs/Web/API/Document/bgColor
 /en-US/docs/Web/API/document.body	/en-US/docs/Web/API/Document/body
-/en-US/docs/Web/API/document.caretPositionFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot/caretPositionFromPoint
+/en-US/docs/Web/API/document.caretPositionFromPoint	/en-US/docs/Web/API/Document/caretPositionFromPoint
 /en-US/docs/Web/API/document.characterSet	/en-US/docs/Web/API/document/characterSet
 /en-US/docs/Web/API/document.clear	/en-US/docs/Web/API/Document/clear
 /en-US/docs/Web/API/document.close	/en-US/docs/Web/API/Document/close
@@ -9353,7 +9358,6 @@
 /en-US/docs/Web/API/document.write	/en-US/docs/Web/API/Document/write
 /en-US/docs/Web/API/document.writeln	/en-US/docs/Web/API/Document/writeln
 /en-US/docs/Web/API/document.xmlVersion	/en-US/docs/Web/API/Document/xmlVersion
-/en-US/docs/Web/API/document/caretPositionFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot/caretPositionFromPoint
 /en-US/docs/Web/API/document/mozFullScreen	/en-US/docs/Web/API/Document/fullscreen
 /en-US/docs/Web/API/document/nodePrincipal	/en-US/docs/Web/API/Node
 /en-US/docs/Web/API/dummyDocument.scripts	/en-US/docs/Web/API/Document/scripts
@@ -11898,7 +11902,7 @@
 /en-US/docs/cancelBubble	/en-US/docs/Web/API/UIEvent/cancelBubble
 /en-US/docs/cancelable	/en-US/docs/Web/API/Event/cancelable
 /en-US/docs/caption	/en-US/docs/Web/HTML/Element/caption
-/en-US/docs/caret_temp	/en-US/docs/Web/API/DocumentOrShadowRoot/caretPositionFromPoint
+/en-US/docs/caret_temp	/en-US/docs/Web/API/Document/caretPositionFromPoint
 /en-US/docs/ccache	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/ccache
 /en-US/docs/ccs_temp	/en-US/docs/Web/API/Document/createCDATASection
 /en-US/docs/cellPadding	/en-US/docs/Web/API/HTMLTableElement/cellPadding

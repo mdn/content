@@ -85,7 +85,7 @@ Referrer-Policy: unsafe-url
 
 <pre class="brush: html">&lt;meta name="referrer" content="origin"&gt;</pre>
 
-<p>Or set it for individual requests with <a href="/en-US/search?q=referrerPolicy">the <code>referrerpolicy</code> attribute</a> on {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}}, {{HTMLElement("script")}}, or {{HTMLElement("link")}} elements:</p>
+<p>Or set it for individual requests with the <code>referrerpolicy</code> attribute on {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}}, {{HTMLElement("script")}}, or {{HTMLElement("link")}} elements:</p>
 
 <pre class="brush: html">&lt;a href="http://example.com" referrerpolicy="origin"&gt;</pre>
 
@@ -216,6 +216,18 @@ Referrer-Policy: unsafe-url
 <p>In the above scenario, <code>no-referrer</code> will only be used if <code>strict-origin-when-cross-origin</code> is not supported by the browser.</p>
 
 <p class="note">Specifying multiple values is only supported in the <code>Referrer-Policy</code> HTTP header, and not in the <code>referrerpolicy</code> attribute.</p>
+
+<h2 id="Browser-specific_preferencessettings">Browser-specific preferences/settings</h2>
+<h3 id="Firefox_preferences">Firefox preferences</h3>
+
+<p>Firefox preferences can be used to configure the <em>default</em> referrer policy. The preference names are version specific:</p>
+<ul>
+  <li>Firefox version 87: <code>network.http.referer.userControlPolicy</code></li>
+  <li>Firefox versions 59 to 86: <code>network.http.referer.defaultPolicy</code> (and <code>network.http.referer.defaultPolicy.pbmode</code> for private networks)</li>
+  <li>Firefox versions 53 to 58: <code>network.http.referer.userControlPolicy</code></li>
+</ul>
+<p>All of these settings take the same set of values: <code>0 = no-referrer</code>, <code>1 = same-origin</code>, <code>2 = strict-origin-when-cross-origin</code>, <code>3 = no-referrer-when-downgrade</code>.</p>
+
 
 <h2 id="Specifications">Specifications</h2>
 

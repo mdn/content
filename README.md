@@ -720,6 +720,8 @@ but it will usually be quicker.
 
 You can use <https://whatsdeployed.io/s/DLi/mdn/content> to see if your change
 has been deployed to the production site.
+And use <https://whatsdeployed.io/s/16d/mdn/translated-content> for changes
+to the <https://github.com/mdn/translated-content> repo.
 
 ### Can I copy content from other sources to put on MDN
 

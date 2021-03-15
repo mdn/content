@@ -221,15 +221,15 @@ items.sort(function (a, b) {
   temporary array to achieve the right order.</p>
 
 <pre class="brush: js">// the array to be sorted
-var list = ['Delta', 'alpha', 'CHARLIE', 'bravo'];
+const in = ['delta', 'alpha', 'charlie', 'bravo'];
 
 // temporary array holds objects with position and sort-value
-var mapped = list.map(function(el, i) {
-  return { index: i, value: el.toLowerCase() };
+const mapped = in.map((v, i) => {
+  return { i, value: someSlowOperation(v) };
 })
 
 // sorting the mapped array containing the reduced values
-mapped.sort(function(a, b) {
+mapped.sort((a, b) => {
   if (a.value &gt; b.value) {
     return 1;
   }
@@ -239,10 +239,7 @@ mapped.sort(function(a, b) {
   return 0;
 });
 
-// container for the resulting order
-var result = mapped.map(function(el){
-  return list[el.index];
-});
+const result = mapped.map(v => in[v.i]);
 </pre>
 
 <p>There is an open source library available called <a

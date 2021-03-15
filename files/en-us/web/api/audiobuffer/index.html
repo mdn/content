@@ -12,7 +12,7 @@ tags:
 
 <p>The <strong><code>AudioBuffer</code></strong> interface represents a short audio asset residing in memory, created from an audio file using the {{ domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()") }} method, or from raw data using {{ domxref("BaseAudioContext/createBuffer", "AudioContext.createBuffer()") }}. Once put into an AudioBuffer, the audio can then be played by being passed into an {{ domxref("AudioBufferSourceNode") }}.</p>
 
-<p>Objects of these types are designed to hold small audio snippets, typically less than 45 s. For longer sounds, objects implementing the {{domxref("MediaElementAudioSourceNode")}} are more suitable. The buffer contains data in the following format: non-interleaved IEEE754 32-bit linear PCM with a nominal range between <code>-1</code> and <code>+1</code>, that is, 32bits floating point buffer, with each samples between -1.0 and 1.0. If the {{domxref("AudioBuffer")}} has multiple channels, they are stored in separate buffer.</p>
+<p>Objects of these types are designed to hold small audio snippets, typically less than 45 s. For longer sounds, objects implementing the {{domxref("MediaElementAudioSourceNode")}} are more suitable. The buffer contains data in the following format: non-interleaved IEEE754 32-bit linear PCM with a nominal range between <code>-1</code> and <code>+1</code>, that is, a 32-bit floating point buffer, with each sample between -1.0 and 1.0. If the {{domxref("AudioBuffer")}} has multiple channels, they are stored in separate buffers.</p>
 
 <h2 id="Constructor">Constructor</h2>
 
