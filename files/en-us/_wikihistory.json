@@ -44289,40 +44289,6 @@
       "david_ross"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/elementFromPoint": {
-    "modified": "2020-10-15T21:49:27.541Z",
-    "contributors": [
-      "Zearin_Galaurum",
-      "sideshowbarker",
-      "Nickolay",
-      "Sheppy",
-      "ExE-Boss",
-      "rsinohara",
-      "fscholz",
-      "chrisdavidmills",
-      "HolgerJeromin",
-      "david_ross",
-      "jpmedley"
-    ]
-  },
-  "Web/API/DocumentOrShadowRoot/elementsFromPoint": {
-    "modified": "2020-10-15T21:49:27.171Z",
-    "contributors": [
-      "mfuji09",
-      "Zearin_Galaurum",
-      "sideshowbarker",
-      "samthor",
-      "LucasSouza6",
-      "ExE-Boss",
-      "progers",
-      "fscholz",
-      "chrisdavidmills",
-      "HolgerJeromin",
-      "mbhall88",
-      "david_ross",
-      "jpmedley"
-    ]
-  },
   "Web/API/DocumentTimeline": {
     "modified": "2020-10-15T21:45:09.763Z",
     "contributors": [
@@ -165775,6 +165741,38 @@
       "fscholz",
       "bede",
       "david_ross"
+    ]
+  },
+  "Web/API/Document/elementFromPoint": {
+    "modified": "2020-10-15T21:49:27.541Z",
+    "contributors": [
+      "Zearin_Galaurum",
+      "sideshowbarker",
+      "Nickolay",
+      "Sheppy",
+      "ExE-Boss",
+      "rsinohara",
+      "fscholz",
+      "chrisdavidmills",
+      "HolgerJeromin",
+      "david_ross",
+      "jpmedley"
+    ]
+  },
+  "Web/API/Document/elementsFromPoint": {
+    "modified": "2020-10-15T21:49:27.171Z",
+    "contributors": [
+      "mfuji09",
+      "Zearin_Galaurum",
+      "sideshowbarker",
+      "samthor",
+      "LucasSouza6",
+      "ExE-Boss",
+      "progers",
+      "fscholz",
+      "chrisdavidmills",
+      "HolgerJeromin",
+      "mbhall88"
     ]
   },
   "Web/API/Document/caretPositionFromPoint": {

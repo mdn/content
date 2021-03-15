@@ -1,26 +1,17 @@
 ---
-title: DocumentOrShadowRoot.elementFromPoint()
-slug: Web/API/DocumentOrShadowRoot/elementFromPoint
+title: Document.elementFromPoint()
+slug: Web/API/Document/elementFromPoint
 tags:
   - API
   - Coordinates
   - Document
-  - DocumentOrShadowRoot
-  - Find Element
   - Method
-  - Point
   - Reference
-  - ShadowRoot
-  - elementFromPoint
-  - elementFromPoint()
-  - find
-  - shadow dom
 ---
 <div>{{APIRef("DOM")}}</div>
 
 <p><span class="seoSummary">The <strong><code>elementFromPoint()</code></strong>
-    method—available on both the {{domxref("Document")}} and {{domxref("ShadowRoot")}}
-    objects—returns the topmost {{domxref("Element")}} at the specified coordinates
+    method, available on the {{domxref("Document")}} object, returns the topmost {{domxref("Element")}} at the specified coordinates
     (relative to the viewport).</span></p>
 
 <p>If the element at the specified point belongs to another document (for example, the
@@ -45,7 +36,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js">const <var>element</var> = document.elementFromPoint(<var>x</var>, <var>y</var>)</pre>
+  class="brush: js">elementFromPoint(x, y)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -90,7 +81,7 @@ tags:
 
 <h3 id="Result">Result</h3>
 
-<p>{{EmbedLiveSample('Example', 400, 80)}}</p>
+<p>{{EmbedLiveSample('Example', 400, 100)}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -98,29 +89,21 @@ tags:
   <thead>
     <tr>
       <th scope="col">Specification</th>
-      <th scope="col">Status</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>{{SpecName('Shadow
-        DOM','#dom-documentorshadowroot-elementsfrompoint','elementsFromPoint()')}}</td>
-      <td>{{Spec2('Shadow DOM')}}</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('CSSOM View', '#dom-document-elementsfrompoint',
-        'elementsFromPoint()')}}</td>
-      <td>{{Spec2('CSSOM View')}}</td>
+      <td>{{SpecName('CSSOM View', '#dom-document-elementfrompoint', 'elementFromPoint()')}}</td>
     </tr>
   </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.DocumentOrShadowRoot.elementFromPoint")}}</p>
+<p>{{Compat("api.Document.elementFromPoint")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li>{{domxref("DocumentOrShadowRoot.elementsFromPoint()")}}</li>
+  <li>{{domxref("Document.elementsFromPoint()")}}</li>
 </ul>
