@@ -830,86 +830,6 @@ tags:
 
 <h3 id="HTML_DOM_API">HTML DOM API</h3>
 
-<h4 id="Global_event_beforeinput">Global event: beforeinput</h4>
-
-<p>The global {{domxref("HTMLElement.beforeinput_event", "beforeinput")}} event is sent to an {{HTMLElement("input")}} element—or any element whose {{htmlattrxref("contenteditable")}} attribute is enabled—immediately before the element's value changes.</p>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col" style="vertical-align: bottom;">Release channel</th>
-   <th scope="col" style="vertical-align: bottom;">Version added</th>
-   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Nightly</th>
-   <td>74</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Developer Edition</th>
-   <td>74</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Beta</th>
-   <td>74</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Release</th>
-   <td>74</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Preference name</th>
-   <th colspan="2"><code>dom.input_events.beforeinput.enabled</code></th>
-  </tr>
- </tbody>
-</table>
-
-<h4 id="InputEvent.getTargetRanges">InputEvent.getTargetRanges()</h4>
-
-<p>The {{domxref('InputEvent.getTargetRanges()', 'getTargetRanges()')}} method of the {{domxref("InputEvent")}} interface returns an array of static ranges that will be affected by a change to the DOM if the input event is not canceled.</p>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col" style="vertical-align: bottom;">Release channel</th>
-   <th scope="col" style="vertical-align: bottom;">Version added</th>
-   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Nightly</th>
-   <td>83</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Developer Edition</th>
-   <td>83</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Beta</th>
-   <td>83</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Release</th>
-   <td>83</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Preference name</th>
-   <th colspan="2"><code>dom.input_events.beforeinput.enabled</code></th>
-  </tr>
- </tbody>
-</table>
-
 <h4 id="HTMLMediaElement_method_setSinkId">HTMLMediaElement method: setSinkId()</h4>
 
 <p>{{domxref("HTMLMediaElement.setSinkId()")}} allows you to set the sink ID of an audio output device on an {{domxref("HTMLMediaElement")}}, thereby changing where the audio is being output. See {{bug(934425)}} for more details.</p>
@@ -1695,46 +1615,6 @@ tags:
 <h2 id="Developer_tools">Developer tools</h2>
 
 <p>Mozilla's developer tools are constantly evolving. We experiment with new ideas, add new features, and test them on the Nightly and Developer Edition channels before letting them go through to beta and release. The features below are the current crop of experimental developer tool features.</p>
-
-<h4 id="Color_scheme_simulation">Color scheme simulation</h4>
-
-<p>Adds an option to simulate different color schemes allowing to test {{cssxref("@media/prefers-color-scheme", "@prefers-color-scheme")}} media queries. Using this media query lets your style sheet specify whether it prefers a light or dark user interface. This feature lets you test your code without having to change settings in your browser (or operating system, if the browser follows a system-wide color scheme setting). (See {{bug(1550804)}} and {{bug(1137699)}} for more details.)</p>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col" style="vertical-align: bottom;">Release channel</th>
-   <th scope="col" style="vertical-align: bottom;">Version added</th>
-   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Nightly</th>
-   <td>72</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Developer Edition</th>
-   <td>72</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Beta</th>
-   <td>72</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Release</th>
-   <td>72</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Preference name</th>
-   <th colspan="2"><code>devtools.inspector.color-scheme-simulation.enabled</code></th>
-  </tr>
- </tbody>
-</table>
 
 <h4 id="Execution_context_selector">Execution context selector</h4>
 

@@ -2,14 +2,14 @@
 title: Document.styleSheetSets
 slug: Web/API/Document/styleSheetSets
 tags:
-- API
-- CSSOM
-- DOM
-- Property
-- Reference
-- Stylesheets
+  - API
+  - CSSOM
+  - DOM
+  - Property
+  - Reference
+  - Stylesheets
 ---
-<div>{{APIRef("DOM")}}{{gecko_minversion_header("1.9")}}{{deprecated_header}}</div>
+<div>{{APIRef("DOM")}}{{deprecated_header}}</div>
 
 <p>The <strong><code>styleSheetSets</code></strong> read-only property <span
     class="seosummary">returns a live list of all of the currently-available style sheet
@@ -43,7 +43,7 @@ for (let i = 0; i &lt; sheets.length; i++) {
 
 <p>The list of available style sheet sets is constructed by enumerating all the style
   sheets available for the document, in the order in which they're listed in the
-  {{domxref("document.styleSheets")}} attribute, adding the <code>title</code> of each
+  {{domxref("Document.styleSheets")}} attribute, adding the <code>title</code> of each
   style sheet that has a title to the list. Duplicates are dropped from the list (using a
   case-sensitive comparison).</p>
 
@@ -55,7 +55,7 @@ for (let i = 0; i &lt; sheets.length; i++) {
 
 <ul>
   <li>{{domxref("Stylesheet")}}</li>
-  <li>{{domxref("document.styleSheets")}}</li>
+  <li>{{domxref("Document.styleSheets")}}</li>
   <li>{{domxref("document.lastStyleSheetSet")}}</li>
   <li>{{domxref("document.preferredStyleSheetSet")}}</li>
   <li>{{domxref("document.selectedStyleSheetSet")}}</li>

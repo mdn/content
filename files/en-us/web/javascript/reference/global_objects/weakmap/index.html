@@ -29,9 +29,9 @@ tags:
  <li>The second inconvenience is a memory leak because the arrays ensure that references to each key and each value are maintained indefinitely. These references prevent the keys from being garbage collected, even if there are no other references to the object. This would also prevent the corresponding values from being garbage collected.</li>
 </ol>
 
-<p>By contrast, native <code>WeakMap</code>s hold "weak" references to key objects, which means that they do not prevent garbage collection in case there would be no other reference to the key object. This also avoids preventing garbage collection of values in the map. Native WeakMaps can be particularly useful constructs when mapping keys to information about the key that is valuable only if the key has not been garbage collected.</p>
+<p>By contrast, native <code>WeakMap</code>s hold "weak" references to key objects. As such native <code>WeakMap</code>s do not prevent garbage collection, which eventually removes references to the key object. "Weak" references also avoid preventing garbage collection of values in the map. <code>WeakMap</code>s can be particularly useful constructs when mapping keys to information about the key that is valuable <em>only if</em> the key has not been garbage collected.</p>
 
-<p><strong>Because the references are weak, <code>WeakMap</code> keys are not enumerable.</strong> There is no method to obtain a list of the keys. If they were, the list would depend on the state of garbage collection, introducing non-determinism. If you want to have a list of keys, you should use a {{jsxref("Map")}}.</p>
+<p><strong>Because the references are weak, <code>WeakMap</code> keys are not enumerable.</strong> There is no method to obtain a list of the keys. If there was, the list would depend on the state of garbage collection, introducing non-determinism. If you want to have a list of keys, you should use a {{jsxref("Map")}}.</p>
 
 <h2 id="Constructor">Constructor</h2>
 

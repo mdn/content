@@ -14,9 +14,7 @@ tags:
 
 <p>File objects may be obtained from a {{domxref("FileList")}} object returned as a result of a user selecting files using the {{HTMLElement("input")}} element, from a drag and drop operation's {{domxref("DataTransfer")}} object, or from the <code>mozGetAsFile()</code> API on an {{domxref("HTMLCanvasElement")}}.</p>
 
-<div class="notecard warning">
-<p>Important note: <code>FileReader</code> is used to read file content from the user's (remote) system in secure ways only. It cannot be used to read a file by pathname from a file system. To read files by pathname in JavaScript, standard Ajax solutions should be used to do server-side file reading, with CORS permission if reading cross-domain.</p>
-</div>
+<p><code>FileReader</code> can only access the contents of files that the user has explicitly selected, either using an HTML <code>&lt;input type="file"&gt;</code> element or by drag and drop. It cannot be used to read a file by pathname from the user's file system. To read files on the client's file system by pathname, use the <a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a>. To read server-side files, use standard Ajax solutions, with CORS permission if reading cross-domain.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -27,7 +25,7 @@ tags:
  <dd>Returns a newly constructed <code>FileReader</code>.</dd>
 </dl>
 
-<p>See <a href="/en-US/docs/Using_files_from_web_applications">Using files from web applications</a> for details and examples.</p>
+<p>See <a href="/en-US/docs/Web/API/File/Using_files_from_web_applications">Using files from web applications</a> for details and examples.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -86,7 +84,7 @@ tags:
 <dl>
  <dt>{{domxref("FileReader.abort()")}}</dt>
  <dd>Aborts the read operation. Upon return, the <code>readyState</code> will be <code>DONE</code>.</dd>
- <dt>{{domxref("FileReader.readAsArrayBuffer()")}} {{gecko_minversion_inline("7.0")}}</dt>
+ <dt>{{domxref("FileReader.readAsArrayBuffer()")}}</dt>
  <dd>Starts reading the contents of the specified {{domxref("Blob")}}, once finished, the <code>result</code> attribute contains an {{domxref("ArrayBuffer")}} representing the file's data.</dd>
  <dt>{{domxref("FileReader.readAsBinaryString()")}}</dt>
  <dd>Starts reading the contents of the specified {{domxref("Blob")}}, once finished, the <code>result</code> attribute contains the raw binary data from the file as a string.</dd>
@@ -147,7 +145,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Using_files_from_web_applications">Using files from web applications</a></li>
+ <li><a href="/en-US/docs/Web/API/File/Using_files_from_web_applications">Using files from web applications</a></li>
  <li>{{domxref("File")}}</li>
  <li>{{domxref("Blob")}}</li>
  <li>{{domxref("FileReaderSync")}}</li>

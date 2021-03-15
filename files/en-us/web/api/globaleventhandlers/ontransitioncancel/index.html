@@ -2,14 +2,14 @@
 title: GlobalEventHandlers.ontransitioncancel
 slug: Web/API/GlobalEventHandlers/ontransitioncancel
 tags:
-- API
-- CSS Transitions
-- CSS3 Transitions
-- Event Handler
-- GlobalEventHandlers
-- Property
-- Reference
-- ontransitioncancel
+  - API
+  - CSS Transitions
+  - CSS3 Transitions
+  - Event Handler
+  - GlobalEventHandlers
+  - Property
+  - Reference
+  - ontransitioncancel
 ---
 <div>{{APIRef("CSS3 Transitions")}}</div>
 
@@ -110,12 +110,12 @@ tags:
 <p>Next, we need to establish our event handlers to change the text content of the box
   when the transition begins and ends.</p>
 
-<pre class="brush: js">let box = document.querySelector(".box");
+<pre class="brush: js">let box = document.querySelector(&quot;.box&quot;);
 box.ontransitionrun = function(event) {
-  box.textContent = "Zooming...";
+  box.textContent = &quot;Zooming...&quot;;
 }
 box.ontransitionend = function(event) {
-  box.textContent = "Done!";
+  box.textContent = &quot;Done!&quot;;
 }
 
 box.onclick = function() {
@@ -127,7 +127,7 @@ box.onclick = function() {
 }
 
 box.ontransitioncancel = function(event) {
-  console.log('transitioncancel fired after ' + event.<code>elapsedTime + ' seconds.'</code>);
+  console.log('transitioncancel fired after ' + event.elapsedTime + ' seconds.');
 }</pre>
 
 <h3 id="Result">Result</h3>

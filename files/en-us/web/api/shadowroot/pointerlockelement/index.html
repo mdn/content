@@ -1,0 +1,59 @@
+---
+title: ShadowRoot.pointerLockElement
+slug: Web/API/ShadowRoot/pointerLockElement
+tags:
+  - API
+  - DOM
+  - ShadowRoot
+  - Property
+  - Reference
+  - mouse lock
+---
+<div>{{APIRef("DOM")}}</div>
+
+<p><span class="seoSummary">The read-only <strong><code>pointerLockElement</code></strong> property
+    of the {{domxref("ShadowRoot")}} interface provides the
+    element set as the target for mouse events while the pointer is locked. It is
+    <code>null</code> if lock is pending, pointer is unlocked, or the target is in another
+    tree.</span></p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js"><var>shadowRoot</var>.pointerLockElement;</pre>
+
+<h3 id="Value">Value</h3>
+
+<p>An {{domxref("Element")}} or <code>null</code>.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: js">let customElem = document.querySelector('my-shadow-dom-element');
+let shadow = customElem.shadowRoot;
+let pleElem = shadow.pointerLockElement;</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Pointer Lock','#extensions-to-the-documentorshadowroot-mixin','pointerLockElement')}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("api.ShadowRoot.pointerLockElement")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li>{{ domxref("Document.exitPointerLock()") }}</li>
+  <li>{{ domxref("Element.requestPointerLock()") }}</li>
+  <li><a href="/en-US/docs/Web/API/Pointer_Lock_API">Pointer Lock</a></li>
+</ul>

@@ -16,7 +16,7 @@ tags:
 
 <p>A <code>PannerNode</code> always has exactly one input and one output: the input can be <em>mono</em> or <em>stereo</em> but the output is always <em>stereo</em> (2 channels); you can't have panning effects without at least two audio channels!</p>
 
-<p><img alt="The PannerNode brings a spatial position and velocity and a directionality for a given signal." src="https://mdn.mozillademos.org/files/13815/WebAudioPannerNode.png" style="display: block; height: 225px; margin: 0px auto; width: 771px;"></p>
+<p><img alt="The PannerNode brings a spatial position and velocity and a directionality for a given signal." src="webaudiopannernode.png" style="display: block; margin: 0px auto;"></p>
 
 <table class="properties">
  <tbody>
@@ -95,7 +95,7 @@ tags:
 
 <dl>
  <dt>{{domxref("PannerNode.setPosition()")}}</dt>
- <dd>Defines the position of the audio source relative to the listener (represented by an {{domxref("AudioListener")}} object stored in the {{domxref("AudioContext.listener")}} attribute.)</dd>
+ <dd>Defines the position of the audio source relative to the listener (represented by an {{domxref("AudioListener")}} object stored in the {{domxref("BaseAudioContext.listener")}} attribute.)</dd>
  <dt>{{domxref("PannerNode.setOrientation()")}}</dt>
  <dd>Defines the direction the audio source is playing in.</dd>
  <dt>{{domxref("PannerNode.setVelocity()")}} {{obsolete_inline}}</dt>
@@ -130,5 +130,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
 </ul>

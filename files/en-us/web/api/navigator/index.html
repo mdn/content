@@ -38,7 +38,7 @@ tags:
  <dt>{{domxref("NavigatorConcurrentHardware.hardwareConcurrency")}} {{readonlyInline}}</dt>
  <dd>Returns the number of logical processor cores available.</dd>
  <dt>{{domxref("NavigatorPlugins.javaEnabled")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("Boolean")}} flag indicating whether the host browser is Java-enabled or not.</dd>
+ <dd>Returns false.</dd>
  <dt>{{domxref('Navigator.keyboard')}} {{readonlyinline}} {{experimental_inline}}</dt>
  <dd>Returns a {{domxref('Keyboard')}} object which provides access to functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.</dd>
  <dt>{{domxref("NavigatorLanguage.language")}} {{readonlyInline}}</dt>
@@ -55,13 +55,13 @@ tags:
  <dd>Returns a reference to a {{domxref("MediaDevices")}} object which can then be used to get information about available media devices ({{domxref("MediaDevices.enumerateDevices()")}}), find out what constrainable properties are supported for media on the user's computer and user agent ({{domxref("MediaDevices.getSupportedConstraints()")}}), and to request access to media using {{domxref("MediaDevices.getUserMedia()")}}.</dd>
  <dt>{{domxref("Navigator.mediaSession")}} {{readonlyinline}} {{experimental_inline}}</dt>
  <dd>Returns {{domxref("MediaSession")}} object which can be used to provide metadata that can be used by the browser to present information about the currently-playing media to the user, such as in a global media controls UI.</dd>
- <dt>{{domxref("NavigatorPlugins.mimeTypes")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("NavigatorPlugins.mimeTypes")}} {{readonlyInline}}{{deprecated_inline}}</dt>
  <dd>Returns an {{domxref("MimeTypeArray")}} listing the MIME types supported by the browser.</dd>
  <dt>{{domxref("NavigatorOnLine.onLine")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("Boolean")}} indicating whether the browser is working online.</dd>
  <dt>{{domxref("Navigator.permissions")}} {{readonlyinline}} {{experimental_inline}}</dt>
  <dd>Returns a {{domxref("Permissions")}} object that can be used to query and update permission status of APIs covered by the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>.</dd>
- <dt>{{domxref("NavigatorPlugins.plugins")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("NavigatorPlugins.plugins")}} {{readonlyInline}}{{deprecated_inline}}</dt>
  <dd>Returns a {{domxref("PluginArray")}} listing the plugins installed in the browser.</dd>
  <dt>{{domxref("Navigator.presentation")}} {{readonlyInline}} {{experimental_inline}}</dt>
  <dd>Returns a reference to the {{domxref("Presentation")}} API.</dd>
@@ -117,8 +117,6 @@ tags:
  <dd>Always returns <code>'Gecko'</code>, on any browser. This property is kept only for compatibility purpose.</dd>
  <dt>{{domxref("Navigator.productSub")}} {{readonlyInline}} {{deprecated_inline}}</dt>
  <dd>Returns the build number of the current browser (e.g., "20060909").</dd>
- <dt>{{domxref("Navigator.storageQuota")}} {{readonlyinline}} {{deprecated_inline}}</dt>
- <dd>Returns a {{domxref('StorageQuota')}} interface which provides means to query and request storage usage and quota information.</dd>
  <dt>{{domxref("Navigator.vendorSub")}} {{readonlyInline}} {{deprecated_inline}}</dt>
  <dd>Returns the vendor version number (e.g. "6.1").</dd>
 </dl>

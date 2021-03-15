@@ -7,7 +7,7 @@ tags:
   - NSS
 ---
 <h2 id="Background">Background</h2>
-<p>Up to version 3.11, <a href="/en-US/NSS">NSS</a> connects directly over <a href="/en-US/HTTP">HTTP</a> to an OCSP responder to make the request and fetch the response. It does so in a blocking fashion, and also directly to the responder, ignoring any proxy the application may wish to use. This causes OCSP requests to fail if the network environment requires the use of a proxy.</p>
+<p>Up to version 3.11, <a href="/en-US/docs/Mozilla/Projects/NSS">NSS</a> connects directly over <a href="/en-US/docs/Web/HTTP">HTTP</a> to an OCSP responder to make the request and fetch the response. It does so in a blocking fashion, and also directly to the responder, ignoring any proxy the application may wish to use. This causes OCSP requests to fail if the network environment requires the use of a proxy.</p>
 <p>There are two possible solutions to this limitation. Instead of improving the simple HTTP client in NSS, the NSS team has decided to provide an NSS API to register application callback functions. If provided by the application, NSS will use the registered HTTP client for querying an OSCP responder.</p>
 <p>This NSS feature is currently targeted to first appear in NSS version 3.11.1. More details can be found in {{ Bug(152426) }}.</p>
 <p>In order to use the HTTP Delegation feature in your NSS-based application, you need to implement several callback functions. Your callback functions might be a full implementation of a HTTP client. Or you might choose to leverage an existing HTTP client library and implement the callback functions as a thin layer that forwards requests from NSS to the HTTP client library.</p>

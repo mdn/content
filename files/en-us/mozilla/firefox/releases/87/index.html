@@ -15,9 +15,8 @@ tags:
 
 <h3 id="Developer_Tools">Developer Tools</h3>
 
-
-
 <ul>
+  <li>Developers can now use the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#view_media_rules_for_prefers-color-scheme">Page Inspector</a> to simulate {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} media queries, without having to change the operating system to light or dark mode ({{bug(1679408)}} and {{bug(1692272)}}).</li>
   <li>Developers can now use the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#viewing_common_pseudo-classes">Page Inspector</a> to toggle the {{cssxref(":target")}} pseudo-class for the currently selected element (in addition to the pseudo-classes that were previously supported: {{cssxref(":hover")}}, {{cssxref(":active")}} and {{cssxref(":focus")}}, {{cssxref(":focus-within")}}, {{cssxref(":focus-visible")}}, and {{cssxref(":visited")}}). ({{bug(1689899)}}).</li>
   <li>Firefox <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#rule_display">Page Inspector</a> improvements and bug fixes related to inactive CSS rules:
     <ul>
@@ -68,6 +67,10 @@ tags:
 <h3 id="APIs">APIs</h3>
 
 <h4 id="DOM">DOM</h4>
+
+<ul>
+  <li>The {{domxref("HTMLElement.beforeinput_event", "beforeinput")}} event and {{domxref('InputEvent.getTargetRanges()', 'getTargetRanges()')}} method are now enabled by default. They allow web apps to override text edit behavior before the browser modifies the DOM tree, and provide more control over input events to improve performance. The global {{domxref("HTMLElement.beforeinput_event", "beforeinput")}} event is sent to an {{HTMLElement("input")}} element — or any element whose {{htmlattrxref("contenteditable")}} attribute is enabled — immediately before the element's value changes. The {{domxref('InputEvent.getTargetRanges()', 'getTargetRanges()')}} method of the {{domxref("InputEvent")}} interface returns an array of static ranges that will be affected by a change to the DOM if the input event is not canceled.</li>
+</ul>
 
 <h4 id="Media_WebRTC_and_Web_Audio">Media, WebRTC, and Web Audio</h4>
 
