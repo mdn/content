@@ -23,9 +23,9 @@ tags:
 <p><em>This interface also inherits the properties of its parent, {{domxref("Event")}}.</em></p>
 
 <dl>
- <dt>{{domxref("HashChangeEvent.newURL")}} {{readonlyInline}} {{gecko_minversion_inline("6.0")}}</dt>
+ <dt>{{domxref("HashChangeEvent.newURL")}} {{readonlyInline}}</dt>
  <dd>The new URL to which the window is navigating.</dd>
- <dt>{{domxref("HashChangeEvent.oldURL")}} {{readonlyInline}} {{gecko_minversion_inline("6.0")}}</dt>
+ <dt>{{domxref("HashChangeEvent.oldURL")}} {{readonlyInline}}</dt>
  <dd>The previous URL from which the window was navigated.</dd>
 </dl>
 
@@ -65,7 +65,7 @@ window.addEventListener('hashchange', locationHashChanged);
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>There are several fallback scripts listed on the <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">Modernizr GitHub page</a>. Basically, those scripts check the {{domxref("HTMLHyperlinkElementUtils.hash", "location.hash")}} at a regular interval. Here is a version that allows only one handler to be bound to the {{domxref("WindowEventHandlers.onhashchange", "onhashchange")}} property:</p>
+<p>There are several fallback scripts listed on the <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">Modernizr GitHub page</a>. Basically, those scripts check the <code>hash</code> property of {{domxref("Window.location")}} at a regular interval. Here is a version that allows only one handler to be bound to the {{domxref("WindowEventHandlers.onhashchange", "onhashchange")}} property:</p>
 
 <pre class="brush: js">;(function(window) {
 

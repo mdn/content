@@ -21,7 +21,7 @@ tags:
 
 <p>As time passed, of course, we know that computers have evolved into powerful multi-core systems, and JavaScript has become one of the most prolifically-used languages in the computing world. A vast number of the most popular applications are based at least in part on JavaScript code. To support this, it was necessary to find ways to allow for projects to escape the limitations of a single-threaded language.</p>
 
-<p>Starting with the addition of timeouts and intervals as part of the Web API ({{domxref("window.setTimeout", "setTimeout()")}} and {{domxref("window.setInterval", "setInterval()")}}), the JavaScript environment provided by Web browsers has gradually advanced to include powerful features that enable scheduling of tasks, multi-threaded application development, and so forth. To understand where <code>queueMicrotask()</code> comes into play here, it's helpful to understand how the JavaScript runtime operates when scheduling and running code.</p>
+<p>Starting with the addition of timeouts and intervals as part of the Web API ({{domxref("WindowOrWorkerGlobalScope/setTimeout", "setTimeout()")}} and {{domxref("WindowOrWorkerGlobalScope/setInterval", "setInterval()")}}), the JavaScript environment provided by Web browsers has gradually advanced to include powerful features that enable scheduling of tasks, multi-threaded application development, and so forth. To understand where <code>queueMicrotask()</code> comes into play here, it's helpful to understand how the JavaScript runtime operates when scheduling and running code.</p>
 
 <h2 id="JavaScript_execution_contexts">JavaScript execution contexts</h2>
 
@@ -141,7 +141,7 @@ greetUser("Veronica");</pre>
 
 <h4 id="Tasks_vs_microtasks">Tasks vs microtasks</h4>
 
-<p>A <strong>task</strong> is any JavaScript scheduled to be run by the standard mechanisms such as initially starting to execute a program, an event triggering a callback, and so forth. Other than by using events, you can enqueue a task by using {{domxref("window.setTimeout", "setTimeout()")}} or {{domxref("window.setInterval", "setInterval()")}}<strong>.</strong></p>
+<p>A <strong>task</strong> is any JavaScript scheduled to be run by the standard mechanisms such as initially starting to execute a program, an event triggering a callback, and so forth. Other than by using events, you can enqueue a task by using {{domxref("WindowOrWorkerGlobalScope/setTimeout", "setTimeout()")}} or {{domxref("WindowOrWorkerGlobalScope/setInterval", "setInterval()")}}<strong>.</strong></p>
 
 <p>The difference between the task queue and the microtask queue is simple but very important:</p>
 
