@@ -16,7 +16,7 @@ tags:
 <p>The Sensor APIs are a set of interfaces built to a common design that expose device sensors in a consistent way to the web platform.</p>
 </div>
 
-<h2 id="Sensor_APIs_Concepts_and_Usage">Sensor APIs Concepts and Usage</h2>
+<h2 id="Sensor_APIs_Concepts_and_Usage">Sensor APIs concepts and usage</h2>
 
 <p>Although the Generic Sensor API specification defines a {{domxref('Sensor')}} interface, as a web developer you will never use it. Instead you'll use one of its subclasses to retrieve specific kinds of sensor data. For example, the {{domxref('accelerometer')}} interface returns the acceleration of the device along all three axes at the time it is read.</p>
 
@@ -42,7 +42,7 @@ if (window.AmbientLightSensor) {
     // go dark...
 }</pre>
 
-<h3 id="Defensive_Programming">Defensive Programming</h3>
+<h3 id="defensive_programming">Defensive programming</h3>
 
 <p>As stated in Feature Detection, checking for a particular sensor API is insufficient for feature detection. The existence of an actual sensor must be confirmed as well. This is where defensive programming is needed. Defensive programming requires three strategies.</p>
 
