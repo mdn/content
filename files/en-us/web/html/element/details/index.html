@@ -13,9 +13,9 @@ tags:
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">The <strong>HTML Details Element (<code>&lt;details&gt;</code>)</strong> creates a disclosure widget in which information is visible only when the widget is toggled into an "open" state.</span> A summary or label can be provided using the {{HTMLElement("summary")}} element.</p>
+<p><span class="seoSummary">The <strong>HTML Details Element (<code>&lt;details&gt;</code>)</strong> creates a disclosure widget in which information is visible only when the widget is toggled into an "open" state.</span> A summary or label must be provided using the {{HTMLElement("summary")}} element.</p>
 
-<p>A disclosure widget is typically presented onscreen using a small triangle which rotates (or twists) to indicate open/closed status, with a label next to the triangle. If the first child of the <code>&lt;details&gt;</code> element is a <code>&lt;summary&gt;</code>, the contents of the <code>&lt;summary&gt;</code> element are used as the label for the disclosure widget.</p>
+<p>A disclosure widget is typically presented onscreen using a small triangle which rotates (or twists) to indicate open/closed status, with a label next to the triangle. The contents of the <code>&lt;summary&gt;</code> element are used as the label for the disclosure widget.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/details.html", "tabbed-shorter")}}</div>
 
@@ -84,7 +84,7 @@ tags:
  <dt>{{htmlattrdef("open")}}</dt>
  <dd>
  <p>This Boolean attribute indicates whether or not the details — that is, the contents of the <code>&lt;details&gt;</code> element — are currently visible. The details are shown when this attribute exists, or hidden when this attribute is absent. By default this attribute is absent which means the details are not visible. </p>
- 
+
  <p class="note"><strong>Note:</strong> You have to remove this attribute entirely to make the details hidden. <code>open="false"</code> makes the details visible because this attribute is Boolean.</p>
 </dd>
 </dl>
@@ -105,24 +105,9 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="A_simple_disclosure_example">A simple disclosure example</h3>
+<h3>A simple disclosure example</h3>
 
-<p>This example shows a <code>&lt;details&gt;</code> element with no provided summary.</p>
-
-<pre class="brush: html">&lt;details&gt;
-  &lt;p&gt;Requires a computer running an operating system. The computer
-  must have some memory and ideally some kind of long-term storage.
-  An input device as well as some form of output device is
-  recommended.&lt;/p&gt;
-&lt;/details&gt;</pre>
-
-<p>In this situation, the browser will use a default summary string (usually "Details"). Here's what your browser does with it:</p>
-
-<p>{{EmbedLiveSample("A_simple_disclosure_example", 650, 150)}}</p>
-
-<h3 id="Providing_a_summary">Providing a summary</h3>
-
-<p>This example adds a summary to the above example by using the {{HTMLElement("summary")}} element inside <code>&lt;details&gt;</code>, like this:</p>
+<p>This example shows a simple <code>&lt;details&gt;</code> element with a <code>&lt;summary&gt;</code>.
 
 <pre class="brush: html">&lt;details&gt;
   &lt;summary&gt;System Requirements&lt;/summary&gt;
@@ -132,9 +117,24 @@ tags:
   recommended.&lt;/p&gt;
 &lt;/details&gt;</pre>
 
-<p>The result from this HTML is this:</p>
+<p>The result of this HTML is:</p>
 
-<p>{{EmbedLiveSample("Providing_a_summary", 650, 150)}}</p>
+<p>{{EmbedLiveSample("A_simple_disclosure_example", 650, 150)}}</p>
+
+<h3>Omitting the summary</h3>
+
+<p>If the <code>&lt;summary&gt;</code> element is omitted, then the browser will provide a default summary string (usually "Details"). Note that the <code>&lt;summary&gt;</code> is required by the spec, so this code is not valid HTML.</p>
+
+<pre class="brush: html">&lt;details&gt;
+  &lt;p&gt;Requires a computer running an operating system. The computer
+  must have some memory and ideally some kind of long-term storage.
+  An input device as well as some form of output device is
+  recommended.&lt;/p&gt;
+&lt;/details&gt;</pre>
+
+<p>The result of this HTML is:</p>
+
+<p>{{EmbedLiveSample("Omitting_the_summary", 650, 150)}}</p>
 
 <h3 id="Creating_an_open_disclosure_box">Creating an open disclosure box</h3>
 
