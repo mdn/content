@@ -12,7 +12,7 @@ on:
 jobs:
   triage:
     # This make sure it only runs on our origin repo
-    if: github.repository == 'mdn/content'
+    if: github.repository_ownert == 'mdn'
     runs-on: ubuntu-latest
     steps:
       - name: Stop anything and everything
