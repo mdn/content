@@ -57,7 +57,7 @@ jobs:
           # this to "*:error" which means the slightest flaw in the build
           # will break the build.
           # See https://github.com/mdn/yari/issues/715
-          export BUILD_FLAW_LEVELS="*:ignore"
+          export BUILD_FLAW_LEVELS="unsafe_html: error, *:ignore"
 
           # Note, it might be interesting to explore building *some*
           # pages in a PR build if the diff doesn't have any index.html
