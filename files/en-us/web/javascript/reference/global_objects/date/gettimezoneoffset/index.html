@@ -28,7 +28,7 @@ tags:
 
 <h3>Negative values and positive values</h3>
 
-<p>The number of minutes returned by <code>getTimezoneOffset()</code> is positive if the local time zone is behind UTC, and negative if the local time zone is ahead of UTC. For example, for UTC+10, <code>-600</code> will be returned.</li>
+<p>The number of minutes returned by <code>getTimezoneOffset()</code> is positive if the local time zone is behind UTC, and negative if the local time zone is ahead of UTC. For example, for UTC+10, <code>-600</code> will be returned.</p>
 
 <table class="standard-table">
  <thead>
@@ -52,7 +52,7 @@ tags:
 <h3>Varied results in Daylight Saving Time (DST) time zones</h3>
 
 <p>In a time zone that annually shifts in and out of Daylight Saving Time (DST), the number of minutes returned by calling <code>getTimezoneOffset()</code> can vary.</p>
-<p>Consider a given local time zone and a date <var>date1</var> that are both in DST, and consider <var>minutes</var>, the number of minutes returned by calling <code><var>date1</var>.getTimezoneOffset()</code>; then:</li>
+<p>Consider a given local time zone and a date <var>date1</var> that are both in DST, and consider <var>minutes</var>, the number of minutes returned by calling <code><var>date1</var>.getTimezoneOffset()</code>; then:</p>
 
 <ul>
  <li>If the local time zone is currently in DST, but a given date <var>date2</var> is <em>not</em> in DST, then the number of minutes returned by <code><var>date2</var>.getTimezoneOffset()</code> is <var>minutes</var> ± 60.</li>
