@@ -18,5 +18,7 @@ jobs:
       - name: Stop anything and everything
         run: |
           echo "Any PR that edits these files should break the build and expect admin overrides"
+          echo "Owner?"
+          echo ${{ github.repository_owner }}
           echo ${{ github.event.pull_request }}
           exit 1
