@@ -22,7 +22,7 @@ tags:
 
 <p>Sensors may or may not correspond exactly to a physical device sensor. For example, the {{domxref('Gyroscope')}} interface corresponds exactly to a physical device interface. Alternatively, the {{domxref('AbsoluteOrientationSensor')}} interface provides information that is algorithmically agregated from two or more device sensors. These sensor types are referred to as <em>low-level</em> and <em>high-level</em> respectively. The latter type of sensor is also called a fusion sensor (alternatively, virtual or synthetic sensors).</p>
 
-<h3 id="feature_detection">Feature Detection</h3>
+<h3 id="feature_detection">Feature detection</h3>
 
 <p>Sensor interfaces are only proxies for the underlying device sensors. Consequently, feature detection is more complicated for sensors than it is for other APIs. The presence of a sensor API does not tell you whether that API is connected to a real hardware sensor, whether that sensor works, if it's still connected, or even whether the user has granted access to it. Making all this information consistently available is costly to performance and battery life.</p>
 
