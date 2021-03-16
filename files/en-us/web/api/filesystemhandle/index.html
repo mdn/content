@@ -10,19 +10,19 @@ tags:
   - handle
   - working with files
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}</div>
+<div>{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}</div>
 
-<p class="summary">The <strong><code>FileSystemHandle</code></strong> interface of the {{domxref('File System Access API')}} is an object which represents an entry. Multiple handles can represent the same entry. For the most part you do not work with <code>FileSystemEntry</code> directly but rather it's child interfaces {{domxref('FileSystemFileEntry')}} and {{domxref('FileSystemDirectoryEntry')}}</p>
+<p class="summary">The <strong><code>FileSystemHandle</code></strong> interface of the {{domxref('File System Access API')}} is an object which represents a file or directory entry. Multiple handles can represent the same entry. For the most part you do not work with <code>FileSystemHandle</code> directly but rather its child interfaces {{domxref('FileSystemFileHandle')}} and {{domxref('FileSystemDirectoryHandle')}}.</p>
 
 <h2 id="Interfaces_based_on_FileSystemHandle">Interfaces based on FileSystemHandle</h2>
 
 <p>Below is a list of interfaces based on the FileSystemHandle interface.</p>
 
 <dl>
- <dt>{{domxref("FileSystemFileEntry")}}</dt>
- <dd>Represents a handle to a file system entry.</dd>
- <dt>{{domxref("FileSystemDirectoryEntry")}}</dt>
- <dd>Provides a handle to a file system directory.</dd>
+ <dt>{{domxref("FileSystemFileHandle")}}</dt>
+ <dd>Represents a handle to a file entry.</dd>
+ <dt>{{domxref("FileSystemDirectoryHandle")}}</dt>
+ <dd>Provides a handle to a directory entry.</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>
