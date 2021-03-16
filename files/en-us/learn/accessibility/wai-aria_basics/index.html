@@ -382,7 +382,7 @@ tags:
 <p>The new features are as follows:</p>
 
 <ul>
- <li>New roles — <code><a href="https://www.w3.org/TR/wai-aria-1.1/#tablist">tablist</a></code>, <code><a href="https://www.w3.org/TR/wai-aria-1.1/#tab">tab</a></code>, <code><a href="https://www.w3.org/TR/wai-aria-1.1/#tabpanel">tabpanel</a></code> — these identify the important areas of the tabbed interface — the container for the tabs, the tabs themselves, and the corresponding tabpanels.</li>
+ <li>New roles — <code><a href="https://www.w3.org/TR/wai-aria-1.1/#tablist">tablist</a></code>, <code><a href="https://www.w3.org/TR/wai-aria-1.1/#tab">tab</a></code>, <code><a href="https://www.w3.org/TR/wai-aria-1.1/#tabpanel">tabpanel</a></code> — these identify the important areas of the tabbed interface — the container for the tabs (<em>or the container used for referencing the tabs</em>), the tabs themselves, and the corresponding tabpanels.</li>
  <li><code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-selected">aria-selected</a></code> — Defines which tab is currently selected. As different tabs are selected by the user, the value of this attribute on the different tabs is updated via JavaScript.</li>
  <li><code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-hidden">aria-hidden</a></code> — Hides an element from being read out by a screenreader. As different tabs are selected by the user, the value of this attribute on the different tabs is updated via JavaScript.</li>
  <li><code>tabindex="0"</code> — As we've removed the links, we need to give the list items this attribute to provide it with keyboard focus.</li>
@@ -391,6 +391,23 @@ tags:
 </ul>
 
 <p>In our tests, this new structure did serve to improve things overall. The tabs are now recognized as tabs (e.g. "tab" is spoken by the screenreader), the selected tab is indicated by "selected" being read out with the tab name, and the screenreader also tells you which tab number you are currently on. In addition, because of the <code>aria-hidden</code> settings (only the non-hidden tab ever has <code>aria-hidden="false"</code> set), the non-hidden content is the only one you can navigate down to, meaning the selected content is easier to find.</p>
+
+<p>The above example uses <em>list items</em> to create the tabs but a <code><a href="https://www.w3.org/TR/wai-aria-1.1/#tablist">tablist</a></code> <em>can be empty</em>. In this case, in lieu of list items, the <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-owns">aria-owns</a></code> attribute is used to create an explicit relationship between the tabs and the corresponding tabpanels — as shown below:</p>
+
+<pre class="brush: html">&lt;div role="tablist" aria-owns="tab-1 tab-2 tab-3"&gt;&lt;/div&gt;
+&lt;h2 id="tab-1" role="tab" aria-selected="true" aria-controls="panel-1" tabindex="0"&gt;Tab 1&lt;/h2&gt;
+&lt;div id="panel-1" role="tabpanel" aria-labelledby="tab-1"&gt;
+  ...
+&lt;/div&gt;
+&lt;h2 id="tab-2" role="tab" aria-selected="false" aria-controls="panel-2" tabindex="-1"&gt;Tab 2&lt;/h2&gt;
+&lt;div id="panel-2" role="tabpanel" aria-labelledby="tab-2" hidden&gt;
+  ...
+&lt;/div&gt;
+&lt;h2 id="tab-3" role="tab" aria-selected="false" aria-controls="panel-3" tabindex="-1"&gt;Tab 3&lt;/h2&gt;
+&lt;div id="panel-3" role="tabpanel" aria-labelledby="tab-3" hidden&gt;
+  ...
+&lt;/div&gt;</pre>
+
 
 <div class="note">
 <p><strong>Note</strong>: If there is anything you explicitly don't want screen readers to read out, you can give them the <code>aria-hidden="true"</code>  attribute.</p>
