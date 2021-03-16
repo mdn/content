@@ -42,6 +42,23 @@ tags:
 <h4 id="Removals_3">Removals</h4>
 
 <ul>
+  <li>The following Firefox-specific theme-related media features have been disabled for use in web pages ({{bug(787521)}}):
+    <ul>
+      <li><code>-moz-mac-graphite-theme</code></li>
+      <li><code>-moz-mac-lion-theme</code></li>
+      <li><code>-moz-maemo-classic</code></li>
+      <li><code>-moz-windows-classic</code></li>
+      <li><code>-moz-windows-compositor</code></li>
+      <li><code>-moz-windows-default-theme</code></li>
+      <li><code>-moz-windows-theme</code></li>
+      <li><code>-moz-scrollbar-end-backward</code></li>
+      <li><code>-moz-scrollbar-end-forward</code></li>
+      <li><code>-moz-scrollbar-start-backward</code></li>
+      <li><code>-moz-scrollbar-start-forward</code></li>
+      <li><code>-moz-scrollbar-thumb-proportional</code></li>
+      <li><code>-moz-menubar-drag</code></li>
+    </ul>
+  </li>
   <li>The non-standard values of {{cssxref("caption-side")}} (<code>left</code>, <code>right</code>, <code>top-outside</code>, and <code>bottom-outside</code>) have been removed and placed behind the <code>layout.css.caption-side-non-standard.enabled</code> flag ({{bug(1688695)}}).</li>
   <li>The {{HTMLElement("link")}} element is no longer matched by {{cssxref(":link")}}, {{cssxref(":visited")}}, or {{cssxref(":any-link")}}. This aligns the behavior in Firefox to existing behavior in Chrome and to a recent spec change ({{bug(1687538)}}).</li>
 </ul>
