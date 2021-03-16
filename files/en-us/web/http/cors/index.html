@@ -85,7 +85,7 @@ tags:
    <li><code>text/plain</code></li>
   </ul>
  </li>
- <li>No event listeners are registered on any {{domxref("XMLHttpRequest.upload")}} object used in the request; these are accessed using the {{domxref("XMLHttpRequest.upload")}} property.</li>
+ <li>If the request is made using an {{domxref("XMLHttpRequest")}} object, no event listeners are registered on the object returned by the {{domxref("XMLHttpRequest.upload")}} property used in the request; that is, given an {{domxref("XMLHttpRequest")}} instance <code>xhr</code>, no code has called <code>xhr.upload.addEventListener()</code> to add an event listener to monitor the upload.</li>
  <li>No {{domxref("ReadableStream")}} object is used in the request.</li>
 </ul>
 

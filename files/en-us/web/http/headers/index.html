@@ -13,7 +13,7 @@ tags:
 
 <p><span class="seoSummary"><strong>HTTP headers</strong> let the client and the server pass additional information with an HTTP request or response. An HTTP header consists of its case-insensitive name followed by a colon (<code>:</code>), then by its value.</span> {{Glossary("Whitespace")}} before the value is ignored.</p>
 
-<p>Custom proprietary headers have historically been used with an <code>X-</code> prefix, but this convention was deprecated in June 2012 because of the inconveniences it caused when nonstandard fields became standard in <a href="https://tools.ietf.org/html/rfc6648">RFC 6648</a>; others are listed in an <a href="http://www.iana.org/assignments/message-headers/perm-headers.html">IANA registry</a>, whose original content was defined in <a href="https://tools.ietf.org/html/rfc4229">RFC 4229</a>. IANA also maintains a <a href="http://www.iana.org/assignments/message-headers/prov-headers.html">registry of proposed new HTTP headers</a>.</p>
+<p>Custom proprietary headers have historically been used with an <code>X-</code> prefix, but this convention was deprecated in June 2012 because of the inconveniences it caused when nonstandard fields became standard in <a href="https://datatracker.ietf.org/doc/html/rfc6648">RFC 6648</a>; others are listed in an <a href="http://www.iana.org/assignments/message-headers/perm-headers.html">IANA registry</a>, whose original content was defined in <a href="https://datatracker.ietf.org/doc/html/rfc4229">RFC 4229</a>. IANA also maintains a <a href="http://www.iana.org/assignments/message-headers/prov-headers.html">registry of proposed new HTTP headers</a>.</p>
 
 <p>Headers can be grouped according to their contexts:</p>
 
@@ -77,13 +77,13 @@ tags:
 <h2 id="Client_hints">Client hints</h2>
 
 <p>HTTP {{Glossary("Client_hints", "Client hints")}} are a set of request headers that provide useful information about the client such as device type and network conditions, and allow the server to optimize what it serves for those conditions 
-  (<a href="https://tools.ietf.org/html/rfc8942"><cite>[RFC8942]</cite></a>).</p>
+  (<a href="https://datatracker.ietf.org/doc/html/rfc8942"><cite>[RFC8942]</cite></a>).</p>
 
 <dl>
  <dt>{{HTTPHeader("Accept-CH")}} {{experimental_inline}}</dt>
  <dd>Servers can advertise support for Client Hints using the <code>Accept-CH</code> header field or an equivalent HTML <code>&lt;meta&gt;</code> element with <code>http-equiv</code> attribute (<a href="https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-http-equiv"><cite>[HTML]</cite></a>).</dd>
  <dt>{{HTTPHeader("Accept-CH-Lifetime")}} {{experimental_inline}}</dt>
- <dd>Servers can ask the client to remember the set of Client Hints that the server supports for a specified period of time, to enable delivery of Client Hints on subsequent requests to the server’s origin (<a href="https://tools.ietf.org/html/rfc6454"><cite>[RFC6454]</cite></a>).</dd>
+ <dd>Servers can ask the client to remember the set of Client Hints that the server supports for a specified period of time, to enable delivery of Client Hints on subsequent requests to the server’s origin (<a href="https://datatracker.ietf.org/doc/html/rfc6454"><cite>[RFC6454]</cite></a>).</dd>
  <dt>{{HTTPHeader("Early-Data")}} {{experimental_inline}}</dt>
  <dd>Indicates that the request has been conveyed in early data.</dd>
  <dt>{{HTTPHeader("Device-Memory")}} {{experimental_inline}}</dt>
@@ -398,7 +398,7 @@ tags:
 
 <dl>
  <dt>{{HTTPHeader("Accept-Push-Policy")}} {{experimental_inline}}</dt>
- <dd>A client can express the desired push policy for a request by sending an <code><a href="https://tools.ietf.org/html/draft-ruellan-http-accept-push-policy-00#section-3.1">Accept-Push-Policy</a></code> header field in the request.</dd>
+ <dd>A client can express the desired push policy for a request by sending an <code><a href="https://datatracker.ietf.org/doc/html/draft-ruellan-http-accept-push-policy-00#section-3.1">Accept-Push-Policy</a></code> header field in the request.</dd>
  <dt>{{HTTPHeader("Accept-Signature")}} {{experimental_inline}}</dt>
  <dd>A client can send the <code><a href="https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#rfc.section.3.7">Accept-Signature</a></code> header field to indicate intention to take advantage of any available signatures and to indicate what kinds of signatures it supports.</dd>
  <dt>{{HTTPHeader("Alt-Svc")}}</dt>
@@ -408,9 +408,9 @@ tags:
  <dt>{{HTTPHeader("Large-Allocation")}}</dt>
  <dd>Tells the browser that the page being loaded is going to want to perform a large allocation.</dd>
  <dt>{{HTTPHeader("Link")}}</dt>
- <dd>The <code><a href="https://tools.ietf.org/html/rfc5988#section-5">Link</a></code> entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML {{HTMLElement("link")}} element.</dd>
+ <dd>The <code><a href="https://datatracker.ietf.org/doc/html/rfc5988#section-5">Link</a></code> entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML {{HTMLElement("link")}} element.</dd>
  <dt>{{HTTPHeader("Push-Policy")}} {{experimental_inline}}</dt>
- <dd>A <code><a href="https://tools.ietf.org/html/draft-ruellan-http-accept-push-policy-00#section-3.2">Push-Policy</a></code> defines the server behavior regarding push when processing a request.</dd>
+ <dd>A <code><a href="https://datatracker.ietf.org/doc/html/draft-ruellan-http-accept-push-policy-00#section-3.2">Push-Policy</a></code> defines the server behavior regarding push when processing a request.</dd>
  <dt>{{HTTPHeader("Retry-After")}}</dt>
  <dd>Indicates how long the user agent should wait before making a follow-up request.</dd>
  <dt>{{HTTPHeader("Signature")}} {{experimental_inline}}</dt>
@@ -424,7 +424,7 @@ tags:
  <dt>{{HTTPHeader("SourceMap")}}</dt>
  <dd>Links generated code to a <a href="/en-US/docs/Tools/Debugger/How_to/Use_a_source_map">source map</a>.</dd>
  <dt>{{HTTPHeader("Upgrade")}}</dt>
- <dd>The relevant RFC document for the <a href="https://tools.ietf.org/html/rfc7230#section-6.7">Upgrade header field is RFC 7230, section 6.7</a>. The standard establishes rules for upgrading or changing to a different protocol on the current client, server, transport protocol connection. For example, this header standard allows a client to change from HTTP 1.1 to HTTP 2.0, assuming the server decides to acknowledge and implement the Upgrade header field. Neither party is required to accept the terms specified in the Upgrade header field. It can be used in both client and server headers. If the Upgrade header field is specified, then the sender MUST also send the Connection header field with the upgrade option specified. For details on the Connection header field <a href="https://tools.ietf.org/html/rfc7230#section-6.1">please see section 6.1 of the aforementioned RFC</a>.</dd>
+ <dd>The relevant RFC document for the <a href="https://datatracker.ietf.org/doc/html/rfc7230#section-6.7">Upgrade header field is RFC 7230, section 6.7</a>. The standard establishes rules for upgrading or changing to a different protocol on the current client, server, transport protocol connection. For example, this header standard allows a client to change from HTTP 1.1 to HTTP 2.0, assuming the server decides to acknowledge and implement the Upgrade header field. Neither party is required to accept the terms specified in the Upgrade header field. It can be used in both client and server headers. If the Upgrade header field is specified, then the sender MUST also send the Connection header field with the upgrade option specified. For details on the Connection header field <a href="https://datatracker.ietf.org/doc/html/rfc7230#section-6.1">please see section 6.1 of the aforementioned RFC</a>.</dd>
  <dt>{{HTTPHeader("X-DNS-Prefetch-Control")}}</dt>
  <dd>Controls DNS prefetching, a feature by which browsers proactively perform domain name resolution on both links that the user may choose to follow as well as URLs for items referenced by the document, including images, CSS, JavaScript, and so forth.</dd>
  <dt>{{HTTPHeader("X-Firefox-Spdy")}} {{deprecated_inline}} {{non-standard_inline}}</dt>

@@ -7,6 +7,8 @@ tags:
   - CSS Grids
   - Guide
 ---
+<div>{{CSSRef}}</div>
+
 <p>Those of us who have been doing web development for more years than we care to remember might consider that CSS Grid is a little bit like using “tables for layout”. Back in the early days of web design, the way we constructed page layout was to use HTML tables, then fragment our design into the cells of those tables in order to create a layout. This had some advantages over the “CSS Positioning” that came afterwards, in that we could take advantage of the alignment and full height columns offered by table display. The biggest downside however was that it tied our design to the mark-up, often creating accessibility issues as it did so. In order to lay the design out in the table we often broke up the content in ways that made no sense at all when read out by a screen reader for example.</p>
 
 <p>In moving to CSS we often spoke about CSS for layout enabling a separation of content and markup and presentation. The ultimate aim being that we could create a semantic and well structured document, then apply CSS to create the layout we desired. Sites such as the <a href="http://www.csszengarden.com/">CSS Zen Garden</a> showcased this ability. The CSS Zen Garden challenged us to take identical markup and create a unique design using CSS.</p>
@@ -114,65 +116,3 @@ tags:
 
 <p>As a way to start thinking about these issues, as you use CSS Grid Layout I would suggest reading <em><a href="http://tink.uk/flexbox-the-keyboard-navigation-disconnect/">Flexbox &amp; the Keyboard Navigation Disconnect</a></em> from Léonie Watson. Also <a href="https://www.youtube.com/watch?v=spxT2CmHoPk">the video of Léonie’s presentation from ffconf</a> is helpful to understand more about how screen readers work with the visual representation of things in CSS. Adrian Roselli has also posted regarding <a href="http://adrianroselli.com/2015/10/html-source-order-vs-css-display-order.html">tab order in various browsers</a> – although this was prior to grid support being fully implemented in Firefox.</p>
 
-<section id="Quick_links">
-<ol>
- <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
- <li data-default-state="open"><a href="#"><strong>Guides</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basics concepts of grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship to other layout methods</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Grids, logical values and writing modes</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid">Subgrid</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout">Masonry layout</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Properties</strong></a>
-  <ol>
-   <li><code><a href="/en-US/docs/Web/CSS/align-tracks">align-tracks</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/column-gap">column-gap</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/gap">gap</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid">grid</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/justify-tracks">justify-tracks</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/masonry-auto-flow">masonry-auto-flow</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/row-gap">row-gap</a></code></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Glossary</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Glossary/Grid">Grid</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_lines">Grid lines</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_tracks">Grid tracks</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_cell">Grid cell</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_areas">Grid areas</a></li>
-   <li><a href="/en-US/docs/Glossary/Gutters">Gutters</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_Axis">Grid Axis</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_rows">Grid row</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_column">Grid column</a></li>
-  </ol>
- </li>
-</ol>
-</section>

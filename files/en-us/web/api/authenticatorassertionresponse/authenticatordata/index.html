@@ -38,7 +38,7 @@ tags:
    <li><strong>AAGUID</strong> (16 bytes) - Authenticator Attestation Globally Unique Identifier, a unique number that identifies the model of the authenticator (not the specific instance of the authenticator) so that a relying party can understand the characteristics of the authenticator by looking up its metadata statement.</li>
    <li><strong><dfn>credentialIdLength</dfn></strong> (2 bytes) - The length of the credential ID that immediately follows these bytes.</li>
    <li><strong><dfn>credentialId</dfn></strong> (variable length) - A unique identifier for this credential so that it can be requested for future authentications. The credential is "<dfn>credentialIdLength</dfn>" bytes long.</li>
-   <li><dfn><strong>credentialPublicKey</strong> (variable length) - </dfn>A <a href="https://tools.ietf.org/html/rfc8152">COSE</a> encoded public key. This public key will be stored on the server associated with a user's account and be used for future authentications.</li>
+   <li><dfn><strong>credentialPublicKey</strong> (variable length) - </dfn>A <a href="https://datatracker.ietf.org/doc/html/rfc8152">COSE</a> encoded public key. This public key will be stored on the server associated with a user's account and be used for future authentications.</li>
   </ul>
  </li>
  <li><strong>extensions</strong> (variable length) - An optional <a href="/en-US/docs/">CBOR</a> map of extensions.</li>

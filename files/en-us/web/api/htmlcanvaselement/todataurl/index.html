@@ -2,23 +2,23 @@
 title: HTMLCanvasElement.toDataURL()
 slug: Web/API/HTMLCanvasElement/toDataURL
 tags:
-- API
-- Canvas
-- HTMLCanvasElement
-- Method
-- Reference
+  - API
+  - Canvas
+  - HTMLCanvasElement
+  - Method
+  - Reference
 ---
 <div>{{APIRef("Canvas API")}}</div>
 
 <p>The <strong><code>HTMLCanvasElement.toDataURL()</code></strong> method returns a <a
-    href="/en-US/docs/Web/HTTP/data_URIs">data URI</a> containing a representation of the
+    href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">data URI</a> containing a representation of the
   image in the format specified by the <code>type</code> parameter (defaults to <a
     href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a>). The returned
   image is in a resolution of 96 dpi.</p>
 
 <ul>
   <li>If the height or width of the canvas is <code>0</code> or larger than the <a
-      href="/en-US/docs/Web/HTML/Element/canvas#Maximum_canvas_size">maximum canvas
+      href="/en-US/docs/Web/HTML/Element/canvas#maximum_canvas_size">maximum canvas
       size</a>, the string <code>"data:,"</code> is returned.</li>
   <li>If the requested type is not <code>image/png</code>, but the returned value starts
     with <code>data:image/png</code>, then the requested type is not supported.</li>
@@ -47,7 +47,7 @@ tags:
 <h3 id="Return_value">Return value</h3>
 
 <p>A {{domxref("DOMString")}} containing the requested <a
-    href="/en-US/docs/Web/HTTP/data_URIs">data URI</a>.</p>
+    href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">data URI</a>.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
@@ -174,6 +174,6 @@ function removeColors() {
 
 <ul>
   <li>The interface defining it, {{domxref("HTMLCanvasElement")}}.</li>
-  <li><a href="/en-US/docs/Web/HTTP/data_URIs">Data URIs</a> in the <a
+  <li><a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">Data URIs</a> in the <a
       href="/en-US/docs/Web/HTTP">HTTP</a> reference.</li>
 </ul>

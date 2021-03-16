@@ -349,7 +349,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
 
 <p>The example below sends the <code>X-Frame-Options</code> response header with DENY as the value, informing browsers not to display the content of the web page in any frame to protect the website against <a href="https://www.owasp.org/index.php/Clickjacking">clickjacking</a>.</p>
 
-<p>This might not be the best setting for everyone. You should read about <a href="https://tools.ietf.org/html/rfc7034#section-2.1">the other two possible values for the <code>X-Frame-Options</code> header</a>: <code>SAMEORIGIN</code> and <code>ALLOW-FROM</code>.</p>
+<p>This might not be the best setting for everyone. You should read about <a href="https://datatracker.ietf.org/doc/html/rfc7034#section-2.1">the other two possible values for the <code>X-Frame-Options</code> header</a>: <code>SAMEORIGIN</code> and <code>ALLOW-FROM</code>.</p>
 
 <p>While you could send the <code>X-Frame-Options</code> header for all of your website's pages, this has the potential downside that it forbids even any framing of your content (e.g.: when users visit your website using a Google Image Search results page).</p>
 
@@ -385,7 +385,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
 
 <p>In Macintosh and Linux systems, files that begin with a period are hidden from view but not from access if you know their name and location. These types of files usually contain user preferences or the preserved state of a utility, and can include rather private places like, for example, the <code>.git</code> or <code>.svn</code> directories.</p>
 
-<p>The <code>.well-known/</code> directory represents <a href="https://tools.ietf.org/html/rfc5785">the standard (RFC 5785)</a> path prefix for "well-known locations" (e.g.: <code>/.well-known/manifest.json</code>, <code>/.well-known/keybase.txt</code>), and therefore, access to its visible content should not be blocked.</p>
+<p>The <code>.well-known/</code> directory represents <a href="https://datatracker.ietf.org/doc/html/rfc5785">the standard (RFC 5785)</a> path prefix for "well-known locations" (e.g.: <code>/.well-known/manifest.json</code>, <code>/.well-known/keybase.txt</code>), and therefore, access to its visible content should not be blocked.</p>
 
 <pre class="brush: bash">&lt;IfModule mod_rewrite.c&gt;
     RewriteEngine On
