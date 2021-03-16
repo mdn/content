@@ -119,7 +119,7 @@ parseInt('0x10'); // 16
 <pre class="brush: js">NaN + 5; // NaN
 </pre>
 
-<p>You can reliably test for <code>NaN</code> using the built-in {{jsxref("Number.isNaN", "Number.isNaN()")}} function, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN#description">which behaves just as its name implies</a>:</p>
+<p>You can reliably test for <code>NaN</code> using the built-in {{jsxref("Number.isNaN", "Number.isNaN()")}} function, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN#description">which behaves just as its name implies</a>:</p>
 
 <pre class="brush: js">Number.isNaN(NaN); // true
 Number.isNaN('hello'); // false
@@ -130,7 +130,7 @@ Number.isNaN([1]) // false
 Number.isNaN([1,2]) // false
 </pre>
 
-<p>But don’t test for <code>NaN</code> using the global {{jsxref("Global_Objects/isNaN", "isNaN()")}} function, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#confusing_special-case_behavior">which has unintuitive behavior</a>:</p>
+<p>But don’t test for <code>NaN</code> using the global {{jsxref("Global_Objects/isNaN", "isNaN()")}} function, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#confusing_special-case_behavior">which has unintuitive behavior</a>:</p>
 
 <pre class="brush: js">isNaN('hello'); // true
 isNaN('1'); // false
