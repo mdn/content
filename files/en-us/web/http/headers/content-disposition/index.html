@@ -59,7 +59,7 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"</pre>
  <dd>Is followed by a string containing the original name of the file transmitted. The filename is always optional and must not be used blindly by the application: path information should be stripped, and conversion to the server file system rules should be done. This parameter provides mostly indicative information. When used in combination with <code>Content-Disposition: attachment</code>, it is used as the default filename for an eventual "Save As" dialog presented to the user.</dd>
  <dt><code>filename*</code></dt>
  <dd>
- <p>The parameters <code>filename</code> and <code>filename*</code> differ only in that <code>filename*</code> uses the encoding defined in <a href="https://tools.ietf.org/html/rfc5987">RFC 5987</a>. When both <code>filename</code> and <code>filename*</code> are present in a single header field value, <code>filename*</code> is preferred over <code>filename</code> when both are understood.</p>
+ <p>The parameters <code>filename</code> and <code>filename*</code> differ only in that <code>filename*</code> uses the encoding defined in <a href="https://datatracker.ietf.org/doc/html/rfc5987">RFC 5987</a>. When both <code>filename</code> and <code>filename*</code> are present in a single header field value, <code>filename*</code> is preferred over <code>filename</code> when both are understood.</p>
  </dd>
 </dl>
 

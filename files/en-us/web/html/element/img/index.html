@@ -101,7 +101,7 @@ tags:
 
 	<dl>
 		<dt><code>anonymous</code></dt>
-		<dd>A CORS request is sent with credentials omitted (that is, no {{glossary("cookie", "cookies")}}, <a href="https://tools.ietf.org/html/rfc5280">X.509 certificates</a>, or {{httpheader("Authorization")}} request header).</dd>
+		<dd>A CORS request is sent with credentials omitted (that is, no {{glossary("cookie", "cookies")}}, <a href="https://datatracker.ietf.org/doc/html/rfc5280">X.509 certificates</a>, or {{httpheader("Authorization")}} request header).</dd>
 		<dt><code>use-credentials</code></dt>
 		<dd>The CORS request is sent with any credentials included (that is, cookies, X.509 certificates, and the <code>Authorization</code> request header). If the server does not opt into sharing credentials with the origin site (by sending back the <code>Access-Control-Allow-Credentials: true</code> response header), then the browser marks the image as tainted and restricts access to its image data.</dd>
 	</dl>
