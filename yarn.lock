@@ -41,10 +41,10 @@
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.4.280":
-  version "0.4.280"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.280.tgz#7a2a502a9a15a3780c8f5bb887ad16937e254006"
-  integrity sha512-2N7f5ZtcAGXWz1nKDaHsTVt9W6mo7zxNDMM0sW+n+9r4NyImFMo7153XYZdiQ/v6HDhP14U6yYU14CtTqf8/5w==
+"@mdn/yari@0.4.289":
+  version "0.4.289"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.289.tgz#e03ea7528cc912046e9935fa7204508206bb955c"
+  integrity sha512-BPnJj5T/s+C5YGEYU4caT5Uxhz4uyvEVx1DXpM9ZuPiYhbXChoMXYv92nOmN55s1TtyFNth+Hr1TX5od5fh21g==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
@@ -67,7 +67,7 @@
     glob "^7.1.6"
     got "11.8.2"
     http-proxy-middleware "1.0.6"
-    image-size "0.9.5"
+    image-size "0.9.7"
     image-type "4.1.0"
     imagemin "7.0.1"
     imagemin-gifsicle "7.0.0"
@@ -1938,12 +1938,12 @@ ignore@^5.1.1, ignore@^5.1.4:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.1.8.tgz#f150a8b50a34289b33e22f5889abd4d8016f0e57"
   integrity sha512-BMpfD7PpiETpBl/A6S498BaIJ6Y/ABT93ETbby2fP00v4EbvPBXWEoaR1UBPKs3iR53pJY7EtZk5KACI57i1Uw==
 
-image-size@0.9.5:
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/image-size/-/image-size-0.9.5.tgz#03a4224c5b643d2a0a7d21ee561cf7edf8985421"
-  integrity sha512-HvnQBt6+u5PjmZvaFpJOB1VfrDdwxu8p456HAfYXPzEKl6GJKrNJZKDaN0A/0b1kJ7JpDUU6eBT7hmiREwzqWA==
+image-size@0.9.7:
+  version "0.9.7"
+  resolved "https://registry.yarnpkg.com/image-size/-/image-size-0.9.7.tgz#43b4ead4b1310d5ae310a559d52935a347e47c09"
+  integrity sha512-KRVgLNZkr00YGN0qn9MlIrmlxbRhsCcEb1Byq3WKGnIV4M48iD185cprRtaoK4t5iC+ym2Q5qlArxZ/V1yzDgA==
   dependencies:
-    queue "6.0.1"
+    queue "6.0.2"
 
 image-type@4.1.0:
   version "4.1.0"
@@ -3041,10 +3041,10 @@ query-string@^5.0.1:
     object-assign "^4.1.0"
     strict-uri-encode "^1.0.0"
 
-queue@6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/queue/-/queue-6.0.1.tgz#abd5a5b0376912f070a25729e0b6a7d565683791"
-  integrity sha512-AJBQabRCCNr9ANq8v77RJEv73DPbn55cdTb+Giq4X0AVnNVZvMHlYp7XlQiN+1npCZj1DuSmaA2hYVUUDgxFDg==
+queue@6.0.2:
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/queue/-/queue-6.0.2.tgz#b91525283e2315c7553d2efa18d83e76432fed65"
+  integrity sha512-iHZWu+q3IdFZFX36ro/lKBkSvfkztY5Y7HMiPlOUjhupPcG2JMfst2KKEpu5XndviX/3UhFbRngUPNKtgvtZiA==
   dependencies:
     inherits "~2.0.3"
 
