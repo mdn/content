@@ -1,0 +1,22 @@
+name: Dangerous file changes
+
+on:
+  pull_request_target:
+    paths:
+      - '.github/workflows/**'
+      - '.github/CODEOWNERS'
+      - '.github/dependabot.yml'
+      - package.json
+      - yarn.lock
+
+jobs:
+  triage:
+    # This make sure it only runs on our origin repo
+    if: github.repository == 'mdn/content' && github.event.pull_request.user.login != 'dependabot'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Stop anything and everything
+        run: |
+          echo "Any PR that edits these files should break the build and expect admin overrides"
+          echo ${{ github.event.pull_request }}
+          exit 1
