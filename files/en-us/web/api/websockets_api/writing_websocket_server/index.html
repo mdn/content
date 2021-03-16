@@ -11,7 +11,7 @@ tags:
 
 <p>If you would like to use the WebSocket API, it is useful if you have a server. In this article I will show you how to write one in C#. You can do it in any server-side language<span style="line-height: 1.5;">, but to keep things simple and more understandable, I chose Microsoft's language.</span></p>
 
-<p>This server conforms to <a href="https://tools.ietf.org/html/rfc6455">RFC 6455</a> so it will only handle connections from Chrome version 16, Firefox 11, IE 10 and over.</p>
+<p>This server conforms to <a href="https://datatracker.ietf.org/doc/html/rfc6455">RFC 6455</a> so it will only handle connections from Chrome version 16, Firefox 11, IE 10 and over.</p>
 
 <h2 id="First_steps">First steps</h2>
 
@@ -213,7 +213,7 @@ if (Regex.IsMatch(data, "^GET")) {
 <ul>
  <li>FIN bit: This bit indicates whether the full message has been sent from the client. Messages may be sent in frames, but for now we will keep things simple.</li>
  <li>RSV1, RSV2, RSV3: These bits must be 0 unless an extension is negotiated which supplies a nonzero value to them.</li>
- <li><span style="line-height: 1.572;">Opcode: These bits describe the type of message received. Opcode </span>0x1<span style="line-height: 1.572;"> means this is a text message. </span><a href="https://tools.ietf.org/html/rfc6455#section-5.2" style="line-height: 1.572;">Full list of Opcodes</a></li>
+ <li><span style="line-height: 1.572;">Opcode: These bits describe the type of message received. Opcode </span>0x1<span style="line-height: 1.572;"> means this is a text message. </span><a href="https://datatracker.ietf.org/doc/html/rfc6455#section-5.2" style="line-height: 1.572;">Full list of Opcodes</a></li>
 </ul>
 
 <p>The second byte, which currently has a value of 131, is another bitfield that breaks down as such:</p>

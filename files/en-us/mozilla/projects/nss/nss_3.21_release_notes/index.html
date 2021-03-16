@@ -31,7 +31,7 @@ slug: Mozilla/Projects/NSS/NSS_3.21_release_notes
 
 <ul>
  <li><code>certutil</code> now supports a <code>--rename</code> option to change a nickname (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1142209">bug 1142209</a>)</li>
- <li>TLS extended master secret extension (<a href="https://tools.ietf.org/html/rfc7627">RFC 7627</a>) is supported (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1117022">bug 1117022</a>)</li>
+ <li>TLS extended master secret extension (<a href="https://datatracker.ietf.org/doc/html/rfc7627">RFC 7627</a>) is supported (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1117022">bug 1117022</a>)</li>
  <li>New info functions added for use during mid-handshake callbacks (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1084669">bug 1084669</a>)</li>
 </ul>
 
@@ -123,7 +123,7 @@ slug: Mozilla/Projects/NSS/NSS_3.21_release_notes
  </li>
  <li><em>in sslt.h</em>
   <ul>
-   <li><strong>SSL_ENABLE_EXTENDED_MASTER_SECRET</strong> - configuration to enable the TLS extended master secret extension (<a href="https://tools.ietf.org/html/rfc7627">RFC 7627</a>)</li>
+   <li><strong>SSL_ENABLE_EXTENDED_MASTER_SECRET</strong> - configuration to enable the TLS extended master secret extension (<a href="https://datatracker.ietf.org/doc/html/rfc7627">RFC 7627</a>)</li>
    <li><strong>ssl_preinfo_version</strong> - used with <strong>SSLPreliminaryChannelInfo</strong> to indicate that a TLS version has been selected</li>
    <li><strong>ssl_preinfo_cipher_suite</strong> - used with <strong>SSLPreliminaryChannelInfo</strong> to indicate that a TLS cipher suite has been selected</li>
    <li><strong>ssl_preinfo_all</strong> - used with <strong>SSLPreliminaryChannelInfo</strong> to indicate that all preliminary information has been set</li>

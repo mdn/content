@@ -86,7 +86,7 @@ tags:
 
 <p>To make keys available outside your app, you need to export the key, and that's what {{DOMxRef("SubtleCrypto.exportKey","exportKey()")}} is for. You can choose one of a number of export formats.</p>
 
-<p>The inverse of <code>exportKey()</code> is {{DOMxRef("SubtleCrypto.importKey","importKey()")}}. You can import keys from other systems, and support for standard formats like <a href="https://tools.ietf.org/html/rfc5208">PKCS #8</a> and <a href="https://tools.ietf.org/html/rfc7517">JSON Web Key</a> helps you do this. The <code>exportKey()</code> function exports the key in an unencrypted format.</p>
+<p>The inverse of <code>exportKey()</code> is {{DOMxRef("SubtleCrypto.importKey","importKey()")}}. You can import keys from other systems, and support for standard formats like <a href="https://datatracker.ietf.org/doc/html/rfc5208">PKCS #8</a> and <a href="https://datatracker.ietf.org/doc/html/rfc7517">JSON Web Key</a> helps you do this. The <code>exportKey()</code> function exports the key in an unencrypted format.</p>
 
 <p>If the key is sensitive you should use {{DOMxRef("SubtleCrypto.wrapKey","wrapKey()")}}, which exports the key and then encrypts it using another key; the API calls a "key-wrapping key".</p>
 

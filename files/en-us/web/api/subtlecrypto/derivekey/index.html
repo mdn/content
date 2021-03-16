@@ -142,7 +142,7 @@ tags:
   secret as a symmetric key to secure their communication, or can use the secret as an
   input to derive such a key (for example, using the HKDF algorithm).</p>
 
-<p>ECDH is specified in <a href="https://tools.ietf.org/html/rfc6090">RFC 6090</a>.</p>
+<p>ECDH is specified in <a href="https://datatracker.ietf.org/doc/html/rfc6090">RFC 6090</a>.</p>
 
 <h3 id="HKDF">HKDF</h3>
 
@@ -152,7 +152,7 @@ tags:
 <p>It's <em>not</em> designed to derive keys from relatively low-entropy inputs such as
   passwords. For that, use PBKDF2.</p>
 
-<p>HKDF is specified in <a href="https://tools.ietf.org/html/rfc5869">RFC 5869</a>.</p>
+<p>HKDF is specified in <a href="https://datatracker.ietf.org/doc/html/rfc5869">RFC 5869</a>.</p>
 
 <h3 id="PBKDF2">PBKDF2</h3>
 
@@ -163,7 +163,7 @@ tags:
   computationally expensive key derivation is: this makes it harder for an attacker to use
   brute-force to discover the key using a dictionary attack.</p>
 
-<p>PBKDF2 is specified in <a href="https://tools.ietf.org/html/rfc2898">RFC 2898</a>.</p>
+<p>PBKDF2 is specified in <a href="https://datatracker.ietf.org/doc/html/rfc2898">RFC 2898</a>.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -317,7 +317,7 @@ async function encrypt(plaintext, salt, iv) {
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="https://tools.ietf.org/html/rfc5869">HKDF specification</a>.</li>
+  <li><a href="https://datatracker.ietf.org/doc/html/rfc5869">HKDF specification</a>.</li>
   <li><a href="https://csrc.nist.gov/publications/detail/sp/800-132/final">NIST guidelines
       for password-based key derivation</a>.</li>
   <li><a href="https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet">Password
